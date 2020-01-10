@@ -4,12 +4,12 @@ description: Questa esercitazione avanzata illustra come eseguire la migrazione 
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: 75bc8d278efb66363212e3e000154ffc70f373bf
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: e480cfa7c041d18a2bdaf8caa2468165e855186e
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634911"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740457"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Esercitazione: eseguire la migrazione di codice esistente con tipi di riferimento Nullable
 
@@ -167,4 +167,4 @@ Il parametro `IMapper` è tipizzato come riferimento nullable. Viene chiamato da
 
 Gli avvisi identificati nella compilazione di prova iniziale sono stati corretti, quindi è ora possibile attivare il contesto delle annotazioni nullable per entrambi i progetti. Ricompilare i progetti. Il compilatore non segnala alcun avviso. È possibile ottenere il codice per il progetto completato nel repository GitHub [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/nullable-reference-migration/finished).
 
-Le nuove funzionalità che supportano i tipi riferimento nullable consentono di trovare e correggere eventuali errori nel modo in cui si gestiscono i valori `null` nel codice. L'abilitazione del contesto delle annotazioni nullable consente di esprimere le finalità di progettazione: alcune variabili non devono mai essere Null e altre variabili possono contenere valori Null. Queste funzionalità rendono più semplice dichiarare le finalità della progettazione. Analogamente, il contesto degli avvisi nullable indica al compilatore di generare avvisi quando vengono violate le finalità. Questi avvisi sono utili per segnalare gli aggiornamenti che rendono il codice più resiliente e meno soggetto a generare eccezioni di tipo `NullReferenceException` durante l'esecuzione. È possibile controllare l'ambito di questi contesti in modo da potersi concentrare sulle aree locali del codice di cui eseguire la migrazione, mentre la base di codice rimanente rimane invariata. In pratica, è possibile eseguire questa attività di migrazione come parte delle normali attività di manutenzione delle classi. Questa esercitazione ha illustrato il processo per eseguire la migrazione di un'applicazione per l'uso dei tipi riferimento nullable. È possibile esplorare un esempio più esaustivo reale di questo processo, esaminando la richiesta pull effettuata da [Jon Skeet](https://github.com/jskeet) per incorporare i tipi riferimento nullable in [NodaTime](https://github.com/nodatime/nodatime/pull/1240/commits).
+Le nuove funzionalità che supportano i tipi riferimento nullable consentono di trovare e correggere eventuali errori nel modo in cui si gestiscono i valori `null` nel codice. L'abilitazione del contesto delle annotazioni nullable consente di esprimere le finalità di progettazione: alcune variabili non devono mai essere Null e altre variabili possono contenere valori Null. Queste funzionalità rendono più semplice dichiarare le finalità della progettazione. Analogamente, il contesto degli avvisi nullable indica al compilatore di generare avvisi quando vengono violate le finalità. Questi avvisi sono utili per segnalare gli aggiornamenti che rendono il codice più resiliente e meno soggetto a generare eccezioni di tipo `NullReferenceException` durante l'esecuzione. È possibile controllare l'ambito di questi contesti in modo da potersi concentrare sulle aree locali del codice di cui eseguire la migrazione, mentre la base di codice rimanente rimane invariata. In pratica, è possibile eseguire questa attività di migrazione come parte delle normali attività di manutenzione delle classi. Questa esercitazione ha illustrato il processo per eseguire la migrazione di un'applicazione per l'uso dei tipi riferimento nullable. È possibile esplorare un esempio più esaustivo reale di questo processo, esaminando la richiesta pull effettuata da [Jon Skeet](https://github.com/jskeet) per incorporare i tipi riferimento nullable in [NodaTime](https://github.com/nodatime/nodatime/pull/1240/commits). In alternativa, è possibile apprendere le tecniche per l'uso dei tipi di riferimento nullable con Entity Framework Core in [Entity Framework Core-working con i tipi di riferimento Nullable](/ef/core/miscellaneous/nullable-reference-types).

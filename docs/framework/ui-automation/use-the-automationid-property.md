@@ -9,16 +9,16 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-ms.openlocfilehash: 43a67a8dd73931172a6fa729c054ad494b29134e
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: a07a9c9bf6b0bf1e2f8ce56653a90a3aad3c4b2f
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800309"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741381"
 ---
 # <a name="use-the-automationid-property"></a>Utilizzare la proprietà AutomationID
 > [!NOTE]
-> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](/windows/win32/winauto/entry-uiauto-win32).  
+> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](/windows/win32/winauto/entry-uiauto-win32).  
   
  Questo argomento contiene gli scenari e il codice di esempio che illustrano come e quando sia possibile usare <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> per individuare un elemento nell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
@@ -31,7 +31,7 @@ ms.locfileid: "74800309"
  Sono stati identificati tre scenari principali dell'applicazione client di automazione interfaccia utente, che richiedono l'uso di <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> per ottenere risultati accurati e coerenti quando si cercano elementi.  
   
 > [!NOTE]
-> <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> è supportato da tutti gli elementi di automazione interfaccia utente nella visualizzazione controlli tranne che dalle finestre dell'applicazione di primo livello, dagli elementi di automazione interfaccia utente derivati da controlli [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] senza ID o x:Uid e dagli elementi di automazione interfaccia utente derivati da controlli [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] senza ID controllo.  
+> <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> è supportato da tutti gli elementi di automazione interfaccia utente nella visualizzazione controlli, eccetto le finestre dell'applicazione di primo livello, gli elementi di automazione interfaccia utente derivati da controlli [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] che non hanno un ID o x:Uid e gli elementi di automazione interfaccia utente derivati da controlli Win32 che non hanno un ID controllo.  
   
 #### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>Usare un oggetto AutomationID univoco e individuabile per trovare un elemento specifico nell'albero di automazione interfaccia utente  
   

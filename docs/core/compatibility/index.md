@@ -2,12 +2,12 @@
 title: Tipi di modifiche di rilievo-.NET Core
 description: Informazioni sul modo in cui .NET Core tenta di mantenere la compatibilità per gli sviluppatori tra le versioni di .NET e il tipo di modifica che viene considerata una modifica di rilievo.
 ms.date: 06/10/2019
-ms.openlocfilehash: 5624a35a0d71224faf9adc5df2b02a529e650314
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: a84468c0c0e04f367dc7e89ce806ac01b2b49b48
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567709"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740889"
 ---
 # <a name="changes-that-affect-compatibility"></a>Modifiche che influiscono sulla compatibilità
 
@@ -19,7 +19,7 @@ Nel corso del tempo, .NET ha tentato di mantenere un elevato livello di compatib
 
 Oltre alla compatibilità tra le implementazioni di .NET, gli sviluppatori si aspettano un elevato livello di compatibilità tra le versioni di .NET Core. In particolare, il codice scritto per una versione precedente di .NET Core dovrebbe essere eseguito senza problemi in una versione successiva di .NET Core. In realtà, molti gli sviluppatori si aspettano che le nuove API incluse nelle nuove versioni rilasciate di .NET Core siano compatibili anche con le versioni non definitive in cui sono state introdotte le API.
 
-Questo articolo descrive le categorie di modifiche di compatibilità (o che causano un'interruzione) e il modo in cui le modifiche di ogni categoria vengono valutate dal team di .NET. Conoscere il modo in cui il team .NET si avvicina alle possibili modifiche di rilievo è particolarmente utile per gli sviluppatori che aprono le richieste pull nel repository GitHub [DotNet/CoreFx](https://github.com/dotnet/corefx) che modificano il comportamento delle API esistenti.
+Questo articolo descrive le categorie di modifiche di compatibilità (o che causano un'interruzione) e il modo in cui le modifiche di ogni categoria vengono valutate dal team di .NET. Conoscere il modo in cui il team .NET si avvicina alle possibili modifiche di rilievo è particolarmente utile per gli sviluppatori che aprono le richieste pull nel repository GitHub [DotNet/Runtime](https://github.com/dotnet/runtime) che modificano il comportamento delle API esistenti.
 
 > [!NOTE]
 > Per una definizione delle categorie di compatibilità, come la compatibilità a livello di codice binario e la compatibilità con le versioni precedenti, vedere [Categorie di modifiche che causano un'interruzione](categories.md).
@@ -87,7 +87,7 @@ Le modifiche apportate a questa categoria modificano la superficie di attacco pu
 
    L'espansione della visibilità di un tipo è tuttavia consentita.
 
-### <a name="members"></a>Members
+### <a name="members"></a>Membri
 
 - **✔️ Espansione della visibilità di un membro non [virtuale](../../csharp/language-reference/keywords/sealed.md)**
 
@@ -178,7 +178,7 @@ Le modifiche apportate a questa categoria modificano la superficie di attacco pu
 
 - **❌ riduzione della visibilità di un membro**
 
-   Ciò include la limitazione della visibilità di un membro [protetto](../../csharp/language-reference/keywords/protected.md) quando non sono presenti costruttori *accessibili* (pubblici o protetti) e il tipo *non* è [sealed](../../csharp/language-reference/keywords/sealed.md). Se questo non avviene, la limitazione della visibilità di un membro protetto è consentita.
+   Ciò include la riduzione della visibilità di un membro [protetto](../../csharp/language-reference/keywords/protected.md) quando sono presenti costruttori *accessibili* (pubblici o protetti) e il tipo *non* è [sealed](../../csharp/language-reference/keywords/sealed.md). Se questo non avviene, la limitazione della visibilità di un membro protetto è consentita.
 
    L'espansione della visibilità di un membro è tuttavia consentita.
 
@@ -192,7 +192,7 @@ Le modifiche apportate a questa categoria modificano la superficie di attacco pu
 
 - **❌ la generazione di un evento esistente quando non è mai stato generato prima**
 
-## <a name="behavioral-changes"></a>Modifiche del comportamento
+## <a name="behavioral-changes"></a>Modifiche funzionali
 
 ### <a name="assemblies"></a>Assemblies
 

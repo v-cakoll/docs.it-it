@@ -3,13 +3,12 @@ title: Riduzione delle dipendenze dei pacchetti con project.json
 description: Ridurre le dipendenze dei pacchetti durante la creazione di librerie basate su project.json.
 author: cartermp
 ms.date: 06/20/2016
-ms.custom: seodec18
-ms.openlocfilehash: 9d4f9d7f6e7a736b7d07062f3cd31d6f45176cb1
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: HT
+ms.openlocfilehash: 48ba3ef578388fd98fe7cb830df313512d359483
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674965"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740830"
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>Riduzione delle dipendenze dei pacchetti con project.json
 
@@ -17,13 +16,13 @@ Questo articolo descrive cosa è necessario conoscere sulla riduzione delle dipe
 
 ## <a name="why-its-important"></a>Perché è importante?
 
-.NET Core è un prodotto costituito da pacchetti NuGet.  Un pacchetto fondamentale è il [metapacchetto .NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library), ovvero un pacchetto NuGet composto da altri pacchetti.  Fornisce il set di pacchetti in grado di funzionare su più implementazioni di .NET, ad esempio .NET Framework, .NET Core e Xamarin/Mono.
+.NET Core è un prodotto costituito da pacchetti NuGet.  Un pacchetto fondamentale è il [metapacchetto .NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library), ovvero un pacchetto NuGet composto da altri pacchetti. Fornisce il set di pacchetti che sono garantiti per lavorare su più implementazioni di .NET, ad esempio .NET Framework, .NET Core e Novell/mono.
 
 È tuttavia probabile che la libreria non usi tutti i pacchetti che contiene.  Quando si crea una libreria e la si distribuisce tramite NuGet, è opportuno ridurre il numero delle dipendenze ai soli pacchetti che vengono effettivamente usati.  In questo modo, si otterrà un impatto minore per i pacchetti NuGet.
 
 ## <a name="how-to-do-it"></a>Come procedere?
 
-Attualmente non è disponibile un comando `dotnet` ufficiale che consenta di ridurre il numero di riferimenti nel pacchetto.  È tuttavia possibile eseguire questa operazione manualmente.  Il processo generale è simile al seguente:
+Attualmente non è presente alcun comando ufficiale `dotnet` che ritaglia i riferimenti ai pacchetti.  È tuttavia possibile eseguire questa operazione manualmente.  Il processo generale è simile al seguente:
 
 1. Fare riferimento a `NETStandard.Library` versione `1.6.0` in una sezione `dependencies` di `project.json`.
 2. Ripristinare i pacchetti con `dotnet restore` ([vedere la nota](#dotnet-restore-note)) dalla riga di comando.
@@ -34,12 +33,12 @@ Attualmente non è disponibile un comando `dotnet` ufficiale che consenta di rid
 
 È possibile individuare i pacchetti non necessari in uno dei modi seguenti:
 
-1. Tentativi ed errori.  Questo metodo fa riferimento alla rimozione di un pacchetto, al relativo ripristino, se la libreria continua a eseguire la compilazione, e alla ripetizione del processo.
-2. Tramite uno strumento come [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) o [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector) per la selezione dei riferimenti in modo da visualizzare quali vengono effettivamente usati dal codice.  A questo punto, è possibile rimuovere i pacchetti che non corrispondono ai tipi in uso.
+1. Tentativi ed errori. Questo metodo fa riferimento alla rimozione di un pacchetto, al relativo ripristino, se la libreria continua a eseguire la compilazione, e alla ripetizione del processo.
+2. Tramite uno strumento come [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) o [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector) per la selezione dei riferimenti in modo da visualizzare quali vengono effettivamente usati dal codice. È quindi possibile rimuovere i pacchetti che non corrispondono ai tipi in uso.
 
 ## <a name="example"></a>Esempio
 
-Si supponga di aver scritto una libreria che offre funzionalità aggiuntive per tipi di raccolte generiche.  Tale libreria deve dipendere da pacchetti come `System.Collections`, ma può non dipendere da pacchetti come `System.Net.Http`.  Di conseguenza, può essere opportuno ridurre le dipendenze dei pacchetti alla quantità necessaria per la libreria.
+Si supponga di aver scritto una libreria che fornisce funzionalità aggiuntive ai tipi di raccolte generiche. Tale libreria deve dipendere da pacchetti come `System.Collections`, ma può non dipendere da pacchetti come `System.Net.Http`. Di conseguenza, può essere opportuno ridurre le dipendenze dei pacchetti alla quantità necessaria per la libreria.
 
 Per ridurre questa libreria, iniziare con il file `project.json` e aggiungere un riferimento a `NETStandard.Library` versione `1.6.0`.
 

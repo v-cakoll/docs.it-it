@@ -3,13 +3,12 @@ title: Compilare .NET Core dal codice sorgente
 description: Informazioni su come compilare .NET Core e .NET Core CLI dal codice sorgente.
 author: bleroy
 ms.date: 06/28/2017
-ms.custom: seodec18
-ms.openlocfilehash: dcd7c909325eec5a79db74098d7ac880000eafa1
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: fe5431667d861d830c2ec56252e6e3e2ca08a866
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105390"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740923"
 ---
 # <a name="build-net-core-from-source"></a>Compilare .NET Core dal codice sorgente
 
@@ -18,7 +17,7 @@ Questo articolo offre materiale sussidiario agli sviluppatori che vogliono compi
 
 ## <a name="build-the-clr-from-source"></a>Compilare Common Language Runtime (CLR) dal codice sorgente
 
-Il codice sorgente per .NET CoreCLR è reperibile nel repository [dotnet/coreclr](https://github.com/dotnet/coreclr/) su GitHub.
+Il codice sorgente per .NET CoreCLR è reperibile nel repository [DotNet/Runtime](https://github.com/dotnet/runtime/) su GitHub.
 
 La compilazione attualmente dipende dai prerequisiti seguenti:
 
@@ -27,7 +26,7 @@ La compilazione attualmente dipende dai prerequisiti seguenti:
 - [Python](https://www.python.org/)
 - un compilatore C++.
 
-Dopo aver installato questi prerequisiti è possibile compilare CLR richiamando lo script di compilazione (`build.cmd` in Windows o `build.sh` in Linux e macOS) alla base del repository [dotnet/coreclr](https://github.com/dotnet/coreclr/).
+Dopo aver installato questi prerequisiti, è possibile compilare CLR richiamando lo script di compilazione (`build.cmd` in Windows o `build.sh` in Linux e macOS) alla base del repository [DotNet/Runtime](https://github.com/dotnet/runtime/) .
 
 L'installazione dei componenti varia in base al sistema operativo. Vedere le istruzioni di compilazione per il sistema operativo specifico:
 
@@ -43,7 +42,7 @@ Non esiste alcuna compilazione incrociata tra sistemi operativi (solo per ARM, c
 La compilazione ha due `buildTypes` principali:
 
 - Debug (impostazione predefinita): compila il runtime con le ottimizzazioni minime e controlli di runtime aggiuntivi (asserzioni). La riduzione del livello di ottimizzazione e i controlli aggiuntivi rallentano l'esecuzione di runtime, ma sono utili per il debug. Questa è l'impostazione consigliata per gli ambienti di sviluppo e test.
-- Release: compila il runtime con le ottimizzazioni complete e senza i controlli di runtime aggiuntivi. Si ottengono così prestazioni di runtime molto più veloci, ma la compilazione può richiedere un po' più di tempo e può essere difficile eseguire il debug. Passare `release` allo script di compilazione per selezionare questo tipo di compilazione.
+- Release: compila il runtime con le ottimizzazioni complete e senza i controlli di runtime aggiuntivi. Ciò produrrà prestazioni più veloci in fase di esecuzione, ma potrebbe richiedere un po' più tempo per la compilazione e può essere difficile eseguire il debug. Passare `release` allo script di compilazione per selezionare questo tipo di compilazione.
 
 Inoltre, per impostazione predefinita la compilazione non solo crea gli eseguibili di runtime, ma compila anche tutti i test.
 I test sono piuttosto numerosi e richiedono una quantità significativa di tempo che non è necessaria se si vuole solo sperimentare le modifiche.
@@ -72,13 +71,13 @@ Benché l'output non elaborato della compilazione spesso sia utile, di solito in
 Esistono due tecniche di base per l'uso del nuovo runtime:
 
  1. **Usare dotnet.exe e NuGet per creare un'applicazione**.
-    Vedere [Uso della compilazione](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingYourBuild.md) per istruzioni sulla creazione di un programma che usa il nuovo runtime con i pacchetti NuGet appena creati e l'interfaccia della riga di comando "dotnet" (CLI). Questa tecnica è probabilmente il modo in cui gli sviluppatori non di runtime preferiscono usare il nuovo runtime.
+    Vedere [Uso della compilazione](https://github.com/dotnet/runtime/blob/master/docs/workflow/testing/using-your-build.md) per istruzioni sulla creazione di un programma che usa il nuovo runtime con i pacchetti NuGet appena creati e l'interfaccia della riga di comando "dotnet" (CLI). Questa tecnica è probabilmente il modo in cui gli sviluppatori non di runtime preferiscono usare il nuovo runtime.
 
  2. **Usare corerun.exe per eseguire un'applicazione con le DLL non in pacchetto**.
     Questo archivio definisce anche un host semplice denominato corerun.exe che NON accetta dipendenze in NuGet.
     Si dovrà indicare all'host dove si ottengono le DLL necessarie in uso e raccogliere le DLL manualmente.
-    Questa tecnica viene usata da tutti i test nel repository [dotnet/coreclr](https://github.com/dotnet/coreclr) ed è utile in un ciclo rapido di "modifica-compilazione-debug" locale, ad esempio per gli unit test preliminari.
-    Vedere [Executing .NET Core Apps with CoreRun.exe](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingCoreRun.md) (Esecuzione delle app .NET Core con CoreRun.exe) per informazioni dettagliate sull'uso di questa tecnica.
+    Questa tecnica viene usata da tutti i test nel repository [DotNet/Runtime](https://github.com/dotnet/runtime) ed è utile per il ciclo Quick "Edit-Compile-debug" locale, ad esempio il testing unità preliminare.
+    Vedere l'argomento relativo all'[esecuzione delle app .NET Core con CoreRun.exe](https://github.com/dotnet/runtime/blob/master/docs/workflow/testing/using-corerun.md) per informazioni dettagliate sull'uso di questa tecnica.
 
 ## <a name="build-the-cli-from-source"></a>Compilare l'interfaccia della riga di comando dal codice sorgente
 
@@ -91,7 +90,7 @@ Per compilare l'interfaccia della riga di comando di .NET Core, i seguenti compo
 - macOS:
   - git nel PERCORSO
   - Xcode
-  - OpenSSL
+  - Openssl
 
 Per compilare, eseguire `build.cmd` in Windows o `build.sh` in Linux e macOS dalla radice. Per non eseguire i test, eseguire `build.cmd -t:Compile` o `./build.sh -t:Compile`. Per compilare l'interfaccia della riga di comando in macOS Sierra, è necessario impostare la variabile di ambiente DOTNET_RUNTIME_ID eseguendo `export DOTNET_RUNTIME_ID=osx.10.11-x64`.
 
@@ -101,6 +100,6 @@ Usare l'eseguibile `dotnet` da *artifacts/{os}-{arch}/stage2* per provare l'inte
 
 ## <a name="see-also"></a>Vedere anche
 
-- [.NET Core Common Language Runtime (CoreCLR)](https://github.com/dotnet/coreclr/blob/master/README.md)
+- [Runtime .NET](https://github.com/dotnet/runtime/blob/master/README.md)
 - [Guida per sviluppatori di .NET Core CLI](https://github.com/dotnet/cli/blob/master/Documentation/project-docs/developer-guide.md)
 - [Pacchetti di distribuzione di .NET Core](./distribution-packaging.md)

@@ -1,5 +1,5 @@
 ---
-title: Creare e usare ssemblies con nome sicuro
+title: Creare e usare gli assembly con nome sicuro
 ms.date: 08/19/2019
 helpviewer_keywords:
 - strong-name bypass feature
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - strong-named assemblies, loading into trusted application domains
 - assembly binding, strong-named
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
-ms.openlocfilehash: 700eca16e7755823456c3e3ace17eb5e6b3526ac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 18a0b7d657290835a34c705513d0d7a4ccbfc61c
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122507"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738682"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Creare e usare gli assembly con nome sicuro
 
-Un nome sicuro è costituito dall'identità dell'assembly, corrispondente al nome semplice in formato testo, al numero di versione e alle informazioni sulle impostazioni cultura eventualmente disponibili, nonché da una chiave pubblica e da una firma digitale. Questo nome viene generato da un file di assembly usando la chiave privata corrispondente. Il file di assembly contiene il manifesto dell'assembly, che include i nomi e gli hash di tutti i file che costituiscono l'assembly.
+Un nome sicuro è costituito dall'identità dell'assembly, corrispondente al nome semplice in formato testo, al numero di versione e alle informazioni sulle impostazioni cultura eventualmente disponibili, nonché da una chiave pubblica e da una firma digitale. Viene generato da un file assembly tramite la chiave privata corrispondente. Nel file assembly è contenuto il manifesto dell'assembly, in cui si trovano i nomi e gli hash di tutti i file che costituiscono l'assembly.
 
 > [!WARNING]
 > Non usare i nomi sicuri per la sicurezza, poiché forniscono solo un'identità univoca.
@@ -29,7 +29,7 @@ Un nome sicuro è costituito dall'identità dell'assembly, corrispondente al nom
 Gli assembly con nome sicuro possono usare solo tipi da altri assembly con nome sicuro. In caso contrario, l'integrità dell'assembly con nome sicuro risulterebbe compromessa.
 
 > [!NOTE]
-> Sebbene .NET Core supporti assembly con nome sicuro e tutti gli assembly nella libreria .NET Core siano firmati, la maggior parte degli assembly di terze parti non necessita di nomi sicuri. Per altre informazioni, vedere [firma con nome sicuro](https://github.com/dotnet/corefx/blob/master/Documentation/project-docs/strong-name-signing.md) su GitHub.
+> Sebbene .NET Core supporti assembly con nome sicuro e tutti gli assembly nella libreria .NET Core siano firmati, la maggior parte degli assembly di terze parti non necessita di nomi sicuri. Per altre informazioni, vedere [firma con nome sicuro](https://github.com/dotnet/runtime/blob/master/docs/project/strong-name-signing.md) su GitHub.
 
 ## <a name="strong-name-scenario"></a>Scenario con nome sicuro
 

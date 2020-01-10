@@ -4,12 +4,12 @@ description: Usare uno Gestione pacchetti per installare .NET Core SDK e Runtime
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 1cd761e323467ef34fdad58de7385c1ca7b2c14a
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 750952229297ae069c0e8465bf83333d86b38dbd
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74836962"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740689"
 ---
 # <a name="fedora-29-package-manager---install-net-core"></a>Gestione pacchetti Fedora 29-installare .NET Core
 
@@ -21,9 +21,9 @@ Questo articolo descrive come usare un gestore di pacchetti per installare .NET 
 
 Prima di installare .NET, è necessario:
 
-- Registrare la chiave Microsoft
-- registrare il repository del prodotto
-- Installare le dipendenze necessarie
+- Registrare la chiave Microsoft.
+- Registrare il repository del prodotto.
+- Installare le dipendenze necessarie.
 
 Questa operazione deve essere eseguita una volta sola per ogni computer.
 

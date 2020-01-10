@@ -18,19 +18,19 @@ helpviewer_keywords:
 - BypassNGenAttribute
 - System.Runtime.BypassNGenAttribute
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
-ms.openlocfilehash: e6c4baae854e5997b153e1363ca8ed4204e10e2b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 297bc3f9182e76523eda4d4be3112f4d1d7e3fee
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73085201"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741799"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (generatore di immagini native)
 
 Il generatore di immagini native (Ngen.exe) consente di migliorare le prestazioni delle applicazioni gestite. Questo strumento crea immagini native, ovvero file contenenti codice macchina compilato specifico del processore, e le installa nella cache delle immagini native del computer locale. Il runtime può usare le immagini native della cache anziché il compilatore Just-In-Time (JIT) per compilare l'assembly originale.
 
 > [!NOTE]
-> Ngen.exe compila le immagini native solo per gli assembly la cui destinazione è .NET Framework. Il generatore di immagini native equivalente per .NET Core è [CrossGen](https://github.com/dotnet/coreclr/blob/master/Documentation/building/crossgen.md). 
+> Ngen.exe compila le immagini native solo per gli assembly la cui destinazione è .NET Framework. Il generatore di immagini native equivalente per .NET Core è [CrossGen](https://github.com/dotnet/runtime/blob/master/docs/workflow/building/coreclr/crossgen.md).
 
 Modifiche apportate a Ngen.exe in .NET Framework 4:
 
@@ -75,7 +75,7 @@ ngen /? | /help
 
 Nella tabella riportata di seguito viene illustrata la sintassi di ciascuna `action`. Per le descrizioni delle singole parti di `action`, vedere le tabelle [Argomenti](#ArgumentTable), [Livelli di priorità](#PriorityTable), [Scenari](#ScenarioTable) e [Configurazione](#ConfigTable). Nella tabella [Opzioni](#OptionTable) vengono descritte le `options` e le opzioni della Guida.
 
-|Operazione|Descrizione|
+|Azione|Descrizione|
 |------------|-----------------|
 |`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|Genera le immagini native per un assembly e le relative dipendenze e installa le immagini nella cache delle immagini native.<br /><br /> Se si specifica l'opzione `/queue`, l'azione viene accodata per il servizio immagini native. La priorità predefinita è 3. Vedere la tabella [Livelli di priorità](#PriorityTable).|
 |`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Elimina le immagini native di un assembly e le relative dipendenze dalla cache delle immagini native.<br /><br /> Per disinstallare una singola immagine e le relative dipendenze, ricorrere agli stessi argomenti della riga di comando usati per l'installazione dell'immagine. **Nota:**  A partire da .NET Framework 4, l'azione `uninstall` * non è più supportata.|
@@ -86,7 +86,7 @@ Nella tabella riportata di seguito viene illustrata la sintassi di ciascuna `act
 
 <a name="ArgumentTable"></a>
 
-## <a name="arguments"></a>argomenti
+## <a name="arguments"></a>Argomenti
 
 |Argomento|Descrizione|
 |--------------|-----------------|
@@ -97,7 +97,7 @@ Nella tabella riportata di seguito viene illustrata la sintassi di ciascuna `act
 
 ## <a name="priority-levels"></a>Livelli di priorità
 
-|Priorità|Descrizione|
+|Priority|Descrizione|
 |--------------|-----------------|
 |`1`|Le immagini native vengono generate e installate immediatamente, senza attendere il tempo di inattività.|
 |`2`|Le immagini native vengono generate e installate senza attendere il tempo di inattività, ma dopo il completamento di tutte le azioni con priorità 1 (e delle relative dipendenze).|
@@ -117,14 +117,14 @@ Nella tabella riportata di seguito viene illustrata la sintassi di ciascuna `act
 
 ## <a name="config"></a>Config
 
-|Configurazione|Descrizione|
+|Configurazione di|Descrizione|
 |-------------------|-----------------|
 |`/ExeConfig:` `exePath`|Usa la configurazione dell'assembly eseguibile specificato.<br /><br /> Al momento dell'associazione alle dipendenze, le decisioni di Ngen.exe devono coincidere con quelle del caricatore. Quando un componente condiviso viene caricato in fase di esecuzione, mediante il metodo <xref:System.Reflection.Assembly.Load%2A>, il file di configurazione dell'applicazione determina le dipendenze che devono essere caricate per il componente condiviso, ad esempio la versione di una dipendenza caricata. L'opzione `/ExeConfig` indica a Ngen.exe le dipendenze che verranno caricate in fase di esecuzione.|
 |`/AppBase:` `directoryPath`|Al momento dell'individuazione delle dipendenze, la directory specificata viene usata come base dell'applicazione.|
 
 <a name="OptionTable"></a>
 
-## <a name="options"></a>Opzioni
+## <a name="options"></a>Options
 
 |Opzione|Descrizione|
 |------------|-----------------|
@@ -394,7 +394,7 @@ Quando genera un'immagine nativa, Ngen.exe registra queste informazioni. Quando 
 
 <a name="Troubleshooting"></a>
 
-## <a name="troubleshooting"></a>Troubleshooting
+## <a name="troubleshooting"></a>Risoluzione dei problemi
 
 Gli argomenti seguenti per la risoluzione dei problemi consentono di vedere quali immagini native vengono usate dall'applicazione e quali non possono essere usate da questa per determinare quando il compilatore JIT inizia a compilare un metodo. Illustrano anche come rifiutare esplicitamente la compilazione di immagini native di metodi specificati.
 
@@ -461,7 +461,7 @@ Per disinstallare una dipendenza, è necessario usare le stesse opzioni della ri
 ngen uninstall c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe
 ```
 
-Per creare un'immagine nativa per un assembly nella Global Assembly Cache, usare il nome visualizzato dell'assembly, Esempio:
+Per creare un'immagine nativa per un assembly nella Global Assembly Cache, usare il nome visualizzato dell'assembly, Ad esempio:
 
 ```console
 ngen install "ClientApp, Version=1.0.0.0, Culture=neutral,
@@ -564,10 +564,10 @@ L'attività di immagini native è un'attività di Windows che esegue automaticam
 
 L'attività di immagini native viene registrata una volta per ogni architettura della CPU supportata in un computer, per consentire la compilazione di applicazioni destinate a ogni architettura:
 
-|Nome attività|Computer a 32 bit|Computer a 64 bit|
+|Nome dell'attività|Computer a 32 bit|Computer a 64 bit|
 |---------------|----------------------|----------------------|
-|NET Framework NGEN v4.0.30319|Yes|Yes|
-|NET Framework NGEN v4.0.30319 64|No|Yes|
+|NET Framework NGEN v4.0.30319|Sì|Sì|
+|NET Framework NGEN v4.0.30319 64|No|Sì|
 
 L'attività di immagine nativa è disponibile in .NET Framework 4.5 e versioni successive, se in esecuzione in Windows 8 o versioni successive. Nelle versioni precedenti di Windows, .NET Framework usa il [Servizio immagini native](#native-image-service).
 

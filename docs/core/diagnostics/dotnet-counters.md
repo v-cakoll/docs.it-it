@@ -1,17 +1,15 @@
 ---
 title: contatori dotnet-.NET Core
 description: Informazioni su come installare e usare lo strumento da riga di comando DotNet-Counter.
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 10/14/2019
-ms.openlocfilehash: b2fab239713d9d19c580580496e73a91ceafcc52
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 10af451a8b1b4d8b27da1490b99b19a4359c860f
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321589"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740799"
 ---
-# <a name="dotnet-counters"></a>contatori DotNet
+# <a name="dotnet-counters"></a>dotnet-counters
 
 **Questo articolo si applica a: ✓** .net core 3,0 SDK e versioni successive
 
@@ -33,7 +31,7 @@ dotnet-counters [-h|--help] [--version] <command>
 
 `dotnet-counters` è uno strumento di monitoraggio delle prestazioni per il monitoraggio dell'integrità ad hoc e l'analisi delle prestazioni di primo livello. Può osservare i valori dei contatori delle prestazioni pubblicati tramite l'API <xref:System.Diagnostics.Tracing.EventCounter>. Ad esempio, è possibile monitorare rapidamente elementi come l'utilizzo della CPU o la frequenza delle eccezioni generate nell'applicazione .NET Core per verificare se c'è qualcosa di sospetto prima di approfondire le analisi delle prestazioni più gravi usando `PerfView` o `dotnet-trace`.
 
-## <a name="options"></a>Opzioni
+## <a name="options"></a>Options
 
 - **`--version`**
 
@@ -86,7 +84,7 @@ Visualizza i valori di aggiornamento periodico dei contatori selezionati.
 dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [counter_list]
 ```
 
-### <a name="options"></a>Opzioni
+### <a name="options"></a>Options
 
 - **`-p|--process-id <PID>`**
 
@@ -98,7 +96,7 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
 
 - **`counter_list <COUNTERS>`**
 
-  Elenco di contatori separato da spazi. È possibile specificare i contatori `provider_name[:counter_name]`. Se il `provider_name` viene usato senza una `counter_name` qualificata, vengono visualizzati tutti i contatori. Per individuare i nomi del provider e del contatore, utilizzare il comando [DotNet-counts list](#dotnet-counters-list) .
+  Elenco di contatori separato da spazi. È possibile specificare i contatori `provider_name[:counter_name]`. Se il `provider_name` viene usato senza una `counter_name`qualificata, vengono visualizzati tutti i contatori. Per individuare i nomi del provider e del contatore, utilizzare il comando [DotNet-counts list](#dotnet-counters-list) .
 
 ### <a name="examples"></a>Esempi
 
@@ -129,7 +127,7 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
       GC Heap Size (MB)                            811
   ```
 
-- Monitorare `EventCounter` valori da `EventSource` definiti dall'utente. Per altre informazioni, vedere [esercitazione: come misurare le prestazioni per eventi molto frequenti usando EventCounters](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md).
+- Monitorare `EventCounter` valori da `EventSource`definiti dall'utente. Per altre informazioni, vedere [esercitazione: come misurare le prestazioni per eventi molto frequenti usando EventCounters](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md).
 
   ```console
   > dotnet-counters monitor --process-id 1902 Samples-EventCounterDemos-Minimal

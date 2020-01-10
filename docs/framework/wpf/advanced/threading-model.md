@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: ae120311e7e58b34437de987e9f9a18e917043c0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 72fa95bde0c41e913bdaa35da7fdcd34f81b3057
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974082"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740263"
 ---
 # <a name="threading-model"></a>Modello di threading
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] è stato progettato per semplificare il threading. Di conseguenza, la maggior parte dei [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sviluppatori non dovranno scrivere un'interfaccia che usa più di un thread. Poiché i programmi con multithreading sono complessi ed è difficile eseguirne il debug, è preferibile evitarli quando sono disponibili soluzioni a thread singolo.
@@ -203,7 +203,7 @@ ms.locfileid: "73974082"
  È possibile che `handler2` l'elaborazione di questo evento venga eseguita da molto tempo. `handler2` possibile utilizzare <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> per avviare un ciclo di messaggi annidato che non restituisce per ore. Se `handler2` non contrassegna l'evento come gestito quando il ciclo di messaggi è completo, l'evento viene passato alla struttura ad albero anche se è molto vecchio.
 
 ### <a name="reentrancy-and-locking"></a>Reentrancy e blocco
- Il meccanismo di blocco del Common Language Runtime (CLR) non si comporta esattamente come si può immaginare; si potrebbe aspettare che un thread smetta completamente l'operazione quando viene richiesto un blocco. In realtà, il thread continua a ricevere ed elaborare i messaggi con priorità alta. Questo consente di evitare i deadlock e rendere le interfacce un minimo reattive, ma introduce la possibilità di bug.  Nella maggior parte dei casi non è necessario conoscere questo aspetto, ma in rari casi (che in genere coinvolgono i messaggi della finestra [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] o i componenti COM STA) può essere utile conoscere.
+ Il meccanismo di blocco del Common Language Runtime (CLR) non si comporta esattamente come si può immaginare; si potrebbe aspettare che un thread smetta completamente l'operazione quando viene richiesto un blocco. In realtà, il thread continua a ricevere ed elaborare i messaggi con priorità alta. Questo consente di evitare i deadlock e rendere le interfacce un minimo reattive, ma introduce la possibilità di bug.  Nella maggior parte dei casi non è necessario conoscere questo aspetto, ma in rari casi (in genere che coinvolgono i messaggi della finestra Win32 o i componenti COM STA) può essere utile sapere.
 
  La maggior parte delle interfacce non è compilata tenendo conto di thread safety perché gli sviluppatori utilizzano il presupposto che non venga mai eseguito l'accesso a una [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] da più di un thread. In questo caso, il singolo thread può apportare modifiche ambientali in momenti imprevisti, causando gli effetti negativi che la <xref:System.Windows.Threading.DispatcherObject> meccanismo di esclusione reciproca dovrebbe risolvere. Si consideri lo pseudocodice seguente:
 

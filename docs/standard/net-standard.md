@@ -7,24 +7,24 @@ ms.date: 09/23/2019
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 4fa0153cfa9dd52f4d80301d228dde3f16225bfd
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 6a4406775056b76dfa789911b8bb14e84dbc8eea
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582032"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738656"
 ---
 # <a name="net-standard"></a>.NET Standard
 
-[.NET Standard](https://github.com/dotnet/standard) è una specifica formale delle API .NET che devono essere disponibili in tutte le implementazioni di .NET. La motivazione alla base di .NET Standard è l'esigenza di creare maggiore uniformità nell'ecosistema .NET. Lo standard [ECMA 335](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) continua ad assicurare uniformità riguardo al comportamento delle implementazioni di .NET, ma non esiste una specifica simile per le librerie di classi base .NET per le implementazioni delle librerie .NET.
+[.NET standard](https://github.com/dotnet/standard) è una specifica formale delle API .NET che devono essere disponibili in tutte le implementazioni di .NET. La motivazione alla base .NET Standard è la definizione di una maggiore uniformità nell'ecosistema .NET. Lo standard [ECMA 335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md) continua ad assicurare uniformità riguardo al comportamento delle implementazioni di .NET, ma non esiste una specifica simile per le librerie di classi base .NET per le implementazioni delle librerie .NET.
 
-.NET Standard abilita gli scenari chiave seguenti:
+.NET Standard Abilita gli scenari principali seguenti:
 
 - Definisce un set uniforme di API BCL per tutte le implementazioni di .NET da implementare, indipendentemente dal carico di lavoro.
 - Consente agli sviluppatori di creare librerie portabili utilizzabili in più implementazioni di .NET usando questo stesso set di API.
 - Riduce o addirittura elimina la compilazione condizionale del codice sorgente condiviso a causa di API .NET (solo per API del sistema operativo).
 
-Le diverse implementazioni di .NET specificano come destinazione determinate versioni di .NET Standard. Ogni versione dell'implementazione di .NET annuncia la versione .NET Standard più recente supportata, implicando che sono supportate anche le versioni precedenti. NET Framework 4.6, ad esempio, implementa .NET Standard 1.3: questo significa che espone tutte le API definite nelle versioni di .NET Standard da 1.0 a 1.3. Analogamente, .NET Framework 4.6.1 implementa .NET Standard 1.4, mentre .NET Core 1.0 implementa .NET Standard 1.6.
+Le diverse implementazioni di .NET specificano come destinazione determinate versioni di .NET Standard. Ogni versione dell'implementazione di .NET annuncia la versione .NET Standard più recente supportata, implicando che sono supportate anche le versioni precedenti. Ad esempio, .NET Framework 4,6 implementa .NET Standard 1,3, il che significa che espone tutte le API definite in .NET Standard versioni da 1,0 a 1,3. Analogamente, .NET Framework 4.6.1 implementa .NET Standard 1,4, mentre .NET Core 1,0 implementa .NET Standard 1,6.
 
 ## <a name="net-implementation-support"></a>Supporto per le implementazioni di .NET
 
@@ -84,9 +84,9 @@ Vengono forniti elementi derivati per facilitare le operazioni di lettura e abil
 
 Il principale veicolo di distribuzione degli assembly di riferimento di .NET Standard sono i [pacchetti NuGet](../core/packages.md). Le implementazioni vengono distribuite con modalità diverse, appropriate per ogni implementazione di .NET.
 
-I pacchetti NuGet hanno come destinazione uno o più [framework](frameworks.md). I pacchetti di .NET Standard hanno come destinazione il framework ".NET Standard". È possibile definire come destinazione il framework .NET Standard usando il `netstandard` [TFM (Target Framework Moniker) compatto](frameworks.md) (ad esempio `netstandard1.4`). Le librerie da eseguire su più runtime devono avere come destinazione questo framework. Per il set più ampio di API, indicare `netstandard2.0` come destinazione poiché il numero di API è più che raddoppiato tra .NET Standard 1.6 e 2.0.
+I pacchetti NuGet hanno come destinazione uno o più [framework](frameworks.md). I pacchetti di .NET Standard hanno come destinazione il framework ".NET Standard". È possibile fare riferimento a .NET Standard Framework usando il `netstandard` [Compact TFM](frameworks.md) , ad esempio `netstandard1.4`. Le librerie che devono essere eseguite in più runtime devono avere come destinazione questo framework. Per il set più ampio di API, indicare `netstandard2.0` come destinazione poiché il numero di API è più che raddoppiato tra .NET Standard 1.6 e 2.0.
 
-Il metapacchetto [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/) fa riferimento al set completo di pacchetti NuGet che definiscono .NET Standard.  Il modo più comune di definire `netstandard` come destinazione è fare riferimento a questo metapacchetto. Questo metapacchetto descrive e fornisce l'accesso alle circa 40 librerie .NET e alle API associate che definiscono .NET Standard. Per accedere ad API aggiuntive, è possibile fare riferimento ad altri pacchetti che hanno come destinazione `netstandard`.
+Il metapacchetto [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/) fa riferimento al set completo di pacchetti NuGet che definiscono .NET Standard.  Il modo più comune per definire `netstandard` come destinazione consiste nel fare riferimento a questo metapacchetto. Questo metapacchetto descrive e fornisce l'accesso alle circa 40 librerie .NET e alle API associate che definiscono .NET Standard. Per accedere ad API aggiuntive, è possibile fare riferimento ad altri pacchetti che hanno come destinazione `netstandard`.
 
 ### <a name="versioning"></a>Versionamento
 

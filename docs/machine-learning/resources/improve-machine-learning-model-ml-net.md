@@ -1,16 +1,16 @@
 ---
-title: "Procedura: Migliorare l'accuratezza del modello"
+title: "Procedura: migliorare l'accuratezza del modello"
 description: Informazioni su come migliorare l'accuratezza del modello
 ms.date: 04/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc
-ms.openlocfilehash: 8bb47102ede8e135090b1381eb815dccd512e03d
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
-ms.translationtype: HT
+ms.openlocfilehash: 8f3b283de378a37bfe429688207ea9fb52f9ca7f
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557815"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739578"
 ---
 # <a name="improve-mlnet-model-accuracy"></a>Migliorare l'accuratezza del modello ML.NET
 
@@ -32,7 +32,7 @@ Come avviene per gli esseri umani, se gli algoritmi ricevono più training, aume
 
 Sebbene una maggior quantità di caratteristiche e dati di esempio possano migliorare l'accuratezza del modello, è possibile che venga aumentato il rumore poiché non tutte le caratteristiche e i dati sono significativi. Per questa ragione, è importante comprendere quali caratteristiche hanno un maggior impatto sulle decisioni prese dall'algoritmo. L'uso di tecniche come Permutation Feature Importance (PFI) consente di identificare le caratteristiche salienti e oltre a descrivere il modello anche a usare l'output come metodo di selezione delle caratteristiche per ridurre la quantità di caratteristiche rumorose nel processo di training.
 
-Per informazioni sull'uso di PFI, usare questo [link](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md)
+Per ulteriori informazioni sull'utilizzo di PFI, vedere [explain model predictions using Permutation feature](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md)importance.
 
 ## <a name="cross-validation"></a>Convalida incrociata
 

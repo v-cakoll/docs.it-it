@@ -3,12 +3,12 @@ title: Impostazioni di configurazione della globalizzazione
 description: Informazioni sulle impostazioni della fase di esecuzione che configurano gli aspetti di globalizzazione di un'app .NET Core, ad esempio il modo in cui analizza le date giapponesi.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 0571c64eff5b38aafa37026fb2ba7f4aef778beb
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 76cd4a0a0f93f4df3ff243c6024b952576e8e6cb
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802778"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740535"
 ---
 # <a name="run-time-configuration-options-for-globalization"></a>Opzioni di configurazione della fase di esecuzione per la globalizzazione
 
@@ -16,7 +16,7 @@ ms.locfileid: "74802778"
 
 - Determina se un'app .NET Core viene eseguita in modalità invariante di globalizzazione senza accedere a dati e comportamenti specifici delle impostazioni cultura o se può accedere ai dati culturali.
 - Impostazione predefinita: eseguire l'app con accesso ai dati culturali (`false`).
-- Per altre informazioni, vedere [modalità invariante per la globalizzazione di .NET Core](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md).
+- Per altre informazioni, vedere [modalità invariante per la globalizzazione di .NET Core](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md).
 
 | | Nome impostazione | Valori |
 | - | - | - |

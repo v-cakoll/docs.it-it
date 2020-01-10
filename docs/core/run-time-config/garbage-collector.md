@@ -3,12 +3,12 @@ title: Impostazioni di configurazione del Garbage Collector
 description: Informazioni sulle impostazioni di run-time per la configurazione del modo in cui il Garbage Collector gestisce la memoria per le app .NET Core.
 ms.date: 11/13/2019
 ms.topic: reference
-ms.openlocfilehash: e7f6877a3cbc7f28776a93b9126f4b64026487fa
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 41157db7770a89f4402fa6675f7031c508f33aca
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800630"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740553"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Opzioni di configurazione in fase di esecuzione per Garbage Collection
 
@@ -217,7 +217,7 @@ Per altre informazioni su alcune di queste impostazioni, vedere la parte interme
 ### <a name="complus_gcname"></a>COMPlus_GCName
 
 - Specifica un percorso della libreria che contiene il Garbage Collector che il runtime intende caricare.
-- Per ulteriori informazioni, vedere la pagina relativa alla [progettazione del caricatore GC autonomo](https://github.com/dotnet/coreclr/blob/master/Documentation/design-docs/standalone-gc-loading.md).
+- Per ulteriori informazioni, vedere la pagina relativa alla [progettazione del caricatore GC autonomo](https://github.com/dotnet/runtime/blob/master/docs/design/features/standalone-gc-loading.md).
 
 | | Nome impostazione | Valori | Versione introdotta |
 | - | - | - | - |

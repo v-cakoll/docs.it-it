@@ -10,12 +10,12 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: ceab7db1f9eeb47ec020e220ec702af8181855e2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 645c44998812453008fc91d5cf4b8463c51bef9a
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442488"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741735"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Automazione interfaccia utente e ridimensionamento dello schermo
 > [!NOTE]
@@ -58,14 +58,14 @@ A partire da Windows Vista, Windows consente agli utenti di modificare l'imposta
   
  La soluzione è costituita da due parti.  
   
-1. Per prima cosa, fare in modo che l'applicazione client sia compatibile con dpi. A tale scopo, chiamare la funzione [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `SetProcessDPIAware` all'avvio. In codice gestito, la dichiarazione seguente rende disponibile questa funzione.  
+1. Per prima cosa, fare in modo che l'applicazione client sia compatibile con dpi. A tale scopo, chiamare la funzione Win32 `SetProcessDPIAware` all'avvio. In codice gestito, la dichiarazione seguente rende disponibile questa funzione.  
   
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
      Questa funzione rende l'intero processo compatibile con dpi, vale a dire che tutte le finestre appartenenti al processo non vengono ridimensionate. Nell' [esempio di evidenziatore](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter), ad esempio, le quattro finestre che costituiscono il rettangolo di evidenziazione si trovano in corrispondenza delle coordinate fisiche ottenute dall'automazione interfaccia utente, non delle coordinate logiche. Se l'esempio non è compatibile con dpi, l'evidenziazione verrebbe disegnata in corrispondenza delle coordinate logiche sul desktop, causando un posizionamento errato in un ambiente non 96 dpi.  
   
-2. Per ottenere coordinate del cursore, chiamare la funzione [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `GetPhysicalCursorPos`. Nell'esempio riportato di seguito viene illustrato come dichiarare e usare questa funzione.  
+2. Per ottenere le coordinate del cursore, chiamare la funzione Win32 `GetPhysicalCursorPos`. Nell'esempio riportato di seguito viene illustrato come dichiarare e usare questa funzione.  
   
      [!code-csharp[UIAClient_snip#185](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#185)]
      [!code-vb[UIAClient_snip#185](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#185)]  
@@ -73,7 +73,7 @@ A partire da Windows Vista, Windows consente agli utenti di modificare l'imposta
 > [!CAUTION]
 > Non usare la proprietà <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType>. Il comportamento di questa proprietà al di fuori delle finestre client in un ambiente non ridimensionato non è definito.  
   
- Se l'applicazione esegue la comunicazione tra processi diretta con applicazioni non compatibili con dpi, è possibile che sia presente una conversione tra coordinate logiche e fisiche usando le funzioni [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `PhysicalToLogicalPoint` e `LogicalToPhysicalPoint`.  
+ Se l'applicazione esegue la comunicazione tra processi diretta con applicazioni non compatibili con dpi, è possibile che sia presente una conversione tra coordinate logiche e fisiche usando le funzioni Win32 `PhysicalToLogicalPoint` e `LogicalToPhysicalPoint`.  
   
 ## <a name="see-also"></a>Vedere anche
 

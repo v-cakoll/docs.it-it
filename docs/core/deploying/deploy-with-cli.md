@@ -7,13 +7,12 @@ ms.date: 12/12/2019
 dev_langs:
 - csharp
 - vb
-ms.custom: seodec18
-ms.openlocfilehash: 0c175d8ba8e4011213265a6cfa2e5e8fea0303b2
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: 98f1e96ac087727e711f9ebf3d3eaf86c4d4eec9
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75343566"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740851"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Pubblicare le app .NET Core con l'interfaccia della riga di comando
 
@@ -135,7 +134,7 @@ Ogni volta che viene usata l'opzione `-r`, il percorso della cartella di output 
 Se si usa l'[app di esempio](#sample-app), eseguire `dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false`. Questo comando crea l'eseguibile seguente: `./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe`
 
 > [!NOTE]
-> È possibile ridurre le dimensioni totali della distribuzione abilitando la **modalità invariante della globalizzazione**. La modalità invariante della globalizzazione è utile per le applicazioni che non sono compatibili a livello globale e possono usare le convenzioni di formattazione, le convenzioni sulla combinazione di maiuscole e minuscole, il confronto tra stringhe e l'ordinamento delle [impostazioni cultura invarianti](xref:System.Globalization.CultureInfo.InvariantCulture). Per ulteriori informazioni sulla **modalità invariante per la globalizzazione** e su come abilitarla, vedere la pagina relativa alla [modalità invariante per la globalizzazione di .NET Core](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md).
+> È possibile ridurre le dimensioni totali della distribuzione abilitando la **modalità invariante della globalizzazione**. La modalità invariante della globalizzazione è utile per le applicazioni che non sono compatibili a livello globale e possono usare le convenzioni di formattazione, le convenzioni sulla combinazione di maiuscole e minuscole, il confronto tra stringhe e l'ordinamento delle [impostazioni cultura invarianti](xref:System.Globalization.CultureInfo.InvariantCulture). Per ulteriori informazioni sulla **modalità invariante per la globalizzazione** e su come abilitarla, vedere la pagina relativa alla [modalità invariante per la globalizzazione di .NET Core](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md).
 
 ## <a name="self-contained-deployment"></a>Distribuzione autonoma
 
@@ -150,7 +149,7 @@ La pubblicazione di un SCD crea un'app che non esegue il rollforward alla patch 
 - `--self-contained true` Questa opzione indica a .NET Core SDK di creare un eseguibile come distribuzione autonoma.
 
 > [!NOTE]
-> È possibile ridurre le dimensioni totali della distribuzione abilitando la **modalità invariante della globalizzazione**. La modalità invariante della globalizzazione è utile per le applicazioni che non sono compatibili a livello globale e possono usare le convenzioni di formattazione, le convenzioni sulla combinazione di maiuscole e minuscole, il confronto tra stringhe e l'ordinamento delle [impostazioni cultura invarianti](xref:System.Globalization.CultureInfo.InvariantCulture). Per ulteriori informazioni sulla **modalità invariante per la globalizzazione** e su come abilitarla, vedere la pagina relativa alla [modalità invariante per la globalizzazione di .NET Core](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md).
+> È possibile ridurre le dimensioni totali della distribuzione abilitando la **modalità invariante della globalizzazione**. La modalità invariante della globalizzazione è utile per le applicazioni che non sono compatibili a livello globale e possono usare le convenzioni di formattazione, le convenzioni sulla combinazione di maiuscole e minuscole, il confronto tra stringhe e l'ordinamento delle [impostazioni cultura invarianti](xref:System.Globalization.CultureInfo.InvariantCulture). Per ulteriori informazioni sulla **modalità invariante per la globalizzazione** e su come abilitarla, vedere la pagina relativa alla [modalità invariante per la globalizzazione di .NET Core](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md).
 
 ## <a name="see-also"></a>Vedere anche
 

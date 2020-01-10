@@ -1,15 +1,13 @@
 ---
 title: Modifiche di rilievo e librerie .NET
 description: Procedure consigliate per esplorare le modifiche di rilievo durante la creazione di librerie .NET.
-author: jamesnk
-ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 6881b8737d9dd3fa7fa71f099fa1dc97b747033d
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 8536662ae1cd9733efbcc0c6526bd69d34a13177
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104655"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740978"
 ---
 # <a name="breaking-changes"></a>Modifiche che causano un'interruzione
 
@@ -66,9 +64,9 @@ Una modifica di tipo binario si verifica quando viene modificata l'API pubblica 
 
 Una modifica di tipo binario può interrompere anche un **intero assembly**. La rinomina di un assembly con `AssemblyName` modificherà l'identità dell'assembly, esattamente come succede se si aggiunge, rimuove o modifica la chiave per la creazione di nomi sicuri. La modifica di un'identità dell'assembly interrompe l'intero codice compilato in cui viene usata.
 
-**❌ NON** modificare il nome di un assembly.
+**❌ non** modificare il nome di un assembly.
 
-**❌ NON** aggiungere, rimuovere o modificare la chiave per la creazione di nomi sicuri.
+**❌** non aggiungere, rimuovere o modificare la chiave di denominazione sicura.
 
 **✔️ CONSIDERARE** l'uso di classi di base astratte al posto di interfacce.
 
@@ -102,7 +100,7 @@ public class Document
 
 - [Considerazioni su versione e aggiornamento per gli sviluppatori C#](../../csharp/whats-new/version-update-considerations.md)
 - [A definitive guide to API-breaking changes in .NET](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net) (Ottima guida alle modifiche di rilievo delle API in .NET)
-- [CoreFX Breaking Change Rules](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/breaking-change-rules.md) (Regole di modifica di rilievo CoreFX)
+- [Regole per le modifiche di rilievo .NET](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/breaking-change-rules.md)
 
 >[!div class="step-by-step"]
 >[Precedente](versioning.md)

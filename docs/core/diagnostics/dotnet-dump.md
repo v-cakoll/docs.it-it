@@ -1,15 +1,13 @@
 ---
 title: DotNet-dump-.NET Core
 description: Installazione e utilizzo dello strumento da riga di comando DotNet-dump.
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 10/14/2019
-ms.openlocfilehash: bb4f7827f898431c55603b070f5b7a23fe44cba5
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: dcd5dd42620010c1a9b6dffd3365fc1b777c0eeb
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973449"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740770"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Dump Collection and Analysis Utility (`dotnet-dump`)
 
@@ -36,7 +34,7 @@ dotnet-dump [-h|--help] [--version] <command>
 
 Lo strumento `dotnet-dump` Global è un modo per raccogliere e analizzare i dump di Windows e Linux senza che sia necessario un debugger nativo come `lldb` in Linux. Questo strumento è importante su piattaforme come Alpine Linux in cui non è disponibile un `lldb` completamente funzionante. Lo strumento `dotnet-dump` consente di eseguire i comandi SOS per analizzare gli arresti anomali e il Garbage Collector (GC), ma non è un debugger nativo, quindi non sono supportati elementi come la visualizzazione di stack frame nativi.
 
-## <a name="options"></a>Opzioni
+## <a name="options"></a>Options
 
 - **`--version`**
 
@@ -63,7 +61,7 @@ Acquisisce un dump da un processo.
 dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag]
 ```
 
-### <a name="options"></a>Opzioni
+### <a name="options"></a>Options
 
 - **`-h|--help`**
 
@@ -75,7 +73,7 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag
 
 - **`--type <Heap|Mini>`**
 
-  Specifica il tipo di dump, che determina i tipi di informazioni raccolte dal processo. Esistono due tipi:
+  Specifica il tipo di dump, che determina i tipi di informazioni raccolte dal processo. Ne esistono di due tipi:
 
   - `Heap`: un dump di grandi dimensioni e relativamente completo che contiene elenchi di moduli, elenchi di thread, tutti gli stack, informazioni sulle eccezioni, informazioni sulla gestione e tutta la memoria eccetto le immagini mappate.
   - `Mini`: un piccolo dump contenente elenchi di moduli, elenchi di thread, informazioni sulle eccezioni e tutti gli stack.
@@ -107,13 +105,13 @@ Avvia una shell interattiva per esplorare un dump. La shell accetta diversi [com
 dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 ```
 
-### <a name="arguments"></a>argomenti
+### <a name="arguments"></a>Argomenti
 
 - **`<dump_path>`**
 
   Specifica il percorso del file di dump da analizzare.
 
-### <a name="options"></a>Opzioni
+### <a name="options"></a>Options
 
 - **`-c|--command <debug_command>`**
 
@@ -158,9 +156,9 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 | `syncblk <arguments>`               | Visualizza le informazioni sul contenitore SyncBlock.                                                           |
 | `threads|setthread <threadid>`      | Imposta o Visualizza l'ID del thread corrente per i comandi SOS.                                  |
 
-## <a name="using-dotnet-dump"></a>Utilizzo di `dotnet-dump`
+## <a name="using-dotnet-dump"></a>Uso di `dotnet-dump`
 
-Il primo passaggio consiste nel raccogliere un dump. Questo passaggio può essere ignorato se è già stato generato un dump di base. Il sistema operativo o la [funzionalità di generazione del dump](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/xplat-minidump-generation.md#configurationpolicy) predefinita del runtime di .NET Core possono creare dump di base.
+Il primo passaggio consiste nel raccogliere un dump. Questo passaggio può essere ignorato se è già stato generato un dump di base. Il sistema operativo o la [funzionalità di generazione del dump](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md) predefinita del runtime di .NET Core possono creare dump di base.
 
 ```console
 $ dotnet-dump collect --process-id 1902

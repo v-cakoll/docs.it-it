@@ -1,16 +1,14 @@
 ---
 title: Automatizzare il training del modello con l'interfaccia della riga di comando ML.NET
 description: Informazioni su come usare lo strumento dell'interfaccia della riga di comando ML.NET per eseguire automaticamente il training del modello migliore dalla riga di comando.
-author: natke
-ms.author: nakersha
 ms.date: 12/17/2019
 ms.custom: how-to
-ms.openlocfilehash: c7ad80d627e69df329ffe6b53de60520188347d8
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: ffcdba28fcb73a02f5d4726075588fe3b7789375
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636601"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740129"
 ---
 # <a name="automate-model-training-with-the-mlnet-cli"></a>Automatizzare il training del modello con l'interfaccia della riga di comando ML.NET
 

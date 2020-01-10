@@ -1,15 +1,14 @@
 ---
 title: Glossario dell'apprendimento automatico
 description: Glossario dei principali termini relativi all'apprendimento automatico, utili per la creazione di modelli personalizzati in ML.NET.
-ms.custom: seodec18
 ms.topic: reference
 ms.date: 07/31/2019
-ms.openlocfilehash: bd4f2db701f537d5c87529115a6bd44035432534
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 32ccb6df1cb08db45ebd25a0d1c0ea4396a6c50b
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977291"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739884"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Glossario dell'apprendimento automatico
 
@@ -31,7 +30,7 @@ Un caso di [classificazione](#classification) in cui l'[etichetta](#label) può 
 
 La calibrazione è il processo di mapping di un punteggio non elaborato a un'appartenenza di classe, per la classificazione binaria e multiclasse. Alcuni formatori ML.NET hanno un suffisso `NonCalibrated`. Questi algoritmi producono un punteggio non elaborato che deve quindi essere mappato a una probabilità di classe.
 
-## <a name="catalog"></a>Catalog
+## <a name="catalog"></a>di catalogo
 
 In ML.NET un catalogo è una raccolta di funzioni di estensione, raggruppate in base a uno scopo comune.
 
@@ -45,7 +44,7 @@ Quando i dati vengono usati per stimare una categoria, l'attività di [apprendim
 
 Nell'ambito della [regressione](#regression), una metrica di valutazione che indica il livello di adattamento dei dati a un modello. È compreso tra 0 e 1. Un valore pari a 0 indica che i dati sono casuali o non possono essere adattati al modello. Un valore pari a 1 indica che il modello corrisponde esattamente ai dati. È noto anche come r<sup>2</sup>, R<sup>2</sup> o r al quadrato.
 
-## <a name="data"></a>Dati
+## <a name="data"></a>Data
 
 I dati sono fondamentali per qualsiasi applicazione di apprendimento automatico. In ML.NET i dati sono rappresentati da oggetti <xref:Microsoft.ML.IDataView>. Gli oggetti di visualizzazione dei dati:
 
@@ -57,7 +56,7 @@ I dati sono fondamentali per qualsiasi applicazione di apprendimento automatico.
 
 Classe di ML.NET che implementa l'interfaccia <xref:Microsoft.ML.IEstimator%601>.
 
-Uno strumento di stima è una specifica di una trasformazione, sia la trasformazione di preparazione dei dati, sia la trasformazione del training del modello di apprendimento automatico. Gli strumenti di stima possono essere concatenati in una pipeline di trasformazioni. I parametri di uno strumento di stima o una pipeline di strumenti di stima vengono appresi quando si chiama <xref:Microsoft.ML.IEstimator`1.Fit*>. Il risultato di <xref:Microsoft.ML.IEstimator`1.Fit*> è un [trasformatore](#transformer).
+Uno strumento di stima è una specifica di una trasformazione, sia la trasformazione di preparazione dei dati, sia la trasformazione del training del modello di apprendimento automatico. Gli strumenti di stima possono essere concatenati in una pipeline di trasformazioni. I parametri di uno strumento di stima o una pipeline di strumenti di stima vengono appresi quando si chiama <xref:Microsoft.ML.IEstimator%601.Fit%2A>. Il risultato di <xref:Microsoft.ML.IEstimator%601.Fit%2A> è un [trasformatore](#transformer).
 
 ## <a name="extension-method"></a>Metodo di estensione
 
@@ -65,7 +64,7 @@ Metodo .NET che fa parte di una classe ma è definito all'esterno della classe. 
 
 I metodi di estensione vengono usati spesso in ML.NET per costruire istanze di [trasformatori](#estimator).
 
-## <a name="feature"></a>Funzionalità
+## <a name="feature"></a>Caratteristica
 
 Una proprietà misurabile del fenomeno misurato, in genere un valore numerico (double). Più funzionalità sono denominate **vettore di funzionalità**, generalmente archiviato come `double[]`. Le funzionalità definiscono le caratteristiche importanti del fenomeno misurato. Per altre informazioni, vedere l'articolo relativo alle [funzionalità](https://en.wikipedia.org/wiki/Feature_(machine_learning)) su Wikipedia.
 
@@ -131,7 +130,7 @@ Nell'ambito della [classificazione](#classification), la precisione di una class
 
 Nell'ambito della [classificazione](#classification), il richiamo di una classe è il numero di elementi stimati correttamente come appartenenti alla classe diviso per il numero totale di elementi effettivamente appartenenti alla classe.
 
-## <a name="regularization"></a>Regolarizzazione
+## <a name="regularization"></a>Regularization
 
  La regolarizzazione penalizza un modello lineare per essere troppo complicato. Sono disponibili due tipi di regolarizzazione:
 

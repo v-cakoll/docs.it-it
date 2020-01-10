@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 0ba4e8ff639cdfbbec596da45a6e950fff921974
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 0c98d0e7363e7732f44f2edf238b9cb6d2bf11fb
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740714"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740279"
 ---
 # <a name="typography-in-wpf"></a>Funzionalità tipografiche di WPF
 Questo argomento presenta le principali funzionalità tipografiche di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Queste funzionalità includono qualità e prestazioni migliorate per il rendering del testo, supporto tipografico OpenType, testo internazionale migliorato, supporto dei tipi di carattere migliorato e nuove API (Application Programming Interface) di testo.  
@@ -59,7 +59,7 @@ Testo con anti-aliasing della direzione y ClearType
   
 - Comportamento del tipo di carattere indipendente dalle impostazioni globali, ad esempio le impostazioni locali del sistema.  
   
-- Separare i tipi di <xref:System.Windows.FontWeight>, <xref:System.Windows.FontStretch>e <xref:System.Windows.FontStyle> per la definizione di una <xref:System.Windows.Media.FontFamily>. Offre maggiore flessibilità rispetto alla programmazione [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], in cui si usano combinazioni booleane di corsivo e grassetto per definire una famiglia di caratteri.  
+- Separare i tipi di <xref:System.Windows.FontWeight>, <xref:System.Windows.FontStretch>e <xref:System.Windows.FontStyle> per la definizione di una <xref:System.Windows.Media.FontFamily>. Questo garantisce una maggiore flessibilità rispetto alla programmazione Win32, in cui le combinazioni booleane di corsivo e grassetto vengono usate per definire una famiglia di caratteri.  
   
 - Direzione di scrittura (orizzontale o verticale) gestita indipendentemente dal nome del carattere.  
   

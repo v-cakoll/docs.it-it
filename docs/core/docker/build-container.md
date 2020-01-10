@@ -3,13 +3,13 @@ title: Distribuire un'app in un contenitore con Docker - Esercitazione
 description: In questa esercitazione si apprenderà come distribuire un'applicazione .NET Core in un contenitore con Docker.
 ms.date: 06/26/2019
 ms.topic: tutorial
-ms.custom: mvc, seodec18
-ms.openlocfilehash: b344731c7d356f3705d9909b6901234f91ec7d6d
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.custom: mvc
+ms.openlocfilehash: e012fcf78c88e7f64f6ee205cd69b69683bed9c3
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72521882"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740767"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Esercitazione: distribuire un'app .NET Core
 
@@ -26,7 +26,7 @@ Si imparerà a:
 
 L'esercitazione illustra le attività di compilazione e distribuzione di un contenitore Docker per un'applicazione .NET Core. La *piattaforma Docker* usa il *motore Docker* per compilare rapidamente app e inserirle in pacchetti come *immagini Docker*. Queste immagini vengono scritte nel formato *Dockerfile* per la distribuzione e l'esecuzione in un contenitore su più livelli.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Installare i prerequisiti seguenti:
 
@@ -124,7 +124,7 @@ namespace myapp
 }
 ```
 
-Salvare il file e testare di nuovo il programma con `dotnet run`. Tenere presente che l'app viene eseguita per un tempo illimitato. Usare il comando Annulla <kbd>CTRL</kbd> +<kbd>C</kbd> per arrestarlo. Verrà visualizzato l'output seguente:
+Salvare il file e testare di nuovo il programma con `dotnet run`. Tenere presente che l'app viene eseguita per un tempo illimitato. Usare il comando Annulla <kbd>CTRL</kbd>+<kbd>C</kbd> per arrestarlo. Verrà visualizzato l'output seguente:
 
 ```console
 > dotnet run
@@ -369,9 +369,9 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 Il comando `docker run` consente anche di modificare il comando `ENTRYPOINT` dal *Dockerfile* e di eseguire qualcosa di diverso, ma solo per il contenitore in questione. Ad esempio, usare il comando seguente per eseguire `bash` o `cmd.exe`. Modificare il comando in base alle esigenze.
 
-#### <a name="windows"></a>WINDOWS
+#### <a name="windows"></a>Portale di
 
-In questo esempio `ENTRYPOINT` viene sostituito con `cmd.exe`. Premere <kbd>CTRL</kbd> +<kbd>C</kbd> per terminare il processo e arrestare il contenitore.
+In questo esempio `ENTRYPOINT` viene sostituito con `cmd.exe`. Premere <kbd>CTRL</kbd>+<kbd>C</kbd> per terminare il processo e arrestare il contenitore.
 
 ```console
 > docker run -it --rm --entrypoint "cmd.exe" myimage

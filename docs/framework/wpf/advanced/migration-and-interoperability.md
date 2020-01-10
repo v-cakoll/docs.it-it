@@ -13,29 +13,29 @@ helpviewer_keywords:
 - WPF [WPF], interoperability
 - migration [WPF]
 ms.assetid: d655de05-bf63-4814-bc64-6b3be01c70a2
-ms.openlocfilehash: fcb7ece1081ae0858148cef883429b205478689b
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 3e7b838bddef535572afaaaf962cdda4b0272a62
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040895"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740339"
 ---
 # <a name="migration-and-interoperability"></a>Migrazione e interoperabilità
 Questa pagina contiene collegamenti a documenti che illustrano come implementare l'interoperatività tra applicazioni [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] e altri tipi di applicazioni Microsoft Windows.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Interoperatività di WPF e Windows Form](wpf-and-windows-forms-interoperation.md)  
  [Interoperatività di WPF e Win32](wpf-and-win32-interoperation.md)  
  [Interoperatività di WPF e Direct3D9](wpf-and-direct3d9-interoperation.md)  
   
-## <a name="reference"></a>Reference  
+## <a name="reference"></a>Riferimenti  
   
 |Termine|Definizione|  
 |----------|----------------|  
 |<xref:System.Windows.Forms.Integration.WindowsFormsHost>|Elemento che è possibile utilizzare per ospitare un controllo [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] come elemento di una pagina di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].|  
 |<xref:System.Windows.Forms.Integration.ElementHost>|Controllo [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] che è possibile utilizzare per ospitare un controllo [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].|  
-|<xref:System.Windows.Interop.HwndSource>|Ospita un'area [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] all'interno di un'applicazione [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)].|  
-|<xref:System.Windows.Interop.HwndHost>|Classe di base per <xref:System.Windows.Forms.Integration.WindowsFormsHost>, definisce alcune funzionalità di base utilizzate da tutte le tecnologie basate su HWND quando sono ospitate da un'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Sottoclassare questo oggetto per ospitare una finestra [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] all'interno di un'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].|  
+|<xref:System.Windows.Interop.HwndSource>|Ospita un'area [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] all'interno di un'applicazione Win32.|  
+|<xref:System.Windows.Interop.HwndHost>|Classe di base per <xref:System.Windows.Forms.Integration.WindowsFormsHost>, definisce alcune funzionalità di base utilizzate da tutte le tecnologie basate su HWND quando sono ospitate da un'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Sottoclassare questo oggetto per ospitare una finestra Win32 in un'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].|  
 |<xref:System.Windows.Interop.BrowserInteropHelper>|Classe helper per la creazione di report sulle condizioni dell'ambiente browser per un'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ospitata da un browser.|  
   
 ## <a name="related-sections"></a>Sezioni correlate

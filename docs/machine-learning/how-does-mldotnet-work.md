@@ -4,14 +4,12 @@ description: ML.NET offre la possibilità di aggiungere funzionalità di Machine
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.author: nakersha
-author: natke
-ms.openlocfilehash: 7d15c49ade4cd32389f7c86440b3a66aec8e4ea8
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 98251c39a4bdaba8203c26c6a781a86efc46efa4
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345192"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740086"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>Che cos'è ML.NET e come funziona?
 
@@ -214,7 +212,7 @@ Dopo che sono stati creati gli oggetti nella pipeline, è possibile usare i dati
 
 La chiamata di `Fit()` usa i dati di training di input per stimare i parametri del modello. Tale processo è noto come training del modello. Ricordare che il modello di regressione lineare precedente aveva due parametri di modello: **bias** e **weight**. Dopo la chiamata `Fit()` i valori dei parametri sono noti. La maggior parte dei modelli ha un numero di parametri di molto superiore a questo.
 
-Per altre informazioni sul training del modello, vedere [Come eseguire il training del modello](./how-to-guides/train-machine-learning-model-ml-net.md)
+Per ulteriori informazioni sul training del modello [, vedere come eseguire il training del modello](./how-to-guides/train-machine-learning-model-ml-net.md).
 
 L'oggetto modello risultante implementa l'interfaccia <xref:Microsoft.ML.ITransformer>. In altre parole il modello trasforma i dati di input in stime.
 

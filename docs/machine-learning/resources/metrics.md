@@ -2,14 +2,12 @@
 title: Metriche di ML.NET
 description: Informazioni sulle metriche usate per valutare le prestazioni di un modello ML.NET
 ms.date: 12/17/2019
-author: natke
-ms.author: nakersha
-ms.openlocfilehash: b154c88281b65730c107a52034dfa40a45d4e367
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 8e823fd8cc344c1b8e0ecd709b527137368cbfa0
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347763"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739600"
 ---
 # <a name="evaluate-your-mlnet-model-with-metrics"></a>Valutare il modello ML.NET con le metriche
 

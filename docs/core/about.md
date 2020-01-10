@@ -2,12 +2,12 @@
 title: Informazioni su .NET Core
 description: Informazioni su .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: ed153e817746a88277c191dfb14c465ff2d8bfa1
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: c6d120445bc6625b37c461c1bf2686b10833dc13
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344914"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740950"
 ---
 # <a name="about-net-core"></a>Informazioni su .NET Core
 
@@ -113,7 +113,7 @@ Poiché .NET Core supporta l'installazione side-by-side e il relativo runtime è
 
 ### <a name="comparison-with-mono"></a>Confronto con Mono
 
-[Mono](https://www.mono-project.com/) è l'implementazione originale multipiattaforma di .NET. È stata avviata come alternativa [Open Source](https://github.com/mono/mono) per la .NET Framework e la transizione alla destinazione dei dispositivi mobili come dispositivi iOS e Android sono diventati molto diffusi. Può essere considerato un duplicato della community di .NET Framework. Il team di progetto di mono si basava sugli [standard .NET](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) aperti, in particolare ECMA 335, pubblicati da Microsoft per fornire un'implementazione compatibile.
+[Mono](https://www.mono-project.com/) è l'implementazione originale multipiattaforma di .NET. È stata avviata come alternativa [Open Source](https://github.com/mono/mono) per la .NET Framework e la transizione alla destinazione dei dispositivi mobili come dispositivi iOS e Android sono diventati molto diffusi. Può essere considerato un duplicato della community di .NET Framework. Il team di progetto di mono si basava sugli [standard .NET](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md) aperti, in particolare ECMA 335, pubblicati da Microsoft per fornire un'implementazione compatibile.
 
 Le differenze principali tra .NET Core e Mono sono:
 

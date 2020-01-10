@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: a45cb570ccf572a699359598319fd3867fb5e5dd
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: d36909e06bd9a3de0940c4c1b2b9eacbf9cafe7f
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340965"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740588"
 ---
 # <a name="install-the-net-core-runtime"></a>Installare il runtime di .NET Core
 
@@ -97,7 +97,7 @@ Gli [script DotNet-install](../tools/dotnet-install-script.md) vengono usati per
 Per impostazione predefinita, lo script installa la versione più recente del [supporto a lungo termine (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) , che è .net core 3,1. È possibile scegliere una versione specifica specificando l'opzione `current`. Includere l'opzione `runtime` per installare un Runtime. In caso contrario, lo script installa l' [SDK](sdk.md).
 
 ```bash
-./dotnet-install.sh --current 3.1 --runtime aspnetcore
+./dotnet-install.sh --channel 3.1 --runtime aspnetcore
 ```
 
 > [!NOTE]

@@ -11,17 +11,17 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: c9ddbcf8f7b6307ab2d89b819aee4809f753a0fe
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 64f3a51b29a7116c736fea0e76465a4a73c640c2
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138603"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738773"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Procedura: firmare un assembly con un nome sicuro
 
 > [!NOTE]
-> Sebbene .NET Core supporti assembly con nome sicuro e tutti gli assembly nella libreria .NET Core siano firmati, la maggior parte degli assembly di terze parti non necessita di nomi sicuri. Per altre informazioni, vedere [firma con nome sicuro](https://github.com/dotnet/corefx/blob/master/Documentation/project-docs/strong-name-signing.md) su GitHub.
+> Sebbene .NET Core supporti assembly con nome sicuro e tutti gli assembly nella libreria .NET Core siano firmati, la maggior parte degli assembly di terze parti non necessita di nomi sicuri. Per altre informazioni, vedere [firma con nome sicuro](https://github.com/dotnet/runtime/blob/master/docs/project/strong-name-signing.md) su GitHub.
 
 Sono disponibili diversi modi per firmare un assembly con un nome sicuro:  
   
@@ -41,7 +41,7 @@ Sono disponibili diversi modi per firmare un assembly con un nome sicuro:
   
 2. Scegliere la scheda **Firma** .  
   
-3. Selezionare la casella **Firma assembly**.  
+3. Selezionare la casella **Firma assembly** .  
   
 4. Nella casella **Scegli un file chiave con nome sicuro** scegliere **Sfoglia**e quindi passare al file di chiave. Per creare un nuovo file di chiave, scegliere **nuovo** e immettere il nome nella finestra di dialogo **Crea chiave con nome sicuro** .  
   
@@ -52,7 +52,7 @@ Sono disponibili diversi modi per firmare un assembly con un nome sicuro:
   
 Nel [prompt dei comandi per gli sviluppatori per Visual Studio](../../framework/tools/developer-command-prompt-for-vs.md), immettere il comando seguente:  
 
-**al** **/out:** \<*assemblyName*>  *\<moduleName>* **/keyfile:** \<*keyfileName*>  
+**al** **/out:** \<*assemblyName*>  *\<ModuleName >* **/keyfile:** \<*fileFileName*>  
 
 Dove:  
 

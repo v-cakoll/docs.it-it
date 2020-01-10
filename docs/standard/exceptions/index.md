@@ -11,14 +11,12 @@ helpviewer_keywords:
 - exceptions [.NET]
 - common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a417e964c2f44c291892f9ddec6e32438fbff9a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8e78b2a8d7a815637e143eeb88bcfb51ded33771
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945431"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741351"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>Gestione e generazione di eccezioni in .NET
 
@@ -48,7 +46,7 @@ Le eccezioni presentano vantaggi rispetto ad altri metodi di notifica degli erro
 
 Nella tabella seguente sono elencate alcune eccezioni comuni con esempi di possibili cause.
 
-| Tipo di eccezione | Description | Esempio |
+| Tipo di eccezione | Descrizione | Esempio |
 | -------------- | ----------- | ------- |
 | <xref:System.Exception> | Classe base per tutte le eccezioni. | Nessuno (usare una classe derivata di questa eccezione). |
 | <xref:System.IndexOutOfRangeException> | Generata dal runtime solo quando una matrice viene indicizzata in modo non corretto. | Indicizzazione di una matrice esternamente al relativo intervallo valido: <br /> `arr[arr.Length+1]` |
@@ -61,12 +59,12 @@ Nella tabella seguente sono elencate alcune eccezioni comuni con esempi di possi
 ## <a name="see-also"></a>Vedere anche
 
 - [Classe e proprietà dell'eccezione](exception-class-and-properties.md)
-- [Procedura: Usare il blocco try/catch per intercettare le eccezioni](how-to-use-the-try-catch-block-to-catch-exceptions.md)
+- [Procedura: Usare il blocco try/catch per l'intercettazione di eccezioni](how-to-use-the-try-catch-block-to-catch-exceptions.md)
 - [Procedura: Usare eccezioni specifiche in un blocco catch](how-to-use-specific-exceptions-in-a-catch-block.md)
-- [Procedura: Generare in modo esplicito le eccezioni](how-to-explicitly-throw-exceptions.md)
+- [Procedura: Come generare in modo esplicito le eccezioni](how-to-explicitly-throw-exceptions.md)
 - [Procedura: Creare eccezioni definite dall'utente](how-to-create-user-defined-exceptions.md)
 - [Uso di gestori eccezioni filtrati dall'utente](using-user-filtered-exception-handlers.md)
 - [Procedura: Usare blocchi Finally](how-to-use-finally-blocks.md)
 - [Gestione di eccezioni per interoperabilità COM](handling-com-interop-exceptions.md)
 - [Procedure consigliate per le eccezioni](best-practices-for-exceptions.md)
-- [What Every Dev needs to Know About Exceptions in the Runtime](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md) (Tutto quello che ogni sviluppatore deve sapere sulle eccezioni in runtime)
+- [What Every Dev needs to Know About Exceptions in the Runtime](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/exceptions.md) (Tutto quello che ogni sviluppatore deve sapere sulle eccezioni in runtime)

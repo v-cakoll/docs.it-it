@@ -4,14 +4,12 @@ description: Informazioni su come trasferire le informazioni da un modello Tenso
 ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-author: natke
-ms.author: nakersha
-ms.openlocfilehash: 952ce5c52bcd09b8c4e4e40d5ddf85835a26478d
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 5fe47c42d0cf24ebfdc33a937e1afbd11a976680
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204995"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738959"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>Esercitazione: generare un modello di classificazione delle immagini ML.NET da un modello di TensorFlow con training preliminare
 
@@ -114,7 +112,7 @@ toaster2.png    appliance
 Le immagini di training e di test si trovano nelle cartelle assets che verranno scaricate in un file ZIP. Queste immagini appartengono a Wikimedia Commons.
 > *[Wikimedia Commons](https://commons.wikimedia.org/w/index.php?title=Main_Page&oldid=313158208), il repository di file multimediali gratuiti.* Recuperato 10:48, 17 ottobre 2018 da: https://commons.wikimedia.org/wiki/Pizza https://commons.wikimedia.org/wiki/Toaster https://commons.wikimedia.org/wiki/Teddy_bear
 
-## <a name="setup"></a>Configurazione
+## <a name="setup"></a>Programma di installazione
 
 ### <a name="create-a-project"></a>Creare un progetto
 
@@ -137,7 +135,7 @@ Le immagini di training e di test si trovano nelle cartelle assets che verranno 
 
 1. Scaricare il [modello Inception](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip) e decomprimere il file.
 
-1. Copiare il contenuto della directory `inception5h` appena decompressa nella directory *del progetto*TransferLearningTF`assets/inception`. Questa directory contiene il modello e i file di supporto aggiuntivi necessari per questa esercitazione, come illustrato nell'immagine seguente:
+1. Copiare il contenuto della directory `inception5h` appena decompressa nella directory `assets/inception` del progetto *TransferLearningTF*. Questa directory contiene il modello e i file di supporto aggiuntivi necessari per questa esercitazione, come illustrato nell'immagine seguente:
 
    ![Contenuto della directory Inception](./media/image-classification/inception-files.png)
 
@@ -336,7 +334,7 @@ Una pipeline del modello ML.NET è una catena di estimatori. Si noti che non vie
     Le metriche seguenti vengono valutate per la classificazione delle immagini:
 
     * `Log-loss`: vedere [Perdita di log](../resources/glossary.md#log-loss). Il valore desiderato per LogLoss è il valore più prossimo a 0.
-    * `Per class Log-loss` Il valore desiderato per LogLoss per classe è il valore più prossimo a 0.
+    * `Per class Log-loss`. Il valore desiderato per LogLoss per classe è il valore più prossimo a 0.
 
 1. Aggiungere il codice seguente per restituire il modello sottoposto a training come riga successiva:
 

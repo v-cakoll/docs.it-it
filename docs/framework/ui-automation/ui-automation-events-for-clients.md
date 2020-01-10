@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: 4193f92223cb9c9f924c1021b2f3e58a5e8b988d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6d4525aeea458e1ec810efa659f373a2b5f21f57
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441513"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741303"
 ---
 # <a name="ui-automation-events-for-clients"></a>Eventi di automazione interfaccia utente per i client
 > [!NOTE]
@@ -23,7 +23,7 @@ ms.locfileid: "74441513"
  Una maggiore efficienza è ottenuta anche grazie alla possibilità di restare in ascolto di eventi solo in un ambito definito. Un client, ad esempio, può restare in ascolto di eventi di modifica dello stato attivo per tutti gli elementi di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dell'albero o solo per un elemento e i relativi discendenti.  
   
 > [!NOTE]
-> Non presupporre che tutti i possibili eventi vengano generati da un provider di [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]. Ad esempio, non per tutte le modifiche di proprietà vengono generati eventi dai provider proxy standard per i controlli [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] e [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)].  
+> Non presupporre che tutti i possibili eventi vengano generati da un provider di [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]. Non tutte le modifiche alle proprietà, ad esempio, determinano la generazione di eventi da parte dei provider proxy standard per i controlli [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] e Win32.  
   
  Per una visualizzazione più ampia degli eventi di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Cenni preliminari sugli eventi di automazione interfaccia utente](ui-automation-events-overview.md).  
   
@@ -48,7 +48,7 @@ ms.locfileid: "74441513"
   
  All'arresto o quando gli eventi di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] non interessano più l'applicazione, i client di automazione interfaccia utente devono chiamare uno dei metodi seguenti.  
   
-|Metodo|description|  
+|Metodo|Descrizione|  
 |------------|-----------------|  
 |<xref:System.Windows.Automation.Automation.RemoveAutomationEventHandler%2A>|Annulla la registrazione di un gestore eventi che era stato registrato usando <xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>.|  
 |<xref:System.Windows.Automation.Automation.RemoveAutomationFocusChangedEventHandler%2A>|Annulla la registrazione di un gestore eventi che era stato registrato usando <xref:System.Windows.Automation.Automation.AddAutomationFocusChangedEventHandler%2A>.|  

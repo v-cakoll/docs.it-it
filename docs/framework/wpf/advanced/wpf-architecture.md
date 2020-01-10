@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 04e6c6fb5dd903e0f52a29bb2c0739d899ce2bb1
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 382facef15e79c4ce49fdedaeb1a072b7591e4a0
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636354"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740220"
 ---
 # <a name="wpf-architecture"></a>Architettura WPF
 In questo argomento viene fornita una presentazione guidata della gerarchia di classi Windows Presentation Foundation (WPF). Viene illustrata la maggior parte dei principali sottosistemi di WPF e viene descritta la modalità di interazione. Vengono inoltre illustrate alcune delle scelte effettuate dagli architetti di WPF.  
@@ -38,7 +38,7 @@ In questo argomento viene fornita una presentazione guidata della gerarchia di c
   
 <a name="System_Threading_DispatcherObject"></a>   
 ## <a name="systemthreadingdispatcherobject"></a>System.Threading.DispatcherObject  
- La maggior parte degli oggetti in WPF deriva da <xref:System.Windows.Threading.DispatcherObject>, che fornisce i costrutti di base per la gestione della concorrenza e del threading. WPF si basa su un sistema di messaggistica implementato dal dispatcher. Funziona in modo molto simile al familiare [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] message pump. in realtà, il dispatcher WPF USA messaggi User32 per l'esecuzione di chiamate cross-thread.  
+ La maggior parte degli oggetti in WPF deriva da <xref:System.Windows.Threading.DispatcherObject>, che fornisce i costrutti di base per la gestione della concorrenza e del threading. WPF si basa su un sistema di messaggistica implementato dal dispatcher. Funziona in modo molto simile a quello del messaggio Win32 familiare; in realtà, il dispatcher WPF USA messaggi User32 per l'esecuzione di chiamate cross-thread.  
   
  Esistono due concetti principali da comprendere quando si discute la concorrenza in WPF, ovvero il dispatcher e l'affinità di thread.  
   

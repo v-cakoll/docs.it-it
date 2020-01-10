@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 12/23/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: cc063eccfafa915908e66815b5b7535c66636716
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: caf12296b208b3d2e57c3a74300cced225e4db66
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636937"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738763"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>Analizzare il sentiment usando l'interfaccia della riga di comando di ML.NET
 
@@ -115,7 +115,7 @@ Verrà usato un set di dati esistente per uno scenario di 'analisi del sentiment
 
     Tuttavia, in alcuni casi la misurazione con la semplice metrica dell'accuratezza non è sufficiente, in particolare quando l'etichetta (0 e 1 in questo esempio) non è bilanciata nel set di dati di test.
 
-    Per informazioni su altre metriche e per **ulteriori dettagli sulle metriche** come Accuracy, AUC, AUCPR e F1-score, usate per valutare i diversi modelli, vedere l'articolo sulle [metriche di ML.NET](../resources/metrics.md)
+    Per altre metriche e informazioni più **dettagliate sulle metriche** , ad esempio l'accuratezza, l'AUC, il AUCPR e il Punteggio F1 usati per valutare i diversi modelli, vedere informazioni sulle [metriche di ml.NET](../resources/metrics.md).
 
     > [!NOTE]
     > È possibile provare questo stesso set di dati e specificare alcuni minuti per `--max-exploration-time` (ad esempio, tre minuti in modo da specificare 180 secondi) in modo da trovare un "modello ottimale" migliore con una configurazione della pipeline di training diversa per questo set di dati, che con 1000 righe è piuttosto piccolo.

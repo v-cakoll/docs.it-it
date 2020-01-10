@@ -5,16 +5,16 @@ helpviewer_keywords:
 - automation tree
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
-ms.openlocfilehash: d1edbb82e0d5d6a6275c09646fbf8e54b4ff90df
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: f541aab7ed5aae48b943ba5699366fe6a3f21a4c
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800289"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741387"
 ---
 # <a name="ui-automation-tree-overview"></a>Panoramica dell'albero di automazione dell'interfaccia utente
 > [!NOTE]
-> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](/windows/win32/winauto/entry-uiauto-win32).  
+> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](/windows/win32/winauto/entry-uiauto-win32).  
   
  Prodotti e script di test di assistive technology esplorano l'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] per raccogliere informazioni sull'[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] e i relativi elementi.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "74800289"
   
 <a name="uiautomation_raw_view"></a>   
 ### <a name="raw-view"></a>Visualizzazione non elaborata  
- La visualizzazione non elaborata dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] è l'albero completo degli oggetti <xref:System.Windows.Automation.AutomationElement> di cui il desktop è la radice. La visualizzazione non elaborata riproduce la struttura a livello di codice nativa di un'applicazione ed è pertanto la visualizzazione più dettagliata disponibile. Costituisce inoltre la base sulla quale vengono compilate le altre visualizzazioni dell'albero. Poiché questa visualizzazione dipende dal framework di [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] sottostante, la visualizzazione non elaborata di un pulsante [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] avrà una visualizzazione non elaborata diversa da un pulsante [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)].  
+ La visualizzazione non elaborata dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] è l'albero completo degli oggetti <xref:System.Windows.Automation.AutomationElement> di cui il desktop è la radice. La visualizzazione non elaborata riproduce la struttura a livello di codice nativa di un'applicazione ed è pertanto la visualizzazione più dettagliata disponibile. Costituisce inoltre la base sulla quale vengono compilate le altre visualizzazioni dell'albero. Poiché questa vista dipende dal Framework [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] sottostante, la visualizzazione non elaborata di un pulsante [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] avrà una visualizzazione non elaborata diversa da quella di un pulsante Win32.  
   
  La visualizzazione non elaborata si ottiene cercando elementi senza specificare proprietà o usando <xref:System.Windows.Automation.TreeWalker.RawViewWalker> per esplorare l'albero.  
   

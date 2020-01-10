@@ -4,14 +4,12 @@ description: Questa esercitazione illustra come usare un modello TensorFlow con 
 ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.author: nakersha
-author: natke
-ms.openlocfilehash: 8c3544b60b1fba1d419ca091b0a1d85fbbdbe2d6
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 0e80cdc6bb7dcc62a57466e909451da972c92db8
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204928"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738690"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>Esercitazione: analizzare i sentimenti delle revisioni dei film usando un modello TensorFlow con training preliminare in ML.NET
 
@@ -32,13 +30,13 @@ In questa esercitazione si imparerà a:
 
 * [Visual Studio 2017 versione 15,6 o successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) con il carico di lavoro "sviluppo multipiattaforma .NET Core" installato.
 
-## <a name="setup"></a>Configurazione
+## <a name="setup"></a>Programma di installazione
 
 ### <a name="create-the-application"></a>Creare l'applicazione
 
 1. Creare un' **applicazione console .NET Core** denominata "TextClassificationTF".
 
-2. Creare una directory denominata *Dati* nel progetto per salvare i file del set di dati.
+2. Creare una directory denominata *Data* nel progetto per salvare i file del set di dati.
 
 3. Installare il **pacchetto NuGet Microsoft.ML**:
 
@@ -81,14 +79,14 @@ Le revisioni del film sono testo in formato libero. L'applicazione converte il t
 
 Il primo consiste nel suddividere il testo in parole separate e utilizzare il file di mapping specificato per eseguire il mapping di ogni parola a una codifica di tipo Integer. Il risultato di questa trasformazione è una matrice integer a lunghezza variabile con una lunghezza corrispondente al numero di parole nella frase.
 
-|Proprietà| Value|Type|
+|Gli| Valore|Tipo di|
 |-------------|-----------------------|------|
 |ReviewText|Questo film è molto valido|string|
 |VariableLengthFeatures|14, 22, 9, 66, 78,... |int []|
 
 La matrice di funzionalità a lunghezza variabile viene quindi ridimensionata a una lunghezza fissa di 600. Si tratta della lunghezza prevista dal modello TensorFlow.
 
-|Proprietà| Value|Type|
+|Gli| Valore|Tipo di|
 |-------------|-----------------------|------|
 |ReviewText|Questo film è molto valido|string|
 |VariableLengthFeatures|14, 22, 9, 66, 78,... |int []|
@@ -124,7 +122,7 @@ La matrice di funzionalità a lunghezza variabile viene quindi ridimensionata a 
 
 ### <a name="create-the-mlcontext-lookup-dictionary-and-action-to-resize-features"></a>Creare il MLContext, il dizionario di ricerca e l'azione per ridimensionare le funzionalità
 
-La [classe MLContext](xref:Microsoft.ML.MLContext) è un punto di partenza per tutte le operazioni ML.NET. L'inizializzazione di `mlContext` crea un nuovo ambiente ML.NET che può essere condiviso tra gli oggetti del flusso di lavoro della creazione del modello. Dal punto di vista concettuale è simile a `DBContext` in Entity Framework.
+La [classe MLContext](xref:Microsoft.ML.MLContext) è un punto di partenza per tutte le operazioni ML.NET. L'inizializzazione di `mlContext` crea un nuovo ambiente ML.NET che può essere condiviso tra gli oggetti del flusso di lavoro di creazione del modello. Dal punto di vista concettuale è simile a `DBContext` in Entity Framework.
 
 1. Sostituire la riga `Console.WriteLine("Hello World!")` nel metodo `Main` con il codice seguente per dichiarare e inizializzare la variabile mlContext:
 
@@ -135,7 +133,7 @@ La [classe MLContext](xref:Microsoft.ML.MLContext) è un punto di partenza per t
     |Word     |Indice    |
     |---------|---------|
     |bambini     |  362    |
-    |desidera     |  181    |
+    |want     |  181    |
     |errato    |  355    |
     |effetti  |  302    |
     |ci si sente  |  547    |
@@ -226,7 +224,7 @@ La [classe MLContext](xref:Microsoft.ML.MLContext) è un punto di partenza per t
 
 1. La funzione [Predict ()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) esegue una stima su una singola riga di dati:
 
-    |Proprietà| Value|Type|
+    |Gli| Valore|Tipo di|
     |-------------|-----------------------|------|
     |Stima|[0,5459937, 0,454006255]|float []|
 

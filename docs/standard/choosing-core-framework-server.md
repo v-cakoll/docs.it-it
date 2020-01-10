@@ -4,12 +4,12 @@ description: Guida alla scelta dell'implementazione di .NET da prendere in consi
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: e5df362231b0786a58a4c3c9ae8f5a167930a12e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b2b9e15cfdfd63d070ae94c29a9f2d1a5b5c87b2
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799263"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738669"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Scelta di .NET Core o .NET Framework per le app server
 
@@ -46,7 +46,7 @@ Un'architettura di microservizi consente di usare una combinazione di tecnologie
 
 Le piattaforme di infrastruttura disponibili sono numerose. [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) è appositamente concepita per sistemi di microservizi complessi e di grandi dimensioni. [Servizio app di Azure](https://azure.microsoft.com/services/app-service/) è la soluzione ideale per i microservizi senza stato. Le alternative basate su Docker sono adatte a qualsiasi tipo di approccio ai microservizi, come descritto nella sezione [Contenitori](#containers). Grazie al supporto di .NET Core, tutte queste piattaforme rappresentano soluzioni ideali per l'hosting dei microservizi.
 
-Per altre informazioni sull'architettura dei microservizi, vedere [.NET Microservices. Architecture for Containerized .NET Applications](../architecture/microservices/index.md) (Microservizi .NET. Architettura per le applicazioni .NET incluse in contenitori).
+Per altre informazioni sull'architettura dei microservizi, vedere [microservizi .NET. Architettura per le applicazioni .NET in contenitori](../architecture/microservices/index.md).
 
 ### <a name="containers"></a>Contenitori
 
@@ -91,11 +91,11 @@ Esistono tecnologie di .NET Framework non disponibili in .NET Core. Alcune potre
 
 - Implementazione di servizi WCF: anche se è presente una [libreria WCF client](https://github.com/dotnet/wcf) per l'utilizzo di servizi WCF da .NET Core, l'implementazione di server WCF è attualmente disponibile solo in .NET Framework. Questo scenario non è attualmente previsto per .NET Core, ma verrà preso in considerazione per il futuro.
 
-- Servizi correlati ai flussi di lavoro: Windows Workflow Foundation (WF), Servizi flussi di lavoro (WCF e WF in un unico servizio) e WCF Data Services (in precedenza "ADO.NET Data Services") sono disponibili solo in .NET Framework.  e non è previsto alcun trasferimento di WF/WCF+WF/WCF Data Services in .NET Core.
+- Servizi correlati al flusso di lavoro: Windows Workflow Foundation (WF), Servizi flusso di lavoro (WCF e WF in un unico servizio) e WCF Data Services (in precedenza "ADO.NET Data Services") sono disponibili solo in .NET Framework  e non è previsto alcun trasferimento di WF/WCF+WF/WCF Data Services in .NET Core.
 
 - Supporto per i linguaggi: Visual Basic e F# sono attualmente supportati in .NET Core, ma non per tutti i tipi di progetto. Per un elenco dei modelli di progetto supportati, vedere le [opzioni del modello per dotnet new](../core/tools/dotnet-new.md#arguments).
 
-In aggiunta a quanto indicato nella roadmap ufficiale, sono presenti altri framework da trasferire in .NET Core. Per un elenco completo, vedere i problemi di CoreFX contrassegnati come [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core). Questo elenco non indica che Microsoft trasferirà necessariamente i componenti specificati in .NET Core, ma rappresenta solo il desiderio della community di procedere in tal senso. Se si è interessati a uno dei componenti contrassegnati come `port-to-core`, è consigliabile partecipare alle discussioni su GitHub. Se inoltre si ritiene di dover aggiungere alcune osservazioni, è possibile inserire un nuovo problema nel [repository CoreFX](https://github.com/dotnet/corefx/issues/new).
+In aggiunta a quanto indicato nella roadmap ufficiale, sono presenti altri framework da trasferire in .NET Core. Per un elenco completo, vedere i problemi di CoreFX contrassegnati come [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core). Questo elenco non indica che Microsoft trasferirà necessariamente i componenti specificati in .NET Core, ma rappresenta solo il desiderio della community di procedere in tal senso. Se si è interessati a uno dei componenti contrassegnati come `port-to-core`, è consigliabile partecipare alle discussioni su GitHub. Se si ritiene che qualcosa non sia presente, archiviare un nuovo problema nel [repository .NET](https://github.com/dotnet/runtime/issues/new).
 
 ### <a name="a-need-to-use-a-platform-that-doesnt-support-net-core"></a>Necessità di usare una piattaforma che non supporta .NET Core
 
@@ -110,4 +110,4 @@ Alcune piattaforme Microsoft o di terze parti non supportano .NET Core. Alcuni s
 - [Porting from .NET Framework to .NET Core](../core/porting/index.md) (Portabilità da .NET Framework a .NET Core)
 - [Introduzione a .NET e Docker](../core/docker/introduction.md)
 - [.NET Components Overview](components.md) (Panoramica dei componenti .NET)
-- [.NET Microservices. Architecture for Containerized .NET Applications](../architecture/microservices/index.md) (Microservizi .NET. Architettura per le applicazioni .NET incluse in contenitori)
+- [Microservizi .NET. Architettura per le applicazioni .NET in contenitori](../architecture/microservices/index.md)
