@@ -2,13 +2,12 @@
 title: Distribuzione di applicazioni .NET Core
 description: Informazioni sui modi per distribuire un'applicazione .NET Core.
 ms.date: 12/03/2018
-ms.custom: seodec18
-ms.openlocfilehash: fd15d41065b0a6ecb1a0bf04a0f0ab292a0a5fb7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 41c5285f2a9ddf38e4be7326bd5cba1c58370fe7
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089189"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740816"
 ---
 # <a name="net-core-application-deployment"></a>Distribuzione di applicazioni .NET Core
 
@@ -64,7 +63,7 @@ Sono presenti anche alcuni svantaggi:
 
 - La dimensione del pacchetto di distribuzione è relativamente elevata, poiché è necessario includere .NET Core, nonché l'app e le relative dipendenze di terze parti.
 
-  A partire da .NET Core 2.0, è possibile ridurre le dimensioni della distribuzione nei sistemi Linux di circa 28 MB usando la [*modalità invariante della globalizzazione*](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md). In genere, .NET Core in Linux si basa sulle [librerie ICU](http://icu-project.org) per il supporto della globalizzazione. Nella modalità invariante le librerie non sono incluse nella distribuzione e tutte le impostazioni cultura si comportano come le [impostazioni cultura inglese non dipendenti da paese/area geografica](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
+  A partire da .NET Core 2.0, è possibile ridurre le dimensioni della distribuzione nei sistemi Linux di circa 28 MB usando la [*modalità invariante della globalizzazione*](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md). In genere, .NET Core in Linux si basa sulle [librerie ICU](http://icu-project.org) per il supporto della globalizzazione. Nella modalità invariante le librerie non sono incluse nella distribuzione e tutte le impostazioni cultura si comportano come le [impostazioni cultura inglese non dipendenti da paese/area geografica](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
 
 - La distribuzione di numerose app .NET Core autonome a un sistema comporta l'utilizzo di quantità significative di spazio su disco, poiché ogni app duplica i file di .NET Core.
 

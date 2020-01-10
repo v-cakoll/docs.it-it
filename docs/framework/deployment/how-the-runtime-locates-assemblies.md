@@ -9,14 +9,12 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 01cef9646ca9c4f49ab8376364648f66b9651e4a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c462a6df2d5221907a6b574c33bb8fa1c52abac5
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052133"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741342"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Come il runtime individua gli assembly
 
@@ -29,13 +27,13 @@ Quando si tenta di individuare un assembly e risolvere un riferimento ad assembl
 
 ## <a name="initiating-the-bind"></a>Avvio dell'associazione
 
-Il processo di individuazione e associazione di un assembly inizia quando il runtime tenta di risolvere un riferimento a un altro assembly. Questo riferimento può essere statico o dinamico. I compilatore registra i riferimenti statici nei metadati del manifesto dell'assembly in fase di compilazione. I riferimenti dinamici vengono costruiti nel momento in cui vengono chiamati i diversi metodi, ad esempio <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>.
+Il processo di individuazione e associazione di un assembly inizia quando il runtime tenta di risolvere un riferimento a un altro assembly. Questo riferimento può essere statico o dinamico. I compilatore registra i riferimenti statici nei metadati del manifesto dell'assembly in fase di compilazione. I riferimenti dinamici vengono costruiti al momento, in base ai risultati delle chiamate a diversi metodi, ad esempio <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>.
 
 Il modo migliore per fare riferimento a un assembly consiste nell'usare un riferimento completo che includa il nome dell'assembly, la versione, le impostazioni cultura il e token di chiave pubblica (se presente). Il runtime usa queste informazioni per individuare l'assembly, seguendo i passaggi descritti più avanti in questa sezione. Il runtime usa lo stesso processo di risoluzione a prescindere che il riferimento riguardi un assembly statico o dinamico.
 
 Un riferimento dinamico a un assembly può essere eseguito anche fornendo il metodo di chiamata solo con informazioni parziali sull'assembly, ad esempio specificando solo il nome dell'assembly. In questo caso, l'assembly viene cercato solo nella directory dell'applicazione e non vengono eseguiti altri controlli. È possibile creare un riferimento parziale usando uno dei diversi metodi per il caricamento degli assembly, ad esempio <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> o <xref:System.AppDomain.Load%2A?displayProperty=nameWithType>.
 
-È infine possibile creare un riferimento dinamico usando un metodo come <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> e specificare solo informazioni parziali. In seguito verranno specificate informazioni complete sul riferimento usando l'elemento [\<qualifyAssembly>](../configure-apps/file-schema/runtime/qualifyassembly-element.md) nel file di configurazione dell'applicazione. Questo elemento consente di specificare le informazioni di riferimento complete (nome, versione, impostazioni cultura e, se applicabile, il token di chiave pubblica) nel file di configurazione dell'applicazione anziché nel codice. Questa tecnica si usa quando si vuole completare un riferimento a un assembly di fuori della directory dell'applicazione oppure se si vuole fare riferimento a un assembly nella Global Assembly Cache, ma si preferisce definirlo in modo completo nel file di configurazione anziché nel codice.
+È infine possibile creare un riferimento dinamico usando un metodo come <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> e specificare solo informazioni parziali. In seguito verranno specificate informazioni complete sul riferimento usando l'elemento [\<qualifyAssembly>](../configure-apps/file-schema/runtime/qualifyassembly-element.md) nel file di configurazione dell'applicazione. Questo elemento consente di specificare le informazioni di riferimento complete (nome, versione, impostazioni cultura e, se applicabile, il token di chiave pubblica) nel file di configurazione dell'applicazione anziché nel codice. Questa tecnica si usa quando si vuole completare un riferimento a un assembly di fuori della directory dell'applicazione oppure se si vuole fare riferimento a un assembly nella Global Assembly Cache, ma si preferisce definirlo in modo completo nel file di configurazione anziché nel codice.
 
 > [!NOTE]
 > Questo tipo di riferimento parziale non deve essere usato con gli assembly condivisi tra diverse applicazioni. Poiché le impostazioni di configurazione vengono applicate per applicazione e non per assembly, per usare questo tipo di riferimento parziale in un assembly condiviso ogni applicazione che usa l'assembly condiviso dovrebbe disporre delle informazioni complete nel file di configurazione.
@@ -53,7 +51,7 @@ Il runtime usa la procedura seguente per risolvere un riferimento ad assembly:
 
 4. [Individua tramite probe l'assembly](#step4) usando la procedura seguente:
 
-    1. Se i criteri dell'editore e della configurazione non hanno effetto sul riferimento originale e se la richiesta di associazione è stata creata usando il metodo <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>, il runtime cerca suggerimenti per la posizione.
+    1. Se i criteri dell'editore e della configurazione non hanno effetto sul riferimento originale e se la richiesta di associazione è stata creata usando il metodo <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> , il runtime cerca suggerimenti per la posizione.
 
     2. Se viene trovata una codebase nei file di configurazione, il runtime controlla solo questo percorso. Se la probe non riesce, il runtime determina che la richiesta di associazione non è riuscita e non vengono eseguite altre individuazioni tramite probe.
 
@@ -83,7 +81,7 @@ Questi file seguono la stessa sintassi e forniscono informazioni quali i reindir
 
 Common Language Runtime controlla innanzitutto il file di configurazione dell'applicazione per le informazioni che eseguono l'override delle informazioni sulla versione memorizzate nel manifesto dell'assembly chiamante. Il file di configurazione dell'applicazione può essere distribuito con un'applicazione, ma non è necessario per la sua esecuzione. In genere il recupero di questo file è quasi istantaneo, ma in situazioni in cui la base dell'applicazione si trova in un computer remoto, ad esempio in uno scenario basato su Web di Internet Explorer, il file di configurazione deve essere scaricato.
 
-Per gli eseguibili del client, il file di configurazione dell'applicazione si trova nella stessa directory del file eseguibile dell'applicazione e ha lo stesso nome di base dell'eseguibile con estensione config. Ad esempio, il file di configurazione per C:\Programmi\Myapp\Myapp.exe è C:\Programmi\Myapp\Myapp.exe.config. In un scenario basato sul browser nel file HTML deve essere usato l'elemento **\<link>** per puntare in modo esplicito al file di configurazione.
+Per gli eseguibili del client, il file di configurazione dell'applicazione si trova nella stessa directory del file eseguibile dell'applicazione e ha lo stesso nome di base dell'eseguibile con estensione config. Ad esempio, il file di configurazione per C:\Program Files\Myapp\Myapp.exe è C:\Program C:\Programmi\Myapp\Myapp.exe.config. In uno scenario basato su browser, il file HTML deve usare l'elemento **\<link >** per puntare in modo esplicito al file di configurazione.
 
 Il codice seguente fornisce un esempio semplice di un file di configurazione dell'applicazione. Questo esempio aggiunge <xref:System.Diagnostics.TextWriterTraceListener> a una raccolta <xref:System.Diagnostics.Debug.Listeners%2A> per consentire la registrazione di informazioni di debug in un file.
 

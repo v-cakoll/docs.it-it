@@ -1,16 +1,15 @@
 ---
 title: Tipi di puntatori - Guida per programmatori C#
-ms.custom: seodec18
 ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: b9b9f145f8f2d945fa06d53efa89f5754766963f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: fe0eacbd67917826c88c5ef68bb8d8aeab9ba251
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423124"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711818"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Tipi di puntatori (Guida per programmatori C#)
 
@@ -25,7 +24,7 @@ Il tipo specificato prima di `*` in un tipo di puntatore viene chiamato **tipo r
 
 I tipi di puntatore non ereditano da [object](../../language-reference/builtin-types/reference-types.md). Non sono inoltre previste conversioni tra i tipi di puntatore e `object`. Con i puntatori non sono inoltre supportate le operazioni di boxing e unboxing. È tuttavia possibile eseguire conversioni tra tipi di puntatore diversi e tra tipi di puntatore e tipi integrali.
 
-Quando si dichiarano più puntatori nella stessa dichiarazione, l'asterisco (*) viene scritto solo con il tipo sottostante. Non viene utilizzato come prefisso di ogni nome di puntatore. Esempio:
+Quando si dichiarano più puntatori nella stessa dichiarazione, l'asterisco (*) viene scritto solo con il tipo sottostante. Non viene utilizzato come prefisso di ogni nome di puntatore. Ad esempio:
 
 ```csharp
 int* p1, p2, p3;   // Ok
@@ -64,7 +63,7 @@ Tenere presente che il passaggio di puntatori tra metodi può generare un compor
 
 Nella tabella riportata di seguito sono elencati gli operatori e le istruzioni che è possibile utilizzare con i puntatori in un contesto unsafe:
 
-|Operatore/istruzione|Usa|
+|Operatore/istruzione|Utilizza|
 |-------------------------|---------|
 |`*`|Esegue il riferimento indiretto al puntatore.|
 |`->`|Accede a un membro di struct tramite un puntatore.|
@@ -87,5 +86,6 @@ Per altre informazioni, vedere la sezione [Tipi puntatore](~/_csharplang/spec/un
 - [Guida per programmatori C#](../index.md)
 - [Codice unsafe e puntatori](index.md)
 - [Conversioni puntatore](pointer-conversions.md)
-- [Tipi](/dotnet/csharp/language-reference/keywords)
+- [Tipi riferimento](../../language-reference/keywords/reference-types.md)
+- [Tipi valore](../../language-reference/keywords/value-types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)
