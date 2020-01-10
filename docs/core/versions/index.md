@@ -1,15 +1,13 @@
 ---
 title: Come viene specificata la versione del runtime di .NET Core e di .NET Core SDK
 description: Questo articolo illustra come viene specificata la versione di .NET Core SDK e del runtime di .NET Core (simile al Versionamento Semantico).
-author: bleroy
 ms.date: 07/26/2018
-ms.custom: seodec18
-ms.openlocfilehash: b8cfb2d40b1ae88ef03daca6c31b283256bc6f26
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: c85a2112b439768068663688947960ac814de824
+ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179964"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75777326"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>Panoramica di come viene specificata la versione di .NET Core
 
@@ -25,14 +23,14 @@ Il runtime di .NET Core e .NET Core SDK aggiungono le nuove funzionalità con fr
 
 La terza posizione del numero di versione del SDK comunica la versione secondaria e il numero di patch. La versione secondaria viene moltiplicata per 100. Quindi la versione secondaria 1, versione patch 2 viene rappresentata come 102. Le due cifre finali rappresentano il numero della patch. Ad esempio la versione .NET Core 2.2 può creare versioni come quelle della tabella seguente:
 
-| Modifica                | Runtime di .NET Core | .NET Core SDK (*) |
+| Modifica                | Runtime di .NET Core | .NET Core SDK (\*) |
 |-----------------------|-------------------|-------------------|
 | Versione iniziale       | 2.2.0             | 2.2.100           |
 | Patch SDK             | 2.2.0             | 2.2.101           |
 | Runtime e patch SDK | 2.2.1             | 2.2.102           |
 | Modifica di funzionalità nel SDK    | 2.2.1             | 2.2.200           |
 
-(\*) Questo grafico usa come esempio una versione futura del runtime .NET Core 2.2, perché a causa di un artefatto storico il primo SDK per .NET Core 2.1 è stato il 2.1.300. Per altre informazioni, vedere [Scelta della versione di .NET Core](selection.md).
+(\*) Questo grafico usa il runtime di .NET Core 2,2 come esempio perché un artefatto storico significava il primo SDK per .NET Core 2,1 è 2.1.300. Per altre informazioni, vedere [Scelta della versione di .NET Core](selection.md).
 
 NOTE:
 

@@ -3,13 +3,12 @@ title: Scrivere un host di runtime di .NET Core personalizzato
 description: Informazioni su come ospitare il runtime di .NET Core dal codice nativo per supportare scenari avanzati che richiedono il controllo del funzionamento del runtime di .NET Core.
 author: mjrousos
 ms.date: 12/21/2018
-ms.custom: seodec18
-ms.openlocfilehash: b4d36d1ded3af1c6f1181712080e9fcd18a5a468
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: 83012dd70c2480ce488c361e821694fb957d12d9
+ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75339730"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75777224"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Scrivere un host di .NET Core personalizzato per controllare il runtime di .NET dal codice nativo
 
@@ -29,10 +28,11 @@ Poiché sarà necessaria anche un'applicazione .NET Core semplice con cui testar
 Per l'hosting di .NET Core è possibile usare tre API diverse. Questo articolo (e gli [esempi](https://github.com/dotnet/samples/tree/master/core/hosting)associati) copre tutte le opzioni.
 
 * La soluzione preferita per l'hosting del runtime di .NET Core in .NET Core 3.0 e versioni successive è costituita dalle API delle librerie `nethost` e `hostfxr`. Questi punti di ingresso gestiscono la complessità legata alla ricerca e alla configurazione del runtime per l'inizializzazione e consentono sia l'avvio di un'applicazione gestita sia la chiamata a un metodo gestito statico.
-* La soluzione preferita per l'hosting del runtime di .NET Core nelle versioni precedenti .NET Core 3.0 è costituita dall'API [CoreClrHost.h](https://github.com/dotnet/coreclr/blob/master/src/coreclr/hosts/inc/coreclrhost.h). Questa API espone le funzioni necessarie per avviare e arrestare facilmente il runtime e per richiamare il codice gestito tramite l'avvio di un file con estensione exe gestito o la chiamata di metodi gestiti statici.
-* È possibile ospitare .NET Core anche tramite l'interfaccia `ICLRRuntimeHost4` in [mscoree.h](https://github.com/dotnet/coreclr/blob/master/src/pal/prebuilt/inc/mscoree.h). Questa API è stata introdotta prima di CoreClrHost.h ed è quindi possibile che se ne sia già osservato l'uso in host precedenti. L'API funziona ancora e consente un livello di controllo leggermente superiore sul processo di hosting rispetto a CoreClrHost. Per la maggior parte degli scenari, CoreClrHost.h è tuttavia il metodo attualmente preferito grazie alla maggiore semplicità delle relative API.
+* La soluzione preferita per l'hosting del runtime di .NET Core nelle versioni precedenti .NET Core 3.0 è costituita dall'API [CoreClrHost.h](https://github.com/dotnet/runtime/blob/master/src/coreclr/src/hosts/inc/coreclrhost.h). Questa API espone le funzioni necessarie per avviare e arrestare facilmente il runtime e per richiamare il codice gestito tramite l'avvio di un file con estensione exe gestito o la chiamata di metodi gestiti statici.
+* È possibile ospitare .NET Core anche tramite l'interfaccia `ICLRRuntimeHost4` in [mscoree.h](https://github.com/dotnet/runtime/blob/master/src/coreclr/src/pal/prebuilt/inc/mscoree.h). Questa API è stata introdotta prima di CoreClrHost.h ed è quindi possibile che se ne sia già osservato l'uso in host precedenti. L'API funziona ancora e consente un livello di controllo leggermente superiore sul processo di hosting rispetto a CoreClrHost. Per la maggior parte degli scenari, CoreClrHost.h è tuttavia il metodo attualmente preferito grazie alla maggiore semplicità delle relative API.
 
 ## <a name="sample-hosts"></a>Host di esempio
+
 Nel repository GitHub dotnet/samples sono disponibili [host di esempio](https://github.com/dotnet/samples/tree/master/core/hosting) che illustrano i passaggi descritti nelle esercitazioni riportate di seguito. I commenti presenti negli esempi associano chiaramente i passaggi numerati di queste esercitazioni al punto in cui vengono eseguiti nell'esempio. Per istruzioni sul download, vedere [Esempi ed esercitazioni](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 Tenere presente che gli host di esempio sono destinati all'uso ai fini dell'apprendimento. In questi host, progettati per enfatizzare la leggibilità più che l'efficienza, il controllo degli errori non è prioritario.
@@ -83,7 +83,7 @@ L'host nativo può ora chiamare il metodo gestito e passare i parametri desidera
 
 La procedura seguente illustra come usare l'API CoreClrHost.h per avviare il runtime di .NET Core in un'applicazione nativa e chiamare un metodo statico gestito. I frammenti di codice disponibili in questo documento usano alcune API specifiche di Windows, ma l'[host di esempio completo](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithCoreClrHost) include percorsi di codice Windows e Linux.
 
-L'[host Unix CoreRun](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts/unixcorerun) mostra un esempio più complesso, tratto dal mondo reale, di hosting tramite coreclrhost.h.
+L'[host Unix CoreRun](https://github.com/dotnet/runtime/tree/master/src/coreclr/src/hosts/unixcorerun) mostra un esempio più complesso, tratto dal mondo reale, di hosting tramite coreclrhost.h.
 
 ### <a name="step-1---find-and-load-coreclr"></a>Passaggio 1: Trovare e caricare CoreCLR
 
@@ -165,13 +165,13 @@ CoreCLR non supporta la reinizializzazione o lo scaricamento. Non chiamare di nu
 
 Come accennato in precedenza, CoreClrHost.h è attualmente il metodo preferito per l'hosting del runtime di .NET Core. Ma è ancora possibile usare l'interfaccia `ICLRRuntimeHost4` se le interfacce CoreClrHost.h non sono sufficienti, ad esempio se sono necessari flag di avvio non standard o se è necessario un AppDomainManager nel dominio predefinito. Queste istruzioni illustrano la procedura di hosting di .NET Core tramite mscoree.h.
 
-L'[host CoreRun](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts/corerun) mostra un esempio più complesso, tratto dal mondo reale, di hosting tramite mscoree.h.
+L'[host CoreRun](https://github.com/dotnet/runtime/tree/master/src/coreclr/src/hosts/corerun) mostra un esempio più complesso, tratto dal mondo reale, di hosting tramite mscoree.h.
 
 ### <a name="a-note-about-mscoreeh"></a>Nota su mscoree.h
-L'interfaccia di hosting di .NET Core `ICLRRuntimeHost4` è definita in [MSCOREE.IDL](https://github.com/dotnet/coreclr/blob/master/src/inc/MSCOREE.IDL). Una versione dell'intestazione di questo file (mscoree.h) a cui l'host dovrà fare riferimento viene prodotta tramite MIDL quando viene compilato il [runtime di .NET Core](https://github.com/dotnet/coreclr/). Se non si vuole compilare il runtime di .NET Core, mscoree.h è disponibile anche come [intestazione precompilata](https://github.com/dotnet/coreclr/tree/master/src/pal/prebuilt/inc) nel repository dotnet/coreclr. Le [istruzioni sulla compilazione del runtime di .NET Core](https://github.com/dotnet/coreclr#building-the-repository) sono disponibili nel relativo repository GitHub.
+L'interfaccia di hosting di .NET Core `ICLRRuntimeHost4` è definita in [MSCOREE.IDL](https://github.com/dotnet/runtime/blob/master/src/coreclr/src/inc/MSCOREE.IDL). Una versione dell'intestazione di questo file (mscoree.h) a cui l'host dovrà fare riferimento viene prodotta tramite MIDL quando viene compilato il [runtime di .NET Core](https://github.com/dotnet/runtime/). Se non si vuole compilare il runtime di .NET Core, Mscoree. h è disponibile anche come [intestazione predefinita](https://github.com/dotnet/runtime/blob/master/src/coreclr/src/pal/prebuilt/inc/) nel repository DotNet/Runtime.
 
 ### <a name="step-1---identify-the-managed-entry-point"></a>Passaggio 1: Identificare il punto di ingresso gestito
-Dopo il riferimento alle intestazioni necessarie, ad esempio [mscoree.h](https://github.com/dotnet/coreclr/tree/master/src/pal/prebuilt/inc/mscoree.h) e stdio.h, una delle prime operazioni che devono essere eseguite da un host .NET Core consiste nell'individuare il punto di ingresso gestito da usare. Nell'host di esempio, questa operazione viene eseguita semplicemente prendendo il primo argomento della riga di comando nell'host come percorso di un binario gestito di cui verrà eseguito il `main` metodo.
+Dopo il riferimento alle intestazioni necessarie, ad esempio [mscoree.h](https://github.com/dotnet/runtime/blob/master/src/coreclr/src/pal/prebuilt/inc/mscoree.h) e stdio.h, una delle prime operazioni che devono essere eseguite da un host .NET Core consiste nell'individuare il punto di ingresso gestito da usare. Nell'host di esempio, questa operazione viene eseguita semplicemente prendendo il primo argomento della riga di comando nell'host come percorso di un binario gestito di cui verrà eseguito il `main` metodo.
 
 [!code-cpp[NetCoreHost#1](~/samples/core/hosting/HostWithMscoree/host.cpp#1)]
 
