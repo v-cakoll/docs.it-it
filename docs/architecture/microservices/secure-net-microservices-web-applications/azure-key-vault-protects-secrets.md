@@ -4,12 +4,12 @@ description: Sicurezza in microservizi .NET e applicazioni Web - Azure Key Vault
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 63bf357c95b82a820b6dfb6a2d24a5d89f66de72
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 4d121f584188c5d5fa9ddf0d91bea5e107eff0cb
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675668"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899663"
 ---
 # <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a>Usare Azure Key Vault per proteggere i segreti in fase di produzione
 
@@ -17,7 +17,7 @@ I segreti archiviati come variabili di ambiente o dallo strumento Secret Manager
 
 Il pacchetto **Microsoft.Extensions.Configuration.AzureKeyVault** consente alle applicazioni ASP.NET Core di leggere le informazioni di configurazione da Azure Key Vault. Per iniziare a usare segreti da Azure Key Vault, eseguire i passaggi seguenti:
 
-1. Registrare l'applicazione come applicazione Azure AD. L'accesso agli insiemi di credenziali delle chiavi viene gestito da Azure AD. Questa operazione può essere eseguita tramite il portale di gestione di Azure.
+1. Registrare l'applicazione come applicazione Azure AD. L'accesso agli insiemi di credenziali delle chiavi è gestito da Azure AD. Questa operazione può essere eseguita tramite il portale di gestione di Azure.
 
    In alternativa, se si vuole che l'applicazione effettui l'autenticazione tramite certificato anziché tramite password o segreto client, è possibile usare il cmdlet PowerShell [New-AzADApplication](/powershell/module/az.resources/new-azadapplication). Il certificato che si registra con Azure Key Vault ha bisogno della sola chiave pubblica. L'applicazione userà la chiave privata.
 
@@ -50,7 +50,7 @@ Il pacchetto **Microsoft.Extensions.Configuration.AzureKeyVault** consente alle 
   [https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings](/aspnet/core/security/data-protection/configuration/default-settings)
 
 - Repository GitHub **Microsoft.Extensions.Configuration.KeyPerFile**. \
-  <https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile>
+  <https://github.com/dotnet/extensions/tree/master/src/Configuration/Config.KeyPerFile>
 
 >[!div class="step-by-step"]
 >[Precedente](developer-app-secrets-storage.md)

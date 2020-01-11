@@ -2,12 +2,12 @@
 title: Usare HttpClientFactory per l'implementazione di richieste HTTP resilienti
 description: Informazioni su come usare HttpClientFactory, disponibile a partire da .NET Core 2.1, per la creazione di istanze `HttpClient`, semplificandone l'uso nelle applicazioni.
 ms.date: 08/08/2019
-ms.openlocfilehash: 9eff4a01361b3dc6f7471bc012c945d048b9a276
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 1a6d65509d669166e73ad907b506bae7fa26536d
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737760"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900319"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Usare HttpClientFactory per l'implementazione di richieste HTTP resilienti
 
@@ -37,7 +37,7 @@ L'oggetto `HttpClientFactory` è progettato per:
 - Gestire la durata di `HttpClientMessageHandlers` per evitare i problemi o i problemi indicati che possono verificarsi quando si gestiscono autonomamente `HttpClient` durate.
 
 > [!NOTE]
-> `HttpClientFactory` è strettamente legata all'implementazione di inserimento delle dipendenze nel pacchetto NuGet `Microsoft.Extensions.DependencyInjection`. Per altre informazioni sull'uso di altri contenitori di inserimento di dipendenze, vedere questa [discussione su GitHub](https://github.com/aspnet/Extensions/issues/1345).
+> `HttpClientFactory` è strettamente legata all'implementazione di inserimento delle dipendenze nel pacchetto NuGet `Microsoft.Extensions.DependencyInjection`. Per altre informazioni sull'uso di altri contenitori di inserimento di dipendenze, vedere questa [discussione su GitHub](https://github.com/dotnet/extensions/issues/1345).
 
 ## <a name="multiple-ways-to-use-httpclientfactory"></a>Modi diversi di usare HttpClientFactory
 
@@ -119,7 +119,7 @@ Ogni client tipizzato o client denominato può avere un proprio valore configura
 
 ### <a name="implement-your-typed-client-classes-that-use-the-injected-and-configured-httpclient"></a>Implementare le classi di client tipizzato che usano l'oggetto HttpClient inserito e configurato
 
-È necessario avere definito in precedenza le classi di client tipizzato, ad esempio le classi nell'esempio di codice come "BasketService", "CatalogService", "OrderingService" e così via. Un client tipizzato è una classe che accetta un oggetto `HttpClient` (inserito tramite il relativo costruttore) e lo usa per chiamare un servizio HTTP remoto. Di seguito è riportato un esempio:
+È necessario avere definito in precedenza le classi di client tipizzato, ad esempio le classi nell'esempio di codice come "BasketService", "CatalogService", "OrderingService" e così via. Un client tipizzato è una classe che accetta un oggetto `HttpClient` (inserito tramite il relativo costruttore) e lo usa per chiamare un servizio HTTP remoto. Ad esempio:
 
 ```csharp
 public class CatalogService : ICatalogService
@@ -188,14 +188,14 @@ Il codice visualizzato fino a questo punto esegue solo normali richieste HTTP. L
 - **Uso di HttpClientFactory in .NET Core**  
   [https://docs.microsoft.com/aspnet/core/fundamentals/http-requests](/aspnet/core/fundamentals/http-requests)
 
-- **HttpClientFactory codice sorgente nel repository GitHub `aspnet/Extensions`**  
-  <https://github.com/aspnet/Extensions/tree/master/src/HttpClientFactory>
+- **HttpClientFactory codice sorgente nel repository GitHub `dotnet/extensions`**  
+  <https://github.com/dotnet/extensions/tree/master/src/HttpClientFactory>
 
 - **Polly (libreria .NET con funzionalità di resilienza e di gestione degli errori temporanei)**  
   <http://www.thepollyproject.org/>
   
 - **Uso di HttpClientFactory senza inserimento delle dipendenze (problema di GitHub)**  
-  <https://github.com/aspnet/Extensions/issues/1345>
+  <https://github.com/dotnet/extensions/issues/1345>
 
 >[!div class="step-by-step"]
 >[Precedente](explore-custom-http-call-retries-exponential-backoff.md)

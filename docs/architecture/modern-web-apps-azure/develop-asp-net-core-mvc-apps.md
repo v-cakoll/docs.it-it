@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Svil
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: b57741ed68b3481ad2c85b1c3d62717f09c7570e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: efb57b4290825be9f21c61c8dee5af073d264d3a
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971595"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899702"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Sviluppare app ASP.NET Core MVC
 
@@ -51,7 +51,7 @@ app.UseMvc(routes =>
 
 In questo esempio è stata aggiunta una route denominata "default" alla tabella di routing. Definisce un modello di route con segnaposto per _controller_, _azione_e _ID_. Ai segnaposto del controller e dell'azione è stato specificato il valore predefinito ("Home" e "index", rispettivamente) e il segnaposto ID è facoltativo (in virtù di un "?" applicato). La convenzione definita in questo caso stabilisce che la prima parte di una richiesta deve corrispondere al nome del controller, la seconda parte all'azione e, se necessaria, una terza parte al parametro dell'ID. Le route convenzionali vengono in genere definite in un'unica posizione per l'applicazione, ad esempio nel metodo Configure della classe Startup.
 
-Le route di attributi vengono applicate a controller e azioni direttamente anziché essere specificate a livello globale. Ciò offre il vantaggio di renderle più facilmente individuabili durante la ricerca di un metodo specifico, ma significa che le informazioni di routing non vengono mantenute in un'unica posizione nell'applicazione. Con le route di attributi, è possibile specificare in modo semplice più route per una determinata azione nonché combinare le route tra i controller e le azioni. Di seguito è riportato un esempio:
+Le route di attributi vengono applicate a controller e azioni direttamente anziché essere specificate a livello globale. Ciò offre il vantaggio di renderle più facilmente individuabili durante la ricerca di un metodo specifico, ma significa che le informazioni di routing non vengono mantenute in un'unica posizione nell'applicazione. Con le route di attributi, è possibile specificare in modo semplice più route per una determinata azione nonché combinare le route tra i controller e le azioni. Ad esempio:
 
 ```csharp
 [Route("Home")]
@@ -324,7 +324,7 @@ Per altre informazioni sull'implementazione di filtri e per scaricare un esempio
 > - **MSDN - Real World ASP.NET Core MVC Filters (MSDN - Filtri reali di ASP.NET Core MVC)**  
 >   <https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters>
 
-## <a name="security"></a>Sicurezza
+## <a name="security"></a>Sicurezza -
 
 La protezione delle applicazioni Web è un argomento molto ampio con numerose considerazioni. A un livello di base, per garantire la sicurezza è necessario conoscere l'identità dell'utente da cui proviene una determinata richiesta e assicurarsi che la richiesta abbia accesso solo alle risorse necessarie. L'autenticazione è il processo di confronto delle credenziali specificate con una richiesta con quelle di un archivio di dati attendibili per verificare se la richiesta deve essere trattata come proveniente da un'entità nota. L'autorizzazione è il processo di limitazione dell'accesso a determinate risorse in base all'identità utente. Un terzo aspetto relativo alla sicurezza è la protezione delle richieste dall'intercettazione da terze parti per cui è necessario [assicurarsi che l'applicazione usi SSL](/aspnet/core/security/enforcing-ssl).
 
@@ -447,7 +447,7 @@ Oltre a visualizzare le pagine e a rispondere alle richieste di dati tramite le 
 
 ASP.NET Core SignalR è disponibile con ASP.NET Core a partire dalla versione 2.1.
 
-La comunicazione con il client in tempo reale, con l'utilizzo diretto di WebSocket o altre tecniche, è utile in diversi scenari di applicazioni. Di seguito sono riportati alcuni esempi:
+La comunicazione con il client in tempo reale, con l'utilizzo diretto di WebSocket o altre tecniche, è utile in diversi scenari di applicazioni. Alcuni esempi includono:
 
 - Applicazioni live chat room
 
@@ -500,7 +500,7 @@ Esaminare i modi in cui le applicazioni comunicano direttamente con le applicazi
 > ### <a name="references--client-communication"></a>Riferimenti - Comunicazione con i client
 >
 > - **ASP.NET Core SignalR**  
->   <https://github.com/aspnet/SignalR>
+>   <https://github.com/dotnet/aspnetcore/tree/master/src/SignalR>
 > - **WebSocket Manager**  
 >   https://github.com/radu-matei/websocket-manager
 
