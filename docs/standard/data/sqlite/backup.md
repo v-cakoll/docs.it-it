@@ -2,12 +2,12 @@
 title: Backup online.
 ms.date: 12/13/2019
 description: Informazioni su come usare la funzionalità di backup online di SQLite.
-ms.openlocfilehash: 885aa2c5555b58deb2551c0a4e6933742a093457
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: d857dcb69f2b2d10b034a0abf222b30c2e20bb41
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75447097"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901280"
 ---
 # <a name="online-backup"></a>Backup online.
 
@@ -15,4 +15,4 @@ SQLite può eseguire il backup dei file di database durante l'esecuzione dell'ap
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/BackupSample/Program.cs?name=snippet_Backup)]
 
-Attualmente, `BackupDatabase` eseguirà il backup del database il più rapidamente possibile e blocca le altre connessioni dalla scrittura al database. Il problema [#13834](https://github.com/aspnet/EntityFrameworkCore/issues/13834) fornirebbe un'API alternativa per eseguire il backup del database in background e consentire ad altre connessioni di interrompere il backup e scrivere nel database. Se si è interessati, fornire commenti e suggerimenti sul problema.
+Attualmente, `BackupDatabase` eseguirà il backup del database il più rapidamente possibile e blocca le altre connessioni dalla scrittura al database. Il problema [#13834](https://github.com/dotnet/efcore/issues/13834) fornirebbe un'API alternativa per eseguire il backup del database in background e consentire ad altre connessioni di interrompere il backup e scrivere nel database. Se si è interessati, fornire commenti e suggerimenti sul problema.

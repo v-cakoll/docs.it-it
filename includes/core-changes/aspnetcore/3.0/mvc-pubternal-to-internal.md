@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 09fd95ba5f3aee59f2abdfbb4e64eb6202e2b873
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 5741e8cdd51e00d5459c4c1032a56682429aab17
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394426"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901834"
 ---
 ### <a name="mvc-pubternal-types-changed-to-internal"></a>MVC: i tipi "Pubternal" sono stati modificati in Internal
 
 In ASP.NET Core 3,0 tutti i tipi "pubternal" in MVC sono stati aggiornati per essere `public` in uno spazio dei nomi supportato o `internal` a seconda delle esigenze.
 
-#### <a name="change-description"></a>Descrizione della modifica
+#### <a name="change-description"></a>Descrizione delle modifiche
 
 In ASP.NET Core i tipi "pubternal" sono dichiarati come `public` ma risiedono in uno spazio dei nomi con suffisso `.Internal`. Anche se questi tipi sono `public`, non dispongono di criteri di supporto e sono soggetti a modifiche di rilievo. Sfortunatamente, l'uso accidentale di questi tipi è stato comune, con conseguente riduzione delle modifiche apportate a questi progetti e della possibilità di mantenere il Framework.
 
@@ -34,9 +34,9 @@ L'uso accidentale dei tipi "pubternal" è stato comune, con conseguente riduzion
 
 Se si usano tipi che sono diventati realmente `public` e sono stati spostati in un nuovo spazio dei nomi supportato, aggiornare i riferimenti in modo che corrispondano ai nuovi spazi dei nomi.
 
-Se si usano i tipi che sono stati contrassegnati come `internal`, è necessario trovare un'alternativa. I tipi "pubternal" precedenti non erano mai supportati per l'uso pubblico. Se in questi spazi dei nomi sono presenti tipi specifici che sono fondamentali per le app, archiviare un problema in [ASPNET/AspNetCore](https://github.com/aspnet/AspNetCore/issues). È possibile che vengano apportate alcune considerazioni per rendere `public`i tipi richiesti.
+Se si usano i tipi che sono stati contrassegnati come `internal`, è necessario trovare un'alternativa. I tipi "pubternal" precedenti non erano mai supportati per l'uso pubblico. Se in questi spazi dei nomi sono presenti tipi specifici che sono fondamentali per le app, inviare un problema in [DotNet/aspnetcore](https://github.com/dotnet/aspnetcore/issues). È possibile che vengano apportate alcune considerazioni per rendere `public`i tipi richiesti.
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>Categoria
 
 ASP.NET Core
 

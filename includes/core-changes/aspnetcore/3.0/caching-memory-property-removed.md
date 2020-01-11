@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: 7d40324e6b0bc4afab9dd39b236f0909f360cc9b
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 2c1362d6982206b14475f77700add0bae61da173
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394137"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901960"
 ---
 ### <a name="caching-compactonmemorypressure-property-removed"></a>Caching: la proprietà CompactOnMemoryPressure è stata rimossa
 
-La versione di ASP.NET Core 3,0 ha rimosso le [API MemoryCacheOptions obsolete](https://github.com/aspnet/Extensions/blob/dc5c593da7b72c82e6fe85abb91d03818f9b700c/src/Caching/Memory/src/MemoryCacheOptions.cs#L17-L18).
+La versione di ASP.NET Core 3,0 ha rimosso le [API MemoryCacheOptions obsolete](https://github.com/dotnet/extensions/blob/dc5c593da7b72c82e6fe85abb91d03818f9b700c/src/Caching/Memory/src/MemoryCacheOptions.cs#L17-L18).
 
-#### <a name="change-description"></a>Descrizione della modifica
+#### <a name="change-description"></a>Descrizione delle modifiche
 
-Questa modifica è un completamento di [ASPNET/Caching # 221](https://github.com/aspnet/Caching/issues/221). Per informazioni, vedere [ASPNET/Extensions # 1062](https://github.com/aspnet/Extensions/issues/1062).
+Questa modifica è un completamento di [ASPNET/Caching # 221](https://github.com/aspnet/Caching/issues/221). Per informazioni, vedere [DotNet/Extensions # 1062](https://github.com/dotnet/extensions/issues/1062).
 
 #### <a name="version-introduced"></a>Versione introdotta
 
@@ -20,7 +20,7 @@ Questa modifica è un completamento di [ASPNET/Caching # 221](https://github.com
 
 #### <a name="old-behavior"></a>Comportamento precedente
 
-la proprietà `MemoryCacheOptions.CompactOnMemoryPressure` era disponibile.
+Proprietà `MemoryCacheOptions.CompactOnMemoryPressure` disponibile.
 
 #### <a name="new-behavior"></a>Nuovo comportamento
 
@@ -32,9 +32,9 @@ La compattazione automatica della cache ha causato problemi. Per evitare comport
 
 #### <a name="recommended-action"></a>Azione consigliata
 
-Per compattare la cache, abbreviata in `MemoryCache` e chiamare `Compact` quando necessario.
+Per compattare la cache, abbreviata per `MemoryCache` e chiamare `Compact` quando necessario.
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>Categoria
 
 ASP.NET Core
 

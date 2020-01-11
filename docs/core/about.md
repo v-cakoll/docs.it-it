@@ -2,12 +2,12 @@
 title: Informazioni su .NET Core
 description: Informazioni su .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: c6d120445bc6625b37c461c1bf2686b10833dc13
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 12611c2cd0b872a683d070ff17dcf9f111578627
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740950"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900625"
 ---
 # <a name="about-net-core"></a>Informazioni su .NET Core
 
@@ -57,7 +57,7 @@ Questa integrazione viene fornita, in parte, dai collaboratori dei progetti [Omn
 .NET Core è costituito dalle parti seguenti:
 
 - Il [runtime di .NET Core](https://github.com/dotnet/runtime/tree/master/src/coreclr), che fornisce un sistema di tipi, il caricamento di assembly, una Garbage Collector, l'interoperabilità nativa e altri servizi di base. Le [librerie .NET Core Framework](https://github.com/dotnet/runtime/tree/master/src/libraries) forniscono tipi di dati primitivi, tipi di composizione delle app e utilità fondamentali.
-- Il [runtime di ASP.NET](https://github.com/aspnet/home), che fornisce un Framework per la compilazione di moderne applicazioni connesse a Internet basate su cloud, ad esempio app Web, app per le cose e backend per dispositivi mobili.
+- Il [runtime di ASP.NET Core](https://github.com/dotnet/aspnetcore), che fornisce un Framework per la compilazione di moderne applicazioni connesse a Internet basate su cloud, ad esempio app Web, app per le cose e backend per dispositivi mobili.
 - Gli [strumenti dell'interfaccia della riga di comando di .NET Core](https://github.com/dotnet/sdk) e compilatori di linguaggio ([Roslyn](https://github.com/dotnet/roslyn) e [F#](https://github.com/microsoft/visualfsharp)) che rendono possibile l'esperienza di sviluppo .NET Core.
 - [dotnet tool](https://github.com/dotnet/core-setup), usato per avviare le app e gli strumenti dell'interfaccia della riga di comando di .NET Core. Seleziona il runtime e ospita il runtime, fornisce un criterio di caricamento degli assembly e avvia le app e gli strumenti.
 

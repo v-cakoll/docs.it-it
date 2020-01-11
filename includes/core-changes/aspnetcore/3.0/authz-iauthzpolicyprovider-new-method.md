@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 74b989a2413d2192f7cf5208e400eaed879ea096
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 58dbb73902c0226fa81acf1a70de2160f406f6c6
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198461"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901936"
 ---
 ### <a name="authorization-iauthorizationpolicyprovider-implementations-require-new-method"></a>Autorizzazione: le implementazioni di IAuthorizationPolicyProvider richiedono un nuovo metodo
 
-In ASP.NET Core 3,0 è stato aggiunto un nuovo metodo `GetFallbackPolicyAsync` a `IAuthorizationPolicyProvider`. Questo criterio di fallback viene utilizzato dal middleware di autorizzazione quando non viene specificato alcun criterio.
+In ASP.NET Core 3,0 è stato aggiunto un nuovo metodo di `GetFallbackPolicyAsync` al `IAuthorizationPolicyProvider`. Questo criterio di fallback viene utilizzato dal middleware di autorizzazione quando non viene specificato alcun criterio.
 
-Per ulteriori informazioni, vedere [ASPNET/AspNetCore # 9759](https://github.com/aspnet/AspNetCore/pull/9759).
+Per ulteriori informazioni, vedere [DotNet/aspnetcore # 9759](https://github.com/dotnet/aspnetcore/pull/9759).
 
 #### <a name="version-introduced"></a>Versione introdotta
 
@@ -18,21 +18,21 @@ Per ulteriori informazioni, vedere [ASPNET/AspNetCore # 9759](https://github.com
 
 #### <a name="old-behavior"></a>Comportamento precedente
 
-Le implementazioni di `IAuthorizationPolicyProvider` non hanno richiesto un metodo `GetFallbackPolicyAsync`.
+Le implementazioni di `IAuthorizationPolicyProvider` non richiedono un metodo di `GetFallbackPolicyAsync`.
 
 #### <a name="new-behavior"></a>Nuovo comportamento
 
-Per le implementazioni di `IAuthorizationPolicyProvider` è necessario un metodo `GetFallbackPolicyAsync`.
+Le implementazioni di `IAuthorizationPolicyProvider` richiedono un metodo di `GetFallbackPolicyAsync`.
 
 #### <a name="reason-for-change"></a>Motivo della modifica
 
-È necessario un nuovo metodo per la nuova `AuthorizationMiddleware` da usare quando non è specificato alcun criterio.
+Un nuovo metodo era necessario per il nuovo `AuthorizationMiddleware` da utilizzare quando non viene specificato alcun criterio.
 
 #### <a name="recommended-action"></a>Azione consigliata
 
 Aggiungere il metodo `GetFallbackPolicyAsync` alle implementazioni di `IAuthorizationPolicyProvider`.
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>Categoria
 
 ASP.NET Core
 

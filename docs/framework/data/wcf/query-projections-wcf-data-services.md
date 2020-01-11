@@ -10,16 +10,16 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: 03fa40a895d322a8b5ad543f75424ef5b379672b
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 764ea6a77ba267e691d48bc72d17c02f6b3c18ca
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568893"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900968"
 ---
 # <a name="query-projections-wcf-data-services"></a>Proiezioni di query (WCF Data Services)
 
-La proiezione fornisce un meccanismo nel Open Data Protocol (OData) per ridurre la quantità di dati nel feed restituiti da una query specificando che nella risposta vengono restituite solo determinate proprietà di un'entità. Per ulteriori informazioni, vedere [OData: opzione query di sistema SELECT ($Select)](https://go.microsoft.com/fwlink/?LinkId=186076).
+La proiezione fornisce un meccanismo nel Open Data Protocol (OData) per ridurre la quantità di dati nel feed restituiti da una query specificando che nella risposta vengono restituite solo determinate proprietà di un'entità. Per ulteriori informazioni, vedere la sezione 4,8. Selezionare l'opzione query di sistema ($select) nelle [convenzioni URI (OData versione 2,0)](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).
 
 In questo argomento viene descritto come definire una proiezione di query e quali sono i requisiti per i tipi di entità e non entità. Viene inoltre illustrato come eseguire gli aggiornamenti dei risultati proiettati e creare i tipi proiettati e vengono elencate alcune considerazioni sulla proiezione.
 

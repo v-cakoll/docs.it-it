@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: 7b5ae84d02b83a10a4b9e002fc2ed4ee0833b84c
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 1b4b0aba3ea24682ae972bf283ac387692c83781
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198470"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901870"
 ---
 ### <a name="http-defaulthttpcontext-extensibility-removed"></a>HTTP: DefaultHttpContext estensibilità rimosso
 
-Come parte del miglioramento delle prestazioni di ASP.NET Core 3,0, l'estendibilità di `DefaultHttpContext` è stata rimossa. La classe è ora `sealed`. Per ulteriori informazioni, vedere [ASPNET/AspNetCore # 6504](https://github.com/aspnet/AspNetCore/pull/6504).
+Come parte del miglioramento delle prestazioni ASP.NET Core 3,0, l'estendibilità di `DefaultHttpContext` è stata rimossa. La classe è ora `sealed`. Per ulteriori informazioni, vedere [DotNet/aspnetcore # 6504](https://github.com/dotnet/aspnetcore/pull/6504).
 
 Se gli unit test usano `Mock<DefaultHttpContext>`, usare invece `Mock<HttpContext>`.
 
-Per informazioni, vedere [ASPNET/AspNetCore # 6534](https://github.com/aspnet/AspNetCore/issues/6534).
+Per informazioni, vedere [DotNet/aspnetcore # 6534](https://github.com/dotnet/aspnetcore/issues/6534).
 
 #### <a name="version-introduced"></a>Versione introdotta
 
@@ -34,7 +34,7 @@ Inizialmente è stata fornita l'estendibilità per consentire il pool di `HttpCo
 
 Se si usa `Mock<DefaultHttpContext>` negli unit test, iniziare a usare `Mock<HttpContext>`.
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>Categoria
 
 ASP.NET Core
 

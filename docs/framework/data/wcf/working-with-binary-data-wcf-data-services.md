@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: 9a09908a2a998d5da739b28aefda3d5aecdc08e0
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: aa3e58d559121aaca401e7b851a4b4fd8e7753cd
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568742"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900836"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>Utilizzo di dati binari (WCF Data Services)
 
@@ -26,7 +26,7 @@ La libreria client di WCF Data Services consente di recuperare e aggiornare i da
 WCF Data Services implementa il flusso di dati binari tramite HTTP come definito in OData. In questo meccanismo, i dati binari vengono considerati come una risorsa multimediale che è separata da ma correlata a un'entità, denominata voce di collegamento multimediale. Per ulteriori informazioni, vedere [provider di flussi](streaming-provider-wcf-data-services.md).
 
 > [!TIP]
-> Per un esempio dettagliato di come creare un'applicazione client Windows Presentation Foundation (WPF) che Scarica i file di immagine binari da un servizio OData che archivia le foto, vedere la [serie Post Data Services Streaming provider-parte 2: accesso a un flusso di risorse multimediali dal client](https://go.microsoft.com/fwlink/?LinkId=201637). Per scaricare il codice di esempio per il servizio dati di foto di flusso in evidenza nel post di Blog, vedere l' [esempio streaming Photo Data Service](https://go.microsoft.com/fwlink/?LinkId=198988) in MSDN Code Gallery.
+> Per un esempio dettagliato di come creare un'applicazione client Windows Presentation Foundation (WPF) che Scarica i file di immagine binari da un servizio OData che archivia le foto, vedere la [serie Post Data Services Streaming provider-parte 2: accesso a un flusso di risorse multimediali dal client](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-part-2-accessing-a-media-resource-stream-from-the-client). Per scaricare il codice di esempio per il servizio dati di foto di flusso in evidenza nel post di Blog, vedere l' [esempio streaming Photo Data Service](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/Streaming%20Photo%20OData%20Service%20Sample) in GitHub.
 
 ## <a name="entity-metadata"></a>Metadati dell'entità
 
@@ -34,14 +34,14 @@ Un'entità che dispone di un flusso di risorsa multimediale correlato viene indi
 
 [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_photo_streaming_service/xml/photodata.edmx#hasstream)]
 
-Negli esempi restanti di questo argomento viene illustrato come accedere e modificare il flusso di risorsa multimediale. Per un esempio completo su come usare un flusso di risorse multimediali in un'applicazione client di .NET Framework usando la libreria client di WCF Data Services, vedere l'articolo relativo all' [accesso a un flusso di risorse multimediali dal client](https://go.microsoft.com/fwlink/?LinkID=201637).
+Negli esempi restanti di questo argomento viene illustrato come accedere e modificare il flusso di risorsa multimediale. Per un esempio completo su come usare un flusso di risorse multimediali in un'applicazione client di .NET Framework usando la libreria client di WCF Data Services, vedere l'articolo relativo all' [accesso a un flusso di risorse multimediali dal client](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-part-2-accessing-a-media-resource-stream-from-the-client).
 
 ## <a name="accessing-the-binary-resource-stream"></a>Accesso al flusso di risorsa binaria
 
 La libreria client di WCF Data Services fornisce metodi per l'accesso ai flussi di risorse binarie da un servizio dati basato su OData. Quando si scarica una risorsa multimediale, è possibile usare l'URI della risorsa multimediale od ottenere un flusso binario contenente i dati della risorsa multimediale. È possibile caricare i dati della risorsa multimediale anche come un flusso binario.
 
 > [!TIP]
-> Per un esempio dettagliato di come creare un'applicazione client Windows Presentation Foundation (WPF) che Scarica i file di immagine binari da un servizio OData che archivia le foto, vedere la [serie Post Data Services Streaming provider-parte 2: accesso a un flusso di risorse multimediali dal client](https://go.microsoft.com/fwlink/?LinkId=201637). Per scaricare il codice di esempio per il servizio dati di foto di flusso in evidenza nel post di Blog, vedere l' [esempio streaming Photo Data Service](https://go.microsoft.com/fwlink/?LinkId=198988) in MSDN Code Gallery.
+> Per un esempio dettagliato di come creare un'applicazione client Windows Presentation Foundation (WPF) che Scarica i file di immagine binari da un servizio OData che archivia le foto, vedere la [serie Post Data Services Streaming provider-parte 2: accesso a un flusso di risorse multimediali dal client](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-part-2-accessing-a-media-resource-stream-from-the-client). Per scaricare il codice di esempio per il servizio dati di foto di flusso in evidenza nel post di Blog, vedere l' [esempio streaming Photo Data Service](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/Streaming%20Photo%20OData%20Service%20Sample) in GitHub.
 
 ### <a name="getting-the-uri-of-the-binary-stream"></a>Recupero dell'URI del flusso binario
 

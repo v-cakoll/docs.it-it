@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 503d61cb86c83e2f32ad40c60a127ae255ef71b0
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 58b1190e3e6a3168d35700eed655f6756e076a29
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198466"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901827"
 ---
 ### <a name="mvc-async-suffix-trimmed-from-controller-action-names"></a>MVC: suffisso asincrono rimosso dai nomi delle azioni del controller
 
-Nell'ambito dell'indirizzamento di [ASPNET/AspNetCore # 4849](https://github.com/aspnet/AspNetCore/issues/4849), ASP.NET Core MVC taglia il suffisso `Async` dai nomi delle azioni per impostazione predefinita. A partire da ASP.NET Core 3,0, questa modifica interessa sia il routing che la generazione del collegamento.
+Come parte dell'indirizzamento di [DotNet/aspnetcore # 4849](https://github.com/dotnet/aspnetcore/issues/4849), ASP.NET Core MVC taglia il suffisso `Async` dai nomi delle azioni per impostazione predefinita. A partire da ASP.NET Core 3,0, questa modifica interessa sia il routing che la generazione del collegamento.
 
 #### <a name="version-introduced"></a>Versione introdotta
 
@@ -29,7 +29,7 @@ public class ProductController : Controller
 }
 ```
 
-L'azione è instradabile tramite `Product/ListAsync`. Per la generazione di collegamenti è necessario specificare il suffisso `Async`. Esempio:
+L'azione è instradabile tramite `Product/ListAsync`. Per la generazione di collegamenti è necessario specificare il suffisso `Async`. Ad esempio:
 
 ```cshtml
 <a asp-controller="Product" asp-action="ListAsync">List</a>
@@ -37,7 +37,7 @@ L'azione è instradabile tramite `Product/ListAsync`. Per la generazione di coll
 
 #### <a name="new-behavior"></a>Nuovo comportamento
 
-In ASP.NET Core 3,0, l'azione è instradabile tramite `Product/List`. Il codice di generazione del collegamento deve omettere il suffisso `Async`. Esempio:
+In ASP.NET Core 3,0, l'azione è instradabile tramite `Product/List`. Il codice di generazione del collegamento deve omettere il suffisso `Async`. Ad esempio:
 
 ```cshtml
 <a asp-controller="Product" asp-action="List">List</a>
@@ -54,7 +54,7 @@ services.AddMvc(options =>
 
 #### <a name="reason-for-change"></a>Motivo della modifica
 
-Per convenzione, i metodi .NET asincroni sono con suffisso `Async`. Tuttavia, quando un metodo definisce un'azione MVC, è indesiderabile usare il suffisso `Async`.
+Per convenzione, i metodi .NET asincroni hanno come suffisso `Async`. Tuttavia, quando un metodo definisce un'azione MVC, è indesiderabile usare il suffisso `Async`.
 
 #### <a name="recommended-action"></a>Azione consigliata
 
@@ -70,13 +70,13 @@ services.AddMvc(options =>
 });
 ```
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>Categoria
 
 ASP.NET Core
 
 #### <a name="affected-apis"></a>API interessate
 
-Nessuno
+nessuna
 
 <!-- 
 

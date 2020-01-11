@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3f702febc78488b9413ec9303ded211493650f02
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 1e081c9f37fbd7ab754ce44ba89d7aa5cabfc219
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198469"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75902017"
 ---
 ### <a name="mvc-precompilation-tool-deprecated"></a>MVC: strumento di precompilazione deprecato
 
@@ -18,11 +18,11 @@ In ASP.NET Core 3,0 è stato rimosso lo strumento di precompilazione MVC ASP.NET
 
 #### <a name="old-behavior"></a>Comportamento precedente
 
-Il pacchetto `Microsoft.AspNetCore.Mvc.Razor.ViewCompilation` è stato usato per pre-compilare le visualizzazioni Razor MVC.
+Il pacchetto di `Microsoft.AspNetCore.Mvc.Razor.ViewCompilation` è stato usato per pre-compilare le visualizzazioni Razor MVC.
 
 #### <a name="new-behavior"></a>Nuovo comportamento
 
-Razor SDK supporta questa funzionalità in modo nativo. Il pacchetto `Microsoft.AspNetCore.Mvc.Razor.ViewCompilation` non viene più aggiornato.
+Razor SDK supporta questa funzionalità in modo nativo. Il pacchetto di `Microsoft.AspNetCore.Mvc.Razor.ViewCompilation` non viene più aggiornato.
 
 #### <a name="reason-for-change"></a>Motivo della modifica
 
@@ -30,15 +30,15 @@ Razor SDK offre più funzionalità e verifica la correttezza dei file con *esten
 
 #### <a name="recommended-action"></a>Azione consigliata
 
-Per gli utenti di ASP.NET Core 2,1 o versioni successive, eseguire l'aggiornamento per usare il supporto nativo per la precompilazione in [Razor SDK](/aspnet/core/razor-pages/sdk?view=aspnetcore-3.0). Se i bug o le funzionalità mancanti impediscono la migrazione a Razor SDK, aprire un problema in [ASPNET/AspNetCore](https://github.com/aspnet/AspNetCore/issues).
+Per gli utenti di ASP.NET Core 2,1 o versioni successive, eseguire l'aggiornamento per usare il supporto nativo per la precompilazione in [Razor SDK](/aspnet/core/razor-pages/sdk?view=aspnetcore-3.0). Se i bug o le funzionalità mancanti impediscono la migrazione a Razor SDK, aprire un problema in [DotNet/aspnetcore](https://github.com/dotnet/aspnetcore/issues).
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>Categoria
 
 ASP.NET Core
 
 #### <a name="affected-apis"></a>API interessate
 
-Nessuno
+nessuna
 
 <!-- 
 

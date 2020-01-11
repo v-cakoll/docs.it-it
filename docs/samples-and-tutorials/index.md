@@ -4,12 +4,12 @@ description: Informazioni su esempi ed esercitazioni per .NET Core, ASP.NET Core
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 5132415a6be03787111aaed8d027d436bb6820fe
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.openlocfilehash: e64d0fdd02b28a1c9f21f06305f5ef278fb2827b
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74884436"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901029"
 ---
 # <a name="net-samples-and-tutorials"></a>Esempi ed esercitazioni per .NET
 
@@ -107,7 +107,7 @@ Molti argomenti mostrano codice sorgente ed esempi disponibili per la visualizza
 
 1. Scaricare il repository che contiene il codice di esempio seguendo una di queste procedure:
    * Scaricare un file ZIP del repository nel sistema locale. Decomprimere l'archivio compresso.
-   * [Duplicare](https://help.github.com/articles/fork-a-repo/) il repository e [clonare](https://help.github.com/articles/cloning-a-repository/) la copia nel sistema locale. La duplicazione e la clonazione consentono di contribuire alla documentazione eseguendo il commit delle modifiche nella propria copia e creando quindi una richiesta di pull per il repository docs ufficiale. Per altre informazioni, vedere [.NET Documentation Contributing Guide](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md) (Guida per contribuire alla documentazione di .NET) e [ASP.NET Docs Contributing Guide](https://github.com/aspnet/Docs/blob/master/CONTRIBUTING.md) (Guida per contribuire alla documentazione di ASP.NET).
+   * [Duplicare](https://help.github.com/articles/fork-a-repo/) il repository e [clonare](https://help.github.com/articles/cloning-a-repository/) la copia nel sistema locale. La duplicazione e la clonazione consentono di contribuire alla documentazione eseguendo il commit delle modifiche nella propria copia e creando quindi una richiesta di pull per il repository docs ufficiale. Per ulteriori informazioni, vedere la [Guida](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md) per la documentazione di .NET e la [Guida contributing a ASP.NET Core docs](https://github.com/aspnet/AspNetCore.Docs/blob/master/CONTRIBUTING.md).
    * Clonare il repository in locale. Se si clona un repository docs direttamente nel sistema locale, non sarà possibile eseguire direttamente commit nel repository ufficiale, quindi non sarà possibile fornire il proprio contributo per la documentazione in un secondo momento. Usare la procedura di duplicazione e clonazione descritta in precedenza se si vuole avere l'opportunità di contribuire alla documentazione in un secondo momento.
 1. Spostarsi all'interno delle cartelle del repository nel percorso dell'esempio. Il percorso relativo per il percorso dell'esempio viene visualizzato nella barra degli indirizzi del browser quando si segue il collegamento all'esempio.
 1. Per eseguire un esempio, sono disponibili diverse alternative:

@@ -5,14 +5,14 @@ author: briacht
 ms.date: 09/30/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 5b4541b527559ee05c9b97d84324e9e70599a014
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 382683f8b8500a2235a2d610a67119cf9a7fc301
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977386"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900691"
 ---
-# <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>Esercitazione: creare un Movie Recommender usando Matrix factorizaton con ML.NET
+# <a name="tutorial-build-a-movie-recommender-using-matrix-factorization-with-mlnet"></a>Esercitazione: creare un Movie Recommender usando la factorzzazione della matrice con ML.NET
 
 In questa esercitazione viene illustrato come creare un sistema di raccomandazione di film con ML.NET in un'applicazione console .NET Core. I passaggi usano C# e Visual Studio 2019.
 
@@ -36,7 +36,7 @@ Per completare questa attività, così come qualsiasi altra attività ML.NET, si
 3. [Valutare il modello](#evaluate-your-model)
 4. [Usare il modello](#use-your-model)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 * [Visual Studio 2017 versione 15,6 o successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con il carico di lavoro "sviluppo multipiattaforma .NET Core" installato.
 
@@ -416,7 +416,7 @@ La procedura è stata completata. È stato creato un modello di Machine Learning
 
 È possibile migliorare le prestazioni del modello in diversi modi per ottenere previsioni più accurate.
 
-### <a name="data"></a>Dati
+### <a name="data"></a>Data
 
 L'aggiunta di altri dati di training con sufficienti esempi per ogni utente e ID film contribuisce a migliorare la qualità del modello di raccomandazione.
 

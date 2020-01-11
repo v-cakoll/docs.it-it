@@ -2,16 +2,16 @@
 title: Dettagli di implementazione del protocollo WCF Data Services
 ms.date: 03/30/2017
 ms.assetid: 712d689b-fada-4cbb-bcdb-d65a3ef83b4c
-ms.openlocfilehash: 5cd73caf848badc058c1f6df75973e1bb0a4fad4
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 2302b5577bec3fc4221bc6e5161c87905c38bec3
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568763"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900863"
 ---
 # <a name="wcf-data-services-protocol-implementation-details"></a>Dettagli di implementazione del protocollo WCF Data Services
 ## <a name="odata-protocol-implementation-details"></a>Dettagli di implementazione del protocollo OData  
- Il Open Data Protocol (OData) richiede che un servizio dati che implementa il protocollo fornisca un certo set minimo di funzionalità. Queste funzionalità sono descritte nei documenti del protocollo in termini di "should" e "must". Altre funzionalità facoltative sono descritte in termini di "maggio". In questo argomento vengono descritte le funzionalità facoltative che non sono attualmente implementate da WCF Data Services. Per ulteriori informazioni, vedere la [documentazione del protocollo OData](https://go.microsoft.com/fwlink/?LinkID=184554).  
+Il Open Data Protocol (OData) richiede che un servizio dati che implementa il protocollo fornisca un certo set minimo di funzionalità. Queste funzionalità sono descritte nei documenti del protocollo in termini di "should" e "must". Altre funzionalità facoltative sono descritte in termini di "May". In questo articolo vengono descritte le funzionalità facoltative che non sono attualmente implementate da WCF Data Services.
   
 ### <a name="support-for-the-format-query-option"></a>Supporto dell'opzione query $format  
  Il protocollo OData supporta sia la notazione JavaScript (JSON) sia i feed Atom, mentre OData fornisce l'opzione di query di sistema `$format` per consentire a un client di richiedere il formato del feed di risposta. Questa opzione query di sistema, se supportata dal servizio dati, deve eseguire l'override del valore dell'intestazione Accept della richiesta. WCF Data Services supporta la restituzione di feed JSON e Atom. Tuttavia, l'implementazione predefinita non supporta l'opzione query `$format` e usa solo il valore dell'intestazione Accept per determinare il formato della risposta. In alcuni casi è necessario che il servizio dati supporti l'opzione query `$format`, ad esempio quando i client non possono impostare l'intestazione Accept. Per supportare questi scenari, è necessario estendere il servizio dati per gestire questa opzione nell'URI. Per aggiungere questa funzionalità al servizio dati, scaricare il [JSONP e il supporto del formato controllato da URL per](https://go.microsoft.com/fwlink/?LinkId=208228) il progetto di esempio ADO.NET Data Services dal sito Web MSDN Code Gallery e aggiungerlo al progetto del servizio dati. Questo esempio rimuove l'opzione query `$format` e imposta l'intestazione Accept su `application/json`. Quando si include il progetto di esempio aggiungendo `JSONPSupportBehaviorAttribute` alla classe del servizio dati, si consente al servizio di gestire l'opzione query `$format``$format=json`. È necessario personalizzare ulteriormente questo progetto di esempio per gestire anche `$format=atom` o gli altri formati personalizzati.  

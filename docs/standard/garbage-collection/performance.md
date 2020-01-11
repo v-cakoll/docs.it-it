@@ -6,12 +6,12 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: 8d40091420c29c86f2ebb25f14c17ae4f7a1c44a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 72cf742aae26f9441229b355dc6e70da7a5fc9cd
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974755"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900575"
 ---
 # <a name="garbage-collection-and-performance"></a>Garbage Collection e prestazioni
 
@@ -133,7 +133,7 @@ La frammentazione si verifica sempre nell'heap oggetti grandi in quanto non vien
 
 La frammentazione può diventare un problema nella generazione 1 e nella generazione 2. Se in queste generazioni è disponibile una quantità elevata di spazio libero dopo un'operazione di Garbage Collection, potrebbe essere necessario modificare l'utilizzo degli oggetti di un'applicazione e provare a eseguire una nuova valutazione della durata degli oggetti a lungo termine.
 
-Il blocco eccessivo di oggetti può aumentare la frammentazione. Se la frammentazione è elevata, potrebbe essere bloccato un numero eccessivo di oggetti.
+Il blocco eccessivo di oggetti può aumentare la frammentazione. Se la frammentazione è elevata, potrebbe essere stato aggiunto un numero eccessivo di oggetti.
 
 Se la frammentazione della memoria virtuale impedisce a Garbage Collector di aggiungere segmenti, la causa può essere una delle seguenti:
 
@@ -209,7 +209,7 @@ Se non si usa un profiler, è necessario definire un modello di misurazione coer
 
 - Se si esegue una misurazione immediatamente prima di un'operazione di Garbage Collection, è necessario misurare tutta l'allocazione possibile prima dell'avvio dell'operazione di Garbage Collection.
 
-- La misurazione durante un'operazione di Garbage Collection è problematica, perché le strutture di dati di Garbage Collector non sono in uno stato valido per l'attraversamento e potrebbero non essere in grado di fornire i risultati completi. Si tratta di un comportamento correlato alla progettazione.
+- La misurazione durante un'operazione di Garbage Collection è problematica, perché le strutture di dati di Garbage Collector non sono in uno stato valido per l'attraversamento e potrebbero non essere in grado di fornire i risultati completi. Questo rientra nel normale comportamento del prodotto.
 
 - Quando si usa un'operazione di Garbage Collection per workstation con un'operazione di Garbage Collection simultanea, gli oggetti recuperati non vengono compattati e di conseguenza le dimensioni dell'heap possono essere uguali o maggiori (la frammentazione può farle apparire maggiori).
 
@@ -423,7 +423,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
   Se l'heap gestito è di grandi dimensioni, il completamento di **dumpheap** può richiedere alcuni minuti.
 
-  È possibile iniziare l'analisi dalle ultime righe dell'output, perché elencano gli oggetti che usano la maggior parte dello spazio. Esempio:
+  È possibile iniziare l'analisi dalle ultime righe dell'output, perché elencano gli oggetti che usano la maggior parte dello spazio. Ad esempio:
 
   ```console
   2c6108d4   173712     14591808 DevExpress.XtraGrid.Views.Grid.ViewInfo.GridCellInfo

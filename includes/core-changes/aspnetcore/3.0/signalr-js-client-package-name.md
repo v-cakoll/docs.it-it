@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: acef6d7177ee5ad7e18dc8ba1e383d6f76263623
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: f202b39f1a45f740625827be25e72df0e403d605
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394069"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75902061"
 ---
 ### <a name="signalr-javascript-client-package-name-changed"></a>SignalR: nome del pacchetto client JavaScript modificato
 
-In ASP.NET Core 3,0 Preview 7, il nome del pacchetto client JavaScript SignalR è cambiato da `@aspnet/signalr` a `@microsoft/signalr`. La modifica del nome riflette il fatto che SignalR è utile in più di ASP.NET Core app, grazie al servizio Azure SignalR.
+In ASP.NET Core 3,0 Preview 7 il nome del pacchetto client JavaScript SignalR è cambiato da `@aspnet/signalr` a `@microsoft/signalr`. La modifica del nome riflette il fatto che SignalR è utile in più di ASP.NET Core app, grazie al servizio Azure SignalR.
 
-Per rispondere a questa modifica, modificare i riferimenti nei file *Package. JSON* , nelle istruzioni `require` e nelle istruzioni ECMAScript `import`. Nessuna API verrà modificata come parte di questa ridenominazione.
+Per rispondere a questa modifica, modificare i riferimenti nei file *Package. JSON* , `require` istruzioni e le istruzioni `import` ECMAScript. Nessuna API verrà modificata come parte di questa ridenominazione.
 
-Per informazioni, vedere [ASPNET/AspNetCore # 11637](https://github.com/aspnet/AspNetCore/issues/11637).
+Per informazioni, vedere [DotNet/aspnetcore # 11637](https://github.com/dotnet/aspnetcore/issues/11637).
 
 #### <a name="version-introduced"></a>Versione introdotta
 
@@ -34,13 +34,13 @@ La modifica del nome chiarisce che SignalR è utile oltre ASP.NET Core app, graz
 
 Passare al nuovo pacchetto `@microsoft/signalr`.
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>Categoria
 
 ASP.NET Core
 
 #### <a name="affected-apis"></a>API interessate
 
-Nessuno
+nessuna
 
 <!-- 
 

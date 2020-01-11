@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 16b9fde49f513643a37f65f3e926a34fc991c55a
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 4d99d0b6e99a7a9b976cf11832b33ad3bdc6d299
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394314"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901895"
 ---
 ### <a name="hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies"></a>Hosting: ObjectPoolProvider rimosso dalle dipendenze WebHostBuilder
 
-Come parte del processo di ASP.NET Core, il `ObjectPoolProvider` è stato rimosso dal set principale di dipendenze. I componenti specifici che si basano su `ObjectPoolProvider` ora aggiungono se stessi.
+Come parte del processo di ASP.NET Core, il `ObjectPoolProvider` è stato rimosso dal set principale di dipendenze. Componenti specifici che si basano su `ObjectPoolProvider` ora aggiungono se stessi.
 
-Per informazioni, vedere [ASPNET/AspNetCore # 5944](https://github.com/aspnet/AspNetCore/issues/5944).
+Per informazioni, vedere [DotNet/aspnetcore # 5944](https://github.com/dotnet/aspnetcore/issues/5944).
 
 #### <a name="version-introduced"></a>Versione introdotta
 
@@ -30,15 +30,15 @@ Questa modifica è stata apportata per rendere ASP.NET Core più pagamento per l
 
 #### <a name="recommended-action"></a>Azione consigliata
 
-Se il componente richiede `ObjectPoolProvider`, è necessario aggiungerlo alle dipendenze tramite il `IServiceCollection`.
+Se il componente richiede `ObjectPoolProvider`, è necessario aggiungerlo alle dipendenze tramite l'`IServiceCollection`.
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>Categoria
 
 ASP.NET Core
 
 #### <a name="affected-apis"></a>API interessate
 
-Nessuno
+nessuna
 
 <!-- 
 

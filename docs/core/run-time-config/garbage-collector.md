@@ -1,14 +1,14 @@
 ---
 title: Impostazioni di configurazione del Garbage Collector
 description: Informazioni sulle impostazioni di run-time per la configurazione del modo in cui il Garbage Collector gestisce la memoria per le app .NET Core.
-ms.date: 11/13/2019
+ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: 41157db7770a89f4402fa6675f7031c508f33aca
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 24e5c47de781e7eed5f76d2c551cac2dce1e8f05
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740553"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900104"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Opzioni di configurazione in fase di esecuzione per Garbage Collection
 
@@ -20,7 +20,7 @@ Le impostazioni sono disposte in gruppi in questa pagina. Le impostazioni all'in
 >
 > - Queste impostazioni possono essere modificate anche in modo dinamico dall'app mentre è in esecuzione, quindi è possibile eseguire l'override di tutte le impostazioni di runtime impostate.
 > - Alcune impostazioni, ad esempio il [livello di latenza](../../standard/garbage-collection/latency.md), vengono in genere impostate solo tramite l'API in fase di progettazione. Tali impostazioni vengono omesse da questa pagina.
-> - Per i valori numerici, usare la notazione decimale per le impostazioni nel file *runtimeconfig. JSON* e la notazione esadecimale per le impostazioni delle variabili di ambiente.
+> - Per i valori numerici, usare la notazione decimale per le impostazioni nel file *runtimeconfig. JSON* e la notazione esadecimale per le impostazioni delle variabili di ambiente. Per i valori esadecimali, è possibile specificarli con o senza il prefisso "0x".
 
 ## <a name="flavors-of-garbage-collection"></a>Tipi di Garbage Collection
 
@@ -41,6 +41,18 @@ Usare le impostazioni seguenti per selezionare le versioni di Garbage Collection
 | **Variabile di ambiente** | `COMPlus_gcServer` | workstation `0`<br/>Server `1` | .NET Core 1.0 |
 | **app. config per .NET Framework** | [GCServer](../../framework/configure-apps/file-schema/runtime/gcserver-element.md) | workstation `false`<br/>Server `true` |  |
 
+Esempio:
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.Server": true
+      }
+   }
+}
+```
+
 ### <a name="systemgcconcurrentcomplus_gcconcurrent"></a>System. GC. Concurrent/COMPlus_gcConcurrent
 
 - Configura se la Garbage Collection di sfondo (simultanea) è abilitata.
@@ -53,6 +65,18 @@ Usare le impostazioni seguenti per selezionare le versioni di Garbage Collection
 | **Variabile di ambiente** | `COMPlus_gcConcurrent` | GC in background `true`<br/>GC `false` non simultaneo | .NET Core 1.0 |
 | **app. config per .NET Framework** | [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) | GC in background `true`<br/>GC `false` non simultaneo |  |
 
+Esempio:
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.Concurrent": false
+      }
+   }
+}
+```
+
 ## <a name="manage-resource-usage"></a>Gestire l'utilizzo delle risorse
 
 Usare le impostazioni descritte in questa sezione per gestire l'utilizzo della memoria e del processore del Garbage Collector.
@@ -62,7 +86,7 @@ Per altre informazioni su alcune di queste impostazioni, vedere la parte interme
 ### <a name="systemgcheapcountcomplus_gcheapcount"></a>System. GC. HeapCount/COMPlus_GCHeapCount
 
 - Limita il numero di heap creati dal Garbage Collector.
-- Si applica solo a server Garbage Collection (GC).
+- Si applica solo al server Garbage Collection.
 - Se è abilitata l'affinità processori GC, ovvero l'impostazione predefinita, il numero di heap imposta cui `n` heap GC/thread per i primi processori `n`. Usare le impostazioni creare affinità tra mask o creare affinità tra Ranges per specificare esattamente i processori da creare affinità tra.
 - Se l'affinità processori GC è disabilitata, questa impostazione limita il numero di heap GC.
 - Per ulteriori informazioni, vedere la [sezione Osservazioni GCHeapCount](../../framework/configure-apps/file-schema/runtime/gcheapcount-element.md#remarks).
@@ -71,23 +95,47 @@ Per altre informazioni su alcune di queste impostazioni, vedere la parte interme
 | - | - | - | - |
 | **runtimeconfig. JSON** | `System.GC.HeapCount` | *valore decimale* | .NET Core 3.0 |
 | **Variabile di ambiente** | `COMPlus_GCHeapCount` | *valore esadecimale* | .NET Core 3.0 |
-| **app. config per .NET Framework** | [GCHeapCount](../../framework/configure-apps/file-schema/runtime/gcheapcount-element.md) | *valore decimale* | 4.6.2 |
+| **app. config per .NET Framework** | [GCHeapCount](../../framework/configure-apps/file-schema/runtime/gcheapcount-element.md) | *valore decimale* | .NET Framework 4.6.2 |
+
+Esempio:
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.HeapCount": 16
+      }
+   }
+}
+```
 
 > [!TIP]
-> Se si sta impostando l'opzione in *runtimeconfig. JSON*, specificare un valore decimale. Se si imposta l'opzione come variabile di ambiente, specificare un valore esadecimale. Ad esempio, per limitare il numero di heap a 16, i valori sarebbero 16 per il file JSON e 10 per la variabile di ambiente.
+> Se si sta impostando l'opzione in *runtimeconfig. JSON*, specificare un valore decimale. Se si imposta l'opzione come variabile di ambiente, specificare un valore esadecimale. Ad esempio, per limitare il numero di heap a 16, i valori sarebbero 16 per il file JSON e 0x10 o 10 per la variabile di ambiente.
 
 ### <a name="systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask"></a>System. GC. HeapAffinitizeMask/COMPlus_GCHeapAffinitizeMask
 
 - Specifica i processori esatti che Garbage Collector thread devono usare.
 - Se l'affinità del processore è disabilitata impostando `System.GC.NoAffinitize` su `true`, questa impostazione viene ignorata.
-- Si applica solo a server Garbage Collection (GC).
-- Il valore è una maschera di bit che definisce i processori disponibili per il processo. Ad esempio, un valore decimale di 1023 (o un valore esadecimale di 3FF se si usa la variabile di ambiente) è 0011 1111 1111 in notazione binaria. Specifica che devono essere usati i primi 10 processori. Per specificare i 10 processori successivi, ovvero i processori 10-19, specificare un valore decimale di 1047552 (o un valore esadecimale di FFC00), equivalente a un valore binario di 1111 1111 1100 0000 0000.
+- Si applica solo al server Garbage Collection.
+- Il valore è una maschera di bit che definisce i processori disponibili per il processo. Ad esempio, un valore decimale di 1023 (o un valore esadecimale di 0x3FF o 3FF se si usa la variabile di ambiente) è 0011 1111 1111 in notazione binaria. Specifica che devono essere usati i primi 10 processori. Per specificare i 10 processori successivi, ovvero i processori 10-19, specificare un valore decimale di 1047552 (o un valore esadecimale di 0xFFC00 o FFC00), equivalente a un valore binario di 1111 1111 1100 0000 0000.
 
 | | Nome impostazione | Valori | Versione introdotta |
 | - | - | - | - |
 | **runtimeconfig. JSON** | `System.GC.HeapAffinitizeMask` | *valore decimale* | .NET Core 3.0 |
 | **Variabile di ambiente** | `COMPlus_GCHeapAffinitizeMask` | *valore esadecimale* | .NET Core 3.0 |
-| **app. config per .NET Framework** | [GCHeapAffinitizeMask](../../framework/configure-apps/file-schema/runtime/gcheapaffinitizemask-element.md) | *valore decimale* | 4.6.2 |
+| **app. config per .NET Framework** | [GCHeapAffinitizeMask](../../framework/configure-apps/file-schema/runtime/gcheapaffinitizemask-element.md) | *valore decimale* | .NET Framework 4.6.2 |
+
+Esempio:
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.HeapAffinitizeMask": 1023
+      }
+   }
+}
+```
 
 ### <a name="systemgcgcheapaffinitizerangescomplus_gcheapaffinitizeranges"></a>System. GC. GCHeapAffinitizeRanges/COMPlus_GCHeapAffinitizeRanges
 
@@ -95,7 +143,7 @@ Per altre informazioni su alcune di queste impostazioni, vedere la parte interme
 - Questa impostazione è simile a `System.GC.HeapAffinitizeMask`, ad eccezione del fatto che consente di specificare più di 64 processori.
 - Per i sistemi operativi Windows, anteporre al [gruppo di CPU](/windows/win32/procthread/processor-groups)corrispondente il numero o l'intervallo del processore, ad esempio "0:1-10, 0:12, 1:50-52, 1:70".
 - Se l'affinità del processore è disabilitata impostando `System.GC.NoAffinitize` su `true`, questa impostazione viene ignorata.
-- Si applica solo a server Garbage Collection (GC).
+- Si applica solo al server Garbage Collection.
 - Per altre informazioni, vedere [migliorare la configurazione della CPU per GC nei computer con > cpu 64](https://devblogs.microsoft.com/dotnet/making-cpu-configuration-better-for-gc-on-machines-with-64-cpus/) nel Blog di Maoni Stephens.
 
 | | Nome impostazione | Valori | Versione introdotta |
@@ -103,13 +151,25 @@ Per altre informazioni su alcune di queste impostazioni, vedere la parte interme
 | **runtimeconfig. JSON** | `System.GC.GCHeapAffinitizeRanges` | Elenco delimitato da virgole di numeri di processore o intervalli di numeri del processore.<br/>Esempio di UNIX: "1-10, 12, 50-52, 70"<br/>Esempio di Windows: "0:1-10, 0:12, 1:50-52, 1:70" | .NET Core 3.0 |
 | **Variabile di ambiente** | `COMPlus_GCHeapAffinitizeRanges` | Elenco delimitato da virgole di numeri di processore o intervalli di numeri del processore.<br/>Esempio di UNIX: "1-10, 12, 50-52, 70"<br/>Esempio di Windows: "0:1-10, 0:12, 1:50-52, 1:70" | .NET Core 3.0 |
 
+Esempio:
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.GCHeapAffinitizeRanges": "0:1-10,0:12,1:50-52,1:70"
+      }
+   }
+}
+```
+
 ### <a name="complus_gccpugroup"></a>COMPlus_GCCpuGroup
 
 - Configura se il Garbage Collector utilizza o meno [gruppi di CPU](/windows/win32/procthread/processor-groups) .
 
   Quando un computer Windows a 64 bit dispone di più gruppi di CPU, ovvero sono presenti più di 64 processori, l'abilitazione di questo elemento estende Garbage Collection in tutti i gruppi di CPU. Il Garbage Collector utilizza tutti i core per creare e bilanciare gli heap.
 
-- Si applica solo a server Garbage Collection (GC) nei sistemi operativi Windows a 64 bit.
+- Si applica al server Garbage Collection solo nei sistemi operativi Windows a 64 bit.
 - Impostazione predefinita: disabilitato (`0`).
 - Per altre informazioni, vedere [migliorare la configurazione della CPU per GC nei computer con > cpu 64](https://devblogs.microsoft.com/dotnet/making-cpu-configuration-better-for-gc-on-machines-with-64-cpus/) nel Blog di Maoni Stephens.
 
@@ -125,14 +185,26 @@ Per altre informazioni su alcune di queste impostazioni, vedere la parte interme
 ### <a name="systemgcnoaffinitizecomplus_gcnoaffinitize"></a>System. GC. NoAffinitize/COMPlus_GCNoAffinitize
 
 - Specifica se *creare affinità tra* Garbage Collection thread con i processori. Per creare affinità tra un thread GC significa che può essere eseguito solo sulla CPU specifica. Viene creato un heap per ogni thread GC.
-- Si applica solo a server Garbage Collection (GC).
+- Si applica solo al server Garbage Collection.
 - Impostazione predefinita: creare affinità tra Garbage Collection thread con processori (`false`).
 
 | | Nome impostazione | Valori | Versione introdotta |
 | - | - | - | - |
 | **runtimeconfig. JSON** | `System.GC.NoAffinitize` | `false`-creare affinità tra<br/>`true` non creare affinità tra | .NET Core 3.0 |
 | **Variabile di ambiente** | `COMPlus_GCNoAffinitize` | `0`-creare affinità tra<br/>`1` non creare affinità tra | .NET Core 3.0 |
-| **app. config per .NET Framework** | [GCNoAffinitize](../../framework/configure-apps/file-schema/runtime/gcnoaffinitize-element.md) | `false`-creare affinità tra<br/>`true` non creare affinità tra | 4.6.2 |
+| **app. config per .NET Framework** | [GCNoAffinitize](../../framework/configure-apps/file-schema/runtime/gcnoaffinitize-element.md) | `false`-creare affinità tra<br/>`true` non creare affinità tra | .NET Framework 4.6.2 |
+
+Esempio:
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.NoAffinitize": true
+      }
+   }
+}
+```
 
 ### <a name="systemgcheaphardlimitcomplus_gcheaphardlimit"></a>System. GC. HeapHardLimit/COMPlus_GCHeapHardLimit
 
@@ -143,8 +215,20 @@ Per altre informazioni su alcune di queste impostazioni, vedere la parte interme
 | **runtimeconfig. JSON** | `System.GC.HeapHardLimit` | *valore decimale* | .NET Core 3.0 |
 | **Variabile di ambiente** | `COMPlus_GCHeapHardLimit` | *valore esadecimale* | .NET Core 3.0 |
 
+Esempio:
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.HeapHardLimit": 209715200
+      }
+   }
+}
+```
+
 > [!TIP]
-> Se si sta impostando l'opzione in *runtimeconfig. JSON*, specificare un valore decimale. Se si imposta l'opzione come variabile di ambiente, specificare un valore esadecimale. Per specificare, ad esempio, un limite rigido dell'heap di 80.000 byte, i valori sarebbero 80000 per il file JSON e 13880 per la variabile di ambiente.
+> Se si sta impostando l'opzione in *runtimeconfig. JSON*, specificare un valore decimale. Se si imposta l'opzione come variabile di ambiente, specificare un valore esadecimale. Ad esempio, per specificare un limite rigido dell'heap di 200 mebibytes (MiB), i valori sarebbero 209715200 per il file JSON e 0xC800000 o C800000 per la variabile di ambiente.
 
 ### <a name="systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent"></a>System. GC. HeapHardLimitPercent/COMPlus_GCHeapHardLimitPercent
 
@@ -155,8 +239,20 @@ Per altre informazioni su alcune di queste impostazioni, vedere la parte interme
 | **runtimeconfig. JSON** | `System.GC.HeapHardLimitPercent` | *valore decimale* | .NET Core 3.0 |
 | **Variabile di ambiente** | `COMPlus_GCHeapHardLimitPercent` | *valore esadecimale* | .NET Core 3.0 |
 
+Esempio:
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.HeapHardLimitPercent": 30
+      }
+   }
+}
+```
+
 > [!TIP]
-> Se si sta impostando l'opzione in *runtimeconfig. JSON*, specificare un valore decimale. Se si imposta l'opzione come variabile di ambiente, specificare un valore esadecimale. Ad esempio, per limitare l'utilizzo dell'heap al 30%, i valori sarebbero 30 per il file JSON e 1E per la variabile di ambiente.
+> Se si sta impostando l'opzione in *runtimeconfig. JSON*, specificare un valore decimale. Se si imposta l'opzione come variabile di ambiente, specificare un valore esadecimale. Ad esempio, per limitare l'utilizzo dell'heap al 30%, i valori sarebbero 30 per il file JSON e 0x1E o 1E per la variabile di ambiente.
 
 ### <a name="systemgcretainvmcomplus_gcretainvm"></a>System. GC. RetainVM/COMPlus_GCRetainVM
 
@@ -167,6 +263,18 @@ Per altre informazioni su alcune di queste impostazioni, vedere la parte interme
 | - | - | - | - |
 | **runtimeconfig. JSON** | `System.GC.RetainVM` | `false`-rilascia al sistema operativo<br/>`true`-put in standby| .NET Core 1.0 |
 | **Variabile di ambiente** | `COMPlus_GCRetainVM` | `0`-rilascia al sistema operativo<br/>`1`-put in standby | .NET Core 1.0 |
+
+Esempio:
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.RetainVM": true
+      }
+   }
+}
+```
 
 ## <a name="large-pages"></a>Pagine di grandi dimensioni
 
@@ -209,8 +317,20 @@ Per altre informazioni su alcune di queste impostazioni, vedere la parte interme
 | **Variabile di ambiente** | `COMPlus_GCLOHThreshold` | *valore esadecimale* | .NET Core 1.0 |
 | **app. config per .NET Framework** | [GCLOHThreshold](../../framework/configure-apps/file-schema/runtime/gclohthreshold-element.md) | *valore decimale* | .NET Framework 4.8 |
 
+Esempio:
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.LOHThreshold": 120000
+      }
+   }
+}
+```
+
 > [!TIP]
-> Se si sta impostando l'opzione in *runtimeconfig. JSON*, specificare un valore decimale. Se si imposta l'opzione come variabile di ambiente, specificare un valore esadecimale. Ad esempio, per impostare una dimensione della soglia di 120.000 byte, i valori sarebbero 120000 per il file JSON e 1D4C0 per la variabile di ambiente.
+> Se si sta impostando l'opzione in *runtimeconfig. JSON*, specificare un valore decimale. Se si imposta l'opzione come variabile di ambiente, specificare un valore esadecimale. Ad esempio, per impostare una dimensione della soglia di 120.000 byte, i valori sarebbero 120000 per il file JSON e 0x1D4C0 o 1D4C0 per la variabile di ambiente.
 
 ## <a name="standalone-gc"></a>GC autonomo
 

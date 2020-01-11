@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: a5793eae92ffdfa65872c93273bd7cfefdc6f674
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 1eb1267ae0b08d558d5afc41d03270917473a669
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568801"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900917"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Provider di flusso (WCF Data Services)
 
@@ -39,7 +39,7 @@ La configurazione di un servizio dati per supportare il flusso di dati binari ri
 
 5. Abilitare accesso alle risorse binarie sul server o in un'origine dati.
 
-Gli esempi in questo argomento sono basati su un servizio di foto di streaming di esempio, illustrato in dettaglio nella [serie di provider di streaming Post Data Services: implementazione di un provider di flusso (parte 1)](https://go.microsoft.com/fwlink/?LinkID=198989). Il codice sorgente per questo servizio di esempio è disponibile nella [pagina di esempio streaming Photo Data Service](https://go.microsoft.com/fwlink/?LinkID=198988) in MSDN Code Gallery.
+Gli esempi in questo argomento sono basati su un servizio di foto di streaming di esempio, illustrato in dettaglio nella [serie di provider di streaming Post Data Services: implementazione di un provider di flusso (parte 1)](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-implementing-a-streaming-provider-part-1). Il codice sorgente per l'esempio streaming Photo Data Service è disponibile su [GitHub](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/Streaming%20Photo%20OData%20Service%20Sample).
 
 ## <a name="defining-a-media-link-entry-in-the-data-model"></a>Definizione di un elemento entry di collegamento multimediale nel modello di dati
 
@@ -53,7 +53,7 @@ Per indicare che un'entità è un elemento entry di collegamento multimediale, a
 
 È inoltre necessario aggiungere lo spazio dei nomi `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` all'entità o alla radice del file con estensione edmx o csdl che definisce il modello di dati.
 
-Per un esempio di un servizio dati che usa il provider di Entity Framework ed espone una risorsa multimediale, vedere la [serie di provider di flusso post Data Services: implementazione di un provider di flusso (parte 1)](https://go.microsoft.com/fwlink/?LinkID=198989).
+Per un esempio di un servizio dati che usa il provider di Entity Framework ed espone una risorsa multimediale, vedere la [serie di provider di flusso post Data Services: implementazione di un provider di flusso (parte 1)](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-implementing-a-streaming-provider-part-1).
 
 **Provider di reflection**
 

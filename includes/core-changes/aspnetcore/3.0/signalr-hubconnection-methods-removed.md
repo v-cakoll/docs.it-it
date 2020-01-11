@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: a56c5fc32b5fd274d5da0d9b295918f5ea3b345e
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: de06825f1031d05bc83183a83bae165e2f9512ff
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393990"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901807"
 ---
 ### <a name="signalr-hubconnection-resetsendping-and-resettimeout-methods-removed"></a>SignalR: HubConnection ResetSendPing e ResetTimeout metodi rimossi
 
-I metodi `ResetSendPing` e `ResetTimeout` sono stati rimossi dall'API SignalR `HubConnection`. Questi metodi sono stati originariamente progettati solo per uso interno, ma sono stati resi pubblici in ASP.NET Core 2,2. Questi metodi non saranno disponibili a partire dalla versione di ASP.NET Core 3,0 Preview 4. Per informazioni, vedere [ASPNET/AspNetCore # 8543](https://github.com/aspnet/AspNetCore/issues/8543).
+I metodi `ResetSendPing` e `ResetTimeout` sono stati rimossi dall'API `HubConnection` di SignalR. Questi metodi sono stati originariamente progettati solo per uso interno, ma sono stati resi pubblici in ASP.NET Core 2,2. Questi metodi non saranno disponibili a partire dalla versione di ASP.NET Core 3,0 Preview 4. Per informazioni, vedere [DotNet/aspnetcore # 8543](https://github.com/dotnet/aspnetcore/issues/8543).
 
 #### <a name="version-introduced"></a>Versione introdotta
 
@@ -30,7 +30,7 @@ Questi metodi sono stati originariamente progettati solo per uso interno, ma son
 
 Non usare questi metodi.
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>Categoria
 
 ASP.NET Core
 

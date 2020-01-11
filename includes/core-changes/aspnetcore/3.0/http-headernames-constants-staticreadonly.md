@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: e0d0a680915f14c2d33f1864ad5ad05aff3dde5f
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 31e7f84a787d255a474f4c2b1fa3068903dbed52
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394325"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75902054"
 ---
 ### <a name="http-headernames-constants-changed-to-static-readonly"></a>Costanti HTTP: HeaderNames modificate in ReadOnly statico
 
-A partire da ASP.NET Core 3,0 Preview 5, i campi in <xref:Microsoft.Net.Http.Headers.HeaderNames?displayProperty=fullName> sono stati modificati da `const` a `static readonly`.
+A partire da ASP.NET Core 3,0 Preview 5, i campi in <xref:Microsoft.Net.Http.Headers.HeaderNames?displayProperty=fullName> modificati da `const` a `static readonly`.
 
-Per informazioni, vedere [ASPNET/AspNetCore # 9514](https://github.com/aspnet/AspNetCore/issues/9514).
+Per informazioni, vedere [DotNet/aspnetcore # 9514](https://github.com/dotnet/aspnetcore/issues/9514).
 
 #### <a name="version-introduced"></a>Versione introdotta
 
@@ -37,11 +37,11 @@ Ricompilare con 3,0. Il codice sorgente che usa questi campi nei modi seguenti n
 
 * Come argomento dell'attributo
 * Come `case` in un'istruzione `switch`
-* Quando si definisce un altro `const`
+* Quando si definisce un'altra `const`
 
 Per aggirare la modifica di rilievo, passare a utilizzando le costanti del nome di intestazione o i valori letterali stringa definiti autonomamente.
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>Categoria
 
 ASP.NET Core
 

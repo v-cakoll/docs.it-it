@@ -2,12 +2,12 @@
 title: Limitazioni di ADO.NET
 ms.date: 12/13/2019
 description: Descrive alcune delle limitazioni di ADO.NET che possono verificarsi.
-ms.openlocfilehash: b58fd3a9ea324e9c17ad21479e53e45f5982db9d
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 8664b73071fc859ed30080f549b05e7d6ed020f4
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75447090"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901256"
 ---
 # <a name="adonet-limitations"></a>Limitazioni di ADO.NET
 
@@ -25,13 +25,13 @@ Per ulteriori informazioni, vedere [metadati](metadata.md).
 
 Microsoft. Data. SQLite non supporta ancora System. Transactions. Usare invece le transazioni ADO.NET. Per ulteriori informazioni, vedere [Transactions](transactions.md).
 
-Inviare commenti e suggerimenti sulla mancanza di supporto per System. Transactions sul problema [#13825](https://github.com/aspnet/EntityFrameworkCore/issues/13825).
+Inviare commenti e suggerimenti sulla mancanza di supporto per System. Transactions sul problema [#13825](https://github.com/dotnet/efcore/issues/13825).
 
 ## <a name="data-adapters"></a>Adattatori dati
 
 `DbDataAdapter` non è ancora implementato da Microsoft. Data. sqlite. Ciò significa che è possibile usare solo ADO.NET `DataSet` e `DataTable` per caricare i dati e non aggiornarli.
 
-Usare [#13838](https://github.com/aspnet/EntityFrameworkCore/issues/13838) di problema per fornire commenti e suggerimenti sull'implementazione di `DbDataAdapter`.
+Usare [#13838](https://github.com/dotnet/efcore/issues/13838) di problema per fornire commenti e suggerimenti sull'implementazione di `DbDataAdapter`.
 
 ## <a name="output-parameters"></a>Parametri di output
 

@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: b0d093cc30a09b3248cc57a521b386bf581b5451
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 02602c70689a6d2729e03d3d7230cda5ae7a4994
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552147"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901953"
 ---
 ### <a name="http-browser-samesite-changes-impact-authentication"></a>HTTP: browser navigava sullostesso sito modifiche che influiscano sull'autenticazione
 
 Alcuni browser, ad esempio Chrome e Firefox, hanno apportato modifiche di rilievo alle implementazioni di `SameSite` per i cookie. Le modifiche influiscano sugli scenari di autenticazione remota, ad esempio OpenID Connect e WS-Federation, che devono rifiutare esplicitamente inviando `SameSite=None`. Tuttavia, `SameSite=None` si interrompe in iOS 12 e in alcune versioni precedenti di altri browser. L'app deve annusare queste versioni e omettere `SameSite`.
 
-Per informazioni su questo problema, vedere [ASPNET/AspNetCore # 14996](https://github.com/aspnet/AspNetCore/issues/14996).
+Per informazioni su questo problema, vedere [DotNet/aspnetcore # 14996](https://github.com/dotnet/aspnetcore/issues/14996).
 
 #### <a name="version-introduced"></a>Versione introdotta
 
@@ -136,7 +136,7 @@ Le patch `SameSite` correlate sono imminenti per:
 * `Microsoft.Owin` 4,1
 * `System.Web` (per .NET Framework 4.7.2 e versioni successive)
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>Categoria
 
 ASP.NET
 

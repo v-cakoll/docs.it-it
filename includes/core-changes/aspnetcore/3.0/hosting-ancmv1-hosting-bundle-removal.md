@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 04e5ca41374fc333a31f0422bc2e89f54b3cb049
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 82103d82a6f68c62f3532608718bc71b0ba126bf
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394093"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901737"
 ---
 ### <a name="hosting-aspnetcoremodule-v1-removed-from-windows-hosting-bundle"></a>Hosting: AspNetCoreModule V1 rimosso dal bundle di hosting di Windows
 
@@ -12,7 +12,7 @@ A partire da ASP.NET Core 3,0, il bundle di hosting di Windows non conterrà Asp
 
 MODULO ASP.net core V2 è compatibile con le versioni precedenti di modulo ASP.NET Core OutOfProcess ed è consigliato per l'uso con app ASP.NET Core 3,0.
 
-Per informazioni, vedere [ASPNET/AspNetCore # 7095](https://github.com/aspnet/AspNetCore/issues/7095).
+Per informazioni, vedere [DotNet/aspnetcore # 7095](https://github.com/dotnet/aspnetcore/issues/7095).
 
 #### <a name="version-introduced"></a>Versione introdotta
 
@@ -41,13 +41,13 @@ Questa modifica interrompe ASP.NET Core app 3,0 che:
 - È stato esplicitamente accettato l'uso di modulo ASP.NET Core V1 con `<AspNetCoreModuleName>AspNetCoreModule</AspNetCoreModuleName>`.
 - Disporre di un file *Web. config* personalizzato con `<add name="aspNetCore" path="*" verb="*" modules="AspNetCoreModule" resourceType="Unspecified" />`.
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>Categoria
 
 ASP.NET Core
 
 #### <a name="affected-apis"></a>API interessate
 
-Nessuno
+nessuna
 
 <!-- 
 

@@ -2,12 +2,12 @@
 title: Limitazioni di elegante
 ms.date: 12/13/2019
 description: Descrive alcune delle limitazioni che si verificheranno quando si usa l'elegante.
-ms.openlocfilehash: 90c7fb24f068d663081390bdba9b1b222b4be56e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 396507f25f591a9ab5c3bb07c0af6fd8d175e4ea
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75447279"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901204"
 ---
 # <a name="dapper-limitations"></a>Limitazioni di elegante
 
@@ -15,7 +15,7 @@ Quando si usa Microsoft. Data. sqlite con [elegante](https://stackexchange.githu
 
 ## <a name="parameters"></a>Parametri
 
-I nomi dei parametri SQLite fanno distinzione tra maiuscole e minuscole. Verificare che i nomi di parametro usati in SQL corrispondano al caso delle proprietà dell'oggetto anonimo. Il problema [#18861](https://github.com/aspnet/EntityFrameworkCore/issues/18861) potrebbe migliorare questa esperienza.
+I nomi dei parametri SQLite fanno distinzione tra maiuscole e minuscole. Verificare che i nomi di parametro usati in SQL corrispondano al caso delle proprietà dell'oggetto anonimo. Il problema [#18861](https://github.com/dotnet/efcore/issues/18861) potrebbe migliorare questa esperienza.
 
 L'utilizzo del prefisso `@` è previsto anche per i parametri. Gli altri prefissi non funzioneranno.
 

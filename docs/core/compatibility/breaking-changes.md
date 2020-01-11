@@ -2,12 +2,12 @@
 title: Modifiche di rilievo di .NET Core
 description: Informazioni sulle modifiche di rilievo in ogni versione di .NET Core.
 ms.date: 11/27/2019
-ms.openlocfilehash: 3e1b2a7d0edea1c06af340711182e533aa007c61
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 8bd8ebc803a80069530fe1cf6adc66769f7d6c85
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75343737"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900149"
 ---
 # <a name="breaking-change-selectors"></a>Selettori modifiche di rilievo
 
@@ -34,7 +34,7 @@ Selezionare l'area della tecnologia .NET Core a cui si è interessati. Le singol
 
 - Per .NET Core, il repository [DotNet/docs](https://github.com/dotnet/docs/issues?q=is%3Aissue+label%3Abreaking-change) .
 - Per ASP.NET Core, il repository [ASPNET/annunci](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0) .
-- Per Entity Framework Core, il repository [ASPNET/EntityFrameworkCore](https://github.com/aspnet/EntityFrameworkCore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change) .
+- Per Entity Framework Core, il repository [DotNet/efcore](https://github.com/dotnet/efcore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change) .
 
 ## <a name="see-also"></a>Vedere anche
 

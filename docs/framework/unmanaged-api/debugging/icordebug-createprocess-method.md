@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6128694-11ed-46e7-bd4e-49ea1914c46a
 topic_type:
 - apiref
-ms.openlocfilehash: 8812a98b0f28dd1336903dc34682f638a291f53b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a69fb861f7c2671a5c26245aa544ee99bcbdb56b
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73111000"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901004"
 ---
 # <a name="icordebugcreateprocess-method"></a>Metodo ICorDebug::CreateProcess
 Avvia un processo e il relativo thread primario sotto il controllo del debugger.  
@@ -61,7 +61,7 @@ HRESULT CreateProcess (
  in Impostare su `true` per indicare che ogni handle ereditabile nel processo chiamante viene ereditato dal processo avviato oppure `false` per indicare che gli handle non vengono ereditati. Gli handle ereditati hanno lo stesso valore e i diritti di accesso degli handle originali.  
   
  `dwCreationFlags`  
- in Combinazione bit per bit dei [flag di creazione del processo Win32](https://go.microsoft.com/fwlink/?linkid=69981) che controllano la classe di priorità e il comportamento del processo avviato.  
+ in Combinazione bit per bit dei [flag di creazione del processo Win32](/windows/win32/procthread/process-creation-flags) che controllano la classe di priorità e il comportamento del processo avviato.  
   
  `lpEnvironment`  
  in Puntatore a un blocco di ambiente per il nuovo processo.  
@@ -90,14 +90,14 @@ HRESULT CreateProcess (
   
  Il debug di interoperabilità non è supportato in piattaforme Win9x e non x86, ad esempio piattaforme basate su IA-64 e AMD64.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
