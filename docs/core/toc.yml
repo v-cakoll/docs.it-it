@@ -183,9 +183,9 @@
           href: diagnostics/dotnet-trace.md
     - name: Esercitazioni di diagnostica .NET Core
       items:
-        - name: Debug di una perdita di memoria
+        - name: Eseguire il debug di una perdita di memoria
           href: diagnostics/debug-memory-leak.md
-- name: Testing unità
+- name: Unit test
   href: testing/index.md
   items:
     - name: Procedure consigliate per gli unit test
@@ -339,8 +339,9 @@
     - name: Generazione serializzatore XML
       href: additional-tools/xml-serializer-generator.md
 - name: Convertire da .NET Framework
-  href: porting/index.md
   items:
+    - name: Panoramica
+      href: porting/index.md
     - name: Tecnologie di .NET Framework non disponibili in .NET Core
       href: porting/net-framework-tech-unavailable.md
     - name: Analizzare le dipendenze di terze parti
