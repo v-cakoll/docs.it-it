@@ -9,6 +9,8 @@
           href: system-text-json-how-to.md
         - name: Come scrivere convertitori personalizzati
           href: system-text-json-converters-how-to.md
+        - name: Come eseguire la migrazione da Newtonsoft.Json
+          href: system-text-json-migrate-from-newtonsoft-how-to.md
     - name: Serializzazione binaria
       href: binary-serialization.md
       items:
