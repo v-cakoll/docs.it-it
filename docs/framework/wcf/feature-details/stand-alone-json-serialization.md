@@ -2,17 +2,17 @@
 title: Serializzazione JSON autonoma mediante DataContractJsonSerializer
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: 412da71617a8627c47e877a75770271d9a3cf180
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 39d3c0acd75ffd9a54c5e62a15487a2cd8c465cb
+ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976078"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75904609"
 ---
 # <a name="stand-alone-json-serialization-using-datacontractjsonserializer"></a>Serializzazione JSON autonoma mediante DataContractJsonSerializer
 
 > [!NOTE]
-> Questo articolo riguarda <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>. Per la maggior parte degli scenari che coinvolgono la serializzazione e la deserializzazione di JSON, è consigliabile usare gli strumenti nello [spazio dei nomi System. Text. JSON](../../../standard/serialization/system-text-json-overview.md). 
+> Questo articolo riguarda <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>. Per la maggior parte degli scenari che coinvolgono la serializzazione e la deserializzazione di JSON, è consigliabile usare le API nello [spazio dei nomi System. Text. JSON](../../../standard/serialization/system-text-json-overview.md). 
 
 JSON (JavaScript Object Notation) è un formato dati progettato specificatamente per essere utilizzato dal codice JavaScript in esecuzione su pagine Web all'interno del browser. Si tratta del formato dati predefinito utilizzato dai servizi ASP.NET AJAX creati in Windows Communication Foundation (WCF).
 
@@ -28,16 +28,16 @@ Nella tabella seguente viene illustrata la corrispondenza tra i tipi .NET e i ti
 
 |Tipi .NET|JSON/JavaScript|Note|
 |----------------|----------------------|-----------|
-|Tutti i tipi numerici, ad esempio <xref:System.Int32>, <xref:System.Decimal> o <xref:System.Double>|numero|I valori speciali quali `Double.NaN`, `Double.PositiveInfinity` e `Double.NegativeInfinity` non sono supportati e determinano un tipo JSON non valido.|
-|<xref:System.Enum>|numero|Vedere "Enumerazioni e JSON" più avanti in questo argomento.|
-|<xref:System.Boolean>|Booleano|--|
+|Tutti i tipi numerici, ad esempio <xref:System.Int32>, <xref:System.Decimal> o <xref:System.Double>|Number|I valori speciali quali `Double.NaN`, `Double.PositiveInfinity` e `Double.NegativeInfinity` non sono supportati e determinano un tipo JSON non valido.|
+|<xref:System.Enum>|Number|Vedere "Enumerazioni e JSON" più avanti in questo argomento.|
+|<xref:System.Boolean>|Boolean|--|
 |<xref:System.String>, <xref:System.Char>|Stringa|--|
 |<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|Stringa|Il formato di questi tipi in JSON è identico a quello di XML (essenzialmente, TimeSpan nel formato di durata ISO 8601, GUID nel formato "12345678-ABCD-ABCD-ABCD-1234567890AB" e URI nella relativa forma di stringa naturale come "http://www.example.com"). Per informazioni precise, vedere [riferimento allo schema del contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).|
 |<xref:System.Xml.XmlQualifiedName>|Stringa|Il formato è "nome:spazio dei nomi" (tutto ciò che si trova prima del primo segno di due punti è il nome). Il nome o lo spazio dei nomi potrebbero non essere presenti. Se non esiste alcuno spazio dei nomi, è possibile omettere anche i due punti.|
 |<xref:System.Array> di tipo <xref:System.Byte>|Matrice di numeri|Ogni numero rappresenta il valore di un byte.|
 |<xref:System.DateTime>|DateTime o String|Vedere Date/Ore e JSON più avanti in questo argomento.|
 |<xref:System.DateTimeOffset>|Tipo complesso|Vedere Date/Ore e JSON più avanti in questo argomento.|
-|Tipi XML e ADO.NET (<xref:System.Xml.XmlElement>,<br /><br /> <xref:System.Xml.Linq.XElement> Matrici di <xref:System.Xml.XmlNode>,<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>).|Stringa|Vedere la sezione relativa ai tipi XML e a JSON in questo argomento.|
+|Tipi XML e ADO.NET (<xref:System.Xml.XmlElement>,<br /><br /> <xref:System.Xml.Linq.XElement>. Matrici di <xref:System.Xml.XmlNode>,<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>).|Stringa|Vedere la sezione relativa ai tipi XML e a JSON in questo argomento.|
 |<xref:System.DBNull>|Tipo complesso vuoto|--|
 |Raccolte, dizionari e matrici|Matrice|Vedere la sezione relativa alle raccolte, ai dizionari e alle matrici in questo argomento.|
 |Tipi complessi (con applicazione dell'attributo <xref:System.Runtime.Serialization.DataContractAttribute> o <xref:System.SerializableAttribute>)|Tipo complesso|I membri dati diventano membri del tipo complesso JavaScript.|
