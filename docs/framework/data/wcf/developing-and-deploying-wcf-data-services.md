@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: d3a3539904c5d8b5db23b99ca6128bf5860a1917
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: e34f7c8a0194e3901453923530a5cd07202801f6
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346102"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937453"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Sviluppare e distribuire WCF Data Services
 
@@ -70,7 +70,7 @@ Quando si sviluppa un servizio dati WCF come applicazione ASP.NET o sito Web ASP
 
 3. **Ambiente di sviluppo Microsoft Azure**
 
-     Gli strumenti di Windows Azure per Visual Studio includono un set integrato di strumenti per lo sviluppo di servizi di Microsoft Azure in Visual Studio. Con questi strumenti, è possibile sviluppare un servizio dati che può essere distribuito a Microsoft Azure ed è possibile testare il servizio dati sul computer locale prima della distribuzione. Usare questi strumenti quando si usa Visual Studio per sviluppare un servizio dati in esecuzione nella piattaforma Windows Azure. È possibile scaricare gli strumenti di Windows Azure per Visual Studio dall' [area download Microsoft](https://go.microsoft.com/fwlink/?LinkID=201848). Per ulteriori informazioni sullo sviluppo di un servizio dati in esecuzione in Windows Azure, vedere il post sulla [distribuzione di un servizio OData in Windows Azure](https://blogs.msdn.microsoft.com/astoriateam/2010/07/20/deploying-an-odata-service-in-windows-azure/).
+     Gli strumenti di Windows Azure per Visual Studio includono un set integrato di strumenti per lo sviluppo di servizi di Microsoft Azure in Visual Studio. Con questi strumenti, è possibile sviluppare un servizio dati che può essere distribuito a Microsoft Azure ed è possibile testare il servizio dati sul computer locale prima della distribuzione. Usare questi strumenti quando si usa Visual Studio per sviluppare un servizio dati in esecuzione nella piattaforma Windows Azure. È possibile scaricare gli strumenti di Windows Azure per Visual Studio dall' [area download Microsoft](https://go.microsoft.com/fwlink/?LinkID=201848). Per ulteriori informazioni sullo sviluppo di un servizio dati in esecuzione in Windows Azure, vedere il post sulla [distribuzione di un servizio OData in Windows Azure](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
 
 ### <a name="development-tips"></a>Suggerimenti per lo sviluppo
 
@@ -115,7 +115,7 @@ WCF Data Services fornisce flessibilità di scelta per il processo che ospita il
 
 - **Windows Azure**
 
-     È possibile distribuire un servizio dati in Windows Azure utilizzando gli strumenti di Windows Azure per Visual Studio. È possibile scaricare gli strumenti di Windows Azure per Visual Studio dall' [area download Microsoft](https://go.microsoft.com/fwlink/?LinkID=201848). Per ulteriori informazioni sulla distribuzione di un servizio dati in Windows Azure, vedere il post sulla [distribuzione di un servizio OData in Windows Azure](https://blogs.msdn.microsoft.com/astoriateam/2010/07/20/deploying-an-odata-service-in-windows-azure/).
+     È possibile distribuire un servizio dati in Windows Azure utilizzando gli strumenti di Windows Azure per Visual Studio. È possibile scaricare gli strumenti di Windows Azure per Visual Studio dall' [area download Microsoft](https://go.microsoft.com/fwlink/?LinkID=201848). Per ulteriori informazioni sulla distribuzione di un servizio dati in Windows Azure, vedere il post sulla [distribuzione di un servizio OData in Windows Azure](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
 
 ### <a name="deployment-considerations"></a>Considerazioni sulla distribuzione
 
@@ -123,7 +123,7 @@ Quando si distribuisce un servizio dati è opportuno considerare quanto segue:
 
 - Quando si distribuisce un servizio dati che utilizza il provider di Entity Framework per accedere a un database SQL Server, potrebbe essere necessario propagare anche strutture di dati, dati o entrambi con la distribuzione del servizio dati. Visual Studio è in grado di creare automaticamente script (file con estensione SQL) per eseguire questa operazione nel database di destinazione e tali script possono essere inclusi nel pacchetto di distribuzione Web di un'applicazione ASP.NET. Per altre informazioni, vedere [procedura: distribuire un database con un progetto di applicazione Web](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100)). Per un sito Web ASP.NET, è possibile eseguire questa operazione utilizzando la **pubblicazione guidata database** in Visual Studio. Per ulteriori informazioni, vedere [pubblicazione di un database SQL](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100)).
 
-- Poiché WCF Data Services include un'implementazione WCF di base, è possibile usare Windows Server AppFabric per monitorare un servizio dati distribuito in IIS in esecuzione in Windows Server. Per ulteriori informazioni sull'utilizzo di Windows Server AppFabric per il monitoraggio di un servizio dati, vedere il post di [WCF Data Services Tracking con Windows Server AppFabric](https://blogs.msdn.microsoft.com/rjacobs/2010/06/09/tracking-wcf-data-services-with-windows-server-appfabric/).
+- Poiché WCF Data Services include un'implementazione WCF di base, è possibile usare Windows Server AppFabric per monitorare un servizio dati distribuito in IIS in esecuzione in Windows Server. Per ulteriori informazioni sull'utilizzo di Windows Server AppFabric per il monitoraggio di un servizio dati, vedere il post di [WCF Data Services Tracking con Windows Server AppFabric](https://docs.microsoft.com/archive/blogs/rjacobs/tracking-wcf-data-services-with-windows-server-appfabric).
 
 ## <a name="see-also"></a>Vedere anche
 

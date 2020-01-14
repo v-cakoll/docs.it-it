@@ -3,12 +3,12 @@ title: Introduzione all'archiviazione BLOB di Azure con F#
 description: Archivia i dati non strutturati nel cloud con l'archiviazione BLOB di Azure.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: c765f38cba7642e813a5966d3b7754c5ce45abbd
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 90ec0d63b11ad00c53a1740211e9a6509582e863
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107115"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75935509"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Introduzione all'archiviazione BLOB di Azure con F\#
 
@@ -24,17 +24,17 @@ Per usare questa guida, è necessario [creare prima un account di archiviazione 
 
 ## <a name="create-an-f-script-and-start-f-interactive"></a>Creare uno F# script e avviare F# interattivo
 
-Gli esempi in questo articolo possono essere usati in un' F# applicazione o uno F# script. Per creare uno F# script, creare un file con l' `.fsx` estensione, ad esempio `blobs.fsx`, nell'ambiente F# di sviluppo.
+Gli esempi in questo articolo possono essere usati in un' F# applicazione o uno F# script. Per creare uno F# script, creare un file con l'estensione `.fsx`, ad esempio `blobs.fsx`, nell'ambiente F# di sviluppo.
 
-Usare quindi una [Gestione pacchetti](package-management.md) , ad esempio [Paket](https://fsprojects.github.io/Paket/) o [NuGet](https://www.nuget.org/) , per installare `WindowsAzure.Storage` i `Microsoft.WindowsAzure.ConfigurationManager` pacchetti e e `WindowsAzure.Storage.dll` i `Microsoft.WindowsAzure.Configuration.dll` riferimenti e nello script usando `#r` una direttiva.
+Usare quindi una [Gestione pacchetti](package-management.md) , ad esempio [Paket](https://fsprojects.github.io/Paket/) o [NuGet](https://www.nuget.org/) , per installare i pacchetti `WindowsAzure.Storage` e `Microsoft.WindowsAzure.ConfigurationManager` e `WindowsAzure.Storage.dll` di riferimento e `Microsoft.WindowsAzure.Configuration.dll` nello script usando una direttiva `#r`.
 
-### <a name="add-namespace-declarations"></a>Aggiungi dichiarazioni dello spazio dei nomi
+### <a name="add-namespace-declarations"></a>Aggiungere dichiarazioni di spazi dei nomi
 
-Aggiungere le seguenti `open` istruzioni all'inizio `blobs.fsx` del file:
+Aggiungere le istruzioni `open` seguenti all'inizio del file `blobs.fsx`:
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L1-L5)]
 
-### <a name="get-your-connection-string"></a>Ottenere la stringa di connessione
+### <a name="get-your-connection-string"></a>Ottenere una stringa di connessione
 
 Per questa esercitazione è necessaria una stringa di connessione di archiviazione di Azure. Per altre informazioni sulle stringhe di connessione, vedere [configurare le stringhe di connessione di archiviazione](/azure/storage/storage-configure-connection-string).
 
@@ -42,13 +42,13 @@ Per l'esercitazione, immettere la stringa di connessione nello script, come segu
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L11-L11)]
 
-Questa operazione **non** è tuttavia consigliata per i progetti reali. La chiave dell'account di archiviazione è simile alla password radice dell'account di archiviazione. Prestare sempre attenzione a proteggere la chiave dell'account di archiviazione. Evitare di distribuirla ad altri utenti, impostarla come hardcoded o salvarla in un file di testo normale accessibile ad altri utenti. È possibile rigenerare la chiave usando il portale di Azure se si ritiene che possa essere stata compromessa.
+Questa operazione non è tuttavia **consigliata** per i progetti reali. La chiave dell’account di archiviazione è simile alla password radice per l'account di archiviazione. È consigliabile proteggere sempre la chiave dell'account di archiviazione. Evitare di distribuirla ad altri utenti, impostarla come hardcoded o salvarla in un file di testo normale accessibile ad altri. È possibile rigenerare la chiave usando il portale di Azure se si ritiene che possa essere stata compromessa.
 
 Per le applicazioni reali, il modo migliore per gestire la stringa di connessione di archiviazione è in un file di configurazione. Per recuperare la stringa di connessione da un file di configurazione, è possibile eseguire questa operazione:
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L13-L15)]
 
-L'uso di Configuration Manager di Azure è facoltativo. È anche possibile usare un'API, ad esempio il tipo `ConfigurationManager` di .NET Framework.
+L'uso di Gestione configurazione di Azure è facoltativo. È anche possibile usare un'API, ad esempio il tipo di `ConfigurationManager` del .NET Framework.
 
 ### <a name="parse-the-connection-string"></a>Analizzare la stringa di connessione
 
@@ -56,7 +56,7 @@ Per analizzare la stringa di connessione, usare:
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L21-L22)]
 
-Viene restituito `CloudStorageAccount`.
+Viene restituito un `CloudStorageAccount`.
 
 ### <a name="create-some-local-dummy-data"></a>Creare alcuni dati fittizi locali
 
@@ -66,41 +66,41 @@ Prima di iniziare, creare alcuni dati locali fittizi nella directory dello scrip
 
 ### <a name="create-the-blob-service-client"></a>Creare il client del servizio BLOB
 
-Il `CloudBlobClient` tipo consente di recuperare contenitori e BLOB archiviati nell'archivio BLOB. Ecco un modo per creare il client del servizio:
+Il tipo di `CloudBlobClient` consente di recuperare contenitori e BLOB archiviati nell'archivio BLOB. Ecco come creare il client del servizio:
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L36-L36)]
 
-A questo punto si è pronti per scrivere codice che legge e scrive i dati nell'archivio BLOB.
+A questo punto si è pronti a scrivere codice che legge e scrive i dati nell'archivio BLOB.
 
 ## <a name="create-a-container"></a>Creare un contenitore
 
-Questo esempio illustra come creare un contenitore, se non esiste già:
+In questo esempio viene creato un contenitore, nel caso in cui non esista già:
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L42-L46)]
 
-Per impostazione predefinita, il nuovo contenitore è privato, vale a dire che è necessario specificare la chiave di accesso alle archiviazione per scaricare BLOB da questo contenitore. Se si desidera rendere i file all'interno del contenitore disponibili per tutti, è possibile impostare il contenitore come pubblico utilizzando il codice seguente:
+Per impostazione predefinita, il nuovo contenitore è privato, ovvero è necessario specificare la chiave di accesso alle risorse di archiviazione per scaricare BLOB da questo contenitore. Se si desidera che i file all'interno del contenitore siano disponibili a tutti, è possibile impostare il contenitore come pubblico usando il codice seguente:
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L48-L49)]
 
-Chiunque in Internet può visualizzare i BLOB in un contenitore pubblico, ma è possibile modificarli o eliminarli solo se si ha la chiave di accesso dell'account appropriata o una firma di accesso condiviso.
+I BLOB in un contenitore pubblico sono visibili a tutti gli utenti di Internet, tuttavia è possibile modificarli o eliminarli solo se è disponibile la chiave di accesso dell'account appropriata o una firma di accesso condiviso.
 
 ## <a name="upload-a-blob-into-a-container"></a>Caricare un BLOB in un contenitore
 
-Archiviazione BLOB di Azure supporta BLOB in blocchi e BLOB di pagine. Nella maggior parte dei casi, un BLOB in blocchi è il tipo consigliato da usare.
+In Archiviazione BLOB di Azure sono supportati BLOB in blocchi e BLOB di pagine. Nella maggior parte dei casi, un BLOB in blocchi è il tipo consigliato da usare.
 
-Per caricare un file in un BLOB in blocchi, ottenere un riferimento al contenitore e usarlo per ottenere un riferimento al BLOB in blocchi. Una volta ottenuto un riferimento al BLOB, è possibile caricarvi qualsiasi flusso di dati chiamando il `UploadFromFile` metodo. Questa operazione crea il BLOB se non esisteva in precedenza o lo sovrascrive se esiste.
+Per caricare un file in un BLOB in blocchi, ottenere un riferimento a un contenitore e utilizzarlo per ottenere un riferimento a un BLOB in blocchi. Una volta ottenuto un riferimento al BLOB, è possibile caricarvi qualsiasi flusso di dati chiamando il metodo `UploadFromFile`. Questa operazione crea il BLOB se non esisteva in precedenza o lo sovrascrive se esiste.
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L55-L59)]
 
 ## <a name="list-the-blobs-in-a-container"></a>Elencare i BLOB in un contenitore
 
-Per elencare i BLOB in un contenitore, ottenere prima un riferimento al contenitore. È quindi possibile usare il `ListBlobs` metodo del contenitore per recuperare i BLOB e/o le directory al suo interno. Per accedere al set completo di proprietà e metodi per un oggetto `IListBlobItem`restituito, è necessario eseguirne il `CloudBlockBlob`Cast `CloudPageBlob`a un `CloudBlobDirectory` oggetto, o. Se il tipo è sconosciuto, è possibile usare un controllo del tipo per determinare a quale eseguire il cast. Il codice seguente illustra come recuperare e restituire l'URI di ogni elemento nel `mydata` contenitore:
+Per elencare i BLOB in un contenitore, ottenere prima un riferimento al contenitore. È quindi possibile usare il metodo `ListBlobs` del contenitore per recuperare i BLOB e/o le directory al suo interno. Per accedere al set completo di proprietà e metodi per un `IListBlobItem`restituito, è necessario eseguirne il cast a un oggetto `CloudBlockBlob`, `CloudPageBlob`o `CloudBlobDirectory`. Se il tipo è sconosciuto, è possibile usare un controllo del tipo per determinare quello in cui viene eseguito il cast. Il codice seguente illustra come recuperare e visualizzare l'URI di ogni elemento del contenitore `mydata` :
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L67-L80)]
 
-È anche possibile assegnare un nome ai BLOB con le informazioni sul percorso nei rispettivi nomi. In questo modo si crea una struttura di directory virtuale che è possibile organizzare e attraversare come si farebbe con una tradizionale file system. Si noti che la struttura di directory è solo virtuale: le uniche risorse disponibili nell'archivio BLOB sono i contenitori e i BLOB. Tuttavia, la libreria client di archiviazione offre `CloudBlobDirectory` un oggetto per fare riferimento a una directory virtuale e semplificare il processo di utilizzo dei BLOB organizzati in questo modo.
+È anche possibile assegnare un nome ai BLOB con le informazioni sul percorso nei rispettivi nomi. Consente di creare una struttura di directory virtuale che è possibile organizzare e attraversare come un file system tradizionale. Si noti che la struttura di directory è solo virtuale, le uniche risorse disponibili nell'archiviazione BLOB sono i contenitori e i BLOB. Tuttavia, la libreria client di archiviazione offre un oggetto `CloudBlobDirectory` per fare riferimento a una directory virtuale e semplificare il processo di utilizzo dei BLOB organizzati in questo modo.
 
-Si consideri, ad esempio, il seguente set di BLOB in `photos`blocchi in un contenitore denominato:
+Si consideri, ad esempio, il seguente set di BLOB in blocchi di un contenitore denominato `photos`:
 
 *photo1.jpg*\
 *2015/architecture/description.txt*\
@@ -111,7 +111,7 @@ Si consideri, ad esempio, il seguente set di BLOB in `photos`blocchi in un conte
 *2016/architecture/description.txt*\
 *2016/photo7.jpg*\
 
-Quando si chiama `ListBlobs` su un contenitore, come nell'esempio precedente, viene restituito un elenco gerarchico. Se contiene entrambi `CloudBlobDirectory` gli oggetti `CloudBlockBlob` e, che rappresentano rispettivamente le directory e i BLOB nel contenitore, l'output risultante sarà simile al seguente:
+Quando si chiama `ListBlobs` su un contenitore, come nell'esempio precedente, viene restituito un elenco gerarchico. Se contiene sia `CloudBlobDirectory` che oggetti `CloudBlockBlob`, che rappresentano rispettivamente le directory e i BLOB nel contenitore, l'output risultante sarà simile al seguente:
 
 ```console
 Directory: https://<accountname>.blob.core.windows.net/photos/2015/
@@ -119,7 +119,7 @@ Directory: https://<accountname>.blob.core.windows.net/photos/2016/
 Block blob of length 505623: https://<accountname>.blob.core.windows.net/photos/photo1.jpg
 ```
 
-Facoltativamente, è possibile impostare il `UseFlatBlobListing` parametro `ListBlobs` del metodo su `true`. In questo caso, ogni BLOB nel contenitore viene restituito come `CloudBlockBlob` oggetto. La chiamata a `ListBlobs` per restituire un elenco semplice ha un aspetto simile al seguente:
+Facoltativamente, è possibile impostare il parametro `UseFlatBlobListing` del metodo `ListBlobs` su `true`. In questo caso, ogni BLOB nel contenitore viene restituito come oggetto `CloudBlockBlob`. La chiamata a `ListBlobs` per restituire un elenco semplice ha un aspetto simile al seguente:
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L82-L89)]
 
@@ -136,29 +136,29 @@ Block blob of length 399751: https://<accountname>.blob.core.windows.net/photos/
 Block blob of length 505623: https://<accountname>.blob.core.windows.net/photos/photo1.jpg
 ```
 
-## <a name="download-blobs"></a>Scaricare i BLOB
+## <a name="download-blobs"></a>Scaricare BLOB
 
-Per scaricare i BLOB, recuperare prima un riferimento al BLOB e quindi `DownloadToStream` chiamare il metodo. Nell'esempio seguente viene usato `DownloadToStream` il metodo per trasferire il contenuto del BLOB in un oggetto Stream che è quindi possibile salvare in modo permanente in un file locale.
+Per scaricare i BLOB, recuperare prima un riferimento al BLOB e quindi chiamare il metodo `DownloadToStream`. Nell'esempio seguente viene usato il metodo `DownloadToStream` per trasferire il contenuto del BLOB in un oggetto Stream che è quindi possibile salvare in modo permanente in un file locale.
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L95-L101)]
 
-È anche possibile usare il `DownloadToStream` metodo per scaricare il contenuto di un BLOB come stringa di testo.
+È anche possibile usare il metodo `DownloadToStream` per scaricare il contenuto di un BLOB come stringa di testo.
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L103-L106)]
 
-## <a name="delete-blobs"></a>Elimina BLOB
+## <a name="delete-blobs"></a>Eliminare BLOB
 
-Per eliminare un BLOB, ottenere prima un riferimento al BLOB e quindi chiamare `Delete` il metodo su di esso.
+Per eliminare un BLOB, ottenere prima un riferimento al BLOB e quindi chiamare il metodo `Delete`.
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L112-L116)]
 
-## <a name="list-blobs-in-pages-asynchronously"></a>Elencare i BLOB in pagine in modo asincrono
+## <a name="list-blobs-in-pages-asynchronously"></a>Elencare BLOB nelle pagine in modalità asincrona
 
-Se si elenca un numero elevato di BLOB o si vuole controllare il numero di risultati restituiti in un'operazione di elenco, è possibile elencare i BLOB in pagine di risultati. Questo esempio Mostra come restituire i risultati in pagine in modo asincrono, in modo che l'esecuzione non venga bloccata durante l'attesa di restituire un set di risultati di grandi dimensioni.
+Se si sta elencando un numero elevato di BLOB oppure si vuole controllare il numero di risultati restituiti in un'operazione di elenco, è possibile elencare i BLOB nelle pagine dei risultati. Questo esempio spiega come restituire i risultati nelle pagine in modalità asincrona, in modo che l'esecuzione non venga bloccata durante l'attesa della restituzione di un set di risultati di grandi dimensioni.
 
-Questo esempio illustra un elenco di BLOB Flat, ma è anche possibile eseguire un elenco gerarchico, impostando `useFlatBlobListing` il parametro `ListBlobsSegmentedAsync` del metodo su `false`.
+Questo esempio illustra un elenco di BLOB Flat, ma è anche possibile eseguire un elenco gerarchico, impostando il parametro `useFlatBlobListing` del metodo `ListBlobsSegmentedAsync` su `false`.
 
-Nell'esempio viene definito un metodo asincrono utilizzando un `async` blocco. La ``let!`` parola chiave sospende l'esecuzione del metodo di esempio fino al completamento dell'attività di elenco.
+Nell'esempio viene definito un metodo asincrono utilizzando un blocco `async`. La parola chiave ``let!`` sospende l'esecuzione del metodo di esempio fino al completamento dell'attività di elenco.
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L122-L160)]
 
@@ -170,51 +170,51 @@ A questo punto, chiamare la routine. Usare `Async.RunSynchronously` per forzare 
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L168-L168)]
 
-## <a name="writing-to-an-append-blob"></a>Scrittura in un BLOB di Accodamento
+## <a name="writing-to-an-append-blob"></a>Scrittura in un blob di Accodamento
 
-Un BLOB di accodamento è ottimizzato per le operazioni di Accodamento, ad esempio la registrazione. Analogamente a un BLOB in blocchi, un BLOB di accodamento è costituito da blocchi, ma quando si aggiunge un nuovo blocco a un BLOB di Accodamento, viene sempre accodato alla fine del BLOB. Non è possibile aggiornare o eliminare un blocco esistente in un BLOB di Accodamento. Gli ID blocco per un BLOB di Accodamento non vengono esposti come per un BLOB in blocchi.
+Un blob di accodamento è ottimizzato per le operazioni di accodamento, ad esempio la registrazione. Come un blob in blocchi, un blob di accodamento è costituito da blocchi, ma quando si aggiunge un nuovo blocco in un blob di accodamento, viene aggiunto sempre alla fine del blob. È possibile aggiornare o eliminare un blocco esistente in un blob di Accodamento. L'ID di blocco per un blob di accodamento non vengono esposte come in un blob in blocchi.
 
-Ogni blocco in un BLOB di accodamento può avere dimensioni diverse, fino a un massimo di 4 MB e un BLOB di accodamento può includere un massimo di 50.000 blocchi. La dimensione massima di un BLOB di accodamento è quindi leggermente superiore a 195 GB (4 MB X 50.000 blocchi).
+Ogni blocco di un blob di accodamento può avere dimensioni diverse, con un massimo di 4 MB e un blob di accodamento può includere un massimo di 50.000 blocchi. La dimensione massima di un blob di accodamento è pertanto leggermente superiore a 195 GB (4 MB X 50.000 blocchi).
 
 Nell'esempio seguente viene creato un nuovo BLOB di Accodamento e vengono aggiunti alcuni dati, simulando una semplice operazione di registrazione.
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L174-L203)]
 
-Per altre informazioni sulle differenze tra i tre tipi di BLOB, vedere informazioni sui [BLOB in blocchi, BLOB di pagine e BLOB](https://msdn.microsoft.com/library/azure/ee691964.aspx) di Accodamento.
+Vedere [Informazioni sui BLOB in blocchi, BLOB di pagine e BLOB di accodamento](https://msdn.microsoft.com/library/azure/ee691964.aspx) per ulteriori informazioni sulle differenze tra i tre tipi di BLOB.
 
 ## <a name="concurrent-access"></a>Accesso simultaneo
 
-Per supportare l'accesso simultaneo a un BLOB da più client o da più istanze di processo, è possibile usare **ETag** o **lease**.
+Per supportare l'accesso simultaneo a un BLOB da più client o da più istanze di processo, è possibile usare gli **ETag** o **lease**.
 
-- **ETag** : fornisce un modo per rilevare che il BLOB o il contenitore è stato modificato da un altro processo
+- **Etag** : fornisce un modo per rilevare le eventuali modifiche apportate al BLOB o contenitore da un altro processo
 
-- **Lease** : fornisce un modo per ottenere l'accesso esclusivo, rinnovabile, in scrittura o eliminazione a un BLOB per un certo periodo di tempo
+- **Lease** : consente di ottenere accesso esclusivo, rinnovabile, in scrittura o eliminazione a un BLOB per un periodo di tempo
 
 Per ulteriori informazioni, vedere [gestione della concorrenza in archiviazione di Microsoft Azure](https://azure.microsoft.com/blog/managing-concurrency-in-microsoft-azure-storage-2/).
 
 ## <a name="naming-containers"></a>Denominazione di contenitori
 
-Ogni BLOB in archiviazione di Azure deve risiedere in un contenitore. Il contenitore fa parte del nome del BLOB. Ad esempio, `mydata` è il nome del contenitore negli URI BLOB di esempio:
+Ogni BLOB nell'archiviazione di Azure deve risiedere in un contenitore. Il contenitore fa parte del nome del BLOB. Ad esempio, `mydata` è il nome del contenitore nei seguenti URI del BLOB di esempio:
 
 - https://storagesample.blob.core.windows.net/mydata/blob1.txt
 - https://storagesample.blob.core.windows.net/mydata/photos/myphoto.jpg
 
-Un nome di contenitore deve essere un nome DNS valido, conforme alle seguenti regole di denominazione:
+Il nome di un contenitore deve essere un nome DNS valido, in conformità con le regole di denominazione seguenti:
 
 1. I nomi dei contenitori devono iniziare con una lettera o un numero e possono contenere solo lettere, numeri e il carattere trattino (-).
-1. Ogni trattino (-) deve essere immediatamente preceduto e seguito da una lettera o un numero. nei nomi dei contenitori non sono consentiti trattini consecutivi.
-1. Tutte le lettere in un nome di contenitore devono essere minuscole.
-1. I nomi dei contenitori devono avere una lunghezza compreso tra 3 e 63 caratteri.
+1. Ciascun carattere trattino (-) deve essere immediatamente preceduto e seguito da una lettera o un numero: nei nomi dei contenitori non sono consentiti trattini consecutivi.
+1. Tutte le lettere in un nome di contenitore deve essere composto solo da minuscole.
+1. La lunghezza dei nomi dei contenitori deve essere compresa tra 3 e 63 caratteri.
 
-Si noti che il nome di un contenitore deve sempre essere minuscolo. Se si include una lettera maiuscola in un nome di contenitore o si violano in altro modo le regole di denominazione dei contenitori, è possibile che venga visualizzato un errore 400 (richiesta non valida).
+Il nome di un contenitore deve sempre essere minuscolo. Se si include una lettera maiuscola nel nome di un contenitore o si violano in altro modo le regole di denominazione del contenitore, è possibile che venga visualizzato un errore 400 (richiesta non valida).
 
-## <a name="managing-security-for-blobs"></a>Gestione della sicurezza per i BLOB
+## <a name="managing-security-for-blobs"></a>Gestione della sicurezza dei BLOB
 
-Per impostazione predefinita, archiviazione di Azure garantisce la sicurezza dei dati limitando l'accesso al proprietario dell'account, che possiede le chiavi di accesso dell'account. Quando è necessario condividere i dati BLOB nell'account di archiviazione, è importante farlo senza compromettere la sicurezza delle chiavi di accesso dell'account. Inoltre, è possibile crittografare i dati BLOB per assicurarsi che siano protetti in rete e in archiviazione di Azure.
+Per impostazione predefinita, Archiviazione di Azure garantisce la sicurezza dei dati limitando l'accesso al proprietario dell'account, che possiede le chiavi di accesso dell'account. Quando è necessario condividere dati BLOB nell'account di archiviazione, è importante farlo senza compromettere la sicurezza delle chiavi di accesso dell'account. È anche possibile crittografare i dati BLOB per assicurarne la sicurezza durante il trasferimento in rete e in Archiviazione di Azure.
 
 ### <a name="controlling-access-to-blob-data"></a>Controllo dell'accesso ai dati BLOB
 
-Per impostazione predefinita, i dati BLOB nell'account di archiviazione sono accessibili solo al proprietario dell'account di archiviazione. Per l'autenticazione delle richieste per l'archiviazione BLOB è necessaria la chiave di accesso dell'account per impostazione predefinita. Tuttavia, potrebbe essere necessario rendere disponibili determinati dati BLOB ad altri utenti.
+Per impostazione predefinita, solo il proprietario dell'account di archiviazione può accedere ai dati BLOB in tale account. L'autenticazione delle richieste per l'archiviazione BLOB richiede la chiave di accesso dell'account per impostazione predefinita. Tuttavia, potrebbe essere necessario rendere disponibili determinati dati BLOB ad altri utenti.
 
 ### <a name="encrypting-blob-data"></a>Crittografia dei dati BLOB
 
@@ -222,23 +222,23 @@ Archiviazione di Azure supporta la crittografia dei dati BLOB sia sul client che
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Ora che sono state apprese le nozioni di base dell'archiviazione BLOB, seguire questi collegamenti per altre informazioni.
+A questo punto, dopo avere appreso le nozioni di base dell'archivio BLOB, visitare i collegamenti seguenti per altre informazioni.
 
-### <a name="tools"></a>Strumenti
+### <a name="tools"></a>Strumenti di
 
-- [F#AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/)\
+- [ F#\ AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/)
 Un F# provider di tipi che può essere usato per esplorare le risorse di archiviazione di Azure BLOB, tabelle e code e per applicare con facilità le operazioni CRUD.
 
 - [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage)\
 API F# per l'uso di Microsoft Azure servizio di archiviazione tabelle
 
-- [Microsoft Azure Storage Explorer (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer)\
+- [Microsoft Azure Storage Explorer (Mase)](/azure/vs-azure-tools-storage-manage-with-storage-explorer)\
 App autonoma gratuita di Microsoft che consente di lavorare visivamente con i dati di archiviazione di Azure in Windows, OS X e Linux.
 
-### <a name="blob-storage-reference"></a>Riferimento all'archiviazione BLOB
+### <a name="blob-storage-reference"></a>Informazioni di riferimento sull'archiviazione BLOB
 
-- [API di archiviazione di Azure per .NET](/dotnet/api/overview/azure/storage)
-- [Informazioni di riferimento sull'API REST dei servizi di archiviazione di Azure](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference)
+- [API di Archiviazione di Azure per .NET](/dotnet/api/overview/azure/storage)
+- [Informazioni di riferimento sulle API REST dei servizi di Archiviazione di Azure](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference)
 
 ### <a name="related-guides"></a>Guide correlate
 
@@ -246,5 +246,5 @@ App autonoma gratuita di Microsoft che consente di lavorare visivamente con i da
 - [Trasferire dati con l'utilità della riga di comando AzCopy in Windows](/azure/storage/common/storage-use-azcopy)
 - [Trasferire dati con l'utilità della riga di comando AzCopy in Linux](/azure/storage/common/storage-use-azcopy-linux)
 - [Configurare le stringhe di connessione di archiviazione di Azure](/azure/storage/common/storage-configure-connection-string)
-- [Blog del team di archiviazione di Azure](https://blogs.msdn.microsoft.com/windowsazurestorage/)
-- [Avvio rapido: Usare .NET per creare un BLOB nell'archivio oggetti](/azure/storage/blobs/storage-quickstart-blobs-dotnet)
+- [Blog del team di Archiviazione di Azure](https://docs.microsoft.com/archive/blogs/windowsazurestorage/)
+- [Guida introduttiva: usare .NET per creare un BLOB nell'archivio oggetti](/azure/storage/blobs/storage-quickstart-blobs-dotnet)

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - -baseaddress compiler option [C#]
 - /baseaddress compiler option [C#]
 ms.assetid: ce13c965-dfe4-4433-94f5-63b476e3a608
-ms.openlocfilehash: e96ab3ece6edc36c913a8efc0097ff9c4a1e3c22
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: f138f445b8a335c7505e25b34f560c4da40ab2dd
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69607025"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937204"
 ---
 # <a name="-baseaddress-c-compiler-options"></a>-baseaddress (opzioni del compilatore C#)
-L'opzione **-baseaddress** consente di specificare l'indirizzo di base preferito in cui caricare una DLL. Per altre informazioni su quando e perché usare questa opzione, vedere il [blog di Larry Osterman](https://blogs.msdn.microsoft.com/larryosterman/2004/07/06/why-should-i-even-bother-to-use-dlls-in-my-system/).  
+L'opzione **-baseaddress** consente di specificare l'indirizzo di base preferito in cui caricare una DLL. Per altre informazioni su quando e perché usare questa opzione, vedere il [blog di Larry Osterman](https://docs.microsoft.com/archive/blogs/larryosterman/why-should-i-even-bother-to-use-dlls-in-my-system).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -28,7 +28,7 @@ L'opzione **-baseaddress** consente di specificare l'indirizzo di base preferito
  `address`  
  Indirizzo di base per la DLL. Questo indirizzo può essere specificato come numero decimale, esadecimale o ottale.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  L'indirizzo di base predefinito per una DLL viene impostato dal Common Language Runtime di .NET Framework.  
   
  Tenere presente che la parola di ordine inferiore in questo indirizzo verrà arrotondata. Ad esempio, se si specifica 0x11110001, il valore verrà arrotondato a 0x11110000.  
@@ -37,7 +37,7 @@ L'opzione **-baseaddress** consente di specificare l'indirizzo di base preferito
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1. Aprire la pagine **Proprietà** del progetto.  
+1. Aprire la pagina **Proprietà** del progetto.  
   
 2. Fare clic sulla pagina della proprietà **Compilazione**.  
   

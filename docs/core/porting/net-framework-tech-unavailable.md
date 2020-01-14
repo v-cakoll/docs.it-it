@@ -3,18 +3,18 @@ title: Tecnologie di .NET Framework non disponibili in .NET Core
 description: Informazioni sulle tecnologie di .NET Framework che non sono disponibili in .NET Core
 author: cartermp
 ms.date: 04/30/2019
-ms.openlocfilehash: d474b694b80b2f0e74dd2916106016802f7e0c68
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.openlocfilehash: 89871753fef92a30bf2151a618207a73b40bb402
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75777305"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936955"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>Tecnologie di .NET Framework non disponibili in .NET Core
 
 Diverse tecnologie disponibili per le librerie .NET Framework non sono disponibili per l'uso con .NET Core, ad esempio AppDomain, comunicazione remota, sicurezza dall'accesso di codice (CAS), trasparenza della sicurezza e System. EnterpriseServices. Se le librerie si basano su una o più di queste tecnologie, prendere in considerazione gli approcci alternativi descritti di seguito. Per altre informazioni sulla compatibilità delle API, vedere [modifiche di rilievo di .NET Core](../compatibility/breaking-changes.md).
 
-Il fatto che un'API o una tecnologia non sia attualmente implementata non implica che sia intenzionalmente non supportata. Eseguire una ricerca nei repository GitHub per .NET Core per verificare se un particolare problema riscontrato è stato progettato. Se non si trova un indicatore di questo tipo, inviare un problema nel [repository DotNet/Runtime](https://github.com/dotnet/runtime/issues) per richiedere API e tecnologie specifiche. I problemi relativi alla portabilità delle richieste sono contrassegnati con l'etichetta [Port-to-core](https://github.com/dotnet/runtime/labels/port-to-core) .
+Il fatto che un'API o una tecnologia non sia attualmente implementata non implica che sia intenzionalmente non supportata. Eseguire una ricerca nei repository GitHub per .NET Core per verificare se un particolare problema riscontrato è stato progettato. Se non si trova un indicatore di questo tipo, archiviare un problema nel [repository DotNet/Runtime](https://github.com/dotnet/runtime/issues) per richiedere API e tecnologie specifiche. I problemi relativi alla portabilità delle richieste sono contrassegnati con l'etichetta [Port-to-core](https://github.com/dotnet/runtime/labels/port-to-core) .
 
 ## <a name="appdomains"></a>AppDomain
 
@@ -46,7 +46,6 @@ Usare i limiti di sicurezza forniti dal sistema operativo, ad esempio la virtual
 
 System.EnterpriseServices (COM+) non è supportato da .NET Core.
 
-## <a name="next-steps"></a>Passaggi successivi
+## <a name="see-also"></a>Vedere anche
 
->[!div class="nextstepaction"]
->[Analizzare le dipendenze](third-party-deps.md)
+- [Panoramica del porting da .NET Framework a .NET Core](../porting/index.md)

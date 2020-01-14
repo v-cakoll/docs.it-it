@@ -2,12 +2,12 @@
 title: Informazioni di base
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: deb4d59dc2fb40b63e0362a9a4ee4b84c08dce49
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: d7d00a0c64c6b25219403e8fd15eae85c09eafa0
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634729"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937554"
 ---
 # <a name="background-information"></a>Informazioni di base
 Gli argomenti di questa sezione riguardano i concetti e le procedure che vanno oltre le nozioni di base relative all'utilizzo di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -18,7 +18,7 @@ Gli argomenti di questa sezione riguardano i concetti e le procedure che vanno o
   
 - Partecipare al [Forum su LINQ](https://go.microsoft.com/fwlink/?LinkId=76488), in cui è possibile discutere in dettaglio argomenti più complessi con gli esperti.  
   
-- Esaminare il white paper che descrive in dettaglio [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tecnologia, completati con Visual Basic ed C# esempi di codice. Per ulteriori informazioni, vedere [LINQ to SQL: .NET Language-Integrated Query per i dati relazionali](https://go.microsoft.com/fwlink/?LinkId=93205).  
+- Esaminare la white paper che descrive in dettaglio [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tecnologia, completate C# con Visual Basic ed esempi di codice. Per ulteriori informazioni, vedere [LINQ to SQL: .NET Language-Integrated Query per i dati relazionali](https://go.microsoft.com/fwlink/?LinkId=93205).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [ADO.NET e LINQ to SQL](ado-net-and-linq-to-sql.md)  

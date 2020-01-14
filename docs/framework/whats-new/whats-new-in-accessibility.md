@@ -7,12 +7,12 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: 681328af3f3624a8398d5125b952593f2c0510c7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6f17cb0fb6e5b0457af745ea0d089f3e51d4706c
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427693"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938152"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Nuove funzionalità di accessibilità in .NET Framework
 
@@ -136,7 +136,7 @@ namespace WindowsFormsApplication
 
 **Eventi di notifica di automazione interfaccia utente**
 
-L'evento di notifica di automazione interfaccia utente, introdotto in Windows 10 Fall Creators Update, consente all'app di generare un evento di automazione interfaccia utente in modo che l'Assistente vocale emetta un annuncio in base al testo immesso con l'evento anche senza un controllo corrispondente nell'interfaccia utente. In alcuni scenari questo è un modo semplice per migliorare notevolmente l'accessibilità dell'app. Può essere utile anche notificare lo stato di avanzamento di un processo che potrebbe richiedere molto tempo. Per altre informazioni sugli eventi di notifica di automazione interfaccia utente, vedere [Can your desktop app leverage the new UI Notification event?](https://blogs.msdn.microsoft.com/winuiautomation/2017/11/08/can-your-desktop-app-leverage-the-new-uia-notification-event-in-order-to-have-narrator-say-exactly-what-your-customers-need/) (L'app desktop può usare il nuovo evento di notifica dell'interfaccia utente?).
+L'evento di notifica di automazione interfaccia utente, introdotto in Windows 10 Fall Creators Update, consente all'app di generare un evento di automazione interfaccia utente in modo che l'Assistente vocale emetta un annuncio in base al testo immesso con l'evento anche senza un controllo corrispondente nell'interfaccia utente. In alcuni scenari questo è un modo semplice per migliorare notevolmente l'accessibilità dell'app. Può essere utile anche notificare lo stato di avanzamento di un processo che potrebbe richiedere molto tempo. Per altre informazioni sugli eventi di notifica di automazione interfaccia utente, vedere [Can your desktop app leverage the new UI Notification event?](https://docs.microsoft.com/archive/blogs/winuiautomation/can-your-desktop-app-leverage-the-new-uia-notification-event-in-order-to-have-narrator-say-exactly-what-your-customers-need) (L'app desktop può usare il nuovo evento di notifica dell'interfaccia utente?).
 
 L'esempio seguente genera l'[evento di notifica](xref:System.Windows.Forms.AccessibleObject.RaiseAutomationNotification%2A):
 
@@ -228,7 +228,7 @@ internal class AutoSuggestTextBoxAutomationPeer : TextBoxAutomationPeer
 
 In .NET Framework 4.7.2 e versioni precedenti le descrizioni comando vengono visualizzate solo quando l'utente posiziona il cursore del mouse su un controllo. In .NET Framework 4.8 le descrizioni comando vengono visualizzate anche con lo stato attivo della tastiera e tramite un tasto di scelta rapida.
 
-Per abilitare questa funzionalità, è necessario che l'applicazione sia destinata a .NET Framework 4.8 o venga abilitata esplicitamente tramite le opzioni [AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) `Switch.UseLegacyAccessibilityFeatures.3` e `Switch.UseLegacyToolTipDisplay`. Di seguito è riportato un file di configurazione dell'applicazione di esempio:
+Per abilitare questa funzionalità, un'applicazione deve avere come destinazione .NET Framework 4,8 o acconsentire esplicitamente usando le opzioni di `Switch.UseLegacyAccessibilityFeatures.3` e `Switch.UseLegacyToolTipDisplay` [AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) . Di seguito è riportato un file di configurazione dell'applicazione di esempio:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -291,7 +291,7 @@ A partire da .NET Framework 4.8, WPF espone queste due proprietà per l'automazi
 
 Inoltre, gli elementi nelle istanze <xref:System.Windows.Controls.ItemsControl> specificano automaticamente un valore per queste proprietà senza ulteriori azioni da parte dello sviluppatore. Se <xref:System.Windows.Controls.ItemsControl> è raggruppato, la raccolta di gruppi è rappresentata come set e ogni gruppo viene conteggiato come set separato in cui ogni elemento all'interno del gruppo specifica la propria posizione all'interno del gruppo e le dimensioni del gruppo. La virtualizzazione non ha effetto sui valori automatici. Anche se un elemento non è realizzato, viene comunque conteggiato nelle dimensioni totali del set e influisce sulla posizione dei relativi elementi di pari livello nel set.
 
-I valori automatici vengono forniti solo se l'applicazione è destinata a .NET Framework 4.8. Per le applicazioni destinate a una versione precedente di .NET Framework, è possibile impostare l'[opzione AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) `Switch.UseLegacyAccessibilityFeatures.3`, come illustrato nel file App.config seguente:
+I valori automatici vengono forniti solo se l'applicazione è destinata a .NET Framework 4.8. Per le applicazioni destinate a una versione precedente del .NET Framework, è possibile impostare l' [opzione `Switch.UseLegacyAccessibilityFeatures.3` AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md), come illustrato nel file app. config seguente:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -317,7 +317,7 @@ La finestra di progettazione dei flussi di lavoro include le modifiche seguenti 
 
 - Gli utenti che usano i temi a contrasto elevato noteranno miglioramenti nella visibilità di Progettazione flussi di lavoro e nei relativi controlli, ad esempio rapporti di contrasto più definiti tra gli elementi e caselle di selezione più evidenti per gli elementi con lo stato attivo.
 
-Se l'applicazione è destinata a .NET Framework 4.7.2 o versione precedente, è possibile scegliere esplicitamente queste modifiche impostando l'[opzione AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) `Switch.UseLegacyAccessibilityFeatures.3` su `false` nel file di configurazione dell'applicazione. Per altre informazioni, vedere la sezione [Sfruttare i vantaggi dei miglioramenti all'accessibilità](#taking-advantage-of-accessibility-enhancements) in questo articolo.
+Se l'applicazione è destinata a .NET Framework 4.7.2 o a una versione precedente, è possibile acconsentire esplicitamente a queste modifiche impostando l' [opzione `Switch.UseLegacyAccessibilityFeatures.3` AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) su `false` nel file di configurazione dell'applicazione. Per altre informazioni, vedere la sezione [Sfruttare i vantaggi dei miglioramenti all'accessibilità](#taking-advantage-of-accessibility-enhancements) in questo articolo.
 
 ## <a name="whats-new-in-accessibility-in-net-framework-472"></a>Nuove funzionalità di accessibilità in .NET Framework 4.7.2
 
@@ -445,7 +445,7 @@ Per supportare le aree dinamiche sono state aggiunte le API seguenti a WPF:
 
 - L'enumerazione <xref:System.Windows.Automation.AutomationLiveSetting?displayProperty=nameWithType>, che definisce le i valori **LiveSetting** possibili seguenti:
 
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>. L'elemento non invia notifiche se il contenuto dell'area attiva è stato modificato.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>. L'elemento non invia notifiche se il contenuto dell'area dinamica è stato modificato.
   - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>. L'elemento invia notifiche che non causano interruzioni se il contenuto dell'area dinamica è stato modificato.
 
   - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>. L'elemento invia notifiche con interruzioni se il contenuto dell'area dinamica è stato modificato.

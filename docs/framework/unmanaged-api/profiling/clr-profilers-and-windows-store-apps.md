@@ -12,12 +12,12 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-ms.openlocfilehash: a3e60f715c4c61e671980e4f36813e864469d28e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 1a839c4cd99e21bc2a3ebd90cf3302a475c02e17
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344763"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938134"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Profiler CLR e app di Windows Store
 
@@ -76,7 +76,7 @@ I dispositivi Windows RT sono piuttosto bloccati. I profiler di terze parti non 
 
 In diversi scenari illustrati nelle sezioni seguenti, l'applicazione desktop dell'interfaccia utente del profiler deve utilizzare alcune nuove API Windows Runtime. Si consiglia di consultare la documentazione per comprendere quali API Windows Runtime possono essere utilizzate dalle applicazioni desktop e se il loro comportamento è diverso quando viene chiamato da applicazioni desktop e app di Windows Store.
 
-Se l'interfaccia utente del profiler viene scritta in codice gestito, sarà necessario eseguire alcuni passaggi per semplificare l'utilizzo di tali API Windows Runtime. Per ulteriori informazioni, vedere l'articolo [app desktop gestite e Windows Runtime](https://go.microsoft.com/fwlink/?LinkID=271858) .
+Se l'interfaccia utente del profiler viene scritta in codice gestito, sarà necessario eseguire alcuni passaggi per semplificare l'utilizzo di tali API Windows Runtime. Per ulteriori informazioni, vedere l'articolo [app desktop gestite e Windows Runtime](https://docs.microsoft.com/previous-versions/windows/apps/jj856306(v=win.10)) .
 
 ## <a name="loading-the-profiler-dll"></a>Caricamento della DLL del profiler
 
@@ -378,11 +378,11 @@ Il Garbage Collector e l'heap gestito non sono fondamentalmente diversi in un'ap
 
 Quando si esegue la profilatura della memoria, la DLL del profiler crea in genere un thread separato dal quale chiamare il metodo del [Metodo ForceGC](icorprofilerinfo-forcegc-method.md) . Non si tratta di una novità. Tuttavia, ciò che potrebbe sorprendere è che l'atto di eseguire un Garbage Collection all'interno di un'app di Windows Store può trasformare il thread in un thread gestito. ad esempio, verrà creata una ThreadID dell'API di profilatura per quel thread.
 
-Per comprendere le conseguenze di questo, è importante comprendere le differenze tra le chiamate sincrone e asincrone definite dall'API di profilatura CLR. Si noti che questo è molto diverso dal concetto di chiamate asincrone nelle app di Windows Store. Per ulteriori informazioni, vedere il post di Blog relativo al [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](https://blogs.msdn.microsoft.com/davbr/2008/12/23/why-we-have-corprof_e_unsupported_call_sequence/) .
+Per comprendere le conseguenze di questo, è importante comprendere le differenze tra le chiamate sincrone e asincrone definite dall'API di profilatura CLR. Si noti che questo è molto diverso dal concetto di chiamate asincrone nelle app di Windows Store. Per ulteriori informazioni, vedere il post di Blog relativo al [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](https://docs.microsoft.com/archive/blogs/davbr/why-we-have-corprof_e_unsupported_call_sequence) .
 
 Il punto rilevante è che le chiamate effettuate sui thread creati dal profiler sono sempre considerate sincrone, anche se tali chiamate vengono effettuate dall'esterno di un'implementazione di uno dei metodi [ICorProfilerCallback](icorprofilercallback-interface.md) della dll del profiler. Almeno, questo era il caso. Ora che CLR ha trasformato il thread del profiler in un thread gestito a causa della chiamata al [Metodo ForceGC](icorprofilerinfo-forcegc-method.md), il thread non è più considerato il thread del profiler. Di conseguenza, CLR applica una definizione più rigorosa di ciò che si qualifica come sincrono per quel thread, ovvero che una chiamata deve provenire dall'interno di uno dei metodi [ICorProfilerCallback](icorprofilercallback-interface.md) della dll del profiler per essere qualificata come sincrona.
 
-Cosa significa in pratica? La maggior parte dei metodi [ICorProfilerInfo](icorprofilerinfo-interface.md) può essere chiamata solo in modo sincrono e avrà esito negativo. Quindi, se la DLL del profiler riutilizza il thread del [Metodo ForceGC](icorprofilerinfo-forcegc-method.md) per altre chiamate eseguite in genere nei thread creati dal profiler (ad esempio, in [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)o [RequestRevert](icorprofilerinfo4-requestrevert-method.md)), si verificano problemi. Anche una funzione asincrona sicura, ad esempio [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) , ha regole speciali quando viene chiamata da thread gestiti. Per ulteriori informazioni, vedere il post di Blog relativo all' [analisi dello stack del profiler: Nozioni di base e](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) altro.
+Cosa significa in pratica? La maggior parte dei metodi [ICorProfilerInfo](icorprofilerinfo-interface.md) può essere chiamata solo in modo sincrono e avrà esito negativo. Quindi, se la DLL del profiler riutilizza il thread del [Metodo ForceGC](icorprofilerinfo-forcegc-method.md) per altre chiamate eseguite in genere nei thread creati dal profiler (ad esempio, in [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)o [RequestRevert](icorprofilerinfo4-requestrevert-method.md)), si verificano problemi. Anche una funzione asincrona sicura, ad esempio [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) , ha regole speciali quando viene chiamata da thread gestiti. Per ulteriori informazioni, vedere il post di Blog relativo all' [analisi dello stack del profiler: Nozioni di base e](https://docs.microsoft.com/archive/blogs/davbr/profiler-stack-walking-basics-and-beyond) altro.
 
 Pertanto, è consigliabile usare qualsiasi thread creato dalla DLL del profiler per chiamare il [Metodo ForceGC](icorprofilerinfo-forcegc-method.md) *solo* per l'attivazione di cataloghi globali e la risposta ai callback GC. Non deve chiamare l'API di profilatura per eseguire altre attività, come il campionamento dello stack o lo scollegamento.
 

@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 65990c699bafa8eec1ba7dcbce624c88316cbb72
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0764ca29fc959092e77629ff3888e65f0d68d70c
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283276"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938058"
 ---
 # <a name="working-with-certificates"></a>Utilizzo dei certificati
 
 Per programmare le funzionalità di sicurezza di Windows Communication Foundation (WCF) in genere si usano i certificati digitali X.509. In particolare, questi certificati vengono usati per autenticare client e server, nonché per crittografare e firmare digitalmente i messaggi. Questo argomento fornisce una breve descrizione delle funzionalità relative ai certificati digitali X.509 e illustra come usarle in WCF. Questo argomento contiene inoltre i collegamenti agli argomenti che trattano questi concetti in modo più dettagliato o che descrivono come eseguire attività comuni tramite l'uso di WCF e dei certificati.
 
-In breve, un certificato digitale è un componente dell'*infrastruttura a chiave pubblica* (PKI, Public Key Infrastructure). Questa infrastruttura è un sistema di certificati digitali, autorità di certificazione e altre autorità di registrazione che verificano e autenticano la validità di ogni parte coinvolta in una transazione elettronica basata sull'uso di crittografia a chiave pubblica. Ogni certificato viene rilasciato da un'autorità di certificazione e presenta un set di campi che contengono determinati dati, ad esempio *soggetto* (l'entità alla quale viene rilasciato il certificato), date di validità (il periodo di validità del certificato), autorità emittente (l'entità che ha emesso il certificato) e chiave pubblica. In WCF, ognuna di queste proprietà viene elaborata come un'attestazione <xref:System.IdentityModel.Claims.Claim>. Esistono due tipi di attestazioni: di identità e di diritto. Per altre informazioni sui certificati X.509, vedere [Certificati di chiave pubblica X.509](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates). Per altre informazioni sulle attestazioni e l'autorizzazione in WCF, vedere [Gestione di attestazioni e autorizzazioni con il modello di identità](managing-claims-and-authorization-with-the-identity-model.md). Per ulteriori informazioni sull'implementazione di un'infrastruttura a chiave pubblica (PKI), vedere [Enterprise PKI con Windows Server 2012 R2 Active Directory Certificate Services](https://blogs.technet.microsoft.com/yungchou/2013/10/21/enterprise-pki-with-windows-server-2012-r2-active-directory-certificate-services-part-1-of-2/).
+In breve, un certificato digitale è un componente dell'*infrastruttura a chiave pubblica* (PKI, Public Key Infrastructure). Questa infrastruttura è un sistema di certificati digitali, autorità di certificazione e altre autorità di registrazione che verificano e autenticano la validità di ogni parte coinvolta in una transazione elettronica basata sull'uso di crittografia a chiave pubblica. Ogni certificato viene rilasciato da un'autorità di certificazione e presenta un set di campi che contengono determinati dati, ad esempio *soggetto* (l'entità alla quale viene rilasciato il certificato), date di validità (il periodo di validità del certificato), autorità emittente (l'entità che ha emesso il certificato) e chiave pubblica. In WCF, ognuna di queste proprietà viene elaborata come un'attestazione <xref:System.IdentityModel.Claims.Claim>. Esistono due tipi di attestazioni: di identità e di diritto. Per altre informazioni sui certificati X.509, vedere [Certificati di chiave pubblica X.509](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates). Per altre informazioni sulle attestazioni e l'autorizzazione in WCF, vedere [Gestione di attestazioni e autorizzazioni con il modello di identità](managing-claims-and-authorization-with-the-identity-model.md). Per ulteriori informazioni sull'implementazione di un'infrastruttura a chiave pubblica (PKI), vedere [Enterprise PKI con Windows Server 2012 R2 Active Directory Certificate Services](https://docs.microsoft.com/archive/blogs/yungchou/enterprise-pki-with-windows-server-2012-r2-active-directory-certificate-services-part-1-of-2).
 
 La funzione principale di un certificato è consentire l'autenticazione dell'identità del proprietario del certificato presso altre entità. Un certificato contiene la *chiave pubblica*del proprietario, mentre il proprietario conserva la chiave privata. La chiave pubblica può essere utilizzata per crittografare i messaggi inviati al proprietario del certificato. In quanto unico detentore della chiave privata, solo il proprietario è in grado di decrittografare questi messaggi.
 
@@ -72,7 +72,7 @@ I certificati digitali vengono usati per autenticare un'entità basandosi su una
 
 Quando si crea un nuovo servizio è possibile che si utilizzi un certificato che non è stato rilasciato tramite un certificato radice attendibile oppure che il certificato emittente non sia contenuto nell'archivio Autorità di certificazione radice attendibili. In questo caso, e solo per scopi di sviluppo, è possibile disabilitare temporaneamente il meccanismo che verifica la catena di trust di un certificato. A tale scopo, impostare la proprietà `CertificateValidationMode` su `PeerTrust` oppure su `PeerOrChainTrust`. Queste modalità specificano rispettivamente che il certificato può essere autocertificato (trust peer) o appartenere a una catena di trust. Questa proprietà può essere impostata in una qualsiasi delle classi seguenti:
 
-|Classe|Proprietà|
+|Classe|Gli|
 |-----------|--------------|
 |<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
 |<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>|<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
@@ -168,7 +168,7 @@ Una funzionalità di IIS e di Active Directory è la possibilità di eseguire il
 
 Per altre informazioni sull'uso della funzionalità di mapping di Active Directory, vedere [Mapping di certificati client con il mapping del servizio directory](https://go.microsoft.com/fwlink/?LinkId=88918).
 
-Se questa funzionalità è abilitata è possibile impostare la proprietà <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> della classe <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> su `true`. Nella configurazione è possibile impostare su `mapClientCertificateToWindowsAccount` l'attributo [ dell'elemento \<](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)authentication>`true`, come mostrato nel codice seguente.
+Se questa funzionalità è abilitata è possibile impostare la proprietà <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> della classe <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> su `true`. Nella configurazione è possibile impostare su `true` l'attributo `mapClientCertificateToWindowsAccount` dell'elemento [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md), come mostrato nel codice seguente.
 
 ```xml
 <serviceBehaviors>

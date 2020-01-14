@@ -1,24 +1,24 @@
 ---
-ms.openlocfilehash: 843007ac6467584fbe6350b6ea19ef67609d73e2
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: b0c4e9617677cf95e3a059b57f3d50ddfb072f4a
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74643949"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937083"
 ---
-### <a name="controldefaultfont-changed-to-segoe-ui-9pt"></a>`Control.DefaultFont` modificato in `Segoe UI 9pt`
+### <a name="default-control-font-changed-to-segoe-ui-9-pt"></a>Il tipo di carattere del controllo predefinito è stato modificato in Segoe UI 9 PT
 
-#### <a name="change-description"></a>Descrizione della modifica
+#### <a name="change-description"></a>Descrizione delle modifiche
 
-Nella .NET Framework la proprietà <xref:System.Windows.Forms.Control.DefaultFont?displayProperty=nameWithType> è stata impostata su `Microsoft Sans Serif 8pt`. Nella figura seguente è illustrata una finestra che utilizza il tipo di carattere predefinito.
+In .NET Framework la proprietà <xref:System.Windows.Forms.Control.DefaultFont?displayProperty=nameWithType> è stata impostata su `Microsoft Sans Serif 8 pt`. La figura seguente mostra una finestra che usa il tipo di carattere predefinito.
 
-![tipo di carattere del controllo predefinito in .NET Framework](~/docs/images/core-changes/windowsforms/control-defaultfont-changed/defaultfont-framework.png)
+![Tipo di carattere del controllo predefinito in .NET Framework](~/docs/images/core-changes/windowsforms/control-defaultfont-changed/defaultfont-framework.png)
 
-In .NET Core, a partire da .NET Core 3,0, è impostato su `Segoe UI 9pt` (lo stesso tipo di carattere <xref:System.Drawing.SystemFonts.MessageBoxFont?displayProperty=nameWithType>). In seguito a questa modifica, i form e i controlli verranno ridimensionati circa il 27% più grande per tenere conto della dimensione maggiore del nuovo tipo di carattere predefinito. Ad esempio:
+A partire da .NET Core 3,0, il tipo di carattere predefinito è impostato su `Segoe UI 9 pt` (lo stesso tipo di carattere <xref:System.Drawing.SystemFonts.MessageBoxFont?displayProperty=nameWithType>). In seguito a questa modifica, i form e i controlli vengono ridimensionati circa il 27% più grande per tenere conto della dimensione maggiore del nuovo tipo di carattere predefinito. Ad esempio:
 
-![tipo di carattere del controllo predefinito-in .NET Core](~/docs/images/core-changes/windowsforms/control-defaultfont-changed/defaultfont-core.png)
+![Tipo di carattere del controllo predefinito in .NET Core](~/docs/images/core-changes/windowsforms/control-defaultfont-changed/defaultfont-core.png)
 
-Questa modifica è stata apportata per allinearsi alle [linee guida di Windows UX](https://docs.microsoft.com/windows/win32/uxguide/vis-fonts#fonts-and-colors).
+Questa modifica è stata apportata per allinearsi alle [linee guida sull'esperienza utente di Windows](/windows/win32/uxguide/vis-fonts#fonts-and-colors).
 
 #### <a name="version-introduced"></a>Versione introdotta
 
@@ -28,7 +28,7 @@ Questa modifica è stata apportata per allinearsi alle [linee guida di Windows U
 
 A causa della modifica delle dimensioni dei form e dei controlli, assicurarsi che l'applicazione venga correttamente sottoposta a rendering.
 
-Per mantenere il tipo di carattere originale, impostare il tipo di carattere predefinito del modulo su `Microsoft Sans Serif 8pt`. Ad esempio:
+Per mantenere il tipo di carattere originale, impostare il tipo di carattere predefinito del modulo su `Microsoft Sans Serif 8 pt`. Ad esempio:
 
 ```csharp
 public MyForm()
@@ -38,7 +38,7 @@ public MyForm()
 }
 ```
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>Categoria
 
 - Windows Form
 

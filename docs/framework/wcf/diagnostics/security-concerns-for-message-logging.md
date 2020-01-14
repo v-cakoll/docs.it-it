@@ -2,12 +2,12 @@
 title: Problemi di sicurezza per la registrazione dei messaggi
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: c5efd2990a00045e920c005f6658d5fdfb858481
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 679975be44244f10232b805a6cc2776b48ed6058
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795940"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75935762"
 ---
 # <a name="security-concerns-for-message-logging"></a>Problemi di sicurezza per la registrazione dei messaggi
 In questo argomento viene illustrato come evitare che i dati riservati vengano esposti nei log dei messaggi e come proteggere gli eventi generati dalla registrazione dei messaggi.  
@@ -88,7 +88,7 @@ In questo argomento viene illustrato come evitare che i dati riservati vengano e
   
  Le modifiche diventano effettive solo dopo l'avvio o il riavvio dell'applicazione. Un evento viene registrato all'avvio quando entrambi gli attributi sono impostati su `true`. Un evento viene inoltre registrato se `logKnownPii` è impostato su `true` ma `enableLoggingKnownPii` è `false`.  
   
- L'amministratore del computer e il distributore di applicazioni devono prestare molta attenzione durante l'utilizzo di queste due opzioni. Se la registrazione di informazioni personali è abilitata, vengono registrate chiavi di sicurezza e informazioni personali. Se è disabilitata, i dati riservati e le informazioni specifiche dell'applicazione vengono comunque registrati nell'intestazione e nel corpo dei messaggi. Per una discussione più approfondita sulla privacy e sulla protezione delle informazioni personali da esporre, vedere [privacy degli utenti](https://go.microsoft.com/fwlink/?LinkID=94647).  
+ L'amministratore del computer e il distributore di applicazioni devono prestare molta attenzione durante l'utilizzo di queste due opzioni. Se la registrazione di informazioni personali è abilitata, vengono registrate chiavi di sicurezza e informazioni personali. Se è disabilitata, i dati riservati e le informazioni specifiche dell'applicazione vengono comunque registrati nell'intestazione e nel corpo dei messaggi. Per una discussione più approfondita sulla privacy e sulla protezione delle informazioni personali da esporre, vedere [privacy degli utenti](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480490(v=msdn.10)).  
   
 > [!CAUTION]
 > Le PII non sono nascoste nei messaggi in formato non valido. Tali messaggi vengono registrati così come sono, senza alcuna modifica. Gli attributi menzionati prima non hanno alcun effetto su questa situazione.  
@@ -99,13 +99,13 @@ In questo argomento viene illustrato come evitare che i dati riservati vengano e
 ## <a name="events-triggered-by-message-logging"></a>Eventi generati dalla registrazione dei messaggi  
  Di seguito vengono elencati tutti gli eventi emessi dalla registrazione dei messaggi.  
   
-- Accesso ai messaggi: Questo evento viene generato quando la registrazione dei messaggi è abilitata nella configurazione o tramite WMI. Il contenuto dell'evento è "Registrazione messaggi attivata. È possibile che le informazioni riservate vengano registrate in forma non crittografata, anche se crittografate durante la trasmissione, ad esempio i corpi dei messaggi".  
+- Registrazioni messaggi attiva: questo evento viene emesso quando la registrazione messaggi è abilitata nella configurazione, o tramite WMI. Il contenuto dell'evento è "Registrazione messaggi attivata. È possibile che le informazioni riservate vengano registrate in forma non crittografata, anche se crittografate durante la trasmissione, ad esempio i corpi dei messaggi".  
   
-- Disconnessione del messaggio: Questo evento viene generato quando la registrazione dei messaggi viene disabilitata tramite WMI. Il contenuto dell'evento è "Registrazione messaggi disattivata".  
+- Registrazioni messaggi disattivata: questo evento viene emesso quando la registrazione messaggi è disabilitata tramite WMI. Il contenuto dell'evento è "Registrazione messaggi disattivata".  
   
-- Registra informazioni personali note in: Questo evento viene generato quando è abilitata la registrazione di informazioni personali note. Questo errore si verifica `enableLoggingKnownPii` quando l'attributo `machineSettings` nell'elemento del file Machine. config è impostato su `true`e l' `logKnownPii` attributo dell' `source` elemento nel file app. config o Web. config è impostato su `true`.  
+- Registrazione informazioni personali note attiva: questo evento viene generato quando la registrazione di informazioni personali note è abilitata. Questo errore si verifica quando l'attributo `enableLoggingKnownPii` nell'elemento `machineSettings` del file Machine. config è impostato su `true`e l'attributo `logKnownPii` dell'elemento `source` nel file app. config o Web. config è impostato su `true`.  
   
-- Registro informazioni personali note non consentito: Questo evento viene generato quando non è consentita la registrazione di informazioni personali note. Questo errore si verifica `logKnownPii` quando l'attributo `source` dell'elemento nel file app. config o Web. config è impostato su `true`, ma l' `enableLoggingKnownPii` attributo nell' `machineSettings` elemento del file Machine. config è impostato su `false`. Non viene generata alcuna eccezione.  
+- Registrazione informazioni personali note non consentita: questo evento viene emesso quando la registrazione delle informazioni personali note non è consentita. Questo errore si verifica quando l'attributo `logKnownPii` dell'elemento `source` nel file app. config o Web. config è impostato su `true`, ma l'attributo `enableLoggingKnownPii` nell'elemento `machineSettings` del file Machine. config è impostato su `false`. Non viene generata alcuna eccezione.  
   
  Questi eventi possono essere visualizzati nello strumento Visualizzatore eventi in dotazione con Windows. Per ulteriori informazioni, vedere registrazione degli [eventi](./event-logging/index.md).  
   

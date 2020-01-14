@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 287b11e9-7c52-4a13-ba97-751203fa97f4
 topic_type:
 - apiref
-ms.openlocfilehash: 64bcf6ee58d743a26e31c49a425f36cc808b5080
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5d90f414a945d346ca7721745ea7d86cb24a085c
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426834"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936860"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>Metodo ICorProfilerInfo2::DoStackSnapshot
 Esamina i frame gestiti nello stack per il thread specificato e invia le informazioni al profiler tramite un callback.  
@@ -64,14 +64,14 @@ HRESULT DoStackSnapshot(
  `contextSize`  
  in Dimensioni della struttura di `CONTEXT`, a cui fa riferimento il parametro di `context`.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Il passaggio di null per `thread` restituisce uno snapshot del thread corrente. Gli snapshot possono essere presi da altri thread solo se il thread di destinazione è sospeso al momento.  
   
  Quando il profiler vuole esaminare lo stack, chiama `DoStackSnapshot`. Prima che CLR torni da tale chiamata, chiama il `StackSnapshotCallback` più volte, una volta per ogni frame gestito (o per l'esecuzione di frame non gestiti) nello stack. Quando vengono rilevati frame non gestiti, è necessario eseguirli manualmente.  
   
  L'ordine in cui viene camminato lo stack è il contrario rispetto alla modalità di push dei frame nello stack: primo fotogramma (ultimo push), principale (primo push).  
   
- Per altre informazioni su come programmare il profiler per l'analisi degli stack gestiti, vedere [analisi dello stack del profiler nella .NET Framework 2,0: Nozioni di base e oltre](https://go.microsoft.com/fwlink/?LinkId=73638).  
+ Per altre informazioni su come programmare il profiler per l'analisi degli stack gestiti, vedere [analisi dello stack del profiler nella .NET Framework 2,0: Nozioni di base e oltre](https://docs.microsoft.com/previous-versions/dotnet/articles/bb264782(v=msdn.10)).  
   
  Un percorso stack può essere sincrono o asincrono, come illustrato nelle sezioni seguenti.  
   
@@ -97,14 +97,14 @@ HRESULT DoStackSnapshot(
   
  Esiste anche il rischio che si verifichi un deadlock se si chiama `DoStackSnapshot` da un thread creato dal profiler per poter scorrere lo stack di un thread di destinazione separato. La prima volta che il thread creato immette determinati metodi di `ICorProfilerInfo*` (incluso `DoStackSnapshot`), il CLR eseguirà l'inizializzazione specifica di CLR per thread su tale thread. Se il profiler ha sospeso il thread di destinazione il cui stack si sta tentando di esaminare e se il thread di destinazione è proprietario di un blocco necessario per eseguire questa inizializzazione per thread, si verificherà un deadlock. Per evitare questo deadlock, effettuare una chiamata iniziale in `DoStackSnapshot` dal thread creato dal profiler per esaminare un thread di destinazione separato, ma non sospendere prima il thread di destinazione. Questa chiamata iniziale garantisce che l'inizializzazione per thread possa essere completata senza deadlock. Se `DoStackSnapshot` ha esito positivo e segnala almeno un frame, dopo tale punto sarà sicuro per il thread creato dal profiler sospendere qualsiasi thread di destinazione e chiamare `DoStackSnapshot` per esaminare lo stack del thread di destinazione.  
   
-## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti di  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

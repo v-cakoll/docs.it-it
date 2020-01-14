@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: 2433d8b8563cace4415fb8fcd2d110f75d7d4304
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: e2f8f1304de587e1bedd8cde60e665971d903183
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73196375"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937687"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Procedure consigliate per Transport Layer Security (TLS) con .NET Framework
 
@@ -46,7 +46,7 @@ La sezione [Controllare il codice e apportare modifiche al codice](#audit-your-c
 
 Questo articolo spiega come abilitare il livello di sicurezza più alto disponibile per la versione di .NET Framework a cui è destinata l'app e in cui viene eseguita. Quando un'app imposta in modo esplicito un protocollo di sicurezza e una versione, rifiuta esplicitamente qualsiasi altra alternativa e il comportamento predefinito di .NET Framework e del sistema operativo. Se si vuole che l'app sia in grado di negoziare una connessione TLS 1.2, l'impostazione esplicita di una versione di TLS precedente impedisce una connessione TLS 1.2.
 
-Se non è possibile evitare di usare una versione del protocollo hardcoded, è consigliabile specificare TLS 1.2. Per indicazioni sull'identificazione e la rimozione delle dipendenze di TLS 1.0, scaricare il white paper [Solving the TLS 1.0 Problem](https://www.microsoft.com/download/details.aspx?id=55266) (Risoluzione del problema relativo a TLS 1.0).
+Se non è possibile evitare di usare una versione del protocollo hardcoded, è consigliabile specificare TLS 1.2. Per istruzioni sull'identificazione e la rimozione delle dipendenze TLS 1,0, scaricare il problema relativo alla [risoluzione del problema tls 1,0](https://www.microsoft.com/download/details.aspx?id=55266) white paper.
 
 WCF supporta TLS1.0, 1.1 e 1.2 come impostazione predefinita in .NET Framework 4.7. A partire da .NET Framework 4.7.1, WCF usa come predefinita la versione configurata dal sistema operativo. Se un'applicazione è configurata in modo esplicito con `SslProtocols.None`, WCF usa l'impostazione predefinita del sistema operativo quando si usa il trasporto NetTcp.
 
@@ -104,7 +104,7 @@ Se **non** si usa un binding personalizzato **e** si imposta il binding WCF tram
 
 ### <a name="for-wcf-message-security-with-certificate-credentials"></a>Per la sicurezza dei messaggi WCF con le credenziali del certificato
 
-.NET Framework 4.7 e versioni successive usano per impostazione predefinita il protocollo specificato nella proprietà <xref:System.Net.ServicePointManager.SecurityProtocol>. Quando [AppContextSwitch](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) `Switch.System.ServiceModel.DisableUsingServicePointManagerSecurityProtocols` è impostato su `true`, WCF sceglie il protocollo ottimale, fino a TLS 1.0.
+.NET Framework 4.7 e versioni successive usano per impostazione predefinita il protocollo specificato nella proprietà <xref:System.Net.ServicePointManager.SecurityProtocol>. Quando il `Switch.System.ServiceModel.DisableUsingServicePointManagerSecurityProtocols` [AppContextSwitch](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) è impostato su `true`, WCF sceglie il protocollo migliore, fino a TLS 1,0.
 
 ## <a name="if-your-app-targets-a-net-framework-version-earlier-than-47"></a>Se l'app è destinata a una versione di .NET Framework precedente alla 4.7
 
@@ -112,7 +112,7 @@ Controllare il codice per assicurarsi di non impostare una versione specifica di
 
 ### <a name="for-net-framework-46---462-and-not-wcf"></a>Per .NET Framework 4.6 - 4.6.2 e non WCF
 
-Impostare l'opzione `DontEnableSystemDefaultTlsVersions` `AppContext` su `false`. Vedere [Configurazione della sicurezza tramite opzioni di AppContext](#configuring-security-via-appcontext-switches).
+Impostare l'opzione `DontEnableSystemDefaultTlsVersions` `AppContext` `false`. Vedere [Configurazione della sicurezza tramite opzioni di AppContext](#configuring-security-via-appcontext-switches).
 
 ### <a name="for-wcf-using-net-framework-46---462-using-tcp-transport-security-with-certificate-credentials"></a>Per WCF con .NET Framework 4.6 - 4.6.2 e la sicurezza del trasporto TCP con credenziali del certificato
 
@@ -185,7 +185,7 @@ Per altre informazioni sui protocolli TLS, vedere [Mitigazione: Protocolli TLS](
 
 Se l'impostazione di una o entrambe le opzioni di `AppContext` non è praticabile, è possibile controllare i protocolli di sicurezza usati dall'app con le chiavi del Registro di sistema di Windows descritte in questa sezione. L'uso di una o entrambe le opzioni di `AppContext` potrebbe non essere possibile se l'app viene eseguita in .NET Framework 4.5.2 o versioni precedenti oppure se non è possibile modificare il file di configurazione. Se si vuole configurare la sicurezza con il Registro di sistema, non specificare un valore del protocollo di sicurezza nel codice, perché ha la precedenza rispetto all'impostazione del Registro di sistema.
 
-I nomi delle chiavi del Registro di sistema sono simili a quelli delle opzioni `AppContext` corrispondenti, ma senza il prefisso `DontEnable` nel nome. Ad esempio, l'opzione di `AppContext` `DontEnableSchUseStrongCrypto` corrisponde alla chiave del Registro di sistema denominata [SchUseStrongCrypto](#schusestrongcrypto).
+I nomi delle chiavi del Registro di sistema sono simili a quelli delle opzioni `AppContext` corrispondenti, ma senza il prefisso `DontEnable` nel nome. Ad esempio, l'opzione di `AppContext``DontEnableSchUseStrongCrypto` corrisponde alla chiave del Registro di sistema denominata [SchUseStrongCrypto](#schusestrongcrypto).
 
 Queste chiavi sono disponibili in tutte le versioni di .NET Framework per cui è disponibile una patch di sicurezza recente. Vedere [Aggiornamenti della sicurezza](#security-updates).
 
@@ -248,14 +248,14 @@ Quando è abilitato (per impostazione predefinita, tramite un'opzione di `AppCon
 
 Il flag `SCH_USE_STRONG_CRYPTO` viene anche passato a `Schannel` quando si usano in modo esplicito i valori enumerati `Tls` (TLS 1.0), `Tls11` o `Tls12` di <xref:System.Net.SecurityProtocolType> o <xref:System.Security.Authentication.SslProtocols>.
 
-## <a name="security-updates"></a>Aggiornamenti della sicurezza
+## <a name="security-updates"></a>Aggiornamenti della protezione
 
 Le procedure consigliate in questo articolo dipendono dagli aggiornamenti della sicurezza installati. Questi aggiornamenti includono la possibilità di usare funzionalità avanzate di .NET Framework 4.7 e versioni successive. Gli aggiornamenti della sicurezza recenti sono importanti se l'app viene eseguita in .NET Framework 4.7 e versioni successive (anche se è destinata a una versione precedente).
 
 Per aggiornare .NET Framework per consentire al sistema operativo scegliere la versione migliore di TLS da usare, è necessario installare almeno:
 
 - [.NET Framework August 2017 Preview of Quality Rollup](https://devblogs.microsoft.com/dotnet/net-framework-august-2017-preview-of-quality-rollup/) (Aggiornamento cumulativo per la qualità in anteprima di .NET Framework agosto 2017).
-- **Oppure** [.NET Framework September 2017 Security and Quality Rollup](https://devblogs.microsoft.com/dotnet/net-framework-september-2017-security-and-quality-rollup/) (Aggiornamento cumulativo per la sicurezza e la qualità di .NET Framework settembre 2017).
+- **Oppure**[.NET Framework September 2017 Security and Quality Rollup](https://devblogs.microsoft.com/dotnet/net-framework-september-2017-security-and-quality-rollup/) (Aggiornamento cumulativo per la sicurezza e la qualità di .NET Framework settembre 2017).
 
 Vedere anche:
 
@@ -273,7 +273,7 @@ Per abilitare o riabilitare TLS 1.2 e/o TLS 1.1 in un sistema che li supporta, v
 | **Sistema operativo** | **Supporto di TLS 1.2** |
 | --- | --- |
 | Windows 10<br>Windows Server 2016 | Supportato e abilitato per impostazione predefinita. |
-| Windows 8,1<br>Windows Server 2012 R2 | Supportato e abilitato per impostazione predefinita. |
+| Windows 8.1<br>Windows Server 2012 R2 | Supportato e abilitato per impostazione predefinita. |
 | Windows 8.0<br>Windows Server 2012 | Supportato e abilitato per impostazione predefinita. |
 | Windows 7 SP1<br>Windows Server 2008 R2 SP1 | Supportato, ma non abilitato per impostazione predefinita. Vedere la pagina Web [Impostazioni del Registro di sistema di Transport Layer Security (TLS)](/windows-server/security/tls/tls-registry-settings) per informazioni dettagliate su come abilitare TLS 1.2. |
 | Windows Server 2008 | Il supporto per TLS 1.1 e TLS 1.2 richiede un aggiornamento. Vedere [Aggiornamento per aggiungere il supporto per TLS 1.1 e TLS 1.2 in Windows Server 2008 SP2](https://support.microsoft.com/help/4019276/update-to-add-support-for-tls-1-1-and-tls-1-2-in-windows-server-2008-s). |
@@ -288,7 +288,7 @@ Questa tabella mostra l'aggiornamento del sistema operativo che è necessario pe
 | **Sistema operativo** | **Aggiornamento minimo necessario per supportare TLS 1.2 con .NET Framework 3.5** |
 | --- | --- |
 | Windows 10<br>Windows Server 2016 | [Aggiornamento cumulativo per Windows 10 versione 1511 e Windows Server 2016 Technical Preview 4: 10 maggio 2016](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016) |
-| Windows 8,1<br>Windows Server 2012 R2 | [Supporto per le versioni predefinite del sistema TLS incluso in .NET Framework 3.5 in Windows 8.1 e Windows Server 2012 R2](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework) |
+| Windows 8.1<br>Windows Server 2012 R2 | [Supporto per le versioni predefinite del sistema TLS incluso in .NET Framework 3.5 in Windows 8.1 e Windows Server 2012 R2](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework) |
 | Windows 8.0<br>Windows Server 2012 | [Supporto per le versioni predefinite del sistema TLS incluso in .NET Framework 3.5 in Windows Server 2012](https://support.microsoft.com/help/3154519/support-for-tls-system-default-versions-included-in-the--net-framework) |
 | Windows 7 SP1<br>Windows Server 2008 R2 SP1 | [Supporto per le versioni predefinite del sistema TLS incluso in .NET Framework 3.5.1 in Windows 7 SP1 e Windows Server 2008 R2 SP1](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework) |
 | Windows Server 2008 | [Supporto per le versioni predefinite del sistema TLS incluso in .NET Framework 2.0 SP2 in Windows Vista SP2 e Windows Server 2008 SP2](https://support.microsoft.com/help/3154517/support-for-tls-system-default-versions-included-in-the--net-framework) |

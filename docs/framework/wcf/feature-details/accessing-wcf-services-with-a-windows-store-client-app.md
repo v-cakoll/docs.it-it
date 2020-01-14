@@ -2,12 +2,12 @@
 title: Accesso ai servizi WCF con un'applicazione client Windows Store
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: f5cc18973231f327ee161946a235cb8b8b2ea5a7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 77dc5d19bc40dc09148a8d2368c56e522bfafc1a
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978189"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938167"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Accesso ai servizi WCF con un'applicazione client Windows Store
 In Windows 8 è stato introdotto un nuovo tipo di applicazione denominato applicazioni Windows Store. Queste applicazioni sono progettate in base a un'interfaccia del touchscreen. .NET Framework 4.5 consente alle applicazioni Windows Store di chiamare i servizi WCF.  
@@ -16,7 +16,7 @@ In Windows 8 è stato introdotto un nuovo tipo di applicazione denominato applic
  Un subset di funzionalità WCF è disponibile in un'applicazione Windows Store. Per altre informazioni, vedere le sezioni seguenti.  
   
 > [!IMPORTANT]
-> Usare le API di diffusione WinRT anziché quelle esposte da WCF. Per altre informazioni, vedere [API di diffusione WinRT](https://go.microsoft.com/fwlink/?LinkId=236265)  
+> Usare le API di diffusione WinRT anziché quelle esposte da WCF. Per altre informazioni, vedere [API di diffusione WinRT](xref:Windows.Web.Syndication)  
   
 > [!WARNING]
 > L'uso di Aggiungi riferimento al servizio per aggiungere il riferimento di un servizio Web a un componente Windows Runtime non è supportato.  
@@ -106,7 +106,7 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
 > [!WARNING]
 > XmlDictionaryWriter.Write (DateTime) consente ora di scrivere un oggetto DateTime come stringa.  
   
-### <a name="security"></a>Sicurezza  
+### <a name="security"></a>Sicurezza -  
 
 Nelle applicazioni Windows Store sono supportate le modalità di sicurezza seguenti:
   
@@ -120,7 +120,7 @@ Nelle applicazioni Windows Store sono supportate le modalità di sicurezza segue
   
 Nelle applicazioni Windows Store sono supportati i tipi di credenziali client seguenti:
   
-1. Nessuno  
+1. nessuna  
   
 2. Basic  
   
@@ -130,7 +130,7 @@ Nelle applicazioni Windows Store sono supportati i tipi di credenziali client se
   
 5. NTLM  
   
-6. WINDOWS  
+6. Portale di  
   
 7. Username (sicurezza del messaggio)  
   
@@ -141,7 +141,7 @@ Nelle applicazioni Windows Store sono supportati i tipi di credenziali client se
 > [!IMPORTANT]
 > Affinché le applicazioni Windows Store effettuino chiamate tra computer, è necessario abilitare un'altra funzionalità denominata "rete domestica/aziendale". Questa impostazione è inoltre presente nel file Package. AppManifest nella scheda funzionalità. Selezionare la casella di controllo rete domestica/aziendale. In questo modo viene fornito l'accesso in ingresso e in uscita dell'applicazione in uso alle reti delle posizioni affidabili dell'utente come casa e lavoro. Le porte critiche in ingresso sono sempre bloccate. Per accedere ai servizi su Internet è inoltre necessario abilitare la funzionalità Internet (client).  
   
-### <a name="misc"></a>Varie  
+### <a name="misc"></a>Vari  
  L'uso delle classi seguenti è supportato per le applicazioni Windows Store:  
   
 1. <xref:System.ServiceModel.ChannelFactory>  
@@ -176,9 +176,9 @@ void async SomeMethod()
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Blog di WCF in app di Windows Store](https://blogs.msdn.microsoft.com/piyushjo/2011/09/21/wcf-in-windows-8-metro-styled-apps-absolutely-supported/)
-- [Client e sicurezza di Windows Store WCF](https://blogs.msdn.microsoft.com/piyushjo/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security/)
-- [App di Windows Store e chiamate tra computer](https://blogs.msdn.microsoft.com/piyushjo/2011/10/21/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario/)
-- [Chiamata di un servizio WCF distribuito in Azure da un'app di Windows Store](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
+- [Blog di WCF in app di Windows Store](https://docs.microsoft.com/archive/blogs/piyushjo/wcf-in-windows-8-metro-styled-apps-absolutely-supported)
+- [Client e sicurezza di Windows Store WCF](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-adding-security)
+- [App di Windows Store e chiamate tra computer](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
+- [Chiamata di un servizio WCF distribuito in Azure da un'app di Windows Store](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
 - [Programmazione delle funzionalità di sicurezza di WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
 - [Associazioni](../../../../docs/framework/wcf/bindings.md)

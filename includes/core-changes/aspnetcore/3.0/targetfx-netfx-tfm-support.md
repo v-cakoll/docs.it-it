@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 4c676a185ff4a7a825acb059bf0a5842ca3922fc
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: b60f74947a537c602c7bd1a89587b76bd847c82a
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394482"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937261"
 ---
 ### <a name="target-framework-net-framework-support-dropped"></a>Framework di destinazione: supporto .NET Framework eliminato
 
 A partire da ASP.NET Core 3,0, .NET Framework è un Framework di destinazione non supportato.
 
-#### <a name="change-description"></a>Descrizione della modifica
+#### <a name="change-description"></a>Descrizione delle modifiche
 
 .NET Framework 4,8 è l'ultima versione principale di .NET Framework. Le nuove app ASP.NET Core devono essere compilate in .NET Core. A partire dalla versione di .NET Core 3,0, è possibile pensare a ASP.NET Core 3,0 come parte di .NET Core.
 
@@ -20,7 +20,7 @@ Per altre informazioni sul porting da .NET Framework a .NET Core, vedere [portin
 
 i pacchetti `Microsoft.Extensions` (ad esempio registrazione, inserimento di dipendenze e configurazione) e Entity Framework Core non sono interessati. Continueranno a supportare .NET Standard.
 
-Per ulteriori informazioni sulla motivazione di questa modifica, vedere [il post di Blog originale](https://blogs.msdn.microsoft.com/webdev/2018/10/29/a-first-look-at-changes-coming-in-asp-net-core-3-0).
+Per ulteriori informazioni sulla motivazione di questa modifica, vedere [il post di Blog originale](https://devblogs.microsoft.com/aspnet/a-first-look-at-changes-coming-in-asp-net-core-3-0/).
 
 #### <a name="version-introduced"></a>Versione introdotta
 
@@ -41,13 +41,13 @@ Eseguire una delle azioni seguenti:
 - Mantieni l'app ASP.NET Core 2,1.
 - Eseguire la migrazione dell'app e delle dipendenze a .NET Core.
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>Categoria
 
 ASP.NET Core
 
 #### <a name="affected-apis"></a>API interessate
 
-Nessuno
+nessuna
 
 <!-- 
 

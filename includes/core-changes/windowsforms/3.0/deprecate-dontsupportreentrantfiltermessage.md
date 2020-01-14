@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: cb72e1b92172b8989ce99b47181c13561a7ccd76
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 3272dc562981269b868df4ca9d3a5806918aba5f
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74644005"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937099"
 ---
-### <a name="switchsystemwindowsformsdontsupportreentrantfiltermessage-compatibility-switch-not-supported"></a>Opzione di compatibilità switch. System. Windows. Forms. DontSupportReentrantFilterMessage non supportata
+### <a name="dontsupportreentrantfiltermessage-compatibility-switch-not-supported"></a>Opzione di compatibilità DontSupportReentrantFilterMessage non supportata
 
 L'opzione di compatibilità `Switch.System.Windows.Forms.DontSupportReentrantFilterMessage`, introdotta in .NET Framework 4.6.1, non è supportata in Windows Forms in .NET Core 3,0.
 
-#### <a name="change-description"></a>Descrizione della modifica
+#### <a name="change-description"></a>Descrizione delle modifiche
 
 A partire da .NET Framework 4.6.1, l'opzione di compatibilità `Switch.System.Windows.Forms.DontSupportReentrantFilterMessage` risolve possibili <xref:System.IndexOutOfRangeException> eccezioni quando viene chiamato il messaggio <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> con un'implementazione di <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> personalizzata. Per altre informazioni, vedere [Mitigazione: Implementazioni IMessageFilter.PreFilterMessage personalizzate](~/docs/framework/migration-guide/mitigation-custom-imessagefilter-prefiltermessage-implementations.md).
 
@@ -24,7 +24,7 @@ In .NET Core, l'opzione `Switch.System.Windows.Forms.DontSupportReentrantFilterM
 
 Rimuovere l'opzione. L'opzione non è supportata e non è disponibile alcuna funzionalità alternativa.
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>Categoria
 
 Windows Form
 

@@ -4,12 +4,12 @@ description: Informazioni su come visitare ogni nodo in un albero delle espressi
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: 5c55ef2141e63462c91f84efab09828fafbff142
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a4cb40e439726e5fff60fe697da70d61bb24cb68
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036627"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937229"
 ---
 # <a name="translating-expression-trees"></a>Traduzione degli alberi delle espressioni
 
@@ -192,7 +192,7 @@ Mentre la risposta finale è la stesso, l'attraversamento dell'albero è complet
 
 ## <a name="learning-more"></a>Ulteriori informazioni
 
-Questo esempio illustra un piccolo sottoinsieme del codice creato per attraversare e interpretare gli algoritmi rappresentati da un albero delle espressioni. Per una descrizione completa di tutte le operazioni necessarie per compilare una libreria generica che trasla gli alberi delle espressioni in un'altra lingua, vedere [questa serie](https://blogs.msdn.microsoft.com/mattwar/2008/11/18/linq-building-an-iqueryable-provider-series/) di Matt Warren. La serie spiega in dettaglio come traslare il codice di un albero delle espressioni.
+Questo esempio illustra un piccolo sottoinsieme del codice creato per attraversare e interpretare gli algoritmi rappresentati da un albero delle espressioni. Per una descrizione completa di tutte le operazioni necessarie per compilare una libreria generica che trasla gli alberi delle espressioni in un'altra lingua, vedere [questa serie](https://docs.microsoft.com/archive/blogs/mattwar/linq-building-an-iqueryable-provider-series) di Matt Warren. La serie spiega in dettaglio come traslare il codice di un albero delle espressioni.
 
 Mi auguro che abbiamo percepito la vera potenza degli alberi delle espressioni.
 È possibile esaminare un set di codice, apportare modifiche a tale codice ed eseguire la versione modificata. Dal momento che gli alberi delle espressioni sono immutabili, è possibile creare nuovi alberi usando i componenti degli alberi esistenti. Questa operazione riduce la quantità di memoria necessaria per creare alberi delle espressioni modificati.

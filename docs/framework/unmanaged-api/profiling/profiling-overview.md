@@ -1,5 +1,5 @@
 ---
-title: Panoramica della profilatura
+title: Cenni preliminari sulla profilatura
 ms.date: 03/30/2017
 helpviewer_keywords:
 - managed code, profiling API support
@@ -27,14 +27,14 @@ helpviewer_keywords:
 - security, profiling API considerations
 - stack depth [.NET Framework profiling]
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
-ms.openlocfilehash: 08015e2e5918ca64f601ec912a906cfb6319ed6c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a13470b970b35a2f6f088fd305ba455167c8e107
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427098"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937824"
 ---
-# <a name="profiling-overview"></a>Panoramica della profilatura
+# <a name="profiling-overview"></a>Cenni preliminari sulla profilatura
 
 Un profiler è un strumento che monitora l'esecuzione di un'altra applicazione. Un profiler CLR (Common Language Runtime) è una DLL costituita da funzioni che ricevono e inviano messaggi a CLR usando l'API di profilatura. La DLL del profiler viene caricata in fase di esecuzione da CLR.
 
@@ -131,7 +131,7 @@ Nella maggior parte dei casi, il thread che genera un evento esegue anche notifi
 
 Questi callback non sono serializzati. Gli utenti dovranno proteggere il codice creando strutture dei dati thread-safe e bloccando il codice del profiler dove necessario, per impedire l'accesso parallelo da più thread. Pertanto, in certi casi è possibile ricevere una sequenza insolita di callback. Ad esempio, si supponga che un'applicazione gestita generi due thread che eseguono codice identico. In questo caso, è possibile ricevere un evento [ICorProfilerCallback:: JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) per alcune funzioni da un thread e un callback `FunctionEnter` dall'altro thread prima di ricevere il callback [ICorProfilerCallback:: JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md) . In questo caso, l'utente riceverà un callback `FunctionEnter` per una funzione che potrebbe non essere ancora stata completamente compilata tramite JIT.
 
-## <a name="security"></a>Sicurezza
+## <a name="security"></a>Sicurezza -
 
 Una DLL del profiler è una DLL non gestita che viene eseguita parte del motore di Common Language Runtime. Di conseguenza, il codice nella DLL del profiler non è soggetto alle restrizioni di sicurezza dall'accesso di codice gestito. Le uniche limitazioni relative alla DLL del profiler sono quelle imposte dal sistema operativo all'utente che sta eseguendo l'applicazione profilata.
 
@@ -175,7 +175,7 @@ L'API di profilatura fornisce due modalità per ottenere gli stack di chiamate: 
 
 Uno snapshot dello stack è una traccia dello stack di un thread in un istante di tempo. L'API di profilatura supporta l'analisi di funzioni gestite nello stack, ma lascia l'analisi delle funzioni non gestite alla funzione di verifica del percorso chiamate nello stack del profiler.
 
-Per ulteriori informazioni sulla modalità di programmazione del profiler per l'analisi degli stack gestiti, vedere il metodo [ICorProfilerInfo2::D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) in questo set di documentazione e [analisi dello stack del profiler nel .NET Framework 2,0: Nozioni fondamentali e oltre](https://go.microsoft.com/fwlink/?LinkId=73638).
+Per ulteriori informazioni sulla modalità di programmazione del profiler per l'analisi degli stack gestiti, vedere il metodo [ICorProfilerInfo2::D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) in questo set di documentazione e [analisi dello stack del profiler nel .NET Framework 2,0: Nozioni fondamentali e oltre](https://docs.microsoft.com/previous-versions/dotnet/articles/bb264782(v=msdn.10)).
 
 ### <a name="shadow-stack"></a>Shadow stack
 

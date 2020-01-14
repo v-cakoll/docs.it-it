@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7123a89b-eb9b-463a-a552-a081e33b0a3a
 topic_type:
 - apiref
-ms.openlocfilehash: 82fa0903474ee04b767fd9c68812efe7f0cc4fa0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: adbb5eca3b7ffa36d0c963d0dacc3b2afdb664d4
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124166"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75935554"
 ---
 # <a name="loadtypelibwithresolver-function"></a>Funzione LoadTypeLibWithResolver
 Carica una libreria dei tipi e utilizza l' [interfaccia ITypeLibResolver](itypelibresolver-interface.md) fornita per risolvere le librerie dei tipi a cui si fa riferimento internamente.  
@@ -39,7 +39,7 @@ HRESULT LoadTypeLibWithResolver(
  in Percorso del file della libreria dei tipi.  
   
  `regkind`  
- in Flag di [enumerazione REGKIND](https://docs.microsoft.com/windows/win32/api/oleauto/ne-oleauto-regkind) che controlla la modalità di registrazione della libreria dei tipi. I valori possibili sono:  
+ in Flag di [enumerazione REGKIND](/windows/win32/api/oleauto/ne-oleauto-regkind) che controlla la modalità di registrazione della libreria dei tipi. I valori possibili sono:  
   
 - `REGKIND_DEFAULT`: usare il comportamento di registrazione predefinito.  
   
@@ -82,7 +82,7 @@ HRESULT LoadTypeLibWithResolver(
   
  Se si chiama direttamente `LoadTypeLibWithResolver`, è necessario fornire un'implementazione dell' [interfaccia ITypeLibResolver](itypelibresolver-interface.md) personalizzata.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** TlbRef. h  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c3809c8f-1737-4f0f-9442-0c01ee689871
 topic_type:
 - apiref
-ms.openlocfilehash: 0ce84e1545523302cd47e60b9f047bc470e6bf0f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a4e9268d292004f447b30c82f1db4d0fe58404fe
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443624"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937955"
 ---
 # <a name="corelementtype-enumeration"></a>Enumerazione CorElementType
 
@@ -75,11 +75,11 @@ typedef enum CorElementType {
 } CorElementType;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
-|Membro|Descrizione|
+|Member|Descrizione|
 |------------|-----------------|
-|`ELEMENT_TYPE_END`|Utilizzato internamente.|
+|`ELEMENT_TYPE_END`|Per uso interno.|
 |`ELEMENT_TYPE_VOID`|Tipo void.|
 |`ELEMENT_TYPE_BOOLEAN`|Tipo booleano|
 |`ELEMENT_TYPE_CHAR`|Tipo carattere.|
@@ -110,18 +110,18 @@ typedef enum CorElementType {
 |`ELEMENT_TYPE_MVAR`|Modificatore di tipo di variabile di metodo.|
 |`ELEMENT_TYPE_CMOD_REQD`|Modificatore obbligatorio del linguaggio C.|
 |`ELEMENT_TYPE_CMOD_OPT`|Modificatore facoltativo del linguaggio C.|
-|`ELEMENT_TYPE_INTERNAL`|Utilizzato internamente.|
+|`ELEMENT_TYPE_INTERNAL`|Per uso interno.|
 |`ELEMENT_TYPE_MAX`|Tipo non valido.|
-|`ELEMENT_TYPE_MODIFIER`|Utilizzato internamente.|
+|`ELEMENT_TYPE_MODIFIER`|Per uso interno.|
 |`ELEMENT_TYPE_SENTINEL`|Modificatore di tipo che √® una sentinella per un elenco di un numero variabile di parametri.|
-|`ELEMENT_TYPE_PINNED`|Utilizzato internamente.|
+|`ELEMENT_TYPE_PINNED`|Per uso interno.|
 
 ## <a name="remarks"></a>Note
 
 I modificatori di tipo costituiscono la base per la rappresentazione di tipi pi√π complessi. Un valore del modificatore di tipo `CorElementType` viene applicato al valore che lo segue immediatamente nella firma del tipo. Il valore che segue il valore del modificatore di tipo `CorElementType` pu√≤ essere un valore di tipo semplice `CorElementType`, un token di metadati o un altro valore, come specificato nella tabella seguente.
 
 > [!NOTE]
-> Tutti i numeri *(numero, numero*di *argomenti*, *token di metadati*, *rango*, *conteggio*e *limite*) vengono archiviati come numeri interi compressi. Per informazioni dettagliate, vedere l' [Common Language Infrastructure standard ECMA-335-(CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) nel sito Web ECMA.
+> Tutti i numeri *(numero, numero*di *argomenti*, *token di metadati*, *rango*, *conteggio*e *limite*) vengono archiviati come numeri interi compressi. Per informazioni dettagliate, vedere l' [Common Language Infrastructure standard ECMA-335-(CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm) nel sito Web ECMA.
 
 |Modificatore di tipo|Formato|
 |-------------------|------------|
@@ -130,7 +130,7 @@ I modificatori di tipo costituiscono la base per la rappresentazione di tipi pi√
 |`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE \<un token di metadati `mdTypeDef` >|
 |`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS \<un token di metadati `mdTypeDef` >|
 |`ELEMENT_TYPE_VAR`|Numero \<ELEMENT_TYPE_VAR >|
-|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<un valore `CorElementType` > \<Rank > \<count1 > \<bound1 >... \<countn > \<>|
+|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<un valore `CorElementType` > \<Rank > \<count1 > \<bound1 >... \<countn > \<|
 |`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<un token di metadati `mdTypeDef` > \<numero di argomenti > \<arg1 >... \<argN >|
 |`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<firma completa per la funzione, inclusa la convenzione di chiamata >|
 |`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY \<un valore `CorElementType` >|
@@ -138,13 +138,13 @@ I modificatori di tipo costituiscono la base per la rappresentazione di tipi pi√
 |`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<un token di metadati `mdTypeRef` o `mdTypeDef` >|
 |`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<un token di metadati `mdTypeRef` o `mdTypeDef` >|
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
-**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).
 
 **Intestazione:** CorHdr. h
 
-**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
 ## <a name="see-also"></a>Vedere anche
 

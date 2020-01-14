@@ -4,12 +4,12 @@ description: Viene illustrato come trasferire un .NET Framework Windows Forms Ap
 author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
-ms.openlocfilehash: 959b506fe23691e160d7e88e0ae61cc71c1f3421
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: b1048c2d725a2bcf8398af1d2d53f40efc36c82e
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567284"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936960"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Come trasferire un'app desktop Windows Forms a .NET Core
 
@@ -24,7 +24,7 @@ In questo articolo vengono usati vari nomi per identificare i tipi di file usati
 | **MyFormsCore.csproj** | Nome del nuovo progetto .NET Core creato. |
 | **MyAppCore.exe** | Eseguibile dell'app Windows Forms .NET Core. |
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 - [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) per tutte le operazioni di progettazione che si vogliono eseguire.
 
@@ -106,7 +106,7 @@ SolutionFolder
     └───MyFormsCore.csproj
 ```
 
-È opportuno aggiungere il progetto **MyFormsCore.csproj** alla soluzione **MyApps.sln** con Visual Studio o l'interfaccia della riga di comando di .NET Core dalla directory **SolutionFolder**:
+Aggiungere il progetto **MyFormsCore. csproj** a **app. sln** con Visual Studio o il interfaccia della riga di comando di .NET Core dalla directory **SolutionFolder** :
 
 ```dotnetcli
 dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
@@ -287,7 +287,7 @@ Il comando precedente consente di aggiungere il codice seguente al progetto **My
 
 ```xml
   <ItemGroup>
-    <PackageReference Include="Microsoft.Windows.Compatibility" Version="2.0.1" />
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="3.1.0" />
   </ItemGroup>
 ```
 
@@ -299,6 +299,7 @@ Quando Visual Studio 2019 supporterà la finestra di progettazione per Windows F
 
 ## <a name="next-steps"></a>Passaggi successivi
 
+- Informazioni sulle [modifiche di rilievo da .NET Framework a .NET Core](../compatibility/fx-core.md).
 - Vedere altre informazioni su [Windows Compatibility Pack][compat-pack].
 - Guardare un [video sulla conversione](https://www.youtube.com/watch?v=upVQEUc_KwU) del progetto Windows Forms di .NET Framework in .NET Core.
 

@@ -2,12 +2,12 @@
 title: Supporto per nuovo funzionalità di Workflow Foundation 4.5 nella finestra di progettazione del flusso di lavoro ospitata nuovamente
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: bf5c12fe7892bf81fda9714ba02870a9c8ab8b4e
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 1c554c60bf2e50a8eb89764a21ad15b95343b182
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837597"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937732"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Supporto per nuovo funzionalità di Workflow Foundation 4.5 nella finestra di progettazione del flusso di lavoro ospitata nuovamente
 In Windows Workflow Foundation (WF) in .NET Framework 4,5 sono state introdotte molte nuove funzionalità, tra cui diversi miglioramenti apportati all'esperienza di progettazione dei flussi di lavoro. In questo argomento vengono descritte quali funzionalità sono supportate nella finestra di progettazione ospitata nuovamente e quali non sono attualmente supportate.
@@ -122,7 +122,7 @@ In Windows Workflow Foundation (WF) in .NET Framework 4,5 sono state introdotte 
  Oltre ai modelli di sviluppo dei flussi di lavoro del diagramma di flusso e sequenziale, in questa versione sono inclusi i flussi di lavoro macchina a stati e i servizi dei flussi di lavoro con priorità al contratto ("contract-first").  
   
 ### <a name="state-machine-workflows"></a>Flussi di lavoro macchina a stati  
- I flussi di lavoro della macchina a Stati sono stati introdotti come parte del .NET Framework 4.0.1 in [Microsoft .NET Framework 4 Platform Update 1](https://blogs.msdn.microsoft.com/endpoint/2011/04/18/microsoft-net-framework-4-platform-update-1/). In questo aggiornamento sono incluse numerose nuove classi e attività che hanno consentito agli sviluppatori di creare i flussi di lavoro macchina a stati. Queste classi e attività sono state aggiornate per .NET Framework 4,5. Gli aggiornamenti includono:  
+ I flussi di lavoro della macchina a Stati sono stati introdotti come parte del .NET Framework 4.0.1 in [Microsoft .NET Framework 4 Platform Update 1](https://docs.microsoft.com/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1). In questo aggiornamento sono incluse numerose nuove classi e attività che hanno consentito agli sviluppatori di creare i flussi di lavoro macchina a stati. Queste classi e attività sono state aggiornate per .NET Framework 4,5. Gli aggiornamenti includono:  
   
 1. Possibilità di impostare punti di interruzione negli stati  
   

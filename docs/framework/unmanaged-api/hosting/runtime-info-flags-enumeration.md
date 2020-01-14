@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: adba37be-f775-4cdb-8919-5746ce694f33
 topic_type:
 - apiref
-ms.openlocfilehash: 80643187045e7e96b9c18169c5e71287713d711f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9d505b917c343c40c7fa2a7aecf3466578ae0a8d
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73106242"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936633"
 ---
 # <a name="runtime_info_flags-enumeration"></a>Enumerazione RUNTIME_INFO_FLAGS
 Contiene valori che indicano quali informazioni relative al Common Language Runtime (CLR) devono essere restituite.  
@@ -41,14 +41,14 @@ typedef enum {
 } RUNTIME_INFO_FLAGS;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
   
 |Member|Descrizione|  
 |------------|-----------------|  
 |`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|Indica che le informazioni della directory non devono essere incluse.|  
 |`RUNTIME_INFO_DONT_RETURN_VERSION`|Indica che le informazioni sulla versione non devono essere incluse.|  
 |`RUNTIME_INFO_DONT_SHOW_ERROR_DIALOG`|Indica che non è possibile visualizzare una finestra di dialogo di errore in caso di errore.|  
-|`RUNTIME_INFO_IGNORE_ERROR_MODE`|Indica che è necessario eseguire l'override degli effetti della chiamata della funzione [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) con il flag SEM_FAILCRITICALERRORS. Ovvero una finestra di dialogo di installazione dovrebbe essere visualizzata in caso di errore, anziché essere eliminato.|  
+|`RUNTIME_INFO_IGNORE_ERROR_MODE`|Indica che è necessario eseguire l'override degli effetti della chiamata della funzione [SetErrorMode](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode) con il flag SEM_FAILCRITICALERRORS. Ovvero una finestra di dialogo di installazione dovrebbe essere visualizzata in caso di errore, anziché essere eliminato.|  
 |`RUNTIME_INFO_REQUEST_AMD64`|Indica una richiesta di informazioni su una versione compatibile con AMD-64 del runtime.|  
 |`RUNTIME_INFO_REQUEST_IA64`|Indica una richiesta di informazioni su una versione compatibile con IA-64 del runtime.|  
 |`RUNTIME_INFO_REQUEST_X86`|Indica una richiesta di informazioni su una versione compatibile x86 del runtime.|  
@@ -63,14 +63,14 @@ typedef enum {
   
 - RUNTIME_INFO_REQUEST_X86  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
  **Libreria:** MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
