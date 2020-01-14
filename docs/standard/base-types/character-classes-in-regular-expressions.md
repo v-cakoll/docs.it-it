@@ -12,13 +12,12 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-ms.custom: seodec18
-ms.openlocfilehash: dbfa61077cbfdd7da104dc12f304a4096b3c032d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cd9d3f69f8135b608ced91c34f747600352bafe1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120606"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711454"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Classi di caratteri nelle espressioni regolari
 
@@ -183,7 +182,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  Costrutto dell'espressione regolare  
   
- `\p{` *nome* `}`  
+ *nome* `\p{` `}`  
   
  corrisponde a qualsiasi carattere appartenente a una categoria generale Unicode o a un blocco denominato, dove *name* è l'abbreviazione della categoria o il nome del blocco denominato. Per un elenco di abbreviazioni della categoria, vedere la sezione [Categorie generali Unicode supportate](#SupportedUnicodeGeneralCategories) successiva in questo argomento. Per un elenco dei blocchi denominati, vedere la sezione [Blocchi denominati supportati](#SupportedNamedBlocks) successiva in questo argomento.  
   
@@ -212,7 +211,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  Costrutto dell'espressione regolare  
   
- `\P{` *nome* `}`  
+ *nome* `\P{` `}`  
   
  corrisponde a qualsiasi carattere non appartenente a una categoria generale Unicode o a un blocco denominato, dove *name* è l'abbreviazione della categoria o il nome del blocco denominato. Per un elenco di abbreviazioni della categoria, vedere la sezione [Categorie generali Unicode supportate](#SupportedUnicodeGeneralCategories) successiva in questo argomento. Per un elenco dei blocchi denominati, vedere la sezione [Blocchi denominati supportati](#SupportedNamedBlocks) successiva in questo argomento.  
   
@@ -227,7 +226,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
 ## <a name="word-character-w"></a>Carattere alfanumerico: \w  
  `\w` trova la corrispondenza con qualsiasi carattere alfanumerico. Un carattere alfanumerico è un membro di una delle categorie Unicode elencate nella seguente tabella.  
   
-|Category|Descrizione|  
+|Categoria|Descrizione|  
 |--------------|-----------------|  
 |Ll|Letter, Lowercase|  
 |Lu|Letter, Uppercase|  
@@ -261,7 +260,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  In altre parole, trova corrispondenza con tutti i caratteri, ad eccezione di quelli nelle categorie Unicode elencati nella tabella seguente.  
   
-|Category|Descrizione|  
+|Categoria|Descrizione|  
 |--------------|-----------------|  
 |Ll|Letter, Lowercase|  
 |Lu|Letter, Uppercase|  
@@ -294,7 +293,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
 ## <a name="whitespace-character-s"></a>Carattere spazio vuoto: \s  
  `\s` corrisponde a qualsiasi carattere spazio vuoto. È equivalente alle sequenze di escape e alle categorie Unicode elencate nella tabella seguente.  
   
-|Category|Descrizione|  
+|Categoria|Descrizione|  
 |--------------|-----------------|  
 |`\f`|Carattere di avanzamento modulo, \u000C.|  
 |`\n`|Carattere di nuova riga, \u000A.|  
@@ -342,7 +341,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  Se viene specificato il comportamento conforme a ECMAScript, `\d` equivale a `[0-9]`. Per informazioni sulle espressioni regolari ECMAScript, vedere la sezione "Comportamento di corrispondenza ECMAScript" in [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).  
   
- L'esempio seguente illustra l'elemento di linguaggio `\d`. Viene verificato se una stringa di input rappresenta un numero di telefono valido negli Stati Uniti e in Canada. Il criterio di espressione regolare `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` è definito nel modo illustrato nella tabella seguente.  
+ L'esempio seguente illustra l'elemento di linguaggio `\d`. Viene verificato se una stringa di input rappresenta un numero di telefono valido negli Stati Uniti e in Canada. Il criterio di ricerca di espressioni regolari `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` è definito nel modo illustrato nella tabella seguente.  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
@@ -364,7 +363,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  Se viene specificato il comportamento conforme a ECMAScript, `\D` equivale a `[^0-9]`. Per informazioni sulle espressioni regolari ECMAScript, vedere la sezione "Comportamento di corrispondenza ECMAScript" in [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).  
   
- Nell'esempio seguente viene illustrato l'elemento di linguaggio \D. Verifica se una stringa, ad esempio un numero parte, è formata dalla combinazione corretta di caratteri decimali e non decimali. Il criterio di espressione regolare `^\D\d{1,5}\D*$` è definito nel modo illustrato nella tabella seguente.  
+ Nell'esempio seguente viene illustrato l'elemento di linguaggio \D. Verifica se una stringa, ad esempio un numero parte, è formata dalla combinazione corretta di caratteri decimali e non decimali. Il criterio di ricerca di espressioni regolari `^\D\d{1,5}\D*$` è definito nel modo illustrato nella tabella seguente.  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
@@ -381,7 +380,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
 ## <a name="supported-unicode-general-categories"></a>Categorie generali Unicode supportate  
  In Unicode sono definite le categorie generali elencate nella tabella riportata di seguito. Per altre informazioni, vedere gli argomenti correlati "UCD File Format" (Formato di file UCD) e "General Category Values" (Valori di categoria generale) in [Unicode Character Database](https://www.unicode.org/reports/tr44/) (Database di caratteri Unicode).  
   
-|Category|Descrizione|  
+|Categoria|Descrizione|  
 |--------------|-----------------|  
 |`Lu`|Letter, Uppercase|  
 |`Ll`|Letter, Lowercase|  
