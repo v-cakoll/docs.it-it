@@ -1,15 +1,15 @@
 ---
-title: Panoramica sulla protezione estesa per l'autenticazione
+title: Cenni generali sulla protezione estesa per l'autenticazione
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
-ms.openlocfilehash: 2c166ae4795a64983c0df81629669c9cbf5b0d97
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 400bf7987b5fcd4ec75628d19a30739dd5f23b08
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665957"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964606"
 ---
-# <a name="extended-protection-for-authentication-overview"></a>Panoramica sulla protezione estesa per l'autenticazione
+# <a name="extended-protection-for-authentication-overview"></a>Cenni generali sulla protezione estesa per l'autenticazione
 La protezione estesa per l'autenticazione consente di impedire attacchi man-in-the-middle (MITM) in cui l'autore di un attacco intercetta le credenziali del client e le inoltra a un server.  
   
  Si consideri ad esempio uno scenario in cui sono presenti un client, un server e l'autore di un attacco. Gli URL del server e dell'autore dell'attacco sono, rispettivamente, `https://server` e `https://attacker`. L'autore dell'attacco induce il client ad accedere all'autore stesso come se fosse il server, quindi invia una richiesta al server. Se l'autore dell'attacco sta tentando di accedere a una risorsa protetta, il server risponde con un'intestazione WWW-Authenticate. Poiché l'autore dell'attacco non dispone delle informazioni di autenticazione, invia l'intestazione WWW-Authenticate al client. A questo punto il client invia l'intestazione Authorization all'autore dell'attacco che a sua volta la inoltra al server e ottiene l'accesso alle risorse protette utilizzando le credenziali del client.  
@@ -24,7 +24,7 @@ La protezione estesa per l'autenticazione consente di impedire attacchi man-in-t
   
  Nel server possono essere implementati i livelli di protezione seguenti:  
   
-- Nessuno. Non viene eseguita alcuna convalida dell'associazione di canale. Questo comportamento è tipico di tutti i server che non sono stati aggiornati.  
+- nessuna. Non viene eseguita alcuna convalida dell'associazione di canale. Questo comportamento è tipico di tutti i server che non sono stati aggiornati.  
   
 - Parziale. Tutti i client che sono stati aggiornati devono inviare informazioni di associazione del canale al server, a differenza di quelli che non sono stati aggiornati. Questa è un'opzione di protezione intermedia che consente la compatibilità tra le applicazioni.  
   
@@ -34,4 +34,4 @@ La protezione estesa per l'autenticazione consente di impedire attacchi man-in-t
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Modello di sicurezza per Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

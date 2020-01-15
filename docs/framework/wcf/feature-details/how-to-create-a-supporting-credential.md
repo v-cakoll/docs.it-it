@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: Creare una credenziale di supporto'
+title: 'Procedura: creare una credenziale di supporto'
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: 1f95748235aa5238193b8869f8330f0a7fc650d9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3f33bf5a78c575237ee4bc609a482a81fd30fc53
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968903"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964554"
 ---
-# <a name="how-to-create-a-supporting-credential"></a>Procedura: Creare una credenziale di supporto
-È possibile avere uno schema di sicurezza personalizzato che richiede più di una credenziale. Ad esempio, è possibile che un servizio richieda a un client non solo un nome utente e una password, ma anche una credenziale che dimostri che l'utente del client abbia un'età superiore a 18 anni. La seconda credenziale è una credenziale di *supporto*. In questo argomento viene illustrato come implementare tali credenziali in un client Windows Communication Foundation (WCF).  
+# <a name="how-to-create-a-supporting-credential"></a>Procedura: creare una credenziale di supporto
+È possibile avere uno schema di sicurezza personalizzato che richiede più di una credenziale. Ad esempio, è possibile che un servizio richieda a un client non solo un nome utente e una password, ma anche una credenziale che dimostri che l'utente del client abbia un'età superiore a 18 anni. La seconda credenziale è una *credenziale di supporto*. In questo argomento viene illustrato come implementare tali credenziali in un client Windows Communication Foundation (WCF).  
   
 > [!NOTE]
-> La specifica per supportare le credenziali è parte della specifica SecurityPolicy-WS. Per ulteriori informazioni, vedere la pagina relativa alle [specifiche Web Services Security](https://go.microsoft.com/fwlink/?LinkId=88537).  
+> La specifica per supportare le credenziali è parte della specifica SecurityPolicy-WS. Per ulteriori informazioni, vedere la pagina relativa alle [specifiche Web Services Security](https://docs.microsoft.com/previous-versions/dotnet/articles/ms951273(v=msdn.10)).  
   
 ## <a name="supporting-tokens"></a>Token di supporto  
  In breve, quando si utilizza la sicurezza dei messaggi, viene sempre utilizzata una *credenziale primaria* per proteggere il messaggio (ad esempio, un certificato X. 509 o un ticket Kerberos).  
@@ -35,7 +35,7 @@ ms.locfileid: "69968903"
 |Firmato e di crittografia|I token di supporto crittografati firmati sono token di supporto firmati che vengono anche crittografati quando sono presenti in `wsse:SecurityHeader`.|  
   
 ## <a name="programming-supporting-credentials"></a>Programmazione di credenziali di supporto  
- Per creare un servizio che usa token di supporto, è necessario creare un [ \<> CustomBinding](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md). Per ulteriori informazioni, vedere [procedura: Creare un'associazione personalizzata usando SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
+ Per creare un servizio che usa token di supporto, è necessario creare un [\<custombinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md). Per altre informazioni, vedere [procedura: creare un'associazione personalizzata usando SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
   
  Quando si crea un'associazione personalizzata, il primo passaggio consiste nel creare un elemento di associazione di sicurezza che può essere di uno dei tre tipi seguenti:  
   

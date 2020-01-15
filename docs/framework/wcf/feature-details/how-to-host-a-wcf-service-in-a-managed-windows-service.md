@@ -1,32 +1,32 @@
 ---
-title: 'Procedura: Hosting di un servizio WCF in un servizio Windows gestito'
+title: 'Procedura: ospitare un servizio WCF in un servizio Windows gestito'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-ms.openlocfilehash: b21033cff53f0cb59710b70923c14b8a539923a1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 698a5134683341fedf2a37f7d6383770e14c232c
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636485"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964795"
 ---
-# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Procedura: Hosting di un servizio WCF in un servizio Windows gestito
+# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Procedura: ospitare un servizio WCF in un servizio Windows gestito
 
-Questo argomento descrive i passaggi di base necessari per creare un servizio Windows Communication Foundation (WCF) ospitato da un servizio di Windows. Lo scenario è abilitato per l'opzione che è un servizio WCF con esecuzione prolungata ospitato all'esterno di Internet Information Services (IIS) in un ambiente protetto non attivato messaggio di hosting del servizio Windows gestito. La durata del servizio è controllata invece dal sistema operativo. Questa opzione di hosting è disponibile in tutte le versioni di Windows.
+In questo argomento vengono illustrati i passaggi di base necessari per creare un servizio Windows Communication Foundation (WCF) ospitato da un servizio Windows. Lo scenario è abilitato dall'opzione di hosting del servizio Windows gestito che è un servizio WCF con esecuzione prolungata ospitato all'esterno di Internet Information Services (IIS) in un ambiente protetto che non viene attivato tramite messaggio. La durata del servizio è controllata invece dal sistema operativo. Questa opzione di hosting è disponibile in tutte le versioni di Windows.
 
-I servizi Windows possono essere gestiti con Microsoft.ManagementConsole.SnapIn in Microsoft Management Console (MMC) e possono essere configurati per essere avviati automaticamente all'avvio del sistema. Questa opzione di hosting consiste nella registrazione del dominio dell'applicazione (AppDomain) che ospita un servizio WCF come servizio Windows gestito in modo che la durata del processo del servizio è controllata dal controllo Gestione servizi (SCM) per i servizi di Windows.
+I servizi Windows possono essere gestiti con Microsoft.ManagementConsole.SnapIn in Microsoft Management Console (MMC) e possono essere configurati per essere avviati automaticamente all'avvio del sistema. Questa opzione di hosting consiste nella registrazione del dominio applicazione (AppDomain) che ospita un servizio WCF come servizio Windows gestito, in modo che la durata del processo del servizio sia controllata da Gestione controllo servizi (SCM) per i servizi Windows.
 
-Il codice del servizio include un'implementazione del contratto di servizio, una classe di servizio Windows e una classe del programma di installazione. Classe di implementazione del servizio, `CalculatorService`, è un servizio WCF. `CalculatorWindowsService` è un servizio Windows. Per essere qualificata come servizio Windows, la classe eredita da `ServiceBase` e implementa i metodi `OnStart` e `OnStop`. In `OnStart`, viene creata e aperta una classe <xref:System.ServiceModel.ServiceHost> per il tipo `CalculatorService`. In `OnStop`, il servizio viene interrotto ed eliminato. L'host è inoltre responsabile di fornire un indirizzo di base all'host del servizio, che è stato configurato nelle impostazioni dell'applicazione. La classe del programma di installazione, che eredita da <xref:System.Configuration.Install.Installer>, consente al programma di essere installato come servizio Windows dallo strumento Installutil.exe.
+Il codice del servizio include un'implementazione del contratto di servizio, una classe di servizio Windows e una classe del programma di installazione. La classe di implementazione del servizio, `CalculatorService`, è un servizio WCF. `CalculatorWindowsService` è un servizio Windows. Per essere qualificata come servizio Windows, la classe eredita da `ServiceBase` e implementa i metodi `OnStart` e `OnStop`. In `OnStart`, viene creata e aperta una classe <xref:System.ServiceModel.ServiceHost> per il tipo `CalculatorService`. In `OnStop`, il servizio viene interrotto ed eliminato. L'host è inoltre responsabile di fornire un indirizzo di base all'host del servizio, che è stato configurato nelle impostazioni dell'applicazione. La classe del programma di installazione, che eredita da <xref:System.Configuration.Install.Installer>, consente al programma di essere installato come servizio Windows dallo strumento Installutil.exe.
 
 ## <a name="construct-the-service-and-provide-the-hosting-code"></a>Costruire il servizio e fornire il codice host
 
-1. Creare un nuovo Visual Studio **applicazione Console** progetto chiamato **servizio**.
+1. Creare un nuovo progetto di **app console** di Visual Studio denominato **servizio**.
 
 2. Rinominare Program.cs come Service.cs.
 
-3. Modificare lo spazio dei nomi `Microsoft.ServiceModel.Samples`.
+3. Modificare lo spazio dei nomi in `Microsoft.ServiceModel.Samples`.
 
 4. Aggiungere riferimenti agli assembly riportati di seguito:
 
@@ -110,7 +110,7 @@ Il codice del servizio include un'implementazione del contratto di servizio, una
     </configuration>
     ```
 
-     Fare clic con il pulsante destro l'app. config la **Esplora soluzioni** e selezionare **proprietà**. Sotto **copia in Directory di Output** selezionate **copia se più recente**.
+     Fare clic con il pulsante destro del mouse sul file app. config nel **Esplora soluzioni** e selezionare **Proprietà**. In **copia nella directory di output** selezionare **copia se più recente**.
 
      In questo esempio vengono specificati in modo esplicito gli endpoint del file di configurazione. Se non vengono aggiunti endpoint al servizio, il runtime aggiunge gli endpoint predefiniti. In questo esempio, poiché il servizio ha <xref:System.ServiceModel.Description.ServiceMetadataBehavior> impostato su `true`, è anche abilitata la pubblicazione di metadati. Per altre informazioni su endpoint, associazioni e comportamenti predefiniti, vedere [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) (Configurazione semplificata) e [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md) (Configurazione semplificata per servizi WCF).
 
@@ -118,15 +118,15 @@ Il codice del servizio include un'implementazione del contratto di servizio, una
 
 1. Compilare la soluzione per creare l'eseguibile `Service.exe`.
 
-2. Aprire il prompt dei comandi per gli sviluppatori per Visual Studio e passare alla directory del progetto. Digitare `installutil bin\service.exe` al prompt dei comandi per installare il servizio Windows.
+2. Aprire Prompt dei comandi per gli sviluppatori per Visual Studio e passare alla directory del progetto. Digitare `installutil bin\service.exe` al prompt dei comandi per installare il servizio Windows.
 
-     Digitare `services.msc` al prompt dei comandi per accedere a Gestione controllo servizi (SCM). Il servizio Windows verrà visualizzato in Servizi come "WCFWindowsServiceSample". Il servizio WCF può rispondere ai client solo se il servizio Windows è in esecuzione. Per avviare il servizio, pulsante destro del mouse nella Gestione controllo servizi e selezionare "Start" o digitare **net start WCFWindowsServiceSample** al prompt dei comandi.
+     Digitare `services.msc` al prompt dei comandi per accedere a Gestione controllo servizi (SCM). Il servizio Windows verrà visualizzato in Servizi come "WCFWindowsServiceSample". Il servizio WCF può rispondere ai client solo se il servizio Windows è in esecuzione. Per avviare il servizio, fare clic con il pulsante destro del mouse su di esso in Gestione controllo servizi e scegliere "Avvia" oppure digitare **net start WCFWindowsServiceSample** al prompt dei comandi.
 
-3. Se si apportano modifiche al servizio, è prima necessario arrestare il servizio e disinstallarlo. Per arrestare il servizio, il servizio in Gestione controllo servizi e scegliere "Interrompi" o **stop net tipo WCFWindowsServiceSample** al prompt dei comandi. Si noti che se si arresta il servizio Windows e quindi si esegue un client, si verificherà un'eccezione <xref:System.ServiceModel.EndpointNotFoundException> quando un client tenta di accedere al servizio. Per disinstallare il tipo di servizio di Windows **installutil /u bin\service.exe** al prompt dei comandi.
+3. Se si apportano modifiche al servizio, è prima necessario arrestare il servizio e disinstallarlo. Per arrestare il servizio, fare clic con il pulsante destro del mouse sul servizio in SCM e selezionare "arresta" oppure **digitare net stop WCFWindowsServiceSample** al prompt dei comandi. Si noti che se si arresta il servizio Windows e quindi si esegue un client, si verificherà un'eccezione <xref:System.ServiceModel.EndpointNotFoundException> quando un client tenta di accedere al servizio. Per disinstallare il servizio Windows digitare **installutil/u bin\service.exe** al prompt dei comandi.
 
 ## <a name="example"></a>Esempio
 
-Di seguito è riportato il codice usato in questo argomento:
+Di seguito è riportato un elenco completo del codice utilizzato in questo argomento:
 
 [!code-csharp[c_HowTo_HostInNTService#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#8)]
 [!code-vb[c_HowTo_HostInNTService#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#8)]
@@ -138,4 +138,4 @@ Analogamente all'opzione di self-hosting, l'ambiente host del servizio Windows r
 - [Configurazione semplificata](../../../../docs/framework/wcf/simplified-configuration.md)
 - [Hosting in un'applicazione gestita](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)
 - [Servizi di hosting](../../../../docs/framework/wcf/hosting-services.md)
-- [Funzionalità di hosting di Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Funzionalità di hosting di Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

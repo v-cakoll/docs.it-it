@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 804e22c79c328a2ae96d8f1cb817d0aea2b0c25d
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 068ddcab5cfb7bfb5f37a1858820195a5a05269f
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544723"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964584"
 ---
 # <a name="configure-ws-atomic-transaction-support"></a>Configura supporto transazioni WS-Atomic
 
@@ -59,7 +59,7 @@ Nell'esempio seguente vengono illustrati i passaggi necessari per stabilire il t
 
 Questa procedura richiede lo snap-in MMC Certificati. Per accedere allo snap-in è possibile fare clic sul pulsante Start, scegliere Esegui, digitare "mmc" nella casella di input e fare clic su OK. Quindi, nella finestra **Console1** passare allo snap-in **file/Aggiungi-Rimuovi** , fare clic su Aggiungi e scegliere **certificati** dall'elenco **snap-in autonomo disponibili** . Infine, selezionare **account computer** da gestire e fare clic su **OK**. Il nodo **certificati** verrà visualizzato nella console snap-in.
 
-È necessario già essere in possesso dei certificati necessari per stabilire il trust. Per informazioni su come creare e installare nuovi certificati prima dei passaggi seguenti, vedere [procedura: creare e installare certificati client temporanei in WCF durante lo sviluppo](https://go.microsoft.com/fwlink/?LinkId=158925).
+È necessario già essere in possesso dei certificati necessari per stabilire il trust. Per informazioni su come creare e installare nuovi certificati prima dei passaggi seguenti, vedere [procedura: creare e installare certificati client temporanei in WCF durante lo sviluppo](https://docs.microsoft.com/previous-versions/msp-n-p/ff650751(v=pandp.10)).
 
 1. Sul computer A, usando lo snap-in MMC Certificati, importare il certificato esistente (certA) negli archivi LocalMachine\MY (nodo personale) e LocalMachine\ROOT (nodo Autorità di certificazione radice attendibile). Per importare un certificato in un nodo specifico, fare clic con il pulsante destro del mouse sul nodo e scegliere **tutte le attività/Importa**.
 

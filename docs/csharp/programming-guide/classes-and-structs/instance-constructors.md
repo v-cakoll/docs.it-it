@@ -5,12 +5,12 @@ helpviewer_keywords:
 - constructors [C#], instance constructors
 - instance constructors [C#]
 ms.assetid: 24663779-c1e5-4af4-a942-ca554e4c542d
-ms.openlocfilehash: ee3cc30334154ef8aae6d7d26286463c537ff3dd
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 621b8ca7510b0b9916c9c46f201ff77402c3c655
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714806"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964716"
 ---
 # <a name="instance-constructors-c-programming-guide"></a>Costruttori di istanze (Guida per programmatori C#)
 
@@ -31,7 +31,7 @@ I costruttori di istanze vengono usati per creare e inizializzare qualsiasi vari
   
  [!code-csharp[csProgGuideObjects#77](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#77)]  
   
- Se una classe non ha un costruttore, viene generato automaticamente un costruttore senza parametri e per inizializzare i campi dell'oggetto vengono usati valori predefiniti. Ad esempio, un valore [int](../../language-reference/builtin-types/integral-numeric-types.md) viene inizializzato su 0. Per altre informazioni sui valori predefiniti, vedere [Tabella dei valori predefiniti](../../language-reference/keywords/default-values-table.md). Poiché il costruttore senza parametri della classe `Coords` inizializza tutti i membri dati su zero, può pertanto essere rimosso completamente senza che ciò modifichi il funzionamento della classe. Per un esempio completo sull'uso di più costruttori, vedere l'esempio 1 più avanti in questo argomento. Per un esempio di costruttore generato automaticamente, vedere l'esempio 2.  
+ Se una classe non ha un costruttore, viene generato automaticamente un costruttore senza parametri e per inizializzare i campi dell'oggetto vengono usati valori predefiniti. Ad esempio, un valore [int](../../language-reference/builtin-types/integral-numeric-types.md) viene inizializzato su 0. Per informazioni sui valori predefiniti del tipo, vedere [valori predefiniti dei C# tipi](../../language-reference/builtin-types/default-values.md). Poiché il costruttore senza parametri della classe `Coords` inizializza tutti i membri dati su zero, può pertanto essere rimosso completamente senza che ciò modifichi il funzionamento della classe. Per un esempio completo sull'uso di più costruttori, vedere l'esempio 1 più avanti in questo argomento. Per un esempio di costruttore generato automaticamente, vedere l'esempio 2.  
   
  I costruttori di istanze possono anche essere usati per chiamare i costruttori di istanze delle classi di base. Il costruttore di classi può chiamare il costruttore della classe di base mediante l'inizializzatore, ad esempio:  
   
@@ -49,7 +49,7 @@ I costruttori di istanze vengono usati per creare e inizializzare qualsiasi vari
   
  [!code-csharp[csProgGuideObjects#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#8)]  
   
- Si noti che il valore predefinito di `age` è `0` e il valore predefinito di `name` è `null`. Per altre informazioni sui valori predefiniti, vedere [Tabella dei valori predefiniti](../../language-reference/keywords/default-values-table.md).  
+ Si noti che il valore predefinito di `age` è `0` e il valore predefinito di `name` è `null`.
   
 ## <a name="example-3"></a>Esempio 3:  
  Nell'esempio riportato di seguito viene illustrato l'uso dell'inizializzatore della classe di base. La classe `Circle` è derivata dalla classe generale `Shape`e la classe `Cylinder` è derivata dalla classe `Circle`. Il costruttore di ogni classe derivata usa il relativo inizializzatore della classe di base.  

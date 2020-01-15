@@ -8,12 +8,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 0ab9b6e089f5add9963ffae73e196643ad999763
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cfa92923ff5c7d5e7e4e2a9a965dc1562c183b74
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712910"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964644"
 ---
 # <a name="value-types-c-reference"></a>Tipi valore (Riferimenti per C#)
 
@@ -33,7 +33,7 @@ A differenza dei tipi riferimento, non è possibile derivare un nuovo tipo da un
 
 Le variabili del tipo valore non possono essere `null` per impostazione predefinita. Tuttavia, le variabili dei [tipi valore Nullable](../builtin-types/nullable-value-types.md) corrispondenti possono essere `null`.
 
-Ogni tipo valore ha un costruttore senza parametri implicito che inizializza il valore predefinito del tipo. Per informazioni sui valori predefiniti dei tipi valore, vedere [Tabella dei valori predefiniti](default-values-table.md).
+Ogni tipo valore ha un costruttore senza parametri implicito che inizializza il valore predefinito del tipo. Per informazioni sui valori predefiniti dei tipi valore, vedere [valori predefiniti dei C# tipi](../builtin-types/default-values.md).
 
 ## <a name="simple-types"></a>Tipi semplici
 
@@ -87,7 +87,7 @@ int myInt = new int();
 int myInt = 0;
 ```
 
-Usando l'operatore [new](../operators/new-operator.md), viene chiamato il costruttore senza parametri del tipo specifico e viene assegnato il valore predefinito alla variabile. Nell'esempio precedente il costruttore senza parametri ha assegnato il valore `0` a `myInt`. Per altre informazioni sui valori assegnati chiamando i costruttori senza parametri, vedere [Tabella dei valori predefiniti](default-values-table.md).
+Usando l'operatore [new](../operators/new-operator.md), viene chiamato il costruttore senza parametri del tipo specifico e viene assegnato il valore predefinito alla variabile. Nell'esempio precedente il costruttore senza parametri ha assegnato il valore `0` a `myInt`. Per ulteriori informazioni sui valori assegnati chiamando costruttori senza parametri, vedere [valori predefiniti dei C# tipi](../builtin-types/default-values.md).
 
 Con i tipi definiti dall'utente, usare [new](../operators/new-operator.md) per richiamare il costruttore senza parametri. Ad esempio, l'istruzione seguente richiama il costruttore senza parametri dello struct `Point`:
 

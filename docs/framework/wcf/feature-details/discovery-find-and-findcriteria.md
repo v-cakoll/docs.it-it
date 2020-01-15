@@ -2,16 +2,16 @@
 title: Ricerca di individuazione e FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: 477edabb5d6fe263db43debc2f1d4f29df862609
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: da4c3c4a1d765e4f91b03f4f8fc1a73c3fea1535
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663351"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964840"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Ricerca di individuazione e FindCriteria
 
-Un'operazione di ricerca dell'individuazione viene inizializzata da un client per individuare uno o più servizi ed è una delle azioni principali nell'ambito dell'individuazione. L'esecuzione di una ricerca invia un messaggio WS-Discovery Probe sulla rete. I servizi che corrispondono ai criteri specificati inviano una risposta con i messaggi WS-Discovery ProbeMatch. Per altre informazioni sui messaggi di individuazione, vedere la [specifica WS-Discovery](https://go.microsoft.com/fwlink/?LinkID=122347).
+Un'operazione di ricerca dell'individuazione viene inizializzata da un client per individuare uno o più servizi ed è una delle azioni principali nell'ambito dell'individuazione. L'esecuzione di una ricerca invia un messaggio WS-Discovery Probe sulla rete. I servizi che corrispondono ai criteri specificati inviano una risposta con i messaggi WS-Discovery ProbeMatch. Per ulteriori informazioni sui messaggi di individuazione, vedere la [specifica WS-Discovery](http://schemas.xmlsoap.org/ws/2004/10/discovery/ws-discovery.pdf).
 
 ## <a name="discoveryclient"></a>DiscoveryClient
 
@@ -31,7 +31,7 @@ I criteri di ricerca includono:
 
   - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> esegue un confronto di base tra le stringhe con distinzione tra maiuscole e minuscole.
 
-  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> corrispondenze dai segmenti separati da "/". Cercando `http://contoso/building1` corrisponde a un servizio con ambito `http://contoso/building/floor1`. Si noti che non corrispondono `http://contoso/building100` perché gli ultimi due segmenti non corrispondono.
+  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> corrisponde a segmenti separati da "/". Una ricerca di `http://contoso/building1` corrisponde a un servizio con ambito `http://contoso/building/floor1`. Si noti che non corrisponde `http://contoso/building100` perché gli ultimi due segmenti non corrispondono.
 
   - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> individua la corrispondenza degli ambiti in base ai segmenti utilizzando un URL LDAP.
 

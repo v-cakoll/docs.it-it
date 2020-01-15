@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: 62b218a7259d824930a2eb2c7f810b480034e2b6
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 6505cc027b2983fd61ae53ca7ae43319024c74f7
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338024"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964705"
 ---
 # <a name="auditing-security-events"></a>Controllo degli eventi di sicurezza
 Le applicazioni create con Windows Communication Foundation (WCF) possono registrare gli eventi di sicurezza (esito positivo, esito negativo o entrambi) con la funzionalità di controllo. Gli eventi vengono scritti nel registro eventi del sistema Windows e possono essere esaminati tramite il Visualizzatore eventi.  
@@ -76,7 +76,7 @@ Le applicazioni create con Windows Communication Foundation (WCF) possono regist
  Se il controllo è attivo e non è stata specificata alcuna posizione `auditLogLocation`, la posizione predefinita del registro è "Protezione" se la piattaforma supporta la scrittura in tale registro. In caso contrario, tale posizione è "Applicazione". Solo i sistemi operativi Windows Server 2003 e Windows Vista supportano la scrittura nel registro di sicurezza. Per ulteriori informazioni, vedere la sezione "sistema operativo" più avanti in questo argomento.  
   
 ## <a name="security-considerations"></a>Considerazioni sulla sicurezza  
- Un utente malintenzionato a conoscenza del fatto che il controllo è attivo può inviare messaggi non validi che comportano la scrittura di voci di controllo. Ciò comporta a sua volta la generazione di errori nel sistema di controllo. Per ridurre questo problema, impostare la proprietà <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> su `true` e usare le proprietà del Visualizzatore eventi per controllare il comportamento di controllo. Per ulteriori informazioni, vedere l'articolo supporto tecnico Microsoft sulla visualizzazione e la gestione dei registri eventi utilizzando la Visualizzatore eventi in Windows XP disponibile in [come visualizzare e gestire i registri eventi in Visualizzatore eventi di Windows XP](https://go.microsoft.com/fwlink/?LinkId=89150).  
+ Un utente malintenzionato a conoscenza del fatto che il controllo è attivo può inviare messaggi non validi che comportano la scrittura di voci di controllo. Ciò comporta a sua volta la generazione di errori nel sistema di controllo. Per ridurre questo problema, impostare la proprietà <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> su `true` e usare le proprietà del Visualizzatore eventi per controllare il comportamento di controllo.  
   
  Gli eventi di controllo scritti nel registro applicazioni in [!INCLUDE[wxp](../../../../includes/wxp-md.md)] sono visualizzabili da qualsiasi utente autenticato.  
   
@@ -107,4 +107,4 @@ Le applicazioni create con Windows Communication Foundation (WCF) possono regist
 - [Procedura: Controllare gli eventi di sicurezza](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
 - [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)
 - [comportamenti di \<](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
-- [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Modello di sicurezza per Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

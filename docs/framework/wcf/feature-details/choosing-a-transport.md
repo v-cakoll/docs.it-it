@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: 69f2724182f83d507f749a150a8d006a4e0f2192
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: bf1bda5f1a2e1f0dfa0cc034c293f448cca2bd32
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838065"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964476"
 ---
 # <a name="choosing-a-transport"></a>Scelta di un trasporto
 In questo argomento vengono illustrati i criteri per la scelta tra i tre trasporti principali inclusi in Windows Communication Foundation (WCF): HTTP, TCP e named pipe. WCF include inoltre un trasporto di Accodamento messaggi (noto anche come MSMQ), ma questo documento non copre l'accodamento dei messaggi.  
@@ -26,7 +26,7 @@ In questo argomento vengono illustrati i criteri per la scelta tra i tre traspor
  Contenuto della sezione vengono illustrati i motivi principali per cui scegliere uno dei tre trasporti principali, incluso un grafico dettagliato per agevolare la scelta.  
   
 ### <a name="when-to-use-http-transport"></a>Quando utilizzare il trasporto HTTP  
- HTTP è un protocollo di richiesta/risposta tra client e server. L'ambito di applicazione più comune è costituito da client del browser Web che comunicano con un server Web. Il client invia una richiesta a un server che è in ascolto dei messaggi di richiesta del client. Quando il server riceve una richiesta, restituisce una risposta che contiene lo stato della richiesta. Se la richiesta ha esito positivo, vengono restituiti dati facoltativi, ad esempio una pagina Web, un messaggio di errore o altre informazioni. Per ulteriori informazioni sul protocollo HTTP, vedere [http-Hypertext Transfer Protocol](https://go.microsoft.com/fwlink/?LinkId=94858).  
+ HTTP è un protocollo di richiesta/risposta tra client e server. L'ambito di applicazione più comune è costituito da client del browser Web che comunicano con un server Web. Il client invia una richiesta a un server che è in ascolto dei messaggi di richiesta del client. Quando il server riceve una richiesta, restituisce una risposta che contiene lo stato della richiesta. Se la richiesta ha esito positivo, vengono restituiti dati facoltativi, ad esempio una pagina Web, un messaggio di errore o altre informazioni. Per ulteriori informazioni sul protocollo HTTP, vedere [http-Hypertext Transfer Protocol](https://www.w3.org/Protocols/).  
   
  Il protocollo HTTP non è basato sulla connessione; quando la risposta è stata inviata, lo stato non viene gestito. Per gestire transazioni a più pagine, l'applicazione deve rendere persistente lo stato necessario.  
   

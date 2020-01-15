@@ -6,12 +6,12 @@ helpviewer_keywords:
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-ms.openlocfilehash: f435c149f7ec2768ee6c954c1f0ae12a95cc326f
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 465dbb9120e6e81e5ef216c34dc6a92283956033
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937530"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964665"
 ---
 # <a name="constructors-c-programming-guide"></a>Costruttori (Guida per programmatori C#)
 
@@ -19,7 +19,7 @@ Quando si crea una [classe](../../language-reference/keywords/class.md) o uno [s
 
 ## <a name="parameterless-constructors"></a>Costruttori senza parametri
   
-Se non si specifica un costruttore per la classe, C# ne definisce uno per impostazione predefinita che crea istanze dell'oggetto e imposta le variabili dei membri sui valori predefiniti elencati nella [tabella dei valori predefiniti](../../language-reference/keywords/default-values-table.md). Se non si specifica un costruttore per lo struct, C# usa un *costruttore senza parametri implicito* per inizializzare automaticamente ogni campo di un tipo valore sul rispettivo valore predefinito indicato nella [tabella dei valori predefiniti](../../language-reference/keywords/default-values-table.md). Per altre informazioni, vedere [Costruttori di istanze](./instance-constructors.md).  
+Se non si specifica un costruttore per la classe, C# ne crea uno per impostazione predefinita che crea un'istanza dell'oggetto e imposta le variabili membro sui valori predefiniti elencati nell'articolo [valori C# predefiniti di tipi](../../language-reference/builtin-types/default-values.md) . Se non si fornisce un costruttore per lo struct, C# si basa su un *costruttore senza parametri implicito* per inizializzare automaticamente ogni campo sul valore predefinito. Per ulteriori informazioni ed esempi, vedere [costruttori di istanze](instance-constructors.md).  
 
 ## <a name="constructor-syntax"></a>Sintassi del costruttore
 
@@ -33,13 +33,13 @@ Se un costruttore può essere implementato come istruzione unica, è possibile u
 
 ## <a name="static-constructors"></a>Costruttori statici
 
-Tutti gli esempi precedenti hanno illustrato costruttori di istanza, che creano un nuovo oggetto. Una classe o uno struct può avere anche un costruttore statico, che inizializza i membri statici del tipo.  I costruttori statici non hanno parametri. Se non si specifica un costruttore statico per inizializzare campi statici, il compilatore C# inizializza i campi statici sul relativo valore predefinito come indicato nella [tabella dei valori predefiniti](../../language-reference/keywords/default-values-table.md).
+Tutti gli esempi precedenti hanno illustrato costruttori di istanza, che creano un nuovo oggetto. Una classe o uno struct può avere anche un costruttore statico, che inizializza i membri statici del tipo.  I costruttori statici non hanno parametri. Se non si fornisce un costruttore statico per inizializzare i campi statici C# , il compilatore Inizializza i campi statici sul valore predefinito elencato nell'articolo [valori predefiniti C# di tipi](../../language-reference/builtin-types/default-values.md) .
 
 L'esempio seguente usa un costruttore statico per inizializzare un campo statico.
 
 [!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#2)]  
 
-È anche possibile definire un costruttore statico con una definizione di corpo dell'espressione, come illustrato nell'esempio seguente. 
+È anche possibile definire un costruttore statico con una definizione di corpo dell'espressione, come illustrato nell'esempio seguente.
 
 [!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#3)]  
 

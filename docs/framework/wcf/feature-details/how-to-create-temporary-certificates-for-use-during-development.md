@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Creare certificati temporanei da usare durante lo sviluppo'
+title: 'Procedura: creare certificati temporanei da usare durante lo sviluppo'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: e2df35959f9821c65d694079aefa0ae6ba01897f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 9e01ccb29ad017a2657ab08b54d7f01ef4564481
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053298"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964544"
 ---
-# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Procedura: Creare certificati temporanei da usare durante lo sviluppo
+# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Procedura: creare certificati temporanei da usare durante lo sviluppo
 
 Quando si sviluppa un servizio o un client sicuro usando Windows Communication Foundation (WCF), spesso è necessario fornire un certificato X. 509 da usare come credenziale. Il certificato in genere fa parte di una catena di certificati con autorità radice contenuta nell'archivio Autorità di certificazione radice attendibile del computer. La catena di certificati consente di definire l'ambito per un set di certificati quando in genere l'autorità radice è dell'organizzazione o dell'unità aziendale. Per emulare questo comportamento in fase di sviluppo, è possibile creare due certificati per soddisfare i requisiti di sicurezza. Il primo è un certificato autofirmato che si trova nell'archivio Autorità di certificazione radice attendibile, mentre il secondo certificato viene creato dal primo e si trova nell'archivio Personale del computer locale o dell'utente corrente. Questo argomento illustra i passaggi per creare questi due certificati usando il cmdlet PowerShell [New-SelfSignedCertificate)](/powershell/module/pkiclient/new-selfsignedcertificate) .
 
@@ -21,7 +21,7 @@ Quando si sviluppa un servizio o un client sicuro usando Windows Communication F
 >
 > Per impostazione predefinita, il cmdlet [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) crea certificati autofirmati e questi certificati non sono sicuri. Inserendo i certificati autofirmati nell'archivio Autorità di certificazione radice attendibili, è possibile creare un ambiente di sviluppo che simula in modo più accurato l'ambiente di distribuzione.
 
- Per ulteriori informazioni sulla creazione e sull'utilizzo di certificati, vedere [Working with Certificates](working-with-certificates.md). Per ulteriori informazioni sull'utilizzo di un certificato come credenziale, vedere [protezione di servizi e client](securing-services-and-clients.md). Per un'esercitazione sull'uso della tecnologia Microsoft Authenticode, vedere [Panoramica di Authenticode ed esercitazioni](https://go.microsoft.com/fwlink/?LinkId=88919).
+ Per ulteriori informazioni sulla creazione e sull'utilizzo di certificati, vedere [Working with Certificates](working-with-certificates.md). Per ulteriori informazioni sull'utilizzo di un certificato come credenziale, vedere [protezione di servizi e client](securing-services-and-clients.md). Per un'esercitazione sull'uso della tecnologia Microsoft Authenticode, vedere [Panoramica di Authenticode ed esercitazioni](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537360(v=vs.85)).
 
 ## <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>Per creare un certificato dell'autorità radice autofirmato ed esportare la chiave privata
 
@@ -31,7 +31,7 @@ Il comando che segue crea un certificato autofirmato con un nome soggetto "RootC
 $rootcert = New-SelfSignedCertificate -CertStoreLocation Cert:\CurrentUser\My -DnsName "RootCA" -TextExtension @("2.5.29.19={text}CA=true") -KeyUsage CertSign,CrlSign,DigitalSignature
 ```
 
-È necessario esportare il certificato in un file PFX, in modo che possa essere importato nel punto in cui è necessario in un passaggio successivo. Quando si esporta un certificato con la chiave privata, per proteggerla è necessaria una password. La password viene salvata in `SecureString` un e viene usato il cmdlet [Export-PfxCertificate](/powershell/module/pkiclient/export-pfxcertificate) per esportare il certificato con la chiave privata associata in un file PFX. Viene anche salvato solo il certificato pubblico in un file CRT usando il cmdlet [Export-Certificate](/powershell/module/pkiclient/export-certificate) .
+È necessario esportare il certificato in un file PFX, in modo che possa essere importato nel punto in cui è necessario in un passaggio successivo. Quando si esporta un certificato con la chiave privata, per proteggerla è necessaria una password. La password viene salvata in una `SecureString` e si usa il cmdlet [Export-PfxCertificate](/powershell/module/pkiclient/export-pfxcertificate) per esportare il certificato con la chiave privata associata in un file PFX. Viene anche salvato solo il certificato pubblico in un file CRT usando il cmdlet [Export-Certificate](/powershell/module/pkiclient/export-certificate) .
 
 ```powershell
 [System.Security.SecureString]$rootcertPassword = ConvertTo-SecureString -String "password" -Force -AsPlainText
@@ -42,7 +42,7 @@ Export-Certificate -Cert $rootCertPath -FilePath 'RootCA.crt'
 
 ## <a name="to-create-a-new-certificate-signed-by-a-root-authority-certificate"></a>Per creare un nuovo certificato firmato mediante un certificato dell'autorità radice
 
-Il comando che segue crea un certificato firmato da `RootCA` con un nome soggetto "SignedByRootCA" usando la chiave privata dell'autorità emittente.
+Il comando che segue crea un certificato firmato dal `RootCA` con un nome soggetto "SignedByRootCA" usando la chiave privata dell'autorità emittente.
 
 ```powershell
 $testCert = New-SelfSignedCertificate -CertStoreLocation Cert:\LocalMachine\My -DnsName "SignedByRootCA" -KeyExportPolicy Exportable -KeyLength 2048 -KeyUsage DigitalSignature,KeyEncipherment -Signer $rootCert
@@ -62,7 +62,7 @@ Se è stato creato un certificato autofirmato, è possibile installarlo nell'arc
 
 ### <a name="to-install-a-self-signed-certificate-in-the-trusted-root-certification-authorities"></a>Per installare un certificato autofirmato nell'Autorità di certificazione radice attendibili
 
-1. Aprire lo snap-in del certificato. Per altre informazioni, vedere [Procedura: Visualizzare i certificati con lo snap-in](how-to-view-certificates-with-the-mmc-snap-in.md)MMC.
+1. Aprire lo snap-in del certificato. Per altre informazioni, vedere [Procedura: visualizzare certificati con lo snap-in MMC](how-to-view-certificates-with-the-mmc-snap-in.md).
 
 2. Aprire la cartella in cui archiviare il certificato, **Computer locale** o **Utente corrente**.
 
@@ -115,5 +115,5 @@ Assicurarsi di eliminare qualsiasi certificato temporaneo dell'autorità di radi
 ## <a name="see-also"></a>Vedere anche
 
 - [Uso di certificati](working-with-certificates.md)
-- [Procedura: Visualizzare i certificati con lo snap-in MMC](how-to-view-certificates-with-the-mmc-snap-in.md)
-- [Protezione di servizi e client](securing-services-and-clients.md)
+- [Procedura: Visualizzare certificati con lo snap-in MMC](how-to-view-certificates-with-the-mmc-snap-in.md)
+- [Securing Services and Clients](securing-services-and-clients.md)

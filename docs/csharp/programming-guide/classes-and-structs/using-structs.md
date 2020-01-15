@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: d85b11204eb1f1de3a95efc67054cdffc4c219e8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 22d63465c534090a8918348ea5f050739c0cf01c
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714667"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964754"
 ---
 # <a name="using-structs-c-programming-guide"></a>Utilizzo di struct (C# guida per programmatori)
 
@@ -21,7 +21,7 @@ Il tipo `struct` è adatto a rappresentare oggetti leggeri come `Point`, `Rectan
 
 Quando si crea un oggetto struct mediante l'operatore [new](../../language-reference/operators/new-operator.md), questo viene creato e viene chiamato il costruttore appropriato in base alla [firma del costruttore](constructors.md#constructor-syntax). A differenza delle classi, è possibile creare istanze di struct senza usare l'operatore `new` . In tal caso, non vi è alcuna chiamata al costruttore, il che rende più efficiente l'allocazione. Tuttavia, i campi restano non assegnati e l'oggetto non può essere usato fino all'inizializzazione di tutti i campi. Ciò include l'impossibilità di ottenere o impostare valori tramite le proprietà.
 
-Se si crea un'istanza di un oggetto struct usando il costruttore senza parametri, tutti i membri vengono assegnati in base ai relativi [valori predefiniti](../../language-reference/keywords/default-values-table.md).
+Se si crea un'istanza di un oggetto struct usando il costruttore senza parametri, tutti i membri vengono assegnati in base ai relativi [valori predefiniti](../../language-reference/builtin-types/default-values.md).
 
 Quando si scrive un costruttore con parametri per uno struct, è necessario inizializzare in modo esplicito tutti i membri. in caso contrario, uno o più membri rimangono non assegnati e non è possibile usare lo struct, generando l'errore del compilatore [CS0171](../../misc/cs0171.md).
 
