@@ -3,12 +3,12 @@ title: Glossario .NET
 description: Significato di termini selezionati usati nella documentazione di .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 21b2b0fb606333ace05b6525c9f461e6ee1709d1
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: 9bca68753a93721e48d1ff90aa7baf3a147da0ee
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338527"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708204"
 ---
 # <a name="net-glossary"></a>Glossario .NET
 
@@ -58,7 +58,7 @@ Questo tipo di CLR viene creato dalla stessa base di codice di CLR. In origine, 
 
 Libreria di classi base .NET Core (BCL)
 
-Set di librerie che comprende gli spazi dei nomi System.* (e in modo limitato quelli Microsoft.*. La libreria di classi base è un framework generico di livello inferiore su cui si basano framework applicazione di livello superiore, ad esempio ASP.NET Core. Il codice sorgente della libreria di classi base .NET Core è incluso reperibile nel [repository CoreFX](https://github.com/dotnet/corefx). La maggior parte delle API .NET Core sono però anche disponibili in .NET Framework, di conseguenza è possibile considerare CoreFX come un fork della libreria di classi base .NET Framework.
+Set di librerie che costituiscono il sistema. gli spazi dei nomi\* e in un extent limitato Microsoft\*. La libreria di classi base è un framework generico di livello inferiore su cui si basano framework applicazione di livello superiore, ad esempio ASP.NET Core. Il codice sorgente di .NET Core BCL è contenuto nel repository di [runtime di .NET Core](https://github.com/dotnet/runtime). La maggior parte delle API .NET Core sono però anche disponibili in .NET Framework, di conseguenza è possibile considerare CoreFX come un fork della libreria di classi base .NET Framework.
 
 ## <a name="corert"></a>CoreRT
 
@@ -66,7 +66,7 @@ Runtime di .NET Core.
 
 A differenza di CLR/CoreCLR, CoreRT non è una macchina virtuale, ovvero non include le funzionalità per generare ed eseguire codice al volo perché non include un [JIT](#jit). Include invece la [Garbage Collection](#gc) e la funzionalità per l'identificazione del tipo di runtime (RTTI) e la reflection. Tuttavia, il sistema di tipi di questo runtime è progettato in modo tale da rendere superflui i metadati per la reflection. Si ottiene pertanto una toolchain [AOT](#aot) in grado di scollegare i metadati superflui e, più importante, identificare il codice non usato dall'app. CoreRT è in fase di sviluppo.
 
-Vedere [Intro to .NET Native and CoreRT](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md) (Introduzione a .NET Native e CoreRT).
+Vedere [Introduzione a .NET native e CoreRT](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md).
 
 ## <a name="cross-platform"></a>multipiattaforma
 
