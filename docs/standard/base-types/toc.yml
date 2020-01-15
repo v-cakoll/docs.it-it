@@ -38,10 +38,6 @@
               href: how-to-define-and-use-custom-numeric-format-providers.md
             - name: 'Procedura: Valori di data e ora round trip'
               href: how-to-round-trip-date-and-time-values.md
-            - name: 'Procedura: Convertire in numeri l''input numerico dell''utente nei controlli Web'
-              href: how-to-convert-numeric-user-input-in-web-controls-to-numbers.md
-            - name: 'Procedura: Visualizzare le informazioni su data e ora localizzate agli utenti del Web'
-              href: how-to-display-localized-date-and-time-information-to-web-users.md
             - name: 'Procedura: Visualizzare i millisecondi nei valori di data e ora'
               href: how-to-display-milliseconds-in-date-and-time-values.md
             - name: 'Procedura: Visualizzare le date in calendari non gregoriani'
