@@ -342,24 +342,20 @@
   items:
     - name: Panoramica
       href: porting/index.md
-    - name: Tecnologie di .NET Framework non disponibili in .NET Core
-      href: porting/net-framework-tech-unavailable.md
     - name: Analizzare le dipendenze di terze parti
       href: porting/third-party-deps.md
     - name: Convertire le librerie
       href: porting/libraries.md
     - name: Organizzare progetti per .NET Core
       href: porting/project-structure.md
+    - name: Tecnologie non disponibili
+      href: porting/net-framework-tech-unavailable.md
     - name: Strumenti
       href: porting/tools.md
     - name: Usare Windows Compatibility Pack
       href: porting/windows-compat-pack.md
     - name: Convertire progetti Windows Forms
-      items:
-        - name: Come convertire un progetto
-          href: porting/winforms.md
-        - name: Modifiche che causano un'interruzione
-          href: porting/winforms-breaking-changes.md
+      href: porting/winforms.md
     - name: Convertire progetti WPF
       href: porting/wpf.md
 - name: Caricamento delle dipendenze
