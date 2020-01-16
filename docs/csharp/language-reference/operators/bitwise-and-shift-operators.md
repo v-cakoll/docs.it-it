@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: f14b92aba270eab845ca50e5407da3502b5c4087
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 4e4dbe085b11751416f69c9fa7f790f18a68f5d7
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345336"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964365"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Operatori di scorrimento e bit per bit (Riferimenti per C#)
 
@@ -60,7 +60,7 @@ L'operatore `~` produce un complemento bit per bit del relativo operando inverte
 
 ## <a name="left-shift-operator-"></a>Operatore di scorrimento a sinistra \<\<
 
-L'operatore `<<` scorre verso sinistra l'operando di sinistra del numero di bit specificato dall'operando di destra.
+L'operatore `<<` sposta l'operando sinistro a sinistra del [numero di bit definito dall'operando destro](#shift-count-of-the-shift-operators).
 
 L'operazione di scorrimento a sinistra rimuove i bit più significativi che non rientrano nell'intervallo del tipo di risultato e imposta le posizioni dei bit vuoti meno significativi su zero, come illustrato nell'esempio seguente:
 
@@ -74,7 +74,7 @@ Per informazioni su come l'operando di destra dell'operatore `<<` definisce il c
 
 ## <a name="right-shift-operator-"></a>Operatore di scorrimento a destra >>
 
-L'operatore `>>` scorre l'operando di sinistra verso destra del numero di bit definito dall'operando di destra.
+L'operatore `>>` sposta l'operando sinistro a destra del [numero di bit definito dall'operando destro](#shift-count-of-the-shift-operators).
 
 L'operazione di scorrimento a destra rimuove i bit meno significativi, come illustrato nell'esempio seguente:
 
@@ -136,7 +136,7 @@ L'esempio seguente illustra l'uso dell'assegnazione composta con gli operatori d
 
 [!code-csharp-interactive[compound assignment](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignment)]
 
-A causa delle [promozioni numeriche](~/_csharplang/spec/expressions.md#numeric-promotions) il risultato dell'operazione `op` potrebbe non essere convertibile in modo implicito nel tipo `T` di `x`. In questo caso, se `op` è un operatore già definito e il risultato dell'operazione è convertibile in modo esplicito nel tipo `T` di `x`, un'espressione di assegnazione composta nel formato `x op= y` equivale a `x = (T)(x op y)`, con la differenza che `x` viene valutato una sola volta. L'esempio seguente illustra questo comportamento:
+In ragione delle [promozioni numeriche](~/_csharplang/spec/expressions.md#numeric-promotions) il risultato dell'operazione `op` potrebbe non essere convertibile in modo implicito nel tipo `T` di `x`. In questo caso, se `op` è un operatore già definito e il risultato dell'operazione è convertibile in modo esplicito nel tipo `T` di `x`, un'espressione di assegnazione composta nel formato `x op= y` equivale a `x = (T)(x op y)`, con la differenza che `x` viene valutato una sola volta. L'esempio seguente illustra questo comportamento:
 
 [!code-csharp-interactive[compound assignment with cast](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignmentWithCast)]
 
@@ -169,6 +169,9 @@ Per le espressioni `x << count` e `x >> count`, il conteggio effettivo degli sco
 L'esempio seguente illustra questo comportamento:
 
 [!code-csharp-interactive[shift count example](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ShiftCount)]
+
+> [!NOTE]
+> Come illustrato nell'esempio precedente, il risultato di un'operazione di spostamento può essere diverso da zero, anche se il valore dell'operando destro è maggiore del numero di bit nell'operando sinistro.
 
 ## <a name="enumeration-logical-operators"></a>Operatori logici di enumerazione
 

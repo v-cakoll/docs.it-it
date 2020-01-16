@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 7d027a67e533cb1ed7b2cea38112b4f585bf5fbc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: faab6ac57629db11c60ee5b563ea95ebb90016dd
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714633"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964355"
 ---
 # <a name="using-constructors-c-programming-guide"></a>Utilizzo di costruttori (Guida per programmatori C#)
 
@@ -29,7 +29,7 @@ Quando si crea una [classe](../../language-reference/keywords/class.md) o uno [s
   
  Per altre informazioni, vedere [Costruttori privati](./private-constructors.md).  
   
- I costruttori per i tipi [struct](../../language-reference/keywords/struct.md) sono simili ai costruttori di classi, ma gli `structs` non possono contenere un costruttore senza parametri esplicito poiché ne viene specificato automaticamente uno dal compilatore. Questo costruttore inizializza ogni campo dello `struct` sui valori predefiniti. Per altre informazioni, vedere [Tabella dei valori predefiniti](../../language-reference/keywords/default-values-table.md). Il costruttore senza parametri viene tuttavia chiamato solo se si crea un'istanza dello `struct` con `new`. Questo codice, ad esempio, usa il costruttore senza parametri per <xref:System.Int32>, in modo da garantire che venga inizializzato l'Integer:  
+ I costruttori per i tipi [struct](../../language-reference/keywords/struct.md) sono simili ai costruttori di classi, ma gli `structs` non possono contenere un costruttore senza parametri esplicito poiché ne viene specificato automaticamente uno dal compilatore. Questo costruttore inizializza ogni campo nell'`struct` sul [valore predefinito](../../language-reference/builtin-types/default-values.md). Il costruttore senza parametri viene tuttavia chiamato solo se si crea un'istanza dello `struct` con `new`. Questo codice, ad esempio, usa il costruttore senza parametri per <xref:System.Int32>, in modo da garantire che venga inizializzato l'Integer:  
   
 ```csharp  
 int i = new int();  

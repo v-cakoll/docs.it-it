@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 4a9f3a3b7e69d33a8707a4bed5b9bc369c75f601
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 55120430a9aaafe7d8bbf2b26f07806e4f1aa44a
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346688"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964428"
 ---
 # <a name="denial-of-service"></a>Denial of Service (Negazione del servizio)
 Si verifica un attacco Denial of Service quando un sistema viene sommerso da una quantità di messaggi tale da non poter essere elaborata o da poter essere elaborata solo molto lentamente.  
@@ -44,7 +44,7 @@ Si verifica un attacco Denial of Service quando un sistema viene sommerso da una
 ## <a name="auditing-event-log-can-be-filled"></a>Possibilità di riempimento del registro eventi di controllo  
  Se un utente malintenzionato comprende che è attivato il controllo, può inviare messaggi non validi che causano la scrittura di voci di controllo. Ciò comporta a sua volta la generazione di errori nel sistema di controllo.  
   
- Per ridurre questo problema, impostare la proprietà <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> su `true` e usare le proprietà del Visualizzatore eventi per controllare il comportamento di controllo. Per ulteriori informazioni sull'utilizzo del Visualizzatore eventi per visualizzare e gestire i registri eventi, vedere [Visualizzatore eventi](https://go.microsoft.com/fwlink/?LinkId=186123). Per ulteriori informazioni, vedere [controllo](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Per ridurre questo problema, impostare la proprietà <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> su `true` e usare le proprietà del Visualizzatore eventi per controllare il comportamento di controllo. Per ulteriori informazioni sull'utilizzo del Visualizzatore eventi per visualizzare e gestire i registri eventi, vedere [Visualizzatore eventi](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766042(v=ws.11)). Per ulteriori informazioni, vedere [controllo](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-to-become-unresponsive"></a>Le implementazioni di IAuthorizationPolicy non valide possono causare la mancata risposta del servizio  
  La chiamata del metodo <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> su un'implementazione non corretta dell'interfaccia <xref:System.IdentityModel.Policy.IAuthorizationPolicy> può causare la mancata risposta da parte del servizio.  
@@ -52,7 +52,7 @@ Si verifica un attacco Denial of Service quando un sistema viene sommerso da una
  Mitigazione: usare solo codice attendibile. In altre parole, usare solo codice scritto e verificato o proveniente da un provider attendibile. Non consentire l'aggiunta nel codice di estensioni non attendibili di <xref:System.IdentityModel.Policy.IAuthorizationPolicy> senza la dovuta considerazione. Questo vale per tutte le estensioni usate in un'implementazione del servizio. In WCF non viene fatta alcuna distinzione tra il codice dell'applicazione e il codice esterno collegato utilizzando i punti di estendibilità.  
   
 ## <a name="kerberos-maximum-token-size-may-need-resizing"></a>Possibile necessità di ridimensionamento per la dimensione massima dei token Kerberos  
- Se un client appartiene a un gran numero di gruppi (circa 900, anche se il numero effettivo varia a seconda dei gruppi), può verificarsi un problema quando il blocco dell'intestazione di un messaggio supera i 64 kilobyte. In tal caso, è possibile aumentare le dimensioni massime dei token Kerberos, come descritto nell'articolo supporto tecnico Microsoft "[autenticazione Kerberos di Internet Explorer non funziona a causa di un buffer insufficiente che si connette a IIS](https://go.microsoft.com/fwlink/?LinkId=89176)". Potrebbe inoltre essere necessario aumentare la dimensione massima dei messaggi WCF per contenere il token Kerberos più grande.  
+ Se un client appartiene a un gran numero di gruppi (circa 900, anche se il numero effettivo varia a seconda dei gruppi), può verificarsi un problema quando il blocco dell'intestazione di un messaggio supera i 64 kilobyte. In tal caso, è possibile aumentare le dimensioni massime del token Kerberos. Potrebbe inoltre essere necessario aumentare la dimensione massima dei messaggi WCF per contenere il token Kerberos più grande.  
   
 ## <a name="autoenrollment-results-in-multiple-certificates-with-same-subject-name-for-machine"></a>Generazione da parte della registrazione automatica di più certificati per computer con lo stesso nome di soggetto  
  La *registrazione* automatica è la funzionalità di Windows Server 2003 per la registrazione automatica di utenti e computer per i certificati. Quando un computer si trova in un dominio con questa funzionalità attivata, viene automaticamente creato un certificato X.509 con l'obiettivo di eseguire l'autenticazione client, tale certificato viene quindi inserito nell'archivio dei certificati personali del computer locale ogni qualvolta un nuovo computer viene associato alla rete. Tuttavia, la registrazione automatica usa lo stesso nome di soggetto per tutti i certificati creati nella cache.  
@@ -61,7 +61,7 @@ Si verifica un attacco Denial of Service quando un sistema viene sommerso da una
   
  Per attenuare questo problema, fare riferimento al certificato esatto da usare utilizzando un criterio di ricerca più preciso nel [\<ServiceCredentials](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md). Usare, ad esempio, l'opzione <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> e specificare il certificato in base all'identificazione personale univoca (hash).  
   
- Per ulteriori informazioni sulla funzionalità di registrazione automatica, vedere [registrazione automatica dei certificati in Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=95166).  
+ Per ulteriori informazioni sulla funzionalità di registrazione automatica, vedere [registrazione automatica dei certificati in Windows Server 2003](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc778954(v%3dws.10)).  
   
 ## <a name="last-of-multiple-alternative-subject-names-used-for-authorization"></a>Uso per l'autorizzazione dell'ultimo dei diversi nomi di soggetto alternativi  
  Nel raro caso che un certificato X.509 contenga più nomi di soggetto alternativi e si esegua l'autorizzazione usando il nome di soggetto alternativo, l'autorizzazione potrebbe avere esito negativo.  

@@ -2,15 +2,16 @@
 title: Supporto di memorizzazione nella cache per servizi HTTP Web WCF
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: 7c60deab635c29785398a1b50f9cf14c0f688420
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 5964c58ce28f67815774741815bba0fcbe3b2de7
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141782"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964229"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>Supporto di memorizzazione nella cache per servizi HTTP Web WCF
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] consente di utilizzare il meccanismo dichiarativo di memorizzazione nella cache già disponibile in ASP.NET nei servizi HTTP Web WCF. In questo modo è possibile memorizzare nella cache le risposte inviate dalle operazioni del servizio HTTP Web WCF. Se un utente invia un'operazione HTTP GET al servizio configurato per la memorizzazione nella cache, ASP.NET restituisce la risposta memorizzata nella cache e il metodo del servizio non viene chiamato. Se la cache scade, al successivo tentativo di invio di un'operazione HTTP GET da parte dell'utente, viene chiamato il metodo del servizio e la risposta viene nuovamente memorizzata nella cache. Per ulteriori informazioni sulla memorizzazione nella cache ASP.NET, vedere [Panoramica della memorizzazione nella cache ASP.NET](https://go.microsoft.com/fwlink/?LinkId=152534)  
+
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] consente di utilizzare il meccanismo dichiarativo di memorizzazione nella cache già disponibile in ASP.NET nei servizi HTTP Web WCF. In questo modo è possibile memorizzare nella cache le risposte inviate dalle operazioni del servizio HTTP Web WCF. Se un utente invia un'operazione HTTP GET al servizio configurato per la memorizzazione nella cache, ASP.NET restituisce la risposta memorizzata nella cache e il metodo del servizio non viene chiamato. Se la cache scade, al successivo tentativo di invio di un'operazione HTTP GET da parte dell'utente, viene chiamato il metodo del servizio e la risposta viene nuovamente memorizzata nella cache. Per ulteriori informazioni sulla memorizzazione nella cache ASP.NET, vedere [Cenni preliminari sulla memorizzazione nella cache ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100)).  
   
 ## <a name="basic-web-http-service-caching"></a>Memorizzazione nella cache del servizio HTTP Web di base  
  Per abilitare la memorizzazione nella cache del servizio HTTP WEB, è innanzitutto necessario abilitare la compatibilità ASP.NET applicando <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> al servizio, impostando <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.RequirementsMode%2A> su <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> o <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>.  
@@ -122,10 +123,10 @@ public class Service
  In questo caso la durata della cache è impostata su 60 secondi, `varyByParam` è impostato su none e `sqlDependency` è impostato su un elenco con valori delimitati da punti e virgola di coppie di nomi/tabelle del database separate dai due punti. Se i dati in `MyTable` vengono modificati, la risposta memorizzata nella cache per l'operazione del servizio viene rimossa e, se si richiama l'operazione, una nuova risposta viene generata, memorizzata nella cache e restituita al client.  
   
 > [!IMPORTANT]
-> Per ASP.NET accedere a un database SQL, è necessario usare lo [strumento di registrazione ASP.NET SQL Server](https://go.microsoft.com/fwlink/?LinkId=152536). È inoltre necessario consentire l'accesso dell'account utente appropriato al database e alla tabella. Per ulteriori informazioni, vedere [accesso SQL Server da un'applicazione Web](https://go.microsoft.com/fwlink/?LinkId=178988).  
+> Per ASP.NET accedere a un database SQL, è necessario usare lo [strumento di registrazione ASP.NET SQL Server](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms229862(v=vs.90)). È inoltre necessario consentire l'accesso dell'account utente appropriato al database e alla tabella. Per ulteriori informazioni, vedere [accesso SQL Server da un'applicazione Web](https://docs.microsoft.com/previous-versions/aspnet/ht43wsex(v=vs.100)).  
   
 ## <a name="conditional-http-get-based-caching"></a>Memorizzazione nella cache basata su HTTP GET condizionale  
- Negli scenari HTTP Web un HTTP GET condizionale viene spesso usato dai servizi per implementare la memorizzazione nella cache HTTP intelligente, come descritto nella [specifica http](https://go.microsoft.com/fwlink/?LinkId=165800). A tale scopo, il servizio deve impostare il valore dell'intestazione ETag nella risposta HTTP. Deve inoltre verificare l'intestazione If-None-Match nella richiesta HTTP per controllare se una o più delle intestazioni ETag specificate corrisponde all'intestazione ETag corrente.  
+ Negli scenari HTTP Web un HTTP GET condizionale viene spesso usato dai servizi per implementare la memorizzazione nella cache HTTP intelligente, come descritto nella [specifica http](https://www.w3.org/Protocols/rfc2616/rfc2616.html). A tale scopo, il servizio deve impostare il valore dell'intestazione ETag nella risposta HTTP. Deve inoltre verificare l'intestazione If-None-Match nella richiesta HTTP per controllare se una o più delle intestazioni ETag specificate corrisponde all'intestazione ETag corrente.  
   
  Per le richieste GET e HEAD, <xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalRetrieve%2A> utilizza un valore ETag e lo verifica rispetto all'intestazione If-None-Match della richiesta. Se l'intestazione è presente e viene individuata una corrispondenza, viene generata un'eccezione <xref:System.ServiceModel.Web.WebFaultException> con codice di stato HTTP 304 (non modificato) e viene aggiunta un'intestazione ETag alla risposta con l'intestazione ETag corrispondente.  
   

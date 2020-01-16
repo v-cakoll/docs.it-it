@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], obtaining
 ms.assetid: d53762fd-15ea-42dc-b0ea-6a6597aa23f7
-ms.openlocfilehash: 485741f98c4a120669eafe85d3a3810374f61378
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: bfe6dcfe6850ee17a7bbb59f3a6ccad6c3c3e7d7
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347146"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964236"
 ---
 # <a name="how-to-obtain-a-certificate-wcf"></a>Procedura: ottenere un certificato (WCF)
 Per usare una delle funzionalità di Windows Communication Foundation (WCF) di che usano certificati X. 509, è sufficiente ottenere prima i certificati.  
@@ -20,7 +20,7 @@ Per usare una delle funzionalità di Windows Communication Foundation (WCF) di c
   
     - Acquistare un certificato da un'autorità di certificazione, ad esempio VeriSign, Inc.  
   
-    - Configurare il proprio servizio certificati e fare in modo che un'autorità di certificazione firmi i certificati. Windows Server 2003, Windows 2000 Server, Windows 2000 Server Datacenter e Windows 2000 Datacenter Server includono tutti servizi certificati che supportano l'infrastruttura a chiave pubblica (PKI). In Windows Server 2008 usare il ruolo [Servizi certificati Active Directory](https://go.microsoft.com/fwlink/?LinkID=153483) per gestire un'autorità di certificazione.  
+    - Configurare il proprio servizio certificati e fare in modo che un'autorità di certificazione firmi i certificati. Windows Server 2003, Windows 2000 Server, Windows 2000 Server Datacenter e Windows 2000 Datacenter Server includono tutti servizi certificati che supportano l'infrastruttura a chiave pubblica (PKI). In Windows Server 2008 usare il ruolo [Servizi certificati Active Directory](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731564(v=ws.10)) per gestire un'autorità di certificazione.  
   
     - Configurare un proprio servizio certificati e non far firmare i certificati.  
   

@@ -3,12 +3,12 @@ title: Creare un client REST usando .NET Core
 description: Questa esercitazione illustra alcune funzionalità disponibili in .NET Core e nel linguaggio C#.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 776d0ca65944e943c1c5114f95801c20d31a2b74
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 9478966598a9aaa1e9f592b72afce8f878a38abf
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900731"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964414"
 ---
 # <a name="rest-client"></a>Client REST
 
@@ -38,7 +38,7 @@ Se si vuole proseguire, è possibile scaricare l'[esempio finale](https://github
 
 Il primo passaggio consiste nel creare una nuova applicazione. Aprire un prompt dei comandi e creare una nuova directory per l'applicazione, impostandola come directory corrente. Immettere il comando seguente in una finestra della console:
 
-```console
+```dotnetcli
 dotnet new console --name WebApiClient
 ```
 

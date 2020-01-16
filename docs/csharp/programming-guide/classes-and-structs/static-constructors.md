@@ -5,12 +5,12 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 0956c174f4d5742780baf00a6f2785a9efd1d93f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 27a7cbb1490f42811c79778382063980f3828395
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714681"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964082"
 ---
 # <a name="static-constructors-c-programming-guide"></a>Costruttori statici (Guida per programmatori C#)
 Un costruttore statico consente di inizializzare gli eventuali dati [static](../../language-reference/keywords/static.md) oppure di eseguire un'operazione specifica che deve essere effettuata una sola volta. Viene chiamato automaticamente prima che ne venga creata la prima istanza o venga fatto riferimento a qualsiasi membro statico.  
@@ -32,7 +32,7 @@ I costruttori statici hanno le proprietà seguenti:
   
 - Un costruttore statico viene chiamato automaticamente per inizializzare la [classe](../../language-reference/keywords/class.md) prima che ne venga creata la prima istanza o venga fatto riferimento a qualsiasi membro statico. Un costruttore statico verrà eseguito prima di un costruttore di istanza. Si noti che il costruttore statico di un tipo viene chiamato quando un metodo statico assegnato a un evento o un delegato viene chiamato, e non quando tale metodo viene assegnato. Gli eventuali inizializzatori variabili di campo statico presenti nella classe del costruttore statico verranno eseguiti nell'ordine testuale in cui appaiono nella dichiarazione della classe subito prima dell'esecuzione del costruttore statico.
 
-- Se non si specifica un costruttore statico per inizializzare campi statici, tutti i campi statici vengono inizializzati sul relativo valore predefinito come indicato nella [tabella dei valori predefiniti](../../language-reference/keywords/default-values-table.md). 
+- Se non si specifica un costruttore statico per inizializzare i campi statici, tutti i campi statici vengono inizializzati sul valore predefinito elencato in [valori C# predefiniti dei tipi](../../language-reference/builtin-types/default-values.md).
   
 - Se un costruttore statico genera un'eccezione, il runtime non lo chiamerà una seconda volta e il tipo rimarrà non inizializzato per la durata del dominio dell'applicazione in cui il programma è in esecuzione. Viene più comunemente generata un'eccezione <xref:System.TypeInitializationException> quando un costruttore statico non è in grado di creare un'istanza di un tipo o per un'eccezione non gestita che si verifica all'interno di un costruttore statico. Per i costruttori statici impliciti che non sono definiti in modo esplicito nel codice sorgente, la risoluzione dei problemi può richiedere l'ispezione del codice IL (Intermediate Language).
 

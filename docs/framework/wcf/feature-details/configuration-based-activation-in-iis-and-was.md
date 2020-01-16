@@ -2,12 +2,12 @@
 title: Attivazione basata sulla configurazione in IIS e WAS
 ms.date: 03/30/2017
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
-ms.openlocfilehash: 5b06f474d26b80f955b1508f01da83448a8708a3
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 6515d6621798a9dab67aa7b73a39b9481c1779fc
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928776"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75963491"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>Attivazione basata sulla configurazione in IIS e WAS
 
@@ -15,10 +15,10 @@ In genere, quando si ospita un servizio Windows Communication Foundation (WCF) i
 
 ## <a name="configuration-based-activation"></a>Attivazione basata sulla configurazione
 
-L'attivazione basata sulla configurazione acquisisce i metadati posizionati nel file con estensione svc e li sposta nel file Web.config. All'interno dell'`serviceHostingEnvironment`elemento < > è presente un`serviceActivations`elemento < >. All'interno dell'`serviceActivations`elemento < > sono presenti uno o`add`più elementi < >, uno per ogni servizio ospitato. L'elemento`add`< > contiene attributi che consentono di impostare l'indirizzo relativo per il servizio e il tipo di servizio o una factory di host del servizio. Nell'esempio di codice di configurazione riportato di seguito viene illustrato come utilizzare questa sezione.
+L'attivazione basata sulla configurazione acquisisce i metadati posizionati nel file con estensione svc e li sposta nel file Web.config. All'interno dell'elemento <`serviceHostingEnvironment`> è presente un elemento <`serviceActivations`>. All'interno dell'<`serviceActivations`> elemento sono uno o più <`add`> elementi, uno per ogni servizio ospitato. L'elemento <`add`> contiene attributi che consentono di impostare l'indirizzo relativo per il servizio e il tipo di servizio o una factory di host del servizio. Nell'esempio di codice di configurazione riportato di seguito viene illustrato come utilizzare questa sezione.
 
 > [!NOTE]
-> Ogni elemento`add`< > deve specificare un servizio o un attributo Factory. È consentita la specifica sia degli attributi del servizio che della factory.
+> Ogni elemento <`add`> deve specificare un servizio o un attributo Factory. È consentita la specifica sia degli attributi del servizio che della factory.
 
 ```xml
 <serviceHostingEnvironment>
@@ -33,7 +33,7 @@ L'attivazione basata sulla configurazione acquisisce i metadati posizionati nel 
 > [!NOTE]
 >
 > - Quando si utilizza l'attivazione basata sulla configurazione, il codice inline presente nei file con estensione svc non è supportato.
-> - L' `relativeAddress` attributo deve essere impostato su un indirizzo relativo, ad esempio\<"sub-directory >/Service.svc" o "~\</Sub-Directory/Service. svc".
+> - L'attributo `relativeAddress` deve essere impostato su un indirizzo relativo, ad esempio "\<sottodirectory >/Service.svc" o "~/\<Sub-Directory/Service. svc".
 > - Se si registra un indirizzo relativo che non dispone di un'estensione nota associata a WCF, viene generata un'eccezione di configurazione.
 > - L'indirizzo specificato è relativo alla radice dell'applicazione virtuale.
 > - A causa del modello gerarchico della configurazione, gli indirizzi relativi registrati a livello del computer e del sito vengono ereditati dalle applicazioni virtuali.
@@ -46,4 +46,4 @@ L'attivazione basata sulla configurazione acquisisce i metadati posizionati nel 
 - [Servizi di hosting](../../../../docs/framework/wcf/hosting-services.md)
 - [Panoramica dell'hosting dei servizi flusso di lavoro](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
 - [\<serviceHostingEnvironment>](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)
-- [Funzionalità di hosting di Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Funzionalità di hosting di Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

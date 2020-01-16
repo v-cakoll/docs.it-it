@@ -2,15 +2,16 @@
 title: Hosting di servizi flusso di lavoro
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-ms.openlocfilehash: 07e4f7779c06e6c95b45d59bcdd0890fb5a9cf55
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 21e24853229d09e3f1af719573f47bb12c8fddb6
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636136"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75963735"
 ---
 # <a name="hosting-workflow-services"></a>Hosting di servizi flusso di lavoro
-Per poter rispondere ai messaggi in arrivo, un servizio flusso di lavoro deve essere ospitato. I servizi flusso di lavoro utilizzano l'infrastruttura di messaggistica WCF e sono quindi ospitati in modi analoghi. Come servizi WCF, servizi flusso di lavoro possono essere ospitati in qualsiasi applicazione gestita, in Internet Information Services (IIS) o in Windows Process Activation Services (WAS). Inoltre, i servizi flusso di lavoro possono essere ospitati in Windows Server AppFabric. Per altre informazioni su Windows Server AppFabric, vedere [documentazione di Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=193037), [funzionalità di Hosting di AppFabric](https://go.microsoft.com/fwlink/?LinkId=196494), e [concetti di Hosting](https://go.microsoft.com/fwlink/?LinkId=196495). Per altre informazioni sui diversi modi per ospitare WCF servizi, vedere [servizi di Hosting](../../../../docs/framework/wcf/hosting-services.md).
+
+Per poter rispondere ai messaggi in arrivo, un servizio flusso di lavoro deve essere ospitato. I servizi flusso di lavoro utilizzano l'infrastruttura di messaggistica WCF e sono quindi ospitati in modi analoghi. Analogamente ai servizi WCF, i servizi flusso di lavoro possono essere ospitati in qualsiasi applicazione gestita, in Internet Information Services (IIS) o in servizi di attivazione dei processi di Windows (WAS). Inoltre, i servizi flusso di lavoro possono essere ospitati in Windows Server AppFabric. Per altre informazioni su Windows Server App Fabric, vedere la [documentazione di Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10))AppFabric, le [funzionalità di hosting di AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))e i concetti di hosting di [AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677371(v=azure.10)). Per ulteriori informazioni sui vari modi per ospitare i servizi WCF, vedere [Hosting Services](../../../../docs/framework/wcf/hosting-services.md).
 
 ## <a name="hosting-in-a-managed-application"></a>Hosting in un'applicazione gestita
  Per ospitare un servizio flusso di lavoro in un'applicazione gestita, utilizzare la classe <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Il costruttore <xref:System.ServiceModel.Activities.WorkflowServiceHost> consente di specificare un'istanza di servizio flusso di lavoro singleton, una definizione del servizio flusso di lavoro o un'attività che utilizza le attività di messaggistica del flusso di lavoro. La chiamata a <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> fa in modo che il servizio avvii l'ascolto di messaggi in ingresso.
@@ -42,16 +43,16 @@ Per poter rispondere ai messaggi in arrivo, un servizio flusso di lavoro deve es
 
 - Posizionare un assembly nella directory virtuale IIS/WAS che contiene un'attività che utilizza le attività di messaggistica di WCF.
 
- Un file con estensione xamlx che definisce un servizio del flusso di lavoro deve contenere una <`Service`> elemento radice o un elemento radice contenente qualsiasi tipo derivato da <xref:System.Workflow.ComponentModel.Activity>. Quando si usa il modello di attività di Visual Studio, viene creato un file con estensione xamlx. Quando si usa il modello di servizio del flusso di lavoro WCF, viene creato un file con estensione xamlx.
+ Un file con estensione xamlx che definisce un servizio del flusso di lavoro deve contenere un <`Service`> elemento radice o un elemento radice che contiene qualsiasi tipo derivato da <xref:System.Workflow.ComponentModel.Activity>. Quando si usa il modello di attività di Visual Studio, viene creato un file con estensione xamlx. Quando si utilizza il modello di servizio del flusso di lavoro WCF, viene creato un file con estensione xamlx.
 
 ## <a name="hosting-workflow-services-under-windows-server-app-fabric"></a>Hosting di servizi flusso di lavoro in Windows Server AppFabric
  L'hosting di un servizio flusso di lavoro in Windows Server AppFabric è simile all'hosting in IIS/WAS. L'unica differenza consiste nel fatto che Windows Server App Fabric viene installato. In Windows Server AppFabric vengono forniti gli strumenti aggiunti a Gestione Internet Information Services, nonché i cmdlet PowerShell. Tali strumenti semplificano la distribuzione, la gestione e il rilevamento dei servizi flusso di lavoro e dei servizi WCF.
 
 ## <a name="referencing-custom-activities"></a>Riferimento ad attività personalizzate
- Riferimenti alle attività personalizzate devono essere aggiunto per la <`Assemblies`> sezione sotto <`System.Web.Compilation`> in modo che vengano caricati nel dominio dell'applicazione e il deserializzatore XAML sia in grado di individuare i tipi. È possibile configurare queste impostazioni a livello dell'applicazione o nel file Web.config radice, se tali impostazioni devono essere applicate a tutte le applicazioni nel computer.
+ È necessario aggiungere riferimenti alle attività personalizzate alla sezione <`Assemblies`> in <`System.Web.Compilation`>, in modo che vengano caricati nel dominio dell'applicazione e che il deserializzatore XAML sia in grado di individuare i tipi. È possibile configurare queste impostazioni a livello dell'applicazione o nel file Web.config radice, se tali impostazioni devono essere applicate a tutte le applicazioni nel computer.
 
 ## <a name="deployment"></a>Distribuzione
- Lo strumento Distribuzione Web è stato creato per agevolare il processo di distribuzione. Lo strumento consente di eseguire la migrazione delle applicazioni tra IIS 6.0 e IIS 7.0, sincronizzare server farm e inserire in pacchetti, archiviare e distribuire applicazioni Web. Per altre informazioni, vedere [dello strumento di distribuzione MS](https://go.microsoft.com/fwlink/?LinkId=178690).
+ Lo strumento Distribuzione Web è stato creato per agevolare il processo di distribuzione. Lo strumento consente di eseguire la migrazione delle applicazioni tra IIS 6.0 e IIS 7.0, sincronizzare server farm e inserire in pacchetti, archiviare e distribuire applicazioni Web. Per ulteriori informazioni, vedere [MS Deployment Tool](https://go.microsoft.com/fwlink/?LinkId=178690).
 
 ## <a name="see-also"></a>Vedere anche
 

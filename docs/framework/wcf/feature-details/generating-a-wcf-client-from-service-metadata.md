@@ -2,12 +2,12 @@
 title: Generazione di un client WCF dai metadati del servizio
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-ms.openlocfilehash: 938b1363be3b168fce74d80b47c9ae463d018669
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: e40a908894ca5acac33401ff20a9110d617547ec
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70892757"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75963908"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Generazione di un client WCF dai metadati del servizio
 In questo argomento viene illustrato come utilizzare le varie opzioni in Svcutil.exe per generare client da documenti dei metadati.  
@@ -18,9 +18,9 @@ In questo argomento viene illustrato come utilizzare le varie opzioni in Svcutil
   
 - Richiesta MEX all'indirizzo fornito con `/mex` accodato.  
   
-- Richiesta DISCO (usando [DiscoveryClientProtocol](https://go.microsoft.com/fwlink/?LinkId=94777) da ASP.NET Web Services) all'indirizzo fornito.  
+- Richiesta DISCO (usando il <xref:System.Web.Services.Discovery.DiscoveryClientProtocol> dai servizi Web di ASP.NET) all'indirizzo fornito.  
   
- Lo strumento Svcutil.exe consente di generare il client in base al WSDL (Web Services Description Language) o al file dei criteri ricevuto dal servizio. Il nome dell'entità utente (UPN) viene generato concatenando il nome utente con\@"" e quindi aggiungendo un nome di dominio completo (FQDN). Tuttavia, per gli utenti che hanno eseguito la registrazione in Active Directory, questo formato non è valido e l'UPN generato dallo strumento provoca un errore di autenticazione Kerberos con il messaggio di errore seguente: **Tentativo di accesso non riuscito.** Per risolvere questo problema, è necessario correggere manualmente il file client generato da questo strumento.  
+ Lo strumento Svcutil.exe consente di generare il client in base al WSDL (Web Services Description Language) o al file dei criteri ricevuto dal servizio. Il nome dell'entità utente (UPN) viene generato concatenando il nome utente con "\@" e quindi aggiungendo un nome di dominio completo (FQDN). Tuttavia, per gli utenti che hanno eseguito la registrazione in Active Directory, questo formato non è valido e l'UPN generato dallo strumento provoca un errore nell'autenticazione Kerberos con il messaggio di errore seguente: **tentativo di accesso non riuscito.** Per risolvere questo problema, è necessario correggere manualmente il file client generato da questo strumento.  
   
 ```console
 svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>  
@@ -30,8 +30,8 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
-|**/Reference:\<percorso file >**|Fa riferimento a tipi nell'assembly specificato. Quando si generano client, utilizzare questa opzione per specificare assembly che potrebbero contenere tipi che rappresentano i metadati importati.<br /><br /> Forma abbreviata: `/r`|  
-|**/excludeType:\<digitare >**|Specifica un nome tipo completo o un nome completo del tipo dell’assembly da escludere dai tipi di contratto a cui si fa riferimento.<br /><br /> Forma abbreviata: `/et`|  
+|**/Reference: > percorso file\<**|Fa riferimento a tipi nell'assembly specificato. Quando si generano client, utilizzare questa opzione per specificare assembly che potrebbero contenere tipi che rappresentano i metadati importati.<br /><br /> Forma abbreviata: `/r`|  
+|**/excludeType: tipo di\<**|Specifica un nome tipo completo o un nome completo del tipo dell’assembly da escludere dai tipi di contratto a cui si fa riferimento.<br /><br /> Forma abbreviata: `/et`|  
   
 ## <a name="choosing-a-serializer"></a>Scelta di un serializzatore  
   
@@ -47,13 +47,13 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
-|**/Language:\<> lingua**|Specifica il linguaggio di programmazione da utilizzare per la generazione del codice. Fornire un nome di linguaggio registrato nel file Machine.config o il nome completo di una classe che eredita da <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Valori: C#, cs, csharp, vb, vbs, visualbasic, vbscript, javascript, c++, mc, cpp<br /><br /> Impostazione predefinita: csharp<br /><br /> Forma abbreviata: `/l`<br /><br /> Per ulteriori informazioni, vedere [classe CodeDomProvider](https://go.microsoft.com/fwlink/?LinkId=94778).|  
+|**/Language: > lingua\<**|Specifica il linguaggio di programmazione da utilizzare per la generazione del codice. Fornire un nome di linguaggio registrato nel file Machine.config o il nome completo di una classe che eredita da <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Valori: c#, cs, csharp, vb, vbs, visualbasic, vbscript, javascript, c++, mc, cpp<br /><br /> Impostazione predefinita: csharp<br /><br /> Forma abbreviata: `/l`<br /><br /> Per altre informazioni, vedere la classe <xref:System.CodeDom.Compiler.CodeDomProvider>.|  
   
 ## <a name="choosing-a-namespace-for-the-client"></a>Scelta di uno spazio dei nomi per il client  
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
-|**/namespace:\<String, String >**|Specifica un mapping da un WSDL o XML Schema `targetNamespace` a uno spazio dei nomi Common Language Runtime (CLR). L’utilizzo di un carattere jolly (*) per `targetNamespace` consente di eseguire il mapping di tutti i `targetNamespaces` senza un mapping esplicito a quello spazio dei nomi CLR.<br /><br /> Per assicurarsi che il nome del contratto di messaggio non entri in conflitto con il nome dell'operazione, è necessario qualificare il riferimento al tipo con doppi due punti (`::`) o verificare che i nomi siano univoci.<br /><br /> Valore predefinito: Derivato dallo spazio dei nomi di destinazione del documento dello `DataContracts`schema per. Lo spazio dei nomi predefinito viene utilizzato per tutti gli altri tipi generati.<br /><br /> Forma abbreviata: `/n`|  
+|**/namespace: stringa\<, stringa >**|Specifica un mapping da un WSDL o XML Schema `targetNamespace` a uno spazio dei nomi Common Language Runtime (CLR). L’utilizzo di un carattere jolly (*) per `targetNamespace` consente di eseguire il mapping di tutti i `targetNamespaces` senza un mapping esplicito a quello spazio dei nomi CLR.<br /><br /> Per assicurarsi che il nome del contratto di messaggio non entri in conflitto con il nome dell'operazione, è necessario qualificare il riferimento al tipo con doppi due punti (`::`) o verificare che i nomi siano univoci.<br /><br /> Impostazione predefinita: derivata dallo spazio dei nomi di destinazione del documento dello schema per `DataContracts`. Lo spazio dei nomi predefinito viene utilizzato per tutti gli altri tipi generati.<br /><br /> Forma abbreviata: `/n`|  
   
 ## <a name="choosing-a-data-binding"></a>Scelta di un data binding  
   

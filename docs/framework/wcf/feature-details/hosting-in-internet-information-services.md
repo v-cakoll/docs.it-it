@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: b8e8bbe35ec3091816a4a943662f93f1b4581663
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 108048f6bdd2c02a67e331bd7b07b724d0e86527
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544679"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75963794"
 ---
 # <a name="host-in-internet-information-services"></a>Host in Internet Information Services
 
@@ -25,7 +25,7 @@ WCF può essere ospitato nelle versioni seguenti di IIS nei sistemi operativi se
 
 - IIS 7,0 in Windows Vista e Windows Server 2008. IIS 7,0 fornisce lo stesso modello di processo avanzato di IIS 6,0, ma utilizza il servizio di attivazione dei processi di Windows per consentire l'attivazione e la comunicazione di rete su protocolli diversi da HTTP. Questo ambiente è adatto per lo sviluppo di servizi WCF che comunicano su qualsiasi protocollo di rete supportato da WCF (compresi HTTP, NET. TCP, NET. pipe e NET. MSMQ). Per ulteriori informazioni su WAS, vedere [hosting nel servizio di attivazione dei processi di Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).
 
-- [Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496) funziona con IIS 7,0 e il servizio Attivazione processo Windows (was) per fornire un ambiente di hosting di applicazioni completo per i servizi WCF e WF NET4. Tali vantaggi includono la gestione del ciclo di vita del processo, il riciclo del processo, l'hosting condiviso, una rapida protezione dall'errore, la gestione dell'opzione orfano processo, l'attivazione su richiesta e il monitoraggio dello stato. Per informazioni dettagliate, vedere [funzionalità di hosting di AppFabric](https://go.microsoft.com/fwlink/?LinkId=196494) e [concetti di hosting di AppFabric](https://go.microsoft.com/fwlink/?LinkId=196495).
+- [Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)) funziona con IIS 7,0 e il servizio Attivazione processo Windows (was) per fornire un ambiente di hosting di applicazioni completo per i servizi WCF e WF NET4. Tali vantaggi includono la gestione del ciclo di vita del processo, il riciclo del processo, l'hosting condiviso, una rapida protezione dall'errore, la gestione dell'opzione orfano processo, l'attivazione su richiesta e il monitoraggio dello stato. Per informazioni dettagliate, vedere [funzionalità di hosting di AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10)) e [concetti di hosting di AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677371(v=azure.10)).
 
 ## <a name="benefits-of-iis-hosting"></a>Vantaggi dell'hosting di IIS
 
@@ -68,4 +68,4 @@ I servizi WCF possono essere ospitati side-by-side con ASP.NET o in modalità di
 - [Servizi WCF e ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
 - [Procedure consigliate per l'hosting in Internet Information Services (IIS)](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
 - [Configurazione di Internet Information Services 7.0 per Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/configuring-iis-for-wcf.md)
-- [Funzionalità di hosting di Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Funzionalità di hosting di Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
