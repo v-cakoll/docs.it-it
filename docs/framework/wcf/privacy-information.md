@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: c5500b8fd8b35081e83e2e9279dc4f236ef3c7b0
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 7bd56d44eeb6af70b94cdde77d48e917ef8afb9a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837935"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347787"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Informazioni sulla privacy di Windows Communication Foundation
 Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si compila un'applicazione con Windows Communication Foundation (WCF) versione 3,0, l'applicazione può influisca sulla privacy degli utenti finali. L'applicazione potrebbe, ad esempio, raccogliere in modo esplicito informazioni di contatto sugli utenti o richiedere o inviare informazioni in Internet al sito Web. Se si incorpora la tecnologia Microsoft nell'applicazione, è possibile che tale tecnologia abbia un proprio comportamento che potrebbe influire sulla privacy. WCF non invia informazioni a Microsoft dall'applicazione a meno che l'utente o l'utente finale non scelga di inviarlo a Microsoft.  
@@ -44,17 +44,17 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  Il risultato dell'autenticazione può essere una sessione protetta stabilita tra gli endpoint di comunicazione. La sessione viene identificata da un GUID che ha la durata della sessione di sicurezza. Nella tabella seguente viene mostrato cosa viene mantenuto e dove.  
   
-|Data|Servizio di archiviazione|  
+|Data|Archiviazione|  
 |----------|-------------|  
 |Credenziali di presentazione, ad esempio nome utente, certificati X.509, token Kerberos e riferimenti alle credenziali.|Meccanismi di gestione delle credenziali standard di Windows, ad esempio l'archivio certificati di Windows.|  
 |Informazioni relative all'appartenenza degli utenti, ad esempio nomi utente e password.|Provider di appartenenze ASP.NET.|  
 |Informazioni di identità sul servizio usato per autenticare il servizio sui client.|Indirizzo dell'endpoint del servizio.|  
 |Informazioni sul chiamante.|Registri di controllo.|  
   
-## <a name="auditing"></a>Controllo di  
+## <a name="auditing"></a>Controllo  
  Il controllo registra l'esito positivo o negativo degli eventi di autenticazione e autorizzazione. I record di controllo contengono i dati seguenti: URI del servizio, URI dell'azione e identificazione del chiamante.  
   
- Il controllo registra inoltre quando l'amministratore modifica la configurazione della registrazione messaggi (attivandola o disattivandola), poiché la registrazione messaggi può registrare dati specifici dell'applicazione in intestazioni e corpi. Per [!INCLUDE[wxp](../../../includes/wxp-md.md)], viene registrato un record nel registro eventi dell'applicazione. Per Windows Vista e [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], viene registrato un record nel registro eventi di protezione.  
+ Il controllo registra inoltre quando l'amministratore modifica la configurazione della registrazione messaggi (attivandola o disattivandola), poiché la registrazione messaggi può registrare dati specifici dell'applicazione in intestazioni e corpi. Per [!INCLUDE[wxp](../../../includes/wxp-md.md)], viene registrato un record nel registro eventi dell'applicazione. Per Windows Vista e Windows Server 2003, viene registrato un record nel registro eventi di protezione.  
   
 ## <a name="transactions"></a>Transazioni  
  La funzionalità transazioni fornisce servizi transazionali a un'applicazione WCF.  
@@ -95,7 +95,7 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
 ### <a name="tracing"></a>Traccia  
  La funzionalità di diagnostica dell'infrastruttura WCF consente di registrare i messaggi che passano attraverso i livelli del modello di trasporto e di servizio e le attività e gli eventi associati a tali messaggi. Questa funzionalità è disattivata per impostazione predefinita. Viene abilitato utilizzando il file di configurazione dell'applicazione e il comportamento della traccia può essere modificato utilizzando il provider WMI WCF in fase di esecuzione. Quando viene attivata, l'infrastruttura di traccia emette una traccia di diagnostica che contiene messaggi, attività ed eventi di elaborazione per i listener configurati. Il formato e la posizione dell'output vengono determinati dalle scelte di configurazione dei listener dell'amministratore, ma l'output è in genere un file con formattazione XML. L'amministratore è responsabile dell'impostazione dell'elenco di controllo di accesso sui file di traccia. In particolare, in caso di hosting in Windows Activation System (WAS), l'amministratore deve verificare che i file non vengano servizi dalla directory radice virtuale pubblica, se non lo si desidera.  
   
- Ci sono due tipi di traccia, la registrazione messaggi e la traccia diagnostica del modello di servizio, descritte nella sezione seguente. Ogni tipo viene configurato tramite la propria origine di traccia: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> e <xref:System.ServiceModel>. Entrambe queste origini di traccia di registrazione acquisiscono dati locali rispetto all'applicazione.  
+ Esistono due tipi di traccia: Registrazione dei messaggi e traccia diagnostica del modello di servizio, descritti nella sezione seguente. Ogni tipo viene configurato tramite la propria origine di traccia: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> e <xref:System.ServiceModel>. Entrambe queste origini di traccia di registrazione acquisiscono dati locali rispetto all'applicazione.  
   
 ### <a name="message-logging"></a>Registrazione messaggi  
  L'origine di traccia della registrazione messaggi (<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>) consente a un amministratore di registrare messaggi che fluiscono attraverso il sistema. Tramite la configurazione, l'utente può decidere di registrare interi messaggi o solo intestazioni, se eseguire la registrazione a livello di trasporto e/o di modello di servizio e se includere messaggi in formato non valido. Inoltre, può configurare il filtro per limitare il numero di messaggi registrati.  
@@ -404,4 +404,4 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
 ## <a name="see-also"></a>Vedere anche
 
 - [Windows Communication Foundation](index.md)
-- [Security](./feature-details/security.md)
+- [Sicurezza](./feature-details/security.md)
