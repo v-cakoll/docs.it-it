@@ -358,6 +358,8 @@
       href: porting/winforms.md
     - name: Convertire progetti WPF
       href: porting/wpf.md
+    - name: Convertire progetti C++/CLI
+      href: porting/cpp-cli.md
 - name: Caricamento delle dipendenze
   items:
     - name: Panoramica
