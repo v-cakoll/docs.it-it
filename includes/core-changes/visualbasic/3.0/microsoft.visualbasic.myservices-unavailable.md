@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 58e65bae1593f23945a971b896a1db4a929b4587
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: d207a937917da78f6b902ad8ca4f02fa9a46c2e1
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567439"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116342"
 ---
 ### <a name="types-in-microsoftvisualbasicmyservices-namespace-not-available"></a>Tipi nello spazio dei nomi Microsoft. VisualBasic. MyServices non disponibili
 
@@ -14,7 +14,7 @@ I tipi nello spazio dei nomi <xref:Microsoft.VisualBasic.MyServices?displayPrope
 
 .NET Core 3,0 Preview 8
 
-#### <a name="change-description"></a>Descrizione della modifica
+#### <a name="change-description"></a>Descrizione delle modifiche
 
 I tipi nello spazio dei nomi <xref:Microsoft.VisualBasic.MyServices?displayProperty=fullName> sono disponibili in alcune versioni di .NET Core 3,0 Preview. Non sono più disponibili a partire da .NET Core 3,0 Preview 9.
 
@@ -31,7 +31,7 @@ Se il codice dipende dall'uso dei tipi **Microsoft. VisualBasic. MyServices** e 
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>|Tipi correlati al registro di sistema nello spazio dei nomi <xref:Microsoft.Win32>|
 |<xref:Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy>|<xref:System.Environment.GetFolderPath%2A?displayProperty=nameWithType>|
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>Categoria
 
 Visual Basic -
 
@@ -45,5 +45,4 @@ Visual Basic -
 
 - `N:Microsoft.VisualBasic.MyServices`
 
--- >
-
+-->

@@ -4,14 +4,14 @@ description: Informazioni su come visitare ogni nodo in un albero delle espressi
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: a4cb40e439726e5fff60fe697da70d61bb24cb68
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: f60c447d5c89aa83f85073e642e621608131ed8d
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937229"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115792"
 ---
-# <a name="translating-expression-trees"></a>Traduzione degli alberi delle espressioni
+# <a name="translate-expression-trees"></a>Traduci alberi delle espressioni
 
 [Precedente -- Creazione di espressioni](expression-trees-building.md)
 
@@ -61,7 +61,7 @@ Console.WriteLine(answer);
 La creazione di un nuovo albero è una combinazione tra la visita ai nodi nell'albero esistente e la creazione e l'inserimento di nuovi nodi nell'albero.
 
 Questo esempio illustra l'importanza dell'immutabilità degli alberi delle espressioni. Si noti che il nuovo albero creato in precedenza contiene una combinazione di nodi appena creati e nodi dall'albero esistente. Questa combinazione è sicura, poiché i nodi dell'albero esistente non possono essere modificati. Ciò può comportare una notevole efficienza della memoria.
-Gli stessi nodi possono essere usati in uno o più alberi delle espressioni. Dal momento che i nodi non possono essere modificati, lo stesso nodo può essere riutilizzato secondo necessità.
+Gli stessi nodi possono essere usati in uno o più alberi delle espressioni. Poiché i nodi non possono essere modificati, è possibile riutilizzare lo stesso nodo ogni volta che è necessario.
 
 ## <a name="traversing-and-executing-an-addition"></a>Attraversamento ed esecuzione di un'addizione
 
@@ -91,7 +91,7 @@ Console.WriteLine(theSum);
 ```
 
 Useremo qui il codice, ma i concetti sono molto intuitivi.
-Questo codice visita gli elementi figlio in una prima ricerca profondità. Quando incontra un nodo della costante, il visitatore restituisce il valore della costante. Dopo che il visitatore ha visitato entrambi gli elementi figlio, verrà calcolata la somma per essi, per questo sottoalbero. A questo punto, il nodo di addizione può calcolare la somma.
+Questo codice visita gli elementi figlio in una prima ricerca profondità. Quando incontra un nodo della costante, il visitatore restituisce il valore della costante. Dopo che il visitatore ha visitato entrambi gli elementi figlio, gli elementi figlio avranno calcolato la somma calcolata per tale sottoalbero. A questo punto, il nodo di addizione può calcolare la somma.
 Dopo aver visitato tutti i noti dell'albero delle espressioni, verrà calcolata la somma. È possibile tracciare l'esecuzione eseguendo l'esempio nel debugger.
 
 È possibile semplificare il tracciamento dell'analisi dei nodi e delle modalità di calcolo della somma tramite l'attraversamento dell'albero. Di seguito è riportata una versione aggiornata del metodo Aggregate che include una certa quantità di informazioni di tracciamento:

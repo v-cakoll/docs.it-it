@@ -5,12 +5,12 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 27a7cbb1490f42811c79778382063980f3828395
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 7b8171e75bbd27a1079f2c6cc1b7aef6400d7419
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964082"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115754"
 ---
 # <a name="static-constructors-c-programming-guide"></a>Costruttori statici (Guida per programmatori C#)
 Un costruttore statico consente di inizializzare gli eventuali dati [static](../../language-reference/keywords/static.md) oppure di eseguire un'operazione specifica che deve essere effettuata una sola volta. Viene chiamato automaticamente prima che ne venga creata la prima istanza o venga fatto riferimento a qualsiasi membro statico.  
@@ -30,7 +30,7 @@ I costruttori statici hanno le proprietà seguenti:
 
 - L'utente non può controllare in alcun modo il momento in cui il costruttore statico viene eseguito nel programma.
   
-- Un costruttore statico viene chiamato automaticamente per inizializzare la [classe](../../language-reference/keywords/class.md) prima che ne venga creata la prima istanza o venga fatto riferimento a qualsiasi membro statico. Un costruttore statico verrà eseguito prima di un costruttore di istanza. Si noti che il costruttore statico di un tipo viene chiamato quando un metodo statico assegnato a un evento o un delegato viene chiamato, e non quando tale metodo viene assegnato. Gli eventuali inizializzatori variabili di campo statico presenti nella classe del costruttore statico verranno eseguiti nell'ordine testuale in cui appaiono nella dichiarazione della classe subito prima dell'esecuzione del costruttore statico.
+- Un costruttore statico viene chiamato automaticamente per inizializzare la [classe](../../language-reference/keywords/class.md) prima che ne venga creata la prima istanza o venga fatto riferimento a qualsiasi membro statico. Un costruttore statico verrà eseguito prima di un costruttore di istanza. Il costruttore statico di un tipo viene chiamato quando viene richiamato un metodo statico assegnato a un evento o a un delegato e non al momento dell'assegnazione. Gli eventuali inizializzatori variabili di campo statico presenti nella classe del costruttore statico verranno eseguiti nell'ordine testuale in cui appaiono nella dichiarazione della classe subito prima dell'esecuzione del costruttore statico.
 
 - Se non si specifica un costruttore statico per inizializzare i campi statici, tutti i campi statici vengono inizializzati sul valore predefinito elencato in [valori C# predefiniti dei tipi](../../language-reference/builtin-types/default-values.md).
   
@@ -48,7 +48,7 @@ I costruttori statici hanno le proprietà seguenti:
 - In genere, i costruttori statici sono usati per scrivere voci nel file di log, quando alla classe è associato un file di log.  
 - I costruttori statici risultano utili anche durante la creazione di classi wrapper per il codice non gestito, quando il costruttore può chiamare il metodo `LoadLibrary`.  
 
-- I costruttori statici sono anche un modo pratico per applicare controlli di runtime al parametro di tipo che non può essere controllato in fase di compilazione tramite i vincoli (vincoli del parametro di tipo).
+- I costruttori statici rappresentano anche una comoda posizione per applicare i controlli in fase di esecuzione sul parametro di tipo che non può essere controllato in fase di compilazione tramite vincoli (vincoli di parametro di tipo).
 
 ## <a name="example"></a>Esempio
  In questo esempio la classe `Bus` ha un costruttore statico. Quando viene creata la prima istanza di `Bus` (`bus1`), il costruttore statico viene chiamato per inizializzare la classe. L'output dell'esempio verifica che il costruttore statico venga eseguito una sola volta, anche se vengono create due istanze di `Bus`, e che venga eseguito prima del costruttore di istanze.  

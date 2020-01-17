@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 10/22/2019
-ms.openlocfilehash: 94284a196030d784909c41aae7fef9a5ad3cb52a
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: eb1815f965e86a6f8f709b32f84f879eb03de447
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937242"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115810"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novità di .NET Core 3.0
 
@@ -497,9 +497,13 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 ### <a name="fast-built-in-json-support"></a>Supporto JSON predefinito rapido
 
-Gli utenti .NET si sono ampiamente basati su [**Json.NET**](https://www.newtonsoft.com/json) e altre librerie JSON molto diffuse, che rimangono sempre scelte valide. Come tipo di dati di base, **Json.NET** usa le stringhe .NET, che in realtà sono UTF-16.
+Gli utenti .NET si sono affidati principalmente a [Newtonsoft. JSON](https://www.newtonsoft.com/json) e ad altre librerie JSON più diffuse, che continuano a essere scelte efficaci. `Newtonsoft.Json` usa le stringhe .NET come tipo di dati di base, che è UTF-16 dietro le quinte.
 
-Il nuovo supporto JSON predefinito offre prestazioni elevate, bassa allocazione ed è basato su `Span<byte>`. Per altre informazioni sullo spazio dei nomi e sui tipi di <xref:System.Text.Json>, vedere [serializzazione JSON in .NET-Panoramica](../../standard/serialization/system-text-json-overview.md). Per esercitazioni sugli scenari comuni di serializzazione JSON, vedere [come serializzare e deserializzare JSON in .NET](../../standard/serialization/system-text-json-how-to.md).
+Il nuovo supporto JSON incorporato è ad alte prestazioni e a bassa allocazione e funziona con testo JSON con codifica UTF-8. Per ulteriori informazioni sullo spazio dei nomi e sui tipi di <xref:System.Text.Json>, vedere gli articoli seguenti:
+
+* [Serializzazione JSON in .NET-Panoramica](../../standard/serialization/system-text-json-overview.md)
+* [Come serializzare e deserializzare JSON in .NET](../../standard/serialization/system-text-json-how-to.md).
+* [Come eseguire la migrazione da Newtonsoft. JSON a System. Text. JSON](../../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md)
 
 ### <a name="http2-support"></a>Supporto per HTTP/2
 

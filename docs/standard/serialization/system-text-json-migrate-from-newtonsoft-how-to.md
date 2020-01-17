@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 8b3ffc885691264548a19f694d159ce07aba7550
-ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
+ms.openlocfilehash: 01f94bcfce97da8c71b1b709baa34c2b7509a5e5
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75904684"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116693"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Come eseguire la migrazione da Newtonsoft. JSON a System. Text. JSON
 
@@ -136,17 +136,6 @@ Per implementare l'inferenza del tipo per le proprietà `object`, creare un conv
 ### <a name="maximum-depth"></a>Profondità massima
 
 per impostazione predefinita, `Newtonsoft.Json` non ha un limite di profondità massimo. Per <xref:System.Text.Json> esiste un limite predefinito di 64 ed è configurabile impostando <xref:System.Text.Json.JsonSerializerOptions.MaxDepth?displayProperty=nameWithType>.
-
-### <a name="stack-type-handling"></a>Gestione dei tipi di stack
-
-In <xref:System.Text.Json>, l'ordine del contenuto di uno stack viene invertito quando viene serializzato. Questo comportamento si applica ai tipi e alle interfacce seguenti e ai tipi definiti dall'utente che derivano da essi:
-
-* <xref:System.Collections.Stack>
-* <xref:System.Collections.Generic.Stack%601>
-* <xref:System.Collections.Immutable.ImmutableStack%601>
-* <xref:System.Collections.Immutable.IImmutableStack%601>
-
-È possibile implementare un convertitore personalizzato per mantenere il contenuto dello stack nello stesso ordine.
 
 ### <a name="omit-null-value-properties"></a>Omettere proprietà con valore null
 

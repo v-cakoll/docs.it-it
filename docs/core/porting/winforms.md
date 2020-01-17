@@ -4,12 +4,12 @@ description: Viene illustrato come trasferire un .NET Framework Windows Forms Ap
 author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
-ms.openlocfilehash: b1048c2d725a2bcf8398af1d2d53f40efc36c82e
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: dbd522851faa0a4fe435199914a034ee230d3455
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75936960"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116020"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Come trasferire un'app desktop Windows Forms a .NET Core
 
@@ -261,7 +261,7 @@ Di seguito è riportato un esempio dell'aspetto del file di progetto di libreria
 
 Come si può notare, il nodo `<OutputType>` è stato rimosso e per questo il compilatore produce una libreria anziché un file eseguibile per impostazione predefinita. Sono stati modificati `<AssemblyName>` e `<RootNamespace>`. In particolare, `<RootNamespace>` deve corrispondere allo spazio dei nomi della libreria di controlli Windows Forms da convertire. E, infine, i nodi `<Compile>` e `<EmbeddedResource>` sono stati modificati in modo da puntare alla cartella della libreria di controlli Windows Forms da convertire.
 
-Successivamente, nel progetto **MyFormsCore.csproj** .NET Core principale aggiungere un riferimento alla nuova libreria di controlli Windows Forms .NET Core. Aggiungere un riferimento con Visual Studio o con l'interfaccia della riga di comando di .NET Core dalla directory **SolutionFolder**:
+Successivamente, nel progetto **MyFormsCore. csproj** di .NET Core principale aggiungere un riferimento alla nuova libreria di controlli Windows Forms di .NET Core. Aggiungere un riferimento con Visual Studio o con l'interfaccia della riga di comando di .NET Core dalla directory **SolutionFolder**:
 
 ```dotnetcli
 dotnet add .\MyFormsAppCore\MyFormsCore.csproj reference .\MyFormsControlsCore\MyControlsCore.csproj

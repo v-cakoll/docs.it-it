@@ -2,12 +2,12 @@
 title: Modifiche di rilievo-.NET Framework a .NET Core
 description: Elenca le modifiche di rilievo da .NET Framework a .NET Core.
 ms.date: 12/18/2019
-ms.openlocfilehash: 9f4ecc8a9de7279bb4b222b3df77e1eb17b33f0a
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 6959bffab62cabc524062231db989de45c8c1498
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937397"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116498"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>Modifiche di rilievo per la migrazione da .NET Framework a .NET Core
 
@@ -18,11 +18,7 @@ Se si esegue la migrazione di un'app da .NET Framework a .NET Core, le modifiche
 
 ## <a name="corefx"></a>CoreFx
 
-Modifiche di rilievo:
-
 - [Modificare il valore predefinito di UseShellExecute](#change-in-default-value-of-useshellexecute)
-
-***
 
 ### <a name="net-core-21"></a>.NET Core 2.1
 
@@ -33,8 +29,6 @@ Modifiche di rilievo:
 ## <a name="windows-forms"></a>Windows Form
 
 È stato aggiunto il supporto Windows Forms a .NET Core nella versione 3,0. Se si esegue la migrazione di un'app Windows Forms da .NET Framework a .NET Core, le modifiche di rilievo elencate qui potrebbero influire sull'app.
-
-Modifiche di rilievo:
 
 - [Controlli rimossi](#removed-controls)
 - [Evento CellFormatting non generato se viene visualizzata la descrizione comando](#cellformatting-event-not-raised-if-tooltip-is-shown)

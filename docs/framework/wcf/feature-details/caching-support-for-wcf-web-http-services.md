@@ -2,19 +2,20 @@
 title: Supporto di memorizzazione nella cache per servizi HTTP Web WCF
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: 5964c58ce28f67815774741815bba0fcbe3b2de7
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: b6247dd6c178b355fa4de271415b7cac12f6c629
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964229"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116675"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>Supporto di memorizzazione nella cache per servizi HTTP Web WCF
 
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] consente di utilizzare il meccanismo dichiarativo di memorizzazione nella cache già disponibile in ASP.NET nei servizi HTTP Web WCF. In questo modo è possibile memorizzare nella cache le risposte inviate dalle operazioni del servizio HTTP Web WCF. Se un utente invia un'operazione HTTP GET al servizio configurato per la memorizzazione nella cache, ASP.NET restituisce la risposta memorizzata nella cache e il metodo del servizio non viene chiamato. Se la cache scade, al successivo tentativo di invio di un'operazione HTTP GET da parte dell'utente, viene chiamato il metodo del servizio e la risposta viene nuovamente memorizzata nella cache. Per ulteriori informazioni sulla memorizzazione nella cache ASP.NET, vedere [Cenni preliminari sulla memorizzazione nella cache ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100)).  
   
 ## <a name="basic-web-http-service-caching"></a>Memorizzazione nella cache del servizio HTTP Web di base  
- Per abilitare la memorizzazione nella cache del servizio HTTP WEB, è innanzitutto necessario abilitare la compatibilità ASP.NET applicando <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> al servizio, impostando <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.RequirementsMode%2A> su <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> o <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>.  
+
+  Per abilitare la memorizzazione nella cache del servizio HTTP WEB, è innanzitutto necessario abilitare la compatibilità ASP.NET applicando la <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> all'impostazione del servizio <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.RequirementsMode%2A> <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> o <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>.  
   
  .NET Framework 4 introduce un nuovo attributo denominato <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> che consente di specificare un nome di profilo della cache. L'attributo è applicato a un'operazione del servizio. Nell'esempio seguente <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> viene applicato a un servizio per abilitare la compatibilità ASP.NET e l'operazione `GetCustomer` viene configurata per la memorizzazione nella cache. L'attributo <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> specifica un profilo cache che contiene le impostazioni della cache da utilizzare.  
   
@@ -32,7 +33,7 @@ public class Service
 }
 ```  
   
- È inoltre necessario abilitare la modalità di compatibilità ASP.NET nel file Web.config, come indicato nell'esempio seguente.  
+Attivare anche la modalità di compatibilità ASP.NET nel file Web. config, come illustrato nell'esempio seguente.  
   
 ```xml
 <system.serviceModel>
@@ -62,7 +63,8 @@ public class Service
  Si tratta dello stesso elemento di configurazione disponibile per le applicazioni ASP.NET. Per ulteriori informazioni sui profili della cache ASP.NET, vedere <xref:System.Web.Configuration.OutputCacheProfile>. Per i servizi HTTP Web, gli attributi più importanti del profilo cache sono `cacheDuration` e `varyByParam`. Entrambi gli attributi sono obbligatori. `cacheDuration` imposta la quantità di tempo in secondi necessaria per la memorizzazione nella cache di una risposta. `varyByParam` consente di specificare un parametro della stringa di query utilizzato per memorizzare risposte nella cache. Tutte le richieste effettuate con valori del parametro della stringa di query diversi vengono memorizzate nella cache separatamente. Ad esempio, una volta effettuata una richiesta iniziale di `http://MyServer/MyHttpService/MyOperation?param=10`, tutte le richieste successive effettuate con lo stesso URI verrebbero restituite dalla risposta memorizzata nella cache (purché la durata della cache non sia trascorsa). Le risposte per una richiesta analoga ma con valore diverso per quanto riguarda il parametro della stringa di query vengono memorizzate nella cache separatamente. Se non si desidera questo tipo di comportamento di memorizzazione nella cache, impostare `varyByParam` su "none".  
   
 ## <a name="sql-cache-dependency"></a>Dipendenza dalla cache SQL  
- È inoltre possibile memorizzare nella cache le risposte di un servizio HTTP Web con una dipendenza della cache SQL. Se il servizio HTTP Web WCF dipende da dati archiviati in un database SQL, potrebbe risultare opportuno memorizzare nella cache la risposta del servizio e invalidare la risposta memorizzata nella cache quando i dati nella tabella del database SQL vengono modificati. Questo comportamento viene completamente configurato all'interno del file Web.config. È innanzitutto necessario definire una stringa di connessione nell'elemento <`connectionStrings`>.  
+
+  È inoltre possibile memorizzare nella cache le risposte di un servizio HTTP Web con una dipendenza della cache SQL. Se il servizio HTTP Web WCF dipende da dati archiviati in un database SQL, potrebbe risultare opportuno memorizzare nella cache la risposta del servizio e invalidare la risposta memorizzata nella cache quando i dati nella tabella del database SQL vengono modificati. Questo comportamento viene completamente configurato all'interno del file Web.config. Per prima cosa, definire una stringa di connessione nell'elemento <`connectionStrings`>.  
   
 ```xml
 <connectionStrings>
@@ -120,15 +122,16 @@ public class Service
 </system.web>
 ```  
   
- In questo caso la durata della cache è impostata su 60 secondi, `varyByParam` è impostato su none e `sqlDependency` è impostato su un elenco con valori delimitati da punti e virgola di coppie di nomi/tabelle del database separate dai due punti. Se i dati in `MyTable` vengono modificati, la risposta memorizzata nella cache per l'operazione del servizio viene rimossa e, se si richiama l'operazione, una nuova risposta viene generata, memorizzata nella cache e restituita al client.  
+ Qui la durata della cache è impostata su 60 secondi, `varyByParam` è impostata su None e `sqlDependency` è impostata su un elenco delimitato da punti e virgola di coppie nome/tabella di database separate da punti e virgola. Se i dati in `MyTable` vengono modificati, la risposta memorizzata nella cache per l'operazione del servizio viene rimossa e, se si richiama l'operazione, una nuova risposta viene generata, memorizzata nella cache e restituita al client.  
   
 > [!IMPORTANT]
 > Per ASP.NET accedere a un database SQL, è necessario usare lo [strumento di registrazione ASP.NET SQL Server](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms229862(v=vs.90)). È inoltre necessario consentire l'accesso dell'account utente appropriato al database e alla tabella. Per ulteriori informazioni, vedere [accesso SQL Server da un'applicazione Web](https://docs.microsoft.com/previous-versions/aspnet/ht43wsex(v=vs.100)).  
   
 ## <a name="conditional-http-get-based-caching"></a>Memorizzazione nella cache basata su HTTP GET condizionale  
- Negli scenari HTTP Web un HTTP GET condizionale viene spesso usato dai servizi per implementare la memorizzazione nella cache HTTP intelligente, come descritto nella [specifica http](https://www.w3.org/Protocols/rfc2616/rfc2616.html). A tale scopo, il servizio deve impostare il valore dell'intestazione ETag nella risposta HTTP. Deve inoltre verificare l'intestazione If-None-Match nella richiesta HTTP per controllare se una o più delle intestazioni ETag specificate corrisponde all'intestazione ETag corrente.  
+
+  Negli scenari HTTP Web un HTTP GET condizionale viene spesso usato dai servizi per implementare la memorizzazione nella cache HTTP intelligente, come descritto nella [specifica http](https://www.w3.org/Protocols/rfc2616/rfc2616.html). A tale scopo, il servizio deve impostare il valore dell'intestazione ETag nella risposta HTTP. Deve inoltre verificare l'intestazione If-None-Match nella richiesta HTTP per controllare se una o più delle intestazioni ETag specificate corrisponde all'intestazione ETag corrente.  
   
- Per le richieste GET e HEAD, <xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalRetrieve%2A> utilizza un valore ETag e lo verifica rispetto all'intestazione If-None-Match della richiesta. Se l'intestazione è presente e viene individuata una corrispondenza, viene generata un'eccezione <xref:System.ServiceModel.Web.WebFaultException> con codice di stato HTTP 304 (non modificato) e viene aggiunta un'intestazione ETag alla risposta con l'intestazione ETag corrispondente.  
+ Per le richieste GET e HEAD, <xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalRetrieve%2A> utilizza un valore ETag e lo verifica rispetto all'intestazione If-None-Match della richiesta. Se l'intestazione è presente ed esiste una corrispondenza, viene generata un'<xref:System.ServiceModel.Web.WebFaultException> con un codice di stato HTTP 304 (non modificato) e viene aggiunta un'intestazione ETag alla risposta con l'ETag corrispondente.  
   
  Un overload del metodo <xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalRetrieve%2A> utilizza la data di un'ultima modifica e la controlla rispetto all'intestazione If-Modified-Since della richiesta. Se l'intestazione è presente e la risorsa non è stata ancora modificata, viene generata un'eccezione <xref:System.ServiceModel.Web.WebFaultException> con codice di stato HTTP 304 (non modificato).  
   

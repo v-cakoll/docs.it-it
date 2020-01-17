@@ -2,12 +2,12 @@
 title: Aggiunte al formato csproj per .NET Core
 description: Informazioni sulle differenze tra i file csproj esistenti e .NET Core
 ms.date: 04/08/2019
-ms.openlocfilehash: 4a05709da63c4f6a200039ba5dd59358c700130e
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: da066625b445eca9186acedf06a941564921a6dd
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899875"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115845"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Aggiunte al formato csproj per .NET Core
 
@@ -15,7 +15,7 @@ Questo documento descrive le modifiche aggiunte ai file di progetto nell'ambito 
 
 ## <a name="implicit-package-references"></a>Riferimenti impliciti al pacchetto
 
-È possibile fare riferimento ai metapacchetti in modo implicito in base ai framework di destinazione specificati nella proprietà `<TargetFramework>` o `<TargetFrameworks>` del file di progetto. `<TargetFrameworks>` viene ignorato se è specificato `<TargetFramework>`, indipendentemente dall'ordine. Per altre informazioni, vedere [Pacchetti, metapacchetti e framework](../packages.md). 
+È possibile fare riferimento ai metapacchetti in modo implicito in base ai framework di destinazione specificati nella proprietà `<TargetFramework>` o `<TargetFrameworks>` del file di progetto. `<TargetFrameworks>` viene ignorato se è specificato `<TargetFramework>`, indipendentemente dall'ordine. Per altre informazioni, vedere [pacchetti, metapacchetti e Framework](../packages.md). 
 
 ```xml
  <PropertyGroup>
@@ -280,7 +280,7 @@ Descrizione lunga del pacchetto per la visualizzazione dell'interfaccia utente.
 
 ### <a name="description"></a>Descrizione
 
-Descrizione lunga per l'assembly. Se `PackageDescription` non è specificata, questa proprietà viene usata anche come descrizione del pacchetto.
+Descrizione lunga per l'assembly. Se `PackageDescription` non viene specificato, questa proprietà viene utilizzata anche come descrizione del pacchetto.
 
 ### <a name="copyright"></a>Copyright
 
@@ -366,7 +366,7 @@ Valore booleano che indica se il processo di creazione del pacchetto deve creare
 
 ### <a name="istool"></a>IsTool
 
-Specifica se tutti i file di output devono essere copiati nella cartella *tools* anziché nella cartella *lib*. È diverso da `DotNetCliTool`, che viene specificato impostando `PackageType` nel file *.csproj*.
+Specifica se tutti i file di output devono essere copiati nella cartella *tools* anziché nella cartella *lib*. Si tratta di un valore diverso da un `DotNetCliTool`, che viene specificato impostando il `PackageType` nel file con *estensione csproj* .
 
 ### <a name="repositoryurl"></a>RepositoryUrl
 
@@ -392,7 +392,7 @@ Specifica la versione minima del client NuGet, imposta da nuget.exe e da Gestion
 
 ### <a name="includebuildoutput"></a>IncludeBuildOutput
 
-Valore booleano che specifica se gli assembly di output di compilazione devono essere compresi nel file *.nupkg*.
+Questo valore booleano specifica se gli assembly di output di compilazione devono essere compressi nel file con *estensione nupkg* o meno.
 
 ### <a name="includecontentinpack"></a>IncludeContentInPack
 
