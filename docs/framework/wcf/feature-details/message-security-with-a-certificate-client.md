@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-ms.openlocfilehash: fb68487746a7dc9cec1d1473b445bccc7b2b23c2
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 4b282062040ccfc18534ad88effc4c0f1972c5a6
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424873"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212061"
 ---
 # <a name="message-security-with-a-certificate-client"></a>Protezione dei messaggi con un client di certificato
-Lo scenario seguente viene illustrato un client Windows Communication Foundation (WCF) e un servizio protetti tramite la modalità sicurezza messaggio. Sia il client che il servizio sono autenticati mediante certificati. Per altre informazioni, vedere [Distributed Application Security](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).
+Nello scenario seguente vengono illustrati un client e un servizio Windows Communication Foundation (WCF) protetti mediante la modalità di sicurezza del messaggio. Sia il client che il servizio sono autenticati mediante certificati. Per altre informazioni, vedere [sicurezza delle applicazioni distribuite](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).
 
  ![Screenshot che mostra un client con certificato.](./media/message-security-with-a-certificate-client/client-with-certificate.gif)  
   
@@ -25,13 +25,13 @@ Lo scenario seguente viene illustrato un client Windows Communication Foundation
 |Interoperabilità|Solo WCF|  
 |Autenticazione (server)|Utilizzo del certificato del servizio|  
 |Autenticazione (client)|Utilizzo del certificato client|  
-|Integrità|Yes|  
-|Riservatezza|Yes|  
-|Trasporto|HTTP|  
-|Binding|<xref:System.ServiceModel.WSHttpBinding>|  
+|Integrità|Sì|  
+|Riservatezza|Sì|  
+|Transport|HTTP|  
+|Associazione|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## <a name="service"></a>Service  
- Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:  
+## <a name="service"></a>Servizio  
+ Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Effettuare una delle seguenti operazioni:  
   
 - Creare un servizio autonomo usando il codice senza alcuna configurazione.  
   
@@ -43,7 +43,7 @@ Lo scenario seguente viene illustrato un client Windows Communication Foundation
  [!code-csharp[C_SecurityScenarios#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#10)]
  [!code-vb[C_SecurityScenarios#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#10)]  
   
-### <a name="configuration"></a>Configurazione  
+### <a name="configuration"></a>Configurazione di  
  Invece del codice, è possibile usare la configurazione seguente:  
   
 ```xml  
@@ -85,7 +85,7 @@ Lo scenario seguente viene illustrato un client Windows Communication Foundation
 ```  
   
 ## <a name="client"></a>Client  
- Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:  
+ Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Effettuare una delle seguenti operazioni:  
   
 - Creare un client autonomo usando il codice (e il codice client).  
   
@@ -100,8 +100,8 @@ Lo scenario seguente viene illustrato un client Windows Communication Foundation
  [!code-csharp[C_SecurityScenarios#17](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#17)]
  [!code-vb[C_SecurityScenarios#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#17)]  
   
-### <a name="configuration"></a>Configurazione  
- Nella configurazione seguente il certificato client è specificato utilizzando un comportamento dell'endpoint. Per altre informazioni sui certificati, vedere [Utilizzo dei certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). Il codice utilizza inoltre un <`identity`> elemento per specificare un sistema DNS (Domain Name) dell'identità server prevista. Per altre informazioni sull'identità, vedere [identità del servizio e autenticazione](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+### <a name="configuration"></a>Configurazione di  
+ Nella configurazione seguente il certificato client è specificato utilizzando un comportamento dell'endpoint. Per altre informazioni sui certificati, vedere [Utilizzo dei certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). Il codice usa anche un <`identity`> elemento per specificare un Domain Name System (DNS) dell'identità server prevista. Per ulteriori informazioni sull'identità, vedere [identità e autenticazione del servizio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -148,4 +148,4 @@ Lo scenario seguente viene illustrato un client Windows Communication Foundation
 - [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Identità del servizio e autenticazione](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
 - [Uso di certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Modello di sicurezza per Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

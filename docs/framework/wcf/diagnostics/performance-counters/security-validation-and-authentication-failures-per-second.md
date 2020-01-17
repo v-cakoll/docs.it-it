@@ -2,15 +2,15 @@
 title: Errori di convalida di sicurezza e di autenticazione al secondo
 ms.date: 03/30/2017
 ms.assetid: 266c3bd3-2ffc-4471-94b7-3675443be1ac
-ms.openlocfilehash: 5db8b656b626ea16f89ce432bf4cf1030b87a0b0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 546d81b73e912915d265fb194de4ad9e45d55cea
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664987"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163917"
 ---
 # <a name="security-validation-and-authentication-failures-per-second"></a>Errori di convalida di sicurezza e di autenticazione al secondo
-Nome contatore: Convalida della sicurezza e gli errori di autenticazione al secondo.  
+Nome contatore: errori di convalida di sicurezza e di autenticazione al secondo.  
   
 ## <a name="description"></a>Descrizione  
  Questo contatore avanza ogni volta che un messaggio viene rifiutato a causa di un problema di sicurezza non coperto dal contatore "chiamate di sicurezza non autorizzate". Tra tali problemi si contano:  
@@ -29,6 +29,6 @@ Nome contatore: Convalida della sicurezza e gli errori di autenticazione al seco
   
 - Gli errori si sono verificati durante l'handshake TLSNEGO/SPNEGO.  
   
- Questo contatore è di tipo di contatore delle prestazioni [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), il cui valore viene calcolato utilizzando la formula seguente:  
+ Questo contatore è del tipo di contatore delle prestazioni [PERF_COUNTER_COUNTER](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc740048(v=ws.10)), il cui valore viene calcolato utilizzando la formula seguente:  
   
  (N1-N0)/((D1-D0)/F)

@@ -1,16 +1,16 @@
 ---
-title: 'Servizio: Errori di convalida di sicurezza e di autenticazione al secondo'
+title: 'Servizio: errori di convalida di sicurezza e di autenticazione al secondo'
 ms.date: 03/30/2017
 ms.assetid: 4af18009-e778-490b-9ba6-e76485285830
-ms.openlocfilehash: 2caebed85a28004ef038beee7d07c05a23da53c0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f3f27100afb7390a68d99421cad6f43d9abaccd5
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613688"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163865"
 ---
-# <a name="service-security-validation-and-authentication-failures-per-second"></a>Servizio: Errori di convalida di sicurezza e di autenticazione al secondo
-Nome contatore: Convalida della sicurezza e gli errori di autenticazione al secondo.  
+# <a name="service-security-validation-and-authentication-failures-per-second"></a>Servizio: errori di convalida di sicurezza e di autenticazione al secondo
+Nome contatore: errori di convalida di sicurezza e di autenticazione al secondo.  
   
 ## <a name="description"></a>Descrizione  
  Questo contatore avanza ogni volta che un messaggio viene rifiutato a causa di un problema di sicurezza non coperto dal contatore "chiamate di sicurezza non autorizzate". Tra tali problemi si contano:  
@@ -29,6 +29,6 @@ Nome contatore: Convalida della sicurezza e gli errori di autenticazione al seco
   
 - Gli errori si sono verificati durante l'handshake TLSNEGO/SPNEGO.  
   
- Questo contatore è di tipo di contatore delle prestazioni [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), il cui valore viene calcolato utilizzando la formula seguente,  
+ Questo contatore è del tipo di contatore delle prestazioni [PERF_COUNTER_COUNTER](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc740048(v=ws.10)), il cui valore viene calcolato utilizzando la formula seguente:  
   
  (N 1 - N 0 ) / ( (D 1 -D 0 ) / F)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: a73f6333a91cd8018fe8e0c34d44db87938b8058
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: c68ca0f7c95515a0552b7003454dd87804176d3d
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347099"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212208"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>Procedura: registrare e configurare un moniker servizio
 Prima di utilizzare il moniker del servizio Windows Communication Foundation (WCF) in un'applicazione COM con un contratto tipizzato, è necessario registrare i tipi con attributi necessari con COM e configurare l'applicazione COM e il moniker con l'associazione obbligatoria configurazione.  
@@ -25,7 +25,7 @@ Prima di utilizzare il moniker del servizio Windows Communication Foundation (WC
     [assembly: ComVisible(true)]  
     ```  
   
-3. Compilare il client WCF gestito come assembly con nome sicuro. Ciò richiede una firma con una coppia di chiavi di crittografia. Per ulteriori informazioni, vedere la pagina relativa alla [firma di un assembly con un nome sicuro](https://go.microsoft.com/fwlink/?LinkId=94874) nella Guida per gli sviluppatori .NET.  
+3. Compilare il client WCF gestito come assembly con nome sicuro. Ciò richiede una firma con una coppia di chiavi di crittografia. Per altre informazioni, vedere [Firma di un assembly con un nome sicuro](../../../standard/assembly/sign-strong-name.md).  
   
 4. Usare lo strumento di registrazione degli assembly (Regasm.exe) con l'opzione `/tlb`, per registrare i tipi nell'assembly con COM.  
   

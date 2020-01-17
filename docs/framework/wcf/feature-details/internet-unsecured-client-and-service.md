@@ -5,30 +5,30 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-ms.openlocfilehash: 5ceda5b9c89fdd1770c6573b132c449997fb62b7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4a84b32664c16dad48dd415e430134c5fb98303a
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638628"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76211923"
 ---
 # <a name="internet-unsecured-client-and-service"></a>Client e servizio non protetti in Internet
-La figura seguente mostra un esempio di client Windows Communication Foundation (WCF) pubblica, protetta e servizio:  
+Nella figura seguente viene illustrato un esempio di un client e di un servizio Windows Communication Foundation (WCF) pubblico e non protetto:  
   
- ![Screenshot che mostra uno scenario di Internet non protetto](./media/internet-unsecured-client-and-service/public-unsecured-internet.gif)  
+ ![Screenshot che mostra uno scenario Internet non protetto](./media/internet-unsecured-client-and-service/public-unsecured-internet.gif)  
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|Modalità di sicurezza|nessuno|  
-|Trasporto|HTTP|  
-|Binding|<xref:System.ServiceModel.BasicHttpBinding> nel codice, o la [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) elemento nella configurazione.|  
+|Modalità di sicurezza|nessuna|  
+|Transport|HTTP|  
+|Associazione|<xref:System.ServiceModel.BasicHttpBinding> nel codice o nell'elemento [\<basichttpbinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) nella configurazione.|  
 |Interoperabilità|Con servizi e client di servizi Web esistenti|  
-|Autenticazione|nessuno|  
-|Integrità|nessuno|  
-|Riservatezza|nessuno|  
+|Autenticazione|nessuna|  
+|Integrità|nessuna|  
+|Riservatezza|nessuna|  
   
-## <a name="service"></a>Service  
- Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:  
+## <a name="service"></a>Servizio  
+ Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Effettuare una delle seguenti operazioni:  
   
 - Creare un servizio autonomo usando il codice senza alcuna configurazione.  
   
@@ -68,7 +68,7 @@ La figura seguente mostra un esempio di client Windows Communication Foundation 
 ```  
   
 ## <a name="client"></a>Client  
- Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:  
+ Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Effettuare una delle seguenti operazioni:  
   
 - Creare un client autonomo usando il codice (e il codice client).  
   
@@ -78,7 +78,7 @@ La figura seguente mostra un esempio di client Windows Communication Foundation 
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Codice  
- Il codice seguente viene illustrato un client WCF di base che accede a un endpoint non protetto.  
+ Nel codice seguente viene illustrato un client WCF di base che accede a un endpoint non protetto.  
   
  [!code-csharp[C_UnsecuredClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#1)]
  [!code-vb[C_UnsecuredClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#1)]  
@@ -113,4 +113,4 @@ La figura seguente mostra un esempio di client Windows Communication Foundation 
 
 - [Scenari di sicurezza comuni](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
 - [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Modello di sicurezza per Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

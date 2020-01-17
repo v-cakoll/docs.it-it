@@ -2,20 +2,21 @@
 title: Dati di grandi dimensioni e flussi
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: 70e43eaf4dc77e07af8ec65faf9cf0fa9a7a0fe4
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 5719f941c71867699960c6029f9cc512021986f3
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991523"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212199"
 ---
 # <a name="large-data-and-streaming"></a>Dati di grandi dimensioni e flussi
-Windows Communication Foundation (WCF) è un'infrastruttura di comunicazione basata su XML. Poiché i dati XML sono comunemente codificati nel formato di testo standard definito nella [specifica XML 1,0](https://go.microsoft.com/fwlink/?LinkId=94838), gli sviluppatori e i progettisti di sistemi connessi sono in genere preoccupati per il footprint di rete (o le dimensioni) dei messaggi inviati attraverso la rete e il la codifica basata su testo di XML pone particolari difficoltà per il trasferimento efficiente di dati binari.  
+
+Windows Communication Foundation (WCF) è un'infrastruttura di comunicazione basata su XML. Poiché i dati XML sono comunemente codificati nel formato di testo standard definito nella [specifica XML 1,0](https://www.w3.org/TR/REC-xml/), gli sviluppatori e i progettisti di sistemi connessi sono in genere preoccupati per il footprint di rete (o le dimensioni) dei messaggi inviati attraverso la rete e la codifica del codice XML basata su testo pone particolari difficoltà per il trasferimento efficiente di dati binari.  
   
 ## <a name="basic-considerations"></a>Considerazioni di base  
  Per fornire informazioni di base sulle informazioni seguenti per WCF, in questa sezione vengono illustrate alcune considerazioni e considerazioni generali relative a codifiche, dati binari e flussi che in genere si applicano alle infrastrutture di sistemi connessi.  
   
-### <a name="encoding-data-text-vs-binary"></a>Codifica dei dati: Confronto tra testo e Binary  
+### <a name="encoding-data-text-vs-binary"></a>Codifica dei dati: testo o formato binario  
  Gli sviluppatori hanno espresso preoccupazioni comuni, tra cui la percezione che il codice XML generi un notevole sovraccarico se paragonato ai formati binari a causa della natura ripetitiva dei tag di inizio e fine, l'osservazione che la codifica di valori numerici sia significativamente più grande poiché vengono espressi in valori di testo, e l'opinione che i dati binari non possono essere espressi in modo efficiente perché devono essere codificati appositamente per essere incorporati in un formato di testo.  
   
  Sebbene molte di queste e altre preoccupazioni simili siano valide, la differenza effettiva tra messaggi codificati in formato di testo-XML in un ambiente di servizi Web XML e messaggi con codifica binaria in un ambiente legacy di chiamata a procedura remota (RPC) è spesso molto meno significativa di quanto la considerazione iniziale possa suggerire.  
@@ -56,10 +57,10 @@ Windows Communication Foundation (WCF) è un'infrastruttura di comunicazione bas
   
  Per i dati che non presentano questi vincoli, in genere è consigliabile inviare sequenze di messaggi nell'ambito di una sessione, anziché un solo grande messaggio. Per ulteriori informazioni, vedere la sezione "flusso di dati" più avanti in questo argomento.  
   
- Quando si inviano grandi quantità di dati, è necessario impostare `maxAllowedContentLength` l'impostazione IIS (per ulteriori informazioni, vedere la pagina relativa alla configurazione `maxReceivedMessageSize` dei [limiti delle richieste IIS](https://go.microsoft.com/fwlink/?LinkId=253165)) e l'impostazione dell'associazione, ad esempio [ System. ServiceModel. BasicHttpBinding. MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) o <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A>). Per `maxAllowedContentLength` impostazione predefinita, la proprietà è 28,6 M `maxReceivedMessageSize` e il valore predefinito della proprietà è 64KB.  
+ Quando si inviano grandi quantità di dati, è necessario impostare l'impostazione `maxAllowedContentLength` IIS (per altre informazioni, vedere [configurazione dei limiti delle richieste IIS](https://docs.microsoft.com/iis/configuration/system.webServer/security/requestFiltering/requestLimits/)) e l'impostazione di binding `maxReceivedMessageSize` (ad esempio [System. ServiceModel. BasicHttpBinding. MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) o <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A>). Il valore predefinito per la proprietà `maxAllowedContentLength` è 28,6 MB e il valore predefinito per la proprietà `maxReceivedMessageSize` è 64KB.  
   
 ## <a name="encodings"></a>Codifiche  
- Una *codifica* definisce un set di regole relative alla modalità di presentazione dei messaggi in transito. Un *codificatore* implementa tale codifica ed è responsabile sul lato mittente, per trasformare un in memoria <xref:System.ServiceModel.Channels.Message> in un flusso di byte o in un buffer di byte che può essere inviato attraverso la rete. Sul lato destinatario, il codificatore trasforma una sequenza di byte in un messaggio in memoria.  
+ Una *codifica* definisce un set di regole relative alla modalità di presentazione dei messaggi in transito. Un *codificatore* implementa tale codifica ed è responsabile sul lato mittente, per trasformare un <xref:System.ServiceModel.Channels.Message> in memoria in un flusso di byte o in un buffer di byte che può essere inviato attraverso la rete. Sul lato destinatario, il codificatore trasforma una sequenza di byte in un messaggio in memoria.  
   
  WCF include tre codificatori e consente di scrivere e inserire codificatori personalizzati, se necessario.  
   
@@ -152,7 +153,7 @@ class MyData
  Il flusso non è disponibile neanche in caso di utilizzo del trasporto del canale peer, pertanto non è disponibile con <xref:System.ServiceModel.NetPeerTcpBinding>.  
   
 #### <a name="streaming-and-sessions"></a>Sessioni e flusso  
- È possibile ricevere un comportamento imprevisto quando viene eseguito il flusso delle chiamate con un'associazione basata sulla sessione. Tutte le chiamate del flusso sono eseguite tramite un solo canale (il canale del datagramma) che non supporta sessioni anche se l'associazione utilizzata è configurata per utilizzare sessioni. Se più client effettuano un flusso di chiamate allo stesso oggetto servizio con un'associazione basata sulla sessione e la modalità di concorrenza dell'oggetto servizio è impostata su singola e la modalità di contesto dell'istanza è impostata su PerSession, tutte le chiamate devono transitare attraverso il canale del datagramma, pertanto viene elaborata una sola chiamata alla volta. Uno o più client possono quindi scadere. È possibile risolvere questo problema impostando InstanceContextMode dell'oggetto servizio su PerCall o Concurrency su Multiple.  
+ È possibile ricevere un comportamento imprevisto quando viene eseguito il flusso delle chiamate con un'associazione basata sulla sessione. Tutte le chiamate del flusso sono eseguite tramite un solo canale (il canale del datagramma) che non supporta sessioni anche se l'associazione utilizzata è configurata per utilizzare sessioni. Se più client effettuano un flusso di chiamate allo stesso oggetto servizio con un'associazione basata sulla sessione e la modalità di concorrenza dell'oggetto servizio è impostata su singola e la modalità di contesto dell'istanza è impostata su PerSession, tutte le chiamate devono transitare attraverso il canale del datagramma, pertanto viene elaborata una sola chiamata alla volta. È possibile che si verifichi il timeout di uno o più client. È possibile risolvere questo problema impostando la modalità di contesto dell'istanza dell'oggetto servizio su PerCall o Concurrency su multiple.  
   
 > [!NOTE]
 > In questo caso, MaxConcurrentSessions non ha effetto perché è disponibile una sola "sessione".  
@@ -220,18 +221,18 @@ public class UploadStreamMessage
 }   
 ```  
   
- Il trasferimento del flusso termina e il messaggio viene chiuso quando il flusso raggiunge la fine del file. Quando si invia un messaggio (restituendo un valore o richiamando un'operazione), è <xref:System.IO.FileStream> possibile passare un oggetto e l'infrastruttura WCF esegue successivamente il pull di tutti i dati dal flusso fino a quando il flusso non è stato completamente letto e raggiunto EOF. Per trasferire flussi di dati per l'origine se non esiste una classe derivata <xref:System.IO.Stream> predefinita, costruire tale classe, sovrapporla all'origine del flusso e utilizzarla come argomento o valore restituito.  
+ Il trasferimento del flusso termina e il messaggio viene chiuso quando il flusso raggiunge la fine del file. Quando si invia un messaggio (restituendo un valore o richiamando un'operazione), è possibile passare un <xref:System.IO.FileStream> e l'infrastruttura WCF estrae successivamente tutti i dati dal flusso fino a quando il flusso non è stato completamente letto e raggiunto EOF. Per trasferire flussi di dati per l'origine se non esiste una classe derivata <xref:System.IO.Stream> predefinita, costruire tale classe, sovrapporla all'origine del flusso e utilizzarla come argomento o valore restituito.  
   
  Quando si riceve un messaggio, WCF costruisce un flusso sul contenuto del corpo del messaggio con codifica Base64 (o sulla parte MIME corrispondente se si utilizza MTOM) e il flusso raggiunge la fine del periodo di tempo in cui il contenuto è stato letto.  
   
  Il flusso a livello di trasporto funziona anche con qualsiasi altro tipo di contratto di messaggio (elenchi di parametri, argomenti del contratto dati e contratto di messaggio esplicito), ma poiché la serializzazione e deserializzazione di questi tipi di messaggi richiede la memorizzazione nel buffer da parte del serializzatore, l'utilizzo di tali varianti di contratto non è consigliabile.  
   
 ### <a name="special-security-considerations-for-large-data"></a>Considerazioni speciali sulla protezione per i dati di grandi dimensioni  
- Tutte le associazioni consentono di vincolare le dimensioni dei messaggi in arrivo per impedire attacchi Denial of Service. , Ad esempio, espone una proprietà [System. ServiceModel. BasicHttpBinding. MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) che delimita le dimensioni del messaggio in arrivo, quindi delimita anche la quantità massima di memoria a cui si accede durante l'elaborazione del <xref:System.ServiceModel.BasicHttpBinding> Messaggio. Questa unità è indicata in byte con un valore predefinito di 65.536 byte.  
+ Tutte le associazioni consentono di vincolare le dimensioni dei messaggi in arrivo per impedire attacchi Denial of Service. Il <xref:System.ServiceModel.BasicHttpBinding>, ad esempio, espone una proprietà [System. ServiceModel. BasicHttpBinding. MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) che delimita le dimensioni del messaggio in arrivo, quindi delimita anche la quantità massima di memoria a cui si accede durante l'elaborazione del messaggio. Questa unità è indicata in byte con un valore predefinito di 65.536 byte.  
   
  Un rischio per la sicurezza specifico per gli scenari con flussi di dati di grandi dimensioni provoca un attacco Denial of Service che causa la memorizzazione nel buffer dei dati mentre il destinatario si aspetta che vengano trasmessi in un flusso. Ad esempio, WCF memorizza sempre nel buffer le intestazioni SOAP di un messaggio, quindi un utente malintenzionato può costruire un messaggio dannoso di grandi dimensioni costituito interamente da intestazioni per forzare il buffering dei dati. Quando il flusso è abilitato, è possibile che `MaxReceivedMessageSize` sia impostato su un valore estremamente elevato, perché il destinatario non si aspetta che l'intero messaggio venga memorizzato immediatamente nel buffer in memoria. Se WCF è forzato a memorizzare nel buffer il messaggio, si verifica un overflow della memoria.  
   
- Di conseguenza, limitare le dimensioni massime del messaggio in arrivo non è sufficiente in questo caso. La `MaxBufferSize` proprietà è necessaria per vincolare la memoria memorizzata nei buffer WCF. È importante impostare questa proprietà su un valore sicuro (o lasciare il valore predefinito) per il flusso. Ad esempio, si supponga che il servizio debba ricevere file di dimensioni fino a 4 GB e debba archiviarli sul disco locale. Si supponga inoltre che la memoria sia vincolata in modo da poter memorizzare nel buffer solo 64 KB di dati per volta. In tal caso, è necessario impostare `MaxReceivedMessageSize` su 4 GB e `MaxBufferSize` su 64 KB. Inoltre, nell'implementazione del servizio è necessario verificare di poter eseguire solo la lettura dal flusso in ingresso in blocchi di 64 KB, impedendo la lettura del blocco successivo prima che il precedente sia stato scritto su disco ed eliminato dalla memoria.  
+ Di conseguenza, limitare le dimensioni massime del messaggio in arrivo non è sufficiente in questo caso. La proprietà `MaxBufferSize` è necessaria per vincolare la memoria memorizzata nei buffer WCF. È importante impostare questa proprietà su un valore sicuro (o lasciare il valore predefinito) per il flusso. Ad esempio, si supponga che il servizio debba ricevere file di dimensioni fino a 4 GB e debba archiviarli sul disco locale. Si supponga inoltre che la memoria sia vincolata in modo da poter memorizzare nel buffer solo 64 KB di dati per volta. In tal caso, è necessario impostare `MaxReceivedMessageSize` su 4 GB e `MaxBufferSize` su 64 KB. Inoltre, nell'implementazione del servizio è necessario verificare di poter eseguire solo la lettura dal flusso in ingresso in blocchi di 64 KB, impedendo la lettura del blocco successivo prima che il precedente sia stato scritto su disco ed eliminato dalla memoria.  
   
  È inoltre importante comprendere che questa quota limita solo la memorizzazione nel buffer eseguita da WCF e non è in grado di proteggersi da eventuali buffer eseguiti nell'implementazione del servizio o del client. Per ulteriori informazioni sulle considerazioni relative alla sicurezza, vedere [considerazioni sulla sicurezza per i dati](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
   
@@ -240,4 +241,4 @@ public class UploadStreamMessage
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Abilita flusso](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+- [Procedura: Abilitare lo streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

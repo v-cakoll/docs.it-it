@@ -5,33 +5,33 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-ms.openlocfilehash: a5e3e96ce8c8bb3304c8abcc93a881998382c6ec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 547c23509096b66c1fdbd46117a10f4de1692387
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638003"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212038"
 ---
 # <a name="message-security-with-a-user-name-client"></a>Protezione dei messaggi tramite client con tipo di credenziale UserName
-La figura seguente mostra un servizio Windows Communication Foundation (WCF) e un client protetto usando la sicurezza a livello di messaggio. Il servizio viene autenticato con un certificato X.509. Il client esegue l'autenticazione utilizzando un nome utente e una password.  
+Nella figura seguente vengono illustrati un servizio Windows Communication Foundation (WCF) e un client protetti tramite la sicurezza a livello di messaggio. Il servizio viene autenticato con un certificato X.509. Il client esegue l'autenticazione utilizzando un nome utente e una password.  
   
- Per un'applicazione di esempio, vedere [messaggi tramite nome utente sicurezza](../../../../docs/framework/wcf/samples/message-security-user-name.md).  
+ Per un'applicazione di esempio, vedere [nome utente](../../../../docs/framework/wcf/samples/message-security-user-name.md)per la sicurezza dei messaggi.  
   
- ![Sicurezza dei messaggi con l'autenticazione di nome utente](../../../../docs/framework/wcf/feature-details/media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61-7e1d-42f5-b1af-195bfee5b3c6")  
+ ![Sicurezza del messaggio con l'autenticazione del nome utente](../../../../docs/framework/wcf/feature-details/media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61-7e1d-42f5-b1af-195bfee5b3c6")  
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |Modalità di sicurezza|Messaggio|  
-|Interoperabilità|Windows Communication Foundation (WCF) solo|  
+|Interoperabilità|Solo Windows Communication Foundation (WCF)|  
 |Autenticazione (server)|La negoziazione iniziale richiede l'autenticazione server|  
 |Autenticazione (client)|Nome utente/password|  
 |Integrità|Sì, usando un contesto di sicurezza condiviso|  
 |Riservatezza|Sì, usando un contesto di sicurezza condiviso|  
-|Trasporto|HTTP|  
-|Binding|<xref:System.ServiceModel.WSHttpBinding>|  
+|Transport|HTTP|  
+|Associazione|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## <a name="service"></a>Service  
- Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:  
+## <a name="service"></a>Servizio  
+ Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Effettuare una delle seguenti operazioni:  
   
 - Creare un servizio autonomo usando il codice senza alcuna configurazione.  
   
@@ -43,7 +43,7 @@ La figura seguente mostra un servizio Windows Communication Foundation (WCF) e u
  [!code-csharp[C_SecurityScenarios#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#9)]
  [!code-vb[C_SecurityScenarios#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#9)]  
   
-### <a name="configuration"></a>Configurazione  
+### <a name="configuration"></a>Configurazione di  
  Invece del codice, è possibile utilizzare la configurazione seguente:  
   
 ```xml  
@@ -94,7 +94,7 @@ La figura seguente mostra un servizio Windows Communication Foundation (WCF) e u
  [!code-csharp[C_SecurityScenarios#16](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#16)]
  [!code-vb[C_SecurityScenarios#16](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#16)]  
   
-### <a name="configuration"></a>Configurazione  
+### <a name="configuration"></a>Configurazione di  
  Nel codice seguente viene configurato il client. L'associazione riguarda la protezione della modalità messaggio e il tipo di credenziale client è impostato su `UserName`. Il nome utente e la password possono essere specificati solo tramite codice (non è configurabile).  
   
 ```xml  
@@ -131,4 +131,4 @@ La figura seguente mostra un servizio Windows Communication Foundation (WCF) e u
 - [Sicurezza dei messaggi tramite nome utente](../../../../docs/framework/wcf/samples/message-security-user-name.md)
 - [Identità del servizio e autenticazione](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
 - [\<identity>](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
-- [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Modello di sicurezza per Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

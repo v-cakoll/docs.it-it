@@ -2,15 +2,16 @@
 title: 'Procedura: Sostituire la prenotazione URL WCF con una prenotazione limitata'
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-ms.openlocfilehash: 3d14d76334b15bdb490184a48da11ba48b84deea
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: fc50a0e31a0c323b695ada6565743fa19c1d4c2a
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544654"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212183"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>Procedura: Sostituire la prenotazione URL WCF con una prenotazione limitata
-Una prenotazione URL consente di limitare chi può ricevere messaggi da un URL o un set di URL. Una prenotazione è costituita da un modello di URL, un elenco di controllo di accesso (ACL) e un set di flag. Il modello di URL definisce quali URL sono interessati dalla prenotazione. Per altre informazioni su come vengono elaborati i modelli di URL, vedere [routing delle richieste in ingresso](https://go.microsoft.com/fwlink/?LinkId=136764). L'elenco ACL controlla a quale utente o gruppo di utenti è permesso ricevere messaggi dagli URL specificati. I flag indicano se la prenotazione deve fornire a un utente o a un gruppo l'autorizzazione per ascoltare direttamente l'URL o delegare l'autorizzazione per ascoltare qualche altro processo.  
+
+Una prenotazione URL consente di limitare chi può ricevere messaggi da un URL o un set di URL. Una prenotazione è costituita da un modello di URL, un elenco di controllo di accesso (ACL) e un set di flag. Il modello di URL definisce quali URL sono interessati dalla prenotazione. Per altre informazioni su come vengono elaborati i modelli di URL, vedere [routing delle richieste in ingresso](/windows/win32/http/routing-incoming-requests). L'elenco ACL controlla a quale utente o gruppo di utenti è permesso ricevere messaggi dagli URL specificati. I flag indicano se la prenotazione deve fornire a un utente o a un gruppo l'autorizzazione per ascoltare direttamente l'URL o delegare l'autorizzazione per ascoltare qualche altro processo.  
   
  Come parte della configurazione del sistema operativo predefinita, Windows Communication Foundation (WCF) crea una prenotazione accessibile globalmente per la porta 80 per consentire a tutti gli utenti di eseguire applicazioni che usano un binding HTTP doppio per la comunicazione duplex. Poiché l'elenco ACL in questa prenotazione è per tutti, gli amministratori non possono consentire o impedire in modo esplicito l'autorizzazione all'ascolto di un URL o un set di URL. In questo argomento viene illustrato come eliminare questa prenotazione e come ricrearne una con un ACL limitato.  
   
@@ -24,7 +25,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
             SDDL: D:(A;;GX;;;WD)  
 ```
 
- La prenotazione è costituita da un modello di URL utilizzato quando un'applicazione WCF utilizza un'associazione duale HTTP per la comunicazione duplex. Gli URL di questo form vengono utilizzati per un servizio WCF per l'invio di messaggi al client WCF durante la comunicazione tramite un'associazione duale HTTP. Tutti vengono dotati di autorizzazione per ascoltare sull'URL ma non per delegare l'ascolto di un altro processo. Infine, l'elenco ACL viene descritto nel linguaggio SSDL (Security Descriptor Definition Language). Per ulteriori informazioni su SSDL, vedere [SSDL](https://go.microsoft.com/fwlink/?LinkId=136789) .  
+ La prenotazione è costituita da un modello di URL utilizzato quando un'applicazione WCF utilizza un'associazione duale HTTP per la comunicazione duplex. Gli URL di questo form vengono utilizzati per un servizio WCF per l'invio di messaggi al client WCF durante la comunicazione tramite un'associazione duale HTTP. Tutti vengono dotati di autorizzazione per ascoltare sull'URL ma non per delegare l'ascolto di un altro processo. Infine, l'elenco ACL viene descritto nel linguaggio SSDL (Security Descriptor Definition Language). Per ulteriori informazioni su SSDL, vedere [SSDL](/windows/win32/secauthz/security-descriptor-definition-language) .  
   
 ## <a name="to-delete-the-wcf-url-reservation"></a>Per eliminare la prenotazione URL WCF  
   

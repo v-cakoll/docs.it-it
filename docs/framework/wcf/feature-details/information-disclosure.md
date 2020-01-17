@@ -2,12 +2,12 @@
 title: Diffusione di informazioni
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-ms.openlocfilehash: 0e45a71855ecb172f36aae8139f89d4b8c8ffd0d
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 0bcf1aa04d7ba7477a6c3f1559a77bbda1f974af
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425299"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76211948"
 ---
 # <a name="information-disclosure"></a>Diffusione di informazioni
 
@@ -19,11 +19,11 @@ Se si sta utilizzando la protezione a livello di messaggio su un livello di tras
 
 ## <a name="policy-information"></a>Informazioni sul criterio
 
-La protezione del criterio è importante, specialmente negli scenari di federazioni dove i requisiti di riservatezza dei token emessi o le informazioni sugli emittenti dei token vengono esposti nel criterio. In questi casi, si consiglia di proteggere l'endpoint del criterio del servizio federato per impedire agli autori di attacchi di ottenere informazioni sul servizio, ad esempio il tipo di attestazioni da inserire nel token emesso, o di reindirizzare client a emittenti di token dannosi. L'autore di un attacco, ad esempio, potrebbe individuare coppie di nome utente/password riconfigurando la catena di trust federata in modo tale che termini in un emittente che esegua un attacco di tipo man-in-the-middle. È inoltre consigliabile che i client federati che ottengono le proprie associazioni tramite recupero dei criteri verifichino l'attendibilità degli emittenti nella catena di certificati federata ottenuta. Per altre informazioni sugli scenari di federazione, vedere [federazione](../../../../docs/framework/wcf/feature-details/federation.md).
+La protezione del criterio è importante, specialmente negli scenari di federazioni dove i requisiti di riservatezza dei token emessi o le informazioni sugli emittenti dei token vengono esposti nel criterio. In questi casi, si consiglia di proteggere l'endpoint del criterio del servizio federato per impedire agli autori di attacchi di ottenere informazioni sul servizio, ad esempio il tipo di attestazioni da inserire nel token emesso, o di reindirizzare client a emittenti di token dannosi. L'autore di un attacco, ad esempio, potrebbe individuare coppie di nome utente/password riconfigurando la catena di trust federata in modo tale che termini in un emittente che esegua un attacco di tipo man-in-the-middle. È inoltre consigliabile che i client federati che ottengono le proprie associazioni tramite recupero dei criteri verifichino l'attendibilità degli emittenti nella catena di certificati federata ottenuta. Per ulteriori informazioni sugli scenari di federazione, vedere [Federazione](../../../../docs/framework/wcf/feature-details/federation.md).
 
 ## <a name="memory-dumps-can-reveal-claim-information"></a>Le immagini della memoria possono rivelare informazioni sulle attestazioni
 
-Quando un'applicazione smette di funzionare, i file di log, ad esempio quelli prodotti da Dr. Watson, possono contenere le informazioni sull'attestazione. Tali informazioni non devono essere esportate ad altre entità, ad esempio team di supporto. In caso contrario, vengono esportate anche le informazioni sulle attestazioni che contengono dati privati. È possibile ridurre questo problema non inviando i file di log a entità sconosciute. Per altre informazioni, vedere [Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=89160).
+Quando un'applicazione non riesce, i file di registro, ad esempio quelli prodotti da Dr. Watson, possono contenere informazioni sull'attestazione. Tali informazioni non devono essere esportate ad altre entità, ad esempio team di supporto. In caso contrario, vengono esportate anche le informazioni sulle attestazioni che contengono dati privati. È possibile ridurre questo problema non inviando i file di log a entità sconosciute.
 
 ## <a name="endpoint-addresses"></a>Indirizzi endpoint
 
@@ -33,15 +33,15 @@ Un indirizzo endpoint contiene le informazioni necessarie per comunicare con un 
 
 Quando si utilizza un certificato X.509 per autenticare un client, il certificato viene trasferito in forma non crittografata, nell'intestazione SOAP. Questa situazione può comportare una potenziale diffusione di informazioni personali (PII). Non è un problema per la modalità `TransportWithMessageCredential` in cui l'intero messaggio viene crittografato con la protezione a livello di trasporto.
 
-## <a name="service-references"></a>Riferimenti al servizio
+## <a name="service-references"></a>Riferimenti a servizi
 
-Un riferimento al servizio è un riferimento a un altro servizio. Un servizio, ad esempio, può passare a un client un riferimento al servizio nel corso di un'operazione. Il riferimento al servizio viene usato anche con un *considerare attendibile il verificatore di identità*, un componente interno che verifica l'identità dell'entità di destinazione prima della diffusione di informazioni quali i dati dell'applicazione o le credenziali per la destinazione. Se l'identità di trust remota non può essere verificata o non è corretta, il mittente deve verificare che non sia stato diffuso nessun dato che possa compromettere se stesso, l'applicazione o l'utente.
+Un riferimento al servizio è un riferimento a un altro servizio. Un servizio, ad esempio, può passare a un client un riferimento al servizio nel corso di un'operazione. Il riferimento al servizio viene usato anche con un *verificatore di identità di trust*, un componente interno che garantisce l'identità dell'entità di destinazione prima della divulgazione di informazioni come dati dell'applicazione o credenziali alla destinazione. Se l'identità di trust remota non può essere verificata o non è corretta, il mittente deve verificare che non sia stato diffuso nessun dato che possa compromettere se stesso, l'applicazione o l'utente.
 
 Le possibili soluzioni sono le seguenti:
 
 - I riferimenti a servizi sono normalmente considerati attendibili. Assicurarsi, ogni qualvolta si trasferiscono istanze del riferimento al servizio, che non siano stati alterati.
 
-- Alcune applicazioni possono presentare un'esperienza utente che consente di stabilire in modo interattivo l'affidabilità in base ai dati nel riferimento al servizio e ai dati di attendibilità verificati dall'host remoto. WCF fornisce punti di estendibilità per tale funzionalità, ma deve implementati dall'utente.
+- Alcune applicazioni possono presentare un'esperienza utente che consente di stabilire in modo interattivo l'affidabilità in base ai dati nel riferimento al servizio e ai dati di attendibilità verificati dall'host remoto. WCF fornisce punti di estendibilità per tale funzionalità, ma l'utente deve implementarli.
 
 ## <a name="ntlm"></a>NTLM
 
@@ -55,7 +55,7 @@ Nell'ambiente di dominio Windows, l'autenticazione di Windows utilizza per impos
 
 Quando si crea un client, la specifica di credenziali client senza un nome di dominio o la specifica di un'identità server non valida, provoca l'utilizzo di NTLM al posto del protocollo Kerberos (se la proprietà `AllowNtlm` è impostata su `true`). Poiché l'autenticazione server non viene eseguita in NTLM, è possibile che le informazioni vengano diffuse.
 
-Ad esempio, è possibile specificare le credenziali del client Windows senza un nome di dominio, come illustrato nel codice Visual c# seguente.
+Ad esempio, è possibile specificare le credenziali client di Windows senza un nome di dominio, come illustrato nel codice visuale C# seguente.
 
 ```csharp
 MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCredential("username", "password");
@@ -63,7 +63,7 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
 
 Il codice non specifica un nome di dominio e pertanto verrà utilizzato NTLM.
 
-NTLM viene utilizzato se viene specificato il dominio, ma viene specificato un nome dell'entità servizio non valido tramite la funzionalità di identità endpoint. Per altre informazioni su come specificare identità endpoint, vedere [identità del servizio e autenticazione](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).
+NTLM viene utilizzato se viene specificato il dominio, ma viene specificato un nome dell'entità servizio non valido tramite la funzionalità di identità endpoint. Per ulteriori informazioni sulla modalità di specifica dell'identità dell'endpoint, vedere [identità del servizio e autenticazione](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).
 
 ## <a name="see-also"></a>Vedere anche
 

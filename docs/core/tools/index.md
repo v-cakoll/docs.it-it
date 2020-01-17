@@ -2,16 +2,16 @@
 title: Strumenti dell'interfaccia della riga di comando di .NET Core
 description: Panoramica degli strumenti e delle funzionalità dell'interfaccia della riga di comando di .NET Core.
 ms.date: 08/14/2017
-ms.openlocfilehash: b3bffb47ff973bd0da90e3f943e817756e563138
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f19dcb19fb9d0203b3d3795c3fdc0b026c4c60e3
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714143"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163215"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Strumenti dell'interfaccia della riga di comando di .NET Core
 
-L'interfaccia della riga di comando di .NET Core è una nuova toolchain multipiattaforma per lo sviluppo di applicazioni .NET. È un elemento di base su cui possono essere costruiti altri strumenti di livello più elevato, come gli ambienti di sviluppo integrato (IDE, Integrated Development Environment), gli editor e gli agenti di orchestrazione della compilazione.
+L'interfaccia della riga di comando di .NET Core è una serie di strutture multipiattaforma per lo sviluppo di applicazioni .NET. L'interfaccia della riga di comando è una base su cui gli strumenti di livello superiore, ad esempio gli ambienti di sviluppo integrato (IDE), gli editor e gli agenti di orchestrazione della compilazione, possono essere Rest.
 
 ## <a name="installation"></a>Installazione di
 

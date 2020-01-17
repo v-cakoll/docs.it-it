@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: d8858acb2743b26cc3a5172edf4765976d81adf4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: d5ca0593d802d331d980cf35c701e0a79d54abee
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973010"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163098"
 ---
 # <a name="built-in-reference-types-c-reference"></a>Tipi di riferimento predefiniti (riferimenti per C#)
 
@@ -33,13 +33,13 @@ C# ha un numero di tipi di riferimento predefiniti. Hanno parole chiave o operat
 
 ## <a name="the-object-type"></a>Tipo di oggetto
 
-Il tipo `object` è un alias per <xref:System.Object?displayProperty=nameWithType> in .NET. Nel sistema di tipi unificato di C#, tutti i tipi, predefiniti e definiti dall'utente, i tipi riferimento e i tipi valore ereditano direttamente o indirettamente da <xref:System.Object?displayProperty=nameWithType>. Alle variabili di tipo `object` è possibile assegnare valori di qualsiasi tipo. Qualsiasi variabile `object` può essere assegnata al suo valore predefinito usando il valore letterale `null`. Una variabile di un tipo di valore convertita in oggetto viene definita *boxed*. Una variabile di tipo object convertita in un tipo di valore viene definita *unboxed*. Per altre informazioni, vedere [Boxing e unboxing](../../programming-guide/types/boxing-and-unboxing.md). 
+Il tipo `object` è un alias per <xref:System.Object?displayProperty=nameWithType> in .NET. Nel sistema di tipi unificato di C#, tutti i tipi, predefiniti e definiti dall'utente, i tipi riferimento e i tipi valore ereditano direttamente o indirettamente da <xref:System.Object?displayProperty=nameWithType>. Alle variabili di tipo `object` è possibile assegnare valori di qualsiasi tipo. Qualsiasi variabile `object` può essere assegnata al suo valore predefinito usando il valore letterale `null`. Una variabile di un tipo di valore convertita in oggetto viene definita *boxed*. Quando una variabile di tipo `object` viene convertita in un tipo valore, viene definito *unboxed*. Per altre informazioni, vedere [Boxing e unboxing](../../programming-guide/types/boxing-and-unboxing.md). 
 
 ## <a name="the-string-type"></a>Tipo di stringa
 
 Il tipo `string` rappresenta una sequenza di zero o più caratteri Unicode. `string` è un alias per <xref:System.String?displayProperty=nameWithType> in .NET.
 
-Sebbene `string` sia un tipo riferimento, gli [operatori di uguaglianza`==` e `!=`](../operators/equality-operators.md#string-equality) vengono definiti per confrontare i valori degli oggetti `string` e non dei riferimenti. In questo modo il test di uguaglianza delle stringhe è più intuitivo. Esempio:
+Sebbene `string` sia un tipo riferimento, gli [operatori di uguaglianza`==` e `!=`](../operators/equality-operators.md#string-equality) vengono definiti per confrontare i valori degli oggetti `string` e non dei riferimenti. In questo modo il test di uguaglianza delle stringhe è più intuitivo. Ad esempio:
 
 ```csharp-interactive
 string a = "hello";
@@ -67,14 +67,14 @@ string b = "h";
 b += "ello";
 ```
 
-L'[operatore](../operators/member-access-operators.md#indexer-operator-) `[]` può essere usato per accedere in sola lettura ai singoli caratteri di un tipo `string`. I valori validi partono da `0` e devono essere minori della lunghezza del tipo `string`:
+L' [operatore](../operators/member-access-operators.md#indexer-operator-) `[]` può essere usato per l'accesso di sola lettura a singoli caratteri di una stringa. I valori di indice validi iniziano da `0` e devono essere minori della lunghezza della stringa:
 
 ```csharp
 string str = "test";
 char x = str[2];  // x = 's';
 ```
 
-Analogamente, l'operatore `[]` può anche essere usato per scorrere ogni carattere in un tipo `string`:
+Analogamente, l'operatore `[]` può essere usato anche per scorrere ogni carattere in una stringa:
 
 ```csharp-interactive
 string str = "test";
@@ -105,7 +105,7 @@ Console.WriteLine(a);
 > [!NOTE]
 > Il codice di escape `\udddd` (dove `dddd` è un numero a quattro cifre) rappresenta il carattere Unicode U+`dddd`. Vengono riconosciuti anche i codici di escape Unicode a otto cifre: `\Udddddddd`.
 
-I [valori letterali della stringa verbatim](../tokens/verbatim.md) iniziano con `@` e sono anche racchiusi tra virgolette doppie. Esempio:
+I [valori letterali della stringa verbatim](../tokens/verbatim.md) iniziano con `@` e sono anche racchiusi tra virgolette doppie. Ad esempio:
 
 ```csharp
 @"good morning"  // a string literal

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-ms.openlocfilehash: 36193090349f5b8ddb07ee7c3c6c663621cc6d06
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d3c1661acf4d4aa2de8b6eca7015c74ba7f80af1
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637844"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212023"
 ---
 # <a name="message-security-with-a-windows-client"></a>Protezione dei messaggi con un client Windows
-Questo scenario viene illustrato un client Windows Communication Foundation (WCF) e un server protetto dalla modalità di sicurezza messaggio. Il client e il servizio vengono autenticati utilizzando le credenziali di Windows.  
+Questo scenario mostra un client Windows Communication Foundation (WCF) e un server protetti dalla modalità di sicurezza del messaggio. Il client e il servizio vengono autenticati utilizzando le credenziali di Windows.  
   
- ![Sicurezza con un client di Windows del messaggio](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
+ ![Sicurezza dei messaggi con un client Windows](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
@@ -25,11 +25,11 @@ Questo scenario viene illustrato un client Windows Communication Foundation (WCF
 |Autenticazione (client)|Autenticazione reciproca del server e del client|  
 |Integrità|Sì, usando un contesto di sicurezza condiviso|  
 |Riservatezza|Sì, usando un contesto di sicurezza condiviso|  
-|Trasporto|NET.TCP|  
-|Binding|<xref:System.ServiceModel.NetTcpBinding>|  
+|Transport|NET.TCP|  
+|Associazione|<xref:System.ServiceModel.NetTcpBinding>|  
   
-## <a name="service"></a>Service  
- Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:  
+## <a name="service"></a>Servizio  
+ Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Effettuare una delle seguenti operazioni:  
   
 - Creare un servizio autonomo usando il codice senza alcuna configurazione.  
   
@@ -41,7 +41,7 @@ Questo scenario viene illustrato un client Windows Communication Foundation (WCF
  [!code-csharp[C_SecurityScenarios#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#11)]
  [!code-vb[C_SecurityScenarios#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#11)]  
   
-### <a name="configuration"></a>Configurazione  
+### <a name="configuration"></a>Configurazione di  
  Per configurare il servizio, è possibile utilizzare la configurazione seguente anziché il codice:  
   
 ```xml  
@@ -73,7 +73,7 @@ Questo scenario viene illustrato un client Windows Communication Foundation (WCF
 ```  
   
 ## <a name="client"></a>Client  
- Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:  
+ Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Effettuare una delle seguenti operazioni:  
   
 - Creare un client autonomo usando il codice (e il codice client).  
   
@@ -88,7 +88,7 @@ Questo scenario viene illustrato un client Windows Communication Foundation (WCF
  [!code-csharp[C_SecurityScenarios#18](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#18)]
  [!code-vb[C_SecurityScenarios#18](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#18)]  
   
-### <a name="configuration"></a>Configurazione  
+### <a name="configuration"></a>Configurazione di  
  Per impostare le proprietà client viene utilizzata la configurazione seguente.  
   
 ```xml  
@@ -119,4 +119,4 @@ Questo scenario viene illustrato un client Windows Communication Foundation (WCF
 ## <a name="see-also"></a>Vedere anche
 
 - [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Modello di sicurezza per Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

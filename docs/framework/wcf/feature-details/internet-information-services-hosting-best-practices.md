@@ -2,12 +2,12 @@
 title: Procedure consigliate per l'hosting in Internet Information Services (IIS)
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: e09a42f0f4a98728e588961425d8b6f5b50e6ccb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 092e6ab675cf807db44c2085f8b0e7bbf67d7b28
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957219"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76211909"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Procedure consigliate per l'hosting in Internet Information Services (IIS)
 In questo argomento vengono descritte alcune procedure consigliate per l'hosting di servizi Windows Communication Foundation (WCF).  
@@ -30,19 +30,19 @@ In questo argomento vengono descritte alcune procedure consigliate per l'hosting
 ## <a name="optimizing-performance-in-middle-tier-scenarios"></a>Ottimizzazione delle prestazioni in scenari di livello intermedio  
  Per ottenere prestazioni ottimali in uno *scenario di livello intermedio*, ovvero un servizio che effettua chiamate ad altri servizi in risposta ai messaggi in arrivo, creare un'istanza del client del servizio WCF al servizio remoto e riutilizzarlo in più richieste in ingresso. La creazione di un'istanza dei client del servizio WCF è un'operazione costosa relativa all'esecuzione di una chiamata al servizio su un'istanza client preesistente e gli scenari di livello intermedio producono un miglioramento delle prestazioni distinto attraverso la memorizzazione nella cache di client remoti tra le richieste. I client del servizio WCF sono thread-safe, pertanto non è necessario sincronizzare l'accesso a un client su più thread.  
   
- Gli scenari di livello intermedio offrono vantaggi a livello di prestazioni anche utilizzando le API asincrone generate dall'opzione `svcutil /a`. L' `/a` opzione fa in modo che lo [strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) generi `BeginXXX/EndXXX` i metodi per ogni operazione del servizio, che consente di effettuare chiamate potenzialmente prolungate a servizi remoti per i thread in background.  
+ Gli scenari di livello intermedio offrono vantaggi a livello di prestazioni anche utilizzando le API asincrone generate dall'opzione `svcutil /a`. L'opzione `/a` fa in modo che lo [strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) generi `BeginXXX/EndXXX` metodi per ogni operazione del servizio, che consente di effettuare chiamate potenzialmente prolungate a servizi remoti per i thread in background.  
   
 ## <a name="wcf-in-multi-homed-or-multi-named-scenarios"></a>WCF in scenari multihomed o con nomi multipli  
- È possibile distribuire servizi WCF all'interno di una Web farm IIS, in cui un set di computer condivide un nome esterno comune ( `http://www.contoso.com`ad esempio), ma viene indirizzato singolarmente da nomi host `http://www.contoso.com` diversi (ad esempio, potrebbe indirizzare il traffico a due computer diversi denominato `http://machine1.internal.contoso.com` e `http://machine2.internal.contoso.com`. Questo scenario di distribuzione è completamente supportato da WCF, ma richiede una configurazione speciale del sito Web IIS che ospita i servizi WCF per visualizzare il nome host corretto (esterno) nei metadati del servizio (Web Services Description Language).  
+ È possibile distribuire servizi WCF all'interno di una Web farm IIS, in cui un set di computer condivide un nome esterno comune, ad esempio `http://www.contoso.com`, ma viene indirizzato singolarmente da nomi host diversi, ad esempio `http://www.contoso.com` possibile indirizzare il traffico a due computer diversi denominati `http://machine1.internal.contoso.com` e `http://machine2.internal.contoso.com`. Questo scenario di distribuzione è completamente supportato da WCF, ma richiede una configurazione speciale del sito Web IIS che ospita i servizi WCF per visualizzare il nome host corretto (esterno) nei metadati del servizio (Web Services Description Language).  
   
- Per assicurarsi che venga visualizzato il nome host corretto nei metadati del servizio generati da WCF, configurare l'identità predefinita per il sito Web IIS che ospita i servizi WCF per l'utilizzo di un nome host esplicito. Ad esempio, i `www.contoso.com` computer che risiedono all'interno della farm devono usare un binding del sito IIS *: 80: www. contoso. com per http e \*: 443: www. contoso. com per HTTPS.  
+ Per assicurarsi che venga visualizzato il nome host corretto nei metadati del servizio generati da WCF, configurare l'identità predefinita per il sito Web IIS che ospita i servizi WCF per l'utilizzo di un nome host esplicito. Ad esempio, i computer che risiedono all'interno della farm di `www.contoso.com` devono usare un binding del sito IIS *: 80: www. contoso. com per HTTP e \*: 443: www. contoso. com per HTTPS.  
   
  È possibile configurare le associazioni del sito Web IIS utilizzando lo snap-in IIS Microsoft Management Console (MMC).  
   
 ## <a name="application-pools-running-in-different-user-contexts-overwrite-assemblies-from-other-accounts-in-the-temporary-folder"></a>I pool di applicazioni che sono in esecuzione in contesti utente diversi sovrascrivono gli assembly da altri account nella cartella temporanea  
  Per assicurarsi che i pool di applicazioni in esecuzione in contesti utente diversi non possano sovrascrivere gli assembly da altri account nella cartella temporanea dei file ASP.NET, utilizzare identità e cartelle temporanee diverse per applicazioni diverse. Se si hanno, ad esempio, due applicazioni virtuali /Application1 e / Application2, è possibile creare due pool Application, A e B, con due identità diverse. Il pool dell'applicazione A può essere eseguito sotto un'identità utente (user1) mentre il pool dell'applicazione B può essere eseguito sotto un'altra identità utente (user2). Configurare inoltre /Application1 in modo che utilizzi A e /Application2 in modo che utilizzi B.  
   
- In Web. config è possibile configurare la cartella temporanea usando \< system.web/compilation/@tempFolder>. Per/Application1, può essere "c:\tempForUser1" e per Application2 può essere "c:\tempForUser2". Concedere a queste due cartelle l'autorizzazione di scrittura corrispondente per le due identità.  
+ In Web. config è possibile configurare la cartella temporanea usando \<system.web/compilation/@tempFolder>. Per/Application1, può essere "c:\tempForUser1" e per Application2 può essere "c:\tempForUser2". Concedere a queste due cartelle l'autorizzazione di scrittura corrispondente per le due identità.  
   
  Di conseguenza, user2 non può modificare la cartella di generazione del codice per /application2 (sotto c:\tempForUser1).  
   
@@ -84,4 +84,4 @@ In questo argomento vengono descritte alcune procedure consigliate per l'hosting
 ## <a name="see-also"></a>Vedere anche
 
 - [Esempi di hosting di servizi](../samples/hosting.md)
-- [Funzionalità di hosting di Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Funzionalità di hosting di Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

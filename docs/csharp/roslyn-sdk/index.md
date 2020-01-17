@@ -3,12 +3,12 @@ title: .NET Compiler Platform SDK (API Roslyn)
 description: Informazioni su come usare .NET Compiler Platform SDK (detto anche API Roslyn) per analizzare il codice .NET, individuare gli errori e risolverli.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: 3a202d977237ce716e3f8c0cf906894efd02196d
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 98984edad3a25daa8b0ea13b903c4e6447b8a22a
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346946"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163137"
 ---
 # <a name="the-net-compiler-platform-sdk"></a>.NET Compiler Platform SDK
 
@@ -21,7 +21,7 @@ Con .NET Compiler Platform SDK si riduce drasticamente la barriera all'ingresso 
 
 .NET Compiler Platform SDK consente di realizzare ***analizzatori*** e ***correzioni del codice*** in grado di trovare e correggere gli errori di scrittura del codice. Gli ***analizzatori*** comprendono la sintassi e la struttura del codice e rilevano gli elementi da correggere. Le ***correzioni del codice*** propongono una o più correzioni consigliate per la risoluzione degli errori del codice rilevati dagli analizzatori. In genere, un analizzatore e le correzioni del codice associate sono riuniti in un unico progetto.
 
-Gli analizzatori e le correzioni del codice usano l'analisi statica per comprendere il codice. Non eseguono il codice, né offrono altri vantaggi a livello di test. Questi strumenti possono tuttavia mettere in evidenza le consuetudini che spesso causano bug, codice di difficile manutenzione o errori di convalida delle linee guida standard.
+Gli analizzatori e le correzioni del codice usano l'analisi statica per comprendere il codice. Non eseguono il codice, né offrono altri vantaggi a livello di test. Possono, tuttavia, sottolineare procedure che spesso causano bug, codice non gestibile o violazione di linee guida standard.
 
 .NET Compiler Platform SDK offre un singolo set di API che consentono di esaminare e comprendere una codebase C# o Visual Basic. Grazie alla possibilità di usare questa singola codebase, si possono scrivere analizzatori e correzioni del codice più facilmente sfruttando le API di analisi sintattica e semantica fornite da .NET Compiler Platform SDK. Non dovendo più dipendere dall'attività onerosa di replica dell'analisi eseguita dal compilatore, è possibile concentrarsi sull'attività di individuazione e correzione degli errori di scrittura del codice più comuni per il progetto o la libreria.
 

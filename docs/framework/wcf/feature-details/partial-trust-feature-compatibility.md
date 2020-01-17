@@ -2,12 +2,12 @@
 title: Compatibilità con la funzionalità di trust parziale
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: adeef7a8fa12751c53e2096ae6bf844f091a5545
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3e0f1c2f673d4ba603df7da431d10c211cf779ac
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965311"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212118"
 ---
 # <a name="partial-trust-feature-compatibility"></a>Compatibilità con la funzionalità di trust parziale
 Windows Communication Foundation (WCF) supporta un subset limitato di funzionalità durante l'esecuzione in un ambiente parzialmente attendibile. Le funzionalità supportate in un contesto parzialmente attendibile sono progettate sulla base di uno specifico set di scenari, come descritto nell'argomento [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) .  
@@ -35,7 +35,7 @@ Windows Communication Foundation (WCF) supporta un subset limitato di funzionali
   
  Le associazioni che utilizzano trasporti diversi da HTTP, quali <xref:System.ServiceModel.NetTcpBinding>, <xref:System.ServiceModel.NetNamedPipeBinding>o <xref:System.ServiceModel.NetMsmqBinding>, non sono supportate in un ambiente di trust parziale.  
   
-## <a name="custom-bindings"></a>Associazioni personalizzate  
+## <a name="custom-bindings"></a>Binding personalizzati  
  Le associazioni personalizzate possono essere create e utilizzate in ambiente parzialmente attendibile, ma devono rispettare le restrizioni specificate in questa sezione.  
   
 ### <a name="transports"></a>Trasporti  
@@ -52,7 +52,7 @@ Windows Communication Foundation (WCF) supporta un subset limitato di funzionali
   
  Non sono supportati codificatori MTOM (Message Transmission Optimization Mechanism).  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>Sicurezza -  
  Le applicazioni parzialmente attendibili possono utilizzare le funzionalità di sicurezza a livello di trasporto di WCF per proteggere la comunicazione. La sicurezza a livello di messaggio non è supportata. La configurazione di un'associazione per l'utilizzo della sicurezza a livello di messaggio genera un'eccezione in fase di esecuzione.  
   
 ### <a name="unsupported-bindings"></a>Associazioni non supportate  
@@ -76,7 +76,7 @@ Windows Communication Foundation (WCF) supporta un subset limitato di funzionali
 ### <a name="collection-types"></a>Tipi di raccolta  
  Alcuni tipi di raccolta implementano sia <xref:System.Collections.Generic.IEnumerable%601> che <xref:System.Collections.IEnumerable>. Gli esempi includono tipi che implementano <xref:System.Collections.Generic.ICollection%601>. Tali tipi possono implementare un'implementazione `public` di `GetEnumerator()`e un'implementazione esplicita di `GetEnumerator()`. In questo caso, <xref:System.Runtime.Serialization.DataContractSerializer> richiama l'implementazione `public` di `GetEnumerator()`e non l'implementazione esplicita di `GetEnumerator()`. Se nessuna delle implementazioni di `GetEnumerator()` è `public` e tutte sono implementazioni esplicite, <xref:System.Runtime.Serialization.DataContractSerializer> richiama `IEnumerable.GetEnumerator()`.  
   
- Per i tipi di raccolta quando WCF viene eseguito in un ambiente di trust parziale, se `GetEnumerator()` nessuna delle implementazioni `public`è o se nessuna di esse sono implementazioni esplicite dell'interfaccia, viene generata un'eccezione di sicurezza.  
+ Per i tipi di raccolta quando WCF viene eseguito in un ambiente di trust parziale, se nessuna delle implementazioni di `GetEnumerator()` è `public`o nessuna delle implementazioni esplicite dell'interfaccia, viene generata un'eccezione di sicurezza.  
   
 ### <a name="netdatacontractserializer"></a>NetDataContractSerializer  
  Molti tipi di raccolte .NET Framework come <xref:System.Collections.Generic.List%601>, <xref:System.Collections.ArrayList>, <xref:System.Collections.Generic.Dictionary%602> e <xref:System.Collections.Hashtable> non sono supportati da <xref:System.Runtime.Serialization.NetDataContractSerializer> in ambiente parzialmente attendibile. Per questi tipi è impostato l'attributo `[Serializable]` e, come indicato in precedenza nella sezione sulla serializzazione, questo attributo non è supportato in ambiente parzialmente attendibile. <xref:System.Runtime.Serialization.DataContractSerializer> considera le raccolte in modo particolare ed è pertanto in grado di ignorare questa restrizione, al contrario di <xref:System.Runtime.Serialization.NetDataContractSerializer> che non dispone di un meccanismo di questo tipo.  
@@ -86,16 +86,16 @@ Windows Communication Foundation (WCF) supporta un subset limitato di funzionali
  Se l'esecuzione avviene in ambiente parzialmente attendibile, non è possibile utilizzare un surrogato con <xref:System.Runtime.Serialization.NetDataContractSerializer> (tramite il meccanismo <xref:System.Runtime.Serialization.SurrogateSelector> ). Si noti che questa restrizione si applica all'utilizzo di un surrogato, non alla relativa serializzazione.  
   
 ## <a name="enabling-common-behaviors-to-run"></a>Abilitazione dell'esecuzione dei comportamenti comuni  
- I comportamenti del servizio o dell'endpoint non contrassegnati <xref:System.Security.AllowPartiallyTrustedCallersAttribute> con l'attributo (APTCA) aggiunti [ \<alla sezione CommonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) di un file di configurazione non vengono eseguiti quando l'applicazione è in esecuzione in un ambiente parzialmente attendibile e no Quando si verifica questa situazione, viene generata un'eccezione. Per imporre l'esecuzione di comportamenti comuni, è necessario eseguire una delle operazioni seguenti:  
+ I comportamenti del servizio o dell'endpoint non contrassegnati con l'attributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) aggiunti alla sezione [\<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) di un file di configurazione non vengono eseguiti quando l'applicazione viene eseguita in un ambiente con attendibilità parziale e quando si verifica questa situazione non viene generata alcuna eccezione. Per imporre l'esecuzione di comportamenti comuni, è necessario eseguire una delle operazioni seguenti:  
   
 - Contrassegnare il comportamento comune con l'attributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute> in modo tale che questo possa essere eseguito se distribuito come applicazione parzialmente attendibile. Si noti che una voce di registro può essere impostata nel computer per impedire l'esecuzione delle assembly APTCA. .  
   
 - Verificare che, se l'applicazione viene distribuita come completamente attendibile, gli utenti non possano modificare le impostazioni di sicurezza per l'accesso al codice per eseguire l'applicazione in ambiente parzialmente attendibile. In tal caso, il comportamento non viene eseguito e non viene generata alcuna eccezione. Per garantire questo problema, vedere l'opzione **LevelFinal** usando [Caspol. exe (strumento per i criteri di sicurezza dall'accesso di codice)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md).  
   
- Per un esempio di comportamento comune, vedere [procedura: Bloccare gli endpoint nell'organizzazione](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
+ Per un esempio di comportamento comune, vedere [procedura: bloccare gli endpoint nell'organizzazione](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
-## <a name="configuration"></a>Configurazione  
- Con un'eccezione, il codice parzialmente attendibile può caricare solo le sezioni di configurazione WCF `app.config` nel file locale. Per caricare sezioni di configurazione WCF che fanno riferimento a sezioni WCF in Machine. config o in un file Web. config radice è necessario ConfigurationPermission (Unrestricted). Senza questa autorizzazione, i riferimenti alle sezioni di configurazione WCF (comportamenti, associazioni) esterni al file di configurazione locale generano un'eccezione al momento del caricamento della configurazione.  
+## <a name="configuration"></a>Configurazione di  
+ Con un'eccezione, il codice parzialmente attendibile può caricare solo le sezioni di configurazione WCF nel file di `app.config` locale. Per caricare sezioni di configurazione WCF che fanno riferimento a sezioni WCF in Machine. config o in un file Web. config radice è necessario ConfigurationPermission (Unrestricted). Senza questa autorizzazione, i riferimenti alle sezioni di configurazione WCF (comportamenti, associazioni) esterni al file di configurazione locale generano un'eccezione al momento del caricamento della configurazione.  
   
  L'unica eccezione è data dalla configurazione del tipo noto per la serializzazione, come descritto nella sezione sulla serializzazione di questo argomento.  
   
@@ -111,7 +111,7 @@ Windows Communication Foundation (WCF) supporta un subset limitato di funzionali
  La registrazione messaggi non funziona quando WCF viene eseguito in un ambiente con attendibilità parziale. In un trust parziale, l'attivazione del servizio ha esito positivo ma non viene registrato alcun messaggio.  
   
 ### <a name="tracing"></a>Traccia  
- La funzionalità di traccia con restrizioni è disponibile quando l'applicazione viene eseguita in un ambiente di trust parziale. Nell'elemento <`listeners`> nel file di configurazione, gli unici tipi che è possibile aggiungere sono <xref:System.Diagnostics.TextWriterTraceListener> e il nuovo <xref:System.Diagnostics.EventSchemaTraceListener>. L'utilizzo della classe <xref:System.Diagnostics.XmlWriterTraceListener> standard può generare log incompleti o non corretti.  
+ La funzionalità di traccia con restrizioni è disponibile quando l'applicazione viene eseguita in un ambiente di trust parziale. Nell'<`listeners`> elemento del file di configurazione, gli unici tipi che è possibile aggiungere sono <xref:System.Diagnostics.TextWriterTraceListener> e la nuova <xref:System.Diagnostics.EventSchemaTraceListener>. L'utilizzo della classe <xref:System.Diagnostics.XmlWriterTraceListener> standard può generare log incompleti o non corretti.  
   
  Le origini di traccia supportate sono:  
   
@@ -119,7 +119,7 @@ Windows Communication Foundation (WCF) supporta un subset limitato di funzionali
   
 - <xref:System.Runtime.Serialization>  
   
-- <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors>e <xref:System.IdentityModel.Tokens>.  
+- <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors> e <xref:System.IdentityModel.Tokens>.  
   
  Le origini di traccia seguenti non sono supportate:  
   
@@ -144,11 +144,12 @@ Windows Communication Foundation (WCF) supporta un subset limitato di funzionali
  L'host del servizio WCF non supporta l'attendibilità parziale. Se si desidera utilizzare un servizio WCF in attendibilità parziale, non utilizzare il modello di progetto libreria di servizi WCF in Visual Studio per compilare il servizio. In alternativa, creare un nuovo sito Web in Visual Studio scegliendo il modello di sito Web del servizio WCF, che può ospitare il servizio in un server Web in cui è supportato l'attendibilità parziale WCF.  
   
 ## <a name="other-limitations"></a>Altre limitazioni  
- WCF è in genere limitato alle considerazioni sulla sicurezza imposte dall'applicazione host. Se, ad esempio, WCF è ospitato in un'applicazione browser XAML (XBAP), è soggetto alle limitazioni XBAP, come descritto in [Windows Presentation Foundation sicurezza con attendibilità parziale](https://go.microsoft.com/fwlink/?LinkId=89138).  
+
+  WCF è in genere limitato alle considerazioni sulla sicurezza imposte dall'applicazione host. Se, ad esempio, WCF è ospitato in un'applicazione browser XAML (XBAP), è soggetto alle limitazioni XBAP, come descritto in [Windows Presentation Foundation sicurezza con attendibilità parziale](../../wpf/wpf-partial-trust-security.md).  
   
  Se indigo2 viene eseguito in ambiente parzialmente attendibile, le funzionalità aggiuntive seguenti non vengono abilitate:  
   
-- Strumentazione gestione Windows (WMI, Windows Management Instrumentation)  
+- Windows Management Instrumentation (WMI)  
   
 - La registrazione eventi è abilitata solo parzialmente (vedere la discussione nella sezione **Diagnostica** ).  
   
@@ -166,4 +167,4 @@ Windows Communication Foundation (WCF) supporta un subset limitato di funzionali
 - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
 - <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>
 - [Scenari di distribuzione supportati](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)
-- [Procedure consigliate per l'attendibilità parziale](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)
+- [T:System.Runtime.Serialization.DataContractSerializer](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)

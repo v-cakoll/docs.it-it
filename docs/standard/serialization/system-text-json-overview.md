@@ -1,17 +1,20 @@
 ---
 title: Serializzare e deserializzare JSON C# con-.NET
 ms.date: 01/10/2020
+no-loc:
+- System.Text.Json
+- Newtonsoft.Json
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: c05783963ba521109fb542f247ec9e62fdb5c2d9
-ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
+ms.openlocfilehash: acb83be9b20a155b6b6a9fb5ade38e099f54e71d
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75904649"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163592"
 ---
 # <a name="json-serialization-and-deserialization-marshalling-and-unmarshalling-in-net---overview"></a>Serializzazione e deserializzazione JSON (marshalling e unmarshalling) in .NET-Panoramica
 
@@ -24,7 +27,7 @@ La libreria fornisce inoltre le classi per l'utilizzo di un modello DOM (Documen
 ## <a name="how-to-get-the-library"></a>Come ottenere la libreria
 
 * La libreria è incorporata come parte del Framework condiviso di [.NET Core 3,0](https://aka.ms/netcore3download) .
-* Per gli altri Framework di destinazione, installare il pacchetto NuGet [System. Text. JSON](https://www.nuget.org/packages/System.Text.Json) . Il pacchetto supporta:
+* Per altri Framework di destinazione, installare il pacchetto NuGet [System.Text.Json](https://www.nuget.org/packages/System.Text.Json) . Il pacchetto supporta:
   * .NET Standard 2,0 e versioni successive
   * .NET Framework 4.7.2 e versioni successive
   * .NET Core 2,0, 2,1 e 2,2
@@ -32,9 +35,9 @@ La libreria fornisce inoltre le classi per l'utilizzo di un modello DOM (Documen
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
 * [Come usare la libreria](system-text-json-how-to.md)
-* [Come eseguire la migrazione da Newtonsoft. JSON](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [Come eseguire la migrazione da Newtonsoft.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
 * [Come scrivere i convertitori](system-text-json-converters-how-to.md)
-* [Codice sorgente System. Text. JSON](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json)
-* [Informazioni di riferimento sull'API System. Text. JSON](xref:System.Text.Json)
-* [Riferimento all'API System. Text. JSON. Serialization](xref:System.Text.Json.Serialization)
+* [codice sorgente System.Text.Json](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json)
+* [informazioni di riferimento sull'API System.Text.Json](xref:System.Text.Json)
+* [System.Text.Json. Riferimento all'API di serializzazione](xref:System.Text.Json.Serialization)
 <!-- * [Roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->
