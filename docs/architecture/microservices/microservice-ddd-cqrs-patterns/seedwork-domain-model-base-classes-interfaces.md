@@ -2,16 +2,16 @@
 title: Seedwork (classi di base riutilizzabili e interfacce per il modello di dominio)
 description: Architettura dei microservizi .NET per applicazioni .NET in contenitori | Usare il concetto di cartella SeedWork come punto di partenza per avviare l'implementazione di un modello di dominio orientato a DDD.
 ms.date: 10/08/2018
-ms.openlocfilehash: 491ff39f493a8f5ab192dc4a8376f560a8a7624b
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: ab0aadc28dbd1175c75b04dadca29b7b0947f29b
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937165"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116573"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (classi di base riutilizzabili e interfacce per il modello di dominio)
 
-La cartella della soluzione contiene una cartella denominata *SeedWork*. Tale cartella contiene classi di base personalizzate che è possibile usare come base per le entità di dominio e gli oggetti valore. È possibile usare queste classi di base per evitare codice ridondante in ogni classe di oggetti del dominio. La cartella per questi tipi di classi è denominata *SeedWork* e non *Framework* o qualcosa di simile. Viene denominata *SeedWork* perché la cartella contiene solo un piccolo subset di classi riutilizzabili che non può effettivamente essere considerato un framework. Il termine *Seedwork* è stato introdotto da [Michael Feathers](https://www.artima.com/forums/flat.jsp?forum=106&thread=8826) ed è diventato noto grazie a [Martin Fowler](https://martinfowler.com/bliki/Seedwork.html). Questa cartella può tuttavia essere denominata Common, SharedKernel o avere un nome simile.
+La cartella della soluzione contiene una cartella denominata *SeedWork*. Tale cartella contiene classi di base personalizzate che è possibile usare come base per le entità di dominio e gli oggetti valore. Usare queste classi di base in modo che non si disponga di codice ridondante nella classe di oggetti di ogni dominio. La cartella per questi tipi di classi è denominata *SeedWork* e non *Framework* o qualcosa di simile. Viene chiamato *seeding* perché la cartella contiene solo un piccolo subset di classi riutilizzabili che non può essere considerato un Framework. Il termine *Seedwork* è stato introdotto da [Michael Feathers](https://www.artima.com/forums/flat.jsp?forum=106&thread=8826) ed è diventato noto grazie a [Martin Fowler](https://martinfowler.com/bliki/Seedwork.html). Questa cartella può tuttavia essere denominata Common, SharedKernel o avere un nome simile.
 
 La figura 7-12 illustra le classi che costituiscono la cartella SeedWork del modello di dominio nel microservizio degli ordini. La cartella contiene alcune classi di base personalizzate come Entity, ValueObject ed Enumeration e alcune interfacce. Queste interfacce (IRepository e IUnitOfWork) indicano al livello infrastruttura le implementazioni necessarie. Queste interfacce vengono usate anche dal livello dell'applicazione tramite l'inserimento delle dipendenze.
 
@@ -21,7 +21,7 @@ Contenuto dettagliato della cartella seeding che contiene le classi e le interfa
 
 **Figura 7-12**. Set di esempio di classi di base e interfacce nella cartella"Seedwork" per il modello di dominio
 
-Si tratta di un tipo di riutilizzo che può essere copiato e incollato e che molti sviluppatori condividono nei progetti. Non è un framework formale. È possibile avere cartelle Seedwork in qualsiasi livello o libreria. Se il set di classi e interfacce aumenta di dimensioni, potrebbe essere tuttavia necessario creare un'unica libreria di classi.
+Si tratta di un tipo di riutilizzo che può essere copiato e incollato e che molti sviluppatori condividono nei progetti. Non è un framework formale. È possibile avere cartelle Seedwork in qualsiasi livello o libreria. Tuttavia, se il set di classi e interfacce è sufficientemente grande, potrebbe essere necessario creare una singola libreria di classi.
 
 ## <a name="the-custom-entity-base-class"></a>Classe di base Entity personalizzata
 

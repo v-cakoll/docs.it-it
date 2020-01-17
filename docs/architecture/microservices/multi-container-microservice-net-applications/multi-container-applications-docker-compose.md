@@ -2,12 +2,12 @@
 title: Definizione dell'applicazione a più contenitori con docker-compose.yml
 description: Come specificare la composizione di microservizi per un'applicazione a più contenitori con docker-compose.yml.
 ms.date: 10/02/2018
-ms.openlocfilehash: fa863495c785d89a0b244162e58948ff622e139a
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: f9cab35ac8e11ca89a83f646c29bf72f84e66ef4
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937160"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116548"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definizione dell'applicazione a più contenitori con docker-compose.yml
 
@@ -82,7 +82,7 @@ services:
     image: redis
 ```
 
-La chiave radice in questo file sono i servizi. Sotto questa chiave si definiscono i servizi da distribuire ed eseguire quando si esegue il comando `docker-compose up` o si esegue la distribuzione da Visual Studio usando questo file docker-compose.yml. In questo caso nel file docker compose.yml sono stati definiti più servizi, come descritto nella tabella seguente.
+La chiave radice in questo file sono i servizi. In tale chiave si definiscono i servizi che si desidera distribuire ed eseguire quando si esegue il comando `docker-compose up` o quando si esegue la distribuzione da Visual Studio utilizzando il file Docker-compose. yml. In questo caso nel file docker compose.yml sono stati definiti più servizi, come descritto nella tabella seguente.
 
 | Nome del servizio | Descrizione |
 |--------------|-------------|
@@ -129,7 +129,7 @@ Poiché la stringa di connessione viene definita da una variabile di ambiente, �
 
 - Collega il servizio Web al servizio sql.data, ossia l'istanza di SQL Server per il database Linux in esecuzione in un contenitore. Quando si specifica questa dipendenza, il contenitore catalog.api verrà avviato solo dopo l'avvio del contenitore sql.data; questo aspetto è importante perché per catalog.api è necessario che prima sia in esecuzione il database SQL Server. Tuttavia, questo tipo di dipendenza di contenitore non è sufficiente in molti casi poiché Docker esegue il controllo solo a livello di contenitore. In alcuni casi il servizio, in questo caso SQL Server, potrebbe non essere ancora pronto ed è quindi consigliabile implementare la logica di ripetizione con il backoff esponenziale nei microservizi client. In questo modo, se un contenitore di dipendenza non è pronto per un breve periodo di tempo, l'applicazione sarà ancora resiliente.
 
-- Viene configurata per consentire l'accesso ai server esterni: l'impostazione extra\_hosts consente di accedere ai server esterni o ai computer all'esterno dell'host Docker (quindi all'esterno della VM predefinita che è un host Docker di sviluppo), ad esempio un'istanza locale di SQL Server sul PC di sviluppo.
+- È configurato per consentire l'accesso ai server esterni: l'impostazione aggiuntiva\_host consente di accedere a server esterni o computer all'esterno dell'host Docker (ovvero all'esterno della VM Linux predefinita, ovvero un host Docker di sviluppo), ad esempio un'istanza di SQL Server locale nel computer di sviluppo.
 
 Altre impostazioni più avanzate del file docker-compose.yml verranno illustrate nelle sezioni successive.
 
@@ -141,7 +141,7 @@ Con il comando docker-compose è quindi possibile usare come destinazione i segu
 
 #### <a name="development-environments"></a>Ambienti di sviluppo
 
-Quando si sviluppano applicazioni, è importante poter eseguire un'applicazione in un ambiente di sviluppo isolato. È possibile usare il comando dell'interfaccia della riga di comando docker-compose per creare questo ambiente oppure usare Visual Studio che esegue docker-compose in background.
+Quando si sviluppano applicazioni, è importante poter eseguire un'applicazione in un ambiente di sviluppo isolato. È possibile usare il comando dell'interfaccia della riga di comando Docker-compose per creare l'ambiente o Visual Studio, che usa Docker-compose dietro le quinte.
 
 Il file docker-compose.yml consente di configurare e documentare tutte le dipendenze di servizio dell'applicazione,come altri servizi, cache, database, code e così via. Con il comando dell'interfaccia della riga di comando docker-compose è possibile creare e avviare uno o più contenitori per ogni dipendenza con un unico comando (docker-compose up).
 
@@ -151,7 +151,7 @@ I file docker-compose.yml sono file di configurazione interpretati dal motore Do
 
 Un aspetto importante di qualsiasi processo di distribuzione continua (CD) o di integrazione continua (CI) sono gli unit test e i test di integrazione. Questi test automatizzati richiedono un ambiente isolato per evitare impatti da parte degli utenti o di eventuali altre modifiche nei dati dell'applicazione.
 
-Con Docker Compose è possibile creare ed eliminare definitivamente l'ambiente isolato molto facilmente usando alcuni comandi al prompt dei comandi o script, come i comandi seguenti:
+Con Docker Compose, è possibile creare ed eliminare l'ambiente isolato in modo molto semplice in alcuni comandi dal prompt dei comandi o dagli script, ad esempio i comandi seguenti:
 
 ```console
 docker-compose -f docker-compose.yml -f docker-compose-test.override.yml up -d
@@ -201,7 +201,7 @@ Un tipico caso d'uso è quello in cui si definiscono più file compose in modo d
 
 **Figura 6-12**. Più file docker-compose che eseguono l'override di valori del file docker-compose.yml base
 
-È possibile combinare più file Docker-compose*. yml per gestire ambienti diversi. Iniziare con il file docker-compose.yml base. Questo file base deve contenere le impostazioni di configurazione base o statiche, ossia che non cambiano in base all'ambiente. Ad esempio, eShopOnContainers ha come file di base il seguente file docker-compose.yml, semplificato con meno servizi.
+È possibile combinare più file Docker-compose*. yml per gestire ambienti diversi. Iniziare con il file docker-compose.yml base. Questo file base deve contenere le impostazioni di configurazione base o statiche, ossia che non cambiano in base all'ambiente. Ad esempio, il eShopOnContainers ha il file Docker-compose. yml seguente (semplificato con un minor numero di servizi) come file di base.
 
 ```yml
 #docker-compose.yml (Base)
@@ -390,7 +390,7 @@ In questo esempio, la configurazione di override dello sviluppo espone alcune po
 
 Quando si esegue `docker-compose up` o lo si avvia da Visual Studio, il comando legge automaticamente le sostituzioni come se stesse unendo entrambi i file.
 
-Si supponga di voler creare un altro file Compose per l'ambiente di produzione, con diversi valori di configurazione, porte o stringhe di connessione. È possibile creare un altro file di override, ad esempio un file denominato `docker-compose.prod.yml` con diverse impostazioni e variabili di ambiente. Questo file potrebbe essere archiviato in un diverso repository Git oppure gestito e protetto da un team diverso.
+Si supponga che si desideri un altro file compose per l'ambiente di produzione, con diversi valori di configurazione, porte o stringhe di connessione. È possibile creare un altro file di override, ad esempio un file denominato `docker-compose.prod.yml` con diverse impostazioni e variabili di ambiente. Questo file potrebbe essere archiviato in un diverso repository Git oppure gestito e protetto da un team diverso.
 
 #### <a name="how-to-deploy-with-a-specific-override-file"></a>Come distribuire un file di override specifico
 
@@ -422,7 +422,7 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=10.121.122.92
 
 Docker-compose prevede che il formato di ogni riga di un file con estensione env sia \<variabile\>=\<valore\>.
 
-Si noti che i valori impostati nell'ambiente di runtime eseguono sempre l'override dei valori definiti all'interno del file con estensione env. Analogamente, anche i valori passati tramite gli argomenti del comando della riga di comando eseguono l'override dei valori predefiniti impostati nel file con estensione env.
+I valori impostati nell'ambiente di runtime eseguono sempre l'override dei valori definiti all'interno del file con estensione ENV. Analogamente, i valori passati tramite gli argomenti della riga di comando eseguono l'override anche dei valori predefiniti impostati nel file con estensione ENV.
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
