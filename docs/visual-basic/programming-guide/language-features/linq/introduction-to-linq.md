@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 610f2a1020cc15f855b3ddfc0917e14aae34fb82
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3f58edf326ab9415d78d7065d74d8c1954fbbf37
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344930"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76315863"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Introduzione a LINQ in Visual Basic
 LINQ (Language-Integrated Query) aggiunge funzionalità di query a Visual Basic e fornisce funzionalità semplici e potenti quando si utilizzano tutti i tipi di dati. Anziché inviare una query a un database da elaborare o usare una sintassi di query diversa per ogni tipo di dati che si sta cercando, LINQ introduce le query come parte del linguaggio Visual Basic. Utilizza una sintassi unificata indipendentemente dal tipo di dati.  
@@ -82,7 +82,7 @@ Per iniziare una query è necessario specificare una clausola [`From`](../../../
 
 ### <a name="select-clause"></a>clausola Select
 
-Facoltativa. Una [clausola`Select`](../../../../visual-basic/language-reference/queries/select-clause.md) dichiara un set di variabili di iterazione per una query. Ad esempio:
+Parametro facoltativo. Una [clausola`Select`](../../../../visual-basic/language-reference/queries/select-clause.md) dichiara un set di variabili di iterazione per una query. Ad esempio:
 
  [!code-vb[VbVbalrIntroToLINQ#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#8)]
 
@@ -90,31 +90,31 @@ Se non viene specificata nessuna clausola `Select`, le variabili di iterazione p
 
 ### <a name="where-clause"></a>Clausola Where
 
-Facoltativa. Una [clausola`Where`](../../../../visual-basic/language-reference/queries/where-clause.md) specifica una condizione di filtro per una query. Ad esempio:
+Parametro facoltativo. Una [clausola`Where`](../../../../visual-basic/language-reference/queries/where-clause.md) specifica una condizione di filtro per una query. Ad esempio:
 
  [!code-vb[VbVbalrIntroToLINQ#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#9)]
 
-### <a name="order-by-clause"></a>Clausola ORDER BY]
+### <a name="order-by-clause"></a>Order By (clausola)
 
-| Opzionale. Una [clausola`Order By`](../../../../visual-basic/language-reference/queries/order-by-clause.md) specifica l'ordinamento delle colonne in una query. Ad esempio:
+Parametro facoltativo. Una [clausola`Order By`](../../../../visual-basic/language-reference/queries/order-by-clause.md) specifica l'ordinamento delle colonne in una query. Ad esempio:
 
  [!code-vb[VbVbalrIntroToLINQ#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#10)]
 
 ### <a name="join-clause"></a>clausola Join
 
-Facoltativa. Una [clausola`Join`](../../../../visual-basic/language-reference/queries/join-clause.md) combina due raccolte in un'unica raccolta. Ad esempio:
+Parametro facoltativo. Una [clausola`Join`](../../../../visual-basic/language-reference/queries/join-clause.md) combina due raccolte in un'unica raccolta. Ad esempio:
 
  [!code-vb[VbVbalrIntroToLINQ#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#11)]
 
 ### <a name="group-by-clause"></a>clausola Group By
 
-Facoltativa. Una [clausola`Group By`](../../../../visual-basic/language-reference/queries/group-by-clause.md) raggruppa gli elementi di un risultato della query. Può essere usato per applicare funzioni di aggregazione a ogni gruppo. Ad esempio:
+Parametro facoltativo. Una [clausola`Group By`](../../../../visual-basic/language-reference/queries/group-by-clause.md) raggruppa gli elementi di un risultato della query. Può essere usato per applicare funzioni di aggregazione a ogni gruppo. Ad esempio:
 
  [!code-vb[VbVbalrIntroToLINQ#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#12)]
 
 ### <a name="group-join-clause"></a>clausola Group Join
 
-Facoltativa. Una [clausola`Group Join`](../../../../visual-basic/language-reference/queries/group-join-clause.md) combina due raccolte in un'unica raccolta gerarchica. Ad esempio:
+Parametro facoltativo. Una [clausola`Group Join`](../../../../visual-basic/language-reference/queries/group-join-clause.md) combina due raccolte in un'unica raccolta gerarchica. Ad esempio:
 
  [!code-vb[VbVbalrIntroToLINQ#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#13)]
 
@@ -130,37 +130,37 @@ Per iniziare una query è necessario specificare una clausola [`Aggregate`](../.
 
 ### <a name="let-clause"></a>Let (clausola)
 
-Facoltativa. Una [clausola`Let`](../../../../visual-basic/language-reference/queries/let-clause.md) calcola un valore e lo assegna a una nuova variabile nella query. Ad esempio:
+Parametro facoltativo. Una [clausola`Let`](../../../../visual-basic/language-reference/queries/let-clause.md) calcola un valore e lo assegna a una nuova variabile nella query. Ad esempio:
 
  [!code-vb[VbVbalrIntroToLINQ#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#16)]
 
 ### <a name="distinct-clause"></a>clausola Distinct
 
-Facoltativa. Una clausola `Distinct` limita i valori della variabile di iterazione corrente per eliminare i valori duplicati nei risultati della query. Ad esempio:
+Parametro facoltativo. Una clausola `Distinct` limita i valori della variabile di iterazione corrente per eliminare i valori duplicati nei risultati della query. Ad esempio:
 
  [!code-vb[VbVbalrIntroToLINQ#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#17)]
 
 ### <a name="skip-clause"></a>Skip (clausola)
 
-Facoltativa. Una [clausola`Skip`](../../../../visual-basic/language-reference/queries/skip-clause.md) ignora un numero specificato di elementi in una raccolta e quindi restituisce gli elementi rimanenti. Ad esempio:
+Parametro facoltativo. Una [clausola`Skip`](../../../../visual-basic/language-reference/queries/skip-clause.md) ignora un numero specificato di elementi in una raccolta e quindi restituisce gli elementi rimanenti. Ad esempio:
 
  [!code-vb[VbVbalrIntroToLINQ#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#18)]
 
 ### <a name="skip-while-clause"></a>Skip While (clausola)
 
-Facoltativa. Una [clausola`Skip While`](../../../../visual-basic/language-reference/queries/skip-while-clause.md) ignora gli elementi di una raccolta, purché una condizione specificata venga `true` e quindi restituisce gli elementi rimanenti. Ad esempio:
+Parametro facoltativo. Una [clausola`Skip While`](../../../../visual-basic/language-reference/queries/skip-while-clause.md) ignora gli elementi di una raccolta, purché una condizione specificata venga `true` e quindi restituisce gli elementi rimanenti. Ad esempio:
 
  [!code-vb[VbVbalrIntroToLINQ#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#19)]
 
 ### <a name="take-clause"></a>Take (clausola)
 
-Facoltativa. Una [clausola`Take`](../../../../visual-basic/language-reference/queries/take-clause.md) restituisce un numero specificato di elementi contigui dall'inizio di una raccolta. Ad esempio:
+Parametro facoltativo. Una [clausola`Take`](../../../../visual-basic/language-reference/queries/take-clause.md) restituisce un numero specificato di elementi contigui dall'inizio di una raccolta. Ad esempio:
 
  [!code-vb[VbVbalrIntroToLINQ#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#20)]
 
 ### <a name="take-while-clause"></a>Take While (clausola)
 
-Facoltativa. Una [clausola`Take While`](../../../../visual-basic/language-reference/queries/take-while-clause.md) include elementi in una raccolta, purché una condizione specificata venga `true` e ignori gli elementi rimanenti. Ad esempio:
+Parametro facoltativo. Una [clausola`Take While`](../../../../visual-basic/language-reference/queries/take-while-clause.md) include elementi in una raccolta, purché una condizione specificata venga `true` e ignori gli elementi rimanenti. Ad esempio:
 
  [!code-vb[VbVbalrIntroToLINQ#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#21)]
   
