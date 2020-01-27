@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Test
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 6096bd3aa35a27c97862089d09d537bdc5b1fff0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 82c9815abdd5140340f9a8ea39be23496d433889
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971537"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738389"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testare app ASP.NET Core MVC
 
@@ -94,7 +94,7 @@ Una variante di questo approccio consiste nel terminare ogni nome di classe di t
 
 - `CatalogControllerGetImage`**Should**`.`**Log**`WarningGivenImageMissingException`
 
-Alcuni team trovano il secondo approccio più chiaro, anche se leggermente più prolisso. In ogni caso, è consigliabile usare una convenzione di denominazione che consenta di comprendere il comportamento del test. In questo modo, se uno o più test hanno esito negativo, risulta evidente dai nomi quali casi non sono riusciti. Evitare di denominare i test in modo generico, ad esempio ControllerTests.Test1, perché questi nomi non hanno alcun valore quando vengono visualizzati nei risultati dei test.
+Alcuni team trovano il secondo approccio più chiaro, anche se leggermente più prolisso. In ogni caso, è consigliabile usare una convenzione di denominazione che consenta di comprendere il comportamento del test. In questo modo, se uno o più test hanno esito negativo, risulta evidente dai nomi quali casi non sono riusciti. Evitare di denominare i test in modo vago, ad esempio ControllerTests. test1, perché questi non offrono alcun valore quando vengono visualizzati nei risultati dei test.
 
 Se si segue una convenzione di denominazione simile a quella illustrata sopra, che genera molte classi di test di piccole dimensioni, è consigliabile organizzare ulteriormente i test tramite cartelle e spazi dei nomi. La figura 9-4 illustra un approccio di organizzazione dei test per cartella all'interno di diversi progetti di test.
 

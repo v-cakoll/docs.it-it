@@ -1,17 +1,17 @@
 ---
-title: Controllo FlowLayoutPanel (Windows Form)
+title: Controllo FlowLayoutPanel
 ms.date: 03/30/2017
 helpviewer_keywords:
 - FlowLayoutPanel control [Windows Forms]
 - layout [Windows Forms]
 - Windows Forms, arranging contents
 ms.assetid: 630c9305-9ecf-4f99-94f9-ddf06de82713
-ms.openlocfilehash: ed32d88894b2f0c4be8f1adeca8e891f3ac13810
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: daba37360c8b27df9ae8da36c5b3fc48682e1b63
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651480"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745745"
 ---
 # <a name="flowlayoutpanel-control-windows-forms"></a>Controllo FlowLayoutPanel (Windows Form)
 Il controllo `FlowLayoutPanel` dispone i contenuti in una direzione di flusso orizzontale o verticale. Il contenuto può andare a capo da una riga a quella successiva o da una colonna a quella successiva. In alternativa, è possibile troncare il contenuto invece di usare il ritorno a capo.  
@@ -25,7 +25,7 @@ Il controllo `FlowLayoutPanel` dispone i contenuti in una direzione di flusso or
  [Procedura: Ancorare e agganciare controlli figlio in un controllo FlowLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)  
  Viene illustrato come usare le proprietà <xref:System.Windows.Forms.Control.Anchor%2A> e <xref:System.Windows.Forms.Control.Dock%2A> per ancorare e agganciare i controlli figlio in un controllo <xref:System.Windows.Forms.FlowLayoutPanel>.  
   
- Vedere anche [procedura dettagliata: Disposizione dei controlli in Windows Form usando FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
+ Vedere anche [procedura dettagliata: disposizione di controlli in Windows Forms tramite FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.FlowLayoutPanel>  

@@ -1,5 +1,5 @@
 ---
-title: Controllo LinkLabel (Windows Form)
+title: Controllo LinkLabel
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Label control [Windows Forms]
@@ -8,33 +8,33 @@ helpviewer_keywords:
 - Web page link control
 - LinkLabel control [Windows Forms]
 ms.assetid: af1fd04e-e126-4fd7-9a4e-13b49010c5ca
-ms.openlocfilehash: 4a67f127adf94829202f02056c64e2951891998e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef5161e2de7cb4cbcf69ab7d72ea079e950bd3ff
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012906"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745201"
 ---
 # <a name="linklabel-control-windows-forms"></a>Controllo LinkLabel (Windows Form)
-I moduli di Windows `LinkLabel` controllo consente di aggiungere collegamenti ipertestuali alle applicazioni Windows Form. È possibile usare la `LinkLabel` controllo di tutto ciò che è possibile usare il <xref:System.Windows.Forms.Label> controllare per; è anche possibile impostare una parte del testo come un collegamento a un oggetto o una pagina Web.  
+Il controllo Windows Forms `LinkLabel` consente di aggiungere collegamenti di tipo Web alle applicazioni di Windows Forms. È possibile utilizzare il controllo `LinkLabel` per tutti gli elementi per cui è possibile utilizzare il controllo <xref:System.Windows.Forms.Label> per; è anche possibile impostare parte del testo come collegamento a un oggetto o a una pagina Web.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sul controllo LinkLabel](linklabel-control-overview-windows-forms.md)  
  Definisce il controllo e ne illustra le funzionalità chiave e le proprietà.  
   
- [Procedura: Modificare l'aspetto del controllo Windows Form LinkLabel](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)  
- Elenca i modi per specificare il colore e il carattere di sottolineatura di collegamenti ipertestuali nelle etichette di collegamento.  
+ [Procedura: Modificare l'aspetto del controllo LinkLabel di Windows Form](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)  
+ Elenca i modi per specificare il colore e la sottostruttura dei collegamenti di tipo Web nelle etichette dei collegamenti.  
   
- [Procedura: Collegarsi a un oggetto o Web Page con il controllo LinkLabel di Windows Form](link-to-an-object-or-web-page-with-wf-linklabel-control.md)  
- Vengono fornite le istruzioni per l'apertura di un form o pagina Web quando viene selezionato un collegamento.  
+ [Procedura: Eseguire il collegamento a un oggetto o a una pagina Web con il controllo LinkLabel di Windows Form](link-to-an-object-or-web-page-with-wf-linklabel-control.md)  
+ Fornisce istruzioni per l'apertura di un modulo o di una pagina Web quando si fa clic su un collegamento.  
   
  [Procedura: Visualizzare una pagina Web da un controllo LinkLabel di Windows Form (Visual Basic)](display-a-web-page-from-a-wf-linklabel-control-visual-basic.md)  
- Viene illustrato come visualizzare una pagina Web nel browser predefinito quando un utente fa clic su un form Windows `LinkLabel` controllo.  
+ Viene illustrato come visualizzare una pagina Web nel browser predefinito quando un utente fa clic su un controllo Windows Forms `LinkLabel`.  
   
 ## <a name="reference"></a>Riferimenti  
  Classe <xref:System.Windows.Forms.LinkLabel>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)  
- Fornisce un elenco completo di controlli Windows Form, con collegamenti alle informazioni relative all'utilizzo.
+ [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)  
+ Viene fornito un elenco completo dei controlli di Windows Forms, con collegamenti alle informazioni sul relativo utilizzo.

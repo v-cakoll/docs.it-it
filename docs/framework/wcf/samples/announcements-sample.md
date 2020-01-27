@@ -2,12 +2,12 @@
 title: Esempio di annunci
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
-ms.openlocfilehash: 57b61dbd82338aafd248285c9cb11ecdf58d25bb
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: c3824fb0dc7ab4169c309d1a5154127d6bc3b78f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716146"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747007"
 ---
 # <a name="announcements-sample"></a>Esempio di annunci
 
@@ -71,7 +71,7 @@ static void OnOfflineEvent(object sender, AnnouncementEventArgs e)
 
 #### <a name="to-use-this-sample"></a>Per usare questo esempio
 
-1. Questo esempio Usa endpoint HTTP e per eseguire questo esempio, è necessario aggiungere elenchi ACL URL appropriati. per informazioni dettagliate, vedere [configurazione di http e HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) . L'esecuzione del comando seguente con privilegi elevati consente di aggiungere gli elenchi di controllo di accesso appropriati. È possibile che si desideri sostituire il dominio e il nome utente per gli argomenti seguenti quando il comando non funziona nella forma originale. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`
+1. Questo esempio usa endpoint HTTP e per eseguirlo è necessario aggiungere elenchi di controllo di accesso (ACL) agli URL appropriati. Per ulteriori informazioni, vedere [configurazione di http e HTTPS](../feature-details/configuring-http-and-https.md). L'esecuzione del comando seguente con privilegi elevati consente di aggiungere gli elenchi di controllo di accesso appropriati. È possibile che si desideri sostituire il dominio e il nome utente per gli argomenti seguenti quando il comando non funziona nella forma originale. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`
 
 2. Compila la soluzione.
 

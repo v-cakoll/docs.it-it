@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Salvare file con il controllo RichTextBox di Windows Forms'
+title: Salva file con il controllo RichTextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - .rtf files [Windows Forms], saving in RichTextBox control
 - text files [Windows Forms], saving from RichTextBox control
 ms.assetid: 4a58ec19-84d1-4383-9110-298c06adcfca
-ms.openlocfilehash: c5d88e4942d96ee12e8b9f40156090c874386668
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: a87b93a53347aeba54f944b0f4c455aa272ea243
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046258"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744814"
 ---
-# <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>Procedura: Salvare file con il controllo RichTextBox di Windows Forms
+# <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>Procedura: salvare file con il controllo RichTextBox Windows Form
 
-Il controllo <xref:System.Windows.Forms.RichTextBox> Windows Forms può scrivere le informazioni visualizzate in uno dei diversi formati:
+Il Windows Forms controllo <xref:System.Windows.Forms.RichTextBox> può scrivere le informazioni visualizzate in uno dei diversi formati:
 
 - Testo normale
 
@@ -36,17 +36,17 @@ Il controllo <xref:System.Windows.Forms.RichTextBox> Windows Forms può scrivere
 
 - Testo normale con rappresentazione testuale di oggetti OLE
 
-Per salvare un file, chiamare il <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> metodo. È anche possibile usare il metodo **SaveFile** per salvare i dati in un flusso. Per altre informazioni, vedere <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.
+Per salvare un file, chiamare il metodo <xref:System.Windows.Forms.RichTextBox.SaveFile%2A>. È anche possibile usare il metodo **SaveFile** per salvare i dati in un flusso. Per ulteriori informazioni, vedere <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.
 
 ### <a name="to-save-the-contents-of-the-control-to-a-file"></a>Per salvare il contenuto del controllo in un file
 
 1. Determinare il percorso del file da salvare.
 
-    Per eseguire questa operazione in un'applicazione reale, si usa in genere il <xref:System.Windows.Forms.SaveFileDialog> componente. Per una panoramica, vedere [Cenni preliminari sul componente SaveFileDialog](savefiledialog-component-overview-windows-forms.md).
+    Per eseguire questa operazione in un'applicazione reale, si usa in genere il componente <xref:System.Windows.Forms.SaveFileDialog>. Per una panoramica, vedere [Cenni preliminari sul componente SaveFileDialog](savefiledialog-component-overview-windows-forms.md).
 
-2. Chiamare il <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> metodo <xref:System.Windows.Forms.RichTextBox> del controllo, specificando il file da salvare e, facoltativamente, un tipo di file. Se si chiama il metodo con un nome di file come unico argomento, il file verrà salvato come RTF. Per specificare un altro tipo di file, chiamare il metodo con un valore dell'enumerazione <xref:System.Windows.Forms.RichTextBoxStreamType> come secondo argomento.
+2. Chiamare il metodo <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> del controllo <xref:System.Windows.Forms.RichTextBox>, specificando il file da salvare e, facoltativamente, un tipo di file. Se si chiama il metodo con un nome di file come unico argomento, il file verrà salvato come RTF. Per specificare un altro tipo di file, chiamare il metodo con un valore dell'enumerazione <xref:System.Windows.Forms.RichTextBoxStreamType> come secondo argomento.
 
-    Nell'esempio riportato di seguito, il percorso impostato per il percorso del file di testo RTF è la cartella **documenti** . Questo percorso viene usato perché è possibile presupporre che la maggior parte dei computer che eseguono il sistema operativo Windows includa questa cartella. La scelta di questa località consente anche agli utenti con livelli di accesso di sistema minimi di eseguire l'applicazione in modo sicuro. Nell'esempio seguente si presuppone che un modulo <xref:System.Windows.Forms.RichTextBox> con un controllo sia già stato aggiunto.
+    Nell'esempio riportato di seguito, il percorso impostato per il percorso del file di testo RTF è la cartella **documenti** . Questo percorso viene usato perché è possibile presupporre che la maggior parte dei computer che eseguono il sistema operativo Windows includa questa cartella. La scelta di questa località consente anche agli utenti con livelli di accesso di sistema minimi di eseguire l'applicazione in modo sicuro. Nell'esempio seguente si presuppone un modulo con un controllo <xref:System.Windows.Forms.RichTextBox> già aggiunto.
 
     ```vb
     Public Sub SaveFile()
@@ -93,4 +93,4 @@ Per salvare un file, chiamare il <xref:System.Windows.Forms.RichTextBox.SaveFile
 - <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RichTextBox>
 - [Controllo RichTextBox](richtextbox-control-windows-forms.md)
-- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)
+- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)

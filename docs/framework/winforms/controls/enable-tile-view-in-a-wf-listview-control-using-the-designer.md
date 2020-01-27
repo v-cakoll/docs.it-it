@@ -1,17 +1,17 @@
 ---
-title: 'Procedura: abilitare la visualizzazione affiancata in un controllo ListView Windows Form mediante la finestra di progettazione'
+title: Abilitare la visualizzazione affiancata nel controllo ListView usando la finestra di progettazione
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tile view feature
 - ListView control [Windows Forms], tile view
 - tiling [Windows Forms], Windows Forms, controls
 ms.assetid: 12f0816a-52b8-41ee-a6d9-ded3a8a5817a
-ms.openlocfilehash: 4f51d3a596bc3358942cdfd654b3e4515d96cd07
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: a0429efaab14995ab1e3f3b0dfd91db61de72fbf
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960104"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745811"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>Procedura: abilitare la visualizzazione affiancata in un controllo ListView Windows Form mediante la finestra di progettazione
 La caratteristica visualizzazione affiancata del controllo <xref:System.Windows.Forms.ListView> consente di fornire un equilibrio visivo tra informazioni grafiche e testuali. Le informazioni testuali visualizzate per un elemento nella visualizzazione affiancata corrisponde alle informazioni della colonna definite per la visualizzazione dettagli. Funzioni di visualizzazione affiancate in combinazione con le funzionalità di raggruppamento o di contrassegno di inserimento nel controllo <xref:System.Windows.Forms.ListView>.

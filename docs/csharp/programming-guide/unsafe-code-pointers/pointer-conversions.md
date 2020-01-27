@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
-ms.openlocfilehash: 308d5e0646eeb94012dbe18d46d6d33f67dfeaf5
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 517166331d2bcf73132269ce2adcf68d5f60b4fe
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75698365"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745359"
 ---
 # <a name="pointer-conversions-c-programming-guide"></a>Conversioni di puntatori (Guida per programmatori C#)
 Nella tabella seguente sono illustrate le conversioni di puntatori implicite predefinite. Le conversioni implicite possono avere luogo in numerose situazioni, ad esempio le chiamate di metodi e le istruzioni di assegnazione.  
@@ -43,7 +43,7 @@ Nella tabella seguente sono illustrate le conversioni di puntatori implicite pre
 - [Guida per programmatori C#](../index.md)
 - [Tipi di puntatori](pointer-types.md)
 - [Tipi riferimento](../../language-reference/keywords/reference-types.md)
-- [Tipi valore](../../language-reference/keywords/value-types.md)
+- [Tipi valore](../../language-reference/builtin-types/value-types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)
 - [Istruzione fixed](../../language-reference/keywords/fixed-statement.md)
 - [stackalloc](../../language-reference/operators/stackalloc.md)

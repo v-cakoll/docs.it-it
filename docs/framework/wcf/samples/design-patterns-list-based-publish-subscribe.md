@@ -2,12 +2,12 @@
 title: 'Modelli di progettazione: pubblicazione-sottoscrizione basata su elenchi'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 831e6947c0919e8112627ff0a0697592f598561b
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 3a62b09a29ec0b7e241bf2fdc09df6eaba5420c7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716347"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728836"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Modelli di progettazione: pubblicazione-sottoscrizione basata su elenchi
 Questo esempio illustra il modello di pubblicazione-sottoscrizione basato su elenchi implementato come programma Windows Communication Foundation (WCF).  
@@ -15,7 +15,7 @@ Questo esempio illustra il modello di pubblicazione-sottoscrizione basato su ele
 > [!NOTE]
 > La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
   
- Il modello di progettazione di pubblicazione-sottoscrizione basato su elenchi viene descritto nella pubblicazione di Microsoft Patterns & Practices, [modelli di integrazione](https://go.microsoft.com/fwlink/?LinkId=95894). Il modello di pubblicazione-sottoscrizione passa le informazioni a una raccolta di destinatari che hanno sottoscritto un argomento di informazioni. La pubblicazione-sottoscrizione basata su elenchi gestisce un elenco di sottoscrittori. Quando esistono informazioni da condividere, una copia viene inviata a ogni sottoscrittore presente nell'elenco. In questo esempio viene illustrato un modello di pubblicazione-sottoscrizione basato su elenchi dinamici, in cui i client possono effettuare la sottoscrizione o annullare la sottoscrizione ogni volta che lo desiderano.  
+ Il modello di progettazione di pubblicazione-sottoscrizione basato su elenchi viene descritto nella pubblicazione di Microsoft Patterns & Practices, [modelli di integrazione](https://docs.microsoft.com/previous-versions/msp-n-p/ff647309(v=pandp.10)). Il modello di pubblicazione-sottoscrizione passa le informazioni a una raccolta di destinatari che hanno sottoscritto un argomento di informazioni. La pubblicazione-sottoscrizione basata su elenchi gestisce un elenco di sottoscrittori. Quando esistono informazioni da condividere, una copia viene inviata a ogni sottoscrittore presente nell'elenco. In questo esempio viene illustrato un modello di pubblicazione-sottoscrizione basato su elenchi dinamici, in cui i client possono effettuare la sottoscrizione o annullare la sottoscrizione ogni volta che lo desiderano.  
   
  L'esempio di pubblicazione-sottoscrizione basata su elenchi consiste in un client, un servizio e un programma dell'origine dati. È consentita l'esecuzione di più client e più programmi delle origini dati. I client sottoscrivono il servizio, ricevono le notifiche e annullano la sottoscrizione. I programmi delle origini dati inviano informazioni al servizio da condividere con tutti i sottoscrittori correnti.  
   

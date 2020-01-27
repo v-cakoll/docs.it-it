@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: ancorare i controlli in Windows Form'
+title: Ancorare i controlli (Dock)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], docking
@@ -9,12 +9,12 @@ ms.assetid: bc11f2e4-e90a-4830-b0e2-f43b6e2b8bec
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 82aef0ae9abacad33b21920f88591c0e4c33dfcb
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 02f1c26dcb322a39c41781c83d8c820bd2fd27e0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460556"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745518"
 ---
 # <a name="how-to-dock-controls-on-windows-forms"></a>Procedura: ancorare i controlli in Windows Forms
 
@@ -44,7 +44,7 @@ La proprietà <xref:System.Windows.Forms.Control.Dock%2A> interagisce con la pro
 
 - [Controlli Windows Form](index.md)
 - [Impostazione delle etichette di singoli controlli Windows Form e creazione dei relativi tasti di scelta rapida](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)
+- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)
 - [Controlli Windows Form per funzione](windows-forms-controls-by-function.md)
 - [Procedura: Ancorare e agganciare controlli figlio in un controllo FlowLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
 - [Procedura: Agganciare e ancorare controlli figlio in un controllo TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)

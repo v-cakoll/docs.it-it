@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: Creazione di contenuto Direct3D9 per l'hosting in WPF"
+title: Crea contenuto Direct3D9 per l'hosting
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 286e98bc-1eaa-4b5e-923d-3490a9cca5fc
-ms.openlocfilehash: 462220b526db90d3acfa90a28f9bfd56dbe813e2
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 847ee74da5b295c2c9d3824b3df74f94bc98a4db
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991403"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76727913"
 ---
-# <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>Procedura dettagliata: Creazione di contenuto Direct3D9 per l'hosting in WPF
+# <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>Procedura dettagliata: creazione di contenuto Direct3D9 per l'hosting in WPF
 In questa procedura dettagliata viene illustrato come creare contenuto Direct3D9 adatto per l'hosting in un'applicazione Windows Presentation Foundation (WPF). Per ulteriori informazioni sull'hosting di contenuto Direct3D9 nelle applicazioni WPF, vedere [WPF and Direct3D9 Interoperation](wpf-and-direct3d9-interoperation.md).
 
  Questa procedura dettagliata prevede l'esecuzione delle attività seguenti:
@@ -41,7 +41,7 @@ In questa procedura dettagliata viene illustrato come creare contenuto Direct3D9
 
      Si apre la creazione guidata applicazione Win32 e viene visualizzata la schermata iniziale.
 
-2. Fare clic su **Avanti**.
+2. Scegliere **Avanti**.
 
      Viene visualizzata la schermata Impostazioni applicazione.
 
@@ -65,9 +65,9 @@ In questa procedura dettagliata viene illustrato come creare contenuto Direct3D9
 
 10. Selezionare il nodo di **input** .
 
-11. Nel campo **dipendenze aggiuntive** aggiungere i `d3d9.lib` file e `d3dx9.lib` .
+11. Nel campo **dipendenze aggiuntive** aggiungere i file di `d3d9.lib` e `d3dx9.lib`.
 
-12. In Esplora soluzioni aggiungere un nuovo file di definizione del modulo (con estensione def `D3DContent.def` ) denominato al progetto.
+12. In Esplora soluzioni aggiungere un nuovo file di definizione del modulo (con estensione def) denominato `D3DContent.def` al progetto.
 
 ## <a name="creating-the-direct3d9-content"></a>Creazione del contenuto di Direct3D9
  Per ottenere prestazioni ottimali, il contenuto di Direct3D9 deve usare impostazioni particolari. Nel codice seguente viene illustrato come creare una superficie Direct3D9 con le caratteristiche di prestazioni ottimali. Per ulteriori informazioni, vedere [considerazioni sulle prestazioni per l'interoperabilità Direct3D9 e WPF](performance-considerations-for-direct3d9-and-wpf-interoperability.md).
@@ -76,7 +76,7 @@ In questa procedura dettagliata viene illustrato come creare contenuto Direct3D9
 
 1. Utilizzando Esplora soluzioni, aggiungere tre C++ classi al progetto denominate quanto segue.
 
-     `CRenderer`(con distruttore virtuale)
+     `CRenderer` (con distruttore virtuale)
 
      `CRendererManager`
 
@@ -133,11 +133,11 @@ In questa procedura dettagliata viene illustrato come creare contenuto Direct3D9
     Destroy
     ```
 
-12. Compilare il progetto.
+12. Compilazione del progetto.
 
-## <a name="next-steps"></a>Fasi successive
+## <a name="next-steps"></a>Passaggi successivi
 
-- Ospitare il contenuto di Direct3D9 in un'applicazione WPF. Per altre informazioni, vedere [Procedura dettagliata: Hosting di contenuto Direct3D9 in](walkthrough-hosting-direct3d9-content-in-wpf.md)WPF.
+- Ospitare il contenuto di Direct3D9 in un'applicazione WPF. Per ulteriori informazioni, vedere [procedura dettagliata: hosting di contenuto Direct3D9 in WPF](walkthrough-hosting-direct3d9-content-in-wpf.md).
 
 ## <a name="see-also"></a>Vedere anche
 

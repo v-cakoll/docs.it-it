@@ -1,5 +1,5 @@
 ---
-title: Cenni preliminari sui controlli HScrollBar e VScrollBar (Windows Form)
+title: Panoramica dei controlli HScrollBar e VScrollBar
 ms.date: 03/30/2017
 f1_keywords:
 - HScrollBar
@@ -11,32 +11,32 @@ helpviewer_keywords:
 - ScrollBar control [Windows Forms], about ScrollBar control
 - scroll bars [Windows Forms], about scroll bars
 ms.assetid: 8b307679-1cae-41d8-99aa-3d1efd207cd6
-ms.openlocfilehash: d4a7912a5781fc583357affa728f7d81059b5cf9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: abe0c8da9723f17cb80715454f6ab7297724a21f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61928573"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728169"
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-overview-windows-forms"></a>Cenni preliminari sui controlli HScrollBar e VScrollBar (Windows Form)
-Windows Form <xref:System.Windows.Forms.ScrollBar> controlli vengono utilizzati per semplificare la navigazione tramite un lungo elenco di elementi o una grande quantità di informazioni mediante lo scorrimento orizzontale o verticale all'interno di un'applicazione o un controllo. Le barre di scorrimento rappresentano un elemento comune dell'interfaccia di Windows, in modo che il <xref:System.Windows.Forms.ScrollBar> controllo viene spesso usato con i controlli che non derivano dal <xref:System.Windows.Forms.ScrollableControl> classe. In modo analogo, molti sviluppatori scelgono incorporare il <xref:System.Windows.Forms.ScrollBar> controllare quando si creano i propri controlli utente.  
+Windows Forms controlli <xref:System.Windows.Forms.ScrollBar> vengono utilizzati per semplificare la navigazione attraverso un lungo elenco di elementi o una grande quantità di informazioni scorrendo orizzontalmente o verticalmente all'interno di un'applicazione o di un controllo. Le barre di scorrimento sono un elemento comune dell'interfaccia di Windows, pertanto il controllo <xref:System.Windows.Forms.ScrollBar> viene spesso usato con controlli che non derivano dalla classe <xref:System.Windows.Forms.ScrollableControl>. Allo stesso modo, molti sviluppatori scelgono di incorporare il controllo <xref:System.Windows.Forms.ScrollBar> durante la creazione dei propri controlli utente.  
   
- Il <xref:System.Windows.Forms.HScrollBar> (orizzontale) e <xref:System.Windows.Forms.VScrollBar> controlli (verticali) funzionano in modo indipendente da altri controlli e avere il proprio set di metodi, proprietà ed eventi. <xref:System.Windows.Forms.ScrollBar> i controlli non sono uguali alle barre di scorrimento incorporate sono associate a caselle di testo, caselle di riepilogo, caselle combinate o i form MDI (il <xref:System.Windows.Forms.TextBox> controllo ha un <xref:System.Windows.Forms.TextBox.ScrollBars%2A> proprietà per visualizzare o nascondere le barre di scorrimento che sono associate al controllo).  
+ I controlli <xref:System.Windows.Forms.HScrollBar> (orizzontali) e <xref:System.Windows.Forms.VScrollBar> (verticali) funzionano indipendentemente da altri controlli e hanno un proprio set di eventi, proprietà e metodi. i controlli <xref:System.Windows.Forms.ScrollBar> non sono uguali alle barre di scorrimento predefinite collegate a caselle di testo, caselle di riepilogo, caselle combinate o form MDI (il controllo <xref:System.Windows.Forms.TextBox> dispone di una proprietà <xref:System.Windows.Forms.TextBox.ScrollBars%2A> per mostrare o nascondere le barre di scorrimento collegate al controllo).  
   
- Il <xref:System.Windows.Forms.ScrollBar> controlli usano il <xref:System.Windows.Forms.ScrollBar.Scroll> evento per monitorare lo spostamento della casella di scorrimento (anche detta il controllo thumb) lungo la barra di scorrimento. Uso di <xref:System.Windows.Forms.ScrollBar.Scroll> evento consente di accedere al valore della barra di scorrimento durante il trascinamento.  
+ I controlli <xref:System.Windows.Forms.ScrollBar> utilizzano l'evento <xref:System.Windows.Forms.ScrollBar.Scroll> per monitorare lo spostamento della casella di scorrimento (talvolta definita cursore) lungo la barra di scorrimento. L'utilizzo dell'evento <xref:System.Windows.Forms.ScrollBar.Scroll> consente di accedere al valore della barra di scorrimento mentre viene trascinato.  
   
 ## <a name="value-property"></a>Proprietà Value  
- Il <xref:System.Windows.Forms.ScrollBar.Value%2A> proprietà (ovvero, per impostazione predefinita, 0) è un `integer` valore corrisponde alla posizione della casella di scorrimento nella barra di scorrimento. Una volta la posizione di casella di scorrimento dal valore minimo, sposta la posizione più a sinistra (per le barre di scorrimento orizzontale) o la posizione superiore (per le barre di scorrimento verticale). Quando la casella di scorrimento è il valore massimo, la casella si sposta al più a destra o posizione inferiore. Un valore compreso tra la parte inferiore e superiore dell'intervallo in modo analogo, posiziona il bordo iniziale della casella di scorrimento al centro della barra di scorrimento.  
+ La proprietà <xref:System.Windows.Forms.ScrollBar.Value%2A> (che, per impostazione predefinita, è 0) è un valore `integer` corrispondente alla posizione della casella di scorrimento nella barra di scorrimento. Quando la posizione della casella di scorrimento è impostata sul valore minimo, viene spostata nella posizione più a sinistra (per le barre di scorrimento orizzontali) o nella posizione superiore (per le barre di scorrimento verticali). Quando la casella di scorrimento è impostata sul valore massimo, la casella di scorrimento viene spostata nella posizione più a destra o in basso. Analogamente, un valore a metà tra la parte inferiore e la parte superiore dell'intervallo posiziona il bordo iniziale della casella di scorrimento al centro della barra di scorrimento.  
   
- Oltre a utilizzare il mouse per modificare il valore della barra di scorrimento, un utente può trascinare anche la casella di scorrimento in qualsiasi punto lungo la barra. Il valore risultante dipende dalla posizione della casella di scorrimento, ma è sempre compreso tra il <xref:System.Windows.Forms.ScrollBar.Minimum%2A> a <xref:System.Windows.Forms.ScrollBar.Maximum%2A> proprietà impostate dall'utente.  
+ Oltre a usare i clic del mouse per modificare il valore della barra di scorrimento, un utente può anche trascinare la casella di scorrimento in un punto lungo la barra. Il valore risultante dipende dalla posizione della casella di scorrimento, ma è sempre compreso nell'intervallo del <xref:System.Windows.Forms.ScrollBar.Minimum%2A> <xref:System.Windows.Forms.ScrollBar.Maximum%2A> proprietà impostate dall'utente.  
   
-## <a name="largechange-and-smallchange-properties"></a>Proprietà SmallChange e LargeChange  
- Quando l'utente preme il tasto PGSU o PGGIÙ o fa clic sull'indicatore di avanzamento in entrambi i lati della casella di scorrimento, il <xref:System.Windows.Forms.ScrollBar.Value%2A> le modifiche alle proprietà in base al valore impostato <xref:System.Windows.Forms.ScrollBar.LargeChange%2A> proprietà.  
+## <a name="largechange-and-smallchange-properties"></a>Proprietà LargeChange e SmallChange  
+ Quando l'utente preme il tasto PGSU o PGGIÙ o fa clic sull'indicatore di avanzamento della barra di scorrimento su entrambi i lati della casella di scorrimento, la proprietà <xref:System.Windows.Forms.ScrollBar.Value%2A> cambia in base al valore impostato nella proprietà <xref:System.Windows.Forms.ScrollBar.LargeChange%2A>.  
   
- Quando l'utente preme uno della freccia di tasti o fa clic su uno dei pulsanti della barra di scorrimento, il <xref:System.Windows.Forms.ScrollBar.Value%2A> le modifiche alle proprietà in base al valore impostato <xref:System.Windows.Forms.ScrollBar.SmallChange%2A> proprietà.  
+ Quando l'utente preme uno dei tasti di direzione o fa clic su uno dei pulsanti della barra di scorrimento, la proprietà <xref:System.Windows.Forms.ScrollBar.Value%2A> cambia in base al valore impostato nella proprietà <xref:System.Windows.Forms.ScrollBar.SmallChange%2A>.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.HScrollBar>
 - <xref:System.Windows.Forms.VScrollBar>
-- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)
+- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)

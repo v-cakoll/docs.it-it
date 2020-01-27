@@ -1,5 +1,5 @@
 ---
-title: Layout di controlli Windows Form
+title: Layout dei controlli
 ms.date: 03/30/2017
 helpviewer_keywords:
 - layout [Windows Forms]
@@ -7,33 +7,33 @@ helpviewer_keywords:
 - Margin property [Windows Forms]
 - Padding property [Windows Forms]
 ms.assetid: 99400e3a-720e-4f56-b68f-89df911a251c
-ms.openlocfilehash: d1a3954c8eda87bdda9fa17df1bd2b3858c43619
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed8603e997e7d0c1ed7a2ebda6dc960726d32f45
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012828"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745241"
 ---
 # <a name="layout-in-windows-forms-controls"></a>Layout di controlli Windows Form
 
-Per molte applicazioni è estremamente importante la sistemazione precisa dei controlli nel form. Il <xref:System.Windows.Forms?displayProperty=nameWithType> dello spazio dei nomi offre molti strumenti di layout per eseguire questa operazione.
+Per molte applicazioni è estremamente importante la sistemazione precisa dei controlli nel form. Lo spazio dei nomi <xref:System.Windows.Forms?displayProperty=nameWithType> fornisce molti strumenti di layout a questo scopo.
 
 ## <a name="in-this-section"></a>In questa sezione
 
-[Cenni preliminari sulle proprietà AutoSize](autosize-property-overview.md)\
-Viene descritto il <xref:System.Windows.Forms.Control.AutoSize%2A> proprietà e il suo ruolo nel layout.
+[Panoramica delle proprietà AutoSize](autosize-property-overview.md)\
+Descrive la proprietà <xref:System.Windows.Forms.Control.AutoSize%2A> e il relativo ruolo nel layout.
 
-[Margini e spaziatura nei controlli Windows Form](margin-and-padding-in-windows-forms-controls.md)\
-Descrive la <xref:System.Windows.Forms.Control.Margin%2A> e <xref:System.Windows.Forms.Control.Padding%2A> proprietà e i relativi ruoli nel layout.
+[Margini e spaziatura interna nei controlli Windows Forms](margin-and-padding-in-windows-forms-controls.md)\
+Descrive le proprietà <xref:System.Windows.Forms.Control.Margin%2A> e <xref:System.Windows.Forms.Control.Padding%2A> e i relativi ruoli nel layout.
 
-[Procedura: Allineare un controllo ai bordi dei form](how-to-align-a-control-to-the-edges-of-forms.md)\
-Viene illustrato come utilizzare il <xref:System.Windows.Forms.Control.Dock%2A> proprietà per allineare il controllo al bordo del form occupato.
+[Procedura: allineare un controllo ai bordi dei form](how-to-align-a-control-to-the-edges-of-forms.md)\
+Viene illustrato come utilizzare la proprietà <xref:System.Windows.Forms.Control.Dock%2A> per allineare il controllo al bordo del form che occupa.
 
-[Procedura: Creare un bordo intorno a un controllo Windows Form usando il riempimento di controllo](how-to-create-a-border-around-a-windows-forms-control-using-padding.md)\
-Viene illustrato come utilizzare il <xref:System.Windows.Forms.Control.Padding%2A> proprietà descrive un controllo.
+[Procedura: creare un bordo intorno a un controllo Windows Forms usando la spaziatura interna](how-to-create-a-border-around-a-windows-forms-control-using-padding.md)\
+Viene illustrato come utilizzare la proprietà <xref:System.Windows.Forms.Control.Padding%2A> per delineare un controllo.
 
-[Procedura: Implementare un motore di Layout personalizzati](how-to-implement-a-custom-layout-engine.md)\
-Viene illustrato come implementare un <xref:System.Windows.Forms.Layout.LayoutEngine> per la disposizione di controlli Windows Form.
+[Procedura: implementare un motore di layout personalizzato](how-to-implement-a-custom-layout-engine.md)\
+Viene illustrato come implementare un <xref:System.Windows.Forms.Layout.LayoutEngine> per la disposizione dei controlli Windows Forms.
 
 ## <a name="reference"></a>Riferimenti
 
@@ -46,6 +46,6 @@ Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.
 ## <a name="see-also"></a>Vedere anche
 
 - [Procedura: Ancorare e agganciare controlli figlio in un controllo FlowLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
-- [Procedura: Ancorare e agganciare controlli figlio in un controllo TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [Procedura: Progettare un Layout di Windows Form che risponda correttamente alla localizzazione](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)
+- [Procedura: Agganciare e ancorare controlli figlio in un controllo TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [Procedura: Progettare un layout di Windows Form che risponda correttamente alla localizzazione](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)
 - [Comportamento di AutoSize nel controllo TableLayoutPanel](autosize-behavior-in-the-tablelayoutpanel-control.md)

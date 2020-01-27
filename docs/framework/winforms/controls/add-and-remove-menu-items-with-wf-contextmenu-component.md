@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Aggiungere e rimuovere voci di menu con il componente ContextMenu di Windows Forms'
+title: Aggiungere e rimuovere voci di menu con il componente ContextMenu
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,26 +16,26 @@ helpviewer_keywords:
 - context menus [Windows Forms], examples
 - examples [Windows Forms], context menus
 ms.assetid: 426d1eaf-7fb8-4b0b-8a33-5e8721786ea4
-ms.openlocfilehash: 5d1862b1fc1398f0f8c2217b51c4efb93db639af
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 989ab6d47ec761930a32f542b5fa1136e831f73d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957024"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746278"
 ---
-# <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>Procedura: Aggiungere e rimuovere voci di menu con il componente ContextMenu di Windows Forms
+# <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>Procedura: aggiungere e rimuovere voci di menu tramite il componente ContextMenu Windows Form
 Viene illustrato come aggiungere e rimuovere voci di menu di scelta rapida in Windows Forms.  
   
- Il componente <xref:System.Windows.Forms.ContextMenu> Windows Forms fornisce un menu dei comandi utilizzati di frequente che sono rilevanti per l'oggetto selezionato. È possibile aggiungere elementi al menu di scelta rapida aggiungendo <xref:System.Windows.Forms.MenuItem> oggetti <xref:System.Windows.Forms.Menu.MenuItems%2A> alla raccolta.  
+ Il componente Windows Forms <xref:System.Windows.Forms.ContextMenu> fornisce un menu dei comandi utilizzati di frequente che sono rilevanti per l'oggetto selezionato. È possibile aggiungere elementi al menu di scelta rapida aggiungendo <xref:System.Windows.Forms.MenuItem> oggetti alla raccolta di <xref:System.Windows.Forms.Menu.MenuItems%2A>.  
   
  È possibile rimuovere elementi da un menu di scelta rapida in modo permanente; Tuttavia, in fase di esecuzione può essere più appropriato nascondere o disabilitare gli elementi.  
   
 > [!IMPORTANT]
-> Anche <xref:System.Windows.Forms.MenuStrip> se <xref:System.Windows.Forms.ContextMenuStrip> e sostituiscono e aggiungono <xref:System.Windows.Forms.MainMenu> funzionalità <xref:System.Windows.Forms.ContextMenu> ai controlli e delle versioni precedenti <xref:System.Windows.Forms.ContextMenu> e vengono conservati per compatibilità con le versioni precedenti e per un uso futuro, <xref:System.Windows.Forms.MainMenu> se si sceglie.  
+> Anche se <xref:System.Windows.Forms.MenuStrip> e <xref:System.Windows.Forms.ContextMenuStrip> sostituiscono e aggiungono funzionalità ai controlli <xref:System.Windows.Forms.MainMenu> e <xref:System.Windows.Forms.ContextMenu> delle versioni precedenti, <xref:System.Windows.Forms.MainMenu> e <xref:System.Windows.Forms.ContextMenu> vengono conservati sia per la compatibilità con le versioni precedenti che per un uso futuro, se lo si desidera.  
   
 ### <a name="to-remove-items-from-a-shortcut-menu"></a>Per rimuovere elementi da un menu di scelta rapida  
   
-1. Utilizzare il <xref:System.Windows.Forms.Menu.MenuItemCollection.Remove%2A> metodo <xref:System.Windows.Forms.Menu.MenuItemCollection.RemoveAt%2A> <xref:System.Windows.Forms.Menu.MenuItems%2A> o<xref:System.Windows.Forms.ContextMenu> della raccolta del componente per rimuovere una particolare voce di menu.  
+1. Usare il metodo <xref:System.Windows.Forms.Menu.MenuItemCollection.Remove%2A> o <xref:System.Windows.Forms.Menu.MenuItemCollection.RemoveAt%2A> della raccolta <xref:System.Windows.Forms.Menu.MenuItems%2A> del componente <xref:System.Windows.Forms.ContextMenu> per rimuovere una particolare voce di menu.  
   
     ```vb  
     ' Removes the first item in the shortcut menu.  
@@ -58,9 +58,9 @@ Viene illustrato come aggiungere e rimuovere voci di menu di scelta rapida in Wi
     contextMenu1->MenuItems->Remove(mnuItemNew);  
     ```  
   
-     -oppure-  
+     oppure  
   
-2. Usare il `Clear` metodo `MenuItems` della raccolta del <xref:System.Windows.Forms.ContextMenu> componente per rimuovere tutti gli elementi dal menu.  
+2. Usare il metodo `Clear` della raccolta `MenuItems` del componente <xref:System.Windows.Forms.ContextMenu> per rimuovere tutti gli elementi dal menu.  
   
     ```vb  
     ContextMenu1.MenuItems.Clear()  

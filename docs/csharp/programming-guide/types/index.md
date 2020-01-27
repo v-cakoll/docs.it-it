@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 0b7c9fc0e9dd0f559c52f692c405a3f9e68814d0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: be2af77f9680ab3285720525638bba8ef2041999
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711883"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745371"
 ---
 # <a name="types-c-programming-guide"></a>Tipi (Guida per programmatori C#)
 
@@ -113,7 +113,7 @@ Usare la parola chiave [struct](../../language-reference/keywords/struct.md) per
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 
-Per altre informazioni sui tipi struct, vedere [Struct](../classes-and-structs/structs.md). Per altre informazioni sui tipi valore in .NET, vedere [Tipi valore](../../language-reference/keywords/value-types.md).
+Per altre informazioni sui tipi struct, vedere [Struct](../classes-and-structs/structs.md). Per ulteriori informazioni sui tipi di valore, vedere [tipi di valore](../../language-reference/builtin-types/value-types.md).
 
 L'altra categoria di tipi valore è [enum](../../language-reference/builtin-types/enum.md). Un tipo enum definisce un set di costanti integrali denominate. L'enumerazione <xref:System.IO.FileMode?displayProperty=nameWithType> nella libreria di classi .NET, ad esempio, contiene un set di valori interi costanti e denominati che specificano come deve essere aperto un file. L'enumerazione deve essere definita come illustrato nell'esempio seguente:
 
@@ -148,7 +148,7 @@ I tipi riferimento supportano completamente l'ereditarietà. Quando si crea una 
 
 ## <a name="types-of-literal-values"></a>Tipi di valori letterali
 
-In C# i valori letterali ricevono un tipo dal compilatore. È possibile specificare come deve essere tipizzato un valore letterale numerico aggiungendo una lettera alla fine del numero. Per specificare, ad esempio, che il valore 4.56 deve essere considerato come un tipo float, aggiungere una "f" o una "F" dopo il numero: `4.56f`. Se non viene aggiunta alcuna lettera, il compilatore dedurrà un tipo per il valore letterale. Per altre informazioni sui tipi che possono essere specificati con suffissi letterali, vedere le pagine di riferimento relative ai singoli tipi in [Tipi valore](../../language-reference/keywords/value-types.md).
+In C# i valori letterali ricevono un tipo dal compilatore. È possibile specificare come deve essere tipizzato un valore letterale numerico aggiungendo una lettera alla fine del numero. Per specificare, ad esempio, che il valore 4.56 deve essere considerato come un tipo float, aggiungere una "f" o una "F" dopo il numero: `4.56f`. Se non viene aggiunta alcuna lettera, il compilatore dedurrà un tipo per il valore letterale. Per ulteriori informazioni sui tipi che è possibile specificare con i suffissi di lettera, vedere [tipi numerici integrali](../../language-reference/builtin-types/integral-numeric-types.md) e [tipi numerici a virgola mobile](../../language-reference/builtin-types/floating-point-numeric-types.md).
 
 Poiché i valori letterali sono tipizzati e tutti i tipi derivano in ultima istanza da <xref:System.Object?displayProperty=nameWithType>, è possibile scrivere e compilare codice come il seguente:
 
@@ -185,7 +185,7 @@ Per altre informazioni, vedere i seguenti argomenti:
 
 - [Uso del tipo dinamico](./using-type-dynamic.md)
 
-- [Tipi valore](../../language-reference/keywords/value-types.md)
+- [Tipi valore](../../language-reference/builtin-types/value-types.md)
 
 - [Tipi riferimento](../../language-reference/keywords/reference-types.md)
 

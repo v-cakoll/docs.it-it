@@ -1,5 +1,5 @@
 ---
-title: Cenni preliminari sui componenti aggiuntivi di WPF
+title: Cenni preliminari sui componenti aggiuntivi
 ms.date: 03/30/2017
 helpviewer_keywords:
 - add-ins and XAML browser applications [WPF]
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 319f8b8c0225c7730112b1db073884b391945ac8
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 93904e308932ea41c736ca849ce0efb200502a7e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421094"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738936"
 ---
 # <a name="wpf-add-ins-overview"></a>Cenni preliminari sui componenti aggiuntivi di WPF
 
@@ -25,7 +25,7 @@ ms.locfileid: "73421094"
 
 <a name="Requirements"></a>
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 È necessaria una certa familiarità con il modello di componente aggiuntivo .NET Framework. Per altre informazioni, vedere [Componenti aggiuntivi ed estendibilità](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
 
@@ -252,7 +252,7 @@ Per sua natura, <xref:System.Windows.Interop.HwndHost> presenta alcune limitazio
 
 ## <a name="wpf-add-in-benefits"></a>Vantaggi dei componenti aggiuntivi WPF
 
-Poiché le interfacce utente dei componenti aggiuntivi WPF vengono visualizzate dalle applicazioni host mediante una classe interna che deriva da <xref:System.Windows.Interop.HwndHost>, tali interfacce utente sono limitate dalle funzionalità di <xref:System.Windows.Interop.HwndHost> rispetto ai servizi dell'interfaccia utente WPF, ad esempio layout, rendering e dati. Binding, stili, modelli e risorse. WPF, tuttavia, aumenta la sottoclasse <xref:System.Windows.Interop.HwndHost> interna con funzionalità aggiuntive che includono quanto segue:
+Poiché le interfacce utente dei componenti aggiuntivi WPF vengono visualizzate dalle applicazioni host utilizzando una classe interna che deriva da <xref:System.Windows.Interop.HwndHost>, tali interfacce utente sono limitate dalle funzionalità di <xref:System.Windows.Interop.HwndHost> rispetto ai servizi dell'interfaccia utente WPF, ad esempio layout, rendering, data binding, stili, modelli e risorse. WPF, tuttavia, aumenta la sottoclasse <xref:System.Windows.Interop.HwndHost> interna con funzionalità aggiuntive che includono quanto segue:
 
 - Tabulazione tra l'interfaccia utente di un'applicazione host e l'interfaccia utente di un componente aggiuntivo. Si noti che il modello di programmazione "componente aggiuntivo è un'interfaccia utente" richiede che l'adattatore sul lato del componente aggiuntivo esegua l'override <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> per abilitare la tabulazione, indipendentemente dal fatto che il componente aggiuntivo sia completamente attendibile o parzialmente attendibile.
 

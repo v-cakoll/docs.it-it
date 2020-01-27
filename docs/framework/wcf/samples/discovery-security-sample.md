@@ -2,15 +2,16 @@
 title: Esempio di sicurezza di individuazione
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 8469b69baabcd2ba9185956c276554b4bb929d85
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: cfee226f52bc5f001b2952b76b40ce0eb8aebceb
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74712051"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728858"
 ---
 # <a name="discovery-security-sample"></a>Esempio di sicurezza di individuazione
-La specifica Discovery non richiede che gli endpoint che partecipano al processo di individuazione siano sicuri. Il potenziamento dei messaggi di individuazione tramite la sicurezza riduce tuttavia la possibilità di vari tipi di attacchi (modifica del messaggio, Denial of Service, replay, spoofing). In questo esempio vengono implementati canali personalizzati che calcolano e verificano le firme dei messaggi usando il formato di firma compatto (descritto nella Sezione 8.2 della specifica WS-Discovery). L'esempio supporta sia la [specifica di individuazione 2005](https://go.microsoft.com/fwlink/?LinkId=177912) che la [versione 1,1](https://go.microsoft.com/fwlink/?LinkId=179677).  
+
+La specifica Discovery non richiede che gli endpoint che partecipano al processo di individuazione siano sicuri. Il potenziamento dei messaggi di individuazione tramite la sicurezza riduce tuttavia la possibilità di vari tipi di attacchi (modifica del messaggio, Denial of Service, replay, spoofing). In questo esempio vengono implementati canali personalizzati che calcolano e verificano le firme dei messaggi usando il formato di firma compatto (descritto nella Sezione 8.2 della specifica WS-Discovery). L'esempio supporta sia la [specifica di individuazione 2005](http://specs.xmlsoap.org/ws/2005/04/discovery/ws-discovery.pdf) che la [versione 1,1](http://docs.oasis-open.org/ws-dd/discovery/1.1/cs-01/wsdd-discovery-1.1-spec-cs-01.pdf).  
   
  Il canale personalizzato viene applicato sullo stack di canali esistente per gli endpoint di individuazione e degli annunci. In questo modo, per ogni messaggio inviato viene applicata un'intestazione di firma. La firma viene verificata nei messaggi ricevuti e quando non corrisponde oppure quando i messaggi non presentano una firma, i messaggi vengono eliminati. Nell'esempio per firmare e verificare i messaggi vengono usati i certificati.  
   

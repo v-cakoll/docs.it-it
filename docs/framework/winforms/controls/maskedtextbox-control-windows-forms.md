@@ -1,5 +1,5 @@
 ---
-title: Controllo MaskedTextBox (Windows Form)
+title: Controllo MaskedTextBox
 ms.date: 03/30/2017
 f1_keywords:
 - MaskedTextBox
@@ -9,27 +9,27 @@ helpviewer_keywords:
 - validating user input [Windows Forms], Windows Forms
 - text boxes [Windows Forms], validating user input
 ms.assetid: 235d6121-027d-481d-8d59-4f6794d15d0c
-ms.openlocfilehash: af699875f6f3dea2f384574c85d85bd77a4507af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e46c5b5ec670a58b571703e9920cb3ee90a13aa
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780640"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744966"
 ---
 # <a name="maskedtextbox-control-windows-forms"></a>Controllo MaskedTextBox (Windows Form)
-Questo argomento include collegamenti ad altri utenti sul `MaskedTextBox` controllo.  
+In questo argomento vengono forniti collegamenti ad altri utenti sul controllo `MaskedTextBox`.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Procedura dettagliata: Utilizzo del controllo MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)  
- Illustra le funzionalità principali del `MaskedTextBox` controllo.  
+ Vengono illustrate le funzionalità principali del controllo `MaskedTextBox`.  
   
  [Procedura: Associare dati al controllo MaskedTextBox](how-to-bind-data-to-the-maskedtextbox-control.md)  
  Viene illustrato come riformattare i dati quando i dati nel database non corrispondono al formato previsto dalla definizione della maschera.  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.MaskedTextBox>  
- La classe primaria per l'implementazione del controllo casella di testo mascherata.  
+ Classe primaria per l'implementazione del controllo casella di testo mascherato.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)  
+ [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)  
  Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.

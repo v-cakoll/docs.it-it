@@ -2,12 +2,12 @@
 title: Esempio relativo all'individuazione di ambiti
 ms.date: 03/30/2017
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
-ms.openlocfilehash: 23991002a5236c491a9f74c7efe71ceb2bf51a37
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 8ba5618f472fc8a6e1751776060f99103a67a073
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74712070"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728747"
 ---
 # <a name="discovery-with-scopes-sample"></a>Esempio relativo all'individuazione di ambiti
 
@@ -23,7 +23,7 @@ Il metodo `FindCalculatorServiceAddress()` mostra come utilizzare un <xref:Syste
 
 ### <a name="to-use-this-sample"></a>Per usare questo esempio
 
-1. Questo esempio usa endpoint HTTP e per eseguirlo è necessario aggiungere elenchi di controllo di accesso (ACL) agli URL appropriati. Per informazioni dettagliate, vedere [configurazione di http e HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) . L'esecuzione del comando seguente con privilegi elevati consente di aggiungere gli elenchi di controllo di accesso appropriati. È necessario sostituire dominio e nome utente per gli argomenti seguenti se il comando non funziona in modo corretto: `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`
+1. Questo esempio usa endpoint HTTP e per eseguirlo è necessario aggiungere elenchi di controllo di accesso (ACL) agli URL appropriati. Per ulteriori informazioni, vedere [configurazione di http e HTTPS](../feature-details/configuring-http-and-https.md). L'esecuzione del comando seguente con privilegi elevati consente di aggiungere gli elenchi di controllo di accesso appropriati. È necessario sostituire dominio e nome utente per gli argomenti seguenti se il comando non funziona in modo corretto: `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`
 
 2. Compila la soluzione.
 

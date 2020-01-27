@@ -1,5 +1,6 @@
 ---
-title: 'Procedura dettagliata: creazione di nuovo contenuto WPF in Windows Form in fase di progettazione'
+title: Crea nuovo contenuto WPF in Windows Forms
+titleSuffix: ''
 ms.date: 08/18/2018
 helpviewer_keywords:
 - interoperability [Windows Forms], WPF and Windows Forms
@@ -11,18 +12,18 @@ ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 395543a3141af66038cabef9a3c9fed40a36b47e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 69a0598b05d1b2bff84b203317d6d5a166ce109d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460660"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746394"
 ---
 # <a name="walkthrough-create-new-wpf-content-on-windows-forms-at-design-time"></a>Procedura dettagliata: creare nuovi contenuti WPF in Windows Forms in fase di progettazione
 
 Questo articolo illustra come creare un controllo Windows Presentation Foundation (WPF) da usare nelle applicazioni basate su Windows Forms.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per completare la procedura dettagliata, è necessario Visual Studio.
 
@@ -65,7 +66,7 @@ Per creare un nuovo controllo WPF:
    > [!NOTE]
    > In generale, è opportuno ospitare contenuto WPF più sofisticato. Il controllo <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> è qui usato a solo a titolo esemplificativo.
 
-6. Compilare il progetto.
+6. Compilazione del progetto.
 
 ## <a name="add-a-wpf-control-to-a-windows-form"></a>Aggiungere un controllo WPF a un Windows Form
 

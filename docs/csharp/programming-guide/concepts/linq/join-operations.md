@@ -1,15 +1,18 @@
 ---
-title: Operazioni di join (C#)
+title: Operazioni di JoinC#()
 ms.date: 07/20/2015
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
-ms.openlocfilehash: 86d85c7de16887fbe3001dc548d940d9c114e634
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+no-loc:
+- Join
+- GroupJoin
+ms.openlocfilehash: d4bf9fe76238d8824c5255df8910c1000503dcdf
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635600"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746963"
 ---
-# <a name="join-operations-c"></a>Operazioni di join (C#)
+# <a name="opno-locjoin-operations-c"></a>Operazioni di JoinC#()
 Un *join* di due origini dati è un'associazione di oggetti in un'origine dati con oggetti che condividono un attributo comune in un'altra origine dati.  
   
  La creazione di un join è un'operazione importante nelle query che fanno riferimento a origini dati le cui relazioni reciproche non possono essere seguite direttamente. Nella programmazione orientata a oggetti ciò potrebbe corrispondere a una correlazione non modellata tra oggetti, ad esempio la direzione inversa di una relazione unidirezionale. Un esempio di relazione unidirezionale è costituito da una classe Customer che include una proprietà di tipo City, ma la classe City non include una proprietà che sia una raccolta di oggetti Customer. Se si ha un elenco di oggetti City e si vogliono trovare tutti i clienti in ogni città, è possibile usare un'operazione join per individuarli.  
@@ -27,6 +30,20 @@ Un *join* di due origini dati è un'associazione di oggetti in un'origine dati c
 |Join|Unisce due sequenze in base a funzioni selector chiave ed estrae coppie di valori|`join … in … on … equals …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=nameWithType>|  
 |GroupJoin|Unisce due sequenze in base a funzioni selector chiave e raggruppa le corrispondenze risultanti per ogni elemento.|`join … in … on … equals … into …`|<xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=nameWithType>|  
   
+## <a name="query-expression-syntax-examples"></a>Esempi di sintassi delle espressioni di query
+  
+### Join  
+  
+Nell'esempio seguente viene usata la clausola `join … in … on … equals …` per unire due sequenze in base a un valore specifico:
+  
+[!code-csharp[Join](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQJoin/CS/JoinOperation.cs#Join)]  
+
+### GroupJoin  
+
+Nell'esempio seguente viene utilizzata la clausola `join … in … on … equals … into …` per unire due sequenze in base a un valore specifico e vengono raggruppate le corrispondenze risultanti per ogni elemento:
+  
+[!code-csharp[GroupJoin](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQJoin/CS/JoinOperation.cs#GroupJoin)]  
+  
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Linq>
@@ -34,7 +51,7 @@ Un *join* di due origini dati è un'associazione di oggetti in un'origine dati c
 - [Tipi anonimi](../../classes-and-structs/anonymous-types.md)
 - [Formulare join e query di prodotto incrociato](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)
 - [Clausola join](../../../language-reference/keywords/join-clause.md)
-- [Eseguire un join usando una chiave composta](../../../linq/join-by-using-composite-keys.md)
+- [Join usando chiavi composite](../../../linq/join-by-using-composite-keys.md)
 - [Come unire il contenuto da file non analoghi (LINQ)C#()](./how-to-join-content-from-dissimilar-files-linq.md)
 - [Ordinare i risultati di una clausola join](../../../linq/order-the-results-of-a-join-clause.md)
 - [Eseguire operazioni di join personalizzate](../../../linq/perform-custom-join-operations.md)
