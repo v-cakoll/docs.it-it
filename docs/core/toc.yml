@@ -386,10 +386,7 @@
           href: tutorials/creating-app-with-plugin-support.md
         - name: Come usare ed eseguire il debug di assembly non caricabili in .NET Core
           href: ../standard/assembly/unloadability-howto.md
-- name: Compilare .NET Core dal codice sorgente
-  href: build/index.md
+- name: Creazione di pacchetti di distribuzione di .NET Core
   items:
-    - name: Creazione di pacchetti di distribuzione di .NET Core
-      href: build/distribution-packaging.md
-- name: Documentazione di Visual Studio 2015/project.json
-  href: ../project-json.md
+    - name: Panoramica
+      href: distribution-packaging.md
