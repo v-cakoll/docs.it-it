@@ -1,5 +1,5 @@
 ---
-title: Ordine degli eventi in Windows Form
+title: Ordine degli eventi
 ms.date: 03/30/2017
 helpviewer_keywords:
 - events [Windows Forms], order of
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - validation events [Windows Forms], order of
 - application startup event order
 ms.assetid: e81db09b-4453-437f-b78a-62d7cd5c9829
-ms.openlocfilehash: 28eb451c7edd740664f80f8ec35c60192764043c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 618ac5a6a6a32ae1a53fc60ac80700d7648c81a7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949868"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734854"
 ---
 # <a name="order-of-events-in-windows-forms"></a>Ordine degli eventi in Windows Form
 L'ordine in cui gli eventi vengono generati nelle applicazioni Windows Form è di particolare interesse per gli sviluppatori interessati alla gestione di ciascuno di questi eventi a turno. Quando una situazione richiede una precisa gestione degli eventi, ad esempio quando si riprogettano parti del form, è necessaria la conoscenza dell'ordine esatto in cui vengono generati gli eventi in fase di esecuzione. Questo argomento contiene alcune informazioni dettagliate sull'ordine degli eventi durante le varie fasi importanti nella durata delle applicazioni e dei controlli. Per dettagli specifici sull'ordine degli eventi di input del mouse, vedere [eventi del mouse in Windows Forms](mouse-events-in-windows-forms.md). Per una panoramica degli eventi in Windows Forms, vedere [Cenni preliminari sugli eventi](events-overview-windows-forms.md). Per informazioni dettagliate sulla composizione dei gestori eventi, vedere [Cenni preliminari sui gestori eventi](event-handlers-overview-windows-forms.md).  

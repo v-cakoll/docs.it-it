@@ -1,5 +1,5 @@
 ---
-title: Controllo ListView (Windows Form)
+title: Controllo ListView
 ms.date: 03/30/2017
 helpviewer_keywords:
 - lists
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - ListView control [Windows Forms]
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
-ms.openlocfilehash: a5f20ec34a1b4b41ec1aee667b5d4bfb0c3eebb1
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 009739f78f334d09a9f7e4f0e9f171669014b909
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960365"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745141"
 ---
 # <a name="listview-control-windows-forms"></a>Controllo ListView (Windows Form)
 Il controllo `ListView` di Windows Forms visualizza un elenco di elementi con icone. È possibile usare una visualizzazione elenco per creare un'interfaccia utente simile al riquadro destro di Esplora risorse.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica del controllo ListView](listview-control-overview-windows-forms.md)  
  Illustra il controllo e le relative funzionalità chiave e proprietà.  
   
@@ -62,7 +62,7 @@ Il controllo `ListView` di Windows Forms visualizza un elenco di elementi con ic
   
 - [Procedura dettagliata: Creazione di un'interfaccia di tipo Esplora risorse con i controlli ListView e TreeView usando la finestra di progettazione](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
   
-## <a name="reference"></a>Reference  
+## <a name="reference"></a>Riferimenti  
  Classe <xref:System.Windows.Forms.ListView>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   
@@ -78,4 +78,4 @@ Il controllo `ListView` di Windows Forms visualizza un elenco di elementi con ic
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)
+- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)

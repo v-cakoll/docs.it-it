@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Impostare e restituire valori numerici con il controllo NumericUpDown di Windows Forms'
+title: Impostare e restituire valori numerici con il controllo NumericUpDown
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Windows Forms controls, NumericUpDown
 - NumericUpDown control [Windows Forms], setting and returning values
 ms.assetid: 5bd8f8cd-4c12-49ea-9cc3-2a647d064689
-ms.openlocfilehash: 3da2c7b057732e9b2db5e048dec037e4e9910c0a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a0b264fec9619b467c293bcb96278c4517775ac3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625743"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743029"
 ---
-# <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a>Procedura: Impostare e restituire valori numerici con il controllo NumericUpDown di Windows Forms
-Il valore numerico di moduli di Windows <xref:System.Windows.Forms.NumericUpDown> controllo è determinato dal relativo <xref:System.Windows.Forms.NumericUpDown.Value%2A> proprietà. È possibile scrivere test condizionali per il valore del controllo come avviene con qualsiasi altra proprietà. Una volta il <xref:System.Windows.Forms.NumericUpDown.Value%2A> è impostata, è possibile modificarlo direttamente scrivendo codice per eseguire operazioni su di esso o è possibile chiamare il <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> e <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> metodi.  
+# <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a>Procedura: impostare e restituire valori numerici con il controllo NumericUpDown Windows Form
+Il valore numerico della Windows Forms <xref:System.Windows.Forms.NumericUpDown> controllo è determinato dalla relativa proprietà <xref:System.Windows.Forms.NumericUpDown.Value%2A>. È possibile scrivere test condizionali per il valore del controllo esattamente come per qualsiasi altra proprietà. Una volta impostata la proprietà <xref:System.Windows.Forms.NumericUpDown.Value%2A>, è possibile modificarla direttamente scrivendo codice per eseguire operazioni su di esso oppure è possibile chiamare i metodi <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> e <xref:System.Windows.Forms.NumericUpDown.DownButton%2A>.  
   
 ### <a name="to-set-the-numeric-value"></a>Per impostare il valore numerico  
   
-1. Assegnare un valore per il <xref:System.Windows.Forms.NumericUpDown.Value%2A> proprietà nel codice o nella finestra Proprietà.  
+1. Assegnare un valore alla proprietà <xref:System.Windows.Forms.NumericUpDown.Value%2A> nel codice o nel Finestra Proprietà.  
   
     ```vb  
     NumericUpDown1.Value = 55  
@@ -37,9 +37,9 @@ Il valore numerico di moduli di Windows <xref:System.Windows.Forms.NumericUpDown
     numericUpDown1->Value = 55;  
     ```  
   
-     -oppure-  
+     oppure  
   
-2. Chiamare il <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> oppure <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> metodo per aumentare o diminuire il valore di base al valore specificato nel <xref:System.Windows.Forms.NumericUpDown.Increment%2A> proprietà.  
+2. Chiamare il metodo <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> o <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> per aumentare o diminuire il valore in base alla quantità specificata nella proprietà <xref:System.Windows.Forms.NumericUpDown.Increment%2A>.  
   
     ```vb  
     NumericUpDown1.UpButton()  
@@ -55,7 +55,7 @@ Il valore numerico di moduli di Windows <xref:System.Windows.Forms.NumericUpDown
   
 ### <a name="to-return-the-numeric-value"></a>Per restituire il valore numerico  
   
-- Accesso di <xref:System.Windows.Forms.NumericUpDown.Value%2A> proprietà nel codice.  
+- Accedere alla proprietà <xref:System.Windows.Forms.NumericUpDown.Value%2A> nel codice.  
   
     ```vb  
     If NumericUpDown1.Value >= 65 Then  

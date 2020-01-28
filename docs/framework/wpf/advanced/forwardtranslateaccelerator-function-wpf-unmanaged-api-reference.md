@@ -1,5 +1,6 @@
 ---
-title: Funzione ForwardTranslateAccelerator (riferimenti alle API WPF non gestite)
+title: Funzione ForwardTranslateAccelerator-informazioni di riferimento sulle API WPF non gestite
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -8,17 +9,17 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: fff47a86-9d9f-4176-9530-10e1876e393f
-ms.openlocfilehash: 4bb7e665bb836dc5f95b14f39179f1d4b9f8173d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f6e8208ffe2c186234f30f31e346ca6b1d0be4c0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61960914"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747044"
 ---
-# <a name="forwardtranslateaccelerator-function-wpf-unmanaged-api-reference"></a>Funzione ForwardTranslateAccelerator (riferimenti alle API WPF non gestite)
-Questa API supporta l'infrastruttura Windows Presentation Foundation (WPF) e non deve essere usato direttamente dal codice.  
+# <a name="forwardtranslateaccelerator-function-wpf-unmanaged-api-reference"></a>Funzione ForwardTranslateAccelerator (riferimenti alle API non gestite WPF)
+Questa API supporta l'infrastruttura Windows Presentation Foundation (WPF) e non può essere usata direttamente dal codice.  
   
- Utilizzata dall'infrastruttura Windows Presentation Foundation (WPF) per la gestione di windows.  
+ Utilizzato dall'infrastruttura Windows Presentation Foundation (WPF) per la gestione di Windows.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -31,21 +32,21 @@ HRESULT ForwardTranslateAccelerator(
   
 ## <a name="parameters"></a>Parametri  
  pMsg  
- Un puntatore a un messaggio.  
+ Puntatore a un messaggio.  
   
  appUnhandled  
- `true` Quando l'app è già stato fornito l'opportunità di gestire il messaggio di input, ma non è gestito in caso contrario, `false`.  
+ `true` quando l'app ha già avuto la possibilità di gestire il messaggio di input, ma non lo ha gestito; in caso contrario, `false`.  
   
-## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Visualizzare [requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti di  
+ **Piattaforme:** Vedere [.NET Framework requisiti di sistema](../../get-started/system-requirements.md).  
   
- **DLL:**  
+ **DLL**  
   
- In .NET Framework 3.0 e 3.5: PresentationHostDLL.dll  
+ Nel .NET Framework 3,0 e 3,5: PresentationHostDLL. dll  
   
- In .NET Framework 4 e versioni successive: PresentationHost_v0400.dll  
+ In .NET Framework 4 e versioni successive: PresentationHost_v0400. dll  
   
- **Versione di .NET framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
+ **Versione .NET Framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -2,12 +2,12 @@
 title: Linee guida per le librerie .NET open source
 description: Procedure consigliate per gli sviluppatori nella creazione di librerie .NET di qualità.
 ms.date: 10/17/2018
-ms.openlocfilehash: c1e1c302eede86fd5555a8e84630e216e96f1ce7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4c76dfae6ffc39df7f15381be64e33657067d79d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706452"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731432"
 ---
 # <a name="open-source-library-guidance"></a>Linee guida per le librerie open source
 
@@ -32,19 +32,19 @@ Ogni articolo presenta quattro tipi di suggerimenti: **Da fare**, **Da considera
 
 È opportuno seguire quasi sempre un suggerimento di tipo **Da fare**. Ad esempio:
 
-**✔️ DA FARE** Distribuire la libreria usando un pacchetto NuGet.
+✔️ distribuire la libreria usando un pacchetto NuGet.
 
 In genere è utile osservare le indicazioni di tipo **Da considerare**, ma esistono eccezioni giustificate alla regola e il fatto di non osservarla non deve rappresentare un problema:
 
-**✔️ DA CONSIDERARE** Usare [SemVer 2.0.0](https://semver.org/) per la gestione versioni del pacchetto NuGet.
+✔️ CONSIDERARE l'uso di [SemVer 2.0.0](https://semver.org/) per la versione del pacchetto NuGet.
 
 I suggerimenti di tipo **Da evitare** si riferiscono a operazioni in genere non consigliabili, ma che talvolta possono avere un'utilità:
 
-**❌ evitare** Riferimenti ai pacchetti NuGet che richiedono una versione esatta.
+❌ evitare i riferimenti ai pacchetti NuGet che richiedono una versione esatta.
 
 E infine, i suggerimenti di tipo **Da non fare** indicano operazioni che quasi sempre è necessario evitare:
 
-**❌** non pubblicare versioni con nome sicuro e senza nome sicuro della libreria. Ad esempio, `Contoso.Api` e `Contoso.Api.StrongNamed`.
+❌ non pubblicare versioni con nome sicuro e senza nome sicuro della libreria. Ad esempio, `Contoso.Api` e `Contoso.Api.StrongNamed`.
 
 >[!div class="step-by-step"]
 >[Successivo](get-started.md)

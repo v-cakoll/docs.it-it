@@ -2,16 +2,16 @@
 title: comando DotNet Add Reference
 description: Il comando dotnet add reference offre un'opzione utile per aggiungere riferimenti da progetto a progetto.
 ms.date: 06/26/2019
-ms.openlocfilehash: c97975e11410cfaad18ca68832957d75a4a2fd09
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dc8bc01a2bff4f2cf3a8af9efb233448d7de337f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100808"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733280"
 ---
 # <a name="dotnet-add-reference"></a>dotnet add reference
 
-**Questo articolo si applica a: ✓** .NET Core 1.x SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .NET Core 1. x SDK e versioni successive
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
@@ -37,7 +37,7 @@ Il comando `dotnet add reference` offre un'opzione utile per aggiungere i riferi
 </ItemGroup>
 ```
 
-## <a name="arguments"></a>argomenti
+## <a name="arguments"></a>Argomenti
 
 - **`PROJECT`**
 
@@ -47,7 +47,7 @@ Il comando `dotnet add reference` offre un'opzione utile per aggiungere i riferi
 
   Riferimenti da progetto a progetto da aggiungere. Specificare uno o più progetti. I [criteri GLOB](https://en.wikipedia.org/wiki/Glob_(programming)) sono supportati nei sistemi basati su Unix/Linux.
 
-## <a name="options"></a>Opzioni
+## <a name="options"></a>Options
 
 - **`-h|--help`**
 

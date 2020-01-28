@@ -1,16 +1,17 @@
 ---
 title: Host WPF (PresentationHost.exe)
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF Host application [WPF]
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
-ms.openlocfilehash: 64ba1261134184f22e9faf157ca70e3471e3b3cb
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: bda7efbb1b7a4760199215bdb58c12b3063e290c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636250"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743406"
 ---
 # <a name="wpf-host-presentationhostexe"></a>Host WPF (PresentationHost.exe)
 L'host Windows Presentation Foundation (WPF) (PresentationHost. exe) è l'applicazione che consente l'hosting di applicazioni WPF in browser compatibili (incluso Microsoft Internet Explorer 6 e versioni successive). Per impostazione predefinita, l'host Windows Presentation Foundation (WPF) viene registrato come Shell e gestore MIME per il contenuto WPF ospitato dal browser, che include:  

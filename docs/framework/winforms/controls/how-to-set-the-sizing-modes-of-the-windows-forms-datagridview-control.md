@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Impostare le modalità di ridimensionamento del controllo DataGridView di Windows Forms'
+title: Impostare le modalità di ridimensionamento del controllo DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], setting sizing modes
 - DataGridView control [Windows Forms], sizing modes
 ms.assetid: e9ad15e6-b4bb-44aa-a767-3738e9db1651
-ms.openlocfilehash: 76d71a7c3c37f53854cf4fd9c6d8300831572d51
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 15b084afa4149ac43d40aeae7f35f0eaff5ac0e1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591637"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738396"
 ---
-# <a name="how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control"></a>Procedura: Impostare le modalità di ridimensionamento del controllo DataGridView di Windows Forms
+# <a name="how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control"></a>Procedura: impostare le modalità dimensionamento del controllo DataGridView di Windows Form
 Le seguenti procedure illustrano alcuni scenari comuni in cui vengono personalizzate o combinate le opzioni di ridimensionamento disponibili per il controllo <xref:System.Windows.Forms.DataGridView> e per colonne specifiche di un controllo.  
   
 ### <a name="to-create-a-fixed-width-column"></a>Per creare una colonna a larghezza fissa  

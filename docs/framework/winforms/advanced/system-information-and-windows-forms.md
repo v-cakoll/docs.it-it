@@ -1,5 +1,5 @@
 ---
-title: Informazioni sul sistema e Windows Form
+title: Informazioni sistema
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - user names [Windows Forms], retrieving
 - system information [Windows Forms]
 ms.assetid: 30cf43a3-8cb2-4ff3-862b-6c34576616a8
-ms.openlocfilehash: 2edc2e867259f8884467c3d5b0ae3d22ba391a77
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: a91e2fd8db0ef338ce30f89f11869f1b6698af3b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380114"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732582"
 ---
 # <a name="system-information-and-windows-forms"></a>Informazioni sul sistema e Windows Form
-In alcuni casi è necessario raccogliere informazioni sui computer in cui l'applicazione è in esecuzione su per prendere decisioni nel codice. Ad esempio, potrebbe essere una funzione che è disponibile solo quando si è connessi a un dominio di rete specifica. In questo caso, è necessario un modo per determinare il dominio e se non è presente il dominio, disabilitare la funzione.  
+A volte è necessario raccogliere informazioni sul computer in cui è in esecuzione l'applicazione per prendere decisioni nel codice. Ad esempio, si potrebbe avere una funzione applicabile solo quando si è connessi a un particolare dominio di rete; in questo caso è necessario un modo per determinare il dominio e disabilitare la funzione se il dominio non è presente.  
   
- Le applicazioni Windows Forms è possono usare il <xref:System.Windows.Forms.SystemInformation> classe per determinare una serie di operazioni su un computer in fase di esecuzione. Nell'esempio seguente viene illustrato come utilizzare il <xref:System.Windows.Forms.SystemInformation> classe da cui recuperare il <xref:System.Windows.Forms.SystemInformation.UserName%2A> e <xref:System.Windows.Forms.SystemInformation.UserDomainName%2A>:  
+ Windows Forms applicazioni possono utilizzare la classe <xref:System.Windows.Forms.SystemInformation> per determinare una serie di elementi relativi a un computer in fase di esecuzione. Nell'esempio seguente viene illustrato l'utilizzo della classe <xref:System.Windows.Forms.SystemInformation> per recuperare i <xref:System.Windows.Forms.SystemInformation.UserName%2A> e <xref:System.Windows.Forms.SystemInformation.UserDomainName%2A>:  
   
 ```vb  
 Dim User As String = Windows.Forms.SystemInformation.UserName  
@@ -38,9 +38,9 @@ MessageBox.Show("Good morning " + User + ". You are connected to "
 + Domain);
 ```  
   
- Tutti i membri del <xref:System.Windows.Forms.SystemInformation> classe sono di sola lettura; non è possibile modificare le impostazioni dell'utente. Sono presenti più di 100 membri della classe, la restituzione di informazioni su tutti gli elementi dal numero di monitor connessi al computer (<xref:System.Windows.Forms.SystemInformation.MonitorCount%2A>) per la spaziatura tra le icone in Windows Explorer (<xref:System.Windows.Forms.SystemInformation.IconHorizontalSpacing%2A> e <xref:System.Windows.Forms.SystemInformation.IconVerticalSpacing%2A>).  
+ Tutti i membri della classe <xref:System.Windows.Forms.SystemInformation> sono di sola lettura. non è possibile modificare le impostazioni di un utente. Sono presenti più di 100 membri della classe, che restituiscono informazioni su qualsiasi elemento, dal numero di monitoraggi collegati al computer (<xref:System.Windows.Forms.SystemInformation.MonitorCount%2A>) alla spaziatura delle icone in Esplora risorse (<xref:System.Windows.Forms.SystemInformation.IconHorizontalSpacing%2A> e <xref:System.Windows.Forms.SystemInformation.IconVerticalSpacing%2A>).  
   
- Alcuni dei membri di più utili la <xref:System.Windows.Forms.SystemInformation> classe includono <xref:System.Windows.Forms.SystemInformation.ComputerName%2A>, <xref:System.Windows.Forms.SystemInformation.DbcsEnabled%2A>, <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A>, e <xref:System.Windows.Forms.SystemInformation.TerminalServerSession%2A>.  
+ Alcuni dei membri più utili della classe <xref:System.Windows.Forms.SystemInformation> includono <xref:System.Windows.Forms.SystemInformation.ComputerName%2A>, <xref:System.Windows.Forms.SystemInformation.DbcsEnabled%2A>, <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A>e <xref:System.Windows.Forms.SystemInformation.TerminalServerSession%2A>.  
   
 ## <a name="see-also"></a>Vedere anche
 

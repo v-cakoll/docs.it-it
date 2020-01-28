@@ -1,5 +1,6 @@
 ---
-title: Funzione SetFakeActiveWindow (riferimenti alle API WPF non gestite)
+title: Funzione SetFakeActiveWindow-informazioni di riferimento sulle API WPF non gestite
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -8,17 +9,17 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: a69118be-63b0-445c-9fb6-ab8cc958e531
-ms.openlocfilehash: d83833a0f18f94f3aa590896f0a1eb4c53dc16d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9282ec6f4c6fb9c1410ca07e707db98a02d0b02a
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053405"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731733"
 ---
-# <a name="setfakeactivewindow-function-wpf-unmanaged-api-reference"></a>Funzione SetFakeActiveWindow (riferimenti alle API WPF non gestite)
-Questa API supporta l'infrastruttura Windows Presentation Foundation (WPF) e non deve essere usato direttamente dal codice.  
+# <a name="setfakeactivewindow-function-wpf-unmanaged-api-reference"></a>Funzione SetFakeActiveWindow (riferimenti alle API non gestite WPF)
+Questa API supporta l'infrastruttura Windows Presentation Foundation (WPF) e non può essere usata direttamente dal codice.  
   
- Utilizzata dall'infrastruttura Windows Presentation Foundation (WPF) per la gestione di windows.  
+ Utilizzato dall'infrastruttura Windows Presentation Foundation (WPF) per la gestione di Windows.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -30,14 +31,14 @@ void __stdcall SetFakeActiveWindow(
   
 ## <a name="parameters"></a>Parametri  
  HWND  
- Un handle di finestra.  
+ Handle di finestra.  
   
-## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Visualizzare [requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti di  
+ **Piattaforme:** Vedere [.NET Framework requisiti di sistema](../../get-started/system-requirements.md).  
   
- **DLL:** PresentationHost_v0400.dll  
+ **Dll:** PresentationHost_v0400. dll  
   
- **Versione di .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versione .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

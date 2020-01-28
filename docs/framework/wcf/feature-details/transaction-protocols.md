@@ -2,44 +2,44 @@
 title: Protocolli di transazione
 ms.date: 03/30/2017
 ms.assetid: 2820b0ec-2f32-430c-b299-1f0e95e1f2dc
-ms.openlocfilehash: 31fa6a776cc69c09f030c4de857085b30bf2edba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 32c5da24eb7b23145d79c33a9ca1f5e5bcc22c06
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64585757"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742722"
 ---
 # <a name="transaction-protocols"></a>Protocolli di transazione
 Windows Communication Foundation (WCF) implementa i protocolli WS-Atomic Transaction e WS-Coordination.  
   
-|Specifica/documento|Version|Collegamento|  
+|Specifica/documento|Versione|Collegamento|  
 |-----------------------------|-------------|----------|  
-|WS-Coordination|1.0<br /><br /> 1.1|<https://go.microsoft.com/fwlink/?LinkId=96104><br /><br /> [https://go.microsoft.com/fwlink/?LinkId=96079](https://go.microsoft.com/fwlink/?LinkId=96079)|  
-|WS-AtomicTransaction|1.0<br /><br /> 1.1|<https://go.microsoft.com/fwlink/?LinkId=96080><br /><br /> https://go.microsoft.com/fwlink/?LinkId=96081|  
+|WS-Coordination|1.0<br /><br /> 1.1|<http://schemas.xmlsoap.org/ws/2004/10/wscoor/><br /><br /> <https://docs.oasis-open.org/ws-tx/wscoor/2006/06>|  
+|WS-AtomicTransaction|1.0<br /><br /> 1.1|<http://schemas.xmlsoap.org/ws/2004/10/wsat/><br /><br /> <https://docs.oasis-open.org/ws-tx/wsat/2006/06>|  
   
  Su queste specifiche del protocollo è richiesta l'interoperabilità a due livelli: tra le applicazioni e tra i gestori delle transazioni (vedere la figura seguente). Le specifiche descrivono dettagliatamente i formati dei messaggi e lo scambio di messaggi per entrambi i livelli di interoperabilità. Alcune protezioni, affidabilità e codifiche per lo scambio tra le applicazioni si applicano come per il normale scambio tra applicazioni. Perché, tuttavia, sia possibile l'interoperabilità tra i gestori delle transazioni, è necessario che vi sia un accordo sull'associazione interessata dato che in genere non è configurata dall'utente.  
   
  In questo argomento vengono illustrate una composizione della specifica WS-Atomic Transaction (WS-AT) con protezione e l'associazione protetta per la comunicazione tra i gestori di transazioni. L'approccio descritto in questo documento è stato testato con successo con altre implementazioni di WS-AT e WS-Coordination, compresi IBM, IONA, Sun Microsystems e altri.  
   
- Nella figura seguente viene illustrata l'interoperabilità tra due gestori di transazioni, gestore transazioni 1 e gestore transazioni 2 e due applicazioni, applicazione 1 e 2 dell'applicazione:  
+ Nella figura seguente viene illustrata l'interoperabilità tra due gestioni transazioni, gestione transazioni 1 e gestione transazioni 2 e due applicazioni, Application 1 e Application 2:  
   
- ![Screenshot che mostra l'interazione tra transazioni responsabili.](./media/transaction-protocols/transaction-managers-flow.gif)  
+ ![Screenshot che mostra l'interazione tra i gestori delle transazioni.](./media/transaction-protocols/transaction-managers-flow.gif)  
   
  Si consideri un tipico scenario WS-Coordination/WS-Atomic Transaction con un Iniziatore (I) e un Partecipante (P). Sia l'Iniziatore che il Partecipante hanno gestori transazioni (ITM e PTM, rispettivamente). In questo argomento, il commit in due fasi viene chiamato 2PC.  
   
 |||  
 |-|-|  
-|1. CreateCoordinationContext|12. Risposta al messaggio dell'applicazione|  
+|1. CreateCoordinationContext|12. risposta messaggio applicazione|  
 |2. CreateCoordinationContextResponse|13. Commit (completamento)|  
-|3. Register (completamento)|14. Preparare (2PC)|  
-|4. RegisterResponse|15. Preparare (2PC)|  
-|5. Messaggio dell'applicazione|16. Prepared (2PC)|  
-|6. CreateCoordinationContext con Context|17. Prepared (2PC)|  
-|7. Register (durevole)|18. Committed (completamento)|  
+|3. registrazione (completamento)|14. preparare (2PC)|  
+|4. RegisterResponse|15. preparare (2PC)|  
+|5. messaggio dell'applicazione|16. preparata (2PC)|  
+|6. CreateCoordinationContext con contesto|17. preparata (2PC)|  
+|7. Register (durevole)|18. Commit eseguito (completamento)|  
 |8. RegisterResponse|19. Commit (2PC)|  
 |9. CreateCoordinationContextResponse|20. Commit (2PC)|  
-|10. Register (durevole)|21. Committed (2PC)|  
-|11. RegisterResponse|22. Committed (2PC)|  
+|10. Register (durevole)|21. Commit eseguito (2PC)|  
+|11. RegisterResponse|22. Commit eseguito (2PC)|  
   
  In questo documento vengono illustrate una composizione della specifica WS-AtomicTransaction con protezione e l'associazione protetta per la comunicazione tra i gestori di transazioni. L'approccio descritto in questo documento è stato testato con successo con altre implementazioni di WS-AT e WS-Coordination.  
   
@@ -53,24 +53,24 @@ Windows Communication Foundation (WCF) implementa i protocolli WS-Atomic Transac
   
 - Messaggi dell'applicazione.  
   
- Le prime tre classi di messaggi sono considerate messaggi del gestore transazioni e la loro configurazione dell'associazione viene descritta in "Scambio di messaggi dell'applicazione", più avanti in questo argomento. La quarta classe di messaggi riguarda i messaggi da applicazione ad applicazione e viene descritta nella sezione "Esempi di messaggi", più avanti in questo argomento. Questa sezione descrive le associazioni del protocollo usate per ognuna di queste classi da WCF.  
+ Le prime tre classi di messaggi sono considerate messaggi del gestore transazioni e la loro configurazione dell'associazione viene descritta in "Scambio di messaggi dell'applicazione", più avanti in questo argomento. La quarta classe di messaggi riguarda i messaggi da applicazione ad applicazione e viene descritta nella sezione "Esempi di messaggi", più avanti in questo argomento. In questa sezione vengono descritte le associazioni di protocollo utilizzate da WCF per ognuna di queste classi.  
   
  In questo documento vengono utilizzati gli spazi dei nomi XML e i relativi prefissi associati seguenti.  
   
-|Prefisso|Version|URI dello spazio dei nomi|  
+|Prefisso|Versione|URI dello spazio dei nomi|  
 |------------|-------------|-------------------|  
-|s11||<https://go.microsoft.com/fwlink/?LinkId=96014>|  
-|wsa|Pre-1,0<br /><br /> 1.0|http://www.w3.org/2004/08/addressing<br /><br /> <https://go.microsoft.com/fwlink/?LinkId=96022>|  
-|wscoor|1.0<br /><br /> 1.1|<https://go.microsoft.com/fwlink/?LinkId=96078><br /><br /> [https://go.microsoft.com/fwlink/?LinkId=96079](https://go.microsoft.com/fwlink/?LinkId=96079)|  
-|wsat|1.0<br /><br /> 1.1|<https://go.microsoft.com/fwlink/?LinkId=96080><br /><br /> [https://go.microsoft.com/fwlink/?LinkId=96081](https://go.microsoft.com/fwlink/?LinkId=96081)|  
-|u|Pre-1.3<br /><br /> 1.3|<https://go.microsoft.com/fwlink/?LinkId=96082><br /><br /> [https://go.microsoft.com/fwlink/?LinkId=96100](https://go.microsoft.com/fwlink/?LinkId=96100)|  
-|o||<https://go.microsoft.com/fwlink/?LinkId=96101>|  
-|xsd||<https://go.microsoft.com/fwlink/?LinkId=96102>|  
+|s11||<https://schemas.xmlsoap.org/soap/envelope/>|  
+|wsa|Pre-1,0<br /><br /> 1.0|`http://www.w3.org/2004/08/addressing`<br /><br /> <https://www.w3.org/2005/08/addressing/>|  
+|wscoor|1.0<br /><br /> 1.1|<http://schemas.xmlsoap.org/ws/2004/10/wscoor/><br /><br /> <https://docs.oasis-open.org/ws-tx/wscoor/2006/06>|  
+|wsat|1.0<br /><br /> 1.1|<http://schemas.xmlsoap.org/ws/2004/10/wsat/><br /><br /> <https://docs.oasis-open.org/ws-tx/wsat/2006/06>|  
+|u|Pre-1.3<br /><br /> 1.3|<http://schemas.xmlsoap.org/ws/2005/02/trust/><br /><br /> <https://docs.oasis-open.org/ws-sx/ws-trust/200512>|  
+|o||<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd>|  
+|xsd||<https://www.w3.org/2001/XMLSchema>|  
   
 ## <a name="transaction-manager-bindings"></a>Associazioni dei gestori transazioni  
- R1001: I gestori delle transazioni che fanno parte di una transazione 1.0 WS-AT devono utilizzare SOAP 1.1 e WS-Addressing 2004/08 per gli scambi di messaggi WS-Coordination e WS-Atomic Transaction.  
+ R1001: i gestori delle transazioni che partecipano a una transazione WS-AT 1,0 devono usare SOAP 1,1 e WS-Addressing 2004/08 per gli scambi di messaggi WS-Atomic Transaction e WS-Coordination.  
   
- R1002: I gestori delle transazioni che fanno parte di una transazione WS-AT 1.1 devono utilizzare SOAP 1.1 e WS-Addressing 2005/08 per gli scambi di messaggi WS-Coordination e WS-Atomic Transaction.  
+ R1002: i gestori transazioni che partecipano a una transazione WS-AT 1.1 devono utilizzare SOAP 1.1 e WS-Addressing 2005/08 per gli scambi di messaggi WS-Atomic Transaction e WS-Coordination.  
   
  I messaggi dell'applicazione non sono vincolati a queste associazioni e vengono descritti più avanti.  
   
@@ -80,17 +80,17 @@ Windows Communication Foundation (WCF) implementa i protocolli WS-Atomic Transac
 #### <a name="https-transport-configuration"></a>Configurazione di trasporto HTTPS  
  I certificati X.509 sono utilizzati per stabilire l'identità del gestore transazioni. L'autenticazione client/server è obbligatoria, mentre l'autorizzazione client/server viene lasciata come dettaglio di implementazione:  
   
-- R1111: I certificati X.509 presentati sulla rete devono avere un nome soggetto che corrisponde al nome di dominio completo (FQDN) del computer di origine.  
+- R1111: i certificati X.509 presentati sulla rete devono avere un nome soggetto che corrisponde al nome di dominio completo (FQDN) del computer di origine.  
   
-- B1112: DNS deve essere funzionale tra ogni coppia mittente-destinatario nel sistema per controlli del nome soggetto X.509 abbia esito positivo.  
+- B1112: perché i controlli del nome soggetto X.509 abbiano esito positivo, il DNS deve essere funzionale tra ogni coppia mittente-destinatario nel sistema.  
   
 #### <a name="activation-and-registration-binding-configuration"></a>Attivazione e configurazione dell'associazione di registrazione  
- WCF richiede l'associazione duplex di tipo request/reply con correlazione su HTTPS. Per ulteriori informazioni sulla correlazione e descrizioni dei modelli di scambio dei messaggi request/reply, vedere WS-Atomic Transaction, Sezione 8.  
+ WCF richiede l'associazione duplex Request/Reply con correlazione su HTTPS. Per ulteriori informazioni sulla correlazione e descrizioni dei modelli di scambio dei messaggi request/reply, vedere WS-Atomic Transaction, Sezione 8.  
   
 #### <a name="2pc-protocol-binding-configuration"></a>Configurazione del binding del protocollo 2PC  
  WCF supporta messaggi unidirezionali (datagramma) su HTTPS. La correlazione tra i messaggi viene lasciata come dettaglio di implementazione.  
   
- B1131: Le implementazioni devono supportare `wsa:ReferenceParameters` come descritto in WS-Addressing per ottenere la correlazione dei messaggi 2PC di WCF.  
+ B1131: le implementazioni devono supportare `wsa:ReferenceParameters` come descritto in WS-Addressing per ottenere la correlazione dei messaggi 2PC di WCF.  
   
 ### <a name="transaction-manager-mixed-security-binding"></a>Associazione di sicurezza mista del gestore transazioni  
  Questa è un'associazione alternativa (modalità mista) che utilizza la protezione del trasporto assieme al modello del token emesso WS-Coordination allo scopo di stabilire l'identità. L'attivazione e la registrazione sono gli unici elementi che differiscono tra le due associazioni.  
@@ -101,47 +101,47 @@ Windows Communication Foundation (WCF) implementa i protocolli WS-Atomic Transac
 #### <a name="activation-message-binding-configuration"></a>Configurazione dell'associazione dei messaggi di attivazione  
  I messaggi di attivazione in genere non partecipano all'interoperabilità perché si verificano normalmente tra un'applicazione e il suo gestore transazioni locale.  
   
- B1221: WCF utilizza associazioni HTTPS duplex (descritte in [protocolli di messaggistica](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) per i messaggi di attivazione. I messaggi di richiesta e risposta sono correlati utilizzando WS-Addressing 2004/08 per WS-AT 1.0 e WS-Addressing 2005/08 per WS-AT 1.1.  
+ B1221: WCF usa l'associazione HTTPS duplex (descritta in [protocolli di messaggistica](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) per i messaggi di attivazione. I messaggi di richiesta e risposta sono correlati utilizzando WS-Addressing 2004/08 per WS-AT 1.0 e WS-Addressing 2005/08 per WS-AT 1.1.  
   
- Specifica di WS-Atomic Transaction, sezione 8, vengono descritti più dettagliatamente la correlazione e i modelli di scambio di messaggi.  
+ La specifica WS-Atomic Transaction, sezione 8, descrive più dettagliatamente la correlazione e i modelli di scambio dei messaggi.  
   
-- R1222: Al momento della ricezione una `CreateCoordinationContext`, il coordinatore deve emettere un `SecurityContextToken` con il segreto associato `STx`. Tale token viene restituito in un'intestazione `t:IssuedTokens` dopo la specifica WS-Trust.  
+- R1222: alla ricezione di un `CreateCoordinationContext`, il coordinatore deve emettere un `SecurityContextToken` con il segreto `STx` associato. Tale token viene restituito in un'intestazione `t:IssuedTokens` dopo la specifica WS-Trust.  
   
-- R1223: Se l'attivazione viene eseguita all'interno di un contesto di coordinamento esistente, il `t:IssuedTokens` intestazione con il `SecurityContextToken` associate esistenti contesto deve propagarsi sul `CreateCoordinationContext` messaggio.  
+- R1223: se l'attivazione si verifica all'interno di un contesto di coordinamento esistente, l'intestazione `t:IssuedTokens` con il `SecurityContextToken` associato al contesto esistente deve propagarsi sul messaggio `CreateCoordinationContext`.  
   
- Una nuova `t:IssuedTokens` intestazione deve essere generata per l'associazione in uscita `wscoor:CreateCoordinationContextResponse` messaggio.  
+ È necessario generare una nuova intestazione `t:IssuedTokens` per il fissaggio al messaggio `wscoor:CreateCoordinationContextResponse` in uscita.  
   
 #### <a name="registration-message-binding-configuration"></a>Configurazione dell'associazione dei messaggi di registrazione  
- B1231: WCF utilizza associazioni HTTPS duplex (descritte in [protocolli di messaggistica](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)). I messaggi di richiesta e risposta sono correlati utilizzando WS-Addressing 2004/08 per WS-AT 1.0 e WS-Addressing 2005/08 per WS-AT 1.1.  
+ B1231: WCF usa l'associazione HTTPS duplex (descritta in [protocolli di messaggistica](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)). I messaggi di richiesta e risposta sono correlati utilizzando WS-Addressing 2004/08 per WS-AT 1.0 e WS-Addressing 2005/08 per WS-AT 1.1.  
   
  In WS-AtomicTransaction, Sezione 8, vengono descritti più dettagliatamente la correlazione e i modelli di scambio dei messaggi.  
   
- R1232: In uscita `wscoor:Register` messaggi è necessario usare il `IssuedTokenOverTransport` modalità di autenticazione descritto in [protocolli di sicurezza](../../../../docs/framework/wcf/feature-details/security-protocols.md).  
+ R1232: i messaggi `wscoor:Register` in uscita devono utilizzare la modalità di autenticazione `IssuedTokenOverTransport` descritta in [protocolli di sicurezza](../../../../docs/framework/wcf/feature-details/security-protocols.md).  
   
- Il `wsse:Timestamp` elemento deve essere firmato usando il `SecurityContextToken STx` emesso. Questa firma è una prova del possesso del token associato a una particolare transazione ed è utilizzata per autenticare l'inserimento di un partecipante nella transazione. Il messaggio RegistrationResponse viene inviato su HTTPS.  
+ L'elemento `wsse:Timestamp` deve essere firmato usando il `SecurityContextToken STx` emesso. Questa firma è una prova del possesso del token associato a una particolare transazione ed è utilizzata per autenticare l'inserimento di un partecipante nella transazione. Il messaggio RegistrationResponse viene inviato su HTTPS.  
   
 #### <a name="2pc-protocol-binding-configuration"></a>Configurazione del binding del protocollo 2PC  
  WCF supporta messaggi unidirezionali (datagramma) su HTTPS. La correlazione tra i messaggi viene lasciata come dettaglio di implementazione.  
   
- B1241: Le implementazioni devono supportare `wsa:ReferenceParameters` come descritto in WS-Addressing per ottenere la correlazione dei messaggi 2PC di WCF.  
+ B1241: le implementazioni devono supportare `wsa:ReferenceParameters` come descritto in WS-Addressing per ottenere la correlazione dei messaggi 2PC di WCF.  
   
 ## <a name="application-message-exchange"></a>Scambio di messaggi dell'applicazione  
  Le applicazioni possono utilizzare qualsiasi particolare associazione per i messaggi da applicazione ad applicazione, a condizione che l'associazione soddisfi i requisiti di sicurezza seguenti:  
   
-- R2001: I messaggi da applicazione devono passare il `t:IssuedTokens` intestazione insieme al `CoordinationContext` nell'intestazione del messaggio.  
+- R2001: i messaggi da applicazione ad applicazione devono propagarsi nell'intestazione `t:IssuedTokens` insieme al `CoordinationContext` nell'intestazione del messaggio.  
   
-- R2002: Integrità e riservatezza dei `t:IssuedToken` è obbligatorio.  
+- R2002: è necessario fornire l'integrità e la riservatezza di `t:IssuedToken`.  
   
- L'intestazione `CoordinationContext` contiene `wscoor:Identifier`. Mentre la definizione di `xsd:AnyURI` consente l'uso di URI assoluto e relativo, WCF supporta solo `wscoor:Identifiers`, che sono URI assoluti.  
+ L'intestazione `CoordinationContext` contiene `wscoor:Identifier`. Sebbene la definizione di `xsd:AnyURI` consenta l'utilizzo di URI sia assoluti che relativi, WCF supporta solo `wscoor:Identifiers`, ovvero URI assoluti.  
   
- B2003: Se il `wscoor:Identifier` del `wscoor:CoordinationContext` è un URI relativo, verranno restituiti gli errori dei servizi WCF transazionali.  
+ B2003: se il `wscoor:Identifier` del `wscoor:CoordinationContext` è un URI relativo, verranno restituiti errori dai servizi WCF transazionali.  
   
 ## <a name="message-examples"></a>Esempi di messaggi  
   
 ### <a name="createcoordinationcontext-requestresponse-messages"></a>Messaggi di richiesta/risposta CreateCoordinationContext  
  I messaggi seguenti seguono un modello richiesta/risposta.  
   
-#### <a name="createcoordinationcontext-with-wscoor-10"></a>CreateCoordinationContext con WSCoor 1.0  
+#### <a name="createcoordinationcontext-with-wscoor-10"></a>CreateCoordinationContext con WSCoor 1,0  
   
 ```xml  
 <s:Envelope>  
@@ -354,7 +354,7 @@ xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
 ### <a name="registration-messages"></a>Messaggi di registrazione  
  I messaggi seguenti sono messaggi di registrazione.  
   
-#### <a name="register-with-wscoor-10"></a>Register con WSCoor 1.0  
+#### <a name="register-with-wscoor-10"></a>Eseguire la registrazione con WSCoor 1,0  
   
 ```xml  
 <s:Envelope>  
@@ -474,7 +474,7 @@ Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
 </s:Envelope>  
 ```  
   
-#### <a name="register-response-with-wscoor-10"></a>Register Response con WSCoor 1.0  
+#### <a name="register-response-with-wscoor-10"></a>Registrare la risposta con WSCoor 1,0  
   
 ```xml  
 <s:Envelope>  
@@ -544,7 +544,7 @@ xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-u
 ### <a name="two-phase-commit-protocol-messages"></a>Messaggi del protocollo di commit a due fasi  
  Il messaggio seguente si riferisce al protocollo di commit a due fasi (2PC).  
   
-#### <a name="commit-with-wsat-10"></a>Eseguire il commit con WSAT 1.0  
+#### <a name="commit-with-wsat-10"></a>Eseguire il commit con WSAT 1,0  
   
 ```xml  
 <s:Envelope>  

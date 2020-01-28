@@ -2,18 +2,18 @@
 title: Comando dotnet
 description: Informazioni sul comando dotnet (il driver generico per gli strumenti dell'interfaccia della riga di comando di .NET Core) e sul relativo utilizzo.
 ms.date: 06/04/2018
-ms.openlocfilehash: a22340c26ca2e483e43857e2ecb31f2ab53b60f4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: fe90968560b58471c279fcd2097741ea476cef0b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117504"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734073"
 ---
 # <a name="dotnet-command"></a>Comando dotnet
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>nome
+## <a name="name"></a>Name
 
 `dotnet`: uno strumento per la gestione dei file binari e del codice sorgente di .NET.
 
@@ -51,7 +51,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 `dotnet` può essere usato per eseguire le applicazioni specificando una DLL dell'applicazione, come ad esempio `dotnet myapp.dll`. Per informazioni sulle opzioni di distribuzione, vedere [Distribuzione di applicazioni .NET Core](../deploying/index.md).
 
-## <a name="options"></a>Opzioni
+## <a name="options"></a>Options
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
@@ -67,7 +67,7 @@ Percorso contenente i criteri di probe e gli assembly di cui eseguire il probe.
 
 Percorso di un file *deps.json*.
 
-Un file *deps.json* contiene un elenco di dipendenze, le dipendenze di compilazione e le informazioni sulla versione usate per risolvere i conflitti di assembly. Per altre informazioni su questo file, vedere [Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) (File di configurazione di runtime) su GitHub.
+Un file *Deps. JSON* contiene un elenco di dipendenze, dipendenze di compilazione e informazioni sulla versione utilizzate per risolvere i conflitti di assembly. Per altre informazioni su questo file, vedere [Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) (File di configurazione di runtime) su GitHub.
 
 `-d|--diagnostics`
 
@@ -107,7 +107,7 @@ Definisce il comportamento quando il framework condiviso richiesto non è dispon
 
 Percorso di un file *runtimeconfig.json*.
 
-Un file *runtimeconfig.json* è un file di configurazione contenente le impostazioni di configurazione del runtime. Per altre informazioni, vedere [Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) (File di configurazione di runtime) su GitHub.
+Un file *runtimeconfig. JSON* è un file di configurazione contenente le impostazioni della fase di esecuzione. Per altre informazioni, vedere Impostazioni di configurazione della fase di [esecuzione di .NET Core](../run-time-config/index.md#runtimeconfigjson).
 
 `-v|--verbosity <LEVEL>`
 
@@ -157,7 +157,7 @@ Consente di visualizzare informazioni dettagliate sull'installazione di .NET Cor
 
 Percorso di un file *runtimeconfig.json*.
 
-Un file *runtimeconfig.json* è un file di configurazione contenente le impostazioni di configurazione del runtime. Per altri dettagli, vedere [Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) (File di configurazione di runtime) su GitHub.
+Un file *runtimeconfig. JSON* è un file di configurazione contenente le impostazioni della fase di esecuzione. Per altre informazioni, vedere Impostazioni di configurazione della fase di [esecuzione di .NET Core](../run-time-config/index.md#runtimeconfigjson).
 
 `-v|--verbosity <LEVEL>`
 
@@ -199,7 +199,7 @@ Consente di visualizzare informazioni dettagliate sull'installazione di .NET Cor
 
 Percorso di un file *runtimeconfig.json*.
 
-Un file *runtimeconfig.json* è un file di configurazione contenente le impostazioni di configurazione del runtime. Per altri dettagli, vedere [Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) (File di configurazione di runtime) su GitHub.
+Un file *runtimeconfig. JSON* è un file di configurazione contenente le impostazioni della fase di esecuzione. Per altre informazioni, vedere Impostazioni di configurazione della fase di [esecuzione di .NET Core](../run-time-config/index.md#runtimeconfigjson).
 
 `-v|--verbosity <LEVEL>`
 
@@ -304,7 +304,7 @@ Comando | Funzione
 [dotnet tool uninstall](dotnet-tool-uninstall.md) | Disinstalla uno strumento globale dal computer.
 [dotnet tool update](dotnet-tool-update.md) | Aggiorna uno strumento globale nel computer.
 
-### <a name="additional-tools"></a>Strumenti aggiuntivi
+### <a name="additional-tools"></a>Altri strumenti
 
 A partire da .NET Core SDK 2.1.300, numerosi strumenti precedentemente disponibili solo a livello di singolo progetto usando `DotnetCliToolReference` sono ora disponibili come parte di .NET Core SDK. Tali strumenti sono elencati nella tabella seguente:
 
@@ -399,3 +399,4 @@ Specifica se i dati relativi all'utilizzo degli strumenti .NET Core vengono racc
 ## <a name="see-also"></a>Vedere anche
 
 - [Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) (File di configurazione di runtime)
+- [Impostazioni di configurazione della fase di esecuzione di .NET Core](../run-time-config/index.md)

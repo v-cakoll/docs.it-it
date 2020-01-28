@@ -1,5 +1,5 @@
 ---
-title: Sviluppo di controlli Windows Form in fase di progettazione
+title: Sviluppare controlli in fase di progettazione
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls [Windows Forms]
@@ -12,12 +12,12 @@ ms.assetid: e5a8e088-7ec8-4fd9-bcb3-9078fd134829
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f6afb13a01075d3aa2d101100a0c3bfe31c6ee29
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: dac049ea6a51037daa0e23dc93476e4410b2df06
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460087"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745993"
 ---
 # <a name="develop-windows-forms-controls-at-design-time"></a>Sviluppare controlli Windows Forms in fase di progettazione
 
@@ -81,7 +81,7 @@ Illustra il significato e l'uso dell'elenco errori della fase di progettazione v
 [Risoluzione dei problemi relativi alla modifica di controlli e componenti](troubleshooting-control-and-component-authoring.md)\
 Illustra come diagnosticare e correggere gli errori comuni che possono verificarsi quando si crea un componente o un controllo personalizzato.
 
-## <a name="reference"></a>Reference
+## <a name="reference"></a>Riferimenti
 
 - <xref:System.Windows.Forms.Control?displayProperty=nameWithType>
 
@@ -89,7 +89,7 @@ Illustra come diagnosticare e correggere gli errori comuni che possono verificar
 
 ## <a name="related-sections"></a>Sezioni correlate
 
-[Sviluppo di controlli Windows Forms personalizzati con .NET Framework](developing-custom-windows-forms-controls.md)\
+[Sviluppo di controlli Windows Form personalizzati con .NET Framework](developing-custom-windows-forms-controls.md)\
 Illustra come creare i controlli personalizzati con .NET Framework.
 
 [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md)\

@@ -1,15 +1,15 @@
 ---
-title: Versioni personalizzate di SQLite
+title: Versioni di SQLite personalizzate
 ms.date: 12/13/2019
 description: Informazioni su come usare una versione personalizzata della libreria SQLite nativa.
-ms.openlocfilehash: 8a2646138ea9dbecf412a2e8e0e347e2d71a5b0b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: dd27278c1dbe17b12e5067d04d19043bf259b1e8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75447146"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746987"
 ---
-# <a name="custom-sqlite-versions"></a>Versioni personalizzate di SQLite
+# <a name="custom-sqlite-versions"></a>Versioni di SQLite personalizzate
 
 Microsoft. Data. sqlite si basa su SQLitePCLRaw. È possibile usare versioni personalizzate della libreria SQLite nativa usando un bundle o configurando un provider SQLitePCLRaw.
 
@@ -23,7 +23,7 @@ Per usare un bundle diverso, installare il pacchetto di `Microsoft.Data.Sqlite.C
 
 | Bundle | Descrizione |
 | --- | --- |
-| SQLitePCLRaw. bundle_e_sqlite3 | Fornisce una versione coerente di SQLite su tutte le piattaforme. Include FTS4, FTS5, JSON1 e | Estensioni di R * tree. Questo è il valore predefinito. |
+| SQLitePCLRaw. bundle_e_sqlite3 | Fornisce una versione coerente di SQLite su tutte le piattaforme. Include le estensioni FTS4, FTS5, JSON1 e R * tree. Questo è il valore predefinito. |
 | SQLitePCLRaw. bundle_green | Come bundle_e_sqlite3, tranne che per iOS in cui viene usata la libreria SQLite di sistema. |
 | SQLitePCLRaw. bundle_zetetic | Usa le compilazioni sqlcipher ufficiali da zetetica (non incluso). |
 | SQLitePCLRaw. bundle_winsqlite3 | USA winsqlite3. dll, la libreria SQLite di sistema in Windows 10. |

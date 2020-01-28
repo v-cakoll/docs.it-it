@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Associare un controllo di Windows Forms a un oggetto Factory'
+title: Associare il controllo a un oggetto Factory
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding to a factory object
 - BindingSource component [Windows Forms], examples
 ms.assetid: 7d59af89-ff82-41d8-a48a-f1fbae788b0d
-ms.openlocfilehash: b64545528746e50d00f88d626a07ac98839e926c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 2b4d9aca3345a0cb1e7e995f66a8982dee983ca8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589731"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745086"
 ---
-# <a name="how-to-bind-a-windows-forms-control-to-a-factory-object"></a>Procedura: Associare un controllo di Windows Forms a un oggetto Factory
+# <a name="how-to-bind-a-windows-forms-control-to-a-factory-object"></a>Procedura: associare un controllo Windows Form a un oggetto Factory
 Quando si compilano controlli che interagiscono con i dati, è a volte necessario associare un controllo a un oggetto o metodo che genera altri oggetti. Tale oggetto o metodo è definito factory. L'origine dati, ad esempio, potrebbe essere il valore restituito da una chiamata al metodo anziché un oggetto in memoria o un tipo. È possibile associare un controllo a tale tipo di origine dati purché l'origine restituisca una raccolta.  
   
  È possibile associare facilmente un controllo a un oggetto factory usando il controllo <xref:System.Windows.Forms.BindingSource>.  
@@ -41,4 +41,4 @@ Quando si compilano controlli che interagiscono con i dati, è a volte necessari
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [Componente BindingSource](bindingsource-component.md)
-- [Procedura: Associare un controllo di Windows Form a un tipo](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Procedura: associare un controllo Windows Form a un tipo](how-to-bind-a-windows-forms-control-to-a-type.md)

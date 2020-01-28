@@ -1,5 +1,5 @@
 ---
-title: Cenni preliminari sul controllo PictureBox (Windows Form)
+title: Panoramica del controllo PictureBox
 ms.date: 03/30/2017
 f1_keywords:
 - PictureBox
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - picture controls [Windows Forms], about picture controls
 - image controls [Windows Forms], about image controls
 ms.assetid: e5befee7-dc29-4888-a7c4-3b177e394112
-ms.openlocfilehash: 54ae01789f972381304480c9faf28d084ac3f1db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c911e0190b5a1b063d84e589a7f39285358cbd22
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012633"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744249"
 ---
 # <a name="picturebox-control-overview-windows-forms"></a>Cenni preliminari sul controllo PictureBox (Windows Form)
-I moduli di Windows <xref:System.Windows.Forms.PictureBox> controllo consente di visualizzare immagini in formato bitmap, GIF, JPEG, metafile o icona.  
+Il controllo Windows Forms <xref:System.Windows.Forms.PictureBox> viene usato per visualizzare la grafica in formato bitmap, GIF, JPEG, metafile o icona.  
   
-## <a name="key-properties-and-methods"></a>I metodi e proprietà chiave  
- L'immagine visualizzata varia a seconda di <xref:System.Windows.Forms.PictureBox.Image%2A> proprietà, che può essere impostata in fase di esecuzione o in fase di progettazione. In alternativa, è possibile specificare l'immagine impostando il <xref:System.Windows.Forms.PictureBox.ImageLocation%2A> proprietà e quindi caricare l'immagine in modo sincrono tramite il <xref:System.Windows.Forms.PictureBox.Load%2A> metodo o in modo asincrono usando il <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> (metodo). Il <xref:System.Windows.Forms.PictureBox.SizeMode%2A> proprietà controlla il modo in cui l'immagine e il controllo tra loro. Per altre informazioni, vedere [Procedura: Modificare le dimensioni o la posizione di un'immagine in fase di esecuzione](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md).  
+## <a name="key-properties-and-methods"></a>Proprietà e metodi chiave  
+ L'immagine visualizzata è determinata dalla proprietà <xref:System.Windows.Forms.PictureBox.Image%2A>, che può essere impostata in fase di esecuzione o in fase di progettazione. In alternativa, è possibile specificare l'immagine impostando la proprietà <xref:System.Windows.Forms.PictureBox.ImageLocation%2A> e quindi caricare l'immagine in modo sincrono usando il metodo <xref:System.Windows.Forms.PictureBox.Load%2A> o in modo asincrono usando il metodo <xref:System.Windows.Forms.PictureBox.LoadAsync%2A>. La proprietà <xref:System.Windows.Forms.PictureBox.SizeMode%2A> controlla il modo in cui l'immagine e il controllo si adattano tra loro. Per altre informazioni, vedere [procedura: modificare le dimensioni o la posizione di un'immagine in fase di esecuzione](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.PictureBox>
-- [Procedura: Caricare un'immagine utilizzando la finestra di progettazione](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [Procedura: Caricare un'immagine usando la finestra di progettazione](how-to-load-a-picture-using-the-designer-windows-forms.md)
 - [Procedura: Modificare le dimensioni o la posizione di un'immagine in fase di esecuzione](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
 - [Procedura: Impostare le immagini in fase di esecuzione](how-to-set-pictures-at-run-time-windows-forms.md)
 - [Controllo PictureBox](picturebox-control-windows-forms.md)

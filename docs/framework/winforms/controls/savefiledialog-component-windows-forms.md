@@ -1,16 +1,16 @@
 ---
-title: Componente SaveFileDialog (Windows Form)
+title: Componente SaveFileDialog
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Save File dialog box
 - SaveFileDialog component
 ms.assetid: 6f5d9321-37d7-4448-ac4c-a33c42b2a766
-ms.openlocfilehash: 552e6cae64ab3b30279e04512a87b18c2f2b068a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 920816c648f5dbdd50f869e58769655e8be8e1a1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947979"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743087"
 ---
 # <a name="savefiledialog-component-windows-forms"></a>Componente SaveFileDialog (Windows Form)
 Il componente di Windows Form <xref:System.Windows.Forms.SaveFileDialog> è una finestra di dialogo preconfigurata. È la stessa finestra di dialogo di salvataggio file standard usata da Windows. Il componente eredita dalla classe <xref:System.Windows.Forms.CommonDialog>.  
@@ -19,7 +19,7 @@ Il componente di Windows Form <xref:System.Windows.Forms.SaveFileDialog> è una 
  [Cenni preliminari sul componente SaveFileDialog](savefiledialog-component-overview-windows-forms.md)  
  Introduce i concetti generali relativi al componente<xref:System.Windows.Forms.SaveFileDialog>, che consente di visualizzare una finestra di dialogo preconfigurata tramite la quale gli utenti possono salvare un file nel percorso specificato.  
   
- [Procedura: Salvare i file con il componente SaveFileDialog](how-to-save-files-using-the-savefiledialog-component.md)  
+ [Procedura: Salvare file con il componente SaveFileDialog](how-to-save-files-using-the-savefiledialog-component.md)  
  Illustra come salvare un file mediante un'istanza del componente <xref:System.Windows.Forms.SaveFileDialog> in fase di esecuzione.  
   
 ## <a name="reference"></a>Riferimenti  
@@ -27,7 +27,7 @@ Il componente di Windows Form <xref:System.Windows.Forms.SaveFileDialog> è una 
  Fornisce informazioni di riferimento sulla classe e sui relativi membri.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)  
+ [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)  
  Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.  
   
  [Controlli e componenti della finestra di dialogo](dialog-box-controls-and-components-windows-forms.md)  

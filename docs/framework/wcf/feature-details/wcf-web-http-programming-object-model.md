@@ -2,12 +2,12 @@
 title: Modello a oggetti per la programmazione HTTP Web di WCF
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-ms.openlocfilehash: 43ec16927c703ca373eaa4299093503b2fab2266
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 39c7ec31827d1cde5d95516cc3867f9d6bf9817f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988558"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739860"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>Modello a oggetti per la programmazione HTTP Web di WCF
 Il modello di programmazione HTTP WEB WCF consente agli sviluppatori di esporre i servizi Web di Windows Communication Foundation (WCF) tramite richieste HTTP di base senza richiedere SOAP. Il modello di programmazione HTTP WEB WCF si basa sul modello di estendibilità WCF esistente. Definisce le classi seguenti:  
@@ -44,7 +44,7 @@ Il modello di programmazione HTTP WEB WCF consente agli sviluppatori di esporre 
 ## <a name="webgetattribute"></a>WebGetAttribute  
  L'attributo <xref:System.ServiceModel.Web.WebGetAttribute> viene usato per contrassegnare un'operazione del servizio come operazione che risponde alle richieste HTTP GET. Si tratta di un comportamento di operazione passivo (i metodi <xref:System.ServiceModel.Description.IOperationBehavior> non eseguono alcuna operazione) che aggiunge metadati alla descrizione dell'operazione. L'applicazione di <xref:System.ServiceModel.Web.WebGetAttribute> non alcun effetto, a meno che alla raccolta dei comportamenti del servizio non venga aggiunto un comportamento che cerca questi metadati nella descrizione dell'operazione (in particolare, <xref:System.ServiceModel.Description.WebHttpBehavior>). L'attributo <xref:System.ServiceModel.Web.WebGetAttribute> accetta i parametri facoltativi indicati nella tabella seguente.  
   
-|Parametro|DESCRIZIONE|  
+|Parametro|Descrizione|  
 |---------------|-----------------|  
 |`BodyStyle`|Controlla se eseguire il wrapping delle richieste e delle risposte inviate e ricevute dall'operazione del servizio a cui è applicato l'attributo.|  
 |`RequestFormat`|Controlla la modalità di formattazione dei messaggi di richiesta.|  
@@ -68,10 +68,10 @@ Il modello di programmazione HTTP WEB WCF consente agli sviluppatori di esporre 
 |`UriTemplate`|Specifica il modello di URI che controlla quali richieste GET vengono mappate all'operazione del servizio a cui è applicato l'attributo.|  
   
 ## <a name="uritemplate"></a>UriTemplate  
- La classe <xref:System.UriTemplate> consente di definire un set di URI strutturalmente simili. I modelli sono composti di due parti, un percorso e una query. Un percorso è costituito da una serie di segmenti delimitati da una barra (/). Ogni segmento può avere un valore letterale, un valore di variabile (scritto tra parentesi graffe [{}], vincolato in modo che corrisponda al contenuto di un solo segmento) o un carattere jolly (scritto come\*asterisco [], che corrisponde a "il resto del percorso"), che deve essere visualizzato in fine del percorso. L'espressione di query può essere interamente omessa. Se presente, specifica una serie non ordinata di coppie nome/valore. Gli elementi dell'espressione di query possono essere coppie letterali (? x = 2) o coppie di variabili (? x = {*value*}). Non è consentito usare valori non abbinati. <xref:System.UriTemplate>viene utilizzato internamente dal modello di programmazione HTTP WEB WCF per eseguire il mapping di URI o gruppi di URI specifici a operazioni del servizio.  
+ La classe <xref:System.UriTemplate> consente di definire un set di URI strutturalmente simili. I modelli sono composti di due parti, un percorso e una query. Un percorso è costituito da una serie di segmenti delimitati da una barra (/). Ogni segmento può avere un valore letterale, un valore di variabile (scritto tra parentesi graffe [{}], vincolato in modo che corrisponda al contenuto di un solo segmento) o un carattere jolly (scritto come asterisco [\*], che corrisponde a "il resto del percorso"), che deve essere visualizzato alla fine del percorso. L'espressione di query può essere interamente omessa. Se presente, specifica una serie non ordinata di coppie nome/valore. Gli elementi dell'espressione di query possono essere coppie letterali (? x = 2) o coppie di variabili (? x = {*value*}). Non è consentito usare valori non abbinati. <xref:System.UriTemplate> viene utilizzato internamente dal modello di programmazione HTTP WEB WCF per eseguire il mapping di URI o gruppi di URI specifici a operazioni del servizio.  
   
 ## <a name="uritemplatetable"></a>UriTemplateTable  
- La classe <xref:System.UriTemplateTable> rappresenta un set associativo di oggetti <xref:System.UriTemplate> associati a un oggetto scelto dallo sviluppatore. Consente di confrontare gli URI (Uniform Resource Identifier) candidati con i modelli del set e recuperare i dati associati ai modelli corrispondenti. <xref:System.UriTemplateTable>viene utilizzato internamente dal modello di programmazione HTTP WEB WCF per eseguire il mapping di URI o gruppi di URI specifici a operazioni del servizio.  
+ La classe <xref:System.UriTemplateTable> rappresenta un set associativo di oggetti <xref:System.UriTemplate> associati a un oggetto scelto dallo sviluppatore. Consente di confrontare gli URI (Uniform Resource Identifier) candidati con i modelli del set e recuperare i dati associati ai modelli corrispondenti. <xref:System.UriTemplateTable> viene utilizzato internamente dal modello di programmazione HTTP WEB WCF per eseguire il mapping di URI o gruppi di URI specifici a operazioni del servizio.  
   
 ## <a name="webservicehost"></a>WebServiceHost  
  <xref:System.ServiceModel.Web.WebServiceHost> estende <xref:System.ServiceModel.ServiceHost> per semplificare l'host di un servizio Web non SOAP. Se <xref:System.ServiceModel.Web.WebServiceHost> non trova endpoint nella descrizione del servizio, crea automaticamente un endpoint predefinito all'indirizzo di base del servizio. Quando viene creato un endpoint HTTP predefinito, <xref:System.ServiceModel.Web.WebServiceHost> disabilita anche la pagina della Guida HTTP e la funzionalità WSDL (Web Services Description Language) GET, in modo che l'endpoint dei metadati non interferisce con l'endpoint HTTP predefinito. L'oggetto <xref:System.ServiceModel.Web.WebServiceHost> assicura inoltre che tutti gli endpoint che usano <xref:System.ServiceModel.WebHttpBinding> siano collegati all'oggetto <xref:System.ServiceModel.Description.WebHttpBehavior> necessario. Infine, <xref:System.ServiceModel.Web.WebServiceHost> configura automaticamente l'associazione dell'endpoint per usare le impostazioni di sicurezza IIS (Internet Information Services) associate in caso di uso in una directory virtuale protetta.  
@@ -85,7 +85,7 @@ Il modello di programmazione HTTP WEB WCF consente agli sviluppatori di esporre 
 ### <a name="extending-webhttpbehavior"></a>Estensione di WebHttpBehavior  
  <xref:System.ServiceModel.Description.WebHttpBehavior> è estendibile usando diversi metodi virtuali: <xref:System.ServiceModel.Description.WebHttpBehavior.GetOperationSelector%28System.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29> e <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>. Gli sviluppatori possono derivare una classe da <xref:System.ServiceModel.Description.WebHttpBehavior> ed eseguire l'override di questi metodi per personalizzare il comportamento predefinito.  
   
- L'oggetto <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> è un esempio di estensione di <xref:System.ServiceModel.Description.WebHttpBehavior>. <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>consente agli endpoint Windows Communication Foundation (WCF) di ricevere richieste HTTP da un client ASP.NET AJAX basato su browser. Il [servizio AJAX che usa http post](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md) è un esempio dell'uso di questo punto di estendibilità.  
+ L'oggetto <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> è un esempio di estensione di <xref:System.ServiceModel.Description.WebHttpBehavior>. <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> consente agli endpoint Windows Communication Foundation (WCF) di ricevere richieste HTTP da un client ASP.NET AJAX basato su browser. Il [servizio AJAX che usa http post](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md) è un esempio dell'uso di questo punto di estendibilità.  
   
 > [!WARNING]
 > Quando si usa <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>, non è supportato l'uso di <xref:System.UriTemplate> all'interno di attributi <xref:System.ServiceModel.Web.WebGetAttribute> o <xref:System.ServiceModel.Web.WebInvokeAttribute>.  
@@ -94,10 +94,11 @@ Il modello di programmazione HTTP WEB WCF consente agli sviluppatori di esporre 
  La classe <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector> usa le classi <xref:System.UriTemplate> e <xref:System.UriTemplateTable> per inviare chiamate alle operazioni del servizio.  
   
 ## <a name="compatibility"></a>Compatibilità  
- Il modello di programmazione HTTP WEB WCF non utilizza messaggi basati su SOAP e pertanto non supporta i protocolli WS-*. È tuttavia possibile esporre lo stesso contratto tramite due endpoint diversi, di cui uno usa SOAP e l'altro no. Vedere [Procedura: Esporre un contratto ai client](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) SOAP e Web per un esempio.  
+ Il modello di programmazione HTTP WEB WCF non utilizza messaggi basati su SOAP e pertanto non supporta i protocolli WS-*. È tuttavia possibile esporre lo stesso contratto tramite due endpoint diversi, di cui uno usa SOAP e l'altro no. Per un esempio [, vedere Procedura: esporre un contratto ai client SOAP e Web](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) .  
   
-## <a name="security"></a>Security  
- Poiché il modello di programmazione HTTP WEB WCF non supporta i protocolli WS-*, l'unico modo per proteggere un servizio Web basato sul modello di programmazione HTTP WEB WCF consiste nell'esporre il servizio tramite SSL. Per ulteriori informazioni sulla configurazione di SSL con IIS 7,0 [, vedere come implementare SSL in IIS](https://go.microsoft.com/fwlink/?LinkId=131613) .  
+## <a name="security"></a>Sicurezza -  
+
+Poiché il modello di programmazione HTTP WEB WCF non supporta i protocolli WS-*, l'unico modo per proteggere un servizio Web basato sul modello di programmazione HTTP WEB WCF consiste nell'esporre il servizio tramite SSL. Per ulteriori informazioni sulla configurazione di SSL con IIS 7,0 [, vedere come implementare SSL in IIS](https://support.microsoft.com/help/299875/how-to-implement-ssl-in-iis).
   
 ## <a name="see-also"></a>Vedere anche
 

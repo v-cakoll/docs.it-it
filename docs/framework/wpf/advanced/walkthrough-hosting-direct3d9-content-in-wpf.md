@@ -1,16 +1,17 @@
 ---
-title: 'Procedura dettagliata: hosting di contenuto Direct3D9 in WPF'
+title: Ospitare contenuto Direct3D9 in WPF
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Direct3D9 [WPF interoperability], hosting Direct3D9 content
 - WPF [WPF], hosting Direct3D9 content
 ms.assetid: 60983736-0ab5-42cc-8b16-e9fbde261a43
-ms.openlocfilehash: 03c93ea3813d3572abd7ca60519478c9bf54cf7d
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e65b0c59268b44abed289e54181bf0bda9355664
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976513"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742611"
 ---
 # <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>Procedura dettagliata: hosting di contenuto Direct3D9 in WPF
 
@@ -26,7 +27,7 @@ Questa procedura dettagliata prevede l'esecuzione delle attività seguenti:
 
  Al termine, si saprà come ospitare il contenuto di Direct3D9 in un'applicazione WPF.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per completare la procedura dettagliata, è necessario disporre dei componenti seguenti:
 
@@ -68,7 +69,7 @@ Infine, usare la classe <xref:System.Windows.Interop.D3DImage> per ospitare il c
 
     [!code-xaml[System.Windows.Interop.D3DImage#10](~/samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/CS/window1.xaml#10)]
 
-2. Compilare il progetto.
+2. Compilazione del progetto.
 
 3. Copiare la DLL che contiene il contenuto di Direct3D9 nella cartella bin/debug.
 

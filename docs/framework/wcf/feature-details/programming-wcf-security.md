@@ -7,25 +7,25 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: 18942c2d486038c3ebfbe11d21b41d0ba9412500
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e19f858818866f16b8af44abe462ddb826d43b69
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69909867"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741471"
 ---
 # <a name="programming-wcf-security"></a>Programmazione delle funzionalità di sicurezza di WCF
 In questo argomento vengono descritte le attività di programmazione fondamentali utilizzate per creare un'applicazione Secure Windows Communication Foundation (WCF). Questo argomento descrive solo l'autenticazione, la riservatezza e l'integrità, collettivamente nota come *protezione del trasferimento*. In questo argomento non viene illustrata l'autorizzazione (controllo dell'accesso a risorse o servizi); per informazioni sull'autorizzazione, vedere [autorizzazione](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
   
 > [!NOTE]
-> Per un'introduzione importante ai concetti relativi alla sicurezza, in particolare per quanto riguarda WCF, vedere le esercitazioni sui modelli e sulle procedure in MSDN in [scenari, modelli e indicazioni sull'implementazione di WSE (Web Services Enhancements) 3,0](https://go.microsoft.com/fwlink/?LinkID=88250).  
+> Per un'introduzione importante ai concetti relativi alla sicurezza, in particolare per quanto riguarda WCF, vedere le esercitazioni sui modelli e sulle procedure in MSDN in [scenari, modelli e indicazioni sull'implementazione di WSE (Web Services Enhancements) 3,0](https://docs.microsoft.com/previous-versions/msp-n-p/ff648183(v=pandp.10)).  
   
  La programmazione della sicurezza WCF si basa su tre passaggi che configurano quanto segue: la modalità di sicurezza, un tipo di credenziale client e i valori delle credenziali. Questi passaggi possono essere eseguiti in codice o in configurazione.  
   
 ## <a name="setting-the-security-mode"></a>Impostazione della modalità di sicurezza  
  Di seguito vengono illustrati i passaggi generali per la programmazione con la modalità di sicurezza in WCF:  
   
-1. Scegliere fra le associazioni predefinite un'associazione appropriata ai requisiti dell'applicazione. Per un elenco delle opzioni di associazione, vedere [associazioni fornite dal sistema](../../../../docs/framework/wcf/system-provided-bindings.md). Per impostazione predefinita, quasi tutte le associazioni presentano un meccanismo di sicurezza abilitato. L'unica eccezione è la <xref:System.ServiceModel.BasicHttpBinding> classe (mediante la [ \<configurazione, BasicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)).  
+1. Scegliere fra le associazioni predefinite un'associazione appropriata ai requisiti dell'applicazione. Per un elenco delle opzioni di associazione, vedere [associazioni fornite dal sistema](../../../../docs/framework/wcf/system-provided-bindings.md). Per impostazione predefinita, quasi tutte le associazioni presentano un meccanismo di sicurezza abilitato. L'unica eccezione è la classe <xref:System.ServiceModel.BasicHttpBinding> (mediante la configurazione, il [> basichttpbinding\<](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)).  
   
      L'associazione scelta determina il trasporto. Ad esempio, l'associazione <xref:System.ServiceModel.WSHttpBinding> utilizza il protocollo HTTP come trasporto, mentre l'associazione <xref:System.ServiceModel.NetTcpBinding> utilizza il trasporto TCP.  
   
@@ -35,7 +35,7 @@ In questo argomento vengono descritte le attività di programmazione fondamental
   
     1. `Transport`  
   
-         La sicurezza a livello di trasporto dipende dal meccanismo utilizzato dall'associazione scelta. Ad esempio, se si utilizza l'associazione `WSHttpBinding`, il meccanismo di sicurezza è Secure Sockets Layer (SSL), che peraltro è anche il meccanismo del protocollo HTTPS. In generale, il vantaggio principale della sicurezza a livello di trasporto è che offre una buona velocità effettiva indipendentemente dal trasporto utilizzato. Tuttavia, presenta due limitazioni: Il primo è che il meccanismo di trasporto impone il tipo di credenziale usato per autenticare un utente. Di fatto ciò rappresenta uno svantaggio solo se un servizio deve garantire l'interoperabilità con altri servizi che richiedono vari tipi di credenziali. Inoltre, poiché la sicurezza non viene applicata a livello di messaggio, la sicurezza viene implementata in modo hop-by-hop anziché end-to-end. Questo secondo limite rappresenta un problema solo se il percorso dei messaggi fra client e servizio prevede intermediari. Per ulteriori informazioni sul trasporto da utilizzare, vedere [scelta di un trasporto](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Per altre informazioni sull'uso della sicurezza del trasporto, vedere [Panoramica della sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
+         La sicurezza a livello di trasporto dipende dal meccanismo utilizzato dall'associazione scelta. Ad esempio, se si utilizza l'associazione `WSHttpBinding`, il meccanismo di sicurezza è Secure Sockets Layer (SSL), che peraltro è anche il meccanismo del protocollo HTTPS. In generale, il vantaggio principale della sicurezza a livello di trasporto è che offre una buona velocità effettiva indipendentemente dal trasporto utilizzato. Tuttavia, tale tipo di sicurezza presenta due limiti. Anzitutto, il meccanismo di trasporto impone il tipo di credenziale utilizzato per autenticare un utente. Di fatto ciò rappresenta uno svantaggio solo se un servizio deve garantire l'interoperabilità con altri servizi che richiedono vari tipi di credenziali. Inoltre, poiché la sicurezza non viene applicata a livello di messaggio, la sicurezza viene implementata in modo hop-by-hop anziché end-to-end. Questo secondo limite rappresenta un problema solo se il percorso dei messaggi fra client e servizio prevede intermediari. Per ulteriori informazioni sul trasporto da utilizzare, vedere [scelta di un trasporto](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Per altre informazioni sull'uso della sicurezza del trasporto, vedere [Panoramica della sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
   
     2. `Message`  
   
@@ -54,7 +54,7 @@ In questo argomento vengono descritte le attività di programmazione fondamental
      Una sessione protetta si verifica quando un client e un servizio creano un canale utilizzando una chiave simmetrica, ovvero quando sia il client sia il server utilizzano la stessa chiave per la durata della conversazione e fino alla chiusura del dialogo.  
   
 ## <a name="setting-the-client-credential-type"></a>Impostazione del tipo di credenziale client  
- Selezionare un tipo di credenziale client in base alle proprie esigenze. Per ulteriori informazioni, vedere [selezione di un tipo](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)di credenziale. Sono disponibili i tipi di credenziale client seguenti:  
+ Selezionare un tipo di credenziale client in base alle proprie esigenze. Per ulteriori informazioni, vedere [selezione di un tipo di credenziale](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md). Sono disponibili i tipi di credenziale client seguenti:  
   
 - `Windows`  
   

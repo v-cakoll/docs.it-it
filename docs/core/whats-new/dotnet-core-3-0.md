@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 10/22/2019
-ms.openlocfilehash: eb1815f965e86a6f8f709b32f84f879eb03de447
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
-ms.translationtype: MT
+ms.openlocfilehash: 4bf1c4826273535bfe824828f0fad96998b29483
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115810"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742598"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novità di .NET Core 3.0
 
@@ -112,20 +112,20 @@ Per altre informazioni sullo strumento IL Linker, vedere la [documentazione](htt
 
 ### <a name="tiered-compilation"></a>Compilazione a livelli
 
-Per impostazione predefinita, con .NET Core 3.0 la [compilazione a livelli](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) è attiva. Questa funzionalità consente al runtime di usare in modo più adattivo il compilatore JIT per ottenere prestazioni migliori.
+Per impostazione predefinita, con .NET Core 3.0 la [compilazione a livelli](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation-guide.md) è attiva. Questa funzionalità consente al runtime di più in modo adattivo di usare il compilatore JIT (just-in-Time) per ottenere prestazioni migliori.
 
-Il vantaggio principale della compilazione a livelli (TC) consiste nell'abilitazione di metodi di ricompilazione JIT con un livello lower-quality-but-faster (di minore qualità ma più veloce) o higher-quality-but-slower (di migliore qualità ma più lento). In questo modo è possibile migliorare le prestazioni di un'applicazione nelle sue vari fasi di esecuzione, dall'avvio allo stato stabile. Ciò si differenzia dall'approccio che non usa la compilazione a livelli. In questo caso ogni metodo viene compilato in un solo modo (come per il livello alta qualità), che dà priorità allo stato stabile piuttosto che alle prestazioni all'avvio.
+Il vantaggio principale della compilazione a più livelli consiste nel fornire due metodi di jitting: in un livello di qualità inferiore, ma più veloce, o in un livello di qualità superiore ma più lento. La qualità si riferisce al modo in cui viene ottimizzato il metodo. TC consente di migliorare le prestazioni di un'applicazione durante le varie fasi di esecuzione, dall'avvio fino allo stato stazionario. Quando la compilazione a più livelli è disabilitata, ogni metodo viene compilato in un unico modo, che è influenzato dalle prestazioni di stato costante rispetto alle prestazioni di avvio.
 
-Quando TC è abilitato, durante l'avvio di un metodo denominato:
+Quando TC è abilitato, si applica il comportamento seguente per la compilazione del metodo all'avvio di un'app:
 
-- Se il metodo dispone di codice con compilazione AOT (ReadyToRun), verrà utilizzato il codice pregenerato.
-- In caso contrario, il metodo sarà compilato JIT. In genere, questi metodi sono attualmente generici sui tipi di valore.
-  - JIT rapido produce codice di qualità inferiore più rapidamente. JIT rapido è abilitato per impostazione predefinita in .NET Core 3,0 per i metodi che non contengono cicli ed è preferibile durante l'avvio.
-  - Il JIT con ottimizzazione completa produce un codice di qualità superiore più lentamente. Per i metodi in cui non è possibile usare JIT rapido (ad esempio, se il metodo è attribuito a `[MethodImpl(MethodImplOptions.AggressiveOptimization)]`), viene usato l'ottimizzazione JIT completa.
+- Se il metodo ha codice precompilato in anticipo, o [ReadyToRun](#readytorun-images), viene usato il codice pregenerato.
+- In caso contrario, il metodo è compilato JIT. In genere, questi metodi sono generici sui tipi di valore.
+  - *JIT rapido* produce più rapidamente codice di qualità inferiore (o meno ottimizzato). In .NET Core 3,0, JIT rapido è abilitato per impostazione predefinita per i metodi che non contengono cicli ed è preferibile durante l'avvio.
+  - Il codice JIT per l'ottimizzazione completa produce più lentamente codice di qualità superiore o più ottimizzata. Per i metodi in cui non è possibile usare JIT rapido (ad esempio, se il metodo è attribuito a <xref:System.Runtime.CompilerServices.MethodImplOptions.AggressiveOptimization?displayProperty=nameWithType>), viene usato l'ottimizzazione JIT completa.
 
-Infine, dopo che i metodi sono stati chiamati un numero di volte, vengono ricompilato JIT con la JIT completamente ottimizzata in background.
+Per i metodi denominati di frequente, il compilatore just-in-Time crea il codice completamente ottimizzato in background. Il codice ottimizzato sostituisce quindi il codice precompilato per il metodo.
 
-Il codice generato da Quick JIT può essere eseguito più lentamente, allocare più memoria o usare più spazio dello stack. Se si verificano problemi, è possibile disabilitare Quick JIT usando questa impostazione nel file di progetto:
+Il codice generato da Quick JIT può essere eseguito più lentamente, allocare più memoria o usare più spazio dello stack. Se si verificano problemi, è possibile disabilitare Quick JIT usando questa proprietà MSBuild nel file di progetto:
 
 ```xml
 <PropertyGroup>
@@ -133,7 +133,7 @@ Il codice generato da Quick JIT può essere eseguito più lentamente, allocare p
 </PropertyGroup>
 ```
 
-Per disabilitare completamente la compilazione a livelli, usare questa impostazione nel file di progetto:
+Per disabilitare completamente TC, usare questa proprietà MSBuild nel file di progetto:
 
 ```xml
 <PropertyGroup>
@@ -141,7 +141,10 @@ Per disabilitare completamente la compilazione a livelli, usare questa impostazi
 </PropertyGroup>
 ```
 
-Tutte le modifiche apportate alle impostazioni precedenti nel file di progetto possono richiedere la reflection di una compilazione pulita (eliminare le directory `obj` e `bin` e ricompilare).
+> [!TIP]
+> Se si modificano queste impostazioni nel file di progetto, potrebbe essere necessario eseguire una compilazione pulita affinché le nuove impostazioni vengano riflesse (eliminare le directory `obj` e `bin` e ricompilarle).
+
+Per ulteriori informazioni sulla configurazione della compilazione in fase di esecuzione, vedere [Opzioni di configurazione in fase di esecuzione per la compilazione](../run-time-config/compilation.md).
 
 ### <a name="readytorun-images"></a>Immagini ReadyToRun
 
@@ -182,7 +185,7 @@ Eccezioni relative all'uso di più destinazioni:
 .NET core 3.0 introduce una funzionalità con consenso esplicito che consente all'app di eseguire il roll forward alla versione principale più recente di NET Core. È stata aggiunta anche una nuova impostazione per controllare come applicare il roll forward all'app. Questa funzionalità può essere configurata nei modi seguenti:
 
 - Proprietà file di progetto: `RollForward`
-- Proprietà file di configurazione runtime: `rollForward`
+- Proprietà del file di configurazione in fase di esecuzione: `rollForward`
 - Variabile di ambiente: `DOTNET_ROLL_FORWARD`
 - Argomento della riga di comando: `--roll-forward`
 

@@ -1,5 +1,5 @@
 ---
-title: Stampa più protetta in Windows Form
+title: Stampa più sicura
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, printing
@@ -7,23 +7,23 @@ helpviewer_keywords:
 - printing [Windows Forms], security
 - security [Windows Forms], printing
 ms.assetid: 48fd36ac-872f-4de0-902a-e52969cd4367
-ms.openlocfilehash: b0387a82f142fb32912dad1370d6ac0c784e8894
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 6285b76d01660bfa761ea606421f264bdc0c0af5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592650"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734886"
 ---
-# <a name="more-secure-printing-in-windows-forms"></a>Stampa più protetta in Windows Form
-Le applicazioni Windows Forms spesso includono funzionalità di stampa. .NET Framework Usa il <xref:System.Drawing.Printing.PrintingPermission> classe per controllare l'accesso alle funzionalità di stampa e associato <xref:System.Drawing.Printing.PrintingPermissionLevel> valore di enumerazione per indicare il livello di accesso. Per impostazione predefinita, la stampa è abilitata per impostazione predefinita nelle aree Internet e Intranet locale; Tuttavia, il livello di accesso è limitato in entrambe le aree. Se l'applicazione può essere stampato, richiede l'intervento dell'utente, o non è possibile stampare dipende il valore dell'autorizzazione concesso all'applicazione. Per impostazione predefinita, l'area Intranet locale riceve <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> riceve l'accesso e l'area Intranet <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> accesso.  
+# <a name="more-secure-printing-in-windows-forms"></a>Stampa più sicura in Windows Form
+Le applicazioni Windows Forms includono spesso le funzionalità di stampa. Il .NET Framework utilizza la classe <xref:System.Drawing.Printing.PrintingPermission> per controllare l'accesso alle funzionalità di stampa e il valore di enumerazione <xref:System.Drawing.Printing.PrintingPermissionLevel> associato per indicare il livello di accesso. Per impostazione predefinita, la stampa è abilitata per impostazione predefinita nelle aree Internet e Intranet locale; Tuttavia, il livello di accesso è limitato in entrambe le zone. Se l'applicazione è in grado di stampare, richiede l'intervento dell'utente o non è possibile stampare dipende dal valore di autorizzazione concesso all'applicazione. Per impostazione predefinita, l'area Intranet locale riceve l'accesso <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> e l'area Intranet riceve <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> accesso.  
   
- La tabella seguente illustra le funzionalità disponibili in ogni livello di autorizzazione Stampa.  
+ Nella tabella seguente sono illustrate le funzionalità disponibili a ogni livello di autorizzazione di stampa.  
   
 |PrintingPermissionLevel|Descrizione|  
 |-----------------------------|-----------------|  
-|<xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>|Fornisce accesso completo a tutte le stampanti installate.|  
-|<xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>|Abilita la stampa a livello di codice sulla stampante predefinita e stampa più sicura tramite una finestra di dialogo Stampa restrittivi. <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> è un subset di <xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>.|  
-|<xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>|Consente la stampa solo da una finestra di dialogo più limitata. <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> è un subset di <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>.|  
+|<xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>|Consente l'accesso completo a tutte le stampanti installate.|  
+|<xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>|Consente la stampa a livello di codice sulla stampante predefinita e la stampa più sicura tramite una finestra di dialogo di stampa restrittiva. <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> è un subset di <xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>.|  
+|<xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>|Fornisce la stampa solo da una finestra di dialogo con restrizioni. <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> è un subset di <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>.|  
 |<xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting>|Impedisce l'accesso alle stampanti. <xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting> è un subset di <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>.|  
   
 ## <a name="see-also"></a>Vedere anche

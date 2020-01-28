@@ -1,5 +1,5 @@
 ---
-title: Spazi dei nomi XAML e mapping dello spazio dei nomi per XAML WPF
+title: Spazi dei nomi XAML e mapping dello spazio dei nomi
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 5cce8ff04dbf163aba95346447f0557da14197da
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 85f35c29cdd1d9e4ea9776b756245a75af58e912
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976769"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741833"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>Spazi dei nomi XAML e mapping dello spazio dei nomi per XAML WPF
 Questo argomento approfondisce la presenza e lo scopo dei due mapping dello spazio dei nomi XAML nel tag radice di ogni file XAML WPF. L'argomento descrive anche come produrre mapping simili per l'uso di elementi definiti nel codice e/o all'interno di assembly separati.  
@@ -107,7 +107,7 @@ End Namespace
 ## <a name="mapping-clr-namespaces-to-xml-namespaces-in-an-assembly"></a>Mapping di spazi dei nomi CLR a spazi dei nomi XML in un assembly  
  WPF definisce un attributo CLR che viene usato dai processori XAML per eseguire il mapping di più spazi dei nomi CLR a un unico spazio dei nomi XAML. Questo attributo, <xref:System.Windows.Markup.XmlnsDefinitionAttribute>, viene inserito a livello di assembly nel codice sorgente che produce l'assembly. Il codice sorgente dell'assembly WPF usa questo attributo per eseguire il mapping dei vari spazi dei nomi comuni, ad esempio <xref:System.Windows> e <xref:System.Windows.Controls>, allo spazio dei nomi `http://schemas.microsoft.com/winfx/2006/xaml/presentation`.  
   
- Il <xref:System.Windows.Markup.XmlnsDefinitionAttribute> accetta due parametri: il nome dello spazio dei nomi XML/XAML e il nome dello spazio dei nomi CLR. È possibile che esistano più <xref:System.Windows.Markup.XmlnsDefinitionAttribute> per eseguire il mapping di più spazi dei nomi CLR allo stesso spazio dei nomi XML. Dopo avere eseguito il mapping, è possibile fare riferimento ai membri degli spazi dei nomi senza nome completo specificando l'istruzione `using` appropriata nella pagina code-behind della classe parziale. Per informazioni dettagliate, vedere <xref:System.Windows.Markup.XmlnsDefinitionAttribute>.  
+ Il <xref:System.Windows.Markup.XmlnsDefinitionAttribute> accetta due parametri: il nome dello spazio dei nomi XML/XAML e il nome dello spazio dei nomi CLR. È possibile che esistano più <xref:System.Windows.Markup.XmlnsDefinitionAttribute> per eseguire il mapping di più spazi dei nomi CLR allo stesso spazio dei nomi XML. Dopo avere eseguito il mapping, è possibile fare riferimento ai membri degli spazi dei nomi senza nome completo specificando l'istruzione `using` appropriata nella pagina code-behind della classe parziale. Per ulteriori dettagli, vedere <xref:System.Windows.Markup.XmlnsDefinitionAttribute>.  
   
 ## <a name="designer-namespaces-and-other-prefixes-from-xaml-templates"></a>Spazi dei nomi della finestra di progettazione e altri prefissi di modelli XAML  
  Se si lavora con ambienti di sviluppo e/o con strumenti di progettazione per XAML WPF, si può notare che all'interno del markup XAML esistono altri spazi dei nomi XAML definiti o altri prefissi.  

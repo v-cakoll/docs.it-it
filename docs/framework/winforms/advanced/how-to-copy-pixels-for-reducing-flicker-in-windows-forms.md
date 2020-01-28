@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Copiare i pixel per ridurre lo sfarfallio nei Windows Form'
+title: 'Procedura: copiare i pixel per ridurre lo sfarfallio'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,22 +13,22 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: 5a18539153c64a5059d8079f6e245115b026bb91
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 299041e7038d5bd5b9824d668b3f47d842030ac7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950141"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746478"
 ---
-# <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Procedura: Copiare i pixel per ridurre lo sfarfallio nei Windows Form
+# <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Procedura: copiare i pixel per ridurre lo sfarfallio in Windows Form
 Quando si aggiunge un'animazione a un grafico semplice, gli utenti possono talvolta riscontrare sfarfallio o altri effetti visivi indesiderati. Un modo per limitare questo problema consiste nell'usare un processo "BitBlt" sul grafico. BitBlt è il "trasferimento a blocchi di bit" dei dati relativi ai colori da un rettangolo di origine di pixel a un rettangolo di destinazione di pixel.  
   
- Con Windows Forms, BitBlt viene eseguita utilizzando il <xref:System.Drawing.Graphics.CopyFromScreen%2A> metodo <xref:System.Drawing.Graphics> della classe. Nei parametri del metodo si specificano l'origine e la destinazione (come punti), le dimensioni dell'area da copiare e l'oggetto Graphics utilizzato per disegnare la nuova forma.  
+ Con Windows Forms, BitBlt viene eseguita utilizzando il metodo <xref:System.Drawing.Graphics.CopyFromScreen%2A> della classe <xref:System.Drawing.Graphics>. Nei parametri del metodo si specificano l'origine e la destinazione (come punti), le dimensioni dell'area da copiare e l'oggetto Graphics utilizzato per disegnare la nuova forma.  
   
- Nell'esempio seguente viene disegnata una forma sul form nel <xref:System.Windows.Forms.Control.Paint> gestore eventi. Viene quindi utilizzato <xref:System.Drawing.Graphics.CopyFromScreen%2A> il metodo per duplicare la forma.  
+ Nell'esempio seguente viene disegnata una forma sul form nel gestore dell'evento <xref:System.Windows.Forms.Control.Paint>. Viene quindi usato il metodo <xref:System.Drawing.Graphics.CopyFromScreen%2A> per duplicare la forma.  
   
 > [!NOTE]
-> Se si imposta la <xref:System.Windows.Forms.Control.DoubleBuffered%2A> proprietà del `true` form su, il <xref:System.Windows.Forms.Control.Paint> codice basato su grafica nell'evento verrà sottoposta a doppio buffer. Sebbene non sia possibile ottenere miglioramenti in termini di prestazioni quando si usa il codice riportato di seguito, è opportuno tenere presente quando si lavora con codice di manipolazione grafica più complesso.  
+> Se si imposta la proprietà <xref:System.Windows.Forms.Control.DoubleBuffered%2A> del modulo su `true`, verrà creato un doppio buffer per il codice basato su grafica nell'evento <xref:System.Windows.Forms.Control.Paint>. Sebbene non sia possibile ottenere miglioramenti in termini di prestazioni quando si usa il codice riportato di seguito, è opportuno tenere presente quando si lavora con codice di manipolazione grafica più complesso.  
   
 ## <a name="example"></a>Esempio  
   
@@ -60,7 +60,7 @@ private void Form1_Paint(System.Object sender,
 ```  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Il codice precedente viene eseguito nel gestore <xref:System.Windows.Forms.Control.Paint> eventi del form in modo che la grafica venga mantenute quando il modulo viene ridisegnato. Di conseguenza, non chiamare metodi correlati alla grafica nel <xref:System.Windows.Forms.Form.Load> gestore eventi, perché il contenuto disegnato non verrà ridisegnato se il form viene ridimensionato o nascosto da un altro form.  
+ Il codice precedente viene eseguito nel gestore dell'evento <xref:System.Windows.Forms.Control.Paint> del form in modo che la grafica venga mantenute quando il modulo viene ridisegnato. Di conseguenza, non chiamare metodi correlati alla grafica nel gestore dell'evento <xref:System.Windows.Forms.Form.Load>, perché il contenuto disegnato non verrà ridisegnato se il form viene ridimensionato o nascosto da un altro form.  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -1,5 +1,5 @@
 ---
-title: Attributi nei controlli Windows Form
+title: Attributi nei controlli
 ms.date: 03/30/2017
 helpviewer_keywords:
 - attributes [Windows Forms]
@@ -7,24 +7,24 @@ helpviewer_keywords:
 - attributes [Windows Forms], control properties
 - attributes [Windows Forms], classes
 ms.assetid: 2c5640e9-6c6c-49d7-a5e4-a768f6be7853
-ms.openlocfilehash: 9dd4c2aabe1517b66d8e499de3cf2671bb94e0d6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b32e4f87e953438a3bb11569445a9270e11c7922
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954375"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732135"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Attributi nei controlli Windows Form
 .NET Framework offre un'ampia gamma di attributi che è possibile applicare ai membri dei controlli e dei componenti personalizzati. Alcuni di questi attributi influiscono sul comportamento in fase di esecuzione di una classe, mentre altri influiscono sul comportamento in fase di progettazione.  
   
 ## <a name="attributes-for-control-and-component-properties"></a>Attributi per le proprietà del controllo e del componente  
- La tabella seguente illustra gli attributi che è possibile applicare alle proprietà o ad altri membri dei componenti e dei controlli personalizzati. Per un esempio che usa molti di questi attributi, vedere [come: Applicare attributi nei controlli di Windows Form](how-to-apply-attributes-in-windows-forms-controls.md).  
+ La tabella seguente illustra gli attributi che è possibile applicare alle proprietà o ad altri membri dei componenti e dei controlli personalizzati. Per un esempio che usa molti di questi attributi vedere [Procedura: applicare attributi nei controlli Windows Form](how-to-apply-attributes-in-windows-forms-controls.md).  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
 |<xref:System.ComponentModel.AmbientValueAttribute>|Specifica il valore per passare a una proprietà che determini il proprio valore da un'altra origine. Questo concetto è noto come *ambiente*.|  
 |<xref:System.ComponentModel.BrowsableAttribute>|Indica se visualizzare una proprietà o un evento in una finestra **Proprietà**.|  
-|<xref:System.ComponentModel.CategoryAttribute>|Specifica il nome della categoria in cui raggruppare la proprietà o evento se visualizzato in una <xref:System.Windows.Forms.PropertyGrid> controllo impostato su <xref:System.Windows.Forms.PropertySort.Categorized> modalità.|  
+|<xref:System.ComponentModel.CategoryAttribute>|Specifica il nome della categoria in cui raggruppare la proprietà o l'evento quando viene visualizzato in un controllo <xref:System.Windows.Forms.PropertyGrid> impostato sulla modalità di <xref:System.Windows.Forms.PropertySort.Categorized>.|  
 |<xref:System.ComponentModel.DefaultValueAttribute>|Specifica il valore predefinito per una proprietà.|  
 |<xref:System.ComponentModel.DescriptionAttribute>|Specifica una descrizione per una proprietà o un evento.|  
 |<xref:System.ComponentModel.DisplayNameAttribute>|Specifica il nome visualizzato per una proprietà, un evento o un metodo `public void` che non accetta argomenti.|  
@@ -63,6 +63,6 @@ ms.locfileid: "61954375"
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Attribute>
-- [Procedura: Applicare attributi nei controlli di Windows Form](how-to-apply-attributes-in-windows-forms-controls.md)
+- [Procedura: Applicare attributi nei controlli Windows Form](how-to-apply-attributes-in-windows-forms-controls.md)
 - [Estensione del supporto in fase di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
 - [Sviluppo di controlli Windows Form personalizzati con .NET Framework](developing-custom-windows-forms-controls.md)

@@ -1,17 +1,17 @@
 ---
-title: Controllo BindingNavigator (Windows Form)
+title: Controllo BindingNavigator
 ms.date: 03/30/2017
 helpviewer_keywords:
 - BindingNavigator control [Windows Forms]
 - data [Windows Forms], navigating
 - data navigation
 ms.assetid: 18c1e2a5-9834-40d3-9b2e-2b545e4e769e
-ms.openlocfilehash: ce67a06a5fe43602258d52548e8d933b99548f44
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 96a14ac95afd9131faf1a1687bfde7f0b0c0b73a
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61961720"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744378"
 ---
 # <a name="bindingnavigator-control-windows-forms"></a>Controllo BindingNavigator (Windows Form)
 Il controllo `BindingNavigator` rappresenta l'interfaccia utente di spostamento e modifica per i controlli associati a dati. Il controllo `BindingNavigator` consente agli utenti di esplorare e modificare i dati in Windows Form.  
@@ -22,13 +22,13 @@ Il controllo `BindingNavigator` rappresenta l'interfaccia utente di spostamento 
  [Cenni preliminari sul controllo BindingNavigator](bindingnavigator-control-overview-windows-forms.md)  
  Introduce i concetti generali sul controllo `BindingNavigator`, che consente agli utenti di esplorare gli elementi di un'origine dati.  
   
- [Procedura: Esplorare i dati con il controllo BindingNavigator di Windows Form](how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)  
+ [Procedura: esplorare i dati con il controllo BindingNavigator di Windows Form](how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)  
  Illustra i passaggi per associare un controllo `BindingNavigator` a un'origine dati.  
   
- [Procedura: Esplorare un DataSet con il controllo BindingNavigator di Windows Form](move-through-a-dataset-with-wf-bindingnavigator-control.md)  
+ [Procedura: esplorare un dataset con il controllo BindingNavigator di Windows Form](move-through-a-dataset-with-wf-bindingnavigator-control.md)  
  Illustra l'uso di un `BindingNavigator` controllo per esplorare i record in un <xref:System.Data.DataSet>.  
   
- Vedere anche [come: Aggiungere carica, Salva e Annulla i pulsanti per i Windows Form controllo BindingNavigator](load-save-and-cancel-bindingnavigator.md).  
+ Vedere anche [Procedura: Aggiungere i pulsanti Carica, Salva e Annulla al controllo BindingNavigator Windows Forms](load-save-and-cancel-bindingnavigator.md).  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.BindingNavigator>  

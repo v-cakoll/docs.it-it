@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Abilitare operazioni di trascinamento con il controllo RichTextBox di Windows Forms'
+title: Abilitare le operazioni di trascinamento della selezione con il controllo RichTextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - text boxes [Windows Forms], drag-and-drop operations
 - RichTextBox control [Windows Forms], drag-and-drop operations
 ms.assetid: ca167d1c-2014-4cf0-96a0-20598470be3b
-ms.openlocfilehash: d1b8f3e1d0ef7d0f83db4a742ab76a05e42f761b
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 3c17560dee012912aea2938654f1dc4dc56e0725
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053688"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745815"
 ---
-# <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>Procedura: Abilitare operazioni di trascinamento con il controllo RichTextBox di Windows Forms
+# <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>Procedura: abilitare operazioni di trascinamento con il controllo RichTextBox Windows Form
 Le operazioni di trascinamento della selezione del controllo <xref:System.Windows.Forms.RichTextBox> di Windows Form vengono eseguite gestendo gli eventi <xref:System.Windows.Forms.RichTextBox.DragEnter> e <xref:System.Windows.Forms.RichTextBox.DragDrop> . Quindi, le operazioni di trascinamento della selezione risultano molto semplici con il controllo <xref:System.Windows.Forms.RichTextBox> .  
   
 ### <a name="to-enable-drag-operations-in-a-richtextbox-control"></a>Per abilitare le operazioni di trascinamento in un controllo RichTextBox  
@@ -62,7 +62,7 @@ Le operazioni di trascinamento della selezione del controllo <xref:System.Window
        }  
     ```  
   
-     (Visual C# e Visual C++) Inserire il codice seguente nel costruttore del form per registrare il gestore dell'evento.  
+     (Visual C# e Visual C++) Inserire il codice seguente nel costruttore del form per registrare il gestore eventi.  
   
     ```csharp  
     this.richTextBox1.DragEnter += new  
@@ -138,7 +138,7 @@ Le operazioni di trascinamento della selezione del controllo <xref:System.Window
        }  
     ```  
   
-     (Visual C# e Visual C++) Inserire il codice seguente nel costruttore del form per registrare il gestore dell'evento.  
+     (Visual C# e Visual C++) Inserire il codice seguente nel costruttore del form per registrare il gestore eventi.  
   
     ```csharp  
     this.richTextBox1.DragDrop += new  
@@ -169,4 +169,4 @@ Le operazioni di trascinamento della selezione del controllo <xref:System.Window
 - <xref:System.Windows.Forms.RichTextBox>
 - [Procedura: Eseguire operazioni di trascinamento e rilascio tra applicazioni](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
 - [Controllo RichTextBox](richtextbox-control-windows-forms.md)
-- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)
+- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)

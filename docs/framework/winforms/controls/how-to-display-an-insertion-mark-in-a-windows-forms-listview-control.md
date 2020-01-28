@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Visualizzare un segno di inserimento in un controllo ListView di Windows Form'
+title: Visualizza un segno di inserimento nel controllo ListView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - drop and drag [Windows Forms], insertion marks
 - insertion marks
 ms.assetid: 88d0a15b-25fd-4dc3-a685-297351311940
-ms.openlocfilehash: 62d105dc3c0b9aabc3699c12259e1624ac31a3a0
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: eeae51223a21baaf4d2412de2ce11d0c6cbcae27
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960436"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742214"
 ---
 # <a name="how-to-display-an-insertion-mark-in-a-windows-forms-listview-control"></a>Procedura: Visualizzare un segno di inserimento in un controllo ListView di Windows Form
 Il segno di inserimento nel controllo <xref:System.Windows.Forms.ListView> indica agli utenti il punto in cui verranno inseriti gli elementi trascinati. Quando un utente trascina un elemento in un punto intermedio tra due elementi, il segno di inserimento indica la nuova posizione prevista dell'elemento.  

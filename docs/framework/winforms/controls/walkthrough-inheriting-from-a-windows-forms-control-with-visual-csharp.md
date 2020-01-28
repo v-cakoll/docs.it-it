@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: eredità da un controllo di Windows Form con Visual C#'
+title: Ereditare da un controllo
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], custom controls
@@ -11,16 +11,16 @@ ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c54733a340b1855b3fc7b90ff2b5178fad8c5303
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 713ccf97a73ce9684b9124a121369f22751861d0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460586"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740132"
 ---
 # <a name="walkthrough-inherit-from-a-windows-forms-control-with-c"></a>Procedura dettagliata: ereditare da un controllo Windows Forms con C\#
 
-Con Visual C#è possibile creare controlli personalizzati avanzati tramite l' *ereditarietà*. L'ereditarietà consente di creare nuovi controlli che non solo conservano tutte le funzionalità proprie dei controlli Windows Forms standard, ma includono anche funzionalità personalizzate. In questa procedura verrà creato un controllo ereditato semplice denominato `ValueButton`. Questo pulsante eredita le funzionalità dal controllo Windows Forms <xref:System.Windows.Forms.Button> standard ed espone una proprietà personalizzata denominata `ButtonValue`.
+Con C#, è possibile creare controlli personalizzati avanzati tramite l' *ereditarietà*. L'ereditarietà consente di creare nuovi controlli che non solo conservano tutte le funzionalità proprie dei controlli Windows Forms standard, ma includono anche funzionalità personalizzate. In questa procedura verrà creato un controllo ereditato semplice denominato `ValueButton`. Questo pulsante eredita le funzionalità dal controllo Windows Forms <xref:System.Windows.Forms.Button> standard ed espone una proprietà personalizzata denominata `ButtonValue`.
 
 ## <a name="create-the-project"></a>Creare il progetto
 
@@ -121,7 +121,7 @@ Scegliere **Compila soluzione** dal menu **Compila**. La compilazione dovrebbe e
 
 7. Posizionare l'etichetta al centro del modulo.
 
-8. Doppio clic su `valueButton1`.
+8. Fare doppio clic su `valueButton1`.
 
      Nell'**editor di codice** verrà visualizzato l'evento `valueButton1_Click`.
 
@@ -144,4 +144,4 @@ Scegliere **Compila soluzione** dal menu **Compila**. La compilazione dovrebbe e
 ## <a name="see-also"></a>Vedere anche
 
 - [Procedura: Visualizzare un controllo nella finestra di dialogo Scegli elementi della Casella degli strumenti](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [Procedura dettagliata: modifica di un controllo composito con Visual C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [Procedura dettagliata: Modifica di un controllo composito con Visual C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)

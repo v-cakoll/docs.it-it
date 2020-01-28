@@ -1,5 +1,6 @@
 ---
-title: 'Procedura dettagliata: disposizione del contenuto WPF in Windows Form in fase di progettazione'
+title: Disponi contenuto WPF in Windows Forms in fase di progettazione
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF user control [Windows Forms], hosting in a layout panel
@@ -12,18 +13,18 @@ ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c9db49ae299870479a5cfa6372c25d793a92ff8f
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5a6b12def45052e117fb149555946ea42d6cd3c2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460676"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746826"
 ---
 # <a name="walkthrough-arrange-wpf-content-on-windows-forms-at-design-time"></a>Procedura dettagliata: disposizione del contenuto WPF in Windows Forms in fase di progettazione
 
 Questo articolo illustra come usare le funzionalità di layout di Windows Forms, ad esempio l'ancoraggio e le guide di allineamento, per disporre i controlli Windows Presentation Foundation (WPF).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per completare la procedura dettagliata, è necessario Visual Studio.
 
@@ -46,7 +47,7 @@ Dopo avere aggiunto un controllo WPF al progetto, è possibile disporlo sul form
 
 4. Impostare il valore della proprietà <xref:System.Windows.Controls.Control.Background%2A> su **blu**.
 
-5. Compilare il progetto.
+5. Compilazione del progetto.
 
 ## <a name="host-wpf-controls-in-a-layout-panel"></a>Ospitare controlli WPF in un pannello di layout
 

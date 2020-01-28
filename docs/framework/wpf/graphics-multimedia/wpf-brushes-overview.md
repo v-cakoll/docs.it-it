@@ -1,5 +1,5 @@
 ---
-title: Cenni preliminari sui pennelli di WPF
+title: Panoramica sui pennelli
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-ms.openlocfilehash: 8a1d05ad48ce75ce67d21d5a4d508015fea879b2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 18ca9b79a6ee801638a54fcb227c44e9aea21fd0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458634"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746212"
 ---
 # <a name="wpf-brushes-overview"></a>Cenni preliminari sui pennelli di WPF
 Tutto ciò che è visibile sullo schermo è visibile perché è stato disegnato da un pennello. Ad esempio, viene utilizzato un pennello per descrivere lo sfondo di un pulsante, il primo piano del testo e il riempimento di una forma. In questo argomento vengono presentati i concetti relativi al disegno con [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pennelli e vengono forniti esempi. I pennelli consentono di disegnare oggetti [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] con colori semplici a tinta unita, fino a set complessi di motivi e immagini.  
@@ -26,7 +26,7 @@ Esempi di pennelli
   
  La maggior parte degli oggetti visivi consente di specificare il modo in cui vengono disegnati. Nella tabella seguente sono elencati alcuni oggetti e proprietà comuni con i quali è possibile utilizzare un <xref:System.Windows.Media.Brush>.  
   
-|Class|Proprietà dei pennelli|  
+|Classe|Proprietà dei pennelli|  
 |-----------|----------------------|  
 |<xref:System.Windows.Controls.Border>|<xref:System.Windows.Controls.Border.BorderBrush%2A>, <xref:System.Windows.Controls.Border.Background%2A>|  
 |<xref:System.Windows.Controls.Control>|<xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>|  

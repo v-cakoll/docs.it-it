@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: formattare il controllo DataGrid Windows Form mediante la finestra di progettazione'
+title: Formattare il controllo DataGrid usando la finestra di progettazione
 ms.date: 03/30/2017
 helpviewer_keywords:
 - columns [Windows Forms], DataGrid controls
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-ms.openlocfilehash: b3a85f5f9e51dae50a40058b8f07f92976da66f2
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 548acac0fc7724490bfe89927ec0662b3488c230
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "69666166"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736800"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Procedura: formattare il controllo DataGrid Windows Form mediante la finestra di progettazione
 
@@ -41,11 +41,11 @@ Per la procedura seguente è necessario un progetto di **applicazione Windows** 
 
 2. Nella finestra **Proprietà** impostare le proprietà seguenti, a seconda dei casi.
 
-    |proprietà|Descrizione|
+    |Gli|Descrizione|
     |--------------|-----------------|
     |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|La proprietà `BackColor` definisce il colore delle righe pari della griglia. Quando si imposta la proprietà <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> su un colore diverso, ogni altra riga viene impostata sul nuovo colore (righe 1, 3, 5 e così via).|
     |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|Il colore di sfondo delle righe pari della griglia (righe 0, 2, 4, 6 e così via).|
-    |<xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>|Mentre le proprietà <xref:System.Windows.Forms.DataGrid.BackColor%2A> e <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> determinano il colore delle righe nella griglia, la proprietà <xref:System.Windows.Forms.DataGrid.BackgroundColor%2A> determina il colore dell'area al di fuori dell'area riga, che è visibile solo quando la griglia viene spostata nella parte inferiore o se solo poche righe sono contenute nel griglia.|
+    |<xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>|Mentre le proprietà <xref:System.Windows.Forms.DataGrid.BackColor%2A> e <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> determinano il colore delle righe nella griglia, la proprietà <xref:System.Windows.Forms.DataGrid.BackgroundColor%2A> determina il colore dell'area al di fuori dell'area riga, che è visibile solo quando la griglia viene spostata alla fine o se nella griglia sono contenute solo poche righe.|
     |<xref:System.Windows.Forms.DataGrid.BorderStyle%2A>|Stile del bordo della griglia, uno dei valori di enumerazione <xref:System.Windows.Forms.BorderStyle>.|
     |<xref:System.Windows.Forms.DataGrid.CaptionBackColor%2A>|Colore di sfondo della didascalia della finestra della griglia visualizzata immediatamente sopra la griglia.|
     |<xref:System.Windows.Forms.DataGrid.CaptionFont%2A>|Il tipo di carattere della didascalia nella parte superiore della griglia.|
@@ -76,7 +76,7 @@ Per la procedura seguente è necessario un progetto di **applicazione Windows** 
 
 1. Selezionare il controllo <xref:System.Windows.Forms.DataGrid> sul form.
 
-2. Nella finestra **Proprietà** selezionare la proprietà <xref:System.Windows.Forms.DataGrid.TableStyles%2A> e fare clic sui **puntini** di sospensione (![The pulsante con i puntini di sospensione (...) nel pulsante finestra proprietà di Visual Studio. ](./media/visual-studio-ellipsis-button.png)).
+2. Nella finestra **Proprietà** selezionare la proprietà <xref:System.Windows.Forms.DataGrid.TableStyles%2A> e fare clic sui **puntini** di sospensione (![pulsante con i puntini di sospensione (...) nel pulsante finestra proprietà di Visual Studio.](./media/visual-studio-ellipsis-button.png)).
 
 3. Nella finestra di dialogo **Editor della raccolta DataGridTableStyle** fare clic su **Aggiungi** per aggiungere uno stile tabella alla raccolta.
 
@@ -86,7 +86,7 @@ Per la procedura seguente è necessario un progetto di **applicazione Windows** 
 
      Il nome del mapping viene utilizzato per specificare lo stile della tabella da utilizzare con la tabella.
 
-5. Nell' **Editor della raccolta DataGridTableStyle**selezionare la proprietà <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> e fare clic sul pulsante con i puntini di sospensione (![The pulsante con i puntini di sospensione (...) nel finestra proprietà di Visual Studio. ](./media/visual-studio-ellipsis-button.png)).
+5. Nell' **Editor della raccolta DataGridTableStyle**selezionare la proprietà <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> e fare clic sul pulsante con i puntini di sospensione (![pulsante con i puntini di sospensione (...) nel finestra proprietà di Visual Studio.](./media/visual-studio-ellipsis-button.png)).
 
 6. Nella finestra di dialogo **Editor della raccolta DataGridColumnStyle** aggiungere gli stili delle colonne allo stile di tabella creato.
 

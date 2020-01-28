@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: posizionare i controlli in Windows Form'
+title: Posizionare i controlli
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,12 +18,12 @@ ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: bb57d14397a4626e01c41dd687dfed7331282a10
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 144a0021c74f0fb5afec1d511315168fb28528e9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458334"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735908"
 ---
 # <a name="how-to-position-controls-on-windows-forms"></a>Procedura: posizionare i controlli in Windows Forms
 
@@ -103,6 +103,6 @@ button1->Left += 200;
 - [Procedura dettagliata: disposizione di controlli in Windows Form usando TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
 - [Procedura dettagliata: disposizione dei controlli in Windows Form usando FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [Impostazione delle etichette di singoli controlli Windows Form e creazione dei relativi tasti di scelta rapida](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)
+- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)
 - [Controlli Windows Form per funzione](windows-forms-controls-by-function.md)
 - [Procedura: impostare la posizione dello schermo di Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/52aha046(v=vs.100))

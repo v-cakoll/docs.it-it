@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Nascondere le intestazioni delle colonne nel controllo DataGridView di Windows Forms'
+title: Nascondi intestazioni di colonna nel controllo DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - column headers [Windows Forms], hiding
 - DataGridView control [Windows Forms], column headers
 ms.assetid: e4ad5f68-50d2-4b9e-93ee-9d622423a8ab
-ms.openlocfilehash: 888ff59d42f44db652d3188e016b9e10a9590139
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d84c93b0ad1c9ef456c73dd29af1de4857778999
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651664"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736592"
 ---
-# <a name="how-to-hide-column-headers-in-the-windows-forms-datagridview-control"></a>Procedura: Nascondere le intestazioni delle colonne nel controllo DataGridView di Windows Forms
-In alcuni casi si potrebbe essere necessario visualizzare un <xref:System.Windows.Forms.DataGridView> senza intestazioni di colonna. Nel <xref:System.Windows.Forms.DataGridView> (controllo), il <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A> valore della proprietà determina se le intestazioni di colonna vengono visualizzate.  
+# <a name="how-to-hide-column-headers-in-the-windows-forms-datagridview-control"></a>Procedura: nascondere le intestazioni delle colonne nel controllo DataGridView di Windows Form
+In alcuni casi è possibile visualizzare un <xref:System.Windows.Forms.DataGridView> senza intestazioni di colonna. Nel controllo <xref:System.Windows.Forms.DataGridView> il valore della proprietà <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A> determina se vengono visualizzate le intestazioni di colonna.  
   
 ### <a name="to-hide-the-column-headers"></a>Per nascondere le intestazioni di colonna  
   

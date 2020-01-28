@@ -1,5 +1,5 @@
 ---
-title: Raccogli input penna in app WPF
+title: Raccogli input penna digitale
 ms.date: 08/15/2018
 dev_langs:
 - csharp
@@ -13,18 +13,18 @@ helpviewer_keywords:
 - properties [WPF], DefaultDrawingAttributes
 - DefaultDrawingAttributes property [WPF]
 ms.assetid: 66a3129d-9577-43eb-acbd-56c147282016
-ms.openlocfilehash: 8109e0d6a746d6ca23c25643c510014c1a1e656c
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 813a5313a6fbf83c36cdbed1f64ce69a217ad788
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740882"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747034"
 ---
 # <a name="collect-ink"></a>Raccogli input penna
 
 La raccolta di input penna è una delle funzionalità principali della piattaforma [Windows Presentation Foundation](../index.md). In questo argomento vengono illustrati i metodi per la raccolta di input penna in Windows Presentation Foundation (WPF).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per usare gli esempi seguenti, è necessario innanzitutto installare Visual Studio e il Windows SDK. È inoltre necessario comprendere come scrivere applicazioni per WPF. Per ulteriori informazioni su come iniziare a usare WPF, vedere [procedura dettagliata: applicazione desktop WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 

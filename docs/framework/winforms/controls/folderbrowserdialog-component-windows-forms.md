@@ -1,5 +1,5 @@
 ---
-title: Componente FolderBrowserDialog (Windows Form)
+title: Componente FolderBrowserDialog
 ms.date: 03/30/2017
 helpviewer_keywords:
 - folders [Windows Forms], browsing
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - browsing folders
 - directories [Windows Forms], browsing
 ms.assetid: d71a0c5e-898a-4eea-be74-93bdf50d1852
-ms.openlocfilehash: 6359ea9683b9a418b7fe92dacc6140865dd01a11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c218edb639edb9b630527c2e77125358400cf3e7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011333"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745716"
 ---
 # <a name="folderbrowserdialog-component-windows-forms"></a>Componente FolderBrowserDialog (Windows Form)
-I moduli di Windows `FolderBrowserDialog` componente consente di visualizzare un'interfaccia con cui gli utenti possono esplorare e selezionare una cartella o crearne uno nuovo. È un complemento per il [componente OpenFileDialog](openfiledialog-component-windows-forms.md) componente, che viene usato per l'esplorazione e selezione dei file.  
+Il componente Windows Forms `FolderBrowserDialog` Visualizza un'interfaccia con cui gli utenti possono cercare e selezionare una cartella o crearne una nuova. Si tratta di un complemento al componente [componente OpenFileDialog](openfiledialog-component-windows-forms.md) , che viene utilizzato per l'esplorazione e la selezione di file.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Cenni preliminari sul componente FolderBrowserDialog (Windows Form)](folderbrowserdialog-component-overview-windows-forms.md)  
  Definisce il controllo e ne illustra le funzionalità chiave e le proprietà.  
   
  [Procedura: Scegliere cartelle con il componente FolderBrowserDialog di Windows Form](how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)  
- Viene illustrato come a livello di programmazione estrarre la cartella selezionata dalla finestra di dialogo, nonché usare alcune delle proprietà del componente di altri, facoltativa.  
+ Viene illustrato come estrarre a livello di codice la cartella selezionata dalla finestra di dialogo, nonché come utilizzare alcune delle altre proprietà facoltative del componente.  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.FolderBrowserDialog>  
@@ -32,5 +32,5 @@ I moduli di Windows `FolderBrowserDialog` componente consente di visualizzare un
  [Finestre di dialogo in Windows Form](../dialog-boxes-in-windows-forms.md)  
  Fornisce un elenco di attività per le finestre di dialogo, che spesso contengono schede.  
   
- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)  
+ [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)  
  Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.

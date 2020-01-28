@@ -1,5 +1,5 @@
 ---
-title: Cenni preliminari sulla sicurezza in Windows Form
+title: Panoramica della sicurezza
 ms.date: 03/30/2017
 helpviewer_keywords:
 - code access security [Windows Forms], Windows Forms
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 08c80eccee395d9141978a7d4594205af1a51ed9
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 9010b45383f856079661359fdf82180526d96dde
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972136"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734846"
 ---
-# <a name="security-in-windows-forms-overview"></a>Cenni preliminari sulla sicurezza in Windows Form
+# <a name="security-in-windows-forms-overview"></a>Panoramica della sicurezza in Windows Form
 
 Prima del rilascio del .NET Framework, tutto il codice in esecuzione sul computer di un utente aveva gli stessi diritti o le stesse autorizzazioni di accesso alle risorse di un utente del computer. Se ad esempio all'utente era consentito l'accesso al file system o a un database, anche il codice aveva accesso al file system o al database. Anche se ciò può essere accettabile per il codice contenuto negli eseguibili installati esplicitamente dall'utente nel computer locale, non è altrettanto accettabile per quanto riguarda il codice potenzialmente dannoso proveniente da Internet o da una Intranet locale. A questo tipo di codice, infatti, non deve essere consentito l'accesso alle risorse del computer dell'utente senza autorizzazione esplicita.
 
@@ -56,7 +56,7 @@ In alcuni casi, è difficile sapere se è stata effettuata l'asserzione di tutte
 
 Negli argomenti riportati di seguito vengono illustrate le funzionalità di sicurezza aggiuntive di Windows Form.
 
-|Argomento|DESCRIZIONE|
+|Argomento|Descrizione|
 |-----------|-----------------|
 |- [File e accesso ai dati più sicuri in Windows Forms](more-secure-file-and-data-access-in-windows-forms.md)|Viene descritto come accedere ai file e ai dati in un ambiente parzialmente attendibile.|
 |- [Stampa più sicura in Windows Forms](more-secure-printing-in-windows-forms.md)|Viene descritto come accedere alle funzionalità di stampa in un ambiente parzialmente attendibile.|
@@ -77,13 +77,13 @@ Queste tecnologie sono descritte nella tabella seguente.
 
 La tecnologia più adatta dipenderà dallo specifico ambiente di distribuzione. Per altre informazioni, vedere [Scelta di una strategia di distribuzione ClickOnce](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy).
 
-Per impostazione predefinita, le applicazioni ClickOnce distribuite tramite Visual Studio o gli strumenti SDK .NET Framework (Mage. exe e MageUI. exe) sono configurate per l'esecuzione in un computer client con attendibilità totale. Se si vuole distribuire l'applicazione in un ambiente parzialmente attendibile o assegnando soltanto alcune autorizzazioni aggiuntive, sarà necessario modificare le impostazioni predefinite. Questa operazione può essere eseguita con Visual Studio o lo strumento SDK .NET Framework MageUI. exe quando si configura la distribuzione. Per ulteriori informazioni su come utilizzare MageUI. exe, vedere [procedura dettagliata: Distribuzione manuale di un'applicazione](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)ClickOnce.  Vedere [anche procedura: Impostare le autorizzazioni personalizzate per un'applicazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) ClickOnce [o come: Impostare le autorizzazioni personalizzate per un'applicazione](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application)ClickOnce.
+Per impostazione predefinita, le applicazioni ClickOnce distribuite tramite Visual Studio o gli strumenti SDK .NET Framework (Mage. exe e MageUI. exe) sono configurate per l'esecuzione in un computer client con attendibilità totale. Se si vuole distribuire l'applicazione in un ambiente parzialmente attendibile o assegnando soltanto alcune autorizzazioni aggiuntive, sarà necessario modificare le impostazioni predefinite. Questa operazione può essere eseguita con Visual Studio o lo strumento SDK .NET Framework MageUI. exe quando si configura la distribuzione. Per ulteriori informazioni su come utilizzare MageUI. exe, vedere [procedura dettagliata: distribuzione manuale di un'applicazione ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application).  Per altre informazioni su come impostare le autorizzazioni per una zona personalizzata, vedere [Procedura: impostare le autorizzazioni personalizzate per un'applicazione ClickOnce](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) o [Procedura: impostare le autorizzazioni personalizzate per un'applicazione ClickOnce](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
 
 Per ulteriori informazioni sugli aspetti di sicurezza di ClickOnce e sull'elevazione delle autorizzazioni, vedere [protezione di applicazioni ClickOnce](/visualstudio/deployment/securing-clickonce-applications). Per altre informazioni sulla distribuzione di applicazioni attendibili, vedere [Panoramica della distribuzione di applicazioni attendibili](/visualstudio/deployment/trusted-application-deployment-overview).
 
 ### <a name="testing-the-application"></a>Verifica dell'applicazione
 
-Se la Windows Forms Application è stata distribuita usando Visual Studio, è possibile abilitare il debug in attendibilità parziale o un set di autorizzazioni limitato dall'ambiente di sviluppo.  Vedere [anche procedura: Eseguire il debug di un'applicazione ClickOnce con autorizzazioni limitate](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions).
+Se la Windows Forms Application è stata distribuita usando Visual Studio, è possibile abilitare il debug in attendibilità parziale o un set di autorizzazioni limitato dall'ambiente di sviluppo.  Vedere anche [procedura: eseguire il debug di un'applicazione ClickOnce con autorizzazioni limitate](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions).
 
 ## <a name="see-also"></a>Vedere anche
 

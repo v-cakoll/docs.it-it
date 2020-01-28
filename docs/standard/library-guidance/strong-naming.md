@@ -2,12 +2,12 @@
 title: Creazione di nomi sicuri e librerie .NET
 description: Procedure consigliate per la creazione di nomi sicuri per le librerie .NET.
 ms.date: 10/16/2018
-ms.openlocfilehash: 0c2dba06413bc6435e3350bf6cc48f1b5882a261
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: db268093b07a2ece7cdb8329fd789b52da9c5c32
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706426"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744526"
 ---
 # <a name="strong-naming"></a>Denominazione sicura
 
@@ -45,26 +45,26 @@ I vantaggi dei nomi sicuri sono i seguenti:
 > [!NOTE]
 > Queste linee guida sono specifiche per le librerie .NET distribuite pubblicamente, ad esempio le librerie .NET pubblicate in NuGet.org. Il nome sicuro non è richiesto dalla maggior parte delle applicazioni .NET e non deve essere eseguito per impostazione predefinita.
 
-**✔️ VALUTARE** l'uso di nomi sicuri per gli assembly della libreria.
+✔️ prendere in considerazione la denominazione sicura degli assembly della libreria.
 
-**✔️ VALUTARE** l'aggiunta della chiave per la creazione di nomi sicuri nel sistema di controllo del codice sorgente.
+✔️ CONSIGLIABILE aggiungere la chiave per la denominazione sicura al sistema di controllo del codice sorgente.
 
 > Una chiave disponibile pubblicamente consente agli sviluppatori di modificare e ricompilare il codice sorgente della libreria con la stessa chiave.
-> 
+>
 > Non rendere pubblica la chiave per la creazione di nomi sicuri se è stata usata in precedenza per concedere autorizzazioni speciali in [scenari di attendibilità parziale](../../framework/misc/using-libraries-from-partially-trusted-code.md). In caso contrario, si potrebbero compromettere gli ambienti esistenti.
 
 > [!IMPORTANT]
 > Quando si vuole indicare l'identità dell'editore del codice, usare [Authenticode](/windows-hardware/drivers/install/authenticode) e la [firma di pacchetti NuGet](/nuget/create-packages/sign-a-package). Non usare la sicurezza dall'accesso di codice come prevenzione per la sicurezza.
 
-**✔️ VALUTARE** l'incremento della versione dell'assembly solo per le modifiche di versione principale, per aiutare gli utenti a ridurre i reindirizzamenti di binding e la frequenza di aggiornamento.
+✔️ valutare la possibilità di incrementare la versione dell'assembly solo con modifiche di versione principali per consentire agli utenti di ridurre i reindirizzamenti di binding e la frequenza di aggiornamento.
 
 > Leggere altre informazioni su [controllo delle versioni e versione degli assembly](./versioning.md#assembly-version).
 
-**❌** non aggiungere, rimuovere o modificare la chiave di denominazione sicura.
+❌ non aggiungere, rimuovere o modificare la chiave di denominazione sicura.
 
 > Se si modifica una chiave per la creazione di nomi sicuri di un assembly, viene modificata l'identità dell'assembly e il codice compilato che lo usa non funziona più. Per altre informazioni, vedere [Binary breaking change](./breaking-changes.md#binary-breaking-change) (Modifica che causa un'interruzione del codice binario).
 
-**❌** non pubblicare versioni con nome sicuro e senza nome sicuro della libreria. Ad esempio, `Contoso.Api` e `Contoso.Api.StrongNamed`.
+❌ non pubblicare versioni con nome sicuro e senza nome sicuro della libreria. Ad esempio, `Contoso.Api` e `Contoso.Api.StrongNamed`.
 
 > La pubblicazione di due pacchetti comporta la biforcazione dell'ecosistema di sviluppo. Se un'applicazione dipende da entrambi i pacchetti, inoltre, possono verificarsi conflitti di nomi di tipo. Per quanto riguarda .NET, si tratta di tipi diversi in assembly diversi.
 

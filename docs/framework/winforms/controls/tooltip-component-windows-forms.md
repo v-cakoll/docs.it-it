@@ -1,19 +1,19 @@
 ---
-title: Componente ToolTip (Windows Form)
+title: Componente ToolTip
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tooltips [Windows Forms]
 - ToolTip component [Windows Forms]
 ms.assetid: 82e71dc3-0159-4f91-9f22-499224f004a0
-ms.openlocfilehash: eb68b614046fc10c4af9d58354125f76e119c782
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c905fe493d3f49bef414853814fef174140e3120
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009279"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747251"
 ---
 # <a name="tooltip-component-windows-forms"></a>Componente ToolTip (Windows Form)
-Il componente <xref:System.Windows.Forms.ToolTip> di Windows Form visualizza un testo quando l'utente posiziona il puntatore sui controlli. Una descrizione comando può essere associata a qualsiasi controllo. Usare un esempio di questo controllo: Per risparmiare spazio in un form, è possibile visualizzare una piccola icona su un pulsante e usando una descrizione comando per illustrare la funzione del pulsante.  
+Il componente <xref:System.Windows.Forms.ToolTip> di Windows Form visualizza un testo quando l'utente posiziona il puntatore sui controlli. Una descrizione comando può essere associata a qualsiasi controllo. Questo controllo, ad esempio, può essere usato se si desidera risparmiare spazio in un form, visualizzando una piccola icona su un pulsante e usando una descrizione comando per illustrare la funzione del pulsante.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sul componente ToolTip](tooltip-component-overview-windows-forms.md)  
@@ -22,7 +22,7 @@ Il componente <xref:System.Windows.Forms.ToolTip> di Windows Form visualizza un 
  [Procedura: Impostare le descrizioni comandi per i controlli in un Windows Form in fase di progettazione](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)  
  Descrive come impostare le descrizioni comandi nel codice o nella finestra di progettazione.  
   
- [Procedura: Modifica del ritardo del componente di descrizione comando di Windows Form](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)  
+ [Procedura: Modifica del ritardo del componente ToolTip di Windows Form](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)  
  Illustra come impostare i valori che controllano il tempo impiegato per visualizzare una descrizione comando e il tempo durante cui la descrizione comando rimane visualizzata.  
   
 ## <a name="reference"></a>Riferimenti  
@@ -30,7 +30,7 @@ Il componente <xref:System.Windows.Forms.ToolTip> di Windows Form visualizza un 
  Fornisce informazioni di riferimento sulla classe e sui relativi membri.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)  
+ [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)  
  Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.  
   
  [Visualizzazione della Guida relativa a un controllo tramite le descrizioni comandi](../advanced/control-help-using-tooltips.md)  

@@ -1,5 +1,6 @@
 ---
-title: 'Esercitazione: creare la prima applicazione WPF in Visual Studio 2019-.NET Framework'
+title: Creare la prima app WPF in Visual Studio 2019-.NET Framework
+titleSuffix: ''
 ms.date: 09/06/2019
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ ms.topic: tutorial
 ms.custom: mvc,vs-dotnet
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b5f74448ffce448740937c06a476a29c8659879
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 232605850c65aebd9aafdc9b76c90af42f2c901c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75336814"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746979"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>Esercitazione: creare la prima applicazione WPF in Visual Studio 2019
 
@@ -83,7 +84,7 @@ Il primo passaggio consiste nel creare l'infrastruttura dell'applicazione, che i
 
     [!code-xaml[ExpenseIt#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/App.xaml#1)]
 
-3. Aprire *MainWindow.xaml*.
+3. Aprire *MainWindow. XAML*.
 
     Questo file XAML è la finestra principale dell'applicazione e visualizza il contenuto creato in pagine. La classe <xref:System.Windows.Window> definisce le proprietà di una finestra, ad esempio il titolo, le dimensioni o l'icona, e gestisce gli eventi, ad esempio la chiusura o il nascondiglio.
 
@@ -151,7 +152,7 @@ In questa sezione si aggiungeranno due pagine e un'immagine all'applicazione.
 
     [!code-xaml[ExpenseIt#6](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/ExpenseItHome.xaml#6)]
 
-1. Aprire *MainWindow.xaml*.
+1. Aprire *MainWindow. XAML*.
 
 1. Aggiungere una proprietà <xref:System.Windows.Navigation.NavigationWindow.Source%2A> all'elemento <xref:System.Windows.Navigation.NavigationWindow> e impostarla su "`ExpenseItHome.xaml`".
 
@@ -263,7 +264,7 @@ In questa sezione viene creata una tabella a colonna singola con tre righe e un 
 
     [!code-xaml[ExpenseIt#9](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt3/ExpenseItHome.xaml#9)]
 
-## <a name="add-controls"></a>Aggiungere controlli
+## <a name="add-controls"></a>Aggiungi controlli
 
 In questa sezione verrà aggiornata l'interfaccia utente di home page per visualizzare un elenco di persone, in cui è possibile selezionare una persona per visualizzare la nota spese. I controlli sono oggetti dell'interfaccia utente che consentono agli utenti di interagire con l'applicazione. Per altre informazioni, vedere [Controlli](../controls/index.md).
 
@@ -483,7 +484,7 @@ In questa procedura dettagliata sono state illustrate alcune tecniche per la cre
 
 - [Architettura WPF](../advanced/wpf-architecture.md)
 - [Panoramica di XAML (WPF)](../advanced/xaml-overview-wpf.md)
-- [Panoramica delle proprietà di dipendenza](../advanced/dependency-properties-overview.md)
+- [Cenni preliminari sulle proprietà di dipendenza](../advanced/dependency-properties-overview.md)
 - [Layout](../advanced/layout.md)
 
 Per altre informazioni sulla creazione di applicazioni, vedere gli argomenti seguenti:

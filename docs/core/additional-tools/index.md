@@ -4,12 +4,12 @@ description: Panoramica degli strumenti aggiuntivi che è possibile installare e
 author: mlacouture
 ms.date: 12/02/2019
 ms.custom: mvc
-ms.openlocfilehash: 1f066523a24d4e1fd7aaaa5a19e8d6c9d72d35af
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 853633f5ef159eee39ed1a8682372d4291a752f5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714541"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740714"
 ---
 # <a name="net-core-additional-tools-overview"></a>Panoramica degli strumenti aggiuntivi per .NET Core
 
@@ -17,7 +17,7 @@ Questa sezione consente di compilare un elenco di strumenti che supportano ed es
 
 ## <a name="net-core-uninstall-tooluninstall-toolmd"></a>[Strumento di disinstallazione di .NET Core](uninstall-tool.md)
 
-Lo [strumento di disinstallazione di .NET Core](https://dotnet.microsoft.com/download/dotnet-core/uninstall-tool) (`dotnet-core-uninstall`) consente di pulire gli SDK e i Runtime .NET Core in un sistema in modo che rimangano solo le versioni specificate. È disponibile una raccolta di opzioni per specificare quali versioni vengono disinstallate.
+Lo [strumento di disinstallazione di .NET Core](https://github.com/dotnet/cli-lab/releases) (`dotnet-core-uninstall`) consente di pulire gli SDK e i Runtime .NET Core in un sistema in modo che rimangano solo le versioni specificate. È disponibile una raccolta di opzioni per specificare quali versioni vengono disinstallate.
 
 ## <a name="wcf-web-service-reference-toolwcf-web-service-reference-guidemd"></a>[Strumento WCF Web Service Reference](wcf-web-service-reference-guide.md)
 

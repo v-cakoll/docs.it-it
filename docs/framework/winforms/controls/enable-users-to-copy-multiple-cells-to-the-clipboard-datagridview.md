@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Consentire agli utenti di copiare più celle negli Appunti dal controllo DataGridView di Windows Forms'
+title: Consentire agli utenti di copiare più celle negli Appunti dal controllo DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - data grids [Windows Forms], copying multiple cells
 - Clipboard [Windows Forms], copying multiple cells
 ms.assetid: fd0403b2-d0e3-4ae0-839c-0f737e1eb4a9
-ms.openlocfilehash: b220603adcaeae6f3380a2e3c10ea524c9a61f24
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 2bb74a1f0c59b28ab496ce9c89c1c1b5f9d8147b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591914"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745780"
 ---
-# <a name="how-to-enable-users-to-copy-multiple-cells-to-the-clipboard-from-the-windows-forms-datagridview-control"></a>Procedura: Consentire agli utenti di copiare più celle negli Appunti dal controllo DataGridView di Windows Forms
+# <a name="how-to-enable-users-to-copy-multiple-cells-to-the-clipboard-from-the-windows-forms-datagridview-control"></a>Procedura: consentire agli utenti di copiare più celle negli Appunti dal controllo DataGridView di Windows Form
 Quando si attiva la copia delle celle, i dati contenuti nel controllo <xref:System.Windows.Forms.DataGridView> sono facilmente accessibili da altre applicazioni tramite la classe <xref:System.Windows.Forms.Clipboard>. I valori delle celle selezionate vengono convertiti in stringhe e aggiunti negli Appunti sotto forma di valori di testo delimitato da tabulazioni, per consentirne l'inserimento in applicazioni quali Blocco note ed Excel, e sotto forma di una tabella in formato HTML, per consentirne l'inserimento in applicazioni come Word.  
   
  È possibile configurare la funzionalità di copia dalle celle in modo da copiare solo i valori delle celle, includere il testo della riga e dell'intestazione della colonna nei dati degli Appunti o includere il testo dell'intestazione solo quando gli utenti selezionano righe o colonne intere.  
   
- A seconda della modalità di selezione gli utenti possono selezionare più gruppi di celle scollegati. Quando un utente copia le celle negli Appunti, le righe e le colonne in cui non è selezionata alcuna cella non vengono copiate. Tutte le altre righe o colonne diventano righe o colonne nella tabella di dati copiati negli Appunti.  Le celle non selezionate in queste righe o colonne vengono copiate come segnaposto vuoti negli Appunti.  
+ A seconda della modalità di selezione gli utenti possono selezionare più gruppi di celle scollegati. Quando un utente copia le celle negli Appunti, le righe e le colonne in cui non è selezionata alcuna cella non vengono copiate. Tutte le altre righe o colonne diventano righe o colonne nella tabella di dati copiati negli Appunti. Le celle non selezionate in queste righe o colonne vengono copiate come segnaposto vuoti negli Appunti.  
   
 ### <a name="to-enable-cell-copying"></a>Per abilitare la copia delle celle  
   

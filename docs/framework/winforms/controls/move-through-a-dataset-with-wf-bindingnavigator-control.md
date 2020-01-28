@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Spostarsi in un set di dati con il controllo BindingNavigator di Windows Forms'
+title: Spostarsi in un set di dati con il controllo BindingNavigator
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - BindingNavigator control [Windows Forms], moving through datasets
 - examples [Windows Forms], BindingNavigator control
 ms.assetid: 146d97be-3d97-400e-accb-860bbf47729d
-ms.openlocfilehash: d33cad4d0a60aa29d8c9f5e2217532963e8358c4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 73a102da74a3a2a00b5042331cffcaf3d858ea5b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952691"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742147"
 ---
-# <a name="how-to-move-through-a-dataset-with-the-windows-forms-bindingnavigator-control"></a>Procedura: Spostarsi in un set di dati con il controllo BindingNavigator di Windows Forms
+# <a name="how-to-move-through-a-dataset-with-the-windows-forms-bindingnavigator-control"></a>Procedura: Esplorare un dataset con il controllo BindingNavigator Windows Form
 Durante la creazione di applicazioni basate sui dati, è spesso necessario visualizzare raccolte di dati agli utenti. Il controllo <xref:System.Windows.Forms.BindingNavigator>, unitamente al componente <xref:System.Windows.Forms.BindingSource>, rappresenta una soluzione pratica e versatile per spostarsi all'interno di una raccolta e visualizzare gli elementi in sequenza.  
   
 ## <a name="example"></a>Esempio  
@@ -40,4 +40,4 @@ Durante la creazione di applicazioni basate sui dati, è spesso necessario visua
 - <xref:System.Windows.Forms.BindingSource>
 - [Controllo BindingNavigator](bindingnavigator-control-windows-forms.md)
 - [Componente BindingSource](bindingsource-component.md)
-- [Procedura: Associare un controllo Windows Forms a un tipo](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Procedura: associare un controllo Windows Form a un tipo](how-to-bind-a-windows-forms-control-to-a-type.md)

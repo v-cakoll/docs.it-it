@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Generare automaticamente colonne in un controllo DataGridView di Windows Forms associato ai dati'
+title: Genera automaticamente colonne nel controllo DataGridView con associazione a dati
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - columns [Windows Forms], autogenerating
 - DataGridView control [Windows Forms], data-bound columns
 ms.assetid: 699f6f9e-6aa5-4811-902b-6a2c57dec7d6
-ms.openlocfilehash: eb74c1ef1661fc8bd7a57f079f10d24a7eef8187
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 860e640e095537358d2f8778c810aa577e9d7ff0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639755"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746241"
 ---
-# <a name="how-to-autogenerate-columns-in-a-data-bound-windows-forms-datagridview-control"></a>Procedura: Generare automaticamente colonne in un controllo DataGridView di Windows Forms associato ai dati
-Esempio di codice seguente viene illustrato come visualizzare le colonne da un'origine dati associata in un <xref:System.Windows.Forms.DataGridView> controllo. Quando la <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> valore della proprietà è `true` (impostazione predefinita), un <xref:System.Windows.Forms.DataGridViewColumn> viene creato per ogni colonna nella tabella di origine dati.  
+# <a name="how-to-autogenerate-columns-in-a-data-bound-windows-forms-datagridview-control"></a>Procedura: generare automaticamente le colonne in un controllo DataGridView associato ai dati di Windows Form
+Nell'esempio di codice riportato di seguito viene illustrato come visualizzare colonne da un'origine dati associata in un controllo <xref:System.Windows.Forms.DataGridView>. Quando il <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> valore della proprietà è `true` (impostazione predefinita), viene creata una <xref:System.Windows.Forms.DataGridViewColumn> per ogni colonna nella tabella dell'origine dati.  
   
- Se il <xref:System.Windows.Forms.DataGridView> controllo contiene già colonne quando si impostano le <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A> proprietà, verrà restituito il limite esistente colonne sono rispetto alle colonne nell'origine dati e mantenute ogni volta che viene trovata una corrispondenza. Le colonne non associate vengono sempre mantenute. Le colonne associate per cui non è disponibile alcuna corrispondenza nell'origine dati vengono rimossi. Le colonne nell'origine dati per cui non è disponibile alcun elemento corrispondente al controllo generano nuovi <xref:System.Windows.Forms.DataGridViewColumn> oggetti, che vengono aggiunti alla fine del <xref:System.Windows.Forms.DataGridView.Columns%2A> raccolta.  
+ Se il controllo <xref:System.Windows.Forms.DataGridView> dispone già di colonne quando si imposta la proprietà <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>, le colonne associate esistenti vengono confrontate con le colonne nell'origine dati e mantenute ogni volta che viene stabilita una corrispondenza. Le colonne non associate vengono sempre mantenute. Le colonne associate per le quali non è presente alcuna corrispondenza nell'origine dati vengono rimosse. Le colonne nell'origine dati per cui non esiste alcuna corrispondenza nel controllo generano nuovi oggetti <xref:System.Windows.Forms.DataGridViewColumn>, che vengono aggiunti alla fine della raccolta di <xref:System.Windows.Forms.DataGridView.Columns%2A>.  
   
 ## <a name="example"></a>Esempio  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#020](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#020)]
@@ -30,7 +30,7 @@ Esempio di codice seguente viene illustrato come visualizzare le colonne da un'o
   
 - Un controllo <xref:System.Windows.Forms.DataGridView> denominato `customersDataGridView`.  
   
-- Oggetto <xref:System.Data.DataSet> oggetto denominato `customersDataSet` che dispone di una tabella denominata `Customers`.  
+- Oggetto <xref:System.Data.DataSet> denominato `customersDataSet` con una tabella denominata `Customers`.  
   
 - Riferimenti agli assembly <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, <xref:System.Data?displayProperty=nameWithType> e <xref:System.Xml?displayProperty=nameWithType>.  
   

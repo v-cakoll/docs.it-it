@@ -2,29 +2,29 @@
 title: Comando dotnet clean
 description: Il comando dotnet clean consente di pulire la directory corrente.
 ms.date: 06/26/2019
-ms.openlocfilehash: 982232833b460b4ea4181acebee74dcef54d3131
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 736c0bba5d156e919534f1ad811641e815b3ffac
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117739"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734246"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
-**Questo argomento si applica a: ✓** .NET Core 2.1.x SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .NET Core 1. x SDK e versioni successive
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>nome
+## <a name="name"></a>Name
 
 `dotnet clean`: pulisce l'output di un progetto.
 
 ## <a name="synopsis"></a>Riepilogo
 
 ```dotnetcli
-dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] 
+dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive]
     [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
@@ -39,7 +39,7 @@ Il comando `dotnet clean` pulisce l'output della compilazione precedente. Viene 
 
 Progetto o soluzione MSBuild da pulire. Se non viene specificato alcun file di progetto o di soluzione, MSBuild cercherà nella directory di lavoro corrente un file con estensione *proj* o *sln* e userà questo file.
 
-## <a name="options"></a>Opzioni
+## <a name="options"></a>Options
 
 * **`-c|--configuration {Debug|Release}`**
 

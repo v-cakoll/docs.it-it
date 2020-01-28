@@ -1,19 +1,19 @@
 ---
-title: Funzionalità di trascinamento della selezione in Windows Form
+title: Funzionalità di trascinamento della selezione
 ms.date: 03/30/2017
 helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Windows Forms, drag and drop
 ms.assetid: 65cd2c03-8782-474e-b958-cbe43eeb902c
-ms.openlocfilehash: 437b632706b27cd487d60c2ad23db3f9a3c96c09
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 603dc158719c0b11def4386eb24a33f235cf3a42
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966859"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732754"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Funzionalità di trascinamento della selezione in Windows Form
-Windows Forms include un set di metodi, eventi e classi che implementano il comportamento di trascinamento e rilascio. Questo argomento fornisce una panoramica del supporto per il trascinamento della selezione in Windows Forms.  Vedere anche [operazioni di trascinamento e rilascio e supporto per gli Appunti](./advanced/drag-and-drop-operations-and-clipboard-support.md).  
+Windows Forms include un set di metodi, eventi e classi che implementano il comportamento di trascinamento e rilascio. Questo argomento fornisce una panoramica del supporto per il trascinamento della selezione in Windows Forms.  Vedere anche [operazioni di trascinamento della selezione e supporto degli Appunti](./advanced/drag-and-drop-operations-and-clipboard-support.md).  
   
 ## <a name="performing-drag-and-drop-operations"></a>Esecuzione di operazioni di trascinamento della selezione  
  Per eseguire un'operazione di trascinamento e rilascio, usare il metodo <xref:System.Windows.Forms.Control.DoDragDrop%2A> della classe <xref:System.Windows.Forms.Control>. Per altre informazioni su come viene eseguita un'operazione di trascinamento e rilascio, vedere <xref:System.Windows.Forms.Control.DoDragDrop%2A>. Per ottenere il rettangolo sul quale deve essere trascinato il puntatore del mouse prima che inizi un'operazione di trascinamento della selezione, usare la proprietà <xref:System.Windows.Forms.SystemInformation.DragSize%2A> della classe <xref:System.Windows.Forms.SystemInformation>.  

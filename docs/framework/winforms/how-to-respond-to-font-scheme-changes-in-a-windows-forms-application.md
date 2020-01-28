@@ -1,5 +1,6 @@
 ---
-title: "Procedura: Rispondere a modifiche delle combinazioni dei tipi di carattere in un'applicazione Windows Forms"
+title: Rispondere alle modifiche dello schema dei tipi di carattere in un'app Windows Forms
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,62 +8,62 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-ms.openlocfilehash: 9fd7f99b35730cf867bfad5da24bc3f223e9a0f8
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: e3b96139a7cfd4b268d81b1da58229527e2beb87
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425326"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739231"
 ---
-# <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Procedura: Rispondere a modifiche delle combinazioni dei tipi di carattere in un'applicazione Windows Forms
-Nei sistemi operativi Windows, un utente può modificare le impostazioni del tipo di carattere a livello di sistema per rendere il tipo di carattere predefinito superiore o inferiore. Modifica di queste impostazioni del tipo di carattere è fondamentale per gli utenti che hanno problemi di vista e richiedono il tipo più grande contenere il testo sullo schermo. È possibile modificare l'applicazione Windows Forms per rispondere a queste modifiche, aumentando o riducendo le dimensioni del form e tutto il testo relativo a ogni volta che viene modificato lo schema del tipo di carattere. Se si desidera che il form per supportare le modifiche nelle dimensioni dei caratteri in modo dinamico, è possibile aggiungere codice al form.  
+# <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Procedura: Rispondere a modifiche delle combinazioni dei tipi di carattere in un'applicazione Windows Form
+Nei sistemi operativi Windows, un utente può modificare le impostazioni del tipo di carattere a livello di sistema in modo che il tipo di carattere predefinito risulti più grande o più piccolo. La modifica di queste impostazioni dei tipi di carattere è fondamentale per gli utenti che hanno un impatto visivo e richiedono un tipo più grande per leggere il testo sulle schermate. È possibile modificare le Windows Forms Application per rispondere a queste modifiche aumentando o diminuendo le dimensioni del form e tutto il testo contenuto ogni volta che lo schema del tipo di carattere viene modificato. Se si desidera che il form soddisfi le modifiche delle dimensioni dei tipi di carattere in modo dinamico, è possibile aggiungere codice al form.  
   
- In genere, il tipo di carattere predefinito utilizzato da Windows Form è il tipo di carattere restituito per il <xref:Microsoft.Win32> chiamata dello spazio dei nomi a `GetStockObject(DEFAULT_GUI_FONT)`. Il tipo di carattere restituito da questa chiamata cambia solo quando cambia la risoluzione dello schermo. Come illustrato nella procedura seguente, il codice necessario modificare il tipo di carattere predefinito <xref:System.Drawing.SystemFonts.IconTitleFont%2A> per rispondere alle modifiche nella dimensione del carattere.  
+ In genere, il tipo di carattere predefinito usato da Windows Forms è il tipo di carattere restituito dalla chiamata dello spazio dei nomi <xref:Microsoft.Win32> a `GetStockObject(DEFAULT_GUI_FONT)`. Il tipo di carattere restituito da questa chiamata viene modificato solo quando cambia la risoluzione dello schermo. Come illustrato nella procedura seguente, il codice deve modificare il tipo di carattere predefinito in <xref:System.Drawing.SystemFonts.IconTitleFont%2A> per rispondere alle modifiche apportate alle dimensioni del carattere.  
   
-### <a name="to-use-the-desktop-font-and-respond-to-font-scheme-changes"></a>Usare il tipo di carattere del desktop e rispondere alle modifiche dello schema del tipo di carattere  
+### <a name="to-use-the-desktop-font-and-respond-to-font-scheme-changes"></a>Per utilizzare il tipo di carattere desktop e rispondere alle modifiche dello schema del carattere  
   
-1. Creare il form e aggiungervi i controlli desiderati. Per altre informazioni, vedere [Procedura: Creare un'applicazione di Windows Forms dalla riga di comando](how-to-create-a-windows-forms-application-from-the-command-line.md) e [controlli da usare in Windows Form](./controls/controls-to-use-on-windows-forms.md).  
+1. Creare il form e aggiungere i controlli desiderati. Per altre informazioni, vedere [procedura: creare un'applicazione Windows Forms dalla riga di comando](how-to-create-a-windows-forms-application-from-the-command-line.md) e [controlli da usare in Windows Forms](./controls/controls-to-use-on-windows-forms.md).  
   
-2. Aggiungere un riferimento di <xref:Microsoft.Win32> dello spazio dei nomi al codice.  
+2. Aggiungere un riferimento allo spazio dei nomi <xref:Microsoft.Win32> al codice.  
   
      [!code-csharp[WinFormsAutoScaling#2](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#2)]
      [!code-vb[WinFormsAutoScaling#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#2)]  
   
-3. Aggiungere il codice seguente al costruttore del form per associare i gestori di evento richiesto e per modificare il tipo di carattere predefinito in uso per il form.  
+3. Aggiungere il codice seguente al costruttore del form per associare i gestori eventi obbligatori e per modificare il tipo di carattere predefinito in uso per il form.  
   
      [!code-csharp[WinFormsAutoScaling#3](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#3)]
      [!code-vb[WinFormsAutoScaling#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#3)]  
   
-4. Implementare un gestore per il <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> evento che attiva il form per la scalabilità automatica quando il <xref:Microsoft.Win32.UserPreferenceCategory.Window> le modifiche della categoria.  
+4. Implementare un gestore per l'evento <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> che determina la scalabilità automatica del modulo quando cambia la categoria <xref:Microsoft.Win32.UserPreferenceCategory.Window>.  
   
      [!code-csharp[WinFormsAutoScaling#4](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#4)]
      [!code-vb[WinFormsAutoScaling#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#4)]  
   
-5. Infine, implementare un gestore per il <xref:System.Windows.Forms.Form.FormClosing> eventi che consente di scollegare il <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> gestore dell'evento.  
+5. Infine, implementare un gestore per l'evento <xref:System.Windows.Forms.Form.FormClosing> che scollega il gestore dell'evento <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>.  
   
      > [!IMPORTANT]
-     > Errore per includere questo codice causerà l'applicazione per determinare una perdita di memoria.  
+     > La mancata inclusione di questo codice causerà la perdita di memoria da un'applicazione.  
   
      [!code-csharp[WinFormsAutoScaling#5](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#5)]
      [!code-vb[WinFormsAutoScaling#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#5)]  
   
 6. Compilare ed eseguire il codice.  
   
-### <a name="to-manually-change-the-font-scheme-in-windows-xp"></a>Per modificare manualmente lo schema del tipo di carattere in Windows XP  
+### <a name="to-manually-change-the-font-scheme-in-windows-xp"></a>Per modificare manualmente lo schema dei tipi di carattere in Windows XP  
   
-1. Durante l'esecuzione dell'applicazione Windows Form, fare doppio clic sul desktop di Windows e scegliere **proprietà** dal menu di scelta rapida.  
+1. Mentre il Windows Forms Application è in esecuzione, fare clic con il pulsante destro del mouse sul desktop di Windows e scegliere **Proprietà** dal menu di scelta rapida.  
   
-2. Nel **le proprietà di visualizzazione** finestra di dialogo, fare clic sul **aspetto** scheda.  
+2. Nella finestra di dialogo **proprietà di visualizzazione** fare clic sulla scheda **aspetto** .  
   
-3. Dal **Font Size** elenco a discesa, selezionare una nuova dimensione del carattere.  
+3. Nella casella di riepilogo a discesa **dimensioni carattere** selezionare una nuova dimensione del carattere.  
   
-     Si noterà che il form ora reagisce alle modifiche di runtime nello schema di carattere del desktop. Quando l'utente passa tra **Normal**, **caratteri grandi**, e **caratteri molto grandi**, il form Cambia tipo di carattere e ridimensiona in modo corretto.  
+     Si noterà che il modulo ora reagisce alle modifiche della fase di esecuzione nello schema del tipo di carattere del desktop. Quando l'utente passa da un tipo di carattere **normale**a un carattere di **grandi dimensioni**e da **caratteri molto grandi**, il form modifica il tipo di carattere e ridimensiona correttamente.  
   
 ## <a name="example"></a>Esempio  
  [!code-csharp[WinFormsAutoScaling#1](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#1)]
  [!code-vb[WinFormsAutoScaling#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#1)]  
   
- Il costruttore in questo esempio di codice contiene una chiamata a `InitializeComponent`, che viene definito quando si crea un nuovo progetto Windows Forms in Visual Studio. Rimuovere questa riga di codice se si compila l'applicazione dalla riga di comando.  
+ Il costruttore in questo esempio di codice contiene una chiamata a `InitializeComponent`, che viene definita quando si crea un nuovo progetto di Windows Forms in Visual Studio. Rimuovere questa riga di codice se si compila l'applicazione dalla riga di comando.  
   
 ## <a name="see-also"></a>Vedere anche
 

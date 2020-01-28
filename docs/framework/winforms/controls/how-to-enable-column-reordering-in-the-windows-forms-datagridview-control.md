@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Abilitare il riordinamento delle colonne nel controllo DataGridView di Windows Forms'
+title: Abilitare il riordinamento delle colonne nel controllo DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - data grids [Windows Forms], reordering columns
 - columns [Windows Forms], reordering
 ms.assetid: cc20eae3-e4db-493f-95ce-a4215e29472a
-ms.openlocfilehash: c4c92a51f2e209f814ac34b39a0c6ba35f0bf56b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 681489cdb874677079e2577140040921e587d21e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651737"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745491"
 ---
-# <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control"></a>Procedura: Abilitare il riordinamento delle colonne nel controllo DataGridView di Windows Forms
+# <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control"></a>Procedura: abilitare il riordinamento delle colonne nel controllo DataGridView di Windows Form
 Quando si abilita il riordinamento delle colonne nel controllo <xref:System.Windows.Forms.DataGridView>, gli utenti possono spostare una colonna in una nuova posizione trascinandone l'intestazione con il mouse. Nel controllo <xref:System.Windows.Forms.DataGridView> il valore della proprietà <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType> determina se gli utenti possono spostare le colonne in posizioni diverse.  
   
- Questa attività è supportata in Visual Studio.  Vedere anche [come: Abilita riordinamento colonne in Windows il controllo DataGridView form usando la finestra di progettazione](enable-column-reordering-in-the-datagrid-using-the-designer.md).  
+ Questa attività è supportata in Visual Studio.  Vedere anche [procedura: abilitare il riordinamento delle colonne nel Windows Forms controllo DataGridView usando la finestra di progettazione](enable-column-reordering-in-the-datagrid-using-the-designer.md).  
   
 ### <a name="to-enable-column-reordering-programmatically"></a>Per abilitare il riordinamento delle colonne a livello di codice  
   
@@ -40,4 +40,4 @@ Quando si abilita il riordinamento delle colonne nel controllo <xref:System.Wind
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType>
 - [Funzionalità di base per colonna, riga e cella nel controllo DataGridView di Windows Form](basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [Procedura: Bloccare le colonne nel controllo DataGridView Windows Form](how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)
+- [Procedura: Bloccare le colonne nel controllo DataGridView di Windows Form](how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)

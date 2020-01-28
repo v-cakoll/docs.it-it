@@ -3,22 +3,22 @@ title: Comando dotnet nuget delete
 description: Il comando dotnet-nuget-delete rimuove dall'elenco o elimina un pacchetto dal server.
 author: karann-msft
 ms.date: 06/26/2019
-ms.openlocfilehash: 79634baa9d6d7ff1f388f6a794ffd816687be105
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 0950f03c0986bde17ae3e2e7170d402ea8222853
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117633"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733127"
 ---
 # <a name="dotnet-nuget-delete"></a>dotnet nuget delete
 
-**Questo argomento si applica a: ✓** .NET Core 2.1.x SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .NET Core 1. x SDK e versioni successive
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>nome
+## <a name="name"></a>Name
 
 `dotnet nuget delete`: rimuove dall'elenco o elimina un pacchetto dal server.
 
@@ -44,7 +44,7 @@ Il comando `dotnet nuget delete` rimuove dall'elenco o elimina un pacchetto dal 
 
   Versione del pacchetto da eliminare.
 
-## <a name="options"></a>Opzioni
+## <a name="options"></a>Options
 
 * **`--force-english-output`**
 

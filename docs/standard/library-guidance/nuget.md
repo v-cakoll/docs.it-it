@@ -2,12 +2,12 @@
 title: NuGet e librerie .NET
 description: Procedure consigliate per la creazione di pacchetti con NuGet per le librerie .NET.
 ms.date: 01/15/2019
-ms.openlocfilehash: 71c380f6062c09a8951769009b29b567fddfddfc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f1e8d39fe2988f11ce7fd351a4d6bee6d322f2b5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706478"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731380"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -34,7 +34,7 @@ Ci sono due modi principali per creare un pacchetto NuGet. Il modo più recente 
 
 Il modo meno recente per creare un pacchetto NuGet consiste nell'usare un file `*.nuspec` e lo strumento da riga di comando `nuget.exe`. Un file nuspec offre uno straordinario controllo, ma è necessario specificare attentamente quali assembly e destinazioni includere nel pacchetto NuGet finale. È facile commette un errore o dimenticarsi di aggiornare il file nuspec quando si apportano modifiche. Il vantaggio di un file nuspec è la possibilità di usarlo per creare pacchetti NuGet per framework che ancora non supportano un file di progetto in stile SDK.
 
-**✔️ VALUTARE** l'uso di un file di progetto in stile SDK per creare il pacchetto NuGet.
+✔️ CONSIGLIABILE usare un file di progetto in stile SDK per creare il pacchetto NuGet.
 
 ## <a name="package-dependencies"></a>Dipendenze dei pacchetti
 
@@ -59,15 +59,15 @@ Un pacchetto NuGet supporta numerose [proprietà dei metadati](/nuget/reference/
 > [!IMPORTANT]
 > Per un progetto senza una licenza viene applicato per impostazione predefinita il [copyright esclusivo](https://choosealicense.com/no-permission/), che ne impedisce a livello legale l'uso da parte di altre persone.
 
-**✔️ VALUTARE** la scelta di un nome di pacchetto NuGet con un prefisso che soddisfi i [criteri](/nuget/reference/id-prefix-reservation) per riservare il prefisso NuGet.
+✔️ prendere in considerazione la scelta di un nome di pacchetto NuGet con un prefisso che soddisfi i [criteri](/nuget/reference/id-prefix-reservation)di prenotazione del prefisso di NuGet.
 
-**✔️ USARE** un attributo href HTTPS per l'icona del pacchetto.
+✔️ usare un href HTTPS per l'icona del pacchetto.
 
 > I siti come NuGet.org vengono eseguiti con il protocollo HTTPS abilitato e la visualizzazione di un'immagine non HTTPS comporta la generazione di un avviso di contenuto misto.
 
-**✔️ USARE** un'immagine di icona del pacchetto con dimensioni di 64x64 e con uno sfondo trasparente per ottenere una migliore visualizzazione.
+✔️ utilizzare un'immagine di icona del pacchetto 64x64 e con uno sfondo trasparente per ottenere risultati ottimali per la visualizzazione.
 
-**✔️ VALUTARE** la configurazione del [collegamento all'origine](./sourcelink.md) per aggiungere metadati di controllo del codice sorgente agli assembly e al pacchetto NuGet.
+✔️ CONSIGLIABILE configurare il [collegamento all'origine](./sourcelink.md) per aggiungere i metadati del controllo del codice sorgente agli assembly e al pacchetto NuGet.
 
 > Il collegamento all'origine aggiunge automaticamente metadati `RepositoryUrl` e `RepositoryType` al pacchetto NuGet. Il collegamento all'origine aggiunge anche informazioni sul codice sorgente esatto da cui è stato compilato il pacchetto. Ad esempio, a un pacchetto creato da un repository Git verrà aggiunto l'hash commit come metadati.
 
@@ -84,9 +84,9 @@ I pacchetti NuGet con un suffisso di versione sono considerati [versioni non def
 
 ![Dipendenza pacchetto della versione non definitiva NuGet](./media/nuget/nuget-prerelease-package.png "Dipendenza pacchetto della versione non definitiva NuGet")
 
-**✔️ PUBBLICARE** un pacchetto in versione non definitiva a scopi di test, anteprima o sperimentazione.
+✔️ pubblicare un pacchetto versione non definitiva durante i test, l'anteprima o la sperimentazione.
 
-**✔️ PUBBLICARE** un pacchetto stabile quando è pronto, in modo che altri pacchetti stabili possano farvi riferimento.
+✔️ pubblicare un pacchetto stabile quando è pronto, altri pacchetti stabili possono farvi riferimento.
 
 ## <a name="symbol-packages"></a>Pacchetti di simboli
 
@@ -112,7 +112,7 @@ Un'alternativa alla creazione di un pacchetto di simboli è incorporare i file d
 
 Lo svantaggio dell'incorporamento di file di simboli è che aumentano le dimensioni del pacchetto di circa il 30% per le librerie .NET compilate con i progetti di tipo SDK. Se le dimensioni del pacchetto costituiscono un problema, i simboli dovranno essere pubblicati in un pacchetto di simboli.
 
-**✔️ VALUTARE** di pubblicare i simboli come un pacchetto di simboli (`*.snupkg`) in NuGet.org
+✔️ PROVARE a pubblicare i simboli come un pacchetto di simboli (`*.snupkg`) in NuGet.org
 
 > I pacchetti di simboli (`*.snupkg`) rappresentano una buona esperienza di debug on demand per gli sviluppatori perché non fanno aumentare le dimensioni del pacchetto principale né interferiscono con le prestazioni del ripristino per gli utenti che non intendono eseguire il debug del pacchetto NuGet.
 >

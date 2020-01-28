@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Web hosted service
 - IIS Hosting Using Inline Code Sample [Windows Communication Foundation]
 ms.assetid: 56fe3687-a34b-4661-8e30-b33770f413fa
-ms.openlocfilehash: 862ae61112db475825901f7c3f1d5127b384bb22
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 304da4fa7d2bb48899cdec864fb2dc1f9fdfb9ef
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711607"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746430"
 ---
 # <a name="iis-hosting-using-inline-code"></a>Hosting IIS mediante il codice inline
 
@@ -96,4 +96,4 @@ Press <ENTER> to terminate client.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Esempi di persistenza e hosting di AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [Esempi di persistenza e hosting di AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

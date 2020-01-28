@@ -2,12 +2,12 @@
 title: Hello World con il servizio di routing
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: 7a41a1b552e220dcb6367ae59876da4570bab909
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ae0615c8cf2fa33f3bb363f77c0d06440b6afc13
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716913"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743716"
 ---
 # <a name="hello-world-with-the-routing-service"></a>Hello World con il servizio di routing
 In questo esempio viene illustrato il servizio di routing Windows Communication Foundation (WCF). Il servizio di routing è un componente WCF che consente di includere facilmente un router basato sul contenuto nell'applicazione. Questo esempio adatta l'esempio di calcolatrice WCF standard per comunicare usando il servizio di routing. In questo esempio, il client calcolatrice è configurato per inviare messaggi a un endpoint esposto dal router. Il servizio di routing è configurato per accettare tutti i messaggi ad esso inviati e per inoltrarli a un endpoint che corrisponde al servizio di calcolatrice. I messaggi inviati dal client vengono pertanto ricevuti dal router e reindirizzati al servizio di calcolatrice effettivo. I messaggi provenienti dal servizio di calcolatrice di backup vengono inviati nuovamente al router del servizio, che a sua volta li inoltra al client calcolatrice.
@@ -59,4 +59,4 @@ In questo esempio viene illustrato il servizio di routing Windows Communication 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Esempi di persistenza e hosting di AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [Esempi di persistenza e hosting di AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

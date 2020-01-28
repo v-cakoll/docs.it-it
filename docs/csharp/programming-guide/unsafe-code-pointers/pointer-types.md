@@ -4,12 +4,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: fe0eacbd67917826c88c5ef68bb8d8aeab9ba251
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ad6e6f17f9a8c30339a74b8ab41af3a99e716d3f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711818"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745352"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Tipi di puntatori (Guida per programmatori C#)
 
@@ -87,5 +87,5 @@ Per altre informazioni, vedere la sezione [Tipi puntatore](~/_csharplang/spec/un
 - [Codice unsafe e puntatori](index.md)
 - [Conversioni puntatore](pointer-conversions.md)
 - [Tipi riferimento](../../language-reference/keywords/reference-types.md)
-- [Tipi valore](../../language-reference/keywords/value-types.md)
+- [Tipi valore](../../language-reference/builtin-types/value-types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)

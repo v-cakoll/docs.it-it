@@ -1,15 +1,16 @@
 ---
-title: 'Procedura dettagliata: hosting di controlli compositi di WPF in Windows Form'
+title: Ospitare un controllo composito WPF in Windows Forms
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: 39124b03b21fe1bc2a5dce3d8fb90ff372ab4853
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
-ms.translationtype: MT
+ms.openlocfilehash: 59243e1810757ff0ff58a60ac3eb007bbc227be0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458927"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742688"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Procedura dettagliata: hosting di controlli compositi di WPF in Windows Form
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce un ambiente completo per la creazione di applicazioni. Tuttavia, quando si ha un investimento sostanziale nel codice [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], può essere più efficace estendere l'applicazione [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] esistente con [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] anziché riscriverla da zero. Uno scenario comune è quando si desidera incorporare uno o più controlli implementati con [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] all'interno del Windows Forms Application. Per ulteriori informazioni sulla personalizzazione dei controlli WPF, vedere [personalizzazione del controllo](../controls/control-customization.md).  
@@ -26,7 +27,7 @@ ms.locfileid: "73458927"
   
  Per un listato di codice completo delle attività illustrate in questa procedura dettagliata, vedere [hosting di un controllo composito WPF nell'esempio Windows Forms](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WindowsFormsHostingWpfControl).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
 
 Per completare la procedura dettagliata, è necessario Visual Studio.  
   
@@ -176,7 +177,7 @@ namespace MyControls
   
  [!code-csharp[WindowsFormsHostingWpfControl#14](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#14)]  
   
- Compilare la soluzione. La compilazione genererà una DLL denominata MyControls.dll.  
+ Compila la soluzione. La compilazione genererà una DLL denominata MyControls.dll.  
   
 <a name="winforms_host_section"></a>   
 ## <a name="implementing-the-windows-forms-host-application"></a>Implementazione dell'applicazione host Windows Forms  
@@ -234,9 +235,9 @@ Nell'immagine seguente viene illustrato un controllo composito WPF ospitato in u
     |----------|----------|  
     |groupBox1|Colore di sfondo|  
     |groupBox2|Colore primo piano|  
-    |groupBox3|Dimensione carattere|  
+    |groupBox3|Dimensioni carattere|  
     |groupBox4|Famiglia di caratteri|  
-    |groupBox5|Stile|  
+    |groupBox5|Stile carattere|  
     |groupBox6|Spessore carattere|  
     |groupBox7|Dati dal controllo|  
   
@@ -248,8 +249,8 @@ Nell'immagine seguente viene illustrato un controllo composito WPF ospitato in u
     |groupBox1|radioBackgroundLightGreen|LightGreen|  
     |groupBox1|radioBackgroundLightSalmon|LightSalmon|  
     |groupBox2|radioForegroundOriginal|Originale|  
-    |groupBox2|radioForegroundRed|Rosso|  
-    |groupBox2|radioForegroundYellow|Giallo|  
+    |groupBox2|radioForegroundRed|Red|  
+    |groupBox2|radioForegroundYellow|Yellow|  
     |groupBox3|radioSizeOriginal|Originale|  
     |groupBox3|radioSizeTen|10|  
     |groupBox3|radioSizeTwelve|12|  

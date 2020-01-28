@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Associare i controlli di Windows Forms a valori di database DBNull'
+title: Associare i controlli ai valori del database DBNull
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], BindingSource component
 - controls [Windows Forms], binding to DBNull values
 ms.assetid: 96494e6f-5f40-4f83-af97-bbd7192c2af8
-ms.openlocfilehash: 8abce5d69a7cece6528e0c9d8728de0e0acd9305
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 175d7f5aee2540916480e2c55a485af1f9d16653
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591418"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746658"
 ---
-# <a name="how-to-bind-windows-forms-controls-to-dbnull-database-values"></a>Procedura: Associare i controlli di Windows Forms a valori di database DBNull
+# <a name="how-to-bind-windows-forms-controls-to-dbnull-database-values"></a>Procedura: Associare controlli Windows Form a valori di database DBNull
 Quando si associano controlli Windows Form a un'origine dati e questa restituisce un valore <xref:System.DBNull>, è possibile sostituire un valore appropriato senza gestire, formattare o analizzare eventi. La proprietà <xref:System.Windows.Forms.Binding.NullValue%2A> eseguirà la conversione del valore <xref:System.DBNull> in un oggetto specificato durante la formattazione o l'analisi dei valori dell'origine dati.  
   
 ## <a name="example"></a>Esempio  
@@ -35,5 +35,5 @@ Quando si associano controlli Windows Form a un'origine dati e questa restituisc
 ## <a name="see-also"></a>Vedere anche
 
 - [Componente BindingSource](bindingsource-component.md)
-- [Procedura: Gestire errori ed eccezioni che si verificano con il Data Binding](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
-- [Procedura: Associare un controllo di Windows Form a un tipo](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Procedura: gestire gli errori e le eccezioni che si verificano con l'associazione dati](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
+- [Procedura: associare un controllo Windows Form a un tipo](how-to-bind-a-windows-forms-control-to-a-type.md)

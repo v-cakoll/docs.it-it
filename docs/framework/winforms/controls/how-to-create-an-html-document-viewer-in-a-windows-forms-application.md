@@ -1,5 +1,6 @@
 ---
-title: 'Procedura: Creare un visualizzatore di documenti HTML in una Windows Forms Application'
+title: Creare un visualizzatore di documenti HTML in un'app Windows Forms
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,24 +10,24 @@ helpviewer_keywords:
 - document viewers
 - Windows Forms, creating document viewers
 ms.assetid: 6a6338fe-f7ee-4f5e-9d8f-0465c57e9039
-ms.openlocfilehash: 4118f526af1e02982f181dba9e86f8ce5b806fbb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 913bc86af034645b4b8cf3d69da4c9def58fc19c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64612163"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732840"
 ---
-# <a name="how-to-create-an-html-document-viewer-in-a-windows-forms-application"></a>Procedura: Creare un visualizzatore di documenti HTML in una Windows Forms Application
-È possibile usare il <xref:System.Windows.Forms.WebBrowser> controllo per visualizzare e stampare documenti HTML senza fornire la funzionalità completa di un browser Internet. Ciò è utile quando si desidera sfruttare le funzionalità di formattazione del codice HTML, ma non si desidera che gli utenti per caricare le pagine Web arbitrari che possono contenere i controlli Web non attendibili o codice di script potenzialmente dannosi. Si potrebbe voler limitare la capacità del <xref:System.Windows.Forms.WebBrowser> controllare in questo modo, ad esempio, per usarlo come un visualizzatore di posta elettronica HTML o per fornire la Guida in formato HTML nell'applicazione.  
+# <a name="how-to-create-an-html-document-viewer-in-a-windows-forms-application"></a>Procedura: creare un visualizzatore di documenti HTML in un'applicazione Windows Form
+È possibile utilizzare il controllo <xref:System.Windows.Forms.WebBrowser> per visualizzare e stampare i documenti HTML senza fornire le funzionalità complete di un Web browser Internet. Questa opzione è utile quando si desidera sfruttare le funzionalità di formattazione di HTML, ma non si desidera che gli utenti carichino pagine Web arbitrarie che possono contenere controlli Web non attendibili o codice di script potenzialmente dannoso. È possibile limitare la funzionalità del controllo <xref:System.Windows.Forms.WebBrowser> in questo modo, ad esempio, per usarlo come visualizzatore di posta elettronica HTML o per fornire la Guida in formato HTML nell'applicazione.  
   
 ### <a name="to-create-an-html-document-viewer"></a>Per creare un visualizzatore di documenti HTML  
   
-1. Impostare il <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> proprietà `false` per impedire il <xref:System.Windows.Forms.WebBrowser> controllo da aprire i file trascinati su di esso.  
+1. Impostare la proprietà <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> su `false` per impedire che il controllo <xref:System.Windows.Forms.WebBrowser> apra i file eliminati.  
   
      [!code-csharp[WebBrowserMisc#20](~/samples/snippets/csharp/VS_Snippets_Winforms/WebBrowserMisc/CS/WebBrowserMisc.cs#20)]
      [!code-vb[WebBrowserMisc#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WebBrowserMisc/vb/WebBrowserMisc.vb#20)]  
   
-2. Impostare il <xref:System.Windows.Forms.WebBrowser.Url%2A> proprietà al percorso del file iniziale da visualizzare.  
+2. Impostare la proprietà <xref:System.Windows.Forms.WebBrowser.Url%2A> sul percorso del file iniziale da visualizzare.  
   
      [!code-csharp[WebBrowserMisc#21](~/samples/snippets/csharp/VS_Snippets_Winforms/WebBrowserMisc/CS/WebBrowserMisc.cs#21)]
      [!code-vb[WebBrowserMisc#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WebBrowserMisc/vb/WebBrowserMisc.vb#21)]  
@@ -46,4 +47,4 @@ ms.locfileid: "64612163"
 - [Panoramica sul controllo WebBrowser](webbrowser-control-overview.md)
 - [Sicurezza dei controlli WebBrowser](webbrowser-security.md)
 - [Procedura: Passare a un URL con il controllo WebBrowser](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
-- [Procedura: Stampa con un controllo WebBrowser](how-to-print-with-a-webbrowser-control.md)
+- [Procedura: Stampare con un controllo WebBrowser](how-to-print-with-a-webbrowser-control.md)

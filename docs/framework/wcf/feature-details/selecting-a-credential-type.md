@@ -2,44 +2,44 @@
 title: Selezione di un tipo di credenziale
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-ms.openlocfilehash: b5dd757328fc04ccbbce7eaed2bd1a28b3e1282e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6737f7daeb37e2e296ca0429d73b963743c409a2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949218"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746148"
 ---
 # <a name="selecting-a-credential-type"></a>Selezione di un tipo di credenziale
-Le *credenziali* sono il Windows Communication Foundation dati (WCF) utilizzato per stabilire un'identità o funzionalità richiesta. Ad esempio, un passaporto è una credenziale rilasciata da un'autorità dello Stato per provare la cittadinanza in un paese o un'area geografica. In WCF, le credenziali possono assumere diverse forme, ad esempio i token del nome utente e i certificati X. 509. In questo argomento vengono illustrate le credenziali, il modo in cui vengono utilizzate in WCF e viene illustrato come selezionare le credenziali appropriate per l'applicazione.  
+Le *credenziali* sono il Windows Communication Foundation dati (WCF) utilizzato per stabilire un'identità o funzionalità richiesta. Ad esempio, un passaporto è una credenziale rilasciata da un'autorità dello Stato per provare la cittadinanza in un paese o una regione. In WCF, le credenziali possono assumere diverse forme, ad esempio i token del nome utente e i certificati X. 509. In questo argomento vengono illustrate le credenziali, il modo in cui vengono utilizzate in WCF e viene illustrato come selezionare le credenziali appropriate per l'applicazione.  
   
- In molti paesi e aree geografiche, la patente di guida costituisce un esempio di credenziale. Oltre a contenere dati che descrivono l'identità e le capacità di un individuo, una patente contiene una prova di possesso, ovvero la foto del titolare. La patente viene inoltre rilasciata da un'autorità attendibile, in genere un apposito ente governativo e, allo scopo di impedire manomissioni e falsificazioni, viene sigillata ed eventualmente corredata di ologramma.  
+ In molti paesi e regioni, la patente di guida costituisce un esempio di credenziale. Oltre a contenere dati che descrivono l'identità e le capacità di un individuo, una patente contiene una prova di possesso, ovvero la foto del titolare. La patente viene inoltre rilasciata da un'autorità attendibile, in genere un apposito ente governativo e, allo scopo di impedire manomissioni e falsificazioni, viene sigillata ed eventualmente corredata di ologramma.  
   
  Quando si presenta una credenziale, è necessario presentare sia i dati sia la prova di possesso dei dati. WCF supporta un'ampia gamma di tipi di credenziali a livello di sicurezza del trasporto e del messaggio. Si considerino, ad esempio, due tipi di credenziali supportati nelle credenziali del certificato WCF: nome utente e (X. 509).  
   
  Nel primo tipo di credenziale, il nome utente rappresenta l'attestazione di identità e la password rappresenta la prova di possesso. In questo caso l'autorità attendibile è il sistema che convalida nome utente e password.  
   
- Con una credenziale del certificato X. 509, il nome del soggetto, il nome alternativo del soggetto o i campi specifici all'interno del certificato possono essere usati come attestazioni di identità `Valid From` , `Valid To` mentre altri campi, ad esempio i campi e, specificano la validità del certificato.  
+ Con una credenziale del certificato X. 509, il nome del soggetto, il nome alternativo del soggetto o i campi specifici all'interno del certificato possono essere usati come attestazioni di identità, mentre altri campi, ad esempio i campi `Valid From` e `Valid To`, specificano la validità del certificato.  
   
 ## <a name="transport-credential-types"></a>Tipi di credenziali a livello di trasporto  
  Nella tabella seguente vengono illustrati i tipi di credenziali client che possono essere usati da un'associazione nella modalità di sicurezza del trasporto. Quando si crea un servizio, impostare la proprietà `ClientCredentialType` su uno di questi valori per specificare il tipo di credenziale che il client deve fornire per comunicare con il servizio. È possibile impostare i tipi nel codice o nei file di configurazione.  
   
-|Impostazione|Descrizione|  
+|Impostazione di|Descrizione|  
 |-------------|-----------------|  
-|Nessuna|Specifica che il client non deve presentare alcuna credenziale. Il client viene pertanto autenticato come anonimo.|  
-|Basic|Specifica l'autenticazione di base per il client. Per ulteriori informazioni, vedere documento RFC2617-[autenticazione http: Basic and Digest Authentication](https://go.microsoft.com/fwlink/?LinkID=88313) (Autenticazione HTTP: autenticazione di base e del digest).|  
-|Digest|Specifica l'autenticazione digest per il client. Per ulteriori informazioni, vedere documento RFC2617-[autenticazione http: Basic and Digest Authentication](https://go.microsoft.com/fwlink/?LinkID=88313) (Autenticazione HTTP: autenticazione di base e del digest).|  
-|Ntlm|Specifica l'autenticazione NT LAN Manager (NTLM). Viene usato quando non è possibile usare l'autenticazione Kerberos per qualche motivo. È inoltre possibile disabilitare l'utilizzo come fallback impostando la <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> proprietà su `false`, che fa in modo che WCF effettui il massimo sforzo per generare un'eccezione se viene utilizzata l'autenticazione NTLM. Si noti che l'impostazione di questa proprietà su `false` potrebbe non impedire l'invio di credenziali NTLM nella rete.|  
-|Windows|Specifica l'autenticazione Windows. Per specificare solo il protocollo Kerberos in un dominio Windows, impostare la proprietà <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> su `false` (l'impostazione predefinita è `true`).|  
+|nessuna|Specifica che il client non deve presentare alcuna credenziale. Il client viene pertanto autenticato come anonimo.|  
+|Basic|Specifica l'autenticazione di base per il client. Per altre informazioni, vedere documento RFC2617-[autenticazione http: autenticazione di base e del digest](ftp://ftp.rfc-editor.org/in-notes/rfc2617.txt).|  
+|Digest|Specifica l'autenticazione digest per il client. Per altre informazioni, vedere documento RFC2617-[autenticazione http: autenticazione di base e del digest](ftp://ftp.rfc-editor.org/in-notes/rfc2617.txt).|  
+|Ntlm|Specifica l'autenticazione NT LAN Manager (NTLM). Viene usato quando non è possibile usare l'autenticazione Kerberos per qualche motivo. È inoltre possibile disabilitarne l'utilizzo come fallback impostando la proprietà <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> su `false`, che fa in modo che WCF faccia il massimo sforzo per generare un'eccezione se viene utilizzata l'autenticazione NTLM. Si noti che l'impostazione di questa proprietà su `false` potrebbe non impedire l'invio di credenziali NTLM nella rete.|  
+|Portale di|Specifica l'autenticazione Windows. Per specificare solo il protocollo Kerberos in un dominio Windows, impostare la proprietà <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> su `false` (l'impostazione predefinita è `true`).|  
 |Certificato|Esegue l'autenticazione client mediante un certificato X.509.|  
 |Password|L'utente deve specificare un nome utente e una password. Convalidare la coppia di nome utente/password usando l'autenticazione di Windows o un'altra soluzione personalizzata.|  
   
 ### <a name="message-client-credential-types"></a>Tipi di credenziale usati nella sicurezza client a livello di messaggio  
  La tabella seguente mostra i tipi di credenziali usabili quando si crea un'applicazione che usa la sicurezza a livello di messaggio. I valori riportati possono essere usati nel codice o nei file di configurazione.  
   
-|Impostazione|Descrizione|  
+|Impostazione di|Descrizione|  
 |-------------|-----------------|  
-|Nessuna|Specifica che il client non deve presentare una credenziale. Il client viene pertanto autenticato come anonimo.|  
-|Windows|Consente lo scambio di messaggi SOAP all'interno di un contesto di sicurezza stabilito mediante una credenziale Windows.|  
+|nessuna|Specifica che il client non deve presentare una credenziale. Il client viene pertanto autenticato come anonimo.|  
+|Portale di|Consente lo scambio di messaggi SOAP all'interno di un contesto di sicurezza stabilito mediante una credenziale Windows.|  
 |Nome utente|Consente al servizio di richiedere che l'autenticazione del client si basi su una credenziale di tipo nome utente. Si noti che WCF non consente operazioni di crittografia con nomi utente, ad esempio la generazione di una firma o la crittografia di dati. WCF garantisce che il trasporto sia protetto quando si utilizzano le credenziali del nome utente.|  
 |Certificato|Consente al servizio di richiedere che il client venga autenticato tramite un certificato X.509.|  
 |Token emesso|Un tipo di token personalizzato, configurato in base a un criterio di sicurezza. Il tipo di token predefinito è Security Assertions Markup Language (SAML). Il token viene emesso da un servizio token di sicurezza. Per altre informazioni, vedere [Federazione e token emessi](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
@@ -47,7 +47,7 @@ Le *credenziali* sono il Windows Communication Foundation dati (WCF) utilizzato 
 ### <a name="negotiation-model-of-service-credentials"></a>Modello di negoziazione delle credenziali del servizio  
  La *negoziazione* è il processo di creazione di un trust tra un client e un servizio scambiando le credenziali. Il processo viene eseguito in maniera iterativa tra il client e il servizio in modo da divulgare solo le informazioni necessarie per il passaggio successivo nel processo di negoziazione. In pratica, il risultato finale è il recapito della credenziale di un servizio al client da usare nelle operazioni successive.  
   
- Con un'eccezione, per impostazione predefinita le associazioni fornite dal sistema in WCF negoziano automaticamente le credenziali del servizio quando si utilizza la sicurezza a livello di messaggio. (l'eccezione è <xref:System.ServiceModel.BasicHttpBinding>, che non consente la sicurezza per impostazione predefinita). Per disabilitare questo comportamento, vedere le proprietà <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> e <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.NegotiateServiceCredential%2A>.  
+ Con un'eccezione, per impostazione predefinita le associazioni fornite dal sistema in WCF negoziano automaticamente le credenziali del servizio quando si utilizza la sicurezza a livello di messaggio. (L'eccezione è la <xref:System.ServiceModel.BasicHttpBinding>, che non Abilita la sicurezza per impostazione predefinita). Per disabilitare questo comportamento, vedere le proprietà <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> e <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.NegotiateServiceCredential%2A>.  
   
 > [!NOTE]
 > Quando si usa la sicurezza SSL con .NET Framework 3,5 e versioni successive, un client WCF USA sia i certificati intermedi nel proprio archivio certificati che i certificati intermedi ricevuti durante la negoziazione SSL per eseguire la convalida della catena di certificati nel servizio certificato. In .NET Framework 3.0 vengono usati solo i certificati intermedi installati nell'archivio certificati locale.  
@@ -111,6 +111,6 @@ Le *credenziali* sono il Windows Communication Foundation dati (WCF) utilizzato 
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A?displayProperty=nameWithType>
 - [Concetti relativi alla sicurezza](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Programmazione delle funzionalità di sicurezza di WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
 - [Sicurezza del trasporto HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

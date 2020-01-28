@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Individuare il pannello selezionato nel controllo StatusBar di Windows Forms'
+title: Determinare il pannello in cui è stato fatto clic sul controllo StatusBar
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,27 +13,27 @@ helpviewer_keywords:
 - PanelClick event [Windows Forms], determining panel clicked
 - Panel control [Windows Forms], determining click
 ms.assetid: d14c6092-04b2-4a07-8ddf-0dd11277ff5f
-ms.openlocfilehash: 6229d8965949641105cd0e9708474c3249d52d1d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 94619f8bd426a42e5dafa0db99880e20d24f9963
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965713"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746019"
 ---
-# <a name="how-to-determine-which-panel-in-the-windows-forms-statusbar-control-was-clicked"></a>Procedura: Individuare il pannello selezionato nel controllo StatusBar di Windows Forms
+# <a name="how-to-determine-which-panel-in-the-windows-forms-statusbar-control-was-clicked"></a>Procedura: individuare il pannello selezionato nel controllo StatusBar Windows Form
 > [!IMPORTANT]
-> I <xref:System.Windows.Forms.StatusStrip> controlli <xref:System.Windows.Forms.ToolStripStatusLabel> e <xref:System.Windows.Forms.StatusBar> sostituiscono e aggiungono funzionalità ai <xref:System.Windows.Forms.StatusBarPanel> controlli e; tuttavia, <xref:System.Windows.Forms.StatusBar> i <xref:System.Windows.Forms.StatusBarPanel> controlli e vengono conservati sia per la compatibilità con le versioni precedenti che per un uso futuro, se scegliere.  
+> I controlli <xref:System.Windows.Forms.StatusStrip> e <xref:System.Windows.Forms.ToolStripStatusLabel> sostituiscono e aggiungono funzionalità ai controlli <xref:System.Windows.Forms.StatusBar> e <xref:System.Windows.Forms.StatusBarPanel>; Tuttavia, se si sceglie, i controlli <xref:System.Windows.Forms.StatusBar> e <xref:System.Windows.Forms.StatusBarPanel> vengono conservati sia per la compatibilità con le versioni precedenti che per un uso futuro.  
   
- Per programmare il controllo di [controllo StatusBar](statusbar-control-windows-forms.md) per rispondere ai clic dell'utente, usare un'istruzione case <xref:System.Windows.Forms.StatusBar.PanelClick> all'interno dell'evento. L'evento contiene un argomento (argomento Panel), che contiene un riferimento all'oggetto selezionato <xref:System.Windows.Forms.StatusBarPanel>. Utilizzando questo riferimento, è possibile determinare l'indice del pannello selezionato e programmare di conseguenza.  
+ Per programmare il controllo di [controllo StatusBar](statusbar-control-windows-forms.md) per rispondere ai clic dell'utente, usare un'istruzione case all'interno dell'evento <xref:System.Windows.Forms.StatusBar.PanelClick>. L'evento contiene un argomento (argomento Panel), che contiene un riferimento al <xref:System.Windows.Forms.StatusBarPanel>selezionato. Utilizzando questo riferimento, è possibile determinare l'indice del pannello selezionato e programmare di conseguenza.  
   
 > [!NOTE]
-> Verificare che la <xref:System.Windows.Forms.StatusBar> <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> proprietà del controllo sia impostata su `true`.  
+> Verificare che la proprietà <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> del controllo <xref:System.Windows.Forms.StatusBar> sia impostata su `true`.  
   
 ### <a name="to-determine-which-panel-was-clicked"></a>Per determinare il pannello selezionato  
   
-1. Nel gestore <xref:System.Windows.Forms.StatusBar.PanelClick> dell'evento usare un' `Select Case` istruzione (in Visual Basic) o `switch case` (Visual C# o Visual C++) per determinare il pannello su cui è stato fatto clic esaminando l'indice del pannello selezionato negli argomenti dell'evento.  
+1. Nel gestore dell'evento <xref:System.Windows.Forms.StatusBar.PanelClick> usare un'istruzione `Select Case` (in Visual Basic) o `switch case` (Visual C# o Visual C++) per determinare il pannello su cui è stato fatto clic, esaminando l'indice del pannello selezionato negli argomenti dell'evento.  
   
-     Nell'esempio di codice seguente è richiesta la presenza, nel form, di <xref:System.Windows.Forms.StatusBar> un controllo `StatusBar1`,, e <xref:System.Windows.Forms.StatusBarPanel> di due `StatusBarPanel1` oggetti `StatusBarPanel2`, e.  
+     Nell'esempio di codice seguente è richiesta la presenza, nel formato, di un controllo <xref:System.Windows.Forms.StatusBar>, `StatusBar1`e due oggetti <xref:System.Windows.Forms.StatusBarPanel>, `StatusBarPanel1` e `StatusBarPanel2`.  
   
     ```vb  
     Private Sub StatusBar1_PanelClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.StatusBarPanelClickEventArgs) Handles StatusBar1.PanelClick  
@@ -97,6 +97,6 @@ ms.locfileid: "69965713"
 
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [Procedura: Impostare le dimensioni dei pannelli della barra di stato](how-to-set-the-size-of-status-bar-panels.md)
+- [Procedura: Impostare la dimensione dei pannelli della barra di stato](how-to-set-the-size-of-status-bar-panels.md)
 - [Procedura dettagliata: Aggiornamento delle informazioni sulla barra di stato in fase di esecuzione](walkthrough-updating-status-bar-information-at-run-time.md)
 - [Cenni preliminari sul controllo StatusBar](statusbar-control-overview-windows-forms.md)

@@ -1,38 +1,38 @@
 ---
-title: Controllo PictureBox (Windows Form)
+title: Controllo PictureBox
 ms.date: 03/30/2017
 helpviewer_keywords:
 - PictureBox control [Windows Forms]
 - image controls [Windows Forms]
 - images [Windows Forms], adding to PictureBox control
 ms.assetid: f900eb93-25d5-40e5-b5df-b3cea0e831b6
-ms.openlocfilehash: 06633583bf99d9888ec7f9180b503a46f2451691
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34e6e7a58e8a022d1359281ddfbe1a90a7ab5593
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903214"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744227"
 ---
 # <a name="picturebox-control-windows-forms"></a>Controllo PictureBox (Windows Form)
-I moduli di Windows `PictureBox` controllo consente di visualizzare immagini in formato bitmap, GIF, JPEG, metafile o icona.  
+Il controllo Windows Forms `PictureBox` viene usato per visualizzare la grafica in formato bitmap, GIF, JPEG, metafile o icona.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sul controllo PictureBox](picturebox-control-overview-windows-forms.md)  
  Definisce il controllo e ne illustra le funzionalità chiave e le proprietà.  
   
  [Procedura: Modificare le dimensioni o la posizione di un'immagine in fase di esecuzione](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)  
- Illustra gli elementi di <xref:System.Windows.Forms.PictureBox.SizeMode%2A> proprietà e viene descritto come impostarla.  
+ Viene illustrato il funzionamento della proprietà <xref:System.Windows.Forms.PictureBox.SizeMode%2A> e la relativa impostazione.  
   
  [Procedura: Impostare le immagini in fase di esecuzione](how-to-set-pictures-at-run-time-windows-forms.md)  
  Viene descritto come visualizzare e cancellare un'immagine in fase di esecuzione.  
   
- [Procedura: Caricare un'immagine utilizzando la finestra di progettazione](how-to-load-a-picture-using-the-designer-windows-forms.md)  
- Viene descritto come caricare e visualizzare un'immagine in un form in fase di progettazione.  
+ [Procedura: Caricare un'immagine usando la finestra di progettazione](how-to-load-a-picture-using-the-designer-windows-forms.md)  
+ Viene descritto come caricare e visualizzare un'immagine in un modulo in fase di progettazione.  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.PictureBox>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)  
+ [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)  
  Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.

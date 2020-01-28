@@ -8,16 +8,18 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 5eb1aaf96097d2c00cb04e24e65e01464f5f00c6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8c911dc1d0aa36ab8e57fb8a77a52d9cec20743c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711974"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745385"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Come definire l'uguaglianza di valori per un tipoC# (Guida per programmatori)
 
-Quando si definisce una classe o uno struct, si decide se è opportuno creare una definizione personalizzata di uguaglianza di valore, o equivalenza, per il tipo. In genere, l'uguaglianza di valori viene implementata quando si prevede che oggetti del tipo vengano aggiunti a una raccolta, o quando lo scopo principale di tali oggetti consiste nell'archiviare un set di campi o di proprietà. È possibile basare la definizione di uguaglianza di valori su un confronto di tutti i campi e di tutte le proprietà nel tipo, oppure su un sottoinsieme. Ma in entrambi i casi e in entrambe le classi e gli struct, l'implementazione deve seguire le cinque garanzie di equivalenza:  
+Quando si definisce una classe o uno struct, si decide se è opportuno creare una definizione personalizzata di uguaglianza di valore, o equivalenza, per il tipo. In genere, l'uguaglianza di valori viene implementata quando si prevede che oggetti del tipo vengano aggiunti a una raccolta, o quando lo scopo principale di tali oggetti consiste nell'archiviare un set di campi o di proprietà. È possibile basare la definizione di uguaglianza di valori su un confronto di tutti i campi e di tutte le proprietà nel tipo, oppure su un sottoinsieme. 
+
+In entrambi i casi, e in entrambe le classi e gli struct, l'implementazione deve seguire le cinque garanzie di equivalenza (per le regole seguenti, si supponga che `x`, `y` e `z` non siano null):  
   
 1. `x.Equals(x)` restituisce `true`. Questa viene denominata proprietà riflessiva.  
   
@@ -27,8 +29,8 @@ Quando si definisce una classe o uno struct, si decide se è opportuno creare un
   
 4. Le successive chiamate di `x.Equals(y)` restituiscono lo stesso valore purché gli oggetti a cui x e y fanno riferimento non vengano modificati.  
   
-5. `x.Equals(null)` restituisce `false`. `null.Equals(null)` genera tuttavia un'eccezione in quanto non rispetta la regola numero 2 precedente.  
-  
+5. Qualsiasi valore non null è diverso da null. Tuttavia, CLR verifica la presenza di valori null in tutte le chiamate al metodo e genera un'`NullReferenceException` se il riferimento `this` sarebbe null. Pertanto, `x.Equals(y)` genera un'eccezione quando `x` è null. Che interrompe le regole 1 o 2, a seconda dell'argomento `Equals`.
+ 
  Gli struct definiti hanno già un'implementazione predefinita di uguaglianza di valore che eredita dall'override <xref:System.ValueType?displayProperty=nameWithType> del metodo <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>. Questa implementazione usa il processo di reflection per esaminare tutti i campi e tutte le proprietà nel tipo. Sebbene questa implementazione produca risultati corretti, è relativamente lenta rispetto a un'implementazione personalizzata che viene scritta specificamente per il tipo.  
   
  I dettagli di implementazione per l'uguaglianza di valori sono diversi per le classi e gli struct. Tuttavia, sia le classi che gli struct richiedono gli stessi passaggi di base per l'implementazione dell'uguaglianza:  

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Modificare il ritardo del componente ToolTip di Windows Forms'
+title: Modificare il ritardo del componente della descrizione comando
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - tooltips [Windows Forms], delay values
 - examples [Windows Forms], tooltips
 ms.assetid: 08979ba7-dd84-477b-ab17-8d06e759be99
-ms.openlocfilehash: cf257cccd272c16c3d7c3d403456265444fc8ac8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8ab0b0760e8c82d752eaada19f14cae57fa63fdc
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61781238"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746583"
 ---
-# <a name="how-to-change-the-delay-of-the-windows-forms-tooltip-component"></a>Procedura: Modificare il ritardo del componente ToolTip di Windows Forms
-Sono presenti più valori di ritardo che è possibile impostare per un controllo Windows Form <xref:System.Windows.Forms.ToolTip> componente. L'unità di misura per tutte queste proprietà è millisecondi. Il <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> proprietà determina quanto tempo l'utente deve fare riferimento al controllo associato per la stringa di descrizione comando da visualizzare. Il <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A> proprietà imposta il numero di millisecondi impiegato per le stringhe di descrizione comando successive da visualizzare quando il mouse viene spostato da un controllo descrizione comando associato a un altro. Il <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A> proprietà determina il periodo di tempo viene visualizzata la stringa di descrizione comando. È possibile impostare questi valori singolarmente o impostando il valore della <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> proprietà; il ritardo di proprietà vengono impostate in base al valore assegnato al <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> proprietà. Ad esempio, quando <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> è impostata su un valore N, <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> è impostato per N, <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A> è impostata sul valore di <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> diviso per cinque (o N/5), e <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A> è impostata su un valore che è cinque volte il valore della <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> proprietà (o n5).  
+# <a name="how-to-change-the-delay-of-the-windows-forms-tooltip-component"></a>Procedura: Modifica del ritardo del componente ToolTip di Windows Form
+Sono disponibili più valori di ritardo che è possibile impostare per un componente Windows Forms <xref:System.Windows.Forms.ToolTip>. L'unità di misura per tutte queste proprietà è in millisecondi. La proprietà <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> determina per quanto tempo l'utente deve puntare al controllo associato affinché venga visualizzata la stringa della descrizione comando. La proprietà <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A> imposta il numero di millisecondi necessari per la visualizzazione delle stringhe di descrizione comando successive quando il mouse passa da un controllo associato alla descrizione comando a un altro. La proprietà <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A> determina il periodo di tempo in cui viene visualizzata la stringa della descrizione comando. È possibile impostare questi valori singolarmente oppure impostando il valore della proprietà <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A>; le altre proprietà delay vengono impostate in base al valore assegnato alla proprietà <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A>. Se, ad esempio, <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> è impostato su un valore N, <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> è impostato su N, <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A> viene impostato sul valore di <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> diviso per cinque (o N/5) e <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A> viene impostato su un valore cinque volte superiore al valore della proprietà <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> (o 5N).  
   
 ### <a name="to-set-the-delay"></a>Per impostare il ritardo  
   
-1. Impostare le proprietà seguenti come illustrato in questo esempio.  
+1. Impostare le proprietà seguenti, come illustrato in questo esempio.  
   
     ```vb  
     ToolTip1.InitialDelay = 500  

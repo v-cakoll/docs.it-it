@@ -1,5 +1,5 @@
 ---
-title: Windows Form e applicazioni non gestite
+title: App non gestite
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ActiveX controls [Windows Forms]
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, unmanaged
 - Windows Forms, interop
 ms.assetid: 81bc100c-fa49-4614-85a6-0f7ab59eac8a
-ms.openlocfilehash: 65465f22b1806d385523c894cce2103afe33c2f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 17dc20653d1628dfd460a9891e1b0a21c0ebecbd
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61746725"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746360"
 ---
 # <a name="windows-forms-and-unmanaged-applications"></a>Windows Form e applicazioni non gestite
 Le applicazioni e i controlli Windows Form possono interagire con le applicazioni non gestite, con alcune raccomandazioni. Nelle sezioni che seguono vengono descritti configurazioni e scenari supportati e non supportati dalle applicazioni e dai controlli Windows Form.  
@@ -25,10 +25,10 @@ Le applicazioni e i controlli Windows Form possono interagire con le applicazion
  [Procedura: Supportare l'interoperabilità COM visualizzando un Windows Form con il metodo ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md)  
  Fornisce un esempio di codice che illustra come usare il metodo <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> per l'esecuzione di un Windows Form in un'applicazione non gestita.  
   
- [Procedura: Supportare l'interoperabilità COM mediante la visualizzazione di ogni Windows Form nel relativo Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)  
+ [How to: Support COM Interop by Displaying Each Windows Form on Its Own Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)  
  Fornisce un esempio di codice che illustra come eseguire un Windows Form nel relativo thread.  
   
- Vedere anche [procedura dettagliata: Supporto dell'interoperabilità COM mediante la visualizzazione di ogni Windows Form nel relativo Thread](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233639(v=vs.100)).  
+ Vedere anche [Procedura dettagliata: supporto dell'interoperabilità COM mediante la visualizzazione di ogni Windows Form nel relativo thread](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233639(v=vs.100)).  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType>  

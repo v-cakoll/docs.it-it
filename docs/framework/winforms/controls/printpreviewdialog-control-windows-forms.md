@@ -1,5 +1,5 @@
 ---
-title: Controllo PrintPreviewDialog (Windows Form)
+title: Controllo PrintPreviewDialog
 ms.date: 03/30/2017
 helpviewer_keywords:
 - PrintPreviewDialog control (using designer)
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - printing [Windows Forms], print preview (using designer)
 - print preview [Windows Forms], default interface (using designer)
 ms.assetid: bfb5a3d7-021e-44f4-90f3-d435467f51d6
-ms.openlocfilehash: 6d763b51e1ac0ba0e07b986be701e86f5bd60df2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 459ff62c5645704d5cbf688af37302500f47e54a
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012581"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741361"
 ---
 # <a name="printpreviewdialog-control-windows-forms"></a>Controllo PrintPreviewDialog (Windows Form)
 Il controllo `PrintPreviewDialog` Windows Form è una finestra di dialogo preconfigurata che consente di visualizzare un documento così come verrà stampato e costituisce una semplice soluzione, utilizzabile nell'applicazione basata su Windows creata, per evitare di configurare una propria finestra di dialogo. Il controllo contiene pulsanti per la stampa, l'ingrandimento, la visualizzazione di una o più pagine e la chiusura della finestra di dialogo.  
@@ -21,7 +21,7 @@ Il controllo `PrintPreviewDialog` Windows Form è una finestra di dialogo precon
  [Cenni preliminari sul controllo PrintPreviewDialog](printpreviewdialog-control-overview-windows-forms.md)  
  Introduce i concetti generali relativi al controllo `PrintPreviewDialog`, che consente di visualizzare una finestra di dialogo preconfigurata nella quale gli utenti possono visualizzare una versione del documento così come verrà stampato.  
   
- [Procedura: Applicazioni di visualizzare l'anteprima di stampa in Windows Form](how-to-display-print-preview-in-windows-forms-applications.md)  
+ [Procedura: Visualizzare l'anteprima di stampa nelle Windows Forms Application](how-to-display-print-preview-in-windows-forms-applications.md)  
  Viene illustrato come visualizzare una pagina da stampare mediante un'istanza del controllo `PrintPreviewDialog` in fase di esecuzione.  
   
 ## <a name="reference"></a>Riferimenti  
@@ -29,7 +29,7 @@ Il controllo `PrintPreviewDialog` Windows Form è una finestra di dialogo precon
  Fornisce informazioni di riferimento sulla classe e sui relativi membri.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)  
+ [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)  
  Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.  
   
  [Essential Code for Windows Forms Dialog Boxes](https://go.microsoft.com/fwlink/?LinkID=102575) (Codice di base per le finestre di dialogo di Windows Form)  

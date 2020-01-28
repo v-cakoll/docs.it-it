@@ -3,12 +3,12 @@ title: .NET Compiler Platform SDK (API Roslyn)
 description: Informazioni su come usare .NET Compiler Platform SDK (detto anche API Roslyn) per analizzare il codice .NET, individuare gli errori e risolverli.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: 98984edad3a25daa8b0ea13b903c4e6447b8a22a
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: a1ceb1d11cf846e67be2c6558978e01133e591da
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163137"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742732"
 ---
 # <a name="the-net-compiler-platform-sdk"></a>.NET Compiler Platform SDK
 
@@ -43,7 +43,7 @@ I team possono creare analizzatori e correzioni del codice per individuare le ab
 
 ## <a name="provide-guidance-with-library-packages"></a>Includere linee guida nei pacchetti di librerie
 
-Sono disponibili numerose librerie per gli sviluppatori .NET su NuGet.
+Sono disponibili numerose librerie per gli sviluppatori .NET in NuGet.
 Alcune provengono da Microsoft, alcune da società di terze parti e altre da membri e volontari della community. Queste librerie ottengono tassi di adozione maggiori e recensioni migliori quando possono essere usate efficacemente dagli sviluppatori.
 
 Oltre a fornire la documentazione, è possibile includere anche analizzatori e correzioni del codice per l'individuazione e correzione degli usi errati più comuni della libreria. Questa possibilità di usufruire di correzioni immediate consentirà agli sviluppatori di lavorare con efficacia più rapidamente.
@@ -58,7 +58,7 @@ Gli analizzatori possono essere caricati in [Visual Studio Marketplace](https://
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-.NET Compiler Platform SDK include i modelli a oggetti del linguaggio più recenti per la generazione, l'analisi e il refactoring del codice. In questa sezione è disponibile una panoramica concettuale di .NET Compiler Platform SDK. Altri dettagli sono disponibili nelle sezioni dedicate a guide introduttive, esempi ed esercitazioni.
+.NET Compiler Platform SDK include i modelli a oggetti del linguaggio più recenti per la generazione, l'analisi e il refactoring del codice. In questa sezione è disponibile una panoramica concettuale di .NET Compiler Platform SDK. Ulteriori informazioni sono disponibili nelle sezioni guide introduttive, esempi ed esercitazioni.
 
 Altre informazioni sui concetti di .NET Compiler Platform SDK sono disponibili in questi cinque argomenti:
 

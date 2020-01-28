@@ -1,5 +1,5 @@
 ---
-title: Controllo DataGridView (Windows Form)
+title: Controllo DataGridView
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tables [Windows Forms]
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - datasets [Windows Forms], displaying in DataGridView control
 - DataGridView control [Windows Forms]
 ms.assetid: dbee73f2-bba6-4874-9389-cd21d44309be
-ms.openlocfilehash: 86e96045b7de580b7cefd0262369ce860d00e234
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fc40c0f08c0c11fa9acc94ce12caab8766658f1e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909194"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746945"
 ---
 # <a name="datagridview-control-windows-forms"></a>Controllo DataGridView (Windows Form)
 Il controllo `DataGridView` fornisce un sistema efficiente e flessibile per visualizzare i dati in formato tabulare. È possibile usare il controllo `DataGridView` per mostrare le visualizzazioni di sola lettura di una piccola quantità di dati oppure ridimensionarlo per mostrare le visualizzazioni modificabili di set di dati di dimensioni molto estese.  
@@ -73,7 +73,7 @@ Il controllo `DataGridView` fornisce un sistema efficiente e flessibile per visu
  [Differenze tra i controlli DataGridView e DataGrid di Windows Form](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)  
  Descrive come il controllo `DataGridView` migliori e sostituisca il controllo <xref:System.Windows.Forms.DataGrid>.  
   
- Vedere anche [usando la finestra di progettazione con il controllo DataGridView di Windows Form](using-the-designer-with-the-windows-forms-datagridview-control.md).  
+ Vedere anche [uso della finestra di progettazione con il controllo DataGridView Windows Forms](using-the-designer-with-the-windows-forms-datagridview-control.md).  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.DataGridView>  
@@ -84,4 +84,4 @@ Il controllo `DataGridView` fornisce un sistema efficiente e flessibile per visu
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)
+- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)

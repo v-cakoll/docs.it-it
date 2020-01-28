@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Aggiungere e rimuovere elementi da un controllo ComboBox, ListBox o CheckedListBox di Windows Forms'
+title: Aggiungere e rimuovere elementi da un controllo ComboBox, ListBox o CheckedListBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], removing items
 - CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
-ms.openlocfilehash: bd6614c76c63a44a7367ac7c7113c4db260c9a02
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a83d98af42386b566b4af7bc11ff383dea8fd6b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640443"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746299"
 ---
-# <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Procedura: Aggiungere e rimuovere elementi da un controllo ComboBox, ListBox o CheckedListBox di Windows Forms
-Gli elementi possono essere aggiunti a una casella combinata Windows Form, casella di riepilogo o casella di riepilogo in svariati modi, poiché questi controlli possono essere associati a una varietà di origini dati. Tuttavia, in questo argomento viene illustrato il metodo più semplice e non richiede supporta l'associazione dati. Gli elementi visualizzati in genere sono stringhe. Tuttavia, può essere usato qualsiasi oggetto. Il testo che viene visualizzato nel controllo è il valore restituito dell'oggetto `ToString` (metodo).  
+# <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Procedura: aggiungere e rimuovere elementi da un controllo ComboBox, ListBox o CheckedListBox Windows Form
+È possibile aggiungere elementi a una casella combinata Windows Forms, una casella di riepilogo o una casella di riepilogo selezionata in diversi modi, perché questi controlli possono essere associati a una varietà di origini dati. Tuttavia, in questo argomento viene illustrato il metodo più semplice e non è necessario alcun data binding. Gli elementi visualizzati sono in genere stringhe; Tuttavia, è possibile usare qualsiasi oggetto. Il testo visualizzato nel controllo corrisponde al valore restituito dal metodo di `ToString` dell'oggetto.  
   
 ### <a name="to-add-items"></a>Per aggiungere elementi  
   
-1. Aggiungere la stringa o l'oggetto all'elenco utilizzando il `Add` metodo di `ObjectCollection` classe. La raccolta viene fatto riferimento tramite il `Items` proprietà:  
+1. Aggiungere la stringa o l'oggetto all'elenco usando il metodo `Add` della classe `ObjectCollection`. Si fa riferimento alla raccolta usando la proprietà `Items`:  
   
     ```vb  
     ComboBox1.Items.Add("Tokyo")  
@@ -42,7 +42,7 @@ Gli elementi possono essere aggiunti a una casella combinata Windows Form, casel
   
      - oppure -  
   
-2. Inserire la stringa o l'oggetto in corrispondenza del punto desiderato nell'elenco con il `Insert` metodo:  
+2. Inserire la stringa o l'oggetto in corrispondenza del punto desiderato nell'elenco con il metodo `Insert`:  
   
     ```vb  
     CheckedListBox1.Items.Insert(0, "Copenhagen")  
@@ -58,7 +58,7 @@ Gli elementi possono essere aggiunti a una casella combinata Windows Form, casel
   
      - oppure -  
   
-3. Assegnare un'intera matrice per la `Items` raccolta:  
+3. Assegnare un'intera matrice alla raccolta di `Items`:  
   
     ```vb  
     Dim ItemObject(9) As System.Object  
@@ -89,7 +89,7 @@ Gli elementi possono essere aggiunti a una casella combinata Windows Form, casel
   
 ### <a name="to-remove-an-item"></a>Per rimuovere un elemento  
   
-1. Chiamare il `Remove` o `RemoveAt` metodo per eliminare gli elementi.  
+1. Chiamare il metodo `Remove` o `RemoveAt` per eliminare gli elementi.  
   
      `Remove` dispone di un argomento che specifica l'elemento da rimuovere.`RemoveAt` Rimuove l'elemento con il numero di indice specificato.  
   
@@ -120,9 +120,9 @@ Gli elementi possono essere aggiunti a una casella combinata Windows Form, casel
     comboBox1->Items->Remove("Tokyo");  
     ```  
   
-### <a name="to-remove-all-items"></a>Rimuovere tutti gli elementi  
+### <a name="to-remove-all-items"></a>Per rimuovere tutti gli elementi  
   
-1. Chiamare il `Clear` metodo per rimuovere tutti gli elementi dalla raccolta:  
+1. Chiamare il metodo `Clear` per rimuovere tutti gli elementi dalla raccolta:  
   
     ```vb  
     ListBox1.Items.Clear()  
@@ -141,6 +141,6 @@ Gli elementi possono essere aggiunti a una casella combinata Windows Form, casel
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms.CheckedListBox>
-- [Procedura: Ordinare il contenuto di un Windows Form ComboBox, ListBox o CheckedListBox (controllo)](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [Procedura: Ordinare il contenuto di un controllo ComboBox, ListBox o CheckedListBox di Windows Form](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
 - [Quando usare un controllo ComboBox Windows Form anziché un controllo ListBox](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
 - [Controlli Windows Form usati per elencare opzioni](windows-forms-controls-used-to-list-options.md)

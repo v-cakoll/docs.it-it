@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Specificare i valori predefiniti per le nuove righe nel controllo DataGridView di Windows Forms'
+title: Specificare i valori predefiniti per le nuove righe nel controllo DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - rows [Windows Forms], specifying default values
 - DataGridView control [Windows Forms], default values for new rows
 ms.assetid: 8d127963-d9f8-4e4e-9f7f-beb66688f1f2
-ms.openlocfilehash: 879c035366c4686ceff3250a63c6ae8d8d3cfec4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 364f922aefc10e57f2ed7f3a0c2a5b25c922d87a
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651955"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742937"
 ---
-# <a name="how-to-specify-default-values-for-new-rows-in-the-windows-forms-datagridview-control"></a>Procedura: Specificare i valori predefiniti per le nuove righe nel controllo DataGridView di Windows Forms
-È possibile rendere più pratico immissione di dati quando l'applicazione predefinita compilato utilizzando i valori per le righe appena aggiunte. Con il <xref:System.Windows.Forms.DataGridView> (classe), è possibile inserire i valori predefiniti con il <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> evento. Questo evento viene generato quando l'utente immette la riga per i nuovi record. Quando il codice gestisce questo evento, è possibile popolare desiderate celle con valori di propria scelta.  
+# <a name="how-to-specify-default-values-for-new-rows-in-the-windows-forms-datagridview-control"></a>Procedura: specificare i valori predefiniti per le nuove righe nel controllo DataGridView di Windows Form
+È possibile rendere più semplice l'immissione dei dati quando l'applicazione compila i valori predefiniti per le nuove righe aggiunte. Con la classe <xref:System.Windows.Forms.DataGridView>, è possibile inserire i valori predefiniti con l'evento <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded>. Questo evento viene generato quando l'utente immette la riga per i nuovi record. Quando il codice gestisce questo evento, è possibile popolare le celle desiderate con i valori desiderati.  
   
- Esempio di codice seguente viene illustrato come specificare i valori predefiniti per le nuove righe usando la <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> evento.  
+ Nell'esempio di codice seguente viene illustrato come specificare i valori predefiniti per le nuove righe utilizzando l'evento <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded>.  
   
 ## <a name="example"></a>Esempio  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#120](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#120)]
@@ -31,7 +31,7 @@ ms.locfileid: "64651955"
   
 - Un controllo <xref:System.Windows.Forms.DataGridView> denominato `dataGridView1`.  
   
-- Oggetto `NewCustomerId` funzione per la generazione univoco `CustomerID` valori.  
+- Funzione `NewCustomerId` per la generazione di valori `CustomerID` univoci.  
   
 - Riferimenti agli assembly <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   

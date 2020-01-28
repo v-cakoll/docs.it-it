@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Personalizzare celle e colonne nel controllo DataGridView di Windows Forms estendendone il comportamento e l'aspetto"
+title: Personalizzare le celle e le colonne nel controllo DataGridView estendendo il comportamento e l'aspetto
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - columns [Windows Forms], customizing in DataGridView control
 - cells [Windows Forms], customizing in DataGridView control
 ms.assetid: 9b7dc7b6-5ce6-4566-9949-902f74f17a81
-ms.openlocfilehash: 0976a0e07aead1bbaf951c6db8266c5de1a31cd8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: be01e085d4fa74c0c49f0a0494183482875c6a09
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929708"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744069"
 ---
-# <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>Procedura: Personalizzare celle e colonne nel controllo DataGridView di Windows Forms estendendone il comportamento e l'aspetto
+# <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>Procedura: personalizzare celle e colonne nel controllo DataGridView di Windows Form estendendone il comportamento e l'aspetto
 Il controllo <xref:System.Windows.Forms.DataGridView> offre diversi metodi per personalizzare l'aspetto e il comportamento mediante proprietà, eventi e classi correlate. In alcune situazioni è possibile che i requisiti relativi alle celle non possano essere soddisfatti mediante le funzioni fornite. In questi casi per estendere le funzionalità è possibile creare una propria classe <xref:System.Windows.Forms.DataGridViewCell> personalizzata.  
   
  La classe <xref:System.Windows.Forms.DataGridViewCell> personalizzata può essere creata derivandola dalla classe di base <xref:System.Windows.Forms.DataGridViewCell> o da una delle relative classi derivate. Sebbene sia possibile visualizzare qualsiasi tipo di cella in qualsiasi tipo di colonna, in genere viene creata anche una classe <xref:System.Windows.Forms.DataGridViewColumn> personalizzata per la visualizzazione del tipo di cella. Le classi di colonna derivano da <xref:System.Windows.Forms.DataGridViewColumn> o da uno dei tipi derivati.  

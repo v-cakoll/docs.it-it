@@ -1,5 +1,5 @@
 ---
-title: Cenni preliminari su Windows Form e applicazioni non gestite
+title: Panoramica delle app non gestite
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [Windows Forms]
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], about ActiveX controls
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
-ms.openlocfilehash: 02f3224a8069fd091833bb09744389592c769818
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0b4c3e738848be1ead2adeb1945e168c9db60071
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592509"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732530"
 ---
-# <a name="windows-forms-and-unmanaged-applications-overview"></a>Cenni preliminari su Windows Form e applicazioni non gestite
+# <a name="windows-forms-and-unmanaged-applications-overview"></a>Panoramica di Windows Form e delle applicazioni non gestite
 Le applicazioni e i controlli Windows Form possono interagire con le applicazioni non gestite, con alcune raccomandazioni. Nelle sezioni che seguono vengono descritti configurazioni e scenari supportati e non supportati dalle applicazioni e dai controlli Windows Form.  
   
 ## <a name="windows-forms-controls-and-activex-applications"></a>Controlli Windows Form e applicazioni ActiveX  
@@ -47,13 +47,13 @@ Le applicazioni e i controlli Windows Form possono interagire con le applicazion
  Il ciclo di messaggi di un'applicazione è un ciclo interno di programma che recupera i messaggi dalla coda di messaggi di un thread, li converte e li invia all'applicazione per la gestione. Il ciclo di messaggi di Windows Form non dispone della stessa architettura dei cicli di messaggi fornita dalle applicazioni precedenti, come le applicazioni Visual Basic 6.0 e le applicazioni MFC. I messaggi inseriti nel ciclo dei messaggi possono essere gestiti in modo diverso da quanto previsto nel Windows Form. Di conseguenza, può prodursi un comportamento imprevisto. Alcune combinazioni di tasti potrebbero non funzionare, così come alcune operazioni eseguite con il mouse, oppure alcuni eventi potrebbero non essere generati in modo appropriato.  
   
 ## <a name="resolving-interoperability-issues"></a>Risoluzione di problemi di interoperabilità  
- È possibile risolvere i problemi visualizzando il form in un ciclo di messaggi di .NET Framework, che viene creato utilizzando il <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> (metodo).  
+ Per risolvere questi problemi, è possibile visualizzare il form in un ciclo di messaggi .NET Framework, creato usando il metodo <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>.  
   
  Perché un Windows Form funzioni correttamente da un'applicazione client COM, è necessario eseguirlo in un ciclo di messaggi Windows Form. Per eseguire questa operazione, adottare uno degli approcci seguenti:  
   
-- Usare il metodo <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> per visualizzare il Windows Form. Per altre informazioni, vedere [Procedura: Supportare l'interoperabilità COM visualizzando un Windows Form con il metodo ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md).  
+- Usare il metodo <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> per visualizzare il Windows Form. Per altre informazioni, vedere [Procedura: supportare l'interoperabilità COM visualizzando un Windows Form con il metodo ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md).  
   
-- Visualizzare ogni Windows Form in un nuovo thread. Per altre informazioni, vedere [Procedura: Supportare l'interoperabilità COM mediante la visualizzazione di ogni Windows Form nel relativo Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
+- Visualizzare ogni Windows Form in un nuovo thread. Per altre informazioni, vedere [Procedura: supportare l'interoperabilità COM mediante la visualizzazione di ogni Windows Form nel relativo thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -66,4 +66,4 @@ Le applicazioni e i controlli Windows Form possono interagire con le applicazion
 - [Preparazione di un assembly per COM](../../interop/packaging-an-assembly-for-com.md)
 - [Registrazione di assembly presso COM](../../interop/registering-assemblies-with-com.md)
 - [Procedura: Supportare l'interoperabilità COM visualizzando un Windows Form con il metodo ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md)
-- [Procedura: Supportare l'interoperabilità COM mediante la visualizzazione di ogni Windows Form nel relativo Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+- [How to: Support COM Interop by Displaying Each Windows Form on Its Own Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)

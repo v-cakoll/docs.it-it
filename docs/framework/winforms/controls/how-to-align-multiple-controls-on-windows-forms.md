@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: allineare più controlli in Windows Form'
+title: Allineare più controlli
 ms.date: 03/30/2017
 helpviewer_keywords:
 - forms [Windows Forms], aligning controls
@@ -10,12 +10,12 @@ ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 48441fe7c7c2745638a8aa95fd899d7e55697e85
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5593c20e0e00e646949bf7357ecd126cbd1271f4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459478"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747202"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>Procedura: allineare più controlli in Windows Form
 
@@ -33,7 +33,7 @@ Per standardizzare il layout dell'interfaccia utente dell'applicazione basata su
 
 - [Controlli Windows Form](index.md)
 - [Procedura: Aggiungere controlli a un Windows Forms](how-to-add-controls-to-windows-forms.md)
-- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)
+- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)
 - [Controlli Windows Form per funzione](windows-forms-controls-by-function.md)
 - [Procedura dettagliata: Disposizione dei controlli in Windows Form usando guide di allineamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Procedura dettagliata: disposizione di controlli in Windows Form usando TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)

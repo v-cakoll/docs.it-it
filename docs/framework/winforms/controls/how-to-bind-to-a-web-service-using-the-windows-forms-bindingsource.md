@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Binding a un servizio Web tramite BindingSource di Windows Forms'
+title: Eseguire l'associazione a un servizio Web tramite BindingSource
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - controls [Windows Forms], binding to Web service
 - BindingSource component [Windows Forms], examples
 ms.assetid: ee261207-4573-4cb9-a8cb-5185037e0fba
-ms.openlocfilehash: 94564ba2614e335da36828912e43fb9db7eca91b
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 0680c73e578577cf40158761f6c635fe30ff9f4d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834000"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746675"
 ---
-# <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>Procedura: Binding a un servizio Web tramite BindingSource di Windows Forms
+# <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>Procedura: associazione a un servizio Web usando il BindingSource Windows Form
 Per associare un controllo Windows Form ai risultati ottenuti dalla chiamata a un servizio Web XML, è possibile usare un componente <xref:System.Windows.Forms.BindingSource>. Questa procedura è simile al binding di un componente <xref:System.Windows.Forms.BindingSource> a un tipo. È necessario creare un proxy lato client contenente i metodi e tipi esposti dal servizio Web. Si genera un proxy lato client direttamente dal servizio Web (asmx) o dal file Web Services Description Language (WSDL). Inoltre, il proxy lato client deve esporre i campi dei tipi complessi usati dal servizio Web come proprietà pubbliche. Quindi si associa <xref:System.Windows.Forms.BindingSource> a uno dei tipi esposti nel proxy del servizio Web.  
   
 ### <a name="to-create-and-bind-to-a-client-side-proxy"></a>Per creare ed eseguire il binding a un proxy lato client  
@@ -28,11 +28,11 @@ Per associare un controllo Windows Form ai risultati ottenuti dalla chiamata a u
   
 2. Aggiungere un componente <xref:System.Windows.Forms.BindingSource> al form.  
   
-3. Aprire il prompt dei comandi di Windows Software Development Kit (SDK) e passare alla stessa directory in cui il modulo si trova in.  
+3. Aprire il prompt dei comandi di Windows Software Development Kit (SDK) e passare alla stessa directory in cui si trova il modulo.  
   
 4. Tramite lo strumento WSDL immettere `wsdl` e l'URL del file asmx o WSDL per il servizio Web, seguito dallo spazio dei nomi dell'applicazione e, facoltativamente, dal linguaggio in uso.  
   
-     Esempio di codice seguente usa il servizio Web disponibile all'indirizzo `http://webservices.eraserver.net/zipcoderesolver/zipcoderesolver.asmx`. Ad esempio, per C# digitare `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService` e per Visual Basic digitare `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService /language:VB`. Passando il percorso come argomento allo strumento WSDL, verrà generato un proxy lato client nella stessa directory e nello stesso spazio dei nomi dell'applicazione, nel linguaggio specificato. Se si usa Visual Studio, aggiungere il file al progetto.  
+     Nell'esempio di codice seguente viene usato il servizio Web disponibile in `http://webservices.eraserver.net/zipcoderesolver/zipcoderesolver.asmx`. Ad esempio, per C# digitare `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService` e per Visual Basic digitare `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService /language:VB`. Passando il percorso come argomento allo strumento WSDL, verrà generato un proxy lato client nella stessa directory e nello stesso spazio dei nomi dell'applicazione, nel linguaggio specificato. Se si usa Visual Studio, aggiungere il file al progetto.  
   
 5. Selezionare un tipo nel proxy lato client a cui eseguire il binding.  
   
@@ -73,4 +73,4 @@ Per associare un controllo Windows Form ai risultati ottenuti dalla chiamata a u
 ## <a name="see-also"></a>Vedere anche
 
 - [Componente BindingSource](bindingsource-component.md)
-- [Procedura: Associare un controllo di Windows Form a un tipo](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Procedura: associare un controllo Windows Form a un tipo](how-to-bind-a-windows-forms-control-to-a-type.md)

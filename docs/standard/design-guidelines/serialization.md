@@ -3,105 +3,105 @@ title: Serializzazione
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: bebb27ac-9712-4196-9931-de19fc04dbac
-ms.openlocfilehash: fb5d714e2452f1b9c1dcc79cc179b35a2dd48fec
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d29a7bc9f304b8d19e8af593166b8d847117424f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709075"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743641"
 ---
 # <a name="serialization"></a>Serializzazione
-La serializzazione è il processo di conversione di un oggetto in un formato che può essere reso immediatamente permanente o trasportato. Ad esempio, è possibile serializzare un oggetto, trasportarlo su Internet tramite HTTP e deserializzarlo nel computer di destinazione.  
-  
- Il .NET Framework offre tre tecnologie di serializzazione principali ottimizzate per vari scenari di serializzazione. Nella tabella seguente vengono elencate tali tecnologie e vengono indicati i principali tipi .NET Framework correlati.  
-  
-|**Nome della tecnologia**|**Tipi principali**|**Scenari**|  
-|-------------------------|--------------------|-------------------|  
-|**Serializzazione del contratto dati**|<xref:System.Runtime.Serialization.DataContractAttribute> <br /> <xref:System.Runtime.Serialization.DataMemberAttribute> <br /> <xref:System.Runtime.Serialization.DataContractSerializer> <br /> <xref:System.Runtime.Serialization.NetDataContractSerializer> <br /> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> <br /> <xref:System.Runtime.Serialization.ISerializable>|Persistenza generale<br />Servizi Web di<br />JSON|  
-|**Serializzazione XML**|<xref:System.Xml.Serialization.XmlSerializer>|Formato XML con controllo completo sulla forma del codice XML|  
-|**Serializzazione runtime (binario e SOAP)**|<xref:System.SerializableAttribute> <br /> <xref:System.Runtime.Serialization.ISerializable> <br /> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> <br /> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>|Servizi remoti .NET|  
-  
- **✓ DO** interazione utente sulla serializzazione durante la progettazione di nuovi tipi.  
-  
-## <a name="choosing-the-right-serialization-technology-to-support"></a>Scelta della tecnologia di serializzazione corretta da supportare  
- **✓ CONSIDER** il supporto di serializzazione del contratto dati se le istanze del tipo potrebbero dover essere persistenti o utilizzato nei servizi Web.  
-  
- **✓ CONSIDER** che supportano la serializzazione XML anziché o oltre alla serializzazione del contratto dati se è necessario un maggiore controllo sul formato XML che viene generato quando il tipo è serializzato.  
-  
- Questa operazione può essere necessaria in alcuni scenari di interoperabilità in cui è necessario usare un costrutto XML non supportato dalla serializzazione del contratto dati, ad esempio per produrre attributi XML.  
-  
- **✓ CONSIDER** che supportano la serializzazione di Runtime se le istanze del tipo devono attraversare i limiti di servizi remoti .NET.  
-  
- **X AVOID** che supporta la serializzazione di Runtime o la serializzazione XML solo per motivi di persistenza generale. Preferisco invece la serializzazione del contratto dati.  
-  
-## <a name="supporting-data-contract-serialization"></a>Supporto della serializzazione dei contratti dati  
- I tipi possono supportare la serializzazione del contratto dati applicando la <xref:System.Runtime.Serialization.DataContractAttribute> al tipo e il <xref:System.Runtime.Serialization.DataMemberAttribute> ai membri (campi e proprietà) del tipo.  
-  
- **✓ CONSIDER** contrassegnando i membri di dati di tipo pubblico se il tipo può essere utilizzato in attendibilità parziale.  
-  
- Nell'attendibilità totale, i serializzatori dei contratti dati possono serializzare e deserializzare i tipi e i membri non pubblici, ma solo i membri pubblici possono essere serializzati e deserializzati in attendibilità parziale.  
-  
- **✓ DO** implementano un getter e setter per tutte le proprietà che hanno <xref:System.Runtime.Serialization.DataMemberAttribute>. Per essere considerati serializzabili, i serializzatori dei contratti dati richiedono sia il getter che il setter per il tipo. In .NET Framework 3,5 SP1 alcune proprietà della raccolta possono essere solo Get. Se il tipo non verrà usato in attendibilità parziale, una o entrambe le funzioni di accesso alle proprietà possono essere non pubbliche.  
-  
- **✓ CONSIDER** utilizzando i callback di serializzazione per l'inizializzazione delle istanze deserializzate.  
-  
- Poiché i costruttori non vengono chiamati quando gli oggetti sono deserializzati, Sono presenti eccezioni alla regola. I costruttori di raccolte contrassegnate con <xref:System.Runtime.Serialization.CollectionDataContractAttribute> vengono chiamati durante la deserializzazione. Pertanto, qualsiasi logica eseguita durante la costruzione normale deve essere implementata come uno dei callback di serializzazione.  
-  
- `OnDeserializedAttribute` è l'attributo di callback usato più di frequente. Gli altri attributi della famiglia sono <xref:System.Runtime.Serialization.OnDeserializingAttribute>, <xref:System.Runtime.Serialization.OnSerializingAttribute> e <xref:System.Runtime.Serialization.OnSerializedAttribute>. Tali attributi possono essere utilizzati rispettivamente per contrassegnare callback eseguiti prima della deserializzazione, prima della serializzazione e dopo la serializzazione.  
-  
- **✓ CONSIDER** utilizzando il <xref:System.Runtime.Serialization.KnownTypeAttribute> per indicare i tipi concreti che devono essere utilizzati quando si deserializza un oggetto complesso grafico.  
-  
- **✓ DO** prendere in considerazione la compatibilità con le versioni precedenti e successivi durante la creazione o modifica dei tipi serializzabili.  
-  
- Tenere presente che i flussi serializzati di versioni future del tipo possono essere deserializzati nella versione corrente del tipo e viceversa.  
-  
- Assicurarsi di aver compreso che i membri dati, anche privati e interni, non possono modificare i nomi, i tipi o anche il proprio ordine nelle versioni future del tipo, a meno che non si debba prestare particolare attenzione a mantenere il contratto usando parametri espliciti per gli attributi del contratto dati .  
-  
- Testare la compatibilità della serializzazione quando si apportano modifiche ai tipi serializzabili. provando ad esempio a deserializzare la nuova versione in una versione precedente e viceversa.  
-  
- **✓ CONSIDER** implementazione <xref:System.Runtime.Serialization.IExtensibleDataObject> per consentire sequenze di andata e ritorno tra versioni diverse del tipo.  
-  
- L'interfaccia consente al serializzatore di verificare che durante le sequenze di andata e ritorno non venga perso alcun dato. La proprietà <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A?displayProperty=nameWithType> viene utilizzata per archiviare i dati della versione futura del tipo sconosciuto alla versione corrente, quindi non può archiviarla nei relativi membri dati. Quando la versione corrente viene successivamente serializzata e deserializzata in una versione futura, i dati aggiuntivi saranno disponibili nel flusso serializzato.  
-  
-## <a name="supporting-xml-serialization"></a>Supporto della serializzazione XML  
- La serializzazione del contratto dati è la tecnologia di serializzazione principale (predefinita) nell'.NET Framework, ma sono presenti scenari di serializzazione non supportati dalla serializzazione del contratto dati. ad esempio non consente di controllare completamente la forma del codice XML creato o utilizzato dal serializzatore. Se è necessario un controllo così accurato, è necessario utilizzare la serializzazione XML ed è necessario progettare i tipi per supportare questa tecnologia di serializzazione.  
-  
- **X AVOID** progettazione di tipi in modo specifico per la serializzazione XML, a meno che non esista un motivo molto complessa per controllare la forma del codice XML generato. Questa tecnologia è stata sostituita dalla serializzazione dei contratti dati descritta nella sezione precedente.  
-  
- **✓ CONSIDER** implementazione il <xref:System.Xml.Serialization.IXmlSerializable> interfaccia se si desidera un maggiore controllo sulla forma del codice XML serializzato quella offerta applicando gli attributi di serializzazione XML. Due metodi dell'interfaccia, <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> e <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>, consentono di controllare completamente il flusso XML serializzato. È inoltre possibile controllare la XML Schema generata per il tipo applicando l'`XmlSchemaProviderAttribute`.  
-  
-## <a name="supporting-runtime-serialization"></a>Supporto della serializzazione di runtime  
- La serializzazione di runtime è una tecnologia utilizzata dalla comunicazione remota di .NET. Se si ritiene che i tipi vengano trasportati tramite .NET Remoting, è necessario assicurarsi che supportino la serializzazione di Runtime.  
-  
- Il supporto di base per la serializzazione di runtime può essere fornito applicando il <xref:System.SerializableAttribute>e scenari più avanzati implicano l'implementazione di un modello serializzabile di runtime semplice (implementare <xref:System.Runtime.Serialization.ISerializable> e fornire il costruttore di serializzazione).  
-  
- **✓ CONSIDER** che supportano la serializzazione di Runtime se i tipi da utilizzare con i servizi remoti .NET. Ad esempio, lo spazio dei nomi <xref:System.AddIn?displayProperty=nameWithType> utilizza .NET Remoting, pertanto tutti i tipi scambiati tra `System.AddIn` componenti aggiuntivi devono supportare la serializzazione di Runtime.  
-  
- **✓ CONSIDER** implementa il Pattern serializzabile di Runtime se si desidera che il controllo completo sul processo di serializzazione. ad esempio se si desidera trasformare i dati quando vengono serializzati o deserializzati.  
-  
- Il modello è molto semplice. È sufficiente implementare l'interfaccia <xref:System.Runtime.Serialization.ISerializable> e specificare un costruttore speciale utilizzato quando l'oggetto viene deserializzato.  
-  
- **✓ DO** rendere il costruttore di serializzazione protetti e fornire due parametri tipizzati e denominati esattamente come illustrato nell'esempio di seguito.  
-  
+La serializzazione è il processo di conversione di un oggetto in un formato che può essere reso immediatamente permanente o trasportato. Ad esempio, è possibile serializzare un oggetto, trasportarlo su Internet tramite HTTP e deserializzarlo nel computer di destinazione.
+
+ Il .NET Framework offre tre tecnologie di serializzazione principali ottimizzate per vari scenari di serializzazione. Nella tabella seguente vengono elencate tali tecnologie e vengono indicati i principali tipi .NET Framework correlati.
+
+|**Nome della tecnologia**|**Tipi principali**|**Scenari**|
+|-------------------------|--------------------|-------------------|
+|**Serializzazione del contratto dati**|<xref:System.Runtime.Serialization.DataContractAttribute> <br /> <xref:System.Runtime.Serialization.DataMemberAttribute> <br /> <xref:System.Runtime.Serialization.DataContractSerializer> <br /> <xref:System.Runtime.Serialization.NetDataContractSerializer> <br /> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> <br /> <xref:System.Runtime.Serialization.ISerializable>|Persistenza generale<br />Servizi Web di<br />JSON|
+|**Serializzazione XML**|<xref:System.Xml.Serialization.XmlSerializer>|Formato XML con controllo completo sulla forma del codice XML|
+|**Serializzazione runtime (binario e SOAP)**|<xref:System.SerializableAttribute> <br /> <xref:System.Runtime.Serialization.ISerializable> <br /> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> <br /> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>|Servizi remoti .NET|
+
+ ✔️ considerare la serializzazione quando si progettano nuovi tipi.
+
+## <a name="choosing-the-right-serialization-technology-to-support"></a>Scelta della tecnologia di serializzazione corretta da supportare
+ ✔️ CONSIGLIABILE supportare la serializzazione del contratto dati se è possibile che le istanze del tipo debbano essere rese permanente o utilizzate nei servizi Web.
+
+ ✔️ CONSIGLIABILE supportare la serializzazione XML anziché o in aggiunta alla serializzazione del contratto dati se è necessario un maggiore controllo sul formato XML generato quando il tipo viene serializzato.
+
+ Questa operazione può essere necessaria in alcuni scenari di interoperabilità in cui è necessario usare un costrutto XML non supportato dalla serializzazione del contratto dati, ad esempio per produrre attributi XML.
+
+ ✔️ CONSIGLIABILE supportare la serializzazione di runtime se le istanze del tipo devono spostarsi tra i limiti .NET Remoting.
+
+ ❌ evitare il supporto della serializzazione di runtime o della serializzazione XML solo per motivi di persistenza generale. Preferisco invece la serializzazione del contratto dati.
+
+## <a name="supporting-data-contract-serialization"></a>Supporto della serializzazione dei contratti dati
+ I tipi possono supportare la serializzazione del contratto dati applicando la <xref:System.Runtime.Serialization.DataContractAttribute> al tipo e il <xref:System.Runtime.Serialization.DataMemberAttribute> ai membri (campi e proprietà) del tipo.
+
+ ✔️ PROVARE a contrassegnare i membri dati del tipo Public se il tipo può essere usato in attendibilità parziale.
+
+ Nell'attendibilità totale, i serializzatori dei contratti dati possono serializzare e deserializzare i tipi e i membri non pubblici, ma solo i membri pubblici possono essere serializzati e deserializzati in attendibilità parziale.
+
+ ✔️ implementano un getter e un setter in tutte le proprietà con <xref:System.Runtime.Serialization.DataMemberAttribute>. Per essere considerati serializzabili, i serializzatori dei contratti dati richiedono sia il getter che il setter per il tipo. In .NET Framework 3,5 SP1 alcune proprietà della raccolta possono essere solo Get. Se il tipo non verrà usato in attendibilità parziale, una o entrambe le funzioni di accesso alle proprietà possono essere non pubbliche.
+
+ ✔️ CONSIGLIABILE utilizzare i callback di serializzazione per l'inizializzazione di istanze deserializzate.
+
+ Poiché i costruttori non vengono chiamati quando gli oggetti sono deserializzati, Sono presenti eccezioni alla regola. I costruttori di raccolte contrassegnate con <xref:System.Runtime.Serialization.CollectionDataContractAttribute> vengono chiamati durante la deserializzazione. Pertanto, qualsiasi logica eseguita durante la costruzione normale deve essere implementata come uno dei callback di serializzazione.
+
+ `OnDeserializedAttribute` è l'attributo di callback usato più di frequente. Gli altri attributi della famiglia sono <xref:System.Runtime.Serialization.OnDeserializingAttribute>, <xref:System.Runtime.Serialization.OnSerializingAttribute> e <xref:System.Runtime.Serialization.OnSerializedAttribute>. Tali attributi possono essere utilizzati rispettivamente per contrassegnare callback eseguiti prima della deserializzazione, prima della serializzazione e dopo la serializzazione.
+
+ ✔️ CONSIGLIABILE utilizzare la <xref:System.Runtime.Serialization.KnownTypeAttribute> per indicare tipi concreti che devono essere utilizzati durante la deserializzazione di un oggetto grafico complesso.
+
+ ✔️ prendere in considerazione la compatibilità con le versioni precedenti e precedenti quando si creano o modificano tipi serializzabili.
+
+ Tenere presente che i flussi serializzati di versioni future del tipo possono essere deserializzati nella versione corrente del tipo e viceversa.
+
+ Assicurarsi di aver compreso che i membri dati, anche privati e interni, non possono modificare i nomi, i tipi o anche il proprio ordine nelle versioni future del tipo, a meno che non si debba prestare particolare attenzione a mantenere il contratto usando parametri espliciti per gli attributi del contratto dati .
+
+ Testare la compatibilità della serializzazione quando si apportano modifiche ai tipi serializzabili. provando ad esempio a deserializzare la nuova versione in una versione precedente e viceversa.
+
+ ✔️ CONSIGLIABILE implementare <xref:System.Runtime.Serialization.IExtensibleDataObject> per consentire l'esecuzione di sequenze di andata e ritorno tra versioni diverse del tipo.
+
+ L'interfaccia consente al serializzatore di verificare che durante le sequenze di andata e ritorno non venga perso alcun dato. La proprietà <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A?displayProperty=nameWithType> viene utilizzata per archiviare i dati della versione futura del tipo sconosciuto alla versione corrente, quindi non può archiviarla nei relativi membri dati. Quando la versione corrente viene successivamente serializzata e deserializzata in una versione futura, i dati aggiuntivi saranno disponibili nel flusso serializzato.
+
+## <a name="supporting-xml-serialization"></a>Supporto della serializzazione XML
+ La serializzazione del contratto dati è la tecnologia di serializzazione principale (predefinita) nell'.NET Framework, ma sono presenti scenari di serializzazione non supportati dalla serializzazione del contratto dati. ad esempio non consente di controllare completamente la forma del codice XML creato o utilizzato dal serializzatore. Se è necessario un controllo così accurato, è necessario utilizzare la serializzazione XML ed è necessario progettare i tipi per supportare questa tecnologia di serializzazione.
+
+ ❌ evitare di progettare i tipi in modo specifico per la serializzazione XML, a meno che non esista un motivo molto forte per controllare la forma del codice XML prodotto. Questa tecnologia è stata sostituita dalla serializzazione dei contratti dati descritta nella sezione precedente.
+
+ ✔️ CONSIGLIABILE implementare l'interfaccia <xref:System.Xml.Serialization.IXmlSerializable> se si desidera un maggiore controllo sulla forma del codice XML serializzato rispetto a quello offerto applicando gli attributi di serializzazione XML. Due metodi dell'interfaccia, <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> e <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>, consentono di controllare completamente il flusso XML serializzato. È inoltre possibile controllare la XML Schema generata per il tipo applicando l'`XmlSchemaProviderAttribute`.
+
+## <a name="supporting-runtime-serialization"></a>Supporto della serializzazione di runtime
+ La serializzazione di runtime è una tecnologia utilizzata dalla comunicazione remota di .NET. Se si ritiene che i tipi vengano trasportati tramite .NET Remoting, è necessario assicurarsi che supportino la serializzazione di Runtime.
+
+ Il supporto di base per la serializzazione di runtime può essere fornito applicando il <xref:System.SerializableAttribute>e scenari più avanzati implicano l'implementazione di un modello serializzabile di runtime semplice (implementare <xref:System.Runtime.Serialization.ISerializable> e fornire il costruttore di serializzazione).
+
+ ✔️ CONSIGLIABILE supportare la serializzazione di runtime se i tipi verranno utilizzati con .NET Remoting. Ad esempio, lo spazio dei nomi <xref:System.AddIn?displayProperty=nameWithType> utilizza .NET Remoting, pertanto tutti i tipi scambiati tra `System.AddIn` componenti aggiuntivi devono supportare la serializzazione di Runtime.
+
+ ✔️ CONSIGLIABILE implementare il modello di runtime serializzabile se si desidera il controllo completo sul processo di serializzazione. ad esempio se si desidera trasformare i dati quando vengono serializzati o deserializzati.
+
+ Il modello è molto semplice. È sufficiente implementare l'interfaccia <xref:System.Runtime.Serialization.ISerializable> e specificare un costruttore speciale utilizzato quando l'oggetto viene deserializzato.
+
+ ✔️ rendere protetto il costruttore di serializzazione e fornire due parametri digitati e denominati esattamente come illustrato nell'esempio qui.
+
 ```csharp
-[Serializable]  
+[Serializable]
 public class Person : ISerializable
-{  
+{
     protected Person(SerializationInfo info, StreamingContext context)
-    {  
-        // ...  
-    }  
-}  
+    {
+        // ...
+    }
+}
 ```
-  
- **✓ DO** implementare il <xref:System.Runtime.Serialization.ISerializable> membri in modo esplicito.  
-  
- **✓ DO** applicare una richiesta di collegamento a <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=nameWithType> implementazione. In questo modo si garantisce che solo i core completamente attendibili e il serializzatore di Runtime abbiano accesso al membro.  
-  
- *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
-  
- *Ristampato con l'autorizzazione di Pearson Education, Inc. da [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2a edizione](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) di Krzysztof Cwalina and Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional nella collana Microsoft Windows Development Series.*  
-  
+
+ ✔️ implementare i membri <xref:System.Runtime.Serialization.ISerializable> in modo esplicito.
+
+ ✔️ applicare una richiesta di collegamento all'implementazione di <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=nameWithType>. In questo modo si garantisce che solo i core completamente attendibili e il serializzatore di Runtime abbiano accesso al membro.
+
+ *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*
+
+ *Ristampato con l'autorizzazione di Pearson Education, Inc. da [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2a edizione](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) di Krzysztof Cwalina and Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional nella collana Microsoft Windows Development Series.*
+
 ## <a name="see-also"></a>Vedere anche
 
 - [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Rispondere alla selezione nel controllo DataGrid di Windows Forms'
+title: Rispondi ai clic nel controllo DataGrid
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - examples [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
-ms.openlocfilehash: 54e41c6960c24f68cb27a6f6fb859b4b9223ed27
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9aa1331116cd3f2f8050ff9f8cc8cc52d25726d1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914988"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735761"
 ---
-# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>Procedura: Rispondere alla selezione nel controllo DataGrid di Windows Forms
+# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>Procedura: rispondere alla selezione nel controllo DataGrid Windows Form
 > [!NOTE]
 > Benché il controllo <xref:System.Windows.Forms.DataGridView> sostituisca il controllo <xref:System.Windows.Forms.DataGrid> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.DataGrid> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro. Per altre informazioni, vedere [Differenze tra i controlli DataGridView e DataGrid Windows Form](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Dopo la connessione <xref:System.Windows.Forms.DataGrid> del Windows Forms a un database, è possibile monitorare la cella su cui l'utente ha fatto clic.  
+ Dopo che l'Windows Forms <xref:System.Windows.Forms.DataGrid> è connessa a un database, è possibile monitorare la cella su cui l'utente ha fatto clic.  
   
 ### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a>Per rilevare quando l'utente del DataGrid seleziona una cella diversa  
   
-- Nel gestore <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> eventi scrivere il codice per rispondere in modo appropriato.  
+- Nel gestore dell'evento <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> scrivere codice per rispondere in modo appropriato.  
   
     ```vb  
     Private Sub myDataGrid_CurrentCellChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles myDataGrid.CurrentCellChanged  
@@ -56,9 +56,9 @@ ms.locfileid: "69914988"
   
 ### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a>Per determinare la parte del DataGrid su cui l'utente ha fatto clic  
   
-- Chiamare il <xref:System.Windows.Forms.DataGrid.HitTest%2A> metodo in un gestore eventi appropriato, ad esempio per l' <xref:System.Windows.Forms.Control.MouseDown> evento <xref:System.Windows.Forms.Control.Click> o.  
+- Chiamare il metodo <xref:System.Windows.Forms.DataGrid.HitTest%2A> in un gestore eventi appropriato, ad esempio per l'evento <xref:System.Windows.Forms.Control.MouseDown> o <xref:System.Windows.Forms.Control.Click>.  
   
-     Il <xref:System.Windows.Forms.DataGrid.HitTest%2A> metodo restituisce un <xref:System.Windows.Forms.DataGrid.HitTestInfo> oggetto che contiene la riga e la colonna di un'area su cui è stato fatto clic.  
+     Il metodo <xref:System.Windows.Forms.DataGrid.HitTest%2A> restituisce un oggetto <xref:System.Windows.Forms.DataGrid.HitTestInfo> che contiene la riga e la colonna di un'area su cui è stato fatto clic.  
   
     ```vb  
     Private Sub myDataGrid_MouseDown(ByVal sender As Object, _  
@@ -143,4 +143,4 @@ ms.locfileid: "69914988"
 ## <a name="see-also"></a>Vedere anche
 
 - [Controllo DataGrid](datagrid-control-windows-forms.md)
-- [Procedura: Modificare i dati visualizzati in fase di esecuzione nel controllo DataGrid Windows Forms](change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [Procedura: Modificare i dati visualizzati in fase di esecuzione nel controllo DataGrid Windows Form](change-displayed-data-at-run-time-wf-datagrid-control.md)

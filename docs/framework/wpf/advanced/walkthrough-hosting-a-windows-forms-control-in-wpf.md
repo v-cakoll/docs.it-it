@@ -1,5 +1,6 @@
 ---
-title: 'Procedura dettagliata: hosting di controlli Windows Form in WPF'
+title: Ospitare un controllo Windows Forms in WPF
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 ms.assetid: 9cb88415-39b0-4c46-80c4-ff325b674286
-ms.openlocfilehash: e353c35e9989e5887e038371672adbb6c2d3598d
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
-ms.translationtype: MT
+ms.openlocfilehash: f7e925529f1bf194664c4f776bcc0322314f8857
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976524"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744910"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-control-in-wpf"></a>Procedura dettagliata: hosting di controlli Windows Form in WPF
 
@@ -22,7 +23,7 @@ In questa procedura dettagliata viene illustrato come ospitare un controllo <xre
 
 Per un listato di codice completo delle attività illustrate in questa procedura dettagliata, vedere la pagina relativa all' [hosting di un controllo Windows Forms in WPF di esempio](https://go.microsoft.com/fwlink/?LinkID=160057).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per completare la procedura dettagliata, è necessario Visual Studio.
 

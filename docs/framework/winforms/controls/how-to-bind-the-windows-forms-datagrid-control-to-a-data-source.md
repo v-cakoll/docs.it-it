@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Associare il controllo DataGrid di Windows Forms a un'origine dati"
+title: Associare il controllo DataGrid a un'origine dati
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,18 +14,18 @@ helpviewer_keywords:
 - bound controls [Windows Forms]
 - data-bound controls [Windows Forms], DataGrid
 ms.assetid: 128cdb07-dfd3-4d60-9d6a-902847667c36
-ms.openlocfilehash: bac24c2dd622ea780408e902d08708ac09561044
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2634a6bd8ace36bcf7a49120162474a8c04b2b83
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922730"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746694"
 ---
-# <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source"></a>Procedura: Associare il controllo DataGrid di Windows Forms a un'origine dati
+# <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source"></a>Procedura: associare il controllo DataGrid Windows Form a un'origine dati
 > [!NOTE]
 > Benché il controllo <xref:System.Windows.Forms.DataGridView> sostituisca il controllo <xref:System.Windows.Forms.DataGrid> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.DataGrid> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro. Per altre informazioni, vedere [Differenze tra i controlli DataGridView e DataGrid Windows Form](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Il controllo <xref:System.Windows.Forms.DataGrid> Windows Forms è progettato in modo specifico per visualizzare le informazioni di un'origine dati. Il controllo viene associato in fase di esecuzione chiamando il <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metodo. Sebbene sia possibile visualizzare i dati da un'ampia gamma di origini dati, le origini più tipiche sono i set di dati e le visualizzazioni dati.  
+ Il controllo Windows Forms <xref:System.Windows.Forms.DataGrid> è progettato in modo specifico per visualizzare le informazioni provenienti da un'origine dati. Il controllo viene associato in fase di esecuzione chiamando il metodo <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>. Sebbene sia possibile visualizzare i dati da un'ampia gamma di origini dati, le origini più tipiche sono i set di dati e le visualizzazioni dati.  
   
 ### <a name="to-data-bind-the-datagrid-control-programmatically"></a>Per associare i dati al controllo DataGrid a livello di codice  
   
@@ -33,7 +33,7 @@ ms.locfileid: "69922730"
   
      Se l'origine dati è un set di dati o una vista dati basata su una tabella del set di dati, aggiungere il codice al form per riempire il set di dati.  
   
-     Il codice esatto utilizzato dipende dalla posizione in cui il set di dati recupera i dati. Se il set di dati viene popolato direttamente da un database, in genere `Fill` si chiama il metodo di un adattatore dati, come nell'esempio seguente, che popola un set `DsCategories1`di dati denominato:  
+     Il codice esatto utilizzato dipende dalla posizione in cui il set di dati recupera i dati. Se il set di dati viene popolato direttamente da un database, in genere si chiama il metodo `Fill` di un adattatore dati, come nell'esempio seguente, che popola un set di dati denominato `DsCategories1`:  
   
     ```vb  
     sqlDataAdapter1.Fill(DsCategories1)  
@@ -47,7 +47,7 @@ ms.locfileid: "69922730"
     sqlDataAdapter1->Fill(dsCategories1);  
     ```  
   
-     Se il set di dati viene compilato da un servizio Web XML, in genere si crea un'istanza del servizio nel codice e quindi si chiama uno dei metodi per restituire un set di dati. È quindi possibile unire il set di dati dal servizio Web XML nel set di dati locale. Nell'esempio seguente viene illustrato come è possibile creare un'istanza di un servizio Web XML `CategoriesService`denominato, `GetCategories` chiamare il metodo e unire il set di dati risultante in un set `DsCategories1`di dati locale denominato:  
+     Se il set di dati viene compilato da un servizio Web XML, in genere si crea un'istanza del servizio nel codice e quindi si chiama uno dei metodi per restituire un set di dati. È quindi possibile unire il set di dati dal servizio Web XML nel set di dati locale. Nell'esempio seguente viene illustrato come è possibile creare un'istanza di un servizio Web XML denominato `CategoriesService`, chiamare il relativo metodo `GetCategories` e unire il set di dati risultante in un set di dati locale denominato `DsCategories1`:  
   
     ```vb  
     Dim ws As New MyProject.localhost.CategoriesService()  
@@ -68,10 +68,10 @@ ms.locfileid: "69922730"
     dsCategories1->Merge(ws->GetCategories());  
     ```  
   
-2. Chiamare il <xref:System.Windows.Forms.DataGrid> <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metodo del controllo, passandogli l'origine dati e un membro dati. Se non è necessario passare in modo esplicito un membro dati, passare una stringa vuota.  
+2. Chiamare il metodo <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> del controllo <xref:System.Windows.Forms.DataGrid> passandogli l'origine dati e un membro dati. Se non è necessario passare in modo esplicito un membro dati, passare una stringa vuota.  
   
     > [!NOTE]
-    > Se si associa la griglia per la prima volta, è possibile impostare le proprietà <xref:System.Windows.Forms.DataGrid.DataSource%2A> e <xref:System.Windows.Forms.DataGrid.DataMember%2A> del controllo. Tuttavia, non è possibile reimpostare queste proprietà dopo che sono state impostate. È pertanto consigliabile utilizzare sempre il <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metodo.  
+    > Se si associa la griglia per la prima volta, è possibile impostare le proprietà <xref:System.Windows.Forms.DataGrid.DataSource%2A> e <xref:System.Windows.Forms.DataGrid.DataMember%2A> del controllo. Tuttavia, non è possibile reimpostare queste proprietà dopo che sono state impostate. È pertanto consigliabile utilizzare sempre il metodo <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>.  
   
      Nell'esempio seguente viene illustrato come è possibile eseguire l'associazione a livello di codice alla tabella Customers in un set di dati denominato `DsCustomers1`:  
   
@@ -106,6 +106,6 @@ ms.locfileid: "69922730"
 ## <a name="see-also"></a>Vedere anche
 
 - [Cenni preliminari sul controllo DataGrid](datagrid-control-overview-windows-forms.md)
-- [Procedura: Aggiungere tabelle e colonne al controllo Windows Forms DataGrid](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [Procedura: Aggiungere tabelle e colonne al controllo DataGrid Windows Form](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
 - [Controllo DataGrid](datagrid-control-windows-forms.md)
 - [Data binding in Windows Form](../windows-forms-data-binding.md)

@@ -2,16 +2,16 @@
 title: Comando dotnet build-server
 description: Il comando dotnet build-server interagisce con i server avviati da una compilazione.
 ms.date: 04/24/2019
-ms.openlocfilehash: 1c6c6dcdb53d779426daf5daa470d2ad0470a7a1
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: e77a4d9f49f555ac847bb13380380599eef881b1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523019"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734382"
 ---
 # <a name="dotnet-build-server"></a>dotnet build-server
 
-**Questo articolo si applica a: ✓** .NET Core 2.1.x SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .net core 2,1 SDK e versioni successive
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-21plus](../../../includes/topic-appliesto-net-core-21plus.md)]
@@ -35,7 +35,7 @@ dotnet build-server [-h|--help]
 
   Arresta i server di compilazione avviati da dotnet. Per impostazione predefinita, vengono arrestati tutti i server.
 
-## <a name="options"></a>Opzioni
+## <a name="options"></a>Options
 
 - **`-h|--help`**
 

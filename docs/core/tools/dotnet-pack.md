@@ -2,42 +2,42 @@
 title: Comando dotnet pack
 description: Il comando dotnet pack consente di creare pacchetti NuGet per il progetto .NET Core.
 ms.date: 08/08/2019
-ms.openlocfilehash: 99dd8e35601f82adf2a3101121028f191a4c3da4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 057d1029e5c933912c43c178b6db8a8498f2ed57
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117648"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734114"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
-**Questo argomento si applica a: ✓** .NET Core 2.1.x SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .NET Core 1. x SDK e versioni successive
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>nome
+## <a name="name"></a>Name
 
 `dotnet pack`: comprime il codice in un pacchetto NuGet.
 
 ## <a name="synopsis"></a>Riepilogo
 
 ```dotnetcli
-dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--interactive] 
-    [--no-build] [--no-dependencies] [--no-restore] [--nologo] [-o|--output] [--runtime] [-s|--serviceable] 
+dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--interactive]
+    [--no-build] [--no-dependencies] [--no-restore] [--nologo] [-o|--output] [--runtime] [-s|--serviceable]
     [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
 
 ## <a name="description"></a>Descrizione
 
-Il comando `dotnet pack` consente di compilare il progetto e creare pacchetti NuGet. Il risultato di questo comando è un pacchetto NuGet, ovvero un file con *estensione nupkg* . 
+Il comando `dotnet pack` consente di compilare il progetto e creare pacchetti NuGet. Il risultato di questo comando è un pacchetto NuGet, ovvero un file con *estensione nupkg* .
 
 Se si desidera generare un pacchetto che contiene i simboli di debug, sono disponibili due opzioni:
 
-- `--include-symbols`-Crea il pacchetto di simboli.
-- `--include-source`-Crea il pacchetto di simboli con una `src` cartella all'interno di che contiene i file di origine.
+- `--include-symbols`: crea il pacchetto di simboli.
+- `--include-source`: crea il pacchetto di simboli con una cartella `src` all'interno di che contiene i file di origine.
 
 Le dipendenze NuGet del progetto compresso vengono aggiunte al file con estensione *nuspec*, in modo da poter essere risolte durante l'installazione del pacchetto. I riferimenti da progetto a progetto non sono inseriti all'interno del progetto. Attualmente è necessario disporre di un pacchetto per ogni progetto se sono presenti dipendenze da progetto a progetto.
 
@@ -61,7 +61,7 @@ Per impostazione predefinita, non è possibile creare un pacchetto dei progetti 
 
   Progetto o soluzione da comprimere. Si tratta di un percorso di un [file csproj](csproj.md), di un file di soluzione o di una directory. Se non specificato, il comando Cerca nella directory corrente un file di progetto o di soluzione.
 
-## <a name="options"></a>Opzioni
+## <a name="options"></a>Options
 
 - **`-c|--configuration {Debug|Release}`**
 
@@ -77,7 +77,7 @@ Per impostazione predefinita, non è possibile creare un pacchetto dei progetti 
 
 - **`--include-source`**
 
-  Include i pacchetti NuGet dei simboli di debug oltre ai pacchetti NuGet normali nella directory di output. I file di origine sono inclusi nella `src` cartella all'interno del pacchetto di simboli.
+  Include i pacchetti NuGet dei simboli di debug oltre ai pacchetti NuGet normali nella directory di output. I file di origine sono inclusi nella cartella `src` all'interno del pacchetto di simboli.
 
 - **`--include-symbols`**
 

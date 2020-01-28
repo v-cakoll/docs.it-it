@@ -1,35 +1,35 @@
 ---
-title: Modalità di selezione di un controllo Button Windows Form
+title: Modalità di selezione di un controllo Button
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Button control [Windows Forms], selecting
 ms.assetid: fe2fc058-5118-4f70-b264-6147d64a7a8d
-ms.openlocfilehash: e511b0d7bcac725ed477678ab4c865f5337e658d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 145166d182f1ec51068ab3e0c23c12b471b69231
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584950"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740011"
 ---
 # <a name="ways-to-select-a-windows-forms-button-control"></a>Modalità di selezione di un controllo Button Windows Form
-È possibile selezionare un pulsante Windows Form nei modi seguenti:  
+È possibile selezionare un pulsante Windows Forms nei modi seguenti:  
   
-- Consente di fare clic sul pulsante del mouse.  
+- Utilizzare un mouse per fare clic sul pulsante.  
   
-- Richiamo del pulsante <xref:System.Windows.Forms.Control.Click> evento nel codice.  
+- Richiama l'evento <xref:System.Windows.Forms.Control.Click> del pulsante nel codice.  
   
-- Spostare lo stato attivo al pulsante premendo il tasto TAB e quindi scegliere il pulsante premendo la barra spaziatrice o INVIO.  
+- Spostare lo stato attivo sul pulsante premendo il tasto TAB, quindi scegliere il pulsante premendo la barra SPAZIAtrice o invio.  
   
-- Premere il tasto di scelta (ALT + lettera sottolineata) per il pulsante. Per altre informazioni sulle chiavi di accesso, vedere [come: Creare le chiavi di accesso per i controlli di Windows Form](how-to-create-access-keys-for-windows-forms-controls.md).  
+- Premere il tasto di accesso (ALT + la lettera sottolineata) per il pulsante. Per altre informazioni sulle chiavi di accesso, vedere [procedura: creare chiavi di accesso per controlli Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md).  
   
-- Se il pulsante è il pulsante "accept" del form, premendo INVIO sceglie il pulsante, anche se un altro controllo ha lo stato attivo, a meno che quest ' è un altro pulsante, una casella di testo su più righe o un controllo personalizzato che intercetta il tasto INVIO.  
+- Se il pulsante è il pulsante "Accetto" del modulo, premendo invio viene scelto il pulsante, anche se un altro controllo ha lo stato attivo, ad eccezione del fatto che un altro controllo è un altro pulsante, una casella di testo a più righe o un controllo personalizzato che intrappola il tasto INVIO.  
   
-- Se il pulsante è il pulsante "Annulla" del form, il tasto ESC sceglie il pulsante, anche se un altro controllo ha lo stato attivo.  
+- Se il pulsante è il pulsante "Annulla" del modulo, premendo ESC viene scelto il pulsante anche se un altro controllo ha lo stato attivo.  
   
-- Chiamare il <xref:System.Windows.Forms.Button.PerformClick%2A> metodo per selezionare il pulsante a livello di codice.  
+- Chiamare il metodo <xref:System.Windows.Forms.Button.PerformClick%2A> per selezionare il pulsante a livello di codice.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Panoramica sul controllo Button](button-control-overview-windows-forms.md)
-- [Procedura: Rispondere alle selezioni dei pulsanti di Windows Form](how-to-respond-to-windows-forms-button-clicks.md)
+- [Procedura: Rispondere alla selezione dei pulsanti di Windows Form](how-to-respond-to-windows-forms-button-clicks.md)
 - [Controllo Button](button-control-windows-forms.md)

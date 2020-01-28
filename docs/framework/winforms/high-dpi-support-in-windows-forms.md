@@ -1,5 +1,5 @@
 ---
-title: Supporto di valori DPI alti in Windows Forms
+title: Supporto di valori DPI alti
 ms.date: 05/16/2017
 helpviewer_keywords:
 - High DPI in Windows Forms
@@ -7,16 +7,16 @@ helpviewer_keywords:
 - Windows Forms layout
 - Windows Forms dynamic resizing
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
-ms.openlocfilehash: f9183b15da24f70b6fceaa90f718c5af93a3cdda
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a5c3125475c2de2cf83a3d97e356b26c0acdde99
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139073"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741892"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Supporto di valori DPI alti in Windows Forms
 
-A partire da .NET Framework 4,7, Windows Forms include miglioramenti per gli scenari con valori DPI più comuni e DPI dinamici. tra cui:
+A partire da .NET Framework 4,7, Windows Forms include miglioramenti per gli scenari con valori DPI più comuni e DPI dinamici. Sono inclusi:
 
 - Miglioramenti apportati alla scalabilità e al layout di un numero di controlli di Windows Forms, ad esempio il controllo <xref:System.Windows.Forms.MonthCalendar> e il controllo <xref:System.Windows.Forms.CheckedListBox>.
 
@@ -60,7 +60,7 @@ Inoltre, per configurare il supporto di valori DPI alti nella Windows Forms Appl
 
 - Chiamare il metodo statico <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>.
 
-  Questa deve essere la prima chiamata al metodo nel punto di ingresso dell'applicazione. Esempio:
+  Questa deve essere la prima chiamata al metodo nel punto di ingresso dell'applicazione. Ad esempio:
 
   ```csharp
   static void Main()
@@ -94,7 +94,7 @@ A partire da .NET Framework 4,7, tre nuovi eventi consentono di gestire a livell
 
 ## <a name="new-helper-methods-and-properties"></a>Nuovi metodi e proprietà Helper
 
-Il .NET Framework 4,7 aggiunge anche una serie di nuove proprietà e metodi helper che forniscono informazioni sul ridimensionamento DPI e consentono di eseguire la scalabilità DPI. tra cui:
+Il .NET Framework 4,7 aggiunge anche una serie di nuove proprietà e metodi helper che forniscono informazioni sul ridimensionamento DPI e consentono di eseguire la scalabilità DPI. Sono inclusi:
 
 - <xref:System.Windows.Forms.Control.LogicalToDeviceUnits%2A>, che converte un valore da Logical a Device pixel.
 
