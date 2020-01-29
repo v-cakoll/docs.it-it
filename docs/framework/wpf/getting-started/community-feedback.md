@@ -1,5 +1,5 @@
 ---
-title: Commenti sulla community WPF
+title: Risorse della community
 ms.date: 03/01/2018
 helpviewer_keywords:
 - community resources [WPF]
@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 468b060a-d54b-4900-a74a-9faccb554045
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3ebeae3e51cedd3add2de4062c8914693ac94f7b
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: a9e903045195d6f464659876334f7fedc5c695e9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197003"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733803"
 ---
 # <a name="wpf-community-feedback"></a>Commenti sulla community WPF
 
@@ -22,7 +22,7 @@ Microsoft espone un'ampia gamma di risorse della community per conoscere, discut
 > [!NOTE]
 > Non usare la sezione feedback disponibile nella parte inferiore di ogni pagina per inviare commenti e suggerimenti sul prodotto. Questi collegamenti sono dedicati esclusivamente ai commenti e ai suggerimenti sulla documentazione.
 
-## <a name="forums"></a>Forum
+## <a name="forums"></a>Forums
 
 Il [forum WPF](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=wpf) è la risorsa principale della community per la discussione e la risoluzione dei problemi. I forum facilitano la discussione e risoluzione dei problemi, offrendo una serie completa di funzionalità di supporto che includono:
 

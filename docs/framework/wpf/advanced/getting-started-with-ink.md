@@ -1,5 +1,5 @@
 ---
-title: Creare un InkCanvas in un'app WPF in Visual Studio
+title: Creare InkCanvas in Visual Studio
 ms.date: 08/15/2018
 dev_langs:
 - csharp
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: ebbf25037921e7802b2bfcb6ffa562d16a849ffa
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: b8087d6db04f7024b9ee48f28002bee04045a14b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920243"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737884"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>Introduzione a input penna in WPF
 
 Windows Presentation Foundation (WPF) dispone di una funzionalità di input penna che semplifica l'incorporamento dell'input penna digitale nell'app.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per usare gli esempi seguenti, installare innanzitutto [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019). Consente inoltre di comprendere come scrivere app WPF di base. Per informazioni introduttive su WPF, vedere [procedura dettagliata: applicazione desktop WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
-## <a name="quick-start"></a>Avvio rapido
+## <a name="quick-start"></a>Guida introduttiva a
 
 Questa sezione consente di scrivere una semplice applicazione WPF che raccoglie input penna.
 
@@ -32,7 +32,7 @@ Questa sezione consente di scrivere una semplice applicazione WPF che raccoglie 
 
 Per creare un'applicazione WPF che supporti l'input penna:
 
-1. Aprire Visual Studio.
+1. Apri Visual Studio.
 
 2. Creare una nuova **app WPF**.
 

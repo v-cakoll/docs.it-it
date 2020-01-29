@@ -3,16 +3,16 @@ title: Comando dotnet nuget push
 description: Il comando dotnet nuget push effettua il push di un pacchetto nel server e lo pubblica.
 author: karann-msft
 ms.date: 12/04/2019
-ms.openlocfilehash: 5e80295a570adc30a06d86b6735cb0387e39d5a3
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
-ms.translationtype: MT
+ms.openlocfilehash: a483c559dee8b4a82cc2c792f5c2c5e4a8ff3f87
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74835519"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733102"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
-**Questo argomento si applica a: ✓** .NET Core 2.1.x SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .NET Core 1. x SDK e versioni successive
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
@@ -77,7 +77,7 @@ Il comando `dotnet nuget push` effettua il push di un pacchetto nel server e lo 
 * **`--skip-duplicate`**
 
   Quando si esegue il push di più pacchetti in un server HTTP (S), tratta qualsiasi risposta di conflitto 409 come un avviso, in modo che il push possa continuare. Disponibile a partire da .NET Core 3,1 SDK.
-                                 
+
 * **`-sk|--symbol-api-key <API_KEY>`**
 
   Chiave API per il server di simboli.
@@ -127,11 +127,11 @@ Il comando `dotnet nuget push` effettua il push di un pacchetto nel server e lo 
   ```dotnetcli
   dotnet nuget push *.nupkg
   ```
-  
+
   > [!NOTE]
   > Il mancato funzionamento di questo comando può dipendere da un bug che era presente nelle versioni precedenti del SDK (.NET Core 2.1 SDK e versioni precedenti).
   > Per risolvere questo problema, aggiornare la versione del SDK oppure eseguire il comando seguente: `dotnet nuget push **/*.nupkg`
-  
+
 * Inserisce tutti i file *nupkg* anche se una risposta di conflitto 409 viene restituita da un server http (S):
 
   ```dotnetcli

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Rimuovere elementi dai controlli DomainUpDown di Windows Forms'
+title: Rimuovere elementi da controlli DomainUpDown
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - DomainUpDown control [Windows Forms], removing items from
 - spin button control [Windows Forms], removing items
 ms.assetid: e70f5cbc-b497-41a9-975a-344c00e56ed2
-ms.openlocfilehash: f56bc2b7b7b8a783ac298b220c83281f38da29da
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e52af5c5add4fda93e2b51c8afdb90c92e8d2f62
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662346"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735773"
 ---
-# <a name="how-to-remove-items-from-windows-forms-domainupdown-controls"></a>Procedura: Rimuovere elementi dai controlli DomainUpDown di Windows Forms
-È possibile rimuovere elementi dall'interno di Windows Form <xref:System.Windows.Forms.DomainUpDown> controllo chiamando la <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> o <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> metodo il <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> classe. Il <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> metodo rimuove un elemento specifico, mentre il <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> metodo rimuove un elemento in base alla posizione.  
+# <a name="how-to-remove-items-from-windows-forms-domainupdown-controls"></a>Procedura: rimuovere elementi dai controlli DomainUpDown Windows Form
+È possibile rimuovere elementi dal controllo Windows Forms <xref:System.Windows.Forms.DomainUpDown> chiamando il metodo <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> o <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> della classe <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection>. Il metodo <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> rimuove un elemento specifico, mentre il metodo <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> rimuove un elemento in base alla relativa posizione.  
   
 ### <a name="to-remove-an-item"></a>Per rimuovere un elemento  
   
-- Usare la <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> metodo del <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> classe per rimuovere un elemento in base al nome.  
+- Usare il metodo <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> della classe <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> per rimuovere un elemento in base al nome.  
   
     ```vb  
     DomainUpDown1.Items.Remove("noodles")  
@@ -35,9 +35,9 @@ ms.locfileid: "64662346"
     domainUpDown1->Items->Remove("noodles");  
     ```  
   
-     -oppure-  
+     oppure  
   
-- Usare il <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> metodo per rimuovere un elemento in base alla posizione.  
+- Usare il metodo <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> per rimuovere un elemento in base alla relativa posizione.  
   
     ```vb  
     ' Removes the first item in the list.  

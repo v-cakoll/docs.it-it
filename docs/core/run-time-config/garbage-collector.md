@@ -3,12 +3,12 @@ title: Impostazioni di configurazione del Garbage Collector
 description: Informazioni sulle impostazioni di run-time per la configurazione del modo in cui il Garbage Collector gestisce la memoria per le app .NET Core.
 ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: 24e5c47de781e7eed5f76d2c551cac2dce1e8f05
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 044083d69601f5092724a46d358b2ee5673d428d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900104"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733527"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Opzioni di configurazione in fase di esecuzione per Garbage Collection
 
@@ -38,10 +38,13 @@ Usare le impostazioni seguenti per selezionare le versioni di Garbage Collection
 | | Nome impostazione | Valori | Versione introdotta |
 | - | - | - | - |
 | **runtimeconfig. JSON** | `System.GC.Server` | workstation `false`<br/>Server `true` | .NET Core 1.0 |
+| **MSBuild (proprietà)** | `ServerGarbageCollection` | workstation `false`<br/>Server `true` | .NET Core 1.0 |
 | **Variabile di ambiente** | `COMPlus_gcServer` | workstation `0`<br/>Server `1` | .NET Core 1.0 |
 | **app. config per .NET Framework** | [GCServer](../../framework/configure-apps/file-schema/runtime/gcserver-element.md) | workstation `false`<br/>Server `true` |  |
 
-Esempio:
+### <a name="examples"></a>Esempi
+
+file *runtimeconfig. JSON* :
 
 ```json
 {
@@ -53,6 +56,18 @@ Esempio:
 }
 ```
 
+File di progetto:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ServerGarbageCollection>true</ServerGarbageCollection>
+  </PropertyGroup>
+
+</Project>
+```
+
 ### <a name="systemgcconcurrentcomplus_gcconcurrent"></a>System. GC. Concurrent/COMPlus_gcConcurrent
 
 - Configura se la Garbage Collection di sfondo (simultanea) è abilitata.
@@ -62,10 +77,13 @@ Esempio:
 | | Nome impostazione | Valori | Versione introdotta |
 | - | - | - | - |
 | **runtimeconfig. JSON** | `System.GC.Concurrent` | GC in background `true`<br/>GC `false` non simultaneo | .NET Core 1.0 |
+| **MSBuild (proprietà)** | `ConcurrentGarbageCollection` | GC in background `true`<br/>GC `false` non simultaneo | .NET Core 1.0 |
 | **Variabile di ambiente** | `COMPlus_gcConcurrent` | GC in background `true`<br/>GC `false` non simultaneo | .NET Core 1.0 |
 | **app. config per .NET Framework** | [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) | GC in background `true`<br/>GC `false` non simultaneo |  |
 
-Esempio:
+### <a name="examples"></a>Esempi
+
+file *runtimeconfig. JSON* :
 
 ```json
 {
@@ -75,6 +93,18 @@ Esempio:
       }
    }
 }
+```
+
+File di progetto:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
+  </PropertyGroup>
+
+</Project>
 ```
 
 ## <a name="manage-resource-usage"></a>Gestire l'utilizzo delle risorse
@@ -261,10 +291,13 @@ Esempio:
 
 | | Nome impostazione | Valori | Versione introdotta |
 | - | - | - | - |
-| **runtimeconfig. JSON** | `System.GC.RetainVM` | `false`-rilascia al sistema operativo<br/>`true`-put in standby| .NET Core 1.0 |
+| **runtimeconfig. JSON** | `System.GC.RetainVM` | `false`-rilascia al sistema operativo<br/>`true`-put in standby | .NET Core 1.0 |
+| **MSBuild (proprietà)** | `RetainVMGarbageCollection` | `false`-rilascia al sistema operativo<br/>`true`-put in standby | .NET Core 1.0 |
 | **Variabile di ambiente** | `COMPlus_GCRetainVM` | `0`-rilascia al sistema operativo<br/>`1`-put in standby | .NET Core 1.0 |
 
-Esempio:
+### <a name="examples"></a>Esempi
+
+file *runtimeconfig. JSON* :
 
 ```json
 {
@@ -274,6 +307,18 @@ Esempio:
       }
    }
 }
+```
+
+File di progetto:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RetainVMGarbageCollection>true</RetainVMGarbageCollection>
+  </PropertyGroup>
+
+</Project>
 ```
 
 ## <a name="large-pages"></a>Pagine di grandi dimensioni

@@ -3,12 +3,12 @@ title: Impostazioni di configurazione Threading
 description: Informazioni sulle impostazioni della fase di esecuzione che configurano il threading per le app .NET Core.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 6a920dbc301830e3f4c95bf637ff3de6d4f464ff
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
-ms.translationtype: MT
+ms.openlocfilehash: ed7688d4d8f7178440fe59afc6e2f5e0a11b2a5c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802764"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733427"
 ---
 # <a name="run-time-configuration-options-for-threading"></a>Opzioni di configurazione in fase di esecuzione per il threading
 
@@ -30,7 +30,34 @@ ms.locfileid: "74802764"
 | | Nome impostazione | Valori |
 | - | - | - |
 | **runtimeconfig. JSON** | `System.Threading.ThreadPool.MinThreads` | Intero che rappresenta il numero minimo di thread |
+| **MSBuild (proprietà)** | `ThreadPoolMinThreads` | Intero che rappresenta il numero minimo di thread |
 | **Variabile di ambiente** | N/D | N/D |
+
+### <a name="examples"></a>Esempi
+
+file *runtimeconfig. JSON* :
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.Threading.ThreadPool.MinThreads": 4
+      }
+   }
+}
+```
+
+File di progetto:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ThreadPoolMinThreads>4</ThreadPoolMinThreads>
+  </PropertyGroup>
+
+</Project>
+```
 
 ## <a name="maximum-threads"></a>Numero massimo di thread
 
@@ -40,4 +67,31 @@ ms.locfileid: "74802764"
 | | Nome impostazione | Valori |
 | - | - | - |
 | **runtimeconfig. JSON** | `System.Threading.ThreadPool.MaxThreads` | Intero che rappresenta il numero massimo di thread |
+| **MSBuild (proprietà)** | `ThreadPoolMaxThreads` | Intero che rappresenta il numero massimo di thread |
 | **Variabile di ambiente** | N/D | N/D |
+
+### <a name="examples"></a>Esempi
+
+file *runtimeconfig. JSON* :
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.Threading.ThreadPool.MaxThreads": 20
+      }
+   }
+}
+```
+
+File di progetto:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ThreadPoolMaxThreads>20</ThreadPoolMaxThreads>
+  </PropertyGroup>
+
+</Project>
+```

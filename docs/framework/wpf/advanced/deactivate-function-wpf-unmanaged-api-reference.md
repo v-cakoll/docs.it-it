@@ -1,5 +1,6 @@
 ---
-title: Funzione Deactivate (riferimenti alle API WPF non gestite)
+title: 'Funzione Deactivate: informazioni di riferimento sulle API WPF non gestite'
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -8,17 +9,17 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 3e81be16-24c7-4399-b242-6268feaa49d7
-ms.openlocfilehash: ec1811998a60cda21c54a8e94e566ff4d06aa863
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bc1f347526f161fe2d0b7d7c8e08a1c1829ec08e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61928765"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737979"
 ---
-# <a name="deactivate-function-wpf-unmanaged-api-reference"></a>Funzione Deactivate (riferimenti alle API WPF non gestite)
-Questa API supporta l'infrastruttura Windows Presentation Foundation (WPF) e non deve essere usato direttamente dal codice.  
+# <a name="deactivate-function-wpf-unmanaged-api-reference"></a>Funzione Deactivate (riferimenti alle API non gestite WPF)
+Questa API supporta l'infrastruttura Windows Presentation Foundation (WPF) e non può essere usata direttamente dal codice.  
   
- Utilizzata dall'infrastruttura Windows Presentation Foundation (WPF) per la gestione di windows.  
+ Utilizzato dall'infrastruttura Windows Presentation Foundation (WPF) per la gestione di Windows.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -26,16 +27,16 @@ Questa API supporta l'infrastruttura Windows Presentation Foundation (WPF) e non
 void Deactivate()  
 ```  
   
-## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Visualizzare [requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti di  
+ **Piattaforme:** Vedere [.NET Framework requisiti di sistema](../../get-started/system-requirements.md).  
   
- **DLL:**  
+ **DLL**  
   
- In .NET Framework 3.0 e 3.5: PresentationHostDLL.dll  
+ Nel .NET Framework 3,0 e 3,5: PresentationHostDLL. dll  
   
- In .NET Framework 4 e versioni successive: PresentationHost_v0400.dll  
+ In .NET Framework 4 e versioni successive: PresentationHost_v0400. dll  
   
- **Versione di .NET framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
+ **Versione .NET Framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

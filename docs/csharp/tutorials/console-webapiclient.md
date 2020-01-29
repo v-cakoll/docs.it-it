@@ -3,12 +3,12 @@ title: Creare un client REST usando .NET Core
 description: Questa esercitazione illustra alcune funzionalità disponibili in .NET Core e nel linguaggio C#.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 85a3c8e17e14db86786950380ba745ae286dccca
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
-ms.translationtype: MT
+ms.openlocfilehash: 09eda08f82490070c66d0b290359872c1043b0c2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115866"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737583"
 ---
 # <a name="rest-client"></a>Client REST
 
@@ -71,7 +71,7 @@ private static async Task ProcessRepositories()
 }
 ```
 
-Aggiungere quindi un'istruzione `using` all'inizio del metodo `Main`, in modo che il compilatore C# riconosca il tipo <xref:System.Threading.Tasks.Task>:
+È necessario aggiungere una direttiva `using` all'inizio del metodo di `Main` in modo che il C# compilatore riconosca il tipo di <xref:System.Threading.Tasks.Task>:
 
 ```csharp
 using System.Threading.Tasks;
@@ -81,10 +81,10 @@ Se si compila il progetto in questo momento, viene generato un avviso per indica
 
 Rinominare quindi lo spazio dei nomi definito nell'istruzione `namespace` sostituendo `ConsoleApp` (nome predefinito) con `WebAPIClient`. In questo spazio dei nomi si definirà in seguito una classe `repo`.
 
-Aggiornare quindi il metodo `Main` per chiamare questo metodo. Il metodo `ProcessRepositories` restituisce un'attività ed è necessario non uscire dal programma prima che questa sia completata. È pertanto necessario modificare la firma del `Main`. Aggiungere il modificatore `async` e modificare il tipo restituito in `Task`. Quindi, nel corpo del metodo, aggiungere una chiamata a `ProcessRepositories`. Aggiungere la parola chiave `await` quando alla chiamata al metodo:
+Aggiornare quindi il metodo `Main` per chiamare questo metodo. Il metodo `ProcessRepositories` restituisce un'attività e non è necessario uscire dal programma prima del completamento dell'attività. È pertanto necessario modificare la firma del `Main`. Aggiungere il modificatore `async` e modificare il tipo restituito in `Task`. Quindi, nel corpo del metodo, aggiungere una chiamata a `ProcessRepositories`. Aggiungere la parola chiave `await` alla chiamata al metodo:
 
 ```csharp
-static Task Main(string[] args)
+static async Task Main(string[] args)
 {
     await ProcessRepositories();
 }
@@ -92,7 +92,7 @@ static Task Main(string[] args)
 
 Si dispone a questo punto di un programma che, pur non eseguendo alcuna operazione, opera in modo asincrono. È ora possibile migliorarlo.
 
-È necessario innanzitutto un oggetto in grado di recuperare i dati dal Web; a tale scopo è possibile usare <xref:System.Net.Http.HttpClient>. per gestire la richiesta e le risposte. Creare un'istanza di una singola istanza del tipo nella classe `Program` all'interno del file Program.cs.
+È necessario innanzitutto un oggetto in grado di recuperare i dati dal Web; a tale scopo è possibile usare <xref:System.Net.Http.HttpClient>. per gestire la richiesta e le risposte. Creare un'istanza di una singola istanza di quel tipo nella classe `Program` all'interno del file *Program.cs* .
 
 ```csharp
 namespace WebAPIClient
@@ -101,7 +101,7 @@ namespace WebAPIClient
     {
         private static readonly HttpClient client = new HttpClient();
 
-        static Task Main(string[] args)
+        static async Task Main(string[] args)
         {
             //...
         }
@@ -126,7 +126,7 @@ private static async Task ProcessRepositories()
 }
 ```
 
-Sarà inoltre necessario aggiungere due nuove istruzioni using all'inizio del file per consentirne la compilazione:
+Per la compilazione, è necessario aggiungere anche due nuove direttive `using` all'inizio del file:
 
 ```csharp
 using System.Net.Http;
@@ -206,6 +206,12 @@ Prima di aggiungere altre funzionalità, è possibile indirizzare la proprietà 
 public string Name { get; set; }
 ```
 
+Per usare `[JsonPropertyName]` attributo, è necessario aggiungere lo spazio dei nomi <xref:System.Text.Json.Serialization> alle direttive di `using`:
+
+```csharp
+using System.Text.Json.Serialization;
+```
+
 Con questa operazione si modifica il codice che scrive il nome di ogni repository in program.cs:
 
 ```csharp
@@ -233,7 +239,7 @@ Il compilatore genera l'oggetto `Task<T>` come elemento restituito perché il me
 Si modificherà ora il metodo `Main` in modo che acquisisca i risultati e scriva ogni nome di repository nella console. Il metodo `Main` avrà ora un aspetto simile al seguente:
 
 ```csharp
-public static Task Main(string[] args)
+public static async Task Main(string[] args)
 {
     var repositories = await ProcessRepositories();
 
@@ -296,7 +302,7 @@ public DateTime LastPush =>
 
 Verranno ora esaminati i nuovi costrutti appena definiti. La proprietà `LastPush` viene definita utilizzando un *membro con corpo di espressione* per la funzione di accesso `get`. Non è presente alcuna funzione di accesso `set`. L'omissione della funzione di accesso `set` è la modalità di definizione di una proprietà C#di *sola lettura* in. (Sì, è possibile creare proprietà di *sola scrittura* in C#, ma il relativo valore è limitato). Il metodo <xref:System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider)> analizza una stringa e crea un oggetto <xref:System.DateTime> usando un formato di data specificato e aggiunge metadati aggiuntivi al `DateTime` usando un oggetto `CultureInfo`. Se l'operazione di analisi ha esito negativo, la funzione di accesso della proprietà genera un'eccezione.
 
-Per usare <xref:System.Globalization.CultureInfo.InvariantCulture> sarà necessario aggiungere lo spazio dei nomi <xref:System.Globalization> alle istruzioni `using` in `repo.cs`:
+Per usare <xref:System.Globalization.CultureInfo.InvariantCulture>, è necessario aggiungere lo spazio dei nomi <xref:System.Globalization> alle direttive di `using` in `repo.cs`:
 
 ```csharp
 using System.Globalization;

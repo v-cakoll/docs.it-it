@@ -3,16 +3,16 @@ title: Comando dotnet nuget locals
 description: Il comando dotnet nuget locals cancella o elenca le risorse NuGet locali, quali cache delle richieste HTTP, cache temporanea o cartella globale dei pacchetti a livello di computer.
 author: karann-msft
 ms.date: 06/26/2019
-ms.openlocfilehash: cb5747636aa9d04f1ef6a6ff9309ba29c0630dd6
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: b57c127650555e412af08df6656fb62d75c8ed7c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74087401"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734074"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
-**Questo argomento si applica a: ✓** .NET Core 2.1.x SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .NET Core 1. x SDK e versioni successive
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
@@ -33,7 +33,7 @@ dotnet nuget locals [-h|--help]
 
 Il comando `dotnet nuget locals` cancella o elenca risorse NuGet locali presenti nella cache delle richieste HTTP, nella cache temporanea o nella cartella globale dei pacchetti a livello di computer.
 
-## <a name="arguments"></a>argomenti
+## <a name="arguments"></a>Argomenti
 
 * **`CACHE_LOCATION`**
 
@@ -44,7 +44,7 @@ Il comando `dotnet nuget locals` cancella o elenca risorse NuGet locali presenti
   * `global-packages` - Indica che l'operazione specificata viene applicata soltanto alla cache dei pacchetti globale. Gli altri percorsi della cache non sono interessati.
   * `temp` - Indica che l'operazione specificata viene applicata soltanto alla cache temporanea. Gli altri percorsi della cache non sono interessati.
 
-## <a name="options"></a>Opzioni
+## <a name="options"></a>Options
 
 * **`--force-english-output`**
 
@@ -94,6 +94,6 @@ Il comando `dotnet nuget locals` cancella o elenca risorse NuGet locali presenti
   dotnet nuget locals temp -c
   ```
 
-## <a name="troubleshooting"></a>Troubleshooting
+## <a name="troubleshooting"></a>Risoluzione dei problemi
 
 Per informazioni su problemi ed errori comuni relativi all'uso del comando `dotnet nuget locals`, vedere [Managing the NuGet cache](/nuget/consume-packages/managing-the-nuget-cache) (Gestione della cache NuGet).

@@ -1,16 +1,16 @@
 ---
-title: Controlli da usare in Windows Form
+title: Controlli da usare
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: bedfaef9a3d0cc81641006d254926f7bf9861c10
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2bcefd2ee2c9533d9f0afa2d12cd2e7437fc3d37
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69930198"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737450"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Controlli da usare in Windows Form
 Il seguente è un elenco alfabetico di controlli e componenti che possono essere usati in Windows Form. Oltre ai controlli Windows Form illustrati in questa sezione, è possibile aggiungere controlli ActiveX e personalizzati a Windows Form. Se il controllo necessario non è elencato qui, è possibile crearlo. Per informazioni dettagliate, vedere [Sviluppo di controlli Windows Form in fase di progettazione](developing-windows-forms-controls-at-design-time.md). Per altre informazioni sulla scelta del controllo necessario, vedere [Controlli Windows Form per funzione](windows-forms-controls-by-function.md).  
@@ -25,7 +25,7 @@ Il seguente è un elenco alfabetico di controlli e componenti che possono essere
  [Controlli con supporto predefinito per il disegno da parte del proprietario](controls-with-built-in-owner-drawing-support.md)  
  Descrive come modificare gli elementi dell'aspetto di un controllo non disponibili nelle proprietà.  
   
- [Componente BackgroundWorker](backgroundworker-component.md)  
+ [BackgroundWorker (componente)](backgroundworker-component.md)  
  Consente a un form o a un controllo di eseguire un'operazione in modo asincrono.  
   
  [Controllo BindingNavigator](bindingnavigator-control-windows-forms.md)  
@@ -50,10 +50,10 @@ Il seguente è un elenco alfabetico di controlli e componenti che possono essere
  Visualizza i dati in una casella combinata a discesa.  
   
  [Componente ContextMenu](contextmenu-component-windows-forms.md)  
- Fornisce agli utenti un menu facilmente accessibile di comandi di uso frequente associati all'oggetto selezionato. Sebbene <xref:System.Windows.Forms.ContextMenuStrip> sostituisce e aggiunge funzionalità al controllo <xref:System.Windows.Forms.ContextMenu> delle versioni precedenti, viene <xref:System.Windows.Forms.ContextMenu> mantenuto sia per la compatibilità con le versioni precedenti che per un uso futuro, se necessario.  
+ Fornisce agli utenti un menu facilmente accessibile di comandi di uso frequente associati all'oggetto selezionato. Anche se <xref:System.Windows.Forms.ContextMenuStrip> sostituisce e aggiunge funzionalità al controllo <xref:System.Windows.Forms.ContextMenu> delle versioni precedenti, <xref:System.Windows.Forms.ContextMenu> viene mantenuta sia per la compatibilità con le versioni precedenti che per un uso futuro, se necessario.  
   
  [Controllo ContextMenuStrip](contextmenustrip-control.md)  
- Viene visualizzato un menu di scelta rapida. Sebbene <xref:System.Windows.Forms.ContextMenuStrip> sostituisce e aggiunge funzionalità al controllo <xref:System.Windows.Forms.ContextMenu> delle versioni precedenti, viene <xref:System.Windows.Forms.ContextMenu> mantenuto sia per la compatibilità con le versioni precedenti che per un uso futuro, se necessario.  
+ Viene visualizzato un menu di scelta rapida. Anche se <xref:System.Windows.Forms.ContextMenuStrip> sostituisce e aggiunge funzionalità al controllo <xref:System.Windows.Forms.ContextMenu> delle versioni precedenti, <xref:System.Windows.Forms.ContextMenu> viene mantenuta sia per la compatibilità con le versioni precedenti che per un uso futuro, se necessario.  
   
  [Controllo DataGrid](datagrid-control-windows-forms.md)  
  Visualizza i dati tabulari da un set di dati e consente gli aggiornamenti all'origine dati.  
@@ -109,13 +109,13 @@ Il seguente è un elenco alfabetico di controlli e componenti che possono essere
  Visualizza un elenco di elementi con icone, come in Esplora risorse.  
   
  [Componente MainMenu](mainmenu-component-windows-forms.md)  
- Visualizza un menu in fase di esecuzione. Sebbene <xref:System.Windows.Forms.MenuStrip> sostituisce e aggiunge funzionalità al controllo <xref:System.Windows.Forms.MainMenu> delle versioni precedenti, viene <xref:System.Windows.Forms.MainMenu> mantenuto sia per la compatibilità con le versioni precedenti che per un uso futuro, se lo si sceglie.  
+ Visualizza un menu in fase di esecuzione. Anche se <xref:System.Windows.Forms.MenuStrip> sostituisce e aggiunge funzionalità al controllo <xref:System.Windows.Forms.MainMenu> delle versioni precedenti, <xref:System.Windows.Forms.MainMenu> viene mantenuta sia per la compatibilità con le versioni precedenti che per un uso futuro, se lo si sceglie.  
   
  [Controllo MaskedTextBox](maskedtextbox-control-windows-forms.md)  
  Vincola il formato dell'input utente in un form.  
   
  [Controllo MenuStrip](menustrip-control-windows-forms.md)  
- Viene fornito un sistema di menu per un form. Sebbene <xref:System.Windows.Forms.MenuStrip> sostituisce e aggiunge funzionalità al controllo <xref:System.Windows.Forms.MainMenu> delle versioni precedenti, viene <xref:System.Windows.Forms.MainMenu> mantenuto sia per la compatibilità con le versioni precedenti che per un uso futuro, se lo si sceglie.  
+ Viene fornito un sistema di menu per un form. Anche se <xref:System.Windows.Forms.MenuStrip> sostituisce e aggiunge funzionalità al controllo <xref:System.Windows.Forms.MainMenu> delle versioni precedenti, <xref:System.Windows.Forms.MainMenu> viene mantenuta sia per la compatibilità con le versioni precedenti che per un uso futuro, se lo si sceglie.  
   
  [Controllo MonthCalendar](monthcalendar-control-windows-forms.md)  
  Presenta un'interfaccia grafica intuitiva che consente agli utenti di visualizzare e impostare le informazioni sulle date.  
@@ -129,7 +129,7 @@ Il seguente è un elenco alfabetico di controlli e componenti che possono essere
  [Componente OpenFileDialog](openfiledialog-component-windows-forms.md)  
  Consente agli utenti di aprire i file usando una finestra di dialogo preconfigurata.  
   
- [Componente PageSetupDialog](pagesetupdialog-component-windows-forms.md)  
+ [PageSetupDialog Component](pagesetupdialog-component-windows-forms.md)  
  Imposta i dettagli della pagina per la stampa in una finestra di dialogo preconfigurata.  
   
  [Controllo Panel](panel-control-windows-forms.md)  
@@ -141,7 +141,7 @@ Il seguente è un elenco alfabetico di controlli e componenti che possono essere
  [Componente PrintDialog](printdialog-component-windows-forms.md)  
  Seleziona una stampante e le pagine da stampare e determina altre impostazioni relative alla stampa.  
   
- [Componente PrintDocument](printdocument-component-windows-forms.md)  
+ [PrintDocument (componente)](printdocument-component-windows-forms.md)  
  Imposta le proprietà che descrivono che cosa stampare e stampa il documento nelle applicazioni basate su Windows.  
   
  [Controllo PrintPreviewControl](printpreviewcontrol-control-windows-forms.md)  
@@ -189,19 +189,19 @@ Il seguente è un elenco alfabetico di controlli e componenti che possono essere
  Genera un evento a intervalli regolari.  
   
  [Controllo ToolBar](toolbar-control-windows-forms.md)  
- Visualizza menu e pulsanti bitmap che attivano comandi. È possibile estendere la funzionalità del controllo e modificarne l'aspetto e il comportamento. Sebbene <xref:System.Windows.Forms.ToolStrip> sostituisce e aggiunge funzionalità al controllo <xref:System.Windows.Forms.ToolBar> delle versioni precedenti, viene <xref:System.Windows.Forms.ToolBar> mantenuto sia per la compatibilità con le versioni precedenti che per un uso futuro, se lo si sceglie.  
+ Visualizza menu e pulsanti bitmap che attivano comandi. È possibile estendere la funzionalità del controllo e modificarne l'aspetto e il comportamento. Anche se <xref:System.Windows.Forms.ToolStrip> sostituisce e aggiunge funzionalità al controllo <xref:System.Windows.Forms.ToolBar> delle versioni precedenti, <xref:System.Windows.Forms.ToolBar> viene mantenuta sia per la compatibilità con le versioni precedenti che per un uso futuro, se lo si sceglie.  
   
  [Controllo ToolStrip](toolstrip-control-windows-forms.md)  
- Crea barre degli strumenti e menu personalizzati in applicazioni Windows Form. Sebbene <xref:System.Windows.Forms.ToolStrip> sostituisce e aggiunge funzionalità al controllo <xref:System.Windows.Forms.ToolBar> delle versioni precedenti, viene <xref:System.Windows.Forms.ToolBar> mantenuto sia per la compatibilità con le versioni precedenti che per un uso futuro, se lo si sceglie.  
+ Crea barre degli strumenti e menu personalizzati in applicazioni Windows Form. Anche se <xref:System.Windows.Forms.ToolStrip> sostituisce e aggiunge funzionalità al controllo <xref:System.Windows.Forms.ToolBar> delle versioni precedenti, <xref:System.Windows.Forms.ToolBar> viene mantenuta sia per la compatibilità con le versioni precedenti che per un uso futuro, se lo si sceglie.  
   
  [Controllo ToolStripContainer](toolstripcontainer-control.md)  
- Fornisce pannelli su ogni lato di un form per l'ancoraggio, il raggruppamento e la disposizione <xref:System.Windows.Forms.ToolStrip> dei controlli e un oggetto centrale <xref:System.Windows.Forms.ToolStripContentPanel> per i controlli tradizionali.  
+ Fornisce pannelli su ogni lato di un form per l'ancoraggio, il raggruppamento e la disposizione dei controlli <xref:System.Windows.Forms.ToolStrip> e una <xref:System.Windows.Forms.ToolStripContentPanel> centrale per i controlli tradizionali.  
   
  [Controllo ToolStripPanel](toolstrippanel-control.md)  
- Fornisce un pannello per l'ancoraggio, il raggruppamento e la disposizione <xref:System.Windows.Forms.ToolStrip> dei controlli.  
+ Fornisce un pannello per l'ancoraggio, il raggruppamento e la disposizione dei controlli <xref:System.Windows.Forms.ToolStrip>.  
   
  [Cenni preliminari sul controllo ToolStripProgressBar](toolstripprogressbar-control-overview.md)  
- Indica graficamente lo stato di un'azione rispetto al completamento. L' <xref:System.Windows.Forms.ToolStripProgressBar> oggetto è in genere contenuto <xref:System.Windows.Forms.StatusStrip>in un oggetto.  
+ Indica graficamente lo stato di un'azione rispetto al completamento. Il <xref:System.Windows.Forms.ToolStripProgressBar> è in genere contenuto in un <xref:System.Windows.Forms.StatusStrip>.  
   
  [Controllo ToolStripStatusLabel](toolstripstatuslabel-control.md)  
  Rappresenta un pannello in un controllo <xref:System.Windows.Forms.StatusStrip>.  
@@ -231,5 +231,5 @@ Il seguente è un elenco alfabetico di controlli e componenti che possono essere
  [Confronto tra controlli e oggetti programmabili in diversi linguaggi e librerie](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))  
  Fornisce una tabella che esegue il mapping dei controlli in Visual Basic 6,0 al controllo corrispondente in Visual Basic .NET. Si noti che i controlli sono ora classi nella .NET Framework.  
   
- [Procedura: Aggiunta di controlli ActiveX a Windows Forms](how-to-add-activex-controls-to-windows-forms.md)  
+ [Procedura: Aggiungere i controlli ActiveX a Windows Form](how-to-add-activex-controls-to-windows-forms.md)  
  Descrive come usare i controlli ActiveX in Windows Form.

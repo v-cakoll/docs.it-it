@@ -3,18 +3,18 @@ title: panoramica di global.json
 description: Informazioni su come usare il file global.json per impostare la versione di .NET Core SDK durante l'esecuzione dei comandi dell'interfaccia della riga di comando di .NET Core.
 ms.date: 01/14/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: fedfe168e2c1a0555c2d4499ba02d270033e0d1a
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: f02c9129a707ddddb2c5e1975b75cc35abc5cd55
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115800"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733970"
 ---
 # <a name="globaljson-overview"></a>panoramica di global.json
 
-**Questo articolo si applica a: ✓** .net core 2,0 SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .net core 2,0 SDK e versioni successive
 
-Il file *global.json* consente di definire la versione di .NET Core SDK usata quando si eseguono comandi dell'interfaccia della riga di comando di .NET Core. La selezione di .NET Core SDK è indipendente dalla specifica del runtime delle destinazioni del progetto. La versione di .NET Core SDK indica quali versioni degli strumenti dell'interfaccia della riga di comando di .NET Core vengono usate. 
+Il file *global.json* consente di definire la versione di .NET Core SDK usata quando si eseguono comandi dell'interfaccia della riga di comando di .NET Core. La selezione di .NET Core SDK è indipendente dalla specifica del runtime delle destinazioni del progetto. La versione di .NET Core SDK indica quali versioni degli strumenti dell'interfaccia della riga di comando di .NET Core vengono usate.
 
 In generale, si vuole usare la versione più recente degli strumenti SDK, pertanto non è necessario alcun file *Global. JSON* . In alcuni scenari avanzati, potrebbe essere necessario controllare la versione degli strumenti SDK e in questo articolo viene illustrato come eseguire questa operazione.
 
@@ -62,7 +62,7 @@ Se questo valore non viene impostato in modo esplicito, il valore predefinito va
 
 - Disponibile a partire da: .NET Core 3,0 SDK.
 
-Criteri di rollforward da usare quando si seleziona una versione di SDK, come fallback quando manca una versione specifica dell'SDK o come direttiva per usare una versione successiva. È necessario specificare una [versione](#version) con un valore `rollForward`, a meno che non lo si stia impostando su `latestMajor`. 
+Criteri di rollforward da usare quando si seleziona una versione di SDK, come fallback quando manca una versione specifica dell'SDK o come direttiva per usare una versione successiva. È necessario specificare una [versione](#version) con un valore `rollForward`, a meno che non lo si stia impostando su `latestMajor`.
 
 Per comprendere i criteri disponibili e il relativo comportamento, prendere in considerazione le seguenti definizioni per una versione SDK nel formato `x.y.znn`:
 
@@ -147,7 +147,7 @@ dotnet new globaljson --sdk-version 3.0.100
 > [!NOTE]
 > Le regole di corrispondenza sono regolate dal punto di ingresso `dotnet.exe`, che è comune in tutti i runtime installati di .NET Core installati. Le regole di corrispondenza per la versione installata più recente del runtime di .NET Core vengono usate quando si hanno più runtime installati side-by-side.
 
-## <a name="net-core-3xtabnetcore3x"></a>[.NET Core 3.x](#tab/netcore3x)
+## <a name="net-core-3xtabnetcore3x"></a>[.NET Core 3. x](#tab/netcore3x)
 
 A partire da .NET Core 3,0, quando si determina la versione dell'SDK da usare sono valide le regole seguenti:
 

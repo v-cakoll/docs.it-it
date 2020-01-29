@@ -1,5 +1,5 @@
 ---
-title: Documenti in WPF
+title: Documenti
 ms.date: 03/30/2017
 helpviewer_keywords:
 - documents [WPF], packaging
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 36704d56b66de977ac7f63fd7e766c925ef9023b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: eccb333b8e9a71ea30454f8bdf9fd2bf6dc90b9b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974676"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737964"
 ---
 # <a name="documents-in-wpf"></a>Documenti in WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] offre un'ampia gamma di funzionalità dei documenti che consentono la creazione di contenuto ad alta fedeltà progettato per essere più facilmente accessibile e leggibile rispetto alle generazioni precedenti di Windows. Oltre a caratteristiche avanzate in termini di funzionalità e qualità, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] assicura servizi integrati per la visualizzazione, la creazione di pacchetti e la sicurezza dei documenti. Questo argomento costituisce un'introduzione ai tipi di documenti e alla creazione di pacchetti di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -46,7 +46,7 @@ ms.locfileid: "73974676"
  La visualizzazione del contenuto dei documenti dinamici è supportata da tre controlli: <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>e <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  
   
 #### <a name="flowdocumentreader"></a>FlowDocumentReader  
- <xref:System.Windows.Controls.FlowDocumentReader> include funzionalità che consentono all'utente di scegliere in modo dinamico le varie modalità di visualizzazione, inclusa una modalità di visualizzazione a pagina singola (pagina alla volta), una modalità di visualizzazione a due pagine alla volta (formato lettura libro) e uno scorrimento continuo (senza fondo) modalità di visualizzazione.  Per ulteriori informazioni su queste modalità di visualizzazione, vedere <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>.  Se non è necessario passare dinamicamente da una modalità di visualizzazione all'altra, <xref:System.Windows.Controls.FlowDocumentPageViewer> e <xref:System.Windows.Controls.FlowDocumentScrollViewer> forniscono visualizzatori di contenuto del flusso più semplici che sono corretti in una particolare modalità di visualizzazione.  
+ <xref:System.Windows.Controls.FlowDocumentReader> include funzionalità che consentono all'utente di scegliere in modo dinamico tra le varie modalità di visualizzazione, inclusa una modalità di visualizzazione a pagina singola (pagina alla volta), una modalità di visualizzazione a due pagine alla volta (formato lettura libro) e una modalità di visualizzazione a scorrimento continuo (senza fine).  Per ulteriori informazioni su queste modalità di visualizzazione, vedere <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>.  Se non è necessario passare dinamicamente da una modalità di visualizzazione all'altra, <xref:System.Windows.Controls.FlowDocumentPageViewer> e <xref:System.Windows.Controls.FlowDocumentScrollViewer> forniscono visualizzatori di contenuto del flusso più semplici che sono corretti in una particolare modalità di visualizzazione.  
   
 #### <a name="flowdocumentpageviewer-and-flowdocumentscrollviewer"></a>FlowDocumentPageViewer e FlowDocumentScrollViewer  
  <xref:System.Windows.Controls.FlowDocumentPageViewer> Visualizza il contenuto nella modalità di visualizzazione pagina alla volta, mentre <xref:System.Windows.Controls.FlowDocumentScrollViewer> Visualizza il contenuto in modalità di scorrimento continuo.  Sia <xref:System.Windows.Controls.FlowDocumentPageViewer> che <xref:System.Windows.Controls.FlowDocumentScrollViewer> sono corretti a una particolare modalità di visualizzazione. Confrontare con <xref:System.Windows.Controls.FlowDocumentReader>, che include funzionalità che consentono all'utente di scegliere dinamicamente tra le varie modalità di visualizzazione (fornite dall'enumerazione <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>), al costo di un maggior utilizzo di risorse rispetto a <xref:System.Windows.Controls.FlowDocumentPageViewer> o <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  
@@ -144,7 +144,7 @@ ms.locfileid: "73974676"
 - <xref:System.IO.Packaging.ZipPackagePart>
 - <xref:System.IO.Packaging.PackageRelationship>
 - <xref:System.Windows.Controls.DocumentViewer>
-- [Testo](optimizing-performance-text.md)
+- [per](optimizing-performance-text.md)
 - [Cenni preliminari sui documenti dinamici](flow-document-overview.md)
 - [Panoramica della stampa](printing-overview.md)
 - [Serializzazione e archiviazione di documenti](document-serialization-and-storage.md)

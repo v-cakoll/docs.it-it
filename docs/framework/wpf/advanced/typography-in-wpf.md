@@ -1,15 +1,15 @@
 ---
-title: Funzionalità tipografiche di WPF
+title: Opzioni tipografiche
 ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 0c98d0e7363e7732f44f2edf238b9cb6d2bf11fb
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 3d94873931e3ee6df780df214f508258aa07a791
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740279"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735539"
 ---
 # <a name="typography-in-wpf"></a>Funzionalità tipografiche di WPF
 Questo argomento presenta le principali funzionalità tipografiche di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Queste funzionalità includono qualità e prestazioni migliorate per il rendering del testo, supporto tipografico OpenType, testo internazionale migliorato, supporto dei tipi di carattere migliorato e nuove API (Application Programming Interface) di testo.  
@@ -156,5 +156,5 @@ Testo con anti-aliasing della direzione y ClearType
 - [Funzionalità dei tipi di carattere OpenType](opentype-font-features.md)
 - [Disegno di testo formattato](drawing-formatted-text.md)
 - [Formattazione del testo avanzata](advanced-text-formatting.md)
-- [Testo](optimizing-performance-text.md)
+- [per](optimizing-performance-text.md)
 - [Microsoft Typography](https://docs.microsoft.com/typography/)

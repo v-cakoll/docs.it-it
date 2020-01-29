@@ -1,63 +1,71 @@
 ---
 title: Script dotnet-install
-description: Informazioni sugli script dotnet-install per l'installazione degli strumenti dell'interfaccia della riga di comando di .NET Core e del runtime condiviso.
-ms.date: 01/16/2019
-ms.openlocfilehash: 765141ae92645db448ac7c9c3448a79b895faac6
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+description: Informazioni sugli script DotNet-install per installare il .NET Core SDK e il runtime condiviso.
+ms.date: 01/23/2020
+ms.openlocfilehash: 169991ac4cd24ccab90634ff265c3ae5b603f8e9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964339"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734209"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Riferimento agli script dotnet-install
 
 ## <a name="name"></a>Name
 
-`dotnet-install.ps1` | `dotnet-install.sh`: script usato per l'installazione degli strumenti dell'interfaccia della riga di comando e del runtime condiviso di .NET Core.
+`dotnet-install.ps1` | `dotnet-install.sh` script utilizzato per installare il .NET Core SDK e il runtime condiviso.
 
 ## <a name="synopsis"></a>Riepilogo
 
 Windows:
 
-`dotnet-install.ps1 [-Channel] [-Version] [-InstallDir] [-Architecture] [-SharedRuntime] [-Runtime] [-DryRun] [-NoPath] [-Verbose] [-AzureFeed] [-UncachedFeed] [-NoCdn] [-FeedCredential] [-ProxyAddress] [-ProxyUseDefaultCredentials] [-SkipNonVersionedFiles] [-Help]`
+```powershell
+dotnet-install.ps1 [-Channel] [-Version] [-JSonFile] [-InstallDir] [-Architecture]
+    [-Runtime] [-DryRun] [-NoPath] [-Verbose] [-AzureFeed] [-UncachedFeed] [-NoCdn] [-FeedCredential]
+    [-ProxyAddress] [-ProxyUseDefaultCredentials] [-SkipNonVersionedFiles] [-Help]
+```
 
-macOS/Linux:
+Linux/macOs:
 
-`dotnet-install.sh [--channel] [--version] [--install-dir] [--architecture] [--runtime] [--dry-run] [--no-path] [--verbose] [--azure-feed] [--uncached-feed] [--no-cdn] [--feed-credential] [--runtime-id] [--skip-non-versioned-files] [--help]`
+```bash
+dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--architecture]
+    [--runtime] [--dry-run] [--no-path] [--verbose] [--azure-feed] [--uncached-feed] [--no-cdn] [--feed-credential]
+    [--runtime-id] [--skip-non-versioned-files] [--help]
+```
 
 ## <a name="description"></a>Descrizione
 
 Gli script `dotnet-install` vengono usati per eseguire un'installazione non amministrativa di .NET Core SDK, che include gli strumenti dell'interfaccia della riga di comando e il runtime condiviso di .NET Core.
 
-È consigliabile usare la versione stabile ospitata nel [sito Web principale di .NET Core](https://dot.net). I percorsi diretti per gli script sono:
+Si consiglia di utilizzare la versione stabile degli script:
 
-- <https://dot.net/v1/dotnet-install.sh> (Bash, UNIX)
-- <https://dot.net/v1/dotnet-install.ps1> (Powershell, Windows)
+- Bash (Linux/macOS): <https://dot.net/v1/dotnet-install.sh>
+- PowerShell (Windows): <https://dot.net/v1/dotnet-install.ps1>
 
 Gli script vengono usati principalmente negli scenari di automazione e nelle installazioni senza privilegi di amministratore. Sono disponibili due script: uno è uno script PowerShell, che funziona in Windows, e l'altro è uno script Bash, che funziona in Linux/macOS. Entrambi gli script hanno lo stesso comportamento. Lo script bash legge anche le opzioni PowerShell, che possono quindi essere usate con lo script in sistemi Linux/macOS.
 
-Gli script di installazione scaricano il file ZIP/tarball da destinazioni di compilazione dell'interfaccia della riga di comando e lo installano nel percorso predefinito o in un percorso specificato da `-InstallDir|--install-dir`. Per impostazione predefinita, lo script di installazione scarica e installa l'SDK. Se si vuole ottenere solo il runtime condiviso, è possibile specificare l'argomento `--runtime`.
+Gli script di installazione scaricano il file ZIP/tarball da destinazioni di compilazione dell'interfaccia della riga di comando e lo installano nel percorso predefinito o in un percorso specificato da `-InstallDir|--install-dir`. Per impostazione predefinita, lo script di installazione scarica e installa l'SDK. Se si vuole ottenere solo il runtime condiviso, è possibile specificare l'argomento `-Runtime|--runtime`.
 
-Per impostazione predefinita, lo script aggiunge il percorso di installazione a $PATH per la sessione corrente. Eseguire l'override di questo comportamento predefinito specificando l'argomento `--no-path`.
+Per impostazione predefinita, lo script aggiunge il percorso di installazione a $PATH per la sessione corrente. Eseguire l'override di questo comportamento predefinito specificando l'argomento `-NoPath|--no-path`.
 
-Prima di eseguire lo script, installare le [dipendenze](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) necessarie.
+Prima di eseguire lo script, installare le [dipendenze](../install/dependencies.md) necessarie.
 
-È possibile installare una versione specifica usando l'argomento `--version`. La versione deve essere specificata con un numero a tre parti (ad esempio, 1.0.0-13232). Se non viene fornita, viene usata la versione `latest`.
+È possibile installare una versione specifica usando l'argomento `-Version|--version`. La versione deve essere specificata come versione in tre parti, ad esempio `2.1.0`. Se non viene fornita, viene usata la versione `latest`.
 
 ## <a name="options"></a>Options
 
-- **`-Channel <CHANNEL>`**
+- **`-Channel|--channel <CHANNEL>`**
 
   Specifica il canale di origine per l'installazione. I valori possibili sono:
 
   - `Current`: versione più recente.
   - `LTS`: canale di supporto a lungo termine (versione supportata più recente).
-  - Versione in due parti nel formato X.Y che rappresenta una versione specifica, ad esempio `2.0` o `1.0`.
-  - Nome ramo. Ad esempio, `release/2.0.0`, `release/2.0.0-preview2` o `master` (per le versione notturne).
+  - Versione in due parti nel formato X.Y che rappresenta una versione specifica, ad esempio `2.1` o `3.0`.
+  - Nome del ramo: ad esempio, `release/3.1.1xx` o `master` (per le versioni notturne). Usare questa opzione per installare una versione da un canale di anteprima. Usare il nome del canale come elencato in [programmi di installazione e file binari](https://github.com/dotnet/core-sdk#installers-and-binaries).
 
   Il valore predefinito è `LTS`. Per altre informazioni sui canali di supporto per .NET, vedere la pagina [.NET Support Policy](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) (Criteri di supporto per .NET).
 
-- **`-Version <VERSION>`**
+- **`-Version|--version <VERSION>`**
 
   Rappresenta una versione di build specifica. I valori possibili sono:
 
@@ -67,55 +75,64 @@ Prima di eseguire lo script, installare le [dipendenze](https://github.com/dotne
 
   Se non viene specificata, `-Version` viene impostata automaticamente su `latest`.
 
-- **`-InstallDir <DIRECTORY>`**
+- **`-JSonFile|--jsonfile <JSONFILE>`**
+
+  Specifica il percorso di un file [Global. JSON](global-json.md) che verrà usato per determinare la versione dell'SDK. Il file *Global. JSON* deve avere un valore per `sdk:version`.
+
+- **`-InstallDir|--install-dir <DIRECTORY>`**
 
   Specifica il percorso di installazione. Se la directory non esiste, verrà creata. Il valore predefinito è *%LocalAppData%\Microsoft\dotnet*. I file binari vengono inseriti direttamente in questa directory.
 
-- **`-Architecture <ARCHITECTURE>`**
+- **`-Architecture|--architecture <ARCHITECTURE>`**
 
   Architettura dei file binari di .NET Core da installare. I valori consentiti sono `<auto>`, `amd64`, `x64`, `x86`, `arm64` e `arm`. Il valore predefinito è `<auto>`, che rappresenta l'architettura del sistema operativo attualmente in esecuzione.
 
-- **`-SharedRuntime`**
+- **`-SharedRuntime|--shared-runtime`**
 
   > [!NOTE]
-  > Questo parametro è obsoleto e potrebbe essere rimosso in una versione futura dello script. L'alternativa consigliata è l'opzione `Runtime`.
+  > Questo parametro è obsoleto e potrebbe essere rimosso in una versione futura dello script. L'alternativa consigliata è l'opzione `-Runtime|--runtime`.
 
-  Installa solo i bit del runtime condiviso, non l'intero SDK. Ciò equivale a specificare `-Runtime dotnet`.
+  Installa solo i bit del runtime condiviso, non l'intero SDK. Questa opzione equivale a specificare `-Runtime|--runtime dotnet`.
 
-- **`-Runtime <RUNTIME>`**
+- **`-Runtime|--runtime <RUNTIME>`**
 
   Installa solo il runtime condiviso, non l'intero SDK. I valori possibili sono:
 
   - `dotnet`: runtime condiviso `Microsoft.NETCore.App`.
   - `aspnetcore`: runtime condiviso `Microsoft.AspNetCore.App`.
+  - `windowsdesktop`: runtime condiviso `Microsoft.WindowsDesktop.App`.
 
-- **`-DryRun`**
+- **`-DryRun|--dry-run`**
 
   Se impostata, lo script non eseguirà l'installazione. Visualizza invece la riga di comando da usare per installare in modo coerente la versione attualmente richiesta dell'interfaccia della riga di comando di .NET Core. Se ad esempio si specifica la versione `latest`, verrà visualizzato un collegamento con la versione specifica in modo che questo comando possa essere usato in modo deterministico in uno script di compilazione. Viene visualizzato anche il percorso del file binario se si preferisce installarlo o scaricarlo manualmente.
 
-- **`-NoPath`**
+- **`-NoPath|--no-path`**
 
   Se impostata, la cartella di installazione non viene esportata nel percorso per la sessione corrente. Per impostazione predefinita, lo script modifica il percorso rendendo disponibili gli strumenti dell'interfaccia della riga di comando immediatamente dopo l'installazione.
 
-- **`-Verbose`**
+- **`-Verbose|--verbose`**
 
   Visualizza le informazioni di diagnostica.
 
-- **`-AzureFeed`**
+- **`-AzureFeed|--azure-feed`**
 
   Specifica l'URL del feed di Azure per il programma di installazione. È consigliabile non modificare questo valore. Il valore predefinito è `https://dotnetcli.azureedge.net/dotnet`.
 
-- **`-UncachedFeed`**
+- **`-UncachedFeed|--uncached-feed`**
 
   Consente di modificare l'URL per il feed non memorizzato nella cache usato da questo programma di installazione. È consigliabile non modificare questo valore.
 
-- **`-NoCdn`**
+- **`-NoCdn|--no-cdn`**
 
   Disabilita il download dalla [Rete di distribuzione dei contenuti di Azure (rete CDN)](https://docs.microsoft.com/azure/cdn/cdn-overview) e usa direttamente il feed non memorizzato nella cache.
 
-- **`-FeedCredential`**
+- **`-FeedCredential|--feed-credential`**
 
   Usata come stringa di query da accodare al feed di Azure. Consente la modifica dell'URL per usare account di archiviazione BLOB pubblici.
+
+- **`--runtime-id`**
+
+  Specifica l' [identificatore di runtime](../rid-catalog.md) per il quale vengono installati gli strumenti. Usare `linux-x64` per Linux portatile. (Valido solo per Linux/macOS)
 
 - **`-ProxyAddress`**
 
@@ -125,11 +142,11 @@ Prima di eseguire lo script, installare le [dipendenze](https://github.com/dotne
 
   Se impostata, il programma di installazione usa le credenziali dell'utente corrente quando si usa l'indirizzo proxy. (Valido solo per Windows)
 
-- **`-SkipNonVersionedFiles`**
+- **`-SkipNonVersionedFiles|--skip-non-versioned-files`**
 
   Ignora l'installazione dei file senza versione, ad esempio *dotnet.exe*, se esistono già.
 
-- **`-Help`**
+- **`-Help|--help`**
 
   Stampa la Guida per lo script.
 
@@ -149,32 +166,32 @@ Prima di eseguire lo script, installare le [dipendenze](https://github.com/dotne
   ./dotnet-install.sh --channel LTS
   ```
 
-- Installare la versione più recente dal canale 2.0 nel percorso specificato:
+- Installare la versione più recente dal canale 3,1 nel percorso specificato:
 
   Windows:
 
   ```powershell
-  ./dotnet-install.ps1 -Channel 2.0 -InstallDir C:\cli
+  ./dotnet-install.ps1 -Channel 3.1 -InstallDir C:\cli
   ```
 
   macOS/Linux:
 
   ```bash
-  ./dotnet-install.sh --channel 2.0 --install-dir ~/cli
+  ./dotnet-install.sh --channel 3.1 --install-dir ~/cli
   ```
 
-- Installare la versione 1.1.0 del runtime condiviso:
+- Installare la versione 3.0.0 del runtime condiviso:
 
   Windows:
 
   ```powershell
-  ./dotnet-install.ps1 -Runtime dotnet -Version 1.1.0
+  ./dotnet-install.ps1 -Runtime dotnet -Version 3.0.0
   ```
 
   macOS/Linux:
 
   ```bash
-  ./dotnet-install.sh --runtime dotnet --version 1.1.0
+  ./dotnet-install.sh --runtime dotnet --version 3.0.0
   ```
 
 - Ottenere lo script e installare la versione 2.1.2 versione dietro un proxy aziendale (solo Windows):

@@ -2,12 +2,12 @@
 title: Implementazione di connessioni SQL resilienti di Entity Framework Core
 description: Informazioni su come implementare connessioni SQL resilienti di Entity Framework Core. Questa tecnica è particolarmente importante quando si usa il database SQL di Azure nel cloud.
 ms.date: 10/16/2018
-ms.openlocfilehash: 3128cf1be7f2dc8804a002556db232f4e0fc8c33
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.openlocfilehash: 7899fc263ab3cde6ac2410ca614a7e5fa285576b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094054"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732730"
 ---
 # <a name="implement-resilient-entity-framework-core-sql-connections"></a>Implementazione di connessioni SQL resilienti di Entity Framework Core
 
@@ -88,7 +88,7 @@ public async Task<IActionResult> UpdateProduct(
 }
 ```
 
-Il primo <xref:Microsoft.EntityFrameworkCore.DbContext> è `_catalogContext` e il secondo `DbContext` è incluso nell'oggetto `_integrationEventLogService`. L'azione Commit viene eseguita su tutti gli oggetti `DbContext` tramite una strategia di esecuzione di EF.
+Il primo <xref:Microsoft.EntityFrameworkCore.DbContext> è `_catalogContext` e il secondo `DbContext` è incluso nell'oggetto `_catalogIntegrationEventService`. L'azione Commit viene eseguita su tutti gli oggetti `DbContext` tramite una strategia di esecuzione di EF.
 
 Per ottenere questo commit di più `DbContext`, `SaveEventAndCatalogContextChangesAsync` usa una classe `ResilientTransaction`, come illustrato nel codice seguente:
 

@@ -3,16 +3,16 @@ title: Esercitazione sul debug di una perdita di memoria
 description: Informazioni su come eseguire il debug di una perdita di memoria in .NET Core.
 ms.topic: tutorial
 ms.date: 12/17/2019
-ms.openlocfilehash: cb137503cbc81f5ab9438dadcf1dc1c6750a1ca8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 014945394f87edd02c94f7c3b28043bd07470d8b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715596"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737738"
 ---
 # <a name="tutorial-debug-a-memory-leak-in-net-core"></a>Esercitazione: eseguire il debug di una perdita di memoria in .NET Core
 
-**Questo articolo si applica a: ✓** .net core 3,0 SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .net core 3,0 SDK e versioni successive
 
 Questa esercitazione illustra gli strumenti per analizzare una perdita di memoria di .NET Core.
 
@@ -28,7 +28,7 @@ In questa esercitazione si eseguono le attività seguenti:
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-L'esercitazione usa:
+L'esercitazione USA:
 
 - [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) o versione successiva.
 - [DotNet-Trace](dotnet-trace.md) per elencare i processi.

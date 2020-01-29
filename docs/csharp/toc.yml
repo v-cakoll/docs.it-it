@@ -1317,14 +1317,15 @@
           items:
             - name: Tipi valore
               items:
-                - name: Funzionalità dei tipi valore
-                  href: language-reference/keywords/value-types.md
+                - name: Panoramica
+                  href: language-reference/builtin-types/value-types.md
+                  displayName: 'value types, simple types'
                 - name: Tipi numerici integrali
-                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer, literal'
                   href: language-reference/builtin-types/integral-numeric-types.md
+                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer, literal'
                 - name: Tipi numerici a virgola mobile
-                  displayName: 'float, decimal, double, rational, real, literal'
                   href: language-reference/builtin-types/floating-point-numeric-types.md
+                  displayName: 'float, decimal, double, rational, real, literal'
                 - name: Conversioni numeriche predefinite
                   href: language-reference/builtin-types/numeric-conversions.md
                 - name: bool
@@ -1364,8 +1365,6 @@
               items:
                 - name: Tabella dei tipi incorporati
                   href: language-reference/keywords/built-in-types-table.md
-                - name: Tabella dei tipi valore
-                  href: language-reference/keywords/value-types-table.md
                 - name: Tabella di formattazione dei risultati numerici
                   href: language-reference/keywords/formatting-numeric-results-table.md
         - name: Modificatori
@@ -1415,7 +1414,7 @@
               href: language-reference/keywords/readonly.md
             - name: sealed
               href: language-reference/keywords/sealed.md
-            - name: statico
+            - name: static
               href: language-reference/keywords/static.md
             - name: unsafe
               href: language-reference/keywords/unsafe.md

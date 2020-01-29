@@ -1,5 +1,5 @@
 ---
-title: Convalida dell'input utente in Windows Form
+title: Convalida dell'input dell'utente
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, validating user input
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: 2b83e94f188f46d0cedc9fed9e9c5a946ada59c5
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: dc56c09677d1054e8f264169b78638fa83bd7d9e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960426"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734685"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Convalida dell'input utente in Windows Form
 Quando gli utenti immettono dati nell'applicazione, è consigliabile verificare che i dati siano validi prima che l'applicazione lo usi. Potrebbe essere necessario che determinati campi di testo non siano di lunghezza zero, che un campo venga formattato come numero di telefono o altro tipo di dati ben formati o che una stringa non contenga caratteri non sicuri che potrebbero essere usati per compromettere la sicurezza di un database. Windows Forms offre diversi modi per convalidare l'input nell'applicazione.  

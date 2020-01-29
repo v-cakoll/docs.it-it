@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Impostare il testo visualizzato da un controllo di Windows Forms'
+title: Imposta il testo visualizzato da un controllo
 ms.date: 08/20/2019
 dev_langs:
 - csharp
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - controls [Windows Forms], captions
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
-ms.openlocfilehash: 887aa5ec9b97770903cd87459d6df5adc3f7ddf0
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: eb02cbc3b335b0d5856f786b21d1d202cf444211
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666147"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738417"
 ---
-# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Procedura: Imposta il testo visualizzato da un controllo Windows Forms
+# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Procedura: impostare il testo visualizzato da un controllo Windows Forms
 
-I controlli Windows Forms in genere visualizzano testo correlato alla funzione primaria del controllo. Un <xref:System.Windows.Forms.Button> controllo, ad esempio, Visualizza in genere una didascalia che indica l'azione che verrà eseguita se si fa clic sul pulsante. Per tutti i controlli, il testo può essere impostato o restituito mediante la proprietà <xref:System.Windows.Forms.Control.Text%2A>. È possibile modificare il tipo di carattere usando la proprietà <xref:System.Windows.Forms.Control.Font%2A>.
+I controlli Windows Forms in genere visualizzano testo correlato alla funzione primaria del controllo. Ad esempio, un controllo <xref:System.Windows.Forms.Button> in genere Visualizza una didascalia che indica l'azione che verrà eseguita se si fa clic sul pulsante. Per tutti i controlli, il testo può essere impostato o restituito mediante la proprietà <xref:System.Windows.Forms.Control.Text%2A>. È possibile modificare il tipo di carattere usando la proprietà <xref:System.Windows.Forms.Control.Font%2A>.
 
 È anche possibile impostare il testo usando la [finestra di progettazione](#designer).
 
@@ -78,12 +78,12 @@ I controlli Windows Forms in genere visualizzano testo correlato alla funzione p
 
    Per creare un tasto di scelta rapida sottolineato, include una e commerciale (&) prima della lettera che sarà il tasto di scelta rapida.
 
-2. Nella finestra **Proprietà** selezionare il pulsante con i puntini![di sospensione (pulsante con i puntini di sospensione (..](./media/visual-studio-ellipsis-button.png).) nella finestra proprietà di Visual Studio) accanto alla proprietà **font** .
+2. Nella finestra **Proprietà** selezionare il pulsante con i puntini di sospensione (![pulsante con i puntini di sospensione (...) nell'finestra proprietà di Visual Studio](./media/visual-studio-ellipsis-button.png)) accanto alla proprietà **font** .
 
    Nella finestra di dialogo tipo di carattere standard selezionare il tipo di carattere, lo stile del carattere, le dimensioni, gli effetti (ad esempio, l'attacco o la sottolineatura) e lo script desiderato.
 
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>
-- [Procedura: Creare chiavi di accesso per i controlli Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)
-- [Procedura: Rispondi a Windows Forms clic sui pulsanti](how-to-respond-to-windows-forms-button-clicks.md)
+- [Procedura: Creare tasti di scelta per i controlli Windows Form](how-to-create-access-keys-for-windows-forms-controls.md)
+- [Procedura: Rispondere alla selezione dei pulsanti di Windows Form](how-to-respond-to-windows-forms-button-clicks.md)

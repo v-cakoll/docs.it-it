@@ -2,16 +2,16 @@
 title: DotNet-dump-.NET Core
 description: Installazione e utilizzo dello strumento da riga di comando DotNet-dump.
 ms.date: 10/14/2019
-ms.openlocfilehash: dcd5dd42620010c1a9b6dffd3365fc1b777c0eeb
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 3c0e28d4efc96ae53ec7dfae243725ab400e6b8f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740770"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737665"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Dump Collection and Analysis Utility (`dotnet-dump`)
 
-**Questo articolo si applica a: ✓** .net core 3,0 SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .net core 3,0 SDK e versioni successive
 
 > [!NOTE]
 > `dotnet-dump` non è supportato in macOS.
@@ -73,7 +73,7 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag
 
 - **`--type <Heap|Mini>`**
 
-  Specifica il tipo di dump, che determina i tipi di informazioni raccolte dal processo. Ne esistono di due tipi:
+  Specifica il tipo di dump, che determina i tipi di informazioni raccolte dal processo. Esistono due tipi:
 
   - `Heap`: un dump di grandi dimensioni e relativamente completo che contiene elenchi di moduli, elenchi di thread, tutti gli stack, informazioni sulle eccezioni, informazioni sulla gestione e tutta la memoria eccetto le immagini mappate.
   - `Mini`: un piccolo dump contenente elenchi di moduli, elenchi di thread, informazioni sulle eccezioni e tutti gli stack.
@@ -156,7 +156,7 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 | `syncblk <arguments>`               | Visualizza le informazioni sul contenitore SyncBlock.                                                           |
 | `threads|setthread <threadid>`      | Imposta o Visualizza l'ID del thread corrente per i comandi SOS.                                  |
 
-## <a name="using-dotnet-dump"></a>Uso di `dotnet-dump`
+## <a name="using-dotnet-dump"></a>Utilizzo di `dotnet-dump`
 
 Il primo passaggio consiste nel raccogliere un dump. Questo passaggio può essere ignorato se è già stato generato un dump di base. Il sistema operativo o la [funzionalità di generazione del dump](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md) predefinita del runtime di .NET Core possono creare dump di base.
 

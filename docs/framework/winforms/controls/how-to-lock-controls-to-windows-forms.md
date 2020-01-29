@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: bloccare i controlli di un Windows Form'
+title: Bloccare i controlli
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls, locking
@@ -8,12 +8,12 @@ ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d157ddc8be4b5fa0057241b562e76b566e8dad99
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 16eb151dc435614e1edc82bf9f0acf3974f36690
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458337"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736242"
 ---
 # <a name="how-to-lock-controls-to-windows-forms"></a>Procedura: bloccare i controlli per Windows Forms
 
@@ -51,5 +51,5 @@ Nella finestra **Proprietà** selezionare la proprietà **Locked** , quindi sele
 
 - [Controlli Windows Form](index.md)
 - [Impostazione delle etichette di singoli controlli Windows Form e creazione dei relativi tasti di scelta rapida](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)
+- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)
 - [Controlli Windows Form per funzione](windows-forms-controls-by-function.md)

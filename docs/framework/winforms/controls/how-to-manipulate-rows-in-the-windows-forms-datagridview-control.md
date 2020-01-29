@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Modificare le righe nel controllo DataGridView di Windows Forms'
+title: Modificare le righe nel controllo DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], manipulating rows
 - rows [Windows Forms], manipulating on Windows Forms
 ms.assetid: 522d8944-e073-4488-9673-923f0a8d7214
-ms.openlocfilehash: ebf434b7ab813c729b48075107cdd3b2a20fcd24
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f6942c4d74269348e7758b335a6fd93bed3ffa53
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592322"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736041"
 ---
-# <a name="how-to-manipulate-rows-in-the-windows-forms-datagridview-control"></a>Procedura: Modificare le righe nel controllo DataGridView di Windows Forms
+# <a name="how-to-manipulate-rows-in-the-windows-forms-datagridview-control"></a>Procedura: modificare le righe nel controllo DataGridView di Windows Form
 L'esempio di codice seguente presenta vari modi per modificare righe di <xref:System.Windows.Forms.DataGridView> mediante le proprietà della classe <xref:System.Windows.Forms.DataGridViewRow>.  
   
 ## <a name="example"></a>Esempio  

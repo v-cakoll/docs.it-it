@@ -1,20 +1,20 @@
 ---
-title: Finestre di dialogo in Windows Form
+title: Finestre di dialogo
 ms.date: 03/30/2017
 helpviewer_keywords:
 - dialog boxes [Windows Forms], Windows Forms
 - Windows Forms dialog boxes
 - dialogs [Windows Forms], using in Windows Forms
 ms.assetid: d43d022b-451b-490d-9386-dc79d98fbf8a
-ms.openlocfilehash: ba40ec42d78199bc59d63a2a1d92fb3655388ad5
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 3ac089bd1becaea70fff53fc6f4d66ab0f6d12fa
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592301"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732770"
 ---
 # <a name="dialog-boxes-in-windows-forms"></a>Finestre di dialogo in Windows Form
-Le finestre di dialogo sono usate per interagire con l'utente e recuperare informazioni. Detto semplicemente, una finestra di dialogo è un form con la proprietà dell'enumerazione <xref:System.Windows.Forms.FormBorderStyle> impostata su `FixedDialog`. È possibile costruire il proprio finestre di dialogo personalizzate usando Progettazione Windows Form in Visual Studio. Per personalizzare le finestre di dialogo in base a esigenze specifiche, aggiungere controlli come `Label`, `Textbox` e `Button`. .NET Framework include anche finestre di dialogo predefinite, ad esempio **Apri File** e finestre di messaggio, che è possibile adattare le proprie applicazioni. Per altre informazioni, vedere [componenti e controlli di finestra di dialogo](./controls/dialog-box-controls-and-components-windows-forms.md).  
+Le finestre di dialogo sono usate per interagire con l'utente e recuperare informazioni. Detto semplicemente, una finestra di dialogo è un form con la proprietà dell'enumerazione <xref:System.Windows.Forms.FormBorderStyle> impostata su `FixedDialog`. È possibile creare finestre di dialogo personalizzate usando il Progettazione Windows Form in Visual Studio. Per personalizzare le finestre di dialogo in base a esigenze specifiche, aggiungere controlli come `Label`, `Textbox` e `Button`. Il .NET Framework include anche finestre di dialogo predefinite, ad esempio le finestre di messaggio e di **apertura dei file** , che è possibile adattare per le proprie applicazioni. Per ulteriori informazioni, vedere [controlli e componenti](./controls/dialog-box-controls-and-components-windows-forms.md)della finestra di dialogo.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Visualizzare le finestre di dialogo per Windows Form](how-to-display-dialog-boxes-for-windows-forms.md)  

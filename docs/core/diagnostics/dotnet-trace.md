@@ -2,16 +2,16 @@
 title: strumento DotNet-Trace-.NET Core
 description: Installazione e utilizzo dello strumento da riga di comando DotNet-Trace.
 ms.date: 11/21/2019
-ms.openlocfilehash: 64c931db5a18659707e832aaca910cfbbd6823c0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b19b159636fbf57fa2d461b398fcf9234aab491c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714427"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737657"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>utilità di analisi delle prestazioni DotNet-Trace
 
-**Questo articolo si applica a:** ✓ .net core 3,0 SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .net core 3,0 SDK e versioni successive
 
 ## <a name="install-dotnet-trace"></a>Installare dotnet-Trace
 
@@ -38,7 +38,7 @@ Lo strumento `dotnet-trace`:
 
 ## <a name="options"></a>Options
 
-- **`--version`**  
+- **`--version`**
 
   Visualizza la versione dell'utilità DotNet-Counters.
 

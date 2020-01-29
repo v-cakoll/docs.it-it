@@ -1,5 +1,5 @@
 ---
-title: Data binding di Windows Form
+title: Data binding
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms]
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data [Windows Forms], architecture
 - Windows Forms controls, data binding
 ms.assetid: c3826d8e-ea25-4ad4-a669-45bfb19192aa
-ms.openlocfilehash: ed456807137e8cf7594bc50eb0eebb67b88e6b40
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 68871db848ab46b88865e668f27f09972e8debcf
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800113"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734619"
 ---
 # <a name="windows-forms-data-binding"></a>Data binding di Windows Form
 Data binding in Windows Form consente di visualizzare e modificare le informazioni da un'origine dati nei controlli del form. È possibile effettuare associazioni alle origini dati tradizionali e a quasi ogni struttura che contiene dati.  
@@ -37,7 +37,7 @@ Data binding in Windows Form consente di visualizzare e modificare le informazio
  Mostra come implementare l'interfaccia <xref:System.ComponentModel.INotifyPropertyChanged>. L'interfaccia comunica a un controllo associato le modifiche delle proprietà di un oggetto business.  
   
  [Procedura: Applicare il modello PropertyNameChanged](how-to-apply-the-propertynamechanged-pattern.md)  
- Viene illustrato come applicare la *PropertyName*modello Changed alle proprietà di un controllo utente Windows Form.  
+ Illustra come applicare il modello *PropertyName*changed alle proprietà di un controllo utente Windows Forms.  
   
  [Procedura: Implementare l'interfaccia ITypedList](how-to-implement-the-itypedlist-interface.md)  
  Mostra come abilitare l'individuazione dello schema per un elenco associabile mediante l'implementazione dell'interfaccia <xref:System.ComponentModel.ITypedList>.  
@@ -45,13 +45,13 @@ Data binding in Windows Form consente di visualizzare e modificare le informazio
  [Procedura: Implementare l'interfaccia IListSource](how-to-implement-the-ilistsource-interface.md)  
  Illustra come implementare l'interfaccia <xref:System.ComponentModel.IListSource> per creare una classe associabile che non implementa <xref:System.Collections.IList>, ma fornisce un elenco da un altro percorso.  
   
- [Procedura: Verificare che più controlli associati alla stessa origine dati rimangano sincronizzati](multiple-controls-bound-to-data-source-synchronized.md)  
+ [Procedura: Garantire la sincronizzazione di più controlli associati alla stessa origine dati](multiple-controls-bound-to-data-source-synchronized.md)  
  Mostra come gestire l'evento <xref:System.Windows.Forms.BindingSource.BindingComplete> per assicurare che tutti i controlli associati a un'origine dati rimangano sincronizzati.  
   
- [Procedura: Verificare che la riga selezionata in una tabella figlio rimanga nella posizione corretta](ensure-the-selected-row-in-a-child-table-correct.md)  
+ [Procedura: Garantire che la riga selezionata in una tabella figlio rimanga nella posizione corretta](ensure-the-selected-row-in-a-child-table-correct.md)  
  Mostra come garantire che la riga selezionata di una tabella figlio non venga modificata quando viene apportata una modifica a un campo della tabella padre.  
   
- Vedere anche [interfacce correlate al Data Binding](interfaces-related-to-data-binding.md), [come: Esplorare dati in Windows Form](how-to-navigate-data-in-windows-forms.md), e [come: Creare un controllo con associazione semplice in un Form Windows](how-to-create-a-simple-bound-control-on-a-windows-form.md).  
+ Vedere anche [interfacce correlate all'associazione dati](interfaces-related-to-data-binding.md), [procedura: esplorare i dati in Windows Forms](how-to-navigate-data-in-windows-forms.md)e [procedura: creare un controllo con associazione semplice in un Windows Form](how-to-create-a-simple-bound-control-on-a-windows-form.md).  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.Binding?displayProperty=nameWithType>  
@@ -67,4 +67,4 @@ Data binding in Windows Form consente di visualizzare e modificare le informazio
  [Controllo DataGridView](./controls/datagridview-control-windows-forms.md)  
  Fornisce un elenco di argomenti in cui viene illustrato come usare un controllo Datagrid associabile.  
   
- Vedere anche [l'accesso ai dati in Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio).
+ Vedere anche [accesso ai dati in Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio).

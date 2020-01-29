@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Scorrere tutti i nodi di un controllo TreeView di Windows Forms'
+title: Scorrere tutti i nodi del controllo TreeView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], iterating through nodes
 - tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-ms.openlocfilehash: 00a0f19803967f02795e3eade767786eecc1f4dd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 010932fa3fdfaa907325b9934682dcbf889265c1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966551"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736371"
 ---
-# <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Procedura: Scorrere tutti i nodi di un controllo TreeView di Windows Forms
-A volte è utile esaminare ogni nodo in un controllo Windows Forms <xref:System.Windows.Forms.TreeView> per eseguire un calcolo sui valori del nodo. Questa operazione può essere eseguita usando una routine ricorsiva (metodo ricorsivo in C# e C++) che esegue l'iterazione in ogni nodo in ogni raccolta dell'albero.  
+# <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Procedura: Scorrere tutti i nodi di un controllo TreeView Windows Form
+A volte è utile esaminare ogni nodo in un Windows Forms controllo <xref:System.Windows.Forms.TreeView> per eseguire un calcolo sui valori del nodo. Questa operazione può essere eseguita usando una routine ricorsiva (metodo ricorsivo in C# e C++) che esegue l'iterazione in ogni nodo in ogni raccolta dell'albero.  
   
- Ogni <xref:System.Windows.Forms.TreeNode> oggetto in una visualizzazione albero dispone di proprietà che è possibile utilizzare per spostarsi nella visualizzazione albero <xref:System.Windows.Forms.TreeNode.FirstNode%2A>: <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>, e <xref:System.Windows.Forms.TreeNode.Parent%2A>. Il valore della <xref:System.Windows.Forms.TreeNode.Parent%2A> proprietà è il nodo padre del nodo corrente. I nodi figlio del nodo corrente, se presenti, vengono elencati nella relativa <xref:System.Windows.Forms.TreeNode.Nodes%2A> proprietà. Il <xref:System.Windows.Forms.TreeView> controllo stesso dispone della <xref:System.Windows.Forms.TreeView.TopNode%2A> proprietà, che rappresenta il nodo radice dell'intera visualizzazione albero.  
+ Ogni oggetto <xref:System.Windows.Forms.TreeNode> in una visualizzazione struttura ad albero dispone di proprietà che è possibile utilizzare per spostarsi nella visualizzazione albero: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>e <xref:System.Windows.Forms.TreeNode.Parent%2A>. Il valore della proprietà <xref:System.Windows.Forms.TreeNode.Parent%2A> è il nodo padre del nodo corrente. I nodi figlio del nodo corrente, se presenti, vengono elencati nella relativa proprietà <xref:System.Windows.Forms.TreeNode.Nodes%2A>. Il controllo <xref:System.Windows.Forms.TreeView> stesso dispone della proprietà <xref:System.Windows.Forms.TreeView.TopNode%2A>, che rappresenta il nodo radice dell'intera visualizzazione albero.  
   
 ### <a name="to-iterate-through-all-nodes-of-the-treeview-control"></a>Per eseguire l'iterazione in tutti i nodi di un controllo TreeView  
   
@@ -28,7 +28,7 @@ A volte è utile esaminare ogni nodo in un controllo Windows Forms <xref:System.
   
 2. Chiamare la routine.  
   
-     Nell'esempio seguente viene illustrato come stampare la <xref:System.Windows.Forms.TreeNode> proprietà di <xref:System.Windows.Forms.TreeNode.Text%2A> ogni oggetto:  
+     Nell'esempio seguente viene illustrato come stampare ogni proprietà <xref:System.Windows.Forms.TreeNode.Text%2A> dell'oggetto <xref:System.Windows.Forms.TreeNode>:  
   
     ```vb  
     Private Sub PrintRecursive(ByVal n As TreeNode)  

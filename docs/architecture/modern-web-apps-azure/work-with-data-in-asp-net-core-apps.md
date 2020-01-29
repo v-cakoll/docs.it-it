@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Usar
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 7e84da784d34be1646df982fa2594764d43d99dd
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
-ms.translationtype: MT
+ms.openlocfilehash: fa30deb16be323f059aa0ec12df08793598a6da2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966876"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738351"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Uso dei dati nelle app ASP.NET Core
 
@@ -385,10 +385,9 @@ Quando si implementa la memorizzazione nella cache, è importante considerare i 
 ASP.NET Core supporta due livelli di memorizzazione nella cache delle risposte. Il primo livello non memorizza tutto nella cache nel server, ma aggiunge le intestazioni HTTP che indicano ai client e ai server proxy di memorizzare le risposte nella cache. Questa istruzione viene implementata aggiungendo l'attributo ResponseCache ai singoli controller o azioni:
 
 ```csharp
-    [ResponseCache(Duration = 60)]
-    public IActionResult Contact()
-    { }
-
+[ResponseCache(Duration = 60)]
+public IActionResult Contact()
+{
     ViewData["Message"] = "Your contact page.";
     return View();
 }

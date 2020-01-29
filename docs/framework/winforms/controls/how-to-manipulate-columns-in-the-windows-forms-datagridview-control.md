@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Modificare le colonne nel controllo DataGridView di Windows Forms'
+title: Modificare le colonne nel controllo DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - columns [Windows Forms], manipulating
 - data grids [Windows Forms], manipulating columns
 ms.assetid: d8cfe6b3-bbab-4182-bec2-0517d9f1eaf6
-ms.openlocfilehash: 1f964314b9fe2f4b1ca235f9e74ca80391a58105
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 485df2594b8f07df784ebbefd9011ca562556eb8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592338"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736089"
 ---
-# <a name="how-to-manipulate-columns-in-the-windows-forms-datagridview-control"></a>Procedura: Modificare le colonne nel controllo DataGridView di Windows Forms
+# <a name="how-to-manipulate-columns-in-the-windows-forms-datagridview-control"></a>Procedura: modificare le colonne nel controllo DataGridView di Windows Form
 
 L'esempio di codice seguente presenta vari modi per modificare colonne di <xref:System.Windows.Forms.DataGridView> mediante le proprietà della classe <xref:System.Windows.Forms.DataGridViewColumn>.
 
