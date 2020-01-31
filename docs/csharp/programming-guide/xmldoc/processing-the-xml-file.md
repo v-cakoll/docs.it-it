@@ -1,18 +1,18 @@
 ---
-title: Elaborazione del file XML - Guida per programmatori C#
+title: Elaborazione della Guida alla C# programmazione dei file XML
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: 2c3ba0e12d0d7e6a568c4c3741d99b901fca2722
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: bc72cade9ce6edddb88d741a3424405bba0a7ad8
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75696519"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793385"
 ---
-# <a name="processing-the-xml-file-c-programming-guide"></a>Elaborazione del file XML (Guida per programmatori C#)
+# <a name="processing-the-xml-file-c-programming-guide"></a>Elaborazione del file XML (C# guida per programmatori)
 
 Il compilatore genera una stringa identificativa (ID) per ciascun costrutto del codice che contiene tag per la creazione della documentazione. Per informazioni su come contrassegnare il codice, vedere [Tag consigliati per i commenti relativi alla documentazione](./recommended-tags-for-documentation-comments.md). La stringa ID identifica in modo univoco il costrutto. I programmi che elaborano il file XML possono usare la stringa ID per identificare il corrispondente elemento metadati/reflection di .NET Framework a cui si applica la documentazione.
 
@@ -27,7 +27,7 @@ Per generare gli ID, il compilatore applica le regole seguenti:
     |Carattere|Descrizione|
     |---------------|-----------------|
     |N|Spazio dei nomi<br /><br /> Non è possibile aggiungere a uno spazio dei nomi commenti relativi alla documentazione, ma, se supportati, è possibile creare riferimenti cref a tali commenti.|
-    |Elemento|tipo: classe, interfaccia, struct, enum, delegato|
+    |Elemento|Tipo: classe, interfaccia, struct, enumerazione o delegato|
     |F|campo|
     |P|proprietà (compresi gli indicizzatori o altre proprietà indicizzate)|
     |M|metodo (compresi i metodi speciali, ad esempio costruttori, operatori e così via)|
@@ -85,5 +85,5 @@ Negli esempi seguenti viene illustrato come vengono generate le stringhe di ID p
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori C#](../index.md)
-- [-doc (opzioni del compilatore C#)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [-DOC (C# opzioni del compilatore)](../../language-reference/compiler-options/doc-compiler-option.md)
 - [Commenti relativi alla documentazione XML](./index.md)

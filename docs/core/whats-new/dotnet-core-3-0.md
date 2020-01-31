@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 10/22/2019
-ms.openlocfilehash: 4bf1c4826273535bfe824828f0fad96998b29483
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: b8aa19a1d422fe7d6accd2b095f15843446599cd
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742598"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789895"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novità di .NET Core 3.0
 
@@ -121,7 +121,7 @@ Quando TC è abilitato, si applica il comportamento seguente per la compilazione
 - Se il metodo ha codice precompilato in anticipo, o [ReadyToRun](#readytorun-images), viene usato il codice pregenerato.
 - In caso contrario, il metodo è compilato JIT. In genere, questi metodi sono generici sui tipi di valore.
   - *JIT rapido* produce più rapidamente codice di qualità inferiore (o meno ottimizzato). In .NET Core 3,0, JIT rapido è abilitato per impostazione predefinita per i metodi che non contengono cicli ed è preferibile durante l'avvio.
-  - Il codice JIT per l'ottimizzazione completa produce più lentamente codice di qualità superiore o più ottimizzata. Per i metodi in cui non è possibile usare JIT rapido (ad esempio, se il metodo è attribuito a <xref:System.Runtime.CompilerServices.MethodImplOptions.AggressiveOptimization?displayProperty=nameWithType>), viene usato l'ottimizzazione JIT completa.
+  - Il codice JIT per l'ottimizzazione completa produce più lentamente codice di qualità superiore (o più ottimizzata). Per i metodi in cui non è possibile usare JIT rapido (ad esempio, se il metodo è attribuito a <xref:System.Runtime.CompilerServices.MethodImplOptions.AggressiveOptimization?displayProperty=nameWithType>), viene usata la modalità JIT completamente ottimizzata.
 
 Per i metodi denominati di frequente, il compilatore just-in-Time crea il codice completamente ottimizzato in background. Il codice ottimizzato sostituisce quindi il codice precompilato per il metodo.
 
@@ -458,7 +458,7 @@ Corrisponde all'operazione IEEE `scaleB` che accetta un valore integrale, restit
 Corrisponde all'operazione IEEE `log2` e restituisce il logaritmo in base 2. Gli errori di arrotondamento sono ridotti al minimo.
 
 - <xref:System.Math.FusedMultiplyAdd(System.Double,System.Double,System.Double)>\
-Corrisponde all'operazione IEEE `fma` ed esegue un'operazione FMA (Fused Multiply-Add). Vale a dire, esegue `(x * y) + z` come una singola operazione, riducendo così al minimo gli errori di arrotondamento. Un esempio è `FusedMultiplyAdd(1e308, 2.0, -1e308)` che restituisce `1e308`. L'operazione normale `(1e308 * 2.0) - 1e308` restituisce `double.PositiveInfinity`.
+Corrisponde all'operazione IEEE `fma` ed esegue un'operazione FMA (Fused Multiply-Add). Vale a dire, esegue `(x * y) + z` come una singola operazione, riducendo così al minimo gli errori di arrotondamento. Un esempio è `FusedMultiplyAdd(1e308, 2.0, -1e308)`, che restituisce `1e308`. L'operazione normale `(1e308 * 2.0) - 1e308` restituisce `double.PositiveInfinity`.
 
 - <xref:System.Math.CopySign(System.Double,System.Double)>\
 Corrisponde all'operazione IEEE `copySign` e restituisce il valore di `x`, ma con il segno di `y`.

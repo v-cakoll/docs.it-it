@@ -1,15 +1,15 @@
 ---
-title: 'Metodo metodo icordebugsymbolprovider:: GetMethodParameterSymbols'
+title: Metodo ICorDebugSymbolProvider::GetMethodParameterSymbols
 ms.date: 03/30/2017
 ms.assetid: 58b7c0b9-f6ad-4b49-b92d-0e421cfd0ec6
-ms.openlocfilehash: 1f7da156e5a164dc753e2283bc7ab24d18983173
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a940077e50ff251111ca6eedaee49401775644d3
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138847"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791590"
 ---
-# <a name="icordebugsymbolprovidergetmethodparametersymbols-method"></a>Metodo metodo icordebugsymbolprovider:: GetMethodParameterSymbols
+# <a name="icordebugsymbolprovidergetmethodparametersymbols-method"></a>Metodo ICorDebugSymbolProvider::GetMethodParameterSymbols
 Ottiene i parametri del metodo da un indirizzo RVA (Relative Virtual Address) di tale metodo.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -34,24 +34,24 @@ HRESULT GetMethodParameterSymbols(
  [out] Puntatore al numero di simboli recuperati dal metodo.  
   
  `pcFetchedSymbols`  
- out Puntatore a una matrice [Metodo icordebugvariablesymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md) che contiene i simboli locali del metodo.  
+ out Puntatore a una matrice [Metodo icordebugvariablesymbol](icordebugvariablesymbol-interface.md) che contiene i simboli locali del metodo.  
   
 ## <a name="remarks"></a>Note  
   
 > [!NOTE]
 > Questo metodo è disponibile solo con .NET Native.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Metodo GetMethodLocalSymbols](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getmethodlocalsymbols-method.md)
-- [Interfaccia ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Metodo GetMethodLocalSymbols](icordebugsymbolprovider-getmethodlocalsymbols-method.md)
+- [Interfaccia ICorDebugSymbolProvider](icordebugsymbolprovider-interface.md)
+- [Interfacce di debug](debugging-interfaces.md)

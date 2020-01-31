@@ -5,12 +5,12 @@ author: thraka
 ms.date: 12/10/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: a4723d6d63c5739123fad774bc75fae7c9fd6703
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 3a72f68f5634c9ee5b137baf12a279130861e61a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340163"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787844"
 ---
 # <a name="tutorial-create-a-template-pack"></a>Esercitazione: creare un pacchetto di modelli
 
@@ -49,7 +49,7 @@ Nel terminale passare alla cartella _working_. Creare un nuovo progetto e impost
 dotnet new console -n templatepack -o .
 ```
 
-Il parametro `-n` imposta il nome del file _csproj_ su _templatepack.csproj_ e il parametro `-o` crea i file nella directory corrente. Viene visualizzato un risultato simile all'output seguente.
+Il parametro `-n` imposta il nome del file con _estensione csproj_ su _TemplatePack. csproj_. Il parametro `-o` crea i file nella directory corrente. Viene visualizzato un risultato simile all'output seguente.
 
 ```console
 C:\working> dotnet new console -n templatepack -o .
@@ -91,7 +91,7 @@ Aprire poi il file _templatepack.csproj_ nell'editor preferito e sostituire il c
 </Project>
 ```
 
-Le impostazioni `<PropertyGroup>` nel codice XML precedente sono suddivise in tre gruppi. Il primo gruppo gestisce le proprietà necessarie per un pacchetto NuGet. Le tre impostazioni `<Package` riguardano le proprietà del pacchetto NuGet per identificare il pacchetto in un feed NuGet. In particolare, il valore `<PacakgeId>` viene usato per disinstallare il pacchetto di modelli con un nome singolo anziché con un percorso di directory. Può anche essere usato per installare il pacchetto di modelli da un feed NuGet. Le impostazioni rimanenti, come `<Title>` e `<Tags>`, si riferiscono ai metadati visualizzati nel feed NuGet. Per altre informazioni sulle impostazioni di NuGet, vedere le [proprietà di NuGet e MSBuild](/nuget/reference/msbuild-targets).
+Le impostazioni `<PropertyGroup>` nel codice XML precedente sono suddivise in tre gruppi. Il primo gruppo gestisce le proprietà necessarie per un pacchetto NuGet. Le tre impostazioni `<Package` riguardano le proprietà del pacchetto NuGet per identificare il pacchetto in un feed NuGet. In particolare, il valore `<PackageId>` viene usato per disinstallare il pacchetto di modelli con un nome singolo anziché con un percorso di directory. Può anche essere usato per installare il pacchetto di modelli da un feed NuGet. Le impostazioni rimanenti, come `<Title>` e `<PackageTags>`, si riferiscono ai metadati visualizzati nel feed NuGet. Per altre informazioni sulle impostazioni di NuGet, vedere le [proprietà di NuGet e MSBuild](/nuget/reference/msbuild-targets).
 
 L'impostazione `<TargetFramework>` deve essere impostata in modo che MSBuild venga eseguito correttamente quando si esegue il comando pack per compilare il progetto e crearne il pacchetto.
 
@@ -178,7 +178,7 @@ Currently installed items:
 
 Eseguire `dotnet new -u AdatumCorporation.Utility.Templates` per disinstallare il modello. Il comando `dotnet new` restituirà informazioni che dovrebbero omettere i modelli installati in precedenza.
 
-La procedura è stata completata. È stato installato e disinstallato un pacchetto di modelli. 
+La procedura è stata completata. È stato installato e disinstallato un pacchetto di modelli.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

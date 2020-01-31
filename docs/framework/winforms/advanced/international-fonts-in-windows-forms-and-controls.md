@@ -1,5 +1,5 @@
 ---
-title: Tipi di carattere internazionali in Windows Forms e controlli
+title: Tipi di carattere internazionali nei form e nei controlli
 ms.date: 03/30/2017
 helpviewer_keywords:
 - fonts [Windows Forms], international
@@ -13,12 +13,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c3066df-9bac-479a-82b2-79e484b346a3
-ms.openlocfilehash: 0ddbd6d7a1b614d588a2572b410957a5ed3b768c
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 59dde6bb384d644321a8ff5674d735f8e6d36fd0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956914"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743513"
 ---
 # <a name="international-fonts-in-windows-forms-and-controls"></a>Tipi di carattere internazionali in Windows Forms e controlli
 
@@ -28,7 +28,7 @@ Nelle applicazioni internazionali, il metodo consigliato per la selezione di tip
 
 Per sfruttare i vantaggi di questa funzionalità, non impostare la proprietà <xref:System.Drawing.Font> per il form o qualsiasi altro elemento. L'applicazione userà automaticamente il tipo di carattere di sistema predefinito, che differisce da una lingua localizzata del sistema operativo a un'altra. Quando l'applicazione viene eseguita, il sistema fornisce automaticamente il tipo di carattere corretto per le impostazioni cultura selezionate nel sistema operativo.
 
-Si verifica un'eccezione alla regola di non impostare il tipo di carattere, ovvero per modificare lo stile del tipo di carattere. Questo potrebbe essere importante per un'applicazione in cui l'utente fa clic su un pulsante per creare il testo in una casella di testo in grassetto. A tale scopo, è necessario scrivere una funzione per modificare lo stile del tipo di carattere della casella di testo in grassetto, in base a qualsiasi tipo di carattere del modulo. È importante chiamare questa funzione in due posizioni: nel gestore dell'evento <xref:System.Windows.Forms.Control.Click> del pulsante e nel gestore dell'evento <xref:System.Windows.Forms.Control.FontChanged>. Se la funzione viene chiamata solo nel gestore eventi <xref:System.Windows.Forms.Control.Click> e un altro frammento di codice modifica la famiglia di caratteri dell'intero form, la casella di testo non cambia con il resto del modulo.
+Si verifica un'eccezione alla regola di non impostare il tipo di carattere, ovvero per modificare lo stile del tipo di carattere. Questo potrebbe essere importante per un'applicazione in cui l'utente fa clic su un pulsante per creare il testo in una casella di testo in grassetto. A tale scopo, è necessario scrivere una funzione per modificare lo stile del tipo di carattere della casella di testo in grassetto, in base a qualsiasi tipo di carattere del modulo. È importante chiamare questa funzione in due posizioni: nel gestore dell'evento <xref:System.Windows.Forms.Control.Click> del pulsante e nel gestore dell'evento <xref:System.Windows.Forms.Control.FontChanged>. Se la funzione viene chiamata solo nel gestore eventi <xref:System.Windows.Forms.Control.Click> e alcune altre parti di codice modificano la famiglia di caratteri dell'intero form, la casella di testo non cambia con il resto del modulo.
 
 ```vb
 Private Sub MakeBold()

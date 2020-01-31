@@ -8,16 +8,16 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 92d267ee9e87e9d204fe76172ca7e0fe33cf1a1b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 1bb38436049e338ab6033ae3b6370732a457d520
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976585"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794218"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Procedura dettagliata: associazione ai dati in applicazioni ibride
 
-Il binding di un'origine dati a un controllo è essenziale per consentire agli utenti di accedere ai dati sottostanti, indipendentemente dal fatto che si utilizzino [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Questa procedura dettagliata illustra come è possibile usare data binding in applicazioni ibride che includono controlli sia [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] che [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
+Il binding di un'origine dati a un controllo è essenziale per consentire agli utenti di accedere ai dati sottostanti, indipendentemente dal fatto che si utilizzino Windows Forms o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Questa procedura dettagliata illustra come è possibile usare data binding in applicazioni ibride che includono controlli sia Windows Forms che [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
 Le attività illustrate nella procedura dettagliata sono le seguenti:
 
@@ -39,7 +39,7 @@ Per un listato di codice completo delle attività illustrate in questa procedura
 
 Al termine, si conosceranno le funzionalità di associazione dati nelle applicazioni ibride.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per completare la procedura dettagliata, è necessario disporre dei componenti seguenti:
 
@@ -61,7 +61,7 @@ Per completare la procedura dettagliata, è necessario disporre dei componenti s
 
 3. Aprire MainWindow. XAML in WPF Designer.
 
-4. Nell'elemento <xref:System.Windows.Window> aggiungere il mapping degli spazi dei nomi [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] seguente.
+4. Nell'elemento <xref:System.Windows.Window> aggiungere il mapping degli spazi dei nomi Windows Forms seguente.
 
     ```xaml
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
@@ -113,7 +113,7 @@ I dettagli di ogni record cliente vengono visualizzati in diversi controlli <xre
 
 ## <a name="displaying-data-by-using-interoperation"></a>Visualizzazione dei dati utilizzando l'interoperabilità
 
-Gli ordini corrispondenti al cliente selezionato vengono visualizzati in un controllo <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> denominato `dataGridView1`. Il controllo `dataGridView1` viene associato all'origine dati nel file code-behind. Un controllo <xref:System.Windows.Forms.Integration.WindowsFormsHost> è l'elemento padre di questo controllo [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
+Gli ordini corrispondenti al cliente selezionato vengono visualizzati in un controllo <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> denominato `dataGridView1`. Il controllo `dataGridView1` viene associato all'origine dati nel file code-behind. Un controllo <xref:System.Windows.Forms.Integration.WindowsFormsHost> è l'elemento padre di questo controllo Windows Forms.
 
 ### <a name="to-display-data-in-the-datagridview-control"></a>Per visualizzare i dati nel controllo DataGridView
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 53d073c6-fa02-40d2-82e1-b9452bb6abaa
 topic_type:
 - apiref
-ms.openlocfilehash: a7eb2796de060b3a5dc8e8c08d07e6aeeb3daecb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0cc79c0a93fa4f05b8c793a8b7fb0b9b3f031b1a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131258"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791961"
 ---
 # <a name="icordebugremote-interface"></a>Interfaccia ICorDebugRemote
 Consente di avviare o allegare un debugger gestito a un processo di destinazione remoto.  
@@ -60,13 +60,13 @@ interface ICorDebugRemote : IUnknown
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo ICorDebugRemote::CreateProcessEx](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-createprocessex-method.md)|Crea un processo in un computer remoto per il debug gestito.|  
-|[Metodo ICorDebugRemote::DebugActiveProcessEx](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-debugactiveprocessex-method.md)|Avvia un processo in un computer remoto nel debugger.|  
+|[Metodo ICorDebugRemote::CreateProcessEx](icordebugremote-createprocessex-method.md)|Crea un processo in un computer remoto per il debug gestito.|  
+|[Metodo ICorDebugRemote::DebugActiveProcessEx](icordebugremote-debugactiveprocessex-method.md)|Avvia un processo in un computer remoto nel debugger.|  
   
 ## <a name="remarks"></a>Note  
  Questa funzionalità è attualmente supportata solo per il debug di una destinazione applicazione basata su Silverlight in esecuzione su un computer Macintosh remoto.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
@@ -77,7 +77,7 @@ interface ICorDebugRemote : IUnknown
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorDebugRemoteTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
-- [Interfaccia ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [Interfaccia ICorDebugRemoteTarget](icordebugremotetarget-interface.md)
+- [Interfaccia ICorDebug](icordebug-interface.md)
 
-- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfacce di debug](debugging-interfaces.md)

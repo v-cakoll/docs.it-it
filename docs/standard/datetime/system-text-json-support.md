@@ -13,12 +13,12 @@ helpviewer_keywords:
 - JSON Serializer, JSON Reader, JSON Writer
 - Converter, JSON Converter, DateTime Converter
 - ISO, ISO 8601, ISO 8601-1:2019
-ms.openlocfilehash: 8198359e2c54c4ed098703fbcc070f7469b3362a
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: fb8836d9c556b317c50b6b34a9dde4e42c6486b5
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344646"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867347"
 ---
 # <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>Supporto di DateTime e DateTimeOffset in System.Text.Json
 
@@ -136,7 +136,7 @@ Il profilo ISO 8601-1:2019 esteso implementato in <xref:System.Text.Json> defini
 | Tempo parziale    | "HH":' mm ':' SS [FFFFFFF] "     | Tempo senza informazioni di offset UTC                                             |
 | Data completa       | "yyyy-'-dd"            | Data calendario                                                                   |
 | Ora completa       | "Time'K parziale"           | Ora UTC del giorno o ora locale del giorno con offset dell'ora tra l'ora locale e l'ora UTC |
-| Data e ora       | "Ora completa ''''''' | Data e ora del calendario del giorno, ad esempio 2019-07-26T16:59:57-05:00                   |
+| Data/ora       | "Ora completa ''''''' | Data e ora del calendario del giorno, ad esempio 2019-07-26T16:59:57-05:00                   |
 
 ### <a name="support-for-parsing"></a>Supporto per l'analisi
 
@@ -199,4 +199,12 @@ Per la formattazione vengono definiti i livelli di granularità seguenti:
 
         Usato per formattare un <xref:System.DateTime> o <xref:System.DateTimeOffset> con i secondi frazionari e con un offset locale.
 
-Se presenti, vengono scritti al massimo 7 cifre frazionarie. Questa operazione è allineata all'implementazione di <xref:System.DateTime>, che è limitata a questa risoluzione.
+Se la rappresentazione in [formato round trip](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier) di un'istanza <xref:System.DateTime> o <xref:System.DateTimeOffset> contiene zeri finali nei secondi frazionari, <xref:System.Text.Json.JsonSerializer> e <xref:System.Text.Json.Utf8JsonWriter> formatteranno una rappresentazione dell'istanza senza zeri finali.
+Ad esempio, un'istanza di <xref:System.DateTime> la cui rappresentazione del [formato round trip](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier) è `2019-04-24T14:50:17.1010000Z`, verrà formattata come `2019-04-24T14:50:17.101Z` da <xref:System.Text.Json.JsonSerializer> e <xref:System.Text.Json.Utf8JsonWriter>.
+
+Se la rappresentazione in [formato round trip](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier) di un'istanza <xref:System.DateTime> o <xref:System.DateTimeOffset> contiene tutti zeri nei secondi frazionari, <xref:System.Text.Json.JsonSerializer> e <xref:System.Text.Json.Utf8JsonWriter> formatteranno una rappresentazione dell'istanza senza secondi frazionari.
+Ad esempio, un'istanza di <xref:System.DateTime> la cui rappresentazione del [formato round trip](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier) è `2019-04-24T14:50:17.0000000+02:00`, verrà formattata come `2019-04-24T14:50:17+02:00` da <xref:System.Text.Json.JsonSerializer> e <xref:System.Text.Json.Utf8JsonWriter>.
+
+Il troncamento degli zeri nelle cifre dei secondi frazionari consente l'output più piccolo necessario per mantenere le informazioni su un round trip da scrivere.
+
+Vengono scritti al massimo 7 cifre in secondi frazionari. Questa operazione è allineata all'implementazione di <xref:System.DateTime>, che è limitata a questa risoluzione.

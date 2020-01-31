@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 166b0761-ed80-4ccd-9973-dc20e61bf8fa
 topic_type:
 - apiref
-ms.openlocfilehash: 077e6d729eb98ddad25cd0c0cccf6d4641e2602c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a1a616c1289867864eb9eb449c7d6f47f9a8352b
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428254"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861294"
 ---
 # <a name="icorprofilerobjectenumgetcount-method"></a>Metodo ICorProfilerObjectEnum::GetCount
 Ottiene il numero totale di oggetti bloccati nella raccolta.  
@@ -39,15 +39,15 @@ HRESULT GetCount (
   
  Questo metodo restituirà sempre zero in .NET Framework versione 3,5 Service Pack 1 (SP1) e versioni successive.  
   
-## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti di  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)
+- [Interfaccia ICorProfilerObjectEnum](icorprofilerobjectenum-interface.md)

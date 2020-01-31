@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b0b2facd-5991-4f4c-932d-c4937f45cef9
 topic_type:
 - apiref
-ms.openlocfilehash: 99778240afb7e296b93cd87ab91feeca20d02637
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8153dbd27e168e3a5bd8e5aeada955a0382aaf75
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428272"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868252"
 ---
 # <a name="icorprofilerobjectenumclone-method"></a>Metodo ICorProfilerObjectEnum::Clone
-Ottiene un puntatore a interfaccia a una copia di questa interfaccia [ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md) .  
+Ottiene un puntatore a interfaccia a una copia di questa interfaccia [ICorProfilerObjectEnum](icorprofilerobjectenum-interface.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,15 +36,15 @@ HRESULT Clone (
  `ppEnum`  
  out Puntatore al puntatore a interfaccia che a sua volta punta alla copia di questa interfaccia `ICorProfilerObjectEnum`. La copia gestisce il proprio stato di enumerazione separatamente da questa. Tuttavia, la posizione iniziale del cursore della copia sarà uguale alla posizione corrente del cursore dell'enumeratore.  
   
-## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti di  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)
+- [Interfaccia ICorProfilerObjectEnum](icorprofilerobjectenum-interface.md)

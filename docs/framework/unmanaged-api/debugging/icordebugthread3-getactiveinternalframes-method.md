@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d69796b4-5b6d-457c-85f6-2cf42e8a8773
 topic_type:
 - apiref
-ms.openlocfilehash: b4f228d55c9ffd6b85ebd0b430a7f5db404320f6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 25cd3e05bc80dd39d2ca558bb4dd5fb77d255f5a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124342"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791404"
 ---
 # <a name="icordebugthread3getactiveinternalframes-method"></a>Metodo ICorDebugThread3::GetActiveInternalFrames
-Restituisce una matrice di frame interni (oggetti[ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) ) nello stack.  
+Restituisce una matrice di frame interni (oggetti[ICorDebugInternalFrame2](icordebuginternalframe2-interface.md) ) nello stack.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -52,7 +52,7 @@ HRESULT GetActiveInternalFrames
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|Creazione dell'oggetto [ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) completata.|  
+|S_OK|Creazione dell'oggetto [ICorDebugInternalFrame2](icordebuginternalframe2-interface.md) completata.|  
 |E_INVALIDARG|`cInternalFrames` non è zero e `ppInternalFrames` è `null`o `pcInternalFrames` è `null`.|  
 |HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|`ppInternalFrames` è inferiore al numero di frame interni.|  
   
@@ -65,18 +65,18 @@ HRESULT GetActiveInternalFrames
   
  `GetActiveInternalFrames` deve quindi essere chiamato una seconda volta. È necessario passare il conteggio appropriato (`pcInternalFrames`) nel parametro `cInternalFrames` e specificare un puntatore a una matrice di dimensioni appropriate in `ppInternalFrames`.  
   
- Usare il metodo [ICorDebugStackWalk:: GetFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) per restituire gli stack frame effettivi.  
+ Usare il metodo [ICorDebugStackWalk:: GetFrame](icordebugthread3-getactiveinternalframes-method.md) per restituire gli stack frame effettivi.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Interfacce di debug](debugging-interfaces.md)
+- [Debug](index.md)

@@ -1,5 +1,5 @@
 ---
-title: DacpReJitData Structure
+title: Struttura DacpReJitData
 ms.date: 02/01/2019
 api.name:
 - DacpReJitData Structure
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 77ef2c65157df4a033700bb8d0295875ede46554
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 46031f29da6916eeaeea863ebef6924a720d7155
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739104"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793820"
 ---
-# <a name="dacprejitdata-structure"></a>DacpReJitData Structure
+# <a name="dacprejitdata-structure"></a>Struttura DacpReJitData
 
-Definisce le informazioni di base per un determinato metodo instrumentato del profiler.
+Definisce le informazioni di base su un metodo instrumentato fornito dal profiler.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -51,21 +51,21 @@ struct MSLAYOUT DacpReJitData
 
 | Member           | Descrizione                                                                                      |
 | ---------------- | ------------------------------------------------------------------------------------------------ |
-| `rejitID`        | Il numero di revisione ReJit per un metodo.                                                          |
-| `flags`          | Un flag che indica lo stato corrente della strumentazione ReJit del metodo per la versione specificata. |
-| `NativeCodeAddr` | L'indirizzo di base dell'implementazione rejitted del metodo.                                         |
+| `rejitID`        | Numero di revisione ReJit per un metodo.                                                          |
+| `flags`          | Flag che indica lo stato corrente della strumentazione ReJit del metodo per la versione specificata. |
+| `NativeCodeAddr` | Indirizzo di base dell'implementazione di rejitted del metodo.                                         |
 
 ## <a name="remarks"></a>Note
 
-Questa struttura si trova all'interno del runtime e non viene esposto tramite le intestazioni o i file di libreria. Per usarlo, definire la struttura come specificato in precedenza. La struttura deve anche essere definita usando `ms_struct` compressione se non si utilizza i compilatori Microsoft.
+Questa struttura si trova all'interno del runtime e non viene esposta tramite le intestazioni o i file di libreria. Per usarlo, definire la struttura come specificato in precedenza. Se non si usano i compilatori Microsoft, è necessario definire anche la struttura usando `ms_struct` la compressione.
 
-## <a name="requirements"></a>Requisiti
-**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
-**Intestazione:** nessuno  
-**Libreria:** nessuno  
-**Versioni di .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+## <a name="requirements"></a>Requisiti di
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+**Intestazione:** Nessuno  
+**Libreria:** Nessuno  
+**Versioni .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Strutture di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Debug](index.md)
+- [Strutture di debug](debugging-structures.md)

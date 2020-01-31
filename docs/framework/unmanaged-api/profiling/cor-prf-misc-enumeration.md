@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 619bb5de-e309-48b6-a3af-32d935a0ff46
 topic_type:
 - apiref
-ms.openlocfilehash: 8105ba34ca400771fbc4273630f20941a4a9557d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fe27c0fca6d38b4cff6cac2b9778cf2be68903a3
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432281"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867126"
 ---
 # <a name="cor_prf_misc-enumeration"></a>Enumerazione COR_PRF_MISC
 Contiene valori costanti che specificano identificatori speciali.  
@@ -34,23 +34,23 @@ typedef enum {
 } COR_PRF_MISC;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
-|`PROFILER_PARENT_UNKNOWN`|Identificatore predefinito usato da [ICorProfilerInfo:: GetModuleInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md) per un modulo che non è ancora stato associato a un assembly.|  
+|`PROFILER_PARENT_UNKNOWN`|Identificatore predefinito usato da [ICorProfilerInfo:: GetModuleInfo](icorprofilerinfo-getmoduleinfo-method.md) per un modulo che non è ancora stato associato a un assembly.|  
 |`PROFILER_GLOBAL_CLASS`|Identificatore di classe predefinito per le costanti globali che non appartengono a una classe.|  
 |`PROFILER_GLOBAL_MODULE`|Identificatore del modulo predefinito per gli oggetti globali che non appartengono a un modulo.|  
   
-## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti di  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Enumerazioni di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [Enumerazioni di profilatura](profiling-enumerations.md)

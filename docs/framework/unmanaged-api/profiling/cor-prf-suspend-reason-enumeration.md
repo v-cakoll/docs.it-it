@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 75594833-bed3-47b2-a426-b75c5fe6fbcf
 topic_type:
 - apiref
-ms.openlocfilehash: d2d9ca77e764fe439753f1174a42af5ef80faa59
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 1036ecbdb735b95c0ad6897c1545e3bd8cb6c3a9
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447713"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867074"
 ---
 # <a name="cor_prf_suspend_reason-enumeration"></a>Enumerazione COR_PRF_SUSPEND_REASON
 Indica il motivo della sospensione del runtime.  
@@ -38,12 +38,12 @@ typedef enum {
 } COR_PRF_SUSPEND_REASON;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`COR_PRF_FIELD_SUSPEND_OTHER`|Il runtime viene sospeso per un motivo non specificato.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC`|Il runtime viene sospeso per servire una richiesta Garbage Collection.<br /><br /> I callback correlati a Garbage Collection si verificano tra i callback [ICorProfilerCallback:: RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) e [ICorProfilerCallback:: RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) .|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC`|Il runtime viene sospeso per servire una richiesta Garbage Collection.<br /><br /> I callback correlati a Garbage Collection si verificano tra i callback [ICorProfilerCallback:: RuntimeSuspendFinished](icorprofilercallback-runtimesuspendfinished-method.md) e [ICorProfilerCallback:: RuntimeResumeStarted](icorprofilercallback-runtimeresumestarted-method.md) .|  
 |`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|Il runtime viene sospeso in modo che sia possibile arrestare un `AppDomain`.<br /><br /> Durante la sospensione del runtime, il runtime determinerà quali thread si trovano nell'`AppDomain` che viene arrestato e li imposta su Interrompi al riavvio. Non sono presenti callback specifici di `AppDomain`durante questa sospensione.|  
 |`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|Il runtime viene sospeso in modo che possa verificarsi il pitching del codice.<br /><br /> Il pitching del codice si verifica solo quando il compilatore JIT (just-in-Time) è attivo con la funzionalità di pitching del codice abilitata. I callback di pitching del codice si verificano tra i callback `ICorProfilerCallback::RuntimeSuspendFinished` e `ICorProfilerCallback::RuntimeResumeStarted`. **Nota:**  CLR JIT non esegue il pitch delle funzioni nella .NET Framework versione 2,0, pertanto questo valore non viene usato in 2,0.|  
 |`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|Il runtime viene sospeso in modo che sia possibile arrestarlo. Per completare l'operazione, è necessario sospendere tutti i thread.|  
@@ -54,15 +54,15 @@ typedef enum {
 ## <a name="remarks"></a>Note  
  È possibile continuare l'esecuzione di tutti i thread di runtime presenti nel codice non gestito fino a quando non tentano di immettere nuovamente il runtime, quindi verranno sospesi fino al riavvio del runtime. Questo vale anche per i nuovi thread che entrano in fase di esecuzione. Tutti i thread all'interno della fase di esecuzione vengono sospesi immediatamente se sono nel codice interrompibili o vengono richiesti per la sospensione quando raggiungono il codice interrompibili.  
   
-## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti di  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Enumerazioni di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [Enumerazioni di profilatura](profiling-enumerations.md)

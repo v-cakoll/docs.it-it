@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2ca20db-df22-4528-a0dd-a09ea62c8998
 topic_type:
 - apiref
-ms.openlocfilehash: aa06b7db6b7371e66853ed242f5e118fb5e5ff0c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: aeaa706ef35413a728f8b254cd325f0bcc83acd1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73096197"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792719"
 ---
 # <a name="icordebugnativeframe2ismatchingparentframe-method"></a>Metodo ICorDebugNativeFrame2::IsMatchingParentFrame
 Determina se il frame specificato è l'elemento padre del frame corrente.  
@@ -54,17 +54,17 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
 ## <a name="remarks"></a>Note  
  `IsMatchingParentFrame` restituisce `true` se l'oggetto frame passato al metodo è l'elemento padre dell'oggetto frame su cui è stato chiamato il metodo. Se si chiama il metodo su un frame che non è figlio del frame specificato, viene restituito un errore.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorDebugNativeFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)
-- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Interfaccia ICorDebugNativeFrame2](icordebugnativeframe2-interface.md)
+- [Interfacce di debug](debugging-interfaces.md)
+- [Debug](index.md)

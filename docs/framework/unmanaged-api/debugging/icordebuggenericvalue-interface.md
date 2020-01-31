@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bc14f408-b359-4c8c-ade2-888ccdf7261b
 topic_type:
 - apiref
-ms.openlocfilehash: 312b8b005998da44feb5ae24ab4a0a17bb948a3f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e60d4b128bf03ff81863e0c95815b2c204807583
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138566"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794463"
 ---
 # <a name="icordebuggenericvalue-interface"></a>Interfaccia ICorDebugGenericValue
 
@@ -29,8 +29,8 @@ Sottoclasse di "ICorDebugValue" che si applica a tutti i valori. Questa interfac
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo GetValue](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-getvalue-method.md)|Copia il valore nel buffer specificato.|  
-|[Metodo SetValue](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md)|Copia un nuovo valore dal buffer specificato.|  
+|[Metodo GetValue](icordebuggenericvalue-getvalue-method.md)|Copia il valore nel buffer specificato.|  
+|[Metodo SetValue](icordebuggenericvalue-setvalue-method.md)|Copia un nuovo valore dal buffer specificato.|  
   
 ## <a name="remarks"></a>Note  
  `ICorDebugGenericValue` è un'interfaccia secondaria perché non utilizzabile in remoto.  
@@ -42,15 +42,15 @@ Sottoclasse di "ICorDebugValue" che si applica a tutti i valori. Questa interfac
 > [!NOTE]
 > Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfacce di debug](debugging-interfaces.md)

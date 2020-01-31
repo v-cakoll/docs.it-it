@@ -1,15 +1,15 @@
 ---
-title: 'Metodo metodo icordebugsymbolprovider:: GetInstanceFieldSymbols'
+title: Metodo ICorDebugSymbolProvider::GetInstanceFieldSymbols
 ms.date: 03/30/2017
 ms.assetid: a29b9233-ee67-4b53-b8bc-c00b281e7edb
-ms.openlocfilehash: 0ad8ddd78d963681c0b2f69bf0f211ad464dc7b7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9c55ce4d36681e173047cfb51515a74899c5a9fe
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138886"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791639"
 ---
-# <a name="icordebugsymbolprovidergetinstancefieldsymbols-method"></a>Metodo metodo icordebugsymbolprovider:: GetInstanceFieldSymbols
+# <a name="icordebugsymbolprovidergetinstancefieldsymbols-method"></a>Metodo ICorDebugSymbolProvider::GetInstanceFieldSymbols
 Ottiene i simboli dei campi di istanza che corrispondono a una firma typespec.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -38,24 +38,24 @@ HRESULT GetInstanceFieldSymbols(
  [out] Puntatore al numero di simboli recuperati dal metodo.  
   
  `pSymbols`  
- out Puntatore a una matrice [ICorDebugStaticFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md) che contiene i simboli dei campi di istanza richiesti.  
+ out Puntatore a una matrice [ICorDebugStaticFieldSymbol](icordebugstaticfieldsymbol-interface.md) che contiene i simboli dei campi di istanza richiesti.  
   
 ## <a name="remarks"></a>Note  
   
 > [!NOTE]
 > Questo metodo è disponibile solo con .NET Native.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Metodo GetStaticFieldSymbols](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getstaticfieldsymbols-method.md)
-- [Interfaccia ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Metodo GetStaticFieldSymbols](icordebugsymbolprovider-getstaticfieldsymbols-method.md)
+- [Interfaccia ICorDebugSymbolProvider](icordebugsymbolprovider-interface.md)
+- [Interfacce di debug](debugging-interfaces.md)

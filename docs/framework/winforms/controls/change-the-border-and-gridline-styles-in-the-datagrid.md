@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Modificare gli stili dei bordi e delle linee della griglia nel controllo DataGridView di Windows Forms'
+title: Modificare gli stili del bordo e della griglia nel controllo DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - data grids [Windows Forms], changing border styles
 - DataGridView control [Windows Forms], gridline styles
 ms.assetid: 2f413c7a-4025-4171-8e3a-66ef908ea583
-ms.openlocfilehash: ebeca5f933eac4da2bf3d4f300866fd2ff52b32a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 918102a87ee29a3d3b78d6e6eedce57237135a51
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917665"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744707"
 ---
-# <a name="how-to-change-the-border-and-gridline-styles-in-the-windows-forms-datagridview-control"></a>Procedura: Modificare gli stili dei bordi e delle linee della griglia nel controllo DataGridView di Windows Forms
-Con il <xref:System.Windows.Forms.DataGridView> controllo è possibile personalizzare l'aspetto del bordo e della griglia del controllo per migliorare l'esperienza utente. È possibile modificare il colore della griglia e lo stile del bordo del controllo oltre agli stili del bordo per le celle all'interno del controllo. È inoltre possibile applicare stili di bordo delle celle diversi per celle ordinarie, celle di intestazioni di riga e celle di intestazione di colonna.  
+# <a name="how-to-change-the-border-and-gridline-styles-in-the-windows-forms-datagridview-control"></a>Procedura: modificare gli stili dei bordi e delle linee della griglia nel controllo DataGridView di Windows Form
+Con il controllo <xref:System.Windows.Forms.DataGridView> è possibile personalizzare l'aspetto del bordo e della griglia del controllo per migliorare l'esperienza utente. È possibile modificare il colore della griglia e lo stile del bordo del controllo oltre agli stili del bordo per le celle all'interno del controllo. È inoltre possibile applicare stili di bordo delle celle diversi per celle ordinarie, celle di intestazioni di riga e celle di intestazione di colonna.  
   
 > [!NOTE]
-> Il colore della griglia viene utilizzato solo con <xref:System.Windows.Forms.DataGridViewCellBorderStyle.Single>i <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal>valori, <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical> e <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle> dell' <xref:System.Windows.Forms.DataGridViewCellBorderStyle> enumerazione e il <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle.Single> valore dell'enumerazione. Gli altri valori di queste enumerazioni utilizzano i colori specificati dal sistema operativo. Inoltre, quando gli stili di visualizzazione sono abilitati in Windows XP e la famiglia di Windows <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> Server 2003 tramite <xref:System.Windows.Forms.DataGridView.GridColor%2A> il metodo, il valore della proprietà non viene utilizzato.  
+> Il colore della griglia viene utilizzato solo con i valori <xref:System.Windows.Forms.DataGridViewCellBorderStyle.Single>, <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal>e <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical> dell'enumerazione <xref:System.Windows.Forms.DataGridViewCellBorderStyle> e il valore <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle.Single> dell'enumerazione <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle>. Gli altri valori di queste enumerazioni utilizzano i colori specificati dal sistema operativo. Inoltre, quando gli stili di visualizzazione sono abilitati in Windows XP e la famiglia di Windows Server 2003 tramite il metodo <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>, il valore della proprietà <xref:System.Windows.Forms.DataGridView.GridColor%2A> non viene utilizzato.  
   
 ### <a name="to-change-the-gridline-color-programmatically"></a>Per modificare il colore della griglia a livello di codice  
   
@@ -40,7 +40,7 @@ Con il <xref:System.Windows.Forms.DataGridView> controllo è possibile personali
   
 ### <a name="to-change-the-border-styles-for-datagridview-cells-programmatically"></a>Per modificare gli stili del bordo per le celle DataGridView a livello di codice  
   
-- Impostare le <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A>proprietà <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A>, e <xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A> .  
+- Impostare le proprietà <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A>, <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A>e <xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A>.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#033](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#033)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#033](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#033)]  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Open File dialog box
 - OpenFileDialog component
 ms.assetid: d2efa832-a272-42ff-aa26-c4ac13ff59ba
-ms.openlocfilehash: ef6b69a90a048caf7924b00ddd0b79a0a7efaeb9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 1f831297ec9d34cbf0c3c55390abd8be0f5013ee
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744367"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868096"
 ---
 # <a name="openfiledialog-component-windows-forms"></a>Componente OpenFileDialog (Windows Form)
 Il componente di Windows Form <xref:System.Windows.Forms.OpenFileDialog> è una finestra di dialogo preconfigurata. Si tratta della stessa finestra di dialogo **Apri file** esposta dal sistema operativo Windows. Il componente eredita dalla classe <xref:System.Windows.Forms.CommonDialog>.  
@@ -31,7 +31,4 @@ Il componente di Windows Form <xref:System.Windows.Forms.OpenFileDialog> è una 
  Descrive un set di controlli e componenti che consentono agli utenti di eseguire interazioni standard con l'applicazione o il sistema.  
   
  [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)  
- Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.  
-  
- [Essential Code for Windows Forms Dialog Boxes](https://go.microsoft.com/fwlink/?LinkID=102575) (Codice di base per le finestre di dialogo di Windows Form)  
- Descrive i controlli di finestra di dialogo di Windows Form, i componenti e il codice necessario per lo svolgimento delle relative funzioni di base. Si tratta di un articolo tecnico della MSDN Online Library.
+ Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.

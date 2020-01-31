@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8dcd7537-d0c6-498c-8a56-2c060310ef65
 topic_type:
 - apiref
-ms.openlocfilehash: 1bbdfa93913b9fdf8aa164c8ca6c35cd33a228df
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f1cfef464569b577923fbb16624c99358998d29c
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449912"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866247"
 ---
 # <a name="icorprofilercallbackjitcompilationfinished-method"></a>Metodo ICorProfilerCallback::JITCompilationFinished
 Notifica al profiler che il compilatore just-in-time (JIT) ha terminato la compilazione di una funzione.  
@@ -34,28 +34,32 @@ HRESULT JITCompilationFinished(
     [in] BOOL       fIsSafeToBlock);  
 ```  
   
-## <a name="parameters"></a>Parametri  
- `functionId`  
- in ID della funzione compilata.  
-  
- `hrStatus`  
- in Valore che indica se la compilazione è stata eseguita correttamente.  
-  
- `fIsSafeToBlock`  
- in Valore che indica al profiler se il blocco influirà sul funzionamento del runtime. Il valore è `true` se il blocco può causare la restituzione del thread chiamante da parte del runtime. in caso contrario, `false`.  
-  
- Sebbene il valore `true` non danneggi il runtime, può alterare i risultati della profilatura.  
-  
-## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="parameters"></a>Parametri
+
+- `functionId`
+
+  \[in] ID della funzione compilata.
+
+- `hrStatus`
+
+  \[in] valore che indica se la compilazione è stata eseguita correttamente.
+
+- `fIsSafeToBlock`
+
+  \[in] valore che indica al profiler se il blocco influirà sul funzionamento del runtime. Il valore è `true` se il blocco può causare la restituzione del thread chiamante da parte del runtime. in caso contrario, `false`.
+
+  Sebbene il valore `true` non danneggi il runtime, può alterare i risultati della profilatura.
+
+## <a name="requirements"></a>Requisiti di  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [Metodo JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)
+- [Interfaccia ICorProfilerCallback](icorprofilercallback-interface.md)
+- [Metodo JITCompilationStarted](icorprofilercallback-jitcompilationstarted-method.md)

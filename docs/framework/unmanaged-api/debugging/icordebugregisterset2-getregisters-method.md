@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dbc498a8-ba3f-42f2-bdd9-b623c77a1019
 topic_type:
 - apiref
-ms.openlocfilehash: 8e5583acfe338c185200c0b8e41b7d6e051fa146
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 54a5fb50a0177fe9886582c112f16ce871ea9df4
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131360"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792067"
 ---
 # <a name="icordebugregisterset2getregisters-method"></a>Metodo ICorDebugRegisterSet2::GetRegisters
 Ottiene il valore di ogni registro (per la piattaforma in cui è attualmente in esecuzione il codice) specificato dalla maschera di bit specificata.  
@@ -56,18 +56,18 @@ HRESULT GetRegisters (
   
  Il metodo `ICorDebugRegisterSet2::GetRegisters` è necessario per le piattaforme con più di 64 registri. Ad esempio, IA64 ha 128 registri per utilizzo generico e 128 registri a virgola mobile, quindi è necessario più di 64 bit nella maschera di bit.  
   
- Se non si dispone di più di 64 registri, come nel caso di piattaforme come x86, il metodo `GetRegisters` converte in realtà solo i byte nella matrice `mask` byte in una `ULONG64` e quindi chiama il metodo [ICorDebugRegisterSet:: GetRegisters](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregisters-method.md) , che accetta il `ULONG64` maschera.  
+ Se non si dispone di più di 64 registri, come nel caso di piattaforme come x86, il metodo `GetRegisters` converte effettivamente i byte nella matrice `mask` byte in un `ULONG64` e quindi chiama il metodo [ICorDebugRegisterSet:: GetRegisters](icordebugregisterset-getregisters-method.md) , che accetta la maschera di `ULONG64`.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorDebugRegisterSet2](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
-- [Interfaccia ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+- [Interfaccia ICorDebugRegisterSet2](icordebugregisterset2-interface.md)
+- [Interfaccia ICorDebugRegisterSet](icordebugregisterset-interface.md)

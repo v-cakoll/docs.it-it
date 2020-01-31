@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 535a6839-c443-405b-a6f4-e2af90725d5b
 topic_type:
 - apiref
-ms.openlocfilehash: 25c208c98802be540bde7532c53798e6f7b35446
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 29aecd530d18b931420467e9127bcbf96d3a4a5f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445959"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866764"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>Metodo ICLRProfiling::AttachProfiler
 Connette il profiler specificato al processo specificato.  
@@ -37,25 +37,32 @@ HRESULT AttachProfiler(
   [in] UINT cbClientData);                          // optional  
 ```  
   
-## <a name="parameters"></a>Parametri  
- `dwProfileeProcessID`  
- [in] ID del processo a cui connettere il profiler. In un computer a 64 bit, il numero di bit del processo profilato deve corrispondere a quello del processo trigger che chiama `AttachProfiler`. Se l'account utente in cui viene chiamato `AttachProfiler` dispone di privilegi amministrativi, il processo di destinazione può essere qualsiasi processo nel sistema. In caso contrario, il processo di destinazione deve essere di proprietà dello stesso account utente.  
+## <a name="parameters"></a>Parametri
+
+- `dwProfileeProcessID`
+
+  \[in] ID processo del processo a cui il profiler deve essere collegato. In un computer a 64 bit, il numero di bit del processo profilato deve corrispondere a quello del processo trigger che chiama `AttachProfiler`. Se l'account utente in cui viene chiamato `AttachProfiler` dispone di privilegi amministrativi, il processo di destinazione può essere qualsiasi processo nel sistema. In caso contrario, il processo di destinazione deve essere di proprietà dello stesso account utente.
+
+- `dwMillisecondsMax`
+
+  \[in] periodo di tempo, in millisecondi, per il completamento del `AttachProfiler`. Il processo trigger deve passare un timeout sufficiente a garantire l'effettivo completamento dell'inizializzazione del profiler specifico.
   
- `dwMillisecondsMax`  
- [in] Intervallo di tempo, in millisecondi, richiesto per il completamento di `AttachProfiler`. Il processo trigger deve passare un timeout sufficiente a garantire l'effettivo completamento dell'inizializzazione del profiler specifico.  
-  
- `pClsidProfiler`  
- [in] Puntatore al CLSID del profiler da caricare. Il processo trigger può riutilizzare questa memoria dopo che `AttachProfiler` restituisce un risultato.  
-  
- `wszProfilerPath`  
- [in] Percorso completo del file DLL del profiler da caricare. Questa stringa deve contenere al massimo 260 caratteri, compreso il terminatore null. Se `wszProfilerPath` è null o una stringa vuota, Common Language Runtime (CLR) tenterà di determinare il percorso del file DLL del profiler cercando nel Registro di sistema il CLSID a cui `pClsidProfiler` punta.  
-  
- `pvClientData`  
- in Puntatore ai dati da passare al profiler tramite il metodo [ICorProfilerCallback3:: InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) . Il processo trigger può riutilizzare questa memoria dopo che `AttachProfiler` restituisce un risultato. Se `pvClientData` è null, `cbClientData` deve essere 0 (zero).  
-  
- `cbClientData`  
- [in] Dimensioni in byte dei dati a cui `pvClientData` punta.  
-  
+- `pClsidProfiler`
+
+  \[in] puntatore al CLSID del profiler da caricare. Il processo trigger può riutilizzare questa memoria dopo che `AttachProfiler` restituisce un risultato.
+
+- `wszProfilerPath`
+
+  \[in] percorso completo del file DLL del profiler da caricare. Questa stringa deve contenere al massimo 260 caratteri, compreso il terminatore null. Se `wszProfilerPath` è null o una stringa vuota, Common Language Runtime (CLR) tenterà di determinare il percorso del file DLL del profiler cercando nel Registro di sistema il CLSID a cui `pClsidProfiler` punta.
+
+- `pvClientData`
+
+  \[in] puntatore ai dati da passare al profiler tramite il metodo [ICorProfilerCallback3:: InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) . Il processo trigger può riutilizzare questa memoria dopo che `AttachProfiler` restituisce un risultato. Se `pvClientData` è null, `cbClientData` deve essere 0 (zero).
+
+- `cbClientData`
+
+  \[in] dimensione, in byte, dei dati a cui punta `pvClientData`.
+
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli HRESULT seguenti.  
   
@@ -72,25 +79,25 @@ HRESULT AttachProfiler(
 |HRESULT_FROM_WIN32(ERROR_TIMEOUT)|Si è verificato il timeout prima dell'inizio del caricamento del profiler. È possibile ritentare l'operazione di connessione. I timeout si verificano quando un finalizzatore nel processo di destinazione viene eseguito per un tempo maggiore del valore di timeout.|  
 |E_INVALIDARG|Uno o più parametri presentano valori non validi.|  
 |E_FAIL|Si è verificato un errore non specificato di altro tipo.|  
-|Altri codici di errore|Se il metodo [ICorProfilerCallback3:: InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) del profiler restituisce un valore HRESULT che indica l'esito negativo, `AttachProfiler` restituisce lo stesso valore HRESULT. In questo caso, E_NOTIMPL viene convertito in CORPROF_E_PROFILER_NOT_ATTACHABLE.|  
+|Altri codici di errore|Se il metodo [ICorProfilerCallback3:: InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) del profiler restituisce un valore HRESULT che indica l'esito negativo, `AttachProfiler` restituisce lo stesso valore HRESULT. In questo caso, E_NOTIMPL viene convertito in CORPROF_E_PROFILER_NOT_ATTACHABLE.|  
   
 ## <a name="remarks"></a>Note  
   
 ## <a name="memory-management"></a>Gestione della memoria  
  In conformità alle convenzioni COM, il chiamante di `AttachProfiler` (ad esempio, il codice del trigger creato dallo sviluppatore del profiler) è responsabile dell'allocazione e della deallocazione della memoria dei dati a cui punta il parametro `pvClientData`. Quando CLR esegue la chiamata a `AttachProfiler` fa una copia della memoria a cui `pvClientData` punta e la trasmette al processo di destinazione. Quando il runtime CLR nel processo di destinazione riceve la propria copia del blocco `pvClientData` lo passa al profiler tramite il metodo `InitializeForAttach`, quindi dealloca la propria copia del blocco `pvClientData` dal processo di destinazione.  
   
-## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti di  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [Interfaccia ICorProfilerInfo3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [Interfacce di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Profilatura](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [Interfaccia ICorProfilerCallback](icorprofilercallback-interface.md)
+- [Interfaccia ICorProfilerInfo3](icorprofilerinfo3-interface.md)
+- [Interfacce di profilatura](profiling-interfaces.md)
+- [Profilatura](index.md)

@@ -10,12 +10,12 @@ api_type:
 ms.assetid: d680c1c0-16ab-4ccc-9444-39cf8e0e05ee
 topic_type:
 - apiref
-ms.openlocfilehash: 239b1a9f258f435e6dcca6e00cc20df5b5c01188
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 99fc89d1aee6c9f0fbffc193e12ce563e820f268
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73097445"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789279"
 ---
 # <a name="cordebugrecordformat-enumeration"></a>Enumerazione CorDebugRecordFormat
 Descrive il formato dei dati in una matrice di byte che contiene informazioni su un evento di debug per le eccezioni native.  
@@ -29,7 +29,7 @@ typedef enum CorDebugRecordFormat {
 } CorDebugRecordFormat;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
   
 |Member|Descrizione|  
 |------------|-----------------|  
@@ -37,20 +37,20 @@ typedef enum CorDebugRecordFormat {
 |`FORMAT_WINDOWS_EXCEPTIONRECORD64`|I dati corrispondono a un record di eccezione Windows a 64 bit.|  
   
 ## <a name="remarks"></a>Note  
- Un membro dell'enumerazione `CorDebugRecordFormat` viene passato al metodo [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) per indicare il formato della matrice di byte nell'argomento `pRecord`.  
+ Un membro dell'enumerazione `CorDebugRecordFormat` viene passato al metodo [DecodeEvent](icordebugprocess6-decodeevent-method.md) per indicare il formato della matrice di byte nell'argomento `pRecord`.  
   
 > [!NOTE]
 > Questa enumerazione è progettata per l'uso solo in scenari di debug di .NET Native.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Enumerazioni di debug](debugging-enumerations.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0d6471bc-ad9b-4b1d-a307-c10443918863
 topic_type:
 - apiref
-ms.openlocfilehash: c6c361113a441df050a8e7cd5219819cc8332581
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bc6543b46200dd611e13bdf55aabfabd8302e70a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131486"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793340"
 ---
 # <a name="icordebugmanagedcallback2functionremapopportunity-method"></a>Metodo ICorDebugManagedCallback2::FunctionRemapOpportunity
 Notifica al debugger che l'esecuzione del codice ha raggiunto un punto di sequenza in una versione precedente di una funzione modificata.  
@@ -54,20 +54,20 @@ HRESULT FunctionRemapOpportunity (
  in Offset MSIL (Microsoft Intermediate Language) del puntatore all'istruzione nella versione precedente della funzione.  
   
 ## <a name="remarks"></a>Note  
- Questo callback offre al debugger un'opportunità per modificare il mapping del puntatore all'istruzione alla posizione corretta nella nuova versione della funzione specificata chiamando il metodo [ICorDebugILFrame2:: RemapFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md) . Se il debugger non chiama `RemapFunction` prima di chiamare il metodo [ICorDebugController:: continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) , il runtime continuerà a eseguire il codice precedente e genererà un altro callback `FunctionRemapOpportunity` al successivo punto di sequenza.  
+ Questo callback offre al debugger un'opportunità per modificare il mapping del puntatore all'istruzione alla posizione corretta nella nuova versione della funzione specificata chiamando il metodo [ICorDebugILFrame2:: RemapFunction](icordebugilframe2-remapfunction-method.md) . Se il debugger non chiama `RemapFunction` prima di chiamare il metodo [ICorDebugController:: continue](icordebugcontroller-continue-method.md) , il runtime continuerà a eseguire il codice precedente e genererà un altro callback `FunctionRemapOpportunity` al successivo punto di sequenza.  
   
- Questo callback verrà richiamato per ogni frame che esegue una versione precedente della funzione specificata finché il debugger non restituisce S_OK.  
+ Questo callback verrà richiamato per ogni frame che esegue una versione precedente della funzione specificata fino a quando il debugger non restituisce S_OK.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [Interfaccia ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [Interfaccia ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md)
+- [Interfaccia ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)

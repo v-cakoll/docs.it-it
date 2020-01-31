@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: c0bf92c9b6046d531e75771a9205e6dffe0fd367
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 9f61a5a60b2ba1305158d1ab570079fe6aac19ac
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458491"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76870740"
 ---
 # <a name="weak-event-patterns"></a>Modelli di eventi deboli
 Nelle applicazioni è possibile che i gestori collegati alle origini eventi non vengano eliminati in modo coordinato con l'oggetto listener che ha collegato il gestore all'origine. Questa situazione può causare perdite di memoria. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] introduce uno schema progettuale che può essere usato per risolvere questo problema, fornendo una classe Manager dedicata per determinati eventi e implementando un'interfaccia nei listener per tale evento. Questo schema progettuale è noto come *modello di eventi deboli*.  
@@ -36,7 +36,7 @@ Nelle applicazioni è possibile che i gestori collegati alle origini eventi non 
 |Usa una classe di gestione degli eventi vulnerabili esistente|Se l'evento a cui si desidera effettuare la sottoscrizione ha un <xref:System.Windows.WeakEventManager>corrispondente, utilizzare il gestore eventi vulnerabile esistente. Per un elenco di gestori di eventi vulnerabili inclusi in WPF, vedere la gerarchia di ereditarietà nella classe <xref:System.Windows.WeakEventManager>. Poiché i gestori di eventi deboli inclusi sono limitati, probabilmente sarà necessario scegliere uno degli altri approcci.|  
 |Usare una classe generica di gestione eventi debole|Usare un <xref:System.Windows.WeakEventManager%602> generico quando un <xref:System.Windows.WeakEventManager> esistente non è disponibile, si vuole un modo semplice per implementare e non si è interessati all'efficienza. Il <xref:System.Windows.WeakEventManager%602> generico è meno efficiente rispetto a un gestore di eventi vulnerabile esistente o personalizzato. La classe generica, ad esempio, esegue più reflection per individuare l'evento in base al nome dell'evento. Inoltre, il codice per registrare l'evento usando il <xref:System.Windows.WeakEventManager%602> generico è più dettagliato rispetto all'uso di un <xref:System.Windows.WeakEventManager>personalizzato o esistente.|  
 |Creare una classe personalizzata di gestione eventi vulnerabili|Creare un <xref:System.Windows.WeakEventManager> personalizzato quando un <xref:System.Windows.WeakEventManager> esistente non è disponibile e si desidera ottenere la migliore efficienza. L'uso di un <xref:System.Windows.WeakEventManager> personalizzato per sottoscrivere un evento è più efficiente, ma comporta il costo di scrivere altro codice all'inizio.|  
-|Usare un gestore eventi vulnerabile di terze parti|NuGet dispone di [diversi gestori di eventi vulnerabili](https://www.nuget.org/packages?q=weak+event+manager&prerel=false) e molti framework WPF supportano anche il modello (ad esempio, vedere la [documentazione di Prisma sulla sottoscrizione di eventi a regime di controllo libero](https://github.com/PrismLibrary/Prism-Documentation/blob/master/docs/wpf/Communication.md#subscribing-to-events)).|
+|Usare un gestore eventi vulnerabile di terze parti|NuGet dispone di [diversi gestori di eventi vulnerabili](https://www.nuget.org/packages?q=weak+event+manager&prerel=false) e molti framework WPF supportano anche il modello (ad esempio, vedere la [documentazione di Prisma sulla sottoscrizione di eventi a regime di controllo libero](https://github.com/PrismLibrary/Prism-Documentation/blob/master/docs/wpf/legacy/Communication.md#subscribing-to-events)).|
 
  Le sezioni seguenti descrivono come implementare il modello di eventi deboli.  Ai fini di questa discussione, l'evento da sottoscrivere presenta le caratteristiche seguenti.  
   
@@ -135,4 +135,4 @@ Nelle applicazioni è possibile che i gestori collegati alle origini eventi non 
 - <xref:System.Windows.WeakEventManager>
 - <xref:System.Windows.IWeakEventListener>
 - [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md)
-- [Panoramica sul data binding](../../../desktop-wpf/data/data-binding-overview.md)
+- [Cenni preliminari sull'associazione dati](../../../desktop-wpf/data/data-binding-overview.md)

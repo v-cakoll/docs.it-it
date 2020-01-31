@@ -1,15 +1,15 @@
 ---
 title: Documentazione del codice con i commenti XML
 description: Informazioni su come documentare il codice con commenti della documentazione XML e generare un file di documentazione XML in fase di compilazione.
-ms.date: 02/14/2017
+ms.date: 01/21/2020
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 6aa52030e20f61b26311347a57629658ebe0e609
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ef0d22e0ee7faa3ba51da6b44cf1827f19baf4f1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713931"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787828"
 ---
 # <a name="document-your-code-with-xml-comments"></a>Documentare il codice con commenti XML
 
@@ -170,7 +170,13 @@ Creare un elenco non ordinato di ogni operazione matematica supportata dalla lib
 
 È possibile creare un elenco ordinato o una tabella sostituendo l'attributo `type` con `number` o `table` rispettivamente.
 
-### <a name="put-it-all-together"></a>Combinare tutti gli elementi
+## <a name="inheritdoc"></a>\<inheritdoc >
+
+È possibile usare il tag `<inheritdoc>` per ereditare i commenti XML da classi base, interfacce e metodi simili. In questo modo si elimina la copia indesiderata e si incollano i commenti XML duplicati e i commenti XML vengono sincronizzati automaticamente.
+
+[!code-csharp-interactive[InheritDoc Tag](~/samples/snippets/csharp/concepts/codedoc/inheritdoc-tag.cs)]
+
+### <a name="put-it-all-together"></a>Riuniamo
 
 Dopo aver eseguito questa esercitazione e applicato i tag al codice, dove necessario, il codice dovrebbe ora essere simile al seguente:
 

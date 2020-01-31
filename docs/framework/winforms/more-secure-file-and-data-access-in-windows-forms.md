@@ -1,5 +1,5 @@
 ---
-title: File e accesso ai dati più protetti in Windows Form
+title: Accesso ai file e ai dati più sicuro
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 94b165757de636b2570798a21fd7c483264e37c5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 49ba1919f68f35e9d72b012540b785e05c307c39
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949945"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743757"
 ---
-# <a name="more-secure-file-and-data-access-in-windows-forms"></a>File e accesso ai dati più protetti in Windows Form
+# <a name="more-secure-file-and-data-access-in-windows-forms"></a>File e accesso ai dati più sicuri in Windows Form
 Il .NET Framework usa le autorizzazioni per proteggere le risorse e i dati. Il fatto che l'applicazione possa leggere o scrivere dati dipende dalle autorizzazioni concesse all'applicazione. Quando l'applicazione viene eseguita in un ambiente parzialmente attendibile, è possibile che non si riesca ad accedere ai dati oppure potrebbe essere necessario modificare la modalità di accesso ai dati.  
   
  Quando si rileva una restrizione di sicurezza, sono disponibili due opzioni: dichiarare l'autorizzazione (supponendo che sia stata concessa all'applicazione) o usare una versione della funzionalità scritta per operare in caso di attendibilità parziale. Le sezioni seguenti illustrano come usare il file, il database e l'accesso al Registro di sistema da applicazioni in esecuzione in un ambiente parzialmente attendibile.  
@@ -29,7 +29,7 @@ Il .NET Framework usa le autorizzazioni per proteggere le risorse e i dati. Il f
 > Per impostazione predefinita, gli strumenti che generano distribuzioni ClickOnce vengono predefiniti per le distribuzioni che richiedono l'attendibilità totale dai computer in cui vengono eseguiti. Se si decide di voler aggiungere i vantaggi di sicurezza dell'esecuzione in attendibilità parziale, è necessario modificare questa impostazione predefinita in Visual Studio o in uno degli strumenti di Windows SDK (Mage. exe o MageUI. exe). Per ulteriori informazioni sulla sicurezza Windows Forms e su come determinare il livello di attendibilità appropriato per l'applicazione, vedere [sicurezza in Windows Forms Panoramica](security-in-windows-forms-overview.md).  
   
 ## <a name="file-access"></a>Accesso ai file  
- La <xref:System.Security.Permissions.FileIOPermission> classe controlla l'accesso a file e cartelle nel .NET Framework. Per impostazione predefinita, il sistema di sicurezza non concede <xref:System.Security.Permissions.FileIOPermission> agli ambienti con attendibilità parziale, ad esempio la Intranet locale e le aree Internet. Un'applicazione che richiede l'accesso ai file può comunque funzionare in questi ambienti se si modifica la progettazione dell'applicazione o si usano metodi diversi per accedere ai file. Per impostazione predefinita, all'area Intranet locale viene concesso il diritto di accesso agli stessi siti e alle stesse directory, di riconnettersi al sito di origine e di leggere dalla directory di installazione. Per impostazione predefinita, all'area Internet è concesso solo il diritto di riconnettersi al sito di origine.  
+ La classe <xref:System.Security.Permissions.FileIOPermission> controlla l'accesso a file e cartelle nel .NET Framework. Per impostazione predefinita, il sistema di sicurezza non concede <xref:System.Security.Permissions.FileIOPermission> agli ambienti con attendibilità parziale, ad esempio la Intranet locale e le aree Internet. Un'applicazione che richiede l'accesso ai file può comunque funzionare in questi ambienti se si modifica la progettazione dell'applicazione o si usano metodi diversi per accedere ai file. Per impostazione predefinita, all'area Intranet locale viene concesso il diritto di accesso agli stessi siti e alle stesse directory, di riconnettersi al sito di origine e di leggere dalla directory di installazione. Per impostazione predefinita, all'area Internet è concesso solo il diritto di riconnettersi al sito di origine.  
   
 ### <a name="user-specified-files"></a>File specificati dall'utente  
  Se non sono disponibili autorizzazioni di accesso ai file, è possibile chiedere all'utente di fornire informazioni specifiche sui file usando la classe <xref:System.Windows.Forms.OpenFileDialog> o <xref:System.Windows.Forms.SaveFileDialog>. Questa interazione utente fornisce una discreta garanzia che l'applicazione non possa caricare file riservati o sovrascrivere file importanti in modo intenzionalmente dannoso. I metodi <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> e <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> forniscono l'accesso ai file in lettura e scrittura aprendo il flusso di file per il file specificato dall'utente. I metodi consentono anche di proteggere il file dell'utente nascondendo il percorso del file.  
@@ -138,7 +138,7 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 ### <a name="other-files"></a>Altri file  
  Talvolta sarà necessario leggere o scrivere in file non specificati dall'utente, ad esempio quando si devono rendere persistenti le impostazioni dell'applicazione. Nelle aree Internet e Intranet locale, l'applicazione non disporrà delle autorizzazioni per archiviare i dati in un file locale. Tuttavia, l'applicazione potrà archiviare dati nello spazio di memorizzazione isolato. Lo spazio di memorizzazione isolato è un raggruppamento dati astratto, non un percorso di archiviazione specifico, contenente uno o più file dello spazio di memorizzazione isolato, denominati archivi, che includono i percorsi di directory in cui sono effettivamente memorizzati i dati. Non sono necessarie autorizzazioni di accesso ai file, ad esempio <xref:System.Security.Permissions.FileIOPermission>. La classe <xref:System.Security.Permissions.IsolatedStoragePermission> controlla invece le autorizzazioni per lo spazio di memorizzazione isolato. Per impostazione predefinita, le applicazioni eseguite nelle aree Internet e Intranet locale possono archiviare i dati usando lo spazio di memorizzazione isolato. Tuttavia, le impostazioni come la quota disco possono variare. Per altre informazioni sullo spazio di memorizzazione isolato, vedere [spazio di memorizzazione isolato](../../standard/io/isolated-storage.md).  
   
- L'esempio seguente usa lo spazio di memorizzazione isolato per scrivere dati in un file contenuto in un archivio. L'esempio richiede <xref:System.Security.Permissions.IsolatedStorageFilePermission> e il valore dell'enumerazione <xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByUser>. L'esempio illustra come leggere e scrivere alcuni valori delle proprietà del controllo <xref:System.Windows.Forms.Button> in un file nello spazio di memorizzazione isolato. La funzione `Read` verrà chiamata dopo l'avvio dell'applicazione e la funzione `Write` verrà chiamata prima della chiusura dell'applicazione. Per l'esempio è necessario `Read` che `Write` le funzioni e esistano come <xref:System.Windows.Forms.Form> membri di un <xref:System.Windows.Forms.Button> oggetto che `MainButton`contiene un controllo denominato.  
+ L'esempio seguente usa lo spazio di memorizzazione isolato per scrivere dati in un file contenuto in un archivio. L'esempio richiede <xref:System.Security.Permissions.IsolatedStorageFilePermission> e il valore dell'enumerazione <xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByUser>. L'esempio illustra come leggere e scrivere alcuni valori delle proprietà del controllo <xref:System.Windows.Forms.Button> in un file nello spazio di memorizzazione isolato. La funzione `Read` verrà chiamata dopo l'avvio dell'applicazione e la funzione `Write` verrà chiamata prima della chiusura dell'applicazione. Nell'esempio è necessario che le funzioni `Read` e `Write` esistano come membri di un <xref:System.Windows.Forms.Form> contenente un controllo <xref:System.Windows.Forms.Button> denominato `MainButton`.  
   
 ```vb  
 ' Reads the button options from the isolated storage. Uses Default values   

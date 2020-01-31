@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: d0f235b2-91fe-4f82-b7d5-e5c64186eea8
 topic_type:
 - apiref
-ms.openlocfilehash: c0cec9eb7bb8bbc94b255152a9b4d79108bdd1b1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 49e154ade91ea1a207645f924bd8aea1dbdb635c
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427073"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868122"
 ---
 # <a name="stacksnapshotcallback-function"></a>Funzione StackSnapshotCallback
-Fornisce al profiler informazioni su ogni frame gestito e ogni esecuzione di frame non gestiti nello stack durante un percorso stack, avviato dal metodo [ICorProfilerInfo2::D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) .  
+Fornisce al profiler informazioni su ogni frame gestito e ogni esecuzione di frame non gestiti nello stack durante un percorso stack, avviato dal metodo [ICorProfilerInfo2::D ostacksnapshot](icorprofilerinfo2-dostacksnapshot-method.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -58,21 +58,21 @@ HRESULT __stdcall StackSnapshotCallback (
  `clientData`  
  in Puntatore ai dati del client, che viene passato direttamente da `ICorProfilerInfo2::DoStackSnapshot`.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  La funzione `StackSnapshotCallback` viene implementata dal writer del profiler. È necessario limitare la complessità delle operazioni eseguite in `StackSnapshotCallback`. Ad esempio, quando si usa `ICorProfilerInfo2::DoStackSnapshot` in modo asincrono, è possibile che il thread di destinazione mantenga i blocchi. Se il codice all'interno `StackSnapshotCallback` richiede gli stessi blocchi, è possibile che si verifichi un deadlock.  
   
  Il metodo `ICorProfilerInfo2::DoStackSnapshot` chiama la funzione `StackSnapshotCallback` una volta per ogni frame gestito o una volta per ogni esecuzione di frame non gestiti. Se `StackSnapshotCallback` viene chiamato per un'esecuzione di frame non gestiti, il profiler può usare il contesto di registro (a cui fa riferimento il parametro `context`) per eseguire il proprio percorso stack non gestito. In questo caso, la struttura di `CONTEXT` Win32 rappresenta lo stato della CPU per il frame inserito più di recente all'interno dell'esecuzione di frame non gestiti. Sebbene la struttura di `CONTEXT` Win32 includa valori per tutti i registri, è necessario basarsi solo sui valori del registro del puntatore dello stack, il registro del puntatore ai frame, il registro del puntatore all'istruzione e i registri di interi non volatili (ovvero conservati).  
   
-## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti di  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf. idl  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Metodo DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)
-- [Funzioni statiche globali di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [Metodo DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md)
+- [Funzioni statiche globali di profilatura](profiling-global-static-functions.md)

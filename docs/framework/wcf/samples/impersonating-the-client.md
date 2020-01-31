@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 0c262d8b5460f236ef0429154ae337c7adf96714
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: e9e85729b10d1c992a22f6c0bea65dfd1e21e7e4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338706"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742561"
 ---
 # <a name="impersonating-the-client"></a>Rappresentazione del client
 L'esempio Rappresentazione di client mostra come rappresentare l'applicazione del chiamante al servizio così che il servizio possa accedere a risorse di sistema per conto del chiamante.  
@@ -102,7 +102,7 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nelle finestre della console client e del servizio. Premere INVIO in tutte le finestre della console per arrestare il servizio e il client.  
   
 > [!NOTE]
-> Il servizio deve essere eseguito con un account amministrativo o l'account in cui è in esecuzione deve disporre dei diritti per registrare l'URI del `http://localhost:8000/ServiceModelSamples` con il livello HTTP. Tali diritti possono essere concessi impostando una [prenotazione dello spazio dei nomi](https://go.microsoft.com/fwlink/?LinkId=95012) utilizzando lo [strumento HttpCfg. exe](https://go.microsoft.com/fwlink/?LinkId=95010).  
+> Il servizio deve essere eseguito con un account amministrativo o l'account in cui è in esecuzione deve disporre dei diritti per registrare l'URI del `http://localhost:8000/ServiceModelSamples` con il livello HTTP. Tali diritti possono essere concessi impostando una [prenotazione dello spazio dei nomi](/windows/win32/http/namespace-reservations-registrations-and-routing) utilizzando lo [strumento HttpCfg. exe](/windows/win32/http/httpcfg-exe).  
   
 > [!NOTE]
 > Nei computer che eseguono Windows Server 2003, la rappresentazione è supportata solo se l'applicazione host. exe dispone del privilegio di rappresentazione. Per impostazione predefinita, solo gli amministratori dispongono di questa autorizzazione. Per aggiungere questo privilegio a un account con cui il servizio è in esecuzione, passare a **strumenti di amministrazione**, aprire **criteri di sicurezza locali**, aprire **criteri locali**, fare clic su **assegnazione diritti utente**e selezionare **rappresenta un client dopo l'autenticazione** e fare doppio clic su **Proprietà** per aggiungere un utente o un gruppo.  

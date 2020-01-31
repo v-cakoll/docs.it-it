@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e2aae09-49cb-4fbd-81e5-e29cd864a88b
 topic_type:
 - apiref
-ms.openlocfilehash: 539fa612234c4cc37bed5a8fd4b1e727a35b1d6f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 22722e4d602bdb9df9877b2199b4d4271a4d3105
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73096396"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792726"
 ---
 # <a name="icordebugnativeframe2ischild-method"></a>Metodo ICorDebugNativeFrame2::IsChild
 Determina se il frame corrente è un frame figlio.  
@@ -47,19 +47,19 @@ HRESULT IsChild([out] BOOL * pIsChild);
 ## <a name="exceptions"></a>Eccezioni  
   
 ## <a name="remarks"></a>Note  
- Il metodo `IsChild` restituisce `true` se l'oggetto frame su cui si chiama il metodo è un elemento figlio di un altro frame. In tal caso, utilizzare il metodo [IsMatchingParentFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md) per verificare se un frame è il relativo elemento padre.  
+ Il metodo `IsChild` restituisce `true` se l'oggetto frame su cui si chiama il metodo è un elemento figlio di un altro frame. In tal caso, utilizzare il metodo [IsMatchingParentFrame](icordebugnativeframe2-ismatchingparentframe-method.md) per verificare se un frame è il relativo elemento padre.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorDebugNativeFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)
-- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Interfaccia ICorDebugNativeFrame2](icordebugnativeframe2-interface.md)
+- [Interfacce di debug](debugging-interfaces.md)
+- [Debug](index.md)

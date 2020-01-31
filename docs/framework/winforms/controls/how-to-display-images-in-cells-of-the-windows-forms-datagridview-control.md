@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Visualizzare immagini nelle celle del controllo DataGridView di Windows Forms'
+title: Visualizzare immagini in celle del controllo DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,21 +10,21 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], displaying images
 - data grids [Windows Forms], displaying images in cells
 ms.assetid: 53b13d31-1b56-476d-9ab4-18bfac138a22
-ms.openlocfilehash: e3a4c395e86e4091d8344bebcf99ee04474f3295
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e0e125c816877875b80e0f20887d9beee443577a
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609935"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740281"
 ---
-# <a name="how-to-display-images-in-cells-of-the-windows-forms-datagridview-control"></a>Procedura: Visualizzare immagini nelle celle del controllo DataGridView di Windows Forms
-E un'immagine è uno dei valori che è possibile visualizzare in una riga di dati. Spesso, questi elementi grafici assumono la forma della fotografia di un dipendente o un logo aziendale.  
+# <a name="how-to-display-images-in-cells-of-the-windows-forms-datagridview-control"></a>Procedura: visualizzare immagini in celle del controllo DataGridView di Windows Form
+Un'immagine o un elemento grafico è uno dei valori che è possibile visualizzare in una riga di dati. Spesso, questi elementi grafici hanno il formato di una fotografia di un dipendente o di un logo aziendale.  
   
- L'inserimento delle immagini è semplice quando si visualizzano i dati all'interno di <xref:System.Windows.Forms.DataGridView> controllo. Il <xref:System.Windows.Forms.DataGridView> qualsiasi formato di immagine supportato da e gestisce in modo nativo il <xref:System.Drawing.Image> formato utilizzato da alcuni database dell'immagine di classe, nonché di OLE.  
+ L'incorporamento di immagini è semplice quando si visualizzano i dati all'interno del controllo <xref:System.Windows.Forms.DataGridView>. Il controllo <xref:System.Windows.Forms.DataGridView> gestisce in modo nativo qualsiasi formato di immagine supportato dalla classe <xref:System.Drawing.Image>, nonché il formato immagine OLE utilizzato da alcuni database.  
   
- Se il <xref:System.Windows.Forms.DataGridView> origine dati del controllo ha una colonna di immagini, questi verranno visualizzati automaticamente dal <xref:System.Windows.Forms.DataGridView> controllo.  
+ Se l'origine dati del controllo <xref:System.Windows.Forms.DataGridView> dispone di una colonna di immagini, queste verranno visualizzate automaticamente dal controllo <xref:System.Windows.Forms.DataGridView>.  
   
- Esempio di codice seguente viene illustrato come estrarre un'icona da una risorsa incorporata e convertirlo in una bitmap da visualizzare in ogni cella della colonna di tipo image. Per un altro esempio che sostituisce i valori delle celle testuali con immagini corrispondenti, vedere [come: Personalizzare la formattazione dei dati nel controllo DataGridView Windows Form](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).  
+ Nell'esempio di codice riportato di seguito viene illustrato come estrarre un'icona da una risorsa incorporata e convertirla in una bitmap per la visualizzazione in ogni cella di una colonna di un'immagine. Per un altro esempio che sostituisce i valori di cella testuale con le immagini corrispondenti, vedere [procedura: personalizzare la formattazione dei dati nel controllo DataGridView Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="example"></a>Esempio  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#050](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#050)]
@@ -43,4 +43,4 @@ E un'immagine è uno dei valori che è possibile visualizzare in una riga di dat
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Funzionalità di base per colonna, riga e cella nel controllo DataGridView di Windows Form](basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [Procedura: Personalizzare la formattazione dei dati nel controllo DataGridView Windows Form](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Procedura: Formattare dati personalizzati in un controllo DataGridView di Windows Form](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)

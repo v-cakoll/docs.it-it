@@ -4,16 +4,16 @@ description: ML.NET offre la possibilità di aggiungere funzionalità di Machine
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: 98251c39a4bdaba8203c26c6a781a86efc46efa4
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: bc157b22201c66bceecf78aaa36b9c653fe6a131
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740086"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794566"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>Che cos'è ML.NET e come funziona?
 
-ML.NET offre la possibilità di aggiungere funzionalità di Machine Learning alle applicazioni .NET, in scenari online o offline. Con questa funzionalità è possibile eseguire stime automatiche usando i dati disponibili per l'applicazione.
+ML.NET offre la possibilità di aggiungere funzionalità di Machine Learning alle applicazioni .NET, in scenari online o offline. Con questa funzionalità è possibile eseguire stime automatiche usando i dati disponibili per l'applicazione. Le applicazioni di Machine Learning usano i modelli nei dati per eseguire stime anziché dover essere programmate in modo esplicito.
 
 Central per ML.NET è un **modello**di machine learning. Il modello specifica i passaggi necessari per trasformare i dati di input in una stima. Con ML.NET è possibile eseguire il training di un modello personalizzato specificando un algoritmo oppure è possibile importare modelli TensorFlow e ONNX con training preliminare.
 

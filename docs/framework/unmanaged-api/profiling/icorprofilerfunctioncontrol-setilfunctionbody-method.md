@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c33f0f7-75b2-4c19-b2c7-c94b54997576
 topic_type:
 - apiref
-ms.openlocfilehash: f6e2cfe47bdd212e39549544b06bf5b11033a956
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: bebc0cf6ac7912ea3a6641e0c729b759e865dac3
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429880"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76864661"
 ---
 # <a name="icorprofilerfunctioncontrolsetilfunctionbody-method"></a>Metodo ICorProfilerFunctionControl::SetILFunctionBody
 Sostituisce il corpo Common Intermediate Language (CIL) del metodo.  
@@ -48,17 +48,17 @@ HRESULT SetILFunctionBody(
 |S_OK|Sostituzione completata correttamente.|  
   
 ## <a name="remarks"></a>Note  
- A differenza del metodo [ICorProfilerInfo:: SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) , il metodo `SetILFunctionBody` gestisce la memoria necessaria per il nuovo corpo CIL. Ciò significa che il corpo del CIL fornito dal profiler non deve essere allocato tramite l'interfaccia [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) o allocato in un intervallo specifico. ma può essere allocato in qualsiasi heap. Il profiler può liberare la memoria usata per il corpo del CIL dopo che `SetILFunctionBody` restituito.  
+ A differenza del metodo [ICorProfilerInfo:: SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md) , il metodo `SetILFunctionBody` gestisce la memoria necessaria per il nuovo corpo CIL. Ciò significa che il corpo del CIL fornito dal profiler non deve essere allocato tramite l'interfaccia [IMethodMalloc](imethodmalloc-interface.md) o allocato in un intervallo specifico. ma può essere allocato in qualsiasi heap. Il profiler può liberare la memoria usata per il corpo del CIL dopo che `SetILFunctionBody` restituito.  
   
-## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti di  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)
+- [Interfaccia ICorProfilerFunctionControl](icorprofilerfunctioncontrol-interface.md)

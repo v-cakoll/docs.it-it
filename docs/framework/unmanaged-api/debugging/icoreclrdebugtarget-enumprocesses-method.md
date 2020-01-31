@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e00fd477-4f49-43d3-bd0e-3094824b1136
 topic_type:
 - apiref
-ms.openlocfilehash: 4d1404e3f7565ee26edd94e059b7f01f8edd4dd6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 11b1072b3467f7d0a3f223fbc2151ec9ccf461ad
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121850"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790797"
 ---
 # <a name="icoreclrdebugtargetenumprocesses-method"></a>Metodo ICoreClrDebugTarget::EnumProcesses
 Enumera i processi in esecuzione in un computer remoto.  
@@ -41,7 +41,7 @@ HRESULT EnumProcesses (
  [out] Numero di processi restituiti in `ppProcs`. Il valore può essere 0 (zero).  
   
  `ppProcs`  
- out Matrice di strutture [CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md) che rappresentano i processi in esecuzione nel computer remoto.  
+ out Matrice di strutture [CoreClrDebugProcInfo](coreclrdebugprocinfo-structure.md) che rappresentano i processi in esecuzione nel computer remoto.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK  
@@ -54,9 +54,9 @@ HRESULT EnumProcesses (
  Altri errori.  
   
 ## <a name="remarks"></a>Note  
- Per liberare la memoria allocata da questo metodo, chiamare il metodo [ICoreClrDebugTarget:: FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) .  
+ Per liberare la memoria allocata da questo metodo, chiamare il metodo [ICoreClrDebugTarget:: FreeMemory](icoreclrdebugtarget-freememory-method.md) .  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CoreClrRemoteDebuggingInterfaces. h  
@@ -67,4 +67,4 @@ HRESULT EnumProcesses (
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)
+- [Interfaccia ICoreClrDebugTarget](icoreclrdebugtarget-interface.md)

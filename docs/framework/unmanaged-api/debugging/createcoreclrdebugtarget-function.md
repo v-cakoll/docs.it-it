@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1cf4ca8e-d9bb-4633-9adf-5e24315bf87a
 topic_type:
 - apiref
-ms.openlocfilehash: d52757f82a950c382c7c8f2162630eda7d7795e7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a7fed8cb70785f0ccfcadf1e16181db303ac98e0
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132100"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789187"
 ---
 # <a name="createcoreclrdebugtarget-function"></a>Funzione CreateCoreClrDebugTarget
-Crea una connessione a un proxy del debugger in esecuzione su un computer remoto e restituisce un oggetto [ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) che può essere usato per eseguire query sui processi in esecuzione e sui runtime caricati nel computer remoto.  
+Crea una connessione a un proxy del debugger in esecuzione su un computer remoto e restituisce un oggetto [ICoreClrDebugTarget](icoreclrdebugtarget-interface.md) che può essere usato per eseguire query sui processi in esecuzione e sui runtime caricati nel computer remoto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,7 +40,7 @@ HRESULT CreateCoreClrDebugTarget (
  [in] Indirizzo IPv4 di un computer di destinazione remoto.  
   
  `ppTarget`  
- out Puntatore a un puntatore a un oggetto [ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) che verrà creato.  
+ out Puntatore a un puntatore a un oggetto [ICoreClrDebugTarget](icoreclrdebugtarget-interface.md) che verrà creato.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK  
@@ -52,7 +52,7 @@ HRESULT CreateCoreClrDebugTarget (
  E_FAIL (o altri codici E_ restituiti)  
  Altri errori.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CoreClrRemoteDebuggingInterfaces. h  

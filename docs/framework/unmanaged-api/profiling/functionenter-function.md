@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: bf4ffa50-4506-4dd4-aa13-a0457b47ca74
 topic_type:
 - apiref
-ms.openlocfilehash: ad34592223433f0bf541c390674bcf96839b6ca8
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: caea1d3d526017c0118f95bb138ee4ac45d2c137
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440822"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866996"
 ---
 # <a name="functionenter-function"></a>Funzione FunctionEnter
 Notifica al profiler che il controllo viene passato a una funzione.  
   
 > [!NOTE]
-> La funzione `FunctionEnter` è deprecata nel .NET Framework versione 2,0 e il suo utilizzo comporterà una riduzione delle prestazioni. Usare invece la funzione [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) .  
+> La funzione `FunctionEnter` è deprecata nel .NET Framework versione 2,0 e il suo utilizzo comporterà una riduzione delle prestazioni. Usare invece la funzione [FunctionEnter2](functionenter2-function.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,11 +35,13 @@ void __stdcall FunctionEnter (
 );  
 ```  
   
-## <a name="parameters"></a>Parametri  
- `funcID`  
- in Identificatore della funzione a cui viene passato il controllo.  
-  
-## <a name="remarks"></a>Osservazioni  
+## <a name="parameters"></a>Parametri
+
+- `funcID`
+
+  \[in] identificatore della funzione a cui viene passato il controllo.
+
+## <a name="remarks"></a>Note  
  La funzione `FunctionEnter` è un callback. è necessario implementarla. L'implementazione deve usare l'attributo della classe di archiviazione `__declspec`(`naked`).  
   
  Il motore di esecuzione non salva i registri prima di chiamare questa funzione.  
@@ -52,8 +54,8 @@ void __stdcall FunctionEnter (
   
  Inoltre, la funzione `FunctionEnter` non deve chiamare nel codice gestito o in alcun modo causare un'allocazione di managed memory.  
   
-## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti di  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf. idl  
   
@@ -63,8 +65,8 @@ void __stdcall FunctionEnter (
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Funzione FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [Funzione FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [Funzione FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
-- [Metodo SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [Funzioni statiche globali di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [Funzione FunctionEnter2](functionenter2-function.md)
+- [Funzione FunctionLeave2](functionleave2-function.md)
+- [Funzione FunctionTailcall2](functiontailcall2-function.md)
+- [Metodo SetEnterLeaveFunctionHooks2](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [Funzioni statiche globali di profilatura](profiling-global-static-functions.md)
