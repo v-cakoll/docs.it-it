@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Visualizzare le finestre di dialogo per Windows Forms'
+title: 'Procedura: visualizzare le finestre di dialogo'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - Windows Forms, calling one form from another
 - dialog boxes [Windows Forms], displaying for Windows Forms
 ms.assetid: aaac1b38-c651-495a-8d3d-5a9bfb32fee3
-ms.openlocfilehash: b99f2273dae88faf86448da6e1d2986a83803abf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd04a06eaa0dd7583ef2f72edb4cffa99aaaa60c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802583"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739457"
 ---
-# <a name="how-to-display-dialog-boxes-for-windows-forms"></a><span data-ttu-id="399f5-102">Procedura: Visualizzare le finestre di dialogo per Windows Forms</span><span class="sxs-lookup"><span data-stu-id="399f5-102">How to: Display Dialog Boxes for Windows Forms</span></span>
-<span data-ttu-id="399f5-103">Visualizzare una finestra di dialogo nello stesso modo che visualizzare qualsiasi altra forma in un'applicazione.</span><span class="sxs-lookup"><span data-stu-id="399f5-103">You display a dialog box in the same way you display any other form in an application.</span></span> <span data-ttu-id="399f5-104">Form di avvio viene caricata automaticamente quando viene eseguita l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="399f5-104">The startup form loads automatically when the application is run.</span></span> <span data-ttu-id="399f5-105">Per rendere un secondo form o finestra di dialogo visualizzata nell'applicazione, scrivere codice per caricare e visualizzarlo.</span><span class="sxs-lookup"><span data-stu-id="399f5-105">To make a second form or dialog box appear in the application, write code to load and display it.</span></span> <span data-ttu-id="399f5-106">In modo analogo, per consentire il form o finestra di dialogo casella scomparsa, scrivere il codice per scaricare o nasconderlo.</span><span class="sxs-lookup"><span data-stu-id="399f5-106">Similarly, to make the form or dialog box disappear, write code to unload or hide it.</span></span>  
+# <a name="how-to-display-dialog-boxes-for-windows-forms"></a><span data-ttu-id="3c2d7-102">Procedura: Visualizzare le finestre di dialogo per Windows Form</span><span class="sxs-lookup"><span data-stu-id="3c2d7-102">How to: Display Dialog Boxes for Windows Forms</span></span>
+<span data-ttu-id="3c2d7-103">Viene visualizzata una finestra di dialogo in modo analogo alla visualizzazione di qualsiasi altro modulo in un'applicazione.</span><span class="sxs-lookup"><span data-stu-id="3c2d7-103">You display a dialog box in the same way you display any other form in an application.</span></span> <span data-ttu-id="3c2d7-104">Il modulo di avvio viene caricato automaticamente quando viene eseguita l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="3c2d7-104">The startup form loads automatically when the application is run.</span></span> <span data-ttu-id="3c2d7-105">Per fare in modo che nell'applicazione venga visualizzato un secondo form o una finestra di dialogo, scrivere il codice per caricarlo e visualizzarlo.</span><span class="sxs-lookup"><span data-stu-id="3c2d7-105">To make a second form or dialog box appear in the application, write code to load and display it.</span></span> <span data-ttu-id="3c2d7-106">Analogamente, per far scomparire il form o la finestra di dialogo, scrivere il codice per scaricarlo o nasconderlo.</span><span class="sxs-lookup"><span data-stu-id="3c2d7-106">Similarly, to make the form or dialog box disappear, write code to unload or hide it.</span></span>  
   
-### <a name="to-display-a-dialog-box"></a><span data-ttu-id="399f5-107">Per visualizzare una finestra di dialogo</span><span class="sxs-lookup"><span data-stu-id="399f5-107">To display a dialog box</span></span>  
+### <a name="to-display-a-dialog-box"></a><span data-ttu-id="3c2d7-107">Per visualizzare una finestra di dialogo</span><span class="sxs-lookup"><span data-stu-id="3c2d7-107">To display a dialog box</span></span>  
   
-1. <span data-ttu-id="399f5-108">Passare al gestore dell'evento a cui si desidera aprire la finestra di dialogo.</span><span class="sxs-lookup"><span data-stu-id="399f5-108">Navigate to the event handler with which you want to open the dialog box.</span></span> <span data-ttu-id="399f5-109">Questa situazione può verificarsi quando un comando di menu è selezionato, quando viene selezionato un pulsante o quando si verifica qualsiasi altro evento.</span><span class="sxs-lookup"><span data-stu-id="399f5-109">This can happen when a menu command is selected, when a button is clicked, or when any other event occurs.</span></span>  
+1. <span data-ttu-id="3c2d7-108">Passare al gestore eventi con il quale si desidera aprire la finestra di dialogo.</span><span class="sxs-lookup"><span data-stu-id="3c2d7-108">Navigate to the event handler with which you want to open the dialog box.</span></span> <span data-ttu-id="3c2d7-109">Questa situazione può verificarsi quando si seleziona un comando di menu, quando si fa clic su un pulsante o quando si verifica un altro evento.</span><span class="sxs-lookup"><span data-stu-id="3c2d7-109">This can happen when a menu command is selected, when a button is clicked, or when any other event occurs.</span></span>  
   
-2. <span data-ttu-id="399f5-110">Nel gestore dell'evento, aggiungere codice per aprire la finestra di dialogo.</span><span class="sxs-lookup"><span data-stu-id="399f5-110">In the event handler, add code to open the dialog box.</span></span> <span data-ttu-id="399f5-111">In questo esempio, un evento click del pulsante consente di visualizzare la finestra di dialogo:</span><span class="sxs-lookup"><span data-stu-id="399f5-111">In this example, a button-click event is used to show the dialog box:</span></span>  
+2. <span data-ttu-id="3c2d7-110">Nel gestore eventi aggiungere il codice per aprire la finestra di dialogo.</span><span class="sxs-lookup"><span data-stu-id="3c2d7-110">In the event handler, add code to open the dialog box.</span></span> <span data-ttu-id="3c2d7-111">In questo esempio viene usato un evento clic del pulsante per visualizzare la finestra di dialogo:</span><span class="sxs-lookup"><span data-stu-id="3c2d7-111">In this example, a button-click event is used to show the dialog box:</span></span>  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  

@@ -11,18 +11,18 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 45a40d49cea2dd5f881fbd47cc2fb4bd96e8f9ff
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9b5059d9e4bf9b79dc67664c7a7971041d1cf35b
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70243980"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861684"
 ---
-# <a name="icorprofilerinfo8getdynamicfunctioninfo-method"></a><span data-ttu-id="d9294-102">Metodo ICorProfilerInfo8:: GetDynamicFunctionInfo</span><span class="sxs-lookup"><span data-stu-id="d9294-102">ICorProfilerInfo8::GetDynamicFunctionInfo Method</span></span>
+# <a name="icorprofilerinfo8getdynamicfunctioninfo-method"></a><span data-ttu-id="a2458-102">Metodo ICorProfilerInfo8:: GetDynamicFunctionInfo</span><span class="sxs-lookup"><span data-stu-id="a2458-102">ICorProfilerInfo8::GetDynamicFunctionInfo Method</span></span>
 
-<span data-ttu-id="d9294-103">Recupera informazioni sui metodi dinamici.</span><span class="sxs-lookup"><span data-stu-id="d9294-103">Retrieves information about dynamic methods.</span></span>
+<span data-ttu-id="a2458-103">Recupera informazioni sui metodi dinamici.</span><span class="sxs-lookup"><span data-stu-id="a2458-103">Retrieves information about dynamic methods.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="d9294-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d9294-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="a2458-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="a2458-104">Syntax</span></span>
 
 ```cpp
 HRESULT GetDynamicFunctionInfo( [in]  FunctionID              functionId,
@@ -34,45 +34,52 @@ HRESULT GetDynamicFunctionInfo( [in]  FunctionID              functionId,
                                 [out] WCHAR                   wszName[]);
 ```
 
-#### <a name="parameters"></a><span data-ttu-id="d9294-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="d9294-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="a2458-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="a2458-105">Parameters</span></span>
 
-`functionId` \
-<span data-ttu-id="d9294-106">in ID della funzione per la quale recuperare le informazioni.</span><span class="sxs-lookup"><span data-stu-id="d9294-106">[in] The ID of the function for which to retrieve information.</span></span>
+- `functionId`
 
-`moduleId` \
-<span data-ttu-id="d9294-107">in Puntatore al modulo in cui è definita la classe padre della funzione.</span><span class="sxs-lookup"><span data-stu-id="d9294-107">[in] A pointer to the module in which the function's parent class is defined.</span></span>
+  <span data-ttu-id="a2458-106">\[in] ID della funzione per la quale recuperare le informazioni.</span><span class="sxs-lookup"><span data-stu-id="a2458-106">\[in] The ID of the function for which to retrieve information.</span></span>
 
-`ppvSig` \
-<span data-ttu-id="d9294-108">out Puntatore alla firma della funzione.</span><span class="sxs-lookup"><span data-stu-id="d9294-108">[out] A pointer to the signature for the function.</span></span>
+- `moduleId`
 
-`pbSig` \
-<span data-ttu-id="d9294-109">out Puntatore al numero di byte per la firma della funzione.</span><span class="sxs-lookup"><span data-stu-id="d9294-109">[out] A pointer to the count of bytes for the function signature.</span></span>
+  <span data-ttu-id="a2458-107">\[in] puntatore al modulo in cui è definita la classe padre della funzione.</span><span class="sxs-lookup"><span data-stu-id="a2458-107">\[in] A pointer to the module in which the function's parent class is defined.</span></span>
 
-`cchName` \
-<span data-ttu-id="d9294-110">[in] Dimensione massima della matrice `wszName`.</span><span class="sxs-lookup"><span data-stu-id="d9294-110">[in] The maximum size of the `wszName` array.</span></span>
+- `ppvSig`
 
-`pcchName` \
-<span data-ttu-id="d9294-111">out Numero di caratteri nella `wszName` matrice.</span><span class="sxs-lookup"><span data-stu-id="d9294-111">[out] The number of characters in the `wszName` array.</span></span>
+  <span data-ttu-id="a2458-108">\[out] puntatore alla firma della funzione.</span><span class="sxs-lookup"><span data-stu-id="a2458-108">\[out] A pointer to the signature for the function.</span></span>
 
-`wszName` \
-<span data-ttu-id="d9294-112">out Matrice di `WCHAR` che rappresenta il nome della funzione, se disponibile.</span><span class="sxs-lookup"><span data-stu-id="d9294-112">[out] An array of `WCHAR` which is the name of the function, if one exists.</span></span>
+- `pbSig`
 
-## <a name="remarks"></a><span data-ttu-id="d9294-113">Note</span><span class="sxs-lookup"><span data-stu-id="d9294-113">Remarks</span></span>
+  <span data-ttu-id="a2458-109">\[out] puntatore al numero di byte per la firma della funzione.</span><span class="sxs-lookup"><span data-stu-id="a2458-109">\[out] A pointer to the count of bytes for the function signature.</span></span>
 
-<span data-ttu-id="d9294-114">Alcuni metodi come gli stub IL o LCG non dispongono di metadati associati che possono essere recuperati tramite le API [IMetaDataImport](../metadata/imetadataimport-interface.md) e [IMetaDataImport2](../metadata/imetadataimport2-interface.md) .</span><span class="sxs-lookup"><span data-stu-id="d9294-114">Certain methods like IL Stubs or LCG do not have associated metadata that can be retrieved using the [IMetaDataImport](../metadata/imetadataimport-interface.md) and [IMetaDataImport2](../metadata/imetadataimport2-interface.md) APIs.</span></span> <span data-ttu-id="d9294-115">Questi metodi possono essere rilevati dai profiler tramite i puntatori all'istruzione oppure ascoltando [ICorProfilerCallback8::D ynamicmethodjitcompilationstarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md).</span><span class="sxs-lookup"><span data-stu-id="d9294-115">Such methods can be encountered by profilers through instruction pointers or by listening to [ICorProfilerCallback8::DynamicMethodJITCompilationStarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md).</span></span>
+- `cchName`
 
-<span data-ttu-id="d9294-116">Questa API può essere usata per recuperare informazioni sui metodi dinamici, incluso un nome descrittivo, se disponibile.</span><span class="sxs-lookup"><span data-stu-id="d9294-116">This API can be used to retrieve information about dynamic methods, including a friendly name, if available.</span></span>
+  <span data-ttu-id="a2458-110">\[in] dimensione massima della matrice di `wszName`.</span><span class="sxs-lookup"><span data-stu-id="a2458-110">\[in] The maximum size of the `wszName` array.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="d9294-117">Requisiti</span><span class="sxs-lookup"><span data-stu-id="d9294-117">Requirements</span></span>
+- `pcchName`
 
-<span data-ttu-id="d9294-118">**Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d9294-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+  <span data-ttu-id="a2458-111">\[out] numero di caratteri nella matrice di `wszName`.</span><span class="sxs-lookup"><span data-stu-id="a2458-111">\[out] The number of characters in the `wszName` array.</span></span>
 
-<span data-ttu-id="d9294-119">**Intestazione:** CorProf. idl, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="d9294-119">**Header:** CorProf.idl, CorProf.h</span></span>
+- `wszName`
 
-<span data-ttu-id="d9294-120">**Libreria** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d9294-120">**Library:** CorGuids.lib</span></span>
+  <span data-ttu-id="a2458-112">\[out] matrice di `WCHAR` che rappresenta il nome della funzione, se disponibile.</span><span class="sxs-lookup"><span data-stu-id="a2458-112">\[out] An array of `WCHAR` which is the name of the function, if one exists.</span></span>
 
-<span data-ttu-id="d9294-121">**Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="d9294-121">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>
+## <a name="remarks"></a><span data-ttu-id="a2458-113">Note</span><span class="sxs-lookup"><span data-stu-id="a2458-113">Remarks</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="d9294-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d9294-122">See also</span></span>
+<span data-ttu-id="a2458-114">Alcuni metodi come gli stub IL o LCG non dispongono di metadati associati che possono essere recuperati tramite le API [IMetaDataImport](../metadata/imetadataimport-interface.md) e [IMetaDataImport2](../metadata/imetadataimport2-interface.md) .</span><span class="sxs-lookup"><span data-stu-id="a2458-114">Certain methods like IL Stubs or LCG do not have associated metadata that can be retrieved using the [IMetaDataImport](../metadata/imetadataimport-interface.md) and [IMetaDataImport2](../metadata/imetadataimport2-interface.md) APIs.</span></span> <span data-ttu-id="a2458-115">Questi metodi possono essere rilevati dai profiler tramite i puntatori all'istruzione oppure ascoltando [ICorProfilerCallback8::D ynamicmethodjitcompilationstarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md).</span><span class="sxs-lookup"><span data-stu-id="a2458-115">Such methods can be encountered by profilers through instruction pointers or by listening to [ICorProfilerCallback8::DynamicMethodJITCompilationStarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md).</span></span>
 
-- [<span data-ttu-id="d9294-123">Interfaccia ICorProfilerInfo8</span><span class="sxs-lookup"><span data-stu-id="d9294-123">ICorProfilerInfo8 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo8-interface.md)
+<span data-ttu-id="a2458-116">Questa API può essere usata per recuperare informazioni sui metodi dinamici, incluso un nome descrittivo, se disponibile.</span><span class="sxs-lookup"><span data-stu-id="a2458-116">This API can be used to retrieve information about dynamic methods, including a friendly name, if available.</span></span>
+
+## <a name="requirements"></a><span data-ttu-id="a2458-117">Requisiti di</span><span class="sxs-lookup"><span data-stu-id="a2458-117">Requirements</span></span>
+
+<span data-ttu-id="a2458-118">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a2458-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+
+<span data-ttu-id="a2458-119">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="a2458-119">**Header:** CorProf.idl, CorProf.h</span></span>
+
+<span data-ttu-id="a2458-120">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a2458-120">**Library:** CorGuids.lib</span></span>
+
+<span data-ttu-id="a2458-121">**Versioni .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="a2458-121">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="a2458-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a2458-122">See also</span></span>
+
+- [<span data-ttu-id="a2458-123">Interfaccia ICorProfilerInfo8</span><span class="sxs-lookup"><span data-stu-id="a2458-123">ICorProfilerInfo8 Interface</span></span>](icorprofilerinfo8-interface.md)
