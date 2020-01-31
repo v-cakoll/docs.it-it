@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 45a40d49cea2dd5f881fbd47cc2fb4bd96e8f9ff
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9b5059d9e4bf9b79dc67664c7a7971041d1cf35b
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70243980"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861684"
 ---
 # <a name="icorprofilerinfo8getdynamicfunctioninfo-method"></a>Metodo ICorProfilerInfo8:: GetDynamicFunctionInfo
 
@@ -34,28 +34,35 @@ HRESULT GetDynamicFunctionInfo( [in]  FunctionID              functionId,
                                 [out] WCHAR                   wszName[]);
 ```
 
-#### <a name="parameters"></a>Parametri
+## <a name="parameters"></a>Parametri
 
-`functionId` \
-in ID della funzione per la quale recuperare le informazioni.
+- `functionId`
 
-`moduleId` \
-in Puntatore al modulo in cui è definita la classe padre della funzione.
+  \[in] ID della funzione per la quale recuperare le informazioni.
 
-`ppvSig` \
-out Puntatore alla firma della funzione.
+- `moduleId`
 
-`pbSig` \
-out Puntatore al numero di byte per la firma della funzione.
+  \[in] puntatore al modulo in cui è definita la classe padre della funzione.
 
-`cchName` \
-[in] Dimensione massima della matrice `wszName`.
+- `ppvSig`
 
-`pcchName` \
-out Numero di caratteri nella `wszName` matrice.
+  \[out] puntatore alla firma della funzione.
 
-`wszName` \
-out Matrice di `WCHAR` che rappresenta il nome della funzione, se disponibile.
+- `pbSig`
+
+  \[out] puntatore al numero di byte per la firma della funzione.
+
+- `cchName`
+
+  \[in] dimensione massima della matrice di `wszName`.
+
+- `pcchName`
+
+  \[out] numero di caratteri nella matrice di `wszName`.
+
+- `wszName`
+
+  \[out] matrice di `WCHAR` che rappresenta il nome della funzione, se disponibile.
 
 ## <a name="remarks"></a>Note
 
@@ -63,16 +70,16 @@ Alcuni metodi come gli stub IL o LCG non dispongono di metadati associati che po
 
 Questa API può essere usata per recuperare informazioni sui metodi dinamici, incluso un nome descrittivo, se disponibile.
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
-**Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).
 
-**Intestazione:** CorProf. idl, CorProf. h
+**Intestazione:** CorProf.idl, CorProf.h
 
-**Libreria** CorGuids.lib
+**Libreria:** CorGuids.lib
 
-**Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**Versioni .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorProfilerInfo8](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo8-interface.md)
+- [Interfaccia ICorProfilerInfo8](icorprofilerinfo8-interface.md)

@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: d6518612c213d21c2dc7d80878121ccd3b7e2abb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7fd62e0d3d9173f3b75882131e57126075c0677f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449848"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76863309"
 ---
 # <a name="icorprofilerinfo10enumerateobjectreferences-method"></a>Metodo ICorProfilerInfo10:: EnumerateObjectReferences
 
@@ -30,22 +30,25 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
                                    [in] void* clientData);
 ```
 
-#### <a name="parameters"></a>Parametri
+## <a name="parameters"></a>Parametri
 
-`objectId` \
-in Oggetto su cui enumerare i riferimenti.
+- `objectId`
 
-`callback` \
-in Funzione che verrà chiamata con i riferimenti per l'oggetto.
+  \[in] oggetto su cui enumerare i riferimenti.
 
-`clientData` \
-in Dati forniti dal profiler da passare alla funzione `callback`.
+- `callback`
 
-## <a name="remarks"></a>Osservazioni
+  \[in] funzione che verrà chiamata con i riferimenti per l'oggetto.
 
-Il metodo `EnumerateObjectReferences` è simile a [ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md), ad eccezione del fatto che scorre i riferimenti su richiesta per il profiler anziché pre-allocare una matrice per archiviare i riferimenti.
+- `clientData`
 
-## <a name="requirements"></a>Requisiti
+  \[in] dati forniti dal profiler da passare alla funzione di `callback`.
+
+## <a name="remarks"></a>Note
+
+Il metodo `EnumerateObjectReferences` è simile a [ObjectReferences](icorprofilercallback-objectreferences-method.md), ad eccezione del fatto che scorre i riferimenti su richiesta per il profiler anziché pre-allocare una matrice per archiviare i riferimenti.
+
+## <a name="requirements"></a>Requisiti di
 
 **Piattaforme:** Vedere [sistemi operativi supportati da .NET Core](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
@@ -57,4 +60,4 @@ Il metodo `EnumerateObjectReferences` è simile a [ObjectReferences](../../../..
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorProfilerInfo10](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [Interfaccia ICorProfilerInfo10](icorprofilerinfo10-interface.md)

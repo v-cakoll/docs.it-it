@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 7593e8873c2714df85146903c0052a9909a95ccd
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8412020fb98fde245b873a2f0c6a355f6436f712
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444724"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868278"
 ---
 # <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>Metodo ICorProfilerInfo9:: GetNativeCodeStartAddresses
 
@@ -32,28 +32,33 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
                                      [out] UINT_PTR codeStartAddresses[]);
 ```
 
-#### <a name="parameters"></a>Parametri
+## <a name="parameters"></a>Parametri
 
-`functionId` \
-in ID della funzione i cui indirizzi di avvio del codice nativo devono essere restituiti.
+- `functionId`
 
-`reJitId` \
-[in] Identità della funzione ricompilata in JIT.
+  \[in] ID della funzione i cui indirizzi di avvio del codice nativo devono essere restituiti.
 
-`cCodeStartAddresses` \
-[in] Dimensione massima della matrice `codeStartAddresses`.
+- `reJitId`
 
-`pcCodeStartAddresses` \
-out Numero di indirizzi disponibili.
+  \[in] identità della funzione ricompilata tramite JIT.
 
-`codeStartAddresses` \
-out Matrice di `UINT_PTR`, ciascuno dei quali è l'indirizzo iniziale per un corpo nativo per la funzione specificata.
+- `cCodeStartAddresses`
 
-## <a name="remarks"></a>Osservazioni
+  \[in] dimensione massima della matrice di `codeStartAddresses`.
+
+- `pcCodeStartAddresses`
+
+  \[out] numero di indirizzi disponibili.
+
+- `codeStartAddresses`
+
+  \[out] matrice di `UINT_PTR`, ciascuno dei quali è l'indirizzo iniziale per un corpo nativo per la funzione specificata.
+
+## <a name="remarks"></a>Note
 
 Quando è abilitata la compilazione a più livelli, una funzione può avere più di un corpo del codice nativo.
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
 **Piattaforme:** Vedere [sistemi operativi supportati da .NET Core](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
@@ -65,4 +70,4 @@ Quando è abilitata la compilazione a più livelli, una funzione può avere più
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorProfilerInfo9](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)
+- [Interfaccia ICorProfilerInfo9](icorprofilerinfo9-interface.md)

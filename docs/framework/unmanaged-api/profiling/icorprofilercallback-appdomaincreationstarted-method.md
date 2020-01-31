@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b2a8240b-07fe-4859-bb2b-7d3adbfa0a9f
 topic_type:
 - apiref
-ms.openlocfilehash: 6a0f6dc9d2559bafed416d409063088d2f51c27d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 49c3ab4901537805a1ae1be79097c55cc331d29d
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445212"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866715"
 ---
 # <a name="icorprofilercallbackappdomaincreationstarted-method"></a>Metodo ICorProfilerCallback::AppDomainCreationStarted
 Notifica al profiler che è in corso la creazione di un dominio applicazione.  
@@ -32,22 +32,24 @@ HRESULT AppDomainCreationStarted(
     [in] AppDomainID appDomainId);  
 ```  
   
-## <a name="parameters"></a>Parametri  
- `appDomainId`  
- in Identifica il dominio in fase di creazione.  
+## <a name="parameters"></a>Parametri
+
+- `appDomainId`
+
+  \[in] identifica il dominio in fase di creazione.
   
 ## <a name="remarks"></a>Note  
- L'ID non è valido per tutte le richieste di informazioni fino a quando non viene chiamato il metodo [ICorProfilerCallback:: AppDomainCreationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md) .  
+ L'ID non è valido per tutte le richieste di informazioni fino a quando non viene chiamato il metodo [ICorProfilerCallback:: AppDomainCreationFinished](icorprofilercallback-appdomaincreationfinished-method.md) .  
   
-## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti di  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Interfaccia ICorProfilerCallback](icorprofilercallback-interface.md)

@@ -3,30 +3,30 @@ title: Interfaccia ICorProfilerInfo8
 ms.date: 08/06/2019
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 2baa33a7a3527392d8095b5d0ec7ad6af8a71a8e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 476bcbd91188e3ff9eb63f50cfa2118a440b1a69
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928929"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868317"
 ---
 # <a name="icorprofilerinfo8-interface"></a>Interfaccia ICorProfilerInfo8
 
-Sottoclasse di [ICorProfilerInfo7](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md) che fornisce metodi per eseguire query sulle informazioni sui metodi dinamici.
+Sottoclasse di [ICorProfilerInfo7](icorprofilerinfo7-interface.md) che fornisce metodi per eseguire query sulle informazioni sui metodi dinamici.
 
 ## <a name="methods"></a>Metodi  
 
-| Metodo|DESCRIZIONE|  
+| Metodo|Descrizione|  
 | ------------|-----------------|  
-|[Metodo IsFunctionDynamic](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo8-isfunctiondynamic-method.md)| Determina se una funzione non dispone di metadati associati.|
-|[Metodo GetFunctionFromIP3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo8-getfunctionfromip3-method.md)| Esegue il mapping di un puntatore all'istruzione di codice gestito a un FunctionID. Questo metodo funziona sia per i metodi dinamici che per quelli non dinamici. |
-|[Metodo GetDynamicFunctionInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo8-getdynamicfunctioninfo-method.md)| Recupera informazioni sui metodi dinamici. |
+|[Metodo IsFunctionDynamic](icorprofilerinfo8-isfunctiondynamic-method.md)| Determina se una funzione non dispone di metadati associati.|
+|[Metodo GetFunctionFromIP3](icorprofilerinfo8-getfunctionfromip3-method.md)| Esegue il mapping di un puntatore all'istruzione di codice gestito a un FunctionID. Questo metodo funziona sia per i metodi dinamici che per quelli non dinamici. |
+|[Metodo GetDynamicFunctionInfo](icorprofilerinfo8-getdynamicfunctioninfo-method.md)| Recupera informazioni sui metodi dinamici. |
 
-## <a name="requirements"></a>Requisiti  
-**Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
-**Intestazione:** CorProf. idl, CorProf. h  
-**Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+## <a name="requirements"></a>Requisiti di  
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+**Intestazione:** CorProf.idl, CorProf.h  
+**Versioni .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfacce di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Interfacce di profilatura](profiling-interfaces.md)

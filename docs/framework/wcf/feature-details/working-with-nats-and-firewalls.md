@@ -5,12 +5,12 @@ helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-ms.openlocfilehash: bfbff63c8c2cdb76d5f6d84424a9b03233744dae
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b8be10740c8e92d3dac7094f07b3372e8d78a3d9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347110"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743864"
 ---
 # <a name="working-with-nats-and-firewalls"></a>Uso di conversioni NAT e firewall
 Fra il client e il server di una connessione di rete spesso non esiste un percorso diretto di comunicazione. I pacchetti vengono filtrati, instradati, analizzati e trasformati sia nei computer endpoint sia nei computer intermedi della rete. Le conversioni Network Address Translation (NAT) e i firewall sono esempi di applicazioni intermedie che in genere partecipano a una comunicazione di rete.  
@@ -32,7 +32,8 @@ Fra il client e il server di una connessione di rete spesso non esiste un percor
  I firewall utilizzati nei computer degli utenti privati vengono in genere configurati in modo da accettare soltanto le connessioni in ingresso provenienti dai computer con cui l'utente ha precedentemente stabilito una connessione in uscita. I firewall utilizzati nei computer aziendali vengono in genere configurati in modo da accettare soltanto le connessioni in ingresso a un determinato gruppo di porte. Ad esempio, un firewall può essere configurato in modo da accettare soltanto le connessioni in ingresso alle porte 80 e 443 allo scopo di consentire il funzionamento dei servizi basati su HTTP e HTTPS. Sia per gli utenti aziendali sia per gli utenti privati sono disponibili firewall gestiti che consentono agli utenti o ai processi attendibili del computer di modificare la configurazione del firewall. I firewall gestiti sono più diffusi fra gli utenti privati, in quanto in questo caso non esiste alcun criterio aziendale di controllo dell'utilizzo di rete.  
   
 ## <a name="using-teredo"></a>Utilizzo di Teredo  
- Teredo è una tecnologia di transizione IPv6 che consente l'indirizzabilità diretta dei computer protetti tramite NAT. Questa tecnologia si basa sull'utilizzo di un server che può essere oggetto di routing pubblico e globale allo scopo di segnalare le connessioni potenzialmente disponibili. Il server Teredo offre al client e al server dell'applicazione un punto comune di incontro presso il quale poter scambiare informazioni relative alla connessione. I computer richiedono quindi un indirizzo Teredo temporaneo da utilizzare per il tunneling dei pacchetti attraverso la rete esistente. Il supporto di Teredo in WCF richiede l'abilitazione del supporto per IPv6 e Teredo nel sistema operativo. In [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e nei sistemi operativi successivi Teredo è supportato. Per impostazione predefinita, Windows Vista e i sistemi operativi successivi supportano IPv6 e richiedono solo all'utente di abilitare Teredo. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] e Windows Server 2003 richiedono che l'utente abiliti sia IPv6 che Teredo. Per ulteriori informazioni, vedere la [Panoramica di Teredo](https://go.microsoft.com/fwlink/?LinkId=87571).  
+
+ Teredo è una tecnologia di transizione IPv6 che consente l'indirizzabilità diretta dei computer protetti tramite NAT. Questa tecnologia si basa sull'utilizzo di un server che può essere oggetto di routing pubblico e globale allo scopo di segnalare le connessioni potenzialmente disponibili. Il server Teredo offre al client e al server dell'applicazione un punto comune di incontro presso il quale poter scambiare informazioni relative alla connessione. I computer richiedono quindi un indirizzo Teredo temporaneo da utilizzare per il tunneling dei pacchetti attraverso la rete esistente. Il supporto di Teredo in WCF richiede l'abilitazione del supporto per IPv6 e Teredo nel sistema operativo. In [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e nei sistemi operativi successivi Teredo è supportato. Per impostazione predefinita, Windows Vista e i sistemi operativi successivi supportano IPv6 e richiedono solo all'utente di abilitare Teredo. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] e Windows Server 2003 richiedono che l'utente abiliti sia IPv6 che Teredo. Per ulteriori informazioni, vedere la [Panoramica di Teredo](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-xp/bb457011(v%3dtechnet.10)).  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>Scelta di un trasporto e di un MEP  
  La scelta di un trasporto e di un MEP prevede tre passaggi:  

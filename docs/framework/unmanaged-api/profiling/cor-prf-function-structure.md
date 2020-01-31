@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8bb5acf5-cf4b-4ccb-93f1-46db1f3f8bf3
 topic_type:
 - apiref
-ms.openlocfilehash: 40698a49ac7012c4f67eb88b1ead04c80f3dea77
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 14dcb251e25b5bd502c8d514a6dc35778fbe9f73
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428323"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867230"
 ---
 # <a name="cor_prf_function-structure"></a>Struttura COR_PRF_FUNCTION
 Fornisce una rappresentazione univoca di una funzione combinando il relativo ID con l'ID della versione ricompilata.  
@@ -30,24 +30,24 @@ Fornisce una rappresentazione univoca di una funzione combinando il relativo ID 
 typedef struct _COR_PRF_FUNCTION {    FunctionID functionId;    ReJITID    reJitId;} COR_PRF_FUNCTION;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`functionId`|ID della funzione.|  
 |`reJitId`|ID della funzione ricompilata. Il valore 0 (zero) rappresenta la versione originale della funzione.|  
   
 ## <a name="remarks"></a>Note  
   
-## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti di  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf. idl  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Strutture di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+- [Strutture di profilatura](profiling-structures.md)

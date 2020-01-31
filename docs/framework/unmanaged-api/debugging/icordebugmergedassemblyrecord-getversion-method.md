@@ -1,15 +1,15 @@
 ---
-title: 'Metodo metodo icordebugmergedassemblyrecord:: GetVersion'
+title: Metodo ICorDebugMergedAssemblyRecord::GetVersion
 ms.date: 03/30/2017
 ms.assetid: c6858b06-ae26-4312-b325-ea6025016675
-ms.openlocfilehash: 0c89d0749281da412bbf71400d51bee1ed651fbe
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8b5995183be7f1c992cf3230e16456cb248eff0c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129774"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793072"
 ---
-# <a name="icordebugmergedassemblyrecordgetversion-method"></a>Metodo metodo icordebugmergedassemblyrecord:: GetVersion
+# <a name="icordebugmergedassemblyrecordgetversion-method"></a>Metodo ICorDebugMergedAssemblyRecord::GetVersion
 Ottiene le informazioni sulla versione dell'assembly.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -42,16 +42,16 @@ HRESULT GetVersion(
 > [!NOTE]
 > Questo metodo è disponibile solo con .NET Native.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorDebugMergedAssemblyRecord](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)
-- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfaccia ICorDebugMergedAssemblyRecord](icordebugmergedassemblyrecord-interface.md)
+- [Interfacce di debug](debugging-interfaces.md)

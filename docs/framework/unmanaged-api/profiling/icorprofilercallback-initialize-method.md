@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dc5fab2a-4b45-4b12-8727-b89c9915f23e
 topic_type:
 - apiref
-ms.openlocfilehash: 64df6a81eb23c20537238c702fd0c204d64d14bc
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e4a003b30c495852a3a68d44d92bef35c3ed7812
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434546"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866297"
 ---
 # <a name="icorprofilercallbackinitialize-method"></a>Metodo ICorProfilerCallback::Initialize
 Chiamato per inizializzare la Code Profiler ogni volta che viene avviata una nuova applicazione di Common Language Runtime (CLR).  
@@ -32,23 +32,25 @@ HRESULT Initialize(
     [in] IUnknown     *pICorProfilerInfoUnk);  
 ```  
   
-## <a name="parameters"></a>Parametri  
- `pICorProfilerInfoUnk`  
- interfaccia [in](/cpp/atl/iunknown) cui il profiler deve eseguire una query per un puntatore di interfaccia [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) .  
-  
+## <a name="parameters"></a>Parametri
+
+- `pICorProfilerInfoUnk`
+
+  \[in] puntatore a un'interfaccia [IUnknown](/cpp/atl/iunknown) che il profiler deve eseguire una query per un puntatore a interfaccia [ICorProfilerInfo](icorprofilerinfo-interface.md) .  
+
 ## <a name="remarks"></a>Note  
- La chiamata `Initialize` è l'unica opportunità per abilitare o disabilitare i callback che non sono modificabili. Quando un callback viene abilitato dalla chiamata di `Initialize`, non può essere disabilitato in un secondo momento utilizzando [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md). Il valore COR_PRF_MONITOR_IMMUTABLE dell'enumerazione [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) indica gli eventi che non sono modificabili.  
+ La chiamata `Initialize` è l'unica opportunità per abilitare o disabilitare i callback che non sono modificabili. Quando un callback viene abilitato dalla chiamata di `Initialize`, non può essere disabilitato in un secondo momento utilizzando [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md). Il valore COR_PRF_MONITOR_IMMUTABLE dell'enumerazione [COR_PRF_MONITOR](cor-prf-monitor-enumeration.md) indica gli eventi che non sono modificabili.  
   
-## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti di  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [Metodo Shutdown](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-shutdown-method.md)
+- [Interfaccia ICorProfilerCallback](icorprofilercallback-interface.md)
+- [Metodo Shutdown](icorprofilercallback-shutdown-method.md)

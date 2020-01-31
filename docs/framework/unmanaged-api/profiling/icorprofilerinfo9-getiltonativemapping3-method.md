@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 1a5a259e6604d906e55166b3fcb770bc37d346c5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5c49d75432980d2f3af77ee040bc6eb20886b027
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444725"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861671"
 ---
 # <a name="icorprofilerinfo9getiltonativemapping3-method"></a>Metodo ICorProfilerInfo9:: GetILToNativeMapping3
 
@@ -31,25 +31,29 @@ HRESULT GetILToNativeMapping3( [in]  UINT_PTR pNativeCodeStartAddress,
                                [out] COR_DEBUG_IL_TO_NATIVE_MAP map[]);
 ```
 
-#### <a name="parameters"></a>Parametri
+## <a name="parameters"></a>Parametri
 
-`pNativeCodeStartAddress` \
-in Puntatore all'inizio di una funzione nativa.
+- `pNativeCodeStartAddress`
 
-`cMap` \
-[in] Dimensione massima della matrice `map`.
+  \[in] puntatore all'inizio di una funzione nativa.
 
-`pcMap` \
-[out] Numero complessivo di strutture COR_DEBUG_IL_TO_NATIVE_MAP disponibili.
+- `cMap`
 
-`map` \
-out Matrice di strutture di [COR_DEBUG_IL_TO_NATIVE_MAP](../debugging/cor-debug-il-to-native-map-structure.md) , ognuna delle quali specifica gli offset. Dopo il completamento del metodo `GetILToNativeMapping3`, `map` conterrà alcune o tutte le strutture `COR_DEBUG_IL_TO_NATIVE_MAP`.
+  \[in] dimensione massima della matrice di `map`.
 
-## <a name="remarks"></a>Osservazioni
+- `pcMap`
 
-Quando è abilitata la compilazione a più livelli, un metodo può avere più di un corpo del codice nativo. [ICorProfilerInfo9:: GetNativeCodeStartAddresses](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-getnativecodestartaddresses-method.md) restituirà gli indirizzi iniziali per tutti i corpi del codice nativo.
+  \[out] numero totale di strutture COR_DEBUG_IL_TO_NATIVE_MAP disponibili.
 
-## <a name="requirements"></a>Requisiti
+- `map`
+
+  \[out] matrice di strutture [COR_DEBUG_IL_TO_NATIVE_MAP](../debugging/cor-debug-il-to-native-map-structure.md) , ognuna delle quali specifica gli offset. Dopo il completamento del metodo `GetILToNativeMapping3`, `map` conterrà alcune o tutte le strutture `COR_DEBUG_IL_TO_NATIVE_MAP`.
+
+## <a name="remarks"></a>Note
+
+Quando è abilitata la compilazione a più livelli, un metodo può avere più di un corpo del codice nativo. [ICorProfilerInfo9:: GetNativeCodeStartAddresses](icorprofilerinfo9-getnativecodestartaddresses-method.md) restituirà gli indirizzi iniziali per tutti i corpi del codice nativo.
+
+## <a name="requirements"></a>Requisiti di
 
 **Piattaforme:** Vedere [sistemi operativi supportati da .NET Core](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
@@ -57,8 +61,8 @@ Quando è abilitata la compilazione a più livelli, un metodo può avere più di
 
 **Libreria:** CorGuids.lib
 
-**Versioni di .NET Framework:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+**Versioni .NET Framework:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorProfilerInfo9](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)
+- [Interfaccia ICorProfilerInfo9](icorprofilerinfo9-interface.md)

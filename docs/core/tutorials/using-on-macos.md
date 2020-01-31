@@ -2,12 +2,12 @@
 title: 'Esercitazione: creare una soluzione .NET Core in macOS usando Visual Studio Code'
 description: Questo documento specifica i passaggi e il flusso di lavoro da seguire per creare una soluzione .NET Core usando Visual Studio Code.
 ms.date: 12/19/2019
-ms.openlocfilehash: 4dc44a0aa155dca3c106a7da68cf100ef644b58b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e3c210d4391c0e3c9c3455ecf23dd138abdb4363
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715296"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741536"
 ---
 # <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>Esercitazione: creare una soluzione .NET Core in macOS usando Visual Studio Code
 
@@ -28,7 +28,7 @@ Installare l'estensione C# Visual Studio Code aprendo Visual Studio Code e preme
 
 In questa esercitazione si creeranno tre progetti: un progetto di libreria, i test per tale progetto e un'applicazione console che usa la libreria. È possibile [visualizzare o scaricare l'origine](https://github.com/dotnet/samples/tree/master/core/getting-started/golden) per questo articolo nel repository DotNet/Samples su GitHub. Per istruzioni sul download, vedere [Esempi ed esercitazioni](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-Avviare Visual Studio Code. Premere <kbd>Ctrl</kbd>+<kbd>\`</kbd> (carattere di apice inverso o apice inverso) oppure selezionare **Visualizza > terminale** dal menu per aprire un terminale incorporato in Visual Studio Code. È anche possibile aprire una shell esterna con il comando **Apri nel prompt dei comandi** in Esplora risorse (**Apri nel terminale** in Mac o Linux) se si preferisce lavorare esternamente a Visual Studio Code.
+Avviare Visual Studio Code. Premere <kbd>Ctrl</kbd> <kbd>\`</kbd> (carattere di apice inverso o apice inverso) oppure selezionare **Visualizza** > **terminale** dal menu per aprire un terminale incorporato in Visual Studio Code. È comunque possibile aprire una shell esterna con il comando **Apri nel prompt dei comandi di** Esplora risorse (**Apri nel terminale** in MacOS o Linux) se si preferisce lavorare al di fuori della Visual Studio Code.
 
 Iniziare creando un file di soluzione, che funge da contenitore per uno o più progetti .NET Core. Nel terminale eseguire il comando [`dotnet new`](../tools/dotnet-new.md) per creare una nuova soluzione *Golden. sln* all'interno di una nuova cartella denominata *Golden*:
 
@@ -142,7 +142,8 @@ namespace TestApp
     public class LibraryTests
     {
         [Fact]
-        public void TestThing() {
+        public void TestThing()
+        {
             Assert.NotEqual(42, new Thing().Get(19, 23));
         }
     }
@@ -211,7 +212,7 @@ dotnet run -p app/app.csproj
 
 Impostare un punto di interruzione nell'istruzione `WriteLine` nel metodo `Main`. A tale scopo, premere il tasto <kbd>Fn</kbd>+<kbd>F9</kbd> quando il cursore si trova sulla linea `WriteLine` oppure facendo clic sul margine sinistro della riga in cui si vuole impostare il punto di interruzione. Verrà visualizzato un cerchio rosso sul margine accanto alla riga di codice. Quando viene raggiunto il punto di interruzione, l'esecuzione del codice si interrompe *prima* che venga eseguita la riga del punto di interruzione.
 
-Aprire la scheda debugger selezionando l'icona debug nella barra degli strumenti Visual Studio Code, selezionando **visualizza > debug** dalla barra dei menu o usando il <kbd>comando</kbd> di scelta rapida da tastiera+<kbd>MAIUSC</kbd>+<kbd>D</kbd>:
+Aprire la scheda debugger selezionando l'icona debug nella barra degli strumenti Visual Studio Code, selezionando **Visualizza** > **debug** dalla barra dei menu o usando il tasto <kbd>&#8679;</kbd> <kbd>&#8984;</kbd>di scelta rapida <kbd>D</kbd>:
 
 ![Debugger di Visual Studio Code](./media/using-on-macos/visual-studio-code-debugger.png)
 
