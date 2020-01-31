@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ecf56646-7e5f-46c4-8340-f3a04e88920f
 topic_type:
 - apiref
-ms.openlocfilehash: 11ce2fdccbf24fd688376cc3256f6db79a7cc352
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b2fca16b3b859df8bd7409149eb5a3cf7b011c5c
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447850"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76864583"
 ---
 # <a name="icorprofilerfunctioncontrolsetilinstrumentedcodemap-method"></a>Metodo ICorProfilerFunctionControl::SetILInstrumentedCodeMap
 Imposta una mappa del codice per la funzione specificata usando le voci della mappa CIL (Common Intermediate Language) specificate.  
@@ -38,20 +38,20 @@ HRESULT SetILInstrumentedCodeMap(
  [in] Numero di voci nella mappa.  
   
  `rgILMapEntries`  
- [in] Array allocato dal chiamante di voci COR_IL_MAP. L'interpretazione di queste voci è identica a quella per il metodo [ICorProfilerInfo:: SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) .  
+ [in] Array allocato dal chiamante di voci COR_IL_MAP. L'interpretazione di queste voci è identica a quella per il metodo [ICorProfilerInfo:: SetILInstrumentedCodeMap](icorprofilerinfo-setilinstrumentedcodemap-method.md) .  
   
 ## <a name="remarks"></a>Note  
  L'impostazione del mapping chiamando questo metodo consente al debugger di recuperare il mapping chiamando [ICorDebugILCode2:: GetInstrumentedILMap](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md). Il debugger potrà anche usare il mapping internamente durante il calcolo degli offset IL per le analisi dello stack e la durata delle variabili.  
   
-## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti di  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [Interfaccia ICorProfilerInfo](icorprofilerinfo-interface.md)

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 90140b0f-a926-4a7e-b6fa-23e05f703cce
 topic_type:
 - apiref
-ms.openlocfilehash: 2393468f78312511d11cbe0ab422c26c710e25d8
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 583189cd667af142ab7d0934be34411644dac936
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439234"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76863920"
 ---
 # <a name="icorprofilerinfogetcodeinfo-method"></a>Metodo ICorProfilerInfo::GetCodeInfo
 Ottiene l'ambito del codice nativo associato all'ID funzione specificato.  
   
- Questo metodo è obsoleto. Usare invece il metodo [ICorProfilerInfo2:: GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) .  
+ Questo metodo è obsoleto. Usare invece il metodo [ICorProfilerInfo2:: GetCodeInfo2](icorprofilerinfo2-getcodeinfo2-method.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,13 +46,13 @@ HRESULT GetCodeInfo(
  `pcSize`  
  [out] Puntatore a un intero che specifica la dimensione, in byte, del codice nativo.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Per ottimizzare le prestazioni, il runtime di .NET Framework versione 2.0 divide in più aree il codice nativo precompilato di una funzione. Il metodo `GetCodeInfo` pertanto è obsoleto in .NET Framework 2.0 perché non è in grado di gestire l'ambito del codice nativo di una funzione. I profiler devono invece iniziare a usare il metodo più generico `ICorProfilerInfo2::GetCodeInfo2`.  
   
  Questa funzione usa buffer allocati dal chiamante.  
   
-## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti di  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
@@ -62,6 +62,6 @@ HRESULT GetCodeInfo(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [Interfacce di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Profilatura](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [Interfaccia ICorProfilerInfo](icorprofilerinfo-interface.md)
+- [Interfacce di profilatura](profiling-interfaces.md)
+- [Profilatura](index.md)

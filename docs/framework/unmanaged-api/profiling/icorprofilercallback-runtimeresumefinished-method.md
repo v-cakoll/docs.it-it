@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 76de0494-dc49-426b-887d-bee98806a982
 topic_type:
 - apiref
-ms.openlocfilehash: 81c26214762fba1cac43e42adc1ee9909759972f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5cafbca75992a5fe8a7d3d95628e0018f1a2e8fa
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74430320"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865948"
 ---
 # <a name="icorprofilercallbackruntimeresumefinished-method"></a>Metodo ICorProfilerCallback::RuntimeResumeFinished
 Notifica al profiler che il runtime ha ripreso tutti i thread di runtime e ha restituito un'operazione normale.  
@@ -32,17 +32,17 @@ HRESULT RuntimeResumeFinished();
 ```  
   
 ## <a name="remarks"></a>Note  
- Non è garantito che il callback `RuntimeResumeFinished` venga eseguito nello stesso thread del callback [ICorProfilerCallback:: RuntimeSuspendStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) . Tuttavia, è garantito che si verifichi nello stesso thread del callback [ICorProfilerCallback:: RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) .  
+ Non è garantito che il callback `RuntimeResumeFinished` venga eseguito nello stesso thread del callback [ICorProfilerCallback:: RuntimeSuspendStarted](icorprofilercallback-runtimesuspendstarted-method.md) . Tuttavia, è garantito che si verifichi nello stesso thread del callback [ICorProfilerCallback:: RuntimeResumeStarted](icorprofilercallback-runtimeresumestarted-method.md) .  
   
-## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti di  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Interfaccia ICorProfilerCallback](icorprofilercallback-interface.md)
