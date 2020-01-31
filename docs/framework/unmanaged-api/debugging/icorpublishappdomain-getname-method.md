@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6ef8ac9b-9803-4b65-8b13-25f3e0b1bc6b
 topic_type:
 - apiref
-ms.openlocfilehash: 2f91891164f1f80617cab10347eb4a7a08762c10
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4325d61d12a66b17f88e5e368cbbc7806d0a3ec5
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140347"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790711"
 ---
 # <a name="icorpublishappdomaingetname-method"></a>Metodo ICorPublishAppDomain::GetName
-Ottiene il nome del dominio dell'applicazione rappresentato da questo [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md).  
+Ottiene il nome del dominio dell'applicazione rappresentato da questo [ICorPublishAppDomain](icorpublishappdomain-interface.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,17 +49,17 @@ HRESULT GetName (
 ## <a name="remarks"></a>Note  
  Se `szName` è diverso da null, il metodo `GetName` copia fino a `cchName` caratteri, incluso il terminatore null, in `szName`. Se viene restituito un valore non null in `pcchName`, il numero effettivo di caratteri nel nome, incluso il terminatore null, viene archiviato nella matrice di `szName`.  
   
- Il metodo `GetName` restituisce un HRESULT S_OK indipendentemente dal numero di caratteri copiati.  
+ Il metodo `GetName` restituisce una S_OK HRESULT indipendentemente dal numero di caratteri copiati.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorPub. idl, CorPub. h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)
+- [Interfaccia ICorPublishAppDomain](icorpublishappdomain-interface.md)

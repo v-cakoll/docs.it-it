@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9c421bb0-e647-4b2d-a986-f3d578cc7f20
 topic_type:
 - apiref
-ms.openlocfilehash: b062faffc22e444bd4d3b4a0c67f2a08d7af3560
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ddfe8cee8fdbca910ffa4f6989b1359ae5f7b11f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131113"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794374"
 ---
 # <a name="icordebugheapvalue3-interface"></a>Interfaccia ICorDebugHeapValue3
 Espone le proprietà del blocco di monitoraggio di oggetti. Questa interfaccia estende le interfacce ICorDebugHeapValue e ICorDebugHeapValue2.  
@@ -28,24 +28,24 @@ Espone le proprietà del blocco di monitoraggio di oggetti. Questa interfaccia e
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo GetThreadOwningMonitorLock](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-getthreadowningmonitorlock-method.md)|Restituisce il thread gestito proprietario del blocco di monitoraggio su questo oggetto.|  
-|[Metodo GetMonitorEventWaitList](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-getmonitoreventwaitlist-method.md)|Fornisce un elenco ordinato di thread accodati per l'evento associato a un blocco di monitoraggio.|  
+|[Metodo GetThreadOwningMonitorLock](icordebugheapvalue3-getthreadowningmonitorlock-method.md)|Restituisce il thread gestito proprietario del blocco di monitoraggio su questo oggetto.|  
+|[Metodo GetMonitorEventWaitList](icordebugheapvalue3-getmonitoreventwaitlist-method.md)|Fornisce un elenco ordinato di thread accodati per l'evento associato a un blocco di monitoraggio.|  
   
 ## <a name="remarks"></a>Note  
   
 > [!NOTE]
 > Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Interfacce di debug](debugging-interfaces.md)
+- [Debug](index.md)

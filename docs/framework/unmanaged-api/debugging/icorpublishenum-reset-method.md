@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8a4d9c86-b5ef-460a-9731-1d8c91b93a0b
 topic_type:
 - apiref
-ms.openlocfilehash: f12ff1486d39fe3d7d33f6afc061e5d0e610750c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e7c60355d4c0e0f34f591a48270e388d0ff53a29
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140471"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790602"
 ---
 # <a name="icorpublishenumreset-method"></a>Metodo ICorPublishEnum::Reset
 Sposta il cursore di all'inizio dell'enumerazione.  
@@ -34,15 +34,15 @@ HRESULT Reset ();
 ## <a name="parameters"></a>Parametri  
  `Reset` non accetta parametri.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorPub. idl, CorPub. h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)
+- [Interfaccia ICorPublishEnum](icorpublishenum-interface.md)

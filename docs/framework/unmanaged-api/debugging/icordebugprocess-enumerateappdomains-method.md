@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d508981f-e2b2-445b-a649-69951c22702d
 topic_type:
 - apiref
-ms.openlocfilehash: e09e25503ad00ab3542f0c4f50221b6014b25561
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 35e3e37b1487b5dda9945402c6a3338384147f9a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128891"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792633"
 ---
 # <a name="icordebugprocessenumerateappdomains-method"></a>Metodo ICorDebugProcess::EnumerateAppDomains
 Enumera tutti i domini applicazione in questo processo.  
@@ -34,16 +34,16 @@ HRESULT EnumerateAppDomains(
   
 ## <a name="parameters"></a>Parametri  
  `ppAppDomains`  
- out Puntatore all'indirizzo di un [ICorDebugAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-interface.md) che rappresenta un enumeratore per i domini applicazione in questo processo.  
+ out Puntatore all'indirizzo di un [ICorDebugAppDomainEnum](icordebugappdomainenum-interface.md) che rappresenta un enumeratore per i domini applicazione in questo processo.  
   
 ## <a name="remarks"></a>Note  
- Questo metodo può essere utilizzato prima del callback [ICorDebugManagedCallback:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) .  
+ Questo metodo può essere utilizzato prima del callback [ICorDebugManagedCallback:: CreateProcess](icordebugmanagedcallback-createprocess-method.md) .  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

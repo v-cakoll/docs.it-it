@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c7276f7-7e54-470c-808c-e13745ac07a1
 topic_type:
 - apiref
-ms.openlocfilehash: a9a6ca9ae3cdb1c6a7398d08c9f99e3cde125cf6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f177d441da3bd967750781e487d9fed42bc132f5
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131905"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791940"
 ---
 # <a name="icordebugremotetargetgethostname-method"></a>Metodo ICorDebugRemoteTarget::GetHostName
 Restituisce il nome di dominio completo o l'indirizzo IPv4 del computer di destinazione per il debug remoto. IPV6 non è attualmente supportato.  
@@ -55,7 +55,7 @@ HRESULT GetHostName (
 ## <a name="remarks"></a>Note  
  Questo metodo viene implementato dal writer del debugger. Deve seguire il paradigma di chiamata multipla: alla prima chiamata, il chiamante passa null a sia `cchHostName` che `szHostName`e `pcchHostName` restituisce la dimensione del buffer richiesto. Nella seconda chiamata, la dimensione che è stata restituita in precedenza viene passata a `cchHostName` e un buffer di dimensioni appropriate viene passato a `szHostName`.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug. idl  
@@ -66,5 +66,5 @@ HRESULT GetHostName (
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorDebugRemoteTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
-- [Interfaccia ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [Interfaccia ICorDebugRemoteTarget](icordebugremotetarget-interface.md)
+- [Interfaccia ICorDebug](icordebug-interface.md)

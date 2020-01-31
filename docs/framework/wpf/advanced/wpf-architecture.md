@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: db9938f26f31506737eb0395fa389da01a1ee444
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 6d8dedafd4ffc582b529289d3583f90d81779762
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76735073"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794044"
 ---
 # <a name="wpf-architecture"></a>Architettura WPF
 In questo argomento viene fornita una presentazione guidata della gerarchia di classi Windows Presentation Foundation (WPF). Viene illustrata la maggior parte dei principali sottosistemi di WPF e viene descritta la modalità di interazione. Vengono inoltre illustrate alcune delle scelte effettuate dagli architetti di WPF.  
@@ -116,7 +116,7 @@ In questo argomento viene fornita una presentazione guidata della gerarchia di c
   
  I due aspetti più importanti che <xref:System.Windows.FrameworkElement> introduce sono data binding e gli stili.  
   
- Il sottosistema data binding in WPF dovrebbe essere relativamente familiare a chiunque abbia utilizzato [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] o ASP.NET per la creazione di un'applicazione [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. In ciascuno di questi sistemi è possibile effettuare in modo semplice l'associazione di una o più proprietà di un dato elemento a un blocco di dati. WPF dispone del supporto completo per l'associazione di proprietà, trasformazione ed elenco.  
+ Il sottosistema data binding in WPF dovrebbe essere relativamente familiare a chiunque abbia utilizzato Windows Forms o ASP.NET per la creazione di un'applicazione [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. In ciascuno di questi sistemi è possibile effettuare in modo semplice l'associazione di una o più proprietà di un dato elemento a un blocco di dati. WPF dispone del supporto completo per l'associazione di proprietà, trasformazione ed elenco.  
   
  Una delle funzionalità più interessanti di data binding in WPF è l'introduzione dei modelli di dati. che consentono di specificare in modo dichiarativo come deve essere visualizzato un blocco di dati. Anziché creare un'interfaccia utente personalizzata che può essere associata ai dati, è possibile aggirare il problema e fare in modo che siano i dati a stabilire il tipo di visualizzazione da creare.  
   
@@ -130,7 +130,7 @@ In questo argomento viene fornita una presentazione guidata della gerarchia di c
   
  Questa suddivisione tra modello dati (proprietà), modello di interazione (comandi ed eventi) e modello di visualizzazione (modelli) consente una personalizzazione completa dell'aspetto e del comportamento di un controllo.  
   
- Una caratteristica comune del modello dati dei controlli è il modello di contenuto. Se si osserva un controllo come <xref:System.Windows.Controls.Button>, si noterà che è presente una proprietà denominata "Content" di tipo <xref:System.Object>. In [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] e ASP.NET questa proprietà è in genere una stringa, ma limita il tipo di contenuto che è possibile inserire in un pulsante. Il contenuto di un pulsante può essere una stringa semplice, un oggetto dati complesso o l'intera struttura ad albero di un elemento. Nel caso di un oggetto dati, il modello dati viene utilizzato per costruire una visualizzazione.  
+ Una caratteristica comune del modello dati dei controlli è il modello di contenuto. Se si osserva un controllo come <xref:System.Windows.Controls.Button>, si noterà che è presente una proprietà denominata "Content" di tipo <xref:System.Object>. In Windows Forms e ASP.NET questa proprietà è in genere una stringa, ma limita il tipo di contenuto che è possibile inserire in un pulsante. Il contenuto di un pulsante può essere una stringa semplice, un oggetto dati complesso o l'intera struttura ad albero di un elemento. Nel caso di un oggetto dati, il modello dati viene utilizzato per costruire una visualizzazione.  
   
 <a name="Summary"></a>   
 ## <a name="summary"></a>Riepilogo  
@@ -138,7 +138,7 @@ In questo argomento viene fornita una presentazione guidata della gerarchia di c
   
  Le applicazioni tradizionali creano una visualizzazione e associano successivamente i dati. In WPF tutte le informazioni sul controllo, ogni aspetto dello schermo, vengono generate da un tipo di data binding. Il testo che si trova nei pulsanti viene visualizzato creando un controllo composto all'interno del pulsante e associando la relativa visualizzazione alla proprietà del contenuto del pulsante.  
   
- Quando si inizia a sviluppare applicazioni basate su WPF, il suo aspetto è molto familiare. È possibile impostare proprietà, usare oggetti e associare dati nello stesso modo in cui è possibile usare [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] o ASP.NET. Con un'analisi più approfondita dell'architettura di WPF, si noterà che esiste la possibilità di creare applicazioni molto più ricche che considerano fondamentalmente i dati come driver di base dell'applicazione.  
+ Quando si inizia a sviluppare applicazioni basate su WPF, il suo aspetto è molto familiare. È possibile impostare proprietà, usare oggetti e associare dati nello stesso modo in cui è possibile usare Windows Forms o ASP.NET. Con un'analisi più approfondita dell'architettura di WPF, si noterà che esiste la possibilità di creare applicazioni molto più ricche che considerano fondamentalmente i dati come driver di base dell'applicazione.  
   
 ## <a name="see-also"></a>Vedere anche
 

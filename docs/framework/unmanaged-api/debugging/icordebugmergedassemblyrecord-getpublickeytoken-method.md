@@ -1,15 +1,15 @@
 ---
-title: 'Metodo metodo icordebugmergedassemblyrecord:: GetPublicKeyToken'
+title: Metodo ICorDebugMergedAssemblyRecord::GetPublicKeyToken
 ms.date: 03/30/2017
 ms.assetid: 72020b72-9611-4bc3-b1e7-5a16b023bfa3
-ms.openlocfilehash: 95ed1303b33b328d1f14ecea6cc318e14991cd54
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 543083703cd0cbbce9dc0660383713202fa2f0b8
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129782"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793097"
 ---
-# <a name="icordebugmergedassemblyrecordgetpublickeytoken-method"></a>Metodo metodo icordebugmergedassemblyrecord:: GetPublicKeyToken
+# <a name="icordebugmergedassemblyrecordgetpublickeytoken-method"></a>Metodo ICorDebugMergedAssemblyRecord::GetPublicKeyToken
 Ottiene il token di chiave pubblica dell'assembly.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -38,16 +38,16 @@ HRESULT GetPublicKeyToken(
 > [!NOTE]
 > Questo metodo è disponibile solo con .NET Native.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorDebugMergedAssemblyRecord](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)
-- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfaccia ICorDebugMergedAssemblyRecord](icordebugmergedassemblyrecord-interface.md)
+- [Interfacce di debug](debugging-interfaces.md)

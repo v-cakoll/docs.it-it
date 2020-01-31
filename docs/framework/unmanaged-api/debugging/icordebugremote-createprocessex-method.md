@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41af93c7-e448-4251-8d4d-413d38c635f2
 topic_type:
 - apiref
-ms.openlocfilehash: 9e1a5ba65da09c90f33e5e8108c3bd91f3aee4a1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cfec84483d387630623f77c176c668171303dd0f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131285"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791986"
 ---
 # <a name="icordebugremotecreateprocessex-method"></a>Metodo ICorDebugRemote::CreateProcessEx
 Avvia un processo in un computer remoto nel debugger.  
@@ -47,7 +47,7 @@ HRESULT CreateProcessEx (
   
 ## <a name="parameters"></a>Parametri  
  `pRemoteTarget`  
- in Puntatore a un' [interfaccia ICorDebugRemoteTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Utilizzato per determinare il computer remoto in cui verrà avviato il processo.  
+ in Puntatore a un' [interfaccia ICorDebugRemoteTarget](icordebugremotetarget-interface.md). Utilizzato per determinare il computer remoto in cui verrà avviato il processo.  
   
  `lpApplicationName`  
  in Puntatore a una stringa con terminazione null che specifica il modulo che deve essere eseguito dal processo avviato. Il modulo viene eseguito nel contesto di sicurezza del processo chiamante.  
@@ -95,7 +95,7 @@ HRESULT CreateProcessEx (
 ## <a name="remarks"></a>Note  
  Il debug in modalità mista non è supportato in Silverlight.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug. idl  
@@ -106,7 +106,7 @@ HRESULT CreateProcessEx (
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorDebugRemote](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
-- [Interfaccia ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [Interfaccia ICorDebugRemote](icordebugremote-interface.md)
+- [Interfaccia ICorDebug](icordebug-interface.md)
 
-- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfacce di debug](debugging-interfaces.md)

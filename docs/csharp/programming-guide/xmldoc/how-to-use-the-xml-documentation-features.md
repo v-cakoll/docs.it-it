@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 5de94b1f1ab44f954b5bab9f8b5212c33325c19d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 57034fb835d4c82b5bf658e61ec78ef226c2551e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75696714"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789778"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>Come usare le funzionalità relative alla documentazione XML
 
@@ -20,7 +20,7 @@ L'esempio seguente fornisce una panoramica di base di un tipo documentato.
 
 [!code-csharp[csProgGuideDocComments#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#15)]
 
-L'esempio genera un file con estensione XML con il contenuto seguente:
+Nell'esempio viene generato un file con estensione *XML* con il contenuto seguente.
 
 ```xml
 <?xml version="1.0"?>
@@ -120,7 +120,7 @@ La documentazione XML inizia con ///. Quando si crea un nuovo progetto, le proce
 
 - La documentazione deve essere in codice XML ben formato. Se il codice XML non è ben formato, viene generato un avviso e il file di documentazione conterrà un commento che segnalerà che si è verificato un errore.
 
-- Gli sviluppatori sono liberi di creare set di tag personalizzati. Esiste un set di tag consigliato (vedere [Tag consigliati per i commenti relativi alla documentazione](recommended-tags-for-documentation-comments.md)). Alcuni tag consigliati hanno un significato speciale:
+- Gli sviluppatori sono liberi di creare set di tag personalizzati. È disponibile un [set di tag consigliato](recommended-tags-for-documentation-comments.md). Alcuni tag consigliati hanno un significato speciale:
 
   - Il tag \< viene usato per descrivere i parametri. Se usato, il compilatore verifica che il parametro esista e che tutti i parametri siano descritti nella documentazione. Se la verifica ha esito negativo, il compilatore genera un avviso.
 
@@ -134,7 +134,7 @@ La documentazione XML inizia con ///. Quando si crea un nuovo progetto, le proce
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori C#](../index.md)
-- [-doc (opzioni del compilatore C#)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [-DOC (C# opzioni del compilatore)](../../language-reference/compiler-options/doc-compiler-option.md)
 - [Commenti relativi alla documentazione XML](./index.md)
 - [Processore della documentazione di DocFX](https://dotnet.github.io/docfx/)
 - [Processore di documentazione Sandcastle](https://github.com/EWSoftware/SHFB)

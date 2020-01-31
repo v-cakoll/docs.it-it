@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: cc79a67d-5368-434d-a943-209db90491b9
 topic_type:
 - apiref
-ms.openlocfilehash: ca0844e4d2b1cad65266d58c6cda74de203d1758
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 13ac5379992f4e768b09a03d31591143ba9bf627
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137665"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788716"
 ---
 # <a name="icordebugevalnewarray-method"></a>Metodo ICorDebugEval::NewArray
 Alloca una nuova matrice del tipo e delle dimensioni dell'elemento specificato.  
   
- Questo metodo è obsoleto nella versione .NET Framework 2,0. Usare invece [ICorDebugEval2:: NewParameterizedArray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) .  
+ Questo metodo è obsoleto nella versione .NET Framework 2,0. Usare invece [ICorDebugEval2:: NewParameterizedArray](icordebugeval2-newparameterizedarray-method.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -58,7 +58,7 @@ HRESULT NewArray (
 ## <a name="remarks"></a>Note  
  La matrice viene sempre creata nel dominio applicazione in cui è attualmente in esecuzione il thread.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  

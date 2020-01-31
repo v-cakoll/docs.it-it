@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 86f06245-9517-49be-8d8c-ca5deaf34c02
 topic_type:
 - apiref
-ms.openlocfilehash: 8fc2abd0728115edbbfae42958d8013029523ed1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d0c283232ff8eca1af9f3ff4448fb7f4c81d554f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73111367"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789039"
 ---
 # <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a>Metodo ICLRDebuggingLibraryProvider::ProvideLibrary
 
@@ -56,13 +56,13 @@ Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di 
 
 |HRESULT|Descrizione|
 |-------------|-----------------|
-|S_OK|Metodo completato correttamente.|
+|S_OK|Il metodo è stato eseguito correttamente.|
 
 ## <a name="exceptions"></a>Eccezioni
 
 ## <a name="remarks"></a>Note
 
-`ProvideLibrary` consente al debugger di fornire i moduli necessari per il debug di file CLR specifici, ad esempio mscordbi. dll e mscordacwks. dll. Gli handle del modulo devono rimanere validi fino a quando una chiamata al metodo [ICLRDebugging:: CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) non indica che possono essere liberati, a quel punto è responsabilità del chiamante liberare gli handle.
+`ProvideLibrary` consente al debugger di fornire i moduli necessari per il debug di file CLR specifici, ad esempio mscordbi. dll e mscordacwks. dll. Gli handle del modulo devono rimanere validi fino a quando una chiamata al metodo [ICLRDebugging:: CanUnloadNow](iclrdebugging-canunloadnow-method.md) non indica che possono essere liberati, a quel punto è responsabilità del chiamante liberare gli handle.
 
 Il debugger può utilizzare qualsiasi mezzo disponibile per individuare o procurare il modulo di debug.
 
@@ -71,7 +71,7 @@ Il debugger può utilizzare qualsiasi mezzo disponibile per individuare o procur
 >
 > Se viene individuato un problema di sicurezza grave in una libreria già rilasciata, ad esempio mscordbi. dll o mscordacwks. dll, è possibile applicare una patch allo shim per riconoscere le versioni non valide dei file. Lo shim può quindi inviare richieste per le versioni con patch dei file e rifiutare le versioni non valide se vengono fornite in risposta a una richiesta. Questa situazione può verificarsi solo se l'utente ha eseguito la correzione a una nuova versione dello shim. Le versioni senza patch rimarranno vulnerabili.
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
 **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).
 
@@ -79,9 +79,9 @@ Il debugger può utilizzare qualsiasi mezzo disponibile per individuare o procur
 
 **Libreria:** CorGuids.lib
 
-**Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]
+**Versioni .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Interfacce di debug](debugging-interfaces.md)
+- [Debug](index.md)

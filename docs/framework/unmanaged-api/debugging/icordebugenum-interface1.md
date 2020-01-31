@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80be7efe-2c32-4b9f-8c52-40c6f6268219
 topic_type:
 - apiref
-ms.openlocfilehash: 59dcb7ae6f27f8d049cd4dc2d313f7f1130fc503
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cc5598f9cbec4b97bb75f83fb18ccf8742904272
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73085256"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783014"
 ---
 # <a name="icordebugenum-interface"></a>Interfaccia ICorDebugEnum
 
@@ -29,10 +29,10 @@ Funge da interfaccia di base astratta per gli enumeratori utilizzati da un'appli
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo Clone](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|Crea una copia di questo oggetto `ICorDebugEnum`.|  
-|[Metodo GetCount](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-getcount-method.md)|Ottiene il numero di elementi nell'enumerazione.|  
-|[Metodo Reset](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-reset-method.md)|Sposta il cursore all'inizio dell'enumerazione.|  
-|[Metodo Skip](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|Sposta il cursore verso l'interno dell'enumerazione in base al numero di elementi specificato.|  
+|[Metodo Clone](icordebugenum-clone-method.md)|Crea una copia di questo oggetto `ICorDebugEnum`.|  
+|[Metodo GetCount](icordebugenum-getcount-method.md)|Ottiene il numero di elementi nell'enumerazione.|  
+|[Metodo Reset](icordebugenum-reset-method.md)|Sposta il cursore all'inizio dell'enumerazione.|  
+|[Metodo Skip](icordebugenum-skip-method.md)|Sposta il cursore verso l'interno dell'enumerazione in base al numero di elementi specificato.|  
   
 ## <a name="remarks"></a>Note  
  Gli enumeratori seguenti derivano da `ICorDebugEnum`:  
@@ -41,7 +41,7 @@ Funge da interfaccia di base astratta per gli enumeratori utilizzati da un'appli
   
 - ICorDebugAssemblyEnum  
   
-- [ICorDebugBlockingObjectEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugblockingobjectenum-interface.md)  
+- [ICorDebugBlockingObjectEnum](icordebugblockingobjectenum-interface.md)  
   
 - ICorDebugBreakpointEnum  
   
@@ -51,17 +51,17 @@ Funge da interfaccia di base astratta per gli enumeratori utilizzati da un'appli
   
 - ICorDebugErrorInfoEnum  
   
-- [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)  
+- [ICorDebugExceptionObjectCallStackEnum](icordebugexceptionobjectcallstackenum-interface.md)  
   
 - ICorDebugFrameEnum  
   
-- [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)  
+- [ICorDebugGCReferenceEnum](icordebuggcreferenceenum-interface.md)  
   
-- [ICorDebugGuidToTypeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md)  
+- [ICorDebugGuidToTypeEnum](icordebugguidtotypeenum-interface.md)  
   
-- [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md)  
+- [ICorDebugHeapEnum](icordebugheapenum-interface.md)  
   
-- [ICorDebugHeapSegmentEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md)  
+- [ICorDebugHeapSegmentEnum](icordebugheapsegmentenum-interface.md)  
   
 - ICorDebugModuleEnum  
   
@@ -77,20 +77,20 @@ Funge da interfaccia di base astratta per gli enumeratori utilizzati da un'appli
   
 - ICorDebugValueEnum  
   
-- [ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)  
+- [ICorDebugVariableHomeEnum](icordebugvariablehomeenum-interface.md)  
   
 > [!NOTE]
 > Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfacce di debug](debugging-interfaces.md)

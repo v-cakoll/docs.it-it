@@ -1,5 +1,5 @@
 ---
-title: <code> - C# Programming Guide
+title: <code> - C# programming guide
 ms.date: 07/20/2015
 f1_keywords:
 - code
@@ -8,32 +8,37 @@ helpviewer_keywords:
 - code XML tag
 - <code> C# XML tag
 ms.assetid: f235e3bc-a709-43cf-8a9f-bd57cabdf6da
-ms.openlocfilehash: eddf00c5fd51308d6d0f618282931190b43e92b5
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1b292f0e1f93f815cc31ef3dfb7015b8950bf8a6
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711805"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789841"
 ---
-# <a name="code-c-programming-guide"></a>\<code> (Guida per programmatori C#)
-## <a name="syntax"></a>Sintassi  
-  
-```xml  
-<code>content</code>  
-```  
-  
-## <a name="parameters"></a>Parametri  
- `content`  
- Testo da contrassegnare come codice.  
-  
-## <a name="remarks"></a>Note  
- Il tag \<code> rappresenta un modo per indicare più righe come codice. Usare [\<c>](./code-inline.md) per indicare che il testo all'interno di una descrizione deve essere contrassegnato come codice.  
-  
- Compilare con [-doc](../../language-reference/compiler-options/doc-compiler-option.md) per elaborare i commenti relativi alla documentazione in un file.  
-  
-## <a name="example"></a>Esempio  
- Vedere l'argomento [\<example>](./example.md) per un esempio di come usare il tag \<code>.  
-  
+# <a name="code-c-programming-guide"></a>> del codice \<C# (Guida per programmatori)
+
+## <a name="syntax"></a>Sintassi
+
+```xml
+<code>content</code>
+```
+
+## <a name="parameters"></a>Parametri
+
+- `content`
+
+  Testo da contrassegnare come codice.
+
+## <a name="remarks"></a>Note
+
+Il tag \<code> rappresenta un modo per indicare più righe come codice. Usare [\<c>](./code-inline.md) per indicare che il testo all'interno di una descrizione deve essere contrassegnato come codice.
+
+Compilare con [-doc](../../language-reference/compiler-options/doc-compiler-option.md) per elaborare i commenti relativi alla documentazione in un file.
+
+## <a name="example"></a>Esempio
+
+Vedere l'argomento [\<example>](./example.md) per un esempio di come usare il tag \<code>.
+
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori C#](../index.md)

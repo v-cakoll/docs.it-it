@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: 25f22d5e8caacc69643f6d79e109ebaa94159d80
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 8a52d84f7152b9cb431ad0aa97c88b143463be2d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75632312"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789620"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementazione del provider di automazione interfaccia utente lato server
 
@@ -20,7 +20,7 @@ ms.locfileid: "75632312"
 
 In questa sezione viene descritto come implementare un provider di automazione interfaccia utente sul lato server per un controllo personalizzato.
 
-L'implementazione per gli elementi Windows Presentation Foundation (WPF) e gli elementi non WPF (ad esempio quelli progettati per [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) è fondamentalmente diversa. Gli elementi WPF forniscono supporto per [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tramite una classe derivata da <xref:System.Windows.Automation.Peers.AutomationPeer>. Gli elementi non WPF forniscono supporto tramite implementazioni di interfacce del provider.
+L'implementazione per gli elementi Windows Presentation Foundation (WPF) e gli elementi non WPF (ad esempio quelli progettati per Windows Forms) è fondamentalmente diversa. Gli elementi WPF forniscono supporto per [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tramite una classe derivata da <xref:System.Windows.Automation.Peers.AutomationPeer>. Gli elementi non WPF forniscono supporto tramite implementazioni di interfacce del provider.
 
 <a name="Security_Considerations"></a>
 
@@ -40,7 +40,7 @@ Per altre informazioni su questo argomento, vedere [Automazione interfaccia uten
 
 ## <a name="provider-implementation-by-non-wpf-elements"></a>Implementazione di provider da elementi non WPF
 
-I controlli personalizzati che non fanno parte del framework WPF, ma che sono scritti in codice gestito (spesso si tratta di controlli [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]), forniscono supporto per [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] mediante l'implementazione di interfacce. Ogni elemento deve implementare almeno una delle interfacce elencate nella prima tabella nella sezione successiva. Inoltre, se l'elemento supporta uno o più pattern di controllo, deve implementare l'interfaccia appropriata per ognuno di essi.
+I controlli personalizzati che non fanno parte del framework WPF, ma che sono scritti in codice gestito (spesso si tratta di controlli Windows Forms), forniscono supporto per [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] mediante l'implementazione di interfacce. Ogni elemento deve implementare almeno una delle interfacce elencate nella prima tabella nella sezione successiva. Inoltre, se l'elemento supporta uno o più pattern di controllo, deve implementare l'interfaccia appropriata per ognuno di essi.
 
 Il progetto del provider [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] deve fare riferimento agli assembly seguenti:
 
@@ -117,7 +117,7 @@ I provider per i controlli basati su HWND in genere non richiedono di specificar
 > [!NOTE]
 > Il valore <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> di un elemento semplice o di una radice di frammento ospitato in una finestra viene ottenuto dalla finestra. Tuttavia, gli elementi del frammento sotto la radice (ad esempio voci di elenco in una casella di riepilogo) devono fornire i propri identificatori. Per ulteriori informazioni, vedere <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>.
 >
-> Il valore <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> deve essere restituito per i provider ospitati in un controllo [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] . In questo caso, il provider di finestra predefinito potrebbe non essere in grado di recuperare il valore corretto.
+> Il <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> deve essere restituito per i provider ospitati in un controllo Windows Forms. In questo caso, il provider di finestra predefinito potrebbe non essere in grado di recuperare il valore corretto.
 >
 > Il valore <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> viene in genere fornito dal provider host. Ad esempio, se un controllo personalizzato è derivato da <xref:System.Windows.Forms.Control>, il nome è derivato dalla proprietà `Text` del controllo.
 

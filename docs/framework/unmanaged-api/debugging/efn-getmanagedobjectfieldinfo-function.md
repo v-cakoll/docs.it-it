@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3b93bcff-62a4-47b2-babc-6bcf4216119a
 topic_type:
 - apiref
-ms.openlocfilehash: b68f24908a5b214d507da8e8a4636a7c55259604
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 182424632e4f81dfdf86e87dc6bb2c75c2780fce
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123022"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793766"
 ---
 # <a name="_efn_getmanagedobjectfieldinfo-function"></a>\_AAPN\_funzione GetManagedObjectFieldInfo
 Ottiene l'offset per un campo dall'inizio di un oggetto e il valore del campo, usando il puntatore all'oggetto e il nome di campo forniti.  
@@ -55,9 +55,9 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
 ## <a name="remarks"></a>Note  
  Se l'offset è 0, non viene scritto alcun offset.  
   
- Se nel thread non è attualmente presente codice gestito nel contesto, la funzione restituisce HRESULT SOS_E_NOMANAGEDCODE con il valore della funzione messaggi 0XA0 e un codice di errore 0x1000.  
+ Se nel thread non è attualmente presente codice gestito, la funzione restituisce HRESULT SOS_E_NOMANAGEDCODE con un valore della funzione messaggi 0XA0 e un codice di errore 0x1000.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** SOS_Stacktrace. h  
@@ -66,4 +66,4 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Funzioni statiche globali di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [Funzioni statiche globali di debug](debugging-global-static-functions.md)

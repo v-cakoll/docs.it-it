@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e06fc19d-2cf4-4cad-81a3-137a68af8969
 topic_type:
 - apiref
-ms.openlocfilehash: ec265525d01dab0669939569501fce91b500a900
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8be7c0e32f6183deb354d8b3936ef55c2520fe9f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127497"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788614"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>Metodo ICorDebugHeapValue3::GetThreadOwningMonitorLock
 Restituisce il thread gestito proprietario del blocco di monitoraggio su questo oggetto.  
@@ -46,7 +46,7 @@ HRESULT GetThreadOwningMonitorLock (
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|Metodo completato correttamente.|  
+|S_OK|Il metodo è stato eseguito correttamente.|  
 |S_FALSE|Nessun thread gestito è proprietario del blocco di monitoraggio per questo oggetto.|  
   
 ## <a name="exceptions"></a>Eccezioni  
@@ -64,16 +64,16 @@ HRESULT GetThreadOwningMonitorLock (
   
  Se si verifica un errore in modo che non sia possibile determinare quale thread è proprietario del blocco di monitoraggio su questo oggetto, il metodo restituisce un valore HRESULT che indica un errore.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Interfacce di debug](debugging-interfaces.md)
+- [Debug](index.md)

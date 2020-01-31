@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4781e39a0c8827adb6ab0155d5215645242208a5
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: eb61ad85580310c7becc2a1a2237efe188fbecf0
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348171"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794586"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>Esercitazione: ispezione visiva automatizzata tramite il trasferimento dell'apprendimento con l'API di classificazione delle immagini ML.NET
 
@@ -140,10 +140,10 @@ In questa esercitazione vengono usate solo le immagini del deck Bridge.
 
         `ModelInput` contiene le proprietà seguenti:
 
-        - `ImagePath` è il percorso completo in cui è archiviata l'immagine.
-        - `Label` è la categoria a cui appartiene l'immagine. Si tratta del valore da stimare.
         - `Image` è la rappresentazione `byte[]` dell'immagine. Il modello prevede che i dati dell'immagine siano di questo tipo per il training.
         - `LabelAsKey` è la rappresentazione numerica del `Label`.
+        - `ImagePath` è il percorso completo in cui è archiviata l'immagine.
+        - `Label` è la categoria a cui appartiene l'immagine. Si tratta del valore da stimare.
 
         Per eseguire il training del modello e eseguire stime, vengono utilizzati solo `Image` e `LabelAsKey`. Le proprietà `ImagePath` e `Label` sono conservate per praticità per accedere al nome del file di immagine originale e alla categoria.
 
@@ -171,7 +171,7 @@ Quando i dati di training e convalida non cambiano spesso, è consigliabile memo
 
     [!code-csharp [DefinePaths](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L15-L17)]
 
-1. Quindi, inizializzare la variabile `mlContext` con una nuova istanza di [MLContext](xref:Microsoft.ML.MLContext).
+1. Inizializzare la variabile `mlContext` con una nuova istanza di [MLContext](xref:Microsoft.ML.MLContext).
 
     [!code-csharp [MLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L19)]
 

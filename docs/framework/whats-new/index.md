@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: ab14e6cb7d9bd4c1571040280dc35233e9b89d43
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 538806627a31366d4b8597eb010a4bbe3f8f9202
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937971"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76860959"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novità di .NET Framework
 
@@ -600,7 +600,7 @@ Un'accessibilità migliorata, grazie alla quale un'applicazione può offrire un'
 
 **Supporto per .NET Standard 2.0**
 
-[.NET Standard](../../standard/net-standard.md) definisce un set di API che devono essere disponibili in ogni implementazione .NET conforme alla versione dello strumento standard. .NET Framework 4.7.1 supporta completamente .NET Standard 2.0 e aggiunge [circa 200 API](https://github.com/dotnet/standard/blob/master/netstandard/src/ApiCompatBaseline.net461.txt), definite in .NET Standard 2.0 e non incluse in .NET Framework 4.6.1, 4.6.2 e 4.7. Si noti che queste versioni del .NET Framework supportano .NET Standard 2,0 solo se nel sistema di destinazione sono distribuiti anche altri file di supporto di .NET Standard. Per ulteriori informazioni, vedere il post di Blog relativo al supporto di BCL-.NET Standard 2,0 nel post di Blog relativo alle [funzionalità di runtime e compilatore di .NET Framework 4.7.1](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) .
+[.NET Standard](../../standard/net-standard.md) definisce un set di API che devono essere disponibili in ogni implementazione .NET conforme alla versione dello strumento standard. .NET Framework 4.7.1 supporta completamente .NET Standard 2.0 e aggiunge [circa 200 API](https://github.com/dotnet/standard/blob/master/src/netstandard/src/ApiCompatBaseline.net461.txt), definite in .NET Standard 2.0 e non incluse in .NET Framework 4.6.1, 4.6.2 e 4.7. Si noti che queste versioni del .NET Framework supportano .NET Standard 2,0 solo se nel sistema di destinazione sono distribuiti anche altri file di supporto di .NET Standard. Per ulteriori informazioni, vedere il post di Blog relativo al supporto di BCL-.NET Standard 2,0 nel post di Blog relativo alle [funzionalità di runtime e compilatore di .NET Framework 4.7.1](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) .
 
 **Supporto per generatori di configurazioni**
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: 59c4076712823faa1602448653680a31b8cd8c69
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 5668e14cd0aed33a29fd43661363131879419e61
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741077"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793928"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Utilizzo di automazione interfaccia utente per il test automatico
 > [!NOTE]
@@ -37,7 +37,7 @@ ms.locfileid: "75741077"
 > Con altri modelli di accessibilità, è necessario che gli sviluppatori raccolgano le informazioni direttamente da singoli pulsanti, menu o altri controlli. Ogni tipo di controllo, purtroppo, è disponibile in decine di varianti minori. In altre parole, anche se dieci varianti di un pulsante possono funzionare tutte allo stesso modo ed eseguire la stessa funzione, devono essere trattate come controlli univoci. Non è possibile sapere se tali controlli sono equivalenti a livello funzionale. I pattern di controllo sono stati sviluppati per rappresentare questi comportamenti comuni dei controlli. Per altre informazioni, vedere [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md).  
   
 ### <a name="implementing-ui-automation"></a>Implementazione di automazione interfaccia utente  
- Come indicato in precedenza, senza il modello unificato fornito da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], è necessario che strumenti di test e sviluppatori conoscano le informazioni specifiche del framework per esporre proprietà e comportamenti dei controlli in tale framework. Poiché possono essere presenti diversi framework dell'interfaccia utente in qualsiasi momento all'interno dei sistemi operativi Windows, tra cui Win32, [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]e Windows Presentation Foundation (WPF), può essere un'attività ardua testare più applicazioni con controlli simili. Nella tabella seguente, ad esempio, sono indicati i nomi delle proprietà specifiche del framework richieste per recuperare il nome (o il testo) associato a un controllo pulsante e viene riportata la singola proprietà [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] equivalente.  
+ Come indicato in precedenza, senza il modello unificato fornito da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], è necessario che strumenti di test e sviluppatori conoscano le informazioni specifiche del framework per esporre proprietà e comportamenti dei controlli in tale framework. Poiché possono essere presenti diversi framework dell'interfaccia utente in qualsiasi momento all'interno dei sistemi operativi Windows, tra cui Win32, Windows Forms e Windows Presentation Foundation (WPF), può essere un'attività ardua testare più applicazioni con controlli che sembra simile. Nella tabella seguente, ad esempio, sono indicati i nomi delle proprietà specifiche del framework richieste per recuperare il nome (o il testo) associato a un controllo pulsante e viene riportata la singola proprietà [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] equivalente.  
   
 |Tipo di controllo di automazione interfaccia utente|Framework di interfaccia utente|Proprietà specifica del framework|Proprietà di automazione interfaccia utente|  
 |--------------------------------|------------------|---------------------------------|----------------------------|  

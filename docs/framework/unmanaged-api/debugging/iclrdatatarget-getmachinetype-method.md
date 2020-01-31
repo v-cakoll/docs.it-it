@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5f1f9c61-3e3b-48b2-b111-a4395f7623a7
 topic_type:
 - apiref
-ms.openlocfilehash: 941d1b4057ef78a6235a0ba853e48a000f2087e8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 50ea9caf08b2ffb689760da95af4e5c3fdd77301
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122880"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793745"
 ---
 # <a name="iclrdatatargetgetmachinetype-method"></a>Metodo ICLRDataTarget::GetMachineType
 Ottiene l'identificatore per il tipo di set di istruzioni utilizzato dal processo di destinazione.  
@@ -37,15 +37,15 @@ HRESULT GetMachineType (
  `machineType`  
  out Puntatore a un valore che indica il set di istruzioni utilizzato dal processo di destinazione. Il `machineType` restituito è una delle costanti IMAGE_FILE_MACHINE, definite nel file di intestazione WinNT. h.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** ClrData. idl, ClrData. h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [Interfaccia ICLRDataTarget](iclrdatatarget-interface.md)

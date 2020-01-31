@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b30280bb-fe75-44ed-8589-bcff081fae44
 topic_type:
 - apiref
-ms.openlocfilehash: 251c96042e8e56112015fb869176c708322267f6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a443332e4f2b0351e99754fae610af39268bb105
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73097260"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789273"
 ---
 # <a name="cordebugsetcontextflag-enumeration"></a>Enumerazione CorDebugSetContextFlag
 Indica se il contesto proviene dal frame attivo (o foglia) sullo stack o se è stato calcolato dalla rimozione da un altro frame.  
@@ -34,7 +34,7 @@ typedef enum CorDebugSetContextFlag
 }  CorDebugSetContextFlag;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
   
 |Member|Descrizione|  
 |------------|-----------------|  
@@ -42,18 +42,18 @@ typedef enum CorDebugSetContextFlag
 |SET_CONTEXT_FLAG_UNWIND_FRAME|Il contesto è stato calcolato dalla rimozione da un altro frame.|  
   
 ## <a name="remarks"></a>Note  
- `CorDebugSetContextFlag` fornisce i valori utilizzati dal metodo [ICorDebugStackWalk:: secontext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md) .  
+ `CorDebugSetContextFlag` fornisce i valori utilizzati dal metodo [ICorDebugStackWalk:: secontext](icordebugstackwalk-setcontext-method.md) .  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
-- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Enumerazioni di debug](debugging-enumerations.md)
+- [Debug](index.md)

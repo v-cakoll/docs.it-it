@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 51d9f4a4-81a7-4527-8537-5212bdb05c70
 topic_type:
 - apiref
-ms.openlocfilehash: 1b4741b71521ab91152ce71d5b1b4a4c3fbd3629
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7a274aaec4919b86f32f98e4d8278dc12748fb2b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73113751"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76785484"
 ---
 # <a name="iclrdatatargetgetpointersize-method"></a>Metodo ICLRDataTarget::GetPointerSize
 Ottiene la dimensione, in byte, del tipo di puntatore utilizzato dal processo di destinazione. Questo metodo viene chiamato dal servizio di accesso ai dati Common Language Runtime.  
@@ -40,15 +40,15 @@ HRESULT GetPointerSize (
 ## <a name="remarks"></a>Note  
  Questo metodo è implementato dal writer dell'applicazione di debug.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** ClrData. idl, ClrData. h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [Interfaccia ICLRDataTarget](iclrdatatarget-interface.md)

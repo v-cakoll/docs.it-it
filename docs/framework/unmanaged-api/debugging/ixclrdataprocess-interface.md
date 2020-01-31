@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: ff74a7acb5cc84c177f083c19402cd78977aeab5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a5d707d61513b030e5968af28db3c2a606e4419b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775245"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790379"
 ---
 # <a name="ixclrdataprocess-interface"></a>Interfaccia IXCLRDataProcess
 
-Fornisce metodi per l'esecuzione di query informazioni sul processo.
+Fornisce metodi per l'esecuzione di query sulle informazioni relative a un processo.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -32,26 +32,26 @@ Fornisce metodi per l'esecuzione di query informazioni sul processo.
 
 | Metodo                                                                                                                                               | Descrizione                                                                                     |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| [GetAppDomainByUniqueId](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-getappdomainbyuniqueid-method.md)                       | Ottiene un `AppDomain` in un processo tramite l'id univoco.                                              |
-| [StartEnumModules](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-startenummodules-method.md)                                   | Fornisce un handle per enumerare i moduli di un processo.                                        |
-| [EnumModule](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-enummodule-method.md)                                               | Enumera i moduli di questo processo.                                                         |
-| [EndEnumModules](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-endenummodules-method.md)                                       | Rilascia le risorse usate dagli iteratori interni utilizzati durante l'enumerazione di modulo.               |
-| [StartEnumMethodInstancesByAddress](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-startenummethodinstancesbyaddress-method.md) | Fornisce un handle per enumerare le istanze di metodo di `AppDomain` iniziando in corrispondenza di un determinato indirizzo. |
-| [EnumMethodInstanceByAddress](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-enummethodinstancebyaddress-method.md)             | Enumera le istanze di metodo di questo processo iniziando in corrispondenza di un offset di indirizzo.                  |
-| [EndEnumMethodInstancesByAddress](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-endenummethodinstancesbyaddress-method.md)     | Rilascia le risorse usate dagli iteratori interni utilizzati durante l'enumerazione di istanza.             |
+| [GetAppDomainByUniqueId](ixclrdataprocess-getappdomainbyuniqueid-method.md)                       | Ottiene un `AppDomain` in un processo in base al relativo ID univoco.                                              |
+| [StartEnumModules](ixclrdataprocess-startenummodules-method.md)                                   | Fornisce un handle per enumerare i moduli di un processo.                                        |
+| [EnumModule](ixclrdataprocess-enummodule-method.md)                                               | Enumera i moduli di questo processo.                                                         |
+| [EndEnumModules](ixclrdataprocess-endenummodules-method.md)                                       | Rilascia le risorse usate dagli iteratori interni usati durante l'enumerazione del modulo.               |
+| [StartEnumMethodInstancesByAddress](ixclrdataprocess-startenummethodinstancesbyaddress-method.md) | Fornisce un handle per enumerare le istanze del metodo di `AppDomain` a partire da un indirizzo specificato. |
+| [EnumMethodInstanceByAddress](ixclrdataprocess-enummethodinstancebyaddress-method.md)             | Enumera le istanze del metodo di questo processo a partire da un offset di indirizzo.                  |
+| [EndEnumMethodInstancesByAddress](ixclrdataprocess-endenummethodinstancesbyaddress-method.md)     | Rilascia le risorse utilizzate dagli iteratori interni utilizzati durante l'enumerazione dell'istanza.             |
 
 ## <a name="remarks"></a>Note
 
-Questa interfaccia si trova all'interno del runtime e non viene esposto tramite le intestazioni o i file di libreria. Tuttavia, è un'interfaccia COM che deriva da `IUnknown` con GUID `5c552ab6-fc09-4cb3-8e36-22fa03c798b7` che può essere ottenuto tramite i normali meccanismi di COM.
+Questa interfaccia si trova all'interno del runtime e non viene esposta tramite le intestazioni o i file di libreria. Tuttavia, si tratta di un'interfaccia COM che deriva da `IUnknown` con GUID `5c552ab6-fc09-4cb3-8e36-22fa03c798b7` che possono essere ottenuti tramite i normali meccanismi COM.
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
-**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).   
-**Intestazione:** nessuno  
-**Libreria:** nessuno  
-**Versioni di .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).   
+**Intestazione:** Nessuno  
+**Libreria:** Nessuno  
+**Versioni .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debug](index.md)
+- [Interfacce di debug](debugging-interfaces.md)

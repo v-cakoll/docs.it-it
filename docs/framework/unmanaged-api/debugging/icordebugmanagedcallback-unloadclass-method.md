@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 66a59b18-ce9a-41f4-b23b-4dd6753d6d36
 topic_type:
 - apiref
-ms.openlocfilehash: e2550320494b9ba43947c3176788042f5c2e6ad5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f2f19987d22502acbe06bd5e5c14b0d6c17cbe24
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130626"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781575"
 ---
 # <a name="icordebugmanagedcallbackunloadclass-method"></a>Metodo ICorDebugManagedCallback::UnloadClass
 Notifica al debugger che una classe viene scaricata.  
@@ -44,16 +44,16 @@ HRESULT UnloadClass (
 ## <a name="remarks"></a>Note  
  Non è necessario fare riferimento alla classe dopo questa chiamata.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Metodo LoadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md)
-- [Interfaccia ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [Metodo LoadClass](icordebugmanagedcallback-loadclass-method.md)
+- [Interfaccia ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 189c36be-028c-4fba-a002-5edfb8fcd07f
 topic_type:
 - apiref
-ms.openlocfilehash: 8cebb66ecf298eaaca0e7af23a9b8c6a2932c23f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b76d17337408653d130ee0cb8594e759bdade37c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131819"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791874"
 ---
 # <a name="icordebugstackwalknext-method"></a>Metodo ICorDebugStackWalk::Next
-Sposta l'oggetto [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) nel frame successivo.  
+Sposta l'oggetto [ICorDebugStackWalk](icordebugstackwalk-interface.md) nel frame successivo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,17 +46,17 @@ HRESULT Next();
 ## <a name="remarks"></a>Note  
  Il metodo `Next` sposta l'oggetto `ICorDebugStackWalk` al frame chiamante solo se il runtime è in grado di rimuovere il frame corrente. In caso contrario, l'oggetto avanza al frame successivo che il runtime è in grado di rimuovere.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)
-- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Interfaccia ICorDebugStackWalk](icordebugstackwalk-interface.md)
+- [Interfacce di debug](debugging-interfaces.md)
+- [Debug](index.md)
