@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control types, Data Grid
 - UI Automation, Data Grid control type
 ms.assetid: a3db4a3f-feb5-4e5f-9b42-aae7fa816e8a
-ms.openlocfilehash: 6302a1d3d27ba9a32242cac6232fe495e8e6b4b9
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 1e127b4a2fdb51a151344f81e1451ecee6ca3a5a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741240"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789538"
 ---
 # <a name="ui-automation-support-for-the-datagrid-control-type"></a>Supporto di automazione interfaccia utente per il tipo di controllo DataGrid
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741240"
   
  Il tipo di controllo DataGrid consente a un utente di usare facilmente gli elementi contenenti metadati rappresentati in colonne. I controlli griglia dati contengono righe di elementi e colonne di informazioni su tali elementi. Un controllo visualizzazione elenco in Esplora risorse di Microsoft Vista è un esempio che supporta il tipo di controllo DataGrid.  
   
- Nelle sezioni seguenti vengono definiti la struttura ad albero necessaria di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , le proprietà, i pattern di controllo e gli eventi per il tipo di controllo DataGrid. I requisiti [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] si applicano a tutti i controlli griglia dati, sia [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 che [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ Nelle sezioni seguenti vengono definiti la struttura ad albero necessaria di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , le proprietà, i pattern di controllo e gli eventi per il tipo di controllo DataGrid. I requisiti [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] si applicano a tutti i controlli griglia dati, sia [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 che Windows Forms.  
   
 ## <a name="required-ui-automation-tree-structure"></a>Struttura ad albero di automazione interfaccia utente obbligatoria  
  Nella tabella seguente vengono illustrate la visualizzazione controlli e la visualizzazione contenuto dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] relativo ai controlli griglia dati e viene descritto il possibile contenuto di ogni visualizzazione. Per altre informazioni sull'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , vedere [UI Automation Tree Overview](ui-automation-tree-overview.md).  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa5ad3d7-e1bb-42af-99bc-471224e3bcaa
 topic_type:
 - apiref
-ms.openlocfilehash: 29bb84341c2cb4177c43f798d25a1a6d50099aa5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 53d8d219a13f2dade16a338efccf0837f8de0158
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122785"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784369"
 ---
 # <a name="icordebugbreakpoint-interface"></a>Interfaccia ICorDebugBreakpoint
 
@@ -29,8 +29,8 @@ Rappresenta un punto di interruzione in una funzione o un punto di controllo su 
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo Activate](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-activate-method.md)|Imposta lo stato attivo di questo `ICorDebugBreakpoint`.|  
-|[Metodo IsActive](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-isactive-method.md)|Ottiene un valore che indica se questo `ICorDebugBreakpoint` è attivo.|  
+|[Metodo Activate](icordebugbreakpoint-activate-method.md)|Imposta lo stato attivo di questo `ICorDebugBreakpoint`.|  
+|[Metodo IsActive](icordebugbreakpoint-isactive-method.md)|Ottiene un valore che indica se questo `ICorDebugBreakpoint` è attivo.|  
   
 ## <a name="remarks"></a>Note  
  I punti di interruzione non supportano direttamente le espressioni condizionali. Se si desidera questa funzionalità, un debugger deve implementarlo sopra `ICorDebugBreakpoint`.  
@@ -40,15 +40,15 @@ Rappresenta un punto di interruzione in una funzione o un punto di controllo su 
 > [!NOTE]
 > Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfacce di debug](debugging-interfaces.md)

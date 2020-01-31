@@ -5,18 +5,18 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: ed5e4f6ab23fe9ae77c94616a668da8accb46d4b
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 49277073706444fd611ae41e762442388ac50b71
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741709"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789612"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>Supporto per automazione interfaccia utente dei controlli standard
 > [!NOTE]
 > Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](/windows/win32/winauto/entry-uiauto-win32).  
   
- Questo argomento contiene informazioni sul supporto [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] per i controlli standard in applicazioni sviluppate per i Framework [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)], Win32 e [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ Questo argomento contiene informazioni sul supporto [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] per i controlli standard in applicazioni sviluppate per i Framework [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)], Win32 e Windows Forms.  
   
 <a name="Windows_Presentation_Foundation_Controls"></a>   
 ## <a name="windows-presentation-foundation-controls"></a>Controlli WPF (Windows Presentation Foundation)  
