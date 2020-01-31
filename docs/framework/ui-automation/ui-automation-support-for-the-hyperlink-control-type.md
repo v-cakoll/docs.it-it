@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Hyperlink control type
 - control types, Hyperlink
 ms.assetid: 110cceea-5932-4955-a1a6-13afc51422b2
-ms.openlocfilehash: e20ed27dc0c787afd8cd6be294d92dde2d7fe549
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: ffddc91cedd96975ff3f6a96385bfc792689e478
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741633"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789464"
 ---
 # <a name="ui-automation-support-for-the-hyperlink-control-type"></a>Supporto per automazione interfaccia utente del tipo di controllo Hyperlink
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741633"
   
  I controlli collegamento ipertestuale consentono agli utenti di spostarsi all'interno di una pagina, da una pagina a un'altra e tra finestre aperte.  
   
- Nelle sezioni seguenti vengono definiti la struttura ad albero, le proprietà, i pattern di controllo e gli eventi di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] per il tipo di controllo Hyperlink. I requisiti [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] si applicano a tutti i controlli collegamento ipertestuale, sia [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 che [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ Nelle sezioni seguenti vengono definiti la struttura ad albero, le proprietà, i pattern di controllo e gli eventi di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] per il tipo di controllo Hyperlink. I requisiti [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] si applicano a tutti i controlli collegamento ipertestuale, sia [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 che Windows Forms.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Struttura ad albero di automazione interfaccia utente obbligatoria  

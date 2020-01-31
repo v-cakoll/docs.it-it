@@ -5,12 +5,12 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: c2b674ba17360c6ee9d2b21683560e840063f17d
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: f692e66672b1804a309c6ac04c158af948a1b1ab
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636055"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789864"
 ---
 # <a name="command-line-build-with-cscexe"></a>Compilazione dalla riga di comando con csc.exe
 
@@ -59,41 +59,42 @@ Il compilatore C# usa le regole seguenti per interpretare gli argomenti visualiz
 
 - Compila *File.cs* e crea *File.exe*:
 
-```console
-csc File.cs
-```
+  ```console
+  csc File.cs
+  ```
 
 - Compila *File.cs* e crea *File.dll*:
 
-```console
-csc -target:library File.cs
-```
+  ```console
+  csc -target:library File.cs
+  ```
 
 - Compila *File.cs* e crea *My.exe*:
 
-```console
-csc -out:My.exe File.cs
-```
+  ```console
+  csc -out:My.exe File.cs
+  ```
 
 - Compila tutti i file C# della directory corrente con le ottimizzazioni attivate e definisce il simbolo DEBUG. L'output è il *File2.exe*:
 
-```console
-csc -define:DEBUG -optimize -out:File2.exe *.cs
-```
+  ```console
+  csc -define:DEBUG -optimize -out:File2.exe *.cs
+  ```
 
 - Compila tutti i file C# della directory corrente generando una versione di debug del file *File2.dll*. Non viene visualizzato nessun logo e nessun avviso:
 
-```console
-csc -target:library -out:File2.dll -warn:0 -nologo -debug *.cs
-```
+  ```console
+  csc -target:library -out:File2.dll -warn:0 -nologo -debug *.cs
+  ```
 
 - Compila tutti i file C# della directory corrente creando un file *Something.xyz* (una DLL):
 
-```console
-csc -target:library -out:Something.xyz *.cs
-```
+  ```console
+  csc -target:library -out:Something.xyz *.cs
+  ```
 
 ## <a name="differences-between-c-compiler-and-c-compiler-output"></a>Differenze tra output del compilatore C# e output del compilatore C++
+
 Dopo il richiamo del compilatore C# non viene creato alcun file oggetto ( *.obj*). I file di output vengono creati direttamente. Di conseguenza il compilatore C# non richiede un linker.
 
 ## <a name="see-also"></a>Vedere anche

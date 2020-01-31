@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 73f536f6-4668-4a4a-b3e4-ac7df862d5be
 topic_type:
 - apiref
-ms.openlocfilehash: 291f6c05171b5e507afaa70537aafdc9002a506e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 815dc63a2dedecc613506b0f98702f58d6e7bd04
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125403"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783795"
 ---
 # <a name="icordebugcontrollerenumeratethreads-method"></a>Metodo ICorDebugController::EnumerateThreads
 Ottiene un enumeratore per i thread gestiti attivi nel processo.  
@@ -38,15 +38,15 @@ HRESULT EnumerateThreads (
  out Puntatore all'indirizzo di un oggetto "ICorDebugThreadEnum" che rappresenta un enumeratore per tutti i thread gestiti attivi nel processo.  
   
 ## <a name="remarks"></a>Note  
- Un thread viene considerato attivo dopo l'invio del callback [ICorDebugManagedCallback:: CreateThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) e prima dell'invio del callback [ICorDebugManagedCallback:: ExitThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitthread-method.md) . Un thread gestito potrebbe non avere necessariamente frame gestiti nello stack. I thread possono essere enumerati anche prima del callback [ICorDebugManagedCallback:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) . L'enumerazione sarà naturalmente vuota.  
+ Un thread viene considerato attivo dopo l'invio del callback [ICorDebugManagedCallback:: CreateThread](icordebugmanagedcallback-createthread-method.md) e prima dell'invio del callback [ICorDebugManagedCallback:: ExitThread](icordebugmanagedcallback-exitthread-method.md) . Un thread gestito potrebbe non avere necessariamente frame gestiti nello stack. I thread possono essere enumerati anche prima del callback [ICorDebugManagedCallback:: CreateProcess](icordebugmanagedcallback-createprocess-method.md) . L'enumerazione sarà naturalmente vuota.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche

@@ -2,12 +2,12 @@
 title: Catalogo dei RID (Runtime IDentifier) di .NET Core
 description: Informazioni sull'identificatore di runtime (RID) e su come vengono usati i RID in .NET Core.
 ms.date: 02/22/2019
-ms.openlocfilehash: b4e0226afa3f68d7c0d17b19e66489d70b759cf8
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 4369e263f1f46c73f04c65e4124f63c68d133520
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733545"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789899"
 ---
 # <a name="net-core-rid-catalog"></a>Catalogo RID di .NET Core
 
@@ -108,14 +108,14 @@ Sono elencati solo i valori comuni. Per la versione più recente e completa, ved
   - `win10-arm`
   - `win10-arm64`
 
-Per ulteriori informazioni, vedere [dipendenze e requisiti di .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-windows) .
+Per altre informazioni, vedere [dipendenze e requisiti di .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
 ## <a name="linux-rids"></a>RID Linux
 
 Sono elencati solo i valori comuni. Per la versione più recente e completa, vedere il file [Runtime. JSON](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) nel repository `dotnet/runtime`. I dispositivi che eseguono una distribuzione non elencata di seguito potrebbero funzionare con uno dei RID portabili. Ad esempio, i dispositivi Raspberry Pi che eseguono una distribuzione di Linux non elencata possono essere assegnati a `linux-arm`.
 
 - Portable (.NET Core 2.0 o versioni successive)
-  - `linux-x64` (La maggior parte delle distribuzioni desktop, ad esempio CentOS, Debian, Fedora, Ubuntu e derivati)
+  - `linux-x64` (la maggior parte delle distribuzioni desktop, ad esempio CentOS, Debian, Fedora, Ubuntu e derivati)
   - `linux-musl-x64` (Le distribuzioni leggere che usano [musl](https://wiki.musl-libc.org/projects-using-musl.html) come Alpine Linux)
   - `linux-arm` (Le distribuzioni di Linux in esecuzione su ARM come Raspberry Pi)
 - Red Hat Enterprise Linux
@@ -126,7 +126,7 @@ Sono elencati solo i valori comuni. Per la versione più recente e completa, ved
   - `tizen.4.0.0`
   - `tizen.5.0.0`
 
-Per ulteriori informazioni, vedere [dipendenze e requisiti di .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-linux) .
+Per altre informazioni, vedere [dipendenze e requisiti di .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-linux).
 
 ## <a name="macos-rids"></a>RID macOS
 
@@ -145,7 +145,7 @@ I RID macOS usano la personalizzazione "OSX" precedente. Sono elencati solo i va
 - macOS 10.14 Mojave (.NET Core 1.1 o versioni successive)
   - `osx.10.14-x64`
 
-Per ulteriori informazioni, vedere [dipendenze e requisiti di .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-macos) .
+Per altre informazioni, vedere [dipendenze e requisiti di .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-macos).
 
 ## <a name="see-also"></a>Vedere anche
 

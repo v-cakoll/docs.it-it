@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 145b06f89b45b165b9d6329a4c16ac5739406113
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1e3a62de3259c012438c64ece26e696682ec96e6
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739190"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789200"
 ---
 # <a name="dacpgetmoduleaddress-structure"></a>Struttura DacpGetModuleAddress
 
-Definisce il contenitore per una richiesta del modulo di indirizzo.
+Definisce il contenitore per una richiesta di indirizzo del modulo.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -41,25 +41,25 @@ struct DacpGetModuleAddress
 
 | Member      | Descrizione                |
 | ----------- | -------------------------- |
-| `ModulePtr` | Il puntatore al modulo. |
+| `ModulePtr` | Puntatore al modulo. |
 
 ## <a name="methods"></a>Metodi
 
 | Metodo                                                                                               | Descrizione                                                                    |
 | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| [Richiesta](../../../../docs/framework/unmanaged-api/debugging/dacpgetmoduleaddress-request-method.md) | Esegue una richiesta per popolare la struttura della struttura di runtime specificato. |
+| [Richiesta](dacpgetmoduleaddress-request-method.md) | Esegue una richiesta per popolare la struttura dalla struttura di runtime specificata. |
 
 ## <a name="remarks"></a>Note
 
-Questa struttura si trova all'interno del runtime e non viene esposto tramite le intestazioni o i file di libreria. Per usarlo, definire la struttura come specificato in precedenza, in cui `CLRDATA_ADDRESS` è un intero senza segno a 64 bit.
+Questa struttura si trova all'interno del runtime e non viene esposta tramite le intestazioni o i file di libreria. Per usarlo, definire la struttura come specificato in precedenza, dove `CLRDATA_ADDRESS` è un Unsigned Integer a 64 bit.
 
-## <a name="requirements"></a>Requisiti
-**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
-**Intestazione:** nessuno  
-**Libreria:** nessuno  
-**Versioni di .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+## <a name="requirements"></a>Requisiti di
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+**Intestazione:** Nessuno  
+**Libreria:** Nessuno  
+**Versioni .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Strutture di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Debug](index.md)
+- [Strutture di debug](debugging-structures.md)

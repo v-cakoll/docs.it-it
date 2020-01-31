@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bc71cbca-7d73-40e5-84dd-2109fade3c2a
 topic_type:
 - apiref
-ms.openlocfilehash: 6de440d10f02f177e62ca3d2bd29fd5e98ea9388
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fdd2fee11e9353c3aa3faee2b137597e4ba47801
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137139"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791174"
 ---
 # <a name="icordebugunmanagedcallback-interface"></a>Interfaccia ICorDebugUnmanagedCallback
 Fornisce la notifica di eventi nativi che non sono direttamente correlati all'Common Language Runtime (CLR).  
@@ -28,22 +28,22 @@ Fornisce la notifica di eventi nativi che non sono direttamente correlati all'Co
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo DebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-debugevent-method.md)|Notifica al debugger che è stato generato un evento nativo.|  
+|[Metodo DebugEvent](icordebugunmanagedcallback-debugevent-method.md)|Notifica al debugger che è stato generato un evento nativo.|  
   
 ## <a name="remarks"></a>Note  
   
 > [!NOTE]
 > Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfacce di debug](debugging-interfaces.md)

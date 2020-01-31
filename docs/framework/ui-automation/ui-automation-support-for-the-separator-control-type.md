@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Separator control type
 - control types, Separator
 ms.assetid: 89f42247-c699-4afa-91e1-2baaf0d86c9d
-ms.openlocfilehash: adc97cd3294b1107a277c157293fd5232f06b226
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 67bdadf288b9feb6e92ab922943394b56c3a0f10
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741549"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76786072"
 ---
 # <a name="ui-automation-support-for-the-separator-control-type"></a>Supporto per l'automazione interfaccia utente del tipo di controllo Separator
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741549"
   
  I controlli separatore vengono usati per dividere visivamente uno spazio in due aree. Ad esempio, un controllo separatore può essere una barra che definisce due riquadri in una finestra. Se il separatore può essere spostato, il controllo deve essere esposto come il tipo di controllo Thumb.  
   
- Nelle sezioni seguenti vengono definiti la struttura ad albero, le proprietà, i pattern di controllo e gli eventi di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] per il tipo di controllo Separator. I requisiti [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] si applicano a tutti i controlli elenco, sia [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 che [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ Nelle sezioni seguenti vengono definiti la struttura ad albero, le proprietà, i pattern di controllo e gli eventi di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] per il tipo di controllo Separator. I requisiti [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] si applicano a tutti i controlli elenco, sia [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 che Windows Forms.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Struttura ad albero di automazione interfaccia utente obbligatoria  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 701281dd-2936-45c8-a1f0-3bf7332b093b
 topic_type:
 - apiref
-ms.openlocfilehash: fc3f77adf33502bfbc3d65ff5131420093fbbec8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 317dc2fe8403ae25949410423f1a28ad365caf6a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73097928"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789303"
 ---
 # <a name="cordebugmappingresult-enumeration"></a>Enumerazione CorDebugMappingResult
 Fornisce informazioni su come è stato ottenuto il valore del puntatore dell'istruzione.  
@@ -37,7 +37,7 @@ typedef enum CorDebugMappingResult {
 } CorDebugMappingResult;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
   
 |Member|Descrizione|  
 |------------|-----------------|  
@@ -49,17 +49,17 @@ typedef enum CorDebugMappingResult {
 |`MAPPING_APPROXIMATE`|Il mapping del metodo è stato eseguito correttamente, ma il valore dell'indirizzo IP potrebbe essere approssimativo.|  
   
 ## <a name="remarks"></a>Note  
- È possibile usare il metodo [ICorDebugILFrame:: GetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md) per ottenere il valore del puntatore all'istruzione.  
+ È possibile usare il metodo [ICorDebugILFrame:: GetIP](icordebugilframe-getip-method.md) per ottenere il valore del puntatore all'istruzione.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Enumerazioni di debug](debugging-enumerations.md)

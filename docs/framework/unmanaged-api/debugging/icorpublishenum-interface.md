@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 76a136b5-e444-417a-8ade-f1596d597dc7
 topic_type:
 - apiref
-ms.openlocfilehash: 7d083655326333f18ee98f8e84fff2ed182dde6d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f54bb99df60d7b3fb7bb98de75fbae210597e45c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73103458"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790618"
 ---
 # <a name="icorpublishenum-interface"></a>Interfaccia ICorPublishEnum
 Funge da interfaccia di base astratta per gli enumeratori utilizzati nella pubblicazione di informazioni sui processi e sui domini dell'applicazione.  
@@ -28,28 +28,28 @@ Funge da interfaccia di base astratta per gli enumeratori utilizzati nella pubbl
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo Clone](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-clone-method.md)|Crea una copia di questo oggetto `ICorPublishEnum`.|  
-|[Metodo GetCount](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-getcount-method.md)|Ottiene il numero di elementi nell'enumerazione.|  
-|[Metodo Reset](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-reset-method.md)|Sposta il cursore di all'inizio dell'enumerazione.|  
-|[Metodo Skip](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-skip-method.md)|Sposta il cursore verso l'interno dell'enumerazione in base al numero di elementi specificato.|  
+|[Metodo Clone](icorpublishenum-clone-method.md)|Crea una copia di questo oggetto `ICorPublishEnum`.|  
+|[Metodo GetCount](icorpublishenum-getcount-method.md)|Ottiene il numero di elementi nell'enumerazione.|  
+|[Metodo Reset](icorpublishenum-reset-method.md)|Sposta il cursore di all'inizio dell'enumerazione.|  
+|[Metodo Skip](icorpublishenum-skip-method.md)|Sposta il cursore verso l'interno dell'enumerazione in base al numero di elementi specificato.|  
   
 ## <a name="remarks"></a>Note  
  Gli enumeratori seguenti derivano da `ICorPublishEnum`:  
   
-- [ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)  
+- [ICorPublishAppDomainEnum](icorpublishappdomainenum-interface.md)  
   
-- [ICorPublishProcessEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)  
+- [ICorPublishProcessEnum](icorpublishprocessenum-interface.md)  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorPub. idl, CorPub. h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Coclasse CorpubPublish](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
-- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Coclasse CorpubPublish](corpubpublish-coclass.md)
+- [Interfacce di debug](debugging-interfaces.md)

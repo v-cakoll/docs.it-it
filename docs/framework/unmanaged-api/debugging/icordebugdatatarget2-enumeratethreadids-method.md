@@ -2,12 +2,12 @@
 title: Metodo ICorDebugDataTarget2::EnumerateThreadIDs
 ms.date: 03/30/2017
 ms.assetid: af02460f-2a45-496e-bc4e-a1ac4f80fe11
-ms.openlocfilehash: b4510e6858045281a2a663095972b84c40df3a22
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 74d4905f2b386f8e0345e4300dd2c8c6d0c882ea
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122152"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783645"
 ---
 # <a name="icordebugdatatarget2enumeratethreadids-method"></a>Metodo ICorDebugDataTarget2::EnumerateThreadIDs
 Restituisce un elenco di ID thread attivi.  
@@ -37,14 +37,14 @@ HRESULT EnumerateThreadIDs(
 > [!NOTE]
 > Questo metodo è disponibile solo con .NET Native.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** Vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md). **Intestazione:** CorDebug. idl, CorDebug. h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorDebugDataTarget2](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)
-- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfaccia ICorDebugDataTarget2](icordebugdatatarget2-interface.md)
+- [Interfacce di debug](debugging-interfaces.md)

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: c5444816-7378-4521-afd3-bf5e4b5303d5
 topic_type:
 - apiref
-ms.openlocfilehash: 5d66503487e1b997e2b8cc7d3d46e210a4dbbe05
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2ed32449c4a133e6e72ec44f9cb57f49de22164a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132760"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778238"
 ---
 # <a name="cordebugplatform-enumeration"></a>Enumerazione CorDebugPlatform
-Fornisce i valori della piattaforma di destinazione usati dal metodo [ICorDebugDataTarget:: GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) .  
+Fornisce i valori della piattaforma di destinazione usati dal metodo [ICorDebugDataTarget:: GetPlatform](icordebugdatatarget-getplatform-method.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,7 +39,7 @@ typedef enum CorDebugPlatform
 } CorDebugPlatform;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
   
 |Member|Descrizione|  
 |------------|-----------------|  
@@ -51,17 +51,17 @@ typedef enum CorDebugPlatform
 |CORDB_PLATFORM_WINDOWS_ARM|La piattaforma di destinazione è il sistema operativo Macintosh in esecuzione su hardware ARM di Windows.|  
 |CORDB_PLATFORM_MAC_AMD64|La piattaforma di destinazione è il sistema operativo Macintosh in esecuzione su hardware AMD64.|  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
  I membri `CORDB_PLATFORM_WINDOWS_ARM` e `CORDB_PLATFORM_MAC_AMD64` sono disponibili in .NET Framework 4.5.2 e versioni successive.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Enumerazioni di debug](debugging-enumerations.md)

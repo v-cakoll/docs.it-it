@@ -2,12 +2,12 @@
 title: Attivazione MSMQ
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 2afcfbee69f8257e4ed0b1c352ef29e4af9ddb84
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 805ab78908b4d1146cce94cac5357bafbb35c832
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544709"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744797"
 ---
 # <a name="msmq-activation"></a>Attivazione MSMQ
 
@@ -269,7 +269,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
         Questo comando consente di accedere all'applicazione/servicemodelsamples usando `http://localhost/servicemodelsamples` e `net.msmq://localhost/servicemodelsamples`.
 
-7. Se in precedenza non è stato fatto, assicurarsi che il servizio di attivazione MSMQ sia abilitato. Dal menu **Start** fare clic su **esegui**e digitare `Services.msc`. Eseguire una ricerca nell'elenco dei servizi per l' **adattatore listener Net. MSMQ**. Fare clic con il pulsante destro del mouse e selezionare **Proprietà**. Impostare **tipo di avvio** su **automatico**, fare clic su **applica** e fare clic sul pulsante **Avvia** . È necessario eseguire questo passaggio solo la prima volta che si usa il servizio di adattatore listener Net.Msmq.
+7. Se in precedenza non è stato fatto, assicurarsi che il servizio di attivazione MSMQ sia abilitato. Dal menu **Start** fare clic su **esegui**e digitare `Services.msc`. Eseguire una ricerca nell'elenco dei servizi per l' **adattatore listener Net. MSMQ**. Fare clic con il pulsante destro del mouse e scegliere **Proprietà**. Impostare **tipo di avvio** su **automatico**, fare clic su **applica** e fare clic sul pulsante **Avvia** . È necessario eseguire questo passaggio solo la prima volta che si usa il servizio di adattatore listener Net.Msmq.
 
 8. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Modificare inoltre il codice nel client che invia l'ordine di acquisto in modo che corrisponda al nome del computer nell'URI della coda durante l'invio di ordini di acquisto. Usare il codice riportato di seguito.
 
@@ -349,4 +349,4 @@ Per impostazione predefinita con il trasporto dell'associazione `netMsmqBinding`
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Esempi di persistenza e hosting di AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [Esempi di persistenza e hosting di AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

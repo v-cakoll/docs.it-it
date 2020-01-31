@@ -1,17 +1,18 @@
 ---
 title: Introduzione a WPF
+titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: b8d7cf43-d1f2-4f3d-adb0-4f3a6428edc0
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: d8ea49bbe400c5ec478a94ad7c1adb759af28abb
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ecdd3b3c24b71917efb0d982d1f23737673622f9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454189"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744718"
 ---
 # <a name="wpf-overview"></a>Panoramica di WPF
 
@@ -140,7 +141,7 @@ La figura seguente mostra il risultato quando si fa clic sul pulsante:
 
 ![MessageBox](media/introduction-to-wpf/wpfintrofigure25.png)
 
-## <a name="controls"></a>Controlli
+## <a name="controls"></a>Controls
 
 Le esperienze utente fornite dal modello di applicazione sono controlli costruiti. In WPF, *controllo* è un termine generico che si applica a una categoria di classi WPF ospitate in una finestra o una pagina, che hanno un'interfaccia utente e che implementano un comportamento.
 
@@ -182,7 +183,7 @@ I controlli nella maggior parte dei casi rilevano e rispondono all'input dell'ut
 
 I requisiti di input delle applicazioni sono spesso complessi. In WPF è disponibile un [sistema di comandi](advanced/commanding-overview.md) che separa le azioni di input utente dal codice che risponde a tali azioni.
 
-## <a name="layout"></a>Layout
+## <a name="layout"></a>Formato
 
 Quando si crea un'interfaccia utente, si dispongono i controlli per percorso e dimensione per creare un layout. Il requisito principale di qualsiasi layout è quello di adattarsi alle modifiche nella dimensione delle finestre e nelle impostazioni di visualizzazione. Anziché richiedere la scrittura di codice per adattare un layout in tali circostanze, WPF offre un efficiente sistema di layout estendibile.
 
@@ -322,7 +323,7 @@ Il supporto di animazione di WPF consente di fare crescere, muovere, ruotare e d
 
 Per altre informazioni, vedere [Cenni preliminari sull'animazione](graphics-multimedia/animation-overview.md).
 
-## <a name="media"></a>Supporti
+## <a name="media"></a>Elemento multimediale
 
 L'uso di supporti audiovisivi è un modo per inserire contenuto dettagliato. WPF offre un supporto speciale per immagini, video e audio.
 
@@ -421,7 +422,7 @@ Nella figura seguente viene illustrato il contenuto di questo pulsante:
 
 Per altre informazioni sui tipi di contenuto supportati dai vari controlli, vedere [Modello di contenuto WPF](controls/wpf-content-model.md).
 
-### <a name="triggers"></a>trigger
+### <a name="triggers"></a>Trigger
 
 Anche se lo scopo principale del markup XAML consiste nell'implementare l'aspetto di un'applicazione, è anche possibile usare XAML per implementare alcuni aspetti del comportamento di un'applicazione. Un esempio è dato dall'uso dei trigger per modificare l'aspetto di un'applicazione in base alle interazioni dell'utente. Per altre informazioni, vedere [stili e modelli](../../desktop-wpf/fundamentals/styles-templates-overview.md).
 
@@ -507,7 +508,7 @@ Si noti che <xref:System.Windows.Controls.ListBox> mantiene il proprio comportam
 
 Per altre informazioni, vedere [Cenni preliminari sui modelli di dati](data/data-templating-overview.md).
 
-### <a name="styles"></a>Stili
+### <a name="styles"></a>cella
 
 Gli stili consentono agli sviluppatori e ai progettisti di standardizzare un determinato aspetto del prodotto. WPF offre un modello di stile avanzato, basato sull'elemento <xref:System.Windows.Style> . Nell'esempio seguente viene creato uno stile che imposta il colore di sfondo per ogni <xref:System.Windows.Controls.Button> in una finestra per `Orange`:
 
@@ -616,7 +617,7 @@ Per altre informazioni, vedere [Risorse](../../desktop-wpf/fundamentals/xaml-res
 
 ### <a name="custom-controls"></a>Controlli personalizzati
 
-Anche se WPF offre un ampio supporto per la personalizzazione, in alcune situazioni i controlli di WPF esistenti potrebbero non soddisfare le necessità di un'applicazione o degli utenti. Questo può verificarsi nei casi seguenti:
+Anche se WPF offre un ampio supporto per la personalizzazione, in alcune situazioni i controlli di WPF esistenti potrebbero non soddisfare le necessità di un'applicazione o degli utenti. Questo può verificarsi nei seguenti casi:
 
 - Non è possibile creare l'interfaccia utente richiesta personalizzando l'aspetto delle implementazioni di WPF esistenti.
 

@@ -10,12 +10,12 @@ api_type:
 ms.assetid: b22717b9-ead5-4eea-887e-789b52d613dc
 topic_type:
 - apiref
-ms.openlocfilehash: b74008e0a183d46d82c5262209d582537fd155c7
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 7ef983c2f0785cb97baf8ba1ad3483b46c08af9a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938077"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788662"
 ---
 # <a name="icordebugfunction3-interface"></a>Interfaccia ICorDebugFunction3
 [Supportato in .NET Framework 4.5.2 e versioni successive]  
@@ -26,7 +26,7 @@ ms.locfileid: "75938077"
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo GetActiveReJitRequestILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction3-getactiverejitrequestilcode-method.md)|Ottiene un puntatore a interfaccia a un [ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md) che contiene il il da una richiesta ReJIT attiva.|  
+|[Metodo GetActiveReJitRequestILCode](icordebugfunction3-getactiverejitrequestilcode-method.md)|Ottiene un puntatore a interfaccia a un [ICorDebugILCode](icordebugilcode-interface.md) che contiene il il da una richiesta ReJIT attiva.|  
   
 ## <a name="remarks"></a>Note  
   
@@ -41,6 +41,6 @@ ms.locfileid: "75938077"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Interfacce di debug](debugging-interfaces.md)
+- [Debug](index.md)
 - [ReJIT: Guida alle procedure](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)

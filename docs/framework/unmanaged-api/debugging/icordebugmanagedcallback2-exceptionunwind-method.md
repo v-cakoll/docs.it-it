@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aaf5938d-179c-4eaa-8d35-8523a4fadded
 topic_type:
 - apiref
-ms.openlocfilehash: fa317e1217ac0a9ca46bfeb312446534b1fca63a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 482afd09ce370fb1247864b9ac2032ee7e3a1dca
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131568"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788283"
 ---
 # <a name="icordebugmanagedcallback2exceptionunwind-method"></a>Metodo ICorDebugManagedCallback2::ExceptionUnwind
 Fornisce una notifica di stato durante il processo di rimozione dell'eccezione.  
@@ -47,23 +47,23 @@ HRESULT ExceptionUnwind (
  in Valore dell'enumerazione CorDebugExceptionUnwindCallbackType che specifica l'evento che viene segnalato dal callback durante la fase di rimozione.  
   
  `dwFlags`  
- in Valore dell'enumerazione [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) che specifica informazioni aggiuntive sull'eccezione.  
+ in Valore dell'enumerazione [CorDebugExceptionFlags](cordebugexceptionflags-enumeration.md) che specifica informazioni aggiuntive sull'eccezione.  
   
 ## <a name="remarks"></a>Note  
  `ExceptionUnwind` viene chiamato in diversi punti durante la fase di rimozione del processo di gestione delle eccezioni. `ExceptionUnwind` può essere chiamato più volte durante la rimozione di una singola eccezione.  
   
  Se `dwEventType` = DEBUG_EXCEPTION_INTERCEPTED, il puntatore all'istruzione si troverà nel frame foglia del thread, in corrispondenza del punto di sequenza precedente (le istruzioni potrebbero essere diverse prima di) l'istruzione che ha generato l'eccezione.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [Interfaccia ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [Interfaccia ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md)
+- [Interfaccia ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)

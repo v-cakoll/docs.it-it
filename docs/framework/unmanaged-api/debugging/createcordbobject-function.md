@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b259821d-4fa7-464d-85cf-304dfffc8089
 topic_type:
 - apiref
-ms.openlocfilehash: d21e0d3d0370ec7c1b223be29099f6b99822463b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1d190c5b558c7c523be09267e59eab7c5611563a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132114"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793862"
 ---
 # <a name="createcordbobject-function"></a>Funzione CreateCordbObject
-Crea un'interfaccia del debugger ([ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)) che fornisce la funzionalità per creare un'istanza di una sessione di debug gestita in un processo remoto.  
+Crea un'interfaccia del debugger ([ICorDebug](icordebug-interface.md)) che fornisce la funzionalità per creare un'istanza di una sessione di debug gestita in un processo remoto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,7 +40,7 @@ HRESULT CordbCreateObject (
  [in] Versione del debugger del processo di destinazione. Questo parametro deve essere CorDebugVersion_2_0 per il debug remoto.  
   
  `ppCordb`  
- out Puntatore a un puntatore a un oggetto di cui verrà eseguito il cast a un'interfaccia [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) e restituito.  
+ out Puntatore a un puntatore a un oggetto di cui verrà eseguito il cast a un'interfaccia [ICorDebug](icordebug-interface.md) e restituito.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK  
@@ -56,9 +56,9 @@ HRESULT CordbCreateObject (
  Altri errori.  
   
 ## <a name="remarks"></a>Note  
- L'interfaccia [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) restituita in `ppCordb` è l'interfaccia di debug di primo livello per tutti i servizi di debug gestito.  
+ L'interfaccia [ICorDebug](icordebug-interface.md) restituita in `ppCordb` è l'interfaccia di debug di primo livello per tutti i servizi di debug gestito.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CoreClrRemoteDebuggingInterfaces. h  

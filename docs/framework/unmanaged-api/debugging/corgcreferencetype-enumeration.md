@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d9f16439-5a36-4474-8ffd-4f0b2c2bb686
 topic_type:
 - apiref
-ms.openlocfilehash: eafae181c74d9f3842f7f0d547bcccbbb28c09e6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 17d47b6242bb12ff5ca3cfbde3e4ec183b9c19fc
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132127"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793869"
 ---
 # <a name="corgcreferencetype-enumeration"></a>Enumerazione CorGCReferenceType
 Identifica l'origine di un oggetto per la Garbage Collection.  
@@ -46,9 +46,9 @@ typedef enum {
 } CorGCReferenceType  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
   
-|Nome del membro|Descrizione|  
+|Nome membro|Descrizione|  
 |-----------------|-----------------|  
 |`CorHandleStrong`|Un handle per un riferimento sicuro dalla tabella di handle degli oggetti.|  
 |`CorHandleStrongPinning`|Handle per un riferimento sicuro bloccato dalla tabella dell'handle dell'oggetto.|  
@@ -60,26 +60,26 @@ typedef enum {
 |`CorHandleStrongSizedByref`|Un handle sicuro che conserva una dimensione approssimativa della chiusura collettiva di tutti gli oggetti e di tutte le radici di oggetto in fase di Garbage Collection.|  
 |`CorReferenceStack`|Riferimento dallo stack gestito.|  
 |`CorReferenceFinalizer`|Riferimento dalla coda del finalizzatore.|  
-|CorHandleStrongOnly|Restituisce solo i riferimenti sicuri della tabella handle. Questo valore viene usato solo dal metodo [ICorDebugProcess5:: EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) .|  
-|`CorHandleWeakOnly`|Restituisce solo i riferimenti deboli dalla tabella dell'handle. Questo valore viene usato solo dal metodo [ICorDebugProcess5:: EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) .|  
-|`CorHandleAll`|Restituisce tutti i riferimenti dalla tabella handle. Questo valore viene usato solo dal metodo [ICorDebugProcess5:: EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) .|  
+|CorHandleStrongOnly|Restituisce solo i riferimenti sicuri della tabella handle. Questo valore viene usato solo dal metodo [ICorDebugProcess5:: EnumerateHandles](icordebugprocess5-enumeratehandles-method.md) .|  
+|`CorHandleWeakOnly`|Restituisce solo i riferimenti deboli dalla tabella dell'handle. Questo valore viene usato solo dal metodo [ICorDebugProcess5:: EnumerateHandles](icordebugprocess5-enumeratehandles-method.md) .|  
+|`CorHandleAll`|Restituisce tutti i riferimenti dalla tabella handle. Questo valore viene usato solo dal metodo [ICorDebugProcess5:: EnumerateHandles](icordebugprocess5-enumeratehandles-method.md) .|  
   
 ## <a name="remarks"></a>Note  
  L'enumerazione `CorGCReferenceType` viene utilizzata come segue:  
   
-- Come valore del campo `type` della struttura [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) , indica l'origine di un riferimento o di un handle.  
+- Come valore del campo `type` della struttura [COR_GC_REFERENCE](cor-gc-reference-structure.md) , indica l'origine di un riferimento o di un handle.  
   
-- Come argomento `types` al metodo [ICorDebugProcess5:: EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) , specifica i tipi di handle da includere nell'enumerazione.  
+- Come argomento `types` al metodo [ICorDebugProcess5:: EnumerateHandles](icordebugprocess5-enumeratehandles-method.md) , specifica i tipi di handle da includere nell'enumerazione.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Enumerazioni di debug](debugging-enumerations.md)

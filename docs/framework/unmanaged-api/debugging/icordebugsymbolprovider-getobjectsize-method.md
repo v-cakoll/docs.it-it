@@ -1,15 +1,15 @@
 ---
-title: 'Metodo metodo icordebugsymbolprovider:: GetObjectSize'
+title: Metodo ICorDebugSymbolProvider::GetObjectSize
 ms.date: 03/30/2017
 ms.assetid: 3c564396-ac64-4ef3-b4f6-df96f1d46fc7
-ms.openlocfilehash: a5c0fe6d73302abbfabe2272cc878d6fd8f5fdec
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fce7410b5ae9571af0c8a5963596e2af41737798
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138812"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791575"
 ---
-# <a name="icordebugsymbolprovidergetobjectsize-method"></a>Metodo metodo icordebugsymbolprovider:: GetObjectSize
+# <a name="icordebugsymbolprovidergetobjectsize-method"></a>Metodo ICorDebugSymbolProvider::GetObjectSize
 Restituisce le dimensioni dell'oggetto per un oggetto in base alla relativa firma typespec.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -37,16 +37,16 @@ HRESULT GetObjectSize(
 > [!NOTE]
 > Questo metodo è disponibile solo con .NET Native.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfaccia ICorDebugSymbolProvider](icordebugsymbolprovider-interface.md)
+- [Interfacce di debug](debugging-interfaces.md)
