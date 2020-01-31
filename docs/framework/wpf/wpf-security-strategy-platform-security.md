@@ -1,5 +1,5 @@
 ---
-title: Strategia di sicurezza di WPF - Sicurezza della piattaforma
+title: Strategia di sicurezza della piattaforma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: b2fd923de165c0926e6f812764c71127b7c27691
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 1ef705fcf046af1f4136ddcf1b29f417c0d72c83
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636237"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741859"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Strategia di sicurezza di WPF - Sicurezza della piattaforma
 Sebbene Windows Presentation Foundation (WPF) fornisca un'ampia gamma di servizi di sicurezza, sfrutta anche le funzionalità di sicurezza della piattaforma sottostante, che include il sistema operativo, CLR e Internet Explorer. Questi livelli combinano per fornire a WPF un modello di sicurezza sicuro e di difesa avanzato che tenta di evitare un singolo punto di errore, come illustrato nella figura seguente:  

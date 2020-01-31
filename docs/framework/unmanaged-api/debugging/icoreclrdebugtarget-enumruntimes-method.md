@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 316df866-442d-40cc-b049-45e8adcb65d1
 topic_type:
 - apiref
-ms.openlocfilehash: 2579bed9ae432a2b9460c421c6ee5bdc40d1e149
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4b55ac1d895bfecbe74be447bd06f4aa22b9d04f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121827"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790785"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>Metodo ICoreClrDebugTarget::EnumRuntimes
 Enumera i Common Language Runtime (CLR) nel processo specificato in cui è in esecuzione in un computer remoto.  
@@ -39,13 +39,13 @@ HRESULT EnumRuntimes (
   
 ## <a name="parameters"></a>Parametri  
  `dwInternalProcessID`  
- [in] ID del processo interno per il quale si vogliono enumerare i runtime. Questa operazione verrà `m_dwInternalID` dal [CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md)corrispondente.  
+ [in] ID del processo interno per il quale si vogliono enumerare i runtime. Questa operazione verrà `m_dwInternalID` dal [CoreClrDebugProcInfo](coreclrdebugprocinfo-structure.md)corrispondente.  
   
  `pcRuntimes`  
  [out] Numero di runtime restituiti in `ppRuntimes`. Il valore può essere 0 (zero).  
   
  `ppRuntimes`  
- out Matrice di strutture [CoreClrDebugRuntimeInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugruntimeinfo-structure.md) che rappresentano i runtime caricati nel processo di destinazione remoto.  
+ out Matrice di strutture [CoreClrDebugRuntimeInfo](coreclrdebugruntimeinfo-structure.md) che rappresentano i runtime caricati nel processo di destinazione remoto.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK  
@@ -61,9 +61,9 @@ HRESULT EnumRuntimes (
  Altri errori.  
   
 ## <a name="remarks"></a>Note  
- Per liberare la memoria allocata da questo metodo, chiamare il metodo [ICoreClrDebugTarget:: FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) .  
+ Per liberare la memoria allocata da questo metodo, chiamare il metodo [ICoreClrDebugTarget:: FreeMemory](icoreclrdebugtarget-freememory-method.md) .  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CoreClrRemoteDebuggingInterfaces. h  
@@ -74,4 +74,4 @@ HRESULT EnumRuntimes (
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)
+- [Interfaccia ICoreClrDebugTarget](icoreclrdebugtarget-interface.md)

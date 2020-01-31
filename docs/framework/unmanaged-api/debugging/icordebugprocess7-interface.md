@@ -10,12 +10,12 @@ api_type:
 ms.assetid: 71aee5f3-5e10-44fa-be69-6d8a475f2c14
 topic_type:
 - apiref
-ms.openlocfilehash: 732e07e15b3ddd535bf781e6c297383150e40e94
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 76aaeef93028b2ff9526601450d7e11f918e063d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123408"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792194"
 ---
 # <a name="icordebugprocess7-interface"></a>Interfaccia ICorDebugProcess7
 [Supportato in .NET Framework 4.5.2 e versioni successive]  
@@ -26,20 +26,20 @@ ms.locfileid: "73123408"
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo SetWriteableMetadataUpdateMode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md)|Imposta un valore che determina in che modo il debugger gestisce gli aggiornamenti in memoria ai metadati all'interno del processo di destinazione.|  
+|[Metodo SetWriteableMetadataUpdateMode](icordebugprocess7-setwriteablemetadataupdatemode-method.md)|Imposta un valore che determina in che modo il debugger gestisce gli aggiornamenti in memoria ai metadati all'interno del processo di destinazione.|  
   
 ## <a name="remarks"></a>Note  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Interfacce di debug](debugging-interfaces.md)
+- [Debug](index.md)

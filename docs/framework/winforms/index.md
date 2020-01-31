@@ -1,20 +1,21 @@
 ---
 title: Windows Form
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms
 - user interface
 - user interface [Windows Forms], forms
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
-ms.openlocfilehash: 00e359e7c2440b6d88f2c42fd0267fc1f12b7bb7
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: cdd3a71b406f1f0ae2afa1e1b3982c27f4db21a4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583429"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739192"
 ---
 # <a name="windows-forms"></a>Windows Form
-I form sono l'unità base di un'applicazione e di conseguenza è fondamentale fare molta attenzione alla loro funzione e progettazione. Un form è una sorta di foglio o di lavagna pulita, in cui uno sviluppatore inserisce controlli, al fine di creare un'interfaccia utente e un codice per la modifica dei dati. A tale scopo, Visual Studio offre un ambiente di sviluppo integrato (IDE) per semplificare la scrittura di codice, nonché un folto gruppo scritto con .NET Framework di controlli. Completando la funzionalità di tali controlli con il codice creato, è possibile sviluppare velocemente e senza difficoltà le soluzioni desiderate.  
+I form sono l'unità base di un'applicazione e di conseguenza è fondamentale fare molta attenzione alla loro funzione e progettazione. Un form è una sorta di foglio o di lavagna pulita, in cui uno sviluppatore inserisce controlli, al fine di creare un'interfaccia utente e un codice per la modifica dei dati. A tale scopo, Visual Studio offre un Integrated Development Environment (IDE) per facilitare la scrittura di codice, nonché un set di controlli completo scritto con il .NET Framework. Completando la funzionalità di tali controlli con il codice creato, è possibile sviluppare velocemente e senza difficoltà le soluzioni desiderate.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Guida introduttiva a Windows Form](getting-started-with-windows-forms.md)  
@@ -45,7 +46,7 @@ I form sono l'unità base di un'applicazione e di conseguenza è fondamentale fa
  [Applicazioni Windows Form](/visualstudio/debugger/debugging-preparation-windows-forms-applications)  
  Illustra il processo di debug delle applicazioni create con il modello di progetto Applicazione Windows e le modalità di modifica delle configurazioni di debug e rilascio.  
   
- [Primi passi in fase di distribuzione in Visual Studio](/visualstudio/deployment/deploying-applications-services-and-components)  
+ [Esaminare prima di tutto la distribuzione in Visual Studio](/visualstudio/deployment/deploying-applications-services-and-components)  
  Descrive il processo di distribuzione di un'applicazione o di un componente pronti per l'installazione su altri computer.  
   
  [Compilazione di applicazioni console](../../standard/building-console-apps.md)  

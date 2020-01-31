@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - void keyword [C#]
 ms.assetid: 0d2d8a95-fe20-4fbd-bf5d-c1e54bce71d4
-ms.openlocfilehash: 465aaeadca603f14432478a7e5496a9ef4589ebe
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 0624b547ee2586334ac35d366ae3c8dfd14963ee
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712858"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742769"
 ---
 # <a name="void-c-reference"></a>void (Riferimenti per C#)
 
@@ -38,9 +38,8 @@ public void SampleMethod()
 ## <a name="see-also"></a>Vedere anche
 
 - [Riferimenti per C#](../index.md)
-- [Guida per programmatori C#](../../programming-guide/index.md)
-- [Parole chiave di C#](index.md)
+- [Parole chiave C#](index.md)
 - [Tipi riferimento](reference-types.md)
-- [Tipi valore](value-types.md)
+- [Tipi valore](../builtin-types/value-types.md)
 - [Metodi](../../programming-guide/classes-and-structs/methods.md)
 - [Codice unsafe e puntatori](../../programming-guide/unsafe-code-pointers/index.md)

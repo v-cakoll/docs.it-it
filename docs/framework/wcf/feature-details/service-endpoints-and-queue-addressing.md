@@ -2,12 +2,12 @@
 title: Mapping fra gli endpoint di servizio e l'indirizzamento delle code
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: 6bdd3b0966f85ff456e0e2ed0b6da773046201dc
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: ec932e83a2b37330f54be545a45358a5ab055423
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837987"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744625"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Mapping fra gli endpoint di servizio e l'indirizzamento delle code
 Questo argomento descrive come i client indirizzano i servizi che leggono da code e il mapping fra gli endpoint di servizio e le code. Come promemoria, nella figura seguente viene illustrata la distribuzione dell'applicazione in coda Windows Communication Foundation (WCF) classica.  
@@ -21,7 +21,7 @@ Questo argomento descrive come i client indirizzano i servizi che leggono da cod
   
  Viene eseguito il mapping dei nomi di percorso a "FormatNames" per determinare altri aspetti dell'indirizzo, tra cui routing e il protocollo di trasferimento del gestore code. Questo servizio supporta due protocolli di trasferimento: il protocollo MSMQ nativo e il protocollo SOAP Reliable Messaging Protocol (SRMP).  
   
- Per ulteriori informazioni sui nomi di percorso e di formato MSMQ, vedere [informazioni su Accodamento messaggi](https://go.microsoft.com/fwlink/?LinkId=94837).  
+ Per ulteriori informazioni sui nomi di percorso e di formato MSMQ, vedere [informazioni su Accodamento messaggi](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms706032(v=vs.85)).  
   
 ## <a name="netmsmqbinding-and-service-addressing"></a>Associazione NetMsmqBinding e indirizzamento del servizio  
  Quando si indirizza un messaggio a un servizio, lo schema contenuto nell'URI viene scelto in base al trasporto utilizzato per le comunicazioni. Ogni trasporto in WCF ha uno schema univoco. Lo schema deve riflettere le caratteristiche del trasporto utilizzato per le comunicazioni, ad esempio net.tcp, net.pipe, HTTP e così via.  
@@ -96,7 +96,7 @@ Questo argomento descrive come i client indirizzano i servizi che leggono da cod
   
  msmq.formatname:\<*MSMQ-format-name*>>  
   
- MSMQ-format-name ha il formato specificato da MSMQ in [About Accodamento messaggi](https://go.microsoft.com/fwlink/?LinkId=94837).  
+ MSMQ-format-name ha il formato specificato da MSMQ in [About Accodamento messaggi](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms706032(v=vs.85)).  
   
  Si noti che quando si ricevono messaggi da una coda tramite l'associazione `MsmqIntegrationBinding` è possibile utilizzare soltanto i nomi di formato Direct e, se è stata scelta l'opzione di integrazione con Active Directory, i nomi di formato pubblici e privati. È tuttavia consigliabile utilizzare i nomi di formato Direct. In Windows Vista, ad esempio, l'utilizzo di qualsiasi altro nome di formato causa un errore, in quanto il sistema tenta di aprire una coda secondaria, che può essere aperta solo con nomi di formato diretti.  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d5c07d86-045d-4391-893b-0bcd2959f90e
 topic_type:
 - apiref
-ms.openlocfilehash: eaf5b9980d55b0efb473b4631a8c052b013d0796
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fb3e0ccb57cf3b056bd25e643706e49b8bc75531
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137262"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792547"
 ---
 # <a name="icordebugprocesswritememory-method"></a>Metodo ICorDebugProcess::WriteMemory
 Scrive i dati in un'area di memoria in questo processo.  
@@ -49,15 +49,15 @@ HRESULT WriteMemory(
  out Puntatore a una variabile che riceve il numero di byte scritti nell'area di memoria del processo. Se `written` è NULL, questo parametro viene ignorato.  
   
 ## <a name="remarks"></a>Note  
- I dati vengono scritti automaticamente dietro i punti di interruzione. In .NET Framework versione 2,0 i debugger nativi non devono usare questo metodo per inserire i punti di interruzione nel flusso di istruzioni. Usare invece [ICorDebugProcess2:: SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md) .  
+ I dati vengono scritti automaticamente dietro i punti di interruzione. In .NET Framework versione 2,0 i debugger nativi non devono usare questo metodo per inserire i punti di interruzione nel flusso di istruzioni. Usare invece [ICorDebugProcess2:: SetUnmanagedBreakpoint](icordebugprocess2-setunmanagedbreakpoint-method.md) .  
   
  Il metodo `WriteMemory` deve essere utilizzato solo all'esterno del codice gestito. Questo metodo può danneggiare il runtime se usato in modo errato.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

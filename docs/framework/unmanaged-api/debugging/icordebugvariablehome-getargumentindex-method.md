@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e86fcc72-388d-4009-ab21-8f9c3323e9a3
 topic_type:
 - apiref
-ms.openlocfilehash: 86b2815c6f95c674c49bba7455e8497192bd8bac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 12d4e63480f03bfad613f30362ddaeaf12b57a88
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125144"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791045"
 ---
 # <a name="icordebugvariablehomegetargumentindex-method"></a>Metodo ICorDebugVariableHome:: GetArgumentIndex
 
@@ -43,16 +43,16 @@ out Puntatore all'indice dell'argomento.
 
 Il metodo restituisce i valori seguenti.
 
-|Value|Descrizione|
+|Valore|Descrizione|
 |-----------|-----------------|
 |`S_OK`|La chiamata al metodo ha restituito un indice di argomento valido.|
-|`E_FAIL`|L'istanza corrente di [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) rappresenta una variabile locale.|
+|`E_FAIL`|L'istanza corrente di [ICorDebugVariableHome](icordebugvariablehome-interface.md) rappresenta una variabile locale.|
 
 ## <a name="remarks"></a>Note
 
 L'indice dell'argomento può essere utilizzato per recuperare i metadati per questo argomento.
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
 **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).
 
@@ -60,8 +60,8 @@ L'indice dell'argomento può essere utilizzato per recuperare i metadati per que
 
 **Libreria:** CorGuids.lib
 
-**Versioni di .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]
+**Versioni .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+- [Interfaccia ICorDebugVariableHome](icordebugvariablehome-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: Cenni preliminari sull'utilizzo di controlli in Windows Form
+title: Cenni preliminari sull'uso dei controlli
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,24 +9,24 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
-ms.openlocfilehash: 16a28db6477ea86a8bc853fbf506cf6d6d4fa5e0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ca8b9fab3c53e256792faf0969b5066d5e35f6c7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654595"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744356"
 ---
-# <a name="overview-of-using-controls-in-windows-forms"></a>Cenni preliminari sull'utilizzo di controlli in Windows Form
-In questo argomento descrive gli elementi essenziali di un'applicazione Windows Forms e fornisce un semplice esempio che usa i controlli e gestisce gli eventi in un'applicazione Windows Form.  
+# <a name="overview-of-using-controls-in-windows-forms"></a>Panoramica dell'uso di controlli in Windows Form
+In questo argomento vengono descritti gli elementi essenziali di un Windows Forms Application e viene fornito un semplice esempio in cui vengono utilizzati i controlli e vengono gestiti gli eventi in una Windows Forms Application.  
   
-## <a name="simple-windows-forms-applications"></a>Semplice Windows Forms Application  
- Come minimo, un'applicazione Windows Forms costituita dagli elementi seguenti:  
+## <a name="simple-windows-forms-applications"></a>Applicazioni Windows Forms semplici  
+ Come minimo, un Windows Forms Application è costituito dagli elementi seguenti:  
   
-- Uno o più classi che derivano da <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.  
+- Una o più classi che derivano da <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.  
   
-- Oggetto `Main` metodo che richiama la `static` (`shared` in Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> metodo e passa un <xref:System.Windows.Forms.Form> istanza ad esso. Il <xref:System.Windows.Forms.Application.Run%2A> metodo elabora i messaggi dal sistema operativo per l'applicazione.  
+- Metodo `Main` che richiama il metodo di <xref:System.Windows.Forms.Application.Run%2A> `static` (`shared` in Visual Basic) e passa un'istanza di <xref:System.Windows.Forms.Form>. Il metodo <xref:System.Windows.Forms.Application.Run%2A> elabora i messaggi dal sistema operativo all'applicazione.  
   
- Esempio di codice seguente illustra gli elementi essenziali di un'applicazione Windows Form.  
+ Nell'esempio di codice seguente vengono illustrati gli elementi essenziali di un Windows Forms Application.  
   
 ```vb  
 Option Explicit  
@@ -74,8 +74,8 @@ public class MyForm : Form {
 }  
 ```  
   
-## <a name="using-controls-in-a-windows-forms-application"></a>Uso di controlli in una Windows Forms Application  
- Esempio di codice seguente illustra un'applicazione semplice che illustra come le applicazioni Windows Form usano i controlli e la gestione degli eventi. L'esempio è costituito da tre pulsanti in un form. ogni pulsante viene modificato il colore di sfondo quando si fa clic.  
+## <a name="using-controls-in-a-windows-forms-application"></a>Uso di controlli in un'applicazione Windows Forms  
+ Nell'esempio di codice seguente viene illustrata una semplice applicazione che illustra il modo in cui le applicazioni Windows Forms utilizzano i controlli e gestiscono gli eventi. L'esempio è costituito da tre pulsanti in un form; Quando si fa clic su ogni pulsante, viene modificato il colore di sfondo.  
   
 ```vb  
 Option Explicit  

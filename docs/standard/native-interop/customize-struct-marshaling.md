@@ -5,12 +5,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: e69746e03cefa2444d4c34b582730824ff357858
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7f8d1ad93633d6feef9c3c6f5d19aad52105968c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706348"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741526"
 ---
 # <a name="customizing-structure-marshaling"></a>Personalizzazione del marshalling delle strutture
 
@@ -20,11 +20,11 @@ In alcuni casi le regole di marshalling predefinite per le strutture non sono es
 
 .NET offre l'attributo <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType> e l'enumerazione <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType> per consentire di personalizzare il modo in cui i campi vengono inseriti nella memoria. Le linee guida seguenti saranno utili per evitare problemi comuni.
 
-**✔️ PRENDERE IN CONSIDERAZIONE** l'uso di `LayoutKind.Sequential` laddove possibile.
+✔️ CONSIGLIABILE utilizzare `LayoutKind.Sequential` quando possibile.
 
-**✔️ USARE** solo `LayoutKind.Explicit` nel marshalling quando lo struct nativo ha anche un layout esplicito, ad esempio un'unione.
+✔️ utilizzano solo `LayoutKind.Explicit` nel marshalling quando lo struct nativo dispone anche di un layout esplicito, ad esempio un'Unione.
 
-**❌ evitare** di usare `LayoutKind.Explicit` quando si effettua il marshalling di strutture su piattaforme non Windows se è necessario destinare i runtime prima di .net core 3,0. Il runtime di .NET Core prima del 3,0 non supporta il passaggio di strutture esplicite per valore a funzioni native su sistemi non Windows Intel o AMD a 64 bit. Tuttavia, il runtime supporta il passaggio di strutture esplicite per riferimento in tutte le piattaforme.
+❌ evitare di usare `LayoutKind.Explicit` quando si effettua il marshalling di strutture su piattaforme non Windows se è necessario destinare i runtime prima di .NET Core 3,0. Il runtime di .NET Core prima del 3,0 non supporta il passaggio di strutture esplicite per valore a funzioni native su sistemi non Windows Intel o AMD a 64 bit. Tuttavia, il runtime supporta il passaggio di strutture esplicite per riferimento in tutte le piattaforme.
 
 ## <a name="customizing-boolean-field-marshaling"></a>Personalizzazione del marshalling di campi booleani
 

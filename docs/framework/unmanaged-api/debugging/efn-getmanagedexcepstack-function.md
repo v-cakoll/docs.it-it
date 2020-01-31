@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 21ceed9e-62b2-4024-b027-6d095109955a
 topic_type:
 - apiref
-ms.openlocfilehash: 9bcc03cc97a62b4c1cadacd7c0b2bc46b9fec470
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 824be4a401d265575b48f66045dd944d521e64a4
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134133"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789157"
 ---
 # <a name="_efn_getmanagedexcepstack-function"></a>\_AAPN\_funzione GetManagedExcepStack
 Restituisce una versione stringa della traccia dello stack contenuta internamente, dato l'indirizzo di un oggetto eccezione gestita.  
@@ -49,9 +49,9 @@ HRESULT _EFN_GetManagedExcepStack(
  out Numero di caratteri disponibili nel buffer di stringa.  
   
 ## <a name="remarks"></a>Note  
- Se nel thread non è attualmente presente codice gestito nel contesto, la funzione restituisce HRESULT SOS_E_NOMANAGEDCODE con il valore della funzione messaggi 0XA0 e un codice di errore 0x1000.  
+ Se nel thread non è attualmente presente codice gestito, la funzione restituisce HRESULT SOS_E_NOMANAGEDCODE con un valore della funzione messaggi 0XA0 e un codice di errore 0x1000.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** SOS_Stacktrace. h  
@@ -60,4 +60,4 @@ HRESULT _EFN_GetManagedExcepStack(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Funzioni statiche globali di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [Funzioni statiche globali di debug](debugging-global-static-functions.md)

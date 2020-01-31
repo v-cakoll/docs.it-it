@@ -1,19 +1,20 @@
 ---
-title: Distribuzione di un'applicazione WPF (WPF)
+title: Distribuire un'app
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: d67919ba38c2e306672966ddc2f62140ef92b638
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 9d4b7dd0464960441410d8ff2a196f0912354e5f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636302"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741940"
 ---
-# <a name="deploying-a-wpf-application-wpf"></a>Distribuzione di un'applicazione WPF (WPF)
-Una volta compilate le applicazioni Windows Presentation Foundation (WPF), è necessario distribuirle. Windows e il .NET Framework includono diverse tecnologie di distribuzione. La tecnologia di distribuzione utilizzata per distribuire un'applicazione WPF dipende dal tipo di applicazione. In questo argomento viene fornita una breve panoramica di ogni tecnologia di distribuzione e viene illustrato come vengono utilizzate in combinazione con i requisiti di distribuzione di ogni tipo di applicazione WPF.  
+# <a name="deploy-a-wpf-application"></a>Distribuire un'applicazione WPF
+
+Una volta compilate le applicazioni Windows Presentation Foundation (WPF), è necessario distribuirle. Windows e il .NET Framework includono diverse tecnologie di distribuzione. La tecnologia di distribuzione utilizzata per distribuire un'applicazione WPF dipende dal tipo di applicazione. In questo argomento viene fornita una breve panoramica di ogni tecnologia di distribuzione e viene illustrato come vengono utilizzate in combinazione con i requisiti di distribuzione di ogni tipo di applicazione WPF.
 
 <a name="Deployment_Technologies"></a>   
 ## <a name="deployment-technologies"></a>Tecnologie di distribuzione  

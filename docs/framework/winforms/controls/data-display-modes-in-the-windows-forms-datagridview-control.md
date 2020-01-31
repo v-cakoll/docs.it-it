@@ -1,45 +1,45 @@
 ---
-title: Modalità di visualizzazione dati nel controllo DataGridView di Windows Form
+title: Modalità di visualizzazione dei dati nel controllo DataGridView
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms], display modes
 - data grids [Windows Forms], display modes
 - DataGridView control [Windows Forms], display modes
 ms.assetid: 9755a030-3f3f-4705-a661-ba5a48a81875
-ms.openlocfilehash: 673780909f6d66168548893e99d79bbfec70a0e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad6be647e3a36904b055fd6771f539df28938fab
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011420"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744012"
 ---
 # <a name="data-display-modes-in-the-windows-forms-datagridview-control"></a>Modalità di visualizzazione dati nel controllo DataGridView di Windows Form
-Il <xref:System.Windows.Forms.DataGridView> controllo può visualizzare i dati in tre diverse modalità: associato, non associato e virtuali. Scegliere la modalità più adatta in base alle esigenze.  
+Il controllo <xref:System.Windows.Forms.DataGridView> è in grado di visualizzare i dati in tre modalità distinte, ovvero binding, non associato e virtuale. Scegliere la modalità più adatta in base alle esigenze.  
   
-## <a name="unbound"></a>Non associato  
- Modalità non associata è adatta per la visualizzazione delle quantità relativamente piccole di dati gestiti a livello di codice. Non collegare il <xref:System.Windows.Forms.DataGridView> controllo direttamente a un'origine dati come modalità di associazione. In alternativa, è necessario popolare il controllo manualmente, in genere usando il <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=nameWithType> (metodo).  
+## <a name="unbound"></a>Svincolato  
+ La modalità non associata è adatta per la visualizzazione di quantità relativamente piccole di dati gestiti a livello di codice. Non è possibile associare il controllo <xref:System.Windows.Forms.DataGridView> direttamente a un'origine dati in modalità di associazione. È invece necessario popolare il controllo autonomamente, in genere utilizzando il metodo <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=nameWithType>.  
   
- Modalità non associata può essere particolarmente utile per i dati statici di sola lettura, o quando si desidera fornire il proprio codice che interagisce con un archivio dati esterno. Quando si desidera che gli utenti interagiscono con un'origine dati esterna, tuttavia, si useranno la modalità associata.  
+ La modalità non associata può essere particolarmente utile per i dati statici di sola lettura o quando si desidera fornire codice personalizzato che interagisce con un archivio dati esterno. Quando si desidera che gli utenti interagisca con un'origine dati esterna, tuttavia, in genere si utilizzerà la modalità associata.  
   
- Per un esempio che usa una proprietà di sola lettura unbound <xref:System.Windows.Forms.DataGridView>, vedere [come: Creare un controllo DataGridView di Windows non associato form](how-to-create-an-unbound-windows-forms-datagridview-control.md).  
+ Per un esempio in cui viene usato un <xref:System.Windows.Forms.DataGridView>di sola lettura non associato, vedere [procedura: creare un controllo DataGridView Windows Forms non associato](how-to-create-an-unbound-windows-forms-datagridview-control.md).  
   
 ## <a name="bound"></a>Associato  
- Modalità di associazione è adatta per la gestione dei dati mediante l'interazione automatica con l'archivio dati. È possibile collegare il <xref:System.Windows.Forms.DataGridView> controllo direttamente all'origine dati impostando il <xref:System.Windows.Forms.DataGridView.DataSource%2A> proprietà. Quando il controllo è associato a dati, le righe di dati vengono effettuato il push e pull senza la necessità di gestione esplicita da parte dell'utente. Quando la <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> è di proprietà `true`, ogni colonna nell'origine dati causerà una colonna corrispondente deve essere creato nel controllo. Se si preferisce creare colonne personalizzate, è possibile impostare questa proprietà `false` e usare il <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> proprietà alla quale associare ogni colonna al momento della configurazione. Ciò è utile quando si vuole usare un tipo di colonna diversi da quelli generati per impostazione predefinita. Per altre informazioni, vedere [tipi di colonne nel controllo DataGridView Windows Form](column-types-in-the-windows-forms-datagridview-control.md).  
+ La modalità associata è adatta per la gestione dei dati tramite l'interazione automatica con l'archivio dati. È possibile alleghi il controllo <xref:System.Windows.Forms.DataGridView> direttamente alla relativa origine dati impostando la proprietà <xref:System.Windows.Forms.DataGridView.DataSource%2A>. Quando il controllo è associato ai dati, viene effettuato il push e il pull delle righe di dati senza che sia necessaria una gestione esplicita da parte dell'utente. Quando la proprietà <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> è `true`, ogni colonna nell'origine dati provocherà la creazione di una colonna corrispondente nel controllo. Se si preferisce creare colonne personalizzate, è possibile impostare questa proprietà su `false` e utilizzare la proprietà <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> per associare ogni colonna quando viene configurata. Questa operazione è utile quando si desidera utilizzare un tipo di colonna diverso dai tipi generati per impostazione predefinita. Per ulteriori informazioni, vedere la pagina relativa ai [tipi di colonna nel controllo DataGridView Windows Forms](column-types-in-the-windows-forms-datagridview-control.md).  
   
- Per un esempio che usa un oggetto associato <xref:System.Windows.Forms.DataGridView> controllano, vedere [procedura dettagliata: Convalida dei dati in di Windows Forms DataGridView Control](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md).  
+ Per un esempio in cui viene usato un controllo <xref:System.Windows.Forms.DataGridView> associato, vedere [procedura dettagliata: convalida dei dati nel controllo DataGridView Windows Forms](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md).  
   
- È anche possibile aggiungere colonne non associate a un <xref:System.Windows.Forms.DataGridView> controllo in modalità di associazione. Ciò è utile quando si desidera visualizzare una colonna di pulsanti o collegamenti che consentono agli utenti di eseguire azioni su righe specifiche. È anche utile visualizzare le colonne con i valori calcolati dalle colonne associate. È possibile popolare i valori delle celle per le colonne calcolate in un gestore per il <xref:System.Windows.Forms.DataGridView.CellFormatting> evento. Se si usa un' <xref:System.Data.DataSet> oppure <xref:System.Data.DataTable> come origine dati, tuttavia, si potrebbe voler usare il <xref:System.Data.DataColumn.Expression%2A?displayProperty=nameWithType> proprietà per creare invece una colonna calcolata. In questo caso, il <xref:System.Windows.Forms.DataGridView> controllo considera la colonna calcolata esattamente come qualsiasi altra colonna nell'origine dati.  
+ È anche possibile aggiungere colonne non vincolate a un controllo <xref:System.Windows.Forms.DataGridView> in modalità di associazione. Questa opzione è utile quando si desidera visualizzare una colonna di pulsanti o collegamenti che consentono agli utenti di eseguire azioni su righe specifiche. È inoltre utile visualizzare le colonne con valori calcolati dalle colonne associate. È possibile popolare i valori delle celle per le colonne calcolate in un gestore per l'evento <xref:System.Windows.Forms.DataGridView.CellFormatting>. Se si utilizza un <xref:System.Data.DataSet> o <xref:System.Data.DataTable> come origine dati, tuttavia, potrebbe essere necessario utilizzare la proprietà <xref:System.Data.DataColumn.Expression%2A?displayProperty=nameWithType> per creare una colonna calcolata. In questo caso, il controllo <xref:System.Windows.Forms.DataGridView> considererà la colonna calcolata come qualsiasi altra colonna nell'origine dati.  
   
- Ordinamento in base a colonne non associate in modalità di associazione non è supportato. Se si crea una colonna non associata in modalità di associazione che contiene i valori modificabili dall'utente, è necessario implementare modalità virtuale per gestire questi valori quando il controllo viene ordinato in base a una colonna associata.  
+ L'ordinamento in base a colonne non vincolate in modalità di associazione non è supportato. Se si crea una colonna non associata in modalità associata che contiene valori modificabili dall'utente, è necessario implementare la modalità virtuale per mantenere questi valori quando il controllo è ordinato in base a una colonna associata.  
   
-## <a name="virtual"></a>Virtuale  
- La modalità virtuale, è possibile implementare il proprio operazioni di gestione dati. Ciò è necessario mantenere i valori delle colonne non associate in modalità di associazione quando il controllo viene ordinato in base a colonne associate. L'utilizzo principale della modalità virtuale, tuttavia, consiste nell'ottimizzare le prestazioni durante l'interazione con grandi quantità di dati.  
+## <a name="virtual"></a>Virtual  
+ Con la modalità virtuale è possibile implementare le proprie operazioni di gestione dei dati. Questa operazione è necessaria per mantenere i valori delle colonne non vincolate in modalità di associazione quando il controllo è ordinato in base alle colonne di associazione. L'uso principale della modalità virtuale, tuttavia, consiste nell'ottimizzare le prestazioni quando si interagisce con grandi quantità di dati.  
   
- Si collega il <xref:System.Windows.Forms.DataGridView> controllo a una cache gestita dall'utente e i controlli di codice quando le righe di dati vengono effettuato il push e pull. Per ridurre il footprint di memoria, la cache deve essere simile al numero di righe attualmente visualizzate. Quando l'utente scorre nuove righe all'interno della visualizzazione, il codice richiede nuovi dati dalla cache e, facoltativamente, Elimina i dati obsoleti dalla memoria.  
+ Il controllo <xref:System.Windows.Forms.DataGridView> viene collegato a una cache gestita e il codice controlla quando viene eseguito il push e il pull delle righe di dati. Per ridurre il footprint di memoria, è necessario che le dimensioni della cache siano simili al numero di righe attualmente visualizzate. Quando l'utente scorre le nuove righe nella visualizzazione, il codice richiede nuovi dati dalla cache e, facoltativamente, Scarica i dati obsoleti dalla memoria.  
   
- Quando si implementa la modalità virtuale, è necessario rilevare quando una nuova riga è necessaria nel modello di dati e quando eseguire il rollback, l'aggiunta della nuova riga. L'implementazione esatta di questa funzionalità variano in base l'implementazione del modello di dati e la semantica delle transazioni del modello di dati; indica se l'ambito di commit è a livello di cella o riga.  
+ Quando si implementa la modalità virtuale, sarà necessario tenere traccia del momento in cui è necessaria una nuova riga nel modello di dati e quando eseguire il rollback dell'aggiunta della nuova riga. L'implementazione esatta di questa funzionalità dipende dall'implementazione del modello di dati e dalla semantica delle transazioni del modello di dati. indica se l'ambito del commit è a livello di cella o di riga.  
   
- Per altre informazioni sulla modalità virtuale, vedere [modalità virtuale nel controllo DataGridView Windows Form](virtual-mode-in-the-windows-forms-datagridview-control.md). Per un esempio che illustra come usare eventi in modalità virtuale, vedere [procedura dettagliata: Implementazione della modalità virtuale in Windows il controllo DataGridView form](implementing-virtual-mode-wf-datagridview-control.md).  
+ Per ulteriori informazioni sulla modalità virtuale, vedere la pagina relativa alla [modalità virtuale nel controllo DataGridView Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md). Per un esempio che illustra come usare gli eventi in modalità virtuale, vedere [procedura dettagliata: implementazione della modalità virtuale nel controllo DataGridView Windows Forms](implementing-virtual-mode-wf-datagridview-control.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -50,7 +50,7 @@ Il <xref:System.Windows.Forms.DataGridView> controllo può visualizzare i dati i
 - <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A?displayProperty=nameWithType>
 - [Visualizzazione di dati nel controllo DataGridView di Windows Form](displaying-data-in-the-windows-forms-datagridview-control.md)
 - [Tipi di colonne nel controllo DataGridView di Windows Form](column-types-in-the-windows-forms-datagridview-control.md)
-- [Procedura dettagliata: Creazione di una cornice di Windows Form controllo DataGridView](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)
-- [Procedura: Associare dati al controllo DataGridView Windows Form](how-to-bind-data-to-the-windows-forms-datagridview-control.md)
+- [Procedura dettagliata: Creazione di un controllo DataGridView di Windows Form non associato](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)
+- [Procedura: Associare dati al controllo DataGridView di Windows Form](how-to-bind-data-to-the-windows-forms-datagridview-control.md)
 - [Modo virtuale nel controllo DataGridView di Windows Form](virtual-mode-in-the-windows-forms-datagridview-control.md)
-- [Procedura dettagliata: Implementazione della modalità virtuale nel controllo DataGridView Windows Form](implementing-virtual-mode-wf-datagridview-control.md)
+- [Procedura dettagliata: Implementazione della modalità virtuale nel controllo DataGridView di Windows Form](implementing-virtual-mode-wf-datagridview-control.md)

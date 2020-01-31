@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Stampare un file di testo con più pagine in Windows Form'
+title: 'Procedura: stampare un file di testo con più pagine'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Windows Forms, printing text
 - printing [Windows Forms], text
 ms.assetid: 362427f8-03d4-4826-b49f-60ab066ad322
-ms.openlocfilehash: bd858279a4d8a3509a91bcd1c62fb1f61d6d2bb9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 51e30706bb7693988d611701d013792c82dccd0b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931785"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740655"
 ---
-# <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>Procedura: Stampare un file di testo con più pagine in Windows Form
+# <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>Procedura: stampare un file di testo con più pagine in Windows Form
 La stampa di testo è un'operazione molto comune nelle applicazioni per Windows. La classe <xref:System.Drawing.Graphics> fornisce metodi per visualizzare oggetti (grafica o testo) su una periferica, ad esempio un monitor o una stampante.  
   
 > [!NOTE]
