@@ -1,16 +1,16 @@
 ---
-title: Miglioramento delle applicazioni Windows Form
+title: Migliorare le app
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, enhancing
 - Windows Forms, adding features
 ms.assetid: 733d1219-d6ad-4256-a55b-9eccf47f5a06
-ms.openlocfilehash: 82847add5b35fe767d42ee88d7754f789174e434
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6c9287870d0a3852cf8dda21c4bd249eca09c114
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942909"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744834"
 ---
 # <a name="enhancing-windows-forms-applications"></a>Miglioramento delle applicazioni Windows Form
 In Windows Form sono disponibili molte funzionalità che possono essere usate per migliorare le proprie applicazioni basate su Windows in modo da soddisfare le specifiche esigenze degli utenti. Gli argomenti riportati di seguito illustrano queste funzionalità e le relative modalità di uso.  
@@ -31,7 +31,7 @@ In Windows Form sono disponibili molte funzionalità che possono essere usate pe
  [Operazioni di rete nelle Windows Forms Application](networking-in-windows-forms-applications.md)  
  Contiene collegamenti ad argomenti che illustrano come usare l'accesso alla rete in Windows Form.  
   
- [Globalizzazione di applicazioni Windows Form](globalizing-windows-forms.md)  
+ [Globalizzazione di applicazioni Windows Forms](globalizing-windows-forms.md)  
  Contiene collegamenti ad argomenti che illustrano come globalizzare le applicazioni Windows Forms.  
   
  [Windows Form e applicazioni non gestite](windows-forms-and-unmanaged-applications.md)  
