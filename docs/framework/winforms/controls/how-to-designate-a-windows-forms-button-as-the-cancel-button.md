@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Designare un pulsante Windows Forms come pulsante di annullamento'
+title: Designare un pulsante come pulsante Annulla
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - buttons [Windows Forms], cancel buttons
 - Button control [Windows Forms], designating as cancel button
 ms.assetid: 252f0834-e54b-44d9-96f7-ee5f50e94f2c
-ms.openlocfilehash: 8170190145e76a86f5343bc42b39be7fb9d61a0f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 123b3e275065efadd24815320ea7d855808e60b9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010722"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743256"
 ---
-# <a name="how-to-designate-a-windows-forms-button-as-the-cancel-button"></a><span data-ttu-id="1742a-102">Procedura: Designare un pulsante Windows Forms come pulsante di annullamento</span><span class="sxs-lookup"><span data-stu-id="1742a-102">How to: Designate a Windows Forms Button as the Cancel Button</span></span>
-<span data-ttu-id="1742a-103">In qualsiasi forma di Windows, è possibile designare un <xref:System.Windows.Forms.Button> controllo pulsante di annullamento.</span><span class="sxs-lookup"><span data-stu-id="1742a-103">On any Windows Form, you can designate a <xref:System.Windows.Forms.Button> control to be the cancel button.</span></span> <span data-ttu-id="1742a-104">Ogni volta che l'utente preme il tasto ESC, indipendentemente da quale altro controllo sul form ha lo stato attivo, viene scelto un pulsante Annulla.</span><span class="sxs-lookup"><span data-stu-id="1742a-104">A cancel button is clicked whenever the user presses the ESC key, regardless of which other control on the form has the focus.</span></span> <span data-ttu-id="1742a-105">Il pulsante di annullamento viene in genere programmate per consentire all'utente di abbandonare un'operazione senza il commit di alcuna azione.</span><span class="sxs-lookup"><span data-stu-id="1742a-105">Such a button is usually programmed to enable the user to quickly exit an operation without committing to any action.</span></span>  
+# <a name="how-to-designate-a-windows-forms-button-as-the-cancel-button"></a><span data-ttu-id="8c59a-102">Procedura: Impostare un pulsante Windows Form come pulsante di annullamento</span><span class="sxs-lookup"><span data-stu-id="8c59a-102">How to: Designate a Windows Forms Button as the Cancel Button</span></span>
+<span data-ttu-id="8c59a-103">In qualsiasi Windows Form è possibile designare un controllo <xref:System.Windows.Forms.Button> come pulsante Annulla.</span><span class="sxs-lookup"><span data-stu-id="8c59a-103">On any Windows Form, you can designate a <xref:System.Windows.Forms.Button> control to be the cancel button.</span></span> <span data-ttu-id="8c59a-104">Quando l'utente preme il tasto ESC, viene fatto clic su un pulsante Annulla, indipendentemente da quale altro controllo nel form abbia lo stato attivo.</span><span class="sxs-lookup"><span data-stu-id="8c59a-104">A cancel button is clicked whenever the user presses the ESC key, regardless of which other control on the form has the focus.</span></span> <span data-ttu-id="8c59a-105">Un pulsante di questo tipo è in genere programmato per consentire all'utente di uscire rapidamente da un'operazione senza eseguire il commit in alcuna azione.</span><span class="sxs-lookup"><span data-stu-id="8c59a-105">Such a button is usually programmed to enable the user to quickly exit an operation without committing to any action.</span></span>  
   
-### <a name="to-designate-the-cancel-button"></a><span data-ttu-id="1742a-106">Per designare il pulsante Annulla</span><span class="sxs-lookup"><span data-stu-id="1742a-106">To designate the cancel button</span></span>  
+### <a name="to-designate-the-cancel-button"></a><span data-ttu-id="8c59a-106">Per impostare il pulsante Annulla</span><span class="sxs-lookup"><span data-stu-id="8c59a-106">To designate the cancel button</span></span>  
   
-1. <span data-ttu-id="1742a-107">Impostare la maschera <xref:System.Windows.Forms.Form.CancelButton%2A> proprietà appropriata <xref:System.Windows.Forms.Button> controllo.</span><span class="sxs-lookup"><span data-stu-id="1742a-107">Set the form's <xref:System.Windows.Forms.Form.CancelButton%2A> property to the appropriate <xref:System.Windows.Forms.Button> control.</span></span>  
+1. <span data-ttu-id="8c59a-107">Impostare la proprietà <xref:System.Windows.Forms.Form.CancelButton%2A> del modulo sul controllo <xref:System.Windows.Forms.Button> appropriato.</span><span class="sxs-lookup"><span data-stu-id="8c59a-107">Set the form's <xref:System.Windows.Forms.Form.CancelButton%2A> property to the appropriate <xref:System.Windows.Forms.Button> control.</span></span>  
   
     ```vb  
     Private Sub SetCancelButton(ByVal myCancelBtn As Button)  
@@ -44,11 +44,11 @@ ms.locfileid: "62010722"
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="1742a-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1742a-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8c59a-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8c59a-108">See also</span></span>
 
 - <xref:System.Windows.Forms.Form.CancelButton%2A>
-- [<span data-ttu-id="1742a-109">Panoramica sul controllo Button</span><span class="sxs-lookup"><span data-stu-id="1742a-109">Button Control Overview</span></span>](button-control-overview-windows-forms.md)
-- [<span data-ttu-id="1742a-110">Modalità di selezione di un controllo Button di Windows Form</span><span class="sxs-lookup"><span data-stu-id="1742a-110">Ways to Select a Windows Forms Button Control</span></span>](ways-to-select-a-windows-forms-button-control.md)
-- [<span data-ttu-id="1742a-111">Procedura: Rispondere alle selezioni dei pulsanti di Windows Form</span><span class="sxs-lookup"><span data-stu-id="1742a-111">How to: Respond to Windows Forms Button Clicks</span></span>](how-to-respond-to-windows-forms-button-clicks.md)
-- [<span data-ttu-id="1742a-112">Procedura: Designare un pulsante di Windows Form come pulsante di conferma</span><span class="sxs-lookup"><span data-stu-id="1742a-112">How to: Designate a Windows Forms Button as the Accept Button</span></span>](how-to-designate-a-windows-forms-button-as-the-accept-button.md)
-- [<span data-ttu-id="1742a-113">Controllo Button</span><span class="sxs-lookup"><span data-stu-id="1742a-113">Button Control</span></span>](button-control-windows-forms.md)
+- [<span data-ttu-id="8c59a-109">Panoramica sul controllo Button</span><span class="sxs-lookup"><span data-stu-id="8c59a-109">Button Control Overview</span></span>](button-control-overview-windows-forms.md)
+- [<span data-ttu-id="8c59a-110">Modalità di selezione di un controllo Button di Windows Form</span><span class="sxs-lookup"><span data-stu-id="8c59a-110">Ways to Select a Windows Forms Button Control</span></span>](ways-to-select-a-windows-forms-button-control.md)
+- [<span data-ttu-id="8c59a-111">Procedura: Rispondere alla selezione dei pulsanti di Windows Form</span><span class="sxs-lookup"><span data-stu-id="8c59a-111">How to: Respond to Windows Forms Button Clicks</span></span>](how-to-respond-to-windows-forms-button-clicks.md)
+- [<span data-ttu-id="8c59a-112">Procedura: Designare un pulsante Windows Form come pulsante di conferma</span><span class="sxs-lookup"><span data-stu-id="8c59a-112">How to: Designate a Windows Forms Button as the Accept Button</span></span>](how-to-designate-a-windows-forms-button-as-the-accept-button.md)
+- [<span data-ttu-id="8c59a-113">Controllo Button</span><span class="sxs-lookup"><span data-stu-id="8c59a-113">Button Control</span></span>](button-control-windows-forms.md)
