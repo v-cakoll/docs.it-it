@@ -44,12 +44,16 @@
         - name: Infrastruttura di comunicazione con mesh di servizi
           href: service-mesh-communication-infrastructure.md
     - name: Dati distribuiti
-      href: distributed-data.md
+      href: null
       items:
-        - name: Modelli di dati cloud nativi
-          href: data-patterns.md
-        - name: Archiviazione dati in Azure
-          href: azure-data-storage.md
+        - name: Database per microservizio
+          href: database-per-microservice.md
+        - name: Modelli di data mining relazionali Dati NoSQL
+          href: relational-vs-nosql-data.md
+        - name: Memorizzazione nella cache in un'applicazione nativa del cloud
+          href: azure-caching.md
+        - name: Elasticsearch in Azure
+          href: elastic-search-in-azure.md
     - name: Resilienza cloud nativa
       href: resiliency.md
       items:
@@ -79,7 +83,7 @@
           href: azure-active-directory.md
         - name: Identity Server
           href: identity-server.md
-    - name: Sicurezza
+    - name: Security
       href: security.md
       items:
         - name: Sicurezza di Azure per le app cloud native
