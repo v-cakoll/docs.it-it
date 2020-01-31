@@ -2,12 +2,12 @@
 title: Risoluzione dei problemi relativi ai messaggi in coda
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: ed114cc9a37fff549e8bfc874765252fd18893a9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 3d2d48076fafe44687546ca27e4d8670b81ce433
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345582"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742677"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Risoluzione dei problemi relativi ai messaggi in coda
 
@@ -113,10 +113,6 @@ Per i problemi relativi all'host Web non correlati alla sicurezza, vedere [il si
 
 **R:** Impostare AutoComplete =`true` sull'operazione che corrisponde all'ultimo messaggio della sessione e impostare AutoComplete =`false` per tutte le operazioni del servizio rimanenti.
 
-**D:** Dove è possibile trovare le risposte alle domande più comuni su MSMQ?
-
-**R:** Per ulteriori informazioni su MSMQ, vedere [Microsoft Message Queuing](https://go.microsoft.com/fwlink/?LinkId=87810).
-
 **D:** Perché il servizio genera un'`ProtocolException` durante la lettura da una coda che contiene sia i messaggi della sessione in coda che i messaggi del datagramma in coda?
 
 **R:** Esiste una differenza fondamentale nel modo in cui i messaggi della sessione in coda e i messaggi del datagramma in coda vengono composti. Per questo motivo, un servizio che prevede di leggere un messaggio della sessione in coda non può ricevere un messaggio del datagramma in coda e un servizio che prevede di leggere un messaggio del datagramma in coda non può ricevere un messaggio della sessione. Eseguendo il tentativo di leggere entrambi tipi di messaggi dalla stessa coda viene generata l'eccezione seguente:
@@ -174,7 +170,7 @@ Un'ulteriore soluzione alternativa consiste nell'installare MSMQ unitamente all'
 
 6. Successivamente, aggiungere un secondo snap-in certificati usando i passaggi precedenti, ma questa volta selezionare **account computer** e fare clic su **Avanti**.
 
-7. Selezionare **Computer locale** e fare clic su **Fine**. È ora possibile trascinare i certificati dall'archivio del computer all'archivio dell'utente corrente.
+7. Selezionare **computer locale** e fare clic su **fine**. È ora possibile trascinare i certificati dall'archivio del computer all'archivio dell'utente corrente.
 
 **D:** Quando il servizio legge da una coda in un altro computer in modalità gruppo di lavoro, viene generata un'eccezione "accesso negato".
 
@@ -186,7 +182,7 @@ Un'ulteriore soluzione alternativa consiste nell'installare MSMQ unitamente all'
 
 ### <a name="remote-transacted-receives"></a>Ricezioni transazionali remote
 
-**D:** Quando si dispone di una coda sul computer A e un servizio WCF che legge i messaggi da una coda nel computer B (scenario di ricezione transazionale remoto), i messaggi non vengono letti dalla coda. Le informazioni di traccia indicano che la ricezione non è riuscita con il messaggio "Impossibile importare la transazione". Come si può risolvere questo problema?
+**D:** Quando si dispone di una coda sul computer A e un servizio WCF che legge i messaggi da una coda nel computer B (scenario di ricezione transazionale remoto), i messaggi non vengono letti dalla coda. Le informazioni di traccia indicano che la ricezione non è riuscita con il messaggio "Impossibile importare la transazione". Cosa è possibile fare per risolvere questo problema?
 
 **R:** Esistono tre possibili motivi:
 

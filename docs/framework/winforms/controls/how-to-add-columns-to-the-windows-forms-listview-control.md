@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Aggiungere colonne al controllo ListView di Windows Forms'
+title: Aggiunta di colonne al controllo ListView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,21 +9,21 @@ helpviewer_keywords:
 - columns [Windows Forms], adding to ListView controls
 - list views [Windows Forms], adding columns
 ms.assetid: 79174274-12ee-4a5d-80db-6ec02976d010
-ms.openlocfilehash: 5c87d43513f2125945145445c61f689cdd9d2aaf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: dd438ffbadddfc37ec9eb15e59a908bb58472a45
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345742"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744578"
 ---
-# <a name="how-to-add-columns-to-the-windows-forms-listview-control"></a>Procedura: Aggiungere colonne al controllo ListView di Windows Forms
-Nella visualizzazione dettagli i <xref:System.Windows.Forms.ListView> controllo può visualizzare più colonne per ogni elemento dell'elenco. È possibile usare le colonne da visualizzare all'utente di diversi tipi di informazioni su ogni elemento dell'elenco. Ad esempio, un elenco di file è stato possibile visualizzare il nome del file, tipo di file, le dimensioni e data che dell'ultima modifica apportata al file. Per informazioni sulla compilazione delle colonne dopo averli creati, vedere [come: Visualizzare elementi secondari nelle colonne con il Windows Form controllo ListView](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md).  
+# <a name="how-to-add-columns-to-the-windows-forms-listview-control"></a>Procedura: Aggiungere colonne al controllo ListView di Windows Form
+Nella visualizzazione dettagli il controllo <xref:System.Windows.Forms.ListView> può visualizzare più colonne per ogni elemento dell'elenco. È possibile utilizzare le colonne per visualizzare all'utente diversi tipi di informazioni su ogni elemento dell'elenco. Ad esempio, un elenco di file potrebbe visualizzare il nome del file, il tipo di file, le dimensioni e la data dell'Ultima modifica del file. Per informazioni sul popolamento delle colonne dopo la creazione, vedere [procedura: visualizzare elementi secondari nelle colonne con il controllo ListView Windows Forms](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md).  
   
 ### <a name="to-add-columns-programmatically"></a>Per aggiungere colonne a livello di codice  
   
-1. Impostare il controllo <xref:System.Windows.Forms.ListView.View%2A> proprietà <xref:System.Windows.Forms.View.Details>.  
+1. Impostare la proprietà <xref:System.Windows.Forms.ListView.View%2A> del controllo su <xref:System.Windows.Forms.View.Details>.  
   
-2. Usare la <xref:System.Windows.Forms.ListView.ColumnHeaderCollection.Add%2A> metodo della visualizzazione elenco <xref:System.Windows.Forms.ListView.Columns%2A> proprietà.  
+2. Usare il metodo <xref:System.Windows.Forms.ListView.ColumnHeaderCollection.Add%2A> della proprietà <xref:System.Windows.Forms.ListView.Columns%2A> della visualizzazione elenco.  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#31)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#31)]  

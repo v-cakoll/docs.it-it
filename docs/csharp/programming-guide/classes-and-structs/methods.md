@@ -5,12 +5,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 5955228d51d2f6845a363bcaf32581b6598273f6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8c90f06bfadc528bd9575ead30e6b01263055fe8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714775"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743914"
 ---
 # <a name="methods-c-programming-guide"></a>Metodi (Guida per programmatori C#)
 
@@ -44,7 +44,7 @@ La definizione del metodo specifica i nomi e i tipi di tutti i parametri obbliga
 
 ## <a name="passing-by-reference-vs-passing-by-value"></a>Passaggio per riferimento e passaggio per valore
 
-Per impostazione predefinita, quando un tipo valore viene passato a un metodo, viene passata una copia anziché l'oggetto stesso. Di conseguenza, le modifiche all'argomento non hanno effetto sulla copia dell'originale nel metodo chiamante. È possibile passare un tipo valore per riferimento usando la parola chiave ref. Per altre informazioni, vedere [Passaggio di parametri di tipi di valore](./passing-value-type-parameters.md). Per un elenco dei tipi valore predefiniti, vedere [Tabella dei tipi di valore](../../language-reference/keywords/value-types-table.md).
+Per impostazione predefinita, quando un'istanza di un [tipo di valore](../../language-reference/builtin-types/value-types.md) viene passata a un metodo, la relativa copia viene passata al posto dell'istanza stessa. Pertanto, le modifiche apportate all'argomento non hanno alcun effetto sull'istanza originale nel metodo chiamante. Per passare un'istanza di tipo valore per riferimento, usare la parola chiave `ref`. Per altre informazioni, vedere [Passaggio di parametri di tipi di valore](./passing-value-type-parameters.md).
 
 Quando viene passato un oggetto di un tipo riferimento a un metodo, viene passato un riferimento all'oggetto, ovvero, il metodo riceve un argomento che indica la posizione dell'oggetto, ma non l'oggetto stesso. Se si modifica un membro dell'oggetto usando questo riferimento, la modifica si riflette nell'argomento nel metodo chiamante, anche se si passa l'oggetto per valore.
 
@@ -157,7 +157,7 @@ Un iteratore esegue un'iterazione personalizzata su una raccolta, ad esempio un 
 
 Per chiamare un iteratore dal codice client, usare un'istruzione [foreach](../../language-reference/keywords/foreach-in.md) .
 
-Il tipo restituito di un iteratore può essere <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> o <xref:System.Collections.Generic.IEnumerator%601>.
+Il tipo restituito di un iteratore può essere <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>o <xref:System.Collections.Generic.IEnumerator%601>.
 
 Per altre informazioni, vedere [Iteratori](../concepts/iterators.md).
 

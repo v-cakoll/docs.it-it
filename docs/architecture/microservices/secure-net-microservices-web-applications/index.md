@@ -4,12 +4,12 @@ description: Protezione di microservizi e applicazioni Web .NET - Informazioni s
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: b25f02140915ce87c5c478d8a8a5fe28ba7693b3
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 6d318f4efc6958610947f164d6ca63634f3d7db5
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736975"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777206"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Proteggere i microservizi e le applicazioni Web .NET
 
@@ -121,7 +121,7 @@ else
 }
 ```
 
-Se quando si crea il progetto di applicazione Web ASP.NET Code in Visual Studio si sceglie l'opzione di autenticazione **Account utente individuali**, tutto il codice necessario per l'accesso con un provider esterno è già presente nel progetto, come illustrato nella figura 9-3.
+Se si sceglie l'opzione di autenticazione **account utente singolo** quando si crea il progetto di applicazione web di ASP.NET Core in Visual Studio, tutto il codice necessario per accedere con un provider esterno è già presente nel progetto, come illustrato nella figura 9-3.
 
 ![Screenshot della finestra di dialogo nuova applicazione Web ASP.NET Core.](./media/index/select-external-authentication-option.png)
 

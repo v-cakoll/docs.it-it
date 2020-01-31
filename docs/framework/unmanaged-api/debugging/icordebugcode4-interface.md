@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a3fdf523-274a-449c-920b-9fcb0aed1d97
 topic_type:
 - apiref
-ms.openlocfilehash: 6c74a6c371ababb21bfda9b8dd2910d6a7881e6a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 373df8a47bdcbc833ffaea05bb205a63b5f583ec
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125532"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777775"
 ---
 # <a name="icordebugcode4-interface"></a>Interfaccia ICorDebugCode4
 Fornisce un metodo che consente a un debugger di enumerare le variabili e gli argomenti locali in una funzione.  
@@ -28,23 +28,23 @@ Fornisce un metodo che consente a un debugger di enumerare le variabili e gli ar
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo EnumerateVariableHomes](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-enumeratevariablehomes-method.md)|Ottiene un enumeratore per le variabili e gli argomenti locali in una funzione.|  
+|[Metodo EnumerateVariableHomes](icordebugcode4-enumeratevariablehomes-method.md)|Ottiene un enumeratore per le variabili e gli argomenti locali in una funzione.|  
   
 ## <a name="remarks"></a>Note  
   
 > [!NOTE]
 > Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorDebugCode3](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
-- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfaccia ICorDebugCode3](icordebugcode3-interface.md)
+- [Interfacce di debug](debugging-interfaces.md)

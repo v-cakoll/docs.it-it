@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: disposizione dei controlli in Windows Form utilizzando guide di allineamento'
+title: Disposizione di controlli mediante guide di allineamento
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], arranging with snaplines
@@ -10,12 +10,12 @@ ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 04bef7162662f4fbefdaa151de13468d88530914
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 3b88f64fca8d3f11308f1cbfde97de2e6c2f22cc
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460648"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740213"
 ---
 # <a name="walkthrough-arrange-controls-on-windows-forms-using-snaplines"></a>Procedura dettagliata: disporre i controlli sui Windows Forms usando le guide di allineamento
 
@@ -29,7 +29,7 @@ Le guide di allineamento semplificano l'allineamento dei controlli, per un aspet
 
 1. In Visual Studio creare un progetto di applicazione basato su Windows denominato "SnaplineExample".
 
-2. Selezionare il form nella finestra di progettazione dei form.
+2. Selezionare il form in Progettazione form.
 
 ## <a name="space-and-align-controls"></a>Spazi e allineamento di controlli
 
@@ -193,4 +193,4 @@ Le guide di allineamento offrono un mezzo intuitivo per allineare i controlli ne
 - <xref:System.Windows.Forms.Design.Behavior.SnapLine>
 - [Procedura dettagliata: disposizione dei controlli in Windows Form usando FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [Procedura dettagliata: disposizione di controlli in Windows Form usando TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Procedura dettagliata: disposizione di controlli Windows Form usando spaziatura, margini e la proprietà AutoSize](windows-forms-controls-padding-autosize.md)
+- [Procedura dettagliata: Disposizione di controlli Windows Form con spaziatura, margini e la proprietà AutoSize](windows-forms-controls-padding-autosize.md)

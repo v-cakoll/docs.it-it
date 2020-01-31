@@ -2,12 +2,12 @@
 title: Collegamento all'origine e librerie .NET
 description: Procedure consigliate per l'uso del collegamento all'origine per migliorare il debug per le librerie .NET.
 ms.date: 01/15/2019
-ms.openlocfilehash: 0ebc7601f1ad92b0fc6ab4c7599b010cb42feb5d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3d768ae6e79efa23a8402ea37bc34cd58cd52c8c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706439"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744543"
 ---
 # <a name="source-link"></a>Collegamento all'origine
 
@@ -25,7 +25,7 @@ Le istruzioni per l'uso del collegamento all'origine sono reperibili nel reposit
 
 ![Collegamento all'origine in Esplora pacchetti NuGet](./media/sourcelink/nuget-package-explorer-sourcelink.png "Collegamento all'origine in Esplora pacchetti NuGet")
 
-**✔️ VALUTARE** l'uso del collegamento all'origine per aggiungere metadati di controllo del codice sorgente agli assembly e ai pacchetti NuGet.
+✔️ PROVARE a usare il collegamento di origine per aggiungere metadati del controllo del codice sorgente agli assembly e ai pacchetti NuGet.
 
 > [!TIP]
 > È possibile migliorare ulteriormente l'esperienza di debug di uno sviluppatore tramite l'aggiunta di attributi del debugger ai tipi in uso.
@@ -34,7 +34,7 @@ Le istruzioni per l'uso del collegamento all'origine sono reperibili nel reposit
 > * <xref:System.Diagnostics.DebuggerStepThroughAttribute> indica al debugger di eseguire il codice un'istruzione alla volta anziché eseguire un'istruzione nel codice.
 > * <xref:System.Diagnostics.DebuggerBrowsableAttribute> controlla se viene visualizzato un membro nelle finestre delle variabili del debugger.
 
-**✔️ VALUTARE** la pubblicazione dei file di simboli (`*.pdb`).
+✔️ CONSIGLIABILE pubblicare i file di simboli (`*.pdb`).
 
 > Per ottenere un'esperienza di debug ottimale, la libreria deve pubblicare i file di simboli oltre a usare il collegamento all'origine. Per altre informazioni sui file di simboli e i pacchetti di simboli, vedere [Pacchetti di simboli](./nuget.md#symbol-packages).
 

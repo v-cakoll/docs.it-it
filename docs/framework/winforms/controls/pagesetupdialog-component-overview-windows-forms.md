@@ -1,5 +1,5 @@
 ---
-title: Cenni preliminari sul componente PageSetupDialog (Windows Form)
+title: Cenni preliminari sul componente PageSetupDialog
 ms.date: 03/30/2017
 f1_keywords:
 - PageSetupDialog
@@ -7,24 +7,24 @@ helpviewer_keywords:
 - Page Setup dialog box [Windows Forms], displaying
 - PageSetupDialog component
 ms.assetid: 791caacb-a5ca-4fca-bad9-1a5721ad697c
-ms.openlocfilehash: 989183b6152dfccb6167d89433317cea596d83c5
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: a891cb8cc77007d7591d41461c94f61c077eb300
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211738"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744335"
 ---
 # <a name="pagesetupdialog-component-overview-windows-forms"></a>Cenni preliminari sul componente PageSetupDialog (Windows Form)
 
-I moduli di Windows <xref:System.Windows.Forms.PageSetupDialog> componente è una finestra di dialogo preconfigurata che consente di impostare i dettagli della pagina per la stampa nelle applicazioni basate su Windows. Usarlo all'interno dell'applicazione basata su Windows come una soluzione semplice per gli utenti per impostare preferenze delle pagine anziché configurare una propria finestra di dialogo. È possibile abilitare gli utenti di impostare i bordi e i margini, intestazioni e piè di pagina e l'orientamento verticale o orizzontale. Basandosi sulle finestre di dialogo standard di Windows è quindi possibile creare applicazioni le cui funzionalità di base sono immediatamente familiari agli utenti.
+Il componente Windows Forms <xref:System.Windows.Forms.PageSetupDialog> è una finestra di dialogo preconfigurata utilizzata per impostare i dettagli della pagina per la stampa in applicazioni basate su Windows. Utilizzarlo all'interno dell'applicazione basata su Windows come soluzione semplice per consentire agli utenti di impostare le preferenze di pagina anziché configurare la propria finestra di dialogo. È possibile consentire agli utenti di impostare le regolazioni del bordo e del margine, le intestazioni e i piè di pagina e l'orientamento verticale o orizzontale. Basandosi sulle finestre di dialogo standard di Windows è quindi possibile creare applicazioni le cui funzionalità di base sono immediatamente familiari agli utenti.
 
-## <a name="key-properties-and-methods"></a>I metodi e proprietà chiave
+## <a name="key-properties-and-methods"></a>Proprietà e metodi chiave
 
-Usare il <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> metodo per visualizzare la finestra di dialogo in fase di esecuzione. Il componente include proprietà che è possibile impostare relative a una singola pagina (<xref:System.Drawing.Printing.PrintDocument> classe) o dei documenti (<xref:System.Drawing.Printing.PageSettings> classe). Inoltre, il <xref:System.Windows.Forms.PageSetupDialog> componente può essere utilizzato per determinare le impostazioni della stampante specifici, che vengono archiviate nel <xref:System.Drawing.Printing.PrinterSettings> classe.
+Usare il metodo <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> per visualizzare la finestra di dialogo in fase di esecuzione. Questo componente dispone di proprietà che è possibile impostare correlate a una singola pagina (<xref:System.Drawing.Printing.PrintDocument> classe) o a qualsiasi documento (classe<xref:System.Drawing.Printing.PageSettings>). Inoltre, è possibile utilizzare il componente <xref:System.Windows.Forms.PageSetupDialog> per determinare impostazioni della stampante specifiche, archiviate nella classe <xref:System.Drawing.Printing.PrinterSettings>.
 
-Quando viene aggiunto a un modulo, il <xref:System.Windows.Forms.PageSetupDialog> componente è visualizzato nella barra delle applicazioni nella parte inferiore della finestra di progettazione Windows Form in Visual Studio.
+Quando viene aggiunto a un modulo, il componente <xref:System.Windows.Forms.PageSetupDialog> viene visualizzato nella barra delle applicazioni nella parte inferiore della Progettazione Windows Form in Visual Studio.
 
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.PageSetupDialog>
-- [Componente PageSetupDialog](pagesetupdialog-component-windows-forms.md)
+- [PageSetupDialog Component](pagesetupdialog-component-windows-forms.md)

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - method parameters [C#], value types
 - parameters [C#], value
 ms.assetid: 193ab86f-5f9b-4359-ac29-7cdf8afad3a6
-ms.openlocfilehash: b6999c90bbe254542419232ab719a2754018d295
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 670af18d4b2b356aa33a0a03a29c05f5ba9bf78f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705457"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744491"
 ---
 # <a name="passing-value-type-parameters-c-programming-guide"></a>Passaggio di parametri di tipo di valore (Guida per programmatori C#)
-Una variabile [di tipo valore](../../language-reference/keywords/value-types.md) contiene direttamente i dati, mentre una variabile [di tipo riferimento](../../language-reference/keywords/reference-types.md) contiene un riferimento ai dati. Quando si passa una variabile di tipo valore a un metodo per valore, si passa una copia della variabile al metodo. Tutte le modifiche al parametro apportate all'interno del metodo non hanno alcun effetto sui dati originali archiviati nella variabile di argomento. Se si vuole che il metodo chiamato modifichi il valore dell'argomento, è necessario passarlo per riferimento usando la parola chiave [ref](../../language-reference/keywords/ref.md) o [out](../../language-reference/keywords/out-parameter-modifier.md). È inoltre possibile usare la parola chiave [in](../../language-reference/keywords/in-parameter-modifier.md) per passare un parametro di valore per riferimento per evitare la copia, garantendo che il valore non verrà modificato. Per semplicità, negli esempi seguenti viene usato `ref`.  
+Una variabile [di tipo valore](../../language-reference/builtin-types/value-types.md) contiene direttamente i dati, mentre una variabile [di tipo riferimento](../../language-reference/keywords/reference-types.md) contiene un riferimento ai dati. Quando si passa una variabile di tipo valore a un metodo per valore, si passa una copia della variabile al metodo. Tutte le modifiche al parametro apportate all'interno del metodo non hanno alcun effetto sui dati originali archiviati nella variabile di argomento. Se si vuole che il metodo chiamato modifichi il valore dell'argomento, è necessario passarlo per riferimento usando la parola chiave [ref](../../language-reference/keywords/ref.md) o [out](../../language-reference/keywords/out-parameter-modifier.md). È inoltre possibile usare la parola chiave [in](../../language-reference/keywords/in-parameter-modifier.md) per passare un parametro di valore per riferimento per evitare la copia, garantendo che il valore non verrà modificato. Per semplicità, negli esempi seguenti viene usato `ref`.  
   
 ## <a name="passing-value-types-by-value"></a>Passaggio di tipi di valore per valore  
  Nell'esempio seguente viene illustrato il passaggio di parametri di tipo valore per valore. La variabile `n` viene passata al metodo `SquareIt` per valore. Tutte le modifiche apportate all'interno del metodo non hanno alcun effetto sul valore originale della variabile.  

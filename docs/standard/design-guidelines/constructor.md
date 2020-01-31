@@ -12,12 +12,12 @@ helpviewer_keywords:
 - parameterless constructors
 - static constructors
 ms.assetid: b4496afe-5fa7-4bb0-85ca-70b0ef21e6fc
-ms.openlocfilehash: 823bc893c9384bb687e5f9a196abe497db14f4db
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7ab795cd4c6e0ff5e1451c05987848c41bd69577
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709478"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741732"
 ---
 # <a name="constructor-design"></a>Progettazione di costruttori
 
@@ -29,51 +29,51 @@ I costruttori di tipi non possono assumere parametri. I costruttori di istanze p
 
 I costruttori rappresentano il modo più naturale per creare istanze di un tipo. La maggior parte degli sviluppatori cercherà e tenterà di usare un costruttore prima di prendere in considerazione modi alternativi per creare istanze, ad esempio i metodi factory.
 
-**✓ CONSIDER** fornendo semplice, in teoria predefiniti, costruttori.
+✔️ CONSIGLIABILE fornire costruttori semplici e idealmente predefiniti.
 
 Un costruttore semplice ha un numero molto ridotto di parametri e tutti i parametri sono primitivi o enumerazioni. Tali costruttori semplici aumentano l'usabilità del Framework.
 
-**✓ CONSIDER** utilizzando un metodo factory statico invece di un costruttore se la semantica dell'operazione desiderata non eseguano il mapping direttamente per la costruzione di una nuova istanza o seguendo le linee guida progettazione costruttore ritiene non naturale.
+✔️ VALUTARE l'uso di un metodo factory statico anziché di un costruttore se la semantica dell'operazione desiderata non viene mappata direttamente alla costruzione di una nuova istanza o se segue le linee guida di progettazione del costruttore si ritengono non naturale.
 
-**✓ DO** utilizzare i parametri del costruttore come tasti di scelta rapida per l'impostazione delle proprietà principali.
+✔️ usare i parametri del costruttore come collegamenti per l'impostazione delle proprietà principali.
 
 Non deve esserci alcuna differenza nella semantica tra l'uso del costruttore vuoto seguito da alcuni set di proprietà e l'uso di un costruttore con più argomenti.
 
-**✓ DO** utilizzare lo stesso nome per i parametri del costruttore e una proprietà, se vengono utilizzati i parametri del costruttore è sufficiente impostare la proprietà.
+✔️ utilizzare lo stesso nome per i parametri del costruttore e una proprietà se i parametri del costruttore vengono utilizzati per impostare semplicemente la proprietà.
 
 L'unica differenza tra tali parametri e le proprietà dovrebbe essere la combinazione di maiuscole e minuscole.
 
-**✓ DO** lavoro minimo nel costruttore.
+✔️ ESEGUIRE operazioni minime nel costruttore.
 
 I costruttori non devono eseguire molto lavoro oltre a acquisire i parametri del costruttore. Il costo di qualsiasi altra elaborazione deve essere posticipato fino a quando richiesto.
 
-**✓ DO** generare eccezioni da costruttori di istanza, se appropriato.
+✔️ generano eccezioni dai costruttori di istanza, se appropriato.
 
-**✓** Dichiarare in modo esplicito il costruttore pubblico senza parametri nelle classi, se tale costruttore è obbligatorio.
+✔️ dichiarare in modo esplicito il costruttore pubblico senza parametri nelle classi, se tale costruttore è obbligatorio.
 
 Se non si dichiara in modo esplicito alcun costruttore in un tipo, molti linguaggi (ad C#esempio) aggiungeranno automaticamente un costruttore pubblico senza parametri. (Le classi astratte ottengono un costruttore protetto).
 
 L'aggiunta di un costruttore con parametri a una classe impedisce al compilatore di aggiungere il costruttore senza parametri. Questo causa spesso modifiche di rilievo accidentali.
 
-**X evitare** di definire in modo esplicito costruttori senza parametri per gli struct.
+❌ evitare di definire in modo esplicito costruttori senza parametri per gli struct.
 
 In questo modo la creazione di matrici risulta più veloce, perché se il costruttore senza parametri non è definito, non è necessario eseguirlo in ogni slot della matrice. Si noti che molti compilatori C#, tra cui, non consentono a struct di avere costruttori senza parametri per questo motivo.
 
-**X AVOID** chiamare membri virtuali su un oggetto all'interno di relativo costruttore.
+❌ evitare di chiamare membri virtuali su un oggetto all'interno del relativo costruttore.
 
 La chiamata a un membro virtuale provocherà la chiamata dell'override più derivato, anche se il costruttore del tipo più derivato non è ancora stato completamente eseguito.
 
 ## <a name="type-constructor-guidelines"></a>Linee guida sui costruttori di tipi
 
-**✓ DO** rendere privato costruttori statici.
+✔️ rendere privati i costruttori statici.
 
 Un costruttore statico, detto anche costruttore di classe, viene usato per inizializzare un tipo. CLR chiama il costruttore statico prima che venga creata la prima istanza del tipo o venga chiamato qualsiasi membro statico del tipo. L'utente non ha alcun controllo sul momento in cui viene chiamato il costruttore statico. Se un costruttore statico non è privato, può essere chiamato da codice diverso da CLR. A seconda delle operazioni eseguite nel costruttore, questo può causare un comportamento imprevisto. Il C# compilatore forza i costruttori statici come privati.
 
-**X DO NOT** generare eccezioni da costruttori statici.
+❌ non generano eccezioni dai costruttori statici.
 
 Se un'eccezione viene generata da un costruttore di tipo, il tipo non è utilizzabile nel dominio applicazione corrente.
 
-**✓ CONSIDER** inizializzando i campi statici inline anziché in modo esplicito i costruttori statici, perché il runtime è in grado di ottimizzare le prestazioni dei tipi che non dispongono di un costruttore statico definito in modo esplicito.
+✔️ PROVARE a inizializzare i campi statici inline invece di usare in modo esplicito i costruttori statici, perché il runtime è in grado di ottimizzare le prestazioni dei tipi che non hanno un costruttore statico definito in modo esplicito.
 
 *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*
 

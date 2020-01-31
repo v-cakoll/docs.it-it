@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Ridimensionare un controllo Label di Windows Forms in base al contenuto'
+title: Ridimensionare un controllo Label per adattarne il contenuto
 ms.date: 03/30/2017
 helpviewer_keywords:
 - captions [Windows Forms], sizing
@@ -8,24 +8,24 @@ helpviewer_keywords:
 - labels [Windows Forms], sizing to fit contents
 - Label control [Windows Forms], sizing to fit contents
 ms.assetid: 99648964-63b2-438c-980e-d24103ad602b
-ms.openlocfilehash: 110aab0c0826bb4b06e22158afd6af37b5406be4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6a563693feaa5074f5d13f0b82cc4d0305a79c23
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971197"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743779"
 ---
-# <a name="how-to-size-a-windows-forms-label-control-to-fit-its-contents"></a>Procedura: Ridimensionare un controllo Label di Windows Forms in base al contenuto
-I moduli di Windows <xref:System.Windows.Forms.Label> controllo può essere a riga singola o multilinea e dimensioni fisse o può ridimensionare automaticamente in base alla lunghezza della didascalia. Il <xref:System.Windows.Forms.Label.AutoSize%2A> proprietà consente di ridimensionare i controlli per adattarli didascalie ingrandire o ridurre, che risulta particolarmente utile se la didascalia verrà modificato in fase di esecuzione.  
+# <a name="how-to-size-a-windows-forms-label-control-to-fit-its-contents"></a>Procedura: ridimensionare un controllo Label Windows Form in base al contenuto
+Il Windows Forms controllo <xref:System.Windows.Forms.Label> può essere a riga singola o a più righe e può essere a dimensione fissa oppure può ridimensionarsi automaticamente per adattarlo alla didascalia. Il <xref:System.Windows.Forms.Label.AutoSize%2A> proprietà consente di ridimensionare i controlli per adattarli a didascalie più grandi o più piccole, operazione particolarmente utile se la didascalia cambierà in fase di esecuzione.  
   
-### <a name="to-make-a-label-control-resize-dynamically-to-fit-its-contents"></a>Per rendere un controllo etichetta ridimensioni dinamicamente per adattarsi al contenuto  
+### <a name="to-make-a-label-control-resize-dynamically-to-fit-its-contents"></a>Per ridimensionare dinamicamente il controllo etichetta per adattarlo al contenuto  
   
-1. Impostare relativi <xref:System.Windows.Forms.Label.AutoSize%2A> proprietà `true`.  
+1. Impostarne la proprietà <xref:System.Windows.Forms.Label.AutoSize%2A> su `true`.  
   
- Se <xref:System.Windows.Forms.Label.AutoSize%2A> è impostata su `false`, le parole specificate nel <xref:System.Windows.Forms.Label.Text%2A> proprietà andrà a capo nella riga successiva, se possibile, ma il controllo non aumenterà.  
+ Se <xref:System.Windows.Forms.Label.AutoSize%2A> è impostato su `false`, le parole specificate nella proprietà <xref:System.Windows.Forms.Label.Text%2A> verrà eseguito il wrapping alla riga successiva, se possibile, ma il controllo non aumenterà.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Creare le chiavi di accesso con i controlli Label di Windows Form](how-to-create-access-keys-with-windows-forms-label-controls.md)
+- [Procedura: Creare tasti di scelta con i controlli Label di Windows Form](how-to-create-access-keys-with-windows-forms-label-controls.md)
 - [Panoramica sul controllo Label](label-control-overview-windows-forms.md)
 - [Controllo Label](label-control-windows-forms.md)

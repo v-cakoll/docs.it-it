@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Impostare rientri, rientri sporgenti e paragrafi puntati con il controllo RichTextBox di Windows Forms'
+title: Impostare rientri, rientri sporgenti e paragrafi puntati con il controllo RichTextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], setting indents and bullets
 - text boxes [Windows Forms], bullets
 ms.assetid: abfb40e6-5642-4691-8ec1-9d9ae91688dc
-ms.openlocfilehash: 9d095e3561cd346e6dbd99d1be7468f6ad5725a6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4dcd5691f328eac6d94675c50ed41a7d7cc36596
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960451"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743010"
 ---
-# <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a>Procedura: Impostare rientri, rientri sporgenti e paragrafi puntati con il controllo RichTextBox di Windows Forms
-Il controllo <xref:System.Windows.Forms.RichTextBox> Windows Forms dispone di numerose opzioni per la formattazione del testo visualizzato. È possibile formattare i paragrafi selezionati come elenchi puntati impostando <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> la proprietà. È anche possibile usare le <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>proprietà <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>, e <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> per impostare il rientro dei paragrafi rispetto ai bordi sinistro e destro del controllo e il bordo sinistro di altre righe di testo.  
+# <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a>Procedura: Impostare rientri, rientri sporgenti e paragrafi puntati con il controllo RichTextBox Windows Form
+Il controllo Windows Forms <xref:System.Windows.Forms.RichTextBox> dispone di numerose opzioni per la formattazione del testo visualizzato. È possibile formattare i paragrafi selezionati come elenchi puntati impostando la proprietà <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A>. È anche possibile usare le proprietà <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>e <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> per impostare il rientro dei paragrafi rispetto ai bordi sinistro e destro del controllo e il bordo sinistro di altre righe di testo.  
   
 ### <a name="to-format-a-paragraph-as-a-bulleted-list"></a>Per formattare un paragrafo come elenco puntato  
   
@@ -41,11 +41,11 @@ Il controllo <xref:System.Windows.Forms.RichTextBox> Windows Forms dispone di nu
   
 ### <a name="to-indent-a-paragraph"></a>Per impostare il rientro di un paragrafo  
   
-1. Impostare la <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A> proprietà su un intero che rappresenta la distanza in pixel tra il bordo sinistro del controllo e il bordo sinistro del testo.  
+1. Impostare la proprietà <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A> su un intero che rappresenta la distanza in pixel tra il bordo sinistro del controllo e il bordo sinistro del testo.  
   
-2. Impostare la <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> proprietà su un intero che rappresenta la distanza in pixel tra il bordo sinistro della prima riga di testo nel paragrafo e il bordo sinistro delle righe successive nello stesso paragrafo. Il valore della <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> proprietà si applica solo alle righe in un paragrafo di cui è stato eseguito il wrapped sotto la prima riga.  
+2. Impostare la proprietà <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> su un intero che rappresenta la distanza in pixel tra il bordo sinistro della prima riga di testo nel paragrafo e il bordo sinistro delle righe successive nello stesso paragrafo. Il valore della proprietà <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> si applica solo alle righe in un paragrafo di cui è stato eseguito il wrapped sotto la prima riga.  
   
-3. Impostare la <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A> proprietà su un intero che rappresenta la distanza in pixel tra il bordo destro del controllo e il bordo destro del testo.  
+3. Impostare la proprietà <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A> su un intero che rappresenta la distanza in pixel tra il bordo destro del controllo e il bordo destro del testo.  
   
     ```vb  
     RichTextBox1.SelectionIndent = 8  
@@ -66,10 +66,10 @@ Il controllo <xref:System.Windows.Forms.RichTextBox> Windows Forms dispone di nu
     ```  
   
     > [!NOTE]
-    > Tutte queste proprietà vengono applicate a qualsiasi paragrafo contenente il testo selezionato, oltre che al testo digitato dopo il punto di inserimento corrente. Ad esempio, quando un utente seleziona una parola all'interno di un paragrafo e ne regola il rientro, le nuove impostazioni verranno applicate all'intero paragrafo contenente tale parola, nonché agli eventuali paragrafi immessi successivamente dopo il paragrafo selezionato. Per informazioni sulla selezione di testo a livello di <xref:System.Windows.Forms.TextBoxBase.Select%2A>codice, vedere.  
+    > Tutte queste proprietà vengono applicate a qualsiasi paragrafo contenente il testo selezionato, oltre che al testo digitato dopo il punto di inserimento corrente. Ad esempio, quando un utente seleziona una parola all'interno di un paragrafo e ne regola il rientro, le nuove impostazioni verranno applicate all'intero paragrafo contenente tale parola, nonché agli eventuali paragrafi immessi successivamente dopo il paragrafo selezionato. Per informazioni sulla selezione di testo a livello di codice, vedere <xref:System.Windows.Forms.TextBoxBase.Select%2A>.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.RichTextBox>
 - [Controllo RichTextBox](richtextbox-control-windows-forms.md)
-- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)
+- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)

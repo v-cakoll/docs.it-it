@@ -2,12 +2,12 @@
 title: Implementazione di connessioni SQL resilienti di Entity Framework Core
 description: Informazioni su come implementare connessioni SQL resilienti di Entity Framework Core. Questa tecnica è particolarmente importante quando si usa il database SQL di Azure nel cloud.
 ms.date: 10/16/2018
-ms.openlocfilehash: 7899fc263ab3cde6ac2410ca614a7e5fa285576b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 0ded30469bb4985fed7b60938756046531c8feea
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76732730"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777054"
 ---
 # <a name="implement-resilient-entity-framework-core-sql-connections"></a>Implementazione di connessioni SQL resilienti di Entity Framework Core
 

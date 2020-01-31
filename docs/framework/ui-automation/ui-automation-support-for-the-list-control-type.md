@@ -6,12 +6,12 @@ helpviewer_keywords:
 - List control type
 - UI Automation, List control type
 ms.assetid: 0e959fcb-50f2-413b-948d-7167d279bc11
-ms.openlocfilehash: d870452348f8837ec6773fc066ed52844f7acccd
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 17c0116ba6610ef28e873696bbf3162175bc0601
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741617"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778615"
 ---
 # <a name="ui-automation-support-for-the-list-control-type"></a>Supporto per automazione interfaccia utente del tipo di controllo List
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741617"
   
  Il tipo di controllo elenco consente di organizzare uno o più gruppi di elementi permettendo a un utente di selezionare uno o più elementi. Il tipo di controllo elenco prevede una restrizione ampia sui tipi di elementi figlio che può contenere. I provider di automazione interfaccia utente sono quindi in grado di supportare un elemento noto per i contenitori di selezione.  
   
- I requisiti [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] nelle sezioni seguenti si applicano a tutti i controlli che implementano il tipo di controllo elenco, sia [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 o [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]. I controlli contenitore elenco sono un esempio di controlli che implementano il tipo di controllo elenco.  
+ I requisiti [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] nelle sezioni seguenti si applicano a tutti i controlli che implementano il tipo di controllo elenco, sia [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 o Windows Forms. I controlli contenitore elenco sono un esempio di controlli che implementano il tipo di controllo elenco.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Struttura ad albero di automazione interfaccia utente obbligatoria  

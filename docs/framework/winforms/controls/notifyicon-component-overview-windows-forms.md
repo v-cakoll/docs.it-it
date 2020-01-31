@@ -1,5 +1,5 @@
 ---
-title: Cenni preliminari sul componente NotifyIcon (Windows Form)
+title: Cenni preliminari sul componente NotifyIcon
 ms.date: 03/30/2017
 f1_keywords:
 - NotifyIcon
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - system tray icons [Windows Forms], about system tray icons
 - system tray icons [Windows Forms], using in Windows Forms
 ms.assetid: 5b9189fa-d4ae-41a6-9b97-eb1f44bb1a69
-ms.openlocfilehash: def109799ddfb25b6f56a4f18d52bb19f62842f5
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 587bf514db853f1122ed16abc05a195985c5ce8d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645715"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742132"
 ---
 # <a name="notifyicon-component-overview-windows-forms"></a>Cenni preliminari sul componente NotifyIcon (Windows Form)
 

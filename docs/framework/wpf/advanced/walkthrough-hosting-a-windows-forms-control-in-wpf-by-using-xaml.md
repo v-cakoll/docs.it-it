@@ -1,15 +1,16 @@
 ---
-title: 'Procedura dettagliata: hosting di controlli Windows Form in WPF tramite XAML'
+title: Ospitare un controllo Windows Forms in WPF tramite XAML
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 ms.assetid: 1aef42cb-4cfb-44b4-9a7a-c02632d3d9c7
-ms.openlocfilehash: 3b4b743b07876f240366b2d2d19667405941a40b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
-ms.translationtype: MT
+ms.openlocfilehash: a0a88c39a25e5292365a6447cefdd8f31db5e5c3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976544"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744926"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml"></a>Procedura dettagliata: hosting di controlli Windows Form in WPF tramite XAML
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] offre numerosi controlli con un insieme di funzionalità completo. Tuttavia, a volte può essere opportuno usare [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controlli nelle pagine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Ad esempio, è possibile che si disponga di un investimento sostanziale nei controlli di [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] esistenti o che si disponga di un controllo [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] che fornisce funzionalità univoche.  
@@ -18,7 +19,7 @@ ms.locfileid: "73976544"
   
  Per un listato di codice completo delle attività illustrate in questa procedura dettagliata, vedere [hosting di un controllo Windows Forms in WPF usando l'esempio XAML](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/HostingWfInWpfWithXaml).
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
 
 Per completare la procedura dettagliata, è necessario Visual Studio.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Eliminare o nascondere colonne nel controllo DataGrid di Windows Forms'
+title: Eliminare o nascondere colonne nel controllo DataGrid
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,18 +12,18 @@ helpviewer_keywords:
 - columns [Windows Forms], deleting in data grids
 - DataGrid control [Windows Forms], hiding columns
 ms.assetid: bcd0dd96-6687-4c48-b0e1-d5287b93ac91
-ms.openlocfilehash: 70229abddb831788f521f85747db1093c941ba8a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c730be934e9b978bdaf09bc7e668b4318077fba5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967381"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743291"
 ---
-# <a name="how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control"></a>Procedura: Eliminare o nascondere colonne nel controllo DataGrid di Windows Forms
+# <a name="how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control"></a>Procedura: eliminare o nascondere colonne nel controllo DataGrid Windows Form
 > [!NOTE]
 > Benché il controllo <xref:System.Windows.Forms.DataGridView> sostituisca il controllo <xref:System.Windows.Forms.DataGrid> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.DataGrid> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro. Per altre informazioni, vedere [Differenze tra i controlli DataGridView e DataGrid Windows Form](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- È possibile eliminare o nascondere a livello di codice le colonne <xref:System.Windows.Forms.DataGrid> nel controllo Windows Forms usando le proprietà e i metodi <xref:System.Windows.Forms.GridColumnStylesCollection> degli <xref:System.Windows.Forms.DataGridColumnStyle> oggetti e (che sono membri della <xref:System.Windows.Forms.DataGridTableStyle> classe).  
+ È possibile eliminare o nascondere a livello di codice le colonne nel controllo Windows Forms <xref:System.Windows.Forms.DataGrid> usando le proprietà e i metodi degli oggetti <xref:System.Windows.Forms.GridColumnStylesCollection> e <xref:System.Windows.Forms.DataGridColumnStyle> (membri della classe <xref:System.Windows.Forms.DataGridTableStyle>).  
   
  Le colonne eliminate o nascoste sono ancora presenti nell'origine dati a cui è associata la griglia ed è comunque possibile accedervi a livello di codice. Non sono più visibili nell'elemento DataGrid.  
   
@@ -32,13 +32,13 @@ ms.locfileid: "69967381"
   
 ### <a name="to-delete-a-column-from-the-datagrid-programmatically"></a>Per eliminare una colonna da DataGrid a livello di codice  
   
-1. Nell'area dichiarazioni del form dichiarare una nuova istanza della <xref:System.Windows.Forms.DataGridTableStyle> classe.  
+1. Nell'area dichiarazioni del modulo dichiarare una nuova istanza della classe <xref:System.Windows.Forms.DataGridTableStyle>.  
   
-2. Impostare la <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A?displayProperty=nameWithType> proprietà sulla tabella nell'origine dati a cui si desidera applicare lo stile. Nell'esempio seguente viene usata <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> la proprietà, che presuppone che sia già impostata.  
+2. Impostare la proprietà <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A?displayProperty=nameWithType> sulla tabella nell'origine dati a cui si desidera applicare lo stile. Nell'esempio seguente viene utilizzata la proprietà <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType>, che presuppone che sia già impostata.  
   
-3. Aggiungere il nuovo <xref:System.Windows.Forms.DataGridTableStyle> oggetto alla raccolta di stili di tabella del DataGrid.  
+3. Aggiungere il nuovo oggetto <xref:System.Windows.Forms.DataGridTableStyle> alla raccolta di stili di tabella del DataGrid.  
   
-4. Chiamare il <xref:System.Windows.Forms.GridColumnStylesCollection.RemoveAt%2A> metodo <xref:System.Windows.Forms.DataGrid>della raccolta di <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> , specificando l'indice di colonna della colonna da eliminare.  
+4. Chiamare il metodo <xref:System.Windows.Forms.GridColumnStylesCollection.RemoveAt%2A> della raccolta di <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> del <xref:System.Windows.Forms.DataGrid>, specificando l'indice di colonna della colonna da eliminare.  
   
     ```vb  
     ' Declare a new DataGridTableStyle in the  
@@ -79,13 +79,13 @@ ms.locfileid: "69967381"
   
 ### <a name="to-hide-a-column-in-the-datagrid-programmatically"></a>Per nascondere una colonna nella griglia a livello di codice  
   
-1. Nell'area dichiarazioni del form dichiarare una nuova istanza della <xref:System.Windows.Forms.DataGridTableStyle> classe.  
+1. Nell'area dichiarazioni del modulo dichiarare una nuova istanza della classe <xref:System.Windows.Forms.DataGridTableStyle>.  
   
-2. Impostare la <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> proprietà dell'oggetto <xref:System.Windows.Forms.DataGridTableStyle> sulla tabella nell'origine dati a cui si desidera applicare lo stile. Nell'esempio di codice seguente viene <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> usata la proprietà, che presuppone è già impostata.  
+2. Impostare la proprietà <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> della <xref:System.Windows.Forms.DataGridTableStyle> alla tabella nell'origine dati a cui si desidera applicare lo stile. Nell'esempio di codice seguente viene usata la proprietà <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType>, che presuppone che sia già impostata.  
   
-3. Aggiungere il nuovo <xref:System.Windows.Forms.DataGridTableStyle> oggetto alla raccolta di stili di tabella del DataGrid.  
+3. Aggiungere il nuovo oggetto <xref:System.Windows.Forms.DataGridTableStyle> alla raccolta di stili di tabella del DataGrid.  
   
-4. Nascondere la colonna impostando la `Width` relativa proprietà su 0, specificando l'indice di colonna della colonna da nascondere.  
+4. Nascondere la colonna impostando la relativa proprietà `Width` su 0, specificando l'indice della colonna da nascondere.  
   
     ```vb  
     ' Declare a new DataGridTableStyle in the  
@@ -126,5 +126,5 @@ ms.locfileid: "69967381"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Modificare i dati visualizzati in fase di esecuzione nel controllo DataGrid Windows Forms](change-displayed-data-at-run-time-wf-datagrid-control.md)
-- [Procedura: Aggiungere tabelle e colonne al controllo Windows Forms DataGrid](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [Procedura: Modificare i dati visualizzati in fase di esecuzione nel controllo DataGrid Windows Form](change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [Procedura: Aggiungere tabelle e colonne al controllo DataGrid Windows Form](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)

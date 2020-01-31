@@ -3,12 +3,12 @@ title: Infrastruttura di comunicazione con mesh di servizi
 description: Informazioni su come le tecnologie di servizi Mesh semplificano la comunicazione di microservizi nativa del cloud
 author: robvet
 ms.date: 09/10/2019
-ms.openlocfilehash: a9192bf9f5827d05b2453c796c72e11782f9f911
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 66bc69580cc56efe725683c16a047aeb07e7e840
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771023"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76780924"
 ---
 # <a name="service-mesh-communication-infrastructure"></a>Infrastruttura di comunicazione con mesh di servizi
 
@@ -74,4 +74,4 @@ Si passa quindi ai dati distribuiti nei sistemi nativi del cloud e ai vantaggi e
 
 >[!div class="step-by-step"]
 >[Precedente](rest-grpc.md)
->[Successivo](distributed-data.md)
+>[Successivo](Database-per-microservice.md)

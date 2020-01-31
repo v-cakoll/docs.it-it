@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 51625fd0-7399-49c7-b22b-5dfb05451fe6
 topic_type:
 - apiref
-ms.openlocfilehash: 897fb56cacb51e98cf8f1778c3529617decb5ecb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 89ce4eafa46be3e9ba7cdb06884034a521e43bca
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138433"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777541"
 ---
 # <a name="icordebugheapsegmentenumnext-method"></a>Metodo ICorDebugHeapSegmentEnum::Next
-Ottiene il numero specificato di istanze di [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) che contengono informazioni sulle aree di memoria dell'heap gestito.  
+Ottiene il numero specificato di istanze di [COR_HEAPOBJECT](cor-heapobject-structure.md) che contengono informazioni sulle aree di memoria dell'heap gestito.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,23 +39,23 @@ HRESULT Next(
  in Numero di segmenti da recuperare.  
   
  segmenti  
- out Matrice di puntatori, ciascuno dei quali punta a un oggetto [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) che fornisce informazioni su un'area di memoria nell'heap gestito.  
+ out Matrice di puntatori, ciascuno dei quali punta a un oggetto [COR_HEAPOBJECT](cor-heapobject-structure.md) che fornisce informazioni su un'area di memoria nell'heap gestito.  
   
  pceltFetched  
- out Puntatore al numero di oggetti [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) effettivamente restituiti in `segments`. Questo valore può essere `null` se `celt` è 1.  
+ out Puntatore al numero di oggetti di [COR_HEAPOBJECT](cor-heapobject-structure.md) restituiti effettivamente nella `segments`. Questo valore può essere `null` se `celt` è 1.  
   
 ## <a name="remarks"></a>Note  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorDebugHeapSegmentEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md)
-- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfaccia ICorDebugHeapSegmentEnum](icordebugheapsegmentenum-interface.md)
+- [Interfacce di debug](debugging-interfaces.md)

@@ -1,22 +1,22 @@
 ---
 title: Modificatore static - Riferimenti per C#
-ms.date: 07/20/2015
+ms.date: 01/22/2020
 f1_keywords:
 - static
 - static_CSharpKeyword
 helpviewer_keywords:
 - static keyword [C#]
 ms.assetid: 5509e215-2183-4da3-bab4-6b7e607a4fdf
-ms.openlocfilehash: f4ca3fcf809e723d2144654f1da949eb4d6de1b4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e7671e9db488a7b50f4ed736864d6fa8d95eef1a
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713066"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744656"
 ---
 # <a name="static-c-reference"></a>static (Riferimenti per C#)
 
-Usare il modificatore `static` per dichiarare un membro statico, che appartiene allo stesso tipo invece che a un oggetto specifico. Il modificatore `static` può essere usato con classi, campi, metodi, proprietà, operatori, eventi e costruttori, ma non con indicizzatori, finalizzatori o tipi diversi da classi. Per altre informazioni, vedere [Classi statiche e membri di classi statiche](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md).
+Usare il modificatore `static` per dichiarare un membro statico, che appartiene allo stesso tipo invece che a un oggetto specifico. È possibile utilizzare il modificatore `static` per dichiarare classi `static`. In classi, interfacce e struct è possibile aggiungere il modificatore `static` a campi, metodi, proprietà, operatori, eventi e costruttori. Impossibile utilizzare il modificatore `static` con gli indicizzatori o i finalizzatori. Per altre informazioni, vedere [Classi statiche e membri di classi statiche](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md).
 
 ## <a name="example"></a>Esempio
 
@@ -24,40 +24,38 @@ La classe seguente viene dichiarata come `static` e contiene solo metodi `static
 
 [!code-csharp[csrefKeywordsModifiers#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#18)]
 
-Una costante o una dichiarazione di tipo è implicitamente un membro statico.
-
-Non è possibile fare riferimento a un membro statico tramite un'istanza. Al contrario, è possibile farvi riferimento tramite il nome del tipo. Si consideri ad esempio la classe seguente:
+Una costante o una dichiarazione di tipo è implicitamente un membro `static`. Non è possibile fare riferimento A un membro `static` tramite un'istanza. Al contrario, viene fatto riferimento tramite il nome del tipo. Si consideri ad esempio la classe seguente:
 
 [!code-csharp[csrefKeywordsModifiers#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#19)]
 
-Per fare riferimento al membro statico `x`, usare il nome completo `MyBaseC.MyStruct.x`, a meno che il membro non è accessibile dallo stesso ambito:
+Per fare riferimento al `x``static` membri, utilizzare il nome completo, `MyBaseC.MyStruct.x`, a meno che il membro non sia accessibile dallo stesso ambito:
 
 ```csharp
 Console.WriteLine(MyBaseC.MyStruct.x);
 ```
 
-Quando un'istanza di una classe contiene una copia separata di tutti i campi istanza della classe, è disponibile solo una copia di ogni campo statico.
+Mentre un'istanza di una classe contiene una copia separata di tutti i campi di istanza della classe, è presente una sola copia di ogni campo `static`.
 
-Non è possibile usare [questo](this.md) per fare riferimento a funzioni di accesso di proprietà o metodi statici.
+Non è possibile usare [`this`](this.md) per fare riferimento a `static` metodi o alle funzioni di accesso alle proprietà.
 
-Se la parola chiave `static` viene applicata a una classe, tutti i membri della classe devono essere statici.
+Se la parola chiave `static` viene applicata a una classe, tutti i membri della classe devono essere `static`.
 
-Le classi e le classi statiche possono disporre di costruttori statici. I costruttori statici vengono chiamati in un determinato momento tra l'avvio del programma e la creazione di un'istanza della classe.
+Classi, interfacce e classi di `static` possono avere costruttori di `static`. Un costruttore di `static` viene chiamato in un determinato punto tra l'avvio del programma e la creazione di un'istanza della classe.
 
 > [!NOTE]
 > La parola chiave `static` ha un uso più limitato rispetto a C++. Per un confronto con la parola chiave di C++, vedere [Classi di archiviazione (C++)](/cpp/cpp/storage-classes-cpp#static).
 
-Per illustrare i membri statici, si consideri una classe che rappresenta un dipendente della società. Si supponga che la classe contenga un metodo di conteggio dei dipendenti e un campo per memorizzare il numero dei dipendenti. Il metodo e il campo non appartengono a nessun dipendente dell'istanza. Appartengono invece alla classe aziendale. Pertanto, devono essere dichiarati come membri statici della classe.
+Per illustrare i membri `static`, prendere in considerazione una classe che rappresenta un dipendente della società. Si supponga che la classe contenga un metodo di conteggio dei dipendenti e un campo per memorizzare il numero dei dipendenti. Sia il metodo che il campo non appartengono ad alcuna istanza di un dipendente. Appartengono invece alla classe di dipendenti nel suo complesso. Devono essere dichiarati come membri `static` della classe.
 
 ## <a name="example"></a>Esempio
 
-Questo esempio legge il nome e l'ID di un nuovo dipendente, il contatore dipendente viene incrementato di uno e vengono visualizzate le informazioni per il nuovo dipendente e il nuovo numero di dipendenti. Per semplicità, questo programma legge il numero corrente di dipendenti dalla tastiera. In un'applicazione reale, queste informazioni devono essere lette da un file.
+Questo esempio legge il nome e l'ID di un nuovo dipendente, il contatore dipendente viene incrementato di uno e vengono visualizzate le informazioni per il nuovo dipendente e il nuovo numero di dipendenti. Questo programma legge il numero corrente di dipendenti dalla tastiera.
 
 [!code-csharp[csrefKeywordsModifiers#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#20)]  
 
 ## <a name="example"></a>Esempio
 
-Questo esempio mostra che anche se è possibile inizializzare un campo statico con un altro campo statico non ancora dichiarato, i risultati non saranno definiti fino a quando non si assegna in modo esplicito un valore al campo statico.
+Questo esempio mostra che è possibile inizializzare un campo di `static` usando un altro campo `static` non ancora dichiarato. I risultati non saranno definiti fino a quando non si assegna in modo esplicito un valore al campo `static`.
 
 [!code-csharp[csrefKeywordsModifiers#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#21)]  
 

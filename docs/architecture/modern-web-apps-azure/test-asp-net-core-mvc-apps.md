@@ -4,23 +4,23 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Test
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 82c9815abdd5140340f9a8ea39be23496d433889
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0cb5c5c604d4a82798d4af736ff278b096621588
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76738389"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777103"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testare app ASP.NET Core MVC
 
 > *"Non vi piace fare lo unit test dei vostri prodotti? Molto probabilmente non piacerà neanche ai vostri clienti."*
  > \_- Anonimo-
 
-Qualsiasi software, indipendentemente dalla complessità, può generare errori imprevisti dopo che è stato modificato. È quindi assolutamente necessario sottoporre a test tutte le applicazioni che non siano banali o poco importanti. Il test manuale è il modo più lento, meno affidabile e più costoso per testare il software, ma se le applicazioni non sono progettate per essere testabili, è l'unico modo disponibile. Le applicazioni create secondo i principi architetturali descritti nel [capitolo 4](architectural-principles.md) devono supportare gli unit test. Le applicazioni ASP.NET Core supportano anche l'integrazione automatizzata e i test funzionali.
+Qualsiasi software, indipendentemente dalla complessità, può generare errori imprevisti dopo che è stato modificato. È quindi assolutamente necessario sottoporre a test tutte le applicazioni che non siano banali o poco importanti. Il test manuale è il modo più lento, meno affidabile e più costoso per testare il software, ma se le applicazioni non sono progettate per essere testabili, è l'unico modo disponibile. Le applicazioni scritte per seguire i principi architetturali presentati nel [capitolo 4](architectural-principles.md) devono essere unità testabili. Le applicazioni ASP.NET Core supportano l'integrazione automatizzata e i test funzionali.
 
 ## <a name="kinds-of-automated-tests"></a>Tipi di test automatizzati
 
-Esistono molti tipi di test automatizzati per le applicazioni software. Il test più semplice e di livello più basso è lo unit test. A un livello leggermente superiore si trovano i test di integrazione e i test funzionali. Altri tipi di test, come i test dell'interfaccia utente, i test di carico, test di stress e gli smoke test, non rientrano nell'ambito di questo documento.
+Esistono molti tipi di test automatizzati per le applicazioni software. Il test più semplice e di livello più basso è lo unit test. A un livello leggermente superiore sono presenti test di integrazione e test funzionali. Altri tipi di test, ad esempio test dell'interfaccia utente, test di carico, test di stress e test di fumo, esulano dall'ambito di questo documento.
 
 ### <a name="unit-tests"></a>Unit test
 
@@ -58,7 +58,7 @@ I diversi livelli della piramide e le dimensioni relative rappresentano i divers
 
 ### <a name="what-to-test"></a>Cosa testare
 
-Un problema comune agli sviluppatori che non hanno dimestichezza con la scrittura di test automatizzati è decidere che cosa testare. Un buon punto di partenza è il test della logica condizionale. Ovunque sia presente un metodo il cui comportamento cambia in base a un'istruzione condizionale (if-else, switch e così via), è necessario creare almeno un paio di test che confermino la correttezza del comportamento per determinate condizioni. Se il codice prevede condizioni di errore, è consigliabile scrivere almeno un test per il percorso corretto attraverso il codice (senza errori) e almeno un test per il percorso non corretto (con errori o risultati atipici) per confermare che l'applicazione si comporti come previsto in caso di errori. Provare infine a concentrarsi sul test delle operazioni che possono non riuscire, piuttosto che su metriche quali il code coverage. Un code coverage maggiore è meglio di un code coverage minore, in genere, ma il tempo impiegato a scrivere qualche test in più per un metodo molto complesso e di importanza critica è di solito meglio impiegato rispetto al tempo speso a scrivere test per le proprietà automatiche per migliorare la metrica di code coverage.
+Un problema comune agli sviluppatori che non hanno dimestichezza con la scrittura di test automatizzati è decidere che cosa testare. Un buon punto di partenza è il test della logica condizionale. Ovunque sia presente un metodo con il comportamento modificato in base a un'istruzione condizionale (if-else, switch e così via), è possibile ottenere almeno un paio di test che confermino il comportamento corretto per determinate condizioni. Se il codice prevede condizioni di errore, è consigliabile scrivere almeno un test per il percorso corretto attraverso il codice (senza errori) e almeno un test per il percorso non corretto (con errori o risultati atipici) per confermare che l'applicazione si comporti come previsto in caso di errori. Provare infine a concentrarsi sul test delle operazioni che possono non riuscire, piuttosto che su metriche quali il code coverage. Un code coverage maggiore è meglio di un code coverage minore, in genere, Tuttavia, la scrittura di un numero ancora maggiore di test di un metodo complesso e cruciale per l'azienda è in genere un uso migliore del tempo rispetto alla scrittura di test per le proprietà automatiche solo per migliorare le metriche del code coverage di test.
 
 ## <a name="organizing-test-projects"></a>Organizzazione dei progetti di test
 
@@ -102,7 +102,7 @@ Se si segue una convenzione di denominazione simile a quella illustrata sopra, c
 
 **Figura 9-4.** Organizzazione delle classi di test per cartella in base alla classe da testare.
 
-È ovvio che, se per una classe di applicazione specifica vengono testati molti metodi (e quindi esistono molte classi di test), può essere utile inserirli in una cartella corrispondente alla classe stessa. Questo tipo di organizzazione è analogo all'organizzazione di file in cartelle in un altro contesto. Se si hanno più di tre o quattro file correlati in una cartella contenente molti altri file, è spesso utile spostare i primi in una sottocartella specifica.
+Se una particolare classe dell'applicazione dispone di molti metodi sottoposti a test (e di conseguenza molte classi di test), potrebbe essere opportuno inserire questi elementi in una cartella corrispondente alla classe dell'applicazione. Questo tipo di organizzazione è analogo all'organizzazione di file in cartelle in un altro contesto. Se si hanno più di tre o quattro file correlati in una cartella contenente molti altri file, è spesso utile spostare i primi in una sottocartella specifica.
 
 ## <a name="unit-testing-aspnet-core-apps"></a>Unit test di app ASP.NET Core
 

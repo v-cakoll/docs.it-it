@@ -1,5 +1,5 @@
 ---
-title: Sicurezza con attendibilità parziale in WPF
+title: Sicurezza con attendibilità parziale
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: ce9341a45b43c4af4543cf473597c273c33701fc
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 0d9bbcc32eea49afc6ecc713b0cf005b4434a67d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636549"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743336"
 ---
 # <a name="wpf-partial-trust-security"></a>Sicurezza con attendibilità parziale in WPF
 <a name="introduction"></a>I n generale, sarebbe opportuno limitare l'accesso diretto alle risorse critiche del sistema da parte delle applicazioni Internet in modo da impedire qualsiasi danno. Per impostazione predefinita, i linguaggi di scripting lato client e HTML non sono in grado di accedere alle risorse di sistema critiche. Poiché le applicazioni ospitate da browser Windows Presentation Foundation (WPF) possono essere avviate dal browser, devono essere conformi a un set di restrizioni simile. Per applicare queste restrizioni, WPF si basa sia sulla sicurezza dall'accesso di codice (CAS) che su ClickOnce (vedere [strategia di sicurezza di WPF-sicurezza della piattaforma](wpf-security-strategy-platform-security.md)). Per impostazione predefinita, le applicazioni ospitate da browser richiedono il set di autorizzazioni dell'area Internet, indipendentemente dal fatto che vengano avviate da Internet, dall'Intranet locale o dal computer locale. Le applicazioni in esecuzione con un set di autorizzazioni incompleto vengono definite applicazioni in esecuzione con attendibilità parziale.  

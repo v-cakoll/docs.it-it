@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Selezionare un elemento nel controllo ListView di Windows Forms'
+title: Seleziona un elemento nel controllo ListView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - selection [Windows Forms], in list views
 - list views [Windows Forms], selecting items
 ms.assetid: ddea918e-1ddf-47f4-bd09-1e9b4c9d0c39
-ms.openlocfilehash: 41a30ba6c242d0587e98b458e41ca213e8885bca
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 57e985af9d0347510d7d7782f68d5b414d36e077
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638196"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743226"
 ---
-# <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a>Procedura: Selezionare un elemento nel controllo ListView di Windows Forms
-In questo esempio viene illustrato come selezionare a livello di programmazione un elemento in un form Windows <xref:System.Windows.Forms.ListView> controllo. Selezione di un elemento a livello di codice non cambia automaticamente lo stato attivo per il <xref:System.Windows.Forms.ListView> controllo. Per questo motivo, è anche in genere possibile impostare l'elemento come lo stato attivo quando si seleziona un elemento.  
+# <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a>Procedura: Selezionare un elemento nel controllo ListView di Windows Form
+In questo esempio viene illustrato come selezionare a livello di codice un elemento in un controllo Windows Forms <xref:System.Windows.Forms.ListView>. La selezione di un elemento a livello di codice non modifica automaticamente lo stato attivo sul controllo <xref:System.Windows.Forms.ListView>. Per questo motivo, in genere è necessario impostare l'elemento come attivo quando si seleziona un elemento.  
   
 ## <a name="example"></a>Esempio  
  [!code-csharp[System.Windows.Forms.ListView.Misc#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView.Misc/CS/form1.cs#1)]
@@ -27,7 +27,7 @@ In questo esempio viene illustrato come selezionare a livello di programmazione 
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  L'esempio presenta i requisiti seguenti:  
   
-- Oggetto <xref:System.Windows.Forms.ListView> controllo denominato `listView1` che contiene almeno un elemento.  
+- Controllo <xref:System.Windows.Forms.ListView> denominato `listView1` che contiene almeno un elemento.  
   
 - Riferimenti agli spazi dei nomi <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   

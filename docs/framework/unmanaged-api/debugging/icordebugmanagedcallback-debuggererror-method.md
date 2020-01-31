@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e983d11-eaf3-4741-b936-29ec456384a3
 topic_type:
 - apiref
-ms.openlocfilehash: c03be2405e1ab0287a2921b6e2e293862c67a193
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9b96c0a2eca543b9e01ccf92b271b1aa7003c5c9
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137378"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781940"
 ---
 # <a name="icordebugmanagedcallbackdebuggererror-method"></a>Metodo ICorDebugManagedCallback::DebuggerError
 Notifica al debugger che si è verificato un errore durante il tentativo di gestire un evento dal Common Language Runtime (CLR).  
@@ -48,17 +48,17 @@ HRESULT DebuggerError (
 ## <a name="remarks"></a>Note  
  Il processo può essere inserito in modalità pass-through, a seconda della natura dell'errore.  
   
- Il callback `DebugError` indica che i servizi di debug sono stati disabilitati a causa di un errore, pertanto i debugger devono rendere disponibile il messaggio di errore per l'utente. [ICorDebugProcess:: GetId](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getid-method.md) sarà sicuro chiamare, ma tutti gli altri metodi, incluso [ICorDebug:: terminate](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md), non devono essere chiamati. Il debugger deve usare le funzionalità del sistema operativo per terminare i processi.  
+ Il callback `DebugError` indica che i servizi di debug sono stati disabilitati a causa di un errore, pertanto i debugger devono rendere disponibile il messaggio di errore per l'utente. [ICorDebugProcess:: GetId](icordebugprocess-getid-method.md) sarà sicuro chiamare, ma tutti gli altri metodi, incluso [ICorDebug:: terminate](icordebug-terminate-method.md), non devono essere chiamati. Il debugger deve usare le funzionalità del sistema operativo per terminare i processi.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [Interfaccia ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)

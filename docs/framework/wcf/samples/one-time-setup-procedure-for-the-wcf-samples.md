@@ -2,12 +2,12 @@
 title: Procedura di installazione singola per gli esempi di Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: b0f452ba7aabcaa5ea995acba1873029c67f0f5d
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: b75dd523d4c88eae70f8d21ac8b3c9f72ae055ed
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544658"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744779"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procedura di installazione singola per gli esempi di Windows Communication Foundation
 
@@ -24,7 +24,7 @@ La directory virtuale **servicemodelsamples** viene utilizzata per la compilazio
 
 2. Verificare che sia installato .NET Framework 4. Eseguire una ricerca nella directory seguente per la versione 4.0 (o versione successiva): **\Windows\Microsoft.NET\Framework**
 
-3. Se Visual Studio 2012 non è installato e il sistema operativo in uso non è Windows Server 2008 SP2 o versione successiva, installare l' [Hotfix 251798](https://go.microsoft.com/fwlink/?LinkId=184693).
+3. Assicurarsi di avere installato Visual Studio 2012 o versione successiva oppure che il sistema operativo in uso sia Windows Server 2008 SP2 o versione successiva.
 
 4. Eseguire i comandi seguenti: Per ulteriori informazioni sui motivi per cui è necessario eseguire questi comandi, vedere la pagina relativa all' [esito negativo del servizio ospitato IIS](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752252(v=vs.90)).
 
@@ -85,4 +85,4 @@ La directory virtuale **servicemodelsamples** viene utilizzata per la compilazio
     > [!NOTE]
     > Assicurarsi di avviare il servizio MSMQ prima di eseguire gli esempi per i quali è necessario Accodamento messaggi.
 
-15. Alcuni esempi richiedono l'utilizzo di certificati. Vedere le [Istruzioni di installazione certificato server IIS (Internet Information Services)](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).
+15. Alcuni esempi richiedono l'utilizzo di certificati. Vedere [le istruzioni di installazione del certificato Server Internet Information Services (IIS)](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).

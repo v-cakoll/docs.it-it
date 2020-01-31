@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: creazione di un controllo di Windows Form che usufruisca delle funzionalità offerte da Visual Studio in fase di progettazione'
+title: Creare un controllo che sfrutta i vantaggi delle funzionalità della fase di progettazione di Visual Studio
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +13,12 @@ ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 64f637b232cf21701185e7b87d86f63fdece5127
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7166b4203c54ab31f1d929c85cf1e6481ff120f8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459531"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744071"
 ---
 # <a name="walkthrough-create-a-control-that-takes-advantage-of-design-time-features"></a>Procedura dettagliata: creare un controllo che sfrutti le funzionalità della fase di progettazione
 
@@ -36,7 +36,7 @@ Al termine di questa procedura dettagliata, il controllo personalizzato sarà si
 
 Per il listato di codice completo, vedere [procedura: creare un controllo Windows Forms che sfrutta le funzionalità della fase di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120)).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per completare questa procedura dettagliata, è necessario Visual Studio.
 
@@ -120,13 +120,13 @@ Il controllo viene associato alla relativa finestra di progettazione tramite la 
 
 3. Modificare la dichiarazione di `DemoMarqueeControl` per ereditare dalla classe `MarqueeControl`.
 
-4. Compilare il progetto.
+4. Compilazione del progetto.
 
 5. Aprire Form1 nella Progettazione Windows Form.
 
 6. Individuare la scheda **Componenti MarqueeControlTest** nella **casella degli strumenti** e aprirla. Trascinare un `DemoMarqueeControl` dalla **casella degli strumenti** nel form.
 
-7. Compilare il progetto.
+7. Compilazione del progetto.
 
 ## <a name="set-up-the-project-for-design-time-debugging"></a>Configurare il progetto per il debug in fase di progettazione
 
@@ -142,7 +142,7 @@ Quando si sviluppa un'esperienza della fase di progettazione personalizzata, sar
 
 5. Fare clic con il pulsante destro del mouse sul progetto MarqueeControlLibrary e selezionare **Imposta come progetto di avvio** per abilitare questa configurazione di debug.
 
-## <a name="checkpoint"></a>Checkpoint
+## <a name="checkpoint"></a>Punto di controllo
 
 A questo punto è possibile eseguire il debug del comportamento in fase di progettazione del controllo personalizzato. Una volta stabilito che l'ambiente di debug è configurato correttamente, si verificherà l'associazione tra il controllo personalizzato e la finestra di progettazione personalizzata.
 
@@ -554,7 +554,7 @@ A questo punto, è possibile compilare il progetto `MarqueeControlLibrary`. Test
 
 4. Trascinare un'istanza del controllo `MarqueeText` nell'area di progettazione del `DemoMarqueeControl`.
 
-5. Compilare la soluzione.
+5. Compila la soluzione.
 
 6. Fare clic con il pulsante destro del mouse sul `DemoMarqueeControl` e scegliere l'opzione **Esegui test** dal menu di scelta rapida per avviare l'animazione. Fare clic su **Interrompi test** per arrestare l'animazione.
 

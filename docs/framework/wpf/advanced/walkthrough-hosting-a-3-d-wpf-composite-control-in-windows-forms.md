@@ -1,5 +1,6 @@
 ---
-title: 'Procedura dettagliata: hosting di controlli compositi 3D di WPF in Windows Form'
+title: Ospitare il controllo composito 3D WPF in Windows Forms
+titleSuffix: ''
 ms.date: 08/18/2018
 dev_langs:
 - csharp
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 - composite controls [WPF], hosting WPF in
 ms.assetid: 486369a9-606a-4a3b-b086-a06f2119c7b0
-ms.openlocfilehash: f33adf6bac5efab87fecd9e95437ac8cff6d1f16
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
-ms.translationtype: MT
+ms.openlocfilehash: 07222809d62b207730ddad3c87b8fb60e1602bc3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976548"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744459"
 ---
-# <a name="walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms"></a>Procedura dettagliata: hosting di controlli compositi 3D di WPF in Windows Form
+# <a name="walkthrough-host-a-3d-wpf-composite-control-in-windows-forms"></a>Procedura dettagliata: ospitare un controllo composito 3D WPF in Windows Forms
 
 In questa procedura dettagliata viene illustrato come creare un controllo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] composito e ospitarlo in controlli [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] e form usando il controllo <xref:System.Windows.Forms.Integration.ElementHost>.
 
-In questa procedura dettagliata verrà implementato un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> contenente due controlli figlio. Il <xref:System.Windows.Controls.UserControl> Visualizza un cono tridimensionale (3D). Il rendering di oggetti 3D è molto più semplice con il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] rispetto a [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. È pertanto opportuno ospitare una classe [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> per creare grafica 3D in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
+In questa procedura dettagliata verrà implementato un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> contenente due controlli figlio. Il <xref:System.Windows.Controls.UserControl> Visualizza un cono tridimensionale (3D). Il rendering degli oggetti 3D è molto più semplice con il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] rispetto a [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. È pertanto consigliabile ospitare una classe [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> per creare grafica 3D in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
 
 Le attività illustrate nella procedura dettagliata sono le seguenti:
 
@@ -29,7 +30,7 @@ Le attività illustrate nella procedura dettagliata sono le seguenti:
 
 - Hosting della <xref:System.Windows.Controls.UserControl>[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per completare la procedura dettagliata, è necessario disporre dei componenti seguenti:
 

@@ -2,12 +2,12 @@
 title: Implementazione di gateway API con Ocelot
 description: Informazioni su come implementare i gateway API con Ocelot e come usare Ocelot in un ambiente basato su contenitori.
 ms.date: 10/02/2018
-ms.openlocfilehash: 1ade05cc6935ce6a1bc74e6d6e4cdd5ef9fc6873
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: c0bcd240b6bd190dd02266c7faaf9fd668eb23bb
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734603"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777298"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Implementare gateway API con Ocelot
 
@@ -414,7 +414,7 @@ Ocelot supporta tuttavia anche il posizionamento del microservizio di gestione d
 
 **Figura 6-40**. Autenticazione in Ocelot
 
-Come illustrato nel diagramma precedente, quando il microservizio di identità è sotto il gateway API (AG): 1) il gruppo di disponibilità richiede un token di autenticazione dal microservizio di identità, 2) il microservizio Identity restituisce il token alle richieste AG, 3-4) dai microservizi usando il token di autenticazione. Poiché l'applicazione eShopOnContainers ha suddiviso il gateway API in più gateway API di BFF (back-end per front-end) e aree di business, un'altra opzione sarebbe stata quella di creare un gateway API aggiuntivo per gli aspetti trasversali. Tale scelta sarebbe lecita in un'architettura basata su microservizi più complessa con più microservizi con aspetti trasversali. Poiché si tratta solo di un problema trasversale in eShopOnContainers, si è deciso di gestire solo il servizio di sicurezza dall'area di autenticazione del gateway API, per semplicità.
+Come illustrato nel diagramma precedente, quando il microservizio di identità è sotto il gateway API (AG): 1) il gruppo di disponibilità richiede un token di autenticazione dal microservizio di identità, 2) il microservizio Identity restituisce il token alle richieste AG, 3-4) dai microservizi usando il token di autenticazione. Poiché l'applicazione eShopOnContainers ha suddiviso il gateway API in più BFF (back-end per front-end) e nei gateway API per le aree di business, un'altra opzione potrebbe essere quella di creare un gateway API aggiuntivo per le problematiche trasversali. Tale scelta sarebbe lecita in un'architettura basata su microservizi più complessa con più microservizi con aspetti trasversali. Poiché si tratta solo di un problema trasversale in eShopOnContainers, si è deciso di gestire solo il servizio di sicurezza dall'area di autenticazione del gateway API, per semplicità.
 
 Se l'app è protetta a livello di gateway API, in ogni caso il modulo di autenticazione del gateway API Ocelot viene visitato per primo quando si tenta di usare un qualsiasi microservizio protetto. Che reindirizza la richiesta HTTP per visitare il microservizio di identità o autenticazione per ottenere il token di accesso in modo che sia possibile visitare i servizi protetti con la access_token.
 

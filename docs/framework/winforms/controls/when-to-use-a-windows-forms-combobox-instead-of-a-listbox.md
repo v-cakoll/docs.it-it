@@ -1,5 +1,5 @@
 ---
-title: Quando utilizzare un controllo ComboBox Windows Form anziché un controllo ListBox
+title: ComboBox e ListBox
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListBox control [Windows Forms], adding and removing items
@@ -11,24 +11,24 @@ helpviewer_keywords:
 - ListBox control [Windows Forms], accessing items
 - ListCount property
 ms.assetid: 7bcaea58-1cfa-46db-9baf-b75a69d8f9ec
-ms.openlocfilehash: 8a2429049acf1a22edde8d132ece17da4e91f1db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7087760a393bb58d83d899c1741c745fb28585bb
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61759830"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739933"
 ---
 # <a name="when-to-use-a-windows-forms-combobox-instead-of-a-listbox"></a>Quando utilizzare un controllo ComboBox Windows Form anziché un controllo ListBox
-Il <xref:System.Windows.Forms.ComboBox> e il <xref:System.Windows.Forms.ListBox> controlli presentano comportamenti simili e in alcuni casi potrebbe essere intercambiabili. Esistono casi, tuttavia, quando uno o l'altro è più appropriato per un'attività.  
+I controlli <xref:System.Windows.Forms.ComboBox> e <xref:System.Windows.Forms.ListBox> hanno comportamenti simili e in alcuni casi possono essere intercambiabili. In alcuni casi, tuttavia, una o l'altra è più appropriata per un'attività.  
   
- In generale, una casella combinata è appropriata quando è disponibile un elenco di opzioni disponibili e una casella di riepilogo è appropriata quando si desidera limitare l'input ai quali è presente nell'elenco. Una casella combinata contiene un campo casella di testo, in modo che le scelte non inclusi nell'elenco possono essere digitate. L'eccezione è quando il <xref:System.Windows.Forms.ComboBox.DropDownStyle%2A> è impostata su <xref:System.Windows.Forms.ComboBoxStyle.DropDownList>. In tal caso, il controllo selezionerà un elemento se si digita la prima lettera.  
+ In genere, una casella combinata è appropriata quando è presente un elenco di scelte consigliate e una casella di riepilogo è appropriata quando si desidera limitare l'input a quello presente nell'elenco. Una casella combinata contiene un campo casella di testo, quindi le scelte non presenti nell'elenco possono essere digitate. L'eccezione si verifica quando la proprietà <xref:System.Windows.Forms.ComboBox.DropDownStyle%2A> è impostata su <xref:System.Windows.Forms.ComboBoxStyle.DropDownList>. In tal caso, il controllo selezionerà un elemento se si digita la prima lettera.  
   
- Inoltre, le caselle combinate di risparmiare spazio in un form. Poiché non viene visualizzato l'elenco completo fino a quando l'utente fa clic sulla freccia in giù, una casella combinata può essere inserita in uno spazio ridotto, in cui non sarebbe sufficienti per una casella di riepilogo. Un'eccezione è quando il <xref:System.Windows.Forms.ComboBox.DropDownStyle%2A> è impostata su <xref:System.Windows.Forms.ComboBoxStyle.Simple>: viene visualizzato l'elenco completo e la casella combinata occupa più spazio rispetto a una casella di riepilogo.  
+ Inoltre, le caselle combinate salvano lo spazio in un form. Poiché l'elenco completo non viene visualizzato fino a quando l'utente non fa clic sulla freccia verso il basso, una casella combinata può facilmente rientrare in uno spazio ridotto in cui una casella di riepilogo non è adatta. Si verifica un'eccezione quando la proprietà <xref:System.Windows.Forms.ComboBox.DropDownStyle%2A> è impostata su <xref:System.Windows.Forms.ComboBoxStyle.Simple>: viene visualizzato l'elenco completo e la casella combinata occupa più spazio rispetto a una casella di riepilogo.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
-- [Procedura: Aggiungere e rimuovere elementi da un Windows Form ComboBox, ListBox o CheckedListBox (controllo)](add-and-remove-items-from-a-wf-combobox.md)
-- [Procedura: Ordinare il contenuto di un Windows Form ComboBox, ListBox o CheckedListBox (controllo)](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [Procedura: Aggiungere e rimuovere elementi da un controllo ComboBox, ListBox o CheckedListBox di Windows Form](add-and-remove-items-from-a-wf-combobox.md)
+- [Procedura: Ordinare il contenuto di un controllo ComboBox, ListBox o CheckedListBox di Windows Form](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
 - [Controlli Windows Form usati per elencare opzioni](windows-forms-controls-used-to-list-options.md)

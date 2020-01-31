@@ -4,30 +4,31 @@ ms.date: 03/30/2017
 dev_langs:
 - csharp
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-ms.openlocfilehash: f94be530fb680320813a93e256e8e411234f2e40
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9ac563ad237749665e9cc53c15aec35f461abfc0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968653"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742661"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>Sicurezza del trasporto con autenticazione del certificato
-In questo argomento viene illustrato l'utilizzo dei certificati X.509 per l'autenticazione del server e del client con la sicurezza del trasporto. Per altre informazioni sui certificati X.509, vedere [Certificati di chiave pubblica X.509](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates). I certificati devono essere emessi da un'autorità di certificazione, che spesso è un'emittente di certificati di terze parti. Nei domini Windows Server è possibile utilizzare Servizi certificati Active Directory per rilasciare certificati ai computer client del dominio. Per ulteriori informazioni, vedere [Servizi certificati Windows 2008 R2](https://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409). In questo scenario, il servizio è ospitato in Internet Information Services (IIS) configurato con Secure Sockets Layer (SSL). Il servizio è configurato con un certificato SSL (X.509) per consentire ai client di verificare l'identità del server. Anche il client è configurato con un certificato X.509 per consentire al servizio di verificare l'identità del client. Il certificato del server deve essere ritenuto attendibile dal client e il certificato del client deve essere ritenuto attendibile dal server. Il meccanismo per cui effettivamente il servizio e il client verificano le reciproche identità non rientra nell'ambito di questo argomento. Per ulteriori informazioni, vedere la pagina [relativa alla firma digitale in Wikipedia](https://go.microsoft.com/fwlink/?LinkId=253157).  
+
+Questo articolo illustra l'uso di certificati X. 509 per l'autenticazione server e client quando si usa la sicurezza del trasporto. Per altre informazioni sui certificati X.509, vedere [Certificati di chiave pubblica X.509](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates). I certificati devono essere emessi da un'autorità di certificazione, che spesso è un'emittente di certificati di terze parti. Nei domini Windows Server è possibile utilizzare Servizi certificati Active Directory per rilasciare certificati ai computer client del dominio. In questo scenario, il servizio è ospitato in Internet Information Services (IIS) configurato con Secure Sockets Layer (SSL). Il servizio è configurato con un certificato SSL (X.509) per consentire ai client di verificare l'identità del server. Anche il client è configurato con un certificato X.509 per consentire al servizio di verificare l'identità del client. Il certificato del server deve essere ritenuto attendibile dal client e il certificato del client deve essere ritenuto attendibile dal server. I meccanismi effettivi del modo in cui il servizio e il client verificano l'identità di ogni altro esulano dall'ambito di questo articolo. Per ulteriori informazioni, vedere la pagina relativa alla [firma digitale](https://en.wikipedia.org/wiki/Digital_signature) su wikipedia.
   
  Questo scenario implementa un modello di messaggio di richiesta/risposta come illustrato nel diagramma seguente.  
   
  ![Trasferimento sicuro tramite certificati](../../../../docs/framework/wcf/feature-details/media/8f7b8968-899f-4538-a9e8-0eaa872a291c.gif "8f7b8968-899F-4538-a9e8-0eaa872a291c")  
   
- Per ulteriori informazioni sull'utilizzo di un certificato con un servizio, vedere [utilizzo](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) dei certificati [e procedura: Configurare una porta con un certificato](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)SSL. Nella tabella riportata di seguito vengono descritte le diverse caratteristiche dello scenario.  
+ Per ulteriori informazioni sull'utilizzo di un certificato con un servizio, vedere [utilizzo dei certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) e [procedura: configurare una porta con un certificato SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md). Nella tabella riportata di seguito vengono descritte le diverse caratteristiche dello scenario.  
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|Modalità di sicurezza|Trasporto|  
+|Modalità di sicurezza|Transport|  
 |Interoperabilità|Con servizi e client di servizi Web esistenti.|  
 |Autenticazione (server)<br /><br /> Autenticazione (client)|Sì (utilizzando un certificato SSL)<br /><br /> sì (utilizzando un certificato X.509)|  
-|Integrità dei dati|Sì|  
-|Riservatezza dei dati|Yes|  
-|Trasporto|HTTPS|  
+|Integrità dati|Sì|  
+|Riservatezza dei dati|Sì|  
+|Transport|HTTPS|  
 |Associazione|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="configure-the-service"></a>Configurazione del servizio  
@@ -140,4 +141,4 @@ cc.Close();
 ## <a name="see-also"></a>Vedere anche
 
 - [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Modello di sicurezza per Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

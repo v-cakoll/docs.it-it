@@ -1,19 +1,19 @@
 ---
-title: Libreria di classi (WPF)
+title: Libreria di classi
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF class library [WPF]
 - Windows Presentation Foundation class library [WPF]
 ms.assetid: dcb35927-00ad-4141-a1ab-a7a524dd3f10
-ms.openlocfilehash: d43b46be2e05561eadcba12c744368db056a3ce5
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: bd099cbbbf96c71749375dab0aadfe84412ca103
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859702"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742302"
 ---
 # <a name="class-library-wpf"></a>Libreria di classi (WPF)
-I collegamenti seguenti si riferiscono agli spazi dei nomi che contengono [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] API.  
+I collegamenti seguenti fanno riferimento agli spazi dei nomi che contengono API [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)].  
   
 ## <a name="in-this-section"></a>In questa sezione  
   
@@ -124,7 +124,7 @@ I collegamenti seguenti si riferiscono agli spazi dei nomi che contengono [!INCL
 - <xref:UIAutomationClientsideProviders>  
   
 ## <a name="xaml-support-in-net-4"></a>Supporto XAML in .NET 4  
- Spazi dei nomi seguenti contengono i tipi dall'assembly System. Xaml. System. XAML fornisce supporto del linguaggio XAML comune per i Framework, ad esempio WPF che si basano su .NET Framework 4.  
+ Gli spazi dei nomi seguenti contengono i tipi dall'assembly System. XAML. System. XAML fornisce il supporto del linguaggio XAML comune per Framework come WPF basati su .NET Framework 4.  
   
 - <xref:System.Windows.Markup> (condiviso)  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Associare un controllo di Windows Forms a un tipo'
+title: Associare il controllo a un tipo
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding to a type
 - types [Windows Forms], binding controls to
 ms.assetid: 94faeebb-d2bc-45d6-86d7-96a42661b43d
-ms.openlocfilehash: ab088e3f34f3f03be2073864a440006259fe5679
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0bc1f92ee8922990bd0e461655168f5618ba39a6
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591338"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744981"
 ---
-# <a name="how-to-bind-a-windows-forms-control-to-a-type"></a>Procedura: Associare un controllo di Windows Forms a un tipo
+# <a name="how-to-bind-a-windows-forms-control-to-a-type"></a>Procedura: Associare un controllo Windows Form a un tipo
 Quando si compilano controlli che interagiscono con i dati, a volte è necessario associare un controllo a un tipo, invece che a un oggetto. Questa situazione si verifica soprattutto in fase di progettazione, quando i dati potrebbero non essere disponibili, ma i controlli associati a dati devono visualizzare informazioni provenienti dall'interfaccia pubblica di un tipo. Ad esempio, se si associa un controllo <xref:System.Windows.Forms.DataGridView> a un oggetto esposto da un servizio Web, potrebbe essere necessario che in fase di progettazione il controllo <xref:System.Windows.Forms.DataGridView> assegni alle colonne un'etichetta con i nomi dei membri di un tipo personalizzato.  
   
  È possibile associare facilmente un controllo a un tipo con il componente <xref:System.Windows.Forms.BindingSource>.  

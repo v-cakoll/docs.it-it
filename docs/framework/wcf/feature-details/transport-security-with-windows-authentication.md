@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: 38f425e50b7981c17a96a78e1e28bafb2cf258fc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6392ea0f17596406a8671a039bd78777d9e11e42
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64635129"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742652"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Protezione del trasporto con l'autenticazione di Windows
-Lo scenario seguente viene illustrato un client Windows Communication Foundation (WCF) e un servizio protetti dalla protezione di Windows. Per altre informazioni sulla programmazione, vedere [come: Proteggere un servizio con le credenziali di Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
+Nello scenario seguente vengono illustrati un client e un servizio Windows Communication Foundation (WCF) protetti dalla sicurezza di Windows. Per altre informazioni sulla programmazione, vedere [procedura: proteggere un servizio con credenziali di Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
   
  Un servizio Web intranet consente di visualizzare informazioni sulle risorse umane. Il client è un'applicazione Windows Form. L'applicazione è distribuita in un dominio in cui la protezione è affidata a un controller Kerberos.  
   
@@ -21,16 +21,16 @@ Lo scenario seguente viene illustrato un client Windows Communication Foundation
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|Modalità di sicurezza|Trasporto|  
+|Modalità di sicurezza|Transport|  
 |Interoperabilità|Solo WCF|  
 |Autenticazione (server)<br /><br /> Autenticazione (client)|Sì (utilizza l'autenticazione integrata di Windows)<br /><br /> Sì (utilizza l'autenticazione integrata di Windows)|  
-|Integrità|Yes|  
-|Riservatezza|Yes|  
-|Trasporto|NET.TCP|  
-|Binding|<xref:System.ServiceModel.NetTcpBinding>|  
+|Integrità|Sì|  
+|Riservatezza|Sì|  
+|Transport|NET.TCP|  
+|Associazione|<xref:System.ServiceModel.NetTcpBinding>|  
   
-## <a name="service"></a>Service  
- Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:  
+## <a name="service"></a>Servizio  
+ Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Effettuare una delle seguenti operazioni:  
   
 - Creare un servizio autonomo usando il codice senza alcuna configurazione.  
   
@@ -42,7 +42,7 @@ Lo scenario seguente viene illustrato un client Windows Communication Foundation
  [!code-csharp[C_SecurityScenarios#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#3)]
  [!code-vb[C_SecurityScenarios#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#3)]  
   
-### <a name="configuration"></a>Configurazione  
+### <a name="configuration"></a>Configurazione di  
  Per configurare l'endpoint del servizio, è possibile utilizzare la configurazione seguente anziché il codice.  
   
 ```xml  
@@ -74,7 +74,7 @@ Lo scenario seguente viene illustrato un client Windows Communication Foundation
 ```  
   
 ## <a name="client"></a>Client  
- Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:  
+ Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Effettuare una delle seguenti operazioni:  
   
 - Creare un client autonomo usando il codice (e il codice client).  
   
@@ -89,7 +89,7 @@ Lo scenario seguente viene illustrato un client Windows Communication Foundation
  [!code-csharp[C_SecurityScenarios#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#4)]
  [!code-vb[C_SecurityScenarios#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#4)]  
   
-### <a name="configuration"></a>Configurazione  
+### <a name="configuration"></a>Configurazione di  
  Per creare il client, è possibile utilizzare la configurazione seguente anziché il codice.  
   
 ```xml  
@@ -120,5 +120,5 @@ Lo scenario seguente viene illustrato un client Windows Communication Foundation
 ## <a name="see-also"></a>Vedere anche
 
 - [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Procedura: Proteggere un servizio con le credenziali di Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
-- [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Procedura: Proteggere un servizio con credenziali di Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+- [Modello di sicurezza per Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

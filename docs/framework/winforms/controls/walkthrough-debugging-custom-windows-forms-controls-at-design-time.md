@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: debug di controlli di Windows Form personalizzati in fase di progettazione'
+title: Debug di controlli personalizzati in fase di progettazione
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,12 +18,12 @@ ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a8572c1e70e36faf3a179de7a69e88e9cf1e781b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d9e292a1219c24571bcb35db2fe357b0197c8812
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460622"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740192"
 ---
 # <a name="walkthrough-debug-custom-windows-forms-controls-at-design-time"></a>Procedura dettagliata: debug di controlli di Windows Forms personalizzati in fase di progettazione
 
@@ -45,9 +45,9 @@ In Visual Studio creare un progetto di applicazione Windows e denominarlo **Debu
 
 3. In **Esplora soluzioni**eliminare il controllo predefinito del progetto eliminando il file di codice con un nome di base di UserControl1.
 
-4. Compilare la soluzione.
+4. Compila la soluzione.
 
-## <a name="checkpoint"></a>Checkpoint
+## <a name="checkpoint"></a>Punto di controllo
 
 A questo punto, sarà possibile visualizzare il controllo personalizzato nella **casella degli strumenti**.
 
@@ -91,7 +91,7 @@ Per dimostrare che il codice del controllo personalizzato viene eseguito in fase
     }
     ```
 
-2. Compilare la soluzione.
+2. Compila la soluzione.
 
 ## <a name="add-your-custom-control-to-the-host-form"></a>Aggiungere il controllo personalizzato al modulo host
 

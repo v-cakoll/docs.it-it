@@ -1,5 +1,5 @@
 ---
-title: Cenni preliminari sul rendering della grafica WPF
+title: Cenni preliminari sul rendering della grafica
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: 09f5f026ed320aaa253d8cdf6e0b271235aff604
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 103d086857bce8ae0960452bb92a69b68dc49dfa
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004173"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744802"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>Cenni preliminari sul rendering della grafica WPF
 Questo argomento offre una panoramica del livello visivo di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Questo argomento è incentrato sul ruolo della classe <xref:System.Windows.Media.Visual> per il rendering del supporto nel modello di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -38,7 +38,7 @@ Questo argomento offre una panoramica del livello visivo di [!INCLUDE[TLA2#tla_w
   
 - Gestione di eventi  
   
-- Layout  
+- Formato  
   
 - cella  
   
@@ -62,10 +62,10 @@ Questo argomento offre una panoramica del livello visivo di [!INCLUDE[TLA2#tla_w
 ### <a name="drawing-content-in-visual-objects"></a>Contenuto del disegno in oggetti visivi  
  Un oggetto <xref:System.Windows.Media.Visual> archivia i dati di rendering come **elenco di istruzioni di grafica vettoriale**. Ogni elemento nell'elenco di istruzioni rappresenta un set di dati grafici di basso livello e risorse associate in un formato serializzato. Esistono quattro diversi tipi di dati di rendering che possono contenere il contenuto del disegno.  
   
-|Tipo di contenuto del disegno|description|  
+|Tipo di contenuto del disegno|Descrizione|  
 |--------------------------|-----------------|  
 |Grafica vettoriale|Rappresenta i dati di grafica vettoriale e qualsiasi <xref:System.Windows.Media.Brush> e informazioni di <xref:System.Windows.Media.Pen> associati.|  
-|Image|Rappresenta un'immagine in un'area definita da un <xref:System.Windows.Rect>.|  
+|Immagine|Rappresenta un'immagine in un'area definita da un <xref:System.Windows.Rect>.|  
 |Icona|Rappresenta un disegno che esegue il rendering di un <xref:System.Windows.Media.GlyphRun>, ovvero una sequenza di glifi da una risorsa del tipo di carattere specificata. Ecco come viene rappresentato il testo.|  
 |Video|Rappresenta un disegno che esegue il rendering di video.|  
   
@@ -77,7 +77,7 @@ Questo argomento offre una panoramica del livello visivo di [!INCLUDE[TLA2#tla_w
   
  Nella figura seguente viene illustrato l'ordine in cui vengono applicate <xref:System.Windows.Media.DrawingGroup> operazioni durante la sequenza di rendering.  
   
- ![Ordine delle operazioni di drawinggroup](./media/graphcismm-drawinggroup-order.png "graphcismm_drawinggroup_order")  
+ ![Ordine delle operazioni DrawingGroup](./media/graphcismm-drawinggroup-order.png "graphcismm_drawinggroup_order")  
 Ordine delle operazioni DrawingGroup  
   
  Per altre informazioni, vedere [Cenni preliminari sugli oggetti Drawing](drawing-objects-overview.md).  
@@ -162,7 +162,7 @@ Ordine delle operazioni DrawingGroup
   
  Per enumerare gli oggetti logici che comprendono l'elemento <xref:System.Windows.Controls.DockPanel> nell'esempio di markup, si troverà la gerarchia di oggetti logici illustrata di seguito:  
   
- ![Diagramma dell'albero](./media/tree1-wcp.gif "Tree1_wcp")  
+ ![Diagramma ad albero](./media/tree1-wcp.gif "Tree1_wcp")  
 Diagramma dell'albero logico  
   
  La struttura ad albero visuale e l'albero logico sono sincronizzati con il set corrente di elementi dell'applicazione che riflette qualsiasi aggiunta, eliminazione o modifica di elementi. Presentano tuttavia visualizzazioni diverse dell'applicazione. A differenza della struttura ad albero visuale, l'albero logico non espande l'elemento <xref:System.Windows.Controls.ContentPresenter> di un controllo. Ciò significa che non vi è una corrispondenza diretta tra un albero logico e una struttura ad albero visuale per lo stesso set di oggetti. Infatti, la chiamata al metodo di <xref:System.Windows.LogicalTreeHelper.GetChildren%2A> dell'oggetto **LogicalTreeHelper** e al metodo <xref:System.Windows.Media.VisualTreeHelper.GetChild%2A> dell'oggetto **VisualTreeHelper** utilizzando lo stesso elemento di un parametro produce risultati diversi.  
@@ -179,7 +179,7 @@ Diagramma dell'albero logico
 ### <a name="profiling-visual-performance"></a>Profilatura delle prestazioni visive  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] include una suite di strumenti per la profilatura delle prestazioni che consentono di analizzare il comportamento dell'applicazione in fase di esecuzione e di determinare i tipi di ottimizzazioni delle prestazioni che è possibile applicare. Lo strumento Visual Profiler offre una visualizzazione grafica completa dei dati sulle prestazioni eseguendo il mapping direttamente alla struttura ad albero visuale dell'applicazione. In questa schermata, la sezione **Utilizzo della CPU** di Visual Profiler fornisce un'indicazione dettagliata dell'uso dei servizi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] da parte di un oggetto, ad esempio il layout e il rendering.  
   
- ![Visualizzazione dell'output di Visual Profiler](./media/wpfperf-visualprofiler-04.png "WPFPerf_VisualProfiler_04")  
+ ![Output di Visual Profiler](./media/wpfperf-visualprofiler-04.png "WPFPerf_VisualProfiler_04")  
 Output di Visual Profiler  
   
 <a name="visual_rendering_behavior"></a>   
