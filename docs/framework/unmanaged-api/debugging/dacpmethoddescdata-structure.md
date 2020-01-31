@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 97079b824dbd0e056374af4173e49304babd6c32
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cc54664ea8ad61005de3f3fae7407946d1c861b2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739138"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793841"
 ---
 # <a name="dacpmethoddescdata-structure"></a>Struttura DacpMethodDescData
 
-Definisce un buffer di trasporto per le informazioni di runtime del metodo.
+Definisce un buffer di trasporto per le informazioni di runtime di un metodo.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -56,35 +56,35 @@ struct DacpMethodDescData
 
 | Member                       | Descrizione                                                                                     |
 | ---------------------------- | ----------------------------------------------------------------------------------------------- |
-| `bHasNativeCode`             | Indica se il runtime dispone di codice nativo disponibile per la creazione dell'istanza specificata del metodo. |
-| `bIsDynamic`                 | Indica se il metodo viene generato in modo dinamico tramite la generazione di codice leggero.           |
-| `wSlotNumber`                | Numero di slot del metodo nella tabella di metodo.                                                   |
+| `bHasNativeCode`             | Indica se il runtime dispone di codice nativo disponibile per l'istanza specificata del metodo. |
+| `bIsDynamic`                 | Indica se il metodo viene generato in modo dinamico tramite la generazione di codice Lightweight.           |
+| `wSlotNumber`                | Numero di slot del metodo nella tabella dei metodi.                                                   |
 | `NativeCodeAddr`             | Indirizzo nativo iniziale del metodo.                                                            |
-| `data`                       | Puntatore a un buffer utilizzato internamente dal runtime.                                             |
-| `MethodDescPtr`              | Puntatore al `MethodDesc` in fase di esecuzione.                                                     |
-| `nativeCodeInfo`             | Puntatore a un buffer utilizzato internamente dal runtime per tenere traccia di metodi.                            |
-| `moduleInfo`                 | Puntatore a un buffer utilizzato internamente dal runtime per informazioni sul modulo.                      |
+| `data`                       | Puntatore a un buffer usato internamente dal runtime.                                             |
+| `MethodDescPtr`              | Puntatore al `MethodDesc` nel Runtime.                                                     |
+| `nativeCodeInfo`             | Puntatore a un buffer usato internamente dal runtime per tenere traccia dei metodi.                            |
+| `moduleInfo`                 | Puntatore a un buffer usato internamente dal runtime per le informazioni sul modulo.                      |
 | `MDToken`                    | Token associato al metodo specificato.                                                         |
-| `payloadGC`                  | Puntatore a un buffer di raccolta garbage utilizzato internamente dal runtime.                          |
-| `payloadGC2`                 | Puntatore a un buffer di raccolta garbage utilizzato internamente dal runtime.                          |
-| `managedDynamicMethodObject` | Se il metodo dinamico, il runtime Usa internamente il buffer per le informazioni di rilevamento.     |
-| `requestedIP`                | Utilizzato per popolare la struttura per ogni richiesta quando viene specificato un indirizzo di codice nativo.                    |
+| `payloadGC`                  | Puntatore a un buffer di Garbage Collection usato internamente dal runtime.                          |
+| `payloadGC2`                 | Puntatore a un buffer di Garbage Collection usato internamente dal runtime.                          |
+| `managedDynamicMethodObject` | Se il metodo è dinamico, il runtime usa questo buffer internamente per il rilevamento delle informazioni.     |
+| `requestedIP`                | Utilizzato per popolare la struttura per ogni richiesta quando viene fornito un indirizzo di codice nativo.                    |
 | `rejitDataCurrent`           | Informazioni sull'ultima versione instrumentata del metodo.                                   |
-| `rejitDataRequested`         | ReJIT informazioni per l'indirizzo native richiesto.                                             |
-| `cJittedRejitVersions`       | Numero di volte in cui che il metodo è stato rejitted tramite la strumentazione.                           |
+| `rejitDataRequested`         | ReJIT informazioni per l'indirizzo nativo richiesto.                                             |
+| `cJittedRejitVersions`       | Numero di volte in cui il metodo è stato rejitted attraverso la strumentazione.                           |
 
 ## <a name="remarks"></a>Note
 
-Questa struttura si trova all'interno del runtime e non viene esposto tramite le intestazioni o i file di libreria. Per usarlo, definire la struttura come specificato in precedenza.
+Questa struttura si trova all'interno del runtime e non viene esposta tramite le intestazioni o i file di libreria. Per usarlo, definire la struttura come specificato in precedenza.
 
-## <a name="requirements"></a>Requisiti
-**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
-**Intestazione:** nessuno  
-**Libreria:** nessuno  
-**Versioni di .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+## <a name="requirements"></a>Requisiti di
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+**Intestazione:** Nessuno  
+**Libreria:** Nessuno  
+**Versioni .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Strutture di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Debug](index.md)
+- [Strutture di debug](debugging-structures.md)
 - [Tipi di dati comuni](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)

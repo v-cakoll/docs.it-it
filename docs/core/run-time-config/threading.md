@@ -3,12 +3,12 @@ title: Impostazioni di configurazione Threading
 description: Informazioni sulle impostazioni della fase di esecuzione che configurano il threading per le app .NET Core.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: ed7688d4d8f7178440fe59afc6e2f5e0a11b2a5c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 68b8e93ca6ec3f708a7a627307655ada1955500a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733427"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789859"
 ---
 # <a name="run-time-configuration-options-for-threading"></a>Opzioni di configurazione in fase di esecuzione per il threading
 
@@ -24,7 +24,7 @@ ms.locfileid: "76733427"
 
 ## <a name="minimum-threads"></a>Numero minimo di thread
 
-- Specifica il numero minimo di thread per il ThreadPool del ruolo di lavoro.
+- Specifica il numero minimo di thread per il pool di thread di lavoro.
 - Corrisponde al metodo <xref:System.Threading.ThreadPool.SetMinThreads%2A?displayProperty=nameWithType>.
 
 | | Nome impostazione | Valori |
@@ -61,7 +61,7 @@ File di progetto:
 
 ## <a name="maximum-threads"></a>Numero massimo di thread
 
-- Specifica il numero massimo di thread per il ThreadPool di lavoro.
+- Specifica il numero massimo di thread per il pool di thread di lavoro.
 - Corrisponde al metodo <xref:System.Threading.ThreadPool.SetMaxThreads%2A?displayProperty=nameWithType>.
 
 | | Nome impostazione | Valori |

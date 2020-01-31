@@ -1,15 +1,15 @@
 ---
-title: 'Metodo metodo icordebugmergedassemblyrecord:: getCulture'
+title: Metodo ICorDebugMergedAssemblyRecord::GetCulture
 ms.date: 03/30/2017
 ms.assetid: 030b2f8c-8c21-40b7-855d-3afa78975a17
-ms.openlocfilehash: f39a1f17c80d27a38c0f2a8a516405f72c79bbcf
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 77ad8ee7977096e87b9fd2e131920a042243560e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131420"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793150"
 ---
-# <a name="icordebugmergedassemblyrecordgetculture-method"></a>Metodo metodo icordebugmergedassemblyrecord:: getCulture
+# <a name="icordebugmergedassemblyrecordgetculture-method"></a>Metodo ICorDebugMergedAssemblyRecord::GetCulture
 Ottiene la stringa del nome delle impostazioni cultura dell'assembly.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -38,16 +38,16 @@ HRESULT GetCulture(
 > [!NOTE]
 > Questo metodo è disponibile solo con .NET Native.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorDebugMergedAssemblyRecord](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)
-- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfaccia ICorDebugMergedAssemblyRecord](icordebugmergedassemblyrecord-interface.md)
+- [Interfacce di debug](debugging-interfaces.md)

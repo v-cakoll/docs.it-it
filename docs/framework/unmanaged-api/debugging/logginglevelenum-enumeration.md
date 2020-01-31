@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 09daac08-005a-46b2-beab-408d0820c5e5
 topic_type:
 - apiref
-ms.openlocfilehash: 01e1eafd9955a0876f77e34eb73c2a3fc6d815c2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1677798abdb8994d34c82a71e97a2c858209c18e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139208"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790382"
 ---
 # <a name="logginglevelenum-enumeration"></a>Enumerazione LoggingLevelEnum
 Indica il livello di gravità di un messaggio descrittivo scritto nel registro eventi quando un thread gestito registra un evento.  
@@ -44,7 +44,7 @@ typedef enum LoggingLevelEnum {
 } LoggingLevelEnum;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
   
 |Member|Descrizione|  
 |------------|-----------------|  
@@ -63,18 +63,18 @@ typedef enum LoggingLevelEnum {
 |`LPanicLevel`|Il messaggio è un livello di panico.|  
   
 ## <a name="remarks"></a>Note  
- Il Common Language Runtime (CLR) chiama il metodo [ICorDebugManagedCallback:: LogMessage](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md) per notificare al debugger che un thread gestito ha registrato un evento. CLR passa un valore dell'enumerazione `LoggingLevelEnum` per indicare il livello di gravità del messaggio scritto dal thread gestito nel registro eventi.  
+ Il Common Language Runtime (CLR) chiama il metodo [ICorDebugManagedCallback:: LogMessage](icordebugmanagedcallback-logmessage-method.md) per notificare al debugger che un thread gestito ha registrato un evento. CLR passa un valore dell'enumerazione `LoggingLevelEnum` per indicare il livello di gravità del messaggio scritto dal thread gestito nel registro eventi.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Diagnostics.EventLog>
-- [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Enumerazioni di debug](debugging-enumerations.md)

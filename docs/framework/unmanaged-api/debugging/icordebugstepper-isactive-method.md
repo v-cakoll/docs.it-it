@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8b35e7a9-b40e-40a9-8d8e-b82e823fc575
 topic_type:
 - apiref
-ms.openlocfilehash: a242764710d92e81e8089bc2919734bfac4bcdb2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 703f454f7ed1d2a959b761726f433db22cb73b01
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137568"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791779"
 ---
 # <a name="icordebugstepperisactive-method"></a>Metodo ICorDebugStepper::IsActive
 Ottiene un valore che indica se questo ICorDebugStepper sta attualmente eseguendo un passaggio.  
@@ -38,13 +38,13 @@ HRESULT IsActive (
  out Restituisce `true` se il gestore di istruzioni sta attualmente eseguendo un passaggio; in caso contrario, restituisce `false`.  
   
 ## <a name="remarks"></a>Note  
- Qualsiasi azione Step rimane attiva fino a quando il debugger non riceve una chiamata [ICorDebugManagedCallback:: StepComplete](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md) , che disattiva automaticamente il stepper. Un stepper può anche essere disattivato in modo anomalo chiamando [ICorDebugStepper::D ttiva](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md) prima che venga raggiunta la condizione di callback.  
+ Qualsiasi azione Step rimane attiva fino a quando il debugger non riceve una chiamata [ICorDebugManagedCallback:: StepComplete](icordebugmanagedcallback-stepcomplete-method.md) , che disattiva automaticamente il stepper. Un stepper può anche essere disattivato in modo anomalo chiamando [ICorDebugStepper::D ttiva](icordebugstepper-deactivate-method.md) prima che venga raggiunta la condizione di callback.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

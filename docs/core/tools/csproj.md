@@ -2,12 +2,12 @@
 title: Aggiunte al formato csproj per .NET Core
 description: Informazioni sulle differenze tra i file csproj esistenti e .NET Core
 ms.date: 04/08/2019
-ms.openlocfilehash: 9d6a7a388cb51bf08996adc654db5722a5ef1303
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 126f5b10999e65d9715e9b52cb54a2bf1dbd3933
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733335"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787874"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Aggiunte al formato csproj per .NET Core
 
@@ -15,7 +15,7 @@ Questo documento descrive le modifiche aggiunte ai file di progetto nell'ambito 
 
 ## <a name="implicit-package-references"></a>Riferimenti impliciti al pacchetto
 
-È possibile fare riferimento ai metapacchetti in modo implicito in base ai framework di destinazione specificati nella proprietà `<TargetFramework>` o `<TargetFrameworks>` del file di progetto. `<TargetFrameworks>` viene ignorato se è specificato `<TargetFramework>`, indipendentemente dall'ordine. Per altre informazioni, vedere [pacchetti, metapacchetti e Framework](../packages.md). 
+È possibile fare riferimento ai metapacchetti in modo implicito in base ai framework di destinazione specificati nella proprietà `<TargetFramework>` o `<TargetFrameworks>` del file di progetto. `<TargetFrameworks>` viene ignorato se è specificato `<TargetFramework>`, indipendentemente dall'ordine. Per altre informazioni, vedere [pacchetti, metapacchetti e Framework](../packages.md).
 
 ```xml
  <PropertyGroup>
@@ -248,7 +248,7 @@ Nei progetti in stile SDK usare una destinazione MSBuild denominata `PreBuild` o
 ```
 
 > [!NOTE]
->È possibile usare qualsiasi nome per le destinazioni di MSBuild, ma l'IDE di Visual Studio riconosce `PreBuild` e `PostBuild` destinazioni, quindi è consigliabile usare questi nomi in modo che sia possibile modificare i comandi nell'IDE di Visual Studio. 
+>È possibile usare qualsiasi nome per le destinazioni di MSBuild, ma l'IDE di Visual Studio riconosce `PreBuild` e `PostBuild` destinazioni, quindi è consigliabile usare questi nomi in modo che sia possibile modificare i comandi nell'IDE di Visual Studio.
 
 ## <a name="nuget-metadata-properties"></a>Proprietà dei metadati NuGet
 
@@ -321,7 +321,7 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 Percorso di un file di licenza all'interno del pacchetto se si usa una licenza a cui non è stato assegnato un identificatore SPDX oppure una licenza personalizzata (in caso contrario, è preferibile l'elemento `PackageLicenseExpression`)
 
-Sostituisce `PackageLicenseUrl`, non può essere combinato con `PackageLicenseExpression` e richiede Visual Studio 15.9.4, .NET SDK 2.1.502 o 2.2.101 o versione successiva.
+Sostituisce `PackageLicenseUrl`, non può essere combinato con `PackageLicenseExpression`e richiede Visual Studio versione 15.9.4 e .NET SDK 2.1.502 o 2.2.101 o versioni successive.
 
 Sarà necessario assicurarsi che il file di licenza venga incluso nel pacchetto aggiungendolo in modo esplicito al progetto, come in questo esempio di utilizzo:
 
@@ -427,7 +427,7 @@ Gli [attributi dell'assembly](../../standard/assembly/set-attributes.md) che in 
 
 ### <a name="properties-per-attribute"></a>Proprietà dei singoli attributi
 
-Ogni attributo ha una proprietà che ne controlla il contenuto e un'altra per disabilitarne la generazione, come illustrato nella tabella seguente:
+Come illustrato nella tabella seguente, ogni attributo dispone di una proprietà che ne controlla il contenuto e un'altra che disabilita la generazione:
 
 | Attributo                                                      | Gli               | Proprietà da disabilitare                             |
 |----------------------------------------------------------------|------------------------|-------------------------------------------------|

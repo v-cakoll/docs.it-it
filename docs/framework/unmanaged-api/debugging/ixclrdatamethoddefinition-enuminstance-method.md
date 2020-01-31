@@ -1,5 +1,5 @@
 ---
-title: Metodo IXCLRDataMethodDefinition::EnumInstance
+title: 'Metodo IXCLRDataMethodDefinition:: EnumInstance'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataMethodDefinition::EnumInstance Method
@@ -15,14 +15,14 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 7ad1a9957e9bffd7b28aa241723dedba1d11f4cd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b6393d7fa4853c230203521e665bbe89d7b228e2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775876"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790434"
 ---
-# <a name="ixclrdatamethoddefinitionenuminstance-method"></a>Metodo IXCLRDataMethodDefinition::EnumInstance
+# <a name="ixclrdatamethoddefinitionenuminstance-method"></a>Metodo IXCLRDataMethodDefinition:: EnumInstance
 
 Enumera le istanze di questa definizione di metodo.
 
@@ -43,22 +43,22 @@ HRESULT EnumInstance(
 [in, out] Handle per l'enumerazione delle istanze.
 
 `instance`\
-[out] L'istanza enumerata.
+out Istanza enumerata.
 
 ## <a name="remarks"></a>Note
 
-Il metodo specificato fa parte di `IXCLRDataMethodDefinition` interfaccia e corrisponde al quarto slot della tabella di metodo virtuale.
+Il metodo fornito fa parte dell'interfaccia `IXCLRDataMethodDefinition` e corrisponde al quarto slot della tabella del metodo virtuale.
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
-**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
-**Intestazione:** Nessuna  
-**Libreria:** Nessuna  
-**Versioni di .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+**Intestazione:** Nessuno  
+**Libreria:** Nessuno  
+**Versioni .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Enumerazione CLRDataSourceType](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
-- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Interfaccia IXCLRDataMethodDefinition](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethoddefinition-interface.md)
-- [Interfaccia IXCLRDataMethodInstance](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-interface.md)
+- [Enumerazione CLRDataSourceType](clrdatasourcetype-enumeration.md)
+- [Debug](index.md)
+- [Interfaccia IXCLRDataMethodDefinition](ixclrdatamethoddefinition-interface.md)
+- [Interfaccia IXCLRDataMethodInstance](ixclrdatamethodinstance-interface.md)

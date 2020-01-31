@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 87360a52-90b1-4ada-80c0-589a556116d8
 topic_type:
 - apiref
-ms.openlocfilehash: 8ae788094def566b4dc3a17d0a08d657cc27468f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d7126222bd23548ec7013ba234c3f3eebbc8e374
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138368"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788636"
 ---
 # <a name="icordebugheapvalue2-interface"></a>Interfaccia ICorDebugHeapValue2
 
@@ -29,22 +29,22 @@ Estensione di ICorDebugHeapValue che fornisce supporto per gli handle di Common 
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo CreateHandle](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-createhandle-method.md)|Crea un handle del tipo specificato per questo oggetto `ICorDebugHeapValue2`.|  
+|[Metodo CreateHandle](icordebugheapvalue2-createhandle-method.md)|Crea un handle del tipo specificato per questo oggetto `ICorDebugHeapValue2`.|  
   
 ## <a name="remarks"></a>Note  
   
 > [!NOTE]
 > Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfacce di debug](debugging-interfaces.md)

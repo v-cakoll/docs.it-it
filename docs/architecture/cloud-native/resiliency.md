@@ -2,12 +2,12 @@
 title: Resilienza cloud nativa
 description: Architettura di app .NET cloud native per Azure | Resilienza nativa del cloud
 ms.date: 06/30/2019
-ms.openlocfilehash: 680542abc5d8c43c577321d5ae834f0a13290da3
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 427405d95534c4467ab519c2188fe88e2f18e2b2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184841"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781091"
 ---
 # <a name="cloud-native-resiliency"></a>Resilienza cloud nativa
 
@@ -41,5 +41,5 @@ In un sistema distribuito su scala ridotta, l'errore sarà meno frequente, ma co
 Pertanto, l'applicazione e l'infrastruttura devono essere resilienti. Nelle sezioni seguenti verranno illustrate le tecniche difensive che è possibile aggiungere all'applicazione e le funzionalità cloud integrate che è possibile utilizzare per consentire l'uso dell'esperienza utente da parte di Bullet.
 
 >[!div class="step-by-step"]
->[Precedente](azure-data-storage.md)
+>[Precedente](elastic-search-in-azure.md)
 >[Successivo](application-resiliency-patterns.md)
