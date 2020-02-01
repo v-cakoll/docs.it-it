@@ -2,12 +2,12 @@
 title: Orchestrazione di microservizi e applicazioni a più contenitori per la scalabilità e la disponibilità elevate
 description: Le applicazioni di produzione reale devono essere distribuite e gestite con agenti di orchestrazione che gestiscono l'integrità, il carico di lavoro e i cicli di vita di tutti i contenitori.
 ms.date: 02/15/2019
-ms.openlocfilehash: eb02a89a58b7df449edc05461e11fbeeec86b4a1
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: e548e6b3816dec1e56c273c53c9fd052443eb09b
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771085"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919532"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orchestrazione di microservizi e applicazioni a più contenitori per la scalabilità e la disponibilità elevate
 
@@ -21,7 +21,7 @@ La figura 4-6 illustra la distribuzione in un cluster di un'applicazione costitu
 
 Si tratta di un approccio apparentemente logico. Occorre tuttavia stabilire come vengono gestiti il bilanciamento del carico, il routing e l'orchestrazione di queste applicazioni composte.
 
-L'interfaccia della riga di comando Docker soddisfa le esigenze di gestione di un contenitore su un host, ma non è sufficiente in caso di gestione di più contenitori distribuiti su più host per applicazioni distribuite più complesse. Nella maggior parte dei casi è necessaria una piattaforma di gestione in grado di avviare automaticamente i contenitori, aumentare il numero di istanze per immagine dei contenitori, sospenderli o arrestarli in caso di necessità e idealmente controllare anche la rispettiva modalità di accesso a risorse come la rete e l'archiviazione dati.
+L'interfaccia della riga di comando di Docker soddisfa le esigenze di gestione di un contenitore in un host, ma non è sufficiente quando si tratta di gestire più contenitori distribuiti in più host per applicazioni distribuite più complesse. Nella maggior parte dei casi è necessaria una piattaforma di gestione in grado di avviare automaticamente i contenitori, aumentare il numero di istanze per immagine dei contenitori, sospenderli o arrestarli in caso di necessità e idealmente controllare anche la rispettiva modalità di accesso a risorse come la rete e l'archiviazione dati.
 
 Per andare oltre la gestione di singoli contenitori o app composte semplici e passare ad applicazioni aziendali di dimensioni maggiori con microservizi, è necessario usare l'orchestrazione e le piattaforme di clustering.
 
@@ -35,7 +35,7 @@ I concetti di cluster e utilità di pianificazione sono strettamente correlati, 
 
 ## <a name="software-platforms-for-container-clustering-orchestration-and-scheduling"></a>Piattaforme software per il clustering, l'orchestrazione e la pianificazione dei contenitori
 
-| Piattaforma | Comments |
+| Platform | Comments |
 |:---:|:---|
 | **Kubernetes** <br/> ![un'immagine del logo Kubernetes.](./media/orchestrate-high-scalability-availability/kubernetes-container-orchestration-system-logo.png) | [*Kubernetes*](https://kubernetes.io/) è un prodotto open source che offre funzionalità per l'infrastruttura dei cluster, la pianificazione dei contenitori e l'orchestrazione. Consente di automatizzare la distribuzione, il ridimensionamento e la gestione di contenitori di applicazioni in cluster di host. <br/> <br/> *Kubernetes* offre un'infrastruttura incentrata sui contenitori che raggruppa i contenitori di applicazioni in unità logiche per semplificarne la gestione e l'individuazione. <br/> <br/> *Kubernetes* è maturo in Linux, meno maturo in Windows. |
 | **Servizio Azure Kubernetes** <br/> ![un'immagine del logo del servizio Azure Kubernetes.](./media/orchestrate-high-scalability-availability/azure-kubernetes-service-logo.png) | Il [servizio Azure Kubernetes](https://azure.microsoft.com/services/kubernetes-service/) è un servizio di orchestrazione dei contenitori Kubernetes gestito in Azure, che semplifica gestione, distribuzioni e operazioni del cluster Kubernetes. |
@@ -145,7 +145,7 @@ Nella prima immagine vengono visualizzati i microservizi come processi, in cui o
 
 Per informazioni aggiornate sul supporto di contenitori in Azure Service Fabric, vedere [Service Fabric e contenitori](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview).
 
-Service Fabric è un buon esempio di piattaforma in cui è possibile definire una diversa architettura logica (microservizi aziendali o contesti delimitati) rispetto all'implementazione fisica. Se, ad esempio, in [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) si implementano [Servizi Reliable con stato](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview), che verranno introdotti nella sezione seguente [Microservizi senza stato e con stato](#stateless-versus-stateful-microservices) si può sviluppare un concetto di microservizio aziendale con più servizi fisici.
+Service Fabric è un buon esempio di piattaforma in cui è possibile definire una diversa architettura logica (microservizi aziendali o contesti delimitati) rispetto all'implementazione fisica. Se, ad esempio, in [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) si implementano [Servizi Reliable con stato](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction), che verranno introdotti nella sezione seguente [Microservizi senza stato e con stato](#stateless-versus-stateful-microservices) si può sviluppare un concetto di microservizio aziendale con più servizi fisici.
 
 Come illustrato nella figura 4-10 e da un punto di vista di microservizio logico/aziendale, quando si implementa un servizio Reliable con stato di Service Fabric, è in genere necessario implementare due livelli di servizi. Il primo è il servizio Reliable con stato di back-end, che gestisce più partizioni (ciascuna partizione è un servizio con stato). Il secondo è il servizio front-end, o Servizio gateway, responsabile del routing e dell'aggregazione dei dati in più partizioni o istanze del servizio con stato. Tale Servizio gateway gestisce anche la comunicazione lato client con i cicli di ripetizione che accedono al servizio back-end. Viene chiamato Servizio gateway se si implementa il servizio personalizzato. In alternativa, è possibile usare il [proxy inverso](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy) di Service Fabric predefinito.
 

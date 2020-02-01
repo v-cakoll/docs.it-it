@@ -2,12 +2,12 @@
 title: Progettazione di un'applicazione orientata ai microservizi
 description: Architettura di microservizi .NET per applicazioni .NET incluse in contenitori | Conoscere i vantaggi e gli svantaggi di un'applicazione orientata ai microservizi, in modo da poter prendere una decisione consapevole.
 ms.date: 10/02/2018
-ms.openlocfilehash: a783d582f39d25be0123f410553a54af970a4f67
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 63c93f237172d80704c00472ef2d4cbf7c787ab0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739555"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921028"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Progettazione di un'applicazione orientata ai microservizi
 
@@ -83,7 +83,7 @@ L'applicazione viene distribuita come un set di microservizi sotto forma di cont
 
 ### <a name="data-sovereignty-per-microservice"></a>Sovranità dei dati per microservizio
 
-Nell'applicazione di esempio ogni microservizio è proprietario di un database o un'origine dati, benché tutti i database di SQL Server vengano distribuiti come un singolo contenitore. Questa decisione progettuale è stata presa solo per semplificare l'acquisizione del codice da GitHub, la clonazione e l'apertura in Visual Studio o Visual Studio Code da parte dello sviluppatore. In alternativa, può anche facilitare la compilazione di immagini Docker personalizzate tramite l'interfaccia della riga di comando di .NET Core e l'interfaccia della riga di comando di Docker, nonché la relativa distribuzione ed esecuzione in un ambiente di sviluppo Docker. In entrambi i casi, l'uso di contenitori per le origini dati consente agli sviluppatori di compilare e distribuire in pochi minuti senza dover eseguire il provisioning di un database esterno o di qualsiasi altra origine dati con dipendenze rigide dall'infrastruttura (cloud o locale).
+Nell'applicazione di esempio ogni microservizio è proprietario di un database o un'origine dati, benché tutti i database di SQL Server vengano distribuiti come un singolo contenitore. Questa decisione progettuale è stata presa solo per semplificare l'acquisizione del codice da GitHub, la clonazione e l'apertura in Visual Studio o Visual Studio Code da parte dello sviluppatore. In alternativa, consente di compilare facilmente le immagini Docker personalizzate usando il interfaccia della riga di comando di .NET Core e l'interfaccia della riga di comando di Docker e quindi di distribuirle ed eseguirle in un ambiente di sviluppo docker. In entrambi i casi, l'uso di contenitori per le origini dati consente agli sviluppatori di compilare e distribuire in pochi minuti senza dover eseguire il provisioning di un database esterno o di qualsiasi altra origine dati con dipendenze rigide dall'infrastruttura (cloud o locale).
 
 In un ambiente di produzione reale, per la disponibilità elevata e la scalabilità i database dovrebbero essere basati su server di database nel cloud o in locale, ma non nei contenitori.
 

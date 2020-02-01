@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Tecn
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 4dd747293fba4c18c2d10738d36f4d98cfd3f5b9
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: bf346825c7e29831111fc11c836ca6b4a05a18ce
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926493"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920990"
 ---
 # <a name="common-client-side-web-technologies"></a>Tecnologie Web lato client comuni
 
@@ -98,7 +98,7 @@ I componenti vengono definiti usando la funzione di espressione Decorator @Compo
 
 Grazie all'uso di componenti e modelli, anziché di elementi DOM, le app Angular sono in grado di operare a un livello di astrazione superiore e con una minore quantità di codice rispetto alle app scritte usando solo JavaScript (anche noto come "vanilla JS") o con jQuery. Angular impone anche un certo ordine nel modo di organizzare i file di script sul lato client. Per convenzione, le app Angular usano una struttura di cartelle comune con i file di script di moduli e componenti inseriti in una cartella dell'app. Gli script di Angular relativi alla compilazione, alla distribuzione e ai test dell'app si trovano in genere in una cartella di livello superiore.
 
-Angular fa anche un ottimo uso degli strumenti dell'interfaccia della riga di comando. Per iniziare a sviluppare con Angular in locale, presupponendo che git e npm siano già installati, basta semplicemente clonare un repository da GitHub ed eseguire `npm install` e `npm start`. Oltre a ciò, Angular offre il proprio strumento dell'interfaccia della riga di comando che consente di creare progetti, aggiungere file e semplificare le attività di test, creazione di bundle e distribuzione. Grazie all'uso di questo tipo di strumenti, Angular è particolarmente compatibile con ASP.NET Core il cui supporto dell'interfaccia della riga di comando è altrettanto buono.
+È possibile sviluppare app angolari usando un'interfaccia della riga di comando. Per iniziare a sviluppare con Angular in locale, presupponendo che git e npm siano già installati, basta semplicemente clonare un repository da GitHub ed eseguire `npm install` e `npm start`. Oltre a questo, angolare fornisce la propria interfaccia della riga di comando, che consente di creare progetti, aggiungere file e supportare attività di test, aggregazione e distribuzione. Questa cordialità dell'interfaccia della riga di comando rende l'angolare particolarmente compatibile con ASP.NET Core, che offre anche il supporto dell'interfaccia
 
 Microsoft ha sviluppato un'applicazione di riferimento, [eShopOnContainers](https://aka.ms/MicroservicesArchitecture), che include l'implementazione di un'applicazione a pagina singola Angular. Questa app include moduli Angular per gestire il carrello acquisti del negozio online, caricare e visualizzare gli articoli dal catalogo e gestire la creazione degli ordini. È possibile visualizzare e scaricare l'applicazione di esempio da [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA).
 
@@ -108,7 +108,7 @@ A differenza di Angular, che offre un'implementazione dello schema MVC completo,
 
 Una delle funzionalità più importanti di React è l'uso di un DOM virtuale. Il DOM virtuale offre a React diversi vantaggi, tra cui le prestazioni (il DOM virtuale può ottimizzare le parti del DOM reale che è necessario aggiornare) e la testabilità (non è necessario che un browser testi React e le relative interazioni con il DOM virtuale).
 
-Anche la modalità di interazione di React con la tecnologia HTML è insolita. Anziché prevedere una netta separazione tra il codice e il markup, ad esempio con riferimenti a JavaScript visualizzati negli attributi HTML, React aggiunge il codice HTML direttamente all'interno del codice JavaScript come JSX. JSX è una sintassi simile a HTML che consente la compilazione fino al codice JavaScript puro. Di seguito è riportato un esempio:
+Anche la modalità di interazione di React con la tecnologia HTML è insolita. Anziché prevedere una netta separazione tra il codice e il markup, ad esempio con riferimenti a JavaScript visualizzati negli attributi HTML, React aggiunge il codice HTML direttamente all'interno del codice JavaScript come JSX. JSX è una sintassi simile a HTML che consente la compilazione fino al codice JavaScript puro. Ad esempio:
 
 ```js
 <ul>

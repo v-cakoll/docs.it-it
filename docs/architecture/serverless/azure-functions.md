@@ -4,12 +4,12 @@ description: Funzioni di Azure offre funzionalità senza server tra più linguag
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 5e8187b3752a0f0d0bcf8e15f2ce440dc5a64e45
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 8764e6a33f3fdd53e60fa767d0fb584a9c07de7e
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "72522872"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920970"
 ---
 # <a name="azure-functions"></a>Funzioni di Azure
 
@@ -35,12 +35,12 @@ Per ulteriori informazioni, vedere [compare 1. x e 2. x](https://docs.microsoft.
 
 Le lingue seguenti sono supportate in disponibilità generale (GA), anteprima o sperimentale.
 
-|Language      |1. x         |2.x      |
+|Lingua:      |1. x         |2.x      |
 |--------------|------------|---------|
-|**C#**        |GA          |Anteprima  |
-|**JavaScript**|GA          |Anteprima  |
-|**F#**        |GA          |         |
-|**Java**      |            |Anteprima  |
+|**C#**        |Disponibilità a livello generale          |Preview  |
+|**JavaScript**|Disponibilità a livello generale          |Preview  |
+|**F#**        |Disponibilità a livello generale          |         |
+|**Java**      |            |Preview  |
 |**Python**    |Sperimentale|         |
 |**PHP**       |Sperimentale|         |
 |**TypeScript**|Sperimentale|         |

@@ -2,12 +2,12 @@
 title: Flusso di lavoro di sviluppo per app Docker
 description: Informazioni dettagliate sul flusso di lavoro richiesto per lo sviluppo delle applicazioni basate su Docker. Iniziare gradualmente e approfondire alcuni dettagli per ottimizzare i Dockerfile e terminare con il flusso di lavoro semplificato disponibile quando si usa Visual Studio.
 ms.date: 01/07/2019
-ms.openlocfilehash: 0c2789377bc388b8ac7373ee7fa46e3141f1b518
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5df646ffaba67a016d2b18959b9873b52c3d5e4c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "73740228"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920332"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Flusso di lavoro di sviluppo per app Docker
 
@@ -409,7 +409,7 @@ Il file docker-compose.yml sarà esaminato di nuovo in una sezione successiva in
 
 ### <a name="working-with-docker-composeyml-in-visual-studio-2017"></a>Utilizzo di docker-compose.yml in Visual Studio 2017
 
-Oltre ad aggiungere un Dockerfile a un progetto, come si è visto in precedenza, Visual Studio 2017 (dalla versione 15.8 in poi) è in grado di aggiungere il supporto di un agente di orchestrazione per Docker Compose a una soluzione.
+Oltre ad aggiungere un Dockerfile a un progetto, come indicato in precedenza, Visual Studio 2017 (dalla versione 15,8 in) può aggiungere il supporto per l'agente di orchestrazione per Docker Compose a una soluzione.
 
 Quando si aggiunge il supporto dell'agente di orchestrazione del contenitore, come illustrato nella figura 5-7, per la prima volta, Visual Studio crea il Dockerfile per il progetto e crea un nuovo progetto (sezione servizio) nella soluzione con diversi file `docker-compose*.yml` globali e quindi aggiunge il progetto a tali file. È quindi possibile aprire i file docker-compose.yml e aggiornarli con funzionalità aggiuntive.
 

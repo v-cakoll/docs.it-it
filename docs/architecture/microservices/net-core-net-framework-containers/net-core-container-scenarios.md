@@ -2,12 +2,12 @@
 title: Quando scegliere .NET Core per i contenitori Docker
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Quando scegliere .NET Core per i contenitori Docker
 ms.date: 09/11/2018
-ms.openlocfilehash: 54ed1b4bbb16352b8c99204383f85ffb25d62be7
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: d17b6b7620f485f09f8f18ac792418a48ae40037
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675728"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920988"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Quando scegliere .NET Core per i contenitori Docker
 
@@ -27,9 +27,9 @@ Chiaramente, se l'obiettivo è creare un'applicazione (app Web o servizio) che p
 
 [Visual Studio per Mac](https://www.visualstudio.com/vs/visual-studio-mac/) è un ambiente IDE, evoluzione di Xamarin Studio, che viene eseguito su macOS e supporta lo sviluppo di applicazioni basate su Docker. È la scelta più indicata per gli sviluppatori che lavorano in computer Mac che vogliono anche usare un potente IDE.
 
-È anche possibile usare [Visual Studio Code](https://code.visualstudio.com/) in macOS, Linux e Windows. Visual Studio Code supporta infatti .NET Core, incluse le funzionalità IntelliSense e di debug. Poiché Visual Studio Code è un editor leggero, è possibile usarlo per sviluppare app in contenitori in Mac in combinazione con l'interfaccia della riga di comando di Docker e l'[interfaccia della riga di comando di .NET Core](../../../core/tools/index.md). È anche possibile usare .NET Core con la maggior parte degli editor di terze parti, come Sublime, Emacs, vi e il progetto OmniSharp open source che fornisce anche il supporto di IntelliSense.
+È anche possibile usare [Visual Studio Code](https://code.visualstudio.com/) in MacOS, Linux e Windows. Visual Studio Code supporta completamente .NET Core, inclusi IntelliSense e debug. Poiché VS Code è un editor leggero, è possibile usarlo per sviluppare app in contenitori in Mac insieme all'interfaccia della riga di comando di Docker e al [interfaccia della riga di comando di .NET Core](../../../core/tools/index.md). È anche possibile usare .NET Core con la maggior parte degli editor di terze parti, come Sublime, Emacs, vi e il progetto OmniSharp open source che fornisce anche il supporto di IntelliSense.
 
-Oltre agli ambienti di sviluppo integrato e agli editor, è possibile usare gli strumenti dell'[interfaccia della riga di comando di .NET Core](../../../core/tools/index.md) per tutte le piattaforme supportate.
+Oltre agli IDE ed editor, è possibile usare la [interfaccia della riga di comando di .NET Core](../../../core/tools/index.md) per tutte le piattaforme supportate.
 
 ## <a name="using-containers-for-new-green-field-projects"></a>Uso dei contenitori per i nuovi progetti (green field)
 
