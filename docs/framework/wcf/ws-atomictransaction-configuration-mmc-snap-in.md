@@ -2,12 +2,12 @@
 title: Snap-in MMC di configurazione di WS-AtomicTransaction
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-ms.openlocfilehash: 9b6c7ecf112309b6c10414bfe506559e153911c2
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 0bcd08f9a3450c850ead941df6313526d076df2d
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900719"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921339"
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>Snap-in MMC configurazione WS-AtomicTransaction
 
@@ -15,11 +15,11 @@ Lo snap-in MMC configurazione WS-AtomicTransaction viene utilizzato per configur
 
 ## <a name="remarks"></a>Note
 
-Se si esegue [!INCLUDE[wxp](../../../includes/wxp-md.md)] o Windows Server 2003, è possibile trovare lo snap-in MMC passando a **Pannello di controllo/strumenti di amministrazione/Servizi componenti/** , facendo clic con il pulsante destro del mouse su **computer locale**e scegliendo **proprietà**. Si tratta dello stesso percorso nel quale è possibile configurare MSDTC. Le opzioni disponibili per la configurazione sono raggruppate nella scheda **WS-at** .
+Se si esegue Windows XP o Windows Server 2003, è possibile trovare lo snap-in MMC passando a **Pannello di controllo/strumenti di amministrazione/Servizi componenti/** , facendo clic con il pulsante destro del mouse su **computer locale**e scegliendo **proprietà**. Si tratta dello stesso percorso nel quale è possibile configurare MSDTC. Le opzioni disponibili per la configurazione sono raggruppate nella scheda **WS-at** .
 
  Se si esegue Windows Vista o Windows Server 2008, è possibile trovare lo snap-in MMC facendo clic sul pulsante **Start** e digitando `dcomcnfg.exe` nella casella di **ricerca** . Quando si apre MMC, passare al nodo **Computer\Distributed Transaction COORDINATOR\LOCAL DTC** , fare clic con il pulsante destro del mouse e scegliere **Proprietà**. Le opzioni disponibili per la configurazione sono raggruppate nella scheda **WS-at** .
 
- I passaggi precedenti vengono utilizzati per avviare lo snap-in per la configurazione di un computer locale. Se si desidera configurare un computer remoto, è necessario individuare il nome del computer remoto nel **Pannello di controllo/strumenti di amministrazione/Servizi componenti/** ed eseguire passaggi simili se si esegue [!INCLUDE[wxp](../../../includes/wxp-md.md)] o Windows Server 2003. Se si esegue Windows Vista o Windows Server 2008, seguire i passaggi precedenti per vista e Windows Server 2008, ma usare il nodo **Distributed Transaction COORDINATOR\LOCAL DTC** nel nodo del computer remoto.
+ I passaggi precedenti vengono utilizzati per avviare lo snap-in per la configurazione di un computer locale. Se si desidera configurare un computer remoto, è necessario individuare il nome del computer remoto nel **Pannello di controllo/strumenti di amministrazione/Servizi componenti/** ed eseguire operazioni simili se si esegue Windows XP o windows Server 2003. Se si esegue Windows Vista o Windows Server 2008, seguire i passaggi precedenti per vista e Windows Server 2008, ma usare il nodo **Distributed Transaction COORDINATOR\LOCAL DTC** nel nodo del computer remoto.
 
  Per usare l'interfaccia fornita dallo strumento è necessario registrare il file WsatUI.dll, disponibile nel percorso seguente:
 

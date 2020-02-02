@@ -1,20 +1,20 @@
 ---
-title: Pubblicare le app .NET Core con l'interfaccia della riga di comando
-description: Informazioni su come pubblicare un'app .NET Core con gli strumenti dell'interfaccia della riga di comando di .NET Core SDK.
+title: Pubblicare app con il interfaccia della riga di comando di .NET Core
+description: Informazioni su come pubblicare un'app .NET Core usando i comandi interfaccia della riga di comando di .NET Core.
 author: thraka
 ms.author: adegeo
 ms.date: 12/12/2019
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 98f1e96ac087727e711f9ebf3d3eaf86c4d4eec9
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: f4c2a4ccf551c53e4aa4e125cb5720d6f1cc9601
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740851"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920904"
 ---
-# <a name="publish-net-core-apps-with-the-cli"></a>Pubblicare le app .NET Core con l'interfaccia della riga di comando
+# <a name="publish-net-core-apps-with-the-net-core-cli"></a>Pubblicare app .NET Core con il interfaccia della riga di comando di .NET Core
 
 Questo articolo illustra come pubblicare l'applicazione .NET Core dalla riga di comando. .NET Core offre tre modi per pubblicare le applicazioni. La distribuzione dipendente dal framework genera un file con estensione dll multipiattaforma che usa il runtime di .NET Core installato in locale. L'eseguibile dipendente dal framework genera un file eseguibile specifico della piattaforma che usa il runtime di .NET Core installato in locale. L'eseguibile autonomo genera un file eseguibile specifico della piattaforma e include una copia locale del runtime di .NET Core.
 

@@ -1,18 +1,18 @@
 ---
-title: Sviluppo di librerie con strumenti multipiattaforma
-description: Informazioni su come creare librerie .NET Core usando gli strumenti dell'interfaccia della riga di comando di .NET Core. Si creerà una libreria che supporta più framework.
+title: Sviluppare librerie con la interfaccia della riga di comando di .NET Core
+description: Informazioni su come creare librerie .NET Core usando il interfaccia della riga di comando di .NET Core. Si creerà una libreria che supporta più framework.
 author: cartermp
 ms.date: 05/01/2017
-ms.openlocfilehash: 4132113037e6c5ec555d2d1859b8217a1a53d07f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a7c0175d29f483571578b58d698dd790cf66f7f4
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714034"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920439"
 ---
-# <a name="develop-libraries-with-cross-platform-tools"></a>Sviluppare librerie con strumenti multipiattaforma
+# <a name="develop-libraries-with-the-net-core-cli"></a>Sviluppare librerie con la interfaccia della riga di comando di .NET Core
 
-Questo articolo illustra come scrivere librerie per .NET usando gli strumenti dell'interfaccia della riga di comando multipiattaforma. L'interfaccia della riga di comando offre un'esperienza efficace e di basso livello per qualsiasi sistema operativo supportato. È comunque sempre possibile creare librerie con Visual Studio. Se si preferisce questo tipo di esperienza, [consultare la Guida di Visual Studio](library-with-visual-studio.md).
+Questo articolo illustra come scrivere librerie per .NET usando il interfaccia della riga di comando di .NET Core. L'interfaccia della riga di comando offre un'esperienza efficace e di basso livello per qualsiasi sistema operativo supportato. È comunque sempre possibile creare librerie con Visual Studio. Se si preferisce questo tipo di esperienza, [consultare la Guida di Visual Studio](library-with-visual-studio.md).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -216,7 +216,7 @@ Ogni directory contiene i file `.dll` per ciascuna destinazione.
 È importante essere in grado di eseguire test tra diverse piattaforme. È possibile usare [xUnit](https://xunit.github.io/) o MSTest senza modifiche. Entrambi sono adatti per gli unit test della libreria in .NET Core. La modalità di configurazione della soluzione con progetti di test dipende dalla [struttura della soluzione](#structuring-a-solution). Nell'esempio seguente si presuppone che le directory di test e di origine si trovino nella stessa directory di livello superiore.
 
 > [!NOTE]
-> Questa procedura usa alcuni [comandi dell'interfaccia della riga di comando di .NET Core](../tools/index.md). Per altre informazioni, vedere [dotnet new](../tools/dotnet-new.md) e [dotnet sln](../tools/dotnet-sln.md).
+> Questa operazione usa alcuni comandi [interfaccia della riga di comando di .NET Core](../tools/index.md) . Per altre informazioni, vedere [dotnet new](../tools/dotnet-new.md) e [dotnet sln](../tools/dotnet-sln.md).
 
 1. Configurare la soluzione. È possibile farlo con i comandi seguenti:
 

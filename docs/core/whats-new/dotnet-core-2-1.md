@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 603e7ae4ffb9e6a4bb477af9597d6948bd63f55e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 32784f7d4b9e3a93eb7f81b4829b39c1a06ef949
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100754"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920387"
 ---
 # <a name="whats-new-in-net-core-21"></a>Novità di .NET Core 2.1
 
@@ -67,7 +67,7 @@ Numerosi strumenti precedentemente disponibili solo a livello di singolo progett
 
 .NET Core 2.1 supporta gli *strumenti globali*, vale a dire strumenti personalizzati disponibili globalmente dalla riga di comando. Il modello di estendibilità nelle versioni precedenti di .NET Core rendeva disponibili gli strumenti personalizzati a livello di singolo progetto solo usando [`DotnetCliToolReference`](../tools/extensibility.md#consuming-per-project-tools).
 
-Per installare uno strumento globale, usare il comando [dotnet tool install](../tools/dotnet-tool-install.md). Esempio:
+Per installare uno strumento globale, usare il comando [dotnet tool install](../tools/dotnet-tool-install.md). Ad esempio:
 
 ```dotnetcli
 dotnet tool install -g dotnetsay
@@ -96,7 +96,7 @@ A partire da .NET Core 2.0, se la versione di .NET Core con cui è stata compila
 > [!IMPORTANT]
 > Questo comportamento di roll forward non si applica alle versioni di anteprima, Per impostazione predefinita, non si applica nemmeno alle versioni principali, ma il comportamento si può modificare con le impostazioni seguenti.
 
-Per modificare questo comportamento, cambiare l'impostazione per il roll forward scegliendo di non eseguirlo su framework condiviso candidato. Le impostazioni disponibili sono:
+Per modificare questo comportamento, cambiare l'impostazione per il roll forward scegliendo di non eseguirlo su framework condiviso candidato. Le impostazioni disponibili solo:
 
 - `0` - Disabilitare il comportamento del roll forward per la versione secondaria. Con questa impostazione, un'applicazione creata per .NET Core 2.0.0 esegue il roll forward a .NET Core 2.0.1, ma non a .NET Core 2.2.0 o .NET Core 3.0.0.
 - `1` - Abilitare il comportamento del roll forward per la versione secondaria. Questo è il valore predefinito per l'impostazione. Con questa impostazione, un'applicazione creata per .NET Core 2.0.0 esegue il roll forward a .NET Core 2.0.1 o a .NET Core 2.2.0, a seconda di quale dei due è installato, ma non a .NET Core 3.0.0.
@@ -112,7 +112,7 @@ Per modificare questo comportamento, cambiare l'impostazione per il roll forward
    "rollForwardOnNoCandidateFx" : 0
    ```
 
-- Quando si usano gli [strumenti dell'interfaccia della riga di comando di .NET Core](../tools/index.md), aggiungere l'opzione seguente con il valore a un comando di .NET Core, ad esempio `run`:
+- Quando si usa il [interfaccia della riga di comando di .NET Core](../tools/index.md), aggiungere l'opzione seguente con il valore desiderato a un comando di .NET Core, ad esempio `run`:
 
    ```dotnetcli
    dotnet run --rollForwardOnNoCandidateFx=0

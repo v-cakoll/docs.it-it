@@ -4,12 +4,12 @@ description: Usare uno Gestione pacchetti per installare .NET Core SDK e Runtime
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 2f3f04ef67115b28b1be91909e88c7ae714260db
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 94bcb493536bdee71ba83053d9e671d529226ac3
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740717"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920830"
 ---
 # <a name="debian-10-package-manager---install-net-core"></a>Gestione pacchetti Debian 10-installare .NET Core
 
@@ -17,7 +17,7 @@ ms.locfileid: "75740717"
 
 Questo articolo descrive come usare un gestore di pacchetti per installare .NET Core in Debian 10. Se si sta installando il runtime, si consiglia di installare il [runtime di ASP.NET Core](#install-the-aspnet-core-runtime), perché include sia .NET Core che ASP.NET Core Runtime.
 
-## <a name="register-microsoft-key-and-feed"></a>Registrare la chiave Microsoft e il feed
+## <a name="register-microsoft-key-and-feed"></a>Registrare la chiave e il feed Microsoft
 
 Prima di installare .NET, è necessario:
 
@@ -25,7 +25,7 @@ Prima di installare .NET, è necessario:
 - Registrare il repository del prodotto.
 - Installare le dipendenze necessarie.
 
-Questa operazione deve essere eseguita una volta sola per ogni computer.
+Questa operazione deve essere eseguita solo una volta per ogni computer.
 
 Aprire un terminale ed eseguire i comandi seguenti.
 
@@ -74,3 +74,11 @@ sudo apt-get install dotnet-runtime-3.1
 ## <a name="how-to-install-other-versions"></a>Come installare altre versioni
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
+## <a name="troubleshoot-the-package-manager"></a>Risolvere i problemi relativi a gestione pacchetti
+
+Questa sezione fornisce informazioni sugli errori comuni che possono verificarsi durante l'uso di gestione pacchetti per installare .NET Core.
+
+### <a name="failed-to-fetch"></a>Non è stato possibile recuperare
+
+[!INCLUDE [package-manager-failed-to-fetch-deb](includes/package-manager-failed-to-fetch-deb.md)]

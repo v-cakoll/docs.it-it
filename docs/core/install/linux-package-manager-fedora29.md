@@ -4,12 +4,12 @@ description: Usare uno Gestione pacchetti per installare .NET Core SDK e Runtime
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 750952229297ae069c0e8465bf83333d86b38dbd
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: d917c867e0d8cdb066b7dee64a9dbd767b56072d
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740689"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920812"
 ---
 # <a name="fedora-29-package-manager---install-net-core"></a>Gestione pacchetti Fedora 29-installare .NET Core
 
@@ -17,7 +17,7 @@ ms.locfileid: "75740689"
 
 Questo articolo descrive come usare un gestore di pacchetti per installare .NET Core in Fedora 29. Se si sta installando il runtime, si consiglia di installare il [runtime di ASP.NET Core](#install-the-aspnet-core-runtime), perché include sia .NET Core che ASP.NET Core Runtime.
 
-## <a name="register-microsoft-key-and-feed"></a>Registrare la chiave Microsoft e il feed
+## <a name="register-microsoft-key-and-feed"></a>Registrare la chiave e il feed Microsoft
 
 Prima di installare .NET, è necessario:
 
@@ -25,7 +25,7 @@ Prima di installare .NET, è necessario:
 - Registrare il repository del prodotto.
 - Installare le dipendenze necessarie.
 
-Questa operazione deve essere eseguita una volta sola per ogni computer.
+Questa operazione deve essere eseguita solo una volta per ogni computer.
 
 Aprire un terminale ed eseguire i comandi seguenti.
 
@@ -61,3 +61,11 @@ sudo dnf install dotnet-runtime-3.1
 ## <a name="how-to-install-other-versions"></a>Come installare altre versioni
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
+## <a name="troubleshoot-the-package-manager"></a>Risolvere i problemi relativi a gestione pacchetti
+
+Questa sezione fornisce informazioni sugli errori comuni che possono verificarsi durante l'uso di gestione pacchetti per installare .NET Core.
+
+### <a name="failed-to-fetch"></a>Non è stato possibile recuperare
+
+[!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]

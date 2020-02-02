@@ -3,12 +3,12 @@ title: Convertire librerie per .NET Core
 description: Informazioni su come convertire progetti di libreria da .NET Framework a .NET Core.
 author: cartermp
 ms.date: 12/07/2018
-ms.openlocfilehash: 6ff38647f77bbe1d25dd1d0065c4b32c60f87fcd
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.openlocfilehash: 646587120de2e51280c2af4de36bf3a6b0f60c2d
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75777341"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920617"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>Convertire librerie .NET Framework a .NET Core
 
@@ -31,7 +31,7 @@ Questo articolo descrive la specifica formale delle API .NET che devono essere d
 Questo articolo descrive le modalità di definizione e uso dei pacchetti in .NET Core e come i pacchetti supportano l'esecuzione del codice in più implementazioni di .NET.
 
 [Sviluppo di librerie con strumenti multipiattaforma](../tutorials/libraries.md)\
-Questo articolo illustra come scrivere librerie per .NET usando gli strumenti dell'interfaccia della riga di comando multipiattaforma.
+Questo articolo illustra come scrivere librerie usando il interfaccia della riga di comando di .NET Core.
 
 [Aggiunte al formato *csproj* per .NET Core](../tools/csproj.md)\
 Questo documento descrive le modifiche aggiunte ai file di progetto nell'ambito del passaggio a *csproj* e a MSBuild.

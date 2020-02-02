@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 6116b2322ed2071b78bcd77de7c38ad07c327aa6
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 23dc0f691c8a8d80a0bd2a5d301ace0d129007af
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740844"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920897"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Distribuire app .NET Core con Visual Studio
 
@@ -28,7 +28,7 @@ Per informazioni sull'uso di Visual Studio per lo sviluppo di applicazioni .NET 
 
 ## <a name="framework-dependent-deployment"></a>Distribuzione dipendente dal framework
 
-Una distribuzione dipendente dal framework senza dipendenze di terze parti richiede la compilazione, il testing e la pubblicazione dell'app. Il processo viene illustrato da un semplice esempio scritto in C#.  
+Una distribuzione dipendente dal framework senza dipendenze di terze parti richiede la compilazione, il testing e la pubblicazione dell'app. Il processo viene illustrato da un semplice esempio scritto in C#.
 
 1. Creare il progetto.
 
@@ -189,7 +189,7 @@ Eseguire le operazioni seguenti per ogni piattaforma a cui è destinata l'applic
    Se è già stato creato un profilo, fare clic con il pulsante destro del mouse sul progetto per aprire la finestra di dialogo **Pubblica** se non è già aperta. Selezionare quindi **Nuovo profilo**.
 
    Viene visualizzata la finestra di dialogo **Selezionare una destinazione di pubblicazione**.
-  
+
 1. Selezionare la posizione in cui Visual Studio pubblica l'applicazione.
 
    Se si esegue la pubblicazione in una sola piattaforma, è possibile accettare il valore predefinito nella casella di testo **scegliere una cartella** . in questo modo viene pubblicata la distribuzione dipendente dal framework dell'applicazione nella directory *\<Project-directory > \bin\Release\netcoreapp2.1\publish* .
@@ -244,7 +244,7 @@ Visual Studio crea anche un profilo di pubblicazione separato (\*.pubxml) per og
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-https://go.microsoft.com/fwlink/?LinkID=208121. 
+https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>

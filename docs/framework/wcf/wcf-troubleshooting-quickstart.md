@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: dfbf5a9b437d0acea16a75236fd3d2861c0f2e06
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 2fef4c7b00fd6a1ed8f85a8bfa01ef9cfffa1bbb
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802359"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919947"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Guida rapida alla risoluzione dei problemi di WCF
 In questo argomento viene elencata una serie di problemi noti rilevati dai clienti durante lo sviluppo di client e servizi WCF. Se il problema rilevato non presente in questo elenco, si consiglia di configurare la traccia del servizio. In tal modo verrà generato un file di traccia che è possibile visualizzare con il visualizzatore dei file di traccia e verranno ricevute informazioni dettagliate sulle eccezioni che si possono verificare nel servizio. Per altre informazioni sulla configurazione della traccia, vedere [Configuring Tracing](./diagnostics/tracing/configuring-tracing.md). Per altre informazioni sul visualizzatore dei file di traccia, vedere [Service Trace Viewer Tool (SvcTraceViewer.exe)](service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -158,7 +158,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q77"></a>   
 ## <a name="im-using-an-x509-certificate-with-my-service-and-i-get-a-systemsecuritycryptographycryptographicexception-whats-happening"></a>Utilizzando un certificato X.509 con il servizio viene generata un'eccezione System.Security.Cryptography.CryptographicException. Qual è il problema?  
- Questa situazione in genere si verifica dopo aver modificato l'account utente utilizzato per eseguire il processo di lavoro IIS. Ad esempio, in [!INCLUDE[wxp](../../../includes/wxp-md.md)], se si modifica l'account utente predefinito con cui si esegue Aspnet_wp.exe da ASPNET in un account utente personalizzato, è possibile che si verifichi questo errore. Se si utilizza una chiave privata, il processo che la utilizza dovrà disporre delle autorizzazioni per accedere al file in cui è archiviata tale chiave.  
+ Questa situazione in genere si verifica dopo aver modificato l'account utente utilizzato per eseguire il processo di lavoro IIS. Ad esempio, in Windows XP, se si modifica l'account utente predefinito con cui viene eseguito il Aspnet_wp. exe da ASPNET a un account utente personalizzato, è possibile che venga visualizzato questo errore. Se si utilizza una chiave privata, il processo che la utilizza dovrà disporre delle autorizzazioni per accedere al file in cui è archiviata tale chiave.  
   
  In questo caso, è necessario assegnare i privilegi di accesso in lettura all'account del processo per il file che contiene la chiave privata. Ad esempio, se il processo di lavoro IIS è in esecuzione con l'account Bob, è necessario assegnare a Bob l'accesso in lettura al file che contiene la chiave privata.  
   

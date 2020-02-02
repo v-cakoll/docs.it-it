@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: ec9c6f992bcd4a76e2f70018f3facca42b7b660c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4eb75f23359334ea483cba1498f1804c4b24c80c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714062"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920461"
 ---
 # <a name="consume-a-net-standard-library-in-visual-studio"></a>Utilizzare una libreria .NET Standard in Visual Studio
 
@@ -86,4 +86,4 @@ Per rendere la libreria di classi disponibile sul Web, è possibile pubblicarla 
    > [!TIP]
    > Se la directory che contiene *dotnet.exe* non si trova nel percorso indicato, è possibile individuarne il percorso immettendo `where dotnet.exe` nella finestra della console.
 
-Per altre informazioni sulla creazione di pacchetti NuGet, vedere [Come creare un pacchetto NuGet con strumenti multipiattaforma](../deploying/creating-nuget-packages.md).
+Per altre informazioni sulla creazione di pacchetti NuGet, vedere [come creare un pacchetto NuGet con il interfaccia della riga di comando di .NET Core](../deploying/creating-nuget-packages.md).

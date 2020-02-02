@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: 7a77f7d11bbd2b685bdcf53a3992b4e04b3691b8
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 9608f9cc55bbba29686440be529659c6606b0eb8
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901236"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921043"
 ---
 # <a name="hosting-services"></a>Servizi di hosting
 
@@ -32,9 +32,9 @@ Questa opzione di hosting consiste nella registrazione del dominio applicazione 
 
 ### <a name="internet-information-services-iis"></a>Internet Information Services (IIS)
 
-L'opzione di hosting di IIS è integrata con ASP.NET e utilizza le funzionalità offerte da queste tecnologie, ad esempio il riciclo dei processi, l'arresto inattivo, il monitoraggio dell'integrità dei processi e l'attivazione basata su messaggi. Nei sistemi operativi [!INCLUDE[wxp](../../../includes/wxp-md.md)] e Windows Server 2003 questa è la soluzione preferita per l'hosting di applicazioni di servizi Web che devono essere a disponibilità elevata e altamente scalabili. IIS offre inoltre la gestione integrata che i clienti si aspettano da un prodotto server aziendale. Questa opzione di hosting richiede che IIS sia configurato correttamente, ma non richiede la scrittura di codice di hosting come parte dell'applicazione. Per ulteriori informazioni su come configurare IIS che ospita un servizio WCF, vedere [procedura: ospitare un servizio WCF in IIS](./feature-details/how-to-host-a-wcf-service-in-iis.md).
+L'opzione di hosting di IIS è integrata con ASP.NET e utilizza le funzionalità offerte da queste tecnologie, ad esempio il riciclo dei processi, l'arresto inattivo, il monitoraggio dell'integrità dei processi e l'attivazione basata su messaggi. Nei sistemi operativi Windows XP e Windows Server 2003 questa è la soluzione preferita per l'hosting di applicazioni di servizi Web che devono essere a disponibilità elevata e altamente scalabili. IIS offre inoltre la gestione integrata che i clienti si aspettano da un prodotto server aziendale. Questa opzione di hosting richiede che IIS sia configurato correttamente, ma non richiede la scrittura di codice di hosting come parte dell'applicazione. Per ulteriori informazioni su come configurare IIS che ospita un servizio WCF, vedere [procedura: ospitare un servizio WCF in IIS](./feature-details/how-to-host-a-wcf-service-in-iis.md).
 
- I servizi ospitati in IIS possono utilizzare solo il trasporto HTTP. L'implementazione in IIS 5.1 ha introdotto alcune limitazioni in [!INCLUDE[wxp](../../../includes/wxp-md.md)]. L'attivazione basata su messaggi fornita per un servizio WCF da IIS 5,1 in [!INCLUDE[wxp](../../../includes/wxp-md.md)] impedisce a tutti gli altri servizi WCF indipendenti presenti nello stesso computer di utilizzare la porta 80 per la comunicazione. I servizi WCF possono essere eseguiti nello stesso AppDomain/pool di applicazioni/processo di lavoro di altre applicazioni quando sono ospitati da IIS 6,0 in Windows Server 2003. Tuttavia, poiché WCF e IIS 6,0 utilizzano entrambi lo stack HTTP in modalità kernel (HTTP. sys), IIS 6,0 può condividere la porta 80 con altri servizi WCF indipendenti in esecuzione nello stesso computer, a differenza di IIS 5,1.
+ I servizi ospitati in IIS possono utilizzare solo il trasporto HTTP. La relativa implementazione in IIS 5,1 ha introdotto alcune limitazioni in Windows XP. L'attivazione basata su messaggi fornita per un servizio WCF da IIS 5,1 in Windows XP impedisce a tutti gli altri servizi WCF indipendenti nello stesso computer di utilizzare la porta 80 per la comunicazione. I servizi WCF possono essere eseguiti nello stesso AppDomain/pool di applicazioni/processo di lavoro di altre applicazioni quando sono ospitati da IIS 6,0 in Windows Server 2003. Tuttavia, poiché WCF e IIS 6,0 utilizzano entrambi lo stack HTTP in modalità kernel (HTTP. sys), IIS 6,0 può condividere la porta 80 con altri servizi WCF indipendenti in esecuzione nello stesso computer, a differenza di IIS 5,1.
 
 ### <a name="windows-process-activation-service-was"></a>Servizio di attivazione dei processi di Windows (WAS, Windows Process Activation Service)
 
@@ -57,9 +57,9 @@ Il servizio Attivazione processo Windows (WAS) è il nuovo meccanismo di attivaz
 
 |Ambiente host|Disponibilità della piattaforma|Trasporti supportati|Riciclo di processo e AppDomain|
 |-------------------------|---------------------------|--------------------------|-------------------------------------|
-|Applicazioni gestite ("indipendenti")|[!INCLUDE[wxp](../../../includes/wxp-md.md)], Windows Server 2003, Windows Vista,<br /><br /> Windows Server 2008|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|No|
-|Servizi Windows (precedentemente noti come servizi NT)|[!INCLUDE[wxp](../../../includes/wxp-md.md)], Windows Server 2003, Windows Vista,<br /><br /> Windows Server 2008|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|No|
-|IIS 5,1|[!INCLUDE[wxp](../../../includes/wxp-md.md)]|HTTP|Sì|
+|Applicazioni gestite ("indipendenti")|Windows XP, Windows Server 2003, Windows Vista,<br /><br /> Windows Server 2008|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|No|
+|Servizi Windows (precedentemente noti come servizi NT)|Windows XP, Windows Server 2003, Windows Vista,<br /><br /> Windows Server 2008|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|No|
+|IIS 5,1|Windows XP|HTTP|Sì|
 |IIS 6.0|Windows Server 2003|HTTP|Sì|
 |Servizio di attivazione dei processi di Windows (WAS, Windows Process Activation Service)|Windows Vista, Windows Server 2008|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|Sì|
 

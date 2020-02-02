@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: 6505cc027b2983fd61ae53ca7ae43319024c74f7
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: e1c3e3d7697bf9a85cf0ab7df35a4755939d1df0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964705"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921404"
 ---
 # <a name="auditing-security-events"></a>Controllo degli eventi di sicurezza
 Le applicazioni create con Windows Communication Foundation (WCF) possono registrare gli eventi di sicurezza (esito positivo, esito negativo o entrambi) con la funzionalità di controllo. Gli eventi vengono scritti nel registro eventi del sistema Windows e possono essere esaminati tramite il Visualizzatore eventi.  
@@ -32,7 +32,7 @@ Le applicazioni create con Windows Communication Foundation (WCF) possono regist
   
  Per scrivere nel registro protezione è necessario disporre del privilegio `SeAuditPrivilege`. Per impostazione predefinita, solo gli account Sistema locale e Servizio di rete dispongono di questo privilegio. Per gestire le funzioni del registro protezione `read` e `delete` è necessario disporre del privilegio `SeSecurityPrivilege`. Per impostazione predefinita, solo gli amministratori dispongono di questo privilegio.  
   
- Gli utenti autenticati possono invece leggere e scrivere nel registro applicazioni. Per impostazione predefinita, il sistema operativo [!INCLUDE[wxp](../../../../includes/wxp-md.md)] scrive eventi di controllo in tale registro. Il registro applicazioni può inoltre contenere informazioni personali a cui tutti gli utenti autenticati sono in grado di accedere.  
+ Gli utenti autenticati possono invece leggere e scrivere nel registro applicazioni. Per impostazione predefinita, in Windows XP gli eventi di controllo vengono scritti nel registro applicazioni. Il registro applicazioni può inoltre contenere informazioni personali a cui tutti gli utenti autenticati sono in grado di accedere.  
   
 ## <a name="suppressing-audit-failures"></a>Soppressione degli errori di controllo  
  Durante il controllo è inoltre disponibile un'opzione che consente di sopprimere tutti gli errori di controllo. Per impostazione predefinita, gli errori di controllo non influiscono sulle applicazioni. Tuttavia, se occorre, è possibile impostare tale opzione su `false`. In questo modo, se si verifica un errore di controllo, viene generata un'eccezione.  
@@ -78,7 +78,7 @@ Le applicazioni create con Windows Communication Foundation (WCF) possono regist
 ## <a name="security-considerations"></a>Considerazioni sulla sicurezza  
  Un utente malintenzionato a conoscenza del fatto che il controllo è attivo può inviare messaggi non validi che comportano la scrittura di voci di controllo. Ciò comporta a sua volta la generazione di errori nel sistema di controllo. Per ridurre questo problema, impostare la proprietà <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> su `true` e usare le proprietà del Visualizzatore eventi per controllare il comportamento di controllo.  
   
- Gli eventi di controllo scritti nel registro applicazioni in [!INCLUDE[wxp](../../../../includes/wxp-md.md)] sono visualizzabili da qualsiasi utente autenticato.  
+ Gli eventi di controllo scritti nel registro applicazioni in Windows XP sono visibili a tutti gli utenti autenticati.  
   
 ## <a name="choosing-between-application-and-security-event-logs"></a>Scelta fra registro eventi Applicazione o Protezione  
  Nelle tabelle seguenti sono fornite informazioni per scegliere se eseguire la registrazione nel registro eventi Applicazione o nel registro eventi Protezione.  
@@ -87,7 +87,7 @@ Le applicazioni create con Windows Communication Foundation (WCF) possono regist
   
 |System|Registro applicazioni|Registro protezione|  
 |------------|---------------------|------------------|  
-|[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] o versione successiva|Supportato|Non supportato|  
+|Windows XP SP2 o versione successiva|Supportato|Non supportato|  
 |Windows Server 2003 SP1 e Windows Vista|Supportato|Il contesto del thread deve disporre del privilegio `SeAuditPrivilege`|  
   
 #### <a name="other-factors"></a>Altri fattori  

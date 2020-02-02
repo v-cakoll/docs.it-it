@@ -4,12 +4,12 @@ description: Questo articolo riepiloga le nuove funzionalità e i miglioramenti 
 ms.custom: updateeachrelease
 ms.date: 04/12/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: ebf656c4a5499fff54cb5a70a93c4e8cc9c82d0a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a90df0360211c3b02f4f2d8697890180099c5807
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73101760"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921064"
 ---
 # <a name="whats-new-in-the-net-standard"></a>Novità di .NET Standard
 
@@ -63,7 +63,7 @@ L'unico requisito è che le API chiamate dalla libreria di classi di .NET Framew
 
 ### <a name="tooling-support-for-net-standard-libraries"></a>Supporto degli strumenti per librerie .NET Standard
 
-Con la versione 2.0 di .NET Core e .NET Standard, sia Visual Studio 2017 che l'[interfaccia della riga di comando di .NET Core](../../core/tools/index.md) includono il supporto degli strumenti per la creazione di librerie .NET Standard.
+Con il rilascio di .NET Core 2,0 e .NET Standard 2,0, sia Visual Studio 2017 che i [interfaccia della riga di comando di .NET Core](../../core/tools/index.md) includono il supporto degli strumenti per la creazione di librerie di .NET standard.
 
 Se si installa Visual Studio con il carico di lavoro **Sviluppo multipiattaforma .NET Core**, è possibile creare un progetto di libreria .NET Standard 2.0 usando un modello di progetto, come illustrato nella figura seguente:
 

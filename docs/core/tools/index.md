@@ -1,26 +1,20 @@
 ---
-title: Strumenti dell'interfaccia della riga di comando di .NET Core
-description: Panoramica degli strumenti e delle funzionalità dell'interfaccia della riga di comando di .NET Core.
+title: Interfaccia della riga di comando di .NET Core
+titleSuffix: ''
+description: Panoramica del interfaccia della riga di comando di .NET Core e delle relative funzionalità.
 ms.date: 08/14/2017
-ms.openlocfilehash: f19dcb19fb9d0203b3d3795c3fdc0b026c4c60e3
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: b0a8e0dd8cf77bb6f7567c27e9972f62515ec0f2
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163215"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920488"
 ---
-# <a name="net-core-command-line-interface-cli-tools"></a>Strumenti dell'interfaccia della riga di comando di .NET Core
+# <a name="net-core-cli-overview"></a>Panoramica di interfaccia della riga di comando di .NET Core
 
-L'interfaccia della riga di comando di .NET Core è una serie di strutture multipiattaforma per lo sviluppo di applicazioni .NET. L'interfaccia della riga di comando è una base su cui gli strumenti di livello superiore, ad esempio gli ambienti di sviluppo integrato (IDE), gli editor e gli agenti di orchestrazione della compilazione, possono essere Rest.
+L'interfaccia della riga di comando di .NET Core è una serie di procedure multipiattaforma per lo sviluppo, la compilazione, l'esecuzione e la pubblicazione di applicazioni .NET Core.
 
-## <a name="installation"></a>Installazione di
-
-È possibile usare programmi di installazione nativi o script della shell di installazione:
-
-- I programmi di installazione nativi sono destinati essenzialmente ai computer degli sviluppatori e si avvalgono del meccanismo di installazione nativo di ogni piattaforma supportata, ad esempio i pacchetti DEB in Ubuntu o i bundle MSI in Windows. Questi programmi installano e configurano l'ambiente in modo da poter essere immediatamente usato dallo sviluppatore ma richiedono privilegi amministrativi sul computer. È possibile visualizzare le istruzioni di installazione nel sito Web [.NET Core installation guide](https://aka.ms/dotnetcoregs) (Guida all'installazione di .NET Core).
-- Gli script vengono usati principalmente per configurare i server di compilazione o quando si vuole installare gli strumenti senza privilegi amministrativi. Con l'installazione degli script non vengono installati nel computer anche i prerequisiti, che devono essere installati manualmente. Per altre informazioni, vedere l'[argomento di riferimento sugli script di installazione](dotnet-install-script.md). Per informazioni su come configurare l'interfaccia della riga di comando nel server di compilazione di integrazione continua (CI, Continuous Integration), vedere [Uso di .NET Core SDK e dei relativi strumenti in integrazione continua](using-ci-with-cli.md).
-
-Per impostazione predefinita, l'interfaccia della riga di comando viene installata in modalità side-by-side (SxS). Pertanto, in un unico computer possono coesistere più versioni degli strumenti dell'interfaccia della riga di comando. La procedura per determinare la versione usata in un computer in cui sono installate più versioni è illustrata nella sezione [Driver](#driver).
+Il interfaccia della riga di comando di .NET Core è incluso nel [.NET Core SDK](../sdk.md). Per informazioni su come installare il .NET Core SDK, vedere [Install the .NET Core SDK](../install/sdk.md).
 
 ## <a name="cli-commands"></a>Comandi dell'interfaccia della riga di comando
 
@@ -153,5 +147,5 @@ Se si sono usati gli strumenti della Preview 2 per generare progetti basati su *
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Repository GitHub dotnet/CLI](https://github.com/dotnet/cli/)
+- [repository GitHub DotNet/SDK](https://github.com/dotnet/sdk/)
 - [.NET Core installation guide](https://aka.ms/dotnetcoregs) (Guida all'installazione di .NET Core)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach, parallel version
 - parallel programming, foreach
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
-ms.openlocfilehash: c2f2484f37c0e99f45b3f10951540c2bb3a4cb8d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 528e22d6b54179181d1479f4feaedfbf82933c58
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134181"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921196"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>Procedura: scrivere un ciclo Parallel. ForEach semplice
 
@@ -47,7 +47,7 @@ Per usare <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameW
 
 In Visual Studio esistono modelli di applicazione console Visual Basic e C# per Windows Desktop e .NET Core.
 
-Dalla riga di comando è possibile usare .NET Core e gli strumenti CLI corrispondenti (ad esempio `dotnet new console` o `dotnet new console -lang vb`) oppure creare il file e usare il compilatore della riga di comando per un'applicazione .NET Framework.
+Dalla riga di comando è possibile usare i comandi di interfaccia della riga di comando di .NET Core, ad esempio `dotnet new console` o `dotnet new console -lang vb`, oppure è possibile creare il file e usare il compilatore da riga di comando per un'applicazione .NET Framework.
 
 Per un progetto .NET Core è necessario fare riferimento al pacchetto NuGet **System.Drawing.Common**. In Visual Studio usare Gestione pacchetti NuGet per installare il pacchetto. In alternativa, è possibile aggiungere un riferimento al pacchetto nel file con estensione \*.csproj o \*.vbproj:
  

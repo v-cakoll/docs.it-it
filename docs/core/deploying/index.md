@@ -2,12 +2,12 @@
 title: Distribuzione di applicazioni .NET Core
 description: Informazioni sui modi per distribuire un'applicazione .NET Core.
 ms.date: 12/03/2018
-ms.openlocfilehash: 41c5285f2a9ddf38e4be7326bd5cba1c58370fe7
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 425f0d5bf11fd0572825d2025005aacf65d7d2cd
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740816"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920884"
 ---
 # <a name="net-core-application-deployment"></a>Distribuzione di applicazioni .NET Core
 
@@ -91,11 +91,11 @@ Sono presenti anche alcuni svantaggi:
 
 ## <a name="step-by-step-examples"></a>Esempi dettagliati
 
-Per esempi dettagliati della distribuzione di app .NET Core con gli strumenti dell'interfaccia della riga di comando, vedere [Deploying .NET Core Apps with CLI Tools](deploy-with-cli.md) (Distribuzione di app .NET Core con gli strumenti dell'interfaccia della riga di comando). Per esempi dettagliati della distribuzione di app .NET Core con Visual Studio, vedere [Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md) (Distribuzione di app .NET Core con Visual Studio). 
+Per esempi dettagliati della distribuzione di app .NET Core con la interfaccia della riga di comando di .NET Core, vedere [pubblicare app .NET Core con il interfaccia della riga di comando di .NET Core](deploy-with-cli.md). Per esempi dettagliati della distribuzione di app .NET Core con Visual Studio, vedere [Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md) (Distribuzione di app .NET Core con Visual Studio). 
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Distribuzione di app .NET Core con strumenti dell'interfaccia della riga di comando](deploy-with-cli.md)
+- [Pubblicare app .NET Core con il interfaccia della riga di comando di .NET Core](deploy-with-cli.md)
 - [Distribuzione di app .NET Core con Visual Studio](deploy-with-vs.md)
 - [Pacchetti, metapacchetti e framework](../packages.md)
 - [Catalogo dei RID (Runtime IDentifier) di .NET Core](../rid-catalog.md)

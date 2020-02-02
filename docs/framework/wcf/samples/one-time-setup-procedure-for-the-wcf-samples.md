@@ -2,12 +2,12 @@
 title: Procedura di installazione singola per gli esempi di Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: b75dd523d4c88eae70f8d21ac8b3c9f72ae055ed
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 1d7b5f6cb5922bde4b002611209ea3464f8e457c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744779"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921175"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procedura di installazione singola per gli esempi di Windows Communication Foundation
 
@@ -63,7 +63,7 @@ La directory virtuale **servicemodelsamples** viene utilizzata per la compilazio
     > [!NOTE]
     > Se questo passaggio non viene completato, tutti gli esempi ospitati in IIS genereranno un errore durante la compilazione. Assicurarsi di impostare correttamente le autorizzazioni oppure eseguire il prompt dei comandi SDK e il prompt dei comandi di Visual Studio (2012) come amministratore.
 
-11. Creare una directory C:\logs nel computer. Alcuni esempi potrebbero prevederne l'esistenza. Verificare che l'account appropriato disponga dell'accesso in scrittura a questa cartella. Per Windows 7, Windows Vista e Windows Server 2008 R2, questo account è **servizio di rete**. Per Windows Server 2008, l'account è NT Authority\Network Service. Per [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e Windows Server 2003, l'account è ASPNET.
+11. Creare una directory C:\logs nel computer. Alcuni esempi potrebbero prevederne l'esistenza. Verificare che l'account appropriato disponga dell'accesso in scrittura a questa cartella. Per Windows 7, Windows Vista e Windows Server 2008 R2, questo account è **servizio di rete**. Per Windows Server 2008, l'account è NT Authority\Network Service. Per Windows XP e Windows Server 2003, l'account è ASPNET.
 
 12. Eseguire il file Setupcerttool.bat. Questo file si trova nella \<cartella installpath > \WF_WCF_Samples\WCF\Setup  Tramite questo script verranno eseguite le attività seguenti:
 

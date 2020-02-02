@@ -3,12 +3,12 @@ title: Creare tipi mixin usando metodi di interfaccia predefiniti
 description: Utilizzando i membri di interfaccia predefiniti è possibile estendere le interfacce con implementazioni predefinite facoltative per gli implementatori.
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: fb8fc1f432bdf909bae4f54bb76d10d7619f71a3
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: f97410124a4ca5bbb10972ab5e7942fa4af68d72
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140851"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921450"
 ---
 # <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>Esercitazione: combinare le funzionalità in durante la creazione di classi mediante interfacce con metodi di interfaccia predefiniti
 
@@ -22,9 +22,9 @@ In questa esercitazione si imparerà a:
 > * Creare classi che usano le implementazioni predefinite.
 > * Creare classi che eseguono l'override di alcune o di tutte le implementazioni predefinite.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
-È necessario configurare il computer per l'esecuzione di .NET Core, incluso il C# compilatore 8,0. Il C# compilatore 8,0 è disponibile a partire da [Visual Studio 2019, 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)o [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download/dotnet-core) o versione successiva.
+È necessario configurare il computer per l'esecuzione di .NET Core, incluso il C# compilatore 8,0. Il C# compilatore 8,0 è disponibile a partire da [Visual Studio 2019 versione 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)o [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download/dotnet-core) o versione successiva.
 
 ## <a name="limitations-of-extension-methods"></a>Limitazioni dei metodi di estensione
 
@@ -45,7 +45,7 @@ Si consideri un'applicazione di automazione domestica. Probabilmente si hanno mo
 
 Alcune di queste funzionalità estese potrebbero essere emulate in dispositivi che supportano il set minimo. Che indica che fornisce un'implementazione predefinita. Per i dispositivi con più funzionalità integrate, il software del dispositivo utilizzerebbe le funzionalità native. Per altre luci, può scegliere di implementare l'interfaccia e di usare l'implementazione predefinita.
 
-I membri di interfaccia predefiniti sono una soluzione migliore per questo scenario rispetto ai metodi di estensione. Gli autori delle classi possono controllare le interfacce che scelgono di implementare. Le interfacce che scelgono sono disponibili come metodi. Inoltre, poiché i metodi di interfaccia predefiniti sono virtuali per impostazione predefinita, la distribuzione del metodo sceglie sempre l'implementazione nella classe. 
+I membri di interfaccia predefiniti sono una soluzione migliore per questo scenario rispetto ai metodi di estensione. Gli autori delle classi possono controllare le interfacce che scelgono di implementare. Le interfacce che scelgono sono disponibili come metodi. Inoltre, poiché i metodi di interfaccia predefiniti sono virtuali per impostazione predefinita, la distribuzione del metodo sceglie sempre l'implementazione nella classe.
 
 Viene ora creato il codice per illustrare queste differenze.
 
@@ -79,7 +79,7 @@ Un tipo di luce diverso può supportare un protocollo più sofisticato. Può for
 
 [!code-csharp[Override the timer function](~/samples/csharp/tutorials/mixins-with-interfaces/HalogenLight.cs?name=SnippetHalogenLight)]
 
-A differenza dei metodi della classe virtuale che eseguono l'override, la dichiarazione di `TurnOnFor` nella classe `HalogenLight` non usa la parola chiave `override`. 
+A differenza dei metodi della classe virtuale che eseguono l'override, la dichiarazione di `TurnOnFor` nella classe `HalogenLight` non usa la parola chiave `override`.
 
 ## <a name="mix-and-match-capabilities"></a>Funzionalità di combinazione e corrispondenza
 

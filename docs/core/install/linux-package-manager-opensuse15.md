@@ -4,12 +4,12 @@ description: Usare uno Gestione pacchetti per installare .NET Core SDK e Runtime
 author: thraka
 ms.author: adegeo
 ms.date: 12/26/2019
-ms.openlocfilehash: ae0f6664c0545ceb047cd9b110fe3f26740e5816
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: aaece5e3554ab567cf82c23265c8fba1656298d8
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116152"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920764"
 ---
 # <a name="opensuse-15-package-manager---install-net-core"></a>Gestione pacchetti openSUSE 15-installare .NET Core
 
@@ -17,7 +17,7 @@ ms.locfileid: "76116152"
 
 Questo articolo descrive come usare un gestore di pacchetti per installare .NET Core in openSUSE 15. Se si sta installando il runtime, si consiglia di installare il [runtime di ASP.NET Core](#install-the-aspnet-core-runtime), perché include sia .NET Core che ASP.NET Core Runtime.
 
-## <a name="register-microsoft-key-and-feed"></a>Registrare la chiave Microsoft e il feed
+## <a name="register-microsoft-key-and-feed"></a>Registrare la chiave e il feed Microsoft
 
 Prima di installare .NET, è necessario:
 
@@ -25,7 +25,7 @@ Prima di installare .NET, è necessario:
 - Registrare il repository del prodotto.
 - Installare le dipendenze necessarie.
 
-Questa operazione deve essere eseguita una volta sola per ogni computer.
+Questa operazione deve essere eseguita solo una volta per ogni computer.
 
 Aprire un terminale ed eseguire i comandi seguenti.
 
@@ -64,3 +64,11 @@ sudo zypper install dotnet-runtime-3.1
 ## <a name="how-to-install-other-versions"></a>Come installare altre versioni
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
+## <a name="troubleshoot-the-package-manager"></a>Risolvere i problemi relativi a gestione pacchetti
+
+Questa sezione fornisce informazioni sugli errori comuni che possono verificarsi durante l'uso di gestione pacchetti per installare .NET Core.
+
+### <a name="failed-to-fetch"></a>Non è stato possibile recuperare
+
+[!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]

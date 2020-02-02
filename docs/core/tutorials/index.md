@@ -4,12 +4,12 @@ description: Seguire le esercitazioni per l'apprendimento di .NET Core per compi
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: 7039d5877ecbd4477d64991321a7fc46cadc2848
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4e0acc357453d3bd3fb877e357264cc1aa715e4c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714036"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920432"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Scopri le esercitazioni su .NET Core e sugli strumenti di .NET Core SDK
 
@@ -35,10 +35,10 @@ Le esercitazioni seguenti includono informazioni e istruzioni sull'uso di .NET C
 - [Introduzione all'uso di .NET Core su macOS con Visual Studio per Mac](using-on-mac-vs.md)
 - [Creazione di una soluzione .NET Core completa in macOS con Visual Studio per Mac](using-on-mac-vs-full-solution.md)
 
-## <a name="build-applications-with-the-net-core-cli-tools"></a>Creazione di applicazioni con gli strumenti di interfaccia della riga di comando di .NET Core
+## <a name="build-applications-with-the-net-core-cli"></a>Compilazione di applicazioni con il interfaccia della riga di comando di .NET Core
 
-- [Introduzione all'uso di .NET Core in Windows/Linux/macOS con gli strumenti dell'interfaccia CLI di .NET Core](cli-create-console-app.md)
-- [Organizing and testing projects with the .NET Core CLI tools](testing-with-cli.md) (Organizzazione e test di progetti con gli strumenti dell'interfaccia della riga di comando di .NET Core)
+- [Introduzione all'uso di .NET Core in Windows/Linux/macOS con il interfaccia della riga di comando di .NET Core](cli-create-console-app.md)
+- [Organizzazione e testing dei progetti con la interfaccia della riga di comando di .NET Core](testing-with-cli.md)
 - [Introduzione a F#](../../fsharp/get-started/get-started-command-line.md)
 
 ## <a name="other"></a>Altro

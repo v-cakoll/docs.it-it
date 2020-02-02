@@ -3,20 +3,20 @@ title: Panoramica dello strumento WCF svcutil
 description: Panoramica dello strumento Microsoft WCF dotnet-svcutil che aggiunge funzionalità per i progetti .NET Core e ASP.NET Core, come lo strumento WCF svcutil per i progetti .NET Framework.
 author: mlacouture
 ms.date: 02/22/2019
-ms.openlocfilehash: d204576f27227ce6e65d61471f19cdf3ec4df37a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 0607c73935f319f2cc0d8d9f92d96a4c71c54edf
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714559"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920940"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>Strumento WCF dotnet-svcutil per .NET Core
 
-Lo strumento Windows Communication Foundation (WCF) **dotnet-svcutil** è uno strumento dell'interfaccia della riga di comando di .NET Core che consente di recuperare metadati da un servizio Web, in un percorso di rete o da un file WSDL e di generare una classe WCF contenente metodi del proxy client che accedono alle operazioni del servizio Web.
+Lo strumento **DotNet-svcutil** Windows Communication Foundation (WCF) è uno strumento .NET che consente di recuperare metadati da un servizio Web in un percorso di rete o da un file WSDL e genera una classe WCF contenente metodi proxy client che accedono alle operazioni del servizio Web.
 
 Analogo allo strumento [**Service Model Metadata - svcutil**](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per i progetti .NET Framework, **dotnet-svcutil** è uno strumento da riga di comando per la generazione di un riferimento al servizio Web compatibile con i progetti .NET Core e .NET Standard.
 
-Lo strumento **DotNet-Svcutil** è un'opzione alternativa al [**servizio Web WCF riferimento**](wcf-web-service-reference-guide.md) al provider di servizi connessi di Visual Studio, fornito per la prima volta con Visual Studio 2017 versione 15,5. Come strumento dell'interfaccia della riga di comando di .NET Core, **dotnet-svcutil** è disponibile come strumento multipiattaforma in Linux, macOS e Windows.
+Lo strumento **DotNet-Svcutil** è un'opzione alternativa al [**servizio Web WCF riferimento**](wcf-web-service-reference-guide.md) al provider di servizi connessi di Visual Studio, fornito per la prima volta con Visual Studio 2017 versione 15,5. Lo strumento **DotNet-Svcutil** come strumento .NET è disponibile su più piattaforme in Linux, MacOS e Windows.
 
 > [!IMPORTANT]
 > Si consiglia di fare riferimento solo a servizi provenienti da un'origine attendibile. L'aggiunta di riferimenti da un'origine non attendibile può compromettere la sicurezza.

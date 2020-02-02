@@ -4,12 +4,12 @@ description: Usare uno Gestione pacchetti per installare .NET Core SDK e Runtime
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: a8e92cab30302c5636d23f098eb60637141545ca
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: e36116d357b8fcd5ced328a574e12c558dd9e2f2
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740615"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920686"
 ---
 # <a name="ubuntu-1804-package-manager---install-net-core"></a>Gestione pacchetti Ubuntu 18,04-installare .NET Core
 
@@ -17,7 +17,7 @@ ms.locfileid: "75740615"
 
 Questo articolo descrive come usare un gestore di pacchetti per installare .NET Core in Ubuntu 18,04. Se si sta installando il runtime, si consiglia di installare il [runtime di ASP.NET Core](#install-the-aspnet-core-runtime), perché include sia .NET Core che ASP.NET Core Runtime.
 
-## <a name="register-microsoft-key-and-feed"></a>Registrare la chiave Microsoft e il feed
+## <a name="register-microsoft-key-and-feed"></a>Registrare la chiave e il feed Microsoft
 
 Prima di installare .NET, è necessario:
 
@@ -25,7 +25,7 @@ Prima di installare .NET, è necessario:
 - Registrare il repository del prodotto.
 - Installare le dipendenze necessarie.
 
-Questa operazione deve essere eseguita una volta sola per ogni computer.
+Questa operazione deve essere eseguita solo una volta per ogni computer.
 
 Aprire un terminale ed eseguire i comandi seguenti.
 
@@ -85,6 +85,10 @@ sudo apt-get install dotnet-runtime-3.1
 
 ## <a name="troubleshoot-the-package-manager"></a>Risolvere i problemi relativi a gestione pacchetti
 
+Questa sezione fornisce informazioni sugli errori comuni che possono verificarsi durante l'uso di gestione pacchetti per installare .NET Core.
+
+### <a name="unable-to-locate"></a>Impossibile individuare
+
 Se viene visualizzato un messaggio di errore simile a **non è possibile individuare il pacchetto {il pacchetto .NET Core}** , eseguire i comandi seguenti.
 
 ```bash
@@ -107,3 +111,7 @@ sudo apt-get install -y apt-transport-https
 sudo apt-get update
 sudo apt-get install {the .NET Core package}
 ```
+
+### <a name="failed-to-fetch"></a>Non è stato possibile recuperare
+
+[!INCLUDE [package-manager-failed-to-fetch-deb](includes/package-manager-failed-to-fetch-deb.md)]

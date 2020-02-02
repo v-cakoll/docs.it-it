@@ -4,18 +4,18 @@ description: Questa esercitazione illustra alcune funzionalità disponibili in .
 ms.date: 03/06/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 921c8fc7824bdb48f08e4d9f5a276bf2284f8a17
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 09ce36e7a61f576dc4449976ce676701dc57c9cd
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714595"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921127"
 ---
 # <a name="console-app"></a>App console
 
 Questa esercitazione illustra alcune funzionalità disponibili in .NET Core e nel linguaggio C#. Si apprenderà:
 
-- Nozioni di base sull'interfaccia della riga di comando di .NET Core
+- Nozioni di base sul interfaccia della riga di comando di .NET Core
 - Struttura di un'applicazione console in C#
 - Input/output della console
 - Nozioni di base sulle API di I/O dei file in .NET
@@ -311,6 +311,6 @@ RunTeleprompter().Wait();
 
 ## <a name="conclusion"></a>Conclusione
 
-In questa esercitazione sono state illustrate diverse funzionalità del linguaggio C# e presentate le librerie .NET Core correlate all'uso di applicazioni console. A partire da queste informazioni è possibile approfondire la conoscenza del linguaggio e delle classi presentate nell'esercitazione. Sono state illustrate le nozioni di base dell'I/O di file e console, il blocco e l'utilizzo non bloccanti della programmazione asincrona basata su C# attività, una C# Panoramica del linguaggio e la modalità di organizzazione dei programmi e l'interfaccia della riga di comando e gli strumenti di .NET Core.
+In questa esercitazione sono state illustrate diverse funzionalità del linguaggio C# e presentate le librerie .NET Core correlate all'uso di applicazioni console. A partire da queste informazioni è possibile approfondire la conoscenza del linguaggio e delle classi presentate nell'esercitazione. Sono state illustrate le nozioni di base dell'I/O di file e console, il blocco e l'utilizzo non bloccanti della programmazione asincrona basata su C# attività, una C# Panoramica del linguaggio e la modalità di organizzazione dei programmi e il interfaccia della riga di comando di .NET Core.
 
 Per altre informazioni su I/O di file, consultare l'argomento [I/O di file e di flussi](../../standard/io/index.md). Per altre informazioni sul modello di programmazione asincrono usato in questa esercitazione, consultare l'argomento [Programmazione asincrona basata su attività](../..//standard/parallel-programming/task-based-asynchronous-programming.md) e l'argomento [Programmazione asincrona](../async.md).

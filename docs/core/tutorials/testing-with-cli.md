@@ -1,16 +1,16 @@
 ---
-title: Organizzazione e test di progetti con la riga di comando di .NET Core
+title: Organizzazione e testing dei progetti con la interfaccia della riga di comando di .NET Core
 description: Questa esercitazione illustra come organizzare e testare i progetti .NET Core dalla riga di comando.
 author: cartermp
 ms.date: 09/10/2018
-ms.openlocfilehash: fdaa42be4d3b8872a3119f97f253ce277564339e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 11d13ad1d74c69cdfe0626bda8823dd0609da85f
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715347"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920412"
 ---
-# <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Organizzazione e test di progetti con la riga di comando di .NET Core
+# <a name="organizing-and-testing-projects-with-the-net-core-cli"></a>Organizzazione e testing dei progetti con la interfaccia della riga di comando di .NET Core
 
 Questa esercitazione segue [Introduzione all'uso di .NET Core su Windows/Linux/macOS dalla riga di comando](cli-create-console-app.md) e va oltre la creazione di una semplice app console, illustrando lo sviluppo di applicazioni più avanzate e organizzate. L'esercitazione indica come usare le cartelle per organizzare il codice, quindi illustra come estendere un'applicazione console con il framework di testo [xUnit](https://xunit.github.io/).
 

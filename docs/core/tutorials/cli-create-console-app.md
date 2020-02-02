@@ -1,23 +1,23 @@
 ---
-title: Introduzione a .NET Core con l'interfaccia della riga di comando-interfaccia della riga di comando di .NET Core
-description: Esercitazione dettagliata che illustra come iniziare a usare .NET Core in Windows, Linux o macOS con l'interfaccia della riga di comando (CLI) di .NET Core.
+title: Introduzione all'uso di .NET Core con l'interfaccia della riga di comando
+description: Esercitazione dettagliata che illustra come iniziare a usare .NET Core in Windows, Linux o macOS usando il interfaccia della riga di comando di .NET Core.
 author: thraka
 ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: 4285ed3c0488ea615ca89b0b771bf09c8c29b318
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 6e1c7881aa415ea54307d80214001a2f0fe5b4a6
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739121"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920472"
 ---
-# <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Introduzione all'uso di .NET Core su Windows/Linux/macOS dalla riga di comando
+# <a name="get-started-with-net-core-using-the-net-core-cli"></a>Introduzione a .NET Core con la interfaccia della riga di comando di .NET Core
 
-Questo articolo illustra come iniziare a sviluppare app multipiattaforma nel computer usando gli strumenti interfaccia della riga di comando di .NET Core.
+Questo articolo illustra come iniziare a sviluppare app .NET Core compatibili con Windows, Linux e macOS usando il interfaccia della riga di comando di .NET Core.
 
-Se non si ha familiarità con il set di strumenti dell'interfaccia della riga di comando di .NET Core, leggere [Panoramica di .NET Core SDK](../tools/index.md).
+Se non si ha familiarità con il interfaccia della riga di comando di .NET Core, vedere la [Panoramica di interfaccia della riga di comando di .NET Core](../tools/index.md).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -194,6 +194,6 @@ L'operazione è ora completata. A questo punto, è possibile usare i concetti di
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Organizing and testing projects with the .NET Core CLI tools](testing-with-cli.md) (Organizzazione e test di progetti con gli strumenti dell'interfaccia della riga di comando di .NET Core)
-- [Pubblicare le app .NET Core con l'interfaccia della riga di comando](../deploying/deploy-with-cli.md)
-- [Altre informazioni sulla distribuzione delle app](../deploying/index.md)
+- [Organizzazione e testing dei progetti con la interfaccia della riga di comando di .NET Core](testing-with-cli.md)
+- [Pubblicare app .NET Core con il interfaccia della riga di comando di .NET Core](../deploying/deploy-with-cli.md)
+- [Distribuzione di applicazioni .NET Core](../deploying/index.md)

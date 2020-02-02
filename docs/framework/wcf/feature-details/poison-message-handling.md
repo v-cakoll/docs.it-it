@@ -2,12 +2,12 @@
 title: Gestione dei messaggi non elaborabili
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: ff1eaec99308b06250722b290b7005ac21731570
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 389d0651438036cd23d30cf7dd866956ac8e5dae
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337642"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921197"
 ---
 # <a name="poison-message-handling"></a>Gestione dei messaggi non elaborabili
 Un *messaggio non elaborabile* è un messaggio che ha superato il numero massimo di tentativi di recapito all'applicazione. Questa situazione può insorgere quando un'applicazione basata sulla coda non è in grado di elaborare un messaggio a causa di errori. Per far fronte a richieste di affidabilità, un'applicazione in coda riceve messaggi nell'ambito di una transazione. Se la transazione nella quale è stato ricevuto un messaggio in coda viene interrotta, il messaggio resta nella coda, quindi viene eseguito un nuovo tentativo nell'ambito di una nuova transazione. Se il problema che ha determinato l'interruzione della transazione non viene risolto, l'applicazione ricevente può rimanere bloccata in una successione continua di ricezioni e interruzioni dello stesso messaggio fino al raggiungimento del numero massimo di tentativi di recapito. Ne consegue l'impossibilità di elaborare il messaggio.  
@@ -21,7 +21,7 @@ Un *messaggio non elaborabile* è un messaggio che ha superato il numero massimo
   
 - `ReceiveRetryCount`. Valore integer che indica il numero massimo di tentativi di recapito di un messaggio dalla coda dell'applicazione all'applicazione. Il valore predefinito è 5. È sufficiente nei casi in cui un tentativo immediato corregge il problema, ad esempio con un deadlock temporaneo su un database.  
   
-- `MaxRetryCycles`. Valore integer che indica il numero massimo di cicli di ripetizione. Un ciclo di ripetizione consiste nel trasferimento di un messaggio dalla coda dell'applicazione alla coda secondaria dei tentativi e, dopo un intervallo di tempo configurabile, dalla coda secondaria dei tentativi alla coda dell'applicazione per tentare di nuovo il recapito. Il valore predefinito è 2. In Windows Vista, il messaggio viene tentato al massimo (`ReceiveRetryCount` + 1) * (`MaxRetryCycles` + 1) volte. `MaxRetryCycles` viene ignorato in Windows Server 2003 e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+- `MaxRetryCycles`. Valore integer che indica il numero massimo di cicli di ripetizione. Un ciclo di ripetizione consiste nel trasferimento di un messaggio dalla coda dell'applicazione alla coda secondaria dei tentativi e, dopo un intervallo di tempo configurabile, dalla coda secondaria dei tentativi alla coda dell'applicazione per tentare di nuovo il recapito. Il valore predefinito è 2. In Windows Vista, il messaggio viene tentato al massimo (`ReceiveRetryCount` + 1) * (`MaxRetryCycles` + 1) volte. `MaxRetryCycles` viene ignorato in Windows Server 2003 e Windows XP.  
   
 - `RetryCycleDelay`. Intervallo di tempo tra cicli di ripetizione. Il valore predefinito è 30 minuti. `MaxRetryCycles` e `RetryCycleDelay` forniscono insieme un meccanismo per risolvere il problema con un nuovo tentativo eseguito dopo un certo tempo. È ad esempio in grado di gestire un set di righe bloccate in un commit di transazioni in sospeso di SQL Server.  
   
@@ -39,12 +39,12 @@ Un *messaggio non elaborabile* è un messaggio che ha superato il numero massimo
   
 - ((ReceiveRetryCount + 1) * (MaxRetryCycles + 1)) in Windows Vista.  
   
-- (ReceiveRetryCount + 1) in Windows Server 2003 e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+- (ReceiveRetryCount + 1) in Windows Server 2003 e Windows XP.  
   
 > [!NOTE]
 > Non vengono eseguiti altri tentativi per i messaggi recapitati correttamente.  
   
- Per tenere traccia del numero di tentativi di lettura di un messaggio, Windows Vista mantiene una proprietà durevole del messaggio che conta il numero di interruzioni e una proprietà del conteggio di spostamento che conta il numero di volte in cui il messaggio si sposta tra la coda dell'applicazione e le code secondarie. Il canale WCF utilizza questi per calcolare il numero di tentativi di ricezione e il numero di cicli di ripetizione. In Windows Server 2003 e [!INCLUDE[wxp](../../../../includes/wxp-md.md)]il numero di interruzioni viene mantenuto in memoria dal canale WCF e viene reimpostato in caso di errore dell'applicazione. Inoltre, il canale WCF può conservare i conteggi delle interruzioni per un massimo di 256 messaggi in memoria in qualsiasi momento. Se viene letto il 257° messaggio, il messaggio più vecchio viene eliminato dal conteggio.  
+ Per tenere traccia del numero di tentativi di lettura di un messaggio, Windows Vista mantiene una proprietà durevole del messaggio che conta il numero di interruzioni e una proprietà del conteggio di spostamento che conta il numero di volte in cui il messaggio si sposta tra la coda dell'applicazione e le code secondarie. Il canale WCF utilizza questi per calcolare il numero di tentativi di ricezione e il numero di cicli di ripetizione. In Windows Server 2003 e Windows XP il numero di interruzioni viene mantenuto in memoria dal canale WCF e viene reimpostato in caso di errore dell'applicazione. Inoltre, il canale WCF può conservare i conteggi delle interruzioni per un massimo di 256 messaggi in memoria in qualsiasi momento. Se viene letto il 257° messaggio, il messaggio più vecchio viene eliminato dal conteggio.  
   
  Le proprietà del numero di interruzioni e del numero di spostamenti sono a disposizione dell'operazione del servizio mediante il contesto dell'operazione. Nell'esempio di codice seguente viene spiegato come accedervi.  
   
@@ -66,7 +66,7 @@ Un *messaggio non elaborabile* è un messaggio che ha superato il numero massimo
   
  L'applicazione potrebbe richiedere una forma di gestione automatica dei messaggi non elaborabili per spostare tali messaggi in una coda apposita affinché il servizio possa accedere al resto dei messaggi presenti nella coda. L'unico scenario in cui viene utilizzato il meccanismo di gestione degli errori per rimanere in attesa delle eccezioni di messaggi non elaborabili si verifica quanto la proprietà <xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> è impostata su <xref:System.ServiceModel.ReceiveErrorHandling.Fault>. Nell'esempio di messaggio non elaborabile per Accodamento messaggi 3.0 viene illustrato questo comportamento. Di seguito vengono descritti i passaggi necessari per gestire i messaggi non elaborabili, comprese le procedure consigliate:  
   
-1. Assicurarsi che le impostazioni dei messaggi non elaborabili rispettino i requisiti dell'applicazione. Quando si utilizzano le impostazioni, assicurarsi di comprendere le differenze tra le funzionalità di Accodamento messaggi in Windows Vista, Windows Server 2003 e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+1. Assicurarsi che le impostazioni dei messaggi non elaborabili rispettino i requisiti dell'applicazione. Quando si utilizzano le impostazioni, assicurarsi di comprendere le differenze tra le funzionalità di Accodamento messaggi in Windows Vista, Windows Server 2003 e Windows XP.  
   
 2. Se necessario, implementare `IErrorHandler` per gestire gli errori di messaggi non elaborabili. Poiché l'impostazione di `ReceiveErrorHandling` su `Fault` richiede un meccanismo manuale per rimuovere dalla coda il messaggio non elaborabile o per correggere un problema collegato esterno, l'utilizzo tipico consiste nell'implementare `IErrorHandler` quando `ReceiveErrorHandling` è impostato su `Fault`, come illustrato nel codice seguente.  
   
@@ -95,13 +95,13 @@ Un *messaggio non elaborabile* è un messaggio che ha superato il numero massimo
  La gestione di messaggi non elaborabili non termina quando un messaggio viene inserito nella coda di messaggi non elaborabili. I messaggi presenti nella coda di messaggi non elaborabili devono comunque essere letti e gestiti. È possibile utilizzare un sottoinsieme di impostazioni della gestione di messaggi non elaborabili durante la lettura di messaggi dalla coda secondaria non elaborabile finale. Le impostazioni applicabili sono `ReceiveRetryCount` e `ReceiveErrorHandling`. È possibile impostare `ReceiveErrorHandling` su Drop, Reject o Fault. `MaxRetryCycles` viene ignorato e viene generata un'eccezione se `ReceiveErrorHandling` è impostato su Move.  
   
 ## <a name="windows-vista-windows-server-2003-and-windows-xp-differences"></a>Differenze tra Windows Vista, Windows Server 2003 e Windows XP  
- Come indicato in precedenza, non tutte le impostazioni di gestione dei messaggi non elaborabili si applicano a Windows Server 2003 e [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Le seguenti differenze principali tra Accodamento messaggi in Windows Server 2003, [!INCLUDE[wxp](../../../../includes/wxp-md.md)]e Windows Vista sono rilevanti per la gestione dei messaggi non elaborabili:  
+ Come indicato in precedenza, non tutte le impostazioni di gestione dei messaggi non elaborabili si applicano a Windows Server 2003 e Windows XP. Le seguenti differenze principali tra Accodamento messaggi in Windows Server 2003, Windows XP e Windows Vista sono rilevanti per la gestione dei messaggi non elaborabili:  
   
-- Accodamento messaggi in Windows Vista supporta le code secondarie, mentre Windows Server 2003 e [!INCLUDE[wxp](../../../../includes/wxp-md.md)] non supportano le code secondarie. Le code secondarie vengono utilizzate nella gestione dei messaggi non elaborabili. Le code di tentativi e la coda non elaborabile sono code secondarie della coda dell'applicazione creata in base alle impostazioni di gestione dei messaggi non elaborabili. `MaxRetryCycles` stabilisce il numero delle code secondarie dei tentativi che verranno create. Pertanto, in caso di esecuzione in Windows Server 2003 o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], `MaxRetryCycles` vengono ignorate e `ReceiveErrorHandling.Move` non è consentito.  
+- Accodamento messaggi in Windows Vista supporta le code secondarie, mentre Windows Server 2003 e Windows XP non supportano le code secondarie. Le code secondarie vengono utilizzate nella gestione dei messaggi non elaborabili. Le code di tentativi e la coda non elaborabile sono code secondarie della coda dell'applicazione creata in base alle impostazioni di gestione dei messaggi non elaborabili. `MaxRetryCycles` stabilisce il numero delle code secondarie dei tentativi che verranno create. Pertanto, in caso di esecuzione in Windows Server 2003 o Windows XP, `MaxRetryCycles` vengono ignorati e `ReceiveErrorHandling.Move` non è consentito.  
   
-- Accodamento messaggi in Windows Vista supporta il riconoscimento negativo, mentre Windows Server 2003 e [!INCLUDE[wxp](../../../../includes/wxp-md.md)] non lo sono. Un negative acknowledgment dal gestore delle code ricevente determina l'inserimento, da parte del gestore delle code mittente, del messaggio respinto nella coda dei messaggi non recapitabili. Di conseguenza, `ReceiveErrorHandling.Reject` non è consentito con Windows Server 2003 e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+- Accodamento messaggi in Windows Vista supporta il riconoscimento negativo, mentre Windows Server 2003 e Windows XP non lo sono. Un negative acknowledgment dal gestore delle code ricevente determina l'inserimento, da parte del gestore delle code mittente, del messaggio respinto nella coda dei messaggi non recapitabili. Di conseguenza, `ReceiveErrorHandling.Reject` non è consentito con Windows Server 2003 e Windows XP.  
   
-- Accodamento messaggi in Windows Vista supporta una proprietà del messaggio che mantiene il conteggio del numero di tentativi di recapito dei messaggi. Questa proprietà del numero di interruzioni non è disponibile in Windows Server 2003 e [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. WCF mantiene il conteggio delle interruzioni in memoria, pertanto è possibile che questa proprietà non contenga un valore accurato quando lo stesso messaggio viene letto da più di un servizio WCF in una farm.  
+- Accodamento messaggi in Windows Vista supporta una proprietà del messaggio che mantiene il conteggio del numero di tentativi di recapito dei messaggi. Questa proprietà del numero di interruzioni non è disponibile in Windows Server 2003 e Windows XP. WCF mantiene il conteggio delle interruzioni in memoria, pertanto è possibile che questa proprietà non contenga un valore accurato quando lo stesso messaggio viene letto da più di un servizio WCF in una farm.  
   
 ## <a name="see-also"></a>Vedere anche
 

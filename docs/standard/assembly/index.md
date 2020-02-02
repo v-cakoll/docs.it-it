@@ -12,12 +12,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 9fd0c55294815c191f1e116dd4e16a44693f3565
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 968eaf2befb44eb893699d1114b315a4f5df3097
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900588"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921376"
 ---
 # <a name="assemblies-in-net"></a>Assembly in .NET
 
@@ -63,7 +63,7 @@ Gli assembly possono essere statici o dinamici. Gli assembly statici sono archiv
 
 Esistono diversi modi per creare assembly. È possibile usare gli strumenti di sviluppo, ad esempio Visual Studio, che possono creare file con estensione *dll* o *exe* . È possibile usare gli strumenti nel Windows SDK per creare assembly con moduli da altri ambienti di sviluppo. Per creare assembly dinamici è anche possibile usare le API di Common Language Runtime come <xref:System.Reflection.Emit?displayProperty=nameWithType>.
 
-Compila gli assembly in Visual Studio, creandoli con strumenti dell'interfaccia della riga di comando di .NET Core o compilando .NET Framework assembly con un compilatore da riga di comando. Per ulteriori informazioni sulla compilazione di assembly mediante gli strumenti dell'interfaccia della riga di comando di .NET Core, vedere [strumenti dell'interfaccia della riga di comando di .NET Core](../../core/tools/index.md). Per la compilazione di assembly con i compilatori della riga di comando, vedere [compilazione da riga di comando con csc. exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) per C#o [compilazione dalla riga di comando](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) per Visual Basic.
+Compila gli assembly in Visual Studio, creandoli con strumenti dell'interfaccia della riga di comando di .NET Core o compilando .NET Framework assembly con un compilatore da riga di comando. Per altre informazioni sulla compilazione di assembly con interfaccia della riga di comando di .NET Core, vedere [Panoramica di interfaccia della riga di comando di .NET Core](../../core/tools/index.md). Per la compilazione di assembly con i compilatori della riga di comando, vedere [compilazione da riga di comando con csc. exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) per C#o [compilazione dalla riga di comando](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) per Visual Basic.
 
 > [!NOTE]
 > Per compilare un assembly in Visual Studio, scegliere **Compila**dal menu **Compila** .

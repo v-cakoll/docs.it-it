@@ -5,12 +5,12 @@ helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-ms.openlocfilehash: b8be10740c8e92d3dac7094f07b3372e8d78a3d9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 28360b8b5b07c7c532dd2406ca98604870b8335f
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743864"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921069"
 ---
 # <a name="working-with-nats-and-firewalls"></a>Uso di conversioni NAT e firewall
 Fra il client e il server di una connessione di rete spesso non esiste un percorso diretto di comunicazione. I pacchetti vengono filtrati, instradati, analizzati e trasformati sia nei computer endpoint sia nei computer intermedi della rete. Le conversioni Network Address Translation (NAT) e i firewall sono esempi di applicazioni intermedie che in genere partecipano a una comunicazione di rete.  
@@ -25,7 +25,7 @@ Fra il client e il server di una connessione di rete spesso non esiste un percor
  Alcune conversioni NAT supportano la configurazione di regole di inoltro per consentire ai computer esterni di connettersi a un determinato computer interno. Le istruzioni per configurare le regole di inoltro variano a seconda della conversione NAT utilizzata e, per la maggior parte delle applicazioni, è consigliabile evitare di chiedere agli utenti finali di modificare le configurazioni NAT. Molti utenti finali non possono né desiderano modificare la propria configurazione NAT per un'applicazione specifica.  
   
 ## <a name="how-firewalls-affect-communication"></a>Effetti dei firewall sulle comunicazioni  
- Un *Firewall* è un software o un dispositivo hardware che applica regole al traffico che passano per decidere se consentire o negare il passaggio. I firewall possono essere configurati in modo da esaminare flussi di traffico in ingresso e/o in uscita. Inoltre, i firewall forniscono un limite di sicurezza per la rete a livello perimetrale oppure a livello di host endpoint. Gli utenti aziendali in genere utilizzano un firewall per proteggere i propri server da attacchi dannosi. Da quando in [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] è stata introdotta la funzionalità di firewall personale, l'utilizzo di firewall si è rapidamente diffuso anche fra gli utenti privati. È di conseguenza molto probabile che una determinata connessione presenti un firewall su una o su entrambe le estremità allo scopo di controllare i flussi di pacchetti.  
+ Un *Firewall* è un software o un dispositivo hardware che applica regole al traffico che passano per decidere se consentire o negare il passaggio. I firewall possono essere configurati in modo da esaminare flussi di traffico in ingresso e/o in uscita. Inoltre, i firewall forniscono un limite di sicurezza per la rete a livello perimetrale oppure a livello di host endpoint. Gli utenti aziendali in genere utilizzano un firewall per proteggere i propri server da attacchi dannosi. Dall'introduzione del firewall personale in Windows XP SP2, il numero di utenti privati protetti da un firewall è aumentato notevolmente. È di conseguenza molto probabile che una determinata connessione presenti un firewall su una o su entrambe le estremità allo scopo di controllare i flussi di pacchetti.  
   
  Esiste una vasta gamma di tipi di firewall, ognuno avente livelli specifici di complessità e di efficienza di analisi. I firewall meno complessi applicano regole basate sugli indirizzi e sulle porte di origine e di destinazione dei pacchetti. I firewall più intelligenti possono prendere decisioni anche in base al contenuto dei pacchetti. I firewall di questo tipo presentano una notevole flessibilità di configurazione e pertanto vengono spesso utilizzati per proteggere applicazioni aventi funzionalità specifiche.  
   
@@ -33,7 +33,7 @@ Fra il client e il server di una connessione di rete spesso non esiste un percor
   
 ## <a name="using-teredo"></a>Utilizzo di Teredo  
 
- Teredo è una tecnologia di transizione IPv6 che consente l'indirizzabilità diretta dei computer protetti tramite NAT. Questa tecnologia si basa sull'utilizzo di un server che può essere oggetto di routing pubblico e globale allo scopo di segnalare le connessioni potenzialmente disponibili. Il server Teredo offre al client e al server dell'applicazione un punto comune di incontro presso il quale poter scambiare informazioni relative alla connessione. I computer richiedono quindi un indirizzo Teredo temporaneo da utilizzare per il tunneling dei pacchetti attraverso la rete esistente. Il supporto di Teredo in WCF richiede l'abilitazione del supporto per IPv6 e Teredo nel sistema operativo. In [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e nei sistemi operativi successivi Teredo è supportato. Per impostazione predefinita, Windows Vista e i sistemi operativi successivi supportano IPv6 e richiedono solo all'utente di abilitare Teredo. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] e Windows Server 2003 richiedono che l'utente abiliti sia IPv6 che Teredo. Per ulteriori informazioni, vedere la [Panoramica di Teredo](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-xp/bb457011(v%3dtechnet.10)).  
+ Teredo è una tecnologia di transizione IPv6 che consente l'indirizzabilità diretta dei computer protetti tramite NAT. Questa tecnologia si basa sull'utilizzo di un server che può essere oggetto di routing pubblico e globale allo scopo di segnalare le connessioni potenzialmente disponibili. Il server Teredo offre al client e al server dell'applicazione un punto comune di incontro presso il quale poter scambiare informazioni relative alla connessione. I computer richiedono quindi un indirizzo Teredo temporaneo da utilizzare per il tunneling dei pacchetti attraverso la rete esistente. Il supporto di Teredo in WCF richiede l'abilitazione del supporto per IPv6 e Teredo nel sistema operativo. Windows XP e i sistemi operativi successivi supportano Teredo. Per impostazione predefinita, Windows Vista e i sistemi operativi successivi supportano IPv6 e richiedono solo all'utente di abilitare Teredo. Windows XP SP2 e Windows Server 2003 richiedono che l'utente abiliti sia IPv6 che Teredo. Per ulteriori informazioni, vedere la [Panoramica di Teredo](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-xp/bb457011(v%3dtechnet.10)).  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>Scelta di un trasporto e di un MEP  
  La scelta di un trasporto e di un MEP prevede tre passaggi:  

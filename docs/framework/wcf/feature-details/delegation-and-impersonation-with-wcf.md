@@ -8,12 +8,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: 578957888daf7be20ab7418a46c533a011b3d2ac
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 3fd90cde16afdfe32b9bd0533ba04e35928d2706
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964169"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920206"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delega e rappresentazione con WCF
 La*rappresentazione* è una tecnica comune utilizzata dai servizi per limitare l'accesso dei client alle risorse del dominio del servizio. Tali risorse possono essere risorse del computer, ad esempio file locali (rappresentazione), o risorse in un'altro computer, ad esempio una condivisione file (delega). Per un'applicazione di esempio, vedere [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Per un esempio di come usare la rappresentazione, vedere [How to: Impersonate a Client on a Service](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -71,7 +71,7 @@ La*rappresentazione* è una tecnica comune utilizzata dai servizi per limitare l
  L'infrastruttura WCF può rappresentare il chiamante solo se il chiamante viene autenticato con credenziali di cui è possibile eseguire il mapping a un account utente di Windows. Se il servizio è configurato per l'autenticazione con una credenziale di cui non è possibile eseguire il mapping a un account di Windows, il metodo del servizio non viene eseguito.  
   
 > [!NOTE]
-> In [!INCLUDE[wxp](../../../../includes/wxp-md.md)], se viene creato un token SCT con stato, la rappresentazione ha esito negativo, generando <xref:System.InvalidOperationException>. Per altre informazioni, vedere [scenari non supportati](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
+> In Windows XP, la rappresentazione ha esito negativo se viene creato un token SCT con stato, ottenendo un <xref:System.InvalidOperationException>. Per altre informazioni, vedere [scenari non supportati](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
   
 ## <a name="impersonation-in-a-service-method-imperative-model"></a>Rappresentazione in un metodo del servizio: modello imperativo  
  Talvolta, per funzionare, non è necessario che un chiamante rappresenti l'intero metodo del servizio, ma solo una parte. In questo caso, è possibile ottenere l'identità Windows del chiamante nel metodo del servizio ed eseguire la rappresentazione in modo imperativo. A tale scopo, utilizzare la proprietà <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> della classe <xref:System.ServiceModel.ServiceSecurityContext> per restituire un'istanza della classe <xref:System.Security.Principal.WindowsIdentity> e chiamare il metodo <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> prima di utilizzare l'istanza.  
