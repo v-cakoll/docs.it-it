@@ -20,7 +20,7 @@ ms.locfileid: "76742286"
 # <a name="wpf-xaml-browser-applications-overview"></a>Panoramica delle applicazioni browser XAML di WPF
 <a name="introduction"></a>Le applicazioni browser XAML (XBAPs) combinano le funzionalità delle applicazioni Web e delle applicazioni rich client. In modo analogo alle applicazioni Web, le applicazioni XBAP possono essere distribuite in un server Web e avviate da Internet Explorer o Firefox. Come le applicazioni rich client, le applicazioni XBAPs possono sfruttare le funzionalità di WPF. Lo sviluppo di applicazioni XBAP è simile allo sviluppo di applicazioni rich client. In questo argomento viene fornita un'introduzione semplice e dettagliata allo sviluppo di applicazioni XBAP e vengono illustrate le differenze esistenti tra lo sviluppo di questo tipo di applicazioni e lo sviluppo di applicazioni rich client standard.
 
- Di seguito sono elencate le diverse sezioni di questo argomento:
+ Questo argomento è suddiviso nelle sezioni seguenti:
 
 - [Creazione di una nuova applicazione browser XAML (XBAP)](#creating_a_new_xaml_browser_application_xbap)
 
@@ -166,7 +166,7 @@ ms.locfileid: "76742286"
 ### <a name="deploying-a-full-trust-xbap"></a>Distribuzione di un'applicazione XBAP con attendibilità totale
  Quando si distribuisce un'applicazione XBAP con attendibilità totale che non segue il modello di distribuzione attendibile di ClickOnce, il comportamento che si ottiene quando l'utente esegue l'applicazione dipenderà dall'area di sicurezza. In alcuni casi, l'utente riceverà un avviso quando tenta di installare il codice. L'utente potrà scegliere se continuare o annullare l'installazione. La tabella seguente descrive il comportamento dell'applicazione per ogni area di sicurezza e le azioni necessarie relative all'applicazione per acquisire attendibilità totale.
 
-|Area di sicurezza|Comportamento di|Ottenere l'attendibilità totale|
+|Area di sicurezza|Comportamento|Ottenere l'attendibilità totale|
 |-------------------|--------------|------------------------|
 |Computer locale|Attendibilità totale automatica|Non sono richieste azioni.|
 |Intranet e siti attendibili|Richiesta di attendibilità totale|Firma dell'applicazione XBAP con un certificato in modo che l'utente veda l'origine nel prompt.|

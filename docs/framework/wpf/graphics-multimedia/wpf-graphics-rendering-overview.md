@@ -38,7 +38,7 @@ Questo argomento offre una panoramica del livello visivo di [!INCLUDE[TLA2#tla_w
   
 - Gestione di eventi  
   
-- Formato  
+- Layout  
   
 - cella  
   

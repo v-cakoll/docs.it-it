@@ -33,7 +33,7 @@ void __stdcall ProcessUnhandledException(
  errorMsg  
  Messaggio di errore.  
   
-## <a name="requirements"></a>Requisiti di  
+## <a name="requirements"></a>Requisiti  
  **Piattaforme:** Vedere [.NET Framework requisiti di sistema](../../get-started/system-requirements.md).  
   
  **DLL**  

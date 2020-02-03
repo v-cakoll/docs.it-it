@@ -47,7 +47,7 @@ Il comando `dotnet add reference` offre un'opzione utile per aggiungere i riferi
 
   Riferimenti da progetto a progetto da aggiungere. Specificare uno o più progetti. I [criteri GLOB](https://en.wikipedia.org/wiki/Glob_(programming)) sono supportati nei sistemi basati su Unix/Linux.
 
-## <a name="options"></a>Options
+## <a name="options"></a>Opzioni
 
 - **`-h|--help`**
 

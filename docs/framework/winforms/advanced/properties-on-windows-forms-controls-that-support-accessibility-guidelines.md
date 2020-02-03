@@ -24,7 +24,7 @@ I controlli della casella degli strumenti standard per Windows Forms supportano 
 |AccessibleName|Nome che verrà segnalato agli strumenti di accessibilità.|  
 |AccessibleRole|Viene descritto l'utilizzo dell'elemento nell'interfaccia utente.|  
 |TabIndex|Crea un percorso di navigazione sensibile nel form. È importante per i controlli senza etichette intrinseche, ad esempio caselle di testo, per fare in modo che l'etichetta associata venga immediatamente preceduta nell'ordine di tabulazione.|  
-|Testo|Usare il carattere "&" per creare chiavi di accesso. L'uso delle chiavi di accesso è parte integrante dell'accesso alla tastiera documentato alle funzionalità.|  
+|Text|Usare il carattere "&" per creare chiavi di accesso. L'uso delle chiavi di accesso è parte integrante dell'accesso alla tastiera documentato alle funzionalità.|  
 |Dimensioni carattere|Se le dimensioni del carattere non sono regolabili, è consigliabile impostarla su un numero di punti pari o superiore a 10. Una volta impostate le dimensioni del carattere del modulo, tutti i controlli aggiunti successivamente al form avranno le stesse dimensioni.|  
 |Forecolor|Se questa proprietà è impostata sul valore predefinito, le preferenze di colore dell'utente verranno utilizzate nel form.|  
 |Backcolor|Se questa proprietà è impostata sul valore predefinito, le preferenze di colore dell'utente verranno utilizzate nel form.|  

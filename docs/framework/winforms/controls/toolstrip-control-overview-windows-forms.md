@@ -55,8 +55,8 @@ Il Windows Forms controllo <xref:System.Windows.Forms.ToolStrip> e le classi ass
 |<xref:System.Windows.Forms.ToolStrip.IsDropDown%2A>|Ottiene un valore che indica se un <xref:System.Windows.Forms.ToolStripItem> Visualizza altri elementi in un elenco a discesa quando si fa clic sull'<xref:System.Windows.Forms.ToolStripItem>.|  
 |<xref:System.Windows.Forms.ToolStrip.OverflowButton%2A>|Ottiene l'oggetto <xref:System.Windows.Forms.ToolStripItem> che rappresenta il pulsante di overflow di un oggetto <xref:System.Windows.Forms.ToolStrip> con l'overflow abilitato.|  
 |<xref:System.Windows.Forms.ToolStrip.Renderer%2A>|Ottiene o imposta un <xref:System.Windows.Forms.ToolStripRenderer> utilizzato per personalizzare l'aspetto e il comportamento (aspetto) di un <xref:System.Windows.Forms.ToolStrip>.|  
-|<xref:System.Windows.Forms.ToolStrip.RenderMode%2A>|Ottiene o imposta gli stili di disegno da applicare all'<xref:System.Windows.Forms.ToolStrip>.|  
-|<xref:System.Windows.Forms.ToolStrip.RendererChanged>|Generato quando viene modificata la proprietà <xref:System.Windows.Forms.ToolStrip.Renderer%2A>.|  
+|<xref:System.Windows.Forms.ToolStrip.RenderMode%2A>|Ottiene o imposta gli stili di disegno da applicare al <xref:System.Windows.Forms.ToolStrip>.|  
+|<xref:System.Windows.Forms.ToolStrip.RendererChanged>|Generato quando la proprietà <xref:System.Windows.Forms.ToolStrip.Renderer%2A> viene modificata.|  
   
  La flessibilità del controllo <xref:System.Windows.Forms.ToolStrip> viene eseguita tramite l'utilizzo di una serie di classi complementari. Di seguito sono riportati alcuni dei più importanti:  
   

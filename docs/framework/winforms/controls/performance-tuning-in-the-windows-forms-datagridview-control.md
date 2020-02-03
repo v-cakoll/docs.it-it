@@ -16,7 +16,7 @@ ms.locfileid: "76744269"
 # <a name="performance-tuning-in-the-windows-forms-datagridview-control"></a>Ottimizzazione delle prestazioni nel controllo DataGridView Windows Form
 Quando si lavora con grandi quantità di dati, il controllo `DataGridView` può utilizzare una grande quantità di memoria in sovraccarico, a meno che non venga utilizzato con cautela. Nei client con memoria limitata è possibile evitare questo sovraccarico evitando funzionalità con un costo elevato di memoria. È anche possibile gestire alcune o tutte le attività di manutenzione e recupero dei dati utilizzando la modalità virtuale per personalizzare l'utilizzo della memoria per lo scenario.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Procedure consigliate per ridimensionare il controllo DataGridView di Windows Form](best-practices-for-scaling-the-windows-forms-datagridview-control.md)  
  Viene descritto come utilizzare il controllo `DataGridView` in modo da evitare l'utilizzo di memoria superfluo e le penalizzazioni delle prestazioni quando si utilizzano grandi quantità di dati.  
   
@@ -29,7 +29,7 @@ Quando si lavora con grandi quantità di dati, il controllo `DataGridView` può 
  [Implementazione del modo virtuale con caricamento dati JIT nel controllo DataGridView di Windows Form](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
  Viene descritto come caricare i dati su richiesta, che risulta utile quando si dispone di più dati da visualizzare rispetto alla memoria del client disponibile che è possibile archiviare.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.DataGridView>  
  Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.DataGridView>.  
   

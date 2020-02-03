@@ -118,7 +118,7 @@ Questo argomento introduce le estensioni di markup per XAML, con informazioni su
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Cenni preliminari su XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
+- [Panoramica di XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Funzionalità del linguaggio dello spazio dei nomi XAML (x:)](../../../desktop-wpf/xaml-services/namespace-language-features.md)
 - [Estensioni XAML WPF](wpf-xaml-extensions.md)
 - [Estensione di markup StaticResource](staticresource-markup-extension.md)

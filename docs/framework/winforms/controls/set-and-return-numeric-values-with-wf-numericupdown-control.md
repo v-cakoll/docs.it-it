@@ -37,7 +37,7 @@ Il valore numerico della Windows Forms <xref:System.Windows.Forms.NumericUpDown>
     numericUpDown1->Value = 55;  
     ```  
   
-     oppure  
+     -oppure-  
   
 2. Chiamare il metodo <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> o <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> per aumentare o diminuire il valore in base alla quantità specificata nella proprietà <xref:System.Windows.Forms.NumericUpDown.Increment%2A>.  
   

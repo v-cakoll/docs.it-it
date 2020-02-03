@@ -56,7 +56,7 @@ Percorso a uno degli elementi seguenti:
 
 Se non è specificata alcuna opzione, verrà impostata automaticamente la directory corrente.
 
-## <a name="options"></a>Options
+## <a name="options"></a>Opzioni
 
 `--format-report-file-json <REPORT_FILE>`
 

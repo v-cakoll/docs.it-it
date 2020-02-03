@@ -169,4 +169,4 @@ Le operazioni di trascinamento della selezione del controllo <xref:System.Window
 - <xref:System.Windows.Forms.RichTextBox>
 - [Procedura: Eseguire operazioni di trascinamento e rilascio tra applicazioni](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
 - [Controllo RichTextBox](richtextbox-control-windows-forms.md)
-- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)
+- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)

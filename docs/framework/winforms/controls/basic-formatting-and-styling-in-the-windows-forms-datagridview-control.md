@@ -15,7 +15,7 @@ ms.locfileid: "76732006"
 # <a name="basic-formatting-and-styling-in-the-windows-forms-datagridview-control"></a>Formattazione e stile di base nel controllo DataGridView Windows Form
 Il controllo `DataGridView` semplifica la definizione dell'aspetto di base delle celle e la formattazione di visualizzazione dei valori delle celle. È possibile definire gli stili di aspetto e formattazione per le singole celle, per le celle in colonne e righe specifiche o per tutte le celle nel controllo impostando le proprietà degli oggetti `DataGridViewCellStyle` a cui si accede tramite varie proprietà del controllo `DataGridView`. Inoltre, è possibile modificare questi stili in modo dinamico in base a fattori quali il valore della cella gestendo l'evento `CellFormatting`.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Procedura: Modificare gli stili dei bordi e delle linee della griglia nel controllo DataGridView di Windows Form](change-the-border-and-gridline-styles-in-the-datagrid.md)  
  Viene descritto come impostare `DataGridView` proprietà che definiscono l'aspetto del bordo del controllo e le linee di limite tra le celle.  
   
@@ -37,7 +37,7 @@ Il controllo `DataGridView` semplifica la definizione dell'aspetto di base delle
  [Procedura: Usare il modello di riga per personalizzare le righe nel controllo DataGridView di Windows Form](use-the-row-template-to-customize-rows-in-the-datagrid.md)  
  Viene descritto come utilizzare la proprietà `RowTemplate` per impostare le proprietà delle righe che verranno utilizzate per tutte le righe nel controllo.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.DataGridView>  
  Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.DataGridView>.  
   

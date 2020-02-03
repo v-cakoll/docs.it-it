@@ -18,7 +18,7 @@ Il controllo `BindingNavigator` rappresenta l'interfaccia utente di spostamento 
   
  Gli argomenti di questa sezione forniscono una panoramica del controllo `BindingNavigator` e offrono istruzioni dettagliate su come usare il controllo per esplorare i dati e un <xref:System.Data.DataSet>.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Cenni preliminari sul controllo BindingNavigator](bindingnavigator-control-overview-windows-forms.md)  
  Introduce i concetti generali sul controllo `BindingNavigator`, che consente agli utenti di esplorare gli elementi di un'origine dati.  
   
@@ -28,9 +28,9 @@ Il controllo `BindingNavigator` rappresenta l'interfaccia utente di spostamento 
  [Procedura: esplorare un dataset con il controllo BindingNavigator di Windows Form](move-through-a-dataset-with-wf-bindingnavigator-control.md)  
  Illustra l'uso di un `BindingNavigator` controllo per esplorare i record in un <xref:System.Data.DataSet>.  
   
- Vedere anche [Procedura: Aggiungere i pulsanti Carica, Salva e Annulla al controllo BindingNavigator Windows Forms](load-save-and-cancel-bindingnavigator.md).  
+ Vedere anche [Procedura: aggiungere i pulsanti Carica, Salva e Annulla al controllo BindingNavigator di Windows Form](load-save-and-cancel-bindingnavigator.md).  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.BindingNavigator>  
  Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.BindingNavigator>.  
   

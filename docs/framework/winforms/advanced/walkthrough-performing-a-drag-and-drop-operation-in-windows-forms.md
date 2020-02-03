@@ -59,7 +59,7 @@ Per eseguire operazioni di trascinamento della selezione nelle applicazioni basa
   
 1. Impostare la proprietà <xref:System.Windows.Forms.Control.AllowDrop%2A> su true.  
   
-2. Nell'evento `DragEnter` per il controllo in cui si verificherà il rilascio, assicurarsi che i dati trascinati siano di tipo accettabile (in questo caso, <xref:System.Windows.Forms.Control.Text%2A>). Il codice imposta quindi l'effetto che si verificherà quando il rilascio viene eseguito in un valore nell'enumerazione <xref:System.Windows.Forms.DragDropEffects>. Per ulteriori informazioni, vedere <xref:System.Windows.Forms.DragEventArgs.Effect%2A>.  
+2. Nell'evento `DragEnter` per il controllo in cui si verificherà il rilascio, assicurarsi che i dati trascinati siano di tipo accettabile (in questo caso, <xref:System.Windows.Forms.Control.Text%2A>). Il codice imposta quindi l'effetto che si verificherà quando il rilascio viene eseguito in un valore nell'enumerazione <xref:System.Windows.Forms.DragDropEffects>. Per altre informazioni, vedere <xref:System.Windows.Forms.DragEventArgs.Effect%2A>.  
   
     ```vb  
     Private Sub TextBox1_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles TextBox1.DragEnter  
@@ -83,9 +83,9 @@ Per eseguire operazioni di trascinamento della selezione nelle applicazioni basa
     ```  
   
     > [!NOTE]
-    > È possibile definire <xref:System.Windows.Forms.DataFormats> personalizzati specificando un oggetto personalizzato come parametro di <xref:System.Object> del metodo <xref:System.Windows.Forms.DataObject.SetData%2A>. Assicurarsi, in tal caso, che l'oggetto specificato sia serializzabile. Per ulteriori informazioni, vedere <xref:System.Runtime.Serialization.ISerializable>.  
+    > È possibile definire <xref:System.Windows.Forms.DataFormats> personalizzati specificando un oggetto personalizzato come parametro di <xref:System.Object> del metodo <xref:System.Windows.Forms.DataObject.SetData%2A>. Assicurarsi, in tal caso, che l'oggetto specificato sia serializzabile. Per altre informazioni, vedere <xref:System.Runtime.Serialization.ISerializable>.  
   
-3. Nell'evento <xref:System.Windows.Forms.Control.DragDrop> per il controllo in cui si verificherà il rilascio, utilizzare il metodo <xref:System.Windows.Forms.DataObject.GetData%2A> per recuperare i dati trascinati. Per ulteriori informazioni, vedere <xref:System.Security.Cryptography.Xml.DataObject.Data%2A>.  
+3. Nell'evento <xref:System.Windows.Forms.Control.DragDrop> per il controllo in cui si verificherà il rilascio, utilizzare il metodo <xref:System.Windows.Forms.DataObject.GetData%2A> per recuperare i dati trascinati. Per altre informazioni, vedere <xref:System.Security.Cryptography.Xml.DataObject.Data%2A>.  
   
      Nell'esempio seguente un controllo <xref:System.Windows.Forms.TextBox> è il controllo da trascinare (in cui si verificherà il rilascio). Il codice imposta la proprietà <xref:System.Windows.Forms.Control.Text%2A> del controllo <xref:System.Windows.Forms.TextBox> uguale ai dati trascinati.  
   

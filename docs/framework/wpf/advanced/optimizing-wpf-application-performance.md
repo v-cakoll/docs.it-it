@@ -20,7 +20,7 @@ Questa sezione è destinata a un riferimento per [!INCLUDE[TLA#tla_winclient](..
 > [!NOTE]
 > I dati sulle prestazioni forniti in questa sezione si basano su [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazioni in esecuzione su un PC a 2,8 GHz con RAM 512 e una scheda grafica ATI Radeon 9700.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Pianificazione delle prestazioni dell'applicazione](planning-for-application-performance.md)  
   
  [Sfruttare appieno l'hardware](optimizing-performance-taking-advantage-of-hardware.md)  
@@ -33,7 +33,7 @@ Questa sezione è destinata a un riferimento per [!INCLUDE[TLA#tla_winclient](..
   
  [Risorse di applicazioni](optimizing-performance-application-resources.md)  
   
- [per](optimizing-performance-text.md)  
+ [Testo](optimizing-performance-text.md)  
   
  [Data binding](optimizing-performance-data-binding.md)  
   
@@ -53,13 +53,13 @@ Questa sezione è destinata a un riferimento per [!INCLUDE[TLA#tla_winclient](..
 - [Strutture ad albero in WPF](trees-in-wpf.md)
 - [Cenni preliminari sugli oggetti Drawing](../graphics-multimedia/drawing-objects-overview.md)
 - [Uso degli oggetti DrawingVisual](../graphics-multimedia/using-drawingvisual-objects.md)
-- [Panoramica sulle proprietà di dipendenza](dependency-properties-overview.md)
+- [Cenni preliminari sulle proprietà di dipendenza](dependency-properties-overview.md)
 - [Cenni preliminari sugli oggetti Freezable](freezable-objects-overview.md)
 - [Risorse XAML](xaml-resources.md)
 - [Documenti in WPF](documents-in-wpf.md)
 - [Disegno di testo formattato](drawing-formatted-text.md)
 - [Funzionalità tipografiche di WPF](typography-in-wpf.md)
-- [Cenni preliminari sull'associazione dati](../../../desktop-wpf/data/data-binding-overview.md)
+- [Panoramica sul data binding](../../../desktop-wpf/data/data-binding-overview.md)
 - [Cenni preliminari sulla navigazione](../app-development/navigation-overview.md)
 - [Suggerimenti sulle animazioni](../graphics-multimedia/animation-tips-and-tricks.md)
 - [Procedura dettagliata: Memorizzazione dei dati di un'applicazione nella cache di un'applicazione WPF](walkthrough-caching-application-data-in-a-wpf-application.md)

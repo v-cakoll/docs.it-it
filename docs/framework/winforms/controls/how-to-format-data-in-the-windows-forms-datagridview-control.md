@@ -65,7 +65,7 @@ Nelle procedure seguenti viene illustrata la formattazione di base dei valori de
 - Riferimenti agli assembly <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="robust-programming"></a>Programmazione efficiente  
- Per la massima scalabilità, è necessario condividere <xref:System.Windows.Forms.DataGridViewCellStyle> oggetti tra più righe, colonne o celle che usano gli stessi stili anziché impostare separatamente le proprietà di stile per ogni elemento. Per ulteriori informazioni, vedere la pagina relativa alle [procedure consigliate per il ridimensionamento del controllo Windows Forms DataGridView](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+ Per la massima scalabilità, è necessario condividere <xref:System.Windows.Forms.DataGridViewCellStyle> oggetti tra più righe, colonne o celle che usano gli stessi stili anziché impostare separatamente le proprietà di stile per ogni elemento. Per altre informazioni, vedere [Procedure consigliate per ridimensionare il controllo DataGridView Windows Form](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

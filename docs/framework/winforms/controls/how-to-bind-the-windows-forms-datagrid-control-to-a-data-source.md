@@ -108,4 +108,4 @@ ms.locfileid: "76746694"
 - [Cenni preliminari sul controllo DataGrid](datagrid-control-overview-windows-forms.md)
 - [Procedura: Aggiungere tabelle e colonne al controllo DataGrid Windows Form](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
 - [Controllo DataGrid](datagrid-control-windows-forms.md)
-- [Data binding in Windows Form](../windows-forms-data-binding.md)
+- [Associazione ai dati di Windows Form](../windows-forms-data-binding.md)

@@ -16,7 +16,7 @@ Peer Channel è una tecnologia di comunicazione peer-to-peer (P2P) a più parti 
   
  Nelle sezioni seguenti vengono fornite informazioni sulla rete peer-to-peer e sull'utilizzo delle classi del canale peer per creare applicazioni di rete abilitate al peer.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Scenari di Peer Channel](../../../../docs/framework/wcf/feature-details/peer-channel-scenarios.md): vengono descritti gli scenari di sviluppo supportati dalle API Peer Channel, ad esempio messaggistica di pubblicazione/sottoscrizione, collaborazione, elaborazione distribuita e giochi.  
   
  [Peer Channel concetti](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md): descrive le reti peer, i nodi peer, la sicurezza Peer Channel e i resolver del peer.  

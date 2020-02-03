@@ -107,7 +107,7 @@ Quando si desidera visualizzare quantità molto elevate di dati tabulari in un c
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#200](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#200)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#200](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#200)]  
   
-## <a name="testing-the-application"></a>Verifica dell'applicazione  
+## <a name="testing-the-application"></a>Test dell'applicazione  
  È ora possibile testare il form per assicurarsi che si comportano come previsto.  
   
 #### <a name="to-test-the-form"></a>Per testare il modulo  

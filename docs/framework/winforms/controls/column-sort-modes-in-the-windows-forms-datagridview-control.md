@@ -15,7 +15,7 @@ ms.locfileid: "76744189"
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Modalità di ordinamento delle colonne nel controllo DataGridView di Windows Form
 <xref:System.Windows.Forms.DataGridView> colonne hanno tre modalità di ordinamento. La modalità di ordinamento per ogni colonna viene specificata tramite la proprietà <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> della colonna, che può essere impostata su uno dei valori di enumerazione <xref:System.Windows.Forms.DataGridViewColumnSortMode> seguenti.  
   
-|Valore di `DataGridViewColumnSortMode`|Descrizione|  
+|Valore di`DataGridViewColumnSortMode`|Descrizione|  
 |----------------------------------------|-----------------|  
 |<xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>|Impostazione predefinita per le colonne della casella di testo. A meno che le intestazioni di colonna non vengano utilizzate per la selezione, fare clic sull'intestazione di colonna per ordinare automaticamente il <xref:System.Windows.Forms.DataGridView> in base a questa colonna e visualizzare un glifo che indica l'ordinamento.|  
 |<xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable>|Impostazione predefinita per le colonne della casella di testo non. È possibile ordinare questa colonna a livello di codice. Tuttavia, non è destinato all'ordinamento, pertanto nessuno spazio viene riservato per il glifo di ordinamento.|  

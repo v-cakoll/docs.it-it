@@ -12,7 +12,7 @@ ms.locfileid: "76730827"
 # <a name="security-concepts"></a>Concetti sulla protezione
 In questa sezione vengono illustrati brevemente i concetti associati alla sicurezza Windows Communication Foundation (WCF).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Concetti relativi alla sicurezza in WCF](../../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md)  
  Panoramica dettagliata dei concetti utilizzati nelle implementazioni di sicurezza.  
   
@@ -22,7 +22,7 @@ In questa sezione vengono illustrati brevemente i concetti associati alla sicure
  [Terminologia della sicurezza](../../../../docs/framework/wcf/feature-details/wcf-security-terminology.md)  
  Glossario dei termini utilizzati per la discussione sulla sicurezza di WCF.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
@@ -38,6 +38,6 @@ In questa sezione vengono illustrati brevemente i concetti associati alla sicure
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Security](../../../../docs/framework/wcf/feature-details/security.md)
+- [Sicurezza](../../../../docs/framework/wcf/feature-details/security.md)
 - [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Modello di sicurezza per Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

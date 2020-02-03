@@ -15,7 +15,7 @@ ms.locfileid: "76746007"
 # <a name="developing-custom-windows-forms-controls-with-the-net-framework"></a>Sviluppo di controlli Windows Form personalizzati con .NET Framework
 I controlli Windows Form sono componenti riutilizzabili che incapsulano funzionalità dell'interfaccia utente e vengono usati nelle applicazioni basate su Windows sul lato client. Windows Form fornisce numerosi controlli pronti per l'uso, nonché l'infrastruttura per lo sviluppo di controlli personalizzati. È possibile combinare ed estendere i controlli esistenti oppure creare controlli personalizzati. Questa sezione fornisce informazioni complementari ed esempi per lo sviluppo di controlli Windows Form.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Cenni preliminari sull'utilizzo di controlli in Windows Form](overview-of-using-controls-in-windows-forms.md)  
  Evidenzia gli elementi essenziali dell'uso di controlli nelle applicazioni Windows Forms.  
   
@@ -28,10 +28,10 @@ I controlli Windows Form sono componenti riutilizzabili che incapsulano funziona
  [Proprietà dei controlli Windows Form](properties-in-windows-forms-controls.md)  
  Mostra come aggiungere le proprietà ai controlli Windows Form.  
   
- [Eventi dei controlli di Windows Form](events-in-windows-forms-controls.md)  
+ [Eventi nei controlli di Windows Form](events-in-windows-forms-controls.md)  
  Mostra come gestire e definire gli eventi nei controlli Windows Form.  
   
- [Attributi nei controlli Windows Form](attributes-in-windows-forms-controls.md)  
+ [Attributi nei controlli Windows Forms](attributes-in-windows-forms-controls.md)  
  Descrive gli attributi che è possibile applicare alle proprietà o ad altri membri e componenti dei controlli personalizzati.  
   
  [Disegno e rendering di controlli personalizzati](custom-control-painting-and-rendering.md)  
@@ -43,7 +43,7 @@ I controlli Windows Form sono componenti riutilizzabili che incapsulano funziona
  [Multithreading nei controlli Windows Form](multithreading-in-windows-forms-controls.md)  
  Mostra come implementare i controlli con multithreading.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.Control?displayProperty=nameWithType>  
  Descrive la classe e include collegamenti a tutti i relativi membri.  
   

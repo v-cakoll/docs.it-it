@@ -22,7 +22,7 @@ Il controllo Windows Forms <xref:System.Windows.Forms.DomainUpDown> ha un aspett
   
  Questo controllo consente di visualizzare solo le stringhe di testo. Se si vuole un controllo che Visualizza i valori numerici, usare il controllo <xref:System.Windows.Forms.NumericUpDown>. Per ulteriori informazioni, vedere [controllo NumericUpDown](numericupdown-control-windows-forms.md) .  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Panoramica sul controllo DomainUpDown](domainupdown-control-overview-windows-forms.md)  
  Introduce i concetti generali del controllo <xref:System.Windows.Forms.DomainUpDown>, che consente agli utenti di esplorare e selezionare da un elenco di stringhe di testo.  
   
@@ -32,7 +32,7 @@ Il controllo Windows Forms <xref:System.Windows.Forms.DomainUpDown> ha un aspett
  [Procedura: Rimuovere elementi dai controlli DomainUpDown di Windows Form](how-to-remove-items-from-windows-forms-domainupdown-controls.md)  
  Viene descritto come eliminare elementi dal controllo <xref:System.Windows.Forms.DomainUpDown> nel codice.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.DomainUpDown>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   

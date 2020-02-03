@@ -17,7 +17,7 @@ ms.locfileid: "76731980"
 # <a name="datetimepicker-control-windows-forms"></a>Controllo DateTimePicker (Windows Form)
 Il controllo Windows Forms `DateTimePicker` consente all'utente di selezionare un singolo elemento da un elenco di date o ore. Quando viene usato per rappresentare una data, viene visualizzato in due parti: un elenco a discesa con una data rappresentata nel testo e una griglia visualizzata quando si fa clic sulla freccia in giù accanto all'elenco.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Panoramica sul controllo DateTimePicker](datetimepicker-control-overview-windows-forms.md)  
  Introduce i concetti generali del controllo `DateTimePicker`, che consente agli utenti di selezionare un singolo elemento da un elenco di date o ore.  
   
@@ -30,7 +30,7 @@ Il controllo Windows Forms `DateTimePicker` consente all'utente di selezionare u
  [Procedura: Visualizzare l'ora con il controllo DateTimePicker](how-to-display-time-with-the-datetimepicker-control.md)  
  Mostra i passaggi per un `DateTimePicker` per visualizzare solo le ore.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.DateTimePicker>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   
@@ -38,7 +38,7 @@ Il controllo Windows Forms `DateTimePicker` consente all'utente di selezionare u
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)  
+ [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)  
  Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.  
   
  [Controllo MonthCalendar](monthcalendar-control-windows-forms.md)  

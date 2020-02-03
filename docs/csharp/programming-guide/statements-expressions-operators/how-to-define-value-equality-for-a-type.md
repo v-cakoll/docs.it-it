@@ -23,7 +23,7 @@ In entrambi i casi, e in entrambe le classi e gli struct, l'implementazione deve
   
 1. `x.Equals(x)` restituisce `true`. Questa viene denominata proprietà riflessiva.  
   
-2. `y.Equals(x)` restituisce lo stesso valore di `x.Equals(y)`. Questa viene denominata proprietà simmetrica.  
+2. `x.Equals(y)` restituisce lo stesso valore di `y.Equals(x)`. Questa viene denominata proprietà simmetrica.  
   
 3. Se `(x.Equals(y) && y.Equals(z))` restituisce `true`, `x.Equals(z)` restituirà `true`. Questa viene denominata proprietà transitiva.  
   

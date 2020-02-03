@@ -16,7 +16,7 @@ In questo esempio viene illustrato come rendere individuabile un servizio e come
 > [!NOTE]
 > In questo esempio l'individuazione viene implementata nel codice.  Per un esempio di implementazione dell'individuazione nella configurazione, vedere [configurazione](../../../../docs/framework/wcf/samples/configuration-sample.md).
 
-## <a name="service"></a>Servizio
+## <a name="service"></a>Service
 
 Si tratta di una semplice implementazione del servizio di calcolatrice. Il codice correlato all'individuazione è disponibile in `Main` dove un oggetto <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> viene aggiunto all'host del servizio e un oggetto <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> viene aggiunto come illustrato nel codice seguente.
 

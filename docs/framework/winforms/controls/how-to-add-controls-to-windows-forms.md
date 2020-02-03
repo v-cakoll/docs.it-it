@@ -92,4 +92,4 @@ La maggior parte dei moduli è progettata mediante l'aggiunta di controlli all'a
 - [Controlli Windows Form](index.md)
 - [Procedura: Ridimensionare i controlli di un Windows Form](how-to-resize-controls-on-windows-forms.md)
 - [Procedura: Impostare il testo visualizzato da un controllo Windows Form](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)
+- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)

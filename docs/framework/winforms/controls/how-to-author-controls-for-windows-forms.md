@@ -52,8 +52,8 @@ Un controllo rappresenta un collegamento grafico tra l'utente e il programma. Un
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Ereditare dalla classe UserControl](how-to-inherit-from-the-usercontrol-class.md)
-- [Procedura: Ereditare dalla classe Control](how-to-inherit-from-the-control-class.md)
-- [Procedura: Ereditare da controlli Windows Form esistenti](how-to-inherit-from-existing-windows-forms-controls.md)
-- [Procedura: Eseguire il test del comportamento in fase di esecuzione di UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [Procedura: ereditare dalla classe UserControl](how-to-inherit-from-the-usercontrol-class.md)
+- [Procedura: ereditare dalla classe Control](how-to-inherit-from-the-control-class.md)
+- [Procedura: ereditare da controlli Windows Form esistenti](how-to-inherit-from-existing-windows-forms-controls.md)
+- [Procedura: eseguire il test del comportamento in fase di esecuzione di UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
 - [Tipi di controlli personalizzati](varieties-of-custom-controls.md)

@@ -156,5 +156,5 @@ Testo con anti-aliasing della direzione y ClearType
 - [Funzionalità dei tipi di carattere OpenType](opentype-font-features.md)
 - [Disegno di testo formattato](drawing-formatted-text.md)
 - [Formattazione del testo avanzata](advanced-text-formatting.md)
-- [per](optimizing-performance-text.md)
+- [Testo](optimizing-performance-text.md)
 - [Microsoft Typography](https://docs.microsoft.com/typography/)

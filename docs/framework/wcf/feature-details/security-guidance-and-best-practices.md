@@ -15,7 +15,7 @@ ms.locfileid: "76728913"
 
 Negli articoli di questa sezione vengono illustrate le linee guida e gli elementi da considerare durante la creazione di applicazioni Secure Windows Communication Foundation (WCF). Per altre informazioni su Windows Server AppFabric e sulla sicurezza, vedere [modello di sicurezza per Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Procedure consigliate per la sicurezza](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)  
  Questo argomento offre consigli su come proteggere le applicazioni create.  
   

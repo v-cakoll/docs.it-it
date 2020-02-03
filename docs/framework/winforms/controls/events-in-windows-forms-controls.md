@@ -12,7 +12,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76745749"
 ---
-# <a name="events-in-windows-forms-controls"></a>Eventi nei controlli Windows Form
+# <a name="events-in-windows-forms-controls"></a>Eventi nei controlli di Windows Form
 Un controllo Windows Forms eredita più di 60 eventi da <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Sono inclusi l'evento <xref:System.Windows.Forms.Control.Paint>, che determina la visualizzazione di un controllo, gli eventi correlati alla visualizzazione di una finestra, ad esempio gli eventi <xref:System.Windows.Forms.Control.Resize> e <xref:System.Windows.Forms.Control.Layout>, nonché gli eventi del mouse e della tastiera di basso livello. Alcuni eventi di basso livello vengono sintetizzati da <xref:System.Windows.Forms.Control> in eventi semantici come <xref:System.Windows.Forms.Control.Click> e <xref:System.Windows.Forms.Control.DoubleClick>. Per informazioni dettagliate sugli eventi ereditati, vedere <xref:System.Windows.Forms.Control>.  
   
  Se è necessario eseguire l'override del controllo personalizzato sulle funzionalità di eventi ereditati, eseguire l'override del metodo `On`*EventName* ereditato anziché associare un delegato. Se non si ha familiarità con il modello di eventi in .NET Framework, vedere [Generazione di eventi da un componente](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/sh2e3k5z(v=vs.120)).  

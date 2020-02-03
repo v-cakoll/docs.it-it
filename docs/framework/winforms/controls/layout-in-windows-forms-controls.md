@@ -18,7 +18,7 @@ ms.locfileid: "76745241"
 
 Per molte applicazioni è estremamente importante la sistemazione precisa dei controlli nel form. Lo spazio dei nomi <xref:System.Windows.Forms?displayProperty=nameWithType> fornisce molti strumenti di layout a questo scopo.
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 [Panoramica delle proprietà AutoSize](autosize-property-overview.md)\
 Descrive la proprietà <xref:System.Windows.Forms.Control.AutoSize%2A> e il relativo ruolo nel layout.
@@ -35,7 +35,7 @@ Viene illustrato come utilizzare la proprietà <xref:System.Windows.Forms.Contro
 [Procedura: implementare un motore di layout personalizzato](how-to-implement-a-custom-layout-engine.md)\
 Viene illustrato come implementare un <xref:System.Windows.Forms.Layout.LayoutEngine> per la disposizione dei controlli Windows Forms.
 
-## <a name="reference"></a>Riferimenti
+## <a name="reference"></a>Riferimento
 
 <xref:System.Windows.Forms.TableLayoutPanel>\
 Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.TableLayoutPanel>.

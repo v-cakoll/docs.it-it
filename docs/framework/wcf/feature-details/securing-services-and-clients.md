@@ -14,7 +14,7 @@ ms.locfileid: "76746422"
 # <a name="securing-services-and-clients"></a>Protezione di servizi e client
 Le informazioni contenute in questa sezione sono incentrate sulla sicurezza della programmazione in Windows Communication Foundation (WCF). Quest'attività include, in genere, la selezione di un'associazione fornita dal sistema appropriata, l'impostazione delle proprietà dell'elemento di sicurezza e quindi l'impostazione delle proprietà dei comportamenti del servizio che regolano la modalità di recupero delle credenziali che devono essere usate dal servizio o dal client. Queste tecniche coprono i requisiti di sicurezza della maggior parte degli utenti per la maggior parte degli scenari, come illustrato negli [scenari di sicurezza comuni](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Se lo scenario richiede più funzionalità, vedere innanzitutto [funzionalità di sicurezza con associazioni personalizzate](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md). Se una soluzione non è evidente, vedere [estensione della sicurezza](../../../../docs/framework/wcf/extending/extending-security.md). Se si crea o si interopera con un sistema che utilizza attestazioni avanzate, vedere gli argomenti in [autorizzazione](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Programmazione delle funzionalità di sicurezza di WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
  Panoramica del modello di programmazione usato per proteggere i messaggi.  
   
@@ -30,7 +30,7 @@ Le informazioni contenute in questa sezione sono incentrate sulla sicurezza dell
  [Uso di certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  Spiegazione di alcune delle attività comuni necessarie quando si usano certificati X.509.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  

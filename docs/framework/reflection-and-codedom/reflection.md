@@ -80,10 +80,10 @@ Queste classi runtime sono `internal` (`Friend` in Visual Basic). Non sono docum
 |[Procedura: Caricare assembly nel contesto Reflection-Only](how-to-load-assemblies-into-the-reflection-only-context.md)|Viene descritto il contesto di caricamento Reflection-Only. Viene illustrato come caricare un assembly, verificare il contesto ed esaminare gli attributi applicati a un assembly nel contesto Reflection-Only.|  
 |[Accessing Custom Attributes](accessing-custom-attributes.md) (Accesso agli attributi personalizzati)|Viene illustrato l'uso della reflection per ottenere informazioni sull'esistenza degli attributi e sui relativi valori.|  
 |[Specifying Fully Qualified Type Names](specifying-fully-qualified-type-names.md) (Specifica di nomi di tipo completi)|Vengono illustrati il formato dei nomi di tipo completi, secondo la notazione BNF (Backus-Naur Form), e la sintassi richiesta per specificare nomi di assembly, puntatori, riferimenti, matrici e caratteri speciali.|  
-|[How to: Hook Up a Delegate Using Reflection](how-to-hook-up-a-delegate-using-reflection.md) (Procedura: Associare un delegato tramite reflection)|Viene illustrato come creare un delegato per un metodo e associarlo a un evento. Viene illustrato come creare un metodo di gestione degli eventi in fase di esecuzione usando <xref:System.Reflection.Emit.DynamicMethod>.|  
+|[Procedura: Associare un delegato tramite reflection](how-to-hook-up-a-delegate-using-reflection.md)|Viene illustrato come creare un delegato per un metodo e associarlo a un evento. Viene illustrato come creare un metodo di gestione degli eventi in fase di esecuzione usando <xref:System.Reflection.Emit.DynamicMethod>.|  
 |[Creazione di assembly e metodi dinamici](emitting-dynamic-methods-and-assemblies.md)|Viene illustrato come generare assembly e metodi generici.|  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
 
 <xref:System.Type?displayProperty=nameWithType>  
   

@@ -16,7 +16,7 @@ ms.locfileid: "76745765"
 # <a name="errorprovider-component-windows-forms"></a>Componente ErrorProvider (Windows Form)
 Il componente Windows Forms `ErrorProvider` viene usato per visualizzare l'utente in modo non intrusivo. Viene in genere usato in combinazione con la convalida dell'input dell'utente in un form o la visualizzazione di errori all'interno di un set di dati.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Panoramica sul componente ErrorProvider](errorprovider-component-overview-windows-forms.md)  
  Illustra il componente e le funzionalità e le proprietà chiave.  
   
@@ -26,10 +26,10 @@ Il componente Windows Forms `ErrorProvider` viene usato per visualizzare l'utent
  [Procedura: Visualizzare errori in un dataset con il componente ErrorProvider di Windows Form](view-errors-within-a-dataset-with-wf-errorprovider-component.md)  
  Fornisce indicazioni per l'utilizzo di un componente del provider di errori per visualizzare gli errori dei dati.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.ErrorProvider>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)  
+ [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)  
  Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.

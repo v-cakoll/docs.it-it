@@ -17,7 +17,7 @@ ms.locfileid: "76745973"
 # <a name="dialog-box-controls-and-components-windows-forms"></a>Controlli e componenti della finestra di dialogo (Windows Form)
 I controlli e i componenti Windows Form riportati di seguito determinano la visualizzazione di finestre di dialogo standard. Per altre informazioni sulle funzioni disponibili in ogni finestra di dialogo, usare i relativi collegamenti.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.ColorDialog>  
  Fornisce informazioni di riferimento sulla classe <xref:System.Windows.Forms.ColorDialog> e sui relativi membri.  
   

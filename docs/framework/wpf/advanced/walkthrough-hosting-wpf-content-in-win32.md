@@ -20,7 +20,7 @@ ms.locfileid: "76735314"
  In questa esercitazione viene descritto come scrivere un'applicazione di esempio, [ospitando contenuto WPF in un esempio di finestra Win32](https://go.microsoft.com/fwlink/?LinkID=160004), che ospita [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contenuto in una finestra Win32. È possibile estendere questo esempio per ospitare qualsiasi finestra di Win32. Poiché comporta la combinazione di codice gestito e non gestito, l'applicazione viene scritta in C++/cli.  
 
 <a name="requirements"></a>   
-## <a name="requirements"></a>Requisiti di  
+## <a name="requirements"></a>Requisiti  
  Questa esercitazione presuppone una conoscenza di base della programmazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e Win32. Per un'introduzione di base alla programmazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], vedere [Introduzione](../getting-started/index.md). Per un'introduzione alla programmazione Win32, è necessario fare riferimento a uno dei numerosi libri sull'argomento, in particolare *programmare Windows* di Charles Petzold.  
   
  Poiché l'esempio che accompagna questa esercitazione è implementato in/CLI C++, in questa esercitazione si presuppone una certa familiarità con C++ l'uso di per programmare l'API Windows, oltre a comprendere la programmazione del codice gestito. La familiarità C++con/CLI è utile ma non essenziale.  
@@ -176,7 +176,7 @@ ms.locfileid: "76735314"
 - [Impostazione delle proprietà WPF](#set_page_properties)
 
 <a name="page_layout"></a>
-### <a name="layout"></a>Formato
+### <a name="layout"></a>Layout
  Gli elementi [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] nel contenuto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sono costituiti da cinque controlli <xref:System.Windows.Controls.TextBox>, con i controlli di <xref:System.Windows.Controls.Label> associati: Name, Address, City, state e zip. Sono disponibili anche due controlli <xref:System.Windows.Controls.Button>, **OK** e **Annulla**
 
  Il contenuto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] è implementato nella classe `WPFPage`. Il layout viene gestito mediante un apposito elemento <xref:System.Windows.Controls.Grid>. La classe eredita da <xref:System.Windows.Controls.Grid>, il che la rende effettivamente l'elemento radice del contenuto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].

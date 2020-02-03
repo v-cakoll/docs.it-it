@@ -74,7 +74,7 @@ ms.locfileid: "76739815"
   
  Alcuni Windows Forms membri forniscono accesso non gestito che richiede l'autorizzazione <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>. Nella tabella seguente sono elencati i membri nello spazio dei nomi <xref:System.Windows.Forms> che richiedono l'autorizzazione. Per altre informazioni sulle autorizzazioni necessarie per un membro, vedere la documentazione della libreria di classi .NET Framework.  
   
-|Componente|Member|  
+|Componente|Membro|  
 |---------------|------------|  
 |<xref:System.Windows.Forms.Application>|-    Metodo <xref:System.Windows.Forms.Application.AddMessageFilter%2A><br />Proprietà <xref:System.Windows.Forms.Application.CurrentInputLanguage%2A> -   <br />-    Metodo `Exit`<br />-    Metodo <xref:System.Windows.Forms.Application.ExitThread%2A><br />evento <xref:System.Windows.Forms.Application.ThreadException> -   |  
 |<xref:System.Windows.Forms.CommonDialog>|-    Metodo <xref:System.Windows.Forms.CommonDialog.HookProc%2A><br />Metodo -   <xref:System.Windows.Forms.CommonDialog.OwnerWndProc%2A>\<br />-    Metodo <xref:System.Windows.Forms.CommonDialog.Reset%2A><br />-    Metodo <xref:System.Windows.Forms.CommonDialog.RunDialog%2A>|  

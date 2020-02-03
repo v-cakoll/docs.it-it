@@ -1,5 +1,5 @@
 ---
-title: Pre-atomizzazione di oggetti XName (LINQ to XML)
+title: Suddivisione preventiva in elementi base di oggetti XName (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 06ea104b-f44c-4bb2-9c34-889ae025c80d
 ms.openlocfilehash: c0e75afa797d2b20f32fc55e6c19d0c1593d174c

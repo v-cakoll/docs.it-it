@@ -16,14 +16,14 @@ ms.locfileid: "76747234"
 # <a name="trackbar-control-windows-forms"></a>Controllo TrackBar (Windows Form)
 Il controllo Windows Forms `TrackBar` (anche noto anche come controllo "slider") viene usato per spostarsi tra una grande quantità di informazioni o per modificare visivamente un'impostazione numerica. Il controllo `TrackBar` è costituito da due parti: il cursore, noto anche come dispositivo di scorrimento, e i segni di graduazione. Il pollice è la parte che può essere regolata. La posizione corrisponde alla proprietà <xref:System.Windows.Forms.TrackBar.Value%2A>. I segni di graduazione sono indicatori visivi spaziati a intervalli regolari. La barra di avanzamento viene spostata in incrementi specificati e può essere allineata orizzontalmente o verticalmente. Un esempio di utilizzo di un indicatore di avanzamento è l'impostazione della velocità del cursore o della velocità del mouse.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Panoramica sul controllo TrackBar](trackbar-control-overview-windows-forms.md)  
  Introduce i concetti generali del controllo `TrackBar`, che consente agli utenti di spostarsi tra le informazioni mediante la regolazione visiva di un'impostazione numerica.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  Classe <xref:System.Windows.Forms.TrackBar>  
  Fornisce informazioni di riferimento sulla classe e sui relativi membri.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)  
+ [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)  
  Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.

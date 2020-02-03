@@ -16,7 +16,7 @@ ms.locfileid: "76741892"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Supporto di valori DPI alti in Windows Forms
 
-A partire da .NET Framework 4,7, Windows Forms include miglioramenti per gli scenari con valori DPI più comuni e DPI dinamici. Sono inclusi:
+A partire da .NET Framework 4,7, Windows Forms include miglioramenti per gli scenari con valori DPI più comuni e DPI dinamici. tra cui:
 
 - Miglioramenti apportati alla scalabilità e al layout di un numero di controlli di Windows Forms, ad esempio il controllo <xref:System.Windows.Forms.MonthCalendar> e il controllo <xref:System.Windows.Forms.CheckedListBox>.
 
@@ -60,7 +60,7 @@ Inoltre, per configurare il supporto di valori DPI alti nella Windows Forms Appl
 
 - Chiamare il metodo statico <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>.
 
-  Questa deve essere la prima chiamata al metodo nel punto di ingresso dell'applicazione. Ad esempio:
+  Questa deve essere la prima chiamata al metodo nel punto di ingresso dell'applicazione. Ad esempio,
 
   ```csharp
   static void Main()
@@ -94,7 +94,7 @@ A partire da .NET Framework 4,7, tre nuovi eventi consentono di gestire a livell
 
 ## <a name="new-helper-methods-and-properties"></a>Nuovi metodi e proprietà Helper
 
-Il .NET Framework 4,7 aggiunge anche una serie di nuove proprietà e metodi helper che forniscono informazioni sul ridimensionamento DPI e consentono di eseguire la scalabilità DPI. Sono inclusi:
+Il .NET Framework 4,7 aggiunge anche una serie di nuove proprietà e metodi helper che forniscono informazioni sul ridimensionamento DPI e consentono di eseguire la scalabilità DPI. tra cui:
 
 - <xref:System.Windows.Forms.Control.LogicalToDeviceUnits%2A>, che converte un valore da Logical a Device pixel.
 

@@ -43,13 +43,13 @@ dotnet new sln
 
   File di soluzione da utilizzare. Se non specificato, il comando ne cerca uno nella directory corrente. Se sono presenti più file di soluzione nella directory, è necessario specificarne uno.
 
-## <a name="options"></a>Options
+## <a name="options"></a>Opzioni
 
 - **`-h|--help`**
 
   Stampa una breve guida per il comando.
 
-## <a name="commands"></a>Comandi
+## <a name="commands"></a>Commands
 
 ### `add`
 
@@ -72,7 +72,7 @@ dotnet sln add [-h|--help]
 
   Percorso del progetto da aggiungere alla soluzione. Aggiungere più progetti aggiungendoli uno dopo l'altro separati da spazi. Le espansioni del [modello glob](https://en.wikipedia.org/wiki/Glob_(programming)) della shell UNIX/Linux vengono elaborate correttamente tramite il comando `dotnet sln`.
 
-#### <a name="options"></a>Options
+#### <a name="options"></a>Opzioni
 
 - **`-h|--help`**
 
@@ -107,7 +107,7 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
 
   Percorso del progetto da rimuovere dalla soluzione. Rimuovere più progetti aggiungendoli uno dopo l'altro separati da spazi. Le espansioni del [modello glob](https://en.wikipedia.org/wiki/Glob_(programming)) della shell UNIX/Linux vengono elaborate correttamente tramite il comando `dotnet sln`.
 
-#### <a name="options"></a>Options
+#### <a name="options"></a>Opzioni
 
 - **`-h|--help`**
 
@@ -129,7 +129,7 @@ dotnet sln list [-h|--help]
 
   File di soluzione da utilizzare. Se non specificato, il comando ne cerca uno nella directory corrente. Se sono presenti più file di soluzione nella directory, è necessario specificarne uno.
 
-#### <a name="options"></a>Options
+#### <a name="options"></a>Opzioni
 
 - **`-h|--help`**
 

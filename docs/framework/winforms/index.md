@@ -17,7 +17,7 @@ ms.locfileid: "76739192"
 # <a name="windows-forms"></a>Windows Form
 I form sono l'unità base di un'applicazione e di conseguenza è fondamentale fare molta attenzione alla loro funzione e progettazione. Un form è una sorta di foglio o di lavagna pulita, in cui uno sviluppatore inserisce controlli, al fine di creare un'interfaccia utente e un codice per la modifica dei dati. A tale scopo, Visual Studio offre un Integrated Development Environment (IDE) per facilitare la scrittura di codice, nonché un set di controlli completo scritto con il .NET Framework. Completando la funzionalità di tali controlli con il codice creato, è possibile sviluppare velocemente e senza difficoltà le soluzioni desiderate.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Guida introduttiva a Windows Form](getting-started-with-windows-forms.md)  
  Fornisce collegamenti ad argomenti che illustrano come sfruttare Windows Form per visualizzare dati, gestire gli input degli utenti e distribuire le applicazioni in modo semplice e con meccanismi di sicurezza più avanzata.  
   
@@ -28,7 +28,7 @@ I form sono l'unità base di un'applicazione e di conseguenza è fondamentale fa
  [Controlli Windows Form](./controls/index.md)  
  Contiene collegamenti ad argomenti che descrivono i controlli Windows Form e come implementarli.  
   
- [Data binding in Windows Form](windows-forms-data-binding.md)  
+ [Associazione ai dati di Windows Form](windows-forms-data-binding.md)  
  Contiene collegamenti ad argomenti che descrivono l'architettura di data binding di Windows Form.  
   
  [Cenni preliminari sulla grafica](./advanced/graphics-overview-windows-forms.md)  

@@ -1,5 +1,5 @@
 ---
-title: Panoramica del componente PrintDocument
+title: Cenni preliminari sul componente PrintDocument
 ms.date: 03/30/2017
 f1_keywords:
 - PrintDocument
@@ -33,4 +33,4 @@ Quando viene aggiunto a un modulo, il componente <xref:System.Drawing.Printing.P
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Printing.PrintDocument>
 - [Supporto per la stampa in Windows Forms](../advanced/windows-forms-print-support.md)
-- [PrintDocument (componente)](printdocument-component-windows-forms.md)
+- [Componente PrintDocument](printdocument-component-windows-forms.md)

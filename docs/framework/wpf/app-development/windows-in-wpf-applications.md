@@ -18,12 +18,12 @@ ms.locfileid: "76739004"
 # <a name="windows-in-wpf-applications"></a>Finestre delle applicazioni WPF
 Gli utenti interagiscono con le applicazioni tramite Windows. Lo scopo principale di una finestra consiste nell'ospitare e visualizzare il contenuto. Il tipo di contenuto che una finestra ospita dipende dal tipo di dati su cui viene eseguita un'applicazione, che può includere pagine di supporto, Extensible Application Markup Language (XAML), pagine Web, documenti, tabelle di database e record e informazioni di sistema.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Panoramica sulle finestre WPF](wpf-windows-overview.md)  
  [Panoramica sulle finestre di dialogo](dialog-boxes-overview.md)  
- [Procedure relative alle proprietà](window-management-how-to-topics.md)  
+ [Procedure relative alla struttura ad albero e alla serializzazione degli elementi](window-management-how-to-topics.md)  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Window>  
   
  <xref:System.Windows.Navigation.NavigationWindow>  

@@ -15,7 +15,7 @@ ms.locfileid: "76738025"
 # <a name="button-control-windows-forms"></a>Controllo Button (Windows Form)
 Il controllo `Button` Windows Form consente all'utente di eseguire le operazioni desiderate facendo clic su di esso. Il controllo `Button` può visualizzare sia testo che immagini. Una volta scelto, il pulsante viene visualizzato come se fosse stato effettivamente premuto e poi rilasciato.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Panoramica sul controllo Button](button-control-overview-windows-forms.md)  
  Definisce il controllo e ne illustra le funzionalità chiave e le proprietà.  
   
@@ -33,12 +33,12 @@ Il controllo `Button` Windows Form consente all'utente di eseguire le operazioni
   
  Vedere anche [procedura: designare un pulsante Windows Forms come pulsante Accept usando la finestra di progettazione](designate-a-wf-button-as-the-accept-button-using-the-designer.md) e [procedura: designare un pulsante Windows Forms come pulsante Annulla usando la finestra di progettazione](designate-a-wf-button-as-the-cancel-button-using-the-designer.md).  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  Classe <xref:System.Windows.Forms.Button>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)  
+ [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)  
  Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.  
   
  Vedere anche l' [input utente per le finestre di dialogo](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1s9ws53w(v=vs.100)) e [procedura: chiudere le finestre di dialogo e mantenere l'input dell'utente](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/65ad5907(v=vs.100)).

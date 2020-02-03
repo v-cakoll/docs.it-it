@@ -16,7 +16,7 @@ ms.locfileid: "76746928"
 # <a name="whats-new-in-wpf-version-45"></a>Novità di WPF versione 4.5
 <a name="introduction"></a>Questo argomento contiene informazioni sulle funzionalità nuove e migliorate nella versione [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 4,5.  
   
- Di seguito sono elencate le diverse sezioni di questo argomento:  
+ Questo argomento è suddiviso nelle sezioni seguenti:  
   
 - [Controllo della barra multifunzione](#ribbon_control)  
   
@@ -77,7 +77,7 @@ ms.locfileid: "76746928"
   
 <a name="INotifyDataErrorInfo"></a>   
 ## <a name="synchronously-and-asynchronously-validating-data"></a>Convalida dei dati in modo sincrono e asincrono  
- L'interfaccia <xref:System.ComponentModel.INotifyDataErrorInfo> consente alle classi di entità dati di implementare regole di convalida personalizzate ed esporre i risultati della convalida in modo asincrono. Questa interfaccia supporta anche gli oggetti di errori personalizzati, più errori per ogni proprietà, gli errori tra le proprietà e gli errori a livello di entità.  Per ulteriori informazioni, vedere <xref:System.ComponentModel.INotifyDataErrorInfo>.  
+ L'interfaccia <xref:System.ComponentModel.INotifyDataErrorInfo> consente alle classi di entità dati di implementare regole di convalida personalizzate ed esporre i risultati della convalida in modo asincrono. Questa interfaccia supporta anche gli oggetti di errori personalizzati, più errori per ogni proprietà, gli errori tra le proprietà e gli errori a livello di entità.  Per altre informazioni, vedere <xref:System.ComponentModel.INotifyDataErrorInfo>.  
   
 <a name="delay"></a>   
 ## <a name="automatically-updating-the-source-of-a-data-binding"></a>Aggiornamento automatico dell'origine di un data binding  

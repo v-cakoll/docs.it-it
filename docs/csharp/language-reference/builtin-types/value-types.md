@@ -1,5 +1,5 @@
 ---
-title: Value types - C# reference
+title: Tipi valore- C# riferimento
 ms.date: 01/22/2020
 f1_keywords:
 - cs.valuetypes
@@ -15,26 +15,26 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76748517"
 ---
-# <a name="value-types-c-reference"></a>Value types (C# reference)
+# <a name="value-types-c-reference"></a>Tipi di valoreC# (riferimento)
 
-*Value types* and [reference types](../keywords/reference-types.md) are the two main categories of C# types. A variable of a value type contains an instance of the type. This differs from a variable of a reference type, which contains a reference to an instance of the type. By default, on [assignment](../operators/assignment-operator.md), passing an argument to a method, or returning a method result, variable values are copied. In the case of value-type variables, the corresponding type instances are copied. L'esempio seguente illustra questo comportamento:
+I tipi di *valore* e i [tipi di riferimento](../keywords/reference-types.md) sono le C# due categorie principali di tipi. Una variabile di un tipo di valore contiene un'istanza del tipo. Questo comportamento è diverso da una variabile di un tipo riferimento, che contiene un riferimento a un'istanza del tipo. Per impostazione predefinita, durante l' [assegnazione](../operators/assignment-operator.md), passando un argomento a un metodo o restituendo il risultato di un metodo, vengono copiati i valori delle variabili. Nel caso di variabili di tipo valore, vengono copiate le istanze del tipo corrispondenti. L'esempio seguente illustra questo comportamento:
 
 [!code-csharp[copy of values](~/samples/csharp/language-reference/builtin-types/ValueTypes.cs#ValueTypeCopied)]
 
-As the preceding example shows, operations on a value-type variable affect only that instance of the value type, stored in the variable.
+Come illustrato nell'esempio precedente, le operazioni su una variabile di tipo valore influiscono solo su tale istanza del tipo di valore, archiviata nella variabile.
 
-If a value type contains a data member of a reference type, only the reference to the instance of the reference type is copied when a value-type instance is copied. Both the copy and original value-type instance have access to the same reference-type instance. L'esempio seguente illustra questo comportamento:
+Se un tipo di valore contiene un membro dati di un tipo di riferimento, quando viene copiata un'istanza del tipo di valore viene copiato solo il riferimento all'istanza del tipo di riferimento. Sia la copia che l'istanza del tipo di valore originale hanno accesso alla stessa istanza del tipo di riferimento. L'esempio seguente illustra questo comportamento:
 
 [!code-csharp[shallow copy](~/samples/csharp/language-reference/builtin-types/ValueTypes.cs#ShallowCopy)]
 
 > [!NOTE]
-> To make your code less error-prone and more robust, define and use immutable value types. This article uses mutable value types only for demonstration purposes.
+> Per rendere il codice meno soggetto a errori e più affidabile, definire e utilizzare tipi di valore non modificabili. Questo articolo usa tipi di valore modificabili solo a scopo dimostrativo.
 
-## <a name="kinds-of-value-types"></a>Kinds of value types
+## <a name="kinds-of-value-types"></a>Tipi di tipi di valore
 
-A value type can be one of the two following kinds:
+Un tipo di valore può essere uno dei due tipi seguenti:
 
-- a [structure type](../keywords/struct.md), which encapsulates data and related functionality
+- [tipo di struttura](../keywords/struct.md)che incapsula i dati e la funzionalità correlata
 - un [tipo di enumerazione](enum.md), definito da un set di costanti denominate e rappresenta una scelta o una combinazione di scelte
 
 Un [tipo di valore nullable](nullable-value-types.md) `T?` rappresenta tutti i valori del tipo di valore sottostante `T` e un valore [null](../keywords/null.md) aggiuntivo. Non è possibile assegnare `null` a una variabile di un tipo di valore, a meno che non si tratti di un tipo di valore Nullable.
@@ -62,7 +62,7 @@ A partire C# da 7,0 C# , supporta le [Tuple di valori](../../tuples.md). Una tup
 
 Per altre informazioni, vedere le sezioni seguenti delle [specifiche del linguaggio C#](~/_csharplang/spec/introduction.md):
 
-- [Tipi valore](~/_csharplang/spec/types.md#value-types)
+- [Tipi di valore](~/_csharplang/spec/types.md#value-types)
 - [Tipi semplici](~/_csharplang/spec/types.md#simple-types)
 - [Variabili](~/_csharplang/spec/variables.md)
 

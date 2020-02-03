@@ -35,7 +35,7 @@ Il comando `dotnet help` apre la pagina di riferimento per ulteriori informazion
 
   Nome del comando dell’interfaccia della riga di comando di .NET Core. Per un elenco dei comandi dell’interfaccia della riga di comando validi, vedere [i comandi CLI](index.md#cli-commands).
 
-## <a name="options"></a>Options
+## <a name="options"></a>Opzioni
 
 * **`-h|--help`**
 

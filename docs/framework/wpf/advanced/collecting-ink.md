@@ -52,7 +52,7 @@ Il <xref:System.Windows.Controls.InkCanvas> fornisce supporto per varie modalit�
 
 Il <xref:System.Windows.Controls.InkCanvas> fornisce il supporto per molte operazioni di modifica dell'input penna. Ad esempio, <xref:System.Windows.Controls.InkCanvas> supporta la cancellazione della penna indietro e non è necessario alcun codice aggiuntivo per aggiungere la funzionalità all'elemento.
 
-#### <a name="selection"></a>Selection
+#### <a name="selection"></a>Selezione
 
 Per impostare la modalità di selezione è sufficiente impostare la proprietà <xref:System.Windows.Controls.InkCanvasEditingMode> su **Seleziona**.
 

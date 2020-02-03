@@ -22,7 +22,7 @@ Windows Presentation Foundation (WPF) fornisce un ambiente completo per la creaz
  In questo argomento viene illustrata un'applicazione che ospita un controllo [ListBox Win32 nell'esempio WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control)che ospita un controllo casella di riepilogo Win32. Questa procedura generale può essere estesa per ospitare qualsiasi finestra di Win32.  
 
 <a name="requirements"></a>   
-## <a name="requirements"></a>Requisiti di  
+## <a name="requirements"></a>Requisiti  
  In questo argomento si presuppone una conoscenza di base di WPF e della programmazione dell'API Windows. Per un'introduzione di base alla programmazione WPF, vedere [Introduzione](../getting-started/index.md). Per un'introduzione alla programmazione dell'API Windows, vedere uno dei numerosi libri sull'argomento, in particolare *programmare Windows* di Charles Petzold.  
   
  Poiché l'esempio che accompagna questo argomento viene implementato in C#, USA i servizi di chiamata della piattaforma (PInvoke) per accedere all'API Windows. Una certa familiarità con PInvoke è utile ma non essenziale.  

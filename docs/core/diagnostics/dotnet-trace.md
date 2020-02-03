@@ -36,7 +36,7 @@ Lo strumento `dotnet-trace`:
 * È basato sulla tecnologia di `EventPipe` multipiattaforma del runtime di .NET Core.
 * Offre la stessa esperienza in Windows, Linux o macOS.
 
-## <a name="options"></a>Options
+## <a name="options"></a>Opzioni
 
 - **`--version`**
 
@@ -46,7 +46,7 @@ Lo strumento `dotnet-trace`:
 
   Mostra la guida della riga di comando.
 
-## <a name="commands"></a>Comandi
+## <a name="commands"></a>Commands
 
 | Comando                                                     |
 | ----------------------------------------------------------- |
@@ -66,7 +66,7 @@ dotnet-trace collect [-h|--help] [-p|--process-id] [--buffersize <size>] [-o|--o
     [--providers] [--profile <profile-name>] [--format]
 ```
 
-### <a name="options"></a>Options
+### <a name="options"></a>Opzioni
 
 - **`-p|--process-id <PID>`**
 
@@ -114,7 +114,7 @@ dotnet-trace convert [<input-filename>] [-h|--help] [--format] [-o|--output]
 
   File di traccia di input da convertire. Il valore predefinito è *Trace. NetTrace*.
 
-### <a name="options"></a>Options
+### <a name="options"></a>Opzioni
 
 - **`--format <NetTrace|Speedscope>`**
 
@@ -208,7 +208,7 @@ Il comando precedente Disabilita gli eventi di runtime e il profiler dello stack
 
 Il runtime di .NET Core supporta i provider .NET seguenti. .NET Core usa le stesse parole chiave per abilitare sia `Event Tracing for Windows (ETW)` che `EventPipe` tracce.
 
-| Nome provider                            | Informazioni su |
+| Nome provider                            | Informazioni |
 |------------------------------------------|-------------|
 | `Microsoft-Windows-DotNETRuntime`        | [Il provider di runtime](../../framework/performance/clr-etw-providers.md#the-runtime-provider)<br>[Parole chiave di runtime CLR](../../framework/performance/clr-etw-keywords-and-levels.md#runtime) |
 | `Microsoft-Windows-DotNETRuntimeRundown` | [Il provider di rundown](../../framework/performance/clr-etw-providers.md#the-rundown-provider)<br>[Parole chiave di rundown CLR](../../framework/performance/clr-etw-keywords-and-levels.md#rundown) |

@@ -32,7 +32,7 @@ Il controllo <xref:System.Windows.Forms.DataGridView> è in grado di visualizzar
   
  L'ordinamento in base a colonne non vincolate in modalità di associazione non è supportato. Se si crea una colonna non associata in modalità associata che contiene valori modificabili dall'utente, è necessario implementare la modalità virtuale per mantenere questi valori quando il controllo è ordinato in base a una colonna associata.  
   
-## <a name="virtual"></a>Virtual  
+## <a name="virtual"></a>Virtuale  
  Con la modalità virtuale è possibile implementare le proprie operazioni di gestione dei dati. Questa operazione è necessaria per mantenere i valori delle colonne non vincolate in modalità di associazione quando il controllo è ordinato in base alle colonne di associazione. L'uso principale della modalità virtuale, tuttavia, consiste nell'ottimizzare le prestazioni quando si interagisce con grandi quantità di dati.  
   
  Il controllo <xref:System.Windows.Forms.DataGridView> viene collegato a una cache gestita e il codice controlla quando viene eseguito il push e il pull delle righe di dati. Per ridurre il footprint di memoria, è necessario che le dimensioni della cache siano simili al numero di righe attualmente visualizzate. Quando l'utente scorre le nuove righe nella visualizzazione, il codice richiede nuovi dati dalla cache e, facoltativamente, Scarica i dati obsoleti dalla memoria.  

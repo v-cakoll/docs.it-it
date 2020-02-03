@@ -33,7 +33,7 @@ void __stdcall SetFakeActiveWindow(
  HWND  
  Handle di finestra.  
   
-## <a name="requirements"></a>Requisiti di  
+## <a name="requirements"></a>Requisiti  
  **Piattaforme:** Vedere [.NET Framework requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Dll:** PresentationHost_v0400. dll  

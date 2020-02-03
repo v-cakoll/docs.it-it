@@ -1,5 +1,5 @@
 ---
-title: Panoramica dei controlli HScrollBar e VScrollBar
+title: Cenni preliminari sui controlli HScrollBar e VScrollBar
 ms.date: 03/30/2017
 f1_keywords:
 - HScrollBar
@@ -39,4 +39,4 @@ Windows Forms controlli <xref:System.Windows.Forms.ScrollBar> vengono utilizzati
 
 - <xref:System.Windows.Forms.HScrollBar>
 - <xref:System.Windows.Forms.VScrollBar>
-- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)
+- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)

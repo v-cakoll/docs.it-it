@@ -15,11 +15,11 @@ ms.locfileid: "76746384"
 # <a name="windows-forms-accessibility"></a>Accessibilità in Windows Form
 La funzionalità di accessibilità di Windows Form consente di rendere disponibile l'applicazione a un'ampia gamma di utenti.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Procedura dettagliata: Creazione di un'applicazione Windows ad Accesso facilitato](walkthrough-creating-an-accessible-windows-based-application.md)  
  Descrive tutte le funzionalità da supportare per migliorare l'accessibilità.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:Accessibility>  
  Spazio dei nomi contenente un numero di classi correlate all'accessibilità.  
   

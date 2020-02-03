@@ -18,7 +18,7 @@ ms.locfileid: "76743477"
 # <a name="getting-started-with-windows-forms"></a>Introduzione a Windows Form
 Con Windows Forms è possibile creare potenti applicazioni basate su Windows. Gli argomenti seguenti descrivono in dettaglio come sfruttare la potenza di Windows Forms per visualizzare i dati, gestire l'input dell'utente e distribuire le applicazioni in modo semplice e con una maggiore sicurezza.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Panoramica sui Windows Form](windows-forms-overview.md)  
  Contiene una panoramica delle applicazioni Windows Forms e smart client.  
   
@@ -43,7 +43,7 @@ Con Windows Forms è possibile creare potenti applicazioni basate su Windows. Gl
  [Finestre di dialogo in Windows Form](dialog-boxes-in-windows-forms.md)  
  Contiene collegamenti ad argomenti che descrivono le diverse finestre di dialogo da utilizzare in Windows Forms.  
   
- [Data binding in Windows Form](windows-forms-data-binding.md)  
+ [Associazione ai dati di Windows Form](windows-forms-data-binding.md)  
  Contiene collegamenti ad argomenti che descrivono l'architettura di data binding Windows Forms e come usarla nelle applicazioni di Windows Forms.  
   
  [Sicurezza di Windows Form](windows-forms-security.md)  

@@ -17,11 +17,11 @@ ms.locfileid: "76747148"
   
  Il componente Windows Forms `MainMenu` Visualizza un menu in fase di esecuzione.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Panoramica sul componente MainMenu](mainmenu-component-overview-windows-forms.md)  
  Illustra il componente e le funzionalità e le proprietà chiave.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.MainMenu>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   

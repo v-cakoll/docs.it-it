@@ -12,18 +12,18 @@ ms.locfileid: "76730948"
 # <a name="security-behaviors-in-wcf"></a>Comportamenti di sicurezza in WCF
 In Windows Communication Foundation (WCF) i comportamenti modificano il comportamento in fase di esecuzione a livello di servizio o di endpoint. Per ulteriori informazioni sui comportamenti in generale, vedere Specifica del [comportamento in fase di esecuzione del servizio](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md). I *comportamenti di sicurezza* consentono di controllare le credenziali, l'autenticazione, l'autorizzazione e i log di controllo. I comportamenti possono essere utilizzati tramite programmazione o mediante configurazione. In questo argomento viene descritto come configurare i comportamenti relativi alle funzioni di sicurezza elencati di seguito:  
   
-- [\<ServiceCredentials](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
+- [>\<ServiceCredentials](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
   
 - [\<clientcredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).  
   
 - [\<> ServiceAuthorization](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md).  
   
-- [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md).  
+- [\<> serviceSecurityAudit](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md).  
   
 - [\<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md), che consente anche di specificare un endpoint protetto a cui i client possono accedere per i metadati.  
   
 ## <a name="setting-credentials-with-behaviors"></a>Impostazione delle credenziali tramite i comportamenti  
- Usare i [\<ServiceCredentials](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) e [\<ClientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) per impostare i valori delle credenziali per un servizio o un client. La configurazione dell'associazione sottostante determina se occorre impostare una credenziale. Ad esempio, se la modalità di sicurezza è impostata su `None`, né i client né i servizi si autenticano reciprocamente o richiedono alcun tipo di credenziale.  
+ Usare i [>\<ServiceCredentials](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) e [\<ClientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) per impostare i valori delle credenziali per un servizio o un client. La configurazione dell'associazione sottostante determina se occorre impostare una credenziale. Ad esempio, se la modalità di sicurezza è impostata su `None`, né i client né i servizi si autenticano reciprocamente o richiedono alcun tipo di credenziale.  
   
  Se invece l'associazione del servizio richiede un tipo di credenziale client, è possibile che occorra utilizzare un comportamento per impostare i valori delle credenziali. Per ulteriori informazioni sui possibili tipi di credenziali, vedere Selezione di [un tipo di credenziale](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md). In alcuni casi, ad esempio quando vengono usate le credenziali di Windows per l'autenticazione, l'ambiente stabilisce automaticamente il valore effettivo delle credenziali e non è necessario impostare in modo esplicito il valore delle credenziali, a meno che non si desideri specificare un set di credenziali diverso.  
   
@@ -48,7 +48,7 @@ In Windows Communication Foundation (WCF) i comportamenti modificano il comporta
 ```  
   
 ## <a name="service-credentials"></a>Credenziali di servizio  
- Il [\<ServiceCredentials](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) contiene quattro elementi figlio. Questi elementi e le relative modalità di utilizzo vengono descritti nelle sezioni seguenti.  
+ Il [>\<ServiceCredentials](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) contiene quattro elementi figlio. Questi elementi e le relative modalità di utilizzo vengono descritti nelle sezioni seguenti.  
   
 ### <a name="servicecertificate-element"></a>\<elemento > serviceCertificate  
  Questo elemento consente di specificare il certificato X.509 utilizzato dai client per autenticare il servizio tramite la modalità di sicurezza Messaggio. L'identificazione digitale di un certificato rinnovato periodicamente viene aggiornata di conseguenza. In questo caso, poiché il certificato può essere rilasciato nuovamente con lo stesso nome del soggetto, usare quest'ultimo come tipo `X509FindType`.  
@@ -82,7 +82,7 @@ In Windows Communication Foundation (WCF) i comportamenti modificano il comporta
   
 - Specificare il set di URI validi, aggiungendo gli URI a questa raccolta. A tale scopo, inserire un [\<aggiungere >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md) per ogni URI  
   
- Per ulteriori informazioni, vedere <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
+ Per altre informazioni, vedere <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
   
  Per altre informazioni sull'uso di questo elemento di configurazione, vedere [procedura: configurare le credenziali in un servizio federativo](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
   
@@ -123,7 +123,7 @@ In Windows Communication Foundation (WCF) i comportamenti modificano il comporta
 #### <a name="issuedtoken-element"></a>\<elemento > issuedToken  
  Il [\<issuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) contiene gli elementi utilizzati per configurare un'autorità emittente locale di token o i comportamenti utilizzati con un servizio token di sicurezza. Per istruzioni sulla configurazione di un client per l'uso di un'autorità emittente locale, vedere [procedura: configurare un'autorità emittente locale](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
   
-#### <a name="localissueraddress"></a>\<localIssuerAddress>  
+#### <a name="localissueraddress"></a>\<localIssuerAddress >  
  Specifica l'indirizzo predefinito di un servizio token di sicurezza. Viene utilizzato quando il <xref:System.ServiceModel.WSFederationHttpBinding> non fornisce un URL per il servizio token di sicurezza o quando l'indirizzo dell'emittente di un'associazione federata è `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` o `null`. In questi casi le credenziali <xref:System.ServiceModel.Description.ClientCredentials> devono essere configurate con l'indirizzo dell'autorità emittente locale e con l'associazione da utilizzare per comunicare con tale autorità emittente.  
   
 #### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors >  

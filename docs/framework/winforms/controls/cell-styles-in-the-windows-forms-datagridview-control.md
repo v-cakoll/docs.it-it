@@ -48,7 +48,7 @@ Ogni cella all'interno del controllo <xref:System.Windows.Forms.DataGridView> pu
   
  Nella tabella seguente sono elencate le proprietà primarie che ottengono o impostano oggetti <xref:System.Windows.Forms.DataGridViewCellStyle>.  
   
-|Gli|Classi|Descrizione|  
+|Proprietà|Classi|Descrizione|  
 |--------------|-------------|-----------------|  
 |`DefaultCellStyle`|classi derivate <xref:System.Windows.Forms.DataGridView>, <xref:System.Windows.Forms.DataGridViewColumn>, <xref:System.Windows.Forms.DataGridViewRow>e|Ottiene o imposta gli stili predefiniti utilizzati da tutte le celle nell'intero controllo (incluse le celle di intestazione), in una colonna o in una riga.|  
 |<xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|Ottiene o imposta gli stili di cella predefiniti utilizzati da tutte le righe nel controllo. Non sono incluse le celle di intestazione.|  

@@ -15,7 +15,7 @@ ms.locfileid: "76744834"
 # <a name="enhancing-windows-forms-applications"></a>Miglioramento delle applicazioni Windows Form
 In Windows Form sono disponibili molte funzionalità che possono essere usate per migliorare le proprie applicazioni basate su Windows in modo da soddisfare le specifiche esigenze degli utenti. Gli argomenti riportati di seguito illustrano queste funzionalità e le relative modalità di uso.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Grafica e disegno in Windows Form](graphics-and-drawing-in-windows-forms.md)  
  Contiene collegamenti ad argomenti che illustrano come usare l'interfaccia grafica in Windows Form.  
   
@@ -34,7 +34,7 @@ In Windows Form sono disponibili molte funzionalità che possono essere usate pe
  [Globalizzazione di applicazioni Windows Forms](globalizing-windows-forms.md)  
  Contiene collegamenti ad argomenti che illustrano come globalizzare le applicazioni Windows Forms.  
   
- [Windows Form e applicazioni non gestite](windows-forms-and-unmanaged-applications.md)  
+ [Windows Forms and Unmanaged Applications](windows-forms-and-unmanaged-applications.md)  
  Contiene collegamenti ad argomenti che illustrano come accedere ai componenti COM dalle applicazioni Windows Form.  
   
  [Informazioni sul sistema e Windows Form](system-information-and-windows-forms.md)  

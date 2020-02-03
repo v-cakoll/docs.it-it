@@ -40,7 +40,7 @@ Per le app in esecuzione nel .NET Framework 4.5.2, è possibile aggiungere la ch
 
 Se la chiave di `EnablePrintPreviewOptimization` è impostata su qualsiasi altro valore o se la chiave non è presente, l'ottimizzazione non viene applicata.
 
-Per le app in esecuzione in .NET Framework 4,6 o versioni successive, è possibile aggiungere l'opzione seguente all'elemento [\<AppContextSwitchOverrides](../../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) nella sezione [\<Runtime >](../../configure-apps/file-schema/runtime/index.md) del file di configurazione dell'app:
+Per le app in esecuzione in .NET Framework 4,6 o versioni successive, è possibile aggiungere l'opzione seguente all'elemento [>\<AppContextSwitchOverrides](../../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) nella sezione [\<Runtime >](../../configure-apps/file-schema/runtime/index.md) del file di configurazione dell'app:
 
 ```xml
 <runtime >

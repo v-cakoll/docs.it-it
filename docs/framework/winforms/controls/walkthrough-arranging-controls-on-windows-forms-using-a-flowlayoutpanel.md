@@ -191,4 +191,4 @@ Al termine, sarà possibile comprendere il ruolo svolto da queste importanti fun
 - [Panoramica sulla proprietà AutoSize](autosize-property-overview.md)
 - [Procedura: Ancorare i controlli in Windows Form](how-to-dock-controls-on-windows-forms.md)
 - [Procedura: Agganciare i controlli in Windows Form](how-to-anchor-controls-on-windows-forms.md)
-- [Procedura dettagliata: Disposizione di controlli Windows Form con spaziatura, margini e la proprietà AutoSize](windows-forms-controls-padding-autosize.md)
+- [Procedura dettagliata: disposizione di controlli Windows Form usando spaziatura, margini e la proprietà AutoSize](windows-forms-controls-padding-autosize.md)

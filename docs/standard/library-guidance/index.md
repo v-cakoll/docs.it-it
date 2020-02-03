@@ -30,7 +30,7 @@ Aspetti delle librerie .NET open source di qualità:
 
 Ogni articolo presenta quattro tipi di suggerimenti: **Da fare**, **Da considerare**, **Da evitare** e **Da non fare**. Il tipo di suggerimento indica quanto è importante che venga osservato.
 
-È opportuno seguire quasi sempre un suggerimento di tipo **Da fare**. Ad esempio:
+È opportuno seguire quasi sempre un suggerimento di tipo **Da fare**. Ad esempio,
 
 ✔️ distribuire la libreria usando un pacchetto NuGet.
 
@@ -47,4 +47,4 @@ E infine, i suggerimenti di tipo **Da non fare** indicano operazioni che quasi s
 ❌ non pubblicare versioni con nome sicuro e senza nome sicuro della libreria. Ad esempio, `Contoso.Api` e `Contoso.Api.StrongNamed`.
 
 >[!div class="step-by-step"]
->[Successivo](get-started.md)
+>[avanti](get-started.md)

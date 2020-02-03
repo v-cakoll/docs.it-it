@@ -36,7 +36,7 @@ Il Windows Forms controllo <xref:System.Windows.Forms.RichTextBox> può scrivere
 
 - Testo normale con rappresentazione testuale di oggetti OLE
 
-Per salvare un file, chiamare il metodo <xref:System.Windows.Forms.RichTextBox.SaveFile%2A>. È anche possibile usare il metodo **SaveFile** per salvare i dati in un flusso. Per ulteriori informazioni, vedere <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.
+Per salvare un file, chiamare il metodo <xref:System.Windows.Forms.RichTextBox.SaveFile%2A>. È anche possibile usare il metodo **SaveFile** per salvare i dati in un flusso. Per altre informazioni, vedere <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.
 
 ### <a name="to-save-the-contents-of-the-control-to-a-file"></a>Per salvare il contenuto del controllo in un file
 
@@ -93,4 +93,4 @@ Per salvare un file, chiamare il metodo <xref:System.Windows.Forms.RichTextBox.S
 - <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RichTextBox>
 - [Controllo RichTextBox](richtextbox-control-windows-forms.md)
-- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)
+- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)

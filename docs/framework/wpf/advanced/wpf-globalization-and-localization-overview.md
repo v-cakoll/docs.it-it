@@ -144,7 +144,7 @@ Le prime due colonne in cui vengono posizionati i <xref:System.Windows.Controls.
 
 Si noti che nell'esempio viene utilizzata la funzionalità di ridimensionamento condiviso di <xref:System.Windows.Controls.Grid>. Le ultime tre colonne sfruttano i vantaggi di questa operazione posizionandosi nello stesso <xref:System.Windows.Controls.DefinitionBase.SharedSizeGroup%2A>. Come si evince dal nome della proprietà, in questo modo le colonne possono condividere le stesse dimensioni. Quindi, quando "Sfoglia..." viene localizzato nella stringa più lunga "durchsuchen...", tutti i pulsanti crescono in larghezza anziché avere un piccolo pulsante "OK" e un "durchsuchen..." molto grande. pulsante.
 
-**xml:lang**
+**XML: lang**
 
 `xml:lang="en-US"`
 
@@ -180,25 +180,25 @@ Usare un editor CSV che supporta la codifica Unicode per modificare il file. Esc
 
 |Chiave di risorsa|Categoria di localizzazione|Valore|
 |-|-|-|
-|Button_1:System.Windows.Controls.Button.$Content|Button|OK|
-|Button_2:System.Windows.Controls.Button.$Content|Button|Cancel|
-|Button_3:System.Windows.Controls.Button.$Content|Button|Sfoglia...|
+|Button_1:System.Windows.Controls.Button.$Content|Pulsante|OK|
+|Button_2:System.Windows.Controls.Button.$Content|Pulsante|Annulla|
+|Button_3:System.Windows.Controls.Button.$Content|Pulsante|Sfoglia...|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Testo|Digitare il nome del programma, della cartella, del documento o della risorsa Internet da aprire.|
-|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Testo|Apri:|
-|Window_1:System.Windows.Window.Title|Titolo|Eseguire|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|Digitare il nome del programma, della cartella, del documento o della risorsa Internet da aprire.|
+|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Text|Apri:|
+|Window_1:System.Windows.Window.Title|Titolo|Esegui|
 
 La localizzazione dell'applicazione in tedesco richiede le seguenti traduzioni:
 
 |Chiave di risorsa|Categoria di localizzazione|Valore|
 |-|-|-|
-|Button_1:System.Windows.Controls.Button.$Content|Button|OK|
-|Button_2:System.Windows.Controls.Button.$Content|Button|Abbrechen|
-|Button_3:System.Windows.Controls.Button.$Content|Button|Durchsuchen…|
+|Button_1:System.Windows.Controls.Button.$Content|Pulsante|OK|
+|Button_2:System.Windows.Controls.Button.$Content|Pulsante|Abbrechen|
+|Button_3:System.Windows.Controls.Button.$Content|Pulsante|Durchsuchen…|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Testo|Geben Sie den Namen eines programmes, Ordners, Dokuments oder einer Internetresource an.|
-|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Testo|Apri:|
-|Window_1:System.Windows.Window.Title|Titolo|Eseguire|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|Geben Sie den Namen eines programmes, Ordners, Dokuments oder einer Internetresource an.|
+|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Text|Apri:|
+|Window_1:System.Windows.Window.Title|Titolo|Esegui|
 
 **Generazione**
 
@@ -267,9 +267,9 @@ In molti casi il contenuto può risultare ambiguo e difficile da tradurre. Lo sv
 
 Questo commento viene associato al contenuto di TextBlock_1 e, nel caso dello strumento LocBaml (vedere [localizzare un'applicazione](how-to-localize-an-application.md)), può essere visualizzato nella sesta colonna della TextBlock_1 riga nel file output. csv:
 
-|Chiave di risorsa|Categoria|Leggibile|Modificabile|Commento|Valore|
+|Chiave di risorsa|Category|Leggibile|Modificabile|Commento|Valore|
 |-|-|-|-|-|-|
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Testo|true|true|Questo carattere viene usato come regola decorativa.|&#124;|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|TRUE|TRUE|Questo carattere viene usato come regola decorativa.|&#124;|
 
 I commenti possono essere inseriti nel contenuto o nella proprietà di qualsiasi elemento usando la sintassi seguente:
 
@@ -277,7 +277,7 @@ I commenti possono essere inseriti nel contenuto o nella proprietà di qualsiasi
 
 **Attributi di localizzazione**
 
-Spesso lo sviluppatore o il responsabile della localizzazione deve avere il controllo su tutto ciò che i localizzatori possono leggere e modificare. Ad esempio, il localizzatore non deve tradurre il nome della società o modificare alcuni termini legali. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dispone di attributi che consentono di impostare la leggibilità, modificabilità e la categoria del contenuto o delle proprietà di un elemento e che possono essere usati dallo strumento di localizzazione per bloccare, nascondere o ordinare gli elementi. Per ulteriori informazioni, vedere <xref:System.Windows.Localization.Attributes%2A>. Ai fini di questo esempio, lo strumento LocBaml restituisce solo i valori di questi attributi. I controlli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] hanno tutti i valori predefiniti per questi attributi, ma è possibile eseguirne l'override. Nell'esempio seguente, ad esempio, viene eseguito l'override degli attributi di localizzazione predefiniti per `TextBlock_1` e il contenuto viene impostato come leggibile ma non modificabile per i localizzatori.
+Spesso lo sviluppatore o il responsabile della localizzazione deve avere il controllo su tutto ciò che i localizzatori possono leggere e modificare. Ad esempio, il localizzatore non deve tradurre il nome della società o modificare alcuni termini legali. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dispone di attributi che consentono di impostare la leggibilità, modificabilità e la categoria del contenuto o delle proprietà di un elemento e che possono essere usati dallo strumento di localizzazione per bloccare, nascondere o ordinare gli elementi. Per altre informazioni, vedere <xref:System.Windows.Localization.Attributes%2A>. Ai fini di questo esempio, lo strumento LocBaml restituisce solo i valori di questi attributi. I controlli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] hanno tutti i valori predefiniti per questi attributi, ma è possibile eseguirne l'override. Nell'esempio seguente, ad esempio, viene eseguito l'override degli attributi di localizzazione predefiniti per `TextBlock_1` e il contenuto viene impostato come leggibile ma non modificabile per i localizzatori.
 
 [!code-xaml[LocalizationComAtt#LocalizationAttributes](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributes)]
 
@@ -285,7 +285,7 @@ Oltre agli attributi di leggibilità e di modificabilità, [!INCLUDE[TLA2#tla_wi
 
 [!code-xaml[LocalizationComAtt#LocalizationAttributesOverridden](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributesoverridden)]
 
-Gli attributi di localizzazione predefiniti che [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce possono anche essere sottoposti a override tramite codice, pertanto è possibile impostare correttamente i valori predefiniti corretti per i controlli personalizzati. Ad esempio:
+Gli attributi di localizzazione predefiniti che [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce possono anche essere sottoposti a override tramite codice, pertanto è possibile impostare correttamente i valori predefiniti corretti per i controlli personalizzati. Ad esempio,
 
 ```csharp
 [Localizability(Readability = Readability.Readable, Modifiability=Modifiability.Unmodifiable, LocalizationCategory.None)]

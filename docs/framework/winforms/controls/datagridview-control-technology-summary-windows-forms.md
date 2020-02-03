@@ -28,7 +28,7 @@ Questo argomento riepiloga le informazioni relative al controllo `DataGridView` 
 ## <a name="related-technologies"></a>Tecnologie correlate  
  `BindingSource`  
   
-## <a name="background"></a>Informazioni di background sul  
+## <a name="background"></a>Background  
  Le finestre di progettazione dell'interfaccia utente trovano spesso la necessità di visualizzare i dati tabulari agli utenti. Il .NET Framework offre diversi modi per visualizzare i dati in una tabella o in una griglia. Il controllo `DataGridView` rappresenta la più recente evoluzione di questa tecnologia per le applicazioni Windows Forms.  
   
  Il controllo `DataGridView` può visualizzare le righe di dati da un archivio dati. Sono supportati molti tipi di archivi dati. L'archivio dati può contenere dati semplici e non tipizzati, ad esempio una matrice unidimensionale, oppure può contenere dati tipizzati, ad esempio un <xref:System.Data.DataSet>. Per altre informazioni, vedere [procedura: associare dati al controllo DataGridView Windows Forms](how-to-bind-data-to-the-windows-forms-datagridview-control.md).  

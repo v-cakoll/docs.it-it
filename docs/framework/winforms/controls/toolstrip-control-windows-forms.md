@@ -15,7 +15,7 @@ ms.locfileid: "76733877"
 # <a name="toolstrip-control-windows-forms"></a>Controllo ToolStrip (Windows Form)
 I controlli <xref:System.Windows.Forms.ToolStrip> sono barre degli strumenti che possono ospitare menu, controlli e controlli utente nelle applicazioni di Windows Form.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Panoramica sul controllo ToolStrip](toolstrip-control-overview-windows-forms.md)  
  Definisce il controllo e ne illustra le funzionalità chiave e le proprietà.  
   
@@ -81,7 +81,7 @@ I controlli <xref:System.Windows.Forms.ToolStrip> sono barre degli strumenti che
   
 - [Procedura dettagliata: Creazione di un form MDI con unione di menu e controlli ToolStrip](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  Classe <xref:System.Windows.Forms.ToolStrip>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   
@@ -92,5 +92,5 @@ I controlli <xref:System.Windows.Forms.ToolStrip> sono barre degli strumenti che
  Descrive la classe <xref:System.Windows.Forms.ToolStripItem> e include collegamenti a tutti i membri corrispondenti.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)  
+ [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)  
  Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.

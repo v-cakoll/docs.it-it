@@ -37,6 +37,6 @@ Uno dei concetti più importanti di Windows Forms data binding è la *notifica d
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.ComponentModel.INotifyPropertyChanged>
 - <xref:System.ComponentModel.BindingList%601>
-- [Data binding in Windows Form](windows-forms-data-binding.md)
+- [Associazione ai dati di Windows Form](windows-forms-data-binding.md)
 - [Origini dati supportate da Windows Form](data-sources-supported-by-windows-forms.md)
 - [Data binding e Windows Forms](data-binding-and-windows-forms.md)

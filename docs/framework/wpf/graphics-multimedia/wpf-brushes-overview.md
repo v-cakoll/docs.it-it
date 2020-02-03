@@ -170,5 +170,5 @@ Rettangolo disegnato utilizzando VisualBrush
 - [Brushes Sample](https://go.microsoft.com/fwlink/?LinkID=159973) (Esempio di pennelli)
 - [Esempio di ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [Esempio VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)
-- [Procedure relative alle proprietà](brushes-how-to-topics.md)
+- [Procedure relative alla struttura ad albero e alla serializzazione degli elementi](brushes-how-to-topics.md)
 - [Altri suggerimenti relativi alle prestazioni](../advanced/optimizing-performance-other-recommendations.md)

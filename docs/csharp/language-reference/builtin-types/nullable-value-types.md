@@ -24,7 +24,7 @@ Si usa in genere un tipo di valore nullable quando è necessario rappresentare i
 
 ## <a name="declaration-and-assignment"></a>Dichiarazione e assegnazione
 
-Poiché un tipo valore è convertibile in modo implicito nel tipo di valore nullable corrispondente, è possibile assegnare un valore a una variabile di un tipo di valore nullable come per il tipo di valore sottostante. È anche possibile assegnare il valore `null`. Ad esempio:
+Poiché un tipo valore è convertibile in modo implicito nel tipo di valore nullable corrispondente, è possibile assegnare un valore a una variabile di un tipo di valore nullable come per il tipo di valore sottostante. È anche possibile assegnare il valore `null`. Ad esempio,
 
 [!code-csharp[declare and assign](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#Declaration)]
 
@@ -68,7 +68,7 @@ Un tipo di valore non nullable `T` è convertibile in modo implicito nel tipo di
 
 ## <a name="lifted-operators"></a>Operatori rimossi
 
-Gli operatori unari e binari predefiniti o gli operatori di overload supportati da un tipo di valore `T` sono supportati anche dal tipo di valore nullable corrispondente `T?`. Questi operatori, noti anche come *operatori lifted*, producono `null` se uno o entrambi gli operandi sono `null`; in caso contrario, l'operatore utilizza i valori contenuti degli operandi per calcolare il risultato. Ad esempio:
+Gli operatori unari e binari predefiniti o gli operatori di overload supportati da un tipo di valore `T` sono supportati anche dal tipo di valore nullable corrispondente `T?`. Questi operatori, noti anche come *operatori lifted*, producono `null` se uno o entrambi gli operandi sono `null`; in caso contrario, l'operatore utilizza i valori contenuti degli operandi per calcolare il risultato. Ad esempio,
 
 [!code-csharp[lifted operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#LiftedOperator)]
 

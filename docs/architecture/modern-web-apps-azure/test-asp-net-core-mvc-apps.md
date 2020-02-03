@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Test
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 0cb5c5c604d4a82798d4af736ff278b096621588
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5f63e350e2f1ba8699bb002a54492cbf9501948e
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777103"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965776"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testare app ASP.NET Core MVC
 
@@ -78,7 +78,7 @@ Un approccio comune consiste nell'organizzare i progetti dell'applicazione in un
 
 ### <a name="test-naming"></a>Denominazione dei test
 
-È consigliabile assegnare ai test nomi coerenti che indichino il tipo di test eseguito. Un approccio molto efficace è assegnare alle classi di test nomi basati sulla classe e sul metodo testato. Il risultato è un numero elevato di classi di test, ma la funzione di ogni test è estremamente chiara. Con il nome della classe di test impostato per identificare la classe e il metodo da sottoporre a test, è possibile usare il nome di ogni metodo di test per specificare il comportamento sottoposto a test. Deve essere incluso il comportamento previsto e l'eventuale input o gli eventuali presupposti che devono generare questo comportamento. Ecco alcuni esempi di nomi di test:
+Assegnare un nome ai test in modo coerente, con nomi che indichino il funzionamento di ogni test. Un approccio molto efficace è assegnare alle classi di test nomi basati sulla classe e sul metodo testato. Il risultato è un numero elevato di classi di test, ma la funzione di ogni test è estremamente chiara. Con il nome della classe di test impostato per identificare la classe e il metodo da sottoporre a test, è possibile usare il nome di ogni metodo di test per specificare il comportamento sottoposto a test. Deve essere incluso il comportamento previsto e l'eventuale input o gli eventuali presupposti che devono generare questo comportamento. Ecco alcuni esempi di nomi di test:
 
 - `CatalogControllerGetImage.CallsImageServiceWithId`
 
@@ -143,7 +143,7 @@ public IActionResult GetImage(int id)
 }
 ```
 
-\_logger e \_imageService sono entrambi inseriti come dipendenze. È ora possibile verificare che lo stesso ID che viene passato al metodo di azione venga passato a \_imageService, e che i byte risultanti vengano restituiti come parte di FileResult. È anche possibile verificare che la registrazione degli errori venga eseguita come previsto e che venga restituito un risultato NotFound se l'immagine manca, presupponendo che questo rappresenti un comportamento importante dell'applicazione, in altre parole, che non sia solo codice temporaneo aggiunto dallo sviluppatore per diagnosticare un problema. La logica effettiva del file è stata spostata in un servizio di implementazione separato ed è stata migliorata perché venga restituita un'eccezione specifica dell'applicazione in caso di mancanza di un file. È possibile testare questa implementazione in modo indipendente, usando un test di integrazione.
+`_logger` e `_imageService` vengono entrambi inseriti come dipendenze. A questo punto è possibile verificare che lo stesso ID passato al metodo di azione venga passato a `_imageService`e che i byte risultanti vengano restituiti come parte del FileResult. È anche possibile verificare che la registrazione degli errori si verifichi come previsto e che venga restituito un risultato `NotFound` se l'immagine non è presente, supponendo che si tratta di un comportamento importante dell'applicazione, ovvero non solo il codice temporaneo che lo sviluppatore ha aggiunto per diagnosticare un problema. La logica effettiva del file è stata spostata in un servizio di implementazione separato ed è stata migliorata perché venga restituita un'eccezione specifica dell'applicazione in caso di mancanza di un file. È possibile testare questa implementazione in modo indipendente, usando un test di integrazione.
 
 Nella maggior parte dei casi è opportuno usare i gestori di eccezioni globali nei controller, per ridurre al minimo la quantità di codice e di conseguenza la necessità di esecuzione di unit test. È consigliabile eseguire la maggior parte dei test di azioni dei controller mediante i test funzionali e la classe `TestServer` descritta di seguito.
 
@@ -153,7 +153,7 @@ La maggior parte dei test di integrazione nelle app ASP.NET Core dovrebbe riguar
 
 ## <a name="functional-testing-aspnet-core-apps"></a>Test funzionale di app ASP.NET Core
 
-Per le applicazioni ASP.NET Core, la classe `TestServer` semplifica notevolmente la scrittura di test funzionali. Si configura un elemento `TestServer` usando direttamente `WebHostBuilder` (come nella procedura standard usata per l'applicazione) o con il tipo `WebApplicationFactory` (disponibile a partire dalla versione 2.1). È consigliabile cercare la corrispondenza più esatta possibile tra l'host di test e l'host di produzione, in modo che i test abbiano un comportamento simile a quello dell'app in produzione. La classe `WebApplicationFactory` è utile per configurare ContentRoot di TestServer, che viene usata da ASP.NET Core per trovare una risorsa statica come Views.
+Per le applicazioni ASP.NET Core, la classe `TestServer` semplifica notevolmente la scrittura di test funzionali. È possibile configurare un `TestServer` usando direttamente un `WebHostBuilder`, come si fa normalmente per l'applicazione, oppure con il tipo di `WebApplicationFactory` (disponibile dalla versione 2,1). Provare a associare l'host di test all'host di produzione il più vicino possibile, in modo che i test esercitino un comportamento simile a quello che l'app eseguirà nell'ambiente di produzione. La classe `WebApplicationFactory` è utile per configurare ContentRoot di TestServer, che viene usata da ASP.NET Core per trovare una risorsa statica come Views.
 
 È possibile generare test funzionali semplici creando una classe di test che implementa IClassFixture \<WebApplicationFactoryTEntry\<>>, dove TEntry è la classe Startup dell'applicazione Web. In questo modo, la fixture di test può creare un client usando il metodo CreateClient della factory:
 

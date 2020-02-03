@@ -26,9 +26,9 @@ Un assembly è l'unità di distribuzione e di identità per i programmi di codic
 
  `<Company>.<Component>.dll`
 
- dove `<Component>` contiene una o più clausole separate da punti. Ad esempio:
+ dove `<Component>` contiene una o più clausole separate da punti. Ad esempio,
 
- `Litware.Controls.dll`.
+ `Litware.Controls.dll`
 
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*
 

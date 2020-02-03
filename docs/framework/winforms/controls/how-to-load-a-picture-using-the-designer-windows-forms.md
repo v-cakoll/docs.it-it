@@ -19,7 +19,7 @@ ms.locfileid: "76736332"
 
 Con il controllo Windows Forms <xref:System.Windows.Forms.PictureBox>, è possibile caricare e visualizzare un'immagine in un form in fase di progettazione impostando la proprietà <xref:System.Windows.Forms.PictureBox.Image%2A> su un'immagine valida. Nella tabella seguente sono elencati i tipi di file accettabili.
 
-|Tipo di|Estensione del nome di file|
+|Type|Estensione del nome di file|
 |---|---|
 |Bitmap|.bmp|
 |Icona|ico|

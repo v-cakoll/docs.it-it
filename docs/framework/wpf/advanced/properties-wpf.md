@@ -19,9 +19,9 @@ ms.locfileid: "76731844"
 # <a name="properties-wpf"></a>Proprietà (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce un set di servizi che possono essere utilizzati per estendere la funzionalità di una proprietà di Common Language Runtime (CLR). In genere, questi servizi vengono definiti collettivamente come sistema di proprietà WPF. Una proprietà supportata dal sistema di proprietà WPF è nota come proprietà di dipendenza.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
 
-- [Panoramica sulle proprietà di dipendenza](dependency-properties-overview.md)
+- [Cenni preliminari sulle proprietà di dipendenza](dependency-properties-overview.md)
 - [Cenni preliminari sulle proprietà associate](attached-properties-overview.md)
 - [Proprietà di dipendenza personalizzate](custom-dependency-properties.md)
 - [Metadati delle proprietà di dipendenza](dependency-property-metadata.md)
@@ -34,9 +34,9 @@ ms.locfileid: "76731844"
 - [Modelli di costruttore sicuri per DependencyObject](safe-constructor-patterns-for-dependencyobjects.md)
 - [Proprietà di dipendenza di tipo raccolta](collection-type-dependency-properties.md)
 - [Caricamento XAML e proprietà di dipendenza](xaml-loading-and-dependency-properties.md)
-- [Procedure relative alle proprietà](properties-how-to-topics.md)
+- [Procedure relative alla struttura ad albero e alla serializzazione degli elementi](properties-how-to-topics.md)
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.DependencyProperty>  
   
  <xref:System.Windows.PropertyMetadata>  

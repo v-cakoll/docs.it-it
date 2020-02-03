@@ -1,5 +1,5 @@
 ---
-title: Panoramica del componente MainMenu
+title: Cenni preliminari sul componente MainMenu
 ms.date: 03/30/2017
 f1_keywords:
 - MenuItem

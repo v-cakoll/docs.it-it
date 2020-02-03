@@ -78,7 +78,7 @@ Per eseguire l'applicazione, il comando `dotnet run` risolve le dipendenze dell'
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-## <a name="options"></a>Options
+## <a name="options"></a>Opzioni
 
 # <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
 

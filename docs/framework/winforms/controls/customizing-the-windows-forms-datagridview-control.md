@@ -17,7 +17,7 @@ Il controllo `DataGridView` fornisce diverse proprietà che è possibile utilizz
   
  Per disegnare le celle e le righe manualmente, è possibile gestire vari eventi di disegno `DataGridView`. Per modificare la funzionalità esistente o fornire nuove funzionalità, è possibile creare tipi personalizzati derivati dai tipi di `DataGridViewCell`, `DataGridViewColumn`e `DataGridViewRow` esistenti. È anche possibile fornire nuove funzionalità di modifica creando tipi derivati che visualizzano un controllo a scelta quando una cella è in modalità di modifica.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Procedura: Personalizzare l'aspetto delle celle nel controllo DataGridView di Windows Form](customize-the-appearance-of-cells-in-the-datagrid.md)  
  Viene descritto come gestire l'evento <xref:System.Windows.Forms.DataGridView.CellPainting> per disegnare manualmente le celle.  
   
@@ -33,7 +33,7 @@ Il controllo `DataGridView` fornisce diverse proprietà che è possibile utilizz
  [Procedura: Inserire controlli in celle del controllo DataGridView di Windows Form](how-to-host-controls-in-windows-forms-datagridview-cells.md)  
  Viene descritto come implementare l'interfaccia `IDataGridViewEditingControl` e creare tipi personalizzati derivati da `DataGridViewCell` e `DataGridViewColumn` per visualizzare un controllo <xref:System.Windows.Forms.DateTimePicker> quando una cella è in modalità di modifica.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.DataGridView>  
  Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.DataGridView>.  
   

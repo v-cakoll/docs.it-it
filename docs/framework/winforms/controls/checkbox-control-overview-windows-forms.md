@@ -1,5 +1,5 @@
 ---
-title: Panoramica del controllo CheckBox
+title: Cenni preliminari sul controllo CheckBox
 ms.date: 03/30/2017
 f1_keywords:
 - CheckBox
@@ -15,7 +15,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76737100"
 ---
-# <a name="checkbox-control-overview-windows-forms"></a>Panoramica del controllo CheckBox (Windows Form)
+# <a name="checkbox-control-overview-windows-forms"></a>Cenni preliminari sul controllo CheckBox (Windows Form)
 Il controllo di Windows Form <xref:System.Windows.Forms.CheckBox> indica se una determinata condizione è attiva o disattivata. Viene usato comunemente per presentare all'utente la selezione di valori Sì/No o True/False. È possibile usare i controlli della casella di controllo in gruppi, per visualizzare e consentire all'utente la selezione di una o più opzioni.  
   
  Il controllo casella di controllo è simile al controllo pulsante di opzione in quanto ogni viene usato per indicare una selezione eseguita dall'utente. Si differenziano per il fatto che è possibile selezionare un solo pulsante di opzione in un gruppo alla volta. Con il controllo casella di controllo, tuttavia, è possibile selezionare qualsiasi numero di caselle di controllo.  

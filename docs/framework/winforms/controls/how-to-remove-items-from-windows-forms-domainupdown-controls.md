@@ -35,7 +35,7 @@ ms.locfileid: "76735773"
     domainUpDown1->Items->Remove("noodles");  
     ```  
   
-     oppure  
+     -oppure-  
   
 - Usare il metodo <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> per rimuovere un elemento in base alla relativa posizione.  
   

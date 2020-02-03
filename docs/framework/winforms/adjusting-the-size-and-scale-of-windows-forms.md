@@ -16,7 +16,7 @@ ms.locfileid: "76739784"
 # <a name="adjusting-the-size-and-scale-of-windows-forms"></a>Regolazione delle dimensioni e della scalabilità di Windows Forms
 Questo argomento fornisce collegamenti a informazioni sul ridimensionamento dei Windows Form.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Procedura: Ridimensionare Windows Form](how-to-resize-windows-forms.md)  
  Fornisce istruzioni per specificare le dimensioni di Windows Form.  
   
@@ -26,7 +26,7 @@ Questo argomento fornisce collegamenti a informazioni sul ridimensionamento dei 
  [Supporto di valori DPI alti in Windows Forms](high-dpi-support-in-windows-forms.md)    
  Viene illustrato il supporto di Windows Forms per valori DPI alti e scalabilità dinamica. 
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Drawing.Size>  
  Descrive la classe e include collegamenti a tutti i relativi membri.  
   

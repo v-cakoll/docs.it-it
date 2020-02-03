@@ -87,7 +87,7 @@ Le modifiche apportate a questa categoria modificano la superficie di attacco pu
 
    L'espansione della visibilità di un tipo è tuttavia consentita.
 
-### <a name="members"></a>Membri
+### <a name="members"></a>Members
 
 - ✔️ **consentito: espansione della visibilità di un membro che non è [virtuale](../../csharp/language-reference/keywords/sealed.md)**
 
@@ -192,7 +192,7 @@ Le modifiche apportate a questa categoria modificano la superficie di attacco pu
 
 - ❌ non **consentito: generazione di un evento esistente quando non è mai stato generato prima**
 
-## <a name="behavioral-changes"></a>Modifiche del comportamento
+## <a name="behavioral-changes"></a>Modifiche funzionali
 
 ### <a name="assemblies"></a>Assemblies
 

@@ -13,7 +13,7 @@ ms.locfileid: "76747007"
 
 In questo esempio viene illustrato come utilizzare la funzionalità degli annunci della funzionalità di individuazione. Gli annunci consentono ai servizi di inviare messaggi di annuncio contenenti i metadati relativi al servizio. Per impostazione predefinita, viene inviato un annuncio Hello all'avvio del servizio e un annuncio Bye all'arresto del servizio. Questi annunci possono essere trasmessi tramite multicast oppure inviati da punto a punto. Questo esempio è costituito da due progetti, ovvero il servizio e il client.
 
-## <a name="service"></a>Servizio
+## <a name="service"></a>Service
 
 Questo progetto contiene un servizio calcolatrice indipendente. Nel metodo `Main` viene creato un host del servizio a cui viene aggiunto un endpoint del servizio. Successivamente viene creato un oggetto <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>. Per abilitare gli annunci, è necessario aggiungere un endpoint degli annunci a <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>. In questo caso viene aggiunto un endpoint standard, tramite multicast UDP, come endpoint degli annunci. In questo modo gli annunci vengono trasmessi su un indirizzo UDP conosciuto.
 

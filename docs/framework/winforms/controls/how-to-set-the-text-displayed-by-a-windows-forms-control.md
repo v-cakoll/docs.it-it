@@ -34,7 +34,7 @@ I controlli Windows Forms in genere visualizzano testo correlato alla funzione p
 
 È anche possibile impostare il testo usando la [finestra di progettazione](#designer).
 
-## <a name="programmatic"></a>A livello
+## <a name="programmatic"></a>Programmatica
 
 1. Impostare la proprietà <xref:System.Windows.Forms.Control.Text%2A> su una stringa.
 

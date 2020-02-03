@@ -39,7 +39,7 @@ Puntatore ai parametri di attivazione della finestra.
 `ppInner`\
 Puntatore all'indirizzo di un buffer a elemento singolo che contiene un puntatore a un oggetto <xref:Microsoft.VisualStudio.OLE.Interop.IOleDocument>.
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
 **Piattaforme:** Vedere [.NET Framework requisiti di sistema](../../get-started/system-requirements.md).
 

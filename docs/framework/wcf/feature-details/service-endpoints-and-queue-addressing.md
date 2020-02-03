@@ -72,9 +72,9 @@ Questo argomento descrive come i client indirizzano i servizi che leggono da cod
   
 |Indirizzo di coda basato sugli URI WCF|Impostazione della proprietà UseActiveDirectory|Impostazione della proprietà QueueTransferProtocol|Nomi di formato di MSMQ risultanti|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
-|Net.msmq://\<machine-name>/private/abc|False (valore predefinito)|Native (impost. predef.)|DIRECT=OS:nome-computer\private$\abc|  
-|Net.msmq://\<machine-name>/private/abc|Falso|SRMP|DIRECT =http://machine/msmq/private $/ABC|  
-|Net.msmq://\<machine-name>/private/abc|True|Nativo|PUBLIC=guid (GUID della coda)|  
+|NET. MSMQ://\<nome computer >/Private/ABC|False (valore predefinito)|Native (impost. predef.)|DIRECT=OS:nome-computer\private$\abc|  
+|NET. MSMQ://\<nome computer >/Private/ABC|False|SRMP|DIRECT =http://machine/msmq/private$/ABC|  
+|NET. MSMQ://\<nome computer >/Private/ABC|True|Nativo|PUBLIC=guid (GUID della coda)|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>Lettura dei messaggi dalla coda dei messaggi non recapitabili o dalla coda dei messaggi non elaborabili  
  Per leggere i messaggi da una coda di messaggi non elaborabili che è una coda secondaria della coda di destinazione, aprire l'elemento `ServiceHost` con l'indirizzo della coda secondaria.  
@@ -94,13 +94,13 @@ Questo argomento descrive come i client indirizzano i servizi che leggono da cod
 ## <a name="msmqintegrationbinding-and-service-addressing"></a>Associazione MsmqIntegrationBinding e indirizzamento del servizio  
  L'associazione `MsmqIntegrationBinding` viene utilizzata per comunicare con le applicazioni MSMQ tradizionali. Per semplificare l'interazione con un'applicazione MSMQ esistente, WCF supporta solo l'indirizzamento dei nomi di formato. Di conseguenza, i messaggi inviati tramite questa associazione devono attenersi allo schema degli URI seguente:  
   
- msmq.formatname:\<*MSMQ-format-name*>>  
+ MSMQ. formatname:\<*MSMQ-format-name*>>  
   
  MSMQ-format-name ha il formato specificato da MSMQ in [About Accodamento messaggi](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms706032(v=vs.85)).  
   
  Si noti che quando si ricevono messaggi da una coda tramite l'associazione `MsmqIntegrationBinding` è possibile utilizzare soltanto i nomi di formato Direct e, se è stata scelta l'opzione di integrazione con Active Directory, i nomi di formato pubblici e privati. È tuttavia consigliabile utilizzare i nomi di formato Direct. In Windows Vista, ad esempio, l'utilizzo di qualsiasi altro nome di formato causa un errore, in quanto il sistema tenta di aprire una coda secondaria, che può essere aperta solo con nomi di formato diretti.  
   
- Quando si esegue l'indirizzamento tramite il protocollo SRMP usando l'associazione `MsmqIntegrationBinding` non occorre aggiungere /msmq/ nel nome di formato Direct per consentire ai servizi Internet Information Services (IIS) di eseguire la distribuzione. Ad esempio: quando si indirizza una coda ABC usando il protocollo SRMP, anziché DIRECT =http://adatum.com/msmq/private $/ABC, è consigliabile usare DIRECT =http://adatum.com/private $/ABC.  
+ Quando si esegue l'indirizzamento tramite il protocollo SRMP usando l'associazione `MsmqIntegrationBinding` non occorre aggiungere /msmq/ nel nome di formato Direct per consentire ai servizi Internet Information Services (IIS) di eseguire la distribuzione. Ad esempio: quando si indirizza una coda ABC usando il protocollo SRMP, anziché DIRECT =http://adatum.com/msmq/private$/ABC, è consigliabile usare DIRECT =http://adatum.com/private$/ABC.  
   
  Si noti che non è possibile utilizzare l'indirizzamento net.msmq:// con l'associazione `MsmqIntegrationBinding`. Poiché `MsmqIntegrationBinding` supporta l'indirizzamento dei nomi di formato MSMQ in formato libero, è possibile utilizzare un servizio WCF che utilizza questa associazione per utilizzare le funzionalità della lista di distribuzione e multicast in MSMQ. Un'eccezione è la specifica dell'elemento `CustomDeadLetterQueue` quando si utilizza l'associazione `MsmqIntegrationBinding`. Analogamente al caso di specifica dell'elemento quando si utilizza l'associazione `NetMsmqBinding`, tale elemento deve presentare il formato net.msmq://.  
   

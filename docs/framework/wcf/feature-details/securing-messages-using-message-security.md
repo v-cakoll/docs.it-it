@@ -34,7 +34,7 @@ In questa sezione viene illustrata la sicurezza del messaggio WCF quando si util
   
  Contenuto della sezione vengono illustrati i diversi tipi di credenziali e viene spiegato come utilizzarli con le code.  
   
-### <a name="certificate"></a>Certificato  
+### <a name="certificate"></a>Certificate  
  Il tipo di credenziale del certificato utilizza un certificato X.509 per identificare il servizio e il client.  
   
  In uno scenario tipico il client e il servizio ricevono un certificato valido rilasciato da un'autorità di certificazione attendibile. La connessione viene quindi stabilita, il client autentica la validità del servizio utilizzando il certificato del servizio per decidere se il servizio è attendibile. Analogamente il servizio utilizza il certificato del client per verificare l'attendibilità del client.  
@@ -43,7 +43,7 @@ In questa sezione viene illustrata la sicurezza del messaggio WCF quando si util
   
  Nei computer che eseguono Windows i certificati sono contenuti in vari tipi di archivio. Per ulteriori informazioni sui diversi archivi, vedere [archivi certificati](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc757138(v=ws.10)).  
   
-### <a name="windows"></a>Portale di  
+### <a name="windows"></a>WINDOWS  
  Il tipo di credenziale del messaggio di Windows utilizza il protocollo Kerberos.  
   
  Il protocollo Kerberos è un meccanismo di sicurezza che esegue l'autenticazione degli utenti in un dominio e consente agli utenti autenticati di stabilire una connessione protetta con le altre entità del dominio.  
@@ -68,4 +68,4 @@ In questa sezione viene illustrata la sicurezza del messaggio WCF quando si util
 - [Protezione dei messaggi mediante la sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
 - [Sicurezza dei messaggi nell'accodamento messaggi](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
 - [Concetti relativi alla sicurezza](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

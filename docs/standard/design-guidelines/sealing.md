@@ -32,7 +32,7 @@ Una delle funzionalità dei Framework orientati a oggetti è che gli sviluppator
 
 - La classe eredita molti membri virtuali e il costo di sealing singolarmente supererà i vantaggi derivanti dall'uscita dalla classe.
 
-- La classe è un attributo che richiede una ricerca molto rapida del runtime. Gli attributi sealed hanno livelli di prestazioni leggermente più elevati rispetto a quelli non bloccati. Vedere [attributi](../../../docs/standard/design-guidelines/attributes.md).
+- La classe è un attributo che richiede una ricerca molto rapida del runtime. Gli attributi sealed hanno livelli di prestazioni leggermente più elevati rispetto a quelli non bloccati. vedere [attributi](../../../docs/standard/design-guidelines/attributes.md).
 
  ❌ non dichiarare membri protetti o virtuali su tipi sealed.
 

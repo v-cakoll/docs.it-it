@@ -21,7 +21,7 @@ Il controllo `DataGridView` viene utilizzato per visualizzare i dati da un'ampia
   
  Inoltre, è possibile visualizzare i dati usando formati standard, ad esempio il formato di valuta, oppure personalizzare la formattazione dello schermo per presentare i dati, ma è necessario, ad esempio, modificare il colore di sfondo per i numeri negativi o sostituire i valori stringa con le immagini corrispondenti).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Modalità di visualizzazione di dati nel controllo DataGridView di Windows Form](data-display-modes-in-the-windows-forms-datagridview-control.md)  
  Descrive le opzioni per popolare il controllo con i dati.  
   
@@ -58,7 +58,7 @@ Il controllo `DataGridView` viene utilizzato per visualizzare i dati da un'ampia
  [Procedura: Formattare dati personalizzati in un controllo DataGridView di Windows Form](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)  
  Viene descritto come gestire l'evento <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> per modificare l'aspetto delle celle a seconda dei rispettivi valori.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.DataGridView>  
  Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.DataGridView>.  
   

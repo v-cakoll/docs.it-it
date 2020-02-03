@@ -62,7 +62,7 @@ Il file *ToDo.csproj* contiene ora un elemento [`<PackageReference>`](/nuget/con
 
   Riferimento al pacchetto da aggiungere.
 
-## <a name="options"></a>Options
+## <a name="options"></a>Opzioni
 
 - **`-f|--framework <FRAMEWORK>`**
 

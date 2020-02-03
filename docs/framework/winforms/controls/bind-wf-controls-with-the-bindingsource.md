@@ -50,7 +50,7 @@ Dopo aver aggiunto i controlli al modulo e aver determinato l'interfaccia utente
 
 9. Se si vuole, sostituire il nome predefinito del set di dati.
 
-10. Scegliere **Fine**.
+10. Fare clic su **Fine**.
 
 11. Nella finestra **Proprietà** fare clic sulla freccia accanto alla proprietà <xref:System.Windows.Forms.TextBox.Text%2A>. Nell'editor di tipo dell'interfaccia utente **DataSource** selezionare il nome del campo a cui associare il <xref:System.Windows.Forms.TextBox>.
 
