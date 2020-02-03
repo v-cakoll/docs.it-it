@@ -88,8 +88,8 @@ Se si desidera estendere le funzionalità di un controllo esistente, è possibil
 ## <a name="see-also"></a>Vedere anche
 
 - [Tipi di controlli personalizzati](varieties-of-custom-controls.md)
-- [Procedura: Ereditare dalla classe Control](how-to-inherit-from-the-control-class.md)
-- [Procedura: Ereditare dalla classe UserControl](how-to-inherit-from-the-usercontrol-class.md)
-- [Procedura: Creare controlli per Windows Form](how-to-author-controls-for-windows-forms.md)
+- [Procedura: ereditare dalla classe Control](how-to-inherit-from-the-control-class.md)
+- [Procedura: ereditare dalla classe UserControl](how-to-inherit-from-the-usercontrol-class.md)
+- [Procedura: creare controlli per Windows Form](how-to-author-controls-for-windows-forms.md)
 - [Risoluzione dei problemi relativi ai gestori eventi ereditati in Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
 - [Procedura dettagliata: eredità da un controllo Windows Forms](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

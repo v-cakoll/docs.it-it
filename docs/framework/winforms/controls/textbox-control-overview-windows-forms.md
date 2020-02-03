@@ -1,5 +1,5 @@
 ---
-title: Panoramica del controllo TextBox
+title: Cenni preliminari sul controllo TextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp

@@ -52,7 +52,7 @@ ms.locfileid: "76742490"
   
  Il controllo <xref:System.Windows.Forms.DataGridView> è altamente configurabile ed estendibile e fornisce molte proprietà, metodi ed eventi per personalizzarne l'aspetto e il comportamento. Quando si desidera che la Windows Forms Application visualizzi dati tabulari, è consigliabile utilizzare il controllo <xref:System.Windows.Forms.DataGridView> prima di altri, ad esempio <xref:System.Windows.Forms.DataGrid>. Se si visualizza una piccola griglia di valori di sola lettura o se si consente a un utente di modificare una tabella con milioni di record, il controllo <xref:System.Windows.Forms.DataGridView> fornirà una soluzione facilmente programmabile e efficiente per la memoria.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Riepilogo della tecnologia del controllo DataGridView](datagridview-control-technology-summary-windows-forms.md)  
  Riepiloga <xref:System.Windows.Forms.DataGridView> concetti di controllo e l'utilizzo di classi correlate.  
   

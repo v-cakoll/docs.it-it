@@ -81,7 +81,7 @@ Per impostazione predefinita, le applicazioni ClickOnce distribuite tramite Visu
 
 Per ulteriori informazioni sugli aspetti di sicurezza di ClickOnce e sull'elevazione delle autorizzazioni, vedere [protezione di applicazioni ClickOnce](/visualstudio/deployment/securing-clickonce-applications). Per altre informazioni sulla distribuzione di applicazioni attendibili, vedere [Panoramica della distribuzione di applicazioni attendibili](/visualstudio/deployment/trusted-application-deployment-overview).
 
-### <a name="testing-the-application"></a>Verifica dell'applicazione
+### <a name="testing-the-application"></a>Test dell'applicazione
 
 Se la Windows Forms Application è stata distribuita usando Visual Studio, è possibile abilitare il debug in attendibilità parziale o un set di autorizzazioni limitato dall'ambiente di sviluppo.  Vedere anche [procedura: eseguire il debug di un'applicazione ClickOnce con autorizzazioni limitate](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions).
 

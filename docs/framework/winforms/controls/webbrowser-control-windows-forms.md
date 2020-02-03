@@ -13,10 +13,10 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76739990"
 ---
-# <a name="webbrowser-control-windows-forms"></a>Controllo WebBrowser (Windows Form)
+# <a name="webbrowser-control-windows-forms"></a>WebBrowser (controllo) [Windows Form]
 Il controllo Windows Forms `WebBrowser` ospita le pagine Web e fornisce funzionalità di esplorazione Web per l'applicazione.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Panoramica sul controllo WebBrowser](webbrowser-control-overview.md)  
  Definisce il controllo e ne illustra le funzionalità chiave e le proprietà.  
   
@@ -41,7 +41,7 @@ Il controllo Windows Forms `WebBrowser` ospita le pagine Web e fornisce funziona
  [Utilizzare il Document Object Model HTML gestito](using-the-managed-html-document-object-model.md)  
  Fornisce argomenti che descrivono come modificare o creare pagine HTML ospitate dal controllo <xref:System.Windows.Forms.WebBrowser>.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  Classe <xref:System.Windows.Forms.WebBrowser>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   
@@ -80,4 +80,4 @@ Il controllo Windows Forms `WebBrowser` ospita le pagine Web e fornisce funziona
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)
+- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)

@@ -40,6 +40,6 @@ In Visual Studio selezionare il controllo da ridimensionare e trascinare uno deg
 
 - [Controlli Windows Form](index.md)
 - [Impostazione delle etichette di singoli controlli Windows Form e creazione dei relativi tasti di scelta rapida](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)
+- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)
 - [Controlli Windows Form per funzione](windows-forms-controls-by-function.md)
 - [Procedura: ridimensionare Windows Forms tramite la finestra di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))

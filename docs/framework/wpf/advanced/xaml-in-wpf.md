@@ -18,9 +18,9 @@ ms.locfileid: "76741874"
 
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] è un linguaggio di markup per la programmazione di applicazioni dichiarative. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] implementa un'implementazione del processore XAML e fornisce il supporto del linguaggio XAML. I tipi di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] vengono implementati in modo che possano fornire il supporto del tipo richiesto per una rappresentazione XAML. In generale, è possibile creare la maggior parte dell'interfaccia utente dell'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nel markup XAML.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
 
-[Cenni preliminari su XAML (WPF)](xaml-overview-wpf.md)  
+[Panoramica di XAML (WPF)](xaml-overview-wpf.md)  
 [Descrizione dettagliata della sintassi XAML](xaml-syntax-in-detail.md)  
 [Code-behind e XAML in WPF](code-behind-and-xaml-in-wpf.md)  
 [Classi XAML e personalizzate per WPF](xaml-and-custom-classes-for-wpf.md)  

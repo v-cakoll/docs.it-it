@@ -44,7 +44,7 @@ Il comando `dotnet nuget locals` cancella o elenca risorse NuGet locali presenti
   * `global-packages` - Indica che l'operazione specificata viene applicata soltanto alla cache dei pacchetti globale. Gli altri percorsi della cache non sono interessati.
   * `temp` - Indica che l'operazione specificata viene applicata soltanto alla cache temporanea. Gli altri percorsi della cache non sono interessati.
 
-## <a name="options"></a>Options
+## <a name="options"></a>Opzioni
 
 * **`--force-english-output`**
 

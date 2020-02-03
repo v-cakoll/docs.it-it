@@ -1,5 +1,5 @@
 ---
-title: Panoramica del componente SaveFileDialog
+title: Cenni preliminari sul componente SaveFileDialog
 ms.date: 03/30/2017
 f1_keywords:
 - SaveFileDialog

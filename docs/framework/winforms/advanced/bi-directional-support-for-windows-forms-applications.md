@@ -76,7 +76,7 @@ ms.locfileid: "76742070"
 |<xref:System.Windows.Forms.UserControl>|La barra di scorrimento verticale viene visualizzata a sinistra. La barra di scorrimento orizzontale ha il pulsante di scorrimento a destra|Nessun supporto diretto. Usare <xref:System.Windows.Forms.TableLayoutPanel>|No|
 |<xref:System.Windows.Forms.VScrollBar>|Visualizzato sul lato sinistro anziché sul lato destro dei controlli scorrevoli|Nessun effetto|No|
 
-## <a name="encoding"></a>Encoding
+## <a name="encoding"></a>Codifica
  I Windows Form supportano Unicode, pertanto è possibile includere qualsiasi set di caratteri durante la creazione di applicazioni bidirezionali. Tuttavia, non tutti i controlli di Windows Form supportano Unicode su tutte le piattaforme.
 
 ## <a name="gdi"></a>GDI+

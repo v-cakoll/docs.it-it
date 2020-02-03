@@ -16,7 +16,7 @@ ms.locfileid: "76741160"
 # <a name="putting-controls-on-windows-forms"></a>Inserimento di controlli in Windows Form
 Sono disponibili numerosi controlli che è possibile inserire in Windows Forms, a seconda delle esigenze dell'applicazione.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Procedura: Aggiungere controlli a un Windows Forms](how-to-add-controls-to-windows-forms.md)  
  Fornisce indicazioni per il fissaggio dei controlli al form.  
   

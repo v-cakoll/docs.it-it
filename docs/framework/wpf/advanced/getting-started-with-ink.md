@@ -24,7 +24,7 @@ Windows Presentation Foundation (WPF) dispone di una funzionalità di input penn
 
 Per usare gli esempi seguenti, installare innanzitutto [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019). Consente inoltre di comprendere come scrivere app WPF di base. Per informazioni introduttive su WPF, vedere [procedura dettagliata: applicazione desktop WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
-## <a name="quick-start"></a>Guida introduttiva a
+## <a name="quick-start"></a>Introduzione
 
 Questa sezione consente di scrivere una semplice applicazione WPF che raccoglie input penna.
 

@@ -55,4 +55,4 @@ In un'applicazione Windows il modo più semplice per spostarsi tra i record in u
 - [Origini dati supportate da Windows Form](data-sources-supported-by-windows-forms.md)
 - [Notifica delle modifiche nel data binding dei Windows Form](change-notification-in-windows-forms-data-binding.md)
 - [Data binding e Windows Forms](data-binding-and-windows-forms.md)
-- [Data binding in Windows Form](windows-forms-data-binding.md)
+- [Associazione ai dati di Windows Form](windows-forms-data-binding.md)

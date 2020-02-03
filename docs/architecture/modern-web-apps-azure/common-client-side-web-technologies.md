@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Tecn
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: bf346825c7e29831111fc11c836ca6b4a05a18ce
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 0e5f3578edc723e2e2a32b9b3a1d8a7dcabd2909
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920990"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965750"
 ---
 # <a name="common-client-side-web-technologies"></a>Tecnologie Web lato client comuni
 
@@ -18,7 +18,7 @@ ms.locfileid: "76920990"
 
 Le applicazioni ASP.NET Core sono applicazioni Web che in genere si basano su tecnologie Web lato client quali HTML, CSS e JavaScript. Grazie alla separazione del contenuto della pagina (HTML) dal layout e dallo stile (CSS), nonché dal comportamento (tramite JavaScript), le app Web complesse possono sfruttare il principio di separazione delle competenze. Se queste competenze non sono interconnesse, le future modifiche alla struttura, alla progettazione o al comportamento possono essere apportate più facilmente.
 
-Mentre le tecnologie HTML e CSS sono relativamente stabili, la tecnologia JavaScript, attraverso i framework e le utilità delle applicazioni che gli sviluppatori usano per compilare le applicazioni basate sul Web, sta evolvendo molto rapidamente. In questo capitolo vengono esaminate alcune modalità d'uso di JavaScript da parte degli sviluppatori Web nelle attività di sviluppo delle applicazioni e viene offerta una panoramica generale delle librerie lato client Angular e React.
+Mentre le tecnologie HTML e CSS sono relativamente stabili, la tecnologia JavaScript, attraverso i framework e le utilità delle applicazioni che gli sviluppatori usano per compilare le applicazioni basate sul Web, sta evolvendo molto rapidamente. In questo capitolo vengono esaminati alcuni modi in cui JavaScript viene utilizzato dagli sviluppatori Web come parte dello sviluppo di applicazioni, in quanto fornisce una panoramica generale delle librerie lato client angolari e React.
 
 ## <a name="html"></a>HTML
 
@@ -26,7 +26,7 @@ HTML (HyperText Markup Language) è il linguaggio di markup standard usato per c
 
 ## <a name="css"></a>CSS
 
-La tecnologia CSS (Cascading Style Sheets) viene usata per controllare l'aspetto e il layout degli elementi HTML. Gli stili CSS possono essere applicati direttamente a un elemento HTML, definiti separatamente nella stessa pagina oppure definiti in un file separato a cui la pagina fa riferimento. Gli stili si propagano in base a come vengono usati per selezionare un determinato elemento HTML. Ad esempio, è possibile che uno stile si applichi a un intero documento, ma che sia sostituito da uno stile applicato a un particolare elemento. Allo stesso modo, lo stile specifico di un elemento viene sostituito da uno stile applicato a una classe CSS che è stata applicata all'elemento, la quale viene a sua volta sostituita da uno stile destinato a un'istanza specifica dell'elemento (tramite il relativo ID). Figura 6-1
+La tecnologia CSS (Cascading Style Sheets) viene usata per controllare l'aspetto e il layout degli elementi HTML. Gli stili CSS possono essere applicati direttamente a un elemento HTML, definiti separatamente nella stessa pagina oppure definiti in un file separato a cui la pagina fa riferimento. Gli stili si propagano in base a come vengono usati per selezionare un determinato elemento HTML. Ad esempio, è possibile che uno stile si applichi a un intero documento, ma che sia sostituito da uno stile applicato a un particolare elemento. Allo stesso modo, lo stile specifico di un elemento verrebbe sostituito da uno stile applicato a una classe CSS applicata all'elemento, che a sua volta verrebbe sottoposto a override da uno stile destinato a un'istanza specifica dell'elemento (tramite il relativo ID). Figura 6-1
 
 ![Regole di specificità CSS](./media/image6-1.png)
 
@@ -38,7 +38,7 @@ La tecnologia CSS (Cascading Style Sheets) viene usata per controllare l'aspetto
 
 Nei fogli di stile CSS non è previsto il supporto per la logica condizionale, le variabili e altre funzionalità del linguaggio di programmazione. Di conseguenza, fogli di stile di grandi dimensioni spesso includono molte ripetizioni poiché gli stessi colori, caratteri o altre impostazioni vengono applicati a molte varianti diverse degli elementi HTML e delle classi CSS. Grazie ai preprocessori CSS, i fogli di stile possono seguire il [principio DRY](https://deviq.com/don-t-repeat-yourself/) aggiungendo il supporto per le variabili e la logica.
 
-I preprocessori CSS più diffusi sono Sass e LESS. Entrambi estendono CSS e sono compatibili con le versioni precedenti, vale a dire che un file CSS normale è un file Sass o LESS valido. Sass è basato su Ruby e LESS è basato su JavaScript. Entrambi vengono in genere eseguiti nell'ambito del processo di sviluppo locale. Per entrambi sono disponibili strumenti da riga di comando e il supporto predefinito in Visual Studio per l'esecuzione tramite attività Gulp o Grunt.
+I preprocessori CSS più diffusi sono Sass e LESS. Entrambi estendono CSS e sono compatibili con le versioni precedenti, vale a dire che un file CSS normale è un file Sass o LESS valido. Sass è basato su Ruby e LESS è basato su JavaScript. Entrambi vengono in genere eseguiti nell'ambito del processo di sviluppo locale. Entrambi gli strumenti da riga di comando sono disponibili, nonché il supporto incorporato in Visual Studio per eseguirli usando le attività Gulp o grugnito.
 
 ## <a name="javascript"></a>JavaScript
 
@@ -58,9 +58,9 @@ Quando si usa la tecnologia JavaScript in un'applicazione Web sarà in genere ne
 
 ### <a name="legacy-web-apps-with-jquery"></a>App Web legacy con jQuery
 
-Anche se datato in base agli standard del framework JavaScript, jQuery continua a essere una libreria molto usata per lavorare con HTML/CSS e compilare applicazioni che effettuano chiamate AJAX alle API Web. jQuery opera tuttavia al livello DOM (Document Object Model) del browser e per impostazione predefinita offre solo un modello imperativo, anziché dichiarativo.
+Sebbene antico dagli standard di Framework JavaScript, jQuery continua a essere una libreria di uso comune per l'uso di HTML/CSS e la creazione di applicazioni che effettuano chiamate AJAX ad API Web. jQuery opera tuttavia al livello DOM (Document Object Model) del browser e per impostazione predefinita offre solo un modello imperativo, anziché dichiarativo.
 
-Si supponga, ad esempio, che se il valore di una casella di testo è superiore a 10, un elemento della pagina debba essere reso visibile. In jQuery questa funzionalità viene in genere implementata scrivendo un gestore dell'evento con codice che ispeziona il valore della casella di testo e imposta la visibilità dell'elemento di destinazione in base a questo valore. Si tratta di un approccio imperativo basato sul codice. Per associare la visibilità dell'elemento al valore della casella di testo in modo dichiarativo, un altro framework potrebbe invece usare il data binding. Non sarebbe necessario scrivere alcun codice, ma sarebbe invece sufficiente decorare gli elementi interessati con attributi di data binding. Con comportamenti sul lato client sempre più complessi, gli approcci basati sul data binding offrono spesso soluzioni più semplici con una minore quantità di codice e una minore complessità condizionale.
+Si supponga, ad esempio, che se il valore di una casella di testo è superiore a 10, un elemento della pagina debba essere reso visibile. In jQuery questa funzionalità viene in genere implementata scrivendo un gestore dell'evento con codice che ispeziona il valore della casella di testo e imposta la visibilità dell'elemento di destinazione in base a questo valore. Si tratta di un approccio imperativo basato sul codice. Per associare la visibilità dell'elemento al valore della casella di testo in modo dichiarativo, un altro framework potrebbe invece usare il data binding. Non sarebbe necessario scrivere alcun codice, ma sarebbe invece sufficiente decorare gli elementi interessati con attributi di data binding. Poiché i comportamenti lato client crescono più complessi, data binding approcci spesso generano soluzioni più semplici con meno codice e complessità condizionale.
 
 ### <a name="jquery-vs-a-spa-framework"></a>jQuery e un framework per applicazioni a pagina singola
 
@@ -73,7 +73,7 @@ Si supponga, ad esempio, che se il valore di una casella di testo è superiore a
 | Modelli | **No** | **Sì** |
 | Routing di collegamento diretto | **No** | **Sì** |
 
-È possibile aggiungere la maggior parte delle funzionalità intrinsecamente mancanti in jQuery con l'aggiunta di altre librerie. Un framework per applicazioni a pagina singola come Angular offre tuttavia queste funzionalità in modo più integrato poiché è stato progettato tenendole presenti sin dall'inizio. jQuery è inoltre una libreria molto imperativa. Per eseguire qualsiasi operazione con jQuery è infatti necessario chiamare le funzioni jQuery. Gran parte del lavoro e le funzionalità offerte dai framework per applicazioni a pagina singola possono essere eseguiti in modo dichiarativo, senza la scrittura di codice.
+È possibile aggiungere la maggior parte delle funzionalità intrinsecamente mancanti in jQuery con l'aggiunta di altre librerie. Un framework per applicazioni a pagina singola come Angular offre tuttavia queste funzionalità in modo più integrato poiché è stato progettato tenendole presenti sin dall'inizio. Inoltre, jQuery è una libreria imperativa, vale a dire che è necessario chiamare le funzioni jQuery per eseguire qualsiasi operazione con jQuery. Gran parte del lavoro e le funzionalità offerte dai framework per applicazioni a pagina singola possono essere eseguiti in modo dichiarativo, senza la scrittura di codice.
 
 Il data binding ne è un ottimo esempio. Per ottenere il valore di un elemento DOM o impostare il valore di un elemento, jQuery richiede in genere solo una riga di codice. Tuttavia, è necessario scrivere questo codice ogni volta che si deve modificare il valore dell'elemento e a volte ciò accade in più funzioni in una pagina. Un altro esempio comune è la visibilità di un elemento. In jQuery la scrittura del codice per controllare se determinati elementi debbano essere visibili o meno può avvenire in molti punti diversi. In ognuno di questi casi, quando si usa il data binding, non è necessario scrivere codice. È sufficiente associare il valore o la visibilità degli elementi interessati a un *viewmodel* nella pagina e le modifiche apportate al viewmodel vengono automaticamente riportate negli elementi associati.
 
@@ -94,7 +94,7 @@ import { Component } from '@angular/core';
 export class AppComponent { name = 'Angular'; }
 ```
 
-I componenti vengono definiti usando la funzione di espressione Decorator @Component che acquisisce i metadati relativi al componente. La proprietà "selector" identifica l'ID dell'elemento nella pagina in cui verrà visualizzato questo componente. La proprietà "template" è un semplice modello HTML che include un segnaposto che corrisponde alla proprietà del nome del componente, definita nell'ultima riga.
+I componenti vengono definiti usando la funzione di espressione Decorator @Component che acquisisce i metadati relativi al componente. La proprietà Selector identifica l'ID dell'elemento nella pagina in cui verrà visualizzato il componente. La proprietà "template" è un semplice modello HTML che include un segnaposto che corrisponde alla proprietà del nome del componente, definita nell'ultima riga.
 
 Grazie all'uso di componenti e modelli, anziché di elementi DOM, le app Angular sono in grado di operare a un livello di astrazione superiore e con una minore quantità di codice rispetto alle app scritte usando solo JavaScript (anche noto come "vanilla JS") o con jQuery. Angular impone anche un certo ordine nel modo di organizzare i file di script sul lato client. Per convenzione, le app Angular usano una struttura di cartelle comune con i file di script di moduli e componenti inseriti in una cartella dell'app. Gli script di Angular relativi alla compilazione, alla distribuzione e ai test dell'app si trovano in genere in una cartella di livello superiore.
 
@@ -134,7 +134,7 @@ Al momento di valutare il framework JavaScript migliore per supportare un'applic
 
 - È ben documentato?
 
-- La community del framework è sufficientemente attiva? Viene usato nella compilazione di nuovi progetti?
+- La community del framework è sufficientemente attiva? Sono stati creati nuovi progetti?
 
 - Quanto è attivo il team di base? I problemi vengono risolti e nuove versioni vengono rese disponibili regolarmente?
 

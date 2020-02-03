@@ -57,6 +57,6 @@ ms.locfileid: "76742041"
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
-- [Data binding in Windows Form](../windows-forms-data-binding.md)
+- [Associazione ai dati di Windows Form](../windows-forms-data-binding.md)
 - [Data binding e Windows Forms](../data-binding-and-windows-forms.md)
 - [Controlli Windows Form usati per elencare opzioni](windows-forms-controls-used-to-list-options.md)

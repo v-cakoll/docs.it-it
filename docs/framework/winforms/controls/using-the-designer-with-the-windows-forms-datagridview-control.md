@@ -16,7 +16,7 @@ ms.locfileid: "76728361"
 # <a name="using-the-designer-with-the-windows-forms-datagridview-control"></a>Utilizzo della finestra di progettazione con il controllo DataGridView di Windows Form
 In Visual Studio è disponibile il supporto della finestra di progettazione per il controllo `DataGridView` che consente di eseguire molte attività di configurazione senza scrivere codice. Queste attività includono l'associazione del controllo a un'origine dati, la modifica delle colonne usate per visualizzare i dati e la regolazione dell'aspetto e del comportamento di base del controllo.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Procedura: Aggiungere e rimuovere colonne nel controllo DataGridView di Windows Form usando la finestra di progettazione](add-and-remove-columns-in-the-datagrid-using-the-designer.md)  
  Viene descritto come utilizzare le finestre di dialogo **Aggiungi colonne** e **modifica colonne** per popolare e modificare la raccolta Columns.  
   
@@ -50,7 +50,7 @@ In Visual Studio è disponibile il supporto della finestra di progettazione per 
  [Procedura: Impostare formati di dati e stili di cella predefiniti per il controllo DataGridView di Windows Form usando la finestra di progettazione](default-cell-styles-datagridview.md)  
  Viene descritto come utilizzare la finestra di dialogo **Generatore CellStyle** per configurare l'aspetto di base e i formati di visualizzazione dei dati per il controllo.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.DataGridView>  
  Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.DataGridView>.  
   

@@ -137,7 +137,7 @@ ms.locfileid: "76738278"
   
 - stringa.  
   
-- Un oggetto <xref:System.DateTime>.  
+- Oggetto <xref:System.DateTime>.  
   
 - Oggetto <xref:System.Windows.UIElement>.  
   

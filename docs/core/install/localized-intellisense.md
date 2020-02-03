@@ -102,7 +102,7 @@ Se il language pack desiderato non è stato installato durante l'installazione, 
 
    ![Scheda Language pack di Visual Studio](./media/localized-intellisense/vs-modify-language-packs.png)
 
-1. Scegliere **Modifica**. L'aggiornamento viene avviato.
+1. Scegliere **Modifica**. L'aggiornamento si avvia.
 
 ### <a name="modify-language-settings-in-visual-studio"></a>Modificare le impostazioni di lingua in Visual Studio
 

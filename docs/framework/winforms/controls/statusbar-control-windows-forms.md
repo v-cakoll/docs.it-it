@@ -18,7 +18,7 @@ ms.locfileid: "76742857"
   
  Il controllo <xref:System.Windows.Forms.StatusBar> di Windows Form viene usato nei form come un'area solitamente rappresentata nella parte inferiore di una finestra, in cui possono essere visualizzati diversi tipi di informazioni sullo stato di un'applicazione. <xref:System.Windows.Forms.StatusBar> controlli possono avere pannelli della barra di stato su di essi che visualizzano icone per indicare lo stato o una serie di icone in un'animazione che indica che un processo funziona; ad esempio, Microsoft Word indica che è in corso il salvataggio del documento.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Cenni preliminari sul controllo StatusBar](statusbar-control-overview-windows-forms.md)  
  Introduce i concetti generali del controllo <xref:System.Windows.Forms.StatusBar>, che consente agli utenti di visualizzare le informazioni rilevanti per il controllo che ha lo stato attivo.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "76742857"
  [Procedura dettagliata: Aggiornamento delle informazioni sulla barra di stato in fase di esecuzione](walkthrough-updating-status-bar-information-at-run-time.md)  
  Viene illustrato come controllare i dati a livello di codice nei pannelli della barra di stato.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.StatusBar>  
  Fornisce informazioni di riferimento sulla classe e sui relativi membri.  
   
@@ -42,5 +42,5 @@ ms.locfileid: "76742857"
  Sostituisce e aggiunge funzionalità al controllo <xref:System.Windows.Forms.StatusBar>.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)  
+ [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)  
  Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.

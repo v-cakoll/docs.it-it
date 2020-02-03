@@ -39,7 +39,7 @@ Il comando `dotnet clean` pulisce l'output della compilazione precedente. Viene 
 
 Progetto o soluzione MSBuild da pulire. Se non viene specificato alcun file di progetto o di soluzione, MSBuild cercherà nella directory di lavoro corrente un file con estensione *proj* o *sln* e userà questo file.
 
-## <a name="options"></a>Options
+## <a name="options"></a>Opzioni
 
 * **`-c|--configuration {Debug|Release}`**
 

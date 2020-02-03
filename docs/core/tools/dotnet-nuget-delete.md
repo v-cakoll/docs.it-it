@@ -44,7 +44,7 @@ Il comando `dotnet nuget delete` rimuove dall'elenco o elimina un pacchetto dal 
 
   Versione del pacchetto da eliminare.
 
-## <a name="options"></a>Options
+## <a name="options"></a>Opzioni
 
 * **`--force-english-output`**
 

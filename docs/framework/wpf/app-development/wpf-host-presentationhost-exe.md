@@ -30,7 +30,7 @@ L'host Windows Presentation Foundation (WPF) (PresentationHost. exe) è l'applic
   
  Questo argomento descrive i parametri della riga di comando che è possibile utilizzare con PresentationHost.exe.  
   
-## <a name="usage"></a>Usage  
+## <a name="usage"></a>Utilizzo  
  `PresentationHost.exe [parameters] uri|filename`  
   
 ## <a name="parameters"></a>Parametri  
@@ -60,4 +60,4 @@ L'host Windows Presentation Foundation (WPF) (PresentationHost. exe) è l'applic
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Security](../security-wpf.md)
+- [Sicurezza](../security-wpf.md)

@@ -34,7 +34,7 @@ L'esempio di codice seguente visualizza un controllo personalizzato denominato `
   
  La tabella seguente elenca le proprietà personalizzate definite da `FlashTrackBar`.  
   
-|Gli|Descrizione|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |`AllowUserEdit`|Indica se l'utente può modificare il valore del controllo FlashTrackBar tramite selezione e trascinamento.|  
 |`EndColor`|Specifica il colore finale della barra di avanzamento.|  
@@ -49,7 +49,7 @@ L'esempio di codice seguente visualizza un controllo personalizzato denominato `
   
  La tabella seguente elenca membri aggiuntivi definiti dalla proprietà `FlashTrackBar:`: l'evento proprietà modificata e il metodo che genera tale evento.  
   
-|Member|Descrizione|  
+|Membro|Descrizione|  
 |------------|-----------------|  
 |`ValueChanged`|L'evento generato quando viene modificata la proprietà `Value` della barra di avanzamento.|  
 |`OnValueChanged`|Il metodo che genera l'evento `ValueChanged`.|  

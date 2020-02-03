@@ -19,7 +19,7 @@ ms.locfileid: "76742341"
 
 Un gestore eventi è una procedura nel codice che determina le azioni da eseguire quando si verifica un evento, ad esempio quando l'utente fa clic su un pulsante o una coda di messaggi riceve un messaggio. Al momento della generazione di un evento, vengono eseguiti i gestori eventi che ricevono l'evento. Gli eventi possono essere assegnati a più gestori e i metodi che gestiscono determinati eventi possono essere modificati in modo dinamico. È anche possibile usare la Progettazione Windows Form in Visual Studio per creare i gestori eventi.
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
  [Cenni preliminari sugli eventi](events-overview-windows-forms.md)\
  Illustra il modello di eventi e il ruolo dei delegati.

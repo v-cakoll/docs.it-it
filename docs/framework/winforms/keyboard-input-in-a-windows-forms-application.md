@@ -1,5 +1,5 @@
 ---
-title: Input da tastiera
+title: Input tastiera
 ms.date: 03/30/2017
 helpviewer_keywords:
 - keyboard input [Windows Forms], using in Windows Forms
@@ -16,7 +16,7 @@ ms.locfileid: "76739154"
 # <a name="keyboard-input-in-a-windows-forms-application"></a>Input da tastiera in un'applicazione Windows Form
 Windows Forms include eventi di tastiera standard che consentono di rispondere a specifiche pressioni dei tasti e fornisce anche modi per intercettare, modificare e utilizzare le pressioni dei tasti a livello di applicazione, di form e di controllo.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Funzionamento dell'input da tastiera](how-keyboard-input-works.md)  
  Descrive il modo in cui i messaggi della tastiera vengono elaborati e trasformati in eventi di tastiera.  
   

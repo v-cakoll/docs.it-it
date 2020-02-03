@@ -45,8 +45,8 @@ In alcune applicazioni, il tipo di una finestra figlio di interfaccia a document
     |Voce di menu Form2|Valore MergeAction|Valore MergeIndex|  
     |---------------------|-----------------------|----------------------|  
     |File|MatchOnly|-1|  
-    |Importare da|MatchOnly|-1|  
-    |Word|Remove|-1|  
+    |Importa da PowerPivot|MatchOnly|-1|  
+    |Word|Rimuovi|-1|  
   
 10. In `Form1`creare un gestore eventi per l'evento <xref:System.Windows.Forms.Control.Click> del <xref:System.Windows.Forms.ToolStripMenuItem>di `&Open`.  
   

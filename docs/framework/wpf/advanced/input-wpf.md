@@ -17,16 +17,16 @@ ms.locfileid: "76727850"
 # <a name="input-wpf"></a>Input (WPF)
 Windows Presentation Foundation (WPF) include il supporto per diversi tipi di input. Questo input include testo, tocco, mouse, comandi, messa a fuoco, tocco, trascinamento della selezione e input penna digitale. In questa sezione vengono descritti gli argomenti relativi all'input in WPF.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Cenni preliminari sull'input](input-overview.md)  
  [Panoramica sull'esecuzione di comandi](commanding-overview.md)  
  [Panoramica sullo stato attivo](focus-overview.md)  
  [Applicazione di stili per lo stato attivo nei controlli e FocusVisualStyle](styling-for-focus-in-controls-and-focusvisualstyle.md)  
  [Procedura dettagliata: Creazione della prima applicazione a tocco](walkthrough-creating-your-first-touch-application.md)  
- [Procedure relative alle proprietà](input-and-commands-how-to-topics.md)  
+ [Procedure relative alla struttura ad albero e alla serializzazione degli elementi](input-and-commands-how-to-topics.md)  
  [Input penna](digital-ink.md)  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.FrameworkElement>  

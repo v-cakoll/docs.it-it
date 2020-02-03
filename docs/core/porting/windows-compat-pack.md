@@ -24,7 +24,7 @@ Include circa 20.000 API, incluse API solo per Windows e API multipiattaforma pe
 
 - Tabelle codici
 - CodeDom
-- Configurazione di
+- Configurazione
 - Servizi directory
 - Disegno
 - ODBC

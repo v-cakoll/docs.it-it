@@ -20,7 +20,7 @@ Il controllo `SplitContainer` Windows Form può essere considerato un oggetto co
   
  Il controllo `SplitContainer` consente di creare complesse interfacce utente, in cui l'elemento selezionato in un pannello determina in genere gli oggetti visualizzati nell'altro. Questa disposizione è particolarmente efficace per la visualizzazione e la ricerca di informazioni. Grazie alla presenza dei due pannelli è possibile aggregare le informazioni in aree, mentre la barra di divisione consente di ridimensionare i pannelli.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Panoramica sul controllo SplitContainer](splitcontainer-control-overview-windows-forms.md)  
  Introduce il controllo `SplitContainer` e descrive le proprietà, i metodi e gli eventi correlati usati più comunemente.  
   
@@ -35,7 +35,7 @@ Il controllo `SplitContainer` Windows Form può essere considerato un oggetto co
   
  Vedere anche [procedura: suddividere una finestra orizzontalmente usando la](how-to-split-a-window-horizontally-using-the-designer.md)finestra di progettazione, [procedura: creare un'interfaccia di tipo Esplora risorse in un Windows Form](how-to-create-a-windows-explorer-style-interface-on-a-windows-form.md), [procedura: creare un'interfaccia utente a più riquadri con Windows Forms usando la finestra di progettazione](create-a-multipane-user-interface-with-wf-using-the-designer.md).  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  Classe <xref:System.Windows.Forms.SplitContainer>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   
@@ -43,5 +43,5 @@ Il controllo `SplitContainer` Windows Form può essere considerato un oggetto co
  [Controlli Windows Form](index.md)  
  Fornisce collegamenti ad argomenti relativi ai controlli appositamente progettati per l'uso con Windows Form.  
   
- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)  
+ [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)  
  Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.

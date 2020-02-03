@@ -38,7 +38,7 @@ L'infrastruttura a chiave pubblica (PKI) è un sistema di certificati digitali, 
   
 1. <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
   
-2. Provider di appartenenza ASP.NET  
+2. Provider di appartenenze ASP.NET  
   
 3. Provider di ruoli ASP.NET  
   

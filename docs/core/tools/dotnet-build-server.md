@@ -29,13 +29,13 @@ dotnet build-server shutdown [-h|--help]
 dotnet build-server [-h|--help]
 ```
 
-## <a name="commands"></a>Comandi
+## <a name="commands"></a>Commands
 
 - **`shutdown`**
 
   Arresta i server di compilazione avviati da dotnet. Per impostazione predefinita, vengono arrestati tutti i server.
 
-## <a name="options"></a>Options
+## <a name="options"></a>Opzioni
 
 - **`-h|--help`**
 

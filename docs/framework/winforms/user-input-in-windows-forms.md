@@ -17,7 +17,7 @@ ms.locfileid: "76734734"
 # <a name="user-input-in-windows-forms"></a>Input dell'utente in Windows Form
 Windows Form include un modello di input dell'utente basato sugli eventi generati durante l'elaborazione di messaggi di Windows correlati. Negli argomenti di questa sezione vengono fornite informazioni sugli input dell'utente eseguiti mediante il mouse e la tastiera, con esempi di codice che illustrano come eseguire attività specifiche.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Input dell'utente in una Windows Forms Application](user-input-in-a-windows-forms-application.md)  
  Fornisce una panoramica degli eventi di input dell'utente e sui metodi per l'elaborazione dei messaggi di Windows.  
   

@@ -22,8 +22,8 @@ Windows Presentation Foundation (WPF) è un framework dell'interfaccia utente ch
 |-|-|  
 |Passare subito a...|[Procedura dettagliata: Prima applicazione desktop WPF](walkthrough-my-first-wpf-desktop-application.md)|  
 |Progettazione dell'interfaccia utente dell'applicazione|[Progettazione di XAML in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)|  
-|Nuovi utenti di .NET?|[Cenni preliminari su .NET Framework](../../get-started/overview.md)<br /><br /> [Concetti di base sulle applicazioni .NET Framework](../../../standard/application-essentials.md)<br /><br /> [Guida introduttiva a Visual C# e Visual Basic](/visualstudio/ide/quickstart-visual-basic-console)|  
-|Ulteriori informazioni su WPF...|[Introduzione a WPF in Visual Studio](introduction-to-wpf-in-vs.md)<br /><br /> [Cenni preliminari su XAML (WPF)](../advanced/xaml-overview-wpf.md)<br /><br /> [Controlli](../controls/index.md)<br /><br /> [Cenni preliminari sull'associazione dati](../../../desktop-wpf/data/data-binding-overview.md)|  
+|Nuovi utenti di .NET?|[Panoramica di .NET Framework](../../get-started/overview.md)<br /><br /> [Concetti di base sulle applicazioni .NET Framework](../../../standard/application-essentials.md)<br /><br /> [Getting Started with Visual C# and Visual Basic](/visualstudio/ide/quickstart-visual-basic-console) (Introduzione a Visual C# e Visual Basic)|  
+|Ulteriori informazioni su WPF...|[Introduzione a WPF in Visual Studio](introduction-to-wpf-in-vs.md)<br /><br /> [Panoramica di XAML (WPF)](../advanced/xaml-overview-wpf.md)<br /><br /> [Controlli](../controls/index.md)<br /><br /> [Panoramica sul data binding](../../../desktop-wpf/data/data-binding-overview.md)|  
 |Per gli sviluppatori Windows Form|[Controlli Windows Form e controlli WPF equivalenti](../advanced/windows-forms-controls-and-equivalent-wpf-controls.md)<br /><br /> [Interoperatività di WPF e Windows Form](../advanced/wpf-and-windows-forms-interoperation.md)|  
   
 ## <a name="see-also"></a>Vedere anche

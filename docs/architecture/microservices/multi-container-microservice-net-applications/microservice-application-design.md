@@ -2,14 +2,14 @@
 title: Progettazione di un'applicazione orientata ai microservizi
 description: Architettura di microservizi .NET per applicazioni .NET incluse in contenitori | Conoscere i vantaggi e gli svantaggi di un'applicazione orientata ai microservizi, in modo da poter prendere una decisione consapevole.
 ms.date: 10/02/2018
-ms.openlocfilehash: 63c93f237172d80704c00472ef2d4cbf7c787ab0
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 619440c02c1a82e05adb2cec9ddba933cd3e0a65
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921028"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965763"
 ---
-# <a name="designing-a-microservice-oriented-application"></a>Progettazione di un'applicazione orientata ai microservizi
+# <a name="design-a-microservice-oriented-application"></a>Progettare un'applicazione orientata ai microservizi
 
 Questa sezione illustra lo sviluppo di un'ipotetica applicazione aziendale sul lato server.
 
@@ -96,7 +96,7 @@ Pertanto, le unità di distribuzione per i microservizi (e anche per i database 
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>Vantaggi di una soluzione basata su microservizi
 
-Una soluzione basata su microservizi come questa offre numerosi vantaggi:
+Una soluzione basata su microservizi come questa presenta molti vantaggi:
 
 **Ogni microservizio è relativamente piccolo, semplice da gestire e da sviluppare**. In particolare:
 
@@ -180,7 +180,7 @@ Usare uno schema a più architetture e microservizi poliglotti significa combina
 
 Ad esempio, per una semplice applicazione di manutenzione CRUD, potrebbe non avere senso progettare e implementare schemi DDD. Ma per il dominio base o l'attività principale, potrebbe essere necessario applicare schemi più avanzati per gestire la complessità aziendale con regole business in continua evoluzione.
 
-Soprattutto quando si gestiscono applicazioni di grandi dimensioni composte da più sottosistemi, è consigliabile non applicare un'unica architettura di primo livello basata su un singolo schema architetturale. Ad esempio, CQRS non dovrebbe essere applicato come un'architettura di primo livello per un'intera applicazione, ma potrebbe essere utile per un set specifico di servizi.
+Soprattutto quando si gestiscono applicazioni di grandi dimensioni composte da più sottosistemi, è consigliabile non applicare una singola architettura di primo livello basata su un unico modello di architettura. Ad esempio, CQRS non dovrebbe essere applicato come un'architettura di primo livello per un'intera applicazione, ma potrebbe essere utile per un set specifico di servizi.
 
 Non esiste un metodo infallibile o il giusto schema architetturale per ogni singolo caso. Non è possibile avere un solo schema architetturale applicabile a tutte le situazioni. In base alle priorità di ogni microservizio, è necessario scegliere un approccio differente, come illustrato nelle sezioni successive.
 

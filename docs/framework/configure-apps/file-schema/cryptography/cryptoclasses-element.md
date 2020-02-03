@@ -35,13 +35,13 @@ Contiene un elenco delle classi di crittografia per le quali è stato eseguito i
  Le sezioni seguenti descrivono gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
- nessuna.  
+ Nessuno  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<cryptoClass>](cryptoclass-element.md)|Contiene una classe di crittografia per la quale è stato eseguito il mapping a un nome descrittivo nell'elemento **\<nameEntry>** .|  
+|[\<cryptoClass >](cryptoclass-element.md)|Contiene una classe di crittografia per la quale è stato eseguito il mapping a un nome descrittivo nell'elemento **\<nameEntry>** .|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -81,6 +81,6 @@ Contiene un elenco delle classi di crittografia per le quali è stato eseguito i
 - <xref:System.Security.Cryptography>
 - [Schema dei file di configurazione](../index.md)
 - [Schema delle impostazioni di crittografia](index.md)
-- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
-- [System.Security.Cryptography.CryptoConfig.CreateFromName](xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A)
+- [Servizi di crittografia](../../../../standard/security/cryptographic-services.md)
+- [System. Security. Cryptography. CryptoConfig. CreateFromName](xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A)
 - [Configurazione di classi di crittografia](../../configure-cryptography-classes.md)

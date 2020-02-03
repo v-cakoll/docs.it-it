@@ -43,7 +43,7 @@ Nella tabella seguente sono illustrate le conversioni di puntatori implicite pre
 - [Guida per programmatori C#](../index.md)
 - [Tipi di puntatori](pointer-types.md)
 - [Tipi riferimento](../../language-reference/keywords/reference-types.md)
-- [Tipi valore](../../language-reference/builtin-types/value-types.md)
+- [Tipi di valore](../../language-reference/builtin-types/value-types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)
 - [Istruzione fixed](../../language-reference/keywords/fixed-statement.md)
 - [stackalloc](../../language-reference/operators/stackalloc.md)

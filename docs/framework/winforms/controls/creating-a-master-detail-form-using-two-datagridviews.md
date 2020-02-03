@@ -55,7 +55,7 @@ Per completare questa procedura dettagliata, è necessario:
     [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#10)]
     [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#10)]
 
-## <a name="testing-the-application"></a>Verifica dell'applicazione
+## <a name="testing-the-application"></a>Test dell'applicazione
 
 È ora possibile testare il form per assicurarsi che si comportano come previsto.
 

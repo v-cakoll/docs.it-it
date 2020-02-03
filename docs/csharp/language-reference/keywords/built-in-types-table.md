@@ -64,7 +64,7 @@ Console.WriteLine(doubleType.FullName);
 
 - [Riferimenti per C#](../index.md)
 - [Parole chiave di C#](index.md)
-- [Tipi valore](../builtin-types/value-types.md)
+- [Tipi di valore](../builtin-types/value-types.md)
 - [Tipi riferimento](reference-types.md)
 - [Valori predefiniti dei C# tipi](../builtin-types/default-values.md)
 - [dynamic](../builtin-types/reference-types.md#the-dynamic-type)

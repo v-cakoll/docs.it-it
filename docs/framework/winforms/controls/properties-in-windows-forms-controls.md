@@ -18,7 +18,7 @@ Un controllo Windows Forms eredita molte proprietà dalla classe di base <xref:S
   
  È possibile eseguire l'override delle proprietà ereditate dal controllo nonché definirne di nuove.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Definizione di una proprietà](defining-a-property-in-windows-forms-controls.md)  
  Viene illustrato come implementare una proprietà per un controllo o un componente personalizzato e come integrare la proprietà nell'ambiente di progettazione.  
   
@@ -34,7 +34,7 @@ Un controllo Windows Forms eredita molte proprietà dalla classe di base <xref:S
  [Implementazione dei metodi nei controlli personalizzati](method-implementation-in-custom-controls.md)  
  Viene descritto come implementare metodi nei controlli e nei componenti personalizzati.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.UserControl>  
  Viene descritta la classe base per l'implementazione dei controlli compositi.  
   
@@ -45,7 +45,7 @@ Un controllo Windows Forms eredita molte proprietà dalla classe di base <xref:S
  Documenta l'attributo che specifica il <xref:System.Drawing.Design.UITypeEditor> da usare per una proprietà personalizzata.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Attributi nei controlli Windows Form](attributes-in-windows-forms-controls.md)  
+ [Attributi nei controlli Windows Forms](attributes-in-windows-forms-controls.md)  
  Descrive gli attributi che è possibile applicare alle proprietà o ad altri membri e componenti dei controlli personalizzati.  
   
  [Attributi per componenti in fase di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120))  

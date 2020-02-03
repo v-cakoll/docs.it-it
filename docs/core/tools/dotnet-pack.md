@@ -61,7 +61,7 @@ Per impostazione predefinita, non è possibile creare un pacchetto dei progetti 
 
   Progetto o soluzione da comprimere. Si tratta di un percorso di un [file csproj](csproj.md), di un file di soluzione o di una directory. Se non specificato, il comando Cerca nella directory corrente un file di progetto o di soluzione.
 
-## <a name="options"></a>Options
+## <a name="options"></a>Opzioni
 
 - **`-c|--configuration {Debug|Release}`**
 

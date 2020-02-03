@@ -70,7 +70,7 @@ ms.locfileid: "76740183"
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#10)]  
   
-## <a name="testing-the-application"></a>Verifica dell'applicazione  
+## <a name="testing-the-application"></a>Test dell'applicazione  
  È ora possibile testare il form per assicurarsi che si comportano come previsto.  
   
 #### <a name="to-test-the-form"></a>Per testare il modulo  

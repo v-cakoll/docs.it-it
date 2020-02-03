@@ -60,7 +60,7 @@ Di seguito è riportato l'ordine degli eventi generati per un doppio clic del pu
 
 5. Evento<xref:System.Windows.Forms.Control.MouseDown> .
 
-6. Evento<xref:System.Windows.Forms.Control.DoubleClick> . Può variare se il controllo in questione ha il bit di stile <xref:System.Windows.Forms.ControlStyles.StandardDoubleClick> impostato su `true`. Per altre informazioni sulla modalità di impostazione di un bit <xref:System.Windows.Forms.Control.SetStyle%2A>, vedere il metodo <xref:System.Windows.Forms.ControlStyles>.
+6. Evento<xref:System.Windows.Forms.Control.DoubleClick> . Può variare se il controllo in questione ha il bit di stile <xref:System.Windows.Forms.ControlStyles.StandardDoubleClick> impostato su `true`. Per altre informazioni sulla modalità di impostazione di un bit <xref:System.Windows.Forms.ControlStyles>, vedere il metodo <xref:System.Windows.Forms.Control.SetStyle%2A>.
 
 7. Evento<xref:System.Windows.Forms.Control.MouseDoubleClick> .
 

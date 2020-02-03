@@ -22,7 +22,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76735721"
 ---
-# <a name="how-to-respond-to-windows-forms-button-clicks"></a>Procedura: Rispondere alla selezione dei pulsanti di Windows Form
+# <a name="how-to-respond-to-windows-forms-button-clicks"></a>Procedura: rispondere alla selezione dei pulsanti di Windows Form
 L'uso più semplice di un controllo di <xref:System.Windows.Forms.Button> Windows Forms consiste nell'eseguire codice quando si fa clic sul pulsante.  
   
  Se si fa clic su un controllo <xref:System.Windows.Forms.Button> viene generato anche un numero di altri eventi, ad esempio gli eventi <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseDown>e <xref:System.Windows.Forms.Control.MouseUp>. Se si intende alleghi i gestori eventi per questi eventi correlati, assicurarsi che le azioni non siano in conflitto. Se, ad esempio, si fa clic sul pulsante per cancellare le informazioni digitate dall'utente in una casella di testo, la sospensione del puntatore del mouse sul pulsante non dovrebbe visualizzare una descrizione comando con le informazioni attualmente inesistenti.  

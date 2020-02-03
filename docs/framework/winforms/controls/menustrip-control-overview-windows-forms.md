@@ -1,5 +1,5 @@
 ---
-title: Panoramica del controllo MenuStrip
+title: Cenni preliminari sul controllo MenuStrip
 ms.date: 03/30/2017
 f1_keywords:
 - MenuStrip
@@ -34,7 +34,7 @@ I menu espongono le funzionalità agli utenti con i comandi raggruppati in base 
   
  Nella tabella seguente vengono illustrate alcune proprietà particolarmente importanti di <xref:System.Windows.Forms.MenuStrip> e le classi associate.  
   
-|Gli|Descrizione|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>|Ottiene o imposta la <xref:System.Windows.Forms.ToolStripMenuItem> utilizzata per visualizzare un elenco di form figlio MDI.|  
 |<xref:System.Windows.Forms.ToolStripItem.MergeAction%2A?displayProperty=nameWithType>|Ottiene o imposta il modo in cui i menu figlio vengono uniti ai menu padre nelle applicazioni MDI.|  
@@ -42,14 +42,14 @@ I menu espongono le funzionalità agli utenti con i comandi raggruppati in base 
 |<xref:System.Windows.Forms.Form.IsMdiContainer%2A?displayProperty=nameWithType>|Ottiene o imposta un valore che indica se il form è un contenitore per form figlio MDI.|  
 |<xref:System.Windows.Forms.MenuStrip.ShowItemToolTips%2A>|Ottiene o imposta un valore che indica se vengono visualizzate le descrizioni comandi per la <xref:System.Windows.Forms.MenuStrip>.|  
 |<xref:System.Windows.Forms.MenuStrip.CanOverflow%2A>|Ottiene o imposta un valore che indica se il controllo <xref:System.Windows.Forms.MenuStrip> supporta la funzionalità di overflow.|  
-|<xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A>|Ottiene o imposta i tasti di scelta rapida associati all'<xref:System.Windows.Forms.ToolStripMenuItem>.|  
-|<xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A>|Ottiene o imposta un valore che indica se i tasti di scelta rapida associati al <xref:System.Windows.Forms.ToolStripMenuItem> vengono visualizzati accanto al <xref:System.Windows.Forms.ToolStripMenuItem>.|  
+|<xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A>|Ottiene o imposta i tasti di scelta rapida associati alla classe <xref:System.Windows.Forms.ToolStripMenuItem>.|  
+|<xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A>|Ottiene o imposta un valore che indica se i tasti di scelta rapida associati alla classe <xref:System.Windows.Forms.ToolStripMenuItem> sono visualizzati accanto alla classe <xref:System.Windows.Forms.ToolStripMenuItem>.|  
   
  Nella tabella seguente vengono illustrate le principali classi <xref:System.Windows.Forms.MenuStrip> complementari.  
   
 |Classe|Descrizione|  
 |-----------|-----------------|  
-|<xref:System.Windows.Forms.ToolStripMenuItem>|Rappresenta un'opzione selezionabile visualizzata in un <xref:System.Windows.Forms.MenuStrip> o <xref:System.Windows.Forms.ContextMenuStrip>.|  
+|<xref:System.Windows.Forms.ToolStripMenuItem>|Rappresenta un'opzione selezionabile visualizzata in un oggetto <xref:System.Windows.Forms.MenuStrip> o <xref:System.Windows.Forms.ContextMenuStrip>.|  
 |<xref:System.Windows.Forms.ContextMenuStrip>|Viene visualizzato un menu di scelta rapida.|  
 |<xref:System.Windows.Forms.ToolStripDropDown>|Rappresenta un controllo che consente all'utente di selezionare un singolo elemento da un elenco visualizzato quando l'utente fa clic su un <xref:System.Windows.Forms.ToolStripDropDownButton> o su una voce di menu di livello superiore.|  
 |<xref:System.Windows.Forms.ToolStripDropDownItem>|Fornisce la funzionalità di base per i controlli derivati da <xref:System.Windows.Forms.ToolStripItem> che visualizzano gli elementi a discesa quando vengono selezionate.|  

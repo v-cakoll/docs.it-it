@@ -58,11 +58,11 @@ Windows Forms offre controlli e componenti che eseguono una serie di funzioni. N
 ||Controllo <xref:System.Windows.Forms.SaveFileDialog>|Visualizza una finestra di dialogo che consente agli utenti di salvare un file.|  
 |Controlli menu|Controllo <xref:System.Windows.Forms.MenuStrip>|Crea menu personalizzati. **Nota:**  Il <xref:System.Windows.Forms.MenuStrip> è progettato per sostituire il controllo <xref:System.Windows.Forms.MainMenu>.|  
 ||Controllo <xref:System.Windows.Forms.ContextMenuStrip>|Crea menu di scelta rapida personalizzati. **Nota:**  Il <xref:System.Windows.Forms.ContextMenuStrip> è progettato per sostituire il controllo <xref:System.Windows.Forms.ContextMenu>.|  
-|Comandi|Controllo <xref:System.Windows.Forms.Button>|Avvia, arresta o interrompe un processo.|  
+|Commands|Controllo <xref:System.Windows.Forms.Button>|Avvia, arresta o interrompe un processo.|  
 ||Controllo <xref:System.Windows.Forms.LinkLabel>|Visualizza il testo come collegamento di tipo Web e attiva un evento quando l'utente fa clic sul testo speciale. In genere il testo è un collegamento a un'altra finestra o a un sito Web.|  
 ||Controllo <xref:System.Windows.Forms.NotifyIcon>|Visualizza un'icona nell'area di notifica dello stato della barra delle applicazioni che rappresenta un'applicazione in esecuzione in background.|  
 ||Controllo <xref:System.Windows.Forms.ToolStrip>|Consente di creare barre degli strumenti che possono avere un Microsoft Windows XP, Microsoft Office, Microsoft Internet Explorer o un aspetto personalizzato, con o senza temi e con supporto per il riordinamento degli elementi in fase di overflow e di Runtime. **Nota:**  Il controllo <xref:System.Windows.Forms.ToolStrip> è progettato per sostituire il controllo <xref:System.Windows.Forms.ToolBar>.|  
-|Guida dell'utente|<xref:System.Windows.Forms.HelpProvider>|Fornisce la Guida popup o la Guida in linea per i controlli.|  
+|Guida dell'utente|<xref:System.Windows.Forms.HelpProvider>|Fornisce una Guida online o una Guida popup per i controlli.|  
 ||<xref:System.Windows.Forms.ToolTip>|Fornisce una finestra popup che visualizza una breve descrizione dello scopo di un controllo quando l'utente posiziona il puntatore del mouse sul controllo.|  
 |Raggruppamento di altri controlli|Controllo <xref:System.Windows.Forms.Panel>|Raggruppa un set di controlli su un frame scorrevole senza etichetta.|  
 ||Controllo <xref:System.Windows.Forms.GroupBox>|Raggruppa un set di controlli (ad esempio pulsanti di opzione) su un frame con etichetta e non scorrevole.|  
@@ -80,11 +80,11 @@ Windows Forms offre controlli e componenti che eseguono una serie di funzioni. N
 |Visualizzazione delle informazioni (controlli di sola lettura)|<xref:System.Windows.Forms.StatusBar>|<xref:System.Windows.Forms.StatusStrip>|  
 |Controlli menu|<xref:System.Windows.Forms.ContextMenu>|<xref:System.Windows.Forms.ContextMenuStrip>|  
 ||<xref:System.Windows.Forms.MainMenu>|<xref:System.Windows.Forms.MenuStrip>|  
-|Comandi|<xref:System.Windows.Forms.ToolBar>|<xref:System.Windows.Forms.ToolStrip>|  
+|Commands|<xref:System.Windows.Forms.ToolBar>|<xref:System.Windows.Forms.ToolStrip>|  
 ||<xref:System.Windows.Forms.StatusBar>|<xref:System.Windows.Forms.StatusStrip>|  
 |Layout del form|<xref:System.Windows.Forms.Splitter>|<xref:System.Windows.Forms.SplitContainer>|  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)
+- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)
 - [Sviluppo di controlli Windows Form personalizzati con .NET Framework](developing-custom-windows-forms-controls.md)

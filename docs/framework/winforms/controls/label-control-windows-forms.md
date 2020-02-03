@@ -19,7 +19,7 @@ ms.locfileid: "76745275"
   
  Windows Forms controlli <xref:System.Windows.Forms.Label> vengono utilizzati per visualizzare testo o immagini che non possono essere modificate dall'utente. Vengono usati per identificare gli oggetti in un form, per fornire una descrizione dell'operazione eseguita da un determinato controllo, ad esempio, o per visualizzare le informazioni in risposta a un evento o a un processo in fase di esecuzione nell'applicazione. Poiché il controllo <xref:System.Windows.Forms.Label> non può ricevere lo stato attivo, può anche essere usato per creare chiavi di accesso per altri controlli.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Panoramica sul controllo Label](label-control-overview-windows-forms.md)  
  Definisce il controllo e ne illustra le funzionalità chiave e le proprietà.  
   
@@ -29,10 +29,10 @@ ms.locfileid: "76745275"
  [Procedura: Ridimensionare un controllo Label di Windows Form in base al contenuto](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)  
  Viene illustrato come modificare le dimensioni di un controllo Label per la didascalia.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.Label>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)  
+ [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)  
  Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.

@@ -79,7 +79,7 @@ Una tabella di ricerca è una tabella di dati che include una colonna che mostra
   
     7. Se si vuole, sostituire il nome predefinito del set di dati.  
   
-    8. Scegliere **Fine**.  
+    8. Fare clic su **Fine**.  
   
 4. Nella casella di riepilogo a discesa **Visualizza membro** selezionare il nome di colonna (ad esempio, ContactName) da visualizzare nella casella combinata.  
   

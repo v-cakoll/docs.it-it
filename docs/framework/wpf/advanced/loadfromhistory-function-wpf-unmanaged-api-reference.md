@@ -37,7 +37,7 @@ HRESULT LoadFromHistory_export(
  pBindCtx  
  Puntatore a un contesto di associazione.  
   
-## <a name="requirements"></a>Requisiti di  
+## <a name="requirements"></a>Requisiti  
  **Piattaforme:** Vedere [.NET Framework requisiti di sistema](../../get-started/system-requirements.md).  
   
  **DLL**  

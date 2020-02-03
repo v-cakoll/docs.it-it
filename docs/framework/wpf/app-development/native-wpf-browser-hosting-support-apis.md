@@ -31,6 +31,6 @@ enum PresentationHostCommands {
   
  PHCMDID_TABINTO indica a PresentationHost di passare lo stato attivo al primo o all'ultimo elemento attivabile nel contenuto, a seconda dello stato del tasto MAIUSC.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md)  
  [IWpfHostSupport](iwpfhostsupport.md)

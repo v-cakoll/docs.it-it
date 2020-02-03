@@ -33,7 +33,7 @@ Una *chiave di accesso* è un carattere sottolineato nel testo di un menu, di un
 
 I controlli che non possono ricevere lo stato attivo non possono avere chiavi di accesso.
 
-## <a name="programmatic"></a>A livello
+## <a name="programmatic"></a>Programmatica
 
 Impostare la proprietà `Text` su una stringa che include una e commerciale (&) prima della lettera che sarà il collegamento.
 

@@ -124,4 +124,4 @@ Una volta compilate le applicazioni Windows Presentation Foundation (WPF), è ne
 ## <a name="see-also"></a>Vedere anche
 
 - [Compilazione di un'applicazione WPF](building-a-wpf-application-wpf.md)
-- [Security](../security-wpf.md)
+- [Sicurezza](../security-wpf.md)

@@ -38,7 +38,7 @@ ms.locfileid: "76742182"
     numericUpDown1->ThousandsSeparator = true;  
     ```  
   
-     oppure  
+     -oppure-  
   
 - Consente di visualizzare un valore esadecimale impostando la proprietà <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> su `true`.  
   

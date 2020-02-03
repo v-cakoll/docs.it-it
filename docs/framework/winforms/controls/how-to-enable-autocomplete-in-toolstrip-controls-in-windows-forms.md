@@ -19,7 +19,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76745512"
 ---
-# <a name="how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms"></a>Procedura: Abilitare il completamento automatico nei controlli ToolStrip di Windows Form
+# <a name="how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms"></a>Procedura: abilitare il completamento automatico nei controlli ToolStrip Windows Form
 La procedura seguente combina una <xref:System.Windows.Forms.ToolStripLabel> con un <xref:System.Windows.Forms.ToolStripComboBox> che può essere rilasciata per visualizzare un elenco di elementi, ad esempio siti Web visitati di recente. Se l'utente digita un carattere che corrisponde al primo carattere di uno degli elementi dell'elenco, l'elemento viene immediatamente visualizzato.  
   
 > [!NOTE]

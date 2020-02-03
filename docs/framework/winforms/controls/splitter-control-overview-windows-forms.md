@@ -1,5 +1,5 @@
 ---
-title: Panoramica del controllo Splitter
+title: Cenni preliminari sul controllo Splitter
 ms.date: 03/30/2017
 f1_keywords:
 - Splitter
@@ -15,7 +15,7 @@ ms.locfileid: "76742894"
 ---
 # <a name="splitter-control-overview-windows-forms"></a>Cenni preliminari sul controllo Splitter (Windows Form)
 > [!IMPORTANT]
-> Anche se <xref:System.Windows.Forms.SplitContainer> sostituisce e aggiunge funzionalità al controllo <xref:System.Windows.Forms.Splitter> delle versioni precedenti, <xref:System.Windows.Forms.Splitter> viene mantenuta sia per la compatibilità con le versioni precedenti che per un uso futuro, se lo si sceglie.  
+> Benché il controllo <xref:System.Windows.Forms.SplitContainer> sostituisca il controllo <xref:System.Windows.Forms.Splitter> delle versioni precedenti aggiungendo funzionalità, il controllo <xref:System.Windows.Forms.Splitter> viene mantenuto per compatibilità con le versioni precedenti e per utilizzo futuro se lo si desidera.  
   
  Windows Forms controlli <xref:System.Windows.Forms.Splitter> vengono usati per ridimensionare i controlli ancorati in fase di esecuzione. Il controllo <xref:System.Windows.Forms.Splitter> viene spesso usato nei form con controlli con lunghezze diverse di dati da presentare, ad esempio Esplora risorse, i cui riquadri dati contengono informazioni di larghezze variabili in momenti diversi.  
   
@@ -26,4 +26,4 @@ ms.locfileid: "76742894"
 
 - <xref:System.Windows.Forms.SplitContainer>
 - [Procedura: Ancorare i controlli in Windows Form](how-to-dock-controls-on-windows-forms.md)
-- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)
+- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)

@@ -21,7 +21,7 @@ ms.locfileid: "76739533"
 
 Le procedure seguenti descrivono i passaggi di base che è necessario completare per creare ed eseguire un'applicazione Windows Forms dalla riga di comando. Esiste un supporto completo per queste procedure in Visual Studio.  Vedere anche [procedura dettagliata: hosting di un controllo Windows Forms in WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).
   
-## <a name="procedure"></a>Procedura  
+## <a name="procedure"></a>Routine  
   
 #### <a name="to-create-the-form"></a>Per creare il form  
   

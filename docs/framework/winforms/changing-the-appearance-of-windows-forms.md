@@ -14,11 +14,11 @@ ms.locfileid: "76732359"
 # <a name="changing-the-appearance-of-windows-forms"></a>Modifica dell'aspetto di Windows Form
 È possibile personalizzare l'aspetto delle applicazioni Windows Forms in molti modi diversi, ad esempio modificando il bordo, l'opacità, la forma, lo stile o l'impostazione di un'immagine di sfondo per l'applicazione Windows Forms.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Procedura: Modificare i bordi di Windows Form](how-to-change-the-borders-of-windows-forms.md)  
  Mostra come modificare lo stile di bordi di un form.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.Form>  
  Descrive la classe e include collegamenti a tutti i relativi membri.  
   

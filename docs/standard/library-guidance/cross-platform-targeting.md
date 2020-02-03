@@ -117,7 +117,7 @@ public static class GpsLocation
 
 .NET consente di scegliere come destinazione versioni di .NET Framework per le quali non è più disponibile il supporto e piattaforme non più comunemente usate. In questo modo, la libreria funzionerà con il maggior numero di destinazioni possibili, tuttavia sarà necessario lavoro aggiuntivo per trovare una soluzione alternativa per le API mancanti. Considerando la copertura e le limitazioni, non vale più la pena scegliere come destinazione determinati framework.
 
-❌ non includere una destinazione libreria di classi portabile (PCL). Ad esempio `portable-net45+win8+wpa81+wp8`.
+❌ non includere una destinazione libreria di classi portabile (PCL). Ad esempio, `portable-net45+win8+wpa81+wp8`.
 
 > .NET standard è il modo moderno per supportare le librerie .NET multipiattaforma e sostituisce le librerie di classi portabili.
 

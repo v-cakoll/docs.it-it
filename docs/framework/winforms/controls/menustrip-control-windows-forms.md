@@ -15,7 +15,7 @@ ms.locfileid: "76732799"
 # <a name="menustrip-control-windows-forms"></a>Controllo MenuStrip (Windows Form)
 Questo controllo raggruppa i comandi dell'applicazione e li rende facilmente accessibili.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Panoramica sul controllo MenuStrip](menustrip-control-overview-windows-forms.md)  
  Spiega che cos'è il controllo e quali sono le funzionalità e le proprietà chiave.  
   
@@ -69,7 +69,7 @@ Questo controllo raggruppa i comandi dell'applicazione e li rende facilmente acc
   
 - [Finestra di dialogo attività di MenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.MenuStrip>  
  Descrive le funzionalità della classe <xref:System.Windows.Forms.MenuStrip>, che fornisce un sistema di menu per un form.  
   
@@ -80,5 +80,5 @@ Questo controllo raggruppa i comandi dell'applicazione e li rende facilmente acc
  Descrive le funzionalità della classe <xref:System.Windows.Forms.ToolStripMenuItem>, che rappresenta un'opzione selezionabile visualizzata in un controllo <xref:System.Windows.Forms.MenuStrip> o <xref:System.Windows.Forms.ContextMenuStrip>.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)  
+ [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)  
  Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.

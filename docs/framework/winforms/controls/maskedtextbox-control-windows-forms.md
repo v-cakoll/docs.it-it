@@ -19,17 +19,17 @@ ms.locfileid: "76744966"
 # <a name="maskedtextbox-control-windows-forms"></a>Controllo MaskedTextBox (Windows Form)
 In questo argomento vengono forniti collegamenti ad altri utenti sul controllo `MaskedTextBox`.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Procedura dettagliata: Utilizzo del controllo MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)  
  Vengono illustrate le funzionalità principali del controllo `MaskedTextBox`.  
   
  [Procedura: Associare dati al controllo MaskedTextBox](how-to-bind-data-to-the-maskedtextbox-control.md)  
  Viene illustrato come riformattare i dati quando i dati nel database non corrispondono al formato previsto dalla definizione della maschera.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.MaskedTextBox>  
  Classe primaria per l'implementazione del controllo casella di testo mascherato.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)  
+ [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)  
  Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.

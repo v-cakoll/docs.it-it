@@ -18,7 +18,7 @@ ms.locfileid: "76733846"
 
 Negli argomenti di questa sezione viene descritto come utilizzare data binding per associare elementi ai dati da un'ampia gamma di origini dati sotto forma di oggetti Common Language Runtime (CLR) e XML.
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 - [Creare un'associazione semplice](how-to-create-a-simple-binding.md)
 - [Specificare l'origine di associazione](how-to-specify-the-binding-source.md)
@@ -56,7 +56,7 @@ Negli argomenti di questa sezione viene descritto come utilizzare data binding p
 - [Procedura: trovare elementi generati da un oggetto DataTemplate](how-to-find-datatemplate-generated-elements.md)
 - [Eseguire l'associazione a un servizio Web](how-to-bind-to-a-web-service.md)
 
-## <a name="reference"></a>Riferimenti
+## <a name="reference"></a>Riferimento
 
 - <xref:System.Windows.Data>
 - <xref:System.Windows.Data.Binding>

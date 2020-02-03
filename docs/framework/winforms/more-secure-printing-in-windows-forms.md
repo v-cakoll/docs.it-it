@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76734886"
 ---
-# <a name="more-secure-printing-in-windows-forms"></a>Stampa più sicura in Windows Form
+# <a name="more-secure-printing-in-windows-forms"></a>Stampa più protetta in Windows Form
 Le applicazioni Windows Forms includono spesso le funzionalità di stampa. Il .NET Framework utilizza la classe <xref:System.Drawing.Printing.PrintingPermission> per controllare l'accesso alle funzionalità di stampa e il valore di enumerazione <xref:System.Drawing.Printing.PrintingPermissionLevel> associato per indicare il livello di accesso. Per impostazione predefinita, la stampa è abilitata per impostazione predefinita nelle aree Internet e Intranet locale; Tuttavia, il livello di accesso è limitato in entrambe le zone. Se l'applicazione è in grado di stampare, richiede l'intervento dell'utente o non è possibile stampare dipende dal valore di autorizzazione concesso all'applicazione. Per impostazione predefinita, l'area Intranet locale riceve l'accesso <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> e l'area Intranet riceve <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> accesso.  
   
  Nella tabella seguente sono illustrate le funzionalità disponibili a ogni livello di autorizzazione di stampa.  

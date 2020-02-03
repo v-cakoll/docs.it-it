@@ -91,7 +91,7 @@ Trustworthy Computing è un'iniziativa Microsoft per garantire la produzione di 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Security](security-wpf.md)
+- [Sicurezza](security-wpf.md)
 - [Sicurezza con attendibilità parziale in WPF](wpf-partial-trust-security.md)
 - [Strategia di sicurezza di WPF - Sicurezza della piattaforma](wpf-security-strategy-platform-security.md)
 - [Calcolo affidabile](https://www.microsoft.com/mscorp/twc/default.mspx)

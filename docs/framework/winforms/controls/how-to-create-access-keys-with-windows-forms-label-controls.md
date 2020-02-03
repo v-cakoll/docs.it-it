@@ -31,7 +31,7 @@ ms.locfileid: "76731055"
   
 1. Creare prima l'etichetta, quindi creare l'altro controllo.  
   
-     oppure  
+     -oppure-  
   
      È possibile creare i controlli in qualsiasi ordine e impostare la proprietà <xref:System.Windows.Forms.Control.TabIndex%2A> dell'etichetta su uno minore dell'altro controllo.  
   

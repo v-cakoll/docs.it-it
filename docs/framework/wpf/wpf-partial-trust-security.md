@@ -27,7 +27,7 @@ ms.locfileid: "76743336"
   
  WPF offre un'ampia gamma di supporto per garantire che il maggior numero possibile di funzionalità possa essere utilizzato in modo sicuro in attendibilità parziale e, insieme alle autorità di certificazione, fornisca ulteriore supporto per la programmazione parzialmente attendibile.  
   
- Di seguito sono elencate le diverse sezioni di questo argomento:  
+ Questo argomento è suddiviso nelle sezioni seguenti:  
   
 - [Supporto con attendibilità parziale della funzionalità WPF](#WPF_Feature_Partial_Trust_Support)  
   
@@ -80,7 +80,7 @@ ms.locfileid: "76743336"
 ## <a name="partial-trust-programming"></a>Programmazione con attendibilità parziale  
  Per le applicazioni XBAP, il codice che supera il set di autorizzazioni predefinito avrà un comportamento diverso a seconda dell'area di sicurezza. In alcuni casi, l'utente riceverà un avviso quando tenta di installare il codice. L'utente potrà scegliere se continuare o annullare l'installazione. La tabella seguente descrive il comportamento dell'applicazione per ogni area di sicurezza e le azioni necessarie relative all'applicazione per acquisire attendibilità totale.  
   
-|Area di sicurezza|Comportamento di|Ottenere l'attendibilità totale|  
+|Area di sicurezza|Comportamento|Ottenere l'attendibilità totale|  
 |-------------------|--------------|------------------------|  
 |Computer locale|Attendibilità totale automatica|Non sono richieste azioni.|  
 |Intranet e siti attendibili|Richiesta di attendibilità totale|Firma dell'applicazione XBAP con un certificato in modo che l'utente veda l'origine nel prompt.|  
@@ -137,12 +137,12 @@ ms.locfileid: "76743336"
 |Spazio di memorizzazione isolato|Isolamento assembly in base all'utente|Sì|No|  
 |Spazio di memorizzazione isolato|Isolamento sconosciuto|Sì|Sì|  
 |Spazio di memorizzazione isolato|Quota utenti illimitata|Sì|No|  
-|Elemento multimediale|Audio, video e immagini sicuri|Sì|Sì|  
+|Supporto|Audio, video e immagini sicuri|Sì|Sì|  
 |Stampa|Stampa predefinita|Sì|No|  
 |Stampa|Stampa sicura|Sì|Sì|  
 |Reflection|Emissione|Sì|No|  
-|Sicurezza -|Esecuzione del codice gestito|Sì|Sì|  
-|Sicurezza -|Asserzione autorizzazioni concesse|Sì|No|  
+|Sicurezza|Esecuzione del codice gestito|Sì|Sì|  
+|Sicurezza|Asserzione autorizzazioni concesse|Sì|No|  
 |Interfaccia utente|Senza restrizioni|Sì|No|  
 |Interfaccia utente|Finestre di primo livello sicure|Sì|Sì|  
 |Interfaccia utente|Appunti personali|Sì|Sì|  
@@ -165,6 +165,6 @@ ms.locfileid: "76743336"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Security](security-wpf.md)
+- [Sicurezza](security-wpf.md)
 - [Strategia di sicurezza di WPF - Sicurezza della piattaforma](wpf-security-strategy-platform-security.md)
 - [Strategia di sicurezza WPF - Progettazione della sicurezza](wpf-security-strategy-security-engineering.md)

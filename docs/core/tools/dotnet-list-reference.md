@@ -35,7 +35,7 @@ Il comando `dotnet list reference` offre un'opzione utile per visualizzare un el
 
   Specifica il file di progetto o di soluzione da usare per l'elenco dei riferimenti. Se non specificato, il comando cerca un file di progetto nella directory corrente.
 
-## <a name="options"></a>Options
+## <a name="options"></a>Opzioni
 
 * **`-h|--help`**
 

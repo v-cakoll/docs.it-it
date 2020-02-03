@@ -47,4 +47,4 @@ Per il linguaggio Microsoft Visual Basic .NET in particolare, è possibile usare
 - <xref:System.Windows.UIElement.AddHandler%2A>
 - [Contrassegno degli eventi indirizzati come gestiti e gestione delle classi](marking-routed-events-as-handled-and-class-handling.md)
 - [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md)
-- [Cenni preliminari su XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
+- [Panoramica di XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)

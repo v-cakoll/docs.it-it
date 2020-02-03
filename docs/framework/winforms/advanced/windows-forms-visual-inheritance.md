@@ -22,7 +22,7 @@ In alcuni casi è possibile impostare un progetto in modo che richiami un modulo
   
  È possibile creare moduli che derivano da classi a livello di codice oppure mediante la finestra di selezione dell'ereditarietà visiva.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Procedura: ereditare Windows Forms](how-to-inherit-windows-forms.md)  
  Vengono fornite indicazioni per creare nel codice moduli ereditati.  
   
@@ -42,7 +42,7 @@ In alcuni casi è possibile impostare un progetto in modo che richiami un modulo
  [Nozioni fondamentali sull'ereditarietà (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
  Vengono descritte le modalità di definizione delle classi Visual Basic che fungono da base per altre classi.  
   
- [classe](../../../csharp/language-reference/keywords/class.md)  
+ [class](../../../csharp/language-reference/keywords/class.md)  
  Viene descritto l'approccio di C# alle classi in cui è consentita l'ereditarietà singola.  
   
  [Risoluzione dei problemi relativi ai gestori eventi ereditati in Visual Basic](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)  

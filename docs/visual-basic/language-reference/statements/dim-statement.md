@@ -47,15 +47,15 @@ Dichiara e alloca lo spazio di archiviazione per una o più variabili.
 Dim [ WithEvents ] variablelist
 ```
 
-## <a name="parts"></a>Componenti
+## <a name="parts"></a>Parti
 
 - `attributelist`
 
-  Parametro facoltativo. Vedere [elenco attributi](attribute-list.md).
+  Facoltativa. Vedere [elenco attributi](attribute-list.md).
 
 - `accessmodifier`
 
-  Parametro facoltativo. Può essere uno dei collegamenti seguenti:
+  Facoltativa. Può essere uno dei collegamenti seguenti:
 
   - [Public](../modifiers/public.md)
 
@@ -73,27 +73,27 @@ Dim [ WithEvents ] variablelist
 
 - `Shared`
 
-  Parametro facoltativo. Vedere [Shared](../modifiers/shared.md).
+  Facoltativa. Vedere [Shared](../modifiers/shared.md).
 
 - `Shadows`
 
-  Parametro facoltativo. Vedere [Shadows](../modifiers/shadows.md).
+  Facoltativa. Vedere [Shadows](../modifiers/shadows.md).
 
 - `Static`
 
-  Parametro facoltativo. Vedere [static](../modifiers/static.md).
+  Facoltativa. Vedere [static](../modifiers/static.md).
 
 - `ReadOnly`
 
-  Parametro facoltativo. Vedere [ReadOnly](../modifiers/readonly.md).
+  Facoltativa. Vedere [ReadOnly](../modifiers/readonly.md).
 
 - `WithEvents`
 
-  Parametro facoltativo. Specifica che si tratta di variabili oggetto che fanno riferimento a istanze di una classe in grado di generare eventi. Vedere [WithEvents](../modifiers/withevents.md).
+  Facoltativa. Specifica che si tratta di variabili oggetto che fanno riferimento a istanze di una classe in grado di generare eventi. Vedere [WithEvents](../modifiers/withevents.md).
 
 - `variablelist`
 
-  Richiesto. Elenco delle variabili dichiarate in questa istruzione.
+  Obbligatoria. Elenco delle variabili dichiarate in questa istruzione.
 
   `variable [ , variable ... ]`
 
@@ -101,14 +101,14 @@ Dim [ WithEvents ] variablelist
 
   `variablename [ ( [ boundslist ] ) ] [ As [ New ] datatype [ With`{`[ .propertyname = propinitializer [ , ... ] ] } ] ] [ = initializer ]`
 
-  |Componente|Descrizione|
+  |Parte|Descrizione|
   |---|---|
-  |`variablename`|Richiesto. Nome della variabile. Vedere [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).|
-  |`boundslist`|Parametro facoltativo. Elenco di limiti di ogni dimensione di una variabile di matrice.|
-  |`New`|Parametro facoltativo. Crea una nuova istanza della classe quando viene eseguita l'istruzione `Dim`.|
-  |`datatype`|Parametro facoltativo. Tipo di dati della variabile.|
-  |`With`|Parametro facoltativo. Introduce l'elenco di inizializzatori di oggetto.|
-  |`propertyname`|Parametro facoltativo. Nome di una proprietà nella classe di cui si sta creando un'istanza.|
+  |`variablename`|Obbligatoria. Nome della variabile. Vedere [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).|
+  |`boundslist`|Facoltativa. Elenco di limiti di ogni dimensione di una variabile di matrice.|
+  |`New`|Facoltativa. Crea una nuova istanza della classe quando viene eseguita l'istruzione `Dim`.|
+  |`datatype`|Facoltativa. Tipo di dati della variabile.|
+  |`With`|Facoltativa. Introduce l'elenco di inizializzatori di oggetto.|
+  |`propertyname`|Facoltativa. Nome di una proprietà nella classe di cui si sta creando un'istanza.|
   |`propinitializer`|Obbligatorio dopo `propertyname` =. Espressione valutata e assegnata al nome della proprietà.|
   |`initializer`|Facoltativo se `New` non è specificato. Espressione valutata e assegnata alla variabile al momento della creazione.|
 
@@ -199,7 +199,7 @@ Dim a, b, c As Single, x, y As Double, i As Integer
 ' a, b, and c are all Single; x and y are both Double
 ```
 
-## <a name="arrays"></a>Array
+## <a name="arrays"></a>Matrici
 
 È possibile dichiarare una variabile in modo che contenga una *matrice*, che può includere più valori. Per specificare che una variabile include una matrice, seguire immediatamente la `variablename` con le parentesi. Per altre informazioni sulle matrici, vedere [Matrici](../../programming-guide/language-features/arrays/index.md).
 
@@ -334,7 +334,7 @@ Nell'esempio seguente, la variabile `speedValue` viene dichiarata a livello di c
 - [Istruzione Option Strict](option-strict-statement.md)
 - [Pagina Compilazione, Creazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
 - [Dichiarazione di variabile](../../programming-guide/language-features/variables/variable-declaration.md)
-- [Matrici](../../programming-guide/language-features/arrays/index.md)
+- [Array](../../programming-guide/language-features/arrays/index.md)
 - [Inizializzatori di oggetto: tipi denominati e tipi anonimi](../../programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [Tipi anonimi](../../programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [Inizializzatori di oggetto: tipi denominati e tipi anonimi](../../programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)

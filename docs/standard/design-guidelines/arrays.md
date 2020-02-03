@@ -1,5 +1,5 @@
 ---
-title: Array
+title: Matrici
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76741796"
 ---
-# <a name="arrays"></a>Array
+# <a name="arrays"></a>Matrici
 ✔️ preferiscono usare le raccolte su matrici in API pubbliche. La sezione [Collections](../../../docs/standard/design-guidelines/guidelines-for-collections.md) fornisce informazioni dettagliate su come scegliere tra le raccolte e le matrici.
 
  ❌ non utilizzano campi di matrice di sola lettura. Il campo stesso è di sola lettura e non può essere modificato, ma è possibile modificare gli elementi della matrice.

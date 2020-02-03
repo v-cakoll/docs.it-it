@@ -1,5 +1,5 @@
 ---
-title: Cenni preliminari sul controllo TabControl
+title: Panoramica del controllo TabControl
 ms.date: 03/30/2017
 f1_keywords:
 - TabControl
@@ -16,7 +16,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76742824"
 ---
-# <a name="tabcontrol-control-overview-windows-forms"></a>Panoramica del controllo TabControl (Windows Form)
+# <a name="tabcontrol-control-overview-windows-forms"></a>Cenni preliminari sul controllo TabControl (Windows Form)
 Il controllo <xref:System.Windows.Forms.TabControl> di Windows Form consente di visualizzare più schede, come i divisori di un raccoglitore o le etichette di una serie di cartelle da archivio. Le schede possono contenere immagini e altri controlli. È possibile utilizzare il controllo TAB per produrre il tipo di finestra di dialogo a più pagine che viene visualizzata in molte posizioni del sistema operativo Windows, ad esempio le proprietà di visualizzazione del pannello di controllo. Inoltre, è possibile utilizzare il <xref:System.Windows.Forms.TabControl> per creare pagine delle proprietà, utilizzate per impostare un gruppo di proprietà correlate.  
   
 ## <a name="working-with-tabcontrol"></a>Utilizzo di TabControl  

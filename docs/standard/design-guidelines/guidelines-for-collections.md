@@ -104,7 +104,7 @@ Qualsiasi tipo progettato specificamente per modificare un gruppo di oggetti con
 
  ❌ evitare di implementare interfacce di raccolta su tipi con API complesse non correlate al concetto di raccolta.
 
- ❌ non ereditano da raccolte di base non generiche, ad esempio `CollectionBase`. Usare invece `Collection<T>`, `ReadOnlyCollection<T>`e `KeyedCollection<TKey,TItem>`.
+ ❌ non ereditano da raccolte di base non generiche, ad esempio `CollectionBase`. In alternativa, usare `Collection<T>`, `ReadOnlyCollection<T>` e `KeyedCollection<TKey,TItem>`.
 
 ### <a name="naming-custom-collections"></a>Denominazione di raccolte personalizzate
  Le raccolte (tipi che implementano `IEnumerable`) vengono create principalmente per due motivi: (1) per creare una nuova struttura di dati con operazioni specifiche della struttura e spesso caratteristiche di prestazioni diverse rispetto alle strutture di dati esistenti (ad esempio, <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.LinkedList%601>, <xref:System.Collections.Generic.Stack%601>) e (2) per creare una raccolta specializzata per la conservazione di un set specifico di elementi (ad esempio, <xref:System.Collections.Specialized.StringCollection>). Le strutture di dati vengono spesso usate nell'implementazione interna di applicazioni e librerie. Le raccolte specializzate sono esposte principalmente nelle API (come tipi di proprietà e parametri).

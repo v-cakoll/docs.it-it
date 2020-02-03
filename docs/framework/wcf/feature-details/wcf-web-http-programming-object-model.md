@@ -96,7 +96,7 @@ Il modello di programmazione HTTP WEB WCF consente agli sviluppatori di esporre 
 ## <a name="compatibility"></a>Compatibilità  
  Il modello di programmazione HTTP WEB WCF non utilizza messaggi basati su SOAP e pertanto non supporta i protocolli WS-*. È tuttavia possibile esporre lo stesso contratto tramite due endpoint diversi, di cui uno usa SOAP e l'altro no. Per un esempio [, vedere Procedura: esporre un contratto ai client SOAP e Web](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) .  
   
-## <a name="security"></a>Sicurezza -  
+## <a name="security"></a>Sicurezza  
 
 Poiché il modello di programmazione HTTP WEB WCF non supporta i protocolli WS-*, l'unico modo per proteggere un servizio Web basato sul modello di programmazione HTTP WEB WCF consiste nell'esporre il servizio tramite SSL. Per ulteriori informazioni sulla configurazione di SSL con IIS 7,0 [, vedere come implementare SSL in IIS](https://support.microsoft.com/help/299875/how-to-implement-ssl-in-iis).
   

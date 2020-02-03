@@ -1,5 +1,5 @@
 ---
-title: Panoramica del controllo PictureBox
+title: Cenni preliminari sul controllo PictureBox
 ms.date: 03/30/2017
 f1_keywords:
 - PictureBox

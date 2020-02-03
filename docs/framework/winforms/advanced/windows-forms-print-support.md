@@ -22,7 +22,7 @@ La stampa in Windows Forms è costituita principalmente dall'utilizzo del compon
   
  Durante la stampa da un'applicazione basata su Windows, nel componente <xref:System.Drawing.Printing.PrintDocument> verrà visualizzata una finestra di dialogo Interrompi stampa per segnalare agli utenti il fatto che la stampa è in corso e per consentire l'annullamento del processo di stampa.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Procedura: Creare processi di stampa standard per Windows Form](how-to-create-standard-windows-forms-print-jobs.md)  
  Viene illustrato come utilizzare il componente <xref:System.Drawing.Printing.PrintDocument> per stampare da un Windows Form.  
   
@@ -48,7 +48,7 @@ La stampa in Windows Forms è costituita principalmente dall'utilizzo del compon
  Viene illustrato come utilizzare un <xref:System.Windows.Forms.PrintPreviewDialog> per la stampa di un documento.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [PrintDocument (componente)](../controls/printdocument-component-windows-forms.md)  
+ [Componente PrintDocument](../controls/printdocument-component-windows-forms.md)  
  Viene illustrato l'utilizzo del componente <xref:System.Drawing.Printing.PrintDocument>.  
   
  [Componente PrintDialog](../controls/printdialog-component-windows-forms.md)  
@@ -57,7 +57,7 @@ La stampa in Windows Forms è costituita principalmente dall'utilizzo del compon
  [Controllo PrintPreviewDialog](../controls/printpreviewdialog-control-windows-forms.md)  
  Viene illustrato l'utilizzo del controllo <xref:System.Windows.Forms.PrintPreviewDialog>.  
   
- [PageSetupDialog Component](../controls/pagesetupdialog-component-windows-forms.md)  
+ [Componente PageSetupDialog](../controls/pagesetupdialog-component-windows-forms.md)  
  Viene illustrato l'utilizzo del componente <xref:System.Windows.Forms.PageSetupDialog>.  
   
  <xref:System.Drawing.Printing>  

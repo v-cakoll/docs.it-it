@@ -23,7 +23,7 @@ ms.locfileid: "76742523"
   
  Quando è impostato su un'origine dati valida, il controllo `DataGrid` viene popolato automaticamente, creando righe e colonne in base alla forma dei dati. Il controllo `DataGrid` può essere usato per visualizzare una singola tabella o le relazioni gerarchiche tra un set di tabelle.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Cenni preliminari sul controllo DataGrid](datagrid-control-overview-windows-forms.md)  
  Descrive le funzionalità di base del controllo `DataGrid`.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "76742523"
  [Procedura: Convalidare l'input con il controllo DataGrid Windows Form](how-to-validate-input-with-the-windows-forms-datagrid-control.md)  
  Descrive come convalidare l'input nel set di dati associato al controllo `DataGrid`.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.DataGrid>  
  Viene fornita una panoramica della classe <xref:System.Windows.Forms.DataGrid>.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "76742523"
  Vengono fornite informazioni dettagliate sull'utilizzo di questa proprietà per associare il controllo <xref:System.Windows.Forms.DataGrid> ai dati.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Data binding in Windows Form](../windows-forms-data-binding.md)  
+ [Associazione ai dati di Windows Form](../windows-forms-data-binding.md)  
  Collegamenti ad argomenti sul data binding in Windows Form.  
   
 ## <a name="see-also"></a>Vedere anche

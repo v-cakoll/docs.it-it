@@ -20,14 +20,14 @@ ms.locfileid: "76746177"
 # <a name="combobox-control-windows-forms"></a>Controllo ComboBox (Windows Form)
 Il controllo Windows Forms `ComboBox` viene usato per visualizzare i dati in una casella combinata a discesa. Per impostazione predefinita, il controllo `ComboBox` viene visualizzato in due parti: la parte superiore è una casella di testo che consente all'utente di digitare un elemento elenco. La seconda parte è una casella di riepilogo in cui viene visualizzato un elenco di elementi da cui l'utente può selezionarne uno.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Panoramica sul controllo ComboBox](combobox-control-overview-windows-forms.md)  
  Definisce il controllo e ne illustra le funzionalità chiave e le proprietà.  
   
  [Procedura: Creare testo di dimensioni variabili in un controllo ComboBox](how-to-create-variable-sized-text-in-a-combobox-control.md)  
  Viene illustrato il disegno personalizzato del testo in un controllo `ComboBox`.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  Classe <xref:System.Windows.Forms.ComboBox>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   
@@ -37,4 +37,4 @@ Il controllo Windows Forms `ComboBox` viene usato per visualizzare i dati in una
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)
+- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)

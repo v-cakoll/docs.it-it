@@ -18,7 +18,7 @@ ms.locfileid: "76741342"
 # <a name="programming-with-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>Programmazione con celle, righe e colonne nel controllo DataGridView Windows Form
 In questa sezione vengono forniti argomenti che illustrano varie attività di programmazione che coinvolgono oggetti Cell, Row e Column.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Procedura: Aggiungere descrizioni comandi a singole celle in un controllo DataGridView di Windows Form](add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
  Viene descritto come gestire l'evento <xref:System.Windows.Forms.DataGridView.CellFormatting> per fornire descrizioni comando diverse per le singole celle.  
   
@@ -37,7 +37,7 @@ In questa sezione vengono forniti argomenti che illustrano varie attività di pr
  [Procedura: Usare le colonne di immagini nel controllo DataGridView di Windows Form](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
  Viene descritto come programmare con la classe `DataGridViewImageColumn`.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.DataGridView>  
  Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.DataGridView>.  
   

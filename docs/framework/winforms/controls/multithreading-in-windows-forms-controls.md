@@ -18,14 +18,14 @@ In molte applicazioni è possibile rendere più reattive l'interfaccia utente es
 > [!NOTE]
 > Il componente `BackgroundWorker` sostituisce e aggiunge funzionalità allo spazio dei nomi <xref:System.Threading> e al metodo <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType>; Tuttavia, questi vengono conservati sia per la compatibilità con le versioni precedenti che per un uso futuro, se si sceglie. Per ulteriori informazioni, vedere [Cenni preliminari sul componente BackgroundWorker](backgroundworker-component-overview.md).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Procedura: Effettuare chiamate thread-safe a controlli di Windows Form](how-to-make-thread-safe-calls-to-windows-forms-controls.md)  
  Viene illustrato come eseguire chiamate thread-safe a controlli Windows Forms.  
   
  [Procedura: Usare un thread in background per la ricerca di file](how-to-use-a-background-thread-to-search-for-files.md)  
  Viene illustrato come utilizzare lo spazio dei nomi <xref:System.Threading> e il metodo <xref:System.Windows.Forms.Control.BeginInvoke%2A> per cercare i file in modo asincrono.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.ComponentModel.BackgroundWorker>  
  Documenta un componente che incapsula un thread di lavoro per le operazioni asincrone.  
   

@@ -57,12 +57,12 @@ In questa sezione vengono descritte le convenzioni di denominazione generali che
 
  Ad esempio, un metodo che converte in <xref:System.Int64> deve essere denominato `ToInt64`, non `ToLong` (perché <xref:System.Int64> è un nome CLR per C#l'alias specifico di `long`). Nella tabella seguente vengono illustrati diversi tipi di dati di base utilizzando i nomi dei tipi CLR, nonché i nomi C#dei tipi corrispondenti per C++, Visual Basic e.
 
-|C#|Visual Basic -|C++|CLR per|
+|C#|Visual Basic|C++|CLR|
 |---------|------------------|-----------|---------|
 |**sbyte**|**SByte**|**char**|**SByte**|
-|**byte**|**Byte**|**char senza segno**|**Byte**|
+|**byte**|**Byte**|**unsigned char**|**Byte**|
 |**short**|**Short**|**short**|**Int16**|
-|**ushort**|**UInt16**|**unsigned short**|**UInt16**|
+|**ushort**|**UInt16**|**short senza segno**|**UInt16**|
 |**int**|**Integer**|**int**|**Int32**|
 |**uint**|**UInt32**|**unsigned int**|**UInt32**|
 |**long**|**Long**|**__int64**|**Int64**|

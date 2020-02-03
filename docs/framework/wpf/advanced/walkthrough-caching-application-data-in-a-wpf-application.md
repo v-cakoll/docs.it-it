@@ -60,7 +60,7 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
 
 2. Scegliere **nuovo**dal menu **file** , quindi fare clic su **nuovo progetto**.
 
-     Verrà visualizzata la finestra di dialogo **Nuovo progetto**.
+     La finestra di dialogo **Nuovo progetto** viene visualizzata.
 
 3. In **modelli installati**selezionare il linguaggio di programmazione che si desidera utilizzare (**Visual Basic** o **oggetto C#visivo** ).
 

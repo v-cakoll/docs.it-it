@@ -1,5 +1,5 @@
 ---
-title: Panoramica del controllo Panel
+title: Cenni preliminari sul controllo Panel
 ms.date: 03/30/2017
 f1_keywords:
 - Panel

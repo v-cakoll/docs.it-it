@@ -27,4 +27,4 @@ Quando viene aggiunto a un modulo, il componente <xref:System.Windows.Forms.Page
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.PageSetupDialog>
-- [PageSetupDialog Component](pagesetupdialog-component-windows-forms.md)
+- [Componente PageSetupDialog](pagesetupdialog-component-windows-forms.md)

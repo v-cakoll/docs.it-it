@@ -17,7 +17,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743226"
 ---
-# <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a>Procedura: Selezionare un elemento nel controllo ListView di Windows Form
+# <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a>Procedura: selezionare un elemento nel controllo ListView Windows Form
 In questo esempio viene illustrato come selezionare a livello di codice un elemento in un controllo Windows Forms <xref:System.Windows.Forms.ListView>. La selezione di un elemento a livello di codice non modifica automaticamente lo stato attivo sul controllo <xref:System.Windows.Forms.ListView>. Per questo motivo, in genere è necessario impostare l'elemento come attivo quando si seleziona un elemento.  
   
 ## <a name="example"></a>Esempio  

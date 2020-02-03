@@ -73,7 +73,7 @@ L'esecuzione di `dotnet build` equivale all'esecuzione di `dotnet msbuild -resto
 
 File di progetto o di soluzione da compilare. Se non viene specificato alcun file di progetto o di soluzione, MSBuild cercherà nella directory di lavoro corrente un file con estensione *proj* o *sln* e userà questo file.
 
-## <a name="options"></a>Options
+## <a name="options"></a>Opzioni
 
 - **`-c|--configuration {Debug|Release}`**
 

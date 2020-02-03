@@ -1,5 +1,5 @@
 ---
-title: Panoramica del controllo SplitContainer
+title: Cenni preliminari sul controllo SplitContainer
 ms.date: 03/30/2017
 f1_keywords:
 - SplitContainer
@@ -40,12 +40,12 @@ Il controllo <xref:System.Windows.Forms.SplitContainer> Windows Form può essere
   
 |Name|Descrizione|  
 |----------|-----------------|  
-|Proprietà<xref:System.Windows.Forms.SplitContainer.FixedPanel%2A>|Determina quale pannello rimarrà invariato dopo il ridimensionamento del controllo <xref:System.Windows.Forms.SplitContainer>.|  
-|Proprietà<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>|Determina se la barra di divisione può essere spostata con la tastiera o il mouse.|  
-|Proprietà<xref:System.Windows.Forms.SplitContainer.Orientation%2A>|Determina se la barra di divisione è disposta verticalmente o orizzontalmente.|  
-|Proprietà<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>|Determina la distanza in pixel dal bordo sinistro o superiore alla barra di divisione mobile.|  
-|Proprietà<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>|Determina la distanza minima, in pixel, che la barra di divisione può spostare dall'utente.|  
-|Proprietà<xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A>|Determina lo spessore, in pixel, della barra di divisione.|  
+|Proprietà <xref:System.Windows.Forms.SplitContainer.FixedPanel%2A>|Determina quale pannello rimarrà invariato dopo il ridimensionamento del controllo <xref:System.Windows.Forms.SplitContainer>.|  
+|Proprietà <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>|Determina se la barra di divisione può essere spostata con la tastiera o il mouse.|  
+|Proprietà <xref:System.Windows.Forms.SplitContainer.Orientation%2A>|Determina se la barra di divisione è disposta verticalmente o orizzontalmente.|  
+|Proprietà <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>|Determina la distanza in pixel dal bordo sinistro o superiore alla barra di divisione mobile.|  
+|Proprietà <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>|Determina la distanza minima, in pixel, che la barra di divisione può spostare dall'utente.|  
+|Proprietà <xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A>|Determina lo spessore, in pixel, della barra di divisione.|  
 |Evento<xref:System.Windows.Forms.SplitContainer.SplitterMoving>|Si verifica quando la barra di divisione viene spostato.|  
 |Evento<xref:System.Windows.Forms.SplitContainer.SplitterMoved>|Si verifica quando la barra di divisione viene spostata.|  
   

@@ -94,7 +94,7 @@ Gli utenti WPF in Windows Vista trarranno vantaggio dai miglioramenti aggiuntivi
   
  Il vantaggio del codice verificabile è il motivo principale per cui WPF si basa sul .NET Framework. Pertanto, più esteso sarà l'uso di codice verificabile, minori saranno le possibilità di sfruttare le vulnerabilità del sistema.  
   
-### <a name="code-access-security"></a>Sicurezza per l'accesso al codice  
+### <a name="code-access-security"></a>Sicurezza dall'accesso di codice  
  Un computer client espone un'ampia varietà di risorse a cui un'applicazione gestita ha accesso, ad esempio il file system, il Registro di sistema, i servizi di stampa, l'interfaccia utente, la reflection e le variabili di ambiente. Prima che un'applicazione gestita possa accedere a una qualsiasi delle risorse in un computer client, deve disporre di .NET Framework autorizzazione. Un'autorizzazione in CAS è una sottoclasse del <xref:System.Security.CodeAccessPermission>; CAS implementa una sottoclasse per ogni risorsa a cui possono accedere le applicazioni gestite.  
   
  Il set di autorizzazioni che un'applicazione gestita viene concessa dalle CA quando viene avviata l'esecuzione è noto come set di autorizzazioni ed è determinato dall'evidenza fornita dall'applicazione. Per le applicazioni WPF, l'evidenza fornita è la posizione, o area, da cui vengono avviate le applicazioni. CA identifica le zone seguenti:  
@@ -109,7 +109,7 @@ Gli utenti WPF in Windows Vista trarranno vantaggio dai miglioramenti aggiuntivi
   
 - **Siti non attendibili**. Applicazioni identificate da un utente come non attendibili (non attendibili).  
   
- Per ognuna di queste zone, CAS fornisce un set di autorizzazioni predefinito che include le autorizzazioni che corrispondono al livello di attendibilità associato a ciascuna di esse. Sono inclusi:  
+ Per ognuna di queste zone, CAS fornisce un set di autorizzazioni predefinito che include le autorizzazioni che corrispondono al livello di attendibilità associato a ciascuna di esse. tra cui:  
   
 - **FullTrust**. Per le applicazioni avviate dalla zona **computer locale** . Sono concesse tutte le autorizzazioni possibili.  
   
@@ -189,6 +189,6 @@ Gli utenti WPF in Windows Vista trarranno vantaggio dai miglioramenti aggiuntivi
 ## <a name="see-also"></a>Vedere anche
 
 - [Sicurezza dall'accesso di codice](../misc/code-access-security.md)
-- [Security](security-wpf.md)
+- [Sicurezza](security-wpf.md)
 - [Sicurezza con attendibilità parziale in WPF](wpf-partial-trust-security.md)
 - [Strategia di sicurezza WPF - Progettazione della sicurezza](wpf-security-strategy-security-engineering.md)

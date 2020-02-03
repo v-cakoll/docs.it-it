@@ -1,5 +1,5 @@
 ---
-title: Panoramica della sicurezza
+title: Cenni preliminari sulla sicurezza
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation, security
@@ -94,7 +94,7 @@ Windows Communication Foundation (WCF) è una piattaforma di programmazione dist
   
  In WCF, le funzionalità di controllo di accesso vengono fornite tramite l'integrazione con il Common Language Runtime (CLR) <xref:System.Security.Permissions.PrincipalPermissionAttribute> e tramite un set di API noto come *modello di identità*. Per informazioni dettagliate sul controllo di accesso e sull'autorizzazione basata sulle attestazioni, vedere [estensione della protezione](../../../../docs/framework/wcf/extending/extending-security.md).  
   
-### <a name="auditing"></a>Controllo di  
+### <a name="auditing"></a>Controllo  
  Il *controllo* è la registrazione degli eventi di sicurezza nel registro eventi di Windows. È possibile registrare eventi relativi alla sicurezza, ad esempio le operazioni di autenticazione riuscite o non riuscite. Per ulteriori informazioni, vedere [controllo](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Per informazioni dettagliate sulla programmazione, vedere [procedura: controllare gli eventi di sicurezza](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
   
 ## <a name="see-also"></a>Vedere anche
@@ -103,7 +103,7 @@ Windows Communication Foundation (WCF) è una piattaforma di programmazione dist
 - [Protezione dei servizi](../../../../docs/framework/wcf/securing-services.md)
 - [Scenari di sicurezza comuni](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
 - [Associazioni e sicurezza](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
-- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Autenticazione](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)
 - [Autorizzazione](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
 - [Federazione e token rilasciati](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

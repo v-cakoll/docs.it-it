@@ -19,16 +19,16 @@ Nella figura seguente vengono illustrati un client e un servizio Windows Communi
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|Modalità di sicurezza|Transport|  
+|Modalità di sicurezza|Trasporto|  
 |Interoperabilità|Con servizi e client di servizi Web esistenti|  
 |Autenticazione (server)<br /><br /> Autenticazione (client)|Sì (usando HTTPS)<br /><br /> Sì (usando nome utente/password).|  
 |Integrità|Sì|  
 |Riservatezza|Sì|  
-|Transport|HTTPS|  
+|Trasporto|HTTPS|  
 |Associazione|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## <a name="service"></a>Servizio  
- Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Effettuare una delle seguenti operazioni:  
+## <a name="service"></a>Service  
+ Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Esegui una delle operazioni seguenti:  
   
 - Creare un servizio autonomo usando il codice senza alcuna configurazione.  
   
@@ -40,7 +40,7 @@ Nella figura seguente vengono illustrati un client e un servizio Windows Communi
  [!code-csharp[C_SecurityScenarios#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#1)]
  [!code-vb[C_SecurityScenarios#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#1)]  
   
-## <a name="configuration"></a>Configurazione di  
+## <a name="configuration"></a>Configurazione  
  Gli elementi seguenti configurano un servizio per l'uso dell'autenticazione di base con protezione a livello di trasporto:  
   
 ```xml  
@@ -80,7 +80,7 @@ Nella figura seguente vengono illustrati un client e un servizio Windows Communi
  [!code-csharp[C_SecurityScenarios#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#2)]
  [!code-vb[C_SecurityScenarios#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#2)]  
   
-### <a name="configuration"></a>Configurazione di  
+### <a name="configuration"></a>Configurazione  
  Nel codice seguente viene mostrata la configurazione client.  
   
 > [!NOTE]
@@ -117,5 +117,5 @@ Nella figura seguente vengono illustrati un client e un servizio Windows Communi
 - [Uso di certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Procedura: Configurare una porta con un certificato SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
 - [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [\<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
+- [\<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
 - [Modello di sicurezza per Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

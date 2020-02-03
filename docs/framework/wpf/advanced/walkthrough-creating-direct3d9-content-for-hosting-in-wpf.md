@@ -41,13 +41,13 @@ In questa procedura dettagliata viene illustrato come creare contenuto Direct3D9
 
      Si apre la creazione guidata applicazione Win32 e viene visualizzata la schermata iniziale.
 
-2. Scegliere **Avanti**.
+2. Fare clic su **Avanti**.
 
      Viene visualizzata la schermata Impostazioni applicazione.
 
 3. Nella sezione **tipo di applicazione:** selezionare l'opzione **dll** .
 
-4. Scegliere **Fine**.
+4. Fare clic su **Fine**.
 
      Viene generato il progetto D3DContent.
 

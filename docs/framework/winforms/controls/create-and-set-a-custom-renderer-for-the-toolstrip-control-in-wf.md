@@ -29,7 +29,7 @@ i controlli <xref:System.Windows.Forms.ToolStrip> offrono un supporto semplice p
   
 1. Estendere la classe <xref:System.Windows.Forms.ToolStripRenderer>.  
   
-2. Implementare il rendering personalizzato desiderato eseguendo l'override dell'appropriato *...* Membri di  
+2. Implementare il rendering personalizzato desiderato eseguendo l'override dell'appropriato *...* membri  
   
     ```vb  
     Public Class RedTextRenderer  

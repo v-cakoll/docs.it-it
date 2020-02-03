@@ -15,7 +15,7 @@ ms.locfileid: "76742346"
 # <a name="windows-forms-controls-used-to-list-options"></a>Controlli Windows Form usati per elencare opzioni
 È possibile aggiungere un'ampia gamma di controlli a un Windows Form se si desidera fornire agli utenti un elenco di opzioni tra cui scegliere. A seconda di quanto si vuole limitare l'input degli utenti, è possibile aggiungere un controllo <xref:System.Windows.Forms.ListBox>, un controllo <xref:System.Windows.Forms.ComboBox> o un controllo di <xref:System.Windows.Forms.CheckedListBox>. Usare i collegamenti seguenti per determinare il controllo più adatto alle proprie esigenze.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Quando usare un controllo ComboBox Windows Form anziché un controllo ListBox](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)  
  Suggerisce un controllo appropriato basato su elenco in base alle esigenze e alle restrizioni del Windows Form.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "76742346"
  [Procedura: Ordinare il contenuto di un controllo ComboBox, ListBox o CheckedListBox di Windows Form](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
  Viene illustrato come ordinare i dati dell'elenco nell'origine dati.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.CheckedListBox>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   
@@ -54,5 +54,5 @@ ms.locfileid: "76742346"
  [Panoramica sul controllo ListBox](listbox-control-overview-windows-forms.md)  
  Definisce il controllo e ne illustra le funzionalità chiave e le proprietà.  
   
- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)  
+ [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)  
  Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.

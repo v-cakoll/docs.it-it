@@ -47,17 +47,17 @@ Le linee guida in questo capitolo definiscono un metodo semplice per l'utilizzo 
 
  Nella tabella seguente vengono descritte le regole di utilizzo delle maiuscole per diversi tipi di identificatori.
 
-|Identificatore|Maiuscole e minuscole|Esempio|
+|Identificatore|Maiuscole/minuscole|Esempio|
 |----------------|------------|-------------|
 |Spazio dei nomi|Pascal|`namespace System.Security { ... }`|
-|Tipo di|Pascal|`public class StreamReader { ... }`|
+|Type|Pascal|`public class StreamReader { ... }`|
 |Interfaccia|Pascal|`public interface IEnumerable { ... }`|
 |Metodo|Pascal|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|
-|Gli|Pascal|`public class String {` <br />  `public int Length { get; }` <br /> `}`|
-|Event|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|
+|Proprietà|Pascal|`public class String {` <br />  `public int Length { get; }` <br /> `}`|
+|Evento|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|
 |Campo|Pascal|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|
 |Valore enum|Pascal|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|
-|Parametro|Convenzione Camel|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|
+|Parametro|notazione Camel|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|
 
 ## <a name="capitalizing-compound-words-and-common-terms"></a>Capitalizzazione di parole composte e termini comuni
  La maggior parte dei termini composti viene considerata come una singola parola per scopi di maiuscole.
@@ -66,7 +66,7 @@ Le linee guida in questo capitolo definiscono un metodo semplice per l'utilizzo 
 
  Si tratta di parole composte scritte come una singola parola, ad esempio endpoint. Ai fini delle linee guida per l'utilizzo di maiuscole e minuscole, considerare una parola composta a forma chiusa come una singola parola. Usare un dizionario corrente per determinare se una parola composta viene scritta in formato chiuso.
 
-|Pascal|Convenzione Camel|not|
+|Pascal|notazione Camel|not|
 |------------|-----------|---------|
 |`BitFlag`|`bitFlag`|`Bitflag`|
 |`Callback`|`callback`|`CallBack`|

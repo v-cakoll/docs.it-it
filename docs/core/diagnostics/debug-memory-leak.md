@@ -28,7 +28,7 @@ In questa esercitazione si eseguono le attività seguenti:
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-L'esercitazione USA:
+L'esercitazione usa:
 
 - [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) o versione successiva.
 - [DotNet-Trace](dotnet-trace.md) per elencare i processi.

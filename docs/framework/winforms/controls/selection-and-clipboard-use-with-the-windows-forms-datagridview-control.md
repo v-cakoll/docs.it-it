@@ -19,7 +19,7 @@ ms.locfileid: "76743057"
 # <a name="selection-and-clipboard-use-with-the-windows-forms-datagridview-control"></a>Uso della selezione e degli Appunti con il controllo DataGridView Windows Form
 Il controllo `DataGridView` offre un'ampia gamma di opzioni per la configurazione del modo in cui gli utenti possono selezionare celle, righe e colonne. È ad esempio possibile abilitare una selezione singola o multipla, la selezione di intere righe o colonne quando gli utenti fanno clic su celle oppure selezionano intere righe o colonne solo quando gli utenti fanno clic sulle intestazioni, consentendo così la selezione delle celle. Se si desidera fornire un'interfaccia utente personalizzata per la selezione, è possibile disabilitare la selezione ordinaria e gestire tutta la selezione a livello di codice. Inoltre, è possibile consentire agli utenti di copiare i valori selezionati negli Appunti.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Modalità di selezione nel controllo DataGridView di Windows Form](selection-modes-in-the-windows-forms-datagridview-control.md)  
  Descrive le opzioni per l'utente e la selezione a livello di codice nel controllo.  
   
@@ -32,7 +32,7 @@ Il controllo `DataGridView` offre un'ampia gamma di opzioni per la configurazion
  [Procedura: Consentire agli utenti di copiare più celle negli Appunti dal controllo DataGridView di Windows Form](enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
  Viene descritto come abilitare il supporto degli Appunti nel controllo.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.DataGridView>  
  Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.DataGridView>.  
   

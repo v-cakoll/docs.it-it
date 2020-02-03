@@ -315,4 +315,4 @@ Per impostazione predefinita, quando vengono usati più domini applicazione, i v
 - [Domini dell'applicazione](../../app-domains/application-domains.md)
 - [Panoramica di .NET Framework Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [Creazione di oggetti in remoto](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
-- [Procedure relative alle proprietà](how-to-topics.md)
+- [Procedure relative alla struttura ad albero e alla serializzazione degli elementi](how-to-topics.md)

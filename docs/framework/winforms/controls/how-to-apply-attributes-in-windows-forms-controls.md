@@ -82,5 +82,5 @@ Per sviluppare componenti e controlli che interagiscono correttamente con l'ambi
 - <xref:System.IComparable>
 - <xref:System.Windows.Forms.DataGridView>
 - [Sviluppo di controlli Windows Form personalizzati con .NET Framework](developing-custom-windows-forms-controls.md)
-- [Attributi nei controlli Windows Form](attributes-in-windows-forms-controls.md)
+- [Attributi nei controlli Windows Forms](attributes-in-windows-forms-controls.md)
 - [Procedura: serializzare raccolte di tipi standard con DesignerSerializationVisibilityAttribute](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))

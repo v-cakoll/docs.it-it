@@ -32,7 +32,7 @@ Dal punto di vista di CLR, sono disponibili solo due categorie di tipi, ovvero t
 
  ✔️ Assicurarsi che ogni tipo sia un set ben definito di membri correlati, non solo una raccolta casuale di funzionalità non correlate.
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
  [Scelta tra classi e struct](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md) [classe astratta progettazione](../../../docs/standard/design-guidelines/abstract-class.md) di classi [statiche](../../../docs/standard/design-guidelines/static-class.md) progettazione dell' [interfaccia](../../../docs/standard/design-guidelines/interface.md) [struttura struttura](../../../docs/standard/design-guidelines/struct.md) progettazione dell'enumerazione progettazione dell' [enumerazione](../../../docs/standard/design-guidelines/enum.md) [tipi annidati](../../../docs/standard/design-guidelines/nested-types.md) *parti © 2005, 2009 Microsoft Corporation. Tutti i diritti sono riservati.*
 
  *Ristampato con l'autorizzazione di Pearson Education, Inc. da [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2a edizione](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) di Krzysztof Cwalina and Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional nella collana Microsoft Windows Development Series.*

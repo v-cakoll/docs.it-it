@@ -198,7 +198,7 @@ La proprietà <xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A> 
 
 Questa proprietà specifica il tipo di sostituzione numerica da eseguire. Accetta uno dei valori di enumerazione <xref:System.Windows.Media.NumberSubstitutionMethod> seguenti:
 
-- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: il metodo di sostituzione viene determinato in base alla proprietà <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> delle impostazioni cultura del numero. Questo è il valore predefinito.
+- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: il metodo di sostituzione viene determinato in base alla proprietà <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> delle impostazioni cultura del numero. Questa è l'impostazione predefinita.
 
 - <xref:System.Windows.Media.NumberSubstitutionMethod.Context>: se le impostazioni cultura del numero sono una lingua araba o persiana, specifica che le cifre dipendono dal contesto.
 
@@ -226,7 +226,7 @@ Se si desidera apportare modifiche in base allo stato dell'applicazione, utilizz
 
 Per prima cosa, impostare la `NumberSubstitution.CultureSource="Text"`del componente dell'applicazione. L'uso di questa impostazione garantisce che le impostazioni non provengano dal [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] per gli elementi di testo con "User" come impostazione predefinita, ad esempio <xref:System.Windows.Controls.TextBlock>.
 
-Ad esempio:
+Ad esempio,
 
 ```xaml
 <TextBlock

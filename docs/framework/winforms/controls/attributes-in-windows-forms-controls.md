@@ -30,7 +30,7 @@ ms.locfileid: "76732135"
 |<xref:System.ComponentModel.DisplayNameAttribute>|Specifica il nome visualizzato per una proprietà, un evento o un metodo `public void` che non accetta argomenti.|  
 |<xref:System.ComponentModel.EditorAttribute>|Specifica l'editor da usare per modificare una proprietà.|  
 |<xref:System.ComponentModel.EditorBrowsableAttribute>|Specifica che una proprietà o un metodo è visualizzabile in un editor.|  
-|<xref:System.ComponentModel.Design.HelpKeywordAttribute>|Specifica la parola chiave di contesto per una classe o un membro.|  
+|<xref:System.ComponentModel.Design.HelpKeywordAttribute>|Specifica la parola chiave del contesto per una classe o un membro.|  
 |<xref:System.ComponentModel.LocalizableAttribute>|Specifica se è necessario localizzare una proprietà.|  
 |<xref:System.ComponentModel.PasswordPropertyTextAttribute>|Indica che la rappresentazione di testo di un oggetto è nascosta da caratteri quali gli asterischi.|  
 |<xref:System.ComponentModel.ReadOnlyAttribute>|Specifica se la proprietà a cui è associato questo attributo è di sola lettura o di lettura/scrittura in fase di progettazione.|  

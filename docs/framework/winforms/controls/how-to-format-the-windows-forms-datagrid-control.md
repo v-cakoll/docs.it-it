@@ -35,7 +35,7 @@ ms.locfileid: "76732967"
   
 1. Impostare le proprietà seguenti in base alle esigenze:  
   
-    |Gli|Descrizione|  
+    |Proprietà|Descrizione|  
     |--------------|-----------------|  
     |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|La proprietà <xref:System.Windows.Forms.DataGrid.BackColor%2A> definisce il colore delle righe pari della griglia. Quando si imposta la proprietà <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> su un colore diverso, ogni altra riga viene impostata sul nuovo colore (righe 1, 3, 5 e così via).|  
     |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|Il colore di sfondo delle righe pari della griglia (righe 0, 2, 4, 6 e così via).|  

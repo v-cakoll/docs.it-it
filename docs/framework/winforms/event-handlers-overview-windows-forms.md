@@ -1,5 +1,5 @@
 ---
-title: Panoramica sui gestori eventi
+title: Cenni preliminari sui gestori eventi
 ms.date: 03/30/2017
 dev_langs:
 - csharp

@@ -15,7 +15,7 @@ ms.locfileid: "76738098"
 # <a name="code-behind-and-xaml-in-wpf"></a>Code-behind e XAML in WPF
 <a name="introduction"></a>Code-behind è un termine usato per descrivere il codice Unito a oggetti definiti dal markup, quando una pagina di [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] viene compilata con markup. In questo argomento vengono descritti i requisiti per il code-behind e un meccanismo alternativo di codice inline per il codice in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
- Di seguito sono elencate le diverse sezioni di questo argomento:  
+ Questo argomento è suddiviso nelle sezioni seguenti:  
   
 - [Prerequisiti](#Prerequisites)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "76738098"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Cenni preliminari su XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
+- [Panoramica di XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Tipo XAML intrinseco x:Code](../../../desktop-wpf/xaml-services/xcode-intrinsic-xaml-type.md)
 - [Compilazione di un'applicazione WPF](../app-development/building-a-wpf-application-wpf.md)
 - [Descrizione dettagliata della sintassi XAML](xaml-syntax-in-detail.md)

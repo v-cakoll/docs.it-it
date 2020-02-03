@@ -41,7 +41,7 @@ Per la procedura seguente è necessario un progetto di **applicazione Windows** 
 
 2. Nella finestra **Proprietà** impostare le proprietà seguenti, a seconda dei casi.
 
-    |Gli|Descrizione|
+    |Proprietà|Descrizione|
     |--------------|-----------------|
     |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|La proprietà `BackColor` definisce il colore delle righe pari della griglia. Quando si imposta la proprietà <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> su un colore diverso, ogni altra riga viene impostata sul nuovo colore (righe 1, 3, 5 e così via).|
     |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|Il colore di sfondo delle righe pari della griglia (righe 0, 2, 4, 6 e così via).|

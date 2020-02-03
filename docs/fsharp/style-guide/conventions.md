@@ -189,7 +189,7 @@ La gestione degli errori nei sistemi di grandi dimensioni è un'attività comple
 
 ### <a name="represent-error-cases-and-illegal-state-in-types-intrinsic-to-your-domain"></a>Rappresentano i casi di errore e lo stato non valido nei tipi intrinseci al dominio
 
-Con le [unioni discriminate](../language-reference/discriminated-unions.md), F# offre la possibilità di rappresentare lo stato del programma difettoso nel sistema di tipi. Ad esempio:
+Con le [unioni discriminate](../language-reference/discriminated-unions.md), F# offre la possibilità di rappresentare lo stato del programma difettoso nel sistema di tipi. Ad esempio,
 
 ```fsharp
 type MoneyWithdrawalResult =
@@ -672,8 +672,8 @@ F#dispone del supporto completo per oggetti e concetti orientati a oggetti (OO).
 * Proprietà automatiche
 * Implementazione di `IDisposable` e `IEnumerable`
 * Estensioni di tipo
-* Events
-* Strutture
+* Eventi
+* Struct
 * Delegati
 * Enumerazioni
 

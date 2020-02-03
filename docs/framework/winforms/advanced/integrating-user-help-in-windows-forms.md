@@ -21,7 +21,7 @@ Un aspetto essenziale, ma spesso trascurato, della creazione di applicazioni bas
   
  Inoltre, è possibile utilizzare il [componente descrizione comando](../controls/tooltip-component-windows-forms.md) per fornire la guida individuale per i controlli Windows Forms.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Procedura: Visualizzare la Guida in un'applicazione Windows](how-to-provide-help-in-a-windows-application.md)  
  Viene illustrato come utilizzare il componente `HelpProvider` per collegare i controlli ai file in un sistema di guida.  
   

@@ -141,5 +141,5 @@ Dopo avere aggiunto un tipo di controllo WPF al progetto, è possibile inserirlo
 - [Migrazione e interoperabilità](../../wpf/advanced/migration-and-interoperability.md)
 - [Uso di controlli WPF](using-wpf-controls.md)
 - [Progettare XAML in Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
-- [Cenni preliminari su XAML (WPF)](../../wpf/advanced/xaml-overview-wpf.md)
+- [Panoramica di XAML (WPF)](../../wpf/advanced/xaml-overview-wpf.md)
 - [Applicazione di stili e modelli](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
