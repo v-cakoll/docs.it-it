@@ -38,7 +38,7 @@ La ricezione e la gestione di input del mouse è una parte importante di ogni ap
 ## <a name="changing-mouse-input-and-detecting-system-settings"></a>Modifica dell'input del mouse e rilevamento delle impostazioni di sistema  
  È possibile rilevare e modificare il modo in cui un controllo gestisce l'input del mouse derivando dal controllo e utilizzando i metodi <xref:System.Windows.Forms.Control.GetStyle%2A> e <xref:System.Windows.Forms.Control.SetStyle%2A>. Il metodo <xref:System.Windows.Forms.Control.SetStyle%2A> accetta una combinazione bit per bit dei valori <xref:System.Windows.Forms.ControlStyles> per determinare se il controllo avrà un comportamento di clic o doppio clic standard o se il controllo gestirà l'elaborazione del mouse. Inoltre, la classe <xref:System.Windows.Forms.SystemInformation> include proprietà che descrivono le funzionalità del mouse e specificano il modo in cui il mouse interagisce con il sistema operativo. Nella tabella seguente sono riepilogate queste proprietà.  
   
-|Gli|Descrizione|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |<xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A>|Ottiene le dimensioni, in pixel, dell'area in cui l'utente deve fare clic due volte affinché il sistema operativo consideri i due clic come un doppio clic.|  
 |<xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A>|Ottiene il numero massimo di millisecondi che possono trascorrere tra un primo clic e un secondo clic affinché il sistema operativo consideri l'azione del mouse come un doppio clic.|  

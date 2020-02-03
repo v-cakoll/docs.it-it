@@ -18,14 +18,14 @@ ms.locfileid: "76745034"
   
  Nella tabella seguente sono elencati i tasti di scelta rapida che è possibile usare per la navigazione all'interno del Windows Forms controllo <xref:System.Windows.Forms.DataGrid>:  
   
-|Azione|Collegamento|  
+|Azione|Metodo rapido|  
 |------------|--------------|  
 |Completa una voce di cella e Sposta giù nella cella successiva.<br /><br /> Se lo stato attivo si trova in un collegamento alla tabella figlio, passare a tale tabella.|INVIO|  
 |Annulla la modifica della cella se in modalità di modifica della cella.<br /><br /> Se nella selezione Marquee, annullare la modifica sulla riga.|ESC|  
 |Elimina il carattere prima del punto di inserimento durante la modifica di una cella.|BACKSPACE|  
 |Elimina il carattere dopo il punto di inserimento durante la modifica di una cella.|DELETE|  
 |Passa alla prima cella della riga corrente.|HOME|  
-|Passa all'ultima cella della riga corrente.|FINE|  
+|Passa all'ultima cella della riga corrente.|END|  
 |Evidenziare i caratteri nella cella corrente e posizionare il punto di inserimento alla fine della riga. Lo stesso comportamento che si fa doppio clic su una cella.|F2|  
 |Se lo stato attivo si trova su una cella, passare alla cella successiva nella riga.<br /><br /> Se lo stato attivo è sull'ultima cella in una riga, spostarsi sul primo collegamento della tabella figlio della riga ed espanderlo.<br /><br /> Se lo stato attivo si trova su un collegamento figlio, passare al collegamento figlio successivo.<br /><br /> Se lo stato attivo è sull'ultimo collegamento figlio, passare alla prima cella della riga successiva.|TAB|  
 |Se lo stato attivo si trova su una cella, passare alla cella precedente della riga.<br /><br /> Se lo stato attivo si trova nella prima cella di una riga, passare all'ultimo collegamento della tabella figlio espanso della riga precedente oppure passare all'ultima cella della riga precedente.<br /><br /> Se lo stato attivo si trova su un collegamento figlio, passare al collegamento figlio precedente.<br /><br /> Se lo stato attivo si trova sul primo collegamento figlio, passare all'ultima cella della riga precedente.|MAIUSC + TAB|  
@@ -37,10 +37,10 @@ ms.locfileid: "76745034"
 |Passare alla cella non vuota più lontana nella direzione della freccia.|CTRL + freccia|  
 |Estendere la selezione di una riga nella direzione della freccia (esclusi i collegamenti alla tabella figlio).|MAIUSC + FRECCIA SU/GIÙ|  
 |Estendere la selezione alla riga non vuota più lontana nella direzione della freccia (esclusi i collegamenti alla tabella figlio).|CTRL + MAIUSC + FRECCIA SU/GIÙ|  
-|Spostarsi nella cella in alto a sinistra.|CTRL + HOME|  
-|Spostarsi nella cella inferiore destra.|CTRL + fine|  
-|Estendere la selezione alla riga superiore.|CTRL + MAIUSC + HOME|  
-|Estendere la selezione alla riga inferiore.|CTRL + MAIUSC + fine|  
+|Spostarsi nella cella in alto a sinistra.|CTRL+HOME|  
+|Spostarsi nella cella inferiore destra.|CTRL+FINE|  
+|Estendere la selezione alla riga superiore.|CTRL+MAIUSC+HOME|  
+|Estendere la selezione alla riga inferiore.|CTRL+MAIUSC+FINE|  
 |Consente di selezionare la riga corrente (esclusi i collegamenti alla tabella figlio).|MAIUSC + barra SPAZIAtrice|  
 |Selezionare l'intera griglia (esclusi i collegamenti alla tabella figlio).|CTRL+A|  
 |Visualizza la riga padre quando si è in una tabella figlio.|CTRL+PGGIÙ|  

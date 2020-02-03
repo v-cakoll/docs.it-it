@@ -1,5 +1,5 @@
 ---
-title: Panoramica del controllo ListView
+title: Cenni preliminari sul controllo ListView
 ms.date: 03/30/2017
 f1_keywords:
 - ListView
@@ -29,17 +29,17 @@ Il controllo <xref:System.Windows.Forms.ListView> di Windows Forms visualizza un
   
 |Membro ListView|Visualizzazione|  
 |---------------------|----------|  
-|Proprietà<xref:System.Windows.Forms.ListView.Alignment%2A>|<xref:System.Windows.Forms.View.SmallIcon> o <xref:System.Windows.Forms.View.LargeIcon>|  
-|Proprietà<xref:System.Windows.Forms.ListView.AutoArrange%2A>|<xref:System.Windows.Forms.View.SmallIcon> o <xref:System.Windows.Forms.View.LargeIcon>|  
-|Metodo <xref:System.Windows.Forms.ListView.AutoResizeColumn%2A>|<xref:System.Windows.Forms.View.Details>|  
-|Proprietà<xref:System.Windows.Forms.ListView.Columns%2A>|<xref:System.Windows.Forms.View.Details> o <xref:System.Windows.Forms.View.Tile>|  
+|Proprietà <xref:System.Windows.Forms.ListView.Alignment%2A>|<xref:System.Windows.Forms.View.SmallIcon> o <xref:System.Windows.Forms.View.LargeIcon>|  
+|Proprietà <xref:System.Windows.Forms.ListView.AutoArrange%2A>|<xref:System.Windows.Forms.View.SmallIcon> o <xref:System.Windows.Forms.View.LargeIcon>|  
+|Metodo<xref:System.Windows.Forms.ListView.AutoResizeColumn%2A>|<xref:System.Windows.Forms.View.Details>|  
+|Proprietà <xref:System.Windows.Forms.ListView.Columns%2A>|<xref:System.Windows.Forms.View.Details> o <xref:System.Windows.Forms.View.Tile>|  
 |Evento<xref:System.Windows.Forms.ListView.DrawSubItem>|<xref:System.Windows.Forms.View.Details>|  
-|Metodo <xref:System.Windows.Forms.ListView.FindItemWithText%2A>|<xref:System.Windows.Forms.View.Details>, <xref:System.Windows.Forms.View.List> o <xref:System.Windows.Forms.View.Tile>|  
-|Metodo <xref:System.Windows.Forms.ListView.FindNearestItem%2A>|<xref:System.Windows.Forms.View.SmallIcon> o <xref:System.Windows.Forms.View.LargeIcon>|  
-|Metodo <xref:System.Windows.Forms.ListView.GetItemAt%2A>|<xref:System.Windows.Forms.View.Details> o <xref:System.Windows.Forms.View.Tile>|  
-|Proprietà<xref:System.Windows.Forms.ListView.Groups%2A>|Tutte le visualizzazioni eccetto <xref:System.Windows.Forms.View.List>|  
-|Proprietà<xref:System.Windows.Forms.ListView.HeaderStyle%2A>|<xref:System.Windows.Forms.View.Details>.|  
-|Proprietà<xref:System.Windows.Forms.ListView.InsertionMark%2A>|<xref:System.Windows.Forms.View.LargeIcon>, <xref:System.Windows.Forms.View.SmallIcon> o <xref:System.Windows.Forms.View.Tile>|  
+|Metodo<xref:System.Windows.Forms.ListView.FindItemWithText%2A>|<xref:System.Windows.Forms.View.Details>, <xref:System.Windows.Forms.View.List>o <xref:System.Windows.Forms.View.Tile>|  
+|Metodo<xref:System.Windows.Forms.ListView.FindNearestItem%2A>|<xref:System.Windows.Forms.View.SmallIcon> o <xref:System.Windows.Forms.View.LargeIcon>|  
+|Metodo<xref:System.Windows.Forms.ListView.GetItemAt%2A>|<xref:System.Windows.Forms.View.Details> o <xref:System.Windows.Forms.View.Tile>|  
+|Proprietà <xref:System.Windows.Forms.ListView.Groups%2A>|Tutte le visualizzazioni eccetto <xref:System.Windows.Forms.View.List>|  
+|Proprietà <xref:System.Windows.Forms.ListView.HeaderStyle%2A>|<xref:System.Windows.Forms.View.Details>|  
+|Proprietà <xref:System.Windows.Forms.ListView.InsertionMark%2A>|<xref:System.Windows.Forms.View.LargeIcon>, <xref:System.Windows.Forms.View.SmallIcon>o <xref:System.Windows.Forms.View.Tile>|  
   
  La proprietà chiave del controllo <xref:System.Windows.Forms.ListView> è <xref:System.Windows.Forms.ListView.Items%2A>, che contiene gli elementi visualizzati dal controllo. La proprietà <xref:System.Windows.Forms.ListView.SelectedItems%2A> contiene una raccolta degli elementi attualmente selezionati nel controllo. L'utente può selezionare più elementi, ad esempio per trascinare e rilasciare più elementi alla volta in un altro controllo, se la proprietà <xref:System.Windows.Forms.ListView.MultiSelect%2A> è impostata su `true`. Il controllo <xref:System.Windows.Forms.ListView> può visualizzare le caselle di controllo accanto agli elementi, se la proprietà <xref:System.Windows.Forms.ListView.CheckBoxes%2A> è impostata su `true`.  
   

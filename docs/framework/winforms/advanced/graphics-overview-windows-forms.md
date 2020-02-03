@@ -1,5 +1,5 @@
 ---
-title: Panoramica sulla grafica
+title: Cenni preliminari sulla grafica
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, graphics
@@ -18,7 +18,7 @@ ms.locfileid: "76742275"
 # <a name="graphics-overview-windows-forms"></a>Panoramica della grafica (Windows Form)
 GDI+ è un Graphics Device Interface che consente ai programmatori di scrivere applicazioni indipendenti dal dispositivo. I servizi di GDI+ vengono esposti tramite un set di classi gestite.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Panoramica sulla grafica](overview-of-graphics.md)  
  Viene fornita un'introduzione generale a GDI+.  
   
@@ -28,7 +28,7 @@ GDI+ è un Graphics Device Interface che consente ai programmatori di scrivere a
  [Struttura dell'interfaccia grafica](structure-of-the-graphics-interface.md)  
  Descrive l'interfaccia di classe gestita di GDI+.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Drawing>  
  Fornisce accesso alle funzionalità grafiche di base GDI+.  
   

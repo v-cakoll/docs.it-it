@@ -84,7 +84,7 @@ ms.locfileid: "76745578"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [PrintDocument (componente)](printdocument-component-windows-forms.md)
+- [Componente PrintDocument](printdocument-component-windows-forms.md)
 - [Controllo PrintPreviewDialog](printpreviewdialog-control-windows-forms.md)
 - [Supporto per la stampa in Windows Forms](../advanced/windows-forms-print-support.md)
 - [Windows Form](../index.md)

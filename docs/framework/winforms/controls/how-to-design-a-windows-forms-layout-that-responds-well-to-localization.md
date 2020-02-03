@@ -17,7 +17,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743289"
 ---
-# <a name="how-to-design-a-windows-forms-layout-that-responds-well-to-localization"></a>Procedura: Progettare un layout di Windows Form che risponda correttamente alla localizzazione
+# <a name="how-to-design-a-windows-forms-layout-that-responds-well-to-localization"></a>Procedura: progettare un layout di Windows Form che risponda correttamente alla localizzazione
 La creazione di form pronti per la localizzazione accelera notevolmente lo sviluppo per i mercati internazionali. È possibile usare il controllo <xref:System.Windows.Forms.TableLayoutPanel> per implementare layout che rispondano correttamente man mano che i controlli vengono ridimensionati in seguito alle modifiche dei valori della proprietà <xref:System.Windows.Forms.Control.Text%2A>.  
   
 ## <a name="example"></a>Esempio  
@@ -38,11 +38,11 @@ La creazione di form pronti per la localizzazione accelera notevolmente lo svilu
   
 4. [Procedura: Modificare colonne e righe in un controllo TableLayoutPanel](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
   
-5. [Procedura dettagliata: esecuzione di attività comuni usando gli smart tag nei controlli Windows Form](performing-common-tasks-using-smart-tags-on-wf-controls.md)  
+5. [Procedura dettagliata: Esecuzione di attività comuni con gli smart tag nei controlli Windows Form](performing-common-tasks-using-smart-tags-on-wf-controls.md)  
   
 6. [Procedura dettagliata: disposizione di controlli in Windows Form usando TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
 
-7. [Procedura dettagliata: Disposizione di controlli Windows Form con spaziatura, margini e la proprietà AutoSize](windows-forms-controls-padding-autosize.md)  
+7. [Procedura dettagliata: disposizione di controlli Windows Form usando spaziatura, margini e la proprietà AutoSize](windows-forms-controls-padding-autosize.md)  
   
 8. [Procedura: Supportare la localizzazione in Windows Form usando la proprietà AutoSize e il controllo TableLayoutPanel](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))  
   

@@ -24,7 +24,7 @@ Il tipo specificato prima di `*` in un tipo di puntatore viene chiamato **tipo r
 
 I tipi di puntatore non ereditano da [object](../../language-reference/builtin-types/reference-types.md). Non sono inoltre previste conversioni tra i tipi di puntatore e `object`. Con i puntatori non sono inoltre supportate le operazioni di boxing e unboxing. È tuttavia possibile eseguire conversioni tra tipi di puntatore diversi e tra tipi di puntatore e tipi integrali.
 
-Quando si dichiarano più puntatori nella stessa dichiarazione, l'asterisco (*) viene scritto solo con il tipo sottostante. Non viene utilizzato come prefisso di ogni nome di puntatore. Ad esempio:
+Quando si dichiarano più puntatori nella stessa dichiarazione, l'asterisco (*) viene scritto solo con il tipo sottostante. Non viene utilizzato come prefisso di ogni nome di puntatore. Ad esempio,
 
 ```csharp
 int* p1, p2, p3;   // Ok
@@ -63,7 +63,7 @@ Tenere presente che il passaggio di puntatori tra metodi può generare un compor
 
 Nella tabella riportata di seguito sono elencati gli operatori e le istruzioni che è possibile utilizzare con i puntatori in un contesto unsafe:
 
-|Operatore/istruzione|Utilizza|
+|Operatore/istruzione|Utilizzo|
 |-------------------------|---------|
 |`*`|Esegue il riferimento indiretto al puntatore.|
 |`->`|Accede a un membro di struct tramite un puntatore.|
@@ -87,5 +87,5 @@ Per altre informazioni, vedere la sezione [Tipi puntatore](~/_csharplang/spec/un
 - [Codice unsafe e puntatori](index.md)
 - [Conversioni puntatore](pointer-conversions.md)
 - [Tipi riferimento](../../language-reference/keywords/reference-types.md)
-- [Tipi valore](../../language-reference/builtin-types/value-types.md)
+- [Tipi di valore](../../language-reference/builtin-types/value-types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)

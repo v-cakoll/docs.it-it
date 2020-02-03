@@ -106,7 +106,7 @@ I bug possono essere relativi agli strumenti usati per sviluppare e compilare le
   - Finestra di progettazione interattiva espressioni
   - Visual Studio
 - La configurazione della soluzione, ad esempio:
-  - Una soluzione
+  - Soluzione
   - Un singolo progetto
   - Una soluzione con più progetti dipendenti
 - Se l'applicazione dispone di risorse specifiche per la lingua o indipendenti dalla lingua. Se ad esempio è stata specificata la proprietà di progetto `UICulture` o i metadati localizzabili per i tipi `Application`, `Page` e `Resource`.

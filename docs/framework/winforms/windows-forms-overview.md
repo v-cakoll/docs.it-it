@@ -1,5 +1,5 @@
 ---
-title: Panoramica di
+title: Panoramica
 ms.date: 03/30/2017
 helpviewer_keywords:
 - smart clients
@@ -48,7 +48,7 @@ Per informazioni dettagliate sull'uso di queste funzionalità, vedere i seguenti
 |Uso dei controlli nei form|[Procedura: Aggiungere controlli a un Windows Forms](./controls/how-to-add-controls-to-windows-forms.md)|
 |Uso del controllo <xref:System.Windows.Forms.ToolStrip>|[Procedura: creare un controllo ToolStrip di base con elementi standard utilizzando la finestra di progettazione](./controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
 |Creazione di grafica con <xref:System.Drawing>|[Introduzione alla programmazione grafica](./advanced/getting-started-with-graphics-programming.md)|
-|Creare controlli personalizzati|[Procedura: Ereditare dalla classe UserControl](./controls/how-to-inherit-from-the-usercontrol-class.md)|
+|Creare controlli personalizzati|[Procedura: ereditare dalla classe UserControl](./controls/how-to-inherit-from-the-usercontrol-class.md)|
 
 ### <a name="display-and-manipulate-data"></a>Visualizzare e modificare i dati
  Molte applicazioni devono visualizzare i dati da un database, da un file XML, servizi Web XML o altre origini di dati. In Windows Form viene fornito un controllo denominato <xref:System.Windows.Forms.DataGridView> che consente di visualizzare dati tabulari in un formato tradizionale basato su righe e colonne, in modo che ciascun blocco di dati occupi una singola cella. Usando <xref:System.Windows.Forms.DataGridView> è possibile personalizzare l'aspetto delle singole celle, bloccare righe e colonne arbitrarie nonché visualizzare controlli complessi all'interno delle celle.
@@ -66,9 +66,9 @@ Per informazioni dettagliate sull'uso di queste funzionalità, vedere i seguenti
 |Descrizione|Argomento della Guida|
 |-----------------|----------------|
 |Uso del componente <xref:System.Windows.Forms.BindingSource>|[Procedura: associare controlli Windows Forms al componente BindingSource usando la finestra di progettazione](./controls/bind-wf-controls-with-the-bindingsource.md)|
-|Uso delle origini dati ADO.NET|[Procedura: ordinare e filtrare i dati ADO.NET con il componente BindingSource Windows Form](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|Uso delle origini dati ADO.NET|[Procedura: ordinare e filtrare i dati ADO.NET con il componente BindingSource Windows Forms](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |Uso della finestra Origini dati|[Associare controlli Windows Form ai dati in Visual Studio](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)|
-|Uso delle impostazioni dell'applicazione|[Procedura: creare le impostazioni applicazione](./advanced/how-to-create-application-settings.md)|
+|Uso delle impostazioni dell'applicazione|[Procedura: Creare le impostazioni applicazione](./advanced/how-to-create-application-settings.md)|
 
 ### <a name="deploy-apps-to-client-computers"></a>Distribuire le app nei computer client
 

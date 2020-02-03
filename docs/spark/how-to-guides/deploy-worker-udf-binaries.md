@@ -27,7 +27,7 @@ Quando si distribuiscono i ruoli di lavoro e si scrivono UDF, è possibile che s
 | DOTNET_ASSEMBLY_SEARCH_PATHS | Percorsi delimitati da virgole in cui <code>Microsoft.Spark.Worker</code> caricherà gli assembly.</br>Si noti che se un percorso inizia con ".", la directory di lavoro verrà anteposta. Se è in **modalità Yarn**, "." rappresenterà la directory di lavoro del contenitore.</br>_ad esempio, "C:\Users\\&lt;nome utente&gt;\\&lt;mysparkapp&gt;\bin\Debug\\&lt;DotNet versione&gt;"_
 | DOTNET_WORKER_DEBUG          | Se si vuole <a href="https://github.com/dotnet/spark/blob/master/docs/developer-guide.md#debugging-user-defined-function-udf">eseguire il debug di una funzione definita dall'utente</a>, impostare questa variabile di ambiente su <code>1</code> prima di eseguire <code>spark-submit</code>.
 
-### <a name="parameter-options"></a>Opzioni parametro
+### <a name="parameter-options"></a>Opzioni dei parametri:
 Quando l'applicazione Spark è in [bundle](https://spark.apache.org/docs/latest/submitting-applications.html#bundling-your-applications-dependencies), è possibile avviarla usando `spark-submit`. Nella tabella seguente vengono illustrate alcune delle opzioni di uso comune: 
 
 | Nome parametro        | Descrizione

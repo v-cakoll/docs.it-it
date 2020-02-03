@@ -21,7 +21,7 @@ ms.locfileid: "76745141"
 # <a name="listview-control-windows-forms"></a>Controllo ListView (Windows Form)
 Il controllo `ListView` di Windows Forms visualizza un elenco di elementi con icone. È possibile usare una visualizzazione elenco per creare un'interfaccia utente simile al riquadro destro di Esplora risorse.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Panoramica del controllo ListView](listview-control-overview-windows-forms.md)  
  Illustra il controllo e le relative funzionalità chiave e proprietà.  
   
@@ -62,7 +62,7 @@ Il controllo `ListView` di Windows Forms visualizza un elenco di elementi con ic
   
 - [Procedura dettagliata: Creazione di un'interfaccia di tipo Esplora risorse con i controlli ListView e TreeView usando la finestra di progettazione](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  Classe <xref:System.Windows.Forms.ListView>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   
@@ -78,4 +78,4 @@ Il controllo `ListView` di Windows Forms visualizza un elenco di elementi con ic
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)
+- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)

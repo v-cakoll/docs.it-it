@@ -72,4 +72,4 @@ Il controllo Windows Forms <xref:System.Windows.Forms.RichTextBox> dispone di nu
 
 - <xref:System.Windows.Forms.RichTextBox>
 - [Controllo RichTextBox](richtextbox-control-windows-forms.md)
-- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)
+- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)

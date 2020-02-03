@@ -29,7 +29,7 @@ Per ulteriori informazioni sulla versione, vedere l' [annuncio di .NET Core 3,1]
 
 .NET Core 3,1 è una versione LTS con supporto Microsoft per i prossimi tre anni. Si consiglia vivamente di spostare le app in .NET Core 3,1. Il ciclo di vita corrente di altre versioni principali è il seguente:
 
-| Release | Nota |
+| Versione | Nota |
 | ------- | ---- |
 | .NET Core 3.0 | Fine vita il 3 marzo 2020.     |
 | .NET Core 2.2 | Fine vita il 23 dicembre 2019. |

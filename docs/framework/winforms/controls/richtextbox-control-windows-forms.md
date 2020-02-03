@@ -16,7 +16,7 @@ ms.locfileid: "76743126"
 # <a name="richtextbox-control-windows-forms"></a>Controllo RichTextBox (Windows Form)
 Il controllo Windows Forms `RichTextBox` viene utilizzato per visualizzare, immettere e modificare il testo con la formattazione. Il controllo `RichTextBox` esegue tutte le operazioni del controllo <xref:System.Windows.Forms.TextBox>, ma può anche visualizzare i tipi di carattere, i colori e i collegamenti; carica il testo e le immagini incorporate da un file; operazioni di modifica di annullamento e rollforward; e trovano i caratteri specificati. Il controllo `RichTextBox` viene in genere usato per fornire funzionalità di visualizzazione e manipolazione del testo simili alle applicazioni di elaborazione di Word, ad esempio Microsoft Word. Analogamente al controllo <xref:System.Windows.Forms.TextBox>, il controllo `RichTextBox` può visualizzare le barre di scorrimento; Tuttavia, a differenza del controllo <xref:System.Windows.Forms.TextBox>, per impostazione predefinita vengono visualizzate le barre di scorrimento orizzontali e verticali e sono disponibili impostazioni aggiuntive per la barra di scorrimento.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Panoramica sul controllo RichTextBox](richtextbox-control-overview-windows-forms.md)  
  Introduce i concetti generali del controllo `RichTextBox`, che consente agli utenti di immettere, visualizzare e modificare il testo con le opzioni di formattazione.  
   
@@ -44,12 +44,12 @@ Il controllo Windows Forms `RichTextBox` viene utilizzato per visualizzare, imme
  [Procedura: Impostare rientri, rientri sporgenti e paragrafi puntati con il controllo RichTextBox di Windows Form](set-indents-hanging-indents-bulleted-paragraphs-with-wf-richtextbox.md)  
  Viene descritto come formattare i paragrafi nel controllo `RichTextBox`.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  Classe <xref:System.Windows.Forms.RichTextBox>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)  
+ [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)  
  Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.  
   
  [Controllo TextBox](textbox-control-windows-forms.md)  

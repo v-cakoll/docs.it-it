@@ -21,16 +21,16 @@ Nello scenario seguente vengono illustrati un client e un servizio Windows Commu
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|Modalità di sicurezza|Transport|  
+|Modalità di sicurezza|Trasporto|  
 |Interoperabilità|Solo WCF|  
 |Autenticazione (server)<br /><br /> Autenticazione (client)|Sì (utilizza l'autenticazione integrata di Windows)<br /><br /> Sì (utilizza l'autenticazione integrata di Windows)|  
 |Integrità|Sì|  
 |Riservatezza|Sì|  
-|Transport|NET.TCP|  
+|Trasporto|NET.TCP|  
 |Associazione|<xref:System.ServiceModel.NetTcpBinding>|  
   
-## <a name="service"></a>Servizio  
- Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Effettuare una delle seguenti operazioni:  
+## <a name="service"></a>Service  
+ Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Esegui una delle operazioni seguenti:  
   
 - Creare un servizio autonomo usando il codice senza alcuna configurazione.  
   
@@ -42,7 +42,7 @@ Nello scenario seguente vengono illustrati un client e un servizio Windows Commu
  [!code-csharp[C_SecurityScenarios#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#3)]
  [!code-vb[C_SecurityScenarios#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#3)]  
   
-### <a name="configuration"></a>Configurazione di  
+### <a name="configuration"></a>Configurazione  
  Per configurare l'endpoint del servizio, è possibile utilizzare la configurazione seguente anziché il codice.  
   
 ```xml  
@@ -74,11 +74,11 @@ Nello scenario seguente vengono illustrati un client e un servizio Windows Commu
 ```  
   
 ## <a name="client"></a>Client  
- Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Effettuare una delle seguenti operazioni:  
+ Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Esegui una delle operazioni seguenti:  
   
 - Creare un client autonomo usando il codice (e il codice client).  
   
-- Creare un client che non definisce alcun indirizzo di endpoint. Usare invece il costruttore client che accetta il nome della configurazione come argomento. Ad esempio:  
+- Creare un client che non definisce alcun indirizzo di endpoint. Usare invece il costruttore client che accetta il nome della configurazione come argomento. Ad esempio,  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -89,7 +89,7 @@ Nello scenario seguente vengono illustrati un client e un servizio Windows Commu
  [!code-csharp[C_SecurityScenarios#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#4)]
  [!code-vb[C_SecurityScenarios#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#4)]  
   
-### <a name="configuration"></a>Configurazione di  
+### <a name="configuration"></a>Configurazione  
  Per creare il client, è possibile utilizzare la configurazione seguente anziché il codice.  
   
 ```xml  

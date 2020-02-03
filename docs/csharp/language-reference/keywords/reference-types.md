@@ -21,7 +21,7 @@ Esistono due generi di tipo in C#: tipi di riferimento e tipi di valore. Le vari
 
  Le seguenti parole chiave vengono utilizzate per dichiarare i tipi di riferimento:
 
-- [classe](class.md)
+- [class](class.md)
 
 - [interface](interface.md)
 
@@ -40,4 +40,4 @@ Esistono due generi di tipo in C#: tipi di riferimento e tipi di valore. Le vari
 - [Riferimenti per C#](../index.md)
 - [Parole chiave di C#](index.md)
 - [Tipi di puntatori](../../programming-guide/unsafe-code-pointers/pointer-types.md)
-- [Tipi valore](../builtin-types/value-types.md)
+- [Tipi di valore](../builtin-types/value-types.md)

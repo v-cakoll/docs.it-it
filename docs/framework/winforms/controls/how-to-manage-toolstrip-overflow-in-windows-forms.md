@@ -17,7 +17,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76736153"
 ---
-# <a name="how-to-manage-toolstrip-overflow-in-windows-forms"></a>Procedura: Gestire l'overflow di ToolStrip in Windows Form
+# <a name="how-to-manage-toolstrip-overflow-in-windows-forms"></a>Procedura: gestire l'overflow di ToolStrip in Windows Form
 
 Quando tutti gli elementi di un controllo <xref:System.Windows.Forms.ToolStrip> non rientrano nello spazio allocato, è possibile abilitare la funzionalità di overflow sul <xref:System.Windows.Forms.ToolStrip> e determinare il comportamento di overflow di <xref:System.Windows.Forms.ToolStripItem>s specifici.
 

@@ -15,7 +15,7 @@ ms.locfileid: "76742796"
 # <a name="textbox-control-windows-forms"></a>Controllo TextBox (Windows Form)
 Windows Forms caselle di testo vengono utilizzate per ottenere l'input dall'utente o per visualizzare il testo. Il controllo `TextBox` viene in genere usato per il testo modificabile, anche se può essere reso di sola lettura. Le caselle di testo possono visualizzare più righe, eseguire il wrapping del testo sulle dimensioni del controllo e aggiungere la formattazione di base. Il controllo `TextBox` consente di visualizzare o immettere un solo formato per il testo nel controllo.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Cenni preliminari sul controllo TextBox](textbox-control-overview-windows-forms.md)  
  Definisce il controllo e ne illustra le funzionalità chiave e le proprietà.  
   
@@ -37,10 +37,10 @@ Windows Forms caselle di testo vengono utilizzate per ottenere l'input dall'uten
  [Procedura: Visualizzare più righe nel controllo TextBox di Windows Form](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
  Viene descritto come rendere scorrevole una casella di testo.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  Classe <xref:System.Windows.Forms.TextBox>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)  
+ [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)  
  Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.

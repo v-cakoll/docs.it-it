@@ -12,7 +12,7 @@ ms.locfileid: "76744447"
 # <a name="wpf-unmanaged-api-reference"></a>Riferimenti alle API non gestite WPF
 Le librerie Windows Presentation Foundation (WPF) espongono una serie di funzioni non gestite destinate solo all'uso interno. Non devono essere chiamati dal codice utente.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Funzione Activate](activate-function-wpf-unmanaged-api-reference.md)  
  [Funzione CreateIDispatchSTAForwarder](createidispatchstaforwarder-function-wpf-unmanaged-api-reference.md)  
  [Funzione Deactivate](deactivate-function-wpf-unmanaged-api-reference.md)  

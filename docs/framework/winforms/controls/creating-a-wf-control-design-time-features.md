@@ -430,7 +430,7 @@ Nel caso della classe `MarqueeControlRootDesigner`, si chiamerà il metodo <xref
 
 ## <a name="add-designer-verbs-to-your-custom-designer"></a>Aggiungere verbi di progettazione alla finestra di progettazione personalizzata
 
-Un verbo di progettazione è un comando di menu collegato a un gestore eventi. I verbi della finestra di progettazione vengono aggiunti al menu di scelta rapida di un componente in fase di progettazione. Per ulteriori informazioni, vedere <xref:System.ComponentModel.Design.DesignerVerb>.
+Un verbo di progettazione è un comando di menu collegato a un gestore evento. I verbi della finestra di progettazione vengono aggiunti al menu di scelta rapida di un componente in fase di progettazione. Per altre informazioni, vedere <xref:System.ComponentModel.Design.DesignerVerb>.
 
 Si aggiungeranno due verbi di progettazione alle finestre di progettazione: **Esegui test** e **Interrompi test**. Questi verbi consentiranno di visualizzare il comportamento della fase di esecuzione del `MarqueeControl` in fase di progettazione. Questi verbi verranno aggiunti al `MarqueeControlRootDesigner`.
 

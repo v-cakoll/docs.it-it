@@ -28,7 +28,7 @@ ms.locfileid: "76745993"
 
 Per creare controlli personalizzati da usare nei Web Form, vedere [Sviluppo di controlli server ASP.NET personalizzati](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)).
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 [Procedura dettagliata: modifica di un controllo composito](walkthrough-authoring-a-composite-control-with-visual-csharp.md)\
 Illustra come creare un controllo composito semplice in C#.
@@ -81,7 +81,7 @@ Illustra il significato e l'uso dell'elenco errori della fase di progettazione v
 [Risoluzione dei problemi relativi alla modifica di controlli e componenti](troubleshooting-control-and-component-authoring.md)\
 Illustra come diagnosticare e correggere gli errori comuni che possono verificarsi quando si crea un componente o un controllo personalizzato.
 
-## <a name="reference"></a>Riferimenti
+## <a name="reference"></a>Riferimento
 
 - <xref:System.Windows.Forms.Control?displayProperty=nameWithType>
 
@@ -89,11 +89,11 @@ Illustra come diagnosticare e correggere gli errori comuni che possono verificar
 
 ## <a name="related-sections"></a>Sezioni correlate
 
-[Sviluppo di controlli Windows Form personalizzati con .NET Framework](developing-custom-windows-forms-controls.md)\
+[Sviluppo di controlli Windows Forms personalizzati con .NET Framework](developing-custom-windows-forms-controls.md)\
 Illustra come creare i controlli personalizzati con .NET Framework.
 
-[Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md)\
+[Indipendenza del linguaggio e componenti indipendenti dal linguaggio](../../../standard/language-independence-and-language-independent-components.md)\
 Introduce Common Language Runtime, progettato per semplificare la creazione e l'uso dei componenti. Un aspetto importante di questa semplificazione è la migliore interoperabilità tra componenti scritti usando linguaggi di programmazione diversi. Common Language Specification (CLS) consente di creare strumenti e componenti che usano più linguaggi di programmazione.
 
-[Procedura dettagliata: compilare automaticamente la casella degli strumenti con componenti personalizzati](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)\
+[Procedura dettagliata: Compilare automaticamente la casella degli strumenti con componenti personalizzati](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)\
 Descrive come abilitare la visualizzazione dei componenti o dei controlli nella finestra di dialogo **Customize Toolbox** (Personalizza casella degli strumenti).

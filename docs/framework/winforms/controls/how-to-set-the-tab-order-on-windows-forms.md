@@ -58,5 +58,5 @@ Un controllo la cui proprietà <xref:System.Windows.Forms.Control.TabStop%2A> è
 ## <a name="see-also"></a>Vedere anche
 
 - [Controlli Windows Form](index.md)
-- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)
+- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)
 - [Controlli Windows Form per funzione](windows-forms-controls-by-function.md)

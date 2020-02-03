@@ -35,7 +35,7 @@ ms.locfileid: "76745586"
     domainUpDown1->Items->Add("noodles");  
     ```  
   
-     oppure  
+     -oppure-  
   
 2. Usare il metodo <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> per inserire un elemento nell'elenco in una posizione specificata.  
   

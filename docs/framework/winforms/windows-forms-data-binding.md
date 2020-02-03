@@ -17,7 +17,7 @@ ms.locfileid: "76734619"
 # <a name="windows-forms-data-binding"></a>Data binding di Windows Form
 Data binding in Windows Form consente di visualizzare e modificare le informazioni da un'origine dati nei controlli del form. È possibile effettuare associazioni alle origini dati tradizionali e a quasi ogni struttura che contiene dati.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Data binding e Windows Forms](data-binding-and-windows-forms.md)  
  Fornisce una panoramica del data binding in Windows Form.  
   
@@ -53,7 +53,7 @@ Data binding in Windows Form consente di visualizzare e modificare le informazio
   
  Vedere anche [interfacce correlate all'associazione dati](interfaces-related-to-data-binding.md), [procedura: esplorare i dati in Windows Forms](how-to-navigate-data-in-windows-forms.md)e [procedura: creare un controllo con associazione semplice in un Windows Form](how-to-create-a-simple-bound-control-on-a-windows-form.md).  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.Binding?displayProperty=nameWithType>  
  Descrive la classe che rappresenta l'associazione tra un componente associabile e un'origine dati.  
   

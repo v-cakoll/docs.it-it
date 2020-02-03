@@ -24,7 +24,7 @@ Il concetto alla base dell'implementazione del Listener di traccia circolare del
 
 Questo listener deriva dalla `XmlWriteTraceListener` e consente la visualizzazione dei log con lo [strumento Visualizzatore di tracce dei servizi (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Quando si desidera visualizzare il log, i due file possono essere facilmente ricombinati aprendoli contemporaneamente nello strumento Service Trace Viewer. Lo strumento Service Trace Viewer si occupa automaticamente di ordinare le tracce, che verranno visualizzate nell'ordine corretto.
 
-## <a name="configuration"></a>Configurazione di
+## <a name="configuration"></a>Configurazione
 
 Un servizio può essere configurato per utilizzare il Listener di traccia circolare del buffer aggiungendo il codice seguente per un listener e gli elementi di origine. La dimensione massima del file viene specificata impostando l'attributo `maxFileSizeKB` durante la configurazione listener di traccia circolare, come illustrato nell'esempio di codice riportato di seguito.
 

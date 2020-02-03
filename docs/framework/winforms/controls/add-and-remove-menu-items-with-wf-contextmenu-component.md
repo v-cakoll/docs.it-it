@@ -58,7 +58,7 @@ Viene illustrato come aggiungere e rimuovere voci di menu di scelta rapida in Wi
     contextMenu1->MenuItems->Remove(mnuItemNew);  
     ```  
   
-     oppure  
+     -oppure-  
   
 2. Usare il metodo `Clear` della raccolta `MenuItems` del componente <xref:System.Windows.Forms.ContextMenu> per rimuovere tutti gli elementi dal menu.  
   

@@ -39,7 +39,7 @@ HRESULT CreateIDispatchSTAForwarder(
  ppForwarder  
  Puntatore all'indirizzo di un'interfaccia `IDispatch`.  
   
-## <a name="requirements"></a>Requisiti di  
+## <a name="requirements"></a>Requisiti  
  **Piattaforme:** Vedere [.NET Framework requisiti di sistema](../../get-started/system-requirements.md).  
   
  **DLL**  

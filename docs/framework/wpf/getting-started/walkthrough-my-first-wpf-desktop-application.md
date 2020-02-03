@@ -474,7 +474,7 @@ Nella figura seguente sono illustrate entrambe le pagine dell'applicazione `Expe
 > Questo esempio illustra una funzionalità specifica di WPF e non segue tutte le procedure consigliate per elementi come sicurezza, localizzazione e accessibilità. Per una copertura completa delle procedure consigliate per lo sviluppo di applicazioni .NET e WPF, vedere gli argomenti seguenti:
 >
 > - [Accessibilità](../../ui-automation/accessibility-best-practices.md)
-> - [Security](../security-wpf.md)
+> - [Sicurezza](../security-wpf.md)
 > - [Globalizzazione e localizzazione WPF](../advanced/wpf-globalization-and-localization-overview.md)
 > - [Prestazioni di WPF](../advanced/optimizing-wpf-application-performance.md)
 

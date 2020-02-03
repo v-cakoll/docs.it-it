@@ -37,7 +37,7 @@ HRESULT ForwardTranslateAccelerator(
  appUnhandled  
  `true` quando l'app ha già avuto la possibilità di gestire il messaggio di input, ma non lo ha gestito; in caso contrario, `false`.  
   
-## <a name="requirements"></a>Requisiti di  
+## <a name="requirements"></a>Requisiti  
  **Piattaforme:** Vedere [.NET Framework requisiti di sistema](../../get-started/system-requirements.md).  
   
  **DLL**  

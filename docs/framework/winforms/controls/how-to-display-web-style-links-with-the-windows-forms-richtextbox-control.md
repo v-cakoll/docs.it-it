@@ -123,4 +123,4 @@ Il controllo Windows Forms <xref:System.Windows.Forms.RichTextBox> può visualiz
 - <xref:System.Windows.Forms.RichTextBox.LinkClicked>
 - <xref:System.Windows.Forms.RichTextBox>
 - [Controllo RichTextBox](richtextbox-control-windows-forms.md)
-- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)
+- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)

@@ -17,7 +17,7 @@ ms.locfileid: "76744472"
 # <a name="treeview-control-windows-forms"></a>Controllo TreeView (Windows Form)
 Il controllo `TreeView` Windows Form visualizza una gerarchia di nodi, come i file e le cartelle visualizzati nel riquadro sinistro della funzionalità Esplora risorse nei sistemi operativi Windows.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Panoramica sul controllo TreeView](treeview-control-overview-windows-forms.md)  
  Spiega che cos'è il controllo e quali sono le funzionalità e le proprietà chiave.  
   
@@ -41,10 +41,10 @@ Il controllo `TreeView` Windows Form visualizza una gerarchia di nodi, come i fi
 
 Vedere anche [procedura: aggiungere e rimuovere nodi con il Windows Forms controllo TreeView usando la finestra di progettazione](add-and-remove-nodes-with-wf-treeview-control-using-the-designer.md)e [procedura: associare un menu di scelta rapida a un oggetto TreeNode usando la finestra di progettazione](how-to-attach-a-shortcut-menu-to-a-treenode-using-the-designer.md).  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  Classe <xref:System.Windows.Forms.TreeView>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)  
+ [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)  
  Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.

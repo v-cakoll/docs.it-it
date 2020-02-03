@@ -31,13 +31,13 @@ Un client accede a uno o più servizi Web distribuiti in una rete. I servizi Web
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|Modalità di sicurezza|Messaggio|  
+|Modalità di sicurezza|Message|  
 |Interoperabilità|Solo Windows Communication Foundation (WCF).|  
 |Autenticazione (servizio)|Il servizio del token di sicurezza autentica e autorizza i client.|  
 |Autenticazione (client)|Il sottosistema attendibile autentica il client e la risorsa autentica il servizio del sottosistema attendibile.|  
 |Integrità|Sì|  
 |Riservatezza|Sì|  
-|Transport|HTTP tra il client e il servizio del sottosistema attendibile.<br /><br /> NET.TCP tra il servizio del sottosistema attendibile e la risorsa (servizio back-end).|  
+|Trasporto|HTTP tra il client e il servizio del sottosistema attendibile.<br /><br /> NET.TCP tra il servizio del sottosistema attendibile e la risorsa (servizio back-end).|  
 |Associazione|<xref:System.ServiceModel.WSHttpBinding> e <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>Risorsa (servizio back-end)  
@@ -48,7 +48,7 @@ Un client accede a uno o più servizi Web distribuiti in una rete. I servizi Web
  [!code-csharp[TrustedSubSystemsResource#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystemsresource/cs/source.cs#1)]
  [!code-vb[TrustedSubSystemsResource#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystemsresource/vb/source.vb#1)]  
   
-### <a name="configuration"></a>Configurazione di  
+### <a name="configuration"></a>Configurazione  
  Nella configurazione seguente viene impostato lo stesso endpoint che utilizza la configurazione.  
   
 ```xml  
@@ -100,7 +100,7 @@ Un client accede a uno o più servizi Web distribuiti in una rete. I servizi Web
  [!code-csharp[TrustedSubSystems#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystems/cs/source.cs#2)]
  [!code-vb[TrustedSubSystems#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystems/vb/source.vb#2)]  
   
-### <a name="configuration"></a>Configurazione di  
+### <a name="configuration"></a>Configurazione  
  Nella configurazione seguente viene impostato lo stesso endpoint che utilizza la configurazione. Si notino le due associazioni: una protegge il servizio ospitato nel sottosistema attendibile e l'altra comunica tra il sottosistema attendibile e il servizio back-end.  
   
 ```xml  
@@ -171,7 +171,7 @@ Un client accede a uno o più servizi Web distribuiti in una rete. I servizi Web
  [!code-csharp[TrustedSubSystemsClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystemsclient/cs/source.cs#1)]
  [!code-vb[TrustedSubSystemsClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystemsclient/vb/source.vb#1)]  
   
-### <a name="configuration"></a>Configurazione di  
+### <a name="configuration"></a>Configurazione  
  Nel codice seguente viene configurato il client in modo che utilizzi la protezione del messaggio sul protocollo HTTP e un nome utente e una password per l'autenticazione. Il nome utente e la password possono essere specificati solo tramite codice (non è configurabile).  
   
 ```xml  

@@ -138,4 +138,4 @@ End Namespace
 ## <a name="see-also"></a>Vedere anche
 
 - [Informazioni sugli spazi dei nomi XML](https://go.microsoft.com/fwlink/?LinkId=98069)
-- [Cenni preliminari su XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
+- [Panoramica di XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)

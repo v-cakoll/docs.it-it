@@ -125,4 +125,4 @@ public int Value {
 - [Proprietà dei controlli Windows Form](properties-in-windows-forms-controls.md)
 - [Definizione dei valori predefiniti utilizzando i metodi ShouldSerialize e Reset](defining-default-values-with-the-shouldserialize-and-reset-methods.md)
 - [Eventi di modifica delle proprietà](property-changed-events.md)
-- [Attributi nei controlli Windows Form](attributes-in-windows-forms-controls.md)
+- [Attributi nei controlli Windows Forms](attributes-in-windows-forms-controls.md)

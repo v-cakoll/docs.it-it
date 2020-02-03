@@ -1,5 +1,5 @@
 ---
-title: Panoramica del controllo CheckedListBox
+title: Cenni preliminari sul controllo CheckedListBox
 ms.date: 03/30/2017
 f1_keywords:
 - CheckedListBox

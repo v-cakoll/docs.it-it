@@ -20,13 +20,13 @@ ms.locfileid: "76744207"
   
  Questa matrice contiene gli elementi da `array[0]` a `array[4]`. L'operatore [new](../../language-reference/operators/new-operator.md) viene usato per creare la matrice e inizializzare gli elementi della matrice ai valori predefiniti. In questo esempio, tutti gli elementi della matrice vengono inizializzati su zero.  
   
- È possibile dichiarare una matrice che archivia elementi stringa nello stesso modo. Ad esempio:  
+ È possibile dichiarare una matrice che archivia elementi stringa nello stesso modo. Ad esempio,  
   
  [!code-csharp[csProgGuideArrays#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#5)]  
   
 ## <a name="array-initialization"></a>Inizializzazione di una matrice
 
- È possibile inizializzare una matrice al momento della dichiarazione. In tal caso, l'identificatore della lunghezza non è necessario perché è già fornito dal numero di elementi nell'elenco di inizializzazione. Ad esempio:  
+ È possibile inizializzare una matrice al momento della dichiarazione. In tal caso, l'identificatore della lunghezza non è necessario perché è già fornito dal numero di elementi nell'elenco di inizializzazione. Ad esempio,  
   
  [!code-csharp[csProgGuideArrays#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#6)]  
   
@@ -40,7 +40,7 @@ ms.locfileid: "76744207"
   
  [!code-csharp[csProgGuideArrays#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#8)]  
   
- È possibile dichiarare una variabile di matrice senza inizializzazione, ma è necessario usare l'operatore `new` quando si assegna una matrice a questa variabile. Ad esempio:  
+ È possibile dichiarare una variabile di matrice senza inizializzazione, ma è necessario usare l'operatore `new` quando si assegna una matrice a questa variabile. Ad esempio,  
   
  [!code-csharp[csProgGuideArrays#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#9)]  
   
@@ -60,6 +60,6 @@ Per ulteriori informazioni sui tipi di valore e sui tipi di riferimento, vedere 
 
 - <xref:System.Array>
 - [Guida per programmatori C#](../index.md)
-- [Matrici](./index.md)
+- [Array](./index.md)
 - [Matrici multidimensionali](./multidimensional-arrays.md)
 - [Matrici irregolari](./jagged-arrays.md)

@@ -29,11 +29,11 @@ Può risultare utile visualizzare i dati all'interno di un Windows Form in un fo
 |OrderID|IDArticolo|Quantità|  
 |-------------|------------|--------------|  
 |4085|12|1|  
-|4086|13|3\.|  
+|4086|13|3|  
   
 ### <a name="itemtable"></a>ItemTable  
   
-|Id|Name|  
+|ID|Name|  
 |--------|----------|  
 |12|Patate|  
 |13|Pollo|  
@@ -54,7 +54,7 @@ Può risultare utile visualizzare i dati all'interno di un Windows Form in un fo
   
 4. Impostare le proprietà seguenti, nel codice o nella finestra di progettazione.  
   
-    |Gli|Impostazione di|  
+    |Proprietà|Impostazione|  
     |--------------|-------------|  
     |<xref:System.Windows.Forms.ListControl.DataSource%2A>|Nella tabella sono contenute le informazioni relative ai numeri ID equivalenti alle diverse voci. Nello scenario precedente, questo è `ItemTable`.|  
     |<xref:System.Windows.Forms.ListControl.DisplayMember%2A>|La colonna della tabella dell'origine dati che si vuole visualizzare nel controllo. Nello scenario precedente, questo è `"Name"` (per impostare nel codice, usare le virgolette).|  

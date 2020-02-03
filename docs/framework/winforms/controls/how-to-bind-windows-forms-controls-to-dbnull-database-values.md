@@ -16,7 +16,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76746658"
 ---
-# <a name="how-to-bind-windows-forms-controls-to-dbnull-database-values"></a>Procedura: Associare controlli Windows Form a valori di database DBNull
+# <a name="how-to-bind-windows-forms-controls-to-dbnull-database-values"></a>Procedura: associare controlli Windows Form a valori di database DBNull
 Quando si associano controlli Windows Form a un'origine dati e questa restituisce un valore <xref:System.DBNull>, è possibile sostituire un valore appropriato senza gestire, formattare o analizzare eventi. La proprietà <xref:System.Windows.Forms.Binding.NullValue%2A> eseguirà la conversione del valore <xref:System.DBNull> in un oggetto specificato durante la formattazione o l'analisi dei valori dell'origine dati.  
   
 ## <a name="example"></a>Esempio  
@@ -35,5 +35,5 @@ Quando si associano controlli Windows Form a un'origine dati e questa restituisc
 ## <a name="see-also"></a>Vedere anche
 
 - [Componente BindingSource](bindingsource-component.md)
-- [Procedura: gestire gli errori e le eccezioni che si verificano con l'associazione dati](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
-- [Procedura: associare un controllo Windows Form a un tipo](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Procedura: Gestire gli errori e le eccezioni che si verificano con il data binding](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
+- [Procedura: Associare un controllo di Windows Form a un tipo](how-to-bind-a-windows-forms-control-to-a-type.md)

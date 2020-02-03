@@ -16,7 +16,7 @@ ms.locfileid: "76744004"
 # <a name="data-entry-in-the-windows-forms-datagridview-control"></a>Immissione di dati nel controllo DataGridView Windows Form
 Il controllo `DataGridView` offre diverse funzionalità che consentono di modificare il modo in cui gli utenti aggiungono o modificano i dati nel controllo. Ad esempio, è possibile rendere più efficiente l'immissione dei dati fornendo i valori predefiniti per le nuove righe e avvisando gli utenti quando si verificano errori.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Procedura: Specificare la modalità di modifica per il controllo DataGridView di Windows Form](how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md)  
  Viene descritto come modificare il modo in cui gli utenti iniziano a modificare le celle.  
   
@@ -32,7 +32,7 @@ Il controllo `DataGridView` offre diverse funzionalità che consentono di modifi
  [Procedura dettagliata: Gestione degli errori che si verificano durante l'immissione di dati nel controllo DataGridView di Windows Form](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
  Viene descritto come gestire gli errori di immissione dati originati dall'origine dati quando l'utente tenta di eseguire il commit di un nuovo valore.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.DataGridView>  
  Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.DataGridView>.  
   

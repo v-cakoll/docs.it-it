@@ -23,12 +23,12 @@ Questo articolo illustra l'uso di certificati X. 509 per l'autenticazione server
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|Modalità di sicurezza|Transport|  
+|Modalità di sicurezza|Trasporto|  
 |Interoperabilità|Con servizi e client di servizi Web esistenti.|  
 |Autenticazione (server)<br /><br /> Autenticazione (client)|Sì (utilizzando un certificato SSL)<br /><br /> sì (utilizzando un certificato X.509)|  
 |Integrità dati|Sì|  
 |Riservatezza dei dati|Sì|  
-|Transport|HTTPS|  
+|Trasporto|HTTPS|  
 |Associazione|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="configure-the-service"></a>Configurazione del servizio  

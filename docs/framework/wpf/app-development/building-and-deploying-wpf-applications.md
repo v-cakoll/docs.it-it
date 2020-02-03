@@ -24,12 +24,12 @@ Il modello di compilazione e distribuzione consente di compilare e distribuire a
   
 - Distribuzione ClickOnce: sistema di pubblicazione e distribuzione di .NET.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Compilazione di un'applicazione WPF](building-a-wpf-application-wpf.md)  
  [Distribuzione di un'applicazione WPF](deploying-a-wpf-application-wpf.md)  
- [Procedure relative alle proprietà](build-and-deploy-how-to-topics.md)  
+ [Procedure relative alla struttura ad albero e alla serializzazione degli elementi](build-and-deploy-how-to-topics.md)  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  MSBuild  
   
 ## <a name="related-sections"></a>Sezioni correlate  

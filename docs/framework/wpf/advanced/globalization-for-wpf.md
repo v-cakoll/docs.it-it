@@ -36,7 +36,7 @@ Nell'esempio seguente viene illustrato un riferimento a un carattere esadecimale
 ```
 
 <a name="encoding"></a>
-### <a name="encoding"></a>Encoding
+### <a name="encoding"></a>Codifica
  La codifica supportata da [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sono ASCII, Unicode UTF-16 e UTF-8. L'istruzione Encoding si trova all'inizio del documento [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Se non esiste alcun attributo di codifica né un ordine dei byte, il parser userà il valore predefinito UTF-8. UTF-8 e UTF-16 sono i tipi di codifica preferiti. UTF-7 non è supportato. Nell'esempio seguente viene illustrato come specificare una codifica UTF-8 in un file di [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].
 
 ```xaml
@@ -180,4 +180,4 @@ Nell'esempio seguente viene illustrato un riferimento a un carattere esadecimale
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica della globalizzazione e localizzazione WPF](wpf-globalization-and-localization-overview.md)
+- [Cenni preliminari sulla globalizzazione e localizzazione WPF](wpf-globalization-and-localization-overview.md)

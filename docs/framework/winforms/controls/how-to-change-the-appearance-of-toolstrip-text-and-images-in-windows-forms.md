@@ -64,7 +64,7 @@ ms.locfileid: "76746603"
   
 ### <a name="to-define-how-toolstripitem-text-and-images-are-displayed-relative-to-each-other"></a>Per definire la modalità di visualizzazione delle immagini e del testo di ToolStripItem  
   
-- Impostare la proprietà <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> sul valore desiderato. Le possibilità sono `ImageAboveText`, `ImageBeforeText`, `Overlay`, `TextAboveImage`e `TextBeforeImage`. Il valore predefinito è `ImageBeforeText`.  
+- Impostare la proprietà <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> sul valore desiderato. I valori possibili sono `ImageAboveText`, `ImageBeforeText`, `Overlay`, `TextAboveImage` e `TextBeforeImage`. Il valore predefinito è `ImageBeforeText`.  
   
     ```vb  
     ToolStripButton1.TextImageRelation = _  

@@ -24,7 +24,7 @@ Quando si inserisce un controllo <xref:System.Windows.Forms.TabControl> sul form
 
 - Nello smart tag del controllo fare clic su **Aggiungi scheda** o **Rimuovi scheda**
 
-     oppure
+     -oppure-
 
      Nella finestra **Proprietà** fare clic sul pulsante con i **puntini** di sospensione (![pulsante con i puntini di sospensione (...) nella finestra proprietà di Visual Studio.](./media/visual-studio-ellipsis-button.png)) accanto alla proprietà <xref:System.Windows.Forms.TabControl.TabPages%2A> per aprire l' **Editor della raccolta TabPage**. Fare clic sul pulsante **Aggiungi** o **Rimuovi** .
 

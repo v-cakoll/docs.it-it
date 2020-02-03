@@ -16,7 +16,7 @@ ms.locfileid: "76737665"
 > [!NOTE]
 > `dotnet-dump` non è supportato in macOS.
 
-## <a name="installing-dotnet-dump"></a>Installazione di `dotnet-dump`
+## <a name="installing-dotnet-dump"></a>Installazione del `dotnet-dump`
 
 Per installare la versione di rilascio più recente del [pacchetto NuGet](https://www.nuget.org/packages/dotnet-dump)di `dotnet-dump`, usare il comando [DotNet tool install](../tools/dotnet-tool-install.md) :
 
@@ -34,7 +34,7 @@ dotnet-dump [-h|--help] [--version] <command>
 
 Lo strumento `dotnet-dump` Global è un modo per raccogliere e analizzare i dump di Windows e Linux senza che sia necessario un debugger nativo come `lldb` in Linux. Questo strumento è importante su piattaforme come Alpine Linux in cui non è disponibile un `lldb` completamente funzionante. Lo strumento `dotnet-dump` consente di eseguire i comandi SOS per analizzare gli arresti anomali e il Garbage Collector (GC), ma non è un debugger nativo, quindi non sono supportati elementi come la visualizzazione di stack frame nativi.
 
-## <a name="options"></a>Options
+## <a name="options"></a>Opzioni
 
 - **`--version`**
 
@@ -44,7 +44,7 @@ Lo strumento `dotnet-dump` Global è un modo per raccogliere e analizzare i dump
 
   Mostra la guida della riga di comando.
 
-## <a name="commands"></a>Comandi
+## <a name="commands"></a>Commands
 
 | Comando                                     |
 | ------------------------------------------- |
@@ -61,7 +61,7 @@ Acquisisce un dump da un processo.
 dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag]
 ```
 
-### <a name="options"></a>Options
+### <a name="options"></a>Opzioni
 
 - **`-h|--help`**
 
@@ -111,7 +111,7 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 
   Specifica il percorso del file di dump da analizzare.
 
-### <a name="options"></a>Options
+### <a name="options"></a>Opzioni
 
 - **`-c|--command <debug_command>`**
 

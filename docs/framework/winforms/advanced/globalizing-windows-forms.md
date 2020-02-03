@@ -20,7 +20,7 @@ ms.locfileid: "76742068"
 
 La *globalizzazione* è il processo di progettazione e sviluppo di un prodotto software che funziona per più impostazioni cultura.
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 [Caratteri internazionali nei controlli e in Windows Form](international-fonts-in-windows-forms-and-controls.md)  
 Illustra quando e come selezionare tipi di carattere per la visualizzazione di caratteri internazionali in Windows Form.

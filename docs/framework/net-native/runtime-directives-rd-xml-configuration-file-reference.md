@@ -132,43 +132,43 @@ I criteri che possono essere espressi dagli elementi [Application](application-e
 
 Gli elementi [Application](application-element-net-native.md), [Assembly](assembly-element-net-native.md), [AttributeImplies](attributeimplies-element-net-native.md), [Namespace](namespace-element-net-native.md), [Subtypes](subtypes-element-net-native.md) e [Type](type-element-net-native.md) supportano i tipi di criteri seguenti:
 
-- `Activate`. Controlla l'accesso in fase di esecuzione ai costruttori per abilitare l'attivazione di istanze.
+- `Activate` Controlla l'accesso in fase di esecuzione ai costruttori per abilitare l'attivazione di istanze.
 
-- `Browse`. Controlla le query per le informazioni sugli elementi di programma, ma non abilita l'accesso in fase di esecuzione.
+- `Browse` Controlla le query per le informazioni sugli elementi di programma, ma non abilita l'accesso in fase di esecuzione.
 
-- `Dynamic`. Controlla l'accesso in fase di esecuzione a tutti i membri dei tipi, inclusi costruttori, metodi, campi, proprietà ed eventi, per abilitare la programmazione dinamica.
+- `Dynamic` Controlla l'accesso in fase di esecuzione a tutti i membri dei tipi, inclusi costruttori, metodi, campi, proprietà ed eventi, per abilitare la programmazione dinamica.
 
-- `Serialize`. Controlla l'accesso in fase di esecuzione ai costruttori, ai campi e alle proprietà per abilitare la serializzazione e la deserializzazione delle istanze del tipo da parte di librerie di terze parti, ad esempio il serializzatore JSON di Newtonsoft.
+- `Serialize` Controlla l'accesso in fase di esecuzione ai costruttori, ai campi e alle proprietà per abilitare la serializzazione e la deserializzazione delle istanze del tipo da parte di librerie di terze parti, ad esempio il serializzatore JSON di Newtonsoft.
 
-- `DataContractSerializer`. Controlla i criteri per la serializzazione che usano la classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.
+- `DataContractSerializer` Controlla i criteri per la serializzazione che usano la classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.
 
-- `DataContractJsonSerializer`. Controlla i criteri per la serializzazione JSON che usano la classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.
+- `DataContractJsonSerializer` Controlla i criteri per la serializzazione JSON che usano la classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.
 
-- `XmlSerializer`. Controlla i criteri per la serializzazione XML che usano la classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.
+- `XmlSerializer` Controlla i criteri per la serializzazione XML che usano la classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.
 
-- `MarshalObject`. Criteri di controlli per effettuare il marshalling dei tipi di riferimento per WinRT e COM.
+- `MarshalObject` Criteri di controlli per effettuare il marshalling dei tipi di riferimento per WinRT e COM.
 
-- `MarshalDelegate`. Controlla i criteri per effettuare il marshalling dei tipi delegati come puntatori a funzioni al codice nativo.
+- `MarshalDelegate` Controlla i criteri per effettuare il marshalling dei tipi delegati come puntatori a funzioni al codice nativo.
 
 - `MarshalStructure` . Controlla i criteri per effettuare il marshalling delle strutture al codice nativo.
 
 Le impostazioni associate a questi tipi di criteri sono:
 
-- `All`. Attivare il criterio per tutti i tipi e membri che la catena di strumenti non riesce a rimuovere.
+- `All` Attivare il criterio per tutti i tipi e membri che la catena di strumenti non riesce a rimuovere.
 
-- `Auto`. Usare il comportamento predefinito (non specificare un criterio è equivalente a impostare tale criterio su `Auto` a meno che tale criterio sia sottoposto a override, ad esempio da un elemento padre).
+- `Auto` Usare il comportamento predefinito (non specificare un criterio è equivalente a impostare tale criterio su `Auto` a meno che tale criterio sia sottoposto a override, ad esempio da un elemento padre).
 
-- `Excluded`. Disattivare il criterio per l'elemento di programma.
+- `Excluded` Disattivare il criterio per l'elemento di programma.
 
-- `Public`. Attivare i criteri per i tipi o i membri pubblici, a meno che la catena di strumenti non determini che il tipo o il membro non è necessario e lo rimuova (in quest'ultimo caso, è necessario usare `Required Public` per garantire che il membro venga mantenuto e abbia funzionalità di reflection.)
+- `Public` Attivare i criteri per i tipi o i membri pubblici, a meno che la catena di strumenti non determini che il tipo o il membro non è necessario e lo rimuova (in quest'ultimo caso, è necessario usare `Required Public` per garantire che il membro venga mantenuto e abbia funzionalità di reflection.)
 
-- `PublicAndInternal`. Attivare il criterio per i tipi o membri pubblici e interni se la catena di strumenti non li rimuove.
+- `PublicAndInternal` Attivare il criterio per i tipi o membri pubblici e interni se la catena di strumenti non li rimuove.
 
-- `Required Public`. Richiedere che la catena di strumenti mantenga i tipi e i membri pubblici, indipendentemente dal fatto che vengano usati o no, e attivare i relativi criteri.
+- `Required Public` Richiedere che la catena di strumenti mantenga i tipi e i membri pubblici, indipendentemente dal fatto che vengano usati o no, e attivare i relativi criteri.
 
-- `Required PublicAndInternal`. Richiedere che la catena di strumenti mantenga i tipi e i membri pubblici e interni, indipendentemente dal fatto che vengano usati o no, e attivare i relativi criteri.
+- `Required PublicAndInternal` Richiedere che la catena di strumenti mantenga i tipi e i membri pubblici e interni, indipendentemente dal fatto che vengano usati o no, e attivare i relativi criteri.
 
-- `Required All`. Richiedere che la catena di strumenti mantenga tutti i tipi e i membri, indipendentemente dal fatto che vengano usati o no, e attivare i relativi criteri.
+- `Required All` Richiedere che la catena di strumenti mantenga tutti i tipi e i membri, indipendentemente dal fatto che vengano usati o no, e attivare i relativi criteri.
 
 Il seguente file di direttive di runtime, ad esempio, definisce i criteri per tutti i tipi e membri nell'assembly DataClasses.dll. Consente la reflection per la serializzazione di tutte le proprietà pubbliche, consente di cercare tutti i tipi e membri del tipo, consente l'attivazione per tutti i tipi (a causa dell'attributo `Dynamic`) e abilita la reflection per tutti i tipi e membri pubblici.
 

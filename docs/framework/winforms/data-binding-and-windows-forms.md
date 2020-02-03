@@ -56,6 +56,6 @@ Nei Windows Form è possibile effettuare associazioni non solo alle origini dati
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.Binding>
-- [Data binding in Windows Form](windows-forms-data-binding.md)
+- [Associazione ai dati di Windows Form](windows-forms-data-binding.md)
 - [Procedura: Associare il controllo DataGrid Windows Form a un'origine dati](./controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
 - [Componente BindingSource](./controls/bindingsource-component.md)

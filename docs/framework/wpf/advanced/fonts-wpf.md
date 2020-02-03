@@ -16,11 +16,11 @@ ms.locfileid: "76737917"
 # <a name="fonts-wpf"></a>Tipi di carattere (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] include il supporto per la presentazione dettagliata del testo con i tipi di carattere OpenType. Con la Windows SDK è incluso un pacchetto di esempio di tipi di carattere OpenType.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Funzionalità dei tipi di carattere OpenType](opentype-font-features.md)  
  [Includere i tipi di carattere nel pacchetto delle applicazioni](packaging-fonts-with-applications.md)  
  [Esempio di pacchetto di tipi di carattere OpenType](sample-opentype-font-pack.md)  
- [Procedure relative alle proprietà](fonts-how-to-topics.md)  
+ [Procedure relative alla struttura ad albero e alla serializzazione degli elementi](fonts-how-to-topics.md)  
   
 ## <a name="see-also"></a>Vedere anche
 

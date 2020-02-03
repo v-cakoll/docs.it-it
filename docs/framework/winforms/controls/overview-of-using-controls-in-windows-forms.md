@@ -16,7 +16,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76744356"
 ---
-# <a name="overview-of-using-controls-in-windows-forms"></a>Panoramica dell'uso di controlli in Windows Form
+# <a name="overview-of-using-controls-in-windows-forms"></a>Cenni preliminari sull'utilizzo di controlli in Windows Form
 In questo argomento vengono descritti gli elementi essenziali di un Windows Forms Application e viene fornito un semplice esempio in cui vengono utilizzati i controlli e vengono gestiti gli eventi in una Windows Forms Application.  
   
 ## <a name="simple-windows-forms-applications"></a>Applicazioni Windows Forms semplici  

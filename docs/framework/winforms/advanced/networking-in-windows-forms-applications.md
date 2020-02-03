@@ -1,5 +1,5 @@
 ---
-title: Funzionalità di rete di
+title: Rete
 ms.date: 03/30/2017
 helpviewer_keywords:
 - networking [Windows Forms], Windows Forms
@@ -12,10 +12,10 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76745019"
 ---
-# <a name="networking-in-windows-forms-applications"></a>Operazioni di rete nelle applicazioni Windows Form
+# <a name="networking-in-windows-forms-applications"></a>Operazioni di rete nelle applicazioni Windows Forms
 Il .NET Framework fornisce classi per la visualizzazione di pagine Web, il download di contenuti Web, l'interazione con i siti FTP (file Transfer Protocol) e l'utilizzo di servizi Web, semplificando la creazione di funzionalità di rete nell'applicazione. Le risorse seguenti consentono di comprendere le tecnologie di rete del .NET Framework e come integrarle nel Windows Forms.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Net>  
  Spazio dei nomi radice per le classi del .NET Framework che gestiscono la connettività di rete.  
   
@@ -32,5 +32,5 @@ Il .NET Framework fornisce classi per la visualizzazione di pagine Web, il downl
  [Programmazione di rete in .NET Framework](../../network-programming/index.md)  
  Introduzione alla rete nel .NET Framework.  
   
- [Data binding in Windows Form](../windows-forms-data-binding.md)  
+ [Associazione ai dati di Windows Form](../windows-forms-data-binding.md)  
  Viene descritto come visualizzare il contenuto di un database nell'applicazione, da un archivio dati locale o da un database che si trova in una rete.

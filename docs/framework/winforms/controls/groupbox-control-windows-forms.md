@@ -16,14 +16,14 @@ ms.locfileid: "76745629"
 # <a name="groupbox-control-windows-forms"></a>Controllo GroupBox (Windows Form)
 Windows Forms controlli <xref:System.Windows.Forms.GroupBox> vengono utilizzati per fornire un raggruppamento identificabile per gli altri controlli. In genere, è possibile utilizzare le caselle di gruppo per suddividere un form per funzione. Ad esempio, è possibile avere un modulo di ordine che specifica le opzioni di mailing, ad esempio il gestore della notte da usare. Il raggruppamento di tutte le opzioni in una casella di gruppo offre all'utente un segnale visivo logico. Il controllo <xref:System.Windows.Forms.GroupBox> è simile al controllo <xref:System.Windows.Forms.Panel>. Tuttavia, solo il controllo <xref:System.Windows.Forms.GroupBox> Visualizza una didascalia e solo il controllo <xref:System.Windows.Forms.Panel> può avere barre di scorrimento.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Panoramica sul controllo GroupBox](groupbox-control-overview-windows-forms.md)  
  Definisce il controllo e ne illustra le funzionalità chiave e le proprietà.  
   
  [Procedura: Raggruppare i controlli con il controllo GroupBox di Windows Form](how-to-group-controls-with-the-windows-forms-groupbox-control.md)  
  Viene descritto come utilizzare questo controllo per raggruppare i controlli.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.GroupBox>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   
@@ -31,5 +31,5 @@ Windows Forms controlli <xref:System.Windows.Forms.GroupBox> vengono utilizzati 
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)  
+ [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)  
  Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.

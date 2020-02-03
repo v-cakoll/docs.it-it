@@ -24,7 +24,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743358"
 ---
-# <a name="wpf-application-resource-content-and-data-files"></a>File di dati e di risorse dell'applicazione WPF
+# <a name="wpf-application-resource-content-and-data-files"></a>File di dati e di risorse dell'applicazione WPF.
 Le applicazioni Microsoft Windows spesso dipendono da file che contengono dati non eseguibili, ad esempio [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], immagini, video e audio. Windows Presentation Foundation (WPF) offre supporto speciale per la configurazione, l'identificazione e l'utilizzo di questi tipi di file di dati, chiamati file di dati dell'applicazione. Questo supporto si basa su un set specifico di tipi di file di dati dell'applicazione, che include:  
   
 - **File di risorse**: file di dati compilati in un file eseguibile o in un assembly WPF di libreria.  

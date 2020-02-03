@@ -134,7 +134,7 @@ Un controllo WPF incluso in un form è soggetto alle stesse regole di ancoraggio
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Procedura: Agganciare e ancorare controlli figlio in un controllo TableLayoutPanel](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [Procedura: Allineare un controllo ai bordi dei form in fase di progettazione](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
+- [Procedura: allineare un controllo ai bordi dei form in fase di progettazione](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
 - [Procedura dettagliata: Disposizione dei controlli in Windows Form usando guide di allineamento](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Migrazione e interoperabilità](../../wpf/advanced/migration-and-interoperability.md)
 - [Uso di controlli WPF](using-wpf-controls.md)

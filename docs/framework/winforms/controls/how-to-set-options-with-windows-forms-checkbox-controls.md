@@ -19,7 +19,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76746774"
 ---
-# <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>Procedura: Impostare opzioni con i controlli CheckBox di Windows Form
+# <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>Procedura: impostare opzioni con i controlli CheckBox di Windows Form
 Un controllo Windows Forms <xref:System.Windows.Forms.CheckBox> viene usato per fornire agli utenti le opzioni true/false o Yes/No. Il controllo Visualizza un segno di spunta quando viene selezionato.  
   
 ### <a name="to-set-options-with-checkbox-controls"></a>Per impostare le opzioni con i controlli CheckBox  

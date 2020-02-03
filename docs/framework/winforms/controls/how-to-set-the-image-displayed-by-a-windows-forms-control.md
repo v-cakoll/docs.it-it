@@ -23,7 +23,7 @@ ms.locfileid: "76746867"
 
 Diversi controlli Windows Forms possono visualizzare immagini. Queste immagini possono essere icone che chiariscono lo scopo del controllo, ad esempio un'icona a forma di dischetto in un pulsante che indica il comando Salva. In alternativa, le icone possono essere immagini di sfondo per dare al controllo l'aspetto e il comportamento desiderati.
 
-## <a name="programmatic"></a>A livello
+## <a name="programmatic"></a>Programmatica
 
 Impostare la proprietà `Image` o `BackgroundImage` del controllo su un oggetto di tipo <xref:System.Drawing.Image>. In genere, è possibile caricare l'immagine da un file usando il metodo <xref:System.Drawing.Image.FromFile%2A>.
 

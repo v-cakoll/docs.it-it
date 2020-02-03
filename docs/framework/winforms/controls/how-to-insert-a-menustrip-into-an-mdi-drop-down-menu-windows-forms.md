@@ -44,10 +44,10 @@ In alcune applicazioni, il tipo di una finestra figlio di interfaccia a document
     |Voce di menu Form2|Valore MergeAction|Valore MergeIndex|  
     |---------------------|-----------------------|----------------------|  
     |File|MatchOnly|-1|  
-    |Separator|INS|2|  
-    |Salva|INS|3\.|  
-    |Salva e chiudi|INS|4|  
-    |Separator|INS|5|  
+    |Separatore|Inserisci|2|  
+    |Salva|Inserisci|3|  
+    |Salva e chiudi|Inserisci|4|  
+    |Separatore|Inserisci|5|  
   
 10. Creare un gestore eventi per l'evento <xref:System.Windows.Forms.Control.Click> di `&Open`<xref:System.Windows.Forms.ToolStripMenuItem>.  
   

@@ -144,7 +144,7 @@ ms.locfileid: "76737964"
 - <xref:System.IO.Packaging.ZipPackagePart>
 - <xref:System.IO.Packaging.PackageRelationship>
 - <xref:System.Windows.Controls.DocumentViewer>
-- [per](optimizing-performance-text.md)
+- [Testo](optimizing-performance-text.md)
 - [Cenni preliminari sui documenti dinamici](flow-document-overview.md)
 - [Panoramica della stampa](printing-overview.md)
 - [Serializzazione e archiviazione di documenti](document-serialization-and-storage.md)

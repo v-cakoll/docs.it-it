@@ -94,7 +94,7 @@ La colonna delle funzionalità deve essere un vettore di dimensioni fisse di <xr
 
 Questo algoritmo di training restituisce quanto segue:
 
-| Nome output | Tipo di | Descrizione|
+| Nome output | Type | Descrizione|
 | -- | -- | -- |
 | `Score` | Vettore di <xref:System.Single> | I punteggi di tutte le classi. Valori più alti indicano maggiori probabilità di rientrare nella classe associata. Se l'elemento i-esimo ha il valore più elevato, l'indice delle etichette stimate sarà i. Si noti che i è l'indice a base zero. |
 | `PredictedLabel` | Tipo [key](xref:Microsoft.ML.Data.KeyDataViewType) | L'indice dell'etichetta stimata. Se il valore è i, l'etichetta effettiva potrebbe essere la categoria i-esima nel tipo di etichetta di input con valori key. |
@@ -127,7 +127,7 @@ I dati della colonna dell'etichetta di input devono essere <xref:System.Single>.
 
 Gli algoritmi di training per questa attività restituiscono quanto segue:
 
-| Nome output | Tipo di | Descrizione|
+| Nome output | Type | Descrizione|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Il punteggio non elaborato stimato dal modello |
 
@@ -151,7 +151,7 @@ I dati delle funzionalità di input devono essere <xref:System.Single>. Non sono
 
 Questo algoritmo di training restituisce quanto segue:
 
-| Nome output | Tipo di | Descrizione|
+| Nome output | Type | Descrizione|
 | -- | -- | -- |
 | `Score` | vettore di <xref:System.Single> | Le distanze del punto dati specificato dai baricentri di tutti i cluster |
 | `PredictedLabel` | Tipo [key](xref:Microsoft.ML.Data.KeyDataViewType) | L'indice del cluster più vicino stimato dal modello. |
@@ -183,7 +183,7 @@ Le funzionalità di input devono essere un vettore a dimensione fissa di <xref:S
 
 Questo algoritmo di training restituisce quanto segue:
 
-| Nome output | Tipo di | Descrizione|
+| Nome output | Type | Descrizione|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Il punteggio non negativo, illimitato calcolato dal modello di rilevamento anomalie |
 | `PredictedLabel` | <xref:System.Boolean> | Valore true/false che indica se l'input è un'anomalia (PredictedLabel = true) o meno (PredictedLabel = false) |
@@ -207,7 +207,7 @@ I dati della funzionalità devono essere un vettore di dimensioni fisse di <xref
 
 Questo algoritmo di training restituisce quanto segue:
 
-| Nome output | Tipo di | Descrizione|
+| Nome output | Type | Descrizione|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Il punteggio illimitato calcolato dal modello per determinare la stima |
 

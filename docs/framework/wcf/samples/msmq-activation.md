@@ -19,11 +19,11 @@ In questo esempio viene illustrato come ospitare le applicazioni del servizio di
 > [!NOTE]
 > È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.
 >
-> \<InstallDrive>:\WF_WCF_Samples
+> \<Unitàinstallazione >: \ WF_WCF_Samples
 >
 > Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti gli esempi relativi a WCF e [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Questo esempio si trova nella directory seguente.
 >
-> \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.
+> \<Unitàinstallazione >: \Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.
 
 Il servizio Attivazione processo Windows (WAS), il nuovo meccanismo di attivazione del processo per Windows Server 2008, fornisce funzionalità simili a IIS che in precedenza erano disponibili solo per applicazioni basate su HTTP per applicazioni che utilizzano protocolli non HTTP. Windows Communication Foundation (WCF) utilizza l'interfaccia dell'adattatore listener per comunicare le richieste di attivazione ricevute tramite i protocolli non HTTP supportati da WCF, ad esempio TCP, named pipe e MSMQ. La funzionalità per ricevere richieste su protocolli non HTTP viene ospitata dai servizi Windows gestiti in esecuzione su SMSvcHost.exe.
 
@@ -269,7 +269,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
         Questo comando consente di accedere all'applicazione/servicemodelsamples usando `http://localhost/servicemodelsamples` e `net.msmq://localhost/servicemodelsamples`.
 
-7. Se in precedenza non è stato fatto, assicurarsi che il servizio di attivazione MSMQ sia abilitato. Dal menu **Start** fare clic su **esegui**e digitare `Services.msc`. Eseguire una ricerca nell'elenco dei servizi per l' **adattatore listener Net. MSMQ**. Fare clic con il pulsante destro del mouse e scegliere **Proprietà**. Impostare **tipo di avvio** su **automatico**, fare clic su **applica** e fare clic sul pulsante **Avvia** . È necessario eseguire questo passaggio solo la prima volta che si usa il servizio di adattatore listener Net.Msmq.
+7. Se in precedenza non è stato fatto, assicurarsi che il servizio di attivazione MSMQ sia abilitato. Dal menu **Start** fare clic su **esegui**e digitare `Services.msc`. Eseguire una ricerca nell'elenco dei servizi per l' **adattatore listener Net. MSMQ**. Fare clic con il pulsante destro del mouse e selezionare **Proprietà**. Impostare **tipo di avvio** su **automatico**, fare clic su **applica** e fare clic sul pulsante **Avvia** . È necessario eseguire questo passaggio solo la prima volta che si usa il servizio di adattatore listener Net.Msmq.
 
 8. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Modificare inoltre il codice nel client che invia l'ordine di acquisto in modo che corrisponda al nome del computer nell'URI della coda durante l'invio di ordini di acquisto. Usare il codice riportato di seguito.
 

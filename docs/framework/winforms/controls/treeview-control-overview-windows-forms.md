@@ -1,5 +1,5 @@
 ---
-title: Panoramica del controllo TreeView
+title: Cenni preliminari sul controllo TreeView
 ms.date: 03/30/2017
 f1_keywords:
 - TreeView
@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743214"
 ---
-# <a name="treeview-control-overview-windows-forms"></a>Panoramica del controllo TreeView (Windows Form)
+# <a name="treeview-control-overview-windows-forms"></a>Cenni preliminari sul controllo TreeView (Windows Form)
 
 Il controllo <xref:System.Windows.Forms.TreeView> di Windows Form consente di visualizzare una gerarchia di nodi, nello stesso modo in cui file e cartelle vengono visualizzati nel riquadro sinistro della funzionalità Esplora risorse in un sistema operativo Windows. Ogni nodo nella visualizzazione albero potrebbe contenere altri nodi, denominati *nodi figlio*. I nodi padre, o i nodi che contengono i nodi figlio, possono essere visualizzati in forma espansa o compressa. Nella visualizzazione albero, accanto ai nodi possono essere presenti anche caselle di controllo se la proprietà <xref:System.Windows.Forms.TreeView.CheckBoxes%2A> della visualizzazione albero viene impostata su `true`. È quindi possibile selezionare o cancellare i nodi a livello di codice impostando la proprietà <xref:System.Windows.Forms.TreeNode.Checked%2A> del nodo su `true` o `false`.
 

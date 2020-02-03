@@ -21,7 +21,7 @@ Il Common Language Runtime utilizza un'implementazione avanzata di Windows Graph
   
  Se si preferisce iniziare subito, vedere [Guida introduttiva alla programmazione grafica](getting-started-with-graphics-programming.md), che include argomenti su come usare il codice per disegnare linee, forme, testo e altro in Windows Form.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Cenni preliminari sulla grafica](graphics-overview-windows-forms.md)  
  Fornisce un'introduzione alle classi gestite relative agli elementi grafici.  
   
@@ -31,7 +31,7 @@ Il Common Language Runtime utilizza un'implementazione avanzata di Windows Graph
  [Uso di classi grafiche gestite](using-managed-graphics-classes.md)  
  Viene illustrato come completare una serie di attività usando le classi gestite GDI+.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Drawing>  
  Fornisce accesso alle funzionalità grafiche di base GDI+.  
   

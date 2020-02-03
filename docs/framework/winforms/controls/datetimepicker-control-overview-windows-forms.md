@@ -1,5 +1,5 @@
 ---
-title: Panoramica del controllo DateTimePicker
+title: Cenni preliminari sul controllo DateTimePicker
 ms.date: 03/30/2017
 f1_keywords:
 - DateTimePicker

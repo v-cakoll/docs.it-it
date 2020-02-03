@@ -23,7 +23,7 @@ Per usare un bundle diverso, installare il pacchetto di `Microsoft.Data.Sqlite.C
 
 | Bundle | Descrizione |
 | --- | --- |
-| SQLitePCLRaw. bundle_e_sqlite3 | Fornisce una versione coerente di SQLite su tutte le piattaforme. Include le estensioni FTS4, FTS5, JSON1 e R * tree. Questo è il valore predefinito. |
+| SQLitePCLRaw. bundle_e_sqlite3 | Fornisce una versione coerente di SQLite su tutte le piattaforme. Include le estensioni FTS4, FTS5, JSON1 e R * tree. Questa è l'impostazione predefinita. |
 | SQLitePCLRaw. bundle_green | Come bundle_e_sqlite3, tranne che per iOS in cui viene usata la libreria SQLite di sistema. |
 | SQLitePCLRaw. bundle_zetetic | Usa le compilazioni sqlcipher ufficiali da zetetica (non incluso). |
 | SQLitePCLRaw. bundle_winsqlite3 | USA winsqlite3. dll, la libreria SQLite di sistema in Windows 10. |

@@ -33,7 +33,7 @@ Per standardizzare il layout dell'interfaccia utente dell'applicazione basata su
 
 - [Controlli Windows Form](index.md)
 - [Procedura: Aggiungere controlli a un Windows Forms](how-to-add-controls-to-windows-forms.md)
-- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)
+- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)
 - [Controlli Windows Form per funzione](windows-forms-controls-by-function.md)
 - [Procedura dettagliata: Disposizione dei controlli in Windows Form usando guide di allineamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Procedura dettagliata: disposizione di controlli in Windows Form usando TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)

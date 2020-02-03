@@ -17,7 +17,7 @@ ms.locfileid: "76742160"
 # <a name="monthcalendar-control-windows-forms"></a>Controllo MonthCalendar (Windows Form)
 Il controllo Windows Forms `MonthCalendar` presenta un'interfaccia grafica intuitiva che consente agli utenti di visualizzare e impostare le informazioni sulla data. Il controllo Visualizza una griglia contenente i giorni del mese numerati, disposti in colonne sotto i giorni della settimana. È possibile selezionare un mese diverso facendo clic sui pulsanti freccia su entrambi i lati della didascalia del mese. Diversamente dal controllo <xref:System.Windows.Forms.DateTimePicker> simile, è possibile selezionare un intervallo di date con questo controllo; Tuttavia, il controllo <xref:System.Windows.Forms.DateTimePicker> consente di impostare le ore e le date.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Panoramica sul controllo MonthCalendar](monthcalendar-control-overview-windows-forms.md)  
  Introduce i concetti generali del controllo `MonthCalendar`, che consente agli utenti di visualizzare e impostare le informazioni sulla data per un'applicazione.  
   
@@ -33,12 +33,12 @@ Il controllo Windows Forms `MonthCalendar` presenta un'interfaccia grafica intui
  [Procedura: Selezionare un intervallo di date nel controllo MonthCalendar di Windows Form](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)  
  Viene illustrato come selezionare a livello di codice un intervallo di date dal controllo `MonthCalendar`.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.MonthCalendar>  
  Fornisce informazioni di riferimento sulla classe e sui relativi membri.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)  
+ [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)  
  Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.  
   
  [Controllo DateTimePicker](datetimepicker-control-windows-forms.md)  

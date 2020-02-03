@@ -68,7 +68,7 @@ Per completare questa procedura dettagliata, è necessario:
     [!code-csharp[System.Windows.Forms.DataGridView.DataError#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/CS/errorhandling.cs#20)]
     [!code-vb[System.Windows.Forms.DataGridView.DataError#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/VB/errorhandling.vb#20)]
 
-## <a name="testing-the-application"></a>Verifica dell'applicazione
+## <a name="testing-the-application"></a>Test dell'applicazione
 
 È ora possibile testare il form per assicurarsi che si comportano come previsto.
 

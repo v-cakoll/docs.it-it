@@ -17,7 +17,7 @@ ms.locfileid: "76745304"
 
 Durante la progettazione e la modifica dell'interfaccia utente delle Windows Forms Application, è necessario aggiungere, allineare e posizionare i controlli. I controlli sono gli oggetti contenuti all'interno di oggetti Form. Ogni tipo di controllo ha un proprio set di proprietà, metodi ed eventi che lo rendono appropriato per un particolare scopo. È possibile modificare i controlli nella finestra di progettazione e scrivere codice per aggiungere controlli in modo dinamico in fase di esecuzione.
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 [Inserimento di controlli in Windows Form](putting-controls-on-windows-forms.md)\
 Fornisce collegamenti correlati all'inserimento dei controlli nei form.
@@ -31,7 +31,7 @@ Descrive gli usi di tasti di scelta rapida, etichette di testo nei controlli e t
 [Controlli da utilizzare in Windows Forms](controls-to-use-on-windows-forms.md)\
 Elenca i controlli che funzionano con Windows Form e le operazioni di base che è possibile eseguire con ogni controllo.
 
-[Sviluppo di controlli Windows Form personalizzati con .NET Framework](developing-custom-windows-forms-controls.md)\
+[Sviluppo di controlli Windows Forms personalizzati con .NET Framework](developing-custom-windows-forms-controls.md)\
 Fornisce informazioni complementari ed esempi per aiutare gli utenti a sviluppare controlli Windows Form personalizzati.
 
 [Sviluppo di controlli Windows Form in fase di progettazione](developing-windows-forms-controls-at-design-time.md)\

@@ -167,7 +167,7 @@ Gli utenti interagiscono con applicazioni autonome Windows Presentation Foundati
   
 - Essere ridotte a icona, ingrandite e ripristinate senza influire sull'altra.  
   
- Alcune finestre richiedono una relazione con la finestra da cui vengono aperte. Ad esempio, un'applicazione IDE (Integrated Development Environment) può aprire finestre delle proprietà e finestre degli strumenti il cui comportamento tipico consiste nel coprire la finestra che le crea. Queste finestre devono inoltre essere chiuse, ridotte a icona, ingrandite e ripristinate insieme alla finestra da cui sono state create. Una relazione di questo tipo può essere stabilita impostando la proprietà di *un'altra finestra* e viene eseguita impostando la proprietà <xref:System.Windows.Window.Owner%2A> della *finestra di proprietà* con un riferimento alla *finestra proprietaria*. come illustrato nell'esempio riportato di seguito.  
+ Alcune finestre richiedono una relazione con la finestra da cui vengono aperte. Ad esempio, un'applicazione IDE (Integrated Development Environment) può aprire finestre delle proprietà e finestre degli strumenti il cui comportamento tipico consiste nel coprire la finestra che le crea. Queste finestre devono inoltre essere chiuse, ridotte a icona, ingrandite e ripristinate insieme alla finestra da cui sono state create. Una relazione di questo tipo può essere stabilita impostando la proprietà di *un'altra finestra* e viene eseguita impostando la proprietà <xref:System.Windows.Window.Owner%2A> della *finestra di proprietà* con un riferimento alla *finestra proprietaria*. Questa operazione viene mostrata nell'esempio seguente.  
   
  [!code-csharp[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/CSharp/MainWindow.xaml.cs#setwindowownercode)]
  [!code-vb[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/visualbasic/mainwindow.xaml.vb#setwindowownercode)]  
@@ -229,7 +229,7 @@ Gli utenti interagiscono con applicazioni autonome Windows Presentation Foundati
   
 - Elemento **Chiudi** del menu di **sistema** .  
   
-- ALT+F4.  
+- ALT + F4.  
   
 - Premere il pulsante **Chiudi** .  
   
@@ -325,13 +325,13 @@ Gli utenti interagiscono con applicazioni autonome Windows Presentation Foundati
   
  Se si vuole che la larghezza e l'altezza della finestra abbiano una dimensione che corrisponda alle dimensioni del contenuto della finestra, è possibile usare la proprietà <xref:System.Windows.Window.SizeToContent%2A>, che presenta i valori seguenti:  
   
-- <xref:System.Windows.SizeToContent.Manual>. Nessun effetto (impostazione predefinita).  
+- <xref:System.Windows.SizeToContent.Manual> Nessun effetto (impostazione predefinita).  
   
-- <xref:System.Windows.SizeToContent.Width>. Adattarsi alla larghezza del contenuto, che ha lo stesso effetto dell'impostazione di <xref:System.Windows.FrameworkElement.MinWidth%2A> e <xref:System.Windows.FrameworkElement.MaxWidth%2A> sulla larghezza del contenuto.  
+- <xref:System.Windows.SizeToContent.Width> Adattarsi alla larghezza del contenuto, che ha lo stesso effetto dell'impostazione di <xref:System.Windows.FrameworkElement.MinWidth%2A> e <xref:System.Windows.FrameworkElement.MaxWidth%2A> sulla larghezza del contenuto.  
   
-- <xref:System.Windows.SizeToContent.Height>. Adatta all'altezza del contenuto, che ha lo stesso effetto dell'impostazione di <xref:System.Windows.FrameworkElement.MinHeight%2A> e <xref:System.Windows.FrameworkElement.MaxHeight%2A> sull'altezza del contenuto.  
+- <xref:System.Windows.SizeToContent.Height> Adatta all'altezza del contenuto, che ha lo stesso effetto dell'impostazione di <xref:System.Windows.FrameworkElement.MinHeight%2A> e <xref:System.Windows.FrameworkElement.MaxHeight%2A> sull'altezza del contenuto.  
   
-- <xref:System.Windows.SizeToContent.WidthAndHeight>. Adattarsi alla larghezza e all'altezza del contenuto, che ha lo stesso effetto dell'impostazione di <xref:System.Windows.FrameworkElement.MinHeight%2A> e <xref:System.Windows.FrameworkElement.MaxHeight%2A> sull'altezza del contenuto e dell'impostazione di <xref:System.Windows.FrameworkElement.MinWidth%2A> e <xref:System.Windows.FrameworkElement.MaxWidth%2A> sulla larghezza del contenuto.  
+- <xref:System.Windows.SizeToContent.WidthAndHeight> Adattarsi alla larghezza e all'altezza del contenuto, che ha lo stesso effetto dell'impostazione di <xref:System.Windows.FrameworkElement.MinHeight%2A> e <xref:System.Windows.FrameworkElement.MaxHeight%2A> sull'altezza del contenuto e dell'impostazione di <xref:System.Windows.FrameworkElement.MinWidth%2A> e <xref:System.Windows.FrameworkElement.MaxWidth%2A> sulla larghezza del contenuto.  
   
  L'esempio seguente mostra una finestra che si ridimensiona automaticamente in base al contenuto, sia in verticale sia in orizzontale, quando viene visualizzata per la prima volta.  
   

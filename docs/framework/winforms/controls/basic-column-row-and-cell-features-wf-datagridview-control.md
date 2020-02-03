@@ -17,7 +17,7 @@ ms.locfileid: "76746223"
 # <a name="basic-column-row-and-cell-features-in-the-windows-forms-datagridview-control"></a>Funzionalità di base per colonna, riga e cella nel controllo DataGridView Windows Form
 Molti comportamenti di base di `DataGridView` celle, righe e colonne possono essere modificati impostando singole proprietà. Negli argomenti di questa sezione vengono descritte alcune delle funzionalità più comunemente utilizzate.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Procedura: Nascondere le colonne nel controllo DataGridView di Windows Form](how-to-hide-columns-in-the-windows-forms-datagridview-control.md)  
  Viene descritto come impedire che colonne specifiche vengano visualizzate nel controllo.  
   
@@ -42,7 +42,7 @@ Molti comportamenti di base di `DataGridView` celle, righe e colonne possono ess
  [Procedura: visualizzare immagini in celle del controllo DataGridView di Windows Form](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)  
  Viene descritto come creare una colonna immagine che visualizza un'icona in ogni cella.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.DataGridView>  
  Fornisce la documentazione di riferimento per il controllo.  
   

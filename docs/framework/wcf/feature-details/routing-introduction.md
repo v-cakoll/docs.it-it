@@ -15,7 +15,7 @@ Il servizio di routing fornisce un intermediario SOAP di collegamento generico i
 
 Questo argomento è destinato a coloro i quali non hanno familiarità con il servizio di routing e ne illustra la configurazione di base e l'hosting.
 
-## <a name="configuration"></a>Configurazione di
+## <a name="configuration"></a>Configurazione
 
 Il servizio di routing viene implementato come servizio WCF che espone uno o più endpoint servizio i quali ricevono i messaggi dalle applicazioni client e li indirizzano a uno o più endpoint di destinazione. Il servizio include un elemento <xref:System.ServiceModel.Routing.RoutingBehavior> che viene applicato agli endpoint servizio esposti. Questo comportamento viene usato per configurare diversi aspetti del funzionamento del servizio. Per semplificare la configurazione quando si usa un file di configurazione, i parametri vengono specificati in **RoutingBehavior**. Negli scenari basati sul codice, questi parametri vengono specificati come parte di un oggetto <xref:System.ServiceModel.Routing.RoutingConfiguration>, che può quindi essere passato a un **RoutingBehavior**.
 
@@ -364,7 +364,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), backupList);
 
 Nella tabella seguente vengono descritti i modelli compatibili con l'uso di elenchi di endpoint di backup, insieme a note che descrivono dettagli specifici di gestione degli errori.
 
-|Criterio|Sessione|Transazione|Contesto di ricezione|Elenco di backup supportato|Note|
+|Modello|Sessione|Transazione|Contesto di ricezione|Elenco di backup supportato|Note|
 |-------------|-------------|-----------------|---------------------|---------------------------|-----------|
 |Unidirezionale||||Sì|Tenta di inviare di nuovo il messaggio a un endpoint di backup. Se per il messaggio viene usata la trasmissione multicast, solo il messaggio nel canale con errori viene spostato alla relativa destinazione di backup.|
 |Unidirezionale||✔️||No|Viene generata un'eccezione e viene eseguito il rollback della transazione.|

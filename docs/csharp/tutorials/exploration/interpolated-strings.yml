@@ -90,7 +90,7 @@ items:
 - title: Controllare la formattazione delle espressioni di interpolazione
   durationInMinutes: 5
   content: >
-    Nel passaggio precedente sono state inserite nella stringa di risultato due stringhe con formattazione imprecisa. Uno è un valore di data e ora nel quale solo la data risultava corretta. Il secondo è un prezzo che non indica la valuta. Entrambi i problemi sono di facile risoluzione. L'interpolazione di stringhe consente di specificare *stringhe di formato* che controllano la formattazione di determinati tipi. Modificare la chiamata in `Console.WriteLine` dell'esempio precedente in modo da includere le stringhe di formato per le espressioni di data e prezzo, come indicato nella riga seguente:
+    Nel passaggio precedente sono state inserite nella stringa di risultato due stringhe con formattazione imprecisa. Il primo problema è un valore di data e ora nel quale solo la data risultava corretta. Il secondo è un prezzo che non indica la valuta. Entrambi i problemi sono di facile risoluzione. L'interpolazione di stringhe consente di specificare *stringhe di formato* che controllano la formattazione di determinati tipi. Modificare la chiamata in `Console.WriteLine` dell'esempio precedente in modo da includere le stringhe di formato per le espressioni di data e prezzo, come indicato nella riga seguente:
 
 
     ```csharp
@@ -106,7 +106,7 @@ items:
     Molti tipi delle librerie .NET supportano un set predefinito di stringhe di formato. Tali tipi includono tutti i tipi numerici e i tipi data e ora. Per l'elenco completo dei tipi che supportano le stringhe di formato, vedere [Stringhe di formato e tipi della libreria di classe .NET](../../../standard/base-types/formatting-types.md#format-strings-and-net-types) nell'articolo [Formattazione di tipi in .NET](../../../standard/base-types/formatting-types.md).
 
 
-    Provare a modificare le stringhe di formato nell'esempio per vedere come cambia la formattazione della stringa di data e ora e del valore numerico. Modificare il valore "d" in `{date:d}` inserendo i valori "t" (per visualizzare il formato ora breve), "y" (per visualizzare anno e mese) e "yyyy" (per visualizzare l'anno come numero a quattro cifre). Modificare "C2" in `{price:C2}` inserendo "e" (per la notazione esponenziale) e "F3" (per un valore numerico con tre cifre dopo il separatore decimale).
+    Provare a modificare le stringhe di formato nell'esempio per vedere come cambia la formattazione della stringa di data e ora e del valore numerico. Modificare il valore "d" in `{date:d}` inserendo i valori "t" (per visualizzare il formato ora breve), "y" (per visualizzare anno e mese) e "yyyy" (per visualizzare l'anno come numero di quattro cifre). Modificare "C2" in `{price:C2}` inserendo "e" (per la notazione esponenziale) e "F3" (per un valore numerico con tre cifre dopo il separatore decimale).
 
 
     Oltre alla formattazione è possibile controllare la larghezza del campo e l'allineamento delle stringhe formattate incluse nella stringa di risultato. Il passaggio successivo indica come eseguire questa operazione.

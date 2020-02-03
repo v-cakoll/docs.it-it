@@ -40,7 +40,7 @@ Con il controllo <xref:System.Windows.Forms.DataGridView> è possibile personali
   
 ### <a name="to-change-the-border-styles-for-datagridview-cells-programmatically"></a>Per modificare gli stili del bordo per le celle DataGridView a livello di codice  
   
-- Impostare le proprietà <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A>, <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A>e <xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A>.  
+- Impostare le proprietà <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A>, <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A>e <xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A> .  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#033](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#033)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#033](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#033)]  

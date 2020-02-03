@@ -107,4 +107,4 @@ L'esempio seguente illustra un form semplice che usa `FirstControl`. Crea tre is
 ## <a name="see-also"></a>Vedere anche
 
 - [Proprietà dei controlli Windows Form](properties-in-windows-forms-controls.md)
-- [Eventi dei controlli di Windows Form](events-in-windows-forms-controls.md)
+- [Eventi nei controlli di Windows Form](events-in-windows-forms-controls.md)

@@ -18,7 +18,7 @@ Il controllo `FlowLayoutPanel` dispone i contenuti in una direzione di flusso or
   
  Gli argomenti di questa sezione descrivono i concetti e le tecniche che è possibile usare per compilare funzionalità `FlowLayoutPanel` nelle applicazioni.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Panoramica del controllo FlowLayoutPanel](flowlayoutpanel-control-overview.md)  
  Introduce i concetti generali relativi al controllo `FlowLayoutPanel`, che consente di creare un layout con un flusso orizzontale o verticale.  
   
@@ -27,6 +27,6 @@ Il controllo `FlowLayoutPanel` dispone i contenuti in una direzione di flusso or
   
  Vedere anche [procedura dettagliata: disposizione di controlli in Windows Forms tramite FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.FlowLayoutPanel>  
  Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.FlowLayoutPanel>.

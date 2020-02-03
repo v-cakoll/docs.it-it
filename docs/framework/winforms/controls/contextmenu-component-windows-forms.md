@@ -23,19 +23,19 @@ ms.locfileid: "76746176"
   
  Il componente Windows Forms `ContextMenu` viene utilizzato per fornire agli utenti un menu di scelta rapida facilmente accessibile dei comandi utilizzati di frequente associati all'oggetto selezionato. Gli elementi in un menu di scelta rapida sono spesso un subset degli elementi dei menu principali che vengono visualizzati altrove nell'applicazione. I menu di scelta rapida sono in genere disponibili facendo clic con il pulsante destro del mouse. In Windows Forms sono associati ad altri controlli.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Panoramica sul componente ContextMenu](contextmenu-component-overview-windows-forms.md)  
  Introduce i concetti generali del componente `ContextMenu`, che consente agli utenti di creare menu di comandi utilizzati di frequente associati a un oggetto selezionato.  
   
  [Procedura: Aggiungere e rimuovere voci di menu tramite il componente ContextMenu di Windows Form](add-and-remove-menu-items-with-wf-contextmenu-component.md)  
  Viene illustrato come aggiungere e rimuovere voci di menu di scelta rapida in Windows Forms.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.ContextMenu>  
  Fornisce informazioni di riferimento sulla classe <xref:System.Windows.Forms.ContextMenu> e sui relativi membri.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)  
+ [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)  
  Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.  
   
 ## <a name="see-also"></a>Vedere anche

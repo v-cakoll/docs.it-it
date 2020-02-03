@@ -47,7 +47,7 @@ End Sub
 - Una connessione Internet attiva.  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
- La chiamata al metodo <xref:System.Diagnostics.Process.Start%2A> richiede l'attendibilità totale. Per ulteriori informazioni, vedere <xref:System.Security.SecurityException>.  
+ La chiamata al metodo <xref:System.Diagnostics.Process.Start%2A> richiede l'attendibilità totale. Per altre informazioni, vedere <xref:System.Security.SecurityException>.  
   
 ## <a name="see-also"></a>Vedere anche
 

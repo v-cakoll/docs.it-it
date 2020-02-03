@@ -21,7 +21,7 @@ ms.locfileid: "76744943"
 # <a name="notifyicon-component-windows-forms"></a>Componente NotifyIcon (Windows Form)
 Il componente Windows Forms `NotifyIcon` Visualizza icone nell'area di notifica dello stato della barra delle applicazioni per i processi eseguiti in background e che altrimenti non dispongono di interfacce utente. Un esempio può essere rappresentato da un programma di protezione dai virus, al quale è possibile accedere facendo clic su un'icona riportata nell'area di notifica dello stato della barra delle applicazioni.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Panoramica sul componente NotifyIcon](notifyicon-component-overview-windows-forms.md)  
  Introduce i concetti generali del componente `NotifyIcon`, che consente agli utenti di visualizzare le icone per i processi in esecuzione in background che non dispongono di un'interfaccia utente.  
   
@@ -31,10 +31,10 @@ Il componente Windows Forms `NotifyIcon` Visualizza icone nell'area di notifica 
  [Procedura: Associare un menu di scelta rapida a un componente NotifyIcon di Windows Form](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)  
  Viene descritta la procedura per aggiungere un menu di scelta rapida a un componente `NotifyIcon`.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.NotifyIcon>  
  Fornisce informazioni di riferimento sulla classe e sui relativi membri.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)  
+ [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)  
  Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.

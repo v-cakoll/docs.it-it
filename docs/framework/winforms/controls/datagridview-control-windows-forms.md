@@ -27,7 +27,7 @@ Il controllo `DataGridView` fornisce un sistema efficiente e flessibile per visu
   
  Gli argomenti di questa sezione descrivono i concetti e le tecniche che è possibile usare per compilare funzionalità `DataGridView` nelle applicazioni.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Panoramica sul controllo DataGridView](datagridview-control-overview-windows-forms.md)  
  Fornisce argomenti che descrivono l'architettura e i concetti principali del controllo `DataGridView` Windows Form.  
   
@@ -75,7 +75,7 @@ Il controllo `DataGridView` fornisce un sistema efficiente e flessibile per visu
   
  Vedere anche [uso della finestra di progettazione con il controllo DataGridView Windows Forms](using-the-designer-with-the-windows-forms-datagridview-control.md).  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.DataGridView>  
  Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.DataGridView>.  
   
@@ -84,4 +84,4 @@ Il controllo `DataGridView` fornisce un sistema efficiente e flessibile per visu
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)
+- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)

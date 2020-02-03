@@ -18,7 +18,7 @@ Negli argomenti di questa sezione vengono descritte le funzionalità di sicurezz
   
  Per ulteriori informazioni su Windows Server AppFabric e sulla sicurezza, vedere [modello di sicurezza per Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10)) .  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  Vengono descritte le funzionalità di sicurezza di WCF.  
   
@@ -34,7 +34,7 @@ Negli argomenti di questa sezione vengono descritte le funzionalità di sicurezz
  [Associazioni e sicurezza](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
  Vengono forniti vari argomenti che descrivono le funzionalità di sicurezza relative alle associazioni. In particolare, vengono forniti argomenti che descrivono come creare associazioni di sicurezza personalizzate.  
   
- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [Protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  Viene descritto come proteggere i messaggi utilizzando le funzionalità di sicurezza di WCF.  
   
  [Autenticazione](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
@@ -55,7 +55,7 @@ Negli argomenti di questa sezione vengono descritte le funzionalità di sicurezz
  [Linee guida e procedure consigliate per la sicurezza](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
  Linee guida per la creazione di applicazioni WCF sicure.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Security>  
@@ -65,7 +65,7 @@ Negli argomenti di questa sezione vengono descritte le funzionalità di sicurezz
   
  [Programmazione WCF di base](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
- [Esercitazione introduttiva](../../../../docs/framework/wcf/getting-started-tutorial.md)  
+ [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md)  
   
  [Panoramica dei concetti](../../../../docs/framework/wcf/conceptual-overview.md)  
   

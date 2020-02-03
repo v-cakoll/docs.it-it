@@ -40,4 +40,4 @@ Durante la creazione di applicazioni basate sui dati, è spesso necessario visua
 - <xref:System.Windows.Forms.BindingSource>
 - [Controllo BindingNavigator](bindingnavigator-control-windows-forms.md)
 - [Componente BindingSource](bindingsource-component.md)
-- [Procedura: associare un controllo Windows Form a un tipo](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Procedura: Associare un controllo di Windows Form a un tipo](how-to-bind-a-windows-forms-control-to-a-type.md)

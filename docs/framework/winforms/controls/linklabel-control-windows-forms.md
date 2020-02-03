@@ -18,7 +18,7 @@ ms.locfileid: "76745201"
 # <a name="linklabel-control-windows-forms"></a>Controllo LinkLabel (Windows Form)
 Il controllo Windows Forms `LinkLabel` consente di aggiungere collegamenti di tipo Web alle applicazioni di Windows Forms. È possibile utilizzare il controllo `LinkLabel` per tutti gli elementi per cui è possibile utilizzare il controllo <xref:System.Windows.Forms.Label> per; è anche possibile impostare parte del testo come collegamento a un oggetto o a una pagina Web.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Panoramica sul controllo LinkLabel](linklabel-control-overview-windows-forms.md)  
  Definisce il controllo e ne illustra le funzionalità chiave e le proprietà.  
   
@@ -31,10 +31,10 @@ Il controllo Windows Forms `LinkLabel` consente di aggiungere collegamenti di ti
  [Procedura: Visualizzare una pagina Web da un controllo LinkLabel di Windows Form (Visual Basic)](display-a-web-page-from-a-wf-linklabel-control-visual-basic.md)  
  Viene illustrato come visualizzare una pagina Web nel browser predefinito quando un utente fa clic su un controllo Windows Forms `LinkLabel`.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  Classe <xref:System.Windows.Forms.LinkLabel>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)  
+ [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)  
  Viene fornito un elenco completo dei controlli di Windows Forms, con collegamenti alle informazioni sul relativo utilizzo.

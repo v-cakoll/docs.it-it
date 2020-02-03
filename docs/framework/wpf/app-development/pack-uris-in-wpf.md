@@ -297,7 +297,7 @@ Queste proprietà possono essere impostate da markup e codice. Questa sezione il
 
 ### <a name="using-pack-uris-in-markup"></a>Uso di URI di tipo pack nel markup
 
-Un URI di pacchetto viene specificato nel markup impostando l'elemento di un attributo con l'URI del pacchetto. Ad esempio:
+Un URI di pacchetto viene specificato nel markup impostando l'elemento di un attributo con l'URI del pacchetto. Ad esempio,
 
 `<element attribute="pack://application:,,,/File.xaml" />`
 
@@ -433,7 +433,7 @@ L'esempio seguente illustra come usare un URI per specificare l'icona di una fin
 
 [!code-xaml[WindowIconSnippets#WindowIconSetXAML](~/samples/snippets/xaml/VS_Snippets_Wpf/WindowIconSnippets/XAML/MainWindow.xaml#windowiconsetxaml)]
 
-Per ulteriori informazioni, vedere <xref:System.Windows.Window.Icon%2A>.
+Per altre informazioni, vedere <xref:System.Windows.Window.Icon%2A>.
 
 <a name="Loading_Image__Audio__and_Video_Files"></a>
 

@@ -23,14 +23,14 @@ ms.locfileid: "76736991"
 # <a name="checkedlistbox-control-windows-forms"></a>Controllo CheckedListBox (Windows Form)
 Il controllo Windows Forms `CheckedListBox` Visualizza un elenco di elementi, ad esempio il controllo <xref:System.Windows.Forms.ListBox>, e può anche visualizzare un segno di spunta accanto agli elementi dell'elenco.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Panoramica sul controllo CheckedListBox](checkedlistbox-control-overview-windows-forms.md)  
  Definisce il controllo e ne illustra le funzionalità chiave e le proprietà.  
   
  [Procedura: Rilevare gli elementi selezionati nel controllo CheckedListBox di Windows Form](how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)  
  Viene descritto come scorrere un elenco per determinare quali elementi sono controllati.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  Classe <xref:System.Windows.Forms.CheckedListBox>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   
@@ -38,5 +38,5 @@ Il controllo Windows Forms `CheckedListBox` Visualizza un elenco di elementi, ad
  [Controlli Windows Form usati per elencare opzioni](windows-forms-controls-used-to-list-options.md)  
  Fornisce un elenco di operazioni che è possibile eseguire con caselle di riepilogo, caselle combinate e caselle di riepilogo selezionate.  
   
- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)  
+ [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)  
  Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.

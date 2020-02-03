@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76737383"
 ---
-# <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a>Procedura: Creare un controllo ToolStrip di Windows Form di base con elementi standard usando la finestra di progettazione
+# <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a>Procedura: creare un controllo ToolStrip di Windows Form di base con elementi standard utilizzando la finestra di progettazione
 Nella procedura seguente viene illustrato come creare un <xref:System.Windows.Forms.ToolStrip> e aggiungere sette controlli <xref:System.Windows.Forms.ToolStripButton> che rappresentano attività tipiche.
 
 ## <a name="to-add-standard-items-in-the-designer"></a>Per aggiungere elementi standard nella finestra di progettazione

@@ -183,7 +183,7 @@ I controlli nella maggior parte dei casi rilevano e rispondono all'input dell'ut
 
 I requisiti di input delle applicazioni sono spesso complessi. In WPF è disponibile un [sistema di comandi](advanced/commanding-overview.md) che separa le azioni di input utente dal codice che risponde a tali azioni.
 
-## <a name="layout"></a>Formato
+## <a name="layout"></a>Layout
 
 Quando si crea un'interfaccia utente, si dispongono i controlli per percorso e dimensione per creare un layout. Il requisito principale di qualsiasi layout è quello di adattarsi alle modifiche nella dimensione delle finestre e nelle impostazioni di visualizzazione. Anziché richiedere la scrittura di codice per adattare un layout in tali circostanze, WPF offre un efficiente sistema di layout estendibile.
 
@@ -323,7 +323,7 @@ Il supporto di animazione di WPF consente di fare crescere, muovere, ruotare e d
 
 Per altre informazioni, vedere [Cenni preliminari sull'animazione](graphics-multimedia/animation-overview.md).
 
-## <a name="media"></a>Elemento multimediale
+## <a name="media"></a>Supporto
 
 L'uso di supporti audiovisivi è un modo per inserire contenuto dettagliato. WPF offre un supporto speciale per immagini, video e audio.
 
@@ -394,7 +394,7 @@ Nella figura seguente viene illustrato il risultato:
 
 ![Controllo TextBox contenente testo](media/introduction-to-wpf/wpfintrofigure21.png)
 
-Gli altri controlli, tuttavia, possono contenere più elementi di tipi diversi di contenuto. Il contenuto di un oggetto <xref:System.Windows.Controls.Button>, specificato dalla proprietà <xref:System.Windows.Controls.ContentControl.Content%2A>, può contenere vari elementi, inclusi i controlli di layout, testo, immagini e forme. Nell'esempio seguente viene illustrato un <xref:System.Windows.Controls.Button> con contenuto che include un <xref:System.Windows.Controls.DockPanel>, un <xref:System.Windows.Controls.Label>, un <xref:System.Windows.Controls.Border>e un <xref:System.Windows.Controls.MediaElement>:
+Gli altri controlli, tuttavia, possono contenere più elementi di tipi diversi di contenuto. Il contenuto di un oggetto <xref:System.Windows.Controls.Button>, specificato dalla proprietà <xref:System.Windows.Controls.ContentControl.Content%2A> , può contenere vari elementi, inclusi i controlli di layout, testo, immagini e forme. Nell'esempio seguente viene illustrato un <xref:System.Windows.Controls.Button> con contenuto che include un <xref:System.Windows.Controls.DockPanel>, un <xref:System.Windows.Controls.Label>, un <xref:System.Windows.Controls.Border>e un <xref:System.Windows.Controls.MediaElement>:
 
 ```xaml
 <Window
@@ -422,7 +422,7 @@ Nella figura seguente viene illustrato il contenuto di questo pulsante:
 
 Per altre informazioni sui tipi di contenuto supportati dai vari controlli, vedere [Modello di contenuto WPF](controls/wpf-content-model.md).
 
-### <a name="triggers"></a>Trigger
+### <a name="triggers"></a>trigger
 
 Anche se lo scopo principale del markup XAML consiste nell'implementare l'aspetto di un'applicazione, è anche possibile usare XAML per implementare alcuni aspetti del comportamento di un'applicazione. Un esempio è dato dall'uso dei trigger per modificare l'aspetto di un'applicazione in base alle interazioni dell'utente. Per altre informazioni, vedere [stili e modelli](../../desktop-wpf/fundamentals/styles-templates-overview.md).
 

@@ -18,17 +18,17 @@ ms.locfileid: "76741222"
   
  Il Windows Forms controllo <xref:System.Windows.Forms.ProgressBar> indica lo stato di avanzamento di un'azione visualizzando un numero appropriato di rettangoli disposti in una barra orizzontale. Quando l'azione viene completata, la barra viene riempita. Gli indicatori di stato vengono comunemente usati per fornire all'utente un'indicazione del tempo di attesa per il completamento di un'azione prolungata, ad esempio quando viene caricato un file di grandi dimensioni.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Panoramica sul controllo ProgressBar](progressbar-control-overview-windows-forms.md)  
  Introduce i concetti generali del controllo <xref:System.Windows.Forms.ProgressBar>, che consente di visualizzare graficamente lo stato di avanzamento di un'operazione.  
   
  [Procedura: Impostare il valore visualizzato da un controllo ProgressBar di Windows Form](how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control.md)  
  Vengono illustrati alcuni modi diversi per aumentare il valore visualizzato dal controllo <xref:System.Windows.Forms.ProgressBar>.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.ProgressBar>  
  Fornisce informazioni di riferimento sulla classe e sui relativi membri.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)  
+ [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)  
  Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.
