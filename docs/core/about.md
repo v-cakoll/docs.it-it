@@ -2,12 +2,12 @@
 title: Informazioni su .NET Core
 description: Informazioni su .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: 12611c2cd0b872a683d070ff17dcf9f111578627
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
-ms.translationtype: MT
+ms.openlocfilehash: e5460fd1d968a49478a1bdc5f18962de2c7cbbe0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900625"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920953"
 ---
 # <a name="about-net-core"></a>Informazioni su .NET Core
 
@@ -58,14 +58,14 @@ Questa integrazione viene fornita, in parte, dai collaboratori dei progetti [Omn
 
 - Il [runtime di .NET Core](https://github.com/dotnet/runtime/tree/master/src/coreclr), che fornisce un sistema di tipi, il caricamento di assembly, una Garbage Collector, l'interoperabilità nativa e altri servizi di base. Le [librerie .NET Core Framework](https://github.com/dotnet/runtime/tree/master/src/libraries) forniscono tipi di dati primitivi, tipi di composizione delle app e utilità fondamentali.
 - Il [runtime di ASP.NET Core](https://github.com/dotnet/aspnetcore), che fornisce un Framework per la compilazione di moderne applicazioni connesse a Internet basate su cloud, ad esempio app Web, app per le cose e backend per dispositivi mobili.
-- Gli [strumenti dell'interfaccia della riga di comando di .NET Core](https://github.com/dotnet/sdk) e compilatori di linguaggio ([Roslyn](https://github.com/dotnet/roslyn) e [F#](https://github.com/microsoft/visualfsharp)) che rendono possibile l'esperienza di sviluppo .NET Core.
-- [dotnet tool](https://github.com/dotnet/core-setup), usato per avviare le app e gli strumenti dell'interfaccia della riga di comando di .NET Core. Seleziona il runtime e ospita il runtime, fornisce un criterio di caricamento degli assembly e avvia le app e gli strumenti.
+- Il [.NET Core SDK](https://github.com/dotnet/sdk) e i compilatori[Roslyn](https://github.com/dotnet/roslyn) di linguaggio [F#](https://github.com/microsoft/visualfsharp)(Roslyn e) che consentono l'esperienza di sviluppo di .NET Core.
+- Il [comando DotNet](./tools/dotnet.md), che viene usato per avviare le app .NET Core e i comandi dell'interfaccia della riga di comando. Seleziona il runtime e ospita il runtime, fornisce un criterio di caricamento degli assembly e avvia le app e gli strumenti.
 
 Questi componenti sono distribuiti nei modi seguenti:
 
 - [Runtime di .NET Core](https://dotnet.microsoft.com/download): include il runtime e le librerie del framework .NET Core.
 - [Runtime di ASP.NET Core](https://dotnet.microsoft.com/download): include il runtime e le librerie dei framework ASP.NET Core e .NET Core.
-- [.NET Core SDK](https://dotnet.microsoft.com/download): include gli strumenti dell'interfaccia della riga di comando di .NET, il runtime di ASP.NET Core, nonché il runtime e il framework .NET Core.
+- [.NET Core SDK](https://dotnet.microsoft.com/download) : include le interfaccia della riga di comando di .NET Core, il runtime di ASP.NET Core e il runtime e il Framework di .NET Core.
 
 ### <a name="open-source"></a>Open source
 
