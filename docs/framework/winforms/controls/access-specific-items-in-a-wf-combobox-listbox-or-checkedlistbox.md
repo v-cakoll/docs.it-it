@@ -20,12 +20,12 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76746332"
 ---
-# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a><span data-ttu-id="9a449-102">Procedura: accedere a elementi specifici di un controllo ComboBox, ListBox o CheckedListBox Windows Form</span><span class="sxs-lookup"><span data-stu-id="9a449-102">How to: Access Specific Items in a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>
-<span data-ttu-id="9a449-103">L'accesso a elementi specifici in una casella combinata Windows Forms, una casella di riepilogo o una casella di riepilogo selezionata è un'attività essenziale.</span><span class="sxs-lookup"><span data-stu-id="9a449-103">Accessing specific items in a Windows Forms combo box, list box, or checked list box is an essential task.</span></span> <span data-ttu-id="9a449-104">Consente di determinare a livello di codice ciò che si trova in un elenco, in una determinata posizione.</span><span class="sxs-lookup"><span data-stu-id="9a449-104">It enables you to programmatically determine what is in a list, at any given position.</span></span>  
+# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a><span data-ttu-id="e14d3-102">Procedura: accedere a elementi specifici di un controllo ComboBox, ListBox o CheckedListBox Windows Form</span><span class="sxs-lookup"><span data-stu-id="e14d3-102">How to: Access Specific Items in a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>
+<span data-ttu-id="e14d3-103">L'accesso a elementi specifici in una casella combinata Windows Forms, una casella di riepilogo o una casella di riepilogo selezionata è un'attività essenziale.</span><span class="sxs-lookup"><span data-stu-id="e14d3-103">Accessing specific items in a Windows Forms combo box, list box, or checked list box is an essential task.</span></span> <span data-ttu-id="e14d3-104">Consente di determinare a livello di codice ciò che si trova in un elenco, in una determinata posizione.</span><span class="sxs-lookup"><span data-stu-id="e14d3-104">It enables you to programmatically determine what is in a list, at any given position.</span></span>  
   
-### <a name="to-access-a-specific-item"></a><span data-ttu-id="9a449-105">Per accedere a un elemento specifico</span><span class="sxs-lookup"><span data-stu-id="9a449-105">To access a specific item</span></span>  
+### <a name="to-access-a-specific-item"></a><span data-ttu-id="e14d3-105">Per accedere a un elemento specifico</span><span class="sxs-lookup"><span data-stu-id="e14d3-105">To access a specific item</span></span>  
   
-1. <span data-ttu-id="9a449-106">Eseguire una query sulla raccolta di `Items` usando l'indice dell'elemento specifico:</span><span class="sxs-lookup"><span data-stu-id="9a449-106">Query the `Items` collection using the index of the specific item:</span></span>  
+1. <span data-ttu-id="e14d3-106">Eseguire una query sulla raccolta di `Items` usando l'indice dell'elemento specifico:</span><span class="sxs-lookup"><span data-stu-id="e14d3-106">Query the `Items` collection using the index of the specific item:</span></span>  
   
     ```vb  
     Private Function GetItemText(i As Integer) As String  
@@ -51,9 +51,9 @@ ms.locfileid: "76746332"
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="9a449-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9a449-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e14d3-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e14d3-107">See also</span></span>
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms.CheckedListBox>
-- [<span data-ttu-id="9a449-108">Controlli Windows Form usati per elencare opzioni</span><span class="sxs-lookup"><span data-stu-id="9a449-108">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)
+- [<span data-ttu-id="e14d3-108">Controlli Windows Form usati per elencare opzioni</span><span class="sxs-lookup"><span data-stu-id="e14d3-108">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)

@@ -13,29 +13,29 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76739784"
 ---
-# <a name="adjusting-the-size-and-scale-of-windows-forms"></a><span data-ttu-id="63c4d-102">Regolazione delle dimensioni e della scalabilità di Windows Forms</span><span class="sxs-lookup"><span data-stu-id="63c4d-102">Adjusting the size and scale of Windows Forms</span></span>
-<span data-ttu-id="63c4d-103">Questo argomento fornisce collegamenti a informazioni sul ridimensionamento dei Windows Form.</span><span class="sxs-lookup"><span data-stu-id="63c4d-103">This topic provides links to information about resizing Windows Forms.</span></span>  
+# <a name="adjusting-the-size-and-scale-of-windows-forms"></a><span data-ttu-id="76157-102">Regolazione delle dimensioni e della scalabilità di Windows Forms</span><span class="sxs-lookup"><span data-stu-id="76157-102">Adjusting the size and scale of Windows Forms</span></span>
+<span data-ttu-id="76157-103">Questo argomento fornisce collegamenti a informazioni sul ridimensionamento dei Windows Form.</span><span class="sxs-lookup"><span data-stu-id="76157-103">This topic provides links to information about resizing Windows Forms.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="63c4d-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="63c4d-104">In This Section</span></span>  
- [<span data-ttu-id="63c4d-105">Procedura: Ridimensionare Windows Form</span><span class="sxs-lookup"><span data-stu-id="63c4d-105">How to: Resize Windows Forms</span></span>](how-to-resize-windows-forms.md)  
- <span data-ttu-id="63c4d-106">Fornisce istruzioni per specificare le dimensioni di Windows Form.</span><span class="sxs-lookup"><span data-stu-id="63c4d-106">Provides instructions for specifying the size of Windows Forms.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="76157-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="76157-104">In This Section</span></span>  
+ [<span data-ttu-id="76157-105">Procedura: Ridimensionare Windows Form</span><span class="sxs-lookup"><span data-stu-id="76157-105">How to: Resize Windows Forms</span></span>](how-to-resize-windows-forms.md)  
+ <span data-ttu-id="76157-106">Fornisce istruzioni per specificare le dimensioni di Windows Form.</span><span class="sxs-lookup"><span data-stu-id="76157-106">Provides instructions for specifying the size of Windows Forms.</span></span>  
   
- [<span data-ttu-id="63c4d-107">Ridimensionamento automatico in Windows Form</span><span class="sxs-lookup"><span data-stu-id="63c4d-107">Automatic Scaling in Windows Forms</span></span>](automatic-scaling-in-windows-forms.md)  
- <span data-ttu-id="63c4d-108">Descrive come il ridimensionamento automatico consente di visualizzare in modo appropriato un form e i relativi controlli tra computer.</span><span class="sxs-lookup"><span data-stu-id="63c4d-108">Discusses how automatic scaling enables a form and its controls to be displayed appropriately between machines.</span></span>  
+ [<span data-ttu-id="76157-107">Ridimensionamento automatico in Windows Form</span><span class="sxs-lookup"><span data-stu-id="76157-107">Automatic Scaling in Windows Forms</span></span>](automatic-scaling-in-windows-forms.md)  
+ <span data-ttu-id="76157-108">Descrive come il ridimensionamento automatico consente di visualizzare in modo appropriato un form e i relativi controlli tra computer.</span><span class="sxs-lookup"><span data-stu-id="76157-108">Discusses how automatic scaling enables a form and its controls to be displayed appropriately between machines.</span></span>  
   
- <span data-ttu-id="63c4d-109">[Supporto di valori DPI alti in Windows Forms](high-dpi-support-in-windows-forms.md)  </span><span class="sxs-lookup"><span data-stu-id="63c4d-109">[High DPI Support in Windows Forms](high-dpi-support-in-windows-forms.md)  </span></span>  
- <span data-ttu-id="63c4d-110">Viene illustrato il supporto di Windows Forms per valori DPI alti e scalabilità dinamica.</span><span class="sxs-lookup"><span data-stu-id="63c4d-110">Discusses Windows Forms' support for High DPI and dynamic scaling.</span></span> 
+ <span data-ttu-id="76157-109">[Supporto di valori DPI alti in Windows Forms](high-dpi-support-in-windows-forms.md)  </span><span class="sxs-lookup"><span data-stu-id="76157-109">[High DPI Support in Windows Forms](high-dpi-support-in-windows-forms.md)  </span></span>  
+ <span data-ttu-id="76157-110">Viene illustrato il supporto di Windows Forms per valori DPI alti e scalabilità dinamica.</span><span class="sxs-lookup"><span data-stu-id="76157-110">Discusses Windows Forms' support for High DPI and dynamic scaling.</span></span> 
   
-## <a name="reference"></a><span data-ttu-id="63c4d-111">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="63c4d-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="76157-111">Riferimento</span><span class="sxs-lookup"><span data-stu-id="76157-111">Reference</span></span>  
  <xref:System.Drawing.Size>  
- <span data-ttu-id="63c4d-112">Descrive la classe e include collegamenti a tutti i relativi membri.</span><span class="sxs-lookup"><span data-stu-id="63c4d-112">Describes this class and has links to all of its members.</span></span>  
+ <span data-ttu-id="76157-112">Descrive la classe e include collegamenti a tutti i relativi membri.</span><span class="sxs-lookup"><span data-stu-id="76157-112">Describes this class and has links to all of its members.</span></span>  
   
  <xref:System.Windows.Forms.TableLayoutPanel>  
- <span data-ttu-id="63c4d-113">Descrive la classe e include collegamenti a tutti i relativi membri.</span><span class="sxs-lookup"><span data-stu-id="63c4d-113">Describes this class and has links to all of its members.</span></span>  
+ <span data-ttu-id="76157-113">Descrive la classe e include collegamenti a tutti i relativi membri.</span><span class="sxs-lookup"><span data-stu-id="76157-113">Describes this class and has links to all of its members.</span></span>  
   
  <xref:System.Windows.Forms.FlowLayoutPanel>  
- <span data-ttu-id="63c4d-114">Descrive la classe e include collegamenti a tutti i relativi membri.</span><span class="sxs-lookup"><span data-stu-id="63c4d-114">Describes this class and has links to all of its members.</span></span>  
+ <span data-ttu-id="76157-114">Descrive la classe e include collegamenti a tutti i relativi membri.</span><span class="sxs-lookup"><span data-stu-id="76157-114">Describes this class and has links to all of its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="63c4d-115">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="63c4d-115">Related sections</span></span>  
- [<span data-ttu-id="63c4d-116">Modifica dell'aspetto di Windows Forms</span><span class="sxs-lookup"><span data-stu-id="63c4d-116">Changing the appearance of Windows Forms</span></span>](changing-the-appearance-of-windows-forms.md)  
- <span data-ttu-id="63c4d-117">Fornisce collegamenti ad argomenti che descrivono altri modi per modificare l'aspetto di Windows Form.</span><span class="sxs-lookup"><span data-stu-id="63c4d-117">Provides links to topics describing other ways to change the appearance of Windows Forms.</span></span>
+## <a name="related-sections"></a><span data-ttu-id="76157-115">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="76157-115">Related sections</span></span>  
+ [<span data-ttu-id="76157-116">Modifica dell'aspetto di Windows Forms</span><span class="sxs-lookup"><span data-stu-id="76157-116">Changing the appearance of Windows Forms</span></span>](changing-the-appearance-of-windows-forms.md)  
+ <span data-ttu-id="76157-117">Fornisce collegamenti ad argomenti che descrivono altri modi per modificare l'aspetto di Windows Form.</span><span class="sxs-lookup"><span data-stu-id="76157-117">Provides links to topics describing other ways to change the appearance of Windows Forms.</span></span>
