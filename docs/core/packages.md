@@ -3,22 +3,22 @@ title: Pacchetti, metapacchetti e Framework-.NET Core
 description: Informazioni sulla terminologia relativa a pacchetti, metapacchetti e framework.
 author: richlander
 ms.date: 06/20/2016
-ms.openlocfilehash: 6a8e257ebf493365518dd9663fbd2a9cadc83875
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 657519edf1c0860ee3222c71ce85723e19029a9d
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116062"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965893"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Pacchetti, metapacchetti e framework
 
-.NET Core è una piattaforma costituita da pacchetti NuGet. Alcuni prodotti traggono vantaggio da una definizione dei pacchetti con granularità fine, mentre altri da una definizione con granularità più grossolana. Per tenere conto di questo dualismo, il prodotto viene distribuito come set di pacchetti con granularità fine e quindi viene descritto in blocchi più grossolani con un tipo di pacchetto denominato in modo informale [metapacchetto](#metapackages).
+.NET Core è una piattaforma costituita da pacchetti NuGet. Alcuni prodotti traggono vantaggio da una definizione dei pacchetti con granularità fine, mentre altri da una definizione con granularità più grossolana. Per supportare questa dualità, .NET Core viene distribuito come set di pacchetti con granularità fine e in blocchi più grossolani con un tipo di pacchetto denominato in modo informale da un [metapacchetto](#metapackages).
 
-Ciascuno dei pacchetti .NET Core supporta l'esecuzione su più implementazioni di .NET, rappresentate come framework. Alcuni di questi framework sono tradizionali, ad esempio `net46`, e rappresentano l'istanza .NET Framework. Un altro insieme è costituito da nuovi framework che possono essere considerati come "framework basati su pacchetti", il che stabilisce un nuovo modello di definizione dei framework stessi. Questi framework basati su pacchetti sono interamente formati e definiti come pacchetti, creando una forte relazione tra pacchetti e framework.
+Ognuno dei pacchetti .NET Core supporta l'esecuzione su più implementazioni di .NET, rappresentate come Framework. Alcuni di questi Framework sono Framework tradizionali, come `net46`, che rappresenta l'.NET Framework. Un altro insieme è costituito da nuovi framework che possono essere considerati come "framework basati su pacchetti", il che stabilisce un nuovo modello di definizione dei framework stessi. Questi framework basati su pacchetti sono interamente creati e definiti come pacchetti, creando una relazione forte tra pacchetti e Framework.
 
 ## <a name="packages"></a>Pacchetti
 
-.NET Core è suddiviso in un set di pacchetti che forniscono primitive, tipi di dati di livello superiore, tipi di composizione delle app e utilità comuni. Ognuno di questi pacchetti rappresenta un singolo assembly con lo stesso nome. Ad esempio, il [pacchetto System. Runtime](https://www.nuget.org/packages/System.Runtime) contiene System. Runtime. dll. 
+.NET Core è suddiviso in un set di pacchetti che forniscono primitive, tipi di dati di livello superiore, tipi di composizione delle app e utilità comuni. Ognuno di questi pacchetti rappresenta un singolo assembly con lo stesso nome. Ad esempio, il [pacchetto System. Runtime](https://www.nuget.org/packages/System.Runtime) contiene System. Runtime. dll.
 
 La definizione dei pacchetti con granularità fine presenta alcuni vantaggi:
 
@@ -38,7 +38,7 @@ Di seguito è riportato un elenco dei principali pacchetti NuGet per .NET Core:
 - [System.Linq](https://www.nuget.org/packages/System.Linq): set di tipi per le query su oggetti, che include `Enumerable` e <xref:System.Linq.ILookup%602>.
 - [System.Reflection](https://www.nuget.org/packages/System.Reflection): set di tipi per il caricamento, l'analisi e l'attivazione, che include <xref:System.Reflection.Assembly>, <xref:System.Reflection.TypeInfo> e <xref:System.Reflection.MethodInfo>.
 
-In genere, anziché includere ogni pacchetto, è più semplice e affidabile includere un [metapacchetto](#metapackages). Tuttavia, se è necessario usare un singolo pacchetto, è possibile includerlo come mostrato nell'esempio seguente, che fa riferimento al pacchetto [System.Runtime](https://www.nuget.org/packages/System.Runtime/). 
+In genere, anziché includere ogni pacchetto, è più semplice e affidabile includere un [metapacchetto](#metapackages). Tuttavia, se è necessario usare un singolo pacchetto, è possibile includerlo come mostrato nell'esempio seguente, che fa riferimento al pacchetto [System.Runtime](https://www.nuget.org/packages/System.Runtime/).
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -53,24 +53,24 @@ In genere, anziché includere ogni pacchetto, è più semplice e affidabile incl
 
 ## <a name="metapackages"></a>Metapacchetti
 
-I metapacchetti sono una convenzione di NuGet per descrivere un set di pacchetti che sono significativi insieme. I metapacchetti rappresentano questo set di pacchetti trasformandoli in dipendenze. Facoltativamente, stabiliscono un framework per questo set di pacchetti specificando appunto un framework. 
+Un metapacchetto è una convenzione di pacchetti NuGet per descrivere un set di pacchetti che sono significativi insieme. Un metapacchetto rappresenta questo set di pacchetti rendendoli le dipendenze. Il metapacchetto può facoltativamente definire un Framework per il set di pacchetti specificando un Framework.
 
 Le versioni precedenti degli strumenti di .NET Core (gli strumenti project.json e gli strumenti basati su csproj) specificavano un framework e un metapacchetto. Il framework di destinazione fa attualmente riferimento in modo implicito al metapacchetto, in modo che ogni metapacchetto sia associato a un framework di destinazione. Ad esempio, il framework `netstandard1.6` fa riferimento a NetStandard.Library versione 1.6.0. Analogamente, il framework `netcoreapp2.1` fa riferimento al metapacchetto Microsoft.NETCore.App versione 2.1.0. Per altre informazioni, vedere [Implicit metapackage package reference in the .NET Core SDK](https://github.com/dotnet/core/blob/master/release-notes/1.0/sdk/1.0-rc3-implicit-package-refs.md) (Riferimento implicito a un pacchetto di un metapacchetto in .NET Core SDK).
 
-La destinazione a un framework e il riferimento implicito a un metapacchetto implica che in realtà viene aggiunto un riferimento a ogni pacchetto dipendente con una singola operazione. Ciò rende disponibili tutte le librerie incluse nei pacchetti per IntelliSense (o metodi simili) e per la pubblicazione dell'app.  
+La destinazione di un Framework e il riferimento implicito a un metapacchetto significa che, in effetti, si aggiunge un riferimento a ogni pacchetto dipendente come singolo gesto. Ciò rende disponibili tutte le librerie incluse nei pacchetti per IntelliSense (o metodi simili) e per la pubblicazione dell'app.
 
 L'uso dei metapacchetti presenta i vantaggi seguenti:
 
-- Fornisce un'esperienza utente che consente di fare facilmente riferimento a un elevato numero di pacchetti con granularità fine. 
+- Fornisce un'esperienza utente che consente di fare facilmente riferimento a un elevato numero di pacchetti con granularità fine.
 - Definisce un set di pacchetti (incluse versioni specifiche) che vengono testati e funzionano bene insieme.
 
 Il metapacchetto di .NET Standard è:
 
-- [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library): descrive le librerie che fanno parte di ".NET Standard". Si applica a tutte le implementazioni .NET che supportano .NET Standard, ad esempio .NET Framework, .NET Core e Mono. Stabilisce il framework 'netstandard'.
+- [NETStandard. Library](https://www.nuget.org/packages/NETStandard.Library) : descrive le librerie che fanno parte di .NET standard. Si applica a tutte le implementazioni di .NET che supportano .NET Standard, ad esempio .NET Framework, .NET Core e mono. Stabilisce il Framework `netstandard`.
 
 I metapacchetti principali di .NET Core sono:
 
-- [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App): descrive le librerie che fanno parte della distribuzione .NET Core. Stabilisce il framework [`.NETCoreApp`](https://github.com/dotnet/core-setup/blob/release/1.1.0/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj). Dipende dalla `NETStandard.Library` di minori dimensioni.
+- [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App): descrive le librerie che fanno parte della distribuzione .NET Core. Stabilisce il Framework `.NETCoreApp`. Dipende dalla `NETStandard.Library` di minori dimensioni.
 - [Microsoft.AspNetCore.All](https://www.nuget.org/packages/Microsoft.AspNetCore.App): include tutti i pacchetti supportati da ASP.NET Core ed Entity Framework Core, ad eccezione di quelli che contengono dipendenze di terze parti. Per altre informazioni, vedere [Metapacchetto Microsoft.AspNetCore.All per ASP.NET Core](/aspnet/core/fundamentals/metapackage-app).
 - [Microsoft.AspNetCore.All](https://www.nuget.org/packages/Microsoft.AspNetCore.All) - Include tutti i pacchetti supportati da ASP.NET Core, Entity Framework Core e dipendenze interne e di terze parti usate da ASP.NET Core ed Entity Framework Core. Per altre informazioni, vedere [Metapacchetto Microsoft.AspNetCore.All per ASP.NET Core 2.x](/aspnet/core/fundamentals/metapackage).
 - [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility): set di caratteristiche di compatibilità che abilitano l'esecuzione in .NET Core di librerie di classi portabili basate su mscorlib.
@@ -85,11 +85,11 @@ Ad esempio, [System.IO.FileSystem](https://www.nuget.org/packages/System.IO.File
 - .NETStandard,versione 1.3
 - 6 piattaforme Xamarin, ad esempio xamarinios10
 
-È utile confrontare i primi due di questi framework, in quanto sono esempi dei due diversi modi di definire i framework.
+È utile confrontare i primi due di questi Framework, in quanto sono esempi dei due diversi modi di definire i Framework:
 
-Il framework `.NETFramework,Version=4.6` rappresenta le API disponibili in .NET Framework 4.6. È possibile creare librerie compilate con assembly di riferimento .NET Framework 4.6 e quindi distribuirle in pacchetti NuGet in una cartella 'lib' net46. Questo procedimento verrà usato per app che hanno come destinazione .NET Framework 4.6 o che sono compatibili con esso. Quella sopra descritta è la tradizionale modalità di funzionamento dei framework.
+- Il Framework `.NETFramework,Version=4.6` rappresenta le API disponibili nella .NET Framework 4,6. È possibile creare librerie compilate con gli assembly di riferimento .NET Framework 4,6 e quindi distribuire tali librerie in pacchetti NuGet in una cartella ' net46 lib. Verrà usato per le app destinate a .NET Framework 4,6 o compatibili con esso. Quella sopra descritta è la tradizionale modalità di funzionamento dei framework.
 
-`.NETStandard,Version=1.3` è un framework basato su pacchetti. Si basa su pacchetti che hanno come destinazione il framework per definire ed esporre le API in termini di framework.
+- `.NETStandard,Version=1.3` è un framework basato su pacchetti. Si basa su pacchetti che hanno come destinazione il framework per definire ed esporre le API in termini di framework.
 
 ## <a name="package-based-frameworks"></a>Framework basati su pacchetti
 
@@ -108,7 +108,7 @@ I due principali framework basati su pacchetti usati con .NET Core sono i seguen
 
 ### <a name="net-standard"></a>.NET Standard
 
-Il framework .NET Standard ([moniker framework di destinazione](../standard/frameworks.md): `netstandard`) rappresenta le API definite e create sulla base di [.NET Standard](../standard/net-standard.md). Le librerie che devono essere eseguite in più runtime devono avere come destinazione questo framework. Saranno supportati in qualsiasi runtime conforme a .NET Standard, ad esempio .NET Core, .NET Framework e mono/Novell. Ciascuno di questi runtime supporta un set di versioni di .NET Standard, a seconda delle API implementate.
+Il Framework .NET Standard ([moniker Framework di destinazione](../standard/frameworks.md): `netstandard`) rappresenta le API definite da e compilate in base ai [.NET standard](../standard/net-standard.md). Le librerie che devono essere eseguite in più runtime devono avere come destinazione questo framework. Saranno supportati in qualsiasi runtime conforme a .NET Standard, ad esempio .NET Core, .NET Framework e mono/Novell. Ciascuno di questi runtime supporta un set di versioni di .NET Standard, a seconda delle API implementate.
 
 Il framework `netstandard` fa riferimento in modo implicito al metapacchetto [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library). Ad esempio, il file di progetto MSBuild seguente indica che il progetto è destinato a `netstandard1.6`, che fa riferimento al metapacchetto di [`NETStandard.Library` versione 1.6](https://www.nuget.org/packages/NETStandard.Library/1.6.0).
 
@@ -131,14 +131,14 @@ Tuttavia, i riferimenti al framework e al metapacchetto nel file di progetto non
 </Project>
 ```
 
-Può sembrare strano definire come destinazione `netstandard1.3` ma usare la versione 1.6.0 della `NETStandard.Library`. Si tratta di un caso di uso valido, dal momento che il metapacchetto mantiene il supporto per le precedenti versioni di `netstandard`. Può trattarsi di una situazione in cui è stata definita come standard la versione 1.6.0 del pacchetto e tale versione è stata usata per tutte le librerie, che hanno come destinazione un'ampia gamma di versioni di `netstandard`. Con questo approccio, è sufficiente ripristinare `NETStandard.Library` 1.6.0 e non le versioni precedenti. 
+Può sembrare strano definire come destinazione `netstandard1.3` ma usare la versione 1.6.0 della `NETStandard.Library`. Si tratta di un caso di uso valido, dal momento che il metapacchetto mantiene il supporto per le precedenti versioni di `netstandard`. Può trattarsi di una situazione in cui è stata definita come standard la versione 1.6.0 del pacchetto e tale versione è stata usata per tutte le librerie, che hanno come destinazione un'ampia gamma di versioni di `netstandard`. Con questo approccio, è sufficiente ripristinare `NETStandard.Library` 1.6.0 e non le versioni precedenti.
 
-La situazione opposta, ovvero la definizione di `netstandard1.6` come destinazione con la versione 1.3.0 della `NETStandard.Library`, non è valida. Non è possibile definire come destinazione la versione più recente di un framework con una versione precedente di un metapacchetto. La versione precedente del metapacchetto, infatti, non espone alcuna risorsa per la versione più recente del framework. Lo schema di controllo delle versioni per i metapacchetti impone che questi ultimi siano di una versione più recente del framework che descrivono. In base a questo schema di versionamento, la prima versione della `NETStandard.Library` è la 1.6.0, dato che contiene le risorse `netstandard1.6`. La versione 1.3.0 viene usata nell'esempio precedente per simmetria, ma di fatto non esiste.
+La situazione opposta, ovvero la definizione di `netstandard1.6` come destinazione con la versione 1.3.0 della `NETStandard.Library`, non è valida. Non è possibile definire come destinazione la versione più recente di un framework con una versione precedente di un metapacchetto. La versione precedente del metapacchetto, infatti, non espone alcuna risorsa per la versione più recente del framework. Lo schema di controllo delle versioni per i metapacchetti impone che questi ultimi siano di una versione più recente del framework che descrivono. In base a questo schema di versionamento, la prima versione della `NETStandard.Library` è la 1.6.0, dato che contiene le risorse `netstandard1.6`. Per la simmetria con l'esempio precedente, v 1.3.0 viene usato qui, ma in realtà non esiste.
 
 ### <a name="net-core-application"></a>Applicazione .NET Core
 
-Il framework .NET Core ([ moniker framework di destinazione](../standard/frameworks.md): `netcoreapp`) rappresenta i pacchetti e le API associate inclusi nella distribuzione .NET Core e con il modello di applicazione console fornito. Le app .NET Core devono usare questo framework poiché hanno come destinazione il modello dell'applicazione console. Devono usare questo framework anche le librerie da eseguire solo in .NET Core. L'uso di questo framework impone che le app e le librerie vengano eseguite solo in .NET Core. 
+Il framework .NET Core ([ moniker framework di destinazione](../standard/frameworks.md): `netcoreapp`) rappresenta i pacchetti e le API associate inclusi nella distribuzione .NET Core e con il modello di applicazione console fornito. Le app .NET Core devono usare questo framework poiché hanno come destinazione il modello dell'applicazione console. Devono usare questo framework anche le librerie da eseguire solo in .NET Core. L'uso di questo framework impone che le app e le librerie vengano eseguite solo in .NET Core.
 
-Il metapacchetto `Microsoft.NETCore.App` ha come destinazione il framework `netcoreapp`. Consente l'accesso a circa 60 librerie, circa 40 fornite dal pacchetto `NETStandard.Library` e le rimanenti 20 in aggiunta. È possibile fare riferimento a librerie aggiuntive che hanno come destinazione `netcoreapp` o framework compatibili, ad esempio `netstandard`, per ottenere l'accesso ad altre API. 
+Il metapacchetto `Microsoft.NETCore.App` ha come destinazione il framework `netcoreapp`. Consente l'accesso a circa 60 librerie, circa 40 fornite dal pacchetto `NETStandard.Library` e le rimanenti 20 in aggiunta. È possibile fare riferimento a librerie aggiuntive che hanno come destinazione `netcoreapp` o framework compatibili, ad esempio `netstandard`, per ottenere l'accesso ad altre API.
 
-Anche la maggior parte delle librerie fornite da `Microsoft.NETCore.App` ha come destinazione `netstandard`, dato che le relative dipendenze sono soddisfatte da altre librerie `netstandard`. Questo significa che anche le librerie `netstandard` possono fare riferimento a tali pacchetti come dipendenze. 
+Anche la maggior parte delle librerie fornite da `Microsoft.NETCore.App` ha come destinazione `netstandard`, dato che le relative dipendenze sono soddisfatte da altre librerie `netstandard`. Questo significa che anche le librerie `netstandard` possono fare riferimento a tali pacchetti come dipendenze.

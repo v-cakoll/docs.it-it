@@ -4,18 +4,18 @@ description: Informazioni su come documentare il codice con commenti della docum
 ms.date: 01/21/2020
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: ef0d22e0ee7faa3ba51da6b44cf1827f19baf4f1
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 1ec088db1de7c953bdb20b1129c5fd40f9e31454
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787828"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965932"
 ---
 # <a name="document-your-code-with-xml-comments"></a>Documentare il codice con commenti XML
 
 I commenti in formato documentazione XML sono commenti speciali, aggiunti alla definizione di ogni tipo o membro definito dall'utente.
 Sono speciali perché possono essere elaborati dal compilatore per generare un file di documentazione XML in fase di compilazione.
-Il file XML generato dal compilatore può essere distribuito insieme agli assembly .NET in modo che Visual Studio e altri IDE possano usare IntelliSense per visualizzare informazioni rapide su tipi o membri. È anche possibile eseguire il file XML tramite strumenti, ad esempio [DocFX](https://dotnet.github.io/docfx/) e [Sandcastle](https://github.com/EWSoftware/SHFB) per generare i siti Web di riferimento all'API.
+Il file XML generato dal compilatore può essere distribuito insieme all'assembly .NET in modo che Visual Studio e altri IDE possano usare IntelliSense per visualizzare informazioni rapide sui tipi o i membri. È anche possibile eseguire il file XML tramite strumenti, ad esempio [DocFX](https://dotnet.github.io/docfx/) e [Sandcastle](https://github.com/EWSoftware/SHFB) per generare i siti Web di riferimento all'API.
 
 I commenti in formato documentazione XML, come tutti gli altri commenti, vengono ignorati dal compilatore.
 
@@ -49,7 +49,7 @@ Questo è il codice per la semplice libreria matematica:
 
 [!code-csharp[Sample Library](../../samples/snippets/csharp/concepts/codedoc/sample-library.cs)]
 
-La libreria di esempio supporta quattro operazioni aritmetiche principali, ovvero `add`, `subtract`, `multiply` e `divide` su tipi di dati `int` e `double`.
+La libreria di esempio supporta quattro operazioni aritmetiche principali (`add`, `subtract`, `multiply`e `divide`) sui tipi di dati `int` e `double`.
 
 È ora possibile creare un documento di riferimento per le API dal codice per gli sviluppatori di terze parti che usano la libreria ma non hanno accesso al codice sorgente.
 Come accennato in precedenza, è possibile usare tag della documentazione XML a questo scopo. Verranno ora presentati i tag XML standard supportati dal compilatore C#.
@@ -61,7 +61,7 @@ Ne viene illustrato l'uso aggiungendolo alla definizione di classe `Math` e al p
 
 [!code-csharp[Summary Tag](~/samples/snippets/csharp/concepts/codedoc/summary-tag.cs)]
 
-Il tag `<summary>` è molto importante ed è consigliabile includerlo perché il suo contenuto è l'origine principale di informazioni sul tipo o sul membro in IntelliSense o in un documento di riferimento all'API.
+Il tag `<summary>` è importante ed è consigliabile includerlo perché il relativo contenuto è la fonte principale di informazioni sul tipo o sul membro in IntelliSense o un documento di riferimento dell'API.
 
 ## <a name="remarks"></a>\<remarks>
 
@@ -150,7 +150,7 @@ Aggiungere un metodo generico semplice alla classe `Math` per verificare se una 
 
 ## <a name="paramref"></a>\<paramref>
 
-A volte è possibile che durante la descrizione dell'operazione di un metodo in un tag `<summary>` si vuole fare un riferimento a un parametro. Il tag `<paramref>` è molto utile per questa operazione. Ora si aggiorna il riepilogo del metodo `Add` basato su double. Analogamente al tag `<param>` il nome del parametro viene specificato nell'attributo `name` **obbligatorio** .
+A volte è possibile che durante la descrizione dell'operazione di un metodo in un tag `<summary>` si vuole fare un riferimento a un parametro. Il tag `<paramref>` è molto utile per questa operazione. Ora si aggiorna il riepilogo del metodo `Add` basato su double. Analogamente al tag `<param>`, il nome del parametro viene specificato nell'attributo `name` **obbligatorio** .
 
 [!code-csharp[Paramref Tag](~/samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
 
@@ -163,8 +163,7 @@ Il tag `<typeparamref>` viene usato allo stesso modo del tag `<paramref>`, ma in
 
 ## <a name="list"></a>\<list>
 
-Il tag `<list>` viene usato per formattare le informazioni sulla documentazione come elenco ordinato, elenco non ordinato o tabella.
-Creare un elenco non ordinato di ogni operazione matematica supportata dalla libreria `Math`.
+Usare il tag `<list>` per formattare le informazioni di documentazione come un elenco ordinato, un elenco non ordinato o una tabella. Creare un elenco non ordinato di ogni operazione matematica supportata dalla libreria `Math`.
 
 [!code-csharp[List Tag](~/samples/snippets/csharp/concepts/codedoc/list-tag.cs)]
 
@@ -207,7 +206,7 @@ L'attributo `path` rappresenta una query [XPath](../standard/data/xml/xpath-quer
 
 L'attributo `name` rappresenta l'identificatore di nome nel tag che precede i commenti.
 
-L'attributo `id` che può essere usato al posto di `name` rappresenta l'ID per il tag che precede i commenti.
+L'attributo `id`, che può essere usato al posto di `name`, rappresenta l'ID del tag che precede i commenti.
 
 ### <a name="user-defined-tags"></a>Tag definiti dall'utente
 
