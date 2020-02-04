@@ -1,27 +1,27 @@
 - name: Guida all'installazione
   href: index.md
   items:
-    - name: Installare .NET Framework in Windows 10 e Windows Server 2016
-      href: on-windows-10.md
-    - name: Installare .NET Framework in Windows 8.1 e Windows Server 2012 R2
-      href: on-windows-8-1.md
-    - name: Installare .NET Framework in Windows 8 e Windows Server 2012
-      href: on-windows-8.md
-    - name: Installare .NET Framework in Windows 7 SP1 e Windows Server 2008 R2
-      href: on-windows-7.md
-    - name: Installare .NET Framework in Windows Vista e Windows Server 2008
-      href: on-windows-vista.md
-    - name: Installare .NET Framework in Windows XP e Windows Server 2003
-      href: on-windows-xp.md
     - name: Guida all'installazione per sviluppatori
       href: guide-for-developers.md
+    - name: Windows 10 e Windows Server 2016
+      href: on-windows-10.md
+    - name: Windows 8.1 e Windows Server 2012 R2
+      href: on-windows-8-1.md
+    - name: Windows 8 e Windows Server 2012
+      href: on-windows-8.md
+    - name: Windows 7 SP1 e Windows Server 2008 R2
+      href: on-windows-7.md
+    - name: Windows Vista e Windows Server 2008
+      href: on-windows-vista.md
+    - name: Windows XP e Windows Server 2003
+      href: on-windows-xp.md
     - name: Ripristinare .NET Framework
       href: repair.md
-    - name: Risolvere i problemi relativi alle installazioni e disinstallazioni bloccate di .NET Framework
+    - name: Risolvere i problemi di installazione e disinstallazione
       href: troubleshoot-blocked-installations-and-uninstallations.md
-    - name: Risolvere il messaggio 'Impossibile avviare l'applicazione'
+    - name: Risolvere 'Impossibile avviare l'applicazione'
       href: application-not-started.md
-    - name: 'Installare .NET Framework 3.5 in Windows 10, Windows 8.1 e Windows 8'
+    - name: .NET Framework 3.5 da Windows 8 a Windows 10
       href: dotnet-35-windows-10.md
-    - name: 'Eseguire app .NET Framework 1.1 in Windows 8, Windows 8.1 o Windows 10'
+    - name: App .NET Framework 1.1 da Windows 8 a Windows 10
       href: run-net-framework-1-1-apps.md

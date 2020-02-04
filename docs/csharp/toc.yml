@@ -1511,7 +1511,7 @@
           items:
             - name: Vincolo new
               href: language-reference/keywords/new-constraint.md
-            - name: dove
+            - name: where
               href: language-reference/keywords/where-generic-type-constraint.md
         - name: Parole chiave di accesso
           items:
@@ -1532,21 +1532,21 @@
             - name: Riferimento rapido
               displayName: contextual keywords
               href: language-reference/keywords/contextual-keywords.md
-            - name: aggiunta
+            - name: add
               href: language-reference/keywords/add.md
             - name: get
               href: language-reference/keywords/get.md
-            - name: parziale (Tipo)
+            - name: partial (Tipo)
               href: language-reference/keywords/partial-type.md
             - name: partial (metodo)
               href: language-reference/keywords/partial-method.md
             - name: remove
               href: language-reference/keywords/remove.md
-            - name: imposta
+            - name: set
               href: language-reference/keywords/set.md
             - name: when (condizione di filtro)
               href: language-reference/keywords/when.md
-            - name: predefinito
+            - name: value
               href: language-reference/keywords/value.md
             - name: yield
               href: language-reference/keywords/yield.md
@@ -1575,7 +1575,7 @@
               href: language-reference/keywords/ascending.md
             - name: descending
               href: language-reference/keywords/descending.md
-            - name: attivo
+            - name: 'on'
               href: language-reference/keywords/on.md
             - name: equals
               href: language-reference/keywords/equals.md
@@ -1642,7 +1642,7 @@
         - name: Operatore await
           href: language-reference/operators/await.md
           displayName: async
-        - name: operatore predefinito
+        - name: operatore default
           href: language-reference/operators/default.md
           displayName: 'default value, default literal, type default'
         - name: Operatore delegate
