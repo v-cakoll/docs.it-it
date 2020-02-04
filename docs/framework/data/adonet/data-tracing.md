@@ -1,13 +1,13 @@
 ---
-title: Traccia dati in ADO.NET
+title: Traccia dei dati
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: f92a17374cf3df1281e51d54bae1a1dcf9e5ea03
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 2b2a33739619ba09e56d4cc9ce99c51423678918
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937621"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980223"
 ---
 # <a name="data-tracing-in-adonet"></a>Traccia dati in ADO.NET
 
@@ -31,7 +31,7 @@ Per ulteriori informazioni sull'impostazione e sulla configurazione della tracci
 
 ## <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Accesso alle informazioni diagnostiche nel registro di eventi esteso
 
-Nella .NET Framework provider di dati per SQL Server, la traccia di accesso ai dati ([traccia di accesso ai dati](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))) è stata aggiornata per semplificare la correlazione degli eventi client con informazioni di diagnostica, ad esempio errori di connessione, dal buffer circolare della connettività del server e dalle informazioni sulle prestazioni dell'applicazione nel log degli eventi estesi. Per ulteriori informazioni sulla lettura del log degli eventi estesi, vedere [View Event Session Data](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110)) (Visualizzare i dati di una sessione di eventi).
+Nella .NET Framework provider di dati per SQL Server, la traccia di accesso ai dati ([traccia di accesso ai dati](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))) è stata aggiornata per semplificare la correlazione degli eventi client con informazioni di diagnostica, ad esempio errori di connessione, dal buffer circolare della connettività del server e dalle informazioni sulle prestazioni dell'applicazione nel log degli eventi estesi. Per informazioni sulla lettura del log degli eventi estesi, vedere [visualizzare i dati della sessione eventi](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110)).
 
 Per le operazioni di connessione, ADO.NET invierà un ID della connessione client. Se la connessione non riesce, è possibile accedere al buffer circolare della connettività ([risoluzione dei problemi di connettività in SQL Server 2008 con il buffer circolare della connettività](https://docs.microsoft.com/archive/blogs/sql_protocols/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer)) e individuare il campo `ClientConnectionID` e ottenere informazioni di diagnostica sull'errore di connessione. Gli ID della connessione client vengono registrati nel buffer circolare solo se si verifica un errore. Se una connessione non riesce prima di inviare il pacchetto di preaccesso, non verrà generato alcun ID connessione client. L'ID connessione client è un GUID a 16 byte. È anche possibile trovare l'ID di connessione client nell'output di destinazione di eventi estesi, se l'azione `client_connection_id` viene aggiunta agli eventi in una sessione di eventi estesi. È possibile abilitare l'analisi di accesso ai dati ed eseguire di nuovo il comando di connessione e osservare il campo `ClientConnectionID` nell'analisi di accesso ai dati, se si necessita di ulteriore assistenza per la diagnostica dei driver del client.
 

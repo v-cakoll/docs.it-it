@@ -1,13 +1,13 @@
 ---
-title: Esecuzione side-by-side in ADO.NET
+title: Esecuzione affiancata di diverse versioni
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: 0355f375de678b2a74f8fdf58e2c58cc0bdf10ee
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: a624aac2ed1f3ab124973c84bc74e39297600c8b
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348000"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980015"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>Esecuzione side-by-side in ADO.NET
 L'esecuzione affiancata nel .NET Framework è la possibilità di eseguire un'applicazione in un computer in cui sono installate più versioni del .NET Framework, usando esclusivamente la versione per la quale è stata compilata l'applicazione. Per informazioni dettagliate sulla configurazione dell'esecuzione side-by-Side, vedere [esecuzione side-by-side](../../deployment/side-by-side-execution.md).  

@@ -1,13 +1,13 @@
 ---
-title: Stringhe di connessione in ADO.NET
+title: Stringhe di connessione
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: bf053c7c26435bea5b2368c81c89b73e8949b74a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: cb0b2831a22f3fe51dd7c5bfbe51e72f266a0003
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040141"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980236"
 ---
 # <a name="connection-strings-in-adonet"></a>Stringhe di connessione in ADO.NET
 
@@ -23,7 +23,7 @@ keyword1=value; keyword2=value;
 
 Parole chiave senza distinzione tra maiuscole e minuscole. I valori, tuttavia, possono fare distinzione tra maiuscole e minuscole, a seconda dell'origine dati. Sia le parole chiave che i valori possono contenere [spazi vuoti](https://en.wikipedia.org/wiki/Whitespace_character#Unicode). Gli spazi vuoti iniziali e finali vengono ignorati nelle parole chiave e nei valori non racchiusi tra virgolette.
 
-Se un valore contiene il punto e virgola, i [caratteri di controllo Unicode](https://en.wikipedia.org/wiki/Unicode_control_characters)o gli spazi vuoti iniziali o finali, è necessario racchiuderlo tra virgolette singole o doppie. Esempio:
+Se un valore contiene il punto e virgola, i [caratteri di controllo Unicode](https://en.wikipedia.org/wiki/Unicode_control_characters)o gli spazi vuoti iniziali o finali, è necessario racchiuderlo tra virgolette singole o doppie. Ad esempio:
 
 ```csharp
 Keyword=" whitespace  ";
@@ -59,7 +59,7 @@ La digitazione degli errori può causare errori. Ad esempio, `Integrated Securit
 
 Le stringhe di connessione costruite manualmente in fase di esecuzione dall'input dell'utente non convalidato sono vulnerabili agli attacchi di stringa Injection e compromettono la sicurezza nell'origine dati. Per risolvere questi problemi, in *ADO.NET* 2,0 sono stati introdotti i [generatori di stringhe di connessione](connection-string-builders.md) per ogni provider di dati *.NET Framework* . Questi generatori di stringhe di connessione espongono parametri come proprietà fortemente tipizzate e rendono possibile la convalida della stringa di connessione prima che venga inviata all'origine dati.
 
-## <a name="in-this-section"></a>Contenuto della sezione
+## <a name="in-this-section"></a>In questa sezione
 
 [Generatori di stringhe di connessione](connection-string-builders.md)\
 Viene illustrato come usare le classi `ConnectionStringBuilder` per creare stringhe di connessione valide in fase di esecuzione.

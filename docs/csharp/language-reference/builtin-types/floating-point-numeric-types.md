@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 23aa33c6887db48a12f995efc5e1e2220d30216c
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 9fde2b28288b58d7da3a4d003ec50af7d7e7a965
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552272"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980171"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Tipi numerici a virgola mobile (riferimenti per C#)
 
@@ -120,7 +120,6 @@ Per altre informazioni, vedere le sezioni seguenti delle [specifiche del linguag
 - [Riferimenti per C#](../index.md)
 - [Tabella dei tipi incorporati](../keywords/built-in-types-table.md)
 - [Tipi integrali](integral-numeric-types.md)
-- [Tabella di formattazione dei risultati numerici](../keywords/formatting-numeric-results-table.md)
 - [Stringhe di formato numerico standard](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Dati numerici in .NET](../../../standard/numerics.md)
 - <xref:System.Numerics.Complex?displayProperty=nameWithType>

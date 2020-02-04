@@ -1,16 +1,16 @@
 ---
-title: Pool di connessioni SQL Server (ADO.NET)
+title: SQL Server pool di connessioni
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 2c73bec644a9a76ba05d3299183e8f1643c8e870
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3bf0ce98b9b16b8d698a814f3bf2c4f442f3bf06
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794312"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980041"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Pool di connessioni SQL Server (ADO.NET)
 Generalmente, la connessione a un server database comporta passaggi che richiedono molto tempo. È necessario, infatti, stabilire un canale fisico, ad esempio un socket oppure una named pipe. Deve verificarsi l'handshake iniziale con il server, deve essere analizzata l'informazione sulla stringa di connessione, la connessione deve essere autenticata dal server, sono necessarie verifiche per l'inserimento in un elenco nella transazione corrente e così via.  
@@ -67,7 +67,7 @@ using (SqlConnection connection = new SqlConnection(
  Il pool di connessioni soddisfa le richieste di connessione grazie alla riallocazione delle connessioni rilasciate nel pool. Se le dimensioni massime del pool sono state raggiunte e non è disponibile alcuna connessione usabile, la richiesta viene accodata. Il pool tenta quindi di recuperare le connessioni fino alla scadenza del timeout (l'impostazione predefinita è 15 secondi). Se il pool non è in grado di soddisfare la richiesta prima che scada la connessione, viene generata un'eccezione.  
   
 > [!CAUTION]
-> Al termine dell'uso, si consiglia di chiudere sempre la connessione in modo che possa essere restituita al pool. Questa operazione può essere eseguita usando i `Close` metodi `Dispose` o dell' `Connection` oggetto oppure aprendo tutte le connessioni all'interno di un' `using` istruzione in C#oppure un' `Using` istruzione in Visual Basic. Le connessioni che non vengono chiuse in modo esplicito potrebbero non essere aggiunte o restituite al pool. Per ulteriori informazioni, vedere [istruzione using](../../../csharp/language-reference/keywords/using-statement.md) o [procedura: Eliminare una risorsa](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) di sistema per Visual Basic.  
+> Al termine dell'uso, si consiglia di chiudere sempre la connessione in modo che possa essere restituita al pool. A tale scopo, è possibile utilizzare i metodi `Close` o `Dispose` dell'oggetto `Connection` oppure aprire tutte le connessioni all'interno di un'istruzione `using` C#in oppure un'istruzione `Using` in Visual Basic. Le connessioni che non vengono chiuse in modo esplicito potrebbero non essere aggiunte o restituite al pool. Per ulteriori informazioni, vedere [istruzione using](../../../csharp/language-reference/keywords/using-statement.md) o [procedura: eliminare una risorsa di sistema](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) per Visual Basic.  
   
 > [!NOTE]
 > Non chiamare `Close` o `Dispose` su un oggetto `Connection`, `DataReader` o su qualsiasi altro oggetto gestito nel metodo `Finalize` della classe. Nei finalizzatori rilasciare solo le risorse non gestite che la classe controlla direttamente. Se nella classe non sono presenti risorse non gestite, non includere un metodo `Finalize` nella relativa definizione della classe. Per altre informazioni, vedere [Garbage Collection](../../../standard/garbage-collection/index.md).  
@@ -80,21 +80,21 @@ Per ulteriori informazioni sugli eventi associati all'apertura e alla chiusura d
  Se esiste una connessione a un server non più disponibile, la connessione può essere recuperata dal pool anche se nessuna connessione è stata rilevata come interrotta e pertanto non è stata contrassegnata come non valida. In caso contrario, l'overhead per la verifica della validità della connessione annullerebbe i vantaggi derivanti dal pool provocando un'ulteriore sequenza di andata e ritorno al server. In questo caso, al primo tentativo di uso della connessione verrà rilevato che la connessione è stata interrotta e verrà generata un'eccezione.  
   
 ## <a name="clearing-the-pool"></a>Cancellazione del pool  
- ADO.NET 2,0 ha introdotto due nuovi metodi per cancellare il pool <xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> : <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>e. `ClearAllPools` cancella i pool di connessioni per un determinato provider, mentre `ClearPool` cancella il pool di connessioni associato a una connessione specifica. Le connessioni in uso al momento della chiamata vengono contrassegnate in modo appropriato. Una volta chiuse, anziché essere restituite al pool, queste connessioni vengono eliminate.  
+ In ADO.NET 2,0 sono stati introdotti due nuovi metodi per cancellare il pool: <xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> e <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>. `ClearAllPools` cancella i pool di connessioni per un determinato provider, mentre `ClearPool` cancella il pool di connessioni associato a una connessione specifica. Le connessioni in uso al momento della chiamata vengono contrassegnate in modo appropriato. Una volta chiuse, anziché essere restituite al pool, queste connessioni vengono eliminate.  
   
-## <a name="transaction-support"></a>Supporto delle transazioni  
+## <a name="transaction-support"></a>Supporto per le transazioni  
  Le connessioni vengono recuperate dal pool e assegnate in base al contesto della transazione. Se nella stringa di connessione non è specificato `Enlist=false`, il pool di connessioni assicura che la connessione venga inserita in un elenco del contesto <xref:System.Transactions.Transaction.Current%2A>. Quando una connessione viene chiusa e restituita al pool con una transazione `System.Transactions` in elenco, questa connessione viene conservata in modo tale che, quando si richiederà nuovamente il pool di connessioni con la stessa transazione `System.Transactions`, verrà restituita la stessa connessione, se è disponibile. Se viene eseguita una richiesta di questo tipo e non sono disponibili connessioni in pool, viene prelevata e inserita in elenco una connessione della parte non transazionale del pool. Se non sono disponibili connessioni in alcuna area del pool, viene creata e inserita in elenco una nuova connessione.  
   
  Una volta chiusa, la connessione viene rilasciata nel pool e nella suddivisione appropriata in base al relativo contesto di transazione. La connessione può quindi essere chiusa senza generare un errore anche se è ancora in sospeso una transazione distribuita. In questo modo è possibile eseguire il commit o interrompere la transazione distribuita in un secondo momento.  
   
 ## <a name="controlling-connection-pooling-with-connection-string-keywords"></a>Controllo del pool di connessioni con parole chiave delle stringhe di connessione  
- La proprietà `ConnectionString` dell'oggetto <xref:System.Data.SqlClient.SqlConnection> supporta le coppie chiave/valore della stringa di connessione che possono essere usare per regolare il comportamento della logica del pool di connessioni. Per altre informazioni, vedere <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
+ La proprietà `ConnectionString` dell'oggetto <xref:System.Data.SqlClient.SqlConnection> supporta le coppie chiave/valore della stringa di connessione che possono essere usare per regolare il comportamento della logica del pool di connessioni. Per ulteriori informazioni, vedere <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
 ## <a name="pool-fragmentation"></a>Frammentazione di pool  
  La frammentazione di pool rappresenta un problema comune di varie applicazioni Web in cui l'applicazione può creare numerosi pool che vengono rilasciati solo al termine del processo. In questo modo, molte connessioni vengono lasciate aperte, occupando memoria e riducendo le prestazioni.  
   
 ### <a name="pool-fragmentation-due-to-integrated-security"></a>Frammentazione di pool dovuta alla sicurezza integrata  
- Le connessioni vengono eseguite in pool in base alla stringa di connessione e all'identità utente. Di conseguenza, se nel sito Web si usa l'autenticazione di base o l'autenticazione Windows, nonché un accesso di sicurezza, si otterrà un pool per ogni utente. Anche se in questo modo migliorano le prestazioni delle successive richieste di database per il singolo utente, l'utente non può usare le connessioni eseguite da altri. Viene generata, inoltre, almeno una connessione per utente al server database. Questo è un effetto collaterale di una particolare architettura di applicazione Web che gli sviluppatori devono tenere in considerazione per non compromettere la sicurezza e il controllo.  
+ Le connessioni vengono eseguite in pool in base alla stringa di connessione e all'identità utente. Di conseguenza, se nel sito Web si usa l'autenticazione di base o l'autenticazione Windows, nonché un accesso di sicurezza, si otterrà un pool per ogni utente. Anche se in questo modo migliorano le prestazioni delle successive richieste di database per il singolo utente, l'utente non può usare le connessioni eseguite da altri. Viene generata, inoltre, almeno una connessione per utente al server database. Questo è un effetto collaterale di una particolare architettura di applicazione Web che gli sviluppatori devono tenere in considerazione per non compromettere i requisiti di sicurezza e controllo.  
   
 ### <a name="pool-fragmentation-due-to-many-databases"></a>Frammentazione di pool dovuta a numerosi database  
  Molti provider di servizi Internet ospitano numerosi siti Web su un unico server. Possono usare un unico database per confermare un accesso basato su form e aprire una connessione a un database specifico di un utente o di un gruppo di utenti. La connessione al database di autenticazione viene eseguita in pool e può essere usata da tutti. Tuttavia è presente un pool di connessioni separato per ogni database, aumentando il numero di connessioni al server.  
@@ -133,5 +133,5 @@ using (SqlConnection connection = new SqlConnection(
 
 - [Pool di connessioni](connection-pooling.md)
 - [SQL Server e ADO.NET](./sql/index.md)
-- [Contatori delle prestazioni](performance-counters.md)
+- [Performance Counters](performance-counters.md)
 - [Panoramica di ADO.NET](ado-net-overview.md)

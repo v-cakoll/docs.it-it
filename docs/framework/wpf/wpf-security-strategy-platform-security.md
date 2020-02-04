@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 1ef705fcf046af1f4136ddcf1b29f417c0d72c83
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 4fa01922c5c3097adb124d67272b9f449b70ada3
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741859"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76979872"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Strategia di sicurezza di WPF - Sicurezza della piattaforma
 Sebbene Windows Presentation Foundation (WPF) fornisca un'ampia gamma di servizi di sicurezza, sfrutta anche le funzionalità di sicurezza della piattaforma sottostante, che include il sistema operativo, CLR e Internet Explorer. Questi livelli combinano per fornire a WPF un modello di sicurezza sicuro e di difesa avanzato che tenta di evitare un singolo punto di errore, come illustrato nella figura seguente:  
@@ -35,14 +35,14 @@ Sebbene Windows Presentation Foundation (WPF) fornisca un'ampia gamma di servizi
 Il nucleo di Windows offre diverse funzionalità di sicurezza che costituiscono la base di sicurezza per tutte le applicazioni Windows, incluse quelle compilate con WPF. In questo argomento viene illustrata la vasta gamma di queste funzionalità di sicurezza importanti per WPF, nonché il modo in cui WPF si integra con loro per offrire un'ulteriore difesa in profondità.  
   
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP Service Pack 2 (SP2)  
- Oltre a una revisione generale e al potenziamento di Windows, sono disponibili tre funzionalità chiave di [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] che verranno illustrate in questo argomento:  
+ Oltre a una revisione generale e al potenziamento di Windows, sono disponibili tre funzionalità chiave di Windows XP SP2 che verranno illustrate in questo argomento:  
   
 - Compilazione /GS  
   
 - Microsoft Windows Update.  
   
 #### <a name="gs-compilation"></a>Compilazione /GS  
- [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] offre protezione ricompilando molte librerie di sistema principali, incluse tutte le dipendenze WPF, ad esempio CLR, per ridurre i sovraccarichi del buffer. A tale scopo, è necessario usare il parametro /GS con il compilatore da riga di comando di C/C++. Anche se i sovraccarichi del buffer dovrebbero essere evitati in modo esplicito, la compilazione /GS rappresenta un esempio di difesa da potenziali vulnerabilità create accidentalmente o intenzionalmente.  
+ Windows XP SP2 offre protezione ricompilando molte librerie di sistema principali, incluse tutte le dipendenze WPF, ad esempio CLR, per attenuare i sovraccarichi del buffer. A tale scopo, è necessario usare il parametro /GS con il compilatore da riga di comando di C/C++. Anche se i sovraccarichi del buffer dovrebbero essere evitati in modo esplicito, la compilazione /GS rappresenta un esempio di difesa da potenziali vulnerabilità create accidentalmente o intenzionalmente.  
   
  In passato i sovraccarichi del buffer sono stati causa di molte violazioni della sicurezza a impatto elevato. Si verifica un sovraccarico del buffer quando un utente malintenzionato sfrutta una vulnerabilità del codice per introdurre codice dannoso che viene scritto oltre i limiti di un buffer. Il malintenzionato sarà così in grado di assumere il controllo del processo in cui il codice è in esecuzione, sovrascrivendo l'indirizzo di ritorno di una funzione per indurre l'esecuzione del proprio codice dannoso. Il risultato sarà l'esecuzione di codice arbitrario attraverso codice dannoso con gli stessi privilegi del processo di cui è stato assunto il controllo.  
   
@@ -94,7 +94,7 @@ Gli utenti WPF in Windows Vista trarranno vantaggio dai miglioramenti aggiuntivi
   
  Il vantaggio del codice verificabile è il motivo principale per cui WPF si basa sul .NET Framework. Pertanto, più esteso sarà l'uso di codice verificabile, minori saranno le possibilità di sfruttare le vulnerabilità del sistema.  
   
-### <a name="code-access-security"></a>Sicurezza dall'accesso di codice  
+### <a name="code-access-security"></a>Sicurezza per l'accesso al codice  
  Un computer client espone un'ampia varietà di risorse a cui un'applicazione gestita ha accesso, ad esempio il file system, il Registro di sistema, i servizi di stampa, l'interfaccia utente, la reflection e le variabili di ambiente. Prima che un'applicazione gestita possa accedere a una qualsiasi delle risorse in un computer client, deve disporre di .NET Framework autorizzazione. Un'autorizzazione in CAS è una sottoclasse del <xref:System.Security.CodeAccessPermission>; CAS implementa una sottoclasse per ogni risorsa a cui possono accedere le applicazioni gestite.  
   
  Il set di autorizzazioni che un'applicazione gestita viene concessa dalle CA quando viene avviata l'esecuzione è noto come set di autorizzazioni ed è determinato dall'evidenza fornita dall'applicazione. Per le applicazioni WPF, l'evidenza fornita è la posizione, o area, da cui vengono avviate le applicazioni. CA identifica le zone seguenti:  
@@ -109,7 +109,7 @@ Gli utenti WPF in Windows Vista trarranno vantaggio dai miglioramenti aggiuntivi
   
 - **Siti non attendibili**. Applicazioni identificate da un utente come non attendibili (non attendibili).  
   
- Per ognuna di queste zone, CAS fornisce un set di autorizzazioni predefinito che include le autorizzazioni che corrispondono al livello di attendibilità associato a ciascuna di esse. tra cui:  
+ Per ognuna di queste zone, CAS fornisce un set di autorizzazioni predefinito che include le autorizzazioni che corrispondono al livello di attendibilità associato a ciascuna di esse. Sono inclusi:  
   
 - **FullTrust**. Per le applicazioni avviate dalla zona **computer locale** . Sono concesse tutte le autorizzazioni possibili.  
   
@@ -189,6 +189,6 @@ Gli utenti WPF in Windows Vista trarranno vantaggio dai miglioramenti aggiuntivi
 ## <a name="see-also"></a>Vedere anche
 
 - [Sicurezza dall'accesso di codice](../misc/code-access-security.md)
-- [Sicurezza](security-wpf.md)
+- [Security](security-wpf.md)
 - [Sicurezza con attendibilità parziale in WPF](wpf-partial-trust-security.md)
 - [Strategia di sicurezza WPF - Progettazione della sicurezza](wpf-security-strategy-security-engineering.md)

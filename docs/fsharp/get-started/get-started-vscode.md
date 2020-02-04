@@ -2,12 +2,12 @@
 title: Introduzione a F# in Visual Studio Code
 description: Informazioni su come usare F# con Visual Studio Code e la suite di plug-in Ionide.
 ms.date: 12/23/2018
-ms.openlocfilehash: 91265303c2954387df0f500940c9af68b3c97dac
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 2aa62bb1afc220348f884865e55c4d7de4359b7f
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559664"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980353"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Introduzione a F# in Visual Studio Code
 
@@ -68,7 +68,7 @@ Poiché ciò che è stato inviato è una [funzione](../language-reference/functi
 toPigLatin "banana";;
 ```
 
-Verrà visualizzato il risultato seguente:
+Dovrebbe essere visualizzato il risultato seguente:
 
 ```fsharp
 val it : string = "ananabay"
@@ -80,7 +80,7 @@ A questo punto, proviamo con una vocale come prima lettera. Immettere quanto seg
 toPigLatin "apple";;
 ```
 
-Verrà visualizzato il risultato seguente:
+Dovrebbe essere visualizzato il risultato seguente:
 
 ```fsharp
 val it : string = "appleyay"
@@ -121,7 +121,7 @@ Il flusso di `toPigLatin` è quindi:
 
 Controllare se il primo carattere della parola di input è una vocale. In caso contrario, alleghi "Yay" alla fine della parola. In caso contrario, spostare il primo carattere alla fine della parola e aggiungere "Ay".
 
-Si noti che, a differenza di molti altri linguaggi, non esiste alcuna istruzione esplicita da restituire dalla funzione. Poiché F# è basato su espressioni e l'ultima espressione nel corpo di una funzione è il valore restituito. Poiché `if..then..else` è a sua volta un'espressione, viene restituito il corpo del blocco di `then` o del corpo del blocco `else` a seconda del valore di input.
+C'è un aspetto finale da tenere presente: in F#non esiste alcuna istruzione esplicita da restituire dalla funzione. Poiché F# è basato su espressioni e l'ultima espressione valutata nel corpo di una funzione determina il valore restituito della funzione. Poiché `if..then..else` è a sua volta un'espressione, la valutazione del corpo del blocco `then` o del corpo del blocco `else` determina il valore restituito dalla funzione `toPigLatin`.
 
 ## <a name="turn-the-console-app-into-a-pig-latin-generator"></a>Trasformare l'app console in un generatore Pig Latin
 

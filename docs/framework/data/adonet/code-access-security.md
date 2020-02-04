@@ -1,16 +1,16 @@
 ---
-title: Sicurezza dell'accesso al codice e ADO.NET
+title: Sicurezza per l'accesso al codice
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: e83c10d6d7b66723d8347f98c1f7b118d7a2f963
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c2b6be79855955887988378b9fcffe1891520d68
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040170"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980262"
 ---
 # <a name="code-access-security-and-adonet"></a>Sicurezza dell'accesso al codice e ADO.NET
 In .NET Framework sono incluse sia la sicurezza basata sui ruoli che la sicurezza dall'accesso di codice (CAS, Code Access Security), entrambe implementate usando un'infrastruttura comune fornita da CLR (Common Language Runtime). In un contesto di codice non gestito la maggior parte delle applicazioni viene eseguita con le autorizzazioni dell'utente o entità di sicurezza. Di conseguenza, quando un utente con privilegi elevati esegue software dannoso o con errori possono verificarsi danni al sistemi del computer e ai dati privati.  
@@ -49,7 +49,7 @@ In .NET Framework sono incluse sia la sicurezza basata sui ruoli che la sicurezz
   
  A seconda del tipo di applicazione che si intende compilare, è opportuno considerare l'implementazione di autorizzazioni basate sui ruoli anche nel database. Per ulteriori informazioni sulla sicurezza basata sui ruoli in SQL Server, vedere [SQL Server sicurezza](./sql/sql-server-security.md).  
   
-## <a name="assemblies"></a>Assembly  
+## <a name="assemblies"></a>Assemblies  
  Gli assembly costituiscono l'unità fondamentale della distribuzione, del controllo della versione, del riutilizzo, dell'ambito di attivazione e delle autorizzazioni di sicurezza per un'applicazione .NET Framework. Un assembly fornisce infatti una raccolta di tipi e risorse che interagiscono tra loro e costituiscono un'unità logica della funzionalità. Per CLR un tipo non esiste al di fuori del contesto di un assembly. Per altre informazioni sulla creazione e la distribuzione di assembly, vedere [programmazione con gli assembly](../../../standard/assembly/program.md).  
   
 ### <a name="strong-naming-assemblies"></a>Assegnazione di nomi sicuri agli assembly  
@@ -69,13 +69,13 @@ In .NET Framework sono incluse sia la sicurezza basata sui ruoli che la sicurezz
   
 |Proprietà dell'attributo di autorizzazione|Descrizione|  
 |-----------------------------------|-----------------|  
-|`Action`|Ottiene o imposta un'azione di sicurezza. La proprietà viene ereditata da <xref:System.Security.Permissions.SecurityAttribute>.|  
-|`AllowBlankPassword`|Viene usata per consentire o meno l'immissione di una password vuota in una stringa di connessione. Valori validi sono `true`, per consentire l'uso di password vuote, e `false`, per impedire l'uso di password vuote. La proprietà viene ereditata da <xref:System.Data.Common.DBDataPermissionAttribute>.|  
-|`ConnectionString`|Viene usata per identificare una stringa di connessione consentita. È possibile identificare più stringhe di connessione. **Nota:**  Non includere un ID utente o una password nella stringa di connessione. In questa versione non è possibile modificare le restrizioni relative alle stringhe di connessione usando lo strumento Configurazione .NET Framework. <br /><br /> La proprietà viene ereditata da <xref:System.Data.Common.DBDataPermissionAttribute>.|  
-|`KeyRestrictions`|Viene usata per identificare i parametri delle stringhe di connessione consentiti o non consentiti. I parametri della stringa di connessione vengono identificati nel formato *\<nome parametro > =* . Per specificare più parametri, separarli con un punto e virgola (;). **Nota:**  Se non si specifica `KeyRestrictions`, ma si imposta `KeyRestrictionBehavior` proprietà su `AllowOnly` o `PreventUsage`, non sono consentiti parametri aggiuntivi per la stringa di connessione. La proprietà viene ereditata da <xref:System.Data.Common.DBDataPermissionAttribute>.|  
-|`KeyRestrictionBehavior`|Viene usata per identificare i parametri della stringa di connessione come unici parametri aggiuntivi consentiti (`AllowOnly`) oppure per identificare i parametri aggiuntivi non consentiti (`PreventUsage`). Il valore predefinito è `AllowOnly`. La proprietà viene ereditata da <xref:System.Data.Common.DBDataPermissionAttribute>.|  
-|`TypeID`|Ottiene un identificatore univoco per l'attributo quando viene implementato in una classe derivata. La proprietà viene ereditata da <xref:System.Attribute>.|  
-|`Unrestricted`|Indica che esiste una dichiarazione di accesso senza limitazioni alla risorsa. La proprietà viene ereditata da <xref:System.Security.Permissions.SecurityAttribute>.|  
+|`Action`|Ottiene o imposta un'azione di sicurezza. Ereditata da <xref:System.Security.Permissions.SecurityAttribute>.|  
+|`AllowBlankPassword`|Viene usata per consentire o meno l'immissione di una password vuota in una stringa di connessione. Valori validi sono `true`, per consentire l'uso di password vuote, e `false`, per impedire l'uso di password vuote. Ereditata da <xref:System.Data.Common.DBDataPermissionAttribute>.|  
+|`ConnectionString`|Viene usata per identificare una stringa di connessione consentita. È possibile identificare più stringhe di connessione. **Nota:**  Non includere un ID utente o una password nella stringa di connessione. In questa versione non è possibile modificare le restrizioni relative alle stringhe di connessione usando lo strumento Configurazione .NET Framework. <br /><br /> Ereditata da <xref:System.Data.Common.DBDataPermissionAttribute>.|  
+|`KeyRestrictions`|Viene usata per identificare i parametri delle stringhe di connessione consentiti o non consentiti. I parametri della stringa di connessione vengono identificati nel formato *\<nome parametro > =* . Per specificare più parametri, separarli con un punto e virgola (;). **Nota:**  Se non si specifica `KeyRestrictions`, ma si imposta `KeyRestrictionBehavior` proprietà su `AllowOnly` o `PreventUsage`, non sono consentiti parametri aggiuntivi per la stringa di connessione. Ereditata da <xref:System.Data.Common.DBDataPermissionAttribute>.|  
+|`KeyRestrictionBehavior`|Viene usata per identificare i parametri della stringa di connessione come unici parametri aggiuntivi consentiti (`AllowOnly`) oppure per identificare i parametri aggiuntivi non consentiti (`PreventUsage`). Il valore predefinito è `AllowOnly`. Ereditata da <xref:System.Data.Common.DBDataPermissionAttribute>.|  
+|`TypeID`|Ottiene un identificatore univoco per l'attributo quando viene implementato in una classe derivata. Ereditata da <xref:System.Attribute>.|  
+|`Unrestricted`|Indica che esiste una dichiarazione di accesso senza limitazioni alla risorsa. Ereditata da <xref:System.Security.Permissions.SecurityAttribute>.|  
   
 #### <a name="connectionstring-syntax"></a>Sintassi di ConnectionString  
  Nell'esempio seguente viene illustrato come usare l'elemento `connectionStrings` di un file di configurazione per consentire l'uso solo di una stringa di connessione specifica. Per ulteriori informazioni sull'archiviazione e il recupero delle stringhe di connessione dai file di configurazione, vedere [stringhe di connessione](connection-strings.md) .  
@@ -136,7 +136,7 @@ In .NET Framework sono incluse sia la sicurezza basata sui ruoli che la sicurezz
 ```  
   
 ### <a name="enabling-partial-trust-with-a-custom-permission-set"></a>Abilitazione dell'attendibilità parziale con un set di autorizzazioni personalizzato  
- Per usare le autorizzazioni <xref:System.Data.SqlClient> per un'area particolare, è necessario che un amministratore di sistema crei un set di autorizzazioni personalizzato e lo imposti come set di autorizzazioni per tale area. I set di autorizzazioni predefiniti, ad esempio `LocalIntranet`, non possono essere modificati. Per includere, ad esempio, <xref:System.Data.SqlClient> autorizzazioni per il codice con un <xref:System.Security.Policy.Zone> di `LocalIntranet`, un amministratore di sistema può copiare il set di autorizzazioni per `LocalIntranet`, rinominarlo in "CustomLocalIntranet", aggiungere le autorizzazioni <xref:System.Data.SqlClient>, importare CustomLocalIntranet set di autorizzazioni mediante [Caspol. exe (strumento per i criteri di sicurezza dall'accesso di codice)](../../tools/caspol-exe-code-access-security-policy-tool.md)e impostare il set di autorizzazioni di `LocalIntranet_Zone` su CustomLocalIntranet.  
+ Per usare le autorizzazioni <xref:System.Data.SqlClient> per un'area particolare, è necessario che un amministratore di sistema crei un set di autorizzazioni personalizzato e lo imposti come set di autorizzazioni per tale area. I set di autorizzazioni predefiniti, ad esempio `LocalIntranet`, non possono essere modificati. Per includere, ad esempio, <xref:System.Data.SqlClient> autorizzazioni per il codice con un <xref:System.Security.Policy.Zone> di `LocalIntranet`, un amministratore di sistema può copiare il set di autorizzazioni per `LocalIntranet`, rinominarlo in "CustomLocalIntranet", aggiungere le autorizzazioni <xref:System.Data.SqlClient>, importare il set di autorizzazioni CustomLocalIntranet utilizzando il [Caspol. exe (strumento criteri di sicurezza dall'accesso di codice)](../../tools/caspol-exe-code-access-security-policy-tool.md)e impostare il set di autorizzazioni di `LocalIntranet_Zone` su CustomLocalIntranet.  
   
 ### <a name="sample-permission-set"></a>Set di autorizzazioni di esempio  
  Di seguito è riportato un set di autorizzazioni di esempio per il provider di dati .NET Framework per SQL Server in uno scenario ad attendibilità parziale. Per informazioni sulla creazione di set di autorizzazioni personalizzati, vedere [configurazione di set di autorizzazioni tramite Caspol. exe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100)).  

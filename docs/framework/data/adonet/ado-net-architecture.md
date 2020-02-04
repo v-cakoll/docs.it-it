@@ -1,13 +1,13 @@
 ---
-title: Architettura ADO.NET
+title: Architettura
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 2692959d5a3e12d503d91b55e19f744bb9abd112
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: de33c9964f3c03b18593b0df0607f941d2117be0
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568451"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980314"
 ---
 # <a name="adonet-architecture"></a>Architettura ADO.NET
 L'elaborazione dei dati è stata sempre basata principalmente su un modello a due livelli basato su connessione. In considerazione dell'utilizzo crescente dell'architettura a più livelli per l'elaborazione dei dati, i programmatori si avvalgono di un approccio disconnesso per ottenere applicazioni con scalabilità maggiore.  
@@ -37,7 +37,7 @@ Architettura di ADO.NET
   
 - Eseguire un'elaborazione estensiva dei dati senza richiedere una connessione aperta all'origine dati, in modo da liberare la connessione per consentirne l'uso da parte di altri client.  
   
- Se le funzionalità fornite dal `DataSet` non sono necessarie, è possibile migliorare le prestazioni dell'applicazione usando il `DataReader` per restituire i dati in modo forward-only e di sola lettura. Sebbene il `DataAdapter` usi il `DataReader` per riempire il contenuto di un `DataSet` (vedere [popolamento di un set di dati da un DataAdapter](populating-a-dataset-from-a-dataadapter.md)), usando il `DataReader`, è possibile migliorare le prestazioni perché si salva la memoria che verrebbe usata dal `DataSet`ed evitare l'elaborazione necessaria per creare e riempire il contenuto del `DataSet`.  
+ Se le funzionalità fornite dal `DataSet` non sono necessarie, è possibile migliorare le prestazioni dell'applicazione usando il `DataReader` per restituire i dati in modo forward-only e di sola lettura. Sebbene in `DataAdapter` venga utilizzato `DataReader` per riempire il contenuto di un oggetto `DataSet` (vedere [Popolamento di un set di dati da un DataAdapter](populating-a-dataset-from-a-dataadapter.md)), utilizzando `DataReader`, è possibile migliorare le prestazioni perché si salva memoria che verrebbe utilizzata dal `DataSet` ed evitare l'elaborazione necessaria per creare e riempire il contenuto di `DataSet`.  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
  LINQ to DataSet fornisce funzionalità di query e controllo dei tipi in fase di compilazione sui dati memorizzati nella cache in un oggetto DataSet. Consente inoltre di scrivere query in uno dei linguaggi di sviluppo di .NET Framework, ad esempio C# o Visual Basic. Per altre informazioni, vedere [LINQ to DataSet](linq-to-dataset.md).  

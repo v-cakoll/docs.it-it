@@ -1,16 +1,16 @@
 ---
-title: Recupero e modifica di dati in ADO.NET
+title: Recupero e modifica di dati
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-ms.openlocfilehash: 78012a6a5ecdfac0e4cd7c4939ae3ab0036ab716
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 65c373ecff004e219527754bf2e9cc56837dc305
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782857"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980054"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Recupero e modifica di dati in ADO.NET
-La connessione a un'origine dati e il recupero dei dati in essa contenuti sono funzioni fondamentali nelle applicazioni di database. I provider di dati .NET Framework di ADO.NET servono come bridge tra un'applicazione e un'origine dati, consentendo di eseguire i comandi e di recuperare i dati usando un **DataReader** o un **DataAdapter**. Una funzione chiave di qualsiasi applicazione di database è la capacità di aggiornare i dati archiviati nel database. In ADO.NET l'aggiornamento dei dati comporta l' utilizzo degli <xref:System.Data.DataSet>oggetti DataAdapter e e **Command** e può inoltre comportare l'utilizzo di transazioni.  
+La connessione a un'origine dati e il recupero dei dati in essa contenuti sono funzioni fondamentali nelle applicazioni di database. I provider di dati .NET Framework di ADO.NET servono come bridge tra un'applicazione e un'origine dati, consentendo di eseguire i comandi e di recuperare i dati usando un **DataReader** o un **DataAdapter**. Una funzione chiave di qualsiasi applicazione di database è la capacità di aggiornare i dati archiviati nel database. In ADO.NET l'aggiornamento dei dati comporta l'utilizzo degli oggetti **DataAdapter** e <xref:System.Data.DataSet>e **Command** ; Inoltre, può comportare l'utilizzo delle transazioni.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Connessione a un'origine dati](connecting-to-a-data-source.md)  
@@ -35,7 +35,7 @@ La connessione a un'origine dati e il recupero dei dati in essa contenuti sono f
  Viene fornito un esempio di mapping dei valori generati per una colonna **Identity** in una tabella SQL Server o per un campo **Autonumber** in una tabella di Microsoft Access a una colonna di una riga inserita in una tabella. Viene descritta l'unione di valori Identity in un oggetto `DataTable`.  
   
  [Recupero di dati binari](retrieving-binary-data.md)  
- Viene descritto come recuperare dati binari o strutture di dati di `CommandBehavior`grandi dimensioni utilizzando.`SequentialAccess` per modificare il comportamento predefinito di un `DataReader`oggetto.  
+ Viene descritto come recuperare dati binari o strutture di dati di grandi dimensioni utilizzando `CommandBehavior`.`SequentialAccess` per modificare il comportamento predefinito di un `DataReader`.  
   
  [Modifica di dati con stored procedure](modifying-data-with-stored-procedures.md)  
  Viene descritto come usare i parametri di input e di output della stored procedure per inserire una riga in un database, restituendo un nuovo valore Identity.  
@@ -49,7 +49,7 @@ La connessione a un'origine dati e il recupero dei dati in essa contenuti sono f
  [Traccia dati in ADO.NET](data-tracing.md)  
  Vengono descritte le funzionalità di analisi dei dati predefinite di ADO.NET.  
   
- [Contatori delle prestazioni](performance-counters.md)  
+ [Performance Counters](performance-counters.md)  
  Vengono descritti i contatori delle prestazioni disponibili per `SqlClient` e `OracleClient`.  
   
  [Programmazione asincrona](asynchronous-programming.md)  

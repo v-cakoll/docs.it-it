@@ -1,13 +1,13 @@
 ---
-title: Opzioni e linee guida per la tecnologia ADO.NET
+title: Opzioni e linee guida per la tecnologia
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
-ms.openlocfilehash: 6c7ff59be7c163117ba990331e7cae75d10e8f59
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 9be44a5b9c06a310581aee57cdb6a304127f8a12
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569425"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980275"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>Opzioni e linee guida per la tecnologia ADO.NET
 ADO.NET Data Platform è una strategia multi-versione concepita per ridurre la quantità di codice e di interventi di manutenzione richiesti per gli sviluppatori consentendo loro di eseguire la programmazione per modelli di dati di entità concettuali. Questa piattaforma include ADO.NET Entity Framework e le tecnologie correlate.  

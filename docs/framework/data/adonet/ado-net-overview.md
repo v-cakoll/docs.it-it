@@ -1,13 +1,13 @@
 ---
-title: Cenni preliminari su ADO.NET
+title: Panoramica di
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 2d21e5b73757280b679a9c5cd04a56339e7e967e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d5dc9cf7081c6876118914a0b95853a5a7ca5e57
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785100"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980340"
 ---
 # <a name="adonet-overview"></a>Cenni preliminari su ADO.NET
 ADO.NET fornisce uniformità di accesso sia per origini dati quali SQL Server e XML, sia per origini dati esposte tramite OLE DB e ODBC. Le applicazioni consumer che supportano la condivisione dei dati sono in grado di usare ADO.NET per connettersi a tali origini dati e recuperare, gestire e aggiornare i dati contenuti.  
@@ -20,7 +20,7 @@ ADO.NET fornisce uniformità di accesso sia per origini dati quali SQL Server e 
   
  ADO.NET fornisce il metodo più diretto per l'accesso ai dati in .NET Framework. Per un'astrazione di livello superiore che consente alle applicazioni di utilizzare un modello concettuale anziché il modello di archiviazione sottostante, vedere [ADO.NET Entity Framework](./ef/index.md).  
   
- **Informativa sulla privacy**: Gli assembly System. Data. dll, System. Data. Design. dll, System. Data. OracleClient. dll, System. Data. SqlXml. dll, System. Data. Linq. dll, System. Data. SqlServerCe. dll e System. Data. DataSetExtensions. dll non fanno distinzione tra l'utente dati privati e dati non privati.  Questi assembly non raccolgono, archiviano o trasportano i dati privati degli utenti, tuttavia possono essere usati da applicazioni di terze parti per tali scopi.  
+ **Informativa sulla privacy**: gli assembly System. Data. dll, System. Data. Design. dll, System. Data. OracleClient. dll, System. Data. SQLXML. dll, System. Data. Linq. dll, System. Data. SqlServerCe. dll e System. Data. datasetextensions. dll non fanno distinzione tra i dati privati e non privati di un utente.  Questi assembly non raccolgono, archiviano o trasportano i dati privati degli utenti, tuttavia possono essere usati da applicazioni di terze parti per tali scopi.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Architettura di ADO.NET](ado-net-architecture.md)  

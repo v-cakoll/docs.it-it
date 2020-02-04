@@ -1,13 +1,14 @@
 ---
 title: LINQ e ADO.NET
+titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-ms.openlocfilehash: f6b956aa4d19a5bf558681975da3125b45b36c5f
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: e24473f68fe5ccd993c5d205660ea8f397b6f797
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634846"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980093"
 ---
 # <a name="linq-and-adonet"></a>LINQ e ADO.NET
 Attualmente, molti sviluppatori aziendali devono usare due o più linguaggi di programmazione: un linguaggio di alto livello per la logica di business e i livelli di presentazione (ad C# esempio, Visual o Visual Basic) e un linguaggio di query per interagire con il database (ad esempio Transact-SQL). Tale necessità non solo richiede una conoscenza approfondita di diversi linguaggi da parte degli sviluppatori, ma provoca anche problemi di mancata corrispondenza tra linguaggi nell'ambiente di sviluppo. Ad esempio, in un'applicazione che usa un'API di accesso ai dati per eseguire una query su un database la query viene specificata come valore letterale stringa racchiuso tra virgolette. Tale stringa di query è tuttavia illeggibile per il compilatore e non è possibile eseguire su di essa un controllo per verificare la presenza di errori, ad esempio l'uso di sintassi non valida o l'effettiva esistenza delle colonne o delle righe cui fa riferimento. Non viene eseguito il controllo dei tipi dei parametri della query, né è disponibile il supporto per `IntelliSense`.  

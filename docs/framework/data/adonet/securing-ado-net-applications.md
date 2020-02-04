@@ -1,13 +1,13 @@
 ---
-title: Protezione delle applicazioni ADO.NET
+title: Protezione delle applicazioni
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: c99c56afca475caafe32cca3f50d074fb82e0e00
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: c1bdf4329665e4d29a47c26fb7dba8eb41c1cc3a
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73196724"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980028"
 ---
 # <a name="securing-adonet-applications"></a>Protezione delle applicazioni ADO.NET
 Per scrivere un'applicazione ADO.NET protetta, non è sufficiente evitare i problemi più comuni di codifica, ad esempio la mancata convalida dell'input dell'utente. Un'applicazione che consente di accedere ai dati può presentare molti punti di errore, che possono essere sfruttati da utenti non autorizzati per recuperare, modificare o eliminare definitivamente dati sensibili. È pertanto importante considerare tutti gli aspetti della sicurezza, a partire dal processo di classificazione dei rischi durante la fase di progettazione dell'applicazione, fino all'eventuale distribuzione e alla manutenzione costante.  
@@ -16,7 +16,7 @@ Per scrivere un'applicazione ADO.NET protetta, non è sufficiente evitare i prob
   
  Il codice protetto non difende dai problemi di sicurezza che si possono verificare quando si usano risorse non gestite quali i database. La maggior parte dei database di server, ad esempio SQL Server, dispone di sistemi di sicurezza interni, che aumentano la protezione se correttamente implementati. Tuttavia, anche un'origine dati con un sistema di sicurezza efficace può subire danni da un attacco se non è configurata in modo appropriato.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica della sicurezza](security-overview.md)  
  Vengono forniti consigli per la progettazione di applicazioni ADO.NET protette.  
   

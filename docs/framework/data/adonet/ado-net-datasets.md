@@ -1,13 +1,13 @@
 ---
-title: Dataset ADO.NET
+title: Set di dati
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-ms.openlocfilehash: 85c0df88d7e919649eae8d2b4e551b26cc684dd8
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 86c14f516ff82e4d9acf7cc3078e04590971a8a1
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634937"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980301"
 ---
 # <a name="adonet-datasets"></a>Dataset ADO.NET
 L'oggetto <xref:System.Data.DataSet> è fondamentale per supportare scenari di dati disconnessi e distribuiti con ADO.NET. Il **set** di dati è una rappresentazione di dati residente in memoria che fornisce un modello di programmazione relazionale coerente indipendentemente dall'origine dati. È possibile usarlo con numerose origini dati diverse, con dati XML o per la gestione di dati locali all'applicazione. Il **set di dati rappresenta un** set completo di dati, tra cui tabelle correlate, vincoli e relazioni tra le tabelle. Nella figura seguente viene illustrato il modello a oggetti del **set di dati** .  

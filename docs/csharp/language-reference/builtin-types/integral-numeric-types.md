@@ -32,12 +32,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 058e75c81c18f0ec73140f6fc13a91f4e0012a61
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 2fb4d7185ac85b29f2cc2d2e7a29e192f91a0868
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036365"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980145"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Tipi numerici integrali (Riferimenti per C#)
 
@@ -89,18 +89,18 @@ Nell'esempio precedente viene inoltre illustrato l'utilizzo di `_` come *separat
 
 Il tipo di un valore letterale integer è determinato dal suffisso, come indicato di seguito:
 
-- Se il valore letterale non ha alcun suffisso, il tipo è il primo dei tipi seguenti in cui è possibile rappresentare il relativo valore: `int`, `uint`, `long` `ulong`.
+- Se il valore letterale non ha alcun suffisso, il tipo è il primo dei tipi seguenti in cui è possibile rappresentare il relativo valore: `int`, `uint`, `long``ulong`.
 - Se il valore letterale è suffisso per `U` o `u`, il tipo è il primo dei tipi seguenti in cui è possibile rappresentare il relativo valore: `uint`, `ulong`.
 - Se il valore letterale è suffisso per `L` o `l`, il tipo è il primo dei tipi seguenti in cui è possibile rappresentare il relativo valore: `long`, `ulong`.
 
   > [!NOTE]
   > È possibile usare la lettera minuscola `l` come suffisso. Viene tuttavia generato un avviso del compilatore perché la lettera `l` può essere confusa con la cifra `1`. Per maggiore chiarezza, utilizzare `L`.
 
-- Se il valore letterale è suffisso in `UL`, `Ul`, `uL`, `ul`, `LU`, `Lu`, `lU` o `lu`, il tipo è `ulong`.
+- Se il valore letterale è suffisso in `UL`, `Ul`, `uL`, `ul`, `LU`, `Lu`, `lU`o `lu`, il tipo è `ulong`.
 
 Se il valore rappresentato da un valore letterale Integer supera <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, si verifica un errore di compilazione [CS1021](../../misc/cs1021.md).
 
-Se il tipo determinato di un valore letterale integer è `int` e il valore rappresentato dal valore letterale è compreso nell'intervallo del tipo di destinazione, il valore può essere convertito in modo implicito in `sbyte`, `byte`, `short``ushort`, `uint`o `ulong`:
+Se il tipo determinato di un valore letterale integer è `int` e il valore rappresentato dal valore letterale è compreso nell'intervallo del tipo di destinazione, il valore può essere convertito in modo implicito in `sbyte`, `byte`, `short`, `ushort`, `uint`o `ulong`:
 
 ```csharp
 byte a = 17;
@@ -132,5 +132,5 @@ Per altre informazioni, vedere le sezioni seguenti delle [specifiche del linguag
 - [Riferimenti per C#](../index.md)
 - [Tabella dei tipi incorporati](../keywords/built-in-types-table.md)
 - [Tipi a virgola mobile](floating-point-numeric-types.md)
-- [Tabella di formattazione dei risultati numerici](../keywords/formatting-numeric-results-table.md)
+- [Stringhe di formato numerico standard](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Dati numerici in .NET](../../../standard/numerics.md)

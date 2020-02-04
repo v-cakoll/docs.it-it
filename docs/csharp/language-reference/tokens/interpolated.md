@@ -10,12 +10,12 @@ helpviewer_keywords:
 - string interpolation [C#]
 - interpolated string [C#]
 author: pkulikov
-ms.openlocfilehash: b32bbbb0bd99878822d7ca5abdba80b46539846a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 97bc606569b83bd14cd3b32495deb8e529747e9c
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715076"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980119"
 ---
 # <a name="---string-interpolation-c-reference"></a>interpolazione di $-C# String (riferimento)
 
@@ -101,6 +101,6 @@ Per altre informazioni, vedere la sezione [Stringhe interpolate](~/_csharplang/s
 - [Riferimenti per C#](../index.md)
 - [Caratteri speciali di C#](index.md)
 - [Stringhe](../../programming-guide/strings/index.md)
-- [Tabella di formattazione dei risultati numerici](../keywords/formatting-numeric-results-table.md)
+- [Stringhe di formato numerico standard](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Formattazione composita](../../../standard/base-types/composite-formatting.md)
 - <xref:System.String.Format%2A?displayProperty=nameWithType>
