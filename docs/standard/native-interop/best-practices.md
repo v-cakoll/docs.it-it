@@ -27,7 +27,7 @@ Le linee guida in questa sezione si applicano a tutti gli scenari di interoperab
 
 ## <a name="dllimport-attribute-settings"></a>Impostazioni degli attributi DllImport
 
-| Impostazione di | Default | Indicazione | Dettagli |
+| Impostazione | Default | Indicazione | Dettagli |
 |---------|---------|----------------|---------|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  Mantenere l'impostazione predefinita  | Con l'impostazione esplicita su false, i valori restituiti HRESULT di errore verranno convertiti in eccezioni e il valore restituito nella definizione diventa Null di conseguenza.|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | Dipende dall'API  | Impostare su true se l'API usa GetLastError e usare Marshal.GetLastWin32Error per ottenere il valore. Se l'API imposta una condizione che indica la presenza di un errore, recuperare l'errore prima di effettuare altre chiamate in modo da evitare di sovrascriverlo inavvertitamente.|
@@ -49,7 +49,7 @@ Ricordarsi di contrassegnare `[DllImport]` come `Charset.Unicode` a meno che non
    1. Alloca un buffer nativo **{2}**
    2. Copia il contenuto se `[In]` _(impostazione predefinita per un parametro `StringBuilder`)_
    3. Copia il buffer nativo in una matrice gestita appena allocata se `[Out]` **{3}** _(impostazione predefinita anche per `StringBuilder`)_
-3. `ToString()` alloca ancora un'altra matrice gestita **{4}**
+3. `ToString()` alloca ancora un'altra matrice gestita **** **
 
 Vale a dire *{4}* allocazioni per ottenere una stringa dal codice nativo. Il meglio che è possibile fare per limitare le allocazioni è riutilizzare `StringBuilder` in un'altra chiamata, ma in questo modo si risparmia solo *1* allocazione. È molto meglio usare e memorizzare nella cache un buffer di caratteri da `ArrayPool`. In questo modo si può arrivare alla sola allocazione per `ToString()` nelle chiamate successive.
 
@@ -161,7 +161,7 @@ L'elenco seguente contiene i tipi di dati comunemente usati nelle API Windows e 
 
 I tipi seguenti hanno le stesse dimensioni in Windows a 32 e 64 bit, nonostante i nomi.
 
-| Larghezza | Portale di          | C (Windows)          | C#       | Alternativa                          |
+| Larghezza | WINDOWS          | C (Windows)          | C#       | Alternativa                          |
 |:------|:-----------------|:---------------------|:---------|:-------------------------------------|
 | 32    | `BOOL`           | `int`                | `int`    | `bool`                               |
 | 8     | `BOOLEAN`        | `unsigned char`      | `byte`   | `[MarshalAs(UnmanagedType.U1)] bool` |
@@ -203,7 +203,7 @@ Per un tipo `PVOID` Windows corrispondente al tipo `void*` C è possibile effett
 
 [Intervalli dei tipi di dati](/cpp/cpp/data-type-ranges)
 
-## <a name="structs"></a>Strutture
+## <a name="structs"></a>Struct
 
 Gli struct gestiti vengono creati nello stack e non vengono rimossi fino a quando il metodo non restituisce il controllo. Per definizione vengono quindi "bloccati" (non verranno spostati dal GC). È possibile semplicemente accettare l'indirizzo nei blocchi di codice non gestito, se il codice nativo non userà il puntatore oltre la fine del metodo corrente.
 

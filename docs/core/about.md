@@ -2,12 +2,12 @@
 title: Informazioni su .NET Core
 description: Informazioni su .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: e5460fd1d968a49478a1bdc5f18962de2c7cbbe0
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
-ms.translationtype: HT
+ms.openlocfilehash: 7908cf70e91dcd68668008c2c3082dc293330ec1
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920953"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965841"
 ---
 # <a name="about-net-core"></a>Informazioni su .NET Core
 
@@ -73,7 +73,7 @@ Questi componenti sono distribuiti nei modi seguenti:
 
 ### <a name="designed-for-adaptability"></a>Progettato per l'adattabilità
 
-.NET Core è stato progettato come prodotto molto simile ma univoco rispetto ad altri prodotti .NET. È stato progettato per consentire un'ampia adattabilità a nuove piattaforme e carichi di lavoro e dispone di diverse porte del sistema operativo e della CPU disponibili, che possono essere trasferite a molti altri.
+.NET Core è stato creato come prodotto simile ma univoco rispetto ad altri prodotti .NET. È stato progettato per consentire un'ampia adattabilità a nuove piattaforme e carichi di lavoro e dispone di diverse porte del sistema operativo e della CPU disponibili, che possono essere trasferite a molti altri.
 
 Il prodotto è suddiviso in più parti, in modo che queste possano essere adattate a nuove piattaforme in momenti diversi. Il runtime e le librerie di base specifiche della piattaforma devono essere trasferite come elementi univoci. Le librerie indipendenti dalla piattaforma dovrebbero funzionare in modo indipendente su tutte le piattaforme, per costruzione. Esiste una distorsione del progetto per la riduzione delle implementazioni specifiche della piattaforma per aumentare l'efficienza dello sviluppatore, preferendo il codice indipendente C# dalla piattaforma ogni volta che un algoritmo o un'API può essere implementata completamente o in parte in questo modo.
 

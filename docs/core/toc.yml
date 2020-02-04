@@ -97,7 +97,7 @@
       href: tutorials/using-on-mac-vs.md
     - name: Creazione di una soluzione .NET Core completa in macOS
       href: tutorials/using-on-mac-vs-full-solution.md
-    - name: Introduzione all'uso di .NET Core con gli strumenti dell'interfaccia della riga di comando
+    - name: Introduzione all'uso di .NET Core con l'interfaccia della riga di comando
       href: tutorials/cli-create-console-app.md
     - name: Organizzare e testare progetti con gli strumenti dell'interfaccia della riga di comando di .NET Core
       href: tutorials/testing-with-cli.md
@@ -151,11 +151,11 @@
 - name: Distribuzione delle applicazioni
   href: deploying/index.md
   items:
-    - name: Distribuire app con gli strumenti dell'interfaccia della riga di comando
+    - name: Pubblicare le app con l'interfaccia della riga di comando
       href: deploying/deploy-with-cli.md
     - name: Distribuire app con Visual Studio
       href: deploying/deploy-with-vs.md
-    - name: Creare un pacchetto NuGet con strumenti multipiattaforma
+    - name: Creare un pacchetto NuGet con l'interfaccia della riga di comando
       href: deploying/creating-nuget-packages.md
     - name: Roll forward del runtime di distribuzione autonoma
       href: deploying/runtime-patch-selection.md

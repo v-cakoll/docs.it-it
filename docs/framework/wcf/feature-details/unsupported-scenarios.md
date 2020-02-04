@@ -2,16 +2,16 @@
 title: Scenari non supportati
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: a963b46d22f2103cddcc8fd080feefc39070690c
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: b643e6df8a877860ce36fc6ee34c4e4ca08ec748
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901270"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921165"
 ---
 # <a name="unsupported-scenarios"></a>Scenari non supportati
 
-Per diversi motivi, Windows Communication Foundation (WCF) non supporta alcuni scenari di sicurezza specifici. Ad esempio, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition non implementa i protocolli di autenticazione SSPI o Kerberos e pertanto WCF non supporta l'esecuzione di un servizio con l'autenticazione di Windows su tale piattaforma. Quando si esegue WCF in Windows XP Home Edition, sono supportati altri meccanismi di autenticazione, ad esempio nome utente/password e autenticazione integrata HTTP/HTTPS.
+Per diversi motivi, Windows Communication Foundation (WCF) non supporta alcuni scenari di sicurezza specifici. Windows XP Home Edition, ad esempio, non implementa i protocolli di autenticazione SSPI o Kerberos e pertanto WCF non supporta l'esecuzione di un servizio con l'autenticazione di Windows su tale piattaforma. Quando si esegue WCF in Windows XP Home Edition, sono supportati altri meccanismi di autenticazione, ad esempio nome utente/password e autenticazione integrata HTTP/HTTPS.
 
 ## <a name="impersonation-scenarios"></a>Scenari di rappresentazione
 
@@ -22,7 +22,7 @@ Per diversi motivi, Windows Communication Foundation (WCF) non supporta alcuni s
 
 WCF non supporta la rappresentazione e viene generata un'<xref:System.InvalidOperationException> quando sussistono le condizioni seguenti:
 
-- Il sistema operativo è [!INCLUDE[wxp](../../../../includes/wxp-md.md)].
+- Il sistema operativo è Windows XP.
 
 - La modalità di autenticazione genera un'identità Windows.
 
@@ -35,7 +35,7 @@ WCF non supporta la rappresentazione e viene generata un'<xref:System.InvalidOpe
  In alternativa, in configurazione il token viene abilitato creando un <`customBinding`>, quindi aggiungendo un <`security`> elemento e impostando l'attributo `authenticationMode` su SecureConversation e l'attributo `requireSecurityContextCancellation` su `true`.
 
 > [!NOTE]
-> I requisiti precedenti sono specifici. Ad esempio, il metodo <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> crea un elemento di associazione che genera un'identità Windows senza tuttavia creare un token SCT. È pertanto possibile utilizzare questa identità con l'opzione `Required` di [!INCLUDE[wxp](../../../../includes/wxp-md.md)].
+> I requisiti precedenti sono specifici. Ad esempio, il metodo <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> crea un elemento di associazione che genera un'identità Windows senza tuttavia creare un token SCT. Pertanto, è possibile utilizzarlo con l'opzione `Required` in Windows XP.
 
 ### <a name="possible-aspnet-conflict"></a>Possibile conflitto ASP.NET
 
@@ -118,7 +118,7 @@ WCF richiede un solo documento WSDL per ogni nodo nella catena di trust federata
 
 ## <a name="wsdl-import-attributes-can-be-lost"></a>Gli attributi di importazione WSDL possono andare perduti
 
-In WCF si perde traccia degli attributi in un elemento `<wst:Claims>` RST in un modello `RST` quando viene eseguita un'importazione WSDL. Questa situazione si verifica durante un'importazione WSDL se si specifica `<Claims>` WSFederationHttpBinding.Security.Message.TokenRequestParameters direttamente in `WSFederationHttpBinding.Security.Message.TokenRequestParameters` `IssuedSecurityTokenRequestParameters.AdditionalRequestParameters` IssuedSecurityTokenRequestParameters.AdditionalRequestParameters o in anziché utilizzare direttamente le raccolte dei tipi di attestazione.  Poiché l'importazione perde gli attributi, l'associazione non esegue correttamente una sequenza di andata e ritorno attraverso WSDL e quindi risulta errata sul lato client.
+In WCF si perde traccia degli attributi in un elemento `<wst:Claims>`RST in un modello`RST` quando viene eseguita un'importazione WSDL. Questa situazione si verifica durante un'importazione WSDL se si specifica `<Claims>`WSFederationHttpBinding.Security.Message.TokenRequestParameters direttamente in`WSFederationHttpBinding.Security.Message.TokenRequestParameters``IssuedSecurityTokenRequestParameters.AdditionalRequestParameters`IssuedSecurityTokenRequestParameters.AdditionalRequestParameters o in anziché utilizzare direttamente le raccolte dei tipi di attestazione.  Poiché l'importazione perde gli attributi, l'associazione non esegue correttamente una sequenza di andata e ritorno attraverso WSDL e quindi risulta errata sul lato client.
 
  Per risolvere il problema è necessario modificare l'associazione direttamente nel client dopo aver eseguito l'importazione.
 
