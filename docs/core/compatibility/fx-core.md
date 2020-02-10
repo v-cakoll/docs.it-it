@@ -1,13 +1,14 @@
 ---
 title: Modifiche di rilievo-.NET Framework a .NET Core
+titleSuffix: ''
 description: Elenca le modifiche di rilievo da .NET Framework a .NET Core.
 ms.date: 12/18/2019
-ms.openlocfilehash: 6959bffab62cabc524062231db989de45c8c1498
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 407f99adf5d400fce659ef71cda32ceac1e54491
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116498"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093058"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>Modifiche di rilievo per la migrazione da .NET Framework a .NET Core
 

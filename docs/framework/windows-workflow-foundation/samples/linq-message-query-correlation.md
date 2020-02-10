@@ -2,17 +2,17 @@
 title: Correlazione di query del messaggio LINQ
 ms.date: 03/30/2017
 ms.assetid: b746872e-57b1-4514-b337-53398a0e0deb
-ms.openlocfilehash: a4b0ed058cfe8d3d487342c9feefdf1b1efe07c8
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: cd91a171f3242cfd7e8ac0404e24ac065919bcce
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715590"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094618"
 ---
 # <a name="linq-message-query-correlation"></a>Correlazione di query del messaggio LINQ
 In questo esempio viene illustrato come eseguire una correlazione basata sul contenuto usando un'implementazione <xref:System.ServiceModel.Dispatcher.MessageQuery> personalizzata anziché l'oggetto <xref:System.ServiceModel.XPathMessageQuery> fornito dal sistema.  
   
-## <a name="demonstrates"></a>Dimostrazione  
+## <a name="demonstrates"></a>Dimostra  
  Oggetto <xref:System.ServiceModel.Dispatcher.MessageQuery> personalizzato, correlazione basata sul contenuto.  
   
 ## <a name="discussion"></a>Discussione  
@@ -20,7 +20,7 @@ In questo esempio viene illustrato come eseguire una correlazione basata sul con
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1. In questo esempio viene esposto un servizio flusso di lavoro tramite endpoint HTTP. Per eseguire questo esempio, è necessario aggiungere gli ACL URL appropriati (per informazioni dettagliate, vedere [configurazione di http e HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) ), eseguendo Visual Studio come amministratore oppure eseguendo il comando seguente in un prompt con privilegi elevati per aggiungere gli ACL appropriati. Assicurarsi che vengono sostituiti il dominio e il nome utente.  
+1. In questo esempio viene esposto un servizio flusso di lavoro tramite endpoint HTTP. Per eseguire questo esempio, è necessario aggiungere gli ACL URL appropriati (per informazioni dettagliate, vedere [configurazione di http e HTTPS](../../wcf/feature-details/configuring-http-and-https.md) ), eseguendo Visual Studio come amministratore oppure eseguendo il comando seguente in un prompt con privilegi elevati per aggiungere gli ACL appropriati. Assicurarsi che vengono sostituiti il dominio e il nome utente.  
   
     ```console  
     netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%  
@@ -28,7 +28,7 @@ In questo esempio viene illustrato come eseguire una correlazione basata sul con
   
 2. Una volta aggiunti gli elenchi ACL URL, usare i passaggi seguenti.  
   
-    1. Compila la soluzione.  
+    1. Compilare la soluzione.  
   
     2. Impostare più progetti di avvio facendo clic con il pulsante destro del mouse sulla soluzione e selezionando **Imposta progetti di avvio**. Aggiungere il **servizio** e il **client** (in questo ordine) come più progetti di avvio.  
   

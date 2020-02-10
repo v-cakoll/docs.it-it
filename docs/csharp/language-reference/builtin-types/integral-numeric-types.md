@@ -32,30 +32,30 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 2fb4d7185ac85b29f2cc2d2e7a29e192f91a0868
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 394a809a9a2f45f4aee652d0eca892f62f0f2e54
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980145"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093201"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Tipi numerici integrali (Riferimenti per C#)
 
-I **tipi numerici integrali** sono un subset dei **tipi semplici** e possono essere inizializzati con [*valori letterali*](#integer-literals). Tutti i tipi integrali sono anche tipi valore. Tutti i tipi numerici integrali supportano gli operatori [aritmetici](../operators/arithmetic-operators.md), [logici bit per bit](../operators/bitwise-and-shift-operators.md), di [confronto](../operators/comparison-operators.md)e di [uguaglianza](../operators/equality-operators.md) .
+I *tipi numerici integrali* rappresentano numeri interi. Tutti i tipi numerici integrali sono [tipi valore](value-types.md). Sono anche [tipi semplici](value-types.md#built-in-value-types) e possono essere inizializzati con [valori letterali](#integer-literals). Tutti i tipi numerici integrali supportano gli operatori [aritmetici](../operators/arithmetic-operators.md), [logici bit per bit](../operators/bitwise-and-shift-operators.md), di [confronto](../operators/comparison-operators.md)e di [uguaglianza](../operators/equality-operators.md) .
 
 ## <a name="characteristics-of-the-integral-types"></a>Caratteristiche dei tipi integrali
 
 C# supporta i tipi integrali predefiniti seguenti:
 
-|Tipo/parola chiave C#|Intervallo|Dimensioni|Tipo .NET|
+|Tipo/parola chiave C#|Range|Dimensione|Tipo .NET|
 |----------|-----------|----------|-------------|
 |`sbyte`|Da -128 a 127|Valore intero con segno a 8 bit|<xref:System.SByte?displayProperty=nameWithType>|
-|`byte`|Da 0 a 255|Intero senza segno a 8 bit|<xref:System.Byte?displayProperty=nameWithType>|
-|`short`|Da –32,768 a 32,767|Valore intero a 16 bit con segno|<xref:System.Int16?displayProperty=nameWithType>|
+|`byte`|da 0 a 255|Intero senza segno a 8 bit|<xref:System.Byte?displayProperty=nameWithType>|
+|`short`|Da -32.768 a 32.767|Valore intero a 16 bit con segno|<xref:System.Int16?displayProperty=nameWithType>|
 |`ushort`|Da 0 a 65.535|Intero senza segno a 16 bit|<xref:System.UInt16?displayProperty=nameWithType>|
-|`int`|da -2.147.483.648 a 2.147.483.647|Valore intero a 32 bit con segno|<xref:System.Int32?displayProperty=nameWithType>|
+|`int`|Da -2.147.483.648 a 2.147.483.647|Valore intero a 32 bit con segno|<xref:System.Int32?displayProperty=nameWithType>|
 |`uint`|Da 0 a 4.294.967.295|Intero senza segno a 32 bit|<xref:System.UInt32?displayProperty=nameWithType>|
-|`long`|Da -9,223,372,036,854,775,808 a 9,223,372,036,854,775,807|Numero intero con segno a 64 bit|<xref:System.Int64?displayProperty=nameWithType>|
+|`long`|Da -9.223.372.036.854.775.808 a 9.223.372.036.854.775.807|Valore intero a 64 bit con segno|<xref:System.Int64?displayProperty=nameWithType>|
 |`ulong`|Da 0 a 18.446.744.073.709.551.615|Intero senza segno a 64 bit|<xref:System.UInt64?displayProperty=nameWithType>|
 
 Nella tabella precedente ogni tipo/parola chiave C# nella colonna più a sinistra è un alias per il tipo .NET corrispondente. Sono intercambiabili. Ad esempio, le dichiarazioni seguenti dichiarano variabili dello stesso tipo:
@@ -130,7 +130,7 @@ Per altre informazioni, vedere le sezioni seguenti delle [specifiche del linguag
 ## <a name="see-also"></a>Vedere anche
 
 - [Riferimenti per C#](../index.md)
-- [Tabella dei tipi incorporati](../keywords/built-in-types-table.md)
+- [Tipi di valore](value-types.md)
 - [Tipi a virgola mobile](floating-point-numeric-types.md)
 - [Stringhe di formato numerico standard](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Dati numerici in .NET](../../../standard/numerics.md)

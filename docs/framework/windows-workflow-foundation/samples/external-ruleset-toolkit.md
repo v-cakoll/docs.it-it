@@ -2,12 +2,12 @@
 title: Toolkit di RuleSet esterno
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-ms.openlocfilehash: b07d2b63d9f3d98b8f08eb697a8d688d8fac1962
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: eb59b02d469788b23126f4e02c5b7ae5a63081f0
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710892"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094670"
 ---
 # <a name="external-ruleset-toolkit"></a>Toolkit di RuleSet esterno
 
@@ -16,7 +16,7 @@ Normalmente quando vengono usate all'interno di un'applicazione del flusso di la
 L'esempio di toolkit di RuleSet esterno contiene uno strumento basato su Windows Form che può essere usato per gestire e modificare le versioni di RuleSet in un database. Include inoltre un'attività e un servizio host per l'esecuzione di tali regole.
 
 > [!NOTE]
-> Questo esempio richiede [Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=96181).
+> Questo esempio richiede [Microsoft SQL Server](/sql).
 
 Visual Studio fornisce un editor di RuleSet come parte del Windows Workflow Foundation (WF). È possibile avviare questo editor facendo doppio clic sull'attività `Policy` in un flusso di lavoro; serializza l'oggetto di RuleSet definito al file con estensione rules associato al flusso di lavoro (un'attività `Policy` esegue un'istanza di RuleSet in base al flusso di lavoro). Il file con estensione rules viene compilato nell'assembly come una risorsa quando si compila il progetto del flusso di lavoro.
 

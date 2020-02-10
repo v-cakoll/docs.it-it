@@ -2,12 +2,12 @@
 title: Eventi di rilevamento in Traccia eventi per Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: fe50476eedef505258c2e6818e75a32c06ed6fa6
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 2c397bcfa809a1306e9c31bf3f652b055d997f38
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715924"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094579"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Eventi di rilevamento in Traccia eventi per Windows
 
@@ -125,7 +125,7 @@ Il profilo di rilevamento del monitoraggio dell'integrità crea record di istanz
 
 #### <a name="to-clean-up-optional"></a>Per eseguire la pulizia (facoltativo)
 
-1. Aprire il Visualizzatore eventi.
+1. Aprire Visualizzatore eventi.
 
 2. Passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**, **server applicazioni-applicazioni**. Fare clic con il pulsante destro del mouse su **analitico** e selezionare **Disattiva log**.
 
@@ -138,7 +138,7 @@ Il profilo di rilevamento del monitoraggio dell'integrità crea record di istanz
 > [!NOTE]
 > Si verifica un problema noto nel Visualizzatore eventi per cui quest'ultimo non riesce a decodificare eventi ETW. Si potrebbe visualizzare un messaggio di errore simile al seguente.
 >
-> Impossibile trovare la descrizione dell'ID evento \<ID > dall'origine Microsoft-Windows-Server applicazioni-applicazioni. Il componente che ha generato l'evento non è installato nel computer locale oppure l'installazione è danneggiata. È possibile installare o ripristinare il componente nel computer locale.
+> Impossibile trovare la descrizione dell'ID evento \<ID > dall'origine Microsoft-Windows-Server applicazioni-applicazioni. Il componente che genera questo evento non è installato nel computer locale o l'installazione è danneggiata. È possibile installare o riparare il componente nel computer locale.
 >
 > Se si rileva questo errore, fare clic su Aggiorna nel riquadro Azioni. La decodifica dell'evento dovrebbe ora essere eseguita in modo corretto.
 
@@ -153,4 +153,4 @@ Il profilo di rilevamento del monitoraggio dell'integrità crea record di istanz
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Esempi di monitoraggio di AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [Esempi di monitoraggio di AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

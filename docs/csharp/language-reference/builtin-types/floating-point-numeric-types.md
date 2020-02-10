@@ -18,22 +18,22 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 9fde2b28288b58d7da3a4d003ec50af7d7e7a965
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 9c8b11f9337ee9de90f2d4d96b5be162713bfcbd
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980171"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093214"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Tipi numerici a virgola mobile (riferimenti per C#)
 
-I **tipi numerici a virgola mobile** sono un subset dei **tipi semplici** e possono essere inizializzati con [*valori letterali*](#real-literals). Tutti i tipi a virgola mobile sono anche tipi di valore. Tutti i tipi numerici a virgola mobile supportano gli operatori [aritmetici](../operators/arithmetic-operators.md), di [confronto](../operators/comparison-operators.md)e di [uguaglianza](../operators/equality-operators.md) .
+I *tipi numerici a virgola mobile* rappresentano i numeri reali. Tutti i tipi numerici a virgola mobile sono [tipi di valore](value-types.md). Sono anche [tipi semplici](value-types.md#built-in-value-types) e possono essere inizializzati con [valori letterali](#real-literals). Tutti i tipi numerici a virgola mobile supportano gli operatori [aritmetici](../operators/arithmetic-operators.md), di [confronto](../operators/comparison-operators.md)e di [uguaglianza](../operators/equality-operators.md) .
 
 ## <a name="characteristics-of-the-floating-point-types"></a>Caratteristiche dei tipi a virgola mobile
 
 C# supporta i tipi a virgola mobile predefiniti seguenti:
   
-|Tipo/parola chiave C#|Intervallo approssimativo|Precisione|Dimensioni|Tipo .NET|
+|Tipo/parola chiave C#|Intervallo approssimativo|Precision|Dimensione|Tipo .NET|
 |----------|-----------------------|---------------|--------------|--------------|
 |`float`|Compreso tra ±1.5 x 10<sup>−45</sup> e ±3.4 x 10<sup>38</sup>|~6-9 cifre|4 byte|<xref:System.Single?displayProperty=nameWithType>|
 |`double`|Compreso tra ±5,0 × 10<sup>−324</sup> e ±1,7 × 10<sup>308</sup>|~15-17 cifre|8 byte|<xref:System.Double?displayProperty=nameWithType>|
@@ -118,7 +118,7 @@ Per altre informazioni, vedere le sezioni seguenti delle [specifiche del linguag
 ## <a name="see-also"></a>Vedere anche
 
 - [Riferimenti per C#](../index.md)
-- [Tabella dei tipi incorporati](../keywords/built-in-types-table.md)
+- [Tipi di valore](value-types.md)
 - [Tipi integrali](integral-numeric-types.md)
 - [Stringhe di formato numerico standard](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Dati numerici in .NET](../../../standard/numerics.md)

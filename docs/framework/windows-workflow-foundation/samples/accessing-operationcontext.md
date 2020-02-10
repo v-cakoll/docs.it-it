@@ -2,17 +2,17 @@
 title: Accesso a OperationContext
 ms.date: 03/30/2017
 ms.assetid: 4e92efe8-7e79-41f3-b50e-bdc38b9f41f8
-ms.openlocfilehash: b8a09aff7b5a30b5267fbdbd7bd6391996f359c7
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 83f3a6cacd3ee86050f65a886d446ab8da7d3690
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715095"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094709"
 ---
 # <a name="accessing-operationcontext"></a>Accesso a OperationContext
 In questo esempio viene illustrato come è possibile utilizzare le attività di messaggistica (<xref:System.ServiceModel.Activities.Receive> e <xref:System.ServiceModel.Activities.Send>) con un'attività di ambito personalizzata per accedere <xref:System.ServiceModel.OperationContext.Current%2A> e associare o recuperare un'intestazione di messaggio personalizzata all'interno di un messaggio in uscita o in ingresso.  
   
-## <a name="demonstrates"></a>Dimostrazione  
+## <a name="demonstrates"></a>Dimostra  
  Attività di messaggistica, <xref:System.ServiceModel.Activities.ISendMessageCallback>, <xref:System.ServiceModel.Activities.IReceiveMessageCallback>.  
   
 ## <a name="discussion"></a>Discussione  
@@ -20,7 +20,7 @@ In questo esempio viene illustrato come è possibile utilizzare le attività di 
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1. In questo esempio viene esposto un servizio flusso di lavoro tramite endpoint HTTP. Per eseguire questo esempio, è necessario aggiungere gli ACL URL appropriati (per informazioni dettagliate, vedere [configurazione di http e HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) ), eseguendo Visual Studio come amministratore oppure eseguendo il comando seguente in un prompt con privilegi elevati per aggiungere gli ACL appropriati. Assicurarsi che vengono sostituiti il dominio e il nome utente.  
+1. In questo esempio viene esposto un servizio flusso di lavoro tramite endpoint HTTP. Per eseguire questo esempio, è necessario aggiungere gli ACL URL appropriati (per informazioni dettagliate, vedere [configurazione di http e HTTPS](../../wcf/feature-details/configuring-http-and-https.md) ), eseguendo Visual Studio come amministratore oppure eseguendo il comando seguente in un prompt con privilegi elevati per aggiungere gli ACL appropriati. Assicurarsi che vengono sostituiti il dominio e il nome utente.  
   
     ```console  
     netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%  
@@ -28,7 +28,7 @@ In questo esempio viene illustrato come è possibile utilizzare le attività di 
   
 2. Una volta aggiunti gli elenchi ACL URL, usare i passaggi seguenti.  
   
-    1. Compila la soluzione.  
+    1. Compilare la soluzione.  
   
     2. Impostare più progetti di avvio facendo clic con il pulsante destro del mouse sulla soluzione e selezionando **Imposta progetti di avvio**.  
   

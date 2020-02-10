@@ -12,12 +12,12 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-ms.openlocfilehash: cd9d3f69f8135b608ced91c34f747600352bafe1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 047d0ea7b3783f8cf45afde2a15470adda94cd6e
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711454"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095047"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Classi di caratteri nelle espressioni regolari
 
@@ -71,7 +71,7 @@ Una classe di caratteri definisce un set di caratteri, di cui uno qualsiasi può
 
 Nella tabella seguente sono elencati alcuni criteri di espressione regolare comuni contenenti classi di caratteri positivi.  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`[aeiou]`|Corrisponde a tutte le vocali.|  
 |`[\p{P}\d]`|Corrisponde a tutti i caratteri di punteggiatura e tutte le cifre decimali.|  
@@ -84,7 +84,7 @@ Nella tabella seguente sono elencati alcuni criteri di espressione regolare comu
   
  L'espressione regolare `gr[ae]y\s\S+?[\s|\p{P}]` viene definita come segue:  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`gr`|Corrisponde ai caratteri letterali "gr".|  
 |`[ae]`|Corrisponde a una "a" o una "e".|  
@@ -99,7 +99,7 @@ Nella tabella seguente sono elencati alcuni criteri di espressione regolare comu
   
  L'espressione regolare `\b[A-Z]\w*\b` viene definita come illustrato nella tabella seguente.  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`[A-Z]`|Corrisponde a qualsiasi carattere maiuscolo da A a Z.|  
@@ -127,14 +127,14 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  Due o più intervalli di caratteri possono essere concatenati. Ad esempio, per specificare l'intervallo di cifre decimali comprese tra "0" e "9", l'intervallo di lettere minuscole comprese tra "a" e "f" e l'intervallo di lettere maiuscole comprese tra "A" e "F", usare `[0-9a-fA-F]`.  
   
- L'accento circonflesso iniziale (`^`) in un gruppo di caratteri negativi è obbligatorio e indica che tale gruppo è un gruppo di caratteri negativi anziché un gruppo di caratteri positivi.  
+ Il carattere di cursore principale (`^`) in un gruppo di caratteri negativi è obbligatorio e indica che il gruppo di caratteri è un gruppo di caratteri negativi anziché un gruppo di caratteri positivi.  
   
 > [!IMPORTANT]
 > Un gruppo di caratteri negativi in un criterio di ricerca di espressioni regolari più grande non è un'asserzione di larghezza zero. Ovvero, dopo avere valutato il gruppo di caratteri negativi, il motore delle espressioni regolari avanza di un carattere nella stringa di input.  
   
  Nella tabella seguente sono elencati alcuni criteri di espressione regolare comuni contenenti gruppi di caratteri negativi.  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`[^aeiou]`|Corrisponde a tutti i caratteri eccetto le vocali.|  
 |`[^\p{P}\d]`|Corrisponde a tutti i caratteri eccetto caratteri di punteggiatura e cifre decimali.|  
@@ -146,7 +146,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  L'espressione regolare `\bth[^o]\w+\b` viene definita come illustrato nella tabella seguente.  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`th`|Corrisponde ai caratteri letterali "th".|  
@@ -158,7 +158,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
 ## <a name="any-character-"></a>Qualsiasi carattere: .  
  Il carattere punto (.) corrisponde a qualsiasi carattere eccetto `\n` (carattere di nuova riga, \u000A), con le due qualificazioni seguenti:  
   
-- Se un criterio di ricerca di espressioni regolari viene modificato dall'opzione <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> o se la parte del criterio contenente la classe di caratteri `.` viene modificata dall'opzione `s`, `.` corrisponde a qualsiasi carattere. Per altre informazioni, vedere [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).  
+- Se un criterio di ricerca di espressioni regolari viene modificato dall'opzione <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> o se la parte del criterio contenente la classe di caratteri `.` viene modificata dall'opzione `s`, `.` corrisponde a qualsiasi carattere. Per altre informazioni, vedere [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md).  
   
      Nell'esempio seguente viene illustrato il diverso comportamento della classe di caratteri `.` per impostazione predefinita e con l'opzione <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType>. L'espressione regolare `^.+` parte dall'inizio della stringa e individua una corrispondenza per ogni carattere. Per impostazione predefinita, la corrispondenza termina alla fine della prima riga. Il criterio di ricerca di espressioni regolari trova la corrispondenza del carattere di ritorno a capo, `\r` o \u000D, ma non di `\n`. Poiché l'opzione <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> interpreta l'intera stringa di input come riga singola, ottiene una corrispondenza per ogni carattere nella stringa di input, incluso `\n`.  
   
@@ -193,7 +193,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  L'espressione regolare `\b(\p{IsGreek}+(\s)?)+\p{Pd}\s(\p{IsBasicLatin}+(\s)?)+` viene definita come illustrato nella tabella seguente.  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`\p{IsGreek}+`|Corrisponde a uno o più caratteri greci.|  
@@ -226,10 +226,10 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
 ## <a name="word-character-w"></a>Carattere alfanumerico: \w  
  `\w` trova la corrispondenza con qualsiasi carattere alfanumerico. Un carattere alfanumerico è un membro di una delle categorie Unicode elencate nella seguente tabella.  
   
-|Categoria|Descrizione|  
+|Category|Descrizione|  
 |--------------|-----------------|  
 |Ll|Letter, Lowercase|  
-|Lu|Letter, Uppercase|  
+|LU|Letter, Uppercase|  
 |Lt|Letter, Titlecase|  
 |Lo|Letter, Other|  
 |Lm|Letter, Modifier|  
@@ -260,10 +260,10 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  In altre parole, trova corrispondenza con tutti i caratteri, ad eccezione di quelli nelle categorie Unicode elencati nella tabella seguente.  
   
-|Categoria|Descrizione|  
+|Category|Descrizione|  
 |--------------|-----------------|  
 |Ll|Letter, Lowercase|  
-|Lu|Letter, Uppercase|  
+|LU|Letter, Uppercase|  
 |Lt|Letter, Titlecase|  
 |Lo|Letter, Other|  
 |Lm|Letter, Modifier|  
@@ -293,7 +293,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
 ## <a name="whitespace-character-s"></a>Carattere spazio vuoto: \s  
  `\s` corrisponde a qualsiasi carattere spazio vuoto. È equivalente alle sequenze di escape e alle categorie Unicode elencate nella tabella seguente.  
   
-|Categoria|Descrizione|  
+|Category|Descrizione|  
 |--------------|-----------------|  
 |`\f`|Carattere di avanzamento modulo, \u000C.|  
 |`\n`|Carattere di nuova riga, \u000A.|  
@@ -341,7 +341,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  Se viene specificato il comportamento conforme a ECMAScript, `\d` equivale a `[0-9]`. Per informazioni sulle espressioni regolari ECMAScript, vedere la sezione "Comportamento di corrispondenza ECMAScript" in [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).  
   
- L'esempio seguente illustra l'elemento di linguaggio `\d`. Viene verificato se una stringa di input rappresenta un numero di telefono valido negli Stati Uniti e in Canada. Il criterio di ricerca di espressioni regolari `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` è definito nel modo illustrato nella tabella seguente.  
+ L'esempio seguente illustra l'elemento di linguaggio `\d`. Viene verificato se una stringa di input rappresenta un numero di telefono valido negli Stati Uniti e in Canada. Il criterio di espressione regolare `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` è definito nel modo illustrato nella tabella seguente.  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
@@ -363,7 +363,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  Se viene specificato il comportamento conforme a ECMAScript, `\D` equivale a `[^0-9]`. Per informazioni sulle espressioni regolari ECMAScript, vedere la sezione "Comportamento di corrispondenza ECMAScript" in [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).  
   
- Nell'esempio seguente viene illustrato l'elemento di linguaggio \D. Verifica se una stringa, ad esempio un numero parte, è formata dalla combinazione corretta di caratteri decimali e non decimali. Il criterio di ricerca di espressioni regolari `^\D\d{1,5}\D*$` è definito nel modo illustrato nella tabella seguente.  
+ Nell'esempio seguente viene illustrato l'elemento di linguaggio \D. Verifica se una stringa, ad esempio un numero parte, è formata dalla combinazione corretta di caratteri decimali e non decimali. Il criterio di espressione regolare `^\D\d{1,5}\D*$` è definito nel modo illustrato nella tabella seguente.  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
@@ -380,7 +380,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
 ## <a name="supported-unicode-general-categories"></a>Categorie generali Unicode supportate  
  In Unicode sono definite le categorie generali elencate nella tabella riportata di seguito. Per altre informazioni, vedere gli argomenti correlati "UCD File Format" (Formato di file UCD) e "General Category Values" (Valori di categoria generale) in [Unicode Character Database](https://www.unicode.org/reports/tr44/) (Database di caratteri Unicode).  
   
-|Categoria|Descrizione|  
+|Category|Descrizione|  
 |--------------|-----------------|  
 |`Lu`|Letter, Uppercase|  
 |`Ll`|Letter, Lowercase|  
@@ -439,7 +439,7 @@ In .NET sono supportati i blocchi denominati elencati nella tabella seguente. Il
 |0250 - 02AF|`IsIPAExtensions`|  
 |02B0 - 02FF|`IsSpacingModifierLetters`|  
 |0300 - 036F|`IsCombiningDiacriticalMarks`|  
-|0370 - 03FF|`IsGreek`<br /><br /> oppure<br /><br /> `IsGreekandCoptic`|  
+|0370 - 03FF|`IsGreek`<br /><br /> -oppure-<br /><br /> `IsGreekandCoptic`|  
 |0400 - 04FF|`IsCyrillic`|  
 |0500 - 052F|`IsCyrillicSupplement`|  
 |0530 - 058F|`IsArmenian`|  
@@ -483,7 +483,7 @@ In .NET sono supportati i blocchi denominati elencati nella tabella seguente. Il
 |2000 - 206F|`IsGeneralPunctuation`|  
 |2070 - 209F|`IsSuperscriptsandSubscripts`|  
 |20A0 - 20CF|`IsCurrencySymbols`|  
-|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> oppure<br /><br /> `IsCombiningMarksforSymbols`|  
+|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> -oppure-<br /><br /> `IsCombiningMarksforSymbols`|  
 |2100 - 214F|`IsLetterlikeSymbols`|  
 |2150 - 218F|`IsNumberForms`|  
 |2190 - 21FF|`IsArrows`|  

@@ -4,16 +4,16 @@ description: Informazioni sui C# tipi di valore nullable e su come usarli
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: 42673d16ac68bbf119e57e4c357b1b2b2a0b5c51
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: bd90a0b1b77349efe581eb8aae44c58802ba756d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740941"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093188"
 ---
 # <a name="nullable-value-types-c-reference"></a>Tipi di valore NullableC# (riferimento)
 
-Un tipo di valore Nullable `T?` rappresenta tutti i valori del [tipo di valore](value-types.md) sottostante `T` e un valore [null](../keywords/null.md) aggiuntivo. Ad esempio, è possibile assegnare uno dei tre valori seguenti a una variabile `bool?`: `true`, `false`o `null`. Un tipo di valore sottostante `T` non può essere un tipo di valore Nullable.
+Un *tipo di valore nullable* `T?` rappresenta tutti i valori del [tipo di valore](value-types.md) sottostante `T` e un valore [null](../keywords/null.md) aggiuntivo. Ad esempio, è possibile assegnare uno dei tre valori seguenti a una variabile `bool?`: `true`, `false`o `null`. Un tipo di valore sottostante `T` non può essere un tipo di valore Nullable.
 
 > [!NOTE]
 > C#8,0 introduce la funzionalità dei tipi di riferimento Nullable. Per altre informazioni, vedere [tipi di riferimento Nullable](../../nullable-references.md). I tipi di valore nullable sono disponibili a C# partire da 2.
@@ -24,7 +24,7 @@ Si usa in genere un tipo di valore nullable quando è necessario rappresentare i
 
 ## <a name="declaration-and-assignment"></a>Dichiarazione e assegnazione
 
-Poiché un tipo valore è convertibile in modo implicito nel tipo di valore nullable corrispondente, è possibile assegnare un valore a una variabile di un tipo di valore nullable come per il tipo di valore sottostante. È anche possibile assegnare il valore `null`. Ad esempio,
+Poiché un tipo valore è convertibile in modo implicito nel tipo di valore nullable corrispondente, è possibile assegnare un valore a una variabile di un tipo di valore nullable come per il tipo di valore sottostante. È anche possibile assegnare il valore `null`. Ad esempio:
 
 [!code-csharp[declare and assign](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#Declaration)]
 
@@ -68,7 +68,7 @@ Un tipo di valore non nullable `T` è convertibile in modo implicito nel tipo di
 
 ## <a name="lifted-operators"></a>Operatori rimossi
 
-Gli operatori unari e binari predefiniti o gli operatori di overload supportati da un tipo di valore `T` sono supportati anche dal tipo di valore nullable corrispondente `T?`. Questi operatori, noti anche come *operatori lifted*, producono `null` se uno o entrambi gli operandi sono `null`; in caso contrario, l'operatore utilizza i valori contenuti degli operandi per calcolare il risultato. Ad esempio,
+Gli [operatori](../operators/index.md) unari e binari predefiniti o gli operatori di overload supportati da un tipo di valore `T` sono supportati anche dal tipo di valore nullable corrispondente `T?`. Questi operatori, noti anche come *operatori lifted*, producono `null` se uno o entrambi gli operandi sono `null`; in caso contrario, l'operatore utilizza i valori contenuti degli operandi per calcolare il risultato. Ad esempio:
 
 [!code-csharp[lifted operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#LiftedOperator)]
 
@@ -82,7 +82,9 @@ Per gli [operatori di confronto](../operators/comparison-operators.md) `<`, `>`,
 
 [!code-csharp-interactive[relational and equality operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#ComparisonOperators)]
 
-Nell'esempio precedente viene inoltre illustrato che un confronto di uguaglianza tra due istanze di tipi di valore nullable che sono entrambe `null` restituisce `true`.
+Per l' [operatore di uguaglianza](../operators/equality-operators.md#equality-operator-) `==`, se entrambi gli operandi sono `null`, il risultato viene `true`, se viene `null`solo uno degli operandi, il risultato è `false`; in caso contrario, vengono confrontati i valori contenuti degli operandi.
+
+Per l' [operatore di disuguaglianza](../operators/equality-operators.md#inequality-operator-) `!=`, se entrambi gli operandi sono `null`, il risultato viene `false`, se viene `null`solo uno degli operandi, il risultato è `true`; in caso contrario, vengono confrontati i valori contenuti degli operandi.
 
 Se esiste una [conversione definita dall'utente](../operators/user-defined-conversion-operators.md) tra due tipi di valore, è possibile usare la stessa conversione anche tra i tipi di valore nullable corrispondenti.
 

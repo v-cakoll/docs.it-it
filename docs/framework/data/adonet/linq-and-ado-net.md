@@ -3,15 +3,16 @@ title: LINQ e ADO.NET
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-ms.openlocfilehash: e24473f68fe5ccd993c5d205660ea8f397b6f797
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: c5b56fa78ce0276953597d63b3d6e2f45d88c8ab
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980093"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094436"
 ---
 # <a name="linq-and-adonet"></a>LINQ e ADO.NET
-Attualmente, molti sviluppatori aziendali devono usare due o più linguaggi di programmazione: un linguaggio di alto livello per la logica di business e i livelli di presentazione (ad C# esempio, Visual o Visual Basic) e un linguaggio di query per interagire con il database (ad esempio Transact-SQL). Tale necessità non solo richiede una conoscenza approfondita di diversi linguaggi da parte degli sviluppatori, ma provoca anche problemi di mancata corrispondenza tra linguaggi nell'ambiente di sviluppo. Ad esempio, in un'applicazione che usa un'API di accesso ai dati per eseguire una query su un database la query viene specificata come valore letterale stringa racchiuso tra virgolette. Tale stringa di query è tuttavia illeggibile per il compilatore e non è possibile eseguire su di essa un controllo per verificare la presenza di errori, ad esempio l'uso di sintassi non valida o l'effettiva esistenza delle colonne o delle righe cui fa riferimento. Non viene eseguito il controllo dei tipi dei parametri della query, né è disponibile il supporto per `IntelliSense`.  
+
+Attualmente, molti sviluppatori aziendali devono usare due o più linguaggi di programmazione: un linguaggio di alto livello per la logica di business e i livelli di presentazione (ad C# esempio, Visual o Visual Basic) e un linguaggio di query per interagire con il database (ad esempio Transact-SQL). Tale necessità non solo richiede una conoscenza approfondita di diversi linguaggi da parte degli sviluppatori, ma provoca anche problemi di mancata corrispondenza tra linguaggi nell'ambiente di sviluppo. Ad esempio, in un'applicazione che usa un'API di accesso ai dati per eseguire una query su un database la query viene specificata come valore letterale stringa racchiuso tra virgolette. Questa stringa di query non è leggibile per il compilatore e non viene verificata la presenza di errori, ad esempio una sintassi non valida o se le colonne o le righe a cui fa riferimento esistono effettivamente. Non viene eseguito il controllo dei tipi dei parametri della query, né è disponibile il supporto per `IntelliSense`.  
   
  LINQ (Language-Integrated Query) consente agli sviluppatori di creare query basate su set nel codice dell'applicazione, senza dover utilizzare un linguaggio di query distinto. È possibile scrivere query LINQ su varie origini dati enumerabili (ovvero un'origine dati che implementa l'interfaccia <xref:System.Collections.IEnumerable>), ad esempio strutture dei dati in memoria, documenti XML, database SQL e oggetti <xref:System.Data.DataSet>. Sebbene queste origini dati enumerabili vengono implementate in modi diversi, espongono tutte la stessa sintassi e gli stessi costrutti di linguaggio. Poiché è possibile formare query nel linguaggio di programmazione stesso, non è necessario usare un altro linguaggio di query incorporato sotto forma di valori letterali stringa che il compilatore non è in grado di riconoscere o verificare. L'integrazione di query nel linguaggio di programmazione consente inoltre ai programmatori di Visual Studio di essere più produttivi offrendo il controllo del tipo in fase di compilazione e della sintassi e `IntelliSense`. Queste funzionalità riducono l'esigenza di debug e correzione degli errori delle query.  
   
@@ -36,9 +37,9 @@ Attualmente, molti sviluppatori aziendali devono usare due o più linguaggi di p
  Con [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)], gli sviluppatori possono scrivere codice direttamente sullo schema di archiviazione usando lo stesso modello di programmazione LINQ delle raccolte in memoria e del <xref:System.Data.DataSet>, oltre ad altre origini dati, ad esempio XML. Per altre informazioni, vedere [LINQ to SQL](./sql/linq/index.md).  
   
 ## <a name="linq-to-entities"></a>LINQ to Entities  
- La maggior parte delle applicazioni viene attualmente scritta basandosi su database relazionali. A un certo punto è necessario che queste applicazioni interagiscano con i dati rappresentati in forma relazionale. Gli schemi di database non costituiscono sempre la soluzione ideale per la compilazione di applicazioni e i modelli concettuali di applicazione non corrispondono ai modelli logici di database. Il Entity Data Model è un modello di dati concettuale che può essere utilizzato per modellare i dati di un determinato dominio in modo che le applicazioni possano interagire con i dati come oggetti. Per ulteriori informazioni, vedere [ADO.NET Entity Framework](./ef/index.md) .  
+ La maggior parte delle applicazioni viene attualmente scritta basandosi su database relazionali. A un certo punto è necessario che queste applicazioni interagiscano con i dati rappresentati in forma relazionale. Gli schemi di database non costituiscono sempre la soluzione ideale per la compilazione di applicazioni e i modelli concettuali di applicazione non corrispondono ai modelli logici di database. Il Entity Data Model è un modello di dati concettuale che può essere utilizzato per modellare i dati di un determinato dominio in modo che le applicazioni possano interagire con i dati come oggetti. Per ulteriori informazioni, vedere [ADO.NET Entity Framework](./ef/index.md).  
   
- Tramite Entity Data Model, i dati relazionali vengono esposti come oggetti nell'ambiente .NET. Questo rende il livello di oggetto una destinazione ideale per il supporto LINQ, consentendo agli sviluppatori di formulare query sul database dal linguaggio utilizzato per compilare la logica di business. Questa funzionalità è nota come LINQ to Entities. Per altre informazioni, vedere [LINQ to Entities](./ef/language-reference/linq-to-entities.md).  
+ Tramite Entity Data Model, i dati relazionali vengono esposti come oggetti nell'ambiente .NET. Questo rende il livello di oggetto una destinazione ideale per il supporto LINQ, consentendo agli sviluppatori di formulare query sul database dal linguaggio utilizzato per compilare la logica di business. Questa funzionalità è nota come LINQ to Entities. Per ulteriori informazioni, vedere [LINQ to Entities](./ef/language-reference/linq-to-entities.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 26c09e547205e7819ebb43d6e34b6e18d6d9ff98
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7e034e92e1ff2b9bec0eaf8e0f3330f7a832a7e5
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460832"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095164"
 ---
 # <a name="how-to-localize-an-application"></a>Procedura: Localizzare un'applicazione
 Questa esercitazione spiega come creare un'applicazione localizzata usando lo strumento LocBaml.  
@@ -81,7 +81,7 @@ Questa esercitazione spiega come creare un'applicazione localizzata usando lo st
 <a name="build_locbaml"></a>   
 ## <a name="build-the-locbaml-tool"></a>Compilare lo strumento LocBaml  
   
-1. Tutti i file necessari per compilare LocBaml si trovano negli esempi in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Scaricare i C# file dall' [esempio dello strumento LocBaml](https://go.microsoft.com/fwlink/?LinkID=160016).  
+1. Tutti i file necessari per compilare LocBaml si trovano negli esempi in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Scaricare i C# file dall' [esempio dello strumento LocBaml](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml).  
   
 2. Eseguire il file di progetto (LocBaml.csproj) per compilare lo strumento dalla riga di comando:  
   
@@ -149,11 +149,11 @@ Questa esercitazione spiega come creare un'applicazione localizzata usando lo st
   
    La tabella seguente mostra come viene eseguito il mapping di questi campi ai valori delimitati del file CSV:  
   
-   |Nome BAML|Chiave di risorsa|Category|Leggibilità|Modificabilità|Comments|Value|  
+   |Nome BAML|Chiave di risorsa|Category|Leggibilità|Modificabilità|Commenti|valore|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
-   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Ignore|false|false||#Text1;#Text2|
-   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|Nessuno|true|true||Hello World|
-   |HelloApp.g.en-US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|Nessuno|true|true||Goodbye World|
+   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Ignora|FALSE|FALSE||#Text1;#Text2|
+   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|nessuno|TRUE|TRUE||Hello World|
+   |HelloApp.g.en-US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|nessuno|TRUE|TRUE||Goodbye World|
   
    Si noti che tutti i valori per il campo **Commenti** non contengono valori. Se un campo non ha un valore, è vuoto. Si noti inoltre che l'elemento nella prima riga non è leggibile né modificabile e ha "Ignora" come valore di **categoria** , il che indica che il valore non è localizzabile.  
   
@@ -206,7 +206,7 @@ Questa esercitazione spiega come creare un'applicazione localizzata usando lo st
 - La versione della DLL di risorsa localizzata deve essere sincronizzata con l'assembly principale.  
   
 <a name="Whats_Next"></a>   
-## <a name="whats-next"></a>Argomenti successivi  
+## <a name="whats-next"></a>Passaggi successivi  
  A questo punto dovrebbero essere state acquisite le conoscenze di base sull'uso dello strumento LocBaml.  Si dovrebbe essere in grado di creare un file che contiene UID. Usando lo strumento LocBaml, si dovrebbe essere in grado di analizzare un file per estrarre il contenuto localizzabile e, dopo la conversione del contenuto, generare un file resources.dll che inserisce il contenuto convertito. Questo argomento non include tutti i dettagli, ma offre le informazioni necessarie per usare LocBaml per la localizzazione delle applicazioni.  
   
 ## <a name="see-also"></a>Vedere anche

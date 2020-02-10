@@ -1,15 +1,15 @@
 ---
-title: 'Esercitazione: analizzare i sentimenti delle revisioni dei film usando un modello TensorFlow con training preliminare'
+title: 'Esercitazione: analizzare i sentimenti di revisione usando un modello TensorFlow'
 description: Questa esercitazione illustra come usare un modello TensorFlow con training preliminare per classificare i sentimenti nei commenti dei siti Web. Il classificatore dei sentimenti binari è C# un'applicazione console sviluppata con Visual Studio.
 ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 0e80cdc6bb7dcc62a57466e909451da972c92db8
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 7a6043f56a2ecaca633ba5545170f27a85a22efc
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738690"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092395"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>Esercitazione: analizzare i sentimenti delle revisioni dei film usando un modello TensorFlow con training preliminare in ML.NET
 
@@ -17,7 +17,7 @@ Questa esercitazione illustra come usare un modello TensorFlow con training prel
 
 Il modello TensorFlow usato in questa esercitazione è stato sottoposto a training con le revisioni dei film del database IMDB. Al termine dello sviluppo dell'applicazione, sarà possibile fornire il testo della revisione del film e l'applicazione indica se la revisione ha un sentimento positivo o negativo.
 
-In questa esercitazione si imparerà a:
+In questa esercitazione verranno illustrate le procedure per:
 > [!div class="checklist"]
 >
 > * Caricare un modello di TensorFlow con training preliminare
@@ -26,17 +26,17 @@ In questa esercitazione si imparerà a:
 
 È possibile trovare il codice sorgente per questa esercitazione nel repository [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TextClassificationTF).
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 * [Visual Studio 2017 versione 15,6 o successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) con il carico di lavoro "sviluppo multipiattaforma .NET Core" installato.
 
-## <a name="setup"></a>Programma di installazione
+## <a name="setup"></a>Configurazione
 
-### <a name="create-the-application"></a>Creare l'applicazione
+### <a name="create-the-application"></a>Creazione dell'applicazione
 
 1. Creare un' **applicazione console .NET Core** denominata "TextClassificationTF".
 
-2. Creare una directory denominata *Data* nel progetto per salvare i file del set di dati.
+2. Creare una directory denominata *Dati* nel progetto per salvare i file del set di dati.
 
 3. Installare il **pacchetto NuGet Microsoft.ML**:
 
@@ -79,14 +79,14 @@ Le revisioni del film sono testo in formato libero. L'applicazione converte il t
 
 Il primo consiste nel suddividere il testo in parole separate e utilizzare il file di mapping specificato per eseguire il mapping di ogni parola a una codifica di tipo Integer. Il risultato di questa trasformazione è una matrice integer a lunghezza variabile con una lunghezza corrispondente al numero di parole nella frase.
 
-|Gli| Valore|Tipo di|
+|Proprietà| valore|Type|
 |-------------|-----------------------|------|
 |ReviewText|Questo film è molto valido|string|
 |VariableLengthFeatures|14, 22, 9, 66, 78,... |int []|
 
 La matrice di funzionalità a lunghezza variabile viene quindi ridimensionata a una lunghezza fissa di 600. Si tratta della lunghezza prevista dal modello TensorFlow.
 
-|Gli| Valore|Tipo di|
+|Proprietà| valore|Type|
 |-------------|-----------------------|------|
 |ReviewText|Questo film è molto valido|string|
 |VariableLengthFeatures|14, 22, 9, 66, 78,... |int []|
@@ -122,7 +122,7 @@ La matrice di funzionalità a lunghezza variabile viene quindi ridimensionata a 
 
 ### <a name="create-the-mlcontext-lookup-dictionary-and-action-to-resize-features"></a>Creare il MLContext, il dizionario di ricerca e l'azione per ridimensionare le funzionalità
 
-La [classe MLContext](xref:Microsoft.ML.MLContext) è un punto di partenza per tutte le operazioni ML.NET. L'inizializzazione di `mlContext` crea un nuovo ambiente ML.NET che può essere condiviso tra gli oggetti del flusso di lavoro di creazione del modello. Dal punto di vista concettuale è simile a `DBContext` in Entity Framework.
+La [classe MLContext](xref:Microsoft.ML.MLContext) è un punto di partenza per tutte le operazioni ML.NET. L'inizializzazione di `mlContext` crea un nuovo ambiente ML.NET che può essere condiviso tra gli oggetti del flusso di lavoro della creazione del modello. Dal punto di vista concettuale è simile a `DBContext` in Entity Framework.
 
 1. Sostituire la riga `Console.WriteLine("Hello World!")` nel metodo `Main` con il codice seguente per dichiarare e inizializzare la variabile mlContext:
 
@@ -224,9 +224,9 @@ La [classe MLContext](xref:Microsoft.ML.MLContext) è un punto di partenza per t
 
 1. La funzione [Predict ()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) esegue una stima su una singola riga di dati:
 
-    |Gli| Valore|Tipo di|
+    |Proprietà| valore|Type|
     |-------------|-----------------------|------|
-    |Stima|[0,5459937, 0,454006255]|float []|
+    |Previsione|[0,5459937, 0,454006255]|float []|
 
 1. Visualizzare la stima del sentimento usando il codice seguente:
 
@@ -247,11 +247,11 @@ Number of classes: 2
 Is sentiment/review positive ? Yes
 ```
 
-La procedura è stata completata. A questo punto è stato creato un modello di apprendimento automatico per la classificazione e la stima dei sentimenti dei messaggi riutilizzando un modello di `TensorFlow` pre-sottoposto a training in ML.NET.
+Congratulazioni! A questo punto è stato creato un modello di apprendimento automatico per la classificazione e la stima dei sentimenti dei messaggi riutilizzando un modello di `TensorFlow` pre-sottoposto a training in ML.NET.
 
 È possibile trovare il codice sorgente per questa esercitazione nel repository [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TextClassificationTF).
 
-In questa esercitazione si è appreso come:
+In questa esercitazione sono state illustrate le procedure per:
 > [!div class="checklist"]
 >
 > * Caricare un modello di TensorFlow con training preliminare

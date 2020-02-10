@@ -3,17 +3,18 @@ title: ADO.NET
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: a803c0592cd44801c55a699b56a9a498781a6593
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: cca3075a73a7bb45fd6154f760adfcda9064345c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980106"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094397"
 ---
 # <a name="adonet"></a>ADO.NET
+
 ADO.NET è un set di classi che espongono servizi di accesso ai dati per i programmatori .NET Framework. ADO.NET fornisce un set completo per la creazione di applicazioni distribuite e abilitate alla condivisione dei dati. ADO.NET è parte integrante di .NET Framework e consente l'accesso ai dati relazionali, ai dati XML e ai dati dell'applicazione. Supporta numerose esigenze di sviluppo, inclusa la creazione di client di database front-end e di oggetti business di livello intermedio, usati da applicazioni, strumenti, linguaggi o browser Internet.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Novità in ADO.NET](whats-new.md)  
  Vengono descritte le nuove funzionalità di ADO.NET.  
   
@@ -36,7 +37,7 @@ ADO.NET è un set di classi che espongono servizi di accesso ai dati per i progr
  Fornisce informazioni su LINQ to DataSet, inclusi esempi di programmazione.  
   
  [Recupero e modifica di dati in ADO.NET](retrieving-and-modifying-data.md)  
- Viene descritto come connettersi a un'origine dati e come recuperare e modificare i dati tramite `Commands`, `DataReaders` e `DataAdapters`.  
+ Viene descritto come connettersi a un'origine dati e come recuperare e modificare i dati utilizzando `Commands`, `DataReaders`e `DataAdapters`.  
   
  [SQL Server e ADO.NET](./sql/index.md)  
  Viene descritto come usare le funzionalità e le caratteristiche specifiche di SQL Server.  

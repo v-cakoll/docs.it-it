@@ -2,22 +2,22 @@
 title: Gestione dei messaggi non elaborabili
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: 389d0651438036cd23d30cf7dd866956ac8e5dae
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 378849815617f6556a7d9cc7e89c6697bfdd895d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921197"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094995"
 ---
 # <a name="poison-message-handling"></a>Gestione dei messaggi non elaborabili
 Un *messaggio non elaborabile* è un messaggio che ha superato il numero massimo di tentativi di recapito all'applicazione. Questa situazione può insorgere quando un'applicazione basata sulla coda non è in grado di elaborare un messaggio a causa di errori. Per far fronte a richieste di affidabilità, un'applicazione in coda riceve messaggi nell'ambito di una transazione. Se la transazione nella quale è stato ricevuto un messaggio in coda viene interrotta, il messaggio resta nella coda, quindi viene eseguito un nuovo tentativo nell'ambito di una nuova transazione. Se il problema che ha determinato l'interruzione della transazione non viene risolto, l'applicazione ricevente può rimanere bloccata in una successione continua di ricezioni e interruzioni dello stesso messaggio fino al raggiungimento del numero massimo di tentativi di recapito. Ne consegue l'impossibilità di elaborare il messaggio.  
   
- Un messaggio può diventare non elaborabile per varie ragioni. Le cause più comuni sono specifiche dell'applicazione. Ad esempio, se un'applicazione legge un messaggio da una coda ed esegue alcune operazioni di elaborazione del database, è possibile che non riesca a ottenere un blocco per il database, causando l'interruzione della transazione. A causa dell'interruzione della transazione del database, il messaggio rimane nella coda e l'applicazione è costretta a rileggerlo una seconda volta e ad eseguire un altro tentativo di acquisire un blocco sul database. I messaggi, inoltre, possono diventare non elaborabili se contengono informazioni non valide. Un ordine di acquisto, ad esempio, potrebbe contenere un numero cliente non valido. In questi casi è possibile che l'applicazione interrompa a ragione la transazione determinando la trasformazione del messaggio in messaggio non elaborabile.  
+ Un messaggio può diventare non elaborabile per varie ragioni. I motivi più comuni sono specifici dell'applicazione. Ad esempio, se un'applicazione legge un messaggio da una coda ed esegue alcune operazioni di elaborazione del database, è possibile che non riesca a ottenere un blocco per il database, causando l'interruzione della transazione. A causa dell'interruzione della transazione del database, il messaggio rimane nella coda e l'applicazione è costretta a rileggerlo una seconda volta e ad eseguire un altro tentativo di acquisire un blocco sul database. I messaggi, inoltre, possono diventare non elaborabili se contengono informazioni non valide. Un ordine di acquisto, ad esempio, potrebbe contenere un numero cliente non valido. In questi casi è possibile che l'applicazione interrompa a ragione la transazione determinando la trasformazione del messaggio in messaggio non elaborabile.  
   
  In rari casi è possibile che i messaggi non vengano inviati all'applicazione. Il livello Windows Communication Foundation (WCF) potrebbe rilevare un problema con il messaggio, ad esempio se il frame del messaggio non è corretto, le credenziali del messaggio non sono collegate o un'intestazione azione non valida. In questi casi l'applicazione non riceve mai il messaggio ma quest'ultimo, pur diventando non elaborabile, può essere elaborato manualmente.  
   
 ## <a name="handling-poison-messages"></a>Gestione di messaggi non elaborabili  
- In WCF la gestione dei messaggi non elaborabili fornisce un meccanismo in base al quale un'applicazione ricevente gestisce i messaggi che non possono essere inviati all'applicazione o i messaggi inviati all'applicazione, ma che non vengono elaborati a causa di un errore specifico dell'applicazione motivi. La gestione dei messaggi non elaborabili è configurata in base alle proprietà seguenti in ogni associazione in coda disponibile:  
+ In WCF la gestione dei messaggi non elaborabili fornisce un meccanismo in base al quale un'applicazione ricevente gestisce i messaggi che non possono essere inviati all'applicazione o ai messaggi inviati all'applicazione, ma che non sono stati elaborati a causa di un problema specifico dell'applicazione motivi. Configurare la gestione dei messaggi non elaborabili con le proprietà seguenti in ognuna delle associazioni in coda disponibili:  
   
 - `ReceiveRetryCount`. Valore integer che indica il numero massimo di tentativi di recapito di un messaggio dalla coda dell'applicazione all'applicazione. Il valore predefinito è 5. È sufficiente nei casi in cui un tentativo immediato corregge il problema, ad esempio con un deadlock temporaneo su un database.  
   
@@ -31,11 +31,11 @@ Un *messaggio non elaborabile* è un messaggio che ha superato il numero massimo
   
 - Elimina. Il messaggio non elaborabile viene eliminato e non verrà mai recapitato all'applicazione. Se a questo punto la proprietà `TimeToLive` del messaggio è scaduta, è possibile che il messaggio venga visualizzato nella coda dei messaggi non recapitabili del mittente. In caso contrario, il messaggio non viene visualizzato mai. L'opzione indica che l'utente non ha specificato l'operazione da eseguire in caso di perdita del messaggio.  
   
-- Rifiuta. Questa opzione è disponibile solo in Windows Vista. Viene indicato a MSMQ di inviare al gestore code mittente un acknowledgement negativo che indichi che l'applicazione non è in grado di ricevere il messaggio. Il messaggio viene inserito nella coda di messaggi non recapitabili del gestore code mittente.  
+- Rifiuta. Questa opzione è disponibile solo in Windows Vista. In questo modo si indica a Accodamento messaggi (MSMQ) di inviare un riconoscimento negativo al gestore code mittente che l'applicazione non è in grado di ricevere il messaggio. Il messaggio viene inserito nella coda di messaggi non recapitabili del gestore code mittente.  
   
 - Sposta. Questa opzione è disponibile solo in Windows Vista. Il messaggio non elaborabile viene spostato in una coda di messaggi non elaborabili per l'elaborazione successiva da parte di un'applicazione di gestione apposita. La coda di messaggi non elaborabili è una coda secondaria della coda dell'applicazione. Un'applicazione per la gestione di messaggi non elaborabili può essere un servizio WCF che legge i messaggi dalla coda non elaborabile. La coda non elaborabile è una coda secondaria della coda dell'applicazione e può essere risolta come NET. MSMQ://\<*nome computer*>/*applicationQueue*;p Baptiste Oison, dove *nome-* computer è il nome del computer in cui risiede la coda e *applicationQueue* è il nome della coda specifica dell'applicazione.  
   
- Di seguito è indicato il numero massimo di tentativi di recapito possibili per un messaggio:  
+Di seguito è indicato il numero massimo di tentativi di recapito possibili per un messaggio:  
   
 - ((ReceiveRetryCount + 1) * (MaxRetryCycles + 1)) in Windows Vista.  
   
@@ -68,7 +68,7 @@ Un *messaggio non elaborabile* è un messaggio che ha superato il numero massimo
   
 1. Assicurarsi che le impostazioni dei messaggi non elaborabili rispettino i requisiti dell'applicazione. Quando si utilizzano le impostazioni, assicurarsi di comprendere le differenze tra le funzionalità di Accodamento messaggi in Windows Vista, Windows Server 2003 e Windows XP.  
   
-2. Se necessario, implementare `IErrorHandler` per gestire gli errori di messaggi non elaborabili. Poiché l'impostazione di `ReceiveErrorHandling` su `Fault` richiede un meccanismo manuale per rimuovere dalla coda il messaggio non elaborabile o per correggere un problema collegato esterno, l'utilizzo tipico consiste nell'implementare `IErrorHandler` quando `ReceiveErrorHandling` è impostato su `Fault`, come illustrato nel codice seguente.  
+2. Se necessario, implementare il `IErrorHandler` per gestire gli errori del messaggio non elaborabile. Poiché l'impostazione di `ReceiveErrorHandling` su `Fault` richiede un meccanismo manuale per rimuovere dalla coda il messaggio non elaborabile o per correggere un problema collegato esterno, l'utilizzo tipico consiste nell'implementare `IErrorHandler` quando `ReceiveErrorHandling` è impostato su `Fault`, come illustrato nel codice seguente.  
   
      [!code-csharp[S_UE_MSMQ_Poison#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/poisonerrorhandler.cs#2)]  
   

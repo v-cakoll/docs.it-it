@@ -7,12 +7,12 @@ helpviewer_keywords:
 - struct keyword [C#]
 - structs [C#], struct keyword
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 8d9a23a0813423571c894758257b284ad67a72e2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 77d5c83dd4c81b96bc62ace6e609db8bc411dc41
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744655"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093162"
 ---
 # <a name="struct-c-reference"></a>struct (Riferimenti per C#)
 
@@ -27,7 +27,7 @@ public struct Book
 }
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Gli struct possono contenere anche [costruttori](../../programming-guide/classes-and-structs/constructors.md), [costanti](../../programming-guide/classes-and-structs/constants.md), [campi](../../programming-guide/classes-and-structs/fields.md), [metodi](../../programming-guide/classes-and-structs/methods.md), [proprietà](../../programming-guide/classes-and-structs/properties.md), [indicizzatori](../../programming-guide/indexers/index.md), [operatori](../operators/index.md), [eventi](../../programming-guide/events/index.md) e [tipi annidati](../../programming-guide/classes-and-structs/nested-types.md), anche se è consigliabile trasformare il tipo in una classe se sono necessari molti di questi membri.
 
@@ -49,7 +49,6 @@ Per i relativi esempi, vedere [Uso di struct](../../programming-guide/classes-an
 
 - [Riferimenti per C#](../index.md)
 - [Parole chiave C#](index.md)
-- [Tabella dei tipi incorporati](built-in-types-table.md)
 - [Tipi di valore](../builtin-types/value-types.md)
 - [class](class.md)
 - [interface](interface.md)

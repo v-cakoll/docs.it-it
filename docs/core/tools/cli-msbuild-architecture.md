@@ -2,12 +2,12 @@
 title: Architettura degli strumenti della riga di comando di .NET Core
 description: Informazioni sui livelli degli strumenti di .NET Core e sulle modifiche apportate nelle versioni più recenti.
 ms.date: 03/06/2017
-ms.openlocfilehash: 0064e7354f073be618bcf6a79962ab495927fadd
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: fde1a0acb6af9dd65aa3466b4ea37473b2eab6fb
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980210"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092915"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>Panoramica generale delle modifiche agli strumenti di .NET Core
 
@@ -24,13 +24,13 @@ Come parte di questo passaggio, il motore di compilazione personalizzato svilupp
 
 ## <a name="the-tooling-layers"></a>Livelli degli strumenti
 
-Con l'abbandono del sistema di progetto esistente e dei commutatori del motore di compilazione, la domanda da porsi è la seguente: uno qualsiasi di questi cambiamenti modificherà i livelli complessivi dell'ecosistema degli strumenti .NET Core? Esistono nuovi elementi e componenti?
+Con la modifica del motore di compilazione e l'allontanamento dal sistema del progetto esistente, alcune domande seguono naturalmente. Eseguire una di queste modifiche per modificare la "sovrapposizione" complessiva dell'ecosistema di strumenti di .NET Core? Esistono nuovi elementi e componenti?
 
 Nella figura seguente viene fornito un breve riepilogo dei livelli dell'anteprima 2:
 
 ![Architettura di alto livello degli strumenti dell'anteprima 2](media/cli-msbuild-architecture/p2-arch.png)
 
-L'organizzazione su più livelli degli strumenti è piuttosto semplice. Nella parte inferiore, la base è la interfaccia della riga di comando di .NET Core. Tutti gli altri strumenti di livello più alto, ad esempio Visual Studio o Visual Studio Code, dipendono e si basano sull'interfaccia della riga di comando per compilare progetti, ripristinare le dipendenze e così via. Ad esempio, se Visual Studio voleva eseguire un'operazione di ripristino, eseguirebbe la chiamata nel comando `dotnet restore` ([vedere la nota](#dotnet-restore-note)) nell'interfaccia della riga di comando.
+La sovrapposizione degli strumenti nella versione Preview 2 è semplice. Nella parte inferiore, la base è la interfaccia della riga di comando di .NET Core. Tutti gli altri strumenti di livello più alto, ad esempio Visual Studio o Visual Studio Code, dipendono e si basano sull'interfaccia della riga di comando per compilare progetti, ripristinare le dipendenze e così via. Ad esempio, se Visual Studio voleva eseguire un'operazione di ripristino, eseguirebbe la chiamata nel comando `dotnet restore` ([vedere la nota](#dotnet-restore-note)) nell'interfaccia della riga di comando.
 
 Con il passaggio al nuovo sistema di progetto, il diagramma precedente risulta modificato nel modo illustrato di seguito:
 
@@ -45,7 +45,7 @@ Tutti i set di strumenti, inclusa l'interfaccia della riga di comando, utilizzan
 
 ### <a name="cli-commands"></a>Comandi dell'interfaccia della riga di comando
 
-Con l'introduzione del componente SDK condiviso, la maggior parte dei comandi dell'interfaccia della riga di comando esistenti sono stati reimplementati come attività e destinazioni MSBuild. Cosa significa questo per i comandi dell'interfaccia della riga di comando e per l'utilizzo del set di strumenti?
+Il componente SDK condiviso indica che la maggior parte dei comandi dell'interfaccia della riga di comando esistenti è stata reimplementata come attività e destinazioni di MSBuild. Cosa significa questo per i comandi dell'interfaccia della riga di comando e per l'utilizzo del set di strumenti?
 
 Dal punto di vista dell'utilizzo, non cambia il modo in cui si usa l'interfaccia della riga di comando. L'interfaccia della riga di comando contiene ancora i comandi di base esistenti nella versione di .NET Core 1,0 Preview 2:
 

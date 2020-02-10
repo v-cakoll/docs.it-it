@@ -2,12 +2,12 @@
 title: Byref
 description: Informazioni sui tipi ByRef e di tipo ByRef in F#, usati per la programmazione di basso livello.
 ms.date: 11/04/2019
-ms.openlocfilehash: 05a40059ad5b72829233b0c4135c76eb1cff4da5
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 2d98d325dc4ad26548fb2cc6aa5b872e152ee0a8
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965815"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092788"
 ---
 # <a name="byrefs"></a>Byref
 
@@ -114,17 +114,17 @@ C#supporta le parole chiave `in ref` e `out ref`, oltre a `ref` restituisce. Nel
 |------------|---------|
 |`ref` valore restituito|`outref<'T>`|
 |`ref readonly` valore restituito|`inref<'T>`|
-|parametro `in ref`|`inref<'T>`|
-|parametro `out ref`|`outref<'T>`|
+|Parametro `in ref`.|`inref<'T>`|
+|Parametro `out ref`.|`outref<'T>`|
 
 La tabella seguente mostra cosa F# genera:
 
 |F#costruire|Costrutto emesso|
 |------------|-----------------|
-|argomento `inref<'T>`|attributo `[In]` sull'argomento|
+|`inref<'T>` argomento|attributo `[In]` sull'argomento|
 |`inref<'T>` restituito|`modreq` attributo per valore|
 |`inref<'T>` nello slot o nell'implementazione astratta|`modreq` sull'argomento o sulla restituzione|
-|argomento `outref<'T>`|attributo `[Out]` sull'argomento|
+|`outref<'T>` argomento|attributo `[Out]` sull'argomento|
 
 ### <a name="type-inference-and-overloading-rules"></a>Regole di overload e inferenza del tipo
 
@@ -188,7 +188,7 @@ let squareAndPrint (data : byref<int>) =
 ```
 
 Per restituire un valore ByRef, la variabile che contiene il valore deve essere più lunga dell'ambito corrente.
-Inoltre, per restituire ByRef, utilizzare & valore (dove valore è una variabile che dura più a lungo dell'ambito corrente).
+Inoltre, per restituire ByRef, utilizzare `&value` (dove value è una variabile che dura più a lungo dell'ambito corrente).
 
 ```fsharp
 let mutable sum = 0
@@ -252,4 +252,4 @@ let test () =
     ()
 ```
 
-In questo modo si evita di ottenere risultati diversi a seconda che si compilino con le ottimizzazioni.
+Ciò impedisce di ottenere risultati diversi a seconda che vengano compilate con le ottimizzazioni.

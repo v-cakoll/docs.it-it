@@ -2,20 +2,20 @@
 title: Attività ExternalizedPolicy in .NET Framework 4.5
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 9184386751bb44e89dfdcedd34ab0ab84a27323e
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 8fd08c9c29f7a268170aaa101a9bdb85250157dc
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710920"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094631"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>Attività ExternalizedPolicy in .NET Framework 4.5
 
-Questo esempio illustra il modo in cui l'attività ExternalizedPolicy4 consente l'esecuzione diretta di .NET Framework 3,5 Windows Workflow Foundation (WF 3,5) <xref:System.Workflow.Activities.Rules.RuleSet> oggetti in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation (WF 4,5) usando il motore regole fornito in WF 3,5. Usando questa attività, è possibile aprire ed eseguire un oggetto <xref:System.Workflow.Activities.Rules.RuleSet> esistente di WF 3.5. Per ulteriori informazioni sul motore regole di WF 3,5 incluso come parte di Windows Workflow Foundation, vedere [Introduzione al motore regole di Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkId=166079). Per ulteriori informazioni sulla migrazione delle regole per [!INCLUDE[wf1](../../../../includes/wf1-md.md)] in [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], vedere la [Guida alla migrazione](../migration-guidance.md).
+Questo esempio illustra il modo in cui l'attività ExternalizedPolicy4 consente l'esecuzione diretta di .NET Framework 3,5 Windows Workflow Foundation (WF 3,5) <xref:System.Workflow.Activities.Rules.RuleSet> oggetti in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation (WF 4,5) usando il motore regole fornito in WF 3,5. Usando questa attività, è possibile aprire ed eseguire un oggetto <xref:System.Workflow.Activities.Rules.RuleSet> esistente di WF 3.5. Per ulteriori informazioni sul motore regole di WF 3,5 incluso come parte di Windows Workflow Foundation, vedere [Introduzione al motore regole di Windows Workflow Foundation](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480193(v=msdn.10)). Per ulteriori informazioni sulla migrazione delle regole per [!INCLUDE[wf1](../../../../includes/wf1-md.md)] in [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], vedere la [Guida alla migrazione](../migration-guidance.md).
 
 ## <a name="projects-in-this-sample"></a>Progetti di questo esempio
 
-|Nome progetto|Descrizione|File principali|
+|Nome del progetto|Descrizione|File principali|
 |-|-|-|
 |ExternalizedPolicy4|Contiene l'attività ExternalizedPolicy4 e la relativa finestra di progettazione di WF 4.5.|**ExternalizedPolicy4.cs**: definizione dell'attività.<br /><br /> **ExternalizedPolicy4Designer. XAML**: finestra di progettazione personalizzata per l'attività ExternalizedPolicy4. Usa l'editor delle regole (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>) dal motore per le regole di WF 3.5.|
 |ImperativeCodeClientSample|Applicazione client di esempio che configura ed esegue un flusso di lavoro tramite un'applicazione ExternalizedPolicy4 e il codice C# imperativo (non viene usata alcuna finestra di progettazione).|**ApplyDiscount. Rules**: file con definizioni della regola di [!INCLUDE[wf1](../../../../includes/wf1-md.md)].<br /><br /> **Order.cs**: tipo che rappresenta un ordine del cliente. Le regole vengono applicate agli oggetti di questo tipo.<br /><br /> **Program.cs**: configura ed esegue un flusso di lavoro che dispone di un'attività Policy4 per applicare le regole definite in ApplyDiscount. Rules alle istanze degli oggetti Order.<br /><br /> App.config: file di configurazione con il percorso del file delle regole.|
@@ -42,7 +42,7 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 }
 ```
 
-|proprietà|Descrizione|
+|Proprietà|Descrizione|
 |-|-|
 |RuleSetFilePath|Percorso del file <xref:System.Workflow.Activities.Rules.RuleSet> di .NET Framework 3.5 da valutare quando viene eseguita l'attività.|
 |RuleSetName|Nome dell'oggetto <xref:System.Workflow.Activities.Rules.RuleSet> da usare all'interno del file con estensione rules.|

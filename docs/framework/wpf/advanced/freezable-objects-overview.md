@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: 755240859829042e9790b9c89e47bb7a2013ceef
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: b1887afd19407898d8de1d92252e29778899fb89
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460443"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095190"
 ---
 # <a name="freezable-objects-overview"></a>Cenni preliminari sugli oggetti Freezable
 
@@ -170,11 +170,11 @@ Se la classe contiene membri dati di proprietà non dipendenza <xref:System.Wind
 > [!NOTE]
 > È molto importante iniziare ogni <xref:System.Windows.Freezable> metodo di cui si esegue l'override con una chiamata all'implementazione di base.
 
-Per un esempio di classe di <xref:System.Windows.Freezable> personalizzata, vedere l' [esempio di animazione personalizzata](https://go.microsoft.com/fwlink/?LinkID=159981).
+Per un esempio di classe di <xref:System.Windows.Freezable> personalizzata, vedere l' [esempio di animazione personalizzata](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/CustomAnimation).
 
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Freezable>
-- [Esempio di animazione personalizzata](https://go.microsoft.com/fwlink/?LinkID=159981)
-- [Panoramica sulle proprietà di dipendenza](dependency-properties-overview.md)
+- [Esempio di animazione personalizzata](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/CustomAnimation)
+- [Cenni preliminari sulle proprietà di dipendenza](dependency-properties-overview.md)
 - [Proprietà di dipendenza personalizzate](custom-dependency-properties.md)

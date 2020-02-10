@@ -2,41 +2,41 @@
 title: Attività personalizzata SendMail
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: b1e2d58a09362569d4d408f6e1c9e589aa6bda76
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 90b3192d931b216345b50ba49465455427e43a64
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715572"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094605"
 ---
 # <a name="sendmail-custom-activity"></a>Attività personalizzata SendMail
 In questo esempio viene illustrato come creare un'attività personalizzata che deriva da <xref:System.Activities.AsyncCodeActivity> per inviare messaggi di posta elettronica tramite il protocollo SMTP da usare in un'applicazione flusso di lavoro. L'attività personalizzata usa le funzionalità di <xref:System.Net.Mail.SmtpClient> per inviare messaggi di posta elettronica in modo asincrono e per inviare messaggi di posta elettronica con l'autenticazione di. Nell'attività sono inoltre disponibili funzionalità per l'utente finale, ad esempio la modalità test, la sostituzione dei token, i modelli di file e il percorso di rilascio di prova.  
   
  Nella tabella seguente vengono indicati in dettaglio gli argomenti per l'attività `SendMail`.  
   
-|Name|Tipo di|Descrizione|  
+|Nome|Type|Descrizione|  
 |-|-|-|  
-|Host|Stringa|Indirizzo dell'host del server SMTP.|  
-|Port|Stringa|Porta del servizio SMTP nell'host.|  
+|Host|string|Indirizzo dell'host del server SMTP.|  
+|Porta|string|Porta del servizio SMTP nell'host.|  
 |EnableSsl|bool|Specifica se la classe <xref:System.Net.Mail.SmtpClient> usa il protocollo SSL (Secure Sockets Layer) per crittografare la connessione.|  
-|Nome utente|Stringa|Nome utente per configurare le credenziali per l'autenticazione della proprietà <xref:System.Net.Mail.SmtpClient.Credentials%2A> del mittente.|  
-|Password|Stringa|Password per configurare le credenziali per l'autenticazione della proprietà <xref:System.Net.Mail.SmtpClient.Credentials%2A> del mittente.|  
-|Subject|<xref:System.Activities.InArgument%601>stringa \<|Oggetto del messaggio.|  
-|Body|<xref:System.Activities.InArgument%601>stringa \<|Corpo del messaggio.|  
-|Allegati|<xref:System.Activities.InArgument%601>stringa \<|Raccolta di allegati utilizzata per archiviare i dati allegati a questo messaggio di posta elettronica.|  
-|Da|<xref:System.Net.Mail.MailAddress>|Indirizzo mittente per questo messaggio di posta elettronica.|  
-|Per|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Raccolta di indirizzi contenente i destinatari di questo messaggio di posta elettronica.|  
+|UserName|string|Nome utente per configurare le credenziali per l'autenticazione della proprietà <xref:System.Net.Mail.SmtpClient.Credentials%2A> del mittente.|  
+|Password|string|Password per configurare le credenziali per l'autenticazione della proprietà <xref:System.Net.Mail.SmtpClient.Credentials%2A> del mittente.|  
+|Oggetto|<xref:System.Activities.InArgument%601>stringa \<>|Oggetto del messaggio.|  
+|Corpo|<xref:System.Activities.InArgument%601>stringa \<>|Corpo del messaggio.|  
+|Allegati|<xref:System.Activities.InArgument%601>stringa \<>|Raccolta di allegati utilizzata per archiviare i dati allegati a questo messaggio di posta elettronica.|  
+|From|<xref:System.Net.Mail.MailAddress>|Indirizzo mittente per questo messaggio di posta elettronica.|  
+|A|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Raccolta di indirizzi contenente i destinatari di questo messaggio di posta elettronica.|  
 |CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Raccolta di indirizzi contenente i destinatari della copia a carboni (CC) per questo messaggio di posta elettronica.|  
 |BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Raccolta di indirizzi contenente i destinatari della copia per conoscenza nascosta (Ccn) per questo messaggio di posta elettronica.|  
-|token|<xref:System.Activities.InArgument%601>< IDictionary\<stringa, stringa > >|Token da sostituire nel corpo del messaggio. Questa funzionalità consente agli utenti di specificare alcuni valori nel corpo del messaggio che possono essere sostituiti in un secondo momento dai token specificati usando questa proprietà.|  
-|BodyTemplateFilePath|Stringa|Percorso di un modello per il corpo del messaggio. L'attività `SendMail` copia il contenuto di questo file nella relativa proprietà del corpo.<br /><br /> Il modello può contenere token sostituiti dal contenuto della proprietà Token.|  
+|Tokens|<xref:System.Activities.InArgument%601>< IDictionary\<stringa, stringa > >|Token da sostituire nel corpo del messaggio. Questa funzionalità consente agli utenti di specificare alcuni valori nel corpo del messaggio che possono essere sostituiti in un secondo momento dai token specificati usando questa proprietà.|  
+|BodyTemplateFilePath|string|Percorso di un modello per il corpo del messaggio. L'attività `SendMail` copia il contenuto di questo file nella relativa proprietà del corpo.<br /><br /> Il modello può contenere token sostituiti dal contenuto della proprietà Token.|  
 |TestMailTo|<xref:System.Net.Mail.MailAddress>|Quando questa proprietà è impostata, tutti i messaggi di posta elettronica vengono inviati all'indirizzo specificato.<br /><br /> Questa proprietà deve essere usata quando si esegue il test di flussi di lavoro, Ad esempio, quando si desidera assicurarsi che tutti i messaggi di posta elettronica vengano inviati senza inviarli ai destinatari effettivi.|  
-|TestDropPath|Stringa|Quando questa proprietà è impostata, anche tutti i messaggi di posta elettronica vengono salvati nel file specificato.<br /><br /> Questa proprietà deve essere usata quando si esegue il test o il debug di flussi di lavoro, per assicurarsi che il formato e il contenuto dei messaggi di posta elettronica in uscita siano appropriati.|  
+|TestDropPath|string|Quando questa proprietà è impostata, anche tutti i messaggi di posta elettronica vengono salvati nel file specificato.<br /><br /> Questa proprietà deve essere usata quando si esegue il test o il debug di flussi di lavoro, per assicurarsi che il formato e il contenuto dei messaggi di posta elettronica in uscita siano appropriati.|  
   
 ## <a name="solution-contents"></a>Contenuto della soluzione  
  Nella soluzione sono contenuti due progetti.  
   
-|Progetto di|Descrizione|File importanti|  
+|Project|Descrizione|File importanti|  
 |-------------|-----------------|---------------------|  
 |SendMail|Attività SendMail|1. SendMail.cs: implementazione per l'attività principale<br />2. SendMailDesigner. XAML e SendMailDesigner.xaml.cs: finestra di progettazione per l'attività SendMail<br />3. MailTemplateBody. htm: modello per il messaggio di posta elettronica da inviare.|  
 |SendMailTestClient|Client in cui eseguire il test dell'attività SendMail.  In questo progetto l'attività viene richiamata in due modi diversi, ovvero in modo dichiarativo e a livello di codice.|1. Sequence1. XAML: flusso di lavoro che richiama l'attività SendMail.<br />2. Program.cs: richiama Sequence1 e crea anche un flusso di lavoro a livello di codice che usa SendMail.|  
@@ -107,17 +107,15 @@ new SendMail
   
  Per ulteriori informazioni sulla configurazione di un server SMTP, vedere i collegamenti seguenti.  
   
-- [Microsoft TechNet](https://go.microsoft.com/fwlink/?LinkId=166060)  
+- [Configurazione del servizio SMTP (IIS 6,0)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784968(v=ws.10))  
   
-- [Configurazione del servizio SMTP (IIS 6,0)](https://go.microsoft.com/fwlink/?LinkId=150456)  
+- [IIS 7,0: configurare la posta elettronica SMTP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772058(v=ws.10))  
   
-- [IIS 7,0: configurare la posta elettronica SMTP](https://go.microsoft.com/fwlink/?LinkId=150457)  
-  
-- [Come installare il servizio SMTP](https://go.microsoft.com/fwlink/?LinkId=150458)  
+- [Come installare il servizio SMTP](https://docs.microsoft.com/previous-versions/tn-archive/aa997480(v=exchg.65))  
   
  Per eseguire il download, sono disponibili emulatori SMTP forniti da terze parti.  
   
-##### <a name="to-run-this-sample"></a>Per eseguire l'esempio  
+##### <a name="to-run-this-sample"></a>Per eseguire questo esempio  
   
 1. Con Visual Studio 2010 aprire il file della soluzione SendMail. sln.  
   

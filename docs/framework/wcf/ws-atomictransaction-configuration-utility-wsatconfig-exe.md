@@ -2,14 +2,15 @@
 title: Utilità di configurazione WS-AtomicTransaction (wsatConfig.exe)
 ms.date: 03/30/2017
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-ms.openlocfilehash: 3b37c271afa20de120682d093e40c0f30f4730de
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 009be8d4c25fd9db5b2f2df6e75fb046e92f389a
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921336"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094722"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>Utilità di configurazione WS-AtomicTransaction (wsatConfig.exe)
+
 L'utilità di configurazione WS-AtomicTransaction viene utilizzata per configurare le impostazioni di base per il supporto WS-AtomicTransaction.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -18,10 +19,10 @@ L'utilità di configurazione WS-AtomicTransaction viene utilizzata per configura
 wsatConfig [Options]  
 ```  
   
-## <a name="remarks"></a>Note  
- Questo strumento da riga di comando può essere utilizzato per configurare soltanto impostazioni WS-AT di base in un computer locale. Se è necessario configurare le impostazioni nei computer locali e remoti, è necessario utilizzare lo snap-in MMC come descritto in [configurazione del supporto per le transazioni WS-Atomic](./feature-details/configuring-ws-atomic-transaction-support.md).  
+## <a name="remarks"></a>Osservazioni  
+ Questo strumento da riga di comando può essere usato per configurare le impostazioni WS-AT di base solo in un computer locale. Se è necessario configurare le impostazioni nei computer locali e remoti, è necessario utilizzare lo snap-in MMC come descritto in [configurazione del supporto per le transazioni WS-Atomic](./feature-details/configuring-ws-atomic-transaction-support.md).  
   
- Lo strumento da riga di comando si trova specificamente nel percorso di installazione di Windows SDK.  
+ Lo strumento da riga di comando si trova nel percorso di installazione Windows SDK, in particolare  
   
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\wsatConfig.exe  
   
@@ -32,12 +33,12 @@ wsatConfig [Options]
 > [!NOTE]
 > Impostando un certificato SSL per una porta selezionata, il certificato SSL originale associato a quella porta, se presente, viene sovrascritto.  
   
-|Options|Descrizione|  
+|Opzioni|Descrizione|  
 |-------------|-----------------|  
 |-Accounts: account\<, >|Specifica un elenco con valori delimitati da virgole di account che possono partecipare in WS-AtomicTransaction. La validità di questi account non viene controllata.|  
-|-accountsCerts:\<thumb>&#124;"Issuer\SubjectName",>|Specifica un elenco con valori delimitati da virgole di certificati che possono partecipare in WS-AtomicTransaction. I certificati sono indicati tramite identificazione digitale o dalla coppia Issuer\SubjectName. Utilizzare {Vuoto} per il nome del soggetto se è vuoto.|  
+|-accountsCerts:\<Thumb >&#124;"Issuer\SubjectName.", >|Specifica un elenco con valori delimitati da virgole di certificati che possono partecipare in WS-AtomicTransaction. I certificati sono indicati tramite identificazione digitale o dalla coppia Issuer\SubjectName. Utilizzare {Vuoto} per il nome del soggetto se è vuoto.|  
 |-endpointCert: <\<&#124; Thumb del computer&#124;> "Issuer\SubjectName." >|Utilizza il certificato del computer o un altro certificato dell'endpoint locale specificato tramite identificazione digitale o dalla coppia Issuer\SubjectName. Utilizza {Vuoto} per il nome del soggetto se è vuoto.|  
-|-maxTimeout:\<sec>|Specifica il timeout massimo in secondi. I valori validi sono compresi tra 0 e 3600.|  
+|-maxTimeout:\<sec >|Specifica il timeout massimo in secondi. I valori validi sono compresi tra 0 e 3600.|  
 |-rete:\<Abilita&#124;Disabilita >|Abilita o disabilita il supporto di rete WS-AtomicTransaction.|  
 |-Port:\<portNum >|Imposta la porta HTTPS per WS-AtomicTransaction.<br /><br /> Se prima di eseguire questo strumento è già stato abilitato un firewall, la porta viene automaticamente registrata nell'elenco delle eccezioni. Se il firewall è stato disabilitato prima di eseguire questo strumento, non avviene nessun’altra configurazione riguardante il firewall.<br /><br /> Se si abilita il firewall dopo aver configurato WS-AT, è necessario eseguire di nuovo questo strumento e fornire il numero della porta che utilizza questo parametro. Se si disabilita il firewall dopo la configurazione, WS-AT rimane in funzione senza input aggiuntivo.|  
 |-timeout:\<sec >|Specifica il timeout predefinito in secondi. I valori validi sono compresi tra 1 e 3600.|  

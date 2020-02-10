@@ -1,14 +1,15 @@
 ---
 title: Tecnologie di .NET Framework non disponibili in .NET Core
+titleSuffix: ''
 description: Informazioni sulle tecnologie di .NET Framework che non sono disponibili in .NET Core
 author: cartermp
 ms.date: 04/30/2019
-ms.openlocfilehash: 89871753fef92a30bf2151a618207a73b40bb402
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: bd2488de653ecdfed261100b4c9019bea58fcab3
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75936955"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092941"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>Tecnologie di .NET Framework non disponibili in .NET Core
 
@@ -22,7 +23,7 @@ I domini applicazione (AppDomain) consentono di isolare le app l'una dall'altra.
 
 Per semplificare la migrazione di codice da .NET Framework, .NET Core espone parte della superficie dell'API <xref:System.AppDomain>. Alcune delle API funzionano normalmente, (ad esempio <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>), alcuni membri non eseguono alcuna operazione (ad esempio, <xref:System.AppDomain.SetCachePath%2A>) e alcuni generano <xref:System.PlatformNotSupportedException> (ad esempio, <xref:System.AppDomain.CreateDomain%2A>). Controllare i tipi usati per la [`System.AppDomain` origine riferimento](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Private.CoreLib/src/System/AppDomain.cs) nel [repository GitHub DotNet/Runtime](https://github.com/dotnet/runtime). Assicurarsi di selezionare il ramo che corrisponde alla versione implementata.
 
-## <a name="remoting"></a>Gestione remota
+## <a name="remoting"></a>Comunicazione remota
 
 L'architettura dei servizi remoti di .NET è stata identificata come problematica. Questi servizi vengono usati per le comunicazioni tra AppDomain, non più supportate. Per i servizi remoti è richiesto anche il supporto del runtime, costoso da gestire. Per questi motivi, i servizi remoti di .NET non sono supportati in .NET Core e non è prevista l'aggiunta del supporto in futuro.
 
@@ -30,7 +31,7 @@ Per la comunicazione tra processi, prendere in considerazione i meccanismi di co
 
 Per le comunicazioni tra computer, usare una soluzione basata su rete in alternativa. Preferibilmente, usare un protocollo di testo normale con basso overhead, come HTTP. Il [server Web Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), ovvero il server Web usato da ASP.NET Core, rappresenta un'opzione praticabile in questo caso. Si consiglia inoltre di usare <xref:System.Net.Sockets> per scenari basati su rete e tra computer diversi. Per informazioni su altre opzioni, vedere [.NET Open Source Developer Projects: Messaging](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging) (Progetti di sviluppo open source .NET: Messaggistica).
 
-## <a name="code-access-security-cas"></a>Sicurezza per l'accesso al codice (CAS, Code Access Security)
+## <a name="code-access-security-cas"></a>Sicurezza dall'accesso di codice (CAS, Code Access Security)
 
 Il sandboxing, che si basa sul runtime o sul framework per vincolare le risorse usate o eseguite da un'applicazione gestita o una libreria, [non è supportato in .NET Framework](../../framework/misc/code-access-security.md) e pertanto non è supportato neanche in .NET Core. Esistono troppi casi in .NET Framework e nel runtime in cui si verifica un'elevazione dei privilegi per continuare a considerare la sicurezza dall'accesso di codice come limite di sicurezza. La sicurezza dall'accesso di codice, inoltre, rende l'implementazione più complicata e spesso ha implicazioni a livello di prestazioni della correttezza per le applicazioni che non intendono usare questo meccanismo di sicurezza.
 

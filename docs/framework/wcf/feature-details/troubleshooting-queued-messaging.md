@@ -2,12 +2,12 @@
 title: Risoluzione dei problemi relativi ai messaggi in coda
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: 5c039c34983647884561f33645f26e4a89280248
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 7990d4b9847ee2f35b9fe6269bb211763c4c80b6
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921264"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095008"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Risoluzione dei problemi relativi ai messaggi in coda
 
@@ -47,13 +47,13 @@ Per ulteriori informazioni, vedere [differenze nelle funzionalità di Accodament
 
 **R:** No. Non è necessario eseguire l'aggiornamento a MSMQ 4.0 in entrambi i lati.
 
-## <a name="troubleshooting"></a>Risoluzione dei problemi
+## <a name="troubleshooting"></a>risoluzione dei problemi
 
 Contenuto della sezione sono contenute risposte per la risoluzione della maggior parte dei problemi frequenti. Alcuni problemi costituiti da limitazioni note sono descritti anche nelle note sulla versione.
 
 **D:** Si sta tentando di usare una coda privata e viene generata l'eccezione seguente: `System.InvalidOperationException`: l'URL non è valido. L'URL per la coda non può contenere il carattere '$'. Utilizzare la sintassi in net.msmq://machine/private/queueName per indirizzare una coda privata.
 
-**R:** Controllare la coda Uniform Resource Identifier (URI) nella configurazione e nel codice. Non utilizzare il carattere "$" nell'URI. Per indirizzare, ad esempio, una coda privata denominata OrdersQueue, specificare l'URI come segue: net.msmq://localhost/private/ordersQueue.
+**R:** Controllare la coda Uniform Resource Identifier (URI) nella configurazione e nel codice. Non utilizzare il carattere "$" nell'URI. Ad esempio, per indirizzare una coda privata denominata OrdersQueue, specificare l'URI come `net.msmq://localhost/private/ordersQueue`.
 
 **D:** Chiamando `ServiceHost.Open()` nell'applicazione in coda viene generata l'eccezione seguente: `System.ArgumentException`: un indirizzo di base non può contenere una stringa di query URI. Perché?
 
@@ -77,7 +77,7 @@ Contenuto della sezione sono contenute risposte per la risoluzione della maggior
 
 - Verificare la connettività o eventuali problemi di indirizzamento delle code in uscita.
 
-**D:** Ho specificato una coda di messaggi non recapitabili personalizzata, ma quando avvio l'applicazione mittente, ottengo un'eccezione che indica che la coda dei messaggi non recapitabili non è stata trovata o che l'applicazione mittente non dispone dell'autorizzazione per la coda dei messaggi non recapitabili. Perché si verifica questa situazione?
+**D:** Ho specificato una coda di messaggi non recapitabili personalizzata, ma quando avvio l'applicazione mittente, ottengo un'eccezione che indica che la coda dei messaggi non recapitabili non è stata trovata o che l'applicazione mittente non dispone dell'autorizzazione per la coda dei messaggi non recapitabili. Perché accade?
 
 **R:** L'URI della coda dei messaggi non recapitabili personalizzata deve includere un "localhost" o il nome del computer nel primo segmento, ad esempio NET. MSMQ://localhost/private/myAppdead-letter Queue.
 
@@ -89,9 +89,9 @@ Se le garanzie sono None (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%
 
 **D:** Il servizio genera un'eccezione su SvcHost. Open con un messaggio "i requisiti di EndpointListener non possono essere soddisfatti da ListenerFactory". Perché?
 
-Oggetto. Controllare il contratto di servizio. È possibile che si sia dimenticato di inserire "IsOneWay =`true`" in tutte le operazioni del servizio. Le code supportano solo operazioni del servizio unidirezionali.
+R. Controllare il contratto di servizio. È possibile che si sia dimenticato di inserire "IsOneWay =`true`" in tutte le operazioni del servizio. Le code supportano solo operazioni del servizio unidirezionali.
 
-**D:** Sono presenti messaggi nella coda, ma non viene richiamata alcuna operazione del servizio. Da che cosa è causato il problema?
+**D:** Sono presenti messaggi nella coda, ma non viene richiamata alcuna operazione del servizio. Qual è il problema riscontrato?
 
 **R:** Determinare se si è verificato un errore nell'host del servizio. È possibile eseguire questo controllo analizzando la traccia o implementando `IErrorHandler`. L'host del servizio, per impostazione predefinita, entra in stato di errore se viene rilevato un messaggio non elaborabile.
 
@@ -132,7 +132,7 @@ La coda dei messaggi non recapitabili di sistema, così come quella personalizza
 
 **D:** Quando si utilizza un nome di formato pubblico o privato e si apre l'host del servizio in Windows Vista, viene visualizzato un errore. Perché?
 
-**R:** Il canale di integrazione WCF in Windows Vista verifica se è possibile aprire una coda secondaria per la coda dell'applicazione principale per la gestione dei messaggi non elaborabili. Il nome della coda secondaria deriva da un URI msmq.formatname passato al listener. Il nome della coda secondaria in MSMQ può essere solo un nome in formato diretto. Per questo motivo viene generato l'errore. Modificare l'URI della coda in modo che il nome sia in un formato diretto.
+**R:** Il canale di integrazione WCF in Windows Vista verifica se è possibile aprire una coda secondaria per la coda dell'applicazione principale per la gestione dei messaggi non elaborabili. Il nome della coda secondaria è derivato da un URI MSMQ. formatname passato al listener. Il nome della coda secondaria in MSMQ può essere solo un nome di formato diretto. Per questo motivo viene generato l'errore. Modificare l'URI della coda in modo che il nome sia in un formato diretto.
 
 **D:** Quando si riceve un messaggio da un'applicazione MSMQ, il messaggio si trova nella coda e non viene letto dall'applicazione WCF di destinazione. Perché?
 
@@ -170,7 +170,7 @@ Un'ulteriore soluzione alternativa consiste nell'installare MSMQ unitamente all'
 
 6. Successivamente, aggiungere un secondo snap-in certificati usando i passaggi precedenti, ma questa volta selezionare **account computer** e fare clic su **Avanti**.
 
-7. Selezionare **computer locale** e fare clic su **fine**. È ora possibile trascinare i certificati dall'archivio del computer all'archivio dell'utente corrente.
+7. Selezionare **Computer locale** e fare clic su **Fine**. È ora possibile trascinare i certificati dall'archivio del computer all'archivio dell'utente corrente.
 
 **D:** Quando il servizio legge da una coda in un altro computer in modalità gruppo di lavoro, viene generata un'eccezione "accesso negato".
 
@@ -182,7 +182,7 @@ Un'ulteriore soluzione alternativa consiste nell'installare MSMQ unitamente all'
 
 ### <a name="remote-transacted-receives"></a>Ricezioni transazionali remote
 
-**D:** Quando si dispone di una coda sul computer A e un servizio WCF che legge i messaggi da una coda nel computer B (scenario di ricezione transazionale remoto), i messaggi non vengono letti dalla coda. Le informazioni di traccia indicano che la ricezione non è riuscita con il messaggio "Impossibile importare la transazione". Cosa è possibile fare per risolvere questo problema?
+**D:** Quando si dispone di una coda sul computer A e un servizio WCF che legge i messaggi da una coda nel computer B (scenario di ricezione transazionale remoto), i messaggi non vengono letti dalla coda. Le informazioni di traccia indicano che la ricezione non è riuscita con il messaggio "Impossibile importare la transazione". Come si può risolvere questo problema?
 
 **R:** Esistono tre possibili motivi:
 
@@ -208,4 +208,4 @@ Un'ulteriore soluzione alternativa consiste nell'installare MSMQ unitamente all'
 
 ## <a name="using-custom-msmq-bindings-with-receivecontext-enabled"></a>Utilizzo di associazioni MSMQ personalizzate con ReceiveContext abilitato
 
-Quando si utilizza un'associazione MSMQ personalizzata con <xref:System.ServiceModel.Channels.ReceiveContext> abilitato, per elaborare un messaggio in arrivo verrà utilizzato un thread del pool poiché il componente MSMQ nativo non supporta il completamento I/O per ricezioni di <xref:System.ServiceModel.Channels.ReceiveContext> asincrone. Questa situazione si verifica perché l'elaborazione di tale messaggio utilizza transazioni interne per <xref:System.ServiceModel.Channels.ReceiveContext> e MSMQ non supporta l'elaborazione asincrona. Per risolvere questo problema, è possibile aggiungere un oggetto <xref:System.ServiceModel.Description.SynchronousReceiveBehavior> all'endpoint per forzare l'elaborazione asincrona o impostare <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.MaxPendingReceives%2A> su 1.
+Quando si utilizza un'associazione MSMQ personalizzata con <xref:System.ServiceModel.Channels.ReceiveContext> abilitata, l'elaborazione di un messaggio in arrivo utilizza un thread del pool di thread perché MSMQ nativo non supporta il completamento I/O per le ricevute di <xref:System.ServiceModel.Channels.ReceiveContext> asincrone. Questo perché l'elaborazione di un messaggio di questo tipo utilizza transazioni interne per <xref:System.ServiceModel.Channels.ReceiveContext> e MSMQ non supporta l'elaborazione asincrona. Per risolvere questo problema, è possibile aggiungere un <xref:System.ServiceModel.Description.SynchronousReceiveBehavior> all'endpoint per forzare l'elaborazione sincrona o impostare <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.MaxPendingReceives%2A> su 1.

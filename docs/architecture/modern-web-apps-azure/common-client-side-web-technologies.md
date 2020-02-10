@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Tecn
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 0e5f3578edc723e2e2a32b9b3a1d8a7dcabd2909
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 7dd3765b1b71d8c1ef22d714a00be3e171fab523
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965750"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093123"
 ---
 # <a name="common-client-side-web-technologies"></a>Tecnologie Web lato client comuni
 
@@ -18,7 +18,7 @@ ms.locfileid: "76965750"
 
 Le applicazioni ASP.NET Core sono applicazioni Web che in genere si basano su tecnologie Web lato client quali HTML, CSS e JavaScript. Grazie alla separazione del contenuto della pagina (HTML) dal layout e dallo stile (CSS), nonché dal comportamento (tramite JavaScript), le app Web complesse possono sfruttare il principio di separazione delle competenze. Se queste competenze non sono interconnesse, le future modifiche alla struttura, alla progettazione o al comportamento possono essere apportate più facilmente.
 
-Mentre le tecnologie HTML e CSS sono relativamente stabili, la tecnologia JavaScript, attraverso i framework e le utilità delle applicazioni che gli sviluppatori usano per compilare le applicazioni basate sul Web, sta evolvendo molto rapidamente. In questo capitolo vengono esaminati alcuni modi in cui JavaScript viene utilizzato dagli sviluppatori Web come parte dello sviluppo di applicazioni, in quanto fornisce una panoramica generale delle librerie lato client angolari e React.
+Mentre le tecnologie HTML e CSS sono relativamente stabili, la tecnologia JavaScript, attraverso i framework e le utilità delle applicazioni che gli sviluppatori usano per compilare le applicazioni basate sul Web, sta evolvendo molto rapidamente. In questo capitolo vengono esaminati alcuni modi in cui JavaScript viene usato dagli sviluppatori Web e viene fornita una panoramica di alto livello delle librerie lato client angolari e React.
 
 ## <a name="html"></a>HTML
 
@@ -75,7 +75,7 @@ Si supponga, ad esempio, che se il valore di una casella di testo è superiore a
 
 È possibile aggiungere la maggior parte delle funzionalità intrinsecamente mancanti in jQuery con l'aggiunta di altre librerie. Un framework per applicazioni a pagina singola come Angular offre tuttavia queste funzionalità in modo più integrato poiché è stato progettato tenendole presenti sin dall'inizio. Inoltre, jQuery è una libreria imperativa, vale a dire che è necessario chiamare le funzioni jQuery per eseguire qualsiasi operazione con jQuery. Gran parte del lavoro e le funzionalità offerte dai framework per applicazioni a pagina singola possono essere eseguiti in modo dichiarativo, senza la scrittura di codice.
 
-Il data binding ne è un ottimo esempio. Per ottenere il valore di un elemento DOM o impostare il valore di un elemento, jQuery richiede in genere solo una riga di codice. Tuttavia, è necessario scrivere questo codice ogni volta che si deve modificare il valore dell'elemento e a volte ciò accade in più funzioni in una pagina. Un altro esempio comune è la visibilità di un elemento. In jQuery la scrittura del codice per controllare se determinati elementi debbano essere visibili o meno può avvenire in molti punti diversi. In ognuno di questi casi, quando si usa il data binding, non è necessario scrivere codice. È sufficiente associare il valore o la visibilità degli elementi interessati a un *viewmodel* nella pagina e le modifiche apportate al viewmodel vengono automaticamente riportate negli elementi associati.
+Il data binding ne è un ottimo esempio. In jQuery, in genere è necessaria solo una riga di codice per ottenere il valore di un elemento DOM o per impostare il valore di un elemento. Tuttavia, è necessario scrivere questo codice ogni volta che è necessario modificare il valore dell'elemento e in alcuni casi ciò si verifica in più funzioni in una pagina. Un altro esempio comune è la visibilità di un elemento. In jQuery potrebbero essere presenti molte posizioni diverse in cui scrivere il codice per controllare se alcuni elementi fossero visibili. In ognuno di questi casi, quando si usa il data binding, non è necessario scrivere codice. È sufficiente associare il valore o la visibilità degli elementi in questione a un *ViewModel* nella pagina e le modifiche apportate a tale ViewModel verranno automaticamente riflesse negli elementi associati.
 
 ### <a name="angular-spas"></a>Applicazioni a pagina singola Angular
 

@@ -2,12 +2,12 @@
 title: Rilevamento SQL
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: c1bb4492695df3ff803dff893de24453d7c03dfb
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 88f44e5362684f755695aab154842fad2274134d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715559"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094592"
 ---
 # <a name="sql-tracking"></a>Rilevamento SQL
 In questo esempio viene illustrato come scrivere un partecipante del rilevamento SQL personalizzato che scrive record di rilevamento in un database SQL. Windows Workflow Foundation (WF) fornisce il rilevamento del flusso di lavoro per ottenere visibilità nell'esecuzione di un'istanza del flusso di lavoro. Il runtime di rilevamento crea record di rilevamento del flusso di lavoro durante l'esecuzione di quest'ultimo. Per ulteriori informazioni sul rilevamento del flusso di lavoro, vedere [rilevamento e traccia del flusso di lavoro](../workflow-tracking-and-tracing.md).
@@ -23,7 +23,7 @@ In questo esempio viene illustrato come scrivere un partecipante del rilevamento
 
 3. Aprire SqlTrackingSample. sln in Visual Studio 2010.
 
-4. Per compilare la soluzione, premere CTRL+MAIUSC+B.
+4. Premere CTRL+MAIUSC+B per compilare la soluzione.
 
 5. Premere F5 per eseguire l'applicazione.
 
@@ -41,7 +41,7 @@ In questo esempio viene illustrato come scrivere un partecipante del rilevamento
 
 10. Nel client di prova WCF fare doppio clic su **GetStockPrice**. Verrà visualizzata l'operazione `GetStockPrice` che accetta un parametro, digitare il valore `Contoso` e fare clic su **richiama**.
 
-11. I record di rilevamento creati vengono scritti in un database SQL. Per visualizzare i record di rilevamento, aprire il database TrackingSample in SQL Management Studio e passare alle tabelle. Per ulteriori informazioni su SQL Server Management Studio, vedere [introduzione SQL Server Management Studio](https://go.microsoft.com/fwlink/?LinkId=165645). SQL Server 2008 Management Studio Express è possibile scaricarlo [qui](https://go.microsoft.com/fwlink/?LinkId=180520). Eseguendo una query di selezione sulle tabelle vengono visualizzati i dati all'interno dei record di rilevamento archiviati nelle rispettive tabelle.
+11. I record di rilevamento creati vengono scritti in un database SQL. Per visualizzare i record di rilevamento, aprire il database TrackingSample in SQL Management Studio e passare alle tabelle. Per ulteriori informazioni su SQL Server Management Studio, vedere [introduzione SQL Server Management Studio](/sql/ssms/sql-server-management-studio-ssms). SQL Server 2008 Management Studio Express è possibile scaricarlo [qui](https://www.microsoft.com/download/details.aspx?id=7593). Eseguendo una query di selezione sulle tabelle vengono visualizzati i dati all'interno dei record di rilevamento archiviati nelle rispettive tabelle.
 
 #### <a name="to-uninstall-the-sample"></a>Per disinstallare l'esempio
 
@@ -61,4 +61,4 @@ In questo esempio viene illustrato come scrivere un partecipante del rilevamento
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Esempi di monitoraggio di AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [Esempi di monitoraggio di AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

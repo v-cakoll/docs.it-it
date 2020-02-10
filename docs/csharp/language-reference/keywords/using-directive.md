@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: a2028ccce47de54b59323194a0ffab3a643d878c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4f7ddad8c3dc12391ef6bf345a73ebb384400b38
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712975"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093149"
 ---
 # <a name="using-directive-c-reference"></a>Direttiva using (Riferimenti per C#)
 
@@ -53,7 +53,7 @@ class Program
 }
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'ambito di una direttiva `using` è limitato al file in cui viene visualizzata.
 
@@ -68,7 +68,7 @@ Creare una direttiva alias `using` per semplificare la qualifica di un identific
 
 ```csharp
 using s = System.Text;
-using s.RegularExpressions;
+using s.RegularExpressions; // Generates a compiler error.
 ```
 
 Creare una direttiva `using` per usare i tipi in uno spazio dei nomi senza dover specificare tale spazio dei nomi. Una direttiva `using` non offre accesso ad alcuno spazio dei nomi annidato nello spazio dei nomi specificato.
@@ -99,5 +99,5 @@ Per altre informazioni, vedere [Direttive using](~/_csharplang/spec/namespaces.m
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Uso degli spazi dei nomi](../../programming-guide/namespaces/using-namespaces.md)
 - [Parole chiave di C#](index.md)
-- [Spazi dei nomi](../../programming-guide/namespaces/index.md)
+- [Namespaces](../../programming-guide/namespaces/index.md) (Spazi dei nomi)
 - [Istruzione using](using-statement.md)

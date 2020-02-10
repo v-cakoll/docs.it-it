@@ -2,15 +2,16 @@
 title: Reliable Secure Profile
 ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
-ms.openlocfilehash: ee94dc5be2c50f9e383a42d435996b2fd35df4a4
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ef4680673f37655603a42f6da8aaf7eceaa01f56
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716495"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094943"
 ---
 # <a name="reliable-secure-profile"></a>Reliable Secure Profile
-In questo esempio viene illustrato come comporre WCF e un [profilo sicuro affidabile](https://go.microsoft.com/fwlink/?LinkId=178140) (RSP). In questo esempio viene illustrata l'implementazione di un canale di [connessione make](https://go.microsoft.com/fwlink/?LinkId=178141) che può essere composto insieme a Reliable Messaging ed eventualmente un canale sicuro per creare un'associazione sicura affidabile basata sulla specifica RSP.  
+
+In questo esempio viene illustrato come comporre WCF e un [profilo sicuro affidabile (RSP)](http://www.ws-i.org/Profiles/ReliableSecureProfile-1.0.html). In questo esempio viene illustrata l'implementazione di un canale di [connessione make](http://docs.oasis-open.org/ws-rx/wsmc/200702/wsmc-1.0-spec-cs-01.pdf) , che può essere composto insieme a Reliable Messaging ed eventualmente un canale sicuro per creare un'associazione sicura affidabile basata sulla specifica RSP.  
   
 > [!IMPORTANT]
 > È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

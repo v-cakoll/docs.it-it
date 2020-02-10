@@ -4,18 +4,18 @@ description: Questa esercitazione avanzata illustra come eseguire la migrazione 
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: e480cfa7c041d18a2bdaf8caa2468165e855186e
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 4edeab7b2a4211d50c424f567ad7df6ced0bf4ce
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740457"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093305"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Esercitazione: eseguire la migrazione di codice esistente con tipi di riferimento Nullable
 
 In C# 8 sono ora disponibili i **tipi riferimento nullable**, che completano i tipi riferimento allo stesso modo in cui i tipi valore nullable completano i tipi valore. Per dichiarare una variabile come **tipo riferimento nullable** basta aggiungere un `?` alla fine del tipo. Ad esempio, `string?` rappresenta un tipo `string` nullable. È possibile usare questi nuovi tipi per esprimere più chiaramente le finalità della progettazione: alcune variabili *devono avere sempre un valore*, mentre in altre *un valore può mancare*. Tutte le variabili esistenti di un tipo riferimento verrebbero interpretate come un tipo riferimento non nullable. 
 
-In questa esercitazione si imparerà a:
+In questa esercitazione si apprenderà come:
 
 > [!div class="checklist"]
 >
@@ -24,7 +24,7 @@ In questa esercitazione si imparerà a:
 > - Gestire l'interfaccia tra contesti abilitati per nullable e contesti disabilitati per nullable.
 > - Controllare i contesti delle annotazioni nullable.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 È necessario configurare il computer per l'esecuzione di .NET Core, incluso il C# compilatore 8,0. Il C# compilatore 8 è disponibile a partire da [Visual Studio 2019 versione 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download).
 
@@ -40,7 +40,7 @@ L'obiettivo di migrazione del progetto dovrebbe essere di sfruttare le nuove fun
 
 ## <a name="upgrade-the-projects-to-c-8"></a>Aggiornare i progetti a C# 8
 
-Un buon primo passo è determinare l'ambito dell'attività di migrazione. Per iniziare, aggiornare il progetto a C# 8.0 (o versione successiva). Aggiungere l'elemento `LangVersion` sia ai file csproj per il progetto Web che al progetto di unit test:
+Un buon primo passo è determinare l'ambito dell'attività di migrazione. Per iniziare, aggiornare il progetto a C# 8.0 (o versione successiva). Aggiungere l'elemento `LangVersion` al PropertyGroup in entrambi i file csproj per il progetto Web e il progetto unit test:
 
 ```xml
 <LangVersion>8.0</LangVersion>
@@ -126,7 +126,7 @@ Spesso, la correzione per un set di avvisi crea nuovi avvisi nel codice correlat
 
 [!code-csharp[StarterIndexModel](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Pages/Index.cshtml.cs#IndexModelStart)]
 
-Aggiungere la direttiva `#nullable enable`. Verranno visualizzati due avvisi. Entrambe le proprietà `ErrorText` e `NewsItems` sono inizializzate. Un esame di questa classe porterebbe a credere che entrambe le proprietà devono essere tipi di riferimento Nullable: entrambi hanno Setter privati. Una sola viene assegnata nel metodo `OnGet`. Prima di apportare modifiche, esaminare i consumer di entrambe le proprietà. Nella pagina stessa, viene eseguito un controllo del valore Null per `ErrorText` prima della generazione del markup per eventuali errori. Viene eseguito un controllo di `null` per la raccolta `NewsItems`, che viene anche controllata per assicurarsi che contenga elementi. Una correzione rapida potrebbe consistere nell'impostare entrambe le proprietà come tipi riferimento nullable. Una correzione migliore sarebbe impostare la raccolta come tipo riferimento non nullable e aggiungere elementi alla raccolta esistente durante il recupero delle notizie. La prima correzione prevede l'aggiunta di `?` al tipo `string` per `ErrorText`:
+Aggiungere la direttiva `#nullable enable`. Verranno visualizzati due avvisi. Entrambe le proprietà `ErrorText` e `NewsItems` sono inizializzate. Un esame di questa classe porterebbe a credere che entrambe le proprietà devono essere tipi di riferimento Nullable: entrambi hanno Setter privati. Una sola viene assegnata nel metodo `OnGet`. Prima di apportare modifiche, esaminare i consumer di entrambe le proprietà. Nella pagina stessa, viene eseguito un controllo del valore Null per `ErrorText` prima della generazione del markup per eventuali errori. Viene eseguito un controllo di `NewsItems` per la raccolta `null`, che viene anche controllata per assicurarsi che contenga elementi. Una correzione rapida potrebbe consistere nell'impostare entrambe le proprietà come tipi riferimento nullable. Una correzione migliore sarebbe impostare la raccolta come tipo riferimento non nullable e aggiungere elementi alla raccolta esistente durante il recupero delle notizie. La prima correzione prevede l'aggiunta di `?` al tipo `string` per `ErrorText`:
 
 [!code-csharp[UpdateErrorText](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Index.cshtml.cs#UpdateErrorText)]
 

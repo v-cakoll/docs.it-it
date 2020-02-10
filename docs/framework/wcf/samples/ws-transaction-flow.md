@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: db23c250014006655fa51ee5a2e5b54e15e4f964
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 781934e9ab27f761e71841c2edc509f9b8022aa7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714591"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094748"
 ---
 # <a name="ws-transaction-flow"></a>Flusso delle transazioni WS
 Questo esempio dimostra l'uso di una transazione coordinata dal client e le opzioni client e server per il flusso delle transazioni mediante il protocollo WS-Atomic Transaction o OleTransactions. Questo esempio si basa sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un servizio di calcolatrice, ma le operazioni sono attribuite per illustrare l'uso della `TransactionFlowAttribute` con l'enumerazione **TransactionFlowOption** per determinare il grado di attivazione del flusso delle transazioni. All'interno dell'ambito della transazione propagata, viene scritto un log delle operazioni richieste in un database che persiste fino a che la transazione coordinata dal client non è stata completata; se la transazione client non viene completata, la transazione del servizio Web assicura che non venga eseguito il commit degli aggiornamenti appropriati al database.  
@@ -230,7 +230,7 @@ Press <ENTER> to terminate the service.
 3. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
-    > Nella configurazione con più computer abilitare Distributed Transaction Coordinator usando le istruzioni seguenti e usare lo strumento WsatConfig.exe di Windows SDK per abilitare il supporto di rete delle transazioni WCF. Per informazioni sulla configurazione di WsatConfig. exe, vedere Configurazione del supporto per le [transazioni WS-Atomic](https://go.microsoft.com/fwlink/?LinkId=190370) .  
+    > Nella configurazione con più computer abilitare Distributed Transaction Coordinator usando le istruzioni seguenti e usare lo strumento WsatConfig.exe di Windows SDK per abilitare il supporto di rete delle transazioni WCF. Per informazioni sulla configurazione di WsatConfig. exe, vedere [configurazione del supporto per le transazioni WS-Atomic](../feature-details/configuring-ws-atomic-transaction-support.md).  
   
  Sia che si esegua l'esempio nello stesso computer o in computer diversi, è necessario configurare Microsoft Distributed Transaction Coordinator (MSDTC) per abilitare il flusso delle transazioni di rete e utilizzare lo strumento WsatConfig. exe per abilitare il supporto di rete delle transazioni WCF.  
   
@@ -250,7 +250,7 @@ Press <ENTER> to terminate the service.
   
     6. Fare clic su **OK**e quindi su **Sì** per riavviare il servizio MSDTC.  
   
-    7. Fare clic su **OK** per chiudere la finestra di dialogo.  
+    7. Scegliere **OK** per chiudere la finestra di dialogo.  
   
 2. In un computer del servizio che esegue Windows Server 2008 o Windows Vista configurare MSDTC per consentire transazioni di rete in ingresso seguendo queste istruzioni.  
   
@@ -264,7 +264,7 @@ Press <ENTER> to terminate the service.
   
     5. Fare clic su **OK**e quindi su **Sì** per riavviare il servizio MSDTC.  
   
-    6. Fare clic su **OK** per chiudere la finestra di dialogo.  
+    6. Scegliere **OK** per chiudere la finestra di dialogo.  
   
 3. Nel computer client configurare MSDTC per consentire le transazioni di rete in uscita.  
   
@@ -278,7 +278,7 @@ Press <ENTER> to terminate the service.
   
     5. Fare clic su **OK**e quindi su **Sì** per riavviare il servizio MSDTC.  
   
-    6. Fare clic su **OK** per chiudere la finestra di dialogo.  
+    6. Scegliere **OK** per chiudere la finestra di dialogo.  
   
 > [!IMPORTANT]
 > È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

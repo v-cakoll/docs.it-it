@@ -2,17 +2,17 @@
 title: Esempio di individuazione del flusso di lavoro
 ms.date: 03/30/2017
 ms.assetid: 82cc43f1-3c8f-4771-ac19-a75ac936e2c3
-ms.openlocfilehash: b503e6231741fb049dbd8e9fdaae73c127ceaa51
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: eafe031b71836eae8de5ce15cd669459c866e89f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714987"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094761"
 ---
 # <a name="workflow-discovery-sample"></a>Esempio di individuazione del flusso di lavoro
 In questo esempio viene descritto come rendere individuabile un servizio flusso di lavoro e come creare un'attività di codice personalizzata in grado di effettuare la ricerca di un servizio specifico.  
   
-## <a name="demonstrates"></a>Dimostrazione  
+## <a name="demonstrates"></a>Dimostra  
  Attività di ricerca di individuazione e utilizzo dei flussi di lavoro  
   
 ## <a name="discussion"></a>Discussione  
@@ -20,9 +20,9 @@ In questo esempio viene descritto come rendere individuabile un servizio flusso 
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1. Questo esempio Usa endpoint HTTP, che devono avere gli ACL URL appropriati da eseguire. per informazioni dettagliate, vedere [configurazione di http e HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) . L'esecuzione del comando seguente con un prompt dei comandi con privilegi elevati consente di aggiungere gli ACL appropriati. Sostituire dominio e nome utente per gli argomenti seguenti se la shell non riconosce il formato della variabile.  
+1. Questo esempio Usa endpoint HTTP, che devono avere gli ACL URL appropriati da eseguire. per informazioni dettagliate, vedere [configurazione di http e HTTPS](../feature-details/configuring-http-and-https.md) . L'esecuzione del comando seguente con un prompt dei comandi con privilegi elevati consente di aggiungere gli ACL appropriati. Se la shell non riconosce il formato della variabile, sostituire il dominio e il nome utente per gli argomenti seguenti.  
   
-     **netsh http add urlacl url =http://+:8000/ utente =% DOMAIN%\\ % UserName%**  
+     **netsh http add urlacl url =http://+:8000/ utente =% DOMAIN%\\% UserName%**  
   
 > [!IMPORTANT]
 > È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

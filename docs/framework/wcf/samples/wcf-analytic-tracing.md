@@ -2,22 +2,22 @@
 title: Traccia analitica WCF
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 52a6787f6c7d309b1ae3a932780e4dbcb2ec0792
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 3ed9c5f08e89d978f8290dcda5ab1ecfd8b9c56c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715301"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094826"
 ---
 # <a name="wcf-analytic-tracing"></a>Traccia analitica WCF
 In questo esempio viene illustrato come aggiungere eventi di traccia nel flusso di tracce analitiche che Windows Communication Foundation (WCF) scrive in ETW in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Le tracce analitiche hanno lo scopo di semplificare la visibilità all'interno dei servizi senza un'elevata riduzione delle prestazioni. In questo esempio viene illustrato come utilizzare le API <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> per scrivere eventi che si integrano con i servizi WCF.  
   
  Per ulteriori informazioni sulle API <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>, vedere <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>.  
   
- Per ulteriori informazioni sulla traccia eventi in Windows, vedere [migliorare il debug e l'ottimizzazione delle prestazioni con ETW](https://go.microsoft.com/fwlink/?LinkId=166488).  
+ Per ulteriori informazioni sulla traccia eventi in Windows, vedere [migliorare il debug e l'ottimizzazione delle prestazioni con ETW](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw).  
   
 ## <a name="disposing-eventprovider"></a>Eliminazione di EventProvider  
- In questo esempio viene utilizzata la classe <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType>, che implementa <xref:System.IDisposable?displayProperty=nameWithType>. Quando si implementa la traccia per un servizio WCF, è probabile che sia possibile utilizzare le risorse del <xref:System.Diagnostics.Eventing.EventProvider>per la durata del servizio. Per tale motivo e per ragioni di leggibilità, in questo esempio l'oggetto <xref:System.Diagnostics.Eventing.EventProvider> con wrapper non viene mai eliminato. Se per qualche motivo il servizio ha requisiti diversi per la traccia ed è necessario eliminare tale risorsa, occorre modificare l'esempio in base alle procedure consigliate per l'eliminazione di risorse non gestite. Per ulteriori informazioni sull'eliminazione di risorse non gestite, vedere [implementazione di un metodo Dispose](https://go.microsoft.com/fwlink/?LinkId=166436).  
+ In questo esempio viene utilizzata la classe <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType>, che implementa <xref:System.IDisposable?displayProperty=nameWithType>. Quando si implementa la traccia per un servizio WCF, è probabile che sia possibile utilizzare le risorse del <xref:System.Diagnostics.Eventing.EventProvider>per la durata del servizio. Per tale motivo e per ragioni di leggibilità, in questo esempio l'oggetto <xref:System.Diagnostics.Eventing.EventProvider> con wrapper non viene mai eliminato. Se per qualche motivo il servizio ha requisiti diversi per la traccia ed è necessario eliminare tale risorsa, occorre modificare l'esempio in base alle procedure consigliate per l'eliminazione di risorse non gestite. Per ulteriori informazioni sull'eliminazione di risorse non gestite, vedere [implementazione di un metodo Dispose](https://docs.microsoft.com/dotnet/standard/garbage-collection/implementing-dispose).  
   
 ## <a name="self-hosting-vs-web-hosting"></a>Differenze tra self-hosting e hosting Web  
  Per i servizi ospitati sul Web, le tracce analitiche di WCF forniscono un campo denominato "HostReference", che viene utilizzato per identificare il servizio che emette le tracce. Le tracce utente estensibili possono far parte di tale modello e in questo esempio vengono descritte le procedure consigliate per effettuare tale operazione. Il formato di un riferimento all'host Web quando il carattere&#124;della pipe '' è effettivamente visualizzato nella stringa risultante può essere uno dei seguenti:  
@@ -97,7 +97,7 @@ In questo esempio viene illustrato come aggiungere eventi di traccia nel flusso 
   
 #### <a name="to-clean-up-optional"></a>Per eseguire la pulizia (facoltativo)  
   
-1. Aprire **Visualizzatore eventi**.  
+1. Aprire il **Visualizzatore eventi**.  
   
 2. Passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**, quindi **Application-Server-** Applications. Fare clic con il pulsante destro del mouse su **analitico** e selezionare **Disattiva log**.  
   
@@ -106,7 +106,7 @@ In questo esempio viene illustrato come aggiungere eventi di traccia nel flusso 
 4. Fare clic su **Cancella** per cancellare gli eventi.  
   
 ## <a name="known-issue"></a>Problemi noti  
- Si è verificato un problema noto nel **Visualizzatore eventi** in cui potrebbe non riuscire a decodificare gli eventi ETW. Potrebbe essere visualizzato un messaggio di errore che indica che la descrizione dell'ID evento \<ID > dall'origine Microsoft-Windows-Server applicazioni-applicazioni non è stata trovata. Il componente che ha generato l'evento non è installato nel computer locale oppure l'installazione è danneggiata. È possibile installare o ripristinare il componente nel computer locale. " Se si verifica questo errore, selezionare **Aggiorna** dal menu **azioni** . L'evento dovrebbe procedere alla decodifica in modo corretto.  
+ Si è verificato un problema noto nel **Visualizzatore eventi** in cui potrebbe non riuscire a decodificare gli eventi ETW. Potrebbe essere visualizzato un messaggio di errore che indica che la descrizione dell'ID evento \<ID > dall'origine Microsoft-Windows-Server applicazioni-applicazioni non è stata trovata. Il componente che genera questo evento non è installato nel computer locale o l'installazione è danneggiata. È possibile installare o ripristinare il componente nel computer locale. " Se si verifica questo errore, selezionare **Aggiorna** dal menu **azioni** . L'evento dovrebbe procedere alla decodifica in modo corretto.  
   
 > [!IMPORTANT]
 > È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
@@ -119,4 +119,4 @@ In questo esempio viene illustrato come aggiungere eventi di traccia nel flusso 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Esempi di monitoraggio di AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [Esempi di monitoraggio di AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

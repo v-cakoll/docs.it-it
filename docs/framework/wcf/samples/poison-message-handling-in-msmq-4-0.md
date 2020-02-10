@@ -2,28 +2,28 @@
 title: Gestione dei messaggi non elaborabili in MSMQ 4,0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: cc4da0deea0de2cd8b3bb8e8f2ba9b8a17e3cc60
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 0a9d4ec9657bacdbcb1273791dc7a593a9565c25
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919393"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094956"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Gestione dei messaggi non elaborabili in MSMQ 4,0
 Questo esempio dimostra come eseguire la gestione dei messaggi non elaborabili in un servizio. Questo esempio è basato sull'esempio di [associazione MSMQ transazionale](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) . In questo esempio viene usato l'oggetto `netMsmqBinding`. Il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.
 
  Nella comunicazione in coda, il client comunica al servizio usando una coda. Più precisamente, il client invia messaggi a una coda. Il servizio riceve messaggi dalla coda. Di conseguenza, per comunicare mediante una coda il servizio e il client non devono essere in esecuzione contemporaneamente.
 
- Un messaggio non elaborabile è un messaggio che viene letto ripetutamente da una coda quando il servizio che legge il messaggio è in grado di elaborarlo e quindi termina la transazione nella quale viene letto il messaggio. In questi casi, il messaggio viene ritentato. Teoricamente l'operazione può ripetersi all'infinito se c'è un problema con il messaggio. Notare che questo può accadere solo quando si usano transazioni per leggere dalla coda e richiamare il funzionamento del servizio.
+ Un messaggio non elaborabile è un messaggio che viene letto ripetutamente da una coda quando il servizio che legge il messaggio è in grado di elaborarlo e quindi termina la transazione nella quale viene letto il messaggio. In questi casi, il messaggio viene ritentato. Teoricamente l'operazione può ripetersi all'infinito se c'è un problema con il messaggio. Questa situazione può verificarsi solo quando si utilizzano transazioni per leggere dalla coda e richiamare l'operazione del servizio.
 
  In base alla versione di MSMQ, NetMsmqBinding supporta dal rilevamento limitato fino a quello completo dei messaggi non elaborabili. Dopo che il messaggio è stato rilevato come non elaborabile, è possibile gestirlo in alcuni modi. Di nuovo, in base alla versione di MSMQ, NetMsmqBinding supporta dalla gestione limitata fino a quella completa dei messaggi non elaborabili.
 
- In questo esempio vengono illustrate le funzionalità non elaborabili limitate fornite in Windows Server 2003 e Windows XP Platform e le funzionalità complete non elaborabili fornite in Windows Vista. In entrambi gli esempi, l'obiettivo è spostare il messaggio non elaborabile in un'altra coda che quindi può essere gestita da un servizio messaggi non elaborabili.
+ In questo esempio vengono illustrate le funzionalità non elaborabili limitate fornite in Windows Server 2003 e Windows XP Platform e le funzionalità complete non elaborabili fornite in Windows Vista. In entrambi gli esempi, l'obiettivo è spostare il messaggio non elaborabile dalla coda a un'altra coda. Tale coda può quindi essere gestita da un servizio di messaggi non elaborabili.
 
 ## <a name="msmq-v40-poison-handling-sample"></a>Esempio di gestione dei messaggi non elaborabili di MSMQ v4.0
  In Windows Vista, MSMQ fornisce una funzionalità di coda secondaria non elaborabile che può essere utilizzata per archiviare i messaggi non elaborabili. In questo esempio viene illustrata la procedura consigliata per gestire i messaggi non elaborabili utilizzando Windows Vista.
 
- Il rilevamento dei messaggi non elaborabili in Windows Vista è piuttosto sofisticato. Il rilevamento è agevolato da 3 proprietà. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> è il numero di volte che un determinato messaggio viene riletto dalla coda e inviato all'applicazione per l'elaborazione. Un messaggio viene riletto dalla coda quando è inserito di nuovo nella coda perché non può essere inviato all'applicazione o l'applicazione esegue il rollback della transazione nell'operazione del servizio. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> è il numero di volte che il messaggio viene spostato nella coda di tentativi. Quando viene raggiunto <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>, il messaggio viene spostato nella coda di tentativi. La proprietà <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> è l'intervallo di tempo dopo il quale il messaggio viene spostato dalla coda di tentativi alla coda principale. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> viene reimpostato su 0. Viene eseguito un nuovo tentativo per il messaggio. Se tutti i tentativi di leggere il messaggio non sono riusciti, il messaggio è contrassegnato come non elaborabile.
+ Il rilevamento dei messaggi non elaborabili in Windows Vista è sofisticato. Il rilevamento è agevolato da 3 proprietà. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> è il numero di volte che un determinato messaggio viene riletto dalla coda e inviato all'applicazione per l'elaborazione. Un messaggio viene riletto dalla coda quando è inserito di nuovo nella coda perché non può essere inviato all'applicazione o l'applicazione esegue il rollback della transazione nell'operazione del servizio. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> è il numero di volte che il messaggio viene spostato nella coda di tentativi. Quando viene raggiunto <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>, il messaggio viene spostato nella coda di tentativi. La proprietà <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> è l'intervallo di tempo dopo il quale il messaggio viene spostato dalla coda di tentativi alla coda principale. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> viene reimpostato su 0. Viene eseguito un nuovo tentativo per il messaggio. Se tutti i tentativi di leggere il messaggio non sono riusciti, il messaggio è contrassegnato come non elaborabile.
 
  Una volta il messaggio è contrassegnato come non elaborabile, viene gestito in base alle impostazioni nell'enumerazione <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A>. Per reiterare i valori possibili:
 
@@ -31,7 +31,7 @@ Questo esempio dimostra come eseguire la gestione dei messaggi non elaborabili i
 
 - Rilascia: per rilasciare il messaggio.
 
-- Move: per spostare il messaggio nella coda secondaria di messaggi non elaborabili. Questo valore è disponibile solo in Windows Vista.
+- Move: per spostare il messaggio nella coda secondaria dei messaggi non elaborabili. Questo valore è disponibile solo in Windows Vista.
 
 - Reject: per rifiutare il messaggio, rispedendolo alla coda di messaggi non recapitabili del mittente. Questo valore è disponibile solo in Windows Vista.
 
@@ -48,7 +48,7 @@ public interface IOrderProcessor
 }
 ```
 
- L'operazione del servizio visualizza un messaggio indicante che l'ordine è in fase di elaborazione. Per dimostrare la funzionalità dei messaggi non elaborabili l'operazione del servizio `SubmitPurchaseOrder` genera un'eccezione per eseguire il rollback della transazione in una chiamata casuale del servizio. Questo fa in modo che il messaggio venga rimesso nella coda. Eventualmente il messaggio viene contrassegnato come non elaborabile. La configurazione è impostata per spostare il messaggio non elaborabile nella coda secondaria non elaborabile.
+ L'operazione del servizio visualizza un messaggio indicante che l'ordine è in fase di elaborazione. Per dimostrare la funzionalità dei messaggi non elaborabili, l'operazione del servizio `SubmitPurchaseOrder` genera un'eccezione per eseguire il rollback della transazione in una chiamata casuale del servizio. Questo fa in modo che il messaggio venga rimesso nella coda. Eventualmente il messaggio viene contrassegnato come non elaborabile. La configurazione è impostata per spostare il messaggio non elaborabile nella coda secondaria non elaborabile.
 
 ```csharp
 // Service class that implements the service contract.
@@ -206,7 +206,7 @@ public class OrderProcessorService : IOrderProcessor
     }
 ```
 
- Diversamente dal servizio di elaborazione ordini che legge i messaggi dalla coda degli ordini, il servizio messaggi non elaborabili legge i messaggi dalla coda secondaria non elaborabile. La coda non elaborabile è una coda secondaria della coda principale, denominata "non elaborabile" ed è generata automaticamente da MSMQ. Per accedervi, fornire il nome della coda principale seguito da un "," e il nome della coda secondaria, in questo caso -"poison", come illustrato nella configurazione di esempio seguente.
+ A differenza del servizio di elaborazione degli ordini che legge i messaggi dalla coda degli ordini, il servizio messaggi non elaborabili legge i messaggi dalla coda secondaria non elaborabile. La coda non elaborabile è una coda secondaria della coda principale, denominata "non elaborabile" e viene generata automaticamente da MSMQ. Per accedervi, fornire il nome della coda principale seguito da un ";" e dal nome della coda secondaria, in questo caso "Poison", come illustrato nella configurazione di esempio seguente.
 
 > [!NOTE]
 > Nell'esempio per MSMQ v3.0, il nome della coda non elaborabile non è una coda secondaria, ma la coda nella quale viene spostato il messaggio.
@@ -309,7 +309,7 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
      Verificare che l'endpoint sia associato al binding impostando l'attributo bindingConfiguration dell'endpoint.
 
-2. Assicurarsi di modificare la configurazione in PoisonMessageServer, sul server e sul client prima che di eseguire l'esempio.
+2. Prima di eseguire l'esempio, assicurarsi di modificare la configurazione in PoisonMessageServer, server e client.
 
     > [!NOTE]
     > L'impostazione di `security mode` su `None` è equivalente all'impostazione di `MsmqAuthenticationMode`, `MsmqProtectionLevel` e della sicurezza `Message` su `None`.  

@@ -16,7 +16,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75713562"
 ---
-# <a name="event-c-reference"></a>evento (C# riferimento)
+# <a name="event-c-reference"></a>event (C# riferimento)
 
 La parola chiave `event` viene usata per dichiarare un evento in una classe autore.
 
@@ -28,7 +28,7 @@ L'esempio seguente illustra come dichiarare e generare un evento che usa <xref:S
 
 Gli eventi sono un tipo di delegati multicast speciali che possono essere chiamati solo dall'interno della classe o dello struct in cui sono dichiarati (la classe autore). Se altre classi o altri struct sottoscrivono l'evento, i metodi di gestione eventi corrispondenti verranno chiamati quando la classe publisher genera l'evento. Per altre informazioni e altri esempi di codice, vedere [Eventi](../../programming-guide/events/index.md) e [Delegati](../../programming-guide/delegates/index.md).
 
-Gli eventi possono essere contrassegnati come [public](./public.md), [private](./private.md), [protected](./protected.md), [Internal](./internal.md), [protected internal](./protected-internal.md)o [private protected](./private-protected.md). Questi modificatori di accesso definiscono in che modo gli utenti della classe possono accedere all'evento. Per altre informazioni, vedere [Modificatori di accesso](../../programming-guide/classes-and-structs/access-modifiers.md).
+Gli eventi possono essere contrassegnati come [public](./public.md), [private](./private.md), [protected](./protected.md), [Internal](./internal.md), [protected internal](./protected-internal.md)o [private protected](./private-protected.md). Questi modificatori di accesso definiscono in che modo gli utenti della classe possono accedere all'evento. Per altre informazioni, vedere [Access Modifiers](../../programming-guide/classes-and-structs/access-modifiers.md) (Modificatori di accesso).
 
 ## <a name="keywords-and-events"></a>Parole chiave ed eventi
 

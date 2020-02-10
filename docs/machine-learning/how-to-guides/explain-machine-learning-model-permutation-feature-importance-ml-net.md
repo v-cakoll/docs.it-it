@@ -1,20 +1,20 @@
 ---
-title: Descrivere le previsioni del modello con Permutation Feature Importance
+title: Interpretare i modelli ML.NET con importanza della funzionalità Permutation
 description: Comprendere l'importanza delle caratteristiche dei modelli con Permutation Feature Importance in ML.NET
-ms.date: 08/29/2019
+ms.date: 01/30/2020
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 4bad8b0ed17a34ba290bf9c00d65cc3f000a2acf
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c1163a41cd2feb0e8785ae9d4c6a71dfbedf3f12
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976678"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092616"
 ---
-# <a name="explain-model-predictions-using-permutation-feature-importance"></a>Descrivere le previsioni del modello con Permutation Feature Importance
+# <a name="interpret-model-predictions-using-permutation-feature-importance"></a>Interpretare le stime del modello usando la funzionalità di permutazione importanza
 
-Di seguito viene illustrato come descrivere le previsioni del modello di Machine Learning di ML.NET e il contributo delle caratteristiche alle previsioni usando Permutation Feature Importance (PFI).
+Con l'importanza della funzionalità di permutazione (PFI), informazioni su come interpretare le stime dei modelli di Machine Learning ML.NET. PFI fornisce il contributo relativo di ogni caratteristica a una stima.
 
 I modelli di Machine Learning sono spesso considerati black box che accettano gli input e generano un output. I passaggi intermedi o le interazioni tra le caratteristiche che influenzano l'output vengono riconosciute raramente. Poiché il Machine Learning viene ora applicato a più aspetti delle attività quotidiane, ad esempio nel settore sanitario, è di importanza fondamentale comprenderne in che modo un modello di Machine Learning prende le decisioni. Ad esempio, se le diagnosi vengono effettuate tramite un modello di Machine Learning, i professionisti del settore sanitario necessitano di un modo per esaminare i fattori che hanno contribuito alle diagnosi. Una diagnosi corretta può fare una grande differenza nella velocità di recupero di un paziente. Più è dettagliato il livello di descrizione di un modello, maggiore sarà la fiducia dei professionisti del settore sanitario nell'accettare o rifiutare le decisioni prese dal modello.
 
@@ -30,7 +30,7 @@ Le funzionalità del set di dati usate per questo esempio si trovano dalla colon
 | --- | --- | --- |
 | 1 | CrimeRate | Tasso di criminalità pro capite
 | 2 | ResidentialZones | Zone residenziali della città
-| 3\. | CommercialZones | Zone non residenziali della città
+| 3 | CommercialZones | Zone non residenziali della città
 | 4 | NearWater | Prossimità al corpo idrico
 | 5 | ToxicWasteLevels | Livelli di tossicità (PPM)
 | 6 | AverageRoomNumber | Numero medio di locali di un'abitazione

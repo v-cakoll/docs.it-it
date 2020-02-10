@@ -1,13 +1,13 @@
 ---
-title: Modifiche di rilievo della globalizzazione-.NET Core
+title: Modifiche di rilievo della globalizzazione
 description: Elenca le modifiche di rilievo della globalizzazione in .NET Core.
 ms.date: 09/20/2019
-ms.openlocfilehash: 6eb979c0bdf366d6b8522aec0c2176a46128106e
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: eebab2b43c1fc852cd728636518c6ac2ceef2d74
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116447"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093006"
 ---
 # <a name="globalization-breaking-changes"></a>Modifiche di rilievo della globalizzazione
 

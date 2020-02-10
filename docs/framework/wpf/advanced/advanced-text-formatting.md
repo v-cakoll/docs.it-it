@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text [WPF]
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-ms.openlocfilehash: d509de02cd1b3f645ee439c0b0eb33fd1ddbdb07
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 26ee3c2b8a431200c3dc04130deb2247b6c1446d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636107"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095242"
 ---
 # <a name="advanced-text-formatting"></a>Formattazione del testo avanzata
 Windows Presentation Foundation (WPF) fornisce un set di API affidabile per includere testo nell'applicazione. Le API di layout e [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], ad esempio <xref:System.Windows.Controls.TextBlock>, forniscono gli elementi più comuni e di uso generale per la presentazione del testo. Il disegno di API, ad esempio <xref:System.Windows.Media.GlyphRunDrawing> e <xref:System.Windows.Media.FormattedText>, fornisce un mezzo per includere testo formattato nei disegni. Al livello più avanzato, WPF fornisce un motore di formattazione del testo estendibile per controllare ogni aspetto della presentazione del testo, ad esempio la gestione dell'archivio di testo, la gestione della formattazione delle esecuzioni del testo e la gestione di oggetti incorporati.  
@@ -22,10 +22,10 @@ Windows Presentation Foundation (WPF) fornisce un set di API affidabile per incl
  In questo argomento viene fornita un'introduzione alla formattazione del testo WPF. Si concentra sull'implementazione del client e sull'uso del motore di formattazione del testo WPF.  
   
 > [!NOTE]
-> Tutti gli esempi di codice all'interno di questo documento sono disponibili nell'esempio relativo alla [formattazione avanzata del testo](https://go.microsoft.com/fwlink/?LinkID=159965).  
+> Tutti gli esempi di codice all'interno di questo documento sono disponibili nell'esempio relativo alla [formattazione avanzata del testo](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI/TextFormatting).  
 
 <a name="prereq"></a>   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Questo argomento presuppone che l'utente abbia familiarità con le API di livello superiore usate per la presentazione del testo. La maggior parte degli scenari utente non richiede le API avanzate di formattazione del testo illustrate in questo argomento. Per un'introduzione alle diverse API di testo, vedere [documenti in WPF](documents-in-wpf.md).  
   
 <a name="section1"></a>   
@@ -67,7 +67,7 @@ Windows Presentation Foundation (WPF) fornisce un set di API affidabile per incl
   
  Nella tabella seguente vengono illustrati alcuni degli oggetti <xref:System.Windows.Media.TextFormatting.TextRun> predefiniti.  
   
-|Tipo di TextRun|Usage|  
+|Tipo di TextRun|Uso|  
 |------------------|-----------|  
 |<xref:System.Windows.Media.TextFormatting.TextCharacters>|Sequenza di testo specializzata usata per passare nuovamente al formattatore di testo una rappresentazione dei glifi dei caratteri.|  
 |<xref:System.Windows.Media.TextFormatting.TextEmbeddedObject>|Sequenza di testo specializzata usata per fornire contenuto nel quale la misurazione, l'hit testing e il disegno vengono eseguite come un'unica operazione, ad esempio un pulsante o un'immagine all'interno del testo.|  

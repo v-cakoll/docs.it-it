@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: 9f97639447284b792d52cf4aa25b81f584d7291a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 89ed57a787b93a1326b4accd3bb1bc5ff9a825fd
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787900"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095151"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>Considerazioni sul layout per l'elemento WindowsFormsHost
 In questo argomento viene descritto il modo in cui l'elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> interagisce con il sistema di layout di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -32,7 +32,7 @@ In questo argomento viene descritto il modo in cui l'elemento <xref:System.Windo
 |--------------------|-----------------|  
 |Ridimensionamento automatico|Alcuni Windows Forms controlli si ridimensionano per visualizzare correttamente il contenuto. Per ulteriori informazioni, vedere [Panoramica delle proprietà AutoSize](../../winforms/controls/autosize-property-overview.md).|  
 |Ancoraggio e ancoraggio|I controlli Windows Forms supportano il posizionamento e il ridimensionamento in base al contenitore padre. Per altre informazioni, vedere <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> e <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>.|  
-|Ridimensionamento automatico|I controlli contenitore si ridimensionano e i relativi elementi figlio in base alla risoluzione del dispositivo di output o alle dimensioni, in pixel, del tipo di carattere del contenitore predefinito. Per ulteriori informazioni, vedere la pagina relativa [alla scalabilità automatica in Windows Forms](../../winforms/automatic-scaling-in-windows-forms.md).|  
+|Scalabilità automatica|I controlli contenitore si ridimensionano e i relativi elementi figlio in base alla risoluzione del dispositivo di output o alle dimensioni, in pixel, del tipo di carattere del contenitore predefinito. Per ulteriori informazioni, vedere la pagina relativa [alla scalabilità automatica in Windows Forms](../../winforms/automatic-scaling-in-windows-forms.md).|  
 |Contenitori di layout|I controlli <xref:System.Windows.Forms.FlowLayoutPanel> e <xref:System.Windows.Forms.TableLayoutPanel> dispongono i controlli figlio e le dimensioni stesse in base al relativo contenuto.|  
   
 ## <a name="layout-limitations"></a>Limitazioni del layout  
@@ -103,6 +103,6 @@ In questo argomento viene descritto il modo in cui l'elemento <xref:System.Windo
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Procedura dettagliata: Disposizione di controlli Windows Form in WPF](walkthrough-arranging-windows-forms-controls-in-wpf.md)
-- [Disposizione di controlli Windows Forms nell'esempio WPF](https://go.microsoft.com/fwlink/?LinkID=159971)
+- [Disposizione di controlli Windows Forms nell'esempio WPF](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WpfLayoutHostingWfWithXaml)
 - [Mapping di proprietà di Windows Form e WPF](windows-forms-and-wpf-property-mapping.md)
 - [Migrazione e interoperabilità](migration-and-interoperability.md)

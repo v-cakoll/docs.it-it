@@ -1,15 +1,15 @@
 ---
-title: 'Esercitazione: generare un modello di classificazione delle immagini ML.NET da un modello di TensorFlow con training preliminare'
+title: 'Esercitazione: modello di classificazione delle immagini ML.NET da TensorFlow'
 description: Informazioni su come trasferire le informazioni da un modello TensorFlow esistente in un nuovo modello di classificazione delle immagini ML.NET. Il modello TensorFlow è stato sottoposto a training per classificare le immagini in un centinaio di categorie. Il modello ML.NET usa l'apprendimento del trasferimento per classificare le immagini in un minor numero di categorie più ampie.
-ms.date: 11/15/2019
+ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 5fe47c42d0cf24ebfdc33a937e1afbd11a976680
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: f5ec31f8bfdc089d275588b228c8ce6f28a44201
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738959"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092551"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>Esercitazione: generare un modello di classificazione delle immagini ML.NET da un modello di TensorFlow con training preliminare
 
@@ -19,7 +19,7 @@ Il modello TensorFlow è stato sottoposto a training per classificare le immagin
 
 Il training di un modello di [classificazione delle immagini](https://en.wikipedia.org/wiki/Outline_of_object_recognition) da zero richiede l'impostazione di milioni di parametri, di una considerevole quantità di dati di training con etichetta e di un notevole importo di risorse di calcolo (centinaia di ore di GPU). Anche se non è così efficace come il training di un modello personalizzato da zero, l'apprendimento trasferito consente di semplificare questo processo usando migliaia di immagini anziché milioni di immagini con etichetta e di creare un modello personalizzato abbastanza rapidamente (entro un'ora in un computer senza GPU). Questa esercitazione ridimensiona ulteriormente il processo, usando solo una decina di immagini di training.
 
-In questa esercitazione si imparerà a:
+In questa esercitazione verranno illustrate le procedure per:
 > [!div class="checklist"]
 >
 > * Informazioni sul problema
@@ -35,7 +35,7 @@ L'apprendimento del trasferimento è il processo di utilizzo delle informazioni 
 
 Per questa esercitazione si userà parte di un modello TensorFlow con training per classificare le immagini in migliaia di categorie, in un modello ML.NET che classifica le immagini in 3 categorie.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 * [Visual Studio 2017 versione 15,6 o successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con il carico di lavoro "sviluppo multipiattaforma .NET Core" installato.
 * [File ZIP della directory assets dell'esercitazione](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)
@@ -43,7 +43,7 @@ Per questa esercitazione si userà parte di un modello TensorFlow con training p
 
 ## <a name="select-the-right-machine-learning-task"></a>Selezionare l'attività di Machine Learning corretta
 
-### <a name="deep-learning"></a>Deep Learning
+### <a name="deep-learning"></a>Apprendimento avanzato
 
 Il [Deep Learning](https://en.wikipedia.org/wiki/Deep_learning) è un subset di Machine Learning che sta rivoluzionando aree quali Visione artificiale e Riconoscimento vocale.
 
@@ -72,7 +72,7 @@ La classificazione delle immagini è un'attività comune Machine Learning che co
 
 Il `Inception model` è stato sottoposto a training per classificare le immagini in mille categorie, ma per questa esercitazione è necessario classificare le immagini in un set di categorie più piccolo e solo in quelle categorie. Specificare la parte `transfer` di `transfer learning`. È possibile trasferire la capacità del `Inception model` di riconoscere e classificare le immagini alle nuove categorie limitate del classificatore di immagini personalizzato.
 
-* Cibo
+* Food
 * Giocattoli
 * Elettrodomestici
 
@@ -92,7 +92,7 @@ Il trainer specifico usato in questo caso è l' [algoritmo di regressione logist
 
 L'algoritmo implementato da questo trainer garantisce prestazioni ottimali in caso di problemi con un numero elevato di funzionalità, come nel caso di un modello di apprendimento avanzato che opera sui dati di immagine.
 
-### <a name="data"></a>Data
+### <a name="data"></a>data
 
 Ci sono due origini dati: il file `.tsv` e i file di immagine.  Il file `tags.tsv` contiene due colonne: la prima è definita come `ImagePath` e la seconda è l'oggetto `Label` corrispondente all'immagine. Il file di esempio seguente non ha una riga di intestazione e ha l'aspetto seguente:
 
@@ -112,7 +112,7 @@ toaster2.png    appliance
 Le immagini di training e di test si trovano nelle cartelle assets che verranno scaricate in un file ZIP. Queste immagini appartengono a Wikimedia Commons.
 > *[Wikimedia Commons](https://commons.wikimedia.org/w/index.php?title=Main_Page&oldid=313158208), il repository di file multimediali gratuiti.* Recuperato 10:48, 17 ottobre 2018 da: https://commons.wikimedia.org/wiki/Pizza https://commons.wikimedia.org/wiki/Toaster https://commons.wikimedia.org/wiki/Teddy_bear
 
-## <a name="setup"></a>Programma di installazione
+## <a name="setup"></a>Configurazione
 
 ### <a name="create-a-project"></a>Creare un progetto
 
@@ -135,7 +135,7 @@ Le immagini di training e di test si trovano nelle cartelle assets che verranno 
 
 1. Scaricare il [modello Inception](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip) e decomprimere il file.
 
-1. Copiare il contenuto della directory `inception5h` appena decompressa nella directory `assets/inception` del progetto *TransferLearningTF*. Questa directory contiene il modello e i file di supporto aggiuntivi necessari per questa esercitazione, come illustrato nell'immagine seguente:
+1. Copiare il contenuto della directory `inception5h` appena decompressa nella directory *del progetto*TransferLearningTF`assets/inception`. Questa directory contiene il modello e i file di supporto aggiuntivi necessari per questa esercitazione, come illustrato nell'immagine seguente:
 
    ![Contenuto della directory Inception](./media/image-classification/inception-files.png)
 
@@ -364,11 +364,11 @@ Una pipeline del modello ML.NET è una catena di estimatori. Si noti che non vie
     Image: toaster3.jpg predicted as: appliance with score: 0.9646884
     ```
 
-La procedura è stata completata. A questo punto è stato creato un modello di apprendimento automatico per la classificazione delle immagini applicando l'apprendimento del trasferimento a un modello di `TensorFlow` in ML.NET.
+Congratulazioni! A questo punto è stato creato un modello di apprendimento automatico per la classificazione delle immagini applicando l'apprendimento del trasferimento a un modello di `TensorFlow` in ML.NET.
 
 È possibile trovare il codice sorgente per questa esercitazione nel repository [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TransferLearningTF).
 
-In questa esercitazione si è appreso come:
+In questa esercitazione sono state illustrate le procedure per:
 > [!div class="checklist"]
 >
 > * Informazioni sul problema

@@ -1,17 +1,17 @@
 ---
-title: 'Esercitazione: rilevare oggetti tramite Deep Learning con ONNX e ML.NET'
+title: 'Esercitazione: rilevare oggetti usando un modello di apprendimento avanzato ONNX'
 description: Questa esercitazione illustra come usare un modello di Deep Learning ONNX già sottoposto a training in ML.NET per rilevare gli oggetti nelle immagini.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 12/12/2019
+ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 6aaf5acc605067f378ff5d42f713fe1c63d91e46
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 7ff9986c09e39f5c4d24f52c351db6455ff63e77
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794631"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092720"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Esercitazione: rilevare oggetti con ONNX in ML.NET
 
@@ -19,7 +19,7 @@ Informazioni su come usare un modello ONNX già sottoposto a training in ML.NET 
 
 Il training di un modello di rilevamento degli oggetti da zero richiede l'impostazione di milioni di parametri, numerosi dati di training con etichetta e una notevole quantità di risorse di calcolo (centinaia di ore di GPU). L'uso di un modello già sottoposto a training consente di abbreviare il processo di training.
 
-In questa esercitazione si imparerà a:
+In questa esercitazione verranno illustrate le procedure per:
 > [!div class="checklist"]
 >
 > - Informazioni sul problema
@@ -110,7 +110,7 @@ Ora che sono state apprese le nozioni generali su ONNX e sul funzionamento di Ti
     tar -xvzf tiny_yolov2.tar.gz
     ```
 
-1. Copiare il file `model.onnx` estratto dalla directory appena decompressa nella directory `assets\Model` del progetto*ObjectDetection* e rinominarlo in `TinyYolo2_model.onnx`. Questa directory contiene il modello necessario per questa esercitazione.
+1. Copiare il file `model.onnx` estratto dalla directory appena decompressa nella directory  *del progetto*ObjectDetection`assets\Model` e rinominarlo in `TinyYolo2_model.onnx`. Questa directory contiene il modello necessario per questa esercitazione.
 
 1. In Esplora soluzioni fare clic con il pulsante destro del mouse su ognuno dei file nella directory assets e nelle relative sottodirectory e selezionare **Proprietà**. In **Avanzate** impostare il valore di **Copia nella directory di output** su **Copia se più recente**.
 
@@ -448,13 +448,13 @@ Infine, all'esterno del ciclo for iniziale del metodo `FilterBoundingBoxes` rest
 
 [!code-csharp [ReturnFilteredBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L246)]
 
-Ottimo! È ora possibile usare il codice insieme al modello per l'assegnazione dei punteggi.
+L'installazione è riuscita. È ora possibile usare il codice insieme al modello per l'assegnazione dei punteggi.
 
 ## <a name="use-the-model-for-scoring"></a>Usare il modello per l'assegnazione dei punteggi
 
 Analogamente alla post-elaborazione, la fase di assegnazione dei punteggi prevede alcuni passaggi. Per semplificare questi passaggi, aggiungere una classe che conterrà la logica di assegnazione dei punteggi al progetto.
 
-1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi** > **Nuovo elemento**.
+1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto e quindi selezionare **Aggiungi** > **Nuovo elemento**.
 1. Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare **Classe** e modificare il campo **Nome** in *OnnxModelScorer.cs*. Selezionare quindi il pulsante **Aggiungi**.
 
     Il file *OnnxModelScorer.cs* viene aperto nell'editor del codice. Aggiungere l'istruzione `using` seguente all'inizio di *OnnxModelScorer.cs*:
@@ -665,7 +665,7 @@ Dopo l'istruzione try-catch aggiungere logica aggiuntiva per indicare che l'esec
 
 [!code-csharp [EndProcessLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L62-L63)]
 
-La procedura è terminata.
+L'operazione è terminata.
 
 ## <a name="results"></a>Risultati
 
@@ -705,11 +705,11 @@ Per visualizzare le immagini con i rettangoli di selezione, passare alla directo
 
 ![Esempio di immagine elaborata di una sala da pranzo](./media/object-detection-onnx/dinning-room-table-chairs.png)
 
-La procedura è stata completata. È stato creato un modello di Machine Learning per il rilevamento di oggetti riutilizzando un modello `ONNX` già sottoposto a training in ML.NET.
+Congratulazioni! È stato creato un modello di Machine Learning per il rilevamento di oggetti riutilizzando un modello `ONNX` già sottoposto a training in ML.NET.
 
 Il codice sorgente per questa esercitazione è reperibile nel repository [DotNet/machinelearning-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx) .
 
-In questa esercitazione si è appreso come:
+In questa esercitazione sono state illustrate le procedure per:
 > [!div class="checklist"]
 >
 > - Informazioni sul problema

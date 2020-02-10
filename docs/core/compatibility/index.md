@@ -1,13 +1,13 @@
 ---
-title: Tipi di modifiche di rilievo-.NET Core
+title: Tipi di modifiche di rilievo
 description: Informazioni sul modo in cui .NET Core tenta di mantenere la compatibilità per gli sviluppatori tra le versioni di .NET e il tipo di modifica che viene considerata una modifica di rilievo.
 ms.date: 06/10/2019
-ms.openlocfilehash: 76d04504c4476f0f7517a633cfbf1c0aa9d5797e
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 1c5790e39754b91aacbde9e87ed99f9dcc36ce9f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76738580"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092980"
 ---
 # <a name="changes-that-affect-compatibility"></a>Modifiche che influiscono sulla compatibilità
 
@@ -194,7 +194,7 @@ Le modifiche apportate a questa categoria modificano la superficie di attacco pu
 
 ## <a name="behavioral-changes"></a>Modifiche funzionali
 
-### <a name="assemblies"></a>Assemblies
+### <a name="assemblies"></a>Assembly
 
 - ✔️ **consentito: creazione di un assembly portabile quando le stesse piattaforme sono ancora supportate**
 
@@ -260,7 +260,7 @@ Le modifiche apportate a questa categoria modificano la superficie di attacco pu
 
 - ❌ **non consentito: rimozione di un'eccezione in altri casi non elencati in precedenza**
 
-### <a name="attributes"></a>Attributi
+### <a name="attributes"></a>Attributes
 
 - ✔️ **consentito: modifica del valore di un attributo *non* osservabile**
 
@@ -270,7 +270,7 @@ Le modifiche apportate a questa categoria modificano la superficie di attacco pu
 
   Nella maggior parte dei casi, la rimozione di un attributo (ad esempio <xref:System.NonSerializedAttribute>) è una modifica che causa un'interruzione.
 
-## <a name="platform-support"></a>Supporto per piattaforme
+## <a name="platform-support"></a>Piattaforme supportate
 
 - ✔️ **consentito: supporto di un'operazione in una piattaforma non supportata in precedenza**
 

@@ -1,14 +1,14 @@
 ---
-title: Creare un'app elenco di corrispondenze di gioco con Infer.NET e la programmazione probabilistica
-description: Informazioni su come usare la programmazione probabilistica con Infer.NET per creare un'app elenco di corrispondenze di gioco basata su una versione semplificata di TrueSkill.
-ms.date: 05/06/2019
+title: Infer.NET gioco-up app-programmazione probabilistica
+description: Scopri come usare la programmazione probabilistica con Infer.NET per creare un'app per elenchi di corrispondenze di gioco basata su una versione semplificata di TrueSkill.
+ms.date: 01/30/2020
 ms.custom: mvc,how-to
-ms.openlocfilehash: 69515c7b3518c35bf84335c453408b1466f93f34
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 8e489d61c5e6cca53ba12b13fddd0b73c7f85ef9
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774536"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092603"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Creare un'app elenco di corrispondenze di gioco con Infer.NET e la programmazione probabilistica
 
@@ -51,11 +51,11 @@ L'esempio usa partite di ping pong o calcio giocate in ufficio. Sono disponibili
 
 *Dati di esempio dei risultati di gioco*
 
-Partita |Vincitori | Sconfitti
+Game |Vincitori | Sconfitti
 ---------|----------|---------
  1 | Giocatore 0 | Giocatore 1
  2 | Giocatore 0 | Giocatore 3
- 3\. | Giocatore 0 | Giocatore 4
+ 3 | Giocatore 0 | Giocatore 4
  4 | Giocatore 1 | Giocatore 2
  5 | Giocatore 3 | Giocatore 1
  6 | Giocatore 4 | Giocatore 2

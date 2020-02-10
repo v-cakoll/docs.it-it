@@ -9,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-ms.openlocfilehash: eee26165e17b3327166a160e7c4ee3726215dcfc
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5cf48b347be2d0ca6a9b55f3e19affb8b471aa2b
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794252"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095099"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Procedura dettagliata: disposizione di controlli Windows Form in WPF
 
@@ -37,11 +37,11 @@ Le attività illustrate nella procedura dettagliata sono le seguenti:
 - Impostazione della spaziatura interna e dei margini.
 - Uso di contenitori di layout dinamici.
 
-Per un listato di codice completo delle attività illustrate in questa procedura dettagliata, vedere [disposizione di Windows Forms controlli in WPF di esempio](https://go.microsoft.com/fwlink/?LinkID=159971).
+Per un listato di codice completo delle attività illustrate in questa procedura dettagliata, vedere [disposizione di Windows Forms controlli in WPF di esempio](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WpfLayoutHostingWfWithXaml).
 
 Al termine, sarà possibile comprendere Windows Forms funzionalità di layout nelle applicazioni basate su [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 Per completare la procedura dettagliata, è necessario Visual Studio.
 
@@ -195,7 +195,7 @@ Per ospitare un controllo che non si estende, attenersi alla procedura seguente:
 
 2. Premere <kbd>F5</kbd> per compilare ed eseguire l'applicazione. L'elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> viene centrato nella riga della griglia, ma non viene allungato per riempire lo spazio disponibile. Se la finestra è sufficientemente grande, è possibile che vengano visualizzati due o più mesi dal controllo <xref:System.Windows.Forms.MonthCalendar> host, che però sono centrati nella riga. Il motore di layout di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] centra gli elementi che non possono essere ridimensionati per riempire lo spazio disponibile.
 
-## <a name="scaling"></a>Ridimensionamento
+## <a name="scaling"></a>Scalabilità
 
 Diversamente dagli elementi WPF, la maggior parte dei controlli Windows Forms non è continuamente scalabile. Per fornire scalabilità personalizzata, è necessario eseguire l'override del metodo <xref:System.Windows.Forms.Integration.WindowsFormsHost.ScaleChild%2A?displayProperty=nameWithType>.
 
@@ -262,6 +262,6 @@ Per usare un contenitore di layout dinamico, attenersi alla procedura seguente:
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Progettare XAML in Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
 - [Considerazioni sul layout per l'elemento WindowsFormsHost](layout-considerations-for-the-windowsformshost-element.md)
-- [Disposizione di controlli Windows Forms nell'esempio WPF](https://go.microsoft.com/fwlink/?LinkID=159971)
+- [Disposizione di controlli Windows Forms nell'esempio WPF](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WpfLayoutHostingWfWithXaml)
 - [Procedura dettagliata: Hosting di controlli Windows Form compositi in WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
 - [Procedura dettaglia: hosting di un controllo WPF composito in Windows Form](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

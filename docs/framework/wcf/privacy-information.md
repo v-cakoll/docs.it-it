@@ -6,15 +6,15 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 30ea92f09bc655796b6bc268212b6d9e0e05bd9b
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: b724ff1ce85442f64980fdc972188705992d5a4f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919325"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094982"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Informazioni sulla privacy di Windows Communication Foundation
-Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si compila un'applicazione con Windows Communication Foundation (WCF) versione 3,0, l'applicazione può influisca sulla privacy degli utenti finali. L'applicazione potrebbe, ad esempio, raccogliere in modo esplicito informazioni di contatto sugli utenti o richiedere o inviare informazioni in Internet al sito Web. Se si incorpora la tecnologia Microsoft nell'applicazione, è possibile che tale tecnologia abbia un proprio comportamento che potrebbe influire sulla privacy. WCF non invia informazioni a Microsoft dall'applicazione a meno che l'utente o l'utente finale non scelga di inviarlo a Microsoft.  
+Microsoft si impegna a proteggere la privacy degli utenti finali. Quando si compila un'applicazione con Windows Communication Foundation (WCF) versione 3,0, l'applicazione può influisca sulla privacy degli utenti finali. L'applicazione potrebbe, ad esempio, raccogliere in modo esplicito informazioni di contatto sugli utenti o richiedere o inviare informazioni in Internet al sito Web. Se si incorpora la tecnologia Microsoft nell'applicazione, è possibile che tale tecnologia abbia un proprio comportamento che potrebbe influire sulla privacy. WCF non invia informazioni a Microsoft dall'applicazione a meno che l'utente o l'utente finale non scelga di inviarlo a Microsoft.  
   
 ## <a name="wcf-in-brief"></a>WCF in breve  
  WCF è un Framework di messaggistica distribuito che usa il Framework di Microsoft .NET che consente agli sviluppatori di creare applicazioni distribuite. I messaggi comunicati tra due applicazioni contengono informazioni di intestazione e corpo.  
@@ -44,14 +44,14 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  Il risultato dell'autenticazione può essere una sessione protetta stabilita tra gli endpoint di comunicazione. La sessione viene identificata da un GUID che ha la durata della sessione di sicurezza. Nella tabella seguente viene mostrato cosa viene mantenuto e dove.  
   
-|Dati|Servizio di archiviazione|  
+|data|Archiviazione|  
 |----------|-------------|  
 |Credenziali di presentazione, ad esempio nome utente, certificati X.509, token Kerberos e riferimenti alle credenziali.|Meccanismi di gestione delle credenziali standard di Windows, ad esempio l'archivio certificati di Windows.|  
 |Informazioni relative all'appartenenza degli utenti, ad esempio nomi utente e password.|Provider di appartenenze ASP.NET.|  
 |Informazioni di identità sul servizio usato per autenticare il servizio sui client.|Indirizzo dell'endpoint del servizio.|  
 |Informazioni sul chiamante.|Registri di controllo.|  
   
-## <a name="auditing"></a>Controllo di  
+## <a name="auditing"></a>Controllo  
  Il controllo registra l'esito positivo o negativo degli eventi di autenticazione e autorizzazione. I record di controllo contengono i dati seguenti: URI del servizio, URI dell'azione e identificazione del chiamante.  
   
  Il controllo registra inoltre quando l'amministratore modifica la configurazione della registrazione messaggi (attivandola o disattivandola), poiché la registrazione messaggi può registrare dati specifici dell'applicazione in intestazioni e corpi. Per Windows XP, viene registrato un record nel registro eventi dell'applicazione. Per Windows Vista e Windows Server 2003, viene registrato un record nel registro eventi di protezione.  
@@ -70,17 +70,17 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  Le sessioni affidabili vengono implementate usando il protocollo WS-RM (WS-ReliableMessaging) e aggiungono intestazioni WS-RM che contengono informazioni sulle sessioni usate per identificare tutti i messaggi associati a una particolare sessione affidabile. Ogni sessione WS-RM ha un identificatore corrispondente a un GUID.  
   
- Nessuna informazione personale viene mantenuta sul computer dell'utente finale.  
+ Nel computer dell'utente finale non vengono conservate informazioni personali.  
   
 ## <a name="queued-channels"></a>Canali in coda  
  Le code archiviano messaggi provenienti da un'applicazione mittente per conto di un'applicazione ricevente e quindi inoltrano tali messaggi all'applicazione ricevente. Esse consentono di assicurare il trasferimento dei messaggi dalle applicazioni mittenti alle applicazioni riceventi quando, ad esempio, l'applicazione ricevente è temporanea. WCF fornisce supporto per l'accodamento tramite Microsoft Message Queuing (MSMQ) come trasporto.  
   
  La funzionalità dei canali in coda non aggiunge intestazioni a un messaggio. Crea invece un messaggio di accodamento messaggi con le proprietà del messaggio di accodamento messaggi appropriate impostate e richiama metodi di accodamento messaggi per inserire il messaggio nella coda di accodamento messaggi. Il servizio di accodamento messaggi è un componente facoltativo fornito con Windows.  
   
- La funzionalità dei canali in coda non conserva alcuna informazione sul computer dell'utente finale, perché usa l'accodamento messaggi come infrastruttura di accodamento.  
+ Nessuna informazione viene mantenuta nel computer dell'utente finale dalla funzionalità canali in coda, perché utilizza l'Accodamento messaggi come infrastruttura di Accodamento.  
   
 ## <a name="com-integration"></a>Integrazione COM+  
- Questa funzionalità esegue il wrapping delle funzionalità COM e COM+ esistenti per creare servizi compatibili con i servizi WCF. Essa non usa intestazioni specifiche e non conserva dati sul computer dell'utente finale.  
+ Questa funzionalità esegue il wrapping delle funzionalità COM e COM+ esistenti per creare servizi compatibili con i servizi WCF. Questa funzionalità non utilizza intestazioni specifiche e non mantiene i dati nel computer dell'utente finale.  
   
 ## <a name="com-service-moniker"></a>Moniker servizio COM  
  In questo modo viene fornito un wrapper non gestito a un client WCF standard. Essa non prevede intestazioni specifiche in transito né conserva dati sul computer.  
@@ -88,7 +88,7 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
 ## <a name="peer-channel"></a>Canale del peer  
  Un canale peer consente lo sviluppo di applicazioni a più parti con WCF. La messaggistica a più parti si verifica nel contesto di una rete. Le reti vengono identificate da un nome a cui i nodi possono connettersi. Ogni nodo nel canale del peer crea un listener TCP su una porta specificata dall'utente e stabilisce connessioni con altri nodi nella rete per assicurare la flessibilità. Per connettersi ad altri nodi nella rete, i nodi si scambiano anche alcuni dati, incluso l'indirizzo del listener e gli indirizzi IP del computer. I messaggi inviati nella rete possono contenere informazioni di sicurezza relative al mittente, per impedire lo spoofing e la manomissione dei messaggi.  
   
- Non vengono archiviate informazioni personali sul computer dell'utente finale.  
+ Nessuna informazione personale viene archiviata nel computer dell'utente finale.  
   
 ## <a name="it-professional-experience"></a>Esperienza dei professionisti IT  
   
@@ -127,13 +127,13 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  Chiavi rimosse:  
   
- \- per xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" e xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust"  
+ \- per xmlns: WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" e xmlns: WST = "http://schemas.xmlsoap.org/ws/2005/02/trust"  
   
  wst:BinarySecret  
   
  wst:Entropy  
   
- \- per xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" e xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- per xmlns: elemento wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" e xmlns: elemento wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Password  
   
@@ -141,7 +141,7 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  Potenziali informazioni personali rimosse:  
   
- \- per xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" e xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- per xmlns: elemento wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" e xmlns: elemento wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Username  
   
@@ -163,13 +163,13 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  >  
   
- \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
+ \<Conditions NotBefore = "[dateTime]" NotOnOrAfter = "[dateTime]" >  
   
- \<AudienceRestrictionCondition>  
+ \<AudienceRestrictionCondition >  
   
  \<audience > [URI]\</audience > +  
   
- \</AudienceRestrictionCondition>*  
+ \</AudienceRestrictionCondition > *  
   
  \<DoNotCacheCondition/> *  
   
@@ -189,7 +189,7 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  [any]*  
   
- \</Advice>?  
+ \<>/advice?  
   
  <\!--tipi di base astratti  
   
@@ -211,15 +211,15 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  `</NameIdentifier>?`  
   
- \<SubjectConfirmation>  
+ \<SubjectConfirmation >  
   
  \<ConfirmationMethod > [anyURI]\</ConfirmationMethod > +  
   
  \<SubjectConfirmationData > [any]\</SubjectConfirmationData >?  
   
- \<ds:KeyInfo>...\</ds:KeyInfo>?  
+ \<DS: info >...\</DS: >?  
   
- \</SubjectConfirmation>?  
+ \<>/SubjectConfirmation?  
   
  \</Subject >  
   
@@ -295,7 +295,7 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  \<>/Evidence?  
   
- \</AuthorizationDecisionStatement>*  
+ \</AuthorizationDecisionStatement > *  
   
  \</Assertion >  
   
@@ -304,7 +304,7 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  Per gli spazi dei nomi seguenti:  
   
- xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" e xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust" (ad esempio, se non è disponibile alcuna azione)  
+ xmlns: WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" e xmlns: WST = "http://schemas.xmlsoap.org/ws/2005/02/trust" (ad esempio, se non è disponibile alcuna azione)  
   
  Vengono rimosse informazioni per questi elementi del corpo, che implicano lo scambio di chiavi:  
   
@@ -359,17 +359,17 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
 #### <a name="no-information-is-removed-from-application-specific-headers-and-body-data"></a>Non vengono rimosse informazioni dalle intestazioni e dai dati del corpo specifici dell'applicazione  
  WCF non tiene traccia delle informazioni personali nelle intestazioni specifiche dell'applicazione (ad esempio, stringhe di query) o dei dati del corpo (ad esempio, il numero di carta di credito).  
   
- Quando la registrazione messaggi è attiva, le informazioni personali presenti in intestazioni e dati del corpo specifici dell'applicazione potrebbero essere visibili nei log. È il distributore dell'applicazione ad essere, ancora una volta, responsabile dell'impostazione degli elenchi di controllo di accesso nei file di configurazione e di log. Egli può inoltre disattivare la registrazione, se non desidera che queste informazioni siano visibili, o può filtrare le informazioni dai file di log dopo la registrazione.  
+ Quando la registrazione messaggi è attiva, le informazioni personali presenti in intestazioni e dati del corpo specifici dell'applicazione potrebbero essere visibili nei log. È il distributore dell'applicazione ad essere, ancora una volta, responsabile dell'impostazione degli elenchi di controllo di accesso nei file di configurazione e di log. Possono anche disattivare la registrazione se non vogliono che queste informazioni siano visibili o escludere queste informazioni dai file di log dopo la registrazione.  
   
 ### <a name="service-model-tracing"></a>Traccia del modello di servizio  
  L'origine della traccia del modello di servizio (<xref:System.ServiceModel>) consente la traccia di attività ed eventi correlati all'elaborazione dei messaggi. Questa funzionalità usa la funzionalità di diagnostica di .NET Framework da <xref:System.Diagnostics>. Come con la proprietà <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>, il percorso e il relativo elenco di controllo di accesso sono configurabili dall'utente mediante i file di configurazione dell'applicazione .NET Framework. Come con la registrazione messaggi, il percorso dei file viene sempre configurato quando l'amministratore attiva la traccia ed è quindi l'amministratore a controllare l'elenco di controllo di accesso.  
   
- Le tracce contengono intestazioni di messaggio quando un messaggio è nell'ambito. Si applicano le stesse regole descritte nella sezione precedente per nascondere potenziali informazioni personali presenti nelle intestazioni dei messaggi: le informazioni personali precedentemente identificate vengono rimosse, per impostazione predefinita, dalle intestazioni nelle tracce. L'amministratore del computer e il distributore dell'applicazione devono modificare la configurazione per poter registrare potenziali informazioni personali. Tuttavia, le informazioni personali contenute nelle intestazioni specifiche dell'applicazione vengono registrate nelle tracce. Il distributore dell'applicazione è responsabile dell'impostazione degli elenchi di controllo di accesso nei file di configurazione e di traccia. Può inoltre disattivare la traccia se non desidera che queste informazioni siano visibili, o può filtrare le informazioni dai file di traccia dopo la registrazione.  
+ Le tracce contengono intestazioni di messaggio quando un messaggio è nell'ambito. Si applicano le stesse regole descritte nella sezione precedente per nascondere potenziali informazioni personali presenti nelle intestazioni dei messaggi: le informazioni personali precedentemente identificate vengono rimosse, per impostazione predefinita, dalle intestazioni nelle tracce. L'amministratore del computer e il distributore dell'applicazione devono modificare la configurazione per poter registrare potenziali informazioni personali. Tuttavia, le informazioni personali contenute nelle intestazioni specifiche dell'applicazione vengono registrate nelle tracce. Il distributore dell'applicazione è responsabile dell'impostazione degli elenchi di controllo di accesso nei file di configurazione e di traccia. Possono anche disattivare la traccia per nascondere queste informazioni o filtrare queste informazioni dai file di traccia dopo la registrazione.  
   
  Come parte della traccia ServiceModel, ID univoci (denominati ID attività e GUID) collegano insieme attività differenti quando un messaggio passa attraverso diverse parti dell'infrastruttura.  
   
 #### <a name="custom-trace-listeners"></a>Listener di traccia personalizzati  
- Per la registrazione e la traccia dei messaggi è possibile configurare un listener di traccia personalizzato che può inviare tracce e messaggi in rete, ad esempio, a un database remoto. Il distributore dell'applicazione è responsabile della configurazione di listener personalizzati o dell'abilitazione degli utenti a tale attività. È inoltre responsabile di qualsiasi informazione personale esposta nel percorso remoto e della corretta applicazione di elenchi di controllo di accesso al percorso in questione.  
+ Per la registrazione e la traccia dei messaggi è possibile configurare un listener di traccia personalizzato che può inviare tracce e messaggi in rete, ad esempio, a un database remoto. Il distributore dell'applicazione è responsabile della configurazione di listener personalizzati o dell'abilitazione degli utenti a tale attività. Sono anche responsabili di eventuali informazioni personali esposte nella sede remota e per applicare correttamente gli ACL a questo percorso.  
   
 ### <a name="other-features-for-it-professionals"></a>Altre funzionalità per i professionisti IT  
  WCF dispone di un provider WMI che espone le informazioni di configurazione dell'infrastruttura WCF tramite WMI (fornito con Windows). Per impostazione predefinita, l'interfaccia WMI è disponibile per gli amministratori.  
@@ -404,4 +404,4 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
 ## <a name="see-also"></a>Vedere anche
 
 - [Windows Communication Foundation](index.md)
-- [Security](./feature-details/security.md)
+- [Sicurezza](./feature-details/security.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-ms.openlocfilehash: da8f3e592e47c9482d4395b81627c1582e2354f7
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 65ecfc4269ff894d45c9b4ee15e349b1a7ddbb73
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72005245"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094514"
 ---
 # <a name="opentype-font-features"></a>Funzionalità dei tipi di carattere OpenType
 
@@ -39,7 +39,7 @@ In questo argomento viene fornita una panoramica di alcune delle principali funz
 > [!NOTE]
 > Il Windows SDK contiene un set di tipi di carattere OpenType di esempio che è possibile usare con le applicazioni [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Questi tipi di carattere offrono la maggior parte delle funzionalità descritte nelle altre sezioni di questo argomento. Per altre informazioni, vedere [Esempio di pacchetto di tipi di carattere OpenType](sample-opentype-font-pack.md).  
   
- Per informazioni dettagliate sul formato dei tipi di carattere OpenType, vedere la [specifica OpenType](https://go.microsoft.com/fwlink/?LinkId=96731) .  
+Per informazioni dettagliate sul formato dei tipi di carattere OpenType, vedere la [specifica OpenType](https://docs.microsoft.com/typography/opentype/spec/).  
   
 ### <a name="advanced-typographic-extensions"></a>Estensioni tipografiche avanzate  
  Le tabelle tipografiche avanzate (tabelle di layout OpenType) estendono le funzionalità dei tipi di carattere con i contorni TrueType o CFF. I tipi di carattere del layout OpenType contengono informazioni aggiuntive che estendono le funzionalità dei tipi di carattere per supportare la tipografia internazionale di alta qualità. La maggior parte dei tipi di carattere OpenType espone solo un subset delle funzionalità OpenType totali disponibili. I tipi di carattere OpenType forniscono le funzionalità seguenti.  
@@ -289,10 +289,10 @@ In questo argomento viene fornita una panoramica di alcune delle principali funz
 ### <a name="typography-class-properties"></a>Proprietà della classe Typography  
  Nella tabella seguente sono elencate le proprietà, i valori e le impostazioni predefinite dell'oggetto <xref:System.Windows.Documents.Typography>.  
   
-|proprietà|Valore/i|Valore predefinito|  
+|Proprietà|Valore/i|Default Value|  
 |--------------|----------------|-------------------|  
 |<xref:System.Windows.Documents.Typography.AnnotationAlternates%2A>|Valore numerico, byte|0|  
-|<xref:System.Windows.Documents.Typography.Capitals%2A>|<xref:System.Windows.FontCapitals.AllPetiteCaps> &#124;<xref:System.Windows.FontCapitals.AllSmallCaps>&#124;<xref:System.Windows.FontCapitals.Normal>&#124;<xref:System.Windows.FontCapitals.PetiteCaps>&#124; &#124;<xref:System.Windows.FontCapitals.SmallCaps>&#124;<xref:System.Windows.FontCapitals.Titling><xref:System.Windows.FontCapitals.Unicase>|<xref:System.Windows.FontCapitals.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.Capitals%2A>|<xref:System.Windows.FontCapitals.AllPetiteCaps> &#124; <xref:System.Windows.FontCapitals.AllSmallCaps> &#124; <xref:System.Windows.FontCapitals.Normal> &#124; <xref:System.Windows.FontCapitals.PetiteCaps> &#124; &#124; <xref:System.Windows.FontCapitals.SmallCaps> &#124; <xref:System.Windows.FontCapitals.Titling> <xref:System.Windows.FontCapitals.Unicase>|<xref:System.Windows.FontCapitals.Normal?displayProperty=nameWithType>|  
 |<xref:System.Windows.Documents.Typography.CapitalSpacing%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.CaseSensitiveForms%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.ContextualAlternates%2A>|<xref:System.Boolean>|`true`|  
@@ -300,8 +300,8 @@ In questo argomento viene fornita una panoramica di alcune delle principali funz
 |<xref:System.Windows.Documents.Typography.ContextualSwashes%2A>|Valore numerico, byte|0|  
 |<xref:System.Windows.Documents.Typography.DiscretionaryLigatures%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.EastAsianExpertForms%2A>|<xref:System.Boolean>|`false`|  
-|<xref:System.Windows.Documents.Typography.EastAsianLanguage%2A>|<xref:System.Windows.FontEastAsianLanguage.HojoKanji> &#124;<xref:System.Windows.FontEastAsianLanguage.Jis04>&#124;<xref:System.Windows.FontEastAsianLanguage.Jis78>&#124;<xref:System.Windows.FontEastAsianLanguage.Jis83>&#124;<xref:System.Windows.FontEastAsianLanguage.Jis90>&#124; &#124; &#124;<xref:System.Windows.FontEastAsianLanguage.NlcKanji>&#124;<xref:System.Windows.FontEastAsianLanguage.Simplified>&#124;<xref:System.Windows.FontEastAsianLanguage.Traditional><xref:System.Windows.FontEastAsianLanguage.TraditionalNames>|<xref:System.Windows.FontEastAsianLanguage.Normal?displayProperty=nameWithType>|  
-|<xref:System.Windows.Documents.Typography.EastAsianWidths%2A>|<xref:System.Windows.FontEastAsianWidths.Full> &#124;<xref:System.Windows.FontEastAsianWidths.Half>&#124;<xref:System.Windows.FontEastAsianWidths.Normal>&#124;<xref:System.Windows.FontEastAsianWidths.Proportional>&#124;<xref:System.Windows.FontEastAsianWidths.Quarter>&#124;<xref:System.Windows.FontEastAsianWidths.Third>|<xref:System.Windows.FontEastAsianWidths.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.EastAsianLanguage%2A>|<xref:System.Windows.FontEastAsianLanguage.HojoKanji> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis04> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis78> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis83> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis90> &#124; &#124; &#124; <xref:System.Windows.FontEastAsianLanguage.NlcKanji> &#124; <xref:System.Windows.FontEastAsianLanguage.Simplified> &#124; <xref:System.Windows.FontEastAsianLanguage.Traditional> <xref:System.Windows.FontEastAsianLanguage.TraditionalNames><xref:System.Windows.FontEastAsianLanguage.Normal>|<xref:System.Windows.FontEastAsianLanguage.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.EastAsianWidths%2A>|<xref:System.Windows.FontEastAsianWidths.Full> &#124; <xref:System.Windows.FontEastAsianWidths.Half> &#124; <xref:System.Windows.FontEastAsianWidths.Normal> &#124; <xref:System.Windows.FontEastAsianWidths.Proportional> &#124; <xref:System.Windows.FontEastAsianWidths.Quarter> &#124; <xref:System.Windows.FontEastAsianWidths.Third>|<xref:System.Windows.FontEastAsianWidths.Normal?displayProperty=nameWithType>|  
 |<xref:System.Windows.Documents.Typography.Fraction%2A>|<xref:System.Windows.FontFraction.Normal> &#124; <xref:System.Windows.FontFraction.Slashed> &#124; <xref:System.Windows.FontFraction.Stacked>|<xref:System.Windows.FontFraction.Normal?displayProperty=nameWithType>|  
 |<xref:System.Windows.Documents.Typography.HistoricalForms%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.HistoricalLigatures%2A>|<xref:System.Boolean>|`false`|  
@@ -333,12 +333,12 @@ In questo argomento viene fornita una panoramica di alcune delle principali funz
 |<xref:System.Windows.Documents.Typography.StylisticSet18%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.StylisticSet19%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.StylisticSet20%2A>|<xref:System.Boolean>|`false`|  
-|<xref:System.Windows.Documents.Typography.Variants%2A>|<xref:System.Windows.FontVariants.Inferior> &#124;<xref:System.Windows.FontVariants.Normal>&#124;<xref:System.Windows.FontVariants.Ordinal>&#124;<xref:System.Windows.FontVariants.Ruby>&#124;<xref:System.Windows.FontVariants.Subscript>&#124;<xref:System.Windows.FontVariants.Superscript>|<xref:System.Windows.FontVariants.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.Variants%2A>|<xref:System.Windows.FontVariants.Inferior> &#124; <xref:System.Windows.FontVariants.Normal> &#124; <xref:System.Windows.FontVariants.Ordinal> &#124; <xref:System.Windows.FontVariants.Ruby> &#124; <xref:System.Windows.FontVariants.Subscript> &#124; <xref:System.Windows.FontVariants.Superscript>|<xref:System.Windows.FontVariants.Normal?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Documents.Typography>
-- [Specifica OpenType](https://go.microsoft.com/fwlink/?LinkId=96731)
+- [Specifica OpenType](https://docs.microsoft.com/typography/opentype/spec/)
 - [Funzionalità tipografiche di WPF](typography-in-wpf.md)
 - [Esempio di pacchetto di tipi di carattere OpenType](sample-opentype-font-pack.md)
 - [Includere i tipi di carattere nel pacchetto delle applicazioni](packaging-fonts-with-applications.md)

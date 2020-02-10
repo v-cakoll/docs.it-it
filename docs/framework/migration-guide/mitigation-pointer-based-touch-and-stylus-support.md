@@ -7,16 +7,16 @@ helpviewer_keywords:
 - WPF retargeting changes
 - WPF pointer-based touch and stylus stack
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
-ms.openlocfilehash: 6b3e8068be2f5ed82c483b760fe100ea0a751588
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 023c38f66611bd0022699d3f62d90c3923585012
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457867"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094475"
 ---
 # <a name="mitigation-pointer-based-touch-and-stylus-support"></a>Mitigazione: Supporto di tocco e stilo basato su puntatore
 
-Le applicazioni WPF destinate a .NET Framework 4.7 e che sono in esecuzione nei sistemi Windows a partire da Windows 10 Creators Update possono abilitare lo stack facoltativo di tocco/stilo basato su `WM_POINTER`.
+Le applicazioni WPF destinate a .NET Framework 4,7 e sono in esecuzione in Windows a partire da Windows 10 Creators Update possono abilitare uno stack di tocco/stilo WPF basato su `WM_POINTER`facoltativo.
 
 ## <a name="impact"></a>Impatto
 
@@ -40,7 +40,7 @@ Di seguito sono riportati problemi noti correnti con lo stack tocco/stilo basato
 
 ## <a name="opting-in-to-wm_pointer-based-touchstylus-support"></a>Consenso esplicito al supporto di tocco/stilo basato su WM_POINTER
 
-Gli sviluppatori che desiderano abilitare questo stack possono aggiungere quanto segue al file app.config dell'applicazione:
+Gli sviluppatori che desiderano abilitare questo stack possono aggiungere quanto segue al file *app. config* dell'applicazione.
 
 ```xml
 <configuration>
