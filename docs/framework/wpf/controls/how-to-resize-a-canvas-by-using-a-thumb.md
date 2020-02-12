@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Ridimensionare un'area di disegno usando un cursore"
+title: "Procedura: ridimensionare un'area di disegno utilizzando un cursore"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,40 +11,40 @@ helpviewer_keywords:
 - Thumb control [WPF]
 - Canvas control [WPF]
 ms.assetid: 7dc9f435-726c-4d4d-be41-eb24cfe17bef
-ms.openlocfilehash: 14942157429b029147d47e2f88428c56e66523d1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 84f5ac2b53124b7f4d7c15741e94b40e7ee81526
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770747"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124299"
 ---
-# <a name="how-to-resize-a-canvas-by-using-a-thumb"></a>Procedura: Ridimensionare un'area di disegno usando un cursore
-In questo esempio viene illustrato come utilizzare un <xref:System.Windows.Controls.Primitives.Thumb> controllo per ridimensionare un <xref:System.Windows.Controls.Canvas> controllo.  
+# <a name="how-to-resize-a-canvas-by-using-a-thumb"></a>Procedura: ridimensionare un'area di disegno utilizzando un cursore
+Questo esempio illustra come usare un controllo <xref:System.Windows.Controls.Primitives.Thumb> per ridimensionare un controllo <xref:System.Windows.Controls.Canvas>.  
   
 ## <a name="example"></a>Esempio  
- Il <xref:System.Windows.Controls.Primitives.Thumb> controllo fornisce funzionalità di trascinamento che può essere utilizzata per spostare o ridimensionare i controlli monitorando il <xref:System.Windows.Controls.Primitives.Thumb.DragStarted>, <xref:System.Windows.Controls.Primitives.Thumb.DragDelta> e <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted> gli eventi del <xref:System.Windows.Controls.Primitives.Thumb>.  
+ Il controllo <xref:System.Windows.Controls.Primitives.Thumb> fornisce funzionalità di trascinamento che possono essere utilizzate per spostare o ridimensionare i controlli monitorando gli eventi <xref:System.Windows.Controls.Primitives.Thumb.DragStarted>, <xref:System.Windows.Controls.Primitives.Thumb.DragDelta> e <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted> del <xref:System.Windows.Controls.Primitives.Thumb>.  
   
- L'utente inizia un'operazione di trascinamento premendo il pulsante sinistro del mouse quando il puntatore del mouse viene posizionato su di <xref:System.Windows.Controls.Primitives.Thumb> controllo. L'operazione di trascinamento continua fino a quando il pulsante sinistro del mouse rimane premuto. Durante l'operazione di trascinamento, il <xref:System.Windows.Controls.Primitives.Thumb.DragDelta> può ricorrere più di una volta. Ogni volta che si verifica, il <xref:System.Windows.Controls.Primitives.DragDeltaEventArgs> classe fornisce la modifica nella posizione corrispondente alla modifica della posizione del mouse. Quando l'utente rilascia il pulsante sinistro del mouse, l'operazione di trascinamento viene completata. L'operazione di trascinamento fornisce solo le nuove coordinate; non riposizionata automaticamente il <xref:System.Windows.Controls.Primitives.Thumb>.  
+ L'utente inizia un'operazione di trascinamento premendo il pulsante sinistro del mouse quando il puntatore del mouse viene sospeso sul controllo <xref:System.Windows.Controls.Primitives.Thumb>. L'operazione di trascinamento continua fino a quando il pulsante sinistro del mouse rimane premuto. Durante l'operazione di trascinamento, il <xref:System.Windows.Controls.Primitives.Thumb.DragDelta> può ripetersi più di una volta. Ogni volta che si verifica, la classe <xref:System.Windows.Controls.Primitives.DragDeltaEventArgs> fornisce la modifica nella posizione che corrisponde alla modifica della posizione del mouse. Quando l'utente rilascia il pulsante sinistro del mouse, l'operazione di trascinamento viene completata. L'operazione di trascinamento fornisce solo nuove coordinate; il <xref:System.Windows.Controls.Primitives.Thumb>non viene riposizionato automaticamente.  
   
- L'esempio seguente mostra una <xref:System.Windows.Controls.Primitives.Thumb> controllo che rappresenta l'elemento figlio di un <xref:System.Windows.Controls.Canvas> controllo. Il gestore eventi per relativi <xref:System.Windows.Controls.Primitives.Thumb.DragDelta> evento fornisce la logica per spostare il <xref:System.Windows.Controls.Primitives.Thumb> e ridimensionare il <xref:System.Windows.Controls.Canvas>. I gestori eventi per il <xref:System.Windows.Controls.Primitives.Thumb.DragStarted> e <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted> eventi modificare il colore del <xref:System.Windows.Controls.Primitives.Thumb> durante un'operazione di trascinamento. L'esempio seguente definisce il <xref:System.Windows.Controls.Primitives.Thumb>.  
+ Nell'esempio seguente viene illustrato un controllo <xref:System.Windows.Controls.Primitives.Thumb> che rappresenta l'elemento figlio di un controllo <xref:System.Windows.Controls.Canvas>. Il gestore eventi per il relativo evento <xref:System.Windows.Controls.Primitives.Thumb.DragDelta> fornisce la logica per spostare l'<xref:System.Windows.Controls.Primitives.Thumb> e ridimensionare il <xref:System.Windows.Controls.Canvas>. I gestori eventi per l'evento <xref:System.Windows.Controls.Primitives.Thumb.DragStarted> e <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted> modificano il colore del <xref:System.Windows.Controls.Primitives.Thumb> durante un'operazione di trascinamento. Nell'esempio seguente viene definita la <xref:System.Windows.Controls.Primitives.Thumb>.  
   
  [!code-xaml[Thumb#thumb](~/samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml#thumb)]  
   
- L'esempio seguente mostra le <xref:System.Windows.Controls.Primitives.Thumb.DragDelta> gestore dell'evento che si sposta il <xref:System.Windows.Controls.Primitives.Thumb> e ridimensiona il <xref:System.Windows.Controls.Canvas> in risposta a un movimento del mouse.  
+ Nell'esempio seguente viene illustrato il gestore dell'evento <xref:System.Windows.Controls.Primitives.Thumb.DragDelta> che sposta l'<xref:System.Windows.Controls.Primitives.Thumb> e ridimensiona il <xref:System.Windows.Controls.Canvas> in risposta a un movimento del mouse.  
   
  [!code-csharp[Thumb#2](~/samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml.cs#2)]  
   
- L'esempio seguente illustra il <xref:System.Windows.Controls.Primitives.Thumb.DragStarted> gestore dell'evento.  
+ Nell'esempio seguente viene illustrato il gestore dell'evento <xref:System.Windows.Controls.Primitives.Thumb.DragStarted>.  
   
  [!code-csharp[Thumb#DragStartedHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml.cs#dragstartedhandler)]
  [!code-vb[Thumb#DragStartedHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Thumb/VisualBasic/Pane1.xaml.vb#dragstartedhandler)]  
   
- L'esempio seguente illustra il <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted> gestore dell'evento.  
+ Nell'esempio seguente viene illustrato il gestore dell'evento <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted>.  
   
  [!code-csharp[Thumb#DragCompletedHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml.cs#dragcompletedhandler)]
  [!code-vb[Thumb#DragCompletedHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Thumb/VisualBasic/Pane1.xaml.vb#dragcompletedhandler)]  
   
- Per l'esempio completo, vedere [esempio di funzionalità di trascinamento Thumb](https://go.microsoft.com/fwlink/?LinkID=160042).  
+ Per l'esempio completo, vedere [esempio di funzionalità di trascinamento del pollice](https://github.com/Microsoft/WPF-Samples/tree/master/Drag%20and%20Drop/DragDropThumbOps).  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -2,16 +2,15 @@
 title: Librerie di classi .NET
 description: Informazioni sul modo in cui le librerie di classi di .NET consentono di raggruppare funzionalità utili in moduli che possono essere usati da più applicazioni.
 author: richlander
-ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: c918883d8620513749826680f9f1b6d89ae87585
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: b7934e5def202760ab05d363ee5fcda5d012ca72
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664593"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124585"
 ---
 # <a name="net-class-libraries"></a>Librerie di classi .NET
 
@@ -54,9 +53,9 @@ Le piattaforme seguenti supportano le librerie di .NET Standard:
 * Mono
 * Xamarin.iOS, Xamarin.Mac, Xamarin.Android
 * Piattaforma UWP (Universal Windows Platform)
-* WINDOWS
+* Windows
 * Windows Phone
-* Silverlight per Windows Phone
+* Windows Phone Silverlight
 
 Per altre informazioni, vedere l'argomento [.NET Standard](net-standard.md).
 

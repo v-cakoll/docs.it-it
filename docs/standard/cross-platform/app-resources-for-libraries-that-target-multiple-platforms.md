@@ -12,14 +12,12 @@ helpviewer_keywords:
 - resources, for multiple platforms
 - targeting multiple platforms, resources for
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b32c2e354ea48e25ddb0aa561eb576cbfd89e3fb
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 3bf475117a85c2fced260dcc9460d55cd7007277
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204745"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123662"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Risorse app per librerie destinate a più piattaforme
 È possibile utilizzare il tipo di progetto [libreria di classi](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) portabile .NET Framework per assicurarsi che le risorse nelle librerie di classi siano accessibili da più piattaforme. Questo tipo di progetto è disponibile in Visual Studio 2012 e è destinato al subset portabile della libreria di classi .NET Framework. L'uso di una libreria di classi portabile garantisce che sia possibile accedere alla libreria da applicazioni desktop, applicazioni Silverlight, Windows Phone app e app di Windows 8. x Store.
@@ -35,7 +33,7 @@ ms.locfileid: "74204745"
 
  Il progetto libreria di classi portabile include i quattro membri <xref:System.Resources.ResourceManager> elencati nella tabella seguente. Questi costruttori e metodi consentono di creare un'istanza di un oggetto <xref:System.Resources.ResourceManager> e recuperare le risorse di tipo stringa.
 
-|Membro`ResourceManager`|description|
+|Membro`ResourceManager`|Descrizione|
 |------------------------------|-----------------|
 |<xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29>|Crea un'istanza di <xref:System.Resources.ResourceManager> per accedere al file di risorse denominato individuato nell'assembly specificato.|
 |<xref:System.Resources.ResourceManager.%23ctor%28System.Type%29>|Crea un'istanza di <xref:System.Resources.ResourceManager> che corrisponde al tipo specificato.|
@@ -55,19 +53,19 @@ ms.locfileid: "74204745"
 ## <a name="example-non-localized-portable-class-library"></a>Esempio: libreria di classi portabile non localizzata
  Nell'esempio di libreria di classi portabile non localizzato seguente vengono utilizzate risorse per archiviare i nomi delle colonne e per determinare il numero di caratteri da riservare per i dati tabulari. Nell'esempio viene utilizzato un file denominato LibResources.resx per archiviare le risorse di tipo stringa elencate nella tabella seguente.
 
-|Nome della risorsa|Valore della risorsa|
+|Nome risorsa|Valore della risorsa|
 |-------------------|--------------------|
 |Born|Birthdate|
 |BornLength|12|
 |Hired|Data assunzione|
 |HiredLength|12|
-|Id|Id|
+|ID|ID|
 |ID.Length|12|
-|nome|nome|
+|Nome|Nome|
 |NameLength|25|
 |Titolo|Employee Database|
 
- Il codice seguente definisce una classe `UILibrary` che usa il wrapper Gestione risorse denominato `resources` generato da Visual Studio quando il **modificatore di accesso** per il file viene modificato in **public**. La classe UILibrary analizza i dati della stringa, se necessario. senza subire modifiche. Notare che la classe si trova nello spazio dei nomi `MyCompany.Employees`.
+ Il codice seguente definisce una classe `UILibrary` che usa il wrapper Gestione risorse denominato `resources` generato da Visual Studio quando il **modificatore di accesso** per il file viene modificato in **public**. La classe UILibrary analizza i dati della stringa, se necessario. . Notare che la classe si trova nello spazio dei nomi `MyCompany.Employees`.
 
  [!code-csharp[Conceptual.Resources.Portable#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/uilibrary.cs#1)]
  [!code-vb[Conceptual.Resources.Portable#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/uilibrary.vb#1)]
@@ -84,14 +82,14 @@ ms.locfileid: "74204745"
 ## <a name="example-localized-portable-class-library"></a>Esempio: libreria di classi portabile localizzata
  Il seguente esempio di libreria di classi portabile localizzata include risorse per le impostazioni cultura francese (Francia) e inglese (Stati Uniti). Le impostazioni cultura della lingua inglese (Stati Uniti) sono le impostazioni cultura predefinite dell'app; le relative risorse vengono visualizzate nella tabella della [sezione precedente](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc). Il file di risorse per le impostazioni cultura francesi (Francia) è denominato LibResources.fr-FR.resx ed è costituito dalle risorse di tipo stringa elencate nella tabella seguente. Il codice sorgente per la classe `UILibrary` è lo stesso di quello riportato nella sezione precedente.
 
-|Nome della risorsa|Valore della risorsa|
+|Nome risorsa|Valore della risorsa|
 |-------------------|--------------------|
 |Born|Date de naissance|
 |BornLength|20|
 |Hired|Date embauché|
 |HiredLength|16|
-|Id|Id|
-|nome|Nom|
+|ID|ID|
+|Nome|Nom|
 |Titolo|Base de données des employés|
 
  Nell'esempio di codice riportato di seguito viene illustrato come sia possibile accedere alla classe `UILibrary` e alle relative risorse da una applicazione in modalità console. Richiede l'aggiunta di un riferimento a UILibrary. dll al progetto di applicazione console.

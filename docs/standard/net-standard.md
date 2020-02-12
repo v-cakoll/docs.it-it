@@ -1,18 +1,16 @@
 ---
 title: .NET Standard
 description: Informazioni su .NET Standard, sulle relative versioni e sulle implementazioni di .NET che le supportano.
-author: mairaw
-ms.author: mairaw
 ms.date: 09/23/2019
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 6a4406775056b76dfa789911b8bb14e84dbc8eea
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 25490d5063a1f6c31b76af30ac6d37de6cb8c07f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738656"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124637"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -60,7 +58,7 @@ Esistono due regole principali per il controllo delle versioni:
 - Additive: le versioni di .NET Standard sono cerchi concentrici da un punto di vista logico, ovvero le versioni successive includono tutte le API delle versioni precedenti. Non vengono apportate modifiche importanti tra una versione e l'altra.
 - Non modificabili: dopo essere state rilasciate, le versioni di .NET Standard sono bloccate. Le nuove API vengono prima rese disponibili in implementazioni di .NET specifiche, ad esempio .NET Core. Se la commissione di esame di .NET Standard ritiene che le nuove API debbano essere disponibili per tutte le implementazioni di .NET, vengono aggiunte in una nuova versione di .NET Standard.
 
-## <a name="specification"></a>Specifica
+## <a name="specification"></a>Specifiche
 
 La specifica di .NET Standard è un set standardizzato di API. La specifica viene gestita dagli implementatori di .NET, in particolare Microsoft (sono inclusi .NET Framework, .NET Core e Mono) e Unity. Un processo pubblico di commenti e suggerimenti è parte integrante della creazione di nuove versioni di .NET Standard tramite [GitHub](https://github.com/dotnet/standard).
 
@@ -84,11 +82,11 @@ Vengono forniti elementi derivati per facilitare le operazioni di lettura e abil
 
 Il principale veicolo di distribuzione degli assembly di riferimento di .NET Standard sono i [pacchetti NuGet](../core/packages.md). Le implementazioni vengono distribuite con modalità diverse, appropriate per ogni implementazione di .NET.
 
-I pacchetti NuGet hanno come destinazione uno o più [framework](frameworks.md). I pacchetti di .NET Standard hanno come destinazione il framework ".NET Standard". È possibile fare riferimento a .NET Standard Framework usando il `netstandard` [Compact TFM](frameworks.md) , ad esempio `netstandard1.4`. Le librerie che devono essere eseguite in più runtime devono avere come destinazione questo framework. Per il set più ampio di API, indicare `netstandard2.0` come destinazione poiché il numero di API è più che raddoppiato tra .NET Standard 1.6 e 2.0.
+I pacchetti NuGet hanno come destinazione uno o più [framework](frameworks.md). I pacchetti di .NET Standard hanno come destinazione il framework ".NET Standard". È possibile fare riferimento a .NET Standard Framework usando il `netstandard` [Compact TFM](frameworks.md) , ad esempio `netstandard1.4`. Le librerie da eseguire su più runtime devono avere come destinazione questo framework. Per il set più ampio di API, indicare `netstandard2.0` come destinazione poiché il numero di API è più che raddoppiato tra .NET Standard 1.6 e 2.0.
 
-Il metapacchetto [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/) fa riferimento al set completo di pacchetti NuGet che definiscono .NET Standard.  Il modo più comune per definire `netstandard` come destinazione consiste nel fare riferimento a questo metapacchetto. Questo metapacchetto descrive e fornisce l'accesso alle circa 40 librerie .NET e alle API associate che definiscono .NET Standard. Per accedere ad API aggiuntive, è possibile fare riferimento ad altri pacchetti che hanno come destinazione `netstandard`.
+Il metapacchetto [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/) fa riferimento al set completo di pacchetti NuGet che definiscono .NET Standard.  Il modo più comune di definire `netstandard` come destinazione è fare riferimento a questo metapacchetto. Questo metapacchetto descrive e fornisce l'accesso alle circa 40 librerie .NET e alle API associate che definiscono .NET Standard. È possibile fare riferimento a pacchetti aggiuntivi che hanno `netstandard` come destinazione per ottenere accesso ad altre API.
 
-### <a name="versioning"></a>Versionamento
+### <a name="versioning"></a>Controllo delle versioni
 
 La specifica non è singola, ma costituisce un set di API a crescita incrementale e con definizione lineare delle versioni. La prima versione dello standard definisce un set di dati di riferimento delle API. Le versioni successive aggiungono nuove API ed ereditano quelle definite dalle versioni precedenti. Non esiste alcuna norma stabilita per la rimozione di API dallo standard.
 

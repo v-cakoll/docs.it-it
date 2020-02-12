@@ -11,20 +11,18 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 ms.topic: tutorial
 ms.custom: mvc,vs-dotnet
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 232605850c65aebd9aafdc9b76c90af42f2c901c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: bc47405636c4727f502caf1f6e27050367eda74a
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746979"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124338"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>Esercitazione: creare la prima applicazione WPF in Visual Studio 2019
 
 Questo articolo illustra come sviluppare un'applicazione desktop Windows Presentation Foundation (WPF) che include gli elementi comuni alla maggior parte delle applicazioni WPF: markup Extensible Application Markup Language (XAML), code-behind, definizioni delle applicazioni, controlli, layout, data binding e stili. Per sviluppare l'applicazione, si userà Visual Studio. 
 
-In questa esercitazione si imparerà a:
+In questa esercitazione verranno illustrate le procedure per:
 > [!div class="checklist"]
 >
 > - Creare un progetto WPF.
@@ -42,7 +40,7 @@ Al termine dell'esercitazione, verrà creata un'applicazione Windows autonoma ch
 >
 > È possibile abilitare o disabilitare il linguaggio del codice di esempio tra C# e Visual Basic usando il selettore della lingua nella parte superiore di questa pagina.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 - [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) con il carico di lavoro sviluppo di applicazioni **desktop .NET** installato.
 
@@ -215,7 +213,7 @@ In questa sezione si aggiungeranno due pagine e un'immagine all'applicazione.
 
     2. Nella finestra di dialogo **Aggiungi elemento esistente** impostare filtro file su **tutti** i file o **file di immagine**, passare al file di immagine che si vuole usare e quindi selezionare **Aggiungi**.
 
-## <a name="build-and-run-the-application"></a>Compilazione ed esecuzione dell'applicazione
+## <a name="build-and-run-the-application"></a>Compilare ed eseguire l'applicazione
 
 1. Per compilare ed eseguire l'applicazione, premere **F5** o scegliere **Avvia debug** dal menu **debug** .
 

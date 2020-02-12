@@ -7,44 +7,42 @@ helpviewer_keywords:
 - targeting multiple platforms
 - multiple platforms, targeting
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e5b6a32aa465700fb316bf2269c4d057ff823443
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dd5e5612de15a499c0dce34dc30faa6fd5731c17
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590341"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124533"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Sviluppo multipiattaforma con la libreria di classi portabile
 
-Il tipo di progetto libreria di classi portabile in Visual Studio consente di compilare App multipiattaforma e librerie per piattaforme Microsoft, semplice e rapido.
+Il tipo di progetto libreria di classi portabile in Visual Studio consente di creare app e librerie multipiattaforma per piattaforme Microsoft in modo rapido e semplice.
 
 [!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
 
-Le librerie di classi portabili consentono di ridurre il tempo e i costi di sviluppo e test del codice. Usare questo tipo di progetto per scrivere e compilare assembly .NET Framework portabili e farvi riferimento dalle App destinate a più piattaforme, ad esempio il Framework .NET, iOS o Mac.
+Le librerie di classi portabili consentono di ridurre il tempo e i costi di sviluppo e test del codice. Usare questo tipo di progetto per scrivere e compilare assembly .NET Framework portabili, quindi fare riferimento a tali assembly da app destinate a più piattaforme, ad esempio .NET Framework, iOS o Mac.
 
-Anche dopo aver creato un progetto Libreria di classi portabile in Visual Studio e aver iniziato lo sviluppo, è possibile modificare le piattaforme di destinazione. Visual Studio compila la libreria con i nuovi assembly, che consente di identificare le modifiche da apportare al codice.
+Anche dopo aver creato un progetto Libreria di classi portabile in Visual Studio e aver iniziato lo sviluppo, è possibile modificare le piattaforme di destinazione. Visual Studio compila la libreria con i nuovi assembly, che consente di identificare le modifiche che è necessario apportare al codice.
 
 ## <a name="create-a-portable-class-library-project"></a>Creare un progetto libreria di classi portabile
 
-Per creare una libreria di classi portabile, usare il modello fornito in Visual Studio. Creare un nuovo progetto (**File** > **nuovo progetto**) e la **nuovo progetto** finestra di dialogo, selezionare il linguaggio di programmazione (Visual c# o Visual Basic). Selezionare quindi il **libreria di classi (portabile Legacy)** modello. Immettere un nome per il progetto e scegliere **OK**.
+Per creare una libreria di classi portabile, usare il modello fornito in Visual Studio. Creare un nuovo progetto (**File** > **nuovo progetto**) e nella finestra di dialogo **nuovo progetto** selezionare il linguaggio di programmazione (Visual C# o Visual Basic). Selezionare quindi il modello **libreria di classi (portabile legacy)** . Immettere un nome per il progetto e scegliere **OK**.
 
-Il **Aggiungi libreria di classi portabile** verrà visualizzata la finestra di dialogo. Scegliere due o più destinazioni e quindi scegliere **OK**.
+Verrà visualizzata la finestra di dialogo **Aggiungi libreria di classi** portabile. Scegliere due o più destinazioni, quindi scegliere **OK**.
 
-![Aggiungere le destinazioni libreria di classi portabile in Visual Studio](media/add-portable-class-library.png)
+![Aggiungere destinazioni della libreria di classi portabile in Visual Studio](media/add-portable-class-library.png)
 
-## <a name="change-targets"></a>Modificare le destinazioni
+## <a name="change-targets"></a>Modifica destinazioni
 
-Durante la creazione o dopo aver iniziato lo sviluppo, è possibile modificare le piattaforme di destinazione di un progetto di libreria di classi portabile. Se si desidera modificare le destinazioni dopo aver creato il progetto, in **Esplora soluzioni**, aprire il menu di scelta rapida per il progetto di libreria di classi portabile (non sulla soluzione) e quindi scegliere **proprietà** . Nella pagina delle proprietà del progetto, il **libreria** scheda Mostra le piattaforme di destinazione del progetto attualmente.
+È possibile modificare le piattaforme di destinazione di un progetto libreria di classi portabile quando lo si crea o dopo l'avvio dello sviluppo. Se si desidera modificare le destinazioni dopo aver creato il progetto, in **Esplora soluzioni**aprire il menu di scelta rapida per il progetto libreria di classi portabile (non per la soluzione), quindi scegliere **Proprietà**. Nella pagina Proprietà progetto la scheda **libreria** Mostra le piattaforme attualmente destinate al progetto.
 
-![Proprietà del progetto per la libreria di classi portabile in Visual Studio](media/pcl-project-properties.png)
+![Proprietà del progetto per libreria di classi portabile in Visual Studio](media/pcl-project-properties.png)
 
-Per aggiungere o rimuovere destinazioni, scegliere il **modifica** pulsante, quindi selezionare e deselezionare le caselle di controllo appropriate.
+Per aggiungere o rimuovere destinazioni, scegliere il pulsante **modifica** , quindi selezionare e deselezionare le caselle di controllo appropriate.
 
 Quando si modificano le destinazioni, le API disponibili per lo sviluppo del progetto cambiano in base alla selezione. Visual Studio segnala gli avvisi e gli errori che possono verificarsi in seguito alla modifica delle destinazioni.
 
-Se si vuole valutare la portabilità degli assembly prima di apportare modifiche in Visual Studio, è possibile usare la [.NET Portability Analyzer](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b).
+Se si vuole valutare la portabilità degli assembly prima di apportare modifiche in Visual Studio, è possibile usare [.NET Portability Analyzer](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b).
 
 ## <a name="supported-types-and-members"></a>Tipi e membri supportati
 
@@ -70,24 +68,24 @@ Dopo avere compilato il progetto Libreria di classi portabile, è sufficiente fa
 
 Per eseguire un'app che faccia riferimento a un assembly Libreria di classi portabile, la versione richiesta (o successiva) delle piattaforme di destinazione deve essere installata nel computer. Visual Studio contiene tutti i framework richiesti, quindi è possibile eseguire l'app senza ulteriori modifiche nel computer usato per sviluppare l'app.
 
-### <a name="deploy-a-universal-windows-app"></a>Distribuire un'app Windows universali
+### <a name="deploy-a-universal-windows-app"></a>Distribuire un'app di Windows universale
 
-Quando si crea un'app Windows universali che fa riferimento a un assembly libreria di classi portabile, tutto il che necessario per distribuire l'app è inclusa nel pacchetto dell'app e non sono altri passaggi necessari.
+Quando si crea un'app di Windows universale che fa riferimento a un assembly libreria di classi portabile, tutto il necessario per distribuire l'app è incluso nel pacchetto dell'app e non sono necessari altri passaggi.
 
-### <a name="deploy-a-net-framework-app"></a>Distribuire .NET Framework app
+### <a name="deploy-a-net-framework-app"></a>Distribuire un'app .NET Framework
 
 Quando si distribuisce un'app .NET Framework che fa riferimento a un assembly Libreria di classi portabile, è necessario specificare una dipendenza dalla versione corretta di .NET Framework. Specificando questa dipendenza, ci si assicura che la versione richiesta per l'app sia installata.
 
-- Per creare una dipendenza con la distribuzione ClickOnce: Nelle **Esplora soluzioni**, scegliere il nodo del progetto per il progetto da pubblicare. (Si tratta del progetto che fa riferimento al progetto Libreria di classi portabile.) Nella barra dei menu, scegliere **Project** > **delle proprietà**e quindi scegliere il **pubblica** scheda. Nel **Publish** pagina, scegliere **prerequisiti**. Selezionare la versione di .NET Framework richiesta come prerequisito.
+- Per creare una dipendenza con la distribuzione ClickOnce: in **Esplora soluzioni**, scegliere il nodo del progetto per il progetto che si desidera pubblicare. Si tratta del progetto che fa riferimento al progetto libreria di classi portabile. Nella barra dei menu scegliere **progetto** > **Proprietà**, quindi scegliere la scheda **pubblica** . Nella pagina **pubblica** scegliere **prerequisiti**. Selezionare la versione di .NET Framework richiesta come prerequisito.
 
-- Per creare una dipendenza con un progetto di installazione: Nelle **Esplora soluzioni**, scegliere il progetto di installazione. Nella barra dei menu, scegliere **Project** > **delle proprietà** > **prerequisiti**. Selezionare la versione di .NET Framework richiesta come prerequisito.
+- Per creare una dipendenza con un progetto di installazione: in **Esplora soluzioni**scegliere il progetto di installazione. Nella barra dei menu scegliere **progetto** > **Proprietà** > **prerequisiti**. Selezionare la versione di .NET Framework richiesta come prerequisito.
 
-Per altre informazioni sulla distribuzione di App .NET Framework, vedere [Guida alla distribuzione per gli sviluppatori](../../../docs/framework/deployment/deployment-guide-for-developers.md).
+Per ulteriori informazioni sulla distribuzione di app .NET Framework, vedere [Guida alla distribuzione per sviluppatori](../../../docs/framework/deployment/deployment-guide-for-developers.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Uso della libreria di classi portabile con MVVM](../../../docs/standard/cross-platform/using-portable-class-library-with-model-view-view-model.md)
 - [Risorse app per librerie destinate a più piattaforme](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)
-- [.NET portability Analyzer](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)
+- [.NET Portability Analyzer](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)
 - [.NET Framework Support for Windows Store Apps and Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md) (Supporto di .NET Framework per le app di Windows Store e Windows Runtime)
 - [Distribuzione](../../../docs/framework/deployment/net-framework-applications.md)

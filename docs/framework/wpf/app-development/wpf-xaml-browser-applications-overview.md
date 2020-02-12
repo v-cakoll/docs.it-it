@@ -10,17 +10,17 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: bec7e14ceed867e89c3117efbc245938356b9d78
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 825b689dea145d18035344cd902ea1b8a50e82c3
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742286"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124208"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Panoramica delle applicazioni browser XAML di WPF
 <a name="introduction"></a>Le applicazioni browser XAML (XBAPs) combinano le funzionalità delle applicazioni Web e delle applicazioni rich client. In modo analogo alle applicazioni Web, le applicazioni XBAP possono essere distribuite in un server Web e avviate da Internet Explorer o Firefox. Come le applicazioni rich client, le applicazioni XBAPs possono sfruttare le funzionalità di WPF. Lo sviluppo di applicazioni XBAP è simile allo sviluppo di applicazioni rich client. In questo argomento viene fornita un'introduzione semplice e dettagliata allo sviluppo di applicazioni XBAP e vengono illustrate le differenze esistenti tra lo sviluppo di questo tipo di applicazioni e lo sviluppo di applicazioni rich client standard.
 
- Questo argomento è suddiviso nelle sezioni seguenti:
+ In questo argomento sono incluse le sezioni seguenti:
 
 - [Creazione di una nuova applicazione browser XAML (XBAP)](#creating_a_new_xaml_browser_application_xbap)
 
@@ -91,7 +91,7 @@ ms.locfileid: "76742286"
 
 <a name="communicating_with_the_host_web_page"></a>
 ## <a name="communicating-with-the-host-web-page"></a>Comunicazione con la pagina Web host
- Quando l'applicazione è ospitata in un frame HTML, è possibile comunicare con la pagina Web che contiene l'applicazione XBAP. A tale scopo, recuperare la proprietà <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> di <xref:System.Windows.Interop.BrowserInteropHelper>. Questa proprietà restituisce un oggetto script che rappresenta la finestra HTML. È quindi possibile accedere alle proprietà, ai metodi e agli eventi nell'[oggetto finestra](https://go.microsoft.com/fwlink/?LinkId=160274) utilizzando la normale sintassi del punto. È inoltre possibile accedere a metodi di script e variabili globali. Nell'esempio seguente viene illustrato come recuperare l'oggetto script e chiudere il browser.
+ Quando l'applicazione è ospitata in un frame HTML, è possibile comunicare con la pagina Web che contiene l'applicazione XBAP. A tale scopo, recuperare la proprietà <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> di <xref:System.Windows.Interop.BrowserInteropHelper>. Questa proprietà restituisce un oggetto script che rappresenta la finestra HTML. È quindi possibile accedere alle proprietà, ai metodi e agli eventi nell'[oggetto finestra](https://developer.mozilla.org/en-US/docs/Web/API/Window) utilizzando la normale sintassi del punto. È inoltre possibile accedere a metodi di script e variabili globali. Nell'esempio seguente viene illustrato come recuperare l'oggetto script e chiudere il browser.
 
  [!code-csharp[XbapBrowserInterop#10](~/samples/snippets/csharp/VS_Snippets_Wpf/xbapbrowserinterop/cs/page1.xaml.cs#10)]
  [!code-vb[XbapBrowserInterop#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/xbapbrowserinterop/vb/page1.xaml.vb#10)]
@@ -126,11 +126,11 @@ ms.locfileid: "76742286"
 
 <a name="xbap_security_considerations"></a>
 ## <a name="xbap-security-considerations"></a>Considerazioni sulla sicurezza delle applicazioni XBAP
- Le applicazioni XBAP vengono in genere eseguite in una sandbox di sicurezza con attendibilità parziale limitata al set di autorizzazioni dell'area Internet. Di conseguenza, l'implementazione deve supportare il subset di elementi WPF supportati nell'area Internet oppure è necessario elevare le autorizzazioni dell'applicazione. Per ulteriori informazioni, vedere [Sicurezza](../security-wpf.md).
+ Le applicazioni XBAP vengono in genere eseguite in una sandbox di sicurezza con attendibilità parziale limitata al set di autorizzazioni dell'area Internet. Di conseguenza, l'implementazione deve supportare il subset di elementi WPF supportati nell'area Internet oppure è necessario elevare le autorizzazioni dell'applicazione. Per altre informazioni, vedere [Sicurezza](../security-wpf.md).
 
  Quando si usa un controllo <xref:System.Windows.Controls.WebBrowser> nell'applicazione, WPF crea internamente un'istanza del controllo ActiveX WebBrowser nativo. Quando l'applicazione è un'applicazione XBAP con attendibilità parziale in esecuzione in Internet Explorer, il controllo ActiveX viene eseguito in un thread dedicato del processo Internet Explorer. Vengono pertanto applicate le limitazioni seguenti:
 
-- Il controllo <xref:System.Windows.Controls.WebBrowser> deve fornire un comportamento simile a quello del browser host, incluse le restrizioni di sicurezza. È possibile controllare alcune di queste restrizioni di sicurezza tramite le impostazioni di sicurezza di Internet Explorer. Per ulteriori informazioni, vedere [Sicurezza](../security-wpf.md).
+- Il controllo <xref:System.Windows.Controls.WebBrowser> deve fornire un comportamento simile a quello del browser host, incluse le restrizioni di sicurezza. È possibile controllare alcune di queste restrizioni di sicurezza tramite le impostazioni di sicurezza di Internet Explorer. Per altre informazioni, vedere [Sicurezza](../security-wpf.md).
 
 - Viene generata un'eccezione quando un'applicazione XBAP viene caricata tra domini in una pagina HTML.
 
@@ -168,14 +168,14 @@ ms.locfileid: "76742286"
 
 |Area di sicurezza|Comportamento|Ottenere l'attendibilità totale|
 |-------------------|--------------|------------------------|
-|Computer locale|Attendibilità totale automatica|Non sono richieste azioni.|
+|Computer locale|Attendibilità totale automatica|Non è richiesto alcun intervento.|
 |Intranet e siti attendibili|Richiesta di attendibilità totale|Firma dell'applicazione XBAP con un certificato in modo che l'utente veda l'origine nel prompt.|
 |Internet|Esito negativo con "Attendibilità non concessa"|Firma dell'applicazione XBAP con un certificato.|
 
 > [!NOTE]
 > Il comportamento descritto nella tabella precedente è relativo alle applicazioni XBAP con attendibilità totale che non seguono il modello di distribuzione attendibile di ClickOnce.
 
- Per la distribuzione di un'applicazione XBAP con attendibilità totale, si consiglia di utilizzare il modello di distribuzione attendibile di ClickOnce. Quando si utilizza questo modello, all'applicazione XBAP viene concessa automaticamente l'attendibilità totale indipendentemente dall'area di sicurezza e all'utente non viene visualizzata alcuna richiesta. Come parte di questo modello, è necessario firmare l'applicazione con un certificato di un editore attendibile. Per altre informazioni, vedere [Cenni preliminari sulla distribuzione di applicazioni attendibili](/visualstudio/deployment/trusted-application-deployment-overview) e [Introduzione alla firma del codice](https://go.microsoft.com/fwlink/?LinkId=166327).
+ Per la distribuzione di un'applicazione XBAP con attendibilità totale, si consiglia di utilizzare il modello di distribuzione attendibile di ClickOnce. Quando si utilizza questo modello, all'applicazione XBAP viene concessa automaticamente l'attendibilità totale indipendentemente dall'area di sicurezza e all'utente non viene visualizzata alcuna richiesta. Come parte di questo modello, è necessario firmare l'applicazione con un certificato di un editore attendibile. Per altre informazioni, vedere [Cenni preliminari sulla distribuzione di applicazioni attendibili](/visualstudio/deployment/trusted-application-deployment-overview) e [Introduzione alla firma del codice](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537361(v=vs.85)).
 
 <a name="xbap_start_time_performance_considerations"></a>
 ## <a name="xbap-start-time-performance-considerations"></a>Considerazioni sulle prestazioni dei tempi di avvio delle applicazioni XBAP

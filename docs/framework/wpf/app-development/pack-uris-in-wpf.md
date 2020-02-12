@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: 0fec72bdedbcc2c84d8bc65e72391366e42d82be
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a98c97a4aa95fb956a2ca6d417e009a281a938b6
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739169"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124481"
 ---
 # <a name="pack-uris-in-wpf"></a>URI di tipo pack in WPF
 
@@ -44,7 +44,7 @@ Per fornire un meccanismo coerente per l'identificazione e il caricamento di que
 
 ## <a name="the-pack-uri-scheme"></a>Schema URI di tipo pack
 
-Lo schema URI di tipo pack viene usato dalla specifica [Open Packaging Conventions](https://go.microsoft.com/fwlink/?LinkID=71255) (OPC), che descrive un modello per organizzare e identificare il contenuto. Gli elementi chiave di questo modello sono i pacchetti e le parti, dove un *pacchetto* è un contenitore logico per una o più *parti*logiche. La figura seguente illustra questo concetto.
+Lo schema URI di tipo pack viene usato dalla specifica [Open Packaging Conventions](https://www.ecma-international.org/publications/standards/Ecma-376.htm) (OPC), che descrive un modello per organizzare e identificare il contenuto. Gli elementi chiave di questo modello sono i pacchetti e le parti, dove un *pacchetto* è un contenitore logico per una o più *parti*logiche. La figura seguente illustra questo concetto.
 
 ![Diagramma di package e parti](./media/pack-uris-in-wpf/wpf-package-parts-diagram.png)
 
@@ -297,7 +297,7 @@ Queste proprietà possono essere impostate da markup e codice. Questa sezione il
 
 ### <a name="using-pack-uris-in-markup"></a>Uso di URI di tipo pack nel markup
 
-Un URI di pacchetto viene specificato nel markup impostando l'elemento di un attributo con l'URI del pacchetto. Ad esempio,
+Un URI di pacchetto viene specificato nel markup impostando l'elemento di un attributo con l'URI del pacchetto. Ad esempio:
 
 `<element attribute="pack://application:,,,/File.xaml" />`
 
@@ -334,7 +334,7 @@ Tabella 2: URI di tipo pack relativi nel markup
 
 ### <a name="using-pack-uris-in-code"></a>Uso di URI di tipo pack nel codice
 
-È possibile specificare un URI di pacchetto nel codice creando un'istanza della classe <xref:System.Uri> e passando l'URI del pacchetto come parametro al costruttore. come illustrato nell'esempio seguente.
+È possibile specificare un URI di pacchetto nel codice creando un'istanza della classe <xref:System.Uri> e passando l'URI del pacchetto come parametro al costruttore. Questo approccio è illustrato nell'esempio seguente.
 
 ```csharp
 Uri uri = new Uri("pack://application:,,,/File.xaml");

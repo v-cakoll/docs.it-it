@@ -10,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: cb1764d1a6f363f3011268eae5fbcb2c76d9cc89
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 9b09f5a2505888c6154a58a3512c94c51f89295b
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938009"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124422"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Procedure consigliate per le espressioni regolari in .NET
 
@@ -102,7 +102,7 @@ Per impostazione predefinita, nella cache vengono memorizzati gli ultimi 15 mode
 
 L'espressione regolare `\p{Sc}+\s*\d+` usata in questo esempio verifica che la stringa di input sia costituita da un simbolo di valuta e da almeno una cifra decimale. Il modello viene definito come illustrato nella tabella seguente.
 
-|Criterio|Descrizione|
+|Modello|Descrizione|
 |-------------|-----------------|
 |`\p{Sc}+`|Trova la corrispondenza di uno o più caratteri nella categoria Unicode Symbol, Currency.|
 |`\s*`|Trovare la corrispondenza di zero o più spazi vuoti.|
@@ -123,7 +123,7 @@ Nell'esempio seguente vengono confrontate le prestazioni delle espressioni regol
 
 Il criterio di espressione regolare usato nell'esempio, `\b(\w+((\r?\n)|,?\s))*\w+[.?:;!]`, è definito nel modo illustrato nella tabella seguente.
 
-|Criterio|Descrizione|
+|Modello|Descrizione|
 |-------------|-----------------|
 |`\b`|Inizia la corrispondenza sul confine di parola.|
 |`\w+`|Trova la corrispondenza di uno o più caratteri alfanumerici.|
@@ -167,7 +167,7 @@ Il supporto del backtracking fornisce alle espressioni regolari potenza e flessi
 
 L'utilizzo del backtracking comporta spesso una riduzione delle prestazioni delle applicazioni sebbene il backtracking non sia essenziale per una corrispondenza. Ad esempio, l'espressione regolare `\b\p{Lu}\w*\b` cerca una corrispondenza di tutte le parole che iniziano con un carattere maiuscolo, come illustrato nella tabella seguente.
 
-|Criterio|Descrizione|
+|Modello|Descrizione|
 |-|-|
 |`\b`|Inizia la corrispondenza sul confine di parola.|
 |`\p{Lu}`|Trova la corrispondenza di un carattere maiuscolo.|
@@ -176,7 +176,7 @@ L'utilizzo del backtracking comporta spesso una riduzione delle prestazioni dell
 
 Poiché un confine di parola non è uguale a un carattere alfanumerico né è un subset di tali caratteri, non è possibile che il motore delle espressioni regolari attraversi un confine di parola quando viene trovata una corrispondenza con i caratteri alfanumerici. Ciò significa che per questa espressione regolare, il backtracking non potrà mai contribuire alla riuscita dell'operazione ma potrà solo ridurre le prestazioni poiché il motore delle espressioni regolari deve salvare lo stato per ogni corrispondenza preliminare corretta di un carattere alfanumerico.
 
-Se si determina che il backtracking non è necessario, è possibile disabilitarlo usando l'elemento del linguaggio `(?>subexpression)`. Nell'esempio seguente viene analizzata una stringa di input utilizzando due espressioni regolari. La prima, `\b\p{Lu}\w*\b`, si basa sul backtracking. La seconda, `\b\p{Lu}(?>\w*)\b`, disabilita il backtracking. Come illustrato nell'output dell'esempio, entrambe producono lo stesso risultato.
+Se si determina che il backtracking non è necessario, è possibile disabilitarlo usando l'elemento del linguaggio `(?>subexpression)`, noto come gruppo atomico. Nell'esempio seguente viene analizzata una stringa di input utilizzando due espressioni regolari. La prima, `\b\p{Lu}\w*\b`, si basa sul backtracking. La seconda, `\b\p{Lu}(?>\w*)\b`, disabilita il backtracking. Come illustrato nell'output dell'esempio, entrambe producono lo stesso risultato.
 
 [!code-csharp[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack2.cs#10)]
 [!code-vb[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack2.vb#10)]
@@ -190,7 +190,7 @@ Ad esempio, il criterio di espressione regolare `^[0-9A-Z]([-.\w]*[0-9A-Z])*\$$`
 
 In questi casi, è possibile ottimizzare le prestazioni dell'espressione regolare rimuovendo i quantificatori annidati e sostituendo la sottoespressione esterna con un'asserzione lookahead o lookbehind di larghezza zero. Le asserzioni lookahead e lookbehind sono ancoraggi; non spostano il puntatore nella stringa di input, ma eseguono il lookahead e lookbehind per verificare se è stata soddisfatta una condizione specificata. Ad esempio, l'espressione regolare del numero parte può essere riscritta come `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])\$$`. Tale modello di espressione regolare viene definito come illustrato nella tabella seguente.
 
-|Criterio|Descrizione|
+|Modello|Descrizione|
 |-------------|-----------------|
 |`^`|Inizia la corrispondenza all'inizio della stringa di input.|
 |`[0-9A-Z]`|Trova la corrispondenza di un carattere alfanumerico. Il numero parte deve essere costituito da almeno uno di questi caratteri.|
@@ -240,7 +240,7 @@ Tuttavia, l'utilizzo di questi elementi del linguaggio ha un costo. Comportano i
 
 I costrutti di raggruppamento spesso vengono utilizzati solo in un'espressione regolare in modo tale che sia possibile applicarvi i quantificatori e che i gruppi acquisiti da queste sottoespressioni non vengano utilizzati successivamente. Ad esempio, l'espressione regolare `\b(\w+[;,]?\s?)+[.?!]` è progettata per acquisire un'intera frase. Nella tabella seguente vengono descritti gli elementi del linguaggio di tale modello di espressione regolare e il relativo effetto sulle raccolte <xref:System.Text.RegularExpressions.Match> e <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> dell'oggetto <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>.
 
-|Criterio|Descrizione|
+|Modello|Descrizione|
 |-------------|-----------------|
 |`\b`|Inizia la corrispondenza sul confine di parola.|
 |`\w+`|Trova la corrispondenza di uno o più caratteri alfanumerici.|

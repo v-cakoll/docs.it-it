@@ -9,12 +9,12 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-ms.openlocfilehash: af812e1e42d57c349e94b5992b768636857d2a0c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 504e315dda4e76f56a88d97149b1515b6743668b
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348274"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124351"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Dettagli sul comportamento delle espressioni regolari
 
@@ -46,7 +46,7 @@ Il motore delle espressioni regolari di .NET Framework è un selettore di espres
 
      Le versioni greedy e lazy di questa espressione regolare vengono definite come illustrato nella tabella seguente:
 
-    |Pattern|Descrizione|
+    |Modello|Descrizione|
     |-------------|-----------------|
     |`.+` (quantificatore greedy)|Trova almeno un'occorrenza di qualsiasi carattere. In questo modo il motore delle espressioni regolari considera soddisfatta la corrispondenza con l'intera stringa ed esegue il backtracking, necessario per verificare le corrispondenze con il resto del criterio.|
     |`.+?` (quantificatore lazy)|Trova almeno un'occorrenza di qualsiasi carattere, ma accetta la corrispondenza con il minor numero possibile di caratteri.|
@@ -62,7 +62,7 @@ Il motore delle espressioni regolari di .NET Framework è un selettore di espres
 
      L'espressione regolare `\b[A-Z]+\b(?=\P{P})` viene definita come illustrato nella tabella seguente.
 
-    |Pattern|Descrizione|
+    |Modello|Descrizione|
     |-------------|-----------------|
     |`\b`|Inizia la corrispondenza sul confine di parola.|
     |`[A-Z]+`|Trova la corrispondenza con qualsiasi carattere alfabetico una o più volte. Poiché il metodo <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> viene chiamato con l'opzione <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>, il confronto non rileva la distinzione tra maiuscole e minuscole.|
@@ -76,9 +76,9 @@ Il motore delle espressioni regolari di .NET Framework è un selettore di espres
      [!code-csharp[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookahead2.cs#3)]
      [!code-vb[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookahead2.vb#3)]
 
-     Il criterio di ricerca di espressioni regolari `\b(?!non)\w+\b` è definito nel modo illustrato nella tabella seguente.
+     Il criterio di espressione regolare `\b(?!non)\w+\b` è definito nel modo illustrato nella tabella seguente.
 
-    |Pattern|Descrizione|
+    |Modello|Descrizione|
     |-------------|-----------------|
     |`\b`|Inizia la corrispondenza sul confine di parola.|
     |`(?!non)`|Esegue il lookahead per verificare che la stringa corrente non inizi con "non". In caso contrario, la corrispondenza ha esito negativo.|
@@ -94,7 +94,7 @@ Il motore delle espressioni regolari di .NET Framework è un selettore di espres
 
      Il criterio di ricerca di espressioni regolari è definito nel modo illustrato nella tabella seguente.
 
-    |Pattern|Descrizione|
+    |Modello|Descrizione|
     |-------------|-----------------|
     |`^`|Inizia la corrispondenza all'inizio di una riga.|
     |`(?<Pvt>\<PRIVATE\>\s)?`|Trova la corrispondenza con zero o un'occorrenza della stringa `<PRIVATE>` seguita da un carattere di spazio vuoto. Assegna la corrispondenza a un gruppo di acquisizione denominato `Pvt`.|
@@ -106,7 +106,7 @@ Il motore delle espressioni regolari di .NET Framework è un selettore di espres
 
 - Definizioni di gruppo di bilanciamento: `(?<`*name1*`-`*name2*`>` *sottoespressione*`)`. Questa funzionalità consente al motore delle espressioni regolari di tenere traccia dei costrutti annidati, ad esempio parentesi o parentesi quadre di apertura e chiusura. Per un esempio, vedere [Costrutti di raggruppamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
-- Sottoespressioni non di backtracking (note anche come sottoespressioni greedy): `(?>`*subexpression*`)`. Questa funzionalità consente al motore di backtracking di garantire che una sottoespressione corrisponda solo alla prima corrispondenza trovata per tale sottoespressione, come se l'espressione venisse eseguita indipendentemente dall'espressione che la contiene. Se non si usa questo costrutto, il backtracking dall'espressione più ampia può modificare il comportamento di una sottoespressione. Ad esempio, l'espressione regolare `(a+)\w` trova la corrispondenza con uno o più caratteri "a", insieme a un carattere alfanumerico che segue la sequenza di caratteri "a", e assegna la sequenza di caratteri "a" al primo gruppo di acquisizione. Se però anche l'ultimo carattere della stringa di input è "a", l'elemento di linguaggio `\w` ne determina la corrispondenza e il carattere non viene incluso nel gruppo acquisito.
+- Gruppi atomici:`)``(?>`*sottoespressione* . Questa funzionalità consente al motore di backtracking di garantire che una sottoespressione corrisponda solo alla prima corrispondenza trovata per tale sottoespressione, come se l'espressione venisse eseguita indipendentemente dall'espressione che la contiene. Se non si usa questo costrutto, il backtracking dall'espressione più ampia può modificare il comportamento di una sottoespressione. Ad esempio, l'espressione regolare `(a+)\w` trova la corrispondenza con uno o più caratteri "a", insieme a un carattere alfanumerico che segue la sequenza di caratteri "a" e assegna la sequenza di caratteri "a" al primo gruppo di acquisizione. Tuttavia, se il carattere finale della stringa di input è anche un "a", viene abbinato dall'elemento di linguaggio `\w` e non è incluso nel gruppo acquisito.
 
      [!code-csharp[Conceptual.RegularExpressions.Design#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/nonbacktracking2.cs#7)]
      [!code-vb[Conceptual.RegularExpressions.Design#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/nonbacktracking2.vb#7)]
@@ -116,7 +116,7 @@ Il motore delle espressioni regolari di .NET Framework è un selettore di espres
      [!code-csharp[Conceptual.RegularExpressions.Design#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/nonbacktracking1.cs#8)]
      [!code-vb[Conceptual.RegularExpressions.Design#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/nonbacktracking1.vb#8)]
 
-     Per altre informazioni sulle sottoespressioni non di backtracking, vedere [Costrutti di raggruppamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
+     Per ulteriori informazioni sui gruppi atomici, vedere [costrutti di raggruppamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
 - Corrispondenza da destra a sinistra specificata passando l'opzione <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> a un costruttore della classe <xref:System.Text.RegularExpressions.Regex> o al metodo corrispondente dell'istanza statica. Questa funzionalità è utile durante la ricerca da destra verso sinistra anziché da sinistra verso destra oppure nei casi in cui risulta più efficace iniziare una corrispondenza nella parte destra del criterio anziché in quella sinistra. Come illustrato nell'esempio seguente, l'uso della corrispondenza da destra a sinistra può modificare il comportamento dei quantificatori greedy. Nell'esempio vengono condotte due ricerche di una frase che termina con un numero. La ricerca da sinistra a destra che usa il quantificatore greedy `+` trova la corrispondenza con una delle sei cifre nella frase, mentre la ricerca da destra a sinistra trova la corrispondenza con tutte le sei cifre. Per una descrizione del criterio di espressione regolare, vedere l'esempio che illustra i quantificatori lazy in precedenza in questa sezione.
 
@@ -125,14 +125,14 @@ Il motore delle espressioni regolari di .NET Framework è un selettore di espres
 
      Per altre informazioni sulla corrispondenza da destra a sinistra, vedere [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).
 
-- Lookbehind positivo e negativo: `(?<=`*subexpression*`)` per lookbehind positivo e `(?<!`*subexpression*`)` per lookbehind negativo. Questa funzionalità è simile a lookahead, illustrata in precedenza in questo argomento. Poiché il motore delle espressioni regolari consente la corrispondenza da destra a sinistra completa, le espressioni regolari consentono lookbehind illimitati. Il lookbehind positivo e negativo consente inoltre di evitare l'annidamento di quantificatori quando la sottoespressione annidata è un superset di un'espressione esterna. Le espressioni regolari con tali quantificatori spesso influiscono negativamente sulle prestazioni. L'esempio seguente, ad esempio, verifica se una stringa inizia e termina con un carattere alfanumerico e se qualsiasi altro carattere nella stringa appartiene a un subset più ampio. Forma una parte dell'espressione regolare usata per convalidare gli indirizzi di posta elettronica. Per altre informazioni, vedere [Procedura: Verificare che le stringhe siano nel formato di posta elettronica valido](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).
+- Lookbehind positivo e negativo: `(?<=`*subexpression*`)` per lookbehind positivo e `(?<!`*subexpression*`)` per lookbehind negativo. Questa funzionalità è simile a lookahead, illustrata in precedenza in questo argomento. Poiché il motore delle espressioni regolari consente la corrispondenza da destra a sinistra completa, le espressioni regolari consentono lookbehind illimitati. Il lookbehind positivo e negativo consente inoltre di evitare l'annidamento di quantificatori quando la sottoespressione annidata è un superset di un'espressione esterna. Le espressioni regolari con tali quantificatori spesso influiscono negativamente sulle prestazioni. L'esempio seguente, ad esempio, verifica se una stringa inizia e termina con un carattere alfanumerico e se qualsiasi altro carattere nella stringa appartiene a un subset più ampio. Il criterio costituisce una parte dell'espressione regolare usata per convalidare gli indirizzi di posta elettronica. Per altre informazioni, vedere [Procedura: Verificare che le stringhe siano nel formato di posta elettronica valido](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).
 
      [!code-csharp[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookbehind1.cs#5)]
      [!code-vb[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookbehind1.vb#5)]
 
      L'espressione regolare ``^[A-Z0-9]([-!#$%&'.*+/=?^`{}|~\w])*(?<=[A-Z0-9])$`` viene definita come illustrato nella tabella seguente.
 
-    |Pattern|Descrizione|
+    |Modello|Descrizione|
     |-------------|-----------------|
     |`^`|Inizia la ricerca della corrispondenza all'inizio della stringa.|
     |`[A-Z0-9]`|Trova la corrispondenza con qualsiasi carattere numerico o alfanumerico. Il confronto non rileva la differenza tra maiuscole e minuscole.|
@@ -154,6 +154,6 @@ Il motore delle espressioni regolari di .NET Framework è un selettore di espres
 |[Esempi di espressioni regolari](../../../docs/standard/base-types/regular-expression-examples.md)|Esempi di codice che illustrano l'uso delle espressioni regolari nelle applicazioni comuni.|
 |[Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|Informazioni su set di caratteri, operatori e costrutti che è possibile usare per definire le espressioni regolari.|
 
-## <a name="reference"></a>Riferimenti
+## <a name="reference"></a>Riferimento
 
 - <xref:System.Text.RegularExpressions?displayProperty=nameWithType>

@@ -1,16 +1,14 @@
 ---
 title: Introduzione a .NET
 description: Introduzione alla famiglia di tecnologie .NET.
-author: mairaw
-ms.author: mairaw
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 15daaafed02ab1132a3c82c12efa6fad0e0a6db2
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 20332f4dcc0664287873a27e0064a4765b1ecde7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838130"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124221"
 ---
 # <a name="welcome-to-net"></a>Introduzione a .NET
 
@@ -40,7 +38,7 @@ Per informazioni sulle funzionalità più recenti aggiunte alle implementazioni 
 - [Novità di C#6](csharp/whats-new/index.md)
 - [Novità per Visual Basic](visual-basic/getting-started/whats-new.md)
 
-## <a name="documentation"></a>Documentation
+## <a name="documentation"></a>Documentazione
 
 Questa documentazione illustra tutte le funzionalità di .NET attraverso piattaforme e linguaggi. È possibile iniziare a conoscere .NET e i suoi linguaggi nelle sezioni seguenti:
 
@@ -48,7 +46,7 @@ Questa documentazione illustra tutte le funzionalità di .NET attraverso piattaf
 - [Guida a .NET Core](core/index.md)
 - [Guida a .NET Framework](framework/index.md)
 - [Guida a C#](csharp/index.yml)
-- [Guida a F#](fsharp/index.yml)
+- [F# Guide](fsharp/index.yml) (Guida di F#)
 - [Guida a Visual Basic](visual-basic/index.yml)
 - [Guida a ML.NET](machine-learning/index.yml)
 - [.NET per Apache Spark](spark/index.yml)
@@ -56,22 +54,22 @@ Questa documentazione illustra tutte le funzionalità di .NET attraverso piattaf
 
 È anche possibile esplorare i [riferimenti alle API .NET](/dotnet/api).
 
-## <a name="videos"></a>Videos
+## <a name="videos"></a>Video
 
 Esplora i video su Web, dispositivi mobili, C#desktop, Machine Learning, contenitori/Docker, accesso ai dati e altro ancora:
 
 [Serie di video su .NET 101](https://dotnet.microsoft.com/learn/videos)
 
-## <a name="open-source"></a>Open source
+## <a name="open-source"></a>Aprire origine
 
 Questa documentazione è completamente [open source](https://github.com/dotnet/docs). È possibile contribuire in qualsiasi modo, sottoponendo problemi o scrivendo la documentazione. Inoltre, anche la maggior parte di .NET è open source. L'elenco seguente include i repository GitHub .NET principali:
 
 - [Home di .NET Core](https://github.com/dotnet/core)
 - [Runtime di .NET Core](https://github.com/dotnet/runtime)
-- [.NET Core SDK](https://github.com/dotnet/sdk)
+- [ASP.NET Core SDK](https://github.com/dotnet/sdk)
 - [Piattaforma del compilatore Roslyn (C# e Visual Basic) e strumenti IDE](https://github.com/dotnet/roslyn)
 - [Compilatore F# e strumenti IDE](https://github.com/dotnet/fsharp)
-- [Windows Form](https://github.com/dotnet/winforms)
+- [WinForms](https://github.com/dotnet/winforms)
 - [WPF](https://github.com/dotnet/wpf)
 
 È possibile unirsi ad altre persone attive nella [community di .NET](https://dotnet.microsoft.com/platform/community) per scoprire le novità o chiedere aiuto.

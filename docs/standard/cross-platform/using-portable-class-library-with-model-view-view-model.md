@@ -9,14 +9,12 @@ helpviewer_keywords:
 - Portable Class Library [.NET Framework], and MVVM
 - MVVM, and Portable Class Library
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 87e756445255f1bd2417a06dfa611eba23208575
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: f5312177b9f437d9b5474d38fca80db6fc45245b
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716747"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123675"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Utilizzo della libreria di classi portabile con MVVM (Model-View-View Model)
 È possibile usare la [libreria di classi](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) portabile .NET Framework per implementare il modello MVVM (Model-View-View Model) e condividere gli assembly in più piattaforme.
@@ -86,7 +84,7 @@ ms.locfileid: "74716747"
  [!code-csharp[PortableClassLibraryMVVM#5](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainpageviewmodel.cs#5)]
  [!code-vb[PortableClassLibraryMVVM#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerviewmodel.vb#5)]  
   
-### <a name="view"></a>Visualizzazione  
+### <a name="view"></a>Visualizza  
  Da un'app .NET Framework 4,5, un'app di Windows 8. x Store, un'app basata su Silverlight o un'app Windows Phone 7,5, è possibile fare riferimento all'assembly che contiene i progetti modello e visualizza modello.  Si crea quindi una vista che interagisce con il modello di visualizzazione. Nell'esempio seguente viene illustrata un'app semplificata Windows Presentation Foundation (WPF) che recupera e aggiorna i dati dal modello di visualizzazione. È possibile creare visualizzazioni simili in Silverlight, Windows Phone o app di Windows 8. x Store.  
   
  [!code-xaml[PortableClassLibraryMVVM#6](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainwindow.xaml#6)]  

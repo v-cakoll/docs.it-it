@@ -3,14 +3,12 @@ title: Sviluppo per piattaforme multiple con .NET Framework
 ms.date: 07/18/2018
 ms.technology: dotnet-standard
 ms.assetid: b153baaa-130c-4169-860b-e580591de91e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cf5c48640b56b5515cc8240ef12319515b859f83
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 0b7a2b4d234227a4901a461dba5362cada6ed4cf
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938023"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124377"
 ---
 # <a name="developing-for-multiple-platforms-with-the-net-framework"></a>Sviluppo per piattaforme multiple con .NET Framework
 

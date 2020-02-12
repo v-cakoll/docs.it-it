@@ -10,17 +10,17 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 1c6d6b7beba03aaa5c978b5cb72c09ce625e0d7e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 01b8dc50860757b0eddee477219db1e19d27f40f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460406"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124403"
 ---
 # <a name="control-styles-and-templates"></a>Stili e modelli di Control
 I controlli in Windows Presentation Foundation (WPF) dispongono di un <xref:System.Windows.Controls.ControlTemplate> che contiene la struttura ad albero visuale del controllo. È possibile modificare la struttura e l'aspetto di un controllo modificando la <xref:System.Windows.Controls.ControlTemplate> di tale controllo. Non è possibile sostituire solo parte della struttura ad albero visuale di un controllo; per modificare la struttura ad albero visuale di un controllo, è necessario impostare la proprietà <xref:System.Windows.Controls.Control.Template%2A> del controllo sul <xref:System.Windows.Controls.ControlTemplate>nuovo e completo.  
   
- I temi del desktop determinano quale dizionario risorse viene usato. Per ottenere i dizionari risorse per i temi del desktop, vedere [Temi WPF predefiniti](https://go.microsoft.com/fwlink/?LinkID=158252).  
+ I temi del desktop determinano quale dizionario risorse viene usato. Per ottenere i dizionari risorse per i temi del desktop, vedere [Temi WPF predefiniti](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms).  
   
  La tabella seguente contiene i nomi file dei dizionari risorse e i corrispondenti temi del desktop.  
   
@@ -67,7 +67,7 @@ I controlli in Windows Presentation Foundation (WPF) dispongono di un <xref:Syst
  [Stili e modelli di TreeView](treeview-styles-and-templates.md)  
  [Stili e modelli di Window](window-styles-and-templates.md)  
   
-## <a name="reference"></a>Reference  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Controls>  
   
  <xref:System.Windows.Controls.ControlTemplate>  

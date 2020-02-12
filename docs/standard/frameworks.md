@@ -1,17 +1,15 @@
 ---
 title: Framework di destinazione nei progetti di tipo SDK-.NET
 description: Informazioni sui framework di destinazione per app e librerie di .NET Core.
-author: mairaw
-ms.author: mairaw
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 957671644ae333180b0c1ba4aae6d6e17ae6478b
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 33beb5606cbf857cc41b739f256482b0298f1fb1
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838215"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124598"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>Framework di destinazione nei progetti di tipo SDK
 
@@ -32,14 +30,14 @@ La tabella seguente definisce i framework di destinazione più comuni, il modo i
 | Framework di destinazione      | Ultima versione <br/> Versione stabile | Moniker della versione di .NET Framework di destinazione (TFM, Target Framework Moniker) | Implementato <br/> Versione standard di .NET |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
 | .NET Standard         | 2.1                         | netstandard 2.1                 | N/D                                     |
-| .NET Core             | 3,1                         | netcoreapp 3.1                  | 2.1                                     |
+| .NET Core             | 3.1                         | netcoreapp 3.1                  | 2.1                                     |
 | .NET Framework        | 4.8                         | net48                          | 2.0                                     |
 
 ## <a name="supported-target-framework-versions"></a>Versioni supportate dei framework di destinazione
 
 Un framework di destinazione viene in genere specificato come riferimento da un moniker framework di destinazione. La tabella seguente mostra i framework di destinazione supportati da .NET Core SDK e dal client NuGet. Gli equivalenti sono visualizzati tra parentesi quadre. Ad esempio, `win81` è un moniker framework di destinazione equivalente a `netcore451`.
 
-| Framework di destinazione           | Moniker framework di destinazione |
+| Framework di destinazione           | TFM |
 | -------------------------- | --- |
 | .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0<br>netstandard 2.1 |
 | .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1<br>netcoreapp2.2<br>netcoreapp 3.0<br>netcoreapp 3.1 |

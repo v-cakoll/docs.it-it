@@ -1,23 +1,23 @@
 ---
-title: 'Procedura: Verificare se .NET Framework 3.0 è installato'
+title: 'Procedura: verificare se .NET Framework 3.0 è installato'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WinFX Runtime user-agent string
 - presence of WPT [WPF], detecting
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-ms.openlocfilehash: c68daf2cb5687497e66ad3022ce42352a17ae0f7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 41010e615b6b3d10ebf6adc0e3f871873e94f409
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053442"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124455"
 ---
-# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Procedura: Verificare se .NET Framework 3.0 è installato
+# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Procedura: verificare se .NET Framework 3.0 è installato
 Prima che gli amministratori possano distribuire le applicazioni Microsoft .NET Framework in un sistema, è necessario verificare che il runtime di .NET Framework sia presente. In questo argomento viene fornito uno script scritto in HTML/JavaScript che gli amministratori possono utilizzare per determinare se il .NET Framework è presente in un sistema.  
   
 > [!NOTE]
-> Per informazioni più dettagliate sull'installazione, la distribuzione e il rilevamento di Microsoft .NET Framework, vedere la sezione relativa alla [distribuzione di Microsoft .NET Framework versione 3,0](https://go.microsoft.com/fwlink/?LinkId=96739).  
+> Per informazioni più dettagliate sull'installazione, la distribuzione e il rilevamento di Microsoft .NET Framework, vedere la sezione relativa alla [distribuzione di Microsoft .NET Framework versione 3,0](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480198(v=msdn.10)).  
   
 <a name="content_expiration"></a>   
 ## <a name="detect-the-net-clr-user-agent-string"></a>Rilevare la stringa dell'agente utente ".NET CLR"  

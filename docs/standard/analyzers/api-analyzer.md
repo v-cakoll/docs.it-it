@@ -2,15 +2,14 @@
 title: Analizzatore di API .NET
 description: Informazioni su come l'analizzatore di API .NET consente di rilevare API deprecate e problemi di compatibilità della piattaforma.
 author: oliag
-ms.author: mairaw
 ms.date: 04/26/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 584f9f952148ebf72c5d5aaed64a2a078be00ce5
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: efbfa89f431bd02cdf86b8eff8704aec63a29b6c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929357"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124247"
 ---
 # <a name="net-api-analyzer"></a>Analizzatore di API .NET
 
@@ -21,7 +20,7 @@ L'analizzatore di API è disponibile come pacchetto NuGet [Microsoft.DotNet.Anal
 > [!NOTE]
 > L'analizzatore di API .NET è ancora una versione non definitiva.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 - Visual Studio 2017 e versioni successive o Visual Studio per Mac (tutte le versioni).
 
@@ -29,7 +28,7 @@ L'analizzatore di API è disponibile come pacchetto NuGet [Microsoft.DotNet.Anal
 
 ### <a name="what-are-deprecated-apis"></a>Cosa sono le API deprecate?
 
-La famiglia .NET è un set di prodotti di grandi dimensioni che vengono aggiornati costantemente per soddisfare al meglio le esigenze dei clienti. È naturale che alcune API vengano deprecate e sostituite con nuove. Un'API viene considerata deprecata quando esiste un'alternativa migliore. Un modo per segnalare che un'API è deprecata e non deve essere usata consiste nel contrassegnarla con l'attributo <xref:System.ObsoleteAttribute>. Lo svantaggio di questo approccio è che esiste un solo ID di diagnostica per tutte le API obsolete (per C#, [CS0612](../../csharp/misc/cs0612.md)). Vale a dire che:
+La famiglia .NET è un set di prodotti di grandi dimensioni che vengono aggiornati costantemente per soddisfare al meglio le esigenze dei clienti. È naturale che alcune API vengano deprecate e sostituite con nuove. Un'API viene considerata deprecata quando esiste un'alternativa migliore. Un modo per segnalare che un'API è deprecata e non deve essere usata consiste nel contrassegnarla con l'attributo <xref:System.ObsoleteAttribute>. Lo svantaggio di questo approccio è che esiste un solo ID di diagnostica per tutte le API obsolete (per C#, [CS0612](../../csharp/misc/cs0612.md)). Ciò significa che:
 
 - Non è possibile avere documenti dedicati per ogni caso.
 - Non è possibile eliminare specifiche categorie di avvisi. È possibile eliminarli tutti o non eliminarli affatto.
@@ -45,7 +44,7 @@ Quando un'API deprecata, ad esempio <xref:System.Net.WebClient>, viene usata nel
 
 La finestra **Elenco errori** contiene avvisi con un ID univoco per ogni API deprecata, come illustrato nell'esempio seguente (`DE004`): 
 
-!["Screenshot della finestra Elenco errori con l'ID e la descrizione dell'avviso"](media/api-analyzer/warnings-id-and-descriptions.jpg "Finestra Elenco errori che include gli avvisi.")
+!["Screenshot della finestra di Elenco errori che mostra l'ID e la descrizione dell'avviso"](media/api-analyzer/warnings-id-and-descriptions.jpg "Elenco errori finestra che include avvisi.")
 
 Facendo clic sull'ID si passa a una pagina Web con informazioni dettagliate sul motivo per cui l'API è stata deprecata e suggerimenti per le API alternative utilizzabili.
 

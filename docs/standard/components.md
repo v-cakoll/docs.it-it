@@ -2,15 +2,14 @@
 title: Componenti dell'architettura .NET
 description: Descrive i componenti dell'architettura .NET, ad esempio .NET Standard, le implementazioni di .NET, i runtime .NET e gli strumenti.
 author: cartermp
-ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 4f52a89179e241dcfce5c888e03518d878009175
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: af28863ac98ff5ffb5a8133fb98f2f1e7036985d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348052"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124390"
 ---
 # <a name="net-architectural-components"></a>Componenti dell'architettura .NET
 
@@ -67,7 +66,7 @@ Per altre informazioni sulla piattaforma UWP, vedere [Introduzione alla piattafo
 
 ## <a name="net-runtimes"></a>Runtime .NET
 
-Un runtime è l'ambiente di esecuzione per un programma gestito. Il sistema operativo è parte dell'ambiente di runtime, ma non del runtime di .NET. Ecco alcuni esempi di runtime .NET:
+Un runtime è l'ambiente di esecuzione per un programma gestito. Il sistema operativo è parte dell'ambiente di runtime, ma non del runtime .NET. Ecco alcuni esempi di runtime di .NET:
 
 - CRL (Common Language Runtime) per .NET Framework
 - CoreCLR (Core Common Language Runtime) per .NET Core
@@ -111,5 +110,5 @@ I documenti ISO/IEC ufficiali sono disponibili nella pagina standard ISO/IEC [di
 - [Guida a .NET Core](../core/index.md)
 - [Guida a .NET Framework](../framework/index.md)
 - [Guida a C#](../csharp/index.yml)
-- [Guida a F#](../fsharp/index.yml)
+- [F# Guide](../fsharp/index.yml) (Guida di F#)
 - [Guida a Visual Basic](../visual-basic/index.yml)

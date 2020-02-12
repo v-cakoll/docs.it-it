@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Impostare le proprietà di altezza di un elemento'
+title: 'Procedura: impostare le proprietà di altezza di un elemento'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,30 +8,30 @@ helpviewer_keywords:
 - height properties [WPF]
 - Panel control [WPF], height properties of elements
 ms.assetid: 5ab9e781-dbb8-469a-a3c8-cf38ce312647
-ms.openlocfilehash: fb655630336c3b69afdc726a2e3c5a2cb8838667
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6500af3c637092820e538d79894d600d617953bf
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024417"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124286"
 ---
-# <a name="how-to-set-the-height-properties-of-an-element"></a>Procedura: Impostare le proprietà di altezza di un elemento
+# <a name="how-to-set-the-height-properties-of-an-element"></a>Procedura: impostare le proprietà di altezza di un elemento
 ## <a name="example"></a>Esempio  
- In questo esempio vengono illustrate le differenze nel comportamento di rendering tra le quattro proprietà correlate all'altezza in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
+ Questo esempio mostra visivamente le differenze nel comportamento di rendering tra le quattro proprietà correlate all'altezza in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
- Il <xref:System.Windows.FrameworkElement> classe espone quattro proprietà che descrivono le caratteristiche dell'altezza di un elemento. Possono verificarsi conflitti tra queste quattro proprietà e in tal caso, il valore ha la precedenza viene determinato come segue: il <xref:System.Windows.FrameworkElement.MinHeight%2A> valore ha la precedenza sul <xref:System.Windows.FrameworkElement.MaxHeight%2A> valore, che a sua volta ha la precedenza sul <xref:System.Windows.FrameworkElement.Height%2A> valore. Una proprietà di quarta <xref:System.Windows.FrameworkElement.ActualHeight%2A>è di sola lettura e l'altezza effettivo a quanto determinato dalle interazioni con il processo di layout di report.  
+ La classe <xref:System.Windows.FrameworkElement> espone quattro proprietà che descrivono le caratteristiche di altezza di un elemento. Queste quattro proprietà possono entrare in conflitto e, quando lo fanno, il valore che ha la precedenza viene determinato nel modo seguente: il valore <xref:System.Windows.FrameworkElement.MinHeight%2A> ha la precedenza sul valore <xref:System.Windows.FrameworkElement.MaxHeight%2A>, che a sua volta ha la precedenza sul valore di <xref:System.Windows.FrameworkElement.Height%2A>. Una quarta proprietà, <xref:System.Windows.FrameworkElement.ActualHeight%2A>, è di sola lettura e indica l'altezza effettiva determinata dalle interazioni con il processo di layout.  
   
- Quanto segue [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] negli esempi viene tracciato un <xref:System.Windows.Shapes.Rectangle> elemento (`rect1`) come elemento figlio <xref:System.Windows.Controls.Canvas>. È possibile modificare le proprietà height di una <xref:System.Windows.Shapes.Rectangle> tramite una serie di <xref:System.Windows.Controls.ListBox> gli elementi che rappresentano i valori delle proprietà <xref:System.Windows.FrameworkElement.MinHeight%2A>, <xref:System.Windows.FrameworkElement.MaxHeight%2A>, e <xref:System.Windows.FrameworkElement.Height%2A>. In questo modo, viene visualizzata in modo visivo la priorità di ogni proprietà.  
+ Negli esempi di [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] seguenti viene disegnato un elemento <xref:System.Windows.Shapes.Rectangle> (`rect1`) come figlio di <xref:System.Windows.Controls.Canvas>. È possibile modificare le proprietà di altezza di un <xref:System.Windows.Shapes.Rectangle> usando una serie di <xref:System.Windows.Controls.ListBox> elementi che rappresentano i valori delle proprietà di <xref:System.Windows.FrameworkElement.MinHeight%2A>, <xref:System.Windows.FrameworkElement.MaxHeight%2A>e <xref:System.Windows.FrameworkElement.Height%2A>. In questo modo, la precedenza di ogni proprietà viene visualizzata visivamente.  
   
  [!code-xaml[HeightMinHeightMaxHeight#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HeightMinHeightMaxHeight/CSharp/Window1.xaml#1)]  
 [!code-xaml[HeightMinHeightMaxHeight#2](~/samples/snippets/csharp/VS_Snippets_Wpf/HeightMinHeightMaxHeight/CSharp/Window1.xaml#2)]  
   
- Gli esempi di codice seguenti gestiscono gli eventi che il <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> generati dagli eventi. Ogni gestore elabora l'input dal <xref:System.Windows.Controls.ListBox>, analizza il valore come un <xref:System.Double>e applica il valore della proprietà correlate alla altezza specificata. I valori di altezza sono inoltre convertiti in una stringa e scritti nei vari <xref:System.Windows.Controls.TextBlock> elementi (definizione di tali elementi non viene visualizzato nella finestra di XAML selezionato).  
+ Gli esempi code-behind seguenti gestiscono gli eventi generati dall'evento <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged>. Ogni gestore accetta l'input dalla <xref:System.Windows.Controls.ListBox>, analizza il valore come <xref:System.Double>e applica il valore alla proprietà relativa all'altezza specificata. I valori di altezza vengono inoltre convertiti in una stringa e scritti in vari elementi di <xref:System.Windows.Controls.TextBlock> (la definizione di tali elementi non viene visualizzata nel codice XAML selezionato).  
   
  [!code-csharp[HeightMinHeightMaxHeight#3](~/samples/snippets/csharp/VS_Snippets_Wpf/HeightMinHeightMaxHeight/CSharp/Window1.xaml.cs#3)]
  [!code-vb[HeightMinHeightMaxHeight#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HeightMinHeightMaxHeight/VisualBasic/Window1.xaml.vb#3)]  
   
- Per l'esempio completo, vedere [esempio di proprietà di altezza](https://go.microsoft.com/fwlink/?LinkID=159993).  
+ Per l'esempio completo, vedere [esempio di proprietà Height](https://github.com/microsoft/WPF-Samples/tree/master/Elements/HeightProperties).  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -43,4 +43,4 @@ ms.locfileid: "62024417"
 - <xref:System.Windows.FrameworkElement.Height%2A>
 - [Impostare le proprietà di larghezza di un elemento](how-to-set-the-width-properties-of-an-element.md)
 - [Cenni preliminari sugli elementi Panel](panels-overview.md)
-- [Esempio di proprietà di altezza](https://go.microsoft.com/fwlink/?LinkID=159993)
+- [Esempio di proprietà Height](https://github.com/microsoft/WPF-Samples/tree/master/Elements/HeightProperties)

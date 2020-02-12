@@ -10,12 +10,12 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: 9ec6716fefdc8de75d7e523c56ae0b3a02c8cf02
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: bce2eed5f0e78c16b85b399e588c3d0d68ce7cb7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424637"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123714"
 ---
 # <a name="dialog-boxes-overview"></a>Cenni preliminari sulle finestre di dialogo
 Le applicazioni autonome in genere dispongono di una finestra principale che Visualizza i dati principali su cui opera l'applicazione ed espone la funzionalità per elaborare i dati tramite [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] meccanismi quali le barre dei menu, le barre degli strumenti e le barre di stato. In un'applicazione più complessa sono inoltre disponibili finestre aggiuntive per l'esecuzione delle operazioni riportate di seguito:  
@@ -32,7 +32,7 @@ Le applicazioni autonome in genere dispongono di una finestra principale che Vis
   
  Una finestra di dialogo non *modale* , d'altra parte, non impedisce a un utente di attivare altre finestre mentre è aperta. Ad esempio, se un utente desidera cercare occorrenze di una determinata parola in un documento, dalla finestra principale verrà spesso aperta una finestra di dialogo in cui l'utente dovrà immettere la parola che desidera cercare. Poiché la ricerca di una parola non impedisce all'utente di modificare il documento, la finestra di dialogo non deve essere modale. Una finestra di dialogo non modale fornisce almeno un pulsante **Chiudi** per chiudere la finestra di dialogo e può fornire pulsanti aggiuntivi per eseguire funzioni specifiche, ad esempio un pulsante **Trova successivo** per trovare la parola successiva corrispondente ai criteri di ricerca di una ricerca di parole.  
   
- Windows Presentation Foundation (WPF) consente di creare diversi tipi di finestre di dialogo, incluse le finestre di messaggio, le finestre di dialogo comuni e le finestre di dialogo personalizzate. In questo argomento vengono illustrati i singoli e l' [esempio della finestra di dialogo](https://go.microsoft.com/fwlink/?LinkID=159984) fornisce esempi corrispondenti.  
+ Windows Presentation Foundation (WPF) consente di creare diversi tipi di finestre di dialogo, incluse le finestre di messaggio, le finestre di dialogo comuni e le finestre di dialogo personalizzate. In questo argomento vengono illustrati i singoli e l' [esempio della finestra di dialogo](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox) fornisce esempi corrispondenti.  
 
 <a name="Message_Boxes"></a>   
 ## <a name="message-boxes"></a>Finestre di messaggio  
@@ -55,9 +55,9 @@ Le applicazioni autonome in genere dispongono di una finestra principale che Vis
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxShowAndResultCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxshowandresultcodebehind1)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxShowAndResultCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxshowandresultcodebehind1)]  
   
- Per ulteriori informazioni sull'utilizzo delle finestre di messaggio, vedere l'esempio <xref:System.Windows.MessageBox>, [MessageBox di esempio](https://go.microsoft.com/fwlink/?LinkID=160023)e della finestra di [dialogo](https://go.microsoft.com/fwlink/?LinkID=159984).  
+ Per ulteriori informazioni sull'utilizzo delle finestre di messaggio, vedere l'esempio <xref:System.Windows.MessageBox>, [MessageBox di esempio](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/MessageBox)e della finestra di [dialogo](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox).  
   
- Sebbene <xref:System.Windows.MessageBox> possa offrire un'esperienza utente semplice per la finestra di dialogo, il vantaggio dell'uso di <xref:System.Windows.MessageBox> è che è l'unico tipo di finestra che può essere visualizzata dalle applicazioni eseguite in una sandbox di sicurezza con attendibilità parziale (vedere [sicurezza](../security-wpf.md)), ad esempio il browser XAML applicazioni (XBAP).  
+ Sebbene <xref:System.Windows.MessageBox> possa offrire un'esperienza utente semplice per la finestra di dialogo, il vantaggio dell'uso di <xref:System.Windows.MessageBox> è che è l'unico tipo di finestra che può essere visualizzato dalle applicazioni eseguite in una sandbox di sicurezza con attendibilità parziale (vedere [sicurezza](../security-wpf.md)), ad esempio le applicazioni browser XAML (XBAPs).  
   
  Nella maggior parte delle finestre di dialogo vengono visualizzati e raggruppati dati più complessi del risultato di una finestra di messaggio, ad esempio testo, selezione (caselle di controllo), selezione a esclusione reciproca (pulsanti di opzione) e selezione in elenchi (caselle di riepilogo, caselle combinate, elenchi a discesa). Per queste, Windows Presentation Foundation (WPF) fornisce diverse finestre di dialogo comuni e consente di creare finestre di dialogo personalizzate, sebbene l'utilizzo di sia limitato alle applicazioni in esecuzione con attendibilità totale.  
   
@@ -118,7 +118,7 @@ Sebbene le finestre di dialogo comuni siano utili e debbano essere utilizzate qu
 <a name="Creating_a_Modal_Custom_Dialog_Box"></a>   
 ### <a name="creating-a-modal-custom-dialog-box"></a>Creazione di una finestra di dialogo modale personalizzata
 
-In questo argomento viene illustrato come utilizzare <xref:System.Windows.Window> per creare un'implementazione tipica della finestra di dialogo modale, utilizzando la finestra di dialogo `Margins` come esempio (vedere l'esempio di finestra di [dialogo](https://go.microsoft.com/fwlink/?LinkID=159984)). Nella figura seguente è illustrata la finestra di dialogo `Margins`.  
+In questo argomento viene illustrato come utilizzare <xref:System.Windows.Window> per creare un'implementazione tipica della finestra di dialogo modale, utilizzando la finestra di dialogo `Margins` come esempio (vedere l'esempio di finestra di [dialogo](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox)). Nella figura seguente è illustrata la finestra di dialogo `Margins`.  
   
  ![Finestra di dialogo margini con campi per definire il margine sinistro, il margine superiore, il margine destro e il margine inferiore.](./media/dialog-boxes-overview/margin-size-dialog-box.png)  
   
@@ -295,7 +295,7 @@ Poiché non è necessario impostare <xref:System.Windows.Window.DialogResult%2A>
   
 - Fare clic sul pulsante **Chiudi** nella barra del titolo.  
   
-- ALT+F4.  
+- ALT + F4.  
   
 - Scegliere **Chiudi** dal menu **sistema** .  
   
@@ -307,4 +307,4 @@ In alternativa, il codice può chiamare <xref:System.Windows.Window.Close%2A> qu
 ## <a name="see-also"></a>Vedere anche
 
 - [Panoramica sul controllo Popup](../controls/popup-overview.md)
-- [Esempio di finestra di dialogo](https://go.microsoft.com/fwlink/?LinkID=159984)
+- [Esempio di finestra di dialogo](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox)

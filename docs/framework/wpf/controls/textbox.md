@@ -7,21 +7,21 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF]
 ms.assetid: 2512a277-e9d8-4de8-a12f-2bd95e8e7b60
-ms.openlocfilehash: 5be472d0d4f27c7a9acc966e4d6ffbcf9d7a1b0d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b1b15739b1ba1787ba160a9a4d829d83fb10db1
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790832"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123637"
 ---
 # <a name="textbox"></a>TextBox
-Il <xref:System.Windows.Controls.TextBox> controllo fornisce il supporto per l'input di base del testo nelle applicazioni WPF.  
+Il controllo <xref:System.Windows.Controls.TextBox> fornisce supporto per l'input di testo di base nelle applicazioni WPF.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Cenni preliminari sulla classe TextBox](textbox-overview.md)  
- [Procedure relative alle proprietà](textbox-how-to-topics.md)  
+ [Procedure relative alla struttura ad albero e alla serializzazione degli elementi](textbox-how-to-topics.md)  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Controls.TextBox>  
   
  <xref:System.Windows.Controls.RichTextBox>  
@@ -32,5 +32,5 @@ Il <xref:System.Windows.Controls.TextBox> controllo fornisce il supporto per l'i
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Esempio di raccolta di controlli WPF](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [Esempio di raccolta di controlli WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout)
 - [Stili e modelli di TextBox](textbox-styles-and-templates.md)

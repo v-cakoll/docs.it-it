@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: ff95b330ff67e916a4d27ef841e757998d847c8b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 418c5a4708a7842e5e441235738b73a009c9c956
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76735314"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124546"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>Procedura dettagliata: hosting di contenuto WPF in Win32
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce un ambiente completo per la creazione di applicazioni. Tuttavia, quando si ha un investimento sostanziale nel codice Win32, potrebbe essere più efficace aggiungere [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] funzionalità all'applicazione anziché riscrivere il codice originale. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce un meccanismo semplice per l'hosting di contenuto di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] in una finestra di Win32.  
   
- In questa esercitazione viene descritto come scrivere un'applicazione di esempio, [ospitando contenuto WPF in un esempio di finestra Win32](https://go.microsoft.com/fwlink/?LinkID=160004), che ospita [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contenuto in una finestra Win32. È possibile estendere questo esempio per ospitare qualsiasi finestra di Win32. Poiché comporta la combinazione di codice gestito e non gestito, l'applicazione viene scritta in C++/cli.  
+ In questa esercitazione viene descritto come scrivere un'applicazione di esempio, [ospitando contenuto WPF in un esempio di finestra Win32](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32HostingWPFPage), che ospita [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contenuto in una finestra Win32. È possibile estendere questo esempio per ospitare qualsiasi finestra di Win32. Poiché comporta la combinazione di codice gestito e non gestito, l'applicazione viene scritta in C++/cli.  
 
 <a name="requirements"></a>   
 ## <a name="requirements"></a>Requisiti  
@@ -26,7 +26,7 @@ ms.locfileid: "76735314"
  Poiché l'esempio che accompagna questa esercitazione è implementato in/CLI C++, in questa esercitazione si presuppone una certa familiarità con C++ l'uso di per programmare l'API Windows, oltre a comprendere la programmazione del codice gestito. La familiarità C++con/CLI è utile ma non essenziale.  
   
 > [!NOTE]
-> Questa esercitazione include numerosi esempi di codice relativi all'esempio associato. Tuttavia, per una questione di leggibilità, il codice di esempio completo non è compreso. Per il codice di esempio completo, vedere l'esempio relativo all' [hosting di contenuto WPF in una finestra Win32](https://go.microsoft.com/fwlink/?LinkID=160004).  
+> Questa esercitazione include numerosi esempi di codice relativi all'esempio associato. Tuttavia, per una questione di leggibilità, il codice di esempio completo non è compreso. Per il codice di esempio completo, vedere l'esempio relativo all' [hosting di contenuto WPF in una finestra Win32](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32HostingWPFPage).  
   
 <a name="basic_procedure"></a>   
 ## <a name="the-basic-procedure"></a>Procedura di base  

@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 2c6a8662236b614545e7fb8545b7b60e1b08b6bd
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 38c77086075e79c0ec5b4b1564ed753eded23b34
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559833"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124494"
 ---
 # <a name="xaml-syntax-in-detail"></a>Descrizione dettagliata della sintassi XAML
 In questo argomento vengono definiti i termini utilizzati per descrivere gli elementi della sintassi XAML. Questi termini vengono usati di frequente nel resto della documentazione, sia per la documentazione di WPF in particolare che per gli altri Framework che usano XAML o i concetti di base di XAML abilitati dal supporto del linguaggio XAML a livello di System. XAML. In questo argomento viene illustrata la terminologia di base introdotta nell'argomento [Cenni preliminari su XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md).  
@@ -43,7 +43,7 @@ In questo argomento vengono definiti i termini utilizzati per descrivere gli ele
 ## <a name="the-xaml-language-specification"></a>Specifica del linguaggio XAML  
  La terminologia di sintassi XAML definita qui viene definita o a cui viene fatto riferimento all'interno della specifica del linguaggio XAML. XAML è un linguaggio basato su XML e segue o si espande in base alle regole strutturali XML. Parte della terminologia è condivisa da o è basata sulla terminologia comunemente utilizzata per descrivere il linguaggio XML o il modello a oggetti documento XML.  
   
- Per ulteriori informazioni sulla specifica del linguaggio XAML, scaricare [\[\]MS-XAML](https://go.microsoft.com/fwlink/?LinkId=114525) dall'area download Microsoft.  
+ Per ulteriori informazioni sulla specifica del linguaggio XAML, scaricare [\[\]MS-XAML](https://download.microsoft.com/download/0/A/6/0A6F7755-9AF5-448B-907D-13985ACCF53E/[MS-XAML].pdf) dall'area download Microsoft.  
   
 <a name="xaml_and_clr"></a>   
 ## <a name="xaml-and-clr"></a>XAML e CLR  
@@ -315,9 +315,9 @@ In questo argomento vengono definiti i termini utilizzati per descrivere gli ele
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Cenni preliminari su XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
+- [Panoramica di XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Funzionalità del linguaggio dello spazio dei nomi XAML (x:)](../../../desktop-wpf/xaml-services/namespace-language-features.md)
 - [Estensioni XAML WPF](wpf-xaml-extensions.md)
-- [Panoramica sulle proprietà di dipendenza](dependency-properties-overview.md)
+- [Cenni preliminari sulle proprietà di dipendenza](dependency-properties-overview.md)
 - [TypeConverter e XAML](typeconverters-and-xaml.md)
 - [Classi XAML e personalizzate per WPF](xaml-and-custom-classes-for-wpf.md)

@@ -9,14 +9,12 @@ helpviewer_keywords:
 - .NET Framework, and Windows Store apps
 - .NET Framework, and Windows Runtime
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: dd7e045bf54b09fe2a229efefc0218eb3f2f731a
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 56c9cb60ab46a583c34f898d20abf85f5ff0fe4c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802752"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123701"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Supporto .NET Framework per applicazioni Windows Store e Windows Runtime
 
@@ -98,9 +96,9 @@ Per abilitare l'utilizzo naturale della Windows Runtime nel codice gestito, veng
 
 - Per le primitive Windows Runtime `Int32`, `Int64`, `Single`, `Double`, `Boolean`, `String` (una raccolta non modificabile di caratteri Unicode), `Enum`, `UInt32`, `UInt64`e `Guid`, usare il tipo con lo stesso nome nello spazio dei nomi `System`.
 
-- Per `UInt8`, utilizzare `System.Byte`.
+- Per `UInt8`, usare `System.Byte`.
 
-- Per `Char16`, utilizzare `System.Char`.
+- Per `Char16`, usare `System.Char`.
 
 - Per l'interfaccia `IInspectable`, utilizzare `System.Object`.
 
@@ -112,7 +110,7 @@ Altri tipi di Windows Runtime di base, usati comunemente, che vengono visualizza
 
 ### <a name="other-differences"></a>Altre differenze
 
-In alcuni casi, il fatto che i tipi di .NET Framework siano visualizzati nel codice anziché Windows Runtime tipi richiedono un'azione da parte dell'utente. Ad esempio, la classe <xref:Windows.Foundation.Uri?displayProperty=nameWithType> viene visualizzata come <xref:System.Uri?displayProperty=nameWithType> nel codice .NET Framework. <xref:System.Uri?displayProperty=nameWithType> consente un URI relativo, ma <xref:Windows.Foundation.Uri?displayProperty=nameWithType> richiede un URI assoluto. Pertanto, quando si passa un URI a un metodo di Windows Runtime, è necessario assicurarsi che sia assoluto. Vedi [Passaggio di un URI a Windows Runtime](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md).
+In alcuni casi, il fatto che i tipi di .NET Framework siano visualizzati nel codice anziché Windows Runtime tipi richiedono un'azione da parte dell'utente. Ad esempio, la classe <xref:Windows.Foundation.Uri?displayProperty=nameWithType> viene visualizzata come <xref:System.Uri?displayProperty=nameWithType> nel codice .NET Framework. <xref:System.Uri?displayProperty=nameWithType> consente un URI relativo, ma <xref:Windows.Foundation.Uri?displayProperty=nameWithType> richiede un URI assoluto. Pertanto, quando si passa un URI a un metodo di Windows Runtime, è necessario assicurarsi che sia assoluto. Vedere [passaggio di un URI al Windows Runtime](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md).
 
 <a name="WindowsRuntimeComponents"></a>
 
