@@ -21,7 +21,7 @@ Le applicazioni native del cloud non sono immuni alla stessa dicotomia. Hanno va
 
 Anni fa, non era insolito per il processo di trasferimento di un'applicazione dallo sviluppo alla produzione per un mese o anche di più. Le aziende hanno rilasciato il software in una cadenza di 6 mesi o addirittura ogni anno. Per ottenere un'idea della cadenza delle versioni accettabili prima dei giorni futuri di Windows 10, è necessario che non sia più disponibile Microsoft Windows. Cinque anni passati tra Windows XP e vista, un ulteriore 3 tra vista e Windows 7.
 
-È ora abbastanza ben definito che la possibilità di rilasciare il software consente alle aziende in rapida evoluzione di ottenere un notevole vantaggio sul mercato rispetto ai concorrenti più simili a bradipo. Per questo motivo, gli aggiornamenti principali di Windows 10 sono ora approssimativamente ogni sei mesi.
+È ora abbastanza ben definito che la possibilità di rilasciare il software consente alle aziende in rapida evoluzione di ottenere un notevole vantaggio sul mercato rispetto ai concorrenti più lenti. Per questo motivo, gli aggiornamenti principali di Windows 10 sono ora approssimativamente ogni sei mesi.
 
 I modelli e le procedure che consentono versioni più veloci e affidabili per fornire valore al business sono collettivamente noti come DevOps. Sono costituiti da un'ampia gamma di idee che occupano l'intero ciclo di vita dello sviluppo software, dalla specifica di un'applicazione fino alla distribuzione e al funzionamento di tale applicazione.
 
