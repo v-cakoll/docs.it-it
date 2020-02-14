@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Aggiungere istruzioni di traccia al codice dell'applicazione"
+title: "Procedura: aggiungere istruzioni di traccia al codice dell'applicazione"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,17 +13,15 @@ helpviewer_keywords:
 - trace switches, conditional writes based on switches
 - WriteIf method
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4517da87603dcdd398d536cd9bf9e441430be375
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 21df0e8129505e50e6b7f29c4f4f5aea94f380e3
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052745"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217461"
 ---
-# <a name="how-to-add-trace-statements-to-application-code"></a>Procedura: Aggiungere istruzioni di traccia al codice dell'applicazione
-I metodi usati più spesso per la traccia sono i metodi per la scrittura dell'output nei listener: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**e **Fail**. Questi metodi possono essere divisi in due categorie: **Write**, **WriteLine**e Fail generano l'output in modo **non** condizionale, mentre **WriteIf**, **WriteLineIf**e **Assert** verificano una condizione booleana e scrivono o non scrivono in base al valore della condizione. **WriteIf** e **WriteLineIf** generano output se la condizione è `true` e **Assert** genera output se la condizione è `false`.  
+# <a name="how-to-add-trace-statements-to-application-code"></a>Procedura: aggiungere istruzioni di traccia al codice dell'applicazione
+I metodi usati più spesso per la traccia sono i metodi per la scrittura dell'output nei listener: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert** e **Fail**. Questi metodi possono essere divisi in due categorie: **Write**, **WriteLine** e **Fail** generano tutti output in modo non condizionale, mentre **WriteIf**, **WriteLineIf** e **Assert** verificano una condizione booleana e scrivono o non scrivono il valore della condizione. **WriteIf** e **WriteLineIf** generano output se la condizione è `true` e **Assert** genera output se la condizione è `false`.  
   
  Quando si progetta la traccia e si esegue il debug strategia, è necessario considerare come si desidera visualizzare l'output. Più istruzioni **Write** costituite da informazioni non correlate creeranno un log che è difficile da leggere. D'altra parte, usando **WriteLine** per inserire istruzioni correlate in righe separate, potrebbe essere difficile distinguere quali informazioni sono correlate. In generale, usare più istruzioni **Write** quando si vogliono combinare informazioni provenienti da più origini per creare un singolo messaggio informativo e usare l’istruzione **WriteLine** quando si intende creare un unico messaggio completo.  
   
@@ -69,7 +67,7 @@ I metodi usati più spesso per la traccia sono i metodi per la scrittura dell'ou
   
 ### <a name="to-verify-that-certain-conditions-exist-either-before-or-after-you-execute-a-method"></a>Per verificare che determinate condizioni esistano prima o dopo l'esecuzione di un metodo  
   
-1. Chiamare il metodo <xref:System.Diagnostics.Trace.Assert%2A>.  
+1. Chiamare il metodo <xref:System.Diagnostics.Trace.Assert%2A> .  
   
     ```vb  
     Dim i As Integer = 4  

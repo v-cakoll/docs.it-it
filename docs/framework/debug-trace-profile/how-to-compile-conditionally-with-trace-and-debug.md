@@ -10,14 +10,12 @@ helpviewer_keywords:
 - TRACE directive
 - conditional compilation, tracing code
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a2cb2ef473d6870da47e0e4c00fecf6bd60707f3
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2c3ec54535319f4c7507563a5976038ca40d20aa
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975575"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217460"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Procedura: compilare in modo condizionale con traccia e debug
 Quando si sottopone a debug l'applicazione durante la fase di sviluppo, sia l'output di tracciatura che l'output di debug vengono inviati alla finestra di output in Visual Studio. Tuttavia, per includere funzionalità di tracciatura in un'applicazione distribuita, è necessario compilare le applicazioni instrumentate con la direttiva del compilatore **TRACE** abilitata. In questo modo è possibile tracciare il codice da compilare nella versione di rilascio dell'applicazione. Se non si abilita la direttiva **TRACE**, tutto il codice di tracciatura verrà ignorato durante la compilazione e non sarà incluso nel codice eseguibile da distribuire.  
@@ -73,7 +71,7 @@ Quando si sottopone a debug l'applicazione durante la fase di sviluppo, sia l'ou
   
 1. Digitare l'istruzione adatta per il linguaggio di programmazione usato all'inizio del file di codice sorgente.  
   
-    |Language|Istruzione|Risultato|  
+    |Linguaggio|.|Risultato|  
     |--------------|---------------|------------|  
     |**Visual Basic**|**#CONST TRACE = true**|Abilita la traccia|  
     ||**#CONST TRACE = false**|Disabilita la traccia|  
@@ -88,7 +86,7 @@ Quando si sottopone a debug l'applicazione durante la fase di sviluppo, sia l'ou
   
 Eliminare la direttiva del compilatore dal codice sorgente.  
   
-\- oppure -  
+\- - oppure -  
   
 Impostare come commento la direttiva del compilatore.  
   

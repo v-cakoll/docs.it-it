@@ -10,19 +10,17 @@ helpviewer_keywords:
 - security [.NET Framework], method access
 - method access security
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 74327e10e57c2f63519a3336ab2a600ad2b0a6b8
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5d083af6abc91121ebbc9554d03c635cabe2bbd9
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971047"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217135"
 ---
 # <a name="securing-method-access"></a>Protezione dell'accesso ai metodi
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- Alcuni metodi potrebbero non essere adatti per consentire le chiamate da parte di codice non attendibile arbitrario. Questi metodi presentano diversi rischi: Il metodo può fornire alcune informazioni limitate. potrebbe ritenere che le informazioni vengano passate; potrebbe non eseguire il controllo degli errori sui parametri; o con i parametri non corretti, potrebbe funzionare in modo non corretto o causare un problema. L'utente dovrebbe essere informato di questi casi e adottare le misure appropriate per proteggere il metodo.  
+ Alcuni metodi potrebbero non essere adatti per consentire le chiamate da parte di codice non attendibile arbitrario. Tali metodi comportano diversi rischi: il metodo può fornire informazioni riservate; può ritenere valide tutte le informazioni passate; può non controllare gli errori sui parametri; con i parametri non corretti, potrebbe presentare problemi di funzionamento o causare danni. L'utente dovrebbe essere informato di questi casi e adottare le misure appropriate per proteggere il metodo.  
   
  In alcuni casi, potrebbe essere necessario limitare i metodi che non sono destinati all'uso pubblico, ma che devono comunque essere pubblici; ad esempio, nel caso di un'interfaccia che deve essere chiamata attraverso le proprie DLL e pertanto deve essere pubblica, ma che non si vuole esporre pubblicamente per evitare che i clienti la usino oppure per impedire che il codice dannoso sfrutti il punto di ingresso al componente. Un altro motivo comune per limitare un metodo non destinato all'uso pubblico (ma che deve essere pubblico) consiste nell'evitare di dover documentare e supportare quella che potrebbe essere un'interfaccia molto interna.  
   
@@ -40,7 +38,7 @@ ms.locfileid: "70971047"
   
 - Richiedere le classi derivate che eseguono l'override di metodi specifici per ottenere un'identità o autorizzazione specificata.  
   
- L'esempio seguente illustra come proteggere una classe pubblica per l'accesso limitato richiedendo che i chiamanti siano firmati con un nome sicuro specifico. <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> In questo esempio viene utilizzato con una **richiesta** per il nome sicuro. Per informazioni basate su attività su come firmare un assembly con un nome sicuro, vedere [creazione e uso di assembly con nome sicuro](../../standard/assembly/create-use-strong-named.md).  
+ L'esempio seguente illustra come proteggere una classe pubblica per l'accesso limitato richiedendo che i chiamanti siano firmati con un nome sicuro specifico. In questo esempio viene usato il <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> con una **richiesta** per il nome sicuro. Per informazioni basate su attività su come firmare un assembly con un nome sicuro, vedere [creazione e uso di assembly con nome sicuro](../../standard/assembly/create-use-strong-named.md).  
   
 ```vb  
 <StrongNameIdentityPermissionAttribute(SecurityAction.Demand, PublicKey := "…hex…", Name := "App1", Version := "0.0.0.0")>  _  
@@ -60,7 +58,7 @@ public class Class1
  Usare le dichiarazioni illustrate in questa sezione per impedire l'uso di specifiche classi e metodi, nonché proprietà ed eventi, da parte di codice parzialmente attendibile. Applicando tali dichiarazioni a una classe, è possibile applicare la protezione a tutti i relativi metodi, proprietà ed eventi. Si noti tuttavia che l'accesso al campo non è influenzato dalla protezione dichiarativa. Si noti inoltre che le richieste di collegamento aiutano a proteggere solo dai chiamanti immediati e potrebbero essere comunque soggette ad attacchi.  
   
 > [!NOTE]
-> In .NET Framework 4 è stato introdotto un nuovo modello di trasparenza. Il [codice SecurityTransparent,](security-transparent-code-level-2.md) il modello di livello 2 identifica il codice sicuro con <xref:System.Security.SecurityCriticalAttribute> l'attributo. Il codice critico per la sicurezza richiede che chiamanti ed eredi siano completamente attendibili. Gli assembly in esecuzione con le regole di protezione dell'accesso al codice delle versioni precedenti di .NET Framework possono chiamare gli assembly di livello 2. In questo caso, gli attributi critici per la sicurezza verranno considerati come richieste di collegamento per l'attendibilità totale.  
+> In .NET Framework 4 è stato introdotto un nuovo modello di trasparenza. Il codice SecurityTransparent, il modello di [livello 2](security-transparent-code-level-2.md) identifica il codice sicuro con l'attributo <xref:System.Security.SecurityCriticalAttribute>. Il codice critico per la sicurezza richiede che chiamanti ed eredi siano completamente attendibili. Gli assembly in esecuzione con le regole di protezione dell'accesso al codice delle versioni precedenti di .NET Framework possono chiamare gli assembly di livello 2. In questo caso, gli attributi critici per la sicurezza verranno considerati come richieste di collegamento per l'attendibilità totale.  
   
  Negli assembly con nome sicuro, un [LinkDemand](link-demands.md) viene applicato a tutti i metodi, le proprietà e gli eventi accessibili pubblicamente per limitarne l'uso a chiamanti completamente attendibili. Per disabilitare questa funzionalità, è necessario applicare l'attributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute>. Di conseguenza, contrassegnare esplicitamente le classi in modo da escludere i chiamanti non attendibili è necessario solo per gli assembly non firmati oppure per gli assembly con questo attributo. È possibile usare queste dichiarazioni per contrassegnare un sottoinsieme di tipi non destinati a chiamanti non attendibili.  
   
@@ -234,7 +232,7 @@ class Implemented : ICanCastToMe
 ## <a name="virtual-internal-overrides-or-overloads-overridable-friend"></a>Override virtual interni e friend sottoponibile a override da overload  
   
 > [!NOTE]
-> In questa sezione viene visualizzato un avviso relativo a un problema di sicurezza quando si `virtual` dichiara `internal` un`Overloads` metodo come e ( `Overridable` `Friend` in Visual Basic). Questo avviso si applica solo alle versioni .NET Framework 1,0 e 1,1, ma non a versioni successive.  
+> In questa sezione viene visualizzato un avviso relativo a un problema di sicurezza quando si dichiara un metodo come `virtual` e `internal` (`Overloads` `Overridable` `Friend` in Visual Basic). Questo avviso si applica solo alle versioni .NET Framework 1,0 e 1,1, ma non a versioni successive.  
   
  Nelle versioni .NET Framework 1,0 e 1,1, è necessario essere a conoscenza di una sfumatura dell'accessibilità del sistema di tipi quando si conferma che il codice non è disponibile per altri assembly. Un metodo dichiarato **virtuale** e **interno** (che esegue l'overload di un elemento**Friend** in Visual Basic) può eseguire l'override della voce vtable della classe padre e può essere utilizzato solo dall'interno dello stesso assembly perché è interno. Tuttavia, l'accessibilità per l'override è determinata dalla parola chiave **Virtual** , che può essere sottoposta a override da un altro assembly, purché tale codice possa accedere alla classe stessa. Se la possibilità di un override presenta un problema, usare la sicurezza dichiarativa per correggerla o rimuovere la parola chiave **Virtual** se non è strettamente necessaria.  
   

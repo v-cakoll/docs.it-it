@@ -10,14 +10,12 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), cache
 - MemberInfo cache
 ms.assetid: 5abdad23-1335-4744-8acb-934002c0b6fe
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d3b65ecc226c1caf7b53d746f0583e1f57c7d8c1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e5dbc769bd634afae06582ee614addafd611fad9
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052462"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217309"
 ---
 # <a name="memberinfocachecreation-mda"></a>MDA memberInfoCacheCreation
 L'assistente al debug gestito `memberInfoCacheCreation` viene attivato al momento della creazione di una cache <xref:System.Reflection.MemberInfo>. Si tratta di un'indicazione chiara di un programma che usa funzionalità di reflection onerose a livello di risorse.  

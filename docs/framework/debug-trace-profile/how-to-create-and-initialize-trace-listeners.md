@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Creare e inizializzare listener di traccia'
+title: 'Procedura: creare e inizializzare listener di traccia'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,16 +11,14 @@ helpviewer_keywords:
 - tracing [.NET Framework], trace listeners
 - logs, trace listeners
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a67bd2c0daa8acc81113a1e38ea463753ae34077
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: ce0df0af32d6798c89c8db6761d18febc1c398bb
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052721"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217437"
 ---
-# <a name="how-to-create-and-initialize-trace-listeners"></a>Procedura: Creare e inizializzare listener di traccia
+# <a name="how-to-create-and-initialize-trace-listeners"></a>Procedura: creare e inizializzare listener di traccia
 
 Le classi <xref:System.Diagnostics.Debug?displayProperty=nameWithType> e <xref:System.Diagnostics.Trace?displayProperty=nameWithType> inviano messaggi a oggetti detti listener, che li ricevono e li elaborano. Uno di questi listener, <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>, viene creato e inizializzato automaticamente quando si abilita la traccia o il debug. Se si vuole indirizzare l'output di <xref:System.Diagnostics.Trace> o <xref:System.Diagnostics.Debug> a origini aggiuntive, è necessario creare e inizializzare listener di traccia aggiuntivi.
 
@@ -77,7 +75,7 @@ I listener devono essere creati in base alle esigenze dell'applicazione. Se, ad 
     Trace.Flush();
     ```
 
-    \- oppure -
+    \- - oppure -
 
 - Se non si vuole che il listener riceva l'output di traccia, non aggiungerlo alla raccolta <xref:System.Diagnostics.Trace.Listeners%2A>. È possibile trasmettere l'output tramite un listener indipendentemente dalla raccolta <xref:System.Diagnostics.Trace.Listeners%2A> chiamando i metodi di output del listener stesso. L'esempio seguente mostra come scrivere una riga in un listener non incluso nella raccolta <xref:System.Diagnostics.Trace.Listeners%2A>.
 
@@ -99,5 +97,5 @@ I listener devono essere creati in base alle esigenze dell'applicazione. Se, ad 
 
 - [Listener di traccia](trace-listeners.md)
 - [Opzioni di traccia](trace-switches.md)
-- [Procedura: Aggiungere istruzioni di traccia al codice dell'applicazione](how-to-add-trace-statements-to-application-code.md)
+- [Procedura: aggiungere istruzioni di traccia al codice dell'applicazione](how-to-add-trace-statements-to-application-code.md)
 - [Traccia e strumentazione di applicazioni](tracing-and-instrumenting-applications.md)

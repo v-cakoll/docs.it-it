@@ -16,14 +16,12 @@ helpviewer_keywords:
 - permissions [.NET Framework], overriding security checks
 - permissions [.NET Framework], assertions
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f43ba2963ec447e5193da73452537b2539c51857
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 2bc46714a508990c5ae31b50e7d19a287da2c5c0
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206047"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215830"
 ---
 # <a name="using-the-assert-method"></a>Utilizzo del metodo Assert
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -61,16 +59,16 @@ ms.locfileid: "70206047"
   
  In questo scenario, il metodo A chiama B, B chiama C, C chiama E e e chiama F. il metodo C asserisce l'autorizzazione per leggere i file nell'unità C (autorizzazione P1) e il metodo e richiede l'autorizzazione per leggere i file con estensione txt nell'unità C (autorizzazione P1A). Quando viene rilevata la richiesta in F in fase di esecuzione, viene eseguito un percorso stack per verificare le autorizzazioni di tutti i chiamanti di F, a partire da E. a è stata concessa l'autorizzazione P1A, quindi il percorso stack procede per esaminare le autorizzazioni di C, dove viene individuata l'asserzione di C. Poiché l'autorizzazione richiesta (P1A) è un subset dell'autorizzazione oggetto dell'asserzione (P1), il percorso stack si interrompe e automaticamente il controllo di sicurezza ha esito positivo. Non è importante che agli assembly A e B non sia stata concessa l'autorizzazione P1A. Con l'asserzione di P1, il metodo C garantisce che i chiamanti possano accedere alla risorsa protetta da P1, anche se non è stata loro concessa l'autorizzazione di accesso.  
   
- Se si progetta una libreria di classi e una classe accede a una risorsa protetta, nella maggior parte dei casi è consigliabile effettuare una richiesta di sicurezza che imponga ai chiamanti della classe di disporre dell'autorizzazione appropriata. Se la classe esegue un'operazione per la quale si conosce la maggior parte dei chiamanti non avrà l'autorizzazione e se si è disposti ad assumere la responsabilità di consentire a questi chiamanti di chiamare il codice, è possibile dichiarare l'autorizzazione chiamando il metodo **Assert** su un oggetto autorizzazione che rappresenta l'operazione eseguita dal codice. L'uso di **Assert** in questo modo consente ai chiamanti che in genere non possono eseguire chiamate al codice. Quando si effettua quindi l'asserzione di un'autorizzazione, è necessario assicurarsi di avere precedentemente eseguito gli opportuni controlli di sicurezza per impedire l'uso improprio del componente.  
+ Se si progetta una libreria di classi e una classe accede a una risorsa protetta, nella maggior parte dei casi è consigliabile effettuare una richiesta di sicurezza che imponga ai chiamanti della classe di disporre dell'autorizzazione appropriata. Se la classe esegue quindi un'operazione per la quale si conosce la maggior parte dei chiamanti non avrà l'autorizzazione e se si è disposti ad assumere la responsabilità di consentire a questi chiamanti di chiamare il codice, è possibile dichiarare l'autorizzazione chiamando il metodo **Assert** su un oggetto autorizzazione che rappresenta l'operazione eseguita dal codice. L'uso di **Assert** in questo modo consente ai chiamanti che in genere non possono eseguire chiamate al codice. Quando si effettua quindi l'asserzione di un'autorizzazione, è necessario assicurarsi di avere precedentemente eseguito gli opportuni controlli di sicurezza per impedire l'uso improprio del componente.  
   
- Si supponga, ad esempio, che una classe di libreria altamente attendibile disponga di un metodo per l'eliminazione di file. L'accesso al file viene effettuato chiamando una funzione Win32 non gestita. Un chiamante richiama il metodo **Delete** del codice, passando il nome del file da eliminare, C:\test.txt. All'interno del metodo **Delete** , il codice crea <xref:System.Security.Permissions.FileIOPermission> un oggetto che rappresenta l'accesso in scrittura a C:\test.txt. L'accesso in scrittura è necessario per l'eliminazione di un file. Il codice richiama quindi un controllo di sicurezza imperativo chiamando il metodo **Demand** dell'oggetto **FileIOPermission** . Se uno dei chiamanti inclusi nello stack di chiamate non dispone di questa autorizzazione, viene generata un'eccezione <xref:System.Security.SecurityException>. Se non viene generata alcuna eccezione, significa che tutti i chiamanti hanno il diritto di accedere a C:\Test.txt. Poiché si ritiene che la maggior parte dei chiamanti non sarà autorizzato ad accedere al codice non gestito, il codice crea quindi un <xref:System.Security.Permissions.SecurityPermission> oggetto che rappresenta il diritto di chiamare codice non gestito e chiama il metodo **Assert** dell'oggetto. Infine, chiama la funzione Win32 non gestita per eliminare C:\Test.txt e restituisce il controllo al chiamante.  
+ Si supponga, ad esempio, che una classe di libreria altamente attendibile disponga di un metodo per l'eliminazione di file. L'accesso al file viene effettuato chiamando una funzione Win32 non gestita. Un chiamante richiama il metodo **Delete** del codice, passando il nome del file da eliminare, C:\test.txt. All'interno del metodo **Delete** , il codice crea un oggetto <xref:System.Security.Permissions.FileIOPermission> che rappresenta l'accesso in scrittura a C:\test.txt. Per eliminare un file, è necessario l'accesso in scrittura. Il codice richiama quindi un controllo di sicurezza imperativo chiamando il metodo **Demand** dell'oggetto **FileIOPermission** . Se uno dei chiamanti inclusi nello stack di chiamate non dispone di questa autorizzazione, viene generata un'eccezione <xref:System.Security.SecurityException>. Se non viene generata alcuna eccezione, significa che tutti i chiamanti hanno il diritto di accedere a C:\Test.txt. Poiché si ritiene che la maggior parte dei chiamanti non sarà autorizzato ad accedere al codice non gestito, il codice crea quindi un oggetto <xref:System.Security.Permissions.SecurityPermission> che rappresenta il diritto di chiamare codice non gestito e chiama il metodo **Assert** dell'oggetto. Infine, chiama la funzione Win32 non gestita per eliminare C:\Test.txt e restituisce il controllo al chiamante.  
   
 > [!CAUTION]
 > È necessario assicurarsi che il codice non usi asserzioni in situazioni in cui può essere usato da altro codice per accedere a una risorsa protetta dall'autorizzazione oggetto dell'asserzione. Ad esempio, nel codice che scrive in un file il cui nome è specificato dal chiamante come parametro, non è necessario dichiarare l'oggetto **FileIOPermission** per la scrittura nei file perché il codice potrebbe essere utilizzato in modo improprio da terze parti.  
   
  Quando si usa la sintassi di sicurezza imperativa, la chiamata al metodo **Assert** su più autorizzazioni nello stesso metodo comporta la generazione di un'eccezione di sicurezza. È invece consigliabile creare un oggetto **PermissionSet** , passargli le singole autorizzazioni da richiamare, quindi chiamare il metodo **Assert** sull'oggetto **PermissionSet** . È possibile chiamare il metodo **Assert** più di una volta quando si usa la sintassi di sicurezza dichiarativa.  
   
- Nell'esempio seguente viene illustrata la sintassi dichiarativa per l'override dei controlli di sicurezza tramite il metodo **Assert** . Si noti che la sintassi **FileIOPermissionAttribute** accetta due valori: <xref:System.Security.Permissions.SecurityAction> un'enumerazione e il percorso del file o della directory a cui deve essere concessa l'autorizzazione. La chiamata a **Assert** causa la riuscita della richiesta `C:\Log.txt` di accesso a, anche se non viene verificata l'autorizzazione di accesso al file da parte dei chiamanti.  
+ Nell'esempio seguente viene illustrata la sintassi dichiarativa per l'override dei controlli di sicurezza tramite il metodo **Assert** . Si noti che la sintassi **FileIOPermissionAttribute** accetta due valori: un'enumerazione <xref:System.Security.Permissions.SecurityAction> e il percorso del file o della directory a cui deve essere concessa l'autorizzazione. La chiamata a **Assert** causa la riuscita della richiesta di accesso `C:\Log.txt`, anche se non viene verificata l'autorizzazione per l'accesso al file da parte dei chiamanti.  
   
 ```vb  
 Option Explicit  
@@ -173,5 +171,5 @@ namespace LogUtil
 - <xref:System.Security.Permissions.SecurityPermission>
 - <xref:System.Security.Permissions.FileIOPermission>
 - <xref:System.Security.Permissions.SecurityAction>
-- [Attributi](../../standard/attributes/index.md)
+- [Attributes (Attributi)](../../standard/attributes/index.md)
 - [Sicurezza dall'accesso di codice](code-access-security.md)

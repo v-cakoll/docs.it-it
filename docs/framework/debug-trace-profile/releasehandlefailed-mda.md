@@ -10,14 +10,12 @@ helpviewer_keywords:
 - SafeHandle class, run-time errors
 - MDAs (managed debugging assistants), handles
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 41f6b67ff63d096cc1fa2c599abb06c9c1129952
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 265344cb100a41cde5443cd0914dc66271aabf93
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052307"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216120"
 ---
 # <a name="releasehandlefailed-mda"></a>releaseHandleFailed (MDA)
 L'assistente al debug gestito `releaseHandleFailed` viene attivato per notificare agli sviluppatori quando il metodo <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> di una classe derivata da <xref:System.Runtime.InteropServices.SafeHandle> o <xref:System.Runtime.InteropServices.CriticalHandle> restituisce `false`.  
@@ -26,7 +24,7 @@ L'assistente al debug gestito `releaseHandleFailed` viene attivato per notificar
  Perdita di risorse o di memoria  Se si verifica un errore nel metodo <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> della classe che deriva da <xref:System.Runtime.InteropServices.SafeHandle> o <xref:System.Runtime.InteropServices.CriticalHandle>, è possibile che la risorsa incapsulata dalla classe non sia stata rilasciata o eliminata.  
   
 ## <a name="cause"></a>Causa  
- Se si creano classi che derivano da  <xref:System.Runtime.InteropServices.SafeHandle> o <xref:System.Runtime.InteropServices.CriticalHandle>, è necessario fornire l'implementazione del metodo <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>. Di conseguenza, le problematiche sono specifiche della singola risorsa. È necessario, tuttavia, che siano rispettati i seguenti requisiti:  
+ Se si creano classi che derivano da  <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> o <xref:System.Runtime.InteropServices.SafeHandle>, è necessario fornire l'implementazione del metodo <xref:System.Runtime.InteropServices.CriticalHandle>. Di conseguenza, le problematiche sono specifiche della singola risorsa. È necessario, tuttavia, che siano rispettati i seguenti requisiti:  
   
 - I tipi <xref:System.Runtime.InteropServices.SafeHandle> e <xref:System.Runtime.InteropServices.CriticalHandle> rappresentano wrapper per risorse vitali di un processo. Una perdita di memoria può rendere il processo inusabile.  
   

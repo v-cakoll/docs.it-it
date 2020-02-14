@@ -1,14 +1,13 @@
 ---
 title: Creare una soluzione .NET Core completa usando Visual Studio per Mac
 description: Questo articolo illustra la creazione di una soluzione .NET Core che include una libreria riutilizzabile e un unit test.
-author: mairaw
 ms.date: 12/19/2019
-ms.openlocfilehash: f4284cd4c3c8b358b87c31c0fd5c067b1e7fb8a2
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: dea23da33912de849f0dcbe1e2f6fa3edb3a5e24
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715356"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215211"
 ---
 # <a name="build-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Creare una soluzione .NET Core completa in macOS usando Visual Studio per Mac
 
@@ -22,7 +21,7 @@ In questa esercitazione viene illustrato come creare un'applicazione che accetta
 > - In Visual Studio per Mac scegliere **Aiuto** > **Segnala un problema** dal menu o **Segnala un problema** dalla schermata iniziale per visualizzare una finestra per la registrazione di un report sul bug. È possibile tenere traccia dei commenti e dei suggerimenti inviati nel portale della [community di sviluppatori](https://developercommunity.visualstudio.com/spaces/41/index.html).
 > - Per inviare un suggerimento, scegliere **Aiuto** > **Invia un suggerimento** dal menu o **Invia un suggerimento** dalla schermata iniziale per aprire la [pagina Web Developer Community di Visual Studio per Mac](https://developercommunity.visualstudio.com/content/idea/post.html?space=41).
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 - [.NET Core SDK 3,1 o versione successiva](https://dotnet.microsoft.com/download)
 - [Visual Studio 2019 per Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
@@ -36,7 +35,7 @@ Per ulteriori informazioni sui prerequisiti, vedere le [dipendenze e i requisiti
    > [!div class="mx-imgBorder"]
    > ![Visual Studio per Mac finestra di dialogo nuovo progetto](./media/using-on-mac-vs-full-solution/visual-studio-mac-new-project.png)
 
-1. Assegnare al progetto il nome "TextUtils" (nome breve per "Text Utilities") e alla soluzione il nome "WordCounter". Lasciare selezionata la casella **Crea una directory del progetto nella directory della soluzione**. Scegliere **Crea**.
+1. Assegnare al progetto il nome "TextUtils" (nome breve per "Text Utilities") e alla soluzione il nome "WordCounter". Lasciare selezionata la casella **Crea una directory del progetto nella directory della soluzione**. Selezionare **Create** (Crea).
 
    > [!div class="mx-imgBorder"]
    > ![Visual Studio per Mac opzioni della finestra di dialogo nuovo progetto](./media/using-on-mac-vs-full-solution/visual-studio-mac-new-project-options.png)
@@ -78,7 +77,7 @@ Gli unit test forniscono test software automatici durante le fasi di sviluppo e 
    > [!div class="mx-imgBorder"]
    > ![finestra di dialogo nuovo progetto di Visual Studio Mac che fornisce il nome del progetto](./media/using-on-mac-vs-full-solution/visual-studio-mac-new-project-name.png)
 
-1. Aggiungere un riferimento al progetto `TextUtils` per consentire l'interazione tra la libreria di test e la classe `WordCount`. Nella barra laterale della **soluzione** , fare clic su **dipendenze** sotto **TestLibrary**. Scegliere **Modifica riferimenti** dal menu di scelta rapida.
+1. Aggiungere un riferimento al progetto `WordCount` per consentire l'interazione tra la libreria di test e la classe `TextUtils`. Nella barra laterale della **soluzione** , fare clic su **dipendenze** sotto **TestLibrary**. Scegliere **Modifica riferimenti** dal menu di scelta rapida.
 
 1. Nella finestra di dialogo **modifica riferimenti** selezionare il progetto **TextUtils** nella scheda **progetti** . Selezionare **OK**.
 
@@ -128,14 +127,14 @@ Gli unit test forniscono test software automatici durante le fasi di sviluppo e 
 
 1. Fare clic sul pulsante **Esegui tutto**.
 
-   Il test ha esito negativo, che è il risultato previsto. Il metodo di test indica che dalla stringa "Jack Jack" fornita al metodo `GetWordCount` non vengono restituite due istanze della stringa `inputString`, "Jack". Poiché nel metodo `GetWordCount` è stato escluso l'uso delle maiuscole/minuscole, vengono invece restituite due istanze. L'asserzione che 2 *non è uguale a* 2 ha esito negativo. Questo risultato è il risultato corretto e la logica del test è valida.
+   Il test ha esito negativo, che è il risultato previsto. Il metodo di test indica che dalla stringa "Jack Jack" fornita al metodo `inputString` non vengono restituite due istanze della stringa `GetWordCount`, "Jack". Poiché nel metodo `GetWordCount` è stato escluso l'uso delle maiuscole/minuscole, vengono invece restituite due istanze. L'asserzione che 2 *non è uguale a* 2 ha esito negativo. Questo risultato è il risultato corretto e la logica del test è valida.
 
    > [!div class="mx-imgBorder"]
    > ![Visual Studio per Mac visualizzazione errore test](./media/using-on-mac-vs-full-solution/visual-studio-for-mac-unit-test-failure.png)
 
 1. Modificare il metodo di test `IgnoreCasing` sostituendo `Assert.NotEqual` con `Assert.Equal`. Salvare il file usando il tasto di scelta rapida <kbd>Ctrl</kbd>+<kbd>s</kbd>, scegliere **file** > **Salva** dal menu o fare clic con il pulsante destro del mouse sulla scheda del file e scegliere **Salva** dal menu di scelta rapida.
 
-   Si prevede che l'oggetto `searchWord` "Jack" restituisca due istanze con la stringa `inputString` "Jack jack" passata a `GetWordCount`. Eseguire di nuovo il test: fare clic sul pulsante **Esegui test** nel pannello **Unit test** o sul pulsante **Riesegui test** nel pannello **Risultati test** nella parte inferiore della schermata. Il test ha esito positivo. Nella stringa "Jack jack" (senza distinzione tra maiuscole e minuscole) sono presenti due istanze di "Jack" e l'asserzione del test è `true`.
+   Si prevede che l'oggetto `searchWord` "Jack" restituisca due istanze con la stringa `inputString` "Jack jack" passata a `GetWordCount`. Eseguire di nuovo il test: fare clic sul pulsante **Esegui test** nel pannello **Unit test** o sul pulsante **Riesegui test** nel pannello **Risultati test** nella parte inferiore della schermata. Il test viene superato. Nella stringa "Jack jack" (senza distinzione tra maiuscole e minuscole) sono presenti due istanze di "Jack" e l'asserzione del test è `true`.
 
    > [!div class="mx-imgBorder"]
    > visualizzazione ![Visual Studio per Mac test superati](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-pass.png)
@@ -170,7 +169,7 @@ Gli unit test forniscono test software automatici durante le fasi di sviluppo e 
 
 ## <a name="adding-a-console-app"></a>Aggiunta di un'app console
 
-1. Nella barra laterale della **soluzione** fare clic con il pulsante destro del mouse sulla soluzione `WordCounter`. Aggiungere un nuovo progetto **Applicazione console** selezionando il modello corrispondente dai modelli **.NET Core** > **App**. Scegliere **Avanti**. Assegnare al progetto il nome **WordCounterApp**. Scegliere **Crea** per creare il progetto nella soluzione.
+1. Nella barra laterale della **soluzione** fare clic con il pulsante destro del mouse sulla soluzione `WordCounter`. Aggiungere un nuovo progetto **Applicazione console** selezionando il modello corrispondente dai modelli **.NET Core** > **App**. Selezionare **Avanti**. Assegnare al progetto il nome **WordCounterApp**. Scegliere **Crea** per creare il progetto nella soluzione.
 
 1. Nella barra laterale **soluzioni** , fare clic con il pulsante destro del mouse sul nodo **dipendenze** del nuovo progetto **WordCounterApp** . Nella finestra di dialogo **Modifica riferimenti** selezionare **TextUtils** e scegliere **OK**.
 

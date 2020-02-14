@@ -7,14 +7,12 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: efc7208aa51cbf6abdb2fe151d48071c0aa95b5c
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 99d67bd621390789993caa4862e5ce379135eb92
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089042"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215383"
 ---
 # <a name="remove-element-for-configsections"></a>\<rimuovere > elemento per \<configSections >
 
@@ -34,7 +32,7 @@ Rimuove una sezione o un gruppo di sezioni predefinito.
 
 |           | Descrizione |
 | --------- | ----------- |
-| **name**  | Attributo obbligatorio.<br><br>Specifica il nome della sezione o del gruppo di sezioni da rimuovere. |
+| **nome**  | Attributo obbligatorio.<br><br>Specifica il nome della sezione o del gruppo di sezioni da rimuovere. |
 
 ## <a name="parent-element"></a>Elemento padre
 
@@ -44,9 +42,9 @@ Rimuove una sezione o un gruppo di sezioni predefinito.
 
 ## <a name="child-elements"></a>Elementi figlio
 
-Nessuno
+nessuno
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 È possibile utilizzare l'elemento **\<remove >** per rimuovere sezioni e gruppi di sezioni dall'applicazione definiti a un livello superiore nella gerarchia dei file di configurazione.
 

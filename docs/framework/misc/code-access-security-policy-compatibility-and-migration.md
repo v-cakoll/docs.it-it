@@ -5,14 +5,12 @@ helpviewer_keywords:
 - policy migration, compatibility
 - CLR policy migration
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9563dae9ba5d144300549e7f33f5f5a9feb1d410
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 949739b3336a9182eef583cc405e60e09d7ec09d
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205645"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217155"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>Migrazione e compatibilità dei criteri di sicurezza dall'accesso di codice
 
@@ -24,11 +22,11 @@ La parte relativa ai criteri di sicurezza dall'accesso di codice (CAS) è stata 
 
 - [Migrazione](#migration) alle .NET Framework 4 sostituzioni per le chiamate obsolete.
 
-   \- oppure -
+   \- - oppure -
 
-- Uso dell' [ \<elemento di configurazione NetFx40_LegacySecurityPolicy >](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) per acconsentire esplicitamente al comportamento del criterio CAS legacy.
+- Utilizzando il [\<NetFx40_LegacySecurityPolicy > elemento di configurazione](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) per acconsentire esplicitamente al comportamento del criterio CAS legacy.
 
-Di seguito sono elencate le diverse sezioni di questo argomento:
+In questo argomento sono incluse le sezioni seguenti:
 
 - [Uso esplicito](#explicit_use)
 
@@ -36,9 +34,9 @@ Di seguito sono elencate le diverse sezioni di questo argomento:
 
 - [Errori e avvisi](#errors_and_warnings)
 
-- [Migrazione Sostituzione per le chiamate obsolete](#migration)
+- [Migrazione: sostituzione per le chiamate obsolete](#migration)
 
-- [Compatibilità Utilizzo dell'opzione legacy criterio CAS](#compatibility)
+- [Compatibilità: uso dell'opzione legacy criteri CAS](#compatibility)
 
 <a name="explicit_use"></a>
 
@@ -46,7 +44,7 @@ Di seguito sono elencate le diverse sezioni di questo argomento:
 
 I membri che modificano direttamente i criteri di sicurezza o richiedono criteri di sicurezza dall'accesso di codice per il sandboxing sono obsoleti e comportano la generazione di errori per impostazione predefinita.
 
-Di seguito vengono forniti alcuni esempi:
+Sono esempi di eventi:
 
 - <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType>
 
@@ -74,7 +72,7 @@ Di seguito vengono forniti alcuni esempi:
 
 Numerosi assembly che caricano overload producono errori a causa dell'uso implicito di criteri di sicurezza dall'accesso di codice. Questi overload accettano un parametro <xref:System.Security.Policy.Evidence> usato per risolvere i criteri di sicurezza dall'accesso di codice e forniscono un set di autorizzazioni per un assembly.
 
-Ecco alcuni esempi. Gli overload obsoleti sono quelli che accettano <xref:System.Security.Policy.Evidence> come parametro:
+Di seguito sono riportati alcuni esempi. Gli overload obsoleti sono quelli che accettano <xref:System.Security.Policy.Evidence> come parametro:
 
 - <xref:System.Activator.CreateInstanceFrom%2A?displayProperty=nameWithType>
 
@@ -110,7 +108,7 @@ Eccezioni di runtime:
 
 <a name="migration"></a>
 
-## <a name="migration-replacement-for-obsolete-calls"></a>Migrazione Sostituzione per le chiamate obsolete
+## <a name="migration-replacement-for-obsolete-calls"></a>Migrazione: sostituzione delle chiamate obsolete
 
 ### <a name="determining-an-assemblys-trust-level"></a>Determinazione del livello di attendibilità di un assembly
 
@@ -126,23 +124,23 @@ I criteri di sicurezza dall'accesso di codice vengono spesso usati per determina
 
 ### <a name="application-domain-sandboxing"></a>Sandboxing di un dominio dell'applicazione
 
-Il metodo <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> viene in genere usato per il sandboxing degli assembly in un dominio dell'applicazione. Il .NET Framework 4 espone i membri che non devono utilizzare <xref:System.Security.Policy.PolicyLevel> a questo scopo. Per altre informazioni, vedere [Procedura: Eseguire codice parzialmente attendibile in un oggetto sandbox](how-to-run-partially-trusted-code-in-a-sandbox.md).
+Il metodo <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> viene in genere usato per il sandboxing degli assembly in un dominio dell'applicazione. Il .NET Framework 4 espone i membri che non devono utilizzare <xref:System.Security.Policy.PolicyLevel> a questo scopo. Per altre informazioni, vedere [procedura: eseguire codice parzialmente attendibile in un ambiente sandbox](how-to-run-partially-trusted-code-in-a-sandbox.md).
 
 ### <a name="determining-a-safe-or-reasonable-permission-set-for-partially-trusted-code"></a>Determinazione di un set di autorizzazioni ragionevoli o sicure per codice parzialmente attendibile
 
-Gli host devono spesso determinare le autorizzazioni appropriate per il sandboxing del codice ospitato. Prima del .NET Framework 4, i criteri CAS fornivano un modo per eseguire questa <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType> operazione con il metodo. In sostituzione, .NET Framework 4 fornisce il <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType> metodo, che restituisce un set di autorizzazioni standard Safe per l'evidenza fornita.
+Gli host devono spesso determinare le autorizzazioni appropriate per il sandboxing del codice ospitato. Prima del .NET Framework 4, i criteri CAS fornivano un modo per eseguire questa operazione con il metodo <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType>. In sostituzione, .NET Framework 4 fornisce il metodo <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType>, che restituisce un set di autorizzazioni standard Safe per l'evidenza fornita.
 
-### <a name="non-sandboxing-scenarios-overloads-for-assembly-loads"></a>Scenari non sandbox: Overload per i caricamenti di assembly
+### <a name="non-sandboxing-scenarios-overloads-for-assembly-loads"></a>Scenari senza sandboxing: overload per i caricamenti di assembly
 
-Il motivo per usare un overload per il caricamento di un assembly potrebbe essere l'uso di parametri che non sono altrimenti disponibili, anziché l'esecuzione del sandboxing dell'assembly. A partire da .NET Framework 4, gli overload di caricamento degli assembly che non richiedono un <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> oggetto come parametro, ad <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>esempio, abilitano questo scenario.
+Il motivo per usare un overload per il caricamento di un assembly potrebbe essere l'uso di parametri che non sono altrimenti disponibili, anziché l'esecuzione del sandboxing dell'assembly. A partire da .NET Framework 4, gli overload di caricamento degli assembly che non richiedono un oggetto <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> come parametro, ad esempio <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>, abilitano questo scenario.
 
 Per eseguire il sandboxing di un assembly, usare l'overload <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType>.
 
 <a name="compatibility"></a>
 
-## <a name="compatibility-using-the-cas-policy-legacy-option"></a>Compatibilità Utilizzo dell'opzione legacy criterio CAS
+## <a name="compatibility-using-the-cas-policy-legacy-option"></a>Compatibilità: uso dell'opzione legacy relativa ai criteri di sicurezza dall'accesso di codice
 
-L' [ \<elemento di configurazione NetFx40_LegacySecurityPolicy >](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) consente di specificare che un processo o una libreria usa i criteri CAS legacy. Quando si abilita questo elemento, gli overload relativi ai criteri e all'evidenza funzionano in modo analogo a quanto avveniva nelle versioni precedenti del framework.
+L' [elemento di configurazione\<NetFx40_LegacySecurityPolicy >](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) consente di specificare che un processo o una libreria utilizza i criteri CAS legacy. Quando si abilita questo elemento, gli overload relativi ai criteri e all'evidenza funzionano in modo analogo a quanto avveniva nelle versioni precedenti del framework.
 
 > [!NOTE]
 > Il comportamento dei criteri di sicurezza dall'accesso di codice viene specificato per ogni versione runtime, pertanto la modifica di questi criteri per una versione runtime non influisce sui criteri di sicurezza dall'accesso di codice di un'altra versione.
@@ -157,5 +155,5 @@ L' [ \<elemento di configurazione NetFx40_LegacySecurityPolicy >](../configure-a
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Eseguire codice parzialmente attendibile in un oggetto sandbox](how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [Procedura: eseguire codice parzialmente attendibile in un oggetto sandbox](how-to-run-partially-trusted-code-in-a-sandbox.md)
 - [Linee guida per la generazione di codice sicuro](../../standard/security/secure-coding-guidelines.md)

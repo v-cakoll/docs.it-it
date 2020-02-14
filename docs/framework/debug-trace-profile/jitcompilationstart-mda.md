@@ -7,14 +7,12 @@ helpviewer_keywords:
 - JitCompilationStart MDA
 - managed debugging assistants (MDAs), JIT compilation
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fa6d3832dcd842631d290e046b5e32908ce4bb7e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 9cae942bc01e9263720dbfe9acfb21bbb70bc548
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052531"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216255"
 ---
 # <a name="jitcompilationstart-mda"></a>MDA jitCompilationStart
 L'assistente al debug gestito `jitCompilationStart` viene attivato per segnalare il momento in cui il compilatore JIT avvia la compilazione di una funzione.  
@@ -39,7 +37,7 @@ method name="Test!ns2.C0::m"
 ```  
   
 ## <a name="configuration"></a>Configurazione  
- Il file di configurazione seguente mostra diversi filtri che è possibile usare per escludere i metodi segnalati quando vengono prima compilati tramite JIT. È possibile specificare che tutti i metodi vengano segnalati impostando il valore dell'attributo Name \*su.  
+ Il file di configurazione seguente mostra diversi filtri che è possibile usare per escludere i metodi segnalati quando vengono prima compilati tramite JIT. È possibile specificare che tutti i metodi vengano segnalati impostando il valore dell'attributo Name su \*.  
   
 ```xml  
 <mdaConfig>  

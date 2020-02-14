@@ -10,14 +10,12 @@ helpviewer_keywords:
 - PInvokeStackImbalance MDA
 - managed debugging assistants (MDAs), platform invoke
 ms.assetid: 34ddc6bd-1675-4f35-86aa-de1645d5c631
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 117e0838f78d43bf9ffa555947bf8749830c9840
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: c789e8cb409bd4c59c91d6b646efe428afe7c86d
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802000"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217252"
 ---
 # <a name="pinvokestackimbalance-mda"></a>PInvokeStackImbalance (MDA)
 
@@ -50,7 +48,7 @@ Il messaggio dell'assistente al debug gestito fornisce il nome della chiamata al
 
 **Una chiamata alla funzione PInvoke ' SampleMethod ' ha sbilanciato lo stack. Questa operazione è probabilmente dovuta al fatto che la firma PInvoke gestita non corrisponde alla firma di destinazione non gestita. Verificare che la convenzione di chiamata e i parametri della firma PInvoke corrispondano alla firma non gestita di destinazione.**
 
-## <a name="configuration"></a>Configurazione di
+## <a name="configuration"></a>Configurazione
 
 ```xml
 <mdaConfig>

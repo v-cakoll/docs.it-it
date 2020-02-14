@@ -7,14 +7,12 @@ helpviewer_keywords:
 - sectionGroup Element
 - <sectionGroup> Element
 ms.assetid: 6c27f9e2-809c-4bc9-aca9-72f90360e7a3
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 746a997e162b0fd370a249b8d039be623b57d77f
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: eb221027470fe6e485f8fcc4b939b71e4f219712
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089010"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215253"
 ---
 # <a name="sectiongroup-element-for-configsections"></a>\<elemento > sectionGroup per \<configSections >
 
@@ -36,7 +34,7 @@ Definisce uno spazio dei nomi per le sezioni di configurazione.
 
 |           | Descrizione |
 | --------- | ----------- |
-| **name**  | Attributo obbligatorio.<br><br>Specifica il nome del gruppo di sezioni da definire. |
+| **nome**  | Attributo obbligatorio.<br><br>Specifica il nome del gruppo di sezioni da definire. |
 
 ## <a name="parent-element"></a>Elemento padre
 
@@ -50,7 +48,7 @@ Definisce uno spazio dei nomi per le sezioni di configurazione.
 | --- | ----------- |
 | [ **\<sezione >** ](section-element.md) | Contiene una dichiarazione della sezione di configurazione. |
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Se si dichiara un gruppo di sezioni, viene creato un tag del contenitore per le sezioni di configurazione e si garantisce che non vi siano conflitti di denominazione con le sezioni di configurazione definite da un altro utente. È possibile annidare\<elementi di **> sectionGroup** all'interno dell'altro.
 

@@ -1,14 +1,13 @@
 ---
 title: Integrazione continua (CI) con .NET Core SDK e strumenti
 description: Informazioni su come usare il .NET Core SDK e i relativi strumenti nel server di compilazione con integrazione continua.
-author: mairaw
 ms.date: 05/18/2017
-ms.openlocfilehash: 65d062fce2f364932ebf8091bd9c6cdef561b633
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: bdb3913cbe588377d9fbee0f1c054e682629ac96
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714125"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215237"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Uso di .NET Core SDK e dei relativi strumenti in integrazione continua
 
@@ -31,7 +30,7 @@ L'uso dello script di installazione consente di installare il sistema senza priv
 Lo script di installazione viene automatizzato per essere eseguito all'inizio della compilazione per recuperare e installare la versione necessaria dell'SDK. La *versione necessaria* è la versione dell'SDK più adatta per compilare i progetti. Lo script consente di installare l'SDK in una directory locale del server, eseguire gli strumenti dal percorso di installazione e quindi pulire (o consentire al servizio CI di eseguire la pulizia) al termine della compilazione. Ciò consente incapsulamento e isolamento per l'intero processo di compilazione. I riferimenti agli script di installazione sono reperibili nell'articolo [dotnet-install](dotnet-install-script.md).
 
 > [!NOTE]
-> **Azure DevOps Services**
+> **Servizi di Azure DevOps**
 >
 > Quando si usa lo script di installazione, le dipendenze native non vengono installate automaticamente. È necessario installare le dipendenze native, se non sono già presenti nel sistema operativo. Per altre informazioni, vedere [dipendenze e requisiti di .NET Core](../install/dependencies.md?tabs=netcore30&pivots=os-linux).
 

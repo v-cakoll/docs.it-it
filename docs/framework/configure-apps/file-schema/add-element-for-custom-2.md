@@ -7,14 +7,12 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 0d4ddb53-eb2b-49c0-9c33-a8dec5c39b46
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ac07fc9ba6f030209a5e0d0160689fab95bc1b4a
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 57722f3518fad12cb8e6e35d68f40bb8465bdd86
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088756"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215443"
 ---
 # <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<aggiungere > elemento per NameValueSectionHandler e DictionarySectionHandler
 
@@ -30,12 +28,12 @@ Aggiunge le impostazioni dell'applicazione personalizzata. Ogni **\<Aggiungi tag
 <add key="key" value="value" />
 ```
 
-## <a name="attributes"></a>Attributi
+## <a name="attributes"></a>Attributes
 
 | Attributo | Descrizione |
 | --------- | ----------- |
 | **key**   | Attributo obbligatorio.<br><br>Specifica il nome dell'impostazione. |
-| **valore** | Attributo obbligatorio.<br><br>Specifica il valore dell'impostazione. |
+| **value** | Attributo obbligatorio.<br><br>Specifica il valore dell'impostazione. |
 
 ## <a name="parent-element"></a>Elemento padre
 
@@ -45,7 +43,7 @@ Aggiunge le impostazioni dell'applicazione personalizzata. Ogni **\<Aggiungi tag
 
 ## <a name="child-elements"></a>Elementi figlio
 
-Nessuno
+nessuno
 
 ## <a name="example"></a>Esempio
 

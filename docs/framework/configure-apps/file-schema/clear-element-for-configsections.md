@@ -7,22 +7,20 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: 77f1d761-ff45-4001-8f36-3a3e5c41fa63
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a45572d0dcb2737558e11f5c38ac2ccc338c754a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e8c9b0479bba839a74dff300f0766838b5d99c8d
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119090"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214834"
 ---
 # <a name="clear-element-for-configsections"></a>\<elemento clear > per \<configSections >
 
 Cancella tutte le sezioni e i gruppi di sezioni definiti in precedenza.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp;[ **\<configSections>** ](configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
+&nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<cancella >**
 
 ## <a name="syntax"></a>Sintassi
 
@@ -32,19 +30,19 @@ Cancella tutte le sezioni e i gruppi di sezioni definiti in precedenza.
 
 ## <a name="attribute"></a>Attributo
 
-|           | description |
+|           | Descrizione |
 | --------- | ----------- |
-| **name**  | Attributo obbligatorio.<br><br>Specifica il nome della sezione o del gruppo di sezioni da rimuovere. |
+| **nome**  | Attributo obbligatorio.<br><br>Specifica il nome della sezione o del gruppo di sezioni da rimuovere. |
 
 ## <a name="parent-element"></a>Elemento padre
 
-|     | description |
+|     | Descrizione |
 | --- | ----------- |
 | [ **\<configSections >** Elemento](configsections-element-for-configuration.md) | Contiene la sezione di configurazione e le dichiarazioni dello spazio dei nomi. |
 
-## <a name="child-elements"></a>Elemento figlio
+## <a name="child-elements"></a>Elementi figlio
 
-None
+nessuno
 
 ## <a name="remarks"></a>Osservazioni
 

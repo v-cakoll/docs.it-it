@@ -1,7 +1,7 @@
 ---
 title: Tipi numerici a virgola mobile - Riferimenti per C#
-description: Panoramica dei tipi a virgola mobile incorporati di C#
-ms.date: 10/22/2019
+description: 'Informazioni sui tipi a C# virgola mobile predefiniti: float, Double e Decimal'
+ms.date: 02/10/2020
 f1_keywords:
 - float
 - float_CSharpKeyword
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 9c8b11f9337ee9de90f2d4d96b5be162713bfcbd
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 95b7f266654bbbcdcd0f81e3aa11cfc94af9f0e5
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093214"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215246"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Tipi numerici a virgola mobile (riferimenti per C#)
 
@@ -50,19 +50,21 @@ Il valore predefinito di ogni tipo a virgola mobile è zero `0`. Ogni tipo a vir
 
 Dato che il tipo `decimal` è caratterizzato da una maggiore precisione e da un intervallo più piccolo rispetto a `float` e `double`, è appropriato per calcoli finanziari e monetari.
 
-In un'espressione è possibile combinare tipi [integrali](integral-numeric-types.md) e tipi a virgola mobile. In questo caso i tipi integrali vengono convertiti in tipi a virgola mobile. La valutazione dell'espressione viene eseguita in base alle regole seguenti:
+È possibile combinare i tipi [integrali](integral-numeric-types.md) e i tipi `float` e `double` in un'espressione. In questo caso, i tipi integrali vengono convertiti in modo implicito in uno dei tipi a virgola mobile e, se necessario, il tipo `float` viene convertito in modo implicito in `double`. L'espressione viene valutata nel modo seguente:
 
-- Se uno dei tipi a virgola mobile è `double`, l'espressione restituisce `double`o a [bool](bool.md) nei confronti relazionali e di uguaglianza.
-- Se non è presente alcun tipo di `double` nell'espressione, l'espressione restituisce `float`o a [bool](bool.md) nei confronti relazionali e di uguaglianza.
+- Se è presente `double` tipo nell'espressione, l'espressione restituisce `double`o per [`bool`](bool.md) nei confronti relazionali e di uguaglianza.
+- Se non è presente alcun tipo di `double` nell'espressione, l'espressione restituisce `float`o per `bool` nei confronti relazionali e di uguaglianza.
 
-Un'espressione a virgola mobile può contenere gli insiemi di valori seguenti:
+È anche possibile combinare tipi integrali e il tipo di `decimal` in un'espressione. In questo caso, i tipi integrali vengono convertiti in modo implicito nel tipo `decimal` e l'espressione restituisce `decimal`o per `bool` nei confronti relazionali e di uguaglianza.
 
-- Zero positivo e negativo
-- Infinito positivo e negativo
-- Non un numero
-- Insieme finito di valori diversi da zero
+Non è possibile combinare il tipo di `decimal` con i tipi di `float` e `double` in un'espressione. In questo caso, se si desidera eseguire operazioni aritmetiche, di confronto o di uguaglianza, è necessario convertire in modo esplicito gli operandi da o nel tipo `decimal`, come illustrato nell'esempio seguente:
 
-Per altre informazioni su questi valori, vedere lo standard IEEE per l'aritmetica a virgola mobile binaria, disponibile nel sito Web [IEEE](https://www.ieee.org).
+```csharp-interactive
+double a = 1.0;
+decimal b = 2.1m;
+Console.WriteLine(a + (double)b);
+Console.WriteLine((decimal)a + b);
+```
 
 È possibile usare [stringhe di formato numerico standard](../../../standard/base-types/standard-numeric-format-strings.md) oppure [stringhe di formato numerico personalizzato](../../../standard/base-types/custom-numeric-format-strings.md) per formattare un valore a virgola mobile.
 

@@ -8,14 +8,12 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), failed QueryInterface
 - managed debugging assistants (MDAs), failed QueryInterface
 ms.assetid: 902dc863-34b3-477c-b433-b8a6bb6133c6
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fec1bfb402f3b394ceb36590c3a880f82c5cb101
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4c36ec514645a38ef1228e76bdf6dbd06e886bae
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052788"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217512"
 ---
 # <a name="failedqi-mda"></a>MDA failedQI
 L'assistente al debug gestito `failedQI` viene attivato quando il runtime chiama `QueryInterface` su un puntatore a interfaccia COM per conto di un Runtime Callable Wrapper (RWC) e la chiamata `QueryInterface` non riesce.  

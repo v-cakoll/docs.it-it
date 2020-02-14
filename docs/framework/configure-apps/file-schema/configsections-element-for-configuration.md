@@ -7,38 +7,36 @@ helpviewer_keywords:
 - configSections Element
 - <configSections> Element
 ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6024144b6f12df22369366f04c3cbad02c5011d5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5b71eb81769db1188f97b1646a608df172ff56c5
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119024"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214829"
 ---
 # <a name="configsections-element-for-configuration"></a>\<elemento > configSections per \<Configuration >
 
 Contiene la sezione di configurazione e le dichiarazioni dello spazio dei nomi.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp; **\<configSections>**
+&nbsp;&nbsp; **\<configSections >**
 
-## <a name="attributes"></a>Attributi
+## <a name="attributes"></a>Attributes
 
-None
+nessuno
 
 ## <a name="parent-element"></a>Elemento padre
 
-|     | description |
+|     | Descrizione |
 | --- | ----------- |
 | [ **\<configuration>** ](configuration-element.md) | Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework. |
 
-## <a name="child-elements"></a>Elemento figlio
+## <a name="child-elements"></a>Elementi figlio
 
-|     | description |
+|     | Descrizione |
 | --- | ----------- |
 | [ **\<sezione >** ](section-element.md) | Contiene una dichiarazione della sezione di configurazione. |
-| [ **\<sectionGroup>** ](sectiongroup-element-for-configsections.md) | Definisce uno spazio dei nomi per le sezioni di configurazione. |
+| [ **\<sectionGroup >** ](sectiongroup-element-for-configsections.md) | Definisce uno spazio dei nomi per le sezioni di configurazione. |
 | [ **\<remove>** ](remove-element-for-configsections.md) | Rimuove una sezione o un gruppo di sezioni predefinito. |
 | [ **\<clear>** ](clear-element-for-configsections.md) | Cancella tutte le sezioni e i gruppi di sezioni definiti in precedenza. |
 

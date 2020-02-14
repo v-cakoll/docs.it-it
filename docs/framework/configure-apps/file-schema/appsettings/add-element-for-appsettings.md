@@ -7,14 +7,12 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 865c693bf8f23bf050064ac097b72aa6fa3b371e
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 5c7de79ec626966e71d461dd3865b294a8979db2
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088755"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214791"
 ---
 # <a name="add-element-for-appsettings"></a>\<aggiungere > elemento per \<appSettings >
 
@@ -32,12 +30,12 @@ Aggiunge un'impostazione dell'applicazione personalizzata.
 </appSettings>
 ```
 
-## <a name="attributes"></a>Attributi
+## <a name="attributes"></a>Attributes
 
 |           | Descrizione |
 | --------- | ----------- |
 | **key**   | Attributo obbligatorio.<br><br>Specifica il nome della chiave da aggiungere. |
-| **valore** | Attributo obbligatorio.<br><br>Specifica il valore della chiave da aggiungere. |
+| **value** | Attributo obbligatorio.<br><br>Specifica il valore della chiave da aggiungere. |
 
 ## <a name="parent-element"></a>Elemento padre
 
@@ -47,7 +45,7 @@ Aggiunge un'impostazione dell'applicazione personalizzata.
 
 ## <a name="child-elements"></a>Elementi figlio
 
-Nessuno
+nessuno
 
 ## <a name="example"></a>Esempio
 

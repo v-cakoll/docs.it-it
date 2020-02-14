@@ -7,14 +7,12 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), marshaling
 - MDAs (managed debugging assistants), marshaling
 ms.assetid: 5433b1f8-b0e5-40c9-a49a-0e5bd213363d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6a6399828f934ad97cde9f36d75cfe3bfc410885
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f7bb630d3a1e832cf6bf083ce4cf603034248ceb
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052494"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217326"
 ---
 # <a name="marshaling-mda"></a>MDA marshalling
 L'assistente al debug gestito `marshaling` viene attivato quando CLR configura le informazioni di marshalling per un parametro di un metodo o un campo di una struttura. Questo assistente al debug gestito non funziona per gli assembly con compilazione JIT.  
@@ -31,7 +29,7 @@ name="assembly!Namespace.Class::myChar
 ```  
   
 ## <a name="configuration"></a>Configurazione  
- La configurazione dell'assistente al debug gestito consente di filtrare le informazioni di marshalling restituite in base ai nomi dei campi o dei metodi coinvolti.  Il seguente esempio mostra l'uso degli elementi `methodFilter`, `fieldFilter`e `match` per specificare i filtri.  L'impostazione `name` dell'attributo su un asterisco\*() corrisponderà a tutti gli elementi.  
+ La configurazione dell'assistente al debug gestito consente di filtrare le informazioni di marshalling restituite in base ai nomi dei campi o dei metodi coinvolti.  Il seguente esempio mostra l'uso degli elementi `methodFilter`, `fieldFilter`e `match` per specificare i filtri.  L'impostazione dell'attributo `name` su un asterisco (\*) corrisponderà a tutti gli elementi.  
   
 ```xml  
 <mdaConfig>  

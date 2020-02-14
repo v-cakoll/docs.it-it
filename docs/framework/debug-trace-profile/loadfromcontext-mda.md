@@ -7,14 +7,12 @@ helpviewer_keywords:
 - LoadFrom context
 - LoadFromContext MDA
 ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 89605a119e8251ffd577ff402366dff0fd4af4d7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 28ef6e12c82cf5ca56962756b9ea964d0ae9baaa
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052524"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216165"
 ---
 # <a name="loadfromcontext-mda"></a>MDA loadFromContext
 L'assistente al debug gestito `loadFromContext` viene attivato se viene caricato un assembly nel contesto `LoadFrom`. Questa situazione può verificarsi come risultato di una chiamata di <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> o di altri metodi simili.  

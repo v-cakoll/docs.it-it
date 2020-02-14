@@ -10,14 +10,12 @@ helpviewer_keywords:
 - loader locks
 - locks, threads
 ms.assetid: 8c10fa02-1b9c-4be5-ab03-451d943ac1ee
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c3e8769ec972ec76d04d2f22368fdde99de9c6de
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cd77640a6566f3fd94631dac184ae5bc3ffab5d1
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052549"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217346"
 ---
 # <a name="loaderlock-mda"></a>MDA loaderLock
 L'assistente al debug gestito `loaderLock` rileva i tentativi di esecuzione di codice gestito in un thread che contiene il blocco del caricatore del sistema operativo Microsoft Windows.  Qualsiasi esecuzione di questo tipo non è valida perché può comportare il verificarsi di deadlock e l'uso di DLL prima che siano state inizializzate dal caricatore del sistema operativo.  

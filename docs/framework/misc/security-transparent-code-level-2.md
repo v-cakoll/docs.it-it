@@ -1,5 +1,5 @@
 ---
-title: Codice SecurityTransparent, livello 2
+title: Codice trasparente per la sicurezza, livello 2
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transparency
@@ -7,16 +7,14 @@ helpviewer_keywords:
 - security-transparent code
 - security-critical code
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ea782b346f6c53664a8aeb736c7d7a4509d83985
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 7ac5660c2c431505f4992f5e687974c2b9d06672
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974937"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217004"
 ---
-# <a name="security-transparent-code-level-2"></a>Codice SecurityTransparent, livello 2
+# <a name="security-transparent-code-level-2"></a>Codice trasparente per la sicurezza, livello 2
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
@@ -72,7 +70,7 @@ Le regole seguenti si applicano all'uso degli attributi a livello di assembly.
 
 Nella tabella seguente viene confrontato il comportamento a livello di assembly per il livello 2 con livello 1.
 
-|Assembly (attributo)|Livello 2|Livello 1|
+|Attributo assembly|Livello 2|Livello 1|
 |------------------------|-------------|-------------|
 |Nessun attributo su un assembly parzialmente attendibile|I tipi e i membri sono Transparent per impostazione predefinita, ma possono essere SecurityCritical o SecuritySafeCritical.|Tutti i tipi e i membri sono Transparent.|
 |Nessun attributo|Se non si specificano attributi, Common Language Runtime determina automaticamente le regole di trasparenza. Tutti i tipi e i membri sono SecurityCritical, tranne nei casi in cui tale caratteristica viola una regola di ereditarietà.|In un assembly completamente attendibile (nella Global Assembly Cache o identificato come con attendibilità totale in `AppDomain`) tutti i tipi sono Transparent e tutti i membri sono SecuritySafeCritical.|
@@ -115,7 +113,7 @@ In questa sezione, l'ordine seguente è assegnato al codice `Transparent`, `Crit
 
 Nella tabella seguente vengono elencati i criteri dell'ereditarietà dei tipi consentiti.
 
-|Classe base|La classe derivata può essere|
+|Classe di base|La classe derivata può essere|
 |----------------|--------------------------|
 |`Transparent`|`Transparent`|
 |`Transparent`|`SafeCritical`|
@@ -126,7 +124,7 @@ Nella tabella seguente vengono elencati i criteri dell'ereditarietà dei tipi co
 
 Nella tabella seguente vengono elencati i criteri di ereditarietà dei tipi non consentiti.
 
-|Classe base|La classe derivata non può essere|
+|Classe di base|La classe derivata non può essere|
 |----------------|-----------------------------|
 |`SafeCritical`|`Transparent`|
 |`Critical`|`Transparent`|

@@ -7,14 +7,12 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fff5a5c2a523480f2eaebb127ec98ff6e9908acf
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: f6d860f35d22002030ffa3d09dd0d8a96116bf5e
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088706"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214747"
 ---
 # <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<elemento clear > per NameValueSectionHandler e DictionarySectionHandler
 
@@ -30,9 +28,9 @@ Cancella tutte le impostazioni definite in precedenza in una sezione.
 <clear />
 ```
 
-## <a name="attributes"></a>Attributi
+## <a name="attributes"></a>Attributes
 
-Nessuno
+nessuno
 
 ## <a name="parent-element"></a>Elemento padre
 
@@ -42,9 +40,9 @@ Nessuno
 
 ## <a name="child-elements"></a>Elementi figlio
 
-Nessuno
+nessuno
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 È possibile utilizzare l'elemento **\<clear >** per rimuovere tutte le impostazioni dall'applicazione definite a un livello superiore nella gerarchia dei file di configurazione.
 

@@ -12,14 +12,12 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - garbage collection, run-time errors
 ms.assetid: 7417f837-805e-4fed-a430-ca919c8421dc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: afc0fd47e51723a7b3ba1b07dffc49260f88917d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f7e6334e20a6e0db1d52307a833de0ecd0d74cc4
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052778"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217482"
 ---
 # <a name="gcmanagedtounmanaged-mda"></a>MDA gcManagedToUnmanaged
 L'assistente al debug gestito `gcManagedToUnmanaged` determina un'operazione di Garbage Collection ogni volta che un thread passa dal codice gestito al codice non gestito.  

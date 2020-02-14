@@ -1,5 +1,5 @@
 ---
-title: Nozioni fondamentali sulla sicurezza per l’accesso al codice
+title: Nozioni di base sulla sicurezza dall'accesso di codice
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,16 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - security [.NET Framework], code access security
 ms.assetid: 4eaa6535-d9fe-41a1-91d8-b437cfc16921
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d77683dde24eeec5de7f1e541a6cc86f3b0c6617
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 08d708e8f98bd2fe06757df3033a512e2fe1f3c2
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205628"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215901"
 ---
-# <a name="code-access-security-basics"></a>Nozioni fondamentali sulla sicurezza per l’accesso al codice
+# <a name="code-access-security-basics"></a>Nozioni di base sulla sicurezza dall'accesso di codice
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
@@ -26,13 +24,13 @@ L'host predefinito per le applicazioni desktop consente l'esecuzione del codice 
 
 È necessario avere familiarità con i concetti attinenti alla sicurezza dall'accesso di codice, illustrati di seguito, per poter scrivere applicazioni efficienti basate su Common Language Runtime:
 
-- **Codice indipendente dai tipi**: Il codice indipendente dai tipi è codice che accede ai tipi solo in modalità ben definite e consentite. Dato un riferimento a un oggetto valido, ad esempio, il codice indipendente dai tipi può accedere solo a offset fissi corrispondenti ai membri di campo effettivi. Se tuttavia il codice accede alla memoria a offset arbitrari esterni all'intervallo di memoria appartenente ai campi dell'oggetto esposti in modo pubblico, non sarà indipendente dai tipi. Per consentire al codice di usufruire dei vantaggi della sicurezza per l'accesso al codice, è necessario usare un compilatore che generi codice indipendente dai tipi verificabile. Per ulteriori informazioni, vedere la sezione relativa alla [scrittura di codice indipendente dai tipi verificabile](#typesafe_code) più avanti in questo argomento.
+- **Codice indipendente**dai tipi: il codice indipendente dai tipi è codice che accede ai tipi solo in modalità ben definite e consentite. Dato un riferimento a un oggetto valido, ad esempio, il codice indipendente dai tipi può accedere solo a offset fissi corrispondenti ai membri di campo effettivi. Se tuttavia il codice accede alla memoria a offset arbitrari esterni all'intervallo di memoria appartenente ai campi dell'oggetto esposti in modo pubblico, non sarà indipendente dai tipi. Per consentire al codice di usufruire dei vantaggi della sicurezza per l'accesso al codice, è necessario usare un compilatore che generi codice indipendente dai tipi verificabile. Per ulteriori informazioni, vedere la sezione relativa alla [scrittura di codice indipendente dai tipi verificabile](#typesafe_code) più avanti in questo argomento.
 
-- **Sintassi imperativa e**dichiarativa: Il codice destinato a Common Language Runtime può interagire con il sistema di sicurezza richiedendo autorizzazioni, richiedendo che i chiamanti dispongano di autorizzazioni specifiche ed eseguendo l'override di alcune impostazioni di sicurezza (con privilegi sufficienti). Per interagire a livello di codice con il sistema di sicurezza di .NET Framework, è necessario usare due forme differenti di sintassi: la sintassi dichiarativa e la sintassi imperativa. Le chiamate dichiarative sono eseguite mediante l'impiego di attributi, le chiamate imperative mediante l'uso di nuove istanze di classi all'interno del codice. Alcune chiamate possono essere eseguite solo in modo imperativo, altre solo in modo dichiarativo e altre ancora in nessun modo.
+- **Sintassi dichiarativa e imperativa**: il codice destinato a Common Language Runtime può interagire con il sistema di sicurezza richiedendo le autorizzazioni, richiedendo che i chiamanti dispongano di autorizzazioni specifiche e sovrascrivendo alcune impostazioni di sicurezza (con privilegi sufficienti). Per interagire a livello di codice con il sistema di sicurezza di .NET Framework, è necessario usare due forme differenti di sintassi: la sintassi dichiarativa e la sintassi imperativa. Le chiamate dichiarative sono eseguite mediante l'impiego di attributi, le chiamate imperative mediante l'uso di nuove istanze di classi all'interno del codice. Alcune chiamate possono essere eseguite solo in modo imperativo, altre solo in modo dichiarativo e altre ancora in nessun modo.
 
-- **Librerie di classi sicure**: Una libreria di classi protetta utilizza le richieste di sicurezza per garantire che i chiamanti della libreria dispongano delle autorizzazioni per accedere alle risorse esposte dalla libreria. Una libreria di classi protetta potrebbe ad esempio usare un metodo per la creazione di file mediante il quale si impone che i chiamanti dispongano di specifiche autorizzazioni per creare file. In .NET Framework sono disponibili librerie di classi protette. È necessario conoscere esattamente le autorizzazioni necessarie per l'accesso a ognuna delle librerie usate dal codice. Per ulteriori informazioni, vedere la sezione [utilizzo delle librerie di classi protette](#secure_library) più avanti in questo argomento.
+- **Librerie di classi sicure**: una libreria di classi protetta usa le richieste di sicurezza per garantire che i chiamanti della libreria dispongano delle autorizzazioni per accedere alle risorse esposte dalla libreria. Una libreria di classi protetta potrebbe ad esempio usare un metodo per la creazione di file mediante il quale si impone che i chiamanti dispongano di specifiche autorizzazioni per creare file. In .NET Framework sono disponibili librerie di classi protette. È necessario conoscere esattamente le autorizzazioni necessarie per l'accesso a ognuna delle librerie usate dal codice. Per ulteriori informazioni, vedere la sezione [utilizzo delle librerie di classi protette](#secure_library) più avanti in questo argomento.
 
-- **Codice trasparente**: A partire da .NET Framework 4, oltre a identificare autorizzazioni specifiche, è necessario determinare se il codice deve essere eseguito come SecurityTransparent. Il codice SecurityTransparent non può chiamare tipi o membri identificati come SecurityCritical. Questa regola si applica sia alle applicazioni completamente attendibili che a quelle parzialmente attendibili. Per altre informazioni, vedere [codice SecurityTransparent](security-transparent-code.md).
+- **Codice Transparent**: a partire dalla .NET Framework 4, oltre a identificare autorizzazioni specifiche, è necessario determinare se il codice deve essere eseguito come SecurityTransparent. Il codice SecurityTransparent non può chiamare tipi o membri identificati come SecurityCritical. Questa regola si applica sia alle applicazioni completamente attendibili che a quelle parzialmente attendibili. Per altre informazioni, vedere [codice SecurityTransparent](security-transparent-code.md).
 
 <a name="typesafe_code"></a>
 
@@ -103,7 +101,7 @@ public class MyClass
 
 La sintassi di sicurezza imperativa invia una chiamata di sicurezza mediante la creazione di una nuova istanza dell'oggetto autorizzazione che si vuole richiamare. È possibile usare la sintassi imperativa per eseguire domande e override, ma non richieste.
 
-Prima di eseguire la chiamata di sicurezza, è necessario inizializzare i dati dello stato dell'oggetto di autorizzazione in modo che rappresenti la forma specifica di autorizzazione necessaria. Ad esempio, quando si crea <xref:System.Security.Permissions.FileIOPermission> un oggetto, è possibile usare il costruttore per inizializzare l'oggetto **FileIOPermission** in modo che rappresenti l'accesso illimitato a tutti i file o nessun accesso ai file. In alternativa, è possibile utilizzare un oggetto **FileIOPermission** diverso, passando i parametri che indicano il tipo di accesso che si desidera venga rappresentato dall'oggetto (ovvero lettura, Accodamento o scrittura) e i file che si desidera proteggere dall'oggetto.
+Prima di eseguire la chiamata di sicurezza, è necessario inizializzare i dati dello stato dell'oggetto di autorizzazione in modo che rappresenti la forma specifica di autorizzazione necessaria. Quando si crea un oggetto <xref:System.Security.Permissions.FileIOPermission>, ad esempio, è possibile utilizzare il costruttore per inizializzare l'oggetto **FileIOPermission** in modo che rappresenti l'accesso illimitato a tutti i file o nessun accesso ai file. In alternativa, è possibile utilizzare un oggetto **FileIOPermission** diverso, passando i parametri che indicano il tipo di accesso che si desidera venga rappresentato dall'oggetto (ovvero lettura, Accodamento o scrittura) e i file che si desidera proteggere dall'oggetto.
 
 Oltre a usare la sintassi di sicurezza imperativa per richiamare un singolo oggetto di sicurezza, è possibile usarla per inizializzare un gruppo di autorizzazioni in un set di autorizzazioni. Questa tecnica è ad esempio l'unico modo per eseguire in modo affidabile chiamate [Assert](using-the-assert-method.md) su più autorizzazioni in un unico metodo. Usare le classi <xref:System.Security.PermissionSet> e <xref:System.Security.NamedPermissionSet> per creare un gruppo di autorizzazioni e quindi chiamare il metodo appropriato per richiamare la chiamata di sicurezza desiderato.
 
@@ -154,7 +152,7 @@ public class MyClass {
 
 È necessario che la maggior parte delle applicazione e dei componenti, fatta eccezione per le librerie protette, non chiami direttamente codice non gestito. Le ragioni sono molteplici. Se il codice chiama direttamente codice non gestito, in molti casi non ne sarà autorizzata l'esecuzione, poiché per chiamare codice nativo è necessario che il codice disponga di un livello di attendibilità elevato. Se i criteri vengono modificati in modo da consentire l'esecuzione di tale applicazione, potrebbe risultarne seriamente indebolita la protezione del sistema e l'applicazione sarebbe libera di eseguire quasi ogni tipo di operazione.
 
-È inoltre probabile che il codice che dispone dell'autorizzazione per l'accesso a codice sia in grado di effettuare qualsiasi operazione chiamando un'API non gestita. Ad esempio, il codice che dispone dell'autorizzazione per chiamare codice non gestito non deve <xref:System.Security.Permissions.FileIOPermission> accedere a un file, ma può semplicemente chiamare direttamente un'API file non gestita (Win32), ignorando l'API del file gestito che richiede **FileIOPermission**. Se il codice gestito è autorizzato a chiamare codice non gestito e lo chiama direttamente, il sistema di protezione non sarà in grado di imporre in maniera affidabile restrizioni di protezione, dal momento che non è possibile imporre tali restrizioni su codice non gestito.
+È inoltre probabile che il codice che dispone dell'autorizzazione per l'accesso a codice sia in grado di effettuare qualsiasi operazione chiamando un'API non gestita. Ad esempio, il codice che dispone dell'autorizzazione per chiamare il codice non gestito non necessita di <xref:System.Security.Permissions.FileIOPermission> per accedere a un file. può semplicemente chiamare direttamente un'API file non gestita (Win32), ignorando l'API del file gestito che richiede **FileIOPermission**. Se il codice gestito è autorizzato a chiamare codice non gestito e lo chiama direttamente, il sistema di protezione non sarà in grado di imporre in maniera affidabile restrizioni di protezione, dal momento che non è possibile imporre tali restrizioni su codice non gestito.
 
 Se si vuole che l'applicazione esegua un'operazione che richiede l'accesso a codice non gestito, sarà necessario usare, se disponibile, una classe gestita attendibile che esegua il wrapping della funzionalità richiesta. Non creare autonomamente una classe wrapper se ne esiste già una in una libreria di classi protetta. La classe wrapper, a cui è necessario concedere un elevato livello di attendibilità perché le sia consentito chiamare codice non gestito, impone ai chiamanti il possesso delle opportune autorizzazioni. Se si usa una classe wrapper, è necessario che il codice richieda e ottenga esclusivamente le autorizzazioni da essa pretese.
 
@@ -167,5 +165,5 @@ Se si vuole che l'applicazione esegua un'operazione che richiede l'accesso a cod
 - [Assert](using-the-assert-method.md)
 - [Sicurezza dall'accesso di codice](code-access-security.md)
 - [Nozioni fondamentali sulla sicurezza per l’accesso al codice](code-access-security-basics.md)
-- [Attributi](../../standard/attributes/index.md)
+- [Attributes (Attributi)](../../standard/attributes/index.md)
 - [Metadati e componenti auto-descrittivi](../../standard/metadata-and-self-describing-components.md)

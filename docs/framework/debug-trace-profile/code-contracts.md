@@ -7,14 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Code contracts
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 103d668dd7a7436fd1acdccdc0afc2431ed8372a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b60f992cf9d934ed622c89a49c491a80377fb6fe
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975002"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216708"
 ---
 # <a name="code-contracts"></a>Contratti di codice
 
@@ -38,7 +36,7 @@ La maggior parte dei metodi nella classe dei contratti sono compilati in modo co
 
 Per gli strumenti e le istruzioni dettagliate per l'uso dei contratti di codice, vedere [contratti di codice](https://marketplace.visualstudio.com/items?itemName=RiSEResearchinSoftwareEngineering.CodeContractsforNET) nel sito di Visual Studio Marketplace.
 
-## <a name="preconditions"></a>Precondizioni
+## <a name="preconditions"></a>Preconditions
 
 È possibile esprimere delle precondizioni usando il metodo <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=nameWithType>. Le precondizioni specificano lo stato nel momento in cui viene richiamato un metodo. In genere, vengono usate per specificare valori di parametro validi. Tutti i membri menzionati nelle precondizioni devono essere accessibili almeno quanto il metodo stesso; in caso contrario, la precondizione potrebbe non essere compresa da tutti i chiamanti di un metodo. La condizione non deve avere effetti collaterali. Il comportamento in fase di esecuzione delle precondizioni con errori è determinato dall'analizzatore di runtime.
 
@@ -147,7 +145,7 @@ I seguenti metodi possono essere usati solo all'interno di postcondizioni:
       Come per il metodo <xref:System.Diagnostics.Contracts.Contract.OldValue%2A>, è possibile omettere il parametro di tipo generico quando il compilatore è in grado di dedurre il tipo. Il rewriter del contratto sostituisce la chiamata al metodo con il valore del parametro `out`. Il metodo <xref:System.Diagnostics.Contracts.Contract.ValueAtReturn%2A> può essere visualizzato solo nelle postcondizioni. L'argomento del metodo deve essere un parametro `out` o un campo del parametro `out` di una struttura. Quest'ultimo è utile anche in caso di riferimento a campi nella postcondizione di un costruttore della struttura.
 
       > [!NOTE]
-      > Attualmente, gli strumenti di analisi dei contratti di codice non verificano se i parametri `out` vengono inizializzati correttamente e ne ignorano la menzione nella postcondizione. Quindi, nell'esempio precedente, se la riga dopo il contratto avesse usato il valore `x` anziché assegnare un numero intero, un compilatore non avrebbe generato l'errore corretto. Tuttavia, in una build in cui il simbolo del preprocessore CONTRACTS_FULL non viene definito (ad esempio in una build di rilascio), il compilatore genererà un errore.
+      > Attualmente, gli strumenti di analisi dei contratti di codice non verificano se i parametri `out` vengono inizializzati correttamente e ne ignorano la menzione nella postcondizione. Quindi, nell'esempio precedente, se la riga dopo il contratto avesse usato il valore `x` anziché assegnare un numero intero, un compilatore non avrebbe generato l'errore corretto. Tuttavia, in una build in cui il simbolo del preprocessore CONTRACTS_FULL non viene definito (ad esempio una build di rilascio), il compilatore genererà un errore.
 
 ## <a name="invariants"></a>Invarianti
 
@@ -169,7 +167,7 @@ Le invarianti vengono definite in modo condizionale dal simbolo del preprocessor
 
 <a name="usage_guidelines"></a>
 
-## <a name="usage-guidelines"></a>Linee guida di utilizzo
+## <a name="usage-guidelines"></a>Linee guida per l'uso
 
 ### <a name="contract-ordering"></a>Ordine dei contratti
 
@@ -206,7 +204,7 @@ Gli strumenti dei contratti di codice presuppongono che i seguenti elementi di c
 
 <a name="visibility"></a>
 
-### <a name="visibility"></a>Visibility
+### <a name="visibility"></a>Visibilità
 
 Tutti i membri menzionati in un contratto devono essere visibili almeno quanto il metodo in cui vengono visualizzati. Un campo privato, ad esempio, non può essere menzionato in una precondizione per un metodo pubblico; i client non possono convalidare un simile contratto prima di chiamare il metodo. Tuttavia, se il campo è contrassegnato con <xref:System.Diagnostics.Contracts.ContractPublicPropertyNameAttribute>, è esente da queste regole.
 

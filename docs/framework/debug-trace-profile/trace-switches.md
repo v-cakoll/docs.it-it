@@ -12,19 +12,17 @@ helpviewer_keywords:
 - trace switches
 - trace switches, creating custom
 ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b796d79fc6acf7d54aac7c69d376e587144d14d1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c164e26c6757094b9820af14a098229ab11eb137
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052252"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217201"
 ---
 # <a name="trace-switches"></a>Opzioni di traccia
 Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output di traccia. Si tratta di oggetti presenti nel codice che possono essere configurati esternamente tramite il file CONFIG. Esistono tre tipi di opzioni di traccia in .NET Framework, ossia le classi <xref:System.Diagnostics.BooleanSwitch> , <xref:System.Diagnostics.TraceSwitch> e <xref:System.Diagnostics.SourceSwitch> . La classe <xref:System.Diagnostics.BooleanSwitch> funge da opzione di attivazione o disabilitazione per diverse istruzioni di traccia. Le classi <xref:System.Diagnostics.TraceSwitch> e <xref:System.Diagnostics.SourceSwitch> consentono di attivare un'opzione per un particolare livello di tracciatura, in modo che vengano visualizzati i messaggi di traccia <xref:System.Diagnostics.Trace> o <xref:System.Diagnostics.TraceSource> specificati per quel livello e per tutti i livelli inferiori. Se si disabilita l'opzione, i messaggi di traccia non verranno visualizzati. Tutte queste classi derivano dalla classe**Switch**( **MustInherit**) astratta, come avviene per ogni opzione sviluppata dall'utente.  
   
- Le opzioni di traccia possono essere utili per filtrare informazioni. Può essere ad esempio necessario visualizzare ogni messaggio di traccia in un modulo di accesso ai dati, ma solo i messaggi di errore nel resto dell'applicazione. In questo caso, si usa un'opzione di traccia per il modulo di accesso ai dati e un'opzione per il resto dell'applicazione. Usando il file CONFIG per configurare le opzioni sulle impostazioni appropriate, è possibile controllare il tipo di messaggi di traccia ricevuti. Per altre informazioni, vedere [Procedura: Creare, inizializzare e configurare opzioni](how-to-create-initialize-and-configure-trace-switches.md)di traccia.  
+ Le opzioni di traccia possono essere utili per filtrare informazioni. Può essere ad esempio necessario visualizzare ogni messaggio di traccia in un modulo di accesso ai dati, ma solo i messaggi di errore nel resto dell'applicazione. In questo caso, si usa un'opzione di traccia per il modulo di accesso ai dati e un'opzione per il resto dell'applicazione. Usando il file CONFIG per configurare le opzioni sulle impostazioni appropriate, è possibile controllare il tipo di messaggi di traccia ricevuti. Per altre informazioni, vedere [Procedura: Creare, inizializzare e configurare opzioni di traccia](how-to-create-initialize-and-configure-trace-switches.md).  
   
  In genere un'applicazione distribuita viene eseguita con le opzioni disabilitate, in modo che non vengano visualizzati messaggi di traccia superflui o non sia necessario compilare file di log durante l'esecuzione dell'applicazione. Se si verifica un problema durante l'esecuzione dell'applicazione, è possibile arrestare l'applicazione, attivare le opzioni e riavviare l'applicazione. I messaggi di tracciatura verranno quindi visualizzati.  
   
@@ -47,10 +45,10 @@ Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output 
   
  Queste proprietà corrispondono ai valori da 1 a 4 dell'enumerazione **TraceLevel** . La tabella seguente elenca i livelli dell'enumerazione **TraceLevel** e i rispettivi valori.  
   
-|Valore enumerato|Valore Integer|Tipo di messaggio visualizzato o scritto in una destinazione di output specificata|  
+|Valore enumerato|Valore intero|Tipo di messaggio visualizzato o scritto in una destinazione di output specificata|  
 |----------------------|-------------------|---------------------------------------------------------------------------|  
-|Off|0|Nessuna|  
-|Error|1|Solo messaggi di errore.|  
+|Disattivato|0|nessuno|  
+|Errore|1|Solo messaggi di errore.|  
 |Avviso|2|Messaggi di avviso e messaggi di errore.|  
 |Info|3|Messaggi informativi, messaggi di avviso e messaggi di errore.|  
 |Dettagliato|4|Messaggi dettagliati, messaggi informativi, messaggi di avviso e messaggi di errore.|  
@@ -86,5 +84,5 @@ MessageBox.Show(myTraceSwitch.TraceVerbose.ToString());
 ## <a name="see-also"></a>Vedere anche
 
 - [Listener di traccia](trace-listeners.md)
-- [Procedura: Aggiungere istruzioni di traccia al codice dell'applicazione](how-to-add-trace-statements-to-application-code.md)
+- [Procedura: aggiungere istruzioni di traccia al codice dell'applicazione](how-to-add-trace-statements-to-application-code.md)
 - [Traccia e strumentazione di applicazioni](tracing-and-instrumenting-applications.md)

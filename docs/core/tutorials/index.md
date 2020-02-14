@@ -4,12 +4,12 @@ description: Seguire le esercitazioni per l'apprendimento di .NET Core per compi
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: 4e0acc357453d3bd3fb877e357264cc1aa715e4c
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: e9fc5544904fc5a1304dcce135e01b1895d3446b
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920432"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215174"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Scopri le esercitazioni su .NET Core e sugli strumenti di .NET Core SDK
 
@@ -41,12 +41,12 @@ Le esercitazioni seguenti includono informazioni e istruzioni sull'uso di .NET C
 - [Organizzazione e testing dei progetti con la interfaccia della riga di comando di .NET Core](testing-with-cli.md)
 - [Introduzione a F#](../../fsharp/get-started/get-started-command-line.md)
 
-## <a name="other"></a>Altro
+## <a name="other"></a>Altri
 
 - [Testing unità in .NET Core tramite il test dotnet](../testing/unit-testing-with-dotnet-test.md)
 - [Testing unità con MSTest e .NET Core](../testing/unit-testing-with-mstest.md)
 - [Sviluppo di librerie con strumenti multipiattaforma](libraries.md)
 - [Hosting di .NET Core da un codice nativo](netcore-hosting.md)
-- [Creare un modello personalizzato per dotnet new](cli-templates-create-item-template.md)
+- [Creare modelli per l'interfaccia della riga di comando](cli-templates-create-item-template.md)
 
 Per esercitazioni sullo sviluppo di applicazioni Web ASP.NET Core, vedere la [documentazione di ASP.NET Core](/aspnet/core/).

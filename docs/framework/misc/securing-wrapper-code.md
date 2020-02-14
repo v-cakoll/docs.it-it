@@ -7,14 +7,12 @@ helpviewer_keywords:
 - secure coding, wrapper code
 - code security, wrapper code
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ee78c1c1f92515472bb3ea3ce77405a5e3447fd9
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 3d38a4d4fd33798cf5987f5ce67305725ad9daec
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206112"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215838"
 ---
 # <a name="securing-wrapper-code"></a>Protezione del codice wrapper
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -76,13 +74,13 @@ ms.locfileid: "70206112"
 - [LinkDemand](link-demands.md) si verifica al momento della compilazione JIT (just-in-Time) e controlla solo il chiamante immediato. Questo controllo di sicurezza non verifica il chiamante del chiamante. Una volta passato questo controllo, non ne vengono eseguiti altri, indipendentemente dal numero di chiamate effettuate dal chiamante. Tuttavia, non esiste nemmeno alcuna protezione contro gli attacchi luring. Con **LinkDemand**, qualsiasi codice che supera il test e può fare riferimento al codice può potenzialmente interrompere la sicurezza, consentendo al codice dannoso di chiamare utilizzando il codice autorizzato. Pertanto, non utilizzare **LinkDemand** a meno che non sia possibile evitare tutte le debolezze possibili.  
   
     > [!NOTE]
-    > In .NET Framework 4, le <xref:System.Security.SecurityCriticalAttribute> richieste di collegamento sono state sostituite dall'attributo negli <xref:System.Security.SecurityRuleSet.Level2> assembly. È <xref:System.Security.SecurityCriticalAttribute> equivalente a una richiesta di collegamento per l'attendibilità totale; tuttavia, influiscono anche sulle regole di ereditarietà. Per altre informazioni su questa modifica, vedere [codice SecurityTransparent, livello 2](security-transparent-code-level-2.md).  
+    > In .NET Framework 4, le richieste di collegamento sono state sostituite dall'attributo <xref:System.Security.SecurityCriticalAttribute> in <xref:System.Security.SecurityRuleSet.Level2> assembly. Il <xref:System.Security.SecurityCriticalAttribute> è equivalente a una richiesta di collegamento per l'attendibilità totale; Tuttavia, influiscono anche sulle regole di ereditarietà. Per altre informazioni su questa modifica, vedere [codice SecurityTransparent, livello 2](security-transparent-code-level-2.md).  
   
  Le precauzioni aggiuntive necessarie quando si utilizza **LinkDemand** devono essere programmate singolarmente; il sistema di sicurezza può essere utile per l'applicazione. Ogni errore crea un punto di debolezza per la sicurezza. Tutto il codice autorizzato che usa il codice dell'utente deve essere responsabile dell'implementazione di altre misure di sicurezza tramite l'esecuzione delle operazioni seguenti:  
   
 - Limitare l'accesso del codice chiamante alla classe o all'assembly.  
   
-- Inserire nel codice chiamante gli stessi controlli di sicurezza visualizzati nel codice che viene chiamato e obbligare i chiamanti a fare lo stesso. Se, ad esempio, si scrive codice che chiama un metodo protetto con **LinkDemand** per <xref:System.Security.Permissions.SecurityPermission> con <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> il flag specificato, il metodo deve anche creare un **LinkDemand** (o **Demand**, che è più avanzato) per questa autorizzazione. L'eccezione è rappresentata dal caso in cui il codice utilizzi il metodo protetto da **LinkDemand**in un modo limitato che si decide sia sicuro, dato che altri meccanismi di protezione (ad esempio le richieste) nel codice. In questo caso eccezionale, il chiamante si assume la responsabilità di indebolire la protezione della sicurezza nel codice sottostante.  
+- Inserire nel codice chiamante gli stessi controlli di sicurezza visualizzati nel codice che viene chiamato e obbligare i chiamanti a fare lo stesso. Se, ad esempio, si scrive codice che chiama un metodo protetto con un **LinkDemand** per il <xref:System.Security.Permissions.SecurityPermission> con il flag di <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> specificato, il metodo deve anche creare un **LinkDemand** (o una **richiesta**più avanzata) per questa autorizzazione. L'eccezione è rappresentata dal caso in cui il codice utilizzi il metodo protetto da **LinkDemand**in un modo limitato che si decide sia sicuro, dato che altri meccanismi di protezione (ad esempio le richieste) nel codice. In questo caso eccezionale, il chiamante si assume la responsabilità di indebolire la protezione della sicurezza nel codice sottostante.  
   
 - Garantire che i chiamanti del codice non possano spingere il codice a chiamare il codice protetto per conto loro. In altre parole, i chiamanti non possono obbligare il codice autorizzato a passare parametri specifici al codice protetto o recuperare i risultati da esso.  
   

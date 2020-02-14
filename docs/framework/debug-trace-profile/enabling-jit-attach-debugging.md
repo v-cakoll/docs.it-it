@@ -5,14 +5,12 @@ helpviewer_keywords:
 - JIT-attach debugging
 - debugging [.NET Framework], JIT-attach debugging
 ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: be619f8e84b176872361fdd43faa9c704832c8e0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 7adf1316a36d781439d364746fa11795a7fe165a
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975593"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217526"
 ---
 # <a name="enabling-jit-attach-debugging"></a>Attivazione dell'esecuzione del debug ad associazione JIT
 Il termine debug ad associazione JIT indica l'associazione di un debugger a un processo in caso di errori. Può anche essere attivato da specifici metodi o funzioni.  
@@ -37,5 +35,5 @@ Il termine debug ad associazione JIT indica l'associazione di un debugger a un p
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Debug, traccia e profilatura](index.md)
+- [Debug, analisi e profilatura](index.md)
 - [Semplificazione del debug di un'immagine](making-an-image-easier-to-debug.md)

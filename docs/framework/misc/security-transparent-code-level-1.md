@@ -9,14 +9,12 @@ helpviewer_keywords:
 - security-transparent code
 - security [.NET Framework], security-transparent code
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: efd3954b63a6683e04bd9143ca3523cdbace506d
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 8f232a7724ad831818627cbfc2845ea808a3fcfd
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894533"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215800"
 ---
 # <a name="security-transparent-code-level-1"></a>Codice SecurityTransparent, livello 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -26,7 +24,7 @@ ms.locfileid: "70894533"
 > [!IMPORTANT]
 > È necessario specificare la trasparenza di livello 1 solo per ragioni di compatibilità, ovvero specificare il livello 1 solo per codice sviluppato con .NET Framework 3.5 o versioni precedenti che usa <xref:System.Security.AllowPartiallyTrustedCallersAttribute> o non usa il modello di trasparenza. Usare ad esempio la trasparenza di livello 1 per assembly .NET Framework 2.0 che consentono l'uso di chiamate da chiamanti parzialmente attendibili (APTCA). Per il codice sviluppato per il .NET Framework 4, usare sempre la trasparenza di livello 2.  
   
- Di seguito sono elencate le diverse sezioni di questo argomento:  
+ In questo argomento sono incluse le sezioni seguenti:  
   
 - [Modello di trasparenza di livello 1](#the_level_1_transparency_model)  
   
@@ -64,15 +62,15 @@ ms.locfileid: "70894533"
 |Attributo|Descrizione|  
 |---------------|-----------------|  
 |<xref:System.Security.SecurityTransparentAttribute>|Consentito solo a livello di assembly. Identifica tutti i tipi e i membri nell'assembly come SecurityTransparent. L'assembly non può contenere codice SecurityCritical.|  
-|<xref:System.Security.SecurityCriticalAttribute>|Se usato a livello di assembly, senza la proprietà <xref:System.Security.SecurityCriticalAttribute.Scope%2A>, identifica tutto il codice nell'assembly come SecurityTransparent per impostazione predefinita, ma indica che l'assembly può contenere codice SecurityCritical.<br /><br /> Se usato a livello di classe, identifica la classe o il metodo come SecurityCritical, ma non i membri della classe. Per impostare tutti i membri come SecurityCritical, impostare la proprietà <xref:System.Security.SecurityCriticalAttribute.Scope%2A> su <xref:System.Security.SecurityCriticalScope.Everything>.<br /><br /> Se usato a livello di membro, l'attributo si applica solo a tale membro.<br /><br /> La classe o il membro identificato come SecurityCritical può eseguire le elevazioni dei privilegi. **Importante:**  Con la trasparenza di livello 1, i tipi e i membri SecurityCritical vengono trattati come SecuritySafeCritical quando vengono chiamati dall'esterno dell'assembly. È necessario proteggere i tipi e i membri SecurityCritical con una richiesta di collegamento per l'attendibilità totale, per evitare l'elevazione dei privilegi non autorizzata.|  
-|<xref:System.Security.SecuritySafeCriticalAttribute>|Identifica codice SecurityCritical a cui è possibile accedere da codice SecurityTransparent nell'assembly. In caso contrario, il codice SecurityTransparent non può accedere ai membri SecurityCritical interni o privati nello stesso assembly. Questa operazione influisce sul codice SecurityCritical con conseguenti possibili elevazioni dei privilegi impreviste. Il codice SecuritySafeCritical deve essere sottoposto a un controllo di sicurezza rigido. **Nota:**  I tipi e i membri SecuritySafeCritical devono convalidare le autorizzazioni dei chiamanti per determinare se il chiamante dispone dell'autorità per accedere alle risorse protette.|  
+|<xref:System.Security.SecurityCriticalAttribute>|Se usato a livello di assembly, senza la proprietà <xref:System.Security.SecurityCriticalAttribute.Scope%2A>, identifica tutto il codice nell'assembly come SecurityTransparent per impostazione predefinita, ma indica che l'assembly può contenere codice SecurityCritical.<br /><br /> Se usato a livello di classe, identifica la classe o il metodo come SecurityCritical, ma non i membri della classe. Per impostare tutti i membri come SecurityCritical, impostare la proprietà <xref:System.Security.SecurityCriticalAttribute.Scope%2A> su <xref:System.Security.SecurityCriticalScope.Everything>.<br /><br /> Se usato a livello di membro, l'attributo si applica solo a tale membro.<br /><br /> La classe o il membro identificato come SecurityCritical può eseguire le elevazioni dei privilegi. **Importante:**  Nella trasparenza di livello 1, i tipi e i membri critici per la sicurezza vengono considerati come critici per la sicurezza quando vengono chiamati dall'esterno dell'assembly. È necessario proteggere i tipi e i membri SecurityCritical con una richiesta di collegamento per l'attendibilità totale, per evitare l'elevazione dei privilegi non autorizzata.|  
+|<xref:System.Security.SecuritySafeCriticalAttribute>|Identifica codice SecurityCritical a cui è possibile accedere da codice SecurityTransparent nell'assembly. In caso contrario, il codice SecurityTransparent non può accedere ai membri SecurityCritical interni o privati nello stesso assembly. Questa operazione influisce sul codice SecurityCritical con conseguenti possibili elevazioni dei privilegi impreviste. Il codice SecuritySafeCritical deve essere sottoposto a un controllo di sicurezza rigido. **Nota:**  I tipi e i membri critici per la sicurezza devono convalidare le autorizzazioni dei chiamanti per determinare se il chiamante è autorizzato ad accedere alle risorse protette.|  
   
  L'attributo <xref:System.Security.SecuritySafeCriticalAttribute> consente al codice SecurityTransparent di accedere ai membri SecurityCritical nello stesso assembly. Considerare il codice SecurityTransparent e il codice SecurityCritical come se si trovassero in due assembly distinti. Il codice SecurityTransparent non riesce a vedere i membri privati o interni del codice SecurityCritical. Inoltre, il codice SecurityCritical viene generalmente controllato per l'accesso all'interfaccia pubblica. Uno stato privato o interno non è normalmente accessibile all'esterno dell'assembly, quindi è consigliabile mantenere lo stato isolato. L'attributo <xref:System.Security.SecuritySafeCriticalAttribute> mantiene l'isolamento dello stato tra il codice SecurityTransparent e il codice SecurityCritical fornendo allo stesso tempo la possibilità di eseguire l'override dell'isolamento quando è necessario. Il codice SecurityTransparent non può accedere al codice SecurityCritical privato o interno, a meno che i membri non siano stati contrassegnati con <xref:System.Security.SecuritySafeCriticalAttribute>. Prima di applicare l'attributo <xref:System.Security.SecuritySafeCriticalAttribute>, controllare il membro come se fosse esposto pubblicamente.  
   
 ### <a name="assembly-wide-annotation"></a>Annotazione a livello di assembly  
  La tabella seguente descrive gli effetti dell'uso di attributi di sicurezza a livello di assembly.  
   
-|Assembly (attributo)|Stato dell'assembly|  
+|Attributo assembly|Stato dell'assembly|  
 |------------------------|--------------------|  
 |Nessun attributo su un assembly parzialmente attendibile|Tutti i tipi e i membri sono Transparent.|  
 |Nessun attributo su un assembly completamente attendibile (nella Global Assembly Cache o identificato come attendibilità totale in `AppDomain`)|Tutti i tipi sono Transparent e tutti i membri sono SecuritySafeCritical.|  

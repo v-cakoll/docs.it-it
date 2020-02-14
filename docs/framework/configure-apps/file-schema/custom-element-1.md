@@ -6,21 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ac2d01121e81b545556fb082fa7b82c31cccf9da
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1d0431085a04d3fb817dfe0883779acc4d693084
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73118840"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214795"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>Elemento personalizzato per SingleTagSectionHandler
 
 Definisce le impostazioni in una sezione di configurazione personalizzata definita da una sezione \<> elemento e utilizza la classe <xref:System.Configuration.SingleTagSectionHandler>.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp; *\<sectionName>*
+&nbsp;&nbsp; *\<sectionname >*
 
 ## <a name="syntax"></a>Sintassi
 
@@ -28,19 +26,19 @@ Definisce le impostazioni in una sezione di configurazione personalizzata defini
 <sectionName key="value" key2="value2" ... />
 ```
 
-## <a name="attributes"></a>Attributi
+## <a name="attributes"></a>Attributes
 
 Attributi e valori di attributo sono definiti dall'utente.
 
 ## <a name="parent-element"></a>Elemento padre
 
-|     | description |
+|     | Descrizione |
 | --- | ----------- |
 | [ **\<configuration>** ](configuration-element.md) | Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework. |
 
-## <a name="child-elements"></a>Elemento figlio
+## <a name="child-elements"></a>Elementi figlio
 
-None
+nessuno
 
 ## <a name="remarks"></a>Osservazioni
 

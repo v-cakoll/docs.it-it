@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di librerie da codice parzialmente attendibile
+title: Uso di librerie provenienti da codice parzialmente attendibile
 ms.date: 03/30/2017
 helpviewer_keywords:
 - security [.NET Framework], partially trusted code
@@ -9,16 +9,14 @@ helpviewer_keywords:
 - code access security, partially trusted code
 - APTCA
 ms.assetid: dd66cd4c-b087-415f-9c3e-94e3a1835f74
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 50428e4e28df812a3a0c985d0d1876dab7b5279c
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 6836d6c7f67afba316125b57b2c3e64a59ac648f
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206023"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216980"
 ---
-# <a name="using-libraries-from-partially-trusted-code"></a>Utilizzo di librerie da codice parzialmente attendibile
+# <a name="using-libraries-from-partially-trusted-code"></a>Uso di librerie provenienti da codice parzialmente attendibile
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
 > [!NOTE]

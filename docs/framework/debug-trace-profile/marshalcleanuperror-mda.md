@@ -10,14 +10,12 @@ helpviewer_keywords:
 - MarshalCleanupError MDA
 - memory, cleanup errors
 ms.assetid: 2f5d9e7c-ae51-4155-a435-54347aa1f091
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ab3690cac28ef572b19cadb632662590d1ea04c7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1a14c548ce960d53f47934595171189db28edfbb
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052473"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216149"
 ---
 # <a name="marshalcleanuperror-mda"></a>MDA marshalCleanupError
 L'assistente al debug gestito `marshalCleanupError` viene attivato quando in Common Language Runtime si verifica un errore durante il tentativo di eseguire la pulizia di strutture temporanee e della memoria usata per effettuare il marshalling dei tipi di dati tra limiti del codice gestito e nativo.  

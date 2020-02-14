@@ -9,14 +9,12 @@ helpviewer_keywords:
 - RaceOnRCWCleanup MDA
 - runtime callable wrappers
 ms.assetid: bee1e9b1-50a8-4c89-9cd9-7dd6b2458187
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 07b6c674e2608ac46bf9870ae26afc2fc1ec99ba
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: edf1fe3ee5be631f7f3c42f4a6cdb17f1be722cf
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052354"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216174"
 ---
 # <a name="raceonrcwcleanup-mda"></a>MDA raceOnRCWCleanup
 L'assistente al debug gestito `raceOnRCWCleanup` viene attivato quando Common Language Runtime (CLR) rileva che è in uso un oggetto [Runtime Callable Wrapper (RCW)](../../standard/native-interop/runtime-callable-wrapper.md) quando viene eseguita una chiamata per rilasciarlo con un comando come il metodo <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>.  

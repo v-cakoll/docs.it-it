@@ -9,14 +9,12 @@ helpviewer_keywords:
 - secure coding, exception handling
 - exception handling, security
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 256d9c9b825081e3bcfafd6e0e09de825d046d20
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: e0465f2eb6be61e161f5e6b8cadf629a53f11906
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894551"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215793"
 ---
 # <a name="securing-exception-handling"></a>Protezione della gestione delle eccezioni
 In Visual C++ e Visual Basic, un'espressione di filtro più avanti lo stack viene eseguita prima di qualsiasi istruzione **finally** . Il blocco **catch** associato a tale filtro viene eseguito dopo l'istruzione **finally** . Per ulteriori informazioni, vedere [utilizzo di eccezioni filtrate dall'utente](../../standard/exceptions/using-user-filtered-exception-handlers.md). In questa sezione vengono esaminate le implicazioni di sicurezza di questo ordine. Si consideri l'esempio di pseudocodice seguente che illustra l'ordine in cui vengono eseguite le istruzioni di filtro e le istruzioni **finally** .  
@@ -116,7 +114,7 @@ Thread.CurrentThread.CurrentUICulture)
 End Class  
 ```  
   
- La correzione corretta in questo caso consiste nel eseguire il wrapping del blocco **try**/**finally** esistente in un blocco **try**/**catch** . La semplice introduzione di una clausola **catch-throw** nel blocco **try**/**finally** esistente non risolve il problema, come illustrato nell'esempio seguente.  
+ La correzione corretta in questo caso consiste nel eseguire il wrapping del blocco **try**/**finally** esistente in un blocco **try**/**catch** . La semplice introduzione di una clausola **catch-throw** nel blocco **try**/**finally** non risolve il problema, come illustrato nell'esempio seguente.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -136,7 +134,7 @@ YourObject.YourMethod()
 }  
 ```  
   
- Questo non risolve il problema perché l'istruzione **finally** non è stata eseguita prima `FilterFunc` del controllo Gets.  
+ Questo non risolve il problema perché l'istruzione **finally** non è stata eseguita prima che l'`FilterFunc` ottenga il controllo.  
   
  Nell'esempio seguente viene risolto il problema garantendo che la clausola **finally** sia stata eseguita prima di offrire un'eccezione per i blocchi di filtro eccezioni dei chiamanti.  
   

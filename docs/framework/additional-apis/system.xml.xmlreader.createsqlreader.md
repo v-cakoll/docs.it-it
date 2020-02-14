@@ -1,7 +1,5 @@
 ---
 title: Metodo XmlReader. CreateSqlReader (System. Xml)
-author: mairaw
-ms.author: mairaw
 ms.date: 10/17/2019
 topic_type:
 - apiref
@@ -11,14 +9,14 @@ api_location:
 - system.xml.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 302be4eff32d2c96a1571d291e0b289e77694db8
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: c65ef7c073175488c11c5e912a44d46fd4319209
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72584134"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215454"
 ---
-# <a name="xmlreadercreatesqlreader-method"></a>XmlReader. CreateSqlReader, metodo
+# <a name="xmlreadercreatesqlreader-method"></a>Metodo XmlReader.CreateSqlReader
 
 Crea una nuova istanza di <xref:System.Xml.XmlReader> con il flusso, le impostazioni e le informazioni di contesto specificati per l'analisi.
 
@@ -38,12 +36,12 @@ internal static XmlReader CreateSqlReader(Stream input,
 - `inputContext` <xref:System.Xml.XmlParserContext>  
   Informazioni sul contesto necessarie per analizzare il frammento XML. Il valore può essere `null`.
 
-## <a name="returns"></a>Valore restituito
+## <a name="returns"></a>Valori di codice restituiti
 
 <xref:System.Xml.XmlReader>  
 Oggetto usato per leggere i dati XML nel flusso.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 > [!WARNING]
 > Il `XmlReader.CreateSqlReader` metodo è interno e non deve essere usato direttamente nel codice.

@@ -8,14 +8,12 @@ helpviewer_keywords:
 - IUnknown pointers
 - managed debugging assistants (MDAs), invalid IUnknown pointer
 ms.assetid: c7924771-a16b-40fe-b337-ce51dcdf6a12
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ea7f48ab61c16cb0430717074f1b1feab4827763
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5df9a3f506d8c2de6f1a3125459adc2d59d510bf
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052599"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217357"
 ---
 # <a name="invalidiunknown-mda"></a>MDA invalidIUnknown
 L'assistente al debug gestito `invalidIUnknown` viene attivato quando un puntatore `IUnknown` non valido viene passato dal codice nativo al codice gestito. La ricerca dell'interfaccia `IUnknown` nel puntatore `IUnknown` non riesce.  

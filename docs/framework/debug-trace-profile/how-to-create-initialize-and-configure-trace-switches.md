@@ -11,14 +11,12 @@ helpviewer_keywords:
 - tracing [.NET Framework], enabling or disabling
 - Web.config configuration file, trace switches
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 13f89af41520fa023d8841d6dc6d7766e2abe6da
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 358e34b2ce5d896ba02b343ce060604f2d42eeeb
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052718"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216485"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Procedura: Creare, inizializzare e configurare opzioni di traccia
 Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output di traccia.  
@@ -54,7 +52,7 @@ Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output 
 ## <a name="configuring-trace-switches"></a>Configurazione di opzioni di traccia  
  Una volta distribuita l'applicazione, è ancora possibile attivare o disabilitare l'output di traccia configurando le opzioni di traccia dell'applicazione. Configurare un'opzione significa modificarne il valore da un'origine esterna una volta inizializzata. È possibile modificare i valori degli oggetti opzione mediante il file di configurazione. Si configura un'opzione di traccia per attivarla e disabilitarla oppure per impostarne il livello, determinando la quantità e il tipo di messaggi da inviare ai listener.  
   
- Le opzioni vengono configurate tramite il file CONFIG. In caso di applicazioni Web si tratta del file Web.config associato al progetto. Nelle applicazioni Windows il file è denominato (nome applicazione).exe.config. Nelle applicazioni distribuite il file deve trovarsi nella stessa cartella dell'eseguibile.  
+ Le opzioni vengono configurate tramite il file CONFIG. In caso di applicazioni Web si tratta del file Web.config associato al progetto. In un'applicazione Windows, questo file è denominato (nome applicazione). exe. config. In un'applicazione distribuita, questo file deve trovarsi nella stessa cartella del file eseguibile.  
   
  Quando l'applicazione esegue il codice che crea un'istanza di un'opzione per la prima volta, viene verificata la presenza nel file di configurazione di informazioni sul livello di traccia relative all'opzione denominata. Il file di configurazione viene esaminato dal sistema di tracciatura solo una volta per ogni opzione, la prima volta che l'opzione in questione viene creata dall'applicazione.  
   
@@ -75,11 +73,11 @@ Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output 
   
 2. Se il progetto non contiene un file di configurazione (app.config o Web.config), scegliere **Aggiungi nuovo elemento** dal menu **Progetto**.  
   
-    - **Visual Basic:** Nella finestra di dialogo **Aggiungi nuovo elemento** scegliere **file di configurazione dell'applicazione**.  
+    - **Visual Basic:** nella finestra di dialogo **Aggiungi nuovo elemento** scegliere **File di configurazione dell'applicazione**.  
   
          Verrà creato e aperto il file di configurazione dell'applicazione. Si tratta di un documento XML il cui elemento radice è `<configuration>.`  
   
-    - **Oggetti C#visivi:** Nella finestra di dialogo **Aggiungi nuovo elemento** scegliere **file XML**. Denominare il file **app.config**. Nell'editor XML, dopo la dichiarazione XML, aggiungere il codice XML seguente:  
+    - **Visual C#:** nella finestra di dialogo **Aggiungi nuovo elemento** fare clic su **File XML**. Assegnare un nome al file **app. config**. Nell'editor XML, dopo la dichiarazione XML, aggiungere il codice XML seguente:  
   
         ```xml  
         <configuration>  
@@ -128,6 +126,6 @@ Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output 
 ## <a name="see-also"></a>Vedere anche
 
 - [Traccia e strumentazione di applicazioni](tracing-and-instrumenting-applications.md)
-- [Procedura: Aggiungere istruzioni di traccia al codice dell'applicazione](how-to-add-trace-statements-to-application-code.md)
+- [Procedura: aggiungere istruzioni di traccia al codice dell'applicazione](how-to-add-trace-statements-to-application-code.md)
 - [Opzioni di traccia](trace-switches.md)
 - [Schema delle impostazioni di traccia e debug](../configure-apps/file-schema/trace-debug/index.md)

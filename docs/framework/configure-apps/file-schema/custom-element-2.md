@@ -6,14 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: 2303031f-4c1d-4df4-bca1-e9bd96ca40dc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d73c07d58bb226346cb99a1fe50b12bb0e7e746e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e5c5c6cf5744aa385e6f6700cad623751a4d7427
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73118539"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215484"
 ---
 # <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>Elemento personalizzato per NameValueSectionHandler e DictionarySectionHandler
 
@@ -22,9 +20,9 @@ Definisce le impostazioni per le sezioni di configurazione personalizzate che us
 [ **\<configuration>** ](configuration-element.md)\
 &nbsp;&nbsp; **\<sectionname >**
 
-## <a name="attributes"></a>Attributi
+## <a name="attributes"></a>Attributes
 
-Nessuno
+nessuno
 
 ## <a name="parent-element"></a>Elemento padre
 
@@ -40,9 +38,9 @@ Nessuno
 | [ **\<rimuovere >** ](remove-element-for-custom-2.md) per <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler> | Rimuove un'impostazione definita in precedenza. |
 | [ **\<deselezionare >** ](clear-element-for-custom-2.md) per <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler> | Cancella tutte le impostazioni definite in precedenza in una sezione. |
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L'elemento **\<sectionname >** è un elemento personalizzato definito da una **sezione di\<** tag nell'elemento\<**configSections >** .
+L'elemento **\<sectionname >** è un elemento personalizzato definito da una **sezione di\<>** tag nell'elemento\<**configSections >** .
 
 La tabella seguente illustra il tipo di oggetto restituito dal metodo ConfigurationSettings. GetConfig per ogni gestore della sezione di configurazione:
 

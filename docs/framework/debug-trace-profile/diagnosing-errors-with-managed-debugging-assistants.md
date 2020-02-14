@@ -29,14 +29,12 @@ helpviewer_keywords:
 - output, managed debugging assistants
 - errors [.NET Framework], managed debugging assistants
 ms.assetid: 76994ee6-9fa9-4059-b813-26578d24427c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6cb2a240a2e7e82b7015eb7a6d99c2117fa63045
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 712fbbe9e0ad291385e8eef321c5e8a2fa092a5d
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052896"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216562"
 ---
 # <a name="diagnose-errors-with-managed-debugging-assistants"></a>Diagnosticare gli errori con gli assistenti al debug gestito
 
@@ -70,7 +68,7 @@ Nella tabella seguente sono elencati i MDA forniti con la .NET Framework:
 |[releaseHandleFailed](releasehandlefailed-mda.md)|[reportAvOnComRelease](reportavoncomrelease-mda.md)|
 |[streamWriterBufferedDataLost](streamwriterbuffereddatalost-mda.md)|[virtualCERCall](virtualcercall-mda.md)|
 
-Per impostazione predefinita, .NET Framework attiva un sottoinsieme di assistenti al debug gestito per tutti i debugger gestiti. È possibile visualizzare il set predefinito in Visual Studio scegliendo**Impostazioni eccezioni** **Windows** > dal menu **debug** e quindi espandendo l'elenco **assistenti al debug gestito** .
+Per impostazione predefinita, .NET Framework attiva un sottoinsieme di assistenti al debug gestito per tutti i debugger gestiti. È possibile visualizzare il set predefinito in Visual Studio scegliendo **Windows** > **Impostazioni eccezioni** dal menu **debug** , quindi espandendo l'elenco **assistenti al debug gestito** .
 
 ![Finestra Impostazioni eccezioni in Visual Studio](./media/diagnosing-errors-with-managed-debugging-assistants/exception-settings-mdas.png)
 
@@ -79,11 +77,11 @@ Per impostazione predefinita, .NET Framework attiva un sottoinsieme di assistent
 È possibile abilitare e disabilitare gli assistenti al debug gestito usando una chiave del Registro di sistema, una variabile di ambiente e impostazioni di configurazione dell'applicazione. Per usare le impostazioni di configurazione dell'applicazione, è necessario abilitare la chiave del Registro di sistema o la variabile di ambiente.
 
 > [!TIP]
-> Anziché disabilitare MDA, è possibile impedire a Visual Studio di visualizzare la finestra di dialogo MDA ogni volta che viene ricevuta una notifica dell'assistente al debug gestito. A tale scopo, scegliere**Impostazioni eccezioni** **Windows** > dal menu **debug** , espandere l'elenco **assistenti al debug gestito** e quindi selezionare o deselezionare la casella di controllo **Interrompi quando viene generata** per il singolo assistente al debug gestito.
+> Anziché disabilitare MDA, è possibile impedire a Visual Studio di visualizzare la finestra di dialogo MDA ogni volta che viene ricevuta una notifica dell'assistente al debug gestito. A tale scopo, scegliere **Windows** > **Impostazioni eccezioni** dal menu **debug** , espandere l'elenco **assistenti al debug gestito** e quindi selezionare o deselezionare la casella di controllo **Interrompi quando viene generata** per il singolo assistente al debug gestito.
 
-### <a name="registry-key"></a>Chiave del Registro di sistema
+### <a name="registry-key"></a>Chiave del Registro
 
-Per abilitare MDA, aggiungere **HKEY_LOCAL_MACHINE\Software\Microsoft\\.** Sottochiave NETFramework\MDA (tipo REG_SZ, valore 1) nel registro di sistema di Windows. Copiare l'esempio seguente in un file di testo denominato *MDAEnable. reg*. Aprire l'editor del registro di sistema di Windows (RegEdit. exe) e scegliere **Importa**dal menu **file** . Selezionare il file *MDAEnable. reg* per abilitare MDA nel computer. Se si imposta la sottochiave sul valore stringa **1** (non DWORD valore **1**), viene abilitata la lettura delle impostazioni dell'assistente al debug gestito dal file *ApplicationName. suffiss*. mda. config. Il file di configurazione dell'assistente al debug gestito per il blocco note, ad esempio, è denominato Notepad. exe. mda. config.
+Per abilitare MDA, aggiungere il **\\HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft.** Sottochiave NETFramework\MDA (tipo REG_SZ, valore 1) nel registro di sistema di Windows. Copiare l'esempio seguente in un file di testo denominato *MDAEnable. reg*. Aprire l'editor del registro di sistema di Windows (RegEdit. exe) e scegliere **Importa**dal menu **file** . Selezionare il file *MDAEnable. reg* per abilitare MDA nel computer. Se si imposta la sottochiave sul valore stringa **1** (non DWORD valore **1**), viene abilitata la lettura delle impostazioni dell'assistente al debug gestito dal file *ApplicationName. suffiss*. mda. config. Il file di configurazione dell'assistente al debug gestito per il blocco note, ad esempio, è denominato Notepad. exe. mda. config.
 
 ```text
 Windows Registry Editor Version 5.00
@@ -129,7 +127,7 @@ In caso di conflitto, le impostazioni più recenti eseguono l'override di quelle
 
 ### <a name="application-specific-configuration-settings"></a>Impostazioni di configurazione specifiche dell'applicazione
 
-È possibile abilitare, disabilitare e configurare individualmente alcuni assistenti nel file di configurazione MDA per l'applicazione. Per abilitare l'uso di un file di configurazione dell'applicazione al fine di configurare gli assistenti al debug gestito, è necessario impostare la chiave del Registro di sistema relativa a MDA o la variabile di ambiente COMPLUS_MDA. Il file di configurazione dell'applicazione si trova in genere nella stessa directory del file eseguibile (con estensione exe) dell'applicazione. Il formato del nome del file è *NomeApplicazione*.mda.config. Ad esempio, blocconote.exe.mda.config. Gli assistenti abilitati nel file di configurazione dell'applicazione potrebbero disporre di attributi o elementi progettati in modo specifico per il controllo del comportamento dell'assistente.
+È possibile abilitare, disabilitare e configurare individualmente alcuni assistenti nel file di configurazione MDA per l'applicazione. Per abilitare l'uso di un file di configurazione dell'applicazione al fine di configurare gli assistenti al debug gestito, è necessario impostare la chiave del Registro di sistema relativa a MDA o la variabile di ambiente COMPLUS_MDA. Il file di configurazione dell'applicazione si trova in genere nella stessa directory del file eseguibile (con estensione exe) dell'applicazione. Il nome del file assume il formato *ApplicationName*. mda. config; ad esempio, Notepad. exe. mda. config. Gli assistenti abilitati nel file di configurazione dell'applicazione possono disporre di attributi o elementi appositamente progettati per controllare il comportamento dell'assistente.
 
 Nell'esempio seguente viene illustrato come abilitare e configurare il [marshalling](marshaling-mda.md):
 
@@ -148,7 +146,7 @@ Nell'esempio seguente viene illustrato come abilitare e configurare il [marshall
 </mdaConfig>
 ```
 
-L'assistente `Marshaling` emette informazioni sul tipo gestito di cui si sta effettuando il marshalling a un tipo non gestito per ogni transizione da gestito a non gestito nell'applicazione. L' `Marshaling` assistente al debug gestito consente inoltre di filtrare i nomi dei campi del metodo e della struttura forniti rispettivamente negli elementi figlio **methodFilter** e **fieldFilter** .
+L'assistente `Marshaling` emette informazioni sul tipo gestito di cui si sta effettuando il marshalling a un tipo non gestito per ogni transizione da gestito a non gestito nell'applicazione. Il `Marshaling` MDA consente inoltre di filtrare i nomi dei campi del metodo e della struttura forniti rispettivamente negli elementi figlio **methodFilter** e **fieldFilter** .
 
 Nell'esempio seguente viene illustrato come abilitare più MDA utilizzando le impostazioni predefinite:
 
@@ -170,14 +168,14 @@ Nell'esempio seguente viene illustrato come abilitare più MDA utilizzando le im
 
 Quando un assistente al debug gestito è abilitato, è attivo anche quando il codice non è in esecuzione in un debugger. Se un evento dell'assistente al debug gestito è generato quando non è presente alcun debugger, il messaggio relativo all'evento è visualizzato in una finestra di dialogo per eccezioni non gestite, anche se non si tratta di un'eccezione non gestita. Per evitare la visualizzazione della finestra di dialogo, rimuovere l'impostazione per l'abilitazione dell'assistente al debug gestito quando il codice non è in esecuzione in un ambiente di debug.
 
-Quando il codice viene eseguito nell'IDE di Visual Integrated Development Environment studio, è possibile evitare la finestra di dialogo di eccezione visualizzata per eventi di assistente al debug gestito specifici. A tale scopo, scegliere**Impostazioni eccezioni** **Windows** > dal menu **debug** . Nella finestra **Impostazioni eccezioni** espandere l'elenco **assistenti al debug gestito** , quindi deselezionare la casella di controllo **Interrompi quando generata** per il singolo assistente al debug gestito. È inoltre possibile utilizzare questa finestra di dialogo per *abilitare* la visualizzazione delle finestre di dialogo delle eccezioni dell'assistente al debug gestito.
+Quando il codice viene eseguito nell'IDE di Visual Integrated Development Environment studio, è possibile evitare la finestra di dialogo di eccezione visualizzata per eventi di assistente al debug gestito specifici. A tale scopo, scegliere **Windows** > **Impostazioni eccezioni**dal menu **debug** . Nella finestra **Impostazioni eccezioni** espandere l'elenco **assistenti al debug gestito** , quindi deselezionare la casella di controllo **Interrompi quando generata** per il singolo assistente al debug gestito. È inoltre possibile utilizzare questa finestra di dialogo per *abilitare* la visualizzazione delle finestre di dialogo delle eccezioni dell'assistente al debug gestito.
 
 ## <a name="mda-output"></a>Output degli assistenti al debug gestito
 
-L'output dell'assistente al debug gestito è simile all'esempio seguente, che mostra `PInvokeStackImbalance` l'output dell'assistente al debug gestito:
+L'output dell'assistente al debug gestito è simile all'esempio seguente, che mostra l'output del `PInvokeStackImbalance` MDA:
 
 **Una chiamata alla funzione PInvoke ' MDATest!' MDATest. Program:: StdCall ' ha sbilanciato lo stack. Questa operazione è probabilmente dovuta al fatto che la firma PInvoke gestita non corrisponde alla firma di destinazione non gestita. Verificare che la convenzione di chiamata e i parametri della firma PInvoke corrispondano alla firma non gestita di destinazione.**
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Debug, traccia e profilatura](index.md)
+- [Debug, analisi e profilatura](index.md)

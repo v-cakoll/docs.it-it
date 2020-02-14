@@ -7,14 +7,12 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: 8d8af7f5-26c9-4db9-bbe4-b2a4e6949568
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6cdd5833e14da1ab5185e56dce1190adfee4a2bf
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: d1e4f3478f6afd6a20c01c6b57a137020ee88f5f
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089034"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214765"
 ---
 # <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<rimuovere > elemento per NameValueSectionHandler e DictionarySectionHandler
 
@@ -44,9 +42,9 @@ Rimuove un'impostazione definita in precedenza.
 
 ## <a name="child-elements"></a>Elementi figlio
 
-Nessuno
+nessuno
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 È possibile usare l'elemento **\<remove >** per rimuovere le impostazioni dall'applicazione definite a un livello superiore nella gerarchia dei file di configurazione.
 

@@ -11,14 +11,12 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), marshaling
 - notMarshalable MDA
 ms.assetid: 96e7b2c1-843f-4d64-b519-740c3a18b50a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ddb6b0b5c2248d215245e0f881c8e7c91b13e480
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 45db0e70b2446fa6e3175409bcc3844042f0acc0
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052422"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217290"
 ---
 # <a name="notmarshalable-mda"></a>notMarshalable (MDA)
 L'assistente al debug gestito `notMarshalable` viene attivato quando Common Language Runtime rileva un puntatore a interfaccia COM senza un proxy/stub registrato valido oppure un'implementazione non corretta dell'interfaccia `IMarshal` durante il marshalling dell'interfaccia tra i vari contesti.  

@@ -11,18 +11,16 @@ api_type:
 ms.assetid: c11d5231-78f2-45a7-9210-3b2d0969370e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7b79da7832a797cce0163de42363f0d3812a2376
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0f8063dd85537f81a1ae145b4526e10ad90b77e
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675390"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215614"
 ---
 # <a name="datamemberlisteditor-class"></a>Classe DataMemberListEditor
 
-Fornisce un'interfaccia utente di elenco a discesa per la modifica delle proprietà degli oggetti associati a dati (oggetti che sono non null `DataSource` proprietà) elencando tutte le proprietà del `DataSource` per selezionare l'origine del valore dall'oggetto.  
+Fornisce un'interfaccia utente a discesa per la modifica delle proprietà di oggetti associati a dati (oggetti con proprietà `DataSource` non null) elencando tutte le proprietà dell'oggetto `DataSource` da cui selezionare l'origine del valore.  
   
 ## <a name="syntax"></a>Sintassi
   
@@ -31,17 +29,17 @@ internal class DataMemberListEditor : UITypeEditor
 ```
 
 > [!WARNING]
-> Il `DataMemberListEditor` classe è interno e non deve essere utilizzato direttamente nel codice.
+> Il `DataMemberListEditor` classe è interno e non deve essere usato direttamente nel codice.
 > 
-> Microsoft non supporta l'uso di questa classe in un'applicazione di produzione in alcuna circostanza.
+> Microsoft non supporta l'utilizzo di questa classe in un'applicazione di produzione in qualsiasi circostanza.
   
 ## <a name="requirements"></a>Requisiti
 
 **Spazio dei nomi:** <xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
   
-**Assembly:** System. Design (in Design)  
+**Assembly:** System. Design (in System. Design. dll)  
   
-**Versioni di .NET framework:** Disponibile dalla 2.0.  
+**Versioni .NET Framework:** Disponibile a partire da 2,0.  
   
 ## <a name="see-also"></a>Vedere anche
 

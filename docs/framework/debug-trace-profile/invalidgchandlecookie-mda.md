@@ -8,14 +8,12 @@ helpviewer_keywords:
 - InvalidGCHandleCookie MDA
 - invalid cookies
 ms.assetid: 613ad742-3c11-401d-a6b3-893ceb8de4f8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7452ae28d63c89845b45bf500c02e771f0b8f4df
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c1d8fab863c34313c0cdb778136c6f69a64defeb
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052603"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216312"
 ---
 # <a name="invalidgchandlecookie-mda"></a>MDA invalidGCHandleCookie
 L'assistente al debug gestito `invalidGCHandleCookie` viene attivato quando si tenta una conversione da un cookie <xref:System.IntPtr> non valido a un oggetto <xref:System.Runtime.InteropServices.GCHandle>.  

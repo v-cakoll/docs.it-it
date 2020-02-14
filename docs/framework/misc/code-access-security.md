@@ -1,5 +1,5 @@
 ---
-title: Sicurezza per l'accesso al codice
+title: Sicurezza dall'accesso di codice
 ms.date: 03/30/2017
 helpviewer_keywords:
 - named permission sets, code access security
@@ -15,16 +15,14 @@ helpviewer_keywords:
 - user authentication, code access security
 - code access security
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bdb4e84170d4d3b95b8b51f12e0787937aaaf961
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: a8021fade8df2c8bee5e3bf26da784a91526540f
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205650"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215889"
 ---
-# <a name="code-access-security"></a>Sicurezza per l'accesso al codice
+# <a name="code-access-security"></a>Sicurezza dall'accesso di codice
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  Gli attuali computer con connessione elevata sono spesso esposti a codice che deriva da origini svariate e magari sconosciute. Il codice può essere allegato a un messaggio di posta elettronica, contenuto in documenti o scaricato tramite Internet. Sfortunatamente, molti utenti hanno sperimentato in prima persona gli effetti dei codici mobili dannosi, tra cui virus e worm, che possono danneggiare o eliminare definitivamente i dati e costare tempo e denaro.  
@@ -36,9 +34,9 @@ ms.locfileid: "70205650"
 > [!NOTE]
 > Sono state apportate importanti modifiche alla sicurezza dall'accesso di codice nel .NET Framework 4. La modifica più rilevante è stata la [trasparenza della sicurezza](security-transparent-code.md), ma sono presenti anche altre modifiche significative che influiscono sulla sicurezza dall'accesso di codice. Per informazioni su queste modifiche, vedere [modifiche di sicurezza](../security/security-changes.md).  
   
- La sicurezza dall'accesso di codice influisce principalmente sul codice di libreria e sulle applicazioni parzialmente attendibili. Gli sviluppatori di librerie devono proteggere il codice da accesso non autorizzato da applicazioni parzialmente attendibili. Le applicazioni parzialmente attendibili sono applicazioni che vengono caricate da origini esterne, ad esempio da Internet. Le applicazioni installate nel desktop o nella rete Intranet locale vengono eseguite con attendibilità totale. Le applicazioni con attendibilità totale non sono interessate dalla sicurezza dall'accesso di codice a meno che non siano contrassegnate come [SecurityTransparent](security-transparent-code.md), perché sono completamente attendibili. L'unica limitazione per le applicazioni con attendibilità totale è che le applicazioni contrassegnate con l'attributo <xref:System.Security.SecurityTransparentAttribute> non possono chiamare il codice contrassegnato con l'attributo <xref:System.Security.SecurityCriticalAttribute>. Le applicazioni parzialmente attendibili devono essere eseguite in una sandbox (ad esempio, in Internet Explorer), per poter applicare la sicurezza dall'accesso di codice. Se si scarica un'applicazione da Internet e si tenta di eseguirla dal desktop, verrà ricevuto un <xref:System.NotSupportedException> messaggio con il messaggio: "È stato effettuato un tentativo di caricare un assembly da un percorso di rete che avrebbe causato la sandboxing dell'assembly nelle versioni precedenti del .NET Framework. In questa versione di .NET Framework i criteri di sicurezza dall'accesso di codice non sono abilitati per impostazione predefinita, pertanto questo tipo di caricamento può risultare pericoloso". Se si è certi che l'applicazione può essere attendibile, è possibile abilitarla per l'esecuzione come attendibilità totale usando l' [ \<elemento loadFromRemoteSources >](../configure-apps/file-schema/runtime/loadfromremotesources-element.md). Per informazioni sull'esecuzione di un'applicazione in una sandbox, [vedere Procedura: Eseguire codice parzialmente attendibile in un oggetto sandbox](how-to-run-partially-trusted-code-in-a-sandbox.md).  
+ La sicurezza dall'accesso di codice influisce principalmente sul codice di libreria e sulle applicazioni parzialmente attendibili. Gli sviluppatori di librerie devono proteggere il codice da accesso non autorizzato da applicazioni parzialmente attendibili. Le applicazioni parzialmente attendibili sono applicazioni che vengono caricate da origini esterne, ad esempio da Internet. Le applicazioni installate nel desktop o nella rete Intranet locale vengono eseguite con attendibilità totale. Le applicazioni con attendibilità totale non sono interessate dalla sicurezza dall'accesso di codice a meno che non siano contrassegnate come [SecurityTransparent](security-transparent-code.md), perché sono completamente attendibili. L'unica limitazione per le applicazioni con attendibilità totale è che le applicazioni contrassegnate con l'attributo <xref:System.Security.SecurityTransparentAttribute> non possono chiamare il codice contrassegnato con l'attributo <xref:System.Security.SecurityCriticalAttribute>. Le applicazioni parzialmente attendibili devono essere eseguite in una sandbox (ad esempio, in Internet Explorer), per poter applicare la sicurezza dall'accesso di codice. Se si scarica un'applicazione da Internet e si cerca di eseguirla dal desktop, verrà generata un'eccezione <xref:System.NotSupportedException> con il messaggio: "È stato effettuato un tentativo di caricamento di un assembly da un percorso di rete, il che avrebbe causato la creazione mediante sandbox dell'assembly nelle versioni precedenti di .NET Framework. In questa versione di .NET Framework i criteri di sicurezza dall'accesso di codice non sono abilitati per impostazione predefinita, pertanto questo tipo di caricamento può risultare pericoloso". Se si è certi che l'applicazione può essere attendibile, è possibile abilitarla per l'esecuzione come attendibilità totale usando l' [elemento\<> loadFromRemoteSources](../configure-apps/file-schema/runtime/loadfromremotesources-element.md). Per informazioni sull'esecuzione di un'applicazione in una sandbox, vedere [procedura: eseguire codice parzialmente attendibile in un oggetto sandbox](how-to-run-partially-trusted-code-in-a-sandbox.md).  
   
- Tutto il codice gestito destinato a Common Language Runtime sfrutta i vantaggi della sicurezza dall'accesso di codice, anche se tale codice non effettua un'unica chiamata alla sicurezza dall'accesso di codice. Per altre informazioni, vedere [Code Access Security Basics](code-access-security-basics.md) (Nozioni di base sulla sicurezza dell'accesso di codice).  
+ Tutto il codice gestito destinato a Common Language Runtime sfrutta i vantaggi della sicurezza dall'accesso di codice, anche se tale codice non effettua un'unica chiamata alla sicurezza dall'accesso di codice. Per altre informazioni, vedere [Code Access Security Basics](code-access-security-basics.md).  
   
 <a name="key_functions"></a>   
 ## <a name="key-functions-of-code-access-security"></a>Funzioni chiave della sicurezza dall'accesso di codice  
@@ -71,4 +69,4 @@ Analisi dello stack di sicurezza
 |[Uso di librerie da codice parzialmente attendibile](using-libraries-from-partially-trusted-code.md)|Descrive come abilitare le librerie per usarle con codice non gestito e come usare le librerie provenienti da codice non gestito.|  
 |[Concetti chiave sulla sicurezza](../../standard/security/key-security-concepts.md)|Fornisce una panoramica di diversi termini e concetti chiave usati nel sistema di sicurezza di .NET Framework.|  
 |[Sicurezza basata sui ruoli](../../standard/security/role-based-security.md)|Descrive come incorporare la sicurezza basata sui ruoli.|  
-|[Cryptographic Services](../../standard/security/cryptographic-services.md)|Descrive come incorporare la crittografia nelle applicazioni.|
+|[Servizi di crittografia](../../standard/security/cryptographic-services.md)|Descrive come incorporare la crittografia nelle applicazioni.|
