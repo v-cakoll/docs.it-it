@@ -49,8 +49,9 @@
     - name: Installare una versione localizzata di IntelliSense
       href: install/localized-intellisense.md
 - name: Introduzione
-  href: get-started.md
   items:
+    - name: Introduzione
+      href: get-started.md
     - name: 'Introduzione a C# e Visual Studio Code'
       href: tutorials/with-visual-studio-code.md
     - name: Introduzione all'uso di .NET Core su macOS con Visual Studio Code
@@ -83,16 +84,9 @@
   displayName: app compatibility
   href: compatibility/
 - name: Esercitazioni
-  href: tutorials/index.md
   items:
-    - name: Modelli per la CLI
-      items:
-        - name: 1 - Creare un modello di elemento
-          href: tutorials/cli-templates-create-item-template.md
-        - name: 2 - Creare un modello di progetto
-          href: tutorials/cli-templates-create-project-template.md
-        - name: 3 - Creare un pacchetto modello
-          href: tutorials/cli-templates-create-template-pack.md
+    - name: Panoramica
+      href: tutorials/index.md
     - name: Introduzione a .NET Core con Visual Studio per Mac
       href: tutorials/using-on-mac-vs.md
     - name: Creazione di una soluzione .NET Core completa in macOS
@@ -109,6 +103,14 @@
       href: tutorials/aspnet-core.md
     - name: Ospitare .NET Core da codice nativo
       href: tutorials/netcore-hosting.md
+    - name: Creare modelli per l'interfaccia della riga di comando
+      items:
+        - name: 1 - Creare un modello di elemento
+          href: tutorials/cli-templates-create-item-template.md
+        - name: 2 - Creare un modello di progetto
+          href: tutorials/cli-templates-create-project-template.md
+        - name: 3 - Creare un pacchetto modello
+          href: tutorials/cli-templates-create-template-pack.md
 - name: Configurazione del runtime
   items:
     - name: Impostazioni
@@ -131,13 +133,6 @@
       href: native-interop/expose-components-to-com.md
 - name: 'Pacchetti, metapacchetti e framework'
   href: packages.md
-- name: Panoramica delle modifiche dell'interfaccia della riga di comando
-  href: tools/cli-msbuild-architecture.md
-  items:
-    - name: Gestione delle dipendenze
-      href: tools/dependencies.md
-    - name: Aggiunte al formato csproj
-      href: tools/csproj.md
 - name: Migrazione
   items:
     - name: Da .NET Core 2.0 a 2.1
@@ -146,11 +141,16 @@
       href: migration/index.md
     - name: Mapping tra project.json e csproj
       href: tools/project-json-to-csproj.md
+    - name: Panoramica delle modifiche dell'interfaccia della riga di comando
+      href: tools/cli-msbuild-architecture.md
+    - name: Aggiunte al formato csproj
+      href: tools/csproj.md
     - name: Eseguire la migrazione da DNX
       href: migration/from-dnx.md
 - name: Distribuzione delle applicazioni
-  href: deploying/index.md
   items:
+    - name: Panoramica
+      href: deploying/index.md
     - name: Pubblicare le app con l'interfaccia della riga di comando
       href: deploying/deploy-with-cli.md
     - name: Distribuire app con Visual Studio
@@ -192,6 +192,8 @@
 - name: Unit test
   href: testing/index.md
   items:
+    - name: Panoramica
+      href: testing/index.md
     - name: Procedure consigliate per gli unit test
       href: testing/unit-testing-best-practices.md
     - name: 'Unit test C# con xUnit'
@@ -221,8 +223,9 @@
 - name: Integrazione continua
   href: tools/using-ci-with-cli.md
 - name: Controllo delle versioni
-  href: versions/index.md
   items:
+    - name: Panoramica
+      href: versions/index.md
     - name: Scelta della versione di .NET Core
       href: versions/selection.md
     - name: Rimuovere runtime e SDK non aggiornati
@@ -330,8 +333,9 @@
             - name: dotnet remove package
               href: tools/dotnet-remove-package.md
 - name: Strumenti aggiuntivi per .NET Core
-  href: additional-tools/index.md
   items:
+    - name: Panoramica
+      href: additional-tools/index.md
     - name: Strumento di disinstallazione di .NET Core
       href: additional-tools/uninstall-tool.md
     - name: WCF Web Service Reference Provider
@@ -364,13 +368,15 @@
       href: porting/wpf.md
     - name: Convertire progetti C++/CLI
       href: porting/cpp-cli.md
-- name: Caricamento delle dipendenze
+- name: Gestione e caricamento delle dipendenze
   items:
-    - name: Panoramica
+    - name: Gestione delle dipendenze
+      href: tools/dependencies.md
+    - name: Caricamento delle dipendenze
       href: dependency-loading/overview.md
     - name: Informazioni su AssemblyLoadContext
       href: dependency-loading/understanding-assemblyloadcontext.md
-    - name: Dettagli del caricamento
+    - name: Dettagli del caricamento delle dipendenze
       items:
         - name: Probe delle dipendenze predefinito
           href: dependency-loading/default-probing.md
@@ -387,6 +393,4 @@
         - name: Come usare ed eseguire il debug di assembly non caricabili in .NET Core
           href: ../standard/assembly/unloadability-howto.md
 - name: Creazione di pacchetti di distribuzione di .NET Core
-  items:
-    - name: Panoramica
-      href: distribution-packaging.md
+  href: distribution-packaging.md
