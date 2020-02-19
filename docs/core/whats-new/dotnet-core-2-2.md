@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 12/04/2018
-ms.openlocfilehash: 917b51e0cf36cca45135fda4a084eb2bca62e835
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9495288658fa102df8f0fbd643e2fcdf49d8f3b3
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100699"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451980"
 ---
 # <a name="whats-new-in-net-core-22"></a>Novità di .NET Core 2.2
 
@@ -18,7 +18,7 @@ ms.locfileid: "73100699"
 
 ## <a name="new-deployment-mode"></a>Nuova modalità di distribuzione
 
-A partire da .NET Core 2.2, è possibile distribuire [file eseguibili dipendenti dal framework](../deploying/index.md#framework-dependent-executables-fde), che sono file **EXE** invece di file **DLL**. I file eseguibili dipendenti dal framework, pur avendo funzionalità simili a quelle delle distribuzioni dipendenti dal framework, per l'esecuzione si basano tuttavia sulla presenza di una versione di .NET Core condivisa a livello di sistema. L'app contiene solo il codice e le dipendenze di terze parti. Diversamente dalle distribuzioni dipendenti dal framework, i file eseguibili dipendenti dal framework sono specifici della piattaforma.
+A partire da .NET Core 2.2, è possibile distribuire [file eseguibili dipendenti dal framework](../deploying/index.md#publish-runtime-dependent), che sono file **EXE** invece di file **DLL**. I file eseguibili dipendenti dal framework, pur avendo funzionalità simili a quelle delle distribuzioni dipendenti dal framework, per l'esecuzione si basano tuttavia sulla presenza di una versione di .NET Core condivisa a livello di sistema. L'app contiene solo il codice e le dipendenze di terze parti. Diversamente dalle distribuzioni dipendenti dal framework, i file eseguibili dipendenti dal framework sono specifici della piattaforma.
 
 Questa nuova modalità di distribuzione offre il particolare vantaggio di compilare un file eseguibile invece di una libreria ed è quindi possibile eseguire l'app direttamente senza richiamare prima `dotnet`.
 
@@ -64,7 +64,7 @@ internal sealed class SimpleEventListener : EventListener
 
 - <xref:System.Diagnostics.Tracing.EventWrittenEventArgs.TimeStamp?displayProperty=nameWithType>
 
-## <a name="data"></a>Dati
+## <a name="data"></a>Data
 
 **Autenticazione AAD ai database SQL di Azure con la proprietà SqlConnection.AccessToken**
 

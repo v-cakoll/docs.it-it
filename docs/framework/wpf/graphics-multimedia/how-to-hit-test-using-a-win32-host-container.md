@@ -9,12 +9,12 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Win32 host containers [WPF], hit tests using
 ms.assetid: 9491f7f3-d8ba-4573-a888-2f064d1349dc
-ms.openlocfilehash: b71783f2d061c9139de4449d8e0106eb00345894
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: a86c1c36f75fa232d52731959371268a8b2593d7
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740171"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452805"
 ---
 # <a name="how-to-hit-test-using-a-win32-host-container"></a>Procedura: eseguire un hit test utilizzando un contenitore di host Win32
 È possibile creare oggetti visivi in una finestra Win32 fornendo un contenitore della finestra host per gli oggetti visivi. Per fornire la gestione degli eventi per gli oggetti visivi contenuti, elaborare i messaggi passati al ciclo del filtro messaggi del contenitore della finestra host. Per altre informazioni su come ospitare oggetti visivi in una finestra Win32, vedere [esercitazione: hosting di oggetti visivi in un'applicazione Win32](tutorial-hosting-visual-objects-in-a-win32-application.md) .  
@@ -32,7 +32,7 @@ ms.locfileid: "75740171"
   
  L'oggetto <xref:System.Windows.Interop.HwndSource> presenta [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] contenuto all'interno di una finestra Win32. Il valore della proprietà <xref:System.Windows.Interop.HwndSource.RootVisual%2A> dell'oggetto <xref:System.Windows.Interop.HwndSource> rappresenta il nodo di primo livello nella gerarchia della struttura ad albero visuale.  
   
- Per l'esempio completo sugli oggetti hit testing con un contenitore host Win32, vedere [esempio di hit test con interoperatività Win32](https://go.microsoft.com/fwlink/?LinkID=159995).  
+ Per l'esempio completo sugli oggetti hit testing con un contenitore host Win32, vedere [esempio di hit test con interoperatività Win32](https://github.com/microsoft/WPF-Samples/tree/master/Visual%20Layer/VisualsHitTesting).  
   
 ## <a name="see-also"></a>Vedere anche
 

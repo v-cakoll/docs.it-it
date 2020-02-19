@@ -2,22 +2,22 @@
 title: Firma di stored procedure in SQL Server
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: 8dc62527be7273d3ce3222d4d261b81bc40b1e19
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0131655d06a6ef543ea460d04739401538cac04b
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791802"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452357"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>Firma di stored procedure in SQL Server
 
-Un firma digitale è un digest di dati crittografato con la chiave privata del firmatario. La chiave privata garantisce che la firma digitale è univoca per il titolare o il proprietario. È possibile firmare stored procedure, funzioni (ad eccezione delle funzioni inline con valori di tabella), trigger e assembly.
+Un firma digitale è un digest di dati crittografato con la chiave privata del firmatario. Tramite la chiave privata, la firma digitale è univoca per il titolare o il proprietario. È possibile firmare stored procedure, funzioni (ad eccezione delle funzioni inline con valori di tabella), trigger e assembly.
 
 È possibile firmare una stored procedure con un certificato o una chiave asimmetrica. Le firme sono progettate per scenari in cui le autorizzazioni non possono essere ereditate tramite il concatenamento della proprietà oppure in cui la catena di proprietà è interrotta, come nel caso delle istruzioni SQL dinamiche. È quindi possibile creare un utente mappato al certificato, concedendo le autorizzazioni utente per gli oggetti a cui deve accedere il stored procedure.
 
-È inoltre possibile creare un account di accesso mappato allo stesso certificato, quindi concedere le autorizzazioni a livello di server necessarie per l'account di accesso o aggiungere l'account di accesso a uno o più ruoli predefiniti del server. Questo è progettato per evitare di abilitare `TRUSTWORTHY` l'impostazione del database per gli scenari in cui sono necessarie autorizzazioni di livello superiore.
+È inoltre possibile creare un account di accesso mappato allo stesso certificato, quindi concedere le autorizzazioni a livello di server necessarie per l'account di accesso o aggiungere l'account di accesso a uno o più ruoli predefiniti del server. Questo è progettato per evitare di abilitare l'impostazione del database `TRUSTWORTHY` per gli scenari in cui sono necessarie autorizzazioni di livello superiore.
 
-Quando viene eseguita la stored procedure, SQL Server combina le autorizzazioni dell'utente del certificato e/o l'account di accesso con quelli del chiamante. A differenza della `EXECUTE AS` clausola, non modifica il contesto di esecuzione della stored procedure. Le funzioni predefinite che restituiscono i nomi di accesso e i nomi utente restituiscono il nome del chiamante e non il nome dell'utente del certificato.
+Quando viene eseguita la stored procedure, SQL Server combina le autorizzazioni dell'utente del certificato e/o l'account di accesso con quelli del chiamante. A differenza della clausola `EXECUTE AS`, non modifica il contesto di esecuzione della stored procedure. Le funzioni predefinite che restituiscono i nomi di accesso e i nomi utente restituiscono il nome del chiamante e non il nome dell'utente del certificato.
 
 ## <a name="creating-certificates"></a>Creazione di certificati
 
@@ -39,9 +39,9 @@ Se il modulo necessita di autorizzazioni aggiuntive a livello di database:
 
 Se il modulo necessita di autorizzazioni aggiuntive a livello di server:
 
-1. Copiare il certificato `master` nel database.
+1. Copiare il certificato nel database di `master`.
 
-1. Creare un account di accesso associato a tale certificato utilizzando l'istruzione `CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]` Transact-SQL.
+1. Creare un account di accesso associato a tale certificato utilizzando l'istruzione Transact-SQL `CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]`.
 
 1. Concedere all'account di accesso del certificato le autorizzazioni a livello di server richieste.
 
@@ -52,10 +52,10 @@ Se il modulo necessita di autorizzazioni aggiuntive a livello di server:
 
 Per altre informazioni, vedere le seguenti risorse.
 
-|Risorsa|Descrizione|
+|Resource|Descrizione|
 |--------------|-----------------|
-|[Accesso al modulo](https://go.microsoft.com/fwlink/?LinkId=98590) documentazione online di SQL Server|Viene descritta la procedura di firma dei moduli e vengono forniti uno scenario di esempio e collegamenti agli argomenti Transact-SQL attinenti.|
-|[Firma di stored procedure con un certificato](/sql/relational-databases/tutorial-signing-stored-procedures-with-a-certificate) in documentazione online di SQL Server|Viene fornita un'esercitazione per firmare una stored procedure con un certificato.|
+|[Firma del modulo](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms345102(v=sql.100))|Viene descritta la firma del modulo, che fornisce uno scenario di esempio e i collegamenti agli articoli di Transact-SQL pertinenti.|
+|[Firma di stored procedure con un certificato](/sql/relational-databases/tutorial-signing-stored-procedures-with-a-certificate)|Viene fornita un'esercitazione per firmare una stored procedure con un certificato.|
 
 ## <a name="see-also"></a>Vedere anche
 

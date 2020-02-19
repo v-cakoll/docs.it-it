@@ -2,12 +2,12 @@
 title: Data binding con LINQ to XML
 ms.date: 10/22/2019
 ms.topic: conceptual
-ms.openlocfilehash: 3c5567c81d2097a1524f5bbbf9010836ca8c0646
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 65e1524a88f1920c037b2747b0bbe30386951635
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733815"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452734"
 ---
 # <a name="overview-of-wpf-data-binding-with-linq-to-xml"></a>Panoramica di data binding WPF con LINQ to XML
 
@@ -36,7 +36,7 @@ L'associazione dati WPF consente a un elemento dell'interfaccia utente di associ
 |Origine di associazione|Oggetto di origine per uno o più valori forniti all'elemento dell'interfaccia utente per la presentazione. In WPF sono automaticamente supportati i seguenti tipi di origini di associazione: oggetti CLR, oggetti dati ADO.NET, dati XML (provenienti da query XPath o LINQ to XML) o un altro oggetto <xref:System.Windows.DependencyObject>.|
 |Percorso di origine|Proprietà dell'origine di associazione che si risolve nel valore o set di valori a cui deve essere associata.|
 
-Quello della proprietà della dipendenza è un concetto specifico di WPF che rappresenta una proprietà di un elemento dell'interfaccia utente elaborato dinamicamente. Ad esempio, le proprietà di dipendenza includono spesso valori predefiniti o specificati da un elemento padre. Queste proprietà speciali sono supportate da istanze della classe <xref:System.Windows.DependencyProperty> e non da campi come con proprietà standard. Per altre informazioni, vedere [Cenni preliminari sulle proprietà di dipendenza](../advanced/dependency-properties-overview.md).
+Quello della proprietà della dipendenza è un concetto specifico di WPF che rappresenta una proprietà di un elemento dell'interfaccia utente elaborato dinamicamente. Ad esempio, le proprietà di dipendenza includono spesso valori predefiniti o specificati da un elemento padre. Queste proprietà speciali sono supportate da istanze della classe <xref:System.Windows.DependencyProperty> e non da campi come con proprietà standard. Per altre informazioni, vedere [Panoramica sulle proprietà di dipendenza](../advanced/dependency-properties-overview.md).
 
 ### <a name="dynamic-data-binding-in-wpf"></a>data binding dinamici in WPF
 
@@ -91,4 +91,4 @@ Per implementare l'associazione dinamica WPF, le proprietà dinamiche verranno u
 - [Proprietà dinamiche in LINQ to XML](linq-to-xml-dynamic-properties.md)
 - [XAML in WPF](../advanced/xaml-in-wpf.md)
 - [Associazione dati (WPF)](/dotnet/framework/wpf/data/data-binding-wpf)
-- [Utilizzo dei markup del flusso di lavoro](https://go.microsoft.com/fwlink/?LinkId=98685)
+- [Utilizzo dei markup del flusso di lavoro](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms735921(v=vs.90))

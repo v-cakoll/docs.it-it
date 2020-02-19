@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: f09a593160b21a9a22a8e7c7faeffdaaab41db85
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: dc5f608dc9eb4635e1282a9ca5e15ff1bf7d0e0d
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344868"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449556"
 ---
 ### <a name="private-fields-added-to-built-in-struct-types"></a>Campi privati aggiunti ai tipi struct predefiniti
 
 I campi privati sono stati aggiunti ai tipi struct predefiniti negli [assembly di riferimento](../../../../docs/standard/assembly/reference-assemblies.md). Di conseguenza, in C#è necessario creare un'istanza dei tipi struct usando l' [operatore New](../../../../docs/csharp/language-reference/operators/new-operator.md) o il [valore letterale predefinito](../../../../docs/csharp/language-reference/operators/default.md#default-literal)oppure inizializzando ognuno dei campi privati.
 
-#### <a name="change-description"></a>Descrizione delle modifiche
+#### <a name="change-description"></a>Descrizione della modifica
 
 In .NET Core 2,0 e versioni precedenti, è possibile creare un'istanza di alcuni tipi struct incorporati, ad esempio <xref:System.ConsoleKeyInfo>, senza usare l'operatore `new` o il [valore letterale predefinito](../../../../docs/csharp/language-reference/operators/default.md#default-literal) in C#. Questo perché gli [assembly di riferimento](../../../../docs/standard/assembly/reference-assemblies.md) utilizzati dal C# compilatore non contenevano i campi privati per gli struct. Tutti i campi privati per i tipi di struct .NET vengono aggiunti agli assembly di riferimento a partire da .NET Core 2,1.
 
@@ -35,7 +35,7 @@ In .NET Core 2,1, il codice precedente genera il seguente errore del compilatore
 
 Creare un'istanza dei tipi struct usando l'operatore `new` o il [valore letterale predefinito](../../../../docs/csharp/language-reference/operators/default.md#default-literal).
 
-Ad esempio:
+Ad esempio,
 
 ```csharp
 ConsoleKeyInfo key = new ConsoleKeyInfo();    // Struct type.
@@ -61,7 +61,7 @@ for (int i = 0; i < keys.Length; i++)
 }
 ```
 
-#### <a name="category"></a>Categoria
+#### <a name="category"></a>Category
 
 CoreFx
 
@@ -413,7 +413,7 @@ CoreFx
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `T:System.ConsoleKeyInfo`
 - `T:System.Memory{T}`

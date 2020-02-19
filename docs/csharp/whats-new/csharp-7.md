@@ -3,12 +3,12 @@ title: Novità di C# 7.0 - Guida a C#
 description: Panoramica delle nuove funzionalità nella versione 7.0 del linguaggio C#.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 73563a04dea04c942a6326d6a04ddd54bb80b0ed
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a6ac5c00ceb2ce8e5e56e2a86a8cde937d5108e2
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75694582"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448634"
 ---
 # <a name="whats-new-in-c-70"></a>Novità di C# 7.0
 
@@ -57,7 +57,7 @@ Si consiglia di specificare il tipo della variabile `out` per maggiore chiarezza
 - Non è necessario assegnare un valore iniziale.
   - Se si dichiara la variabile `out` nel punto in cui viene usata in una chiamata al metodo, non è possibile usarla accidentalmente prima che venga assegnata.
 
-## <a name="tuples"></a>Tuples
+## <a name="tuples"></a>Tuple
 
 C# offre una sintassi completa per le classi e gli struct usati per spiegare la finalità della progettazione. In alcuni casi tale sintassi richiede ulteriore lavoro con vantaggi minimi. Spesso è possibile scrivere metodi che richiedono una struttura semplice contenente più di un elemento dati. Per supportare questi scenari, sono state aggiunte *tuple* a C#. Le tuple sono strutture di dati leggere che contengono più campi per rappresentare i membri dati.
 I campi non vengono convalidati e non è possibile definire i propri metodi
@@ -236,7 +236,7 @@ Questa aggiunta facilita la scrittura di codice basato sulle espressioni. Non so
 
 La restituzione di un oggetto `Task` dai metodi asincroni può introdurre colli di bottiglia delle prestazioni in determinati percorsi. `Task` è un tipo di riferimento, quindi usarlo significa allocare un oggetto. Nei casi in cui un metodo dichiarato con il modificatore `async` restituisce un risultato memorizzato nella cache o viene completato in modo sincrono, le allocazioni aggiuntive possono diventare impegnative in termini di tempo nelle sezioni di codice critiche per le prestazioni. Possono diventare onerose se si verificano in cicli ridotti.
 
-La nuova funzionalità del linguaggio significa che i tipi restituiti dal metodo asincrono non sono limitati a `Task`, `Task<T>` e `void`. Il tipo restituito deve comunque essere conforme al modello asincrono ovvero deve essere accessibile un metodo `GetAwaiter`. Per fare un esempio concreto, il tipo `ValueTask` è stato aggiunto a .NET Framework per consentire l'uso di questa nuova funzionalità del linguaggio:
+La nuova funzionalità del linguaggio significa che i tipi restituiti dal metodo asincrono non sono limitati a `Task`, `Task<T>` e `void`. Il tipo restituito deve comunque essere conforme al modello asincrono ovvero deve essere accessibile un metodo `GetAwaiter`. Come esempio concreto, il tipo di `ValueTask` è stato aggiunto a .NET per usare questa nuova funzionalità del linguaggio:
 
 [!code-csharp[UsingValueTask](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#UsingValueTask "Using ValueTask")]
 

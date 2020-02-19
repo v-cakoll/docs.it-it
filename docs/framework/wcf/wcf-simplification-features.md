@@ -2,12 +2,12 @@
 title: Funzionalità di semplificazione WCF
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: dd944ad2963e29fd3aa9254f3a37f2c2b98ce70d
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 28a05053fda8380b55a1a9eee20119b8c4cfccfe
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802388"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452656"
 ---
 # <a name="wcf-simplification-features"></a>Funzionalità di semplificazione WCF
 
@@ -78,7 +78,7 @@ WCF supporta ora lo sviluppo con priorità al contratto ("contract-first"). Lo s
 
 ## <a name="add-service-reference-from-a-portable-subset-project"></a>Aggiungere un riferimento al servizio da un progetto di subset portabili
 
-I progetti di subset portabili consentono ai programmatori di assembly .NET di mantenere un singolo albero di origine e il sistema di compilazione, supportando comunque più implementazioni .NET (desktop, Silverlight, Windows Phone e XBOX). I progetti di subset portabili fanno riferimento solo a librerie portabili .NET che sono assembly .NET Framework che possono essere usati in qualsiasi implementazione di .NET. L'esperienza dello sviluppatore equivale all'aggiunta di un riferimento al servizio all'interno di qualsiasi altra applicazione client WCF. Per altre informazioni, vedere [Aggiungi riferimento al servizio in un progetto di subset portatile](add-service-reference-in-a-portable-subset-project.md).
+I progetti di subset portabili consentono ai programmatori di assembly .NET di mantenere un singolo albero di origine e il sistema di compilazione, supportando comunque più implementazioni .NET (desktop, Silverlight, Windows Phone e Xbox). I progetti di subset portabili fanno riferimento solo a librerie portabili .NET che sono assembly che possono essere usati in qualsiasi implementazione di .NET. L'esperienza dello sviluppatore equivale all'aggiunta di un riferimento al servizio all'interno di qualsiasi altra applicazione client WCF. Per altre informazioni, vedere [Aggiungi riferimento al servizio in un progetto di subset portatile](add-service-reference-in-a-portable-subset-project.md).
 
 ## <a name="aspnet-compatibility-mode-default-changed"></a>Modifica dell'impostazione predefinita della modalità di compatibilità ASP.NET
 
@@ -94,7 +94,7 @@ WCF fornisce la modalità di compatibilità ASP.NET per garantire agli sviluppat
 
 Nella tabella seguente vengono descritte le impostazioni che sono state modificate e dove reperire informazioni aggiuntive.
 
-|proprietà|On|Nuova impostazione predefinita|Altre informazioni|
+|Proprietà|Attivato|Nuova impostazione predefinita|Altre informazioni|
 |--------------|--------|-----------------|----------------------|
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 secondi|Questa proprietà determina per quanto tempo una connessione TCP può eseguire l'autenticazione usando il protocollo di framing .NET. Un client deve inviare alcuni dati iniziali prima che il server disponga di informazioni sufficienti per effettuare l'autenticazione. Questo timeout viene reso intenzionalmente più piccolo rispetto a ReceiveTimeout (10 min) in modo che eventuali client non autenticati dannosi non possano mantenere le connessioni al server per molto tempo. Il valore predefinito è 30 secondi. Per ulteriori informazioni su <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|16 * numero di processori|È la proprietà a livello di socket che descrive il numero di richieste "in attesa di accettazione" da mettere in coda. Se la coda del backlog in ascolto si riempie, le nuove richieste del socket verranno rifiutate. Per ulteriori informazioni su <xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|

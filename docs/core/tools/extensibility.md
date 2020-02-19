@@ -2,12 +2,12 @@
 title: Modello di estendibilità dell'interfaccia della riga di comando di .NET Core
 description: Informazioni su come estendere il interfaccia della riga di comando di .NET Core.
 ms.date: 04/12/2017
-ms.openlocfilehash: 74da895fb3a3f6c77640a2b9a64acdb2894a954b
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 56a9cedc090ddca446c0ee1a60f2ca49590e7635
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920524"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451155"
 ---
 # <a name="net-core-cli-extensibility-model"></a>Modello di estendibilità dell'interfaccia della riga di comando di .NET Core
 
@@ -32,7 +32,7 @@ L'interfaccia della riga di comando può essere estesa in tre modi principali:
 I tre meccanismi di estendibilità sopra indicati non si escludono a vicenda. È possibile usarne uno, usarli tutti o usare una combinazione dei meccanismi. La scelta dipende dall'obiettivo che si vuole ottenere con l'estensione.
 
 ## <a name="per-project-based-extensibility"></a>Estendibilità in base al progetto
-Gli strumenti in base al progetto sono [installazioni dipendenti dal framework](../deploying/index.md#framework-dependent-deployments-fdd) distribuite come pacchetti NuGet. Sono disponibili solo nel contesto del progetto di riferimento, per il quale vengono ripristinati. La chiamata all'esterno del contesto del progetto (ad esempio all'esterno della directory contenente il progetto) non riesce perché il comando non viene trovato.
+Gli strumenti in base al progetto sono [installazioni dipendenti dal framework](../deploying/index.md#publish-runtime-dependent) distribuite come pacchetti NuGet. Sono disponibili solo nel contesto del progetto di riferimento, per il quale vengono ripristinati. La chiamata all'esterno del contesto del progetto (ad esempio all'esterno della directory contenente il progetto) non riesce perché il comando non viene trovato.
 
 Questi strumenti sono perfetti anche per i server di compilazione, dal momento che non è necessario nulla al di fuori del file di progetto. Il processo di compilazione esegue il ripristino del progetto compilato e gli strumenti saranno disponibili. Rientrano in questa categoria anche i progetti in un particolare linguaggio, ad esempio F#, perché ogni progetto può essere scritto in un solo linguaggio specifico.
 
@@ -61,7 +61,7 @@ Di seguito è riportato un esempio di aggiunta di un semplice strumento "tools" 
 </Project>
 ```
 
-L'elemento `<DotNetCliToolReference>` è strutturato in modo analogo all'elemento `<PackageReference>` Il ripristino richiede l'ID del pacchetto contenente lo strumento e la relativa versione.
+L'elemento `<DotNetCliToolReference>` è strutturato in modo analogo all'elemento `<PackageReference>`. Il ripristino richiede l'ID del pacchetto contenente lo strumento e la relativa versione.
 
 ### <a name="building-tools"></a>Compilazione degli strumenti
 Come affermato in precedenza, gli strumenti sono essenzialmente applicazioni console portabili. La compilazione degli strumenti è analoga a quella di qualsiasi applicazione console.

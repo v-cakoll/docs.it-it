@@ -2,21 +2,21 @@
 title: Riferimento al comando CLI ML.NET
 description: Panoramica, esempi e riferimento per il comando auto-train nello strumento dell'interfaccia della riga di comando di ML.NET.
 ms.date: 12/18/2019
-ms.openlocfilehash: 5e59eba91721b26622360818a73adb07a654dc28
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 537f8d361c170378f5fe8cf454320831d7c8cbf2
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636120"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449699"
 ---
 # <a name="the-mlnet-cli-command-reference"></a>Riferimento ai comandi dell'interfaccia della riga di comando ML.NET
 
-Il comando `auto-train` è il comando principale dello strumento dell'interfaccia della riga di comando di ML.NET. Il comando consente di generare un modello ML.NET di qualità elevata usando automazione Machine Learning (AutoML), nonché il codice di esempio C# per eseguire/assegnare un punteggio al modello. Inoltre, il C# codice per eseguire il training del modello viene generato per la ricerca dell'algoritmo e delle impostazioni del modello.
+Il comando `auto-train` è il comando principale dello strumento dell'interfaccia della riga di comando di ML.NET. Il comando consente di generare un modello ML.NET di qualità elevata usando automazione Machine Learning (AutoML), nonché il codice di C# esempio per eseguire/assegnare un punteggio a tale modello. Inoltre, il C# codice per eseguire il training del modello viene generato per la ricerca dell'algoritmo e delle impostazioni del modello.
 
 > [!NOTE]
 > Questo argomento fa riferimento all'interfaccia della riga di comando di ML.NET e al Machine Learning automatico, attualmente in anteprima, e il materiale può essere soggetto a modifiche.
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 Sintassi di esempio:
 
@@ -26,7 +26,7 @@ mlnet auto-train --task regression --dataset "cars.csv" --label-column-name pric
 
 Il comando `mlnet auto-train` genera gli asset seguenti:
 
-- Un file ZIP di modello serializzato ("modello ottimale") pronto per l'uso.
+- Un file di modello serializzato con estensione zip ("miglior modello") pronto per l'uso.
 - C#codice per l'esecuzione o il punteggio del modello generato.
 - C#codice con il codice di training utilizzato per generare il modello.
 
@@ -145,7 +145,7 @@ In pratica, quando vengono usati `validation dataset` e `test dataset`, la fase 
 1. Si esaminano innanzitutto i modelli e si seleziona l'approccio migliore usando i dati di convalida (=validation)
 2. Quindi si valuta l'accuratezza dell'approccio selezionato (=test).
 
-Di conseguenza, la suddivisione dei dati potrebbe essere 80/10/10 o 75/15/10. Ad esempio:
+Di conseguenza, la suddivisione dei dati potrebbe essere 80/10/10 o 75/15/10. Ad esempio,
 
 - Il file di `training-dataset` deve avere il 75% dei dati.
 - Il file di `validation-dataset` deve avere il 15% dei dati.
@@ -188,7 +188,7 @@ Esempio:
 `--has-header | -h` (bool)
 
 Specificare se i file di set di dati includono una riga di intestazione.
-I possibili valori sono:
+I valori possibili sono:
 
 - `true`
 - `false`
@@ -253,7 +253,7 @@ I valori consentiti sono:
 
 Per impostazione predefinita, lo strumento dell'interfaccia della riga di comando dovrebbe visualizzare un feedback minimo, ad esempio indicare che è attivo e se possibile il tempo rimanente o la percentuale di tempo trascorso.
 
-## <a name="help"></a>Guida di
+## <a name="help"></a>?
 
 `-h|--help`
 
@@ -264,4 +264,4 @@ Visualizza le informazioni della Guida per il comando con una descrizione per og
 - [Come installare lo strumento dell'interfaccia della riga comando ML.NET](../how-to-guides/install-ml-net-cli.md)
 - [Panoramica dell'interfaccia della riga di comando di ML.NET](../automate-training-with-cli.md)
 - [Esercitazione: analizzare i sentimenti usando l'interfaccia della riga di comando di ML.NET](../tutorials/sentiment-analysis-cli.md)
-- [Telemetria nell'interfaccia della riga di comando ML.NET](../resources/ml-net-cli-telemetry.md)
+- [Telemetria nell'interfaccia della riga di comando di ML.NET](../resources/ml-net-cli-telemetry.md)

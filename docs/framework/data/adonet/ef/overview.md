@@ -2,12 +2,12 @@
 title: Cenni preliminari su Entity Framework
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: b68db4f139330ccc1da5057498a37a08d00ba266
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: ff0c85da89c44834620831c041df3ccdcaf8282f
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738504"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452526"
 ---
 # <a name="entity-framework-overview"></a>Panoramica di Entity Framework
 
@@ -20,9 +20,9 @@ Il Entity Framework consente agli sviluppatori di usare i dati sotto forma di pr
 
  Il modello fisico viene ridefinito dagli amministratori del database per migliorare le prestazioni, ma i programmatori che scrivono il codice delle applicazioni tendono a usare solo il modello logico scrivendo query SQL e chiamando stored procedure. I modelli di dominio vengono in genere usati come strumento per l'acquisizione e la comunicazione dei requisiti di un'applicazione, spesso come diagrammi inerti visualizzati e discussi nelle fasi iniziali di un progetto e quindi abbandonati. Molti team di sviluppo saltano la fase di creazione di un modello concettuale e partono direttamente dall'indicazione di tabelle, colonne e chiavi in un database relazionale.
 
- Il Entity Framework dà vita ai modelli consentendo agli sviluppatori di eseguire query su entità e relazioni nel modello di dominio (denominato modello *concettuale* nell'Entity Framework), basandosi sulla Entity Framework per tradurre tali operazioni nell'origine dati : comandi specifici. Le applicazioni non sono quindi più vincolate a dipendenze hard-coded su una determinata origine dati.
+ Il Entity Framework dà vita ai modelli consentendo agli sviluppatori di eseguire query su entità e relazioni nel modello di dominio (denominato modello *concettuale* nell'Entity Framework), basandosi sulla Entity Framework per tradurre tali operazioni in comandi specifici dell'origine dati. Le applicazioni non sono quindi più vincolate a dipendenze hard-coded su una determinata origine dati.
 
- Quando si usa Code First, viene eseguito il mapping del modello concettuale al modello di archiviazione nel codice. Il Entity Framework può dedurre il modello concettuale in base ai tipi di oggetto e alle configurazioni aggiuntive definite. I metadati di mapping vengono generati in fase di esecuzione in base a una combinazione della modalità di definizione dei tipi di dominio e delle informazioni di configurazione aggiuntive fornite nel codice. Entity Framework genera il database secondo le necessità in base ai metadati. Per ulteriori informazioni, vedere [creazione e mapping di un modello concettuale](https://go.microsoft.com/fwlink/?LinkID=235382).
+ Quando si usa Code First, viene eseguito il mapping del modello concettuale al modello di archiviazione nel codice. Il Entity Framework può dedurre il modello concettuale in base ai tipi di oggetto e alle configurazioni aggiuntive definite. I metadati di mapping vengono generati in fase di esecuzione in base a una combinazione della modalità di definizione dei tipi di dominio e delle informazioni di configurazione aggiuntive fornite nel codice. Entity Framework genera il database secondo le necessità in base ai metadati. Per ulteriori informazioni, vedere [creazione di un modello](/ef/ef6/modeling/).
 
  Quando si usano gli strumenti di Entity Data Model, il modello concettuale, il modello di archiviazione e i mapping tra i due vengono espressi in schemi basati su XML e definiti in file con estensioni corrispondenti:
 
@@ -49,7 +49,7 @@ Oltre a rappresentare una soluzione di mapping relazionale a oggetti, Entity Fra
 
 - [!INCLUDE[esql](../../../../../includes/esql-md.md)] Sottolinguaggio SQL indipendente dall'archiviazione che interagisce direttamente con le entità del modello concettuale e che supporta Entity Data Model concetti. [!INCLUDE[esql](../../../../../includes/esql-md.md)] viene utilizzato sia con query di oggetto che con query eseguite tramite il provider EntityClient. Per ulteriori informazioni, vedere [Entity SQL Overview](./language-reference/entity-sql-overview.md).
 
-Il Entity Framework include il provider di dati EntityClient. Questo provider gestisce le connessioni, traduce le query di entità in query specifiche dell'origine dati e restituisce un lettore dati utilizzato dal Entity Framework per materializzare i dati dell'entità in oggetti. Quando la materializzazione degli oggetti non è richiesta, il provider EntityClient può essere utilizzato anche come un provider di dati ADO.NET standard consentendo alle applicazioni di eseguire query [!INCLUDE[esql](../../../../../includes/esql-md.md)] e di utilizzare il lettore dati di sola lettura restituito. Per ulteriori informazioni, vedere [provider EntityClient per la Entity Framework](entityclient-provider-for-the-entity-framework.md).
+Il Entity Framework include il provider di dati EntityClient. Questo provider gestisce le connessioni, traduce le query di entità in query specifiche dell'origine dati e restituisce un lettore dati utilizzato dal Entity Framework per materializzare i dati dell'entità in oggetti. Quando la materializzazione degli oggetti non è richiesta, il provider EntityClient può essere utilizzato anche come un provider di dati ADO.NET standard consentendo alle applicazioni di eseguire query [!INCLUDE[esql](../../../../../includes/esql-md.md)] e di utilizzare il lettore dati di sola lettura restituito. Per ulteriori informazioni, vedere [Provider EntityClient per Entity Framework](entityclient-provider-for-the-entity-framework.md).
 
 Nel diagramma seguente viene illustrata l'architettura di Entity Framework per l'accesso ai dati:
 
@@ -59,7 +59,7 @@ Gli strumenti Entity Data Model possono generare una classe derivata da `System.
 
 ## <a name="data-providers"></a>Provider di dati
 
-Il provider di `EntityClient` estende il modello di provider ADO.NET accedendo ai dati in termini di entità e relazioni concettuali. Esegue query che usano [!INCLUDE[esql](../../../../../includes/esql-md.md)]. [!INCLUDE[esql](../../../../../includes/esql-md.md)] fornisce il linguaggio di query sottostante che consente la comunicazione di `EntityClient` con il database. Per ulteriori informazioni, vedere [provider EntityClient per la Entity Framework](entityclient-provider-for-the-entity-framework.md).
+Il provider di `EntityClient` estende il modello di provider ADO.NET accedendo ai dati in termini di entità e relazioni concettuali. Esegue query che usano [!INCLUDE[esql](../../../../../includes/esql-md.md)]. [!INCLUDE[esql](../../../../../includes/esql-md.md)] fornisce il linguaggio di query sottostante che consente la comunicazione di `EntityClient` con il database. Per ulteriori informazioni, vedere [Provider EntityClient per Entity Framework](entityclient-provider-for-the-entity-framework.md).
 
 Il Entity Framework include un provider di dati SqlClient aggiornato che supporta gli alberi dei comandi canonici. Per ulteriori informazioni, vedere [SqlClient per la Entity Framework](sqlclient-for-the-entity-framework.md).
 

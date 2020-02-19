@@ -2,12 +2,12 @@
 title: Modifiche di rilievo della libreria di classi base
 description: Elenca le modifiche di rilievo apportate in .NET CoreFx, la libreria di classi di base.
 ms.date: 09/20/2019
-ms.openlocfilehash: 9e8a00abfae8bf8f5301a4879cb5274492a2b6fd
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 7c59f2a96545e74e4099b6078ff52009740699c6
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093084"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449555"
 ---
 # <a name="corefx-breaking-changes"></a>CoreFx modifiche di rilievo
 
@@ -15,21 +15,25 @@ CoreFx fornisce le primitive e altri tipi generali usati da .NET Core.
 
 In questa pagina sono documentate le modifiche di rilievo seguenti:
 
-- [API che segnalano ora la versione del prodotto e non la versione del file](#apis-that-report-version-now-report-product-and-not-file-version)
-- [Le istanze EncoderFallbackBuffer personalizzate non possono eseguire il fallback in modo ricorsivo](#custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively)
-- [Modifiche al comportamento di analisi e formattazione a virgola mobile](#floating-point-formatting-and-parsing-behavior-changed)
-- [Le operazioni di analisi a virgola mobile non hanno più esito negativo o generano OverflowException](#floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception)
-- [InvalidAsynchronousStateException spostato in un altro assembly](#invalidasynchronousstateexception-moved-to-another-assembly)
-- [NET Core 3,0 segue le procedure consigliate Unicode per la sostituzione di sequenze di byte UTF-8 in formato non valido](#net-core-30-follows-unicode-best-practices-when-replacing-ill-formed-utf-8-byte-sequences)
-- [TypeDescriptionProviderAttribute spostato in un altro assembly](#typedescriptionproviderattribute-moved-to-another-assembly)
-- [ZipArchiveEntry non gestisce più gli archivi con dimensioni di voce incoerenti](#ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes)
-- [Tipo di eccezione del serializzatore JSON modificato da Jsonexception a NotSupportedException](#json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception)
-- [Modifica della semantica di (String) null in Utf8JsonWriter](#change-in-semantics-of-stringnull-in-utf8jsonwriter)
-- [I metodi JsonEncodedText. Encode hanno un argomento JavaScriptEncoder aggiuntivo](#jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument)
-- [Firma di JsonFactoryConverter. CreateConverter modificata](#jsonfactoryconvertercreateconverter-signature-changed)
-- [Modifiche all'API jsonelement](#jsonelement-api-changes)
-- [Campi privati aggiunti ai tipi struct predefiniti](#private-fields-added-to-built-in-struct-types)
-- [Modificare il valore predefinito di UseShellExecute](#change-in-default-value-of-useshellexecute)
+| Modifica | Versione introdotta |
+| - | :-: |
+| [API che segnalano ora la versione del prodotto e non la versione del file](#apis-that-report-version-now-report-product-and-not-file-version) | 3.0 |
+| [Le istanze EncoderFallbackBuffer personalizzate non possono eseguire il fallback in modo ricorsivo](#custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively) | 3.0 |
+| [Modifiche al comportamento di analisi e formattazione a virgola mobile](#floating-point-formatting-and-parsing-behavior-changed) | 3.0 |
+| [Le operazioni di analisi a virgola mobile non hanno più esito negativo o generano OverflowException](#floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception) | 3.0 |
+| [InvalidAsynchronousStateException spostato in un altro assembly](#invalidasynchronousstateexception-moved-to-another-assembly) | 3.0 |
+| [NET Core 3,0 segue le procedure consigliate Unicode per la sostituzione di sequenze di byte UTF-8 in formato non valido](#net-core-30-follows-unicode-best-practices-when-replacing-ill-formed-utf-8-byte-sequences) | 3.0 |
+| [TypeDescriptionProviderAttribute spostato in un altro assembly](#typedescriptionproviderattribute-moved-to-another-assembly) | 3.0 |
+| [ZipArchiveEntry non gestisce più gli archivi con dimensioni di voce incoerenti](#ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes) | 3.0 |
+| [Tipo di eccezione del serializzatore JSON modificato da Jsonexception a NotSupportedException](#json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception) | 3.0 |
+| [Modifica della semantica di (String) null in Utf8JsonWriter](#change-in-semantics-of-stringnull-in-utf8jsonwriter) | 3.0 |
+| [I metodi JsonEncodedText. Encode hanno un argomento JavaScriptEncoder aggiuntivo](#jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument) | 3.0 |
+| [Firma di JsonFactoryConverter. CreateConverter modificata](#jsonfactoryconvertercreateconverter-signature-changed) | 3.0 |
+| [Modifiche all'API jsonelement](#jsonelement-api-changes) | 3.0 |
+| [FieldInfo. SetValue genera un'eccezione per i campi statici di sola inizializzazione](#fieldinfosetvalue-throws-exception-for-static-init-only-fields) | 3.0 |
+| [Campi privati aggiunti ai tipi struct predefiniti](#private-fields-added-to-built-in-struct-types) | 2.1 |
+| [Modificare il valore predefinito di UseShellExecute](#change-in-default-value-of-useshellexecute) | 2.1 |
+| [UnauthorizedAccessException generata da FileSystemInfo. Attributes](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes) | 1.0 |
 
 ## <a name="net-core-30"></a>.NET Core 3.0
 
@@ -65,13 +69,9 @@ In questa pagina sono documentate le modifiche di rilievo seguenti:
 
 ***
 
-## <a name="net-core-30-preview-9"></a>.NET Core 3,0 Preview 9
-
 [!INCLUDE[JSON serializer exception type changed from JsonException to NotSupportedException](~/includes/core-changes/corefx/3.0/serializer-throws-notsupportedexception.md)]
 
 ***
-
-## <a name="net-core-30-preview-8"></a>.NET Core 3,0 Preview 8
 
 [!INCLUDE[Change in semantics of (string)null in Utf8JsonWriter](~/includes/core-changes/corefx/3.0/change-in-null-in-utf8jsonwriter.md)]
 
@@ -85,9 +85,11 @@ In questa pagina sono documentate le modifiche di rilievo seguenti:
 
 ***
 
-## <a name="net-core-30-preview-7"></a>.NET Core 3,0 Preview 7
-
 [!INCLUDE[JsonElement API changes](~/includes/core-changes/corefx/3.0/jsonelement-api-changes.md)]
+
+***
+
+[!INCLUDE [FieldInfo.SetValue throws exception for static, init-only fields](~/includes/core-changes/corefx/3.0/fieldinfo-setvalue-exception.md)]
 
 ***
 
@@ -98,5 +100,11 @@ In questa pagina sono documentate le modifiche di rilievo seguenti:
 ***
 
 [!INCLUDE[Change in default value of UseShellExecute](~/includes/core-changes/corefx/2.1/process-start-changes.md)]
+
+***
+
+## <a name="net-core-10"></a>.NET Core 1.0
+
+[!INCLUDE [UnauthorizedAccessException thrown by FileSystemInfo.Attributes](~/includes/core-changes/corefx/1.0/filesysteminfo-attributes-exceptions.md)]
 
 ***

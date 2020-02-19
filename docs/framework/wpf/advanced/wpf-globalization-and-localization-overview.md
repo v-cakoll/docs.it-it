@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 665daa14b543a357b17747a7d9d34dac2224711d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: ba49b3ec0f6edebff6278f4e90ae22baba9f1edf
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124559"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452669"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Panoramica della globalizzazione e localizzazione WPF
 
@@ -170,7 +170,7 @@ Non è necessario localizzare il `RunIcon.JPG` perché dovrebbe apparire lo stes
 
 **Localizzazione della finestra di dialogo Esegui**
 
-**Analizza**
+**Analisi**
 
 Dopo aver compilato l'applicazione, il primo passaggio della localizzazione consiste nell'analizzare le risorse localizzabili nell'assembly satellite. Ai fini di questo argomento, usare lo strumento LocBaml di esempio, disponibile nell'esempio di [strumento LocBaml](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml). Si noti che LocBaml è solo uno strumento di esempio che permette di iniziare a creare uno strumento di localizzazione adatto al processo di localizzazione. Usando LocBaml, eseguire il comando seguente per analizzare: **LocBaml/parse RunDialog. resources. dll/out:** per generare un file "RunDialog. resources. dll. csv".
 
@@ -178,19 +178,19 @@ Dopo aver compilato l'applicazione, il primo passaggio della localizzazione cons
 
 Usare un editor CSV che supporta la codifica Unicode per modificare il file. Escludere tutte le voci con categoria di localizzazione "Nessuna". Dovrebbero essere visualizzate le voci seguenti:
 
-|Chiave di risorsa|Categoria di localizzazione|valore|
+|Chiave di risorsa|Categoria di localizzazione|Valore|
 |-|-|-|
 |Button_1:System.Windows.Controls.Button.$Content|Pulsante|OK|
 |Button_2:System.Windows.Controls.Button.$Content|Pulsante|Annulla|
 |Button_3:System.Windows.Controls.Button.$Content|Pulsante|Sfoglia...|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|Digitare il nome del programma, della cartella, del documento o della risorsa Internet da aprire.|
-|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Text|Aperto:|
+|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Text|Apri:|
 |Window_1:System.Windows.Window.Title|Titolo|Esegui|
 
 La localizzazione dell'applicazione in tedesco richiede le seguenti traduzioni:
 
-|Chiave di risorsa|Categoria di localizzazione|valore|
+|Chiave di risorsa|Categoria di localizzazione|Valore|
 |-|-|-|
 |Button_1:System.Windows.Controls.Button.$Content|Pulsante|OK|
 |Button_2:System.Windows.Controls.Button.$Content|Pulsante|Abbrechen|
@@ -200,7 +200,7 @@ La localizzazione dell'applicazione in tedesco richiede le seguenti traduzioni:
 |TextBlock_2:System.Windows.Controls.TextBlock.$Content|Text|Apri:|
 |Window_1:System.Windows.Window.Title|Titolo|Esegui|
 
-**Generate**
+**Generazione**
 
 L'ultimo passaggio della localizzazione implica la creazione dell'assembly satellite appena localizzato. Per questa operazione usare il comando LocBaml seguente:
 
@@ -215,11 +215,11 @@ Nelle finestre tedesche, se il file resources. dll viene inserito in una cartell
 |Codice|BAML inglese originale|BAML localizzato|
 |Risorse indipendenti dalle impostazioni cultura|Altre risorse in inglese|Altre risorse localizzate in tedesco|
 
-.NET Framework sceglie automaticamente l'assembly di risorse satellite da caricare in base all'`Thread.CurrentThread.CurrentUICulture`dell'applicazione. Per impostazione predefinita, vengono utilizzate le impostazioni cultura del sistema operativo Windows. Quindi, se si usano le finestre tedesche, il de-DE\MyDialog.resources.dll viene caricato, se si usa Windows per la lingua inglese, il en-US\MyDialog.resources.dll viene caricato. È possibile impostare la risorsa di fallback finale per l'applicazione specificando NeutralResourcesLanguage nel AssemblyInfo del progetto.\*. Ad esempio se si specifica:
+.NET sceglie automaticamente l'assembly di risorse satellite da caricare in base all'<xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType>dell'applicazione. Per impostazione predefinita, vengono utilizzate le impostazioni cultura del sistema operativo Windows. Se si usano le finestre tedesche, il file *de-DE\MyDialog.resources.dll* viene caricato. Se si usa Windows in lingua inglese, il file *en-US\MyDialog.resources.dll* viene caricato. È possibile impostare la risorsa di fallback finale per l'applicazione specificando l'attributo `NeutralResourcesLanguage` nel file *AssemblyInfo* del progetto. Ad esempio, se si specifica:
 
 `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]`
 
-verrà utilizzato en-US\MyDialog.resources.dll con la versione tedesca di Windows se non sono disponibili de-DE\MyDialog.resources.dll o de\MyDialog.resources.dll.
+il file *en-US\MyDialog.resources.dll* viene quindi utilizzato con le finestre tedesche se non sono disponibili nessuno dei seguenti file: *de-DE\MyDialog.resources.dll* o *DE\MyDialog.resources.dll*.
 
 ### <a name="microsoft-saudi-arabia-homepage"></a>Home page Microsoft per l'Arabia Saudita
 
@@ -267,7 +267,7 @@ In molti casi il contenuto può risultare ambiguo e difficile da tradurre. Lo sv
 
 Questo commento viene associato al contenuto di TextBlock_1 e, nel caso dello strumento LocBaml (vedere [localizzare un'applicazione](how-to-localize-an-application.md)), può essere visualizzato nella sesta colonna della TextBlock_1 riga nel file output. csv:
 
-|Chiave di risorsa|Category|Leggibile|Modificabile|Comment|valore|
+|Chiave di risorsa|Category|Leggibile|Modificabile|Commento|Valore|
 |-|-|-|-|-|-|
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|TRUE|TRUE|Questo carattere viene usato come regola decorativa.|&#124;|
 
@@ -285,7 +285,7 @@ Oltre agli attributi di leggibilità e di modificabilità, [!INCLUDE[TLA2#tla_wi
 
 [!code-xaml[LocalizationComAtt#LocalizationAttributesOverridden](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributesoverridden)]
 
-Gli attributi di localizzazione predefiniti che [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce possono anche essere sottoposti a override tramite codice, pertanto è possibile impostare correttamente i valori predefiniti corretti per i controlli personalizzati. Ad esempio:
+Gli attributi di localizzazione predefiniti che [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce possono anche essere sottoposti a override tramite codice, pertanto è possibile impostare correttamente i valori predefiniti corretti per i controlli personalizzati. Ad esempio,
 
 ```csharp
 [Localizability(Readability = Readability.Readable, Modifiability=Modifiability.Unmodifiable, LocalizationCategory.None)]

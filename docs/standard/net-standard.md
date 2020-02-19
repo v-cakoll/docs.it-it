@@ -1,20 +1,20 @@
 ---
 title: .NET Standard
 description: Informazioni su .NET Standard, sulle relative versioni e sulle implementazioni di .NET che le supportano.
-ms.date: 09/23/2019
+ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 25490d5063a1f6c31b76af30ac6d37de6cb8c07f
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 00b40b771a8608bad7e3f992e3c99367ff6bb131
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124637"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452591"
 ---
 # <a name="net-standard"></a>.NET Standard
 
-[.NET standard](https://github.com/dotnet/standard) è una specifica formale delle API .NET che devono essere disponibili in tutte le implementazioni di .NET. La motivazione alla base .NET Standard è la definizione di una maggiore uniformità nell'ecosistema .NET. Lo standard [ECMA 335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md) continua ad assicurare uniformità riguardo al comportamento delle implementazioni di .NET, ma non esiste una specifica simile per le librerie di classi base .NET per le implementazioni delle librerie .NET.
+[.NET standard](https://github.com/dotnet/standard) è una specifica formale delle API .NET che devono essere disponibili in tutte le implementazioni di .NET. La motivazione alla base .NET Standard consiste nel definire una maggiore uniformità nell'ecosistema .NET. [Ecma 335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md) continua a stabilire uniformità per il comportamento di implementazione di .NET e, mentre ECMA 335 specifica un piccolo set di librerie standard, la specifica .NET standard include una gamma più ampia di API .NET.
 
 .NET Standard Abilita gli scenari principali seguenti:
 
@@ -58,7 +58,7 @@ Esistono due regole principali per il controllo delle versioni:
 - Additive: le versioni di .NET Standard sono cerchi concentrici da un punto di vista logico, ovvero le versioni successive includono tutte le API delle versioni precedenti. Non vengono apportate modifiche importanti tra una versione e l'altra.
 - Non modificabili: dopo essere state rilasciate, le versioni di .NET Standard sono bloccate. Le nuove API vengono prima rese disponibili in implementazioni di .NET specifiche, ad esempio .NET Core. Se la commissione di esame di .NET Standard ritiene che le nuove API debbano essere disponibili per tutte le implementazioni di .NET, vengono aggiunte in una nuova versione di .NET Standard.
 
-## <a name="specification"></a>Specifiche
+## <a name="specification"></a>Specifica
 
 La specifica di .NET Standard è un set standardizzato di API. La specifica viene gestita dagli implementatori di .NET, in particolare Microsoft (sono inclusi .NET Framework, .NET Core e Mono) e Unity. Un processo pubblico di commenti e suggerimenti è parte integrante della creazione di nuove versioni di .NET Standard tramite [GitHub](https://github.com/dotnet/standard).
 
@@ -86,7 +86,7 @@ I pacchetti NuGet hanno come destinazione uno o più [framework](frameworks.md).
 
 Il metapacchetto [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/) fa riferimento al set completo di pacchetti NuGet che definiscono .NET Standard.  Il modo più comune di definire `netstandard` come destinazione è fare riferimento a questo metapacchetto. Questo metapacchetto descrive e fornisce l'accesso alle circa 40 librerie .NET e alle API associate che definiscono .NET Standard. È possibile fare riferimento a pacchetti aggiuntivi che hanno `netstandard` come destinazione per ottenere accesso ad altre API.
 
-### <a name="versioning"></a>Controllo delle versioni
+### <a name="versioning"></a>Versionamento
 
 La specifica non è singola, ma costituisce un set di API a crescita incrementale e con definizione lineare delle versioni. La prima versione dello standard definisce un set di dati di riferimento delle API. Le versioni successive aggiungono nuove API ed ereditano quelle definite dalle versioni precedenti. Non esiste alcuna norma stabilita per la rimozione di API dallo standard.
 

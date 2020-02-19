@@ -3,12 +3,12 @@ title: Confronto tra project.json e csproj
 description: Vedere il mapping tra gli elementi project.json e csproj.
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: c31590cf34990867b81af4d073846c2952928798
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: abe515007b47b415ac33e3350a29edced1784d68
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714127"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451105"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Mapping tra le proprietà di project.json e csproj
 
@@ -30,7 +30,7 @@ Il nuovo formato, \*.csproj, è un formato basato su XML. L'esempio seguente ill
 
 ## <a name="common-top-level-properties"></a>Proprietà comuni di livello superiore
 
-### <a name="name"></a>nome
+### <a name="name"></a>name
 
 ```json
 {
@@ -38,7 +38,7 @@ Il nuovo formato, \*.csproj, è un formato basato su XML. L'esempio seguente ill
 }
 ```
 
-Non è più supportato. In csproj è determinato dal nome del file di progetto, che in genere corrisponde al nome della directory. Ad esempio `MyProjectName.csproj`.
+Non è più supportato. In csproj è determinato dal nome del file di progetto, che in genere corrisponde al nome della directory. Ad esempio, `MyProjectName.csproj`.
 
 Per impostazione predefinita, il nome del file di progetto specifica anche il valore delle proprietà `<AssemblyName>` e `<PackageId>`.
 
@@ -52,7 +52,7 @@ Per impostazione predefinita, il nome del file di progetto specifica anche il va
 La proprietà `<AssemblyName>` avrà un valore diverso da `<PackageId>` se la proprietà `buildOptions\outputName` è stata definita in project.json.
 Per altre informazioni, vedere [Altre opzioni comuni di compilazione](#other-common-build-options).
 
-### <a name="version"></a>Versione di
+### <a name="version"></a>version
 
 ```json
 {
@@ -337,9 +337,9 @@ In MSBuild, tutti i progetti sono *portatili* durante la creazione, ma possono e
 
 `dotnet publish --framework netcoreapp1.0 --runtime osx.10.11-x64`
 
-Per altre informazioni, vedere [Distribuzioni autonome (SCD)](../deploying/index.md#self-contained-deployments-scd).
+Per altre informazioni, vedere [Distribuzioni autonome (SCD)](../deploying/index.md#publish-self-contained).
 
-## <a name="tools"></a>tools
+## <a name="tools"></a>strumenti
 
 ```json
 {
@@ -561,7 +561,7 @@ La proprietà "System.GC.Server" viene migrata nel file csproj:
 </PropertyGroup>
 ```
 
-## <a name="shared"></a>condivise
+## <a name="shared"></a>condiviso
 
 ```json
 {

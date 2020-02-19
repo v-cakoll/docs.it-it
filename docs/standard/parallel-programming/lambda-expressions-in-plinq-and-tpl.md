@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Action delegate, creating with lambda expression
 - lambda expressions, with Action and Func
 ms.assetid: 645b2c17-29d0-4ffa-8684-430743cc2f2d
-ms.openlocfilehash: d1b716e977702d03db176da70be00a1e5c789a4b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4e5be295a52edc1a7f0a0a3aa98f55335ae3e31b
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129023"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453000"
 ---
 # <a name="lambda-expressions-in-plinq-and-tpl"></a>Espressioni lambda in PLINQ e TPL
 
@@ -26,11 +26,11 @@ Task Parallel Library (TPL) contiene numerosi metodi che accettano una delle fam
 
 ## <a name="func-delegate"></a>Delegato Func
 
-Un delegato `Func` incapsula un metodo che restituisce un valore. In una firma Func l'ultimo parametro di tipo o quello più a destra specifica sempre il tipo restituito. Una causa comune degli errori del compilatore è il tentativo di passare due parametri di input a un tipo <xref:System.Func%602?displayProperty=nameWithType>, che accetta un solo parametro di input. La libreria di classi .NET Framework definisce 17 versioni di `Func`: <xref:System.Func%601?displayProperty=nameWithType>, <xref:System.Func%602?displayProperty=nameWithType>, <xref:System.Func%603?displayProperty=nameWithType> e così via fino a <xref:System.Func%6017?displayProperty=nameWithType>.
+Un delegato `Func` incapsula un metodo che restituisce un valore. In una firma `Func`, l'ultimo parametro di tipo, o più a destra, specifica sempre il tipo restituito. Una causa comune degli errori del compilatore è il tentativo di passare due parametri di input a un tipo <xref:System.Func%602?displayProperty=nameWithType>, che accetta un solo parametro di input. .NET definisce 17 versioni di `Func`: <xref:System.Func%601?displayProperty=nameWithType>, <xref:System.Func%602?displayProperty=nameWithType>, <xref:System.Func%603?displayProperty=nameWithType>e così via fino a <xref:System.Func%6017?displayProperty=nameWithType>.
 
 ## <a name="action-delegate"></a>Delegato Action
 
-Un delegato <xref:System.Action?displayProperty=nameWithType> incapsula un metodo (Sub in Visual Basic) che non restituisce un valore o restituisce [void](../../csharp/language-reference/keywords/void.md). In una firma di tipo Action i parametri di tipo rappresentano solo parametri di input. Analogamente a Func, la libreria di classi Framework definisce 17 versioni di Action, da una versione priva di parametri di tipo fino a una versione con 16 parametri di tipo.
+Un delegato <xref:System.Action?displayProperty=nameWithType> incapsula un metodo (Sub in Visual Basic) che non restituisce un valore. In una firma di tipo `Action`, i parametri di tipo rappresentano solo i parametri di input. Come `Func`, .NET definisce 17 versioni di `Action`, da una versione priva di parametri di tipo fino a una versione con 16 parametri di tipo.
 
 ## <a name="example"></a>Esempio
 

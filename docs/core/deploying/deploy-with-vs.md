@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 23dc0f691c8a8d80a0bd2a5d301ace0d129007af
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 11a322278ce3ff38964fe2fa389e0b4a58897ec4
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920897"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449023"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Distribuire app .NET Core con Visual Studio
 
@@ -24,7 +24,7 @@ Le sezioni seguenti illustrano l'uso di Microsoft Visual Studio per creare i tip
 - Distribuzione autonoma
 - Distribuzione autonoma con dipendenze di terze parti
 
-Per informazioni sull'uso di Visual Studio per lo sviluppo di applicazioni .NET Core, vedere [dipendenze e requisiti di .NET Core](../install/dependencies.md?tabs=netcore30&pivots=os-windows).
+Per informazioni sull'uso di Visual Studio per lo sviluppo di applicazioni .NET Core, vedere [dipendenze e requisiti di .NET Core](../install/dependencies.md?pivots=os-windows).
 
 ## <a name="framework-dependent-deployment"></a>Distribuzione dipendente dal framework
 
@@ -32,7 +32,7 @@ Una distribuzione dipendente dal framework senza dipendenze di terze parti richi
 
 1. Creare il progetto.
 
-   Selezionare **File** > **Nuovo** > **Progetto**. Nella finestra di dialogo **Nuovo progetto** espandere le categorie di progetti del linguaggio (C# o Visual Basic) nel riquadro dei tipi di progetti **Installati**, scegliere il modello **.NET Core** e selezionare il modello **Console App (.NET Core)** (App console (.NET Core)) nel riquadro centrale. Immettere un nome di progetto, ad esempio "FDD", nella casella di testo **Nome**. Selezionare il pulsante **OK** .
+   Selezionare **File** > **Nuovo** > **Progetto**. Nella finestra di dialogo **Nuovo progetto** espandere le categorie di progetti del linguaggio (C# o Visual Basic) nel riquadro dei tipi di progetti **Installati**, scegliere il modello **.NET Core** e selezionare il modello **Console App (.NET Core)** (App console (.NET Core)) nel riquadro centrale. Immettere un nome di progetto, ad esempio "FDD", nella casella di testo **Nome**. Selezionare il pulsante **OK**.
 
 1. Aggiungere il codice sorgente dell'applicazione.
 
@@ -110,7 +110,7 @@ Dopo aver terminato il debug, è possibile pubblicare la distribuzione autonoma:
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15.6 e versioni precedenti](#tab/vs156)
+# <a name="visual-studio-156-and-earlier"></a>[Visual Studio 15.6 e versioni precedenti](#tab/vs156)
 
 Dopo aver eseguito il debug e il test del programma creare i file da distribuire con l'app per ogni piattaforma di destinazione.
 
@@ -176,7 +176,7 @@ Di seguito è riportato il file *csproj* completo per questo progetto.
 </Project>
 ```
 
-# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 e versioni successive](#tab/vs157)
+# <a name="visual-studio-157-and-later"></a>[Visual Studio 15.7 e versioni successive](#tab/vs157)
 
 Dopo aver eseguito il debug e il test del programma creare i file da distribuire con l'app per ogni piattaforma di destinazione. Questo richiede la creazione di un profilo separato per ogni piattaforma di destinazione.
 
@@ -216,7 +216,7 @@ Eseguire le operazioni seguenti per ogni piattaforma a cui è destinata l'applic
 
 Ripetere questi passaggi per definire eventuali piattaforme di destinazione dell'applicazione.
 
-I profili sono stati configurati e ora si è pronti per pubblicare l'applicazione. Per eseguire questa operazione:
+I profili sono stati configurati e ora si è pronti per pubblicare l'applicazione. A tale scopo, effettuare l'operazione seguente:
 
    1. Se la finestra **Pubblica** non è attualmente aperta, fare clic con il pulsante destro del mouse sul progetto (non sulla soluzione) in **Esplora soluzioni** e selezionare **Pubblica**.
 
@@ -274,7 +274,7 @@ Una distribuzione autonoma con una o più dipendenze di terze parti comporta l'a
 
 Di seguito è riportato il file *csproj* completo per questo progetto:
 
-# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15.6 e versioni precedenti](#tab/vs156)
+# <a name="visual-studio-156-and-earlier"></a>[Visual Studio 15.6 e versioni precedenti](#tab/vs156)
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -289,7 +289,7 @@ Di seguito è riportato il file *csproj* completo per questo progetto:
 </Project>
 ```
 
-# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 e versioni successive](#tab/vs157)
+# <a name="visual-studio-157-and-later"></a>[Visual Studio 15.7 e versioni successive](#tab/vs157)
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">

@@ -3,23 +3,23 @@ title: Funzionalità SQL Server e ADO.NET
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
-ms.openlocfilehash: a4420799a94b5fa5f37b1e25cf6eb37c130de471
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 30eb7d7f3f98d3cd3999c74f660986bef887c05d
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76979794"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451824"
 ---
 # <a name="sql-server-features-and-adonet"></a>Funzionalità SQL Server e ADO.NET
 Negli argomenti di questa sezione vengono illustrate le funzionalità di SQL Server indirizzate allo sviluppo di applicazioni di database mediante ADO.NET.  
   
  Per altre informazioni, vedere la documentazione online di SQL Server corrispondente alla versione di SQL Server in uso, come indicato nella tabella seguente.  
   
- **Documentazione online di SQL Server**  
+ **Documentazione di SQL Server**  
   
-1. [Sviluppo (motore di database)](https://go.microsoft.com/fwlink/?LinkId=115245)  
+1. [Sviluppo (motore di database)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb500155(v=sql.100))  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Enumerazione di istanze di SQL Server (ADO.NET)](enumerating-instances-of-sql-server.md)  
  Viene illustrato come enumerare le istanze attive di SQL Server.  
   

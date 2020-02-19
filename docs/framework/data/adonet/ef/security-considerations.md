@@ -2,12 +2,12 @@
 title: Considerazioni sulla sicurezza (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 9a560db5dbcb7a87a1c933febfb8bf676cc8816b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e2e1fc75049d41b50aa59092fe1aa21e8cdab659
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968413"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452487"
 ---
 # <a name="security-considerations-entity-framework"></a>Considerazioni sulla sicurezza (Entity Framework)
 In questo argomento vengono descritte considerazioni sulla sicurezza specifiche per lo sviluppo, la distribuzione e l'esecuzione di applicazioni Entity Framework. È inoltre consigliabile seguire le indicazioni per la creazione di applicazioni .NET Framework protette. Per altre informazioni, vedere [Panoramica della sicurezza](../security-overview.md).  
@@ -27,7 +27,7 @@ In questo argomento vengono descritte considerazioni sulla sicurezza specifiche 
  Durante l'operazione di accesso, le informazioni basate sulla password dell'utente vengono passate al server tramite le librerie di rete dell'origine dati sottostante. Un provider malintenzionato può rubare le credenziali utente, generare query dannose o manomettere il set di risultati.  
   
 #### <a name="encrypt-your-connection-to-protect-sensitive-data"></a>Crittografare la connessione per proteggere i dati riservati.  
- Il Entity Framework non gestisce direttamente la crittografia dei dati. Se gli utenti accedono ai dati su una rete pubblica, l'applicazione deve stabilire una connessione crittografata all'origine dati per aumentare la sicurezza. Per altre informazioni, vedere la documentazione relativa alla sicurezza dell'origine dati. Per un'origine dati SQL Server, vedere [crittografia delle connessioni a SQL Server](https://go.microsoft.com/fwlink/?LinkId=119544).  
+ Il Entity Framework non gestisce direttamente la crittografia dei dati. Se gli utenti accedono ai dati su una rete pubblica, l'applicazione deve stabilire una connessione crittografata all'origine dati per aumentare la sicurezza. Per altre informazioni, vedere la documentazione relativa alla sicurezza dell'origine dati. Per un'origine dati SQL Server, vedere [crittografia delle connessioni a SQL Server](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105)).  
   
 #### <a name="secure-the-connection-string"></a>Proteggere la stringa di connessione.  
  La protezione dell'accesso all'origine dati è uno dei principali obiettivi da raggiungere quando si imposta la sicurezza di un'applicazione. Una stringa di connessione presenta una potenziale vulnerabilità se non è protetta o se viene costruita in modo improprio. Se le informazioni di connessione vengono archiviate in testo normale o mantenute in memoria, si rischia di compromettere l'intero sistema. Di seguito sono riportati i metodi di protezione delle stringhe di connessione consigliati.  
@@ -51,7 +51,7 @@ In questo argomento vengono descritte considerazioni sulla sicurezza specifiche 
  Per altre informazioni, vedere [Protezione delle informazioni di connessione](../protecting-connection-information.md).  
   
 #### <a name="do-not-expose-an-entityconnection-to-untrusted-users"></a>Non esporre un oggetto EntityConnection a utenti non attendibili.  
- Un oggetto <xref:System.Data.EntityClient.EntityConnection> espone la stringa di connessione della connessione sottostante. Un utente che dispone dell'accesso a un oggetto <xref:System.Data.EntityClient.EntityConnection> può modificare anche l'oggetto <xref:System.Data.ConnectionState> della connessione sottostante. La classe <xref:System.Data.EntityClient.EntityConnection> non è thread-safe.  
+ Un oggetto <xref:System.Data.EntityClient.EntityConnection> espone la stringa di connessione della connessione sottostante. Un utente che dispone dell'accesso a un oggetto <xref:System.Data.EntityClient.EntityConnection> può modificare anche l'oggetto <xref:System.Data.ConnectionState> della connessione sottostante. La classe <xref:System.Data.EntityClient.EntityConnection>t non è di tipo thread-safe.  
   
 #### <a name="do-not-pass-connections-outside-the-security-context"></a>Non passare connessioni al di fuori del contesto di sicurezza.  
  Dopo aver stabilito una connessione, non è possibile passarla al di fuori del contesto di sicurezza. Un thread con l'autorizzazione ad aprire una connessione, ad esempio, non deve archiviare la connessione in un percorso globale. Da questo percorso, infatti, potrebbe essere usata da uno script dannoso senza un'autorizzazione esplicitamente concessa.  
@@ -81,7 +81,7 @@ In questo argomento vengono descritte considerazioni sulla sicurezza specifiche 
  Il Entity Framework non impone alcuna autorizzazione di sicurezza e richiamerà il codice dell'oggetto dati fornito dall'utente in corso, indipendentemente dal fatto che sia o meno attendibile. Assicurarsi che l'autenticazione e l'autorizzazione del client vengano eseguite dall'archivio dati e dall'applicazione.  
   
 #### <a name="restrict-access-to-all-configuration-files"></a>Limitare l'accesso a tutti i file di configurazione.  
- Un amministratore deve limitare l'accesso in scrittura a tutti i file che specificano la configurazione per un'applicazione, inclusi enterprisesec. config, Security. config, Machine. conf e il file di configurazione dell'applicazione \<> *dell'applicazione*. exe. config.  
+ Un amministratore deve limitare l'accesso in scrittura a tutti i file che specificano la configurazione per un'applicazione, inclusi enterprisesec. config, Security. config, Machine. conf e il file di configurazione dell'applicazione \<*applicazione*>. exe. config.  
   
  Il nome invariante del provider è modificabile nel file app. config. L'applicazione client deve avere la responsabilità di accedere al provider sottostante tramite il modello factory del provider standard usando un nome sicuro.  
   

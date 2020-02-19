@@ -2,12 +2,12 @@
 title: Archivio pacchetti di runtime
 description: Informazioni su come usare l'archivio pacchetti di runtime per specificare come destinazione i manifesti usati da .NET Core.
 ms.date: 08/12/2017
-ms.openlocfilehash: 8c58ccdb90e5ae9830313f52c19f58629ea5b0a2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7a833ed95147608c6fb403f8f0dec179d2a73833
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76737783"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448958"
 ---
 # <a name="runtime-package-store"></a>Archivio pacchetti di runtime
 
@@ -122,11 +122,11 @@ Specificare i manifesti di destinazione nel file di progetto solo quando l'ambie
 
 L'archivio implicito di ASP.NET Core è valido solo per ASP.NET Core 2.0. È consigliabile che le applicazioni usino ASP.NET Core 2.1 e versioni successive, che **non** usano l'archivio implicito. ASP.NET Core 2.1 e versioni successive usano il framework condiviso.
 
-La funzionalità di archivio pacchetti di runtime viene usata in modo implicito da un'app ASP.NET Core quando l'app viene distribuita come app con [distribuzione dipendente da framework (FDD, Framework-Dependent Deployment)](index.md#framework-dependent-deployments-fdd). Le destinazioni in [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) includono manifesti che fanno riferimento all'archivio pacchetti implicito nel sistema di destinazione. Inoltre, qualsiasi app con distribuzione dipendente da framework (FDD, Framework-Dependent Deployment) dipende dal pacchetto `Microsoft.AspNetCore.All` genera un'app pubblicata che contiene solo l'app e gli asset e non i pacchetti elencati nel metapacchetto `Microsoft.AspNetCore.All`. Si presuppone che questi pacchetti siano presenti nel sistema di destinazione.
+La funzionalità di archivio pacchetti di runtime viene usata in modo implicito da un'app ASP.NET Core quando l'app viene distribuita come app con [distribuzione dipendente da framework (FDD, Framework-Dependent Deployment)](index.md#publish-runtime-dependent). Le destinazioni in [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) includono manifesti che fanno riferimento all'archivio pacchetti implicito nel sistema di destinazione. Inoltre, qualsiasi app con distribuzione dipendente da framework (FDD, Framework-Dependent Deployment) dipende dal pacchetto `Microsoft.AspNetCore.All` genera un'app pubblicata che contiene solo l'app e gli asset e non i pacchetti elencati nel metapacchetto `Microsoft.AspNetCore.All`. Si presuppone che questi pacchetti siano presenti nel sistema di destinazione.
 
 L'archivio pacchetti di runtime viene installato nell'host quando viene installato .NET Core SDK. Altri programmi di installazione possono fornire l'archivio pacchetti di runtime, incluse le installazioni di Zip/tarball di SDK .NET Core, `apt-get`, Red Hat Yum, il bundle di .NET Core Windows Server Hosting e le installazioni manuali di archivi pacchetti di runtime.
 
-Quando si distribuisce un'app con [distribuzione dipendente da framework (FDD, Framework-Dependent Deployment)](index.md#framework-dependent-deployments-fdd), verificare che nell'ambiente di destinazione sia installato .NET Core SDK. Se l'app viene distribuita in un ambiente che non include ASP.NET Core, è possibile rifiutare esplicitamente l'archivio implicito specificando **\<PublishWithAspNetCoreTargetManifest >** impostato su `false` nel file di progetto, come nell'esempio seguente:
+Quando si distribuisce un'app con [distribuzione dipendente da framework (FDD, Framework-Dependent Deployment)](index.md#publish-runtime-dependent), verificare che nell'ambiente di destinazione sia installato .NET Core SDK. Se l'app viene distribuita in un ambiente che non include ASP.NET Core, è possibile rifiutare esplicitamente l'archivio implicito specificando **\<PublishWithAspNetCoreTargetManifest >** impostato su `false` nel file di progetto, come nell'esempio seguente:
 
 ```xml
 <PropertyGroup>
@@ -135,7 +135,7 @@ Quando si distribuisce un'app con [distribuzione dipendente da framework (FDD, F
 ```
 
 > [!NOTE]
-> Per le app con [distribuzione indipendente (SCD, Self-Contained Deployment)](index.md#self-contained-deployments-scd), si presuppone che il sistema di destinazione non contenga necessariamente i pacchetti del manifesto necessari. Pertanto, **\<PublishWithAspNetCoreTargetManifest >** non può essere impostato su `true` per un'app con distribuzione indipendente (SCD, Self-Contained Deployment).
+> Per le app con [distribuzione indipendente (SCD, Self-Contained Deployment)](index.md#publish-self-contained), si presuppone che il sistema di destinazione non contenga necessariamente i pacchetti del manifesto necessari. Pertanto, **\<PublishWithAspNetCoreTargetManifest >** non può essere impostato su `true` per un'app con distribuzione indipendente (SCD, Self-Contained Deployment).
 
 Se si distribuisce un'applicazione con una dipendenza del manifesto che è presente nella distribuzione (l'assembly si trova nella cartella *bin*), l'archivio pacchetti di runtime *non viene usato* nell'host per tale assembly. L'assembly della cartella *bin* viene usato indipendentemente dalla sua presenza nell'archivio pacchetti di runtime nell'host.
 

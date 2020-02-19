@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: e01b3a39a004e963e5bb66c5fa71433cb4e7204a
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: b22266efe2e775acd04c400cf9da50bffab28183
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802375"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449504"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Novità in Windows Communication Foundation 4.5
 
@@ -36,7 +36,7 @@ WCF supporta ora lo sviluppo con priorità al contratto ("contract-first"). Svcu
 
 ### <a name="add-service-reference-from-a-portable-subset-project"></a>Aggiungere un riferimento al servizio da un progetto di subset portabili
 
-I progetti di subset portabili consentono ai programmatori di assembly .NET di gestire un unico albero di origine e di compilare il sistema supportando allo stesso tempo più piattaforme .NET (desktop, Silverlight, Windows Phone e XBOX). I progetti di subset portabili fanno riferimento solo a librerie portabili .NET che sono assembly .NET Framework che possono essere usati su qualsiasi piattaforma .NET. L'esperienza dello sviluppatore equivale all'aggiunta di un riferimento al servizio all'interno di qualsiasi altra applicazione client WCF. Per altre informazioni, vedere [Aggiungi riferimento al servizio in un progetto di subset portatile](add-service-reference-in-a-portable-subset-project.md).
+I progetti di subset portabili consentono ai programmatori di assembly .NET di mantenere un singolo albero di origine e il sistema di compilazione, supportando comunque più piattaforme .NET (desktop, Silverlight, Windows Phone e Xbox). I progetti di subset portabili fanno riferimento solo a librerie portabili .NET che sono assembly che possono essere usati su qualsiasi piattaforma .NET. L'esperienza dello sviluppatore equivale all'aggiunta di un riferimento al servizio all'interno di qualsiasi altra applicazione client WCF. Per altre informazioni, vedere [Aggiungi riferimento al servizio in un progetto di subset portatile](add-service-reference-in-a-portable-subset-project.md).
 
 ### <a name="aspnet-compatibility-mode-default-changed"></a>Modifica dell'impostazione predefinita della modalità di compatibilità ASP.NET
 
@@ -78,7 +78,7 @@ WebSockets è una tecnologia che fornisce la vera comunicazione bidirezionale pe
 
 Nella tabella seguente vengono descritte le impostazioni che sono state modificate e dove reperire informazioni aggiuntive.
 
-|proprietà|On|Nuova impostazione predefinita|Per ulteriori informazioni, vedi|
+|Proprietà|Attivato|Nuova impostazione predefinita|Per ulteriori informazioni, vedere|
 |--------------|--------|-----------------|------------------------------|
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 secondi|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * il numero di processori|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|
