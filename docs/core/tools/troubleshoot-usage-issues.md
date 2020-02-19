@@ -3,12 +3,12 @@ title: Risolvere i problemi di utilizzo degli strumenti .NET Core
 description: Individuare i problemi comuni quando si eseguono gli strumenti di .NET Core e le possibili soluzioni.
 author: kdollard
 ms.date: 09/23/2019
-ms.openlocfilehash: df896405a122050acba220923eee58e87e0b75b6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 45139c3441b84964b937d5d1cc63a018f8d1f0fb
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74282506"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451077"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>Risolvere i problemi di utilizzo degli strumenti .NET Core
 
@@ -44,7 +44,7 @@ Il nome del file eseguibile determina il modo in cui si richiama lo strumento. L
 
     Gli strumenti globali possono essere installati nella directory predefinita o in una posizione specifica. Le directory predefinite sono:
 
-    | Sistema operativo          | Path                          |
+    | Sistema operativo          | Percorso                          |
     |-------------|-------------------------------|
     | Linux/macOS | `$HOME/.dotnet/tools`         |
     | WINDOWS     | `%USERPROFILE%\.dotnet\tools` |
@@ -73,7 +73,7 @@ Il nome del file eseguibile determina il modo in cui si richiama lo strumento. L
 
 ### <a name="runtime-not-found"></a>Runtime non trovato
 
-Gli strumenti di .NET Core sono [applicazioni dipendenti dal Framework](../deploying/index.md#framework-dependent-deployments-fdd), ovvero si basano su un runtime di .NET Core installato nel computer. Se il runtime previsto non viene trovato, seguono le normali regole di rollforward del runtime di .NET Core, ad esempio:
+Gli strumenti di .NET Core sono [applicazioni dipendenti dal Framework](../deploying/index.md#publish-runtime-dependent), ovvero si basano su un runtime di .NET Core installato nel computer. Se il runtime previsto non viene trovato, seguono le normali regole di rollforward del runtime di .NET Core, ad esempio:
 
 * Un'applicazione esegue il roll forward alla versione di patch più recente della versione principale e secondaria specificate.
 * Se non esiste un runtime corrispondente con un numero di versione principale e secondario corrispondente, viene usata la versione secondaria successiva più elevata.

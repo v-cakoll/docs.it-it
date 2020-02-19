@@ -2,12 +2,12 @@
 title: Gestione della reentrancy nelle app asincrone (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: 9a6189624eff988ec6b0ac8a93330d591ed46a8c
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 67fbbd294ffe6219b58065f974543b2dd483a92c
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772030"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451863"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Gestione della reentrancy nelle app asincrone (C#)
 
@@ -28,10 +28,10 @@ Quando si include codice asincrono nell'applicazione, è consigliabile prevedere
 - [Revisione ed esecuzione dell'app di esempio](#BKMD_SettingUpTheExample)
 
 > [!NOTE]
-> Per eseguire l'esempio, è necessario avere installato Visual Studio 2012 o versioni successive e .NET Framework 4.5 o versioni successive nel computer.
+> Per eseguire l'esempio, è necessario che nel computer sia installato Visual Studio 2012 o versione successiva e .NET Framework 4,5 o versione successiva.
 
 > [!NOTE]
-> Transport Layer Security (TLS) versione 1,2 è ora la versione minima da usare nello sviluppo di app. Se l'app è destinata a una versione di .NET Framework precedente alla 4,7, vedere l'articolo seguente per [le procedure consigliate per Transport Layer Security (TLS) con la .NET Framework](../../../../framework/network-programming/tls.md) 
+> Transport Layer Security (TLS) versione 1,2 è ora la versione minima da usare nello sviluppo di app. Se l'app è destinata a una versione di .NET Framework precedente alla 4,7, vedere l'articolo seguente per [le procedure consigliate per Transport Layer Security (TLS) con il .NET Framework](../../../../framework/network-programming/tls.md).
 
 ## <a name="BKMK_RecognizingReentrancy"></a> Riconoscimento della reentrancy
 
@@ -616,7 +616,7 @@ Nella sezione seguente viene illustrato il codice per compilare l'esempio come a
 
      Aggiungere un riferimento per <xref:System.Net.Http>, se non è già selezionato.
 
-9. In **Esplora soluzioni** aprire il menu di scelta rapida per MainWindow.xaml.cs e scegliere **Visualizza codice**.
+9. In **Esplora soluzioni** aprire il menu di scelta rapida per MainWindow.xaml.cs e quindi scegliere **Visualizza codice**.
 
 10. Sostituire il codice in MainWindow.xaml.cs con quello riportato di seguito.
 
@@ -731,4 +731,4 @@ Nella sezione seguente viene illustrato il codice per compilare l'esempio come a
 ## <a name="see-also"></a>Vedere anche
 
 - [Procedura dettagliata: Accesso al Web con Async e Await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Programmazione asincrona con Async e Await (C#)](./index.md)
+- [Programmazione asincrona con async e await (C#)](./index.md)

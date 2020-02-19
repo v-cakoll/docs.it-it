@@ -4,12 +4,12 @@ description: Informazioni su come .NET Core ricerca e sceglie automaticamente le
 author: thraka
 ms.author: adegeo
 ms.date: 06/26/2019
-ms.openlocfilehash: 546725db907937dea6fe0739656fb585a8855644
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 55f04ce81f63753831fca8fa2e44811c44049733
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713979"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450999"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Selezionare la versione di .NET Core da usare
 
@@ -78,7 +78,7 @@ I framework di destinazione .NET Standard sono anche limitati al framework di de
 
 ## <a name="framework-dependent-apps-roll-forward"></a>Roll forward delle app dipendenti dal framework
 
-Quando si esegue un'applicazione dall'origine con [`dotnet run`](../tools/dotnet-run.md), da una [**distribuzione dipendente dal framework**](../deploying/index.md#framework-dependent-deployments-fdd) con [`dotnet myapp.dll`](../tools/dotnet.md#description) o da un [**file eseguibile dipendente dal framework**](../deploying/index.md#framework-dependent-executables-fde) con `myapp.exe`, il file eseguibile `dotnet` è l'**host** dell'applicazione.
+Quando si esegue un'applicazione dall'origine con [`dotnet run`](../tools/dotnet-run.md), da una [**distribuzione dipendente dal framework**](../deploying/index.md#publish-runtime-dependent) con [`dotnet myapp.dll`](../tools/dotnet.md#description) o da un [**file eseguibile dipendente dal framework**](../deploying/index.md#publish-runtime-dependent) con `myapp.exe`, il file eseguibile `dotnet` è l'**host** dell'applicazione.
 
 L'host sceglie la versione di patch più recente installata nel computer. Se ad esempio è stato specificato `netcoreapp2.0` nel file di progetto e `2.0.4` è il runtime .NET più recente installato, viene usato il runtime `2.0.4`.
 
@@ -101,7 +101,7 @@ Il roll forward della versione secondaria presenta un effetto collaterale che pu
 
 ## <a name="self-contained-deployments-include-the-selected-runtime"></a>Distribuzioni autonome con runtime selezionato
 
-È possibile pubblicare un'applicazione come [**distribuzione autonoma**](../deploying/index.md#self-contained-deployments-scd). Questo approccio raggruppa il runtime e le librerie di .NET Core con l'applicazione. Le distribuzioni autonome non hanno dipendenze dagli ambienti di runtime. La scelta della versione di runtime avviene al momento della pubblicazione non in base di esecuzione.
+È possibile pubblicare un'applicazione come [**distribuzione autonoma**](../deploying/index.md#publish-self-contained). Questo approccio raggruppa il runtime e le librerie di .NET Core con l'applicazione. Le distribuzioni autonome non hanno dipendenze dagli ambienti di runtime. La scelta della versione di runtime avviene al momento della pubblicazione non in base di esecuzione.
 
 Il processo di pubblicazione seleziona la versione di patch più recente della famiglia di runtime specificata. Il comando `dotnet publish` ad esempio selezionerà .NET Core 2.0.4 se è la versione di patch più recente nella famiglia di runtime .NET Core 2.0. Il framework di destinazione (incluse le patch di sicurezza più recenti) viene fornito con l'applicazione.
 

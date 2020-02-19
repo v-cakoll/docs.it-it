@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: f0f55c948d10c61ebab57f47e3461531ccf5f610
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 00f01b63cdf9397fe25f28fff08767dfc3a83e69
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559716"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453117"
 ---
 # <a name="animation-overview"></a>Cenni preliminari sull'animazione
 
@@ -231,10 +231,10 @@ La tabella seguente illustra diversi tipi di animazione comuni e alcune propriet
 
 |Tipo di proprietà|Animazione (From/To/By) di base corrispondente|Animazione basata su fotogrammi chiave corrispondente|Animazione basata su tracciato corrispondente|Esempio di uso|
 |-------------------|----------------------------------------------------|---------------------------------------|----------------------------------|-------------------|
-|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|nessuna|Animare il <xref:System.Windows.Media.SolidColorBrush.Color%2A> di un <xref:System.Windows.Media.SolidColorBrush> o di un <xref:System.Windows.Media.GradientStop>.|
+|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|None|Animare il <xref:System.Windows.Media.SolidColorBrush.Color%2A> di un <xref:System.Windows.Media.SolidColorBrush> o di un <xref:System.Windows.Media.GradientStop>.|
 |<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimation>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|Animare il <xref:System.Windows.FrameworkElement.Width%2A> di un <xref:System.Windows.Controls.DockPanel> o il <xref:System.Windows.FrameworkElement.Height%2A> di una <xref:System.Windows.Controls.Button>.|
 |<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimation>|<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|Animare la posizione del <xref:System.Windows.Media.EllipseGeometry.Center%2A> di un <xref:System.Windows.Media.EllipseGeometry>.|
-|<xref:System.String>|nessuna|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|nessuna|Animare il <xref:System.Windows.Controls.TextBlock.Text%2A> di un <xref:System.Windows.Controls.TextBlock> o il <xref:System.Windows.Controls.ContentControl.Content%2A> di una <xref:System.Windows.Controls.Button>.|
+|<xref:System.String>|None|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|None|Animare il <xref:System.Windows.Controls.TextBlock.Text%2A> di un <xref:System.Windows.Controls.TextBlock> o il <xref:System.Windows.Controls.ContentControl.Content%2A> di una <xref:System.Windows.Controls.Button>.|
 
 <a name="animationsaretimelines"></a>
 
@@ -258,7 +258,7 @@ Nella sintassi seguente viene illustrata una versione semplificata della sintass
 
 Nella tabella seguente vengono illustrate diverse impostazioni <xref:System.Windows.Duration> e i valori risultanti.
 
-|Impostazione di|Valore risultante|
+|Impostazione|Valore risultante|
 |-------------|---------------------|
 |0:0:5.5|5,5 secondi.|
 |0:30:5.5|30 minuti e 5,5 secondi.|
@@ -341,7 +341,7 @@ Sebbene venga creato anche un clock per la <xref:System.Windows.Media.Animation.
 
 Affinché un'animazione rifletta le modifiche di data binding, è necessario rigenerarne l'orologio. Gli orologi non vengono rigenerati automaticamente. Per fare in modo che un'animazione rifletta le modifiche, riapplicarne lo storyboard usando un <xref:System.Windows.Media.Animation.BeginStoryboard> o il metodo <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>. Quando si usa uno di questi metodi, l'animazione viene riavviata. Nel codice è possibile usare il metodo <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> per spostare nuovamente lo storyboard nella posizione precedente.
 
-Per un esempio di animazione con associazione a dati, vedere [esempio di animazione key spline](https://go.microsoft.com/fwlink/?LinkID=160011). Per ulteriori informazioni sul funzionamento del sistema di animazione e temporizzazione, vedere [Cenni preliminari sull'animazione e sul sistema di temporizzazione](animation-and-timing-system-overview.md).
+Per un esempio di animazione con associazione a dati, vedere [esempio di animazione key spline](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/KeySplineAnimations). Per ulteriori informazioni sul funzionamento del sistema di animazione e temporizzazione, vedere [Cenni preliminari sull'animazione e sul sistema di temporizzazione](animation-and-timing-system-overview.md).
 
 <a name="otherWaysToAnimateSection"></a>
 
@@ -355,11 +355,11 @@ Gli esempi del presente documento illustrano come applicare animazioni tramite s
 
 Gli esempi seguenti consentono di iniziare ad aggiungere animazione alle applicazioni.
 
-- [Esempio di valori di destinazione dell'animazione From/To/By](https://go.microsoft.com/fwlink/?LinkID=159988)
+- [Esempio di valori di destinazione dell'animazione From/To/By](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/TargetValues)
 
   Descrive le diverse impostazioni From/To/By.
 
-- [Esempio di comportamento temporale di un'animazione](https://go.microsoft.com/fwlink/?LinkID=159970)
+- [Esempio di comportamento temporale di un'animazione](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/AnimationTiming)
 
   Illustra le diverse modalità per controllare il comportamento temporale di un'animazione. Questo esempio illustra anche come associare a dati il valore di destinazione di un'animazione.
 
@@ -380,14 +380,14 @@ Gli esempi seguenti consentono di iniziare ad aggiungere animazione alle applica
 |[Cenni preliminari sugli storyboard](storyboards-overview.md)|Descrive come usare gli storyboard con più sequenze temporali per creare animazioni complesse.|
 |[Cenni preliminari sui comportamenti temporali](timing-behaviors-overview.md)|Vengono descritti i tipi e le proprietà <xref:System.Windows.Media.Animation.Timeline> utilizzati nelle animazioni.|
 |[Cenni preliminari sugli eventi di tempo](timing-events-overview.md)|Vengono descritti gli eventi disponibili nell'<xref:System.Windows.Media.Animation.Timeline> e <xref:System.Windows.Media.Animation.Clock> oggetti per l'esecuzione di codice nei punti della sequenza temporale, ad esempio Begin, pause, Resume, Skip o stop.|
-|[Procedure relative alle proprietà](animation-and-timing-how-to-topics.md)|Contiene esempi di codice per usare animazioni e sequenze temporali in un'applicazione.|
+|[Procedure relative alla struttura ad albero e alla serializzazione degli elementi](animation-and-timing-how-to-topics.md)|Contiene esempi di codice per usare animazioni e sequenze temporali in un'applicazione.|
 |[Procedure relative a oggetti Clock](clocks-how-to-topics.md)|Contiene esempi di codice per l'utilizzo dell'oggetto <xref:System.Windows.Media.Animation.Clock> nell'applicazione.|
 |[Procedure relative ai fotogrammi chiave](key-frame-animation-how-to-topics.md)|Contiene esempi di codice per l'uso di animazioni con fotogrammi chiave in un'applicazione.|
 |[Procedure relative all'animazione percorso](path-animation-how-to-topics.md)|Contiene esempi di codice per l'uso di animazioni basate su tracciato in un'applicazione.|
 
 <a name="reference"></a>
 
-## <a name="reference"></a>Riferimenti
+## <a name="reference"></a>Riferimento
 
 - <xref:System.Windows.Media.Animation.Timeline>
 

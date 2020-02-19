@@ -9,12 +9,12 @@ helpviewer_keywords:
 - filtering data in views [WPF]
 - data binding [WPF], filtering data in views
 ms.assetid: c76e8606-4cc4-45a8-9110-e2ec66dc6afd
-ms.openlocfilehash: ea49897ca5e9cb6b639cf7d98ff05bd287c51761
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f15bcfd1e3c4175f8b4b97244f120d5edbdec9b8
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453474"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453078"
 ---
 # <a name="how-to-filter-data-in-a-view"></a>Procedura: filtrare i dati in una visualizzazione
 Questo esempio Mostra come filtrare i dati in una visualizzazione.  
@@ -35,7 +35,7 @@ Questo esempio Mostra come filtrare i dati in una visualizzazione.
  [!code-csharp[SortFilter#Unfilter](~/samples/snippets/csharp/VS_Snippets_Wpf/SortFilter/CSharp/Page1.xaml.cs#unfilter)]
  [!code-vb[SortFilter#Unfilter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SortFilter/VisualBasic/Page1.xaml.vb#unfilter)]  
   
- Per informazioni su come creare o ottenere una vista, vedere [ottenere la visualizzazione predefinita di una raccolta di dati](how-to-get-the-default-view-of-a-data-collection.md). Per l'esempio completo, vedere [ordinamento e filtro degli elementi in un esempio di visualizzazione](https://go.microsoft.com/fwlink/?LinkID=160040).  
+ Per informazioni su come creare o ottenere una vista, vedere [ottenere la visualizzazione predefinita di una raccolta di dati](how-to-get-the-default-view-of-a-data-collection.md). Per l'esempio completo, vedere [ordinamento e filtro degli elementi in un esempio di visualizzazione](https://github.com/Microsoft/WPF-Samples/tree/master/Data%20Binding/SortFilter).  
   
  Se l'oggetto visualizzazione deriva da un oggetto <xref:System.Windows.Data.CollectionViewSource>, applicare la logica di filtro impostando un gestore eventi per l'evento <xref:System.Windows.Data.CollectionViewSource.Filter>. Nell'esempio seguente `listingDataView` è un'istanza di <xref:System.Windows.Data.CollectionViewSource>.  
   
@@ -53,4 +53,4 @@ Questo esempio Mostra come filtrare i dati in una visualizzazione.
 - <xref:System.Windows.Data.BindingListCollectionView.CustomFilter%2A>
 - [Panoramica sul data binding](../../../desktop-wpf/data/data-binding-overview.md)
 - [Ordinare i dati in una visualizzazione](how-to-sort-data-in-a-view.md)
-- [Procedure relative alle proprietà](data-binding-how-to-topics.md)
+- [Procedure relative alla struttura ad albero e alla serializzazione degli elementi](data-binding-how-to-topics.md)

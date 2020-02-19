@@ -4,12 +4,12 @@ description: Informazioni sugli indicizzatori C# e su come implementano propriet
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 86e646b341cf098d8621f095d4bfc9ea2191940d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 966483e80d8dd0421dce1b7fabdb0d443d73a0fc
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039112"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450882"
 ---
 # <a name="indexers"></a>Indexers (Indicizzatori)
 
@@ -321,7 +321,7 @@ using CityDataMeasurements = System.Collections.Generic.Dictionary<string, Syste
 
 creano un *alias* per un tipo generico costruito. Queste istruzioni consentono al codice successivo di usare i nomi `DateMeasurements` e `CityDateMeasurements`, più descrittivi, anziché la costruzione generica di `Dictionary<DateTime, Measurements>` e `Dictionary<string, Dictionary<DateTime, Measurements> >`. Questo costrutto richiede però l'uso di nomi completi di tipo sul lato destro del segno `=`.
 
-La seconda tecnica consiste nel rimuovere le parti relative all'ora di qualsiasi oggetto `DateTime` usato per effettuare l'indicizzazione all'interno delle raccolte. .NET framework non prevede un tipo dotato della sola data.
+La seconda tecnica consiste nel rimuovere le parti relative all'ora di qualsiasi oggetto `DateTime` usato per effettuare l'indicizzazione all'interno delle raccolte. .NET non include un tipo di solo data.
 Gli sviluppatori usano il tipo `DateTime`, ma usano la proprietà `Date` per assicurarsi che tutti gli oggetti `DateTime` di quel giorno siano uguali.
 
 ## <a name="summing-up"></a>Conclusioni

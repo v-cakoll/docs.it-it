@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: eb4639b7cede59e6ca1e315f54ce805947f03327
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 1475852d312fa16980f25347fc9a864cb1659221
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937202"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451928"
 ---
 # <a name="operator-overloading-c-reference"></a>Overload degli operatori (Riferimento C#)
 
@@ -64,4 +64,6 @@ Per altre informazioni, vedere le sezioni seguenti delle [specifiche del linguag
 - [Riferimenti per C#](../index.md)
 - [Operatori C#](index.md)
 - [Operatori di conversione definiti dall'utente](user-defined-conversion-operators.md)
+- [Linee guida di progettazione-overload degli operatori](../../../standard/design-guidelines/operator-overloads.md)
+- [Linee guida di progettazione-operatori di uguaglianza](../../../standard/design-guidelines/equality-operators.md)
 - [Why are overloaded operators always static in C#?](https://docs.microsoft.com/archive/blogs/ericlippert/why-are-overloaded-operators-always-static-in-c) (Perché gli operatori sottoposti a overload sono sempre statici in C#?)

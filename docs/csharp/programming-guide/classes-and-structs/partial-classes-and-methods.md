@@ -6,12 +6,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: ea8d95c41df236897761ace1062ec325a069d52b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e359913aad4b8cea001a894d4ba5720fab54d42b
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714739"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451915"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Classi e metodi parziali (Guida per programmatori C#)
 
@@ -60,7 +60,7 @@ Gli elementi seguenti vengono uniti da tutte le definizioni di tipi parziali:
 
 - attributi class
 
-- Membri di
+- membri
 
 Si considerino ad esempio le dichiarazioni seguenti:
 
@@ -151,7 +151,7 @@ partial void onNameChanged()
 }
 ```
 
-- Le dichiarazioni di metodi parziali devono iniziare con la parola chiave contestuale [partial](../../language-reference/keywords/partial-type.md) e il metodo deve restituire [void](../../language-reference/keywords/void.md).
+- Le dichiarazioni di metodi parziali devono iniziare con la parola chiave contestuale [partial](../../language-reference/keywords/partial-type.md) e il metodo deve restituire [void](../../language-reference/builtin-types/void.md).
 
 - I metodi parziali possono contenere il parametro [in](../../language-reference/keywords/in-parameter-modifier.md) o [ref](../../language-reference/keywords/ref.md) ma non il parametro [out](../../language-reference/keywords/out-parameter-modifier.md).
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9aff20e35469f9e786f0f790fda4ffaa04e76e64
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 5ad9c494fd02059e05cc744aad3b06cfc9399995
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116432"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451888"
 ---
 ### <a name="default-value-of-httprequestmessageversion-changed-to-11"></a>Il valore predefinito di HttpRequestMessage. Version è stato modificato in 1,1
 
@@ -12,9 +12,9 @@ Il valore predefinito della proprietà <xref:System.Net.Http.HttpRequestMessage.
 
 #### <a name="version-introduced"></a>Versione introdotta
 
-.NET Core 3.0
+3.0
 
-#### <a name="change-description"></a>Descrizione delle modifiche
+#### <a name="change-description"></a>Descrizione della modifica
 
 In .NET Core da 1,0 a 2,0, il valore predefinito della proprietà <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> è 1,1. A partire da .NET Core 2,1, è stato modificato in 2,1.
 
@@ -24,17 +24,17 @@ A partire da .NET Core 3,0, il numero di versione predefinito restituito dalla p
 
 Aggiornare il codice se dipende dalla proprietà <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> la restituzione di un valore predefinito di 2,0.
 
-#### <a name="category"></a>Categoria
+#### <a name="category"></a>Category
 
-Funzionalità di rete di
+Rete
 
 #### <a name="affected-apis"></a>API interessate
 
 - <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName>
 
 <!--
-a def
-### Affected APIs
+
+#### Affected APIs
 
 - `P:System.Net.Http.HttpRequestMessage.Version`
 

@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Disegnare una forma chiusa usando l'elemento poligono"
+title: "Procedura: disegnare una forma chiusa utilizzando l'elemento poligono"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], Polygon elements
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - Polygon elements [WPF]
 - drawing [WPF], closed shapes with Polygon elements
 ms.assetid: 4b0ca008-29ce-48dd-8bc3-f3a20ffca6a6
-ms.openlocfilehash: 533c341e2fae528ec896bf38bafa13974af1d127
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 324a5623ee658789b8600a43a89ce26cab7cd6cd
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62003236"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452974"
 ---
-# <a name="how-to-draw-a-closed-shape-by-using-the-polygon-element"></a>Procedura: Disegnare una forma chiusa usando l'elemento poligono
-Questo esempio illustra come disegnare una forma chiusa utilizzando il <xref:System.Windows.Shapes.Polygon> elemento. Per disegnare una forma chiusa, creare un <xref:System.Windows.Shapes.Polygon> elemento e utilizzo relativi <xref:System.Windows.Shapes.Polygon.Points%2A> proprietà per specificare i vertici di una forma. Viene automaticamente tracciata una linea che connette il primo e ultimo punto. Infine, specificare una <xref:System.Windows.Shapes.Shape.Fill%2A>, un <xref:System.Windows.Shapes.Shape.Stroke%2A>, o entrambi.  
+# <a name="how-to-draw-a-closed-shape-by-using-the-polygon-element"></a>Procedura: disegnare una forma chiusa utilizzando l'elemento poligono
+In questo esempio viene illustrato come disegnare una forma chiusa utilizzando l'elemento <xref:System.Windows.Shapes.Polygon>. Per disegnare una forma chiusa, creare un elemento <xref:System.Windows.Shapes.Polygon> e utilizzare la relativa proprietà <xref:System.Windows.Shapes.Polygon.Points%2A> per specificare i vertici di una forma. Viene disegnata automaticamente una linea che connette il primo e l'ultimo punto. Infine, specificare un <xref:System.Windows.Shapes.Shape.Fill%2A>, un <xref:System.Windows.Shapes.Shape.Stroke%2A>o entrambi.  
   
 ## <a name="example"></a>Esempio  
- In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], le sintassi valide per i punti di sono un elenco delimitato da spazi di coppie di coordinate x e y separate da virgole.  
+ In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]la sintassi valida per i punti è un elenco delimitato da spazi di coppie di coordinate x e y separate da virgole.  
   
  [!code-xaml[drawingwithshapeelements#PolygonExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/polygonexample.xaml#polygonexample1)]  
   
- Sebbene l'esempio Usa un' <xref:System.Windows.Controls.Canvas> per contenere i poligoni, è possibile usare gli elementi poligono (e tutti gli altri elementi forma) con qualsiasi <xref:System.Windows.Controls.Panel> o <xref:System.Windows.Controls.Control> che supporta il contenuto non di testo.  
+ Sebbene nell'esempio venga utilizzato un <xref:System.Windows.Controls.Canvas> per contenere i poligoni, è possibile utilizzare gli elementi Polygon (e tutti gli altri elementi Shape) con qualsiasi <xref:System.Windows.Controls.Panel> o <xref:System.Windows.Controls.Control> che supporti contenuto non di testo.  
   
- In questo esempio fa parte di un esempio più esaustivo; per l'esempio completo, vedere [esempio di elementi forma](https://go.microsoft.com/fwlink/?LinkID=160037).
+ Questo esempio fa parte di un esempio più ampio; per l'esempio completo, vedere [esempio di elementi Shape](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/ShapeElements).

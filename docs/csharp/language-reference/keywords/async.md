@@ -8,12 +8,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 3d3f045eed3bad3624ed4994aebb862c52a4e196
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 30ee13a4174a137481fbcd36ccef721958b94a12
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713778"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450856"
 ---
 # <a name="async-c-reference"></a>async (Riferimenti per C#)
 
@@ -71,7 +71,7 @@ Un metodo asincrono può avere i tipi restituiti seguenti:
 
 - <xref:System.Threading.Tasks.Task>
 - <xref:System.Threading.Tasks.Task%601>
-- [void](./void.md). I metodi `async void` sono in genere sconsigliati per il codice diverso dai gestori eventi perché i chiamanti non possono usare `await` per questi metodi e devono implementare un meccanismo diverso per segnalare il completamento corretto o condizioni di errore.
+- [void](../builtin-types/void.md). I metodi `async void` sono in genere sconsigliati per il codice diverso dai gestori eventi perché i chiamanti non possono usare `await` per questi metodi e devono implementare un meccanismo diverso per segnalare il completamento corretto o condizioni di errore.
 - A partire da C# 7.0, qualsiasi tipo con un metodo `GetAwaiter` accessibile. Il tipo `System.Threading.Tasks.ValueTask<TResult>` è una di queste implementazioni ed è disponibile aggiungendo il pacchetto NuGet `System.Threading.Tasks.Extensions`. 
 
 Un metodo asincrono non può dichiarare parametri [in](./in-parameter-modifier.md), [ref](./ref.md) o [out](./out-parameter-modifier.md) e nemmeno avere un [valore di riferimento restituito ](../../programming-guide/classes-and-structs/ref-returns.md), ma può chiamare metodi con tali parametri.  

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: f9fa6f893e7f999564c4dcb43d40755547d3c793
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c3db8f7791e510768608e834339526fb82771979
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713118"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451941"
 ---
 # <a name="readonly-c-reference"></a>readonly (Riferimenti per C#)
 
@@ -54,7 +54,7 @@ In questo esempio, il valore del campo `year` non può essere modificato nel met
 Questi contesti di costruttori sono anche gli unici contesti in cui è possibile passare un campo `readonly` come parametro [out](out-parameter-modifier.md) o [ref](ref.md) .
 
 > [!NOTE]
-> La parola chiave `readonly` è diversa dalla parola chiave [const](const.md). Un campo `const` può essere inizializzato solo nella dichiarazione del campo. Un campo `readonly` può essere assegnato più volte nella dichiarazione del campo e in qualsiasi costruttore. I campi `readonly` possono quindi presentare valori diversi a seconda del costruttore usato. Inoltre, mentre un campo `const` rappresenta una costante in fase di compilazione, il campo `readonly` può essere usato per le costanti in fase di esecuzione, come nell'esempio seguente:
+> La parola chiave `readonly` è diversa dalla parola chiave [const](const.md). Un campo `const` può essere inizializzato solo nella dichiarazione del campo. Un campo `readonly` può essere assegnato più volte nella dichiarazione del campo e in qualsiasi costruttore. I campi `readonly` possono quindi presentare valori diversi a seconda del costruttore usato. Inoltre, mentre un campo `const` è una costante in fase di compilazione, il campo `readonly` può essere usato per le costanti in fase di esecuzione, come nell'esempio seguente:
 >
 > ```csharp
 > public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;
@@ -70,7 +70,7 @@ p2.y = 66;        // Error
 
 verrà ricevuto il messaggio di errore del compilatore:
 
-`A readonly field cannot be assigned to (except in a constructor or a variable initializer)`
+**Non è possibile assegnare un campo di sola lettura a (tranne che in un costruttore o in un inizializzatore di variabile)**
 
 ## <a name="readonly-struct-example"></a>Esempio di struct di sola lettura
 

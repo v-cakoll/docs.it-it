@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 7c0930f6606aa96d2863dc740aef8e9cab724b37
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 58cb3580c8701773452ae8338f036a94bbee80c5
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344861"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449399"
 ---
 ### <a name="change-in-default-value-of-useshellexecute"></a>Modificare il valore predefinito di UseShellExecute
 
 <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType> ha un valore predefinito di `false` in .NET Core. In .NET Framework, il valore predefinito è `true`.
 
-#### <a name="change-description"></a>Descrizione delle modifiche
+#### <a name="change-description"></a>Descrizione della modifica
 
 <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> consente di avviare direttamente un'applicazione, ad esempio con codice come `Process.Start("mspaint.exe")` che avvia Paint. Consente inoltre di avviare indirettamente un'applicazione associata se <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType> è impostata su `true`. In .NET Framework, il valore predefinito per <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType> è `true`, vale a dire che il codice, ad esempio `Process.Start("mytextfile.txt")` avvierà il blocco note, se i file con *estensione txt* sono stati associati con tale editor. Per impedire l'avvio indiretto di un'app in .NET Framework, è necessario impostare in modo esplicito <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType> su `false`. In .NET Core, il valore predefinito per <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType> è `false`. Ciò significa che, per impostazione predefinita, le applicazioni associate non vengono avviate quando si chiama `Process.Start`.
 
@@ -27,7 +27,7 @@ Questa modifica è stata introdotta in .NET Core per motivi di prestazioni. In g
 
 Se l'app si basa sul comportamento precedente, chiamare <xref:System.Diagnostics.Process.Start(System.Diagnostics.ProcessStartInfo)?displayProperty=nameWithType> con <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute> impostato su `true` sull'oggetto <xref:System.Diagnostics.ProcessStartInfo>.
 
-#### <a name="category"></a>Categoria
+#### <a name="category"></a>Category
 
 CoreFx
 
@@ -38,7 +38,7 @@ CoreFx
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `Overload:System.Diagnostics.Process.Start`
 - `M:System.Diagnostics.ProcessStartInfo`

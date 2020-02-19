@@ -2,12 +2,12 @@
 title: Gestione delle autorizzazioni con stored procedure in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-ms.openlocfilehash: 412d2a0a292e2ac83e6c42cf721c83e63633408c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 85383c46dd029db825d24d2f67d2dbda00f3bc95
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780948"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452383"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>Gestione delle autorizzazioni con stored procedure in SQL Server
 Per creare più linee di difesa intorno al database, è possibile implementare tutto l'accesso ai dati tramite stored procedure o funzioni definite dall'utente. Revocare o negare tutte le autorizzazioni per gli oggetti sottostanti, ad esempio tabelle, e concedere autorizzazioni EXECUTE sulle stored procedure. In questo modo viene creato un perimetro di sicurezza efficace intorno ai dati e agli oggetti di database.  
@@ -32,7 +32,7 @@ Per creare più linee di difesa intorno al database, è possibile implementare t
 ## <a name="stored-procedure-execution"></a>Esecuzione delle stored procedure  
  Le stored procedure traggono vantaggio dal concatenamento della proprietà per fornire l'accesso ai dati. In questo modo gli utenti non devono disporre di autorizzazioni esplicite per l'accesso agli oggetti di database. Una catena di proprietà esiste quando gli oggetti che accedono ad altri oggetti in modo sequenziale appartengono allo stesso utente. Ad esempio, una stored procedure può chiamare un'altra stored procedure oppure può accedere a più tabelle. Se tutti gli oggetti nella catena di esecuzione appartengono allo stesso utente, in SQL server viene controllata solo l'autorizzazione EXECUTE del chiamante, non le autorizzazioni per altri oggetti. Pertanto, è necessario concedere solo le autorizzazioni EXECUTE sulle stored procedure e revocare o negare tutte le autorizzazioni per le tabelle sottostanti.  
   
-## <a name="best-practices"></a>Suggerimenti  
+## <a name="best-practices"></a>Procedure consigliate  
  Scrivere stored procedure non è sufficiente per proteggere in modo adeguato l'applicazione. È necessario prendere in considerazione anche i possibili problemi di sicurezza elencati di seguito.  
   
 - Concedere autorizzazioni EXECUTE sulle stored procedure per i ruoli del database che si desidera siano in grado di accedere ai dati.  
@@ -52,9 +52,9 @@ Per creare più linee di difesa intorno al database, è possibile implementare t
 ## <a name="external-resources"></a>Risorse esterne  
  Per altre informazioni, vedere le seguenti risorse.  
   
-|Risorsa|Descrizione|  
+|Resource|Descrizione|  
 |--------------|-----------------|  
-|[Stored procedure](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) e [Attacco SQL Injection](https://go.microsoft.com/fwlink/?LinkId=98234) nella documentazione online di SQL Server|Viene descritto come creare stored procedure e come funziona SQL Injection.|  
+|[Stored procedure](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) e [SQL injection](/sql/relational-databases/security/sql-injection)|Gli articoli descrivono come creare stored procedure e il funzionamento di SQL injection.|  
   
 ## <a name="see-also"></a>Vedere anche
 

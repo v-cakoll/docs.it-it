@@ -11,12 +11,12 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: ac4dafef92bbc900d291a5b653c55ba295f1a6d6
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 4377d113a18d23c8a0f9a669e6112f1a8223cc79
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093227"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450869"
 ---
 # <a name="enumeration-types-c-reference"></a>Tipi di enumerazioneC# (riferimento)
 
@@ -89,5 +89,6 @@ Per altre informazioni, vedere le sezioni seguenti delle [specifiche del linguag
 
 - [Riferimenti per C#](../index.md)
 - [Stringhe di formato di enumerazione](../../../standard/base-types/enumeration-format-strings.md)
-- [Convenzioni di denominazione enum](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)
+- [Linee guida di progettazione-progettazione enum](../../../standard/design-guidelines/enum.md)
+- [Linee guida di progettazione-convenzioni di denominazione enum](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)
 - [Istruzione switch](../keywords/switch.md)
