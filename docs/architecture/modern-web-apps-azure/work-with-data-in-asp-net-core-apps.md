@@ -3,13 +3,13 @@ title: Usare i dati nelle app ASP.NET Core
 description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Usare i dati nelle app ASP.NET Core
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: d3c91f594eedd2636cbf08285f0dee352bc4835a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 12/04/2019
+ms.openlocfilehash: f37bdca688559236d9b07b97f7ee7459b3be4f39
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777122"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449348"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Uso dei dati nelle app ASP.NET Core
 
@@ -200,9 +200,9 @@ private void ConfigureOrder(EntityTypeBuilder<Order> builder)
 }
 ```
 
-In questo esempio la proprietà `ShipToAddress` è di tipo `Address`. `Address` è un oggetto valore con diverse proprietà, quali `Street` e `City`. Entity Framework Core esegue il mapping dell'oggetto `Order` alla relativa tabella con una sola colonna per ogni proprietà `Address`, facendo precedere al nome di ogni colonna il nome della proprietà. In questo esempio la tabella `Order` includerebbe colonne come `ShipToAddress_Street` e `ShipToAddress_City`.
+In questo esempio la proprietà `ShipToAddress` è di tipo `Address`. `Address` è un oggetto valore con diverse proprietà, quali `Street` e `City`. Entity Framework Core esegue il mapping dell'oggetto `Order` alla relativa tabella con una sola colonna per ogni proprietà `Address`, facendo precedere al nome di ogni colonna il nome della proprietà. In questo esempio la tabella `Order` includerebbe colonne come `ShipToAddress_Street` e `ShipToAddress_City`. Se lo si desidera, è anche possibile archiviare i tipi di proprietà in tabelle separate.
 
-[EF Core 2.2 introduce il supporto delle raccolte di entità di proprietà](https://docs.microsoft.com/ef/core/what-is-new/ef-core-2.2#collections-of-owned-entities)
+Altre informazioni sul [supporto delle entità di](/ef/core/modeling/owned-entities)proprietà sono disponibili in EF core.
 
 ### <a name="resilient-connections"></a>Connessioni resilienti
 

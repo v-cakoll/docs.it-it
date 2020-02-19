@@ -1,13 +1,13 @@
 ---
 title: Monitoraggio nei servizi Azure Kubernetes
 description: Monitoraggio nei servizi Azure Kubernetes
-ms.date: 09/23/2019
-ms.openlocfilehash: fc9d84fd738ff1c40d25860680e14313c9323517
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.date: 02/05/2020
+ms.openlocfilehash: 5c46b9e8599f70d430ad26cf1364343454d30a16
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711649"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450063"
 ---
 # <a name="monitoring-in-azure-kubernetes-services"></a>Monitoraggio nei servizi Azure Kubernetes
 
@@ -15,28 +15,14 @@ ms.locfileid: "75711649"
 
 La registrazione incorporata in Kubernetes è primitiva. Tuttavia, esistono alcune opzioni eccezionali per ottenere i log da Kubernetes e in una posizione in cui possono essere analizzati correttamente. Se è necessario monitorare i cluster AKS, la configurazione di Elastic stack per Kubernetes è un'ottima soluzione.
 
-## <a name="elastic-stack"></a>Elastic stack
+## <a name="azure-monitor-for-containers"></a>Monitoraggio di Azure per contenitori
 
-Elastic stack è un'opzione potente per la raccolta di informazioni da un cluster Kubernetes. Kubernetes supporta l'invio di log a un endpoint elasticsearch e, nella [maggior parte dei casi](https://kubernetes.io/docs/tasks/debug-application-cluster/logging-elasticsearch-kibana/), è sufficiente impostare le variabili di ambiente, come illustrato nella figura 7-5:
-
-```kubernetes
-KUBE_LOGGING_DESTINATION=elasticsearch
-KUBE_ENABLE_NODE_LOGGING=true
-```
-
-**Figura 7-5** -variabili di configurazione per Kubernetes
-
-Verrà installato elasticsearch nel cluster e la destinazione invierà tutti i log del cluster.
-
-![un esempio di dashboard Kibana che mostra i risultati di una query sui log inseriti da Kubernetes](./media/kibana-dashboard.png)
-**figura 7-6**. Esempio di dashboard Kibana che mostra i risultati di una query sui log inseriti da Kubernetes
-
-## <a name="azure-container-monitoring"></a>Monitoraggio del contenitore di Azure
-
-Il monitoraggio dei contenitori di Azure supporta l'utilizzo di log solo da Kubernetes, ma anche da altri motori di orchestrazione come DC/OS, Docker Swarm e Red Hat OpenShift.
+Il [monitoraggio di Azure per i contenitori](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-overview) supporta l'utilizzo di log non solo Kubernetes, ma anche da altri motori di orchestrazione, ad esempio DC/OS, Docker Swarm e Red Hat OpenShift.
 
 ![l'utilizzo di log da vari contenitori](./media/containers-diagram.png)
-**figura 7-7**.  Utilizzo di log da vari contenitori
+**figura 7-10**. Utilizzo di log da vari contenitori
+
+[Prometeo](https://prometheus.io/) è una diffusa soluzione di monitoraggio delle metriche open source. Fa parte della base di calcolo nativa del cloud. In genere, l'uso di Prometeo richiede la gestione di un server Prometeo con il proprio archivio. Tuttavia, [monitoraggio di Azure per i contenitori fornisce l'integrazione diretta con gli endpoint della metrica Prometheus](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-prometheus-integration), quindi non è necessario un server separato.
 
 Le informazioni relative a log e metriche vengono raccolte non solo dai contenitori in esecuzione nel cluster, ma anche dal cluster che ospita autonomamente. Consente di correlare le informazioni di log dai due, rendendo molto più semplice rilevare un errore.
 
@@ -45,7 +31,7 @@ L'installazione degli agenti di raccolta log è diversa nei cluster [Windows](ht
 Indipendentemente dall'agente di orchestrazione o dal sistema operativo che esegue il daemon di monitoraggio di Azure, le informazioni di log vengono trasmesse agli stessi strumenti di monitoraggio di Azure con cui gli utenti hanno familiarità. Ciò garantisce un'esperienza parallela in ambienti che combinano origini di log diverse, ad esempio un ambiente ibrido per Kubernetes/funzioni di Azure.
 
 ![un dashboard di esempio che mostra le informazioni di registrazione e metrica da diversi contenitori in esecuzione.](./media/containers-dashboard.png)
-**figura 7-8**. Un dashboard di esempio che mostra le informazioni di registrazione e metrica da diversi contenitori in esecuzione.
+**figura 7-11**. Un dashboard di esempio che mostra le informazioni di registrazione e metrica da diversi contenitori in esecuzione.
 
 ## <a name="logfinalize"></a>Log. Finalize ()
 

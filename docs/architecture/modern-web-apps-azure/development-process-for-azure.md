@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Proc
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 830271d76e5a87ed782d81fa9491328c580f0f87
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7a641c1b6665af6e9e78ef182174b360041d74aa
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849582"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450043"
 ---
 # <a name="development-process-for-azure"></a>Processo di sviluppo per Azure
 
@@ -26,13 +26,9 @@ ms.locfileid: "70849582"
 
 Durante lo sviluppo di applicazioni ASP.NET Core Microsoft offre gli strumenti necessari sia che si scelga un IDE potente e completo sia che si preferisca un editor semplice e agile.
 
-**Visual Studio 2017.** Se si usa *Visual Studio 2017* è possibile compilare le applicazioni ASP.NET Core solo se è stato installato il carico di lavoro di *sviluppo multipiattaforma .NET Core*. La figura 10-1 illustra il carico di lavoro richiesto nella finestra di dialogo di installazione di Visual Studio 2017.
+**Visual Studio 2019.** Visual Studio 2019 è l'IDE migliore per lo sviluppo di applicazioni per ASP.NET Core. Offre una serie di funzionalità che aumentano la produttività degli sviluppatori. È possibile usarlo per sviluppare l'applicazione, quindi analizzarne le prestazioni e altre caratteristiche. Il debugger integrato consente di sospendere l'esecuzione del codice ed eseguire il codice in tempo reale mentre è in esecuzione. Il Test Runner incorporato consente di organizzare i test e i relativi risultati ed è anche in grado di eseguire Live unit testing durante la codifica. Con Live Share è possibile collaborare in tempo reale con altri sviluppatori, condividendo la sessione di codice senza interruzioni sulla rete. Quando si è pronti, Visual Studio include tutti gli elementi necessari per pubblicare l'applicazione in Azure o ovunque sia possibile ospitarla.
 
-![Installazione del carico di lavoro .NET Core in Visual Studio 2017](./media/image10-1.png)
-
-**Figure 10-1.** Installazione del carico di lavoro .NET Core in Visual Studio 2017.
-
-[Scarica Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+[Scarica Visual Studio 2019](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
 **Visual Studio Code e l'interfaccia della riga di comando per .NET** (strumenti multipiattaforma per Mac, Linux e Windows). Se si preferisce un editor leggero e multipiattaforma che supporta qualsiasi linguaggio di sviluppo, è possibile usare Microsoft Visual Studio Code e l'interfaccia della riga di comando per .NET. Questi prodotti offrono un'esperienza semplice ed efficace che consente di ottimizzare il flusso di lavoro di sviluppo. Inoltre, Visual Studio Code supporta le estensioni per C\# e lo sviluppo Web offrendo IntelliSense e attività di collegamento all'interno dell'editor.
 
@@ -58,7 +54,7 @@ Creare un servizio app di Azure in cui verrà distribuita l'applicazione. Creare
 
 ![AzureWebApp](./media/image10-2.png)
 
-**Figura 10-2.** Creazione di una nuova app Web del servizio app di Azure nel portale di Azure.
+**Figure 10-1.** Creazione di una nuova app Web del servizio app di Azure nel portale di Azure.
 
 Il processo di compilazione CI eseguirà una compilazione automatica ogni volta che viene eseguito il commit di nuovo codice nel repository di controllo del codice sorgente del progetto. Ciò consente di verificare immediatamente che il codice venga compilato (e passi i test automatizzati) e possa essere potenzialmente distribuito. Questa compilazione CI produrrà un artefatto del pacchetto di distribuzione Web e lo pubblicherà per l'utilizzo da parte del processo CD.
 
@@ -74,11 +70,11 @@ Dopo aver configurato la pipeline CI/CD, è possibile effettuare aggiornamenti n
 
 ### <a name="workflow-for-developing-azure-hosted-aspnet-core-applications"></a>Flusso di lavoro per lo sviluppo di applicazioni ASP.NET Core ospitate in Azure
 
-Dopo aver configurato l'account di Azure e il processo CI/CD, lo sviluppo di applicazioni ASP.NET Core ospitate in Azure è semplice. Di seguito sono descritti i passaggi di base che vengono in genere eseguiti durante la compilazione di un'app ASP.NET Core, ospitata nel servizio app di Azure come app Web, come illustrato nella figura 10-3.
+Dopo aver configurato l'account di Azure e il processo CI/CD, lo sviluppo di applicazioni ASP.NET Core ospitate in Azure è semplice. Di seguito sono riportati i passaggi di base che si eseguono in genere quando si compila un'app ASP.NET Core, ospitata in app Azure servizio come app Web, come illustrato nella figura 10-2.
 
 ![EndToEndDevDeployWorkflow](./media/image10-3.png)
 
-**Figura 10-3.** Flusso di lavoro dettagliato per la compilazione di app ASP.NET Core e l'hosting in Azure
+**Figura 10-2.** Flusso di lavoro dettagliato per la compilazione di app ASP.NET Core e l'hosting in Azure
 
 #### <a name="step-1-local-dev-environment-inner-loop"></a>Passaggio 1. Ciclo interno dell'ambiente di sviluppo locale
 

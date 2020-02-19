@@ -3,17 +3,19 @@ title: Progettare applicazioni Web moderne con ASP.NET Core e Azure
 description: Una guida che offre linee guida end-to-end sulla compilazione di applicazioni Web monolitiche usando ASP.NET Core e Azure.
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 739dd607aaa45f73e777a30c6495e329236fee17
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.date: 12/4/2019
+ms.openlocfilehash: c19e5e90cfb96463f744cfb064abe72ee5db2e9f
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296292"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449328"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Progettare applicazioni Web moderne con ASP.NET Core e Azure
 
-![Immagine della copertina della guida Progettare applicazioni Web moderne.](./media/index/web-application-guide-cover-image.png)
+![Book Cover image of the Architect Modern Web Applications guide.](./media/index/web-application-guide-cover-image.png)
+
+**Edizione v 3.1** -aggiornata alla ASP.NET Core 3,1
 
 PUBBLICATO DA
 
@@ -25,7 +27,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2019 Microsoft Corporation
+Copyright © 2020 di Microsoft Corporation
 
 Tutti i diritti sono riservati. Nessuna parte del contenuto di questo libro può essere riprodotta o trasmessa in qualsiasi forma o con qualsiasi mezzo, senza il permesso scritto dell'editore.
 
@@ -37,7 +39,7 @@ Microsoft e i marchi elencati nella pagina Web relativa ai marchi all'indirizzo 
 
 Mac e macOS sono marchi registrati di Apple Inc.
 
-Il logo Docker con la balena è un marchio registrato di Docker, Inc. Usato su autorizzazione.
+Il logo Docker Whale è un marchio registrato di Docker, Inc. usato dall'autorizzazione.
 
 Tutti gli altri marchi e logo appartengono ai rispettivi proprietari.
 
@@ -83,7 +85,7 @@ La compilazione di applicazioni Web con ASP.NET Core, ospitato in Azure, offre m
 
 Questa guida offre linee guida end-to-end sulla compilazione di applicazioni Web *monolitiche* usando ASP.NET Core e Azure. In questo contesto "monolitico" si riferisce al fatto che queste applicazioni vengono distribuite come una singola unità, non come una raccolta di applicazioni e servizi che interagiscono tra loro.
 
-Questa guida è complementare per i ["_Microservizi .NET. Architettura per le applicazioni .NET incluse in contenitori_"](../microservices/index.md) incentrata principalmente su Docker, microservizi e distribuzione di contenitori per ospitare applicazioni aziendali.
+Questa guida è complementare ai [_microservizi .NET. Architettura per le applicazioni .NET in contenitori_"](../microservices/index.md) , che è incentrato maggiormente sui Docker, sui microservizi e sulla distribuzione di contenitori per ospitare le applicazioni aziendali.
 
 ### <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microservizi .NET. Architettura per le applicazioni .NET incluse in contenitori
 

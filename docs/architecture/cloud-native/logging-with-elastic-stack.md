@@ -1,20 +1,37 @@
 ---
 title: Registrazione con Elastic Stack
 description: Registrazione con Elastic stack, logstash e Kibana
-ms.date: 09/23/2019
-ms.openlocfilehash: 989834925bc08541bf484e1a4567a56ac324872f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.date: 02/05/2020
+ms.openlocfilehash: 6863c66b63854fe3ecaabe2919beded2926ea64c
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087065"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448917"
 ---
 # <a name="logging-with-elastic-stack"></a>Registrazione con Elastic Stack
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Sono disponibili molti strumenti di registrazione centralizzati e i costi variano a seconda del fatto che siano disponibili strumenti Open Source gratuiti per le opzioni più costose. In molti casi, gli strumenti gratuiti sono più efficaci o migliori delle offerte a pagamento. Uno di questi strumenti è costituito da una combinazione di tre componenti Open Source: ricerca elastica, logstash e Kibana.
+
 Collettivamente questi strumenti sono noti come stack elastico o ELK.
+
+## <a name="elastic-stack"></a>Elastic stack
+
+Elastic stack è un'opzione potente per la raccolta di informazioni da un cluster Kubernetes. Kubernetes supporta l'invio di log a un endpoint elasticsearch e, nella [maggior parte dei casi](https://kubernetes.io/docs/tasks/debug-application-cluster/logging-elasticsearch-kibana/), è sufficiente impostare le variabili di ambiente, come illustrato nella figura 7-5:
+
+```kubernetes
+KUBE_LOGGING_DESTINATION=elasticsearch
+KUBE_ENABLE_NODE_LOGGING=true
+```
+
+**Figura 7-5**. Variabili di configurazione per Kubernetes
+
+Verrà installato elasticsearch nel cluster e la destinazione invierà tutti i log del cluster.
+
+![un esempio di dashboard Kibana che mostra i risultati di una query sui log inseriti da Kubernetes](./media/kibana-dashboard.png)
+**figura 7-6**. Esempio di dashboard Kibana che mostra i risultati di una query sui log inseriti da Kubernetes
 
 ## <a name="what-are-the-advantages-of-elastic-stack"></a>Quali sono i vantaggi di Elastic stack?
 
@@ -24,7 +41,7 @@ Elastic stack fornisce la registrazione centralizzata in modo semplice e a basso
 
 Il primo componente è [logstash](https://www.elastic.co/products/logstash). Questo strumento viene usato per raccogliere informazioni di log da un'ampia gamma di origini diverse. Ad esempio, logstash può leggere i log dal disco e ricevere anche messaggi dalle librerie di registrazione come [Serilog](https://serilog.net/). Logstash è in grado di eseguire operazioni di filtro e espansione di base nei log Man mano che arrivano. Se, ad esempio, i log contengono indirizzi IP, è possibile configurare logstash per eseguire una ricerca geografica e ottenere un paese o anche una città di origine per quel messaggio.
 
-Serilog è una libreria di registrazione per i linguaggi .NET, che consente la registrazione con parametri. Anziché generare un messaggio di log testuale che incorpora campi, i parametri vengono mantenuti separati. Questo consente un filtro e una ricerca più intelligenti. Nella figura 7-2 viene visualizzata una configurazione Serilog di esempio per la scrittura in logstash.
+Serilog è una libreria di registrazione per i linguaggi .NET, che consente la registrazione con parametri. Anziché generare un messaggio di log testuale che incorpora campi, i parametri vengono mantenuti separati. Questo consente un filtro e una ricerca più intelligenti. Nella figura 7-7 viene visualizzata una configurazione Serilog di esempio per la scrittura in logstash.
 
 ```csharp
 var log = new LoggerConfiguration()
@@ -32,9 +49,9 @@ var log = new LoggerConfiguration()
          .CreateLogger();
 ```
 
-**Figura 7-2** Configurazione di Serilog per la scrittura di informazioni di log direttamente in logstash su HTTP
+**Figura 7-7**. Configurazione di Serilog per la scrittura di informazioni di log direttamente in logstash su HTTP
 
-Logstash utilizzerebbe una configurazione come quella illustrata nella figura 7-3.
+Logstash utilizzerebbe una configurazione come quella illustrata nella figura 7-8.
 
 ```
 input {
@@ -52,7 +69,7 @@ output {
 }
 ```
 
-**Figura 7-3** -configurazione di logstash per l'utilizzo di log da Serilog
+**Figura 7-8**. Una configurazione logstash per l'utilizzo di log da Serilog
 
 Per gli scenari in cui non è necessaria una manipolazione estesa dei log, esiste un'alternativa a logstash noto come [Beats](https://www.elastic.co/products/beats). Beats è una famiglia di strumenti che consente di raccogliere un'ampia gamma di dati dai log ai dati di rete e alle informazioni di tempo di esecuzione. Molte applicazioni utilizzeranno sia logstash che Beats.
 
@@ -64,7 +81,7 @@ La ricerca elastica è un motore di ricerca potente che può indicizzare i log M
 
 I messaggi di log che sono stati creati per contenere parametri o i cui parametri sono stati divisi tramite l'elaborazione di logstash, possono essere sottoposti a query direttamente perché elasticsearch conserva queste informazioni.
 
-Una query che cerca le prime 10 pagine visitate dal `jill@example.com`, viene visualizzata nella figura 7-4.
+Una query che cerca le prime 10 pagine visitate dal `jill@example.com`, viene visualizzata nella figura 7-9.
 
 ```
 "query": {
@@ -82,7 +99,7 @@ Una query che cerca le prime 10 pagine visitate dal `jill@example.com`, viene vi
   }
 ```
 
-**Figura 7-4** -query elasticsearch per trovare le prime 10 pagine visitate da un utente
+**Figura 7-9**. Una query elasticsearch per trovare le prime 10 pagine visitate da un utente
 
 ## <a name="visualizing-information-with-kibana-web-dashboards"></a>Visualizzazione di informazioni con i dashboard Web di Kibana
 

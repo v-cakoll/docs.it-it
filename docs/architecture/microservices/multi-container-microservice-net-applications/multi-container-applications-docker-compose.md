@@ -2,12 +2,12 @@
 title: Definizione dell'applicazione a più contenitori con docker-compose.yml
 description: Come specificare la composizione di microservizi per un'applicazione a più contenitori con docker-compose.yml.
 ms.date: 10/02/2018
-ms.openlocfilehash: f9cab35ac8e11ca89a83f646c29bf72f84e66ef4
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 26b7362112c12583377db9f8fa516ee8ce3b1ac2
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116548"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450700"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definizione dell'applicazione a più contenitori con docker-compose.yml
 
@@ -84,7 +84,7 @@ services:
 
 La chiave radice in questo file sono i servizi. In tale chiave si definiscono i servizi che si desidera distribuire ed eseguire quando si esegue il comando `docker-compose up` o quando si esegue la distribuzione da Visual Studio utilizzando il file Docker-compose. yml. In questo caso nel file docker compose.yml sono stati definiti più servizi, come descritto nella tabella seguente.
 
-| Nome del servizio | Descrizione |
+| Nome del servizio | Description |
 |--------------|-------------|
 | webmvc       | Contenitore che include l'applicazione ASP.NET Core MVC che usa i microservizi da C\# sul lato server|
 | catalog.api  | Contenitore che include il microservizio API Web ASP.NET Core che gestisce i cataloghi |
@@ -463,7 +463,7 @@ A tale scopo, il team .NET offre quattro varianti di base in [dotnet/core](https
 1. **sdk**: per gli scenari di sviluppo e compilazione
 1. **aspnet**: per gli scenari di produzione di ASP.NET
 1. **runtime**: per gli scenari di produzione di .NET
-1. **runtime-deps**: per gli scenari di produzione di [applicazioni indipendenti](../../../core/deploying/index.md#self-contained-deployments-scd).
+1. **runtime-deps**: per gli scenari di produzione di [applicazioni indipendenti](../../../core/deploying/index.md#publish-self-contained).
 
 Per velocizzare l'avvio, le immagini di runtime impostano anche automaticamente aspnetcore\_urls sulla porta 80 e usano Ngen per creare una cache di immagini native degli assembly.
 

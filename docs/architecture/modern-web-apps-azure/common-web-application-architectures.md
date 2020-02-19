@@ -3,13 +3,13 @@ title: Architetture di applicazioni Web comuni
 description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Esplorare le architetture delle applicazioni Web comuni
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 6a4e971c1cb19a12710ad7893378a49758b4016e
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.date: 12/04/2019
+ms.openlocfilehash: 7ec0d9cece40ba8a99e8ab5e028f7ac491ed6f4d
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74884241"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450180"
 ---
 # <a name="common-web-application-architectures"></a>Architetture di applicazioni Web comuni
 
@@ -40,7 +40,7 @@ Per risolvere questi problemi, spesso le applicazioni si evolvono in soluzioni c
 
 ## <a name="what-are-layers"></a>Cosa sono i livelli?
 
-Un modo per gestire la crescente complessità delle applicazioni consiste nel suddividere l'applicazione in base a responsabilità o competenze. Questo approccio si basa sul principio della separazione delle competenze e può contribuire all'organizzazione di una codebase in crescita consentendo agli sviluppatori di individuare facilmente il punto in cui è implementata una determinata funzionalità. Oltre alla semplice organizzazione del codice, l'architettura a livelli offre una serie di vantaggi.
+Un modo per gestire la crescente complessità delle applicazioni consiste nel suddividere l'applicazione in base a responsabilità o competenze. In questo modo si segue il principio di separazione delle problematiche e si può contribuire a garantire l'organizzazione di una codebase in continua crescita, in modo che gli sviluppatori possano trovare facilmente la posizione in cui Oltre alla semplice organizzazione del codice, l'architettura a livelli offre una serie di vantaggi.
 
 L'organizzazione del codice in livelli consente di riusare le funzionalità comuni di basso livello all'interno dell'applicazione. Questa possibilità di riutilizzo è utile poiché consente di scrivere meno codice e di standardizzare l'applicazione su una singola implementazione, osservando il principio [DRY (Don't Repeat Yourself)](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself).
 
@@ -99,8 +99,7 @@ L'approccio più semplice alla scalabilità di un'applicazione Web in Azure cons
 
 Le applicazioni che osservano il principio DIP (Dependency Inversion Principle, principio di inversione delle dipendenze) e il principio DDD (Domain-Driven Design, progettazione basata su domini) tendono ad arrivare a un'architettura simile. Nel corso degli anni, questa architettura è stata indicata con molti nomi diversi. Uno dei primi nomi è stato Architettura esagonale, seguito da "Porte-e-adattatori". Più di recente, è stata indicata come [Onion Architecture](https://jeffreypalermo.com/blog/the-onion-architecture-part-1/) (Architettura ad anelli) o [Clean Architecture](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) (Architettura pulita). In questo e-book viene usato quest'ultimo nome, ovvero Architettura pulita.
 
-> [!NOTE]
-> È possibile usare il termine Architettura pulita per indicare le applicazioni compilate osservando i principi DDD così come quelle che non lo sono. Nel caso delle prime, questa combinazione può essere indicata come "Architettura DDD pulita".
+L'applicazione di riferimento eShopOnWeb utilizza l'approccio dell'architettura pulita per organizzare il codice nei progetti. È possibile trovare un modello di soluzione che è possibile usare come punto di partenza per il proprio ASP.NET Core nel repository GitHub [ardalis/cleanarchitecture](https://github.com/ardalis/cleanarchitecture) .
 
 Nell'Architettura pulita la logica di business e il modello applicativo sono posti al centro dell'applicazione. La logica di business non dipende dall'accesso ai dati o da altre competenze dell'infrastruttura. Questa dipendenza viene invece invertita: i dettagli relativi all'infrastruttura e all'implementazione dipendono dal nucleo applicativo. Ciò si ottiene definendo le astrazioni, o interfacce, nel nucleo applicativo. Queste vengono quindi implementate dai tipi definiti nel livello infrastruttura. Un modo comune per visualizzare questa architettura è l'uso di una serie di cerchi concentrici, simile a una struttura ad anelli. La figura 5-7 illustra un esempio di questo stile di rappresentazione dell'architettura.
 
@@ -169,8 +168,8 @@ Il livello UI in un'applicazione MVC ASP.NET Core rappresenta il punto di ingres
 
 ### <a name="ui-layer-types"></a>Tipi del livello UI
 
-- Controllers
-- Filtri.
+- Controller
+- Filtri
 - Visualizzazioni
 - ViewModel
 - Avvio
@@ -212,7 +211,7 @@ La distribuzione degli aggiornamenti come immagini Docker è molto più veloce e
 
 Poiché i contenitori sono implicitamente non modificabili per impostazione predefinita, le macchine virtuali danneggiate non costituiscono un problema, mentre gli script di aggiornamento potrebbero tralasciare alcune configurazioni o file specifici rimasti su disco.
 
-È possibile usare i contenitori Docker per la distribuzione monolitica di applicazioni Web più semplici. Ciò migliora le pipeline di integrazione continua e distribuzione continua e consente di ottenere risultati ottimali dalla distribuzione alla produzione, evitando situazioni in cui quello che funziona in un computer, non funziona nell'ambiente di produzione.
+È possibile usare i contenitori Docker per la distribuzione monolitica di applicazioni Web più semplici. Ciò migliora le pipeline di integrazione continua e distribuzione continua e consente di ottenere risultati ottimali dalla distribuzione alla produzione, "Funziona nel computer, perché non funziona in produzione?"
 
 Un'architettura basata su microservizi offre numerosi vantaggi, ma al costo di una maggiore complessità. In alcuni casi i costi superano i vantaggi. Un'applicazione con distribuzione monolitica in esecuzione in un unico contenitore o in pochi contenitori è pertanto un'opzione migliore.
 
@@ -222,7 +221,7 @@ Per un'applicazione potrebbe non essere necessaria la scalabilità delle funzion
 
 Nelle prime fasi di sviluppo di un'applicazione, i limiti funzionali naturali potrebbero inoltre non essere ancora chiari. Durante lo sviluppo di un prodotto valido minimo, la separazione naturale potrebbe non essere ancora emersa. Alcune di queste condizioni potrebbero essere temporanee. Si potrebbe iniziare creando un'applicazione monolitica e successivamente separare alcune funzionalità da sviluppare e distribuire come microservizi. Altre condizioni potrebbero essere essenziali per i problemi dell'applicazione, vale a dire che l'applicazione potrebbe non essere mai suddivisa in più microservizi.
 
-La separazione di un'applicazione in più processi distinti presenta anche il problema del sovraccarico. La separazione delle funzionalità in processi diversi aumenta la complessità. I protocolli di comunicazione diventano più complessi. Invece delle chiamate ai metodi, è necessario usare comunicazioni asincrone tra i servizi. Quando si passa a un'architettura di microservizi, è necessario aggiungere molti dei blocchi predefiniti implementati nella versione dei microservizi dell'applicazione eShopOnContainers: gestione del bus di eventi, resilienza dei messaggi e nuovi tentativi, coerenza futura e altro ancora.
+La separazione di un'applicazione in più processi distinti presenta anche il problema del sovraccarico. La separazione delle funzionalità in processi diversi incrementa la complessità. I protocolli di comunicazione diventano più complessi. Invece delle chiamate ai metodi, è necessario usare comunicazioni asincrone tra i servizi. Quando si passa a un'architettura di microservizi, è necessario aggiungere molti dei blocchi predefiniti implementati nella versione dei microservizi dell'applicazione eShopOnContainers: gestione del bus di eventi, resilienza dei messaggi e nuovi tentativi, coerenza futura e altro ancora.
 
 L'[applicazione di riferimento eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb), molto più semplice, supporta l'utilizzo del contenitore monolitico a contenitore singolo. L'applicazione include un'applicazione Web con visualizzazioni MVC tradizionali, API Web e Razor Pages. L'applicazione può essere avviata dalla radice della soluzione usando i comandi `docker-compose build` e `docker-compose up`. Questo comando configura un contenitore per l'istanza Web usando l'oggetto `Dockerfile` all'interno della radice del progetto Web ed esegue il contenitore in una porta specifica. È possibile scaricare l'origine per questa applicazione da GitHub ed eseguirla in locale. Anche questa applicazione monolitica trae vantaggio dalla distribuzione in un ambiente basato su contenitori.
 
@@ -260,24 +259,22 @@ networks:
       name: nat
 ```
 
-Il file `docker-compose.yml` fa riferimento a `Dockerfile` nel progetto `Web`. L'oggetto `Dockerfile` viene usato per specificare quale contenitore di base sarà usato e in che modo verrà configurata di conseguenza l'applicazione. In `Dockerfile` di `Web`:
+Il file `docker-compose.yml` fa riferimento a `Dockerfile` nel progetto `Web`. L'oggetto `Dockerfile` viene usato per specificare quale contenitore di base sarà usato e in che modo verrà configurata di conseguenza l'applicazione. In `Web` di `Dockerfile`:
 
 ```Dockerfile
-FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 WORKDIR /app
 
+COPY *.sln .
 COPY . .
 WORKDIR /app/src/Web
 RUN dotnet restore
 
 RUN dotnet publish -c Release -o out
 
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS runtime
 WORKDIR /app
 COPY --from=build /app/src/Web/out ./
-
-# Optional: Set this here if not setting it from docker-compose.yml
-# ENV ASPNETCORE_ENVIRONMENT Development
 
 ENTRYPOINT ["dotnet", "Web.dll"]
 ```
@@ -298,7 +295,7 @@ Se si vuole aggiungere il supporto per Docker all'applicazione tramite Visual St
   <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
 - **Schema repository**  
   <https://deviq.com/repository-pattern/>
-- **Esempio di soluzione con Architettura pulita**  
+- **Modello di soluzione Pulisci architettura**  
   <https://github.com/ardalis/cleanarchitecture>
 - **Architecting Microservices e-book** (E-book Progettazione di microservizi)  
   <https://aka.ms/MicroservicesEbook>
