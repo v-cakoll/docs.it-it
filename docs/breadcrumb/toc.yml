@@ -154,6 +154,9 @@
             - name: Controllo delle versioni
               tocHref: /dotnet/core/versions/
               topicHref: /dotnet/core/versions/index
+            - name: Progetti SDK
+              tocHref: /dotnet/core/project-sdk/
+              topicHref: /dotnet/core/project-sdk/overview
             - name: Strumenti
               tocHref: /dotnet/core/tools/
               topicHref: /dotnet/core/tools/index
