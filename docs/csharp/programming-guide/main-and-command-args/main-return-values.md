@@ -4,12 +4,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 21e780470f455ac133fd4d11ae43c63a4b18c582
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: eaa78c33613093bb0e108870669392d07d346a95
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712039"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504004"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Valori restituiti da Main() (Guida per programmatori C#)
 
@@ -39,8 +39,11 @@ Quindi creare uno script di PowerShell per eseguire l'applicazione e visualizzar
 
 Poiché il codice restituisce zero, il file batch indicherà un esito positivo. Se tuttavia si modifica MainReturnValTest.cs in modo che restituisca un valore diverso da zero e quindi si ricompila il programma, l'esecuzione successiva dello script di PowerShell segnala un errore.
 
-```powershell
+```dotnetcli
 dotnet run
+```
+
+```powershell
 if ($LastExitCode -eq 0) {
     Write-Host "Execution succeeded"
 } else
@@ -50,7 +53,7 @@ if ($LastExitCode -eq 0) {
 Write-Host "Return value = " $LastExitCode
 ```
 
-## <a name="sample-output"></a>Output dell'esempio:
+## <a name="sample-output"></a>Output di esempio
 
 ```txt
 Execution succeeded

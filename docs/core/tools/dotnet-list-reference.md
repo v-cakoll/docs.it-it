@@ -1,23 +1,19 @@
 ---
 title: Comando dotnet list reference
 description: Il comando dotnet list reference offre un'opzione utile per visualizzare un elenco dei riferimenti da progetto a progetto.
-ms.date: 06/26/2019
-ms.openlocfilehash: 496cbcd8fa4d921e30b363904ad0273bd5ebacd5
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 43c4dbc94b33e717c6ba0a1c1c5317ac006f5bba
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733216"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503708"
 ---
 # <a name="dotnet-list-reference"></a>dotnet list reference
 
-**Questo articolo si applica a:** ✔️ .NET Core 1. x SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .NET Core 2. x SDK e versioni successive
 
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
-
-## <a name="name"></a>Name
+## <a name="name"></a>Nome
 
 `dotnet list reference`: visualizza un elenco dei riferimenti da progetto a progetto.
 

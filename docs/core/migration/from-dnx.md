@@ -2,16 +2,16 @@
 title: Migrazione da DNX all'interfaccia della riga di comando .NET Core
 description: Eseguire la migrazione dagli strumenti DNX agli strumenti dell'interfaccia della riga di comando di .NET Core.
 ms.date: 06/20/2016
-ms.openlocfilehash: e15e7ce10bb7a36deb2acd2abb9a0bd4ec8cd4a9
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 31317f110ae1e8586b78becd757d0a8ff07f1459
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920630"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503827"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>Migrazione da DNX all'interfaccia della riga di comando di .NET Core (project.json)
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 La versione RC1 di .NET Core e ASP.NET Core 1.0 Microsoft hanno presentato gli strumenti DNX. La versione RC2 di .NET Core e ASP.NET Core 1.0 hanno eseguito il passaggio da DNX all'interfaccia della riga di comando di .NET Core.
 
 Di seguito è riportato un breve riepilogo delle caratteristiche di DNX. DNX è un runtime e un set di strumenti usati per creare applicazioni .NET Core e, più specificamente, ASP.NET Core 1.0. È costituito da tre componenti principali:
@@ -48,13 +48,13 @@ La tabella seguente mostra il mapping tra i comandi DNX/DNU e i corrispondenti c
 
 | Comando DNX                    | Comando dell'interfaccia della riga di comando    | Descrizione                                                                                                     |
 |--------------------------------|----------------|-----------------------------------------------------------------------------------------------------------------|
-| dnx run                        | dotnet run     | Esegue il codice dall'origine.                                                                                           |
-| dnu build                      | dotnet build   | Crea un file binario IL (Intermediate Language) del codice.                                                                                |
-| dnu pack                       | dotnet pack    | Crea un pacchetto NuGet del codice.                                                                        |
+| dnx run                        | `dotnet run`     | Esegue il codice dall'origine.                                                                                           |
+| dnu build                      | `dotnet build`   | Crea un file binario IL (Intermediate Language) del codice.                                                                                |
+| dnu pack                       | `dotnet pack`    | Crea un pacchetto NuGet del codice.                                                                        |
 | dnx \[command] (ad esempio, "dnx web") | N/D\*          | In DNX esegue un comando in base a quanto definito nel file project.json.                                                     |
 | dnu install                    | N/D\*          | In DNX installa un pacchetto come dipendenza.                                                            |
-| dnu restore                    | dotnet restore | Ripristina le dipendenze specificate nel file project.json. ([vedere la nota](#dotnet-restore-note))                                                            |
-| dnu publish                    | dotnet publish | Pubblica l'applicazione per la distribuzione in una delle tre forme possibili: portabile, portabile con nativo e autonoma. |
+| dnu restore                    | `dotnet restore` | Ripristina le dipendenze specificate nel file project.json. ([vedere la nota](#dotnet-restore-note))                                                            |
+| dnu publish                    | `dotnet publish` | Pubblica l'applicazione per la distribuzione in una delle tre forme possibili: portabile, portabile con nativo e autonoma. |
 | dnu wrap                       | N/D\*          | In DNX esegue il wrapping di un file project.json in csproj.                                                                    |
 | dnu commands                   | N/D\*          | In DNX gestisce i comandi installati a livello globale.                                                           |
 

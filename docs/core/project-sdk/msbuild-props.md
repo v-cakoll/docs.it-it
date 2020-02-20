@@ -1,14 +1,14 @@
 ---
 title: Proprietà di MSBuild per Microsoft. NET. SDK
 description: Riferimento per le proprietà MSBuild riconosciute dal .NET Core SDK.
-ms.date: 02/02/2020
+ms.date: 02/14/2020
 ms.topic: reference
-ms.openlocfilehash: f5dc2079bc313b8dd9fa5556cd941521a597ae38
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 00d9152d864ac0727a511f4c3c15abba82aab904
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77453811"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503816"
 ---
 # <a name="msbuild-properties-for-net-core-sdk-projects"></a>Proprietà MSBuild per progetti .NET Core SDK
 
@@ -19,25 +19,9 @@ Questa pagina descrive le proprietà di MSBuild per la configurazione di progett
 
 ## <a name="framework-properties"></a>Proprietà del Framework
 
-- [NetStandardImplicitPackageVersion](#netstandardimplicitpackageversion)
 - [TargetFramework](#targetframework)
 - [TargetFrameworks](#targetframeworks)
-
-### <a name="netstandardimplicitpackageversion"></a>NetStandardImplicitPackageVersion
-
-> [!NOTE]
-> Questa proprietà si applica solo ai progetti che usano `netstandard1.x`. Non si applica ai progetti che usano `netstandard2` e versioni successive.
-
-Utilizzare la proprietà `NetStandardImplicitPackageVersion` quando si desidera specificare una versione del Framework inferiore alla versione del [metapacchetto](../packages.md#metapackages) . Il file di progetto nell'esempio seguente ha come destinazione `netstandard1.3` ma usa la versione 1.6.0 di `NETStandard.Library`.
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>netstandard1.3</TargetFramework>
-    <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
-  </PropertyGroup>
-</Project>
-```
+- [NetStandardImplicitPackageVersion](#netstandardimplicitpackageversion)
 
 ### <a name="targetframework"></a>TargetFramework
 
@@ -69,6 +53,22 @@ Usare la proprietà `TargetFrameworks` quando si vuole che l'app sia destinata a
 ```
 
 Per altre informazioni, vedere [Framework di destinazione nei progetti in stile SDK](../../standard/frameworks.md).
+
+### <a name="netstandardimplicitpackageversion"></a>NetStandardImplicitPackageVersion
+
+> [!NOTE]
+> Questa proprietà si applica solo ai progetti che usano `netstandard1.x`. Non si applica ai progetti che usano `netstandard2.x`.
+
+Utilizzare la proprietà `NetStandardImplicitPackageVersion` quando si desidera specificare una versione del Framework inferiore alla versione del [metapacchetto](../packages.md#metapackages) . Il file di progetto nell'esempio seguente ha come destinazione `netstandard1.3` ma usa la versione 1.6.0 di `NETStandard.Library`.
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard1.3</TargetFramework>
+    <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
+  </PropertyGroup>
+</Project>
+```
 
 ## <a name="publish-properties"></a>Pubblica proprietà
 

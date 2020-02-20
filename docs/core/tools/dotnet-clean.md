@@ -1,23 +1,19 @@
 ---
 title: Comando dotnet clean
 description: Il comando dotnet clean consente di pulire la directory corrente.
-ms.date: 06/26/2019
-ms.openlocfilehash: 715a33a8a1aa13a2a76f9d4522413dcc72e4b4aa
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 02/14/2020
+ms.openlocfilehash: 186f1ea07718a8e178f88c3d079cf6e2f1f8660b
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451356"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503750"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
-**Questo articolo si applica a:** ✔️ .NET Core 1. x SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .NET Core 2. x SDK e versioni successive
 
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
-
-## <a name="name"></a>Name
+## <a name="name"></a>Nome
 
 `dotnet clean`: pulisce l'output di un progetto.
 
@@ -41,9 +37,9 @@ Progetto o soluzione MSBuild da pulire. Se non viene specificato alcun file di p
 
 ## <a name="options"></a>Opzioni
 
-* **`-c|--configuration {Debug|Release}`**
+* **`-c|--configuration <CONFIGURATION>`**
 
-  Definisce la configurazione di compilazione. Il valore predefinito è `Debug`. Se è stata specificata durante la fase di compilazione, questa opzione è necessaria soltanto al momento della pulizia.
+  Definisce la configurazione di compilazione. Il valore predefinito per la maggior parte dei progetti è `Debug`, ma è possibile eseguire l'override delle impostazioni di configurazione della build nel progetto. Se è stata specificata durante la fase di compilazione, questa opzione è necessaria soltanto al momento della pulizia.
 
 * **`-f|--framework <FRAMEWORK>`**
 
@@ -67,7 +63,7 @@ Progetto o soluzione MSBuild da pulire. Se non viene specificato alcun file di p
 
 * **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  Elimina la cartella di output del runtime specificato. Viene usato durante la creazione di una [distribuzione indipendente](../deploying/index.md#publish-self-contained). Opzione disponibile a partire da .NET Core 2.0 SDK.
+  Elimina la cartella di output del runtime specificato. Viene usato durante la creazione di una [distribuzione indipendente](../deploying/index.md#publish-self-contained).
 
 * **`-v|--verbosity <LEVEL>`**
 

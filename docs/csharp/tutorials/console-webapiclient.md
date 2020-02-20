@@ -3,12 +3,12 @@ title: Creare un client REST usando .NET Core
 description: Questa esercitazione illustra alcune funzionalità disponibili in .NET Core e nel linguaggio C#.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: eb7946d669de60c3469ca8098e40b159082ea270
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: f85d50b222d06caa045e22b452d0902aaac66088
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921082"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503981"
 ---
 # <a name="rest-client"></a>Client REST
 
@@ -27,7 +27,7 @@ Questa esercitazione include molte funzionalità. numerose funzionalità.
 
 Se si vuole proseguire, è possibile scaricare l'[esempio finale](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient) di questo argomento. Per istruzioni sul download, vedere [Esempi ed esercitazioni](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 È necessario configurare il computer per l'esecuzione di .NET core. È possibile trovare le istruzioni di installazione nella pagina di [download di .NET Core](https://dotnet.microsoft.com/download) . Questa applicazione può essere eseguita in Windows, Linux, macOS o in un contenitore Docker.
 È necessario installare l'editor di codice preferito. Nelle descrizioni seguenti viene usato [Visual Studio Code](https://code.visualstudio.com/), un editor open source multipiattaforma, ma è possibile usare gli strumenti con cui si ha maggiore familiarità.
@@ -40,7 +40,7 @@ Il primo passaggio consiste nel creare una nuova applicazione. Aprire un prompt 
 dotnet new console --name WebApiClient
 ```
 
-Questa operazione crea i file iniziali per un'applicazione "Hello World" di base. Il nome del progetto è "WebApiClient". Poiché si tratta di un nuovo progetto, non è presente alcuna dipendenza. La prima esecuzione consente di scaricare il Framework .NET Core, installare un certificato di sviluppo ed eseguire Gestione pacchetti NuGet per ripristinare le dipendenze mancanti.
+per creare i file di avvio per un'applicazione "Hello World" di base. Il nome del progetto è "WebApiClient". Poiché si tratta di un nuovo progetto, non è presente alcuna dipendenza. La prima esecuzione consente di scaricare il Framework .NET Core, installare un certificato di sviluppo ed eseguire Gestione pacchetti NuGet per ripristinare le dipendenze mancanti.
 
 Prima di iniziare ad apportare modifiche, digitare `dotnet run` ([vedere la nota](#dotnet-restore-note)) al prompt dei comandi per eseguire l'applicazione. `dotnet run` esegue automaticamente `dotnet restore` se nell'ambiente mancano dipendenze. Esegue anche `dotnet build` se l'applicazione deve essere ricompilata.
 Dopo l'installazione iniziale, sarà necessario solo eseguire `dotnet restore` o `dotnet build` quando ha senso per il progetto.
@@ -51,7 +51,7 @@ Uno degli obiettivi di progettazione principali di .NET Core è ridurre al minim
 
 È necessario il pacchetto di `System.Runtime.Serialization.Json` per questa applicazione. Aggiungerlo al progetto eseguendo il comando seguente dell' [interfaccia](../../core/tools/dotnet-add-package.md) della riga di comando di .NET:
 
-```console
+```dotnetcli
 dotnet add package System.Text.Json
 ```
 
@@ -314,7 +314,7 @@ Console.WriteLine(repo.LastPush);
 
 La versione dell'app dovrebbe ora corrispondere all'[esempio completo](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient).
 
-## <a name="conclusion"></a>Conclusione
+## <a name="conclusion"></a>Conclusioni
 
 In questa esercitazione sono state descritte le procedure necessarie per eseguire richieste Web, analizzare i risultati e visualizzare le proprietà dei risultati. Sono stati inoltre aggiunti nuovi pacchetti come dipendenze del progetto e sono state illustrate alcune delle funzionalità del linguaggio C# che supportano tecniche orientate agli oggetti.
 

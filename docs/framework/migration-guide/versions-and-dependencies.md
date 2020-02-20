@@ -5,12 +5,12 @@ ms.date: 01/17/2020
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
-ms.openlocfilehash: 62ec1e21fd8e95991af6e2f8fa6f99c17249c761
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 486b320ca30323684d301630ad29f8f4615764ee
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452721"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504054"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>Versioni e dipendenze di .NET Framework
 
@@ -172,7 +172,7 @@ Le tabelle che seguono riepilogano .NET Framework cronologia delle versioni e me
 |**Versioni di Windows Server**|✔️ 2012<br />➕ 2008 R2 SP1<br />➕ 2008 SP2|
 |**Per determinare la versione di .NET installata**|Usare `Release` DWORD 378389<br /><br />(Vedere [le istruzioni](how-to-determine-which-versions-are-installed.md))|
 
-### <a name="net-framework-4"></a>.NET Framework 4
+### <a name="net-framework-4"></a>.NET Framework 4
 
 [Nuove funzionalità](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms171868(v=vs.100))
 
@@ -184,7 +184,7 @@ Le tabelle che seguono riepilogano .NET Framework cronologia delle versioni e me
 |**Versioni di Windows Server**|➕ 2008 R2 SP1<br />➕ 2008 SP2<br />➕ 2003|
 |**Per determinare la versione di .NET installata**|Vedere le [istruzioni](how-to-determine-which-versions-are-installed.md)|
 
-### <a name="net-framework-35"></a>.NET Framework 3.5
+### <a name="net-framework-35"></a>.NET Framework 3.5
 
 [Nuove funzionalità](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms171868\(v=vs.90\)):
 
@@ -199,7 +199,7 @@ Le tabelle che seguono riepilogano .NET Framework cronologia delle versioni e me
 
 |||
 |-|-|
-|**Versione CLR**|2|
+|**Versione CLR**|2.0|
 |**Incluso nella versione di Visual Studio**|2008|
 |**Versioni di Windows**|✔️ 10\*<br/>✔️ 8,1\*<br />✔️ 8\*<br />✔️ 7<br /><br />➕ Vista|
 |**Versioni di Windows Server**|➕ Windows Server, versione 1803\*<br/>➕ Windows Server, versione 1709\*<br/>➕ 2016\*<br/>➕ 2012 R2\*<br />➕ 2012\*<br /><br />✔️ 2008 R2 SP1\*<br /><br/>➕ 2008 SP2<br />➕ 2003|
@@ -216,7 +216,7 @@ Le tabelle che seguono riepilogano .NET Framework cronologia delle versioni e me
 
 |||
 |-|-|
-|**Versione CLR**|2|
+|**Versione CLR**|2.0|
 |**Versioni di Windows**|✔️ Vista|
 |**Versioni di Windows Server**|✔️ 2008 R2 SP1 *<br />✔️ 2008 SP2\*<br /><br />➕ 2003|
 |**Per determinare la versione di .NET installata**|Vedere le [istruzioni](how-to-determine-which-versions-are-installed.md).|
@@ -230,14 +230,14 @@ Le tabelle che seguono riepilogano .NET Framework cronologia delle versioni e me
 - Scalabilità e prestazioni migliorate
 - distribuzione ClickOnce
 - In ASP.NET 2,0, nuovi controlli e supporto per un'ampia gamma di browser
-- Supporto a 64 bit
+- supporto 64 bit
 
 |||
 |-|-|
-|**Versione CLR**|2|
+|**Versione CLR**|2.0|
 |**Incluso nella versione di Visual Studio**|2005|
 |**Versioni di Windows**|N/D|
-|**Versioni di Windows Server**|✔️ 2008 R2 SP1<br />✔️ 2008 SP2<br />✔️ 200|
+|**Versioni di Windows Server**|✔️ 2008 R2 SP1<br />✔️ 2008 SP2<br />✔️ 2003|
 |**Per determinare la versione di .NET installata**|Vedere le [istruzioni](how-to-determine-which-versions-are-installed.md)|
 
 ### <a name="net-framework-11"></a>.NET Framework 1.1
@@ -246,7 +246,7 @@ Le tabelle che seguono riepilogano .NET Framework cronologia delle versioni e me
 
 - Controlli per dispositivi mobili ASP.NET
 - Esecuzione side-by-side
-- Supporto IPv6
+- Supporto per IPv6
 
 |||
 |-|-|
@@ -273,7 +273,7 @@ Le tabelle che seguono riepilogano .NET Framework cronologia delle versioni e me
 
 ## <a name="remarks-for-version-45-and-later"></a>Osservazioni per la versione 4,5 e successive
 
-.NET Framework 4,5 è un aggiornamento sul posto che sostituisce .NET Framework 4 nel computer e, analogamente, .NET Framework 4.5.1, 4.5.2, 4,6, 4.6.1, 4.6.2, 4,7, 4.7.1, 4.7.2 e 4,8 sono aggiornamenti sul posto di .NET Framework 4,5. L'aggiornamento sul posto significa che usano la stessa versione di runtime, ma le versioni degli assembly vengono aggiornate e includono nuovi tipi e membri. Dopo aver installato uno di questi aggiornamenti, le app .NET Framework 4, .NET Framework 4.5, .NET Framework 4.6 o .NET Framework 4.7 dovrebbero continuare a funzionare senza richiedere la ricompilazione. Tuttavia, non è vero il contrario. Non è consigliabile eseguire app destinate a una versione più recente di .NET Framework su una versione precedente. Ad esempio, non è consigliabile eseguire un'app destinata a .NET Framework 4.6 in .NET Framework 4.5.
+.NET Framework 4,5 è un aggiornamento sul posto che sostituisce .NET Framework 4 nel computer e, analogamente, .NET Framework 4.5.1, 4.5.2, 4,6, 4.6.1, 4.6.2, 4,7, 4.7.1, 4.7.2 e 4,8 sono aggiornamenti sul posto di .NET Framework 4,5. L'aggiornamento sul posto significa che usano la stessa versione di runtime, ma le versioni degli assembly vengono aggiornate e includono nuovi tipi e membri. Dopo aver installato uno di questi aggiornamenti, le app .NET Framework 4, .NET Framework 4.5, .NET Framework 4.6 o .NET Framework 4.7 dovrebbero continuare a funzionare senza richiedere la ricompilazione. Non è tuttavia vero il contrario. Non è consigliabile eseguire app destinate a una versione più recente di .NET Framework su una versione precedente. Ad esempio, non è consigliabile eseguire un'app destinata a .NET Framework 4.6 in .NET Framework 4.5.
 
 Si applicano le linee guida seguenti:
 

@@ -3,18 +3,18 @@ title: Sviluppare librerie con la interfaccia della riga di comando di .NET Core
 description: Informazioni su come creare librerie .NET Core usando il interfaccia della riga di comando di .NET Core. Si creerà una libreria che supporta più framework.
 author: cartermp
 ms.date: 05/01/2017
-ms.openlocfilehash: a7c0175d29f483571578b58d698dd790cf66f7f4
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: c23c1f027b4d6d09c50eb2257d34f72ec56302f4
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920439"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503500"
 ---
 # <a name="develop-libraries-with-the-net-core-cli"></a>Sviluppare librerie con la interfaccia della riga di comando di .NET Core
 
 Questo articolo illustra come scrivere librerie per .NET usando il interfaccia della riga di comando di .NET Core. L'interfaccia della riga di comando offre un'esperienza efficace e di basso livello per qualsiasi sistema operativo supportato. È comunque sempre possibile creare librerie con Visual Studio. Se si preferisce questo tipo di esperienza, [consultare la Guida di Visual Studio](library-with-visual-studio.md).
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 È necessario che [l'SDK e l'interfaccia della riga di comando di .NET Core](https://dotnet.microsoft.com/download) siano installati nel computer.
 
@@ -71,11 +71,11 @@ Tenere presente che alcune delle .NET Framework versioni usate in questo argomen
 
 Se si vuole raggiungere il numero massimo di sviluppatori e progetti, usare .NET Framework 4,0 come destinazione della linea di base. Per .NET Framework di destinazione, iniziare usando il moniker del Framework di destinazione corretto (TFM) che corrisponde alla versione di .NET Framework che si vuole supportare.
 
-| Versione di .NET Framework | Moniker framework di destinazione      |
+| Versione di .NET Framework | TFM      |
 | ---------------------- | -------- |
 | .NET Framework 2.0     | `net20`  |
 | .NET Framework 3.0     | `net30`  |
-| .NET Framework 3.5     | `net35`  |
+| .NET Framework 3.5     | `net35`  |
 | .NET Framework 4.0     | `net40`  |
 | .NET Framework 4.5     | `net45`  |
 | .NET Framework 4.5.1   | `net451` |
@@ -96,7 +96,7 @@ Quindi inserire il TFM nella sezione `TargetFramework` del file di progetto. Ad 
 </Project>
 ```
 
-L'operazione è ora completata. Anche se questa operazione è stata compilata solo per .NET Framework 4, è possibile usare la libreria nelle versioni più recenti di .NET Framework.
+L'attività è terminata. Anche se questa operazione è stata compilata solo per .NET Framework 4, è possibile usare la libreria nelle versioni più recenti di .NET Framework.
 
 ## <a name="how-to-multitarget"></a>Come definire più destinazioni
 
@@ -220,7 +220,7 @@ Ogni directory contiene i file `.dll` per ciascuna destinazione.
 
 1. Configurare la soluzione. È possibile farlo con i comandi seguenti:
 
-   ```bash
+   ```dotnetcli
    mkdir SolutionWithSrcAndTest
    cd SolutionWithSrcAndTest
    dotnet new sln
@@ -241,7 +241,7 @@ Ogni directory contiene i file `.dll` per ciascuna destinazione.
 
 1. Passare alla directory del progetto di test e aggiungere un riferimento a `MyProject.Test` da `MyProject`.
 
-   ```bash
+   ```dotnetcli
    cd MyProject.Test
    dotnet add reference ../MyProject/MyProject.csproj
    ```
@@ -257,7 +257,7 @@ Ogni directory contiene i file `.dll` per ciascuna destinazione.
 
 1. Verificare che xUnit sia in esecuzione con il comando `dotnet test`. Se si sceglie di usare MSTest, va invece eseguita l'utilità di test delle console MSTest.
 
-L'operazione è ora completata. È ora possibile testare la libreria in tutte le piattaforme usando gli strumenti da riga di comando. Una volta completata la configurazione, è possibile procedere con il testing della libreria in modo molto semplice:
+L'attività è terminata. È ora possibile testare la libreria in tutte le piattaforme usando gli strumenti da riga di comando. Una volta completata la configurazione, è possibile procedere con il testing della libreria in modo molto semplice:
 
 1. Eseguire le opportune modifiche nella libreria.
 1. Eseguire i test dalla riga di comando, nella directory di test, usando il comando `dotnet test`.
@@ -300,7 +300,7 @@ Scenari di utilizzo come questo indicano che le API a cui si accede devono avere
 
 Eseguire i seguenti comandi nel terminale in uso per ottenere la stessa struttura mostrata in questa Guida:
 
-```console
+```dotnetcli
 mkdir AwesomeLibrary && cd AwesomeLibrary
 dotnet new sln
 mkdir AwesomeLibrary.Core && cd AwesomeLibrary.Core && dotnet new classlib

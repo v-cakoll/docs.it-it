@@ -3,18 +3,18 @@ title: Introduzione a C# e Visual Studio Code
 description: Informazioni su come creare la prima applicazione .NET Core in C# ed eseguirne il debug tramite Visual Studio Code.
 author: kendrahavens
 ms.date: 12/05/2018
-ms.openlocfilehash: fdf26d67ca06ffb5ae9f8c12aa29819280770d5c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: acd1c300545bc6c107552576180afd7dec6b7382
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715312"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503515"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introduzione a C# e Visual Studio Code
 
 .NET Core offre una piattaforma veloce e modulare per la creazione di applicazioni eseguibili in Windows, Linux e macOS. Usare Visual Studio Code con l'estensione C# per ottenere un'efficace esperienza di programmazione con il supporto completo per IntelliSense C# (completamento intelligente del codice) e debug.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 1. Installare [Visual Studio Code](https://code.visualstudio.com/).
 2. Installare [.NET Core SDK](https://dotnet.microsoft.com/download).
@@ -129,8 +129,13 @@ Per altre informazioni sull'installazione in [Windows](https://channel9.msdn.com
 
 5. Salvare le modifiche ed eseguire nuovamente il programma. Verrà visualizzato il nuovo messaggio con la stringa aggiunta.
 
+    ```dotnetcli
+    dotnet run
+    ```
+
+    Si ottiene l'output seguente:
+
     ```console
-    > dotnet run
     Hello World! Happy coding!
     ```
 

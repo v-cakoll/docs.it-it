@@ -2,18 +2,18 @@
 title: Introduzione agli strumenti F# da riga di comando
 description: Informazioni su come creare una semplice soluzione multiprogetto sull' F# uso del interfaccia della riga di comando di .NET Core in qualsiasi sistema operativo (Windows, MacOS o Linux).
 ms.date: 03/26/2018
-ms.openlocfilehash: aa3ed84660a951eeafc11a00ea3831f587b6d876
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 6f67314f49150e20b18734f21f24daa3ce856922
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559487"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504140"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>Introduzione a F# con l'interfaccia della riga di comando di .NET Core
 
 Questo articolo illustra come iniziare a usare F# qualsiasi sistema operativo (Windows, MacOS o Linux) con la interfaccia della riga di comando di .NET Core. Viene illustrata la creazione di una soluzione multiprogetto con una libreria di classi chiamata da un'applicazione console.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 Per iniziare, è necessario installare la [.NET Core SDK](https://dotnet.microsoft.com/download)più recente.
 
@@ -135,7 +135,7 @@ Ripristinare le dipendenze NuGet, `dotnet restore` ed eseguire `dotnet build` pe
 
 Passare alla directory del progetto console `src/App` ed eseguire il progetto passando `Hello World` come argomenti:
 
-```console
+```dotnetcli
 cd src/App
 dotnet run Hello World
 ```

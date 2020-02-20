@@ -5,12 +5,12 @@ author: thraka
 ms.date: 12/10/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 3a72f68f5634c9ee5b137baf12a279130861e61a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5bc926861dd6a501d7c2d24bd5f7c4116cc78b2c
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787844"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503498"
 ---
 # <a name="tutorial-create-a-template-pack"></a>Esercitazione: creare un pacchetto di modelli
 
@@ -25,7 +25,7 @@ In questa parte della serie si apprenderà come:
 > * Installare un modello da un file di pacchetto NuGet
 > * Disinstallare un modello in base all'ID del pacchetto
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 * Completare la [parte 1](cli-templates-create-item-template.md) e la [parte 2](cli-templates-create-project-template.md) di questa serie di esercitazioni.
 
@@ -51,8 +51,11 @@ dotnet new console -n templatepack -o .
 
 Il parametro `-n` imposta il nome del file con _estensione csproj_ su _TemplatePack. csproj_. Il parametro `-o` crea i file nella directory corrente. Viene visualizzato un risultato simile all'output seguente.
 
+```dotnetcli
+dotnet new console -n templatepack -o .
+```
+
 ```console
-C:\working> dotnet new console -n templatepack -o .
 The template "Console Application" was created successfully.
 
 Processing post-creation actions...
@@ -109,8 +112,11 @@ dotnet pack
 
 Questo comando compilerà il progetto e creerà un pacchetto NuGet nella cartella _working\bin\Debug_.
 
+```dotnetcli
+dotnet pack
+```
+
 ```console
-C:\working> dotnet pack
 Microsoft (R) Build Engine version 16.2.0-preview-19278-01+d635043bd for .NET Core
 Copyright (C) Microsoft Corporation. All rights reserved.
 
@@ -146,8 +152,11 @@ Se il pacchetto NuGet è stato caricato in un feed NuGet, è possibile usare il 
 
 Indipendentemente da come è stato installato il pacchetto di modelli, ovvero con il file _.nupkg_ direttamente o dal feed NuGet, la procedura per rimuovere un pacchetto di modelli è la stessa. Usare il `<PackageId>` del modello che si vuole disinstallare. È possibile ottenere un elenco dei modelli installati eseguendo il comando `dotnet new -u`.
 
+```dotnetcli
+dotnet new -u
+```
+
 ```console
-C:\working> dotnet new -u
 Template Instantiation Commands for .NET Core CLI
 
 Currently installed items:
@@ -178,7 +187,7 @@ Currently installed items:
 
 Eseguire `dotnet new -u AdatumCorporation.Utility.Templates` per disinstallare il modello. Il comando `dotnet new` restituirà informazioni che dovrebbero omettere i modelli installati in precedenza.
 
-La procedura è stata completata. È stato installato e disinstallato un pacchetto di modelli.
+Congratulazioni! È stato installato e disinstallato un pacchetto di modelli.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

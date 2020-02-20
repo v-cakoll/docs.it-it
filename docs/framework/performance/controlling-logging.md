@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events, logging
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
-ms.openlocfilehash: 180cce516a1209711430429a46cb5b718b29f1d9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e7d7d6e60b2f582a579f5811225f4027c37c7876
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716114"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504107"
 ---
 # <a name="controlling-net-framework-logging"></a>Controllo della registrazione di .NET Framework
 
@@ -17,7 +17,7 @@ ms.locfileid: "75716114"
 
 - Gli strumenti da riga di comando [Logman](/windows-server/administration/windows-commands/logman) e [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1), inclusi nel sistema operativo Windows.
 
-- Gli strumenti [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) in [Windows Performance Toolkit](/windows-hardware/test/wpt/). Per altre informazioni su Xperf, vedere il [blog sulle prestazioni di Windows](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/).
+- Gli strumenti [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) in [Windows Performance Toolkit](/windows-hardware/test/wpt/). Per altre informazioni su Xperf, vedere il [blog sulle prestazioni di Windows](https://docs.microsoft.com/archive/blogs/pigscanfly/).
 
 Per acquisire informazioni sugli eventi CLR, è necessario installare il provider CLR nel computer in uso. Per confermare la corretta installazione del provider, digitare `logman query providers` al prompt dei comandi. Verrà visualizzato un elenco di provider. L'elenco deve contenere una voce relativa al provider CLR, come riportato di seguito.
 
@@ -45,7 +45,7 @@ Per attivare la registrazione, un utente deve specificare tre impostazioni:
 
 ### <a name="to-capture-clr-etw-events-using-logman"></a>Per acquisire eventi ETW CLR tramite Logman
 
-1. Al prompt dei comandi, digitare:
+1. Al prompt dei comandi digitare:
 
      `logman start clrevents -p {e13c0d23-ccbc-4e12-931b-d9cc2eee27e4} 0x1CCBD 0x5 -ets -ct perf`
 
@@ -69,7 +69,7 @@ Per attivare la registrazione, un utente deve specificare tre impostazioni:
 
 ### <a name="to-capture-clr-etw-events-using-xperf"></a>Per acquisire eventi ETW CLR tramite Xperf
 
-1. Al prompt dei comandi, digitare:
+1. Al prompt dei comandi digitare:
 
      `xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:5 -f clrevents.etl`
 
@@ -87,7 +87,7 @@ Utilizzare i comandi elencati di seguito per visualizzare gli eventi ETW CLR. Pe
 
 ### <a name="to-view-clr-etw-events-using-tracerpt"></a>Per visualizzare gli eventi ETW CLR tramite Tracerpt
 
-- Al prompt dei comandi, digitare:
+- Al prompt dei comandi digitare:
 
      `tracerpt clrevents.etl`
 
@@ -95,7 +95,7 @@ Utilizzare i comandi elencati di seguito per visualizzare gli eventi ETW CLR. Pe
 
 ### <a name="to-view-clr-etw-events-using-xperf"></a>Per visualizzare gli eventi ETW CLR tramite Xperf
 
-- Al prompt dei comandi, digitare:
+- Al prompt dei comandi digitare:
 
      `xperf clrevents.etl`
 
@@ -103,7 +103,7 @@ Utilizzare i comandi elencati di seguito per visualizzare gli eventi ETW CLR. Pe
 
 ### <a name="to-convert-the-etl-file-to-a-comma-separated-value-file"></a>Per convertire il file con estensione etl in un file con valori delimitati da virgole
 
-- Al prompt dei comandi, digitare:
+- Al prompt dei comandi digitare:
 
      `xperf -i clrevents.etl -f clrevents.csv`
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -warnaserror compiler option [C#]
 - warnaserror compiler option [C#]
 ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
-ms.openlocfilehash: 66c78ee56c9d5153b5b878b2e695ad4ee6bffe0b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 7d43941629e933ac5a9e9c9d6a1388b6194f8d99
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606269"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503483"
 ---
 # <a name="-warnaserror-c-compiler-options"></a>-warnaserror (opzioni del compilatore C#)
 L'opzione **-warnaserror+** considera tutti gli avvisi come errori  
@@ -29,7 +29,7 @@ L'opzione **-warnaserror+** considera tutti gli avvisi come errori
   
  Per impostazione predefinita, l'opzione **-warnaserror-** è attiva e fa in modo che gli avvisi non impediscano la generazione di un file di output. **-warnaserror**, che equivale a **-warnaserror+** , fa in modo che gli avvisi vengano considerati errori.  
   
- Facoltativamente, se si vuole che solo determinati avvisi vengano considerati errori, è possibile specificare un elenco delimitato da virgole di numeri di avvisi da considerare errori.  
+ Facoltativamente, se si vuole che solo determinati avvisi vengano considerati errori, è possibile specificare un elenco delimitato da virgole di numeri di avvisi da considerare errori. Il set di tutti gli avvisi relativi al supporto di valori null può essere specificato con la sintassi abbreviata **Nullable** .
   
  Usare [-warn](./warn-compiler-option.md) per specificare il livello degli avvisi da visualizzare nel compilatore. Usare [-nowarn](./nowarn-compiler-option.md) per disabilitare avvisi specifici.  
   
@@ -37,7 +37,7 @@ L'opzione **-warnaserror+** considera tutti gli avvisi come errori
   
 1. Aprire la pagine **Proprietà** del progetto.  
   
-2. Fare clic sulla pagina della proprietà **Compilazione**.  
+2. Fare clic sulla pagina delle proprietà **Compilazione**.  
   
 3. Modificare la proprietà **Considera gli avvisi come errori**.  
   
@@ -48,7 +48,7 @@ L'opzione **-warnaserror+** considera tutti gli avvisi come errori
   
 ```console  
 csc -warnaserror in.cs  
-csc -warnaserror:642,649,652 in.cs  
+csc -warnaserror:642,649,652,nullable in.cs  
 ```  
   
 ## <a name="see-also"></a>Vedere anche

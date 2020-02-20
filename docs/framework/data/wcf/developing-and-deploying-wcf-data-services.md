@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: e34f7c8a0194e3901453923530a5cd07202801f6
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 1a017267c034fa1d6ea522855b7e0e7f056637ac
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937453"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504032"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Sviluppare e distribuire WCF Data Services
 
@@ -26,7 +26,7 @@ Quando si utilizza WCF Data Services per creare un servizio dati che supporta il
 
      WCF Data Services supporta un'ampia gamma di provider di servizi dati che consentono di definire un modello di dati basato su dati di un'ampia gamma di origini dati, dai database relazionali ai tipi di dati ad associazione tardiva. Per ulteriori informazioni, vedere [provider di servizi dati](data-services-providers-wcf-data-services.md).
 
-2. **Creazione del servizio dati**
+2. **Create the data service**
 
      La maggior parte dei servizi di base espone una classe che eredita dalla classe <xref:System.Data.Services.DataService%601> , con un tipo `T` che corrisponde al nome completo dello spazio dei nomi del contenitore di entità. Per altre informazioni, vedere [Defining WCF Data Services](defining-wcf-data-services.md).
 
@@ -80,7 +80,7 @@ Quando si sviluppa un servizio dati è opportuno considerare quanto segue:
 
 - Un programma di ispezione HTTP può essere molto utile quando si esegue il debug di un servizio dati in quanto permette di controllare il contenuto dei messaggi di risposta e richiesta. Qualsiasi analizzatore di pacchetti di rete in grado di visualizzare pacchetti non elaborati può essere usato per controllare le richieste HTTP e le risposte del servizio dati.
 
-- Quando si esegue il debug di un servizio dati, potrebbe essere necessario ottenere ulteriori informazioni su un errore dal servizio dati anziché durante il normale funzionamento. È possibile ottenere altre informazioni sull'errore dal servizio dati impostando la proprietà <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> in <xref:System.Data.Services.DataServiceConfiguration> su `true` e impostando la proprietà <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> dell'attributo <xref:System.ServiceModel.Description.ServiceDebugBehavior> nella classe del servizio dati su `true`. Per ulteriori informazioni, vedere il post [debug WCF Data Services](https://blogs.msdn.microsoft.com/phaniraj/?m=20086). È anche possibile abilitare la traccia in WCF per visualizzare le eccezioni generate nel livello di messaggistica HTTP. Per altre informazioni, vedere [Configuring Tracing](../../wcf/diagnostics/tracing/configuring-tracing.md).
+- Quando si esegue il debug di un servizio dati, potrebbe essere necessario ottenere ulteriori informazioni su un errore dal servizio dati anziché durante il normale funzionamento. È possibile ottenere altre informazioni sull'errore dal servizio dati impostando la proprietà <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> in <xref:System.Data.Services.DataServiceConfiguration> su `true` e impostando la proprietà <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> dell'attributo <xref:System.ServiceModel.Description.ServiceDebugBehavior> nella classe del servizio dati su `true`. Per ulteriori informazioni, vedere il post [debug WCF Data Services](https://docs.microsoft.com/archive/blogs/phaniraj/debugging-wcf-data-services). È anche possibile abilitare la traccia in WCF per visualizzare le eccezioni generate nel livello di messaggistica HTTP. Per altre informazioni, vedere [Configuring Tracing](../../wcf/diagnostics/tracing/configuring-tracing.md).
 
 - Un servizio dati viene in genere sviluppato come progetto di applicazione ASP.NET, ma è anche possibile creare il servizio dati come progetto di sito Web ASP.NET in Visual Studio. Per informazioni sulle differenze tra i due tipi di progetti, vedere [progetti di applicazioni Web rispetto ai progetti di siti Web in Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd547590(v=vs.110)).
 
@@ -129,4 +129,4 @@ Quando si distribuisce un servizio dati è opportuno considerare quanto segue:
 
 - [Hosting del servizio dati](hosting-the-data-service-wcf-data-services.md)
 - [Protezione di WCF Data Services](securing-wcf-data-services.md)
-- [Definizione di WCF Data Services](defining-wcf-data-services.md)
+- [Defining WCF Data Services](defining-wcf-data-services.md)

@@ -1,23 +1,19 @@
 ---
 title: Comando dotnet build
 description: Il comando dotnet build consente di compilare un progetto e tutte le relative dipendenze.
-ms.date: 10/14/2019
-ms.openlocfilehash: ec37d82c9e22a59acf7617f80a7491c0bcab89c9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 9f9a78ec0a6a25c54c8a727c05081ce6835514ee
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734309"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503770"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
-**Questo articolo si applica a:** ✔️ .NET Core 1. x SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .NET Core 2. x SDK e versioni successive
 
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
-
-## <a name="name"></a>Name
+## <a name="name"></a>Nome
 
 `dotnet build`: consente di compilare un progetto e tutte le relative dipendenze.
 
@@ -75,7 +71,7 @@ File di progetto o di soluzione da compilare. Se non viene specificato alcun fil
 
 ## <a name="options"></a>Opzioni
 
-- **`-c|--configuration {Debug|Release}`**
+- **`-c|--configuration <CONFIGURATION>`**
 
   Definisce la configurazione di compilazione. Il valore predefinito per la maggior parte dei progetti è `Debug`, ma è possibile eseguire l'override delle impostazioni di configurazione della build nel progetto.
 
@@ -85,7 +81,7 @@ File di progetto o di soluzione da compilare. Se non viene specificato alcun fil
 
 - **`--force`**
 
-  Forza la risoluzione di tutte le dipendenze, anche se l'ultimo ripristino ha avuto esito positivo. La specifica di questo flag equivale all'eliminazione del file *project.assets.json*. Disponibile a partire da .NET Core 2.0 SDK.
+  Forza la risoluzione di tutte le dipendenze, anche se l'ultimo ripristino ha avuto esito positivo. La specifica di questo flag equivale all'eliminazione del file *project.assets.json*.
 
 - **`-h|--help`**
 
@@ -105,7 +101,7 @@ File di progetto o di soluzione da compilare. Se non viene specificato alcun fil
 
 - **`--no-restore`**
 
-  Non esegue un ripristino implicito durante la compilazione. Disponibile a partire da .NET Core 2.0 SDK.
+  Non esegue un ripristino implicito durante la compilazione.
 
 - **`--nologo`**
 

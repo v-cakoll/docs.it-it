@@ -3,12 +3,12 @@ title: Accesso con privilegi elevati per comandi dotnet
 description: Informazioni sulle procedure consigliate per comandi dotnet che richiedono l'accesso con privilegi elevati.
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: cf7c93a0adcae7092a61a6fc6046cd45cf00bf58
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 1cf29012736e5b6d858ca22dc2a9b97e7e8e33ef
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216312"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503575"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>Accesso con privilegi elevati per comandi dotnet
 
@@ -29,14 +29,14 @@ Le istruzioni seguenti illustrano il modo consigliato per installare, eseguire e
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="windowstabwindows"></a>[Windows](#tab/windows)
+# <a name="windows"></a>[Windows](#tab/windows)
 
 ### <a name="install-the-global-tool"></a>Installare lo strumento globale
 
 Se la cartella `%ProgramFiles%\dotnet-tools` è già esistente, eseguire le operazioni seguenti per verificare se il gruppo "Utenti" dispone dell'autorizzazione per scrivere o modificare tale directory:
 
 - Fare clic con il pulsante destro del mouse sulla cartella `%ProgramFiles%\dotnet-tools` e selezionare **Proprietà**. Verrà visualizzata la finestra di dialogo **Proprietà comuni**. 
-- Selezionare la scheda **Sicurezza**. In **Utenti e gruppi** controllare se il gruppo "Utenti" dispone dell'autorizzazione per scrivere o modificare la directory. 
+- Selezionare la scheda **sicurezza** . In utenti e **gruppi**controllare se il gruppo "utenti" dispone dell'autorizzazione per scrivere o modificare la directory. 
 - Se il gruppo "Utenti" è autorizzato alla scrittura o alla modifica della directory, usare un nome di directory diverso quando si installano gli strumenti anziché usare *dotnet-tools*.
 
 Per installare gli strumenti, eseguire il comando seguente al prompt con privilegi elevati. Verrà creata la cartella *dotnet-tools* durante l'installazione.
@@ -73,11 +73,11 @@ Al prompt con privilegi elevati digitare il comando seguente:
 dotnet tool uninstall PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools"
 ```
 
-# <a name="linuxtablinux"></a>[Linux](#tab/linux)
+# <a name="linux"></a>[Linux](#tab/linux)
 
 [!INCLUDE [elevated-access-unix](../../../includes/elevated-access-unix.md)]
 
-# <a name="macostabmacos"></a>[macOS](#tab/macos)
+# <a name="macos"></a>[macOS](#tab/macos)
 
 [!INCLUDE [elevated-access-unix](../../../includes/elevated-access-unix.md)]
 
@@ -93,14 +93,14 @@ Durante lo sviluppo potrebbe essere necessario l'accesso con privilegi elevati p
 
 - Uso di un eseguibile generato, che offre le prestazioni migliori in fase di avvio:
 
-   ```bash
+   ```dotnetcli
    dotnet build
    sudo ./bin/Debug/netcoreapp3.0/APPLICATIONNAME
    ```
     
 - Uso del comando [dotnet run](dotnet-run.md) con il flag `—no-build` per evitare di generare nuovi file binari:
 
-   ```bash
+   ```dotnetcli
    dotnet build
    sudo dotnet run --no-build
    ```

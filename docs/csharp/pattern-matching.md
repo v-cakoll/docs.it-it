@@ -4,12 +4,12 @@ description: Informazioni sulle espressioni di criteri di ricerca in C#
 ms.date: 04/10/2019
 ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: ff84ddd4f07fb77dc9fe648a495a441ed8f9198b
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: db509a0ebf1e205e9996ba8102757fe8c0b9ea3a
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039370"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501621"
 ---
 # <a name="pattern-matching"></a>Criteri di ricerca
 
@@ -136,3 +136,7 @@ I *costrutti dei criteri di ricerca* consentono di gestire in modo semplice il f
 I criteri di ricerca possono essere usati con qualsiasi tipo di dati. Vengono scritte espressioni che esaminano l'oggetto ed eseguono decisioni per il flusso di controllo in base alle condizioni.
 
 Confrontare il codice dell'esempio con la progettazione che deriverebbe dalla creazione di una gerarchia di classi per una `Shape` astratta e le forme derivate specifiche ognuna con la propria implementazione di un metodo virtuale per il calcolo dell'area. Spesso sarà possibile osservare che le espressioni di criteri di ricerca possono essere uno strumento utile quando si usano dati e si vogliono separare le esigenze di archiviazione di dati da quelle di comportamento.
+
+## <a name="see-also"></a>Vedere anche
+
+- [Esercitazione: uso delle funzionalità di criteri di ricerca per estendere i tipi di dati](tutorials/pattern-matching.md)

@@ -1,27 +1,29 @@
 ---
 title: Comando dotnet remove package
 description: Il comando dotnet remove package offre un'opzione utile per rimuovere il riferimento del pacchetto NuGet a un progetto.
-ms.date: 05/29/2018
-ms.openlocfilehash: cbdeacff78ef20c9a73010e10a771a724b23792e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.date: 02/14/2020
+ms.openlocfilehash: 8eaa311748c5627351ef149012dc4dddd2ab2793
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632439"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503640"
 ---
 # <a name="dotnet-remove-package"></a>dotnet remove package
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+**Questo articolo si applica a:** ✔️ .NET Core 2. x SDK e versioni successive
 
-## <a name="name"></a>nome
+## <a name="name"></a>Nome
 
 `dotnet remove package`: rimuove il riferimento al pacchetto da un file di progetto.
 
 ## <a name="synopsis"></a>Riepilogo
 
-`dotnet remove [<PROJECT>] package <PACKAGE_NAME> [-h|--help]`
+```dotnetcli
+dotnet remove [<PROJECT>] package <PACKAGE_NAME> [-h|--help]
+```
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descrizione
 
 Il comando `dotnet remove package` offre un'opzione utile per rimuovere un riferimento al pacchetto NuGet da un progetto.
 
@@ -37,12 +39,14 @@ Riferimento al pacchetto da rimuovere.
 
 ## <a name="options"></a>Opzioni
 
-`-h|--help`
+- **`-h|--help`**
 
-Stampa una breve guida per il comando.
+  Stampa una breve guida per il comando.
 
 ## <a name="examples"></a>Esempi
 
-Rimuove il pacchetto NuGet `Newtonsoft.Json` da un progetto nella directory corrente:
+- Rimuovere `Newtonsoft.Json` pacchetto NuGet da un progetto nella directory corrente:
 
-`dotnet remove package Newtonsoft.Json`
+  ```dotnetcli
+  dotnet remove package Newtonsoft.Json
+  ```

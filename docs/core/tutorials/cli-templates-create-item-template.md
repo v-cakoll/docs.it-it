@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: fa0ae18221c33d196960239411f8860a561b20ee
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5f4038e863d9bb59df470d3516c08fd2ad29c078
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340375"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503552"
 ---
 # <a name="tutorial-create-an-item-template"></a>Esercitazione: creare un modello di elemento
 
@@ -26,7 +26,7 @@ In questa parte della serie si apprenderà come:
 > * Testare un modello di elemento
 > * Disinstallare un modello di elemento
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 * [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download) o versioni successive.
 * Leggere l'articolo di riferimento [Modelli personalizzati per dotnet new](../tools/custom-templates.md).
@@ -41,7 +41,7 @@ Questa serie usa una "cartella di lavoro" in cui è contenuta l'origine del mode
 
 Prima di tutto creare la cartella padre. Il nome non è rilevante. Creare quindi una sottocartella denominata _working_. All'interno della cartella _working_ creare una sottocartella denominata _templates_.
 
-Creare poi una cartella nella cartella padre denominata _test_. La struttura di cartelle dovrebbe essere simile alla seguente:
+Creare poi una cartella nella cartella padre denominata _test_. La struttura di cartelle dovrebbe essere simile alla seguente.
 
 ```console
 parent_folder
@@ -99,7 +99,7 @@ working
                 template.json
 ```
 
-Aprire il file _template.json_ con l'editor di testo preferito, incollare il codice JSON seguente e salvarlo:
+Aprire il file _template. JSON_ con l'editor di testo preferito e incollare il codice JSON seguente e salvarlo.
 
 ```json
 {
@@ -151,8 +151,13 @@ Worker Service                                    worker                [C#]    
 
 Ora che è stato installato un modello di elemento, è opportuno testarlo. Passare alla cartella _test/_ e creare una nuova applicazione console con `dotnet new console`. Viene generato un progetto funzionante che è possibile testare facilmente con il comando `dotnet run`.
 
+```dotnetcli
+dotnet new console
+```
+
+Si otterrà un output simile al seguente.
+
 ```console
-C:\test> dotnet new console
 The template "Console Application" was created successfully.
 
 Processing post-creation actions...
@@ -162,15 +167,27 @@ Running 'dotnet restore' on C:\test\test.csproj...
 Restore succeeded.
 ```
 
+Eseguire il progetto con.
+
+```dotnetcli
+dotnet run
+```
+
+Si ottiene l'output seguente.
+
 ```console
-C:\test> dotnet run
 Hello World!
 ```
 
 Eseguire quindi `dotnet new stringext` per generare il file _CommonExtensions.cs_ dal modello.
 
+```dotnetcli
+dotnet new stringext
+```
+
+Si ottiene l'output seguente.
+
 ```console
-C:\test> dotnet new stringext
 The template "Example templates: string extensions" was created successfully.
 ```
 
@@ -182,19 +199,29 @@ Console.WriteLine("Hello World!".Reverse());
 
 Eseguire di nuovo il programma per verificare che il risultato sia invertito.
 
+```dotnetcli
+dotnet run
+```
+
+Si ottiene l'output seguente.
+
 ```console
-C:\test> dotnet run
 !dlroW olleH
 ```
 
-La procedura è stata completata. È stato creato e distribuito un modello di elemento con .NET Core. Per prepararsi per la parte successiva di questa serie di esercitazioni, è necessario disinstallare il modello creato. Assicurarsi di eliminare anche tutti i file dalla cartella _test_. Verrà ripristinato uno stato pulito, pronto per la prossima sezione principale di questa esercitazione.
+Congratulazioni! È stato creato e distribuito un modello di elemento con .NET Core. Per prepararsi per la parte successiva di questa serie di esercitazioni, è necessario disinstallare il modello creato. Assicurarsi di eliminare anche tutti i file dalla cartella _test_. Verrà ripristinato uno stato pulito, pronto per la prossima sezione principale di questa esercitazione.
 
 ## <a name="uninstall-the-template"></a>Disinstallare il modello
 
 Poiché il modello è stato installato usando un percorso di file, è necessario disinstallarlo con il percorso di file **assoluto**. È possibile visualizzare un elenco dei modelli installati eseguendo il comando `dotnet new -u`. Il modello creato in questo articolo dovrebbe essere l'ultimo dell'elenco. Usare il percorso indicato per disinstallare il modello con il comando `dotnet new -u <ABSOLUTE PATH TO TEMPLATE DIRECTORY>`.
 
+```dotnetcli
+dotnet new -u
+```
+
+Si otterrà un output simile al seguente.
+
 ```console
-C:\working> dotnet new -u
 Template Instantiation Commands for .NET Core CLI
 
 Currently installed items:
@@ -222,8 +249,10 @@ Currently installed items:
       Example templates: string extensions (stringext) C#
 ```
 
-```console
-C:\working> dotnet new -u C:\working\templates\extensions
+Per disinstallare un modello, eseguire il comando seguente.
+
+```dotnetcli
+dotnet new -u C:\working\templates\extensions
 ```
 
 ## <a name="next-steps"></a>Passaggi successivi

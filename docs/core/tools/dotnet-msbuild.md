@@ -1,19 +1,19 @@
 ---
 title: Comando dotnet msbuild
 description: Il comando dotnet msbuild consente di accedere alla riga di comando di MSBuild.
-ms.date: 12/03/2018
-ms.openlocfilehash: dae1e9f0ca355166d41c11fbafb80c7c9fb29748
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 28a32a460d644d3e22f16b5dd9416222ae466e2e
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733192"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503673"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+**Questo articolo si applica a:** ✔️ .NET Core 2. x SDK e versioni successive
 
-## <a name="name"></a>Name
+## <a name="name"></a>Nome
 
 `dotnet msbuild`: consente di compilare un progetto e tutte le relative dipendenze.
 
@@ -31,25 +31,25 @@ Il comando [dotnet build](dotnet-build.md) equivale a `dotnet msbuild -restore -
 
 ## <a name="examples"></a>Esempi
 
-* Compilare un progetto e le relative dipendenze:
+- Compilare un progetto e le relative dipendenze:
 
   ```dotnetcli
   dotnet msbuild
   ```
 
-* Compilare un progetto e le relative dipendenze usando la configurazione per il rilascio:
+- Compilare un progetto e le relative dipendenze usando la configurazione per il rilascio:
 
   ```dotnetcli
   dotnet msbuild -property:Configuration=Release
   ```
 
-* Eseguire la destinazione di pubblicazione e pubblicare per il RID `osx.10.11-x64`:
+- Eseguire la destinazione di pubblicazione e pubblicare per il RID `osx.10.11-x64`:
 
   ```dotnetcli
   dotnet msbuild -target:Publish -property:RuntimeIdentifiers=osx.10.11-x64
   ```
 
-* Vedere l'intero progetto con tutte le destinazioni incluse dall'SDK:
+- Vedere l'intero progetto con tutte le destinazioni incluse dall'SDK:
 
   ```dotnetcli
   dotnet msbuild -preprocess
