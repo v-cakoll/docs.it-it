@@ -1,19 +1,19 @@
 ---
-title: Parametri valutati a livello di tabella
+title: Parametri con valori di tabella
 ms.date: 10/12/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 6c01453556a71925c322e9f9aef8065cbddb3540
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: d99cea1641dc61c1cae6d6b1634359211ce788ae
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894384"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452305"
 ---
-# <a name="table-valued-parameters"></a>Parametri valutati a livello di tabella
-I parametri valutati a livello di tabella consentono di eseguire facilmente il marshaling di più righe di dati di un'applicazione client in SQL Server senza richiedere più round trip o logica speciale lato server per l'elaborazione dei dati. È possibile usare i parametri con valori di tabella per incapsulare le righe di dati in un'applicazione client e inviare i dati al server in un singolo comando con parametri. Le righe di dati in arrivo vengono archiviate in una variabile di tabella che può quindi essere utilizzata tramite Transact-SQL.  
+# <a name="table-valued-parameters"></a>Parametri con valori di tabella
+I parametri valutati a livello di tabella consentono di eseguire facilmente il marshaling di più righe di dati di un'applicazione client in SQL Server senza richiedere più round trip o logica speciale lato server per l'elaborazione dei dati. I parametri con valori di tabella possono essere usati per incapsulare le righe di dati in un'applicazione client e inviare i dati al server in un singolo comando con parametri. Le righe di dati in arrivo vengono archiviate in una variabile di tabella che può quindi essere utilizzata tramite Transact-SQL.  
   
  I valori di colonna nei parametri valutati a livello di tabella sono accessibili tramite istruzioni Transact-SQL SELECT standard. I parametri con valori di tabella sono fortemente tipizzati e la loro struttura viene convalidata automaticamente. La dimensione dei parametri valutati a livello di tabella è limitata solo dalla memoria del server.  
   
@@ -22,13 +22,13 @@ I parametri valutati a livello di tabella consentono di eseguire facilmente il m
   
  Per altre informazioni sui parametri con valori di tabella, vedere le risorse seguenti.  
   
-|Risorsa|Descrizione|  
+|Resource|Descrizione|  
 |--------------|-----------------|  
-|[Parametri con valori di tabella (motore di database)](https://go.microsoft.com/fwlink/?LinkId=98363) in documentazione online di SQL Server|Viene descritto come creare e usare i parametri con valori di tabella.|  
-|[Tipi di tabella definiti dall'utente](https://go.microsoft.com/fwlink/?LinkId=98364) in documentazione online di SQL Server|Vengono descritti i tipi di tabella definiti dall'utente usati per dichiarare i parametri con valori di tabella.|  
+|[Usare parametri con valori di tabella (motore di database)](/sql/relational-databases/tables/use-table-valued-parameters-database-engine)|Viene descritto come creare e usare i parametri con valori di tabella.|  
+|[Tipi di tabella definiti dall'utente](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))|Vengono descritti i tipi di tabella definiti dall'utente usati per dichiarare i parametri con valori di tabella.|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>Passaggio di più righe nelle versioni precedenti di SQL Server  
- Prima dell'introduzione dei parametri con valori di tabella SQL Server 2008, le opzioni per passare più righe di dati a una stored procedure o a un comando SQL con parametri erano limitate. Per passare più righe al server, uno sviluppatore poteva scegliere tra le opzioni seguenti:  
+ Prima dell'introduzione dei parametri con valori di tabella in SQL Server 2008, le opzioni per passare più righe di dati a una stored procedure o a un comando SQL con parametri erano limitate. Per passare più righe al server, uno sviluppatore poteva scegliere tra le opzioni seguenti:  
   
 - Usare una serie di parametri singoli per rappresentare i valori in più colonne e righe di dati. La quantità di dati che è possibile passare tramite questo metodo è limitata dal numero di parametri consentiti. Le routine di SQL Server possono includere al massimo 2100 parametri. Per assemblare questi singoli valori in una variabile di tabella o in una tabella temporanea per l'elaborazione è necessaria la logica sul lato server.  
   
@@ -39,7 +39,7 @@ I parametri valutati a livello di tabella consentono di eseguire facilmente il m
 - Usare l'utilità `bcp` o l'oggetto <xref:System.Data.SqlClient.SqlBulkCopy> per caricare numerose righe di dati in una tabella. Sebbene questa tecnica sia molto efficace, non supporta l'elaborazione sul lato server, a meno che i dati non vengano caricati in una tabella temporanea o in una variabile di tabella.  
   
 ## <a name="creating-table-valued-parameter-types"></a>Creazione di tipi di parametri con valori di tabella  
- I parametri con valori di tabella sono basati su strutture di tabella fortemente tipizzate definite tramite istruzioni CREATE TYPE Transact-SQL. Per poter utilizzare i parametri con valori di tabella nelle applicazioni client, è prima necessario creare un tipo di tabella e definire la struttura in SQL Server. Per ulteriori informazioni sulla creazione di tipi di tabella, vedere [tipi di tabella definiti dall'utente](https://go.microsoft.com/fwlink/?LinkID=98364) in documentazione online di SQL Server.  
+ I parametri con valori di tabella sono basati su strutture di tabella fortemente tipizzate definite tramite istruzioni CREATE TYPE Transact-SQL. Per poter utilizzare i parametri con valori di tabella nelle applicazioni client, è prima necessario creare un tipo di tabella e definire la struttura in SQL Server. Per ulteriori informazioni sulla creazione di tipi di tabella, vedere [tipi di tabella definiti dall'utente](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)).  
   
  L'istruzione seguente consente di creare un tipo di tabella denominato CategoryTableType, costituito dalle colonne CategoryID e CategoryName:  
   
@@ -86,9 +86,9 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 - Non è possibile usare istruzioni ALTER TABLE per modificare la struttura dei parametri con valori di tabella.  
   
 ## <a name="configuring-a-sqlparameter-example"></a>Configurazione di un esempio SqlParameter  
- <xref:System.Data.SqlClient>supporta il popolamento dei parametri con valori <xref:System.Data.DataTable>di <xref:System.Data.Common.DbDataReader> tabella <xref:System.Collections.Generic.IEnumerable%601> da oggetti o  \  <xref:Microsoft.SqlServer.Server.SqlDataRecord> . È necessario specificare un nome di tipo per il parametro con valori di tabella usando la proprietà <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> di un oggetto <xref:System.Data.SqlClient.SqlParameter>. `TypeName` deve corrispondere al nome di un tipo compatibile creato in precedenza nel server. Nel frammento di codice seguente viene illustrato come configurare <xref:System.Data.SqlClient.SqlParameter> per inserire dati.  
+ <xref:System.Data.SqlClient> supporta il popolamento di parametri con valori di tabella da oggetti <xref:System.Data.DataTable>, <xref:System.Data.Common.DbDataReader> o <xref:System.Collections.Generic.IEnumerable%601> \ <xref:Microsoft.SqlServer.Server.SqlDataRecord>. È necessario specificare un nome di tipo per il parametro con valori di tabella usando la proprietà <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> di un oggetto <xref:System.Data.SqlClient.SqlParameter>. `TypeName` deve corrispondere al nome di un tipo compatibile creato in precedenza nel server. Nel frammento di codice seguente viene illustrato come configurare <xref:System.Data.SqlClient.SqlParameter> per inserire dati.  
  
-Nell'esempio seguente la `addedCategories` variabile contiene un oggetto. <xref:System.Data.DataTable> Per vedere come viene popolata la variabile, vedere gli esempi nella sezione successiva, [passaggio di un parametro con valori di tabella a una stored procedure](#passing).
+Nell'esempio seguente la variabile `addedCategories` contiene un oggetto <xref:System.Data.DataTable>. Per vedere come viene popolata la variabile, vedere gli esempi nella sezione successiva, [passaggio di un parametro con valori di tabella a una stored procedure](#passing).
 
 ```csharp  
 // Configure the command and parameter.  

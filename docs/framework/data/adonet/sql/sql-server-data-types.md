@@ -3,12 +3,12 @@ title: Mapping dei tipi di dati SQL Server e ADO.NET
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
-ms.openlocfilehash: 9baffc7a439c851ead7ec0e12899adf418174e22
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: f727c69b1dd5c23c6a89911005256de70255fd4c
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76979859"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452331"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>Mapping dei tipi di dati SQL Server e ADO.NET
 SQL Server e .NET Framework sono basati su sistemi di tipi diversi che possono comportare una potenziale perdita di dati. Per mantenere l'integrità dei dati, il provider di dati .NET Framework per SQL Server (<xref:System.Data.SqlClient>) fornisce metodi delle funzioni di accesso tipizzate per l'uso dei dati SQL Server. È possibile usare le enumerazioni nelle classi <xref:System.Data.SqlDbType> per specificare i tipi di dati <xref:System.Data.SqlClient.SqlParameter>.  
@@ -19,11 +19,11 @@ SQL Server e .NET Framework sono basati su sistemi di tipi diversi che possono c
   
  I tipi di dati SQL Server disponibili per l'uso nell'applicazione dipendono dalla versione di SQL Server in uso. Per altre informazioni, vedere la versione rilevante della documentazione online di SQL Server nella tabella seguente.  
   
- **Documentazione online di SQL Server**  
+ **Documentazione di SQL Server**  
   
-1. [Tipi di dati (motore di database)](https://go.microsoft.com/fwlink/?LinkID=107468)  
+1. [Tipi di dati (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [SqlTypes e DataSet](sqltypes-and-the-dataset.md)  
  Viene descritto il supporto dei tipi per `SqlTypes` in `DataSet`.  
   
@@ -42,7 +42,7 @@ SQL Server e .NET Framework sono basati su sistemi di tipi diversi che possono c
  [Dati XML in SQL Server](xml-data-in-sql-server.md)  
  Viene descritto come usare i dati XML recuperati da SQL Server.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Data.DataSet>  
  Vengono descritti la classe `DataSet` e tutti i relativi membri.  
   

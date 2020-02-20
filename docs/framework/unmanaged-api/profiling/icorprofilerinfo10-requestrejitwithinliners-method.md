@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 5822136eb1a7f582bcfae901a99775950e586198
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 99b6893854c358720259095bf3c0270cb3676483
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76863179"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452175"
 ---
 # <a name="icorprofilerinfo10requestrejitwithinliners-method"></a>Metodo ICorProfilerInfo10:: RequestReJITWithInliners
 
@@ -53,9 +53,9 @@ HRESULT RequestReJITWithInliners( [in]                       DWORD       dwRejit
 
 [RequestReJIT](icorprofilerinfo4-requestrejit-method.md) non esegue alcun rilevamento dei metodi inline. Il profiler avrebbe dovuto bloccare l'incorporamento o tenere traccia dell'incorporamento e chiamare `RequestReJIT` per tutti gli Inliners per assicurarsi che ogni istanza di un metodo reso inline fosse ReJITted. Si è verificato un problema con ReJIT durante l'associazione, poiché il profiler non è presente per il monitoraggio dell'incorporamento. Questo metodo può essere chiamato per garantire che anche il set completo di inliner sarà ReJITted.
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** Vedere [sistemi operativi supportati da .NET Core](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
+**Piattaforme:** Vedere [sistemi operativi supportati da .NET Core](../../../core/install/dependencies.md?pivots=os-windows).
 
 **Intestazione:** CorProf.idl, CorProf.h
 

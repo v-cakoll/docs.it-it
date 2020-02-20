@@ -2,12 +2,12 @@
 title: Integrazione continua (CI) con .NET Core SDK e strumenti
 description: Informazioni su come usare il .NET Core SDK e i relativi strumenti nel server di compilazione con integrazione continua.
 ms.date: 05/18/2017
-ms.openlocfilehash: bdb3913cbe588377d9fbee0f1c054e682629ac96
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 6e23a21dd36422a095e56519c9aa28ce2549f7b2
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215237"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451038"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Uso di .NET Core SDK e dei relativi strumenti in integrazione continua
 
@@ -30,9 +30,9 @@ L'uso dello script di installazione consente di installare il sistema senza priv
 Lo script di installazione viene automatizzato per essere eseguito all'inizio della compilazione per recuperare e installare la versione necessaria dell'SDK. La *versione necessaria* è la versione dell'SDK più adatta per compilare i progetti. Lo script consente di installare l'SDK in una directory locale del server, eseguire gli strumenti dal percorso di installazione e quindi pulire (o consentire al servizio CI di eseguire la pulizia) al termine della compilazione. Ciò consente incapsulamento e isolamento per l'intero processo di compilazione. I riferimenti agli script di installazione sono reperibili nell'articolo [dotnet-install](dotnet-install-script.md).
 
 > [!NOTE]
-> **Servizi di Azure DevOps**
+> **Azure DevOps Services**
 >
-> Quando si usa lo script di installazione, le dipendenze native non vengono installate automaticamente. È necessario installare le dipendenze native, se non sono già presenti nel sistema operativo. Per altre informazioni, vedere [dipendenze e requisiti di .NET Core](../install/dependencies.md?tabs=netcore30&pivots=os-linux).
+> Quando si usa lo script di installazione, le dipendenze native non vengono installate automaticamente. È necessario installare le dipendenze native, se non sono già presenti nel sistema operativo. Per altre informazioni, vedere [dipendenze e requisiti di .NET Core](../install/dependencies.md).
 
 ## <a name="ci-setup-examples"></a>Esempi di installazione di CI
 

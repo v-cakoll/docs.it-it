@@ -2,12 +2,12 @@
 title: Catalogo dei RID (Runtime IDentifier) di .NET Core
 description: Informazioni sull'identificatore di runtime (RID) e su come vengono usati i RID in .NET Core.
 ms.date: 02/22/2019
-ms.openlocfilehash: 4369e263f1f46c73f04c65e4124f63c68d133520
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: feb19632f16a047ecfb2dcb697a9b837824a1929
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789899"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451733"
 ---
 # <a name="net-core-rid-catalog"></a>Catalogo RID di .NET Core
 
@@ -27,9 +27,9 @@ Un singolo RID può essere impostato nell'elemento `<RuntimeIdentifier>` del fil
 
 I RID che rappresentano un sistema operativo reale seguono in genere il modello seguente: `[os].[version]-[architecture]-[additional qualifiers]` dove:
 
-- `[os]` è il moniker di sistema operativo/piattaforma. Ad esempio `ubuntu`.
+- `[os]` è il moniker di sistema operativo/piattaforma. Ad esempio, `ubuntu`.
 
-- `[version]` è il numero di versione del sistema operativo nel formato separato da punti (`.`). Ad esempio `15.10`.
+- `[version]` è il numero di versione del sistema operativo nel formato separato da punti (`.`). Ad esempio, `15.10`.
 
   - **Non deve** trattarsi di versioni marketing, poiché tali versioni rappresentano spesso più versioni discrete del sistema operativo con una superficie delle API della piattaforma variabile.
 
@@ -108,7 +108,7 @@ Sono elencati solo i valori comuni. Per la versione più recente e completa, ved
   - `win10-arm`
   - `win10-arm64`
 
-Per altre informazioni, vedere [dipendenze e requisiti di .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-windows).
+Per altre informazioni, vedere [dipendenze e requisiti di .NET Core](install/dependencies.md?pivots=os-windows).
 
 ## <a name="linux-rids"></a>RID Linux
 
@@ -126,7 +126,7 @@ Sono elencati solo i valori comuni. Per la versione più recente e completa, ved
   - `tizen.4.0.0`
   - `tizen.5.0.0`
 
-Per altre informazioni, vedere [dipendenze e requisiti di .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-linux).
+Per altre informazioni, vedere [dipendenze e requisiti di .NET Core](install/dependencies.md?pivots=os-linux).
 
 ## <a name="macos-rids"></a>RID macOS
 
@@ -145,7 +145,7 @@ I RID macOS usano la personalizzazione "OSX" precedente. Sono elencati solo i va
 - macOS 10.14 Mojave (.NET Core 1.1 o versioni successive)
   - `osx.10.14-x64`
 
-Per altre informazioni, vedere [dipendenze e requisiti di .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-macos).
+Per altre informazioni, vedere [dipendenze e requisiti di .NET Core](install/dependencies.md?pivots=os-macos).
 
 ## <a name="see-also"></a>Vedere anche
 

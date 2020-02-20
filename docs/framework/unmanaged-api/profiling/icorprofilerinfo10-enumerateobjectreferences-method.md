@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 7fd62e0d3d9173f3b75882131e57126075c0677f
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 9aadf9701444d215291b6fc19cc8cd61ca832837
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76863309"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452240"
 ---
 # <a name="icorprofilerinfo10enumerateobjectreferences-method"></a>Metodo ICorProfilerInfo10:: EnumerateObjectReferences
 
@@ -48,9 +48,9 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
 
 Il metodo `EnumerateObjectReferences` è simile a [ObjectReferences](icorprofilercallback-objectreferences-method.md), ad eccezione del fatto che scorre i riferimenti su richiesta per il profiler anziché pre-allocare una matrice per archiviare i riferimenti.
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** Vedere [sistemi operativi supportati da .NET Core](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
+**Piattaforme:** Vedere [sistemi operativi supportati da .NET Core](../../../core/install/dependencies.md?pivots=os-windows).
 
 **Intestazione:** CorProf.idl, CorProf.h
 

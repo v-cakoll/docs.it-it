@@ -2,14 +2,14 @@
 title: <behaviorExtensions>
 ms.date: 03/30/2017
 ms.assetid: 59f2791a-c78f-40d7-aa80-0d9cd10135d9
-ms.openlocfilehash: bcf1f1dcdba50c3e7fba8eb170132d0cf47c4271
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 39dc92d65a41d223ebd39aec3dc59871ad1fd101
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919812"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448685"
 ---
-# <a name="behaviorextensions"></a>\<behaviorExtensions>
+# <a name="behaviorextensions"></a>\<behaviorExtensions >
 Le estensioni di comportamento consentono all'utente di creare elementi di comportamento definiti dall'utente. Questi elementi possono essere usati insieme agli elementi di comportamento standard di Windows Communication Foundation (WCF). Nella sezione `behaviorExtensions` l'elemento viene definito in modo tale che possa essere usato nella configurazione. Di seguito viene fornito l'esempio di una tipica estensione di comportamento.  
   
 ```xml  
@@ -42,14 +42,14 @@ Le estensioni di comportamento consentono all'utente di creare elementi di compo
 </behaviors>
 ```  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
  È consigliato fortemente l'uso di nomi di assembly completi per la registrazione di tipi nei file `machine.config` e `app.config`. Se il tipo non è definito in modo univoco, il caricatore dei tipi CLR lo cerca nei percorsi seguenti nell'ordine specificato:  
   
  Se l'assembly del tipo è conosciuto, il caricatore esegue una ricerca nei percorsi di reindirizzamento del file di configurazione, in GAC, nell'assembly corrente usando le informazioni di configurazione e la directory base dell'applicazione. Se l'assembly è sconosciuto, il caricatore esegue una ricerca nell'assembly corrente, in mscorlib e nel percorso restituito dal gestore eventi `TypeResolve`. Questo ordine di ricerca CLR può essere modificato con hook quali il meccanismo di inoltro dei tipi e l'evento AppDomain.TypeResolve.  
   
  Un autore di un attacco può sfruttare l'ordine di ricerca CLR ed eseguire codice non autorizzato. L'uso di nomi univoci completi (sicuri) identifica un tipo e aumenta ulteriormente la sicurezza del sistema.  
   
- Per ulteriori informazioni, vedere [come il runtime individua gli assembly](https://go.microsoft.com/fwlink/?LinkId=95336) e <xref:System.AppDomain.TypeResolve>.  
+ Per ulteriori informazioni, vedere [come il runtime individua gli assembly](../../../deployment/how-the-runtime-locates-assemblies.md) e <xref:System.AppDomain.TypeResolve>.  
   
 ## <a name="see-also"></a>Vedere anche
 

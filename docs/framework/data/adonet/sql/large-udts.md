@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: 33f4263c747ac2590234493ec7cb9e6048ed2b96
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 012bddc0b4c29a0b50abc3a0df5c3cd34dc4725a
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794018"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452396"
 ---
 # <a name="large-udts"></a>Tipi di grandi dimensioni definiti dall'utente
 I tipi definiti dall'utente (UDT) consentono agli sviluppatori di estendere il sistema di tipi scalari del server archiviando oggetti CLR (Common Language Runtime) in un database di SQL Server. I tipi UDT possono contenere più elementi e presentare comportamenti diversi dai tipi di dati alias tradizionali, costituiti da un singolo tipo di dati di sistema SQL Server.  
@@ -22,9 +22,9 @@ I tipi definiti dall'utente (UDT) consentono agli sviluppatori di estendere il s
   
  Per informazioni complete sui tipi definiti dall'utente, vedere la documentazione online di SQL Server relativa alla versione di SQL Server in uso.  
   
- **Documentazione online di SQL Server**  
+ **Documentazione di SQL Server**  
   
-1. [Tipi definiti dall'utente CLR](https://go.microsoft.com/fwlink/?LinkId=98366)  
+1. [Tipi definiti dall'utente CLR](/sql/relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types)  
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>Recupero di schemi UDT tramite GetSchema  
  Il metodo <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> di <xref:System.Data.SqlClient.SqlConnection> restituisce informazioni sullo schema del database in un oggetto <xref:System.Data.DataTable>. Per ulteriori informazioni, vedere [SQL Server raccolte di schemi](../sql-server-schema-collections.md).  
@@ -41,7 +41,7 @@ I tipi definiti dall'utente (UDT) consentono agli sviluppatori di estendere il s
 |`ProviderSpecificDataType`|`SqlTypes.SqlBinary`|Istanza UDT|  
 |`ProviderType`|21 (`SqlDbType.VarBinary`)|29 (`SqlDbType.Udt`)|  
 |`NonVersionedProviderType`|29 (`SqlDbType.Udt`)|29 (`SqlDbType.Udt`)|  
-|`DataTypeName`|`SqlDbType.VarBinary`|Nome in tre parti specificato come *database. SchemaName. TypeName*.|  
+|`DataTypeName`|`SqlDbType.VarBinary`|Nome in tre parti specificato come *Database.SchemaName.TypeName*.|  
 |`IsLong`|Variabile|Variabile|  
   
 ## <a name="sqldatareader-considerations"></a>Considerazioni su SqlDataReader  
@@ -72,8 +72,8 @@ I tipi definiti dall'utente (UDT) consentono agli sviluppatori di estendere il s
   
 |Proprietà SqlParameter|Descrizione|  
 |---------------------------|-----------------|  
-|<xref:System.Data.SqlClient.SqlParameter.Value%2A>|Ottiene o imposta un oggetto che rappresenta il valore del parametro. Il valore predefinito è Null. La proprietà può essere `SqlBinary`, `Byte[]` o un oggetto gestito.|  
-|<xref:System.Data.SqlClient.SqlParameter.SqlValue%2A>|Ottiene o imposta un oggetto che rappresenta il valore del parametro. Il valore predefinito è Null. La proprietà può essere `SqlBinary`, `Byte[]` o un oggetto gestito.|  
+|<xref:System.Data.SqlClient.SqlParameter.Value%2A>|Ottiene o imposta un oggetto che rappresenta il valore del parametro. L'impostazione predefinita è null. La proprietà può essere `SqlBinary`, `Byte[]` o un oggetto gestito.|  
+|<xref:System.Data.SqlClient.SqlParameter.SqlValue%2A>|Ottiene o imposta un oggetto che rappresenta il valore del parametro. L'impostazione predefinita è null. La proprietà può essere `SqlBinary`, `Byte[]` o un oggetto gestito.|  
 |<xref:System.Data.SqlClient.SqlParameter.Size%2A>|Ottiene o imposta la dimensione del valore del parametro da risolvere. Il valore predefinito è 0. La proprietà può essere un integer che rappresenta la dimensione del valore del parametro. Per i tipi UDT di grandi dimensioni, può trattarsi delle dimensioni effettive del tipo UDT oppure può essere pari a -1 per i tipi sconosciuti.|  
   
 ## <a name="retrieving-data-example"></a>Esempio di recupero di dati  

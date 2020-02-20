@@ -5,12 +5,12 @@ helpviewer_keywords:
 - loadFromRemoteSources element
 - <loadFromRemoteSources> element
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
-ms.openlocfilehash: a4dbcd0a0b848e5ef57965b5b3f4fcee9161b724
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 454314bf1002a9648f669cc708c8ac42461fccaf
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73116556"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452266"
 ---
 # <a name="loadfromremotesources-element"></a>\<elemento > loadFromRemoteSources
 Specifica se agli assembly caricati da origini remote deve essere concessa l'attendibilità totale in .NET Framework 4 e versioni successive.
@@ -19,7 +19,7 @@ Specifica se agli assembly caricati da origini remote deve essere concessa l'att
 > Se è stato indirizzato a questo articolo a causa di un messaggio di errore nell'elenco errori del progetto di Visual Studio o di un errore di compilazione, vedere [procedura: usare un assembly dal Web in Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100)).  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;[ **\<runtime >** ](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<loadFromRemoteSources >**  
   
 ## <a name="syntax"></a>Sintassi  
@@ -30,7 +30,7 @@ Specifica se agli assembly caricati da origini remote deve essere concessa l'att
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+ Le sezioni seguenti descrivono gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
   
@@ -40,13 +40,13 @@ Specifica se agli assembly caricati da origini remote deve essere concessa l'att
   
 ## <a name="enabled-attribute"></a>attributo enabled  
   
-|Value|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |`false`|Non concedere l'attendibilità totale alle applicazioni da origini remote. Questa è l'impostazione predefinita.|  
 |`true`|Concedere l'attendibilità totale alle applicazioni dalle origini remote.|  
   
-### <a name="child-elements"></a>Elementi figlio  
- Nessuna.  
+### <a name="child-elements"></a>Elemento figlio  
+ Nessuno  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -95,11 +95,11 @@ L'impostazione dell'elemento `<loadFromRemoteSources>` su `true` impedisce che v
 
 - Se un'applicazione è stata copiata dal Web, viene contrassegnata da Windows come applicazione Web, anche se risiede nel computer locale. È possibile modificare la designazione cambiando le proprietà del file oppure è possibile utilizzare l'elemento `<loadFromRemoteSources>` per concedere l'attendibilità totale dell'assembly. In alternativa, è possibile usare il metodo <xref:System.Reflection.Assembly.UnsafeLoadFrom%2A> per caricare un assembly locale segnalato dal sistema operativo come caricato dal Web.
 
-- È possibile ottenere un <xref:System.IO.FileLoadException> in un'applicazione in esecuzione in un'applicazione Windows Virtual PC. Questo problema può verificarsi quando si tenta di caricare un file dalle cartelle collegate nel computer host. Può inoltre verificarsi quando si tenta di caricare un file da una cartella collegata tramite [Servizi Desktop remoto](https://go.microsoft.com/fwlink/?LinkId=182775) (Servizi terminal). Per evitare l'eccezione, impostare `enabled` su `true`.
+- È possibile ottenere un <xref:System.IO.FileLoadException> in un'applicazione in esecuzione in un'applicazione Windows Virtual PC. Questo problema può verificarsi quando si tenta di caricare un file dalle cartelle collegate nel computer host. Può inoltre verificarsi quando si tenta di caricare un file da una cartella collegata tramite [Servizi Desktop remoto](/windows/win32/termserv/terminal-services-portal) (Servizi terminal). Per evitare l'eccezione, impostare `enabled` su `true`.
 
 ## <a name="configuration-file"></a>File di configurazione
 
-Questo elemento viene in genere usato nel file di configurazione dell'applicazione, ma può essere usato in altri file di configurazione a seconda del contesto. Per ulteriori informazioni, vedere l'articolo [utilizzi più impliciti dei criteri CAS: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839) nel Blog sulla sicurezza di .NET.  
+Questo elemento viene in genere usato nel file di configurazione dell'applicazione, ma può essere usato in altri file di configurazione a seconda del contesto. Per ulteriori informazioni, vedere l'articolo [utilizzi più impliciti dei criteri CAS: loadFromRemoteSources](https://docs.microsoft.com/archive/blogs/shawnfa/more-implicit-uses-of-cas-policy-loadfromremotesources) nel Blog sulla sicurezza di .NET.  
 
 ## <a name="example"></a>Esempio
 
@@ -115,7 +115,7 @@ Nell'esempio seguente viene illustrato come concedere l'attendibilità totale ag
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Utilizzi più impliciti dei criteri CAS: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)
+- [Utilizzi più impliciti dei criteri CAS: loadFromRemoteSources](https://docs.microsoft.com/archive/blogs/shawnfa/more-implicit-uses-of-cas-policy-loadfromremotesources)
 - [Procedura: eseguire codice parzialmente attendibile in un oggetto sandbox](../../../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
 - [Schema delle impostazioni di runtime](index.md)
 - [Schema dei file di configurazione](../index.md)

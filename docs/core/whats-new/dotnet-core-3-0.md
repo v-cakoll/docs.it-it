@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 92d97ca3efe761c879d0940a02342edb5a8180f0
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 60794c4f8a5f9aeb7a4b3cd58c0c9f00e03fa9e7
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920373"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450980"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novità di .NET Core 3.0
 
@@ -19,9 +19,9 @@ Questo articolo descrive le novità di .NET Core 3.0. Uno dei principali miglior
 
 .NET Core 3.0 aggiunge il supporto per C# 8.0. È consigliabile usare [Visual Studio 2019 versione 16,3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o successive, [Visual Studio per Mac 8,3](/visualstudio/mac/install-preview) o versioni successive o [Visual Studio Code](https://code.visualstudio.com/) con l'  **C# estensione**più recente.
 
-[Scarica e inizia subito a usare .NET Core 3.0](https://aka.ms/netcore3download) in Windows, MacOS o Linux.
+[Scarica e inizia subito a usare .NET Core 3,0](https://aka.ms/netcore3download) in Windows, MacOS o Linux.
 
-Per ulteriori informazioni sulla versione, vedere l' [annuncio di .NET Core 3.0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/).
+Per ulteriori informazioni sulla versione, vedere l' [annuncio di .NET Core 3,0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/).
 
 .NET Core RC1 è stato considerato pronto per la produzione da Microsoft ed è stato completamente supportato. Se si usa una versione di anteprima, è necessario passare alla versione RTM per il supporto continuo.
 
@@ -54,7 +54,7 @@ Se si usa Visual Studio, è necessario [Visual Studio 2019](https://visualstudio
 
 ### <a name="default-executables"></a>File eseguibili predefiniti
 
-Per impostazione predefinita .NET Core ora compila [file eseguibili dipendenti dal framework](../deploying/index.md#framework-dependent-executables-fde). Si tratta di una novità per le applicazioni che usano una versione di .NET Core installata a livello globale. In precedenza solo le [distribuzioni autonome](../deploying/index.md#self-contained-deployments-scd) generavano un file eseguibile.
+Per impostazione predefinita .NET Core ora compila [file eseguibili dipendenti dal framework](../deploying/index.md#publish-runtime-dependent). Si tratta di una novità per le applicazioni che usano una versione di .NET Core installata a livello globale. In precedenza solo le [distribuzioni autonome](../deploying/index.md#publish-self-contained) generavano un file eseguibile.
 
 Durante `dotnet build` o `dotnet publish`, viene creato un file eseguibile che corrisponde all'ambiente e alla piattaforma dell'SDK usato. Il comportamento di questi file eseguibili è uguale a quello degli altri file eseguibili nativi, ad esempio:
 
@@ -74,7 +74,7 @@ Per pubblicare un file eseguibile singolo, impostare `PublishSingleFile` nel pro
 </PropertyGroup>
 ```
 
-oppure
+-oppure-
 
 ```dotnetcli
 dotnet publish -r win10-x64 -p:PublishSingleFile=true
@@ -301,7 +301,7 @@ Windows offre un'API nativa completa, sotto forma di API C semplici, COM e WinRT
 
 [MSIX](https://docs.microsoft.com/windows/msix/) è un nuovo formato di pacchetto di applicazioni Windows. Può essere usato per distribuire applicazioni desktop di .NET Core 3.0 in Windows 10.
 
-Il [Progetto di creazione pacchetti di applicazione Windows](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), disponibile in Visual Studio 2019, consente di creare pacchetti MSIX con applicazioni .NET Core [autonome](../deploying/index.md#self-contained-deployments-scd).
+Il [Progetto di creazione pacchetti di applicazione Windows](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), disponibile in Visual Studio 2019, consente di creare pacchetti MSIX con applicazioni .NET Core [autonome](../deploying/index.md#publish-self-contained).
 
 Il file di progetto .NET Core deve specificare i runtime supportati nella proprietà `<RuntimeIdentifiers>`:
 
@@ -345,7 +345,7 @@ Sono disponibili [immagini Docker per .NET Core in ARM64](https://hub.docker.com
 > [!NOTE]
 > Il supporto **ARM64** per Windows non è ancora disponibile.
 
-## <a name="security"></a>Sicurezza -
+## <a name="security"></a>Sicurezza
 
 ### <a name="tls-13--openssl-111-on-linux"></a>TLS 1.3 e OpenSSL 1.1.1 in Linux
 
@@ -482,7 +482,7 @@ Per altre informazioni, vedere [.NET Platform Dependent Intrinsics](https://gith
 
 ### <a name="improved-net-core-version-apis"></a>Miglioramento delle API della versione .NET Core
 
-A partire da .NET Core 3.0, le API della versione di .NET Core restituiscono le informazioni previste. Ad esempio:
+A partire da .NET Core 3.0, le API della versione di .NET Core restituiscono le informazioni previste. Ad esempio,
 
 ```csharp
 System.Console.WriteLine($"Environment.Version: {System.Environment.Version}");

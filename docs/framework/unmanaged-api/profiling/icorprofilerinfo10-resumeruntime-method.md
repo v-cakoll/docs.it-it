@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 49de3383902791b1278e7c9221a80c3454eb12a2
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: a3dca2cbb138dbc43f477488032e67335c8b15f9
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868920"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452162"
 ---
 # <a name="icorprofilerinfo10resumeruntime-method"></a>Metodo ICorProfilerInfo10:: ResumeRuntime
 
@@ -28,9 +28,9 @@ Riprende il runtime senza eseguire un catalogo globale.
 HRESULT ResumeRuntime();
 ```
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** Vedere [sistemi operativi supportati da .NET Core](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
+**Piattaforme:** Vedere [sistemi operativi supportati da .NET Core](../../../core/install/dependencies.md?pivots=os-windows).
 
 **Intestazione:** CorProf.idl, CorProf.h
 

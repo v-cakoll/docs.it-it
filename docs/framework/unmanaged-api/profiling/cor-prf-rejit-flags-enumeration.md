@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: fabbcd497dc2f321da90188cebbac6ed4e147492
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 3b4f85072b9dcf87d696b979fa6cbf4e59393f82
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867087"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453039"
 ---
 # <a name="cor_prf_rejit_flags-enumeration"></a>Enumerazione COR_PRF_REJIT_FLAGS
 Contiene valori che indicano il comportamento dell'API [ICorProfilerInfo10:: RequestReJITWithInliners](icorprofilerinfo10-requestrejitwithinliners-method.md) .  
@@ -35,15 +35,15 @@ typedef enum
 } COR_PRF_REJIT_FLAGS;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-|Member|Descrizione|  
+|Membro|Descrizione|  
 |------------|-----------------|  
 |`COR_PRF_REJIT_BLOCK_INLINING`| I metodi ReJITted verranno bloccati in altri metodi. |  
 |`COR_PRF_REJIT_INLINING_CALLBACKS`| Ricevere `GetFunctionParameters` callback per qualsiasi metodo che inline i metodi richiesti come ReJITted. |  
 
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** Vedere [sistemi operativi supportati da .NET Core](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** Vedere [sistemi operativi supportati da .NET Core](../../../core/install/dependencies.md?pivots=os-windows).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

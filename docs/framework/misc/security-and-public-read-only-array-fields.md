@@ -4,18 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [.NET Framework], public read-only array fields
 ms.assetid: 3df28dee-2a9f-40ff-9852-bfdbe59c27f3
-ms.openlocfilehash: 215e8136b4bc3f2982cdb2d8382b0eca6a881f9b
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 2df4acc0606e4fe8fccee4a8acc6ab744dcbbb71
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217040"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452708"
 ---
 # <a name="security-and-public-read-only-array-fields"></a>Sicurezza e campi di matrice pubblici di sola lettura
 Non usare mai i campi di matrice pubblica di sola lettura dalle librerie gestite per definire il comportamento dei limiti o la sicurezza delle applicazioni perché è possibile modificare i campi di matrice pubblica di sola lettura.  
   
-## <a name="remarks"></a>Osservazioni  
- Alcune classi di .NET Framework includono campi pubblici di sola lettura che contengono parametri limite specifici della piattaforma.  Ad esempio, il campo <xref:System.IO.Path.InvalidPathChars> è una matrice che descrive i caratteri non consentiti in una stringa di percorso file.  In .NET Framework sono presenti molti campi simili.  
+## <a name="remarks"></a>Note  
+
+Alcune classi .NET includono campi pubblici di sola lettura che contengono parametri limite specifici della piattaforma. Ad esempio, il campo <xref:System.IO.Path.InvalidPathChars> è una matrice che descrive i caratteri non consentiti in una stringa di percorso file. Molti campi simili sono presenti in .NET.  
   
  I valori dei campi di sola lettura pubblici come <xref:System.IO.Path.InvalidPathChars> possono essere modificati dal codice o dal codice che condivide il dominio applicazione del codice.  Non usare campi di matrice pubblica di sola lettura come questo per definire il comportamento dei limiti delle applicazioni.  In tal caso, il codice dannoso può modificare le definizioni dei limiti e usare il codice in modi imprevisti.  
   

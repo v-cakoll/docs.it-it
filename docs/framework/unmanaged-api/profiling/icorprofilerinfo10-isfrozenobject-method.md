@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: b6dabefceba038a129148f7ba36d4ffcfc425c80
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 21f9cb415f913a9c865a487f6e80523344db811e
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790031"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452188"
 ---
 # <a name="icorprofilerinfo10isfrozenobject-method"></a>Metodo ICorProfilerInfo10:: IsFrozenObject
 
@@ -39,9 +39,9 @@ HRESULT IsFrozenObject( [in]  ObjectID objectId,
 
   \[out] `BOOL` che indica se l'oggetto si trova in un segmento di sola lettura.
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** Vedere [sistemi operativi supportati da .NET Core](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
+**Piattaforme:** Vedere [sistemi operativi supportati da .NET Core](../../../core/install/dependencies.md?pivots=os-windows).
 
 **Intestazione:** CorProf.idl, CorProf.h
 
