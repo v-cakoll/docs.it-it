@@ -1,13 +1,13 @@
 ---
 title: Uso di database NoSQL come infrastruttura di persistenza
-description: Architettura di Microservizi .NET per applicazioni .NET in contenitori | Informazioni sull'uso di database NoSQL in generale e di Azure Cosmos DB in particolare come opzione per l'implementazione della persistenza.
-ms.date: 10/08/2018
-ms.openlocfilehash: 44fc2fa01e2d19efed7314f421a682c0a635a9f6
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+description: Comprendere l'uso di database NoSql in generale e Azure Cosmos DB in particolare, come opzione per implementare la persistenza.
+ms.date: 01/30/2020
+ms.openlocfilehash: 7da4141d9aadc4aaa265ac97d328bc4b7569a0cb
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737418"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502380"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>Usare i database NoSQL come infrastruttura di persistenza
 
@@ -122,9 +122,9 @@ Tuttavia, quando si rende persistente il modello nel database NoSQL, il codice e
 
 È possibile accedere ai database Azure Cosmos DB dal codice .NET in esecuzione nei contenitori come da qualsiasi altra applicazione .NET. Ad esempio, i microservizi Locations.API e Marketing.API in eShopOnContainers vengono implementati in modo da poter usare i database Azure Cosmos DB.
 
-Tuttavia, c'è una limitazione in Azure Cosmos DB per quanto riguarda l'ambiente di sviluppo Docker. Anche quando c'è un [emulatore di Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/local-emulator) locale in grado di essere eseguito in un computer di sviluppo locale (ad esempio, un PC), a partire dal 2017 è supportato solo Windows e non Linux.
+Tuttavia, c'è una limitazione in Azure Cosmos DB per quanto riguarda l'ambiente di sviluppo Docker. Anche se è presente un [emulatore Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/local-emulator) locale che può essere eseguito in un computer di sviluppo locale, supporta solo Windows. Linux e macOS non sono supportati.
 
-È anche possibile eseguire questo emulatore in Docker, ma solo per i contenitori Windows e non per i contenitori Linux. Si tratta di una difficoltà iniziale per l'ambiente di sviluppo se l'applicazione viene distribuita come contenitori Linux, poiché al momento non è possibile distribuire contemporaneamente contenitori Linux e Windows in Docker per Windows. Tutti i contenitori da distribuire devono essere per Linux o per Windows.
+È anche possibile eseguire questo emulatore in Docker, ma solo nei contenitori di Windows, non con i contenitori Linux. Si tratta di un handicap iniziale per l'ambiente di sviluppo, se l'applicazione viene distribuita come contenitori Linux, dal momento che attualmente non è possibile distribuire i contenitori Linux e Windows in Docker per Windows nello stesso momento. Tutti i contenitori da distribuire devono essere per Linux o per Windows.
 
 La distribuzione ideale e più semplice per una soluzione di sviluppo/test consiste nel poter distribuire i sistemi di database come contenitori insieme ai contenitori personalizzati in modo che gli ambienti di sviluppo/test siano sempre coerenti.
 
@@ -273,14 +273,14 @@ Quando si crea un oggetto MongoClient, è necessario un parametro fondamentale c
 version: '3.4'
 services:
   # Other services
-  locations.api:
+  locations-api:
     environment:
       # Other settings
-      - ConnectionString=${ESHOP_AZURE_COSMOSDB:-mongodb://nosql.data}
+      - ConnectionString=${ESHOP_AZURE_COSMOSDB:-mongodb://nosqldata}
 
 ```
 
-La variabile di ambiente `ConnectionString` viene risolta in questo modo: se la variabile globale `ESHOP_AZURE_COSMOSDB` viene definita nel file `.env` con la stringa di connessione di Azure Cosmos DB, verrà usata per accedere al database Azure Cosmos DB nel cloud. Se non è definito, utilizzerà il valore `mongodb://nosql.data` e userà il contenitore MongoDB di sviluppo.
+La variabile di ambiente `ConnectionString` viene risolta in questo modo: se la variabile globale `ESHOP_AZURE_COSMOSDB` viene definita nel file `.env` con la stringa di connessione di Azure Cosmos DB, verrà usata per accedere al database Azure Cosmos DB nel cloud. Se non è definito, utilizzerà il valore `mongodb://nosqldata` e userà il contenitore MongoDB di sviluppo.
 
 Il codice seguente illustra il file `.env` con la variabile di ambiente globale della stringa di connessione di Azure Cosmos DB, come implementato in eShopOnContainers:
 
@@ -299,16 +299,16 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=<YourDockerHostIP>
 #ESHOP_AZURE_SERVICE_BUS=<YourAzureServiceBusInfo>
 ```
 
-È necessario rimuovere il commento dalla riga ESHOP_AZURE_COSMOSDB e aggiornarla con la stringa di connessione di Azure Cosmos DB ottenuta dal portale di Azure come descritto in [Connettere un'applicazione MongoDB ad Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account).
+Rimuovere il commento dalla riga di ESHOP_AZURE_COSMOSDB e aggiornarla con la stringa di connessione Azure Cosmos DB ottenuta dalla portale di Azure come illustrato in [connettere un'applicazione MongoDB a Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account).
 
-Se la variabile globale `ESHOP_AZURE_COSMOSDB` è vuota, ovvero è impostata come commento nel file `.env`, il contenitore usa una stringa di connessione di MongoDB predefinita che punta al contenitore MongoDB locale distribuito in eShopOnContainers denominato `nosql.data` e definito nel file docker-compose, come illustrato nel codice yml seguente.
+Se la `ESHOP_AZURE_COSMOSDB` variabile globale è vuota, vale a dire che è impostata come commento nel file di `.env`, il contenitore usa una stringa di connessione predefinita di MongoDB. Questa stringa di connessione punta al contenitore MongoDB locale distribuito in eShopOnContainers denominato `nosqldata` ed è stato definito nel file Docker-compose, come illustrato nel codice. yml seguente:
 
 ``` yml
 # docker-compose.yml
 version: '3.4'
 services:
   # ...Other services...
-  nosql.data:
+  nosqldata:
     image: mongo
 ```
 

@@ -1,13 +1,13 @@
 ---
 title: Test delle app Web e dei servizi ASP.NET di base
 description: Architettura di microservizi .NET per le applicazioni .NET incluse in contenitori | Esplorare un'architettura per il test delle app Web e dei servizi ASP.NET di base all'interno di contenitori.
-ms.date: 10/02/2018
-ms.openlocfilehash: 324b71d830bca43be71e8847fe2dd1b8b1593556
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: ab3ae6276ea4e4c741731f050913d956046271ca
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739467"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501974"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Test delle app Web e dei servizi ASP.NET di base
 
@@ -68,7 +68,7 @@ A differenza degli unit test, i test di integrazione comportano spesso preoccupa
 
 Visto che esercitano segmenti di codice più grandi rispetto agli unit test e si basano sugli elementi dell'infrastruttura, i test di integrazione tendono a essere notevolmente più lenti rispetto agli unit test. Di conseguenza, è consigliabile limitare il numero di test di integrazione da scrivere ed eseguire.
 
-ASP.NET Core include un host Web di test predefinito che può essere usato per gestire le richieste HTTP senza il sovraccarico di rete, vale a dire che è possibile eseguire più rapidamente i test quando si usa un host Web reale. L'host Web di test (TestServer) è disponibile in un componente NuGet come Microsoft.AspNetCore.TestHost. Può essere aggiunto ai progetti di test di integrazione e usato per ospitare le applicazioni ASP.NET Core.
+ASP.NET Core include un host Web di test predefinito che può essere usato per gestire le richieste HTTP senza overhead di rete, ovvero è possibile eseguire tali test più velocemente rispetto a quando si usa un host Web reale. L'host Web di test (TestServer) è disponibile in un componente NuGet come Microsoft.AspNetCore.TestHost. Può essere aggiunto ai progetti di test di integrazione e usato per ospitare le applicazioni ASP.NET Core.
 
 Come si può notare nel codice seguente, quando si creano test di integrazione per i controller ASP.NET Core, si crea l'istanza dei controller attraverso l'host di test. Ciò è paragonabile a una richiesta HTTP, ma viene eseguita più rapidamente.
 
@@ -140,8 +140,6 @@ I test dell'applicazione di riferimento (eShopOnContainers) sono stati ristruttu
 
 3. **Test funzionali/di integrazione dell'applicazione**, che si concentrano sull'integrazione di microservizi, con test case che impiegano diversi microservizi. Questi test si trovano nel progetto **Application.FunctionalTests**.
 
-4. **Test di carico**, che si concentrano sui tempi di risposta per ogni microservizio. Questi test si trovano nel progetto **LoadTest** e richiedono Visual Studio 2017 Enterprise Edition.
-
 Il test di integrazione e lo unit test per ogni microservizio si trovano nella cartella dei test del rispettivo microservizio. I test di carico delle applicazioni si trovano nella cartella dei test all'interno della cartella della soluzione, come illustrato nella figura 6-25.
 
 ![Screenshot di Visual Studio che indica alcuni dei progetti di test nella soluzione.](./media/test-aspnet-core-services-web-apps/eshoponcontainers-test-folder-structure.png)
@@ -160,9 +158,9 @@ services:
     image: redis:alpine
   rabbitmq:
     image: rabbitmq:3-management-alpine
-  sql.data:
-    image: microsoft/mssql-server-linux:2017-latest
-  nosql.data:
+  sqldata:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+  nosqldata:
     image: mongo
 ```
 
@@ -179,13 +177,13 @@ services:
     ports:
       - "15672:15672"
       - "5672:5672"
-  sql.data:
+  sqldata:
     environment:
       - SA_PASSWORD=Pass@word
       - ACCEPT_EULA=Y
     ports:
       - "5433:1433"
-  nosql.data:
+  nosqldata:
     ports:
       - "27017:27017"
 ```

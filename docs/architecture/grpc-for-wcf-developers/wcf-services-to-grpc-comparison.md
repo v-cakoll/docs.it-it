@@ -2,16 +2,16 @@
 title: Confronto tra WCF e gRPC-gRPC per sviluppatori WCF
 description: Confronto tra i framework WCF e gRPC per la creazione di applicazioni distribuite.
 ms.date: 09/02/2019
-ms.openlocfilehash: 312492dcce4bdef61feff0bf924c6df287b9c676
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4f54db76c9512b770b4dd993496d95437dd89753
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966958"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503342"
 ---
 # <a name="comparing-wcf-to-grpc"></a>Confronto tra WCF e gRPC
 
-Il capitolo precedente dovrebbe dare un'occhiata a protobuf e al modo in cui gRPC gestisce i messaggi. Prima di eseguire una conversione dettagliata da WCF a gRPC, è importante esaminare il modo in cui la gamma di funzionalità attualmente disponibili in WCF viene gestita in gRPC e le soluzioni alternative che è possibile usare quando non sembra essere un equivalente gRPC. In particolare, in questo capitolo vengono trattati gli argomenti seguenti:
+Il capitolo precedente ha dato una migliore occhiata a protobuf e al modo in cui gRPC gestisce i messaggi. Prima di eseguire una conversione dettagliata da Windows Communication Foundation (WCF) a gRPC, è importante sapere in che modo le funzionalità disponibili in WCF vengono gestite in gRPC e quali soluzioni alternative è possibile utilizzare quando non è presente alcun equivalente gRPC. In particolare, in questo capitolo vengono trattati gli argomenti seguenti:
 
 - Operazioni e metodi
 - Binding e trasporti
@@ -37,12 +37,12 @@ service Greeter {
   rpc SayHello (HelloRequest) returns (HelloReply);
 }
 
-// The request message containing the user's name.
+// The request message that contains the user's name.
 message HelloRequest {
   string name = 1;
 }
 
-// The response message containing the greetings.
+// The response message that contains the greetings.
 message HelloReply {
   string message = 1;
 }
@@ -74,7 +74,7 @@ namespace HelloGrpc
 }
 ```
 
-In questo capitolo verrà fatto riferimento a questo codice di esempio per la spiegazione di diversi concetti e funzionalità di gRPC.
+In questo capitolo verrà fatto riferimento a questo codice di esempio per la spiegazione di concetti e funzionalità diversi di gRPC.
 
 >[!div class="step-by-step"]
 >[Precedente](protobuf-maps.md)

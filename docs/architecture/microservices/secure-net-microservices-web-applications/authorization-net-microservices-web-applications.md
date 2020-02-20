@@ -2,14 +2,13 @@
 title: Informazioni sull'autorizzazione in microservizi .NET e applicazioni Web
 description: Sicurezza nei microservizi .NET e nelle applicazioni Web - Panoramica delle principali opzioni di autorizzazione nelle applicazioni ASP.NET Core, sia basate sui ruoli che basate sui criteri.
 author: mjrousos
-ms.author: wiwagn
-ms.date: 10/19/2018
-ms.openlocfilehash: 36cd8eaf7ffe78a29762398044dc1803adc1b200
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.date: 01/30/2020
+ms.openlocfilehash: f6b69faceac9a9b4819212cc04f89080f3ddad56
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675658"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501773"
 ---
 # <a name="about-authorization-in-net-microservices-and-web-applications"></a>Informazioni sull'autorizzazione in microservizi .NET e applicazioni Web
 
@@ -87,8 +86,10 @@ services.AddAuthorization(options =>
 {
     options.AddPolicy("AdministratorsOnly", policy =>
         policy.RequireRole("Administrator"));
+
     options.AddPolicy("EmployeesOnly", policy =>
         policy.RequireClaim("EmployeeNumber"));
+
     options.AddPolicy("Over21", policy =>
         policy.Requirements.Add(new MinimumAgeRequirement(21)));
 });

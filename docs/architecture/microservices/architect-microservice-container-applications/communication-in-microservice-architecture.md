@@ -1,13 +1,13 @@
 ---
 title: Comunicazione in un'architettura di microservizi
 description: Esaminare diverse modalità di comunicazione tra i microservizi, comprendere le implicazioni dei metodi sincroni e asincroni.
-ms.date: 09/20/2018
-ms.openlocfilehash: 7bd45e0b8f8ea3330cf8d2b613e54111cc72f14f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.date: 01/30/2020
+ms.openlocfilehash: f2d6e78966bb7d5f481de6db0ab1dcfe2812a1b5
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966984"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503308"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Comunicazione in un'architettura di microservizi
 
@@ -61,7 +61,7 @@ Se un microservizio deve generare un'azione aggiuntiva in un altro microservizio
 
 Infine, e questo è il punto in cui si verifica la maggior parte dei problemi quando si creano i microservizi, se il microservizio iniziale necessita di dati originariamente di proprietà di altri microservizi, evitare di effettuare richieste sincrone per tali dati. Replicare o propagare i dati (solo gli attributi necessari) nel database del servizio iniziale usando la coerenza finale. In genere si usano gli eventi di integrazione, come illustrato nelle sezioni successive.
 
-Come indicato in precedenza nella sezione [Identificazione dei limiti del modello di dominio per ogni microservizio](identify-microservice-domain-model-boundaries.md), la duplicazione di alcuni dati tra diversi microservizi non è una progettazione non corretta, al contrario, se si adotta questo metodo, è possibile convertire i dati nel linguaggio specifico o secondo le condizioni del dominio aggiuntivo o del contesto delimitato. Ad esempio, nell'applicazione [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) si ha un microservizio denominato identity.api che è responsabile della maggior parte dei dati dell'utente con un'entità denominata User. Tuttavia, quando è necessario archiviare i dati relativi all'utente all'interno del microservizio degli ordini, è possibile archiviarli come entità diversa denominata Buyer. L'entità Buyer condivide la stessa identità con l'entità User originale, ma potrebbe contenere solo alcuni attributi richiesti dal dominio degli ordini e non l'intero profilo utente.
+Come indicato in precedenza nella sezione [Identificazione dei limiti del modello di dominio per ogni microservizio](identify-microservice-domain-model-boundaries.md) , la duplicazione di alcuni dati in diversi microservizi non è una progettazione corretta, al contrario, quando si esegue questa operazione, è possibile convertire i dati in una lingua o in termini specifici del dominio aggiuntivo o del contesto delimitato. Nell' [applicazione eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) , ad esempio, si dispone di un microservizio denominato `identity-api` che è responsabile della maggior parte dei dati dell'utente con un'entità denominata `User`. Tuttavia, quando è necessario archiviare i dati sull'utente all'interno del microservizio `Ordering`, viene archiviato come entità diversa denominata `Buyer`. L'entità `Buyer` condivide la stessa identità con l'entità `User` originale, ma potrebbe contenere solo i pochi attributi necessari per il dominio `Ordering` e non l'intero profilo utente.
 
 È possibile usare qualsiasi protocollo per comunicare e propagare i dati in modo asincrono tra i microservizi per avere la coerenza finale. Come illustrato in precedenza, è possibile usare gli eventi di integrazione mediante un bus di eventi o un broker di messaggi oppure è anche possibile usare HTTP eseguendo il polling degli altri servizi. Non importa. La regola importante consiste nel non creare dipendenze sincrone tra i microservizi.
 

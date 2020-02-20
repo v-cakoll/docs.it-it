@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Test
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: d83f7fca10aed6301c170b7b6c5651da6f02be08
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 164e820ffa6030b3dcb9180d56e57ce39bb03143
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449361"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503942"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testare app ASP.NET Core MVC
 
@@ -70,7 +70,7 @@ Un approccio comune consiste nell'organizzare i progetti dell'applicazione in un
 
 **Figura 9-2**. Organizzazione di test nella soluzione
 
-È possibile usare qualsiasi framework di test si preferisca. Il framework xUnit, in cui sono scritti tutti i test di ASP.NET Core ed EF Core, funziona in modo efficiente. È possibile aggiungere un progetto di test xUnit in Visual Studio usando il modello illustrato nella figura 9-3 oppure usando il comando dotnet new xunit nell'interfaccia della riga di comando.
+È possibile usare qualsiasi framework di test si preferisca. Il framework xUnit, in cui sono scritti tutti i test di ASP.NET Core ed EF Core, funziona in modo efficiente. È possibile aggiungere un progetto di test xUnit in Visual Studio usando il modello illustrato nella figura 9-3 o dall'interfaccia della riga di comando usando `dotnet new xunit`.
 
 ![Aggiungere un progetto di test xUnit in Visual Studio](./media/image9-3.png)
 

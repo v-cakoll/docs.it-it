@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Svil
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 3b1409fbb924638f0148c74a678d482aeb732357
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: a18b4dfc60c7d3971136f73f333b7225735710b3
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449446"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503954"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Sviluppare app ASP.NET Core MVC
 
@@ -51,7 +51,7 @@ app.UseEndpoints(endpoints =>
 
 In questo esempio è stata aggiunta una route denominata "default" alla tabella di routing. Definisce un modello di route con segnaposto per _controller_, _azione_e _ID_. Ai segnaposto del controller e dell'azione è stato specificato il valore predefinito ("Home" e "index", rispettivamente) e il segnaposto ID è facoltativo (in virtù di un "?" applicato). La convenzione definita in questo caso stabilisce che la prima parte di una richiesta deve corrispondere al nome del controller, la seconda parte all'azione e, se necessaria, una terza parte al parametro dell'ID. Le route convenzionali vengono in genere definite in un'unica posizione per l'applicazione, ad esempio nel metodo Configure della classe Startup.
 
-Le route di attributi vengono applicate a controller e azioni direttamente anziché essere specificate a livello globale. Ciò offre il vantaggio di renderle più facilmente individuabili durante la ricerca di un metodo specifico, ma significa che le informazioni di routing non vengono mantenute in un'unica posizione nell'applicazione. Con le route di attributi, è possibile specificare in modo semplice più route per una determinata azione nonché combinare le route tra i controller e le azioni. Ad esempio:
+Le route di attributi vengono applicate a controller e azioni direttamente anziché essere specificate a livello globale. Ciò offre il vantaggio di renderle più facilmente individuabili durante la ricerca di un metodo specifico, ma significa che le informazioni di routing non vengono mantenute in un'unica posizione nell'applicazione. Con le route di attributi, è possibile specificare in modo semplice più route per una determinata azione nonché combinare le route tra i controller e le azioni. Ad esempio,
 
 ```csharp
 [Route("Home")]
@@ -323,7 +323,7 @@ Per altre informazioni sull'implementazione di filtri e sul download di un esemp
 
 La protezione delle applicazioni Web è un argomento molto ampio con numerose considerazioni. A un livello di base, per garantire la sicurezza è necessario conoscere l'identità dell'utente da cui proviene una determinata richiesta e assicurarsi che la richiesta abbia accesso solo alle risorse necessarie. L'autenticazione è il processo di confronto delle credenziali specificate con una richiesta con quelle di un archivio di dati attendibili per verificare se la richiesta deve essere trattata come proveniente da un'entità nota. L'autorizzazione è il processo di limitazione dell'accesso a determinate risorse in base all'identità utente. Un terzo aspetto relativo alla sicurezza è la protezione delle richieste dall'intercettazione da terze parti per cui è necessario [assicurarsi che l'applicazione usi SSL](/aspnet/core/security/enforcing-ssl).
 
-### <a name="authentication"></a>Authentication
+### <a name="authentication"></a>Autenticazione
 
 ASP.NET Core Identity è un sistema di appartenenza che è possibile usare per supportare la funzionalità di accesso per l'applicazione. Include il supporto degli account utente locali e il supporto dei provider di accesso esterni come l'account Microsoft, Twitter, Facebook, Google e altri ancora. Oltre a ASP.NET Core Identity, l'applicazione può usare l'autenticazione di Windows o un provider di identità di terze parti come [Identity Server](https://github.com/IdentityServer/IdentityServer4).
 
@@ -438,7 +438,7 @@ Prestare particolare attenzione alle implementazioni personalizzate della critto
 
 Oltre a visualizzare le pagine e a rispondere alle richieste di dati tramite le API Web, le app ASP.NET Core possono comunicare direttamente con i client connessi. Questa comunicazione in uscita può usare diverse tecnologie di trasporto, tra cui la più comune sono i WebSocket. ASP.NET ASP.NET Core SignalR è una libreria che semplifica l'aggiunta della funzionalità di comunicazione da server a client in tempo reale alle applicazioni. SignalR supporta diverse tecnologie di trasporto, inclusi i WebSocket, ed elimina molti dei dettagli di implementazione specificati dallo sviluppatore.
 
-La comunicazione con il client in tempo reale, con l'utilizzo diretto di WebSocket o altre tecniche, è utile in diversi scenari di applicazioni. Di seguito sono riportati alcuni esempi:
+La comunicazione con il client in tempo reale, con l'utilizzo diretto di WebSocket o altre tecniche, è utile in diversi scenari di applicazioni. Alcuni esempi includono:
 
 - Applicazioni live chat room
 
@@ -546,7 +546,7 @@ Un approccio ibrido potrebbe essere quello di usare la progettazione DDD solo pe
 
 ## <a name="deployment"></a>Distribuzione
 
-Il processo di distribuzione di un'applicazione ASP.NET Core prevede alcuni passaggi, indipendentemente dalla posizione in cui verrà ospitata. Il primo passaggio consiste nel pubblicare l'applicazione, operazione che può essere eseguita con il comando di pubblicazione dell'interfaccia della riga di comando per .NET. Viene compilata l'applicazione e tutti i file necessari per eseguire l'applicazione vengono inseriti in una cartella specificata. Per le distribuzioni da Visual Studio, questo passaggio viene eseguito automaticamente. La cartella di publish contiene i file con estensione exe e dll dell'applicazione e le relative dipendenze. Un'applicazione indipendente includerà anche una versione del runtime .NET. Le applicazioni ASP.NET Core includeranno anche i file di configurazione, gli asset client statici e le visualizzazioni MVC.
+Il processo di distribuzione di un'applicazione ASP.NET Core prevede alcuni passaggi, indipendentemente dalla posizione in cui verrà ospitata. Il primo passaggio consiste nel pubblicare l'applicazione, che può essere eseguita usando il comando dell'interfaccia della riga di comando `dotnet publish`. Viene compilata l'applicazione e tutti i file necessari per eseguire l'applicazione vengono inseriti in una cartella specificata. Per le distribuzioni da Visual Studio, questo passaggio viene eseguito automaticamente. La cartella di publish contiene i file con estensione exe e dll dell'applicazione e le relative dipendenze. Un'applicazione indipendente includerà anche una versione del runtime .NET. Le applicazioni ASP.NET Core includeranno anche i file di configurazione, gli asset client statici e le visualizzazioni MVC.
 
 Le applicazioni ASP.NET Core sono applicazioni console che devono essere avviate all'avvio del server e riavviate in caso di arresto anomalo dell'applicazione o del server. È possibile usare un'utilità di gestione dei processi per automatizzare questo processo. Le utilità di gestione dei processi più comuni per ASP.NET Core sono Nginx e Apache in Linux e IIS o Windows Service in Windows.
 

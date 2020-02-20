@@ -1,13 +1,13 @@
 ---
 title: Progettazione di un modello di dominio del microservizio
 description: Architettura di microservizi .NET per applicazioni .NET incluse in contenitori | Comprendere i concetti principali quando si progetta un modello di dominio orientato a DDD.
-ms.date: 10/08/2018
-ms.openlocfilehash: 3a02059064305ca148b7909923e2f51e60ee54d5
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: 628fb5c76362ec8f48367b3d69d16ea6ebd24f09
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737373"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502330"
 ---
 # <a name="design-a-microservice-domain-model"></a>Progettare un modello di dominio del microservizio
 
@@ -74,9 +74,9 @@ Un'entità richiede un'identità, che non è necessaria invece in molti oggetti 
 
 Una persona con un nome e un cognome, in genere, costituisce un'entità perché ogni persona ha un'identità, anche se il nome e il cognome coincidono con un altro set di valori, come nel caso in cui i nomi facciano riferimento anche a una persona diversa.
 
-Gli oggetti valore sono difficili da gestire nei database relazionali e in ORM come Entity Framework, mentre nei database orientati ai documenti sono più facili da implementare e usare.
+Gli oggetti valore sono difficili da gestire nei database relazionali e ORM come Entity Framework (EF), mentre nei database orientati ai documenti sono più facili da implementare e usare.
 
-EF Core 2.0 include la funzionalità [Entità di proprietà](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting) che semplifica la gestione degli oggetti valore, come si vedrà in dettaglio più avanti.
+EF Core 2,0 e versioni successive includono la funzionalità [entità di proprietà](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting) che semplifica la gestione degli oggetti valore, come si vedrà in dettaglio più avanti.
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 

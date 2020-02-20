@@ -1,13 +1,13 @@
 ---
 title: Implementazione di oggetti valore
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Informazioni su dettagli e opzioni per implementare oggetti valore con le nuove funzionalità di Entity Framework.
-ms.date: 10/08/2018
-ms.openlocfilehash: 70c92fe86fda20ed4e909b945b843e8e71092f09
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.date: 01/30/2020
+ms.openlocfilehash: 4ace5c141b1cbd2dcfefb7ea7165a4006b130479
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899780"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502504"
 ---
 # <a name="implement-value-objects"></a>Implementare oggetti valore
 
@@ -131,13 +131,13 @@ public class Address : ValueObject
 
 Si può vedere come questa implementazione dell'oggetto valore di Address non abbia alcuna identità, e quindi alcun campo ID, né a livello della classe Address, né a livello della classe ValueObject.
 
-L'assenza di un campo ID in una classe usata da Entity Framework non era possibile fino a EF Core 2.0, che consente invece di implementare migliori oggetti valore senza ID. Tutto ciò viene illustrato nella prossima sezione.
+Non è possibile usare un campo ID in una classe per l'uso da Entity Framework (EF) fino a EF Core 2,0, che consente di implementare in modo considerevole oggetti valore migliori senza ID. Tutto ciò viene illustrato nella prossima sezione.
 
-Si potrebbe sostenere che gli oggetti valore, essendo non modificabili, debbano essere di sola lettura (ovvero, proprietà di solo richiamo) e in effetti è vero. Tuttavia, gli oggetti valore vengono in genere serializzati e deserializzati per passare attraverso le code di messaggi e il fatto che siano di sola lettura impedisce al deserializzatore di assegnare valori. Vengono pertanto lasciati come "set privato", con proprietà di sola lettura sufficienti a garantirne la praticità.
+È possibile affermare che gli oggetti valore, non modificabili, devono essere di sola lettura (ovvero avere proprietà solo Get) e ciò è vero. Tuttavia, gli oggetti valore vengono in genere serializzati e deserializzati per passare attraverso le code di messaggi e il fatto che siano di sola lettura impedisce al deserializzatore di assegnare valori. Vengono pertanto lasciati come "set privato", con proprietà di sola lettura sufficienti a garantirne la praticità.
 
-## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20"></a>Come rendere persistenti gli oggetti valore nel database con EF Core 2.0
+## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20-and-later"></a>Come salvare in modo permanente gli oggetti valore nel database con EF Core 2,0 e versioni successive
 
-È stato appena descritto come definire un oggetto valore nel modello di dominio. Ma come si può rendere effettivamente persistente un oggetto valore nel database con Entity Framework (EF) Core, che in genere usa entità con identità?
+È stato appena descritto come definire un oggetto valore nel modello di dominio. Ma come è possibile salvarla in modo permanente nel database usando Entity Framework Core perché in genere è destinata alle entità con identità?
 
 ### <a name="background-and-older-approaches-using-ef-core-11"></a>Approcci generali e precedenti con l'uso di EF Core 1.1
 
@@ -160,11 +160,11 @@ void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration)
 
 La persistenza dell'oggetto valore nel database era comunque assicurata usando un'entità normale in un'altra tabella.
 
-In EF Core 2.0 vengono forniti modi nuovi e ottimizzati per rendere persistenti gli oggetti valore.
+Con EF Core 2,0 e versioni successive, sono disponibili nuovi e migliori modi per salvare in modo permanente gli oggetti valore.
 
-## <a name="persist-value-objects-as-owned-entity-types-in-ef-core-20"></a>Rendere persistenti gli oggetti valore come tipi di entità di proprietà in EF Core 2.0
+## <a name="persist-value-objects-as-owned-entity-types-in-ef-core-20-and-later"></a>Mantieni oggetti valore come tipi di entità di proprietà in EF Core 2,0 e versioni successive
 
-Anche se ci sono alcune discrepanze tra lo schema dell'oggetto valore canonico in DDD e il tipo di entità di proprietà in EF Core, questo è attualmente il modo migliore per rendere persistenti gli oggetti valore con EF Core 2.0. È possibile vedere le limitazioni alla fine di questa sezione.
+Anche con alcuni gap tra il modello di oggetto valore canonico in DDD e il tipo di entità di proprietà in EF Core, è attualmente il modo migliore per salvare in modo permanente gli oggetti valore con EF Core 2,0 e versioni successive. È possibile vedere le limitazioni alla fine di questa sezione.
 
 La funzionalità dei tipi di entità di proprietà è stata aggiunta a EF Core a partire dalla versione 2.0.
 
@@ -178,7 +178,7 @@ L'identità delle istanze dei tipi di proprietà non è del tutto esclusiva, ma 
 
 - La proprietà di navigazione che punta alle istanze
 
-- Per le raccolte di tipi di proprietà, un componente indipendente (non ancora supportato in EF Core 2.0, lo sarà nella versione 2.2).
+- Nel caso di raccolte di tipi di proprietà, componente indipendente (supportato in EF Core 2,2 e versioni successive).
 
 Ad esempio, nel modello di dominio degli ordini in eShopOnContainers, all'interno dell'entità Order, l'oggetto valore Address viene implementato come un tipo di entità di proprietà all'interno dell'entità del proprietario, ovvero l'entità Order. Address è un tipo la cui proprietà identità non è definita nel modello di dominio. Viene usato come proprietà del tipo Order per specificare l'indirizzo di spedizione per uno specifico ordine.
 
@@ -275,7 +275,7 @@ public class Address
 
 - L'identità (chiave) di un'istanza del tipo di proprietà in questo stack è composta dall'identità del tipo di proprietario e dalla definizione del tipo di proprietà.
 
-#### <a name="owned-entities-capabilities"></a>Funzionalità delle entità di proprietà:
+#### <a name="owned-entities-capabilities"></a>Funzionalità delle entità di proprietà
 
 - I tipi di proprietà possono fare riferimento ad altre entità, sia di proprietà (tipi di proprietà annidati) che non (proprietà di navigazione con normale riferimento ad altre entità).
 
@@ -283,27 +283,27 @@ public class Address
 
 - La suddivisione di tabelle è configurata per convenzione, ma è possibile rifiutare esplicitamente eseguendo il mapping del tipo di proprietà in una tabella diversa usando ToTable.
 
-- Il caricamento eager viene eseguito automaticamente sui tipi di proprietà, ovvero non è necessario chiamare Include() nella query.
+- Il caricamento eager viene eseguito automaticamente sui tipi di proprietà, ovvero non è necessario chiamare `.Include()` sulla query.
 
-- Possono essere configurate con l'attributo \[Owned\], a partire da EF Core 2.1
+- Può essere configurato con `[Owned]`di attributo, usando EF Core 2,1 e versioni successive.
 
-#### <a name="owned-entities-limitations"></a>Limitazioni delle entità di proprietà:
+- Può gestire raccolte di tipi di proprietà (usando la versione 2,2 e successive).
 
-- Non è possibile creare un elemento DbSet\<T\> di un tipo di proprietà (per impostazione predefinita).
+#### <a name="owned-entities-limitations"></a>Limitazioni delle entità di proprietà
 
-- Non è possibile chiamare ModelBuilder.Entity\<T\>() nei tipi di proprietà (attualmente per impostazione predefinita).
+- Non è possibile creare un `DbSet<T>` di un tipo di proprietà (da progettazione).
 
-- Le raccolte di tipi di proprietà non sono ancora supportate (in EF Core 2.1, ma lo saranno nella versione 2.2).
+- Non è possibile chiamare `ModelBuilder.Entity<T>()` sui tipi di proprietà (attualmente in fase di progettazione).
 
-- Nessun supporto per i tipi di proprietà facoltativi (ovvero, nullable) di cui viene eseguito il mapping con il proprietario nella stessa tabella, ad esempio tramite la suddivisione di tabelle. Ciò è dovuto al fatto che il mapping viene eseguito per ogni proprietà e non è disponibile un valore sentinel separato per l'intero valore complesso Null.
+- Nessun supporto per i tipi di proprietà facoltativi (ovvero Nullable) di cui è stato eseguito il mapping con il proprietario nella stessa tabella, ovvero usando la suddivisione delle tabelle. Ciò è dovuto al fatto che il mapping viene eseguito per ogni proprietà e non è disponibile un valore sentinel separato per l'intero valore complesso Null.
 
 - Nessun supporto del mapping di ereditarietà per i tipi di proprietà, ma è possibile eseguire il mapping di due tipi di foglia delle stesse gerarchie di ereditarietà come tipi di proprietà diversi. EF Core non considera il fatto che fanno parte della stessa gerarchia.
 
 #### <a name="main-differences-with-ef6s-complex-types"></a>Principali differenze rispetto ai i tipi complessi di EF6
 
-- La suddivisione di tabelle è facoltativa, ossia si può scegliere di eseguirne il mapping a una tabella separata mantenendo lo stato di tipi di proprietà.
+- La suddivisione delle tabelle è facoltativa, ovvero è possibile eseguirne il mapping facoltativamente a una tabella separata ed essere ancora di proprietà di tipi.
 
-- Possono fare riferimento ad altre entità, ovvero possono fungere da lato dipendente nelle relazioni con altri tipi non di proprietà.
+- Possono fare riferimento ad altre entità, ovvero possono fungere da lato dipendente sulle relazioni con altri tipi non di proprietà.
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
@@ -316,8 +316,11 @@ public class Address
 - **Vaughn Vernon. Implementazione della progettazione basata su dominio.** (Libro. Include una trattazione sugli oggetti valore) \
   <https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/>
 
+- **Tipi di entità di proprietà** \
+  <https://docs.microsoft.com/ef/core/modeling/owned-entities>
+
 - **Proprietà shadow** \
-  [https://docs.microsoft.com/ef/core/modeling/shadow-properties](/ef/core/modeling/shadow-properties)
+  <https://docs.microsoft.com/ef/core/modeling/shadow-properties>
 
 - **Complex types and/or value objects (Tipi complessi e/o oggetti valore)** . Discussione nel repository GitHub di EF Core (scheda Issues) \
   <https://github.com/dotnet/efcore/issues/246>

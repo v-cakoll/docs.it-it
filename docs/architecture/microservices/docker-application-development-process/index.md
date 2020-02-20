@@ -1,17 +1,17 @@
 ---
 title: Processo di sviluppo per le applicazioni basate su Docker
 description: Ottenere una panoramica di alto livello delle opzioni per lo sviluppo di applicazioni basate su Docker. Uso di Visual Studio per Windows, Visual Studio per Mac o Visual Studio Code per il supporto multipiattaforma (Windows, macOS e Linux).
-ms.date: 09/27/2018
-ms.openlocfilehash: 95e940371f4dbef3b3a8f327c13acbbc55ff29ef
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.date: 01/30/2020
+ms.openlocfilehash: 799aa6fc742a8fb763ec5a7ae3cf3f70f89bed6d
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337691"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502723"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Processo di sviluppo per le applicazioni basate su Docker
 
-*È possibile sviluppare applicazioni .NET incluse in contenitori come si preferisce, sia basandosi su IDE con Visual Studio e Visual Studio Tools per Docker oppure su editor/CLI con CLI di Docker e Visual Studio Code.*
+*Sviluppare applicazioni .NET in contenitori nel modo desiderato, l'ambiente di sviluppo integrato (IDE) con Visual Studio e gli strumenti di Visual Studio per Docker o l'interfaccia della riga di comando e l'editor con interfaccia della riga di comando di Docker e Visual Studio Code.*
 
 ## <a name="development-environment-for-docker-apps"></a>Ambiente di sviluppo per le app di Docker
 
@@ -19,11 +19,11 @@ ms.locfileid: "75337691"
 
 Microsoft include strumenti che è possibile usare per lo sviluppo di applicazioni di Docker, sia se si sceglie un IDE potente e completo che con un editor semplice e agile.
 
-**Visual Studio (per Windows).** Quando si sviluppano applicazioni basate su Docker con Visual Studio, è consigliabile usare Visual Studio 2017 versione 15,7 o successiva, disponibile con gli strumenti per Docker già incorporati. Gli strumenti per Docker consentono di sviluppare, eseguire e convalidare le applicazioni direttamente nell'ambiente di Docker di destinazione. È possibile premere F5 per eseguire l'applicazione ed eseguirne il debug (con contenitore singolo o più contenitori) direttamente in un host Docker oppure premere CTRL + F5 per modificare e aggiornare l'applicazione senza dovere ricompilare il contenitore. Questa è la scelta di sviluppo più potente per le app basate su Docker.
+**Visual Studio (per Windows).** Per lo sviluppo di applicazioni .NET Core 3,1 basate su Docker con Visual Studio è necessario Visual Studio 2019 versione 16,4 o successiva. Visual Studio 2019 è dotato di strumenti per Docker già integrato. Gli strumenti per Docker consentono di sviluppare, eseguire e convalidare le applicazioni direttamente nell'ambiente di Docker di destinazione. È possibile premere F5 per eseguire l'applicazione ed eseguirne il debug (con contenitore singolo o più contenitori) direttamente in un host Docker oppure premere CTRL + F5 per modificare e aggiornare l'applicazione senza dovere ricompilare il contenitore. Questa è la scelta di sviluppo più potente per le app basate su Docker.
 
-**Visual Studio per Mac.** È un ambiente di sviluppo integrato (IDE), un'evoluzione di Xamarin Studio, in esecuzione in macOS e in grado di supportare Docker dalla metà del 2017. Questa deve essere la scelta migliore per gli sviluppatori che lavorano in computer macOS che vogliono usare anche un IDE potente.
+**Visual Studio per Mac.** Si tratta di un IDE, evoluzione di Xamarin Studio, in esecuzione in macOS. Per lo sviluppo di .NET Core 3,1, è richiesta la versione 8,4 o successiva. Questa deve essere la scelta migliore per gli sviluppatori che lavorano in computer macOS che vogliono usare anche un IDE potente.
 
-**Visual Studio Code e CLI di Docker**. Se si preferisce un editor leggero e multipiattaforma che supporta qualsiasi linguaggio di sviluppo, è possibile usare Microsoft Visual Studio Code (codice Visual Studio) e l'interfaccia CLI di Docker. Si tratta di un approccio di sviluppo multipiattaforma per macOS, Linux e Windows. Inoltre, Visual Studio Code supporta le estensioni per Docker, quali IntelliSense per Dockerfile e le attività collegamento per eseguire i comandi di Docker dall'editor.
+**Visual Studio Code e CLI di Docker**. Se si preferisce un editor leggero e multipiattaforma che supporta qualsiasi linguaggio di sviluppo, è possibile usare Visual Studio Code e l'interfaccia della riga di comando di Docker. Si tratta di un approccio di sviluppo multipiattaforma per macOS, Linux e Windows. Inoltre, Visual Studio Code supporta le estensioni per Docker, quali IntelliSense per Dockerfile e le attività collegamento per eseguire i comandi di Docker dall'editor.
 
 Installando [Docker Desktop Community Edition (CE)](https://hub.docker.com/search/?type=edition&offering=community), è possibile usare una singola interfaccia della riga di comando di Docker per creare app per Windows e Linux.
 

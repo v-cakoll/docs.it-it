@@ -1,13 +1,13 @@
 ---
 title: Implementazione del livello dell'applicazione di microservizi tramite l'API Web
-description: Architettura di microservizi .NET per applicazioni .NET incluse in contenitori | Informazioni sull'inserimento di dipendenze e sugli schemi Mediator e i relativi dettagli di implementazione nel livello dell'applicazione API Web.
-ms.date: 10/08/2018
-ms.openlocfilehash: 08cb409b06a54c6b30afa393a817e14bd64fbcbf
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+description: Comprendere l'inserimento delle dipendenze e i modelli Mediator e i relativi dettagli di implementazione nel livello applicazione API Web.
+ms.date: 01/30/2020
+ms.openlocfilehash: a88f3bfd11ea06df085ca82ed7265cb37006fc31
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "73737499"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502442"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementare il livello dell'applicazione del microservizio usando l'API Web
 
@@ -92,11 +92,9 @@ public void ConfigureServices(IServiceCollection services)
 {
     // Register out-of-the-box framework services.
     services.AddDbContext<CatalogContext>(c =>
-    {
-        c.UseSqlServer(Configuration["ConnectionString"]);
-    },
-    ServiceLifetime.Scoped
-    );
+        c.UseSqlServer(Configuration["ConnectionString"]),
+        ServiceLifetime.Scoped);
+
     services.AddMvc();
     // Register custom application dependencies.
     services.AddScoped<IMyCustomRepository, MyCustomSQLRepository>();
@@ -289,7 +287,7 @@ In sostanza, la classe del comando contiene tutti i dati necessari per eseguire 
 
 Un'altra caratteristica dei comandi è di non essere modificabili, perché l'utilizzo previsto è che vengano elaborati direttamente dal modello di dominio. Non è necessario modificarli nell'arco della durata prevista. In una classe C# l'immutabilità può essere ottenuta anche senza setter o altri metodi che modificano lo stato interno.
 
-Tenere presente che se si intende o si prevede che i comandi vengano sottoposti a un processo di serializzazione/deserializzazione, le proprietà devono avere un setter privato e l'attributo `[DataMember]` (o `[JsonProperty]`), altrimenti il deserializzatore non sarà in grado di ricostruire l'oggetto nella destinazione con i valori richiesti.
+Tenere presente che, se si intende o si prevede che i comandi passino attraverso un processo di serializzazione/deserializzazione, le proprietà devono avere un setter privato e l'attributo `[DataMember]` (o `[JsonProperty]`). In caso contrario, il deserializzatore non sarà in grado di ricostruire l'oggetto nella destinazione con i valori richiesti. È anche possibile usare le proprietà di sola lettura se la classe dispone di un costruttore con parametri per tutte le proprietà, con la consueta convenzione di denominazione camelCase e annotare il costruttore come `[JsonConstructor]`. Tuttavia, questa opzione richiede un maggior numero di codice.
 
 Ad esempio, la classe del comando per la creazione di un ordine è probabilmente simile, in termini di dati, all'ordine che si vuole creare, ma è altrettanto probabile che non siano necessari gli stessi attributi. Ad esempio, `CreateOrderCommand` non dispone di un ID ordine, perché l'ordine non è ancora stato creato.
 
@@ -313,9 +311,9 @@ public class UpdateOrderStatusCommand
 
 Alcuni sviluppatori preferiscono tenere gli oggetti richiesta dell'interfaccia utente separati dagli oggetti DTO dei comandi, anche se non è necessario. Si tratta di una separazione noiosa, non particolarmente utile, e la forma degli oggetti è quasi esattamente la stessa. In eShopOnContainers, ad esempio, alcuni comandi provengono direttamente dal lato client.
 
-### <a name="the-command-handler-class"></a>Classe del gestore comando
+### <a name="the-command-handler-class"></a>Classe del gestore dei comandi
 
-È consigliabile implementare una classe di gestore comando specifica per ogni comando. In tale classe, che è alla base del funzionamento dello schema, si useranno l'oggetto comando, gli oggetti dominio e gli oggetti del repository dell'infrastruttura. Il gestore comando è di fatto il cuore del livello dell'applicazione in termini di CQRS e progettazione basata su domini. Tutta la logica del dominio deve tuttavia essere contenuta nelle classi di dominio, ovvero le radici di aggregazione (entità radice), le entità figlio o i [servizi di dominio](https://lostechies.com/jimmybogard/2008/08/21/services-in-domain-driven-design/), ma non nel gestore comando, che è una classe del livello dell'applicazione.
+È consigliabile implementare una classe di gestore comando specifica per ogni comando. Questo è il modo in cui il modello funziona ed è il punto in cui si userà l'oggetto Command, gli oggetti di dominio e gli oggetti del repository dell'infrastruttura. Il gestore comando è di fatto il cuore del livello dell'applicazione in termini di CQRS e progettazione basata su domini. Tuttavia, tutta la logica di dominio deve essere contenuta nelle classi di dominio, all'interno delle radici di aggregazione (entità radice), delle entità figlio o [dei servizi del dominio](https://lostechies.com/jimmybogard/2008/08/21/services-in-domain-driven-design/), ma non all'interno del gestore comandi, che è una classe a livello di applicazione.
 
 La classe del gestore comandi offre un efficace trampolino di lancio per il modo in cui si ottiene il principio di singola responsabilità (SRP, Single Responsibility Principle) menzionato in una sezione precedente.
 
@@ -816,13 +814,13 @@ In modo simile, è possibile implementare altri comportamenti per ulteriori aspe
 - **MediatR.** Repository GitHub. \
   <https://github.com/jbogard/MediatR>
 
-- **CQRS with MediatR and AutoMapper (CQRS con MediatR e AutoMapper)**  \
+- **CQRS with MediatR and AutoMapper** \ (CQRS con MediatR e AutoMapper)
   <https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/>
 
 - **Put your controllers on a diet: POSTs and commands.** (Mettere a dieta i controller: POST e comandi) \
   <https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/>
 
-- **Tackling cross-cutting concerns with a mediator pipeline (Affrontare i problemi di montaggio incrociato con una pipeline MediatR)**  \
+- **Tackling cross-cutting concerns with a mediator pipeline** \ (Affrontare i problemi di montaggio incrociato con una pipeline MediatR)
   <https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/>
 
 - **CQRS and REST: the perfect match (CQRS e REST: la coppia perfetta)**  \

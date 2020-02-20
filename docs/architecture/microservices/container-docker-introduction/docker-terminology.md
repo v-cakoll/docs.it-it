@@ -1,13 +1,13 @@
 ---
 title: Terminologia di Docker
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Terminologia di Docker
-ms.date: 01/07/2019
-ms.openlocfilehash: 33f2918df5b63cc4bd54ddb84900c6bd91e9f77e
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.date: 01/30/2020
+ms.openlocfilehash: 5ffc7e791df8cbc999c6ababf62670bae46e1d5e
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921012"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502829"
 ---
 # <a name="docker-terminology"></a>Terminologia di Docker
 
@@ -31,7 +31,7 @@ Questa sezione elenca i termini e le definizioni che è necessario conoscere pri
 
 **Registro**: servizio che fornisce l'accesso ai repository. Il registro predefinito per la maggior parte delle immagini pubbliche è l'[Hub Docker](https://hub.docker.com/), di proprietà di Docker a livello di organizzazione. Un registro contiene in genere i repository di più team. Spesso le aziende hanno registri privati in cui archiviare e gestire le immagini che hanno creato. Registro Azure Container è un esempio.
 
-**Immagine**a più Arch: per la multiarchitettura, è una funzionalità che semplifica la selezione dell'immagine appropriata, in base alla piattaforma in cui è in esecuzione Docker, ad esempio quando un Dockerfile richiede un'immagine **di base da MCR.Microsoft.com/dotnet/Core/SDK:2.2** dal registro di sistema ottiene effettivamente **2,2-sdk-nanoserver-1709**, **2,2-sdk-nanoserver-1803**, **2,2-SDK-nanoserver-1809** o **2,2-SDK-stretch**, a seconda del sistema operativo e della versione in cui è in esecuzione docker.
+**Immagine**a più Arch: per la multiarchitettura, si tratta di una funzionalità che semplifica la selezione dell'immagine appropriata, in base alla piattaforma in cui è in esecuzione docker. Ad esempio, quando un Dockerfile richiede un'immagine **di base di MCR.Microsoft.com/dotnet/Core/SDK:3.1** dal registro di sistema, riceve effettivamente **3,1-SDK-nanoserver-1909**, **3,1-sdk-nanoserver-1809** o **3,1-SDK-Buster-Slim**, a seconda del sistema operativo e della versione in cui è in esecuzione docker.
 
 **Hub Docker**: registro pubblico in cui caricare le immagini e usarle. L'hub Docker fornisce l'hosting di immagini Docker, registri pubblici o privati, trigger e webhook di compilazione e integrazione con GitHub e Bitbucket.
 

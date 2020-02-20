@@ -2,16 +2,16 @@
 title: Endpoint WCF e metodi gRPC-gRPC per sviluppatori WCF
 description: Confronto tra gli endpoint WCF dichiarati con gli attributi ServiceContract e OperationContract e i metodi gRPC dichiarati in protobuf
 ms.date: 09/02/2019
-ms.openlocfilehash: 763862a363afc6aab72335050cf4822754816c7a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 1bc6ecbc73bfc0a58393e4c28672b897ed6f2f15
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966918"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503424"
 ---
 # <a name="wcf-endpoints-and-grpc-methods"></a>Endpoint WCF e metodi gRPC
 
-In WCF, quando si scrive il codice dell'applicazione, usare uno dei metodi seguenti:
+In Windows Communication Foundation (WCF), quando si scrive il codice dell'applicazione, usare uno dei metodi seguenti:
 
 - È possibile scrivere il codice dell'applicazione in una classe e decorare i metodi con l'attributo [OperationContract](xref:System.ServiceModel.OperationContractAttribute) .
 - Si dichiara un'interfaccia per il servizio e si aggiungono gli attributi [OperationContract](xref:System.ServiceModel.OperationContractAttribute) all'interfaccia.
@@ -31,20 +31,20 @@ Il capitolo 3 ha mostrato che le definizioni dei messaggi protobuf vengono usate
 
 ## <a name="operationcontract-properties"></a>Proprietà di OperationContract
 
-L'attributo [OperationContract](xref:System.ServiceModel.OperationContractAttribute) dispone di proprietà per controllare o ridefinire il funzionamento. i metodi gRPC non offrono questo tipo di controllo. Nella tabella seguente vengono illustrate le proprietà `OperationContract` e il modo in cui la funzionalità specificata viene o non è gestita in gRPC:
+L'attributo [OperationContract](xref:System.ServiceModel.OperationContractAttribute) dispone di proprietà per controllare o ridefinire il funzionamento. i metodi gRPC non offrono questo tipo di controllo. Nella tabella seguente sono elencate le proprietà di `OperationContract` e viene descritto il modo in cui la funzionalità specificata non viene gestita in gRPC:
 
-| Proprietà`OperationContract` | gRPC                                             |
+| Proprietà `OperationContract` | gRPC                                             |
 | ---------------------------- | ------------------------------------------------ |
-| <xref:System.ServiceModel.OperationContractAttribute.Action>             | URI che identifica l'operazione. gRPC usa il nome del `package`, `service` e `rpc` dal file `.proto`. |
+| <xref:System.ServiceModel.OperationContractAttribute.Action>             | URI che identifica l'operazione. gRPC usa il nome di `package`, `service`e `rpc` dal file `.proto`. |
 | <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern>       | Tutti i metodi del servizio gRPC restituiscono oggetti `Task`. |
-| <xref:System.ServiceModel.OperationContractAttribute.IsInitiating>       | Vedere la nota seguente. |
+| <xref:System.ServiceModel.OperationContractAttribute.IsInitiating>       | Vedere il paragrafo dopo questa tabella. |
 | <xref:System.ServiceModel.OperationContractAttribute.IsOneWay>           | I metodi gRPC unidirezionali restituiscono `Empty` risultati o utilizzano lo streaming client. |
-| <xref:System.ServiceModel.OperationContractAttribute.IsTerminating>      | Vedere la nota seguente. |
-| <xref:System.ServiceModel.OperationContractAttribute.Name>               | Correlato a SOAP, nessun significato in gRPC. |
-| <xref:System.ServiceModel.OperationContractAttribute.ProtectionLevel>    | Nessuna crittografia del messaggio; crittografia di rete gestita a livello di trasporto (TLS su HTTP/2). |
-| <xref:System.ServiceModel.OperationContractAttribute.ReplyAction>        | Correlato a SOAP, nessun significato in gRPC. |
+| <xref:System.ServiceModel.OperationContractAttribute.IsTerminating>      | Vedere il paragrafo dopo questa tabella. |
+| <xref:System.ServiceModel.OperationContractAttribute.Name>               | Questa proprietà è associata a SOAP e non ha significato in gRPC. |
+| <xref:System.ServiceModel.OperationContractAttribute.ProtectionLevel>    | Non è presente alcuna crittografia dei messaggi. La crittografia di rete viene gestita a livello di trasporto (TLS su HTTP/2). |
+| <xref:System.ServiceModel.OperationContractAttribute.ReplyAction>        | Questa proprietà è associata a SOAP e non ha significato in gRPC. |
 
-La proprietà `IsInitiating` consente di indicare che un metodo all'interno di un [ServiceContract](xref:System.ServiceModel.ServiceContractAttribute) non può essere il primo metodo chiamato come parte di una sessione. La proprietà `IsTerminating` fa in modo che il server chiuda la sessione dopo la chiamata di un'operazione o il client, se usato in un client di callback. In gRPC i flussi vengono creati da singoli metodi e chiusi in modo esplicito. Vedere [gRPC streaming](rpc-types.md#grpc-streaming).
+La proprietà `IsInitiating` consente di indicare che un metodo all'interno di [ServiceContract](xref:System.ServiceModel.ServiceContractAttribute) non può essere il primo metodo chiamato come parte di una sessione. La proprietà `IsTerminating` determina la chiusura della sessione da parte del server dopo la chiamata di un'operazione o il client, se la proprietà viene utilizzata in un client di callback. In gRPC i flussi vengono creati da singoli metodi e chiusi in modo esplicito. Vedere [gRPC streaming](rpc-types.md#grpc-streaming).
 
 Per ulteriori informazioni sulla sicurezza e la crittografia di gRPC, vedere il [capitolo 6](security.md).
 

@@ -1,19 +1,19 @@
 ---
 title: Sottoscrizione di eventi
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Informazioni sui dettagli di pubblicazione e sottoscrizione di eventi di integrazione.
-ms.date: 10/02/2018
-ms.openlocfilehash: facbb04d322c5df03498a0313556dd9b5b3161d2
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.date: 01/30/2020
+ms.openlocfilehash: 544af8035ed23dd6507dfed4944b0c327c81d943
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937139"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501802"
 ---
 # <a name="subscribing-to-events"></a>Sottoscrizione di eventi
 
 Il primo passaggio per poter usare il bus eventi consiste nel sottoscrivere i microservizi agli eventi che devono ricevere. Tale operazione deve essere eseguita nei microservizi di tipo ricevitore.
 
-Il semplice codice seguente mostra che cosa ogni microservizio di tipo ricevitore deve implementare all'avvio del servizio, ovvero nella classe `Startup`, per poter sottoscrivere gli eventi necessari. In questo caso il microservizio `basket.api` deve sottoscrivere i messaggi `ProductPriceChangedIntegrationEvent` e `OrderStartedIntegrationEvent`.
+Il semplice codice seguente mostra che cosa ogni microservizio di tipo ricevitore deve implementare all'avvio del servizio, ovvero nella classe `Startup`, per poter sottoscrivere gli eventi necessari. In questo caso il microservizio `basket-api` deve sottoscrivere i messaggi `ProductPriceChangedIntegrationEvent` e `OrderStartedIntegrationEvent`.
 
 Con la sottoscrizione dell'evento `ProductPriceChangedIntegrationEvent`, ad esempio, il microservizio basket è in grado di riconoscere eventuali modifiche apportate al prezzo di un prodotto e di avvertire l'utente della modifica se tale prodotto è presente nel carrello dell'utente.
 
@@ -301,7 +301,7 @@ Alcune operazioni di elaborazione dei messaggi sono intrinsecamente idempotenti.
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Honoring message idempotency** (Rispetto dell'idempotenza dei messaggi)  
+-  \ **idempotenza del messaggio**
   <https://docs.microsoft.com/previous-versions/msp-n-p/jj591565(v=pandp.10)#honoring-message-idempotency>
 
 ## <a name="deduplicating-integration-event-messages"></a>Deduplicazione dei messaggi degli eventi di integrazione
@@ -338,7 +338,7 @@ Se il flag di nuovo recapito è impostato, il ricevitore deve tenerlo in conside
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
 - **Coerenza finale** \
-    [https://en.wikipedia.org/wiki/Eventual\_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
+    <https://en.wikipedia.org/wiki/Eventual_consistency>
 
 - **Philip Brown. Strategie per l'integrazione di contesti delimitati** \
     <https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/>
@@ -359,9 +359,9 @@ Se il flag di nuovo recapito è impostato, il ricevitore deve tenerlo in conside
     <https://dzone.com/articles/event-driven-data-management-for-microservices-1>
 
 - **Il teorema CAP** \
-    [https://en.wikipedia.org/wiki/CAP\_theorem](https://en.wikipedia.org/wiki/CAP_theorem)
+    <https://en.wikipedia.org/wiki/CAP_theorem>
 
-- **Che cos'è il teorema CAP** \
+- **What is CAP Theorem?** (Che cos'è il teorema CAP) \
     <https://www.quora.com/What-Is-CAP-Theorem-1>
 
 - **Introduzione alla coerenza dei dati** \
@@ -376,8 +376,8 @@ Se il flag di nuovo recapito è impostato, il ricevitore deve tenerlo in conside
 - **Bus di servizio di Azure. Messaggistica negoziata:  \ di rilevamento duplicati**
     <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
 
-- **Reliability Guide** (Guida all'affidabilità), documentazione RabbitMQ \
-    [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html#consumer)
+- **Guida all'affidabilità**documentazione RabbitMQ \
+    <https://www.rabbitmq.com/reliability.html#consumer>
 
 > [!div class="step-by-step"]
 > [Precedente](rabbitmq-event-bus-development-test-environment.md)

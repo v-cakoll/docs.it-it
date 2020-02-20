@@ -1,13 +1,13 @@
 ---
 title: Implementazione dei tentativi di chiamate HTTP con backoff esponenziale con Polly
 description: Informazioni su come gestire gli errori HTTP con Polly e HttpClientFactory.
-ms.date: 01/07/2019
-ms.openlocfilehash: 551cd1230c565b30c81090c984747e726680b9ed
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.date: 01/30/2020
+ms.openlocfilehash: 60943360c9674f93b246b37b2667b48dab659e0e
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089963"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502660"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Implementazione dei tentativi di chiamate HTTP con backoff esponenziale con i criteri di Polly e HttpClientFactory
 
@@ -19,9 +19,9 @@ Tuttavia, la scrittura di codice personalizzato per usare la libreria di Polly c
 
 I passaggi seguenti mostrano come usare i tentativi HTTP con Polly integrato in HttpClientFactory, come spiegato nella sezione precedente.
 
-**Fare riferimento ai pacchetti di ASP.NET Core 2.2**
+**Fare riferimento ai pacchetti di ASP.NET Core 3,1**
 
-`HttpClientFactory` è disponibile sin da .NET Core 2.1, tuttavia è consigliabile usare i pacchetti di ASP.NET Core 2.2 più recenti da NuGet nel progetto. In genere è necessario il metapacchetto `AspNetCore` e il pacchetto di estensione `Microsoft.Extensions.Http.Polly`.
+`HttpClientFactory` è disponibile a partire da .NET Core 2,1, tuttavia è consigliabile usare i pacchetti di ASP.NET Core 3,1 più recenti di NuGet nel progetto. In genere è anche necessario fare riferimento al pacchetto di estensione `Microsoft.Extensions.Http.Polly`.
 
 **Configurare un client con i criteri di ripetizione di Polly, in Startup**
 

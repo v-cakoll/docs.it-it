@@ -2,14 +2,13 @@
 title: Uso di Azure Key Vault per proteggere i segreti in fase di produzione
 description: Sicurezza in microservizi .NET e applicazioni Web - Azure Key Vault è un metodo eccellente per la gestione dei segreti dell'applicazione completamente controllati dagli amministratori. Gli amministratori possono anche assegnare e revocare valori di sviluppo senza richiederne la gestione agli sviluppatori.
 author: mjrousos
-ms.author: wiwagn
-ms.date: 10/19/2018
-ms.openlocfilehash: 4d121f584188c5d5fa9ddf0d91bea5e107eff0cb
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.date: 01/30/2020
+ms.openlocfilehash: cc95d491136c945255408cec2bd49d4d6579e29a
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899663"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501758"
 ---
 # <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a>Usare Azure Key Vault per proteggere i segreti in fase di produzione
 
@@ -33,7 +32,7 @@ Il pacchetto **Microsoft.Extensions.Configuration.AzureKeyVault** consente alle 
    È anche possibile usare un overload di `AddAzureKeyVault` che accetta un certificato al posto del segreto client, includendo solo un riferimento al pacchetto [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory).
 
 > [!IMPORTANT]
-> È consigliabile registrare Azure Key Vault come ultimo provider di configurazione, per far sì che esegua l'override dei valori di configurazione dei provider precedenti.
+> Si consiglia di registrare Azure Key Vault come ultimo provider di configurazione, in modo che sia possibile eseguire l'override dei valori di configurazione dei provider precedenti.
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
