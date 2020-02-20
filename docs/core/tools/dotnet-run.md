@@ -1,288 +1,131 @@
 ---
 title: Comando dotnet run
 description: Il comando dotnet run offre un modo pratico per eseguire l'applicazione dal codice sorgente.
-ms.date: 10/31/2019
-ms.openlocfilehash: 5920f0d1f04204b286fdf6f51f5fd13644846390
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/19/2020
+ms.openlocfilehash: 415d7079db6a3da80c4fcf2074307ea760e84982
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734112"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503603"
 ---
-# <a name="dotnet-run"></a><span data-ttu-id="eac6d-103">dotnet run</span><span class="sxs-lookup"><span data-stu-id="eac6d-103">dotnet run</span></span>
+# <a name="dotnet-run"></a><span data-ttu-id="709ab-103">dotnet run</span><span class="sxs-lookup"><span data-stu-id="709ab-103">dotnet run</span></span>
 
-<span data-ttu-id="eac6d-104">**Questo articolo si applica a:** ✔️ .NET Core 1. x SDK e versioni successive</span><span class="sxs-lookup"><span data-stu-id="eac6d-104">**This article applies to:** ✔️ .NET Core 1.x SDK and later versions</span></span>
+<span data-ttu-id="709ab-104">**Questo articolo si applica a:** ✔️ .NET Core 2. x SDK e versioni successive</span><span class="sxs-lookup"><span data-stu-id="709ab-104">**This article applies to:** ✔️ .NET Core 2.x SDK and later versions</span></span>
 
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+## <a name="name"></a><span data-ttu-id="709ab-105">Nome</span><span class="sxs-lookup"><span data-stu-id="709ab-105">Name</span></span>
 
-## <a name="name"></a><span data-ttu-id="eac6d-105">Name</span><span class="sxs-lookup"><span data-stu-id="eac6d-105">Name</span></span>
+<span data-ttu-id="709ab-106">`dotnet run`: esegue il codice sorgente senza comandi espliciti di compilazione o avvio.</span><span class="sxs-lookup"><span data-stu-id="709ab-106">`dotnet run` - Runs source code without any explicit compile or launch commands.</span></span>
 
-<span data-ttu-id="eac6d-106">`dotnet run`: esegue il codice sorgente senza comandi espliciti di compilazione o avvio.</span><span class="sxs-lookup"><span data-stu-id="eac6d-106">`dotnet run` - Runs source code without any explicit compile or launch commands.</span></span>
-
-## <a name="synopsis"></a><span data-ttu-id="eac6d-107">Riepilogo</span><span class="sxs-lookup"><span data-stu-id="eac6d-107">Synopsis</span></span>
-
-<!-- markdownlint-disable MD025 -->
-
-# <a name="net-core-30tabnetcore30"></a>[<span data-ttu-id="eac6d-108">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="eac6d-108">.NET Core 3.0</span></span>](#tab/netcore30)
+## <a name="synopsis"></a><span data-ttu-id="709ab-107">Riepilogo</span><span class="sxs-lookup"><span data-stu-id="709ab-107">Synopsis</span></span>
 
 ```dotnetcli
-dotnet run [-c|--configuration] [-f|--framework] [--force] [--interactive] [--launch-profile] [--no-build] [--no-dependencies]
-    [--no-launch-profile] [--no-restore] [-p|--project] [-r|--runtime] [-v|--verbosity] [[--] [application arguments]]
+dotnet run [-c|--configuration] [-f|--framework] [--force] [--interactive] [--launch-profile] 
+    [--no-build] [--no-dependencies] [--no-launch-profile] [--no-restore] [-p|--project] 
+    [-r|--runtime] [-v|--verbosity] [[--] [application arguments]]
 dotnet run [-h|--help]
 ```
 
-# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="eac6d-109">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="eac6d-109">.NET Core 2.1</span></span>](#tab/netcore21)
+## <a name="description"></a><span data-ttu-id="709ab-108">Descrizione</span><span class="sxs-lookup"><span data-stu-id="709ab-108">Description</span></span>
 
-```dotnetcli
-dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies]
-    [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [-v|--verbosity] [[--] [application arguments]]
-dotnet run [-h|--help]
-```
+<span data-ttu-id="709ab-109">Il comando `dotnet run` offre un modo pratico per eseguire l'applicazione dal codice sorgente con un solo comando.</span><span class="sxs-lookup"><span data-stu-id="709ab-109">The `dotnet run` command provides a convenient option to run your application from the source code with one command.</span></span> <span data-ttu-id="709ab-110">Questo comando è utile per lo sviluppo iterativo veloce dalla riga di comando.</span><span class="sxs-lookup"><span data-stu-id="709ab-110">It's useful for fast iterative development from the command line.</span></span> <span data-ttu-id="709ab-111">Il comando dipende dal comando [`dotnet build`](dotnet-build.md) per compilare il codice.</span><span class="sxs-lookup"><span data-stu-id="709ab-111">The command depends on the [`dotnet build`](dotnet-build.md) command to build the code.</span></span> <span data-ttu-id="709ab-112">I requisiti per la compilazione, ad esempio il ripristino preliminare del progetto, si applicano anche a `dotnet run`.</span><span class="sxs-lookup"><span data-stu-id="709ab-112">Any requirements for the build, such as that the project must be restored first, apply to `dotnet run` as well.</span></span>
 
-# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="eac6d-110">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="eac6d-110">.NET Core 2.0</span></span>](#tab/netcore20)
+<span data-ttu-id="709ab-113">I file di output vengono scritti nel percorso predefinito, ovvero `bin/<configuration>/<target>`.</span><span class="sxs-lookup"><span data-stu-id="709ab-113">Output files are written into the default location, which is `bin/<configuration>/<target>`.</span></span> <span data-ttu-id="709ab-114">Se ad esempio si ha un'applicazione `netcoreapp2.1` e si esegue `dotnet run`, l'output viene inserito in `bin/Debug/netcoreapp2.1`.</span><span class="sxs-lookup"><span data-stu-id="709ab-114">For example if you have a `netcoreapp2.1` application and you run `dotnet run`, the output is placed in `bin/Debug/netcoreapp2.1`.</span></span> <span data-ttu-id="709ab-115">I file vengono sovrascritti in base alle esigenze.</span><span class="sxs-lookup"><span data-stu-id="709ab-115">Files are overwritten as needed.</span></span> <span data-ttu-id="709ab-116">I file temporanei vengono inseriti nella directory `obj`.</span><span class="sxs-lookup"><span data-stu-id="709ab-116">Temporary files are placed in the `obj` directory.</span></span>
 
-```dotnetcli
-dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies]
-    [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [[--] [application arguments]]
-dotnet run [-h|--help]
-```
+<span data-ttu-id="709ab-117">Se il progetto specifica più framework, l'esecuzione di `dotnet run` genera un errore a meno che non venga usata l'opzione `-f|--framework <FRAMEWORK>` per specificare il framework.</span><span class="sxs-lookup"><span data-stu-id="709ab-117">If the project specifies multiple frameworks, executing `dotnet run` results in an error unless the `-f|--framework <FRAMEWORK>` option is used to specify the framework.</span></span>
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="eac6d-111">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="eac6d-111">.NET Core 1.x</span></span>](#tab/netcore1x)
-
-```dotnetcli
-dotnet run [-c|--configuration] [-f|--framework] [-p|--project] [[--] [application arguments]]
-dotnet run [-h|--help]
-```
-
----
-
-## <a name="description"></a><span data-ttu-id="eac6d-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="eac6d-112">Description</span></span>
-
-<span data-ttu-id="eac6d-113">Il comando `dotnet run` offre un modo pratico per eseguire l'applicazione dal codice sorgente con un solo comando.</span><span class="sxs-lookup"><span data-stu-id="eac6d-113">The `dotnet run` command provides a convenient option to run your application from the source code with one command.</span></span> <span data-ttu-id="eac6d-114">Questo comando è utile per lo sviluppo iterativo veloce dalla riga di comando.</span><span class="sxs-lookup"><span data-stu-id="eac6d-114">It's useful for fast iterative development from the command line.</span></span> <span data-ttu-id="eac6d-115">Il comando dipende dal comando [`dotnet build`](dotnet-build.md) per compilare il codice.</span><span class="sxs-lookup"><span data-stu-id="eac6d-115">The command depends on the [`dotnet build`](dotnet-build.md) command to build the code.</span></span> <span data-ttu-id="eac6d-116">I requisiti per la compilazione, ad esempio il ripristino preliminare del progetto, si applicano anche a `dotnet run`.</span><span class="sxs-lookup"><span data-stu-id="eac6d-116">Any requirements for the build, such as that the project must be restored first, apply to `dotnet run` as well.</span></span>
-
-<span data-ttu-id="eac6d-117">I file di output vengono scritti nel percorso predefinito, ovvero `bin/<configuration>/<target>`.</span><span class="sxs-lookup"><span data-stu-id="eac6d-117">Output files are written into the default location, which is `bin/<configuration>/<target>`.</span></span> <span data-ttu-id="eac6d-118">Se ad esempio si ha un'applicazione `netcoreapp2.1` e si esegue `dotnet run`, l'output viene inserito in `bin/Debug/netcoreapp2.1`.</span><span class="sxs-lookup"><span data-stu-id="eac6d-118">For example if you have a `netcoreapp2.1` application and you run `dotnet run`, the output is placed in `bin/Debug/netcoreapp2.1`.</span></span> <span data-ttu-id="eac6d-119">I file vengono sovrascritti in base alle esigenze.</span><span class="sxs-lookup"><span data-stu-id="eac6d-119">Files are overwritten as needed.</span></span> <span data-ttu-id="eac6d-120">I file temporanei vengono inseriti nella directory `obj`.</span><span class="sxs-lookup"><span data-stu-id="eac6d-120">Temporary files are placed in the `obj` directory.</span></span>
-
-<span data-ttu-id="eac6d-121">Se il progetto specifica più framework, l'esecuzione di `dotnet run` genera un errore a meno che non venga usata l'opzione `-f|--framework <FRAMEWORK>` per specificare il framework.</span><span class="sxs-lookup"><span data-stu-id="eac6d-121">If the project specifies multiple frameworks, executing `dotnet run` results in an error unless the `-f|--framework <FRAMEWORK>` option is used to specify the framework.</span></span>
-
-<span data-ttu-id="eac6d-122">Il comando `dotnet run` viene usato nel contesto dei progetti e non di assembly di compilazione.</span><span class="sxs-lookup"><span data-stu-id="eac6d-122">The `dotnet run` command is used in the context of projects, not built assemblies.</span></span> <span data-ttu-id="eac6d-123">Se in alternativa si prova a eseguire la DLL di un'applicazione dipendente da framework, è necessario usare [dotnet](dotnet.md) senza un comando.</span><span class="sxs-lookup"><span data-stu-id="eac6d-123">If you're trying to run a framework-dependent application DLL instead, you must use [dotnet](dotnet.md) without a command.</span></span> <span data-ttu-id="eac6d-124">Ad esempio, per eseguire `myapp.dll`, usare:</span><span class="sxs-lookup"><span data-stu-id="eac6d-124">For example, to run `myapp.dll`, use:</span></span>
+<span data-ttu-id="709ab-118">Il comando `dotnet run` viene usato nel contesto dei progetti e non di assembly di compilazione.</span><span class="sxs-lookup"><span data-stu-id="709ab-118">The `dotnet run` command is used in the context of projects, not built assemblies.</span></span> <span data-ttu-id="709ab-119">Se in alternativa si prova a eseguire la DLL di un'applicazione dipendente da framework, è necessario usare [dotnet](dotnet.md) senza un comando.</span><span class="sxs-lookup"><span data-stu-id="709ab-119">If you're trying to run a framework-dependent application DLL instead, you must use [dotnet](dotnet.md) without a command.</span></span> <span data-ttu-id="709ab-120">Ad esempio, per eseguire `myapp.dll`, usare:</span><span class="sxs-lookup"><span data-stu-id="709ab-120">For example, to run `myapp.dll`, use:</span></span>
 
 ```dotnetcli
 dotnet myapp.dll
 ```
 
-<span data-ttu-id="eac6d-125">Per altre informazioni sul driver `dotnet`, vedere l'argomento [Strumenti dell'interfaccia della riga di comando di .NET Core](index.md).</span><span class="sxs-lookup"><span data-stu-id="eac6d-125">For more information on the `dotnet` driver, see the [.NET Core Command Line Tools (CLI)](index.md) topic.</span></span>
+<span data-ttu-id="709ab-121">Per altre informazioni sul driver `dotnet`, vedere l'argomento [Strumenti dell'interfaccia della riga di comando di .NET Core](index.md).</span><span class="sxs-lookup"><span data-stu-id="709ab-121">For more information on the `dotnet` driver, see the [.NET Core Command Line Tools (CLI)](index.md) topic.</span></span>
 
-<span data-ttu-id="eac6d-126">Per eseguire l'applicazione, il comando `dotnet run` risolve le dipendenze dell'applicazione esterne al runtime condiviso dalla cache NuGet.</span><span class="sxs-lookup"><span data-stu-id="eac6d-126">To run the application, the `dotnet run` command resolves the dependencies of the application that are outside of the shared runtime from the NuGet cache.</span></span> <span data-ttu-id="eac6d-127">È consigliabile non per usare `dotnet run` per eseguire le applicazioni nell'ambiente di produzione perché questo comando usa dipendenze memorizzate nella cache.</span><span class="sxs-lookup"><span data-stu-id="eac6d-127">Because it uses cached dependencies, it's not recommended to use `dotnet run` to run applications in production.</span></span> <span data-ttu-id="eac6d-128">In alternativa, [creare una distribuzione](../deploying/index.md) usando il comando [`dotnet publish`](dotnet-publish.md) e distribuire l'output pubblicato.</span><span class="sxs-lookup"><span data-stu-id="eac6d-128">Instead, [create a deployment](../deploying/index.md) using the [`dotnet publish`](dotnet-publish.md) command and deploy the published output.</span></span>
+<span data-ttu-id="709ab-122">Per eseguire l'applicazione, il comando `dotnet run` risolve le dipendenze dell'applicazione esterne al runtime condiviso dalla cache NuGet.</span><span class="sxs-lookup"><span data-stu-id="709ab-122">To run the application, the `dotnet run` command resolves the dependencies of the application that are outside of the shared runtime from the NuGet cache.</span></span> <span data-ttu-id="709ab-123">È consigliabile non per usare `dotnet run` per eseguire le applicazioni nell'ambiente di produzione perché questo comando usa dipendenze memorizzate nella cache.</span><span class="sxs-lookup"><span data-stu-id="709ab-123">Because it uses cached dependencies, it's not recommended to use `dotnet run` to run applications in production.</span></span> <span data-ttu-id="709ab-124">In alternativa, [creare una distribuzione](../deploying/index.md) usando il comando [`dotnet publish`](dotnet-publish.md) e distribuire l'output pubblicato.</span><span class="sxs-lookup"><span data-stu-id="709ab-124">Instead, [create a deployment](../deploying/index.md) using the [`dotnet publish`](dotnet-publish.md) command and deploy the published output.</span></span>
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-## <a name="options"></a><span data-ttu-id="eac6d-129">Opzioni</span><span class="sxs-lookup"><span data-stu-id="eac6d-129">Options</span></span>
+## <a name="options"></a><span data-ttu-id="709ab-125">Opzioni</span><span class="sxs-lookup"><span data-stu-id="709ab-125">Options</span></span>
 
-# <a name="net-core-30tabnetcore30"></a>[<span data-ttu-id="eac6d-130">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="eac6d-130">.NET Core 3.0</span></span>](#tab/netcore30)
+- **`--`**
 
-`--`
+  <span data-ttu-id="709ab-126">Delimita gli argomenti a `dotnet run` dagli argomenti per l'applicazione in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="709ab-126">Delimits arguments to `dotnet run` from arguments for the application being run.</span></span> <span data-ttu-id="709ab-127">Tutti gli argomenti dopo questo delimitatore vengono passati all'applicazione in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="709ab-127">All arguments after this delimiter are passed to the application run.</span></span>
 
-<span data-ttu-id="eac6d-131">Delimita gli argomenti a `dotnet run` dagli argomenti per l'applicazione in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="eac6d-131">Delimits arguments to `dotnet run` from arguments for the application being run.</span></span> <span data-ttu-id="eac6d-132">Tutti gli argomenti dopo questo delimitatore vengono passati all'applicazione in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="eac6d-132">All arguments after this delimiter are passed to the application run.</span></span>
+- **`-c|--configuration <CONFIGURATION>`**
 
-`-c|--configuration {Debug|Release}`
+  <span data-ttu-id="709ab-128">Definisce la configurazione di compilazione.</span><span class="sxs-lookup"><span data-stu-id="709ab-128">Defines the build configuration.</span></span> <span data-ttu-id="709ab-129">Il valore predefinito per la maggior parte dei progetti è `Debug`, ma è possibile eseguire l'override delle impostazioni di configurazione della build nel progetto.</span><span class="sxs-lookup"><span data-stu-id="709ab-129">The default for most projects is `Debug`, but you can override the build configuration settings in your project.</span></span>
 
-<span data-ttu-id="eac6d-133">Definisce la configurazione di compilazione.</span><span class="sxs-lookup"><span data-stu-id="eac6d-133">Defines the build configuration.</span></span> <span data-ttu-id="eac6d-134">Il valore predefinito per la maggior parte dei progetti è `Debug`.</span><span class="sxs-lookup"><span data-stu-id="eac6d-134">The default value for most projects is `Debug`.</span></span>
+- **`-f|--framework <FRAMEWORK>`**
 
-`-f|--framework <FRAMEWORK>`
+  <span data-ttu-id="709ab-130">Compila ed esegue l'app usando il [framework](../../standard/frameworks.md) specificato.</span><span class="sxs-lookup"><span data-stu-id="709ab-130">Builds and runs the app using the specified [framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="709ab-131">Il framework deve essere specificato nel file di progetto.</span><span class="sxs-lookup"><span data-stu-id="709ab-131">The framework must be specified in the project file.</span></span>
 
-<span data-ttu-id="eac6d-135">Compila ed esegue l'app usando il [framework](../../standard/frameworks.md) specificato.</span><span class="sxs-lookup"><span data-stu-id="eac6d-135">Builds and runs the app using the specified [framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="eac6d-136">Il framework deve essere specificato nel file di progetto.</span><span class="sxs-lookup"><span data-stu-id="eac6d-136">The framework must be specified in the project file.</span></span>
+- **`--force`**
 
-`--force`
+  <span data-ttu-id="709ab-132">Forza la risoluzione di tutte le dipendenze, anche se l'ultimo ripristino ha avuto esito positivo.</span><span class="sxs-lookup"><span data-stu-id="709ab-132">Forces all dependencies to be resolved even if the last restore was successful.</span></span> <span data-ttu-id="709ab-133">La specifica di questo flag equivale all'eliminazione del file *project.assets.json*.</span><span class="sxs-lookup"><span data-stu-id="709ab-133">Specifying this flag is the same as deleting the *project.assets.json* file.</span></span>
 
-<span data-ttu-id="eac6d-137">Forza la risoluzione di tutte le dipendenze, anche se l'ultimo ripristino ha avuto esito positivo.</span><span class="sxs-lookup"><span data-stu-id="eac6d-137">Forces all dependencies to be resolved even if the last restore was successful.</span></span> <span data-ttu-id="eac6d-138">La specifica di questo flag equivale all'eliminazione del file *project.assets.json*.</span><span class="sxs-lookup"><span data-stu-id="eac6d-138">Specifying this flag is the same as deleting the *project.assets.json* file.</span></span>
+- **`-h|--help`**
 
-`-h|--help`
+  <span data-ttu-id="709ab-134">Stampa una breve guida per il comando.</span><span class="sxs-lookup"><span data-stu-id="709ab-134">Prints out a short help for the command.</span></span>
 
-<span data-ttu-id="eac6d-139">Stampa una breve guida per il comando.</span><span class="sxs-lookup"><span data-stu-id="eac6d-139">Prints out a short help for the command.</span></span>
+- **`--interactive`**
 
-`--interactive`
+  <span data-ttu-id="709ab-135">Consente al comando di arrestarsi e attendere l'input o l'azione dell'utente (ad esempio, il completamento dell'autenticazione).</span><span class="sxs-lookup"><span data-stu-id="709ab-135">Allows the command to stop and wait for user input or action (for example, to complete authentication).</span></span> <span data-ttu-id="709ab-136">Disponibile a partire da .NET Core 3.0 SDK.</span><span class="sxs-lookup"><span data-stu-id="709ab-136">Available since .NET Core 3.0 SDK.</span></span>
 
-<span data-ttu-id="eac6d-140">Consente al comando di arrestarsi e attendere l'input o l'azione dell'utente (ad esempio, il completamento dell'autenticazione).</span><span class="sxs-lookup"><span data-stu-id="eac6d-140">Allows the command to stop and wait for user input or action (for example, to complete authentication).</span></span>
+- **`--launch-profile <NAME>`**
 
-`--launch-profile <NAME>`
+  <span data-ttu-id="709ab-137">Il nome del profilo di avvio, se presente, da usare all'avvio dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="709ab-137">The name of the launch profile (if any) to use when launching the application.</span></span> <span data-ttu-id="709ab-138">I profili di avvio vengono definiti nel file *launchSettings.json* e in genere vengono denominati `Development`, `Staging` e `Production`.</span><span class="sxs-lookup"><span data-stu-id="709ab-138">Launch profiles are defined in the *launchSettings.json* file and are typically called `Development`, `Staging`, and `Production`.</span></span> <span data-ttu-id="709ab-139">Per altre informazioni, vedere [Working with multiple environments](/aspnet/core/fundamentals/environments) (Utilizzo con più ambienti).</span><span class="sxs-lookup"><span data-stu-id="709ab-139">For more information, see [Working with multiple environments](/aspnet/core/fundamentals/environments).</span></span>
 
-<span data-ttu-id="eac6d-141">Il nome del profilo di avvio, se presente, da usare all'avvio dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="eac6d-141">The name of the launch profile (if any) to use when launching the application.</span></span> <span data-ttu-id="eac6d-142">I profili di avvio vengono definiti nel file *launchSettings.json* e in genere vengono denominati `Development`, `Staging` e `Production`.</span><span class="sxs-lookup"><span data-stu-id="eac6d-142">Launch profiles are defined in the *launchSettings.json* file and are typically called `Development`, `Staging`, and `Production`.</span></span> <span data-ttu-id="eac6d-143">Per altre informazioni, vedere [Working with multiple environments](/aspnet/core/fundamentals/environments) (Utilizzo con più ambienti).</span><span class="sxs-lookup"><span data-stu-id="eac6d-143">For more information, see [Working with multiple environments](/aspnet/core/fundamentals/environments).</span></span>
+- **`--no-build`**
 
-`--no-build`
+  <span data-ttu-id="709ab-140">Non compila il progetto prima dell'esecuzione.</span><span class="sxs-lookup"><span data-stu-id="709ab-140">Doesn't build the project before running.</span></span> <span data-ttu-id="709ab-141">Imposta anche in modo implicito il flag `--no-restore`.</span><span class="sxs-lookup"><span data-stu-id="709ab-141">It also implicit sets the `--no-restore` flag.</span></span>
 
-<span data-ttu-id="eac6d-144">Non compila il progetto prima dell'esecuzione.</span><span class="sxs-lookup"><span data-stu-id="eac6d-144">Doesn't build the project before running.</span></span> <span data-ttu-id="eac6d-145">Imposta anche in modo implicito il flag `--no-restore`.</span><span class="sxs-lookup"><span data-stu-id="eac6d-145">It also implicit sets the `--no-restore` flag.</span></span>
+- **`--no-dependencies`**
 
-`--no-dependencies`
+  <span data-ttu-id="709ab-142">Durante il ripristino di un progetto con riferimenti da progetto a progetto, ripristina il progetto radice e non i riferimenti.</span><span class="sxs-lookup"><span data-stu-id="709ab-142">When restoring a project with project-to-project (P2P) references, restores the root project and not the references.</span></span>
 
-<span data-ttu-id="eac6d-146">Durante il ripristino di un progetto con riferimenti da progetto a progetto, ripristina il progetto radice e non i riferimenti.</span><span class="sxs-lookup"><span data-stu-id="eac6d-146">When restoring a project with project-to-project (P2P) references, restores the root project and not the references.</span></span>
+- **`--no-launch-profile`**
 
-`--no-launch-profile`
+  <span data-ttu-id="709ab-143">Non tenta di usare *launchSettings.json* per configurare l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="709ab-143">Doesn't try to use *launchSettings.json* to configure the application.</span></span>
 
-<span data-ttu-id="eac6d-147">Non tenta di usare *launchSettings.json* per configurare l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="eac6d-147">Doesn't try to use *launchSettings.json* to configure the application.</span></span>
+- **`--no-restore`**
 
-`--no-restore`
+  <span data-ttu-id="709ab-144">Non esegue un ripristino implicito quando si esegue il comando.</span><span class="sxs-lookup"><span data-stu-id="709ab-144">Doesn't execute an implicit restore when running the command.</span></span>
 
-<span data-ttu-id="eac6d-148">Non esegue un ripristino implicito quando si esegue il comando.</span><span class="sxs-lookup"><span data-stu-id="eac6d-148">Doesn't execute an implicit restore when running the command.</span></span>
+- **`-p|--project <PATH>`**
 
-`-p|--project <PATH>`
+  <span data-ttu-id="709ab-145">Specifica il percorso del file di progetto da eseguire: nome della cartella o percorso completo.</span><span class="sxs-lookup"><span data-stu-id="709ab-145">Specifies the path of the project file to run (folder name or full path).</span></span> <span data-ttu-id="709ab-146">Se non specificato, per impostazione predefinita il percorso corrisponde alla directory corrente.</span><span class="sxs-lookup"><span data-stu-id="709ab-146">If not specified, it defaults to the current directory.</span></span>
 
-<span data-ttu-id="eac6d-149">Specifica il percorso del file di progetto da eseguire: nome della cartella o percorso completo.</span><span class="sxs-lookup"><span data-stu-id="eac6d-149">Specifies the path of the project file to run (folder name or full path).</span></span> <span data-ttu-id="eac6d-150">Se non specificato, per impostazione predefinita il percorso corrisponde alla directory corrente.</span><span class="sxs-lookup"><span data-stu-id="eac6d-150">If not specified, it defaults to the current directory.</span></span>
+- **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-`--runtime <RUNTIME_IDENTIFIER>`
+  <span data-ttu-id="709ab-147">Specifica il runtime di destinazione per cui ripristinare i pacchetti.</span><span class="sxs-lookup"><span data-stu-id="709ab-147">Specifies the target runtime to restore packages for.</span></span> <span data-ttu-id="709ab-148">Per un elenco degli identificatori di runtime (RID, Runtime Identifier), vedere il [catalogo RID](../rid-catalog.md).</span><span class="sxs-lookup"><span data-stu-id="709ab-148">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span> <span data-ttu-id="709ab-149">`-r` opzione short disponibile a partire da .NET Core 3,0 SDK.</span><span class="sxs-lookup"><span data-stu-id="709ab-149">`-r` short option available since .NET Core 3.0 SDK.</span></span>
 
-<span data-ttu-id="eac6d-151">Specifica il runtime di destinazione per cui ripristinare i pacchetti.</span><span class="sxs-lookup"><span data-stu-id="eac6d-151">Specifies the target runtime to restore packages for.</span></span> <span data-ttu-id="eac6d-152">Per un elenco degli identificatori di runtime (RID, Runtime Identifier), vedere il [catalogo RID](../rid-catalog.md).</span><span class="sxs-lookup"><span data-stu-id="eac6d-152">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span>
+- **`-v|--verbosity <LEVEL>`**
 
-`-v|--verbosity <LEVEL>`
+  <span data-ttu-id="709ab-150">Imposta il livello di dettaglio del comando.</span><span class="sxs-lookup"><span data-stu-id="709ab-150">Sets the verbosity level of the command.</span></span> <span data-ttu-id="709ab-151">I valori consentiti sono `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="709ab-151">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span> <span data-ttu-id="709ab-152">Il valore predefinito è `m`.</span><span class="sxs-lookup"><span data-stu-id="709ab-152">The default value is `m`.</span></span> <span data-ttu-id="709ab-153">Disponibile a partire da .NET Core 2,1 SDK.</span><span class="sxs-lookup"><span data-stu-id="709ab-153">Available since .NET Core 2.1 SDK.</span></span> 
 
-<span data-ttu-id="eac6d-153">Imposta il livello di dettaglio del comando.</span><span class="sxs-lookup"><span data-stu-id="eac6d-153">Sets the verbosity level of the command.</span></span> <span data-ttu-id="eac6d-154">I valori consentiti sono `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="eac6d-154">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
+## <a name="examples"></a><span data-ttu-id="709ab-154">Esempi</span><span class="sxs-lookup"><span data-stu-id="709ab-154">Examples</span></span>
 
-# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="eac6d-155">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="eac6d-155">.NET Core 2.1</span></span>](#tab/netcore21)
+- <span data-ttu-id="709ab-155">Eseguire il progetto nella directory corrente:</span><span class="sxs-lookup"><span data-stu-id="709ab-155">Run the project in the current directory:</span></span>
 
-`--`
+  ```dotnetcli
+  dotnet run
+  ```
 
-<span data-ttu-id="eac6d-156">Delimita gli argomenti a `dotnet run` dagli argomenti per l'applicazione in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="eac6d-156">Delimits arguments to `dotnet run` from arguments for the application being run.</span></span> <span data-ttu-id="eac6d-157">Tutti gli argomenti dopo questo delimitatore vengono passati all'applicazione in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="eac6d-157">All arguments after this delimiter are passed to the application run.</span></span>
+- <span data-ttu-id="709ab-156">Eseguire il progetto specificato:</span><span class="sxs-lookup"><span data-stu-id="709ab-156">Run the specified project:</span></span>
 
-`-c|--configuration {Debug|Release}`
+  ```dotnetcli
+  dotnet run --project ./projects/proj1/proj1.csproj
+  ```
 
-<span data-ttu-id="eac6d-158">Definisce la configurazione di compilazione.</span><span class="sxs-lookup"><span data-stu-id="eac6d-158">Defines the build configuration.</span></span> <span data-ttu-id="eac6d-159">Il valore predefinito per la maggior parte dei progetti è `Debug`.</span><span class="sxs-lookup"><span data-stu-id="eac6d-159">The default value for most projects is `Debug`.</span></span>
+- <span data-ttu-id="709ab-157">Eseguire il progetto nella directory corrente. L'argomento `--help` in questo esempio viene passato all'applicazione perché viene usata l'opzione `--` vuota:</span><span class="sxs-lookup"><span data-stu-id="709ab-157">Run the project in the current directory (the `--help` argument in this example is passed to the application, since the blank `--` option is used):</span></span>
 
-`-f|--framework <FRAMEWORK>`
+  ```dotnetcli
+  dotnet run --configuration Release -- --help
+  ```
 
-<span data-ttu-id="eac6d-160">Compila ed esegue l'app usando il [framework](../../standard/frameworks.md) specificato.</span><span class="sxs-lookup"><span data-stu-id="eac6d-160">Builds and runs the app using the specified [framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="eac6d-161">Il framework deve essere specificato nel file di progetto.</span><span class="sxs-lookup"><span data-stu-id="eac6d-161">The framework must be specified in the project file.</span></span>
+- <span data-ttu-id="709ab-158">Ripristinare le dipendenze e gli strumenti per il progetto nella directory corrente visualizzando solo il risultato minimo, quindi eseguire il progetto: (.NET Core SDK 2.0 e versioni successive):</span><span class="sxs-lookup"><span data-stu-id="709ab-158">Restore dependencies and tools for the project in the current directory only showing minimal output and then run the project: (.NET Core SDK 2.0 and later versions):</span></span>
 
-`--force`
-
-<span data-ttu-id="eac6d-162">Forza la risoluzione di tutte le dipendenze, anche se l'ultimo ripristino ha avuto esito positivo.</span><span class="sxs-lookup"><span data-stu-id="eac6d-162">Forces all dependencies to be resolved even if the last restore was successful.</span></span> <span data-ttu-id="eac6d-163">La specifica di questo flag equivale all'eliminazione del file *project.assets.json*.</span><span class="sxs-lookup"><span data-stu-id="eac6d-163">Specifying this flag is the same as deleting the *project.assets.json* file.</span></span>
-
-`-h|--help`
-
-<span data-ttu-id="eac6d-164">Stampa una breve guida per il comando.</span><span class="sxs-lookup"><span data-stu-id="eac6d-164">Prints out a short help for the command.</span></span>
-
-`--launch-profile <NAME>`
-
-<span data-ttu-id="eac6d-165">Il nome del profilo di avvio, se presente, da usare all'avvio dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="eac6d-165">The name of the launch profile (if any) to use when launching the application.</span></span> <span data-ttu-id="eac6d-166">I profili di avvio vengono definiti nel file *launchSettings.json* e in genere vengono denominati `Development`, `Staging` e `Production`.</span><span class="sxs-lookup"><span data-stu-id="eac6d-166">Launch profiles are defined in the *launchSettings.json* file and are typically called `Development`, `Staging`, and `Production`.</span></span> <span data-ttu-id="eac6d-167">Per altre informazioni, vedere [Working with multiple environments](/aspnet/core/fundamentals/environments) (Utilizzo con più ambienti).</span><span class="sxs-lookup"><span data-stu-id="eac6d-167">For more information, see [Working with multiple environments](/aspnet/core/fundamentals/environments).</span></span>
-
-`--no-build`
-
-<span data-ttu-id="eac6d-168">Non compila il progetto prima dell'esecuzione.</span><span class="sxs-lookup"><span data-stu-id="eac6d-168">Doesn't build the project before running.</span></span> <span data-ttu-id="eac6d-169">Imposta anche in modo implicito il flag `--no-restore`.</span><span class="sxs-lookup"><span data-stu-id="eac6d-169">It also implicit sets the `--no-restore` flag.</span></span>
-
-`--no-dependencies`
-
-<span data-ttu-id="eac6d-170">Durante il ripristino di un progetto con riferimenti da progetto a progetto, ripristina il progetto radice e non i riferimenti.</span><span class="sxs-lookup"><span data-stu-id="eac6d-170">When restoring a project with project-to-project (P2P) references, restores the root project and not the references.</span></span>
-
-`--no-launch-profile`
-
-<span data-ttu-id="eac6d-171">Non tenta di usare *launchSettings.json* per configurare l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="eac6d-171">Doesn't try to use *launchSettings.json* to configure the application.</span></span>
-
-`--no-restore`
-
-<span data-ttu-id="eac6d-172">Non esegue un ripristino implicito quando si esegue il comando.</span><span class="sxs-lookup"><span data-stu-id="eac6d-172">Doesn't execute an implicit restore when running the command.</span></span>
-
-`-p|--project <PATH>`
-
-<span data-ttu-id="eac6d-173">Specifica il percorso del file di progetto da eseguire: nome della cartella o percorso completo.</span><span class="sxs-lookup"><span data-stu-id="eac6d-173">Specifies the path of the project file to run (folder name or full path).</span></span> <span data-ttu-id="eac6d-174">Se non specificato, per impostazione predefinita il percorso corrisponde alla directory corrente.</span><span class="sxs-lookup"><span data-stu-id="eac6d-174">If not specified, it defaults to the current directory.</span></span>
-
-`--runtime <RUNTIME_IDENTIFIER>`
-
-<span data-ttu-id="eac6d-175">Specifica il runtime di destinazione per cui ripristinare i pacchetti.</span><span class="sxs-lookup"><span data-stu-id="eac6d-175">Specifies the target runtime to restore packages for.</span></span> <span data-ttu-id="eac6d-176">Per un elenco degli identificatori di runtime (RID, Runtime Identifier), vedere il [catalogo RID](../rid-catalog.md).</span><span class="sxs-lookup"><span data-stu-id="eac6d-176">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span>
-
-`-v|--verbosity <LEVEL>`
-
-<span data-ttu-id="eac6d-177">Imposta il livello di dettaglio del comando.</span><span class="sxs-lookup"><span data-stu-id="eac6d-177">Sets the verbosity level of the command.</span></span> <span data-ttu-id="eac6d-178">I valori consentiti sono `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="eac6d-178">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
-
-# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="eac6d-179">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="eac6d-179">.NET Core 2.0</span></span>](#tab/netcore20)
-
-`--`
-
-<span data-ttu-id="eac6d-180">Delimita gli argomenti a `dotnet run` dagli argomenti per l'applicazione in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="eac6d-180">Delimits arguments to `dotnet run` from arguments for the application being run.</span></span> <span data-ttu-id="eac6d-181">Tutti gli argomenti dopo questo delimitatore vengono passati all'applicazione in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="eac6d-181">All arguments after this delimiter are passed to the application run.</span></span>
-
-`-c|--configuration {Debug|Release}`
-
-<span data-ttu-id="eac6d-182">Definisce la configurazione di compilazione.</span><span class="sxs-lookup"><span data-stu-id="eac6d-182">Defines the build configuration.</span></span> <span data-ttu-id="eac6d-183">Il valore predefinito per la maggior parte dei progetti è `Debug`.</span><span class="sxs-lookup"><span data-stu-id="eac6d-183">The default for most projects value is `Debug`.</span></span>
-
-`-f|--framework <FRAMEWORK>`
-
-<span data-ttu-id="eac6d-184">Compila ed esegue l'app usando il [framework](../../standard/frameworks.md) specificato.</span><span class="sxs-lookup"><span data-stu-id="eac6d-184">Builds and runs the app using the specified [framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="eac6d-185">Il framework deve essere specificato nel file di progetto.</span><span class="sxs-lookup"><span data-stu-id="eac6d-185">The framework must be specified in the project file.</span></span>
-
-`--force`
-
-<span data-ttu-id="eac6d-186">Forza la risoluzione di tutte le dipendenze, anche se l'ultimo ripristino ha avuto esito positivo.</span><span class="sxs-lookup"><span data-stu-id="eac6d-186">Forces all dependencies to be resolved even if the last restore was successful.</span></span> <span data-ttu-id="eac6d-187">La specifica di questo flag equivale all'eliminazione del file *project.assets.json*.</span><span class="sxs-lookup"><span data-stu-id="eac6d-187">Specifying this flag is the same as deleting the *project.assets.json* file.</span></span>
-
-`-h|--help`
-
-<span data-ttu-id="eac6d-188">Stampa una breve guida per il comando.</span><span class="sxs-lookup"><span data-stu-id="eac6d-188">Prints out a short help for the command.</span></span>
-
-`--launch-profile <NAME>`
-
-<span data-ttu-id="eac6d-189">Il nome del profilo di avvio, se presente, da usare all'avvio dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="eac6d-189">The name of the launch profile (if any) to use when launching the application.</span></span> <span data-ttu-id="eac6d-190">I profili di avvio vengono definiti nel file *launchSettings.json* e in genere vengono denominati `Development`, `Staging` e `Production`.</span><span class="sxs-lookup"><span data-stu-id="eac6d-190">Launch profiles are defined in the *launchSettings.json* file and are typically called `Development`, `Staging`, and `Production`.</span></span> <span data-ttu-id="eac6d-191">Per altre informazioni, vedere [Working with multiple environments](/aspnet/core/fundamentals/environments) (Utilizzo con più ambienti).</span><span class="sxs-lookup"><span data-stu-id="eac6d-191">For more information, see [Working with multiple environments](/aspnet/core/fundamentals/environments).</span></span>
-
-`--no-build`
-
-<span data-ttu-id="eac6d-192">Non compila il progetto prima dell'esecuzione.</span><span class="sxs-lookup"><span data-stu-id="eac6d-192">Doesn't build the project before running.</span></span> <span data-ttu-id="eac6d-193">Imposta anche in modo implicito il flag `--no-restore`.</span><span class="sxs-lookup"><span data-stu-id="eac6d-193">It also implicit sets the `--no-restore` flag.</span></span>
-
-`--no-dependencies`
-
-<span data-ttu-id="eac6d-194">Durante il ripristino di un progetto con riferimenti da progetto a progetto, ripristina il progetto radice e non i riferimenti.</span><span class="sxs-lookup"><span data-stu-id="eac6d-194">When restoring a project with project-to-project (P2P) references, restores the root project and not the references.</span></span>
-
-`--no-launch-profile`
-
-<span data-ttu-id="eac6d-195">Non tenta di usare *launchSettings.json* per configurare l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="eac6d-195">Doesn't try to use *launchSettings.json* to configure the application.</span></span>
-
-`--no-restore`
-
-<span data-ttu-id="eac6d-196">Non esegue un ripristino implicito quando si esegue il comando.</span><span class="sxs-lookup"><span data-stu-id="eac6d-196">Doesn't execute an implicit restore when running the command.</span></span>
-
-`-p|--project <PATH>`
-
-<span data-ttu-id="eac6d-197">Specifica il percorso del file di progetto da eseguire: nome della cartella o percorso completo.</span><span class="sxs-lookup"><span data-stu-id="eac6d-197">Specifies the path of the project file to run (folder name or full path).</span></span> <span data-ttu-id="eac6d-198">Se non specificato, per impostazione predefinita il percorso corrisponde alla directory corrente.</span><span class="sxs-lookup"><span data-stu-id="eac6d-198">If not specified, it defaults to the current directory.</span></span>
-
-`--runtime <RUNTIME_IDENTIFIER>`
-
-<span data-ttu-id="eac6d-199">Specifica il runtime di destinazione per cui ripristinare i pacchetti.</span><span class="sxs-lookup"><span data-stu-id="eac6d-199">Specifies the target runtime to restore packages for.</span></span> <span data-ttu-id="eac6d-200">Per un elenco degli identificatori di runtime (RID, Runtime Identifier), vedere il [catalogo RID](../rid-catalog.md).</span><span class="sxs-lookup"><span data-stu-id="eac6d-200">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span>
-
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="eac6d-201">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="eac6d-201">.NET Core 1.x</span></span>](#tab/netcore1x)
-
-`--`
-
-<span data-ttu-id="eac6d-202">Delimita gli argomenti a `dotnet run` dagli argomenti per l'applicazione in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="eac6d-202">Delimits arguments to `dotnet run` from arguments for the application being run.</span></span> <span data-ttu-id="eac6d-203">Tutti gli argomenti dopo questo delimitatore vengono passati all'applicazione in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="eac6d-203">All arguments after this delimiter are passed to the application run.</span></span>
-
-`-c|--configuration {Debug|Release}`
-
-<span data-ttu-id="eac6d-204">Definisce la configurazione di compilazione.</span><span class="sxs-lookup"><span data-stu-id="eac6d-204">Defines the build configuration.</span></span> <span data-ttu-id="eac6d-205">Il valore predefinito per la maggior parte dei progetti è `Debug`.</span><span class="sxs-lookup"><span data-stu-id="eac6d-205">The default value for most projects is `Debug`.</span></span>
-
-`-f|--framework <FRAMEWORK>`
-
-<span data-ttu-id="eac6d-206">Compila ed esegue l'app usando il [framework](../../standard/frameworks.md) specificato.</span><span class="sxs-lookup"><span data-stu-id="eac6d-206">Builds and runs the app using the specified [framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="eac6d-207">Il framework deve essere specificato nel file di progetto.</span><span class="sxs-lookup"><span data-stu-id="eac6d-207">The framework must be specified in the project file.</span></span>
-
-`-h|--help`
-
-<span data-ttu-id="eac6d-208">Stampa una breve guida per il comando.</span><span class="sxs-lookup"><span data-stu-id="eac6d-208">Prints out a short help for the command.</span></span>
-
-`-p|--project <PATH/PROJECT.csproj>`
-
-<span data-ttu-id="eac6d-209">Specifica il percorso e il nome del file di progetto.</span><span class="sxs-lookup"><span data-stu-id="eac6d-209">Specifies the path and name of the project file.</span></span> <span data-ttu-id="eac6d-210">(Vedere la nota). Se non specificato, viene impostato come predefinito la directory corrente.</span><span class="sxs-lookup"><span data-stu-id="eac6d-210">(See the NOTE.) If not specified, it defaults to the current directory.</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="eac6d-211">Usare il percorso e il nome del file di progetto con l'opzione `-p|--project`.</span><span class="sxs-lookup"><span data-stu-id="eac6d-211">Use the path and name of the project file with the `-p|--project` option.</span></span> <span data-ttu-id="eac6d-212">Una regressione nell'interfaccia della riga di comando impedisce di specificare un percorso di cartella con .NET Core SDK 1.x.</span><span class="sxs-lookup"><span data-stu-id="eac6d-212">A regression in the CLI prevents providing a folder path with .NET Core SDK 1.x.</span></span> <span data-ttu-id="eac6d-213">Per altre informazioni su questo problema, vedere [dotnet run -p, can not start a project (dotnet/cli #5992)](https://github.com/dotnet/cli/issues/5992) (dotnet run -p, non è possibile avviare un progetto (dotnet/cli #5992)).</span><span class="sxs-lookup"><span data-stu-id="eac6d-213">For more information about this issue, see [dotnet run -p, can not start a project (dotnet/cli #5992)](https://github.com/dotnet/cli/issues/5992).</span></span>
-
----
-
-## <a name="examples"></a><span data-ttu-id="eac6d-214">Esempi</span><span class="sxs-lookup"><span data-stu-id="eac6d-214">Examples</span></span>
-
-<span data-ttu-id="eac6d-215">Eseguire il progetto nella directory corrente:</span><span class="sxs-lookup"><span data-stu-id="eac6d-215">Run the project in the current directory:</span></span>
-
-`dotnet run`
-
-<span data-ttu-id="eac6d-216">Eseguire il progetto specificato:</span><span class="sxs-lookup"><span data-stu-id="eac6d-216">Run the specified project:</span></span>
-
-`dotnet run --project ./projects/proj1/proj1.csproj`
-
-<span data-ttu-id="eac6d-217">Eseguire il progetto nella directory corrente. L'argomento `--help` in questo esempio viene passato all'applicazione perché viene usata l'opzione `--` vuota:</span><span class="sxs-lookup"><span data-stu-id="eac6d-217">Run the project in the current directory (the `--help` argument in this example is passed to the application, since the blank `--` option is used):</span></span>
-
-`dotnet run --configuration Release -- --help`
-
-<span data-ttu-id="eac6d-218">Ripristinare le dipendenze e gli strumenti per il progetto nella directory corrente visualizzando solo il risultato minimo, quindi eseguire il progetto: (.NET Core SDK 2.0 e versioni successive):</span><span class="sxs-lookup"><span data-stu-id="eac6d-218">Restore dependencies and tools for the project in the current directory only showing minimal output and then run the project: (.NET Core SDK 2.0 and later versions):</span></span>
-
-`dotnet run --verbosity m`
+  ```dotnetcli
+  dotnet run --verbosity m
+  ```
