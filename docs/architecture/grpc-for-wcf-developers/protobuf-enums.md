@@ -2,18 +2,20 @@
 title: Enumerazioni protobuf-gRPC per sviluppatori WCF
 description: Informazioni su come dichiarare e usare le enumerazioni in protobuf.
 ms.date: 09/09/2019
-ms.openlocfilehash: 4ea4d03bede2a9ebfd1f2c3ee56f299e918800e9
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 01cf4a4e5e0eda1e7ddff2a6780119fcb3120dad
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971581"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543144"
 ---
 # <a name="protobuf-enumerations"></a>Enumerazioni protobuf
 
-Protobuf supporta i tipi di enumerazione, come illustrato nella sezione precedente, in cui è stata usata un'enumerazione per determinare il tipo di un campo `oneof`. È possibile definire tipi di enumerazione personalizzati e protobuf li compilerà C# ai tipi enum. Poiché protobuf può essere usato con lingue diverse, le convenzioni di denominazione per le enumerazioni sono C# diverse dalle convenzioni. Tuttavia, il generatore di codice è intelligente e converte i nomi nel caso C# tradizionale. Se l'equivalente del case Pascal del nome del campo inizia con il nome dell'enumerazione, viene rimosso.
+Protobuf supporta i tipi di enumerazione. Questo supporto è stato visualizzato nella sezione precedente, in cui è stata usata un'enumerazione per determinare il tipo di un campo di `Oneof`. È possibile definire tipi di enumerazione personalizzati e protobuf li compilerà ai C# tipi enum. 
 
-Ad esempio, in questa enumerazione protobuf i campi sono preceduti da `ACCOUNT_STATUS`, che equivale al nome enum del case Pascal: `AccountStatus`.
+Poiché è possibile utilizzare protobuf con diversi linguaggi, le convenzioni di denominazione per le enumerazioni sono C# diverse dalle convenzioni. Tuttavia, il generatore di codice converte i nomi nel caso C# tradizionale. Se l'equivalente del case Pascal del nome del campo inizia con il nome dell'enumerazione, viene rimosso.
+
+Nell'enumerazione protobuf seguente, ad esempio, i campi sono preceduti dal prefisso `ACCOUNT_STATUS`. Questo prefisso è equivalente al nome dell'enumerazione del case Pascal, `AccountStatus`.
 
 ```protobuf
 enum AccountStatus {
@@ -25,7 +27,7 @@ enum AccountStatus {
 }
 ```
 
-Il generatore crea quindi un' C# enumerazione equivalente al codice seguente:
+Il generatore crea un' C# enumerazione equivalente al codice seguente:
 
 ```csharp
 public enum AccountStatus
@@ -38,7 +40,7 @@ public enum AccountStatus
 }
 ```
 
-Le definizioni di enumerazione protobuf **devono** avere una costante zero come primo campo. Come in C#, è possibile dichiarare più campi con lo stesso valore, ma è necessario abilitare questa opzione in modo esplicito tramite l'opzione `allow_alias` nell'enumerazione:
+Le definizioni di enumerazione protobuf *devono* avere una costante zero come primo campo. Come in C#, è possibile dichiarare più campi con lo stesso valore. Tuttavia, è necessario abilitare questa opzione in modo esplicito tramite l'opzione `allow_alias` nell'enumerazione:
 
 ```protobuf
 enum AccountStatus {
@@ -70,7 +72,7 @@ message Product {
 }
 ```
 
-Se si imposta `product.AvailableIn` su `Region.NorthAmerica | Region.SouthAmerica`, questo viene serializzato come valore integer `3`. Quando un client o un server tenta di deserializzare il valore, non troverà una corrispondenza nella definizione di enumerazione per `3` e il risultato verrà `Region.None`.
+Se si imposta `product.AvailableIn` su `Region.NorthAmerica | Region.SouthAmerica`, questo viene serializzato come valore integer `3`. Quando un client o un server tenta di deserializzare il valore, non troverà una corrispondenza nella definizione di enumerazione per `3`. Il risultato sarà `Region.None`.
 
 Il modo migliore per lavorare con più valori enum in protobuf consiste nell'usare un campo `repeated` di tipo enum.
 

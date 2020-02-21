@@ -1,17 +1,17 @@
 ---
 title: Protobuf Maps for dictionarys-gRPC per sviluppatori WCF
-description: Informazioni su come usare le mappe protobuf per rappresentare. Tipi di dizionario di NET.
+description: Informazioni su come usare le mappe protobuf per rappresentare i tipi di dizionario in .NET.
 ms.date: 09/09/2019
-ms.openlocfilehash: 8b4f29daa263f329dc533d3ddc596d0f47c1b6e0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: bf848bbc7e3618f6d78e280fcd85d5eb88d5cfae
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967418"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543131"
 ---
 # <a name="protobuf-maps-for-dictionaries"></a>Mappe protobuf per i dizionari
 
-È importante essere in grado di rappresentare raccolte arbitrarie di valori denominati nei messaggi. In .NET questo viene comunemente gestito con i tipi di dizionario. L'equivalente di protobuf del tipo di <xref:System.Collections.Generic.IDictionary%602> .NET è il tipo di `map<key_type, value_type>`. In questa sezione viene illustrato come dichiarare un `map` in protobuf e come utilizzare il codice generato.
+È importante essere in grado di rappresentare raccolte arbitrarie di valori denominati nei messaggi. In .NET, questo viene comunemente gestito tramite i tipi di dizionario. L'equivalente del tipo di <xref:System.Collections.Generic.IDictionary%602> .NET nel buffer del protocollo (protobuf) è il tipo di `map<key_type, value_type>`. In questa sezione viene illustrato come dichiarare un tipo di `map` in protobuf e come utilizzare il codice generato.
 
 ```protobuf
 message StockPrices {
@@ -19,9 +19,9 @@ message StockPrices {
 }
 ```
 
-Nel codice generato `map` campi utilizzano la classe `Google.Protobuf.Collections.MapField<TKey, TValue>`, che implementa le interfacce di raccolta .NET standard, incluso <xref:System.Collections.Generic.IDictionary%602>.
+Nel codice generato `map` campi utilizzano la classe `Google.Protobuf.Collections.MapField<TKey, TValue>`. Questa classe implementa le interfacce della raccolta .NET standard, incluso <xref:System.Collections.Generic.IDictionary%602>.
 
-I campi mappa non possono essere ripetuti direttamente nella definizione di un messaggio, ma è possibile creare un messaggio annidato contenente una mappa e utilizzare `repeated` per il tipo di messaggio, come nell'esempio seguente:
+I campi mappa non possono essere ripetuti direttamente in una definizione di messaggio. È tuttavia possibile creare un messaggio annidato contenente una mappa e utilizzare `repeated` sul tipo di messaggio, come nell'esempio seguente:
 
 ```protobuf
 message Order {

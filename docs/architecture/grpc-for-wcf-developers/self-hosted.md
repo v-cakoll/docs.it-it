@@ -2,12 +2,12 @@
 title: Applicazioni gRPC self-hosted-gRPC per sviluppatori WCF
 description: Distribuzione di ASP.NET Core applicazioni gRPC come servizi indipendenti.
 ms.date: 09/02/2019
-ms.openlocfilehash: 2244f161ad4b5d60138ae0f7b4d6a9c8c8829aa8
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: ee370ba1893b060505b38ddf84235bd84433ad32
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503395"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77542989"
 ---
 # <a name="self-hosted-grpc-applications"></a>Applicazioni gRPC indipendenti
 
@@ -90,6 +90,7 @@ A questo punto, pubblicare l'applicazione. L'applicazione può essere dipendente
   ```dotnetcli
   dotnet publish -c Release -r linux-x64 -o ./publish
   ```
+  
 Copiare il contenuto completo della directory `publish` in una cartella di installazione nell'host Linux. Per la registrazione del servizio è necessario aggiungere un file speciale, denominato *file di unità*, alla directory `/etc/systemd/system`. È necessario disporre dell'autorizzazione radice per creare un file in questa cartella. Assegnare un nome al file con l'identificatore che si desidera utilizzare `systemd` e l'estensione `.service`. Ad esempio, usare `/etc/systemd/system/myapp.service`.
 
 Il file del servizio usa il formato INI, come illustrato in questo esempio:

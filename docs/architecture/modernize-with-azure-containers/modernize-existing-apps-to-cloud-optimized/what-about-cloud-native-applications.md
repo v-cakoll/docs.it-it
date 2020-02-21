@@ -2,12 +2,12 @@
 title: Informazioni sulle app cloud native
 description: Modernizzare le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows | Cosa accade per le applicazioni native del cloud?
 ms.date: 04/28/2018
-ms.openlocfilehash: cf4c3b24a4eeb62ed84a5fccb294b675d38fcc36
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: d2a7f89e347d75ddbdae84c8eb57e32447b83297
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "72318429"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543547"
 ---
 # <a name="what-about-cloud-native-applications"></a>Informazioni sulle app cloud native
 
@@ -41,7 +41,10 @@ L' [app a dodici fattori](https://12factor.net/) (una raccolta di modelli strett
 
 [Cloud native Computing Foundation (CNCF)](https://www.cncf.io/) è un promotore primario di principi nativi del cloud. Microsoft è [membro di CNCF](https://azure.microsoft.com/blog/announcing-cncf/).
 
-Per una definizione di esempio e per altre informazioni sulle caratteristiche delle applicazioni native del cloud, vedere l'articolo di Gartner [How to Architect and Design cloud-native applications](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications). Per indicazioni specifiche da Microsoft su come implementare un'applicazione nativa del cloud, vedere [microservizi .NET: architettura per le applicazioni .NET in contenitori](https://aka.ms/microservicesebook).
+Per istruzioni dettagliate su come progettare e sviluppare applicazioni native del cloud, leggere gli e-book gratuiti seguenti:
+
+* [Architettura di applicazioni .NET native del cloud per Azure](../../cloud-native/introduction.md)
+* [Microservizi .NET: architettura per le applicazioni .NET in contenitori](../../microservices/index.md).
 
 Il fattore più importante da considerare quando si esegue la migrazione di un'applicazione completa al modello nativo del cloud è che è necessario riprogettare un'architettura basata su microservizi. Questa operazione richiede chiaramente un investimento significativo nello sviluppo a causa del notevole processo di refactoring. Questa opzione viene in genere scelta per le applicazioni cruciali che necessitano di nuovi livelli di scalabilità e agilità a lungo termine. Tuttavia, è possibile iniziare a passare a native del cloud aggiungendo microservizi per alcuni nuovi scenari e infine effettuare il refactoring dell'applicazione come microservizi. Si tratta di un approccio incrementale che rappresenta la scelta migliore per alcuni scenari.
 
