@@ -4,12 +4,12 @@ description: Informazioni su come distribuire un'applicazione .NET per Apache Sp
 ms.date: 01/23/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 76a150879324640352aa36f753ec3d6e7342bcaf
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 77b57463375c36444532bdd383ec4b3bfe3ab056
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76860778"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504172"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>Esercitazione: distribuire un'applicazione .NET per Apache Spark in Azure HDInsight
 
@@ -44,10 +44,10 @@ Prima di iniziare, eseguire le attività seguenti:
 
    Dopo aver eseguito l'accesso, verranno visualizzati tutti gli account di archiviazione disponibili e tutte le risorse caricate negli account di archiviazione.
 
-## <a name="create-an-hdinsight-cluster"></a>Creare un cluster HDInsight
+## <a name="create-an-hdinsight-cluster"></a>Creazione di un cluster HDInsight
 
 > [!IMPORTANT]
-> La fatturazione per i cluster HDInsight viene rivalutata al minuto, anche se non vengono usate. Assicurarsi di eliminare il cluster al termine dell'uso. Per ulteriori informazioni, vedere la sezione [Pulisci risorse in](#clean-up-resources) questa esercitazione.
+> La fatturazione per i cluster HDInsight viene rivalutata al minuto, anche se non vengono usate. Assicurarsi di eliminare il cluster dopo aver finito di usarlo. Per ulteriori informazioni, vedere la sezione [Pulisci risorse in](#clean-up-resources) questa esercitazione.
 
 1. Visitare il [portale di Azure](https://portal.azure.com).
 
@@ -55,30 +55,30 @@ Prima di iniziare, eseguire le attività seguenti:
 
     ![Creare una risorsa HDInsight da portale di Azure](./media/hdinsight-deployment/create-hdinsight-resource.png)
 
-3. In **nozioni di base**specificare i valori seguenti:
+3. In **Informazioni di base** specificare i valori seguenti:
 
-    |Gli  |Descrizione  |
+    |Proprietà  |Descrizione  |
     |---------|---------|
     |Sottoscrizione  | Dall'elenco a discesa scegliere una delle sottoscrizioni di Azure attive. |
-    |Gruppo di risorse | Specificare se si vuole creare un nuovo gruppo di risorse o utilizzarne uno esistente. Un gruppo di risorse è un contenitore che include le risorse correlate per una soluzione di Azure. |
+    |Gruppo di risorse | Specificare se si vuole creare un nuovo gruppo di risorse o usarne uno esistente. Un gruppo di risorse è un contenitore con risorse correlate per una soluzione Azure. |
     |Nome del cluster | Assegnare un nome al cluster HDInsight Spark.|
-    |Percorso   | Selezionare una località per il gruppo di risorse. Il modello usa questo percorso per creare il cluster e per l'archiviazione cluster predefinita. |
+    |Location   | Selezionare una posizione per il gruppo di risorse. Il modello usa questa posizione per la creazione del cluster e per l'archiviazione del cluster predefinita. |
     |Tipo di cluster| Selezionare **Spark** come tipo di cluster.|
-    |Versione cluster|Questo campo verrà automaticamente popolato con la versione predefinita dopo che è stato selezionato il tipo di cluster. Selezionare una versione 2,3 o 2,4 di Spark.|
-    |Nome utente di accesso del cluster| Immettere il nome utente di accesso del cluster.  Il nome predefinito è *admin*. |
-    |Password di accesso del cluster| Immettere una password di accesso. |
-    |Nome utente Secure Shell (SSH)| Immettere il nome utente SSH. Per impostazione predefinita, questo account condivide la stessa password dell'account *nome utente di accesso del cluster* . |
+    |Versione del cluster|Questo campo verrà automaticamente popolato con la versione predefinita dopo che è stato selezionato il tipo di cluster. Selezionare una versione 2,3 o 2,4 di Spark.|
+    |Nome utente dell'account di accesso del cluster| Immettere il nome utente dell'account di accesso del cluster.  Il nome predefinito è *admin*. |
+    |Password di accesso al cluster| Immettere una password di accesso. |
+    |Nome utente Secure Shell (SSH)| Immettere il nome utente SSH. Per impostazione predefinita, questo account condivide la stessa password dell'account *Nome utente dell'account di accesso del cluster*. |
 
-4. Selezionare **Avanti: archiviazione > >** per passare alla pagina **archiviazione** . In **archiviazione**specificare i valori seguenti:
+4. Selezionare **Avanti: archiviazione > >** per passare alla pagina **archiviazione** . In **Archiviazione** specificare i valori seguenti:
 
-    |Gli  |Descrizione  |
+    |Proprietà  |Descrizione  |
     |---------|---------|
-    |Tipo di archiviazione primario|Usare il valore predefinito **archiviazione di Azure**.|
-    |Metodo di selezione|Usare il valore predefinito **Select from list**.|
+    |Tipo di archiviazione primario|Usare il valore predefinito **Archiviazione di Azure**.|
+    |Metodo di selezione|Usare il valore predefinito **Selezionare dall'elenco**.|
     |Account di archiviazione primario|Scegliere la sottoscrizione e uno degli account di archiviazione attivi all'interno di tale sottoscrizione.|
     |Contenitore|Questo contenitore è il contenitore BLOB specifico nell'account di archiviazione in cui il cluster Cerca i file per l'esecuzione dell'app nel cloud. È possibile assegnargli qualsiasi nome disponibile.|
 
-5. In **Verifica + crea**selezionare **Crea**. La creazione del cluster richiede circa 20 minuti. Il cluster deve essere creato prima di continuare con il passaggio successivo.
+5. In **Rivedi e crea** selezionare **Crea**. La creazione del cluster richiede circa 20 minuti. Il cluster deve essere creato prima di continuare con il passaggio successivo.
 
 ## <a name="publish-your-app"></a>Pubblicare l'app
 
@@ -88,7 +88,7 @@ Successivamente, pubblicare il *mySparkApp* creato in [.NET per Apache Spark-int
 
    **In Windows:**
 
-   ```console
+   ```dotnetcli
    cd mySparkApp
    dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x64
    ```
@@ -148,13 +148,13 @@ Quando il cluster è in esecuzione e i file sono stati caricati in Azure, si ese
 
 2. Selezionare **+ Invia nuovo** e specificare i valori seguenti:
 
-   |Gli  |Descrizione  |
+   |Proprietà  |Descrizione  |
    |---------|---------|
    | Tipo di script |Personalizzato|
    | Name | Installare il ruolo di lavoro|
-   | URI script bash |https://mystorageaccount.blob.core.windows.net/mycontainer/install-worker.sh </br> Per confermare questo URI, fare clic con il pulsante destro del mouse su install-worker.sh in Azure Storage Explorer e scegliere Proprietà. |
-   | Tipi di nodo| Worker|
-   | Parametri | Azure </br> wasbs://mycontainer@myStorageAccount.blob.core.windows.net/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz </br> /usr/local/bin
+   | URI script Bash |https://mystorageaccount.blob.core.windows.net/mycontainer/install-worker.sh </br> Per confermare questo URI, fare clic con il pulsante destro del mouse su install-worker.sh in Azure Storage Explorer e scegliere Proprietà. |
+   | Tipo/i di nodo| Worker|
+   | Parametri | azure </br> wasbs://mycontainer@myStorageAccount.blob.core.windows.net/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz </br> /usr/local/bin
 
 3. Selezionare **Crea** per inviare lo script.
 
@@ -178,9 +178,9 @@ Quando il cluster è in esecuzione e i file sono stati caricati in Azure, si ese
 
 ## <a name="clean-up-resources"></a>Pulire le risorse
 
-HDInsight Salva i dati in archiviazione di Azure, in modo da poter eliminare in modo sicuro un cluster quando non è in uso. Viene anche addebitato un cluster HDInsight, anche se non è in uso. Poiché gli addebiti per il cluster sono molti volte maggiori rispetto agli addebiti per l'archiviazione, è opportuno eliminare i cluster quando non sono in uso.
+HDInsight Salva i dati in archiviazione di Azure, in modo da poter eliminare in modo sicuro un cluster quando non è in uso. Vengono addebitati i costi anche per i cluster HDInsight che non sono in uso. Poiché i costi per il cluster sono decisamente superiori a quelli per l'archiviazione, economicamente ha senso eliminare i cluster quando non vengono usati.
 
-È anche possibile selezionare il nome del gruppo di risorse per aprire la pagina del gruppo di risorse e quindi selezionare **Elimina gruppo di risorse**. Eliminando il gruppo di risorse, si eliminano sia il cluster HDInsight Spark che l'account di archiviazione predefinito.
+È anche possibile selezionare il nome del gruppo di risorse per aprire la pagina del gruppo di risorse e quindi selezionare **Elimina gruppo di risorse**. Eliminando il gruppo di risorse, si elimina sia il cluster HDInsight Spark che l'account di archiviazione predefinito.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
