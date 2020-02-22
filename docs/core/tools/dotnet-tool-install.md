@@ -1,99 +1,118 @@
 ---
 title: Comando dotnet tool install
-description: Il comando dotnet tool install installa lo strumento globale .NET Core specificato nel computer.
-ms.date: 05/29/2018
-ms.openlocfilehash: d6f691117e93a39c9837b282dca19e452515c80a
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+description: Il comando DotNet tool install installa lo strumento .NET Core specificato nel computer.
+ms.date: 02/14/2020
+ms.openlocfilehash: 2705defe9b77009ca1411da28dd86d144ccc19e6
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117468"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543469"
 ---
-# <a name="dotnet-tool-install"></a><span data-ttu-id="afe7b-103">dotnet tool install</span><span class="sxs-lookup"><span data-stu-id="afe7b-103">dotnet tool install</span></span>
+# <a name="dotnet-tool-install"></a><span data-ttu-id="5cf6b-103">dotnet tool install</span><span class="sxs-lookup"><span data-stu-id="5cf6b-103">dotnet tool install</span></span>
 
-[!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
+<span data-ttu-id="5cf6b-104">**Questo articolo si applica a:** ✔️ .net core 2,1 SDK e versioni successive</span><span class="sxs-lookup"><span data-stu-id="5cf6b-104">**This article applies to:** ✔️ .NET Core 2.1 SDK and later versions</span></span>
 
-## <a name="name"></a><span data-ttu-id="afe7b-104">nome</span><span class="sxs-lookup"><span data-stu-id="afe7b-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="5cf6b-105">Nome</span><span class="sxs-lookup"><span data-stu-id="5cf6b-105">Name</span></span>
 
-<span data-ttu-id="afe7b-105">`dotnet tool install` - Installa lo [strumento globale .NET Core](global-tools.md) specificato nel computer.</span><span class="sxs-lookup"><span data-stu-id="afe7b-105">`dotnet tool install` - Installs the specified [.NET Core Global Tool](global-tools.md) on your machine.</span></span>
+<span data-ttu-id="5cf6b-106">`dotnet tool install`: installa lo [strumento .NET Core](global-tools.md) specificato nel computer.</span><span class="sxs-lookup"><span data-stu-id="5cf6b-106">`dotnet tool install` - Installs the specified [.NET Core tool](global-tools.md) on your machine.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="afe7b-106">Riepilogo</span><span class="sxs-lookup"><span data-stu-id="afe7b-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="5cf6b-107">Riepilogo</span><span class="sxs-lookup"><span data-stu-id="5cf6b-107">Synopsis</span></span>
 
 ```dotnetcli
 dotnet tool install <PACKAGE_NAME> <-g|--global> [--add-source] [--configfile] [--framework] [-v|--verbosity] [--version]
 dotnet tool install <PACKAGE_NAME> <--tool-path> [--add-source] [--configfile] [--framework] [-v|--verbosity] [--version]
+dotnet tool install <PACKAGE_NAME> [--add-source] [--configfile] [--framework] [-v|--verbosity] [--version]
 dotnet tool install <-h|--help>
 ```
 
-## <a name="description"></a><span data-ttu-id="afe7b-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="afe7b-107">Description</span></span>
+## <a name="description"></a><span data-ttu-id="5cf6b-108">Descrizione</span><span class="sxs-lookup"><span data-stu-id="5cf6b-108">Description</span></span>
 
-<span data-ttu-id="afe7b-108">Il comando `dotnet tool install` consente di installare gli strumenti globali .NET Core nel computer.</span><span class="sxs-lookup"><span data-stu-id="afe7b-108">The `dotnet tool install` command provides a way for you to install .NET Core Global Tools on your machine.</span></span> <span data-ttu-id="afe7b-109">Per usare il comando, è necessario specificare che si vuole un'installazione a livello utente con l'opzione `--global` oppure specificare un percorso per l'installazione con l'opzione `--tool-path`.</span><span class="sxs-lookup"><span data-stu-id="afe7b-109">To use the command, you either have to specify that you want a user-wide installation using the `--global` option or you specify a path to install it using the `--tool-path` option.</span></span>
+<span data-ttu-id="5cf6b-109">Il comando `dotnet tool install` consente di installare gli strumenti di .NET Core nel computer.</span><span class="sxs-lookup"><span data-stu-id="5cf6b-109">The `dotnet tool install` command provides a way for you to install .NET Core tools on your machine.</span></span> <span data-ttu-id="5cf6b-110">Per utilizzare il comando, è necessario specificare una delle opzioni di installazione seguenti:</span><span class="sxs-lookup"><span data-stu-id="5cf6b-110">To use the command, you specify one of the following installation options:</span></span>
 
-<span data-ttu-id="afe7b-110">Gli strumenti globali vengono installati nelle directory seguenti per impostazione predefinita quando si specifica l'opzione `-g` (o `--global`):</span><span class="sxs-lookup"><span data-stu-id="afe7b-110">Global Tools are installed in the following directories by default when you specify the `-g` (or `--global`) option:</span></span>
+* <span data-ttu-id="5cf6b-111">Per installare uno strumento globale nel percorso predefinito, usare l'opzione `--tool-path`.</span><span class="sxs-lookup"><span data-stu-id="5cf6b-111">To install a global tool in the default location, use the `--tool-path` option.</span></span>
+* <span data-ttu-id="5cf6b-112">Per installare uno strumento globale in un percorso personalizzato, utilizzare l'opzione `--tool-path`.</span><span class="sxs-lookup"><span data-stu-id="5cf6b-112">To install a global tool in a custom location,  use the `--tool-path` option.</span></span>
+* <span data-ttu-id="5cf6b-113">Per installare uno strumento locale, omettere le opzioni `--global` e `--tool-path`.</span><span class="sxs-lookup"><span data-stu-id="5cf6b-113">To install a local tool, omit the `--global` and `--tool-path` options.</span></span>
 
-| <span data-ttu-id="afe7b-111">Sistema operativo</span><span class="sxs-lookup"><span data-stu-id="afe7b-111">OS</span></span>          | <span data-ttu-id="afe7b-112">Path</span><span class="sxs-lookup"><span data-stu-id="afe7b-112">Path</span></span>                          |
+<span data-ttu-id="5cf6b-114">**Gli strumenti locali sono disponibili a partire da .NET Core SDK 3,0.**</span><span class="sxs-lookup"><span data-stu-id="5cf6b-114">**Local tools are available starting with .NET Core SDK 3.0.**</span></span>
+
+<span data-ttu-id="5cf6b-115">Per impostazione predefinita, gli strumenti globali vengono installati nelle directory seguenti quando si specifica l'opzione `-g` o `--global`:</span><span class="sxs-lookup"><span data-stu-id="5cf6b-115">Global tools are installed in the following directories by default when you specify the `-g` or `--global` option:</span></span>
+
+| <span data-ttu-id="5cf6b-116">OS</span><span class="sxs-lookup"><span data-stu-id="5cf6b-116">OS</span></span>          | <span data-ttu-id="5cf6b-117">Path</span><span class="sxs-lookup"><span data-stu-id="5cf6b-117">Path</span></span>                          |
 |-------------|-------------------------------|
-| <span data-ttu-id="afe7b-113">Linux/macOS</span><span class="sxs-lookup"><span data-stu-id="afe7b-113">Linux/macOS</span></span> | `$HOME/.dotnet/tools`         |
-| <span data-ttu-id="afe7b-114">WINDOWS</span><span class="sxs-lookup"><span data-stu-id="afe7b-114">Windows</span></span>     | `%USERPROFILE%\.dotnet\tools` |
+| <span data-ttu-id="5cf6b-118">Linux/macOS</span><span class="sxs-lookup"><span data-stu-id="5cf6b-118">Linux/macOS</span></span> | `$HOME/.dotnet/tools`         |
+| <span data-ttu-id="5cf6b-119">Windows</span><span class="sxs-lookup"><span data-stu-id="5cf6b-119">Windows</span></span>     | `%USERPROFILE%\.dotnet\tools` |
 
-## <a name="arguments"></a><span data-ttu-id="afe7b-115">Argomenti</span><span class="sxs-lookup"><span data-stu-id="afe7b-115">Arguments</span></span>
+<span data-ttu-id="5cf6b-120">Gli strumenti locali vengono aggiunti a un file con estensione *JSON dello strumento* in una directory *. config* nella directory corrente.</span><span class="sxs-lookup"><span data-stu-id="5cf6b-120">Local tools are added to a *tool-manifest.json* file in a *.config* directory under the current directory.</span></span> <span data-ttu-id="5cf6b-121">Se un file manifesto non esiste ancora, crearlo eseguendo il comando seguente:</span><span class="sxs-lookup"><span data-stu-id="5cf6b-121">If a manifest file doesn't exist yet, create it by running the following command:</span></span>
 
-`PACKAGE_NAME`
+```dotnetcli
+dotnet new tool-manifest
+```
 
-<span data-ttu-id="afe7b-116">Nome/ID del pacchetto NuGet che contiene lo strumento globale .NET Core da installare.</span><span class="sxs-lookup"><span data-stu-id="afe7b-116">Name/ID of the NuGet package that contains the .NET Core Global Tool to install.</span></span>
+<span data-ttu-id="5cf6b-122">Per ulteriori informazioni, vedere [Install a local Tool](global-tools.md#install-a-local-tool).</span><span class="sxs-lookup"><span data-stu-id="5cf6b-122">For more information, see [Install a local tool](global-tools.md#install-a-local-tool).</span></span>
 
-## <a name="options"></a><span data-ttu-id="afe7b-117">Opzioni</span><span class="sxs-lookup"><span data-stu-id="afe7b-117">Options</span></span>
+## <a name="arguments"></a><span data-ttu-id="5cf6b-123">Argomenti</span><span class="sxs-lookup"><span data-stu-id="5cf6b-123">Arguments</span></span>
 
-`--add-source <SOURCE>`
+- **`PACKAGE_NAME`**
 
-<span data-ttu-id="afe7b-118">Aggiunge un'altra origine pacchetto NuGet da usare durante l'installazione.</span><span class="sxs-lookup"><span data-stu-id="afe7b-118">Adds an additional NuGet package source to use during installation.</span></span>
+  <span data-ttu-id="5cf6b-124">Nome/ID del pacchetto NuGet che contiene lo strumento .NET Core da installare.</span><span class="sxs-lookup"><span data-stu-id="5cf6b-124">Name/ID of the NuGet package that contains the .NET Core tool to install.</span></span>
 
-`--configfile <FILE>`
+## <a name="options"></a><span data-ttu-id="5cf6b-125">Opzioni</span><span class="sxs-lookup"><span data-stu-id="5cf6b-125">Options</span></span>
 
-<span data-ttu-id="afe7b-119">File di configurazione NuGet (*nuget.config*) da usare.</span><span class="sxs-lookup"><span data-stu-id="afe7b-119">The NuGet configuration (*nuget.config*) file to use.</span></span>
+- **`add-source <SOURCE>`**
 
-`--framework <FRAMEWORK>`
+  <span data-ttu-id="5cf6b-126">Aggiunge un'altra origine pacchetto NuGet da usare durante l'installazione.</span><span class="sxs-lookup"><span data-stu-id="5cf6b-126">Adds an additional NuGet package source to use during installation.</span></span>
 
-<span data-ttu-id="afe7b-120">Specifica il [framework di destinazione](../../standard/frameworks.md) per cui installare lo strumento.</span><span class="sxs-lookup"><span data-stu-id="afe7b-120">Specifies the [target framework](../../standard/frameworks.md) to install the tool for.</span></span> <span data-ttu-id="afe7b-121">Per impostazione predefinita, .NET Core SDK tenta di scegliere il framework di destinazione più appropriato.</span><span class="sxs-lookup"><span data-stu-id="afe7b-121">By default, the .NET Core SDK tries to choose the most appropriate target framework.</span></span>
+- **`configfile <FILE>`**
 
-`-g|--global`
+  <span data-ttu-id="5cf6b-127">File di configurazione NuGet (*nuget.config*) da usare.</span><span class="sxs-lookup"><span data-stu-id="5cf6b-127">The NuGet configuration (*nuget.config*) file to use.</span></span>
 
-<span data-ttu-id="afe7b-122">Specifica che l'installazione è a livello utente.</span><span class="sxs-lookup"><span data-stu-id="afe7b-122">Specifies that the installation is user wide.</span></span> <span data-ttu-id="afe7b-123">Non può essere usata con l'opzione `--tool-path`.</span><span class="sxs-lookup"><span data-stu-id="afe7b-123">Can't be combined with the `--tool-path` option.</span></span> <span data-ttu-id="afe7b-124">Se non si specifica questa opzione, è necessario specificare l'opzione `--tool-path`.</span><span class="sxs-lookup"><span data-stu-id="afe7b-124">If you don't specify this option, you must specify the `--tool-path` option.</span></span>
+- **`framework <FRAMEWORK>`**
 
-`-h|--help`
+  <span data-ttu-id="5cf6b-128">Specifica il [framework di destinazione](../../standard/frameworks.md) per cui installare lo strumento.</span><span class="sxs-lookup"><span data-stu-id="5cf6b-128">Specifies the [target framework](../../standard/frameworks.md) to install the tool for.</span></span> <span data-ttu-id="5cf6b-129">Per impostazione predefinita, .NET Core SDK tenta di scegliere il framework di destinazione più appropriato.</span><span class="sxs-lookup"><span data-stu-id="5cf6b-129">By default, the .NET Core SDK tries to choose the most appropriate target framework.</span></span>
 
-<span data-ttu-id="afe7b-125">Stampa una breve guida per il comando.</span><span class="sxs-lookup"><span data-stu-id="afe7b-125">Prints out a short help for the command.</span></span>
+- **`-g|--global`**
 
-`--tool-path <PATH>`
+  <span data-ttu-id="5cf6b-130">Specifica che l'installazione è a livello utente.</span><span class="sxs-lookup"><span data-stu-id="5cf6b-130">Specifies that the installation is user wide.</span></span> <span data-ttu-id="5cf6b-131">Non può essere usata con l'opzione `--tool-path`.</span><span class="sxs-lookup"><span data-stu-id="5cf6b-131">Can't be combined with the `--tool-path` option.</span></span> <span data-ttu-id="5cf6b-132">Omettere sia `--global` che `--tool-path` specifica un'installazione dello strumento locale.</span><span class="sxs-lookup"><span data-stu-id="5cf6b-132">Omitting both `--global` and `--tool-path` specifies a local tool installation.</span></span> 
 
-<span data-ttu-id="afe7b-126">Specifica il percorso in cui disinstallare lo strumento globale.</span><span class="sxs-lookup"><span data-stu-id="afe7b-126">Specifies the location where to install the Global Tool.</span></span> <span data-ttu-id="afe7b-127">Il valore di PATH può essere assoluto o relativo.</span><span class="sxs-lookup"><span data-stu-id="afe7b-127">PATH can be absolute or relative.</span></span> <span data-ttu-id="afe7b-128">Se PATH non esiste, il comando tenta di creare la variabile.</span><span class="sxs-lookup"><span data-stu-id="afe7b-128">If PATH doesn't exist, the command tries to create it.</span></span> <span data-ttu-id="afe7b-129">Non può essere usata con l'opzione `--global`.</span><span class="sxs-lookup"><span data-stu-id="afe7b-129">Can't be combined with the `--global` option.</span></span> <span data-ttu-id="afe7b-130">Se non si specifica questa opzione, è necessario specificare l'opzione `--global`.</span><span class="sxs-lookup"><span data-stu-id="afe7b-130">If you don't specify this option, you must specify the `--global` option.</span></span>
+- **`-h|--help`**
 
-`-v|--verbosity <LEVEL>`
+  <span data-ttu-id="5cf6b-133">Stampa una breve guida per il comando.</span><span class="sxs-lookup"><span data-stu-id="5cf6b-133">Prints out a short help for the command.</span></span>
 
-<span data-ttu-id="afe7b-131">Imposta il livello di dettaglio del comando.</span><span class="sxs-lookup"><span data-stu-id="afe7b-131">Sets the verbosity level of the command.</span></span> <span data-ttu-id="afe7b-132">I valori consentiti sono `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="afe7b-132">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
+- **`tool-path <PATH>`**
 
-`--version <VERSION_NUMBER>`
+  <span data-ttu-id="5cf6b-134">Specifica il percorso in cui disinstallare lo strumento globale.</span><span class="sxs-lookup"><span data-stu-id="5cf6b-134">Specifies the location where to install the Global Tool.</span></span> <span data-ttu-id="5cf6b-135">Il valore di PATH può essere assoluto o relativo.</span><span class="sxs-lookup"><span data-stu-id="5cf6b-135">PATH can be absolute or relative.</span></span> <span data-ttu-id="5cf6b-136">Se PATH non esiste, il comando tenta di creare la variabile.</span><span class="sxs-lookup"><span data-stu-id="5cf6b-136">If PATH doesn't exist, the command tries to create it.</span></span> <span data-ttu-id="5cf6b-137">Omettere sia `--global` che `--tool-path` specifica un'installazione dello strumento locale.</span><span class="sxs-lookup"><span data-stu-id="5cf6b-137">Omitting both `--global` and `--tool-path` specifies a local tool installation.</span></span> 
 
-<span data-ttu-id="afe7b-133">La versione dello strumento da installare.</span><span class="sxs-lookup"><span data-stu-id="afe7b-133">The version of the tool to install.</span></span> <span data-ttu-id="afe7b-134">Per impostazione predefinita, viene installata la versione del pacchetto stabile più recente.</span><span class="sxs-lookup"><span data-stu-id="afe7b-134">By default, the latest stable package version is installed.</span></span> <span data-ttu-id="afe7b-135">Usare questa opzione per installare le versioni di anteprima o precedenti dello strumento.</span><span class="sxs-lookup"><span data-stu-id="afe7b-135">Use this option to install preview or older versions of the tool.</span></span>
+- **`-v|--verbosity <LEVEL>`**
 
-## <a name="examples"></a><span data-ttu-id="afe7b-136">Esempi</span><span class="sxs-lookup"><span data-stu-id="afe7b-136">Examples</span></span>
+  <span data-ttu-id="5cf6b-138">Imposta il livello di dettaglio del comando.</span><span class="sxs-lookup"><span data-stu-id="5cf6b-138">Sets the verbosity level of the command.</span></span> <span data-ttu-id="5cf6b-139">I valori consentiti sono `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="5cf6b-139">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
 
-<span data-ttu-id="afe7b-137">Installa lo strumento globale [dotnetsay](https://www.nuget.org/packages/dotnetsay/) nel percorso predefinito:</span><span class="sxs-lookup"><span data-stu-id="afe7b-137">Installs the [dotnetsay](https://www.nuget.org/packages/dotnetsay/) Global Tool in the default location:</span></span>
+- **`--version <VERSION_NUMBER>`**
 
-`dotnet tool install -g dotnetsay`
+  <span data-ttu-id="5cf6b-140">La versione dello strumento da installare.</span><span class="sxs-lookup"><span data-stu-id="5cf6b-140">The version of the tool to install.</span></span> <span data-ttu-id="5cf6b-141">Per impostazione predefinita, viene installata la versione del pacchetto stabile più recente.</span><span class="sxs-lookup"><span data-stu-id="5cf6b-141">By default, the latest stable package version is installed.</span></span> <span data-ttu-id="5cf6b-142">Usare questa opzione per installare le versioni di anteprima o precedenti dello strumento.</span><span class="sxs-lookup"><span data-stu-id="5cf6b-142">Use this option to install preview or older versions of the tool.</span></span>
 
-<span data-ttu-id="afe7b-138">Installa lo strumento globale [dotnetsay](https://www.nuget.org/packages/dotnetsay/) in una cartella di Windows specifica:</span><span class="sxs-lookup"><span data-stu-id="afe7b-138">Installs the [dotnetsay](https://www.nuget.org/packages/dotnetsay/) Global Tool on a specific Windows folder:</span></span>
+## <a name="examples"></a><span data-ttu-id="5cf6b-143">Esempi</span><span class="sxs-lookup"><span data-stu-id="5cf6b-143">Examples</span></span>
 
-`dotnet tool install dotnetsay --tool-path c:\global-tools`
+- **`dotnet tool install -g dotnetsay`**
 
-<span data-ttu-id="afe7b-139">Installa lo strumento globale [dotnetsay](https://www.nuget.org/packages/dotnetsay/) in una cartella di Linux/macOS specifica:</span><span class="sxs-lookup"><span data-stu-id="afe7b-139">Installs the [dotnetsay](https://www.nuget.org/packages/dotnetsay/) Global Tool on a specific Linux/macOS folder:</span></span>
+  <span data-ttu-id="5cf6b-144">Installa [dotnetsay](https://www.nuget.org/packages/dotnetsay/) come strumento globale nel percorso predefinito.</span><span class="sxs-lookup"><span data-stu-id="5cf6b-144">Installs [dotnetsay](https://www.nuget.org/packages/dotnetsay/) as a global tool in the default location.</span></span>
 
-`dotnet tool install dotnetsay --tool-path ~/bin`
+- **`dotnet tool install dotnetsay --tool-path c:\global-tools`**
 
-<span data-ttu-id="afe7b-140">Installa la versione 2.0.0 dello strumento globale [dotnetsay](https://www.nuget.org/packages/dotnetsay/):</span><span class="sxs-lookup"><span data-stu-id="afe7b-140">Installs version 2.0.0 of the [dotnetsay](https://www.nuget.org/packages/dotnetsay/) Global Tool:</span></span>
+  <span data-ttu-id="5cf6b-145">Installa [dotnetsay](https://www.nuget.org/packages/dotnetsay/) come strumento globale in una directory di Windows specifica.</span><span class="sxs-lookup"><span data-stu-id="5cf6b-145">Installs [dotnetsay](https://www.nuget.org/packages/dotnetsay/) as a global tool in a specific Windows directory.</span></span>
 
-`dotnet tool install -g dotnetsay --version 2.0.0`
+- **`dotnet tool install dotnetsay --tool-path ~/bin`**
 
-## <a name="see-also"></a><span data-ttu-id="afe7b-141">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="afe7b-141">See also</span></span>
+  <span data-ttu-id="5cf6b-146">Installa [dotnetsay](https://www.nuget.org/packages/dotnetsay/) come strumento globale in una directory Linux/MacOS specifica.</span><span class="sxs-lookup"><span data-stu-id="5cf6b-146">Installs [dotnetsay](https://www.nuget.org/packages/dotnetsay/) as a global tool in a specific Linux/macOS directory.</span></span>
 
-- [<span data-ttu-id="afe7b-142">Strumenti globali .NET Core</span><span class="sxs-lookup"><span data-stu-id="afe7b-142">.NET Core Global Tools</span></span>](global-tools.md)
+- **`dotnet tool install -g dotnetsay --version 2.0.0`**
+
+  <span data-ttu-id="5cf6b-147">Installa la versione 2.0.0 di [dotnetsay](https://www.nuget.org/packages/dotnetsay/) come strumento globale.</span><span class="sxs-lookup"><span data-stu-id="5cf6b-147">Installs version 2.0.0 of [dotnetsay](https://www.nuget.org/packages/dotnetsay/) as a global tool.</span></span>
+
+- **`dotnet tool install dotnetsay`**
+
+  <span data-ttu-id="5cf6b-148">Installa [dotnetsay](https://www.nuget.org/packages/dotnetsay/) come strumento locale per la directory corrente.</span><span class="sxs-lookup"><span data-stu-id="5cf6b-148">Installs [dotnetsay](https://www.nuget.org/packages/dotnetsay/) as a local tool for the current directory.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="5cf6b-149">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5cf6b-149">See also</span></span>
+
+- [<span data-ttu-id="5cf6b-150">Strumenti di .NET Core</span><span class="sxs-lookup"><span data-stu-id="5cf6b-150">.NET Core tools</span></span>](global-tools.md)

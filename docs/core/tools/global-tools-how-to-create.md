@@ -1,193 +1,211 @@
 ---
-title: Come creare uno strumento globale .NET Core
-description: Descrive come creare uno strumento globale. Lo strumento globale è un'applicazione console installata tramite l'interfaccia della riga di comando di .NET Core.
-author: Thraka
-ms.author: adegeo
-ms.date: 08/22/2018
-ms.openlocfilehash: 1daecf7234f02a5fe0dcf25cf7edbb0af327b8c1
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+title: 'Esercitazione: creare uno strumento .NET Core'
+description: Informazioni su come creare uno strumento .NET Core. Uno strumento è un'applicazione console che viene installata usando il interfaccia della riga di comando di .NET Core.
+ms.date: 02/12/2020
+ms.openlocfilehash: 558bf9e37efc8de68a61f1384fababe342ab7d66
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75343515"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543404"
 ---
-# <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a><span data-ttu-id="74e76-104">Creare uno strumento globale Core .NET tramite l'interfaccia della riga di comando di .NET Core</span><span class="sxs-lookup"><span data-stu-id="74e76-104">Create a .NET Core Global Tool using the .NET Core CLI</span></span>
+# <a name="tutorial-create-a-net-core-tool-using-the-net-core-cli"></a><span data-ttu-id="ebd70-104">Esercitazione: creare uno strumento .NET Core usando il interfaccia della riga di comando di .NET Core</span><span class="sxs-lookup"><span data-stu-id="ebd70-104">Tutorial: Create a .NET Core tool using the .NET Core CLI</span></span>
 
-<span data-ttu-id="74e76-105">Questo articolo illustra come creare uno strumento globale .NET Core e inserirlo in un pacchetto.</span><span class="sxs-lookup"><span data-stu-id="74e76-105">This article teaches you how to create and package a .NET Core Global Tool.</span></span> <span data-ttu-id="74e76-106">L'interfaccia della riga di comando di .NET Core consente di creare un'applicazione console come uno strumento globale, che altri utenti possono facilmente installare ed eseguire.</span><span class="sxs-lookup"><span data-stu-id="74e76-106">The .NET Core CLI allows you to create a console application as a Global Tool, which others can easily install and run.</span></span> <span data-ttu-id="74e76-107">Gli strumenti globali .NET Core sono pacchetti NuGet installati dall'interfaccia della riga di comando di .NET Core.</span><span class="sxs-lookup"><span data-stu-id="74e76-107">.NET Core Global Tools are NuGet packages that are installed from the .NET Core CLI.</span></span> <span data-ttu-id="74e76-108">Per altre informazioni sugli strumenti globali, vedere [Panoramica degli strumenti globali .NET Core](global-tools.md).</span><span class="sxs-lookup"><span data-stu-id="74e76-108">For more information about Global Tools, see [.NET Core Global Tools overview](global-tools.md).</span></span>
+<span data-ttu-id="ebd70-105">**Questo articolo si applica a:** ✔️ .net core 2,1 SDK e versioni successive</span><span class="sxs-lookup"><span data-stu-id="ebd70-105">**This article applies to:** ✔️ .NET Core 2.1 SDK and later versions</span></span>
 
-[!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
+<span data-ttu-id="ebd70-106">Questa esercitazione illustra come creare e creare un pacchetto di uno strumento .NET Core.</span><span class="sxs-lookup"><span data-stu-id="ebd70-106">This tutorial teaches you how to create and package a .NET Core tool.</span></span> <span data-ttu-id="ebd70-107">Il interfaccia della riga di comando di .NET Core consente di creare un'applicazione console come strumento, che altri utenti possono installare ed eseguire.</span><span class="sxs-lookup"><span data-stu-id="ebd70-107">The .NET Core CLI lets you create a console application as a tool, which others can install and run.</span></span> <span data-ttu-id="ebd70-108">Gli strumenti di .NET Core sono pacchetti NuGet installati dal interfaccia della riga di comando di .NET Core.</span><span class="sxs-lookup"><span data-stu-id="ebd70-108">.NET Core tools are NuGet packages that are installed from the .NET Core CLI.</span></span> <span data-ttu-id="ebd70-109">Per altre informazioni sugli strumenti, vedere [Cenni preliminari sugli strumenti di .NET Core](global-tools.md).</span><span class="sxs-lookup"><span data-stu-id="ebd70-109">For more information about tools, see [.NET Core tools overview](global-tools.md).</span></span>
 
-## <a name="create-a-project"></a><span data-ttu-id="74e76-109">Creare un progetto</span><span class="sxs-lookup"><span data-stu-id="74e76-109">Create a project</span></span>
+<span data-ttu-id="ebd70-110">Lo strumento che verrà creato è un'applicazione console che accetta un messaggio come input e visualizza il messaggio insieme alle righe di testo che creano l'immagine di un robot.</span><span class="sxs-lookup"><span data-stu-id="ebd70-110">The tool that you'll create is a console application that takes a message as input and displays the message along with lines of text that create the image of a robot.</span></span>
 
-<span data-ttu-id="74e76-110">In questo articolo viene usata l'interfaccia della riga di comando di .NET Core per creare e gestire un progetto.</span><span class="sxs-lookup"><span data-stu-id="74e76-110">This article uses the .NET Core CLI to create and manage a project.</span></span>
+<span data-ttu-id="ebd70-111">Questo è il primo di una serie di tre esercitazioni.</span><span class="sxs-lookup"><span data-stu-id="ebd70-111">This is the first in a series of three tutorials.</span></span> <span data-ttu-id="ebd70-112">In questa esercitazione viene creato e creato un pacchetto di uno strumento.</span><span class="sxs-lookup"><span data-stu-id="ebd70-112">In this tutorial, you create and package a tool.</span></span> <span data-ttu-id="ebd70-113">Nelle due esercitazioni successive si [userà lo strumento come strumento globale](global-tools-how-to-use.md) e si [userà lo strumento come strumento locale](local-tools-how-to-use.md).</span><span class="sxs-lookup"><span data-stu-id="ebd70-113">In the next two tutorials you [use the tool as a global tool](global-tools-how-to-use.md) and [use the tool as a local tool](local-tools-how-to-use.md).</span></span>
 
-<span data-ttu-id="74e76-111">Lo strumento di esempio sarà un'applicazione console che genera un bot ASCII e stampa un messaggio.</span><span class="sxs-lookup"><span data-stu-id="74e76-111">Our example tool will be a console application that generates an ASCII bot and prints a message.</span></span> <span data-ttu-id="74e76-112">Creare innanzitutto una nuova applicazione console .NET Core.</span><span class="sxs-lookup"><span data-stu-id="74e76-112">First, create a new .NET Core Console Application.</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="ebd70-114">Prerequisites</span><span class="sxs-lookup"><span data-stu-id="ebd70-114">Prerequisites</span></span>
 
-```dotnetcli
-dotnet new console -o botsay
-```
+- <span data-ttu-id="ebd70-115">[.NET Core SDK 3,1](https://dotnet.microsoft.com/download) o versione successiva.</span><span class="sxs-lookup"><span data-stu-id="ebd70-115">[.NET Core SDK 3.1](https://dotnet.microsoft.com/download) or a later version.</span></span>
 
-<span data-ttu-id="74e76-113">Passare alla directory `botsay` creata dal comando precedente.</span><span class="sxs-lookup"><span data-stu-id="74e76-113">Navigate to the `botsay` directory created by the previous command.</span></span>
+  <span data-ttu-id="ebd70-116">Questa esercitazione e l' [esercitazione seguente per gli strumenti globali](global-tools-how-to-use.md) si applicano a .NET Core SDK 2,1 e versioni successive, perché gli strumenti globali sono disponibili a partire da tale versione.</span><span class="sxs-lookup"><span data-stu-id="ebd70-116">This tutorial and the following [tutorial for global tools](global-tools-how-to-use.md) apply to .NET Core SDK 2.1 and later versions because global tools are available starting in that version.</span></span> <span data-ttu-id="ebd70-117">Tuttavia, in questa esercitazione si presuppone che sia installato 3,1 o versione successiva, in modo da avere la possibilità di continuare con l' [esercitazione sugli strumenti locali](local-tools-how-to-use.md).</span><span class="sxs-lookup"><span data-stu-id="ebd70-117">But this tutorial assumes you have installed 3.1 or later so that you have the option of continuing on to the [local tools tutorial](local-tools-how-to-use.md).</span></span> <span data-ttu-id="ebd70-118">Gli strumenti locali sono disponibili a partire da .NET Core SDK 3,0.</span><span class="sxs-lookup"><span data-stu-id="ebd70-118">Local tools are available starting in .NET Core SDK 3.0.</span></span> <span data-ttu-id="ebd70-119">Le procedure per la creazione di uno strumento sono le stesse se lo si usa come strumento globale o come strumento locale.</span><span class="sxs-lookup"><span data-stu-id="ebd70-119">The procedures for creating a tool are the same whether you use it as a global tool or as a local tool.</span></span>
+  
+- <span data-ttu-id="ebd70-120">Un editor di testo o editor di codice di propria scelta.</span><span class="sxs-lookup"><span data-stu-id="ebd70-120">A text editor or code editor of your choice.</span></span>
 
-## <a name="add-the-code"></a><span data-ttu-id="74e76-114">Aggiunta del codice</span><span class="sxs-lookup"><span data-stu-id="74e76-114">Add the code</span></span>
+## <a name="create-a-project"></a><span data-ttu-id="ebd70-121">Creare un progetto</span><span class="sxs-lookup"><span data-stu-id="ebd70-121">Create a project</span></span>
 
-<span data-ttu-id="74e76-115">Aprire il file `Program.cs` con un editor di testo, ad esempio `vim` oppure [Visual Studio Code](https://code.visualstudio.com/).</span><span class="sxs-lookup"><span data-stu-id="74e76-115">Open the `Program.cs` file with your favorite text editor, such as `vim` or [Visual Studio Code](https://code.visualstudio.com/).</span></span>
+1. <span data-ttu-id="ebd70-122">Aprire un prompt dei comandi e creare una cartella denominata *repository*.</span><span class="sxs-lookup"><span data-stu-id="ebd70-122">Open a command prompt and create a folder named *repository*.</span></span>
 
-<span data-ttu-id="74e76-116">Aggiungere la direttiva `using` seguente all'inizio del file, in modo da abbreviare il codice per visualizzare le informazioni sulla versione dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="74e76-116">Add the following `using` directive to the top of the file, this helps shorten the code to display the version information of the application.</span></span>
+1. <span data-ttu-id="ebd70-123">Passare alla cartella del *repository* e immettere il comando seguente, sostituendo `<name>` con un valore univoco per rendere univoco il nome del progetto.</span><span class="sxs-lookup"><span data-stu-id="ebd70-123">Navigate to the *repository* folder and enter the following command, replacing `<name>` with a unique value to make the project name unique.</span></span> 
 
-```csharp
-using System.Reflection;
-```
+   ```dotnetcli
+   dotnet new console -n botsay-<name>
+   ```
 
-<span data-ttu-id="74e76-117">Spostarsi quindi verso il basso fino al metodo `Main`.</span><span class="sxs-lookup"><span data-stu-id="74e76-117">Next, move down to the `Main` method.</span></span> <span data-ttu-id="74e76-118">Sostituire il metodo con il codice seguente per elaborare gli argomenti della riga di comando per l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="74e76-118">Replace the method with the following code to process the command-line arguments for your application.</span></span> <span data-ttu-id="74e76-119">Se non si passa alcun argomento, viene visualizzato un breve messaggio della Guida.</span><span class="sxs-lookup"><span data-stu-id="74e76-119">If no arguments were passed, a short help message is displayed.</span></span> <span data-ttu-id="74e76-120">In caso contrario, tutti gli argomenti vengono trasformati in una stringa e stampati con il bot.</span><span class="sxs-lookup"><span data-stu-id="74e76-120">Otherwise, all of those arguments are transformed into a string and printed with the bot.</span></span>
+   <span data-ttu-id="ebd70-124">Ad esempio, è possibile eseguire il comando seguente:</span><span class="sxs-lookup"><span data-stu-id="ebd70-124">For example, you could run the following command:</span></span>
 
-```csharp
-static void Main(string[] args)
-{
-    if (args.Length == 0)
-    {
-        var versionString = Assembly.GetEntryAssembly()
-                                .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
-                                .InformationalVersion
-                                .ToString();
+   ```dotnetcli
+   dotnet new console -n botsay-nancydavolio
+   ```
 
-        Console.WriteLine($"botsay v{versionString}");
-        Console.WriteLine("-------------");
-        Console.WriteLine("\nUsage:");
-        Console.WriteLine("  botsay <message>");
-        return;
-    }
+   <span data-ttu-id="ebd70-125">Il comando crea una nuova cartella denominata *botsay-\<nome >* nella cartella del *repository* .</span><span class="sxs-lookup"><span data-stu-id="ebd70-125">The command creates a new folder named *botsay-\<name>* under the *repository* folder.</span></span>
 
-    ShowBot(string.Join(' ', args));
-}
-```
+1. <span data-ttu-id="ebd70-126">Passare alla cartella *botsay-\<nome >* .</span><span class="sxs-lookup"><span data-stu-id="ebd70-126">Navigate to the *botsay-\<name>* folder.</span></span>
 
-### <a name="create-the-bot"></a><span data-ttu-id="74e76-121">Creare il bot</span><span class="sxs-lookup"><span data-stu-id="74e76-121">Create the bot</span></span>
+   ```console
+   cd botsay-<name>
+   ```
 
-<span data-ttu-id="74e76-122">Aggiungere quindi un nuovo metodo denominato `ShowBot` che accetta un parametro di stringa.</span><span class="sxs-lookup"><span data-stu-id="74e76-122">Next, add a new method named `ShowBot` that takes a string parameter.</span></span> <span data-ttu-id="74e76-123">Questo metodo stampa il messaggio e il bot ASCII.</span><span class="sxs-lookup"><span data-stu-id="74e76-123">This method prints out the message and the ASCII bot.</span></span> <span data-ttu-id="74e76-124">Il codice del bot ASCII è stato ricavato dall'esempio [dotnetbot](https://github.com/dotnet/core/blob/master/samples/dotnetsay/Program.cs).</span><span class="sxs-lookup"><span data-stu-id="74e76-124">The ASCII bot code was taken from the [dotnetbot](https://github.com/dotnet/core/blob/master/samples/dotnetsay/Program.cs) sample.</span></span>
+## <a name="add-the-code"></a><span data-ttu-id="ebd70-127">Aggiungere il codice</span><span class="sxs-lookup"><span data-stu-id="ebd70-127">Add the code</span></span>
 
-```csharp
-static void ShowBot(string message)
-{
-    string bot = $"\n        {message}";
-    bot += @"
-    __________________
-                      \
-                       \
-                          ....
-                          ....'
-                           ....
-                        ..........
-                    .............'..'..
-                 ................'..'.....
-               .......'..........'..'..'....
-              ........'..........'..'..'.....
-             .'....'..'..........'..'.......'.
-             .'..................'...   ......
-             .  ......'.........         .....
-             .    _            __        ......
-            ..    #            ##        ......
-           ....       .                 .......
-           ......  .......          ............
-            ................  ......................
-            ........................'................
-           ......................'..'......    .......
-        .........................'..'.....       .......
-     ........    ..'.............'..'....      ..........
-   ..'..'...      ...............'.......      ..........
-  ...'......     ...... ..........  ......         .......
- ...........   .......              ........        ......
-.......        '...'.'.              '.'.'.'         ....
-.......       .....'..               ..'.....
-   ..       ..........               ..'........
-          ............               ..............
-         .............               '..............
-        ...........'..              .'.'............
-       ...............              .'.'.............
-      .............'..               ..'..'...........
-      ...............                 .'..............
-       .........                        ..............
-        .....
-";
-    Console.WriteLine(bot);
-}
-```
+1. <span data-ttu-id="ebd70-128">Aprire il file `Program.cs` con l'editor di codice.</span><span class="sxs-lookup"><span data-stu-id="ebd70-128">Open the `Program.cs` file with your code editor.</span></span>
 
-### <a name="test-the-tool"></a><span data-ttu-id="74e76-125">Testare lo strumento</span><span class="sxs-lookup"><span data-stu-id="74e76-125">Test the tool</span></span>
+1. <span data-ttu-id="ebd70-129">Aggiungere la direttiva di `using` seguente all'inizio del file:</span><span class="sxs-lookup"><span data-stu-id="ebd70-129">Add the following `using` directive to the top of the file:</span></span>
 
-<span data-ttu-id="74e76-126">Eseguire il progetto e osservare l'output.</span><span class="sxs-lookup"><span data-stu-id="74e76-126">Run the project and see the output.</span></span> <span data-ttu-id="74e76-127">Provare a eseguire queste variazioni dalla riga di comando per visualizzare risultati diversi:</span><span class="sxs-lookup"><span data-stu-id="74e76-127">Try these variations at the command line to see different results:</span></span>
+   ```csharp
+   using System.Reflection;
+   ```
+
+1. <span data-ttu-id="ebd70-130">Sostituire il metodo `Main` con il codice seguente per elaborare gli argomenti della riga di comando per l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="ebd70-130">Replace the `Main` method with the following code to process the command-line arguments for the application.</span></span>
+
+   ```csharp
+   static void Main(string[] args)
+   {
+       if (args.Length == 0)
+       {
+           var versionString = Assembly.GetEntryAssembly()
+                                   .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
+                                   .InformationalVersion
+                                   .ToString();
+
+           Console.WriteLine($"botsay v{versionString}");
+           Console.WriteLine("-------------");
+           Console.WriteLine("\nUsage:");
+           Console.WriteLine("  botsay <message>");
+           return;
+       }
+
+       ShowBot(string.Join(' ', args));
+   }
+   ```
+
+   <span data-ttu-id="ebd70-131">Se non viene passato alcun argomento, viene visualizzato un breve messaggio di guida.</span><span class="sxs-lookup"><span data-stu-id="ebd70-131">If no arguments are passed, a short help message is displayed.</span></span> <span data-ttu-id="ebd70-132">In caso contrario, tutti gli argomenti vengono concatenati in una singola stringa e stampati chiamando il metodo `ShowBot` creato nel passaggio successivo.</span><span class="sxs-lookup"><span data-stu-id="ebd70-132">Otherwise, all of the arguments are concatenated into a single string and printed by calling the `ShowBot` method that you create in the next step.</span></span>
+
+1. <span data-ttu-id="ebd70-133">Aggiungere un nuovo metodo denominato `ShowBot` che accetta un parametro di stringa.</span><span class="sxs-lookup"><span data-stu-id="ebd70-133">Add a new method named `ShowBot` that takes a string parameter.</span></span> <span data-ttu-id="ebd70-134">Il metodo stampa il messaggio e un'immagine di un robot usando righe di testo.</span><span class="sxs-lookup"><span data-stu-id="ebd70-134">The method prints out the message and an image of a robot using lines of text.</span></span>
+
+   ```csharp
+   static void ShowBot(string message)
+   {
+       string bot = $"\n        {message}";
+       bot += @"
+       __________________
+                         \
+                          \
+                             ....
+                             ....'
+                              ....
+                           ..........
+                       .............'..'..
+                    ................'..'.....
+                  .......'..........'..'..'....
+                 ........'..........'..'..'.....
+                .'....'..'..........'..'.......'.
+                .'..................'...   ......
+                .  ......'.........         .....
+                .    _            __        ......
+               ..    #            ##        ......
+              ....       .                 .......
+              ......  .......          ............
+               ................  ......................
+               ........................'................
+              ......................'..'......    .......
+           .........................'..'.....       .......
+        ........    ..'.............'..'....      ..........
+      ..'..'...      ...............'.......      ..........
+     ...'......     ...... ..........  ......         .......
+    ...........   .......              ........        ......
+   .......        '...'.'.              '.'.'.'         ....
+   .......       .....'..               ..'.....
+      ..       ..........               ..'........
+             ............               ..............
+            .............               '..............
+           ...........'..              .'.'............
+          ...............              .'.'.............
+         .............'..               ..'..'...........
+         ...............                 .'..............
+          .........                        ..............
+           .....
+   ";
+       Console.WriteLine(bot);
+   }
+   ```
+
+1. <span data-ttu-id="ebd70-135">Salvare le modifiche.</span><span class="sxs-lookup"><span data-stu-id="ebd70-135">Save your changes.</span></span>
+
+## <a name="test-the-application"></a><span data-ttu-id="ebd70-136">Test dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="ebd70-136">Test the application</span></span>
+
+<span data-ttu-id="ebd70-137">Eseguire il progetto e osservare l'output.</span><span class="sxs-lookup"><span data-stu-id="ebd70-137">Run the project and see the output.</span></span> <span data-ttu-id="ebd70-138">Provare a eseguire queste variazioni dalla riga di comando per visualizzare risultati diversi:</span><span class="sxs-lookup"><span data-stu-id="ebd70-138">Try these variations at the command line to see different results:</span></span>
 
 ```dotnetcli
 dotnet run
 dotnet run -- "Hello from the bot"
-dotnet run -- hello from the bot
+dotnet run -- Hello from the bot
 ```
 
-<span data-ttu-id="74e76-128">Tutti gli argomenti dopo il delimitatore `--` vengono passati all'applicazione.</span><span class="sxs-lookup"><span data-stu-id="74e76-128">All arguments after the `--` delimiter are passed to your application.</span></span>
+<span data-ttu-id="ebd70-139">Tutti gli argomenti dopo il delimitatore `--` vengono passati all'applicazione.</span><span class="sxs-lookup"><span data-stu-id="ebd70-139">All arguments after the `--` delimiter are passed to your application.</span></span>
 
-## <a name="set-up-the-global-tool"></a><span data-ttu-id="74e76-129">Configurare lo strumento globale</span><span class="sxs-lookup"><span data-stu-id="74e76-129">Set up the global tool</span></span>
+## <a name="package-the-tool"></a><span data-ttu-id="ebd70-140">Creare il pacchetto dello strumento</span><span class="sxs-lookup"><span data-stu-id="ebd70-140">Package the tool</span></span>
 
-<span data-ttu-id="74e76-130">Prima di inserire in un pacchetto e distribuire l'applicazione come uno strumento globale, è necessario modificare il file di progetto.</span><span class="sxs-lookup"><span data-stu-id="74e76-130">Before you can pack and distribute the application as a Global Tool, you need to modify the project file.</span></span> <span data-ttu-id="74e76-131">Aprire il file `botsay.csproj` e aggiungere tre nuovi nodi XML al nodo `<Project><PropertyGroup>`:</span><span class="sxs-lookup"><span data-stu-id="74e76-131">Open the `botsay.csproj` file and add three new XML nodes to the `<Project><PropertyGroup>` node:</span></span>
+<span data-ttu-id="ebd70-141">Prima di poter comprimere e distribuire l'applicazione come strumento, è necessario modificare il file di progetto.</span><span class="sxs-lookup"><span data-stu-id="ebd70-141">Before you can pack and distribute the application as a tool, you need to modify the project file.</span></span> 
 
-- `<PackAsTool>`\
-<span data-ttu-id="74e76-132">[OBBLIGATORIO] Indica che verrà creato un pacchetto dell'applicazione per l'installazione come strumento globale.</span><span class="sxs-lookup"><span data-stu-id="74e76-132">[REQUIRED] Indicates that the application will be packaged for install as a Global Tool.</span></span>
+1. <span data-ttu-id="ebd70-142">Aprire il *botsay-\<nome > file con estensione csproj* e aggiungere tre nuovi nodi XML alla fine del nodo `<PropertyGroup>`:</span><span class="sxs-lookup"><span data-stu-id="ebd70-142">Open the *botsay-\<name>.csproj* file and add three new XML nodes to the end of the `<PropertyGroup>` node:</span></span>
 
-- `<ToolCommandName>`\
-<span data-ttu-id="74e76-133">[FACOLTATIVO] Nome alternativo per lo strumento. Se non viene specificato, il nome del comando per lo strumento verrà assegnato in base al file di progetto.</span><span class="sxs-lookup"><span data-stu-id="74e76-133">[OPTIONAL] An alternative name for the tool, otherwise the command name for the tool will be named after the project file.</span></span> <span data-ttu-id="74e76-134">È possibile includere più strumenti in un pacchetto, scegliendo un nome descrittivo e univoco che consenta di differenziarli dagli altri strumenti contenuti nello stesso pacchetto.</span><span class="sxs-lookup"><span data-stu-id="74e76-134">You can have multiple tools in a package, choosing a unique and friendly name helps differentiate from other tools in the same package.</span></span>
+   ```xml
+   <PackAsTool>true</PackAsTool>
+   <ToolCommandName>botsay</ToolCommandName>
+   <PackageOutputPath>./nupkg</PackageOutputPath>
+   ```
 
-- `<PackageOutputPath>`\
-<span data-ttu-id="74e76-135">[FACOLTATIVO] Percorso in cui verrà creato il pacchetto NuGet.</span><span class="sxs-lookup"><span data-stu-id="74e76-135">[OPTIONAL] Where the NuGet package will be produced.</span></span> <span data-ttu-id="74e76-136">Il pacchetto NuGet viene usato dagli strumenti globali dell'interfaccia della riga di comando di .NET Core per installare lo strumento.</span><span class="sxs-lookup"><span data-stu-id="74e76-136">The NuGet package is what the .NET Core CLI Global Tools uses to install your tool.</span></span>
+   <span data-ttu-id="ebd70-143">`<ToolCommandName>` è un elemento facoltativo che specifica il comando che verrà richiamato dallo strumento dopo l'installazione.</span><span class="sxs-lookup"><span data-stu-id="ebd70-143">`<ToolCommandName>` is an optional element that specifies the command that will invoke the tool after it's installed.</span></span> <span data-ttu-id="ebd70-144">Se questo elemento non viene specificato, il nome del comando per lo strumento è il nome del file di progetto senza estensione *csproj* .</span><span class="sxs-lookup"><span data-stu-id="ebd70-144">If this element isn't provided, the command name for the tool is the project file name without the *.csproj* extension.</span></span>
 
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
+   <span data-ttu-id="ebd70-145">`<PackageOutputPath>` è un elemento facoltativo che determina la posizione in cui verrà generato il pacchetto NuGet.</span><span class="sxs-lookup"><span data-stu-id="ebd70-145">`<PackageOutputPath>` is an optional element that determines where the NuGet package will be produced.</span></span> <span data-ttu-id="ebd70-146">Il pacchetto NuGet è quello usato dal interfaccia della riga di comando di .NET Core per installare lo strumento.</span><span class="sxs-lookup"><span data-stu-id="ebd70-146">The NuGet package is what the .NET Core CLI uses to install your tool.</span></span>
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+   <span data-ttu-id="ebd70-147">Il file di progetto ha ora un aspetto simile all'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="ebd70-147">The project file now looks like the following example:</span></span>
 
-    <PackAsTool>true</PackAsTool>
-    <ToolCommandName>botsay</ToolCommandName>
-    <PackageOutputPath>./nupkg</PackageOutputPath>
+   ```xml
+   <Project Sdk="Microsoft.NET.Sdk">
+  
+     <PropertyGroup>
 
-  </PropertyGroup>
+       <OutputType>Exe</OutputType>
+       <TargetFramework>netcoreapp3.1</TargetFramework>
+  
+       <PackAsTool>true</PackAsTool>
+       <ToolCommandName>botsay</ToolCommandName>
+       <PackageOutputPath>./nupkg</PackageOutputPath>
+  
+     </PropertyGroup>
 
-</Project>
-```
+   </Project>
+   ```
 
-<span data-ttu-id="74e76-137">Anche se `<PackageOutputPath>` è facoltativo, verrà usato in questo esempio.</span><span class="sxs-lookup"><span data-stu-id="74e76-137">Even though `<PackageOutputPath>` is optional, use it in this example.</span></span> <span data-ttu-id="74e76-138">Assicurarsi di impostarlo: `<PackageOutputPath>./nupkg</PackageOutputPath>`.</span><span class="sxs-lookup"><span data-stu-id="74e76-138">Make sure you set it: `<PackageOutputPath>./nupkg</PackageOutputPath>`.</span></span>
+1. <span data-ttu-id="ebd70-148">Creare un pacchetto NuGet eseguendo il comando [DotNet Pack](dotnet-pack.md) :</span><span class="sxs-lookup"><span data-stu-id="ebd70-148">Create a NuGet package by running the [dotnet pack](dotnet-pack.md) command:</span></span>
 
-<span data-ttu-id="74e76-139">Creare quindi un pacchetto NuGet per l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="74e76-139">Next, create a NuGet package for your application.</span></span>
+   ```dotnetcli
+   dotnet pack
+   ```
 
-```dotnetcli
-dotnet pack
-```
+   <span data-ttu-id="ebd70-149">Il file *botsay-\<nome >. 1.0.0. nupkg* viene creato nella cartella identificata dal valore di `<PackageOutputPath>` dal *nome botsay-\<>. csproj* , che in questo esempio è la cartella *./nupkg* .</span><span class="sxs-lookup"><span data-stu-id="ebd70-149">The *botsay-\<name>.1.0.0.nupkg* file is created in the folder identified by the `<PackageOutputPath>` value from the *botsay-\<name>.csproj* file, which in this example is the *./nupkg* folder.</span></span>
+  
+   <span data-ttu-id="ebd70-150">Quando si desidera rilasciare uno strumento pubblicamente, è possibile caricarlo in `https://www.nuget.org`.</span><span class="sxs-lookup"><span data-stu-id="ebd70-150">When you want to release a tool publicly, you can upload it to `https://www.nuget.org`.</span></span> <span data-ttu-id="ebd70-151">Quando lo strumento è disponibile in NuGet, gli sviluppatori possono installare lo strumento usando il comando [DotNet tool install](dotnet-tool-install.md) .</span><span class="sxs-lookup"><span data-stu-id="ebd70-151">Once the tool is available on NuGet, developers can install the tool by using the [dotnet tool install](dotnet-tool-install.md) command.</span></span> <span data-ttu-id="ebd70-152">Per questa esercitazione si installa il pacchetto direttamente dalla cartella *nupkg* locale, pertanto non è necessario caricare il pacchetto in NuGet.</span><span class="sxs-lookup"><span data-stu-id="ebd70-152">For this tutorial you install the package directly from the local *nupkg* folder, so there's no need to upload the package to NuGet.</span></span>
 
-<span data-ttu-id="74e76-140">Il file `botsay.1.0.0.nupkg` viene creato nella cartella identificata dal valore XML `<PackageOutputPath>` dal file `botsay.csproj`, ovvero in questo esempio la cartella `./nupkg`.</span><span class="sxs-lookup"><span data-stu-id="74e76-140">The `botsay.1.0.0.nupkg` file is created in the folder identified by the `<PackageOutputPath>` XML value from the `botsay.csproj` file, which in this example is the `./nupkg` folder.</span></span> <span data-ttu-id="74e76-141">Questo ne rende più semplice l'installazione e il test.</span><span class="sxs-lookup"><span data-stu-id="74e76-141">This makes it easy to install and test.</span></span> <span data-ttu-id="74e76-142">Per rilasciare pubblicamente uno strumento, caricarlo in <https://www.nuget.org>.</span><span class="sxs-lookup"><span data-stu-id="74e76-142">When you want to release a tool publicly, upload it to <https://www.nuget.org>.</span></span> <span data-ttu-id="74e76-143">Quando lo strumento è disponibile in NuGet, gli sviluppatori possono eseguire un'installazione dello strumento a livello di utente usando l'opzione `--global` del comando [DotNet tool install](dotnet-tool-install.md) .</span><span class="sxs-lookup"><span data-stu-id="74e76-143">Once the tool is available on NuGet, developers can perform a user-wide installation of the tool using the `--global` option of the [dotnet tool install](dotnet-tool-install.md) command.</span></span>
+## <a name="troubleshoot"></a><span data-ttu-id="ebd70-153">Risolvere problemi</span><span class="sxs-lookup"><span data-stu-id="ebd70-153">Troubleshoot</span></span>
 
-<span data-ttu-id="74e76-144">Dopo aver creato un pacchetto, installare lo strumento da tale pacchetto:</span><span class="sxs-lookup"><span data-stu-id="74e76-144">Now that you have a package, install the tool from that package:</span></span>
+<span data-ttu-id="ebd70-154">Se viene visualizzato un messaggio di errore mentre si segue l'esercitazione, vedere [risolvere i problemi di utilizzo degli strumenti .NET Core](troubleshoot-usage-issues.md).</span><span class="sxs-lookup"><span data-stu-id="ebd70-154">If you get an error message while following the tutorial, see [Troubleshoot .NET Core tool usage issues](troubleshoot-usage-issues.md).</span></span>
 
-```dotnetcli
-dotnet tool install --global --add-source ./nupkg botsay
-```
+## <a name="next-steps"></a><span data-ttu-id="ebd70-155">Passaggi successivi</span><span class="sxs-lookup"><span data-stu-id="ebd70-155">Next steps</span></span>
 
-<span data-ttu-id="74e76-145">Il parametro `--add-source` indica all'interfaccia della riga di comando di .NET Core di usare temporaneamente la cartella `./nupkg` (ovvero, la cartella `<PackageOutputPath>` che è stata specificata) come feed di origine aggiuntivo per i pacchetti NuGet.</span><span class="sxs-lookup"><span data-stu-id="74e76-145">The `--add-source` parameter tells the .NET Core CLI to temporarily use the `./nupkg` folder (our `<PackageOutputPath>` folder) as an additional source feed for NuGet packages.</span></span> <span data-ttu-id="74e76-146">Per altre informazioni sull'installazione degli strumenti globali, vedere [Panoramica degli strumenti globali .NET Core](global-tools.md).</span><span class="sxs-lookup"><span data-stu-id="74e76-146">For more information about installing Global Tools, see [.NET Core Global Tools overview](global-tools.md).</span></span>
+<span data-ttu-id="ebd70-156">In questa esercitazione è stata creata un'applicazione console che è stata assemblata come strumento.</span><span class="sxs-lookup"><span data-stu-id="ebd70-156">In this tutorial, you created a console application and packaged it as a tool.</span></span> <span data-ttu-id="ebd70-157">Per informazioni su come usare lo strumento come strumento globale, passare all'esercitazione successiva.</span><span class="sxs-lookup"><span data-stu-id="ebd70-157">To learn how to use the tool as a global tool, advance to the next tutorial.</span></span>
 
-<span data-ttu-id="74e76-147">Se l'installazione ha esito positivo, viene visualizzato un messaggio che mostra il comando usato per chiamare lo strumento e la versione installata, simile all'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="74e76-147">If installation is successful, a message is displayed showing the command used to call the tool and the version installed, similar to the following example:</span></span>
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="ebd70-158">Installare e usare uno strumento globale</span><span class="sxs-lookup"><span data-stu-id="ebd70-158">Install and use a global tool</span></span>](global-tools-how-to-use.md)
 
-```output
-You can invoke the tool using the following command: botsay
-Tool 'botsay' (version '1.0.0') was successfully installed.
-```
+<span data-ttu-id="ebd70-159">Se si preferisce, è possibile ignorare l'esercitazione sugli strumenti globali e passare direttamente all'esercitazione relativa agli strumenti locali.</span><span class="sxs-lookup"><span data-stu-id="ebd70-159">If you prefer, you can skip the global tools tutorial and go directly to the local tools tutorial.</span></span>
 
-<span data-ttu-id="74e76-148">A questo punto, dovrebbe essere possibile digitare `botsay` e ottenere una risposta dallo strumento.</span><span class="sxs-lookup"><span data-stu-id="74e76-148">You should now be able to type `botsay` and get a response from the tool.</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="74e76-149">Se l'installazione ha avuto esito positivo, ma non è possibile usare il comando `botsay`, potrebbe essere necessario aprire un nuovo terminale per aggiornare il percorso.</span><span class="sxs-lookup"><span data-stu-id="74e76-149">If the install was successful, but you cannot use the `botsay` command, you may need to open a new terminal to refresh the PATH.</span></span>
-
-## <a name="remove-the-tool"></a><span data-ttu-id="74e76-150">Rimuovere lo strumento</span><span class="sxs-lookup"><span data-stu-id="74e76-150">Remove the tool</span></span>
-
-<span data-ttu-id="74e76-151">Dopo aver completato la sperimentazione con lo strumento, è possibile rimuoverlo con il comando seguente:</span><span class="sxs-lookup"><span data-stu-id="74e76-151">Once you're done experimenting with the tool, you can remove it with the following command:</span></span>
-
-```dotnetcli
-dotnet tool uninstall -g botsay
-```
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="ebd70-160">Installare e usare uno strumento locale</span><span class="sxs-lookup"><span data-stu-id="ebd70-160">Install and use a local tool</span></span>](local-tools-how-to-use.md)
