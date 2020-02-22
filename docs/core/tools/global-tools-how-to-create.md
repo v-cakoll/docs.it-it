@@ -1,193 +1,211 @@
 ---
-title: Come creare uno strumento globale .NET Core
-description: Descrive come creare uno strumento globale. Lo strumento globale è un'applicazione console installata tramite l'interfaccia della riga di comando di .NET Core.
-author: Thraka
-ms.author: adegeo
-ms.date: 08/22/2018
-ms.openlocfilehash: 1daecf7234f02a5fe0dcf25cf7edbb0af327b8c1
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+title: 'Esercitazione: creare uno strumento .NET Core'
+description: Informazioni su come creare uno strumento .NET Core. Uno strumento è un'applicazione console che viene installata usando il interfaccia della riga di comando di .NET Core.
+ms.date: 02/12/2020
+ms.openlocfilehash: 558bf9e37efc8de68a61f1384fababe342ab7d66
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75343515"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543404"
 ---
-# <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>Creare uno strumento globale Core .NET tramite l'interfaccia della riga di comando di .NET Core
+# <a name="tutorial-create-a-net-core-tool-using-the-net-core-cli"></a>Esercitazione: creare uno strumento .NET Core usando il interfaccia della riga di comando di .NET Core
 
-Questo articolo illustra come creare uno strumento globale .NET Core e inserirlo in un pacchetto. L'interfaccia della riga di comando di .NET Core consente di creare un'applicazione console come uno strumento globale, che altri utenti possono facilmente installare ed eseguire. Gli strumenti globali .NET Core sono pacchetti NuGet installati dall'interfaccia della riga di comando di .NET Core. Per altre informazioni sugli strumenti globali, vedere [Panoramica degli strumenti globali .NET Core](global-tools.md).
+**Questo articolo si applica a:** ✔️ .net core 2,1 SDK e versioni successive
 
-[!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
+Questa esercitazione illustra come creare e creare un pacchetto di uno strumento .NET Core. Il interfaccia della riga di comando di .NET Core consente di creare un'applicazione console come strumento, che altri utenti possono installare ed eseguire. Gli strumenti di .NET Core sono pacchetti NuGet installati dal interfaccia della riga di comando di .NET Core. Per altre informazioni sugli strumenti, vedere [Cenni preliminari sugli strumenti di .NET Core](global-tools.md).
+
+Lo strumento che verrà creato è un'applicazione console che accetta un messaggio come input e visualizza il messaggio insieme alle righe di testo che creano l'immagine di un robot.
+
+Questo è il primo di una serie di tre esercitazioni. In questa esercitazione viene creato e creato un pacchetto di uno strumento. Nelle due esercitazioni successive si [userà lo strumento come strumento globale](global-tools-how-to-use.md) e si [userà lo strumento come strumento locale](local-tools-how-to-use.md).
+
+## <a name="prerequisites"></a>Prerequisites
+
+- [.NET Core SDK 3,1](https://dotnet.microsoft.com/download) o versione successiva.
+
+  Questa esercitazione e l' [esercitazione seguente per gli strumenti globali](global-tools-how-to-use.md) si applicano a .NET Core SDK 2,1 e versioni successive, perché gli strumenti globali sono disponibili a partire da tale versione. Tuttavia, in questa esercitazione si presuppone che sia installato 3,1 o versione successiva, in modo da avere la possibilità di continuare con l' [esercitazione sugli strumenti locali](local-tools-how-to-use.md). Gli strumenti locali sono disponibili a partire da .NET Core SDK 3,0. Le procedure per la creazione di uno strumento sono le stesse se lo si usa come strumento globale o come strumento locale.
+  
+- Un editor di testo o editor di codice di propria scelta.
 
 ## <a name="create-a-project"></a>Creare un progetto
 
-In questo articolo viene usata l'interfaccia della riga di comando di .NET Core per creare e gestire un progetto.
+1. Aprire un prompt dei comandi e creare una cartella denominata *repository*.
 
-Lo strumento di esempio sarà un'applicazione console che genera un bot ASCII e stampa un messaggio. Creare innanzitutto una nuova applicazione console .NET Core.
+1. Passare alla cartella del *repository* e immettere il comando seguente, sostituendo `<name>` con un valore univoco per rendere univoco il nome del progetto. 
 
-```dotnetcli
-dotnet new console -o botsay
-```
+   ```dotnetcli
+   dotnet new console -n botsay-<name>
+   ```
 
-Passare alla directory `botsay` creata dal comando precedente.
+   Ad esempio, è possibile eseguire il comando seguente:
 
-## <a name="add-the-code"></a>Aggiunta del codice
+   ```dotnetcli
+   dotnet new console -n botsay-nancydavolio
+   ```
 
-Aprire il file `Program.cs` con un editor di testo, ad esempio `vim` oppure [Visual Studio Code](https://code.visualstudio.com/).
+   Il comando crea una nuova cartella denominata *botsay-\<nome >* nella cartella del *repository* .
 
-Aggiungere la direttiva `using` seguente all'inizio del file, in modo da abbreviare il codice per visualizzare le informazioni sulla versione dell'applicazione.
+1. Passare alla cartella *botsay-\<nome >* .
 
-```csharp
-using System.Reflection;
-```
+   ```console
+   cd botsay-<name>
+   ```
 
-Spostarsi quindi verso il basso fino al metodo `Main`. Sostituire il metodo con il codice seguente per elaborare gli argomenti della riga di comando per l'applicazione. Se non si passa alcun argomento, viene visualizzato un breve messaggio della Guida. In caso contrario, tutti gli argomenti vengono trasformati in una stringa e stampati con il bot.
+## <a name="add-the-code"></a>Aggiungere il codice
 
-```csharp
-static void Main(string[] args)
-{
-    if (args.Length == 0)
-    {
-        var versionString = Assembly.GetEntryAssembly()
-                                .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
-                                .InformationalVersion
-                                .ToString();
+1. Aprire il file `Program.cs` con l'editor di codice.
 
-        Console.WriteLine($"botsay v{versionString}");
-        Console.WriteLine("-------------");
-        Console.WriteLine("\nUsage:");
-        Console.WriteLine("  botsay <message>");
-        return;
-    }
+1. Aggiungere la direttiva di `using` seguente all'inizio del file:
 
-    ShowBot(string.Join(' ', args));
-}
-```
+   ```csharp
+   using System.Reflection;
+   ```
 
-### <a name="create-the-bot"></a>Creare il bot
+1. Sostituire il metodo `Main` con il codice seguente per elaborare gli argomenti della riga di comando per l'applicazione.
 
-Aggiungere quindi un nuovo metodo denominato `ShowBot` che accetta un parametro di stringa. Questo metodo stampa il messaggio e il bot ASCII. Il codice del bot ASCII è stato ricavato dall'esempio [dotnetbot](https://github.com/dotnet/core/blob/master/samples/dotnetsay/Program.cs).
+   ```csharp
+   static void Main(string[] args)
+   {
+       if (args.Length == 0)
+       {
+           var versionString = Assembly.GetEntryAssembly()
+                                   .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
+                                   .InformationalVersion
+                                   .ToString();
 
-```csharp
-static void ShowBot(string message)
-{
-    string bot = $"\n        {message}";
-    bot += @"
-    __________________
-                      \
-                       \
-                          ....
-                          ....'
-                           ....
-                        ..........
-                    .............'..'..
-                 ................'..'.....
-               .......'..........'..'..'....
-              ........'..........'..'..'.....
-             .'....'..'..........'..'.......'.
-             .'..................'...   ......
-             .  ......'.........         .....
-             .    _            __        ......
-            ..    #            ##        ......
-           ....       .                 .......
-           ......  .......          ............
-            ................  ......................
-            ........................'................
-           ......................'..'......    .......
-        .........................'..'.....       .......
-     ........    ..'.............'..'....      ..........
-   ..'..'...      ...............'.......      ..........
-  ...'......     ...... ..........  ......         .......
- ...........   .......              ........        ......
-.......        '...'.'.              '.'.'.'         ....
-.......       .....'..               ..'.....
-   ..       ..........               ..'........
-          ............               ..............
-         .............               '..............
-        ...........'..              .'.'............
-       ...............              .'.'.............
-      .............'..               ..'..'...........
-      ...............                 .'..............
-       .........                        ..............
-        .....
-";
-    Console.WriteLine(bot);
-}
-```
+           Console.WriteLine($"botsay v{versionString}");
+           Console.WriteLine("-------------");
+           Console.WriteLine("\nUsage:");
+           Console.WriteLine("  botsay <message>");
+           return;
+       }
 
-### <a name="test-the-tool"></a>Testare lo strumento
+       ShowBot(string.Join(' ', args));
+   }
+   ```
+
+   Se non viene passato alcun argomento, viene visualizzato un breve messaggio di guida. In caso contrario, tutti gli argomenti vengono concatenati in una singola stringa e stampati chiamando il metodo `ShowBot` creato nel passaggio successivo.
+
+1. Aggiungere un nuovo metodo denominato `ShowBot` che accetta un parametro di stringa. Il metodo stampa il messaggio e un'immagine di un robot usando righe di testo.
+
+   ```csharp
+   static void ShowBot(string message)
+   {
+       string bot = $"\n        {message}";
+       bot += @"
+       __________________
+                         \
+                          \
+                             ....
+                             ....'
+                              ....
+                           ..........
+                       .............'..'..
+                    ................'..'.....
+                  .......'..........'..'..'....
+                 ........'..........'..'..'.....
+                .'....'..'..........'..'.......'.
+                .'..................'...   ......
+                .  ......'.........         .....
+                .    _            __        ......
+               ..    #            ##        ......
+              ....       .                 .......
+              ......  .......          ............
+               ................  ......................
+               ........................'................
+              ......................'..'......    .......
+           .........................'..'.....       .......
+        ........    ..'.............'..'....      ..........
+      ..'..'...      ...............'.......      ..........
+     ...'......     ...... ..........  ......         .......
+    ...........   .......              ........        ......
+   .......        '...'.'.              '.'.'.'         ....
+   .......       .....'..               ..'.....
+      ..       ..........               ..'........
+             ............               ..............
+            .............               '..............
+           ...........'..              .'.'............
+          ...............              .'.'.............
+         .............'..               ..'..'...........
+         ...............                 .'..............
+          .........                        ..............
+           .....
+   ";
+       Console.WriteLine(bot);
+   }
+   ```
+
+1. Salvare le modifiche.
+
+## <a name="test-the-application"></a>Test dell'applicazione
 
 Eseguire il progetto e osservare l'output. Provare a eseguire queste variazioni dalla riga di comando per visualizzare risultati diversi:
 
 ```dotnetcli
 dotnet run
 dotnet run -- "Hello from the bot"
-dotnet run -- hello from the bot
+dotnet run -- Hello from the bot
 ```
 
 Tutti gli argomenti dopo il delimitatore `--` vengono passati all'applicazione.
 
-## <a name="set-up-the-global-tool"></a>Configurare lo strumento globale
+## <a name="package-the-tool"></a>Creare il pacchetto dello strumento
 
-Prima di inserire in un pacchetto e distribuire l'applicazione come uno strumento globale, è necessario modificare il file di progetto. Aprire il file `botsay.csproj` e aggiungere tre nuovi nodi XML al nodo `<Project><PropertyGroup>`:
+Prima di poter comprimere e distribuire l'applicazione come strumento, è necessario modificare il file di progetto. 
 
-- `<PackAsTool>`\
-[OBBLIGATORIO] Indica che verrà creato un pacchetto dell'applicazione per l'installazione come strumento globale.
+1. Aprire il *botsay-\<nome > file con estensione csproj* e aggiungere tre nuovi nodi XML alla fine del nodo `<PropertyGroup>`:
 
-- `<ToolCommandName>`\
-[FACOLTATIVO] Nome alternativo per lo strumento. Se non viene specificato, il nome del comando per lo strumento verrà assegnato in base al file di progetto. È possibile includere più strumenti in un pacchetto, scegliendo un nome descrittivo e univoco che consenta di differenziarli dagli altri strumenti contenuti nello stesso pacchetto.
+   ```xml
+   <PackAsTool>true</PackAsTool>
+   <ToolCommandName>botsay</ToolCommandName>
+   <PackageOutputPath>./nupkg</PackageOutputPath>
+   ```
 
-- `<PackageOutputPath>`\
-[FACOLTATIVO] Percorso in cui verrà creato il pacchetto NuGet. Il pacchetto NuGet viene usato dagli strumenti globali dell'interfaccia della riga di comando di .NET Core per installare lo strumento.
+   `<ToolCommandName>` è un elemento facoltativo che specifica il comando che verrà richiamato dallo strumento dopo l'installazione. Se questo elemento non viene specificato, il nome del comando per lo strumento è il nome del file di progetto senza estensione *csproj* .
 
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
+   `<PackageOutputPath>` è un elemento facoltativo che determina la posizione in cui verrà generato il pacchetto NuGet. Il pacchetto NuGet è quello usato dal interfaccia della riga di comando di .NET Core per installare lo strumento.
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+   Il file di progetto ha ora un aspetto simile all'esempio seguente:
 
-    <PackAsTool>true</PackAsTool>
-    <ToolCommandName>botsay</ToolCommandName>
-    <PackageOutputPath>./nupkg</PackageOutputPath>
+   ```xml
+   <Project Sdk="Microsoft.NET.Sdk">
+  
+     <PropertyGroup>
 
-  </PropertyGroup>
+       <OutputType>Exe</OutputType>
+       <TargetFramework>netcoreapp3.1</TargetFramework>
+  
+       <PackAsTool>true</PackAsTool>
+       <ToolCommandName>botsay</ToolCommandName>
+       <PackageOutputPath>./nupkg</PackageOutputPath>
+  
+     </PropertyGroup>
 
-</Project>
-```
+   </Project>
+   ```
 
-Anche se `<PackageOutputPath>` è facoltativo, verrà usato in questo esempio. Assicurarsi di impostarlo: `<PackageOutputPath>./nupkg</PackageOutputPath>`.
+1. Creare un pacchetto NuGet eseguendo il comando [DotNet Pack](dotnet-pack.md) :
 
-Creare quindi un pacchetto NuGet per l'applicazione.
+   ```dotnetcli
+   dotnet pack
+   ```
 
-```dotnetcli
-dotnet pack
-```
+   Il file *botsay-\<nome >. 1.0.0. nupkg* viene creato nella cartella identificata dal valore di `<PackageOutputPath>` dal *nome botsay-\<>. csproj* , che in questo esempio è la cartella *./nupkg* .
+  
+   Quando si desidera rilasciare uno strumento pubblicamente, è possibile caricarlo in `https://www.nuget.org`. Quando lo strumento è disponibile in NuGet, gli sviluppatori possono installare lo strumento usando il comando [DotNet tool install](dotnet-tool-install.md) . Per questa esercitazione si installa il pacchetto direttamente dalla cartella *nupkg* locale, pertanto non è necessario caricare il pacchetto in NuGet.
 
-Il file `botsay.1.0.0.nupkg` viene creato nella cartella identificata dal valore XML `<PackageOutputPath>` dal file `botsay.csproj`, ovvero in questo esempio la cartella `./nupkg`. Questo ne rende più semplice l'installazione e il test. Per rilasciare pubblicamente uno strumento, caricarlo in <https://www.nuget.org>. Quando lo strumento è disponibile in NuGet, gli sviluppatori possono eseguire un'installazione dello strumento a livello di utente usando l'opzione `--global` del comando [DotNet tool install](dotnet-tool-install.md) .
+## <a name="troubleshoot"></a>Risolvere problemi
 
-Dopo aver creato un pacchetto, installare lo strumento da tale pacchetto:
+Se viene visualizzato un messaggio di errore mentre si segue l'esercitazione, vedere [risolvere i problemi di utilizzo degli strumenti .NET Core](troubleshoot-usage-issues.md).
 
-```dotnetcli
-dotnet tool install --global --add-source ./nupkg botsay
-```
+## <a name="next-steps"></a>Passaggi successivi
 
-Il parametro `--add-source` indica all'interfaccia della riga di comando di .NET Core di usare temporaneamente la cartella `./nupkg` (ovvero, la cartella `<PackageOutputPath>` che è stata specificata) come feed di origine aggiuntivo per i pacchetti NuGet. Per altre informazioni sull'installazione degli strumenti globali, vedere [Panoramica degli strumenti globali .NET Core](global-tools.md).
+In questa esercitazione è stata creata un'applicazione console che è stata assemblata come strumento. Per informazioni su come usare lo strumento come strumento globale, passare all'esercitazione successiva.
 
-Se l'installazione ha esito positivo, viene visualizzato un messaggio che mostra il comando usato per chiamare lo strumento e la versione installata, simile all'esempio seguente:
+> [!div class="nextstepaction"]
+> [Installare e usare uno strumento globale](global-tools-how-to-use.md)
 
-```output
-You can invoke the tool using the following command: botsay
-Tool 'botsay' (version '1.0.0') was successfully installed.
-```
+Se si preferisce, è possibile ignorare l'esercitazione sugli strumenti globali e passare direttamente all'esercitazione relativa agli strumenti locali.
 
-A questo punto, dovrebbe essere possibile digitare `botsay` e ottenere una risposta dallo strumento.
-
-> [!NOTE]
-> Se l'installazione ha avuto esito positivo, ma non è possibile usare il comando `botsay`, potrebbe essere necessario aprire un nuovo terminale per aggiornare il percorso.
-
-## <a name="remove-the-tool"></a>Rimuovere lo strumento
-
-Dopo aver completato la sperimentazione con lo strumento, è possibile rimuoverlo con il comando seguente:
-
-```dotnetcli
-dotnet tool uninstall -g botsay
-```
+> [!div class="nextstepaction"]
+> [Installare e usare uno strumento locale](local-tools-how-to-use.md)

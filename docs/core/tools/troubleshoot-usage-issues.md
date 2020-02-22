@@ -2,13 +2,13 @@
 title: Risolvere i problemi di utilizzo degli strumenti .NET Core
 description: Individuare i problemi comuni quando si eseguono gli strumenti di .NET Core e le possibili soluzioni.
 author: kdollard
-ms.date: 09/23/2019
-ms.openlocfilehash: 45139c3441b84964b937d5d1cc63a018f8d1f0fb
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 02/14/2020
+ms.openlocfilehash: ab5d1be8f201ea283f8537f18886feab46157127
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451077"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543274"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>Risolvere i problemi di utilizzo degli strumenti .NET Core
 
@@ -44,10 +44,10 @@ Il nome del file eseguibile determina il modo in cui si richiama lo strumento. L
 
     Gli strumenti globali possono essere installati nella directory predefinita o in una posizione specifica. Le directory predefinite sono:
 
-    | Sistema operativo          | Percorso                          |
+    | OS          | Path                          |
     |-------------|-------------------------------|
     | Linux/macOS | `$HOME/.dotnet/tools`         |
-    | WINDOWS     | `%USERPROFILE%\.dotnet\tools` |
+    | Windows     | `%USERPROFILE%\.dotnet\tools` |
 
     Se si sta provando a eseguire uno strumento globale, verificare che la variabile di ambiente `PATH` nel computer contenga il percorso in cui è stato installato lo strumento globale e che il file eseguibile si trovi in tale percorso.
 
@@ -59,7 +59,7 @@ Il nome del file eseguibile determina il modo in cui si richiama lo strumento. L
   * Se è stato installato .NET Core 3,0 SDK e la variabile di ambiente `DOTNET_ADD_GLOBAL_TOOLS_TO_PATH` è stata impostata su `false`.
   * Se è stato installato .NET Core 2,2 SDK o versioni precedenti ed è stata impostata la variabile di ambiente `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` su `true`.
 
-  Per altre informazioni sugli strumenti globali, vedere [Cenni preliminari sugli strumenti globali di .NET Core](global-tools.md).
+  Per altre informazioni, vedere [strumenti di .NET Core](global-tools.md).
 
 * Strumenti locali
 
@@ -137,9 +137,6 @@ Gli strumenti di .NET Core in anteprima devono essere specificati con una parte 
 dotnet tool install -g --version 1.1.0-pre <toolName>
 ```
 
-> [!NOTE]
-> Il team interfaccia della riga di comando di .NET Core prevede di aggiungere un cambio di `--preview` in una versione futura per semplificare questa operazione.
-
 ### <a name="package-isnt-a-net-core-tool"></a>Il pacchetto non è uno strumento .NET Core
 
 * Un pacchetto NuGet con questo nome è stato trovato, ma non era uno strumento .NET Core.
@@ -162,4 +159,4 @@ Una causa comune dell'errore è che il nome dello strumento non è corretto. Que
 
 ## <a name="see-also"></a>Vedere anche
 
-* [Panoramica degli strumenti globali .NET Core](global-tools.md)
+* [Strumenti di .NET Core](global-tools.md)

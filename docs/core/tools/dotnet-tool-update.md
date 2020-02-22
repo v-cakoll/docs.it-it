@@ -1,84 +1,95 @@
 ---
 title: Comando dotnet tool update
-description: Il comando dotnet tool update aggiorna lo strumento globale .NET Core specificato nel computer.
-ms.date: 05/29/2018
-ms.openlocfilehash: b10ce39c8b9d4df23243bcf672454a455e34eec1
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+description: Il comando DotNet Tool Update aggiorna lo strumento .NET Core specificato nel computer.
+ms.date: 02/14/2020
+ms.openlocfilehash: 50bb366fedfb0ea69b8b6007ff89e366b4f689de
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117538"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543417"
 ---
 # <a name="dotnet-tool-update"></a>dotnet tool update
 
-[!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
+**Questo articolo si applica a:** ✔️ .net core 2,1 SDK e versioni successive
 
-## <a name="name"></a>nome
+## <a name="name"></a>Nome
 
-`dotnet tool update` - Aggiorna lo [strumento globale .NET Core](global-tools.md) specificato nel computer.
+`dotnet tool update`: aggiorna lo [strumento .NET Core](global-tools.md) specificato nel computer.
 
 ## <a name="synopsis"></a>Riepilogo
 
 ```dotnetcli
-dotnet tool update <PACKAGE_NAME> <-g|--global> [--configfile] [--framework] [-v|--verbosity]
-dotnet tool update <PACKAGE_NAME> <--tool-path> [--configfile] [--framework] [-v|--verbosity]
+dotnet tool update <PACKAGE_NAME> <-g|--global> [--configfile] [--framework] [-v|--verbosity] [--add-source]
+dotnet tool update <PACKAGE_NAME> <--tool-path> [--configfile] [--framework] [-v|--verbosity] [--add-source]
+dotnet tool update <PACKAGE_NAME> [--configfile] [--framework] [-v|--verbosity] [--add-source]
 dotnet tool update <-h|--help>
 ```
 
 ## <a name="description"></a>Descrizione
 
-Il comando `dotnet tool update` consente di aggiornare gli strumenti globali .NET Core nel computer all'ultima versione stabile del pacchetto. Il comando disinstalla e reinstalla uno strumento aggiornandolo. Per usare il comando, è necessario specificare che si vuole aggiornare uno strumento da un'installazione a livello utente con l'opzione `--global` oppure specificare un percorso in cui è installato lo strumento con l'opzione `--tool-path`.
+Il `dotnet tool update` comando fornisce un modo per aggiornare gli strumenti di .NET Core nel computer alla versione stabile più recente del pacchetto. Il comando disinstalla e reinstalla uno strumento aggiornandolo. Per utilizzare il comando, è necessario specificare una delle opzioni seguenti:
+
+* Per aggiornare uno strumento globale che è stato installato nel percorso predefinito, usare l'opzione `--global`
+* Per aggiornare uno strumento globale installato in un percorso personalizzato, utilizzare l'opzione `--tool-path`.
+* Per aggiornare uno strumento locale, omettere le opzioni `--global` e `--tool-path`.
+
+**Gli strumenti locali sono disponibili a partire da .NET Core SDK 3,0.**
 
 ## <a name="arguments"></a>Argomenti
 
-`PACKAGE_NAME`
+- **`PACKAGE_NAME`**
 
-Nome/ID del pacchetto NuGet che contiene lo strumento globale .NET Core da aggiornare. È possibile trovare il nome del pacchetto usando il comando [dotnet tool list](dotnet-tool-list.md).
+  Nome/ID del pacchetto NuGet che contiene lo strumento globale .NET Core da aggiornare. È possibile trovare il nome del pacchetto usando il comando [dotnet tool list](dotnet-tool-list.md).
 
 ## <a name="options"></a>Opzioni
 
-`--add-source <SOURCE>`
+- **`--add-source <SOURCE>`**
 
-Aggiunge un'altra origine pacchetto NuGet da usare durante l'installazione.
+  Aggiunge un'altra origine pacchetto NuGet da usare durante l'installazione.
 
-`--configfile <FILE>`
+- **`--configfile <FILE>`**
 
-File di configurazione NuGet (*nuget.config*) da usare.
+  File di configurazione NuGet (*nuget.config*) da usare.
 
-`--framework <FRAMEWORK>`
+- **`--framework <FRAMEWORK>`**
 
-Specifica il [framework di destinazione](../../standard/frameworks.md) per cui aggiornare lo strumento.
+  Specifica il [framework di destinazione](../../standard/frameworks.md) per cui aggiornare lo strumento.
 
-`-g|--global`
+- **`-g|--global`**
 
-Specifica che l'aggiornamento è per uno strumento a livello utente. Non può essere usata con l'opzione `--tool-path`. Se non si specifica questa opzione, è necessario specificare l'opzione `--tool-path`.
+  Specifica che l'aggiornamento è per uno strumento a livello utente. Non può essere usata con l'opzione `--tool-path`. Omettendo sia `--global` che `--tool-path` specifica che lo strumento da aggiornare è uno strumento locale. 
 
-`-h|--help`
+- **`-h|--help`**
 
-Stampa una breve guida per il comando.
+  Stampa una breve guida per il comando.
 
-`--tool-path <PATH>`
+- **`--tool-path <PATH>`**
 
-Specifica il percorso in cui è installato lo strumento globale. Il valore di PATH può essere assoluto o relativo. Non può essere usata con l'opzione `--global`. Se non si specifica questa opzione, è necessario specificare l'opzione `--global`.
+  Specifica il percorso in cui è installato lo strumento globale. Il valore di PATH può essere assoluto o relativo. Non può essere usata con l'opzione `--global`. Omettendo sia `--global` che `--tool-path` specifica che lo strumento da aggiornare è uno strumento locale. 
 
-`-v|--verbosity <LEVEL>`
+- **`-v|--verbosity <LEVEL>`**
 
-Imposta il livello di dettaglio del comando. I valori consentiti sono `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.
+  Imposta il livello di dettaglio del comando. I valori consentiti sono `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.
 
 ## <a name="examples"></a>Esempi
 
-Aggiorna lo strumento globale [dotnetsay](https://www.nuget.org/packages/dotnetsay/):
+- **`dotnet tool update -g dotnetsay`**
 
-`dotnet tool update -g dotnetsay`
+  Aggiorna lo strumento globale [dotnetsay](https://www.nuget.org/packages/dotnetsay/) .
 
-Aggiorna lo strumento globale [dotnetsay](https://www.nuget.org/packages/dotnetsay/) in una cartella di Windows specifica:
+- **`dotnet tool update dotnetsay --tool-path c:\global-tools`**
 
-`dotnet tool update dotnetsay --tool-path c:\global-tools`
+  Aggiorna lo strumento globale [dotnetsay](https://www.nuget.org/packages/dotnetsay/) che si trova in una directory di Windows specifica.
 
-Aggiorna lo strumento globale [dotnetsay](https://www.nuget.org/packages/dotnetsay/) in una cartella di Linux/macOS specifica:
+- **`dotnet tool update dotnetsay --tool-path ~/bin`**
 
-`dotnet tool update dotnetsay --tool-path ~/bin`
+  Aggiorna lo strumento globale [dotnetsay](https://www.nuget.org/packages/dotnetsay/) che si trova in una directory Linux/MacOS specifica.
+
+- **`dotnet tool update dotnetsay`**
+
+  Aggiorna lo strumento locale [dotnetsay](https://www.nuget.org/packages/dotnetsay/) installato per la directory corrente.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Strumenti globali .NET Core](global-tools.md)
+- [Strumenti di .NET Core](global-tools.md)

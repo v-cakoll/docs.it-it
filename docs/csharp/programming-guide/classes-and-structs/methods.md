@@ -5,12 +5,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 8c90f06bfadc528bd9575ead30e6b01263055fe8
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 8348e080d833e79dd364aee511ac7d05fb53d1cc
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743914"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543560"
 ---
 # <a name="methods-c-programming-guide"></a>Metodi (Guida per programmatori C#)
 
@@ -21,7 +21,7 @@ Un metodo è un blocco di codice che contiene una serie di istruzioni. Un progra
 
 ## <a name="method-signatures"></a>Firme del metodo
 
-I metodi vengono dichiarati in una [classe](../../language-reference/keywords/class.md) o in una [struct](../../language-reference/keywords/struct.md) specificando il livello di accesso, ad esempio `public` o `private`, i modificatori facoltativi, ad esempio `abstract` o `sealed`, il valore restituito, il nome del metodo e i parametri del metodo. Queste parti costituiscono la firma del metodo.
+I metodi vengono dichiarati in una [classe](../../language-reference/keywords/class.md), uno [struct](../../language-reference/keywords/struct.md)o un' [interfaccia](../interfaces/index.md) specificando il livello di accesso, ad esempio `public` o `private`, i modificatori facoltativi, ad esempio `abstract` o `sealed`, il valore restituito, il nome del metodo e tutti i parametri del metodo. Queste parti costituiscono la firma del metodo.
 
 > [!NOTE]
 > Un tipo restituito di un metodo non fa parte della firma del metodo in caso di overload dei metodi. Fa tuttavia parte della firma del metodo quando si determina la compatibilità tra un delegato e il metodo a cui fa riferimento.
@@ -38,7 +38,7 @@ Chiamare un metodo su un oggetto è come accedere a un campo. Dopo il nome dell'
 
 ## <a name="method-parameters-vs-arguments"></a>Parametri di metodo e argomenti
 
-La definizione del metodo specifica i nomi e i tipi di tutti i parametri obbligatori. Quando il codice chiamante chiama il metodo, fornisce valori concreti, detti argomenti, per ogni parametro. Gli argomenti devono essere compatibili con il tipo di parametro, ma il nome dell'argomento (se presente) usato nel codice chiamante non deve essere lo stesso del parametro denominato definito nel metodo. Ad esempio,
+La definizione del metodo specifica i nomi e i tipi di tutti i parametri obbligatori. Quando il codice chiamante chiama il metodo, fornisce valori concreti, detti argomenti, per ogni parametro. Gli argomenti devono essere compatibili con il tipo di parametro, ma il nome dell'argomento (se presente) usato nel codice chiamante non deve essere lo stesso del parametro denominato definito nel metodo. Ad esempio:
 
 [!code-csharp[csProgGuideObjects#74](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#74)]
 
@@ -153,7 +153,7 @@ Se il metodo restituisce `void` o è un metodo asincrono, il corpo del metodo de
 
 ## <a name="iterators"></a>Iteratori
 
-Un iteratore esegue un'iterazione personalizzata su una raccolta, ad esempio un elenco o una matrice. Un iteratore usa l'istruzione [yield return](../../language-reference/keywords/yield.md) per restituire un elemento alla volta. Quando viene raggiunta un'istruzione [yield return](../../language-reference/keywords/yield.md) , la posizione corrente nel codice viene memorizzata. L'esecuzione viene riavviata a partire da quella posizione la volta successiva che viene chiamato l'iteratore.
+Un iteratore esegue un'iterazione personalizzata su una raccolta, ad esempio un elenco o una matrice. Un iteratore usa l'istruzione [yield return](../../language-reference/keywords/yield.md) per restituire un elemento per volta. Quando viene raggiunta un'istruzione [yield return](../../language-reference/keywords/yield.md) , la posizione corrente nel codice viene memorizzata. L'esecuzione viene riavviata a partire da quella posizione la volta successiva che viene chiamato l'iteratore.
 
 Per chiamare un iteratore dal codice client, usare un'istruzione [foreach](../../language-reference/keywords/foreach-in.md) .
 

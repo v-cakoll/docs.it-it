@@ -3,12 +3,12 @@ title: Come modificare il contenuto di una C# stringa-Guida
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 539e313173d46c2c92399cefe94207c8beed03b4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ecedd9a9027aa925c753f8e187d611b19d3db991
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973260"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543261"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Come modificare il contenuto di una stringa in C\#
 
@@ -62,12 +62,13 @@ Nell'esempio seguente viene illustrato come sostituire un gruppo di caratteri in
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#6)]
 
-## <a name="unsafe-modifications-to-string"></a>Modifiche di tipo unsafe alle stringhe
+## <a name="programmatically-build-up-string-content"></a>Compilare contenuto stringa a livello di codice
 
-Il codice **unsafe** consente di modificare una stringa "sul posto" dopo che è stata creata. Il codice unsafe ignora molte funzionalità di .NET progettate per ridurre al minimo determinati tipi di bug nel codice. Per modificare una stringa sul posto è necessario usare il codice unsafe, perché la classe string è progettata come tipo **non modificabile**. Dopo che è stato creato, il valore di tale classe non cambia. Il codice unsafe aggira questa proprietà accedendo e modificando la memoria usata da un oggetto `string` senza usare i metodi `string` normali.
-L'esempio seguente viene incluso per i rari casi in cui si vuole modificare una stringa sul posto mediante codice unsafe. L'esempio illustra l'uso della parola chiave `fixed`. La parola chiave `fixed` impedisce a Garbage Collector (GC) di spostare l'oggetto stringa in memoria mentre il codice accede alla memoria usando il puntatore unsafe. Mostra anche un possibile effetto collaterale delle operazioni con codice unsafe sulle stringhe, legato al modo in cui il compilatore C# archivia (inserisce) le stringhe internamente. In generale questa tecnica va usata solo quando è assolutamente necessario. Per altre informazioni, vedere gli articoli relativi a [unsafe](../language-reference/keywords/unsafe.md) e [fixed](../language-reference/keywords/fixed-statement.md). La Guida di riferimento alle API per <xref:System.String.Intern%2A> include informazioni sulla centralizzazione delle stringhe.
+Poiché le stringhe non sono modificabili, negli esempi precedenti vengono create stringhe temporanee o matrici di caratteri. Negli scenari a prestazioni elevate può essere utile evitare queste allocazioni di heap. .NET Core fornisce un metodo di <xref:System.String.Create%2A?displayProperty=nameWithType> che consente di compilare a livello di codice il contenuto di una stringa tramite un callback evitando al tempo stesso le allocazioni di stringhe temporanee intermedie.
 
-[!code-csharp[unsafe ways to create a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
+[!code-csharp[using string.Create to programmatically build the string content for a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
+
+È possibile modificare una stringa in un blocco fisso con codice non sicuro, ma è **fortemente** sconsigliata modificare il contenuto della stringa dopo la creazione di una stringa. In questo modo si interrompono le operazioni in modi imprevedibili. Se, ad esempio, un utente centralizza una stringa con lo stesso contenuto, otterrà la copia e non si aspetta che la stringa venga modificata.
 
 È possibile provare questi esempi esaminando il codice nel [repository GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Oppure è possibile scaricare gli esempi [come file ZIP](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 

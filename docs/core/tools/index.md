@@ -2,15 +2,17 @@
 title: Interfaccia della riga di comando di .NET Core
 titleSuffix: ''
 description: Panoramica del interfaccia della riga di comando di .NET Core e delle relative funzionalità.
-ms.date: 08/14/2017
-ms.openlocfilehash: b0a8e0dd8cf77bb6f7567c27e9972f62515ec0f2
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.date: 02/13/2020
+ms.openlocfilehash: 1078d68ddc088274fa14b0094a81765f7af69dad
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920488"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543314"
 ---
 # <a name="net-core-cli-overview"></a>Panoramica di interfaccia della riga di comando di .NET Core
+
+**Questo articolo si applica a:** ✔️ .net core 2,1 SDK e versioni successive
 
 L'interfaccia della riga di comando di .NET Core è una serie di procedure multipiattaforma per lo sviluppo, la compilazione, l'esecuzione e la pubblicazione di applicazioni .NET Core.
 
@@ -20,27 +22,23 @@ Il interfaccia della riga di comando di .NET Core è incluso nel [.NET Core SDK]
 
 Per impostazione predefinita vengono installati i comandi seguenti:
 
-<!-- markdownlint-disable MD025 -->
+### <a name="basic-commands"></a>Comandi di base
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
-**Comandi di base**
-
-- [new](dotnet-new.md)
+- [Nuovo](dotnet-new.md)
 - [restore](dotnet-restore.md)
 - [build](dotnet-build.md)
-- [publish](dotnet-publish.md)
+- [pubblica](dotnet-publish.md)
 - [run](dotnet-run.md)
 - [test](dotnet-test.md)
 - [vstest](dotnet-vstest.md)
 - [pack](dotnet-pack.md)
-- [migrate](dotnet-migrate.md)
+- [migrazione](dotnet-migrate.md)
 - [clean](dotnet-clean.md)
 - [sln](dotnet-sln.md)
 - [help](dotnet-help.md)
 - [store](dotnet-store.md)
 
-**Comandi per la modifica dei progetti**
+### <a name="project-modification-commands"></a>Comandi di modifica dei progetti
 
 - [add package](dotnet-add-package.md)
 - [add reference](dotnet-add-reference.md)
@@ -48,7 +46,7 @@ Per impostazione predefinita vengono installati i comandi seguenti:
 - [remove reference](dotnet-remove-reference.md)
 - [list reference](dotnet-list-reference.md)
 
-**Comandi avanzati**
+### <a name="advanced-commands"></a>Comandi avanzati
 
 - [nuget delete](dotnet-nuget-delete.md)
 - [nuget locals](dotnet-nuget-locals.md)
@@ -56,64 +54,26 @@ Per impostazione predefinita vengono installati i comandi seguenti:
 - [msbuild](dotnet-msbuild.md)
 - [dotnet install script](dotnet-install-script.md)
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+### <a name="tool-management-commands"></a>Comandi di gestione degli strumenti
 
-**Comandi di base**
+- [installazione dello strumento](dotnet-tool-install.md)
+- [Elenco strumenti](dotnet-tool-list.md)
+- [aggiornamento dello strumento](dotnet-tool-update.md)
+- [ripristino dello strumento](global-tools.md#install-a-local-tool) **disponibile a partire da .NET Core SDK 3,0**
+- [esecuzione dello strumento](global-tools.md#invoke-a-local-tool) **disponibile a partire da .NET Core SDK 3,0**
+- [Disinstallazione dello strumento](dotnet-tool-uninstall.md)
 
-- [new](dotnet-new.md)
-- [restore](dotnet-restore.md)
-- [build](dotnet-build.md)
-- [publish](dotnet-publish.md)
-- [run](dotnet-run.md)
-- [test](dotnet-test.md)
-- [vstest](dotnet-vstest.md)
-- [pack](dotnet-pack.md)
-- [migrate](dotnet-migrate.md)
-- [clean](dotnet-clean.md)
-- [sln](dotnet-sln.md)
-
-**Comandi per la modifica dei progetti**
-
-- [add package](dotnet-add-package.md)
-- [add reference](dotnet-add-reference.md)
-- [remove package](dotnet-remove-package.md)
-- [remove reference](dotnet-remove-reference.md)
-- [list reference](dotnet-list-reference.md)
-
-**Comandi avanzati**
-
-- [nuget delete](dotnet-nuget-delete.md)
-- [nuget locals](dotnet-nuget-locals.md)
-- [nuget push](dotnet-nuget-push.md)
-- [msbuild](dotnet-msbuild.md)
-- [dotnet install script](dotnet-install-script.md)
-
----
-
-L'interfaccia della riga di comando adotta un modello di estendibilità che consente di specificare altri strumenti per i progetti. Per altre informazioni, vedere l'argomento [Modello di estendibilità dell'interfaccia della riga di comando di .NET Core](extensibility.md).
+Gli strumenti sono applicazioni console installate da pacchetti NuGet e vengono richiamate dal prompt dei comandi. È possibile scrivere strumenti manualmente oppure installare gli strumenti scritti da terze parti. Gli strumenti sono noti anche come strumenti globali, strumenti per percorsi di strumenti e strumenti locali. Per altre informazioni, vedere [Cenni preliminari sugli strumenti di .NET Core](global-tools.md).
 
 ## <a name="command-structure"></a>Struttura dei comandi
 
 La struttura dei comandi dell'interfaccia della riga di comando è composta dal [driver ("dotnet")](#driver), dal [comando](#command) e, in alcuni casi, dagli [argomenti](#arguments) e dalle [opzioni](#options). Questo modello può essere osservato nella maggior parte delle operazioni eseguite dalla riga di comando, inclusa la creazione di una nuova app console e la relativa esecuzione dalla riga di comando, come illustrato dai comandi seguenti quando vengono eseguiti da una directory denominata *my_app*:
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```dotnetcli
 dotnet new console
 dotnet build --output /build_output
 dotnet /build_output/my_app.dll
 ```
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-```dotnetcli
-dotnet new console
-dotnet restore
-dotnet build --output /build_output
-dotnet /build_output/my_app.dll
-```
-
----
 
 ### <a name="driver"></a>Driver
 
@@ -137,15 +97,11 @@ Il comando esegue un'azione. Ad esempio, `dotnet build` compila il codice. `dotn
 
 Gli argomenti passati alla riga di comando sono gli argomenti per il comando richiamato. Quando si esegue `dotnet publish my_app.csproj`, ad esempio, l'argomento `my_app.csproj` indica il progetto da pubblicare e viene passato al comando `publish`.
 
-### <a name="options"></a>Options
+### <a name="options"></a>Opzioni
 
 Le opzioni passate alla riga di comando sono le opzioni per il comando richiamato. Quando si esegue `dotnet publish --output /build_output`, ad esempio, l'opzione `--output` e il relativo valore vengono passati al comando `publish`.
-
-## <a name="migration-from-projectjson"></a>Migrazione da project.json
-
-Se si sono usati gli strumenti della Preview 2 per generare progetti basati su *project.json*, consultare l'argomento [dotnet migrate](dotnet-migrate.md) per informazioni sulla migrazione del progetto in MSBuild/ *.csproj* per l'uso con gli strumenti di rilascio. Per i progetti .NET Core creati prima del rilascio degli strumenti della Preview 2, aggiornare manualmente il progetto seguendo le istruzioni disponibili in [Migrazione da DNX all'interfaccia della riga di comando di .NET Core (project.json)](../migration/from-dnx.md) e usare `dotnet migrate` o aggiornare direttamente i progetti.
 
 ## <a name="see-also"></a>Vedere anche
 
 - [repository GitHub DotNet/SDK](https://github.com/dotnet/sdk/)
-- [.NET Core installation guide](https://aka.ms/dotnetcoregs) (Guida all'installazione di .NET Core)
+- [.NET Core installation guide](../install/sdk.md) (Guida all'installazione di .NET Core)

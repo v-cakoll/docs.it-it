@@ -3,16 +3,20 @@ title: Esecuzione di unit test selettivi
 description: Come usare un'espressione di filtro per eseguire unit test selettivi con il comando dotnet test in .NET Core.
 author: smadala
 ms.date: 03/22/2017
-ms.openlocfilehash: 57428dad2de6c2507ca2cdc42e3df9e83a1edd69
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b9156300587215e68c01c609e298dbc1a2c53d11
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715453"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543508"
 ---
 # <a name="running-selective-unit-tests"></a>Esecuzione di unit test selettivi
 
 Con il comando `dotnet test` in .NET Core è possibile usare un'espressione filtro per eseguire test selettivi. Questo articolo illustra come filtrare i test eseguiti. Negli esempi seguenti viene usato `dotnet test`. Se si utilizza `vstest.console.exe`, sostituire `--filter` con `--testcasefilter:`.
+
+> [!NOTE]
+> L'uso di filtri che includono punti esclamativi (!) in `*nix` richiede l'escape perché `!` è riservato. Questo filtro, ad esempio, ignora tutti i test se lo spazio dei nomi contiene IntegrationTests: `dotnet test --filter FullyQualifiedName\!~IntegrationTests`.
+> Si noti la barra rovesciata che precede il punto esclamativo.
 
 ## <a name="mstest"></a>MSTest
 
@@ -40,7 +44,7 @@ namespace MSTestNamespace
 }
 ```
 
-| Espressione | Risultato |
+| Expression | Risultato |
 | ---------- | ------ |
 | `dotnet test --filter Method` | Esegue i test il cui `FullyQualifiedName` contiene `Method`. Disponibile in `vstest 15.1+`. |
 | `dotnet test --filter Name~TestMethod1` | Esegue i test il cui nome contiene `TestMethod1`. |
@@ -51,7 +55,7 @@ namespace MSTestNamespace
 
 **Utilizzo degli operatori condizionali | e &amp;**
 
-| Espressione | Risultato |
+| Expression | Risultato |
 | ---------- | ------ |
 | <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | Esegue i test che hanno `UnitTest1` in `FullyQualifiedName` **o** `TestCategory` è `CategoryA`. |
 | `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | Esegue i test che hanno `UnitTest1` in `FullyQualifiedName` **e** `TestCategory` è `CategoryA`. |
@@ -82,7 +86,7 @@ namespace XUnitNamespace
 }
 ```
 
-| Espressione | Risultato |
+| Expression | Risultato |
 | ---------- | ------ |
 | `dotnet test --filter DisplayName=XUnitNamespace.TestClass1.Test1` | Esegue solo un test, `XUnitNamespace.TestClass1.Test1`. |
 | `dotnet test --filter FullyQualifiedName!=XUnitNamespace.TestClass1.Test1` | Esegue tutti i test tranne `XUnitNamespace.TestClass1.Test1`. |
@@ -90,14 +94,14 @@ namespace XUnitNamespace
 
 Nell'esempio di codice, i tratti definiti con le chiavi `Category` e `Priority` possono essere utilizzati per il filtraggio.
 
-| Espressione | Risultato |
+| Expression | Risultato |
 | ---------- | ------ |
 | `dotnet test --filter XUnit` | Esegue i test il cui `FullyQualifiedName` contiene `XUnit`.  Disponibile in `vstest 15.1+`. |
 | `dotnet test --filter Category=CategoryA` | Esegue i test che hanno `[Trait("Category", "CategoryA")]`. |
 
 **Utilizzo degli operatori condizionali | e &amp;**
 
-| Espressione | Risultato |
+| Expression | Risultato |
 | ---------- | ------ |
 | <code>dotnet test --filter "FullyQualifiedName~TestClass1&#124;Category=CategoryA"</code> | Esegue i test che hanno `TestClass1` in `FullyQualifiedName` **o** `Category` è `CategoryA`. |
 | `dotnet test --filter "FullyQualifiedName~TestClass1&Category=CategoryA"` | Esegue i test che hanno `TestClass1` in `FullyQualifiedName` **e** `Category` è `CategoryA`. |
@@ -128,7 +132,7 @@ namespace NUnitNamespace
 }
 ```
 
-| Espressione | Risultato |
+| Expression | Risultato |
 | ---------- | ------ |
 | `dotnet test --filter Method` | Esegue i test il cui `FullyQualifiedName` contiene `Method`. Disponibile in `vstest 15.1+`. |
 | `dotnet test --filter Name~TestMethod1` | Esegue i test il cui nome contiene `TestMethod1`. |
@@ -139,7 +143,7 @@ namespace NUnitNamespace
 
 **Utilizzo degli operatori condizionali | e &amp;**
 
-| Espressione | Risultato |
+| Expression | Risultato |
 | ---------- | ------ |
 | <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | Esegue i test che hanno `UnitTest1` in `FullyQualifiedName` **o** `TestCategory` è `CategoryA`. |
 | `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | Esegue i test che hanno `UnitTest1` in `FullyQualifiedName` **e** `TestCategory` è `CategoryA`. |
