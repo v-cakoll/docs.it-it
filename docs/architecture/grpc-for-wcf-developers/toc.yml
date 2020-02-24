@@ -27,7 +27,7 @@
           href: protobuf-repeated.md
         - name: Campi riservati protobuf
           href: protobuf-reserved.md
-        - name: Campi Any e OneOf protobuf per i tipi variant
+        - name: Campi Any e Oneof protobuf per i tipi variant
           href: protobuf-any-oneof.md
         - name: Enumerazioni protobuf
           href: protobuf-enums.md
@@ -79,7 +79,7 @@
           href: docker.md
         - name: Kubernetes
           href: kubernetes.md
-        - name: gRPC e mesh di servizi
+        - name: Mesh di servizi
           href: service-mesh.md
         - name: Bilanciamento del carico
           href: load-balancing.md
