@@ -49,25 +49,7 @@
     - name: Installare una versione localizzata di IntelliSense
       href: install/localized-intellisense.md
 - name: Introduzione
-  items:
-    - name: Introduzione
-      href: get-started.md
-    - name: 'Introduzione a C# e Visual Studio Code'
-      href: tutorials/with-visual-studio-code.md
-    - name: Introduzione all'uso di .NET Core su macOS con Visual Studio Code
-      href: tutorials/using-on-macos.md
-    - name: Creare la prima app console in Visual Studio
-      href: tutorials/with-visual-studio.md
-    - name: Eseguire il debug di un'applicazione con Visual Studio
-      href: tutorials/debugging-with-visual-studio.md
-    - name: Pubblicare un'applicazione con Visual Studio
-      href: tutorials/publishing-with-visual-studio.md
-    - name: Creare una libreria .NET Standard in Visual Studio
-      href: tutorials/library-with-visual-studio.md
-    - name: Testare una libreria .NET Standard in Visual Studio
-      href: tutorials/testing-library-with-visual-studio.md
-    - name: Utilizzare una libreria .NET Standard in Visual Studio
-      href: tutorials/consuming-library-with-visual-studio.md
+  href: get-started.md
 - name: Novità di .NET Core
   items:
     - name: Novità di .NET Core 3.1
@@ -87,12 +69,28 @@
   items:
     - name: Panoramica
       href: tutorials/index.md
-    - name: Introduzione a .NET Core con Visual Studio per Mac
-      href: tutorials/using-on-mac-vs.md
-    - name: Creazione di una soluzione .NET Core completa in macOS
-      href: tutorials/using-on-mac-vs-full-solution.md
+    - name: Introduzione a .NET Core con Visual Studio
+      href: tutorials/with-visual-studio.md
+    - name: Introduzione a .NET Core con Visual Studio Code
+      href: tutorials/with-visual-studio-code.md
     - name: Introduzione all'uso di .NET Core con l'interfaccia della riga di comando
       href: tutorials/cli-create-console-app.md
+    - name: Introduzione all'uso di .NET Core con Visual Studio Code su macOS
+      href: tutorials/using-on-macos.md
+    - name: Introduzione a .NET Core con Visual Studio per Mac
+      href: tutorials/using-on-mac-vs.md
+    - name: Eseguire il debug di un'applicazione con Visual Studio
+      href: tutorials/debugging-with-visual-studio.md
+    - name: Pubblicare un'applicazione con Visual Studio
+      href: tutorials/publishing-with-visual-studio.md
+    - name: Creare una libreria .NET Standard in Visual Studio
+      href: tutorials/library-with-visual-studio.md
+    - name: Testare una libreria .NET Standard in Visual Studio
+      href: tutorials/testing-library-with-visual-studio.md
+    - name: Utilizzare una libreria .NET Standard in Visual Studio
+      href: tutorials/consuming-library-with-visual-studio.md
+    - name: Creazione di una soluzione .NET Core completa in macOS
+      href: tutorials/using-on-mac-vs-full-solution.md
     - name: Organizzare e testare progetti con gli strumenti dell'interfaccia della riga di comando di .NET Core
       href: tutorials/testing-with-cli.md
     - name: Sviluppare librerie con strumenti multipiattaforma
