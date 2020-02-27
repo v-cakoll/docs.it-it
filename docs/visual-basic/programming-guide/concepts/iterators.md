@@ -2,12 +2,12 @@
 title: Iteratori
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
-ms.openlocfilehash: 465a8e6650c3d015520164030a146c9502ebe603
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2789ac66690ebfd472b9bae5ccf08b1bdfaa0922
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353731"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628735"
 ---
 # <a name="iterators-visual-basic"></a>Iteratori (Visual Basic)
 
@@ -435,7 +435,7 @@ Anche se si scrive un iteratore come metodo, il compilatore lo traduce in una cl
 
 Per verificare le operazioni eseguite dal compilatore, è possibile usare lo strumento Ildsam.exe per visualizzare il codice Microsoft Intermediate Language generato per un metodo iteratore.
 
-Quando si crea un iteratore per una [classe](../../../csharp/language-reference/keywords/class.md) o uno [struct](../../../csharp/language-reference/keywords/struct.md), non è necessario implementare l'intera interfaccia <xref:System.Collections.IEnumerator>. Quando il compilatore rileva l'iteratore, genera automaticamente i metodi `Current`, `MoveNext` e `Dispose` dell'interfaccia <xref:System.Collections.IEnumerator> o <xref:System.Collections.Generic.IEnumerator%601>.
+Quando si crea un iteratore per una [classe](../../language-reference/statements/class-statement.md) o uno [struct](../../language-reference/statements/structure-statement.md), non è necessario implementare l'intera interfaccia <xref:System.Collections.IEnumerator>. Quando il compilatore rileva l'iteratore, genera automaticamente i metodi `Current`, `MoveNext` e `Dispose` dell'interfaccia <xref:System.Collections.IEnumerator> o <xref:System.Collections.Generic.IEnumerator%601>.
 
 In ogni iterazione successiva del ciclo `For Each…Next` (o alla chiamata diretta a `IEnumerator.MoveNext`), il corpo di codice iteratore successivo riprende dopo la precedente istruzione `Yield`. Continua quindi con l'istruzione `Yield` successiva fino a quando non viene raggiunta la fine del corpo dell'iteratore o fino a quando non viene rilevata un'istruzione `Exit Function` o `Return`.
 
@@ -459,4 +459,4 @@ Gli iteratori consentono di mantenere la semplicità di un ciclo `For Each` quan
 - <xref:System.Collections.Generic.IEnumerable%601>
 - [Istruzione For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
 - [Istruzione Yield](../../../visual-basic/language-reference/statements/yield-statement.md)
-- [Iteratore](../../../visual-basic/language-reference/modifiers/iterator.md)
+- [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md)

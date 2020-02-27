@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: d277869809b7148a2c3d568c91fce15f9a83baa1
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: ade2cba857a1a32039f8fd07881f13f63f0dbe1a
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093565"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628137"
 ---
 # <a name="types-c-programming-guide"></a>Tipi (Guida per programmatori C#)
 
@@ -67,7 +67,7 @@ Il linguaggio C# offre un set standard di tipi numerici predefiniti per rapprese
 
 ## <a name="custom-types"></a>Tipi personalizzati
 
-Usare i costrutti [struct](../../language-reference/keywords/struct.md), [class](../../language-reference/keywords/class.md), [interface](../../language-reference/keywords/interface.md) e [enum](../../language-reference/builtin-types/enum.md) per creare tipi personalizzati. La libreria di classi .NET stessa è una raccolta di tipi personalizzati offerti da Microsoft che è possibile usare nelle proprie applicazioni. Per impostazione predefinita, i tipi più comunemente usati nella libreria di classi sono disponibili in qualsiasi programma C#, mentre altri diventano disponibili solo quando si aggiunge in modo esplicito un riferimento di progetto all'assembly in cui sono definiti. Dopo che il compilatore avrà un riferimento all'assembly, è possibile dichiarare variabili (e costanti) dei tipi dichiarati in tale assembly in codice sorgente. Per altre informazioni, vedere [Libreria di classi .NET](../../../standard/class-library-overview.md).
+Usare i costrutti [struct](../../language-reference/builtin-types/struct.md), [class](../../language-reference/keywords/class.md), [interface](../../language-reference/keywords/interface.md) e [enum](../../language-reference/builtin-types/enum.md) per creare tipi personalizzati. La libreria di classi .NET stessa è una raccolta di tipi personalizzati offerti da Microsoft che è possibile usare nelle proprie applicazioni. Per impostazione predefinita, i tipi più comunemente usati nella libreria di classi sono disponibili in qualsiasi programma C#, mentre altri diventano disponibili solo quando si aggiunge in modo esplicito un riferimento di progetto all'assembly in cui sono definiti. Dopo che il compilatore avrà un riferimento all'assembly, è possibile dichiarare variabili (e costanti) dei tipi dichiarati in tale assembly in codice sorgente. Per altre informazioni, vedere [Libreria di classi .NET](../../../standard/class-library-overview.md).
 
 ## <a name="the-common-type-system"></a>Common Type System
 
@@ -75,7 +75,7 @@ Usare i costrutti [struct](../../language-reference/keywords/struct.md), [class]
 
 - Il tipo supporta il principio di ereditarietà. I tipi possono derivare da altri tipi, denominati *tipi di base*. Il tipo derivato eredita (con alcune limitazioni) metodi, proprietà e altri membri del tipo di base, Il tipo di base può a sua volta derivare da un altro tipo, nel quale caso il tipo derivato eredita i membri di entrambi i tipi di base nella gerarchia di ereditarietà. Tutti i tipi, inclusi i tipi numerici predefiniti, ad esempio <xref:System.Int32?displayProperty=nameWithType> (parola chiave C#: [int](../../language-reference/builtin-types/integral-numeric-types.md)), derivano in definitiva da un unico tipo di base, ovvero <xref:System.Object?displayProperty=nameWithType> (parola chiave C#: [object](../../language-reference/builtin-types/reference-types.md)). Questa gerarchia di tipi unificata prende il nome di [Common Type System](../../../standard/base-types/common-type-system.md) (CTS). Per altre informazioni sull'ereditarietà in C#, vedere [Ereditarietà](../classes-and-structs/inheritance.md).
 
-- Nel CTS ogni tipo è definito come *tipo valore* o *tipo riferimento*. In queste due categorie sono inclusi anche tutti i tipi personalizzati nella libreria di classi .NET e i tipi definiti dall'utente. I tipi definiti tramite la parola chiave [struct](../../language-reference/keywords/struct.md) sono tipi valore e tutti i tipi numerici incorporati sono tipi `structs`. I tipi definiti tramite la parola chiave [class](../../language-reference/keywords/class.md) sono tipi di riferimento. I tipi riferimento e i tipi valore hanno regole diverse in fase di compilazione e un comportamento diverso in fase di esecuzione.
+- Nel CTS ogni tipo è definito come *tipo valore* o *tipo riferimento*. In queste due categorie sono inclusi anche tutti i tipi personalizzati nella libreria di classi .NET e i tipi definiti dall'utente. I tipi definiti tramite la parola chiave [struct](../../language-reference/builtin-types/struct.md) sono tipi valore e tutti i tipi numerici incorporati sono tipi `structs`. I tipi definiti tramite la parola chiave [class](../../language-reference/keywords/class.md) sono tipi di riferimento. I tipi di riferimento e i tipi di valore hanno regole diverse e un comportamento diverso in fase di esecuzione.
 
 La figura seguente illustra la relazione tra tipi valore e tipi riferimento nel CTS.
 
@@ -90,7 +90,7 @@ L'immagine seguente illustra tipi valore e tipi riferimento nel CTS:
 
 I tipi valore derivano da <xref:System.ValueType?displayProperty=nameWithType>, che deriva da <xref:System.Object?displayProperty=nameWithType>. I tipi che derivano da <xref:System.ValueType?displayProperty=nameWithType> hanno un comportamento speciale in CLR. Le variabili dei tipi valore contengono direttamente i rispettivi valori, ovvero la memoria viene allocata inline nel contesto in cui è dichiarata la variabile. Non esiste un'allocazione heap o un overhead di Garbage Collection separato per le variabili dei tipi valore.
 
-Esistono due categorie di tipi valore: [struct](../../language-reference/keywords/struct.md) e [enum](../../language-reference/builtin-types/enum.md).
+Esistono due categorie di tipi valore: [struct](../../language-reference/builtin-types/struct.md) e [enum](../../language-reference/builtin-types/enum.md).
 
 I tipi numerici incorporati sono struct, i cui metodi e proprietà sono accessibili dall'utente:
 
@@ -107,9 +107,9 @@ int i = 5;
 char c = 'Z';
 ```
 
-I tipi valore sono *sealed*, ovvero non è possibile, ad esempio, derivare un tipo da <xref:System.Int32?displayProperty=nameWithType> e non è possibile definire uno struct da ereditare da uno struct o una classe definita dall'utente, poiché uno struct può ereditare solo da <xref:System.ValueType?displayProperty=nameWithType>. Uno struct può implementare tuttavia una o più interfacce. È possibile eseguire il cast di un tipo struct in qualsiasi tipo di interfaccia implementata. Questa operazione genera tuttavia una *conversione boxing*  per eseguire il wrapping dello struct in un oggetto tipo riferimento sull'heap gestito. Le operazioni di conversione boxing si verificano quando si passa un tipo valore a un metodo che accetta <xref:System.Object?displayProperty=nameWithType> o qualsiasi tipo di interfaccia come parametro di input. Per altre informazioni, vedere [Boxing e unboxing](./boxing-and-unboxing.md).
+I tipi valore sono *sealed*, ovvero non è possibile, ad esempio, derivare un tipo da <xref:System.Int32?displayProperty=nameWithType> e non è possibile definire uno struct da ereditare da uno struct o una classe definita dall'utente, poiché uno struct può ereditare solo da <xref:System.ValueType?displayProperty=nameWithType>. Un tipo struct può tuttavia implementare una o più interfacce. È possibile eseguire il cast di un tipo struct in qualsiasi tipo di interfaccia implementata. Questa operazione genera tuttavia una *conversione boxing*  per eseguire il wrapping dello struct in un oggetto tipo riferimento sull'heap gestito. Le operazioni di conversione boxing si verificano quando si passa un tipo valore a un metodo che accetta <xref:System.Object?displayProperty=nameWithType> o qualsiasi tipo di interfaccia come parametro di input. Per altre informazioni, vedere [Boxing e unboxing](./boxing-and-unboxing.md).
 
-Usare la parola chiave [struct](../../language-reference/keywords/struct.md) per creare tipi valore personalizzati. In genere, uno struct viene usato come contenitore per un piccolo set di variabili correlate, come illustrato nell'esempio seguente:
+Usare la parola chiave [struct](../../language-reference/builtin-types/struct.md) per creare tipi valore personalizzati. In genere, uno struct viene usato come contenitore per un piccolo set di variabili correlate, come illustrato nell'esempio seguente:
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 
@@ -138,7 +138,7 @@ Un'interfaccia deve essere inizializzata insieme a un oggetto classe che la impl
 IMyInterface iface = new MyClass();
 ```
 
-Quando viene creato l'oggetto, la memoria viene allocata nell'heap gestito e la variabile mantiene solo un riferimento al percorso dell'oggetto. I tipi nell'heap gestito richiedono un overhead quando vengono allocati e recuperati dalla funzionalità di gestione automatica della memoria del CLR, nota come *Garbage Collection*. La Garbage Collection, tuttavia, è anche altamente ottimizzata e, nella maggior parte degli scenari, non genera un problema di prestazioni. Per altre informazioni sulla Garbage Collection, vedere [Gestione automatica della memoria](../../../standard/automatic-memory-management.md).
+Quando viene creato l'oggetto, la memoria viene allocata nell'heap gestito e la variabile mantiene solo un riferimento al percorso dell'oggetto. I tipi nell'heap gestito richiedono un overhead quando vengono allocati e recuperati dalla funzionalità di gestione automatica della memoria di CLR, nota come *Garbage Collection*. La Garbage Collection, tuttavia, è anche altamente ottimizzata e, nella maggior parte degli scenari, non genera un problema di prestazioni. Per altre informazioni sulla Garbage Collection, vedere [Gestione automatica della memoria](../../../standard/automatic-memory-management.md).
 
 Tutte le matrici sono tipi riferimento, anche se i relativi elementi sono tipi valore. Le matrici derivano in modo implicito dalla classe <xref:System.Array?displayProperty=nameWithType>, ma vengono dichiarate e usate con la sintassi semplificata fornita da C#, come illustrato nell'esempio seguente:
 

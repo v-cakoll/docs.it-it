@@ -2,16 +2,16 @@
 title: Comando dotnet restore
 description: Informazioni sul ripristino delle dipendenze e degli strumenti specifici per il progetto tramite il comando dotnet-restore.
 ms.date: 05/29/2018
-ms.openlocfilehash: dc73b7b2482d25872be922e68103fb86067146f7
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: c221e8a34e844d0ad0482d2bb4aa6e1c795555ca
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920566"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626060"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+**Questo articolo si applica a:** ✔️ .net core 2,1 SDK e versioni successive
 
 ## <a name="name"></a>Name
 
@@ -19,33 +19,20 @@ ms.locfileid: "76920566"
 
 ## <a name="synopsis"></a>Riepilogo
 
-<!-- markdownlint-disable MD025 -->
-
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```dotnetcli
-dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--force] [--ignore-failed-sources] [--no-cache]
-    [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity] [--interactive]
+dotnet restore [<ROOT>] [--configfile] [--disable-parallel]
+    [--force] [--ignore-failed-sources] [--no-cache]
+    [--no-dependencies] [--packages] [-r|--runtime]
+    [-s|--source] [-v|--verbosity] [--interactive]
+
 dotnet restore [-h|--help]
 ```
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-```dotnetcli
-dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--ignore-failed-sources] [--no-cache]
-    [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity]
-dotnet restore [-h|--help]
-```
-
----
 
 ## <a name="description"></a>Descrizione
 
 Il comando `dotnet restore` usa NuGet per ripristinare le dipendenze e gli strumenti specifici del progetto definiti nel file di progetto. Per impostazione predefinita, il ripristino delle dipendenze e degli strumenti viene eseguito in parallelo.
 
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
-
-Per ripristinare le dipendenze, NuGet necessita dei feed in cui si trovano i pacchetti. I feed vengono forniti in genere tramite il file di configurazione *nuget.config*. Quando viene installato il .NET Core SDK, viene fornito un file di configurazione predefinito. È possibile specificare più feed creando un file *nuget.config* nella directory del progetto. È possibile eseguire l'override dei feed *NuGet. config* con l'opzione `-s`.
+Per ripristinare le dipendenze, NuGet necessita dei feed in cui si trovano i pacchetti. I feed vengono forniti in genere tramite il file di configurazione *nuget.config*. Quando viene installato il .NET Core SDK, viene fornito un file di configurazione predefinito. È possibile specificare più feed creando un file *nuget.config* nella directory del progetto. È possibile eseguire l'override dei feed *NuGet. config* con l'opzione-`-s`.
 
 Per le dipendenze è possibile specificare dove vengono inseriti i pacchetti ripristinati durante l'operazione di ripristino usando l'argomento `--packages`. Se questa destinazione non viene specificata, viene usata la cache predefinita dei pacchetti NuGet che si trova nella directory `.nuget/packages` della directory home dell'utente in tutti i sistemi operativi. Ad esempio, */home/user1* in Linux o *C:\Utenti\user1* in Windows.
 
@@ -69,9 +56,9 @@ Esistono tre impostazioni specifiche che `dotnet restore` ignora:
 
   Questa impostazione non può essere applicata perché [NuGet non supporta ancora la verifica multipiattaforma](https://github.com/NuGet/Home/issues/7939) di pacchetti attendibili.
 
-## <a name="implicit-dotnet-restore"></a>`dotnet restore` implicito
+## <a name="implicit-restore"></a>Ripristino implicito
 
-A partire da .NET Core 2.0, `dotnet restore` viene eseguito in modo implicito se necessario quando si usano i comandi seguenti:
+Il comando `dotnet restore` viene eseguito in modo implicito se necessario quando si eseguono i comandi seguenti:
 
 - [`dotnet new`](dotnet-new.md)
 - [`dotnet build`](dotnet-build.md)
@@ -81,130 +68,94 @@ A partire da .NET Core 2.0, `dotnet restore` viene eseguito in modo implicito se
 - [`dotnet publish`](dotnet-publish.md)
 - [`dotnet pack`](dotnet-pack.md)
 
-Nella maggior parte dei casi non è più necessario usare il comando `dotnet restore` in modo esplicito.
+Nella maggior parte dei casi non è necessario usare in modo esplicito il comando `dotnet restore`.
 
 In alcuni casi, potrebbe non essere appropriato eseguire `dotnet restore` in modo implicito. È ad esempio necessario che alcuni sistemi automatizzati, come i sistemi di compilazione, chiamino `dotnet restore` in modo esplicito per controllare quando si verifica il ripristino in modo che possano controllare l'utilizzo della rete. Per impedire l'esecuzione implicita di `dotnet restore`, è possibile usare il flag `--no-restore` con uno di questi comandi per disabilitare il ripristino implicito.
 
 ## <a name="arguments"></a>Argomenti
 
-`ROOT`
+- **`ROOT`**
 
-Percorso facoltativo del file di progetto da ripristinare.
+  Percorso facoltativo del file di progetto da ripristinare.
 
-## <a name="options"></a>Options
+## <a name="options"></a>Opzioni
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+- **`--configfile <FILE>`**
 
-`--configfile <FILE>`
+  File di configurazione NuGet (*nuget.config*) da usare per l'operazione di ripristino.
 
-File di configurazione NuGet (*nuget.config*) da usare per l'operazione di ripristino.
+- **`--disable-parallel`**
 
-`--disable-parallel`
+  Disabilita il ripristino di più progetti in parallelo.
 
-Disabilita il ripristino di più progetti in parallelo.
+- **`--force`**
 
-`--force`
+  Forza la risoluzione di tutte le dipendenze, anche se l'ultimo ripristino ha avuto esito positivo. La specifica di questo flag equivale all'eliminazione del file *project.assets.json*.
 
-Forza la risoluzione di tutte le dipendenze, anche se l'ultimo ripristino ha avuto esito positivo. La specifica di questo flag equivale all'eliminazione del file *project.assets.json*.
+- **`-h|--help`**
 
-`-h|--help`
+  Stampa una breve guida per il comando.
 
-Stampa una breve guida per il comando.
+- **`--ignore-failed-sources`**
 
-`--ignore-failed-sources`
+  Segnala le origini con esito negativo solo se sono presenti pacchetti che soddisfano il requisito di versione.
 
-Segnala le origini con esito negativo solo se sono presenti pacchetti che soddisfano il requisito di versione.
+- **`--no-cache`**
 
-`--no-cache`
+  Specifica di non memorizzare nella cache pacchetti e richieste HTTP.
 
-Specifica di non memorizzare nella cache pacchetti e richieste HTTP.
+- **`--no-dependencies`**
 
-`--no-dependencies`
+  Durante il ripristino di un progetto con riferimenti da progetto a progetto, ripristina il progetto radice e non i riferimenti.
 
-Durante il ripristino di un progetto con riferimenti da progetto a progetto, ripristina il progetto radice e non i riferimenti.
+- **`--packages <PACKAGES_DIRECTORY>`**
 
-`--packages <PACKAGES_DIRECTORY>`
+  Specifica la directory per i pacchetti ripristinati.
 
-Specifica la directory per i pacchetti ripristinati.
+- **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-`-r|--runtime <RUNTIME_IDENTIFIER>`
+  Specifica un runtime per il ripristino dei pacchetti. Questo runtime viene usato per ripristinare i pacchetti di runtime non esplicitamente elencati nel tag `<RuntimeIdentifiers>` del file *csproj*. Per un elenco degli identificatori di runtime (RID, Runtime Identifier), vedere il [catalogo RID](../rid-catalog.md). Specificare più origini selezionando questa opzione più volte.
 
-Specifica un runtime per il ripristino dei pacchetti. Questo runtime viene usato per ripristinare i pacchetti di runtime non esplicitamente elencati nel tag `<RuntimeIdentifiers>` del file *csproj*. Per un elenco degli identificatori di runtime (RID, Runtime Identifier), vedere il [catalogo RID](../rid-catalog.md). Specificare più origini selezionando questa opzione più volte.
+- **`-s|--source <SOURCE>`**
 
-`-s|--source <SOURCE>`
+  Specifica un'origine dei pacchetti NuGet da usare durante l'operazione di ripristino. Questa impostazione esegue l'override di tutte le origini specificate nei file *NuGet.config*. È possibile specificare più origini, selezionando questa opzione più volte.
 
-Specifica un'origine dei pacchetti NuGet da usare durante l'operazione di ripristino. Questa impostazione esegue l'override di tutte le origini specificate nei file *NuGet.config*. È possibile specificare più origini, selezionando questa opzione più volte.
+- **`--verbosity <LEVEL>`**
 
-`--verbosity <LEVEL>`
+  Imposta il livello di dettaglio del comando. I valori consentiti sono `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`. Il valore predefinito è `minimal`.
 
-Imposta il livello di dettaglio del comando. I valori consentiti sono `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`. Il valore predefinito è `minimal`.
+- **`--interactive`**
 
-`--interactive`
-
-Consente al comando di arrestarsi e attendere l'input o l'azione dell'utente (ad esempio, il completamento dell'autenticazione). A partire da .NET Core 2.1.400
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-`--configfile <FILE>`
-
-File di configurazione NuGet (*nuget.config*) da usare per l'operazione di ripristino.
-
-`--disable-parallel`
-
-Disabilita il ripristino di più progetti in parallelo.
-
-`-h|--help`
-
-Stampa una breve guida per il comando.
-
-`--ignore-failed-sources`
-
-Segnala le origini con esito negativo solo se sono presenti pacchetti che soddisfano il requisito di versione.
-
-`--no-cache`
-
-Specifica di non memorizzare nella cache pacchetti e richieste HTTP.
-
-`--no-dependencies`
-
-Durante il ripristino di un progetto con riferimenti da progetto a progetto, ripristina il progetto radice e non i riferimenti.
-
-`--packages <PACKAGES_DIRECTORY>`
-
-Specifica la directory per i pacchetti ripristinati.
-
-`-r|--runtime <RUNTIME_IDENTIFIER>`
-
-Specifica un runtime per il ripristino dei pacchetti. Questo runtime viene usato per ripristinare i pacchetti di runtime non esplicitamente elencati nel tag `<RuntimeIdentifiers>` del file *csproj*. Per un elenco degli identificatori di runtime (RID, Runtime Identifier), vedere il [catalogo RID](../rid-catalog.md). Specificare più origini selezionando questa opzione più volte.
-
-`-s|--source <SOURCE>`
-
-Specifica un'origine dei pacchetti NuGet da usare durante l'operazione di ripristino. Esegue l'override di tutte le origini specificate nei file *NuGet. config* , leggendo effettivamente il file *NuGet. config* come se l'elemento `<packageSource>` non fosse presente. È possibile specificare più origini, selezionando questa opzione più volte.
-
-`--verbosity <LEVEL>`
-
-Imposta il livello di dettaglio del comando. I valori consentiti sono `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`. Il valore predefinito è `minimal`.
-
----
+  Consente al comando di arrestarsi e attendere l'input o l'azione dell'utente (ad esempio, il completamento dell'autenticazione). A partire da .NET Core 2.1.400
 
 ## <a name="examples"></a>Esempi
 
-Ripristinare le dipendenze e gli strumenti per il progetto nella directory corrente:
+- Ripristinare le dipendenze e gli strumenti per il progetto nella directory corrente:
 
-`dotnet restore`
+  ```dotnetcli
+  dotnet restore
+  ```
 
-Ripristinare le dipendenze e gli strumenti per il progetto `app1` che si trova nel percorso specificato:
+- Ripristinare le dipendenze e gli strumenti per il progetto `app1` trovato nel percorso specificato:
 
-`dotnet restore ~/projects/app1/app1.csproj`
+  ```dotnetcli
+  dotnet restore ~/projects/app1/app1.csproj
+  ```
 
-Ripristinare le dipendenze e gli strumenti per il progetto nella directory corrente usando il percorso di file specificato come origine:
+- Ripristinare le dipendenze e gli strumenti per il progetto nella directory corrente usando il percorso del file fornito come origine:
 
-`dotnet restore -s c:\packages\mypackages`
+  ```dotnetcli
+  dotnet restore -s c:\packages\mypackages
+  ```
 
-Ripristinare le dipendenze e gli strumenti per il progetto nella directory corrente usando i due percorsi di file specificati come origini:
+- Ripristinare le dipendenze e gli strumenti per il progetto nella directory corrente usando i due percorsi di file forniti come origini:
 
-`dotnet restore -s c:\packages\mypackages -s c:\packages\myotherpackages`
+  ```dotnetcli
+  dotnet restore -s c:\packages\mypackages -s c:\packages\myotherpackages
+  ```
 
-Ripristinare le dipendenze e gli strumenti per il progetto nella directory corrente che mostra l'output dettagliato:
+- Ripristinare le dipendenze e gli strumenti per il progetto nella directory corrente che mostra l'output dettagliato:
 
-`dotnet restore --verbosity detailed`
+  ```dotnetcli
+  dotnet restore --verbosity detailed
+  ```

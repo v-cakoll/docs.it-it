@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 597bfd2c16f6289a2bcb931c3896918dcb6d9a4d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 26c168040b0fa5e975e64a7518b0d0bf250c4711
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094137"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628124"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guida alla distribuzione di .NET Framework per sviluppatori
 Questo argomento offre informazioni destinate agli sviluppatori che vogliono installare qualsiasi versione di .NET Framework da .NET Framework 4.5 a [!INCLUDE[net_current](../../../includes/net-current-version.md)] con le proprie app.
@@ -55,7 +55,7 @@ Quando si ritiene di poter procedere alla pubblicazione dell'applicazione in un 
 
 |Strategia di distribuzione per l'applicazione|Metodi di distribuzione disponibili|Pacchetto ridistribuibile di .NET Framework da usare|
 |--------------------------------------|----------------------------------|-------------------------------------------|
-|Installazione dal Web|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Set di strumenti WiX](#wix)<br />- [Installazione manuale](#installing_manually)|[Programma di installazione Web](#redistributable-packages)|
+|Installazione dal Web|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Set di strumenti WiX](#wix)<br />- [Installazione manuale](#installing_manually)|[Web installer](#redistributable-packages)|
 |Installazione da disco|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Set di strumenti WiX](#wix)<br />- [Installazione manuale](#installing_manually)|[Programma di installazione offline](#redistributable-packages)|
 |Installazione da una rete locale (per applicazioni aziendali)|- [ClickOnce](#clickonce-deployment)|[Programma di installazione Web](#redistributable-packages) (vedere [ClickOnce](#clickonce-deployment) per le restrizioni) o [programma di installazione offline](#redistributable-packages)|
 
@@ -134,21 +134,7 @@ InstallAware compila pacchetti di app di Windows (APPX), Windows Installer (MSI)
 
 ### <a name="installshield-deployment"></a>Distribuzione InstallShield
 
-In Visual Studio scegliere la distribuzione InstallShield e aggiungere una dipendenza da .NET Framework:
-
-1. Nella barra dei menu di Visual Studio scegliere **File**, **Nuovo**, **Progetto**.
-
-2. Nel riquadro sinistro della finestra di dialogo **Nuovo progetto** scegliere **Altri tipi di progetto**, **Installazione e distribuzione**, **InstallShield LE**.
-
-3. Nella casella **Nome** digitare un nome per il progetto e scegliere **OK**.
-
-4. Se si sta creando un progetto di installazione e distribuzione per la prima volta, scegliere **Vai a InstallShield** o **Abilita InstallShield Limited Edition** per scaricare InstallShield Limited Edition per la versione di Microsoft Visual Studio. Riavviare Visual Studio.
-
-5. Passare alla procedura guidata **Project Assistant** e scegliere **File applicazione** per aggiungere l'output del progetto. È possibile configurare altri attributi del progetto tramite la procedura guidata.
-
-6. Passare a **Requisiti per l'installazione** e selezionare i sistemi operativi e la versione di .NET Framework che si vuole installare.
-
-7. Aprire il menu di scelta rapida per il progetto di installazione e scegliere **Compila**.
+InstallShield compila i pacchetti dell'app Windows (MSIX, APPX), i pacchetti di Windows Installer (MSI) e i programmi di installazione di codice nativo (EXE). InstallShield fornisce anche l'integrazione con Visual Studio. Per ulteriori informazioni, vedere il sito Web [InstallShield](https://www.flexerasoftware.com/install/products/installshield.html) .
 
 <a name="wix"></a>
 
@@ -190,7 +176,7 @@ Ad esempio, se il programma eseguibile è Contoso.exe e si vuole installare auto
 
 `dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso`
 
-È possibile usare opzioni aggiuntive della riga di comando per personalizzare l'installazione. Ad esempio:
+È possibile usare opzioni aggiuntive della riga di comando per personalizzare l'installazione. Ad esempio,
 
 - Per offrire agli utenti un metodo per chiudere le applicazioni .NET Framework in esecuzione per ridurre al minimo i riavvii del sistema, impostare la modalità passiva e usare l'opzione `/showrmui` come segue:
 
@@ -275,7 +261,7 @@ Ad esempio, per rilevare se è installato il Language Pack giapponese completo (
 | | |
 |-|-|
 | Chiave | HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
-| Nome | Versione |
+| Name | Versione |
 | Type | DWORD |
 
 Per determinare se per una versione particolare di .NET Framework dalla 4.5 alla 4.7.2 è installata la versione di rilascio finale di un Language Pack, verificare il valore della chiave RELEASE del valore DWORD descritto nella sezione precedente, [Rilevamento di .NET Framework](#detect_net).
@@ -310,7 +296,7 @@ Non è necessario concatenare i Language Pack se si usa il programma di installa
 
 Per un elenco completo di opzioni della riga di comando, vedere la sezione [Opzioni della riga di comando](#command-line-options) .
 
-### <a name="troubleshooting"></a>risoluzione dei problemi
+### <a name="troubleshooting"></a>Risoluzione dei problemi
 
 #### <a name="return-codes"></a>Codici restituiti
 

@@ -4,16 +4,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: 665c99302887c51c69b4d818619dd6bedd43b644
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 46d4f77a4a490b2acdb5da20b9a477f27c38d410
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714941"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628241"
 ---
 # <a name="fields-c-programming-guide"></a>Campi (Guida per programmatori C#)
 
-Un *campo* è una variabile di qualsiasi tipo che viene dichiarata direttamente in una [classe](../../language-reference/keywords/class.md) o [struct](../../language-reference/keywords/struct.md). I campi sono *membri* del rispettivo tipo contenitore.
+Un *campo* è una variabile di qualsiasi tipo che viene dichiarata direttamente in una [classe](../../language-reference/keywords/class.md) o [struct](../../language-reference/builtin-types/struct.md). I campi sono *membri* del rispettivo tipo contenitore.
 
 Una classe o uno struct può avere campi di istanza, campi statici o entrambi. I campi di istanza sono specifici di un'istanza di tipo. Se si ha una classe T con un campo di istanza F, è possibile creare due oggetti di tipo T e modificare il valore di F in ciascun oggetto senza modificare il valore nell'altro oggetto. Al contrario, un campo statico appartiene alla classe stessa ed è condiviso tra tutte le istanze della classe. È possibile accedere al campo statico solo usando il nome della classe. Se si accede al campo statico tramite un nome di istanza, si ottiene un errore in fase di compilazione [CS0176](../../misc/cs0176.md) .
 
@@ -21,11 +21,11 @@ In genere è necessario usare i campi solo per le variabili che hanno accesso pr
 
 Di solito i campi archiviano dati che devono essere accessibili a più metodi della classe e devono essere archiviati per un tempo maggiore rispetto alla durata di ogni singolo metodo. Ad esempio, una classe che rappresenta una data di calendario potrebbe contenere tre campi interi: uno per il mese, uno per il giorno e uno per l'anno. Le variabili che vengono usate solo all'interno dell'ambito di un singolo metodo devono essere dichiarate come *variabili locali* all'interno del corpo del metodo stesso.
 
-I campi vengono dichiarati nel blocco della classe, specificando il livello di accesso del campo, seguito dal tipo di campo e poi dal nome del campo. Ad esempio:
+I campi vengono dichiarati nel blocco della classe, specificando il livello di accesso del campo, seguito dal tipo di campo e poi dal nome del campo. Ad esempio,
 
 [!code-csharp[csProgGuideObjects#61](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#61)]
 
-Per accedere a un campo in un oggetto, aggiungere un punto dopo il nome dell'oggetto, seguito dal nome del campo, come in `objectname.fieldname`. Ad esempio:
+Per accedere a un campo in un oggetto, aggiungere un punto dopo il nome dell'oggetto, seguito dal nome del campo, come in `objectname.fieldname`. Ad esempio,
 
 [!code-csharp[csProgGuideObjects#62](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#62)]
 
@@ -38,7 +38,7 @@ I campi vengono inizializzati immediatamente prima della chiamata del costruttor
 > [!NOTE]
 > Un inizializzatore di campo non può fare riferimento ad altri campi di istanza.
 
-I campi possono essere contrassegnati come [public](../../language-reference/keywords/public.md), [private](../../language-reference/keywords/private.md), [protected](../../language-reference/keywords/protected.md), [Internal](../../language-reference/keywords/internal.md), [protected internal](../../language-reference/keywords/protected-internal.md)o [private protected](../../language-reference/keywords/private-protected.md). Questi modificatori di accesso definiscono in che modo gli utenti della classe possono accedere ai campi. Per altre informazioni, vedere [Modificatori di accesso](./access-modifiers.md).
+I campi possono essere contrassegnati come [public](../../language-reference/keywords/public.md), [private](../../language-reference/keywords/private.md), [protected](../../language-reference/keywords/protected.md), [Internal](../../language-reference/keywords/internal.md), [protected internal](../../language-reference/keywords/protected-internal.md)o [private protected](../../language-reference/keywords/private-protected.md). Questi modificatori di accesso definiscono in che modo gli utenti della classe possono accedere ai campi. Per altre informazioni, vedere [Access Modifiers](./access-modifiers.md) (Modificatori di accesso).
 
 È possibile facoltativamente dichiarare un campo come [static](../../language-reference/keywords/static.md). Questo rende il campo disponibile per i chiamanti in qualsiasi momento, anche se non esiste alcuna istanza della classe. Per altre informazioni, vedere [Classi statiche e membri di classi statiche](./static-classes-and-static-class-members.md).
 

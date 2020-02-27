@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Modificare colonne e righe in un controllo TableLayoutPanel'
+title: 'Procedura: modificare colonne e righe in un controllo TableLayoutPanel'
 ms.date: 03/30/2017
 f1_keywords:
 - net.ComponentModel.StyleCollectionEditor
@@ -8,27 +8,27 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], editing
 - rows [Windows Forms], editing
 ms.assetid: c367ed43-40dc-49eb-9e0f-ba70e83dfec0
-ms.openlocfilehash: 99ff3286592da0a097835b8f35d687475ca54fb0
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 4473b20eea57088104a51eb1b6c080219223d214
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040300"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628644"
 ---
-# <a name="how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control"></a>Procedura: Modificare colonne e righe in un controllo TableLayoutPanel
+# <a name="how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control"></a>Procedura: modificare colonne e righe in un controllo TableLayoutPanel
 
-Per modificare le righe e le colonne dei <xref:System.Windows.Forms.TableLayoutPanel> controlli, è possibile utilizzare l'editor della raccolta del controllo, denominato finestra di dialogo **stili colonna e riga** .
+Per modificare le righe e le colonne dei controlli, è possibile usare l'editor della raccolta del controllo <xref:System.Windows.Forms.TableLayoutPanel>, denominato finestra di dialogo **stili colonna e riga** .
 
 > [!NOTE]
-> Se si desidera che un controllo si estenda su più righe o colonne `RowSpan` , `ColumnSpan` impostare le proprietà e sul controllo. Per altre informazioni, vedere [Procedura dettagliata: Disposizione di controlli su Windows Forms usando TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).
+> Se si desidera che un controllo si estenda su più righe o colonne, impostare le proprietà `RowSpan` e `ColumnSpan` sul controllo. Per altre informazioni, vedere [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).
 >
-> Se si desidera allineare un controllo all'interno di una cella o se si desidera che un controllo si estenda all'interno di una cella, <xref:System.Windows.Forms.Control.Anchor%2A> utilizzare la proprietà del controllo. Per altre informazioni, vedere [Procedura dettagliata: Disposizione di controlli su Windows Forms usando TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).
+> Se si desidera allineare un controllo all'interno di una cella o se si desidera che un controllo si estenda all'interno di una cella, utilizzare la proprietà <xref:System.Windows.Forms.Control.Anchor%2A> del controllo. Per altre informazioni, vedere [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).
 
 ## <a name="to-edit-rows-and-columns"></a>Per modificare righe e colonne
 
 1. Trascinare un controllo <xref:System.Windows.Forms.TableLayoutPanel> dalla **Casella degli strumenti** al form.
 
-2. Fare clic <xref:System.Windows.Forms.TableLayoutPanel> sul glifo smart tag del controllo (![glifo smart tag](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) e selezionare **modifica righe e colonne** per aprire la finestra di dialogo **stili colonna e riga** . È anche possibile fare clic con il <xref:System.Windows.Forms.TableLayoutPanel> pulsante destro del mouse sul controllo e scegliere **modifica righe e colonne** dal menu di scelta rapida.
+2. Fare clic sul glifo delle azioni della finestra di progettazione del controllo <xref:System.Windows.Forms.TableLayoutPanel> (![Small Black Arrow](./media/designer-actions-glyph.gif)) e selezionare **modifica righe e colonne** per aprire la finestra di dialogo **stili colonna e riga** . È anche possibile fare clic con il pulsante destro del mouse sul controllo <xref:System.Windows.Forms.TableLayoutPanel> e scegliere **modifica righe e colonne** dal menu di scelta rapida.
 
 3. Per aggiungere o rimuovere colonne, selezionare le **colonne** nella casella di riepilogo a discesa **tipo di membro** .
 

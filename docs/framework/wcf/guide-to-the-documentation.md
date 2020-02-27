@@ -5,17 +5,15 @@ helpviewer_keywords:
 - WCF [WCF], documentation
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
-ms.openlocfilehash: 12408bd9f10e7ed147a6c1adc0497d3b8d797e42
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 705e571e11fa7c8276fcb48d15ed0160fbda2bc5
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319814"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628761"
 ---
 # <a name="guide-to-the-documentation"></a>Guida alla documentazione
 Vengono fornite informazioni aggiuntive sulla documentazione di Windows Communication Foundation (WCF). I documenti collegati sono punti di partenza consigliati, raggruppati secondo specifici interessi e livelli di esperienza.  
-  
- Per installare una versione autonoma della documentazione e un visualizzatore della guida, scaricare il [Microsoft Windows SDK v 7,1](https://go.microsoft.com/fwlink/?LinkID=194146&clcid=0x409).  
   
 ## <a name="new-to-windows-communication-foundation-programming"></a>Novità della programmazione in Windows Communication Foundation  
   
@@ -39,7 +37,7 @@ Vengono fornite informazioni aggiuntive sulla documentazione di Windows Communic
   
 - La configurazione tramite file XML è un modo principale per programmare i servizi e i client WCF. Per la documentazione di riferimento per gli elementi XML usati nei file di configurazione, vedere [schema di configurazione WCF](../configure-apps/file-schema/wcf/index.md).  
   
-## <a name="troubleshooting"></a>Troubleshooting  
+## <a name="troubleshooting"></a>Risoluzione dei problemi  
  Per informazioni sulla risoluzione dei problemi WCF comuni, vedere [Guida introduttiva alla risoluzione dei](wcf-troubleshooting-quickstart.md)problemi di WCF.  
   
 ## <a name="using-windows-communication-foundation-with-other-technologies"></a>Utilizzo di Windows Communication Foundation con altre tecnologie  

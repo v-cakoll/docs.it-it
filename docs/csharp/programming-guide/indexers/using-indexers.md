@@ -4,16 +4,16 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-ms.openlocfilehash: bf290681395460bec10be45c4eaa1f165e453caf
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 17162a0dc959a85c03a5cb5757e2b91fe10b0ab3
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75702896"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628163"
 ---
 # <a name="using-indexers-c-programming-guide"></a>Uso di indicizzatori (Guida per programmatori C#)
 
-Gli indicizzatori sono una convenzione sintattica che consente di creare una [classe](../../language-reference/keywords/class.md), uno [struct](../../language-reference/keywords/struct.md) o un'[interfaccia](../../language-reference/keywords/interface.md) a cui le applicazioni client possono accedere esattamente come a una matrice. Gli indicizzatori sono in genere implementati in tipi il cui scopo principale è incapsulare una raccolta o una matrice interna. Si supponga, ad esempio, una classe `TempRecord` che rappresenta la temperatura in gradi Fahrenheit registrata in 10 momenti diversi in un periodo di 24 ore. La classe contiene una matrice `temps` di tipo `float[]` per archiviare i valori di temperatura. Implementando un indicizzatore in questa classe, i client possono accedere alle temperature in un'istanza `TempRecord` come `float temp = tr[4]` invece che come `float temp = tr.temps[4]`. La notazione dell'indicizzatore non solo semplifica la sintassi per le applicazioni client, ma rende anche la classe e il relativo scopo più intuitivi per gli altri sviluppatori.  
+Gli indicizzatori sono una convenzione sintattica che consente di creare una [classe](../../language-reference/keywords/class.md), uno [struct](../../language-reference/builtin-types/struct.md) o un'[interfaccia](../../language-reference/keywords/interface.md) a cui le applicazioni client possono accedere esattamente come a una matrice. Gli indicizzatori sono in genere implementati in tipi il cui scopo principale è incapsulare una raccolta o una matrice interna. Si supponga, ad esempio, una classe `TempRecord` che rappresenta la temperatura in gradi Fahrenheit registrata in 10 momenti diversi in un periodo di 24 ore. La classe contiene una matrice `temps` di tipo `float[]` per archiviare i valori di temperatura. Implementando un indicizzatore in questa classe, i client possono accedere alle temperature in un'istanza `TempRecord` come `float temp = tr[4]` invece che come `float temp = tr.temps[4]`. La notazione dell'indicizzatore non solo semplifica la sintassi per le applicazioni client, ma rende anche la classe e il relativo scopo più intuitivi per gli altri sviluppatori.  
   
 Per dichiarare un indicizzatore in una classe o uno struct, usare la parola chiave [this](../../language-reference/keywords/this.md), come nell'esempio seguente:
 

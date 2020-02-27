@@ -5,12 +5,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 8348e080d833e79dd364aee511ac7d05fb53d1cc
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 114fa2973c50be9a4199db9729e3cd9ea6122866
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543560"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626529"
 ---
 # <a name="methods-c-programming-guide"></a>Metodi (Guida per programmatori C#)
 
@@ -21,7 +21,7 @@ Un metodo è un blocco di codice che contiene una serie di istruzioni. Un progra
 
 ## <a name="method-signatures"></a>Firme del metodo
 
-I metodi vengono dichiarati in una [classe](../../language-reference/keywords/class.md), uno [struct](../../language-reference/keywords/struct.md)o un' [interfaccia](../interfaces/index.md) specificando il livello di accesso, ad esempio `public` o `private`, i modificatori facoltativi, ad esempio `abstract` o `sealed`, il valore restituito, il nome del metodo e tutti i parametri del metodo. Queste parti costituiscono la firma del metodo.
+I metodi vengono dichiarati in una [classe](../../language-reference/keywords/class.md), uno [struct](../../language-reference/builtin-types/struct.md)o un' [interfaccia](../interfaces/index.md) specificando il livello di accesso, ad esempio `public` o `private`, i modificatori facoltativi, ad esempio `abstract` o `sealed`, il valore restituito, il nome del metodo e tutti i parametri del metodo. Queste parti costituiscono la firma del metodo.
 
 > [!NOTE]
 > Un tipo restituito di un metodo non fa parte della firma del metodo in caso di overload dei metodi. Fa tuttavia parte della firma del metodo quando si determina la compatibilità tra un delegato e il metodo a cui fa riferimento.
@@ -38,7 +38,7 @@ Chiamare un metodo su un oggetto è come accedere a un campo. Dopo il nome dell'
 
 ## <a name="method-parameters-vs-arguments"></a>Parametri di metodo e argomenti
 
-La definizione del metodo specifica i nomi e i tipi di tutti i parametri obbligatori. Quando il codice chiamante chiama il metodo, fornisce valori concreti, detti argomenti, per ogni parametro. Gli argomenti devono essere compatibili con il tipo di parametro, ma il nome dell'argomento (se presente) usato nel codice chiamante non deve essere lo stesso del parametro denominato definito nel metodo. Ad esempio:
+La definizione del metodo specifica i nomi e i tipi di tutti i parametri obbligatori. Quando il codice chiamante chiama il metodo, fornisce valori concreti, detti argomenti, per ogni parametro. Gli argomenti devono essere compatibili con il tipo di parametro, ma il nome dell'argomento (se presente) usato nel codice chiamante non deve essere lo stesso del parametro denominato definito nel metodo. Ad esempio,
 
 [!code-csharp[csProgGuideObjects#74](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#74)]
 

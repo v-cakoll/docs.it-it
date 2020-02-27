@@ -12,12 +12,12 @@ ms.assetid: e5a8e088-7ec8-4fd9-bcb3-9078fd134829
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: dac049ea6a51037daa0e23dc93476e4410b2df06
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7626e1efbb30ef3bfe9b5b1278c0adb18dd5944b
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745993"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628709"
 ---
 # <a name="develop-windows-forms-controls-at-design-time"></a>Sviluppare controlli Windows Forms in fase di progettazione
 
@@ -36,7 +36,7 @@ Illustra come creare un controllo composito semplice in C#.
 [Procedura dettagliata: eredità da un controllo Windows Forms](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)\
 Illustra come creare un controllo Windows Form semplice usando l'ereditarietà in C#.
 
-[Procedura dettagliata: esecuzione di attività comuni usando gli smart tag nei controlli Windows Forms](performing-common-tasks-using-smart-tags-on-wf-controls.md)\
+[Procedura dettagliata: eseguire attività comuni utilizzando le azioni della finestra di progettazione](perform-common-tasks-design-actions.md)\
 Illustra come usare la funzionalità di smart tag nei controlli Windows Form.
 
 [Procedura dettagliata: serializzazione di raccolte di tipi standard con DesignerSerializationVisibilityAttribute](serializing-collections-designerserializationvisibilityattribute.md)\

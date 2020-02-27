@@ -5,12 +5,12 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: c2d4fbd2f9e8a343a81d88bacc54a53335e170ec
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: e9b2ab32fb79b80649305843abdd935b8c582bc0
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867386"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628215"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Come implementare una classe Lightweight con proprietà implementate automaticamente (C# guida per programmatori)
 
@@ -148,5 +148,5 @@ Il compilatore crea campi sottostanti per ogni proprietà implementate automatic
 ## <a name="see-also"></a>Vedere anche
 
 - [Proprietà](./properties.md)
-- [struct](../../language-reference/keywords/struct.md)
+- [struct](../../language-reference/builtin-types/struct.md)
 - [Inizializzatori di oggetto e di raccolta](./object-and-collection-initializers.md)

@@ -3,12 +3,12 @@ title: Protezione di microservizi e applicazioni Web .NET
 description: Protezione di microservizi e applicazioni Web .NET - Informazioni sulle opzioni di autenticazione per le applicazioni Web ASP.NET Core.
 author: mjrousos
 ms.date: 01/30/2020
-ms.openlocfilehash: f82212956f5492a51ec99d092e1a5131d1b31313
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 0ac2591f8650e9f8cf29560735a9ec803d29ee4f
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77501640"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628332"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Proteggere i microservizi e le applicazioni Web .NET
 
@@ -135,8 +135,8 @@ In tutti i casi, è necessario completare una procedura di registrazione dell'ap
 
 Per informazioni dettagliate sulla configurazione dell'app per un provider esterno, vedere l' [autenticazione del provider esterno nella documentazione di ASP.NET Core](/aspnet/core/security/authentication/social/)).
 
-> [!TIP]
-Tutti i dettagli sono gestiti dal middleware di autorizzazione e dai servizi indicati in precedenza. Quindi, è sufficiente scegliere l'opzione di autenticazione dell' **account utente singolo** quando si crea il progetto di applicazione Web di codice ASP.NET in Visual Studio, come illustrato nella figura 9-3, oltre alla registrazione dei provider di autenticazione citati in precedenza.
+>[!TIP]
+>Tutti i dettagli sono gestiti dal middleware di autorizzazione e dai servizi indicati in precedenza. Quindi, è sufficiente scegliere l'opzione di autenticazione dell' **account utente singolo** quando si crea il progetto di applicazione Web di codice ASP.NET in Visual Studio, come illustrato nella figura 9-3, oltre alla registrazione dei provider di autenticazione citati in precedenza.
 
 ![Screenshot della finestra di dialogo nuova applicazione Web ASP.NET Core.](./media/index/select-individual-user-account-authentication-option.png)
 

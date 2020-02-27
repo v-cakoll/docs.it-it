@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-ms.openlocfilehash: ac862d163f1bd8b66f29160d836bc459e4bf4081
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0305df5e7566f9441ce09fa3346a8b2dc67c8943
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745134"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627968"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Procedura: aggiungere i pulsanti Carica, Salva e Annulla al controllo BindingNavigator di Windows Form
 
@@ -35,7 +35,7 @@ Nella procedura seguente, un controllo <xref:System.Windows.Forms.TextBox> viene
 
 5. Selezionare il controllo <xref:System.Windows.Forms.BindingNavigator>.
 
-6. Fare clic sul glifo smart tag (![glifo smart tag](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) per visualizzare la finestra di dialogo **attività di BindingNavigator** e selezionare **modifica elementi**.
+6. Fare clic sul glifo azioni della finestra di progettazione (![piccola freccia nera](./media/designer-actions-glyph.gif)) per visualizzare la finestra di dialogo **attività di BindingNavigator** e selezionare **modifica elementi**.
 
      Viene visualizzato l' **Editor della raccolta Items** .
 

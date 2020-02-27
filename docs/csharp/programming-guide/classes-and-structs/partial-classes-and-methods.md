@@ -6,16 +6,16 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: e359913aad4b8cea001a894d4ba5720fab54d42b
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 641c2e3adfb3dabaa300e94b203aa6c4c4b509d2
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451915"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628189"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Classi e metodi parziali (Guida per programmatori C#)
 
-È possibile suddividere la definizione di una [classe](../../language-reference/keywords/class.md) di uno [struct](../../language-reference/keywords/struct.md), di un'[interfaccia](../../language-reference/keywords/interface.md) o di un metodo tra due o più file di origine. Ogni file di origine contiene una sezione della definizione di tipo o metodo e tutte le parti vengono combinate al momento della compilazione dell'applicazione.
+È possibile suddividere la definizione di una [classe](../../language-reference/keywords/class.md) di uno [struct](../../language-reference/builtin-types/struct.md), di un'[interfaccia](../../language-reference/keywords/interface.md) o di un metodo tra due o più file di origine. Ogni file di origine contiene una sezione della definizione di tipo o metodo e tutte le parti vengono combinate al momento della compilazione dell'applicazione.
 
 ## <a name="partial-classes"></a>Classi parziali
 
@@ -90,7 +90,7 @@ Quando si usano le definizioni parziali di classi è necessario rispettare diver
 
 - Le parole chiave riportate di seguito sono facoltative in una definizione di tipi parziali. Tuttavia, se presenti in una definizione, tali parole chiave non possono essere in conflitto con quelle specificate in un'altra definizione parziale per lo stesso tipo:
 
-  - [public](../../language-reference/keywords/public.md)
+  - [pubblico](../../language-reference/keywords/public.md)
 
   - [private](../../language-reference/keywords/private.md)
 

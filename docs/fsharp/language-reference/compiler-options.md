@@ -2,16 +2,18 @@
 title: Opzioni del compilatore
 description: Usare F# le opzioni della riga di comando del compilatore per controllare la F# compilazione delle app e delle librerie.
 ms.date: 12/10/2018
-ms.openlocfilehash: d0f4d1ca5ae45af25d6c304a2920d5c457700b1a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ecaae538a5db2f5dfefa79cb8e7b8b51d39c440d
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424764"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628878"
 ---
 # <a name="compiler-options"></a>Opzioni del compilatore
 
-In questo argomento vengono descritte le opzioni della F# riga di comando del compilatore, FSC. exe. L'ambiente di compilazione può essere controllato anche impostando le proprietà del progetto.
+In questo argomento vengono descritte le opzioni della F# riga di comando del compilatore, FSC. exe.
+
+L'ambiente di compilazione può essere controllato anche impostando le proprietà del progetto. Per i progetti destinati a .NET Core, la proprietà "other flags", `<OtherFlags>...</OtherFlags>` in `.fsproj`, viene usata per specificare opzioni aggiuntive della riga di comando.
 
 ## <a name="compiler-options-listed-alphabetically"></a>Opzioni del compilatore elencate in ordine alfabetico
 
@@ -57,7 +59,7 @@ Nella tabella seguente vengono illustrate le opzioni del compilatore elencate in
 |`--standalone`|Specifica di produrre un assembly contenente tutte le relative dipendenze, in modo che venga eseguito da solo senza la necessità di assembly aggiuntivi, ad F# esempio la libreria.|
 |`--staticlink:assembly-name`|Collega in modo statico l'assembly specificato e tutte le dll a cui si fa riferimento che dipendono da questo assembly. Usare il nome dell'assembly, non il nome della DLL.|
 |`--subsystemversion`|Specifica la versione del sottosistema del sistema operativo che deve essere utilizzata dal file eseguibile generato. Utilizzare 6,02 per Windows 8.1, 6,01 per Windows 7, 6,00 per Windows Vista. Questa opzione si applica solo ai file eseguibili e non alle dll e deve essere usata solo se l'applicazione dipende da funzionalità di sicurezza specifiche disponibili solo in determinate versioni del sistema operativo. Se si usa questa opzione e un utente tenta di eseguire l'applicazione in una versione precedente del sistema operativo, avrà esito negativo con un messaggio di errore.|
-|<code>--tailcalls[+&#124;-]</code>|Abilita o Disabilita l'utilizzo dell'istruzione il tail, che fa in modo che la stack frame venga riutilizzata per le funzioni tail ricorsive. Questa opzione è attivata per impostazione predefinita.|
+|<code>--tailcalls[+&#124;-]</code>|Abilita o Disabilita l'utilizzo dell'istruzione il tail, che fa in modo che la stack frame venga riutilizzata per le funzioni tail ricorsive. Per impostazione predefinita, questa casella di controllo è selezionata.|
 |<code>--target:[exe&#124;winexe&#124;library&#124;module] filename</code>|Specifica il tipo e il nome file del codice compilato generato.<ul><li>`exe` indica un'applicazione console.<br /></li><li>`winexe` indica un'applicazione Windows, che differisce dall'applicazione console in quanto non dispone di flussi di input/output standard (stdin, stdout e stderr) definiti.<br /></li><li>`library` è un assembly senza un punto di ingresso.<br /></li><li>`module` è un modulo di .NET Framework (. netmodule), che può essere successivamente combinato con altri moduli in un assembly.<br /></li><ul/>Questa opzione del compilatore è equivalente all' C# opzione del compilatore con lo stesso nome. Per altre informazioni, vedere [ &#47;opzioni &#40;&#41;del&#35; compilatore C di destinazione](https://msdn.microsoft.com/library/6h25dztx.aspx).|
 |`--times`|Visualizza le informazioni sull'intervallo per la compilazione.|
 |`--utf8output`|Consente di stampare l'output del compilatore nella codifica UTF-8.|

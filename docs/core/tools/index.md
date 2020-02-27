@@ -3,12 +3,12 @@ title: Interfaccia della riga di comando di .NET Core
 titleSuffix: ''
 description: Panoramica del interfaccia della riga di comando di .NET Core e delle relative funzionalità.
 ms.date: 02/13/2020
-ms.openlocfilehash: 1078d68ddc088274fa14b0094a81765f7af69dad
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: c491088f26a9aa1c065414e76fb0b80d554380b4
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543314"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625982"
 ---
 # <a name="net-core-cli-overview"></a>Panoramica di interfaccia della riga di comando di .NET Core
 
@@ -24,15 +24,15 @@ Per impostazione predefinita vengono installati i comandi seguenti:
 
 ### <a name="basic-commands"></a>Comandi di base
 
-- [Nuovo](dotnet-new.md)
+- [new](dotnet-new.md)
 - [restore](dotnet-restore.md)
 - [build](dotnet-build.md)
-- [pubblica](dotnet-publish.md)
+- [publish](dotnet-publish.md)
 - [run](dotnet-run.md)
 - [test](dotnet-test.md)
 - [vstest](dotnet-vstest.md)
 - [pack](dotnet-pack.md)
-- [migrazione](dotnet-migrate.md)
+- [migrate](dotnet-migrate.md)
 - [clean](dotnet-clean.md)
 - [sln](dotnet-sln.md)
 - [help](dotnet-help.md)
@@ -81,13 +81,13 @@ Il driver, denominato [dotnet](dotnet.md), ha due compiti: eseguire un'[app dipe
 
 Per eseguire un'applicazione dipendente dal framework, specificare l'app dopo il driver, ad esempio `dotnet /path/to/my_app.dll`. Se si esegue il comando dalla cartella in cui si trova la DLL dell'app, è sufficiente eseguire `dotnet my_app.dll`. Se si vuole usare una versione specifica del runtime .NET Core, usare l'opzione `--fx-version <VERSION>` (vedere il riferimento per il [comando dotnet](dotnet.md)).
 
-Nel momento in cui si fornisce un comando al driver, `dotnet.exe` avvia il processo di esecuzione del comando dell'interfaccia della riga di comando. Ad esempio:
+Nel momento in cui si fornisce un comando al driver, `dotnet.exe` avvia il processo di esecuzione del comando dell'interfaccia della riga di comando. Ad esempio,
 
 ```dotnetcli
 dotnet build
 ```
 
-Come prima operazione, il driver determina la versione dell'SDK da usare. Se non è presente nessuna voce ['global.json'](global-json.md) viene usata la versione più recente disponibile del SDK. Può essere una versione di anteprima o una versione stabile, a seconda di qual è la più recente disponibile nel computer.  Dopo aver determinato la versione del SDK il driver esegue il comando.
+Come prima operazione, il driver determina la versione dell'SDK da usare. Se non è presente alcun file [Global. JSON](global-json.md) , viene usata la versione più recente dell'SDK disponibile. Può essere una versione di anteprima o una versione stabile, a seconda di qual è la più recente disponibile nel computer.  Dopo aver determinato la versione del SDK il driver esegue il comando.
 
 ### <a name="command"></a>Comando
 

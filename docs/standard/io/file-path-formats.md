@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 258cf59fb8383fe131f4a0e78dac6189e1d9c91e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b3510be5d417b555d2db163636eac5ce0c0779e4
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337666"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628046"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formati dei percorsi di file nei sistemi Windows
 
@@ -25,7 +25,7 @@ I membri di molti tipi nello spazio dei nomi <xref:System.IO> includono un param
 Un percorso DOS standard può essere costituito da tre componenti:
 
 - Un volume o una lettera di unità seguita dal separatore di volume (`:`).
-- Un nome di directory. Il [carattere separatore di directory](<xref:System.IO.Path.DirectorySeparatorChar>) separa le sottodirectory all'interno della gerarchia di directory annidata.
+- Nome di directory. Il [carattere separatore di directory](<xref:System.IO.Path.DirectorySeparatorChar>) separa le sottodirectory all'interno della gerarchia di directory annidata.
 - Un nome file facoltativo. Il [carattere separatore di directory](<xref:System.IO.Path.DirectorySeparatorChar>) separa il percorso e il nome del file.
 
 Se sono presenti tutti e tre i componenti, il percorso è assoluto. Se non si specifica alcun volume o lettera di unità e il nome della directory inizia con il [carattere separatore di directory](<xref:System.IO.Path.DirectorySeparatorChar>), il percorso è relativo dalla radice dell'unità corrente. In caso contrario, il percorso è relativo alla directory corrente. La tabella seguente illustra alcuni percorsi possibili di directory e file.
@@ -49,13 +49,15 @@ L'esempio seguente illustra la differenza fra percorsi assoluti e relativi. Si p
 [!code-csharp[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/cs/paths.cs)]
 [!code-vb[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/vb/paths.vb)]
 
+[!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
+
 ## <a name="unc-paths"></a>Percorsi UNC
 
 I percorsi UNC (Universal Naming Convention), che vengono usati per accedere alle risorse di rete, hanno il formato seguente:
 
 - Un nome host o server, preceduto da \\\\. Il nome del server può essere un nome computer NetBIOS o un indirizzo IP/FQDN (sono supportati IPv4 e v6).
 - Un nome condivisione, separato dal nome host da \\. Insieme, il server e il nome condivisione costituiscono il volume.
-- Un nome di directory. Il [carattere separatore di directory](<xref:System.IO.Path.DirectorySeparatorChar>) separa le sottodirectory all'interno della gerarchia di directory annidata.
+- Nome di directory. Il [carattere separatore di directory](<xref:System.IO.Path.DirectorySeparatorChar>) separa le sottodirectory all'interno della gerarchia di directory annidata.
 - Un nome file facoltativo. Il [carattere separatore di directory](<xref:System.IO.Path.DirectorySeparatorChar>) separa il percorso e il nome del file.
 
 Di seguito sono riportati alcuni esempi di percorsi UNC:
@@ -93,7 +95,7 @@ Il percorso del dispositivo DOS è costituito dai componenti seguenti:
 
    Il primo segmento del percorso del dispositivo DOS dopo l'identificatore del percorso del dispositivo identifica il volume o l'unità (ad esempio, `\\?\C:\` e `\\.\BootPartition\`).
 
-   È disponibile un collegamento specifico per i percorsi UNC, chiamato `UNC`. Ad esempio:
+   È disponibile un collegamento specifico per i percorsi UNC, chiamato `UNC`. Ad esempio,
 
   `\\.\UNC\Server\Share\Test\Foo.txt`
   `\\?\UNC\Server\Share\Test\Foo.txt`

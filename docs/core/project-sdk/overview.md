@@ -3,12 +3,12 @@ title: Panoramica dell'SDK del progetto .NET Core
 description: Informazioni sugli SDK per progetti .NET Core.
 ms.date: 02/02/2020
 ms.topic: conceptual
-ms.openlocfilehash: b1b839f81b1b4a8d20dbb34d3d2fc000c64acb8a
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: c41b25bf7933e7b1f6cb50da5e52dc0b312f5c74
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77453804"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626249"
 ---
 # <a name="net-core-project-sdks"></a>SDK per progetti .NET Core
 
@@ -32,7 +32,7 @@ Il .NET Core SDK è l'SDK di base per .NET Core. Gli altri SDK fanno riferimento
 
 ## <a name="project-files"></a>File di progetto
 
-I progetti .NET Core sono basati sul formato [MSBuild](/visualstudio/msbuild/msbuild) . I file di progetto, che hanno estensioni come *. csproj* per C# i progetti e F# *. fsproj* per i progetti, sono in formato XML. L'elemento radice di un file di progetto MSBuild è l'elemento [Project](/msbuild/project-element-msbuild) . L'elemento `Project` dispone di un attributo `Sdk` facoltativo che specifica quale SDK (e versione) utilizzare. Per usare gli strumenti di .NET Core e compilare il codice, impostare l'attributo `Sdk` su uno degli ID nella tabella [SDK disponibili](#available-sdks) .
+I progetti .NET Core sono basati sul formato [MSBuild](/visualstudio/msbuild/msbuild) . I file di progetto, che hanno estensioni come *. csproj* per C# i progetti e F# *. fsproj* per i progetti, sono in formato XML. L'elemento radice di un file di progetto MSBuild è l'elemento [Project](/visualstudio/msbuild/project-element-msbuild) . L'elemento `Project` dispone di un attributo `Sdk` facoltativo che specifica quale SDK (e versione) utilizzare. Per usare gli strumenti di .NET Core e compilare il codice, impostare l'attributo `Sdk` su uno degli ID nella tabella [SDK disponibili](#available-sdks) .
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">

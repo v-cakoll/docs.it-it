@@ -2,12 +2,12 @@
 title: Tipi di modifiche di rilievo
 description: Informazioni sul modo in cui .NET Core tenta di mantenere la compatibilità per gli sviluppatori tra le versioni di .NET e il tipo di modifica che viene considerata una modifica di rilievo.
 ms.date: 06/10/2019
-ms.openlocfilehash: 1c5790e39754b91aacbde9e87ed99f9dcc36ce9f
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: bf0cc35d69e6bb501640455604a99a1f48962c4a
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77092980"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628592"
 ---
 # <a name="changes-that-affect-compatibility"></a>Modifiche che influiscono sulla compatibilità
 
@@ -49,7 +49,7 @@ Le modifiche apportate a questa categoria modificano la superficie di attacco pu
 
   L'assembly *precedente* deve essere contrassegnato con la <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> che punta al nuovo assembly.
 
-- ✔️ **consentito: modifica di un tipo [struct](../../csharp/language-reference/keywords/struct.md) in un tipo di `readonly struct`**
+- ✔️ **consentito: modifica di un tipo [struct](../../csharp/language-reference/builtin-types/struct.md) in un tipo di `readonly struct`**
 
   La modifica di un tipo di `readonly struct` in un tipo di `struct` non è consentita.
 
@@ -77,11 +77,11 @@ Le modifiche apportate a questa categoria modificano la superficie di attacco pu
 
   Esiste un'unica eccezione alla regola per la rimozione di un'interfaccia. È possibile aggiungere l'implementazione di un'interfaccia che deriva dall'interfaccia rimossa. È ad esempio possibile rimuovere <xref:System.IDisposable> se il tipo o l'interfaccia implementa ora <xref:System.ComponentModel.IComponent>, che implementa a sua volta l'interfaccia <xref:System.IDisposable>.
 
-- ❌ non **consentito: modifica di un tipo di `readonly struct` in un tipo [struct](../../csharp/language-reference/keywords/struct.md)**
+- ❌ non **consentito: modifica di un tipo di `readonly struct` in un tipo [struct](../../csharp/language-reference/builtin-types/struct.md)**
 
   Tuttavia, è consentita la modifica di un tipo di `struct` in un tipo di `readonly struct`.
 
-- ❌ non **consentito: modifica di un tipo [struct](../../csharp/language-reference/keywords/struct.md) in un tipo di `ref struct` e** viceversa
+- ❌ non **consentito: modifica di un tipo [struct](../../csharp/language-reference/builtin-types/struct.md) in un tipo di `ref struct` e** viceversa
 
 - ❌ non **consentito: riduzione della visibilità di un tipo**
 
@@ -194,7 +194,7 @@ Le modifiche apportate a questa categoria modificano la superficie di attacco pu
 
 ## <a name="behavioral-changes"></a>Modifiche funzionali
 
-### <a name="assemblies"></a>Assembly
+### <a name="assemblies"></a>Assemblies
 
 - ✔️ **consentito: creazione di un assembly portabile quando le stesse piattaforme sono ancora supportate**
 
@@ -260,7 +260,7 @@ Le modifiche apportate a questa categoria modificano la superficie di attacco pu
 
 - ❌ **non consentito: rimozione di un'eccezione in altri casi non elencati in precedenza**
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attributi
 
 - ✔️ **consentito: modifica del valore di un attributo *non* osservabile**
 
@@ -300,7 +300,7 @@ Le modifiche apportate a questa categoria modificano la superficie di attacco pu
 
 - ✔️ **consentito: aggiunta di [parametri](../../csharp/language-reference/keywords/params.md) a un parametro**
 
-- ❌ non **consentito: modifica di uno [struct](../../csharp/language-reference/keywords/struct.md) in una [classe](../../csharp/language-reference/keywords/class.md) e viceversa**
+- ❌ non **consentito: modifica di uno [struct](../../csharp/language-reference/builtin-types/struct.md) in una [classe](../../csharp/language-reference/keywords/class.md) e viceversa**
 
 - ❌ non **consentito: aggiunta della parola chiave [checked](../../csharp/language-reference/keywords/virtual.md) a un blocco di codice**
 

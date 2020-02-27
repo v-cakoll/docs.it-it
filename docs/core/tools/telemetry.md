@@ -3,12 +3,12 @@ title: Telemetria di .NET Core SDK
 description: Informazioni sulle funzionalità di telemetria degli strumenti di .NET Core SDK che raccolgono informazioni sull'utilizzo per l'analisi, i dati raccolti e il modo in cui disabilitarli.
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: 8bde344ee393e113502a0895ee55c241cbf24c57
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: abc9f8e1ef134ebfb5ec9acacb629d5180aaf83b
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714107"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625917"
 ---
 # <a name="net-core-sdk-telemetry"></a>Telemetria di .NET Core SDK
 
@@ -56,19 +56,19 @@ La funzionalità di telemetria raccoglie i dati seguenti:
 
 | Versioni dell'SDK | Data |
 |--------------|------|
-| Tutte le          | Timestamp della chiamata. |
-| Tutte le          | Comando richiamato (ad esempio, "build"), con hash a partire dalla versione 2.1. |
-| Tutte le          | Indirizzo IP di tre ottetti usato per determinare la posizione geografica. |
-| Tutte le          | Sistema operativo e versione. |
-| Tutte le          | ID Runtime (RID) in cui è in esecuzione l'SDK. |
-| Tutte le          | Versione di .NET Core SDK. |
-| Tutte le          | Profilo di telemetria: valore facoltativo usato solo con consenso esplicito dell'utente e usato internamente a Microsoft. |
-| >=2.0        | Argomenti e opzioni di comando: vengono raccolti vari argomenti e opzioni (non stringhe arbitrarie). Vedere [Opzioni raccolte](#collected-options). Con hash dopo la versione 2.1.300. |
-| >=2.0         | Se il SDK è in esecuzione in un contenitore. |
-| >=2.0         | Framework di destinazione (dall'evento `TargetFramework`), con hash a partire dalla versione 2.1. |
-| >=2.0         | Indirizzo MAC (Media Access Control) con hash: ID univoco e anonimo dal punto di vista crittografico (SHA256) per un computer. |
-| >=2.0         | Directory di lavoro corrente con hash. |
-| >=2.0         | Report di esito positivo dell'installazione, con nome di file EXE del programma di installazione con hash. |
+| Tutte          | Timestamp della chiamata. |
+| Tutte          | Comando richiamato (ad esempio, "build"), con hash a partire dalla versione 2.1. |
+| Tutte          | Indirizzo IP di tre ottetti usato per determinare la posizione geografica. |
+| Tutte          | Sistema operativo e versione. |
+| Tutte          | ID Runtime (RID) in cui è in esecuzione l'SDK. |
+| Tutte          | Versione di .NET Core SDK. |
+| Tutte          | Profilo di telemetria: valore facoltativo usato solo con consenso esplicito dell'utente e usato internamente a Microsoft. |
+| >= 2.0        | Argomenti e opzioni di comando: vengono raccolti vari argomenti e opzioni (non stringhe arbitrarie). Vedere [Opzioni raccolte](#collected-options). Con hash dopo la versione 2.1.300. |
+| >= 2.0         | Se il SDK è in esecuzione in un contenitore. |
+| >= 2.0         | Framework di destinazione (dall'evento `TargetFramework`), con hash a partire dalla versione 2.1. |
+| >= 2.0         | Indirizzo MAC (Media Access Control) con hash: ID univoco e anonimo dal punto di vista crittografico (SHA256) per un computer. |
+| >= 2.0         | Directory di lavoro corrente con hash. |
+| >= 2.0         | Report di esito positivo dell'installazione, con nome di file EXE del programma di installazione con hash. |
 | >=2.1.300     | Versione del kernel. |
 | >=2.1.300     | Versione di libc. |
 | >=3.0.100     | Indica se l'output è stato reindirizzato (true o false). |
@@ -90,7 +90,7 @@ Alcuni comandi inviano dati aggiuntivi. Un subset di comandi invia il primo argo
 
 Un subset di comandi invia le opzioni selezionate se vengono usate, insieme ai relativi valori:
 
-| Opzione                  | Comandi                                                                                       |
+| Opzione                  | Commands                                                                                       |
 |-------------------------|------------------------------------------------------------------------------------------------|
 | `--verbosity`           | Tutti i comandi                                                                                   |
 | `--language`            | `dotnet new`                                                                                   |
@@ -128,7 +128,7 @@ at Microsoft.DotNet.Cli.Program.ProcessArgs(String[] args, ITelemetry telemetryC
 at Microsoft.DotNet.Cli.Program.Main(String[] args)
 ```
 
-### <a name="avoid-inadvertent-disclosure-information"></a>Evitare la divulgazione accidentale di informazioni
+### <a name="avoid-inadvertent-disclosure-of-information"></a>Evitare la divulgazione accidentale di informazioni
 
 I collaboratori di .NET Core e chiunque esegua una versione personalizzata di .NET Core SDK devono tenere conto del percorso del codice sorgente dell'SDK. Se si verifica un arresto anomalo durante l'uso di un'istanza di .NET Core SDK che rappresenta una compilazione di debug personalizzata o è configurata con file di simboli di compilazione personalizzati, il percorso del file di origine dell'SDK dal computer di compilazione viene raccolto come parte dell'analisi dello stack e non viene sottoposto ad hashing.
 

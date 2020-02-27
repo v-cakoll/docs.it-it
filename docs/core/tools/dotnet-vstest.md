@@ -2,16 +2,16 @@
 title: Comando dotnet vstest
 description: Il comando dotnet vstest consente di compilare un progetto e tutte le relative dipendenze.
 ms.date: 05/30/2018
-ms.openlocfilehash: 3fdb5443d6d0cfbe1e7e88bc824cbb930f211260
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: fc0aa4f9abf069f78e27692ee84aea2559109c98
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451181"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626021"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+**Questo articolo si applica a:** ✔️ .net core 2,1 SDK e versioni successive
 
 ## <a name="name"></a>Name
 
@@ -19,34 +19,13 @@ ms.locfileid: "77451181"
 
 ## <a name="synopsis"></a>Riepilogo
 
-<!-- markdownlint-disable MD025 -->
-
-# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
-
 ```dotnetcli
-dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--TestAdapterPath|/TestAdapterPath]
-    [--Platform|/Platform] [--Framework|/Framework] [--Parallel|/Parallel] [--TestCaseFilter|/TestCaseFilter] [--logger|/logger]
-    [-lt|--ListTests|/lt|/ListTests] [--ParentProcessId|/ParentProcessId] [--Port|/Port] [--Diag|/Diag] [--Blame|/Blame] [--InIsolation|/InIsolation]
-    [[--] <args>...]] [-?|--Help|/?|/Help]
+dotnet vstest [<TEST_FILE_NAMES>] [--Settings] [--Tests]
+    [--TestAdapterPath] [--Platform] [--Framework] [--Parallel]
+    [--TestCaseFilter] [--logger] [-lt|--ListTests]
+    [--ParentProcessId] [--Port] [--Diag] [--Blame]
+    [--InIsolation] [[--] <args>...]] [-?|--Help]
 ```
-
-# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
-
-```dotnetcli
-dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--TestAdapterPath|/TestAdapterPath] 
-    [--Platform|/Platform] [--Framework|/Framework] [--Parallel|/Parallel] [--TestCaseFilter|/TestCaseFilter] [--logger|/logger]
-    [-lt|--ListTests|/lt|/ListTests] [--ParentProcessId|/ParentProcessId] [--Port|/Port] [--Diag|/Diag] [[--] <args>...]] [-?|--Help|/?|/Help]
-```
-
-# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-```dotnetcli
-dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--TestAdapterPath|/TestAdapterPath]
-    [--Platform|/Platform] [--Framework|/Framework] [--Parallel|/Parallel] [--TestCaseFilter|/TestCaseFilter] [--logger|/logger] 
-    [-lt|--ListTests|/lt|/ListTests] [--ParentProcessId|/ParentProcessId] [--Port|/Port] [--Diag|/Diag] [[--] <args>...]] [-?|--Help|/?|/Help]
-```
-
----
 
 ## <a name="description"></a>Descrizione
 
@@ -54,272 +33,126 @@ Il comando `dotnet-vstest` esegue l'applicazione della riga di comando `VSTest.C
 
 ## <a name="arguments"></a>Argomenti
 
-`TEST_FILE_NAMES`
+- **`TEST_FILE_NAMES`**
 
-Eseguire i test dagli assembly specificati. Per separare più nomi di assembly di test, usare gli spazi.
+  Eseguire i test dagli assembly specificati. Per separare più nomi di assembly di test, usare gli spazi. I caratteri jolly sono supportati.
 
 ## <a name="options"></a>Opzioni
 
-# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
+- **`--Settings <Settings File>`**
 
-`--Settings|/Settings:<Settings File>`
+  Impostazioni da usare durante l'esecuzione di test.
 
-Impostazioni da usare durante l'esecuzione di test.
+- **`--Tests <Test Names>`**
 
-`--Tests|/Tests:<Test Names>`
+  Esegue test con nomi corrispondenti ai valori specificati. Se si specificano più valori, separarli con virgole.
 
-Esegue test con nomi corrispondenti ai valori specificati. Se si specificano più valori, separarli con virgole.
+- **`--TestAdapterPath`**
 
-`--TestAdapterPath|/TestAdapterPath`
+  Durante l'esecuzione dei test, vengono usati adattatori di test personalizzati da un percorso specificato (se presenti).
 
-Durante l'esecuzione dei test, vengono usati adattatori di test personalizzati da un percorso specificato (se presenti).
+- **`--Platform <Platform type>`**
 
-`--Platform|/Platform:<Platform type>`
+  Architettura della piattaforma di destinazione usata per l'esecuzione dei test. I valori validi sono `x86`, `x64` e `ARM`.
 
-Architettura della piattaforma di destinazione usata per l'esecuzione dei test. I valori validi sono `x86`, `x64` e `ARM`.
+- **`--Framework <Framework Version>`**
 
-`--Framework|/Framework:<Framework Version>`
+  Versione di .NET Framework di destinazione usata per l'esecuzione dei test. Esempi di valori validi sono `.NETFramework,Version=v4.6` o `.NETCoreApp,Version=v1.0`. Altri valori supportati sono `Framework40`, `Framework45`, `FrameworkCore10` e `FrameworkUap10`.
 
-Versione di .NET Framework di destinazione usata per l'esecuzione dei test. Esempi di valori validi sono `.NETFramework,Version=v4.6` o `.NETCoreApp,Version=v1.0`. Altri valori supportati sono `Framework40`, `Framework45`, `FrameworkCore10` e `FrameworkUap10`.
+- **`--Parallel`**
 
-`--Parallel|/Parallel`
+  Eseguire i test in parallelo. Per impostazione predefinita, tutti i core presenti nel computer sono disponibili per l'uso. Specificare un numero esplicito di core impostando la proprietà `MaxCpuCount` nel nodo `RunConfiguration` del file *runsettings* .
 
-Esegue test in parallelo. Per impostazione predefinita, tutti i core presenti nel computer sono disponibili per l'uso. Specificare un numero esplicito di core impostando la proprietà MaxCpuCount nel nodo RunConfiguration nel file runsettings.
+- **`--TestCaseFilter <Expression>`**
 
-`--TestCaseFilter|/TestCaseFilter:<Expression>`
+  Esegue test corrispondenti all'espressione specificata. `<Expression>` è in formato `<property>Operator<value>[|&<Expression>]`, dove Operator è `=`, `!=` o `~`. L'operatore `~` usa la semantica 'contains' ed è applicabile per le proprietà stringa come `DisplayName`. Le parentesi `()` vengono usate per raggruppare le sottoespressioni.
 
-Esegue test corrispondenti all'espressione specificata. `<Expression>` è in formato `<property>Operator<value>[|&<Expression>]`, dove Operator è `=`, `!=` o `~`. L'operatore `~` usa la semantica 'contains' ed è applicabile per le proprietà stringa come `DisplayName`. Le parentesi `()` vengono usate per raggruppare le sottoespressioni.
+- **`-?|--Help`**
 
-`-?|--Help|/?|/Help`
+  Stampa una breve guida per il comando.
 
-Stampa una breve guida per il comando.
+- **`--logger <Logger Uri/FriendlyName>`**
 
-`--logger|/logger:<Logger Uri/FriendlyName>`
+  Specifica un logger per i risultati dei test.
 
-Specifica un logger per i risultati dei test.
+  - Per pubblicare i risultati dei test in Team Foundation Server, usare il provider di logger `TfsPublisher`:
 
-* Per pubblicare i risultati dei test in Team Foundation Server, usare il provider di logger `TfsPublisher`:
+    ```console
+    /logger:TfsPublisher;
+        Collection=<team project collection url>;
+        BuildName=<build name>;
+        TeamProject=<team project name>
+        [;Platform=<Defaults to "Any CPU">]
+        [;Flavor=<Defaults to "Debug">]
+        [;RunTitle=<title>]
+    ```
 
-  ```console
-  /logger:TfsPublisher;
-      Collection=<team project collection url>;
-      BuildName=<build name>;
-      TeamProject=<team project name>
-      [;Platform=<Defaults to "Any CPU">]
-      [;Flavor=<Defaults to "Debug">]
-      [;RunTitle=<title>]
-  ```
+  - Per registrare i risultati in un file di risultati dei test di Visual Studio (con estensione trx), usare il provider di logger `trx`. Questa opzione crea un file nella directory dei risultati dei test con nome di file di log specificato. Se `LogFileName` non è specificato, viene creato un nome di file univoco per contenere i risultati dei test.
 
-* Per registrare i risultati in un file di risultati dei test di Visual Studio (con estensione trx), usare il provider di logger `trx`. Questa opzione crea un file nella directory dei risultati dei test con nome di file di log specificato. Se `LogFileName` non è specificato, viene creato un nome di file univoco per contenere i risultati dei test.
+    ```console
+    /logger:trx [;LogFileName=<Defaults to unique file name>]
+    ```
 
-  ```console
-  /logger:trx [;LogFileName=<Defaults to unique file name>]
-  ```
+- **`-lt|--ListTests <File Name>`**
 
-`-lt|--ListTests|/lt|/ListTests:<File Name>`
+  Elenca tutti i test individuati dal contenitore di test specificato.
 
-Elenca tutti i test individuati dal contenitore di test specificato.
+- **`--ParentProcessId <ParentProcessId>`**
 
-`--ParentProcessId|/ParentProcessId:<ParentProcessId>`
+  ID del processo padre responsabile dell'avvio del processo corrente.
 
-ID del processo padre responsabile dell'avvio del processo corrente.
+- **`--Port <Port>`**
 
-`--Port|/Port:<Port>`
+  Specifica la porta per la connessione socket e la ricezione dei messaggi di evento.
 
-Specifica la porta per la connessione socket e la ricezione dei messaggi di evento.
+- **`--Diag <Path to log file>`**
 
-`--Diag|/Diag:<Path to log file>`
+  Abilita i log dettagliati per la piattaforma di test. I log vengono scritti nel file specificato.
 
-Abilita i log dettagliati per la piattaforma di test. I log vengono scritti nel file specificato.
+- **`--Blame`**
 
-`--Blame|/Blame`
+  Esegue i test in modalità di segnalazione degli errori. Questa opzione è utile per isolare i test problematici che causano un arresto anomalo dell'host dei test. Crea un file di output nella directory corrente denominato *Sequence.xml* che acquisisce l'ordine di esecuzione dei test prima dell'arresto anomalo.
 
-Esegue i test in modalità di segnalazione degli errori. Questa opzione è utile per isolare i test problematici che causano un arresto anomalo dell'host dei test. Crea un file di output nella directory corrente denominato *Sequence.xml* che acquisisce l'ordine di esecuzione dei test prima dell'arresto anomalo.
+- **`--InIsolation`**
 
-`--InIsolation|/InIsolation`
+  Esegue i test in un processo isolato. In questo modo si riduce la probabilità di arresto del processo di *vstest.console.exe* a causa di un errore durante i test, sebbene questi ultimi potrebbero risultare più lenti.
 
-Esegue i test in un processo isolato. In questo modo si riduce la probabilità di arresto del processo di *vstest.console.exe* a causa di un errore durante i test, sebbene questi ultimi potrebbero risultare più lenti.
+- **`@<file>`**
 
-`@<file>`
+  Legge un file di risposta per altre opzioni.
 
-Legge un file di risposta per altre opzioni.
+- **`args`**
 
-`args`
-
-Specifica argomenti aggiuntivi da passare all'adattatore. Gli argomenti sono specificati come coppie nome-valore nel formato `<n>=<v>`, dove `<n>` è il nome dell'argomento e `<v>` è il valore dell'argomento. Per separare più argomenti usare uno spazio.
-
-# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
-
-`--Settings|/Settings:<Settings File>`
-
-Impostazioni da usare durante l'esecuzione di test.
-
-`--Tests|/Tests:<Test Names>`
-
-Esegue test con nomi corrispondenti ai valori specificati. Se si specificano più valori, separarli con virgole.
-
-`--TestAdapterPath|/TestAdapterPath`
-
-Durante l'esecuzione dei test, vengono usati adattatori di test personalizzati da un percorso specificato (se presenti).
-
-`--Platform|/Platform:<Platform type>`
-
-Architettura della piattaforma di destinazione usata per l'esecuzione dei test. I valori validi sono `x86`, `x64` e `ARM`.
-
-`--Framework|/Framework:<Framework Version>`
-
-Versione di .NET Framework di destinazione usata per l'esecuzione dei test. Esempi di valori validi sono `.NETFramework,Version=v4.6` o `.NETCoreApp,Version=v1.0`. Altri valori supportati sono `Framework40`, `Framework45` e `FrameworkCore10`.
-
-`--Parallel|/Parallel`
-
-Esegue test in parallelo. Per impostazione predefinita, tutti i core presenti nel computer sono disponibili per l'uso. Specificare un numero esplicito di core impostando la proprietà MaxCpuCount nel nodo RunConfiguration nel file runsettings.
-
-`--TestCaseFilter|/TestCaseFilter:<Expression>`
-
-Esegue test corrispondenti all'espressione specificata. `<Expression>` è in formato `<property>Operator<value>[|&<Expression>]`, dove Operator è `=`, `!=` o `~`. L'operatore `~` usa la semantica 'contains' ed è applicabile per le proprietà stringa come `DisplayName`. Le parentesi `()` vengono usate per raggruppare le sottoespressioni.
-
-`-?|--Help|/?|/Help`
-
-Stampa una breve guida per il comando.
-
-`--logger|/logger:<Logger Uri/FriendlyName>`
-
-Specifica un logger per i risultati dei test.
-
-* Per pubblicare i risultati dei test in Team Foundation Server, usare il provider di logger `TfsPublisher`:
-
-  ```console
-  /logger:TfsPublisher;
-      Collection=<team project collection url>;
-      BuildName=<build name>;
-      TeamProject=<team project name>
-      [;Platform=<Defaults to "Any CPU">]
-      [;Flavor=<Defaults to "Debug">]
-      [;RunTitle=<title>]
-  ```
-
-* Per registrare i risultati in un file di risultati dei test di Visual Studio (con estensione trx), usare il provider di logger `trx`. Questa opzione crea un file nella directory dei risultati dei test con nome di file di log specificato. Se `LogFileName` non è specificato, viene creato un nome di file univoco per contenere i risultati dei test.
-
-  ```console
-  /logger:trx [;LogFileName=<Defaults to unique file name>]
-  ```
-
-`-lt|--ListTests|/lt|/ListTests:<File Name>`
-
-Elenca tutti i test individuati dal contenitore di test specificato.
-
-`--ParentProcessId|/ParentProcessId:<ParentProcessId>`
-
-ID del processo padre responsabile dell'avvio del processo corrente.
-
-`--Port|/Port:<Port>`
-
-Specifica la porta per la connessione socket e la ricezione dei messaggi di evento.
-
-`--Diag|/Diag:<Path to log file>`
-
-Abilita i log dettagliati per la piattaforma di test. I log vengono scritti nel file specificato.
-
-`args`
-
-Specifica argomenti aggiuntivi da passare all'adattatore. Gli argomenti sono specificati come coppie nome-valore nel formato `<n>=<v>`, dove `<n>` è il nome dell'argomento e `<v>` è il valore dell'argomento. Per separare più argomenti usare uno spazio.
-
-# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-`--Settings|/Settings:<Settings File>`
-
-Impostazioni da usare durante l'esecuzione di test.
-
-`--Tests|/Tests:<Test Names>`
-
-Esegue test con nomi corrispondenti ai valori specificati. Se si specificano più valori, separarli con virgole.
-
-`--TestAdapterPath|/TestAdapterPath`
-
-Durante l'esecuzione dei test, vengono usati adattatori di test personalizzati da un percorso specificato (se presenti).
-
-`--Platform|/Platform:<Platform type>`
-
-Architettura della piattaforma di destinazione usata per l'esecuzione dei test. I valori validi sono `x86`, `x64` e `ARM`.
-
-`--Framework|/Framework:<Framework Version>`
-
-Versione di .NET Framework di destinazione usata per l'esecuzione dei test. Esempi di valori validi sono `.NETFramework,Version=v4.6` o `.NETCoreApp,Version=v1.0`. Altri valori supportati sono `Framework40`, `Framework45` e `FrameworkCore10`.
-
-`--Parallel|/Parallel`
-
-Esegue test in parallelo. Per impostazione predefinita, tutti i core presenti nel computer sono disponibili per l'uso. Specificare un numero esplicito di core impostando la proprietà MaxCpuCount nel nodo RunConfiguration nel file runsettings.
-
-`--TestCaseFilter|/TestCaseFilter:<Expression>`
-
-Esegue test corrispondenti all'espressione specificata. `<Expression>` è in formato `<property>Operator<value>[|&<Expression>]`, dove Operator è `=`, `!=` o `~`. L'operatore `~` usa la semantica 'contains' ed è applicabile per le proprietà stringa come `DisplayName`. Le parentesi `()` vengono usate per raggruppare le sottoespressioni.
-
-`-?|--Help|/?|/Help`
-
-Stampa una breve guida per il comando.
-
-`--logger|/logger:<Logger Uri/FriendlyName>`
-
-Specifica un logger per i risultati dei test.
-
-* Per pubblicare i risultati dei test in Team Foundation Server, usare il provider di logger `TfsPublisher`:
-
-  ```console
-  /logger:TfsPublisher;
-      Collection=<team project collection url>;
-      BuildName=<build name>;
-      TeamProject=<team project name>
-      [;Platform=<Defaults to "Any CPU">]
-      [;Flavor=<Defaults to "Debug">]
-      [;RunTitle=<title>]
-  ```
-
-* Per registrare i risultati in un file di risultati dei test di Visual Studio (con estensione trx), usare il provider di logger `trx`. Questa opzione crea un file nella directory dei risultati dei test con nome di file di log specificato. Se `LogFileName` non è specificato, viene creato un nome di file univoco per contenere i risultati dei test.
-
-  ```console
-  /logger:trx [;LogFileName=<Defaults to unique file name>]
-  ```
-
-`-lt|--ListTests|/lt|/ListTests:<File Name>`
-
-Elenca tutti i test individuati dal contenitore di test specificato.
-
-`--ParentProcessId|/ParentProcessId:<ParentProcessId>`
-
-ID del processo padre responsabile dell'avvio del processo corrente.
-
-`--Port|/Port:<Port>`
-
-Specifica la porta per la connessione socket e la ricezione dei messaggi di evento.
-
-`--Diag|/Diag:<Path to log file>`
-
-Abilita i log dettagliati per la piattaforma di test. I log vengono scritti nel file specificato.
-
-`args`
-
-Specifica argomenti aggiuntivi da passare all'adattatore. Gli argomenti sono specificati come coppie nome-valore nel formato `<n>=<v>`, dove `<n>` è il nome dell'argomento e `<v>` è il valore dell'argomento. Per separare più argomenti usare uno spazio.
-
----
+  Specifica argomenti aggiuntivi da passare all'adattatore. Gli argomenti sono specificati come coppie nome-valore nel formato `<n>=<v>`, dove `<n>` è il nome dell'argomento e `<v>` è il valore dell'argomento. Per separare più argomenti usare uno spazio.
 
 ## <a name="examples"></a>Esempi
 
-Eseguire test in `mytestproject.dll`:
+Eseguire i test in *mytestproject. dll*:
 
-`dotnet vstest mytestproject.dll`
+```dotnetcli
+dotnet vstest mytestproject.dll
+```
 
-Eseguire test in `mytestproject.dll`, esportando in una cartella personalizzata con il nome personalizzato:
+Eseguire i test in *mytestproject. dll*, esportando nella cartella personalizzata con nome personalizzato:
 
-`dotnet vstest mytestproject.dll --logger:"trx;LogFileName=custom_file_name.trx" --ResultsDirectory:custom/file/path`
+```dotnetcli
+dotnet vstest mytestproject.dll --logger:"trx;LogFileName=custom_file_name.trx" --ResultsDirectory:custom/file/path
+```
 
-Eseguire test in `mytestproject.dll` e `myothertestproject.exe`:
+Eseguire i test in *mytestproject. dll* e *myothertestproject. exe*:
 
-`dotnet vstest mytestproject.dll myothertestproject.exe`
+```dotnetcli
+dotnet vstest mytestproject.dll myothertestproject.exe
+```
 
 Eseguire test `TestMethod1`:
 
-`dotnet vstest /Tests:TestMethod1`
+```dotnetcli
+dotnet vstest /Tests:TestMethod1
+```
 
 Eseguire test `TestMethod1` e `TestMethod2`:
 
-`dotnet vstest /Tests:TestMethod1,TestMethod2`
+```dotnetcli
+dotnet vstest /Tests:TestMethod1,TestMethod2
+```

@@ -1,16 +1,16 @@
 ---
 title: Distribuire un modello in Funzioni di Azure
 description: Fornire il modello di Machine Learning per l'analisi del sentiment ML.NET per le previsioni tramite Internet usando Funzioni di Azure
-ms.date: 11/07/2019
+ms.date: 02/21/2020
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 5ef6331950845b2900e33b2c51c308644ba17fd6
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 33afd568bb12b855a3888bec31f2e9bbc3c720da
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733347"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628670"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>Distribuire un modello in Funzioni di Azure
 
@@ -19,7 +19,7 @@ Informazioni su come distribuire un modello di Machine Learning ML.NET con train
 > [!NOTE]
 > In questo esempio viene eseguita una versione di anteprima del servizio `PredictionEnginePool`.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 - [Visual Studio 2017 versione 15,6 o successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con il carico di lavoro "sviluppo multipiattaforma .NET Core" e "sviluppo Azure" installato.
 - [Strumenti di Funzioni di Azure](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
@@ -30,7 +30,7 @@ Informazioni su come distribuire un modello di Machine Learning ML.NET con train
 
 Questo esempio è un'  **C# applicazione trigger http di funzioni di Azure** che usa un modello di classificazione binaria con training per categorizzare il sentimento del testo come positivo o negativo. Funzioni di Azure offre un modo semplice per eseguire piccole porzioni di codice su larga scala in un ambiente senza server gestito nel cloud. Il codice per questo esempio è disponibile nel repository [DotNet/machinelearning-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction) in GitHub.
 
-## <a name="create-azure-functions-project"></a>Creare un progetto Funzioni di Azure
+## <a name="create-azure-functions-project"></a>Creare un progetto di Funzioni di Azure
 
 1. Aprire Visual Studio 2017. Selezionare **File** > **Nuovo** > **Progetto** dalla barra dei menu. Nella finestra di dialogo **Nuovo progetto** selezionare il nodo **Visual C#** seguito dal nodo **Cloud**. Selezionare quindi il modello di progetto **Funzioni di Azure**. Nella casella di testo **Nome** digitare "SentimentAnalysisFunctionsApp" e quindi selezionare il pulsante **OK**.
 1. Nella finestra di dialogo **Nuovo progetto** aprire l'elenco a discesa sopra le opzioni del progetto e selezionare **Azure Functions v2 (.NET Core)** (Funzioni di Azure v2 - .NET Core). Selezionare quindi il progetto **Trigger HTTP** e infine fare clic su **OK**.
@@ -50,9 +50,9 @@ Questo esempio è un'  **C# applicazione trigger http di funzioni di Azure** che
 
     In Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto e selezionare **Gestisci pacchetti NuGet**. Scegliere "nuget.org" come origine del pacchetto, selezionare la scheda Sfoglia, cercare **Microsoft.Extensions.ML**, selezionare il pacchetto nell'elenco e quindi il pulsante **Installa**. Selezionare il pulsante **OK** nella finestra di dialogo **Anteprima modifiche** e quindi selezionare il pulsante **Accetto** nella finestra di dialogo **Accettazione della licenza** se si accettano le condizioni di licenza per i pacchetti elencati.
 
-1. Installare la versione del **pacchetto NuGet Microsoft. NET. Sdk. Functions** **1.0.28 +** :
+1. Installare la versione del **pacchetto NuGet Microsoft. NET. Sdk. Functions** **1.0.31**:
 
-    In Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto e selezionare **Gestisci pacchetti NuGet**. Scegliere "nuget.org" come origine del pacchetto, selezionare la scheda installato, cercare **Microsoft. NET. Sdk. Functions**, selezionare il pacchetto nell'elenco, selezionare **1.0.28 o versioni successive** dall'elenco a discesa versione e selezionare il pulsante **Aggiorna** . Selezionare il pulsante **OK** nella finestra di dialogo **Anteprima modifiche** e quindi selezionare il pulsante **Accetto** nella finestra di dialogo **Accettazione della licenza** se si accettano le condizioni di licenza per i pacchetti elencati.
+    In Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto e selezionare **Gestisci pacchetti NuGet**. Scegliere "nuget.org" come origine del pacchetto, selezionare la scheda installato, cercare **Microsoft. NET. Sdk. Functions**, selezionare il pacchetto nell'elenco, selezionare **1.0.31** nell'elenco a discesa versione e selezionare il pulsante **Aggiorna** . Selezionare il pulsante **OK** nella finestra di dialogo **Anteprima modifiche** e quindi selezionare il pulsante **Accetto** nella finestra di dialogo **Accettazione della licenza** se si accettano le condizioni di licenza per i pacchetti elencati.
 
 ## <a name="add-pre-trained-model-to-project"></a>Aggiungere il modello con training preliminare al progetto
 
@@ -63,7 +63,7 @@ Questo esempio è un'  **C# applicazione trigger http di funzioni di Azure** che
 
 Creare una classe per prevedere il sentiment. Aggiungere una nuova classe al progetto:
 
-1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi** > **Nuovo elemento**.
+1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto e quindi selezionare **Aggiungi** > **Nuovo elemento**.
 
 1. Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare **Funzione di Azure** e impostare il campo **Nome** su *AnalyzeSentiment.cs*. Selezionare quindi il pulsante **Aggiungi**.
 
@@ -115,7 +115,7 @@ Per eseguire una singola stima, è necessario creare un [`PredictionEngine`](xre
 
 Il collegamento seguente fornisce ulteriori informazioni se si desidera ottenere ulteriori informazioni sull' [inserimento delle dipendenze](https://en.wikipedia.org/wiki/Dependency_injection).
 
-1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi** > **Nuovo elemento**.
+1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto e quindi selezionare **Aggiungi** > **Nuovo elemento**.
 1. Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare **Classe** e modificare il campo **Nome** in *Startup.cs*. Selezionare quindi il pulsante **Aggiungi**.
 1. Aggiungere le istruzioni using seguenti all'inizio di *Startup.cs*:
 
@@ -150,7 +150,7 @@ A un livello elevato, questo codice inizializza automaticamente gli oggetti e i 
 
 I modelli di apprendimento automatico non sono statici. Al momento della disponibilità dei nuovi dati di training, il modello viene nuovamente sottoposto a training e ridistribuito. Un modo per ottenere la versione più recente del modello nell'applicazione consiste nel ridistribuire l'intera applicazione. Questa operazione introduce tuttavia i tempi di inattività dell'applicazione. Il servizio `PredictionEnginePool` fornisce un meccanismo per ricaricare un modello aggiornato senza interrompere l'applicazione.
 
-Impostare il parametro `watchForChanges` su `true` e il `PredictionEnginePool` avvia un [`FileSystemWatcher`](xref:System.IO.FileSystemWatcher) in ascolto delle notifiche di modifica file System e genera eventi quando viene apportata una modifica al file. In questo modo viene richiesto all'`PredictionEnginePool` di ricaricare automaticamente il modello.
+Impostare il parametro `watchForChanges` su `true`e il `PredictionEnginePool` avvia un [`FileSystemWatcher`](xref:System.IO.FileSystemWatcher) in ascolto delle notifiche di modifica file System e genera eventi quando viene apportata una modifica al file. In questo modo viene richiesto all'`PredictionEnginePool` di ricaricare automaticamente il modello.
 
 Il modello è identificato dal parametro `modelName` in modo che sia possibile ricaricare più di un modello per applicazione al momento della modifica.
 
@@ -181,11 +181,11 @@ Sostituire l'implementazione esistente del metodo *Run* nella classe *AnalyzeSen
 
 Quando il metodo `Run` viene eseguito, i dati in ingresso dalla richiesta HTTP vengono deserializzati e usati come input per `PredictionEnginePool`. Viene quindi chiamato il metodo `Predict` per eseguire stime utilizzando l'`SentimentAnalysisModel` registrato nella classe `Startup` e i risultati vengono restituiti all'utente in caso di esito positivo.
 
-## <a name="test-locally"></a>Eseguire il test in locale
+## <a name="test-locally"></a>Test in locale
 
 Dopo aver completato la configurazione, è possibile testare l'applicazione:
 
-1. Esecuzione dell'applicazione
+1. Eseguire l'applicazione
 1. Aprire PowerShell e immettere il codice nel prompt, dove PORT è la porta su cui l'applicazione è in esecuzione. La porta è in genere la 7071.
 
     ```powershell
@@ -198,8 +198,8 @@ Dopo aver completato la configurazione, è possibile testare l'applicazione:
     Negative
     ```
 
-La procedura è stata completata. È stato creato il modello per eseguire previsioni tramite Internet usando una funzione di Azure.
+Congratulazioni! È stato creato il modello per eseguire previsioni tramite Internet usando una funzione di Azure.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- [Distribuire in Azure](/azure/azure-functions/functions-develop-vs#publish-to-azure)
+- [Distribuzione in Azure](/azure/azure-functions/functions-develop-vs#publish-to-azure)

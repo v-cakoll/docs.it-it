@@ -3,12 +3,12 @@ title: Tipi non gestiti - Riferimenti per C#
 ms.date: 09/06/2019
 helpviewer_keywords:
 - unmanaged type [C#]
-ms.openlocfilehash: 97aa4dd629e385dbe9641d82a7da21a0aaa63e92
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 042cf382879cc4010a388fb75f41099b4342c9d9
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75342585"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626945"
 ---
 # <a name="unmanaged-types-c-reference"></a>Tipi non gestiti (Riferimenti per C#)
 
@@ -17,7 +17,7 @@ Un tipo è un **tipo non gestito** se è uno dei tipi seguenti:
 - `sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, `double`, `decimal` o `bool`
 - Qualsiasi tipo [enum](enum.md)
 - Qualsiasi tipo [puntatore](../../programming-guide/unsafe-code-pointers/pointer-types.md)
-- Qualsiasi tipo [struct](../keywords/struct.md) definito dall'utente che contiene campi solo di tipi non gestiti e, in C# 7,3 e versioni precedenti, non è un tipo costruito (un tipo che include almeno un argomento di tipo)
+- Qualsiasi tipo [struct](struct.md) definito dall'utente che contiene campi solo di tipi non gestiti e, in C# 7,3 e versioni precedenti, non è un tipo costruito (un tipo che include almeno un argomento di tipo)
 
 A partire C# da 7,3, è possibile usare il [vincolo`unmanaged`](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint) per specificare che un parametro di tipo è un tipo non gestito non nullable.
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: c88f205a616587e5437bf4fc81bcbdcbbc19a9ac
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8e4518718d0975f8b4a65870f15d8c52d692c2f5
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712637"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625735"
 ---
 # <a name="sizeof-operator-c-reference"></a>Operatore sizeof (Riferimenti per C#)
 
@@ -20,7 +20,7 @@ L'operatore `sizeof` restituisce il numero di byte occupati da una variabile di 
 
 L'operatore `sizeof` richiede un contesto [unsafe](../keywords/unsafe.md). Tuttavia, per le espressioni presentate nella tabella seguente vengono restituiti i valori costanti corrispondenti in fase di compilazione e non è richiesto un contesto unsafe:
 
-|Espressione|Valore costante|
+|Expression|Valore costante|
 |---------|---------------|
 |`sizeof(sbyte)`|1|
 |`sizeof(byte)`|1|
@@ -42,7 +42,7 @@ Nell'esempio seguente viene illustrato l'uso dell'operatore `sizeof`:
 
 [!code-csharp[sizeof examples](~/samples/csharp/language-reference/operators/SizeOfOperator.cs)]
 
-L'operatore `sizeof` restituisce un numero di byte che verrebbero allocati dal Common Language Runtime in managed memory. Per i tipi [struct](../keywords/struct.md) questo valore include l'eventuale riempimento, come illustrato nell'esempio precedente. Il risultato dell'operatore `sizeof` può essere diverso da quello del metodo <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType>, che restituisce le dimensioni di un tipo nella memoria *non gestita*.
+L'operatore `sizeof` restituisce un numero di byte che verrebbero allocati dal Common Language Runtime in managed memory. Per i tipi [struct](../builtin-types/struct.md) questo valore include l'eventuale riempimento, come illustrato nell'esempio precedente. Il risultato dell'operatore `sizeof` può essere diverso da quello del metodo <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType>, che restituisce le dimensioni di un tipo nella memoria *non gestita*.
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 

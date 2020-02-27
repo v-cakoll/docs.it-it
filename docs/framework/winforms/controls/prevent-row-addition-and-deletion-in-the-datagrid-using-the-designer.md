@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], preventing row addition or deletion
 ms.assetid: a17722bd-9400-41e6-8dcc-c9c151f0a749
-ms.openlocfilehash: cc9aff0f15d1bd6de5c469ee7069a99f3360837a
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: cca497aeaedd0c9f988241092eed707ecc259859
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76728717"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628891"
 ---
 # <a name="how-to-prevent-row-addition-and-deletion-in-the-windows-forms-datagridview-control-using-the-designer"></a>Procedura: impedire l'aggiunta e l'eliminazione di righe nel controllo DataGridView di Windows Form utilizzando la finestra di progettazione
 Talvolta potrebbe essere necessario impedire agli utenti di inserire nuove righe di dati o eliminare le righe esistenti nel controllo <xref:System.Windows.Forms.DataGridView>. Le nuove righe vengono immesse nella riga speciale per i nuovi record nella parte inferiore del controllo. Quando si disabilita l'aggiunta di righe, la riga per i nuovi record non viene visualizzata. È quindi possibile rendere il controllo interamente di sola lettura disabilitando l'eliminazione delle righe e la modifica delle celle.
@@ -18,7 +18,7 @@ Talvolta potrebbe essere necessario impedire agli utenti di inserire nuove righe
 
 ## <a name="to-prevent-row-addition-and-deletion"></a>Per impedire l'aggiunta e l'eliminazione di righe
 
-- Fare clic sul glifo smart tag (![glifo smart tag](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) nell'angolo superiore destro del controllo <xref:System.Windows.Forms.DataGridView>, quindi deselezionare le caselle di controllo **Consenti aggiunta** e **Abilita eliminazione** .
+- Fare clic sul glifo azioni della finestra di progettazione (![piccola freccia nera](./media/designer-actions-glyph.gif)) nell'angolo superiore destro del controllo <xref:System.Windows.Forms.DataGridView>, quindi deselezionare le caselle di controllo **Consenti aggiunta** e **Abilita eliminazione** .
 
     > [!NOTE]
     > Per rendere il controllo interamente di sola lettura, deselezionare anche la casella di controllo **Abilita modifica** .

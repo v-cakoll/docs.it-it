@@ -10,12 +10,12 @@ ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3b88f64fca8d3f11308f1cbfde97de2e6c2f22cc
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0b68a70b55cbf03d480fd388a637a4caf78b6eaa
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740213"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628800"
 ---
 # <a name="walkthrough-arrange-controls-on-windows-forms-using-snaplines"></a>Procedura dettagliata: disporre i controlli sui Windows Forms usando le guide di allineamento
 
@@ -124,7 +124,7 @@ Le guide di allineamento consentono di allineare i controlli ai margini dei modu
 
 ## <a name="align-a-label-to-a-controls-text"></a>Allinea un'etichetta al testo di un controllo
 
-1. Trascinare un controllo <xref:System.Windows.Forms.TextBox> dalla **Casella degli strumenti** al form. Quando si rilascia il controllo <xref:System.Windows.Forms.TextBox> sul form, fare clic sul glifo smart tag e selezionare l'opzione **imposta il testo su TextBox1** . Per informazioni dettagliate, vedere [procedura dettagliata: esecuzione di attività comuni usando gli smart tag nei controlli Windows Forms](performing-common-tasks-using-smart-tags-on-wf-controls.md).
+1. Trascinare un controllo <xref:System.Windows.Forms.TextBox> dalla **Casella degli strumenti** al form. Quando si rilascia il controllo <xref:System.Windows.Forms.TextBox> sul form, fare clic sul glifo smart tag e selezionare l'opzione **imposta il testo su TextBox1** . Per informazioni dettagliate, vedere [procedura dettagliata: eseguire attività comuni usando le azioni della finestra di progettazione](perform-common-tasks-design-actions.md).
 
 2. Trascinare un controllo <xref:System.Windows.Forms.Label> dalla **Casella degli strumenti** al form.
 
@@ -182,7 +182,7 @@ Non viene visualizzata alcuna linea di allineamento e il controllo non si blocca
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Le guide di allineamento offrono un mezzo intuitivo per allineare i controlli nel form. Per approfondire l'argomento, si consiglia di effettuare le seguenti operazioni:
+Le guide di allineamento offrono un mezzo intuitivo per allineare i controlli nel form. Alcuni suggerimenti per un'analisi più ampia dell'argomento includono:
 
 - Provare a annidare un controllo <xref:System.Windows.Forms.GroupBox> all'interno di un altro controllo <xref:System.Windows.Forms.GroupBox>. Inserire un controllo <xref:System.Windows.Forms.Button> all'interno del controllo <xref:System.Windows.Forms.GroupBox> figlio e un altro all'interno del controllo <xref:System.Windows.Forms.GroupBox> padre. Spostare i controlli <xref:System.Windows.Forms.Button> per verificare il modo in cui le guide di allineamento attraversano i limiti del contenitore.
 

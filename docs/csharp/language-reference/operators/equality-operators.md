@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 14bb8227a4a6c8beff6ab04c58d8e1a43db69856
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 578413b053fc1daab0c3162d9032f4d64d3e470d
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093136"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626698"
 ---
 # <a name="equality-operators-c-reference"></a>Operatori di uguaglianza (Riferimenti per C#)
 
@@ -41,7 +41,7 @@ Gli operandi dei [tipi valore predefiniti](../builtin-types/value-types.md#built
 
 Due operandi dello stesso tipo [enum](../builtin-types/enum.md) sono uguali se i valori corrispondenti del tipo integrale sottostante sono uguali.
 
-I tipi [struct](../keywords/struct.md) definiti dall'utente non supportano l'operatore `==` per impostazione predefinita. Per supportare l'operatore `==`, un tipo struct definito dall'utente deve eseguirne l'[overload](operator-overloading.md).
+I tipi [struct](../builtin-types/struct.md) definiti dall'utente non supportano l'operatore `==` per impostazione predefinita. Per supportare l'operatore `==`, un tipo struct definito dall'utente deve eseguirne l'[overload](operator-overloading.md).
 
 A partire da C# 7.3, gli operatori `==` e `!=` sono supportati dalle [tuple](../../tuples.md) C#. Per altre informazioni, vedere la sezione [Uguaglianza e tuple](../../tuples.md#equality-and-tuples) nell'articolo [Tipi tupla in C#](../../tuples.md).
 

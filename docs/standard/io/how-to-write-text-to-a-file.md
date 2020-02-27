@@ -11,12 +11,12 @@ helpviewer_keywords:
 - streams, writing text to files
 - data streams, writing text to files
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
-ms.openlocfilehash: 42b758eeb36a4c319c3e1f24676cb600d580902e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: db0b7719105c9f6d42633df6c029a7a94f940908
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706608"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627981"
 ---
 # <a name="how-to-write-text-to-a-file"></a>Procedura: scrivere testo in un file
 Questo argomento illustra diversi modi per scrivere testo in un file per un'app .NET. 
@@ -38,6 +38,8 @@ L'esempio seguente illustra come usare la classe <xref:System.IO.StreamWriter> p
 
 [!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/write.cs)] 
 [!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/write.vb)]  
+
+[!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
 
 ## <a name="example-synchronously-append-text-with-streamwriter"></a>Esempio: accodare in modo sincrono il testo con StreamWriter
 

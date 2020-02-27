@@ -2,12 +2,12 @@
 title: Programmazione asincrona
 description: Informazioni su F# come fornisce un supporto pulito per modalità asincrona basato su un modello di programmazione a livello di linguaggio derivato dai concetti di base della programmazione funzionale.
 ms.date: 12/17/2018
-ms.openlocfilehash: 471566befd69f330fb9254dbd57b19569d9f9ad3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 7021d7936d10f9ea6fceb4aa56db3285d21624ad
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344666"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628852"
 ---
 # <a name="async-programming-in-f"></a>Programmazione asincrona in F\#
 
@@ -33,13 +33,13 @@ Se si considera l'etimologia della parola "Asynchronous", sono necessarie due pa
 - "a", che significa "not".
 - "sincrono", che significa "allo stesso tempo".
 
-Quando si impostano questi due termini, si noterà che "Asynchronous" significa "not allo stesso tempo". La procedura è terminata. In questa definizione non esiste alcuna implicazione della concorrenza o del parallelismo. Questo vale anche per la pratica.
+Quando si impostano questi due termini, si noterà che "Asynchronous" significa "not allo stesso tempo". L'operazione è terminata. In questa definizione non esiste alcuna implicazione della concorrenza o del parallelismo. Questo vale anche per la pratica.
 
 In termini pratici, i calcoli asincroni in F# sono pianificati per l'esecuzione indipendentemente dal flusso di programma principale. Questo non implica la concorrenza o il parallelismo, né implica che un calcolo avvenga sempre in background. Infatti, i calcoli asincroni possono anche essere eseguiti in modo sincrono, a seconda della natura del calcolo e dell'ambiente in cui è in esecuzione il calcolo.
 
 Il principale vantaggio è che i calcoli asincroni sono indipendenti dal flusso di programma principale. Sebbene ci siano poche garanzie su quando o come viene eseguito un calcolo asincrono, esistono alcuni approcci per orchestrarli e pianificarli. Nella parte restante di questo articolo vengono esaminati F# i concetti di base per modalità asincrona e viene illustrato come utilizzare i tipi, F#le funzioni e le espressioni incorporati in.
 
-## <a name="core-concepts"></a>Concetti di base
+## <a name="core-concepts"></a>Concetti principali
 
 In F#la programmazione asincrona è incentrata su tre concetti fondamentali:
 
@@ -69,7 +69,7 @@ let main argv =
     0
 ```
 
-Nell'esempio, la funzione `printTotalFileBytes` è di tipo `string -> Async<unit>`. La chiamata alla funzione non esegue effettivamente il calcolo asincrono. Viene invece restituito un `Async<unit>` che funge da *specifica* del lavoro da eseguire in modo asincrono. Chiama `Async.AwaitTask` nel corpo, che converte il risultato di <xref:System.IO.File.WriteAllBytesAsync%2A> in un tipo appropriato.
+Nell'esempio, la funzione `printTotalFileBytes` è di tipo `string -> Async<unit>`. La chiamata alla funzione non esegue effettivamente il calcolo asincrono. Viene invece restituito un `Async<unit>` che funge da *specifica* del lavoro da eseguire in modo asincrono. Chiama `Async.AwaitTask` nel corpo, che converte il risultato di <xref:System.IO.File.ReadAllBytesAsync%2A> in un tipo appropriato.
 
 Un'altra linea importante è la chiamata a `Async.RunSynchronously`. Si tratta di una delle funzioni di avvio del modulo asincrono che è necessario chiamare se si desidera eseguire effettivamente un F# calcolo asincrono.
 
@@ -144,13 +144,13 @@ Poiché F# i calcoli asincroni sono una _specifica_ di lavoro anziché una rappr
 
 Avvia un calcolo figlio all'interno di un calcolo asincrono. Questo consente l'esecuzione simultanea di più calcoli asincroni. Il calcolo figlio condivide un token di annullamento con il calcolo padre. Se il calcolo padre viene annullato, viene annullato anche il calcolo figlio.
 
-Firma:
+Firma
 
 ```fsharp
 computation: Async<'T> - timeout: ?int -> Async<Async<'T>>
 ```
 
-Utilizzo:
+Quando usare:
 
 - Quando si desidera eseguire contemporaneamente più calcoli asincroni anziché uno alla volta, ma non sono stati pianificati in parallelo.
 - Quando si desidera associare la durata di un calcolo figlio a quella di un calcolo padre.
@@ -164,13 +164,13 @@ Elementi da controllare:
 
 Esegue un calcolo asincrono, a partire immediatamente dal thread del sistema operativo corrente. Questa operazione è utile se è necessario aggiornare qualcosa nel thread chiamante durante il calcolo. Se, ad esempio, un calcolo asincrono deve aggiornare un'interfaccia utente, ad esempio l'aggiornamento di un indicatore di stato, è necessario usare `Async.StartImmediate`.
 
-Firma:
+Firma
 
 ```fsharp
 computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
 ```
 
-Utilizzo:
+Quando usare:
 
 - Quando è necessario aggiornare qualcosa nel thread chiamante durante un calcolo asincrono.
 
@@ -182,13 +182,13 @@ Elementi da controllare:
 
 Esegue un calcolo nel pool di thread. Restituisce un <xref:System.Threading.Tasks.Task%601> che verrà completato nello stato corrispondente al termine del calcolo (genera il risultato, genera un'eccezione o viene annullato). Se non viene fornito alcun token di annullamento, viene utilizzato il token di annullamento predefinito.
 
-Firma:
+Firma
 
 ```fsharp
 computation: Async<'T> - taskCreationOptions: ?TaskCreationOptions - cancellationToken: ?CancellationToken -> Task<'T>
 ```
 
-Utilizzo:
+Quando usare:
 
 - Quando è necessario chiamare un'API .NET che prevede un <xref:System.Threading.Tasks.Task%601> per rappresentare il risultato di un calcolo asincrono.
 
@@ -200,7 +200,7 @@ Elementi da controllare:
 
 Pianifica una sequenza di calcoli asincroni da eseguire in parallelo. Il grado di parallelismo può essere facoltativamente ottimizzato/limitato specificando il parametro `maxDegreesOfParallelism`.
 
-Firma:
+Firma
 
 ```fsharp
 computations: seq<Async<'T>> - ?maxDegreesOfParallelism: int -> Async<'T[]>
@@ -220,7 +220,7 @@ Elementi da controllare:
 
 Pianifica una sequenza di calcoli asincroni da eseguire nell'ordine in cui vengono passati. Il primo calcolo verrà eseguito, quindi il successivo e così via. Nessun calcolo verrà eseguito in parallelo.
 
-Firma:
+Firma
 
 ```fsharp
 computations: seq<Async<'T>> -> Async<'T[]>
@@ -239,13 +239,13 @@ Elementi da controllare:
 
 Restituisce un calcolo asincrono che attende il completamento del <xref:System.Threading.Tasks.Task%601> specificato e ne restituisce il risultato come `Async<'T>`
 
-Firma:
+Firma
 
 ```fsharp
 task: Task<'T>  -> Async<'T>
 ```
 
-Utilizzo:
+Quando usare:
 
 - Quando si utilizza un'API .NET che restituisce un <xref:System.Threading.Tasks.Task%601> all'interno di un F# calcolo asincrono.
 
@@ -257,13 +257,13 @@ Elementi da controllare:
 
 Crea un calcolo asincrono che esegue un `Async<'T>`specificato, restituendo una `Async<Choice<'T, exn>>`. Se il `Async<'T>` specificato viene completato correttamente, viene restituita una `Choice1Of2` con il valore risultante. Se viene generata un'eccezione prima che venga completata, viene restituita una `Choice2of2` con l'eccezione generata. Se viene usato in un calcolo asincrono costituito da un numero elevato di calcoli e uno di questi calcoli genera un'eccezione, il calcolo che la comprende verrà interrotto interamente.
 
-Firma:
+Firma
 
 ```fsharp
 computation: Async<'T> -> Async<Choice<'T, exn>>
 ```
 
-Utilizzo:
+Quando usare:
 
 - Quando si eseguono operazioni asincrone che possono avere esito negativo con un'eccezione e si desidera gestire tale eccezione nel chiamante.
 
@@ -275,13 +275,13 @@ Elementi da controllare:
 
 Crea un calcolo asincrono che esegue il calcolo specificato e ne ignora il risultato.
 
-Firma:
+Firma
 
 ```fsharp
 computation: Async<'T> -> Async<unit>
 ```
 
-Utilizzo:
+Quando usare:
 
 - Quando si dispone di un calcolo asincrono il cui risultato non è necessario. Questo è analogo al codice `ignore` per il codice non asincrono.
 
@@ -293,7 +293,7 @@ Elementi da controllare:
 
 Esegue un calcolo asincrono e ne attende il risultato nel thread chiamante. Questa chiamata è in blocco.
 
-Firma:
+Firma
 
 ```fsharp
 computation: Async<'T> - timeout: ?int - cancellationToken: ?CancellationToken -> 'T
@@ -312,7 +312,7 @@ Elementi da controllare:
 
 Avvia un calcolo asincrono nel pool di thread che restituisce `unit`. Non attende il risultato. I calcoli annidati avviati con `Async.Start` vengono avviati completamente indipendentemente dal calcolo padre che li ha chiamati. La loro durata non è associata ad alcun calcolo padre. Se il calcolo padre viene annullato, nessun calcolo figlio viene annullato.
 
-Firma:
+Firma
 
 ```fsharp
 computation: Async<unit> - cancellationToken: ?CancellationToken -> unit

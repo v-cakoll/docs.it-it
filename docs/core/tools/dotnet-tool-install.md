@@ -2,18 +2,18 @@
 title: Comando dotnet tool install
 description: Il comando DotNet tool install installa lo strumento .NET Core specificato nel computer.
 ms.date: 02/14/2020
-ms.openlocfilehash: 2705defe9b77009ca1411da28dd86d144ccc19e6
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 837d12bc807ad95ccdbd9c0e087c7d45418c6e74
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543469"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626034"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
 **Questo articolo si applica a:** ✔️ .net core 2,1 SDK e versioni successive
 
-## <a name="name"></a>Nome
+## <a name="name"></a>Name
 
 `dotnet tool install`: installa lo [strumento .NET Core](global-tools.md) specificato nel computer.
 
@@ -30,7 +30,7 @@ dotnet tool install <-h|--help>
 
 Il comando `dotnet tool install` consente di installare gli strumenti di .NET Core nel computer. Per utilizzare il comando, è necessario specificare una delle opzioni di installazione seguenti:
 
-* Per installare uno strumento globale nel percorso predefinito, usare l'opzione `--tool-path`.
+* Per installare uno strumento globale nel percorso predefinito, usare l'opzione `--global`.
 * Per installare uno strumento globale in un percorso personalizzato, utilizzare l'opzione `--tool-path`.
 * Per installare uno strumento locale, omettere le opzioni `--global` e `--tool-path`.
 
@@ -38,10 +38,10 @@ Il comando `dotnet tool install` consente di installare gli strumenti di .NET Co
 
 Per impostazione predefinita, gli strumenti globali vengono installati nelle directory seguenti quando si specifica l'opzione `-g` o `--global`:
 
-| OS          | Path                          |
+| Sistema operativo          | Percorso                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
-| Windows     | `%USERPROFILE%\.dotnet\tools` |
+| WINDOWS     | `%USERPROFILE%\.dotnet\tools` |
 
 Gli strumenti locali vengono aggiunti a un file con estensione *JSON dello strumento* in una directory *. config* nella directory corrente. Se un file manifesto non esiste ancora, crearlo eseguendo il comando seguente:
 

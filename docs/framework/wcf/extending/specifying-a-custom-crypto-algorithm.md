@@ -2,12 +2,12 @@
 title: Specifica di un algoritmo di crittografia personalizzato
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: 55200732b392c15a25853af28ecdf9e32d092da4
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 0bfa6c46f4db1171eb314625e36c267000a0ec12
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849109"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628683"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>Specifica di un algoritmo di crittografia personalizzato
 WCF consente di specificare un algoritmo di crittografia personalizzato da usare per crittografare i dati o calcolare le firme digitali. A tale scopo, attenersi alla procedura seguente:  
@@ -105,7 +105,7 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 </configuration>  
 ```  
   
- La sezione sotto l'elemento`cryptoClasses`> < crea il mapping tra SHA256CryptoServiceProvider e l'alias "SHA256CSP". L'elemento`nameEntry`< > Crea il mapping tra l'alias "SHA256CSP" e l'URL specificato (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm ).  
+ La sezione sotto l'elemento <`cryptoClasses`> Crea il mapping tra SHA256CryptoServiceProvider e l'alias "SHA256CSP". L'elemento <`nameEntry`> Crea il mapping tra l'alias "SHA256CSP" e l'URL specificato `http://constoso.com/CustomAlgorithms/CustomHashAlgorithm`.  
   
  Per registrare l'algoritmo personalizzato nel codice usare il metodo <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])>. Questo metodo crea entrambi i mapping. Nell'esempio seguente viene illustrato come chiamare questo metodo:  
   
@@ -129,5 +129,5 @@ WSHttpBinding binding = new WSHttpBinding();
 
 - [Protezione di servizi e client](../feature-details/securing-services-and-clients.md)
 - [Protezione dei servizi](../securing-services.md)
-- [Panoramica della sicurezza](../feature-details/security-overview.md)
+- [Proteggere un database in SQL Data Warehouse](../feature-details/security-overview.md)
 - [Concetti relativi alla sicurezza](../feature-details/security-concepts.md)

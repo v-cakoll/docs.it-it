@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
-ms.openlocfilehash: b315d1f04c9e74700afba8ee7871b23ab4b2fd28
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 473f5f8e226f0a144746ac943afcffdccd4777c7
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744686"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625852"
 ---
 # <a name="no-loc-textinterface-c-reference"></a>:::no-loc text="interface"::: (C# riferimento)
 
-Un'interfaccia definisce un contratto. Qualsiasi [`class`](class.md) o [`struct`](struct.md) che implementi il contratto deve fornire un'implementazione dei membri definiti nell'interfaccia. A partire C# da 8,0, un'interfaccia può definire un'implementazione predefinita per i membri. Può inoltre definire [`static`](static.md) membri per fornire una singola implementazione per la funzionalità comune.
+Un'interfaccia definisce un contratto. Qualsiasi [`class`](class.md) o [`struct`](../builtin-types/struct.md) che implementi il contratto deve fornire un'implementazione dei membri definiti nell'interfaccia. A partire C# da 8,0, un'interfaccia può definire un'implementazione predefinita per i membri. Può inoltre definire [`static`](static.md) membri per fornire una singola implementazione per la funzionalità comune.
 
 Nell'esempio seguente, la classe `ImplementationClass` deve implementare un metodo denominato `SampleMethod` che è privo di parametri e restituisce `void`.
 
@@ -78,6 +78,4 @@ Per ulteriori informazioni, vedere la sezione [interfacce](~/_csharplang/spec/in
 - [Interfacce](../../programming-guide/interfaces/index.md)
 - [Uso delle proprietà](../../programming-guide/classes-and-structs/using-properties.md)
 - [Uso degli indicizzatori](../../programming-guide/indexers/using-indexers.md)
-- [class](class.md)
-- [struct](struct.md)
 - [Interfacce](../../programming-guide/interfaces/index.md)

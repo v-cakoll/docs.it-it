@@ -2,12 +2,12 @@
 title: Modernizzare le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows (seconda edizione)
 description: Questo e-book contiene informazioni su come trasferire in modalità lift-and-shift e modernizzare le applicazioni esistenti nei contenitori e nel cloud di Azure.
 ms.date: 04/28/2018
-ms.openlocfilehash: fa20e606c9a1364fbdf8c9a58c8703420d9e65a9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9439de84dd46ac3153d951378764d10184c33a52
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714577"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628401"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernizzare le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows (seconda edizione)
 
@@ -19,7 +19,7 @@ Divisioni di Microsoft Corporation
 One Microsoft Way  
 Redmond, Washington 98052-6399  
 
-Copyright © 2018 Microsoft Corporation  
+Copyright © 2020 di Microsoft Corporation  
 
 Tutti i diritti riservati. Nessuna parte del contenuto di questo libro può essere riprodotta in qualsiasi forma o con qualsiasi mezzo, senza il permesso scritto dell'editore.
 
@@ -202,4 +202,4 @@ Queste app di esempio hanno una seconda versione, con codice modernizzato, e son
 Questa guida è stata scritta per aiutare a comprendere le opzioni disponibili per migliorare e modernizzare le applicazioni Web .NET esistenti. La guida e le applicazioni di esempio correlate sono in continua evoluzione. I commenti degli utenti sono molto apprezzati! È possibile inviare eventuali commenti su come rendere la guida ancora più utile all'indirizzo: [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book).
 
 >[!div class="step-by-step"]
->[Successivo](lift-and-shift-existing-apps-azure-iaas.md) <!-- Next Chapter -->
+>[avanti](lift-and-shift-existing-apps-azure-iaas.md) <!-- Next Chapter -->

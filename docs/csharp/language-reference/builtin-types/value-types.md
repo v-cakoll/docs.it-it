@@ -8,16 +8,16 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 6b96d65f657f2af1af5c9a245e956640ee06260e
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 76f4a3ed929e3ac8e3e6cc74158e75af7a6c8cf2
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76748517"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625947"
 ---
 # <a name="value-types-c-reference"></a>Tipi di valoreC# (riferimento)
 
-I tipi di *valore* e i [tipi di riferimento](../keywords/reference-types.md) sono le C# due categorie principali di tipi. Una variabile di un tipo di valore contiene un'istanza del tipo. Questo comportamento è diverso da una variabile di un tipo riferimento, che contiene un riferimento a un'istanza del tipo. Per impostazione predefinita, durante l' [assegnazione](../operators/assignment-operator.md), passando un argomento a un metodo o restituendo il risultato di un metodo, vengono copiati i valori delle variabili. Nel caso di variabili di tipo valore, vengono copiate le istanze del tipo corrispondenti. L'esempio seguente illustra questo comportamento:
+I tipi di *valore* e i [tipi di riferimento](../keywords/reference-types.md) sono le C# due categorie principali di tipi. Una variabile di un tipo di valore contiene un'istanza del tipo. Questo comportamento è diverso da una variabile di un tipo riferimento, che contiene un riferimento a un'istanza del tipo. Per impostazione predefinita, durante l' [assegnazione](../operators/assignment-operator.md), passando un argomento a un metodo e restituendo il risultato di un metodo, vengono copiati i valori delle variabili. Nel caso di variabili di tipo valore, vengono copiate le istanze del tipo corrispondenti. L'esempio seguente illustra questo comportamento:
 
 [!code-csharp[copy of values](~/samples/csharp/language-reference/builtin-types/ValueTypes.cs#ValueTypeCopied)]
 
@@ -34,7 +34,7 @@ Se un tipo di valore contiene un membro dati di un tipo di riferimento, quando v
 
 Un tipo di valore può essere uno dei due tipi seguenti:
 
-- [tipo di struttura](../keywords/struct.md)che incapsula i dati e la funzionalità correlata
+- [tipo di struttura](struct.md)che incapsula i dati e la funzionalità correlata
 - un [tipo di enumerazione](enum.md), definito da un set di costanti denominate e rappresenta una scelta o una combinazione di scelte
 
 Un [tipo di valore nullable](nullable-value-types.md) `T?` rappresenta tutti i valori del tipo di valore sottostante `T` e un valore [null](../keywords/null.md) aggiuntivo. Non è possibile assegnare `null` a una variabile di un tipo di valore, a meno che non si tratti di un tipo di valore Nullable.

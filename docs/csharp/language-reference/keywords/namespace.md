@@ -8,12 +8,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: 1eaec05289ad1146ac3dcd6479442a6fae067cc9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b35f0a2a5cc0b2895b491d4ee24f89955f4b8fed
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713359"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625800"
 ---
 # <a name="namespace-c-reference"></a>namespace (Riferimenti per C#)
 
@@ -27,11 +27,11 @@ All'interno di uno spazio dei nomi è possibile dichiarare nessuno o più di uno
 
 - un altro spazio dei nomi
 
-- [classe](class.md)
+- [class](class.md)
 
 - [interface](interface.md)
 
-- [struct](struct.md)
+- [struct](../builtin-types/struct.md)
 
 - [enum](../builtin-types/enum.md)
 
@@ -62,4 +62,4 @@ Per altre informazioni, vedere la sezione [Spazi dei nomi](~/_csharplang/spec/na
 - [using](using-directive.md)
 - [using static](using-static.md)
 - [Qualificatore di alias dello spazio dei nomi `::`](../operators/namespace-alias-qualifier.md)
-- [Spazi dei nomi](../../programming-guide/namespaces/index.md)
+- [Namespaces](../../programming-guide/namespaces/index.md) (Spazi dei nomi)

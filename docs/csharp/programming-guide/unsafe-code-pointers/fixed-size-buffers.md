@@ -5,12 +5,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: b5be6892a265f0a2b7f3109321fdcf46d4b0ea22
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9005c425badc5a4ed74e6af3447e563daf61229e
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711844"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627799"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Buffer a dimensione fissa (Guida per programmatori C#)
 
@@ -22,7 +22,7 @@ private fixed char name[30];
 
 ## <a name="remarks"></a>Note
 
-Nel codice safe, uno struct C# che contiene una matrice non contiene gli elementi della matrice. Lo struct contiene invece un riferimento agli elementi. È possibile incorporare una matrice di dimensioni fisse in uno [struct](../../language-reference/keywords/struct.md) quando viene usata in un blocco di codice [unsafe](../../language-reference/keywords/unsafe.md).
+Nel codice safe, uno struct C# che contiene una matrice non contiene gli elementi della matrice. Lo struct contiene invece un riferimento agli elementi. È possibile incorporare una matrice di dimensioni fisse in uno [struct](../../language-reference/builtin-types/struct.md) quando viene usata in un blocco di codice [unsafe](../../language-reference/keywords/unsafe.md).
 
 Lo `struct` seguente ha una dimensione di 8 byte. La matrice `pathName` è un riferimento:
 
@@ -32,7 +32,7 @@ Un oggetto `struct` può contenere una matrice incorporata in codice unsafe. Nel
 
 [!code-csharp[Struct with embedded inline array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#7)]
 
-Le dimensioni della matrice `char` a 128 elementi sono di 256 byte. I buffer [char](../../language-reference/builtin-types/char.md) a dimensione fissa accettano sempre due byte per carattere, indipendentemente dalla codifica. Questo vale anche quando viene eseguito il marshalling di buffer char in metodi API o struct con `CharSet = CharSet.Auto` o `CharSet = CharSet.Ansi`. Per ulteriori informazioni, vedere <xref:System.Runtime.InteropServices.CharSet>.
+Le dimensioni della matrice `char` a 128 elementi sono di 256 byte. I buffer [char](../../language-reference/builtin-types/char.md) a dimensione fissa accettano sempre due byte per carattere, indipendentemente dalla codifica. Questo vale anche quando viene eseguito il marshalling di buffer char in metodi API o struct con `CharSet = CharSet.Auto` o `CharSet = CharSet.Ansi`. Per altre informazioni, vedere <xref:System.Runtime.InteropServices.CharSet>.
 
 L'esempio precedente mostra l'accesso ai campi `fixed` senza blocco, opzione disponibile a partire da C# 7.3.
 
