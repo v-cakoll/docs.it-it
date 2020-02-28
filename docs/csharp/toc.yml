@@ -82,8 +82,6 @@
       href: tour-of-csharp/statements.md
     - name: Classi e oggetti
       href: tour-of-csharp/classes-and-objects.md
-    - name: Struct
-      href: tour-of-csharp/structs.md
     - name: Matrici
       href: tour-of-csharp/arrays.md
     - name: Interfacce
@@ -129,8 +127,6 @@
       href: basic-types.md
     - name: Classi
       href: programming-guide/classes-and-structs/classes.md
-    - name: Struct
-      href: structs.md
     - name: Tuple
       href: tuples.md
     - name: Decostruzione di tuple e altri tipi
@@ -941,19 +937,12 @@
     - name: Classi e struct
       items:
         - name: Panoramica
-          displayName: classes structs
+          displayName: classes
           href: programming-guide/classes-and-structs/index.md
         - name: Classi
           href: programming-guide/classes-and-structs/classes.md
         - name: Oggetti
           href: programming-guide/classes-and-structs/objects.md
-        - name: Struct
-          items:
-            - name: Panoramica
-              displayName: structs
-              href: programming-guide/classes-and-structs/structs.md
-            - name: Usare le strutture
-              href: programming-guide/classes-and-structs/using-structs.md
         - name: Ereditarietà
           href: programming-guide/classes-and-structs/inheritance.md
         - name: Polimorfismo
