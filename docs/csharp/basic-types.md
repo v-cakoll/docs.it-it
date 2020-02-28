@@ -4,12 +4,12 @@ description: Informazioni sui tipi di base (dati numerici, stringhe e oggetto) i
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 10230394ece27a2a34be1075abcdbd3765995aeb
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: bb2177026afb2eef2e14ece0c306bfd3ffe7af39
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628566"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673264"
 ---
 # <a name="types-variables-and-values"></a>Tipi, variabili e valori
 
@@ -82,9 +82,10 @@ In alcuni casi non è consigliabile creare un tipo denominato per set semplici d
   
 - Il tipo supporta il principio di ereditarietà. I tipi possono derivare da altri tipi, denominati *tipi di base*. Il tipo derivato eredita (con alcune limitazioni) metodi, proprietà e altri membri del tipo di base, Il tipo di base può a sua volta derivare da un altro tipo, nel quale caso il tipo derivato eredita i membri di entrambi i tipi di base nella gerarchia di ereditarietà. Tutti i tipi, inclusi i tipi numerici predefiniti, ad esempio <xref:System.Int32> (parola chiave C#: `int`), derivano in definitiva da un unico tipo di base, ovvero <xref:System.Object> (parola chiave C#: `object`). Questa gerarchia di tipi unificati viene chiamata [Common Type System](../standard/common-type-system.md) (CTS). Per altre informazioni sull'ereditarietà in C#, vedere [Ereditarietà](programming-guide/classes-and-structs/inheritance.md).  
   
-- Nel CTS ogni tipo è definito come *tipo valore* o *tipo riferimento*. Ciò include tutti i tipi personalizzati nella libreria di classi .NET Framework, nonché i tipi definiti dall'utente. I tipi definiti tramite la parola chiave [struct](language-reference/builtin-types/struct.md) sono tipi di valore e tutti i tipi numerici predefiniti sono tipi **struct**. Per altre informazioni sui tipi di valori, vedere [Struct](structs.md). I tipi definiti tramite la parola chiave [class](language-reference/keywords/class.md) sono tipi di riferimento. Per altre informazioni sui tipi di riferimento, vedere [Classi](programming-guide/classes-and-structs/classes.md). I tipi di riferimento e i tipi di valore hanno regole diverse e un comportamento diverso in fase di esecuzione.
+- Nel CTS ogni tipo è definito come *tipo valore* o *tipo riferimento*. In queste due categorie sono inclusi anche tutti i tipi personalizzati nella libreria di classi .NET e i tipi definiti dall'utente. I tipi definiti tramite la parola chiave `struct` o `enum` sono tipi valore. Per ulteriori informazioni sui tipi di valore, vedere [tipi di valore](language-reference/builtin-types/value-types.md). I tipi definiti tramite la parola chiave [class](language-reference/keywords/class.md) sono tipi di riferimento. Per altre informazioni sui tipi di riferimento, vedere [Classi](programming-guide/classes-and-structs/classes.md). I tipi di riferimento e i tipi di valore hanno regole diverse e un comportamento diverso in fase di esecuzione.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Struct](structs.md)
+- [Tipi di struttura](language-reference/builtin-types/struct.md)
+- [Tipi di enumerazione](language-reference/builtin-types/enum.md)
 - [Classi](programming-guide/classes-and-structs/classes.md)

@@ -2,12 +2,12 @@
 title: Panoramica di C# | Guida a C#
 description: Introduzione a C# Informazioni di base sul linguaggio.
 ms.date: 04/05/2019
-ms.openlocfilehash: e2d7af3a35dc9d4fdeddf9eb742d155ab33094b4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b510342f957a259a6c7763441778461b3dd4ef1e
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711662"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673290"
 ---
 # <a name="a-tour-of-the-c-language"></a>Panoramica del C# linguaggio
 
@@ -59,14 +59,12 @@ Oltre quelli sopra riportati, rimangono da discutere altri numerosi aspetti del 
 - [Tipi e variabili](types-and-variables.md)
   - Vengono offerte informazioni sui ***tipi valore***, i ***tipi riferimento*** e le ***variabili*** del linguaggio C#.
 - [Espressioni](expressions.md)
-  - Le ***espressioni*** sono costituite da ***operandi*** e ***operatori***. e producono un valore.
+  - Le ***espressioni*** sono costituite da ***operandi*** e ***operatori*** e producono un valore.
 - [Istruzioni](statements.md)
   - Le ***istruzioni*** consentono di esprimere le azioni di un programma.
 - [Classi e oggetti](classes-and-objects.md)
   - Le ***classi*** sono i tipi C# più importanti. Gli ***oggetti*** sono istanze di una classe. Le classi vengono create usando ***membri***, descritti più avanti in questo argomento.
-- [Struct](structs.md)
-  - Le ***struct*** sono strutture dati che, a differenza delle classi, sono tipi valore.
-- [Matrici](arrays.md)
+- [Array](arrays.md)
   - Una ***matrice*** è una struttura di dati contenente una serie di variabili accessibili tramite indici calcolati.
 - [Interfacce](interfaces.md)
   - Un'***interfaccia*** definisce un contratto che può essere implementato da classi e struct. Può contenere metodi, proprietà, eventi e indicizzatori. Un'interfaccia non fornisce le implementazioni dei membri che definisce, ma specifica semplicemente i membri che devono essere forniti dalle classi o dai tipi struct che la implementano.
@@ -79,4 +77,4 @@ Oltre quelli sopra riportati, rimangono da discutere altri numerosi aspetti del 
 > Questi articoli si applicano a C# 7,0 e versioni successive. Alcune funzionalità potrebbero non essere disponibili nelle versioni precedenti.
 
 > [!div class="step-by-step"]
-> [Successivo](program-structure.md)
+> [avanti](program-structure.md)

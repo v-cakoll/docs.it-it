@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: ade2cba857a1a32039f8fd07881f13f63f0dbe1a
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: a094e6e8ab9094fb14ce9a2ca8a180cbf9b273cb
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628137"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673394"
 ---
 # <a name="types-c-programming-guide"></a>Tipi (Guida per programmatori C#)
 
@@ -113,7 +113,7 @@ Usare la parola chiave [struct](../../language-reference/builtin-types/struct.md
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 
-Per altre informazioni sui tipi struct, vedere [Struct](../classes-and-structs/structs.md). Per ulteriori informazioni sui tipi di valore, vedere [tipi di valore](../../language-reference/builtin-types/value-types.md).
+Per ulteriori informazioni sugli struct, vedere [tipi di struttura](../../language-reference/builtin-types/struct.md). Per ulteriori informazioni sui tipi di valore, vedere [tipi di valore](../../language-reference/builtin-types/value-types.md).
 
 L'altra categoria di tipi valore è [enum](../../language-reference/builtin-types/enum.md). Un tipo enum definisce un set di costanti integrali denominate. L'enumerazione <xref:System.IO.FileMode?displayProperty=nameWithType> nella libreria di classi .NET, ad esempio, contiene un set di valori interi costanti e denominati che specificano come deve essere aperto un file. L'enumerazione deve essere definita come illustrato nell'esempio seguente:
 
@@ -205,3 +205,4 @@ Per altre informazioni, vedere gli argomenti seguenti:
 - [Guida per programmatori C#](../index.md)
 - [Conversione dei tipi di dati XML](../../../standard/data/xml/conversion-of-xml-data-types.md)
 - [Tipi integrali](../../language-reference/builtin-types/integral-numeric-types.md)
+ 

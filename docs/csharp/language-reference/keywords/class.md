@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 187a49131e903e00cab54d9db43b6cd8eb359a3a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 500160d3bc9280b866e5f5ba24c5edc623e752c1
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713687"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673095"
 ---
 # <a name="class-c-reference"></a>class (Riferimenti per C#)
 
@@ -32,16 +32,16 @@ In C# è consentita solo l'eredità singola. In altre parole, una classe può er
 
 |Ereditarietà|Esempio|
 |-----------------|-------------|
-|nessuna|`class ClassA { }`|
-|Single|`class DerivedClass: BaseClass { }`|
-|Nessuna, implementa due interfacce|`class ImplClass: IFace1, IFace2 { }`|
-|Singola, implementa una sola interfaccia|`class ImplDerivedClass: BaseClass, IFace1 { }`|
+|None|`class ClassA { }`|
+|Single|`class DerivedClass : BaseClass { }`|
+|Nessuna, implementa due interfacce|`class ImplClass : IFace1, IFace2 { }`|
+|Singola, implementa una sola interfaccia|`class ImplDerivedClass : BaseClass, IFace1 { }`|
 
 Una classe dichiarata direttamente all'interno di uno spazio dei nomi, non annidata all'interno di altre classi, può essere [public](./public.md) o [internal](./internal.md). Le classi sono `internal` per impostazione predefinita.
 
 I membri di classe, incluse le classi annidate, possono essere [public](public.md), [protected internal](protected-internal.md), [protected](protected.md), [internal](internal.md), [private](private.md) o [private protected](private-protected.md). I membri sono `private` per impostazione predefinita.
 
-Per altre informazioni, vedere [Modificatori di accesso](../../programming-guide/classes-and-structs/access-modifiers.md).
+Per altre informazioni, vedere [Access Modifiers](../../programming-guide/classes-and-structs/access-modifiers.md) (Modificatori di accesso).
 
 È possibile dichiarare classi generiche che hanno parametri di tipo. Per altre informazioni, vedere [Generic Classes](../../programming-guide/generics/generic-classes.md) (Classi generiche).
 
@@ -71,9 +71,9 @@ Una classe può contenere dichiarazioni dei membri seguenti:
 
 - [Interfacce](../../programming-guide/interfaces/index.md)
 
-- [Struct](../../programming-guide/classes-and-structs/structs.md)
+- [Tipi di struttura](../builtin-types/struct.md)
 
-- [Enumerazioni](../builtin-types/enum.md)
+- [Tipi di enumerazione](../builtin-types/enum.md)
 
 ## <a name="example"></a>Esempio
 
@@ -104,4 +104,4 @@ Infine, si noti che per l'oggetto creato usando il costruttore senza parametri (
 - [Riferimenti per C#](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](./index.md)
-- [Tipi riferimento](./reference-types.md)
+- [Tipi di riferimento](./reference-types.md)

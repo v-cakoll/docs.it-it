@@ -10,12 +10,12 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-ms.openlocfilehash: 301ba292010470208e92a225c1014bcb50497106
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: afd9e688bd716375bafb370fad4af082a9498411
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714827"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673420"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Classi e struct (Guida per programmatori C#)
 Classi e struct sono due dei costrutti di base del Common Type System in .NET Framework. Ognuno di essi è costituito essenzialmente da una struttura di dati che incapsula un set di dati e comportamenti che formano insieme un'unità logica. I dati e i comportamenti sono i *membri* della classe o del tipo struct e ne includono i metodi, le proprietà, gli eventi e così via, come illustrato più avanti in questo argomento.  
@@ -24,11 +24,11 @@ Classi e struct sono due dei costrutti di base del Common Type System in .NET Fr
   
  Una classe è un tipo riferimento. Quando viene creato un oggetto della classe, la variabile a cui è assegnato l'oggetto contiene solo un riferimento alla memoria. Se il riferimento all'oggetto viene assegnato a una nuova variabile, questa fa riferimento all'oggetto originale. Le modifiche apportate tramite una variabile vengono riflesse nell'altra variabile perché entrambe fanno riferimento agli stessi dati.  
   
- Un tipo struct è un tipo valore. Quando viene creato un tipo struct, la variabile a cui è assegnato questo tipo ne contiene i dati effettivi. Quando viene assegnato a una nuova variabile, il tipo struct viene copiato. La nuova variabile e quella originale contengono quindi due copie separate degli stessi dati. Eventuali modifiche apportate a una copia non influiscono sull'altra copia.  
+ Un tipo struct è un tipo valore. Quando viene creato uno struct, la variabile a cui è assegnato lo struct contiene i dati effettivi dello struct. Quando viene assegnato a una nuova variabile, il tipo struct viene copiato. La nuova variabile e quella originale contengono quindi due copie separate degli stessi dati. Eventuali modifiche apportate a una copia non influiscono sull'altra copia.  
   
  In generale, le classi vengono usate per modellare un comportamento più complesso o dati destinati a essere modificati dopo la creazione di un oggetto di classe. I tipi struct sono invece più adatti a piccole strutture che contengono principalmente dati non destinati a essere modificati dopo la creazione del tipo.  
   
- Per altre informazioni, vedere [Classi](./classes.md), [Oggetti](./objects.md) e [Struct](./structs.md).  
+ Per ulteriori informazioni, vedere [classi](./classes.md), [oggetti](./objects.md)e [tipi di struttura](../../language-reference/builtin-types/struct.md).  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente la classe `CustomClass` inclusa nello spazio dei nomi `ProgrammingGuide` contiene tre membri: un costruttore di istanze, una proprietà denominata `Number` e un metodo denominato `Multiply`. Il metodo `Main` nella classe `Program` crea un'istanza (oggetto) di `CustomClass` ed è possibile accedere al metodo e alla proprietà dell'oggetto usando la notazione del punto.
@@ -40,7 +40,7 @@ Classi e struct sono due dei costrutti di base del Common Type System in .NET Fr
   
  Per altre informazioni sulle classi, vedere [Classi](./classes.md) e [Oggetti](./objects.md).  
   
-### <a name="members"></a>Membri  
+### <a name="members"></a>Members  
  Tutti i metodi, i campi, le costanti, le proprietà e gli eventi devono essere dichiarati all'interno di un tipo e prendono il nome di *membri* del tipo. In C# non esistono variabili o metodi globali come in altri linguaggi. Anche il punto di ingresso di un programma, il metodo `Main`, deve essere dichiarato all'interno di una classe o di un tipo struct. Di seguito sono elencati tutti i tipi di membri che possono essere dichiarati in una classe o in un tipo struct.  
   
 - [Campi](./fields.md)  
@@ -64,7 +64,7 @@ Classi e struct sono due dei costrutti di base del Common Type System in .NET Fr
 - [Tipi annidati](./nested-types.md)  
   
 ### <a name="accessibility"></a>Accessibilità  
- Alcuni metodi e proprietà sono progettati in modo da essere chiamabili o accessibili da codice esterno alla classe o al tipo struct, noto come *codice client*. Altri metodi e proprietà possono invece essere usati esclusivamente all'interno della classe o del tipo struct. Questa distinzione è importante per limitare l'accessibilità del codice in modo che solo il codice client desiderato possa raggiungerlo. È possibile specificare l'accessibilità dei tipi e dei loro membri dal codice client usando i modificatori di accesso [public](../../language-reference/keywords/public.md), [protected](../../language-reference/keywords/protected.md), [internal](../../language-reference/keywords/internal.md), [protected internal](../../language-reference/keywords/protected-internal.md), [private](../../language-reference/keywords/private.md) e [private protected](../../language-reference/keywords/private-protected.md). L'accessibilità predefinita è `private`. Per altre informazioni, vedere [Modificatori di accesso](./access-modifiers.md).  
+ Alcuni metodi e proprietà sono progettati in modo da essere chiamabili o accessibili da codice esterno alla classe o al tipo struct, noto come *codice client*. Altri metodi e proprietà possono invece essere usati esclusivamente all'interno della classe o del tipo struct. Questa distinzione è importante per limitare l'accessibilità del codice in modo che solo il codice client desiderato possa raggiungerlo. È possibile specificare l'accessibilità dei tipi e dei loro membri dal codice client usando i modificatori di accesso [public](../../language-reference/keywords/public.md), [protected](../../language-reference/keywords/protected.md), [internal](../../language-reference/keywords/internal.md), [protected internal](../../language-reference/keywords/protected-internal.md), [private](../../language-reference/keywords/private.md) e [private protected](../../language-reference/keywords/private-protected.md). L'accessibilità predefinita è `private`. Per altre informazioni, vedere [Access Modifiers](./access-modifiers.md) (Modificatori di accesso).  
   
 ### <a name="inheritance"></a>Ereditarietà  
  Le classi (ma non i tipi struct) supportano il concetto di ereditarietà. Una classe che deriva da un'altra classe definita *classe di base* contiene automaticamente tutti i membri pubblici, protetti e interni della classe di base, ad eccezione di costruttori e finalizzatori. Per altre informazioni, vedere [Ereditarietà](./inheritance.md) e [Polimorfismo](./polymorphism.md).  
@@ -72,7 +72,7 @@ Classi e struct sono due dei costrutti di base del Common Type System in .NET Fr
  Le classi possono essere dichiarate come [astratte](../../language-reference/keywords/abstract.md). Ciò significa che uno o più metodi di tali classi sono privi di implementazione. Anche se non è possibile crearne direttamente un'istanza, le classi astratte possono svolgere la funzione di classi di base per altre classi che forniscono l'implementazione mancante. Le classi possono anche essere dichiarate come [sealed](../../language-reference/keywords/sealed.md) per impedire che altre classi ereditino da esse. Per altre informazioni, vedere [Classi e membri delle classi astratte e sealed](./abstract-and-sealed-classes-and-class-members.md).  
   
 ### <a name="interfaces"></a>Interfacce  
- Le classi e i tipi struct possono ereditare più interfacce. Quando eredita da un'interfaccia, un tipo implementa tutti i metodi definiti in tale interfaccia. Per ulteriori informazioni, vedi [Interfacce](../interfaces/index.md).  
+ Le classi e i tipi struct possono ereditare più interfacce. Quando eredita da un'interfaccia, un tipo implementa tutti i metodi definiti in tale interfaccia. Per altre informazioni, vedere [Interfacce](../interfaces/index.md).  
   
 ### <a name="generic-types"></a>Tipi generici  
  Le classi e i tipi struct possono essere definiti con uno o più parametri di tipo. Il codice client fornisce il tipo quando ne crea un'istanza. Ad esempio, la classe <xref:System.Collections.Generic.List%601> nello spazio dei nomi <xref:System.Collections.Generic> viene definita con un solo parametro di tipo. Il codice client crea un'istanza di `List<string>` o `List<int>` per specificare il tipo che sarà contenuto nell'elenco. Per altre informazioni, vedere [Generics](../generics/index.md).  
@@ -87,7 +87,7 @@ Classi e struct sono due dei costrutti di base del Common Type System in .NET Fr
  È possibile definire una parte di una classe, un tipo struct o un metodo in un file di codice e un'altra parte in un file di codice separato. Per altre informazioni, vedere [Classi e metodi parziali](./partial-classes-and-methods.md).  
   
 ### <a name="object-initializers"></a>Inizializzatori di oggetti  
- È possibile creare istanze e inizializzare oggetti classe o struct e raccolte di oggetti senza chiamare in modo esplicito il relativo costruttore. Per altre informazioni, vedere [Inizializzatori di oggetto e di raccolta](./object-and-collection-initializers.md).  
+ È possibile creare istanze e inizializzare oggetti classe o struct e raccolte di oggetti senza chiamare in modo esplicito il relativo costruttore. Per altre informazioni, vedere [Inizializzatori di oggetto e di Collection](./object-and-collection-initializers.md).  
   
 ### <a name="anonymous-types"></a>Tipi anonimi  
  Nelle situazioni in cui non conviene o non è necessario creare una classe denominata, ad esempio quando si popola un elenco con strutture di dati che non devono necessariamente essere persistenti o passate a un altro metodo, è possibile usare i tipi anonimi. Per altre informazioni, vedere [Tipi anonimi](./anonymous-types.md).  

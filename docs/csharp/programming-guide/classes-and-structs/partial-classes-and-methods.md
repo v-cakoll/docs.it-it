@@ -6,12 +6,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 641c2e3adfb3dabaa300e94b203aa6c4c4b509d2
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 50b192d5a7416a982f41d0c3ac13e9c1bfe3397c
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628189"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673355"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Classi e metodi parziali (Guida per programmatori C#)
 
@@ -90,7 +90,7 @@ Quando si usano le definizioni parziali di classi è necessario rispettare diver
 
 - Le parole chiave riportate di seguito sono facoltative in una definizione di tipi parziali. Tuttavia, se presenti in una definizione, tali parole chiave non possono essere in conflitto con quelle specificate in un'altra definizione parziale per lo stesso tipo:
 
-  - [pubblico](../../language-reference/keywords/public.md)
+  - [public](../../language-reference/keywords/public.md)
 
   - [private](../../language-reference/keywords/private.md)
 
@@ -173,6 +173,6 @@ Per altre informazioni, vedere [Tipi parziali](~/_csharplang/spec/classes.md#par
 
 - [Guida per programmatori C#](../index.md)
 - [Classi](./classes.md)
-- [Struct](./structs.md)
+- [Tipi di struttura](../../language-reference/builtin-types/struct.md)
 - [Interfacce](../interfaces/index.md)
 - [partial (tipo)](../../language-reference/keywords/partial-type.md)

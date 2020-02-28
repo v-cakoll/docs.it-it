@@ -3,12 +3,12 @@ title: Classi e oggetti in C# - Panoramica del linguaggio C#
 description: Introduzione a C# Leggere questa panoramica su classi, oggetti ed ereditarietà
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: be8e760b19b7ca5305918ecfdbf9ad797d7e76b2
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: e5078135ab22445ac636c6edc3d46570be8fcaf5
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105622"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673303"
 ---
 # <a name="classes-and-objects"></a>Classi e oggetti
 
@@ -26,7 +26,7 @@ Le istanze delle classi vengono create usando l'operatore `new`, che alloca memo
 
 La memoria occupata da un oggetto viene automaticamente recuperata nel momento in cui l'oggetto non è più raggiungibile. In C# non è possibile, né necessario, deallocare oggetti in modo esplicito.
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 I membri di una classe possono essere membri statici o membri di istanza. I primi appartengono a classi, mentre i secondi appartengono a oggetti, ovvero a istanze di classi.
 
@@ -34,13 +34,13 @@ Di seguito viene fornita una panoramica dei tipi di membri che può contenere un
 
 - Costanti
   - Valori costanti associati alla classe
-- Campi
+- Fields
   - Variabili della classe
 - Metodi
   - Calcoli e azioni che possono essere eseguiti dalla classe
 - Proprietà
   - Azioni associate alla lettura e alla scrittura di proprietà denominate della classe
-- Indicizzatori
+- Indexers (Indicizzatori)
   - Azioni associate all'indicizzazione di istanze della classe, come una matrice
 - Eventi
   - Notifiche che possono essere generate dalla classe
@@ -95,7 +95,7 @@ Un tipo di classe viene implicitamente convertito in uno dei relativi tipi di cl
 
 [!code-csharp[Point3DExample](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L22-L23)]
 
-## <a name="fields"></a>Campi
+## <a name="fields"></a>Fields
 
 Un *campo* è una variabile associata a una classe o a un'istanza di una classe.
 
@@ -139,7 +139,7 @@ Una *matrice di parametri* consente di passare un numero variabile di argomenti 
 
 [!code-csharp[ConsoleExample](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L78-L83)]
 
-All'interno di un metodo, una matrice di parametri si comporta esattamente come un normale parametro di tipo matrice. In una chiamata di un metodo con una matrice di parametri, tuttavia, è possibile passare un singolo argomento di tipo matrice di parametri oppure un qualsiasi numero di argomenti di tipo elemento della matrice di parametri. Nel secondo caso, un'istanza di matrice viene automaticamente creata e inizializzata con gli argomenti specificati. Questo esempio
+All'interno di un metodo, una matrice di parametri si comporta esattamente come un normale parametro di tipo matrice. In una chiamata di un metodo con una matrice di parametri, tuttavia, è possibile passare un singolo argomento di tipo matrice di parametri oppure un qualsiasi numero di argomenti di tipo elemento della matrice di parametri. Nel secondo caso, un'istanza di matrice viene automaticamente creata e inizializzata con gli argomenti specificati. Esempio
 
 [!code-csharp[StringFormat](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L55-L55)]
 
@@ -254,11 +254,11 @@ Come per i campi e i metodi, C# supporta sia proprietà di istanza sia propriet�
 
 Le funzioni di accesso di una proprietà possono essere virtuali. Se una dichiarazione di proprietà contiene un modificatore `virtual`, `abstract` o `override`, questo viene applicato anche alle funzioni di accesso della proprietà.
 
-### <a name="indexers"></a>Indicizzatori
+### <a name="indexers"></a>Indexers (Indicizzatori)
 
 Un *indicizzatore* è un membro che consente di indicizzare gli oggetti esattamente come una matrice. Un indicizzatore viene dichiarato come una proprietà, ma a differenza di questa il nome del membro è `this` seguito da un elenco di parametri scritti tra i delimitatori `[` e `]`. I parametri sono disponibili nelle funzioni di accesso dell'indicizzatore. Analogamente alle proprietà, gli indicizzatori possono essere di lettura/scrittura, di sola lettura o di sola scrittura e le funzioni di accesso di un indicizzatore possono essere virtuali.
 
-La classe `MyList<T>` dichiara un indicizzatore di lettura/scrittura che accetta un parametro `int` e consente di indicizzare istanze `MyList<T>` con valori `int`. Ad esempio:
+La classe `MyList<T>` dichiara un indicizzatore di lettura/scrittura che accetta un parametro `int` e consente di indicizzare istanze `MyList<T>` con valori `int`. Ad esempio,
 
 [!code-csharp[ListExample3](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L109-L117)]
 
@@ -298,4 +298,4 @@ L'istruzione `using` offre una soluzione più efficace per l'eliminazione di ogg
 
 > [!div class="step-by-step"]
 > [Precedente](statements.md)
-> [Successivo](structs.md)
+> [Successivo](arrays.md)

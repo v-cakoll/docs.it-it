@@ -3,12 +3,12 @@ title: Matrici C# - Panoramica del linguaggio C#
 description: Le matrici costituiscono il tipo di raccolta di base del linguaggio C#
 ms.date: 08/10/2016
 ms.assetid: a440704c-9e88-4c75-97dd-bfe30ca0fb97
-ms.openlocfilehash: 56a053ac8525d4c6c34592d6092f3f162cb04247
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: 195df1f31c71ee7a202a3b57076775c4f717d399
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634611"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673316"
 ---
 # <a name="arrays"></a>Matrici
 
@@ -44,5 +44,5 @@ Entrambi gli esempi precedenti equivalgono a quello seguente:
 [!code-csharp[ArrayAssignment](../../../samples/snippets/csharp/tour/arrays/Program.cs#L49-L53)]
 
 >[!div class="step-by-step"]
->[Precedente](structs.md)
+>[Precedente](classes-and-objects.md)
 >[Successivo](interfaces.md)
