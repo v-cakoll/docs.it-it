@@ -2,12 +2,12 @@
 title: Installare i file IntelliSense localizzati
 description: Informazioni su come configurare il computer di sviluppo per l'uso di file IntelliSense localizzati per i progetti .NET Core in Visual Studio.
 ms.date: 01/23/2020
-ms.openlocfilehash: 58b462507edf953a6c28aadbb9e3239a5cbe05b2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: e45e225e58865ca2b529000ada0984fbeca850f3
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733645"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157713"
 ---
 # <a name="how-to-install-localized-intellisense-files-for-net-core"></a>Come installare i file IntelliSense localizzati per .NET Core
 
@@ -16,7 +16,7 @@ ms.locfileid: "76733645"
 - Come installare la versione localizzata di questi file.
 - Come modificare l'installazione di Visual Studio per usare una lingua diversa.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 - [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) o versione successiva.
 - [Visual Studio 2019 versione 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o successiva.
@@ -35,14 +35,14 @@ ms.locfileid: "76733645"
 1. Passare alla cartella IntelliSense di .NET Core.
 
    1. Passare alla cartella di installazione di .NET Core. Per impostazione predefinita, è in *%ProgramFiles%\dotnet\packs*.
-   1. Scegliere l'SDK per cui si vuole installare IntelliSense e passare al percorso associato. Sono disponibili le seguenti opzioni:
+   1. Scegliere l'SDK per cui si vuole installare IntelliSense e passare al percorso associato. L'utente ha a disposizione le seguenti opzioni:
 
-      | Tipo di SDK        | Percorso                               |
+      | Tipo di SDK        | Path                               |
       | --------------- | ---------------------------------- |
       | .NET Core       | *Microsoft.NETCore.App.Ref*        |
-      | Windows Desktop | *Microsoft.WindowsDesktop.App.Ref* |
+      | Desktop di Windows | *Microsoft.WindowsDesktop.App.Ref* |
       | .NET Standard   | *NETStandard.Library.Ref*          |
-   
+
    1. Passare alla versione per cui si vuole installare la versione localizzata di IntelliSense. Ad esempio, *3.1.0*.
    1. Aprire la cartella *ref*.
    1. Aprire la cartella del moniker. Ad esempio, *netcoreapp3.1*.
@@ -51,7 +51,7 @@ ms.locfileid: "76733645"
 
 1. Creare una sottocartella all'interno della cartella del moniker appena aperta. Il nome della cartella indica la lingua da usare. Nella tabella seguente vengono specificate le diverse opzioni:
 
-   | Lingua:              | Nome cartella |
+   | Linguaggio              | Nome cartella |
    | --------------------- | ----------- |
    | Portoghese brasiliano  | *pt-br*     |
    | Cinese (semplificato)  | *zh-hans*   |
@@ -108,7 +108,7 @@ Se il language pack desiderato non è stato installato durante l'installazione, 
 
 Dopo aver installato i language pack desiderati, modificare le impostazioni di Visual Studio per usare una lingua diversa:
 
-1. Apri Visual Studio.
+1. Aprire Visual Studio.
 
 1. Nella finestra iniziale scegliere **Continua senza codice**.
 
@@ -116,7 +116,7 @@ Dopo aver installato i language pack desiderati, modificare le impostazioni di V
 
 1. Nel nodo **ambiente** scegliere **impostazioni internazionali**.
 
-1. Nell'elenco a discesa **Lingua** selezionare la lingua desiderata. Scegliere **OK**. 
+1. Nell'elenco a discesa **Lingua** selezionare la lingua desiderata. Scegliere **OK**.
 
 1. Una finestra di dialogo informa che è necessario riavviare Visual Studio per rendere effettive le modifiche. Scegliere **OK**.
 

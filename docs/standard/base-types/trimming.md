@@ -15,17 +15,17 @@ helpviewer_keywords:
 - TrimStart method
 - removing characters
 ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
-ms.openlocfilehash: 66a4945f536c2f30d61a878e6449a6b0f6b45f22
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bdbe267bb178e90c0008422e6543a23178c2c4d8
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132891"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159988"
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a>Eliminazione di spazi iniziali e finali e rimozione di caratteri dalle stringhe in .NET
 Se si sta analizzando una frase in singole parole, è possibile che si ottengano parole con spazi vuoti alle estremità. In questo caso è possibile usare uno dei metodi trim della classe **System.String** per rimuovere un numero qualsiasi di spazi o altri caratteri da una posizione specificata nella stringa. La tabella seguente illustra i metodi trim disponibili.  
   
-|Nome metodo|Usa|  
+|Nome del metodo|Uso|  
 |-----------------|---------|  
 |<xref:System.String.Trim%2A?displayProperty=nameWithType>|Rimuove gli spazi vuoti o i caratteri specificati in una matrice di caratteri all'inizio e alla fine di una stringa.|  
 |<xref:System.String.TrimEnd%2A?displayProperty=nameWithType>|Rimuove i caratteri specificati in una matrice di caratteri alla fine di una stringa.|  
@@ -77,7 +77,7 @@ Se si sta analizzando una frase in singole parole, è possibile che si ottengano
   
  Il codice visualizza `World!` nella console.  
   
-## <a name="remove"></a>Rimuovi 
+## <a name="remove"></a>Rimuovere
 
  Tramite il metodo <xref:System.String.Remove%2A?displayProperty=nameWithType> viene rimosso un numero specificato di caratteri a partire da una posizione specificata in una stringa esistente. Questo metodo presuppone un indice a base zero.  
   
@@ -87,7 +87,7 @@ Se si sta analizzando una frase in singole parole, è possibile che si ottengano
  [!code-csharp[Conceptual.String.BasicOps#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#21)]
  [!code-vb[Conceptual.String.BasicOps#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/trimming.vb#21)]  
   
-## <a name="replace"></a>Sostituisci
+## <a name="replace"></a>Replace
 
  È anche possibile rimuovere da una stringa una sottostringa o un carattere specificato chiamando il metodo <xref:System.String.Replace%28System.String%2CSystem.String%29?displayProperty=nameWithType> e specificando, in sostituzione, una stringa vuota (<xref:System.String.Empty?displayProperty=nameWithType>). Nell'esempio seguente vengono rimosse tutte le virgole da una stringa.  
   

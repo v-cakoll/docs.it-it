@@ -10,12 +10,12 @@ helpviewer_keywords:
 - threading [.NET Framework], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-ms.openlocfilehash: 26b0535fa918a802dd0922554ae197ba10396d56
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a76cc40f308ac2f636a650cd4a17da0e94e23a34
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129556"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160261"
 ---
 # <a name="managed-threading-best-practices"></a>Suggerimenti per l'uso del threading gestito
 Il multithreading richiede un'attenta programmazione. È possibile ridurre la complessità della maggior parte delle attività accodando le richieste di esecuzione tramite thread di pool di thread. In questo argomento vengono analizzate situazioni più complesse, come il coordinamento del lavoro di più thread o la gestione di thread che effettuano un blocco.  
@@ -81,7 +81,7 @@ L'architettura multithreading può essere influenzata dal fatto che nel sistema 
 
 Usare la proprietà <xref:System.Environment.ProcessorCount?displayProperty=nameWithType> per determinare il numero di processori disponibili in fase di esecuzione.
   
-## <a name="general-recommendations"></a>Suggerimenti generali  
+## <a name="general-recommendations"></a>Raccomandazioni generali  
  Quando si usano più thread, attenersi alle seguenti linee guida:  
   
 - Non usare <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> per terminare altri thread. Chiamare **Abort** su un altro thread equivale a generare un'eccezione su tale thread, senza conoscere il punto raggiunto dal thread nell'elaborazione.  
@@ -107,7 +107,7 @@ Usare la proprietà <xref:System.Environment.ProcessorCount?displayProperty=name
     ```  
   
     ```csharp  
-    lock(lockObject)   
+    lock(lockObject)
     {  
         myField++;  
     }  
@@ -175,4 +175,4 @@ Usare la proprietà <xref:System.Environment.ProcessorCount?displayProperty=name
 ## <a name="see-also"></a>Vedere anche
 
 - [Threading](../../../docs/standard/threading/index.md)
-- [Thread e Threading](../../../docs/standard/threading/threads-and-threading.md)
+- [Threads and Threading](../../../docs/standard/threading/threads-and-threading.md) (Thread e threading)

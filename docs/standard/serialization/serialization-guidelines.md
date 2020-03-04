@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: 603306ad4a739f168716fd7f6169a79923585b82
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 067f32a026e3354e6c4256602ed17fd7d7bde0b8
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645056"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159793"
 ---
 # <a name="serialization-guidelines"></a>Linee guida relative alla serializzazione
 In questo documento vengono elencate le linee guida da tenere presenti quando si progetta un'API da serializzare.  
@@ -69,8 +69,7 @@ In questo documento vengono elencate le linee guida da tenere presenti quando si
      [!code-csharp[SerializationGuidelines#3](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#3)]
      [!code-vb[SerializationGuidelines#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#3)]  
   
-     L'oggetto <xref:System.Runtime.Serialization.OnDeserializedAttribute> è l'attributo di callback più comunemente utilizzato. Gli altri attributi della famiglia sono <xref:System.Runtime.Serialization.OnDeserializingAttribute>,    
-    <xref:System.Runtime.Serialization.OnSerializingAttribute>, e <xref:System.Runtime.Serialization.OnSerializedAttribute>. Tali attributi possono essere utilizzati rispettivamente per contrassegnare callback eseguiti prima della deserializzazione, prima della serializzazione e dopo la serializzazione.  
+     L'oggetto <xref:System.Runtime.Serialization.OnDeserializedAttribute> è l'attributo di callback più comunemente utilizzato. Gli altri attributi della famiglia sono <xref:System.Runtime.Serialization.OnDeserializingAttribute>, <xref:System.Runtime.Serialization.OnSerializingAttribute>e <xref:System.Runtime.Serialization.OnSerializedAttribute>. Tali attributi possono essere utilizzati rispettivamente per contrassegnare callback eseguiti prima della deserializzazione, prima della serializzazione e dopo la serializzazione.  
   
 4. Considerare l'utilizzo di <xref:System.Runtime.Serialization.KnownTypeAttribute> per indicare tipi concreti da utilizzare in caso di deserializzazione di un oggetto grafico complesso.  
   
@@ -104,7 +103,7 @@ In questo documento vengono elencate le linee guida da tenere presenti quando si
      [!code-csharp[SerializationGuidelines#6](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#6)]
      [!code-vb[SerializationGuidelines#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#6)]  
   
-2. Considerare l'implementazione dell'interfaccia <xref:System.Xml.Serialization.IXmlSerializable> se si desidera maggiore controllo sulla forma del codice XML serializzato rispetto a quello offerto applicando gli attributi della serializzazione XML. Due metodi per l'interfaccia <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> e <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>, consentono di controllare completamente il flusso XML serializzato. È inoltre possibile controllare l'XML Schema generato per il tipo applicando l'attributo <xref:System.Xml.Serialization.XmlSchemaProviderAttribute>.  
+2. Considerare l'implementazione dell'interfaccia <xref:System.Xml.Serialization.IXmlSerializable> se si desidera maggiore controllo sulla forma del codice XML serializzato rispetto a quello offerto applicando gli attributi della serializzazione XML. Due metodi dell'interfaccia, <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> e <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>, consentono di controllare completamente il flusso XML serializzato. È inoltre possibile controllare l'XML Schema generato per il tipo applicando l'attributo <xref:System.Xml.Serialization.XmlSchemaProviderAttribute>.  
   
 #### <a name="supporting-runtime-serialization"></a>Supporto della serializzazione di runtime  
  La *serializzazione di runtime* è una tecnologia usata dai servizi remoti .NET. Se si ritiene che i tipi verranno trasportati utilizzando i servizi remoti .NET, è necessario verificare che supportino la serializzazione di runtime.  

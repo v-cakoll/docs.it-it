@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: 0583329ae75fa54cf000212479895ccebdbd30d8
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: f3d3269ccf56954f963762503d2bc1c53b9e6b83
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74142062"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78238988"
 ---
 # <a name="implementing-a-dispose-method"></a>Implementazione di un metodo Dispose
 
@@ -33,7 +33,7 @@ Il modello Dispose precede due variazioni:
   
 Al fine di garantire la corretta pulitura delle risorse in ogni occasione, deve essere possibile chiamare il metodo <xref:System.IDisposable.Dispose%2A> più volte senza che venga generata un'eccezione.  
   
-L'esempio di codice fornito per il metodo <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> illustra come una procedura di Garbage Collection troppo incisiva possa determinare l'esecuzione di un finalizzatore mentre un membro dell'oggetto recuperato è ancora in esecuzione. È consigliabile chiamare il metodo <xref:System.GC.KeepAlive%2A> alla fine di un metodo <xref:System.IDisposable.Dispose%2A> di lunga durata.  
+Nell'esempio di codice fornito per il metodo <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> viene illustrato il modo in cui Garbage Collection può causare l'esecuzione di un finalizzatore, mentre un riferimento non gestito all'oggetto o ai relativi membri è ancora in uso. Potrebbe essere utile usare <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> per rendere l'oggetto non idoneo per Garbage Collection dall'inizio della routine corrente fino al punto in cui viene chiamato il metodo.
   
 <a name="Dispose2"></a>
 ## <a name="dispose-and-disposeboolean"></a>Dispose() e Dispose(Boolean)  
@@ -125,7 +125,7 @@ Di seguito è illustrato il modello generale per implementare il modello Dispose
 > [!NOTE]
 > In C# si esegue l'override di <xref:System.Object.Finalize%2A?displayProperty=nameWithType> definendo un [distruttore](../../csharp/programming-guide/classes-and-structs/destructors.md).  
   
-<a name="SafeHandles"></a>   
+<a name="SafeHandles"></a>
 ## <a name="using-safe-handles"></a>Utilizzo degli handle sicuri
 
 La scrittura di codice per il finalizzatore di un oggetto è un'attività complessa che può causare problemi se non eseguita correttamente. È pertanto consigliabile costruire oggetti <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> anziché implementare un finalizzatore.  
@@ -142,7 +142,7 @@ Le classi derivate dalla classe <xref:System.Runtime.InteropServices.SafeHandle?
   
 - La classe <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> per gli handle di attesa.  
   
-<a name="base"></a>   
+<a name="base"></a>
 ## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-base-class"></a>Uso di un handle sicuro per implementare il modello Dispose per una classe di base
 
 L'esempio seguente illustra il modello Dispose per una classe di base, `DisposableStreamResource`, che usa handle sicuri per incapsulare le risorse non gestite. Viene definita una classe `DisposableResource` che usa <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> per eseguire il wrapping di un oggetto <xref:System.IO.Stream> che rappresenta un file aperto. Il metodo `DisposableResource` include anche una singola proprietà, `Size`, che restituisce il numero totale di byte nel flusso di file.  
@@ -150,7 +150,7 @@ L'esempio seguente illustra il modello Dispose per una classe di base, `Disposab
 [!code-csharp[Conceptual.Disposable#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/base1.cs#9)]
 [!code-vb[Conceptual.Disposable#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/base1.vb#9)]  
   
-<a name="derived"></a>   
+<a name="derived"></a>
 ## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-derived-class"></a>Utilizzo di un handle sicuro per implementare il modello Dispose per una classe derivata
 
 Nell'esempio seguente viene illustrato il modello Dispose per una classe derivata, `DisposableStreamResource2`, che eredita dalla classe `DisposableStreamResource` presentata nell'esempio precedente. La classe aggiunge un metodo aggiuntivo, `WriteFileInfo`, e usa un oggetto <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> per il wrapping dell'handle del file modificabile.  

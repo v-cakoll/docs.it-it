@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: af1b374cd14d5070194c035024ce2328c9016646
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: fe69521a6ac88055e3e8c8502a7e19a72667dbef
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503547"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240857"
 ---
 # <a name="get-started-with-net-core-using-the-net-core-cli"></a>Introduzione a .NET Core con la interfaccia della riga di comando di .NET Core
 
@@ -40,30 +40,30 @@ Ecco una descrizione rapida dei comandi digitati:
 01. `dotnet new console`
 
     [DotNet New](../tools/dotnet-new.md) crea un file di progetto *Hello. csproj* aggiornato con le dipendenze necessarie per compilare un'app console. Viene inoltre creato un *Program.cs*, un file di base contenente il punto di ingresso per l'applicazione.
-    
+
     *Hello. csproj*:
-    
-    [!code-xml[Hello.csproj](~/samples/core/console-apps/HelloMsBuild/Hello.csproj)]
-    
+
+    [!code-xml[Hello.csproj](~/samples/snippets/core/tutorials/cli-create-console-app/HelloMsBuild/csharp/Hello.csproj)]
+
     Il file di progetto specifica tutti gli elementi necessari per recuperare le dipendenze e compilare il programma.
-    
+
     - L'elemento `<OutputType>` specifica che si sta compilando un eseguibile, in altre parole un'applicazione console.
     - L'elemento `<TargetFramework>` specifica l'implementazione di .NET di destinazione. In uno scenario avanzato è possibile specificare più framework di destinazione ed eseguire la compilazione per ognuno di essi in un'unica operazione. In questa esercitazione verrà illustrata la compilazione solo per .NET Core 3,1.
-    
+
     *Program.cs*:
-    
-    [!code-csharp[Program.cs](~/samples/core/console-apps/HelloMsBuild/Program.cs)]
-    
+
+    [!code-csharp[Program.cs](~/samples/snippets/core/tutorials/cli-create-console-app/HelloMsBuild/csharp/Program.cs)]
+
     Il programma inizia con `using System`, che significa "porta tutti gli elementi presenti nello spazio dei nomi `System` nell'ambito relativo a questo file". Lo spazio dei nomi `System` include la classe `Console`.
-    
+
     Viene quindi definito uno spazio dei nomi denominato `Hello`. È comunque possibile modificare il nome secondo le proprie esigenze. Una classe denominata `Program` viene definita all'interno di tale spazio dei nomi, con un `Main` metodo che accetta una matrice di stringhe denominate `args`. Questa matrice contiene l'elenco degli argomenti passati durante l'esecuzione del programma. Così com'è, questa matrice non viene utilizzata e il programma scrive semplicemente il testo "Hello World!" nella console. Successivamente saranno apportate modifiche al codice che userà tale argomento.
-    
+
     `dotnet new` chiama [DotNet Restore](../tools/dotnet-restore.md) in modo implicito. `dotnet restore` chiama [NuGet](https://www.nuget.org/) (gestione dei pacchetti per .NET) per ripristinare l'albero delle dipendenze. NuGet analizza il file *Hello.csproj*, scarica le dipendenze definite nel file (o le recupera da una cache nel computer) e scrive il file *obj/project.assets.json*, che è necessario compilare ed eseguire l'esempio.
 
 02. `dotnet run`
 
     [DotNet Run](../tools/dotnet-run.md) chiama [DotNet Build](../tools/dotnet-build.md) per assicurarsi che le destinazioni di compilazione siano state compilate e quindi chiama `dotnet <assembly.dll>` per eseguire l'applicazione di destinazione.
-    
+
     ```dotnetcli
     dotnet run
     ```
@@ -73,9 +73,9 @@ Ecco una descrizione rapida dei comandi digitati:
     ```console
     Hello World!
     ```
-    
+
     In alternativa, è anche possibile eseguire `dotnet build` per compilare il codice senza eseguire le applicazioni della console di compilazione. In questo modo si ottiene un'applicazione compilata, come file DLL, in base al nome del progetto. In questo caso, il file creato viene denominato *Hello. dll*. Questa app può essere eseguita con `dotnet bin\Debug\netcoreapp3.1\Hello.dll` in Windows (usare `/` per i sistemi non Windows).
-    
+
     ```dotnetcli
     dotnet bin\Debug\netcoreapp3.1\Hello.dll
     ```
@@ -85,7 +85,7 @@ Ecco una descrizione rapida dei comandi digitati:
     ```console
     Hello World!
     ```
-    
+
     Quando l'app viene compilata, viene creato un file eseguibile specifico del sistema operativo insieme al `Hello.dll`. In Windows, questo sarebbe `Hello.exe`; in Linux o macOS questo `hello`. Con l'esempio precedente, il nome del file è `Hello.exe` o `Hello`. È possibile eseguire direttamente l'eseguibile.
 
     ```console
@@ -100,7 +100,7 @@ Modificare la logica di programma. I numeri di Fibonacci sono divertenti, quindi
 
 01. Sostituire il contenuto del file *Program.cs* con il codice seguente:
 
-    [!code-csharp[Fibonacci](~/samples/core/console-apps/fibonacci-msbuild/Program.cs)]
+    [!code-csharp[Fibonacci](~/samples/snippets/core/tutorials/cli-create-console-app/fibonacci-msbuild/csharp/Program.cs)]
 
 02. Eseguire [DotNet Build](../tools/dotnet-build.md) per compilare le modifiche.
 
@@ -140,11 +140,11 @@ I singoli file sono buoni per i semplici programmi One-off, ma se si crea un'app
 
 01. Aggiungere un nuovo file nella directory *Hello* denominato *FibonacciGenerator.cs* con il codice seguente:
 
-    [!code-csharp[Fibonacci Generator](~/samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]
+    [!code-csharp[Fibonacci Generator](~/samples/snippets/core/tutorials/cli-create-console-app/FibonacciBetterMsBuild/csharp/FibonacciGenerator.cs)]
 
 02. Modificare il metodo `Main` del file *Program.cs* per creare un'istanza della nuova classe e chiamare il metodo come illustrato nell'esempio seguente :
 
-    [!code-csharp[New Program.cs](~/samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
+    [!code-csharp[New Program.cs](~/samples/snippets/core/tutorials/cli-create-console-app/FibonacciBetterMsBuild/csharp/Program.cs)]
 
 03. Eseguire [DotNet Build](../tools/dotnet-build.md) per compilare le modifiche.
 

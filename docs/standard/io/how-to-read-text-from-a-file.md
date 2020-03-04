@@ -12,15 +12,15 @@ helpviewer_keywords:
 - data streams, reading text from files
 - I/O [.NET Framework], reading text from files
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
-ms.openlocfilehash: 49ea989a2b11c6572dc08970cf96e2df5f4fa024
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8676e5f0acd0646b4854df7dde060ec15548ec3e
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706660"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155724"
 ---
 # <a name="how-to-read-text-from-a-file"></a>Procedura: leggere testo da un file
-Negli esempi seguenti viene illustrato come leggere il testo in modo sincrono e in modo asincrono da un file di testo usando .NET per le applicazioni desktop. In entrambi gli esempi, quando si crea l'istanza della classe <xref:System.IO.StreamReader>, si immette il percorso relativo o assoluto del file. 
+Negli esempi seguenti viene illustrato come leggere il testo in modo sincrono e in modo asincrono da un file di testo usando .NET per le applicazioni desktop. In entrambi gli esempi, quando si crea l'istanza della classe <xref:System.IO.StreamReader>, si immette il percorso relativo o assoluto del file.
   
 > [!NOTE]
 > Questi esempi di codice non sono applicabili allo sviluppo di applicazioni UWP (Universal Windows Platform), perché Windows Runtime offre tipi di flusso diversi per la lettura e la scrittura nei file. Per un esempio che illustra come leggere il testo da un file in un'app UWP, vedere [Guida introduttiva: lettura e scrittura di file](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10)). Per esempi che illustrano come eseguire la conversione tra flussi .NET Framework e flussi Windows Runtime, vedere [procedura: eseguire la conversione tra flussi di .NET Framework e flussi Windows Runtime](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md).  
@@ -34,7 +34,7 @@ L'esempio seguente mostra un'operazione di lettura sincrona in un'app console. I
  [!code-csharp[Conceptual.BasicIO.TextFiles#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source3.cs#3)]
  [!code-vb[Conceptual.BasicIO.TextFiles#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source3.vb#3)]  
   
-## <a name="example-asynchronous-read-in-a-wpf-app"></a>Esempio: lettura asincrona in un'app WPF 
+## <a name="example-asynchronous-read-in-a-wpf-app"></a>Esempio: lettura asincrona in un'app WPF
  L'esempio seguente illustra un'operazione di lettura asincrona in un'app Windows Presentation Foundation (WPF).  
   
 > [!IMPORTANT]

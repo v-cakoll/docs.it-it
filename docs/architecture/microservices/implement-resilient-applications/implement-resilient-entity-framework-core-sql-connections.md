@@ -2,12 +2,12 @@
 title: Implementazione di connessioni SQL resilienti di Entity Framework Core
 description: Informazioni su come implementare connessioni SQL resilienti di Entity Framework Core. Questa tecnica è particolarmente importante quando si usa il database SQL di Azure nel cloud.
 ms.date: 10/16/2018
-ms.openlocfilehash: 0ded30469bb4985fed7b60938756046531c8feea
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 7a047edca21d63a451e90f407b23f3358d461330
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777054"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78241065"
 ---
 # <a name="implement-resilient-entity-framework-core-sql-connections"></a>Implementazione di connessioni SQL resilienti di Entity Framework Core
 
@@ -49,7 +49,7 @@ Se si prova a eseguire la transazione quando si usa una strategia di esecuzione 
 
 > System.InvalidOperationException: La strategia di esecuzione configurata 'SqlServerRetryingExecutionStrategy' non supporta le transazioni avviate dall'utente. Usare la strategia di esecuzione restituita da 'DbContext.Database.CreateExecutionStrategy()' per eseguire tutte le operazioni nella transazione come un'unità con possibilità di ritentare.
 
-La soluzione prevede di richiamare manualmente la strategia di esecuzione di EF con un delegato che rappresenta tutte le operazioni che devono essere eseguite. Se si verifica un errore temporaneo, la strategia di esecuzione richiamerà nuovamente il delegato. Ad esempio il codice seguente visualizza l'implementazione in eShopOnContainers con due DbContext multipli (\_catalogContext e IntegrationEventLogContext) durante l'aggiornamento di un prodotto e il successivo salvataggio dell'oggetto ProductPriceChangedIntegrationEvent, che deve usare un oggetto DbContext diverso.
+La soluzione prevede di richiamare manualmente la strategia di esecuzione di EF con un delegato che rappresenta tutte le operazioni che devono essere eseguite. Se si verifica un errore temporaneo, la strategia di esecuzione chiamerà nuovamente il delegato. Ad esempio il codice seguente visualizza l'implementazione in eShopOnContainers con due DbContext multipli (\_catalogContext e IntegrationEventLogContext) durante l'aggiornamento di un prodotto e il successivo salvataggio dell'oggetto ProductPriceChangedIntegrationEvent, che deve usare un oggetto DbContext diverso.
 
 ```csharp
 public async Task<IActionResult> UpdateProduct(
@@ -146,7 +146,7 @@ public class ResilientTransaction
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Connection Resiliency and Command Interception with EF in an ASP.NET MVC Application (Resilienza della connessione e intercettazione dei comandi con EF in un'applicazione MVC ASP.NET)**  \
+- **Connection Resiliency and Command Interception with EF in an ASP.NET MVC Application (Resilienza della connessione e intercettazione dei comandi con EF in un'applicazione MVC ASP.NET)** \
   [https://docs.microsoft.com/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application](/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application)
 
 - **Cesar de la Torre. Utilizzo di transazioni e connessioni SQL resilienti Entity Framework Core** \
@@ -154,4 +154,4 @@ public class ResilientTransaction
 
 >[!div class="step-by-step"]
 >[Precedente](implement-retries-exponential-backoff.md)
->[Successivo](explore-custom-http-call-retries-exponential-backoff.md)
+>[Successivo](use-httpclientfactory-to-implement-resilient-http-requests.md)

@@ -4,12 +4,12 @@ description: Informazioni sulle espressioni di criteri di ricerca in C#
 ms.date: 04/10/2019
 ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: db509a0ebf1e205e9996ba8102757fe8c0b9ea3a
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: ffa59d073ad891fd93e0f8d7ad8889de0499b106
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77501621"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78241013"
 ---
 # <a name="pattern-matching"></a>Criteri di ricerca
 
@@ -27,7 +27,7 @@ Procedendo nell'esempio, confrontare il codice a un eventuale codice strutturato
 
 Anziché iniziare con una definizione della forma astratta e l'aggiunta di diverse classi di forme specifiche, iniziare con definizioni di soli dati semplici per ogni forma geometrica:
 
-[!code-csharp[ShapeDefinitions](../../samples/csharp/PatternMatching/Shapes.cs#01_ShapeDefinitions "Shape definitions")]
+[!code-csharp[ShapeDefinitions](../../samples/snippets/csharp/PatternMatching/Shapes.cs#01_ShapeDefinitions "Shape definitions")]
 
 Da queste strutture scrivere un metodo che calcola l'area di una forma.
 
@@ -35,13 +35,13 @@ Da queste strutture scrivere un metodo che calcola l'area di una forma.
 
 Prima di C# 7.0, era necessario testare ogni tipo di una serie di istruzioni `if` e `is`:
 
-[!code-csharp[ClassicIsExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "Classic type pattern using is")]
+[!code-csharp[ClassicIsExpression](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "Classic type pattern using is")]
 
 Il codice precedente è un'espressione classica del *criterio di tipo*: si esegue il test di una variabile per determinarne il tipo ed eseguire un'azione diversa in base al tipo.
 
 Questo codice diventa più semplice con l'uso di estensioni dell'espressione `is` per l'assegnazione di una variabile se il test ha esito positivo:
 
-[!code-csharp[IsPatternExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#03_IsPatternExpression "is pattern expression")]
+[!code-csharp[IsPatternExpression](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#03_IsPatternExpression "is pattern expression")]
 
 In questa versione aggiornata l'espressione `is` esegue il test della variabile e la assegna a una nuova variabile del tipo appropriato. Si noti anche che questa versione include il tipo `Rectangle` che è uno `struct`. La nuova espressione `is` può essere usata con tipi di valore e tipi di riferimento.
 
@@ -64,12 +64,12 @@ Queste regole comportano l'impossibilità di accedere accidentalmente al risulta
 L'istruzione `switch` tradizionale era un'espressione di criteri che supportava i criteri costanti.
 Era possibile confrontare una variabile con qualsiasi costante in un'istruzione `case`:
 
-[!code-csharp[ClassicSwitch](../../samples/csharp/PatternMatching/GeometricUtilities.cs#04_ClassicSwitch "Classic switch statement")]
+[!code-csharp[ClassicSwitch](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#04_ClassicSwitch "Classic switch statement")]
 
 Gli unici criteri supportati dall'istruzione `switch` erano i criteri costanti. Era presente un'ulteriore limitazione ai tipi numerici e al tipo `string`.
 Queste limitazioni sono state rimosse ed è ora possibile scrivere un'istruzione `switch` usando i criteri di tipo:
 
-[!code-csharp[Switch Type Pattern](../../samples/csharp/PatternMatching/GeometricUtilities.cs#05_SwitchTypePattern "Compute with `switch` expression")]
+[!code-csharp[Switch Type Pattern](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#05_SwitchTypePattern "Compute with `switch` expression")]
 
 L'istruzione `switch` di criteri di ricerca usa una sintassi già nota agli sviluppatori che hanno usato l'istruzione `switch` di tipo C. Viene valutata ogni istruzione `case` e viene eseguito il codice sottostante la condizione che corrisponde alla variabile di input. L'esecuzione del codice non può "passare" da un'espressione case alla successiva. La sintassi dell'istruzione `case` richiede che ogni `case` termini con `break`, `return` o `goto`.
 
@@ -87,7 +87,7 @@ Il case `default` verrà eseguito solo se non corrispondono altre etichette case
 
 È possibile creare casi speciali per le forme con area 0 usando una clausola `when` nell'etichetta `case`. Un quadrato con una lunghezza del lato pari a 0 o un cerchio con raggio pari a 0 ha un'area 0. Questa condizione viene specificata usando una clausola `when` nell'etichetta `case`:  
 
-[!code-csharp[ComputeDegenerateShapes](../../samples/csharp/PatternMatching/GeometricUtilities.cs#07_ComputeDegenerateShapes "Compute shapes with 0 area")]
+[!code-csharp[ComputeDegenerateShapes](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#07_ComputeDegenerateShapes "Compute shapes with 0 area")]
 
 Questa modifica illustra alcune considerazioni importanti sulla nuova sintassi. Innanzitutto, è possibile applicare più etichette `case` a una sezione `switch`. Il blocco di istruzioni viene eseguito quando una delle etichette è `true`. In questa istanza se l'espressione `switch` è un cerchio o un quadrato con area 0, il metodo restituisce la costante 0.
 
@@ -98,13 +98,13 @@ Tuttavia, non è possibile sapere *quale* variabile è stata assegnata in fase d
 
 Dopo aver aggiunto le forme con area 0, si aggiungono due tipi di forme aggiuntivi, un rettangolo e un triangolo:
 
-[!code-csharp[AddRectangleAndTriangle](../../samples/csharp/PatternMatching/GeometricUtilities.cs#09_AddRectangleAndTriangle "Add rectangle and triangle")]
+[!code-csharp[AddRectangleAndTriangle](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#09_AddRectangleAndTriangle "Add rectangle and triangle")]
 
  Questo set di modifiche aggiunge etichette `case` per il caso degenere ed etichette e blocchi per ogni nuova forma. 
 
 È possibile infine aggiungere un case `null` per assicurarsi che l'argomento non sia `null`:
 
-[!code-csharp[NullCase](../../samples/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "Add null case")]
+[!code-csharp[NullCase](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "Add null case")]
 
 Lo speciale comportamento del criterio `null` è interessante perché la costante `null` nel criterio non ha un tipo, ma può essere convertita in qualsiasi tipo di riferimento o nullable. Anziché convertire una costante `null` in un tipo, il linguaggio definisce che un valore `null` non corrisponderà ad alcun criterio del tipo, indipendentemente dal tipo in fase di compilazione della variabile. Questo comportamento rende il nuovo criterio del tipo basato su `switch` coerente con l'istruzione `is`: le istruzioni `is` restituiscono sempre `false` quando il valore controllato è `null`. È anche più semplice: dopo aver controllato il tipo, non è necessario un controllo null aggiuntivo. Questo è dimostrato dal fatto che non è presente alcun controllo null in nessuno dei blocchi di case degli esempi precedenti: i controlli non sono necessari poiché la corrispondenza del criterio del tipo garantisce già un valore non null.
 
@@ -124,7 +124,7 @@ Dato che qualsiasi case non predefinito è preferibile al case `default`, il cas
 
 La terza regola introduce gli usi per cui può essere utile un case `var`. Si supponga di eseguire una corrispondenza di criterio in cui l'input è una stringa e si stanno cercando valori di comando noti. È possibile scrivere codice simile al seguente:
 
-[!code-csharp[VarCaseExpression](../../samples/csharp/PatternMatching/Program.cs#VarCaseExpression "use a var case expression to filter white space")]
+[!code-csharp[VarCaseExpression](../../samples/snippets/csharp/PatternMatching/Program.cs#VarCaseExpression "use a var case expression to filter white space")]
 
 Il case `var` corrisponde a `null`, una stringa vuota o qualsiasi stringa che contiene solo spazi vuoti. Si noti che il codice precedente usa l'operatore `?.` per assicurarsi che non venga generata accidentalmente un'eccezione <xref:System.NullReferenceException>. Il case `default` gestisce qualsiasi altro valore stringa non riconosciuto dal parser dei comandi.
 

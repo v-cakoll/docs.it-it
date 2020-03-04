@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Determinare se un file è un assembly'
+title: 'Procedura: determinare se un file è un assembly'
 ms.date: 08/19/2019
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: f9bff86ac559e40136ed016b862eef8ba0863ce3
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 1d66c0c166724f195a3cafd9bcbe3c7414c08ebb
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973222"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159507"
 ---
-# <a name="how-to-determine-if-a-file-is-an-assembly"></a>Procedura: Determinare se un file è un assembly
+# <a name="how-to-determine-if-a-file-is-an-assembly"></a>Procedura: determinare se un file è un assembly
 
 Un file è un assembly unicamente nei casi in cui è gestito e include nei metadati una voce assembly. Per ulteriori informazioni sugli assembly e sui metadati, vedere [manifesto dell'assembly](manifest.md).  
   
@@ -22,7 +22,7 @@ Un file è un assembly unicamente nei casi in cui è gestito e include nei metad
   
 2. Caricare il file che si desidera testare.  
   
-3. Se **ILDASM** segnala che il file non è un file eseguibile portabile (PE, portable executable), tale file non è un assembly. Per altre informazioni, vedere l'argomento [Procedura: Visualizzare il contenuto](view-contents.md)dell'assembly.  
+3. Se **ILDASM** segnala che il file non è un file eseguibile portabile (PE, portable executable), tale file non è un assembly. Per ulteriori informazioni, vedere l'argomento [procedura: visualizzare il contenuto dell'assembly](view-contents.md).  
   
 ## <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>Procedura: Determinare se un file è un assembly a livello di codice  
   
@@ -88,7 +88,7 @@ End Module
 ' Output (with .NET Framework 3.5 installed):  
 '        Yes, the file is an Assembly.  
 ```
- 
+
 Il metodo <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> carica il file di test e lo rilascia dopo aver letto le informazioni.  
   
 ## <a name="see-also"></a>Vedere anche

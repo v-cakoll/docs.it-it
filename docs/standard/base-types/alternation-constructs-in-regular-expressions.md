@@ -15,12 +15,12 @@ helpviewer_keywords:
 - constructs, alternation
 - .NET Framework regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-ms.openlocfilehash: 8db9ef72415f148aca2c975fc4e8b70421e3adc3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 02664bd2812f89649ec933483161263bae530a75
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711558"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159689"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Costrutti di alternanza nelle espressioni regolari
 
@@ -33,16 +33,16 @@ I costrutti di alternanza modificano un'espressione regolare per abilitare la co
 <a name="Either_Or"></a>
 ## <a name="pattern-matching-with-124"></a>Criteri di ricerca con &#124;
 
-È possibile usare la barra verticale (`|`) per trovare la corrispondenza con uno qualsiasi di una serie di criteri, dove i singoli criteri sono separati dal carattere `|`.
+È possibile usare la barra verticale (`|`) per trovare la corrispondenza con uno qualsiasi di una serie di criteri, dove i singoli criteri sono separati dal carattere `|` .
 
-Analogamente alla classe di caratteri positivi, il carattere `|` può essere usato per trovare la corrispondenza con uno qualsiasi tra diversi caratteri singoli. L'esempio seguente usa sia una classe di caratteri positivi sia criteri di ricerca di tipo either/or con il carattere `|` per individuare le occorrenze delle parole "gray" o "grey" in una stringa. In questo caso, `|` produce un'espressione regolare più dettagliata.
+Analogamente alla classe di caratteri positivi, il carattere `|` può essere usato per trovare la corrispondenza con uno qualsiasi tra diversi caratteri singoli. L'esempio seguente usa sia una classe di caratteri positivi sia criteri di ricerca di tipo either/or con il carattere `|` per individuare le occorrenze delle parole "gray" o "grey" in una stringa. In questo caso il carattere `|` produce un'espressione regolare più dettagliata.
 
 [!code-csharp[RegularExpressions.Language.Alternation#1](~/samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation1.cs#1)]
 [!code-vb[RegularExpressions.Language.Alternation#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation1.vb#1)]
 
 L'espressione regolare che usa il carattere `|`, `\bgr(a|e)y\b`, viene interpretata come illustrato nella tabella seguente:
 
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`gr`|Corrisponde ai caratteri "gr".|  
@@ -56,16 +56,16 @@ Il carattere `|` può essere usato anche per trovare una corrispondenza di tipo 
 
 L'espressione regolare `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` viene interpretata come illustrato nella tabella seguente:
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |<code>(\d{2}-\d{7}&#124;\d{3}-\d{2}-\d{4})</code>|Corrisponde a una delle due opzioni seguenti: due cifre decimali seguite da un trattino seguito da sette cifre decimali oppure tre cifre decimali, un trattino, due cifre decimali, un altro trattino e quattro cifre decimali.|  
 |`\d`|Termina la corrispondenza sul confine di parola.|  
   
-<a name="Conditional_Expr"></a>   
+<a name="Conditional_Expr"></a>
 ## <a name="conditional-matching-with-an-expression"></a>Corrispondenza condizionale con un'espressione
 
-Questo elemento del linguaggio tenta di trovare una corrispondenza con uno di due criteri, a seconda della possibilità di trovare una corrispondenza con un criterio iniziale. La sintassi è la seguente:  
+Questo elemento del linguaggio tenta di trovare una corrispondenza con uno di due criteri, a seconda della possibilità di trovare una corrispondenza con un criterio iniziale. La relativa sintassi è la seguente:  
 
 `(?(` *espressione* `)` *sì* `|` *No* `)`
 
@@ -73,7 +73,7 @@ dove *espressione* è il criterio iniziale per la corrispondenza, *sì* è il cr
 
 `(?(?=` *espressione* `)` *sì* `|` *No* `)`
 
-dove `(?=`*espressione*`)` è un costrutto di asserzione di larghezza zero. Per ulteriori informazioni, vedere [costrutti di raggruppamento](grouping-constructs-in-regular-expressions.md). Poiché il motore delle espressioni regolari interpreta *espressione* come un ancoraggio (un'asserzione di larghezza zero), *Expression* deve essere un'asserzione di larghezza zero (per altre informazioni, vedere [ancoraggi](anchors-in-regular-expressions.md)) o una sottoespressione anch ' essa contenuta in *Yes*. In caso contrario, non è possibile trovare una corrispondenza per il criterio *sì* .  
+dove `(?=`*espressione*`)` è un costrutto di asserzione di larghezza zero. Per ulteriori informazioni, vedere [costrutti di raggruppamento](grouping-constructs-in-regular-expressions.md). Poiché il motore delle espressioni regolari interpreta *espressione* come un ancoraggio (un'asserzione di larghezza zero), *Expression* deve essere un'asserzione di larghezza zero (per altre informazioni, vedere [ancoraggi](anchors-in-regular-expressions.md)) o una sottoespressione anch ' essa contenuta in *Yes*. In caso contrario, non è possibile trovare una corrispondenza per il criterio *yes*.  
   
 > [!NOTE]
 > Se *Expression* è un gruppo di acquisizione denominato o numerato, il costrutto di alternanza viene interpretato come un test di acquisizione. Per ulteriori informazioni, vedere la sezione successiva, [corrispondenza condizionale basata su un gruppo Capture valido](#Conditional_Group). In altre parole, il motore delle espressioni regolari non tenta di trovare la corrispondenza con la sottostringa acquisita, ma verifica invece la presenza o l'assenza del gruppo.  
@@ -85,7 +85,7 @@ L'esempio seguente è una variante dell'esempio visualizzato nella sezione relat
 
 Il criterio di ricerca di espressioni regolari `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` viene interpretato come illustrato nella tabella seguente:
 
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`(?(\d{2}-)`|Determina se i tre caratteri successivi sono costituiti da due cifre seguite da un trattino.|  
@@ -96,11 +96,11 @@ Il criterio di ricerca di espressioni regolari `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d
 <a name="Conditional_Group"></a>
 ## <a name="conditional-matching-based-on-a-valid-captured-group"></a>Corrispondenza condizionale in base a un gruppo acquisito valido
 
-Tramite questo elemento di linguaggio viene effettuato un tentativo di corrispondenza con uno dei due modelli, a seconda dell'effettiva corrispondenza con un gruppo di acquisizione specificato. La sintassi è la seguente:
+Tramite questo elemento di linguaggio viene effettuato un tentativo di corrispondenza con uno dei due modelli, a seconda dell'effettiva corrispondenza con un gruppo di acquisizione specificato. La relativa sintassi è la seguente:
 
 `(?(` *nome* `)` *sì* `|` *No* `)`
 
-oppure
+o
 
 `(?(` *numero* `)` *sì* `|` *No* `)`
 
@@ -115,7 +115,7 @@ L'esempio seguente è una variante dell'esempio visualizzato nella sezione relat
 
 Il criterio di ricerca di espressioni regolari `\b(?<n2>\d{2}-)?(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` viene interpretato come illustrato nella tabella seguente:
 
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`(?<n2>\d{2}-)?`|Corrisponde a zero o una occorrenza di due cifre seguite da un trattino. Il nome di questo gruppo di acquisizione è `n2`.|  

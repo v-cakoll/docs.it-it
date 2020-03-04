@@ -2,12 +2,12 @@
 title: Comando dotnet run
 description: Il comando dotnet run offre un modo pratico per eseguire l'applicazione dal codice sorgente.
 ms.date: 02/19/2020
-ms.openlocfilehash: 415d7079db6a3da80c4fcf2074307ea760e84982
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: e442ed56d676ffd189ef6d394d840cea671c2dc6
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503603"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157076"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -20,8 +20,8 @@ ms.locfileid: "77503603"
 ## <a name="synopsis"></a>Riepilogo
 
 ```dotnetcli
-dotnet run [-c|--configuration] [-f|--framework] [--force] [--interactive] [--launch-profile] 
-    [--no-build] [--no-dependencies] [--no-launch-profile] [--no-restore] [-p|--project] 
+dotnet run [-c|--configuration] [-f|--framework] [--force] [--interactive] [--launch-profile]
+    [--no-build] [--no-dependencies] [--no-launch-profile] [--no-restore] [-p|--project]
     [-r|--runtime] [-v|--verbosity] [[--] [application arguments]]
 dotnet run [-h|--help]
 ```
@@ -102,7 +102,7 @@ Per eseguire l'applicazione, il comando `dotnet run` risolve le dipendenze dell'
 
 - **`-v|--verbosity <LEVEL>`**
 
-  Imposta il livello di dettaglio del comando. I valori consentiti sono `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`. Il valore predefinito è `m`. Disponibile a partire da .NET Core 2,1 SDK. 
+  Imposta il livello di dettaglio del comando. I valori consentiti sono `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`. Il valore predefinito è `m`. Disponibile a partire da .NET Core 2,1 SDK.
 
 ## <a name="examples"></a>Esempi
 

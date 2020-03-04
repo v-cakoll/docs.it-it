@@ -7,12 +7,12 @@ helpviewer_keywords:
 - I/O [.NET], buffers
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: 5b98e3e2d41d3e49a28db6393f15f13c3579b06d
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: f939164cd56b2fb2feeeb171236b0e1171327e19
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628078"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160118"
 ---
 # <a name="work-with-buffers-in-net"></a>Usare i buffer in .NET
 
@@ -119,7 +119,7 @@ Nell'esempio seguente viene analizzata una lunghezza Integer a 4 byte big-endian
 
 ##### <a name="process-text-data"></a>Elabora dati di testo
 
-L'esempio seguente consente di:
+L'esempio seguente:
 
 - Trova la prima nuova riga (`\r\n`) nell'`ReadOnlySequence<byte>` e la restituisce tramite il parametro out ' line '.
 - Elimina la riga, esclusa la `\r\n` dal buffer di input.

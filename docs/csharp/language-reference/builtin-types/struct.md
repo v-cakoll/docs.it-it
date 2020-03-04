@@ -8,18 +8,18 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 6113912f176d2d7b68c77ff2e78a361b373ca31a
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 523269ffc9de9b750330fcefd15a9026d6dc59b8
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77634869"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239781"
 ---
 # <a name="structure-types-c-reference"></a>Tipi di strutturaC# (riferimento)
 
 Un tipo di *struttura* o un tipo di *struct*è un [tipo valore](value-types.md) che può incapsulare dati e funzionalità correlate. Usare la parola chiave `struct` per definire un tipo di struttura:
 
-[!code-csharp[struct example](~/samples/csharp/language-reference/builtin-types/StructType.cs#StructExample)]
+[!code-csharp[struct example](~/samples/snippets/csharp/language-reference/builtin-types/StructType.cs#StructExample)]
 
 I tipi di struttura hanno una *semantica di valori*. Ovvero una variabile di un tipo di struttura contiene un'istanza del tipo. Per impostazione predefinita, i valori delle variabili vengono copiati durante l'assegnazione, passando un argomento a un metodo e restituendo il risultato di un metodo. Nel caso di una variabile di tipo struttura, viene copiata un'istanza del tipo. Per ulteriori informazioni, vedere [tipi di valore](value-types.md).
 
@@ -47,7 +47,7 @@ In genere, si crea un'istanza di un tipo di struttura chiamando un costruttore a
 
 Se tutti i campi di istanza di un tipo di struttura sono accessibili, è anche possibile crearne un'istanza senza l'operatore `new`. In tal caso, è necessario inizializzare tutti i campi di istanza prima del primo utilizzo dell'istanza. L'esempio seguente illustra come eseguire questa operazione:
 
-[!code-csharp[without new](~/samples/csharp/language-reference/builtin-types/StructType.cs#WithoutNew)]
+[!code-csharp[without new](~/samples/snippets/csharp/language-reference/builtin-types/StructType.cs#WithoutNew)]
 
 Nel caso dei [tipi valore predefiniti](value-types.md#built-in-value-types), usare i valori letterali corrispondenti per specificare un valore del tipo.
 

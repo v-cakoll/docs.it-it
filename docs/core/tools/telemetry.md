@@ -3,20 +3,20 @@ title: Telemetria di .NET Core SDK
 description: Informazioni sulle funzionalità di telemetria degli strumenti di .NET Core SDK che raccolgono informazioni sull'utilizzo per l'analisi, i dati raccolti e il modo in cui disabilitarli.
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: abc9f8e1ef134ebfb5ec9acacb629d5180aaf83b
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 9d5d7ff09ade89712f2fbbe35224851bb1c28b4c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77625917"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156686"
 ---
 # <a name="net-core-sdk-telemetry"></a>Telemetria di .NET Core SDK
 
 [.NET Core SDK](index.md) include una funzionalità di telemetria che raccoglie i dati di utilizzo e informazioni sulle eccezioni in caso di arresto anomalo dell'interfaccia della riga di comando di .NET Core. L'interfaccia della riga di comando di .NET Core è inclusa in .NET Core SDK ed è il set di verbi che consentono di compilare, testare e pubblicare le app .NET Core. È importante che il team di .NET sappia come vengono usati gli strumenti per consentire a Microsoft di migliorarne le funzionalità. Le informazioni sugli errori consentono al team di risolvere i problemi e correggere i bug.
 
-I dati raccolti sono anonimi e vengono pubblicati in modo aggregato in base alla [licenza Creative Commons Attribution](https://creativecommons.org/licenses/by/4.0/). 
+I dati raccolti sono anonimi e vengono pubblicati in modo aggregato in base alla [licenza Creative Commons Attribution](https://creativecommons.org/licenses/by/4.0/).
 
-## <a name="scope"></a>Ambito
+## <a name="scope"></a>Scope
 
 `dotnet` ha due funzioni: eseguire le app ed eseguire i comandi dell'interfaccia della riga di comando. I dati di telemetria *non vengono raccolti* quando si usa `dotnet` per avviare un'applicazione nel formato seguente:
 
@@ -30,7 +30,7 @@ I dati di telemetria *vengono raccolti* quando si usano i [comandi dell’interf
 
 ## <a name="how-to-opt-out"></a>Come rifiutare esplicitamente
 
-La funzionalità di telemetria di .NET Core SDK è abilitata per impostazione predefinita. Per rifiutare esplicitamente la funzionalità di telemetria, impostare la variabile di ambiente `DOTNET_CLI_TELEMETRY_OPTOUT` su `1` o `true`. 
+La funzionalità di telemetria di .NET Core SDK è abilitata per impostazione predefinita. Per rifiutare esplicitamente la funzionalità di telemetria, impostare la variabile di ambiente `DOTNET_CLI_TELEMETRY_OPTOUT` su `1` o `true`.
 
 Una singola voce di telemetria viene inviata anche dal programma di installazione di .NET Core SDK in caso di installazione corretta. Per rifiutare esplicitamente, impostare la variabile di ambiente `DOTNET_CLI_TELEMETRY_OPTOUT` prima di installare .NET Core SDK.
 
@@ -54,15 +54,15 @@ La tutela della privacy è importante per Microsoft. Se si ritiene che la teleme
 
 La funzionalità di telemetria raccoglie i dati seguenti:
 
-| Versioni dell'SDK | Data |
+| Versioni dell'SDK | data |
 |--------------|------|
-| Tutte          | Timestamp della chiamata. |
-| Tutte          | Comando richiamato (ad esempio, "build"), con hash a partire dalla versione 2.1. |
-| Tutte          | Indirizzo IP di tre ottetti usato per determinare la posizione geografica. |
-| Tutte          | Sistema operativo e versione. |
-| Tutte          | ID Runtime (RID) in cui è in esecuzione l'SDK. |
-| Tutte          | Versione di .NET Core SDK. |
-| Tutte          | Profilo di telemetria: valore facoltativo usato solo con consenso esplicito dell'utente e usato internamente a Microsoft. |
+| Tutti          | Timestamp della chiamata. |
+| Tutti          | Comando richiamato (ad esempio, "build"), con hash a partire dalla versione 2.1. |
+| Tutti          | Indirizzo IP di tre ottetti usato per determinare la posizione geografica. |
+| Tutti          | Sistema operativo e versione. |
+| Tutti          | ID Runtime (RID) in cui è in esecuzione l'SDK. |
+| Tutti          | Versione di .NET Core SDK. |
+| Tutti          | Profilo di telemetria: valore facoltativo usato solo con consenso esplicito dell'utente e usato internamente a Microsoft. |
 | >= 2.0        | Argomenti e opzioni di comando: vengono raccolti vari argomenti e opzioni (non stringhe arbitrarie). Vedere [Opzioni raccolte](#collected-options). Con hash dopo la versione 2.1.300. |
 | >= 2.0         | Se il SDK è in esecuzione in un contenitore. |
 | >= 2.0         | Framework di destinazione (dall'evento `TargetFramework`), con hash a partire dalla versione 2.1. |
@@ -90,7 +90,7 @@ Alcuni comandi inviano dati aggiuntivi. Un subset di comandi invia il primo argo
 
 Un subset di comandi invia le opzioni selezionate se vengono usate, insieme ai relativi valori:
 
-| Opzione                  | Commands                                                                                       |
+| Opzione                  | Comandi:                                                                                       |
 |-------------------------|------------------------------------------------------------------------------------------------|
 | `--verbosity`           | Tutti i comandi                                                                                   |
 | `--language`            | `dotnet new`                                                                                   |
@@ -132,7 +132,7 @@ at Microsoft.DotNet.Cli.Program.Main(String[] args)
 
 I collaboratori di .NET Core e chiunque esegua una versione personalizzata di .NET Core SDK devono tenere conto del percorso del codice sorgente dell'SDK. Se si verifica un arresto anomalo durante l'uso di un'istanza di .NET Core SDK che rappresenta una compilazione di debug personalizzata o è configurata con file di simboli di compilazione personalizzati, il percorso del file di origine dell'SDK dal computer di compilazione viene raccolto come parte dell'analisi dello stack e non viene sottoposto ad hashing.
 
-Per questo motivo, le compilazioni personalizzate di .NET Core SDK non devono trovarsi in directory i cui nomi di percorso espongono informazioni personali o sensibili. 
+Per questo motivo, le compilazioni personalizzate di .NET Core SDK non devono trovarsi in directory i cui nomi di percorso espongono informazioni personali o sensibili.
 
 ## <a name="see-also"></a>Vedere anche
 

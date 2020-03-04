@@ -4,12 +4,12 @@ description: Informazioni su come usare un oggetto AssemblyLoadContext ritirabil
 author: janvorli
 ms.author: janvorli
 ms.date: 02/05/2019
-ms.openlocfilehash: 462e6d2c7f135d2ba274d78fe31ad27391eac416
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 267c2209556b66ab3541c9c79c99d7eceb2024da
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740443"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159741"
 ---
 # <a name="how-to-use-and-debug-assembly-unloadability-in-net-core"></a>Come usare ed eseguire il debug di assembly non caricabili in .NET Core
 
@@ -82,7 +82,7 @@ Talvolta può essere necessario che il codice caricato in un `AssemblyLoadContex
 
 A causa della natura cooperativa dello scaricamento, è facile dimenticare i riferimenti che potrebbero mantenere il materiale in un `AssemblyLoadContext` ritirabile e impedire lo scaricamento. Di seguito è riportato un riepilogo delle entità (alcune delle quali non sono ovvie) che possono conservare i riferimenti:
 
-- I riferimenti regolari detenuti dall'esterno dei `AssemblyLoadContext` ritirabili archiviati in uno slot dello stack o in un registro del processore (variabili locali del metodo, creati in modo esplicito dal codice utente o in modo implicito dal compilatore just-in-time (JIT)), una variabile statica o una complessa ( aggiunta) handle GC e puntando in modo transitivo a:
+- I riferimenti regolari detenuti dall'esterno dei `AssemblyLoadContext` ritirabili archiviati in uno slot dello stack o in un registro del processore (variabili locali del metodo, creati in modo esplicito dal codice utente o in modo implicito dal compilatore just-in-time (JIT)), una variabile statica o un handle GC sicuro (blocco) e che puntano in modo transitivo a:
   - Un assembly caricato nell'`AssemblyLoadContext` ritirabile.
   - Un tipo di tale assembly.
   - Un'istanza di un tipo incluso in tale assembly.
@@ -123,12 +123,12 @@ Viene ora eseguito il debug di un programma di esempio con problemi di scaricame
 !dumpheap -type LoaderAllocator
 ```
 
-Questo comando esegue il dump di tutti gli oggetti con un nome di tipo contenente `LoaderAllocator` che si trovano nell'heap GC. Ecco un esempio:
+Questo comando esegue il dump di tutti gli oggetti con un nome di tipo contenente `LoaderAllocator` che si trovano nell'heap GC. Esempio:
 
 ```console
          Address               MT     Size
-000002b78000ce40 00007ffadc93a288       48     
-000002b78000ceb0 00007ffadc93a218       24     
+000002b78000ce40 00007ffadc93a288       48
+000002b78000ceb0 00007ffadc93a218       24
 
 Statistics:
               MT    Count    TotalSize Class Name
@@ -196,35 +196,35 @@ OS Thread Id: 0x6ba8 (0)
 0000001fc697d5c8 00007ffb50d9de12 [HelperMethodFrame: 0000001fc697d5c8] System.Diagnostics.Debugger.BreakInternal()
 0000001fc697d6d0 00007ffa864765fa System.Diagnostics.Debugger.Break()
 0000001fc697d700 00007ffa864736bc example.Program.Main(System.String[]) [E:\unloadability\example\Program.cs @ 70]
-0000001fc697d998 00007ffae5fdc1e3 [GCFrame: 0000001fc697d998] 
-0000001fc697df28 00007ffae5fdc1e3 [GCFrame: 0000001fc697df28] 
+0000001fc697d998 00007ffae5fdc1e3 [GCFrame: 0000001fc697d998]
+0000001fc697df28 00007ffae5fdc1e3 [GCFrame: 0000001fc697df28]
 OS Thread Id: 0x2ae4 (1)
-Unable to walk the managed stack. The current thread is likely not a 
+Unable to walk the managed stack. The current thread is likely not a
 managed thread. You can run !threads to get a list of managed threads in
 the process
 Failed to start stack walk: 80070057
 OS Thread Id: 0x61a4 (2)
-Unable to walk the managed stack. The current thread is likely not a 
+Unable to walk the managed stack. The current thread is likely not a
 managed thread. You can run !threads to get a list of managed threads in
 the process
 Failed to start stack walk: 80070057
 OS Thread Id: 0x7fdc (3)
-Unable to walk the managed stack. The current thread is likely not a 
+Unable to walk the managed stack. The current thread is likely not a
 managed thread. You can run !threads to get a list of managed threads in
 the process
 Failed to start stack walk: 80070057
 OS Thread Id: 0x5390 (4)
-Unable to walk the managed stack. The current thread is likely not a 
+Unable to walk the managed stack. The current thread is likely not a
 managed thread. You can run !threads to get a list of managed threads in
 the process
 Failed to start stack walk: 80070057
 OS Thread Id: 0x5ec8 (5)
         Child SP               IP Call Site
-0000001fc70ff6e0 00007ffb5437f6e4 [DebuggerU2MCatchHandlerFrame: 0000001fc70ff6e0] 
+0000001fc70ff6e0 00007ffb5437f6e4 [DebuggerU2MCatchHandlerFrame: 0000001fc70ff6e0]
 OS Thread Id: 0x4624 (6)
         Child SP               IP Call Site
 GetFrameContext failed: 1
-0000000000000000 0000000000000000 
+0000000000000000 0000000000000000
 OS Thread Id: 0x60bc (7)
         Child SP               IP Call Site
 0000001fc727f158 00007ffb5437fce4 [HelperMethodFrame: 0000001fc727f158] System.Threading.Thread.SleepInternal(Int32)
@@ -232,8 +232,8 @@ OS Thread Id: 0x60bc (7)
 0000001fc727f290 00007ffa865005b3 test.Program.ThreadProc() [E:\unloadability\test\Program.cs @ 17]
 0000001fc727f2c0 00007ffb37ea6a5b System.Threading.Thread.ThreadMain_ThreadStart()
 0000001fc727f2f0 00007ffadbc4cbe3 System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object)
-0000001fc727f568 00007ffae5fdc1e3 [GCFrame: 0000001fc727f568] 
-0000001fc727f7f0 00007ffae5fdc1e3 [DebuggerU2MCatchHandlerFrame: 0000001fc727f7f0] 
+0000001fc727f568 00007ffae5fdc1e3 [GCFrame: 0000001fc727f568]
+0000001fc727f7f0 00007ffae5fdc1e3 [DebuggerU2MCatchHandlerFrame: 0000001fc727f7f0]
 
 ```
 

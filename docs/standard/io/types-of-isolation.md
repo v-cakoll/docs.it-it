@@ -18,12 +18,12 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-ms.openlocfilehash: aa8a62ee0c653a1905283696b97f55a3e6ffff85
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 99e1f3f96465d05c100a0dbb2bc5218810c33754
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706543"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159429"
 ---
 # <a name="types-of-isolation"></a>Tipi di isolamento
 L'accesso allo spazio di memorizzazione isolato è sempre limitato all'utente che l'ha creata. Per implementare questo tipo di isolamento, Common Language Runtime usa la stessa nozione di identità utente riconosciuta dal sistema operativo, ovvero l'identità associata al processo in cui è in esecuzione il codice quando viene aperto lo spazio di memorizzazione. Sebbene sia un'identità utente autenticata, è possibile che con la rappresentazione l'identità dell'utente corrente venga modificata dinamicamente.  
@@ -53,7 +53,7 @@ L'accesso allo spazio di memorizzazione isolato è sempre limitato all'utente ch
 > [!IMPORTANT]
 > Lo spazio di memorizzazione isolato non è disponibile per le app di Windows 8. x Store. Al contrario, usare le classi di dati dell'applicazione negli spazi dei nomi `Windows.Storage` inclusi nell'API di Windows Runtime per archiviare dati e file locali. Per altre informazioni, vedere [Dati dell'applicazione](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) nel Centro per sviluppatori Windows.  
   
-<a name="UserAssembly"></a>   
+<a name="UserAssembly"></a>
 ## <a name="isolation-by-user-and-assembly"></a>Isolamento in base all'utente e all'assembly  
  L'isolamento in base all'utente e all'assembly è indicato quando si vuole che l'assembly che usa l'archivio dati sia accessibile da qualsiasi dominio dell'applicazione. In genere, in questa situazione, lo spazio di memorizzazione isolato viene usato per memorizzare dati che riguardano più applicazioni e non una singola applicazione, come il nome utente e informazioni sulla licenza. Per poter accedere a uno spazio di memorizzazione isolato in base all'utente e all'assembly, è necessario che il codice sia considerato attendibile per il trasferimento di informazioni tra applicazioni diverse. In genere, l'isolamento in base all'utente e all'assembly è consentito in reti Intranet, ma non in Internet. Chiamando il metodo statico <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A?displayProperty=nameWithType> e passando un utente e un assembly <xref:System.IO.IsolatedStorage.IsolatedStorageScope>, viene restituito uno spazio di memorizzazione con questo tipo di isolamento.  
   
@@ -71,7 +71,7 @@ L'accesso allo spazio di memorizzazione isolato è sempre limitato all'utente ch
  [!code-csharp[Conceptual.IsolatedStorage#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source11.cs#18)]
  [!code-vb[Conceptual.IsolatedStorage#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source11.vb#18)]  
   
-<a name="UserDomainAssembly"></a>   
+<a name="UserDomainAssembly"></a>
 ## <a name="isolation-by-user-domain-and-assembly"></a>Isolamento in base all'utente, al dominio e all'assembly  
  Se un'applicazione usa un assembly di terze parti che richiede un archivio dati privato, è possibile usare lo spazio di memorizzazione isolato per memorizzare i dati privati. L'isolamento in base all'utente, al dominio e all'assembly garantisce che ai dati possa accedere solo il codice di un determinato assembly, solo quando l'assembly viene usato dall'applicazione che era in esecuzione nel momento in cui l'assembly ha creato lo spazio di memorizzazione e solo quando l'applicazione viene eseguita dall'utente per il quale è stato creato lo spazio di memorizzazione. L'isolamento in base all'utente, al dominio e all'assembly impedisce che l'assembly di terze parti passi i dati ad altre applicazioni. È opportuno scegliere questo tipo di isolamento se si è certi di voler usare lo spazio di memorizzazione isolato, ma non si è sicuri del tipo di isolamento da usare. Chiamando il metodo statico <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> di <xref:System.IO.IsolatedStorage.IsolatedStorageFile> e passando un utente, un dominio e un assembly, <xref:System.IO.IsolatedStorage.IsolatedStorageScope> restituisce lo spazio di memorizzazione con questo tipo di isolamento.  
   
@@ -87,7 +87,7 @@ L'accesso allo spazio di memorizzazione isolato è sempre limitato all'utente ch
  [!code-csharp[Conceptual.IsolatedStorage#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source10.cs#15)]
  [!code-vb[Conceptual.IsolatedStorage#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source10.vb#15)]  
   
-<a name="Roaming"></a>   
+<a name="Roaming"></a>
 ## <a name="isolated-storage-and-roaming"></a>Spazio di memorizzazione isolato e roaming  
  I profili utente mobili sono una funzionalità di Windows che consente a un utente di impostare un'identità in una rete e usarla per accedere a qualsiasi computer di rete, conservando tutte le impostazioni personalizzate. Un assembly che usa lo spazio di memorizzazione isolato può specificare che lo spazio di memorizzazione isolato dell'utente si sposti con il profilo utente mobile. Il roaming può essere usato con l'isolamento in base all'utente e all'assembly oppure con l'isolamento in base all'utente, al dominio e all'assembly. Se non viene usato un ambito di roaming, gli spazi di memorizzazione non si spostano neppure se viene usato un profilo utente mobile.  
   

@@ -4,18 +4,18 @@ description: Questa esercitazione avanzata descrive come esplorare i dati usando
 ms.date: 09/20/2019
 ms.technology: csharp-fundamentals
 ms.custom: mvc
-ms.openlocfilehash: 3d4c022ff8d6e7f260632e34d6f28277014c85c8
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5b6277763cfccfc75947f6fa0534964389b1dea3
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345627"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240041"
 ---
 # <a name="indices-and-ranges"></a>Indici e intervalli
 
 Gli intervalli e gli indici forniscono una sintassi concisa per l'accesso a singoli elementi o intervalli in una sequenza.
 
-In questa esercitazione si imparerà a:
+In questa esercitazione si apprenderà come:
 
 > [!div class="checklist"]
 >
@@ -52,29 +52,29 @@ string[] words = new string[]
 
 È possibile recuperare l'ultima parola con l'indice `^1`. Aggiungere il codice seguente sotto l'inizializzazione:
 
-[!code-csharp[LastIndex](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_LastIndex)]
+[!code-csharp[LastIndex](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_LastIndex)]
 
 Un intervallo specifica *inizio* e *fine* di un intervallo. Gli intervalli sono esclusivi, vale a dire che la *fine* non è inclusa nell'intervallo. L'intervallo `[0..^0]` rappresenta l'intero intervallo, proprio come `[0..sequence.Length]` rappresenta l'intero intervallo. 
 
 Il codice seguente crea un intervallo secondario con le parole "quick", "brown" e "fox". Include da `words[1]` a `words[3]`. L'elemento `words[4]` non è compreso nell'intervallo. Aggiungere il codice seguente allo stesso metodo. Copiarlo e incollarlo nella parte inferiore della finestra interattiva.
 
-[!code-csharp[Range](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_Range)]
+[!code-csharp[Range](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_Range)]
 
 Il codice seguente crea un intervallo secondario con "lazy" e "dog". Include `words[^2]` e `words[^1]`. L'indice finale `words[^0]` non viene incluso. Aggiungere anche il codice seguente:
 
-[!code-csharp[LastRange](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_LastRange)]
+[!code-csharp[LastRange](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_LastRange)]
 
 Gli esempi seguenti creano intervalli aperti alle estremità, per l'inizio, la fine o entrambe:
 
-[!code-csharp[PartialRange](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_PartialRanges)]
+[!code-csharp[PartialRange](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_PartialRanges)]
 
 È anche possibile dichiarare gli intervalli o gli indici come variabili. In seguito la variabile può essere usata all'interno dei caratteri `[` e `]`:
 
-[!code-csharp[IndexRangeTypes](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_RangeIndexTypes)]
+[!code-csharp[IndexRangeTypes](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_RangeIndexTypes)]
 
 L'esempio seguente illustra molti dei motivi per cui sono state fatte tali scelte. Modificare `x`, `y`, e `z` per provare combinazioni diverse. Durante le varie prove, usare valori per cui `x` è minore di `y` e `y` è minore di `z` per le combinazioni valide. Aggiungere il codice seguente in un nuovo metodo. Provare combinazioni diverse:
 
-[!code-csharp[SemanticsExamples](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_Semantics)]
+[!code-csharp[SemanticsExamples](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_Semantics)]
 
 ## <a name="type-support-for-indices-and-ranges"></a>Supporto dei tipi per gli indici e gli intervalli
 
@@ -90,6 +90,6 @@ I tipi .NET seguenti, ad esempio, supportano sia gli indici che gli intervalli: 
 
 Quando si vuole analizzare un intervallo secondario di un'intera sequenza, si usano spesso intervalli e indici. La nuova sintassi è più chiara e consente di capire meglio la funzione dell'intervallo secondario. La funzione locale `MovingAverage` accetta un <xref:System.Range> come argomento. In seguito il metodo enumera solo quell'intervallo durante il calcolo dei valori minimo e massimo e della media. Provare a includere il codice seguente nel progetto:
 
-[!code-csharp[MovingAverages](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_MovingAverage)]
+[!code-csharp[MovingAverages](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_MovingAverage)]
 
 È possibile scaricare il codice completo dal repository [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/RangesIndexes).

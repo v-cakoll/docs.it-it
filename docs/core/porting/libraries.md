@@ -3,18 +3,18 @@ title: Convertire librerie per .NET Core
 description: Informazioni su come convertire progetti di libreria da .NET Framework a .NET Core.
 author: cartermp
 ms.date: 12/07/2018
-ms.openlocfilehash: 646587120de2e51280c2af4de36bf3a6b0f60c2d
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 68fe36e543d949dc76bdb0c19ef3482936ad9e79
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920617"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157531"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>Convertire librerie .NET Framework a .NET Core
 
 Informazioni su come trasferire .NET Framework codice della libreria in .NET Core, in cui viene eseguito multipiattaforma ed espande la portata delle app che lo usano.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 In questo articolo si presuppone che:
 
@@ -91,13 +91,13 @@ Questo approccio potrebbe costituire la scelta migliore per progetti più comple
    - È necessario effettuare il refactoring del codice?
    - Per i tipi non portabili, esistono API alternative che svolgono la stessa attività? Se ad esempio si usa la classe <xref:System.Net.WebClient>, è possibile usare invece la classe <xref:System.Net.Http.HttpClient>.
    - Sono disponibili API portabili differenti che è possibile usare per eseguire un'attività, anche se non si tratta di una sostituzione vera e propria? Se, ad esempio, si usa <xref:System.Xml.Schema.XmlSchema> per analizzare il codice XML, ma non è necessario XML Schema l'individuazione, è possibile usare <xref:System.Xml.Linq> API e implementare l'analisi in modo non basato su un'API.
-1. Se sono presenti assembly difficili da trasferire, è opportuno lasciarli per il momento in .NET Framework? Di seguito sono riportati alcuni aspetti da prendere in considerazione:
+1. Se sono presenti assembly difficili da trasferire, è opportuno lasciarli per il momento in .NET Framework? Di seguito sono illustrati alcuni aspetti da considerare:
    - Alcune funzionalità della libreria possono non essere compatibili con .NET Core poiché sono basate in misura eccessiva su funzionalità specifiche di .NET Framework o di Windows. Vale la pena abbandonare questa funzionalità per ora e rilasciare una versione temporanea di .NET Core della libreria con meno funzionalità fino a quando le risorse non saranno disponibili per trasferire le funzionalità?
    - Un'operazione di refactoring può essere utile?
 1. La scrittura di una propria implementazione di un'API .NET Framework non disponibile è una scelta ragionevole?
    È possibile prendere in considerazione la copia, la modifica e l'uso del codice dalla [.NET Framework origine riferimento](https://github.com/Microsoft/referencesource). Il codice sorgente di riferimento è concesso in licenza con la [licenza MIT](https://github.com/Microsoft/referencesource/blob/master/LICENSE.txt), quindi esiste un ampio margine di libertà per usare il codice sorgente come base per il proprio codice. È sufficiente assicurarsi di aggiungere le attribuzioni appropriate per Microsoft nel codice.
 1. Ripetere questo processo in base alle esigenze per i diversi progetti.
- 
+
 A seconda delle dimensioni della codebase, la fase di analisi può richiedere diverso tempo. Il tempo dedicato a questa fase per comprendere appieno la portata delle modifiche necessarie e per elaborare un piano consente in genere di risparmiare tempo nel lungo termine, in particolare se la codebase è complessa.
 
 Il piano può comportare la necessità di modifiche significative della codebase, mantenendo tuttavia come destinazione .NET Framework 4.7.2. Si tratta di una versione più strutturata dell'approccio precedente. La modalità di esecuzione del piano dipende dalle caratteristiche della codebase.
@@ -111,10 +111,10 @@ Il piano può comportare la necessità di modifiche significative della codebase
 Il modo migliore per verificare un codice trasferito consiste nell'eseguirne il test durante il trasferimento in .NET Core. A tale scopo è necessario usare un framework di test che supporta la compilazione e l'esecuzione dei test per .NET Core. Attualmente sono disponibili le tre opzioni seguenti:
 
 - [xUnit](https://xunit.github.io/)
-  - [Introduzione](https://xunit.github.io/docs/getting-started-dotnet-core.html)
+  - [Per iniziare](https://xunit.github.io/docs/getting-started-dotnet-core.html)
   - [Strumento per trasferire un progetto MSTest in xUnit](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
 - [NUnit](https://nunit.org/)
-  - [Introduzione](https://github.com/nunit/docs/wiki/Installation)
+  - [Per iniziare](https://github.com/nunit/docs/wiki/Installation)
   - [Post di blog sulla migrazione da MSTest a NUnit](https://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
 - [MSTest](/visualstudio/test/unit-test-basics)
 

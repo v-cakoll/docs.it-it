@@ -10,12 +10,12 @@ helpviewer_keywords:
 - implicit keyword [C#]
 - conversion operator [C#]
 - user-defined conversion [C#]
-ms.openlocfilehash: 379deb20243a13cc608cb7fe119b341065327c1e
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: cddb3139742329303989c6fed9e9b64474e6b1f9
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450674"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78238858"
 ---
 # <a name="user-defined-conversion-operators-c-reference"></a>Operatori di conversione definiti dall'utente (riferimenti per C#)
 
@@ -29,7 +29,7 @@ Usare `operator` e `implicit` o le parole chiave `explicit` per definire rispett
 
 L'esempio seguente illustra come definire una conversione implicita ed esplicita:
 
-[!code-csharp[implicit an explicit conversions](~/samples/csharp/language-reference/operators/UserDefinedConversions.cs)]
+[!code-csharp[implicit an explicit conversions](~/samples/snippets/csharp/language-reference/operators/UserDefinedConversions.cs)]
 
 È anche possibile usare la parola chiave `operator` per eseguire l'overload di un operatore C# predefinito. Per altre informazioni, vedere [Overload degli operatori](operator-overloading.md).
 

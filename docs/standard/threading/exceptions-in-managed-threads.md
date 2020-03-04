@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET Framework],exceptions in managed threads
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-ms.openlocfilehash: 2c3215fd42e8cf6d6427d23f94c14db4230ddd02
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6c14c60b30f8f70aa5e888ed45d6f867154e18d8
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138058"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159650"
 ---
 # <a name="exceptions-in-managed-threads"></a>Eccezioni in thread gestiti
 A partire da .NET Framework versione 2.0, Common Language Runtime consente alla maggior parte delle eccezioni non gestite nei thread di proseguire normalmente. Nella maggior parte dei casi questo significa che l'eccezione non gestita provoca l'interruzione dell'applicazione.  
@@ -41,7 +41,7 @@ A partire da .NET Framework versione 2.0, Common Language Runtime consente alla 
   
  Consentire alle eccezioni non gestite nei thread di proseguire normalmente finché il sistema operativo non termina il programma permette di esporre tali problemi durante le fasi di sviluppo e test. I report di errore relativi alle chiusure dei programmi supportano il debug.  
   
-<a name="ChangeFromPreviousVersions"></a>   
+<a name="ChangeFromPreviousVersions"></a>
 ## <a name="change-from-previous-versions"></a>Cambiamenti dalle versioni precedenti  
  Il cambiamento più significativo riguarda i thread gestiti. In .NET Framework versioni 1.0 e 1.1, Common Language Runtime fornisce una barriera per le eccezioni non gestite nelle situazioni seguenti:  
   

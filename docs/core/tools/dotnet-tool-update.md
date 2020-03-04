@@ -2,12 +2,12 @@
 title: Comando dotnet tool update
 description: Il comando DotNet Tool Update aggiorna lo strumento .NET Core specificato nel computer.
 ms.date: 02/14/2020
-ms.openlocfilehash: 50bb366fedfb0ea69b8b6007ff89e366b4f689de
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 80e807a0fc06ad762334f888e701f6d9c448369a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543417"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156946"
 ---
 # <a name="dotnet-tool-update"></a>dotnet tool update
 
@@ -58,7 +58,7 @@ Il `dotnet tool update` comando fornisce un modo per aggiornare gli strumenti di
 
 - **`-g|--global`**
 
-  Specifica che l'aggiornamento è per uno strumento a livello utente. Non può essere usata con l'opzione `--tool-path`. Omettendo sia `--global` che `--tool-path` specifica che lo strumento da aggiornare è uno strumento locale. 
+  Specifica che l'aggiornamento è per uno strumento a livello utente. Non può essere usata con l'opzione `--tool-path`. Omettendo sia `--global` che `--tool-path` specifica che lo strumento da aggiornare è uno strumento locale.
 
 - **`-h|--help`**
 
@@ -66,7 +66,7 @@ Il `dotnet tool update` comando fornisce un modo per aggiornare gli strumenti di
 
 - **`--tool-path <PATH>`**
 
-  Specifica il percorso in cui è installato lo strumento globale. Il valore di PATH può essere assoluto o relativo. Non può essere usata con l'opzione `--global`. Omettendo sia `--global` che `--tool-path` specifica che lo strumento da aggiornare è uno strumento locale. 
+  Specifica il percorso in cui è installato lo strumento globale. Il valore di PATH può essere assoluto o relativo. Non può essere usata con l'opzione `--global`. Omettendo sia `--global` che `--tool-path` specifica che lo strumento da aggiornare è uno strumento locale.
 
 - **`-v|--verbosity <LEVEL>`**
 

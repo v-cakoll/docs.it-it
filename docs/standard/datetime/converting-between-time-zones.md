@@ -12,12 +12,12 @@ helpviewer_keywords:
 - converting times
 - local time conversions
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
-ms.openlocfilehash: d0b38523f054598ba6fb1f05a0183bc4ccff2120
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fbb59dbe364763209f44a4e2241d1d5275036c40
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132570"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156023"
 ---
 # <a name="converting-times-between-time-zones"></a>Conversione degli orari tra fusi orari
 
@@ -57,7 +57,7 @@ Tutti questi metodi accettano <xref:System.DateTime> valori come parametri e res
 
 ## <a name="converting-utc-to-a-designated-time-zone"></a>Conversione dell'ora UTC in un determinato fuso orario
 
-Per convertire l'ora UTC nell'ora locale, vedere la sezione "conversione dell'ora UTC nell'ora locale" riportata di seguito. Per convertire l'ora UTC nell'ora di qualsiasi fuso orario designato, chiamare il metodo <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A>. Questo metodo accetta due parametri:
+Per convertire l'ora UTC nell'ora locale, vedere la sezione "conversione dell'ora UTC nell'ora locale" riportata di seguito. Per convertire l'ora UTC nell'ora di qualsiasi fuso orario designato, chiamare il metodo <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A>. Il metodo accetta due parametri:
 
 - L'ora UTC da convertire. Deve essere un valore <xref:System.DateTime> la cui proprietà <xref:System.DateTime.Kind%2A> è impostata su `Unspecified` o `Utc`.
 
@@ -109,7 +109,7 @@ I valori di data e ora rappresentati dagli oggetti <xref:System.DateTimeOffset> 
 Se, ad esempio, la data e l'ora della richiesta di una pagina Web da parte di un utente sono note e serializzate sotto forma di stringa nel formato MM/gg/aaaa hh:mm:ss zzzz, il metodo `ReturnTimeOnServer` seguente converte questo valore di data e ora nella data e nell'ora del server Web.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.OffsetConversions#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/cs/TimeConversions.cs#1)]
-[!code-vb[System.DateTimeOffset.Conceptual.OffsetConversions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/vb/TimeConversions.vb#1)] 
+[!code-vb[System.DateTimeOffset.Conceptual.OffsetConversions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/vb/TimeConversions.vb#1)]
 
 Se al metodo viene passata la stringa "9/1/2007 5:32:07 -05:00" che rappresenta la data e l'ora in un fuso orario indietro di cinque ore rispetto all'ora UTC, viene restituito 9/1/2007 3:32:07 AM -07:00 per un server situato nel fuso orario standard del Pacifico (Stati Uniti).
 

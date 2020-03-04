@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: ba50eb222d9eab6bffbb8ebfdf0ecf47951ce719
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: a41bbdf5419585f06773583dbe82ab0d84ebaa4c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543521"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157636"
 ---
 # <a name="install-the-net-core-runtime"></a>Installare il runtime di .NET Core
 
@@ -35,6 +35,19 @@ Windows dispone di programmi di installazione autonomi che possono essere usati 
 macOS dispone di programmi di installazione autonomi che possono essere usati per installare il runtime di .NET Core 3,1:
 
 - [CPU x64 (64 bit)](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+
+## <a name="download-and-manually-install"></a>Scaricare e installare manualmente
+
+In alternativa ai programmi di installazione di macOS per .NET Core, è possibile scaricare e installare manualmente il Runtime.
+
+Per installare il runtime e abilitare i comandi interfaccia della riga di comando di .NET Core disponibili nel terminale, [scaricare](#all-net-core-downloads) prima di tutto una versione binaria di .NET Core. Quindi, aprire un terminale ed eseguire i comandi seguenti. Si presuppone che il runtime venga scaricato nel file di `~/Downloads/dotnet-runtime.pkg`.
+
+```bash
+mkdir -p $HOME/dotnet
+sudo installer -pkg ~/Downloads/dotnet-runtime.pkg -target $HOME/dotnet
+export DOTNET_ROOT=$HOME/dotnet
+export PATH=$PATH:$HOME/dotnet
+```
 
 ::: zone-end
 
@@ -64,7 +77,7 @@ export PATH=$PATH:$HOME/dotnet
 > - **Shell bash**: *~/. bash_profile*, *~/.bashrc*
 > - **Korn Shell**: *~/.KSHRC* o *. profile*
 > - **Shell Z**: *~/.zshrc* o *. zprofile*
-> 
+>
 > Modificare il file di origine appropriato per la shell e aggiungere `:$HOME/dotnet` alla fine dell'istruzione `PATH` esistente. Se non è inclusa alcuna istruzione `PATH`, aggiungere una nuova riga con `export PATH=$PATH:$HOME/dotnet`.
 >
 > Inoltre, aggiungere `export DOTNET_ROOT=$HOME/dotnet` alla fine del file.

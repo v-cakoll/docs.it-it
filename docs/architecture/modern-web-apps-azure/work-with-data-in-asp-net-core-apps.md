@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Usar
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: f37bdca688559236d9b07b97f7ee7459b3be4f39
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 5a38ca94b6df676858e7cb058272e450aaf1572e
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449348"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78241039"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Uso dei dati nelle app ASP.NET Core
 
@@ -242,7 +242,7 @@ Se tuttavia il codice avvia una transazione tramite BeginTransaction, viene defi
 
 System.InvalidOperationException: La strategia di esecuzione configurata 'SqlServerRetryingExecutionStrategy' non supporta le transazioni avviate dall'utente. Utilizzare la strategia di esecuzione restituita da' DbContext. database. CreateExecutionStrategy ()' per eseguire tutte le operazioni nella transazione come unità riprovabile.
 
-La soluzione prevede di richiamare manualmente la strategia di esecuzione di EF con un delegato che rappresenta tutte le operazioni che devono essere eseguite. Se si verifica un errore temporaneo, la strategia di esecuzione richiamerà nuovamente il delegato. Nel codice seguente viene illustrato come implementare questo approccio:
+La soluzione prevede di richiamare manualmente la strategia di esecuzione di EF con un delegato che rappresenta tutte le operazioni che devono essere eseguite. Se si verifica un errore temporaneo, la strategia di esecuzione chiamerà nuovamente il delegato. Nel codice seguente viene illustrato come implementare questo approccio:
 
 ```csharp
 // Use of an EF Core resiliency strategy when using multiple DbContexts
@@ -261,7 +261,7 @@ await strategy.ExecuteAsync(async () =>
 
         // Save to EventLog only if product price changed
         if (raiseProductPriceChangedEvent)
-        await _integrationEventLogService.SaveEventAsync(priceChangedEvent);
+            await _integrationEventLogService.SaveEventAsync(priceChangedEvent);
         transaction.Commit();
     }
 });
@@ -350,7 +350,7 @@ Azure Cosmos DB è un servizio di database NoSQL completamente gestito che offre
 
 **Figura 8-2.** Azure Cosmos DB organizzazione delle risorse.
 
-Il linguaggio di query Azure Cosmos DB è un'interfaccia semplice ma potente per l'esecuzione di query sui documenti JSON. Il linguaggio supporta un subset di grammatica SQL ANSI e offre totale integrazione di oggetti, matrici, costruzione di oggetti e chiamate JavaScript.
+Il linguaggio di query Azure Cosmos DB è un'interfaccia semplice ma potente per l'esecuzione di query sui documenti JSON. Il linguaggio supporta un sottoinsieme della grammatica SQL ANSI e aggiunge un'integrazione profonda di oggetti JavaScript, matrici, costruzione di oggetti e chiamata di funzioni.
 
 **Riferimenti: Azure Cosmos DB**
 
@@ -411,7 +411,7 @@ public void Configure(IApplicationBuilder app)
 
 Il middleware di memorizzazione nella cache delle risposte memorizzerà autenticamente le risposte sulla base di una serie di condizioni personalizzabili. Per impostazione predefinita, vengono memorizzate nella cache solo risposte con codice di stato 200 (OK) tramite i metodi GET o HEAD. È anche necessario che le richieste abbiano una risposta con intestazione pubblica Cache-Control e non includano le intestazioni Authorization o Set-Cookie. Vedere l'[elenco completo delle condizioni di memorizzazione nella cache usato dal middleware di memorizzazione nella cache delle risposte](/aspnet/core/performance/caching/middleware#conditions-for-caching).
 
-### <a name="data-caching"></a>Memorizzazione nella cache dei dati
+### <a name="data-caching"></a>Memorizzazione dei dati nella cache
 
 Anziché memorizzare nella cache tutte le risposte Web oppure oltre ad abilitare tale funzionalità, è possibile memorizzare nella cache i risultati delle singole query sui dati. A tale scopo, è possibile usare la memorizzazione nella cache in memoria nel server Web, oppure una [cache distribuita](/aspnet/core/performance/caching/distributed). In questa sezione sarà illustrato come implementare la memorizzazione nella cache in memoria.
 

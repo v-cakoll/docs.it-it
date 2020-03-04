@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 4a6c8b27812e9f60e52132169dda0464c24abcc2
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 0aa323533dd9136372c2bbc330c9c3056fdf428c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740570"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157571"
 ---
 # <a name="install-the-net-core-sdk"></a>Installare il .NET Core SDK
 
@@ -35,6 +35,19 @@ Windows dispone di programmi di installazione autonomi che possono essere usati 
 macOS dispone di programmi di installazione autonomi che possono essere usati per installare .NET Core 3,1 SDK:
 
 - [CPU x64 (64 bit)](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+
+## <a name="download-and-manually-install"></a>Scaricare e installare manualmente
+
+In alternativa ai programmi di installazione di macOS per .NET Core, è possibile scaricare e installare manualmente l'SDK.
+
+Per estrarre l'SDK e rendere disponibili i interfaccia della riga di comando di .NET Core comandi nel terminale, [scaricare](#all-net-core-downloads) prima di tutto una versione binaria di .NET Core. Quindi, aprire un terminale ed eseguire i comandi seguenti. Si presuppone che il runtime venga scaricato nel file di `~/Downloads/dotnet-sdk.pkg`.
+
+```bash
+mkdir -p $HOME/dotnet
+sudo installer -pkg ~/Downloads/dotnet-sdk.pkg -target $HOME/dotnet
+export DOTNET_ROOT=$HOME/dotnet
+export PATH=$PATH:$HOME/dotnet
+```
 
 ::: zone-end
 
@@ -79,14 +92,14 @@ Se si usa Visual Studio per sviluppare app .NET Core, nella tabella seguente vie
 
 | Versione .NET Core SDK | Versione di Visual Studio                      |
 | --------------------- | ------------------------------------------ |
-| 3,1                   | Visual Studio 2019 versione 16,4 o successiva. |
+| 3.1                   | Visual Studio 2019 versione 16,4 o successiva. |
 | 3.0                   | Visual Studio 2019 versione 16,3 o successiva. |
 | 2.2                   | Visual Studio 2017 versione 15,9 o successiva. |
 | 2.1                   | Visual Studio 2017 versione 15,7 o successiva. |
 
 Se Visual Studio è già installato, è possibile controllare la versione con i passaggi seguenti.
 
-01. Apri Visual Studio.
+01. Aprire Visual Studio.
 01. Selezionare la **guida** > **informazioni su Microsoft Visual Studio**.
 01. Leggere il numero di versione dalla finestra **di dialogo informazioni su** .
 
@@ -104,6 +117,25 @@ Quando si installa o si modifica Visual Studio, selezionare uno o più dei caric
 - Il carico di lavoro **sviluppo per desktop .NET** nella sezione **Desktop & per dispositivi mobili** .
 
 [![Windows Visual Studio 2019 con carico di lavoro .NET Core](media/install-sdk/windows-install-visual-studio-2019.png)](media/install-sdk/windows-install-visual-studio-2019.png#lightbox)
+
+## <a name="download-and-manually-install"></a>Scaricare e installare manualmente
+
+Per estrarre il runtime e rendere disponibili i interfaccia della riga di comando di .NET Core comandi nel terminale, [scaricare](#all-net-core-downloads) prima di tutto una versione binaria di .NET Core. Quindi, creare una directory in cui eseguire l'installazione, ad esempio `%USERPROFILE%\dotnet`. Estrarre infine il file zip scaricato in tale directory.
+
+Per impostazione predefinita, i comandi e le app di interfaccia della riga di comando di .NET Core non useranno .NET Core installato in questo modo. È necessario scegliere esplicitamente di usarlo. A tale scopo, modificare le variabili di ambiente con cui viene avviata un'applicazione:
+
+```console
+set DOTNET_ROOT=%USERPROFILE%\dotnet
+set PATH=%USERPROFILE%\dotnet;%PATH%
+```
+
+Questo approccio consente di installare più versioni in posizioni separate, quindi scegliere in modo esplicito il percorso di installazione che un'applicazione deve usare eseguendo l'applicazione con le variabili di ambiente che puntano a tale posizione.
+
+Anche quando queste variabili di ambiente sono impostate, .NET Core considera ancora il percorso di installazione globale predefinito quando si seleziona il Framework migliore per l'esecuzione dell'applicazione. Il valore predefinito è in genere `C:\Program Files\dotnet`, che vengono utilizzati dai programmi di installazione. È possibile indicare al runtime di usare solo il percorso di installazione personalizzato impostando anche questa variabile di ambiente:
+
+```console
+set DOTNET_MULTILEVEL_LOOKUP=0
+```
 
 ::: zone-end
 
@@ -186,6 +218,7 @@ Per altre informazioni sull'uso di .NET Core in un contenitore Docker, vedere [I
 
 ::: zone pivot="os-macos"
 
+- [Uso dell'autenticazione di MacOS Catalina](macos-notarization-issues.md).
 - [Esercitazione: Introduzione a MacOS](../tutorials/using-on-mac-vs.md).
 - [Esercitazione: creare una nuova app con Visual Studio Code](../tutorials/with-visual-studio-code.md).
 - [Esercitazione: distribuire un'app .NET Core](../docker/build-container.md).

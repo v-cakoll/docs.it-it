@@ -4,12 +4,12 @@ description: Usare l'operatore predefinito per produrre il valore predefinito di
 ms.date: 08/01/2019
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 651c4698514aee8cf4dab75ea32c98493e19a30b
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: ba4c02caa53a9d532be4012a4543a25cd41b6023
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964613"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239313"
 ---
 # <a name="default-operator-c-reference"></a>Operatore default (Riferimenti per C#)
 
@@ -17,7 +17,7 @@ L'operatore `default` produce il [valore predefinito](../builtin-types/default-v
 
 L'esempio seguente illustra l'utilizzo dell'operatore `default`:
 
-[!code-csharp-interactive[default of T](~/samples/csharp/language-reference/operators/DefaultOperator.cs#WithOperand)]
+[!code-csharp-interactive[default of T](~/samples/snippets/csharp/language-reference/operators/DefaultOperator.cs#WithOperand)]
 
 È anche possibile usare la parola chiave `default` come etichetta case predefinita all'interno di un' [istruzione`switch`](../keywords/switch.md).
 
@@ -32,7 +32,7 @@ A partire da C# 7.1, è possibile usare il valore letterale `default` per produr
 
 L'esempio seguente illustra l'utilizzo del valore letterale `default`:
 
-[!code-csharp-interactive[default literal](~/samples/csharp/language-reference/operators/DefaultOperator.cs#DefaultLiteral)]
+[!code-csharp-interactive[default literal](~/samples/snippets/csharp/language-reference/operators/DefaultOperator.cs#DefaultLiteral)]
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 

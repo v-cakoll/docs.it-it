@@ -14,12 +14,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: 87436b7d9e2041afb14b146ae0c16201c8593154
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b33366922677b26f8fe99454206cacd5bb124f32
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348287"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159273"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Stringhe di formato di data e ora personalizzato
 
@@ -30,7 +30,7 @@ Una stringa di formato di data e ora definisce la rappresentazione di testo di u
 
 Le stringhe di formato data e ora personalizzate possono essere usate sia con valori <xref:System.DateTime> sia con valori <xref:System.DateTimeOffset>.
 
-[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-partial-note.md)] 
+[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-partial-note.md)]
 
 <a name="table"></a> Nelle operazioni di formattazione, le stringhe di formato di data e ora personalizzate possono essere usate con il metodo `ToString` di un'istanza di data e ora o con un metodo che supporta la formattazione composita. Nell'esempio seguente vengono illustrati entrambi gli usi.
 
@@ -398,7 +398,7 @@ L'esempio seguente include l'identificatore di formato personalizzato "M" in una
 [!code-csharp[Formatting.DateAndTime.Custom#11](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#11)]
 [!code-vb[Formatting.DateAndTime.Custom#11](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#11)]
 
-[Torna alla tabella](#table) 
+[Torna alla tabella](#table)
 
 ## <a name="MM_Specifier"></a> Identificatore di formato personalizzato "MM"
 
@@ -629,7 +629,7 @@ I caratteri seguenti in una stringa di formato di data e ora sono riservati e ve
 |-|-|-|-|-|
 |F|H|K|M|d|
 |f|g|h|m|s|
-|u|s|l|%|:|
+|t|y|z|%|:|
 |/|"|'|&#92;||
 
 Tutti gli altri caratteri vengono sempre interpretati come valori letterali carattere e in un'operazione di formattazione vengono inclusi senza modifiche nella stringa di risultato.  In un'operazione di analisi questi caratteri devono corrispondere esattamente ai caratteri nella stringa di input. Il confronto tiene conto di maiuscole e minuscole.
@@ -684,7 +684,7 @@ Nell'esempio seguente viene usato il carattere di escape per impedire che durant
 
 L'impostazione **Opzioni internazionali e della lingua** nel Pannello di controllo influisce sulla stringa di risultato prodotta da un'operazione di formattazione che include molti degli identificatori di formato di data e ora personalizzati. Queste impostazioni vengono usate per inizializzare l'oggetto <xref:System.Globalization.DateTimeFormatInfo> associato alle impostazioni cultura del thread corrente, che fornisce i valori usati per definire la formattazione. Computer con impostazioni diverse generano stringhe di risultato diverse.
 
-Se inoltre viene usato il costruttore <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> per creare un'istanza di un nuovo oggetto <xref:System.Globalization.CultureInfo> che rappresenta le stesse impostazioni cultura delle impostazioni cultura del sistema correnti, le eventuali personalizzazioni definite tramite **Opzioni internazionali e della lingua** nel Pannello di controllo verranno applicate al nuovo oggetto <xref:System.Globalization.CultureInfo> . È possibile usare il costruttore <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> per creare un oggetto <xref:System.Globalization.CultureInfo> che non rifletta le personalizzazioni di un sistema.
+Se inoltre viene usato il costruttore <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> per creare un'istanza di un nuovo oggetto <xref:System.Globalization.CultureInfo> che rappresenta le stesse impostazioni cultura delle impostazioni cultura del sistema correnti, le eventuali personalizzazioni definite tramite **Opzioni internazionali e della lingua** nel Pannello di controllo verranno applicate al nuovo oggetto <xref:System.Globalization.CultureInfo>. È possibile usare il costruttore <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> per creare un oggetto <xref:System.Globalization.CultureInfo> che non rifletta le personalizzazioni di un sistema.
 
 ### <a name="datetimeformatinfo-properties"></a>Proprietà DateTimeFormatInfo
 
@@ -697,6 +697,6 @@ La stringa di risultato prodotta da molti degli identificatori di formato di dat
 - <xref:System.DateTime?displayProperty=nameWithType>
 - <xref:System.IFormatProvider?displayProperty=nameWithType>
 - [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)
-- [Stringhe di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
 - [Esempio: Utilità di formattazione di .NET Core WinForms (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)
 - [Esempio: Utilità di formattazione di .NET Core WinForms (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb)

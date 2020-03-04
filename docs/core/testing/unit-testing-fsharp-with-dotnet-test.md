@@ -4,12 +4,12 @@ description: Informazioni sui concetti relativi agli unit test in .NET Core tram
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.openlocfilehash: 9cf301533046951f8fd3f9829afabadf6bba3d64
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5fe4a8faddd87334439513368f24d808abc58e65
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715435"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157310"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-xunit"></a>Testing unità di librerie F# in .NET Core usando il test dotnet e xUnit
 
@@ -82,7 +82,7 @@ Il layout della soluzione finale è il seguente:
         MathServiceTests.fsproj
 ```
 
-Eseguire `dotnet sln add .\MathService.Tests\MathService.Tests.fsproj` nella directory *Unit-Testing-with-FSharp* . 
+Eseguire `dotnet sln add .\MathService.Tests\MathService.Tests.fsproj` nella directory *Unit-Testing-with-FSharp* .
 
 ## <a name="creating-the-first-test"></a>Creazione del primo test
 
@@ -118,7 +118,7 @@ let squaresOfOdds xs =
     Seq.empty<int>
 ```
 
-Nella directory *unit-test-con-fsharp* eseguire di nuovo `dotnet test`. Il comando `dotnet test` esegue prima una compilazione del progetto `MathService` e quindi del progetto `MathService.Tests`. Dopo la compilazione di entrambi i progetti, verrà eseguito il test singolo, che viene superato.
+Nella directory *unit-test-con-fsharp* eseguire di nuovo `dotnet test`. Il comando `dotnet test` esegue prima una compilazione del progetto `MathService` e quindi del progetto `MathService.Tests`. Dopo la compilazione di entrambi i progetti, verrà eseguito il test singolo, Procede.
 
 ## <a name="completing-the-requirements"></a>Completamento dei requisiti
 
@@ -158,9 +158,9 @@ let ``SquaresOfOdds works`` () =
 let private square x = x * x
 let private isOdd x = x % 2 <> 0
 
-let squaresOfOdds xs = 
-    xs 
-    |> Seq.filter isOdd 
+let squaresOfOdds xs =
+    xs
+    |> Seq.filter isOdd
     |> Seq.map square
 ```
 

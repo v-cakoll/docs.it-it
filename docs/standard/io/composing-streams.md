@@ -13,15 +13,15 @@ helpviewer_keywords:
 - base streams
 - streams, backing stores
 ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
-ms.openlocfilehash: 689cc9537cd7a5fe6a677d42e5790bbcf1b3aefa
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3f18712793254f4942c092c87a3e64c73b492ae0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708148"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160105"
 ---
 # <a name="compose-streams"></a>Comporre flussi
-Un *archivio di backup* è un supporto di archiviazione, ad esempio un disco o la memoria. Ogni tipo di archivio di backup implementa il flusso come implementazione della classe <xref:System.IO.Stream>. 
+Un *archivio di backup* è un supporto di archiviazione, ad esempio un disco o la memoria. Ogni tipo di archivio di backup implementa il flusso come implementazione della classe <xref:System.IO.Stream>.
 
 Ogni tipo di flusso legge e scrive i byte da e nel relativo archivio di backup. I flussi che si connettono agli archivi di backup sono chiamati *flussi di base*. I flussi di base hanno costruttori con i parametri necessari per connettere il flusso all'archivio di backup. <xref:System.IO.FileStream>, ad esempio, ha costruttori che specificano un parametro del percorso, che specifica come il file verrà condiviso dai processi.  
 

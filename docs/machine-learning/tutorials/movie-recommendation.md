@@ -5,18 +5,18 @@ author: briacht
 ms.date: 09/30/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 382683f8b8500a2235a2d610a67119cf9a7fc301
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: a221289d0c232863f03a275c26dce835f2878bf7
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900691"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78241104"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorization-with-mlnet"></a>Esercitazione: creare un Movie Recommender usando la factorzzazione della matrice con ML.NET
 
 In questa esercitazione viene illustrato come creare un sistema di raccomandazione di film con ML.NET in un'applicazione console .NET Core. I passaggi usano C# e Visual Studio 2019.
 
-In questa esercitazione si imparerà a:
+In questa esercitazione verranno illustrate le procedure per:
 > [!div class="checklist"]
 >
 > * Selezionare un algoritmo di Machine Learning
@@ -36,7 +36,7 @@ Per completare questa attività, così come qualsiasi altra attività ML.NET, si
 3. [Valutare il modello](#evaluate-your-model)
 4. [Usare il modello](#use-your-model)
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 * [Visual Studio 2017 versione 15,6 o successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con il carico di lavoro "sviluppo multipiattaforma .NET Core" installato.
 
@@ -48,7 +48,7 @@ I problemi relativi alla raccomandazione, ad esempio la raccomandazione di un el
 
 ### <a name="create-a-project"></a>Creare un progetto
 
-1. Aprire Visual Studio 2017. Selezionare **File** > **Nuovo** > **Progetto** dalla barra dei menu. Nella finestra di dialogo **Nuovo progetto** selezionare il nodo **Visual C#** seguito dal nodo **.NET Core**. Selezionare quindi il modello di progetto **App Console (.NET Core)** . Nella casella di testo **Nome** digitare "MovieRecommender" e quindi selezionare il pulsante **OK**.
+1. Aprire Visual Studio 2017. Selezionare **File** > **Nuovo** > **Progetto** dalla barra dei menu. Nella finestra di dialogo **Nuovo progetto** selezionare il nodo **Visual C#** seguito dal nodo **.NET Core**. Selezionare quindi il modello di progetto **App console (.NET Core)**. Nella casella di testo **Nome** digitare "MovieRecommender" e quindi selezionare il pulsante **OK**.
 
 2. Creare una directory denominata *Data* nel progetto per archiviare il set di dati:
 
@@ -60,7 +60,7 @@ I problemi relativi alla raccomandazione, ad esempio la raccomandazione di un el
 
 4. Aggiungere le istruzioni `using` seguenti all'inizio del file *Program.cs*:
 
-    [!code-csharp[UsingStatements](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#UsingStatements "Add necessary usings")]
+    [!code-csharp[UsingStatements](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#UsingStatements "Add necessary usings")]
 
 ### <a name="download-your-data"></a>Scaricare i dati
 
@@ -96,7 +96,7 @@ Nel Machine Learning le colonne usate per effettuare una previsione sono denomin
 
 In questo caso si vuole prevedere le valutazioni di film, quindi la colonna della valutazione è la colonna `Label`. Le altre tre colonne, `userId`, `movieId` e `timestamp`, sono tutte `Features` usate per la previsione di `Label`.
 
-| Funzionalità      | Label         |
+| Funzionalità      | Etichetta         |
 | ------------- |:-------------:|
 | `userId`        |    `rating`     |
 | `movieId`      |               |
@@ -106,7 +106,7 @@ In questo caso si vuole prevedere le valutazioni di film, quindi la colonna dell
 
 In questo caso è consigliabile eliminare la colonna `timestamp` come `Feature` perché il timestamp in realtà non influisce sulla valutazione di un determinato film da parte di un utente e quindi non contribuisce a effettuare una previsione più accurata:
 
-| Funzionalità      | Label         |
+| Funzionalità      | Etichetta         |
 | ------------- |:-------------:|
 | `userId`        |    `rating`     |
 | `movieId`      |               |
@@ -127,17 +127,17 @@ using Microsoft.ML.Data;
 
 Creare una classe denominata `MovieRating` rimuovendo la definizione di classe esistente e aggiungendo il codice seguente in *MovieRatingData.cs*:
 
-[!code-csharp[MovieRatingClass](~/samples/machine-learning/tutorials/MovieRecommendation/MovieRatingData.cs#MovieRatingClass "Add the Movie Rating class")]
+[!code-csharp[MovieRatingClass](~/samples/snippets/machine-learning/MovieRecommendation/csharp/MovieRatingData.cs#MovieRatingClass "Add the Movie Rating class")]
 
 `MovieRating` specifica una classe di dati di input. L'attributo [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) specifica quali colonne (in base all'indice delle colonne) nel set di dati è necessario caricare. Le colonne `userId` e `movieId` sono le `Features`, ovvero gli input che si forniranno al modello per la previsione di `Label`, e la colonna della valutazione è l'oggetto `Label` di cui si otterrà la previsione, ovvero l'output del modello.
 
 Creare un'altra classe, `MovieRatingPrediction`, per rappresentare i risultati previsti aggiungendo il codice seguente dopo la classe `MovieRating` in *MovieRatingData.cs*:
 
-[!code-csharp[PredictionClass](~/samples/machine-learning/tutorials/MovieRecommendation/MovieRatingData.cs#PredictionClass "Add the Movie Prediction Class")]
+[!code-csharp[PredictionClass](~/samples/snippets/machine-learning/MovieRecommendation/csharp/MovieRatingData.cs#PredictionClass "Add the Movie Prediction Class")]
 
 In *Program.cs* sostituire `Console.WriteLine("Hello World!")` con il codice seguente all'interno di `Main()`:
 
-[!code-csharp[MLContext](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#MLContext "Add MLContext")]
+[!code-csharp[MLContext](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#MLContext "Add MLContext")]
 
 La [classe MLContext](xref:Microsoft.ML.MLContext) è un punto di partenza per tutte le operazioni ML.NET e l'inizializzazione di `mlContext` crea un nuovo ambiente ML.NET che può essere condiviso tra gli oggetti del flusso di lavoro della creazione del modello. Dal punto di vista concettuale è simile a `DBContext` in Entity Framework.
 
@@ -155,7 +155,7 @@ public static (IDataView training, IDataView test) LoadData(MLContext mlContext)
 
 Inizializzare le variabili di percorso dei dati, caricare i dati dai file \*.csv e restituire i dati `Train` e `Test` come oggetti `IDataView` aggiungendo il codice seguente come riga successiva in `LoadData()`:
 
-[!code-csharp[LoadData](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#LoadData "Load data from data paths")]
+[!code-csharp[LoadData](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#LoadData "Load data from data paths")]
 
 I dati in ML.NET sono rappresentati come una [classe IDataView](xref:Microsoft.ML.IDataView). `IDataView` è un modo flessibile ed efficiente di descrivere i dati tabulari (numerici e di testo). È possibile caricare dati da un file di testo o in tempo reale, ad esempio da un database SQL o file di log, in un oggetto `IDataView`.
 
@@ -163,7 +163,7 @@ I dati in ML.NET sono rappresentati come una [classe IDataView](xref:Microsoft.M
 
 Aggiungere il codice seguente nel metodo `Main()` per chiamare il metodo `LoadData()` e restituire i dati `Train` e `Test`:
 
-[!code-csharp[LoadDataMain](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#LoadDataMain "Add LoadData method to Main")]
+[!code-csharp[LoadDataMain](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#LoadDataMain "Add LoadData method to Main")]
 
 ## <a name="build-and-train-your-model"></a>Creare il modello ed eseguirne il training
 
@@ -195,19 +195,19 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 
 Definire le trasformazioni dei dati aggiungendo il codice seguente a `BuildAndTrainModel()`:
 
-[!code-csharp[DataTransformations](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#DataTransformations "Define data transformations")]
+[!code-csharp[DataTransformations](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#DataTransformations "Define data transformations")]
 
 Poiché `userId` e `movieId` rappresentano utenti e titoli di film, non valori reali, viene usato il metodo [MapValueToKey()](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A) per trasformare ogni `userId` e ogni `movieId` in una colonna chiave di tipo numerico `Feature` (un formato accettato dagli algoritmi di raccomandazione) e aggiungerle come nuove colonne del set di dati:
 
-| userId | movieId | Label | userIdEncoded | movieIdEncoded |
+| userId | movieId | Etichetta | userIdEncoded | movieIdEncoded |
 | ------------- |:-------------:| -----:|-----:|-----:|
 | 1 | 1 | 4 | userKey1 | movieKey1 |
-| 1 | 3\. | 4 | userKey1 | movieKey2 |
+| 1 | 3 | 4 | userKey1 | movieKey2 |
 | 1 | 6 | 4 | userKey1 | movieKey3 |
 
 Scegliere l'algoritmo di Machine Learning e aggiungerlo alle definizioni di trasformazione dei dati aggiungendo il codice seguente come riga successiva in `BuildAndTrainModel()`:
 
-[!code-csharp[AddAlgorithm](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#AddAlgorithm "Add the training algorithm with options")]
+[!code-csharp[AddAlgorithm](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#AddAlgorithm "Add the training algorithm with options")]
 
 [MatrixFactorizationTrainer](xref:Microsoft.ML.RecommendationCatalog.RecommendationTrainers.MatrixFactorization%28Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options%29) è l'algoritmo di training della raccomandazione.  La [fattorizzazione di matrice](https://en.wikipedia.org/wiki/Matrix_factorization_(recommender_systems)) è un approccio comune alla raccomandazione quando si hanno a disposizione dati su come gli utenti hanno valutato i prodotti in passato, come nel caso dei set di dati usati in questa esercitazione. Per le situazioni in cui sono disponibili dati diversi, esistono altri algoritmi di raccomandazione. Per altre informazioni, vedere la sezione [Altri algoritmi di raccomandazione](#other-recommendation-algorithms) più avanti in questo articolo.
 
@@ -224,13 +224,13 @@ Il trainer `Matrix Factorization` include diverse [opzioni](xref:Microsoft.ML.Tr
 
 Eseguire il fit del modello ai dati `Train` e restituire il modello sottoposto a training aggiungendo il codice seguente come riga successiva nel metodo `BuildAndTrainModel()`:
 
-[!code-csharp[FitModel](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#FitModel "Call the Fit method and return back the trained model")]
+[!code-csharp[FitModel](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#FitModel "Call the Fit method and return back the trained model")]
 
 Il metodo [Fit()](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Fit%28Microsoft.ML.IDataView,Microsoft.ML.IDataView%29) esegue il training del modello con il set di dati di training specificato. Tecnicamente il metodo esegue le definizioni `Estimator` trasformando i dati e applicando il training, quindi restituisce il modello sottoposto a training, ovvero un `Transformer`.
 
 Aggiungere il codice seguente come riga successiva nel metodo `Main()` per chiamare il metodo `BuildAndTrainModel()` e restituire il modello sottoposto a training:
 
-[!code-csharp[BuildTrainModelMain](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#BuildTrainModelMain "Add BuildAndTrainModel method in Main")]
+[!code-csharp[BuildTrainModelMain](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#BuildTrainModelMain "Add BuildAndTrainModel method in Main")]
 
 ## <a name="evaluate-your-model"></a>Valutare il modello
 
@@ -247,23 +247,23 @@ public static void EvaluateModel(MLContext mlContext, IDataView testDataView, IT
 
 Trasformare i dati `Test` aggiungendo il codice seguente a `EvaluateModel()`:
 
-[!code-csharp[Transform](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#Transform "Transform the test data")]
+[!code-csharp[Transform](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#Transform "Transform the test data")]
 
 Il metodo [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) effettua previsioni per più righe di input specificate di un set di dati di test.
 
 Valutare il modello aggiungendo il codice seguente come riga successiva nel metodo `EvaluateModel()`:
 
-[!code-csharp[Evaluate](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#Evaluate "Evaluate the model using predictions from the test data")]
+[!code-csharp[Evaluate](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#Evaluate "Evaluate the model using predictions from the test data")]
 
 Dopo aver impostato la previsione, il metodo [Evaluate()](xref:Microsoft.ML.RecommendationCatalog.Evaluate%2A) valuta il modello confrontando i valori stimati con gli oggetti `Labels` effettivi presenti nel set di dati di test e restituisce le metriche relative alle prestazioni del modello.
 
 Stampare le metriche di valutazione nella console aggiungendo il codice seguente come riga successiva nel metodo `EvaluateModel()`:
 
-[!code-csharp[PrintMetrics](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#PrintMetrics "Print the evaluation metrics")]
+[!code-csharp[PrintMetrics](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#PrintMetrics "Print the evaluation metrics")]
 
 Aggiungere il codice seguente come riga successiva nel metodo `Main()` per chiamare il metodo `EvaluateModel()`:
 
-[!code-csharp[EvaluateModelMain](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#EvaluateModelMain "Add EvaluateModel method in Main")]
+[!code-csharp[EvaluateModelMain](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#EvaluateModelMain "Add EvaluateModel method in Main")]
 
 A questo punto, l'output dovrebbe avere un aspetto simile al testo seguente:
 
@@ -318,7 +318,7 @@ public static void UseModelForSinglePrediction(MLContext mlContext, ITransformer
 
 Usare `PredictionEngine` per prevedere la valutazione aggiungendo il codice seguente a `UseModelForSinglePrediction()`:
 
-[!code-csharp[PredictionEngine](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#PredictionEngine "Create Prediction Engine")]
+[!code-csharp[PredictionEngine](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#PredictionEngine "Create Prediction Engine")]
 
 [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) è un'API di praticità, che consente di eseguire una stima su una singola istanza di dati. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) non è thread-safe. È accettabile usare in ambienti a thread singolo o prototipi. Per migliorare le prestazioni e thread safety negli ambienti di produzione, usare il servizio `PredictionEnginePool`, che consente di creare un [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) di [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) oggetti da usare nell'applicazione. Vedere questa guida su come [usare `PredictionEnginePool` in un'API Web di ASP.NET Core](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application).
 
@@ -327,7 +327,7 @@ Usare `PredictionEngine` per prevedere la valutazione aggiungendo il codice segu
 
 Creare un'istanza di `MovieRating` denominata `testInput` e passarla al motore di previsione aggiungendo il codice seguente come righe successive nel metodo `UseModelForSinglePrediction()`:
 
-[!code-csharp[MakeSinglePrediction](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#MakeSinglePrediction "Make a single prediction with the Prediction Engine")]
+[!code-csharp[MakeSinglePrediction](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#MakeSinglePrediction "Make a single prediction with the Prediction Engine")]
 
 La funzione [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) effettua una previsione su una singola colonna di dati.
 
@@ -335,11 +335,11 @@ La funzione [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) effet
 
 Per stampare i risultati, aggiungere il codice seguente come righe successive nel metodo `UseModelForSinglePrediction()`:
 
-[!code-csharp[PrintResults](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#PrintResults "Print the recommendation prediction results")]
+[!code-csharp[PrintResults](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#PrintResults "Print the recommendation prediction results")]
 
 Aggiungere il codice seguente come riga successiva nel metodo `Main()` per chiamare il metodo `UseModelForSinglePrediction()`:
 
-[!code-csharp[UseModelMain](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#UseModelMain "Add UseModelForSinglePrediction method in Main")]
+[!code-csharp[UseModelMain](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#UseModelMain "Add UseModelForSinglePrediction method in Main")]
 
 L'output di questo metodo dovrebbe avere un aspetto simile al testo seguente:
 
@@ -363,13 +363,13 @@ public static void SaveModel(MLContext mlContext, DataViewSchema trainingDataVie
 
 Salvare il modello sottoposto a training aggiungendo il codice seguente nel metodo `SaveModel()`:
 
-[!code-csharp[SaveModel](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#SaveModel "Save the model to a zip file")]
+[!code-csharp[SaveModel](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#SaveModel "Save the model to a zip file")]
 
 Questo metodo salva il modello sottoposto a training in un file con estensione zip (nella cartella "Data") che potrà essere successivamente usato in altre applicazioni .NET per effettuare previsioni.
 
 Aggiungere il codice seguente come riga successiva nel metodo `Main()` per chiamare il metodo `SaveModel()`:
 
-[!code-csharp[SaveModelMain](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#SaveModelMain "Create SaveModel method in Main")]
+[!code-csharp[SaveModelMain](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#SaveModelMain "Create SaveModel method in Main")]
 
 ### <a name="use-your-saved-model"></a>Usare il modello salvato
 
@@ -410,13 +410,13 @@ Movie 10 is recommended for user 6
 =============== Saving the model to a file ===============
 ```
 
-La procedura è stata completata. È stato creato un modello di Machine Learning per raccomandare film. È possibile trovare il codice sorgente per questa esercitazione nel repository [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/MovieRecommendation).
+Congratulazioni! È stato creato un modello di Machine Learning per raccomandare film. È possibile trovare il codice sorgente per questa esercitazione nel repository [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/MovieRecommendation).
 
 ## <a name="improve-your-model"></a>Migliorare il modello
 
 È possibile migliorare le prestazioni del modello in diversi modi per ottenere previsioni più accurate.
 
-### <a name="data"></a>Data
+### <a name="data"></a>data
 
 L'aggiunta di altri dati di training con sufficienti esempi per ogni utente e ID film contribuisce a migliorare la qualità del modello di raccomandazione.
 
@@ -468,7 +468,7 @@ I dati usati in questa esercitazione sono derivati dal [set di dati MovieLens](h
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-In questa esercitazione si è appreso come:
+In questa esercitazione sono state illustrate le procedure per:
 
 > [!div class="checklist"]
 >

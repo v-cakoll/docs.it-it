@@ -1,14 +1,14 @@
 ---
 title: Istruzioni C# - Panoramica del linguaggio C#
 description: Le azioni di un programma C# vengono create mediante istruzioni
-ms.date: 11/06/2016
+ms.date: 02/27/2020
 ms.assetid: 5409c379-5622-4fae-88b5-1654276ea8d4
-ms.openlocfilehash: 26b151bc116dde9120757f954bdcf3aee041c5f5
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: ced13b1bfd17977acb98bf33c0a477161cf08a93
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634536"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159104"
 ---
 # <a name="statements"></a>Istruzioni
 
@@ -20,11 +20,11 @@ Le *istruzioni di dichiarazione* vengono usate per dichiarare le costanti e le v
 
 Le *istruzioni di espressione* vengono usate per valutare le espressioni. Le espressioni che possono essere usate come istruzioni includono le chiamate ai metodi, le allocazioni di oggetti mediante l'operatore `new`, le assegnazioni mediante `=` e gli operatori di assegnazione composta, le operazioni di incremento e decremento mediante gli operatori `++` e `--` e le espressioni `await`.
 
-Le *istruzioni di selezione* vengono usate per selezionare una tra più istruzioni che è possibile eseguire sulla base del valore di alcune espressioni. In questo gruppo sono incluse le istruzioni `if` e `switch`.
+Le *istruzioni di selezione* vengono usate per selezionare una tra più istruzioni che è possibile eseguire sulla base del valore di alcune espressioni. Questo gruppo contiene le istruzioni `if` e `switch`.
 
-Le *istruzioni di iterazione* vengono usate per eseguire più volte un'istruzione nidificata. In questo gruppo sono incluse le istruzioni `while`, `do`, `for` e `foreach`.
+Le *istruzioni di iterazione* vengono usate per eseguire più volte un'istruzione nidificata. Questo gruppo contiene le istruzioni `while`, `do`, `for`e `foreach`.
 
-Le *istruzioni di spostamento* vengono usate per trasferire il controllo. In questo gruppo sono incluse le istruzioni `break`, `continue`, `goto`, `throw`, `return` e `yield`.
+Le *istruzioni di spostamento* vengono usate per trasferire il controllo. Questo gruppo contiene le istruzioni `break`, `continue`, `goto`, `throw`, `return`e `yield`.
 
 L'istruzione `try`...`catch` viene usata per rilevare le eccezioni che si verificano durante l'esecuzione di un blocco, mentre l'istruzione `try`...`finally` viene usata per specificare il codice di finalizzazione che viene eseguito sempre, indipendentemente dal fatto che si sia verificata un'eccezione.
 

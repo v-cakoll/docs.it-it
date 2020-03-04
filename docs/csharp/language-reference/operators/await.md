@@ -7,12 +7,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 6dc058f3850e30d8c424d4372c47b127c7d361b6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 156c07561406caed6ebb4a354a5cc2b484c832db
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712741"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239508"
 ---
 # <a name="await-operator-c-reference"></a>Operatore await (Riferimenti per C#)
 
@@ -20,7 +20,7 @@ L'operatore `await` sospende la valutazione del metodo [async](../keywords/async
 
 Nell'esempio seguente il metodo <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> restituisce l'istanza `Task<byte[]>`, che rappresenta un'operazione asincrona che produce una matrice di byte quando viene completata. Fino al completamento dell'operazione, l'operatore `await` sospende il metodo `DownloadDocsMainPageAsync`. Quando `DownloadDocsMainPageAsync` viene sospeso, il controllo viene restituito al metodo `Main`, che è il chiamante di `DownloadDocsMainPageAsync`. Il metodo `Main` viene eseguito fino a quando non è necessario il risultato dell'operazione asincrona eseguita dal metodo `DownloadDocsMainPageAsync`. Quando <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> ottiene tutti i byte, viene valutato il resto del metodo `DownloadDocsMainPageAsync`. Successivamente, viene valutato il resto del metodo `Main`.
 
-[!code-csharp[await example](~/samples/csharp/language-reference/operators/AwaitOperator.cs)]
+[!code-csharp[await example](~/samples/snippets/csharp/language-reference/operators/AwaitOperator.cs)]
 
 Nell'esempio precedente viene usato il [metodo async `Main`](../../programming-guide/main-and-command-args/index.md), che è possibile a C# partire da 7,1. Per altre informazioni, vedere la sezione [Operatore await nel metodo Main](#await-operator-in-the-main-method).
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: 19f74e6835ae555a3a38aa6ca8679948c7f290dd
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 790249c4cc85128f529bd88a4bf27d8b75121aaa
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712754"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239535"
 ---
 # <a name="assignment-operators-c-reference"></a>Operatori di assegnazioneC# (riferimento)
 
@@ -31,13 +31,13 @@ a = (b = c)
 
 L'esempio seguente illustra l'utilizzo dell'operatore di assegnazione con una variabile locale, una proprietà e un elemento indicizzatore come operando sul lato sinistro:
 
-[!code-csharp-interactive[simple assignment](~/samples/csharp/language-reference/operators/AssignmentOperator.cs#Simple)]
+[!code-csharp-interactive[simple assignment](~/samples/snippets/csharp/language-reference/operators/AssignmentOperator.cs#Simple)]
 
 ## <a name="ref-assignment-operator"></a>Operatore di assegnazione ref
 
 A partire da C# 7.3, è possibile usare l'operatore di assegnazione ref `= ref` per riassegnare una variabile [locale ref](../keywords/ref.md#ref-locals) o [locale ref readonly](../keywords/ref.md#ref-readonly-locals). L'esempio seguente illustra l'uso dell'operatore di assegnazione ref:
 
-[!code-csharp[ref assignment operator](~/samples/csharp/language-reference/operators/AssignmentOperator.cs#RefAssignment)]
+[!code-csharp[ref assignment operator](~/samples/snippets/csharp/language-reference/operators/AssignmentOperator.cs#RefAssignment)]
 
 Nel caso dell'operatore di assegnazione Ref, entrambi gli operandi devono essere dello stesso tipo.
 

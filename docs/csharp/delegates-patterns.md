@@ -3,16 +3,16 @@ title: Modelli comuni per i delegati
 description: Informazioni sui modelli comuni per l'uso dei delegati nel codice per evitare l'accoppiamento forte tra i componenti.
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: 174ae4129464c9d2e787048793cec764121ca4aa
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 40e6ced7337e32d6e9b67b12a15ad7e03a77c4b6
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454073"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239872"
 ---
 # <a name="common-patterns-for-delegates"></a>Modelli comuni per i delegati
 
-[Precedente](delegates-strongly-typed.md)
+[Indietro](delegates-strongly-typed.md)
 
 I delegati offrono un meccanismo che consente progettazioni software che comportano un accoppiamento minimo tra i componenti.
 
@@ -54,15 +54,15 @@ In questa progettazione, il componente del log primario può essere una classe n
 
 Per iniziare in modo semplice, l'implementazione iniziale accetterà i nuovi messaggi e li scriverà usando qualsiasi delegato associato. È possibile iniziare con un solo delegato che scrive i messaggi nella console.
 
-[!code-csharp[LoggerImplementation](../../samples/csharp/delegates-and-events/Logger.cs#FirstImplementation "A first Logger implementation.")]
+[!code-csharp[LoggerImplementation](../../samples/snippets/csharp/delegates-and-events/Logger.cs#FirstImplementation "A first Logger implementation.")]
 
 La classe statica precedente è l'elemento più semplice in grado di funzionare. È necessario scrivere la singola implementazione per il metodo che scrive i messaggi nella console: 
 
-[!code-csharp[LogToConsole](../../samples/csharp/delegates-and-events/LoggingMethods.cs#LogToConsole "A Console logger.")]
+[!code-csharp[LogToConsole](../../samples/snippets/csharp/delegates-and-events/LoggingMethods.cs#LogToConsole "A Console logger.")]
 
 Infine, è necessario collegare il delegato associandolo al delegato WriteMessage dichiarato nel logger:
 
-[!code-csharp[ConnectDelegate](../../samples/csharp/delegates-and-events/Program.cs#ConnectDelegate "Connect to the delegate")]
+[!code-csharp[ConnectDelegate](../../samples/snippets/csharp/delegates-and-events/Program.cs#ConnectDelegate "Connect to the delegate")]
 
 ## <a name="practices"></a>Procedure consigliate
 
@@ -78,12 +78,12 @@ Creare una prima versione più affidabile e altri meccanismi di registrazione.
 
 Successivamente, aggiungere alcuni argomenti al metodo `LogMessage()` in modo che la classe del log crei messaggi più strutturati:
 
-[!code-csharp[Severity](../../samples/csharp/delegates-and-events/Logger.cs#Severity "Define severities")]
-[!code-csharp[NextLogger](../../samples/csharp/delegates-and-events/Logger.cs#LoggerTwo "Refine the Logger")]
+[!code-csharp[Severity](../../samples/snippets/csharp/delegates-and-events/Logger.cs#Severity "Define severities")]
+[!code-csharp[NextLogger](../../samples/snippets/csharp/delegates-and-events/Logger.cs#LoggerTwo "Refine the Logger")]
 
 Usare quindi l'argomento `Severity` per filtrare i messaggi inviati all'output del log. 
 
-[!code-csharp[FinalLogger](../../samples/csharp/delegates-and-events/Logger.cs#LoggerFinal "Finish the Logger")]
+[!code-csharp[FinalLogger](../../samples/snippets/csharp/delegates-and-events/Logger.cs#LoggerFinal "Finish the Logger")]
 
 ## <a name="practices"></a>Procedure consigliate
 
@@ -97,11 +97,11 @@ Il componente di log è stato migliorato. Aggiungere un modulo di output che reg
 
 Il logger basato su file è il seguente:
 
-[!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/FileLogger.cs#FileLogger "Log to files")]
+[!code-csharp[FileLogger](../../samples/snippets/csharp/delegates-and-events/FileLogger.cs#FileLogger "Log to files")]
 
 Dopo aver creato questa classe, è possibile crearne un'istanza che associa il relativo metodo LogMessage al componente Logger:
 
-[!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/Program.cs#FileLogger "Log to files")]
+[!code-csharp[FileLogger](../../samples/snippets/csharp/delegates-and-events/Program.cs#FileLogger "Log to files")]
 
 Le due operazioni non si escludono a vicenda. È possibile associare entrambi i metodi di log e generare messaggi nella console e in un file:
 
@@ -153,4 +153,4 @@ Sono state descritte le prime fasi di un componente di log che può essere espan
 
 La classe Logger può apportare qualsiasi numero di miglioramenti o modifiche senza causare modifiche sostanziali. Come qualsiasi altra classe, non è possibile modificare l'API pubblica senza il rischio di modifiche di rilievo. Tuttavia, poiché l'accoppiamento tra il logger e i moduli di output avviene solo tramite il delegato, non vengono usati altri tipi, ad esempio interfacce o classi base. L'accoppiamento è ridotto al minimo.
 
-[avanti](events-overview.md)
+[Avanti](events-overview.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-ms.openlocfilehash: ae0ba0bf15b6a02df5130d34d277322897826697
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b1ec8cfc0f8c6e660d716c51bf3c3387b73a278f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338517"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159312"
 ---
 # <a name="composite-formatting"></a>Formattazione composita
 
@@ -31,7 +31,7 @@ La funzionalità di formattazione composita è supportata da metodi quali i segu
   
 - <xref:System.String.Format%2A?displayProperty=nameWithType>, che restituisce una stringa di risultato formattata.  
   
-- <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, che aggiunge una stringa di risultato formattata a un oggetto <xref:System.Text.StringBuilder>.   
+- <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, che aggiunge una stringa di risultato formattata a un oggetto <xref:System.Text.StringBuilder>.
 - Alcuni overload del metodo di <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, che visualizza una stringa di risultato formattata nella console.  
   
 - Alcuni overload del metodo di <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=nameWithType>, che visualizza una stringa di risultato formattata in un flusso o in un file. Le classi derivate da <xref:System.IO.TextWriter>, come <xref:System.IO.StreamWriter> e <xref:System.Web.UI.HtmlTextWriter>, condividono questa funzionalità.  
@@ -87,9 +87,9 @@ La funzionalità di formattazione composita è supportata da metodi quali i segu
   
 |Tipo o categoria di tipo|Vedere|  
 |---------------------------|---------|  
-|Tipi di data e ora (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Stringhe di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Stringhe di formato di data e ora personalizzato](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
-|Tipi di enumerazione (tutti derivati da <xref:System.Enum?displayProperty=nameWithType>)|[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|  
-|Tipi numerici (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
+|Tipi di data e ora (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
+|Tipi di enumerazione (tutti derivati da <xref:System.Enum?displayProperty=nameWithType>)|[Stringhe di formato di enumerazione](../../../docs/standard/base-types/enumeration-format-strings.md)|  
+|Tipi numerici (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Stringhe di formato numerico standard](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Stringhe di formato numerico personalizzato](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
 |<xref:System.Guid>|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|  
 |<xref:System.TimeSpan>|[Stringhe di formato TimeSpan standard](../../../docs/standard/base-types/standard-timespan-format-strings.md)<br /><br /> [Stringhe di formato TimeSpan personalizzate](../../../docs/standard/base-types/custom-timespan-format-strings.md)|  
   
@@ -164,10 +164,10 @@ La funzionalità di formattazione composita è supportata da metodi quali i segu
 - [Interpolazione di stringhe (C#)](../../csharp/language-reference/tokens/interpolated.md)
 - [Interpolazione di stringhe (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
 - [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)
-- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)
-- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)
-- [Stringhe di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
-- [Stringhe di formato di data e ora personalizzato](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [Stringhe di formato numerico standard](../../../docs/standard/base-types/standard-numeric-format-strings.md)
+- [Stringhe di formato numerico personalizzato](../../../docs/standard/base-types/custom-numeric-format-strings.md)
+- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [Stringhe di formato TimeSpan standard](../../../docs/standard/base-types/standard-timespan-format-strings.md)
 - [Stringhe di formato TimeSpan personalizzate](../../../docs/standard/base-types/custom-timespan-format-strings.md)
-- [Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)
+- [Stringhe di formato di enumerazione](../../../docs/standard/base-types/enumeration-format-strings.md)

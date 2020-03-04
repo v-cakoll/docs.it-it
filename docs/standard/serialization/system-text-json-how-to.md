@@ -9,12 +9,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: fdca8d957bb2453e90652af1dfe5ef99b33b1b2c
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: 8025f84f2425f5b91e08b28ddb24d105d8c4d1a3
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163202"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159585"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>Come serializzare e deserializzare (effettuare il marshalling e unmarshalling) JSON in .NET
 
@@ -61,7 +61,7 @@ Di seguito è riportato un esempio di classe che contiene le raccolte e una clas
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithPOCOs)]
 
-L'output JSON della serializzazione di un'istanza del tipo precedente è simile all'esempio seguente. Per impostazione predefinita, l'output JSON è minimizzati: 
+L'output JSON della serializzazione di un'istanza del tipo precedente è simile all'esempio seguente. Per impostazione predefinita, l'output JSON è minimizzati:
 
 ```json
 {"Date":"2019-08-01T00:00:00-07:00","TemperatureCelsius":25,"Summary":"Hot","DatesAvailable":["2019-08-01T00:00:00-07:00","2019-08-02T00:00:00-07:00"],"TemperatureRanges":{"Cold":{"High":20,"Low":-10},"Hot":{"High":60,"Low":20}},"SummaryWords":["Cool","Windy","Humid"]}
@@ -191,7 +191,7 @@ Per impostazione predefinita, i nomi delle proprietà e le chiavi del dizionario
 * [Converte tutti i nomi di proprietà in Camel case](#use-camel-case-for-all-json-property-names)
 * [Implementare i criteri di denominazione delle proprietà personalizzate](#use-a-custom-json-property-naming-policy)
 * [Converte le chiavi del dizionario in lettere maiuscole](#camel-case-dictionary-keys)
-* [Converte le enumerazioni in stringhe e maiuscole](#enums-as-strings) 
+* [Converte le enumerazioni in stringhe e maiuscole](#enums-as-strings)
 
 Per altri scenari che richiedono una gestione speciale dei nomi e dei valori delle proprietà JSON, è possibile [implementare convertitori personalizzati](system-text-json-converters-how-to.md).
 
@@ -378,11 +378,11 @@ Per escludere tutte le proprietà con valore null, impostare la proprietà <xref
 
 Di seguito è riportato un esempio di oggetto da serializzare e output JSON:
 
-|Gli |Valore  |
+|Proprietà |valore  |
 |---------|---------|
-| Date    | 8/1/2019 12:00:00 AM-07:00|
+| Data    | 8/1/2019 12:00:00 AM-07:00|
 | TemperatureCelsius| 25 |
-| Riepilogo| null|
+| Summary| Null|
 
 ```json
 {
@@ -507,7 +507,7 @@ Nello scenario di esempio precedente, entrambi gli approcci determinano l'inclus
 ```
 
 > [!IMPORTANT]
-> Questi approcci forniscono la serializzazione polimorfica solo per l'oggetto radice da serializzare, non per le proprietà dell'oggetto radice. 
+> Questi approcci forniscono la serializzazione polimorfica solo per l'oggetto radice da serializzare, non per le proprietà dell'oggetto radice.
 
 È possibile ottenere la serializzazione polimorfica per gli oggetti di livello inferiore se vengono definiti come tipo `object`. Si supponga, ad esempio, che la classe `WeatherForecast` disponga di una proprietà denominata `PreviousForecast` che può essere definita come tipo `WeatherForecast` o `object`:
 
@@ -566,7 +566,7 @@ Nell'esempio seguente viene illustrato il codice JSON risultante dal codice prec
 }
 ```
 
-Per ulteriori informazioni sulla **serializzazione**polimorfica e per informazioni sulla **deserializzazione**, vedere [come eseguire la migrazione da Newtonsoft.Json a System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization).
+Per ulteriori informazioni sulla **serializzazione**polimorfica e per informazioni sulla **deserializzazione**, vedere [How to migrate from Newtonsoft. JSON to System. Text. JSON](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization).
 
 ## <a name="allow-comments-and-trailing-commas"></a>Consenti commenti e virgole finali
 
@@ -634,14 +634,14 @@ Se si deserializza il codice JSON mostrato nel tipo visualizzato, le proprietà 
 
 Quando si deserializza il codice JSON illustrato in precedenza in questo tipo di esempio, i dati aggiuntivi diventano coppie chiave-valore della proprietà `ExtensionData`:
 
-|Gli |Valore  |Note  |
+|Proprietà |valore  |Note  |
 |---------|---------|---------|
-| Date    | 8/1/2019 12:00:00 AM-07:00||
+| Data    | 8/1/2019 12:00:00 AM-07:00||
 | TemperatureCelsius| 0 | Mancata corrispondenza tra maiuscole e minuscole (`temperatureCelsius` in JSON), quindi la proprietà non è impostata. |
-| Riepilogo | Alto ||
+| Summary | Accesso frequente ||
 | ExtensionData | temperatureCelsius: 25 |Poiché il caso non corrisponde, questa proprietà JSON è un oggetto aggiuntivo e diventa una coppia chiave-valore nel dizionario.|
 || DatesAvailable:<br>  8/1/2019 12:00:00 AM-07:00<br>8/2/2019 12:00:00 AM-07:00 |Una proprietà aggiuntiva da JSON diventa una coppia chiave-valore, con una matrice come oggetto valore.|
-| |SummaryWords:<br>Comode<br>Ventoso<br>Umido |Una proprietà aggiuntiva da JSON diventa una coppia chiave-valore, con una matrice come oggetto valore.|
+| |SummaryWords:<br>Accesso sporadico<br>Ventoso<br>Umido |Una proprietà aggiuntiva da JSON diventa una coppia chiave-valore, con una matrice come oggetto valore.|
 
 Quando l'oggetto di destinazione viene serializzato, le coppie chiave-valore dei dati di estensione diventano proprietà JSON esattamente come nel codice JSON in ingresso:
 
@@ -712,7 +712,7 @@ L'esempio seguente illustra come usare la classe <xref:System.Text.Json.JsonDocu
 Il codice precedente:
 
 * Presuppone che il codice JSON da analizzare si trovi in una stringa denominata `jsonString`.
-* Calcola un livello medio per gli oggetti in una matrice di `Students` con una proprietà `Grade`. 
+* Calcola un livello medio per gli oggetti in una matrice di `Students` con una proprietà `Grade`.
 * Assegna un livello predefinito di 70 per gli studenti che non hanno un livello.
 * Conta gli studenti incrementando una variabile di `count` a ogni iterazione. In alternativa, è possibile chiamare <xref:System.Text.Json.JsonElement.GetArrayLength%2A>, come illustrato nell'esempio seguente:
 
@@ -732,7 +732,7 @@ Il codice precedente:
 
 * Legge un file JSON, carica i dati in un `JsonDocument`e scrive JSON formattato (abbastanza stampato) in un file.
 * USA <xref:System.Text.Json.JsonDocumentOptions> per specificare che i commenti nel codice JSON di input sono consentiti ma ignorati.
-* Al termine, chiama <xref:System.Text.Json.Utf8JsonWriter.Flush%2A> sul writer. In alternativa, è possibile lasciare che il writer AutoFlush quando viene eliminato. 
+* Al termine, chiama <xref:System.Text.Json.Utf8JsonWriter.Flush%2A> sul writer. In alternativa, è possibile lasciare che il writer AutoFlush quando viene eliminato.
 
 Di seguito è riportato un esempio di input JSON che verrà elaborato dal codice di esempio:
 
@@ -769,7 +769,7 @@ Il codice precedente:
 * Presuppone che il file sia codificato come UTF-16 e lo transcodifichi in UTF-8. Un file codificato come UTF-8 può essere letto direttamente in una `ReadOnlySpan<byte>`, usando il codice seguente:
 
   ```csharp
-  ReadOnlySpan<byte> jsonReadOnlySpan = File.ReadAllBytes(fileName); 
+  ReadOnlySpan<byte> jsonReadOnlySpan = File.ReadAllBytes(fileName);
   ```
 
   Se il file contiene un byte order mark UTF-8 (BOM), rimuoverlo prima di passare i byte al `Utf8JsonReader`, poiché il lettore prevede il testo. In caso contrario, l'indicatore dell'ordine dei byte viene considerato JSON non valido e il lettore genera un'eccezione.

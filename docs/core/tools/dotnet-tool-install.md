@@ -2,18 +2,18 @@
 title: Comando dotnet tool install
 description: Il comando DotNet tool install installa lo strumento .NET Core specificato nel computer.
 ms.date: 02/14/2020
-ms.openlocfilehash: 837d12bc807ad95ccdbd9c0e087c7d45418c6e74
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 641e6a2753b1cf3bfc334ba2495342f7c42421fc
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77626034"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156974"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
 **Questo articolo si applica a:** ✔️ .net core 2,1 SDK e versioni successive
 
-## <a name="name"></a>Name
+## <a name="name"></a>Nome
 
 `dotnet tool install`: installa lo [strumento .NET Core](global-tools.md) specificato nel computer.
 
@@ -38,10 +38,10 @@ Il comando `dotnet tool install` consente di installare gli strumenti di .NET Co
 
 Per impostazione predefinita, gli strumenti globali vengono installati nelle directory seguenti quando si specifica l'opzione `-g` o `--global`:
 
-| Sistema operativo          | Percorso                          |
+| OS          | Path                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
-| WINDOWS     | `%USERPROFILE%\.dotnet\tools` |
+| Windows     | `%USERPROFILE%\.dotnet\tools` |
 
 Gli strumenti locali vengono aggiunti a un file con estensione *JSON dello strumento* in una directory *. config* nella directory corrente. Se un file manifesto non esiste ancora, crearlo eseguendo il comando seguente:
 
@@ -73,7 +73,7 @@ Per ulteriori informazioni, vedere [Install a local Tool](global-tools.md#instal
 
 - **`-g|--global`**
 
-  Specifica che l'installazione è a livello utente. Non può essere usata con l'opzione `--tool-path`. Omettere sia `--global` che `--tool-path` specifica un'installazione dello strumento locale. 
+  Specifica che l'installazione è a livello utente. Non può essere usata con l'opzione `--tool-path`. Omettere sia `--global` che `--tool-path` specifica un'installazione dello strumento locale.
 
 - **`-h|--help`**
 
@@ -81,7 +81,7 @@ Per ulteriori informazioni, vedere [Install a local Tool](global-tools.md#instal
 
 - **`tool-path <PATH>`**
 
-  Specifica il percorso in cui disinstallare lo strumento globale. Il valore di PATH può essere assoluto o relativo. Se PATH non esiste, il comando tenta di creare la variabile. Omettere sia `--global` che `--tool-path` specifica un'installazione dello strumento locale. 
+  Specifica il percorso in cui disinstallare lo strumento globale. Il valore di PATH può essere assoluto o relativo. Se PATH non esiste, il comando tenta di creare la variabile. Omettere sia `--global` che `--tool-path` specifica un'installazione dello strumento locale.
 
 - **`-v|--verbosity <LEVEL>`**
 

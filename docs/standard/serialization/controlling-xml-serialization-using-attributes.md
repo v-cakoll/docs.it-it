@@ -15,12 +15,12 @@ helpviewer_keywords:
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-ms.openlocfilehash: e089924900196ae369de1becfe3d0b8f0a00b79c
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d4e30984a232b17d1f40e300655c519ec1a6e191
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459278"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159910"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>Controllo della serializzazione XML mediante attributi
 
@@ -250,7 +250,7 @@ Un altro modo per differenziare i due flussi XML è quello di utilizzare lo stru
 Se al campo è applicato l'attributo <xref:System.Xml.Serialization.XmlElementAttribute>, lo schema risultante descrive l'elemento nel modo riportato di seguito.
 
 ```xml
-<xs:element minOccurs="0" maxOccurs="unbounded" name="Employees" type="Employee" /> 
+<xs:element minOccurs="0" maxOccurs="unbounded" name="Employees" type="Employee" />
 ```
 
 ## <a name="serializing-an-arraylist"></a>Serializzazione di un ArrayList
@@ -267,7 +267,7 @@ End Class
 
 ```csharp
 public class Group {
-    [XmlElement(Type = typeof(Employee)), 
+    [XmlElement(Type = typeof(Employee)),
     XmlElement(Type = typeof(Manager))]
     public ArrayList Info;
 }
@@ -321,6 +321,6 @@ Potrebbero presentarsi delle situazioni in cui un campo o una proprietà pubblic
 - [Attributi per il controllo della serializzazione SOAP codificata](attributes-that-control-encoded-soap-serialization.md)
 - [Introduzione alla serializzazione XML](introducing-xml-serialization.md)
 - [Esempi di serializzazione XML](examples-of-xml-serialization.md)
-- [Procedura: specificare un nome di elemento alternativo per un flusso XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-- [Procedura: serializzare un oggetto](how-to-serialize-an-object.md)
+- [Procedura: Specificare un nome di elemento alternativo per un flusso XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Procedura: Serializzare un oggetto](how-to-serialize-an-object.md)
 - [Procedura: deserializzare un oggetto](how-to-deserialize-an-object.md)

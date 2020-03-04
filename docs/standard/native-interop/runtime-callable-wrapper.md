@@ -8,12 +8,12 @@ helpviewer_keywords:
 - runtime callable wrappers
 - interoperation with unmanaged code, COM wrappers
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
-ms.openlocfilehash: 70ed4176872e18ccafa00808630fcc51337b8479
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0b448379fba965060fdf3bf067e65374f40d1fc2
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123208"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156010"
 ---
 # <a name="runtime-callable-wrapper"></a>Runtime Callable Wrapper
 Common Language Runtime espone gli oggetti COM tramite un proxy denominato Runtime Callable Wrapper (RCW). Benché l'RCW appaia ai client .NET come un normale oggetto, la sua funzione principale consiste nell'effettuare il marshalling tra un client .NET e un oggetto COM.  
@@ -31,9 +31,9 @@ La figura seguente illustra il processo per accedere a oggetti COM tramite Runti
  Il wrapper standard applica le regole di marshalling incorporate. Quando ad esempio un client .NET passa come parte di un argomento un tipo String a un oggetto gestito, il wrapper converte la stringa in un tipo BSTR. Nel caso in cui l'oggetto COM dovesse restituire un valore di tipo BSTR, il relativo chiamante gestito riceverebbe una stringa. Sia il client che il server inviano e ricevono dati rispettivamente noti. Gli altri tipi non richiedono alcuna conversione. Un wrapper standard, ad esempio, trasferirà sempre un intero di 4 byte tra il codice gestito e quello non gestito senza operare alcuna conversione di tipo.  
   
 ## <a name="marshaling-selected-interfaces"></a>Interfacce sottoposte a marshalling  
- L'obiettivo principale di un oggetto [Runtime Callable Wrapper](runtime-callable-wrapper.md) (RCW) è quello di nascondere le differenze tra i modelli di programmazione gestiti e non gestiti. Per semplificare la transizione, l'RCW usa interfacce COM selezionate senza esporle al client .NET, come illustrato nella figura che segue. 
+ L'obiettivo principale di un oggetto [Runtime Callable Wrapper](runtime-callable-wrapper.md) (RCW) è quello di nascondere le differenze tra i modelli di programmazione gestiti e non gestiti. Per semplificare la transizione, l'RCW usa interfacce COM selezionate senza esporle al client .NET, come illustrato nella figura che segue.
 
- L'immagine seguente illustra le interfacce COM e Runtime Callable Wrapper: 
+ L'immagine seguente illustra le interfacce COM e Runtime Callable Wrapper:
   
  ![Screenshot di Runtime Callable Wrapper con interfacce.](./media/runtime-callable-wrapper/runtime-callable-wrapper-interfaces.gif)  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - compression
 - compress files
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
-ms.openlocfilehash: 6345b467e9ade085a38de6dc9758b1bd99d1ae62
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5aa25e265ed6ffb613e9916414c6f2335a4aaf57
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708102"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159377"
 ---
 # <a name="how-to-compress-and-extract-files"></a>Procedura: Comprimere ed estrarre file
 
@@ -31,9 +31,9 @@ Gli esempi seguenti mostrano alcune delle operazioni che è possibile eseguire c
 
 ## <a name="example-1-create-and-extract-a-zip-file"></a>Esempio 1: creare ed estrarre un file zip
 
-Nell'esempio seguente viene illustrato come creare ed estrarre un file *ZIP* compresso usando la classe <xref:System.IO.Compression.ZipFile>. L'esempio comprime il contenuto di una cartella in un nuovo file *ZIP* e quindi estrae il contenuto in una nuova cartella. 
+Nell'esempio seguente viene illustrato come creare ed estrarre un file *ZIP* compresso usando la classe <xref:System.IO.Compression.ZipFile>. L'esempio comprime il contenuto di una cartella in un nuovo file *ZIP* e quindi estrae il contenuto in una nuova cartella.
 
-Per eseguire l'esempio, creare una cartella *start* nella cartella del programma e copiarvi i file da comprimere. 
+Per eseguire l'esempio, creare una cartella *start* nella cartella del programma e copiarvi i file da comprimere.
 
 Se viene visualizzato l'errore di compilazione "Il nome 'ZipFile' non esiste nel contesto corrente", aggiungere un riferimento all'assembly `System.IO.Compression.FileSystem` nel progetto.
 
@@ -42,13 +42,13 @@ Se viene visualizzato l'errore di compilazione "Il nome 'ZipFile' non esiste nel
 
 ## <a name="example-2-extract-specific-file-extensions"></a>Esempio 2: estrarre estensioni di file specifiche
 
-Il prossimo esempio mostra come eseguire l'iterazione del contenuto di un file *ZIP* esistente ed estrarre i file con estensione *txt*. Usa la classe <xref:System.IO.Compression.ZipArchive> per accedere al file ZIP e la classe <xref:System.IO.Compression.ZipArchiveEntry> per controllare le singole voci. Il metodo di estensione <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A> per l'oggetto <xref:System.IO.Compression.ZipArchiveEntry> è disponibile nella classe <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType>. 
+Il prossimo esempio mostra come eseguire l'iterazione del contenuto di un file *ZIP* esistente ed estrarre i file con estensione *txt*. Usa la classe <xref:System.IO.Compression.ZipArchive> per accedere al file ZIP e la classe <xref:System.IO.Compression.ZipArchiveEntry> per controllare le singole voci. Il metodo di estensione <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A> per l'oggetto <xref:System.IO.Compression.ZipArchiveEntry> è disponibile nella classe <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType>.
 
-Per eseguire l'esempio, inserire un file *ZIP* denominato *result.zip* nella cartella del programma. Quando richiesto, specificare un nome di cartella in cui estrarre i file. 
+Per eseguire l'esempio, inserire un file *ZIP* denominato *result.zip* nella cartella del programma. Quando richiesto, specificare un nome di cartella in cui estrarre i file.
 
 Se viene visualizzato l'errore di compilazione "Il nome 'ZipFile' non esiste nel contesto corrente", aggiungere un riferimento all'assembly `System.IO.Compression.FileSystem` nel progetto.
 
-Se viene visualizzato l'errore "Il tipo 'ZipArchive' è definito in un assembly di cui manca il riferimento", aggiungere un riferimento all'assembly `System.IO.Compression` al progetto. 
+Se viene visualizzato l'errore "Il tipo 'ZipArchive' è definito in un assembly di cui manca il riferimento", aggiungere un riferimento all'assembly `System.IO.Compression` al progetto.
 
 > [!IMPORTANT]
 > Quando si decomprimono i file, è necessario cercare percorsi dannosi che possono sfuggire alla directory in cui si esegue la decompressione. Si tratta di un attacco noto come attacco path traversal. L'esempio seguente illustra come verificare la presenza di percorsi file dannosi e offre un metodo sicuro per la decompressione.

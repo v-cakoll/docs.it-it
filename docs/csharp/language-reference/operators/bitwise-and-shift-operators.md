@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: a9f507ecdfced5b044b9d6338f723f53b1b4c4b7
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: a6319cbbbe8a691f5d2a01a13a5abfa2550b3705
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115834"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239521"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Operatori di scorrimento e bit per bit (Riferimenti per C#)
 
@@ -54,7 +54,7 @@ Le operazioni di scorrimento non causano mai overflow e producono gli stessi ris
 
 L'operatore `~` produce un complemento bit per bit del relativo operando invertendo ogni bit:
 
-[!code-csharp-interactive[bitwise NOT](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseComplement)]
+[!code-csharp-interactive[bitwise NOT](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseComplement)]
 
 È anche possibile usare il simbolo `~` per dichiarare i finalizzatori. Per altre informazioni, vedere [Finalizzatori](../../programming-guide/classes-and-structs/destructors.md).
 
@@ -64,11 +64,11 @@ L'operatore `<<` sposta l'operando sinistro a sinistra del [numero di bit defini
 
 L'operazione di scorrimento a sinistra rimuove i bit più significativi che non rientrano nell'intervallo del tipo di risultato e imposta le posizioni dei bit vuoti meno significativi su zero, come illustrato nell'esempio seguente:
 
-[!code-csharp-interactive[left shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShift)]
+[!code-csharp-interactive[left shift](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShift)]
 
 Poiché gli operatori di scorrimento sono definiti solo per i tipi `int`, `uint`, `long` e `ulong`, il risultato di un'operazione contiene almeno 32 bit. Se l'operando di sinistra e di un tipo integrale diverso (`sbyte`, `byte`, `short`, `ushort` o `char`), il relativo valore viene convertito nel tipo `int`, come illustrato nell'esempio seguente:
 
-[!code-csharp-interactive[left shift with promotion](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShiftPromoted)]
+[!code-csharp-interactive[left shift with promotion](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShiftPromoted)]
 
 Per informazioni su come l'operando di destra dell'operatore `<<` definisce il conteggio degli scorrimenti, vedere la sezione [Conteggio degli scorrimenti degli operatori di scorrimento](#shift-count-of-the-shift-operators).
 
@@ -78,17 +78,17 @@ L'operatore `>>` sposta l'operando sinistro a destra del [numero di bit definito
 
 L'operazione di scorrimento a destra rimuove i bit meno significativi, come illustrato nell'esempio seguente:
 
-[!code-csharp-interactive[right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#RightShift)]
+[!code-csharp-interactive[right shift](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#RightShift)]
 
 Le posizioni dei bit vuoti più significativi vengono impostate in base al tipo dell'operando di sinistra come segue:
 
 - Se l'operando sinistro è di tipo `int` o `long`, l'operatore di spostamento a destra esegue un turno *aritmetico* : il valore del bit più significativo (il bit di segno) dell'operando di sinistra viene propagato nelle posizioni di bit vuote di ordine superiore. Vale a dire, le posizioni dei bit vuoti più significativi vengono impostate su zero se l'operando di sinistra è un valore non negativo e impostate su uno se è negativo.
 
-  [!code-csharp-interactive[arithmetic right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ArithmeticRightShift)]
+  [!code-csharp-interactive[arithmetic right shift](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ArithmeticRightShift)]
 
 - Se l'operando sinistro è di tipo `uint` o `ulong`, l'operatore di spostamento a destra esegue un spostamento *logico* : le posizioni dei bit vuote di ordine superiore sono sempre impostate su zero.
 
-  [!code-csharp-interactive[logical right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LogicalRightShift)]
+  [!code-csharp-interactive[logical right shift](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LogicalRightShift)]
 
 Per informazioni su come l'operando di destra dell'operatore `>>` definisce il conteggio degli scorrimenti, vedere la sezione [Conteggio degli scorrimenti degli operatori di scorrimento](#shift-count-of-the-shift-operators).
 
@@ -96,7 +96,7 @@ Per informazioni su come l'operando di destra dell'operatore `>>` definisce il c
 
 L'operatore `&` calcola l'AND logico bit per bit dei relativi operandi:
 
-[!code-csharp-interactive[bitwise AND](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseAnd)]
+[!code-csharp-interactive[bitwise AND](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseAnd)]
 
 Per `bool` operandi, l'operatore di `&` calcola l'operatore [and logico](boolean-logical-operators.md#logical-and-operator-) degli operandi. L'operatore unario `&` è l'[operatore address-of](pointer-related-operators.md#address-of-operator-).
 
@@ -104,7 +104,7 @@ Per `bool` operandi, l'operatore di `&` calcola l'operatore [and logico](boolean
 
 L'operatore `^` calcola l'OR esclusivo logico bit per bit, chiamato anche XOR logico bit per bit, dei relativi operandi:
 
-[!code-csharp-interactive[bitwise XOR](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseXor)]
+[!code-csharp-interactive[bitwise XOR](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseXor)]
 
 Per `bool` operandi, l'operatore di `^` calcola l' [OR esclusivo logico](boolean-logical-operators.md#logical-exclusive-or-operator-) degli operandi.
 
@@ -112,7 +112,7 @@ Per `bool` operandi, l'operatore di `^` calcola l' [OR esclusivo logico](boolean
 
 L'operatore `|` calcola l'OR logico bit per bit dei relativi operandi:
 
-[!code-csharp-interactive[bitwise OR](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseOr)]
+[!code-csharp-interactive[bitwise OR](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseOr)]
 
 Per `bool` operandi, l'operatore `|` calcola l' [OR logico](boolean-logical-operators.md#logical-or-operator-) degli operandi.
 
@@ -134,13 +134,13 @@ con la differenza che `x` viene valutato una sola volta.
 
 L'esempio seguente illustra l'uso dell'assegnazione composta con gli operatori di scorrimento e bit per bit:
 
-[!code-csharp-interactive[compound assignment](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignment)]
+[!code-csharp-interactive[compound assignment](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignment)]
 
-A causa delle [promozioni numeriche](~/_csharplang/spec/expressions.md#numeric-promotions) il risultato dell'operazione `op` potrebbe non essere convertibile in modo implicito nel tipo `T` di `x`. In questo caso, se `op` è un operatore già definito e il risultato dell'operazione è convertibile in modo esplicito nel tipo `T` di `x`, un'espressione di assegnazione composta nel formato `x op= y` equivale a `x = (T)(x op y)`, con la differenza che `x` viene valutato una sola volta. L'esempio seguente illustra questo comportamento:
+In ragione delle [promozioni numeriche](~/_csharplang/spec/expressions.md#numeric-promotions) il risultato dell'operazione `op` potrebbe non essere convertibile in modo implicito nel tipo `T` di `x`. In questo caso, se `op` è un operatore già definito e il risultato dell'operazione è convertibile in modo esplicito nel tipo `T` di `x`, un'espressione di assegnazione composta nel formato `x op= y` equivale a `x = (T)(x op y)`, con la differenza che `x` viene valutato una sola volta. L'esempio seguente illustra questo comportamento:
 
-[!code-csharp-interactive[compound assignment with cast](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignmentWithCast)]
+[!code-csharp-interactive[compound assignment with cast](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignmentWithCast)]
 
-## <a name="operator-precedence"></a>Precedenza tra gli operatori
+## <a name="operator-precedence"></a>Precedenza degli operatori
 
 Nell'elenco seguente gli operatori di scorrimento e bit per bit sono ordinati dalla precedenza più elevata a quella più bassa:
 
@@ -152,7 +152,7 @@ Nell'elenco seguente gli operatori di scorrimento e bit per bit sono ordinati da
 
 Usare le parentesi, `()`, per cambiare l'ordine di valutazione imposto dalla precedenza tra gli operatori:
 
-[!code-csharp-interactive[operator precedence](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#Precedence)]
+[!code-csharp-interactive[operator precedence](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#Precedence)]
 
 Per l'elenco completo degli C# operatori ordinati in base al livello di precedenza, vedere la sezione [precedenza](index.md#operator-precedence) degli [ C# operatori](index.md) dell'articolo operatori.
 
@@ -168,7 +168,7 @@ Per le espressioni `x << count` e `x >> count`, il conteggio effettivo degli sco
 
 L'esempio seguente illustra questo comportamento:
 
-[!code-csharp-interactive[shift count example](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ShiftCount)]
+[!code-csharp-interactive[shift count example](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ShiftCount)]
 
 > [!NOTE]
 > Come illustrato nell'esempio precedente, il risultato di un'operazione di spostamento può essere diverso da zero, anche se il valore dell'operando destro è maggiore del numero di bit nell'operando sinistro.

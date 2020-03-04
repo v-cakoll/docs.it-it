@@ -12,29 +12,29 @@ helpviewer_keywords:
 - Equals method
 - collections [.NET Framework], comparisons
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
-ms.openlocfilehash: fc6972061994e17c2176d3ab278b8d2b37c725ee
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3360652f22ed39ccfd99f9863052fe584b78562f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711389"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159260"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>Confronti e ordinamenti all'interno delle raccolte
 Le classi <xref:System.Collections> eseguono confronti in quasi tutti i processi di gestione delle raccolte, ricercando l'elemento da rimuovere o restituendo il valore di una coppia chiave-valore.  
   
  Le raccolte in genere usano un operatore di uguaglianza e/o un confronto di ordinamento. Vengono usati due costrutti per i confronti.  
   
-<a name="BKMK_Checkingforequality"></a>   
+<a name="BKMK_Checkingforequality"></a>
 ## <a name="checking-for-equality"></a>Verifica dell'uguaglianza  
- I metodi come `Contains`, <xref:System.Collections.IList.IndexOf%2A>, <xref:System.Collections.Generic.List%601.LastIndexOf%2A>e `Remove` usano un confronto di uguaglianza per gli elementi della raccolta. Se la raccolta è generica, viene verificata l'uguaglianza degli elementi secondo le istruzioni seguenti:  
+ I metodi come `Contains`, <xref:System.Collections.IList.IndexOf%2A>, <xref:System.Collections.Generic.List%601.LastIndexOf%2A> e `Remove` usano un confronto di uguaglianza per gli elementi della raccolta. Se la raccolta è generica, viene verificata l'uguaglianza degli elementi secondo le istruzioni seguenti:  
   
 - Se il tipo T implementa l'interfaccia generica <xref:System.IEquatable%601> , il confronto di uguaglianza è il metodo <xref:System.IEquatable%601.Equals%2A> di tale interfaccia.  
   
-- Se il tipo T non implementa <xref:System.IEquatable%601>, viene usato <xref:System.Object.Equals%2A?displayProperty=nameWithType> .  
+- Se il tipo T non implementa <xref:System.IEquatable%601>, viene usato <xref:System.Object.Equals%2A?displayProperty=nameWithType>.  
   
  Inoltre, alcuni overload del costruttore per le raccolte dizionario accettano un'implementazione di <xref:System.Collections.Generic.IEqualityComparer%601>, che viene usata per confrontare l'uguaglianza delle chiavi. Per un esempio, vedere il costruttore <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A?displayProperty=nameWithType> .  
   
-<a name="BKMK_Determiningsortorder"></a>   
+<a name="BKMK_Determiningsortorder"></a>
 ## <a name="determining-sort-order"></a>Determinare il tipo di ordinamento  
  I metodi come `BinarySearch` e `Sort` usano un confronto di ordinamento per gli elementi della raccolta. È possibile eseguire il confronto tra gli elementi della raccolta o tra un elemento e un valore specificato. Per confrontare gli oggetti, esiste il concetto di `default comparer` e `explicit comparer`.  
   
@@ -50,7 +50,7 @@ Le classi <xref:System.Collections> eseguono confronti in quasi tutti i processi
   
  L'impostazione cultura corrente del sistema può influenzare i confronti e gli ordinamenti all'interno di una raccolta. Per impostazione predefinita, i confronti e gli ordinamenti nelle classi **Collections** classi sono dipendenti dalle impostazioni cultura. Per ignorare l'impostazione cultura e quindi ottenere risultati coerenti di confronto e ordinamento, usare il <xref:System.Globalization.CultureInfo.InvariantCulture%2A> con gli overload dei membri che accettano un <xref:System.Globalization.CultureInfo>. Per altre informazioni, vedere [Performing Culture-Insensitive String Operations in Collections](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) e [Performing Culture-Insensitive String Operations in Arrays](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md).  
   
-<a name="BKMK_Equalityandsortexample"></a>   
+<a name="BKMK_Equalityandsortexample"></a>
 ## <a name="equality-and-sort-example"></a>Esempio di uguaglianza e ordinamento  
  Nel codice seguente viene illustrata un'implementazione di <xref:System.IEquatable%601> e <xref:System.IComparable%601> su un semplice oggetto business. Inoltre, quando l'oggetto viene memorizzato in un elenco e ordinato, la chiamata al metodo <xref:System.Collections.Generic.List%601.Sort> risulterà nell'uso dell'operatore di confronto predefinito per il tipo `Part` e il metodo <xref:System.Collections.Generic.List%601.Sort%28System.Comparison%7B%600%7D%29> implementato usando un metodo anonimo.  
   

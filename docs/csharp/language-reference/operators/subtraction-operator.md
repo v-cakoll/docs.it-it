@@ -12,12 +12,12 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: 775f06b05d75078e53ab777d09713d69467ace14
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ccf3572df99f5c3de127c9ada690a977843648af
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712611"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78238845"
 ---
 # <a name="--and---operators-c-reference"></a>Operatori - e -= (Riferimenti per C#)
 
@@ -31,17 +31,17 @@ Per gli operandi dello stesso tipo [delegato](../builtin-types/reference-types.m
 
 - Se entrambi gli operandi sono diversi da Null e l'elenco chiamate dell'operando di destra è un sottoelenco contiguo dell'elenco chiamate dell'operando di sinistra, il risultato dell'operazione è un nuovo elenco chiamate ottenuto rimuovendo le voci dell'operando di destra dall'elenco di chiamate dell'operando di sinistra. Se l'elenco dell'operando di destra corrisponde a più sottoelenchi contigui nell'elenco dell'operando di sinistra, viene rimosso solo il sottoelenco corrispondente più a destra. Se la rimozione restituisce un elenco vuoto, il risultato è `null`.
 
-  [!code-csharp-interactive[delegate removal](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemoval)]
+  [!code-csharp-interactive[delegate removal](~/samples/snippets/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemoval)]
 
 - Se l'elenco chiamate dell'operando di destra non è un sottoelenco contiguo dell'elenco chiamate dell'operando di sinistra, il risultato dell'operazione è l'operando di sinistra. La rimozione di un delegato che non fa parte del delegato multicast, ad esempio, non produce alcun risultato e il delegato multicast rimane invariato.
 
-  [!code-csharp-interactive[delegate removal with no effect](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalNoChange)]
+  [!code-csharp-interactive[delegate removal with no effect](~/samples/snippets/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalNoChange)]
 
   L'esempio precedente dimostra anche che, durante la rimozione del delegato, vengono confrontate le istanze del delegato. I delegati prodotti dalla valutazione di [espressioni lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) identiche, ad esempio, non sono uguali. Per altre informazioni sull'uguaglianza dei delegati, vedere la sezione [Delegare gli operatori di uguaglianza](~/_csharplang/spec/expressions.md#delegate-equality-operators) dell'articolo [Specifiche del linguaggio C#](~/_csharplang/spec/introduction.md).
 
 - Se l'operando di sinistra è `null`, il risultato dell'operazione è `null`. Se l'operando di destra è `null`, il risultato dell'operazione è l'operando di sinistra.
 
-  [!code-csharp-interactive[delegate removal and null](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalAndNull)]
+  [!code-csharp-interactive[delegate removal and null](~/samples/snippets/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalAndNull)]
 
 Per combinare i delegati, usare l'[operatore `+`](addition-operator.md#delegate-combination).
 
@@ -65,7 +65,7 @@ con la differenza che `x` viene valutato una sola volta.
 
 Nell'esempio seguente viene illustrato l'uso dell'operatore `-=`:
 
-[!code-csharp-interactive[-= examples](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#SubtractAndAssign)]
+[!code-csharp-interactive[-= examples](~/samples/snippets/csharp/language-reference/operators/SubtractionOperator.cs#SubtractAndAssign)]
 
 È anche possibile usare l'operatore `-=` per specificare un metodo del gestore eventi quando si elimina la sottoscrizione a un [evento](../keywords/event.md). Per ulteriori informazioni, vedere [come sottoscrivere e annullare la sottoscrizione di eventi](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: acb83be9b20a155b6b6a9fb5ade38e099f54e71d
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: 660a2831aa6a807486fc47eae880bcd11347c547
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163592"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159546"
 ---
 # <a name="json-serialization-and-deserialization-marshalling-and-unmarshalling-in-net---overview"></a>Serializzazione e deserializzazione JSON (marshalling e unmarshalling) in .NET-Panoramica
 
@@ -22,7 +22,7 @@ Lo spazio dei nomi `System.Text.Json` fornisce funzionalità per la serializzazi
 
 La progettazione della libreria enfatizza le prestazioni elevate e l'allocazione di memoria insufficiente su un set di funzionalità esteso. Il supporto incorporato di UTF-8 ottimizza il processo di lettura e scrittura del testo JSON codificato come UTF-8, ovvero la codifica più prevalente per i dati sul Web e sui file su disco.
 
-La libreria fornisce inoltre le classi per l'utilizzo di un modello DOM (Document Object Model) in memoria. Questa funzionalità consente l'accesso casuale in sola lettura degli elementi in una stringa o in un file JSON. 
+La libreria fornisce inoltre le classi per l'utilizzo di un modello DOM (Document Object Model) in memoria. Questa funzionalità consente l'accesso casuale in sola lettura degli elementi in una stringa o in un file JSON.
 
 ## <a name="how-to-get-the-library"></a>Come ottenere la libreria
 

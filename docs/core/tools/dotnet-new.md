@@ -2,25 +2,25 @@
 title: Comando dotnet new
 description: Il comando dotnet new consente di creare nuovi progetti .NET Core in base al modello specificato.
 ms.date: 02/13/2020
-ms.openlocfilehash: f11512acf5a1fdc4bde49b3d1212ccf6335dff8b
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: d3c609419596b123f5bfb3ca85cf292a61154a70
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451330"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157219"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
 **Questo articolo si applica a:** ✔️ .net core 2,0 SDK e versioni successive
 
-## <a name="name"></a>Name
+## <a name="name"></a>Nome
 
 `dotnet new`: crea un nuovo progetto, un file di configurazione o una soluzione sulla base del modello specificato.
 
 ## <a name="synopsis"></a>Riepilogo
 
 ```dotnetcli
-dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install] [-lang|--language] [-n|--name] 
+dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install] [-lang|--language] [-n|--name]
     [--nuget-source] [-o|--output] [-u|--uninstall] [--update-apply] [--update-check] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
@@ -47,7 +47,7 @@ Questo comando chiama il [motore del modello](https://github.com/dotnet/templati
 
   Il comando contiene un elenco predefinito di modelli. Usare `dotnet new -l` per ottenere un elenco dei modelli disponibili. Nella tabella seguente sono illustrati i modelli preinstallati con la .NET Core SDK. Il linguaggio predefinito per il modello è indicato tra parentesi quadre. Fare clic sul collegamento nome breve per visualizzare le opzioni specifiche del modello.
 
-| Modelli                                    | Nome breve                      | Lingua:     | Tag                                  | Introdotte |
+| Modelli                                    | Nome breve                      | Linguaggio     | Tag                                  | Introdotte |
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
 | Applicazione console                          | [console](#console)             | [C#], F#, VB | Comune/Console                        | 1.0        |
 | Libreria di classi                                | [classlib](#classlib)           | [C#], F#, VB | Comune/Library                        | 1.0        |
@@ -63,25 +63,25 @@ Questo comando chiama il [motore del modello](https://github.com/dotnet/templati
 | Elemento di test NUnit 3                            | `nunit-test`                    | [C#], F#, VB | Test/NUnit                            | 2.2        |
 | Progetto di test xUnit                           | [xUnit](#test)                  | [C#], F#, VB | Test/xUnit                            | 1.0        |
 | Componente Razor                              | `razorcomponent`                | [C#]         | Web/ASP.NET                           | 3.0        |
-| Pagina Razor                                   | [page](#page)                   | [C#]         | Web/ASP.NET                           | 2        |
-| MVC ViewImports                              | [viewimports](#namespace)       | [C#]         | Web/ASP.NET                           | 2        |
-| MVC ViewStart                                | `viewstart`                     | [C#]         | Web/ASP.NET                           | 2        |
+| Pagina Razor                                   | [page](#page)                   | [C#]         | Web/ASP.NET                           | 2.0        |
+| MVC ViewImports                              | [viewimports](#namespace)       | [C#]         | Web/ASP.NET                           | 2.0        |
+| MVC ViewStart                                | `viewstart`                     | [C#]         | Web/ASP.NET                           | 2.0        |
 | App Server Blazer                            | [blazorserver](#blazorserver)   | [C#]         | Web/Blazer                            | 3.0        |
 | Progetto ASP.NET Core vuoto                           | [web](#web)                     | [C#], F#     | Web/Vuoto                             | 1.0        |
 | App Web ASP.NET Core (Model-View-Controller) | [mvc](#web-options)             | [C#], F#     | Web/MVC                               | 1.0        |
 | App Web ASP.NET Core                         | [WebApp, Razor](#web-options)   | [C#]         | Web/MVC/Razor Pages                   | 2,2, 2,0   |
-| ASP.NET Core con Angular                    | [angolare](#spa)                 | [C#]         | Web/MVC/SPA                           | 2        |
-| ASP.NET Core con React.js                   | [React](#spa)                   | [C#]         | Web/MVC/SPA                           | 2        |
-| ASP.NET Core con React.js e Redux         | [reactredux](#reactredux)       | [C#]         | Web/MVC/SPA                           | 2        |
+| ASP.NET Core con Angular                    | [angolare](#spa)                 | [C#]         | Web/MVC/SPA                           | 2.0        |
+| ASP.NET Core con React.js                   | [React](#spa)                   | [C#]         | Web/MVC/SPA                           | 2.0        |
+| ASP.NET Core con React.js e Redux         | [reactredux](#reactredux)       | [C#]         | Web/MVC/SPA                           | 2.0        |
 | Libreria di classi Razor                          | [razorclasslib](#razorclasslib) | [C#]         | Web/Razor/Libreria/Libreria di classi Razor | 2.1        |
 | API Web ASP.NET Core                         | [webapi](#webapi)               | [C#], F#     | Web/WebAPI                            | 1.0        |
 | Servizio ASP.NET Core gRPC                    | [grpc](#web-others)             | [C#]         | Web/gRPC                              | 3.0        |
 | File buffer del protocollo                         | [proto](#namespace)             |              | Web/gRPC                              | 3.0        |
-| file gitignore DotNet                        | `gitignore`                     |              | Config                                | 3.0        |
-| File global.json                             | [globaljson](#globaljson)       |              | Config                                | 2        |
-| Configurazione NuGet                                 | `nugetconfig`                   |              | Config                                | 1.0        |
-| file manifesto dello strumento locale DotNet              | `tool-manifest`                 |              | Config                                | 3.0        |
-| Configurazione Web                                   | `webconfig`                     |              | Config                                | 1.0        |
+| file gitignore DotNet                        | `gitignore`                     |              | File di configurazione                                | 3.0        |
+| File global.json                             | [globaljson](#globaljson)       |              | File di configurazione                                | 2.0        |
+| Configurazione NuGet                                 | `nugetconfig`                   |              | File di configurazione                                | 1.0        |
+| file manifesto dello strumento locale DotNet              | `tool-manifest`                 |              | File di configurazione                                | 3.0        |
+| Configurazione Web                                   | `webconfig`                     |              | File di configurazione                                | 1.0        |
 | File di soluzione                                | `sln`                           |              | Soluzione                              | 1.0        |
 
 ## <a name="options"></a>Opzioni
@@ -96,7 +96,7 @@ Questo comando chiama il [motore del modello](https://github.com/dotnet/templati
 
 - **`-h|--help`**
 
-  Stampa la Guida per il comando. Può essere richiamato per il comando `dotnet new` stesso o per qualsiasi modello. Ad esempio, `dotnet new mvc --help`.
+  Stampa la Guida per il comando. Può essere richiamato per il comando `dotnet new` stesso o per qualsiasi modello. Ad esempio: `dotnet new mvc --help`.
 
 - **`-i|--install <PATH|NUGET_ID>`**
 
@@ -115,7 +115,7 @@ Questo comando chiama il [motore del modello](https://github.com/dotnet/templati
   Linguaggio del modello da creare. Il linguaggio accettato varia a seconda del modello. Vedere i valori predefiniti nella sezione [Argomenti](#arguments). Non è valido per alcuni modelli.
 
   > [!NOTE]
-  > Alcune shell interpretano `#` come un carattere speciale. In questi casi, racchiudere il valore del parametro Language tra virgolette. Ad esempio, `dotnet new console -lang "F#"`.
+  > Alcune shell interpretano `#` come un carattere speciale. In questi casi, racchiudere il valore del parametro Language tra virgolette. Ad esempio: `dotnet new console -lang "F#"`.
 
 - **`-n|--name <OUTPUT_NAME>`**
 
@@ -155,7 +155,7 @@ Questo comando chiama il [motore del modello](https://github.com/dotnet/templati
 
 Per ogni modello di progetto potrebbero essere disponibili opzioni aggiuntive. I modelli principali includono le opzioni aggiuntive seguenti:
 
-### <a name="console"></a>del fornitore
+### <a name="console"></a>console
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -174,7 +174,7 @@ Per ogni modello di progetto potrebbero essere disponibili opzioni aggiuntive. I
 
   Per un elenco delle versioni C# predefinite, vedere [defaults](../../csharp/language-reference/configure-language-version.md#defaults).
 
-- **`--no-restore`** 
+- **`--no-restore`**
 
   Se specificato, non esegue un ripristino implicito durante la creazione del progetto. Disponibile a partire da .NET Core 2,2 SDK.
 
@@ -202,7 +202,7 @@ Per ogni modello di progetto potrebbero essere disponibili opzioni aggiuntive. I
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Specifica il [Framework](../../standard/frameworks.md) di destinazione. Il valore predefinito è `netcoreapp3.1`. Disponibile a partire da .NET Core 3,1 SDK. 
+  Specifica il [Framework](../../standard/frameworks.md) di destinazione. Il valore predefinito è `netcoreapp3.1`. Disponibile a partire da .NET Core 3,1 SDK.
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -234,7 +234,7 @@ Per ogni modello di progetto potrebbero essere disponibili opzioni aggiuntive. I
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Specifica il [Framework](../../standard/frameworks.md) di destinazione. Il valore predefinito è `netcoreapp3.1`. Disponibile a partire da .NET Core 3,1 SDK. 
+  Specifica il [Framework](../../standard/frameworks.md) di destinazione. Il valore predefinito è `netcoreapp3.1`. Disponibile a partire da .NET Core 3,1 SDK.
 
 - **`--exclude-launch-settings`**
 
@@ -503,7 +503,7 @@ Per ogni modello di progetto potrebbero essere disponibili opzioni aggiuntive. I
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
-  Tipo di autenticazione da utilizzare. Disponibile a partire da .NET Core 3.0 SDK. 
+  Tipo di autenticazione da utilizzare. Disponibile a partire da .NET Core 3.0 SDK.
   
   I valori possibili sono:
 
@@ -512,7 +512,7 @@ Per ogni modello di progetto potrebbero essere disponibili opzioni aggiuntive. I
 
 - **`--exclude-launch-settings`**
 
-  Esclude *launchSettings. JSON* dal modello generato. 
+  Esclude *launchSettings. JSON* dal modello generato.
 
 - **`--no-restore`**
 
@@ -544,7 +544,7 @@ Per ogni modello di progetto potrebbero essere disponibili opzioni aggiuntive. I
 
 - **`--exclude-launch-settings`**
 
-  Esclude *launchSettings. JSON* dal modello generato. 
+  Esclude *launchSettings. JSON* dal modello generato.
 
 - **`-f|--framework <FRAMEWORK>`**
 

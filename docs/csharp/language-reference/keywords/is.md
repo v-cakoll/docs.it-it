@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 1a1f539e80f8d843f40640fa798cf6122f316a9f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a72f3b87e7558c594ef8a94bd0eadcc4664206b9
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715242"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239651"
 ---
 # <a name="is-c-reference"></a>is (Riferimenti per C#)
 
@@ -36,7 +36,7 @@ Quando si usa il criterio del tipo per eseguire i criteri di ricerca, `is` verif
    expr is type varname
 ```
 
-dove *expr* è un'espressione che restituisce un'istanza di un tipo, *type* è il nome del tipo in cui il risultato di *expr* deve essere convertito e *varname* è l'oggetto in cui il risultato di *expr*deve essere convertito se il test `is` è `true`. 
+Dove *expr* è un'espressione che restituisce un'istanza di un tipo, *Type* è il nome del tipo in cui il risultato di *expr* deve essere convertito e *VarName* è l'oggetto in cui il risultato di *expr* viene convertito se il `is` test è `true`. 
 
 L'espressione `is` è `true` se *expr* non è `null` e una delle condizioni seguenti è true:
 
@@ -70,7 +70,7 @@ Il codice equivalente senza criteri di ricerca richiede un'assegnazione separata
 
 ### <a name="constant-pattern"></a>Criterio costante
 
-Quando si eseguono criteri di ricerca con il criterio costante, `is` verifica se un'espressione è uguale a una costante specificata. In C# 6 e versioni precedenti, il criterio costante è supportato per l'istruzione [switch](switch.md). A partire da C# 7.0 è supportato anche dall'istruzione `is`. La sintassi è la seguente:
+Quando si eseguono criteri di ricerca con il criterio costante, `is` verifica se un'espressione è uguale a una costante specificata. In C# 6 e versioni precedenti, il criterio costante è supportato per l'istruzione [switch](switch.md). A partire da C# 7.0 è supportato anche dall'istruzione `is`. La relativa sintassi è la seguente:
 
 ```csharp
    expr is constant
@@ -78,7 +78,7 @@ Quando si eseguono criteri di ricerca con il criterio costante, `is` verifica se
 
 dove *expr* è l'espressione da valutare e *constant* è il valore da testare. *constant* può essere una delle espressioni costanti seguenti:
 
-- Un valore letterale.
+- Valore letterale.
 
 - Il nome di una variabile `const` dichiarata.
 
@@ -94,7 +94,7 @@ Nell'esempio seguente vengono combinati i criteri di tipo e costante per verific
 
 [!code-csharp[is#7](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern7.cs#7)]
 
-Verifica che `null` possa essere eseguito usando il criterio costante. La parola chiave `null` è supportata dall'istruzione `is`. La sintassi è la seguente:
+Verifica che `null` possa essere eseguito usando il criterio costante. La parola chiave `null` è supportata dall'istruzione `is`. La relativa sintassi è la seguente:
 
 ```csharp
    expr is null
@@ -106,15 +106,21 @@ L'esempio seguente illustra un confronto di controlli `null`:
 
 ### <a name="var-pattern"></a>Criterio var
 
-Il criterio `var` è applicabile a qualsiasi tipo o valore. Il valore di *expr* viene sempre assegnato a una variabile locale dello stesso tipo del tipo della fase di compilazione di *expr*. Il risultato dell'espressione `is` è sempre `true`. La sintassi è la seguente:
+Una corrispondenza con il modello di `var` ha sempre esito positivo. La relativa sintassi è la seguente:
 
 ```csharp
    expr is var varname
 ```
 
-Nell'esempio seguente viene usato il criterio var per assegnare un'espressione a una variabile denominata `obj`. Viene quindi visualizzato il valore e il tipo di `obj`.
+Dove il valore di *expr* viene sempre assegnato a una variabile locale denominata *VarName*. *VarName* è una variabile dello stesso tipo del tipo in fase di compilazione di *expr*. 
+
+Se *expr* restituisce `null`, l'espressione `is` produce `true` e assegna `null` a *VarName*. Il modello var è uno dei pochi usi di `is` che produce `true` per un valore di `null`.
+
+È possibile usare il modello di `var` per creare una variabile temporanea in un'espressione booleana, come illustrato nell'esempio seguente:
 
 [!code-csharp[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
+
+Nell'esempio precedente, la variabile temporanea viene utilizzata per archiviare il risultato di un'operazione costosa. La variabile può quindi essere usata più volte.
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
   

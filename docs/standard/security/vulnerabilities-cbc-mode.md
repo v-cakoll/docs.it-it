@@ -3,16 +3,16 @@ title: Vulnerabilità della decrittografia CBC
 description: Informazioni su come rilevare e attenuare le vulnerabilità temporali con la decrittografia simmetrica della modalità CBC (Cipher-Block-Chaining) usando la spaziatura interna.
 ms.date: 06/12/2018
 author: blowdart
-ms.openlocfilehash: 87f8e3c53e4d06f6a4edc7670891ac83ec8d65ab
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4616ef9015b47ff232a17f058c7a0f1449f42e81
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705847"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159962"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Vulnerabilità di temporizzazione con decrittografia simmetrica modalità CBC usando il riempimento
 
-Microsoft ritiene che non sia più sicuro decrittografare i dati crittografati con la modalità CBC (Cipher-Block-Chaining) della crittografia simmetrica quando è stata applicata la spaziatura verificabile senza prima verificare l'integrità del testo crittografato, ad eccezione di quelli specifici circostanze. Questo giudizio è basato sulla ricerca crittografica attualmente nota. 
+Microsoft ritiene che non sia più sicuro decrittografare i dati crittografati con la modalità CBC (Cipher-Block-Chaining) della crittografia simmetrica quando è stata applicata la spaziatura verificabile senza prima verificare l'integrità del testo crittografato, ad eccezione di quelli specifici circostanze. Questo giudizio è basato sulla ricerca crittografica attualmente nota.
 
 ## <a name="introduction"></a>Introduzione
 
@@ -28,7 +28,7 @@ Le crittografie basate su blocchi hanno un'altra proprietà, denominata mode, ch
 
 Un utente malintenzionato può utilizzare una spaziatura interna Oracle, in combinazione con il modo in cui i dati CBC sono strutturati, per inviare messaggi leggermente modificati al codice che espone Oracle e per restare in attesa dell'invio dei dati fino a quando Oracle non indica che i dati sono corretti. Da questa risposta, l'autore dell'attacco può decrittografare il byte del messaggio per byte.
 
-Le reti di computer moderne hanno una qualità elevata che un utente malintenzionato può rilevare le differenze minime (meno di 0,1 ms) nel tempo di esecuzione nei sistemi remoti. Le applicazioni che presuppongono una corretta decrittografia possono verificarsi solo quando i dati non sono stati manomessi possono essere vulnerabili ad attacchi da strumenti progettati per osservare le differenze di decrittografia con esito positivo e negativo. Questa differenza di tempo può essere più significativa in alcune lingue o librerie rispetto ad altre, ora si ritiene che si tratti di una minaccia pratica per tutte le lingue e le librerie quando viene presa in considerazione la risposta dell'applicazione a un errore.
+Le reti di computer moderne hanno una qualità elevata che un utente malintenzionato può rilevare le differenze minime (meno di 0,1 ms) nel tempo di esecuzione nei sistemi remoti.Le applicazioni che presuppongono una corretta decrittografia possono verificarsi solo quando i dati non sono stati manomessi possono essere vulnerabili ad attacchi da strumenti progettati per osservare le differenze di decrittografia con esito positivo e negativo. Questa differenza di tempo può essere più significativa in alcune lingue o librerie rispetto ad altre, ora si ritiene che si tratti di una minaccia pratica per tutte le lingue e le librerie quando viene presa in considerazione la risposta dell'applicazione a un errore.
 
 Questo attacco si basa sulla possibilità di modificare i dati crittografati e di testare il risultato con Oracle. L'unico modo per attenuare completamente l'attacco consiste nel rilevare le modifiche apportate ai dati crittografati e rifiutare di eseguire azioni su di essa. Il modo standard per eseguire questa operazione consiste nel creare una firma per i dati e convalidare tale firma prima di eseguire qualsiasi operazione. La firma deve essere verificabile, non può essere creata dall'utente malintenzionato. in caso contrario, modifica i dati crittografati, quindi calcola una nuova firma in base ai dati modificati. Un tipo comune di firma appropriata è noto come codice HMAC (chiave-hash Message Authentication Code). Un HMAC differisce da un checksum in quanto accetta una chiave privata, nota solo alla persona che produce l'HMAC e alla persona che la convalida. Senza il possesso della chiave, non è possibile produrre un HMAC corretto. Quando si ricevono i dati, si accettano i dati crittografati, si calcola in modo indipendente il HMAC usando la chiave privata e la condivisione del mittente, quindi si confronta il HMAC inviato rispetto a quello calcolato. Questo confronto deve essere un tempo costante, in caso contrario è stato aggiunto un altro Oracle rilevabile, che consente un tipo diverso di attacco.
 
@@ -68,7 +68,7 @@ Inizialmente gli attacchi pratici si basavano su servizi che restituivano codici
 
 Se lo schema di crittografia usa una firma e la verifica della firma viene eseguita con un runtime fisso per una data lunghezza dei dati (indipendentemente dal contenuto), l'integrità dei dati può essere verificata senza emettere informazioni a un utente malintenzionato tramite un [canale laterale](https://en.wikipedia.org/wiki/Side-channel_attack). Poiché il controllo di integrità rifiuta tutti i messaggi manomessi, la minaccia Oracle di riempimento viene mitigata.
 
-## <a name="guidance"></a>Informazioni aggiuntive
+## <a name="guidance"></a>Materiale sussidiario
 
 Prima di tutto, Microsoft consiglia che tutti i dati con riservatezza devono essere trasmessi tramite Transport Layer Security (TLS), il successore di Secure Sockets Layer (SSL).
 

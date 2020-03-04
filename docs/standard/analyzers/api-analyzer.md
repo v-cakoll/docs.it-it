@@ -4,12 +4,12 @@ description: Informazioni su come l'analizzatore di API .NET consente di rilevar
 author: oliag
 ms.date: 02/20/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: f6cf2d8109c564447972afd18c6d6d587711304b
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: e214c91f2beebc7f3b3324f4879deba9a5623f86
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77542624"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156134"
 ---
 # <a name="net-api-analyzer"></a>Analizzatore di API .NET
 
@@ -47,7 +47,7 @@ L'analizzatore di API usa codici di errore specifici dell'API che iniziano con D
    3. Selezionare **Includi versione preliminare**.
    4. Cercare **Microsoft. dotnet. Analyzers. Compatibility**.
    5. Selezionare il pacchetto nell'elenco.
-   6. Selezionare il pulsante **Installa**. 
+   6. Selezionare il pulsante **Installa**.
    7. Selezionare il pulsante **OK** nella finestra di dialogo **Anteprima modifiche** e quindi selezionare il pulsante **Accetto** nella finestra di dialogo **Accettazione della licenza** se si accettano le condizioni di licenza per i pacchetti elencati.
 
 ### <a name="use-the-api-analyzer"></a>Usare l'analizzatore di API
@@ -56,24 +56,24 @@ Quando un'API deprecata, ad esempio <xref:System.Net.WebClient>, viene usata nel
 
 !["Screenshot dell'API WebClient API con sottolineatura ondulata verde e lampadina a sinistra"](media/api-analyzer/green-squiggle.jpg)
 
-La finestra **Elenco errori** contiene avvisi con un ID univoco per ogni API deprecata, come illustrato nell'esempio seguente (`DE004`): 
+La finestra **Elenco errori** contiene avvisi con un ID univoco per ogni API deprecata, come illustrato nell'esempio seguente (`DE004`):
 
 !["Screenshot della finestra di Elenco errori che mostra l'ID e la descrizione dell'avviso"](media/api-analyzer/warnings-id-and-descriptions.jpg "Elenco errori finestra che include avvisi.")
 
 Facendo clic sull'ID si passa a una pagina Web con informazioni dettagliate sul motivo per cui l'API è stata deprecata e suggerimenti per le API alternative utilizzabili.
 
-Tutti gli avvisi possono essere eliminati facendo clic con il pulsante destro del mouse sul membro evidenziato e scegliendo **Elimina \<ID diagnostica>** . Esistono due modi per eliminare gli avvisi: 
+Tutti gli avvisi possono essere eliminati facendo clic con il pulsante destro del mouse sul membro evidenziato e scegliendo **Elimina \<ID diagnostica>**. Esistono due modi per eliminare gli avvisi:
 
 - [in locale (nell'origine)](#suppress-warnings-locally)
 - [a livello globale (in un file di eliminazione)](#suppress-warnings-globally) - scelta consigliata
 
 ### <a name="suppress-warnings-locally"></a>Non visualizzare gli avvisi localmente
 
-Per eliminare gli avvisi in locale, fare clic con il pulsante destro del mouse sul membro per cui si vogliono eliminare gli avvisi e quindi scegliere **Azioni rapide e refactoring** > **Elimina *ID diagnostica*\<ID diagnostica>**  > **nell'origine**. La direttiva del preprocessore [#pragma warning](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) viene aggiunta al codice sorgente nell'ambito definito: !["Screenshot di codice evidenziato con #pragma warning disable"](media/api-analyzer/suppress-in-source.jpg)
+Per eliminare gli avvisi in locale, fare clic con il pulsante destro del mouse sul membro per cui si vogliono eliminare gli avvisi e quindi scegliere **Azioni rapide e refactoring** > **Elimina *ID diagnostica*\<ID diagnostica>** > **nell'origine**. La direttiva del preprocessore [#pragma warning](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) viene aggiunta al codice sorgente nell'ambito definito: !["Screenshot di codice evidenziato con #pragma warning disable"](media/api-analyzer/suppress-in-source.jpg)
 
 ### <a name="suppress-warnings-globally"></a>Non visualizzare avvisi a livello globale
 
-Per eliminare gli avvisi a livello globale, fare clic con il pulsante destro del mouse sul membro per cui si vogliono eliminare gli avvisi e quindi scegliere **Azioni rapide e refactoring** > **Elimina *ID diagnostica*\<ID diagnostica>**  > **nel file di eliminazione**.
+Per eliminare gli avvisi a livello globale, fare clic con il pulsante destro del mouse sul membro per cui si vogliono eliminare gli avvisi e quindi scegliere **Azioni rapide e refactoring** > **Elimina *ID diagnostica*\<ID diagnostica>** > **nel file di eliminazione**.
 
 !["Screenshot dell'API WebClient API con sottolineatura ondulata verde e lampadina a sinistra"](media/api-analyzer/suppress-in-sup-file.jpg)
 

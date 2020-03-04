@@ -3,12 +3,12 @@ title: Automatizzare il training del modello con l'interfaccia della riga di com
 description: Informazioni su come usare lo strumento dell'interfaccia della riga di comando ML.NET per eseguire automaticamente il training del modello migliore dalla riga di comando.
 ms.date: 12/17/2019
 ms.custom: how-to
-ms.openlocfilehash: ffcdba28fcb73a02f5d4726075588fe3b7789375
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 9c493b1df0dd326ad2f0a5d1cac0fc11d7cf37e2
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740129"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240623"
 ---
 # <a name="automate-model-training-with-the-mlnet-cli"></a>Automatizzare il training del modello con l'interfaccia della riga di comando ML.NET
 
@@ -21,17 +21,17 @@ L'interfaccia della riga di comando di ML.NET semplifica questo processo usando 
 > [!NOTE]
 > Questo argomento fa riferimento all'**interfaccia della riga di comando** ML.NET e alla funzionalità di Machine Learning automatico (**AutoML**), attualmente in anteprima, e il materiale può essere soggetto a modifiche.
 
-## <a name="what-is-the-mlnet-command-line-interface-cli"></a>Informazioni sull'interfaccia della riga di comando (CLI) ML.NET
+## <a name="what-is-the-mlnet-command-line-interface-cli"></a>Che cos'è l'interfaccia della riga di comando di ML.NET?
 
-L'interfaccia della riga di comando di ML.NET è uno strumento globale dotnet. Una volta installato, è possibile assegnare un set di dati di training a un'attività di machine learning e un modello ML.NET, nonché C# il codice da eseguire per usare il modello nell'applicazione.
+L'interfaccia della riga di comando di ML.NET è uno [strumento di .NET Core](../core/tools/global-tools.md). Una volta eseguita l'installazione, viene assegnata un'attività di machine learning e un set di dati di training e viene generato un modello C# ml.NET, nonché il codice da eseguire per usare il modello nell'applicazione.
 
-Come illustra l'immagine che segue, è facile generare un modello ML.NET di buona qualità (file ZIP di modello serializzato) e il codice C# di esempio per eseguire/assegnare un punteggio al modello. Viene anche generato automaticamente il codice C# per creare/eseguire il training del modello in modo da ricercare l'algoritmo e le impostazioni usate per il "modello ottimale" generato.
+Come illustrato nella figura seguente, è semplice generare un modello ML.NET di qualità elevata (file con estensione zip del modello serializzato) più il codice C# di esempio per eseguire/assegnare un punteggio al modello. Viene anche generato automaticamente il codice C# per creare/eseguire il training del modello in modo da ricercare l'algoritmo e le impostazioni usate per il "modello ottimale" generato.
 
 ![image](media/automate-training-with-cli/cli-high-level-process.png "Motore AutoML che funziona nell'interfaccia della riga di comando di ML.NET")
 
-Poiché questi asset si possono generare dal proprio set di dati senza scrivere alcun codice, è possibile migliorare la produttività anche se si conosce già ML.NET.
+Poiché è possibile generare questi asset dal proprio set di dati senza scrivere alcun codice, è possibile migliorare la produttività anche se si conosce già ML.NET.
 
-Attualmente, le attività di Machine Learning supportate dall'interfaccia della riga di comando di ML.NET sono:
+Attualmente, le attività di apprendimento automatico supportate dall'interfaccia della riga di comando ML.NET sono:
 
 - `binary-classification`
 - `multiclass-classification`
@@ -44,7 +44,7 @@ Esempio di utilizzo:
 mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
 ```
 
-![immagine](media/automate-training-with-cli/cli-model-generation.gif)
+![image](media/automate-training-with-cli/cli-model-generation.gif)
 
 È possibile eseguire la funzionalità come si esegue *Windows PowerShell*, *bash di macOS/Linux o una *finestra di comando di Windows*. Tuttavia, il completamento automatico in formato tabella (suggerimento dei parametri) non funzionerà nella *finestra di comando di Windows*.
 
@@ -58,23 +58,23 @@ Il comando `auto-train` dell'interfaccia della riga di comando genera gli asset 
   - Il codice C# con il codice di training usato per generare il modello (a scopo di apprendimento o nuovo training del modello).
 - File di log con informazioni su tutte le iterazioni e gli sweep eseguiti su più algoritmi valutati, inclusa la configurazione/pipeline dettagliata.
 
-I primi due asset possono essere usati direttamente nelle app degli utenti finali (app Web ASP.NET Core, servizi, app desktop e così via) per effettuare previsioni con il modello di Machine Learning generato.
+I primi due asset possono essere usati direttamente nelle app degli utenti finali (app Web ASP.NET Core, servizi, app desktop, ecc.) per effettuare previsioni con il modello di Machine Learning generato.
 
 Il terzo asset, ovvero il codice di training, indica quale codice API ML.NET è stato usato dall'interfaccia della riga di comando per eseguire il training del modello generato, in modo che sia possibile ripetere il training del modello ed esaminare il formatore/algoritmo e gli iperparametri specifici selezionati in background dall'interfaccia della riga di comando e dalla funzionalità AutoML.
 
 ## <a name="understanding-the-quality-of-the-model"></a>Informazioni sulla qualità del modello
 
-Quando si genera un "modello ottimale" con lo strumento dell'interfaccia della riga di comando vengono visualizzate metriche relative alla qualità, ad esempio accuratezza e R quadrato, in base all'attività di apprendimento automatico che interessa.
+Quando si genera un modello "migliore" con lo strumento dell'interfaccia della riga di comando, vengono visualizzate le metriche qualitative (ad esempio l'accuratezza e il quadrato R) in base alle esigenze dell'attività ML di destinazione.
 
-Nel riepilogo che segue le metriche sono raggruppate per attività di apprendimento automatico per consentire all'utente di comprendere la qualità del "modello ottimale" generato automaticamente.
+Queste metriche vengono riepilogate raggruppate per attività di Machine Learning, in modo che sia possibile comprendere la qualità del "modello migliore" generato automaticamente.
 
 ### <a name="metrics-for-binary-classification-models"></a>Metriche per i modelli di classificazione binaria
 
 Di seguito è visualizzato l'elenco delle metriche delle attività di apprendimento automatico per la classificazione binaria dei primi cinque modelli individuati dall'interfaccia della riga di comando:
 
-![immagine](media/automate-training-with-cli/cli-binary-classification-metrics.png)
+![image](media/automate-training-with-cli/cli-binary-classification-metrics.png)
 
-L'accuratezza è una metrica molto diffusa per i problemi di classificazione, tuttavia non è sempre la metrica più adatta per selezionare il modello ottimale, come spiegato di seguito. Vi sono casi in cui è necessario valutare la qualità del modello con metriche supplementari.
+L'accuratezza è una metrica diffusa per i problemi di classificazione, tuttavia l'accuratezza non è sempre la metrica migliore per selezionare il modello migliore da come illustrato nei riferimenti seguenti. Vi sono casi in cui è necessario valutare la qualità del modello con metriche supplementari.
 
 Per esplorare e comprendere le metriche restituite dall'interfaccia della riga di comando, vedere [metriche di valutazione per la classificazione binaria](resources/metrics.md#evaluation-metrics-for-binary-classification).
 
@@ -82,7 +82,7 @@ Per esplorare e comprendere le metriche restituite dall'interfaccia della riga d
 
 Di seguito è visualizzato l'elenco delle metriche delle attività di apprendimento automatico per la classificazione multiclasse dei primi cinque modelli individuati dall'interfaccia della riga di comando:
 
-![immagine](media/automate-training-with-cli/cli-multiclass-classification-metrics.png)
+![image](media/automate-training-with-cli/cli-multiclass-classification-metrics.png)
 
 Per esplorare e comprendere le metriche restituite dall'interfaccia della riga di comando, vedere [metriche di valutazione per la classificazione multiclasse](resources/metrics.md#evaluation-metrics-for-multi-class-classification).
 
@@ -90,9 +90,9 @@ Per esplorare e comprendere le metriche restituite dall'interfaccia della riga d
 
 Un modello di regressione risulta adatto ai dati se le differenze tra i valori osservati e valori stimati del modello sono ridotti e non distorti. La regressione può essere valutata con alcune metriche.
 
-Verrà visualizzato un elenco simile di metriche per i primi cinque modelli di qualità ottimale individuati dall'interfaccia della riga di comando. In questo caso particolare, correlato a un'attività di regressione dell'apprendimento automatico:
+Verrà visualizzato un elenco simile di metriche per i primi cinque modelli di qualità trovati dall'interfaccia della riga di comando. In questo caso particolare, correlato a un'attività di regressione dell'apprendimento automatico:
 
-![immagine](media/automate-training-with-cli/cli-regression-metrics.png)
+![image](media/automate-training-with-cli/cli-regression-metrics.png)
 
 Per esplorare e comprendere le metriche restituite dall'interfaccia della riga di comando, vedere [metriche di valutazione per la regressione](resources/metrics.md#evaluation-metrics-for-regression-and-recommendation).
 
@@ -101,4 +101,4 @@ Per esplorare e comprendere le metriche restituite dall'interfaccia della riga d
 - [Come installare lo strumento dell'interfaccia della riga comando ML.NET](how-to-guides/install-ml-net-cli.md)
 - [Esercitazione: analizzare i sentimenti usando l'interfaccia della riga di comando di ML.NET](tutorials/sentiment-analysis-cli.md)
 - [Informazioni di riferimento sui comandi dell'interfaccia della riga di comando ML.NET](reference/ml-net-cli-reference.md)
-- [Telemetria nell'interfaccia della riga di comando ML.NET](resources/ml-net-cli-telemetry.md)
+- [Telemetria nell'interfaccia della riga di comando di ML.NET](resources/ml-net-cli-telemetry.md)

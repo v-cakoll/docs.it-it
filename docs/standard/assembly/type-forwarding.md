@@ -8,17 +8,17 @@ ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: 7b9fd4e89d1d3290dfc17f52de392c4ee9092d02
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 215636a9617a2723d8ab69640c1d3e69491a7d87
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138589"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160365"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>Inoltro dei tipi in Common Language Runtime
 L'inoltro dei tipi consente di spostare un tipo in un altro assembly senza dover ricompilare le applicazioni in cui viene utilizzato l'assembly originale.  
   
- Si supponga, ad esempio, che un'applicazione utilizzi la classe `Example` in un assembly denominato *Utility. dll*. Gli sviluppatori di *Utility. dll* potrebbero decidere di effettuare il refactoring dell'assembly e nel processo potrebbero spostare la classe `Example` in un altro assembly. Se la versione precedente di *Utility. dll* viene sostituita dalla nuova versione di *Utility. dll* e dall'assembly complementare, l'applicazione che usa la classe `Example` non riesce perché non è in grado di individuare la classe `Example` nella nuova versione di *Utility. dll* .  
+ Si supponga, ad esempio, che un'applicazione utilizzi la classe `Example` in un assembly denominato *Utility. dll*. Gli sviluppatori di *Utility. dll* potrebbero decidere di effettuare il refactoring dell'assembly e nel processo potrebbero spostare la classe `Example` in un altro assembly. Se la versione precedente di *Utility. dll* viene sostituita dalla nuova versione di *Utility. dll* e dall'assembly complementare, l'applicazione che usa la classe `Example` non riesce perché non è in grado di individuare la classe `Example` nella nuova versione di *Utility. dll*.  
   
  Gli sviluppatori di *Utility. dll* possono evitare questo problema tramite l'invio di richieste per la classe `Example`, usando l'attributo <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>. Se l'attributo è stato applicato alla nuova versione di *Utility. dll*, le richieste per la classe `Example` vengono inviate all'assembly che ora contiene la classe. e l'applicazione esistente continuerà a funzionare normalmente, senza ricompilazione.  
   
@@ -29,19 +29,19 @@ L'inoltro dei tipi consente di spostare un tipo in un altro assembly senza dover
  La procedura di inoltro dei tipi prevede quattro passaggi:  
   
 1. Spostare il codice sorgente del tipo dall'assembly originale nell'assembly di destinazione.  
-   
+
 2. Nell'assembly in cui solitamente si trova il tipo usato, aggiungere un <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> per il tipo che è stato spostato. Nel codice riportato di seguito viene illustrato l'attributo per un tipo denominato `Example` che è stato spostato.  
-   
+
    ```cpp  
     [assembly:TypeForwardedToAttribute(Example::typeid)]  
    ```
-   
+
    ```csharp  
     [assembly:TypeForwardedToAttribute(typeof(Example))]  
    ```  
-   
+
 3. Compilare l'assembly in cui è ora contenuto il tipo.  
-   
+
 4. Ricompilare l'assembly originale del tipo, con un riferimento all'assembly in cui è ora contenuto il tipo. Se, ad esempio, si compila un C# file dalla riga di comando, utilizzare l'opzione [-Reference (C# opzioni del compilatore)](../../csharp/language-reference/compiler-options/reference-compiler-option.md) per specificare l'assembly contenente il tipo. In C++ utilizzare la direttiva [#using](/cpp/preprocessor/hash-using-directive-cpp) nel file di origine per specificare l'assembly contenente il tipo.  
   
 ## <a name="see-also"></a>Vedere anche

@@ -2,12 +2,12 @@
 title: Personalizzazione del marshalling dei parametri - .NET
 description: Informazioni su come personalizzare il modo in cui .NET effettua il marshalling dei parametri in una rappresentazione nativa.
 ms.date: 01/18/2019
-ms.openlocfilehash: 36fb8c105a8836d77b862095a616de3ba641073c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ff646ad942cf051ce90cd75b24c8562e536182d9
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706361"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159611"
 ---
 # <a name="customizing-parameter-marshaling"></a>Personalizzazione del marshalling dei parametri
 
@@ -21,10 +21,10 @@ Quando il comportamento di marshalling dei parametri predefinito del runtime .NE
 
 Ognuno di questi formati passa una stringa con terminazione Null al codice nativo. Si differenziano per la codifica della stringa nativa.
 
-| Valore di `System.Runtime.InteropServices.UnmanagedType` | Encoding |
+| Valore della proprietà `System.Runtime.InteropServices.UnmanagedType` | Codifica |
 |------------------------------------------------------|----------|
 | LPStr | ANSI |
-| LPUTF8Str | UTF-8 | 
+| LPUTF8Str | UTF-8 |
 | LPWStr | UTF-16 |
 | LPTStr | UTF-16 |
 

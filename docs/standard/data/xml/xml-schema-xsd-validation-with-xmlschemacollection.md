@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ad0b5717-3d32-41ad-a4d7-072c3e492b82
-ms.openlocfilehash: 1ab6dec2b99b01db04333c5d47176e40ed033fa7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 994153ba93848ebb120f23bdf6a979462a65142d
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709894"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159481"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>Convalida XSD (XML Schema) con XmlSchemaCollection
 È possibile usare il tipo <xref:System.Xml.Schema.XmlSchemaCollection> per convalidare un documento XML in base a schemi XSD (XML Schema Definition Language). Il tipo <xref:System.Xml.Schema.XmlSchemaCollection> migliora le prestazioni archiviando gli schemi nella raccolta in modo che non vengano caricati in memoria ogni volta che viene eseguita la convalida. Se lo schema esiste nella raccolta di schemi, l'attributo `schemaLocation` verrà usato per cercare lo schema nella raccolta.  
@@ -35,7 +35,7 @@ ms.locfileid: "75709894"
 ```vb  
 Dim xsc As New XmlSchemaCollection()  
 ' XML Schema.  
-xsc.Add("urn:bookstore-schema", schema)   
+xsc.Add("urn:bookstore-schema", schema)
 reader = New XmlTextReader(filename)  
 vreader = New XmlValidatingReader(reader)  
 vreader.Schemas.Add(xsc)  
@@ -184,9 +184,9 @@ while(vr.Read()) {
  Di seguito viene indicato il contenuto del file di XML Schema, sample4.xsd, in base al quale eseguire la convalida.  
   
 ```xml  
-<xs:schema   
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"   
-    xmlns:tns="datatypesTest"   
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:tns="datatypesTest"
     targetNamespace="datatypesTest"  
     elementFormDefault="qualified">  
   

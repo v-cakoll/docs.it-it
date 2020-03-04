@@ -9,16 +9,16 @@ helpviewer_keywords:
 - destroying threads
 - threading [.NET Framework], destroying threads
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
-ms.openlocfilehash: efd4c596f67d5eabace8ecafb48f2d350df6a18e
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 842ca4ff17f9cbab3a1518d2dea37436c9b23f9d
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938043"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155932"
 ---
 # <a name="destroying-threads"></a>Eliminazione definitiva di thread
 
-Per terminare l'esecuzione del thread, in genere si usa il [modello di annullamento cooperativo](cancellation-in-managed-threads.md). In alcuni casi non è possibile arrestare un thread in modo cooperativo, perché esegue codice di terze parti non progettato per l'annullamento cooperativo. Il metodo <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> in .NET Framework può essere usato per terminare forzatamente un thread gestito. Quando si chiama <xref:System.Threading.Thread.Abort%2A>, Common Language Runtime genera una <xref:System.Threading.ThreadAbortException> nel thread di destinazione, che può essere intercettata dal thread di destinazione. Per ulteriori informazioni, vedere <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Il metodo <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> non è supportato in .NET Core. Se è necessario terminare l'esecuzione di codice di terze parti forzatamente in .NET Core, eseguirlo nel processo separato e usare <xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType>.
+Per terminare l'esecuzione del thread, in genere si usa il [modello di annullamento cooperativo](cancellation-in-managed-threads.md). In alcuni casi non è possibile arrestare un thread in modo cooperativo, perché esegue codice di terze parti non progettato per l'annullamento cooperativo. Il metodo <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> in .NET Framework può essere usato per terminare forzatamente un thread gestito. Quando si chiama <xref:System.Threading.Thread.Abort%2A>, Common Language Runtime genera una <xref:System.Threading.ThreadAbortException> nel thread di destinazione, che può essere intercettata dal thread di destinazione. Per altre informazioni, vedere <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Il metodo <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> non è supportato in .NET Core. Se è necessario terminare l'esecuzione di codice di terze parti forzatamente in .NET Core, eseguirlo nel processo separato e usare <xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType>.
 
 > [!NOTE]
 > Se un thread esegue codice non gestito quando viene chiamato il metodo <xref:System.Threading.Thread.Abort%2A>, il runtime lo contrassegna come <xref:System.Threading.ThreadState.AbortRequested?displayProperty=nameWithType>. L'eccezione viene generata quando il thread torna al codice gestito.  
@@ -38,26 +38,26 @@ Try
 Catch ex As ThreadAbortException  
     ' Clean-up code can go here.  
     ' If there is no Finally clause, ThreadAbortException is  
-    ' re-thrown by the system at the end of the Catch clause.   
+    ' re-thrown by the system at the end of the Catch clause.
 Finally  
     ' Clean-up code can go here.  
 End Try  
-' Do not put clean-up code here, because the exception   
+' Do not put clean-up code here, because the exception
 ' is rethrown at the end of the Finally clause.  
 ```  
   
 ```csharp  
-try   
+try
 {  
     // Code that is executing when the thread is aborted.  
-}   
-catch (ThreadAbortException ex)   
+}
+catch (ThreadAbortException ex)
 {  
     // Clean-up code can go here.  
     // If there is no Finally clause, ThreadAbortException is  
-    // re-thrown by the system at the end of the Catch clause.   
+    // re-thrown by the system at the end of the Catch clause.
 }  
-// Do not put clean-up code here, because the exception   
+// Do not put clean-up code here, because the exception
 // is rethrown at the end of the Finally clause.  
 ```  
   

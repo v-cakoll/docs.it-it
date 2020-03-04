@@ -5,12 +5,12 @@ author: richlander
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: bfa9c24ef4cd2c418c91e00318aa47b889078d40
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: d4444b6d080afa92a4e7fd9f30c5f9358f02f0ef
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552649"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159234"
 ---
 # <a name="framework-libraries"></a>Librerie del framework
 
@@ -36,7 +36,7 @@ Le librerie di classi base offrono i tipi fondamentali e le funzionalità di uti
 * <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/builtin-types/char.md)): tipo numerico a 16 bit che rappresenta un carattere Unicode.
 * <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/builtin-types/reference-types.md#the-string-type)): rappresenta una serie di caratteri. Diverso dal tipo `char[]`, ma consente l'indicizzazione in ogni singolo `char` di `string`.
 
-## <a name="data-structures"></a>Strutture di dati
+## <a name="data-structures"></a>strutture di dati
 
 .NET include un insieme di strutture di dati che sono alla base di quasi tutte le applicazioni .NET. Si tratta principalmente di raccolte, ma sono inclusi anche altri tipi.
 
@@ -52,7 +52,7 @@ Le librerie di classi base offrono i tipi fondamentali e le funzionalità di uti
 
 * <xref:System.Net.Http.HttpClient>: un'API per inviare richieste HTTP e ricevere risposte HTTP da una risorsa identificata da un URI.
 * <xref:System.Xml.Linq.XDocument>: un'API per il caricamento e l'esecuzione di query su documenti XML con LINQ.
-* <xref:System.IO.StreamReader> : Un'API per la lettura dei file. 
+* <xref:System.IO.StreamReader> : Un'API per la lettura dei file.
 * <xref:System.IO.StreamWriter> : Un'API per la scrittura dei file.
 
 ## <a name="app-model-apis"></a>API dei modelli per App

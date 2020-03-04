@@ -2,12 +2,12 @@
 title: 'Esercitazione: creare uno strumento .NET Core'
 description: Informazioni su come creare uno strumento .NET Core. Uno strumento è un'applicazione console che viene installata usando il interfaccia della riga di comando di .NET Core.
 ms.date: 02/12/2020
-ms.openlocfilehash: 558bf9e37efc8de68a61f1384fababe342ab7d66
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 88cc3be7b149834ace0c5f3ba8ac8c039199908f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543404"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156725"
 ---
 # <a name="tutorial-create-a-net-core-tool-using-the-net-core-cli"></a>Esercitazione: creare uno strumento .NET Core usando il interfaccia della riga di comando di .NET Core
 
@@ -31,24 +31,18 @@ Questo è il primo di una serie di tre esercitazioni. In questa esercitazione vi
 
 1. Aprire un prompt dei comandi e creare una cartella denominata *repository*.
 
-1. Passare alla cartella del *repository* e immettere il comando seguente, sostituendo `<name>` con un valore univoco per rendere univoco il nome del progetto. 
+1. Passare alla cartella del *repository* e immettere il comando seguente:
 
    ```dotnetcli
-   dotnet new console -n botsay-<name>
+   dotnet new console -n microsoft.botsay
    ```
 
-   Ad esempio, è possibile eseguire il comando seguente:
+   Il comando crea una nuova cartella denominata *Microsoft. botsay* nella cartella del *repository* .
 
-   ```dotnetcli
-   dotnet new console -n botsay-nancydavolio
-   ```
-
-   Il comando crea una nuova cartella denominata *botsay-\<nome >* nella cartella del *repository* .
-
-1. Passare alla cartella *botsay-\<nome >* .
+1. Passare alla cartella *Microsoft. botsay* .
 
    ```console
-   cd botsay-<name>
+   cd microsoft.botsay
    ```
 
 ## <a name="add-the-code"></a>Aggiungere il codice
@@ -151,9 +145,9 @@ Tutti gli argomenti dopo il delimitatore `--` vengono passati all'applicazione.
 
 ## <a name="package-the-tool"></a>Creare il pacchetto dello strumento
 
-Prima di poter comprimere e distribuire l'applicazione come strumento, è necessario modificare il file di progetto. 
+Prima di poter comprimere e distribuire l'applicazione come strumento, è necessario modificare il file di progetto.
 
-1. Aprire il *botsay-\<nome > file con estensione csproj* e aggiungere tre nuovi nodi XML alla fine del nodo `<PropertyGroup>`:
+1. Aprire il file *Microsoft. botsay. csproj* e aggiungere tre nuovi nodi XML alla fine del nodo `<PropertyGroup>`:
 
    ```xml
    <PackAsTool>true</PackAsTool>
@@ -190,7 +184,7 @@ Prima di poter comprimere e distribuire l'applicazione come strumento, è necess
    dotnet pack
    ```
 
-   Il file *botsay-\<nome >. 1.0.0. nupkg* viene creato nella cartella identificata dal valore di `<PackageOutputPath>` dal *nome botsay-\<>. csproj* , che in questo esempio è la cartella *./nupkg* .
+   Il file *Microsoft. botsay. 1.0.0. nupkg* viene creato nella cartella identificata dal valore `<PackageOutputPath>` dal file *Microsoft. botsay. csproj* , che in questo esempio è la cartella *./nupkg* .
   
    Quando si desidera rilasciare uno strumento pubblicamente, è possibile caricarlo in `https://www.nuget.org`. Quando lo strumento è disponibile in NuGet, gli sviluppatori possono installare lo strumento usando il comando [DotNet tool install](dotnet-tool-install.md) . Per questa esercitazione si installa il pacchetto direttamente dalla cartella *nupkg* locale, pertanto non è necessario caricare il pacchetto in NuGet.
 

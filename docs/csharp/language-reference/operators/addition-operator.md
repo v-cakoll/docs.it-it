@@ -13,12 +13,12 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: 0c468f0fe56c68a16de660dbb3bd6356b4b6a00f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c8452ab1f90bb2873a591b483b5432311a9f9b79
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712767"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239626"
 ---
 # <a name="-and--operators-c-reference"></a>Operatori + e += (Riferimenti per C#)
 
@@ -30,17 +30,17 @@ Per informazioni sull'operatore aritmetico `+`, vedere le sezioni [Operatori pi�
 
 Quando uno o entrambi gli operandi sono di tipo [stringa](../builtin-types/reference-types.md#the-string-type), l'operatore `+` concatena le rappresentazioni di stringa dei due operandi:
 
-[!code-csharp-interactive[string concatenation](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddStrings)]
+[!code-csharp-interactive[string concatenation](~/samples/snippets/csharp/language-reference/operators/AdditionOperator.cs#AddStrings)]
 
 A partire C# da 6, l' [interpolazione di stringhe](../tokens/interpolated.md) rappresenta un modo più pratico per formattare le stringhe:
 
-[!code-csharp-interactive[string interpolation](~/samples/csharp/language-reference/operators/AdditionOperator.cs#UseStringInterpolation)]
+[!code-csharp-interactive[string interpolation](~/samples/snippets/csharp/language-reference/operators/AdditionOperator.cs#UseStringInterpolation)]
 
 ## <a name="delegate-combination"></a>Combinazione di delegati
 
 Per gli operandi con lo stesso tipo [delegato](../builtin-types/reference-types.md#the-delegate-type), l'operatore `+` restituisce una nuova istanza di delegato che, quando viene chiamata, richiama l'operando di sinistra e quindi quello di destra. Se uno degli operandi è `null`, l'operatore `+` restituisce il valore di un altro operando, che può essere anch'esso `null`. L'esempio seguente mostra in che modo è possibile combinare delegati con l'operatore `+`:
 
-[!code-csharp-interactive[delegate combination](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddDelegates)]
+[!code-csharp-interactive[delegate combination](~/samples/snippets/csharp/language-reference/operators/AdditionOperator.cs#AddDelegates)]
 
 Per eseguire la rimozione dei delegati, usare l'[operatore `-`](subtraction-operator.md#delegate-removal).
 
@@ -64,7 +64,7 @@ con la differenza che `x` viene valutato una sola volta.
 
 Nell'esempio seguente viene illustrato l'uso dell'operatore `+=`:
 
-[!code-csharp-interactive[+= examples](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddAndAssign)]
+[!code-csharp-interactive[+= examples](~/samples/snippets/csharp/language-reference/operators/AdditionOperator.cs#AddAndAssign)]
 
 È anche possibile usare l'operatore `+=` per specificare un metodo del gestore eventi quando si sottoscrive un [evento](../keywords/event.md). Per altre informazioni, vedere [Procedura: Sottoscrivere e annullare la sottoscrizione di eventi](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
 

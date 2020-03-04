@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 500335af-f9b5-413b-968a-e6d9a824478c
-ms.openlocfilehash: 5f670fa5e83d1802496c0cc6972a7e3af7cae374
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e03eb08c71ff2d031ac61a702683e3950d94f2be
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709647"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160235"
 ---
 # <a name="xslt-transformations-with-the-xsltransform-class"></a>Trasformazioni XSLT con la classe XslTransform
 
@@ -20,9 +20,9 @@ ms.locfileid: "75709647"
 
 Lo scopo dell'XSLT (Extensible Stylesheet Language Transformation) è quello di trasformare il contenuto di un documento XML di origine in un altro documento di formato o struttura diversa, ad esempio, per trasformare il codice XML in HTML per l'uso su un sito Web o per trasformarlo in un documento che contenga solo i campi richiesti da un'applicazione. Questo processo di trasformazione è specificato dalla raccomandazione [XSLT versione 1.0](https://www.w3.org/TR/1999/REC-xslt-19991116) di World Wide Web Consortium (W3C). In .NET Framework la classe <xref:System.Xml.Xsl.XslTransform>, disponibile nello spazio dei nomi <xref:System.Xml.Xsl>, è il processore XSLT che implementa la funzionalità di questa specifica. Alcune funzionalità non sono state implementate dalla raccomandazione W3C XSL Transformations (XSLT) versione 1.0 e sono elencate in [Output da un XslTransform](outputs-from-an-xsltransform.md). La figura seguente illustra l'architettura di trasformazione di .NET Framework.
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
-![Diagramma che illustra l'architettura di trasformazione XSLT.](./media/xslt-transformations-with-the-xsltransform-class/xslt-transformation-architecture.gif) 
+![Diagramma che illustra l'architettura di trasformazione XSLT.](./media/xslt-transformations-with-the-xsltransform-class/xslt-transformation-architecture.gif)
 
 Per la selezione di parti di un documento XML, nella raccomandazione XSLT viene usato XPath (XML Path Language), ovvero un linguaggio di query usato per navigare nei nodi dell'albero di un documento. Come illustrato nel diagramma, l'implementazione di XPath in .NET Framework viene usata per la selezione di parti di XML archiviate in diverse classi, ad esempio una classe <xref:System.Xml.XmlDocument>, una classe <xref:System.Xml.XmlDataDocument> e una classe <xref:System.Xml.XPath.XPathDocument>. <xref:System.Xml.XPath.XPathDocument> è un archivio dati XSLT ottimizzato che, se usato con <xref:System.Xml.Xsl.XslTransform>, fornisce trasformazioni XSLT con elevate prestazioni.
 
@@ -74,7 +74,7 @@ using System.Xml;
 using System.Xml.XPath;
 using System.Xml.Xsl;
 
-public class Sample 
+public class Sample
 {
     private const String filename = "mydata.xml";
     private const String stylesheet = "myStyleSheet.xsl";

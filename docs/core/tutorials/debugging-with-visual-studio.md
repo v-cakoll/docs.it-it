@@ -3,12 +3,12 @@ title: Eseguire il debug dell'applicazione Hello World .NET Core con Visual Stud
 description: Informazioni su come eseguire il debug di un'app C# Hello World scritta in o Visual Basic con Visual Studio.
 ms.date: 12/05/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: bc2736165ec827c1f2670605f23f549ceed4e83a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b2ee1401fc89f990c5f930d80d1a510a117e63a0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714048"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156673"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio"></a>Eseguire il C# debug dell'applicazione .net core Hello World o Visual Basic con Visual Studio
 
@@ -28,7 +28,7 @@ Eseguire il programma e provare alcune funzionalità di debug:
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. Impostare un punto di *interruzione* sulla riga che legge `Console.WriteLine($"\nHello, {name}, on {date:d} at {date:t}!");` facendo clic sul margine sinistro della finestra del codice nella riga. È anche possibile impostare un punto di interruzione posizionando il cursore nella riga di codice e premendo **F9** o scegliendo **debug** > **Imposta/Rimuovi** punto di interruzione dalla barra dei menu.
 
@@ -64,12 +64,12 @@ Eseguire il programma e provare alcune funzionalità di debug:
 
 1. Premere un tasto qualsiasi per uscire dall'applicazione e arrestare il debug.
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. Impostare un punto di *interruzione* sulla riga che legge `Console.WriteLine($"{vbCrLf}Hello, {name}, on {currentDate:d} at {currentDate:t}!")` facendo clic sul margine sinistro della finestra del codice nella riga. È anche possibile impostare un punto di interruzione posizionando il cursore sulla riga desiderata e scegliendo **Debug** > **Imposta/Rimuovi** punto di interruzione dalla barra dei menu.
 
    Un punto di interruzione interrompe temporaneamente l'esecuzione dell'applicazione *prima* che venga eseguita la riga con il punto di interruzione.
-   
+
    Come mostrato nella figura seguente, Visual Studio indica la riga in cui è impostato il punto di interruzione evidenziando tale riga e visualizzando un cerchio rosso sul margine sinistro della finestra.
 
    ![Finestra del programma in Visual Studio con punto di interruzione impostato](./media/debugging-with-visual-studio/vb/set-breakpoint-in-editor.png)
@@ -104,7 +104,7 @@ Il programma visualizza la stringa immessa dall'utente. Ma cosa succede se l'ute
 
 Per impostare un punto di interruzione condizionale e verificare cosa succede quando l'utente non immette una stringa, seguire questa procedura:
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. Fare clic con il pulsante destro del mouse sul punto rosso che rappresenta il punto di interruzione. Scegliere **Condizioni** dal menu di scelta rapida per aprire la finestra di dialogo **Impostazioni del punto di interruzione**. Selezionare la casella per le **condizioni** se non è già selezionata.
 
@@ -142,7 +142,7 @@ Per impostare un punto di interruzione condizionale e verificare cosa succede qu
 
 1. Deselezionare il punto di interruzione facendo clic sul punto sul margine sinistro della finestra del codice oppure scegliendo **Debug > Imposta/Rimuovi** punto di interruzione mentre è selezionata la riga di codice.
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. Fare clic con il pulsante destro del mouse sul punto rosso che rappresenta il punto di interruzione. Scegliere **Condizioni** dal menu di scelta rapida per aprire la finestra di dialogo **Impostazioni del punto di interruzione**. Selezionare la casella per **Condizioni**.
 
@@ -185,7 +185,7 @@ Per impostare un punto di interruzione condizionale e verificare cosa succede qu
 
 Visual Studio consente anche di esaminare il programma una riga alla volta e di monitorarne l'esecuzione. In genere si imposta un punto di interruzione e si usa questa funzionalità per seguire il flusso del programma attraverso una piccola parte del codice. Poiché il programma è di piccole dimensioni, è possibile eseguire l'intero programma:
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. Nella barra dei menu scegliere **Debug** > **Esegui istruzione** o premere **F11**. Visual Studio evidenzia e visualizza una freccia accanto alla riga di esecuzione successiva.
 
@@ -211,7 +211,7 @@ Visual Studio consente anche di esaminare il programma una riga alla volta e di 
 
 1. Premere un tasto qualsiasi per chiudere la finestra della console e arrestare il debug.
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. Nella barra dei menu scegliere **Debug** > **Esegui istruzione** o premere **F11**. Visual Studio evidenzia e visualizza una freccia accanto alla riga di esecuzione successiva.
 

@@ -2,18 +2,18 @@
 title: Pubblicazione dell'applicazione
 description: Informazioni sulle modalità di pubblicazione di un'applicazione .NET Core. .NET Core può pubblicare app specifiche della piattaforma o multipiattaforma. È possibile pubblicare un'app come indipendente o dipendente dal runtime. Ogni modalità influiscono sul modo in cui un utente esegue l'app.
 ms.date: 01/31/2020
-ms.openlocfilehash: 696cca436c73601a3e7825033152d43a659a7dce
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 3b9c3b7f29af12477874b7a31ef0de4750719de0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448984"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157935"
 ---
 # <a name="net-core-application-publishing-overview"></a>Panoramica della pubblicazione di applicazioni .NET Core
 
 Le applicazioni create con .NET Core possono essere pubblicate in due modalità diverse e la modalità influiscono sulla modalità di esecuzione dell'app da parte di un utente.
 
-La pubblicazione dell'app come *autonoma* produce un'applicazione che include il runtime e le librerie di .NET Core e l'applicazione e le relative dipendenze. Gli utenti dell'applicazione possono eseguirla in un computer in cui non è installato il runtime di .NET Core. 
+La pubblicazione dell'app come *autonoma* produce un'applicazione che include il runtime e le librerie di .NET Core e l'applicazione e le relative dipendenze. Gli utenti dell'applicazione possono eseguirla in un computer in cui non è installato il runtime di .NET Core.
 
 La pubblicazione dell'app come *dipendente dal runtime* produce un'applicazione che include solo l'applicazione stessa e le relative dipendenze. Gli utenti dell'applicazione devono installare separatamente il runtime di .NET Core.
 
@@ -132,7 +132,7 @@ Poiché l'app include il runtime di .NET Core e tutte le dipendenze dell'app, le
   > È possibile ridurre le dimensioni della distribuzione nei sistemi Linux di circa 28 MB usando la [*modalità invariante di globalizzazione*](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)di .NET Core. Questa operazione impone all'app di trattare tutte le impostazioni [cultura come la lingua inglese](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
 
 - **Più difficile aggiornare la versione di .NET Core**\
-Il runtime di .NET Core (distribuito con l'app) può essere aggiornato solo rilasciando una nuova versione dell'app. Si è responsabili della fornitura di una versione aggiornata dell'applicazione per le patch di sicurezza al runtime di .NET Core. 
+Il runtime di .NET Core (distribuito con l'app) può essere aggiornato solo rilasciando una nuova versione dell'app. Si è responsabili della fornitura di una versione aggiornata dell'applicazione per le patch di sicurezza al runtime di .NET Core.
 
 ### <a name="examples"></a>Esempi
 

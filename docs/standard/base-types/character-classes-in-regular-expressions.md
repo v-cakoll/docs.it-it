@@ -12,12 +12,12 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-ms.openlocfilehash: 047d0ea7b3783f8cf45afde2a15470adda94cd6e
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 07bd63c90bc8d78c9831e2007695a232a85111b1
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77095047"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159338"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Classi di caratteri nelle espressioni regolari
 
@@ -50,7 +50,7 @@ Una classe di caratteri definisce un set di caratteri, di cui uno qualsiasi può
 > [!NOTE]
 > Le classi di caratteri che corrispondono a caratteri in base alla categoria, ad esempio [\w](#WordCharacter) per la corrispondenza con caratteri alfanumerici o [\p{}](#CategoryOrBlock) per la corrispondenza con una categoria Unicode, si basano sulla classe <xref:System.Globalization.CharUnicodeInfo> per offrire informazioni sulle categorie di caratteri.  A partire da .NET Framework 4.6.2, le categorie di caratteri si basano sullo [standard Unicode, versione 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). Da .NET Framework 4 a .NET Framework 4.6.1, si basano sullo [standard Unicode, versione 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
   
-<a name="PositiveGroup"></a>   
+<a name="PositiveGroup"></a>
 ## <a name="positive-character-group--"></a>Gruppo di caratteri positivi: [ ]  
  Un gruppo di caratteri positivi specifica un elenco di caratteri che possono essere presenti in una stringa di input per trovare una corrispondenza. È possibile specificare l'elenco di caratteri singolarmente, come intervallo o entrambi.  
   
@@ -106,7 +106,7 @@ Nella tabella seguente sono elencati alcuni criteri di espressione regolare comu
 |`\w*`|Trova la corrispondenza di zero o più caratteri alfanumerici.|  
 |`\b`|Trova la corrispondenza di un confine di parola.|  
   
-<a name="NegativeGroup"></a>   
+<a name="NegativeGroup"></a>
 ## <a name="negative-character-group-"></a>Gruppo di caratteri negativi: [^]  
  Un gruppo di caratteri negativi specifica un elenco di caratteri che non devono essere presenti in una stringa di input per trovare una corrispondenza. È possibile specificare l'elenco di caratteri singolarmente, come intervallo o entrambi.  
   
@@ -154,11 +154,11 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
 |`\w+`|Trova la corrispondenza di uno o più caratteri alfanumerici.|  
 |`\b`|Terminare al confine di una parola.|  
   
-<a name="AnyCharacter"></a>   
+<a name="AnyCharacter"></a>
 ## <a name="any-character-"></a>Qualsiasi carattere: .  
  Il carattere punto (.) corrisponde a qualsiasi carattere eccetto `\n` (carattere di nuova riga, \u000A), con le due qualificazioni seguenti:  
   
-- Se un criterio di ricerca di espressioni regolari viene modificato dall'opzione <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> o se la parte del criterio contenente la classe di caratteri `.` viene modificata dall'opzione `s`, `.` corrisponde a qualsiasi carattere. Per altre informazioni, vedere [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md).  
+- Se un criterio di ricerca di espressioni regolari viene modificato dall'opzione <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> o se la parte del criterio contenente la classe di caratteri `.` viene modificata dall'opzione `s`, `.` corrisponde a qualsiasi carattere. Per altre informazioni, vedere [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).  
   
      Nell'esempio seguente viene illustrato il diverso comportamento della classe di caratteri `.` per impostazione predefinita e con l'opzione <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType>. L'espressione regolare `^.+` parte dall'inizio della stringa e individua una corrispondenza per ogni carattere. Per impostazione predefinita, la corrispondenza termina alla fine della prima riga. Il criterio di ricerca di espressioni regolari trova la corrispondenza del carattere di ritorno a capo, `\r` o \u000D, ma non di `\n`. Poiché l'opzione <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> interpreta l'intera stringa di input come riga singola, ottiene una corrispondenza per ogni carattere nella stringa di input, incluso `\n`.  
   
@@ -176,7 +176,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
 > [!NOTE]
 > Poiché corrisponde a qualsiasi carattere, l'elemento di linguaggio `.` viene spesso usato con un quantificatore lazy se un criterio di ricerca di espressioni regolari tenta di ottenere più volte una corrispondenza con ogni carattere. Per altre informazioni, vedere [Quantificatori ](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
-<a name="CategoryOrBlock"></a>   
+<a name="CategoryOrBlock"></a>
 ## <a name="unicode-category-or-unicode-block-p"></a>Categoria Unicode o blocco Unicode: \p{}  
  Lo standard Unicode assegna una categoria generale a ogni carattere. Ad esempio, un carattere particolare può essere una lettera maiuscola (rappresentata dalla categoria `Lu`), una cifra decimale (la categoria `Nd`), un simbolo matematico (la categoria `Sm`) o un separatore di paragrafo (la categoria `Zl`). Anche set di caratteri specifici nello standard Unicode occupano un intervallo specifico o un blocco di punti di codice consecutivi. Il set di caratteri latini si trova ad esempio da \u0000 a \u007F, mentre il set di caratteri arabi si trova da \u0600 a \u06FF.  
   
@@ -205,7 +205,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
 |`(\s)?`|Trova la corrispondenza di uno o nessuno spazio vuoto.|  
 |`(\p{IsBasicLatin}+(\s)?)+`|Ottiene una o più volte la corrispondenza con il modello di uno o più caratteri latini di base seguiti da zero o da uno spazio vuoto.|  
   
-<a name="NegativeCategoryOrBlock"></a>   
+<a name="NegativeCategoryOrBlock"></a>
 ## <a name="negative-unicode-category-or-unicode-block-p"></a>Categoria Unicode o blocco Unicode negativo: \P{}  
  Lo standard Unicode assegna una categoria generale a ogni carattere. Ad esempio, un carattere particolare può essere una lettera maiuscola (rappresentata dalla categoria `Lu`), una cifra decimale (la categoria `Nd`), un simbolo matematico (la categoria `Sm`) o un separatore di paragrafo (la categoria `Zl`). Anche set di caratteri specifici nello standard Unicode occupano un intervallo specifico o un blocco di punti di codice consecutivi. Il set di caratteri latini si trova ad esempio da \u0000 a \u007F, mentre il set di caratteri arabi si trova da \u0600 a \u06FF.  
   
@@ -222,7 +222,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  Il criterio di ricerca di espressioni regolari `(\P{Sc})+` corrisponde a uno o più caratteri che non siano simboli di valuta e rimuove efficacemente qualsiasi simbolo di valuta dalla stringa del risultato.  
   
-<a name="WordCharacter"></a>   
+<a name="WordCharacter"></a>
 ## <a name="word-character-w"></a>Carattere alfanumerico: \w  
  `\w` trova la corrispondenza con qualsiasi carattere alfanumerico. Un carattere alfanumerico è un membro di una delle categorie Unicode elencate nella seguente tabella.  
   
@@ -252,7 +252,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/wordchar1.cs#8)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/wordchar1.vb#8)]  
   
-<a name="NonWordCharacter"></a>   
+<a name="NonWordCharacter"></a>
 ## <a name="non-word-character-w"></a>Carattere non alfanumerico: \W  
  `\W` trova la corrispondenza con qualsiasi carattere non alfanumerico. L'elemento di linguaggio \W è equivalente alla classe di caratteri seguente:  
   
@@ -289,7 +289,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  Poiché l'oggetto <xref:System.Text.RegularExpressions.Group> per il secondo gruppo di acquisizione contiene un solo carattere non alfanumerico acquisito, nell'esempio vengono recuperati tutti i caratteri non alfanumerici acquisiti dall'oggetto <xref:System.Text.RegularExpressions.CaptureCollection> restituito dalla proprietà <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>.  
   
-<a name="WhitespaceCharacter"></a>   
+<a name="WhitespaceCharacter"></a>
 ## <a name="whitespace-character-s"></a>Carattere spazio vuoto: \s  
  `\s` corrisponde a qualsiasi carattere spazio vuoto. È equivalente alle sequenze di escape e alle categorie Unicode elencate nella tabella seguente.  
   
@@ -318,7 +318,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/whitespace1.cs#10)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/whitespace1.vb#10)]  
   
-<a name="NonWhitespaceCharacter"></a>   
+<a name="NonWhitespaceCharacter"></a>
 ## <a name="non-whitespace-character-s"></a>Carattere diverso dallo spazio vuoto: \S  
  `\S` trova la corrispondenza con qualsiasi carattere diverso da uno spazio. È equivalente al criterio di ricerca di espressioni regolari `[^\f\n\r\t\v\x85\p{Z}]` o è il contrario del criterio di ricerca di espressioni regolari equivalente a `\s`, che corrisponde a spazi vuoti. Per altre informazioni, vedere [Spazio vuoto: \s](#WhitespaceCharacter).  
   
@@ -335,7 +335,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/nonwhitespace1.cs#11)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/nonwhitespace1.vb#11)]  
   
-<a name="DigitCharacter"></a>   
+<a name="DigitCharacter"></a>
 ## <a name="decimal-digit-character-d"></a>Carattere cifra decimale: \d  
  `\d` trova la corrispondenza con qualsiasi cifra decimale. È equivalente al criterio di ricerca di espressioni regolari `\p{Nd}` che include le cifre decimali standard da 0 a 9 e le cifre decimali di diversi altri set di caratteri.  
   
@@ -357,7 +357,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/digit1.cs#12)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/digit1.vb#12)]  
   
-<a name="NonDigitCharacter"></a>   
+<a name="NonDigitCharacter"></a>
 ## <a name="non-digit-character-d"></a>Carattere non numerico: \D  
  `\D` trova la corrispondenza con qualsiasi carattere non numerico. È equivalente al criterio di ricerca di espressioni regolari `\P{Nd}`.  
   
@@ -376,7 +376,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/nondigit1.cs#13)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/nondigit1.vb#13)]  
   
-<a name="SupportedUnicodeGeneralCategories"></a>   
+<a name="SupportedUnicodeGeneralCategories"></a>
 ## <a name="supported-unicode-general-categories"></a>Categorie generali Unicode supportate  
  In Unicode sono definite le categorie generali elencate nella tabella riportata di seguito. Per altre informazioni, vedere gli argomenti correlati "UCD File Format" (Formato di file UCD) e "General Category Values" (Valori di categoria generale) in [Unicode Character Database](https://www.unicode.org/reports/tr44/) (Database di caratteri Unicode).  
   
@@ -425,7 +425,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/getunicodecategory1.cs#14)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/getunicodecategory1.vb#14)]  
   
-<a name="SupportedNamedBlocks"></a>   
+<a name="SupportedNamedBlocks"></a>
 ## <a name="supported-named-blocks"></a>Blocchi denominati supportati
 
 In .NET sono supportati i blocchi denominati elencati nella tabella seguente. Il set di blocchi denominati supportati è basato su Unicode 4.0 e Perl 5.6. Per un'espressione regolare che usa blocchi denominati, vedere la sezione [Categoria Unicode o blocco Unicode: \\p{}](#unicode-category-or-unicode-block-p).  
@@ -538,7 +538,7 @@ In .NET sono supportati i blocchi denominati elencati nella tabella seguente. Il
 |FF00 - FFEF|`IsHalfwidthandFullwidthForms`|  
 |FFF0 - FFFF|`IsSpecials`|  
   
-<a name="CharacterClassSubtraction"></a>   
+<a name="CharacterClassSubtraction"></a>
 ## <a name="character-class-subtraction-base_group---excluded_group"></a>Sottrazione di classi di caratteri: [base_group - excluded_group] []  
  Una classe di caratteri definisce un set di caratteri. La sottrazione di classi di caratteri produce un set di caratteri che è il risultato dell'esclusione dei caratteri di una classe di caratteri da un'altra classe di caratteri.  
   

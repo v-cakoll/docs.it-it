@@ -13,21 +13,21 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-ms.openlocfilehash: db0e2234055c6869c4cf55196d9f3b62a6996c96
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 3562bd113ae4c9a3f721d8858a5d3625ef548d3a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972056"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160079"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Sostituzioni nelle espressioni regolari
 Le sostituzioni sono elementi di linguaggio riconosciuti solo all'interno dei criteri di sostituzione. Utilizzano un modello di espressione regolare per definire in tutto o in parte il testo che sostituirà il testo corrispondente nella stringa di input. Il criterio di sostituzione può essere costituito da una o più sostituzioni insieme a caratteri letterali. I criteri di sostituzione vengono forniti agli overload del metodo <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> che dispongono di un parametro `replacement` e al metodo <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> . I metodi sostituiscono il criterio di ricerca con il criterio definito dal parametro `replacement` .  
   
  .NET Framework definisce gli elementi di sostituzione elencati nella tabella riportata di seguito.  
   
-|Substitution|Descrizione|  
+|Sostituzione|Descrizione|  
 |------------------|-----------------|  
-|$  *numero*|Include nella stringa di sostituzione l'ultima sottostringa corrispondente al gruppo di acquisizione identificato da *numero*dove *numero* è un valore decimale. Per ulteriori informazioni, vedere [Sostituzione di un gruppo numerato](#substituting-a-numbered-group).|  
+|$ *numero*|Include nella stringa di sostituzione l'ultima sottostringa corrispondente al gruppo di acquisizione identificato da *numero* dove *numero* è un valore decimale. Per ulteriori informazioni, vedere [Sostituzione di un gruppo numerato](#substituting-a-numbered-group).|  
 |${ *nome* }|Include nella stringa di sostituzione l'ultima sottostringa corrispondente al gruppo denominato definito da `(?<`*nome*`> )` . Per ulteriori informazioni, vedere [Sostituzione di un gruppo denominato](#substituting-a-named-group).|  
 |$$|Include un solo simbolo letterale "$" nella stringa di sostituzione. Per ulteriori informazioni, vedere [Sostituzione di un simbolo "$"](#substituting-a--character).|  
 |$&|Include una copia dell'intera corrispondenza nella stringa di sostituzione. Per ulteriori informazioni, vedere [Sostituzione dell'intera corrispondenza](#substituting-the-entire-match).|  
@@ -42,14 +42,14 @@ Le sostituzioni sono elementi di linguaggio riconosciuti solo all'interno dei cr
  L'unico carattere che può essere utilizzato in un modello di espressione regolare o in una sostituzione è il carattere `$` , anche se presenta un significato diverso in ogni contesto. In un modello di espressione regolare `$` è un ancoraggio che corrisponde al termine della stringa. In un criterio di sostituzione, `$` indica l'inizio di una sostituzione.  
   
 > [!NOTE]
-> Per una funzionalità simile a un criterio di sostituzione all'interno di un'espressione regolare, utilizzare un backreference. Per ulteriori informazioni sui backreference, vedere [Costrutti di backreference](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).  
+> Per una funzionalità simile a un criterio di sostituzione all'interno di un'espressione regolare, usare un backreference. Per ulteriori informazioni sui backreference, vedere [Costrutti di backreference](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).  
 
 ## <a name="substituting-a-numbered-group"></a>Sostituzione di un gruppo numerato  
  L'elemento di linguaggio `$`*numero* include l'ultima sottostringa corrispondente al gruppo di acquisizione *numero* nella stringa di sostituzione, dove *numero* è l'indice del gruppo di acquisizione. Ad esempio, il criterio di sostituzione `$1` indica che la sottostringa corrispondente deve essere sostituita dal primo gruppo acquisito. Per altre informazioni sui gruppi di acquisizione numerati, vedere [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
  Tutte le cifre che seguono `$` vengono interpretate come appartenenti al gruppo *numero* . Se questa non è la propria intenzione, è possibile sostituire un gruppo denominato invece. Ad esempio, è possibile utilizzare la stringa di sostituzione `${1}1` anziché `$11` per definire la stringa di sostituzione come la validità del gruppo innanzitutto acquisito con il numero "1 ". Per ulteriori informazioni, vedere [Sostituzione di un gruppo denominato](#substituting-a-named-group).  
   
- I gruppi di acquisizione a cui non sono stati assegnati nomi in modo esplicito tramite la sintassi `(?<`*nome*`>)` vengono numerati da sinistra verso destra a partire da uno. I gruppi denominati sono anche numerati da sinistra a destra, a partire dall'indice dell'ultimo gruppo senza nome più uno. Ad esempio, nell'espressione regolare `(\w)(?<digit>\d)`l'indice del gruppo denominato `digit` è 2.  
+ I gruppi di acquisizione a cui non sono stati assegnati nomi in modo esplicito tramite la sintassi `(?<`*nome*`>)` vengono numerati da sinistra verso destra a partire da uno. I gruppi denominati sono anche numerati da sinistra a destra, a partire dall'indice dell'ultimo gruppo senza nome più uno. Ad esempio, nell'espressione regolare `(\w)(?<digit>\d)` l'indice del gruppo denominato `digit` è 2.  
   
  Se *numero* non specifica un gruppo di acquisizione valido definito nel criterio di espressione regolare, `$`*numero* viene interpretato come una sequenza di caratteri letterali usata per sostituire ogni corrispondenza.  
   
@@ -60,7 +60,7 @@ Le sostituzioni sono elementi di linguaggio riconosciuti solo all'interno dei cr
   
  Il criterio di espressione regolare `\p{Sc}*(\s?\d+[.,]?\d*)\p{Sc}*` è definito nel modo illustrato nella tabella seguente.  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Trovare la corrispondenza con zero o più caratteri di simboli valutari.|  
 |`\s?`|Trova la corrispondenza di uno o nessuno spazio vuoto.|  
@@ -83,7 +83,7 @@ Le sostituzioni sono elementi di linguaggio riconosciuti solo all'interno dei cr
   
  Il criterio di espressione regolare `\p{Sc}*(?<amount>\s?\d[.,]?\d*)\p{Sc}*` è definito nel modo illustrato nella tabella seguente.  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Trovare la corrispondenza con zero o più caratteri di simboli valutari.|  
 |`\s?`|Trova la corrispondenza di uno o nessuno spazio vuoto.|  
@@ -102,7 +102,7 @@ Le sostituzioni sono elementi di linguaggio riconosciuti solo all'interno dei cr
   
  Il criterio di espressione regolare `\b(\d+)(\.(\d+))?` è definito nel modo illustrato nella tabella seguente.  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza all'inizio di un confine di parola.|  
 |`(\d+)`|Trova la corrispondenza con una o più cifre decimali. Equivale al primo gruppo di acquisizione.|  
@@ -120,7 +120,7 @@ Le sostituzioni sono elementi di linguaggio riconosciuti solo all'interno dei cr
   
  Il criterio di espressione regolare `^(\w+\s?)+$` è definito nel modo illustrato nella tabella seguente.  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`^`|Inizia la corrispondenza all'inizio della stringa di input.|  
 |`(\w+\s?)+`|Ottiene una o più volte la corrispondenza con il modello di uno o più caratteri alfanumerici seguiti da zero o da uno spazio vuoto.|  
@@ -138,13 +138,13 @@ Le sostituzioni sono elementi di linguaggio riconosciuti solo all'interno dei cr
   
  In questo esempio, la stringa di input `"aa1bb2cc3dd4ee5"` contiene cinque corrispondenze. La tabella seguente illustra come la sostituzione ``$` `` fa in modo che il motore delle espressioni regolari sostituisca ogni corrispondenza nella stringa di input. Il testo inserito viene visualizzato in grassetto nella colonna dei risultati.  
   
-|Corrispondenza con|Posizione|Stringa prima della corrispondenza|Stringa di risultato|  
+|Corrispondente|Posizione|Stringa prima della corrispondenza|Stringa di risultato|  
 |-----------|--------------|-------------------------|-------------------|  
 |1|2|aa|aa**aa**bb2cc3dd4ee5|  
 |2|5|aa1bb|aaaabb**aa1bb**cc3dd4ee5|  
-|3\.|8|aa1bb2cc|aaaabbaa1bbcc**aa1bb2cc**dd4ee5|  
+|3|8|aa1bb2cc|aaaabbaa1bbcc**aa1bb2cc**dd4ee5|  
 |4|11|aa1bb2cc3dd|aaaabbaa1bbccaa1bb2ccdd**aa1bb2cc3dd**ee5|  
-|5|14|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddee**aa1bb2cc3dd4ee**| 
+|5|14|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddee**aa1bb2cc3dd4ee**|
 
 ## <a name="substituting-the-text-after-the-match"></a>Sostituzione del testo dopo la corrispondenza  
  La sostituzione `$'` sostituisce la stringa corrispondente con l'intera stringa di input dopo la corrispondenza. Ovvero, duplica la stringa di input dopo la corrispondenza e rimuove il testo corrispondente. Qualsiasi testo che precede il testo corrispondente resta invariato nella stringa di risultato. Se non esiste alcuna corrispondenza, la sostituzione  `$'` non ha alcun effetto.  
@@ -156,11 +156,11 @@ Le sostituzioni sono elementi di linguaggio riconosciuti solo all'interno dei cr
   
  In questo esempio, la stringa di input `"aa1bb2cc3dd4ee5"` contiene cinque corrispondenze. La tabella seguente illustra come la sostituzione `$'` fa in modo che il motore delle espressioni regolari sostituisca ogni corrispondenza nella stringa di input. Il testo inserito viene visualizzato in grassetto nella colonna dei risultati.  
   
-|Corrispondenza con|Posizione|Stringa dopo la corrispondenza|Stringa di risultato|  
+|Corrispondente|Posizione|Stringa dopo la corrispondenza|Stringa di risultato|  
 |-----------|--------------|------------------------|-------------------|  
 |1|2|bb2cc3dd4ee5|aa**bb2cc3dd4ee5**bb2cc3dd4ee5|  
 |2|5|cc3dd4ee5|aabb2cc3dd4ee5bb**cc3dd4ee5**cc3dd4ee5|  
-|3\.|8|dd4ee5|aabb2cc3dd4ee5bbcc3dd4ee5cc**dd4ee5**dd4ee5|  
+|3|8|dd4ee5|aabb2cc3dd4ee5bbcc3dd4ee5cc**dd4ee5**dd4ee5|  
 |4|11|ee5|aabb2cc3dd4ee5bbcc3dd4ee5ccdd4ee5dd**ee5**ee5|  
 |5|14|<xref:System.String.Empty?displayProperty=nameWithType>|aabb2cc3dd4ee5bbcc3dd4ee5ccdd4ee5ddee5ee|  
 
@@ -174,7 +174,7 @@ Le sostituzioni sono elementi di linguaggio riconosciuti solo all'interno dei cr
   
  Il criterio di espressione regolare `\b(\w+)\s\1\b` è definito nel modo illustrato nella tabella seguente.  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`(\w+)`|Trova la corrispondenza di uno o più caratteri alfanumerici. Equivale al primo gruppo di acquisizione.|  
@@ -192,9 +192,9 @@ Le sostituzioni sono elementi di linguaggio riconosciuti solo all'interno dei cr
   
  In questo esempio, la stringa di input `"ABC123DEF456"` contiene due corrispondenze. La tabella seguente illustra come la sostituzione `$_` fa in modo che il motore delle espressioni regolari sostituisca ogni corrispondenza nella stringa di input. Il testo inserito viene visualizzato in grassetto nella colonna dei risultati.  
   
-|Corrispondenza con|Posizione|Corrispondenza con|Stringa di risultato|  
+|Corrispondente|Posizione|Corrispondente|Stringa di risultato|  
 |-----------|--------------|-----------|-------------------|  
-|1|3\.|123|ABC**ABC123DEF456**DEF456|  
+|1|3|123|ABC**ABC123DEF456**DEF456|  
 |2|5|456|ABCABC123DEF456DEF**ABC123DEF456**|  
   
 ## <a name="see-also"></a>Vedere anche

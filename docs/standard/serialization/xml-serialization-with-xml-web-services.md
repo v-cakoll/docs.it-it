@@ -17,12 +17,12 @@ helpviewer_keywords:
 - literal XML serialization
 - serialization, attributes
 ms.assetid: a416192f-8102-458e-bc0a-0b8f3f784da9
-ms.openlocfilehash: c8e4e848cb37ac1b2d147b570d98777a7beaf1bb
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 2301f30a55e136b9a75a414d9325e4cf71c161da
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460247"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159533"
 ---
 # <a name="xml-serialization-with-xml-web-services"></a>Serializzazione XML con Servizi Web XML
 La serializzazione XML è il meccanismo di trasporto sottostante utilizzato nell'architettura dei servizi Web XML, eseguita dalla classe <xref:System.Xml.Serialization.XmlSerializer>. Per controllare il codice XML generato da un servizio Web XML, è possibile applicare gli attributi elencati in [Attributi per il controllo della serializzazione XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) e in [Attributi per il controllo della serializzazione SOAP codificata](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md) alle classi, ai valori restituiti, ai parametri e ai campi di un file usato per creare un servizio Web XML (file con estensione asmx). Per ulteriori informazioni sulla creazione di un servizio Web XML, vedere [XML Web Services Using ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ba0z6a33(v=vs.100)).  
@@ -51,12 +51,12 @@ End Class
   
 Public Class MyService  
     <WebMethod, SoapDocumentMethod> _  
-    public Function MyLiteralMethod() As Order   
+    public Function MyLiteralMethod() As Order
         Dim myOrder As Order = New Order()  
         return myOrder  
     End Function  
     <WebMethod, SoapRpcMethod> _  
-    public Function MyEncodedMethod() As Order   
+    public Function MyEncodedMethod() As Order
         Dim myOrder As Order = New Order()  
         return myOrder  
     End Function  
@@ -129,7 +129,7 @@ public class MyService {
 public Function MyLiteralMethod() As _  
 <XmlElement(Namespace:="http://www.cohowinery.com", _  
 ElementName:= "BookOrder")> _  
-Order   
+Order
     Dim myOrder As Order = New Order()  
     return myOrder  
 End Function  
@@ -169,7 +169,7 @@ public Function MyLiteralMethod(<XmlElement _
 ("MyOrderID", Namespace:="http://www.microsoft.com")>ID As String) As _  
 <XmlElement(Namespace:="http://www.cohowinery.com", _  
 ElementName:= "BookOrder")> _  
-Order   
+Order
     Dim myOrder As Order = New Order()  
     myOrder.OrderID = ID  
     return myOrder  
@@ -180,12 +180,12 @@ End Function
 [return: XmlElement(Namespace = "http://www.cohowinery.com",  
 ElementName = "BookOrder")]  
 [WebMethod][SoapDocumentMethod]  
-public Order MyLiteralMethod([XmlElement("MyOrderID",   
+public Order MyLiteralMethod([XmlElement("MyOrderID",
 Namespace="http://www.microsoft.com")] string ID){  
     Order myOrder = new Order();  
     myOrder.OrderID = ID;  
     return myOrder;  
-}   
+}
 ```  
   
  La richiesta SOAP dovrebbe essere simile alla seguente.  
@@ -265,5 +265,5 @@ public class Order {
 - [Procedura: Serializzare un oggetto come flusso XML con codifica SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
 - [Procedura: Eseguire l'override della serializzazione XML con codifica SOAP](how-to-override-encoded-soap-xml-serialization.md)
 - [Introduzione alla serializzazione XML](introducing-xml-serialization.md)
-- [Procedura: serializzare un oggetto](how-to-serialize-an-object.md)
+- [Procedura: Serializzare un oggetto](how-to-serialize-an-object.md)
 - [Procedura: deserializzare un oggetto](how-to-deserialize-an-object.md)

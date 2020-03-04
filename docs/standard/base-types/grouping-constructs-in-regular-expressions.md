@@ -13,12 +13,12 @@ helpviewer_keywords:
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-ms.openlocfilehash: 87cc3d53cf06457191d9c87020c4151e3f848c51
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 5b2ea110837d9d5b905f97ab706af52a594f1c43
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124325"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159221"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Costrutti di raggruppamento nelle espressioni regolari
 I costrutti di raggruppamento delineano sottoespressioni di un'espressione regolare e acquisiscono sottostringhe di una stringa di input. È possibile usare i costrutti di raggruppamento per effettuare le operazioni seguenti:  
@@ -48,7 +48,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  Per informazioni sui gruppi e sul modello a oggetti delle espressioni regolari, vedere l'argomento relativo ai [costrutti di raggruppamento e oggetti delle espressioni regolari](#Objects).  
   
-<a name="matched_subexpression"></a>   
+<a name="matched_subexpression"></a>
 ## <a name="matched-subexpressions"></a>Sottoespressioni corrispondenti  
  Nel costrutto di raggruppamento seguente viene acquisita una sottoespressione corrispondente:  
   
@@ -87,7 +87,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
 |`(\1)`|Trova la corrispondenza con la stringa nel primo gruppo acquisito. Equivale al secondo gruppo di acquisizione. L'esempio lo assegna a un gruppo acquisito in modo che sia possibile recuperare la posizione iniziale della parola duplicata dalla proprietà `Match.Index` .|  
 |`\W`|Trova la corrispondenza con un carattere non alfanumerico, inclusi spazio vuoto e punteggiatura. Impedisce al criterio dell'espressione regolare di trovare la corrispondenza con una parola che inizia con la parola del primo gruppo acquisito.|  
   
-<a name="named_matched_subexpression"></a>   
+<a name="named_matched_subexpression"></a>
 ## <a name="named-matched-subexpressions"></a>Sottoespressioni corrispondenti denominate  
  Il costrutto di raggruppamento seguente acquisisce una sottoespressione corrispondente e consente di accedervi tramite nome o numero:  
   
@@ -161,7 +161,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
 |`\D+`|Corrisponde a una o più cifre non decimali.|  
 |`(?<digit>\d+)?`|Corrisponde a zero o a un'occorrenza di una o più cifre decimali. Assegna la corrispondenza al gruppo denominato `digit`.|  
   
-<a name="balancing_group_definition"></a>   
+<a name="balancing_group_definition"></a>
 ## <a name="balancing-group-definitions"></a>Definizioni di gruppo di bilanciamento  
  Una definizione di gruppo di bilanciamento elimina la definizione di un gruppo precedentemente definito e archivia nel gruppo corrente l'intervallo tra il gruppo precedentemente definito e il gruppo corrente. Questo costrutto di raggruppamento presenta il formato seguente:  
   
@@ -234,7 +234,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
 |23|`(?(Open)(?!))`|Il gruppo `Open` non è definito, pertanto non viene tentato di trovare corrispondenze.|  
 |24|`$`|Trova la corrispondenza della fine della stringa di input.|  
   
-<a name="noncapturing_group"></a>   
+<a name="noncapturing_group"></a>
 ## <a name="noncapturing-groups"></a>Gruppi di non acquisizione  
  Nel costrutto di raggruppamento seguente non viene acquisita la sottostringa quando viene trovata una corrispondenza con una sottoespressione:  
   
@@ -260,7 +260,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
 |`(?:\b(?:\w+)\W*)+`|Trova la corrispondenza con il criterio di ricerca di uno o più caratteri alfanumerici a partire dal confine di una parola, seguiti da zero o più caratteri non alfanumerici, una o più volte. Non assegna il testo corrispondente a un gruppo acquisito.|  
 |`\.`|Trova la corrispondenza con un punto.|  
   
-<a name="group_options"></a>   
+<a name="group_options"></a>
 ## <a name="group-options"></a>Opzioni di gruppo  
  Il costrutto di raggruppamento applica o disabilita le opzioni specificate all'interno di una sottoespressione:  
   
@@ -284,7 +284,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
  [!code-csharp[Conceptual.Regex.Language.Options#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#8)]
  [!code-vb[Conceptual.Regex.Language.Options#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#8)]  
   
-<a name="zerowidth_positive_lookahead_assertion"></a>   
+<a name="zerowidth_positive_lookahead_assertion"></a>
 ## <a name="zero-width-positive-lookahead-assertions"></a>Asserzioni lookahead positive di larghezza zero  
  Il costrutto di raggruppamento seguente definisce un'asserzione lookbehind positiva di larghezza zero:  
   
@@ -307,7 +307,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
 |`\w+`|Trova la corrispondenza di uno o più caratteri alfanumerici.|  
 |`(?=\sis\b)`|Determina se i caratteri alfanumerici vengono seguiti da uno spazio vuoto e dalla stringa "is", che termina su un confine di parola. In tal caso, la corrispondenza ha esito positivo.|  
   
-<a name="zerowidth_negative_lookahead_assertion"></a>   
+<a name="zerowidth_negative_lookahead_assertion"></a>
 ## <a name="zero-width-negative-lookahead-assertions"></a>Asserzioni lookahead negative di larghezza zero  
  Nel costrutto di raggruppamento seguente viene definita un'asserzione lookahead negativa di larghezza zero:  
   
@@ -345,7 +345,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
 |`\b`|Termina la corrispondenza sul confine di parola.|  
 |`\p{P})`|Se il carattere successivo non è un simbolo di punteggiatura (quale un punto o una virgola), la corrispondenza ha esito positivo.|  
   
-<a name="zerowidth_positive_lookbehind_assertion"></a>   
+<a name="zerowidth_positive_lookbehind_assertion"></a>
 ## <a name="zero-width-positive-lookbehind-assertions"></a>Asserzioni lookbehind positive di larghezza zero  
  Nel costrutto di raggruppamento seguente viene definita un'asserzione lookbehind positiva di larghezza zero:  
   
@@ -370,7 +370,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  Le asserzioni lookbehind positive di larghezza zero vengono usate anche per limitare il backtracking quando l'ultimo carattere o gli ultimi caratteri in un gruppo acquisito devono essere costituiti da un subset di caratteri corrispondenti al criterio di ricerca di espressioni regolari di tale gruppo. Se, ad esempio, un gruppo acquisisce tutti i caratteri alfanumerici consecutivi, è possibile usare un'asserzione positiva lookbehind di larghezza zero per richiedere che l'ultimo carattere sia un carattere alfabetico.  
   
-<a name="zerowidth_negative_lookbehind_assertion"></a>   
+<a name="zerowidth_negative_lookbehind_assertion"></a>
 ## <a name="zero-width-negative-lookbehind-assertions"></a>Asserzioni lookbehind negative di larghezza zero  
  Nel costrutto di raggruppamento seguente viene definita un'asserzione lookbehind negativa di larghezza zero:  
   
@@ -395,7 +395,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
 |`\d{4}\b`|Trova la corrispondenza di quattro cifre digitali e termina la corrispondenza sul confine di parola.|  
 |<code>(?<!(Saturday&#124;Sunday) )</code>|Se la corrispondenza viene preceduta da un elemento diverso dalle stringhe "Saturday" o "Sunday" seguito da uno spazio, la corrispondenza ha esito positivo.|  
   
-<a name="atomic_groups"></a>   
+<a name="atomic_groups"></a>
 ## <a name="atomic-groups"></a>Gruppi atomici  
  Il costrutto di raggruppamento seguente rappresenta un gruppo atomico (noto in altri motori delle espressioni regolari come sottoespressione non di backtracking, una sottoespressione atomica o una sottoespressione solo una volta):
   
@@ -424,7 +424,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
 |`\b`|Termina la corrispondenza sul confine di parola.|  
 |`(?>(\w)\1+)`|Trova una o più occorrenze di un carattere alfanumerico duplicato ma non esegue il backtracking per trovare la corrispondenza con l'ultimo carattere su un confine di parola.|  
   
-<a name="Objects"></a>   
+<a name="Objects"></a>
 ## <a name="grouping-constructs-and-regular-expression-objects"></a>costrutti di raggruppamento e oggetti delle espressioni regolari  
  Le sottostringhe per cui viene trovata una corrispondenza da parte di un gruppo di acquisizione dell'espressione regolare sono rappresentate da oggetti <xref:System.Text.RegularExpressions.Group?displayProperty=nameWithType> , che possono essere recuperati dall'oggetto <xref:System.Text.RegularExpressions.GroupCollection?displayProperty=nameWithType> restituito dalla proprietà <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> . L'oggetto <xref:System.Text.RegularExpressions.GroupCollection> è popolato come descritto di seguito:  
   

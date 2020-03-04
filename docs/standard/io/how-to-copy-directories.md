@@ -12,17 +12,17 @@ helpviewer_keywords:
 - copying directories
 - directories [.NET Framework], copying
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
-ms.openlocfilehash: 132ce0b887f7c314311e294567c546bded9a89a0
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 5d40db7f902dac8bd6bbdc1510be8e56a321be30
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77627394"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159455"
 ---
 # <a name="how-to-copy-directories"></a>Procedura: copiare le directory
-Questo argomento illustra come usare le classi di I/O per copiare in modalità sincrona il contenuto di una directory in un'altra posizione. 
+Questo argomento illustra come usare le classi di I/O per copiare in modalità sincrona il contenuto di una directory in un'altra posizione.
 
-Per un esempio di copia di file asincrona, vedere [I/O di file asincrono](../../../docs/standard/io/asynchronous-file-i-o.md). 
+Per un esempio di copia di file asincrona, vedere [I/O di file asincrono](../../../docs/standard/io/asynchronous-file-i-o.md).
 
 In questo esempio le sottodirectory vengono copiate impostando l'elemento `copySubDirs` del metodo `DirectoryCopy` su `true`. Il metodo `DirectoryCopy` copia le sottodirectory in modo ricorsivo chiamando se stesso in ogni sottodirectory finché non ci sono più sottodirectory da copiare.  
   

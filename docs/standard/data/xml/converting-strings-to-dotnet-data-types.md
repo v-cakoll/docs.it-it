@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-ms.openlocfilehash: ac7e1b68f3f43a0c84c7330666825207e5b90004
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e54990785cafd6061c6d53c13af6476a4b46e20e
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711051"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160352"
 ---
 # <a name="converting-strings-to-net-framework-data-types"></a>Conversione delle stringhe in tipi di dati di .NET Framework
 Per convertire una stringa in un tipo di dati di .NET Framework, usare il metodo **XmlConvert** che soddisfa i requisiti dell'applicazione. Per un elenco di tutti i metodi di conversione disponibili nella classe **XmlConvert**, vedere <xref:System.Xml.XmlConvert>.  
@@ -27,7 +27,7 @@ Per convertire una stringa in un tipo di dati di .NET Framework, usare il metodo
 |Single.NegativeInfinity|"-INF"|  
 |Double.PositiveInfinity|"INF"|  
 |Double.NegativeInfinity|"-INF"|  
-|DateTime|Il formato è "yyyy-MM-ddTHH:mm:sszzzzzz" e i relativi subset.|  
+|Datetime|Il formato è "yyyy-MM-ddTHH:mm:sszzzzzz" e i relativi subset.|  
 |TimeSpan|Il formato è PnYnMnTnHnMnS, ovvero `P2Y10M15DT10H30M20S` corrisponde a una durata di 2 anni, 10 mesi, 15 giorni, 10 ore, 30 minuti e 20 secondi.|  
   
 > [!NOTE]
@@ -87,7 +87,7 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
   
 ```xml  
 <Boolean>true</Boolean>  
-<Boolean>1</Boolean>   
+<Boolean>1</Boolean>
 ```  
   
  Entrambi possono essere interpretati correttamente dal codice seguente e **bvalue** corrisponde a **System.Boolean.True**:  

@@ -3,12 +3,12 @@ title: Introduzione a Docker
 description: Questo articolo fornisce un'introduzione e una panoramica di Docker nel contesto di un'applicazione .NET Core.
 ms.date: 03/20/2019
 ms.custom: mvc
-ms.openlocfilehash: 40c8a3c8d81d23c621ccb83a283f49aa34a58ac1
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: eedfd1e7c1b361beb9d4f271e739657ef5e894a6
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920815"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157791"
 ---
 # <a name="introduction-to-net-and-docker"></a>Introduzione a .NET e Docker
 
@@ -18,7 +18,7 @@ Per altre informazioni su come installare Docker, vedere la pagina di download p
 
 ## <a name="docker-basics"></a>Concetti di base su Docker
 
-Questa sezione illustra alcuni concetti che è necessario conoscere. Il client Docker ha un'interfaccia della riga di comando che è possibile usare per gestire le immagini e i contenitori. Come già suggerito, è consigliabile dedicare del tempo alla lettura della documentazione [introduttiva a Docker](https://docs.docker.com/engine/docker-overview/). 
+Questa sezione illustra alcuni concetti che è necessario conoscere. Il client Docker ha un'interfaccia della riga di comando che è possibile usare per gestire le immagini e i contenitori. Come già suggerito, è consigliabile dedicare del tempo alla lettura della documentazione [introduttiva a Docker](https://docs.docker.com/engine/docker-overview/).
 
 ### <a name="images"></a>Immagini
 
@@ -34,7 +34,7 @@ Un contenitore è un'istanza eseguibile di un'immagine. Quando si compila un'imm
 
 I registri contenitori sono una raccolta di repository di immagini. È possibile basare le immagini su un'immagine di registro e anche creare contenitori direttamente da un'immagine in un registro. La [relazione tra contenitori, immagini e registri Docker](../../architecture/microservices/container-docker-introduction/docker-containers-images-registries.md) è un concetto importante per l'[architettura e la compilazione di applicazioni o microservizi inclusi in contenitori](../../architecture/microservices/architect-microservice-container-applications/index.md). Questo approccio riduce considerevolmente il tempo che intercorre tra lo sviluppo e la distribuzione.
 
-Docker ha un registro pubblico ospitato nell'[hub Docker](https://hub.docker.com/) che è possibile usare. Nell'hub Docker sono elencate le [immagini correlate a .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/). 
+Docker ha un registro pubblico ospitato nell'[hub Docker](https://hub.docker.com/) che è possibile usare. Nell'hub Docker sono elencate le [immagini correlate a .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/).
 
 La fonte ufficiale delle immagini di contenitore fornite da Microsoft è il Registro Container. Questo registro si basa sulla rete CDN di Azure per fornire immagini replicate a livello globale. Il Registro Container di Microsoft, tuttavia, non dispone di un sito Web pubblico e il metodo principale per ottenere informazioni sulle immagini di contenitore fornite da Microsoft è quello di visitare le [pagine corrispondenti nell'hub Docker](https://hub.docker.com/_/microsoft-dotnet-core/).
 
@@ -44,7 +44,7 @@ Un **Dockerfile** è un file in cui è definito un set di istruzioni per la crea
 
 ## <a name="net-core-images"></a>Immagini di .NET Core
 
-Le immagini Docker ufficiali di .NET Core sono pubblicate nel Registro Container di Microsoft e sono disponibili nel [repository di Microsoft .NET Core nell'hub Docker](https://hub.docker.com/_/microsoft-dotnet-core/). Ogni repository contiene le immagini per diverse combinazioni di .NET (SDK o Runtime) e del sistema operativo che è possibile usare. 
+Le immagini Docker ufficiali di .NET Core sono pubblicate nel Registro Container di Microsoft e sono disponibili nel [repository di Microsoft .NET Core nell'hub Docker](https://hub.docker.com/_/microsoft-dotnet-core/). Ogni repository contiene le immagini per diverse combinazioni di .NET (SDK o Runtime) e del sistema operativo che è possibile usare.
 
 Microsoft fornisce immagini progettate per scenari specifici. Il [repository di ASP.NET Core](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/), ad esempio, include immagini che vengono compilate per l'esecuzione di app ASP.NET Core nell'ambiente di produzione.
 

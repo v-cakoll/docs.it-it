@@ -14,12 +14,12 @@ helpviewer_keywords:
 - base types, parsing strings
 - DateTime object
 - time strings
-ms.openlocfilehash: 16daa0ef3133b6cd04dc48b7f79fd365098e4bdf
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 9555304e570226b2ed3b040735cf099b5a018f93
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348065"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156543"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Analisi di stringhe di data e ora in .NET
 
@@ -48,7 +48,7 @@ Oltre a un componente di data e ora, la rappresentazione di stringa di una data 
   
 Il provider di formato viene usato anche per interpretare una data numerica ambigua. Non risulta chiaro quali componenti della data rappresentata dalla stringa "02/03/04" sono il mese, il giorno e l'anno. I componenti vengono interpretati in base all'ordine dei formati di data simili nel provider di formato.
 
-## <a name="parse"></a>Parse
+## <a name="parse"></a>Analizza
 
 L'esempio seguente illustra l'uso del metodo <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> per convertire un valore `string` in <xref:System.DateTime>. Questo esempio usa le impostazioni cultura associate al thread corrente. Se l'oggetto <xref:System.Globalization.CultureInfo> associato alle impostazioni cultura correnti non è in grado di analizzare la stringa di input, viene generata un'eccezione <xref:System.FormatException>.
 
@@ -72,7 +72,7 @@ Tuttavia, sebbene sia possibile usare overload del metodo <xref:System.DateTime.
 
 [!code-csharp[Parsing.DateAndTime#3](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#3)]
 [!code-vb[Parsing.DateAndTime#3](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#3)]
- 
+
 ## <a name="parseexact"></a>ParseExact
 
 Il metodo <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> converte una stringa in un oggetto <xref:System.DateTime> se è conforme a uno dei modelli di stringa specificati. Quando una stringa che non è in uno dei formati specificati viene passata a questo metodo, viene generata un'eccezione <xref:System.FormatException>. È possibile specificare uno degli identificatori di formato di data e ora standard o una combinazione degli identificatori di formato personalizzato. Usando gli identificatori di formato personalizzato è possibile costruire una stringa di riconoscimento personalizzata. Per una spiegazione degli identificatori, vedere gli argomenti relativi alle [stringhe di formato di data e ora standard](standard-date-and-time-format-strings.md) e alle [stringhe di formato di data e ora personalizzato](custom-date-and-time-format-strings.md).  
@@ -86,7 +86,7 @@ Ogni overload dei metodi <xref:System.DateTime.Parse%2A> e <xref:System.DateTime
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Parsing Strings](parsing-strings.md)
+- [Analisi di stringhe](parsing-strings.md)
 - [Formattazione di tipi](formatting-types.md)
 - [Conversione di tipi in .NET](type-conversion.md)
 - [Formati di data e ora standard](standard-date-and-time-format-strings.md)

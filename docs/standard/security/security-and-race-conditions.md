@@ -11,12 +11,12 @@ helpviewer_keywords:
 - secure coding, race conditions
 - code security, race conditions
 ms.assetid: ea3edb80-b2e8-4e85-bfed-311b20cb59b6
-ms.openlocfilehash: 8980122acdd069bc840aa09129483a1cb9a379fd
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: bc0d9f481fd212ede55bffde6cc20c3e080629e4
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705873"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159416"
 ---
 # <a name="security-and-race-conditions"></a>Sicurezza e race condition
 Un'altra area di interesse è la possibilità di buchi di sicurezza sfruttati da race condition. Questa situazione può verificarsi in diversi modi. Gli argomenti secondari che seguono illustrano alcune delle principali insidie che lo sviluppatore deve evitare.  
@@ -34,9 +34,9 @@ End Sub
 ```  
   
 ```csharp  
-void Dispose()   
+void Dispose()
 {  
-    if (myObj != null)   
+    if (myObj != null)
     {  
         Cleanup(myObj);  
         myObj = null;  
@@ -72,22 +72,22 @@ End Sub
 ```  
   
 ```csharp  
-void SomeSecureFunction()   
+void SomeSecureFunction()
 {  
-    if (SomeDemandPasses())   
+    if (SomeDemandPasses())
     {  
         fCallersOk = true;  
         DoOtherWork();  
         fCallersOk = false;  
     }  
 }  
-void DoOtherWork()   
+void DoOtherWork()
 {  
-    if (fCallersOK)   
+    if (fCallersOK)
     {  
         DoSomethingTrusted();  
     }  
-    else   
+    else
     {  
         DemandSomething();  
         DoSomethingTrusted();  

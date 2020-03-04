@@ -5,12 +5,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 692a0f8ad933f3ba4bef50681cb3487fa0a7eea9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d39e4c4dd180ba35b7555d61211a34d696b04f50
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714839"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78241000"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Variabili locali tipizzate in modo implicito - Guida per programmatori C#
 
@@ -54,7 +54,7 @@ Dal punto di vista del codice sorgente, un tipo anonimo non ha nome. Se una vari
 
 [!code-csharp[csProgGuideLINQ#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#44)]
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Alle dichiarazioni di variabili tipizzate in modo implicito si applicano le restrizioni seguenti:
 
@@ -88,7 +88,7 @@ La parola chiave `var` può essere utile anche quando il tipo specifico della va
 
 [!code-csharp[cscsrefQueryKeywords#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#13)]
 
-L'uso di `var`, tuttavia, può quanto meno rendere più difficoltosa la comprensione del codice per gli altri sviluppatori. Nella documentazione di C# `var` viene quindi in genere usata solo quando è necessario.
+L'uso di `var` consente di semplificare il codice, ma il suo utilizzo deve essere limitato ai casi in cui è necessario o quando rende il codice più facile da leggere. Per altre informazioni su quando usare `var` correttamente, vedere la sezione [variabili locali tipizzate in modo implicito](../inside-a-program/coding-conventions.md#implicitly-typed-local-variables) nell'articolo linee guida per la C# codifica.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -3,12 +3,12 @@ title: Supporto per la funzione msxsl:node-set()
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
-ms.openlocfilehash: b9603f6c910e8e29309618c8e01e283c28ae2bff
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5022b298cb20796edbc54e951d8b06043697d832
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710128"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155594"
 ---
 # <a name="support-for-the-msxslnode-set-function"></a>Supporto per la funzione msxsl:node-set()
 La funzione `msxsl:node-set` consente di convertire un frammento di albero risultato in un set di nodi. Il set di nodi risultante contiene sempre un nodo singolo ed è il nodo radice dell'albero.  
@@ -35,7 +35,7 @@ La funzione `msxsl:node-set` consente di convertire un frammento di albero risul
   
     <xsl:template match="/">  
         <authors>  
-            <xsl:for-each select="msxsl:node-set($books)/book">   
+            <xsl:for-each select="msxsl:node-set($books)/book">
                 <author><xsl:value-of select="@author"/></author>  
             </xsl:for-each>  
         </authors>  

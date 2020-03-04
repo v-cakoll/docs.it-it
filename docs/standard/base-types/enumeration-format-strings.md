@@ -10,12 +10,12 @@ helpviewer_keywords:
 - enumeration format strings
 - formatting [.NET Framework], enumeration
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
-ms.openlocfilehash: c32fd9d59f61b6befe94ff9eb85b0c39ce926adb
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: da7634758f5c4319fa18612d216682dc141318fd
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348259"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155958"
 ---
 # <a name="enumeration-format-strings"></a>Stringhe di formato di enumerazione
 
@@ -48,7 +48,7 @@ Visualizza la voce di enumerazione come valore intero nella rappresentazione pi√
 
 Visualizza la voce di enumerazione come valore esadecimale. Il valore viene rappresentato con zeri inziali, se necessario, per garantire che la stringa del risultato abbia due caratteri per ogni byte nel [tipo numerico sottostante](xref:System.Enum.GetUnderlyingType%2A) del tipo di enumerazione. L'esempio seguente illustra l'identificatore di formato X. Nell'esempio il tipo sottostante di <xref:System.ConsoleColor> e <xref:System.IO.FileAttributes> √® <xref:System.Int32> o un numero intero a 32 bit (o 4 byte) che produce una stringa del risultato di 8 caratteri.
 
-[!code-csharp[Formatting.Enum#4](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#4)]      
+[!code-csharp[Formatting.Enum#4](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#4)]
 [!code-vb[Formatting.Enum#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#4)]
 
 ## <a name="example"></a>Esempio

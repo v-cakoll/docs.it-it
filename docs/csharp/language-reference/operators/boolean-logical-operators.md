@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: e4efb283c835a703ec64b6ec5995b821c995dc60
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: d8fe68fc04300b65bea9b66a6dc6c20e3c69abf4
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552484"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239443"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Operatori logici booleani (Riferimenti per C#)
 
@@ -53,9 +53,9 @@ Per gli operandi dei [tipi numerici integrali](../builtin-types/integral-numeric
 
 Il prefisso unario `!` operatore calcola la negazione logica del relativo operando. Vale a dire, produce `true` se l'operando restituisce `false` e `false` se l'operando restituisce `true`:
 
-[!code-csharp-interactive[logical negation](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
+[!code-csharp-interactive[logical negation](~/samples/snippets/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
 
-A partire C# da 8,0, il suffisso unario`!`operatore è l' [operatore che perdona i valori null](null-forgiving.md).
+A partire C# da 8,0, il suffisso unario `!` operatore è l' [operatore che perdona i valori null](null-forgiving.md).
 
 ## <a name="logical-and-operator-"></a> Operatore AND logico &amp;
 
@@ -65,17 +65,17 @@ L'operatore `&` valuta entrambi gli operandi anche se l'operando sinistro restit
 
 Nell'esempio seguente l'operando di destra dell'operatore `&` è una chiamata a un metodo, che viene eseguita indipendentemente dal valore dell'operando di sinistra:
 
-[!code-csharp-interactive[logical AND](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#And)]
+[!code-csharp-interactive[logical AND](~/samples/snippets/csharp/language-reference/operators/BooleanLogicalOperators.cs#And)]
 
-L'[operatore AND condizionale logico](#conditional-logical-and-operator-) `&&` calcola anche l'AND logico dei relativi operandi, ma non valuta l'operando di destra se l'operando di sinistra restituisce `false`.
+L' [operatore logico and condizionale](#conditional-logical-and-operator-) `&&` calcola anche l'operatore and logico degli operandi, ma non valuta l'operando di destra se l'operando sinistro restituisce `false`.
 
 Per gli operandi dei [tipi numerici integrali](../builtin-types/integral-numeric-types.md), l'operatore `&` calcola l' [and logico bit per bit](bitwise-and-shift-operators.md#logical-and-operator-) dei relativi operandi. L'operatore unario `&` è l'[operatore address-of](pointer-related-operators.md#address-of-operator-).
 
 ## <a name="logical-exclusive-or-operator-"></a>Operatore OR esclusivo logico: ^
 
-L'operatore `^` calcola l'OR esclusivo logico, noto anche come XOR logico, dei relativi operandi. Il risultato di `x ^ y` è `true` se `x` restituisce `true` e `y` restituisce `false` oppure `x` restituisce `false` e `y` restituisce `true`. In caso contrario, il risultato è `false`. Vale a dire, per gli operandi `bool`, l'operatore `^` calcola lo stesso risultato dell'[operatore di disuguaglianza](equality-operators.md#inequality-operator-) `!=`.
+L'operatore `^` calcola l'OR esclusivo logico, noto anche come XOR logico, dei relativi operandi. Il risultato di `x ^ y` è `true` se `x` restituisce `true` e `y` restituisce `false` oppure `x` restituisce `false` e `y` restituisce `true`. In caso contrario, il risultato è `false`. Ovvero, per gli operandi `bool`, l'operatore `^` calcola lo stesso risultato dell' [operatore di disuguaglianza](equality-operators.md#inequality-operator-) `!=`.
 
-[!code-csharp-interactive[logical exclusive OR](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Xor)]
+[!code-csharp-interactive[logical exclusive OR](~/samples/snippets/csharp/language-reference/operators/BooleanLogicalOperators.cs#Xor)]
 
 Per gli operandi dei [tipi numerici integrali](../builtin-types/integral-numeric-types.md), l'operatore `^` calcola l' [OR esclusivo logico bit per bit](bitwise-and-shift-operators.md#logical-exclusive-or-operator-) dei relativi operandi.
 
@@ -87,9 +87,9 @@ L'operatore `|` valuta entrambi gli operandi anche se l'operando sinistro restit
 
 Nell'esempio seguente l'operando di destra dell'operatore `|` è una chiamata a un metodo, che viene eseguita indipendentemente dal valore dell'operando di sinistra:
 
-[!code-csharp-interactive[logical OR](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Or)]
+[!code-csharp-interactive[logical OR](~/samples/snippets/csharp/language-reference/operators/BooleanLogicalOperators.cs#Or)]
 
-L'[operatore OR condizionale logico](#conditional-logical-or-operator-) `||` calcola anche l'OR logico dei relativi operandi, ma non valuta l'operando di destra se l'operando di sinistra restituisce `true`.
+L' [operatore logico OR condizionale](#conditional-logical-or-operator-) `||` calcola anche l'OR logico degli operandi, ma non valuta l'operando di destra se l'operando sinistro restituisce `true`.
 
 Per gli operandi dei [tipi numerici integrali](../builtin-types/integral-numeric-types.md), l'operatore `|` calcola l' [OR logico bit per bit](bitwise-and-shift-operators.md#logical-or-operator-) dei relativi operandi.
 
@@ -99,9 +99,9 @@ L'operatore AND condizionale logico `&&`, chiamato anche operatore AND logico di
 
 Nell'esempio seguente l'operando di destra dell'operatore `&&` è una chiamata a un metodo, che non viene eseguita se l'operando di sinistra restituisce `false`:
 
-[!code-csharp-interactive[conditional logical AND](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#ConditionalAnd)]
+[!code-csharp-interactive[conditional logical AND](~/samples/snippets/csharp/language-reference/operators/BooleanLogicalOperators.cs#ConditionalAnd)]
 
-L'[operatore AND logico](#logical-and-operator-) `&` calcola anche l'AND logico dei relativi operandi, ma valuta sempre entrambi gli operandi.
+L' [operatore and logico](#logical-and-operator-) `&` calcola anche l'and logico degli operandi, ma valuta sempre entrambi gli operandi.
 
 ## <a name="conditional-logical-or-operator-"></a>Operatore OR condizionale logico ||
 
@@ -109,31 +109,31 @@ L'operatore OR condizionale logico `||`, chiamato anche operatore OR logico di "
 
 Nell'esempio seguente l'operando di destra dell'operatore `||` è una chiamata a un metodo, che non viene eseguita se l'operando di sinistra restituisce `true`:
 
-[!code-csharp-interactive[conditional logical OR](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#ConditionalOr)]
+[!code-csharp-interactive[conditional logical OR](~/samples/snippets/csharp/language-reference/operators/BooleanLogicalOperators.cs#ConditionalOr)]
 
-L'[operatore OR logico](#logical-or-operator-) `|` calcola anche l'OR logico dei relativi operandi, ma valuta sempre entrambi gli operandi.
+L' [operatore OR logico](#logical-or-operator-) `|` calcola anche l'OR logico degli operandi, ma valuta sempre entrambi gli operandi.
 
 ## <a name="nullable-boolean-logical-operators"></a>Operatori logici booleani nullable
 
 Per gli operandi `bool?`, gli operatori `&` e `|` supportano la logica a tre valori. La semantica di questi operatori è definita dalla tabella seguente:  
   
-|x|s|x&y|x&#124;y|  
+|x|y|x&y|x&#124;y|  
 |----|----|----|----|  
 |true|true|true|true|  
 |true|false|false|true|  
-|true|null|null|true|  
+|true|Null|Null|true|  
 |false|true|false|true|  
 |false|false|false|false|  
-|false|null|false|null|  
-|null|true|null|true|  
-|null|false|false|null|  
-|null|null|null|null|  
+|false|Null|false|Null|  
+|Null|true|Null|true|  
+|Null|false|false|Null|  
+|Null|Null|Null|Null|  
 
 Il comportamento di questi operatori è diverso dal comportamento tipico degli operatori con tipi valore nullable. In genere un operatore definito per gli operandi di un tipo valore può essere usato anche con gli operandi del tipo valore nullable corrispondente. Tale operatore produce `null` se uno qualsiasi degli operandi restituisce `null`. Tuttavia, gli operatori `&` e `|` possono produrre un valore diverso da null anche se uno degli operandi restituisce `null`. Per ulteriori informazioni sul comportamento dell'operatore con i tipi di valore Nullable, vedere la sezione [operatori rimossi](../builtin-types/nullable-value-types.md#lifted-operators) dell'articolo [tipi di valore Nullable](../builtin-types/nullable-value-types.md) .
 
 È anche possibile usare gli operatori `!` e `^` con `bool?` operandi, come illustrato nell'esempio seguente:
 
-[!code-csharp-interactive[lifted negation and xor](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#WithNullableBoolean)]
+[!code-csharp-interactive[lifted negation and xor](~/samples/snippets/csharp/language-reference/operators/BooleanLogicalOperators.cs#WithNullableBoolean)]
 
 Gli operatori logici condizionali `&&` e `||` non supportano gli operandi `bool?`.
 
@@ -155,11 +155,11 @@ con la differenza che `x` viene valutato una sola volta.
 
 Gli operatori `&`, `|` e `^` supportano l'assegnazione composta, come illustrato nell'esempio seguente:
 
-[!code-csharp-interactive[compound assignment](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#CompoundAssignment)]
+[!code-csharp-interactive[compound assignment](~/samples/snippets/csharp/language-reference/operators/BooleanLogicalOperators.cs#CompoundAssignment)]
 
 Gli operatori condizionali logici `&&` e `||` non supportano l'assegnazione composta.
 
-## <a name="operator-precedence"></a>Precedenza tra gli operatori
+## <a name="operator-precedence"></a>Precedenza degli operatori
 
 Nell'elenco seguente gli operatori logici sono ordinati dalla precedenza più elevata a quella più bassa:
 
@@ -172,7 +172,7 @@ Nell'elenco seguente gli operatori logici sono ordinati dalla precedenza più el
 
 Usare le parentesi, `()`, per cambiare l'ordine di valutazione imposto dalla precedenza tra gli operatori:
 
-[!code-csharp-interactive[operator precedence](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Precedence)]
+[!code-csharp-interactive[operator precedence](~/samples/snippets/csharp/language-reference/operators/BooleanLogicalOperators.cs#Precedence)]
 
 Per l'elenco completo degli C# operatori ordinati in base al livello di precedenza, vedere la sezione [precedenza](index.md#operator-precedence) degli [ C# operatori](index.md) dell'articolo operatori.
 

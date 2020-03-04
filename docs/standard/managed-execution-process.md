@@ -10,12 +10,12 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-ms.openlocfilehash: 0ce7182af33a795188d01ac457b9d45b8ad305dd
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 46a266849f137076170287aeb10becedf83ccf78
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960382"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160222"
 ---
 # <a name="managed-execution-process"></a>Processo di esecuzione gestita
 <a name="introduction"></a> Il processo di esecuzione gestita include i passaggi seguenti, descritti in modo dettagliato più avanti in questo argomento:  
@@ -36,15 +36,15 @@ ms.locfileid: "74960382"
   
      Common Language Runtime fornisce l'infrastruttura che permette l'esecuzione e i servizi che possono essere usati durante l'esecuzione.  
   
-<a name="choosing_a_compiler"></a>   
+<a name="choosing_a_compiler"></a>
 ## <a name="choosing-a-compiler"></a>Scelta di un compilatore  
  Per sfruttare i vantaggi offerti da Common Language Runtime (CLR), è necessario usare uno o più compilatori di linguaggio destinati al runtime, come Visual Basic, C#, Visual C++, F# o uno dei molti compilatori di terze parti come Eiffel, Perl o COBOL.  
   
- Poiché si tratta di un ambiente di esecuzione multilinguaggio, il runtime supporta un'ampia gamma di tipi di dati e funzionalità per i linguaggi. Il compilatore di linguaggio usato determina le funzionalità di runtime disponibili, che verranno usate per progettare il codice. È il compilatore, non Common Language Runtime, a determinare la sintassi che deve essere utilizzata dal codice. Per essere completamente utilizzabile dai componenti scritti in altri linguaggi, il componente deve avere tipi esportati che espongono solo le funzionalità per i linguaggi incluse in [Language Independence and Language-Independent Components](../../docs/standard/language-independence-and-language-independent-components.md) (CLS). È possibile usare l'attributo <xref:System.CLSCompliantAttribute> per garantire che il codice sia conforme a CLS. Per altre informazioni, vedere [Language Independence and Language-Independent Components](../../docs/standard/language-independence-and-language-independent-components.md).  
+ Poiché si tratta di un ambiente di esecuzione multilinguaggio, il runtime supporta un'ampia gamma di tipi di dati e funzionalità per i linguaggi. Il compilatore di linguaggio usato determina le funzionalità di runtime disponibili, che verranno usate per progettare il codice. È il compilatore, non Common Language Runtime, a determinare la sintassi che deve essere utilizzata dal codice. Per essere completamente utilizzabile dai componenti scritti in altri linguaggi, il componente deve avere tipi esportati che espongono solo le funzionalità per i linguaggi incluse in [Language Independence and Language-Independent Components](../../docs/standard/language-independence-and-language-independent-components.md) (CLS). È possibile usare l'attributo <xref:System.CLSCompliantAttribute> per garantire che il codice sia conforme a CLS. Per altre informazioni, vedere [Indipendenza del linguaggio e componenti indipendenti dal linguaggio](../../docs/standard/language-independence-and-language-independent-components.md).  
   
  [Torna all'inizio](#introduction)  
   
-<a name="compiling_to_msil"></a>   
+<a name="compiling_to_msil"></a>
 ## <a name="compiling-to-msil"></a>Compilazione in MSIL  
  Quando si esegue la compilazione in codice gestito, il compilatore converte il codice sorgente in codice MSIL (Microsoft Intermediate Language), che è un set di istruzioni indipendente dalla CPU che può essere convertito in modo efficiente in codice nativo. Il codice MSIL include istruzioni per il caricamento, l'archiviazione, l'inizializzazione e la chiamata di metodi su oggetti, nonché per operazioni aritmetiche e logiche, flusso di controllo, accesso diretto alla memoria, gestione delle eccezioni e altre ancora. Prima che sia possibile eseguire il codice, il codice MSIL deve essere convertito in codice specifico della CPU, in genere da un [compilatore JIT (Just-In-Time)](#compiling_msil_to_native_code). Poiché Common Language Runtime fornisce uno o più compilatori JIT per ogni architettura di computer supportata, lo stesso set di codice MSIL può essere compilato tramite JIT ed eseguito su qualsiasi architettura supportata.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "74960382"
   
  [Torna all'inizio](#introduction)  
   
-<a name="compiling_msil_to_native_code"></a>   
+<a name="compiling_msil_to_native_code"></a>
 ## <a name="compiling-msil-to-native-code"></a>Compilazione del codice MSIL in codice nativo  
  Prima di poter essere eseguito, il codice MSIL (Microsoft Intermediate Language) deve essere compilato con Common Language Runtime in codice nativo per l'architettura di computer di destinazione. .NET Framework offre due strumenti per eseguire questa conversione:  
   
@@ -89,7 +89,7 @@ ms.locfileid: "74960382"
   
  [Torna all'inizio](#introduction)  
   
-<a name="running_code"></a>   
+<a name="running_code"></a>
 ## <a name="running-code"></a>Esecuzione del codice  
  Common Language Runtime fornisce l'infrastruttura che permette l'esecuzione gestita e i servizi che possono essere usati durante l'esecuzione. Prima che un metodo possa essere eseguito, deve essere compilato in codice specifico del processore. Ogni metodo per cui è stato generato codice MSIL viene compilato tramite JIT quando viene chiamato per la prima volta, quindi viene eseguito. Alla successiva esecuzione del metodo, viene eseguito il codice nativo esistente compilato tramite JIT. Il processo di compilazione JIT e di esecuzione del codice viene ripetuto fino al completamento dell'esecuzione.  
   
@@ -107,11 +107,11 @@ ms.locfileid: "74960382"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica](../../docs/framework/get-started/overview.md)
+- [Overview](../../docs/framework/get-started/overview.md)
 - [Indipendenza del linguaggio e componenti indipendenti dal linguaggio](../../docs/standard/language-independence-and-language-independent-components.md)
 - [Metadati e componenti auto-descrittivi](../../docs/standard/metadata-and-self-describing-components.md)
 - [Ilasm.exe (Assembler IL)](../../docs/framework/tools/ilasm-exe-il-assembler.md)
-- [Security](../../docs/standard/security/index.md)
+- [Sicurezza](../../docs/standard/security/index.md)
 - [Interoperabilità con codice non gestito](../../docs/framework/interop/index.md)
 - [Distribuzione](../../docs/framework/deployment/net-framework-applications.md)
 - [Assembly in .NET](assembly/index.md)

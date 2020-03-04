@@ -4,18 +4,18 @@ description: Questa esercitazione illustra come generare sequenze con LINQ, come
 ms.date: 10/29/2018
 ms.technology: csharp-linq
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 8984fdf0ff26726b6d05e8bee8a9e8ae1c350ea7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: ece001e82c0aa44a91999bea78d2fd695ff9362b
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345617"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240015"
 ---
 # <a name="work-with-language-integrated-query-linq"></a>Usare LINQ (Language-Integrated Query)
 
 ## <a name="introduction"></a>Introduzione
 
-Questa esercitazione illustra le funzionalità disponibili in .NET Core e nel linguaggio C#. Scoprirai come eseguire queste operazioni:
+Questa esercitazione illustra le funzionalità disponibili in .NET Core e nel linguaggio C#. Verrà descritto come:
 
 - Generare sequenze con LINQ.
 - Scrivere metodi che possono essere usati facilmente nelle query LINQ.
@@ -29,13 +29,13 @@ Ai fini dell'esercitazione, questa tecnica offre un modo scherzoso per illustrar
 
 Questa esercitazione prevede diversi passaggi. Dopo ogni passaggio, è possibile eseguire l'applicazione e verificare lo stato di avanzamento. È anche possibile vedere l'[esempio completo](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq) disponibile nel repository dotnet/samples su GitHub. Per istruzioni sul download, vedere [Esempi ed esercitazioni](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 È necessario configurare il computer per l'esecuzione di .NET core. È possibile trovare le istruzioni di installazione nella pagina di [download di .NET Core](https://dotnet.microsoft.com/download) . È possibile eseguire questa applicazione in Windows, Ubuntu Linux o OS X oppure in un contenitore docker. È necessario installare l'editor di codice preferito. Le descrizioni seguenti usano [Visual Studio Code](https://code.visualstudio.com/) un editor multipiattaforma open source. ma è possibile usare gli strumenti con cui si ha maggiore familiarità.
 
 ## <a name="create-the-application"></a>Creare l'applicazione
 
-Il primo passaggio consiste nel creare una nuova applicazione. Aprire un prompt dei comandi e creare una nuova directory per l'applicazione, impostandola come directory corrente. Digitare il comando `dotnet new console` al prompt dei comandi Questa operazione crea i file iniziali per un'applicazione "Hello World" di base.
+Il primo passaggio consiste nel creare una nuova applicazione. Aprire un prompt dei comandi e creare una nuova directory per l'applicazione, impostandola come directory corrente. Digitare il comando `dotnet new console` al prompt dei comandi per creare i file di avvio per un'applicazione "Hello World" di base.
 
 Se non si è mai usato C#, [questa esercitazione](console-teleprompter.md) illustra la struttura di un programma C#. È possibile leggerla e tornare qui per ottenere altre informazioni su LINQ.
 
@@ -179,7 +179,7 @@ L'interfaccia <xref:System.Collections.Generic.IEnumerable%601> ha un unico meto
 
 Questa è l'implementazione del metodo:
 
-[!CODE-csharp[InterleaveSequenceWith](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet1)]
+[!CODE-csharp[InterleaveSequenceWith](../../../samples/snippets/csharp/getting-started/console-linq/extensions.cs?name=snippet1)]
 
 Dopo avere scritto questo metodo, tornare al metodo `Main` e mischiare una volta il mazzo:
 
@@ -213,7 +213,7 @@ Quante volte è necessario mischiare il mazzo per ripristinare l'ordine original
 
 Scrivere un metodo per determinare se due sequenze sono uguali è un'operazione piuttosto intuitiva. La struttura è simile a quella del metodo usato per mischiare il mazzo. In questo caso, però, anziché eseguire un'istruzione `yield return` in ogni elemento, si confronteranno gli elementi corrispondenti di ogni sequenza. Al termine dell'enumerazione dell'intera sequenza, se ogni elemento corrisponde, le sequenze sono identiche:
 
-[!CODE-csharp[SequenceEquals](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet2)]
+[!CODE-csharp[SequenceEquals](../../../samples/snippets/csharp/getting-started/console-linq/extensions.cs?name=snippet2)]
 
 Questo esempio illustra un secondo termine del linguaggio LINQ: i metodi terminali. Questi metodi accettano una sequenza come input (o, in questo caso, due sequenze) e restituiscono un singolo valore scalare. Quando si usa un metodo terminale, questo è sempre il metodo finale in una catena di metodi per una query LINQ, da qui il nome "terminale".
 
@@ -267,7 +267,7 @@ Tenere presente che il mazzo originale è stato generato con una query LINQ. e, 
 
 Nel file `Extensions.cs` digitare o copiare il metodo riportato di seguito. Questo metodo di estensione crea un nuovo file denominato `debug.log` nella directory del progetto e registra la query attualmente in esecuzione nel file di log. Questo metodo di estensione può essere aggiunto a qualsiasi query per indicare che la query è stata eseguita.
 
-[!CODE-csharp[LogQuery](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet3)]
+[!CODE-csharp[LogQuery](../../../samples/snippets/csharp/getting-started/console-linq/extensions.cs?name=snippet3)]
 
 Si noterà una sottolineatura ondulata rossa sotto `File`, per indicare che non esiste. Non viene compilato, perché il compilatore non riconosce `File`. Per risolvere questo problema, assicurarsi di aggiungere la seguente riga di codice sotto la prima riga in `Extensions.cs`:
 
@@ -329,7 +329,7 @@ Si noti che la registrazione non viene eseguita ogni volta che si accede a una q
 
 È possibile migliorare le prestazioni del codice per ridurre il numero di esecuzioni eseguite. Una semplice correzione consiste nel *memorizzare nella cache* i risultati della query LINQ originale che costruisce il mazzo di carte. Attualmente si rieseguono le query ad ogni iterazione del ciclo do-while, ricostruendo il mazzo di carte e rimescolandolo ogni volta. Per memorizzare il mazzo di carte nella cache, è possibile sfruttare i metodi LINQ <xref:System.Linq.Enumerable.ToArray%2A> e <xref:System.Linq.Enumerable.ToList%2A>. Accodandoli alle query, eseguiranno le stesse azioni per cui sono stati creati, ma ora archivieranno i risultati in una matrice o un elenco, a seconda del metodo che si è scelto di chiamare. Accodare il metodo LINQ <xref:System.Linq.Enumerable.ToArray%2A> a entrambe le query ed eseguire di nuovo il programma:
 
-[!CODE-csharp[Main](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
+[!CODE-csharp[Main](../../../samples/snippets/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
 
 Ora il numero di query per mischiare le carte esterne è ridotto a 30. Eseguire nuovamente il programma per mischiare anche le carte interne e si noteranno miglioramenti analoghi: ora vengono eseguite 162 query.
 
@@ -337,7 +337,7 @@ Questo esempio è stato **progettato** per mettere in evidenza i casi d'uso in c
 
 In pratica, per alcuni algoritmi è più efficiente la valutazione eager, mentre per altri è preferibile la valutazione lazy. Per l'uso quotidiano, quest'ultima rappresenta in genere la scelta migliore quando l'origine dati è costituita da un processo separato, ad esempio un motore di database. Per i database, la valutazione lazy consente alle query più complesse di eseguire un solo round trip al processo di database e di tornare al resto del codice. LINQ offre la stessa flessibilità sia che si scelga di usare la valutazione lazy o eager. Misurare pertanto i processi e scegliere il tipo di valutazione che offre le prestazioni migliori.
 
-## <a name="conclusion"></a>Conclusione
+## <a name="conclusion"></a>Conclusioni
 
 In questo progetto sono stati illustrati gli argomenti seguenti:
 

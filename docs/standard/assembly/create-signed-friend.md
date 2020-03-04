@@ -5,12 +5,12 @@ ms.assetid: bab62063-61e6-453f-905f-77673df9534e
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 52ecfbae11c7be125d0e60a0fce6a05182e2db9e
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 9912fa70014a8828e994cf528644aaa7cb351fea
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774355"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159494"
 ---
 # <a name="how-to-create-signed-friend-assemblies"></a>Procedura: creare assembly Friend firmati
 In questo esempio viene illustrato come usare assembly Friend e assembly con nomi sicuri. È necessario che entrambi i tipi di assembly abbiano un nome sicuro. Gli assembly in questo esempio usano le stesse chiavi. È comunque possibile usare chiavi diverse per i due assembly.  
@@ -34,15 +34,15 @@ In questo esempio viene illustrato come usare assembly Friend e assembly con nom
          `sn -tp FriendAssemblies.publickey`  
   
 3. Creare un C# file o Visual Basic denominato *friend_signed_A* contenente il codice seguente. Il codice usa l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> per dichiarare *friend_signed_B* come assembly Friend.  
-   
+
    Ogni volta che viene eseguito, lo strumento Nome sicuro genera una chiave pubblica nuova. È pertanto necessario sostituire la chiave pubblica nel codice seguente con la chiave pubblica appena generata, come illustrato nell'esempio seguente.  
-   
+
    ```csharp  
    // friend_signed_A.cs  
-   // Compile with:   
+   // Compile with:
    // csc /target:library /keyfile:FriendAssemblies.snk friend_signed_A.cs  
    using System.Runtime.CompilerServices;  
-   
+
    [assembly: InternalsVisibleTo("friend_signed_B, PublicKey=0024000004800000940000000602000000240000525341310004000001000100e3aedce99b7e10823920206f8e46cd5558b4ec7345bd1a5b201ffe71660625dcb8f9a08687d881c8f65a0dcf042f81475d2e88f3e3e273c8311ee40f952db306c02fbfc5d8bc6ee1e924e6ec8fe8c01932e0648a0d3e5695134af3bb7fab370d3012d083fa6b83179dd3d031053f72fc1f7da8459140b0af5afc4d2804deccb6")]  
    class Class1  
    {  
@@ -53,14 +53,14 @@ In questo esempio viene illustrato come usare assembly Friend e assembly con nom
        }  
    }  
    ```  
-   
+
    ```vb  
    ' friend_signed_A.vb  
-   ' Compile with:   
+   ' Compile with:
    ' Vbc -target:library -keyfile:FriendAssemblies.snk friend_signed_A.vb  
    Imports System.Runtime.CompilerServices  
-   
-   <Assembly: InternalsVisibleTo("friend_signed_B, PublicKey=0024000004800000940000000602000000240000525341310004000001000100e3aedce99b7e10823920206f8e46cd5558b4ec7345bd1a5b201ffe71660625dcb8f9a08687d881c8f65a0dcf042f81475d2e88f3e3e273c8311ee40f952db306c02fbfc5d8bc6ee1e924e6ec8fe8c01932e0648a0d3e5695134af3bb7fab370d3012d083fa6b83179dd3d031053f72fc1f7da8459140b0af5afc4d2804deccb6")>   
+
+   <Assembly: InternalsVisibleTo("friend_signed_B, PublicKey=0024000004800000940000000602000000240000525341310004000001000100e3aedce99b7e10823920206f8e46cd5558b4ec7345bd1a5b201ffe71660625dcb8f9a08687d881c8f65a0dcf042f81475d2e88f3e3e273c8311ee40f952db306c02fbfc5d8bc6ee1e924e6ec8fe8c01932e0648a0d3e5695134af3bb7fab370d3012d083fa6b83179dd3d031053f72fc1f7da8459140b0af5afc4d2804deccb6")>
    Public Class Class1  
        Public Sub Test()  
            System.Console.WriteLine("Class1.Test")  
@@ -68,22 +68,22 @@ In questo esempio viene illustrato come usare assembly Friend e assembly con nom
        End Sub  
    End Class  
    ```  
-   
+
 4. Compilare e firmare *friend_signed_A* usando il comando seguente.  
-   
+
    ```csharp
    csc /target:library /keyfile:FriendAssemblies.snk friend_signed_A.cs  
    ```  
-   
+
    ```vb
    Vbc -target:library -keyfile:FriendAssemblies.snk friend_signed_A.vb  
    ```  
-   
-5. Creare un C# file o Visual Basic denominato *friend_signed_B* contenente il codice seguente. Poiché *friend_signed_A* specifica *friend_signed_B* come assembly Friend, il codice in *friend_signed_B* può accedere ai tipi eC#ai membri di `internal` () o `Friend` (Visual Basic) da *friend_signed_A*. Il file contiene il codice seguente.  
-   
+
+5. Creare un C# file o Visual Basic denominato *friend_signed_B* contenente il codice seguente. Poiché *friend_signed_A* specifica *friend_signed_B* come assembly Friend, il codice in *friend_signed_B* può accedere ai tipi eC#ai membri `internal` () o `Friend` (Visual Basic) da *friend_signed_A*. Il file contiene il codice seguente.  
+
    ```csharp  
    // friend_signed_B.cs  
-   // Compile with:   
+   // Compile with:
    // csc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll /out:friend_signed_B.exe friend_signed_B.cs  
    public class Program  
    {  
@@ -94,10 +94,10 @@ In questo esempio viene illustrato come usare assembly Friend e assembly con nom
        }  
    }  
    ```  
-   
+
    ```vb  
    ' friend_signed_B.vb  
-   ' Compile with:   
+   ' Compile with:
    ' Vbc -keyfile:FriendAssemblies.snk -r:friend_signed_A.dll friend_signed_B.vb  
    Module Sample  
        Public Sub Main()  
@@ -106,21 +106,21 @@ In questo esempio viene illustrato come usare assembly Friend e assembly con nom
        End Sub  
    End Module  
    ```  
-   
+
 6. Compilare e firmare *friend_signed_B* usando il comando seguente.  
-   
+
    ```csharp
    csc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll /out:friend_signed_B.exe friend_signed_B.cs  
    ```  
-   
+
    ```vb
    vbc -keyfile:FriendAssemblies.snk -r:friend_signed_A.dll friend_signed_B.vb  
    ```  
-   
+
    Il nome dell'assembly generato dal compilatore deve corrispondere al nome dell'assembly Friend passato all'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. È necessario specificare in modo esplicito il nome dell'assembly di output (con*estensione exe* o *dll*) utilizzando l'opzione del compilatore `-out`. Per ulteriori informazioni, vedere [-out (C# opzioni del compilatore)](../../csharp/language-reference/compiler-options/out-compiler-option.md) o [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).  
-   
+
 7. Eseguire il file *friend_signed_B. exe* .  
-   
+
    Il programma restituisce la stringa **Class1. test**.  
   
 ## <a name="net-security"></a>Protezione .NET  

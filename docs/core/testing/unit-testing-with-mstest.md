@@ -4,12 +4,12 @@ description: Informazioni sui concetti relativi agli unit test in C# e .NET Core
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
-ms.openlocfilehash: 2d432f5efd6f8de3593f939abbd488f9fe68b73e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: bd7891243d84277a7578089f8b4629ff5bada577
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715391"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240909"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>Testing unità di C# con MSTest e .NET Core
 
@@ -36,15 +36,15 @@ namespace Prime.Services
 {
     public class PrimeService
     {
-        public bool IsPrime(int candidate) 
+        public bool IsPrime(int candidate)
         {
             throw new NotImplementedException("Please create a test first.");
-        } 
+        }
     }
 }
 ```
 
-Tornare alla directory *unit-testing-using-mstest*. Eseguire [`dotnet sln add PrimeService/PrimeService.csproj`](../tools/dotnet-sln.md) per aggiungere il progetto di libreria di classi alla soluzione. 
+Tornare alla directory *unit-testing-using-mstest*. Eseguire [`dotnet sln add PrimeService/PrimeService.csproj`](../tools/dotnet-sln.md) per aggiungere il progetto di libreria di classi alla soluzione.
 
 ## <a name="create-the-test-project"></a>Creare il progetto di test
 
@@ -90,7 +90,7 @@ Il layout della soluzione finale è il seguente:
         PrimeServiceTests.csproj
 ```
 
-Eseguire [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md) nella directory *unit-testing-using-mstest*. 
+Eseguire [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md) nella directory *unit-testing-using-mstest*.
 
 ## <a name="create-the-first-test"></a>Creare il primo test
 
@@ -123,7 +123,7 @@ namespace Prime.UnitTests.Services
 }
 ```
 
-L'[attributo TestClass](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute) indica una classe che contiene unit test. L'[attributo TestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) indica che il metodo è un metodo di test. 
+L'[attributo TestClass](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute) indica una classe che contiene unit test. L'[attributo TestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) indica che il metodo è un metodo di test.
 
 Salvare questo file ed eseguire [`dotnet test`](../tools/dotnet-test.md) per compilare i test e la libreria di classi, quindi eseguire i test. Il Test Runner di MSTest include il punto d'ingresso del programma per l'esecuzione dei test. `dotnet test` avvia il Test Runner usando il progetto di unit test creato.
 
@@ -140,7 +140,7 @@ public bool IsPrime(int candidate)
 }
 ```
 
-Eseguire di nuovo `dotnet test` nella directory *unit-testing-using-mstest*. Il comando `dotnet test` esegue prima una compilazione del progetto `PrimeService` e quindi del progetto `PrimeService.Tests`. Dopo la compilazione di entrambi i progetti, verrà eseguito il test singolo, che viene superato.
+Eseguire di nuovo *nella directory*unit-testing-using-mstest`dotnet test`. Il comando `dotnet test` esegue prima una compilazione del progetto `PrimeService` e quindi del progetto `PrimeService.Tests`. Dopo la compilazione di entrambi i progetti, verrà eseguito il test singolo, Procede.
 
 ## <a name="add-more-features"></a>Aggiungere altre funzionalità
 
@@ -148,7 +148,7 @@ Ora che il test è stato superato, è necessario scriverne altri. Esistono alcun
 
 Anziché creare nuovi test, applicare questi due attributi per creare un singolo test basato sui dati. Il test basato sui dati è un metodo che verifica vari valori minori di due, ovvero il numero primo più piccolo:
 
-[!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
+[!code-csharp[Sample_TestCode](../../../samples/snippets/core/testing/unit-testing-using-mstest/csharp/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
 Eseguire `dotnet test`. Due test hanno esito negativo. Per assicurare che tutti i test vengano superati, modificare la clausola `if` all'inizio del metodo:
 

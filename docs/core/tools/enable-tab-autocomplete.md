@@ -4,12 +4,12 @@ description: Questo articolo illustra come abilitare il completamento tramite ta
 author: thraka
 ms.author: adegeo
 ms.date: 11/03/2019
-ms.openlocfilehash: 6614f11a9c4eb1b1aac4dd8dac8d05d15262bd0c
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 31328be14811760bc8d7fb527e0d55abfe6b1493
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77626008"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156751"
 ---
 # <a name="how-to-enable-tab-completion-for-the-net-core-cli"></a>Come abilitare il completamento tramite TAB per l'interfaccia della riga di comando di .NET Core
 
@@ -17,7 +17,7 @@ ms.locfileid: "77626008"
 
 Questo articolo descrive come configurare il completamento tramite TAB per tre shell: PowerShell, Bash e zsh. Per altre shell, fare riferimento alla relativa documentazione per informazioni su come configurare il completamento tramite tasto TAB.
 
-Una volta configurato, il completamento tramite tasto TAB per la interfaccia della riga di comando di .NET Core viene attivato digitando un comando `dotnet` nella shell, quindi premendo il tasto TAB. La riga di comando corrente viene inviata al comando `dotnet complete` e i risultati vengono elaborati dalla shell. Per testare i risultati senza abilitazione del completamento tramite TAB, inviare direttamente un elemento al comando `dotnet complete`. Ad esempio,
+Una volta configurato, il completamento tramite tasto TAB per la interfaccia della riga di comando di .NET Core viene attivato digitando un comando `dotnet` nella shell, quindi premendo il tasto TAB. La riga di comando corrente viene inviata al comando `dotnet complete` e i risultati vengono elaborati dalla shell. Per testare i risultati senza abilitazione del completamento tramite TAB, inviare direttamente un elemento al comando `dotnet complete`. Ad esempio:
 
 ```console
 > dotnet complete "dotnet a"
@@ -38,18 +38,18 @@ Input                                | diventa                                  
 :------------------------------------|:----------------------------------------------------------------------------|:--------------------------------
 `dotnet a⇥`                          | `dotnet add`                                                                 | `add` è il primo sottocomando in ordine alfabetico.
 `dotnet add p⇥`                      | `dotnet add --help`                                                          | Il completamento tramite TAB rileva la corrispondenza delle sottostringhe e `--help` viene per prima in ordine alfabetico.
-`dotnet add p⇥⇥`                    | `dotnet add package`                                                          | Se si preme TAB una seconda volta, viene visualizzato il suggerimento successivo.      
+`dotnet add p⇥⇥`                    | `dotnet add package`                                                          | Se si preme TAB una seconda volta, viene visualizzato il suggerimento successivo.
 `dotnet add package Microsoft⇥`      | `dotnet add package Microsoft.ApplicationInsights.Web`                      | I risultati vengono restituiti in ordine alfabetico.
 `dotnet remove reference ⇥`          | `dotnet remove reference ..\..\src\OmniSharp.DotNet\OmniSharp.DotNet.csproj` | Il completamento tramite TAB è compatibile con i file di progetto.
 
 ## <a name="powershell"></a>PowerShell
 
-Per aggiungere il completamento tramite TAB a **PowerShell** per l'interfaccia della riga di comando di .NET Core, creare o modificare il profilo memorizzato nella variabile `$PROFILE`. Per altre informazioni, vedere [How to create your profile](/powershell/module/microsoft.powershell.core/about/about_profiles#how-to-create-a-profile) (Come creare un profilo) e [Profiles and execution policy](/powershell/module/microsoft.powershell.core/about/about_profiles#profiles-and-execution-policy) (Profili e criteri di esecuzione). 
+Per aggiungere il completamento tramite TAB a **PowerShell** per l'interfaccia della riga di comando di .NET Core, creare o modificare il profilo memorizzato nella variabile `$PROFILE`. Per altre informazioni, vedere [How to create your profile](/powershell/module/microsoft.powershell.core/about/about_profiles#how-to-create-a-profile) (Come creare un profilo) e [Profiles and execution policy](/powershell/module/microsoft.powershell.core/about/about_profiles#profiles-and-execution-policy) (Profili e criteri di esecuzione).
 
 Aggiungere il codice seguente al profilo:
 
 ```powershell
-# PowerShell parameter completion shim for the dotnet CLI 
+# PowerShell parameter completion shim for the dotnet CLI
 Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
      param($commandName, $wordToComplete, $cursorPosition)
          dotnet complete --position $cursorPosition "$wordToComplete" | ForEach-Object {
@@ -58,7 +58,7 @@ Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
  }
 ```
 
-## <a name="bash"></a>barra rovesciata
+## <a name="bash"></a>bash
 
 Per aggiungere il completamento tramite TAB alla shell **bash** per l'interfaccia della riga di comando di .NET Core, aggiungere il codice seguente al file `.bashrc`:
 
@@ -88,7 +88,7 @@ Per aggiungere il completamento tramite TAB alla shell **zsh** per l'interfaccia
 ```zsh
 # zsh parameter completion for the dotnet CLI
 
-_dotnet_zsh_complete() 
+_dotnet_zsh_complete()
 {
   local completions=("$(dotnet complete "$words")")
 

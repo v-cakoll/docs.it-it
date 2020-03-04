@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Specificare un nome di elemento alternativo per un flusso XML'
+title: 'Procedura: specificare un nome di elemento alternativo per un flusso XML'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-ms.openlocfilehash: 577b96517632ca1ae06891540f22c2c3c3886cd1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6aaff20e2955fc9f121b3e60b14c0bbcf7515660
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018008"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159858"
 ---
-# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Procedura: Specificare un nome di elemento alternativo per un flusso XML
+# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Procedura: specificare un nome di elemento alternativo per un flusso XML
   
 Tramite l'utilizzo di <xref:System.Xml.Serialization.XmlSerializer>, è possibile generare più di un flusso XML con lo stesso set di classi. È consigliabile eseguire questa operazione poiché due diversi servizi Web XML richiedono le stesse informazioni di base, con solo piccole differenze. Si immagini ad esempio due servizi Web XML che elaborano ordini per libri e che pertanto richiedono i numeri ISBN. Un servizio usa il tag \<ISBN> mentre il secondo usa il tag \<BookID>. Si dispone di una classe denominata `Book` che contiene un campo denominato `ISBN`. Quando viene serializzata un'istanza della classe `Book`, per impostazione predefinita verrà utilizzato il nome del membro (ISBN) come nome dell'elemento del tag. Per il primo servizio Web XML, tale comportamento è quello previsto. Per inviare invece il flusso XML al secondo servizio Web XML, è necessario eseguire l'override della serializzazione in modo che il nome dell'elemento del tag sia `BookID`.  
   
@@ -73,7 +73,7 @@ public class SerializeOverride()
     myAttributes.XmlElements.Add(myElementAttribute);  
     XmlAttributeOverrides myOverrides = new XmlAttributeOverrides();  
     myOverrides.Add(typeof(Book), "ISBN", myAttributes);  
-    XmlSerializer mySerializer =   
+    XmlSerializer mySerializer =
     new XmlSerializer(typeof(Book), myOverrides)  
     Book b = new Book();  
     b.ISBN = "123456789"  
@@ -99,4 +99,4 @@ public class SerializeOverride()
 - [Serializzazione SOAP e XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [Procedura: Serializzare un oggetto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Procedura: Deserializzare un oggetto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Procedura: deserializzare un oggetto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

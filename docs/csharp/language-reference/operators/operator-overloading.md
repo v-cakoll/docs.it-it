@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: 1475852d312fa16980f25347fc9a864cb1659221
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: c59ae6960a77efd866db4748ca537d9e5218fd1e
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451928"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78238975"
 ---
 # <a name="operator-overloading-c-reference"></a>Overload degli operatori (Riferimento C#)
 
@@ -25,7 +25,7 @@ Per dichiarare un operatore, usare la parola chiave `operator`. Una dichiarazion
 
 L'esempio seguente definisce una struttura semplificata per la rappresentazione di un numero razionale. La struttura esegue l'overload di alcuni [operatori aritmetici](arithmetic-operators.md):
 
-[!code-csharp[fraction example](~/samples/csharp/language-reference/operators/OperatorOverloading.cs)]
+[!code-csharp[fraction example](~/samples/snippets/csharp/language-reference/operators/OperatorOverloading.cs)]
 
 È possibile estendere l'esempio precedente [definendo una conversione implicita](user-defined-conversion-operators.md) da `int` a `Fraction`. Gli operatori di overload supporteranno quindi gli argomenti di questi due tipi. Diventerà quindi possibile aggiungere un numero intero a una frazione e ottenere di conseguenza una frazione.
 

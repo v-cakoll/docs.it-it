@@ -1,16 +1,16 @@
 ---
 title: Attributi C# - Panoramica del linguaggio C#
 description: Informazioni sulla programmazione dichiarativa con attributi in C#
-ms.date: 08/10/2016
+ms.date: 02/27/2020
 ms.assetid: 753bcfe2-7ddd-4487-9513-ba70937fc8e9
-ms.openlocfilehash: 79bd14ebd3b25eabc0b9f7ed8f9e9585a050805f
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: dc5b194c22fc2746ff8b0ab3e550e560a3666bbe
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634650"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159208"
 ---
-# <a name="attributes"></a>Attributi
+# <a name="attributes"></a>Attributes
 
 Tipi, membri e altre entità di un programma C# supportano modificatori che controllano alcuni aspetti del loro comportamento. L'accessibilità di un metodo, ad esempio, è controllata con i modificatori `public`, `protected`, `internal` e `private`. Il linguaggio C# generalizza questa funzionalità in modo che i tipi di informazioni dichiarative definiti dall'utente possano essere associati a entità di programma e recuperati in fase di esecuzione. I programmi specificano queste informazioni dichiarative aggiuntive definendo e usando ***attributi***.
 
@@ -31,4 +31,4 @@ L'esempio di codice seguente illustra come ottenere le istanze di `HelpAttribute
 [!code-csharp[AttributeRead](../../../samples/snippets/csharp/tour/attributes/Program.cs#ReadAttributes)]
 
 >[!div class="step-by-step"]
->[Precedente](delegates.md)
+>[Indietro](delegates.md)

@@ -3,12 +3,12 @@ title: Navigazione dello spazio dei nomi XPath
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
-ms.openlocfilehash: 37b9d3e04e075c7ef95420c70881ba9b34e031ce
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f35318b1439b762bf7c87cff217ed1787e8d007c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709790"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156322"
 ---
 # <a name="xpath-namespace-navigation"></a>Navigazione dello spazio dei nomi XPath
 Per usare le query XPath con i documenti XML, è necessario indirizzare correttamente gli spazi dei nomi XML e gli elementi da questi contenuti. Gli spazi dei nomi evitano le ambiguità che si possono verificare quando i nomi vengono usati in più contesti; ad esempio il nome `ID` potrebbe far riferimento a più identificatori associati a diversi elementi di un documento XML. La sintassi dello spazio dei nomi specifica gli URI, i nomi e i prefissi che distinguono gli elementi di un documento XML.  
@@ -18,7 +18,7 @@ Per usare le query XPath con i documenti XML, è necessario indirizzare corretta
 ## <a name="namespace-declarations"></a>Dichiarazioni dello spazio dei nomi  
  Le dichiarazioni dello spazio dei nomi consentono di distinguere e indirizzare gli elementi di un documento XML quando si usa un'istanza dell'oggetto <xref:System.Xml.XPath.XPathNavigator>. I prefissi dello spazio dei nomi forniscono una breve sintassi per l'indirizzamento degli spazi dei nomi.  
   
- I prefissi sono definiti dal formato: `<e:Envelope>`e`" è un'abbreviazione dell'URI formale dello spazio dei nomi. È possibile identificare l'elemento `Body` come membro dello spazio dei nomi `Envelope` tramite la sintassi: `e:Body`.  
+ I prefissi sono definiti dal formato: `<e:Envelope xmlns:e=http://schemas.xmlsoap.org/soap/envelope/>.` In questa sintassi il prefisso "`e`" è un'abbreviazione dell'URI formale dello spazio dei nomi. È possibile identificare l'elemento `Body` come membro dello spazio dei nomi `Envelope` tramite la sintassi: `e:Body`.  
   
  Nell'esempio di navigazione della sezione successiva, al seguente documento XML verrà fatto riferimento come `response.xml`.  
   
@@ -27,7 +27,7 @@ Per usare le query XPath con i documenti XML, è necessario indirizzare corretta
 <e:Envelope xmlns:e="http://schemas.xmlsoap.org/soap/envelope/">  
   <e:Body>  
     <s:Search xmlns:s="http://schemas.microsoft.com/v1/Search">  
-      <r:request xmlns:r="http://schemas.microsoft.com/v1/Search/metadata"   
+      <r:request xmlns:r="http://schemas.microsoft.com/v1/Search/metadata"
                  xmlns:i="http://www.w3.org/2001/XMLSchema-instance">  
       </r:request>  
     </s:Search>  
@@ -54,13 +54,13 @@ using (XmlReader reader = XmlReader.Create("response.xml"))
   
     XPathNavigator element = nav.SelectSingleNode(xpath, nsmgr);  
   
-    Console.WriteLine("Element Prefix:" + element.Prefix +   
+    Console.WriteLine("Element Prefix:" + element.Prefix +
     " Local name:" + element.LocalName);  
     Console.WriteLine("Namespace URI: " + element.NamespaceURI);  
 }  
 ```  
   
- La precisione assicurata dalla qualifica completa degli spazi dei nomi e dei nomi non è soltanto utile, infatti da un breve esperimento con la definizione di documento e il codice degli esempi precedenti è possibile constatare che la navigazione senza nomi di elementi completi genera eccezioni. Ad esempio la definizione di elemento: `<Search>` e la query: stringa `xpath = "/s:Envelope/s:Body/Search";` senza il prefisso dello spazio dei nomi nell'elemento `Search` restituisce `null` invece dell'elemento `Search`.  
+ La precisione assicurata dalla qualifica completa degli spazi dei nomi e dei nomi non è soltanto utile, infatti da un breve esperimento con la definizione di documento e il codice degli esempi precedenti è possibile constatare che la navigazione senza nomi di elementi completi genera eccezioni. Ad esempio la definizione di elemento: `<Search xmlns="http://schemas.microsoft.com/v1/Search">` e la query: stringa `xpath = "/s:Envelope/s:Body/Search";` senza il prefisso dello spazio dei nomi nell'elemento `Search` restituisce `null` invece dell'elemento `Search`.  
   
 ## <a name="see-also"></a>Vedere anche
 

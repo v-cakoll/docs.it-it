@@ -1,19 +1,19 @@
 ---
 title: Comando dotnet test
 description: Il comando dotnet test viene usato per eseguire unit test in un determinato progetto.
-ms.date: 05/29/2018
-ms.openlocfilehash: 890d1fc3fd9d47f2bdcd63f2a25248c3edd705e4
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.date: 02/27/2020
+ms.openlocfilehash: 6e906ab396a788905c99f50e73390b765b240efc
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77626047"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157011"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
 **Questo articolo si applica a:** ✔️ .net core 2,1 SDK e versioni successive
 
-## <a name="name"></a>Name
+## <a name="name"></a>Nome
 
 `dotnet test`: driver di test .NET usato per eseguire gli unit test.
 
@@ -147,7 +147,7 @@ I progetti di test specificano l'applicazione di esecuzione dei test usando un n
 
 | Framework di test | Proprietà supportate                                                                                      |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
-| MSTest         | <ul><li>FullyQualifiedName</li><li>Name</li><li>ClassName</li><li>Priorità</li><li>TestCategory</li></ul> |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>Nome</li><li>ClassName</li><li>Priorità</li><li>TestCategory</li></ul> |
 | xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Caratteristiche</li></ul>                                   |
 
 `<operator>` descrive la relazione tra la proprietà e il valore:
@@ -167,7 +167,7 @@ Le espressioni possono essere unite con operatori condizionali:
 
 | Operatore            | Funzione |
 | ------------------- | -------- |
-| <code>&#124;</code> | OPPURE       |
+| <code>&#124;</code> | o       |
 | `&`                 | AND      |
 
 È possibile racchiudere le espressioni tra parentesi quando si usano gli operatori condizionali (ad esempio, `(Name~TestMethod1) | (Name~TestMethod2)`).

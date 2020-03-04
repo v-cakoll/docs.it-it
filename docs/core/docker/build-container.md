@@ -4,12 +4,12 @@ description: In questa esercitazione si apprenderà come distribuire un'applicaz
 ms.date: 01/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 17d3dfbe58770b19a75be1dad3ae03406584992c
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: e1904430a591b0e74a69d50a53869a130fc0a248
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900118"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157830"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Esercitazione: distribuire un'app .NET Core
 
@@ -29,7 +29,7 @@ L'esercitazione illustra le attività di compilazione e distribuzione di un cont
 > [!TIP]
 > Se si usa un'applicazione ASP.NET Core esistente, vedere l'esercitazione [informazioni su come distribuire un'applicazione ASP.NET Core](/aspnet/core/host-and-deploy/docker/building-net-docker-images) .
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 Installare i prerequisiti seguenti:
 
@@ -40,7 +40,7 @@ Se .NET Core è già installato, usare il comando `dotnet --info` per determinar
 
 - Una cartella di lavoro temporanea per il *Dockerfile* e l'app .NET Core di esempio. In questa esercitazione il nome *Docker-working* viene usato come cartella di lavoro.
 
-## <a name="create-net-core-app"></a>Creare l'app .NET Core
+## <a name="create-net-core-app"></a>Creare un'app .NET Core
 
 È necessario creare un'app .NET Core che verrà eseguita dal contenitore Docker. Aprire il terminale in uso, creare una cartella di lavoro se non è già stata creata e passare alla cartella. Nella cartella di lavoro, eseguire il comando seguente per creare un nuovo progetto in una sottodirectory denominata *app*:
 
@@ -141,7 +141,7 @@ dotnet publish -c Release
 
 Questo comando compila l'app nella cartella *publish*. Il percorso della cartella *publish* dalla cartella di lavoro deve essere `.\app\bin\Release\netcoreapp3.1\publish\`
 
-Dalla cartella dell' *app* , ottenere un elenco di directory della cartella di pubblicazione per verificare che il file *MyApp. dll* sia stato creato. 
+Dalla cartella dell' *app* , ottenere un elenco di directory della cartella di pubblicazione per verificare che il file *MyApp. dll* sia stato creato.
 
 ```console
 > dir bin\Release\netcoreapp3.1\publish
@@ -370,7 +370,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 Il comando `docker run` consente anche di modificare il comando `ENTRYPOINT` dal *Dockerfile* e di eseguire qualcosa di diverso, ma solo per il contenitore in questione. Ad esempio, usare il comando seguente per eseguire `bash` o `cmd.exe`. Modificare il comando in base alle esigenze.
 
-#### <a name="windows"></a>Portale di
+#### <a name="windows"></a>Windows
 
 In questo esempio `ENTRYPOINT` viene sostituito con `cmd.exe`. Premere <kbd>CTRL</kbd>+<kbd>C</kbd> per terminare il processo e arrestare il contenitore.
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: a53a8123db64948503bd6d2da9a27fc414dc1e1f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: b8ed028bc1edabf14d7b2dd67d94b28d574d2eb4
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423531"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159624"
 ---
 # <a name="handling-and-raising-events"></a>Gestione e generazione di eventi
 
@@ -27,7 +27,7 @@ Gli eventi in .NET si basano sul modello di delegato. Il modello di delegato seg
   
  Per informazioni sulla gestione di eventi nelle applicazioni Windows 8.x Store, vedere la pagina relativa alla [Panoramica degli eventi e degli eventi indirizzati](https://docs.microsoft.com/previous-versions/windows/apps/hh758286(v=win.10)).  
   
-## <a name="events"></a>eventi
+## <a name="events"></a>Eventi
 
 Un evento è un messaggio inviato da un oggetto per segnalare l'occorrenza di un'azione. L'azione può essere causata dall'interazione dell'utente, ad esempio il clic su un pulsante, oppure essere il risultato di altre logiche di programma, ad esempio la modifica di un valore della proprietà. L'oggetto che genera l'evento viene chiamato *mittente dell'evento*. Il mente dell'evento non sa quale oggetto o metodo riceverà (handle) gli eventi che egli genera. L'evento è in genere un membro del mittente dell'evento. Ad esempio, l'evento <xref:System.Web.UI.WebControls.Button.Click> è un membro della classe <xref:System.Web.UI.WebControls.Button> e l'evento <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> è un membro della classe che implementa l'interfaccia <xref:System.ComponentModel.INotifyPropertyChanged>.  
   
@@ -55,7 +55,7 @@ Per gli scenari in cui i delegati <xref:System.EventHandler> e <xref:System.Even
 [!code-csharp[EventsOverview#4](~/samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)]
 [!code-vb[EventsOverview#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  
   
-## <a name="event-data"></a>Dati evento
+## <a name="event-data"></a>Dati dell'evento
 
 I dati associati a un evento possono essere forniti tramite una classe di dati eventi. .NET fornisce molte classi di dati eventi che possono essere usate nelle applicazioni. Ad esempio, la classe <xref:System.IO.Ports.SerialDataReceivedEventArgs> è la classe di dati eventi per l'evento <xref:System.IO.Ports.SerialPort.DataReceived?displayProperty=nameWithType>. .NET segue un modello di denominazione che prevede di terminare tutte le classi di dati eventi con `EventArgs`. È possibile determinare quale classe di dati eventi è associata a un evento esaminando il delegato per tale evento. Ad esempio, il delegato <xref:System.IO.Ports.SerialDataReceivedEventHandler> include la classe <xref:System.IO.Ports.SerialDataReceivedEventArgs> come uno dei relativi parametri.  
   
@@ -78,7 +78,7 @@ Nell'esempio seguente viene illustrato un metodo del gestore eventi denominato `
 [!code-vb[EventsOverview#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#2)]  
   
 ## <a name="static-and-dynamic-event-handlers"></a>Gestori eventi statici e dinamici  
- 
+
 .NET consente ai sottoscrittori di registrarsi per le notifiche degli eventi in modo statico o dinamico. I gestori eventi statici sono attivi per l'intera durata della classe di cui gestiscono gli eventi. I gestori eventi dinamici sono attivati e disattivati in modo esplicito durante l'esecuzione del programma, in genere in risposta a una logica di programma condizionale. Ad esempio, possono essere usati se le notifiche degli eventi sono necessarie solo in determinate condizioni oppure se un'applicazione fornisce più gestori eventi e le condizioni di runtime definiscono quello appropriato da usare. Nell'esempio della sezione precedente viene illustrato come aggiungere un gestore eventi in modo dinamico. Per altre informazioni, vedere [Eventi (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md) e [Eventi (Guida per programmatori C#)](../../csharp/programming-guide/events/index.md).  
   
 ## <a name="raising-multiple-events"></a>Generazione di più eventi  

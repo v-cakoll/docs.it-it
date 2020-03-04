@@ -3,12 +3,12 @@ title: Testing unità di Visual Basic in .NET Core con il test dotnet e NUnit
 description: Informazioni sui concetti relativi agli unit test in .NET Core tramite un'esperienza interattiva per la creazione passo-passo di una soluzione di Visual Basic di esempio con NUnit.
 author: rprouse
 ms.date: 10/04/2018
-ms.openlocfilehash: 8f05d25a0add76f5c552f5b9ac1eb310c3d6407a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a33447457344b241b4c2376d777b0deb7f556874
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715412"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240922"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>Testing unità di librerie .NET Core di Visual Basic usando il test dotnet e NUnit
 
@@ -16,10 +16,10 @@ In questa esercitazione viene illustrata un'esperienza interattiva di compilazio
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 - [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) o versioni successive.
-- Editor di testo o editor di codice a scelta.
+- Un editor di testo o editor di codice di propria scelta.
 
 ## <a name="creating-the-source-project"></a>Creazione del progetto di origine
 
@@ -82,7 +82,7 @@ dotnet new nunit -lang VB
 
 Il comando [dotnet new](../tools/dotnet-new.md) crea un progetto di test che usa NUnit come libreria di test. Il modello generato configura il Test Runner nel file *PrimeServiceTests.vbproj*:
 
-[!code-xml[Packages](~/samples/core/getting-started/unit-testing-vb-nunit/PrimeService.Tests/PrimeService.Tests.vbproj#Packages)]
+[!code-xml[Packages](~/samples/snippets/core/testing/unit-testing-vb-nunit/vb/PrimeService.Tests/PrimeService.Tests.vbproj#Packages)]
 
 Per creare ed eseguire unit test, il progetto di test richiede altri pacchetti. `dotnet new` nel passaggio precedente aggiunge NUnit e l'adattatore di test NUnit. Aggiungere ora la libreria di classi `PrimeService` come un'altra dipendenza del progetto. Usare il comando [`dotnet add reference`](../tools/dotnet-add-reference.md):
 
@@ -147,7 +147,7 @@ Public Function IsPrime(candidate As Integer) As Boolean
 End Function
 ```
 
-Eseguire di nuovo `dotnet test` nella directory *unit-testing-vb-nunit*. Il comando `dotnet test` esegue prima una compilazione del progetto `PrimeService` e quindi del progetto `PrimeService.Tests`. Dopo la compilazione di entrambi i progetti, verrà eseguito il test singolo, che viene superato.
+Eseguire di nuovo *nella directory*unit-testing-vb-nunit`dotnet test`. Il comando `dotnet test` esegue prima una compilazione del progetto `PrimeService` e quindi del progetto `PrimeService.Tests`. Dopo la compilazione di entrambi i progetti, verrà eseguito il test singolo, Procede.
 
 ## <a name="adding-more-features"></a>Aggiunta di altre funzionalità
 
@@ -155,7 +155,7 @@ Ora che il test è stato superato, è necessario scriverne altri. Esistono alcun
 
 Anziché creare nuovi test, applicare questi due attributi per creare una serie di test che verificano diversi valori minori di due, ovvero il numero primo più basso:
 
-[!code-vb[Sample_TestCode](../../../samples/core/getting-started/unit-testing-vb-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.vb?name=Sample_TestCode)]
+[!code-vb[Sample_TestCode](../../../samples/snippets/core/testing/unit-testing-vb-nunit/vb/PrimeService.Tests/PrimeService_IsPrimeShould.vb?name=Sample_TestCode)]
 
 Eseguire `dotnet test`. Due test hanno esito negativo. Per fare in modo che tutti i test vengano superati, modificare la clausola `if` all'inizio del metodo `Main` nel file *PrimeServices.cs*:
 

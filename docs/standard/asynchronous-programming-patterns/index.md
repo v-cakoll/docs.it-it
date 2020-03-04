@@ -6,20 +6,20 @@ helpviewer_keywords:
 - asynchronous design patterns, .NET
 - .NET Framework, asynchronous design patterns
 ms.assetid: 4ece5c0b-f8fe-4114-9862-ac02cfe5a5d7
-ms.openlocfilehash: dfce69ee18b8346cd802b4934de63bf0a39c72f0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e1efe9c3eb57f317def91e527506c358eb086679
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124264"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160053"
 ---
 # <a name="asynchronous-programming-patterns"></a>Modelli di programmazione asincrona
 
 In .NET sono disponibili tre modelli per l'esecuzione di operazioni asincrone:  
 
-- **Modello asincrono basato su attività (TAP)** , che usa un unico metodo per rappresentare l'inizio e il completamento di un'operazione asincrona. Il modello TAP è stato introdotto in .NET Framework 4. **È l'approccio consigliato per la programmazione asincrona in .NET.** Le parole chiave [async](../../csharp/language-reference/keywords/async.md) e [await](../../csharp/language-reference/operators/await.md) in C# e gli operatori [Async](../../visual-basic/language-reference/modifiers/async.md) e [Await](../../visual-basic/language-reference/operators/await-operator.md) in Visual Basic aggiungono il supporto del linguaggio per TAP. Per altre informazioni, vedere [Task-based Asynchronous Pattern (TAP)](task-based-asynchronous-pattern-tap.md) (Modello asincrono basato su attività, TAP).  
+- **Modello asincrono basato su attività (TAP)**, che usa un unico metodo per rappresentare l'inizio e il completamento di un'operazione asincrona. Il modello TAP è stato introdotto in .NET Framework 4. **È l'approccio consigliato per la programmazione asincrona in .NET.** Le parole chiave [async](../../csharp/language-reference/keywords/async.md) e [await](../../csharp/language-reference/operators/await.md) in C# e gli operatori [Async](../../visual-basic/language-reference/modifiers/async.md) e [Await](../../visual-basic/language-reference/operators/await-operator.md) in Visual Basic aggiungono il supporto del linguaggio per TAP. Per altre informazioni, vedere [Task-based Asynchronous Pattern (TAP)](task-based-asynchronous-pattern-tap.md) (Modello asincrono basato su attività, TAP).  
 
-- **Modello asincrono basato su eventi (EAP)** , ovvero il modello legacy basato su eventi per fornire il comportamento asincrono. Richiede un metodo con il suffisso `Async` e uno o più eventi, i tipi delegati del gestore eventi e i tipi derivati da `EventArg`. EAP è stato introdotto in .NET Framework 2.0. Questo modello non è più consigliato per i nuovi progetti di sviluppo. Per ulteriori informazioni, vedere [Event-based Asynchronous Pattern (EAP)](event-based-asynchronous-pattern-eap.md) (Modello asincrono basato su eventi, EAP).  
+- **Modello asincrono basato su eventi (EAP)**, ovvero il modello legacy basato su eventi per fornire il comportamento asincrono. Richiede un metodo con il suffisso `Async` e uno o più eventi, i tipi delegati del gestore eventi e i tipi derivati da `EventArg`. EAP è stato introdotto in .NET Framework 2.0. Questo modello non è più consigliato per i nuovi progetti di sviluppo. Per ulteriori informazioni, vedere [Event-based Asynchronous Pattern (EAP)](event-based-asynchronous-pattern-eap.md) (Modello asincrono basato su eventi, EAP).  
 
 - Il **modello di programmazione asincrona (APM)** (chiamato anche modello <xref:System.IAsyncResult>) è il modello legacy che usa l'interfaccia <xref:System.IAsyncResult> per fornire il comportamento asincrono. In questo modello, le operazioni sincrone richiedono i metodi `Begin` e `End` (ad esempio `BeginWrite` e `EndWrite` per implementare un'operazione di scrittura asincrona). Questo modello non è più consigliato per i nuovi sviluppi. Per altre informazioni, vedere [Asynchronous Programming Model (APM)](asynchronous-programming-model-apm.md) (Modello di programmazione asincrona, APM).  
   
@@ -59,7 +59,7 @@ La controparte APM espone i metodi `BeginRead` e `EndRead`:
 public class MyClass  
 {  
     public IAsyncResult BeginRead(  
-        byte [] buffer, int offset, int count,   
+        byte [] buffer, int offset, int count,
         AsyncCallback callback, object state);  
     public int EndRead(IAsyncResult asyncResult);  
 }  

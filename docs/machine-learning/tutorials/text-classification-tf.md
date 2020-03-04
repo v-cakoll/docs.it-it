@@ -4,12 +4,12 @@ description: Questa esercitazione illustra come usare un modello TensorFlow con 
 ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 7a6043f56a2ecaca633ba5545170f27a85a22efc
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 688c5b83cef8f21eef8fa24521a85449a9cfbd48
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77092395"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78241117"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>Esercitazione: analizzare i sentimenti delle revisioni dei film usando un modello TensorFlow con training preliminare in ML.NET
 
@@ -64,11 +64,11 @@ In questa esercitazione verranno illustrate le procedure per:
 
 1. Aggiungere le istruzioni `using` seguenti all'inizio del file *Program.cs*:
 
-   [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TextClassificationTF/Program.cs#AddUsings "Add necessary usings")]
+   [!code-csharp[AddUsings](../../../samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#AddUsings "Add necessary usings")]
 
 1. Creare due variabili globali immediatamente sopra il metodo `Main` per conservare il percorso del file del modello salvato e la lunghezza del vettore di funzionalità.
 
-   [!code-csharp[DeclareGlobalVariables](../../../samples/machine-learning/tutorials/TextClassificationTF/Program.cs#DeclareGlobalVariables "Declare global variables")]
+   [!code-csharp[DeclareGlobalVariables](../../../samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#DeclareGlobalVariables "Declare global variables")]
 
     * `_modelPath` è il percorso del file del modello sottoposto a training.
     * `FeatureLength` è la lunghezza della matrice di funzionalità Integer prevista per il modello.
@@ -94,13 +94,13 @@ La matrice di funzionalità a lunghezza variabile viene quindi ridimensionata a 
 
 1. Creare una classe per i dati di input, dopo il metodo `Main`:
 
-    [!code-csharp[MovieReviewClass](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#MovieReviewClass "Declare movie review type")]
+    [!code-csharp[MovieReviewClass](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#MovieReviewClass "Declare movie review type")]
 
     La classe di dati di input, `MovieReview`, dispone di un `string` per i commenti degli utenti (`ReviewText`).
 
 1. Creare una classe per le funzionalità a lunghezza variabile, dopo il metodo `Main`:
 
-    [!code-csharp[VariableLengthFeatures](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#VariableLengthFeatures "Declare variable length features type")]
+    [!code-csharp[VariableLengthFeatures](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#VariableLengthFeatures "Declare variable length features type")]
 
     La proprietà `VariableLengthFeatures` dispone di un attributo [VectorType](xref:Microsoft.ML.Data.VectorTypeAttribute.%23ctor%2A) per designarla come vettore.  Tutti gli elementi Vector devono essere dello stesso tipo. Nei set di dati con un numero elevato di colonne, il caricamento di più colonne come un singolo vettore riduce il numero di passaggi di dati quando si applicano le trasformazioni dei dati.
 
@@ -108,7 +108,7 @@ La matrice di funzionalità a lunghezza variabile viene quindi ridimensionata a 
 
 1. Creare una classe per le funzionalità a lunghezza fissa, dopo il metodo `Main`:
 
-    [!code-csharp[FixedLengthFeatures](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#FixedLengthFeatures)]
+    [!code-csharp[FixedLengthFeatures](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#FixedLengthFeatures)]
 
     Questa classe viene utilizzata nell'azione `ResizeFeatures`. I nomi delle proprietà (in questo caso solo uno) vengono utilizzati per indicare quali colonne del DataView possono essere utilizzate come _output_ dell'azione di mapping personalizzata.
 
@@ -116,7 +116,7 @@ La matrice di funzionalità a lunghezza variabile viene quindi ridimensionata a 
 
 1. Creare una classe per la stima dopo il metodo `Main`:
 
-    [!code-csharp[Prediction](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#Prediction "Declare prediction class")]
+    [!code-csharp[Prediction](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#Prediction "Declare prediction class")]
 
     `MovieReviewSentimentPrediction` è la classe di stima usata dopo il training del modello. `MovieReviewSentimentPrediction` dispone di una singola matrice di `float` (`Prediction`) e di un attributo `VectorType`.
 
@@ -126,7 +126,7 @@ La [classe MLContext](xref:Microsoft.ML.MLContext) è un punto di partenza per t
 
 1. Sostituire la riga `Console.WriteLine("Hello World!")` nel metodo `Main` con il codice seguente per dichiarare e inizializzare la variabile mlContext:
 
-   [!code-csharp[CreateMLContext](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CreateMLContext "Create the ML Context")]
+   [!code-csharp[CreateMLContext](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#CreateMLContext "Create the ML Context")]
 
 1. Creare un dizionario per codificare le parole come numeri interi usando il metodo [`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%2A) per caricare i dati di mapping da un file, come illustrato nella tabella seguente:
 
@@ -140,21 +140,21 @@ La [classe MLContext](xref:Microsoft.ML.MLContext) è un punto di partenza per t
 
     Aggiungere il codice seguente per creare la mappa di ricerca:
 
-    [!code-csharp[CreateLookupMap](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CreateLookupMap)]
+    [!code-csharp[CreateLookupMap](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#CreateLookupMap)]
 
 1. Aggiungere un `Action` per ridimensionare la matrice di tipo Integer a lunghezza variabile in una matrice di numeri interi di dimensioni fisse, con le righe di codice seguenti:
 
-   [!code-csharp[ResizeFeatures](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#ResizeFeatures)]
+   [!code-csharp[ResizeFeatures](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#ResizeFeatures)]
 
 ## <a name="load-the-pre-trained-tensorflow-model"></a>Caricare il modello di TensorFlow con training preliminare
 
 1. Aggiungere codice per caricare il modello di TensorFlow:
 
-    [!code-csharp[LoadTensorFlowModel](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#LoadTensorFlowModel)]
+    [!code-csharp[LoadTensorFlowModel](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#LoadTensorFlowModel)]
 
     Una volta caricato il modello, è possibile estrarne lo schema di input e di output. Gli schemi vengono visualizzati solo per interesse e apprendimento. Questo codice non è necessario per il funzionamento dell'applicazione finale:
 
-    [!code-csharp[GetModelSchema](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#GetModelSchema)]
+    [!code-csharp[GetModelSchema](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#GetModelSchema)]
 
     Lo schema di input è la matrice a lunghezza fissa di parole con codifica Integer. Lo schema di output è una matrice di probabilità float che indica se il sentimento di una verifica è negativo o positivo. Questi valori vengono sommati a 1, in quanto la probabilità di essere positivi è il complemento della probabilità che il sentimento sia negativo.
 
@@ -162,27 +162,27 @@ La [classe MLContext](xref:Microsoft.ML.MLContext) è un punto di partenza per t
 
 1. Creare la pipeline e suddividere il testo di input in parole usando la trasformazione [TokenizeIntoWords](xref:Microsoft.ML.TextCatalog.TokenizeIntoWords%2A) per suddividere il testo in parole come riga di codice successiva:
 
-   [!code-csharp[TokenizeIntoWords](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#TokenizeIntoWords)]
+   [!code-csharp[TokenizeIntoWords](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#TokenizeIntoWords)]
 
    La trasformazione [TokenizeIntoWords](xref:Microsoft.ML.TextCatalog.TokenizeIntoWords%2A) usa gli spazi per analizzare la stringa di testo in parole. Crea una nuova colonna e suddivide ogni stringa di input in un vettore di sottostringhe in base al separatore definito dall'utente.
 
 1. Eseguire il mapping delle parole sulla codifica Integer usando la tabella di ricerca dichiarata in precedenza:
 
-    [!code-csharp[MapValue](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#MapValue)]
+    [!code-csharp[MapValue](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#MapValue)]
 
 1. Ridimensionare le codifiche Integer a lunghezza variabile a una lunghezza fissa richiesta dal modello:
 
-    [!code-csharp[CustomMapping](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CustomMapping)]
+    [!code-csharp[CustomMapping](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#CustomMapping)]
 
 1. Classificare l'input con il modello TensorFlow caricato:
 
-    [!code-csharp[ScoreTensorFlowModel](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#ScoreTensorFlowModel)]
+    [!code-csharp[ScoreTensorFlowModel](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#ScoreTensorFlowModel)]
 
     L'output del modello TensorFlow è denominato `Prediction/Softmax`. Si noti che il nome `Prediction/Softmax` è determinato dal modello TensorFlow. Non è possibile modificare questo nome.
 
 1. Crea una nuova colonna per la stima di output:
 
-    [!code-csharp[SnippetCopyColumns](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#SnippetCopyColumns)]
+    [!code-csharp[SnippetCopyColumns](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#SnippetCopyColumns)]
 
     È necessario copiare la colonna `Prediction/Softmax` in una colonna con un nome che può essere usato come proprietà in una C# classe: `Prediction`. Il carattere `/` non è consentito in un C# nome di proprietà.
 
@@ -190,7 +190,7 @@ La [classe MLContext](xref:Microsoft.ML.MLContext) è un punto di partenza per t
 
 1. Aggiungere il codice per creare il modello dalla pipeline:
 
-    [!code-csharp[SnippetCreateModel](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#SnippetCreateModel)]
+    [!code-csharp[SnippetCreateModel](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#SnippetCreateModel)]
 
     Un modello ML.NET viene creato dalla catena di estimatori nella pipeline chiamando il metodo `Fit`. In questo caso, i dati non vengono adattati per la creazione del modello, perché è già stato eseguito il training del modello TensorFlow. Viene fornito un oggetto visualizzazione dati vuoto per soddisfare i requisiti del metodo `Fit`.
 
@@ -207,7 +207,7 @@ La [classe MLContext](xref:Microsoft.ML.MLContext) è un punto di partenza per t
 
 1. Aggiungere il codice seguente per creare il `PredictionEngine` come prima riga nel metodo `PredictSentiment()`:
 
-    [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CreatePredictionEngine)]
+    [!code-csharp[CreatePredictionEngine](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#CreatePredictionEngine)]
 
     [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) è un'API di praticità, che consente di eseguire una stima su una singola istanza di dati. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) non è thread-safe. È accettabile usare in ambienti a thread singolo o prototipi. Per migliorare le prestazioni e thread safety negli ambienti di produzione, usare il servizio `PredictionEnginePool`, che consente di creare un [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) di [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) oggetti da usare nell'applicazione. Vedere questa guida su come [usare `PredictionEnginePool` in un'API Web di ASP.NET Core](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application).
 
@@ -216,11 +216,11 @@ La [classe MLContext](xref:Microsoft.ML.MLContext) è un punto di partenza per t
 
 1. Aggiungere un commento per testare la stima del modello sottoposto a training nel metodo `Predict()` creando un'istanza di `MovieReview`:
 
-    [!code-csharp[CreateTestData](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CreateTestData)]
+    [!code-csharp[CreateTestData](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#CreateTestData)]
 
 1. Passare i dati di commento del test al `Prediction Engine` aggiungendo le righe di codice seguenti nel metodo `PredictSentiment()`:
 
-    [!code-csharp[Predict](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#Predict)]
+    [!code-csharp[Predict](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#Predict)]
 
 1. La funzione [Predict ()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) esegue una stima su una singola riga di dati:
 
@@ -230,11 +230,11 @@ La [classe MLContext](xref:Microsoft.ML.MLContext) è un punto di partenza per t
 
 1. Visualizzare la stima del sentimento usando il codice seguente:
 
-    [!code-csharp[DisplayPredictions](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#DisplayPredictions)]
+    [!code-csharp[DisplayPredictions](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#DisplayPredictions)]
 
 1. Aggiungere una chiamata a `PredictSentiment` alla fine del metodo `Main`:
 
-    [!code-csharp[CallPredictSentiment](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CallPredictSentiment)]
+    [!code-csharp[CallPredictSentiment](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#CallPredictSentiment)]
 
 ## <a name="results"></a>Risultati
 

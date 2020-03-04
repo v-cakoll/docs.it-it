@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Serializzare un oggetto'
+title: 'Procedura: serializzare un oggetto'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - serializing objects
 - objects, serializing steps
 ms.assetid: a1207d05-32b2-4953-8582-959607991227
-ms.openlocfilehash: a587a132446a5f5d74b2d534b1ca3b93ccca1480
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3e24d890d47747c51086214530073fc551321079
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928978"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159884"
 ---
-# <a name="how-to-serialize-an-object"></a>Procedura: Serializzare un oggetto
+# <a name="how-to-serialize-an-object"></a>Procedura: serializzare un oggetto
 Per serializzare un oggetto, creare prima l'oggetto da serializzare e impostarne i campi e le proprietà pubbliche. A tale scopo, è necessario determinare il formato di trasporto in cui deve essere archiviato il flusso XML, come flusso o come file. Ad esempio, se il flusso XML deve essere salvato in forma permanente, creare un oggetto <xref:System.IO.FileStream>.  
   
 > [!NOTE]
@@ -42,7 +42,7 @@ Per serializzare un oggetto, creare prima l'oggetto da serializzare e impostarne
     ```csharp  
     MySerializableClass myObject = new MySerializableClass();  
     // Insert code to set properties and fields of the object.  
-    XmlSerializer mySerializer = new   
+    XmlSerializer mySerializer = new
     XmlSerializer(typeof(MySerializableClass));  
     // To write to a file, create a StreamWriter object.  
     StreamWriter myWriter = new StreamWriter("myFileName.xml");  
@@ -53,4 +53,4 @@ Per serializzare un oggetto, creare prima l'oggetto da serializzare e impostarne
 ## <a name="see-also"></a>Vedere anche
 
 - [Introduzione alla serializzazione XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [Procedura: Deserializzare un oggetto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Procedura: deserializzare un oggetto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

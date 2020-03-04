@@ -1,19 +1,19 @@
 ---
 title: Comando dotnet vstest
 description: Il comando dotnet vstest consente di compilare un progetto e tutte le relative dipendenze.
-ms.date: 05/30/2018
-ms.openlocfilehash: fc0aa4f9abf069f78e27692ee84aea2559109c98
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.date: 02/27/2020
+ms.openlocfilehash: 88e5b6a8966d78d0746f9ea5ccbccab142a2e0f6
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77626021"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156933"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
 **Questo articolo si applica a:** ✔️ .net core 2,1 SDK e versioni successive
 
-## <a name="name"></a>Name
+## <a name="name"></a>Nome
 
 `dotnet-vstest`: esegue test dai file specificati.
 
@@ -35,7 +35,7 @@ Il comando `dotnet-vstest` esegue l'applicazione della riga di comando `VSTest.C
 
 - **`TEST_FILE_NAMES`**
 
-  Eseguire i test dagli assembly specificati. Per separare più nomi di assembly di test, usare gli spazi. I caratteri jolly sono supportati.
+  Eseguire i test dagli assembly specificati. Per separare più nomi di assembly di test, usare gli spazi. Sono supportati caratteri jolly.
 
 ## <a name="options"></a>Opzioni
 

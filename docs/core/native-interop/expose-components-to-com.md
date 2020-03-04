@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 8d9b8eb274777a0ed019a207c6e8610cc73ec390
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: f6665e18e51af96761941e419fabc409e4b9391d
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973307"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240974"
 ---
 # <a name="exposing-net-core-components-to-com"></a>Esposizione di componenti .NET Core a COM
 
-In .NET Core, il processo di esposizione degli oggetti .NET a COM è stato significativamente semplificato rispetto a .NET Framework. Nel processo seguente viene illustrato come esporre una classe a COM. In questa esercitazione verrà illustrato come:
+In .NET Core, il processo di esposizione degli oggetti .NET a COM è stato significativamente semplificato rispetto a .NET Framework. Nel processo seguente viene illustrato come esporre una classe a COM. Questa esercitazione illustra come:
 
 - Esporre una classe a COM da .NET Core.
 - Generare un server COM nell'ambito della creazione della libreria .NET Core.
@@ -32,21 +32,35 @@ In .NET Core, il processo di esposizione degli oggetti .NET a COM è stato signi
 Il primo passaggio consiste nel creare la libreria.
 
 1. Creare una nuova cartella e in tale cartella eseguire il comando seguente:
-    
+
     ```dotnetcli
     dotnet new classlib
     ```
 
 2. Aprire `Class1.cs`.
 3. Aggiungere `using System.Runtime.InteropServices;` all'inizio del file.
-4. Creare un'interfaccia denominata `IServer`. Esempio:
+4. Creare un'interfaccia denominata `IServer`. Ad esempio:
 
-   [!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)]
+   ```csharp
+   using System;
+   using System.Runtime.InteropServices;
 
-5. Aggiungere l'attributo `[Guid("<IID>")]` all'interfaccia con il GUID di interfaccia per l'interfaccia COM che si sta implementando. Ad esempio `[Guid("fe103d6e-e71b-414c-80bf-982f18f6c1c7")]`. Si noti che questo GUID deve essere univoco perché è l'unico identificatore di questa interfaccia per COM. In Visual Studio è possibile generare un GUID passando a Strumenti > Crea GUID per aprire lo strumento Crea GUID.
+   [ComVisible(true)]
+   [Guid(ContractGuids.ServerInterface)]
+   [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
+   public interface IServer
+   {
+       /// <summary>
+       /// Compute the value of the constant Pi.
+       /// </summary>
+       double ComputePi();
+   }
+   ```
+
+5. Aggiungere l'attributo `[Guid("<IID>")]` all'interfaccia con il GUID di interfaccia per l'interfaccia COM che si sta implementando. Ad esempio: `[Guid("fe103d6e-e71b-414c-80bf-982f18f6c1c7")]`. Si noti che questo GUID deve essere univoco perché è l'unico identificatore di questa interfaccia per COM. In Visual Studio è possibile generare un GUID passando a Strumenti > Crea GUID per aprire lo strumento Crea GUID.
 6. Aggiungere l'attributo `[InterfaceType]` all'interfaccia e specificare le interfacce COM di base che l'interfaccia deve implementare.
 7. Creare una classe denominata `Server` che implementi `IServer`.
-8. Aggiungere l'attributo `[Guid("<CLSID>")]` alla classe con il GUID dell'identificatore di classe per la classe COM che si sta implementando. Ad esempio `[Guid("9f35b6f5-2c05-4e7f-93aa-ee087f6e7ab6")]`. Come per il GUID dell'interfaccia, questo GUID deve essere univoco perché è l'unico identificatore di questa interfaccia per COM.
+8. Aggiungere l'attributo `[Guid("<CLSID>")]` alla classe con il GUID dell'identificatore di classe per la classe COM che si sta implementando. Ad esempio: `[Guid("9f35b6f5-2c05-4e7f-93aa-ee087f6e7ab6")]`. Come per il GUID dell'interfaccia, questo GUID deve essere univoco perché è l'unico identificatore di questa interfaccia per COM.
 9. Aggiungere l'attributo `[ComVisible(true)]` sia all'interfaccia che alla classe.
 
 > [!IMPORTANT]

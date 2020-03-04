@@ -4,12 +4,12 @@ description: Informazioni sulle procedure consigliate per la scrittura di unit t
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 387d66bfeaf48359a27a532247a799c319f38caa
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 586373381bcb18384cbf29bb2ca2bd220a2b2d3d
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714290"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240961"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Procedure consigliate di testing unità con .NET Core e .NET Standard
 
@@ -58,7 +58,7 @@ Il termine *mock* è purtroppo usato in modo improprio quando si parla di testin
 
 *Stub*: è la sostituzione controllabile nel sistema di una dipendenza o di un collaboratore. Utilizzando uno stub è possibile testare il codice senza prendere direttamente in considerazione la dipendenza. Per impostazione predefinita, un fake è inizialmente uno stub.
 
-Si prenda in considerazione il seguente frammento di codice:
+Si consideri il frammento di codice seguente:
 
 ```csharp
 var mockOrder = new MockOrder();
@@ -118,10 +118,10 @@ Il nome del test deve essere costituito da tre parti:
 I test non si limitano a verificare che il codice funzioni, ma documentano anche il risultato. Osservando semplicemente il gruppo di unit test, sarà possibile dedurre il comportamento del codice senza neanche guardare il codice. Inoltre, quando i test hanno esito negativo, è possibile vedere esattamente quali scenari non soddisfano le aspettative.
 
 #### <a name="bad"></a>Scadente:
-[!code-csharp[BeforeNaming](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeNaming)]
+[!code-csharp[BeforeNaming](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeNaming)]
 
 #### <a name="better"></a>Migliore:
-[!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
+[!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
 
 ### <a name="arranging-your-tests"></a>Disposizione dei test
 **Disporre, agire, asserire** è uno schema comune per gli unit test. Come suggerisce il nome, è costituito da tre azioni principali:
@@ -138,10 +138,10 @@ I test non si limitano a verificare che il codice funzioni, ma documentano anche
 La leggibilità è uno degli aspetti più importanti da considerare durante la scrittura di un test. La separazione di ognuna di queste azioni all'interno del test evidenzia chiaramente le dipendenze necessarie per chiamare il codice, come viene chiamato il codice e ciò che si sta tentando di asserire. Sebbene sia possibile combinare alcuni passaggi e ridurre le dimensioni del test, l'obiettivo principale rimane rendere il test più leggibile possibile.
 
 #### <a name="bad"></a>Scadente:
-[!code-csharp[BeforeArranging](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeArranging)]
+[!code-csharp[BeforeArranging](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeArranging)]
 
 #### <a name="better"></a>Migliore:
-[!code-csharp[AfterArranging](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterArranging)]
+[!code-csharp[AfterArranging](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterArranging)]
 
 ### <a name="write-minimally-passing-tests"></a>Scrivere test più semplici possibile
 L'input da usare in uno unit test deve essere il più semplice possibile per verificare il comportamento che si sta testando.
@@ -154,10 +154,10 @@ L'input da usare in uno unit test deve essere il più semplice possibile per ver
 Test che includono più informazioni rispetto a quelle necessarie per la verifica hanno maggiori probabilità di contenere errori e il loro intento risulta meno chiaro. Durante la scrittura dei test, è necessario concentrare l'attenzione sul comportamento. L'impostazione di proprietà aggiuntive per i modelli o l'uso di valori diversi da zero quando non sono necessari distoglie l'attenzione da ciò che si sta tentando di provare.
 
 #### <a name="bad"></a>Scadente:
-[!code-csharp[BeforeMinimallyPassing](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeMinimallyPassing)]
+[!code-csharp[BeforeMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMinimallyPassing)]
 
 #### <a name="better"></a>Migliore:
-[!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
+[!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
 
 ### <a name="avoid-magic-strings"></a>Evitare le "stringhe magiche"
 La denominazione delle variabili negli unit test è importante quanto la denominazione delle variabili nel codice di produzione o anche di più. Gli unit test non devono contenere "stringhe magiche".
@@ -169,14 +169,14 @@ La denominazione delle variabili negli unit test è importante quanto la denomin
 
 Le "stringhe magiche" possono causare confusione a chi legge il test. Se una stringa appare insolita, ci si potrebbe domandare perché è stato scelto un determinato valore per un parametro o valore restituito. Ciò porterebbe a esaminare i dettagli di implementazione piuttosto che il test stesso.
 
-> [!TIP] 
+> [!TIP]
 > Quando si scrivono i test, bisogna porsi l'obiettivo di esprimere nel modo più chiaro possibile le loro finalità. Nel caso delle "stringhe magiche", un buon espediente consiste nell'assegnare questi valori a costanti.
 
 #### <a name="bad"></a>Scadente:
-[!code-csharp[BeforeMagicString](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeMagicString)]
+[!code-csharp[BeforeMagicString](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMagicString)]
 
 #### <a name="better"></a>Migliore:
-[!code-csharp[AfterMagicString](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterMagicString)]
+[!code-csharp[AfterMagicString](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterMagicString)]
 
 ### <a name="avoid-logic-in-tests"></a>Evitare la logica nei test
 Quando si scrivono gli unit test bisogna evitare la concatenazione manuale di stringhe e le condizioni logiche, ad esempio `if`, `while`, `for`, `switch` e così via.
@@ -192,10 +192,10 @@ Se si introduce la logica nel gruppo di test, la possibilità di introdurre un b
 > Se risulta inevitabile inserire la logica nel test, è consigliabile suddividere il test in due o più test diversi.
 
 #### <a name="bad"></a>Scadente:
-[!code-csharp[LogicInTests](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#LogicInTests)]
+[!code-csharp[LogicInTests](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#LogicInTests)]
 
 #### <a name="better"></a>Migliore:
-[!code-csharp[AfterTestLogic](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterTestLogic)]
+[!code-csharp[AfterTestLogic](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterTestLogic)]
 
 ### <a name="prefer-helper-methods-to-setup-and-teardown"></a>Prediligere i metodi helper agli attributi Setup e Teardown
 Se si richiede un oggetto o uno stato simile per i test, prediligere un metodo helper piuttosto che utilizzare gli attributi Setup e Teardown, se presenti.
@@ -208,26 +208,26 @@ Se si richiede un oggetto o uno stato simile per i test, prediligere un metodo h
 
 Nel framework di testing unità, `Setup` viene chiamato prima di ogni unit test all'interno del gruppo di test. Mentre ad alcuni può apparire uno strumento utile, in realtà genera test troppo grandi e difficili da leggere. I requisiti per rendere ogni test operativo variano da test a test. Sfortunatamente, `Setup` obbliga a usare esattamente gli stessi requisiti per ogni test.
 
-> [!NOTE] 
+> [!NOTE]
 > SetUp e TearDown sono stati rimossi a partire dalla versione 2.x di xUnit
 
 #### <a name="bad"></a>Scadente:
-[!code-csharp[BeforeSetup](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeSetup)]
+[!code-csharp[BeforeSetup](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeSetup)]
 
 ```csharp
 // more tests...
 ```
 
-[!code-csharp[BeforeHelperMethod](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeHelperMethod)]
+[!code-csharp[BeforeHelperMethod](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeHelperMethod)]
 
 #### <a name="better"></a>Migliore:
-[!code-csharp[AfterHelperMethod](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterHelperMethod)]
+[!code-csharp[AfterHelperMethod](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterHelperMethod)]
 
 ```csharp
 // more tests...
 ```
 
-[!code-csharp[AfterSetup](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterSetup)]
+[!code-csharp[AfterSetup](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterSetup)]
 
 ### <a name="avoid-multiple-asserts"></a>Evitare le asserzioni multiple
 Quando si scrivono i test, puntare a includere una sola asserzione per ogni test. Le strategie comuni per usare una sola asserzione includono:
@@ -239,7 +239,7 @@ Quando si scrivono i test, puntare a includere una sola asserzione per ogni test
 
 - Se un'asserzione ha esito negativo, le asserzioni successive non verranno valutate.
 - Garantisce che l'asserzione non venga applicata a più test case.
-- Offre il quadro completo del motivo per cui i test non sono riusciti. 
+- Offre il quadro completo del motivo per cui i test non sono riusciti.
 
 Quando si introducono più asserzioni in un test case, non è sicuro che tutte le asserzioni verranno eseguite. Nella maggior parte dei framework di testing unità, una volta che un'asserzione ha esito negativo in uno unit test, i test successivi sono automaticamente considerati come non riusciti. Ciò può generare confusione perché la funzionalità genererà un errore, anche se in realtà funziona.
 
@@ -247,13 +247,13 @@ Quando si introducono più asserzioni in un test case, non è sicuro che tutte l
 > Un'eccezione comune a questa regola riguarda l'asserzione per un oggetto. In questo caso, è in genere accettabile avere più asserzioni per ogni proprietà per assicurarsi che l'oggetto sia nello stato previsto.
 
 #### <a name="bad"></a>Scadente:
-[!code-csharp[BeforeMultipleAsserts](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeMultipleAsserts)]
+[!code-csharp[BeforeMultipleAsserts](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMultipleAsserts)]
 
 #### <a name="better"></a>Migliore:
-[!code-csharp[AfterMultipleAsserts](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterMultipleAsserts)]
+[!code-csharp[AfterMultipleAsserts](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterMultipleAsserts)]
 
 ### <a name="validate-private-methods-by-unit-testing-public-methods"></a>Convalidare i metodi privati tramite il testing unità dei metodi pubblici
-Nella maggior parte dei casi, non è necessario testare un metodo privato. I metodi privati sono un dettaglio di implementazione. Consideriamo la cosa da questo punto di vista: i metodi privati non esistono singolarmente. A un certo punto, ci sarà un metodo pubblico che chiama il metodo privato come parte della sua implementazione. Quello che è opportuno prendere in considerazione è il risultato finale del metodo pubblico che chiama quello privato. 
+Nella maggior parte dei casi, non è necessario testare un metodo privato. I metodi privati sono un dettaglio di implementazione. Consideriamo la cosa da questo punto di vista: i metodi privati non esistono singolarmente. A un certo punto, ci sarà un metodo pubblico che chiama il metodo privato come parte della sua implementazione. Quello che è opportuno prendere in considerazione è il risultato finale del metodo pubblico che chiama quello privato.
 
 Si consideri il caso seguente
 
@@ -270,9 +270,9 @@ private string TrimInput(string input)
 }
 ```
 
-La prima reazione dell'utente potrebbe essere iniziare a scrivere un test per `TrimInput` per verificare che il metodo funzioni come previsto. Tuttavia, è probabile che `ParseLogLine` manipoli `sanitizedInput` in un modo imprevisto che rende il test di `TrimInput` inutile. 
+La prima reazione dell'utente potrebbe essere iniziare a scrivere un test per `TrimInput` per verificare che il metodo funzioni come previsto. Tuttavia, è probabile che `ParseLogLine` manipoli `sanitizedInput` in un modo imprevisto che rende il test di `TrimInput` inutile.
 
-Il test reale deve essere eseguito con il metodo pubblico `ParseLogLine` perché questo è ciò che è necessario considerare. 
+Il test reale deve essere eseguito con il metodo pubblico `ParseLogLine` perché questo è ciò che è necessario considerare.
 
 ```csharp
 public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
@@ -293,11 +293,11 @@ Uno dei principi a cui uno unit test si deve attenere è che deve avere controll
 ```csharp
 public int GetDiscountedPrice(int price)
 {
-    if(DateTime.Now.DayOfWeek == DayOfWeek.Tuesday) 
+    if(DateTime.Now.DayOfWeek == DayOfWeek.Tuesday)
     {
         return price / 2;
     }
-    else 
+    else
     {
         return price;
     }
@@ -326,7 +326,7 @@ public void GetDiscountedPrice_OnTuesday_ReturnsHalfPrice()
 }
 ```
 
-Sfortunatamente, ci si renderà rapidamente conto che nel test ci sono un paio di problemi. 
+Sfortunatamente, ci si renderà rapidamente conto che nel test ci sono un paio di problemi.
 
 - Se il gruppo di test viene eseguito di martedì, il secondo test avrà esito positivo, ma il primo test avrà esito negativo.
 - Se il gruppo di test viene eseguito un qualsiasi altro giorno, il primo test avrà esito positivo, ma il secondo test avrà esito negativo.
@@ -341,11 +341,11 @@ public interface IDateTimeProvider
 
 public int GetDiscountedPrice(int price, IDateTimeProvider dateTimeProvider)
 {
-    if(dateTimeProvider.DayOfWeek() == DayOfWeek.Tuesday) 
+    if(dateTimeProvider.DayOfWeek() == DayOfWeek.Tuesday)
     {
         return price / 2;
     }
-    else 
+    else
     {
         return price;
     }

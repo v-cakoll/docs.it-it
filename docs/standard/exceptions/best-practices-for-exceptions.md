@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: 6a165c3e0f41603ef7233669d7148dd44b1d3ce6
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 1de231b01e3fa97e78a87ae6b0595a9b5536374e
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696757"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160170"
 ---
 # <a name="best-practices-for-exceptions"></a>Procedure consigliate per le eccezioni
 
@@ -56,7 +56,7 @@ Una classe può offrire metodi o proprietà che consentono di evitare di effettu
 
 Un altro modo per evitare le eccezioni consiste nel restituire Null (o default) per i casi di errore estremamente comuni, invece di generare un'eccezione. Un caso di errore estremamente comune può essere considerato come un normale flusso di controllo. Restituendo Null (o default) in questi casi, si riduce al minimo l'impatto sulle prestazioni di un'app.
 
-Per i tipi di valore, la scelta tra `Nullable<T>` o default come indicatore di errore è un aspetto da considerare in relazione all'app specifica. Usando `Nullable<Guid>`, `default` diventa `null` invece di `Guid.Empty`. Talvolta, l'aggiunta di `Nullable<T>` può indicare più chiaramente quando un valore è presente o assente. Altre volte, l'aggiunta di `Nullable<T>` può creare casi aggiuntivi da controllare che non sono necessari e serve solo per creare potenziali fonti di errore. 
+Per i tipi di valore, la scelta tra `Nullable<T>` o default come indicatore di errore è un aspetto da considerare in relazione all'app specifica. Usando `Nullable<Guid>`, `default` diventa `null` invece di `Guid.Empty`. Talvolta, l'aggiunta di `Nullable<T>` può indicare più chiaramente quando un valore è presente o assente. Altre volte, l'aggiunta di `Nullable<T>` può creare casi aggiuntivi da controllare che non sono necessari e serve solo per creare potenziali fonti di errore.
 
 ## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>Generare eccezioni anziché restituire un codice di errore
 
@@ -64,7 +64,7 @@ Le eccezioni garantiscono il rilevamento degli errori quando il codice chiamante
 
 ## <a name="use-the-predefined-net-exception-types"></a>Usare i tipi di eccezione .NET predefiniti
 
-Introdurre una nuova classe di eccezioni solo quando non è possibile applicare una classe predefinita. Esempio:
+Introdurre una nuova classe di eccezioni solo quando non è possibile applicare una classe predefinita. Ad esempio:
 
 - Generare un'eccezione <xref:System.InvalidOperationException> se un set di proprietà o una chiamata al metodo non è adatta allo stato corrente dell'oggetto.
 
@@ -72,7 +72,7 @@ Introdurre una nuova classe di eccezioni solo quando non è possibile applicare 
 
 ## <a name="end-exception-class-names-with-the-word-exception"></a>Terminare i nomi delle classi di eccezioni con la parola `Exception`
 
-Quando è necessaria un'eccezione personalizzata, assegnare un nome appropriato all'eccezione e derivarla dalla classe <xref:System.Exception>. Esempio:
+Quando è necessaria un'eccezione personalizzata, assegnare un nome appropriato all'eccezione e derivarla dalla classe <xref:System.Exception>. Ad esempio:
 
 [!code-cpp[Conceptual.Exception.Handling#4](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#4)]
 [!code-csharp[Conceptual.Exception.Handling#4](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#4)]
@@ -98,7 +98,7 @@ Ad esempio, nelle implementazioni .NET che supportano domini app, è possibile c
 
 - Inserendo l'assembly in una base applicativa comune condivisa da entrambi i domini applicazione
 
-    \- oppure -
+    \- - oppure -
 
 - Se i domini non condividono alcuna base applicativa comune, firmando l'assembly contenente le informazioni sull'eccezione con un nome sicuro e distribuendo tale assembly nella Global Assembly Cache.
 
@@ -113,7 +113,7 @@ Il messaggio di errore visualizzato all'utente è derivato dalla proprietà <xre
 Per le applicazioni localizzate, è necessario specificare una stringa di messaggio localizzata per ogni eccezione che può essere generata dall'applicazione. Usare i file di risorse per specificare i messaggi di errore localizzati. Per informazioni sulla localizzazione delle applicazioni e il recupero di stringhe localizzate, vedere gli articoli seguenti:
 
 - [Procedura: creare eccezioni definite dall'utente con messaggi di eccezione localizzati](how-to-create-localized-exception-messages.md)
-- [Risorse nelle applicazioni desktop](../../framework/resources/index.md) 
+- [Risorse nelle applicazioni desktop](../../framework/resources/index.md)
 - <xref:System.Resources.ResourceManager?displayProperty=nameWithType>
 
 ## <a name="in-custom-exceptions-provide-additional-properties-as-needed"></a>Nelle eccezioni personalizzate specificare le proprietà aggiuntive necessarie
@@ -126,7 +126,7 @@ La traccia dello stack inizia in corrispondenza dell'istruzione in cui l'eccezio
 
 ## <a name="use-exception-builder-methods"></a>Usare metodi per la creazione di eccezioni
 
-Una classe genera spesso la stessa eccezione da punti diversi dell'implementazione. Per evitare codice di dimensioni eccessive, utilizzare metodi di supporto che creano l'eccezione e la restituiscono. Esempio:
+Una classe genera spesso la stessa eccezione da punti diversi dell'implementazione. Per evitare codice di dimensioni eccessive, utilizzare metodi di supporto che creano l'eccezione e la restituiscono. Ad esempio:
 
 [!code-cpp[Conceptual.Exception.Handling#6](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#6)]
 [!code-csharp[Conceptual.Exception.Handling#6](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]

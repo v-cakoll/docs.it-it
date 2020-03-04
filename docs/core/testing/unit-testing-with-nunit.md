@@ -3,12 +3,12 @@ title: Testing unità di C# con NUnit e .NET Core
 description: Informazioni sui concetti relativi agli unit test in C# e .NET Core tramite un'esperienza interattiva per la creazione passo-passo di una soluzione di esempio con test dotnet e NUnit.
 author: rprouse
 ms.date: 08/31/2018
-ms.openlocfilehash: 1ea17d9f830d8ac20e2bad79eebab5db767e0af8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 283aa5a28ed213d4290eb3c73a98af56ec074ad0
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714224"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240883"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Testing unità di C# con NUnit e .NET Core
 
@@ -16,10 +16,10 @@ In questa esercitazione viene illustrata un'esperienza interattiva di compilazio
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 - [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) o versioni successive.
-- Editor di testo o editor di codice a scelta.
+- Un editor di testo o editor di codice di propria scelta.
 
 ## <a name="creating-the-source-project"></a>Creazione del progetto di origine
 
@@ -28,7 +28,7 @@ Aprire una finestra della shell. Creare una directory denominata *unit-testing-u
 ```dotnetcli
 dotnet new sln
 ```
- 
+
 Creare quindi una directory *PrimeService*. Finora è stata creata la struttura di directory e file seguente:
 
 ```console
@@ -87,7 +87,7 @@ dotnet new nunit
 
 Il comando [dotnet new](../tools/dotnet-new.md) crea un progetto di test che usa NUnit come libreria di test. Il modello generato configura il Test Runner nel file *PrimeService.Tests.csproj*:
 
-[!code-xml[Packages](~/samples/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService.Tests.csproj#Packages)]
+[!code-xml[Packages](~/samples/snippets/core/testing/unit-testing-using-nunit/csharp/PrimeService.Tests/PrimeService.Tests.csproj#Packages)]
 
 Per creare ed eseguire unit test, il progetto di test richiede altri pacchetti. `dotnet new` nel passaggio precedente aggiunge Microsoft Test SDK, il framework di test NUnit e l'adattatore di test NUnit. Aggiungere ora la libreria di classi `PrimeService` come un'altra dipendenza del progetto. Usare il comando [`dotnet add reference`](../tools/dotnet-add-reference.md):
 
@@ -120,35 +120,7 @@ dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 
 Scrivere un test che genera errore, fare in modo che venga superato e quindi ripetere il processo. Nella directory *PrimeService.Tests* rinominare il file *UnitTest1.cs* in *PrimeService_IsPrimeShould.cs* e sostituire l'intero contenuto con il codice seguente:
 
-```csharp
-using NUnit.Framework;
-using Prime.Services;
-
-namespace Prime.UnitTests.Services
-{
-    [TestFixture]
-    public class PrimeService_IsPrimeShould
-    {
-        [Test]
-        public void IsPrime_InputIs1_ReturnFalse()
-        {
-            PrimeService primeService = CreatePrimeService();
-            var result = primeService.IsPrime(1);
-
-            Assert.IsFalse(result, "1 should not be prime");
-        }
-        
-        /*
-        More tests
-        */
-        
-        private PrimeService CreatePrimeService()
-        {
-             return new PrimeService();
-        }
-    }
-}
-```
+[!code-csharp[Sample_FirstTest](~/samples/snippets/core/testing/unit-testing-using-nunit/csharp/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_FirstTest)]
 
 L'attributo `[TestFixture]` indica una classe che contiene unit test. L'attributo `[Test]` indica che il metodo è un metodo di test.
 
@@ -167,7 +139,7 @@ public bool IsPrime(int candidate)
 }
 ```
 
-Eseguire di nuovo `dotnet test` nella directory *unit-testing-using-nunit*. Il comando `dotnet test` esegue prima una compilazione del progetto `PrimeService` e quindi del progetto `PrimeService.Tests`. Dopo la compilazione di entrambi i progetti, verrà eseguito il test singolo, che viene superato.
+Eseguire di nuovo *nella directory*unit-testing-using-nunit`dotnet test`. Il comando `dotnet test` esegue prima una compilazione del progetto `PrimeService` e quindi del progetto `PrimeService.Tests`. Dopo la compilazione di entrambi i progetti, verrà eseguito il test singolo, Procede.
 
 ## <a name="adding-more-features"></a>Aggiunta di altre funzionalità
 
@@ -175,7 +147,7 @@ Ora che il test è stato superato, è necessario scriverne altri. Esistono alcun
 
 Anziché creare nuovi test, applicare questo attributo per creare un singolo test basato sui dati. Il test basato sui dati è un metodo che verifica vari valori minori di due, ovvero il numero primo più piccolo:
 
-[!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
+[!code-csharp[Sample_TestCode](~/samples/snippets/core/testing/unit-testing-using-nunit/csharp/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
 Eseguire `dotnet test`. Due test hanno esito negativo. Per assicurare che tutti i test vengano superati, modificare la clausola `if` all'inizio del metodo `Main` nel file *PrimeService.cs*:
 

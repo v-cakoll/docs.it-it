@@ -11,12 +11,12 @@ helpviewer_keywords:
 - multiple attribute instances
 - attributes [.NET Framework], retrieving
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
-ms.openlocfilehash: fe5bb95d5e1f90c0dafa30977d76ea1d62125c99
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4f0f3555ae1ab7e662d5f88ac65739a7c791a964
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130886"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78158077"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Recupero di informazioni memorizzate negli attributi
 Il recupero di un attributo personalizzato è un processo semplice. Dichiarare prima di tutto un'istanza dell'attributo da recuperare. Usare quindi il metodo <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> per inizializzare il nuovo attributo per il valore dell'attributo da recuperare. Dopo avere inizializzato il nuovo attributo, è sufficiente usarne le proprietà per ottenere i valori.  
@@ -32,7 +32,7 @@ Il recupero di un attributo personalizzato è un processo semplice. Dichiarare p
   
 - [Recupero di più istanze di un attributo applicate ad ambiti diversi](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
   
-<a name="cpconretrievingsingleinstanceofattribute"></a>   
+<a name="cpconretrievingsingleinstanceofattribute"></a>
 ## <a name="retrieving-a-single-instance-of-an-attribute"></a>Recupero di una singola istanza di un attributo  
  Nell'esempio seguente `DeveloperAttribute` (descritto nella sezione precedente) viene applicato alla classe `MainApp` a livello di classe. Il `GetAttribute` metodo usa **GetCustomAttribute** per recuperare i valori archiviati in `DeveloperAttribute` a livello di classe prima di visualizzarli nella console.  
   
@@ -51,12 +51,12 @@ The Reviewed Attribute is: True.
  Se l'attributo non viene trovato, il metodo **GetCustomAttribute** inizializza `MyAttribute` per un valore null. Questo esempio cerca tale istanza in `MyAttribute` e informa l'utente se non vengono trovati attributi. Se `DeveloperAttribute` non viene trovato nell'ambito della classe, viene visualizzato il messaggio seguente nella console.  
   
 ```console  
-The attribute was not found.   
+The attribute was not found.
 ```  
   
  Questo esempio presuppone che la definizione dell'attributo sia nello spazio dei nomi corrente. Ricordare di importare lo spazio dei nomi in cui si trova la definizione dell'attributo se non è inclusa nello spazio dei nomi corrente.  
   
-<a name="cpconretrievingmultipleinstancesofattributeappliedtosamescope"></a>   
+<a name="cpconretrievingmultipleinstancesofattributeappliedtosamescope"></a>
 ## <a name="retrieving-multiple-instances-of-an-attribute-applied-to-the-same-scope"></a>Recupero di più istanze di un attributo applicate allo stesso ambito  
  Nell'esempio precedente la classe da analizzare e l'attributo specifico da trovare vengono passati a <xref:System.Attribute.GetCustomAttribute%2A>. Tale codice funziona correttamente solo se un'istanza di un attributo viene applicata a livello di classe. Se tuttavia più istanze di un attributo vengono applicate allo stesso livello di classe, il metodo **GetCustomAttribute** non recupera tutte le informazioni. Nei casi in cui più istanze dello stesso attributo vengono applicate allo stesso ambito, è possibile usare <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType> per inserire tutte le istanze di un attributo in una matrice. Se ad esempio due istanze di `DeveloperAttribute` vengono applicate a livello di classe della stessa classe, il metodo `GetAttribute` può essere modificato per visualizzare le informazioni trovate in entrambi gli attributi. Si ricordi che, per applicare più attributi allo stesso livello, l'attributo deve essere definito con la proprietà **AllowMultiple** impostata su **true** in <xref:System.AttributeUsageAttribute>.  
   
@@ -68,7 +68,7 @@ The attribute was not found.
   
  Se non vengono trovati attributi, questo codice avvisa l'utente. In caso contrario, vengono visualizzate le informazioni contenute in entrambe le istanze di `DeveloperAttribute`.  
   
-<a name="cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes"></a>   
+<a name="cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes"></a>
 ## <a name="retrieving-multiple-instances-of-an-attribute-applied-to-different-scopes"></a>Recupero di più istanze di un attributo applicate ad ambiti diversi  
  I metodi <xref:System.Attribute.GetCustomAttributes%2A> e <xref:System.Attribute.GetCustomAttribute%2A> non eseguono la ricerca in un'intera classe e non restituiscono tutte le istanze di un attributo in tale classe. Cercano invece solo un metodo o membro specificato per volta. Se si ha una classe con lo stesso attributo applicato a ogni membro e si vogliono recuperare i valori in tutti gli attributi applicati a tali membri, è necessario fornire ogni metodo o membro singolarmente a **GetCustomAttributes** e  **GetCustomAttribute**.  
   
@@ -87,4 +87,4 @@ The attribute was not found.
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>
 - <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>
-- [Attributi](../../../docs/standard/attributes/index.md)
+- [Attributes (Attributi)](../../../docs/standard/attributes/index.md)

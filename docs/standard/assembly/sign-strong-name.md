@@ -11,12 +11,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 64f3a51b29a7116c736fea0e76465a4a73c640c2
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 9998e69e8bf1505bcfc7a9103e9d89616dad9633
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738773"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160313"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Procedura: firmare un assembly con un nome sicuro
 
@@ -52,7 +52,7 @@ Sono disponibili diversi modi per firmare un assembly con un nome sicuro:
   
 Nel [prompt dei comandi per gli sviluppatori per Visual Studio](../../framework/tools/developer-command-prompt-for-vs.md), immettere il comando seguente:  
 
-**al** **/out:** \<*assemblyName*>  *\<ModuleName >* **/keyfile:** \<*fileFileName*>  
+**al** **/out:**\<*assemblyName*> *\<ModuleName >* **/keyfile:**\<*fileFileName*>  
 
 Dove:  
 
@@ -73,9 +73,9 @@ Per ulteriori informazioni sull'utilizzo di questo strumento, vedere [Assembly L
 ## <a name="sign-an-assembly-with-a-strong-name-by-using-attributes"></a>Firmare un assembly con un nome sicuro usando gli attributi  
   
 1. Aggiungere l'attributo <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=nameWithType> o <xref:System.Reflection.AssemblyKeyNameAttribute> al file del codice sorgente, specificando il nome del file o del contenitore contenente la coppia di chiavi da utilizzare per la firma dell'assembly con un nome sicuro.  
-   
+
 2. Compilare normalmente il file del codice sorgente.  
-   
+
    > [!NOTE]
    > Nei compilatori C# e Visual Basic vengono pubblicati avvisi del compilatore (rispettivamente CS1699 e BC41008) quando viene rilevato l'attributo <xref:System.Reflection.AssemblyKeyFileAttribute> o <xref:System.Reflection.AssemblyKeyNameAttribute> nel codice sorgente. È possibile ignorare gli avvisi.  
 

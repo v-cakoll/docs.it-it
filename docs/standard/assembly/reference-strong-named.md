@@ -11,12 +11,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 427550e1fbeb38cefbb4afe97d80e198ac2d6cb0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: adda4ed2ab5c59e3518b8e724044529a79840ad0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127638"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156478"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>Procedura: fare riferimento a un assembly con nome sicuro
 Il processo per la creazione di riferimenti a tipi o risorse in un assembly con nome sicuro è solitamente trasparente all'utente. È possibile creare i riferimenti in fase di compilazione (associazione anticipata) o in fase di esecuzione.  
@@ -28,7 +28,7 @@ Un riferimento in fase di compilazione si verifica quando si indica al compilato
   
 ## <a name="make-a-compile-time-reference-to-a-strong-named-assembly"></a>Creare un riferimento in fase di compilazione a un assembly con nome sicuro  
 
-Digitare il comando seguente al prompt dei comandi:  
+Al prompt dei comandi digitare il comando seguente:  
 
 \<*comando compilatore*>  **/reference:** \<*nome assembly*>  
 
@@ -44,12 +44,12 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
 Quando si crea un riferimento in fase di esecuzione a un assembly con nome sicuro, ad esempio usando il metodo <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>, è necessario usare il nome visualizzato dell'assembly con nome sicuro a cui si fa riferimento. La sintassi di un nome visualizzato è la seguente:  
 
-\<*nome assembly*> **,** \<*numero versione*> **,** \<*cultura*> **,** \<*token chiave pubblica*>  
+*nome dell'assembly* \<>, *numero di versione* \<> **,** \<*impostazioni cultura*>\< token **di** *chiave pubblica*>  
 
-Esempio:  
+Ad esempio:  
 
 ```console
-myDll, Version=1.1.0.0, Culture=en, PublicKeyToken=03689116d3a4ae33   
+myDll, Version=1.1.0.0, Culture=en, PublicKeyToken=03689116d3a4ae33
 ```  
 
 In questo esempio `PublicKeyToken` è il token di chiave pubblica in formato esadecimale. Se non è presente alcun valore relativo alle impostazioni cultura, usare `Culture=neutral`.  
@@ -73,11 +73,11 @@ Dim myDll As Assembly = _
 
 È possibile stampare il formato esadecimale della chiave pubblica e del token di chiave pubblica per un assembly specifico usando il comando [Nome sicuro (Sn.exe)](../../framework/tools/sn-exe-strong-name-tool.md) seguente:  
 
-**sn -Tp \<** *assembly* **>**  
+**sn-Tp \<** *assembly* **>**  
 
 Se è presente un file di chiave pubblica, è possibile usare il comando seguente (si noti la differenza tra maiuscole e minuscole nell'opzione della riga di comando):  
 
-**sn -tp \<** *file di chiave pubblica* **>**  
+**sn-tp \<file di** *chiave pubblica* **>**  
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -11,23 +11,23 @@ helpviewer_keywords:
 - streams, writing characters to strings
 - I/O [.NET Framework], writing characters to strings
 ms.assetid: 1222cbeb-0760-44bf-9888-914a2a37174b
-ms.openlocfilehash: b53513ef0b373cdde7703eddcd182ab7fd15cb9b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ecbfa2de2c21ff79df269f74eeddfa0738e7e25c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706621"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160280"
 ---
 # <a name="how-to-write-characters-to-a-string"></a>Procedura: scrivere caratteri in una stringa
 Gli esempi di codice seguenti illustrano come scrivere i caratteri in modo sincrono o asincrono da una matrice di caratteri in una stringa.  
   
 ## <a name="example-write-characters-synchronously-in-a-console-app"></a>Esempio: scrivere i caratteri in modo sincrono in un'app console  
- L'esempio seguente usa <xref:System.IO.StringWriter> per scrivere cinque caratteri in modo sincrono in un oggetto <xref:System.Text.StringBuilder>. 
+ L'esempio seguente usa <xref:System.IO.StringWriter> per scrivere cinque caratteri in modo sincrono in un oggetto <xref:System.Text.StringBuilder>.
   
  [!code-csharp[Conceptual.StringBuilder#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/example2.cs#9)]
  [!code-vb[Conceptual.StringBuilder#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/example2.vb#9)]  
   
-## <a name="example-write-characters-asynchronously-in-a-wpf-app"></a>Esempio: scrivere caratteri in modo asincrono in un'app WPF 
+## <a name="example-write-characters-asynchronously-in-a-wpf-app"></a>Esempio: scrivere caratteri in modo asincrono in un'app WPF
  L'esempio successivo è il code-behind di un'app WPF. Al caricamento della finestra, l'esempio legge in modo asincrono tutti i caratteri da un controllo <xref:System.Windows.Controls.TextBox> e li archivia in una matrice. Scrive quindi in modo asincrono ogni lettera o spazio su una riga separata di un controllo <xref:System.Windows.Controls.TextBlock>.  
   
  [!code-csharp[StreamReaderWriter](../../../samples/snippets/csharp/VS_Snippets_Wpf/StringReaderWriter/MainWindow.xaml.cs)]

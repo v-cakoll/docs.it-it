@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
-ms.openlocfilehash: ec08b668bf54c5460e078bbb27bfbc370aff4e4a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e6ec30e3c7c2318b199122cd63c7f56584707a98
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711181"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78158051"
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>Accesso a dati XML fortemente tipizzati con XPathNavigator
 Analogamente a un'istanza del modello di dati XPath versione 2.0, la classe <xref:System.Xml.XPath.XPathNavigator> può contenere dati tipizzati in modo sicuro associati a tipi CLR (Common Language Runtime). In base al modello di dati XPath versione 2.0, solo gli elementi e gli attributi possono contenere dati tipizzati in modo sicuro. La classe <xref:System.Xml.XPath.XPathNavigator> fornisce meccanismi di accesso ai dati di un oggetto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument> come dati tipizzati in modo sicuro e meccanismi di conversione da un tipo di dati a un altro.  
@@ -32,7 +32,7 @@ Analogamente a un'istanza del modello di dati XPath versione 2.0, la classe <xre
 ## <a name="xpathnavigator-typed-accessors"></a>Funzioni di accesso tipizzate di XPathNavigator  
  Nella tabella seguente vengono illustrate le diverse proprietà e i diversi metodi della classe <xref:System.Xml.XPath.XPathNavigator> che possono essere usati per accedere alle informazioni sul tipo di un nodo.  
   
-|Gli|Descrizione|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |<xref:System.Xml.XPath.XPathNavigator.XmlType%2A>|Contiene le informazioni sul tipo di schema XML per il nodo se questo è valido.|  
 |<xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A>|Contiene l'infoset sulla convalida post-schema del nodo aggiunte dopo la convalida. Sono incluse le informazioni sul tipo di schema XML e le informazioni sulla validità.|  
@@ -111,9 +111,9 @@ Console.WriteLine(navigator.SchemaInfo.SchemaElement.MinOccurs);
  Anche lo schema `books.xsd` viene considerato come input.  
   
 ```xml  
-<xs:schema xmlns="http://www.contoso.com/books"   
-attributeFormDefault="unqualified" elementFormDefault="qualified"   
-targetNamespace="http://www.contoso.com/books"   
+<xs:schema xmlns="http://www.contoso.com/books"
+attributeFormDefault="unqualified" elementFormDefault="qualified"
+targetNamespace="http://www.contoso.com/books"
 xmlns:xs="http://www.w3.org/2001/XMLSchema">  
     <xs:simpleType name="publishedType">  
         <xs:restriction base="xs:date">  

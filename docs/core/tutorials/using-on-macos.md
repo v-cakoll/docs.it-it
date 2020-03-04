@@ -2,12 +2,12 @@
 title: 'Esercitazione: creare una soluzione .NET Core in macOS usando Visual Studio Code'
 description: Questo documento specifica i passaggi e il flusso di lavoro da seguire per creare una soluzione .NET Core usando Visual Studio Code.
 ms.date: 12/19/2019
-ms.openlocfilehash: e3c210d4391c0e3c9c3455ecf23dd138abdb4363
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: f5da16d413ddc25587ff35550fe9f308dc87f4bb
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741536"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156595"
 ---
 # <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>Esercitazione: creare una soluzione .NET Core in macOS usando Visual Studio Code
 
@@ -16,7 +16,7 @@ Questo documento specifica i passaggi e il flusso di lavoro da seguire per crear
 > [!NOTE]
 > In questo articolo [Visual Studio Code](https://code.visualstudio.com) viene usato su macOS.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 Installare [.NET Core SDK](https://dotnet.microsoft.com/download). .NET Core SDK include la versione più recente del framework e del runtime di .NET Core.
 
@@ -24,7 +24,7 @@ Installare [Visual Studio Code](https://code.visualstudio.com). Nel corso di que
 
 Installare l'estensione C# Visual Studio Code aprendo Visual Studio Code e premendo <kbd>FN</kbd>+<kbd>F1</kbd> per aprire la tavolozza Visual Studio Code. Digitare **ext install** per visualizzare l'elenco delle estensioni. Selezionare l'estensione C#. Riavviare Visual Studio Code per attivare l'estensione. Per altre informazioni, vedere la [documentazione dell'estensione C# di Visual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
 
-## <a name="get-started"></a>Attività iniziali
+## <a name="get-started"></a>Introduzione
 
 In questa esercitazione si creeranno tre progetti: un progetto di libreria, i test per tale progetto e un'applicazione console che usa la libreria. È possibile [visualizzare o scaricare l'origine](https://github.com/dotnet/samples/tree/master/core/getting-started/golden) per questo articolo nel repository DotNet/Samples su GitHub. Per istruzioni sul download, vedere [Esempi ed esercitazioni](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
@@ -80,7 +80,7 @@ Eseguire [`dotnet restore`](../tools/dotnet-restore.md), ([vedere la nota](#dotn
 dotnet restore
 ```
 
-Nella cartella *libreria*, rinominare il file *Class1.cs* in *Thing.cs*. Sostituire il codice con quello seguente:
+Nella cartella *libreria*, rinominare il file *Class1.cs* in *Thing.cs*. Sostituire il codice con il codice seguente:
 
 ```csharp
 using static Newtonsoft.Json.JsonConvert;
@@ -155,7 +155,7 @@ Si noti che si afferma che il valore 42 non è uguale a 19+23 (o 42) quando si c
 Dalla cartella *golden*, eseguire i comandi seguenti:
 
 ```dotnetcli
-dotnet restore 
+dotnet restore
 dotnet test test-library/test-library.csproj
 ```
 

@@ -4,12 +4,12 @@ description: Questo articolo offre una breve panoramica del testing unità per i
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.openlocfilehash: 41f4457e636ca495b78109803ca66680e72d007e
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 1263bfe337b9d6609c0ca7df70aa299a61a7f1a0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899892"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157401"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Testing unità in .NET Core e .NET Standard
 
@@ -23,9 +23,9 @@ Come punto di partenza per il progetto personale, è possibile usare i modelli d
 
 ## <a name="what-are-unit-tests"></a>Cosa sono gli unit test?
 
-Usare test automatizzati è un'ottima scelta per verificare che un'applicazione software esegua le operazioni per la quale è stata sviluppata. Esistono più tipi di test per le applicazioni software, tra cui test di integrazione, test Web, test di carico e altri tipi. Gli **unit test** consentono di testare singoli componenti software e metodi. Gli unit test devono essere usati solo per eseguire il test del codice sotto il controllo dello sviluppatore. Non è consigliabile usarli per risolvere problemi che riguardano l'infrastruttura, vale a dire database, file system e risorsa di rete. 
+Usare test automatizzati è un'ottima scelta per verificare che un'applicazione software esegua le operazioni per la quale è stata sviluppata. Esistono più tipi di test per le applicazioni software, tra cui test di integrazione, test Web, test di carico e altri tipi. Gli **unit test** consentono di testare singoli componenti software e metodi. Gli unit test devono essere usati solo per eseguire il test del codice sotto il controllo dello sviluppatore. Non è consigliabile usarli per risolvere problemi che riguardano l'infrastruttura, vale a dire database, file system e risorsa di rete.
 
-È anche utile ricordare che esistono procedure consigliate per la scrittura dei test. Ad esempio, si parla di [sviluppo basato su test (TDD, Test Driven Development) ](https://deviq.com/test-driven-development/) quando si scrive uno unit test prima di sapere che il codice sarà sottoposto a controllo. Il TTD è paragonabile alla stesura di uno schema prima di iniziare a scrivere un libro. Lo scopo del TDD è aiutare gli sviluppatori a creare un codice più semplice, leggibile ed efficiente. 
+È anche utile ricordare che esistono procedure consigliate per la scrittura dei test. Ad esempio, si parla di [sviluppo basato su test (TDD, Test Driven Development) ](https://deviq.com/test-driven-development/) quando si scrive uno unit test prima di sapere che il codice sarà sottoposto a controllo. Il TTD è paragonabile alla stesura di uno schema prima di iniziare a scrivere un libro. Lo scopo del TDD è aiutare gli sviluppatori a creare un codice più semplice, leggibile ed efficiente.
 
 > [!NOTE]
 > lI team di ASP.NET segue [queste convenzioni](https://github.com/dotnet/aspnetcore/wiki/Engineering-guidelines#unit-tests-and-functional-tests) per aiutare gli sviluppatori a usare nomi appropriati per classi di test e metodi.
@@ -40,11 +40,11 @@ I progetti di unit test .NET Core sono supportati per i linguaggi seguenti:
 
 - [C#](../../csharp/index.yml)
 - [F#](../../fsharp/index.yml)
-- [Visual Basic](../../visual-basic/index.yml) 
+- [Visual Basic](../../visual-basic/index.yml)
 
 È anche possibile scegliere tra le opzioni seguenti:
 
-- [xUnit](https://xunit.github.io) 
+- [xUnit](https://xunit.github.io)
 - [NUnit](https://nunit.org)
 - [MSTest](https://github.com/Microsoft/testfx-docs)
 

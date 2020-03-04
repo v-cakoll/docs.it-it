@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 12/04/2018
-ms.openlocfilehash: 9495288658fa102df8f0fbd643e2fcdf49d8f3b3
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: e045c39240c99777d05ca86ee0a8cd1fa4309c4f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451980"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156582"
 ---
 # <a name="whats-new-in-net-core-22"></a>Novità di .NET Core 2.2
 
@@ -22,13 +22,13 @@ A partire da .NET Core 2.2, è possibile distribuire [file eseguibili dipendenti
 
 Questa nuova modalità di distribuzione offre il particolare vantaggio di compilare un file eseguibile invece di una libreria ed è quindi possibile eseguire l'app direttamente senza richiamare prima `dotnet`.
 
-## <a name="core"></a>Base
+## <a name="core"></a>Core
 
 **Gestione degli eventi nei servizi di runtime**
 
-Potrebbe essere necessario monitorare spesso l'uso da parte dell'applicazione dei servizi di runtime, ad esempio GC, JIT e ThreadPool, per conoscerne l'impatto sull'applicazione. Nei sistemi Windows, questa operazione viene eseguita in genere monitorando gli eventi ETW del processo corrente. Sebbene questo continui a funzionare correttamente, non è sempre possibile usare ETW se si esegue in un ambiente con privilegi limitati o in Linux o macOS. 
+Potrebbe essere necessario monitorare spesso l'uso da parte dell'applicazione dei servizi di runtime, ad esempio GC, JIT e ThreadPool, per conoscerne l'impatto sull'applicazione.Nei sistemi Windows, questa operazione viene eseguita in genere monitorando gli eventi ETW del processo corrente.Sebbene questo continui a funzionare correttamente, non è sempre possibile usare ETW se si esegue in un ambiente con privilegi limitati o in Linux o macOS.
 
-A partire da .NET Core 2.2, gli eventi CoreCLR possono essere utilizzati con la classe <xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithType>. Questi eventi descrivono il comportamento di servizi di runtime come GC, JIT, ThreadPool e interop. Si tratta degli stessi eventi esposti come parte del provider ETW CoreCLR.  In questo modo, le applicazioni possono utilizzare questi eventi o utilizzare un meccanismo di trasporto per inviarli a un servizio di aggregazione dei dati di telemetria. È possibile vedere come sottoscrivere gli eventi nell'esempio di codice seguente:
+A partire da .NET Core 2.2, gli eventi CoreCLR possono essere utilizzati con la classe <xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithType>. Questi eventi descrivono il comportamento di servizi di runtime come GC, JIT, ThreadPool e interop. Si tratta degli stessi eventi esposti come parte del provider ETW CoreCLR.In questo modo, le applicazioni possono utilizzare questi eventi o utilizzare un meccanismo di trasporto per inviarli a un servizio di aggregazione dei dati di telemetria. È possibile vedere come sottoscrivere gli eventi nell'esempio di codice seguente:
 
 ```csharp
 internal sealed class SimpleEventListener : EventListener
@@ -64,7 +64,7 @@ internal sealed class SimpleEventListener : EventListener
 
 - <xref:System.Diagnostics.Tracing.EventWrittenEventArgs.TimeStamp?displayProperty=nameWithType>
 
-## <a name="data"></a>Data
+## <a name="data"></a>data
 
 **Autenticazione AAD ai database SQL di Azure con la proprietà SqlConnection.AccessToken**
 
@@ -84,7 +84,7 @@ Per informazioni sul miglioramento delle prestazioni che può derivare dalla com
 
 In .NET Core 2.2 Preview 2 la compilazione a livelli era abilitata per impostazione predefinita. È stato tuttavia deciso che non è ancora il momento opportuno per abilitare la compilazione a livelli per impostazione predefinita, quindi in .NET Core 2.2 la compilazione a livelli è ancora una funzionalità con consenso esplicito. Per informazioni sul consenso esplicito alla compilazione a livelli, vedere [Miglioramenti del compilatore JIT](dotnet-core-2-1.md#jit-compiler-improvements) in [Novità di .NET Core 2.1](dotnet-core-2-1.md).
 
-## <a name="runtime"></a>Tipo
+## <a name="runtime"></a>Runtime
 
 **Inserimento di codice prima dell'esecuzione del metodo Main**
 

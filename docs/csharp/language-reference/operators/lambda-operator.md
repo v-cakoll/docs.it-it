@@ -7,12 +7,12 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: 61cc3c3ab4f0b22c4040a9b8a025c81071f4d942
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5df1ae60ddc298f75d70db7769ec1bf1d21b8ef2
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712702"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239287"
 ---
 # <a name="-operator-c-reference"></a>Operatore => (Riferimenti per C#)
 
@@ -24,15 +24,15 @@ Nelle [espressioni lambda](../../programming-guide/statements-expressions-operat
 
 L'esempio seguente illustra l'utilizzo delle espressioni lambda tramite la funzionalità [LINQ](../../programming-guide/concepts/linq/index.md) con la sintassi dei metodi:
 
-[!code-csharp-interactive[infer types of input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#InferredTypes)]
+[!code-csharp-interactive[infer types of input variables](~/samples/snippets/csharp/language-reference/operators/LambdaOperator.cs#InferredTypes)]
 
 I parametri di input di un'espressione lambda sono fortemente tipizzati in fase di compilazione. Quando il compilatore può dedurre i tipi di parametri di input, come nell'esempio precedente, è possibile omettere le dichiarazioni di tipo. Se è necessario specificare il tipo di parametri di input, è necessario eseguire questa operazione per ogni parametro, come illustrato nell'esempio seguente:
 
-[!code-csharp-interactive[specify types of input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#ExplicitTypes)]
+[!code-csharp-interactive[specify types of input variables](~/samples/snippets/csharp/language-reference/operators/LambdaOperator.cs#ExplicitTypes)]
 
 Nell'esempio seguente viene illustrato come definire un'espressione lambda senza parametri di input:
 
-[!code-csharp-interactive[without input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#WithoutInput)]
+[!code-csharp-interactive[without input variables](~/samples/snippets/csharp/language-reference/operators/LambdaOperator.cs#WithoutInput)]
 
 Per altre informazioni, vedere [Espressioni lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md).
 
@@ -67,7 +67,7 @@ Per altre informazioni, vedere [Membri con corpo di espressione](../../programmi
 
 ## <a name="operator-overloadability"></a>Overload degli operatori
 
-Non è possibile eseguire l'overload dell'operatore `=>`.
+Non è possibile sottoporre l'operatore `=>` a overload.
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 

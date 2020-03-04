@@ -1,12 +1,12 @@
 ---
 title: 'Procedura dettagliata: Persistenza di un oggetto tramite C#'
 ms.date: 04/26/2018
-ms.openlocfilehash: 5e3a327ca0a257c45de361e0b3734e0b127f9869
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 9531909bdf1ed61305c292411ef2cd08b7b67465
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851037"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240467"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>Procedura dettagliata: Persistenza di un oggetto tramite C\#
 
@@ -20,7 +20,7 @@ In questa procedura verrà creato un oggetto `Loan` di base i cui dati verranno 
 > [!IMPORTANT]
 > In questo esempio i dati vengono archiviati in un file in formato binario. Non usare questi formati per i dati riservati, ad esempio password o informazioni sulla carta di credito.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 - Per consentire la compilazione e l'esecuzione, installare [.NET Core SDK](https://dotnet.microsoft.com/download).
 
@@ -41,7 +41,7 @@ Il primo passaggio consiste nel creare una classe `Loan` e un'applicazione conso
 1. Aprire l'applicazione nell'editor e aggiungere una nuova classe denominata `Loan.cs`.
 1. Aggiungere il codice seguente alla classe `Loan`:
 
-[!code-csharp[Loan class definition](../../../../../samples/csharp/serialization/Loan.cs#1)]
+[!code-csharp[Loan class definition](../../../../../samples/snippets/csharp/serialization/Loan.cs#1)]
 
 Sarà anche necessario creare un'applicazione che usi la classe `Loan`.
 
@@ -49,11 +49,11 @@ Sarà anche necessario creare un'applicazione che usi la classe `Loan`.
 
 1. Aprire `Program.cs`. Aggiungere il codice seguente:
 
-[!code-csharp[Create a loan object](../../../../../samples/csharp/serialization/Program.cs#1)]
+[!code-csharp[Create a loan object](../../../../../samples/snippets/csharp/serialization/Program.cs#1)]
 
 Aggiungere un gestore per l'evento `PropertyChanged` e alcune righe per modificare l'oggetto `Loan` e visualizzare le modifiche. Le aggiunte sono presenti nel codice seguente:
 
-[!code-csharp[Listening for the PropertyChanged event](../../../../../samples/csharp/serialization/Program.cs#2)]
+[!code-csharp[Listening for the PropertyChanged event](../../../../../samples/snippets/csharp/serialization/Program.cs#2)]
 
 A questo punto è possibile eseguire il codice e visualizzare l'output corrente:
 
@@ -69,33 +69,33 @@ Se si esegue ripetutamente questa applicazione, vengono scritti sempre gli stess
 
 Per rendere persistenti i valori per la classe Loan, per prima cosa contrassegnare la classe con l'attributo `Serializable`. Aggiungere il codice riportato di seguito prima della dichiarazione della classe Loan:
 
-[!code-csharp[Loan class definition](../../../../../samples/csharp/serialization/Loan.cs#2)]
+[!code-csharp[Loan class definition](../../../../../samples/snippets/csharp/serialization/Loan.cs#2)]
 
 <xref:System.SerializableAttribute> indica al compilatore che tutti gli elementi nella classe possono essere resi persistenti in un file. Poiché l'evento `PropertyChanged` non rappresenta una parte dell'oggetto grafico che deve essere archiviata, non deve essere serializzato. La serializzazione interesserebbe infatti tutti gli oggetti associati all'evento. È possibile aggiungere <xref:System.NonSerializedAttribute> alla dichiarazione di campo per il gestore dell'evento `PropertyChanged`.
 
-[!code-csharp[Disable serialization for the event handler](../../../../../samples/csharp/serialization/Loan.cs#3)]
+[!code-csharp[Disable serialization for the event handler](../../../../../samples/snippets/csharp/serialization/Loan.cs#3)]
 
 A partire da C# 7.3, è possibile collegare attributi al campo sottostante di una proprietà implementata automaticamente usando il valore di destinazione `field`. Il codice seguente aggiunge la proprietà `TimeLastLoaded` e la contrassegna come non serializzabile:
 
-[!code-csharp[Disable serialization for an auto-implemented property](../../../../../samples/csharp/serialization/Loan.cs#4)]
+[!code-csharp[Disable serialization for an auto-implemented property](../../../../../samples/snippets/csharp/serialization/Loan.cs#4)]
 
 Il passaggio successivo consiste nell'aggiungere il codice di serializzazione all'applicazione LoanApp. Per serializzare la classe e scriverla in un file, si usano gli spazi dei nomi <xref:System.IO> e <xref:System.Runtime.Serialization.Formatters.Binary>. Per evitare di digitare i nomi completi, è possibile aggiungere riferimenti agli spazi dei nomi necessari, come illustrato nel codice seguente:
 
-[!code-csharp[Adding namespaces for serialization](../../../../../samples/csharp/serialization/Program.cs#3)]
+[!code-csharp[Adding namespaces for serialization](../../../../../samples/snippets/csharp/serialization/Program.cs#3)]
 
 Il passaggio successivo consiste nell'aggiungere codice per deserializzare l'oggetto dal file quando viene creato l'oggetto. Aggiungere una costante alla classe per il nome del file di dati serializzati, come illustrato nel codice seguente:
 
-[!code-csharp[Define the name of the saved file](../../../../../samples/csharp/serialization/Program.cs#4)]
+[!code-csharp[Define the name of the saved file](../../../../../samples/snippets/csharp/serialization/Program.cs#4)]
 
 Aggiungere quindi il codice seguente dopo la riga che crea l'oggetto `TestLoan`:
 
-[!code-csharp[Read from a file if it exists](../../../../../samples/csharp/serialization/Program.cs#5)]
+[!code-csharp[Read from a file if it exists](../../../../../samples/snippets/csharp/serialization/Program.cs#5)]
 
 È prima necessario verificare che il file esista. Se esiste, creare una classe <xref:System.IO.Stream> per leggere il file binario e una classe <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> per convertire il file. È anche necessario eseguire la conversione dal tipo di flusso al tipo di oggetto Loan.
 
 È quindi necessario aggiungere codice per serializzare la classe in un file. Aggiungere il codice seguente dopo il codice esistente nel metodo `Main`:
 
-[!code-csharp[Save the existing Loan object](../../../../../samples/csharp/serialization/Program.cs#6)]
+[!code-csharp[Save the existing Loan object](../../../../../samples/snippets/csharp/serialization/Program.cs#6)]
 
 A questo punto, è nuovamente possibile compilare ed eseguire l'applicazione. Si noti che, la prima volta che viene eseguita, il tasso di interesse inizia a 7,5 e quindi passa a 7,1. Chiudere l'applicazione ed eseguirla nuovamente. A questo punto, l'applicazione stampa un messaggio che comunica l'avvenuta lettura del file salvato e che il tasso di interesse corrisponde a 7,1 anche prima del codice che lo modifica.
 

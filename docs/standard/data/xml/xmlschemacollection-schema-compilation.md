@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76f28770-7126-428f-9ed5-7b5ae8bad5ee
-ms.openlocfilehash: 1f300bab01f94af8c70c8b67a69a73fbc5ba5bac
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: af6df3729f1bd926e9a47cc5b9d9bf460c8e1225
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709829"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159286"
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>Compilazione dello schema XmlSchemaCollection
 **XmlSchemaCollection** è una cache o una libreria in cui è possibile archiviare e convalidare gli schemi XDR (XML-Data Reduced) e XSD (XML Schema Definition Language). **XmlSchemaCollection** migliora le prestazioni memorizzando nella cache gli schemi anziché accedervi da un file o un URL.  
@@ -34,7 +34,7 @@ ms.locfileid: "75709829"
 ## <a name="validate-xml-documents-using-xmlschemacollection"></a>Convalida di documenti XML mediante XmlSchemaCollection  
  È possibile convalidare un documento di istanza XML tramite **XmlSchemaCollection** creando l'oggetto **XmlSchemaCollection**, aggiungendo gli schemi alla raccolta e impostando la proprietà **Schemas** su **XmlValidatingReader** per assegnare l'oggetto **XmlSchemaCollection** creato a **XmlValidatingReader**.  
   
-### <a name="improved-performance"></a>Miglioramento delle prestazioni  
+### <a name="improved-performance"></a>Prestazioni migliorate  
  Si consiglia, se si convalida più di un documento rispetto allo stesso schema, di usare **XmlSchemaCollection** in quanto la memorizzazione degli schemi nella cache garantisce prestazioni migliori.  
   
  Nel seguente codice di esempio viene creato un oggetto **XmlSchemaCollection**, vengono aggiunti schemi alla raccolta e viene impostata la proprietà **Schemas**.  
@@ -51,7 +51,7 @@ vr.Schemas.Add(xsc)
 XmlTextReader tr = new XmlTextReader("Books.xml");  
 XmlValidatingReader vr = new XmlValidatingReader(tr);  
 XmlSchemaCollection xsc = new XmlSchemaCollection();  
-xsc.Add("urn:bookstore-schema", "Books.xsd");    
+xsc.Add("urn:bookstore-schema", "Books.xsd");
 vr.Schemas.Add(xsc);  
 ```  
   

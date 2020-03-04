@@ -4,12 +4,12 @@ description: Informazioni sul funzionamento del controllo delle versioni in C# e
 ms.date: 01/08/2017
 ms.technology: csharp-advanced-concepts
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 3fadbc1257ae758fc220685fa074a4fa68b20ba1
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: ee123893ac8baa0a55bdf69ce49fb6fcb87601b4
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039660"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240002"
 ---
 # <a name="versioning-in-c"></a>Controllo delle versioni in C\#
 
@@ -53,7 +53,7 @@ Più è facile per gli utenti eseguire l'aggiornamento alla nuova versione della
 ### <a name="application-configuration-file"></a>File di configurazione dell'applicazione
 
 Gli sviluppatori .NET molto probabilmente hanno trovato [il file `app.config`](../framework/configure-apps/file-schema/index.md) nella maggior parte dei tipi di progetto.
-Questo semplice file di configurazione è in grado di ottimizzare la distribuzione dei nuovi aggiornamenti. In genere è consigliabile progettare le librerie in modo che le informazioni che probabilmente cambiano regolarmente vengano archiviate nel file di `app.config`, in questo modo quando tali informazioni vengono aggiornate, il file di configurazione delle versioni precedenti deve essere sostituito con quello nuovo senza necessità di ricompilare la libreria.
+Questo semplice file di configurazione è in grado di ottimizzare la distribuzione dei nuovi aggiornamenti. In genere è consigliabile progettare le librerie in modo che le informazioni che probabilmente cambiano regolarmente vengano archiviate nel file di `app.config`, in questo modo quando tali informazioni vengono aggiornate, il file di configurazione delle versioni precedenti deve essere sostituito con quello nuovo senza la necessità di ricompilare la libreria.
 
 ## <a name="consuming-libraries"></a>Elaborazione delle librerie
 
@@ -76,13 +76,13 @@ Per fortuna, C# l'ecosistema .NET include funzionalità e tecniche che consenton
 > Questo approccio funziona solo se la nuova versione di `ReferencedLibrary` è compatibile a livello binario con l'applicazione.
 > Vedere la sezione [Compatibilità con le versioni precedenti](#backwards-compatibility) per verificare quando deve essere determinata la compatibilità.
 
-### <a name="new"></a>new
+### <a name="new"></a>Nuovo
 
 Usare il modificatore `new` per nascondere i membri ereditati di una classe di base. In questo modo le classi derivate possono rispondere agli aggiornamenti nelle classi di base.
 
 Vedere l'esempio seguente:
 
-[!code-csharp[Sample usage of the 'new' modifier](~/samples/csharp/versioning/new/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'new' modifier](~/samples/snippets/csharp/versioning/new/Program.cs#sample)]
 
 **Output**
 
@@ -96,11 +96,11 @@ Ciò significa che quando una classe di base nella nuova versione di una libreri
 
 Se non si specifica alcun modificatore `new`, una classe derivata nasconderà per impostazione predefinita i membri in conflitto in una classe di base e il codice verrà comunque compilato anche se viene generato un avviso del compilatore. Ciò significa che la semplice aggiunta di nuovi membri a una classe esistente rende la nuova versione della libreria compatibile sia a livello di codice sorgente che a livello binario con il codice che dipende da essa.
 
-### <a name="override"></a>ignora
+### <a name="override"></a>override
 
 Il modificatore `override` indica che un'implementazione derivata estende l'implementazione di un membro della classe di base anziché nasconderlo. È necessario che al membro della classe di base sia applicato il modificatore `virtual`.
 
-[!code-csharp[Sample usage of the 'override' modifier](../../samples/csharp/versioning/override/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'override' modifier](../../samples/snippets/csharp/versioning/override/Program.cs#sample)]
 
 **Output**
 

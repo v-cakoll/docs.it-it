@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 32784f7d4b9e3a93eb7f81b4829b39c1a06ef949
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 2397bf999ba97fe0c011de180e05be4177894365
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920387"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239885"
 ---
 # <a name="whats-new-in-net-core-21"></a>Novità di .NET Core 2.1
 
@@ -77,7 +77,7 @@ Dopo l'installazione, lo strumento può essere eseguito dalla riga di comando sp
 
 ### <a name="tool-management-with-the-dotnet-tool-command"></a>Strumento di gestione con il comando `dotnet tool`
 
-In .NET Core 2.1 SDK tutte le operazioni con gli strumenti usano il comando `dotnet tool`. Sono disponibili le seguenti opzioni:
+In .NET Core 2.1 SDK tutte le operazioni con gli strumenti usano il comando `dotnet tool`. Sono disponibili le opzioni seguenti:
 
 - [`dotnet tool install`](../tools/dotnet-tool-install.md) per installare uno strumento.
 
@@ -163,7 +163,7 @@ Una delle attività importanti eseguite dal compilatore JIT è l'ottimizzazione 
    </PropertyGroup>
    ```
 
-## <a name="api-changes"></a>Modifiche API
+## <a name="api-changes"></a>Modifiche all'API
 
 ### <a name="spant-and-memoryt"></a>`Span<T>` e `Memory<T>`
 
@@ -177,17 +177,17 @@ Senza questi tipi, quando si passano elementi quali una parte di una matrice o u
 
 L'esempio seguente usa un'istanza <xref:System.Span%601> e un'istanza <xref:System.Memory%601> per fornire una visualizzazione virtuale di 10 elementi di una matrice.
 
-[!code-csharp[Span\<T>](~/samples/core/whats-new/whats-new-in-21/cs/program.cs)]
+[!code-csharp[Span\<T>](~/samples/snippets/core/whats-new/whats-new-in-21/csharp/program.cs)]
 
-[!code-vb[Memory\<T>](~/samples/core/whats-new/whats-new-in-21/vb/program.vb)]
+[!code-vb[Memory\<T>](~/samples/snippets/core/whats-new/whats-new-in-21/vb/program.vb)]
 
 ### <a name="brotli-compression"></a>Compressione Brotli
 
 .NET Core 2.1 aggiunge il supporto per la compressione e la decompressione Brotli. Brotli è un algoritmo di compressione generico senza perdita di dati definito in [RFC 7932](https://www.ietf.org/rfc/rfc7932.txt) e supportato dalla maggior parte dei Web browser e dai principali server Web. È possibile usare la classe <xref:System.IO.Compression.BrotliStream?displayProperty=nameWithType> basata sul flusso o le classi <xref:System.IO.Compression.BrotliEncoder?displayProperty=nameWithType> e <xref:System.IO.Compression.BrotliDecoder?displayProperty=nameWithType> basate sull'intervallo a prestazioni elevate. L'esempio seguente illustra la compressione con la classe <xref:System.IO.Compression.BrotliStream>:
 
-[!code-csharp[Brotli compression](~/samples/core/whats-new/whats-new-in-21/cs/brotli.cs#1)]
+[!code-csharp[Brotli compression](~/samples/snippets/core/whats-new/whats-new-in-21/csharp/brotli.cs#1)]
 
-[!code-vb[Brotli compression](~/samples/core/whats-new/whats-new-in-21/vb/brotli.vb#1)]
+[!code-vb[Brotli compression](~/samples/snippets/core/whats-new/whats-new-in-21/vb/brotli.vb#1)]
 
 Il comportamento di <xref:System.IO.Compression.BrotliStream> è lo stesso di <xref:System.IO.Compression.DeflateStream> e <xref:System.IO.Compression.GZipStream>, che rende più facile convertire il codice che chiama queste API in <xref:System.IO.Compression.BrotliStream>.
 
@@ -244,6 +244,10 @@ AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", False)
 In Windows è anche possibile scegliere di usare <xref:System.Net.Http.WinHttpHandler?displayProperty=nameWithType>, che si basa su un'implementazione nativa, o la classe <xref:System.Net.Http.SocketsHttpHandler> passando un'istanza della classe al costruttore <xref:System.Net.Http.HttpClient>.
 
 In Linux e macOS è possibile configurare <xref:System.Net.Http.HttpClient> solo in base al processo. In Linux è necessario distribuire [libcurl](https://curl.haxx.se/libcurl/) se si vuole usare l'implementazione precedente di <xref:System.Net.Http.HttpClient> (installato con .NET Core 2.0).
+
+### <a name="breaking-changes"></a>Modifiche di rilievo
+
+Per informazioni sulle modifiche di rilievo, vedere [modifiche di rilievo per la migrazione dalla versione 2,0 alla versione 2,1](../compatibility/2.0-2.1.md).
 
 ## <a name="see-also"></a>Vedere anche
 

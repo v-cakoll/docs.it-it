@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 12/10/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: a82934fd2ea9568681a3bec82c3b15513decc926
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: bdd6e28713bdece2bd144e6763bd84d719e91449
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741572"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156634"
 ---
 # <a name="publish-your-net-core-hello-world-application-with-visual-studio"></a>Pubblicare l'applicazione Hello World .NET Core con Visual Studio
 
@@ -25,15 +25,15 @@ In [creare un'applicazione Hello World con .NET Core in Visual Studio](with-visu
 1. Fare clic con il pulsante destro del mouse sul progetto **HelloWorld**, non sulla soluzione HelloWorld, e scegliere **Pubblica** dal menu. È anche possibile selezionare **Publish HelloWorld** dal menu Main **Build** .
 
    ![Menu di scelta rapida Pubblica di Visual Studio](media/publishing-with-visual-studio/publish-context-menu.png)
-   
+
 1. Nella pagina selezionare **una destinazione di pubblicazione** selezionare **cartella**, quindi selezionare **Crea profilo**.
 
    ![Selezionare una destinazione di pubblicazione in Visual Studio](media/publishing-with-visual-studio/pick-publish-target.png)
-   
+
 1. Nella pagina **pubblica** selezionare **pubblica**.
 
    ![Finestra Pubblica di Visual Studio](media/publishing-with-visual-studio/publish-page.png)
-   
+
 ## <a name="inspect-the-files"></a>Esaminare i file
 
 Il processo di pubblicazione crea una distribuzione dipendente dal Framework, ovvero un tipo di distribuzione in cui l'applicazione pubblicata viene eseguita su qualsiasi piattaforma supportata da .NET Core con .NET Core installato nel sistema. Gli utenti possono eseguire l'app pubblicata facendo doppio clic sul file eseguibile o eseguendo il comando `dotnet HelloWorld.dll` da un prompt dei comandi.
@@ -59,7 +59,7 @@ Nei passaggi seguenti verranno esaminati i file creati dal processo di pubblicaz
          Si tratta della versione della [distribuzione dipendente dal Framework](../deploying/deploy-with-cli.md#framework-dependent-deployment) dell'applicazione. Per eseguire questa libreria a collegamento dinamico, immettere `dotnet HelloWorld.dll` al prompt dei comandi.
 
       * *HelloWorld. exe*
-      
+
          Si tratta della versione [eseguibile dipendente dal Framework](../deploying/deploy-with-cli.md#framework-dependent-executable) dell'applicazione. Per eseguirlo, immettere `HelloWorld.exe` al prompt dei comandi.
 
       * *HelloWorld.pdb* (facoltativo per la distribuzione)

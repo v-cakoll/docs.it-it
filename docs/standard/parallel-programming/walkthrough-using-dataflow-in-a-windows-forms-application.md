@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: Uso del flusso di dati in un'applicazione Windows Forms"
+title: 'Procedura dettagliata: uso del flusso di dati in Windows Forms Application'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - Windows Forms, and TPL
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
-ms.openlocfilehash: b6f4b933f76834f48d522d9c97fb0c9b5c24e13d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 794253514edf63f02276e1ece21c60a85c534390
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139927"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159767"
 ---
-# <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Procedura dettagliata: Uso del flusso di dati in un'applicazione Windows Forms
+# <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Procedura dettagliata: uso del flusso di dati in Windows Forms Application
 Questo documento illustra come creare una rete di blocchi di flussi di dati tramite cui viene eseguita l'elaborazione di immagini in una Windows Forms Application.  
   
  Questo esempio carica i file di immagine dalla cartella specificata, crea un'immagine composita e visualizza il risultato. L'esempio utilizza il modello di flusso di dati per instradare le immagini tramite la rete. Nel modello del flusso di dati, i componenti indipendenti di un programma di comunicano tra loro mediante l'invio di messaggi. Quando un componente riceve un messaggio, esegue una determinata azione e quindi passa il risultato a un altro componente. Confrontare questo modello con il modello di flusso di controllo, in cui un'applicazione utilizza le strutture di controllo, ad esempio le istruzioni condizionali, i cicli e così via, per controllare l'ordine delle operazioni in un programma.  
@@ -35,7 +35,7 @@ Questo documento illustra come creare una rete di blocchi di flussi di dati tram
   
 - [Esempio completo](#complete)  
   
-<a name="winforms"></a>   
+<a name="winforms"></a>
 ## <a name="creating-the-windows-forms-application"></a>Creazione di Windows Forms Application  
  In questa sezione viene descritto come creare la Windows Forms Application di base e aggiungere i controlli al modulo principale.  
   
@@ -51,7 +51,7 @@ Questo documento illustra come creare una rete di blocchi di flussi di dati tram
   
 5. Aggiungere un oggetto <xref:System.Windows.Forms.PictureBox> al form principale. Impostare la proprietà <xref:System.Windows.Forms.Control.Dock%2A> su <xref:System.Windows.Forms.DockStyle.Fill>.  
   
-<a name="network"></a>   
+<a name="network"></a>
 ## <a name="creating-the-dataflow-network"></a>Creazione della rete del flusso di dati  
  In questa sezione viene descritto come creare la rete del flusso di dati che esegue l'elaborazione delle immagini.  
   
@@ -84,7 +84,7 @@ Questo documento illustra come creare una rete di blocchi di flussi di dati tram
   
  Nella tabella seguente vengono descritti i membri della rete.  
   
-|Member|Digitare|Descrizione|  
+|Membro|Type|Descrizione|  
 |------------|----------|-----------------|  
 |`loadBitmaps`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Accetta il percorso di una cartella come input e genera una raccolta di oggetti <xref:System.Drawing.Bitmap> come output.|  
 |`createCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Accetta una raccolta di oggetti <xref:System.Drawing.Bitmap> come input e genera una bitmap composita come output.|  
@@ -101,7 +101,7 @@ Questo documento illustra come creare una rete di blocchi di flussi di dati tram
   
  Questo esempio usa un token di annullamento condiviso anziché impostare la proprietà <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>, perché la proprietà <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> annulla in modo permanente l'esecuzione dei blocchi di flussi di dati. Un token di annullamento consente in questo esempio di riutilizzare la stessa rete del flusso di dati più volte, anche quando l'utente annulla una o più operazioni. Per un esempio che usa <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> per annullare in modo permanente l'esecuzione di un blocco di flussi di dati, vedere [Procedura: Annullare un blocco di flussi di dati](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md).  
   
-<a name="ui"></a>   
+<a name="ui"></a>
 ## <a name="connecting-the-dataflow-network-to-the-user-interface"></a>Connessione della rete del flusso dati all'interfaccia utente  
  In questa sezione viene descritto come connettere la rete del flusso di dati all'interfaccia utente. La creazione dell'immagine composita e l'annullamento dell'operazione vengono avviate dai pulsanti **Scegli cartella** e **Annulla**. Quando l'utente sceglie uno di questi pulsanti, l'azione appropriata viene avviata in modo asincrono.  
   
@@ -119,7 +119,7 @@ Questo documento illustra come creare una rete di blocchi di flussi di dati tram
   
      [!code-csharp[TPLDataflow_CompositeImages#7](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#7)]  
   
-<a name="complete"></a>   
+<a name="complete"></a>
 ## <a name="the-complete-example"></a>Esempio completo  
  Nell'esempio riportato di seguito viene illustrato il codice completo per questa procedura guidata.  
   

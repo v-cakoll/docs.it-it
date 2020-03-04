@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 0905cbebb2d966570be4ac3aefb40f4377b97061
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 323a2390f079c17b81db01e4e3787916251943bf
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742582"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156556"
 ---
 # <a name="whats-new-in-net-core-31"></a>Novità di .NET Core 3.1
 
@@ -29,13 +29,41 @@ Per ulteriori informazioni sulla versione, vedere l' [annuncio di .NET Core 3,1]
 
 .NET Core 3,1 è una versione LTS con supporto Microsoft per i prossimi tre anni. Si consiglia vivamente di spostare le app in .NET Core 3,1. Il ciclo di vita corrente di altre versioni principali è il seguente:
 
-| Versione | Nota |
+| Versione | Note |
 | ------- | ---- |
 | .NET Core 3.0 | Fine vita il 3 marzo 2020.     |
 | .NET Core 2.2 | Fine vita il 23 dicembre 2019. |
 | .NET Core 2.1 | Fine del ciclo di vita del 21 agosto 2021.    |
 
 Per ulteriori informazioni, vedere i [criteri di supporto di .NET Core](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).
+
+## <a name="macos-apphost-and-notarization"></a>appHost e autenticazione macOS
+
+*solo macOS*
+
+A partire dalla .NET Core SDK autenticata 3,1 per macOS, l'impostazione appHost è disabilitata per impostazione predefinita. Per altre informazioni, vedere [la pagina relativa all'autenticazione di MacOS Catalina e l'effetto sui download e sui progetti di .NET Core](../install/macos-notarization-issues.md).
+
+Quando è abilitata l'impostazione appHost, .NET Core genera un eseguibile nativo di Mach-O durante la compilazione o la pubblicazione. L'app viene eseguita nel contesto di appHost quando viene eseguita dal codice sorgente con il comando `dotnet run` o avviando direttamente il file eseguibile di Mach-O.
+
+Senza appHost, l'unico modo in cui un utente può avviare un'app [dipendente dal runtime](../deploying/index.md#publish-runtime-dependent) è con il comando `dotnet <filename.dll>`. Quando si pubblica l'app [autonoma](../deploying/index.md#publish-self-contained), viene sempre creato un APPHOST.
+
+È possibile configurare appHost a livello di progetto o impostare il appHost per un comando `dotnet` specifico con il parametro `-p:UseAppHost`:
+
+- File di progetto
+
+  ```xml
+  <PropertyGroup>
+    <UseAppHost>true</UseAppHost>
+  </PropertyGroup>
+  ```
+
+- Parametro della riga di comando
+
+  ```dotnetcli
+  dotnet run -p:UseAppHost=true
+  ```
+
+Per ulteriori informazioni sull'impostazione di `UseAppHost`, vedere [Proprietà MSBuild per Microsoft. NET. SDK](../project-sdk/msbuild-props.md#useapphost).
 
 ## <a name="windows-forms"></a>Windows Form
 

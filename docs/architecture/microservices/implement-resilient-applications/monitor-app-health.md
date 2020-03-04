@@ -1,15 +1,15 @@
 ---
-title: Monitoraggio dello stato
+title: Monitoraggio dell’integrità
 description: Esplorare un approccio per implementare il monitoraggio dell'integrità.
-ms.date: 01/30/2020
-ms.openlocfilehash: a91e51af66049f9774365cd56b90ab792a4dd4fc
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.date: 03/02/2020
+ms.openlocfilehash: 3b8ba57149061e629bee441672718eba8a79da63
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502710"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78241156"
 ---
-# <a name="health-monitoring"></a>Monitoraggio dello stato
+# <a name="health-monitoring"></a>Monitoraggio dell’integrità
 
 Il monitoraggio dell'integrità consente di ottenere quasi in tempo reale informazioni sullo stato di contenitori e microservizi. Il monitoraggio dell'integrità è fondamentale per vari aspetti dei microservizi operativi ed è particolarmente importante quando gli agenti di orchestrazione eseguono aggiornamenti parziali dell'applicazione in fasi, come illustrato più avanti.
 
@@ -19,7 +19,7 @@ Nel modello tipico, i servizi inviano report sul proprio stato e queste informaz
 
 ## <a name="implement-health-checks-in-aspnet-core-services"></a>Implementare i controlli di integrità nei servizi ASP.NET Core
 
-Quando si sviluppa un microservizio ASP.NET Core o un'applicazione Web, è possibile usare la funzionalità dei controlli di integrità incorporata rilasciata in ASP .NET Core 3,1 ([Microsoft. Extensions. Diagnostics. HealthChecks](https://www.nuget.org/packages/Microsoft.Extensions.Diagnostics.HealthChecks)). Come molte delle funzionalità di ASP.NET Core, i controlli di integrità includono un set di servizi e un middleware.
+Quando si sviluppa un microservizio ASP.NET Core o un'applicazione Web, è possibile usare la funzionalità dei controlli di integrità incorporata rilasciata in ASP .NET Core 2,2 ([Microsoft. Extensions. Diagnostics. HealthChecks](https://www.nuget.org/packages/Microsoft.Extensions.Diagnostics.HealthChecks)). Come molte delle funzionalità di ASP.NET Core, i controlli di integrità includono un set di servizi e un middleware.
 
 I servizi e il middleware per i controlli di integrità sono facili da usare e offrono funzionalità che consentono di accertarsi del corretto funzionamento di qualsiasi risorsa esterna necessaria per l'applicazione (ad esempio un database di SQL Server o un API remota). Quando si usa questa funzionalità, è possibile anche decidere cosa si intende per integrità della risorsa, come illustrato più avanti.
 
@@ -27,7 +27,9 @@ Per usare questa funzionalità in modo efficace, è prima necessario configurare
 
 ### <a name="use-the-healthchecks-feature-in-your-back-end-aspnet-microservices"></a>Usare la funzionalità HealthChecks nei microservizi ASP.NET di back-end
 
-In questa sezione si apprenderà come la funzionalità HealthChecks, come implementata in [AspNetCore. Diagnostics. HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks), venga usata in un esempio di applicazione API Web di esempio ASP.NET Core 3,1. L'implementazione di questa funzionalità in un microservizio su larga scala come eShopOnContainers è illustrata nella sezione successiva. Per iniziare, è necessario definire gli elementi che costituiscono uno stato integro per ogni microservizio. Nell'applicazione di esempio, un microservizio è integro se la relativa API è accessibile tramite HTTP e se è disponibile anche il database SQL Server correlato.
+In questa sezione si apprenderà come implementare la funzionalità HealthChecks in un'applicazione di esempio ASP.NET Core 3,1 API Web quando si usa il pacchetto [Microsoft. Extensions. Diagnostics. HealthChecks](https://www.nuget.org/packages/Microsoft.Extensions.Diagnostics.HealthChecks) . La sezione successiva illustra l'implementazione di questa funzionalità in un microservizio su larga scala, come eShopOnContainers.
+
+Per iniziare, è necessario definire gli elementi che costituiscono uno stato integro per ogni microservizio. Nell'applicazione di esempio, il microservizio è integro se la relativa API è accessibile tramite HTTP ed è disponibile anche il database SQL Server correlato.
 
 In .NET Core 3,1, con le API predefinite, è possibile configurare i servizi, aggiungere un controllo di integrità per il microservizio e il database SQL Server dipendente in questo modo:
 
@@ -40,10 +42,11 @@ public void ConfigureServices(IServiceCollection services)
     // Registers required services for health checks
     services.AddHealthChecks()
         // Add a health check for a SQL Server database
-        .AddSqlServer(
-            configuration["ConnectionString"],
-            name: "OrderingDB-check",
-            tags: new string[] { "orderingdb" });
+        .AddCheck(
+            "OrderingDB-check", 
+            new SqlConnectionHealthCheck(Configuration["ConnectionString"]), 
+            HealthStatus.Unhealthy, 
+            new string[] { "orderingdb" });
 }
 ```
 
@@ -114,11 +117,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     app.UseEndpoints(endpoints =>
     {
         //...
-        endpoints.MapHealthChecks("/hc", new HealthCheckOptions()
-        {
-            Predicate = _ => true,
-            ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
-        });
+        endpoints.MapHealthChecks("/hc");
         //...
     });
     //…
@@ -129,9 +128,9 @@ Quando l'endpoint `<yourmicroservice>/hc` viene richiamato, esegue tutti i contr
 
 ### <a name="healthchecks-implementation-in-eshoponcontainers"></a>Implementazione di HealthChecks in eShopOnContainers
 
-I microservizi in eShopOnContainers si basano su più servizi per eseguire le attività. Ad esempio, il microservizio `Catalog.API` da eShopOnContainers dipende da molti servizi, ad esempio Archiviazione BLOB di Azure, SQL Server e RabbitMQ. Pertanto, include diversi controlli di integrità aggiunti con il metodo `AddCheck()`. Per ogni servizio dipendente, è necessario aggiungere un'implementazione personalizzata di `IHealthCheck` che definisce lo stato di integrità corrispondente.
+I microservizi in eShopOnContainers si basano su più servizi per eseguire le attività. Ad esempio, il microservizio `Catalog.API` da eShopOnContainers dipende da molti servizi, ad esempio Archiviazione BLOB di Azure, SQL Server e RabbitMQ. Pertanto, include diversi controlli di integrità aggiunti con il metodo `AddCheck()`. Per ogni servizio dipendente, è necessario aggiungere un'implementazione di `IHealthCheck` personalizzata che definisce il rispettivo stato di integrità.
 
-Il progetto open source [AspNetCore. Diagnostics. HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) risolve questo problema fornendo implementazioni personalizzate per i controlli di integrità per ognuno di questi servizi aziendali basati su .net core 3,1. Ogni controllo di integrità è disponibile come singolo pacchetto NuGet che può essere facilmente aggiunto al progetto. eShopOnContainers li usa ampiamente in tutti i microservizi.
+Il progetto open source [AspNetCore. Diagnostics. HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) risolve questo problema fornendo implementazioni personalizzate per i controlli di integrità per ognuno di questi servizi aziendali, basati su .net core 3,1. Ogni controllo di integrità è disponibile come singolo pacchetto NuGet che può essere facilmente aggiunto al progetto. eShopOnContainers li usa ampiamente in tutti i microservizi.
 
 Ad esempio, nel microservizio `Catalog.API` sono stati aggiunti i pacchetti NuGet seguenti:
 
@@ -211,7 +210,7 @@ In questo test, si può notare che il microservizio `Catalog.API` (in esecuzione
 
 ## <a name="use-watchdogs"></a>Usare watchdog
 
-Un watchdog è un servizio separato in grado di controllare l'integrità e il carico tra servizi e segnalare l'integrità dei microservizi eseguendo una query con la libreria `HealthChecks` introdotta in precedenza. Ciò consente di evitare gli errori che non verrebbero rilevati in base alla visualizzazione di un singolo servizio. I watchdog possono anche contenere codice in grado di eseguire azioni correttive per condizioni note senza interazione da parte dell'utente.
+Un watchdog è un servizio separato in grado di controllare l'integrità e il carico tra servizi e segnalare l'integrità dei microservizi eseguendo una query con la libreria `HealthChecks` introdotta in precedenza. Questo consente di evitare errori che non verrebbero rilevati visualizzando un singolo servizio. I watchdog sono una buona posizione in cui ospitare codice in grado di eseguire interventi correttivi per condizioni note senza bisogno di azioni da parte degli utenti.
 
 L'esempio eShopOnContainers contiene una pagina Web che visualizza report di esempio sul controllo di integrità, come illustrato nella figura 8-9. Questo è il tipo watchdog più semplice possibile, poiché si limita a visualizzare lo stato dei microservizi e delle applicazioni Web in eShopOnContainers. In genere un watchdog esegue anche azioni quando rileva stati non integri.
 
@@ -271,13 +270,13 @@ Ad esempio, gran parte degli agenti di orchestrazione può usare controlli di in
 
 Il monitoraggio dell'integrità è particolarmente importante quando un agente di orchestrazione esegue l'aggiornamento dell'applicazione. Alcuni agenti di orchestrazione (ad esempio Azure Service Fabric) aggiornano i servizi in fasi, ad esempio aggiornano un quinto della superficie di cluster per ogni aggiornamento dell'applicazione. Il set di nodi che viene aggiornato allo stesso tempo è detto *dominio di aggiornamento*. Quando un dominio di aggiornamento risulta aggiornato ed è disponibile agli utenti, deve superare i controlli di integrità prima che la distribuzione passi al dominio di aggiornamento successivo.
 
-Un altro aspetto dell'integrità del servizio è la segnalazione delle metriche dal servizio. Si tratta di una funzionalità avanzata del modello di integrità di alcuni agenti di orchestrazione, ad esempio Service Fabric. Le metriche sono importanti quando si usa un agente di orchestrazione perché vengono usate per bilanciare l'utilizzo delle risorse. Le metriche possono anche essere un indicatore dell'integrità del sistema. Ad esempio, un'applicazione potrebbe disporre di molti microservizi e ogni istanza potrebbe segnalare una metrica di richieste al secondo (RPS). Se un servizio usa più risorse (memoria, processore e così via) di un altro servizio, l'agente di orchestrazione potrebbe spostare le istanze del servizio all'interno del cluster per tentare di mantenere uniforme l'utilizzo delle risorse.
+Un altro aspetto dell'integrità del servizio è dato dalla creazione di report sulle metriche del servizio. Si tratta di una funzionalità avanzata del modello di integrità di alcuni agenti di orchestrazione, ad esempio Service Fabric. Le metriche sono importanti quando si usa un agente di orchestrazione perché vengono usate per bilanciare l'utilizzo delle risorse. Possono anche essere usate come un indicatore dell'integrità del sistema. Ad esempio, un'applicazione potrebbe disporre di molti microservizi e ogni istanza potrebbe segnalare una metrica di richieste al secondo (RPS). Se un servizio usa più risorse (memoria, processore e così via) di un altro servizio, l'agente di orchestrazione potrebbe spostare le istanze del servizio all'interno del cluster per tentare di mantenere uniforme l'utilizzo delle risorse.
 
 Si noti che Azure Service Fabric fornisce il proprio [modello di monitoraggio dell'integrità](/azure/service-fabric/service-fabric-health-introduction), più avanzato rispetto ai semplici controlli di integrità.
 
 ## <a name="advanced-monitoring-visualization-analysis-and-alerts"></a>Monitoraggio avanzato: visualizzazione, analisi e avvisi
 
-La parte finale del monitoraggio è la visualizzazione del flusso di eventi, la generazione di report sulle prestazioni del servizio e l'invio di avvisi quando vengono rilevati problemi. È possibile usare diverse soluzioni per questo aspetto del monitoraggio.
+L'ultima parte del monitoraggio consiste nel visualizzare il flusso di eventi, creare report sulle prestazioni dei servizi e avvisare in caso di problemi. È possibile usare soluzioni diverse per questo aspetto del monitoraggio.
 
 È possibile usare semplici applicazioni personalizzate che visualizzano lo stato dei servizi, ad esempio la pagina personalizzata visualizzata nella spiegazione di [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks). In alternativa è possibile usare strumenti più avanzati come [Monitoraggio di Azure](https://azure.microsoft.com/services/monitor/) per la generazione di avvisi in base al flusso di eventi.
 

@@ -5,12 +5,12 @@ author: leecow
 ms.author: leecow
 ms.date: 12/04/2019
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 4164ea5a04d80ab20109168a225b793b02ee616a
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: ca86b3c158bb38c1293cd4303dcf4c00ea9175b1
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448893"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157810"
 ---
 # <a name="net-core-dependencies-and-requirements"></a>Dipendenze e requisiti di .NET Core
 
@@ -30,7 +30,7 @@ Con .NET Core 3,1 sono supportate le seguenti versioni di Windows:
 > [!NOTE]
 > Un simbolo di `+` rappresenta la versione minima.
 
-| Sistema operativo                            | Versione                        | Architetture   |
+| OS                            | Versione                        | Architetture   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Client Windows                | 7 SP1 +, 8,1                    | x64, x86        |
 | Client Windows 10             | Versione 1607 +                  | x64, x86        |
@@ -46,7 +46,7 @@ Con .NET Core 3,0 sono supportate le seguenti versioni di Windows:
 > [!NOTE]
 > Un simbolo di `+` rappresenta la versione minima.
 
-| Sistema operativo                            | Versione                        | Architetture   |
+| OS                            | Versione                        | Architetture   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Client Windows                | 7 SP1 +, 8,1                    | x64, x86        |
 | Client Windows 10             | Versione 1607 +                  | x64, x86        |
@@ -62,7 +62,7 @@ Con .NET Core 2,2 sono supportate le seguenti versioni di Windows:
 > [!NOTE]
 > Un simbolo di `+` rappresenta la versione minima.
 
-| Sistema operativo                            | Versione                        | Architetture   |
+| OS                            | Versione                        | Architetture   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Client Windows                | 7 SP1 +, 8,1                    | x64, x86        |
 | Client Windows 10             | Versione 1607 +                  | x64, x86        |
@@ -78,7 +78,7 @@ Con .NET Core 2,1 sono supportate le seguenti versioni di Windows:
 > [!NOTE]
 > Un simbolo di `+` rappresenta la versione minima.
 
-| Sistema operativo                            | Versione                        | Architetture   |
+| OS                            | Versione                        | Architetture   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Client Windows                | 7 SP1 +, 8,1                    | x64, x86        |
 | Client Windows 10             | Versione 1607 +                  | x64, x86        |
@@ -99,9 +99,9 @@ Sono necessarie dipendenze aggiuntive se si sta installando .NET SDK o Runtime n
 - Windows Vista SP 2
 - Windows 8.1
 - Windows Server 2008 R2
-- Windows Server 2012 R2
+- Windows Server 2012 R2
 
-Installare gli elementi seguenti:
+Installare i componenti seguenti:
 
 - [Microsoft Visual C++ 2015 Redistributable Update 3](https://www.microsoft.com/download/details.aspx?id=52685).
 - [KB2533623](https://support.microsoft.com/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot)
@@ -110,7 +110,7 @@ I requisiti indicati sopra sono necessari anche se si verifica uno degli errori 
 
 > Non è possibile avviare il programma perché non è presente alcuna *API-MS-Win-CRT-Runtime-L1-1-0. dll* nel computer. Per risolvere il problema, provare a reinstallare il programma.
 >
-> \- oppure -
+> \- - oppure -
 >
 > La libreria *hostfxr. dll* è stata trovata, ma il caricamento da *C:\\\<path_to_app >\\hostfxr. dll* non è riuscita.
 
@@ -127,17 +127,17 @@ I requisiti indicati sopra sono necessari anche se si verifica uno degli errori 
 > [!NOTE]
 > Un simbolo di `+` rappresenta la versione minima.
 
-| Sistema operativo                             | Versione               | Architetture    |
+| OS                             | Versione               | Architetture    |
 | ------------------------------ | --------------------- | ---------------- |
-| Red Hat Enterprise Linux       | 6, 7, 8               | X64 |
-| CentOS                         | 7+                    | X64 |
-| Oracle Linux                   | 7+                    | X64 |
-| Fedora                         | 29 +                   | X64 |
+| Red Hat Enterprise Linux       | 6, 7, 8               | x64 |
+| CentOS                         | 7+                    | x64 |
+| Oracle Linux                   | 7+                    | x64 |
+| Fedora                         | 29 +                   | x64 |
 | Debian                         | 9+                    | x64, ARM32, ARM64 |
 | Ubuntu                         | 16.04+                | x64, ARM32, ARM64 |
-| Linux Mint                     | 18 +                   | X64 |
-| openSUSE                       | 15 +                   | X64 |
-| SUSE Enterprise Linux (SLES)   | 12 SP2+               | X64 |
+| Linux Mint                     | 18 +                   | x64 |
+| openSUSE                       | 15 +                   | x64 |
+| SUSE Enterprise Linux (SLES)   | 12 SP2+               | x64 |
 | Alpine Linux                   | 3.10 +                 | x64, ARM64 |
 
 Per altre informazioni sui sistemi operativi, le distribuzioni e i criteri del ciclo di vita supportati di .NET Core 3,1, vedere [versioni del sistema operativo supportate da .net core 3,1](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md).
@@ -156,17 +156,17 @@ Per altre informazioni su come installare .NET Core 3,1 in ARM64 (kernel 4.14 +)
 > [!NOTE]
 > Un simbolo di `+` rappresenta la versione minima.
 
-| Sistema operativo                             | Versione               | Architetture    |
+| OS                             | Versione               | Architetture    |
 | ------------------------------ | --------------------- | ---------------- |
-| Red Hat Enterprise Linux       | 6, 7, 8               | X64 |
-| CentOS                         | 7+                    | X64 |
-| Oracle Linux                   | 7+                    | X64 |
-| Fedora                         | 29 +                   | X64 |
+| Red Hat Enterprise Linux       | 6, 7, 8               | x64 |
+| CentOS                         | 7+                    | x64 |
+| Oracle Linux                   | 7+                    | x64 |
+| Fedora                         | 29 +                   | x64 |
 | Debian                         | 9+                    | x64, ARM32, ARM64 |
 | Ubuntu                         | 16.04+                | x64, ARM32, ARM64 |
-| Linux Mint                     | 18 +                   | X64 |
-| openSUSE                       | 15 +                   | X64 |
-| SUSE Enterprise Linux (SLES)   | 12 SP2+               | X64 |
+| Linux Mint                     | 18 +                   | x64 |
+| openSUSE                       | 15 +                   | x64 |
+| SUSE Enterprise Linux (SLES)   | 12 SP2+               | x64 |
 | Alpine Linux                   | 3.8+                  | x64, ARM64 |
 
 Per altre informazioni sui sistemi operativi, le distribuzioni e i criteri del ciclo di vita supportati di .NET Core 3,0, vedere [versioni del sistema operativo supportate da .net core 3,0](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md).
@@ -182,18 +182,18 @@ Per altre informazioni su come installare .NET Core 3.0 su ARM64, vedere [Instal
 > [!NOTE]
 > Un simbolo di `+` rappresenta la versione minima.
 
-| Sistema operativo                             |  Versione                |  Architetture   |
+| OS                             |  Versione                |  Architetture   |
 | ------------------------------ | ----------------------- | ---------------- |
-| Red Hat Enterprise Linux       |  6, 7                   | X64 |
-| CentOS                         |  7                      | X64 |
-| Oracle Linux                   |  7                      | X64 |
-| Fedora                         |  29, 30                 | X64 |
+| Red Hat Enterprise Linux       |  6, 7                   | x64 |
+| CentOS                         |  7                      | x64 |
+| Oracle Linux                   |  7                      | x64 |
+| Fedora                         |  29, 30                 | x64 |
 | Debian                         |  9                      | x64, ARM32 |
 | Ubuntu                         |  16,04, 18,04, 18,10    | x64, ARM32 |
-| Linux Mint                     |  17, 18                 | X64 |
-| openSUSE                       |  15 +                    | X64 |
-| SUSE Enterprise Linux (SLES)   |  12 SP2+                | X64 |
-| Alpine Linux                   |  3.8+                   | X64 |
+| Linux Mint                     |  17, 18                 | x64 |
+| openSUSE                       |  15 +                    | x64 |
+| SUSE Enterprise Linux (SLES)   |  12 SP2+                | x64 |
+| Alpine Linux                   |  3.8+                   | x64 |
 
 Per altre informazioni sui sistemi operativi, le distribuzioni e i criteri del ciclo di vita supportati di .NET Core 2,2, vedere [versioni del sistema operativo supportate da .net core 2,2](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md).
 
@@ -206,18 +206,18 @@ Per altre informazioni sui sistemi operativi, le distribuzioni e i criteri del c
 > [!NOTE]
 > Un simbolo di `+` rappresenta la versione minima.
 
-| Sistema operativo                             |  Versione                |  Architetture   |
+| OS                             |  Versione                |  Architetture   |
 | ------------------------------ | ----------------------- | ---------------- |
-| Red Hat Enterprise Linux       |  6, 7, 8                | X64 |
-| CentOS                         |  7+                     | X64 |
-| Oracle Linux                   |  7+                     | X64 |
-| Fedora                         |  29 +                    | X64 |
+| Red Hat Enterprise Linux       |  6, 7, 8                | x64 |
+| CentOS                         |  7+                     | x64 |
+| Oracle Linux                   |  7+                     | x64 |
+| Fedora                         |  29 +                    | x64 |
 | Debian                         |  9                      | x64, ARM32 |
 | Ubuntu                         |  16,04, 18,04, 19,04, 19,10    | x64, ARM32 |
-| Linux Mint                     |  17 +                    | X64 |
-| openSUSE                       |  15 +                    | X64 |
-| SUSE Enterprise Linux (SLES)   |  12 SP2+                | X64 |
-| Alpine Linux                   |  3.8+                   | X64 |
+| Linux Mint                     |  17+                    | x64 |
+| openSUSE                       |  15 +                    | x64 |
+| SUSE Enterprise Linux (SLES)   |  12 SP2+                | x64 |
+| Alpine Linux                   |  3.8+                   | x64 |
 
 Per altre informazioni sui sistemi operativi, le distribuzioni e i criteri del ciclo di vita supportati di .NET Core 2,1, vedere [versioni del sistema operativo supportate da .net core 2,1](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md).
 
@@ -290,10 +290,18 @@ Per le app .NET Core che usano l'assembly *System. Drawing. Common* , è necessa
 
 | Versione di .NET Core | macOS                 | Architetture |     |
 | ----------------- | --------------------- | --------------| --- |
-| 3.1               | Alta Sierra (10.13 +)  | X64 | [Altre informazioni](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md) |
-| 3.0               | Alta Sierra (10.13 +)  | X64 | [Altre informazioni](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) |
-| 2.2               | Sierra (10.12 +)       | X64 | [Altre informazioni](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) |
-| 2.1               | Sierra (10.12 +)       | X64 | [Altre informazioni](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) |
+| 3.1               | Alta Sierra (10.13 +)  | x64 | [Altre informazioni](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md) |
+| 3.0               | Alta Sierra (10.13 +)  | x64 | [Altre informazioni](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) |
+| 2.2               | Sierra (10.12 +)       | x64 | [Altre informazioni](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) |
+| 2.1               | Sierra (10.12 +)       | x64 | [Altre informazioni](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) |
+
+A partire da macOS Catalina (versione 10,15), tutto il software creato dopo il 1 ° giugno 2019 distribuito con ID sviluppatore, deve essere autenticato. Questo requisito si applica al runtime di .NET Core, alla .NET Core SDK e al software creato con .NET Core.
+
+I programmi di installazione per .NET Core (Runtime e SDK) versioni 3,1, 3,0 e 2,1 sono stati autenticati dal 18 febbraio 2020. Le versioni precedenti rilasciate non vengono autenticate. Se si esegue un'app non autenticata, verrà visualizzato un errore simile all'immagine seguente:
+
+![avviso di autenticazione di macOS Catalina](media/dependencies/macos-notarized-pkg-warning.png)
+
+Per altre informazioni sul modo in cui l'autenticazione applicata a .NET Core (e sulle app .NET Core), vedere [Working with MacOS Catalina notariation](macos-notarization-issues.md).
 
 ## <a name="libgdiplus"></a>libgdiplus
 

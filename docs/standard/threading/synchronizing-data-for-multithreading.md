@@ -7,12 +7,12 @@ helpviewer_keywords:
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: ecc1e234b03cb45075c40ff6698f71f8ce18d0de
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a70bd3070d8b1dcd06e55d330a01d29071293f6c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128970"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159390"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Sincronizzazione dei dati per il multithreading
 
@@ -33,7 +33,7 @@ Se più thread sono in grado di effettuare chiamate alle proprietà e ai metodi 
 |Category|Campi globali|Campi statici|Metodi statici|Campi di istanza|Metodi di istanza|Blocchi di codice specifici|  
 |--------------|-------------------|-------------------|--------------------|---------------------|----------------------|--------------------------|  
 |Nessuna sincronizzazione|No|No|No|No|No|No|  
-|Contesto sincronizzato|No|No|No|Yes|Yes|No|  
+|Contesto sincronizzato|No|No|No|Sì|Sì|No|  
 |Aree di codice sincronizzate|No|No|Solo se contrassegnato|No|Solo se contrassegnato|Solo se contrassegnato|  
 |Sincronizzazione manuale|Manuale|Manuale|Manuale|Manuale|Manuale|Manuale|  
   
@@ -64,13 +64,13 @@ Se più thread sono in grado di effettuare chiamate alle proprietà e ai metodi 
  In entrambi i casi, se viene generata un'eccezione nell'area di codice, il blocco acquisito da **lock** o **SyncLock** viene rilasciato automaticamente. I compilatori C# e Visual Basic creano un blocco **try**/**finally** con **Monitor.Enter** all'inizio del blocco try e **Monitor.Exit** nel blocco **finally**. Se viene generata un'eccezione all'interno del blocco **lock** o **SyncLock**, viene eseguito il gestore **finally** per consentire l'esecuzione di operazioni di pulizia.  
   
 ## <a name="synchronized-context"></a>Contesto sincronizzato  
- 
+
 Solo nelle applicazioni .NET Framework e Xamarin è possibile usare <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> in qualsiasi <xref:System.ContextBoundObject> per sincronizzare tutti i campi e i metodi di istanza. Tutti gli oggetti nello stesso dominio di contesto condividono lo stesso blocco. Più thread possono accedere ai metodi e ai campi, ma è consentito un singolo thread alla volta.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
-- [Thread e Threading](../../../docs/standard/threading/threads-and-threading.md)
-- [Cenni preliminari sulle primitive di sincronizzazione](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
+- [Threads and Threading](../../../docs/standard/threading/threads-and-threading.md) (Thread e threading)
+- [Panoramica sulle primitive di sincronizzazione](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
 - [Istruzione SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md)
 - [Istruzione lock](../../csharp/language-reference/keywords/lock-statement.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: 05b5ab19c5206395ab138465eccf2035b5cebe3e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: cce01a7c87f6f20b5e6c46881b8c863bb5a72a88
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046481"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160067"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Cenni preliminari sul modello asincrono basato su eventi
 Le applicazioni che eseguono più attività contemporaneamente, pur rimanendo disponibili all'utente, richiedono spesso una progettazione che preveda l'uso di più thread. Lo spazio dei nomi <xref:System.Threading> offre tutti gli strumenti necessari per creare applicazioni multithreading a elevate prestazioni, per l'uso dei quali è necessaria tuttavia una notevole esperienza nel campo dell'ingegneria del software multithreading. Per applicazioni multithreading relativamente semplici, il componente <xref:System.ComponentModel.BackgroundWorker> rappresenta una soluzione adeguata. Per applicazioni asincrone più complesse, si consiglia di implementare una classe che segua il modello asincrono basato su eventi.  
@@ -60,19 +60,19 @@ Le applicazioni che eseguono più attività contemporaneamente, pur rimanendo di
 ```vb  
 Public Class AsyncExample  
     ' Synchronous methods.  
-    Public Function Method1(ByVal param As String) As Integer   
-    Public Sub Method2(ByVal param As Double)   
+    Public Function Method1(ByVal param As String) As Integer
+    Public Sub Method2(ByVal param As Double)
   
     ' Asynchronous methods.  
-    Overloads Public Sub Method1Async(ByVal param As String)   
-    Overloads Public Sub Method1Async(ByVal param As String, ByVal userState As Object)   
+    Overloads Public Sub Method1Async(ByVal param As String)
+    Overloads Public Sub Method1Async(ByVal param As String, ByVal userState As Object)
     Public Event Method1Completed As Method1CompletedEventHandler  
   
-    Overloads Public Sub Method2Async(ByVal param As Double)   
-    Overloads Public Sub Method2Async(ByVal param As Double, ByVal userState As Object)   
+    Overloads Public Sub Method2Async(ByVal param As Double)
+    Overloads Public Sub Method2Async(ByVal param As Double, ByVal userState As Object)
     Public Event Method2Completed As Method2CompletedEventHandler  
   
-    Public Sub CancelAsync(ByVal userState As Object)   
+    Public Sub CancelAsync(ByVal userState As Object)
   
     Public ReadOnly Property IsBusy () As Boolean  
   
@@ -138,7 +138,7 @@ public class AsyncExample
 - <xref:System.ComponentModel.AsyncCompletedEventArgs>
 - [Procedura: Usare componenti che supportano il modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
 - [Procedura: Eseguire un'operazione in background](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Procedura: Implementare un modulo che usa un'operazione in background](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
-- [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) (Modello asincrono basato su eventi, EAP)
+- [Procedura: Implementare un form che esegue un'operazione in background](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Modello asincrono basato su eventi (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
 - [Suggerimenti per l'implementazione del modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
 - [Quando implementare il modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)

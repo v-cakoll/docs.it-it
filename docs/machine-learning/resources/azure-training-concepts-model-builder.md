@@ -2,15 +2,15 @@
 title: Risorse di formazione di Azure per generatore di modelli
 description: Guida alle risorse per Azure Machine Learning
 ms.topic: reference
-ms.date: 02/25/2020
+ms.date: 02/27/2020
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: a0a75283cdc7402c67b6bfb0799189fa34cd39a7
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.openlocfilehash: 866fd5a90d13f85f2f8a1aa45ff0e1efb0096642
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77675205"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159299"
 ---
 # <a name="model-builder-azure-training-resources"></a>Risorse di formazione di Azure per generatore di modelli
 
@@ -52,7 +52,7 @@ Per creare un'area di lavoro di Azure Machine Learning, sono necessari gli eleme
 
 ## <a name="training"></a>Formazione
 
-Il training in Azure è disponibile solo per lo scenario di classificazione delle immagini del generatore di modelli. L'algoritmo usato per il training di questi modelli è una rete neurale profonda basata sull'architettura ResNet50. Durante il training, viene effettuato il provisioning delle risorse necessarie per eseguire il training del modello e viene eseguito il training del modello. Questo processo richiede alcuni minuti e la quantità di tempo può variare a seconda delle dimensioni del calcolo selezionato e della quantità di dati. È possibile tenere traccia dello stato di avanzamento delle esecuzioni selezionando il collegamento "monitora esecuzione corrente in portale di Azure" in Visual Studio.
+Il training in Azure è disponibile solo per lo scenario di classificazione delle immagini del generatore di modelli. L'algoritmo usato per il training di questi modelli è una rete neurale profonda basata sull'architettura ResNet50. Il processo di training richiede tempo e la quantità di tempo può variare a seconda delle dimensioni del calcolo selezionato e della quantità di dati. La prima volta che si esegue il training di un modello, è possibile prevedere un tempo di training leggermente più lungo perché è necessario effettuare il provisioning delle risorse. È possibile tenere traccia dello stato di avanzamento delle esecuzioni selezionando il collegamento "monitora esecuzione corrente in portale di Azure" in Visual Studio.
 
 ## <a name="results"></a>Risultati
 
@@ -64,12 +64,26 @@ Al termine del training, verranno aggiunti due progetti alla soluzione con i suf
   - bestModel. Onnx: una versione serializzata del modello nel formato Open Neural Network Exchange (ONNX). ONNX è un formato Open Source per i modelli di intelligenza artificiale che supporta l'interoperabilità tra Framework come ML.NET, PyTorch e TensorFlow.
   - bestModelMap. JSON: elenco di categorie utilizzate per eseguire stime per eseguire il mapping dell'output del modello a una categoria di testo.
   - MLModel. zip: una versione serializzata della pipeline di stima ML.NET che utilizza la versione serializzata del modello *bestModel. Onnx* per eseguire stime ed eseguire il mapping degli output utilizzando il file di `bestModelMap.json`.
-  
-## <a name="troubleshooting"></a>Risoluzione dei problemi
+
+## <a name="use-the-machine-learning-model"></a>Usare il modello di Machine Learning
+
+Le classi `ModelInput` e `ModelOutput` nel progetto di *modello* definiscono rispettivamente lo schema dell'input e dell'output previsto del modello.
+
+In uno scenario di classificazione delle immagini, il `ModelInput` contiene due colonne:
+
+- `ImageSource`: il percorso della stringa del percorso dell'immagine.
+- `Label`: la categoria effettiva a cui appartiene l'immagine. `Label` viene utilizzato solo come input quando si esegue il training e non è necessario specificarlo durante le stime.
+
+Il `ModelOutput` contiene due colonne:
+
+- `Prediction`: Categoria stimata dell'immagine.
+- `Score`: elenco di probabilità per tutte le categorie (il più alto appartiene al `Prediction`).
+
+## <a name="troubleshooting"></a>risoluzione dei problemi
 
 ### <a name="cannot-create-compute"></a>Non è possibile creare il calcolo
 
 Se si verifica un errore durante la creazione di Azure Machine Learning calcolo, è possibile che la risorsa di calcolo esista ancora, in uno stato di errore. Se si tenta di ricreare la risorsa di calcolo con lo stesso nome, l'operazione non riesce. Per correggere l'errore, eseguire una delle operazioni seguenti:
 
-* Crea il nuovo calcolo con un nome diverso
-* Passare alla portale di Azure e rimuovere la risorsa di calcolo originale
+- Crea il nuovo calcolo con un nome diverso
+- Passare alla portale di Azure e rimuovere la risorsa di calcolo originale

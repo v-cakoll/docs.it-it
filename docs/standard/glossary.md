@@ -3,12 +3,12 @@ title: Glossario .NET
 description: Significato di termini selezionati usati nella documentazione di .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 822d6c9513d49dcc6bc57421003441d9bcc7c281
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 8da1d858835210590a80a624fb8989fbfe8e0a91
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921115"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160092"
 ---
 # <a name="net-glossary"></a>Glossario .NET
 
@@ -22,11 +22,11 @@ Simile a [JIT](#jit), questo compilatore esegue anche la conversione del linguag
 
 Vedere [CoreRT](#corert) e [.NET Native](#net-native).
 
-## <a name="aspnet"></a>ASP.NET 
+## <a name="aspnet"></a>ASP.NET
 
 Implementazione originale di ASP.NET inclusa con .NET Framework.
 
-In alcuni casi ASP.NET è un termine generico che fa riferimento a entrambe le implementazioni di ASP.NET, inclusa ASP.NET Core. Il significato assunto dal termine in una specifica istanza è determinato dal contesto. Fare riferimento ad ASP.NET 4.x per definire che non si sta usando ASP.NET per indicare entrambe le implementazioni. 
+In alcuni casi ASP.NET è un termine generico che fa riferimento a entrambe le implementazioni di ASP.NET, inclusa ASP.NET Core. Il significato assunto dal termine in una specifica istanza è determinato dal contesto. Fare riferimento ad ASP.NET 4.x per definire che non si sta usando ASP.NET per indicare entrambe le implementazioni.
 
 Vedere [Documentazione di ASP.NET](/aspnet/#pivot=aspnet).
 
@@ -42,7 +42,7 @@ File *DLL*/*EXE* che possono contenere una raccolta di API che possono essere ch
 
 Un assembly può includere tipi, ad esempio interfacce, classi, strutture, enumerazioni e delegati. Gli assembly presenti nella cartella *bin* di un progetto sono anche denominati *binari*. Vedere anche [libreria](#library).
 
-## <a name="clr"></a>CLR per
+## <a name="clr"></a>CLR
 
 Common Language Runtime.
 
@@ -58,7 +58,7 @@ Questo tipo di CLR viene creato dalla stessa base di codice di CLR. In origine, 
 
 Libreria di classi base .NET Core (BCL)
 
-Set di librerie che costituiscono il sistema. gli spazi dei nomi\* e in un extent limitato Microsoft\*. La libreria di classi base è un framework generico di livello inferiore su cui si basano framework applicazione di livello superiore, ad esempio ASP.NET Core. Il codice sorgente di .NET Core BCL è contenuto nel repository di [runtime di .NET Core](https://github.com/dotnet/runtime). La maggior parte delle API .NET Core sono però anche disponibili in .NET Framework, di conseguenza è possibile considerare CoreFX come un fork della libreria di classi base .NET Framework.
+Set di librerie che costituiscono il sistema. gli spazi dei nomi\* e in un extent limitato Microsoft.\* La libreria di classi base è un framework generico di livello inferiore su cui si basano framework applicazione di livello superiore, ad esempio ASP.NET Core. Il codice sorgente di .NET Core BCL è contenuto nel repository di [runtime di .NET Core](https://github.com/dotnet/runtime). La maggior parte delle API .NET Core sono però anche disponibili in .NET Framework, di conseguenza è possibile considerare CoreFX come un fork della libreria di classi base .NET Framework.
 
 ## <a name="corert"></a>CoreRT
 
@@ -78,7 +78,7 @@ Tutto il software di runtime, gli strumenti di sviluppo e le risorse della commu
 
 Il termine "ecosistema .NET" è diverso da termini simili, quali "stack .NET", quando è inserito in app e librerie di terze parti. Eccone un esempio in una frase:
 
-- "La motivazione alla base di [.NET Standard](#net-standard) è l'esigenza di creare maggiore uniformità nell'ecosistema .NET". 
+- "La motivazione alla base di [.NET Standard](#net-standard) è l'esigenza di creare maggiore uniformità nell'ecosistema .NET".
 
 ## <a name="framework"></a>framework
 
@@ -96,7 +96,7 @@ Nella documentazione esistente il termine "framework" si riferisce talvolta a un
 
 Garbage Collector.
 
-Il Garbage Collector è un'implementazione di un sistema di gestione automatica della memoria.  Libera infatti la memoria occupata da oggetti che non vengono più usati. 
+Il Garbage Collector è un'implementazione di un sistema di gestione automatica della memoria.  Libera infatti la memoria occupata da oggetti che non vengono più usati.
 
 Vedere [Garbage Collection](garbage-collection/index.md).
 
@@ -127,7 +127,7 @@ Esempi di implementazioni di .NET:
 - [.NET Core](#net-core)
 - [Piattaforma UWP (Universal Windows Platform)](#uwp)
 
-## <a name="library"></a>libreria
+## <a name="library"></a>library
 
 Raccolta di API che possono essere chiamate da app o altre librerie. Una libreria .NET è composta da uno o più [assembly](#assembly).
 
@@ -157,7 +157,7 @@ Termine generico per riferirsi a [.NET Standard](#net-standard) e a tutti i cari
 
 Vedere [Guida alla piattaforma .NET](index.md).
 
-## <a name="net-core"></a>.NET Core 
+## <a name="net-core"></a>.NET Core
 
 Implementazione open source, ad alte prestazioni e multi-piattaforma di .NET. Include Core Common Language Runtime (CoreCLR), il runtime Core AOT (CoreRT, in fase di sviluppo), la libreria di classi base Core e Core SDK.
 
@@ -205,28 +205,28 @@ Generazione di immagini native.
 
 È possibile considerare questa tecnologia come un compilatore JIT permanente. Il codice viene in genere compilato nel computer stesso in cui viene eseguito il codice, ma la compilazione viene eseguita di solito durante l'installazione.
 
-## <a name="package"></a>pacchetto
+## <a name="package"></a>Pacchetto
 
 Un pacchetto NuGet &mdash; o semplicemente un pacchetto &mdash; è un file *ZIP* contenente uno o più assembly con lo stesso nome, unitamente a metadati aggiuntivi, quali il nome dell'autore.
 
 Il file *ZIP* è caratterizzato dall'estensione *NUPKG* e può contenere asset, quali file *DLL* e *XML*, da usare con più framework e versioni di destinazione. Quando vengono installati in un'app o una libreria, gli asset appropriati vengono selezionati in base al framework di destinazione specificato dall'app o dalla libreria. Gli asset che definiscono l'interfaccia si trovano nella cartella *ref*, mentre quelli che definiscono l'implementazione si trovano nella cartella *lib*.
 
-## <a name="platform"></a>piattaforma
+## <a name="platform"></a>Piattaforma
 
 Sistema operativo e hardware in cui viene eseguito, ad esempio Windows, macOS, Linux, iOS e Android.
 
 Ecco alcuni esempio di utilizzo nelle frasi:
 
-- ".NET Core è un'implementazione multipiattaforma di .NET". 
+- ".NET Core è un'implementazione multipiattaforma di .NET".
 - "I profili delle librerie di classi portabili rappresentano piattaforme Microsoft, mentre .NET Standard è indipendente dalla piattaforma".
 
 Nella documentazione di .NET si usa spesso "piattaforma .NET" per indicare un'implementazione di .NET o lo stack .NET che include tutte le implementazioni. Entrambe queste accezioni generano confusione con il significato primario (sistema operativo/hardware), di conseguenza Microsoft intende eliminarle dalla documentazione.
 
-## <a name="runtime"></a>runtime di
+## <a name="runtime"></a>runtime
 
 Ambiente di esecuzione per un programma gestito.
 
-Il sistema operativo è parte dell'ambiente di runtime, ma non del runtime di .NET. Ecco alcuni esempi di runtime .NET:
+Il sistema operativo è parte dell'ambiente di runtime, ma non del runtime .NET. Ecco alcuni esempi di runtime di .NET:
 
 - Common Language Runtime (CLR)
 - Core Common Language Runtime (CoreCLR)
@@ -239,13 +239,13 @@ Nella documentazione di .NET si usa talvolta "runtime" per indicare un'implement
 - "Le librerie da eseguire su più runtime devono avere come destinazione questo framework" (in riferimento a .NET Standard).
 - "I diversi runtime .NET implementano versioni specifiche di .NET Standard. … Ciascuna versione del runtime .NET annuncia la versione .NET Standard più recente supportata...".
 
-Microsoft intende eliminare questa incoerenza. 
+Microsoft intende eliminare questa incoerenza.
 
 ## <a name="stack"></a>stack
 
 Set di tecnologie di programmazione che vengono usate in combinazione per compilare ed eseguire applicazioni.
 
-Il termine "stack .NET" si riferisce a .NET Standard e a tutte le implementazioni di .NET. L'espressione "uno stack .NET" può fare riferimento a una singola implementazione di .NET. 
+Il termine "stack .NET" si riferisce a .NET Standard e a tutte le implementazioni di .NET. L'espressione "uno stack .NET" può fare riferimento a una singola implementazione di .NET.
 
 ## <a name="target-framework"></a>framework di destinazione
 
@@ -257,7 +257,7 @@ Per alcuni framework di destinazione, ad esempio .NET Framework, le API disponib
 
 Vedere [Framework di destinazione](frameworks.md).
 
-## <a name="tfm"></a>Moniker framework di destinazione
+## <a name="tfm"></a>TFM
 
 Moniker framework di destinazione.
 

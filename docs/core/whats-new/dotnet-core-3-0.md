@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 60794c4f8a5f9aeb7a4b3cd58c0c9f00e03fa9e7
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 6e85c2c3e796ae59a13f944bd4913e4b7316c56a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450980"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156569"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novità di .NET Core 3.0
 
@@ -54,12 +54,40 @@ Se si usa Visual Studio, è necessario [Visual Studio 2019](https://visualstudio
 
 ### <a name="default-executables"></a>File eseguibili predefiniti
 
-Per impostazione predefinita .NET Core ora compila [file eseguibili dipendenti dal framework](../deploying/index.md#publish-runtime-dependent). Si tratta di una novità per le applicazioni che usano una versione di .NET Core installata a livello globale. In precedenza solo le [distribuzioni autonome](../deploying/index.md#publish-self-contained) generavano un file eseguibile.
+Per impostazione predefinita, .NET Core Compila ora gli [eseguibili dipendenti dal runtime](../deploying/index.md#publish-runtime-dependent) . Si tratta di una novità per le applicazioni che usano una versione di .NET Core installata a livello globale. In precedenza solo le [distribuzioni autonome](../deploying/index.md#publish-self-contained) generavano un file eseguibile.
 
-Durante `dotnet build` o `dotnet publish`, viene creato un file eseguibile che corrisponde all'ambiente e alla piattaforma dell'SDK usato. Il comportamento di questi file eseguibili è uguale a quello degli altri file eseguibili nativi, ad esempio:
+Durante `dotnet build` o `dotnet publish`, viene creato un file eseguibile (noto come **APPHOST**) che corrisponde all'ambiente e alla piattaforma dell'SDK in uso. Il comportamento di questi file eseguibili è uguale a quello degli altri file eseguibili nativi, ad esempio:
 
 - È possibile fare doppio clic sul file eseguibile.
 - È possibile avviare l'applicazione direttamente da un prompt dei comandi, ad esempio `myapp.exe` in Windows e `./myapp` in Linux e macOS.
+
+### <a name="macos-apphost-and-notarization"></a>appHost e autenticazione macOS
+
+*solo macOS*
+
+A partire dalla .NET Core SDK autenticata 3,0 per macOS, l'impostazione per produrre un file eseguibile predefinito (noto come appHost) è disabilitata per impostazione predefinita. Per altre informazioni, vedere [la pagina relativa all'autenticazione di MacOS Catalina e l'effetto sui download e sui progetti di .NET Core](../install/macos-notarization-issues.md).
+
+Quando è abilitata l'impostazione appHost, .NET Core genera un eseguibile nativo di Mach-O durante la compilazione o la pubblicazione. L'app viene eseguita nel contesto di appHost quando viene eseguita dal codice sorgente con il comando `dotnet run` o avviando direttamente il file eseguibile di Mach-O.
+
+Senza appHost, l'unico modo in cui un utente può avviare un'app [dipendente dal runtime](../deploying/index.md#publish-runtime-dependent) è con il comando `dotnet <filename.dll>`. Quando si pubblica l'app [autonoma](../deploying/index.md#publish-self-contained), viene sempre creato un APPHOST.
+
+È possibile configurare appHost a livello di progetto o impostare il appHost per un comando `dotnet` specifico con il parametro `-p:UseAppHost`:
+
+- File di progetto
+
+  ```xml
+  <PropertyGroup>
+    <UseAppHost>true</UseAppHost>
+  </PropertyGroup>
+  ```
+
+- Parametro della riga di comando
+
+  ```dotnetcli
+  dotnet run -p:UseAppHost=true
+  ```
+
+Per ulteriori informazioni sull'impostazione di `UseAppHost`, vedere [Proprietà MSBuild per Microsoft. NET. SDK](../project-sdk/msbuild-props.md#useapphost).
 
 ### <a name="single-file-executables"></a>File eseguibili singoli
 
@@ -345,7 +373,7 @@ Sono disponibili [immagini Docker per .NET Core in ARM64](https://hub.docker.com
 > [!NOTE]
 > Il supporto **ARM64** per Windows non è ancora disponibile.
 
-## <a name="security"></a>Sicurezza
+## <a name="security"></a>Security
 
 ### <a name="tls-13--openssl-111-on-linux"></a>TLS 1.3 e OpenSSL 1.1.1 in Linux
 
@@ -482,7 +510,7 @@ Per altre informazioni, vedere [.NET Platform Dependent Intrinsics](https://gith
 
 ### <a name="improved-net-core-version-apis"></a>Miglioramento delle API della versione .NET Core
 
-A partire da .NET Core 3.0, le API della versione di .NET Core restituiscono le informazioni previste. Ad esempio,
+A partire da .NET Core 3.0, le API della versione di .NET Core restituiscono le informazioni previste. Ad esempio:
 
 ```csharp
 System.Console.WriteLine($"Environment.Version: {System.Environment.Version}");
@@ -517,7 +545,7 @@ Il nuovo supporto JSON incorporato è ad alte prestazioni e a bassa allocazione 
 * [Come serializzare e deserializzare JSON in .NET](../../standard/serialization/system-text-json-how-to.md).
 * [Come eseguire la migrazione da Newtonsoft. JSON a System. Text. JSON](../../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md)
 
-### <a name="http2-support"></a>Supporto per HTTP/2
+### <a name="http2-support"></a>Supporto HTTP/2
 
 Il tipo <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> supporta il protocollo HTTP/2. Se HTTP/2 è abilitato, la versione del protocollo HTTP viene negoziata tramite TLS/ALPN e HTTP/2 viene usato solo in base alla decisione del server.
 

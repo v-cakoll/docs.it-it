@@ -8,24 +8,24 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 76f4a3ed929e3ac8e3e6cc74158e75af7a6c8cf2
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: a2b9dce3b0ca5e66cfc0fbdbbf8f341abca0b636
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77625947"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239729"
 ---
 # <a name="value-types-c-reference"></a>Tipi di valoreC# (riferimento)
 
 I tipi di *valore* e i [tipi di riferimento](../keywords/reference-types.md) sono le C# due categorie principali di tipi. Una variabile di un tipo di valore contiene un'istanza del tipo. Questo comportamento è diverso da una variabile di un tipo riferimento, che contiene un riferimento a un'istanza del tipo. Per impostazione predefinita, durante l' [assegnazione](../operators/assignment-operator.md), passando un argomento a un metodo e restituendo il risultato di un metodo, vengono copiati i valori delle variabili. Nel caso di variabili di tipo valore, vengono copiate le istanze del tipo corrispondenti. L'esempio seguente illustra questo comportamento:
 
-[!code-csharp[copy of values](~/samples/csharp/language-reference/builtin-types/ValueTypes.cs#ValueTypeCopied)]
+[!code-csharp[copy of values](~/samples/snippets/csharp/language-reference/builtin-types/ValueTypes.cs#ValueTypeCopied)]
 
 Come illustrato nell'esempio precedente, le operazioni su una variabile di tipo valore influiscono solo su tale istanza del tipo di valore, archiviata nella variabile.
 
 Se un tipo di valore contiene un membro dati di un tipo di riferimento, quando viene copiata un'istanza del tipo di valore viene copiato solo il riferimento all'istanza del tipo di riferimento. Sia la copia che l'istanza del tipo di valore originale hanno accesso alla stessa istanza del tipo di riferimento. L'esempio seguente illustra questo comportamento:
 
-[!code-csharp[shallow copy](~/samples/csharp/language-reference/builtin-types/ValueTypes.cs#ShallowCopy)]
+[!code-csharp[shallow copy](~/samples/snippets/csharp/language-reference/builtin-types/ValueTypes.cs#ShallowCopy)]
 
 > [!NOTE]
 > Per rendere il codice meno soggetto a errori e più affidabile, definire e utilizzare tipi di valore non modificabili. Questo articolo usa tipi di valore modificabili solo a scopo dimostrativo.

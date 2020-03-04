@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 450e350b-6a68-4634-a2a5-33f4dc33baf0
-ms.openlocfilehash: 2ca5f27bdea75f6c6ce8f954f553b6a58a1a9204
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 642a7e5321d0150865f74a66a811914bc9f5d21d
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124254"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160027"
 ---
 # <a name="mapping-the-object-hierarchy-to-xml-data"></a>Mapping della gerarchia di oggetti in dati XML
 Quando un documento XML è in memoria, la rappresentazione concettuale è un albero. Nella programmazione, è possibile accedere ai nodi dell'albero mediante una gerarchia di oggetti. Nell'esempio seguente viene illustrato come il contenuto XML viene convertito in nodi.  
@@ -68,8 +68,8 @@ Public Class Sample
         Dim reader As XmlTextReader = Nothing  
   
         Try  
-            ' Load the reader with the data file and   
-            'ignore all white space nodes.   
+            ' Load the reader with the data file and
+            'ignore all white space nodes.
             reader = New XmlTextReader(filename)  
             reader.WhitespaceHandling = WhitespaceHandling.None  
   
@@ -122,7 +122,7 @@ public class Sample
   
         try  
         {  
-            // Load the reader with the data file and ignore   
+            // Load the reader with the data file and ignore
             // all white space nodes.  
             reader = new XmlTextReader(filename);  
             reader.WhitespaceHandling = WhitespaceHandling.None;  

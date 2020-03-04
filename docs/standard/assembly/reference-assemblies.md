@@ -4,12 +4,12 @@ description: Informazioni sugli assembly di riferimento, un tipo speciale di ass
 author: MSDN-WhiteKnight
 ms.date: 09/12/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 7d2cc01861e8a3fdc260a2990ca0652878c386b0
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 3b85e51a015cca1e53ee2503c7bfa58c504fc718
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089275"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156465"
 ---
 # <a name="reference-assemblies"></a>Assembly di riferimento
 
@@ -27,7 +27,7 @@ Per usare determinate API dal progetto, è necessario aggiungere riferimenti ai 
 
 Gli assembly di riferimento per le librerie di .NET Framework vengono distribuiti con i targeting pack. È possibile ottenerli scaricando un programma di installazione autonomo o selezionando un componente nel programma di installazione di Visual Studio. Per ulteriori informazioni, vedere [Install the .NET Framework for Developers](../../framework/install/guide-for-developers.md). Per .NET Core e .NET Standard, gli assembly di riferimento vengono scaricati automaticamente in base alle necessità (tramite NuGet) e a cui si fa riferimento. Per .NET Core 3,0 e versioni successive, gli assembly di riferimento per il Framework di base sono inclusi nel pacchetto [Microsoft. NETCore. app. Ref](https://www.nuget.org/packages/Microsoft.NETCore.App.Ref) (il pacchetto [Microsoft. NETCore. app](https://www.nuget.org/packages/Microsoft.NETCore.App) viene usato in alternativa per le versioni precedenti a 3,0). Per altre informazioni, vedere [pacchetti, metapacchetti e Framework](../../core/packages.md) nella Guida di .NET Core.
 
-Quando si aggiungono riferimenti a assembly .NET Framework in Visual Studio usando la finestra di dialogo **Aggiungi riferimento** , si seleziona un assembly dall'elenco e Visual Studio rileva automaticamente gli assembly di riferimento che corrispondono alla versione del Framework di destinazione selezionato nel progetto. Lo stesso vale per l'aggiunta di riferimenti direttamente al progetto MSBuild utilizzando l'elemento di progetto di [riferimento](/visualstudio/msbuild/common-msbuild-project-items#reference) : è sufficiente specificare il nome dell'assembly, non il percorso completo del file. Quando si aggiungono riferimenti a questi assembly nella riga di comando usando l'opzione del compilatore `-reference`[( C# in](../../csharp/language-reference/compiler-options/reference-compiler-option.md) e in [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md)) o usando il metodo <xref:Microsoft.CodeAnalysis.Compilation.AddReferences%2A?displayProperty=nameWithType> nell'API Roslyn, è necessario specificare manualmente i file di assembly di riferimento per la versione corretta della piattaforma di destinazione. .NET Framework file di assembly di riferimento si trovano negli *assembly di riferimento% ProgramFiles (x86)%\\\\Microsoft\\Framework\\. Directory NETFramework* . Per .NET Core, è possibile forzare l'operazione di pubblicazione per copiare gli assembly di riferimento per la piattaforma di destinazione nella sottodirectory *Publish/refs* della directory di output impostando la proprietà `PreserveCompilationContext` project su `true`. Quindi, è possibile passare questi file di assembly di riferimento al compilatore. L'uso di `DependencyContext` dal pacchetto [Microsoft. Extensions. DependencyModel](https://www.nuget.org/packages/Microsoft.Extensions.DependencyModel/) può aiutare a individuare i percorsi.
+Quando si aggiungono riferimenti a assembly .NET Framework in Visual Studio usando la finestra di dialogo **Aggiungi riferimento** , si seleziona un assembly dall'elenco e Visual Studio rileva automaticamente gli assembly di riferimento che corrispondono alla versione del Framework di destinazione selezionata nel progetto. Lo stesso vale per l'aggiunta di riferimenti direttamente al progetto MSBuild utilizzando l'elemento di progetto di [riferimento](/visualstudio/msbuild/common-msbuild-project-items#reference) : è sufficiente specificare il nome dell'assembly, non il percorso completo del file. Quando si aggiungono riferimenti a questi assembly nella riga di comando usando l'opzione del compilatore `-reference`[( C# in](../../csharp/language-reference/compiler-options/reference-compiler-option.md) e in [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md)) o usando il metodo <xref:Microsoft.CodeAnalysis.Compilation.AddReferences%2A?displayProperty=nameWithType> nell'API Roslyn, è necessario specificare manualmente i file di assembly di riferimento per la versione corretta della piattaforma di destinazione. .NET Framework file di assembly di riferimento si trovano negli *assembly di riferimento% ProgramFiles (x86)%\\\\Microsoft\\Framework\\. Directory NETFramework* . Per .NET Core, è possibile forzare l'operazione di pubblicazione per copiare gli assembly di riferimento per la piattaforma di destinazione nella sottodirectory *Publish/refs* della directory di output impostando la proprietà `PreserveCompilationContext` project su `true`. Quindi, è possibile passare questi file di assembly di riferimento al compilatore. L'uso di `DependencyContext` dal pacchetto [Microsoft. Extensions. DependencyModel](https://www.nuget.org/packages/Microsoft.Extensions.DependencyModel/) può aiutare a individuare i percorsi.
 
 Poiché non contengono alcuna implementazione, non è possibile caricare gli assembly di riferimento per l'esecuzione. il tentativo di eseguire questa operazione comporta un <xref:System.BadImageFormatException?displayProperty=nameWithType>. Tuttavia, possono comunque essere caricati nel contesto di sola reflection (usando il metodo <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType>), se è necessario esaminarne il contenuto.
 
@@ -39,11 +39,11 @@ Gli IDE e gli strumenti di compilazione possono inoltre sfruttare gli assembly d
 
 È possibile generare gli assembly di riferimento:
 
-- In un progetto MSBuild, usando la [proprietà `ProduceReferenceAssembly` Project](/visualstudio/msbuild/common-msbuild-project-properties).
+- In un progetto MSBuild, usando la [proprietà`ProduceReferenceAssembly` Project](/visualstudio/msbuild/common-msbuild-project-properties).
 - Quando si compila il programma dalla riga di comando, da specifica[C#](../../csharp/language-reference/compiler-options/refonly-compiler-option.md) `-refonly` ( / [Visual Basic](../../visual-basic/reference/command-line-compiler/refonly-compiler-option.md) ) o[C#](../../csharp/language-reference/compiler-options/refout-compiler-option.md) `-refout` opzioni del compilatore ( / [Visual Basic](../../visual-basic/reference/command-line-compiler/refout-compiler-option.md)).
 - Quando si usa l'API Roslyn, impostando <xref:Microsoft.CodeAnalysis.Emit.EmitOptions.EmitMetadataOnly?displayProperty=nameWithType> su `true` e <xref:Microsoft.CodeAnalysis.Emit.EmitOptions.IncludePrivateMembers?displayProperty=nameWithType> su `false` in un oggetto passato al metodo <xref:Microsoft.CodeAnalysis.Compilation.Emit%2A?displayProperty=nameWithType>.
 
-Se si desidera distribuire gli assembly di riferimento con i pacchetti NuGet, è necessario includerli nella sottodirectory *ref \\* nella directory del pacchetto anziché nella sottodirectory *lib \\* utilizzata per gli assembly di implementazione.
+Se si desidera distribuire gli assembly di riferimento con i pacchetti NuGet, è necessario includerli nella sottodirectory *ref\\* nella directory del pacchetto anziché nella sottodirectory *lib\\* utilizzata per gli assembly di implementazione.
 
 ## <a name="reference-assemblies-structure"></a>Struttura degli assembly di riferimento
 

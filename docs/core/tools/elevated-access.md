@@ -3,16 +3,16 @@ title: Accesso con privilegi elevati per comandi dotnet
 description: Informazioni sulle procedure consigliate per comandi dotnet che richiedono l'accesso con privilegi elevati.
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: fe33cbe966d175f71ba350737b283c1e83f64fa6
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 4aff9badfa8ad9b83adc4496d4ebd6df29252e36
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543430"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156764"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>Accesso con privilegi elevati per comandi dotnet
 
-Le procedure consigliate per lo sviluppo di software supportano gli sviluppatori nella scrittura di software con una richiesta minima di privilegi. Per alcuni software, ad esempio gli strumenti di monitoraggio delle prestazioni, è però necessaria un'autorizzazione di amministratore a causa delle regole del sistema operativo. Questo documento descrive gli scenari supportati per la scrittura di questo tipo di software usando .NET Core. 
+Le procedure consigliate per lo sviluppo di software supportano gli sviluppatori nella scrittura di software con una richiesta minima di privilegi. Per alcuni software, ad esempio gli strumenti di monitoraggio delle prestazioni, è però necessaria un'autorizzazione di amministratore a causa delle regole del sistema operativo. Questo documento descrive gli scenari supportati per la scrittura di questo tipo di software usando .NET Core.
 
 I comandi seguenti possono essere eseguiti con privilegi elevati:
 
@@ -35,8 +35,8 @@ Le istruzioni seguenti illustrano il modo consigliato per installare, eseguire e
 
 Se la cartella `%ProgramFiles%\dotnet-tools` è già esistente, eseguire le operazioni seguenti per verificare se il gruppo "Utenti" dispone dell'autorizzazione per scrivere o modificare tale directory:
 
-- Fare clic con il pulsante destro del mouse sulla cartella `%ProgramFiles%\dotnet-tools` e selezionare **Proprietà**. Verrà visualizzata la finestra di dialogo **Proprietà comuni**. 
-- Selezionare la scheda **sicurezza** . In utenti e **gruppi**controllare se il gruppo "utenti" dispone dell'autorizzazione per scrivere o modificare la directory. 
+- Fare clic con il pulsante destro del mouse sulla cartella `%ProgramFiles%\dotnet-tools` e selezionare **Proprietà**. Verrà visualizzata la finestra di dialogo **Proprietà comuni**.
+- Selezionare la scheda **sicurezza** . In utenti e **gruppi**controllare se il gruppo "utenti" dispone dell'autorizzazione per scrivere o modificare la directory.
 - Se il gruppo "Utenti" è autorizzato alla scrittura o alla modifica della directory, usare un nome di directory diverso quando si installano gli strumenti anziché usare *dotnet-tools*.
 
 Per installare gli strumenti, eseguire il comando seguente al prompt con privilegi elevati. Verrà creata la cartella *dotnet-tools* durante l'installazione.
@@ -97,7 +97,7 @@ Durante lo sviluppo potrebbe essere necessario l'accesso con privilegi elevati p
    dotnet build
    sudo ./bin/Debug/netcoreapp3.0/APPLICATIONNAME
    ```
-    
+
 - Uso del comando [dotnet run](dotnet-run.md) con il flag `—no-build` per evitare di generare nuovi file binari:
 
    ```dotnetcli

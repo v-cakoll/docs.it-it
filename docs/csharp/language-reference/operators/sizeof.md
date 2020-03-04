@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: 8e4518718d0975f8b4a65870f15d8c52d692c2f5
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 711005479eea2757b4ef18f6710a4453bfca02f9
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77625735"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78238833"
 ---
 # <a name="sizeof-operator-c-reference"></a>Operatore sizeof (Riferimenti per C#)
 
@@ -40,7 +40,7 @@ Non è inoltre necessario usare un contesto unsafe quando l'operando dell'operat
 
 Nell'esempio seguente viene illustrato l'uso dell'operatore `sizeof`:
 
-[!code-csharp[sizeof examples](~/samples/csharp/language-reference/operators/SizeOfOperator.cs)]
+[!code-csharp[sizeof examples](~/samples/snippets/csharp/language-reference/operators/SizeOfOperator.cs)]
 
 L'operatore `sizeof` restituisce un numero di byte che verrebbero allocati dal Common Language Runtime in managed memory. Per i tipi [struct](../builtin-types/struct.md) questo valore include l'eventuale riempimento, come illustrato nell'esempio precedente. Il risultato dell'operatore `sizeof` può essere diverso da quello del metodo <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType>, che restituisce le dimensioni di un tipo nella memoria *non gestita*.
 

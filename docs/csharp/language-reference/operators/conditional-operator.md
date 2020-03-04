@@ -9,12 +9,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 60156585dd21d5d2f9c9f3916452bb8574ddd4e4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 6e8fde8c210b2c33cc514167be7face657cbb618
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712728"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239379"
 ---
 # <a name="-operator-c-reference"></a>Operatore ?: (Riferimenti per C#)
 
@@ -51,7 +51,7 @@ a ? b : (c ? d : e)
 
 L'esempio seguente illustra l'uso dell'operatore condizionale:
 
-[!code-csharp-interactive[non ref conditional](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#ConditionalValue)]
+[!code-csharp-interactive[non ref conditional](~/samples/snippets/csharp/language-reference/operators/ConditionalOperator.cs#ConditionalValue)]
 
 ## <a name="conditional-ref-expression"></a>Espressione condizionale ref
 
@@ -69,13 +69,13 @@ Nel caso dell'espressione condizionale ref, il tipo di `consequent` e `alternati
 
 L'esempio seguente illustra l'uso dell'espressione condizionale ref:
 
-[!code-csharp-interactive[conditional ref](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#ConditionalRef)]
+[!code-csharp-interactive[conditional ref](~/samples/snippets/csharp/language-reference/operators/ConditionalOperator.cs#ConditionalRef)]
 
 ## <a name="conditional-operator-and-an-ifelse-statement"></a>Operatore condizionale e istruzione `if..else`
 
 L'uso dell'operatore condizionale anziché di un'istruzione [if-else](../keywords/if-else.md) potrebbe produrre codice più conciso nei casi in cui è necessario calcolare un valore in modo condizionale. L'esempio seguente illustra due modi di classificare un intero come negativo o non negativo:
 
-[!code-csharp[conditional and if-else](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#CompareWithIf)]
+[!code-csharp[conditional and if-else](~/samples/snippets/csharp/language-reference/operators/ConditionalOperator.cs#CompareWithIf)]
 
 ## <a name="operator-overloadability"></a>Overload degli operatori
 

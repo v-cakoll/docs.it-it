@@ -5,12 +5,12 @@ helpviewer_keywords:
 - false operator [C#]
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: 498f8698401e91845b14ee1dbcda84ba7166bd14
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9924009ef4f0f8c512ea9b3da2b0dedeaa97bb9d
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712598"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239027"
 ---
 # <a name="true-and-false-operators-c-reference"></a>Operatori true e false (Riferimenti per C#)
 
@@ -19,7 +19,7 @@ L'operatore `true` restituisce il valore [bool](../builtin-types/bool.md) `true`
 > [!TIP]
 > Usare il tipo di `bool?`, se è necessario supportare la logica a tre valori, ad esempio quando si lavora con database che supportano un tipo booleano a tre valori. In C# sono disponibili gli operatori `&` e `|` che supportano la logica a tre valori con gli operandi `bool?`. Per altre informazioni, vedere la sezione [Operatori logici booleani nullable](boolean-logical-operators.md#nullable-boolean-logical-operators) dell'articolo [Operatori logici booleani](boolean-logical-operators.md).
 
-## <a name="boolean-expressions"></a>espressioni booleane
+## <a name="boolean-expressions"></a>Espressioni booleane
 
 Un tipo con l'operatore `true` definito può essere il tipo di un risultato di un'espressione condizionale di controllo nelle istruzioni [if](../keywords/if-else.md), [do](../keywords/do.md), [while](../keywords/while.md) e [for](../keywords/for.md) e nell'[operatore condizionale `?:`](conditional-operator.md). Per altre informazioni, vedere la sezione [Espressioni booleane](~/_csharplang/spec/expressions.md#boolean-expressions) della [specifica del linguaggio C#](~/_csharplang/spec/introduction.md).
 
@@ -31,7 +31,7 @@ Se un tipo con gli operatori definito `true` e `false` [Overload](operator-overl
 
 L'esempio seguente presenta il tipo che definisce entrambi gli operatori `true` e `false`. Il tipo, inoltre, consente di eseguire l'overload dell'operatore AND logico `&` in modo che anche l'operatore `&&` possa essere valutato per gli operandi di quel tipo.
 
-[!code-csharp[true and false operators example](~/samples/csharp/language-reference/operators/TrueFalseOperators.cs)]
+[!code-csharp[true and false operators example](~/samples/snippets/csharp/language-reference/operators/TrueFalseOperators.cs)]
 
 Si noti il comportamento che causa il corto circuito dell'operatore `&&`. Quando il metodo `GetFuelLaunchStatus` restituisce `LaunchStatus.Red`, l'operando di destra dell'operatore `&&` non viene valutato. Il motivo è che `LaunchStatus.Red` è indubbiamente false. Pertanto il risultato dell'operatore AND logico non dipende dal valore dell'operando di destra. L'output dell'esempio è il seguente:
 

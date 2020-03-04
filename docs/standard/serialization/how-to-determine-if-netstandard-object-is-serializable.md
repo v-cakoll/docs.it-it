@@ -8,16 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - serializing objects
 - objects, serializing steps
-ms.openlocfilehash: 87bf863b158fe3b2c03c7a6d23462bc2aabf9966
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4037dee36aeb619eb2757016904fd877158e57cf
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73106624"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159897"
 ---
 # <a name="how-to-determine-if-a-net-standard-object-is-serializable"></a>Come determinare se un oggetto .NET Standard è serializzabile
 
-Il .NET Standard è una specifica che definisce i tipi e i membri che devono essere presenti in implementazioni .NET specifiche conformi a tale versione dello standard. Tuttavia, il .NET Standard non definisce se un tipo è serializzabile. I tipi definiti nella libreria .NET Standard non sono contrassegnati con l'attributo <xref:System.SerializableAttribute>. Al contrario, le implementazioni di .NET specifiche, ad esempio .NET Framework e .NET Core, sono gratuite per determinare se un determinato tipo è serializzabile. 
+Il .NET Standard è una specifica che definisce i tipi e i membri che devono essere presenti in implementazioni .NET specifiche conformi a tale versione dello standard. Tuttavia, il .NET Standard non definisce se un tipo è serializzabile. I tipi definiti nella libreria .NET Standard non sono contrassegnati con l'attributo <xref:System.SerializableAttribute>. Al contrario, le implementazioni di .NET specifiche, ad esempio .NET Framework e .NET Core, sono gratuite per determinare se un determinato tipo è serializzabile.
 
 Se è stata sviluppata una libreria destinata al .NET Standard, la libreria può essere utilizzata da qualsiasi implementazione di .NET che supporti l'.NET Standard. Ciò significa che non è possibile sapere in anticipo se un determinato tipo è serializzabile; è possibile determinare solo se è serializzabile in fase di esecuzione.
 

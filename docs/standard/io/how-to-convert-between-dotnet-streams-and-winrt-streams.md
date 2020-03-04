@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
-ms.openlocfilehash: 3b44b981a65dee5d216f882198a74b5fb61adfad
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7413c3fae7d7189ec8dca43b0c77f6b56158f416
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708042"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159468"
 ---
 # <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>Procedura: eseguire la conversione tra flussi .NET Framework e Windows Runtime (solo Windows)
 
@@ -28,7 +28,7 @@ Per convertire un flusso di Windows Runtime in un flusso di .NET Framework, usar
   
 - <xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead%2A?displayProperty=nameWithType> converte un flusso di input di Windows Runtime in un flusso gestito di .NET per app UWP.
 
-Windows Runtime offre tipi di flusso che supportano solo la lettura, solo la scrittura oppure la lettura e la scrittura. Queste funzionalità vengono mantenute quando si converte un flusso di Windows Runtime in un flusso di .NET Framework. Inoltre, se un flusso di Windows Runtime viene convertito in un flusso di .NET Framework e viceversa, si ottiene l'istanza originale di Windows Runtime. 
+Windows Runtime offre tipi di flusso che supportano solo la lettura, solo la scrittura oppure la lettura e la scrittura. Queste funzionalità vengono mantenute quando si converte un flusso di Windows Runtime in un flusso di .NET Framework. Inoltre, se un flusso di Windows Runtime viene convertito in un flusso di .NET Framework e viceversa, si ottiene l'istanza originale di Windows Runtime.
 
 È consigliabile usare il metodo di conversione corrispondente alle funzionalità del flusso di Windows Runtime da convertire. Tuttavia, dato che <xref:Windows.Storage.Streams.IRandomAccessStream> è leggibile e modificabile (implementa sia <xref:Windows.Storage.Streams.IOutputStream> che <xref:Windows.Storage.Streams.IInputStream>) i metodi di conversione mantengono le funzionalità del flusso originale. Ad esempio, se si usa <xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead%2A?displayProperty=nameWithType> per convertire <xref:Windows.Storage.Streams.IRandomAccessStream>, il flusso convertito di .NET Framework non viene limitato alla sola lettura, ma è accessibile anche in scrittura.
 

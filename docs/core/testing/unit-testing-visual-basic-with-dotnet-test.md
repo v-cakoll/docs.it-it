@@ -4,12 +4,12 @@ description: Informazioni sui concetti relativi agli unit test in .NET Core tram
 author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
-ms.openlocfilehash: c587aaa5c4c50ec66ac6cd8cd7aefd7b0ca1a80c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9a99d9031711a3e958132416d0235df76f4a9092
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715413"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240948"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-xunit"></a>Testing unità di librerie .NET Core di Visual Basic usando il test dotnet e xUnit
 
@@ -87,7 +87,7 @@ Il layout della cartella finale è il seguente:
         PrimeServiceTests.vbproj
 ```
 
-Eseguire [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj`](../tools/dotnet-sln.md) nella directory *unit-testing-vb-using-dotnet-test*. 
+Eseguire [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj`](../tools/dotnet-sln.md) nella directory *unit-testing-vb-using-dotnet-test*.
 
 ## <a name="creating-the-first-test"></a>Creazione del primo test
 
@@ -124,7 +124,7 @@ Public Function IsPrime(candidate As Integer) As Boolean
 End Function
 ```
 
-Eseguire di nuovo `dotnet test` nella directory *unit-testing-vb-using-dotnet-test*. Il comando `dotnet test` esegue prima una compilazione del progetto `PrimeService` e quindi del progetto `PrimeService.Tests`. Dopo la compilazione di entrambi i progetti, verrà eseguito il test singolo, che viene superato.
+Eseguire di nuovo *nella directory*unit-testing-vb-using-dotnet-test`dotnet test`. Il comando `dotnet test` esegue prima una compilazione del progetto `PrimeService` e quindi del progetto `PrimeService.Tests`. Dopo la compilazione di entrambi i progetti, verrà eseguito il test singolo, Procede.
 
 ## <a name="adding-more-features"></a>Aggiunta di altre funzionalità
 
@@ -132,7 +132,7 @@ Ora che il test è stato superato, è necessario scriverne altri. Esistono alcun
 
 Anziché creare nuovi test, applicare questi due attributi per creare una singola teoria. La teoria è un metodo che verifica vari valori minori di due, ovvero il numero primo più piccolo:
 
-[!code-vb[Sample_TestCode](../../../samples/core/getting-started/unit-testing-vb-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.vb?name=Sample_TestCode)]
+[!code-vb[Sample_TestCode](../../../samples/snippets/core/testing/unit-testing-vb-dotnet-test/vb/PrimeService.Tests/PrimeService_IsPrimeShould.vb?name=Sample_TestCode)]
 
 Eseguire `dotnet test`. Due test hanno esito negativo. Per assicurare che tutti i test vengano superati, modificare la clausola `if` all'inizio del metodo:
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-ms.openlocfilehash: 953d8d3055dff48cd943b748771f20803a4d6573
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1055b10d0e3e971a6b0963c1ed950fef903ac5bd
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120898"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239950"
 ---
 # <a name="globalization"></a>Globalizzazione
 
@@ -66,7 +66,7 @@ Quando possibile, si raccomanda di gestire le stringhe come unità intere, anzic
 > [!TIP]
 > È possibile usare la classe <xref:System.Globalization.StringInfo> per gestire gli elementi di testo anziché i singoli caratteri in una stringa.
 
-Nelle ricerche e nei confronti di stringhe, un errore comune consiste nel gestire la stringa come una raccolta di caratteri, ognuno dei quali è rappresentato da un oggetto <xref:System.Char>. Infatti, un singolo carattere può essere costituito da uno, due o più oggetti <xref:System.Char>. Caratteri di questo tipo vengono trovati più frequentemente nelle stringhe delle impostazioni cultura i cui alfabeti sono costituiti da caratteri esterni all'intervallo di caratteri latini di base Unicode (da U+0021 a U+007E). Nell'esempio seguente si tenta di trovare l'indice del carattere LETTERA LATINA A MAIUSCOLA CON accento GRAVE (U+00C0) in una stringa. Tuttavia, questo carattere può essere rappresentato in due modi diversi: come singola unità di codice (U+00C0) o come carattere composito (due unità di codice: U+0021 e U+007E). In questo caso, il carattere è rappresentato nell'istanza della stringa da due oggetti <xref:System.Char>, U+0021 e U+007E. Il codice di esempio chiama gli overload <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> e <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> per trovare la posizione del carattere incluso nell'istanza della stringa, ma questi restituiscono risultati diversi. La prima chiamata al metodo dispone di un argomento <xref:System.Char>; esegue un confronto ordinale e pertanto non può trovare una corrispondenza. La seconda chiamata dispone di un argomento <xref:System.String>; esegue un confronto dipendente dalle impostazioni cultura e pertanto trova una corrispondenza.
+Nelle ricerche e nei confronti di stringhe, un errore comune consiste nel gestire la stringa come una raccolta di caratteri, ognuno dei quali è rappresentato da un oggetto <xref:System.Char>. Infatti, un singolo carattere può essere costituito da uno, due o più oggetti <xref:System.Char>. Caratteri di questo tipo vengono trovati più frequentemente nelle stringhe delle impostazioni cultura i cui alfabeti sono costituiti da caratteri esterni all'intervallo di caratteri latini di base Unicode (da U+0021 a U+007E). Nell'esempio seguente si tenta di trovare l'indice del carattere LETTERA LATINA A MAIUSCOLA CON accento GRAVE (U+00C0) in una stringa. Tuttavia, questo carattere può essere rappresentato in due modi diversi: come singola unità di codice (U + 00C0) o come carattere composito (due unità di codice: U + 0041 e U + 0300). In questo caso, il carattere è rappresentato nell'istanza della stringa da due oggetti <xref:System.Char>, U + 0041 e U + 0300. Il codice di esempio chiama gli overload <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> e <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> per trovare la posizione del carattere incluso nell'istanza della stringa, ma questi restituiscono risultati diversi. La prima chiamata al metodo dispone di un argomento <xref:System.Char>; esegue un confronto ordinale e pertanto non può trovare una corrispondenza. La seconda chiamata dispone di un argomento <xref:System.String>; esegue un confronto dipendente dalle impostazioni cultura e pertanto trova una corrispondenza.
 
 [!code-csharp[Conceptual.Globalization#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/search1.cs#18)]
 [!code-vb[Conceptual.Globalization#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/search1.vb#18)]
@@ -108,8 +108,8 @@ Il confronto di stringhe dipendenti dalle impostazioni cultura viene definito da
 |----------------------------|----------------------|---------------------|
 |.NET Framework 2.0|Tutti i sistemi operativi|Unicode 4.1|
 |.NET Framework 3.0|Tutti i sistemi operativi|Unicode 4.1|
-|.NET Framework 3.5|Tutti i sistemi operativi|Unicode 4.1|
-|.NET Framework 4|Tutti i sistemi operativi|Unicode 5.0|
+|.NET Framework 3.5|Tutti i sistemi operativi|Unicode 4.1|
+|.NET Framework 4|Tutti i sistemi operativi|Unicode 5.0|
 |.NET Framework 4.5 e versioni successive in Windows 7|Unicode 5.0|
 |.NET Framework 4.5 e versioni successive in Windows 8 e sistemi operativi successivi|Unicode 6.3.0|
 |.NET Core (tutte le versioni)|Dipende dalla versione dello standard Unicode supportato dal sistema operativo sottostante.|

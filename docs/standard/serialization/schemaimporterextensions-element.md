@@ -6,14 +6,14 @@ helpviewer_keywords:
 - schemaImporterExtensions element
 - <schemaImporterExtensions> element
 ms.assetid: 465ef2a0-f909-4ac1-9a56-0ead5c849698
-ms.openlocfilehash: 43f8439708c73e8e5241a923360caf549bf09d8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ed80ac370e34d6b62bb2b601cb7bd978228a302
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017963"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159819"
 ---
-# <a name="schemaimporterextensions-element"></a>\<schemaImporterExtensions > elemento
+# <a name="schemaimporterextensions-element"></a>\<elemento > schemaImporterExtensions
 Contiene tipi utilizzati da <xref:System.Xml.Serialization.XmlSchemaImporter> per l'esecuzione del mapping dei tipi XSD ai tipi .NET Framework. Per altre informazioni sui file di configurazione, vedere [Schema dei file di configurazione](../../../docs/framework/configure-apps/file-schema/index.md).  
   
 ## <a name="syntax"></a>Sintassi  
@@ -28,7 +28,7 @@ Contiene tipi utilizzati da <xref:System.Xml.Serialization.XmlSchemaImporter> pe
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<aggiungere > (elemento) per \<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)|Aggiunge tipi usati da <xref:System.Xml.Serialization.XmlSchemaImporter> per creare i mapping.|  
+|[\<aggiungere > elemento per \<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)|Aggiunge tipi usati da <xref:System.Xml.Serialization.XmlSchemaImporter> per creare i mapping.|  
   
 ## <a name="parent-elements"></a>Elementi padre  
   
@@ -42,9 +42,9 @@ Contiene tipi utilizzati da <xref:System.Xml.Serialization.XmlSchemaImporter> pe
 ```xml  
 <system.xml.serialization>  
     <schemaImporterExtensions>  
-        <add name = "MobileCapabilities" type =   
-        "System.Web.Mobile.MobileCapabilities,   
-        System.Web.Mobile, Version - 2.0.0.0, Culture = neutral,   
+        <add name = "MobileCapabilities" type =
+        "System.Web.Mobile.MobileCapabilities,
+        System.Web.Mobile, Version - 2.0.0.0, Culture = neutral,
         PublicKeyToken = b03f5f6f11d40a3a" />  
     </schemaImporterExtensions>  
 </system.xml.serialization>  
@@ -56,5 +56,5 @@ Contiene tipi utilizzati da <xref:System.Xml.Serialization.XmlSchemaImporter> pe
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
 - [Schema dei file di configurazione](../../../docs/framework/configure-apps/file-schema/index.md)
 - [Elemento \<dateTimeSerialization>](../../../docs/standard/serialization/datetimeserialization-element.md)
-- [\<aggiungere > (elemento) per \<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
+- [\<aggiungere > elemento per \<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
 - [Elemento \<system.xml.serialization>](../../../docs/standard/serialization/system-xml-serialization-element.md)

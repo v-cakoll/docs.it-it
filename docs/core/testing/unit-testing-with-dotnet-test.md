@@ -4,12 +4,12 @@ description: Informazioni sui concetti relativi agli unit test in C# e .NET Core
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 226db54047747fbd065c64f5e4812094921c7f62
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c9e3d63a2cf4f560591459833340b729ffec1b95
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714242"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240896"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>Testing unità di C# in .NET Core usando il test dotnet e xUnit
 
@@ -175,7 +175,7 @@ public bool IsPrime(int candidate)
 }
 ```
 
-Eseguire `dotnet test`. Il test ha esito positivo.
+Eseguire `dotnet test`. Il test viene superato.
 
 ### <a name="add-more-tests"></a>Aggiungi altri test
 
@@ -207,7 +207,7 @@ public void IsPrime_InputIs1_ReturnFalse()
 
 con il codice seguente:
 
-[!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
+[!code-csharp[Sample_TestCode](../../../samples/snippets/core/testing/unit-testing-using-dotnet-test/csharp/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
 Nel codice precedente `[Theory]` e `[InlineData]` abilitano il testing di diversi valori minori di due. Due è il numero primo più piccolo.
 

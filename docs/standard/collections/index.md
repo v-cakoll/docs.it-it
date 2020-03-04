@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - collections [.NET Framework]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-ms.openlocfilehash: 9b868bd5ed77788cd9b44c11623ae38eba58153c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3ca340e19d7340d7bea133fa62c6d8bbc3c0512a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711363"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160391"
 ---
 # <a name="collections-and-data-structures"></a>Raccolte e strutture di dati
 Dati simili possono spesso essere gestiti in modo più efficiente quando memorizzati e modificati come una raccolta. È possibile usare la classe <xref:System.Array?displayProperty=nameWithType> o le classi negli spazi dei nomi <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent> e System.Collections.Immutable per aggiungere, rimuovere e modificare singoli elementi o un intervallo di elementi nella raccolta.  
@@ -24,7 +24,7 @@ Dati simili possono spesso essere gestiti in modo più efficiente quando memoriz
   
  A partire da .NET Framework 4 le raccolte nello spazio dei nomi <xref:System.Collections.Concurrent> forniscono operazioni thread-safe efficienti per accedere agli elementi della raccolta da più thread. Le classi di raccolte non modificabili dello spazio dei nomi System.Collections.Immutable ([Pacchetto NuGet](https://www.nuget.org/packages/System.Collections.Immutable)) sono intrinsecamente thread-safe, perché le operazioni vengono eseguite su una copia della raccolta originale, che non può essere modificata.  
 
-<a name="BKMK_Commoncollectionfeatures"></a>   
+<a name="BKMK_Commoncollectionfeatures"></a>
 ## <a name="common-collection-features"></a>Funzionalità comuni delle raccolte  
  Tutte le raccolte forniscono metodi per l'aggiunta, la rimozione o la ricerca di elementi nella raccolta. In aggiunta, tutte le raccolte che implementano direttamente o indirettamente l'interfaccia <xref:System.Collections.ICollection> o l'interfaccia <xref:System.Collections.Generic.ICollection%601> condividono le funzionalità seguenti:  
   
@@ -54,10 +54,10 @@ Dati simili possono spesso essere gestiti in modo più efficiente quando memoriz
   
      I tipi di raccolta non generica nello spazio dei nomi <xref:System.Collections> forniscono una determinata thread safety con la sincronizzazione, in genere esposte attraverso i membri <xref:System.Collections.ICollection.SyncRoot%2A> e <xref:System.Collections.ICollection.IsSynchronized%2A>. Queste raccolte non sono thread-safe per impostazione predefinita. Se si richiede un accesso multithreading scalabile ed efficiente a una raccolta, usare una delle classi nello spazio dei nomi <xref:System.Collections.Concurrent> o considerare l'uso di una raccolta non modificabile. Per altre informazioni, vedere [Raccolte thread-safe](../../../docs/standard/collections/thread-safe/index.md).  
   
-<a name="BKMK_Choosingacollection"></a>   
+<a name="BKMK_Choosingacollection"></a>
 ## <a name="choosing-a-collection"></a>Scelta di una raccolta  
  In generale, è necessario usare raccolte generiche. Nella tabella seguente vengono descritti alcuni scenari comuni di raccolta e le classi di raccolta che è possibile usare per gli scenari. Se si ha già familiarità con le raccolte generiche, questa tabella consente di scegliere la raccolta generica più adatta alla propria attività.  
- 
+
 |Si desidera...|Opzioni di raccolta generica|Opzioni di raccolta non generica|Opzioni di raccolta thread-safe o non modificabile|  
 |-|-|-|-|  
 |Archiviare gli elementi come coppie chiave/valore per la ricerca rapida dalla chiave|<xref:System.Collections.Generic.Dictionary%602>|<xref:System.Collections.Hashtable><br /><br /> (Una raccolta di coppie chiave/valore che sono organizzate in base al codice hash della chiave).|<xref:System.Collections.Concurrent.ConcurrentDictionary%602><br /><br /> <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableDictionary%602>|  
@@ -69,13 +69,13 @@ Dati simili possono spesso essere gestiti in modo più efficiente quando memoriz
 |Una raccolta ordinata|<xref:System.Collections.Generic.SortedList%602>|<xref:System.Collections.SortedList>|<xref:System.Collections.Immutable.ImmutableSortedDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableSortedSet%601>|  
 |Un set di funzioni matematiche|<xref:System.Collections.Generic.HashSet%601><br /><br /> <xref:System.Collections.Generic.SortedSet%601>|Nessuna raccomandazione|<xref:System.Collections.Immutable.ImmutableHashSet%601><br /><br /> <xref:System.Collections.Immutable.ImmutableSortedSet%601>|  
   
-<a name="BKMK_RelatedTopics"></a>   
+<a name="BKMK_RelatedTopics"></a>
 ## <a name="related-topics"></a>Argomenti correlati  
   
 |Titolo|Descrizione|  
 |-----------|-----------------|  
 |[Selezione di una classe Collection](../../../docs/standard/collections/selecting-a-collection-class.md)|Vengono descritte le diverse raccolte e come selezionarne una per lo scenario.|  
-|[Tipi di raccolte usate comunemente](../../../docs/standard/collections/commonly-used-collection-types.md)|Vengono descritti i tipi di raccolta generici e non generici comunemente usati, quali <xref:System.Array?displayProperty=nameWithType>, <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> e <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.|  
+|[Tipi di raccolte comunemente utilizzate](../../../docs/standard/collections/commonly-used-collection-types.md)|Vengono descritti i tipi di raccolta generici e non generici comunemente usati, quali <xref:System.Array?displayProperty=nameWithType>, <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> e <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.|  
 |[Quando utilizzare raccolte generiche](../../../docs/standard/collections/when-to-use-generic-collections.md)|Viene illustrato l'utilizzo di tipi di raccolta generici.|  
 |[Confronti e ordinamenti all'interno delle raccolte](../../../docs/standard/collections/comparisons-and-sorts-within-collections.md)|Viene illustrato l'utilizzo di confronti di uguaglianza e ordinamento nelle raccolte.|  
 |[Tipi di raccolta ordinati](../../../docs/standard/collections/sorted-collection-types.md)|Vengono descritte le caratteristiche e le prestazioni di raccolte ordinate|  
@@ -83,8 +83,8 @@ Dati simili possono spesso essere gestiti in modo più efficiente quando memoriz
 |[Raccolte thread-safe](../../../docs/standard/collections/thread-safe/index.md)|Vengono descritti i tipi di raccolta quali <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> e <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> che supportano l'accesso simultaneo sicuro ed efficiente da più thread.|  
 |System.Collections.Immutable|Introduce le raccolte non modificabili e fornisce collegamenti ai tipi di raccolta.|  
   
-<a name="BKMK_Reference"></a>   
-## <a name="reference"></a>Riferimenti  
+<a name="BKMK_Reference"></a>
+## <a name="reference"></a>Riferimento  
  <xref:System.Array?displayProperty=nameWithType>  
  <xref:System.Collections?displayProperty=nameWithType>  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>  

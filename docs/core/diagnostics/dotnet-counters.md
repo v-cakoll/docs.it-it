@@ -1,13 +1,13 @@
 ---
 title: contatori dotnet-.NET Core
 description: Informazioni su come installare e usare lo strumento da riga di comando DotNet-Counter.
-ms.date: 10/14/2019
-ms.openlocfilehash: 399d5908e8ac52bcd4a20c1a819fc6c99f4de2f4
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/26/2020
+ms.openlocfilehash: 88f701a60d0ee03dd0236ae54c57679943e14939
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76737702"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157882"
 ---
 # <a name="dotnet-counters"></a>dotnet-counters
 
@@ -41,12 +41,57 @@ dotnet-counters [-h|--help] [--version] <command>
 
   Mostra la guida della riga di comando.
 
-## <a name="commands"></a>Commands
+## <a name="commands"></a>Comandi:
 
 | Comando                                             |
 | --------------------------------------------------- |
+| [DotNet-contatori Collect](#dotnet-counters-collect) |
 | [elenco di contatori DotNet](#dotnet-counters-list)       |
 | [monitoraggio contatori DotNet](#dotnet-counters-monitor) |
+| [PS dei contatori DotNet](#dotnet-counters-ps) |
+
+## <a name="dotnet-counters-collect"></a>DotNet-contatori Collect
+
+Raccogliere periodicamente i valori dei contatori selezionati ed esportarli in un formato di file specificato per la post-elaborazione.
+
+### <a name="synopsis"></a>Riepilogo
+
+```console
+dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [counter_list] [--format] [-o|--output]
+```
+
+### <a name="options"></a>Opzioni
+
+- **`-p|--process-id <PID>`**
+
+  ID del processo da monitorare.
+
+- **`--refresh-interval <SECONDS>`**
+
+  Numero di secondi di ritardo tra l'aggiornamento dei contatori visualizzati
+
+- **`counter_list <COUNTERS>`**
+
+  Elenco di contatori separato da spazi. È possibile specificare i contatori `provider_name[:counter_name]`. Se il `provider_name` viene usato senza una `counter_name`qualificata, vengono visualizzati tutti i contatori. Per individuare i nomi del provider e del contatore, utilizzare il comando [DotNet-counts list](#dotnet-counters-list) .
+
+- **`--format <csv|json>`**
+
+  Formato TImpossibile da esportare. Attualmente disponibile: CSV, JSON.
+
+- **`-o|--output <output>`**
+
+  Nome del file di output.
+
+### <a name="examples"></a>Esempi
+
+- Raccogliere tutti i contatori in un intervallo di aggiornamento di 3 secondi e generare un volume CSV come output:
+
+  ```console
+  > dotnet-counters collect --process-id 1902 --refresh-interval 3 --format csv
+
+  counter_list is unspecified. Monitoring all counters by default.
+  Starting a counter session. Press Q to quit.
+  ```
 
 ## <a name="dotnet-counters-list"></a>elenco di contatori DotNet
 
@@ -135,3 +180,22 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
   Press p to pause, r to resume, q to quit.
       request                                      100
   ```
+  
+## <a name="dotnet-counters-ps"></a>PS dei contatori DotNet 
+
+Visualizza un elenco di processi DotNet che è possibile monitorare.
+
+### <a name="synopsis"></a>Riepilogo
+
+```console
+dotnet-counters ps [-h|--help]
+```
+
+### <a name="example"></a>Esempio
+
+```console
+> dotnet-counters ps
+  
+  15683 WebApi     /home/suwhang/repos/WebApi/WebApi
+  16324 dotnet     /usr/local/share/dotnet/dotnet
+```

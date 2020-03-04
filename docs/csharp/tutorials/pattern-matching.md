@@ -4,18 +4,18 @@ description: Questa esercitazione avanzata illustra come usare le tecniche dei c
 ms.date: 03/13/2019
 ms-technology: csharp-whats-new
 ms.custom: mvc
-ms.openlocfilehash: ca7ae63a038fce0b2569e7a4bd1805765bc23d44
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: fd08e707402bfcd552997111a9c3fa58841a5466
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039200"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240054"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Esercitazione: uso delle funzionalità di criteri di ricerca per estendere i tipi di dati
 
 In C# 7 sono state introdotte le funzionalità dei criteri di ricerca di base. Tali funzionalità vengono estese in C# 8 con nuove espressioni e criteri. È possibile scrivere funzionalità che si comportano come se si estendessero tipi che potrebbero essere in altre librerie. I criteri possono essere usati anche per creare funzionalità necessarie per l'applicazione che non sono funzioni fondamentali del tipo da estendere.
 
-In questa esercitazione si imparerà a:
+In questa esercitazione si apprenderà come:
 
 > [!div class="checklist"]
 >
@@ -41,7 +41,7 @@ Si prenda come esempio un'importante area metropolitana che gestisce il traffico
 
 In base a questa breve descrizione, potrebbe essere stata rapidamente delineata una gerarchia di oggetti per modellare questo sistema. I dati provengono tuttavia da più origini, ad esempio altri sistemi di gestione di registrazione dei veicoli. Questi sistemi forniscono classi differenti per modellare i dati e non esiste un unico modello a oggetti che è possibile usare. Nell'esercitazione si useranno queste classi semplificate per la modellazione dei dati dei veicoli dai sistemi esterni, come illustrato nel codice seguente:
 
-[!code-csharp[ExternalSystems](~/samples/csharp/tutorials/patterns/start/toll-calculator/ExternalSystems.cs)]
+[!code-csharp[ExternalSystems](~/samples/snippets/csharp/tutorials/patterns/start/toll-calculator/ExternalSystems.cs)]
 
 È possibile scaricare il codice iniziale dal repository GitHub [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/patterns/start). È possibile osservare che le classi dei veicoli provengono da sistemi diversi e sono in spazi dei nomi diversi. Non è possibile sfruttare classi di base comuni, tranne `System.Object`.
 
@@ -298,24 +298,24 @@ Per questa funzionalità si useranno i criteri di ricerca, che verranno però in
 
 La tabella seguente mostra le combinazioni dei valori di input e il moltiplicatore dei prezzi per le ore di punta:
 
-| Day        | Ora         | Direzione | Sovrapprezzo |
+| Giorno        | Tempo         | Direction | Premium |
 | ---------- | ------------ | --------- |--------:|
-| Giorno feriale    | ore di punta del mattino | in entrata   | x 2,00  |
-| Giorno feriale    | ore di punta del mattino | in uscita  | x 1,00  |
-| Giorno feriale    | giorno      | in entrata   | x 1,50  |
-| Giorno feriale    | giorno      | in uscita  | x 1,50  |
-| Giorno feriale    | ore di punta serali | in entrata   | x 1,00  |
-| Giorno feriale    | ore di punta serali | in uscita  | x 2,00  |
-| Giorno feriale    | notte    | in entrata   | x 0,75  |
-| Giorno feriale    | notte    | in uscita  | x 0,75  |
-| Fine settimana    | ore di punta del mattino | in entrata   | x 1,00  |
-| Fine settimana    | ore di punta del mattino | in uscita  | x 1,00  |
-| Fine settimana    | giorno      | in entrata   | x 1,00  |
-| Fine settimana    | giorno      | in uscita  | x 1,00  |
-| Fine settimana    | ore di punta serali | in entrata   | x 1,00  |
-| Fine settimana    | ore di punta serali | in uscita  | x 1,00  |
-| Fine settimana    | notte    | in entrata   | x 1,00  |
-| Fine settimana    | notte    | in uscita  | x 1,00  |
+| Giorno della settimana    | ore di punta del mattino | inbound   | x 2,00  |
+| Giorno della settimana    | ore di punta del mattino | in uscita  | x 1,00  |
+| Giorno della settimana    | giorno      | inbound   | x 1,50  |
+| Giorno della settimana    | giorno      | in uscita  | x 1,50  |
+| Giorno della settimana    | ore di punta serali | inbound   | x 1,00  |
+| Giorno della settimana    | ore di punta serali | in uscita  | x 2,00  |
+| Giorno della settimana    | notte    | inbound   | x 0,75  |
+| Giorno della settimana    | notte    | in uscita  | x 0,75  |
+| fine settimana    | ore di punta del mattino | inbound   | x 1,00  |
+| fine settimana    | ore di punta del mattino | in uscita  | x 1,00  |
+| fine settimana    | giorno      | inbound   | x 1,00  |
+| fine settimana    | giorno      | in uscita  | x 1,00  |
+| fine settimana    | ore di punta serali | inbound   | x 1,00  |
+| fine settimana    | ore di punta serali | in uscita  | x 1,00  |
+| fine settimana    | notte    | inbound   | x 1,00  |
+| fine settimana    | notte    | in uscita  | x 1,00  |
 
 Sono presenti 16 combinazioni diverse delle tre variabili. Combinando alcune delle condizioni, si semplificherà l'espressione switch finale.
 
@@ -337,17 +337,17 @@ private static bool IsWeekDay(DateTime timeOfToll) =>
 
 Questo metodo funziona, ma è ripetitivo. È possibile semplificarlo, come illustrato nel codice seguente:
 
-[!code-csharp[IsWeekDay](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#IsWeekDay)]
+[!code-csharp[IsWeekDay](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#IsWeekDay)]
 
 Aggiungere quindi una funzione simile per classificare l'ora in blocchi di:
 
-[!code-csharp[GetTimeBand](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#GetTimeBand)]
+[!code-csharp[GetTimeBand](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#GetTimeBand)]
 
 Il metodo precedente non usa criteri di ricerca. Risulta più chiaro se si usa una familiare cascata di istruzioni `if`. Si aggiunge un elemento `enum` privato per convertire ogni intervallo di tempo in un valore discreto.
 
 Dopo aver creato tali metodi, è possibile usare un'altra espressione `switch` con il **criterio di tupla** per calcolare il sovrapprezzo. È possibile creare un'espressione `switch` con tutti i 16 elementi:
 
-[!code-csharp[FullTuplePattern](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#TuplePatternOne)]
+[!code-csharp[FullTuplePattern](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#TuplePatternOne)]
 
 Il codice precedente funziona, ma può essere semplificato. Tutte le otto combinazioni per il fine settimana hanno lo stesso pedaggio. È possibile sostituire tutte le otto combinazioni con la sola riga seguente:
 
@@ -380,7 +380,7 @@ public decimal PeakTimePremium(DateTime timeOfToll, bool inbound) =>
 
 È infine possibile rimuovere le due fasce orarie di punta che pagano il prezzo normale. Dopo aver rimosso tali elementi, è possibile sostituire `false` con un discard (`_`) nell'elemento switch finale. Il metodo finale sarà il seguente:
 
-[!code-csharp[SimplifiedTuplePattern](../../../samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#FinalTuplePattern)]
+[!code-csharp[SimplifiedTuplePattern](../../../samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#FinalTuplePattern)]
 
 Questo esempio illustra uno dei vantaggi dei criteri di ricerca. I rami dei criteri vengono infatti valutati in ordine. Se si modifica l'ordine in modo che un ramo precedente gestisce uno dei case successivi, il compilatore avvisa l'utente perché il codice non è raggiungibile. Grazie alle regole del linguaggio, è stato più facile eseguire le semplificazioni precedenti con la certezza che il codice non fosse modificato.
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: b7ea52eaccda4599969a5d1e3b683d2d842b0d82
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: a5aca12e4037d517c3bcfb403c990605a052d48f
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093240"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239846"
 ---
 # <a name="char-c-reference"></a>char (C# riferimento)
 
@@ -34,7 +34,7 @@ Il tipo [stringa](reference-types.md#the-string-type) rappresenta il testo come 
 - sequenza di escape Unicode, che è `\u` seguita dalla rappresentazione esadecimale a quattro simboli di un codice carattere.
 - sequenza di escape esadecimale, `\x` seguita dalla rappresentazione esadecimale di un codice carattere.
 
-[!code-csharp-interactive[char literals](~/samples/csharp/language-reference/builtin-types/CharType.cs#Literals)]
+[!code-csharp-interactive[char literals](~/samples/snippets/csharp/language-reference/builtin-types/CharType.cs#Literals)]
 
 Come illustrato nell'esempio precedente, è anche possibile eseguire il cast del valore di un codice carattere nel valore `char` corrispondente.
 

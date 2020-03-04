@@ -3,12 +3,12 @@ title: Output da un XslTransform
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 8e149d32-4b2f-493f-9e4b-d0d93475acde
-ms.openlocfilehash: 178b1e949868d3af893cbcb6df63590053341a3e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 93cbf7807630a605e17e7f513055c052aad0d08e
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710492"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159637"
 ---
 # <a name="outputs-from-an-xsltransform"></a>Output da un XslTransform
 Poiché i fogli di stile consentono di determinare il formato di output usando un'istruzione `<xsl:output>` con l'attributo `method`, nella tabella seguente viene descritto il formato di output ottenuto quando si usa il metodo <xref:System.Xml.Xsl.XslTransform.Transform%2A> per scrivere l'output e il formato dell'output è dichiarato come tipo <xref:System.IO.Stream> o <xref:System.IO.TextWriter>.  
@@ -22,7 +22,7 @@ Poiché i fogli di stile consentono di determinare il formato di output usando u
 |-----------------------------------------|-------------------|  
 |method="xml"|XML|  
 |method="html"|HTML|  
-|method="text"|Testo|  
+|method="text"|Text|  
   
 > [!NOTE]
 > Nota: quando l'output del metodo `<xsl:output>` è un oggetto <xref:System.Xml.Xsl.XslTransform.Transform%2A> o <xref:System.Xml.XmlReader>, l'istruzione <xref:System.Xml.XmlWriter> viene ignorata.  
@@ -44,7 +44,7 @@ Poiché i fogli di stile consentono di determinare il formato di output usando u
 - indent  
   
     > [!NOTE]
-    > \*L'attributo di codifica viene ignorato quando il metodo <xref:System.Xml.Xsl.XslTransform.Transform%2A> invia l'output a un <xref:System.IO.TextWriter>. Viene invece usata la proprietà di codifica del tipo <xref:System.IO.TextWriter>. 
+    > \*L'attributo di codifica viene ignorato quando il metodo <xref:System.Xml.Xsl.XslTransform.Transform%2A> invia l'output a un <xref:System.IO.TextWriter>. Viene invece usata la proprietà di codifica del tipo <xref:System.IO.TextWriter>.
   
  Quando l'output del metodo <xref:System.Xml.Xsl.XslTransform.Transform%2A> è un tipo <xref:System.IO.Stream>, l'attributo seguente viene ignorato:  
   

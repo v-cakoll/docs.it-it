@@ -3,12 +3,12 @@ title: Interfaccia della riga di comando di .NET Core
 titleSuffix: ''
 description: Panoramica del interfaccia della riga di comando di .NET Core e delle relative funzionalità.
 ms.date: 02/13/2020
-ms.openlocfilehash: c491088f26a9aa1c065414e76fb0b80d554380b4
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: d84f96889cabc3fb4521e39db25050aacdd11546
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77625982"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156712"
 ---
 # <a name="net-core-cli-overview"></a>Panoramica di interfaccia della riga di comando di .NET Core
 
@@ -24,15 +24,15 @@ Per impostazione predefinita vengono installati i comandi seguenti:
 
 ### <a name="basic-commands"></a>Comandi di base
 
-- [new](dotnet-new.md)
+- [Nuovo](dotnet-new.md)
 - [restore](dotnet-restore.md)
 - [build](dotnet-build.md)
-- [publish](dotnet-publish.md)
+- [pubblica](dotnet-publish.md)
 - [run](dotnet-run.md)
 - [test](dotnet-test.md)
 - [vstest](dotnet-vstest.md)
 - [pack](dotnet-pack.md)
-- [migrate](dotnet-migrate.md)
+- [migrazione](dotnet-migrate.md)
 - [clean](dotnet-clean.md)
 - [sln](dotnet-sln.md)
 - [help](dotnet-help.md)
@@ -77,11 +77,11 @@ dotnet /build_output/my_app.dll
 
 ### <a name="driver"></a>Driver
 
-Il driver, denominato [dotnet](dotnet.md), ha due compiti: eseguire un'[app dipendente dal framework](../deploying/index.md) ed eseguire un comando. 
+Il driver, denominato [dotnet](dotnet.md), ha due compiti: eseguire un'[app dipendente dal framework](../deploying/index.md) ed eseguire un comando.
 
 Per eseguire un'applicazione dipendente dal framework, specificare l'app dopo il driver, ad esempio `dotnet /path/to/my_app.dll`. Se si esegue il comando dalla cartella in cui si trova la DLL dell'app, è sufficiente eseguire `dotnet my_app.dll`. Se si vuole usare una versione specifica del runtime .NET Core, usare l'opzione `--fx-version <VERSION>` (vedere il riferimento per il [comando dotnet](dotnet.md)).
 
-Nel momento in cui si fornisce un comando al driver, `dotnet.exe` avvia il processo di esecuzione del comando dell'interfaccia della riga di comando. Ad esempio,
+Nel momento in cui si fornisce un comando al driver, `dotnet.exe` avvia il processo di esecuzione del comando dell'interfaccia della riga di comando. Ad esempio:
 
 ```dotnetcli
 dotnet build
