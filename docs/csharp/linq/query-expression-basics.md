@@ -3,12 +3,12 @@ title: Nozioni fondamentali sulle espressioni di query (LINQ in C#)
 description: Vengono introdotti concetti relativi alle espressioni di query
 ms.date: 11/30/2016
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-ms.openlocfilehash: 5ebe2163df47c60c677d7ac911ce0f65529835eb
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 83beaa82d4b4b42ff9da5230edddd391b33a0717
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635860"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173354"
 ---
 # <a name="query-expression-basics"></a>Nozioni fondamentali sulle espressioni di query
 
@@ -138,7 +138,7 @@ Usare la clausola `where` per escludere gli elementi dai dati di origine in base
 
 [!code-csharp[csrefQueryExpBasics#59](~/samples/snippets/csharp/concepts/linq/query-expression-basics_15.cs)]
 
-Per altre informazioni, vedere [Clausola where](../language-reference/keywords/where-clause.md).
+Per ulteriori informazioni, vedere [clausola where](../language-reference/keywords/where-clause.md).
 
 #### <a name="orderby-clause"></a>Clausola orderby
 
@@ -150,13 +150,13 @@ La parola chiave `ascending` è facoltativa, ma consente l'ordinamento predefini
 
 #### <a name="join-clause"></a>Clausola join
 
-Usare la clausola `join` per associare e/o combinare gli elementi di un'origine dati con gli elementi di un'altra origine dati in base a un confronto di uguaglianza tra le chiavi specificate in ogni elemento. In LINQ le operazioni di join vengono eseguite su sequenze di oggetti i cui elementi sono tipi diversi. Dopo avere unito due sequenze, è necessario usare un'istruzione `select` o `group` per specificare l'elemento da archiviare nella sequenza di output. È anche possibile usare un tipo anonimo per combinare le proprietà da ogni set di elementi associati in un nuovo tipo per la sequenza di output. L'esempio seguente associa oggetti `prod` la cui proprietà `Category` corrisponde a una delle categorie nella matrice di stringhe `categories`. I prodotti la cui `Category` non corrisponde ad alcuna stringa in `categories` sono esclusi. L'istruzione `select` proietta un nuovo tipo le cui proprietà sono detratte da `cat` e `prod`.
+Usare la clausola `join` per associare e/o combinare gli elementi di un'origine dati con gli elementi di un'altra origine dati in base a un confronto di uguaglianza tra le chiavi specificate in ogni elemento. In LINQ le operazioni di join vengono eseguite su sequenze di oggetti i cui elementi sono tipi diversi. Dopo avere unito due sequenze, è necessario usare un'istruzione `select` o `group` per specificare l'elemento da archiviare nella sequenza di output. È anche possibile usare un tipo anonimo per combinare le proprietà da ogni set di elementi associati in un nuovo tipo per la sequenza di output. L'esempio seguente associa oggetti `prod` la cui proprietà `Category` corrisponde a una delle categorie nella matrice di stringhe `categories`. I `Category` prodotti che non `categories` corrispondono ad alcuna stringa in vengono filtrati. L'istruzione `select` proietta un nuovo tipo `cat` le `prod`cui proprietà sono tratte da entrambi e .
 
 [!code-csharp[csrefQueryExpBasics#61](~/samples/snippets/csharp/concepts/linq/query-expression-basics_17.cs)]
 
-È anche possibile creare un join di gruppo archiviando i risultati dell'operazione `join` in una variabile temporanea usando la parola chiave [into](../language-reference/keywords/into.md). Per altre informazioni, vedere [Clausola join](../language-reference/keywords/join-clause.md).
+È anche possibile creare un join di gruppo archiviando i risultati dell'operazione `join` in una variabile temporanea usando la parola chiave [into](../language-reference/keywords/into.md). Per ulteriori informazioni, vedere [Clausola join](../language-reference/keywords/join-clause.md).
 
-#### <a name="let-clause"></a>Clausola let 
+#### <a name="let-clause"></a>Clausola let
 
 Usare la clausola `let` per archiviare il risultato di un'espressione, ad esempio una chiamata al metodo, in una nuova variabile di intervallo. Nell'esempio seguente la variabile di intervallo `firstName` archivia il primo elemento della matrice di stringhe restituita da `Split`.
 
@@ -170,11 +170,11 @@ Una clausola di query può contenere un'espressione di query, a volte detta *sot
 
 [!code-csharp[csrefQueryExpBasics#63](~/samples/snippets/csharp/concepts/linq/query-expression-basics_19.cs)]
 
-Per altre informazioni, vedere [eseguire una sottoquery su un'operazione di raggruppamento](perform-a-subquery-on-a-grouping-operation.md).
+Per ulteriori informazioni, vedere [Eseguire una sottoquery su un'operazione di raggruppamento.](perform-a-subquery-on-a-grouping-operation.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../programming-guide/index.md)
-- [LINQ (Language-Integrated Query)](index.md)
+- [Guida alla programmazione in C](../programming-guide/index.md)
+- [Language Integrated Query (LINQ)](index.md)
 - [Parole chiave di query (LINQ)](../language-reference/keywords/query-keywords.md)
 - [Standard query operators overview](../programming-guide/concepts/linq/standard-query-operators-overview.md) (Panoramica degli operatori di query standard)

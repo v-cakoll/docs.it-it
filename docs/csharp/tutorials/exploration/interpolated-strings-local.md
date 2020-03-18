@@ -3,17 +3,17 @@ title: Interpolazione di stringhe - Esercitazione su C#
 description: Questa esercitazione mostra come usare la funzionalità di interpolazione di stringhe di C# per includere risultati di espressioni formattate in una stringa più grande.
 ms.date: 10/23/2018
 ms.openlocfilehash: 593f3a77370da73dfd5f090be98112327b86b1f7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75346787"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>Usare l'interpolazione di stringhe per la costruzione di stringhe formattate
 
 Questa esercitazione descrive come usare l'[interpolazione di stringhe](../../language-reference/tokens/interpolated.md) in C# per inserire i valori in un'unica stringa di risultato. Verranno descritte le procedure per scrivere codice C# e visualizzare i risultati della compilazione ed esecuzione del codice. L'esercitazione contiene una serie di lezioni che descrivono come inserire valori in una stringa e formattare questi valori in modi diversi.
 
-Questa esercitazione prevede la presenza di un computer da usare per lo sviluppo. L'esercitazione .NET [Hello World in 10 minuti](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) contiene le istruzioni per configurare l'ambiente di sviluppo locale in Windows, Linux o MacOS. È anche possibile completare la [versione interattiva](interpolated-strings.yml) di questa esercitazione nel browser.
+Questa esercitazione prevede la presenza di un computer da usare per lo sviluppo. L'esercitazione di .NET [Hello World in 10 minuti](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) contiene istruzioni per la configurazione dell'ambiente di sviluppo locale in Windows, Linux o macOS. È anche possibile completare la [versione interattiva](interpolated-strings.yml) di questa esercitazione nel browser.
 
 ## <a name="create-an-interpolated-string"></a>Creare una stringa interpolata
 
@@ -46,19 +46,19 @@ Ora si proveranno altri esempi di interpolazione di stringhe con altri tipi di d
 
 Nella sezione precedente è stata usata l'interpolazione di stringhe per inserire una stringa in un'altra. Il risultato di un'espressione di interpolazione può avere tuttavia qualsiasi tipo di dati. Includiamo valori di vari tipi di dati in una stringa interpolata.
 
-Nell'esempio seguente viene innanzitutto definito un tipo di dati [class](../../programming-guide/classes-and-structs/classes.md) `Vegetable` con una [Proprietà](../../properties.md) `Name` e un [Metodo](../../methods.md)`ToString` che esegue l' [override](../../language-reference/keywords/override.md) del comportamento del metodo <xref:System.Object.ToString?displayProperty=nameWithType>. Il [modificatore di accesso `public`](../../language-reference/keywords/public.md)rende tale metodo disponibile per qualsiasi codice client per ottenere la rappresentazione stringa di un'istanza di `Vegetable`. Nell'esempio il metodo `Vegetable.ToString` restituisce il valore della proprietà `Name` inizializzata nel [costruttore](../../programming-guide/classes-and-structs/constructors.md)`Vegetable`:
+Nell'esempio seguente viene definito prima di tutto un tipo di dati [class](../../programming-guide/classes-and-structs/classes.md)`Vegetable` con la `Name` [proprietà](../../properties.md) e un `ToString` [metodo](../../methods.md) che esegue l'[override](../../language-reference/keywords/override.md) del comportamento del metodo <xref:System.Object.ToString?displayProperty=nameWithType>. Il [ `public` modificatore](../../language-reference/keywords/public.md) di accesso rende tale metodo disponibile a `Vegetable` qualsiasi codice client per ottenere la rappresentazione di stringa di un'istanza. Nell'esempio `Vegetable.ToString` il metodo restituisce `Name` il valore della `Vegetable` proprietà inizializzata in corrispondenza del [costruttore](../../programming-guide/classes-and-structs/constructors.md):
 
 ```csharp
 public Vegetable(string name) => Name = name;
 ```
 
-Viene quindi creata un'istanza della classe `Vegetable` denominata `item` usando l'[operatore `new`](../../language-reference/operators/new-operator.md) e specificando un nome per il costruttore `Vegetable`:
+Quindi viene creata `Vegetable` un'istanza `item` della classe denominata utilizzando l'operatore [ `new` ](../../language-reference/operators/new-operator.md) e fornendo un nome per il costruttore `Vegetable`:
 
 ```csharp
 var item = new Vegetable("eggplant");
 ```
 
-Infine, includere la variabile `item` in una stringa interpolata che contiene anche un valore <xref:System.DateTime>, un valore <xref:System.Decimal> e un valore di [enumerazione](../../language-reference/builtin-types/enum.md) `Unit`. Sostituire tutto il codice C# in un editor con il codice seguente e usare il comando `dotnet run` per l'eseguirlo:
+Infine, includere la variabile `item` in una stringa interpolata che contenga anche un valore <xref:System.DateTime>, un valore <xref:System.Decimal> e un valore di  [enumerazione](../../language-reference/builtin-types/enum.md)`Unit`. Sostituire tutto il codice C# in un editor con il codice seguente e usare il comando `dotnet run` per l'eseguirlo:
 
 ```csharp
 using System;
@@ -103,7 +103,7 @@ Nella sezione precedente sono state inserite nella stringa di risultato due stri
 Console.WriteLine($"On {date:d}, the price of {item} was {price:C2} per {unit}.");
 ```
 
-Per specificare una stringa di formato, aggiungere i due punti (":") e la stringa di formato desiderata dopo l'espressione di interpolazione. "d" è un [stringa di formato data e ora standard](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier) che rappresenta il formato di data breve. "C2" è un [stringa di formato numerico standard](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier) che rappresenta un numero come valore di valuta con due cifre dopo il separatore decimale.
+Per specificare una stringa di formato, aggiungere i due punti (":") e la stringa di formato desiderata dopo l'espressione di interpolazione. "d" è un [stringa di formato data e ora standard](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier) che rappresenta il formato di data breve. "C2" è una stringa di [formato numerico standard](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier) che rappresenta un numero come valore di valuta con due cifre dopo il separatore decimale.
 
 Molti tipi delle librerie .NET supportano un set predefinito di stringhe di formato. Tali tipi includono tutti i tipi numerici e i tipi data e ora. Per l'elenco completo dei tipi che supportano le stringhe di formato, vedere [Stringhe di formato e tipi della libreria di classe .NET](../../../standard/base-types/formatting-types.md#format-strings-and-net-types) nell'articolo [Formattazione di tipi in .NET](../../../standard/base-types/formatting-types.md).
 

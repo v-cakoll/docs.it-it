@@ -4,11 +4,11 @@ description: Caratteristiche del linguaggio nelle prime versioni ed evoluzione s
 author: erikdietrich
 ms.date: 09/20/2017
 ms.openlocfilehash: 9114395a5c6cfd8df5da18024921c35828947e0b
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77673277"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399686"
 ---
 # <a name="the-history-of-c"></a>Cronologia di C\#
 
@@ -17,18 +17,18 @@ Questo articolo include la cronologia di ogni versione principale del linguaggio
 > [!IMPORTANT]
 > Per alcune funzionalità, il linguaggio C# si basa sui tipi e metodi inclusi in quella che la specifica C# definisce la *libreria standard*. La piattaforma .NET rende disponibili questi tipi e metodi in numerosi pacchetti. Un esempio è l'elaborazione delle eccezioni. Ogni istruzione o espressione `throw` viene controllata per assicurarsi che l'oggetto generato derivi da <xref:System.Exception>. Analogamente, ogni istruzione `catch` viene controllata per verificare che il tipo intercettato derivi da <xref:System.Exception>. In ogni versione potrebbero essere aggiunti nuovi requisiti. Per usare le funzionalità del linguaggio più recenti in ambienti meno recenti, potrebbe essere necessario installare librerie specifiche. Queste dipendenze sono documentate nella pagina per ogni versione specifica. Le informazioni sulle [relazioni tra linguaggio e libreria](relationships-between-language-and-library.md) possono essere utili per comprendere meglio questa dipendenza.
 
-Gli strumenti di compilazione per C# considerano la versione del linguaggio principale più recente la versione del linguaggio predefinita. Potrebbero esistere versioni intermedie tra le versioni principali, descritte in dettaglio in altri articoli in questa sezione. Per usare le funzionalità più recenti in una versione intermedia, è necessario [configurare la versione in lingua del compilatore](../language-reference/configure-language-version.md) e selezionare la versione. Sono state rilasciate tre versioni intermedie da C# 7.0:
+Gli strumenti di compilazione per C# considerano la versione del linguaggio principale più recente la versione del linguaggio predefinita. Potrebbero esistere versioni intermedie tra le versioni principali, descritte in dettaglio in altri articoli in questa sezione. Per usare le funzionalità più recenti in una versione a punti, è necessario [configurare la versione in lingua del compilatore](../language-reference/configure-language-version.md) e selezionare la versione. Sono state rilasciate tre versioni intermedie da C# 7.0:
 
-- [C# 7.3](csharp-7-3.md):
+- [7.3](csharp-7-3.md):
   - C# 7.3 è disponibile a partire da [Visual Studio 2017 versione 15.7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) e [.NET Core 2.1 SDK](../../core/whats-new/dotnet-core-2-1.md).
 - [C# 7.2](csharp-7-2.md):
-  - C#7,2 è disponibile a partire da [Visual Studio 2017 versione 15,5](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) e [.NET Core 2,0 SDK](../../core/whats-new/dotnet-core-2-0.md).
-- [C# 7.1](csharp-7-1.md):
+  - È disponibile la versione 7.2 a partire da [Visual Studio 2017 versione 15.5](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) e [.NET Core 2.0 SDK.](../../core/whats-new/dotnet-core-2-0.md)
+- [7.1](csharp-7-1.md):
   - C# 7.1 è disponibile a partire da [Visual Studio 2017 versione 15.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) e [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md).
 
 ## <a name="c-version-10"></a>C# versione 1.0
 
-Quando si torna indietro e si guarda C# la versione 1,0, rilasciata con Visual Studio .NET 2002, è molto simile a Java. Come affermato [negli obiettivi di progettazione dichiarati per ECMA](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), C# cercava di essere "un linguaggio orientato agli oggetti di utilizzo generico, semplice e moderno".  All'epoca, somigliare molto a Java significava aver raggiunto tali obiettivi di progettazione di allora.
+Quando si torna indietro e guardare, versione 1.0 di C, rilasciato con Visual Studio .NET 2002, sembrava molto simile a Java. Come affermato [negli obiettivi di progettazione dichiarati per ECMA](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), C# cercava di essere "un linguaggio orientato agli oggetti di utilizzo generico, semplice e moderno".  All'epoca, somigliare molto a Java significava aver raggiunto tali obiettivi di progettazione di allora.
 
 Ma se si guarda ora com'era C# 1.0, la sensazione è di disorientamento. Mancavano le capacità asincrone predefinite e alcune delle semplici funzionalità relative ai generics che ora si danno per scontate. In realtà,i generics mancavano completamente.  E [LINQ](../linq/index.md)? Non era ancora disponibile. Queste aggiunte avrebbero richiesto ancora alcuni anni.
 
@@ -39,7 +39,7 @@ Le principali funzionalità di C# 1.0 includevano:
 - [Classi](../programming-guide/classes-and-structs/classes.md)
 - [Struct](../language-reference/builtin-types/struct.md)
 - [Interfacce](../programming-guide/interfaces/index.md)
-- [Eventi](../events-overview.md)
+- [Events](../events-overview.md)
 - [Proprietà](../properties.md)
 - [Delegati](../delegates-overview.md)
 - [Espressioni](../programming-guide/statements-expressions-operators/expressions.md)
@@ -48,7 +48,7 @@ Le principali funzionalità di C# 1.0 includevano:
 
 ## <a name="c-version-12"></a>Versione C# 1.2
 
-C#versione 1,2 fornita con Visual Studio .NET 2003. Conteneva alcuni piccoli miglioramenti del linguaggio. L'aspetto più importante è che a partire da questa versione, il codice veniva generato in un ciclo `foreach` denominato <xref:System.IDisposable.Dispose%2A> in <xref:System.Collections.IEnumerator> quando <xref:System.Collections.IEnumerator> implementava <xref:System.IDisposable>.
+Versione 1.2 fornita con Visual Studio .NET 2003. Conteneva alcuni piccoli miglioramenti del linguaggio. L'aspetto più importante è che a partire da questa versione, il codice veniva generato in un ciclo `foreach` denominato <xref:System.IDisposable.Dispose%2A> in <xref:System.Collections.IEnumerator> quando <xref:System.Collections.IEnumerator> implementava <xref:System.IDisposable>.
 
 ## <a name="c-version-20"></a>C# versione 2.0
 
@@ -57,7 +57,7 @@ Qui le cose iniziano a farsi interessanti. Ecco alcune delle funzionalità princ
 - [Generics](../programming-guide/generics/index.md)
 - [Tipi parziali](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
 - [Metodi anonimi](../language-reference/operators/delegate-operator.md)
-- [Tipi valore nullable](../language-reference/builtin-types/nullable-value-types.md)
+- [tipi di valore nullable](../language-reference/builtin-types/nullable-value-types.md)
 - [Iteratori](../programming-guide/concepts/iterators.md)
 - [Covarianza e controvarianza](../programming-guide/concepts/covariance-contravariance/index.md)
 
@@ -83,7 +83,7 @@ C# versione 3.0 è stato rilasciato alla fine del 2007, insieme a Visual Studio 
 - [Proprietà implementate automaticamente](../programming-guide/classes-and-structs/auto-implemented-properties.md)
 - [Tipi anonimi](../programming-guide/classes-and-structs/anonymous-types.md)
 - [Espressioni di query](../linq/query-expression-basics.md)
-- [Espressioni lambda](../programming-guide/statements-expressions-operators/lambda-expressions.md)
+- [Espressioni lambdaLambda expressions](../programming-guide/statements-expressions-operators/lambda-expressions.md)
 - [Alberi delle espressioni](../expression-trees.md)
 - [Metodi di estensione](../programming-guide/classes-and-structs/extension-methods.md)
 - [Variabili locali tipizzate in modo implicito](../language-reference/keywords/var.md)
@@ -100,7 +100,7 @@ La comprensione e l'integrazione effettive del concetto da parte degli utenti ha
 
 ## <a name="c-version-40"></a>C# versione 4.0
 
-C#la versione 4,0, rilasciata con Visual Studio 2010, avrebbe avuto un tempo difficile per lo stato rivoluzionario della versione 3,0. Con la versione 3.0, il linguaggio C# è uscito con decisione dall'ombra di Java e ha assunto una propria rilevanza. Il linguaggio stava rapidamente diventando elegante.
+La versione 4.0, rilasciata con Visual Studio 2010, avrebbe avuto difficoltà a rispettare lo stato rivoluzionario della versione 3.0. Con la versione 3.0, il linguaggio C# è uscito con decisione dall'ombra di Java e ha assunto una propria rilevanza. Il linguaggio stava rapidamente diventando elegante.
 
 La versione successiva introdusse comunque alcune nuove interessanti funzionalità:
 
@@ -117,7 +117,7 @@ L'associazione dinamica è suscettibile di errori ma offre anche la possibilità
 
 ## <a name="c-version-50"></a>C# versione 5.0
 
-C#la versione 5,0, rilasciata con Visual Studio 2012, era una versione focalizzata del linguaggio. Quasi tutto l'impegno per questa versione è stato indirizzato verso un altro concetto rivoluzionario: il modello `async` e `await` per la programmazione asincrona.  Ecco l'elenco delle funzionalità principali:
+La versione 5.0, rilasciata con Visual Studio 2012, era una versione mirata del linguaggio. Quasi tutto l'impegno per questa versione è stato indirizzato verso un altro concetto rivoluzionario: il modello `async` e `await` per la programmazione asincrona.  Ecco l'elenco delle funzionalità principali:
 
 - [Membri asincroni](../async.md)
 - [Attributi informativi sul chiamante](../programming-guide/concepts/caller-information.md)
@@ -132,7 +132,7 @@ Ma le vere stelle di questa versione sono `async` e `await`. Con il rilascio di 
 
 ## <a name="c-version-60"></a>C# versione 6.0
 
-Le versioni 3.0 e 5.0 hanno aggiunto a C# nuove funzionalità eccezionali per un linguaggio orientato agli oggetti. Con la versione 6,0, rilasciata con Visual Studio 2015, è possibile evitare di eseguire una funzionalità killer dominante e rilasciare invece molte funzionalità più C# piccole che rendevano la programmazione più produttiva. Eccone alcune:
+Le versioni 3.0 e 5.0 hanno aggiunto a C# nuove funzionalità eccezionali per un linguaggio orientato agli oggetti. Con la versione 6.0, rilasciata con Visual Studio 2015, sarebbe andato lontano da fare una funzionalità killer dominante e invece rilasciare molte funzionalità più piccole che hanno reso più produttiva la programmazione c'è. Eccone alcuni:
 
 - [Importazioni statiche](./csharp-6.md#using-static)
 - [Filtri eccezioni](./csharp-6.md#exception-filters)
@@ -154,11 +154,11 @@ Con questa versione è stata introdotta un'altra caratteristica, che di per sé 
 
 ## <a name="c-version-70"></a>C# versione 7.0
 
-La versione principale più recente è C# la versione 7,0, rilasciata con Visual Studio 2017. Questa versione presenta alcune delle caratteristiche evolutive e innovative di C# 6.0, ma senza il compilatore come servizio. Ecco alcune delle nuove funzionalità:
+La versione principale più recente è la versione 7.0 di C, rilasciata con Visual Studio 2017. Questa versione presenta alcune delle caratteristiche evolutive e innovative di C# 6.0, ma senza il compilatore come servizio. Ecco alcune delle nuove funzionalità:
 
 - [Variabili out](./csharp-7.md#out-variables)
 - [Tuple e decostruzione](./csharp-7.md#tuples)
-- [Criteri di ricerca](./csharp-7.md#pattern-matching)
+- [Corrispondenza dei criteri](./csharp-7.md#pattern-matching)
 - [Funzioni locali](./csharp-7.md#local-functions)
 - [Membri di espressioni corpo espansi](./csharp-7.md#more-expression-bodied-members)
 - [Variabili locali e valori restituiti per riferimento](./csharp-7.md#ref-locals-and-returns)
@@ -173,4 +173,4 @@ Tutte queste caratteristiche offrono nuove utili funzionalità agli sviluppatori
 
 Ma C# è ora destinato a un uso ancora più ampio. .NET Core ora supporta qualsiasi sistema operativo ed è decisamente orientato al cloud e alla portabilità.  Queste nuove capacità, insieme alla realizzazione di nuove funzionalità, tengono sicuramente impegnati i progettisti del linguaggio.
 
-_Articolo_ [_pubblicato originariamente nel Blog di NDepend, per la_](https://blog.ndepend.com/c-versions-look-language-history/)_cortesia di Erik Dietrich e Patrick Smacchia._
+_Articolo_ [_originariamente pubblicato nel blog NDepend_](https://blog.ndepend.com/c-versions-look-language-history/)_, gentilmente concesso da Erik Dietrich e Patrick Smacchia._

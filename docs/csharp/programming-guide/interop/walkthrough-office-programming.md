@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
 ms.openlocfilehash: 6c27442cb5c0c4172f503c945849e47560c2b33d
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635353"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Procedura dettagliata: programmazione di Office (C# e Visual Basic)
@@ -24,7 +24,7 @@ Entrambi i linguaggi consentono di incorporare informazioni sul tipo, in modo da
 
 In questa procedura dettagliata queste funzionalità vengono illustrate nel contesto della programmazione di Office, ma molte di esse sono utili anche nella programmazione generale. Nella procedura dettagliata si usa un componente aggiuntivo di Excel per creare una cartella di lavoro di Excel. A questo punto si crea un documento di Word contenente un collegamento alla cartella di lavoro. Infine, si visualizzerà come la dipendenza dell'assembly di interoperabilità primario può essere abilitata e disabilitata.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 Per completare questa procedura dettagliata è necessario aver installato Microsoft Office Excel o Microsoft Office Word nel computer.
 
@@ -34,9 +34,9 @@ Per completare questa procedura dettagliata è necessario aver installato Micros
 
 1. Avviare Visual Studio.
 
-2. Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**.
+2. Scegliere **Nuovo** dal menu **File**e quindi fare clic su **Progetto**.
 
-3. Nel riquadro **Modelli installati** espandere **Visual Basic** o **Visual C#** , espandere **Office** e scegliere l'anno della versione del prodotto Office.
+3. Nel riquadro **Modelli installati** espandere **Visual Basic** o **Visual C#**, espandere **Office** e scegliere l'anno della versione del prodotto Office.
 
 4. Nel riquadro **Modelli** fare clic su **Excel \<versione > Componente aggiuntivo**.
 
@@ -50,9 +50,9 @@ Per completare questa procedura dettagliata è necessario aver installato Micros
 
 ### <a name="to-add-references"></a>Per aggiungere riferimenti
 
-1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nome del progetto e quindi scegliere **Aggiungi riferimento**. Viene visualizzata la finestra di dialogo **Aggiungi riferimento**.
+1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nome del progetto e quindi scegliere **Aggiungi riferimento**. Verrà visualizzata la finestra di dialogo **Aggiungi riferimento**.
 
-2. Nella scheda **Assembly** selezionare **Microsoft.Office.Interop.Excel**, versione `<version>.0.0.0` (per conoscere il numero versione del prodotto Office, vedere [Versioni Microsoft](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)) nell'elenco **Nome componente**. Tenere premuto CTRL e selezionare **Microsoft.Office.Interop.Word**, `version <version>.0.0.0`. Se gli assembly non sono visibili, può essere necessario verificare che siano installati e visualizzati (vedere [Procedura: Installare assembly di interoperabilità primari di Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).
+2. Nella scheda **Assembly** selezionare **Microsoft.Office.Interop.Excel**, versione `<version>.0.0.0` (per conoscere il numero versione del prodotto Office, vedere [Versioni Microsoft](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)) nell'elenco **Nome componente**. Tenere premuto CTRL e selezionare **Microsoft.Office.Interop.Word**, `version <version>.0.0.0`. Se gli assembly non vengono visualizzati, potrebbe essere necessario assicurarsi che siano installati e visualizzati (vedere [Procedura: installare gli assembly](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)di interoperabilità primari di Office ).
 
 3. Fare clic su **OK**.
 
@@ -76,7 +76,7 @@ Per completare questa procedura dettagliata è necessario aver installato Micros
 
      [!code-vb[csOfficeWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/account.vb#2)]
 
-3. Per creare un elenco `bankAccounts` contenente due conti, aggiungere il codice seguente al metodo `ThisAddIn_Startup` nei file *ThisAddIn.vb* o *ThisAddIn.cs*. Le dichiarazioni dell'elenco usano gli  *inizializzatori di insieme*. Per altre informazioni, vedere [Inizializzatori di insieme](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).
+3. Per creare `bankAccounts` un elenco contenente due account, `ThisAddIn_Startup` aggiungere il codice riportato di seguito al metodo in *ThisAddIn.vb* o *ThisAddIn.cs*. Le dichiarazioni dell'elenco usano gli * inizializzatori di insieme*. Per altre informazioni, vedere [Inizializzatori di insieme](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).
 
      [!code-csharp[csOfficeWalkthrough#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#3)]
 
@@ -92,9 +92,9 @@ Per completare questa procedura dettagliata è necessario aver installato Micros
 
      In questo metodo vengono usati due nuove funzionalità di C#. Entrambe queste funzionalità sono già esistenti in Visual Basic.
 
-    - Il metodo [Add](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) usa un *parametro facoltativo* per specificare un modello particolare. I parametri facoltativi, una novità di C# 4, consentono di omettere l'argomento per il parametro se si vuole usare il valore predefinito del parametro. Poiché nessun argomento viene inviato nell'esempio precedente, `Add` usa il modello predefinito e crea una nuova cartella di lavoro. L'istruzione equivalente nelle precedenti versioni di C# richiede un argomento segnaposto: `excelApp.Workbooks.Add(Type.Missing)`.
+    - Il metodo [Add](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) dispone di un *parametro facoltativo* per specificare un modello specifico. I parametri facoltativi, una novità di C# 4, consentono di omettere l'argomento per il parametro se si vuole usare il valore predefinito del parametro. Poiché nessun argomento viene inviato nell'esempio precedente, `Add` usa il modello predefinito e crea una nuova cartella di lavoro. L'istruzione equivalente nelle precedenti versioni di C# richiede un argomento segnaposto: `excelApp.Workbooks.Add(Type.Missing)`.
 
-         Per altre informazioni, vedere [Argomenti denominati e facoltativi](../classes-and-structs/named-and-optional-arguments.md).
+         Per ulteriori informazioni, vedere [Argomenti denominati e facoltativi](../classes-and-structs/named-and-optional-arguments.md).
 
     - Le proprietà `Range` e `Offset` dell'oggetto [Range](<xref:Microsoft.Office.Interop.Excel.Range>) usano la funzionalità delle *proprietà indicizzate*. Questa funzionalità consente di usare tali proprietà dai tipi COM con la tipica sintassi di C# seguente. Le proprietà indicizzate consentono anche di usare la proprietà `Value` dell'oggetto `Range`, eliminando la necessità di usare la proprietà `Value2`. La proprietà `Value` è indicizzata, ma l'indice è facoltativo. Nell'esempio seguente sono presenti sia argomenti facoltativi sia proprietà indicizzate.
 
@@ -106,7 +106,7 @@ Per completare questa procedura dettagliata è necessario aver installato Micros
 
          Non è possibile creare proprietà indicizzate personalizzate. La funzionalità supporta solo l'utilizzo di proprietà indicizzate esistenti.
 
-         Per ulteriori informazioni, vedere [come utilizzare le proprietà indicizzate nella programmazione dell'interoperabilità COM](./how-to-use-indexed-properties-in-com-interop-rogramming.md).
+         Per ulteriori informazioni, vedere [Come utilizzare le proprietà indicizzate nella programmazione](./how-to-use-indexed-properties-in-com-interop-rogramming.md)di interoperabilità COM .
 
 2. Aggiungere il seguente codice alla fine di `DisplayInExcel` per regolare la larghezza delle colonne in modo da adattarle al contenuto.
 
@@ -114,7 +114,7 @@ Per completare questa procedura dettagliata è necessario aver installato Micros
 
      [!code-vb[csOfficeWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#7)]
 
-     Queste aggiunte dimostrano un'altra nuova funzionalità di C#: considerare i valori `Object` restituiti dagli host COM, ad esempio Office, come se il tipo fosse [dynamic](../../language-reference/builtin-types/reference-types.md). Ciò avviene automaticamente quando l'opzione **Incorpora tipi di interoperabilità** è impostata sul valore predefinito, `True`o, in modo equivalente, quando si fa riferimento all'assembly tramite l'opzione del compilatore [-link](../../language-reference/compiler-options/link-compiler-option.md) . Il tipo `dynamic` consente l'associazione tardiva, già disponibile in Visual Basic, ed evita il cast esplicito richiesto in C# 3.0 e versioni precedenti del linguaggio.
+     Queste aggiunte dimostrano un'altra nuova funzionalità di C#: considerare i valori `Object` restituiti dagli host COM, ad esempio Office, come se il tipo fosse [dynamic](../../language-reference/builtin-types/reference-types.md). Ciò si verifica automaticamente quando Incorpora tipi `True`di **interoperabilità** è impostato sul valore predefinito , o, in modo equivalente, quando l'assembly fa riferimento all'opzione del compilatore [-link.](../../language-reference/compiler-options/link-compiler-option.md) Il tipo `dynamic` consente l'associazione tardiva, già disponibile in Visual Basic, ed evita il cast esplicito richiesto in C# 3.0 e versioni precedenti del linguaggio.
 
      Ad esempio, `excelApp.Columns[1]` restituisce `Object` e `AutoFit` è un metodo [Range](<xref:Microsoft.Office.Interop.Excel.Range>) di Excel. In assenza di `dynamic`, è necessario eseguire il cast dell'oggetto restituito da `excelApp.Columns[1]` come istanza di `Range` prima di chiamare il metodo `AutoFit`.
 
@@ -124,7 +124,7 @@ Per completare questa procedura dettagliata è necessario aver installato Micros
 
 ### <a name="to-invoke-displayinexcel"></a>Per richiamare DisplayInExcel
 
-1. Aggiungere il codice seguente alla fine del metodo `ThisAddIn_StartUp`. La chiamata a `DisplayInExcel` contiene due argomenti. Il primo argomento è il nome dell'elenco di conti da elaborare. Il secondo argomento è un'espressione lambda su più righe che definisce la modalità con cui i dati saranno elaborati. I valori `ID` e `balance` per ogni conto vengono visualizzati in celle adiacenti e la riga viene visualizzata in rosso se il saldo è inferiore a zero. Per altre informazioni, vedere [Espressioni lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).
+1. Aggiungere il codice seguente alla fine del metodo `ThisAddIn_StartUp`. La chiamata a `DisplayInExcel` contiene due argomenti. Il primo argomento è il nome dell'elenco di conti da elaborare. Il secondo argomento è un'espressione lambda su più righe che definisce la modalità con cui i dati saranno elaborati. I valori `ID` e `balance` per ogni conto vengono visualizzati in celle adiacenti e la riga viene visualizzata in rosso se il saldo è inferiore a zero. Per ulteriori informazioni, vedere [Espressioni lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).
 
      [!code-csharp[csOfficeWalkthrough#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#9)]
 
@@ -140,7 +140,7 @@ Per completare questa procedura dettagliata è necessario aver installato Micros
 
      [!code-vb[csOfficeWalkthrough#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#10)]
 
-     In questo codice vengono illustrate diverse nuove funzionalità di C#: la possibilità di omettere la parola chiave `ref` nella programmazione COM, gli argomenti denominati e gli argomenti facoltativi. Queste funzionalità sono già esistenti in Visual Basic. Il metodo [PasteSpecial](<xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A>) ha sette parametri, ognuno dei quali è definito come parametro per riferimento facoltativo. Gli argomenti denominati e facoltativi consentono di indicare i parametri a cui si vuol accedere per nome e di inviare argomenti solo a tali parametri. In questo esempio gli argomenti vengono inviati per indicare che deve essere creato un collegamento alla cartella di lavoro negli Appunti (parametro `Link`), e che il collegamento deve essere visualizzato nel documento di Word come icona (parametro `DisplayAsIcon`). Visual C# consente anche di omettere la parola chiave `ref` per questi argomenti.
+     In questo codice vengono illustrate diverse nuove funzionalità di C#: la possibilità di omettere la parola chiave `ref` nella programmazione COM, gli argomenti denominati e gli argomenti facoltativi. Queste funzionalità sono già esistenti in Visual Basic. Il [PasteSpecial](<xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A>) metodo dispone di sette parametri, tutti definiti come parametri di riferimento facoltativi. Gli argomenti denominati e facoltativi consentono di indicare i parametri a cui si vuol accedere per nome e di inviare argomenti solo a tali parametri. In questo esempio gli argomenti vengono inviati per indicare che deve essere creato un collegamento alla cartella di lavoro negli Appunti (parametro `Link`), e che il collegamento deve essere visualizzato nel documento di Word come icona (parametro `DisplayAsIcon`). Visual C# consente anche di omettere la parola chiave `ref` per questi argomenti.
 
 ### <a name="to-run-the-application"></a>Per eseguire l'applicazione
 
@@ -194,18 +194,18 @@ Per completare questa procedura dettagliata è necessario aver installato Micros
 - [Proprietà implementate automaticamente (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
 - [Proprietà implementate automaticamente (C#)](../classes-and-structs/auto-implemented-properties.md)
 - [Inizializzatori di raccolta](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
-- [Inizializzatori di oggetto e di raccolta](../classes-and-structs/object-and-collection-initializers.md)
+- [Inizializzatori di oggetto e di raccoltaObject and Collection Initializers](../classes-and-structs/object-and-collection-initializers.md)
 - [Parametri facoltativi](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
 - [Passaggio di argomenti in base alla posizione e al nome](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)
 - [Argomenti denominati e facoltativi](../classes-and-structs/named-and-optional-arguments.md)
-- [Associazione anticipata e tardiva](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
-- [dynamic](../../language-reference/builtin-types/reference-types.md)
-- [Uso del tipo dinamico](../types/using-type-dynamic.md)
+- [Binding anticipato e tardivo](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
+- [dinamico](../../language-reference/builtin-types/reference-types.md)
+- [Utilizzo del tipo dinamico](../types/using-type-dynamic.md)
 - [Espressioni lambda (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [Espressioni lambda (C#)](../statements-expressions-operators/lambda-expressions.md)
-- [Come usare le proprietà indicizzate nella programmazione dell'interoperabilità COM](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
+- [Come usare proprietà indicizzate nella programmazione dell'interoperabilità COM](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
 - [Procedura dettagliata: Incorporamento delle informazioni sui tipi da assembly di Microsoft Office in Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
-- [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti](../../../standard/assembly/embed-types-visual-studio.md)
-- [Procedura dettagliata: creazione del primo componente aggiuntivo VSTO per Excel](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
+- [Procedura dettagliata: incorporamento dei tipi da assembly gestiti](../../../standard/assembly/embed-types-visual-studio.md)
+- [Procedura dettagliata: Creazione del primo componente aggiuntivo VSTO per Excel](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
 - [Interoperabilità COM](../../../visual-basic/programming-guide/com-interop/index.md)
 - [Interoperabilità](./index.md)

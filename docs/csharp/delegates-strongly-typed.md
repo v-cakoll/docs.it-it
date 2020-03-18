@@ -4,24 +4,24 @@ description: Informazioni su come usare i tipi delegati generici per dichiarare 
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 564a683d-352b-4e57-8bac-b466529daf6b
-ms.openlocfilehash: efdbef39d0e6bf2f07cde2c9621cec173e921752
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 798e8b597389bc99d10e587ec417a4e717f28abc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037351"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146203"
 ---
 # <a name="strongly-typed-delegates"></a>Delegati fortemente tipizzati
 
-[Precedente](delegate-class.md)
+[Indietro](delegate-class.md)
 
-Nell'articolo precedente è stata descritta la creazione di tipi di delegato specifici tramite la parola chiave `delegate`. 
+Nell'articolo precedente è stata descritta la creazione di tipi di delegato specifici tramite la parola chiave `delegate`.
 
 La classe Delegate astratta offre l'infrastruttura per l'accoppiamento libero e la chiamata. I tipi delegati concreti diventano più utili includendo e imponendo l'indipendenza dai tipi per i metodi aggiunti all'elenco di chiamate per un oggetto delegato. Quando si usa la parola chiave `delegate` e si definisce un tipo delegato concreto, il compilatore genera tali metodi.
 
 In pratica, verranno creati nuovi tipi delegati ogni volta che è necessaria una firma del metodo diversa. Questa operazione potrebbe risultare tediosa dopo un periodo di tempo. Ogni nuova funzionalità richiede nuovi tipi delegati.
 
-Fortunatamente, questo non è necessario. Il framework .NET Core include diversi tipi che è possibile riutilizzare quando sono necessari tipi delegati. Poiché si tratta di definizioni [generiche](programming-guide/generics/index.md) è possibile dichiarare personalizzazioni quando sono necessarie nuove dichiarazioni di metodi. 
+Fortunatamente, questo non è necessario. Il framework .NET Core include diversi tipi che è possibile riutilizzare quando sono necessari tipi delegati. Poiché si tratta di definizioni [generiche](programming-guide/generics/index.md) è possibile dichiarare personalizzazioni quando sono necessarie nuove dichiarazioni di metodi.
 
 Il primo di questi tipi è il tipo <xref:System.Action> e diverse variazioni:
 
@@ -55,8 +55,8 @@ Per convenzione, il tipo del risultato è sempre l'ultimo parametro di tipo in t
 
 Usare uno dei tipi `Func` per ogni tipo delegato che restituisce un valore.
 
-È disponibile anche una <xref:System.Predicate%601> specializzata 
-digitare per un delegato che restituisce un test su un singolo valore:
+C'è anche un specializzato<xref:System.Predicate%601>
+tipo per un delegato che restituisce un test su un singolo valore:
 
 ```csharp
 public delegate bool Predicate<in T>(T obj);
@@ -72,10 +72,10 @@ Predicate<string> AnotherTestForString;
 Si potrebbe pensare che questi due tipi siano equivalenti. Ma non lo sono.
 Queste due variabili non possono essere usate indifferentemente. A una variabile di un tipo non è possibile assegnare un altro tipo. Il sistema dei tipi di C# usa i nomi dei tipi definiti, non la struttura.
 
-Tutte queste definizioni di tipi delegati nella libreria .NET Core dovrebbero eliminare la necessità di definire un nuovo tipo delegato per ogni nuova funzionalità creata che richiede delegati. Queste definizioni generiche dovrebbero offrire tutti i tipi delegati necessari nella maggior parte delle situazioni. È possibile creare semplicemente un'istanza di uno di questi tipi con i parametri di tipo richiesti. Nel caso di algoritmi che possono essere definiti come generici, questi delegati possono essere usati come tipi generici. 
+Tutte queste definizioni di tipi delegati nella libreria .NET Core dovrebbero eliminare la necessità di definire un nuovo tipo delegato per ogni nuova funzionalità creata che richiede delegati. Queste definizioni generiche dovrebbero offrire tutti i tipi delegati necessari nella maggior parte delle situazioni. È possibile creare semplicemente un'istanza di uno di questi tipi con i parametri di tipo richiesti. Nel caso di algoritmi che possono essere definiti come generici, questi delegati possono essere usati come tipi generici.
 
 Ciò dovrebbe consentire di risparmiare tempo e di ridurre il numero di nuovi tipi da creare per usare i delegati.
 
 Nel articolo successivo sono descritti diversi modelli comuni per l'uso pratico dei delegati.
 
-[avanti](delegates-patterns.md)
+[Avanti](delegates-patterns.md)

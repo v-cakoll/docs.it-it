@@ -1,15 +1,15 @@
 ---
-title: Come eseguire lo streaming di frammenti XML da un XmlReaderC#()
+title: Come eseguire il flusso di frammenti XML da un XmlReader (C
 ms.date: 07/20/2015
 ms.assetid: 4a8f0e45-768a-42e2-bc5f-68bdf0e0a726
 ms.openlocfilehash: f7914d33622518f983a685dd2e844a25fd3ca15f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714646"
 ---
-# <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a>Come eseguire lo streaming di frammenti XML da un XmlReaderC#()
+# <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a>Come eseguire il flusso di frammenti XML da un XmlReader (C
 
 Quando è necessario elaborare file XML di grandi dimensioni, potrebbe risultare impossibile caricare in memoria l'intero albero XML. In questo argomento viene illustrato come generare il flusso di frammenti tramite <xref:System.Xml.XmlReader>.  
   
@@ -19,12 +19,12 @@ Quando è necessario elaborare file XML di grandi dimensioni, potrebbe risultare
   
  Se si desidera creare un albero parziale, è possibile creare un'istanza di <xref:System.Xml.XmlReader>, posizionare il lettore sul nodo da convertire in un albero <xref:System.Xml.Linq.XElement> e quindi creare l'oggetto <xref:System.Xml.Linq.XElement>.  
   
-Nell'argomento [come eseguire lo streaming di frammenti XML con accesso a informazioni diC#intestazione ()](./how-to-stream-xml-fragments-with-access-to-header-information.md) sono contenute informazioni e un esempio su come trasmettere un documento più complesso.
+L'argomento [Come trasmettere frammenti XML con accesso alle informazioni di intestazione (C )](./how-to-stream-xml-fragments-with-access-to-header-information.md) contiene informazioni e un esempio su come trasmettere un documento più complesso.
   
- Nell'argomento [come eseguire la trasformazione flusso di documenti XML di grandiC#dimensioni ()](./how-to-perform-streaming-transform-of-large-xml-documents.md) è incluso un esempio di utilizzo di LINQ to XML per trasformare documenti XML di dimensioni estremamente grandi mantenendo un footprint di memoria ridotto.  
+ L'argomento Come eseguire la [trasformazione di flusso di documenti XML di grandi dimensioni (C )](./how-to-perform-streaming-transform-of-large-xml-documents.md) contiene un esempio di utilizzo di LINQ to XMLLINQ to XML per trasformare documenti XML di grandi dimensioni mantenendo un footprint di memoria ridotto.  
   
 ## <a name="example"></a>Esempio  
- In questo esempio viene creato un metodo dell'asse personalizzato. È possibile eseguire query su di esso utilizzando una query LINQ. Il metodo dell'asse personalizzato `StreamRootChildDoc` è progettato specificamente per leggere un documento contenente un elemento `Child` ripetuto.  
+ In questo esempio viene creato un metodo dell'asse personalizzato. È possibile eseguire una query utilizzando una query LINQ. Il metodo dell'asse personalizzato `StreamRootChildDoc` è progettato specificamente per leggere un documento contenente un elemento `Child` ripetuto.  
   
 ```csharp  
 static IEnumerable<XElement> StreamRootChildDoc(StringReader stringReader)  
@@ -74,7 +74,7 @@ static void Main(string[] args)
 }  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```output  
 bbb  

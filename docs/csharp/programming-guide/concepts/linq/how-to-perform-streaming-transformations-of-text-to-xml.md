@@ -1,15 +1,15 @@
 ---
-title: Come eseguire trasformazioni del flusso di testo in XML (C#)
+title: Come eseguire trasformazioni di streaming di testo in xml (C )How to perform streaming transformations of text to XML (C
 ms.date: 07/20/2015
 ms.assetid: 9b3bd941-d0ff-4f2d-ae41-7c3b81d8fae6
 ms.openlocfilehash: 496535b7f868095a62be2b72b1eea2b082e00a44
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345800"
 ---
-# <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>Come eseguire trasformazioni del flusso di testo in XML (C#)
+# <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>Come eseguire trasformazioni di streaming di testo in xml (C )How to perform streaming transformations of text to XML (C
 
 Uno degli approcci disponibili per l'elaborazione di un file di testo consiste nello scrivere un metodo di estensione che genera un flusso del file di testo, una riga alla volta, tramite il costrutto `yield return`. È quindi possibile scrivere una query LINQ che elabora il file di testo in modo posticipato lazy. Se poi si usa <xref:System.Xml.Linq.XStreamingElement> per il flusso di output, è possibile creare una trasformazione del file di testo in XML che usa una quantità minima di memoria, indipendentemente dalle dimensioni del file di testo di origine.
 
@@ -66,7 +66,7 @@ class Program
 }
 ```
 
- Questo esempio produce il seguente output:
+ Nell'esempio viene prodotto l'output seguente:
 
 ```xml
 <Root>

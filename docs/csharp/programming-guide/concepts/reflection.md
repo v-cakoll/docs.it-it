@@ -3,20 +3,20 @@ title: Reflection (C#)
 ms.date: 07/20/2015
 ms.assetid: f80a2362-953b-4e8e-9759-cd5f334190d4
 ms.openlocfilehash: a56fb24b63e4d80dbb67b079466b67cd11672023
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74711666"
 ---
 # <a name="reflection-c"></a>Reflection (C#)
 
-La reflection fornisce oggetti (di tipo <xref:System.Type>) che descrivono assembly, moduli e tipi. È possibile usare la reflection per creare in modo dinamico un'istanza di un tipo, associare il tipo a un oggetto esistente oppure ottenere il tipo da un oggetto esistente e richiamarne i metodi o accedere ai relativi campi e proprietà. Se si usano attributi nel codice, la reflection consente di accedervi. Per altre informazioni, vedere [Attributi](../../../standard/attributes/index.md).
+La reflection fornisce <xref:System.Type>oggetti (di tipo ) che descrivono assembly, moduli e tipi. È possibile usare la reflection per creare in modo dinamico un'istanza di un tipo, associare il tipo a un oggetto esistente oppure ottenere il tipo da un oggetto esistente e richiamarne i metodi o accedere ai relativi campi e proprietà. Se si usano attributi nel codice, la reflection consente di accedervi. Per altre informazioni, vedere [Attributi](../../../standard/attributes/index.md).
 
-Ecco un semplice esempio di reflection che usa il metodo <xref:System.Object.GetType> ereditato da tutti i tipi della classe di base `Object` per ottenere il tipo di una variabile:
+Di seguito è riportato un <xref:System.Object.GetType> semplice esempio di reflection `Object` utilizzando il metodo , ereditato da tutti i tipi dalla classe base, per ottenere il tipo di una variabile:Here's a simple example of reflection using the method - inherited by all types from the base class - to obtain the type of a variable:
 
 > [!NOTE]
-> Assicurarsi di aggiungere `using System;` e `using System.Reflection;` nella parte superiore del file con *estensione cs* .
+> Assicurati di `using System;` aggiungere `using System.Reflection;` e nella parte superiore del file *.cs.*
 
 ```csharp
 // Using GetType to obtain type information:
@@ -25,7 +25,7 @@ Type type = i.GetType();
 Console.WriteLine(type);
 ```
 
-L'output è: `System.Int32`.
+L'output `System.Int32`è: .
 
 L'esempio seguente usa la reflection per ottenere il nome completo dell'assembly caricato.
 
@@ -35,12 +35,12 @@ Assembly info = typeof(int).Assembly;
 Console.WriteLine(info);
 ```
 
-L'output è: `System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e`.
+L'output `System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e`è: .
 
 > [!NOTE]
 > Le parole chiave di C# `protected` e `internal` non hanno significato in IL e non sono usate nelle API di reflection. I termini corrispondenti in IL sono *Famiglia* e *Assembly*. Per identificare un metodo `internal` tramite reflection, usare la proprietà <xref:System.Reflection.MethodBase.IsAssembly%2A>. Per identificare un metodo `protected internal`, usare <xref:System.Reflection.MethodBase.IsFamilyOrAssembly%2A>.
 
-## <a name="reflection-overview"></a>Panoramica della reflection
+## <a name="reflection-overview"></a>Panoramica della riflessione
 
 La reflection è utile nelle situazioni seguenti:
 
@@ -51,9 +51,9 @@ La reflection è utile nelle situazioni seguenti:
 
 ## <a name="related-sections"></a>Sezioni correlate
 
-Per ulteriori informazioni:
+Per altre informazioni:
 
-- [Reflection](../../../framework/reflection-and-codedom/reflection.md)
+- [Riflessione](../../../framework/reflection-and-codedom/reflection.md)
 - [Visualizzazione delle informazioni sul tipo](../../../framework/reflection-and-codedom/viewing-type-information.md)
 - [Reflection e tipi generici](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)
 - <xref:System.Reflection.Emit>

@@ -3,15 +3,15 @@ title: Comando dotnet msbuild
 description: Il comando dotnet msbuild consente di accedere alla riga di comando di MSBuild.
 ms.date: 02/14/2020
 ms.openlocfilehash: 28a32a460d644d3e22f16b5dd9416222ae466e2e
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503673"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
-**Questo articolo si applica a:** ✔️ .NET Core 2. x SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .NET Core 2.x SDK e versioni successive
 
 ## <a name="name"></a>Nome
 
@@ -25,9 +25,9 @@ ms.locfileid: "77503673"
 
 Il comando `dotnet msbuild` consente di accedere a un'istanza completamente funzionante di MSBuild.
 
-Il comando ha esattamente le stesse funzionalità del client della riga di comando MSBuild esistente solo per i progetti in stile SDK. Le opzioni sono uguali. Per ulteriori informazioni sulle opzioni disponibili, vedere la Guida di [riferimento alla riga di comando di MSBuild](/visualstudio/msbuild/msbuild-command-line-reference).
+Il comando ha esattamente le stesse funzionalità del client della riga di comando MSBuild esistente solo per i progetti in stile SDK. Le opzioni sono uguali. Per ulteriori informazioni sulle opzioni disponibili, vedere le informazioni di [riferimento sulla riga di comando MSBuild](/visualstudio/msbuild/msbuild-command-line-reference).
 
-Il comando [dotnet build](dotnet-build.md) equivale a `dotnet msbuild -restore -target:Build`. la [compilazione DotNet](dotnet-build.md) è più comunemente utilizzata per la compilazione di progetti, ma poiché viene sempre eseguita la destinazione di compilazione, è possibile utilizzare `dotnet msbuild` quando non si desidera compilare il progetto. Se, ad esempio, si dispone di una destinazione specifica che si desidera eseguire senza compilare il progetto, utilizzare `dotnet msbuild` e specificare la destinazione.
+Il comando [dotnet build](dotnet-build.md) equivale a `dotnet msbuild -restore -target:Build`. [dotnet build](dotnet-build.md) è più comunemente usato per la compilazione di `dotnet msbuild` progetti, ma poiché esegue sempre la destinazione di compilazione, è possibile utilizzare quando non si desidera compilare il progetto. Ad esempio, se si dispone di una destinazione specifica `dotnet msbuild` che si desidera eseguire senza compilare il progetto, utilizzare e specificare la destinazione.
 
 ## <a name="examples"></a>Esempi
 

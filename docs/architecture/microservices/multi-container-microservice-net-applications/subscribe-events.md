@@ -3,10 +3,10 @@ title: Sottoscrizione di eventi
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Informazioni sui dettagli di pubblicazione e sottoscrizione di eventi di integrazione.
 ms.date: 01/30/2020
 ms.openlocfilehash: 544af8035ed23dd6507dfed4944b0c327c81d943
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77501802"
 ---
 # <a name="subscribing-to-events"></a>Sottoscrizione di eventi
@@ -32,7 +32,7 @@ Dopo l'esecuzione di questo codice il microservizio del sottoscrittore sarà in 
 
 ## <a name="publishing-events-through-the-event-bus"></a>Pubblicazione di eventi tramite il bus di eventi
 
-Il mittente del messaggio (microservizio di origine) pubblica infine gli eventi di integrazione con codice simile all'esempio seguente. Si tratta di un esempio semplificato che non prende in considerazione l'atomicità. Si implementerà codice simile ogni volta che un evento deve essere propagato tra più microservizi, in genere subito dopo il commit di dati o transazioni dal microservizio di origine.
+Il mittente del messaggio (microservizio di origine) pubblica infine gli eventi di integrazione con codice simile all'esempio seguente. (Questo è un esempio semplificato che non tiene conto dell'atomicità). È necessario implementare codice simile ogni volta che un evento deve essere propagato tra più microservizi, in genere subito dopo il commit di dati o transazioni dal microservizio di origine.
 
 Per iniziare, l'oggetto di implementazione del bus di eventi (basato su RabbitMQ o su un bus di servizio) verrà inserito a livello del costruttore del costruttore, come illustrato nel codice seguente:
 
@@ -139,7 +139,7 @@ Quando si implementano i passaggi per la pubblicazione degli eventi, è possibil
 
 La figura 6-22 illustra l'architettura relativa al primo di questi approcci.
 
-![Diagramma di atomicità durante la pubblicazione senza un microservizio Worker.](./media/subscribe-events/atomicity-publish-event-bus.png)
+![Diagramma dell'atomicità durante la pubblicazione senza un microservizio di lavoro.](./media/subscribe-events/atomicity-publish-event-bus.png)
 
 **Figura 6-22**. Atomicità durante la pubblicazione di eventi nel bus di eventi
 
@@ -147,7 +147,7 @@ Nell'approccio illustrato nella figura 6-22 manca un microservizio worker aggiun
 
 Nel secondo approccio si usa invece la tabella EventLog come coda e si usa sempre un microservizio worker per pubblicare i messaggi. Il processo corrispondente è simile a quello illustrato nella figura 6-23, in cui viene illustrato un microservizio aggiuntivo, mentre la tabella è l'unica origine durante la pubblicazione di eventi.
 
-![Diagramma di atomicità durante la pubblicazione con un microservizio Worker.](./media/subscribe-events/atomicity-publish-worker-microservice.png)
+![Diagramma dell'atomicità durante la pubblicazione con un microservizio di lavoro.](./media/subscribe-events/atomicity-publish-worker-microservice.png)
 
 **Figura 6-23**. Atomicità durante la pubblicazione di eventi nel bus di eventi con un microservizio worker
 
@@ -279,7 +279,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 Il gestore dell'evento deve verificare se il prodotto è presente in una delle istanze del carrello, aggiorna il prezzo dell'articolo per ogni articolo del carrello correlato e infine crea un avviso da visualizzare all'utente sulla variazione di prezzo, come illustrato nella figura 6-24.
 
-![Screenshot di un browser che mostra la notifica di modifica dei prezzi nel carrello dell'utente.](./media/subscribe-events/display-item-price-change.png)
+![Screenshot di un browser che mostra la notifica di modifica del prezzo nel carrello utente.](./media/subscribe-events/display-item-price-change.png)
 
 **Figura 6-24**. Visualizzazione di una variazione di prezzo dell'articolo in un carrello, comunicato dagli eventi di integrazione
 
@@ -301,7 +301,7 @@ Alcune operazioni di elaborazione dei messaggi sono intrinsecamente idempotenti.
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
--  \ **idempotenza del messaggio**
+- **Riconoscimento dell'idempotency dei messaggiHonoring message idempotency** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/jj591565(v=pandp.10)#honoring-message-idempotency>
 
 ## <a name="deduplicating-integration-event-messages"></a>Deduplicazione dei messaggi degli eventi di integrazione
@@ -322,63 +322,63 @@ Se il flag di nuovo recapito è impostato, il ricevitore deve tenerlo in conside
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Fork di eShopOnContainers tramite NServiceBus (Particular Software)**  \
+- **Forked eShopOnContainers tramite NServiceBus (software particolare)** \
     <https://go.particular.net/eShopOnContainers>
 
-- **Messaggistica basata su eventi** \
+- **Messaggi guidati da eventi** \
     <https://patterns.arcitura.com/soa-patterns/design_patterns/event_driven_messaging>
 
-- **Jimmy Bogard. Refactoring per la resilienza: valutazione** del \ di accoppiamento
+- **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling** \
     <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
-- **Canale di pubblicazione-sottoscrizione** \
+- **Canale Publish-Subscribe** \
     <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
 
 - **Comunicazione tra contesti delimitati** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
-- **Coerenza finale** \
+- **Eventuale coerenza** \
     <https://en.wikipedia.org/wiki/Eventual_consistency>
 
 - **Philip Brown. Strategie per l'integrazione di contesti delimitati** \
     <https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/>
 
-- **Chris Richardson. Sviluppo di microservizi transazionali con aggregazioni, Event sourcing e CQRS-Part 2** \
+- **Chris Richardson. Sviluppo di microservizi transazionali mediante aggregazioni, approvvigionamento di eventi e CQRS - Parte 2** \
     <https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson>
 
-- **Chris Richardson. Modello** di origine eventi \
+- **Chris Richardson. Modello di approvvigionamento di eventi** \
     <https://microservices.io/patterns/data/event-sourcing.html>
 
-- **Introduzione a Event Sourcing** \
+- **Presentazione dell'evento Sourcing** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591559(v=pandp.10)>
 
 - **Database di Event Store**. Sito ufficiale. \
     <https://geteventstore.com/>
 
-- **Patrick Nommensen. Gestione dati basata su eventi per i microservizi** \
+- **Patrick Nommensen. Gestione dei dati basata su eventi per i microservizi** \
     <https://dzone.com/articles/event-driven-data-management-for-microservices-1>
 
-- **Il teorema CAP** \
+- **Teorema della PAC** \
     <https://en.wikipedia.org/wiki/CAP_theorem>
 
-- **What is CAP Theorem?** (Che cos'è il teorema CAP) \
+- **Che cos'è il teorema CAP** \
     <https://www.quora.com/What-Is-CAP-Theorem-1>
 
-- **Introduzione alla coerenza dei dati** \
+- **Primer di coerenza dei dati** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
-- **Rick Saling. Teorema CAP: perché "tutto è diverso" con il cloud e Internet** \
+- **Rick Saling. Teorema CAP: Perché "tutto è diverso" con il cloud e Internet** \
     <https://docs.microsoft.com/archive/blogs/rickatmicrosoft/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/>
 
-- **Eric Brewer. CAP dodici anni dopo: come sono state modificate le "regole"**  \
+- **Eric Brewer. CAP Dodici anni dopo: come sono cambiate le "regole"** \
     <https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed>
 
-- **Bus di servizio di Azure. Messaggistica negoziata:  \ di rilevamento duplicati**
+- **Bus di servizio di Azure.Azure Service Bus. Messaggistica negoziata: rilevamento duplicati**  \
     <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
 
-- **Guida all'affidabilità**documentazione RabbitMQ \
+- **Reliability Guide** (Guida all'affidabilità), documentazione RabbitMQ \
     <https://www.rabbitmq.com/reliability.html#consumer>
 
 > [!div class="step-by-step"]
-> [Precedente](rabbitmq-event-bus-development-test-environment.md)
-> [Successivo](test-aspnet-core-services-web-apps.md)
+> [Successivo](rabbitmq-event-bus-development-test-environment.md)
+> [precedente](test-aspnet-core-services-web-apps.md)

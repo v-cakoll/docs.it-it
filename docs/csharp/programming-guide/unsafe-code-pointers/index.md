@@ -11,10 +11,10 @@ helpviewer_keywords:
 - pointers [C#], about pointers
 ms.assetid: b0fcca10-a92d-4f2a-835b-b0ccae6739ee
 ms.openlocfilehash: 013af4e55c8fc396bbc92058d7fb454484f3263e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711831"
 ---
 # <a name="unsafe-code-and-pointers-c-programming-guide"></a>Codice non gestito e puntatori (Guida per programmatori C#)
@@ -42,7 +42,7 @@ Il codice unsafe presenta le proprietà seguenti:
 
 Per altre informazioni, vedere:
 
-- [Tipi di puntatori](pointer-types.md)
+- [Tipi di puntatore](pointer-types.md)
 
 - [Buffer a dimensione fissa](fixed-size-buffers.md)
 
@@ -53,4 +53,4 @@ Per altre informazioni, vedere l'argomento [Codice di tipo unsafe](~/_csharplang
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori C#](../index.md)
-- [unsafe](../../language-reference/keywords/unsafe.md)
+- [Pericoloso](../../language-reference/keywords/unsafe.md)

@@ -5,19 +5,19 @@ author: thraka
 ms.author: adegeo
 ms.date: 11/03/2019
 ms.openlocfilehash: 31328be14811760bc8d7fb527e0d55abfe6b1493
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156751"
 ---
 # <a name="how-to-enable-tab-completion-for-the-net-core-cli"></a>Come abilitare il completamento tramite TAB per l'interfaccia della riga di comando di .NET Core
 
-**Questo articolo si applica a:** ✔️ .net core 2,1 SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .NET Core 2.1 SDK e versioni successive
 
-Questo articolo descrive come configurare il completamento tramite TAB per tre shell: PowerShell, Bash e zsh. Per altre shell, fare riferimento alla relativa documentazione per informazioni su come configurare il completamento tramite tasto TAB.
+Questo articolo descrive come configurare il completamento tramite TAB per tre shell: PowerShell, Bash e zsh. Per altre shell, fare riferimento alla relativa documentazione su come configurare il completamento delle schede.
 
-Una volta configurato, il completamento tramite tasto TAB per la interfaccia della riga di comando di .NET Core viene attivato digitando un comando `dotnet` nella shell, quindi premendo il tasto TAB. La riga di comando corrente viene inviata al comando `dotnet complete` e i risultati vengono elaborati dalla shell. Per testare i risultati senza abilitazione del completamento tramite TAB, inviare direttamente un elemento al comando `dotnet complete`. Ad esempio:
+Una volta impostato, il completamento tramite tabulazione `dotnet` per l'interfaccia della riga di comando di .NET Core viene attivato digitando un comando nella shell e quindi premendo TAB. La riga di comando corrente viene inviata al comando `dotnet complete` e i risultati vengono elaborati dalla shell. Per testare i risultati senza abilitazione del completamento tramite TAB, inviare direttamente un elemento al comando `dotnet complete`. Ad esempio:
 
 ```console
 > dotnet complete "dotnet a"

@@ -1,5 +1,5 @@
 ---
-title: <typeparam> - C# Guida alla programmazione
+title: <typeparam> - Guida alla programmazione in C
 ms.date: 07/20/2015
 f1_keywords:
 - typeparam
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - typeparam C# XML tag
 ms.assetid: 9b99d400-e911-4e55-99c6-64367c96aa4f
 ms.openlocfilehash: 867ecacf58f95533395ded203a8f17bc92558ccf
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76793357"
 ---
-# <a name="typeparam-c-programming-guide"></a>> typeparam \<(C# guida per programmatori)
+# <a name="typeparam-c-programming-guide"></a>\<> typeparam (Guida per programmatori C
 
 ## <a name="syntax"></a>Sintassi
 
@@ -32,7 +32,7 @@ ms.locfileid: "76793357"
 
   Descrizione del parametro di tipo.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Il tag `<typeparam>` deve essere usato nel commento per una dichiarazione di tipo o metodo generico per descrivere un parametro di tipo. Aggiungere un tag per ogni parametro di tipo del tipo o del metodo generico.
 
@@ -48,6 +48,6 @@ Compilare con [-doc](../../language-reference/compiler-options/doc-compiler-opti
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../../language-reference/index.md)
-- [Guida per programmatori C#](../index.md)
+- [Informazioni di riferimento su C#](../../language-reference/index.md)
+- [Guida alla programmazione in C](../index.md)
 - [Tag consigliati per i commenti relativi alla documentazione](./recommended-tags-for-documentation-comments.md)

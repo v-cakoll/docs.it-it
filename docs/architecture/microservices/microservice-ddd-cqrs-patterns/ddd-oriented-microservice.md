@@ -3,11 +3,11 @@ title: Progettazione di un microservizio orientato a DDD
 description: Architettura di microservizi .NET per applicazioni .NET incluse in contenitori | Progettazione del microservizio degli ordini orientato a DDD e dei relativi livelli dell'applicazione.
 ms.date: 10/08/2018
 ms.openlocfilehash: c5ac55978ca979a3ae055d9b0cd2d3c6b3187b4e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739962"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401697"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>Progettare un microservizio orientato a DDD
 
@@ -43,7 +43,7 @@ La figura 7-5 illustra una progettazione a più livelli implementata nell'applic
 
 I tre livelli in un microservizio DDD, ad esempio per gli ordini. Ogni livello è un progetto di Visual Studio: il livello dell'applicazione è Ordering.API, il livello del dominio è Ordering.Domain e il livello dell'infrastruttura è Ordering.Infrastructure. Si vuole progettare il sistema in modo che ogni livello comunichi solo con determinati altri livelli. Questo obiettivo può risultare più semplice se i livelli vengono implementati come librerie di classi diverse, in quanto è possibile identificare chiaramente quali dipendenze siano impostate tra le librerie. Ad esempio, il livello del modello di dominio non deve accettare una dipendenza da qualsiasi altro livello (le classi di modello di dominio devono essere oggetti Plain Old CLR Object, o[POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)). Come illustrato nella figura 7-6, la libreria del livello **Ordering.Domain** presenta dipendenze solo dalle librerie .NET Core o dai pacchetti NuGet, ma da nessun'altra libreria personalizzata, ad esempio una libreria di dati o di persistenza.
 
-![Screenshot dell'ordinamento delle dipendenze di dominio.](./media/ddd-oriented-microservice/ordering-domain-dependencies.png)
+![Screenshot di Ordering.Domain dependencies.](./media/ddd-oriented-microservice/ordering-domain-dependencies.png)
 
 **Figura 7-6**. I livelli implementati come librerie consentono un migliore controllo delle dipendenze tra i livelli
 
@@ -96,12 +96,12 @@ Dipendenze in un servizio DDD, il livello dell'applicazione dipende da dominio e
 - **DevIQ. Principio di persistenza dell'ignoranza** \
   <https://deviq.com/persistence-ignorance/>
 
-- **Oren Eini. Ignoranza infrastruttura** \
+- **Oren Eini. Ignoranza delle infrastrutture** \
   <https://ayende.com/blog/3137/infrastructure-ignorance>
 
-- **Angel Lopez. Architettura a più livelli nella progettazione basata su domini** \
+- **Angel Lopez. Architettura basata su più livelli nella progettazione basata su dominio** \
   <https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/>
 
 >[!div class="step-by-step"]
->[Precedente](cqrs-microservice-reads.md)
->[Successivo](microservice-domain-model.md)
+>[Successivo](cqrs-microservice-reads.md)
+>[precedente](microservice-domain-model.md)

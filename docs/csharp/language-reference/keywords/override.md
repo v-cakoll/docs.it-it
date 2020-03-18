@@ -8,10 +8,10 @@ helpviewer_keywords:
 - override keyword [C#]
 ms.assetid: dd1907a8-acf8-46d3-80b9-c2ca4febada8
 ms.openlocfilehash: acad3aa3b196c184132ad1acdf52b18a799b0896
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713248"
 ---
 # <a name="override-c-reference"></a>override (Riferimenti per C#)
@@ -20,7 +20,7 @@ Il modificatore `override` è necessario per estendere o modificare l'implementa
 
 ## <a name="example"></a>Esempio
 
-In questo esempio, la classe `Square` deve fornire un'implementazione sottoposta a override di `GetArea` perché `GetArea` viene ereditata dalla classe `Shape` astratta:
+In questo esempio, `Square` la classe deve `GetArea` fornire `GetArea` un'implementazione `Shape` sottoposta a override di perché viene ereditata dalla classe astratta:In this example, the class must provide an overridden implementation of because is inherited from the abstract class:
 
 [!code-csharp[csrefKeywordsModifiers#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#1)]
 
@@ -48,12 +48,12 @@ Questo esempio definisce una classe base denominata `Employee` e una classe deri
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
+- [Guida di riferimento a C](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Ereditarietà](../../programming-guide/classes-and-structs/inheritance.md)
 - [Parole chiave di C#](index.md)
 - [Modificatori](index.md)
-- [abstract](abstract.md)
-- [virtual](virtual.md)
+- [astratto](abstract.md)
+- [Virtuale](virtual.md)
 - [new (modifier)](new-modifier.md)
 - [Polimorfismo](../../programming-guide/classes-and-structs/polymorphism.md)

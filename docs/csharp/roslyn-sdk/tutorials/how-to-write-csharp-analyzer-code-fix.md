@@ -4,10 +4,10 @@ description: In questa esercitazione vengono fornite istruzioni dettagliate per 
 ms.date: 08/01/2018
 ms.custom: mvc
 ms.openlocfilehash: f6fc21c010f9b5fcd5e709ef822639c020a7c93b
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78240550"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Esercitazione: compilare il primo analizzatore con correzione del codice
@@ -60,7 +60,7 @@ Il modello di analizzatore con correzione del codice crea tre progetti: uno cont
 > [!TIP]
 > Quando si esegue l'analizzatore, si avvia una seconda copia di Visual Studio. Questa seconda copia usa un diverso hive del Registro di sistema per archiviare le impostazioni. Questo consente di distinguere le impostazioni di visualizzazione nelle due copie di Visual Studio. È possibile scegliere un tema diverso per l'esecuzione sperimentale di Visual Studio. Inoltre, non eseguire il roaming delle impostazioni o accedere all'account di Visual Studio usando l'istanza sperimentale di Visual Studio. Ciò consente di mantenere diverse le impostazioni.
 
-Nella seconda istanza di Visual Studio appena avviata creare un nuovo C# progetto di applicazione console (.NET Core o .NET Framework progetto funzionerà--Analyzers funziona a livello di origine). Passare il puntatore del mouse sul token con una sottolineatura ondulata e viene visualizzato il testo di avviso fornito da un analizzatore.
+Nella seconda istanza di Visual Studio appena avviata, creare un nuovo progetto di applicazione console di C . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Passare il mouse sul token con una sottolineatura ondulata e viene visualizzato il testo di avviso fornito da un analizzatore.
 
 Il modello crea un analizzatore che genera un avviso per ogni dichiarazione di tipo in cui il nome del tipo contiene lettere minuscole, come illustrato nella figura seguente:
 

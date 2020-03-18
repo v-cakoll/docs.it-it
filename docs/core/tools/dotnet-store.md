@@ -3,15 +3,15 @@ title: comando dotnet store
 description: Il comando 'dotnet store' archivia gli assembly specificati nell'archivio pacchetti di runtime.
 ms.date: 02/14/2020
 ms.openlocfilehash: da1d132b2b873ff55ec104b5bb092d0194889bdc
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503589"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
-**Questo articolo si applica a:** ✔️ .NET Core 2. x SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .NET Core 2.x SDK e versioni successive
 
 ## <a name="name"></a>Nome
 
@@ -35,11 +35,11 @@ dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-
 
 - **`-m|--manifest <PATH_TO_MANIFEST_FILE>`**
 
-  Il *file manifesto dell'archivio pacchetti* è un file XML che contiene l'elenco di pacchetti da archiviare. Il formato del file manifesto è compatibile con il formato di progetto SDK. È quindi possibile usare un file di progetto che fa riferimento ai pacchetti desiderati con l'opzione `-m|--manifest` per archiviare gli assembly nell'archivio pacchetti di runtime. Per specificare più file manifesto, ripetere l'opzione e il percorso per ogni file. Ad esempio: `--manifest packages1.csproj --manifest packages2.csproj`.
+  Il *file manifesto dell'archivio pacchetti* è un file XML che contiene l'elenco di pacchetti da archiviare. Il formato del file manifesto è compatibile con il formato di progetto SDK. È quindi possibile usare un file di progetto che fa riferimento ai pacchetti desiderati con l'opzione `-m|--manifest` per archiviare gli assembly nell'archivio pacchetti di runtime. Per specificare più file manifesto, ripetere l'opzione e il percorso per ogni file. Ad esempio `--manifest packages1.csproj --manifest packages2.csproj`.
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  L'[identificatore di runtime](../rid-catalog.md) di destinazione.
+  [Identificatore di runtime](../rid-catalog.md) di destinazione.
 
 ## <a name="optional-options"></a>Opzioni facoltative
 

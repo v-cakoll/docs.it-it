@@ -4,11 +4,11 @@ description: Informazioni sulle proprietà di C#, tra cui funzionalità per la c
 ms.technology: csharp-fundamentals
 ms.date: 04/25/2018
 ms.openlocfilehash: bda8a4f58f71b57248296dd4ba9f9bf4cbed40d4
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039753"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399413"
 ---
 # <a name="properties"></a>Proprietà
 
@@ -141,12 +141,12 @@ Uno scenario finale in cui è necessario scrivere codice nella funzione di acces
 
 [!code-csharp[invalidating the cache correctly](../../samples/snippets/csharp/properties/Person.cs#15)]
 
-L'operatore `?.` è chiamato *operatore condizionale Null*. L'operatore cerca un riferimento Null prima di eseguire la valutazione della parte destra dell'operatore. Se non vengono trovati sottoscrittori dell'evento `PropertyChanged`, il codice che genera l'evento non viene eseguito. In questo caso, verrà generato `NullReferenceException` senza eseguire il controllo. Per altre informazioni, vedere [`events`](events-overview.md). Questo esempio usa anche il nuovo operatore `nameof` per convertire il simbolo del nome della proprietà nella rappresentazione di testo.
+L'operatore `?.` è chiamato *operatore condizionale Null*. L'operatore cerca un riferimento Null prima di eseguire la valutazione della parte destra dell'operatore. Se non vengono trovati sottoscrittori dell'evento `PropertyChanged`, il codice che genera l'evento non viene eseguito. In questo caso, verrà generato `NullReferenceException` senza eseguire il controllo. Per ulteriori informazioni, vedere [`events`](events-overview.md). Questo esempio usa anche il nuovo operatore `nameof` per convertire il simbolo del nome della proprietà nella rappresentazione di testo.
 L'uso di `nameof` può ridurre gli errori nel caso in cui il nome della proprietà sia stato digitato erroneamente.
 
 L'implementazione di <xref:System.ComponentModel.INotifyPropertyChanged> è quindi un esempio di caso in cui è possibile scrivere codice nelle funzioni di accesso per supportare gli scenari necessari.
 
-## <a name="summing-up"></a>Conclusioni
+## <a name="summing-up"></a>Riepilogo
 
 Le proprietà sono una forma di campi intelligenti in una classe o un oggetto. All'esterno dell'oggetto, vengono visualizzate come campi dell'oggetto. Tuttavia, le proprietà possono essere implementate usando l'intera gamma di funzionalità di C#.
 È possibile specificare la convalida, un'accessibilità diversa, la valutazione lazy o tutti i requisiti necessari negli scenari.

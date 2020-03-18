@@ -1,22 +1,22 @@
 ---
 title: Interfaccia della riga di comando di .NET Core
 titleSuffix: ''
-description: Panoramica del interfaccia della riga di comando di .NET Core e delle relative funzionalità.
+description: Panoramica dell'interfaccia della riga di comando di .NET Core e delle relative funzionalità.
 ms.date: 02/13/2020
-ms.openlocfilehash: d84f96889cabc3fb4521e39db25050aacdd11546
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 45a40063f70a621e807abf5e01ceecb125aecd7c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156712"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79399119"
 ---
-# <a name="net-core-cli-overview"></a>Panoramica di interfaccia della riga di comando di .NET Core
+# <a name="net-core-cli-overview"></a>Panoramica dell'interfaccia della riga di comando di .NET Core
 
-**Questo articolo si applica a:** ✔️ .net core 2,1 SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .NET Core 2.1 SDK e versioni successive
 
-L'interfaccia della riga di comando di .NET Core è una serie di procedure multipiattaforma per lo sviluppo, la compilazione, l'esecuzione e la pubblicazione di applicazioni .NET Core.
+L'interfaccia della riga di comando (CLI) di .NET Core è una catena di strumenti multipiattaforma per lo sviluppo, la compilazione, l'esecuzione e la pubblicazione di applicazioni .NET Core.
 
-Il interfaccia della riga di comando di .NET Core è incluso nel [.NET Core SDK](../sdk.md). Per informazioni su come installare il .NET Core SDK, vedere [Install the .NET Core SDK](../install/sdk.md).
+L'interfaccia della riga di comando di .NET Core è inclusa in [.NET Core SDK.](../sdk.md) Per informazioni su come installare .NET Core SDK, vedere [Installare .NET Core SDK](../install/sdk.md).
 
 ## <a name="cli-commands"></a>Comandi dell'interfaccia della riga di comando
 
@@ -24,46 +24,46 @@ Per impostazione predefinita vengono installati i comandi seguenti:
 
 ### <a name="basic-commands"></a>Comandi di base
 
-- [Nuovo](dotnet-new.md)
-- [restore](dotnet-restore.md)
-- [build](dotnet-build.md)
-- [pubblica](dotnet-publish.md)
-- [run](dotnet-run.md)
-- [test](dotnet-test.md)
-- [vstest](dotnet-vstest.md)
-- [pack](dotnet-pack.md)
-- [migrazione](dotnet-migrate.md)
-- [clean](dotnet-clean.md)
-- [sln](dotnet-sln.md)
-- [help](dotnet-help.md)
-- [store](dotnet-store.md)
+- [`new`](dotnet-new.md)
+- [`restore`](dotnet-restore.md)
+- [`build`](dotnet-build.md)
+- [`publish`](dotnet-publish.md)
+- [`run`](dotnet-run.md)
+- [`test`](dotnet-test.md)
+- [`vstest`](dotnet-vstest.md)
+- [`pack`](dotnet-pack.md)
+- [`migrate`](dotnet-migrate.md)
+- [`clean`](dotnet-clean.md)
+- [`sln`](dotnet-sln.md)
+- [`help`](dotnet-help.md)
+- [`store`](dotnet-store.md)
 
 ### <a name="project-modification-commands"></a>Comandi di modifica dei progetti
 
-- [add package](dotnet-add-package.md)
-- [add reference](dotnet-add-reference.md)
-- [remove package](dotnet-remove-package.md)
-- [remove reference](dotnet-remove-reference.md)
-- [list reference](dotnet-list-reference.md)
+- [`add package`](dotnet-add-package.md)
+- [`add reference`](dotnet-add-reference.md)
+- [`remove package`](dotnet-remove-package.md)
+- [`remove reference`](dotnet-remove-reference.md)
+- [`list reference`](dotnet-list-reference.md)
 
 ### <a name="advanced-commands"></a>Comandi avanzati
 
-- [nuget delete](dotnet-nuget-delete.md)
-- [nuget locals](dotnet-nuget-locals.md)
-- [nuget push](dotnet-nuget-push.md)
-- [msbuild](dotnet-msbuild.md)
-- [dotnet install script](dotnet-install-script.md)
+- [`nuget delete`](dotnet-nuget-delete.md)
+- [`nuget locals`](dotnet-nuget-locals.md)
+- [`nuget push`](dotnet-nuget-push.md)
+- [`msbuild`](dotnet-msbuild.md)
+- [`dotnet install script`](dotnet-install-script.md)
 
 ### <a name="tool-management-commands"></a>Comandi di gestione degli strumenti
 
-- [installazione dello strumento](dotnet-tool-install.md)
-- [Elenco strumenti](dotnet-tool-list.md)
-- [aggiornamento dello strumento](dotnet-tool-update.md)
-- [ripristino dello strumento](global-tools.md#install-a-local-tool) **disponibile a partire da .NET Core SDK 3,0**
-- [esecuzione dello strumento](global-tools.md#invoke-a-local-tool) **disponibile a partire da .NET Core SDK 3,0**
-- [Disinstallazione dello strumento](dotnet-tool-uninstall.md)
+- [`tool install`](dotnet-tool-install.md)
+- [`tool list`](dotnet-tool-list.md)
+- [`tool update`](dotnet-tool-update.md)
+- [`tool restore`](global-tools.md#install-a-local-tool)Disponibile da .NET Core SDK 3.0.
+- [`tool run`](global-tools.md#invoke-a-local-tool)Disponibile da .NET Core SDK 3.0.
+- [`tool uninstall`](dotnet-tool-uninstall.md)
 
-Gli strumenti sono applicazioni console installate da pacchetti NuGet e vengono richiamate dal prompt dei comandi. È possibile scrivere strumenti manualmente oppure installare gli strumenti scritti da terze parti. Gli strumenti sono noti anche come strumenti globali, strumenti per percorsi di strumenti e strumenti locali. Per altre informazioni, vedere [Cenni preliminari sugli strumenti di .NET Core](global-tools.md).
+Gli strumenti sono applicazioni console installate da pacchetti NuGet e richiamate dal prompt dei comandi. È possibile scrivere strumenti da soli o installare strumenti scritti da terze parti. Gli strumenti sono noti anche come strumenti globali, strumenti per il percorso degli strumenti e strumenti locali. Per ulteriori informazioni, vedere [Panoramica degli strumenti .NET Core](global-tools.md).
 
 ## <a name="command-structure"></a>Struttura dei comandi
 
@@ -87,7 +87,7 @@ Nel momento in cui si fornisce un comando al driver, `dotnet.exe` avvia il proce
 dotnet build
 ```
 
-Come prima operazione, il driver determina la versione dell'SDK da usare. Se non è presente alcun file [Global. JSON](global-json.md) , viene usata la versione più recente dell'SDK disponibile. Può essere una versione di anteprima o una versione stabile, a seconda di qual è la più recente disponibile nel computer.  Dopo aver determinato la versione del SDK il driver esegue il comando.
+Come prima operazione, il driver determina la versione dell'SDK da usare. Se non è presente alcun file [global.json,](global-json.md) viene utilizzata la versione più recente dell'SDK. Può essere una versione di anteprima o una versione stabile, a seconda di qual è la più recente disponibile nel computer.  Dopo aver determinato la versione del SDK il driver esegue il comando.
 
 ### <a name="command"></a>Comando
 
@@ -103,5 +103,5 @@ Le opzioni passate alla riga di comando sono le opzioni per il comando richiamat
 
 ## <a name="see-also"></a>Vedere anche
 
-- [repository GitHub DotNet/SDK](https://github.com/dotnet/sdk/)
+- [repository GitHub dotnet/sdk](https://github.com/dotnet/sdk/)
 - [.NET Core installation guide](../install/sdk.md) (Guida all'installazione di .NET Core)

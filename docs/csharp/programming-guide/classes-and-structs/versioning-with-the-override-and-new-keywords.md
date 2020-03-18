@@ -6,10 +6,10 @@ helpviewer_keywords:
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
 ms.openlocfilehash: 089d5d7c7a95e2de4629f53255d9d9790fd5508a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705392"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Controllo delle versioni con le parole chiave Override e New (Guida per programmatori C#)
@@ -61,7 +61,7 @@ Il linguaggio C# è progettato in modo che il controllo delle versioni tra le cl
   
  [!code-csharp[csProgGuideInheritance#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#31)]  
   
- L'uso della parola chiave `new` indica al compilatore che la definizione nasconde la definizione contenuta nella classe di base. Comportamento predefinito.  
+ L'uso della parola chiave `new` indica al compilatore che la definizione nasconde la definizione contenuta nella classe di base. Questo è il comportamento predefinito.  
   
 ## <a name="override-and-method-selection"></a>Override e selezione del metodo  
  Quando un metodo è denominato in una classe, il compilatore C# seleziona il metodo migliore per la chiamata se più metodi sono compatibili con la chiamata, ad esempio quando esistono due metodi con lo stesso nome e parametri compatibili con il parametro passato. I seguenti metodi sarebbero compatibili:  

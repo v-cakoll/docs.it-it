@@ -1,5 +1,5 @@
 ---
-title: Come sottoscrivere e annullare la sottoscrizione di eventi- C# Guida alla programmazione
+title: Come sottoscrivere e annullare la sottoscrizione agli eventi - Guida per programmatori C
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event handlers [C#], creating
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
 ms.openlocfilehash: 3df357cb15f7f77cefbf360dd9615ce246afe2ea
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705327"
 ---
-# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Come sottoscrivere e annullare la sottoscrizione di eventi (C# guida per programmatori)
+# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Come sottoscrivere e annullare la sottoscrizione agli eventi (Guida per programmatori C
 Si sottoscrive un evento pubblicato da un'altra classe quando si vuole scrivere codice personalizzato che viene chiamato quando viene generato tale evento. È ad esempio possibile sottoscrivere l'evento `click` di un pulsante perché l'applicazione esegua un'operazione utile quando l'utente fa clic sul pulsante in questione.  
   
 ### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>Per sottoscrivere gli eventi usando l'IDE di Visual Studio  
@@ -99,8 +99,8 @@ Si sottoscrive un evento pubblicato da un'altra classe quando si vuole scrivere 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Eventi](./index.md)
-- [event](../../language-reference/keywords/event.md)
+- [Events](./index.md)
+- [Evento](../../language-reference/keywords/event.md)
 - [Come pubblicare eventi conformi alle linee guida di .NET Framework](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
-- [Operatori - e -=](../../language-reference/operators/subtraction-operator.md)
+- [- e - - operatori](../../language-reference/operators/subtraction-operator.md)
 - [Operatori + e +=](../../language-reference/operators/addition-operator.md)

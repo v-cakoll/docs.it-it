@@ -5,10 +5,10 @@ helpviewer_keywords:
 - expression-bodied members[C#]
 - C# language, expresion-bodied members
 ms.openlocfilehash: f212bb707d3dd2d4a7cc917d335a83cff01ed0cf
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75711987"
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>Membri con corpo di espressione (Guida per programmatori C#)
@@ -23,13 +23,13 @@ dove *expression* è un'espressione valida.
 
 Il supporto per le definizioni dei corpi di espressione è stato introdotto per i metodi e le proprietà di sola lettura in C# 6 ed è stato ampliato in C# 7.0. Le definizioni dei corpi di espressione possono essere usate con i membri dei tipi elencati nella tabella seguente:
 
-|Member  |Supportato a partire da... |
+|Membro  |Supportato a partire da... |
 |---------|---------|
 |[Metodo](#methods)  |C# 6 |
 |[Proprietà di sola lettura](#read-only-properties)   |C# 6  |
-|[Property](#properties)  |C# 7.0 |
+|[Proprietà](#properties)  |C# 7.0 |
 |[Costruttore](#constructors)   |C# 7.0 |
-|[Finalizzatore](#finalizers)     |C# 7.0 |
+|[Finalizer](#finalizers)     |C# 7.0 |
 |[Indicizzatore](#indexers)       |C# 7.0 |
 
 ## <a name="methods"></a>Metodi
@@ -84,11 +84,11 @@ L'esempio seguente definisce un finalizzatore che usa una definizione di corpo d
 
 Per altre informazioni, vedere [Finalizzatori (Guida per programmatori C#)](../classes-and-structs/destructors.md).
 
-## <a name="indexers"></a>Indexers (Indicizzatori)
+## <a name="indexers"></a>Indicizzatori
 
-Analogamente alle proprietà, le funzioni di accesso Indexer `get` e `set` sono costituite da definizioni del corpo dell'espressione se la funzione di accesso `get` è costituita da una singola espressione che restituisce un valore o la funzione di accesso `set` esegue un'assegnazione semplice.
+Come con le `get` proprietà, indicizzatore e `set` funzioni `get` di accesso sono costituite da definizioni del corpo dell'espressione se la funzione di accesso è costituita da una singola espressione che restituisce un valore o la `set` funzione di accesso esegue un'assegnazione semplice.
 
-Nell'esempio seguente viene definita una classe denominata `Sports` che include una matrice <xref:System.String> interna contenente i nomi di alcuni sport. Le funzioni di accesso `get` e `set` dell'indicizzatore sono implementate come definizioni del corpo dell'espressione.
+Nell'esempio seguente viene definita una classe denominata `Sports` che include una matrice <xref:System.String> interna contenente i nomi di alcuni sport. Sia l'indicizzatore `get` che `set` le funzioni di accesso vengono implementate come definizioni del corpo dell'espressione.
 
 [!code-csharp[expression-bodied-indexer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-indexers.cs#1)]
 

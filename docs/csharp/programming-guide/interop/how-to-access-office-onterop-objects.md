@@ -1,5 +1,5 @@
 ---
-title: Come accedere a oggetti di interoperabilità di Office- C# Guida alla programmazione
+title: Come accedere agli oggetti di interoperabilità di Office - Guida per programmatori C
 ms.date: 07/20/2015
 helpviewer_keywords:
 - optional parameters [C#], Office programming
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
 ms.openlocfilehash: b5d2da011ec6318c8b07f1eb4d383a4d56488239
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75700835"
 ---
-# <a name="how-to-access-office-interop-objects-c-programming-guide"></a>Come accedere agli oggetti di interoperabilità di Office (C# guida per programmatori)
+# <a name="how-to-access-office-interop-objects-c-programming-guide"></a>Come accedere agli oggetti di interoperabilità di Office (Guida per programmatori C
 
-C#dispone di funzionalità che semplificano l'accesso agli oggetti API di Office. Le nuove funzionalità includono argomenti denominati e facoltativi, un nuovo tipo chiamato `dynamic` e la possibilità di passare argomenti a parametri di riferimento nei metodi COM come se fossero parametri di valore.
+In Cè sono disponibili funzionalità che semplificano l'accesso agli oggetti API di Office. Le nuove funzionalità includono argomenti denominati e facoltativi, un nuovo tipo chiamato `dynamic` e la possibilità di passare argomenti a parametri di riferimento nei metodi COM come se fossero parametri di valore.
 
 In questo argomento si useranno le nuove funzionalità per scrivere codice che consente di creare e visualizzare un foglio di lavoro di Microsoft Office Excel. Quindi si scriverà il codice per aggiungere un documento di Office Word contenente un'icona che è collegata al foglio di lavoro di Excel.
 
@@ -30,7 +30,7 @@ Per completare questa procedura dettagliata, è necessario aver installato nel c
 
 1. Avviare Visual Studio.
 
-2. Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**. Verrà visualizzata la finestra di dialogo **Nuovo progetto**.
+2. Scegliere **Nuovo** dal menu **File**e quindi fare clic su **Progetto**. Viene visualizzata la finestra di dialogo **Nuovo progetto**.
 
 3. Nel riquadro **Modelli installati** espandere **Visual C#** e fare clic su **Windows**.
 
@@ -46,9 +46,9 @@ Per completare questa procedura dettagliata, è necessario aver installato nel c
 
 ## <a name="to-add-references"></a>Per aggiungere riferimenti
 
-1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nome del progetto e quindi scegliere **Aggiungi riferimento**. Viene visualizzata la finestra di dialogo **Aggiungi riferimento**.
+1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nome del progetto e quindi scegliere **Aggiungi riferimento**. Verrà visualizzata la finestra di dialogo **Aggiungi riferimento**.
 
-2. Nella pagina **Assembly** selezionare **Microsoft.Office.Interop.Word** nell'elenco **Nome componente** e, tenendo premuto CTRL, selezionare **Microsoft.Office.Interop.Excel**.  Se gli assembly non sono visibili, potrebbe essere necessario assicurarsi che siano installati e visualizzati. Vedere [procedura: installare gli assembly di interoperabilità primari di Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies).
+2. Nella pagina **Assembly** selezionare **Microsoft.Office.Interop.Word** nell'elenco **Nome componente** e, tenendo premuto CTRL, selezionare **Microsoft.Office.Interop.Excel**.  Se gli assembly non vengono visualizzati, potrebbe essere necessario assicurarsi che siano installati e visualizzati. Vedere [Procedura: installare assembly](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)di interoperabilità primari di Office .
 
 3. Fare clic su **OK**.
 
@@ -56,7 +56,7 @@ Per completare questa procedura dettagliata, è necessario aver installato nel c
 
 1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul file *Program.cs* e quindi fare clic su **Visualizza codice**.
 
-2. Aggiungere le seguenti direttive di `using` all'inizio del file di codice:
+2. Aggiungere le `using` direttive seguenti all'inizio del file di codice:
 
      [!code-csharp[csProgGuideOfficeHowTo#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#1)]
 
@@ -94,7 +94,7 @@ Per completare questa procedura dettagliata, è necessario aver installato nel c
 
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]
 
-     C#4 e versioni successive, converte automaticamente il `Object` restituito in `dynamic` se all'assembly viene fatto riferimento dall'opzione del compilatore [-link](../../language-reference/compiler-options/link-compiler-option.md) o, in modo analogo, se la proprietà **Incorpora tipi di interoperabilità** di Excel è impostata su true. True è il valore predefinito di questa proprietà.
+     Il linguaggio C'è 4 e `Object` versioni `dynamic` successive converte automaticamente l'oggetto restituito se l'assembly fa riferimento all'opzione del compilatore [-link](../../language-reference/compiler-options/link-compiler-option.md) o, in modo equivalente, se la proprietà Incorpora tipi di **interoperabilità** incorporati di Excel è impostata su true. True è il valore predefinito di questa proprietà.
 
 ## <a name="to-run-the-project"></a>Per eseguire il progetto
 
@@ -148,7 +148,7 @@ Per completare questa procedura dettagliata, è necessario aver installato nel c
 
 3. Se non è possibile visualizzare la finestra **Proprietà**, premere **F4**.
 
-4. Trovare **Incorpora tipi di interoperabilità** nell'elenco delle proprietà e modificarne il valore in **False**. In modo analogo, è possibile compilare usando l'opzione del compilatore [-Reference](../../language-reference/compiler-options/reference-compiler-option.md) invece di [-link](../../language-reference/compiler-options/link-compiler-option.md) al prompt dei comandi.
+4. Trovare **Incorpora tipi di interoperabilità** nell'elenco delle proprietà e modificarne il valore in **False**. Allo stesso modo, è possibile compilare utilizzando l'opzione del compilatore [-reference](../../language-reference/compiler-options/reference-compiler-option.md) anziché [-link](../../language-reference/compiler-options/link-compiler-option.md) al prompt dei comandi.
 
 ## <a name="to-add-additional-formatting-to-the-table"></a>Per aggiungere ulteriore formattazione alla tabella
 
@@ -175,7 +175,7 @@ Nel codice seguente viene illustrato l'esempio completo.
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Type.Missing?displayProperty=nameWithType>
-- [dynamic](../../language-reference/builtin-types/reference-types.md)
-- [Uso del tipo dinamico](../types/using-type-dynamic.md)
+- [dinamico](../../language-reference/builtin-types/reference-types.md)
+- [Utilizzo del tipo dinamico](../types/using-type-dynamic.md)
 - [Argomenti denominati e facoltativi](../classes-and-structs/named-and-optional-arguments.md)
-- [Come usare gli argomenti denominati e facoltativi nella programmazione di Office](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [Come usare argomenti denominati e facoltativi nella programmazione di Office](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)

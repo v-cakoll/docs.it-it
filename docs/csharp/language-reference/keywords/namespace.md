@@ -9,10 +9,10 @@ helpviewer_keywords:
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
 ms.openlocfilehash: b35f0a2a5cc0b2895b491d4ee24f89955f4b8fed
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77625800"
 ---
 # <a name="namespace-c-reference"></a>namespace (Riferimenti per C#)
@@ -21,21 +21,21 @@ La parola chiave `namespace` è usata per dichiarare un ambito che contiene un s
 
 [!code-csharp[csrefKeywordsNamespace#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#1)]
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 All'interno di uno spazio dei nomi è possibile dichiarare nessuno o più di uno dei tipi elencati di seguito:
 
 - un altro spazio dei nomi
 
-- [class](class.md)
+- [Classe](class.md)
 
-- [interface](interface.md)
+- [Interfaccia](interface.md)
 
 - [struct](../builtin-types/struct.md)
 
-- [enum](../builtin-types/enum.md)
+- [Enum](../builtin-types/enum.md)
 
-- [delegate](../builtin-types/reference-types.md#the-delegate-type)
+- [Delegato](../builtin-types/reference-types.md#the-delegate-type)
 
 Il compilatore aggiunge uno spazio dei nomi predefinito indipendentemente dal fatto che venga dichiarato o meno uno spazio dei nomi in modo esplicito in un file di origine C#. Questo spazio dei nomi senza nome, talvolta chiamato spazio dei nomi globale, è presente in ogni file. Qualsiasi identificatore nello spazio dei nomi globale può essere usato all'interno di uno spazio dei nomi denominato.
 
@@ -57,9 +57,9 @@ Per altre informazioni, vedere la sezione [Spazi dei nomi](~/_csharplang/spec/na
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
-- [Parole chiave C#](index.md)
-- [using](using-directive.md)
-- [using static](using-static.md)
+- [Informazioni di riferimento su C#](../index.md)
+- [Parole chiave di C](index.md)
+- [Utilizzando](using-directive.md)
+- [utilizzando statica](using-static.md)
 - [Qualificatore di alias dello spazio dei nomi `::`](../operators/namespace-alias-qualifier.md)
-- [Namespaces](../../programming-guide/namespaces/index.md) (Spazi dei nomi)
+- [Spazi dei nomi](../../programming-guide/namespaces/index.md)

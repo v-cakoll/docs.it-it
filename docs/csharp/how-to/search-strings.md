@@ -1,5 +1,5 @@
 ---
-title: Come cercare stringhe (C# guida)
+title: Come eseguire la ricerca di stringhe (Guida di C
 ms.date: 02/21/2018
 helpviewer_keywords:
 - searching strings [C#]
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
 ms.openlocfilehash: 15ea77d13a93d88bd996a22b6fe1aaad81df572d
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74959702"
 ---
 # <a name="how-to-search-strings"></a>Come cercare stringhe
@@ -39,13 +39,13 @@ Anche i metodi <xref:System.String.IndexOf%2A> e <xref:System.String.LastIndexOf
 
 La classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> può essere usata per eseguire la ricerca di stringhe. Queste ricerche possono usare modelli di testo semplici, ma anche piuttosto complicati.
 
-L'esempio di codice seguente cerca la parola "the" o "their" in una frase, ignorando la combinazione di maiuscole e minuscole. Il metodo statico <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> esegue la ricerca. È necessario passare la stringa da cercare e i criteri di ricerca. In questo caso, un terzo argomento specifica una ricerca senza distinzione tra maiuscole e minuscole. Per ulteriori informazioni, vedere <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.  
+L'esempio di codice seguente cerca la parola "the" o "their" in una frase, ignorando la combinazione di maiuscole e minuscole. Il metodo statico <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> esegue la ricerca. È necessario passare la stringa da cercare e i criteri di ricerca. In questo caso, un terzo argomento specifica una ricerca senza distinzione tra maiuscole e minuscole. Per altre informazioni, vedere <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.  
 
 I criteri di ricerca descrivono il testo da cercare. La tabella seguente descrive ogni elemento dei criteri di ricerca. (Nella tabella seguente viene usata la barra singola `\` per la quale è necessario l'escape come `\\` in una stringa in C#).
 
 | pattern  | Significato     |
 | -------- |-------------|
-| the      | corrisponde al testo "the" |
+| il      | corrisponde al testo "the" |
 | (eir)?   | corrisponde a 0 o 1 occorrenza di "eir" |
 | \s       | corrisponde a un carattere spazio vuoto    |
   
@@ -72,7 +72,7 @@ Il codice seguente usa le espressioni regolari per convalidare il formato di ogn
 
 Questo singolo criterio di ricerca corrisponde a molte stringhe valide. Le espressioni regolari sono preferibili per eseguire ricerche o convalide in base a un modello, anziché a una singola stringa di testo.
 
-È possibile provare questi esempi esaminando il codice nel [repository GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Oppure è possibile scaricare gli esempi [come file ZIP](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
+È possibile provare questi esempi esaminando il codice nel repository [GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Oppure è possibile scaricare gli esempi [come file ZIP](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -81,5 +81,5 @@ Questo singolo criterio di ricerca corrisponde a molte stringhe valide. Le espre
 - [LINQ e stringhe](../programming-guide/concepts/linq/linq-and-strings.md)
 - <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
 - [Espressioni regolari di .NET Framework](../../standard/base-types/regular-expressions.md)
-- [Linguaggio di espressioni regolari - Riferimento rapido](../../standard/base-types/regular-expression-language-quick-reference.md)
+- [Linguaggio delle espressioni regolari - Guida di riferimento rapidoRegular Expression Language - Quick Reference](../../standard/base-types/regular-expression-language-quick-reference.md)
 - [Procedure consigliate per l'uso delle stringhe in .NET](../../standard/base-types/best-practices-strings.md)

@@ -1,21 +1,21 @@
 ---
-title: Come analizzare una stringa (C#)
+title: Come analizzare una stringa (C )How to parse a string (C
 ms.date: 07/20/2015
 ms.assetid: 81e5686c-9658-42d8-a7e3-b11be0a2c98b
 ms.openlocfilehash: 79821eb9e5cd7187ac3c2a93f85eaae45c5c48ac
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345804"
 ---
-# <a name="how-to-parse-a-string-c"></a>Come analizzare una stringa (C#)
+# <a name="how-to-parse-a-string-c"></a>Come analizzare una stringa (C )How to parse a string (C
 
 Questo argomento illustra come analizzare una stringa per creare una struttura ad albero XML in C#.
 
 ## <a name="example"></a>Esempio
 
-Nel codice C# seguente viene illustrato come analizzare una stringa XML:
+Il seguente codice in c'è viene illustrato come analizzare una stringa XML:The following C's code shows how to parse an XML string:
 
 ```csharp
 XElement contacts = XElement.Parse(
@@ -47,7 +47,7 @@ XElement contacts = XElement.Parse(
 Console.WriteLine(contacts);
 ```
 
-Il nodo `Contacts` radice ha due nodi di `Contact`. Per accedere ad alcuni dati specifici nel codice XML analizzato, usare il metodo [XElement. Elements ()](xref:System.Xml.Linq.XContainer.Elements) , che in questo caso restituisce gli elementi figlio del nodo `Contacts` radice. Nell'esempio seguente viene stampato il primo nodo di `Contact` nella console:
+Il `Contacts` nodo radice `Contact` ha due nodi. Per accedere ad alcuni dati specifici nel codice XML analizzato, utilizzate il metodo [XElement.Elements(),](xref:System.Xml.Linq.XContainer.Elements) che in questo caso restituisce gli elementi figlio del nodo radice. `Contacts` L'esempio seguente stampa `Contact` il primo nodo nella console:
 
 ```csharp
 List<XElement> contactNodes = contacts.Elements("Contact").ToList();
@@ -56,4 +56,4 @@ Console.WriteLine(contactNodes[0]);
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Come trovare un elemento con un attributo specifico (C#)](how-to-find-an-element-with-a-specific-attribute.md)
+- [Come trovare un elemento con un attributo specifico (c'è)How to find an element with a specific attribute (C](how-to-find-an-element-with-a-specific-attribute.md)

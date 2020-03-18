@@ -2,21 +2,21 @@
 title: Tipi restituiti async (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 2c0dae6b4357ce89325ecb9b7d70ffd79f4e9417
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.openlocfilehash: 9926fea5308f9088ad924bcc98d8deed319c6300
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168389"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170039"
 ---
 # <a name="async-return-types-c"></a>Tipi restituiti async (C#)
 I metodi asincroni possono avere i seguenti tipi restituiti:
 
-- <xref:System.Threading.Tasks.Task%601>, per un metodo asincrono che restituisce un valore. 
- 
+- <xref:System.Threading.Tasks.Task%601>, per un metodo asincrono che restituisce un valore.
+
 - <xref:System.Threading.Tasks.Task>, per un metodo asincrono che esegue un'operazione ma non restituisce alcun valore.
 
-- `void` per un gestore eventi. 
+- `void` per un gestore eventi.
 
 - A partire da C# 7.0, qualsiasi tipo con un metodo `GetAwaiter` accessibile. L'oggetto restituito dal metodo `GetAwaiter` deve implementare l'interfaccia <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=nameWithType>.
   
@@ -52,10 +52,10 @@ L'attesa per `WaitAndApologize` viene impostata usando un'istruzione await invec
 Come nell'esempio di <xref:System.Threading.Tasks.Task%601> precedente, è possibile separare la chiamata a `WaitAndApologize` dall'applicazione di un operatore await, come illustrato dal codice seguente. Tuttavia, si noti che un tipo `Task` non ha una proprietà `Result` e che quando viene applicato un operatore await a un tipo `Task` non viene prodotto alcun valore.  
   
 Il codice seguente separa la chiamata del metodo `WaitAndApologize` dall'attesa dell'attività restituita dal metodo.  
- 
+
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2a.cs#1)]  
- 
-## <a name="BKMK_VoidReturnType"></a> Tipo restituito void
+
+## <a name="BKMK_VoidReturnType"></a>Tipo restituito void
 
 Usare il tipo restituito `void` nei gestori eventi asincroni, che richiedono un tipo restituito `void`. Per i metodi diversi dai gestori eventi che non restituiscono un valore, è invece necessario restituire <xref:System.Threading.Tasks.Task>, perché non è possibile impostare l'attesa per un metodo asincrono che restituisce `void`. Qualsiasi chiamante di questo metodo deve poter continuare fino al completamento senza attendere il completamento del metodo asincrono chiamato e il chiamante deve essere indipendente da qualsiasi eccezione o valore generato dal metodo asincrono.  
   
@@ -64,23 +64,23 @@ Il chiamante di un metodo asincrono che restituisce void non può intercettare l
 Per altre informazioni su come intercettare eccezioni nei metodi asincroni, vedere la sezione [Exceptions in Async Methods](../../../language-reference/keywords/try-catch.md#exceptions-in-async-methods) (Eccezioni nei metodi asincroni) dell'argomento [try-catch](../../../language-reference/keywords/try-catch.md).  
   
 L'esempio seguente mostra il comportamento di un gestore dell'evento asincrono. Si noti che nel codice di esempio un gestore dell'evento asincrono deve indicare al thread principale quando viene completato. Il thread principale può attendere quindi che un gestore dell'evento asincrono venga completato prima di uscire dal programma.
- 
+
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns3.cs)]  
- 
+
 ## <a name="generalized-async-return-types-and-valuetasktresult"></a>Tipi restituiti asincroni generalizzati e ValueTask\<TResult\>
 
 A partire da C# 7.0, un metodo asincrono può restituire qualsiasi tipo con un metodo `GetAwaiter` accessibile.
- 
-Dato che <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601> sono tipi riferimento, l'allocazione della memoria in percorsi critici per le prestazioni, in particolare quando le allocazioni si verificano in cicli ravvicinati, può influire negativamente sulle prestazioni. Il supporto dei tipi restituiti generalizzati implica la possibilità di restituire un tipo valore leggero anziché un tipo riferimento per evitare allocazioni di memoria aggiuntive. 
 
-.NET offre la struttura <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType> come implementazione leggera di un valore generalizzato per la restituzione di attività. Per usare il tipo <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType>, è necessario aggiungere il pacchetto NuGet `System.Threading.Tasks.Extensions` al progetto. L'esempio seguente usa la struttura <xref:System.Threading.Tasks.ValueTask%601> per recuperare il valore di due tiri di dadi. 
+Dato che <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601> sono tipi riferimento, l'allocazione della memoria in percorsi critici per le prestazioni, in particolare quando le allocazioni si verificano in cicli ravvicinati, può influire negativamente sulle prestazioni. Il supporto dei tipi restituiti generalizzati implica la possibilità di restituire un tipo valore leggero anziché un tipo riferimento per evitare allocazioni di memoria aggiuntive.
+
+.NET offre la struttura <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType> come implementazione leggera di un valore generalizzato per la restituzione di attività. Per usare il tipo <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType>, è necessario aggiungere il pacchetto NuGet `System.Threading.Tasks.Extensions` al progetto. L'esempio seguente usa la struttura <xref:System.Threading.Tasks.ValueTask%601> per recuperare il valore di due tiri di dadi.
   
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-valuetask.cs)]
 
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Threading.Tasks.Task.FromResult%2A>
-- [Procedura dettagliata: Accesso al Web con Async e Await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Flusso di controllo in programmi asincroni (C#)](./control-flow-in-async-programs.md)
-- [async](../../../language-reference/keywords/async.md)
-- [await](../../../language-reference/operators/await.md)
+- [Procedura dettagliata: accesso al Web tramite async e await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Flusso di controllo nei programmi asincroni (c'è)Control Flow in Async Programs (C](./control-flow-in-async-programs.md)
+- [Async](../../../language-reference/keywords/async.md)
+- [Attendono](../../../language-reference/operators/await.md)

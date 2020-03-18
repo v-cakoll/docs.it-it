@@ -5,16 +5,16 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
 ms.openlocfilehash: d70fa54adeb505fd37807399402281dfda67cf52
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77451564"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Caratteristiche delle applicazioni Web moderne
 
 > "… con la progettazione adeguata, i costi delle funzionalità risultano competitivi. Questo approccio è complesso, ma continua a dare risultati positivi".  
-> _\- Dennis Ritchie_
+> _\-Dennis Ritchie_
 
 Le applicazioni Web moderne devono soddisfare esigenze e aspettative degli utenti sempre più importanti. Oggi le app Web devono essere disponibili 24 ore al giorno, ogni giorno e in qualsiasi parte del mondo e devono poter essere usate su qualsiasi dispositivo o su uno schermo di qualsiasi dimensione. Le applicazioni Web devono essere sicure, flessibili e scalabili, per soddisfare i picchi di richiesta. Scenari sempre più complessi devono essere gestiti con esperienze utente complete, app compilate nel client con JavaScript e in grado di comunicare adeguatamente tramite le API Web.
 
@@ -45,7 +45,7 @@ ASP.NET Core è multipiattaforma e può essere eseguito in Linux, macOS e Window
 
 I pacchetti NuGet sono perfettamente compatibili in .NET Core e la struttura con molte librerie delle app ASP.NET Core dipende da NuGet. La granularità delle funzionalità garantisce che le app eseguano e distribuiscano solo le funzionalità necessarie, riducendo la superficie di attacco per le vulnerabilità di sicurezza.
 
-ASP.NET Core offre anche il supporto completo per l'[inserimento delle dipendenze](https://deviq.com/dependency-injection/), sia internamente che a livello di applicazione. Le interfacce possono avere più implementazioni, intercambiabili in base alle esigenze. L'inserimento delle dipendenze consente l'accoppiamento debole delle app a tali interfacce, anziché a implementazioni specifiche, semplificandone l'estensione, la gestione e il test.
+ASP.NET Core supporta inoltre completamente [l'inserimento](https://deviq.com/dependency-injection/)delle dipendenze, sia internamente che a livello di applicazione. Le interfacce possono avere più implementazioni, intercambiabili in base alle esigenze. L'inserimento delle dipendenze consente l'accoppiamento debole delle app a tali interfacce, anziché a implementazioni specifiche, semplificandone l'estensione, la gestione e il test.
 
 ## <a name="easily-tested-with-automated-tests"></a>Test automatizzati
 
@@ -61,29 +61,29 @@ Molte applicazioni Web presentano una combinazione di comportamenti dell'applica
 
 ## <a name="simple-development-and-deployment"></a>Sviluppo e distribuzione facili
 
-ASP.NET Core applicazioni possono essere scritte usando semplici editor di testo e interfacce della riga di comando o ambienti di sviluppo completi come Visual Studio. In genere le applicazioni monolitiche vengono distribuite a un singolo endpoint. Le distribuzioni possono essere facilmente automatizzate e incluse in una pipeline di integrazione continua (CI, Continuous Integration) e recapito continuo (CD, Continuous Delivery). Oltre agli strumenti di integrazione continua/distribuzione continua tradizionale, Microsoft Azure ha integrato il supporto per i repository git e può distribuire automaticamente gli aggiornamenti man mano che vengono apportati a un ramo o un tag git specificato. Azure DevOps offre una pipeline di compilazione e distribuzione di integrazione continua e distribuzione continua con funzionalità complete e le azioni di GitHub forniscono un'altra opzione per i progetti ospitati.
+ASP.NET Core applications can be written using simple text editors and command-line interfaces, or full-featured development environments like Visual Studio. In genere le applicazioni monolitiche vengono distribuite a un singolo endpoint. Le distribuzioni possono essere facilmente automatizzate e incluse in una pipeline di integrazione continua (CI, Continuous Integration) e recapito continuo (CD, Continuous Delivery). Oltre agli strumenti CI/CD tradizionali, Microsoft Azure include il supporto integrato per gli archivi git e può distribuire automaticamente gli aggiornamenti man mano che vengono eseguiti in un ramo o un tag git specificato. Azure DevOps offre una pipeline completa di compilazione e distribuzione di CI/CD e GitHub Actions offre un'altra opzione per i progetti ospitati in tale data.
 
 ## <a name="traditional-aspnet-and-web-forms"></a>ASP.NET tradizionale e Web Form
 
-Oltre ad ASP.NET Core, anche ASP.NET 4.x continua a rappresentare una piattaforma solida e affidabile per la compilazione di applicazioni Web. ASP.NET supporta i modelli di sviluppo dell'API Web e MVC, oltre a Web Form, ideale per lo sviluppo di applicazioni avanzate basate su pagine e che offre un ricco ecosistema di componenti di terze parti. Microsoft Azure offre un notevole supporto di lunga durata per le applicazioni ASP.NET 4. x e molti sviluppatori hanno familiarità con questa piattaforma.
+Oltre ad ASP.NET Core, anche ASP.NET 4.x continua a rappresentare una piattaforma solida e affidabile per la compilazione di applicazioni Web. ASP.NET supporta i modelli di sviluppo MVC e API Web, nonché Web Form, che è adatto per lo sviluppo di applicazioni avanzate basate su pagine e dispone di un ricco ecosistema di componenti di terze parti. Microsoft Azure ha un ottimo supporto di lunga data per ASP.NET applicazioni 4.x e molti sviluppatori hanno familiarità con questa piattaforma.
 
 ## <a name="blazor"></a>Blazor
 
-Blazer è incluso in ASP.NET Core 3,0 e versioni successive. Fornisce un nuovo meccanismo per la creazione di applicazioni client Web interattive avanzate con C#Razor, e ASP.NET Core. Offre un'altra soluzione da considerare durante lo sviluppo di applicazioni Web moderne. Esistono due versioni di blazer da considerare: lato server e lato client.
+Blazor è incluso con ASP.NET Core 3.0 e versioni successive. Fornisce un nuovo meccanismo per la creazione di applicazioni web client interattive avanzate utilizzando Razor, C , e ASP.NET Core. Offre un'altra soluzione da considerare quando si sviluppano applicazioni web moderne. Esistono due versioni di Blazor da considerare: lato server e lato client.
 
-La versione del server blazer è stata rilasciata in 2019 con ASP.NET Core 3,0. Come suggerisce il nome, viene eseguito sul server, il rendering delle modifiche apportate al documento client nel browser tramite la rete. Il lato server Blazer offre un'esperienza client avanzata senza richiedere JavaScript sul lato client e senza richiedere carichi di pagina separati per ogni interazione con la pagina client. Le modifiche apportate alla pagina caricata vengono richieste ed elaborate dal server e quindi inviate nuovamente al client tramite SignalR.
+Blazor lato server è stato rilasciato nel 2019 con ASP.NET Core 3.0. Come suggerisce il nome, viene eseguito sul server, il rendering delle modifiche apportate al documento client nel browser in rete. Blazor lato server offre un'esperienza rich client senza richiedere JavaScript sul lato client e senza richiedere caricamenti di pagina separati per ogni interazione di pagina client. Le modifiche nella pagina caricata vengono richieste dal server e quindi inviate al client tramite SignalR.
 
-Il blazer lato client verrà rilasciato in 2020 e eliminerà la necessità di eseguire il rendering delle modifiche nel server. Al contrario, utilizzerà webassembly per eseguire il codice .NET all'interno del client. Il client può comunque effettuare chiamate API al server, se necessario, per richiedere i dati, ma tutto il comportamento sul lato client viene eseguito nel client tramite webassembly, che è già supportato da tutti i browser principali ed è semplicemente una libreria JavaScript.
+Blazor lato client verrà rilasciato nel 2020 ed eliminerà la necessità di eseguire il rendering delle modifiche sul server. Al contrario, si utilizzerà WebAssembly per eseguire il codice .NET all'interno del client. Il client può comunque effettuare chiamate API al server se necessario per richiedere dati, ma tutto il comportamento lato client viene eseguito nel client tramite WebAssembly, che è già supportato da tutti i principali browser ed è solo una libreria Javascript.
 
 > ### <a name="references--modern-web-applications"></a>Riferimenti: applicazioni Web moderne
 >
-> - **Introduzione a ASP.NET Core**  
+> - **Introduzione ad ASP.NET Core**  
 >   <https://docs.microsoft.com/aspnet/core/>
 > - **Test e debug in ASP.NET Core**  
 >   <https://docs.microsoft.com/aspnet/core/testing/>
-> - **Blazer-iniziare**  
+> - **Blazor - Per iniziare**  
 >   <https://blazor.net/docs/get-started.html>
 
 >[!div class="step-by-step"]
->[Precedente](index.md)
->[Successivo](choose-between-traditional-web-and-single-page-apps.md)
+>[Successivo](index.md)
+>[precedente](choose-between-traditional-web-and-single-page-apps.md)

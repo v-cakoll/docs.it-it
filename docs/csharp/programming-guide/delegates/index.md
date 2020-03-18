@@ -6,10 +6,10 @@ helpviewer_keywords:
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
 ms.openlocfilehash: c0f28716926d4c9d74cde58fd00e27d1fdfa7ce1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75705366"
 ---
 # <a name="delegates-c-programming-guide"></a>Delegati (Guida per programmatori C#)
@@ -41,11 +41,11 @@ Un [delegate](../../language-reference/builtin-types/reference-types.md) è un t
   
 - In C# versione 2.0 è stato introdotto il concetto di [metodi anonimi](../../language-reference/operators/delegate-operator.md), ovvero metodi che consentono di passare blocchi di codice come parametri in alternativa a un metodo definito separatamente. In C# 3.0 sono state introdotte le espressioni lambda per scrivere in modo più conciso i blocchi di codice in linea. I metodi anonimi e le espressioni lambda vengono compilati, in determinati contesti, in tipi delegati. Queste funzionalità sono ora note complessivamente come funzioni anonime. Per altre informazioni sulle espressioni lambda, vedere [Espressioni lambda](../statements-expressions-operators/lambda-expressions.md).
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 - [Uso dei delegati](./using-delegates.md)  
   
-- [Quando utilizzare i delegati anziché le interfacce (Guida per programmatori C#)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms173173(v=vs.100))  
+- [Quando usare i delegati anziché le interfacce (Guida per programmatori C#)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms173173(v=vs.100))  
   
 - [Delegati con metodi denominati e anonimi](./delegates-with-named-vs-anonymous-methods.md)  
   
@@ -53,9 +53,9 @@ Un [delegate](../../language-reference/builtin-types/reference-types.md) è un t
   
 - [Come combinare delegati (delegati multicast)](./how-to-combine-delegates-multicast-delegates.md)  
   
-- [Come dichiarare, creare un'istanza e usare un delegato](./how-to-declare-instantiate-and-use-a-delegate.md)
+- [Come dichiarare un delegato, crearne un'istanza e usarlo](./how-to-declare-instantiate-and-use-a-delegate.md)
 
-## <a name="c-language-specification"></a>Specifica del linguaggio C#  
+## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
 
 Per altre informazioni, vedere [Delegati](~/_csharplang/spec/delegates.md) nella [Specifica del linguaggio C#](/dotnet/csharp/language-reference/language-specification/introduction). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
   
@@ -68,4 +68,4 @@ Per altre informazioni, vedere [Delegati](~/_csharplang/spec/delegates.md) nella
 
 - <xref:System.Delegate>
 - [Guida per programmatori C#](../index.md)
-- [Eventi](../events/index.md)
+- [Events](../events/index.md)

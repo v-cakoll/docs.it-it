@@ -1,17 +1,17 @@
 ---
-title: Come implementare e chiamare un metodo di estensione personalizzato- C# Guida alla programmazione
+title: Come implementare e chiamare un metodo di estensione personalizzato - Guida per programmatori C
 ms.date: 07/20/2015
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
 ms.openlocfilehash: 7e2092a37c1f042a087e03f4a272139b585156c8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705600"
 ---
-# <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Come implementare e chiamare un metodo di estensione personalizzato (C# guida per programmatori)
+# <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Come implementare e chiamare un metodo di estensione personalizzato (Guida per programmatori C
 Questo argomento illustra come implementare metodi di estensione personali per qualsiasi tipo .NET. Il codice client può usare i metodi di estensione aggiungendo un riferimento alla DLL che li contiene, e aggiungendo una direttiva [using](../../language-reference/keywords/using-directive.md) che specifica lo spazio dei nomi in cui vengono definiti i metodi di estensione.  
   
 ## <a name="to-define-and-call-the-extension-method"></a>Per definire e chiamare il metodo di estensione  
@@ -44,8 +44,8 @@ Questo argomento illustra come implementare metodi di estensione personali per q
 - [Metodi di estensione](./extension-methods.md)
 - [LINQ (Language-Integrated Query)](../../linq/linq-in-csharp.md)
 - [Classi statiche e membri di classi statiche](./static-classes-and-static-class-members.md)
-- [protected](../../language-reference/keywords/protected.md)
-- [internal](../../language-reference/keywords/internal.md)
-- [public](../../language-reference/keywords/public.md)
-- [this](../../language-reference/keywords/this.md)
-- [namespace](../../language-reference/keywords/namespace.md)
+- [Protetto](../../language-reference/keywords/protected.md)
+- [Interno](../../language-reference/keywords/internal.md)
+- [pubblico](../../language-reference/keywords/public.md)
+- [Questo](../../language-reference/keywords/this.md)
+- [Namespace](../../language-reference/keywords/namespace.md)

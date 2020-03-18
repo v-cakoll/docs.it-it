@@ -9,10 +9,10 @@ helpviewer_keywords:
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
 ms.openlocfilehash: 86202333484933d7449b0c4d8c5a3f1a63cd7775
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713552"
 ---
 # <a name="extern-alias-c-reference"></a>extern alias (Riferimenti per C#)
@@ -37,13 +37,13 @@ ms.locfileid: "75713552"
   
  Nell'esempio precedente, l'oggetto `GridV1::Grid` rappresenta il controllo griglia dell'oggetto `grid.dll`, e `GridV2::Grid` rappresenta il controllo griglia dell'oggetto `grid20.dll`.  
   
-## <a name="c-language-specification"></a>Specifica del linguaggio C#  
+## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
+- [Guida di riferimento a C](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](./index.md)
-- [Operatore ::](../operators/namespace-alias-qualifier.md)
-- [-reference (opzioni del compilatore C#)](../compiler-options/reference-compiler-option.md)
+- [:: Operatore](../operators/namespace-alias-qualifier.md)
+- [-reference (opzioni del compilatore C](../compiler-options/reference-compiler-option.md)

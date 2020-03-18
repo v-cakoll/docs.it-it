@@ -50,7 +50,7 @@
                     - name: Definizione e specifica degli errori
                       href: defining-and-specifying-faults.md
                       items:
-                        - name: 'Procedura: Dichiarare errori nei contratti di servizio'
+                        - name: 'Procedura: dichiarare errori nei contratti di servizio'
                           href: how-to-declare-faults-in-service-contracts.md
                     - name: Invio e ricezione degli errori
                       href: sending-and-receiving-faults.md
@@ -59,7 +59,7 @@
                 - name: Operazioni sincrone e asincrone
                   href: synchronous-and-asynchronous-operations.md
                   items:
-                    - name: 'Procedura: Implementare un''operazione del servizio asincrona'
+                    - name: 'Procedura: implementare un''operazione del servizio asincrona'
                       href: how-to-implement-an-asynchronous-service-operation.md
                 - name: Servizi affidabili
                   href: reliable-services.md
@@ -89,13 +89,13 @@
                 - name: Uso di associazioni per configurare servizi e client
                   href: using-bindings-to-configure-services-and-clients.md
                   items:
-                    - name: 'Procedura: Specificare un''associazione al client in codice'
+                    - name: 'Procedura: specificare un''associazione al client in codice'
                       href: how-to-specify-a-client-binding-in-code.md
-                    - name: 'Procedura: Specificare un''associazione al client nella configurazione'
+                    - name: 'Procedura: specificare un''associazione client nella configurazione'
                       href: how-to-specify-a-client-binding-in-configuration.md
-                    - name: 'Procedura: Specificare un''associazione al servizio in codice'
+                    - name: 'Procedura: specificare un''associazione al servizio in codice'
                       href: how-to-specify-a-service-binding-in-code.md
-                    - name: 'Procedura: Specificare un''associazione al servizio nella configurazione'
+                    - name: 'Procedura: specificare un''associazione al servizio in configurazione'
                       href: how-to-specify-a-service-binding-in-configuration.md
                 - name: Configurazione delle associazioni per i servizi
                   href: configuring-bindings-for-wcf-services.md
@@ -111,30 +111,30 @@
             - name: Protezione dei servizi
               href: securing-services.md
               items:
-                - name: 'Procedura: Proteggere un servizio con credenziali di Windows'
+                - name: 'Procedura: proteggere un servizio con credenziali di Windows'
                   href: how-to-secure-a-service-with-windows-credentials.md
-                - name: 'Procedura: Impostare la modalità di sicurezza'
+                - name: 'Procedura: impostare la modalità di sicurezza'
                   href: how-to-set-the-security-mode.md
-                - name: 'Procedura: Specificare il tipo di credenziali client'
+                - name: 'Procedura: specificare il tipo di credenziali client'
                   href: how-to-specify-the-client-credential-type.md
-                - name: 'Procedura: Limitare l''accesso con la classe PrincipalPermissionAttribute'
+                - name: 'Procedura: limitare l''accesso tramite la classe PrincipalPermissionAttribute'
                   href: how-to-restrict-access-with-the-principalpermissionattribute-class.md
-                - name: 'Procedura: Rappresentare un client in un servizio'
+                - name: 'Procedura: rappresentare un client in un servizio'
                   href: how-to-impersonate-a-client-on-a-service.md
-                - name: 'Procedura: Esaminare il contesto di sicurezza'
+                - name: 'Procedura: esaminare il contesto di sicurezza'
                   href: how-to-examine-the-security-context.md
                 - name: Informazioni sul livello di protezione
                   href: understanding-protection-level.md
-                - name: 'Procedura: Impostare la proprietà ProtectionLevel'
+                - name: 'Procedura: impostare la proprietà ProtectionLevel'
                   href: how-to-set-the-protectionlevel-property.md
             - name: Creazione di servizi interoperativi WS-I Basic Profile 1.1
               href: creating-ws-i-basic-profile-1-1-interoperable-services.md
         - name: Servizi host
           href: hosting-services.md
           items:
-            - name: 'Procedura: Ospitare un servizio WCF in un''applicazione gestita'
+            - name: 'Procedura: ospitare un servizio WCF in un''applicazione gestita'
               href: how-to-host-a-wcf-service-in-a-managed-application.md
-            - name: 'Procedura: Ospitare un servizio WCF scritto con .NET Framework 3.5 in IIS in esecuzione in .NET Framework 4'
+            - name: 'Procedura: ospitare un servizio WCF scritto con .NET Framework 3.5 in IIS in esecuzione in .NET Framework 4'
               href: host-a-wcf-service-net-framework-3-5-iis--net-framework-4.md
         - name: Creazione di client
           href: building-clients.md
@@ -153,7 +153,7 @@
             - name: Protezione di client
               href: securing-clients.md
               items:
-                - name: 'Procedura: Specificare valori di credenziali client'
+                - name: 'Procedura: specificare valori di credenziali client'
                   href: how-to-specify-client-credential-values.md
         - name: Introduzione all'estendibilità
           href: introduction-to-extensibility.md
@@ -170,9 +170,9 @@
     - name: Linee guida e suggerimenti
       href: guidelines-and-best-practices.md
       items:
-        - name: 'Procedure consigliate: Controllo delle versioni dei contratti dati'
+        - name: 'Procedure consigliate: controllo delle versioni del contratto dati'
           href: best-practices-data-contract-versioning.md
-        - name: 'Procedure consigliate: Intermediari'
+        - name: 'Procedure consigliate: intermediari'
           href: best-practices-intermediaries.md
         - name: Controllo delle versioni dei servizi
           href: service-versioning.md

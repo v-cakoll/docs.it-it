@@ -1,37 +1,37 @@
 ---
-title: 'Esercitazione: installare e usare uno strumento globale di .NET Core'
+title: 'Esercitazione: Installare e usare uno strumento globale .NET CoreTutorial: Install and use a .NET Core global tool'
 description: Informazioni su come installare e usare uno strumento .NET come strumento globale.
 ms.date: 02/12/2020
 ms.openlocfilehash: 9f8378e50fd2544eedbbaaeffb89d67800ec6880
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156738"
 ---
-# <a name="tutorial-install-and-use-a-net-core-global-tool-using-the-net-core-cli"></a>Esercitazione: installare e usare uno strumento globale .NET Core usando il interfaccia della riga di comando di .NET Core
+# <a name="tutorial-install-and-use-a-net-core-global-tool-using-the-net-core-cli"></a>Esercitazione: Installare e usare uno strumento globale .NET Core usando l'interfaccia della riga di comando di .NET CoreTutorial: Install and use a .NET Core global tool using the .NET Core CLI
 
-**Questo articolo si applica a:** ✔️ .net core 2,1 SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .NET Core 2.1 SDK e versioni successive
 
-Questa esercitazione illustra come installare e usare uno strumento globale. Usare uno strumento creato nella [prima esercitazione di questa serie](global-tools-how-to-create.md).
+Questo tutorial ti insegna come installare e utilizzare uno strumento globale. Si utilizza uno strumento creato nella [prima esercitazione di questa serie.](global-tools-how-to-create.md)
 
 ## <a name="prerequisites"></a>Prerequisites
 
-* Completare la [prima esercitazione di questa serie](global-tools-how-to-create.md).
+* Completare la [prima esercitazione di questa serie.](global-tools-how-to-create.md)
 
-## <a name="use-the-tool-as-a-global-tool"></a>Usare lo strumento come strumento globale
+## <a name="use-the-tool-as-a-global-tool"></a>Utilizzare lo strumento come strumento globale
 
-1. Installare lo strumento dal pacchetto eseguendo il comando [DotNet tool install](dotnet-tool-install.md) nella cartella del progetto *Microsoft. botsay* :
+1. Installare lo strumento dal pacchetto eseguendo il comando [dotnet tool install](dotnet-tool-install.md) nella cartella del progetto *microsoft.botsay:*
 
    ```dotnetcli
    dotnet tool install --global --add-source ./nupkg microsoft.botsay
    ```
 
-   Il parametro `--global` indica al interfaccia della riga di comando di .NET Core di installare i file binari dello strumento in un percorso predefinito aggiunto automaticamente alla variabile di ambiente PATH.
+   Il `--global` parametro indica all'interfaccia della riga di comando di .NET Core per installare i file binari dello strumento in un percorso predefinito che viene aggiunto automaticamente alla variabile di ambiente PATH.
 
-   Il parametro `--add-source` indica al interfaccia della riga di comando di .NET Core di usare temporaneamente la directory *./nupkg* come feed di origine aggiuntivo per i pacchetti NuGet. È stato assegnato un nome univoco al pacchetto per assicurarsi che venga trovato solo nella directory *./nupkg* , non nel sito NuGet.org.
+   Il `--add-source` parametro indica all'interfaccia della riga di comando di .NET Core di utilizzare temporaneamente la directory *./nupkg* come feed di origine aggiuntivo per i pacchetti NuGet. Hai fornito al tuo pacchetto un nome univoco per assicurarti che si trovi solo nella directory *./nupkg,* non nella Nuget.org sito.
 
-   L'output Mostra il comando utilizzato per chiamare lo strumento e la versione installata:
+   L'output mostra il comando utilizzato per chiamare lo strumento e la versione installata:
 
    ```console
    You can invoke the tool using the following command: botsay
@@ -47,13 +47,13 @@ Questa esercitazione illustra come installare e usare uno strumento globale. Usa
    > [!NOTE]
    > Se questo comando non riesce, potrebbe essere necessario aprire un nuovo terminale per aggiornare il percorso.
 
-1. Rimuovere lo strumento eseguendo il comando [DotNet Tool uninstall](dotnet-tool-uninstall.md) :
+1. Rimuovere lo strumento eseguendo il comando [dotnet tool uninstall:](dotnet-tool-uninstall.md)
 
    ```dotnetcli
    dotnet tool uninstall -g microsoft.botsay
    ```
 
-## <a name="use-the-tool-as-a-global-tool-installed-in-a-custom-location"></a>Usare lo strumento come strumento globale installato in un percorso personalizzato
+## <a name="use-the-tool-as-a-global-tool-installed-in-a-custom-location"></a>Utilizzare lo strumento come strumento globale installato in una posizione personalizzata
 
 1. Installare lo strumento dal pacchetto.
 
@@ -63,15 +63,15 @@ Questa esercitazione illustra come installare e usare uno strumento globale. Usa
    dotnet tool install --tool-path c:\dotnet-tools --add-source ./nupkg microsoft.botsay
    ```
 
-   In Linux o macOS:
+   Su Linux o macOS:
 
    ```dotnetcli
    dotnet tool install --tool-path ~/bin --add-source ./nupkg microsoft.botsay
    ```
 
-   Il parametro `--tool-path` indica al interfaccia della riga di comando di .NET Core di installare i file binari degli strumenti nel percorso specificato. Se la directory non esiste, viene creata. Questa directory non viene aggiunta automaticamente alla variabile di ambiente PATH.
+   Il `--tool-path` parametro indica all'interfaccia della riga di comando di .NET Core per installare i file binari dello strumento nel percorso specificato. Se la directory non esiste, viene creata. Questa directory non viene aggiunta automaticamente alla variabile di ambiente PATH.
 
-   L'output Mostra il comando utilizzato per chiamare lo strumento e la versione installata:
+   L'output mostra il comando utilizzato per chiamare lo strumento e la versione installata:
 
    ```console
    You can invoke the tool using the following command: botsay
@@ -86,13 +86,13 @@ Questa esercitazione illustra come installare e usare uno strumento globale. Usa
    c:\dotnet-tools\botsay hello from the bot
    ```
 
-   In Linux o macOS:
+   Su Linux o macOS:
 
    ```console
    ~/bin/botsay hello from the bot
    ```
 
-1. Rimuovere lo strumento eseguendo il comando [DotNet Tool uninstall](dotnet-tool-uninstall.md) :
+1. Rimuovere lo strumento eseguendo il comando [dotnet tool uninstall:](dotnet-tool-uninstall.md)
 
    In Windows:
 
@@ -100,7 +100,7 @@ Questa esercitazione illustra come installare e usare uno strumento globale. Usa
    dotnet tool uninstall --tool-path c:\dotnet-tools microsoft.botsay
    ```
 
-   In Linux o macOS:
+   Su Linux o macOS:
 
    ```dotnetcli
    dotnet tool uninstall --tool-path ~/bin microsoft.botsay
@@ -108,11 +108,11 @@ Questa esercitazione illustra come installare e usare uno strumento globale. Usa
 
 ## <a name="troubleshoot"></a>Risolvere problemi
 
-Se viene visualizzato un messaggio di errore mentre si segue l'esercitazione, vedere [risolvere i problemi di utilizzo degli strumenti .NET Core](troubleshoot-usage-issues.md).
+Se viene visualizzato un messaggio di errore durante l'esercitazione, vedere Risolvere i problemi di [utilizzo degli strumenti .NET Core](troubleshoot-usage-issues.md).
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-In questa esercitazione è stato installato e utilizzato uno strumento come strumento globale. Per installare e usare lo stesso strumento di uno strumento locale, passare all'esercitazione successiva.
+In questa esercitazione è stato installato e usato uno strumento come strumento globale. Per installare e utilizzare lo stesso strumento di uno strumento locale, passare all'esercitazione successiva.
 
 > [!div class="nextstepaction"]
-> [Installare e usare gli strumenti locali](local-tools-how-to-use.md)
+> [Installare e utilizzare strumenti locali](local-tools-how-to-use.md)

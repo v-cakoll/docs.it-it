@@ -10,10 +10,10 @@ helpviewer_keywords:
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
 ms.openlocfilehash: 11c544e7fc923b0820141fb2e096ef7707f0a95f
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74552467"
 ---
 # <a name="c-operators-c-reference"></a>Operatori C# (Riferimenti per C#)
@@ -22,7 +22,7 @@ C# include una serie di operatori supportati dai tipi predefiniti. Ad esempio, g
 
 In un'[espressione](../../programming-guide/statements-expressions-operators/expressions.md), la precedenza e l'associatività degli operatori determinano l'ordine in cui vengono eseguite le operazioni. È possibile usare le parentesi per cambiare l'ordine di valutazione imposto dalla precedenza e dall'associatività degli operatori.
 
-## <a name="operator-precedence"></a>Precedenza tra gli operatori
+## <a name="operator-precedence"></a>Precedenza degli operatori
 
 In un'espressione con più operatori, gli operatori con precedenza superiore vengono valutati prima degli operatori con precedenza più bassa. Nell'esempio seguente, la moltiplicazione viene eseguita per prima perché ha una precedenza più alta rispetto all'addizione:
 
@@ -42,14 +42,14 @@ La tabella seguente elenca gli operatori C# in ordine decrescente di precedenza.
 
 | Operatori | Categoria o nome |
 | --------- | ---------------- |
-| [x.y](member-access-operators.md#member-access-operator-), [x?.y](member-access-operators.md#null-conditional-operators--and-), [x?[y]](member-access-operators.md#null-conditional-operators--and-), [f(x)](member-access-operators.md#invocation-operator-), [a&#91;i&#93;](member-access-operators.md#indexer-operator-), [x++](arithmetic-operators.md#increment-operator-), [x--](arithmetic-operators.md#decrement-operator---), [new](new-operator.md), [typeof](type-testing-and-cast.md#typeof-operator), [checked](../keywords/checked.md), [unchecked](../keywords/unchecked.md), [default](default.md), [nameof](nameof.md), [delegate](delegate-operator.md), [sizeof](sizeof.md), [stackalloc](stackalloc.md), [x->y](pointer-related-operators.md#pointer-member-access-operator--) | Primary |
-| [+ x](arithmetic-operators.md#unary-plus-and-minus-operators), [-x](arithmetic-operators.md#unary-plus-and-minus-operators), [\!x](boolean-logical-operators.md#logical-negation-operator-), [~ x](bitwise-and-shift-operators.md#bitwise-complement-operator-), [+ + x](arithmetic-operators.md#increment-operator-), [--x](arithmetic-operators.md#decrement-operator---), [^ x](member-access-operators.md#index-from-end-operator-), [(t) x](type-testing-and-cast.md#cast-operator-), [await](await.md), [& x](pointer-related-operators.md#address-of-operator-), [* x](pointer-related-operators.md#pointer-indirection-operator-), [true e false](true-false-operators.md) | Unario |
-| [x.. y](member-access-operators.md#range-operator-) | Intervallo |
+| [x.y](member-access-operators.md#member-access-operator-), [x?.y](member-access-operators.md#null-conditional-operators--and-), [x?[y]](member-access-operators.md#null-conditional-operators--and-), [f(x)](member-access-operators.md#invocation-operator-), [a&#91;i&#93;](member-access-operators.md#indexer-operator-), [x++](arithmetic-operators.md#increment-operator-), [x--](arithmetic-operators.md#decrement-operator---), [new](new-operator.md), [typeof](type-testing-and-cast.md#typeof-operator), [checked](../keywords/checked.md), [unchecked](../keywords/unchecked.md), [default](default.md), [nameof](nameof.md), [delegate](delegate-operator.md), [sizeof](sizeof.md), [stackalloc](stackalloc.md), [x->y](pointer-related-operators.md#pointer-member-access-operator--) | Primaria |
+| [x](arithmetic-operators.md#unary-plus-and-minus-operators), [-x](arithmetic-operators.md#unary-plus-and-minus-operators), [ \!x](boolean-logical-operators.md#logical-negation-operator-), [x](bitwise-and-shift-operators.md#bitwise-complement-operator-), [x](arithmetic-operators.md#increment-operator-), [--x](arithmetic-operators.md#decrement-operator---), x , [x](member-access-operators.md#index-from-end-operator-), [x , (T)x](type-testing-and-cast.md#cast-operator-), [await](await.md), [&x](pointer-related-operators.md#address-of-operator-), [x](pointer-related-operators.md#pointer-indirection-operator-), true [e false](true-false-operators.md) | Unaria |
+| [X.. Y](member-access-operators.md#range-operator-) | Range |
 | [x * y](arithmetic-operators.md#multiplication-operator-), [x / y](arithmetic-operators.md#division-operator-), [x % y](arithmetic-operators.md#remainder-operator-) | Moltiplicazione|
-| [x + y](arithmetic-operators.md#addition-operator-), [x – y](arithmetic-operators.md#subtraction-operator--) | Addizione |
-| [x \<\<  y](bitwise-and-shift-operators.md#left-shift-operator-), [x >> y](bitwise-and-shift-operators.md#right-shift-operator-) | Shift |
+| [x + y](arithmetic-operators.md#addition-operator-), [x – y](arithmetic-operators.md#subtraction-operator--) | Additive |
+| [ \< x \< y](bitwise-and-shift-operators.md#left-shift-operator-), [x >> y](bitwise-and-shift-operators.md#right-shift-operator-) | Turno |
 | [x \< y](comparison-operators.md#less-than-operator-), [x > y](comparison-operators.md#greater-than-operator-), [x \<= y](comparison-operators.md#less-than-or-equal-operator-), [x >= y](comparison-operators.md#greater-than-or-equal-operator-), [is](type-testing-and-cast.md#is-operator), [as](type-testing-and-cast.md#as-operator) | Operatori relazionali e operatori di test del tipo |
-| [x == y](equality-operators.md#equality-operator-), [x != y](equality-operators.md#inequality-operator-) | Uguaglianza |
+| [x sy](equality-operators.md#equality-operator-), [x !, y](equality-operators.md#inequality-operator-) | Uguaglianza |
 | `x & y` | [AND logico booleano](boolean-logical-operators.md#logical-and-operator-) o [AND bit per bit](bitwise-and-shift-operators.md#logical-and-operator-) |
 | `x ^ y` | [XOR logico booleano](boolean-logical-operators.md#logical-exclusive-or-operator-) o [XOR bit per bit](bitwise-and-shift-operators.md#logical-exclusive-or-operator-) |
 | <code>x &#124; y</code> | [OR logico booleano](boolean-logical-operators.md#logical-or-operator-) o [OR bit per bit](bitwise-and-shift-operators.md#logical-or-operator-) |
@@ -57,14 +57,14 @@ La tabella seguente elenca gli operatori C# in ordine decrescente di precedenza.
 | [x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) | OR condizionale |
 | [x ?? y](null-coalescing-operator.md) | Operatore null-coalescing |
 | [c ? t : f](conditional-operator.md) | Operatore condizionale |
-| [x = y](assignment-operator.md), [x + = y](arithmetic-operators.md#compound-assignment), [x-= y](arithmetic-operators.md#compound-assignment), [x * = y](arithmetic-operators.md#compound-assignment), [x/= y](arithmetic-operators.md#compound-assignment), [x% = y](arithmetic-operators.md#compound-assignment), [x & = y](boolean-logical-operators.md#compound-assignment), [x &#124;= y](boolean-logical-operators.md#compound-assignment), [x ^ = y](boolean-logical-operators.md#compound-assignment), [x < < = y](bitwise-and-shift-operators.md#compound-assignment), [x > > = y](bitwise-and-shift-operators.md#compound-assignment), [x? = y](null-coalescing-operator.md), [=>](lambda-operator.md) | Assegnazione e dichiarazione lambda |
+| [x , y ,](assignment-operator.md) [x , y](arithmetic-operators.md#compound-assignment), x [- y](arithmetic-operators.md#compound-assignment), x , [y](arithmetic-operators.md#compound-assignment), x [, x](arithmetic-operators.md#compound-assignment), x % [, y](arithmetic-operators.md#compound-assignment), x &[, y](boolean-logical-operators.md#compound-assignment) [, x &#124;, y ,](boolean-logical-operators.md#compound-assignment)x [,](boolean-logical-operators.md#compound-assignment)y , x , x , x <<[, y](bitwise-and-shift-operators.md#compound-assignment), x >>, [y](bitwise-and-shift-operators.md#compound-assignment), x [? y](null-coalescing-operator.md), y ,[=>](lambda-operator.md) | Assegnazione e dichiarazione lambda |
 
 ## <a name="operator-associativity"></a>Associatività degli operatori
 
 Quando gli operatori hanno la stessa precedenza, l'associatività degli operatori determina l'ordine di esecuzione delle operazioni:
 
-- Gli operatori *associativi a sinistra* vengono valutati nell'ordine da sinistra a destra. Ad eccezione degli operatori di [assegnazione](assignment-operator.md) e degli [operatori che uniscono valori null](null-coalescing-operator.md), tutti gli operatori binari sono associativi a sinistra. L'espressione `a + b - c` viene ad esempio valutata come `(a + b) - c`.
-- Gli operatori *associativi a destra* vengono valutati nell'ordine da destra a sinistra. Gli operatori di assegnazione, gli operatori che uniscono valori null e l' [operatore condizionale `?:`](conditional-operator.md) sono associativi a destra. L'espressione `x = y = z` viene ad esempio valutata come `x = (y = z)`.
+- Gli operatori *associativi a sinistra* vengono valutati nell'ordine da sinistra a destra. Fatta eccezione per gli operatori di [assegnazione](assignment-operator.md) e gli [operatori di null-coalescing](null-coalescing-operator.md), tutti gli operatori binari sono associativi a sinistra. L'espressione `a + b - c` viene ad esempio valutata come `(a + b) - c`.
+- Gli operatori *associativi a destra* vengono valutati nell'ordine da destra a sinistra. Gli operatori di assegnazione, gli operatori null-coalescing e [l'operatore `?:` condizionale](conditional-operator.md) sono associativi a destra. L'espressione `x = y = z` viene ad esempio valutata come `x = (y = z)`.
 
 Usare le parentesi per cambiare l'ordine di valutazione imposto dall'associatività degli operatori:
 
@@ -78,14 +78,14 @@ Console.WriteLine($"a = {a}, b = {b}");  // output: a = 1, b = 6
 
 Senza correlazione con la precedenza e l'associatività degli operatori, gli operandi in un'espressione vengono valutati da sinistra a destra. Gli esempi seguenti dimostrano l'ordine di valutazione degli operatori e degli operandi:
 
-| Espressione | Ordine di valutazione |
+| Expression | Ordine di valutazione |
 | ---------- | ------------------- |
 |`a + b`|a, b, +|
 |`a + b * c`|a, b, c, *, +|
 |`a / b + c * d`|a, b, /, c, d, *, +|
 |`a / (b + c) * d`|a, b, c, +, /, d, *|
 
-In genere, vengono valutati tutti gli operandi dell'operatore. Tuttavia, alcuni operatori valutano gli operandi in modo condizionale. Ovvero, il valore dell'operando più a sinistra di tale operatore definisce se (o quali) devono essere valutati altri operandi. Questi operatori sono gli operatori logici [and (`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) e [OR (`||`)](boolean-logical-operators.md#conditional-logical-or-operator-) condizionali, gli operatori con unione [null `??` e `??=`](null-coalescing-operator.md), gli [operatori condizionali null `?.` e `?[]`](member-access-operators.md#null-conditional-operators--and-)e l' [operatore condizionale `?:`](conditional-operator.md). Per ulteriori informazioni, vedere la descrizione di ogni operatore.
+In genere, vengono valutati tutti gli operandi dell'operatore. Tuttavia, alcuni operatori valutano gli operandi in modo condizionale. Ovvero, il valore dell'operando più a sinistra di tale operatore definisce se (o quale) altri operandi devono essere valutati. Questi operatori sono gli operatori logici [condizionali`&&`AND ( )](boolean-logical-operators.md#conditional-logical-and-operator-) e OR ( [`||`),](boolean-logical-operators.md#conditional-logical-or-operator-) gli operatori [ `??` null-coalescing e `??=` ](null-coalescing-operator.md), gli operatori [ `?.` null-conditional e `?[]` ](member-access-operators.md#null-conditional-operators--and-), e l'operatore [ `?:`condizionale ](conditional-operator.md). Per ulteriori informazioni, vedere la descrizione di ogni operatore.
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
@@ -93,5 +93,5 @@ Per altre informazioni, vedere la sezione [Operatori](~/_csharplang/spec/express
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
+- [Informazioni di riferimento su C#](../index.md)
 - [Espressioni](../../programming-guide/statements-expressions-operators/expressions.md)

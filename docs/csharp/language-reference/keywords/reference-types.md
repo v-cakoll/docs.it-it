@@ -9,10 +9,10 @@ helpviewer_keywords:
 - types [C#], reference types
 ms.assetid: 801cf030-6e2d-4a0d-9daf-1431b0c31f47
 ms.openlocfilehash: b2d6cc94c11ca6305a75e9ee489af53ad957201e
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76744525"
 ---
 # <a name="reference-types-c-reference"></a>Tipi di riferimento (Riferimenti per C#)
@@ -21,23 +21,23 @@ Esistono due generi di tipo in C#: tipi di riferimento e tipi di valore. Le vari
 
  Le seguenti parole chiave vengono utilizzate per dichiarare i tipi di riferimento:
 
-- [class](class.md)
+- [Classe](class.md)
 
-- [interface](interface.md)
+- [Interfaccia](interface.md)
 
-- [delegate](../builtin-types/reference-types.md)
+- [Delegato](../builtin-types/reference-types.md)
 
  In c# sono disponibili i seguenti tipi di riferimento predefiniti:
 
-- [dynamic](../builtin-types/reference-types.md)
+- [dinamico](../builtin-types/reference-types.md)
 
-- [object](../builtin-types/reference-types.md)
+- [Oggetto](../builtin-types/reference-types.md)
 
-- [string](../builtin-types/reference-types.md)
+- [Stringa](../builtin-types/reference-types.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
+- [Guida di riferimento a C](../index.md)
 - [Parole chiave di C#](index.md)
-- [Tipi di puntatori](../../programming-guide/unsafe-code-pointers/pointer-types.md)
-- [Tipi di valore](../builtin-types/value-types.md)
+- [Tipi di puntatore](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [Tipi valore](../builtin-types/value-types.md)

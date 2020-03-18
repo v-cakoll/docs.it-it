@@ -1,73 +1,73 @@
 ---
 title: Informazioni sulle app cloud native
-description: Modernizzare le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows | Cosa accade per le applicazioni native del cloud?
+description: Modernizza le applicazioni .NET esistenti con i contenitori di Azure Cloud e Windows . E le applicazioni Cloud-Native?
 ms.date: 04/28/2018
 ms.openlocfilehash: d2a7f89e347d75ddbdae84c8eb57e32447b83297
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77543547"
 ---
 # <a name="what-about-cloud-native-applications"></a>Informazioni sulle app cloud native
 
-Sebbene le applicazioni [native del cloud](https://azure.microsoft.com/overview/cloudnative/) non siano l'obiettivo principale di questa guida, è utile conoscere il livello di maturità della modernizzazione e distinguerlo dalle applicazioni ottimizzate per il cloud.
+Anche se le applicazioni [Cloud-Native](https://azure.microsoft.com/overview/cloudnative/) non sono l'obiettivo principale di questa guida, è utile avere una comprensione di questo livello di maturità di modernizzazione e distinguerlo dalle applicazioni ottimizzate per il cloud.
 
-Figura 4-3 posizioni delle app native del cloud nei livelli di maturità della modernizzazione delle applicazioni:
+Figura 4-3 posizioni Cloud-Native applicazioni nei livelli di maturità di modernizzazione dell'applicazione:
 
-![Diagramma che illustra come posizionare le applicazioni native del cloud.](./media/what-about-cloud-native-applications/positioning-cloud-native-applications.png)
+![Diagramma che illustra come posizionare le applicazioni native nel cloud.](./media/what-about-cloud-native-applications/positioning-cloud-native-applications.png)
 
-**Figura 4-3.** Posizionamento di applicazioni native del cloud
+**Figura 4-3.** Posizionamento di applicazioni Cloud-Native
 
-Il livello di maturità della modernizzazione nativa del cloud richiede in genere nuovi investimenti di sviluppo. Il passaggio al livello nativo del cloud è in genere determinato dalla necessità aziendale di modernizzare le applicazioni il più possibile per migliorare drasticamente la scalabilità in applicazioni di grandi dimensioni creando sottosistemi autonomi (microservizi) che possono essere distribuiti e ridimensionati in modo indipendente da altre aree dell'applicazione, riducendo i costi a lungo termine e aumentando l'agilità dell'evoluzione delle parti dell'app autonoma che offrono vantaggi significativi in termini di concorrenza.
+Il livello di maturità della modernizzazione Cloud-Native richiede solitamente nuovi investimenti di sviluppo. Il passaggio al livello Cloud-Native è in genere guidato dalle esigenze aziendali per modernizzare le applicazioni il più possibile per migliorare drasticamente la scalabilità nelle applicazioni di grandi dimensioni creando sottosistemi autonomi (microservizi) che possono essere distribuiti e scalabili in modo indipendente da altre aree dell'applicazione, riducendo i costi a lungo termine e aumentando l'agilità evolutiva delle parti di tali applicazioni autonome che forniscono vantaggi di concorrenza significativi.
 
-I principali pilastri delle applicazioni native del cloud sono basati su approcci di architettura di microservizi, che possono evolversi con agilità e scalabilità fino a limiti che sarebbero difficili da ottenere in un'architettura monolitica, distribuiti in locale o nel cloud. ambiente.
+I pilastri principali delle applicazioni Cloud-Native sono basati su approcci di architettura di microservizi, che possono evolvere con agilità e scalabilità a limiti difficili da raggiungere in un'architettura monolitica, distribuita in locale o cloud Ambiente.
 
-La figura 4-4 illustra le caratteristiche principali del modello nativo del cloud.
+Nella figura 4-4 sono illustrate le caratteristiche principali del modello Cloud-Native.
 
 ![Diagramma che elenca le principali caratteristiche native del cloud.](./media/what-about-cloud-native-applications/cloud-native-characteristics.png)
 
-**Figura 4-4.** Caratteristiche native del cloud
+**Figura 4-4.** Caratteristiche di Cloud-Native
 
-Inoltre, è possibile estendere app Web moderne e app native del cloud aggiungendo altri servizi, ad esempio intelligenza artificiale, Machine Learning (ML) e molto altro. È possibile usare uno di questi servizi per estendere i possibili approcci ottimizzati per il cloud.
+Inoltre, è possibile estendere le app Web moderne di base e le app native nel cloud aggiungendo altri servizi, ad esempio l'intelligenza artificiale (AI), l'apprendimento automatico (ML) e l'IoT. È possibile utilizzare uno di questi servizi per estendere uno dei possibili approcci ottimizzati per il cloud.
 
-La differenza fondamentale nelle applicazioni a livello nativo del cloud è l'architettura dell'applicazione. Le applicazioni native del cloud sono, per definizione, app basate su microservizi. Le app native del cloud richiedono architetture, tecnologie e piattaforme speciali, rispetto a un'applicazione Web monolitica o a una tradizionale applicazione a più livelli.
+La differenza fondamentale nelle applicazioni a livello di Cloud-Native è nell'architettura dell'applicazione. Le applicazioni native del cloud sono, per definizione, app basate su microservizi. Le app native per il cloud richiedono architetture, tecnologie e piattaforme speciali, rispetto a un'applicazione Web monolitica o a un'applicazione a più livelli tradizionale.
 
 ## <a name="cloud-native-applications-details"></a>Dettagli sulle applicazioni native del cloud
 
-Il cloud nativo è uno stato più avanzato o maturo per applicazioni di grandi dimensioni e cruciali. Le applicazioni native del cloud richiedono in genere architettura e progettazione create da zero anziché modernizzando le applicazioni esistenti. La differenza principale tra un'applicazione nativa del cloud e una più semplice app Web ottimizzata per il cloud è la raccomandazione di usare architetture di microservizi in un approccio nativo per il cloud. Le app ottimizzate per il cloud possono essere anche app Web monolitiche o app a più livelli.
+Cloud-Native è uno stato più avanzato o maturo per applicazioni di grandi dimensioni e mission-critical. Le applicazioni cloud native richiedono in genere l'architettura e la progettazione create da zero anziché la modernizzazione delle applicazioni esistenti. La differenza principale tra un'applicazione Cloud-Native e un'app Web ottimizzata per il cloud più semplice è la raccomandazione di usare le architetture di microservizi in un approccio cloud-native. Le app ottimizzate per il cloud possono anche essere app Web monolitiche o app a più livelli.
 
-L' [app a dodici fattori](https://12factor.net/) (una raccolta di modelli strettamente correlati a approcci di microservizi) viene considerata anche un requisito per le architetture di applicazioni native del cloud.
+[L'app](https://12factor.net/) a dodici fattori (una raccolta di modelli strettamente correlati agli approcci ai microservizi) è anche considerata un requisito per le architetture di applicazioni native del cloud.
 
-[Cloud native Computing Foundation (CNCF)](https://www.cncf.io/) è un promotore primario di principi nativi del cloud. Microsoft è [membro di CNCF](https://azure.microsoft.com/blog/announcing-cncf/).
+La [Cloud Native Computing Foundation (CNCF)](https://www.cncf.io/) è un promotore primario dei principi cloud-native. Microsoft è [membro del CNCF](https://azure.microsoft.com/blog/announcing-cncf/).
 
-Per istruzioni dettagliate su come progettare e sviluppare applicazioni native del cloud, leggere gli e-book gratuiti seguenti:
+Per indicazioni dettagliate su come progettare e sviluppare applicazioni native cloud, leggere i seguenti e-book gratuiti:
 
-* [Architettura di applicazioni .NET native del cloud per Azure](../../cloud-native/introduction.md)
-* [Microservizi .NET: architettura per le applicazioni .NET in contenitori](../../microservices/index.md).
+* [Architettura di applicazioni .NET native cloud per AzureArchitecting Cloud-Native .NET Applications for Azure](../../cloud-native/introduction.md)
+* [Microservizi .NET: architettura per applicazioni .NET containerizzate.](../../microservices/index.md)
 
-Il fattore più importante da considerare quando si esegue la migrazione di un'applicazione completa al modello nativo del cloud è che è necessario riprogettare un'architettura basata su microservizi. Questa operazione richiede chiaramente un investimento significativo nello sviluppo a causa del notevole processo di refactoring. Questa opzione viene in genere scelta per le applicazioni cruciali che necessitano di nuovi livelli di scalabilità e agilità a lungo termine. Tuttavia, è possibile iniziare a passare a native del cloud aggiungendo microservizi per alcuni nuovi scenari e infine effettuare il refactoring dell'applicazione come microservizi. Si tratta di un approccio incrementale che rappresenta la scelta migliore per alcuni scenari.
+Il fattore più importante da considerare se si esegue la migrazione di un'applicazione completa al modello nativo cloud è che è necessario riprogettare un'architettura basata su microservizi. Ciò richiede chiaramente un investimento significativo nello sviluppo a causa del grande processo di refactoring coinvolto. Questa opzione viene in genere scelta per le applicazioni mission-critical che necessitano di nuovi livelli di scalabilità e agilità a lungo termine. Tuttavia, è possibile iniziare a passare a cloud-native aggiungendo microservizi per pochi nuovi scenari ed eventualmente refactoring l'applicazione completamente come microservizi. Si tratta di un approccio incrementale che è l'opzione migliore per alcuni scenari.
 
-## <a name="what-about-microservices"></a>Quali sono i microservizi?
+## <a name="what-about-microservices"></a>E i microservizi?
 
-Conoscere i microservizi e il relativo funzionamento è importante quando si considerano le applicazioni native del cloud per l'organizzazione.
+Comprendere i microservizi e il loro funzionamento è importante quando si considerano le applicazioni native cloud per l'organizzazione.
 
-L'architettura dei microservizi è un approccio avanzato che è possibile usare per le applicazioni create da zero o quando si evolvono le applicazioni esistenti verso applicazioni native del cloud. È possibile iniziare aggiungendo alcuni microservizi alle applicazioni esistenti per ottenere informazioni sui nuovi paradigmi di microservizi. Ovviamente, è necessario progettare e scrivere codice, in particolare per questo tipo di approccio architettonico.
+L'architettura dei microservizi è un approccio avanzato che è possibile usare per le applicazioni create da zero o quando si evolveno le applicazioni esistenti verso applicazioni native nel cloud. È possibile iniziare aggiungendo alcuni microservizi alle applicazioni esistenti per conoscere i nuovi paradigmi dei microservizi. Ma chiaramente, è necessario architetto e codice, soprattutto per questo tipo di approccio architettonico.
 
-I microservizi, tuttavia, non sono obbligatori per qualsiasi applicazione nuova o moderna. I microservizi non sono "Magic Bullet" e non sono il singolo modo migliore per creare tutte le applicazioni. Il modo in cui e quando si usano i microservizi dipende dal tipo di applicazione che è necessario compilare.
+Tuttavia, i microservizi non sono obbligatori per qualsiasi applicazione nuova o moderna. I microservizi non sono un "proiettile magico" e non sono l'unico modo migliore per creare ogni applicazione. La modalità e l'utilizzo dei microservizi dipende dal tipo di applicazione che è necessario compilare.
 
-L'architettura dei microservizi sta diventando l'approccio preferito per le applicazioni mission-critical distribuite e grandi o complesse basate su più sottosistemi indipendenti sotto forma di servizi autonomi. In un'architettura basata su microservizi, un'applicazione viene creata come una raccolta di servizi che possono essere sviluppati, testati, sottoposti a controllo delle versioni, distribuiti e ridimensionati in modo indipendente. Questo può includere qualsiasi database autonomo correlato per microservizio.
+L'architettura dei microservizi sta diventando l'approccio preferito per applicazioni mission-critical distribuite e complesse che si basano su più sottosistemi indipendenti sotto forma di servizi autonomi. In un'architettura basata su microservizi, un'applicazione viene compilata come una raccolta di servizi che possono essere sviluppati, testati, sottoposti a controllo delle versioni, distribuiti e scalati in modo indipendente. Questo può includere qualsiasi database autonomo correlato per microservizio.
 
-Per un'analisi dettagliata di un'architettura di microservizi che è possibile implementare con .NET Core, vedere l'e-book PDF scaricabile [per i microservizi .NET: architettura per le applicazioni .NET in contenitori](https://aka.ms/microservicesebook). La guida è disponibile anche in [linea](../../microservices/index.md).
+Per un'analisi dettagliata di un'architettura di microservizi che è possibile implementare utilizzando .NET Core, vedere i [microservizi .NET .NET scaricabili, vedere i microservizi .NET .NET scaricabili.](https://aka.ms/microservicesebook) La guida è disponibile anche [online.](../../microservices/index.md)
 
-Tuttavia, anche negli scenari in cui i microservizi offrono potenti funzionalità indipendenti dalla distribuzione, i limiti del sottosistema e la diversità tecnologica, generano anche molte nuove problemi. I problemi sono correlati allo sviluppo di applicazioni distribuite, ad esempio modelli di dati frammentati e indipendenti; raggiungimento di una comunicazione resiliente tra microservizi; la necessità di coerenza finale; e complessità operativa. I microservizi introducono un livello di complessità superiore rispetto alle applicazioni monolitiche tradizionali.
+Ma anche in scenari in cui i microservizi offrono una distribuzione potente e indipendente dalle funzionalità, forti limiti dei sottosistemi e diversità tecnologica, sollevano anche molte nuove sfide. Le sfide sono correlate allo sviluppo di applicazioni distribuite, ad esempio modelli di dati frammentati e indipendenti; raggiungere una comunicazione resiliente tra i microservizi; la necessità di un'eventuale coerenza; complessità operativa. I microservizi introducono un livello di complessità più elevato rispetto alle applicazioni monolitiche tradizionali.
 
-A causa della complessità di un'architettura di microservizi, solo scenari specifici e determinati tipi di applicazioni sono adatti per le applicazioni basate su microservizi. Sono incluse applicazioni complesse e di grandi dimensioni con più sottosistemi in continua evoluzione. In questi casi, vale la pena investire in un'architettura software più complessa, per una maggiore agilità a lungo termine e una maggiore efficienza di manutenzione delle applicazioni. Per gli scenari meno complessi, tuttavia, può essere preferibile continuare con un approccio di applicazione monolitica o approcci più semplici a più livelli.
+A causa della complessità di un'architettura di microservizi, solo scenari specifici e determinati tipi di applicazioni sono adatti per le applicazioni basate su microservizi. Queste includono applicazioni di grandi dimensioni e complesse con più sottosistemi in evoluzione. In questi casi, vale la pena investire in un'architettura software più complessa, per una maggiore agilità a lungo termine e una manutenzione delle applicazioni più efficiente. Tuttavia, per gli scenari meno complessi, potrebbe essere preferibile continuare con un approccio applicativo monolitico o approcci a più livelli più semplici.
 
-Come nota finale, anche al rischio di essere ripetitivo di questo concetto, non è consigliabile usare microservizi nelle applicazioni come "tutto o niente". È possibile estendere e sviluppare applicazioni monolitiche esistenti aggiungendo nuovi scenari piccoli basati sui microservizi. Non è necessario iniziare da zero per iniziare a usare un approccio di architettura di microservizi. Si consiglia infatti di evolvere dall'uso di un'applicazione monolitica o a più livelli esistente aggiungendo nuovi scenari. Infine, è possibile suddividere l'applicazione in componenti autonomi o microservizi. È possibile iniziare a sviluppare le applicazioni monolitiche in una direzione di microservizi, passo per passo.
+Come nota finale, anche a rischio di essere ripetitivi su questo concetto, non si dovrebbe considerare l'utilizzo di microservizi nelle applicazioni come "all-in o niente affatto." È possibile estendere ed evolvere le applicazioni monolitiche esistenti aggiungendo nuovi scenari di piccole dimensioni basati su microservizi. Non è necessario iniziare da zero per iniziare a lavorare con un approccio all'architettura di microservizi. In effetti, è consigliabile evoluzione dall'utilizzo di un'applicazione monolitica o a più livelli esistente aggiungendo nuovi scenari. Infine, è possibile suddividere l'applicazione in componenti autonomi o microservizi. È possibile iniziare a sviluppare le applicazioni monolitiche in una direzione di microservizi, passo dopo passo.
 
-In ogni caso, la parte restante di questa guida è incentrata principalmente su "nessuna app basata su microservizi" perché questa guida è destinata principalmente alla modernizzazione di app esistenti che in genere hanno architetture monolitiche o a più livelli.
+In ogni caso, il resto di queste linee guida attuali si concentra soprattutto su "nessuna app basata su microservizi" perché questa guida è principalmente mirata alla modernizzazione delle app esistenti che di solito hanno architetture monolitiche o a più livelli.
 
 > [!div class="step-by-step"]
-> [Precedente](microsoft-technologies-in-cloud-optimized-applications.md)
-> [Successivo](deploy-existing-net-apps-as-windows-containers.md)
+> [Successivo](microsoft-technologies-in-cloud-optimized-applications.md)
+> [precedente](deploy-existing-net-apps-as-windows-containers.md)

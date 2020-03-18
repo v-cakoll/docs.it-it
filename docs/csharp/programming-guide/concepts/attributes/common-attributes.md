@@ -3,11 +3,11 @@ title: Attributi comuni (C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
 ms.openlocfilehash: 7988dad410c6e51869ec9d7e40d94e874443a5f8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595467"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399756"
 ---
 # <a name="common-attributes-c"></a>Attributi comuni (C#)
 Questo argomento descrive gli attributi usati più di frequente nei programmi C#.  
@@ -16,11 +16,11 @@ Questo argomento descrive gli attributi usati più di frequente nei programmi C#
   
 - [Attributo Obsolete](#Obsolete)  
   
-- [Attributo Conditional](#Conditional)  
+- [Attributo condizionale](#Conditional)  
   
-- [Attributi informativi sul chiamante](#CallerInfo)  
+- [Attributi info chiamante](#CallerInfo)  
   
-## <a name="Global"></a> Attributi globali  
+## <a name="Global"></a>Attributi globali  
  La maggior parte degli attributi viene applicata a elementi specifici del linguaggio quali classi o metodi. Alcuni attributi sono invece globali e vengono applicati a un intero assembly o a un intero modulo. Ad esempio, l'attributo <xref:System.Reflection.AssemblyVersionAttribute> può essere usato per incorporare informazioni sulla versione in un assembly, nel modo seguente:  
   
 ```csharp  
@@ -72,7 +72,7 @@ Questo argomento descrive gli attributi usati più di frequente nei programmi C#
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|Definisce un attributo personalizzato che specifica una configurazione assembly per un manifesto dell'assembly.|  
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Definisce un alias predefinito descrittivo per un manifesto dell'assembly.|  
   
-## <a name="Obsolete"></a> Attributo Obsolete  
+## <a name="Obsolete"></a>Attributo Obsolete  
  L'attributo `Obsolete` contrassegna un'entità del programma il cui uso non è più consigliato. Ogni uso di un'entità contrassegnata con Obsolete genererà in seguito un avviso o errore, a seconda della configurazione dell'attributo. Ad esempio:  
   
 ```csharp  
@@ -216,12 +216,12 @@ class SampleClass
 }  
 ```  
   
-## <a name="CallerInfo"></a> Attributi di informazioni sul chiamante  
+## <a name="CallerInfo"></a>Attributi info chiamante  
  Gli attributi di informazioni sul chiamante consentono di ottenere informazioni sul chiamante di un metodo. È possibile ottenere il percorso del file del codice sorgente, il numero di riga nel codice sorgente e il nome del chiamante.  
   
  È possibile ottenere informazioni sul chiamante usando gli attributi applicati ai parametri facoltativi. Ogni parametro facoltativo specifica un valore predefinito. Nella tabella seguente sono elencati gli attributi di informazioni sul chiamante definiti nello spazio dei nomi <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>:  
   
-|Attributo|DESCRIZIONE|Tipo|  
+|Attributo|Descrizione|Type|  
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Percorso completo del file di origine contenente il chiamante. È il percorso al momento della compilazione.|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Numero di riga nel file di origine da cui viene chiamato il metodo.|`Integer`|  
@@ -236,4 +236,4 @@ class SampleClass
 - [Guida per programmatori C#](../../index.md)
 - [Attributi](../../../../standard/attributes/index.md)
 - [Reflection (C#)](../reflection.md)
-- [Accessing Attributes by Using Reflection (C#)](./accessing-attributes-by-using-reflection.md) (Accesso agli attributi tramite reflection (C#))
+- [Accessing Attributes by Using Reflection (C#)](./accessing-attributes-by-using-reflection.md) (Accesso agli attributi con reflection (C#))

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
 ms.openlocfilehash: 96e8bbce2e67c316d5cd1cd78e3e2506dabead25
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713856"
 ---
 # <a name="abstract-c-reference"></a>abstract (Riferimenti per C#)
@@ -77,14 +77,14 @@ BaseClass bc = new BaseClass();   // Error
   
 si ottiene un messaggio di errore che informa che il compilatore non può creare un'istanza della classe astratta "BaseClass".  
   
-## <a name="c-language-specification"></a>Specifica del linguaggio C#  
+## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
+- [Guida di riferimento a C](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Modificatori](index.md)
-- [virtual](./virtual.md)
-- [override](./override.md)
+- [Virtuale](./virtual.md)
+- [prevalere](./override.md)
 - [Parole chiave di C#](./index.md)

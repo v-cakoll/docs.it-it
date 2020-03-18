@@ -3,11 +3,11 @@ title: Comunicazione in un'architettura di microservizi
 description: Esaminare diverse modalità di comunicazione tra i microservizi, comprendere le implicazioni dei metodi sincroni e asincroni.
 ms.date: 01/30/2020
 ms.openlocfilehash: f2d6e78966bb7d5f481de6db0ab1dcfe2812a1b5
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503308"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401655"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Comunicazione in un'architettura di microservizi
 
@@ -51,17 +51,17 @@ Inoltre, se si hanno dipendenze HTTP tra microservizi, come per la creazione di 
 
 Più si aggiungono dipendenze sincrone tra i microservizi, come per le richieste di query e peggiore sarà il tempo di risposta complessivo necessario per le app client.
 
-![Diagramma che mostra tre tipi di comunicazioni tra i microservizi.](./media/communication-in-microservice-architecture/sync-vs-async-patterns-across-microservices.png)
+![Diagramma che mostra tre tipi di comunicazioni tra microservizi.](./media/communication-in-microservice-architecture/sync-vs-async-patterns-across-microservices.png)
 
 **Figura 4-15**. Schemi e antipattern nella comunicazione tra microservizi
 
-Come illustrato nel diagramma precedente, nella comunicazione sincrona viene creata una "catena" di richieste tra i microservizi e la richiesta del client. Questo è un anti-pattern. Nella comunicazione asincrona i microservizi usano messaggi asincroni o il polling HTTP per comunicare con altri microservizi, ma la richiesta del client viene gestita immediatamente.
+Come illustrato nel diagramma precedente, nella comunicazione sincrona viene creata una "catena" di richieste tra microservizi durante la gestione della richiesta del client. Questo è un anti-pattern. Nella comunicazione asincrona i microservizi usano messaggi asincroni o il polling HTTP per comunicare con altri microservizi, ma la richiesta del client viene gestita immediatamente.
 
 Se un microservizio deve generare un'azione aggiuntiva in un altro microservizio, se possibile non eseguire tale azione in modo sincrono e come parte dell'operazione di richiesta e risposta originale del microservizio. Eseguire invece l'azione in modo asincrono (usando la messaggistica asincrona o eventi di integrazione, code e così via). Tuttavia, per quanto possibile, non richiamare l'azione in modo sincrono come parte dell'operazione di richiesta e risposta sincrona originale.
 
 Infine, e questo è il punto in cui si verifica la maggior parte dei problemi quando si creano i microservizi, se il microservizio iniziale necessita di dati originariamente di proprietà di altri microservizi, evitare di effettuare richieste sincrone per tali dati. Replicare o propagare i dati (solo gli attributi necessari) nel database del servizio iniziale usando la coerenza finale. In genere si usano gli eventi di integrazione, come illustrato nelle sezioni successive.
 
-Come indicato in precedenza nella sezione [Identificazione dei limiti del modello di dominio per ogni microservizio](identify-microservice-domain-model-boundaries.md) , la duplicazione di alcuni dati in diversi microservizi non è una progettazione corretta, al contrario, quando si esegue questa operazione, è possibile convertire i dati in una lingua o in termini specifici del dominio aggiuntivo o del contesto delimitato. Nell' [applicazione eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) , ad esempio, si dispone di un microservizio denominato `identity-api` che è responsabile della maggior parte dei dati dell'utente con un'entità denominata `User`. Tuttavia, quando è necessario archiviare i dati sull'utente all'interno del microservizio `Ordering`, viene archiviato come entità diversa denominata `Buyer`. L'entità `Buyer` condivide la stessa identità con l'entità `User` originale, ma potrebbe contenere solo i pochi attributi necessari per il dominio `Ordering` e non l'intero profilo utente.
+Come indicato in precedenza nella sezione Identificazione dei limiti del modello di dominio per ogni sezione dei [microservizi,](identify-microservice-domain-model-boundaries.md) la duplicazione di alcuni dati tra diversi microservizi non è una progettazione non corretta, al contrario, in questo modo è possibile tradurre i dati nella lingua o nei termini specifici di tale dominio aggiuntivo o contesto delimitato. Ad esempio, [nell'applicazione eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) si `identity-api` dispone di un microservizio denominato responsabile della maggior `User`parte dei dati dell'utente con un'entità denominata . Tuttavia, quando è necessario archiviare `Ordering` i dati relativi all'utente all'interno del microservizio, archiviarli come entità diversa denominata `Buyer`. L'entità `Buyer` condivide la stessa `User` identità con l'entità originale, `Ordering` ma potrebbe avere solo i pochi attributi necessari per il dominio e non l'intero profilo utente.
 
 È possibile usare qualsiasi protocollo per comunicare e propagare i dati in modo asincrono tra i microservizi per avere la coerenza finale. Come illustrato in precedenza, è possibile usare gli eventi di integrazione mediante un bus di eventi o un broker di messaggi oppure è anche possibile usare HTTP eseguendo il polling degli altri servizi. Non importa. La regola importante consiste nel non creare dipendenze sincrone tra i microservizi.
 
@@ -77,7 +77,7 @@ Esistono inoltre diversi formati di messaggio come JSON o XML o anche formati bi
 
 Quando un client usa la comunicazione di tipo richiesta/risposta, invia una richiesta a un servizio, quindi il servizio elabora la richiesta e restituisce una risposta. La comunicazione di tipo richiesta/risposta è particolarmente indicata per eseguire query sui dati per un'interfaccia utente in tempo reale dalle app client. Pertanto, in un'architettura di microservizi probabilmente si userà questo meccanismo di comunicazione per la maggior parte delle query, come illustrato nella figura 4-16.
 
-![Diagramma che mostra le comunicazioni di richiesta/risposta per gli aggiornamenti e le query in tempo reale.](./media/communication-in-microservice-architecture/request-response-comms-live-queries-updates.png)
+![Diagramma che mostra le comunicazioni richiesta/risposta per le query e gli aggiornamenti in tempo reale.](./media/communication-in-microservice-architecture/request-response-comms-live-queries-updates.png)
 
 **Figura 4-16**. Uso della comunicazione di tipo richiesta/risposta HTTP (sincrona o asincrona)
 
@@ -89,7 +89,7 @@ L'uso di servizi REST HTTP come linguaggio di definizione dell'interfaccia offre
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Martin Fowler. Modello di maturità Richardson** una descrizione del modello REST. \
+- **Martin Fowler. Richardson Maturity Model** Una descrizione del modello REST. \
   <https://martinfowler.com/articles/richardsonMaturityModel.html>
 
 - **Swagger** Il sito ufficiale. \
@@ -108,5 +108,5 @@ Come mostrato nella figura 4-17, la comunicazione HTTP in tempo reale significa 
 SignalR è un buon metodo per ottenere la comunicazione in tempo reale per eseguire il push del contenuto ai client da un server back-end. Poiché la comunicazione è in tempo reale, le app client mostrano le modifiche quasi immediatamente. Questa operazione viene in genere gestita da un protocollo, ad esempio WebSocket, usando molte connessioni WebSocket (una per ogni client). Un esempio tipico è quando un servizio comunica contemporaneamente una modifica del punteggio di un gioco sportivo alle app Web di molti client.
 
 >[!div class="step-by-step"]
->[Precedente](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)
->[Successivo](asynchronous-message-based-communication.md)
+>[Successivo](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)
+>[precedente](asynchronous-message-based-communication.md)

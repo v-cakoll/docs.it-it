@@ -3,10 +3,10 @@ title: Implementazione di oggetti valore
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Informazioni su dettagli e opzioni per implementare oggetti valore con le nuove funzionalità di Entity Framework.
 ms.date: 01/30/2020
 ms.openlocfilehash: 4ace5c141b1cbd2dcfefb7ea7165a4006b130479
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77502504"
 ---
 # <a name="implement-value-objects"></a>Implementare oggetti valore
@@ -17,11 +17,11 @@ Un oggetto valore può fare riferimento ad altre entità. Ad esempio, in un'appl
 
 La figura 7-13 illustra l'oggetto valore Address all'interno dell'aggregazione Order.
 
-![Diagramma che mostra il valore dell'indirizzo-oggetto all'interno dell'aggregazione Order.](./media/implement-value-objects/value-object-within-aggregate.png)
+![Diagramma che mostra l'oggetto valore Indirizzo all'interno dell'aggregazione dell'ordine.](./media/implement-value-objects/value-object-within-aggregate.png)
 
 **Figura 7-13**. Oggetto valore Address all'interno dell'aggregazione Order
 
-Come illustrato nella figura 7-13, un'entità è generalmente composta da più attributi. Ad esempio, l'entità `Order` può essere modellata come entità con un'identità e composta internamente da un set di attributi, ad esempio OrderId, OrderDate, OrderItems e così via. Tuttavia, l'indirizzo, che è semplicemente un valore complesso costituito da paese/area geografica, via, città e così via, non ha identità in questo dominio, deve essere modellato e considerato come un oggetto valore.
+Come illustrato nella figura 7-13, un'entità è generalmente composta da più attributi. Ad esempio, `Order` l'entità può essere modellata come un'entità con un'identità e composta internamente da un set di attributi, ad esempio OrderId, OrderDate, OrderItems e così via. Ma l'indirizzo, che è semplicemente un valore complesso composto da paese / regione, strada, città, ecc e non ha identità in questo dominio, deve essere modellato e trattato come un oggetto valore.
 
 ## <a name="important-characteristics-of-value-objects"></a>Caratteristiche importanti degli oggetti valore
 
@@ -131,17 +131,17 @@ public class Address : ValueObject
 
 Si può vedere come questa implementazione dell'oggetto valore di Address non abbia alcuna identità, e quindi alcun campo ID, né a livello della classe Address, né a livello della classe ValueObject.
 
-Non è possibile usare un campo ID in una classe per l'uso da Entity Framework (EF) fino a EF Core 2,0, che consente di implementare in modo considerevole oggetti valore migliori senza ID. Tutto ciò viene illustrato nella prossima sezione.
+Non avendo alcun campo ID in una classe da utilizzare da Entity Framework (EF) non era possibile fino a Entity Framework Core 2.0, che consente notevolmente di implementare oggetti di valore migliore senza ID. Tutto ciò viene illustrato nella prossima sezione.
 
-È possibile affermare che gli oggetti valore, non modificabili, devono essere di sola lettura (ovvero avere proprietà solo Get) e ciò è vero. Tuttavia, gli oggetti valore vengono in genere serializzati e deserializzati per passare attraverso le code di messaggi e il fatto che siano di sola lettura impedisce al deserializzatore di assegnare valori. Vengono pertanto lasciati come "set privato", con proprietà di sola lettura sufficienti a garantirne la praticità.
+Si potrebbe sostenere che gli oggetti di valore, essendo immutabili, devono essere di sola lettura (vale a dire, hanno proprietà get-only), e questo è davvero. Tuttavia, gli oggetti valore vengono in genere serializzati e deserializzati per passare attraverso le code di messaggi e il fatto che siano di sola lettura impedisce al deserializzatore di assegnare valori. Vengono pertanto lasciati come "set privato", con proprietà di sola lettura sufficienti a garantirne la praticità.
 
-## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20-and-later"></a>Come salvare in modo permanente gli oggetti valore nel database con EF Core 2,0 e versioni successive
+## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20-and-later"></a>Come rendere persistenti gli oggetti valore nel database con EF Core 2.0 e versioni successiveHow to persist value objects in the database with EF Core 2.0 and later
 
-È stato appena descritto come definire un oggetto valore nel modello di dominio. Ma come è possibile salvarla in modo permanente nel database usando Entity Framework Core perché in genere è destinata alle entità con identità?
+È stato appena descritto come definire un oggetto valore nel modello di dominio. Ma come è effettivamente possibile rendere effettivamente persistente nel database utilizzando Entity Framework Core poiché in genere è destinato alle entità con identità?
 
 ### <a name="background-and-older-approaches-using-ef-core-11"></a>Approcci generali e precedenti con l'uso di EF Core 1.1
 
-Una limitazione generale di EF Core 1.0 e 1.1 impediva l'uso dei [tipi complessi](xref:System.ComponentModel.DataAnnotations.Schema.ComplexTypeAttribute) come definito in EF 6.x nella piattaforma .NET Framework tradizionale. Quindi, se si usava EF Core 1.0 o 1.1, era necessario archiviare l'oggetto di valore come entità EF con un campo ID. Successivamente, per farlo somigliare di più a un oggetto valore senza identità, era possibile nascondere l'ID per indicare che l'identità di un oggetto valore non è importante nel modello di dominio. L'ID poteva essere nascosto trasformandolo in una [proprietà shadow](https://docs.microsoft.com/ef/core/modeling/shadow-properties ). Dal momento che la configurazione per nascondere l'ID del modello viene configurata nel livello di infrastruttura di EF, risulterebbe trasparente per il modello di dominio.
+Come sfondo, una limitazione quando si utilizza EF Core 1.0 e 1.1 era che non è possibile utilizzare [tipi complessi](xref:System.ComponentModel.DataAnnotations.Schema.ComplexTypeAttribute) come definito in EF 6.x in .NET Framework tradizionale. Quindi, se si usava EF Core 1.0 o 1.1, era necessario archiviare l'oggetto di valore come entità EF con un campo ID. Successivamente, per farlo somigliare di più a un oggetto valore senza identità, era possibile nascondere l'ID per indicare che l'identità di un oggetto valore non è importante nel modello di dominio. L'ID poteva essere nascosto trasformandolo in una [proprietà shadow](https://docs.microsoft.com/ef/core/modeling/shadow-properties ). Dal momento che la configurazione per nascondere l'ID del modello viene configurata nel livello di infrastruttura di EF, risulterebbe trasparente per il modello di dominio.
 
 Nella versione iniziale di eShopOnContainers (.NET Core 1.1), l'ID nascosto necessario per l'infrastruttura EF Core era implementato nel modo seguente nel livello DbContext, usando l'API Fluent nel progetto di infrastruttura. Quindi, l'ID risultava nascosto per il modello di dominio, ma era ancora presente nell'infrastruttura.
 
@@ -160,11 +160,11 @@ void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration)
 
 La persistenza dell'oggetto valore nel database era comunque assicurata usando un'entità normale in un'altra tabella.
 
-Con EF Core 2,0 e versioni successive, sono disponibili nuovi e migliori modi per salvare in modo permanente gli oggetti valore.
+Con EF Core 2.0 e versioni successive, esistono modi nuovi e migliori per rendere persistenti gli oggetti valore.
 
-## <a name="persist-value-objects-as-owned-entity-types-in-ef-core-20-and-later"></a>Mantieni oggetti valore come tipi di entità di proprietà in EF Core 2,0 e versioni successive
+## <a name="persist-value-objects-as-owned-entity-types-in-ef-core-20-and-later"></a>Rendere persistenti gli oggetti valore come tipi di entità di proprietà in Entity Framework Core 2.0 e versioni successivePersist value objects as owned entity types in EF Core 2.0 and later
 
-Anche con alcuni gap tra il modello di oggetto valore canonico in DDD e il tipo di entità di proprietà in EF Core, è attualmente il modo migliore per salvare in modo permanente gli oggetti valore con EF Core 2,0 e versioni successive. È possibile vedere le limitazioni alla fine di questa sezione.
+Anche con alcuni spazi tra il modello di oggetto valore canonico in DDD e il tipo di entità di proprietà in Entity Framework Core, è attualmente il modo migliore per rendere persistenti gli oggetti valore con Entity Framework Core 2.0 e versioni successive. È possibile vedere le limitazioni alla fine di questa sezione.
 
 La funzionalità dei tipi di entità di proprietà è stata aggiunta a EF Core a partire dalla versione 2.0.
 
@@ -178,7 +178,7 @@ L'identità delle istanze dei tipi di proprietà non è del tutto esclusiva, ma 
 
 - La proprietà di navigazione che punta alle istanze
 
-- Nel caso di raccolte di tipi di proprietà, componente indipendente (supportato in EF Core 2,2 e versioni successive).
+- Nel caso di raccolte di tipi di proprietà, un componente indipendente (supportato in EF Core 2.2 e versioni successive).
 
 Ad esempio, nel modello di dominio degli ordini in eShopOnContainers, all'interno dell'entità Order, l'oggetto valore Address viene implementato come un tipo di entità di proprietà all'interno dell'entità del proprietario, ovvero l'entità Order. Address è un tipo la cui proprietà identità non è definita nel modello di dominio. Viene usato come proprietà del tipo Order per specificare l'indirizzo di spedizione per uno specifico ordine.
 
@@ -238,7 +238,7 @@ orderConfiguration.OwnsOne(p => p.Address)
                             .Property(p=>p.City).HasColumnName("ShippingCity");
 ```
 
-È possibile concatenare il metodo `OwnsOne` in un mapping Fluent. Nell'esempio ipotetico seguente `OrderDetails` è proprietario di `BillingAddress` e `ShippingAddress`, che sono entrambi tipi `Address`. Quindi `OrderDetails` è di proprietà del tipo `Order`.
+È possibile concatenare `OwnsOne` il metodo in una mappatura fluente. Nell'esempio ipotetico seguente `OrderDetails` è proprietario di `BillingAddress` e `ShippingAddress`, che sono entrambi tipi `Address`. Quindi `OrderDetails` è di proprietà del tipo `Order`.
 
 ```csharp
 orderConfiguration.OwnsOne(p => p.OrderDetails, cb =>
@@ -283,27 +283,27 @@ public class Address
 
 - La suddivisione di tabelle è configurata per convenzione, ma è possibile rifiutare esplicitamente eseguendo il mapping del tipo di proprietà in una tabella diversa usando ToTable.
 
-- Il caricamento eager viene eseguito automaticamente sui tipi di proprietà, ovvero non è necessario chiamare `.Include()` sulla query.
+- Il caricamento rapido viene eseguito automaticamente sui tipi di `.Include()` proprietà, ovvero non è necessario chiamare la query.
 
-- Può essere configurato con `[Owned]`di attributo, usando EF Core 2,1 e versioni successive.
+- Può essere configurato `[Owned]`con l'attributo , utilizzando EF Core 2.1 e versioni successive.
 
-- Può gestire raccolte di tipi di proprietà (usando la versione 2,2 e successive).
+- Può gestire raccolte di tipi di proprietà (utilizzando la versione 2.2 e successive).
 
 #### <a name="owned-entities-limitations"></a>Limitazioni delle entità di proprietà
 
-- Non è possibile creare un `DbSet<T>` di un tipo di proprietà (da progettazione).
+- Non è possibile `DbSet<T>` creare un di un tipo di proprietà (in base alla progettazione).
 
-- Non è possibile chiamare `ModelBuilder.Entity<T>()` sui tipi di proprietà (attualmente in fase di progettazione).
+- Non è possibile `ModelBuilder.Entity<T>()` chiamare i tipi di proprietà (attualmente in base alla progettazione).
 
-- Nessun supporto per i tipi di proprietà facoltativi (ovvero Nullable) di cui è stato eseguito il mapping con il proprietario nella stessa tabella, ovvero usando la suddivisione delle tabelle. Ciò è dovuto al fatto che il mapping viene eseguito per ogni proprietà e non è disponibile un valore sentinel separato per l'intero valore complesso Null.
+- Nessun supporto per i tipi di proprietà facoltativi ( ovvero nullable) mappati con il proprietario nella stessa tabella, ovvero utilizzando la suddivisione della tabella. Ciò è dovuto al fatto che il mapping viene eseguito per ogni proprietà e non è disponibile un valore sentinel separato per l'intero valore complesso Null.
 
 - Nessun supporto del mapping di ereditarietà per i tipi di proprietà, ma è possibile eseguire il mapping di due tipi di foglia delle stesse gerarchie di ereditarietà come tipi di proprietà diversi. EF Core non considera il fatto che fanno parte della stessa gerarchia.
 
 #### <a name="main-differences-with-ef6s-complex-types"></a>Principali differenze rispetto ai i tipi complessi di EF6
 
-- La suddivisione delle tabelle è facoltativa, ovvero è possibile eseguirne il mapping facoltativamente a una tabella separata ed essere ancora di proprietà di tipi.
+- La suddivisione delle tabelle è facoltativa, ovvero può essere facoltativamente mappata a una tabella separata ed è comunque di essere di proprietà.
 
-- Possono fare riferimento ad altre entità, ovvero possono fungere da lato dipendente sulle relazioni con altri tipi non di proprietà.
+- Possono fare riferimento ad altre entità, ovvero possono fungere da lato dipendente per le relazioni con altri tipi non di proprietà.
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
@@ -319,10 +319,10 @@ public class Address
 - **Tipi di entità di proprietà** \
   <https://docs.microsoft.com/ef/core/modeling/owned-entities>
 
-- **Proprietà shadow** \
+- **Proprietà ombra** \
   <https://docs.microsoft.com/ef/core/modeling/shadow-properties>
 
-- **Complex types and/or value objects (Tipi complessi e/o oggetti valore)** . Discussione nel repository GitHub di EF Core (scheda Issues) \
+- **Complex types and/or value objects (Tipi complessi e/o oggetti valore)**. Discussione nel repository GitHub di EF Core (scheda Issues) \
   <https://github.com/dotnet/efcore/issues/246>
 
 - **ValueObject.cs.** Classe oggetti valore di base in eShopOnContainers. \
@@ -332,5 +332,5 @@ public class Address
   <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs>
 
 > [!div class="step-by-step"]
-> [Precedente](seedwork-domain-model-base-classes-interfaces.md)
-> [Successivo](enumeration-classes-over-enum-types.md)
+> [Successivo](seedwork-domain-model-base-classes-interfaces.md)
+> [precedente](enumeration-classes-over-enum-types.md)

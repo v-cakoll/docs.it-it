@@ -4,15 +4,15 @@ description: Le interfacce definiscono contratti implementati dai tipi in C#
 ms.date: 02/27/2020
 ms.assetid: a9bf82f4-efd1-4216-bd34-4ef0fa48c968
 ms.openlocfilehash: 62d94462fa481379cf70d63a598deb7f36be204f
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78159130"
 ---
 # <a name="interfaces"></a>Interfacce
 
-Un'***interfaccia*** definisce un contratto che può essere implementato da classi e struct. Può contenere metodi, proprietà, eventi e indicizzatori. Un'interfaccia non fornisce implementazioni dei membri che definisce: specifica semplicemente i membri che devono essere forniti da classi o struct che implementano l'interfaccia.
+Un'***interfaccia*** definisce un contratto che può essere implementato da classi e struct. Può contenere metodi, proprietà, eventi e indicizzatori. Un'interfaccia non fornisce implementazioni dei membri che definisce, ma specifica semplicemente i membri che devono essere forniti da classi o struct che implementano l'interfaccia.
 
 Le interfacce possono usare l'***ereditarietà multipla***. Nell'esempio seguente l'interfaccia `IComboBox` eredita da `ITextBox` e `IListBox`.
 
@@ -26,7 +26,7 @@ Quando una classe o un tipo struct implementa un'interfaccia specifica, le istan
 
 [!code-csharp[InterfacesThree](../../../samples/snippets/csharp/tour/interfaces/Program.cs#L33-L35)]
 
-Nei casi in cui un'istanza non è nota in modo statico per implementare un'interfaccia particolare, è possibile utilizzare i cast di tipo dinamico. Le istruzioni seguenti usano ad esempio cast di tipo dinamico per ottenere implementazioni delle interfacce `IControl` e `IDataBound` di un oggetto. Poiché il tipo effettivo in fase di esecuzione dell'oggetto è `EditBox`, i cast vengono eseguiti correttamente.
+Nei casi in cui un'istanza non è nota in modo statico per implementare una particolare interfaccia, è possibile utilizzare cast di tipo dinamici. Le istruzioni seguenti usano ad esempio cast di tipo dinamico per ottenere implementazioni delle interfacce `IControl` e `IDataBound` di un oggetto. Poiché il tipo effettivo in fase di esecuzione dell'oggetto è `EditBox`, i cast vengono eseguiti correttamente.
 
 [!code-csharp[InterfacesFour](../../../samples/snippets/csharp/tour/interfaces/Program.cs#L40-L42)]
 
@@ -39,5 +39,5 @@ Nella classe `EditBox` precedente il metodo `Paint` dell'interfaccia `IControl` 
 [!code-csharp[InterfacesFive](../../../samples/snippets/csharp/tour/interfaces/Program.cs#L71-L74)]
 
 >[!div class="step-by-step"]
->[Precedente](arrays.md)
->[Successivo](delegates.md)
+>[Successivo](arrays.md)
+>[precedente](delegates.md)

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - contravariance, in keyword [C#]
 - in keyword [C#]
 ms.openlocfilehash: 57da13f6dc6719166b9051afeb2532ba5fbeff3a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713479"
 ---
 # <a name="in-generic-modifier-c-reference"></a>in (Modificatore generico) (Riferimenti per C#)
@@ -43,6 +43,6 @@ L'esempio seguente illustra come dichiarare, creare un'istanza e chiamare un del
 
 ## <a name="see-also"></a>Vedere anche
 
-- [out](out-generic-modifier.md)
+- [Cambio](out-generic-modifier.md)
 - [Covarianza e controvarianza](../../programming-guide/concepts/covariance-contravariance/index.md)
 - [Modificatori](index.md)

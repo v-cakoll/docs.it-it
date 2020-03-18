@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 469be53e14c42775f21ef1ef815becd5cad03a97
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: e5da9a98e8725880223df3737dc60f773db8d20e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75336718"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79141133"
 ---
-# <a name="contributing"></a>Contributi al codice
+# <a name="contributing"></a>Contributo
 
 Grazie per l'interesse dimostrato nell'apporto di contributi alla documentazione di .NET.
 
@@ -15,32 +15,36 @@ Grazie per l'interesse dimostrato nell'apporto di contributi alla documentazione
 
 Il documento illustra il processo per offrire il proprio contributo per gli articoli e gli esempi di codice ospitati nel [sito della documentazione di .NET](https://docs.microsoft.com/dotnet). I contributi possono essere semplici come le correzioni di errori di ortografia o complessi, ad esempio nuovi articoli.
 
-- [Cosa fare e cosa non fare](#dos-and-donts)
+- [SO e NON](#dos-and-donts)
 - [Processo per fornire il contributo](#process-for-contributing)
 - [Esperienza interattiva in C#](#the-c-interactive-experience)
 - [Contratto di licenza con il collaboratore](#contributor-license-agreement)
 
 Questo repository contiene la documentazione concettuale per .NET. Il sito della documentazione di .NET è costituito da più repository oltre a questo:
 
-- [Esempi di codice e frammenti di codice](https://github.com/dotnet/samples) I problemi e le attività per questo repository vengono rilevati in [DotNet/docs/issues](https://github.com/dotnet/docs/issues).
-- Informazioni di [riferimento sulle API .NET](https://github.com/dotnet/dotnet-api-docs) I problemi e le attività per questo repository vengono rilevati in [DotNet/DotNet-API-docs/issues](https://github.com/dotnet/dotnet-api-docs/issues).
-- Informazioni di [riferimento su .NET Compiler Platform SDK](https://github.com/dotnet/roslyn-api-docs) I problemi e le attività per questo repository vengono rilevati in [DotNet/docs/issues](https://github.com/dotnet/docs/issues).
+- [Esempi di codice e frammenti di codiceCode samples and snippets](https://github.com/dotnet/samples) I problemi e le attività per questo repository vengono registrati in [dotnet/docs/issues](https://github.com/dotnet/docs/issues).
+- [Informazioni di riferimento sulle API .NET](https://github.com/dotnet/dotnet-api-docs) I problemi e le attività per questo repository vengono registrati in [dotnet/dotnet-api-docs/issues](https://github.com/dotnet/dotnet-api-docs/issues).
+- [Informazioni di riferimento su .NET Compiler Platform SDK](https://github.com/dotnet/roslyn-api-docs) I problemi e le attività per questo repository vengono registrati in [dotnet/docs/issues](https://github.com/dotnet/docs/issues).
+
+### <a name="contributing-to-international-content"></a>Contribuire ai contenuti internazionali
+
+I contributi per i contenuti tradotti automaticamente (MT) non sono attualmente accettati per il momento. Nel tentativo di migliorare la qualità del contenuto MT, abbiamo passato a un motore MT neurale. Accettiamo e incoraggiamo i contributi per i contenuti tradotti umani (HT), che vengono utilizzati per addestrare il motore Neural MT. Così nel tempo, i contributi ai contenuti HT miglioreranno la qualità sia di HT che di MT. Gli argomenti di MT avranno una dichiarazione di non responsabilità che indica che parte dell'argomento può essere MT e il pulsante **Modifica** non verrà visualizzato come disabilitato.
 
 ## <a name="dos-and-donts"></a>Cosa fare e cosa non fare
 
 Il seguente elenco illustra alcune regole che è necessario tenere presenti quando si inviano contributi alla documentazione di .NET:
 
-- **NON** inviare richieste pull di grandi dimensioni. Al contrario, segnalare un problema e avviare una discussione in modo che si possa concordare una direzione prima di investire una grande quantità di tempo. Per le modifiche bulk, suddividere il lavoro in richieste pull più piccole (fino a 100 di file). Questa guida è fortemente consigliata se la richiesta pull non segue le linee guida seguenti.
-- **Esaminare i** [problemi correnti per i](https://github.com/dotnet/docs/labels/up-for-grabs) suggerimenti sulle attività.
-- **Creare una** richiesta pull per ogni attività. Le richieste pull che includono più modifiche non correlate sono molto più difficili da rivedere. Che ritarda le revisioni e l'Unione di richieste pull. Questa linea guida si applica anche alle revisioni: si prova a non suggerire modifiche non correlate nelle revisioni. si chiede che le revisioni della community rispettano questa linea guida.
-- **Fornire una** descrizione chiara del lavoro nella richiesta pull. Indicare le modifiche e il motivo. La descrizione predefinita di "Update article.md" non è utile per i revisori.
-- **Non** inviare richieste pull per le modifiche solo stile senza una discussione preliminare. Queste richieste pull hanno tempo aggiuntivo per verificarne l'accuratezza e l'Unione causa spesso conflitti di merge con altri aggiornamenti importanti. Ci stiamo impegnando per seguire uno stile coerente, ma stiamo bilanciando il lavoro con altre attività. Gli articoli vengono introdotti in conformità allo stile quando si eseguono aggiornamenti principali per altri motivi.
-- **LEGGERE** le linee guida riportate nella [Guida di stile](./styleguide/template.md) e sulla [voce e tono](./styleguide/voice-tone.md). Le nuove aggiunte devono seguire queste linee guida.
+- **NON** inviare richieste pull di grandi dimensioni. Al contrario, segnalare un problema e avviare una discussione in modo che si possa concordare una direzione prima di investire una grande quantità di tempo. Per le modifiche collettive, suddividete il lavoro in PI più piccoli (fino a 100 file). Questa linea guida è fortemente consigliata se il PR non segue le seguenti linee guida.
+- **DO** guardare l'attuale [in piedi per afferrare problemi](https://github.com/dotnet/docs/labels/up-for-grabs) per suggerimenti sulle attività.
+- **Creare** un PR per ogni attività. Le PI che includono più modifiche non correlate sono molto più difficili da rivedere. Questo ritarda le revisioni e la fusione delle Questa linea guida si applica anche alle recensioni: cerchiamo di non suggerire modifiche non correlate nelle recensioni; chiediamo che le recensioni della community aderiscano a questa linea guida.
+- **Fornire** una descrizione chiara del lavoro nella PR. Dicci cosa è cambiato e perché. La descrizione predefinita di "aggiornamento article.md" non è utile per i revisori.
+- **NON** inviare RAP per modifiche solo di stile senza discussioni preliminari. Questi PR richiedono più tempo per verificarne l'accuratezza e l'unione spesso causa conflitti di unione con altri aggiornamenti importanti. Stiamo lavorando per seguire uno stile coerente, ma stiamo bilanciando il lavoro con altre attività. Gli articoli vengono portati in conformità di stile quando facciamo importanti aggiornamenti per altri motivi.
+- **LEGGERE** le linee guida riportate nella [Guida di stile](./styleguide/template.md) e sulla [voce e tono](./styleguide/voice-tone.md). Le nuove aggiunte dovrebbero seguire queste linee guida.
 - **CREARE** un ramo separato nel fork prima di lavorare sugli articoli.
 - **SEGUIRE** il [flusso di lavoro di GitHub Flow](https://guides.github.com/introduction/flow/).
 - **SCIVERE UN BLOG O INVIARE TWEET** (o usare altri mezzi) frequentemente per informazioni sui contributi.
 
-Queste linee guida consentono di rispettare il tempo degli utenti. Molti utenti contribuiscono a questi repository. Seguendo queste linee guida, è più semplice esaminare e unire la richiesta pull in modo tempestivo. Queste procedure riducono al minimo i conflitti con le richieste pull di altri membri della community e del team. Poiché le richieste pull che non seguono queste linee guida spesso causano un lavoro aggiuntivo per i membri della community e degli Stati Uniti, tali richieste potrebbero essere rifiutate. Se si desidera un'eccezione, iniziare creando un problema.
+Queste linee guida ci aiutano a rispettare il tempo di tutti. Molte persone contribuiscono a questi repository. Seguire queste linee guida ci rende più facile rivedere e unire le tue pubbliche relazioni in modo tempestivo. Queste procedure riducono al minimo i conflitti con le RI di altri membri della comunità e del nostro team. Poiché le PI che non seguono queste linee guida spesso causano lavoro aggiuntivo per noi e per i membri della comunità, tali PI potrebbero essere rifiutate. Se si desidera un'eccezione, iniziare creando un problema.
 
 > Nota: si potrebbe osservare che attualmente alcuni argomenti non seguono tutte le linee guida indicate qui e nella [Guida di stile](./styleguide/template.md). Ci stiamo impegnando per il raggiungimento della coerenza in tutto il sito.
 
@@ -48,22 +52,22 @@ Queste linee guida consentono di rispettare il tempo degli utenti. Molti utenti 
 
 Sono necessarie conoscenze di base di [Git e GitHub.com](https://guides.github.com/activities/hello-world/).
 
-**Passaggio 1:** Ignorare questo passaggio per le piccole modifiche (ad esempio, se si corregge un errore di digitazione o si apre immediatamente una richiesta pull per risolvere un problema riscontrato nei documenti). Se si è interessati a scrivere nuovo contenuto o a revisionare completamente un contenuto esistente, aprire un [problema](https://github.com/dotnet/docs/issues) descrivendo che cosa si intende fare.
+**Fase 1:** Ignora questo passaggio per piccole modifiche (ad esempio, se stai correggendo un errore di battitura o aprendo immediatamente una richiesta pull per risolvere un problema che trovi nei documenti). Se si è interessati a scrivere nuovo contenuto o a revisionare completamente un contenuto esistente, aprire un [problema](https://github.com/dotnet/docs/issues) descrivendo che cosa si intende fare.
 Il contenuto all'interno della cartella *docs* è suddiviso in sezioni visibili nel sommario. Definire la posizione del sommario in cui verrà inserito l'argomento. Ottenere feedback sulla proposta.
 
-oppure
+-oppure-
 
 È anche possibile scegliere tra i problemi esistenti per cui sono previsti i contributi della community. In [Projects for .NET Community contributors](https://github.com/dotnet/docs/projects/35) (Progetti per i collaboratori della community di .NET) sono elencati molti elementi di lavoro disponibili per i collaboratori della community. In base ai propri interessi e livello di impegno, è possibile scegliere tra i problemi nelle categorie seguenti:
 
-- **Maintenance** (Manutenzione). Questa categoria include contributi piuttosto semplici, ad esempio la correzione di collegamenti interrotti o non corretti, l'aggiunta di esempi di codice mancanti o la risoluzione di problemi di contenuto limitato. In alcuni casi, questi problemi possono riguardare un numero elevato di file. In tal caso, è opportuno comunicare su che cosa si vuole intervenire prima di iniziare.
+- **Manutenzione**. Questa categoria include contributi piuttosto semplici, ad esempio la correzione di collegamenti interrotti o non corretti, l'aggiunta di esempi di codice mancanti o la risoluzione di problemi di contenuto limitato. In alcuni casi, questi problemi possono riguardare un numero elevato di file. In tal caso, è opportuno comunicare su che cosa si vuole intervenire prima di iniziare.
 
-- **Content updates** (Aggiornamenti del contenuto). A causa dell'enormità del set di documenti, il contenuto diventa facilmente obsoleto e richiede una revisione. Per diversi motivi, inoltre, il contenuto è stato duplicato o anche triplicated. L'aggiornamento del contenuto richiede di verificare che i singoli argomenti siano aggiornati o di revisionare il contenuto in un'area funzionale per eliminare i duplicati assicurandosi che tutto il contenuto univoco venga conservato nel set di documenti più piccolo.
+- **Content updates** (Aggiornamenti del contenuto). A causa dell'enormità del set di documenti, il contenuto diventa facilmente obsoleto e richiede una revisione. Inoltre, per una serie di motivi, alcuni contenuti sono stati duplicati o addirittura triplicati. L'aggiornamento del contenuto richiede di verificare che i singoli argomenti siano aggiornati o di revisionare il contenuto in un'area funzionale per eliminare i duplicati assicurandosi che tutto il contenuto univoco venga conservato nel set di documenti più piccolo.
 
 - **New content authoring** (Creazione di nuovi contenuti). Se si è interessati a creare il proprio argomento, questi problemi elencano gli argomenti che sarebbe opportuno aggiungere al set di documenti. Prima di iniziare a lavorare su un argomento, inviare un messaggio. Se si è interessati a scrivere un argomento non elencato qui, aprire un problema.
 
 È anche possibile esaminare l'elenco di [problemi aperti](https://github.com/dotnet/docs/issues) e proporsi per lavorare a quelli a cui si è interessati. I problemi aperti per il contributo sono contrassegnati dall'etichetta [up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs).
 
-**Passaggio 2:** Creare una copia tramite fork dei repository `dotnet/docs`, `dotnet/samples` o `dotnet/dotnet-api-docs` in base alle esigenze e creare un ramo per le modifiche.
+**Fase 2:** Fork `dotnet/docs`il `dotnet/samples` `dotnet/dotnet-api-docs` , o i repository in base alle esigenze e creare un ramo per le modifiche.
 
 Per le piccole modifiche, è possibile usare l'interfaccia Web di GitHub. È sufficiente fare clic su **Edit the file in your fork of this project** (Modifica il file nel fork di questo progetto) nel file che si vuole modificare. GitHub crea automaticamente il nuovo ramo quando si inviano le modifiche.
 
@@ -92,9 +96,9 @@ docs
             portability_report.png
 ```
 
-**Passaggio 4:** Inviare una richiesta pull (PR) dal ramo a `dotnet/docs/master`, `dotnet/dotnet-api-docs/master`o `dotnet/samples/master`.
+**Fase 4:** Inviare una richiesta pull (PR) `dotnet/dotnet-api-docs/master`dalla `dotnet/samples/master`filiale a `dotnet/docs/master`, , o .
 
-La richiesta pull deve *sempre* essere destinata al ramo predefinito del repository, a meno che non si stia lavorando a un ramo di rilascio. Per DotNet/docs, Master Branch è il ramo predefinito. Per i repository localizzati, il ramo attivo è quello predefinito. Non aprire *mai* una richiesta pull destinata al ramo Live su DotNet/docs.
+Il PR deve *sempre* essere destinato al ramo predefinito del repository (a meno che non si stia lavorando su un ramo di rilascio). Per dotnet/docs, il ramo master è il ramo predefinito. Per i repository localizzati, il ramo attivo è quello predefinito. Non aprire *mai* una PR che si rivolge al ramo live su dotnet/docs.
 
 Ogni richiesta pull deve in genere fare riferimento a un problema alla volta. La richiesta pull può modificare uno o più file. Se è necessario apportare più correzioni in file diversi, è preferibile inviare richieste pull separate.
 
@@ -119,7 +123,7 @@ Viene fatta la distinzione seguente per il codice esistente nel repository:
 Tutti i codici si trovano nel repository [dotnet/samples](https://github.com/dotnet/samples). Microsoft sta lavorando a un modello in cui la struttura della cartella samples corrisponda alla struttura della cartella docs. Gli standard seguiti sono:
 
 - La cartella *snippets* di primo livello contiene i frammenti per i piccoli esempi specifici.
-- Gli esempi di riferimento API sono stati inseriti in una cartella che segue questo modello: *snippets/\<linguaggio>/api/\<spazio dei nomi>/\<nomeapi>* .
+- Gli esempi di riferimento API sono stati inseriti in una cartella che segue questo modello: *snippets/\<linguaggio>/api/\<spazio dei nomi>/\<nomeapi>*.
 - Le altre cartelle di primo livello corrispondono alle cartelle di primo livello nel repository *docs*. Il repository docs include, ad esempio, una cartella *machine-learning/tutorials* e gli esempi per le esercitazioni su Machine Learning si trovano nella cartella *samples/machine-learning/tutorials*.
 
 Inoltre, tutti gli esempi nelle cartelle *core* e *standard* devono essere compilati ed eseguiti in tutte le piattaforme supportate da .NET Core. Il sistema di compilazione CI imporrà questo requisito. La cartella *framework* di primo livello contiene esempi che vengono eseguiti e convalidati solo in Windows.
@@ -135,7 +139,7 @@ Per altre informazioni, vedere il [file leggimi sugli esempi](https://github.com
 
 ## <a name="the-c-interactive-experience"></a>Esperienza interattiva in C#
 
-Gli esempi di codice breve in C# possono usare il tag di linguaggio `csharp-interactive` per specificare un esempio C# che viene eseguito nel browser. (Gli esempi di codice inline usano il tag `csharp-interactive` per i frammenti di codice inclusi nell'origine, usare il tag `code-csharp-interactive`). Questi esempi di codice visualizzano una finestra del codice e una finestra di output nell'articolo. La finestra di output visualizza gli output dell'esecuzione del codice interattivo dopo che l'utente ha eseguito l'esempio.
+Gli esempi di codice breve in C# possono usare il tag di linguaggio `csharp-interactive` per specificare un esempio C# che viene eseguito nel browser. Gli esempi di codice `csharp-interactive` inline usano il tag, `code-csharp-interactive` per i frammenti inclusi dall'origine, usa il tag. Questi esempi di codice visualizzano una finestra del codice e una finestra di output nell'articolo. La finestra di output visualizza gli output dell'esecuzione del codice interattivo dopo che l'utente ha eseguito l'esempio.
 
 L'esperienza interattiva in C# cambia il modo di usare gli esempi. I visitatori possono eseguire l'esempio per visualizzare i risultati. Una serie di fattori consente di determinare se l'esempio o il testo corrispondente deve includere informazioni sull'output.
 

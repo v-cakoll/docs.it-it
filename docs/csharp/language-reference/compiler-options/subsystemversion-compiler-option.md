@@ -3,10 +3,10 @@ title: -subsystemversion (opzioni del compilatore C#)
 ms.date: 07/20/2015
 ms.assetid: a99fce81-9d92-4813-9874-bee777041445
 ms.openlocfilehash: d76c9424340b4b6f3c211c849b466be55eb79d1e
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74802038"
 ---
 # <a name="-subsystemversion-c-compiler-options"></a>-subsystemversion (opzioni del compilatore C#)
@@ -30,16 +30,16 @@ Versione minima richiesta per il sottosistema, espressa in una notazione del pun
 
 Gli zeri iniziali della versione `minor` non modificano la versione, a differenza degli zeri finali. Ad esempio, 6.1 e 6.01 si fanno riferimento alla stessa versione, ma 6.10 fa riferimento a una versione diversa. È consigliabile esprimere la versione secondaria con due cifre per evitare confusione.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Nella tabella seguente sono elencate le versioni comuni del sottosistema di Windows.
 
 |Versione di Windows|Versione del sottosistema|
 |---------------------|-----------------------|
-|Windows 2000|5.00|
-|Windows XP|5.01|
-|Windows Server 2003|5.02|
-|Windows Vista|6.00|
+|Windows 2000|5,00|
+|Windows XP|5,01|
+|Windows Server 2003|5,02|
+|Windows Vista|6,00|
 |Windows 7|6.01|
 |Windows Server 2008|6.01|
 |Windows 8|6.02|
@@ -50,7 +50,7 @@ Il valore predefinito dell'opzione del compilatore **-subsystemversion** dipende
 
 - Il valore predefinito è 6.02 se è impostata un'opzione del compilatore nell'elenco seguente:
 
-  - [/target:appcontainerexe](./target-appcontainerexe-compiler-option.md)
+  - [-target:appcontainerexe](./target-appcontainerexe-compiler-option.md)
 
   - [/target:winmdobj](./target-winmdobj-compiler-option.md)
 
@@ -66,4 +66,4 @@ Per impostare l'opzione del compilatore **-subsystemversion** in Visual Studio, 
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Opzioni del compilatore C#](./index.md)
+- [Opzioni del compilatore C](./index.md)

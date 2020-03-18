@@ -3,15 +3,15 @@ title: Comando dotnet list package
 description: Il comando "dotnet list package" offre un'opzione utile per visualizzare un elenco dei riferimenti al pacchetto per un progetto o una soluzione.
 ms.date: 02/14/2020
 ms.openlocfilehash: 1cb52b8de10b2eef2ef7465f04316e9446318763
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78157232"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
-**Questo articolo si applica a:** ✔️ .net core 2,2 SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .NET Core 2.2 SDK e versioni successive
 
 ## <a name="name"></a>Nome
 
@@ -77,7 +77,7 @@ File di progetto o di soluzione su cui eseguire le operazioni. Se non specificat
 
 - **`--framework <FRAMEWORK>`**
 
-  Visualizza solo i pacchetti validi per il [framework di destinazione](../../standard/frameworks.md) specificato. Per specificare più framework, ripetere l'opzione più volte. Ad esempio: `--framework netcoreapp2.2 --framework netstandard2.0`.
+  Visualizza solo i pacchetti validi per il [framework di destinazione](../../standard/frameworks.md) specificato. Per specificare più framework, ripetere l'opzione più volte. Ad esempio `--framework netcoreapp2.2 --framework netstandard2.0`.
 
 - **`-h|--help`**
 

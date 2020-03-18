@@ -8,10 +8,10 @@ helpviewer_keywords:
 - C# language, sealed
 ms.assetid: 99aa52f7-b435-43f9-936e-2470af734c4e
 ms.openlocfilehash: 07738031f1dec05424f7c3756f49a8f1f9a2c44b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714999"
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a>Classi e membri delle classi astratte e sealed (Guida per programmatori C#)
@@ -54,4 +54,4 @@ La parola chiave [abstract](../../language-reference/keywords/abstract.md) conse
 - [Ereditarietà](./inheritance.md)
 - [Metodi](./methods.md)
 - [Campi](./fields.md)
-- [Come definire le proprietà astratte](./how-to-define-abstract-properties.md)
+- [Come definire proprietà astratte](./how-to-define-abstract-properties.md)

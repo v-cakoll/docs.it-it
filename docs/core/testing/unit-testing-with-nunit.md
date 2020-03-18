@@ -4,10 +4,10 @@ description: Informazioni sui concetti relativi agli unit test in C# e .NET Core
 author: rprouse
 ms.date: 08/31/2018
 ms.openlocfilehash: 283aa5a28ed213d4290eb3c73a98af56ec074ad0
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78240883"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Testing unità di C# con NUnit e .NET Core
@@ -85,11 +85,11 @@ Impostare *PrimeService.Tests* come directory corrente e creare un nuovo progett
 dotnet new nunit
 ```
 
-Il comando [dotnet new](../tools/dotnet-new.md) crea un progetto di test che usa NUnit come libreria di test. Il modello generato configura il Test Runner nel file *PrimeService.Tests.csproj*:
+Il [comando dotnet new](../tools/dotnet-new.md) crea un progetto di test che utilizza NUnit come libreria di test. Il modello generato configura il test runner nel file *PrimeService.Tests.csproj:*
 
 [!code-xml[Packages](~/samples/snippets/core/testing/unit-testing-using-nunit/csharp/PrimeService.Tests/PrimeService.Tests.csproj#Packages)]
 
-Per creare ed eseguire unit test, il progetto di test richiede altri pacchetti. `dotnet new` nel passaggio precedente aggiunge Microsoft Test SDK, il framework di test NUnit e l'adattatore di test NUnit. Aggiungere ora la libreria di classi `PrimeService` come un'altra dipendenza del progetto. Usare il comando [`dotnet add reference`](../tools/dotnet-add-reference.md):
+Per creare ed eseguire unit test, il progetto di test richiede altri pacchetti. `dotnet new` nel passaggio precedente aggiunge Microsoft Test SDK, il framework di test NUnit e l'adattatore di test NUnit. Aggiungere ora la libreria di classi `PrimeService` come un'altra dipendenza del progetto. Utilizzare [`dotnet add reference`](../tools/dotnet-add-reference.md) il comando:
 
 ```dotnetcli
 dotnet add reference ../PrimeService/PrimeService.csproj
@@ -124,7 +124,7 @@ Scrivere un test che genera errore, fare in modo che venga superato e quindi rip
 
 L'attributo `[TestFixture]` indica una classe che contiene unit test. L'attributo `[Test]` indica che il metodo è un metodo di test.
 
-Salvare questo file ed eseguire [`dotnet test`](../tools/dotnet-test.md) per compilare i test e la libreria di classi, quindi eseguire i test. Il Test Runner di NUnit include il punto d'ingresso del programma per l'esecuzione dei test. `dotnet test` avvia il Test Runner usando il progetto di unit test creato.
+Salvare il file [`dotnet test`](../tools/dotnet-test.md) ed eseguire per compilare i test e la libreria di classi e quindi eseguire i test. Il Test Runner di NUnit include il punto d'ingresso del programma per l'esecuzione dei test. `dotnet test` avvia il Test Runner usando il progetto di unit test creato.
 
 Il test ha esito negativo. Non è stata ancora creata l'implementazione. Fare in modo che questo test venga superato scrivendo il codice più semplice e funzionante nella classe `PrimeService`:
 
@@ -139,7 +139,7 @@ public bool IsPrime(int candidate)
 }
 ```
 
-Eseguire di nuovo *nella directory*unit-testing-using-nunit`dotnet test`. Il comando `dotnet test` esegue prima una compilazione del progetto `PrimeService` e quindi del progetto `PrimeService.Tests`. Dopo la compilazione di entrambi i progetti, verrà eseguito il test singolo, Procede.
+Eseguire di nuovo `dotnet test` nella directory *unit-testing-using-nunit*. Il comando `dotnet test` esegue prima una compilazione del progetto `PrimeService` e quindi del progetto `PrimeService.Tests`. Dopo la compilazione di entrambi i progetti, verrà eseguito il test singolo, che viene superato.
 
 ## <a name="adding-more-features"></a>Aggiunta di altre funzionalità
 

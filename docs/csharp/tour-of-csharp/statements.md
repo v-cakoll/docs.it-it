@@ -4,10 +4,10 @@ description: Le azioni di un programma C# vengono create mediante istruzioni
 ms.date: 02/27/2020
 ms.assetid: 5409c379-5622-4fae-88b5-1654276ea8d4
 ms.openlocfilehash: ced13b1bfd17977acb98bf33c0a477161cf08a93
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78159104"
 ---
 # <a name="statements"></a>Istruzioni
@@ -20,11 +20,11 @@ Le *istruzioni di dichiarazione* vengono usate per dichiarare le costanti e le v
 
 Le *istruzioni di espressione* vengono usate per valutare le espressioni. Le espressioni che possono essere usate come istruzioni includono le chiamate ai metodi, le allocazioni di oggetti mediante l'operatore `new`, le assegnazioni mediante `=` e gli operatori di assegnazione composta, le operazioni di incremento e decremento mediante gli operatori `++` e `--` e le espressioni `await`.
 
-Le *istruzioni di selezione* vengono usate per selezionare una tra più istruzioni che è possibile eseguire sulla base del valore di alcune espressioni. Questo gruppo contiene le istruzioni `if` e `switch`.
+Le *istruzioni di selezione* vengono usate per selezionare una tra più istruzioni che è possibile eseguire sulla base del valore di alcune espressioni. Questo gruppo `if` contiene `switch` le istruzioni e .
 
-Le *istruzioni di iterazione* vengono usate per eseguire più volte un'istruzione nidificata. Questo gruppo contiene le istruzioni `while`, `do`, `for`e `foreach`.
+Le *istruzioni di iterazione* vengono usate per eseguire più volte un'istruzione nidificata. Questo gruppo `while`contiene `do` `for`le `foreach` istruzioni , , e .
 
-Le *istruzioni di spostamento* vengono usate per trasferire il controllo. Questo gruppo contiene le istruzioni `break`, `continue`, `goto`, `throw`, `return`e `yield`.
+Le *istruzioni di spostamento* vengono usate per trasferire il controllo. Questo gruppo `break`contiene `continue` `goto`le `throw` `return`istruzioni `yield` , , , , e .
 
 L'istruzione `try`...`catch` viene usata per rilevare le eccezioni che si verificano durante l'esecuzione di un blocco, mentre l'istruzione `try`...`finally` viene usata per specificare il codice di finalizzazione che viene eseguito sempre, indipendentemente dal fatto che si sia verificata un'eccezione.
 
@@ -109,5 +109,5 @@ Di seguito vengono elencati i tipi di istruzione che è possibile usare e viene 
  [!code-csharp[UsingStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L198-L206)]
 
 >[!div class="step-by-step"]
->[Precedente](expressions.md)
->[Successivo](classes-and-objects.md)
+>[Successivo](expressions.md)
+>[precedente](classes-and-objects.md)

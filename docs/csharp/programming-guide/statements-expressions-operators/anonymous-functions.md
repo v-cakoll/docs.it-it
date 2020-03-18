@@ -7,10 +7,10 @@ helpviewer_keywords:
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
 ms.openlocfilehash: cfb0190ee263e65e8130a8925f76357a382eafa3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712000"
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>Funzioni anonime (Guida per programmatori C#)
@@ -34,6 +34,6 @@ Per altre informazioni, vedere la sezione [Espressioni di funzioni anonime](~/_c
 ## <a name="see-also"></a>Vedere anche
 
 - [Istruzioni, espressioni e operatori](./index.md)
-- [Espressioni lambda](./lambda-expressions.md)
+- [Espressioni lambdaLambda Expressions](./lambda-expressions.md)
 - [Delegati](../delegates/index.md)
 - [Alberi delle espressioni (C#)](../concepts/expression-trees/index.md)

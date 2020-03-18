@@ -2,12 +2,12 @@
 title: Programmazione asincrona in C#
 description: Panoramica del supporto del linguaggio C# per la programmazione asincrona con async, await, Task e Task<T>
 ms.date: 03/18/2019
-ms.openlocfilehash: 633da9485c5f74efb6e57234a31f0404e39605ec
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 4cbbff0f2c48f0ec2f8befa234ea5023465a1c5d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552434"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79169909"
 ---
 # <a name="asynchronous-programming-with-async-and-await"></a>Programmazione asincrona con async e await
 
@@ -26,13 +26,13 @@ Se si ha esperienza in cucina, queste istruzioni verranno eseguite **in modo asi
 
 La preparazione della colazione è un buon esempio di lavoro asincrono non parallelo. Tutte le attività possono essere gestite da una sola persona (o thread). Continuando con l'analogia della colazione, una sola persona può preparare la colazione in modo asincrono iniziando l'attività successiva prima che l'attività precedente venga completata. La preparazione procede indipendentemente dal fatto che venga controllata da qualcuno. Non appena si inizia a scaldare la padella per le uova, è possibile iniziare a friggere la pancetta. Dopo aver iniziato a cuocere la pancetta, è possibile inserire il pane nel tostapane.
 
-In un algoritmo parallelo sarebbero necessari più cuochi (o thread). Un cuoco cucinerebbe le uova, un cuoco cucinerebbe la pancetta e così via. Ogni cuoco si dedicherebbe a una singola attività. Ogni cuoco (o thread) verrebbe bloccato in modo sincrono in attesa che la pancetta sia pronta per essere girata o che la tostatura del pane venga completata. 
+In un algoritmo parallelo sarebbero necessari più cuochi (o thread). Un cuoco cucinerebbe le uova, un cuoco cucinerebbe la pancetta e così via. Ogni cuoco si dedicherebbe a una singola attività. Ogni cuoco (o thread) verrebbe bloccato in modo sincrono in attesa che la pancetta sia pronta per essere girata o che la tostatura del pane venga completata.
 
 A questo punto, prendere in esame le stesse istruzioni scritte sotto forma di istruzioni C#:
 
 [!code-csharp[SynchronousBreakfast](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-starter/Program.cs#Main)]
 
-I computer non interpretano le istruzioni allo stesso modo delle persone. Il computer si bloccherà in corrispondenza di ogni istruzione fino a quando non verrà completata prima di passare all'istruzione successiva. In questo modo non verrà preparata una colazione soddisfacente. Le attività successive non verranno iniziate prima del completamento delle attività precedenti. La preparazione della colazione richiederà più tempo e alcuni alimenti si raffredderanno prima di essere serviti. 
+I computer non interpretano le istruzioni allo stesso modo delle persone. Il computer si bloccherà in corrispondenza di ogni istruzione fino a quando non verrà completata prima di passare all'istruzione successiva. In questo modo non verrà preparata una colazione soddisfacente. Le attività successive non verranno iniziate prima del completamento delle attività precedenti. La preparazione della colazione richiederà più tempo e alcuni alimenti si raffredderanno prima di essere serviti.
 
 Se si vuole che il computer esegua le istruzioni precedenti in modo asincrono, è necessario scrivere codice asincrono.
 
@@ -42,7 +42,7 @@ Per applicazioni moderne efficienti è necessario creare codice asincrono. Senza
 
 ## <a name="dont-block-await-instead"></a>Non bloccare, ma attendere
 
-Il codice precedente illustra una prassi non corretta, ovvero la costruzione di codice sincrono per eseguire operazioni asincrone. Come previsto, questo codice impedisce al thread che lo esegue di eseguire altre operazioni. Non verrà interrotto mentre un'attività è in corso. Equivale a mettersi a osservare il tostapane dopo avere inserito il pane. E a ignorare qualsiasi interlocutore fino a quando il pane non è pronto. 
+Il codice precedente illustra una prassi non corretta, ovvero la costruzione di codice sincrono per eseguire operazioni asincrone. Come previsto, questo codice impedisce al thread che lo esegue di eseguire altre operazioni. Non verrà interrotto mentre un'attività è in corso. Equivale a mettersi a osservare il tostapane dopo avere inserito il pane. E a ignorare qualsiasi interlocutore fino a quando il pane non è pronto.
 
 Si procederà ora ad aggiornare il codice in modo che il thread non venga bloccato mentre sono in esecuzione altre attività. La parola chiave `await` consente di iniziare un'attività senza alcun blocco e di continuare l'esecuzione al completamento dell'attività. Una versione asincrona semplice del codice della preparazione della colazione sarebbe simile al frammento seguente:
 

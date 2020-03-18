@@ -3,15 +3,15 @@ title: Comando dotnet migrate
 description: Il comando dotnet migrate consente di eseguire la migrazione di un progetto e di tutte le relative dipendenze.
 ms.date: 02/14/2020
 ms.openlocfilehash: 6148048c469c43320cc4459352fd2fb62f101740
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503706"
 ---
 # <a name="dotnet-migrate"></a>dotnet migrate
 
-**Questo articolo si applica a:** ✔️ .NET Core 2. x SDK
+**Questo articolo si applica a:** ✔️ .NET Core 2.x SDK
 
 ## <a name="name"></a>Nome
 
@@ -26,7 +26,7 @@ dotnet migrate [-h|--help]
 
 ## <a name="description"></a>Descrizione
 
-Questo comando è deprecato. Il comando `dotnet migrate` non è più disponibile a partire da .NET Core 3,0 SDK. È possibile eseguire la migrazione di un progetto .NET Core di anteprima 2 a un progetto .NET Core 1. x, che non è supportato.
+Questo comando è deprecato. Il `dotnet migrate` comando non è più disponibile a partire da .NET Core 3.0 SDK. Può eseguire solo la migrazione di un progetto .NET Core di anteprima 2 a un progetto 1.x .NET Core, che non è supportato.
 
 Per impostazione predefinita, il comando esegue la migrazione del progetto radice e dei riferimenti del progetto presenti nel progetto radice. Questo comportamento viene disabilitato usando l'opzione `--skip-project-references` in fase di esecuzione.
 

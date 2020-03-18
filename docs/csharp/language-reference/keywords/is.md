@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: a72f3b87e7558c594ef8a94bd0eadcc4664206b9
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: e64b690482419963a92764b2c97a42dbb231fbfc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239651"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399637"
 ---
 # <a name="is-c-reference"></a>is (Riferimenti per C#)
 
@@ -36,7 +36,7 @@ Quando si usa il criterio del tipo per eseguire i criteri di ricerca, `is` verif
    expr is type varname
 ```
 
-Dove *expr* è un'espressione che restituisce un'istanza di un tipo, *Type* è il nome del tipo in cui il risultato di *expr* deve essere convertito e *VarName* è l'oggetto in cui il risultato di *expr* viene convertito se il `is` test è `true`. 
+Dove *expr* è un'espressione che restituisce un'istanza di un tipo, *type* è il nome del tipo in cui deve essere convertito il risultato `true`di *expr* e *varname* è l'oggetto in cui viene convertito il risultato di *expr* se il `is` test è .
 
 L'espressione `is` è `true` se *expr* non è `null` e una delle condizioni seguenti è true:
 
@@ -106,31 +106,31 @@ L'esempio seguente illustra un confronto di controlli `null`:
 
 ### <a name="var-pattern"></a>Criterio var
 
-Una corrispondenza con il modello di `var` ha sempre esito positivo. La relativa sintassi è la seguente:
+Una corrispondenza `var` di modello con il modello ha sempre esito positivo. La relativa sintassi è la seguente:
 
 ```csharp
    expr is var varname
 ```
 
-Dove il valore di *expr* viene sempre assegnato a una variabile locale denominata *VarName*. *VarName* è una variabile dello stesso tipo del tipo in fase di compilazione di *expr*. 
+Dove il valore di *expr* viene sempre assegnato a una variabile locale denominata *varname*. *varname* è una variabile dello stesso tipo del tipo in fase di compilazione di *expr*.
 
-Se *expr* restituisce `null`, l'espressione `is` produce `true` e assegna `null` a *VarName*. Il modello var è uno dei pochi usi di `is` che produce `true` per un valore di `null`.
+Se *expr* restituisce `null` `is` , `true` l'espressione `null` produce e assegna a *varname*. Il modello var è uno `is` dei `true` pochi `null` usi di che produce per un valore.
 
-È possibile usare il modello di `var` per creare una variabile temporanea in un'espressione booleana, come illustrato nell'esempio seguente:
+È possibile `var` utilizzare il modello per creare una variabile temporanea all'interno di un'espressione booleana, come illustrato nell'esempio seguente:You can use the pattern to create a temporary variable within a Boolean expression, as the following example shows:
 
 [!code-csharp[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
 
-Nell'esempio precedente, la variabile temporanea viene utilizzata per archiviare il risultato di un'operazione costosa. La variabile può quindi essere usata più volte.
+Nell'esempio precedente, la variabile temporanea viene utilizzata per archiviare il risultato di un'operazione costosa. La variabile può quindi essere utilizzata più volte.
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
   
 Per altre informazioni, vedere la sezione [Operatore is](~/_csharplang/spec/expressions.md#the-is-operator) della [specifica del linguaggio C#](~/_csharplang/spec/introduction.md) e le proposte di linguaggio C# seguenti:
 
-- [Criteri di ricerca](~/_csharplang/proposals/csharp-7.0/pattern-matching.md)
+- [Corrispondenza dei criteri](~/_csharplang/proposals/csharp-7.0/pattern-matching.md)
 - [Criteri di ricerca con generics](~/_csharplang/proposals/csharp-7.1/generics-pattern-match.md)
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
-- [Parole chiave C#](index.md)
+- [Informazioni di riferimento su C#](../index.md)
+- [Parole chiave di C](index.md)
 - [Operatori di cast e di test del tipo](../operators/type-testing-and-cast.md)

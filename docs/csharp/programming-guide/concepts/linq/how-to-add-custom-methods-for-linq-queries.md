@@ -1,15 +1,15 @@
 ---
-title: Come aggiungere metodi personalizzati per le query LINQ (C#)
+title: Come aggiungere metodi personalizzati per le query LINQ (C )How to add custom methods for LINQ queries (C
 ms.date: 07/20/2015
 ms.assetid: 1a500f60-2e10-49fb-8b2a-d8d08e4817cb
 ms.openlocfilehash: e16175d3332b6ce36458eaa78af093e4f8772723
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141475"
 ---
-# <a name="how-to-add-custom-methods-for-linq-queries-c"></a>Come aggiungere metodi personalizzati per le query LINQ (C#)
+# <a name="how-to-add-custom-methods-for-linq-queries-c"></a>Come aggiungere metodi personalizzati per le query LINQ (C )How to add custom methods for LINQ queries (C
 
 È possibile estendere il set di metodi da usare per le query LINQ aggiungendo metodi di estensione all'interfaccia <xref:System.Collections.Generic.IEnumerable%601>. Oltre alla media standard o a un numero massimo di operazioni, ad esempio, è possibile creare un metodo di aggregazione personalizzato per calcolare un singolo valore da una sequenza di valori. È anche possibile creare un metodo che funzioni come un filtro personalizzato o una trasformazione di dati specifica per una sequenza di valori che restituisca una nuova sequenza. Esempi di tali metodi sono <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A> e <xref:System.Linq.Enumerable.Reverse%2A>.
 

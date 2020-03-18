@@ -5,15 +5,15 @@ author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
 ms.openlocfilehash: eae792ddaa6655bfdcd932d3cb695f9dafa68130
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78240844"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Creare un'applicazione .NET Core con i plug-in
 
-Questa esercitazione illustra come creare un <xref:System.Runtime.Loader.AssemblyLoadContext> personalizzato per caricare i plug-in. Viene usato un <xref:System.Runtime.Loader.AssemblyDependencyResolver> per risolvere le dipendenze del plug-in. L'esercitazione isola correttamente le dipendenze del plug-in dall'applicazione host. Si apprenderà come:
+Questa esercitazione illustra come <xref:System.Runtime.Loader.AssemblyLoadContext> creare un plug-in personalizzato per caricare i plug-in. Un <xref:System.Runtime.Loader.AssemblyDependencyResolver> viene utilizzato per risolvere le dipendenze del plugin. L'esercitazione isola correttamente le dipendenze del plug-in dall'applicazione host. Si apprenderà come:
 
 - Strutturare un progetto per il supporto dei plug-in.
 - Creare una classe <xref:System.Runtime.Loader.AssemblyLoadContext> personalizzata per caricare ogni plug-in.
@@ -22,7 +22,7 @@ Questa esercitazione illustra come creare un <xref:System.Runtime.Loader.Assembl
 
 ## <a name="prerequisites"></a>Prerequisites
 
-- Installare [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download) o una versione più recente.
+- Installare [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download) o una versione più recente.
 
 ## <a name="create-the-application"></a>Creazione dell'applicazione
 
@@ -40,7 +40,7 @@ Il primo passaggio consiste nel creare l'applicazione:
     dotnet new sln
     ```
 
-3. Eseguire il comando seguente per aggiungere il progetto di app alla soluzione:
+3. Eseguire il comando seguente per aggiungere il progetto dell'app alla soluzione:
 
     ```dotnetcli
     dotnet sln add AppWithPlugin/AppWithPlugin.csproj
@@ -148,7 +148,7 @@ if (command == null)
 command.Execute();
 ```
 
-Infine, aggiungere i metodi statici denominati `Program` e `LoadPlugin` alla classe `CreateCommands` come illustrato di seguito:
+Infine, aggiungere i metodi statici denominati `LoadPlugin` e `CreateCommands` alla classe `Program` come illustrato di seguito:
 
 ```csharp
 static Assembly LoadPlugin(string relativePath)
@@ -185,11 +185,11 @@ static IEnumerable<ICommand> CreateCommands(Assembly assembly)
 
 ## <a name="load-plugins"></a>Caricare i plug-in
 
-A questo punto l'applicazione è in grado di caricare e creare istanze di comandi da assembly di plug-in caricati, ma non è ancora in grado di caricare gli assembly del plug-in Creare un file denominato *PluginLoadContext.cs* nella cartella *AppWithPlugin* con il contenuto seguente:
+Ora l'applicazione può caricare e creare correttamente i comandi dagli assembly del plug-in caricati, ma non è ancora in grado di caricare gli assembly del plug-in. Creare un file denominato *PluginLoadContext.cs* nella cartella *AppWithPlugin* con il contenuto seguente:
 
 [!code-csharp[loading-plugins](~/samples/snippets/core/tutorials/creating-app-with-plugin-support/csharp/AppWithPlugin/PluginLoadContext.cs)]
 
-Il tipo `PluginLoadContext` deriva da <xref:System.Runtime.Loader.AssemblyLoadContext>. Il tipo di `AssemblyLoadContext` è un tipo speciale nel runtime che consente agli sviluppatori di isolare gli assembly caricati in gruppi diversi per garantire che le versioni degli assembly non siano in conflitto. Inoltre, un tipo `AssemblyLoadContext` personalizzato può scegliere percorsi diversi da cui caricare gli assembly ed eseguire l'override del comportamento predefinito. `PluginLoadContext` usa un'istanza del tipo `AssemblyDependencyResolver` introdotta in .NET Core 3.0 per risolvere i nomi di assembly in percorsi. L'oggetto `AssemblyDependencyResolver` è costruito con il percorso per una libreria di classi .NET. Risolve gli assembly e le librerie native nei relativi percorsi in base al file *deps.json* per la libreria di classi il cui percorso è stato passato al costruttore `AssemblyDependencyResolver`. Il tipo `AssemblyLoadContext` personalizzato consente ai plug-in di avere proprie dipendenze, mentre l'oggetto `AssemblyDependencyResolver` rende più semplice caricare correttamente le dipendenze.
+Il tipo `PluginLoadContext` deriva da <xref:System.Runtime.Loader.AssemblyLoadContext>. Il `AssemblyLoadContext` tipo è un tipo speciale nel runtime che consente agli sviluppatori di isolare gli assembly caricati in gruppi diversi per garantire che le versioni degli assembly non siano in conflitto. Inoltre, un tipo `AssemblyLoadContext` personalizzato può scegliere percorsi diversi da cui caricare gli assembly ed eseguire l'override del comportamento predefinito. `PluginLoadContext` usa un'istanza del tipo `AssemblyDependencyResolver` introdotta in .NET Core 3.0 per risolvere i nomi di assembly in percorsi. L'oggetto `AssemblyDependencyResolver` è costruito con il percorso per una libreria di classi .NET. Risolve gli assembly e le librerie native nei relativi percorsi in base al file `AssemblyDependencyResolver` *.deps.json* per la libreria di classi il cui percorso è stato passato al costruttore. Il tipo `AssemblyLoadContext` personalizzato consente ai plug-in di avere proprie dipendenze, mentre l'oggetto `AssemblyDependencyResolver` rende più semplice caricare correttamente le dipendenze.
 
 Ora che il progetto `AppWithPlugin` ha il tipo `PluginLoadContext`, aggiornare il metodo `Program.LoadPlugin` con il corpo seguente:
 
@@ -213,17 +213,17 @@ static Assembly LoadPlugin(string relativePath)
 
 Usando un'istanza `PluginLoadContext` diversa per ogni plug-in, i plug-in possono avere dipendenze diverse o persino in conflitto senza problemi.
 
-## <a name="simple-plugin-with-no-dependencies"></a>Plug-in semplice senza dipendenze
+## <a name="simple-plugin-with-no-dependencies"></a>Plugin semplice senza dipendenze
 
 Nella cartella radice eseguire le operazioni seguenti:
 
-1. Eseguire il comando seguente per creare un nuovo progetto di libreria di classi denominato `HelloPlugin`:
+1. Eseguire il comando seguente per creare `HelloPlugin`un nuovo progetto di libreria di classi denominato :
 
     ```dotnetcli
     dotnet new classlib -o HelloPlugin
     ```
 
-2. Eseguire il comando seguente per aggiungere il progetto alla soluzione `AppWithPlugin`:
+2. Eseguire il comando seguente per `AppWithPlugin` aggiungere il progetto alla soluzione:
 
     ```dotnetcli
     dotnet sln add HelloPlugin/HelloPlugin.csproj
@@ -257,21 +257,21 @@ Tra i due tag `<Project>` aggiungere gli elementi seguenti:
 </ItemGroup>
 ```
 
-L'elemento `<Private>false</Private>` è importante. Indica a MSBuild di non copiare *PluginBase.dll* nella directory di output per HelloPlugin. Se l'assembly *PluginBase.dll* è presente nella directory di output, `PluginLoadContext` individuerà l'assembly e lo caricherà durante il caricamento dell'assembly *HelloPlugin.dll*. A questo punto, il tipo `HelloPlugin.HelloCommand` implementerà l'interfaccia `ICommand` di *PluginBase.dll* nella directory di output del progetto `HelloPlugin`, non l'interfaccia `ICommand` caricata nel contesto di caricamento predefinito. Poiché il runtime Visualizza questi due tipi come tipi diversi da assembly diversi, il metodo `AppWithPlugin.Program.CreateCommands` non troverà i comandi. Di conseguenza, saranno necessari i metadati `<Private>false</Private>` per il riferimento all'assembly che contiene le interfacce dei plug-in.
+L'elemento `<Private>false</Private>` è importante. Indica a MSBuild di non copiare *PluginBase.dll* nella directory di output per HelloPlugin. Se l'assembly *PluginBase.dll* è presente nella directory di output, `PluginLoadContext` individuerà l'assembly e lo caricherà durante il caricamento dell'assembly *HelloPlugin.dll*. A questo punto, il tipo `HelloPlugin.HelloCommand` implementerà l'interfaccia `ICommand` di *PluginBase.dll* nella directory di output del progetto `HelloPlugin`, non l'interfaccia `ICommand` caricata nel contesto di caricamento predefinito. Poiché il runtime vede questi due tipi come `AppWithPlugin.Program.CreateCommands` tipi diversi da assembly diversi, il metodo non troverà i comandi. Di conseguenza, saranno necessari i metadati `<Private>false</Private>` per il riferimento all'assembly che contiene le interfacce dei plug-in.
 
-Analogamente, anche l'elemento `<ExcludeAssets>runtime</ExcludeAssets>` è importante se il `PluginBase` fa riferimento ad altri pacchetti. Questa impostazione ha lo stesso effetto di `<Private>false</Private>` ma funziona sui riferimenti ai pacchetti che possono essere inclusi nel progetto `PluginBase` o in una delle relative dipendenze.
+Analogamente, `<ExcludeAssets>runtime</ExcludeAssets>` l'elemento è `PluginBase` importante anche se fa riferimento ad altri pacchetti. Questa impostazione ha `<Private>false</Private>` lo stesso effetto di `PluginBase` but funziona sui riferimenti al pacchetto che il progetto o una delle relative dipendenze può includere.
 
-Ora che il progetto `HelloPlugin` è completo, è necessario aggiornare il progetto `AppWithPlugin` per capire dove è possibile trovare il plug-in `HelloPlugin`. Dopo il commento `// Paths to plugins to load`, aggiungere `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"` come elemento della matrice `pluginPaths`.
+Ora che `HelloPlugin` il progetto è completo, è necessario aggiornare il `AppWithPlugin` progetto per sapere dove si trova il `HelloPlugin` plugin. Dopo il commento `// Paths to plugins to load`, aggiungere `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"` come elemento della matrice `pluginPaths`.
 
-## <a name="plugin-with-library-dependencies"></a>Plug-in con dipendenze di libreria
+## <a name="plugin-with-library-dependencies"></a>Plugin con dipendenze di libreria
 
-Quasi tutti i plug-in sono più complessi rispetto a un semplice "Hello World" e molti plug-in hanno dipendenze in altre librerie. I progetti di plug-in `JsonPlugin` e `OldJson` mostrano due esempi di plug-in con dipendenze del pacchetto NuGet in `Newtonsoft.Json`. I file di progetto non dispongono di informazioni speciali per i riferimenti al progetto e (dopo aver aggiunto i percorsi del plug-in all'array `pluginPaths`) i plug-in vengono eseguiti perfettamente, anche se vengono eseguiti nella stessa esecuzione dell'app AppWithPlugin. Tuttavia, questi progetti non copiano gli assembly a cui si fa riferimento nella directory di output, quindi gli assembly devono essere presenti nel computer dell'utente per consentire il funzionamento dei plug-in. Questo problema può essere risolto in due modi. La prima opzione consiste nell'usare il comando `dotnet publish` per pubblicare la libreria di classi. In alternativa, se si vuole essere in grado di usare l'output di `dotnet build` per il plug-in, è possibile aggiungere la proprietà `<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>` tra i due tag `<PropertyGroup>` nel file di progetto del plug-in. Vedere il progetto di plug-in `XcopyablePlugin` per un esempio.
+Quasi tutti i plug-in sono più complessi rispetto a un semplice "Hello World" e molti plug-in hanno dipendenze in altre librerie. I progetti di plug-in `JsonPlugin` e `OldJson` mostrano due esempi di plug-in con dipendenze del pacchetto NuGet in `Newtonsoft.Json`. I file di progetto stessi non hanno informazioni speciali per i riferimenti al `pluginPaths` progetto e (dopo aver aggiunto i percorsi dei plugin alla matrice) i plugin vengono eseguiti perfettamente, anche se eseguiti nella stessa esecuzione dell'app AppWithPlugin. Tuttavia, questi progetti non copiano gli assembly di riferimento nella directory di output, pertanto gli assembly devono essere presenti nel computer dell'utente affinché i plug-in funzionino. Questo problema può essere risolto in due modi. La prima opzione consiste nell'usare il comando `dotnet publish` per pubblicare la libreria di classi. In alternativa, se si vuole essere in grado di usare l'output di `dotnet build` per il plug-in, è possibile aggiungere la proprietà `<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>` tra i due tag `<PropertyGroup>` nel file di progetto del plug-in. Vedere il progetto di plug-in `XcopyablePlugin` per un esempio.
 
 ## <a name="other-examples-in-the-sample"></a>Altri esempi nell'esempio
 
 Il codice sorgente completo per questa esercitazione è reperibile nel [repository dotnet/samples](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin). L'esempio completato include alcuni altri esempi del comportamento di `AssemblyDependencyResolver`. Ad esempio, l'oggetto `AssemblyDependencyResolver` può anche risolvere le librerie native nonché gli assembly satellite localizzati inclusi nei pacchetti NuGet. `UVPlugin` e `FrenchPlugin` nel repository degli esempi illustrano questi scenari.
 
-## <a name="reference-a-plugin-interface-from-a-nuget-package"></a>Fare riferimento a un'interfaccia del plug-in da un pacchetto NuGet
+## <a name="reference-a-plugin-interface-from-a-nuget-package"></a>Fare riferimento a un'interfaccia del plug-in da un pacchetto NuGetReference a plugin interface from a NuGet package
 
 Si supponga che sia presente un'app A con un'interfaccia di plug-in definita nel pacchetto NuGet denominato `A.PluginBase`. Come fare riferimento correttamente al pacchetto nel progetto di plug-in? Per i riferimenti al progetto, l'uso dei metadati `<Private>false</Private>` nell'elemento `ProjectReference` nel file di progetto ha impedito la copia della dll nell'output.
 
@@ -287,8 +287,8 @@ In questo modo si impedisce che gli assembly `A.PluginBase` vengano copiati nell
 
 ## <a name="plugin-target-framework-recommendations"></a>Consigli sul framework di destinazione del plug-in
 
-Poiché il caricamento delle dipendenze del plug-in usa il file *deps.json*, tenere presente la raccomandazione relativa al framework di destinazione del plug-in. In particolare, è consigliabile che i plug-in abbiano come destinazione un runtime, ad esempio .NET Core 3.0, anziché una versione di .NET Standard. Il file *.deps.json* viene generato in base al framework di destinazione del progetto e poiché numerosi pacchetti compatibili con .NET Standard offrono assembly di riferimento per la compilazione in .NET Standard e assembly di implementazione per runtime specifici, è possibile che *.deps.json* non consideri correttamente gli assembly di implementazione oppure ottenga la versione .NET Standard di un assembly anziché la versione .NET Core prevista.
+Poiché il caricamento delle dipendenze del plug-in utilizza il file *.deps.json,* esiste un gotcha relativo al framework di destinazione del plug-in. In particolare, è consigliabile che i plug-in abbiano come destinazione un runtime, ad esempio .NET Core 3.0, anziché una versione di .NET Standard. Il file *.deps.json* viene generato in base al framework di destinazione del progetto e poiché numerosi pacchetti compatibili con .NET Standard offrono assembly di riferimento per la compilazione in .NET Standard e assembly di implementazione per runtime specifici, è possibile che *.deps.json* non consideri correttamente gli assembly di implementazione oppure ottenga la versione .NET Standard di un assembly anziché la versione .NET Core prevista.
 
-## <a name="plugin-framework-references"></a>Riferimenti al Framework di plug-in
+## <a name="plugin-framework-references"></a>Riferimenti al framework del plug-in
 
-Attualmente, i plug-in non possono introdurre nuovi Framework nel processo. Ad esempio, non è possibile caricare un plug-in che usa il Framework di `Microsoft.AspNetCore.App` in un'applicazione che usa solo il Framework `Microsoft.NETCore.App` radice. L'applicazione host deve dichiarare i riferimenti a tutti i Framework necessari per i plug-in.
+Attualmente, i plugin non possono introdurre nuovi framework nel processo. Ad esempio, non è possibile caricare `Microsoft.AspNetCore.App` un plug-in che utilizza `Microsoft.NETCore.App` il framework in un'applicazione che utilizza solo il framework radice. L'applicazione host deve dichiarare i riferimenti a tutti i framework necessari per i plug-in.

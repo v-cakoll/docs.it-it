@@ -3,11 +3,11 @@ title: Considerazioni su versione e aggiornamento per gli sviluppatori C#
 description: L'introduzione delle nuove funzionalità del linguaggio nella libreria può influire sul codice che la usa.
 ms.date: 09/19/2018
 ms.openlocfilehash: 3ffe2f6fd64a391fddf28233dccb022c95851884
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634484"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399385"
 ---
 # <a name="version-and-update-considerations-for-c-developers"></a>Considerazioni su versione e aggiornamento per gli sviluppatori C#
 
@@ -31,7 +31,7 @@ Se una modifica non è **compatibile a livello di codice sorgente** né **compat
 
 Questi concetti relativi alla compatibilità interessano le dichiarazioni pubbliche e protette per la libreria, non la relativa implementazione interna. Internamente, l'adozione delle nuove funzionalità è sempre **compatibile a livello binario**.  
 
-Le modifiche **compatibili a livello binario**  forniscono una nuova sintassi che genera lo stesso codice compilato per le dichiarazioni pubbliche della sintassi precedente. Ad esempio, la modifica di un metodo in un membro con corpo di espressione è una **modifica compatibile a livello binario**:
+Le modifiche **compatibili a livello binario ** forniscono una nuova sintassi che genera lo stesso codice compilato per le dichiarazioni pubbliche della sintassi precedente. Ad esempio, la modifica di un metodo in un membro con corpo di espressione è una **modifica compatibile a livello binario**:
 
 Codice originale:
 

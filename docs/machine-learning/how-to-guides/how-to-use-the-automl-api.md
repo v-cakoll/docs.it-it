@@ -4,10 +4,10 @@ description: L'API di Machine Learning automatizzato per ML.NET consente di auto
 ms.date: 12/18/2019
 ms.custom: mvc,how-to
 ms.openlocfilehash: b322c484282d025033d747d2093f7b5b4d216fde
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75636562"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>Come usare l'API di Machine Learning automatizzato per ML.NET
@@ -17,7 +17,7 @@ Il Machine Learning automatizzato (AutoML) consente di automatizzare il processo
 > [!NOTE]
 > Questo argomento riguarda l'API di Machine Learning automatizzato per ML.NET, che è attualmente in anteprima. Il materiale potrà essere soggetto a modifiche.
 
-## <a name="load-data"></a>Caricare i dati
+## <a name="load-data"></a>Caricare dati
 
 Il Machine Learning automatizzato supporta il caricamento di un set di dati in un elemento [IDataView](xref:Microsoft.ML.IDataView). I dati possono essere sotto forma di file di valori delimitati da tabulazioni (con estensione tsv) e file di valori delimitati da virgole (con estensione csv).
 
@@ -38,7 +38,7 @@ Prima di creare un esperimento, determinare il tipo di problema di apprendimento
 * Classificazione binaria
 * Classificazione multiclasse
 * Regressione
-* Indicazione
+* Recommendation
 
 ## <a name="create-experiment-settings"></a>Creare le impostazioni dell'esperimento
 
@@ -62,7 +62,7 @@ Creare le impostazioni dell'esperimento per il tipo specifico di attività di ap
   var experimentSettings = new RegressionExperimentSettings();
   ```
 
-* Indicazione
+* Recommendation
 
   ```csharp
   var experimentSettings = new RecommendationExperimentSettings();
@@ -72,7 +72,7 @@ Creare le impostazioni dell'esperimento per il tipo specifico di attività di ap
 
 Gli esperimenti sono ampiamente configurabili. Vedere la [documentazione dell'API AutoML](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl?view=ml-dotnet-preview) per un elenco completo delle impostazioni di configurazione.
 
-Alcuni esempi includono:
+Di seguito sono riportati alcuni esempi:
 
 1. Specificare il tempo massimo per il quale eseguire l'esperimento.
 
@@ -117,13 +117,13 @@ L'elenco degli algoritmi di training supportati per ogni attività di apprendime
 * [Algoritmi di classificazione binaria supportati](xref:Microsoft.ML.AutoML.BinaryClassificationTrainer)
 * [Algoritmi di classificazione multiclasse supportati](xref:Microsoft.ML.AutoML.MulticlassClassificationTrainer)
 * [Algoritmi di regressione supportati](xref:Microsoft.ML.AutoML.RegressionTrainer)
-* [Algoritmi di raccomandazione supportati](xref:Microsoft.ML.AutoML.RecommendationTrainer)
+* [Algoritmi di raccomandazione supportatiSupported Recommendation Algorithms](xref:Microsoft.ML.AutoML.RecommendationTrainer)
 
 ## <a name="optimizing-metric"></a>Metrica di ottimizzazione
 
 Come illustrato nell'esempio precedente, la metrica di ottimizzazione determina la metrica da ottimizzare durante il training del modello. La metrica di ottimizzazione selezionabile è determinata dal tipo di attività scelto. Ecco un elenco delle metriche disponibili.
 
-|[Classificazione binaria](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [Classificazione multiclasse](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[Raccomandazione & regressione](xref:Microsoft.ML.AutoML.RegressionMetric)
+|[Classificazione binaria](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [Classificazione multiclasse](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[Raccomandazione & di regressione](xref:Microsoft.ML.AutoML.RegressionMetric)
 |-- |-- |--
 |Accuratezza| LogLoss | RSquared
 |AreaUnderPrecisionRecallCurve | LogLossReduction | MeanAbsoluteError
@@ -134,26 +134,26 @@ Come illustrato nell'esempio precedente, la metrica di ottimizzazione determina 
 |PositivePrecision
 |PositiveRecall
 
-## <a name="data-pre-processing-and-featurization"></a>Preelaborazione dati ed estrazione caratteristiche
+## <a name="data-pre-processing-and-featurization"></a>Definizione delle caratteristiche e pre-elaborazione dei dati
 
 > [!NOTE]
-> La colonna feature supporta solo tipi di <xref:System.Boolean>, <xref:System.Single>e <xref:System.String>.
+> La colonna di entità <xref:System.Boolean> <xref:System.Single>geografiche <xref:System.String>supporta solo i tipi di , e .
 
 La preelaborazione dei dati si verifica per impostazione predefinita e i passaggi seguenti vengono eseguiti automaticamente:
 
 1. Rimozione delle caratteristiche prive di informazioni utili
 
-    Le caratteristiche prive informazioni utili vengono rimosse da set di training e convalida. Queste includono le caratteristiche con tutti i valori mancanti, con lo stesso valore in tutte le righe o con una cardinalità molto elevata (ad esempio hash, ID o GUID).
+    Vengono eliminate le caratteristiche senza informazioni utili dai set di training e convalida. Queste includono le caratteristiche con tutti i valori mancanti, con lo stesso valore in tutte le righe o con cardinalità molto elevata, ad esempio hash, ID o GUID.
 
 1. Indicazione e marcatura dei valori mancanti
 
     Riempimento delle celle con valore mancante con il valore predefinito per il tipo di dati. Aggiunta di caratteristiche indicatore con lo stesso numero di slot della colonna di input. Il valore nelle caratteristiche indicatore accodate è `1` se il valore nella colonna di input è mancante e `0` negli altri casi.
 
-1. Generare caratteristiche aggiuntive
+1. Generazione di caratteristiche aggiuntive
 
-    Per le funzionalità di testo: funzionalità del contenitore di Word che usano unigrammi e Tri-character-grams.
+    Per le caratteristiche di testo: Bag-of-word caratteristiche che utilizzano unigrammi e tri-carattere-grammi.
 
-    Per le funzionalità categoriche: codifica One-Hot per le funzionalità di cardinalità bassa e codifica One-Hot-hash per le funzionalità categoriche con cardinalità elevata.
+    Per le funzionalità categoriche: codifica one-hot per le funzionalità di cardinalità bassa e codifica hash a un solo punto per le funzionalità categoriche ad alta cardinalità.
 
 1. Trasformazioni e codifiche
 
@@ -195,7 +195,7 @@ Esplorare altri overload per `Execute()` se si vuole passare dati di convalida, 
 
 ## <a name="training-modes"></a>Modalità di training
 
-### <a name="training-dataset"></a>Set di dati di training
+### <a name="training-dataset"></a>Dataset di training
 
 AutoML include un metodo di esecuzione dell'esperimento con overload che consente di specificare dati di training. A livello interno, il Machine Learning automatizzato suddivide i dati in gruppi train-validate (training-convalida).
 
@@ -227,7 +227,7 @@ Di seguito sono elencate tutte le metriche disponibili per attività ML:
 
 * [Metriche di classificazione binaria](xref:Microsoft.ML.AutoML.BinaryClassificationMetric)
 * [Metriche di classificazione multiclasse](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric)
-* [Metriche delle raccomandazioni del & di regressione](xref:Microsoft.ML.AutoML.RegressionMetric)
+* [Metriche di raccomandazione & di regressione](xref:Microsoft.ML.AutoML.RegressionMetric)
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -5,15 +5,15 @@ ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
 ms.openlocfilehash: b00050c1d151b95e330f94eb9393a4031e47d5a8
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78240067"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Esercitazione: Esprimere più chiaramente le finalità di progettazione con tipi riferimento nullable e non nullable
 
-C#8,0 introduce [tipi di riferimento Nullable](../nullable-references.md), che completano i tipi di riferimento in modo analogo ai tipi di valore Nullable. Per dichiarare una variabile come **tipo riferimento nullable** basta aggiungere un `?` alla fine del tipo. Ad esempio, `string?` rappresenta un tipo `string` nullable. È possibile usare questi nuovi tipi per esprimere più chiaramente le finalità della progettazione: alcune variabili *devono avere sempre un valore*, mentre in altre *un valore può mancare*.
+La versione 8.0 introduce tipi di [riferimento nullable,](../nullable-references.md)che completano i tipi di riferimento allo stesso modo in cui i tipi di valore nullable completano i tipi di valore. Per dichiarare una variabile come **tipo riferimento nullable** basta aggiungere un `?` alla fine del tipo. Ad esempio, `string?` rappresenta un tipo `string` nullable. È possibile usare questi nuovi tipi per esprimere più chiaramente le finalità della progettazione: alcune variabili *devono avere sempre un valore*, mentre in altre *un valore può mancare*.
 
 In questa esercitazione si apprenderà come:
 
@@ -26,19 +26,19 @@ In questa esercitazione si apprenderà come:
 
 ## <a name="prerequisites"></a>Prerequisites
 
-È necessario configurare il computer per l'esecuzione di .NET Core, incluso il C# compilatore 8,0. Il C# compilatore 8,0 è disponibile con [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)o [.NET Core 3,0](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+È necessario configurare il computer per l'esecuzione di .NET Core, incluso il compilatore c'è 8.0. Il compilatore di Cè 8.0 è disponibile con [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)o [.NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0).
 
 Per questa esercitazione si presuppone che l'utente abbia familiarità con C# e .NET, inclusa l'interfaccia della riga di comando di .NET Core o Visual Studio.
 
 ## <a name="incorporate-nullable-reference-types-into-your-designs"></a>Incorporare tipi riferimento nullable nelle progettazioni
 
-In questa esercitazione si compilerà una libreria che modella l'esecuzione di un sondaggio. Il codice usa tipi riferimento sia nullable che non nullable per rappresentare concetti reali. Le domande del sondaggio non possono mai essere Null. Un partecipante al sondaggio potrebbe preferire non rispondere a una domanda. In questo caso, le risposte potrebbero essere `null`.
+In questa esercitazione si compilerà una libreria che modella l'esecuzione di un sondaggio. Il codice usa tipi riferimento sia nullable che non nullable per rappresentare concetti reali. Le domande del sondaggio non possono mai essere Null. Un partecipante al sondaggio potrebbe preferire non rispondere a una domanda. Le risposte potrebbero `null` essere in questo caso.
 
 Il codice scritto per questo esempio esprime questa intenzione e il compilatore la applica.
 
 ## <a name="create-the-application-and-enable-nullable-reference-types"></a>Creare l'applicazione e abilitare i tipi riferimento nullable
 
-Creare una nuova applicazione console in Visual Studio oppure dalla riga di comando tramite `dotnet new console`. Assegnare all'applicazione il nome `NullableIntroduction`. Dopo aver creato l'applicazione, è necessario specificare che l'intero progetto venga compilato in un **contesto di annotazione Nullable**abilitato. Aprire il file con *estensione csproj* e aggiungere un elemento `Nullable` all'elemento `PropertyGroup`. Impostare il relativo valore su `enable`. È necessario optare per la funzionalità dei **tipi di riferimento Nullable** , anche nei C# progetti 8,0. Questo perché dopo che la funzionalità viene attivata, le dichiarazioni di variabili di riferimento esistenti diventano **tipi riferimento non nullable**. Sebbene questa decisione consenta di individuare i problemi per cui il codice esistente potrebbe non avere controlli null appropriati, potrebbe non riflettere accuratamente la finalità di progettazione originale:
+Creare una nuova applicazione console in Visual Studio oppure dalla riga di comando tramite `dotnet new console`. Assegnare all'applicazione il nome `NullableIntroduction`. Dopo aver creato l'applicazione, è necessario specificare che l'intero progetto viene compilato in un contesto di **annotazione nullable**abilitato. Aprire il file *con estensione csproj* e aggiungere un `Nullable` elemento all'elemento. `PropertyGroup` Impostare il relativo valore su `enable`. È necessario acconsentire esplicitamente alla funzionalità dei tipi di **riferimento nullable,** anche nei progetti 8.0 di C. Questo perché dopo che la funzionalità viene attivata, le dichiarazioni di variabili di riferimento esistenti diventano **tipi riferimento non nullable**. Sebbene tale decisione consenta di individuare i problemi in cui il codice esistente potrebbe non disporre di controlli null appropriati, potrebbe non riflettere in modo accurato l'intento di progettazione originale:While that decision will help find issues where existing code may not have proper null-checks, it may not precision reflect your original design intent:
 
 ```xml
 <Nullable>enable</Nullable>
@@ -58,23 +58,23 @@ Questi tipi useranno tipi riferimento sia nullable sia non nullable per indicare
 - I partecipanti al sondaggio non possono mai essere Null. Si vuole infatti tenere traccia delle persone che sono state contattate, anche quelle che non hanno accettato di partecipare.
 - Una risposta a una domanda può essere Null. I partecipanti possono infatti rifiutarsi di rispondere ad alcune o a tutte le domande.
 
-Se è stata eseguita la C#programmazione in, è possibile che si sia abituati a fare riferimento ai tipi che consentono di `null` valori che potrebbero aver perso altre opportunità per dichiarare istanze non nullable:
+Se è stato programmato in C , si può essere `null` così abituati a i tipi di riferimento che consentono valori che potrebbero essere persi altre opportunità di dichiarare istanze non nullable:If you've programmed in C'è, you may be so accustomed to reference types that allow values that you may have missed other opportunities to declare non-nullable instances:
 
 - La raccolta delle domande deve essere non nullable.
 - La raccolta dei partecipanti deve essere non nullable.
 
-Quando si scrive il codice, si noterà che un tipo di riferimento non nullable come il valore predefinito per i riferimenti evita errori comuni che potrebbero causare <xref:System.NullReferenceException>s. Una lezione di questa esercitazione consiste nel prendere decisioni sulle variabili che possono o non essere `null`. Nelle versioni precedenti il linguaggio non forniva la sintassi necessaria per esprimere queste decisioni. Ora invece tutto questo è possibile.
+Mentre si scrive il codice, si noterà che un tipo di riferimento non nullable come <xref:System.NullReferenceException>valore predefinito per i riferimenti evita errori comuni che potrebbero portare a s. Una lezione da questo tutorial è che hai preso `null`decisioni su quali variabili potrebbero o non potrebbero essere . Nelle versioni precedenti il linguaggio non forniva la sintassi necessaria per esprimere queste decisioni. Ora invece tutto questo è possibile.
 
-L'app da compilare esegue i passaggi seguenti:
+L'app che verrà compilata esegue i passaggi seguenti:The app you'll build does the following steps:
 
-1. Consente di creare un sondaggio e di aggiungere domande.
-1. Crea un set pseudo-casuale di intervistati per il sondaggio.
-1. Contatta gli intervistati fino a quando la dimensione del sondaggio completata raggiunge il numero obiettivo.
-1. Scrive statistiche importanti sulle risposte del sondaggio.
+1. Crea un sondaggio e vi aggiunge delle domande.
+1. Crea un set pseudo-casuale di rispondenti per il sondaggio.
+1. Contatta i rispondenti fino a quando la dimensione dell'indagine completata non raggiunge il numero di obiettivo.
+1. Scrive statistiche importanti sulle risposte al sondaggio.
 
 ## <a name="build-the-survey-with-nullable-and-non-nullable-types"></a>Compilare il sondaggio con tipi nullable e non nullable
 
-Il primo codice scritto crea il sondaggio. Occorre scrivere le classi necessarie per modellare una domanda del sondaggio e l'esecuzione del sondaggio. Il sondaggio ha tre tipi di domande, distinte dal formato della risposta: risposte Sì/No, risposte in forma di numero e risposte testuali. Creare una classe `public SurveyQuestion`:
+Il primo codice scritto crea il sondaggio. Occorre scrivere le classi necessarie per modellare una domanda del sondaggio e l'esecuzione del sondaggio. Il sondaggio ha tre tipi di domande, distinte dal formato della risposta: risposte Sì/No, risposte in forma di numero e risposte testuali. Creare `public SurveyQuestion` una classe:Create a class:
 
 ```csharp
 namespace NullableIntroduction
@@ -85,7 +85,7 @@ namespace NullableIntroduction
 }
 ```
 
-Il compilatore interpreta ogni dichiarazione di variabile di tipo riferimento come tipo di riferimento **non nullable** per il codice in un contesto di annotazione Nullable abilitato. È possibile vedere il primo avviso aggiungendo le proprietà del testo della domanda e il tipo di domanda, come illustrato nel codice seguente:
+Il compilatore interpreta ogni dichiarazione di variabile di tipo riferimento come un tipo di riferimento **non nullable** per il codice in un contesto di annotazione nullable abilitato. È possibile vedere il primo avviso aggiungendo le proprietà del testo della domanda e il tipo di domanda, come illustrato nel codice seguente:
 
 ```csharp
 namespace NullableIntroduction
@@ -131,11 +131,11 @@ namespace NullableIntroduction
 
 Anche in questo caso occorre inizializzare l'oggetto elenco su un valore non Null per evitare che il compilatore generi un avviso. Nel secondo overload di `AddQuestion` non ci sono controlli dei valori Null in quanto non sono necessari: la variabile è stata infatti dichiarata come non nullable. Il suo valore non può essere `null`.
 
-Passare a *Program.cs* nell'editor e sostituire il contenuto di `Main` con le righe di codice seguenti:
+Passare a *Program.cs* nell'editor e `Main` sostituire il contenuto con le seguenti righe di codice:
 
 [!code-csharp[AddQuestions](~/samples/snippets/csharp/NullableIntroduction/NullableIntroduction/Program.cs#AddQuestions)]
 
-Poiché l'intero progetto si trova in un contesto di annotazione Nullable abilitato, si riceveranno avvisi quando si passa `null` a qualsiasi metodo che prevede un tipo di riferimento non nullable. Provare ad aggiungere la riga seguente a `Main`:
+Poiché l'intero progetto si trova in un contesto di `null` annotazione nullable abilitato, si otterranno avvisi quando si passa a qualsiasi metodo che prevede un tipo di riferimento non nullable. Provare ad aggiungere la riga seguente a `Main`:
 
 ```csharp
 surveyRun.AddQuestion(QuestionType.Text, default);
@@ -176,7 +176,7 @@ Aggiungere il codice seguente alla classe `SurveyResponse`:
 
 [!code-csharp[AnswerSurvey](~/samples/snippets/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#AnswerSurvey)]
 
-L'archivio per le risposte del sondaggio è un `Dictionary<int, string>?`, a indicare che può essere Null. Si sta usando la nuova funzionalità del linguaggio per dichiarare la finalità della progettazione, sia al compilatore che a chiunque legga il codice successivamente. Se si dereferenziano `surveyResponses` senza prima verificare il valore di `null`, verrà visualizzato un avviso del compilatore. Non si riceve un avviso nel metodo `AnswerSurvey` perché il compilatore è in grado di determinare che la variabile `surveyResponses` è stata impostata su un valore non Null.
+L'archivio per le risposte del sondaggio è un `Dictionary<int, string>?`, a indicare che può essere Null. Si sta usando la nuova funzionalità del linguaggio per dichiarare la finalità della progettazione, sia al compilatore che a chiunque legga il codice successivamente. Se si dereferenzierà `surveyResponses` senza prima controllare il `null` valore, si otterrà un avviso del compilatore. Non si riceve un avviso nel metodo `AnswerSurvey` perché il compilatore è in grado di determinare che la variabile `surveyResponses` è stata impostata su un valore non Null.
 
 L'uso di `null` per le risposte mancanti evidenzia un aspetto essenziale per l'utilizzo dei tipi riferimento nullable, ovvero l'obiettivo non è rimuovere tutti i valori `null` dal programma. L'obiettivo è invece quello di assicurarsi che il codice scritto esprima lo scopo della progettazione. I valori mancanti sono un concetto necessario da esprimere nel codice. Il valore `null` rappresenta un modo chiaro per esprimere tali valori mancanti. Il tentativo di rimuovere tutti i valori `null` porta solo alla definizione di un altro modo per esprimere i valori mancanti senza `null`.
 
@@ -196,7 +196,7 @@ L'ultimo passaggio è la visualizzazione dei risultati del sondaggio. Occorre ag
 
 [!code-csharp[ReportResponses](~/samples/snippets/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#SurveyStatus)]
 
-Poiché `surveyResponses` è un tipo di riferimento Nullable, i controlli null sono necessari prima di dereferenziarli. Il metodo `Answer` restituisce una stringa che non ammette i valori null, pertanto è necessario coprire il caso di una risposta mancante utilizzando l'operatore di Unione null.
+Poiché `surveyResponses` è un tipo di riferimento nullable, i controlli null sono necessari prima di dereferenziare esso. Il `Answer` metodo restituisce una stringa non nullable, pertanto è necessario coprire il caso di una risposta mancante utilizzando l'operatore di null-coalescing.
 
 Aggiungere quindi questi tre membri con corpo di espressione alla classe `SurveyRun`:
 

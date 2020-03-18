@@ -10,17 +10,17 @@ helpviewer_keywords:
 - throw keyword [C#]
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
 ms.openlocfilehash: 04d3138e3390627355b4b2d4e25c6b00248cec1a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713053"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399336"
 ---
 # <a name="throw-c-reference"></a>throw (Riferimenti per C#)
 
 Segnala l'occorrenza di un'eccezione durante l'esecuzione del programma.  
   
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 La sintassi di `throw` è:
 
@@ -47,9 +47,9 @@ I caller al metodo usano quindi un blocco `try-catch` o `try-catch-finally` per 
 
 ## <a name="the-throw-expression"></a>Espressione `throw`
 
-A partire da C# 7.0 è possibile usare `throw` come espressione e come istruzione. Ciò consente di generare un'eccezione in contesti non supportati in precedenza. Sono inclusi:
+A partire da C# 7.0 è possibile usare `throw` come espressione e come istruzione. Ciò consente di generare un'eccezione in contesti non supportati in precedenza. incluse le seguenti:
 
-- [L'operatore condizionale](../operators/conditional-operator.md). Nell'esempio seguente viene usata un'espressione `throw` per generare una <xref:System.ArgumentException> se a un metodo viene passato una matrice di stringa vuota. Prima di C# 7.0, la logica avrebbe dovuto usare un'istruzione `if`/`else`.
+- [l'operatore condizionale](../operators/conditional-operator.md). Nell'esempio seguente viene usata un'espressione `throw` per generare una <xref:System.ArgumentException> se a un metodo viene passato una matrice di stringa vuota. Prima di C# 7.0, la logica avrebbe dovuto usare un'istruzione `if`/`else`.
 
    [!code-csharp[csrefKeyword#4](~/samples/snippets/csharp/language-reference/keywords/throw/conditional.cs#1)]
 
@@ -67,7 +67,7 @@ A partire da C# 7.0 è possibile usare `throw` come espressione e come istruzion
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
+- [Guida di riferimento a C](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [try-catch](try-catch.md)
 - [Parole chiave di C#](index.md)

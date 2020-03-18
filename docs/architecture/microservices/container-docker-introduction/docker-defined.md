@@ -3,23 +3,23 @@ title: Che cos'è Docker?
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Che cos'è Docker?
 ms.date: 08/31/2018
 ms.openlocfilehash: a53845d3bbcf24f3eaeb98b9e08b6f35a023c30e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75337712"
 ---
 # <a name="what-is-docker"></a>Che cos'è Docker?
 
 [Docker](https://www.docker.com/) è un [progetto open source](https://github.com/docker/docker) per automatizzare la distribuzione di app come contenitori portabili e autosufficienti che possono essere eseguiti nel cloud o in locale. Docker è anche una [società](https://www.docker.com/) che promuove e sviluppa questa tecnologia, collaborando con fornitori cloud, Linux e Windows, inclusa Microsoft.
 
-![Diagramma che mostra le posizioni in cui è possibile eseguire i contenitori docker.](./media/docker-defined/docker-containers-run-anywhere.png)
+![Diagramma che mostra i punti in cui è possibile eseguire i contenitori Docker.](./media/docker-defined/docker-containers-run-anywhere.png)
 
-**Figura 2-2**. Docker distribuisce contenitori a tutti i livelli del cloud ibrido.
+**Figura 2-2**. Docker distribuisce i contenitori in tutti i livelli del cloud ibrido.
 
 I contenitori Docker possono essere eseguiti ovunque, in locale nel data center del cliente, in un provider di servizi esterno o nel cloud, in Azure. I contenitori di immagini Docker possono essere eseguiti in modo nativo in Linux e Windows. Tuttavia, le immagini Windows possono essere eseguite solo negli host Windows e le immagini Linux possono essere eseguite in host Linux e in host Windows (con una macchina virtuale Linux Hyper-V, per il momento), dove con host si intende una macchina virtuale o un server.
 
-Gli sviluppatori possono usare gli ambienti di sviluppo in Windows, Linux o macOS. Nel computer di sviluppo lo sviluppatore esegue un host Docker in cui vengono distribuite le immagini Docker, inclusa l'app e le relative dipendenze. Gli sviluppatori che lavorano su Linux o su macOS usano un host Docker basato su Linux e possono creare immagini solo per i contenitori Linux. Gli sviluppatori che lavorano su macOS possono modificare il codice o eseguire l'interfaccia della riga di comando di Docker da macOS, ma al momento della stesura di questo articolo, i contenitori non vengono eseguiti direttamente in macOS. Gli sviluppatori che lavorano su Windows possono creare immagini per i contenitori Linux o Windows.
+Gli sviluppatori possono usare gli ambienti di sviluppo in Windows, Linux o macOS. Nel computer di sviluppo lo sviluppatore esegue un host Docker in cui vengono distribuite le immagini Docker, inclusa l'app e le relative dipendenze. Gli sviluppatori che lavorano su Linux o macOS usano un host Docker basato su Linux e possono creare immagini solo per i contenitori Linux. (Gli sviluppatori che lavorano su macOS possono modificare il codice o eseguire l'interfaccia della riga di comando di Docker da macOS, ma al momento della stesura di questa scrittura, i contenitori non vengono eseguiti direttamente su macOS.) Gli sviluppatori che lavorano su Windows possono creare immagini per contenitori Linux o Windows.Developers who work on Windows can create images for either Linux or Windows Containers.
 
 Per ospitare i contenitori negli ambienti di sviluppo e offrire strumenti di sviluppo aggiuntivi, Docker fornisce [Docker Community Edition (CE)](https://www.docker.com/community-edition) per Windows o per macOS. Questi i prodotti installano la macchina virtuale necessaria (host Docker) per l'hosting dei contenitori. Docker mette anche a disposizione [Docker Enterprise Edition (EE)](https://www.docker.com/enterprise-edition), progettato per lo sviluppo aziendale e usato dai team IT che compilano, distribuiscono ed eseguono applicazioni critiche di grandi dimensioni nell'ambiente di produzione.
 
@@ -37,7 +37,7 @@ La figura 2-3 mostra un confronto tra macchine virtuali e contenitori Docker.
 
 | Macchine virtuali | Contenitori Docker |
 | -----------------| ------------------|
-|![Diagramma che mostra lo stack hardware/software di una macchina virtuale tradizionale.](./media/docker-defined/virtual-machine-hardware-software.png)|![Diagramma che mostra lo stack hardware/software per i contenitori docker.](./media/docker-defined/docker-container-hardware-software.png)|
+|![Diagramma che mostra lo stack hardware/software di una macchina virtuale tradizionale.](./media/docker-defined/virtual-machine-hardware-software.png)|![Diagramma che mostra lo stack hardware/software per i contenitori Docker.](./media/docker-defined/docker-container-hardware-software.png)|
 |Le macchine virtuali includono l'applicazione, le librerie o i file binari necessari e un sistema operativo guest completo. La virtualizzazione completa richiede più risorse rispetto alla creazione di contenitori. | I contenitori includono l'applicazione e tutte le relative dipendenze. Condividono tuttavia il kernel del sistema operativo con altri contenitori, in esecuzione come processi isolati nello spazio utente nel sistema operativo host. Tranne che nei contenitori Hyper-V, in cui ogni contenitore viene eseguito all'interno di una macchina virtuale speciale per contenitore. |
 
 **Figura 2-3**. Confronto tra macchine virtuali tradizionali e contenitori Docker
@@ -83,5 +83,5 @@ Un'immagine può essere considerata come un disco rigido di sola lettura ausilia
 Allo stesso modo, un contenitore può essere considerato come il "computer" con il disco rigido dell'immagine installato. Il contenitore, proprio come un computer, può essere acceso o spento.
 
 >[!div class="step-by-step"]
->[Precedente](index.md)
->[Successivo](docker-terminology.md)
+>[Successivo](index.md)
+>[precedente](docker-terminology.md)

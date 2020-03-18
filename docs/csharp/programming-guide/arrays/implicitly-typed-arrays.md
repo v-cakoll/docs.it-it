@@ -7,10 +7,10 @@ helpviewer_keywords:
 - C# language, implicitly typed arrays
 ms.assetid: e05be95c-6732-403d-ae42-b35f057cbbea
 ms.openlocfilehash: 943760af30422cd333fdff65cdf678108c9d9564
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705717"
 ---
 # <a name="implicitly-typed-arrays-c-programming-guide"></a>Matrici tipizzate in modo implicito (Guida per programmatori C#)
@@ -34,9 +34,9 @@ Quando si crea un tipo anonimo che contiene una matrice, la matrice deve essere 
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori C#](../index.md)
-- [Variabili locali tipizzate in modo implicito](../classes-and-structs/implicitly-typed-local-variables.md)
+- [Variabili locali tipizzate in modo implicitoImplicitly typed Local Variables](../classes-and-structs/implicitly-typed-local-variables.md)
 - [Matrici](./index.md)
 - [Tipi anonimi](../classes-and-structs/anonymous-types.md)
-- [Inizializzatori di oggetto e di raccolta](../classes-and-structs/object-and-collection-initializers.md)
-- [var](../../language-reference/keywords/var.md)
+- [Inizializzatori di oggetto e di raccoltaObject and Collection Initializers](../classes-and-structs/object-and-collection-initializers.md)
+- [Var](../../language-reference/keywords/var.md)
 - [LINQ in C#](../../linq/index.md)

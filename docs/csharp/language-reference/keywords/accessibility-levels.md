@@ -6,10 +6,10 @@ helpviewer_keywords:
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
 ms.openlocfilehash: 26fbc2a6d86aead537465c304146630f8bcd3ad4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713821"
 ---
 # <a name="accessibility-levels-c-reference"></a>Livelli di accessibilità (Riferimenti per C#)
@@ -37,26 +37,26 @@ Usare i modificatori di accesso `public`, `protected`, `internal` o `private` pe
   
 |Membri di|Accessibilità predefinita del membro|Accessibilità dichiarate e consentite del membro|  
 |----------------|----------------------------------|--------------------------------------------------|  
-|`enum`|`public`|nessuna|  
+|`enum`|`public`|nessuno|  
 |`class`|`private`|`public`<br /><br /> `protected`<br /><br /> `internal`<br /><br /> `private`<br /><br /> `protected internal` <br /><br />`private protected`|  
-|`interface`|`public`|nessuna|  
+|`interface`|`public`|nessuno|  
 |`struct`|`private`|`public`<br /><br /> `internal`<br /><br /> `private`|  
   
- L'accessibilità di un tipo annidato dipende dal relativo [dominio di accessibilità](./accessibility-domain.md), che è determinato dall'accessibilità dichiarata del membro e dal dominio di accessibilità del tipo contenitore. Tuttavia il dominio di accessibilità di un tipo annidato non può essere superiore a quello del tipo che lo contiene.  
+ L'accessibilità di un tipo annidato dipende dal [relativo dominio](./accessibility-domain.md)di accessibilità, determinato sia dall'accessibilità dichiarata del membro che dal dominio di accessibilità del tipo che lo contiene immediatamente. Tuttavia il dominio di accessibilità di un tipo annidato non può essere superiore a quello del tipo che lo contiene.  
   
-## <a name="c-language-specification"></a>Specifica del linguaggio C#  
+## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
+- [Guida di riferimento a C](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](./index.md)
 - [Modificatori di accesso](./access-modifiers.md)
 - [Dominio di accessibilità](./accessibility-domain.md)
 - [Restrizioni relative all'uso dei livelli di accessibilità](./restrictions-on-using-accessibility-levels.md)
 - [Modificatori di accesso](../../programming-guide/classes-and-structs/access-modifiers.md)
-- [public](./public.md)
-- [private](./private.md)
-- [protected](./protected.md)
-- [internal](./internal.md)
+- [pubblico](./public.md)
+- [Privato](./private.md)
+- [Protetto](./protected.md)
+- [Interno](./internal.md)

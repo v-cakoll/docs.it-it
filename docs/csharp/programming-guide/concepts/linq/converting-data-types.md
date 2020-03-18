@@ -3,10 +3,10 @@ title: Conversione di tipi di dati (C#)
 ms.date: 07/20/2015
 ms.assetid: 46e5682f-77a1-4302-8f93-a2b53c408808
 ms.openlocfilehash: 328c790a1a360907c91f69b3b6330b0b25eb414b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347194"
 ---
 # <a name="converting-data-types-c"></a>Conversione di tipi di dati (C#)
@@ -38,7 +38,7 @@ I metodi di conversione modificano il tipo degli oggetti di input.
 
 ## <a name="query-expression-syntax-example"></a>Esempio di sintassi delle espressioni di query
 
-Nell'esempio di codice seguente viene utilizzata una variabile di intervallo tipizzata in modo esplicito per eseguire il cast di un tipo a un sottotipo prima di accedere a un membro disponibile solo sul sottotipo.
+Nell'esempio di codice riportato di seguito viene utilizzata una variabile di intervallo tipizzata in modo esplicito per eseguire il cast di un tipo a un sottotipo prima di accedere a un membro disponibile solo nel sottotipo.
 
 ```csharp
 class Plant
@@ -78,7 +78,7 @@ static void Cast()
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Linq>
-- [Panoramica degli operatori di query standard (C#)](./standard-query-operators-overview.md)
-- [Clausola from](../../../language-reference/keywords/from-clause.md)
-- [Espressioni di query LINQ](../../../linq/index.md)
-- [Come eseguire una query su un ArrayList con LINQC#()](./how-to-query-an-arraylist-with-linq.md)
+- [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md) (Panoramica degli operatori di query standard)
+- [clausola from](../../../language-reference/keywords/from-clause.md)
+- [Espressioni di query LINQLINQ Query Expressions](../../../linq/index.md)
+- [Come eseguire una query su un ArrayList con LINQ (C )How to query an ArrayList with LINQ (C](./how-to-query-an-arraylist-with-linq.md)

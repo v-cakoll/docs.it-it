@@ -8,10 +8,10 @@ helpviewer_keywords:
 - volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
 ms.openlocfilehash: c7a6c442c33ac2b41f652805837f455a957819de
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712845"
 ---
 # <a name="volatile-c-reference"></a>volatile (Riferimenti per C#)
@@ -27,7 +27,7 @@ La parola chiave `volatile` può essere applicata ai campi di questi tipi:
 - Parametri di tipo generico noti come tipi di riferimento.
 - <xref:System.IntPtr> e <xref:System.UIntPtr>.
 
-Altri tipi, inclusi `double` e `long`, non possono essere contrassegnati come `volatile`, perché non è possibile garantire che le letture e le scritture in campi di questi tipi siano atomiche. Per proteggere l'accesso multithread a questi tipi di campi, usare i membri della classe <xref:System.Threading.Interlocked> o proteggere l'accesso usando l'istruzione [`lock`](lock-statement.md).
+Altri tipi, inclusi `double` e `long`, non possono essere contrassegnati come `volatile`, perché non è possibile garantire che le letture e le scritture in campi di questi tipi siano atomiche. Per proteggere l'accesso multithread a tali <xref:System.Threading.Interlocked> tipi di campi, [`lock`](lock-statement.md) utilizzare i membri della classe o proteggere l'accesso tramite l'istruzione .
 
 La parola chiave `volatile` può essere applicata solo a campi di un oggetto `class` o `struct`. Le variabili locali non possono essere dichiarate `volatile`.
 
@@ -50,9 +50,9 @@ Dopo aver aggiunto il modificatore `volatile` alla dichiarazione di `_shouldStop
 ## <a name="see-also"></a>Vedere anche
 
 - [Specifica del linguaggio C#: parola chiave volatile](../../../../_csharplang/spec/classes.md#volatile-fields)
-- [Riferimenti per C#](../index.md)
+- [Guida di riferimento a C](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](index.md)
 - [Modificatori](index.md)
-- [Istruzione lock](lock-statement.md)
+- [lock (istruzione)](lock-statement.md)
 - <xref:System.Threading.Interlocked>

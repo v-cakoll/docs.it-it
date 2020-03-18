@@ -3,11 +3,11 @@ title: Flusso di lavoro di sviluppo per app Docker
 description: Informazioni dettagliate sul flusso di lavoro richiesto per lo sviluppo delle applicazioni basate su Docker. Iniziare gradualmente e approfondire alcuni dettagli per ottimizzare i Dockerfile e terminare con il flusso di lavoro semplificato disponibile quando si usa Visual Studio.
 ms.date: 01/30/2020
 ms.openlocfilehash: c58ea2436027968143777a19286a1a0a72107717
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502788"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401641"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Flusso di lavoro di sviluppo per app Docker
 
@@ -23,21 +23,21 @@ Ogni contenitore, ovvero un'istanza di un'immagine Docker, include i componenti 
 
 ## <a name="workflow-for-developing-docker-container-based-applications"></a>Flusso di lavoro per lo sviluppo di applicazioni Docker basate su contenitore
 
-Questa sezione descrive il flusso di lavoro di sviluppo a *ciclo interno* per applicazioni Docker basate su contenitore. Il flusso di lavoro a ciclo interno significa che non sta considerando il flusso di lavoro DevOps più ampio, che può includere fino alla distribuzione di produzione, e si concentra solo sul lavoro di sviluppo svolto nel computer dello sviluppatore. I passaggi iniziali per configurare l'ambiente non sono inclusi, poiché vengono eseguiti una sola volta.
+Questa sezione descrive il flusso di lavoro di sviluppo a *ciclo interno* per applicazioni Docker basate su contenitore. Il flusso di lavoro del ciclo interno significa che non sta prendendo in considerazione il flusso di lavoro DevOps più ampio, che può includere fino alla distribuzione di produzione, e si concentra solo sul lavoro di sviluppo eseguito nel computer dello sviluppatore. I passaggi iniziali per configurare l'ambiente non sono inclusi, poiché vengono eseguiti una sola volta.
 
 Un'applicazione è costituita da servizi e raccolte aggiuntive, ossia dipendenze. Di seguito sono indicati i passaggi di base che si eseguono in genere quando si compila un'applicazione Docker, come illustrato nella figura 5-1.
 
-:::image type="complex" source="./media/docker-app-development-workflow/life-cycle-containerized-apps-docker-cli.png" alt-text="Diagramma che illustra i 7 passaggi necessari per creare un'app in contenitori.":::
-Il processo di sviluppo per le app docker: 1-scrivere il codice dell'app, 2-scrivere Dockerfile/s, 3-creare immagini definite in Dockerfile/s, 4-(facoltativo) comporre servizi nel file Docker-compose. yml, 5-eseguire il contenitore o l'app Docker-compose, 6 testare l'app o i microservizi, 7 push nel repository e ripetere.
+:::image type="complex" source="./media/docker-app-development-workflow/life-cycle-containerized-apps-docker-cli.png" alt-text="Diagramma che mostra i 7 passaggi necessari per creare un'app in contenitori.":::
+Il processo di sviluppo per le app Docker: 1 - Codificare l'app, 2 - Scrivere Dockerfile/s, 3 - Creare immagini definite in Dockerfile/s, 4 - (facoltativo) Componi servizi nel file docker-compose.yml, 5 - Esegui app contenitore o docker-compose, 6 - Testl'app o microservizi, 7 - Push per ripetere e ripetere.
 :::image-end:::
 
-**Figura 5-1.** Flusso di lavoro passo per passo per lo sviluppo di applicazioni Docker in contenitori
+**Come illustrato nella figura 5-1.** Flusso di lavoro passo per passo per lo sviluppo di applicazioni Docker in contenitori
 
 Questa sezione descrive nei dettagli l'intero processo e ogni passaggio principale è spiegato con riferimento all'ambiente Visual Studio.
 
 Quando si usa un approccio di sviluppo editor/CLI, ad esempio codice Visual Studio e CLI di Docker in macOS o Windows, di solito è necessario conoscere ogni passaggio in modo più dettagliato rispetto all'uso di Visual Studio. Per altre informazioni sull'uso di un ambiente CLI, vedere l'e-book [Containerized Docker Application lifecycle with Microsoft Platforms and Tools](https://aka.ms/dockerlifecycleebook/) (Ciclo di vita di un'applicazione Docker in un contenitore con piattaforme e strumenti Microsoft).
 
-Quando si usa Visual Studio 2019, molti di questi passaggi vengono gestiti per l'utente, in modo da migliorare notevolmente la produttività. Ciò è particolarmente vero quando si usa Visual Studio 2019 e si fa riferimento a applicazioni a più contenitori. Ad esempio, con un solo clic del mouse, Visual Studio aggiunge il `Dockerfile` e il file di `docker-compose.yml` ai progetti con la configurazione per l'applicazione. Quando si esegue l'applicazione in Visual Studio, viene creata l'immagine Docker e l'applicazione a più contenitori viene eseguita direttamente in Docker; è anche possibile eseguire il debug di diversi contenitori contemporaneamente. Queste funzionalità rendono lo sviluppo più veloce.
+Quando si usa Visual Studio 2019, molti di questi passaggi vengono gestiti per l'utente, aumentando notevolmente la produttività. Ciò è particolarmente vero quando si utilizza Visual Studio 2019 e la destinazione di applicazioni multi-contenitore. Ad esempio, con un solo clic `Dockerfile` del `docker-compose.yml` mouse, Visual Studio aggiunge il file e ai progetti con la configurazione per l'applicazione. Quando si esegue l'applicazione in Visual Studio, viene creata l'immagine Docker e l'applicazione a più contenitori viene eseguita direttamente in Docker; è anche possibile eseguire il debug di diversi contenitori contemporaneamente. Queste funzionalità rendono lo sviluppo più veloce.
 
 Tuttavia, anche se Visual Studio automatizza questi passaggi, ciò non significa che non sia necessario sapere cosa succede dietro le quinte con Docker. Di conseguenza, il materiale sussidiario seguente illustra in dettaglio ogni passaggio.
 
@@ -53,11 +53,11 @@ Per iniziare, accertarsi che sia installato [Docker Community Edition (CE)](http
 
 [Introduzione a Docker CE per Windows](https://docs.docker.com/docker-for-windows/)
 
-Inoltre, è necessario Visual Studio 2019 versione 16,4 o successiva, con il carico di lavoro **sviluppo multipiattaforma .NET Core** installato, come illustrato nella figura 5-2.
+Inoltre, è necessario Visual Studio 2019 versione 16.4 o successiva, con il carico di lavoro di **sviluppo multipiattaforma .NET Core** installato, come illustrato nella Figura 5-2.
 
 ![Screenshot della selezione dello sviluppo multipiattaforma .NET Core.](./media/docker-app-development-workflow/dotnet-core-cross-platform-development.png)
 
-**Figura 5-2**. Selezione del carico di lavoro **sviluppo multipiattaforma .NET Core** durante l'installazione di Visual Studio 2019
+**Figura 5-2**. Selezione del carico di lavoro di **sviluppo multipiattaforma .NET Core** durante l'installazione di Visual Studio 2019
 
 È possibile iniziare a scrivere il codice dell'applicazione in .NET normale, di solito in .NET Core se si prevede di usare contenitori, anche prima di attivare Docker nell'applicazione e di eseguire la distribuzione e i test in Docker, ma si consiglia di iniziare a lavorare in Docker appena possibile, perché quello sarà l'ambiente reale e gli eventuali problemi possono essere individuati velocemente. Si consiglia di procedere in questo modo perché Visual Studio facilita così tanto il lavoro con Docker da diventare quasi trasparente, soprattutto quando lo si usa per eseguire il debug di applicazioni a più contenitori.
 
@@ -69,29 +69,29 @@ Inoltre, è necessario Visual Studio 2019 versione 16,4 o successiva, con il car
 - **Visual Studio 2019** \
   [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)
 
-![Immagine del passaggio 2.](./media/docker-app-development-workflow/step-2-write-dockerfile.png)
+![Immagine per il passaggio 2.](./media/docker-app-development-workflow/step-2-write-dockerfile.png)
 
-## <a name="step-2-create-a-dockerfile-related-to-an-existing-net-base-image"></a>Passaggio 2: Creare un Dockerfile correlato a un'immagine di base .NET esistente
+## <a name="step-2-create-a-dockerfile-related-to-an-existing-net-base-image"></a>Passaggio 2. Creare un Dockerfile correlato a un'immagine di base .NET esistente
 
 È necessario un Dockerfile per ogni immagine personalizzata che si desidera creare; è necessario un Dockerfile per ogni contenitore da distribuire, sia che si esegua la distribuzione automaticamente da Visual Studio o manualmente con la CLI di Docker: comandi docker run e docker-compose. Se l'applicazione contiene un solo servizio personalizzato, è necessario un solo Dockerfile. Se l'applicazione contiene più servizi, come in un'architettura a microservizi, è necessario un Dockerfile per ogni servizio.
 
 Il Dockerfile viene inserito nella cartella radice dell'applicazione o del servizio. Contiene i comandi che indicano a Docker come configurare ed eseguire l'applicazione o il servizio in un contenitore. È possibile creare manualmente un Dockerfile nel codice e aggiungerlo al progetto insieme alle dipendenze .NET.
 
-Con Visual Studio e i relativi strumenti per Docker questa attività richiede solo pochi clic del mouse. Quando si crea un nuovo progetto in Visual Studio 2019, è disponibile un'opzione denominata **Abilita supporto Docker**, come illustrato nella figura 5-3.
+Con Visual Studio e i relativi strumenti per Docker questa attività richiede solo pochi clic del mouse. Quando si crea un nuovo progetto in Visual Studio 2019, è disponibile un'opzione denominata **Abilita supporto Docker**, come illustrato nella Figura 5-3.
 
-![Screenshot che mostra la casella di controllo Abilita supporto docker.](./media/docker-app-development-workflow/enable-docker-support-check-box.png)
+![Screenshot della casella di controllo Abilita supporto Docker.](./media/docker-app-development-workflow/enable-docker-support-check-box.png)
 
-**Figura 5-3**. Abilitazione del supporto Docker durante la creazione di un nuovo progetto di ASP.NET Core in Visual Studio 2019
+**Figura 5-3**. Abilitazione del supporto Docker durante la creazione di un nuovo progetto ASP.NET Core in Visual Studio 2019Enabling Docker Support when creating a new ASP.NET Core project in Visual Studio 2019
 
-È anche possibile abilitare il supporto Docker in un progetto di app Web ASP.NET Core esistente facendo clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e selezionando **Aggiungi** > **supporto docker...** , come illustrato nella figura 5-4.
+È inoltre possibile abilitare il supporto Docker in un progetto di app Web ASP.NET Core esistente facendo clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e selezionando **Aggiungi** > **supporto Docker...**, come illustrato nella Figura 5-4.
 
-![Screenshot che mostra l'opzione di supporto Docker nel menu Aggiungi.](./media/docker-app-development-workflow/add-docker-support-option.png)
+![Screenshot che mostra l'opzione Supporto Docker nel menu Aggiungi.](./media/docker-app-development-workflow/add-docker-support-option.png)
 
-**Figura 5-4**. Abilitazione del supporto Docker in un progetto Visual Studio 2019 esistente
+**Figura 5-4**. Abilitazione del supporto Docker in un progetto Visual Studio 2019 esistenteEnabling Docker support in an existing Visual Studio 2019 project
 
 Questa azione aggiunge un *Dockerfile* al progetto con la configurazione richiesta ed è disponibile solo nei progetti ASP.NET Core.
 
-In modo analogo, Visual Studio può anche aggiungere un file di `docker-compose.yml` per l'intera soluzione con l'opzione **aggiungi > supporto dell'agente di orchestrazione del contenitore...** . Nel passaggio 4, questa opzione verrà esaminata in modo più dettagliato.
+In modo analogo, Visual Studio `docker-compose.yml` può anche aggiungere un file per l'intera soluzione con l'opzione Aggiungi > supporto dell'orchestratore **contenitore...**. Nel passaggio 4 verrà esaminata questa opzione in modo più dettagliato.
 
 ### <a name="using-an-existing-official-net-docker-image"></a>Uso di un'immagine Docker .NET ufficiale esistente
 
@@ -112,13 +112,13 @@ COPY ${source:-obj/Docker/publish} .
 ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 ```
 
-In questo caso, l'immagine è basata sulla versione 3,1 del ASP.NET Core ufficiale Docker Image (multiarch per Linux e Windows). Si tratta dell'impostazione `FROM mcr.microsoft.com/dotnet/core/aspnet:3.1`. Per altre informazioni su questa immagine di base, vedere la pagina dell' [immagine Docker di .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/) . In Dockerfile è anche necessario indicare a Docker di restare in ascolto sulla porta TCP che verrà usata in fase di esecuzione (in questo caso, la porta 80, come configurata con l'impostazione EXPOSE).
+In questo caso, l'immagine si basa sulla versione 3.1 dell'immagine ufficiale ASP.NET Core Docker (multi-arch per Linux e Windows). Si tratta dell'impostazione `FROM mcr.microsoft.com/dotnet/core/aspnet:3.1`. Per altre informazioni su questa immagine di base, vedere la pagina [.NET Core Docker Image.](https://hub.docker.com/_/microsoft-dotnet-core/) Nel Dockerfile, è inoltre necessario indicare Docker per l'ascolto sulla porta TCP che verrà utilizzato in fase di esecuzione (in questo caso, la porta 80, come configurato con l'impostazione EXPOSE).
 
 Nel Dockerfile è possibile specificare altre impostazioni di configurazione in base al linguaggio e al framework in uso. Ad esempio, la riga ENTRYPOINT con `["dotnet", "MySingleContainerWebApp.dll"]` indica a Docker di eseguire un'applicazione .NET Core. Se si usa l'SDK e l'interfaccia della riga di comando di .NET Core, ovvero l'interfaccia della riga di comando dotnet, per compilare ed eseguire l'applicazione .NET, questa impostazione sarà diversa. In sostanza la riga ENTRYPOINT e altre impostazioni saranno diverse a seconda del linguaggio e della piattaforma scelti per l'applicazione.
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Compilazione di immagini Docker per applicazioni .NET Core** \
+- **Creazione di immagini Docker per applicazioni .NET CoreBuilding Docker Images for .NET Core Applications** \
   [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 
 - **Creare un'immagine**. Nella documentazione ufficiale di Docker.\
@@ -127,7 +127,7 @@ Nel Dockerfile è possibile specificare altre impostazioni di configurazione in 
 - **Rimanere aggiornati con le immagini del contenitore .NET** \
   <https://devblogs.microsoft.com/dotnet/staying-up-to-date-with-net-container-images/>
 
-- **Uso combinato di .NET e Docker - Aggiornamento DockerCon 2018** \
+- **Utilizzo di .NET e Docker insieme - Aggiornamento DockerCon 2018** \
   <https://devblogs.microsoft.com/dotnet/using-net-and-docker-together-dockercon-2018-update/>
 
 ### <a name="using-multi-arch-image-repositories"></a>Uso di repository di immagini multi-arch
@@ -137,15 +137,15 @@ Un singolo repository può contenere varianti di piattaforme, ad esempio un'imma
 Se si specifica un tag, ci si rivolge a una piattaforma esplicita come nei casi seguenti:
 
 - `mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim` \
-  Destinazioni: Runtime di .NET Core 3,1-solo in Linux
+  Destinazioni: .NET Core 3.1 solo runtime in LinuxTargets: .NET Core 3.1 runtime-only on Linux
 
 - `mcr.microsoft.com/dotnet/core/aspnet:3.1-nanoserver-1909` \
-  Destinazioni: Runtime di .NET Core 3,1-solo in Windows nano server
+  Destinazioni: .NET Core 3.1 solo runtime in Windows Nano Server
 
 Ma se si specifica lo stesso nome di immagine, anche con lo stesso tag, le immagini multi-arch, ad esempio l'immagine `aspnet`, useranno la versione Linux o Windows in base al sistema operativo host Docker che si sta distribuendo, come illustrato nell'esempio seguente:
 
 - `mcr.microsoft.com/dotnet/core/aspnet:3.1` \
-  Multiarch: Runtime di .NET Core 3,1-solo in Linux o Windows nano server a seconda del sistema operativo host Docker
+  Multi-arch: .NET Core 3.1 solo runtime su Linux o Windows Nano Server a seconda del sistema operativo host Docker
 
 In questo modo, se si esegue il pull di un'immagine da un host Windows si ottiene la variante Windows mentre se si esegue il pull dello stesso nome di immagine da un host Linux si ottiene la variante Linux.
 
@@ -153,7 +153,7 @@ In questo modo, se si esegue il pull di un'immagine da un host Windows si ottien
 
 Il Dockerfile è simile a uno script batch. Esegue le operazioni che sarebbe necessario eseguire per configurare il computer dalla riga di comando.
 
-Inizia con un'immagine di base che imposta il contesto iniziale, analogamente al filesystem di avvio, e si trova nella parte superiore del sistema operativo host. Non si tratta di un sistema operativo, ma è possibile considerarlo come il sistema operativo all'interno del contenitore.
+Inizia con un'immagine di base che imposta il contesto iniziale, analogamente al filesystem di avvio, e si trova nella parte superiore del sistema operativo host. Non è un sistema operativo, ma si può pensare ad esso come "il" Sistema operativo all'interno del contenitore.
 
 L'esecuzione di ogni riga di comando crea un nuovo livello nel filesystem con le modifiche di quello precedente, in modo che la combinazione generi il filesystem risultante.
 
@@ -206,37 +206,37 @@ Il Dockerfile iniziale può avere un aspetto simile al seguente:
 
 E questi sono i dettagli, riga per riga:
 
-- **#1 riga:** Iniziare una fase con un'immagine di base di sola esecuzione "Small", chiamarla come **base** per riferimento.
+- **Linea #1:** Iniziare una fase con un'immagine di base "piccola" di sola runtime, chiamarla **base** per riferimento.
 
-- **#2 riga:** Creare la directory **/app** nell'immagine.
+- **Linea #2:** Creare la directory **/app** nell'immagine.
 
-- **#3 riga:** Esporre la porta **80**.
+- **Linea #3:** Esporre la porta **80**.
 
-- **#5 riga:** Inizia una nuova fase con l'immagine "large" per la compilazione e la pubblicazione. Chiamare **Build** per riferimento.
+- **Linea #5:** Inizia una nuova fase con l'immagine "grande" per la costruzione/pubblicazione. Chiamarlo **build** per riferimento.
 
-- **#6 riga:** Creare la directory **/src** nell'immagine.
+- **#6 linea:** Creare la directory **/src** nell'immagine.
 
-- **#7 riga:** Fino alla riga 16, copiare i file di progetto con **estensione csproj** a cui si fa riferimento per poter ripristinare i pacchetti in un secondo momento.
+- **#7 linea:** Fino alla riga 16, copiare i file di progetto **con estensione csproj** per poter ripristinare i pacchetti in un secondo momento.
 
-- **#17 riga:** Ripristinare i pacchetti per il progetto **Catalog. API** e i progetti a cui si fa riferimento.
+- **Linea #17:** Ripristinare i pacchetti per il progetto **Catalog.API** e i progetti a cui si fa riferimento.
 
-- **#18 riga:** Copiare **tutti gli alberi di directory per la soluzione** (ad eccezione dei file/directory inclusi nel file con **estensione dockerignore** ) nella directory **/src** nell'immagine.
+- **#18 linea:** Copiare tutta la struttura di **directory per la soluzione** (ad eccezione dei file/directory inclusi nel file **.dockerignore)** nella directory **/src** nell'immagine.
 
-- **#19 riga:** Modificare la cartella corrente nel progetto **Catalog. API** .
+- **Linea #19:** Modificare la cartella corrente nel progetto **Catalog.API.**
 
-- **#20 riga:** Compilare il progetto (e altre dipendenze del progetto) e l'output nella directory **/app** nell'immagine.
+- **Linea #20:** Compilare il progetto (e altre dipendenze del progetto) e l'output nella directory **/app** nell'immagine.
 
-- **#22 riga:** Inizia una nuova fase continuando dalla compilazione. Chiamarlo **Publish** for Reference.
+- **Linea #22:** Iniziare una nuova fase continuando dalla compilazione. Chiamarlo **pubblicare** come riferimento.
 
-- **#23 riga:** Pubblicare il progetto e le dipendenze e l'output nella directory **/app** nell'immagine.
+- **#23 linea:** Pubblicare il progetto (e le dipendenze) e l'output nella directory **/app** nell'immagine.
 
-- **#25 riga:** Iniziare una nuova fase continuando da **base** e chiamarla **finale**.
+- **Linea #25:** Iniziare una nuova fase continuando dalla **base** e chiamarlo **finale**.
 
-- **#26 riga:** Modificare la directory corrente in **/app**.
+- **Linea #26:** Modificare la directory corrente in **/app**.
 
-- **#27 riga:** Copiare la directory **/app** dalla fase di **pubblicazione** alla directory corrente.
+- **#27 linea:** Copiare la directory **/app** dalla **pubblicazione** della fase nella directory corrente.
 
-- **#28 riga:** Definire il comando da eseguire all'avvio del contenitore.
+- **Linea #28:** Definire il comando da eseguire all'avvio del contenitore.
 
 Esaminare ora alcune ottimizzazioni che consentono di migliorare le prestazioni generali del processo che, nel caso di eShopOnContainers, corrispondono a circa 22 minuti o più per la compilazione della soluzione completa nei contenitori Linux.
 
@@ -300,7 +300,7 @@ Il file risultante quindi è:
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Immagini multi-arch .NET Core**.\
+- **Immagini .NET Core multi-arco.**
   <https://github.com/dotnet/announcements/issues/14>
 
 - **Creare un'immagine di base**. Documentazione ufficiale di Docker.\
@@ -318,7 +318,7 @@ Lo sviluppatore deve eseguire lo sviluppo e i test localmente finché non esegue
 
 Per creare un'immagine personalizzata nell'ambiente locale tramite la CLI di Docker e il Dockerfile, è possibile usare il comando docker build, come illustrato nella figura 5-5.
 
-![Screenshot che mostra l'output della console del comando Docker Build.](./media/docker-app-development-workflow/run-docker-build-command.png)
+![Screenshot che mostra l'output della console del comando docker build.](./media/docker-app-development-workflow/run-docker-build-command.png)
 
 **Figura 5-5**. Creazione di un'immagine Docker personalizzata
 
@@ -338,7 +338,7 @@ Quando un'applicazione è costituita da più contenitori, ovvero è un'applicazi
 
 Quando si usa Visual Studio per creare un progetto con il supporto Docker, non si crea un'immagine in modo esplicito. L'immagine viene invece creata automaticamente quando si preme **F5** (o **CTRL-F5**) e si esegue l'applicazione o il servizio Docker. Questo passaggio è automatico e invisibile in Visual Studio, ma è importante sapere cosa succede dietro le quinte.
 
-![Immagine per il passaggio 4 facoltativo.](./media/docker-app-development-workflow/step-4-define-services-docker-compose-yml.png)
+![Immagine per il passaggio facoltativo 4.](./media/docker-app-development-workflow/step-4-define-services-docker-compose-yml.png)
 
 ## <a name="step-4-define-your-services-in-docker-composeyml-when-building-a-multi-container-docker-application"></a>Passaggio 4. Definire i servizi in docker-compose.yml quando si compila un'applicazione Docker a più contenitori
 
@@ -407,25 +407,25 @@ Il file docker-compose.yml specifica non solo quali contenitori vengono usati, m
 
 Il file docker-compose.yml sarà esaminato di nuovo in una sezione successiva in cui sarà descritto come implementare microservizi e app a più contenitori.
 
-### <a name="working-with-docker-composeyml-in-visual-studio-2019"></a>Uso di Docker-compose. yml in Visual Studio 2019
+### <a name="working-with-docker-composeyml-in-visual-studio-2019"></a>Utilizzo di docker-compose.yml in Visual Studio 2019
 
-Oltre ad aggiungere un Dockerfile a un progetto, come indicato in precedenza, Visual Studio 2017 (dalla versione 15,8 in) può aggiungere il supporto per l'agente di orchestrazione per Docker Compose a una soluzione.
+Oltre ad aggiungere un Dockerfile a un progetto, come accennato in precedenza, Visual Studio 2017 (dalla versione 15.8 in poi) può aggiungere il supporto dell'agente di orchestrazione per Docker Compose a una soluzione.
 
 Quando si aggiunge il supporto dell'agente di orchestrazione del contenitore, come illustrato nella figura 5-7, per la prima volta, Visual Studio crea il Dockerfile per il progetto e crea un nuovo progetto (sezione servizio) nella soluzione con diversi file `docker-compose*.yml` globali e quindi aggiunge il progetto a tali file. È quindi possibile aprire i file docker-compose.yml e aggiornarli con funzionalità aggiuntive.
 
 È necessario ripetere questa operazione per ogni progetto che si vuole includere nel file docker-compose.yml.
 
-Al momento della stesura di questo articolo, Visual Studio supporta gli agenti di orchestrazione **Docker compose** e **Kubernetes/Helm** .
+Al momento della stesura di questo articolo, Visual Studio supporta gli orchestratori **Docker Compose** e **Kubernetes/Helm.**
 
-![Screenshot che mostra l'opzione di supporto dell'agente di orchestrazione dei contenitori nel menu di scelta rapida del progetto](./media/docker-app-development-workflow/add-container-orchestrator-support-option.png)
+![Screenshot che mostra l'opzione Supporto orchestrator contenitore nel menu di scelta rapida del progetto.](./media/docker-app-development-workflow/add-container-orchestrator-support-option.png)
 
 **Figura 5-7**. Aggiunta del supporto Docker in Visual Studio 2019 facendo clic con il pulsante destro del mouse su un progetto ASP.NET Core
 
 Dopo aver aggiunto il supporto dell'agente di orchestrazione alla soluzione in Visual Studio, si noterà anche un nuovo nodo nel file di progetto `docker-compose.dcproj` in Esplora soluzioni, che contiene i file docker-compose.yml aggiunti, come illustrato nella figura 5-8.
 
-![Screenshot del nodo Docker-compose in Esplora soluzioni.](./media/docker-app-development-workflow/docker-compose-tree-node.png)
+![Screenshot del nodo docker-compose in Esplora soluzioni.](./media/docker-app-development-workflow/docker-compose-tree-node.png)
 
-**Figura 5-8**. Nodo dell'albero **Docker-compose** aggiunto in Visual Studio 2019 Esplora soluzioni
+**Figura 5-8**. Nodo della struttura ad albero docker-compose aggiunto in Esplora soluzioni di Visual Studio 2019The **docker-compose** tree node added in Visual Studio 2019 Solution Explorer
 
 È possibile distribuire un'applicazione a più contenitori con un singolo file docker-compose.yml usando il comando `docker-compose up`. Tuttavia Visual Studio ne aggiunge un gruppo, quindi è possibile sostituire i valori in base all'ambiente, che può essere di sviluppo o di produzione, e al tipo di esecuzione (versione o debug). Questa funzionalità sarà spiegata nelle sezioni successive.
 
@@ -433,9 +433,9 @@ Dopo aver aggiunto il supporto dell'agente di orchestrazione alla soluzione in V
 
 ## <a name="step-5-build-and-run-your-docker-application"></a>Passaggio 5. Compilare ed eseguire l'applicazione Docker
 
-Se l'applicazione ha un solo contenitore, è possibile eseguirla distribuendola all'host Docker, ovvero una VM o un server fisico. Tuttavia, se l'applicazione contiene più servizi, è possibile distribuirla come applicazione composta, usando un singolo comando CLI (`docker-compose up)`o con Visual Studio, che utilizzerà tale comando dietro le quinte. Le diverse opzioni sono esaminate di seguito.
+Se l'applicazione ha un solo contenitore, è possibile eseguirla distribuendola all'host Docker, ovvero una VM o un server fisico. Tuttavia, se l'applicazione contiene più servizi, è possibile distribuirla`docker-compose up)`come applicazione composta, utilizzando un singolo comando CLI ( , o con Visual Studio, che utilizzerà tale comando sotto le copertine. Le diverse opzioni sono esaminate di seguito.
 
-### <a name="option-a-running-a-single-container-application"></a>Opzione A: esecuzione di un'applicazione a contenitore singolo
+### <a name="option-a-running-a-single-container-application"></a>Opzione A: Esecuzione di un'applicazione a contenitore singoloOption A: Running a single-container application
 
 #### <a name="using-docker-cli"></a>Con l'interfaccia della riga di comando di Docker
 
@@ -445,17 +445,17 @@ Se l'applicazione ha un solo contenitore, è possibile eseguirla distribuendola 
 docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 ```
 
-Il comando precedente crea una nuova istanza di contenitore dall'immagine specificata, ogni volta che viene eseguito. È possibile usare il parametro `--name` per assegnare un nome al contenitore e quindi usare `docker start {name}` (o usare l'ID del contenitore o il nome automatico) per eseguire un'istanza del contenitore esistente.
+Il comando precedente crea una nuova istanza di contenitore dall'immagine specificata, ogni volta che viene eseguito. È possibile `--name` utilizzare il parametro per assegnare `docker start {name}` un nome al contenitore e quindi utilizzare (o utilizzare l'ID del contenitore o il nome automatico) per eseguire un'istanza del contenitore esistente.
 
-![Screenshot che esegue un contenitore Docker usando il comando Docker Run.](./media/docker-app-development-workflow/use-docker-run-command.png)
+![Screenshot che esegue un contenitore Docker utilizzando il comando docker run.](./media/docker-app-development-workflow/use-docker-run-command.png)
 
 **Figura 5-9**. Esecuzione di un contenitore Docker usando il comando docker run
 
 In questo caso il comando associa la porta interna 5000 del contenitore alla porta 80 del computer host. Ciò significa che l'host è in ascolto sulla porta 80 e inoltra alla porta 5000 nel contenitore.
 
-L'hash visualizzato è l'ID del contenitore e viene assegnato anche un nome leggibile casuale se non si usa l'opzione `--name`.
+L'hash visualizzato è l'ID contenitore e gli viene `--name` assegnato anche un nome leggibile casuale se l'opzione non viene utilizzata.
 
-#### <a name="using-visual-studio"></a>Utilizzo di Visual Studio
+#### <a name="using-visual-studio"></a>Con Visual Studio
 
 Se non è stato aggiunto il supporto dell'agente di orchestrazione dei contenitori, è anche possibile eseguire un'applicazione a singolo contenitore in Visual Studio premendo **CTRL+F5** e usare **F5** per eseguire il debug dell'applicazione all'interno del contenitore. Il contenitore viene eseguito in locale usando docker run.
 
@@ -477,9 +477,9 @@ Per eseguire un'applicazione a più contenitori con l'interfaccia della riga di 
 
 Dopo l'esecuzione del comando docker-compose up, l'applicazione e i contenitori correlati vengono distribuiti nell'host Docker, come illustra la figura 5-10.
 
-#### <a name="using-visual-studio"></a>Utilizzo di Visual Studio
+#### <a name="using-visual-studio"></a>Con Visual Studio
 
-L'esecuzione di un'applicazione a più contenitori con Visual Studio 2019 non può essere più semplice. Basta premere **CTRL+F5** per l'esecuzione o **F5** per il debug, come di consueto, impostando il progetto **docker-compose** come progetto di avvio.  Visual Studio gestisce tutte le configurazioni necessarie, quindi è possibile creare punti di interruzione come di consueto ed eseguire il debug di processi indipendenti eseguiti in "server remoti", con il debugger già collegato. Proprio così.
+L'esecuzione di un'applicazione multicontenitore con Visual Studio 2019 non è possibile ottenere alcun più semplice. Basta premere **CTRL+F5** per l'esecuzione o **F5** per il debug, come di consueto, impostando il progetto **docker-compose** come progetto di avvio.  Visual Studio gestisce tutte le impostazioni necessarie, in modo da poter creare punti di interruzione come di consueto ed eseguire il debug di quelli che diventano infine processi indipendenti in esecuzione in "server remoti", con il debugger già collegato. Proprio così.
 
 Come accennato in precedenza, ogni volta che si aggiungere il supporto Docker a un progetto all'interno di una soluzione, il progetto è configurato nel file docker-compose.yml globale, a livello di soluzione, che consente di eseguire l'intera soluzione o di eseguirne il debug in una sola volta. Visual Studio avvia un solo contenitore per ogni progetto che ha il supporto Docker abilitato ed esegue automaticamente tutti i passaggi interni, ovvero pubblicazione dotnet, compilazione docker, ecc.
 
@@ -489,18 +489,18 @@ Per avere un'idea di tutta la complessità, esaminare il file:
 
 Il punto importante è che, come illustrato nella figura 5-12, in Visual Studio 2019 è disponibile un comando **Docker** aggiuntivo per l'azione del tasto F5. Questa opzione consente di eseguire un'applicazione a più contenitori o di eseguirne il debug eseguendo tutti i contenitori definiti nei file docker-compose.yml a livello di soluzione. Grazie alla capacità di eseguire il debug delle soluzioni a più contenitori, è possibile impostare più punti di interruzione, ciascuno in un progetto (contenitore) diverso, e durante il debug da Visual Studio l'esecuzione viene arrestata in corrispondenza dei punti di interruzione definiti in progetti diversi ed eseguiti in contenitori diversi.
 
-![Screenshot della barra degli strumenti di debug che esegue un progetto Docker-compose.](./media/docker-app-development-workflow/debug-toolbar-docker-compose-project.png)
+![Screenshot della barra degli strumenti di debug che esegue un progetto docker-compose.](./media/docker-app-development-workflow/debug-toolbar-docker-compose-project.png)
 
-**Figura 5-12**. Esecuzione di app a più contenitori in Visual Studio 2019
+**Figura 5-12**. Esecuzione di app multi-contenitore in Visual Studio 2019Running multi-container apps in Visual Studio 2019
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Distribuire un contenitore ASP.NET a un host Docker remoto** \
+- **Distribuire un contenitore di ASP.NET a un host Docker remotoDeploy an ASP.NET container to a remote Docker host** \
   <https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker>
 
 ### <a name="a-note-about-testing-and-deploying-with-orchestrators"></a>Una nota sul test e la distribuzione con agenti di orchestrazione
 
-I comandi docker-compose up e docker run, o l'esecuzione e il debug dei contenitori in Visual Studio, sono adeguati per eseguire test sui contenitori nell'ambiente di sviluppo. È consigliabile non usare questo approccio per le distribuzioni di produzione, in cui la destinazione deve essere un agente di orchestrazione, ad esempio [Kubernetes](https://kubernetes.io/) o [Service Fabric](https://azure.microsoft.com/services/service-fabric/). Se si usa Kubernetes, è necessario usare i [Pod](https://kubernetes.io/docs/concepts/workloads/pods/pod/) per organizzare i contenitori e i [Servizi](https://kubernetes.io/docs/concepts/services-networking/service/) per la rete. Si usano anche le [distribuzioni](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) per organizzare la creazione e la modifica dei pod.
+I comandi docker-compose up e docker run, o l'esecuzione e il debug dei contenitori in Visual Studio, sono adeguati per eseguire test sui contenitori nell'ambiente di sviluppo. È consigliabile non usare questo approccio per le distribuzioni di produzione, in cui la destinazione deve essere un agente di orchestrazione, ad esempio [Kubernetes](https://kubernetes.io/) o [Service Fabric](https://azure.microsoft.com/services/service-fabric/). Se si utilizzaKubernetes, è necessario utilizzare [i pod](https://kubernetes.io/docs/concepts/workloads/pods/pod/) per organizzare i contenitori e i [servizi](https://kubernetes.io/docs/concepts/services-networking/service/) per metterli in rete. Si usano anche le [distribuzioni](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) per organizzare la creazione e la modifica dei pod.
 
 ![Immagine per il passaggio 6.](./media/docker-app-development-workflow/step-6-test-app-microservices.png)
 
@@ -518,32 +518,32 @@ Si noti che questo URL nel browser usa la porta 80 per lo specifico contenitore 
 
 È anche possibile testare l'applicazione usando curl dal terminale, come illustrato nella figura 5-14. In un'installazione di Docker in Windows, il valore IP dell'host Docker predefinito è sempre 10.0.75.1 in aggiunta all'indirizzo IP effettivo del computer.
 
-![L'output della console è quello di ottenere la http://10.0.75.1/API/values con curl.](./media/docker-app-development-workflow/test-docker-app-locally-curl.png)
+![Uscita della console http://10.0.75.1/API/values da ottenere il con ricciolo.](./media/docker-app-development-workflow/test-docker-app-locally-curl.png)
 
 **Figura 5-14**. Esempio di test dell'applicazione Docker in locale mediante curl
 
 ### <a name="testing-and-debugging-containers-with-visual-studio-2019"></a>Test e debug di contenitori con Visual Studio 2019
 
-Quando si eseguono e si esegue il debug dei contenitori con Visual Studio 2019, è possibile eseguire il debug dell'applicazione .NET in modo analogo a quando si esegue senza contenitori.
+Quando si eseguono e debug i contenitori con Visual Studio 2019, è possibile eseguire il debug dell'applicazione .NET in modo molto simile a quello che si esegue quando si esegue senza contenitori.
 
 ### <a name="testing-and-debugging-without-visual-studio"></a>Test e debug senza Visual Studio
 
-Se si sta sviluppando utilizzando l'approccio editor/CLI, i contenitori di debug sono più difficili e probabilmente si desidera eseguire il debug generando tracce.
+Se si sta sviluppando usando l'approccio editor/CLI, il debug dei contenitori è più difficile e probabilmente vorrai eseguire il debug generando tracce.
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Debug delle applicazioni in un contenitore Docker locale** \
+- **Debug di app in un contenitore Docker localeDebugging apps in a local Docker container** \
   [https://docs.microsoft.com/visualstudio/containers/edit-and-refresh](/visualstudio/containers/edit-and-refresh)
 
-- **Steve Lasker. Compila, Esegui il debug, Distribuisci ASP.NET Core app con Docker.** Video. \
+- **Steve Lasker. Compilare, eseguire il debug, distribuire ASP.NET applicazioni principali con Docker.Build, Debug, Deploy ASP.NET Core Apps with Docker.** Video. \
   <https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115>
 
 ## <a name="simplified-workflow-when-developing-containers-with-visual-studio"></a>Flusso di lavoro semplificato per lo sviluppo di contenitori con Visual Studio
 
 Il flusso di lavoro quando si usa Visual Studio è molto più semplice rispetto all'uso dell'approccio editor/CLI. La maggior parte dei passaggi richiesti da Docker correlati ai file Dockerfile e docker-compose.yml sono nascosti o semplificati da Visual Studio, come illustrato nella figura 5-15.
 
-:::image type="complex" source="./media/docker-app-development-workflow/simplified-life-cycle-containerized-apps-docker-cli.png" alt-text="Diagramma che illustra i cinque passaggi semplificati necessari per creare un'app.":::
-Il processo di sviluppo per le app docker: 1-scrivere il codice dell'app, 2-scrivere Dockerfile/s, 3-creare immagini definite in Dockerfile/s, 4-(facoltativo) comporre servizi nel file Docker-compose. yml, 5-eseguire il contenitore o l'app Docker-compose, 6 testare l'app o i microservizi, 7 push nel repository e ripetere.
+:::image type="complex" source="./media/docker-app-development-workflow/simplified-life-cycle-containerized-apps-docker-cli.png" alt-text="Diagramma che mostra i cinque passaggi semplificati necessari per creare un'app.":::
+Il processo di sviluppo per le app Docker: 1 - Codificare l'app, 2 - Scrivere Dockerfile/s, 3 - Creare immagini definite in Dockerfile/s, 4 - (facoltativo) Componi servizi nel file docker-compose.yml, 5 - Esegui app contenitore o docker-compose, 6 - Testl'app o microservizi, 7 - Push per ripetere e ripetere.
 :::image-end:::
 
 **Figura 5-15**. Flusso di lavoro semplificato per lo sviluppo con Visual Studio
@@ -552,7 +552,7 @@ Inoltre è sufficiente eseguire una sola volta il passaggio 2, ovvero l'aggiunta
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Steve Lasker. .NET Docker Development con Visual Studio (2017)**  \
+- **Steve Lasker. Sviluppo di .NET Docker con Visual Studio (2017)** \
   <https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111>
 
 ## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>Uso dei comandi di PowerShell in un Dockerfile per configurare contenitori Windows
@@ -578,5 +578,5 @@ RUN powershell add-windowsfeature web-asp-net45
   <https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile>
 
 >[!div class="step-by-step"]
->[Precedente](index.md)
->[Successivo](../multi-container-microservice-net-applications/index.md)
+>[Successivo](index.md)
+>[precedente](../multi-container-microservice-net-applications/index.md)

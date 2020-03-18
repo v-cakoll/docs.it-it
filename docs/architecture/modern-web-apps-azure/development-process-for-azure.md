@@ -5,10 +5,10 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
 ms.openlocfilehash: 7a641c1b6665af6e9e78ef182174b360041d74aa
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77450043"
 ---
 # <a name="development-process-for-azure"></a>Processo di sviluppo per Azure
@@ -16,7 +16,7 @@ ms.locfileid: "77450043"
 > _"Con il cloud, privati e piccole aziende possono configurare rapidamente servizi di livello professionale"._  
 > _- Roy Stephan_
 
-## <a name="vision"></a>Vision
+## <a name="vision"></a>Visione
 
 > *Sviluppare applicazioni ASP .NET Core ben progettate nel modo desiderato usando Visual Studio o l'interfaccia della riga di comando per .NET e Visual Studio Code o l'editor preferito.*
 
@@ -26,13 +26,13 @@ ms.locfileid: "77450043"
 
 Durante lo sviluppo di applicazioni ASP.NET Core Microsoft offre gli strumenti necessari sia che si scelga un IDE potente e completo sia che si preferisca un editor semplice e agile.
 
-**Visual Studio 2019.** Visual Studio 2019 è l'IDE migliore per lo sviluppo di applicazioni per ASP.NET Core. Offre una serie di funzionalità che aumentano la produttività degli sviluppatori. È possibile usarlo per sviluppare l'applicazione, quindi analizzarne le prestazioni e altre caratteristiche. Il debugger integrato consente di sospendere l'esecuzione del codice ed eseguire il codice in tempo reale mentre è in esecuzione. Il Test Runner incorporato consente di organizzare i test e i relativi risultati ed è anche in grado di eseguire Live unit testing durante la codifica. Con Live Share è possibile collaborare in tempo reale con altri sviluppatori, condividendo la sessione di codice senza interruzioni sulla rete. Quando si è pronti, Visual Studio include tutti gli elementi necessari per pubblicare l'applicazione in Azure o ovunque sia possibile ospitarla.
+**Visual Studio 2019.** Visual Studio 2019 è l'IDE migliore per lo sviluppo di applicazioni per ASP.NET Core. Offre una serie di funzionalità che aumentano la produttività degli sviluppatori. È possibile utilizzarlo per sviluppare l'applicazione, quindi analizzarne le prestazioni e altre caratteristiche. Il debugger integrato consente di sospendere l'esecuzione del codice e di passare avanti e indietro nel codice in tempo reale durante l'esecuzione. Il test runner integrato ti consente di organizzare i test e i relativi risultati e può anche eseguire unit test dal vivo durante la codifica. Utilizzando Live Share, è possibile collaborare in tempo reale con altri sviluppatori, condividendo la sessione di codice senza problemi in rete. E quando si è pronti, Visual Studio include tutto il necessario per pubblicare l'applicazione in Azure o ovunque si potrebbe ospitarlo.
 
 [Scarica Visual Studio 2019](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
 **Visual Studio Code e l'interfaccia della riga di comando per .NET** (strumenti multipiattaforma per Mac, Linux e Windows). Se si preferisce un editor leggero e multipiattaforma che supporta qualsiasi linguaggio di sviluppo, è possibile usare Microsoft Visual Studio Code e l'interfaccia della riga di comando per .NET. Questi prodotti offrono un'esperienza semplice ed efficace che consente di ottimizzare il flusso di lavoro di sviluppo. Inoltre, Visual Studio Code supporta le estensioni per C\# e lo sviluppo Web offrendo IntelliSense e attività di collegamento all'interno dell'editor.
 
-[Download di .NET Core SDK](https://dotnet.microsoft.com/download)
+[Scaricare .NET Core SDK](https://dotnet.microsoft.com/download)
 
 [Download di Visual Studio Code](https://code.visualstudio.com/download)
 
@@ -44,7 +44,7 @@ Per iniziare a sviluppare un'applicazione ASP.NET Core mediante CI/CD, è possib
 
 ### <a name="initial-setup"></a>Configurazione iniziale
 
-Per creare una pipeline di versione per l'app, è necessario avere il codice dell'applicazione nel controllo del codice sorgente. Configurare un repository locale e connetterlo a un repository remoto in un progetto team. Seguire le istruzioni seguenti:
+Per creare una pipeline di versione per l'app, è necessario avere il codice dell'applicazione nel controllo del codice sorgente. Configurare un repository locale e connetterlo a un repository remoto in un progetto team. Seguire queste istruzioni:
 
 - [Condividere il codice con Git e Visual Studio](https://docs.microsoft.com/azure/devops/git/share-your-code-in-git-vs) oppure
 
@@ -70,7 +70,7 @@ Dopo aver configurato la pipeline CI/CD, è possibile effettuare aggiornamenti n
 
 ### <a name="workflow-for-developing-azure-hosted-aspnet-core-applications"></a>Flusso di lavoro per lo sviluppo di applicazioni ASP.NET Core ospitate in Azure
 
-Dopo aver configurato l'account di Azure e il processo CI/CD, lo sviluppo di applicazioni ASP.NET Core ospitate in Azure è semplice. Di seguito sono riportati i passaggi di base che si eseguono in genere quando si compila un'app ASP.NET Core, ospitata in app Azure servizio come app Web, come illustrato nella figura 10-2.
+Dopo aver configurato l'account di Azure e il processo CI/CD, lo sviluppo di applicazioni ASP.NET Core ospitate in Azure è semplice. Di seguito sono riportati i passaggi di base da eseguire in genere quando si compila un'app ASP.NET Core, ospitata nel servizio app di Azure come app Web, come illustrato nella Figura 10-2.
 
 ![EndToEndDevDeployWorkflow](./media/image10-3.png)
 
@@ -80,7 +80,7 @@ Dopo aver configurato l'account di Azure e il processo CI/CD, lo sviluppo di app
 
 Lo sviluppo di un'applicazione ASP.NET Core per la distribuzione in Azure non differisce dalla normale procedura di sviluppo dell'applicazione. Usare l'ambiente di sviluppo locale desiderato, ovvero Visual Studio 2017 o l'interfaccia della riga di comando per .NET e Visual Studio Code o l'editor preferito. È possibile scrivere codice, eseguire ed eseguire il debug delle modifiche, eseguire test automatizzati e commit locali nel controllo del codice sorgente fino a quando non si è pronti per il push delle modifiche nel repository del controllo del codice sorgente condiviso.
 
-#### <a name="step-2-application-code-repository"></a>Passaggio 2: Repository del codice dell'applicazione
+#### <a name="step-2-application-code-repository"></a>Passaggio 2. Repository del codice dell'applicazione
 
 Quando si è pronti per condividere il codice con il proprio team, eseguire il push delle modifiche dal repository del codice sorgente locale al repository del codice sorgente condiviso del team. Se è stato usato un ramo personalizzato, questo passaggio prevede in genere l'unione del codice in un ramo condiviso, ad esempio per mezzo di una [richiesta pull](https://docs.microsoft.com/azure/devops/git/pull-requests).
 
@@ -106,5 +106,5 @@ Mentre l'app Web è in esecuzione, è possibile monitorare l'integrità dell'app
 <https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core>
 
 >[!div class="step-by-step"]
->[Precedente](test-asp-net-core-mvc-apps.md)
->[Successivo](azure-hosting-recommendations-for-asp-net-web-apps.md)
+>[Successivo](test-asp-net-core-mvc-apps.md)
+>[precedente](azure-hosting-recommendations-for-asp-net-web-apps.md)
