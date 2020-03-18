@@ -1,41 +1,41 @@
 ---
-title: Impostazioni di configurazione Threading
-description: Informazioni sulle impostazioni della fase di esecuzione che configurano il threading per le app .NET Core.
+title: Impostazioni di configurazione del threading
+description: Informazioni sulle impostazioni di runtime che configurano il threading per le app .NET Core.Learn about run-time settings that configure threading for .NET Core apps.
 ms.date: 11/27/2019
 ms.topic: reference
 ms.openlocfilehash: 68b8e93ca6ec3f708a7a627307655ada1955500a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789859"
 ---
-# <a name="run-time-configuration-options-for-threading"></a>Opzioni di configurazione in fase di esecuzione per il threading
+# <a name="run-time-configuration-options-for-threading"></a>Opzioni di configurazione in fase di esecuzione per il threadingRun-time configuration options for threading
 
 ## <a name="cpu-groups"></a>Gruppi CPU
 
-- Configura se i thread vengono distribuiti automaticamente tra gruppi di CPU.
-- Impostazione predefinita: disabilitato (`0`).
+- Configura se i thread vengono distribuiti automaticamente tra i gruppi della CPU.
+- Impostazione predefinita: Disabilitato (`0`).
 
 | | Nome impostazione | Valori |
 | - | - | - |
-| **runtimeconfig. JSON** | N/D | N/D |
-| **Variabile di ambiente** | `COMPlus_Thread_UseAllCpuGroups` | `0` disabilitato<br/>Abilitazione di `1` |
+| **runtimeconfig.json** | N/D | N/D |
+| **Variabile di ambiente** | `COMPlus_Thread_UseAllCpuGroups` | `0`- disabilitato<br/>`1`- abilitato |
 
 ## <a name="minimum-threads"></a>Numero minimo di thread
 
 - Specifica il numero minimo di thread per il pool di thread di lavoro.
-- Corrisponde al metodo <xref:System.Threading.ThreadPool.SetMinThreads%2A?displayProperty=nameWithType>.
+- Corrisponde al <xref:System.Threading.ThreadPool.SetMinThreads%2A?displayProperty=nameWithType> metodo.
 
 | | Nome impostazione | Valori |
 | - | - | - |
-| **runtimeconfig. JSON** | `System.Threading.ThreadPool.MinThreads` | Intero che rappresenta il numero minimo di thread |
-| **MSBuild (proprietà)** | `ThreadPoolMinThreads` | Intero che rappresenta il numero minimo di thread |
+| **runtimeconfig.json** | `System.Threading.ThreadPool.MinThreads` | Un numero intero che rappresenta il numero minimo di thread |
+| **MSBuild (proprietà)** | `ThreadPoolMinThreads` | Un numero intero che rappresenta il numero minimo di thread |
 | **Variabile di ambiente** | N/D | N/D |
 
 ### <a name="examples"></a>Esempi
 
-file *runtimeconfig. JSON* :
+*runtimeconfig.json:*
 
 ```json
 {
@@ -62,17 +62,17 @@ File di progetto:
 ## <a name="maximum-threads"></a>Numero massimo di thread
 
 - Specifica il numero massimo di thread per il pool di thread di lavoro.
-- Corrisponde al metodo <xref:System.Threading.ThreadPool.SetMaxThreads%2A?displayProperty=nameWithType>.
+- Corrisponde al <xref:System.Threading.ThreadPool.SetMaxThreads%2A?displayProperty=nameWithType> metodo.
 
 | | Nome impostazione | Valori |
 | - | - | - |
-| **runtimeconfig. JSON** | `System.Threading.ThreadPool.MaxThreads` | Intero che rappresenta il numero massimo di thread |
-| **MSBuild (proprietà)** | `ThreadPoolMaxThreads` | Intero che rappresenta il numero massimo di thread |
+| **runtimeconfig.json** | `System.Threading.ThreadPool.MaxThreads` | Un numero intero che rappresenta il numero massimo di thread |
+| **MSBuild (proprietà)** | `ThreadPoolMaxThreads` | Un numero intero che rappresenta il numero massimo di thread |
 | **Variabile di ambiente** | N/D | N/D |
 
 ### <a name="examples"></a>Esempi
 
-file *runtimeconfig. JSON* :
+*runtimeconfig.json:*
 
 ```json
 {

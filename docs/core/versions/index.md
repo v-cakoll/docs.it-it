@@ -3,10 +3,10 @@ title: Come viene specificata la versione del runtime di .NET Core e di .NET Cor
 description: Questo articolo illustra come viene specificata la versione di .NET Core SDK e del runtime di .NET Core (simile al Versionamento Semantico).
 ms.date: 07/26/2018
 ms.openlocfilehash: c85a2112b439768068663688947960ac814de824
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75777326"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>Panoramica di come viene specificata la versione di .NET Core
@@ -23,23 +23,23 @@ Il runtime di .NET Core e .NET Core SDK aggiungono le nuove funzionalità con fr
 
 La terza posizione del numero di versione del SDK comunica la versione secondaria e il numero di patch. La versione secondaria viene moltiplicata per 100. Quindi la versione secondaria 1, versione patch 2 viene rappresentata come 102. Le due cifre finali rappresentano il numero della patch. Ad esempio la versione .NET Core 2.2 può creare versioni come quelle della tabella seguente:
 
-| Modifica                | Runtime di .NET Core | .NET Core SDK (\*) |
+| Modifica                | Runtime di .NET Core | .NET Core\*SDK ( ) |
 |-----------------------|-------------------|-------------------|
 | Versione iniziale       | 2.2.0             | 2.2.100           |
 | Patch SDK             | 2.2.0             | 2.2.101           |
 | Runtime e patch SDK | 2.2.1             | 2.2.102           |
 | Modifica di funzionalità nel SDK    | 2.2.1             | 2.2.200           |
 
-(\*) Questo grafico usa il runtime di .NET Core 2,2 come esempio perché un artefatto storico significava il primo SDK per .NET Core 2,1 è 2.1.300. Per altre informazioni, vedere [Scelta della versione di .NET Core](selection.md).
+(\*) Questo grafico utilizza il Runtime di 2.2 .NET Core come esempio perché un elemento storico significava che il primo SDK per .NET Core 2.1 è 2.1.300. Per altre informazioni, vedere [Scelta della versione di .NET Core](selection.md).
 
-NOTE:
+NOTE
 
 - Se il SDK registra 10 aggiornamenti delle funzionalità prima che sia disponibile un aggiornamento delle funzionalità del runtime, i numeri di versione vengono moltiplicati per 1000 e ad esempio la versione con funzionalità 2.2.900 viene seguita dalla versione 2.2.1000. Non è previsto che si verifichi questa situazione.
 - È molto improbabile che vengano rilasciate 99 patch senza il rilascio di una versione con funzionalità. Quando una versione si avvicina a questo numero, forza il rilascio di una versione con funzionalità.
 
 Altri dettagli sono disponibili nella proposta iniziale, nel repository [dotnet/designs](https://github.com/dotnet/designs/pull/29).
 
-## <a name="semantic-versioning"></a>Versionamento semantico
+## <a name="semantic-versioning"></a>Versionamento Semantico
 
 Il *runtime* di .NET Core aderisce a grandi linee allo standard [Semantic Versioning (SemVer)](https://semver.org/) e adotta l'uso del versionamento `MAJOR.MINOR.PATCH`, usando le varie parti del numero di versione per descrivere il grado e il tipo di modifica.
 
@@ -80,11 +80,11 @@ I file scaricati per .NET Core includono la versione, ad esempio `dotnet-sdk-2.1
 
 ### <a name="preview-versions"></a>Versioni di anteprima
 
-Le versioni di anteprima hanno un `-preview[number]-([build]|"final")` aggiunto alla versione. Ad esempio `2.0.0-preview1-final`.
+Le versioni di anteprima hanno un `-preview[number]-([build]|"final")` aggiunto alla versione. Ad esempio: `2.0.0-preview1-final`.
 
 ### <a name="servicing-versions"></a>Versioni di manutenzione
 
-Dopo l'uscita di una versione, i rami generalmente interrompono la produzione di build giornaliere e avviano la produzione di build di manutenzione. Nelle versioni di manutenzione c'è l'aggiunta di `-servicing-[number]`. Ad esempio `2.0.1-servicing-006924`.
+Dopo l'uscita di una versione, i rami generalmente interrompono la produzione di build giornaliere e avviano la produzione di build di manutenzione. Nelle versioni di manutenzione c'è l'aggiunta di `-servicing-[number]`. Ad esempio: `2.0.1-servicing-006924`.
 
 ## <a name="relationship-to-net-standard-versions"></a>Relazione con le versioni di .NET Standard
 
@@ -106,8 +106,8 @@ Ogni versione di .NET Core implementa una versione di .NET Standard. L'implement
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Framework di destinazione](../../standard/frameworks.md)
+- [Quadri di destinazione](../../standard/frameworks.md)
 - [Pacchetti di distribuzione di .NET Core](../build/distribution-packaging.md)
 - [.NET Core Support Lifecycle Fact Sheet (Scheda informativa sul ciclo di supporto per .NET Core)](https://dotnet.microsoft.com/platform/support/policy)
-- [Associazione della versione di .NET core 2+](https://github.com/dotnet/designs/issues/3)
+- [Associazione della versione di .NET Core 2+](https://github.com/dotnet/designs/issues/3)
 - [Immagini Docker per .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/)

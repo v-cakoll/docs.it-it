@@ -4,11 +4,11 @@ description: Informazioni su come eseguire un join usando una chiave composta in
 ms.date: 12/01/2016
 ms.assetid: da70b54d-3213-45eb-8437-fbe75cbcf935
 ms.openlocfilehash: 460a52da7e0c0a47b77d4c64e76641bae9da7cd6
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857515"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61659878"
 ---
 # <a name="join-by-using-composite-keys"></a>Eseguire un join usando chiavi composte
 
@@ -38,6 +38,6 @@ Le chiavi composte possono essere usate anche nella clausola `group`.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ (Language-Integrated Query)](index.md)
-- [Clausola join](../language-reference/keywords/join-clause.md)
+- [Language Integrated Query (LINQ)](index.md)
+- [clausola join](../language-reference/keywords/join-clause.md)
 - [Clausola group](../language-reference/keywords/group-clause.md)

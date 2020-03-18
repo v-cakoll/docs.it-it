@@ -8,10 +8,10 @@ helpviewer_keywords:
 - var keyword [C#]
 ms.assetid: 0777850a-2691-4e3e-927f-0c850f5efe15
 ms.openlocfilehash: ff8348a725f43fa8789c73fa58549da26126369c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712884"
 ---
 # <a name="var-c-reference"></a>var (Riferimenti per C#)
@@ -23,7 +23,7 @@ var i = 10; // Implicitly typed.
 int i = 10; // Explicitly typed.
 ```
 
-Per altre informazioni, vedere [Variabili locali tipizzate in modo implicito](../../programming-guide/classes-and-structs/implicitly-typed-local-variables.md) e [Relazioni tra i tipi nelle operazioni di query LINQ](../../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md).
+Per ulteriori informazioni, vedere [Variabili locali tipizzate in modo implicito](../../programming-guide/classes-and-structs/implicitly-typed-local-variables.md) e [relazioni tra tipi in LINQ Query Operations](../../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md).
 
 ## <a name="example"></a>Esempio
 
@@ -33,6 +33,6 @@ L'esempio seguente illustra due espressioni di query. Nella prima espressione l'
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
+- [Guida di riferimento a C](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
-- [Variabili locali tipizzate in modo implicito](../../programming-guide/classes-and-structs/implicitly-typed-local-variables.md)
+- [Variabili locali tipizzate in modo implicitoImplicitly typed Local Variables](../../programming-guide/classes-and-structs/implicitly-typed-local-variables.md)

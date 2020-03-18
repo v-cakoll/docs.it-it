@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - where (generic type constraint) [C#]
 ms.openlocfilehash: d236420c5019f7529b729155b13df50807dc1dab
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77626711"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (vincolo di tipo generico) (Riferimenti per C#)
 
-La clausola `where` in una definizione generica specifica i vincoli per i tipi che vengono usati come argomenti per i parametri di tipo in un tipo generico, metodo, delegato o funzione locale. I vincoli possono specificare interfacce, classi base o richiedere che un tipo generico sia un riferimento, un valore o un tipo non gestito. Dichiarano le funzionalità che l'argomento tipo deve possedere.
+La clausola `where` in una definizione generica specifica i vincoli per i tipi che vengono usati come argomenti per i parametri di tipo in un tipo generico, metodo, delegato o funzione locale. I vincoli possono specificare interfacce, classi di base o richiedere che un tipo generico sia un riferimento, un valore o un tipo non gestito. Dichiarano le funzionalità che l'argomento tipo deve possedere.
 
 Ad esempio, una classe generica, `MyGenericClass`, può essere dichiarata in modo che tramite il parametro di tipo `T` venga implementata l'interfaccia <xref:System.IComparable%601>:
 
@@ -32,10 +32,10 @@ La clausola `where` può specificare che il tipo è un oggetto `class` o `struct
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#3)]
 
-La clausola `where` può includere il vincolo `notnull`. Il vincolo `notnull` limita il parametro di tipo ai tipi che non ammettono valori null. Il tipo può essere un [tipo di valore](../builtin-types/value-types.md) o un tipo di riferimento non nullable. Il vincolo `notnull` è disponibile a partire C# da 8,0 per il codice compilato in un [contesto di`nullable enable`](../../nullable-references.md#nullable-contexts). Diversamente da altri vincoli, se un argomento di tipo viola il vincolo di `notnull`, il compilatore genera un avviso anziché un errore. Gli avvisi vengono generati solo in un contesto di `nullable enable`.
+La `where` clausola `notnull` può includere il vincolo. Il `notnull` vincolo limita il parametro di tipo a tipi non nullable. Tale tipo può essere un tipo di [valore](../builtin-types/value-types.md) o un tipo di riferimento non nullable. Il `notnull` vincolo è disponibile a partire da C , 8.0 per il codice compilato in un [ `nullable enable` contesto](../../nullable-references.md#nullable-contexts). A differenza di altri vincoli, `notnull` se un argomento di tipo viola il vincolo, il compilatore genera un avviso anziché un errore. Gli avvisi vengono `nullable enable` generati solo in un contesto.
 
 > [!IMPORTANT]
-> Le dichiarazioni generiche che includono il vincolo `notnull` possono essere utilizzate in un contesto ignaro Nullable, ma il compilatore non impone il vincolo.
+> Le dichiarazioni generiche che includono il `notnull` vincolo possono essere utilizzate in un contesto ignario nullable, ma il compilatore non applica il vincolo.
 
 [!code-csharp[using the nonnull constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#NotNull)]
 
@@ -43,7 +43,7 @@ La clausola `where` può anche includere un vincolo `unmanaged`. Il vincolo `unm
 
 [!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#4)]
 
-La clausola `where` può anche includere un vincolo di costruttore, `new()`. Tale vincolo consente di creare un'istanza di un parametro di tipo usando l'operatore `new`. Il [vincolo New ()](new-constraint.md) consente al compilatore di verificare che qualsiasi argomento di tipo fornito disponga di un costruttore senza parametri accessibile. Ad esempio,
+La clausola `where` può anche includere un vincolo di costruttore, `new()`. Tale vincolo consente di creare un'istanza di un parametro di tipo usando l'operatore `new`. Il [vincolo new()](new-constraint.md) consente al compilatore di sapere che qualsiasi argomento di tipo fornito deve avere un costruttore senza parametri accessibile. Ad esempio:
 
 [!code-csharp[using the new constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#5)]
 
@@ -71,8 +71,8 @@ Per informazioni dettagliate sulla sintassi e sull'uso dei vincoli, vedere [Vinc
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
+- [Guida di riferimento a C](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Introduzione ai generics](../../programming-guide/generics/index.md)
-- [Vincolo new](./new-constraint.md)
+- [nuovo vincolo](./new-constraint.md)
 - [Vincoli sui parametri di tipo](../../programming-guide/generics/constraints-on-type-parameters.md)

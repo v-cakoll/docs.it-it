@@ -1,18 +1,18 @@
 ---
-title: Interpretare i modelli ML.NET con modelli additivi generalizzati
-description: Usare modelli additivi generalizzati e funzioni di forma per l'interpretazione dei modelli in ML.NET
+title: Interpretare modelli ML.NET con modelli additivi generalizzati
+description: Utilizzare modelli additivi generalizzati e funzioni di forma per l'interpretazione del modello in ML.NET
 ms.date: 01/30/2020
 ms.custom: mvc,how-to
 ms.openlocfilehash: 6df19eff4fec98c5815a9f8f4d8e4e9a80cba6ed
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77092473"
 ---
-# <a name="use-generalized-additive-models-and-shape-functions-for-model-interpretability-in-mlnet"></a>Usare modelli additivi generalizzati e funzioni di forma per l'interpretazione dei modelli in ML.NET
+# <a name="use-generalized-additive-models-and-shape-functions-for-model-interpretability-in-mlnet"></a>Utilizzare modelli additivi generalizzati e funzioni di forma per l'interpretazione del modello in ML.NET
 
-Quando si creano modelli di Machine Learning, spesso non è sufficiente eseguire semplicemente stime. Spesso gli sviluppatori, i responsabili delle decisioni e gli utenti interessati ai modelli devono comprendere quali criteri vengono adottati dai modelli di Machine Learning per prendere decisioni e quali caratteristiche contribuiscono alle relative prestazioni. I **modelli di additivi generalizzati** vengono usati internamente in Microsoft per l'interpretazione dei modelli per aiutare gli sviluppatori di machine learning a creare modelli ad alta capacità che possono essere facilmente interpretati da altri utenti.
+Quando si creano modelli di Machine Learning, spesso non è sufficiente eseguire semplicemente stime. Spesso gli sviluppatori, i responsabili delle decisioni e gli utenti interessati ai modelli devono comprendere quali criteri vengono adottati dai modelli di Machine Learning per prendere decisioni e quali caratteristiche contribuiscono alle relative prestazioni. **I modelli additivi generalizzati (GAM, Generalized Additive Models)** vengono usati internamente a Microsoft per l'interpretazione dei modelli per consentire agli sviluppatori di apprendimento automatico di creare modelli ad alta capacità che possono essere facilmente interpretati da altri.
 
 I modelli GAM sono una classe di **modelli interpretabili**, ovvero modelli lineari in cui i termini sono funzioni non lineari, denominate "funzioni di forma" di una singola variabile. In quanto lineari, questi modelli vengono interpretati facilmente, ma poiché apprendono funzioni relative a caratteristiche anziché a una singola ponderazione, possono modellare relazioni più complesse rispetto a un modello lineare semplice. Il modello predittivo GAM risultante ha un termine di intercetta che rappresenta la stima media relativa al set di training e funzioni di forma che rappresentano la deviazione dalla stima media. Le funzioni di forma possono essere esaminate visivamente per verificare la risposta del modello ai diversi valori di una caratteristica e possono essere rappresentate con il grafico seguente, riportato dopo l'esempio di codice. L'algoritmo di apprendimento GAM in ML.NET viene implementato usando alberi con gradient boosting, ad esempio ceppi di albero, per apprendere le funzioni di forma non parametriche ed è basato sul metodo descritto nell'articolo [Intelligible Models for Classification and Regression](https://www.cs.cornell.edu/~yinlou/papers/lou-kdd12.pdf) (Modelli intelligibili per la classificazione e la regressione) di Lou, Caruana e Gehrke.
 

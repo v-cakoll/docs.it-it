@@ -8,7 +8,7 @@
           href: attributeusage.md
     - name: Accesso agli attributi tramite reflection
       href: accessing-attributes-by-using-reflection.md
-    - name: 'Procedura: Creare un''unione C/C++ tramite attributi'
+    - name: 'Procedura: creare un''unione C/C++ tramite attributi'
       href: how-to-create-a-c-cpp-union-by-using-attributes.md
     - name: Attributi comuni
       href: common-attributes.md

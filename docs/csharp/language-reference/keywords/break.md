@@ -8,10 +8,10 @@ helpviewer_keywords:
 - break keyword [C#]
 ms.assetid: be2571ed-efb0-4965-b122-81e5b09db0b9
 ms.openlocfilehash: ef276fd9e8da0ea25695c5afdf06a300bbd2a123
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713758"
 ---
 # <a name="break-c-reference"></a>break (Riferimenti per C#)
@@ -39,13 +39,13 @@ Sorry, invalid selection.
 
 ## <a name="example"></a>Esempio
 
-In questo esempio, l'istruzione `break` viene usata per interrompere un ciclo annidato interno e restituire il controllo al ciclo esterno. Il controllo viene restituito _solo_ un livello verso l'alto nei cicli nidificati.
+In questo esempio, l'istruzione `break` viene usata per interrompere un ciclo annidato interno e restituire il controllo al ciclo esterno. Il controllo viene restituito _solo_ un livello superiore nei cicli annidati.
 
 [!code-csharp[csrefKeywordsJump#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#7)]
 
 ## <a name="example"></a>Esempio
 
-In questo esempio, l'istruzione `break` viene utilizzata solo per interrompere il ramo corrente durante ogni iterazione del ciclo. Il ciclo stesso non è influenzato dalle istanze di `break` che appartengono all'istruzione [Switch](./switch.md) nidificata.
+In questo esempio, l'istruzione `break` viene utilizzata solo per uscire dal ramo corrente durante ogni iterazione del ciclo. Il ciclo stesso non è `break` influenzato dalle istanze che appartengono all'istruzione [switch](./switch.md) annidata.
 
 [!code-csharp[csrefKeywordsJump#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#8)]
 
@@ -55,7 +55,7 @@ In questo esempio, l'istruzione `break` viene utilizzata solo per interrompere i
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
+- [Guida di riferimento a C](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](./index.md)
-- [switch](./switch.md)
+- [Interruttore](./switch.md)

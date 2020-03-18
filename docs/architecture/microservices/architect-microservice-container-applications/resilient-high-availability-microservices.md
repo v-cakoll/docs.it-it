@@ -3,36 +3,36 @@ title: Resilienza e disponibilità elevata nei microservizi
 description: I microservizi sono progettati per resistere a errori temporanei di rete e dipendenze che per raggiungere una disponibilità elevata devono essere resilienti.
 ms.date: 09/20/2018
 ms.openlocfilehash: 1c0f75a8c68d1f84ba24c550e854edc5372cf7f6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73094219"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Resilienza e disponibilità elevata nei microservizi
 
-La gestione di errori imprevisti è uno dei problemi più difficili da risolvere, in particolare in un sistema distribuito. Gran parte del codice scritto dagli sviluppatori comporta la gestione delle eccezioni, che è anche l'area che richiede più tempo per i test. Il problema è più complesso della semplice scrittura di codice per la gestione degli errori. Cosa accade quando si verifica un errore nel computer in cui viene eseguito il microservizio? Non solo è necessario rilevare l'errore (un problema già difficile per conto suo), ma è anche necessario riavviare il microservizio.
+Affrontare gli errori imprevisti è uno dei problemi più difficili da risolvere, specialmente in un sistema distribuito. Gran parte del codice scritto dagli sviluppatori comporta la gestione delle eccezioni, che è anche l'area che richiede più tempo per i test. Il problema è più complesso della scrittura di codice per gestire gli errori. Cosa accade infatti in caso di errore del computer in cui è in esecuzione il microservizio? Non è solo necessario rilevare l'errore del microservizio, un problema di per sé difficile, ma serve anche una soluzione per riavviarlo.
 
 Un microservizio deve essere resiliente agli errori e capace di riavviarsi spesso in un altro computer per la disponibilità. Questo tipo di resilienza dipende anche dallo stato salvato per conto del microservizio, dalla posizione in cui il microservizio può recuperare questo stato e se il microservizio può essere riavviato senza problemi. In altre parole, deve esserci resilienza nella capacità di calcolo (il processo può essere riavviato in qualsiasi momento) e resilienza nello stato o nei dati (nessuna perdita di dati, che restano coerenti).
 
-I problemi di resilienza si accumulano durante altri scenari, ad esempio quando si verificano errori durante l'aggiornamento dell'applicazione. Il microservizio, che collabora con il sistema di distribuzione, deve determinare se è possibile continuare a passare alla versione più recente oppure eseguire il rollback a una versione precedente per mantenere uno stato coerente. Occorre prendere in considerazione vari fattori, ad esempio se è disponibile un numero sufficiente di computer per procedere alla versione successiva e come recuperare versioni precedenti del microservizio. A tale scopo, il microservizio deve generare informazioni sull'integrità, in modo che l'applicazione globale e l'agente di orchestrazione possano prendere queste decisioni.
+I problemi di resilienza si accumulano durante altri scenari, ad esempio quando si verificano errori durante l'aggiornamento dell'applicazione. Il microservizio, che collabora con il sistema di distribuzione, deve determinare se è possibile continuare a passare alla versione più recente oppure eseguire il rollback a una versione precedente per mantenere uno stato coerente. Occorre considerare alcune domande, ad esempio se sono disponibili computer sufficienti per continuare e come recuperare le versioni precedenti del microservizio. A tale scopo, il microservizio deve generare informazioni sull'integrità, in modo che l'applicazione globale e l'agente di orchestrazione possano prendere queste decisioni.
 
 In più, la resilienza dipende dal comportamento previsto per i sistemi basati sul cloud. Come accennato, un sistema basato sul cloud deve cogliere gli errori e provare a eseguire il recupero automatico. Ad esempio, in caso di errori di rete o di un contenitore, le applicazioni client o i servizi client devono prevedere una strategia per ritentare l'invio di messaggi o le richieste, perché in molti casi gli errori nel cloud sono parziali. La sezione [Implementazione di applicazioni resilienti](../implement-resilient-applications/index.md) in questa guida affronta la gestione degli errori parziali, descrivendo tecniche come i tentativi di chiamata con backoff esponenziale o lo schema Circuit Breaker in .NET Core usando raccolte come [Polly](https://github.com/App-vNext/Polly), che offre una vasta gamma di criteri per la gestione di questo argomento.
 
 ## <a name="health-management-and-diagnostics-in-microservices"></a>Gestione di integrità e diagnostica nei microservizi
 
-Potrebbe sembrare ovvio, ed è spesso trascurato, ma un microservizio deve segnalare la propria integrità e la diagnostica. In caso contrario, si avrà una quantità limitata di informazioni da un punto di vista operativo. Mettere in correlazione gli eventi di diagnostica in un set di servizi indipendenti e gestire gli sfasamenti dell'orologio macchina per analizzare l'ordine degli eventi è un'operazione complessa. Analogamente alla modalità di interazione con un microservizio su protocolli e formati di dati concordati, esiste la necessità di standardizzare la procedura di registrazione dell'integrità e degli eventi di diagnostica che alla fine terminano in un archivio eventi per l'esecuzione di query e la visualizzazione. In un approccio ai microservizi, è fondamentale che diversi team concordino su un unico formato di registrazione. Deve esserci un approccio coerente alla visualizzazione di eventi di diagnostica nell'applicazione.
+Potrebbe sembrare ovvio, ed è spesso trascurato, ma un microservizio deve segnalare la propria integrità e la diagnostica. In caso contrario, si avrà una quantità limitata di informazioni da un punto di vista operativo. Correlare gli eventi di diagnostica in un set di servizi indipendenti e gestire le differenze di orario dei computer per comprendere l'ordine degli eventi è difficile. Analogamente alla modalità di interazione con un microservizio su protocolli e formati di dati concordati, esiste la necessità di standardizzare la procedura di registrazione dell'integrità e degli eventi di diagnostica che alla fine terminano in un archivio eventi per l'esecuzione di query e la visualizzazione. In un approccio basato su microservizi, è fondamentale che i diversi team siano concordi sull'uso di un unico formato di registrazione. Deve esserci un approccio coerente alla visualizzazione di eventi di diagnostica nell'applicazione.
 
 ### <a name="health-checks"></a>Controlli di integrità
 
-L'integrità è diversa dalla diagnostica. L'integrità dipende dalla segnalazione dello stato corrente del microservizio allo scopo di adottare le misure opportune. Un buon esempio consiste nell'utilizzo dei meccanismi di aggiornamento e distribuzione per mantenere la disponibilità. Anche se, a causa di un arresto anomalo del processo o del riavvio del computer, un servizio potrebbe essere attualmente non integro, potrebbe comunque essere operativo. L'esecuzione di un aggiornamento finirebbe solo con il peggiorare la situazione. L'approccio migliore consiste prima di tutto nell'eseguire un'indagine o attendere il recupero del microservizio. Gli eventi di integrità di un microservizio consentono di prendere decisioni informate e, in effetti, aiutano a creare servizi con riparazione automatica.
+L'integrità è diversa dalla diagnostica. Per integrità si intende la segnalazione dello stato corrente da parte del microservizio per consentire l'esecuzione di azioni appropriate. Un esempio efficace riguarda l'interazione con i meccanismi di aggiornamento e distribuzione per assicurare la disponibilità. Anche se, a causa di un arresto anomalo del processo o del riavvio del computer, un servizio potrebbe essere attualmente non integro, potrebbe comunque essere operativo. L'ultima cosa da fare è peggiorare la situazione eseguendo un aggiornamento. L'approccio migliore è procedere prima di tutto a un'indagine o attendere il ripristino del microservizio. Gli eventi di integrità di un microservizio consentono di prendere decisioni informate e favoriscono in effetti la creazione di servizi con funzionalità di riparazione automatica.
 
 La sezione [Implementazione dei controlli di integrità nei servizi ASP.NET Core](../implement-resilient-applications/monitor-app-health.md#implement-health-checks-in-aspnet-core-services) di questa guida illustra come usare una nuova libreria HealthChecks di ASP.NET nei microservizi in modo da segnalarne lo stato a un servizio di monitoraggio e adottare le opportune misure.
 
 È anche possibile usare Beat Pulse, un'utilissima libreria open-source disponibile su [GitHub](https://github.com/Xabaril/BeatPulse) e come [pacchetto NuGet](https://www.nuget.org/packages/BeatPulse/). Questa libreria esegue anche i controlli di integrità e gestisce due tipi di controlli:
 
 - **Attività**: controlla se il microservizio è attivo, vale a dire, se può accettare le richieste e rispondere.
-- **Idoneità** : controlla se anche le dipendenze del microservizio (database, servizi coda e così via) sono idonee, in modo che il microservizio possa eseguire le operazioni previste.
+- **Idoneità **: controlla se anche le dipendenze del microservizio (database, servizi coda e così via) sono idonee, in modo che il microservizio possa eseguire le operazioni previste.
 
 ### <a name="using-diagnostics-and-logs-event-streams"></a>Uso della diagnostica e log dei flussi di eventi
 
@@ -56,19 +56,19 @@ Diversi agenti di orchestrazione potrebbero sembrare simili, ma la diagnostica e
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- **App. XI a dodici fattori. Log: considera i registri come flussi di eventi** \
+- **L'App a Dodici Fattori. XI. Registri: considerare i log come flussi di eventiLogs: Treat logs as event streams** \
   <https://12factor.net/logs>
 
 - Repository GitHub **Libreria di flussi eventi di diagnostica Microsoft**. \
   <https://github.com/Azure/diagnostics-eventflow>
 
-- **Cos'è Diagnostica di Azure** \
+- **Che cos'è Diagnostica di AzureWhat is Azure Diagnostics** \
   <https://docs.microsoft.com/azure/azure-diagnostics>
 
-- **Connettere computer Windows al servizio Monitoraggio di Azure** \
+- **Connettere computer Windows al servizio Monitor di AzureConnect Windows computers to the Azure Monitor service** \
   <https://docs.microsoft.com/azure/azure-monitor/platform/agent-windows>
 
-- **Logging What You Mean: Using the Semantic Logging Application Block** \ (Registrazione mirata: uso del blocco applicazione di registrazione semantica)
+- **Logging What You Mean: Using the Semantic Logging Application Block** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/dn440729(v=pandp.60)>
 
 - Sito ufficiale di **Splunk**. \
@@ -78,5 +78,5 @@ Diversi agenti di orchestrazione potrebbero sembrare simili, ma la diagnostica e
   [https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource](xref:System.Diagnostics.Tracing.EventSource)
 
 >[!div class="step-by-step"]
->[Precedente](microservice-based-composite-ui-shape-layout.md)
->[Successivo](scalable-available-multi-container-microservice-applications.md)
+>[Successivo](microservice-based-composite-ui-shape-layout.md)
+>[precedente](scalable-available-multi-container-microservice-applications.md)

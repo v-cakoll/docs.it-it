@@ -1,14 +1,14 @@
 ---
 ms.openlocfilehash: 2a65caedea2af65796267aa145e275ebff814bf8
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72393943"
 ---
-### <a name="signalr-usesignalr-and-useconnections-methods-marked-obsolete"></a>SignalR: Metodi UseSignalR e UseConnections contrassegnati come obsoleti
+### <a name="signalr-usesignalr-and-useconnections-methods-marked-obsolete"></a>SignalR: metodi UseSignalR e UseConnections contrassegnati come obsoleti
 
-I metodi `UseConnections` e `UseSignalR` e le classi `ConnectionsRouteBuilder` e `HubRouteBuilder` sono contrassegnati come obsoleti in ASP.NET Core 3,0.
+I `UseConnections` metodi `UseSignalR` e `ConnectionsRouteBuilder` e `HubRouteBuilder` le classi e sono contrassegnati come obsoleti in ASP.NET Core 3.0.
 
 #### <a name="version-introduced"></a>Versione introdotta
 
@@ -16,21 +16,21 @@ I metodi `UseConnections` e `UseSignalR` e le classi `ConnectionsRouteBuilder` e
 
 #### <a name="old-behavior"></a>Comportamento precedente
 
-Il routing dell'hub SignalR è stato configurato con `UseSignalR` o `UseConnections`.
+Il routing dell'hub `UseSignalR` `UseConnections`SignalR è stato configurato utilizzando o .
 
 #### <a name="new-behavior"></a>Nuovo comportamento
 
-Il modo precedente per configurare il routing è stato obsoleto e sostituito con il routing degli endpoint.
+Il vecchio modo di configurare il routing è stato obsoleto e sostituito con il routing endpoint.
 
 #### <a name="reason-for-change"></a>Motivo della modifica
 
-Il middleware è stato spostato nel nuovo sistema di routing degli endpoint. Il modo precedente per aggiungere il middleware è obsoleto.
+Il middleware viene spostato nel nuovo sistema di routing degli endpoint. Il vecchio modo di aggiungere middleware è obsoleto.
 
 #### <a name="recommended-action"></a>Azione consigliata
 
 Sostituire `UseSignalR` con `UseEndpoints`:
 
-**Codice precedente:**
+**Vecchio codice:**
 
 ```csharp
 app.UseSignalR(routes =>

@@ -1,20 +1,20 @@
 ---
 ms.openlocfilehash: 60ebcd9fc9ca18c33d31b82ba5020426d22a7d5a
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901967"
 ---
-### <a name="authentication-httpcontextauthentication-property-removed"></a>Autenticazione: Proprietà HttpContext. Authentication rimossa
+### <a name="authentication-httpcontextauthentication-property-removed"></a>Autenticazione: proprietà HttpContext.Authentication rimossa
 
-La proprietà `Authentication` deprecata `HttpContext` è stata rimossa.
+La proprietà `Authentication` deprecata su `HttpContext` è stata rimossa.
 
-#### <a name="change-description"></a>Descrizione delle modifiche
+#### <a name="change-description"></a>Descrizione modifica:
 
-Come parte di [DotNet/aspnetcore # 6504](https://github.com/dotnet/aspnetcore/pull/6504), la proprietà `Authentication` deprecata `HttpContext` è stata rimossa. La proprietà `Authentication` è stata deprecata a partire da 2,0. È stata pubblicata una [Guida alla migrazione](/aspnet/core/migration/1x-to-2x/identity-2x?view=aspnetcore-2.2#use-httpcontext-authentication-extensions) per eseguire la migrazione del codice utilizzando questa proprietà deprecata per le nuove API sostitutive. Le altre classi/API inutilizzate correlate allo stack di autenticazione precedente ASP.NET Core 1. x sono state rimosse in commit [dotnet/aspnetcore@d7a7c65](https://github.com/dotnet/aspnetcore/commit/d7a7c65).
+Come parte di [dotnet/aspnetcore-6504](https://github.com/dotnet/aspnetcore/pull/6504) `Authentication` , `HttpContext` la proprietà deprecata attivata è stata rimossa. La `Authentication` proprietà è deprecata dalla 2.0.The property has been deprecated since 2.0. È stata pubblicata una guida alla [migrazione](/aspnet/core/migration/1x-to-2x/identity-2x?view=aspnetcore-2.2#use-httpcontext-authentication-extensions) per eseguire la migrazione del codice usando questa proprietà deprecata nelle nuove API sostitutive. Le restanti classi/API inutilizzate correlate al vecchio stack di autenticazione [dotnet/aspnetcore@d7a7c65](https://github.com/dotnet/aspnetcore/commit/d7a7c65)ASP.NET Core 1.x sono state rimosse nel commit.
 
-Per informazioni, vedere [DotNet/aspnetcore # 6533](https://github.com/dotnet/aspnetcore/issues/6533).
+Per una discussione, vedere [dotnet/aspnetcore-6533](https://github.com/dotnet/aspnetcore/issues/6533).
 
 #### <a name="version-introduced"></a>Versione introdotta
 
@@ -22,13 +22,13 @@ Per informazioni, vedere [DotNet/aspnetcore # 6533](https://github.com/dotnet/as
 
 #### <a name="reason-for-change"></a>Motivo della modifica
 
-ASP.NET Core 1,0 API sono state sostituite dai metodi di estensione in <xref:Microsoft.AspNetCore.Authentication.AuthenticationHttpContextExtensions?displayProperty=fullName>.
+Le API di ASP.NET Core 1.0 sono <xref:Microsoft.AspNetCore.Authentication.AuthenticationHttpContextExtensions?displayProperty=fullName>state sostituite da metodi di estensione in .
 
 #### <a name="recommended-action"></a>Azione consigliata
 
-Vedere la [Guida alla migrazione](/aspnet/core/migration/1x-to-2x/identity-2x?view=aspnetcore-2.2#use-httpcontext-authentication-extensions).
+Vedere la [guida alla migrazione](/aspnet/core/migration/1x-to-2x/identity-2x?view=aspnetcore-2.2#use-httpcontext-authentication-extensions).
 
-#### <a name="category"></a>Categoria
+#### <a name="category"></a>Category
 
 ASP.NET Core
 

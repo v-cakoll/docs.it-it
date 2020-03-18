@@ -4,10 +4,10 @@ description: Informazioni sulle funzionalità di telemetria degli strumenti di .
 author: KathleenDollard
 ms.date: 08/27/2019
 ms.openlocfilehash: 9d5d7ff09ade89712f2fbbe35224851bb1c28b4c
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156686"
 ---
 # <a name="net-core-sdk-telemetry"></a>Telemetria di .NET Core SDK
@@ -54,7 +54,7 @@ La tutela della privacy è importante per Microsoft. Se si ritiene che la teleme
 
 La funzionalità di telemetria raccoglie i dati seguenti:
 
-| Versioni dell'SDK | data |
+| Versioni dell'SDK | Data |
 |--------------|------|
 | Tutti          | Timestamp della chiamata. |
 | Tutti          | Comando richiamato (ad esempio, "build"), con hash a partire dalla versione 2.1. |
@@ -96,7 +96,7 @@ Un subset di comandi invia le opzioni selezionate se vengono usate, insieme ai r
 | `--language`            | `dotnet new`                                                                                   |
 | `--configuration`       | `dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`                  |
 | `--framework`           | `dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`, `dotnet vstest` |
-| `--runtime`             | `dotnet build`, `dotnet publish`                                                              |
+| `--runtime`             | `dotnet build`,  `dotnet publish`                                                              |
 | `--platform`            | `dotnet vstest`                                                                                |
 | `--logger`              | `dotnet vstest`                                                                                |
 | `--sdk-package-version` | `dotnet migrate`                                                                               |
@@ -128,7 +128,7 @@ at Microsoft.DotNet.Cli.Program.ProcessArgs(String[] args, ITelemetry telemetryC
 at Microsoft.DotNet.Cli.Program.Main(String[] args)
 ```
 
-### <a name="avoid-inadvertent-disclosure-of-information"></a>Evitare la divulgazione accidentale di informazioni
+### <a name="avoid-inadvertent-disclosure-of-information"></a>Evitare la divulgazione involontaria di informazioni
 
 I collaboratori di .NET Core e chiunque esegua una versione personalizzata di .NET Core SDK devono tenere conto del percorso del codice sorgente dell'SDK. Se si verifica un arresto anomalo durante l'uso di un'istanza di .NET Core SDK che rappresenta una compilazione di debug personalizzata o è configurata con file di simboli di compilazione personalizzati, il percorso del file di origine dell'SDK dal computer di compilazione viene raccolto come parte dell'analisi dello stack e non viene sottoposto ad hashing.
 

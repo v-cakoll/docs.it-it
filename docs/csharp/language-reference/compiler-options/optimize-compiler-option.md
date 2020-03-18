@@ -13,10 +13,10 @@ helpviewer_keywords:
 - o compiler option [C#]
 ms.assetid: 6dd5b6f2-cd1d-4593-a9f4-1c2ed9404ca0
 ms.openlocfilehash: bec99ca582070a99fd8b734ef8a7b9e71d945488
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69606607"
 ---
 # <a name="-optimize-c-compiler-options"></a>-optimize (opzioni del compilatore C#)
@@ -31,7 +31,7 @@ L'opzione **-optimize** abilita o disabilita le ottimizzazioni eseguite dal comp
 ## <a name="remarks"></a>Osservazioni  
  **-optimize** comunica poi a Common Language Runtime di ottimizzare il codice in fase di esecuzione.  
   
- Per impostazione predefinita, le ottimizzazioni sono disabilitate. Per abilitarle, specificare **-optimize+** .  
+ Per impostazione predefinita, le ottimizzazioni sono disabilitate. Per abilitarle, specificare **-optimize+**.  
   
  Durante la compilazione di un modulo per l'uso da parte di un assembly, specificare per **-optimize** le stesse impostazioni usate per l'assembly.  
   
@@ -41,7 +41,7 @@ L'opzione **-optimize** abilita o disabilita le ottimizzazioni eseguite dal comp
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1. Aprire la pagine **Proprietà** del progetto.  
+1. Aprire la pagina **Proprietà** del progetto.  
   
 2. Fare clic sulla pagina della proprietà **Compilazione**.  
   
@@ -58,5 +58,5 @@ csc t2.cs -optimize
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Opzioni del compilatore C#](./index.md)
+- [Opzioni del compilatore C](./index.md)
 - [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)

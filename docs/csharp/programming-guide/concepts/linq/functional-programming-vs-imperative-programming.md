@@ -1,18 +1,18 @@
 ---
-title: Differenze tra programmazione funzionale e programmazione imperativa (C#)
+title: Programmazione funzionale e programmazione imperativa (C )Functional Programming vs.
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
 ms.openlocfilehash: a163a62912ed2a44d6ea8cad5bc536f03343f15c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69594323"
 ---
-# <a name="functional-programming-vs-imperative-programming-c"></a>Differenze tra programmazione funzionale e programmazione imperativa (C#)
+# <a name="functional-programming-vs-imperative-programming-c"></a>Programmazione funzionale e programmazione imperativa (C )Functional Programming vs.
 In questo argomento vengono presentate le differenze tra la programmazione funzionale e la più tradizionale programmazione imperativa (procedurale).  
   
-## <a name="functional-programming-vs-imperative-programming"></a>Differenze tra programmazione funzionale e programmazione imperativa  
+## <a name="functional-programming-vs-imperative-programming"></a>Programmazione imperativa e funzionale  
  Il paradigma della *programmazione funzionale* è stato creato espressamente per supportare un approccio funzionale puro alla risoluzione di problemi. La programmazione funzionale è un tipo di *programmazione dichiarativa*. Al contrario, la maggior parte dei linguaggi più diffusi, compresi i linguaggi di programmazione orientata a oggetti (OOP), quali C#, Visual Basic, C++ e Java, è progettata principalmente per supportare la programmazione (procedurale) *imperativa*.  
   
  Con un approccio imperativo lo sviluppatore scrive codice in cui vengono descritti in dettaglio i passaggi esatti che devono essere eseguiti dal computer per raggiungere l'obiettivo. Questo tipo di programmazione viene a volte definito *algoritmica*. Al contrario, un approccio funzionale implica la composizione del problema come set di funzioni da eseguire. È necessario definire con attenzione l'input e l'output di ogni funzione. Nella tabella seguente sono descritte alcune delle differenze generali tra questi due approcci.  
@@ -20,7 +20,7 @@ In questo argomento vengono presentate le differenze tra la programmazione funzi
 |Caratteristica|Approccio imperativo|Approccio funzionale|  
 |--------------------|-------------------------|-------------------------|  
 |Obiettivo del programmatore|Come eseguire attività (algoritmi) e come tenere traccia delle modifiche di stato.|Quali informazioni si desiderano e quali trasformazioni sono richieste.|  
-|Modifiche di stato|Importante.|Non esistente.|  
+|Modifiche stato|Importante.|Non esistente.|  
 |Ordine di esecuzione|Importante.|Importanza limitata.|  
 |Controllo del flusso primario|Cicli, condizionali e chiamate di funzioni (metodi).|Chiamate di funzioni, inclusa la ricorsione.|  
 |Unità di modifica primaria|Istanze di strutture o classi.|Funzioni come oggetti e raccolte dati di prima classe.|  

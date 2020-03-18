@@ -1,18 +1,18 @@
 ---
-title: Come scorrere un albero di directory- C# Guida alla programmazione
+title: Come scorrere un albero di directory - Guida per programmatori C
 ms.date: 07/20/2015
 helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
 ms.openlocfilehash: be3931a23e7a88affcf4d0abf617ec00bd35297a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712260"
 ---
-# <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Come scorrere un albero di directory (C# guida per programmatori)
+# <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Come scorrere un albero di directory (Guida per programmatori C
 Eseguire l'iterazione in un albero di directory significa accedere a ogni file in ogni sottodirectory annidata in una cartella radice specificata, a qualsiasi livello. Non è necessario aprire ogni file. È possibile recuperare semplicemente il nome del file o della sottodirectory come `string` oppure è possibile recuperare informazioni aggiuntive sotto forma di oggetto <xref:System.IO.FileInfo?displayProperty=nameWithType> o <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>.  
   
 > [!NOTE]
@@ -59,5 +59,5 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.IO>
-- [Directory di file e LINQ](../concepts/linq/linq-and-file-directories.md)
+- [Directory di file e LINQ (C#)](../concepts/linq/linq-and-file-directories.md)
 - [File system e Registro di sistema (Guida per programmatori C#)](./index.md)

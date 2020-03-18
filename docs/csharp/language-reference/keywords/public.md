@@ -8,10 +8,10 @@ helpviewer_keywords:
 - public keyword [C#]
 ms.assetid: 0ae45d16-a551-4b74-9845-57208de1328e
 ms.openlocfilehash: 19906d7fd0f7d41ef9e4cdaf951c77825e0bbead
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713170"
 ---
 # <a name="public-c-reference"></a>public (Riferimenti per C#)
@@ -43,13 +43,13 @@ Per altre informazioni, vedere [Accessibilità dichiarata](~/_csharplang/spec/ba
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
+- [Guida di riferimento a C](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Modificatori di accesso](../../programming-guide/classes-and-structs/access-modifiers.md)
 - [Parole chiave di C#](index.md)
 - [Modificatori di accesso](access-modifiers.md)
 - [Livelli di accessibilità](accessibility-levels.md)
 - [Modificatori](index.md)
-- [private](private.md)
-- [protected](protected.md)
-- [internal](internal.md)
+- [Privato](private.md)
+- [Protetto](protected.md)
+- [Interno](internal.md)

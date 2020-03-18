@@ -3,10 +3,10 @@ title: Eseguire un'iterazione sulle raccolte in C#
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
 ms.openlocfilehash: aceedd11466c75cedad3c67224c3a5595b4cabfa
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77626270"
 ---
 # <a name="iterators-c"></a>Iteratori (C#)
@@ -324,11 +324,11 @@ public class Stack<T> : IEnumerable<T>
 
 Un iteratore può verificarsi come metodo o funzione di accesso `get`. Un iteratore non può verificarsi in un evento, in un costruttore di istanze, in un costruttore statico o in un finalizzatore statico.
 
-Una conversione implicita deve esistere dal tipo di espressione nell'istruzione `yield return` all'argomento tipo per il `IEnumerable<T>` restituito dall'iteratore.
+Deve esistere una conversione implicita `yield return` dal tipo di `IEnumerable<T>` espressione nell'istruzione all'argomento di tipo per l'oggetto restituito dall'iteratore.
 
 In C# un metodo iteratore non può avere parametri `in`, `ref` o `out`.
 
-In C#`yield` non è una parola riservata e ha un significato speciale solo quando viene utilizzata prima di una parola chiave `return` o `break`.
+Nel linguaggio `yield` C, non è una parola riservata e `return` `break` ha un significato speciale solo quando viene usata prima di una parola chiave o .
 
 ## <a name="technical-implementation"></a>Implementazione tecnica
 

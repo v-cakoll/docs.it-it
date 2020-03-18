@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
 ms.openlocfilehash: 5150e871d75c3c34dab10f10cdac3d8322d7a834
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70849874"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform (opzioni del compilatore C#)
@@ -30,7 +30,7 @@ Specifica la versione di Common Language Runtime (CLR) in grado di eseguire l'as
 `string` \
 anycpu (impostazione predefinita), anycpu32bitpreferred, ARM, x64, x86 o Itanium.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 - **anycpu** (valore predefinito) consente di compilare l'assembly in modo da poter essere eseguito su qualsiasi piattaforma. L'applicazione viene eseguita come processo a 64 bit, quando possibile, e tramite essa viene eseguito il fallback a 32 bit solo quando questa modalità è disponibile.
 
@@ -69,7 +69,7 @@ Per altre informazioni sullo sviluppo di un'applicazione da eseguire su un siste
 3. Modificare la proprietà **Piattaforma di destinazione** e, per i progetti destinati a .NET Framework 4.5, selezionare o deselezionare la casella di controllo **Preferisci 32 bit**.
 
 > [!NOTE]
-> `-platform`non è disponibile nell'ambiente di sviluppo in Visual C# Express.
+> `-platform`non è disponibile nell'ambiente di sviluppo in Visual C.
 
 Per informazioni su come impostare questa opzione del compilatore a livello di codice, vedere <xref:VSLangProj80.CSharpProjectConfigurationProperties3.PlatformTarget%2A>.
 
@@ -83,5 +83,5 @@ csc -platform:anycpu filename.cs
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Opzioni del compilatore C#](index.md)
+- [Opzioni del compilatore C](index.md)
 - [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)

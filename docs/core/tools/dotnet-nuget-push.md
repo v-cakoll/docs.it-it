@@ -4,15 +4,15 @@ description: Il comando dotnet nuget push effettua il push di un pacchetto nel s
 author: karann-msft
 ms.date: 02/14/2020
 ms.openlocfilehash: d4ef8e58908fe488c712debff3b313ac0908b43e
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503665"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
-**Questo articolo si applica a:** ✔️ .NET Core 2. x SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .NET Core 2.x SDK e versioni successive
 
 ## <a name="name"></a>Nome
 
@@ -72,7 +72,7 @@ Il comando `dotnet nuget push` effettua il push di un pacchetto nel server e lo 
 
 - **`--skip-duplicate`**
 
-  Quando si esegue il push di più pacchetti in un server HTTP (S), tratta qualsiasi risposta di conflitto 409 come un avviso, in modo che il push possa continuare. Disponibile a partire da .NET Core 3,1 SDK.
+  Quando si esegue il push di più pacchetti in un server HTTP(S), considera qualsiasi risposta 409 Conflict come un avviso in modo che il push possa continuare. Disponibile da .NET Core 3.1 SDK.
 
 - **`-sk|--symbol-api-key <API_KEY>`**
 
@@ -94,7 +94,7 @@ Il comando `dotnet nuget push` effettua il push di un pacchetto nel server e lo 
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
   ```
 
-- Eseguire il push di *foo. nupkg* nel server NuGet ufficiale, specificando una chiave API:
+- Spingere *foo.nupkg* al server NuGet ufficiale, specificando una chiave API:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://api.nuget.org/v3/index.json
@@ -134,7 +134,7 @@ Il comando `dotnet nuget push` effettua il push di un pacchetto nel server e lo 
   > Il mancato funzionamento di questo comando può dipendere da un bug che era presente nelle versioni precedenti del SDK (.NET Core 2.1 SDK e versioni precedenti).
   > Per risolvere questo problema, aggiornare la versione del SDK oppure eseguire il comando seguente: `dotnet nuget push **/*.nupkg`
 
-- Inserisce tutti i file *nupkg* anche se una risposta di conflitto 409 viene restituita da un server http (S):
+- Esegue il push di tutti i file *.nupkg* anche se una risposta 409 Conflict viene restituita da un server HTTP(S):
 
   ```dotnetcli
   dotnet nuget push *.nupkg --skip-duplicate

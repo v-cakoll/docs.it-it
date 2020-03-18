@@ -1,39 +1,39 @@
 ---
-title: Quando distribuire i contenitori di Windows in istanze di contenitore di Azure (ACI)
-description: Modernizzare le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows | Quando distribuire i contenitori di Windows in istanze di contenitore di Azure (ACI)
+title: Quando distribuire i contenitori di Windows alle istanze del contenitore di Azure (ACI)When to deploy Windows Containers to Azure Container Instances (ACI)
+description: Modernizza le applicazioni .NET esistenti con i contenitori di Azure Cloud e Windows . Quando distribuire i contenitori di Windows alle istanze del contenitore di Azure (ACI)When to deploy Windows Containers to Azure Container Instances (ACI)
 ms.date: 04/29/2018
 ms.openlocfilehash: 3b6ae1ced9c4e01f5ab400e2575947a396064ebd
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69577934"
 ---
-# <a name="when-to-deploy-windows-containers-to-azure-container-instances-aci"></a>Quando distribuire i contenitori di Windows in istanze di contenitore di Azure (ACI)
+# <a name="when-to-deploy-windows-containers-to-azure-container-instances-aci"></a>Quando distribuire i contenitori di Windows alle istanze del contenitore di Azure (ACI)When to deploy Windows Containers to Azure Container Instances (ACI)
 
-Istanze di contenitore di Azure la proposta di valore principale è che è possibile distribuire immediatamente i contenitori e non è necessario mantenere tale ambiente, non è necessario aggiornare/applicare patch al sistema operativo o alle macchine virtuali sottostanti, tutto trasparente ed è sufficiente distribuire i contenitori in un ambiente pronto per l'uso.
+Proposta di valore principale di Istanze contenitore di Azure è che è possibile distribuire immediatamente i contenitori e non è necessario gestire tale ambiente, non è necessario aggiornare/applicare la patch del sistema operativo o delle macchine virtuali sottostanti, tutto ciò che è trasparente e si distribuiscono semplicemente i contenitori in un ambiente pronto per l'uso.
 
-I motivi e gli scenari in cui si vuole usare ACI sono simili agli scenari principali quando si usano macchine virtuali di Azure con contenitori, quindi fondamentalmente gli scenari principali per l'uso di istanze di contenitore di Azure sono:
+I motivi e gli scenari in cui si vuole usare l'aCI sono simili agli scenari principali quando si usano macchine virtuali di Azure con contenitori, pertanto, fondamentalmente, gli scenari principali per l'uso di istanze del contenitore di Azure sono:The reasons and scenarios when you would want to use ACI are similar to the main scenarios when you use Azure VMs with containers, so basically, the main scenarios for using Azure Container Instances are:
 
 - **Scenari di sviluppo/test**
 - **Automazione delle attività**
 - **Agenti CI/CD**
-- **Elaborazione batch ridotta/scalabile**
+- **Elaborazione batch su piccola/scala**
 - **App Web semplici**
 
-Lo scenario di app Web semplici è uno scenario equo per ACI, ma tenere presente che, poiché in ACI è possibile avere una sola istanza di contenitore per ogni immagine del contenitore, non si avrà una disponibilità elevata e si avrà solo una scalabilità limitata.
+Lo scenario di app Web semplici è uno scenario equo per ACI, ma tenere in considerazione che, poiché in ACI è possibile avere una sola istanza del contenitore per ogni immagine del contenitore, non si avrà disponibilità elevata e solo una scalabilità limitata.
 
-Tuttavia, anche quando ACI viene considerato infrastruttura perché fornisce solo istanze di contenitore singolo, si verifica un enorme vantaggio rispetto alle normali macchine virtuali di Azure con Windows Server. Con ACI è sufficiente distribuire i contenitori in un ambiente autogestito ed è sufficiente pagare per questi contenitori. Non è necessario gestire/aggiornare/applicare patch alle macchine virtuali, quindi è una piattaforma molto migliore per la maggior parte degli scenari in cui è possibile usare macchine virtuali con i contenitori. L'uso di ACI è semplice, ma è sufficiente distribuire un contenitore. non è necessario creare un ambiente di macchina virtuale in cui si distribuiscono semplicemente i contenitori.
+Tuttavia, anche quando ACI è considerato infrastruttura perché fornisce solo istanze di un singolo contenitore, c'è un enorme vantaggio rispetto alle normali macchine virtuali di Azure con Windows Server.However, even when ACI is considered infrastructure because it just provides single container instances, there is a huge benefit compared to regular Azure VMs with Windows Server. Con ACI, è sufficiente distribuire i contenitori in un ambiente self-maintained e si paga solo per quei contenitori. Non è necessario gestire/aggiornare/applicare patch alle macchine virtuali, pertanto è una piattaforma molto migliore per la maggior parte degli scenari in cui potrebbero usare macchine virtuali con contenitori. L'uso di ACI è semplice, basta distribuire un contenitore, non è necessario creare un ambiente VM per distribuire semplicemente i contenitori.
 
-I principali vantaggi delle istanze di contenitore di Azure sono:
+I principali vantaggi delle istanze del contenitore di Azure (ACI) sono:The main benefits of Azure Container Instances (ACI) are:
 
-- Esegui contenitori senza gestire i server
-- Aumento della flessibilità con i contenitori su richiesta
+- Eseguire i contenitori senza gestire i serverRun containers without managing servers
+- Aumenta l'agilità con i contenitori su richiesta
 - Distribuisci i contenitori nel cloud con semplicità e velocità senza precedenti, con un unico comando.
-- Proteggere le applicazioni con isolamento hypervisor
+- Applicazioni sicure con isolamento dell'hypervisor
 
-In breve, con ACI è possibile sviluppare rapidamente app senza dover gestire macchine virtuali o dover apprendere nuovi strumenti. Si tratta solo dell'applicazione, in un contenitore, in esecuzione nel cloud.
+In breve, con ACI è possibile sviluppare applicazioni rapidamente senza gestire macchine virtuali o dover imparare nuovi strumenti. È solo la tua applicazione, in un contenitore, in esecuzione nel cloud.
 
 > [!div class="step-by-step"]
-> [Precedente](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)
-> [Successivo](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
+> [Successivo](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)
+> [precedente](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)

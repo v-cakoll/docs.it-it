@@ -3,10 +3,10 @@ title: Architettura orientata ai servizi
 description: Informazioni sulle differenze fondamentali tra microservizi e architettura orientata ai servizi.
 ms.date: 09/20/2018
 ms.openlocfilehash: 84786539fbac0e8b38a81a2580232474774cd355
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68674928"
 ---
 # <a name="service-oriented-architecture"></a>Architettura orientata ai servizi
@@ -22,5 +22,5 @@ I microservizi derivano dall'architettura orientata ai servizi, ma quest'ultima 
 Questa guida fa riferimento ai microservizi, in quanto l'approccio dell'architettura orientato ai servizi è meno rigoroso rispetto ai requisiti e alle tecniche usati in un'architettura di microservizi. Se si è in grado di creare un'applicazione basata su microservizi, si riuscirà anche a creare una più semplice applicazione orientata ai servizi.
 
 >[!div class="step-by-step"]
->[Precedente](docker-application-state-data.md)
->[Successivo](microservices-architecture.md)
+>[Successivo](docker-application-state-data.md)
+>[precedente](microservices-architecture.md)

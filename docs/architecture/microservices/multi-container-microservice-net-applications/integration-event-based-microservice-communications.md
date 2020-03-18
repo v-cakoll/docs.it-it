@@ -3,17 +3,17 @@ title: Implementazione della comunicazione basata su eventi tra microservizi (ev
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Riconoscere gli eventi di integrazione per implementare la comunicazione basata su eventi tra microservizi.
 ms.date: 10/02/2018
 ms.openlocfilehash: 6d4e324a05def91935a82df41c971a75cb75c3f8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712403"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implementazione della comunicazione basata su eventi tra microservizi (eventi di integrazione)
 
 Come descritto in precedenza, quando si usa la comunicazione basata su eventi, un microservizio pubblica un evento quando succede qualcosa di rilevante, ad esempio quando aggiorna un'entità di business. Altri microservizi sottoscrivono tali eventi. Quando un microservizio riceve un evento, può aggiornare le proprie entità di business, producendo la pubblicazione di altri eventi. È questa l'essenza del concetto di coerenza finale. Questo sistema di pubblicazione/sottoscrizione viene in genere eseguito usando un'implementazione di un bus di eventi. Il bus di eventi può essere progettato come interfaccia con l'API necessaria per sottoscrivere e annullare la sottoscrizione a eventi e per pubblicare eventi. Può anche avere uno o più implementazioni basate su qualsiasi comunicazione tra processi o di messaggistica, ad esempio una coda di messaggi o un bus di servizio che supporta la comunicazione asincrona e un modello di pubblicazione/sottoscrizione.
 
-È possibile usare gli eventi per implementare le transazioni aziendali che si estendono su più servizi, offrendo una coerenza finale tra tali servizi. Una transazione con coerenza finale consiste in una serie di azioni distribuite. Per ogni azione, il microservizio aggiorna un'entità di business e pubblica un evento che attiva l'azione successiva. Nella figura 6-18 riportata di seguito viene mostrato un evento PriceUpdated pubblicato tramite e bus di eventi, quindi l'aggiornamento del prezzo viene propagato al carrello e ad altri microservizi.
+È possibile usare gli eventi per implementare le transazioni aziendali che si estendono su più servizi, offrendo una coerenza finale tra tali servizi. Una transazione con coerenza finale consiste in una serie di azioni distribuite. Per ogni azione, il microservizio aggiorna un'entità di business e pubblica un evento che attiva l'azione successiva. Figura 6-18 di seguito, Mostra un evento PriceUpdated pubblicato attraverso e bus di eventi, in modo che l'aggiornamento dei prezzi viene propagato al carrello e altri microservizi.
 
 ![Diagramma della comunicazione asincrona basata su eventi con un bus di eventi.](./media/integration-event-based-microservice-communications/event-driven-communication.png)
 
@@ -27,7 +27,7 @@ Come indicato nella sezione dedicata all'architettura, è possibile scegliere tr
 
 Per implementare solo un modello di prova del bus di eventi per l'ambiente di sviluppo, come nell'esempio eShopOnContainers, potrebbe essere sufficiente una semplice implementazione sopra RabbitMQ eseguito come contenitore. Ma per i sistemi di produzione e mission-critical che necessitano di una scalabilità elevata, può essere opportuno valutare e usare il bus di servizio di Azure.
 
-Se sono necessarie astrazioni di alto livello e funzionalità più avanzate come [Sagas](https://docs.particular.net/nservicebus/sagas/) per i processi a esecuzione prolungata che facilitano lo sviluppo distribuito, vale la pena prendere in considerazione altri bus di servizio commerciali e open source come NServiceBus, MassTransit e Brighter. In questo caso, le astrazioni e l'API da usare sarebbero direttamente quelle fornite dai bus di servizio di alto livello invece che dalle proprie astrazioni (come le [semplici astrazioni del bus di eventi fornite da eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/BuildingBlocks/EventBus/EventBus/Abstractions/IEventBus.cs)). A tale scopo, è possibile ricercare il [eShopOnContainers con fork usando nservicebus](https://go.particular.net/eShopOnContainers) (esempio derivato aggiuntivo implementato da un software specifico).
+Se sono necessarie astrazioni di alto livello e funzionalità più avanzate come [Sagas](https://docs.particular.net/nservicebus/sagas/) per i processi a esecuzione prolungata che facilitano lo sviluppo distribuito, vale la pena prendere in considerazione altri bus di servizio commerciali e open source come NServiceBus, MassTransit e Brighter. In questo caso, le astrazioni e l'API da usare sarebbero direttamente quelle fornite dai bus di servizio di alto livello invece che dalle proprie astrazioni (come le [semplici astrazioni del bus di eventi fornite da eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/BuildingBlocks/EventBus/EventBus/Abstractions/IEventBus.cs)). Del resto, è possibile ricercare il [forked eShopOnContainers utilizzando NServiceBus](https://go.particular.net/eShopOnContainers) (esempio derivato aggiuntivo implementato da particular Software).
 
 Naturalmente, è sempre possibile creare funzionalità personalizzate del bus di servizio sopra tecnologie di livello inferiore, come RabbitMQ e Docker, ma il lavoro necessario per partire da zero potrebbe essere troppo costoso per un'applicazione aziendale personalizzata.
 
@@ -64,11 +64,11 @@ Esistono solo alcuni tipi di librerie che è necessario condividere tra i micros
 
 Un bus di eventi consente la comunicazione in stile pubblicazione/sottoscrizione tra microservizi senza che i componenti si rilevino esplicitamente a vicenda, come illustrato nella figura 6-19.
 
-![Diagramma che mostra il modello di base di pubblicazione/sottoscrizione.](./media/integration-event-based-microservice-communications/publish-subscribe-basics.png)
+![Diagramma che mostra il modello di pubblicazione/sottoscrizione di base.](./media/integration-event-based-microservice-communications/publish-subscribe-basics.png)
 
 **Figura 6-19**. Nozioni di base di pubblicazione/sottoscrizione con un bus di eventi
 
-Il diagramma precedente mostra che il microservizio A pubblica il bus di eventi, che distribuisce i microservizi B e C di sottoscrizione, senza che il server di pubblicazione debba conoscerli. Il bus di eventi è correlato allo schema Observer e allo schema publish-subscribe.
+Il diagramma precedente mostra che il microservizio A pubblica nel bus di eventi, che distribuisce ai microservizi b e C, senza che il server di pubblicazione debba conoscere i server di sottoscrizione. Il bus di eventi è correlato allo schema Observer e allo schema publish-subscribe.
 
 ### <a name="observer-pattern"></a>Schema Observer
 
@@ -92,7 +92,7 @@ Nella figura 6-19 è possibile vedere come, dal punto di vista dell'applicazione
 
 Nella figura 6-20 è possibile visualizzare un'astrazione di un bus di eventi con più implementazioni basate sulle tecnologie di messaggistica di infrastruttura come RabbitMQ, il bus di servizio di Azure o un altro broker di messaggi/eventi.
 
-![Diagramma che illustra l'aggiunta di un livello di astrazione del bus di eventi.](./media/integration-event-based-microservice-communications/multiple-implementations-event-bus.png)
+![Diagramma che mostra l'aggiunta di un livello di astrazione del bus di eventi.](./media/integration-event-based-microservice-communications/multiple-implementations-event-bus.png)
 
 **Figura 6- 20.** Più implementazioni di un bus di eventi
 
@@ -129,17 +129,17 @@ I metodi `Subscribe` (sono possibili diverse implementazioni, a seconda degli ar
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-Alcune soluzioni di messaggistica pronte per l'ambiente di produzione:
+Alcune soluzioni di messaggistica pronte per la produzione:Some production-ready messaging solutions:
 
--  \ del **bus di servizio di Azure**
+- **Bus di servizio di AzureAzure Service Bus** \
   <https://docs.microsoft.com/azure/service-bus-messaging/>
   
--  \ **nservicebus**
+- **NServiceBus (informazioni in stato inquestoe utente** \
   <https://particular.net/nservicebus>
   
--  \ **MassTransit**
+- **Transito di Massa** \
   <https://masstransit-project.com/>
 
 > [!div class="step-by-step"]
-> [Precedente](database-server-container.md)
-> [Successivo](rabbitmq-event-bus-development-test-environment.md)
+> [Successivo](database-server-container.md)
+> [precedente](rabbitmq-event-bus-development-test-environment.md)

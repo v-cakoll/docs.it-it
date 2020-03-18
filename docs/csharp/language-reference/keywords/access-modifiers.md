@@ -5,10 +5,10 @@ helpviewer_keywords:
 - access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
 ms.openlocfilehash: 754949e42771de30cc2dce7e4e610f70ada6dfd4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713848"
 ---
 # <a name="access-modifiers-c-reference"></a>Modificatori di accesso (Riferimenti per C#)
@@ -23,15 +23,15 @@ I modificatori di accesso sono parole chiave usate per specificare l'accessibili
   
 - [`public`](public.md): l'accesso non è limitato.  
   
-- [`protected`](protected.md): l'accesso è limitato alla classe o ai tipi derivati dalla classe che li contiene.  
+- [`protected`](protected.md): l'accesso è limitato alla classe o ai tipi che la contiene derivati dalla classe contenitore.  
   
-- [`internal`](internal.md): l'accesso è limitato all'assembly corrente.  
+- [`internal`](internal.md): l'accesso è limitato all'assieme corrente.  
   
-- [`protected internal`](protected-internal.md): l'accesso è limitato all'assembly corrente o ai tipi derivati dalla classe che li contiene.  
+- [`protected internal`](protected-internal.md): l'accesso è limitato all'assembly corrente o ai tipi derivati dalla classe contenitore.  
   
-- [`private`](private.md): l'accesso è limitato al tipo contenitore.  
+- [`private`](private.md): l'accesso è limitato al tipo che lo contiene.  
 
-- [`private protected`](private-protected.md): l'accesso è limitato alla classe o ai tipi derivati dalla classe che li contiene all'interno dell'assembly corrente.  
+- [`private protected`](private-protected.md): l'accesso è limitato alla classe o ai tipi che la contiene derivati dalla classe contenitore all'interno dell'assembly corrente.  
   
  In questa sezione vengono presentati anche gli argomenti seguenti:  
   
@@ -43,7 +43,7 @@ I modificatori di accesso sono parole chiave usate per specificare l'accessibili
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
+- [Guida di riferimento a C](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](./index.md)
 - [Modificatori di accesso](../../programming-guide/classes-and-structs/access-modifiers.md)

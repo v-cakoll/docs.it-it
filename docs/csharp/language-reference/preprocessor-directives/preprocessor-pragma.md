@@ -7,10 +7,10 @@ helpviewer_keywords:
 - '#pragma directive [C#]'
 ms.assetid: 5b7944cd-d402-46a1-ad8f-feffb2d83673
 ms.openlocfilehash: 3bd62364aeae0f21715711324655ef7d00d88afc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712455"
 ---
 # <a name="pragma-c-reference"></a>#pragma (Riferimenti per C#)
@@ -18,7 +18,7 @@ ms.locfileid: "75712455"
   
  [avviso #pragma](./preprocessor-pragma-warning.md)  
   
- [checksum #pragma](./preprocessor-pragma-checksum.md)  
+ [Checksum #pragma](./preprocessor-pragma-checksum.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,8 +35,8 @@ ms.locfileid: "75712455"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
+- [Guida di riferimento a C](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
-- [Direttive per il preprocessore C#](./index.md)
+- [Direttive per il preprocessore di C](./index.md)
 - [avviso #pragma](./preprocessor-pragma-warning.md)
-- [checksum #pragma](./preprocessor-pragma-checksum.md)
+- [Checksum #pragma](./preprocessor-pragma-checksum.md)

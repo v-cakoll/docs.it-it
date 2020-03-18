@@ -4,10 +4,10 @@ description: Vedere il mapping tra gli elementi project.json e csproj.
 author: natemcmaster
 ms.date: 03/13/2017
 ms.openlocfilehash: abe515007b47b415ac33e3350a29edced1784d68
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77451105"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Mapping tra le proprietà di project.json e csproj
@@ -38,7 +38,7 @@ Il nuovo formato, \*.csproj, è un formato basato su XML. L'esempio seguente ill
 }
 ```
 
-Non è più supportato. In csproj è determinato dal nome del file di progetto, che in genere corrisponde al nome della directory. Ad esempio, `MyProjectName.csproj`.
+Non più supportata. In csproj è determinato dal nome del file di progetto, che in genere corrisponde al nome della directory. Ad esempio: `MyProjectName.csproj`.
 
 Per impostazione predefinita, il nome del file di progetto specifica anche il valore delle proprietà `<AssemblyName>` e `<PackageId>`.
 
@@ -141,7 +141,7 @@ Usare la proprietà `TargetFrameworks` per definire l'elenco dei framework di de
 </PropertyGroup>
 ```
 
-## <a name="dependencies"></a>dipendenze
+## <a name="dependencies"></a>dependencies
 
 > [!IMPORTANT]
 > Se la dipendenza è un **progetto** e non un pacchetto, il formato è diverso.
@@ -486,7 +486,7 @@ Vedere anche [Files](#files).
 ```
 
 Non è disponibile nessuna opzione equivalente per l'elemento `owners` in MSBuild.
-In `summary` è possibile usare la proprietà `<Description>` di MSBuild, anche se il valore di `summary` non viene migrato automaticamente a tale proprietà, poiché tale proprietà è mappata all'elemento [`description`](#other-common-root-level-options).
+Per `summary`, è possibile `<Description>` utilizzare la proprietà MSBuild, anche se il valore di `summary` non viene [`description`](#other-common-root-level-options) migrato automaticamente a tale proprietà, poiché tale proprietà è mappata all'elemento.
 
 ## <a name="scripts"></a>script
 
@@ -561,7 +561,7 @@ La proprietà "System.GC.Server" viene migrata nel file csproj:
 </PropertyGroup>
 ```
 
-## <a name="shared"></a>condiviso
+## <a name="shared"></a>shared
 
 ```json
 {
@@ -572,7 +572,7 @@ La proprietà "System.GC.Server" viene migrata nel file csproj:
 Non supportato in csproj. È invece necessario creare e includere i file di contenuto nel file *.nuspec*.
 Per altre informazioni, vedere [Including content files](/nuget/schema/nuspec#including-content-files) (Includere i file di contenuto).
 
-## <a name="files"></a>file
+## <a name="files"></a>files
 
 In *project.json*, la compilazione e la creazione di pacchetti possono essere estese per compilare e incorporare da cartelle diverse.
 In MSBuild, questa operazione viene eseguita tramite [items](/visualstudio/msbuild/common-msbuild-project-items). L'esempio seguente illustra una conversione comune:

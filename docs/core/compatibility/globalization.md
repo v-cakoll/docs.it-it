@@ -1,19 +1,19 @@
 ---
-title: Modifiche di rilievo della globalizzazione
-description: Elenca le modifiche di rilievo della globalizzazione in .NET Core.
+title: Globalizzazione delle modifiche di rilievo
+description: Elenca le modifiche di rilievo nella globalizzazione in .NET Core.
 ms.date: 09/20/2019
 ms.openlocfilehash: eebab2b43c1fc852cd728636518c6ac2ceef2d74
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093006"
 ---
-# <a name="globalization-breaking-changes"></a>Modifiche di rilievo della globalizzazione
+# <a name="globalization-breaking-changes"></a>Globalizzazione delle modifiche di rilievo
 
-In questa pagina sono documentate le modifiche di rilievo seguenti:
+In questa pagina sono documentate le seguenti modifiche di rilievo:
 
-- [Le impostazioni locali "C" sono mappate alle impostazioni locali invariabili](#c-locale-maps-to-the-invariant-locale)
+- [Le impostazioni locali "C" vengono mappate alle impostazioni locali invarianti](#c-locale-maps-to-the-invariant-locale)
 
 ## <a name="net-core-30"></a>.NET Core 3.0
 

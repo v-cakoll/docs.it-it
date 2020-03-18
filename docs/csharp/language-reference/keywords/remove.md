@@ -7,10 +7,10 @@ helpviewer_keywords:
 - remove event accessor [C#]
 ms.assetid: c8223426-c17b-4fe2-8406-01564cf1dd2b
 ms.openlocfilehash: 8ea3ea1910e28c03b2a894c64415cb2ccff942d0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713144"
 ---
 # <a name="remove-c-reference"></a>remove (Riferimenti per C#)
@@ -19,7 +19,7 @@ La parola chiave contestuale `remove` viene usata per definire una funzione di a
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente mostra un evento con le funzioni di accesso [add](add.md) personalizzata e `remove`. Per l'esempio completo, vedere [come implementare eventi di interfaccia](../../programming-guide/events/how-to-implement-interface-events.md).
+L'esempio seguente mostra un evento con le funzioni di accesso [add](add.md) personalizzata e `remove`. Per l'esempio completo, vedere [Come implementare gli eventi](../../programming-guide/events/how-to-implement-interface-events.md)di interfaccia .
 
  [!code-csharp[csrefKeywordsContextual#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#15)]
 
@@ -27,4 +27,4 @@ In genere, non è necessario fornire funzioni di accesso a eventi personalizzate
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Eventi](../../programming-guide/events/index.md)
+- [Events](../../programming-guide/events/index.md)

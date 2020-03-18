@@ -11,10 +11,10 @@ helpviewer_keywords:
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
 ms.openlocfilehash: 98c1a8dceec3e5a47627841988e2d722c56fc36c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75715269"
 ---
 # <a name="if-else-c-reference"></a>if-else (Riferimenti per C#)
@@ -81,7 +81,7 @@ L'esempio seguente determina se un carattere di input è una lettera minuscola, 
 
 [!code-csharp[csrefKeywordsSelection#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#6)]
 
-Come per un'istruzione nel blocco else o nel blocco then è possibile usare qualsiasi istruzione valida, allo stesso modo per la condizione è possibile usare qualsiasi espressione booleana valida. Per creare le condizioni composte è possibile usare gli [operatori logici](../operators/boolean-logical-operators.md), come `!`, `&&`, `||`, `&`, `|` e `^`. Il codice seguente illustra alcuni esempi.
+Come per un'istruzione nel blocco else o nel blocco then è possibile usare qualsiasi istruzione valida, allo stesso modo per la condizione è possibile usare qualsiasi espressione booleana valida. È possibile utilizzare operatori `!` `&&` [logici](../operators/boolean-logical-operators.md) `|`quali `^` , , `||`, `&`, e per creare condizioni composte. Il codice seguente illustra alcuni esempi.
 
 ```csharp
 // NOT
@@ -136,9 +136,9 @@ if (!(m >= n || m >= p))
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
+- [Guida di riferimento a C](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](index.md)
-- [Operatore ?:](../operators/conditional-operator.md)
+- [?: Operatore](../operators/conditional-operator.md)
 - [Istruzione if-else (C++)](/cpp/cpp/if-else-statement-cpp)
-- [switch](switch.md)
+- [Interruttore](switch.md)

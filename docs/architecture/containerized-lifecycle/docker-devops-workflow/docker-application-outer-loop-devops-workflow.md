@@ -3,27 +3,27 @@ title: Passaggi nel flusso di lavoro DevOps del ciclo esterno per un'applicazion
 description: Informazioni sui passaggi del "ciclo esterno" del flusso di lavoro DevOps
 ms.date: 02/15/2019
 ms.openlocfilehash: 735f92c00cd6279649ec3b0c35cfb00543f21a8c
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75936787"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Passaggi nel flusso di lavoro DevOps del ciclo esterno per un'applicazione Docker
 
-La figura 5-1 mostra una rappresentazione end-to-end dei passaggi che comprendono il flusso di lavoro del ciclo esterno DevOps. Viene visualizzato il "ciclo esterno" di DevOps. Quando viene eseguito il push del codice al repository, viene avviata una pipeline di integrazione continua, quindi viene attivata la pipeline di distribuzione continua nella quale viene distribuita l'applicazione. La metrica registrata dalle applicazioni distribuite viene reinserita nel carico di lavoro di sviluppo, in cui si svolge il "ciclo interno", pertanto i team di sviluppo hanno a disposizione dati reali per soddisfare le esigenze dell'organizzazione e degli utenti finali.
+La figura 5-1 mostra una rappresentazione end-to-end dei passaggi che comprendono il flusso di lavoro del ciclo esterno DevOps. Mostra il "ciclo esterno" di DevOps. Quando viene eseguito il push del codice al repository, viene avviata una pipeline di integrazione continua, quindi viene attivata la pipeline di distribuzione continua nella quale viene distribuita l'applicazione. La metrica registrata dalle applicazioni distribuite viene reinserita nel carico di lavoro di sviluppo, in cui si svolge il "ciclo interno", pertanto i team di sviluppo hanno a disposizione dati reali per soddisfare le esigenze dell'organizzazione e degli utenti finali.
 
-![Diagramma che illustra i 6 passaggi del flusso di lavoro del ciclo esterno DevOps.](./media/docker-application-outer-loop-devops-workflow/overview-dev-ops-outter-loop-workflow.png)
+![Diagramma che mostra i 6 passaggi del flusso di lavoro del ciclo esterno DevOps.](./media/docker-application-outer-loop-devops-workflow/overview-dev-ops-outter-loop-workflow.png)
 
 **Figura 5-1**. Flusso di lavoro del ciclo esterno DevOps per le applicazioni Docker con strumenti Microsoft
 
 Di seguito verrà esaminato ognuno di questi passaggi in maggior dettaglio.
 
-## <a name="step-1-inner-loop-development-workflow"></a>Passaggio 1: flusso di lavoro di sviluppo a ciclo interno
+## <a name="step-1-inner-loop-development-workflow"></a>Passaggio 1: Flusso di lavoro di sviluppo del ciclo internoStep 1: Inner-loop development workflow
 
 Questo passaggio è illustrato in dettaglio nel capitolo 4. Tuttavia, per ricapitolare, questo è il punto in cui inizia il ciclo esterno, il momento in cui lo sviluppatore esegue il push del codice al sistema di gestione del controllo del codice sorgente (ad esempio Git) che avvia le azioni della pipeline di integrazione continua.
 
-## <a name="step-2-source-code-control-integration-and-management-with-azure-devops-services-and-git"></a>Passaggio 2: integrazione e gestione del controllo del codice sorgente con Azure DevOps Services e git
+## <a name="step-2-source-code-control-integration-and-management-with-azure-devops-services-and-git"></a>Passaggio 2: Integrazione e gestione del controllo del codice sorgente con i servizi DevOps e Git di AzureStep 2: Source-Code Control integration and management with Azure DevOps Services and Git
 
 Per questo passaggio è necessario avere un sistema di controllo delle versioni per raccogliere una versione consolidata di tutto il codice proveniente da diversi sviluppatori del team.
 
@@ -33,7 +33,7 @@ Le immagini locali generate dagli sviluppatori dovrebbero essere usate solo dagl
 
 Azure DevOps Services e Team Foundation Server supportano Git e il controllo della versione di Team Foundation. È possibile scegliere una delle due opzioni e usarla per un'esperienza Microsoft end-to-end. Tuttavia, è anche possibile gestire il codice in repository esterni, ad esempio GitHub, repository Git locali o Subversion, ed essere ancora in grado di connettersi e ottenere il codice come punto di partenza della pipeline di integrazione continua DevOps.
 
-## <a name="step-3-build-ci-integrate-and-test-with-azure-devops-services-and-docker"></a>Passaggio 3: compilare, CI, integrare e testare con Azure DevOps Services e Docker
+## <a name="step-3-build-ci-integrate-and-test-with-azure-devops-services-and-docker"></a>Passaggio 3: Creare, CI, integrare e testare con i servizi DevOps di Azure e DockerStep 3: Build, CI, Integrate, and Test with Azure DevOps Services and Docker
 
 L'integrazione continua rappresenta oggi uno standard per il test e la distribuzione dei software moderni. La soluzione Docker mantiene una netta separazione delle problematiche tra il team di sviluppo e il team operazioni. L'immutabilità delle immagini Docker assicura una distribuzione ripetibile tra ciò che viene sviluppato, testato tramite l'integrazione continua ed eseguito in produzione. Il motore Docker distribuito nei portatili degli sviluppatori e nell'infrastruttura di test rende i contenitori portatili tra gli ambienti.
 
@@ -45,9 +45,9 @@ Il flusso di lavoro interno per questo passaggio (integrazione continua, compila
 
 Quando si usa Docker per la distribuzione, gli "artefatti finali" da distribuire sono immagini Docker con l'applicazione o i servizi incorporati. Queste immagini vengono sottoposte a push o vengono pubblicate in un *registro Docker*, ovvero un repository privato simile a quelli di Registro Azure Container o un repository pubblico come il registro Docker Hub solitamente usato per le immagini di base ufficiali.
 
-Ecco il concetto di base: la pipeline CI verrà avviata da un commit in un repository SCC come Git. Il commit fa in modo che Azure DevOps Services esegua un processo di compilazione all'interno di un contenitore Docker e, al termine del processo, esegue il push di un'immagine Docker nel registro Docker, come illustrato nella figura 5-2. La prima parte del ciclo esterno prevede i passaggi da 1 a 3, dal codice, l'esecuzione, il debug e la convalida, quindi il repository del codice fino al passaggio di compilazione e test CI.
+Ecco il concetto di base: la pipeline CI verrà avviata da un commit in un repository SCC come Git. Il commit fa in modo che Azure DevOps Services esegua un processo di compilazione all'interno di un contenitore Docker e, al termine del processo, esegue il push di un'immagine Docker nel registro Docker, come illustrato nella figura 5-2. La prima parte del ciclo esterno prevede i passaggi da 1 a 3, dal codice, eseguire, eseguire il debug e convalidare, quindi il codice repo fino al passaggio di compilazione e test CI.
 
-![Diagramma che illustra i tre passaggi necessari per il flusso di lavoro CI.](./media/docker-application-outer-loop-devops-workflow/continuous-integration-steps.png)
+![Diagramma che mostra i tre passaggi coinvolti nel flusso di lavoro CI.](./media/docker-application-outer-loop-devops-workflow/continuous-integration-steps.png)
 
 **Figura 5-2**. Passaggi previsti nell'integrazione continua
 
@@ -69,7 +69,7 @@ Di seguito sono elencati i passaggi del flusso di lavoro di integrazione continu
 
 Visual Studio Azure DevOps Services contiene modelli di compilazione e versione che è possibile usare nella pipeline CI/CD con cui le immagini Docker vengono compilate, ne viene eseguito il push in un registro Docker autenticato, vengono eseguite oppure vengono eseguite altre operazioni offerte dall'interfaccia della riga di comando Docker. Azure DevOps Services aggiunge anche un'attività Docker Compose che consente di compilare, eseguire il push ed eseguire applicazioni Docker con più contenitori oppure eseguire altre operazioni offerte dall'interfaccia della riga di comando Docker Compose, come illustrato nella figura 5-3.
 
-![Screenshot della pipeline CI Docker in Azure DevOps.](./media/docker-application-outer-loop-devops-workflow/docker-ci-pipeline-azure-devops.png)
+![Screenshot of the Docker CI pipeline in Azure DevOps.](./media/docker-application-outer-loop-devops-workflow/docker-ci-pipeline-azure-devops.png)
 
 **Figura 5-3**. Pipeline di integrazione continua di Docker in Azure DevOps Services con modelli di compilazione e versione e attività associate.
 
@@ -104,7 +104,7 @@ Di conseguenza, dopo aver compilato i contenitori dell'applicazione nella pipeli
 
 Se si usa un singolo host, è possibile usare i comandi Docker, ad esempio docker-compose, per compilare e distribuire i contenitori correlati per testare e convalidare l'ambiente Docker in una singola macchina virtuale. Se si usa invece un cluster di agenti di orchestrazione come DC/OS, Kubernetes o Docker Swarm, è necessario distribuire i contenitori tramite un meccanismo o un agente di orchestrazione diverso, a seconda del cluster o dell'utilità di pianificazione selezionata.
 
-Di seguito sono riportati alcuni tipi di test che è possibile eseguire nei contenitori docker:
+Di seguito sono riportati diversi tipi di test che è possibile eseguire su contenitori Docker:
 
 - Unit test per i contenitori Docker
 
@@ -132,13 +132,13 @@ Nel passaggio 3, per l'integrazione e il test (CI) è possibile pubblicare le im
 
 Usando le attività Docker è possibile eseguire il push di un set di immagini di servizio definito da un file `docker-compose.yml`, con più tag, in un registro Docker autenticato (come Registro Azure Container), come illustrato nella figura 5-5.
 
-![Screenshot che illustra il passaggio per pubblicare le immagini in un registro.](./media/docker-application-outer-loop-devops-workflow/publish-custom-image-to-docker-registry.png)
+![Screenshot che mostra il passaggio per pubblicare immagini in un Registro di sistema.](./media/docker-application-outer-loop-devops-workflow/publish-custom-image-to-docker-registry.png)
 
 **Figura 5-5**. Uso di Azure DevOps Services per la pubblicazione di immagini personalizzate in un registro Docker
 
 > [!INFORMATION] Per altre informazioni su Registro Azure Container, vedere <https://aka.ms/azurecontainerregistry>.
 
-## <a name="step-4-cd-deploy"></a>Passaggio 4: CD, distribuzione
+## <a name="step-4-cd-deploy"></a>Passaggio 4: CD, distribuzioneStep 4: CD, Deploy
 
 L'immutabilità delle immagini Docker assicura una distribuzione ripetibile con ciò che viene sviluppato, testato tramite l'integrazione continua ed eseguito in produzione. Dopo aver pubblicato le immagini Docker dell'applicazione nel registro Docker pubblico o privato è possibile distribuirle in più ambienti (produzione, controllo di qualità, staging e così via) dalla pipeline di distribuzione continua usando le attività della pipeline Azure DevOps Services oppure la gestione del rilascio di Azure DevOps Services.
 
@@ -148,13 +148,13 @@ A questo punto, tuttavia, la procedura varia a seconda del tipo di applicazione 
 
 Verrà descritto per primo lo scenario meno complesso: la distribuzione in host Docker semplici (macchine virtuali o server) in un unico ambiente o in più ambienti (controllo di qualità, staging e produzione). In questo scenario la pipeline di distribuzione continua può usare internamente docker-compose (dalle attività di distribuzione di Azure DevOps Services) per distribuire le applicazioni Docker con il relativo set di contenitori o servizi, come illustrato nella figura 5-6.
 
-![Diagramma che illustra la distribuzione del passaggio di distribuzione CD in tre ambienti.](./media/docker-application-outer-loop-devops-workflow/deploy-app-containers-to-docker-host-environments.png)
+![Diagramma che mostra il passaggio di distribuzione del CD in tre ambienti.](./media/docker-application-outer-loop-devops-workflow/deploy-app-containers-to-docker-host-environments.png)
 
 **Figura 5-6**. Distribuzione dei contenitori dell'applicazione nel registro ambienti host di Docker
 
 La figura 5-7 illustra come connettere l'integrazione continua di compilazione ad ambienti di controllo di qualità/test tramite Azure DevOps Services facendo clic su Docker Compose nella finestra di dialogo Aggiungi attività. Tuttavia, durante la distribuzione in ambienti di staging o produzione si usano in genere le funzionalità di gestione del rilascio per la gestione di più ambienti, ad esempio degli ambienti di controllo di qualità, staging e produzione. Se si esegue la distribuzione in singoli host Docker, si usa l'attività "Docker Compose" di Azure DevOps Services che richiama il comando `docker-compose up` in background. Se si esegue la distribuzione nel servizio Azure Kubernetes, viene usata l'attività Distribuzione di Docker, come descritto nella sezione seguente.
 
-![Screenshot che mostra la finestra di dialogo Aggiungi attività dell'attività Docker Compose.](./media/docker-application-outer-loop-devops-workflow/add-tasks-docker-compose.png)
+![Screenshot della finestra di dialogo Aggiungi attività dell'attività Componi docker.](./media/docker-application-outer-loop-devops-workflow/add-tasks-docker-compose.png)
 
 **Figura 5-7**. Aggiunta di un'attività Docker Compose in una pipeline Azure DevOps Services
 
@@ -166,7 +166,7 @@ I modelli di Azure DevOps Services consentono di creare artefatti di compilazion
 
 Usando i modelli di Azure DevOps Services è possibile compilare una nuova immagine, pubblicarla in un registro Docker, eseguirla su host Linux o Windows e usare comandi, ad esempio `docker-compose`, per distribuire più contenitori come applicazione completa, il tutto tramite le funzionalità di gestione del rilascio di Azure DevOps Services progettate per più ambienti, come illustrato nella figura 5-8.
 
-![Screenshot che mostra la configurazione delle versioni di Docker compose.](./media/docker-application-outer-loop-devops-workflow/configure-docker-compose-release.png)
+![Screenshot che mostra la configurazione delle versioni di composizione Docker.](./media/docker-application-outer-loop-devops-workflow/configure-docker-compose-release.png)
 
 **Figura 5-8**. Configurazione delle attività Docker Compose di Azure DevOps Services dalla gestione del rilascio di Azure DevOps Services
 
@@ -180,13 +180,13 @@ Sebbene sia possibile distribuire i contenitori manualmente in questo tipo di cl
 
 Dal punto di vista della distribuzione continua, in particolare di Azure DevOps Services, è possibile eseguire attività specifiche per la distribuzione dagli ambienti di gestione del rilascio di Azure DevOps Services che eseguiranno la distribuzione delle applicazioni aggiunte a contenitori in cluster distribuiti nel servizio contenitore, come illustrato nella figura 5-9.
 
-![Diagramma che illustra la distribuzione del passaggio di distribuzione CD agli agenti di orchestrazione.](./media/docker-application-outer-loop-devops-workflow/cd-deploy-to-orchestrators.png)
+![Diagramma che mostra il passaggio di distribuzione del CD che distribuisce agli agenti di orchestrazione.](./media/docker-application-outer-loop-devops-workflow/cd-deploy-to-orchestrators.png)
 
 **Figura 5-9**. Distribuzione di applicazioni distribuite nel servizio contenitore
 
 Inizialmente, durante la distribuzione in determinati cluster o agenti di orchestrazione, venivano in genere usati script e meccanismi di distribuzione specifici per ogni agente di orchestrazione (Kubernetes e Service Fabric hanno meccanismi di distribuzione diversi) anziché lo strumento `docker-compose` più semplice e facile da usare basato sul file di definizione `docker-compose.yml`. Tuttavia, grazie all'attività Distribuzione di Docker di Azure DevOps Services, illustrata nella figura 5-10, è ora possibile anche distribuire negli agenti di orchestrazione supportati semplicemente usando il file `docker-compose.yml` poiché lo strumento esegue la "conversione" automaticamente (dal file `docker-compose.yml` nel formato richiesto dall'agente di orchestrazione).
 
-![Screenshot che illustra l'attività Distribuisci in Kubernetes.](./media/docker-application-outer-loop-devops-workflow/add-deploy-to-kubernetes-task.png)
+![Screenshot che mostra l'attività Distribuisci a Kubernetes.](./media/docker-application-outer-loop-devops-workflow/add-deploy-to-kubernetes-task.png)
 
 **Figura 5-10**. Aggiunta dell'attività Distribuisci in Kubernetes all'ambiente
 
@@ -198,16 +198,16 @@ La figura 5-11 illustra come modificare l'attività Distribuisci in Kubernetes c
 
 > [!INFORMATION] Per altre informazioni sulla pipeline di distribuzione continua con Azure DevOps Services e Docker, visitare <https://azure.microsoft.com/services/devops/pipelines>
 
-## <a name="step-5-run-and-manage"></a>Passaggio 5: eseguire e gestire
+## <a name="step-5-run-and-manage"></a>Passaggio 5: Eseguire e gestire
 
 Poiché l'esecuzione e la gestione di applicazioni a livello di produzione aziendale sono una questione della massima importanza e considerato il tipo di operazioni e gli utenti che operano a quel livello (operazioni IT) e l'enorme ambito di quest'area, l'intero capitolo successivo è dedicato a questi argomenti.
 
-## <a name="step-6-monitor-and-diagnose"></a>Passaggio 6: monitorare e diagnosticare
+## <a name="step-6-monitor-and-diagnose"></a>Passaggio 6: Monitorare e diagnosticare
 
 Questo argomento è trattato anche nel capitolo successivo come parte delle attività eseguite dal settore IT nei sistemi di produzione. È importante tuttavia sottolineare che le informazioni dettagliate ottenute in questo passaggio devono essere inviate al team di sviluppo per consentire un miglioramento continuo dell'applicazione. Da questo punto di vista, è anche parte di DevOps, sebbene le attività e le operazioni vengano in genere eseguite dal settore IT.
 
 Soltanto al completamento del monitoraggio e della diagnostica in DevOps, il team di sviluppo esegue i processi di monitoraggio e analisi negli ambienti di test o beta. Questa operazione viene eseguita tramite l'esecuzione di test di carico o monitorando gli ambienti beta o di controllo di qualità in cui i beta tester provano a usare le nuove versioni.
 
 >[!div class="step-by-step"]
->[Precedente](index.md)
->[Successivo](create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md)
+>[Successivo](index.md)
+>[precedente](create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md)

@@ -1,5 +1,5 @@
 ---
-title: Come usare gli argomenti denominati e facoltativi nella C# Guida alla programmazione di Office
+title: Come usare gli argomenti denominati e facoltativi nella programmazione di Office - Guida per programmatori C
 ms.date: 07/20/2015
 helpviewer_keywords:
 - named and optional arguments [C#], Office programming
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
 ms.openlocfilehash: 36b5c8b49404606c8240d24953c3677d5612d30e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714867"
 ---
-# <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Come usare argomenti denominati e facoltativi nella programmazioneC# di Office (Guida per programmatori)
+# <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Come usare gli argomenti denominati e facoltativi nella programmazione di Office (Guida per programmatori C
 
 Gli argomenti denominati e gli argomenti facoltativi, introdotti in C# 4, migliorano la praticità, la flessibilità e la leggibilità nella programmazione C#. Queste funzionalità, poi, semplificano notevolmente l'accesso alle interfacce COM, quali le API di automazione di Microsoft Office.
 
@@ -27,7 +27,7 @@ Per eseguire queste procedure, Microsoft Office Word deve essere installato.
 
 1. Avviare Visual Studio.
 
-2. Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**.
+2. Scegliere **Nuovo** dal menu **File**e quindi fare clic su **Progetto**.
 
 3. Nel riquadro **Categorie di modelli** espandere **Visual C#** e quindi fare clic su **Windows**.
 
@@ -43,7 +43,7 @@ Per eseguire queste procedure, Microsoft Office Word deve essere installato.
 
 ## <a name="to-add-a-reference"></a>Per aggiungere un riferimento
 
-1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nome del progetto e quindi scegliere **Aggiungi riferimento**. Viene visualizzata la finestra di dialogo **Aggiungi riferimento**.
+1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nome del progetto e quindi scegliere **Aggiungi riferimento**. Verrà visualizzata la finestra di dialogo **Aggiungi riferimento**.
 
 2. Nella pagina **.NET** selezionare **Microsoft.Office.Interop.Word** nell'elenco **Nome componente**.
 
@@ -53,13 +53,13 @@ Per eseguire queste procedure, Microsoft Office Word deve essere installato.
 
 1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul file *Program.cs* e quindi fare clic su **Visualizza codice**.
 
-2. Aggiungere le seguenti direttive di `using` all'inizio del file di codice:
+2. Aggiungere le `using` direttive seguenti all'inizio del file di codice:
 
      [!code-csharp[csProgGuideNamedAndOptional#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#4)]
 
 ## <a name="to-display-text-in-a-word-document"></a>Per visualizzare il testo in un documento di Word
 
-1. Nella classe `Program` in *Program.cs*aggiungere il metodo seguente per creare un'applicazione di Word e un documento di Word. Il metodo [Add](<xref:Microsoft.Office.Interop.Word.Documents.Add%2A>) dispone di quattro parametri facoltativi. Questo esempio usa i relativi valori predefiniti. Non sono pertanto necessari argomenti nell'istruzione di chiamata.
+1. Nella `Program` classe *in Program.cs*aggiungere il metodo seguente per creare un'applicazione Word e un documento di Word. Il metodo [Add](<xref:Microsoft.Office.Interop.Word.Documents.Add%2A>) dispone di quattro parametri facoltativi. Questo esempio usa i relativi valori predefiniti. Non sono pertanto necessari argomenti nell'istruzione di chiamata.
 
      [!code-csharp[csProgGuideNamedAndOptional#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#6)]
 
@@ -85,7 +85,7 @@ Per eseguire queste procedure, Microsoft Office Word deve essere installato.
 
      [!code-csharp[csProgGuideNamedAndOptional#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#9)]
 
-     Nelle versioni precedenti di C#la chiamata a `ConvertToTable` richiede un argomento di riferimento per ogni parametro, come illustrato nel codice seguente:
+     Nelle versioni precedenti di C, `ConvertToTable` la chiamata a richiede un argomento di riferimento per ogni parametro, come illustrato nel codice seguente:
   
      [!code-csharp[csProgGuideNamedAndOptional#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#14)]
 
@@ -93,17 +93,17 @@ Per eseguire queste procedure, Microsoft Office Word deve essere installato.
 
 ## <a name="to-experiment-with-other-parameters"></a>Per provare a usare altri parametri
 
-1. Per modificare la tabella in modo che contenga una colonna e tre righe, sostituire l'ultima riga di `DisplayInWord` con l'istruzione seguente, quindi premere <kbd>CTRL</kbd>+<kbd>F5</kbd>.  
+1. Per modificare la tabella in modo che condisponga di `DisplayInWord` una colonna e tre righe, sostituire l'ultima riga con l'istruzione seguente e quindi digitare <kbd>CTRL</kbd>+<kbd>F5</kbd>.  
 
      [!code-csharp[csProgGuideNamedAndOptional#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#10)]
 
-2. Per specificare un formato predefinito per la tabella, sostituire l'ultima riga di `DisplayInWord` con l'istruzione seguente, quindi premere <kbd>CTRL</kbd>+<kbd>F5</kbd>. Il formato può corrispondere a qualsiasi costante [WdTableFormat](<xref:Microsoft.Office.Interop.Word.WdTableFormat>).
+2. Per specificare un formato predefinito per la `DisplayInWord` tabella, sostituire l'ultima riga con l'istruzione seguente, quindi digitare <kbd>CTRL</kbd>+<kbd>F5.</kbd> Il formato può corrispondere a qualsiasi costante [WdTableFormat](<xref:Microsoft.Office.Interop.Word.WdTableFormat>).
 
      [!code-csharp[csProgGuideNamedAndOptional#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#11)]
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente include l'esempio completo:
+Il codice seguente include l'esempio completo:The following code includes the full example:
 
  [!code-csharp[csProgGuideNamedAndOptional#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#12)]
 

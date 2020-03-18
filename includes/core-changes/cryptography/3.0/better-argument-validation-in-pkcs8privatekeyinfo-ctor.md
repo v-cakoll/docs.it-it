@@ -1,20 +1,20 @@
 ---
 ms.openlocfilehash: 8d3a8712528d2d35c706cc26b8c388b65d6ad506
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77449218"
 ---
 ### <a name="better-argument-validation-in-the-pkcs8privatekeyinfo-constructor"></a>Migliore convalida degli argomenti nel costruttore Pkcs8PrivateKeyInfo
 
-A partire da .NET Core 3,0 Preview 9, il costruttore `Pkcs8PrivateKeyInfo` convalida il parametro `algorithmParameters` come singolo valore con codifica BER.
+A partire da .NET Core 3.0 Preview 9, il `Pkcs8PrivateKeyInfo` costruttore convalida il `algorithmParameters` parametro come un singolo valore con codifica BER.
 
-#### <a name="change-description"></a>Descrizione della modifica
+#### <a name="change-description"></a>Descrizione modifica:
 
-Prima di .NET Core 3,0 Preview 9, il [costruttore`Pkcs8PrivateKeyInfo`](xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.%23ctor(System.Security.Cryptography.Oid,System.Nullable%7BSystem.ReadOnlyMemory%7BSystem.Byte%7D%7D,System.ReadOnlyMemory%7BSystem.Byte%7D,System.Boolean)) non convalidava l'argomento `algorithmParameters`.  Quando questo argomento rappresenta un valore non valido, il costruttore ha esito positivo, ma una chiamata a uno dei metodi <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.Encode>, <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.TryEncode%2A>, <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.Encrypt%2A>o <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.TryEncrypt%2A> genera un <xref:System.ArgumentException> per un argomento che non accetta (`preEncodedValue`) o un <xref:System.Security.Cryptography.CryptographicException>.
+Prima di .NET Core 3.0 Preview 9, il `algorithmParameters` [ `Pkcs8PrivateKeyInfo` costruttore](xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.%23ctor(System.Security.Cryptography.Oid,System.Nullable%7BSystem.ReadOnlyMemory%7BSystem.Byte%7D%7D,System.ReadOnlyMemory%7BSystem.Byte%7D,System.Boolean)) non convalidava l'argomento.  Quando questo argomento rappresenta un valore non valido, il costruttore avrebbe <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.TryEncrypt%2A> avuto esito <xref:System.ArgumentException> positivo, ma una chiamata`preEncodedValue`a uno qualsiasi dei <xref:System.Security.Cryptography.CryptographicException>metodi <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.Encode>, <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.TryEncode%2A>, <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.Encrypt%2A>, o genera un per un argomento che non accettano ( ) o un oggetto .
 
-Se viene eseguito con .NET Core 3,0 prima dell'anteprima 9, il codice seguente genera un'eccezione solo quando viene chiamato il metodo <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.Encode>:
+Se viene eseguito con .NET Core 3.0 prima dell'anteprima <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.Encode> 9, il codice seguente genera un'eccezione solo quando viene chiamato il metodo:
 
 ```csharp
 byte[] algorithmParameters = { 0x05, 0x00, 0x05, 0x00 };
@@ -24,7 +24,7 @@ var info = new Pkcs8PrivateKeyInfo(algorithmId, algorithmParameters, privateKey)
 byte[] encoded = info.Encode();
 ```
 
-A partire da .NET Core 3,0 Preview 9, l'argomento viene convalidato nel costruttore e un valore non valido determina la generazione di un <xref:System.Security.Cryptography.CryptographicException>da parte del metodo. Questa modifica sposta l'eccezione più vicino all'origine dell'errore dei dati. Ad esempio,
+A partire da .NET Core 3.0 Preview 9, l'argomento viene convalidato nel <xref:System.Security.Cryptography.CryptographicException>costruttore e un valore non valido genera un eccezione . Questa modifica sposta l'eccezione più vicina all'origine dell'errore di dati. Ad esempio:
 
 ```csharp
 byte[] algorithmParameters = { 0x05, 0x00, 0x05, 0x00 };
@@ -35,11 +35,11 @@ var info = new Pkcs8PrivateKeyInfo(algorithmId, algorithmParameters, privateKey)
 
 #### <a name="version-introduced"></a>Versione introdotta
 
-3,0 Preview 9
+3.0 Anteprima 9
 
 #### <a name="recommended-action"></a>Azione consigliata
 
-Verificare che siano specificati solo valori `algorithmParameters` validi oppure che le chiamate al costruttore di `Pkcs8PrivateKeyInfo` verificano sia per <xref:System.ArgumentException> che per <xref:System.Security.Cryptography.CryptographicException> se si desidera la gestione delle eccezioni.
+Assicurarsi che `algorithmParameters` vengano forniti solo valori `Pkcs8PrivateKeyInfo` validi o <xref:System.ArgumentException> <xref:System.Security.Cryptography.CryptographicException> che vengano chiamate al test del costruttore per entrambi e se si desidera utilizzare la gestione delle eccezioni.
 
 ### <a name="category"></a>Category
 

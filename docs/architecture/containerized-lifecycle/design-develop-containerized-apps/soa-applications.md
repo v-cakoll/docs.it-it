@@ -3,10 +3,10 @@ title: Applicazioni SOA
 description: Tenere presente che anche i contenitori possono essere un'opzione di distribuzione utile per le applicazioni SOA.
 ms.date: 02/15/2019
 ms.openlocfilehash: aa56ada7b14a465fb3dafd02b03b815782ac765b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68672358"
 ---
 # <a name="service-oriented-applications"></a>Applicazioni orientate ai servizi
@@ -20,5 +20,5 @@ I contenitori Docker sono utili (ma non necessari) sia per le architetture orien
 Alla fine, le soluzioni di clustering dei contenitori sono utili sia per un'architettura SOA tradizionale che per un'architettura di microservizi più avanzata in cui ogni microservizio è proprietario del modello di dati. E grazie alla presenza di più database, è anche possibile scalare orizzontalmente il livello dei dati invece di lavorare con database monolitici condivisi dai servizi SOA. Tuttavia, la discussione sulla suddivisione dei dati riguarda esclusivamente l'architettura e la progettazione.
 
 >[!div class="step-by-step"]
->[Precedente](state-and-data-in-docker-applications.md)
->[Successivo](orchestrate-high-scalability-availability.md)
+>[Successivo](state-and-data-in-docker-applications.md)
+>[precedente](orchestrate-high-scalability-availability.md)

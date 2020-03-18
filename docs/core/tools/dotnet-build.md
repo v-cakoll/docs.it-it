@@ -3,15 +3,15 @@ title: Comando dotnet build
 description: Il comando dotnet build consente di compilare un progetto e tutte le relative dipendenze.
 ms.date: 02/14/2020
 ms.openlocfilehash: 9f9a78ec0a6a25c54c8a727c05081ce6835514ee
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503770"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
-**Questo articolo si applica a:** ✔️ .NET Core 2. x SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .NET Core 2.x SDK e versioni successive
 
 ## <a name="name"></a>Nome
 
@@ -29,19 +29,19 @@ dotnet build [-h|--help]
 
 ## <a name="description"></a>Descrizione
 
-Il comando `dotnet build` compila il progetto e le relative dipendenze in un set di file binari. I file binari includono il codice del progetto nei file Intermediate Language (IL) con estensione *. dll* .  A seconda del tipo di progetto e delle impostazioni, è possibile includere altri file, ad esempio:
+Il comando `dotnet build` compila il progetto e le relative dipendenze in un set di file binari. I file binari includono il codice del progetto nei file IL (Intermediate Language) con estensione *dll.*  A seconda del tipo di progetto e delle impostazioni, possono essere inclusi altri file, ad esempio:
 
-- Eseguibile che può essere usato per eseguire l'applicazione, se il tipo di progetto è un file eseguibile destinato a .NET Core 3,0 o versione successiva.
-- File di simboli usati per il debug con estensione *PDB* .
-- Un file con *estensione Deps. JSON* , che elenca le dipendenze dell'applicazione o della libreria.
-- Un file *. runtimeconfig. JSON* che specifica il runtime condiviso e la relativa versione per un'applicazione.
-- Altre librerie da cui dipende il progetto (tramite i riferimenti al progetto o i riferimenti ai pacchetti NuGet).
+- Un eseguibile che può essere utilizzato per eseguire l'applicazione, se il tipo di progetto è un eseguibile destinato a .NET Core 3.0 o versione successiva.
+- File di simboli utilizzati per il debug con estensione *pdb.*
+- Un file *.deps.json,* che elenca le dipendenze dell'applicazione o della libreria.
+- Un file *.runtimeconfig.json,* che specifica il runtime condiviso e la relativa versione per un'applicazione.
+- Altre librerie da cui dipende il progetto (tramite riferimenti al progetto o riferimenti al pacchetto NuGet).
 
-Per i progetti eseguibili destinati a versioni precedenti a .NET Core 3,0, le dipendenze della libreria da NuGet non vengono in genere copiate nella cartella di output.  Vengono risolti dalla cartella pacchetti globali NuGet in fase di esecuzione. Per queste ragioni, il prodotto di `dotnet build` non è pronto per essere trasferito in un altro computer per l'esecuzione. Per creare una versione dell'applicazione che può essere distribuita, è necessario pubblicarla, ad esempio con il comando [DotNet Publish](dotnet-publish.md) . Per altre informazioni, vedere [Distribuzione di applicazioni .NET Core](../deploying/index.md).
+Per i progetti eseguibili destinati a versioni precedenti a .NET Core 3.0, le dipendenze della libreria da NuGet non vengono in genere copiate nella cartella di output.  Vengono risolti dalla cartella dei pacchetti globali NuGet in fase di esecuzione. Per queste ragioni, il prodotto di `dotnet build` non è pronto per essere trasferito in un altro computer per l'esecuzione. Per creare una versione dell'applicazione che può essere distribuita, è necessario pubblicarla, ad esempio con il comando [dotnet publish.](dotnet-publish.md) Per ulteriori informazioni, vedere [Distribuzione di applicazioni .NET Core](../deploying/index.md).
 
-Per i progetti eseguibili destinati a .NET Core 3,0 e versioni successive, le dipendenze della libreria vengono copiate nella cartella di output. Ciò significa che se non sono presenti altre logiche specifiche per la pubblicazione, ad esempio i progetti web, l'output di compilazione deve essere distribuibile.
+Per i progetti eseguibili destinati a .NET Core 3.0 e versioni successive, le dipendenze della libreria vengono copiate nella cartella di output. Ciò significa che se non sono presenti altre logiche specifiche della pubblicazione (ad esempio i progetti Web), l'output di compilazione deve essere distribuibile.
 
-Per la compilazione è necessario il file *project.assets.json*, che elenca le dipendenze dell'applicazione. Il file viene creato quando [`dotnet restore`](dotnet-restore.md) viene eseguito. Senza il file di asset sul posto, gli strumenti non possono risolvere gli assembly di riferimento, generando così errori. Con .NET Core 1. x SDK, era necessario eseguire in modo esplicito `dotnet restore` prima di eseguire `dotnet build`. A partire da .NET Core 2.0 SDK, `dotnet restore` viene eseguito in modo implicito quando viene eseguito `dotnet build`. Se si desidera disabilitare ripristino implicito quando si esegue il comando di compilazione, è possibile passare l’opzione `--no-restore`.
+Per la compilazione è necessario il file *project.assets.json*, che elenca le dipendenze dell'applicazione. Il file viene [`dotnet restore`](dotnet-restore.md) creato quando viene eseguito. Senza il file di asset sul posto, gli strumenti non possono risolvere gli assembly di riferimento, generando così errori. Con .NET Core 1.x SDK, `dotnet restore` era `dotnet build`necessario eseguire in modo esplicito prima dell'esecuzione . A partire da .NET Core 2.0 SDK, `dotnet restore` viene eseguito in modo implicito quando viene eseguito `dotnet build`. Se si desidera disabilitare ripristino implicito quando si esegue il comando di compilazione, è possibile passare l’opzione `--no-restore`.
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
@@ -53,7 +53,7 @@ La proprietà `<OutputType>` nel file di progetto determina se il progetto è es
 </PropertyGroup>
 ```
 
-Per produrre una libreria, omettere la proprietà `<OutputType>` o modificarne il valore in `Library`. La DLL il per una libreria non contiene punti di ingresso e non può essere eseguita.
+Per produrre una libreria, `<OutputType>` omettere la proprietà `Library`o modificarne il valore in . La DLL IL per una libreria non contiene punti di ingresso e non può essere eseguita.
 
 ### <a name="msbuild"></a>MSBuild
 
@@ -61,7 +61,7 @@ Poiché `dotnet build` usa MSBuild per compilare il progetto, sono supportate le
 
 In aggiunta alle proprie opzioni, il comando `dotnet build` accetta anche le opzioni di MSBuild, ad esempio `-p` per l'impostazione delle proprietà o `-l` per la definizione di un logger. Per altre informazioni su queste opzioni, vedere [Riferimenti alla riga di comando di MSBuild](/visualstudio/msbuild/msbuild-command-line-reference). In alternativa è anche possibile usare il comando [dotnet msbuild](dotnet-msbuild.md).
 
-L'esecuzione di `dotnet build` equivale all'esecuzione di `dotnet msbuild -restore`; Tuttavia, il livello di dettaglio predefinito dell'output è diverso.
+L'esecuzione `dotnet build` equivale `dotnet msbuild -restore`all'esecuzione di ; tuttavia, il livello di dettaglio predefinito dell'output è diverso.
 
 ## <a name="arguments"></a>Argomenti
 
@@ -73,7 +73,7 @@ File di progetto o di soluzione da compilare. Se non viene specificato alcun fil
 
 - **`-c|--configuration <CONFIGURATION>`**
 
-  Definisce la configurazione di compilazione. Il valore predefinito per la maggior parte dei progetti è `Debug`, ma è possibile eseguire l'override delle impostazioni di configurazione della build nel progetto.
+  Definisce la configurazione di compilazione. L'impostazione predefinita `Debug`per la maggior parte dei progetti è , ma è possibile eseguire l'override delle impostazioni di configurazione della compilazione nel progetto.
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -109,7 +109,7 @@ File di progetto o di soluzione da compilare. Se non viene specificato alcun fil
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Directory in cui inserire i file binari compilati. Se non specificata, il percorso predefinito è `./bin/<configuration>/<framework>/`.  Per i progetti con più framework di destinazione (tramite la proprietà `TargetFrameworks`), è anche necessario definire `--framework` quando si specifica questa opzione.
+  Directory in cui inserire i file binari compilati. Se non specificata, il percorso predefinito è `./bin/<configuration>/<framework>/`.  Per i progetti con più `TargetFrameworks` framework di destinazione (tramite la proprietà), è inoltre necessario definire `--framework` quando si specifica questa opzione.
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
@@ -149,7 +149,7 @@ File di progetto o di soluzione da compilare. Se non viene specificato alcun fil
   dotnet build --source c:\packages\mypackages
   ```
 
-- Compilare il progetto e impostare Version 1.2.3.4 come parametro di compilazione usando l' [opzione `-p` MSBuild](#msbuild):
+- Compilare il progetto e impostare la versione 1.2.3.4 come parametro di compilazione usando l' [opzione MSBuild](#msbuild)`-p`:
 
   ```dotnetcli
   dotnet build -p:Version=1.2.3.4

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - unsafe keyword [C#]
 ms.assetid: 7e818009-1c6e-4b9e-b769-3728a01586a0
 ms.openlocfilehash: ef98809eae0329c028dfb318c4a437aae4736db1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712988"
 ---
 # <a name="unsafe-c-reference"></a>unsafe (Riferimenti per C#)
 
-La parola chiave `unsafe` denota un contesto unsafe, necessario per qualsiasi operazione che interessa i puntatori. Per altre informazioni, vedere [Codice unsafe e puntatori](../../programming-guide/unsafe-code-pointers/index.md).
+La parola chiave `unsafe` denota un contesto unsafe, necessario per qualsiasi operazione che interessa i puntatori. Per ulteriori informazioni, vedere [Codice unsafe e puntatori](../../programming-guide/unsafe-code-pointers/index.md).
 
 È possibile usare il modificatore `unsafe` nella dichiarazione di un tipo o di un membro. L'intera estensione testuale del tipo o membro viene pertanto considerato come contesto unsafe. Ad esempio, il seguente è un metodo dichiarato con il modificatore `unsafe`:
 
@@ -42,7 +42,7 @@ unsafe
 }
 ```
 
-Per compilare codice unsafe è necessario specificare l'opzione del compilatore [`-unsafe`](../compiler-options/unsafe-compiler-option.md). Il codice unsafe non è verificabile da Common Language Runtime.
+Per compilare codice unsafe, [`-unsafe`](../compiler-options/unsafe-compiler-option.md) è necessario specificare l'opzione del compilatore. Il codice unsafe non è verificabile da Common Language Runtime.
 
 ## <a name="example"></a>Esempio
 
@@ -54,7 +54,7 @@ Per altre informazioni, vedere [Codice di tipo unsafe](~/_csharplang/spec/unsafe
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
+- [Guida di riferimento a C](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](index.md)
 - [Istruzione fixed](fixed-statement.md)

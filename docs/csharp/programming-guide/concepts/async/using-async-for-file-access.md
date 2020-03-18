@@ -3,10 +3,10 @@ title: Uso della funzionalità Async per l'accesso ai file (C#)
 ms.date: 07/20/2015
 ms.assetid: bb018fea-5313-4c80-ab3f-7c24b2145bd9
 ms.openlocfilehash: e6b0370049d9b9315de6a72d0e84c080aac12481
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69595541"
 ---
 # <a name="using-async-for-file-access-c"></a>Uso della funzionalità Async per l'accesso ai file (C#)
@@ -78,7 +78,7 @@ await theTask;
  La prima istruzione restituisce un'attività e determina l'avvio dell'elaborazione dei file. La seconda istruzione con await induce il metodo a terminare immediatamente e restituire un'attività diversa. Al termine dell'elaborazione dei file l'esecuzione torna quindi all'istruzione che segue await. Per altre informazioni, vedere [Flusso di controllo in programmi asincroni (C#)](./control-flow-in-async-programs.md).  
   
 ## <a name="reading-text"></a>Lettura di testo  
- Nell'esempio seguente viene letto del testo da un file. Il testo viene memorizzato nel buffer e, in questo caso, inserito in un oggetto <xref:System.Text.StringBuilder>. A differenza dell'esempio precedente, la valutazione di await produce un valore. Il metodo <xref:System.IO.Stream.ReadAsync%2A> restituisce un <xref:System.Threading.Tasks.Task> \< <xref:System.Int32>>. Pertanto la valutazione dell'attesa produce un valore `Int32` (`numRead`) dopo il completamento dell'operazione. Per altre informazioni, vedere [Tipi restituiti asincroni (C#)](./async-return-types.md).  
+ Nell'esempio seguente viene letto del testo da un file. Il testo viene memorizzato nel buffer e, in questo caso, inserito in un oggetto <xref:System.Text.StringBuilder>. A differenza dell'esempio precedente, la valutazione di await produce un valore. Il metodo <xref:System.IO.Stream.ReadAsync%2A> restituisce un <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>. Pertanto la valutazione dell'attesa produce un valore `Int32` (`numRead`) dopo il completamento dell'operazione. Per altre informazioni, vedere [Tipi restituiti asincroni (C#)](./async-return-types.md).  
   
 ```csharp  
 public async Task ProcessReadAsync()  
@@ -176,6 +176,6 @@ public async Task ProcessWriteMultAsync()
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Programmazione asincrona con Async e Await (C#)](./index.md)
-- [Tipi restituiti asincroni (C#)](./async-return-types.md)
-- [Flusso di controllo in programmi asincroni (C#)](./control-flow-in-async-programs.md)
+- [Programmazione asincrona con async e await (C#)](./index.md)
+- [Tipi restituiti async (C#)](./async-return-types.md)
+- [Flusso di controllo nei programmi asincroni (c'è)Control Flow in Async Programs (C](./control-flow-in-async-programs.md)

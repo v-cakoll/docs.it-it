@@ -5,10 +5,10 @@ helpviewer_keywords:
 - new constraint keyword [C#]
 ms.assetid: 58850b64-cb97-4136-be50-1f3bc7fc1da9
 ms.openlocfilehash: cd67aeb82d736b8941b0637494089723e7815505
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713346"
 ---
 # <a name="new-constraint-c-reference"></a>Vincolo new (Riferimenti per C#)
@@ -33,7 +33,7 @@ Per altre informazioni, vedere la sezione [Vincoli del parametro di tipo](~/_csh
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../../language-reference/index.md)
+- [Guida di riferimento a C](../../language-reference/index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](index.md)
 - [Generics](../../programming-guide/generics/index.md)

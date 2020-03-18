@@ -13,10 +13,10 @@ helpviewer_keywords:
 - warn compiler option [C#]
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
 ms.openlocfilehash: 5b05e944a37e16fc1fcc422271be00c09a271a33
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69602401"
 ---
 # <a name="-warn-c-compiler-options"></a>-warn (opzioni del compilatore C#)
@@ -30,7 +30,7 @@ L'opzione **-warn** specifica il livello di avviso da visualizzare nel compilato
   
 ## <a name="arguments"></a>Argomenti  
  `option`  
- Livello di avviso da visualizzare per la compilazione: i valori più bassi visualizzano solo avvisi di gravità alta; i valori alti visualizzano più avvisi. I valori validi sono 0-4:  
+ Livello di avviso da visualizzare per la compilazione: i numeri più bassi mostrano solo gli avvisi con un livello di gravità elevato, i valori più alti mostrano altri avvisi. I valori validi sono 0-4:  
   
 |Livello avvisi|Significato|  
 |-------------------|-------------|  
@@ -49,7 +49,7 @@ L'opzione **-warn** specifica il livello di avviso da visualizzare nel compilato
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1. Aprire la pagine **Proprietà** del progetto.  
+1. Aprire la pagina **Proprietà** del progetto.  
   
 2. Fare clic sulla pagina della proprietà **Compilazione**.  
   
@@ -66,5 +66,5 @@ csc -warn:1 in.cs
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Opzioni del compilatore C#](./index.md)
+- [Opzioni del compilatore C](./index.md)
 - [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
 ms.openlocfilehash: 8e52e9db241392b67818b7316767dd97bd38432a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713401"
 ---
 # <a name="join-clause-c-reference"></a>Clausola join (Riferimento C#)
@@ -55,7 +55,7 @@ Per altre informazioni, vedere [Eseguire join raggruppati](../../linq/perform-gr
 
 ## <a name="left-outer-join"></a>Left outer join
 
-In un left outer join vengono restituiti tutti gli elementi nella sequenza di origine a sinistra, anche se non sono disponibili elementi corrispondenti nella sequenza a destra. Per eseguire una left outer join in LINQ, usare il metodo `DefaultIfEmpty` in combinazione con un join di gruppo per specificare un elemento di destra predefinito da produrre se un elemento di sinistra non ha corrispondenze. È possibile usare `null` come valore predefinito per qualsiasi tipo di riferimento oppure specificare un tipo predefinito definito dall'utente. Nell'esempio seguente viene illustrato un tipo predefinito definito dall'utente:
+In un left outer join vengono restituiti tutti gli elementi nella sequenza di origine a sinistra, anche se non sono disponibili elementi corrispondenti nella sequenza a destra. Per eseguire un left outer join `DefaultIfEmpty` in LINQ, usare il metodo in combinazione con un group join per specificare un elemento del lato destro predefinito da produrre se un elemento del lato sinistro non ha corrispondenze. È possibile usare `null` come valore predefinito per qualsiasi tipo di riferimento oppure specificare un tipo predefinito definito dall'utente. Nell'esempio seguente viene illustrato un tipo predefinito definito dall'utente:
 
 [!code-csharp[cscsrefQueryKeywords#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Join.cs#27)]
 
@@ -71,7 +71,7 @@ Una clausola `join` esegue un equijoin. In altre parole, è possibile basare le 
 
 ## <a name="joins-on-object-collections-vs-relational-tables"></a>Join su raccolte di oggetti e tabelle relazionali
 
-In un'espressione di query LINQ, le operazioni di join vengono eseguite sulle raccolte di oggetti. Le raccolte di oggetti non possono essere "aggiunte" nello stesso modo in cui si aggiungono due tabelle relazionali. In LINQ le clausole `join` esplicite sono necessarie solo se due sequenze di origine non sono collegate da alcuna relazione. Quando si usa [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], le tabelle di chiavi esterne vengono rappresentate nel modello a oggetti come proprietà della tabella primaria. Nel database Northwind, ad esempio, la tabella Customer ha una relazione di chiavi esterne con la tabella Orders. Quando si esegue il mapping delle tabelle al modello a oggetti, la classe Customer presenta una proprietà Orders che contiene la raccolta degli ordini associati a tale cliente. In effetti, il join è già stato automaticamente eseguito.
+In un'espressione di query LINQLINQ vengono eseguite operazioni di join sulle raccolte di oggetti. Le raccolte di oggetti non possono essere "aggiunte" nello stesso modo in cui si aggiungono due tabelle relazionali. In LINQ `join` le clausole esplicite sono necessarie solo quando due sequenze di origine non sono legate ad alcuna relazione. Quando si usa [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], le tabelle di chiavi esterne vengono rappresentate nel modello a oggetti come proprietà della tabella primaria. Nel database Northwind, ad esempio, la tabella Customer ha una relazione di chiavi esterne con la tabella Orders. Quando si esegue il mapping delle tabelle al modello a oggetti, la classe Customer presenta una proprietà Orders che contiene la raccolta degli ordini associati a tale cliente. In effetti, il join è già stato automaticamente eseguito.
 
 Per altre informazioni sull'esecuzione di una query in tabelle correlate nel contesto di [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], vedere [Procedura: Eseguire il mapping delle relazioni di database](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md).
 
@@ -85,19 +85,19 @@ Nell'esempio seguente vengono confrontati i risultati di un inner join, di un gr
 
 [!code-csharp[cscsrefQueryKeywords#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Join.cs#23)]
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Una clausola `join` non seguita da `into` viene traslata in una chiamata al metodo <xref:System.Linq.Enumerable.Join%2A>. Una clausola `join` seguita da `into` viene traslata in una chiamata al metodo <xref:System.Linq.Enumerable.GroupJoin%2A>.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Parole chiave di query (LINQ)](query-keywords.md)
-- [LINQ (Language-Integrated Query)](../../linq/index.md)
-- [Operazioni di join](../../programming-guide/concepts/linq/join-operations.md)
+- [Parole chiave di query (LINQ)Query Keywords (LINQ)](query-keywords.md)
+- [Language Integrated Query (LINQ)](../../linq/index.md)
+- [Operazioni di unione](../../programming-guide/concepts/linq/join-operations.md)
 - [Clausola group](group-clause.md)
-- [Eseguire left outer join](../../linq/perform-left-outer-joins.md)
+- [Eseguire outer join a sinistra](../../linq/perform-left-outer-joins.md)
 - [Eseguire inner join](../../linq/perform-inner-joins.md)
 - [Eseguire join raggruppati](../../linq/perform-grouped-joins.md)
 - [Ordinare i risultati di una clausola join](../../linq/order-the-results-of-a-join-clause.md)
-- [Eseguire un join usando una chiave composta](../../linq/join-by-using-composite-keys.md)
+- [Eseguire un join usando chiavi composte](../../linq/join-by-using-composite-keys.md)
 - [Sistemi di database compatibili per Visual Studio](/visualstudio/data-tools/installing-database-systems-tools-and-samples)

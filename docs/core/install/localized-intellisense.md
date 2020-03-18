@@ -3,10 +3,10 @@ title: Installare i file IntelliSense localizzati
 description: Informazioni su come configurare il computer di sviluppo per l'uso di file IntelliSense localizzati per i progetti .NET Core in Visual Studio.
 ms.date: 01/23/2020
 ms.openlocfilehash: e45e225e58865ca2b529000ada0984fbeca850f3
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78157713"
 ---
 # <a name="how-to-install-localized-intellisense-files-for-net-core"></a>Come installare i file IntelliSense localizzati per .NET Core
@@ -32,7 +32,7 @@ ms.locfileid: "78157713"
 
 1. Estrarre il contenuto del file ZIP.
 
-1. Passare alla cartella IntelliSense di .NET Core.
+1. Passare alla cartella Intellisense di .NET Core.Navigate to the .NET Core Intellisense folder.
 
    1. Passare alla cartella di installazione di .NET Core. Per impostazione predefinita, è in *%ProgramFiles%\dotnet\packs*.
    1. Scegliere l'SDK per cui si vuole installare IntelliSense e passare al percorso associato. L'utente ha a disposizione le seguenti opzioni:
@@ -75,7 +75,7 @@ Per fare in modo che Visual Studio usi una lingua diversa per IntelliSense, inst
 Se il language pack desiderato non è stato installato durante l'installazione, aggiornare Visual Studio come indicato di seguito per installare il language pack:
 
 > [!IMPORTANT]
-> Per installare, aggiornare o modificare Visual Studio, è necessario accedere con un account con autorizzazioni di amministratore. Per altre informazioni, vedere [Autorizzazioni utente e Visual Studio](/visualstudio/ide/user-permissions-and-visual-studio).
+> Per installare, aggiornare o modificare Visual Studio, è necessario accedere con un account che disponga dell'autorizzazione di amministratore. Per altre informazioni, vedere [Autorizzazioni utente e Visual Studio](/visualstudio/ide/user-permissions-and-visual-studio).
 
 1. Individuare il programma di installazione di Visual Studio all'interno del computer in uso.
 
@@ -112,9 +112,9 @@ Dopo aver installato i language pack desiderati, modificare le impostazioni di V
 
 1. Nella finestra iniziale scegliere **Continua senza codice**.
 
-1. Nella barra dei menu selezionare **strumenti** > **Opzioni**. Verrà visualizzata la finestra di dialogo Opzioni.
+1. Nella barra dei menu, selezionare**Opzioni** **degli strumenti.** >  Verrà visualizzata la finestra di dialogo Opzioni.
 
-1. Nel nodo **ambiente** scegliere **impostazioni internazionali**.
+1. Nel nodo **Ambiente** scegliere **Impostazioni internazionali**.
 
 1. Nell'elenco a discesa **Lingua** selezionare la lingua desiderata. Scegliere **OK**.
 

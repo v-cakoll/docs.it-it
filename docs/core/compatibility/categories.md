@@ -3,22 +3,22 @@ title: Categorie di modifiche che causano un'interruzione
 description: Informazioni sui modi in cui le modifiche che causano un'interruzione vengono categorizzate in .NET Core.
 ms.date: 06/10/2019
 ms.openlocfilehash: b273ebbb82da803cde66ea34760aa1779c6c1ca5
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093045"
 ---
 # <a name="breaking-change-categories"></a>Categorie di modifiche che causano un'interruzione
 
-Per *compatibilità* si intende la possibilità di compilare o eseguire codice in una versione di un'implementazione di .NET diversa da quella con cui il codice è stato sviluppato originariamente. Una particolare modifica può influire sulla compatibilità in sei modi diversi. I [singoli tipi di modifiche](index.md) considerate durante la valutazione della compatibilità rientrano nelle categorie seguenti:
+Per *compatibilità* si intende la possibilità di compilare o eseguire codice in una versione di un'implementazione di .NET diversa da quella con cui il codice è stato sviluppato originariamente. Una particolare modifica può influire sulla compatibilità in sei modi diversi. I [singoli tipi di modifiche](index.md) considerati durante la valutazione della compatibilità rientrano nelle seguenti categorie:
 
-- [modifica del comportamento](#behavioral-change)
+- [cambiamento comportamentale](#behavioral-change)
 - [compatibilità binaria](#binary-compatibility)
-- [compatibilità con l'origine](#source-compatibility)
-- [compatibilità con la fase di progettazione](#design-time-compatibility)
-- [compatibilità con le versioni precedenti](#backwards-compatibility)
-- [compatibilità](#forward-compatibility) con le edizioni (non obiettivo di .NET Core)
+- [compatibilità delle fonti](#source-compatibility)
+- [compatibilità in fase di progettazione](#design-time-compatibility)
+- [Compatibilità](#backwards-compatibility)
+- [compatibilità in avanti](#forward-compatibility) (non un obiettivo di .NET Core)
 
 ## <a name="behavioral-change"></a>Modifiche funzionali
 
@@ -42,7 +42,7 @@ La compatibilità della fase di progettazione si riferisce al mantenimento dell'
 
 La compatibilità con le versioni precedenti si riferisce alla capacità di un consumer esistente di un'API di supportare l'esecuzione su una nuova versione mantenendo invariato il comportamento. Sia le modifiche funzionali che quelle alla compatibilità binaria influiscono sulla compatibilità con le versioni precedenti. Se un consumer non supporta l'esecuzione o funziona in modo diverso quando viene eseguito con la versione più recente dell'API, l'API è *incompatibile con le versioni precedenti*.
 
-Le modifiche che interessano la compatibilità con le versioni precedenti sono sconsigliate, poiché gli sviluppatori si aspettano la compatibilità con le versioni precedenti di un'API.
+Le modifiche che influiscono sulla compatibilità con le versioni precedenti sono sconsigliate, poiché gli sviluppatori si aspettano la compatibilità con le versioni precedenti nelle versioni più recenti di un'API.
 
 ## <a name="forward-compatibility"></a>Compatibilità con le versioni successive
 

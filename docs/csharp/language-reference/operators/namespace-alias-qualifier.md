@@ -11,17 +11,17 @@ helpviewer_keywords:
 - global keyword [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
 ms.openlocfilehash: a18e52ea05d49bf2b3a468923f1433f09fff9a8b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712676"
 ---
 # <a name="-operator-c-reference"></a>Operatore :: (Riferimenti per C#)
 
-Usare il qualificatore alias dello spazio dei nomi `::` per accedere a un membro di uno spazio dei nomi con alias. È possibile utilizzare il qualificatore di `::` solo tra due identificatori. L'identificatore a sinistra può essere uno qualsiasi degli alias seguenti:
+Utilizzare il qualificatore `::` di alias dello spazio dei nomi per accedere a un membro di uno spazio dei nomi con alias. È possibile `::` utilizzare il qualificatore solo tra due identificatori. L'identificatore a sinistra può essere uno qualsiasi degli alias seguenti:
 
-- Alias dello spazio dei nomi creato con una [direttiva alias using](../keywords/using-directive.md):
+- Alias dello spazio dei nomi creato con una [direttiva using alias](../keywords/using-directive.md):
 
   ```csharp
   using forwinforms = System.Drawing;
@@ -56,7 +56,7 @@ Usare il qualificatore alias dello spazio dei nomi `::` per accedere a un membro
   > [!NOTE]
   > La parola chiave `global` è l'alias dello spazio dei nomi globale solo quando è l'identificatore di sinistra del qualificatore `::`.
 
-È anche possibile usare l' [operatore `.` di accesso ai membri](member-access-operators.md#member-access-operator-) per accedere a un membro di uno spazio dei nomi con alias. Tuttavia, l'operatore `.` viene utilizzato anche per accedere a un membro del tipo. Il qualificatore `::` garantisce che il relativo identificatore di sinistra faccia sempre riferimento a un alias dello spazio dei nomi, anche se esiste un tipo o uno spazio dei nomi con lo stesso nome.
+È inoltre possibile utilizzare [l'operatore `.` ](member-access-operators.md#member-access-operator-) di accesso ai membri per accedere a un membro di uno spazio dei nomi con alias. Tuttavia, `.` l'operatore viene utilizzato anche per accedere a un membro del tipo. Il qualificatore `::` garantisce che il relativo identificatore di sinistra faccia sempre riferimento a un alias dello spazio dei nomi, anche se esiste un tipo o uno spazio dei nomi con lo stesso nome.
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
@@ -64,6 +64,6 @@ Per altre informazioni, vedere la sezione [Qualificatori di alias dello spazio d
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
+- [Informazioni di riferimento su C#](../index.md)
 - [Operatori C#](index.md)
-- [Uso degli spazi dei nomi](../../programming-guide/namespaces/using-namespaces.md)
+- [Utilizzo degli spazi dei nomiUsing namespaces](../../programming-guide/namespaces/using-namespaces.md)

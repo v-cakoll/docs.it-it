@@ -3,15 +3,15 @@ title: Comando dotnet help
 description: Il comando dotnet help mostra documentazione online più dettagliata per il comando specificato.
 ms.date: 02/14/2020
 ms.openlocfilehash: f5d9221ae18653451a3bf97dc82fae396ae4e288
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503721"
 ---
 # <a name="dotnet-help-reference"></a>riferimento dotnet help
 
-**Questo articolo si applica a:** ✔️ .net core 2,0 SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .NET Core 2.0 SDK e versioni successive
 
 ## <a name="name"></a>Nome
 

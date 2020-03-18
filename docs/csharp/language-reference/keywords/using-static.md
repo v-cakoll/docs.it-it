@@ -5,15 +5,15 @@ helpviewer_keywords:
 - using static directive [C#]
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
 ms.openlocfilehash: 55847aceb9fdf032ba533b82ee59be53761fa2c2
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712949"
 ---
 # <a name="using-static-directive-c-reference"></a>Direttiva using static (Riferimenti per C#)
 
-La direttiva `using static` consente di definire un tipo i cui membri statici e i tipi nidificati sono accessibili senza specificare un nome di tipo. La sintassi è la seguente:
+La direttiva `using static` consente di definire un tipo i cui membri statici e i tipi nidificati sono accessibili senza specificare un nome di tipo. La relativa sintassi è la seguente:
 
 ```csharp
 using static <fully-qualified-type-name>;
@@ -25,7 +25,7 @@ La direttiva `using static` si applica a qualsiasi tipo che includa membri stati
 
 La direttiva `using static` è stata introdotta in C# 6.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Quando si chiama un membro statico si fornisce in genere il nome del tipo e il nome del membro. Immettere ripetutamente lo stesso nome di tipo per chiamare i membri del tipo può generare codice troppo dettagliato e incomprensibile. Ad esempio, la seguente definizione di una classe `Circle` fa riferimento a un numero di membri della classe <xref:System.Math>.
 
@@ -51,8 +51,8 @@ Nell'esempio la direttiva `using static` può anche essere stata applicata al ti
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Direttiva using](using-directive.md)
-- [Riferimenti per C#](../index.md)
+- [using (direttiva)](using-directive.md)
+- [Guida di riferimento a C](../index.md)
 - [Parole chiave di C#](index.md)
 - [Uso degli spazi dei nomi](../../programming-guide/namespaces/using-namespaces.md)
 - [Spazi dei nomi](../../programming-guide/namespaces/index.md)

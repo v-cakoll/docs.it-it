@@ -6,13 +6,13 @@ ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
 ms.openlocfilehash: 5f4038e863d9bb59df470d3516c08fd2ad29c078
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503552"
 ---
-# <a name="tutorial-create-an-item-template"></a>Esercitazione: creare un modello di elemento
+# <a name="tutorial-create-an-item-template"></a>Esercitazione: Creare un modello di elementoTutorial: Create an item template
 
 Con .NET Core è possibile creare e distribuire modelli per generare progetti, file e persino risorse. Questa esercitazione è la prima parte di una serie che illustra come creare, installare e disinstallare i modelli da usare con il comando `dotnet new`.
 
@@ -33,7 +33,7 @@ In questa parte della serie si apprenderà come:
 
   L'articolo di riferimento presenta i concetti di base sui modelli e il modo in cui vengono creati. Alcune di queste informazioni verranno ripetute qui.
 
-* Aprire un terminale e passare alla cartella _working\templates_
+* Aprire un terminale e passare alla cartella _working\templates_.
 
 ## <a name="create-the-required-folders"></a>Creare le cartelle necessarie
 
@@ -41,7 +41,7 @@ Questa serie usa una "cartella di lavoro" in cui è contenuta l'origine del mode
 
 Prima di tutto creare la cartella padre. Il nome non è rilevante. Creare quindi una sottocartella denominata _working_. All'interno della cartella _working_ creare una sottocartella denominata _templates_.
 
-Creare poi una cartella nella cartella padre denominata _test_. La struttura di cartelle dovrebbe essere simile alla seguente.
+Creare poi una cartella nella cartella padre denominata _test_. La struttura delle cartelle dovrebbe essere simile alla seguente.
 
 ```console
 parent_folder
@@ -54,7 +54,7 @@ parent_folder
 
 Un modello di elemento è un tipo specifico di modello che contiene uno o più file. Questi tipi di modelli sono utili quando si vogliono generare elementi come un file di configurazione, di codice o di soluzione. In questo esempio verrà creata una classe che aggiunge un metodo di estensione al tipo stringa.
 
-Nel terminale passare alla cartella _working\templates_ e creare una nuova sottocartella denominata _Extensions_. Accedere alla cartella.
+Nel terminale passare alla cartella _working\templates_ e creare una nuova sottocartella denominata _extensions_. Accedere alla cartella.
 
 ```console
 working
@@ -99,7 +99,7 @@ working
                 template.json
 ```
 
-Aprire il file _template. JSON_ con l'editor di testo preferito e incollare il codice JSON seguente e salvarlo.
+Aprire il _file template.json_ con l'editor di testo preferito e incollare il codice JSON seguente e salvarlo.
 
 ```json
 {
@@ -122,8 +122,8 @@ L'elemento `classifications` rappresenta la colonna **tags** visualizzata quando
 
 Ora che è disponibile un file _.template.config/template.json_ valido, il modello è pronto per l'installazione. Nel terminale passare alla cartella _extensions_ ed eseguire il comando seguente per installare il modello che si trova nella cartella corrente:
 
-* **In Windows**: `dotnet new -i .\`
-* **In Linux o macOS**: `dotnet new -i ./`
+* **Su Windows**:`dotnet new -i .\`
+* **Su Linux o macOS**:`dotnet new -i ./`
 
 Questo comando restituisce l'elenco dei modelli installati, che dovrebbe includere quello creato in questa esercitazione.
 
@@ -155,7 +155,7 @@ Ora che è stato installato un modello di elemento, è opportuno testarlo. Passa
 dotnet new console
 ```
 
-Si otterrà un output simile al seguente.
+Si ottiene un output simile al seguente.
 
 ```console
 The template "Console Application" was created successfully.
@@ -173,7 +173,7 @@ Eseguire il progetto con.
 dotnet run
 ```
 
-Si ottiene l'output seguente.
+Viene visualizzato il seguente output.
 
 ```console
 Hello World!
@@ -185,7 +185,7 @@ Eseguire quindi `dotnet new stringext` per generare il file _CommonExtensions.cs
 dotnet new stringext
 ```
 
-Si ottiene l'output seguente.
+Viene visualizzato il seguente output.
 
 ```console
 The template "Example templates: string extensions" was created successfully.
@@ -203,7 +203,7 @@ Eseguire di nuovo il programma per verificare che il risultato sia invertito.
 dotnet run
 ```
 
-Si ottiene l'output seguente.
+Viene visualizzato il seguente output.
 
 ```console
 !dlroW olleH
@@ -219,7 +219,7 @@ Poiché il modello è stato installato usando un percorso di file, è necessario
 dotnet new -u
 ```
 
-Si otterrà un output simile al seguente.
+Si ottiene un output simile al seguente.
 
 ```console
 Template Instantiation Commands for .NET Core CLI

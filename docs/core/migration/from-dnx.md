@@ -3,10 +3,10 @@ title: Migrazione da DNX all'interfaccia della riga di comando .NET Core
 description: Eseguire la migrazione dagli strumenti DNX agli strumenti dell'interfaccia della riga di comando di .NET Core.
 ms.date: 06/20/2016
 ms.openlocfilehash: 31317f110ae1e8586b78becd757d0a8ff07f1459
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503827"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>Migrazione da DNX all'interfaccia della riga di comando di .NET Core (project.json)
@@ -30,9 +30,9 @@ Riguardo agli strumenti sono state apportate alcune modifiche di carattere gener
 ### <a name="no-more-dnvm"></a>DNVM non più disponibile
 DNVM, acronimo di *DotNet Version Manager*, era uno script bash/PowerShell usato per installare un'istanza di DNX nel computer in uso. DNVM consentiva agli utenti di ottenere il DNX necessario dal feed specificato o dai feed predefiniti. Permetteva inoltre di contrassegnare un determinato DNX come "attivo", inserendolo in $PATH per la sessione in oggetto. Questo consentiva di usare i diversi strumenti.
 
-DNVM è stato interrotto perché il set di funzionalità è stato reso ridondante dalle modifiche apportate all'interfaccia della riga di comando di .NET Core.
+DNVM non è più disponibile perché il relativo set di funzionalità è stato reso ridondante dalle modifiche in arrivo nell'interfaccia della riga di comando di .NET Core.
 
-L'interfaccia della riga di comando è stata assemblata in due modi:
+L'interfaccia della riga di comando è disponibile in due modi principali:
 
 1. Programmi di installazione nativi per una determinata piattaforma
 2. Script di installazione per altre situazioni, ad esempio server CI
@@ -69,7 +69,7 @@ DNU integrava un concetto denominato "comandi globali". Si trattava essenzialmen
 L'interfaccia della riga di comando non supporta questo concetto. Supporta tuttavia l'aggiunta di comandi per progetto che è possibile richiamare usando la comune sintassi `dotnet <command>`.
 
 ### <a name="installing-dependencies"></a>Installazione delle dipendenze
-A partire dalla versione V1, il interfaccia della riga di comando di .NET Core non dispone di un comando `install` per l'installazione delle dipendenze. Per installare un pacchetto da NuGet, è necessario aggiungerlo come dipendenza al file `project.json` e quindi eseguire `dotnet restore` ([vedere la nota](#dotnet-restore-note)).
+A partire dalla versione 1, l'interfaccia `install` della riga di comando di .NET Core non dispone di un comando per l'installazione delle dipendenze. Per installare un pacchetto da NuGet, è necessario aggiungerlo come dipendenza al file `project.json` e quindi eseguire `dotnet restore` ([vedere la nota](#dotnet-restore-note)).
 
 ### <a name="running-your-code"></a>Esecuzione del codice
 È possibile eseguire il codice in due modi: Dal sorgente, con `dotnet run`. A differenza di `dnx run`, questo comando non esegue alcuna compilazione in memoria, ma richiama `dotnet build` per compilare il codice e quindi eseguire il file binario compilato.
@@ -84,7 +84,7 @@ Oltre all'uso di nuovi comandi per la gestione del codice, la migrazione da DNX 
 3. Migrazione di qualsiasi API DNX alla corrispondente controparte BCL.
 
 ### <a name="changing-the-globaljson-file"></a>Modifica del file global.json
-Il file `global.json` funge da file di soluzione sia per progetti RC1 che per progetti RC2 (o versioni successive). Per consentire al interfaccia della riga di comando di .NET Core (oltre a Visual Studio) di distinguere tra RC1 e versioni successive, viene usata la proprietà `"sdk": { "version" }` per distinguere quale progetto è RC1 o versione successiva. Se il file `global.json` non dispone affatto di questo nodo, presuppone che si tratti della versione più recente.
+Il file `global.json` funge da file di soluzione sia per progetti RC1 che per progetti RC2 (o versioni successive). Affinché l'interfaccia della riga di comando di .NET Core (così come `"sdk": { "version" }` Visual Studio) distingua tra RC1 e versioni successive, usano la proprietà per fare la distinzione quale progetto è RC1 o versione successiva. Se il file `global.json` non dispone affatto di questo nodo, presuppone che si tratti della versione più recente.
 
 Per aggiornare il file `global.json`, rimuovere la proprietà o impostarla sulla versione esatta degli strumenti che si intende usare, in questo caso **1.0.0-preview2-003121**:
 

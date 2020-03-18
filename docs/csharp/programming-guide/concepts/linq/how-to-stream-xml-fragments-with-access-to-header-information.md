@@ -1,22 +1,22 @@
 ---
-title: Come eseguire lo streaming di frammenti XML con accesso a informazioni diC#intestazione ()
+title: Come eseguire il flusso di frammenti XML con accesso alle informazioni di intestazione (C )How to stream XML fragments with access to header information (C
 ms.date: 07/20/2015
 ms.assetid: 7f242770-b0c7-418d-894b-643215e1f8aa
 ms.openlocfilehash: 5bc10bcadae0e33ee63f953608ca841d44dd6527
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712390"
 ---
-# <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a>Come eseguire lo streaming di frammenti XML con accesso a informazioni diC#intestazione ()
+# <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a>Come eseguire il flusso di frammenti XML con accesso alle informazioni di intestazione (C )How to stream XML fragments with access to header information (C
 A volte è necessario leggere file XML arbitrariamente grandi e scrivere l'applicazione in modo tale che il footprint di memoria dell'applicazione sia prevedibile. Se si tenta di popolare un albero XML con un file XML di grandi dimensioni, l'uso della memoria sarà proporzionale alla dimensione del file (ovvero, eccessivo). Pertanto, è necessario usare una tecnica di flusso in sostituzione.  
   
-Una delle opzioni disponibili consiste nello scrivere l'applicazione usando <xref:System.Xml.XmlReader>. Tuttavia, potrebbe essere necessario usare LINQ per eseguire una query sull'albero XML. In questo caso, è possibile scrivere un metodo dell'asse personalizzato. Per ulteriori informazioni, vedere [come scrivere un metodo dell'asse LINQ to XML (C#)](./how-to-write-a-linq-to-xml-axis-method.md).
+Una delle opzioni disponibili consiste nello scrivere l'applicazione usando <xref:System.Xml.XmlReader>. Tuttavia, è possibile utilizzare LINQ per eseguire query sulla struttura ad albero XML. In questo caso, è possibile scrivere un metodo dell'asse personalizzato. Per ulteriori informazioni, vedere [Come scrivere un metodo dell'asse LINQ to XML (C)](./how-to-write-a-linq-to-xml-axis-method.md).
   
  Per scrivere metodo dell'asse, scrivere un piccolo metodo che usa <xref:System.Xml.XmlReader> per leggere i nodi fino a raggiungere uno dei nodi di interesse. Il metodo chiama quindi <xref:System.Xml.Linq.XNode.ReadFrom%2A>, che legge da <xref:System.Xml.XmlReader> e crea un'istanza di un frammento XML. Restituisce quindi ogni frammento tramite `yield return` al metodo che sta enumerando il metodo dell'asse personalizzato. È quindi possibile scrivere query LINQ sul metodo dell'asse personalizzato.  
   
- Le tecniche di flusso sono maggiormente indicate nelle situazioni in cui è necessario elaborare solo una volta il documento di origine ed è possibile elaborare gli elementi in base all'ordine in cui sono riportati nel documento. Determinati operatori di query standard, ad esempio <xref:System.Linq.Enumerable.OrderBy%2A>, scorrono l'origine, raccolgono tutti i dati, li ordinano e infine restituiscono il primo elemento nella sequenza. Se si usa un operatore di query che materializza l'origine prima di restituire il primo elemento, non si manterrà un footprint di memoria ridotto.  
+ Le tecniche di flusso sono maggiormente indicate nelle situazioni in cui è necessario elaborare solo una volta il documento di origine ed è possibile elaborare gli elementi in base all'ordine in cui sono riportati nel documento. Determinati operatori di query standard, ad esempio <xref:System.Linq.Enumerable.OrderBy%2A>, scorrono l'origine, raccolgono tutti i dati, li ordinano e infine restituiscono il primo elemento nella sequenza. Se si utilizza un operatore di query che materializza l'origine prima di restituire il primo elemento, non si manterrà un footprint di memoria ridotto.  
   
 ## <a name="example"></a>Esempio  
 
@@ -71,7 +71,7 @@ A volte il problema diventa più interessante. Nel documento XML seguente, il co
   
  Questo approccio prevede un footprint di memoria ridotto. Quando viene restituito un frammento XML, non viene mantenuto alcun riferimento al frammento precedente, che diventa disponibile per Garbage Collection. Questa tecnica crea molti oggetti di breve durata nell'heap.  
   
- Nell'esempio seguente viene illustrato come implementare e usare un metodo dell'asse personalizzato che genera un flusso di frammenti XML dal file specificato dall'URI. Questo asse personalizzato viene scritto in modo che preveda un documento con elementi `Customer`, `Name`e `Item` e che tali elementi verranno disposti come nel documento di `Source.xml` precedente. Si tratta di un'implementazione semplicistica. Un'implementazione più solida sarebbe in grado di analizzare un documento non valido.  
+ Nell'esempio seguente viene illustrato come implementare e usare un metodo dell'asse personalizzato che genera un flusso di frammenti XML dal file specificato dall'URI. Questo asse personalizzato viene scritto in modo `Customer`che `Name`si `Item` aspetti un documento con elementi , `Source.xml` e e che tali elementi vengano disposti come nel documento precedente. Si tratta di un'implementazione semplicistica. Un'implementazione più solida sarebbe in grado di analizzare un documento non valido.  
   
 ```csharp  
 static IEnumerable<XElement> StreamCustomerItem(string uri)  

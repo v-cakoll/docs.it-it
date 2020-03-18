@@ -1,18 +1,18 @@
 ---
-title: 'Esercitazione: usare gli attributi-C#'
+title: 'Esercitazione: Usare gli attributi - CTutorial: Use attributes - C #'
 description: Informazioni sull'uso degli attributi in C#.
 author: mgroves
 ms.technology: csharp-fundamentals
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
 ms.openlocfilehash: 24cb7d35a89fda78511dc4ba725b69c5d601a008
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937464"
 ---
-# <a name="use-attributes-in-c"></a>Usare gli attributi in C\#
+# <a name="use-attributes-in-c"></a>Usa attributi in C\#
 
 Gli attributi consentono di associare informazioni al codice in modo dichiarativo. Offrono anche un elemento riutilizzabile che può essere applicato a vari tipi di destinazioni.
 
@@ -20,10 +20,10 @@ L'attributo `[Obsolete]`, ad esempio, può essere applicato a classi, struct, me
 
 In questa esercitazione si illustreranno le procedure necessarie per aggiungere attributi al codice, creare e usare attributi personalizzati e usare alcuni attributi incorporati in .NET Core.
 
-## <a name="prerequisites"></a>Prerequisiti
-È necessario configurare il computer per l'esecuzione di .NET core. È possibile trovare le istruzioni di installazione nella pagina di [download di .NET Core](https://dotnet.microsoft.com/download) .
+## <a name="prerequisites"></a>Prerequisites
+È necessario configurare il computer per l'esecuzione di .NET core. Le istruzioni di installazione sono disponibili nella pagina Download di .NET Core.You can find the installation instructions on the [.NET Core Downloads page.](https://dotnet.microsoft.com/download)
 Questa applicazione può essere eseguita in Windows, Ubuntu Linux, macOS o in un contenitore Docker.
-È necessario installare l'editor di codice preferito. Nelle descrizioni seguenti viene usato [Visual Studio Code](https://code.visualstudio.com/), un editor open source multipiattaforma, ma è possibile usare gli strumenti con cui si ha maggiore familiarità.
+È necessario installare l'editor di codice preferito. Le descrizioni seguenti usano [Visual Studio Code,](https://code.visualstudio.com/) che è un editor open source e multipiattaforma. ma è possibile usare gli strumenti con cui si ha maggiore familiarità.
 
 ## <a name="create-the-application"></a>Creare l'applicazione
 
@@ -31,7 +31,7 @@ Dopo avere installato tutti gli strumenti, creare una nuova applicazione .NET Co
 
 `dotnet new console`
 
-Questo comando creerà file di progetto .NET Core Bare Bones. Sarà necessario eseguire `dotnet restore` per ripristinare le dipendenze richieste per la compilazione del progetto.
+Questo comando creerà file di progetto .NET bare-bone. Sarà necessario eseguire `dotnet restore` per ripristinare le dipendenze richieste per la compilazione del progetto.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
@@ -92,9 +92,9 @@ Gli attributi possono essere usati su diversi tipi di "destinatari". Gli esempi 
 * GenericParameter
 * Interfaccia
 * Metodo
-* Module
+* Modulo
 * Parametro
-* Gli
+* Proprietà
 * ReturnValue
 * Struct
 
@@ -147,6 +147,6 @@ Se la stringa non corrisponde a una direttiva `#define`, qualsiasi chiamata al m
 
 Nel codice precedente non è necessario che sia inclusa una stringa `"Name"` letterale. In questo modo, infatti, si evitano bug correlati a errori di digitazione e si semplificano eventuali operazioni di refactoring/ridenominazione.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Gli attributi integrano funzioni dichiarative in C#, ma rappresentano elementi di codice simili ai metadati e da soli non hanno alcuna funzione.

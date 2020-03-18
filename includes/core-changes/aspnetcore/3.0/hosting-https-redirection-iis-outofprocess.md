@@ -1,16 +1,16 @@
 ---
 ms.openlocfilehash: eb3fa768a491f6c0ff4b15479beabd71b0670338
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937267"
 ---
-### <a name="hosting-https-redirection-enabled-for-iis-out-of-process-apps"></a>Hosting: reindirizzamento HTTPS abilitato per le app out-of-process di IIS
+### <a name="hosting-https-redirection-enabled-for-iis-out-of-process-apps"></a>Hosting: reindirizzamento HTTPS abilitato per le app out-of-process di IISHosting: HTTPS redirection enabled for IIS out-of-process apps
 
-La versione 13.0.19218.0 del [modulo di ASP.NET Core (modulo ASP.NET Core)](/aspnet/core/host-and-deploy/aspnet-core-module) per l'hosting tramite IIS out-of-process Abilita una funzionalità di reindirizzamento HTTPS esistente per le app ASP.NET Core 3,0 e 2,2.
+La versione 13.0.19218.0 del [modulo ASP.NET Core Module (ANCM)](/aspnet/core/host-and-deploy/aspnet-core-module) per l'hosting tramite Out-of-process di IIS abilita una funzionalità di reindirizzamento HTTPS esistente per ASP.NET le app Core 3.0 e 2.2.
 
-Per informazioni, vedere [DotNet/AspNetCore # 15243](https://github.com/dotnet/AspNetCore/issues/15243).
+Per una discussione, vedere [dotnet/AspNetCore-15243](https://github.com/dotnet/AspNetCore/issues/15243).
 
 #### <a name="version-introduced"></a>Versione introdotta
 
@@ -18,26 +18,26 @@ Per informazioni, vedere [DotNet/AspNetCore # 15243](https://github.com/dotnet/A
 
 #### <a name="old-behavior"></a>Comportamento precedente
 
-Il modello di progetto ASP.NET Core 2,1 ha introdotto per la prima volta il supporto per i metodi middleware HTTPS come <xref:Microsoft.AspNetCore.Builder.HttpsPolicyBuilderExtensions.UseHttpsRedirection%2A> e <xref:Microsoft.AspNetCore.Builder.HstsBuilderExtensions.UseHsts%2A>. L'abilitazione del reindirizzamento HTTPS richiede l'aggiunta della configurazione, perché le app in fase di sviluppo non usano la porta predefinita 443. La [sicurezza del trasporto http Strict (HSTS)](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html) è attiva solo se la richiesta usa già HTTPS. Localhost viene ignorato per impostazione predefinita.
+Il modello di progetto ASP.NET Core 2.1 ha <xref:Microsoft.AspNetCore.Builder.HttpsPolicyBuilderExtensions.UseHttpsRedirection%2A> <xref:Microsoft.AspNetCore.Builder.HstsBuilderExtensions.UseHsts%2A>introdotto per la prima volta il supporto per i metodi middleware HTTPS come e . L'abilitazione del reindirizzamento HTTPS richiedeva l'aggiunta della configurazione, poiché le app in fase di sviluppo non usano la porta predefinita 443. [HTTP Strict Transport Security (HSTS)](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html) è attivo solo se la richiesta utilizza già HTTPS. Localhost viene ignorato per impostazione predefinita.
 
 #### <a name="new-behavior"></a>Nuovo comportamento
 
-In ASP.NET Core 3,0 lo scenario HTTPS di IIS è stato [migliorato](https://github.com/dotnet/AspNetCore/pull/4685). Con il miglioramento, un'app potrebbe individuare le porte HTTPS del server e rendere `UseHttpsRedirection` lavoro per impostazione predefinita. Il componente in-process ha eseguito l'individuazione delle porte con la funzionalità `IServerAddresses`, che influiscono solo sulle app ASP.NET Core 3,0, perché la libreria in-process ha una versione con il Framework. Il componente out-of-process è stato modificato per aggiungere automaticamente la variabile di ambiente `ASPNETCORE_HTTPS_PORT`. Questa modifica ha interessato entrambe le app ASP.NET Core 2,2 e 3,0 perché il componente out-of-process è condiviso a livello globale. ASP.NET Core 2,1 le app non sono interessate perché usano una versione precedente di modulo ASP.NET Core per impostazione predefinita.
+In ASP.NET Core 3.0, lo scenario HTTPS di IIS è stato [migliorato.](https://github.com/dotnet/AspNetCore/pull/4685) Con il miglioramento, un'app potrebbe individuare le `UseHttpsRedirection` porte HTTPS del server e rendere il lavoro di default. Il componente in-process ha eseguito l'individuazione delle porte con la `IServerAddresses` funzionalità, che interessa solo ASP.NET applicazioni Core 3.0 perché la libreria in-process è sottoposta a controllo del framework. Componente out-of-process modificato per `ASPNETCORE_HTTPS_PORT` aggiungere automaticamente la variabile di ambiente. Questa modifica ha interessato sia ASP.NET applicazioni Core 2.2 e 3.0 perché il componente out-of-process è condiviso a livello globale. ASP.NET core 2.1 le app non sono interessate perché usano una versione precedente di ANCM per impostazione predefinita.
 
-Il comportamento precedente è stato modificato in ASP.NET Core 3.0.1 e 3.1.0 Preview 3 per annullare le modifiche del comportamento in ASP.NET Core 2. x. Queste modifiche influiscono solo sulle app IIS out-of-process.
+Il comportamento precedente è stato modificato in ASP.NET Core 3.0.1 e 3.1.0 Preview 3 per annullare le modifiche di comportamento in ASP.NET Core 2.x. Queste modifiche interessano solo le app out-of-process di IIS.
 
-Come descritto in precedenza, l'installazione di ASP.NET Core 3.0.0 ha avuto effetto collaterale anche sull'attivazione del middleware `UseHttpsRedirection` nelle app ASP.NET Core 2. x. È stata apportata una modifica a modulo ASP.NET Core in ASP.NET Core 3.0.1 e 3.1.0 Preview 3, in modo che l'installazione non abbia più questo effetto sulle app ASP.NET Core 2. x. La variabile di ambiente `ASPNETCORE_HTTPS_PORT` in cui modulo ASP.NET Core è stata popolata ASP.NET Core 3.0.0 è stata modificata in `ASPNETCORE_ANCM_HTTPS_PORT` ASP.NET Core 3.0.1 e 3.1.0 Preview 3. `UseHttpsRedirection` è stato aggiornato anche in queste versioni per comprendere le variabili nuove e obsolete. ASP.NET Core 2. x non verrà aggiornato. Di conseguenza, viene ripristinato il comportamento precedente di disabilitato per impostazione predefinita.
+Come descritto in precedenza, l'installazione di ASP.NET Core 3.0.0 ha avuto l'effetto collaterale di attivare anche il `UseHttpsRedirection` middleware nelle app ASP.NET Core 2.x. È stata apportata una modifica ad ANCM in ASP.NET Core 3.0.1 e 3.1.0 Preview 3 in modo che l'installazione non abbia più questo effetto sulle app di ASP.NET Core 2.x. La `ASPNETCORE_HTTPS_PORT` variabile di ambiente popolata da ANCM in `ASPNETCORE_ANCM_HTTPS_PORT` ASP.NET Core 3.0.0 è stata modificata in ASP.NET Core 3.0.1 e 3.1.0 Preview 3. `UseHttpsRedirection`è stato anche aggiornato in queste versioni per comprendere sia le variabili nuove che vecchie. ASP.NET Core 2.x non verrà aggiornato. Di conseguenza, viene ripristinato il comportamento precedente di essere disabilitato per impostazione predefinita.
 
 #### <a name="reason-for-change"></a>Motivo della modifica
 
-Miglioramento della funzionalità ASP.NET Core 3,0.
+Migliorata ASP.NET funzionalità di Core 3.0.
 
 #### <a name="recommended-action"></a>Azione consigliata
 
-Non è richiesta alcuna azione se si desidera che tutti i client usino HTTPS. Per consentire l'uso di HTTP da parte dei client, eseguire una delle operazioni seguenti:
+Non è richiesta alcuna azione se si desidera che tutti i client utilizzino HTTPS. Per consentire ad alcuni client di utilizzare HTTP, eseguire una delle operazioni seguenti:
 
-* Rimuovere le chiamate a `UseHttpsRedirection` e `UseHsts` dal metodo di `Startup.Configure` del progetto e ridistribuire l'app.
-* Nel file *Web. config* , impostare la variabile di ambiente `ASPNETCORE_HTTPS_PORT` su una stringa vuota. Questa modifica può verificarsi direttamente nel server senza ridistribuire l'app. Ad esempio:
+* Rimuovere le `UseHttpsRedirection` chiamate `UseHsts` da e `Startup.Configure` verso il metodo del progetto e ridistribuire l'app.
+* Nel file *web.config* impostare la `ASPNETCORE_HTTPS_PORT` variabile di ambiente su una stringa vuota. Questa modifica può verificarsi direttamente sul server senza ridistribuire l'app. Ad esempio:
 
     ```xml
     <aspNetCore processPath="dotnet" arguments=".\WebApplication3.dll" stdoutLogEnabled="false" stdoutLogFile="\\?\%home%\LogFiles\stdout" >
@@ -47,16 +47,16 @@ Non è richiesta alcuna azione se si desidera che tutti i client usino HTTPS. Pe
     </aspNetCore>
     ```
 
-`UseHttpsRedirection` può essere ancora:
+`UseHttpsRedirection`può ancora essere:
 
-* Attivato manualmente in ASP.NET Core 2. x impostando la variabile di ambiente `ASPNETCORE_HTTPS_PORT` sul numero di porta appropriato (443 nella maggior parte degli scenari di produzione).
-* Disattivato in ASP.NET Core 3. x definendo `ASPNETCORE_ANCM_HTTPS_PORT` con un valore di stringa vuoto. Questo valore viene impostato in modo analogo all'esempio di `ASPNETCORE_HTTPS_PORT` precedente.
+* Attivato manualmente in ASP.NET Core 2.x impostando la `ASPNETCORE_HTTPS_PORT` variabile di ambiente sul numero di porta appropriato (443 nella maggior parte degli scenari di produzione).
+* Disattivato in ASP.NET Core 3.x definendo `ASPNETCORE_ANCM_HTTPS_PORT` con un valore di stringa vuota. Questo valore viene impostato nello stesso `ASPNETCORE_HTTPS_PORT` modo dell'esempio precedente.
 
-I computer che eseguono ASP.NET Core app 3.0.0 devono installare il runtime ASP.NET Core 3.0.1 prima di installare il ASP.NET Core 3.1.0 Preview 3 modulo ASP.NET Core. In questo modo si garantisce che `UseHttpsRedirection` continui a funzionare come previsto per le app ASP.NET Core 3,0.
+I computer che eseguono ASP.NET app Core 3.0.0 devono installare il runtime ASP.NET Core 3.0.1 prima di installare l'ANCM di ASP.NET Core 3.1.0 Preview 3. In questo modo `UseHttpsRedirection` si garantisce che continui a funzionare come previsto per le app ASP.NET Core 3.0.
 
-Nel servizio app Azure, modulo ASP.NET Core viene distribuito in base a una pianificazione separata dal runtime a causa della sua natura globale. MODULO ASP.NET Core è stato distribuito in Azure con queste modifiche dopo la distribuzione di ASP.NET Core 3.0.1 e 3.1.0.
+Nel servizio app di Azure ANCM viene distribuito in base a una pianificazione separata dal runtime a causa della sua natura globale. ANCM è stato distribuito in Azure con queste modifiche dopo ASP.NET Core 3.0.1 e 3.1.0 sono stati distribuiti.
 
-#### <a name="category"></a>Categoria
+#### <a name="category"></a>Category
 
 ASP.NET Core
 

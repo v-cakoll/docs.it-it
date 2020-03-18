@@ -8,10 +8,10 @@ helpviewer_keywords:
 - sealed keyword [C#]
 ms.assetid: 8e4ed5d3-10be-47db-9488-0da2008e6f3f
 ms.openlocfilehash: 686afd5d9d0394bb1a802551b65083732599f384
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713105"
 ---
 # <a name="sealed-c-reference"></a>sealed (Riferimenti per C#)
@@ -55,7 +55,7 @@ Il risultato è un messaggio di errore:
 
 `'MyDerivedC': cannot derive from sealed type 'SealedClass'`
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Per determinare se bloccare una classe, proprietà o metodo, è consigliabile in genere considerare i due punti seguenti:
 
@@ -69,12 +69,12 @@ Per determinare se bloccare una classe, proprietà o metodo, è consigliabile in
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
+- [Guida di riferimento a C](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](index.md)
 - [Classi statiche e membri di classi statiche](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
 - [Classi e membri delle classi astratte e sealed](../../programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
 - [Modificatori di accesso](../../programming-guide/classes-and-structs/access-modifiers.md)
 - [Modificatori](index.md)
-- [override](override.md)
-- [virtual](virtual.md)
+- [prevalere](override.md)
+- [Virtuale](virtual.md)

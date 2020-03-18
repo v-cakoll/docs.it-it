@@ -3,10 +3,10 @@ title: Considerazioni principali
 description: Esaminare le considerazioni principali per la Guida.
 ms.date: 02/15/2019
 ms.openlocfilehash: d28739a87e5c7c7e6c9304c36e1ec2a73cf0d0db
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70295649"
 ---
 # <a name="key-takeaways"></a>Considerazioni principali
@@ -24,4 +24,4 @@ ms.locfileid: "70295649"
 - Azure DevOps Services semplifica notevolmente l'ambiente DevOps eseguendo la distribuzione in ambienti Docker dalle pipeline CI/CD. Queste informazioni si applicano agli ambienti Docker semplici e agli agenti di orchestrazione e microservizi avanzati basati su Azure.
 
 >[!div class="step-by-step"]
->[Precedente](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)
+>[Indietro](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)

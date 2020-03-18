@@ -3,10 +3,10 @@ title: Implementare attività in background in microservizi con IHostedService e
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Informazioni sulle nuove opzioni per usare IHostedService e BackgroundService per implementare attività in background nei microservizi .NET Core.
 ms.date: 01/30/2020
 ms.openlocfilehash: fab67c816e90c69a4d593422b4974cb9b8819807
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77502297"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Implementare attività in background in microservizi con IHostedService e la classe BackgroundService
@@ -15,21 +15,21 @@ Le attività in background e i processi pianificati sono elementi che potrebbe e
 
 Da un punto di vista generico, in .NET Core questi tipi di attività vengono chiamati *Servizi ospitati*, perché sono servizi/logica ospitati all'interno di un host, un'applicazione o un microservizio. Si noti che, in questo caso, il servizio ospitato indica semplicemente una classe con la logica di attività in background.
 
-Fin dalla versione .NET Core 2.0, il framework fornisce una nuova interfaccia denominata <xref:Microsoft.Extensions.Hosting.IHostedService> che consente di implementare facilmente i servizi ospitati. L'idea di base è che è possibile registrare più attività in background (servizi ospitati) che vengono eseguite in background mentre l'host o l'host Web è in esecuzione, come illustrato nell'immagine 6-26.
+Fin dalla versione .NET Core 2.0, il framework fornisce una nuova interfaccia denominata <xref:Microsoft.Extensions.Hosting.IHostedService> che consente di implementare facilmente i servizi ospitati. L'idea di base è che è possibile registrare più attività in background (servizi ospitati) che vengono eseguite in background mentre l'host Web o l'host è in esecuzione, come illustrato nell'immagine 6-26.
 
-![Diagramma che confronta ASP.NET Core IWebHost e .NET Core IHost.](./media/background-tasks-with-ihostedservice/ihosted-service-webhost-vs-host.png)
+![Diagramma di confronto ASP.NET Core IWebHost e IHost .NET Core.Diagram comparing to Core IWebHost and .NET Core IHost.](./media/background-tasks-with-ihostedservice/ihosted-service-webhost-vs-host.png)
 
 **Figura 6-26**. Uso di IHostedService in un WebHost rispetto a un Host
 
-ASP.NET Core 1. x e 2. x supportano `IWebHost` per i processi in background nelle app Web. .NET Core 2,1 e versioni successive supportano `IHost` per i processi in background con app console semplici. Si noti la differenza tra `WebHost` e `Host`.
+ASP.NET core `IWebHost` 1.x e 2.x supporto per i processi in background nelle applicazioni web. .NET Core 2.1 e `IHost` versioni successive supportano i processi in background con app console semplici. Si noti la differenza tra `WebHost` e `Host`.
 
-Un `WebHost` (classe base che implementa `IWebHost`) in ASP.NET Core 2,0 è l'artefatto dell'infrastruttura usato per fornire funzionalità server HTTP al processo, ad esempio quando si implementa un'app Web MVC o un servizio API Web. Fornisce tutta la bontà dell'infrastruttura in ASP.NET Core, consentendo di usare l'inserimento di dipendenze, inserire middleware nella pipeline delle richieste e simili. Il `WebHost` utilizza queste stesse `IHostedServices` per le attività in background.
+Un `WebHost` elemento (implementa classe `IWebHost`base) in ASP.NET Core 2.0 è l'elemento dell'infrastruttura utilizzato per fornire funzionalità server HTTP al processo, ad esempio quando si implementa un'app Web MVC o un servizio API Web. Fornisce tutta la novità dell'infrastruttura in ASP.NET Core, consentendo di utilizzare l'inserimento delle dipendenze, inserire middleware nella pipeline delle richieste e simili. L'utilizza `WebHost` questi `IHostedServices` stessi per le attività in background.
 
 In .NET Core 2.1 è stato introdotto un `Host` (classe di base che implementa `IHost`). In pratica, un `Host` consente di avere un'infrastruttura simile a quella che si ha con `WebHost` (aggiunta di dipendenze, i servizi ospitati e così via), ma in questo caso si avrà un processo semplice e più snello come host, senza elementi correlati a MVC, API Web o funzionalità del server HTTP.
 
-Pertanto, è possibile scegliere e creare un processo host specializzato con `IHost` per gestire i servizi ospitati e nient'altro, ad esempio un microservizio creato solo per ospitare la `IHostedServices`oppure è possibile estendere un `WebHost`ASP.NET Core esistente, ad esempio un'API Web o un'app MVC esistente ASP.NET Core.
+Pertanto, è possibile scegliere e creare `IHost` un processo host specializzato con per gestire i servizi `IHostedServices`ospitati e nient'altro, ad `WebHost`esempio un microservizio fatto solo per l'hosting di , oppure è possibile estendere in alternativa un ASP.NET Core esistente, ad esempio un'api Web di ASP.NET base o un'app MVC esistente.
 
-Ogni approccio presenta vantaggi e svantaggi in base alle esigenze aziendali e di scalabilità. In sostanza, se le attività in background non hanno nulla a che fare con HTTP (`IWebHost`), è consigliabile usare `IHost`.
+Ogni approccio presenta vantaggi e svantaggi in base alle esigenze aziendali e di scalabilità. La linea di fondo è fondamentalmente che se`IWebHost`le attività `IHost`in background non hanno nulla a che fare con HTTP ( ) è necessario utilizzare .
 
 ## <a name="registering-hosted-services-in-your-webhost-or-host"></a>Registrazione di servizi ospitati in un Host o WebHost
 
@@ -43,9 +43,9 @@ SignalR è un esempio di un elemento che usa i servizi ospitati, ma è possibile
 - L'elaborazione di messaggi da una coda di messaggi in background di un'app Web condividendo servizi comuni come `ILogger`.
 - Un'attività in background avviata con `Task.Run()`.
 
-In sostanza, è possibile eseguire l'offload di una qualsiasi di queste azioni in un'attività in background che implementa `IHostedService`.
+È possibile eseguire fondamentalmente l'offload di `IHostedService`una qualsiasi di queste azioni a un'attività in background che implementa .
 
-Il modo in cui si aggiungono uno o più `IHostedServices` nel `WebHost` o `Host` consiste nel registrarli tramite il <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions.AddHostedService%2A>metodo di estensione  in un ASP.NET Core `WebHost` o in un `Host` in .NET Core 2,1 e versioni successive. In pratica, è necessario registrare i servizi ospitati all'interno del noto metodo `ConfigureServices()` della classe `Startup`, come illustrato nel codice seguente da un tipico WebHost ASP.NET.
+Il modo in cui `IHostedServices` si `WebHost` `Host` aggiunge uno o più <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions.AddHostedService%2A>  in o è `WebHost` registrandoli `Host` tramite il metodo di estensione in un ASP.NET Core (o in un in .NET Core 2.1 e versioni successive). In pratica, è necessario registrare i servizi ospitati all'interno del noto metodo `ConfigureServices()` della classe `Startup`, come illustrato nel codice seguente da un tipico WebHost ASP.NET.
 
 ```csharp
 public IServiceProvider ConfigureServices(IServiceCollection services)
@@ -222,7 +222,7 @@ WebHost.CreateDefaultBuilder(args)
 
 ### <a name="summary-class-diagram"></a>Diagramma classi di riepilogo
 
-Nell'immagine seguente viene illustrato un riepilogo visivo delle classi e delle interfacce necessarie per l'implementazione di IHostedServices.
+The following image shows a visual summary of the classes and interfaces involved when implementing IHostedServices.
 
 ![Diagramma che mostra che IWebHost e IHost possono ospitare molti servizi.](./media/background-tasks-with-ihostedservice/class-diagram-custom-ihostedservice.png)
 
@@ -232,23 +232,23 @@ Diagramma classi: IWebHost e IHost possono ospitare molti servizi, che ereditano
 
 ### <a name="deployment-considerations-and-takeaways"></a>Considerazioni finali sulla distribuzione
 
-È importante notare che la modalità di distribuzione del `WebHost` di ASP.NET Core o del `Host` di .NET Core può incidere negativamente sulla soluzione finale. Ad esempio, se si distribuisce il `WebHost` in IIS o in un normale Servizio App di Azure, l'host può essere arrestato a causa di ricicli del pool di app. Tuttavia, se si distribuisce l'host come contenitore in un agente di orchestrazione come Kubernetes, è possibile controllare il numero di istanze attive dell'host. In più, è possibile considerare altri approcci nel cloud fatti apposta per questi scenari, ad esempio le Funzioni di Azure. Infine, se è necessario che il servizio sia sempre in esecuzione e si esegue la distribuzione in un'istanza di Windows Server, è possibile usare un servizio di Windows.
+È importante notare che la modalità di distribuzione del `WebHost` di ASP.NET Core o del `Host` di .NET Core può incidere negativamente sulla soluzione finale. Ad esempio, se si distribuisce il `WebHost` in IIS o in un normale Servizio App di Azure, l'host può essere arrestato a causa di ricicli del pool di app. Ma se si distribuisce l'host come contenitore in un orchestratore come Kubernetes, è possibile controllare il numero assicurato di istanze attive dell'host. In più, è possibile considerare altri approcci nel cloud fatti apposta per questi scenari, ad esempio le Funzioni di Azure. Infine, se è necessario che il servizio sia sempre in esecuzione e si esegue la distribuzione in un'istanza di Windows Server, è possibile usare un servizio di Windows.
 
-Tuttavia, anche per una `WebHost` distribuita in un pool di applicazioni, esistono scenari come il ripopolamento o lo scaricamento della cache in memoria dell'applicazione che sarebbe ancora applicabile.
+Ma anche `WebHost` per una distribuzione in un pool di applicazioni, esistono scenari come il ripopolamento o lo svuotamento della cache in memoria dell'applicazione che sarebbero ancora applicabili.
 
-L'interfaccia `IHostedService` offre un modo pratico per avviare attività in background in un'applicazione Web ASP.NET Core (in .NET Core 2,0 e versioni successive) o in qualsiasi processo/host (a partire da .NET Core 2,1 con `IHost`). Il vantaggio principale è la possibilità che si ottiene con l'annullamento automatico di pulire il codice delle attività in background quando è in corso la chiusura dell'host stesso.
+L'interfaccia `IHostedService` fornisce un modo pratico per avviare attività in background in un'applicazione Web ASP.NET Core (in .NET Core `IHost`2.0 e versioni successive) o in qualsiasi processo/host (a partire da .NET Core 2.1 con ). Il vantaggio principale è la possibilità che si ottiene con l'annullamento automatico di pulire il codice delle attività in background quando è in corso la chiusura dell'host stesso.
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Compilazione di un'attività pianificata in ASP.NET Core/Standard 2,0** \
+- **Compilazione di un'attività pianificata in ASP.NET Core/Standard 2.0Building a scheduled task in ASP.NET Core/Standard 2.0** \
   <https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html>
 
-- **Implementazione di IHostedService in ASP.NET Core 2,0** \
+- **Implementazione di IHostedService in ASP.NET Core 2.0Implementing IHostedService in ASP.NET Core 2.0** \
   <https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice>
 
-- **Esempio di GenericHost con ASP.NET Core 2,1** \
+- **Esempio GenericHost che usa ASP.NET Core 2.1** \
   <https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
 
 >[!div class="step-by-step"]
->[Precedente](test-aspnet-core-services-web-apps.md)
->[Successivo](implement-api-gateways-with-ocelot.md)
+>[Successivo](test-aspnet-core-services-web-apps.md)
+>[precedente](implement-api-gateways-with-ocelot.md)

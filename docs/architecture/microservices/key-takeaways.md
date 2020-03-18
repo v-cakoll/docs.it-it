@@ -3,13 +3,13 @@ title: Considerazioni principali
 description: Considerazioni principali nella guida/ebook Architettura di microservizi .NET per applicazioni .NET in contenitori, che consentono un esame rapido degli aspetti principali dell'uso di un'architettura di microservizi, quali vantaggi e svantaggi, modelli DDD per la progettazione e lo sviluppo, nonché resilienza, sicurezza e uso di agenti di orchestrazione.
 ms.date: 10/19/2018
 ms.openlocfilehash: 3b8b7be9b3903c64221cba7c6abdb1e38f5d944f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68674458"
 ---
-# <a name="key-takeaways"></a>Considerazioni principali
+# <a name="key-takeaways"></a>Risultati principali
 
 Di seguito sono riportate le considerazioni principali e le conclusioni più importanti e le considerazioni principali da questa guida.
 
@@ -33,7 +33,7 @@ Di seguito sono riportate le considerazioni principali e le conclusioni più imp
 
 **Sicurezza.** Questo mondo moderno con contenitori e microservizi può esporre nuove vulnerabilità. Esistono varie modalità per l'implementazione della sicurezza delle applicazioni di base, tramite l'autenticazione e l'autorizzazione. La sicurezza dei contenitori deve tuttavia tenere conto di altri componenti principali che generano applicazioni intrinsecamente più sicure. Un elemento strategico della creazione di app più sicure è la previsione di un modo sicuro per comunicare con altre app e sistemi, e questo spesso richiede credenziali, token, password ed elementi simili, noti come segreti dell'applicazione. Qualsiasi soluzione sicura deve osservare le procedure consigliate per la sicurezza, ad esempio la crittografia dei segreti in transito e a riposo e il blocco della perdita accidentale dei segreti quando sono usati dall'applicazione finale. Questi segreti dover essere archiviati e mantenuti in modo sicuro, ad esempio con l'uso di Azure Key Vault.
 
-**Agenti di orchestrazione.** Gli agenti di orchestrazione basati su container, come il servizio Azure Kubernetes e Azure Service Fabric, sono una parte essenziale di qualsiasi applicazione importante di microservizi basata sui contenitori. Queste applicazioni supportano una complessità elevata, si adattano alle esigenze di scalabilità e si evolvono in continuazione. Questa guida ha illustrato gli agenti di orchestrazione e il ruolo che hanno nelle soluzioni basate su microservizi e su contenitori. Se le esigenze a livello di applicazioni indirizzano verso le applicazioni in contenitori complesse, è possibile vedere risorse aggiuntive per acquisire maggiori informazioni sugli agenti di orchestrazione.
+**Orchestratori.** Gli agenti di orchestrazione basati su container, come il servizio Azure Kubernetes e Azure Service Fabric, sono una parte essenziale di qualsiasi applicazione importante di microservizi basata sui contenitori. Queste applicazioni supportano una complessità elevata, si adattano alle esigenze di scalabilità e si evolvono in continuazione. Questa guida ha illustrato gli agenti di orchestrazione e il ruolo che hanno nelle soluzioni basate su microservizi e su contenitori. Se le esigenze a livello di applicazioni indirizzano verso le applicazioni in contenitori complesse, è possibile vedere risorse aggiuntive per acquisire maggiori informazioni sugli agenti di orchestrazione.
 
 >[!div class="step-by-step"]
->[Precedente](secure-net-microservices-web-applications/azure-key-vault-protects-secrets.md)
+>[Indietro](secure-net-microservices-web-applications/azure-key-vault-protects-secrets.md)

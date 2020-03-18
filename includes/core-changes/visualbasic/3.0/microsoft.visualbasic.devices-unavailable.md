@@ -1,32 +1,32 @@
 ---
 ms.openlocfilehash: 7f528510e4158dad71280a7b1f269a231b8c60f2
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76116361"
 ---
-### <a name="types-in-microsoftvisualbasicdevices-namespace-not-available"></a>Tipi nello spazio dei nomi Microsoft. VisualBasic. Devices non disponibile
+### <a name="types-in-microsoftvisualbasicdevices-namespace-not-available"></a>Tipi nello spazio dei nomi Microsoft.VisualBasic.Devices non disponibiliTypes in Microsoft.VisualBasic.Devices namespace not available
 
-I tipi nello spazio dei nomi <xref:Microsoft.VisualBasic.Devices?displayProperty=fullName> non sono disponibili.
+I tipi <xref:Microsoft.VisualBasic.Devices?displayProperty=fullName> nello spazio dei nomi non sono disponibili.
 
 #### <a name="version-introduced"></a>Versione introdotta
 
-.NET Core 3,0 Preview 8
+.NET Core 3.0 Anteprima 8
 
-#### <a name="change-description"></a>Descrizione delle modifiche
+#### <a name="change-description"></a>Descrizione modifica:
 
-I tipi nello spazio dei nomi <xref:Microsoft.VisualBasic.Devices?displayProperty=fullName> sono disponibili in alcune versioni di anteprima di .NET Core 3,0,. Non sono più disponibili a partire da .NET Core 3,0 Preview 9.
+I tipi <xref:Microsoft.VisualBasic.Devices?displayProperty=fullName> nello spazio dei nomi erano disponibili in alcune versioni di .NET Core 3.0 Preview. Non sono più disponibili a partire da .NET Core 3.0 Preview 9.
 
 I tipi sono stati rimossi per evitare dipendenze di assembly non necessarie o modifiche di rilievo nelle versioni successive.
 
 #### <a name="recommended-action"></a>Azione consigliata
 
-Se il codice dipende dall'uso di tipi di <xref:Microsoft.VisualBasic.Devices> e dei relativi membri, potrebbe essere possibile usare un tipo o un membro corrispondente nella libreria di classi .NET. Ad esempio, la funzionalità equivalente alla classe <xref:Microsoft.VisualBasic.Devices.Clock?displayProperty=nameWithType> viene fornita dai tipi <xref:System.DateTime?displayProperty=nameWithType> e <xref:System.Environment?displayProperty=nameWithType> e la funzionalità equivalente alla classe <xref:Microsoft.VisualBasic.Devices.Ports?displayProperty=nameWithType> viene fornita dai tipi nello spazio dei nomi <xref:System.IO.Ports?displayProperty=nameWithType>.
+Se il codice dipende <xref:Microsoft.VisualBasic.Devices> dall'utilizzo dei tipi e dei relativi membri, è possibile utilizzare un tipo o un membro corrispondente nella libreria di classi .NET. Ad esempio, funzionalità <xref:Microsoft.VisualBasic.Devices.Clock?displayProperty=nameWithType> equivalenti alla <xref:System.DateTime?displayProperty=nameWithType> classe <xref:System.Environment?displayProperty=nameWithType> viene fornita dai <xref:Microsoft.VisualBasic.Devices.Ports?displayProperty=nameWithType> tipi e funzionalità equivalenti alla classe vengono fornite dai tipi nello <xref:System.IO.Ports?displayProperty=nameWithType> spazio dei nomi .
 
-#### <a name="category"></a>Categoria
+#### <a name="category"></a>Category
 
-Visual Basic -
+Visual Basic
 
 #### <a name="affected-apis"></a>API interessate
 

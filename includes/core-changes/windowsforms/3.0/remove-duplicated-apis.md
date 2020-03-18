@@ -1,18 +1,18 @@
 ---
 ms.openlocfilehash: e609b8006846cd202a6a7eeec2529cf1fbb09e7c
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937091"
 ---
-### <a name="duplicated-apis-removed-from-windows-forms"></a>API duplicate rimosse da Windows Forms
+### <a name="duplicated-apis-removed-from-windows-forms"></a>API duplicate rimosse da Windows Form
 
-Una serie di API duplicate accidentalmente nello spazio dei nomi <xref:System.Windows.Forms?displayProperty=fullName> a partire da .NET Core 3,0 Preview 4 sono state rimosse in .NET Core 3,0 RC1.
+Un numero di API accidentalmente duplicate <xref:System.Windows.Forms?displayProperty=fullName> nello spazio dei nomi a partire da .NET Core 3.0 Preview 4 sono state rimosse in .NET Core 3.0 RC1.
 
-#### <a name="change-description"></a>Descrizione delle modifiche
+#### <a name="change-description"></a>Descrizione modifica:
 
-.NET Core 3,0 Preview 4 ha inavvertitamente duplicato un numero di tipi nello spazio dei nomi <xref:System.Windows.Forms?displayProperty=fullName> già esistente nello spazio dei nomi <xref:System.ComponentModel.Design?displayProperty=fullName>. A partire da .NET Core 3,0 RC1, questi tipi duplicati non sono più disponibili. Nella tabella seguente vengono elencati il tipo originale e il tipo duplicato:
+.NET Core 3.0 Preview 4 ha inavvertitamente <xref:System.Windows.Forms?displayProperty=fullName> duplicato un numero <xref:System.ComponentModel.Design?displayProperty=fullName> di tipi nello spazio dei nomi già esistenti nello spazio dei nomi. A partire da .NET Core 3.0 RC1, questi tipi duplicati non sono più disponibili. Nella tabella seguente sono elencati il tipo originale e il tipo duplicato:
 
 > [!div class="mx-tdCol2BreakAll"]
 > |Tipo originale|Tipo duplicato|
@@ -25,19 +25,19 @@ Una serie di API duplicate accidentalmente nello spazio dei nomi <xref:System.Wi
 
 #### <a name="version-introduced"></a>Versione introdotta
 
-3,0 RC1
+3.0 RC1
 
 #### <a name="recommended-action"></a>Azione consigliata
 
-Aggiornare il codice in modo che faccia riferimento al tipo originale, come illustrato nella colonna di **tipo originale** della tabella.
+Aggiornare il codice in modo che faccia riferimento al tipo originale, come illustrato nella colonna **Tipo originale** della tabella.
 
-#### <a name="category"></a>Categoria
+#### <a name="category"></a>Category
 
 Windows Form
 
 #### <a name="affected-apis"></a>API interessate
 
-- Non rilevabile tramite l'analisi dell'API.
+- Non rilevabile tramite l'analisi API.
 
 <!--
 

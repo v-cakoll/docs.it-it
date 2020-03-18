@@ -3,10 +3,10 @@ title: Contenuto valido di oggetti XElement e XDocument3
 ms.date: 07/20/2015
 ms.assetid: 0d253586-2b97-459f-b1a7-f30f38f3ed9f
 ms.openlocfilehash: 1ad5b18e3bbc2143a56f9c8e7b34354761b4e42f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69590941"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>Contenuto valido di oggetti XElement e XDocument
@@ -45,7 +45,7 @@ In questo argomento vengono illustrati gli argomenti validi che è possibile pas
   
 - <xref:System.Xml.Linq.XAttribute>  
   
-- Qualsiasi tipo che implementa <xref:System.Collections.Generic.IEnumerable%601>.  
+- Qualsiasi tipo che implementa <xref:System.Collections.Generic.IEnumerable%601>  
   
  Se un oggetto implementa <xref:System.Collections.Generic.IEnumerable%601>, la raccolta nell'oggetto viene enumerata e vengono aggiunti tutti gli elementi della raccolta. Se la raccolta contiene oggetti <xref:System.Xml.Linq.XNode> o <xref:System.Xml.Linq.XAttribute>, ogni elemento della raccolta viene aggiunto separatamente. Se la raccolta contiene testo (oppure oggetti convertiti in testo), il testo della raccolta viene concatenato e aggiunto come un unico nodo di tipo text.  
   
@@ -75,7 +75,7 @@ In questo argomento vengono illustrati gli argomenti validi che è possibile pas
 ## <a name="constructors-and-functions-that-allow-adding-content"></a>Costruttori e funzioni che consentono l'aggiunta di contenuto  
  I metodi seguenti consentono di aggiungere contenuto figlio a un oggetto <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument>:  
   
-|Metodo|DESCRIZIONE|  
+|Metodo|Descrizione|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.%23ctor%2A>|Costruisce un oggetto <xref:System.Xml.Linq.XElement>.|  
 |<xref:System.Xml.Linq.XDocument.%23ctor%2A>|Costruisce un oggetto <xref:System.Xml.Linq.XDocument>.|  

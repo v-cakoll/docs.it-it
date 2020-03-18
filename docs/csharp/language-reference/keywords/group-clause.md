@@ -9,10 +9,10 @@ helpviewer_keywords:
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
 ms.openlocfilehash: 75a366ec24e4e48af7e87d3372950aad8d76435b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713464"
 ---
 # <a name="group-clause-c-reference"></a>Clausola group (Riferimento C#)
@@ -53,7 +53,7 @@ L'esempio seguente illustra l'uso di un valore booleano per una chiave in modo d
 
 ### <a name="grouping-by-numeric-range"></a>Raggruppamento per intervallo numerico
 
-Nell'esempio seguente viene usata un'espressione per creare le chiavi di raggruppamento numeriche che rappresentano un intervallo percentile. Si noti l'uso di [let](let-clause.md) come comoda posizione di archiviazione del risultato della chiamata a un metodo, in modo da non dover chiamare il metodo due volte nella clausola `group`. Per altre informazioni su come usare in modo sicuro i metodi nelle espressioni di query, vedere [gestire le eccezioni nelle espressioni di query](../../linq/handle-exceptions-in-query-expressions.md).
+Nell'esempio seguente viene usata un'espressione per creare le chiavi di raggruppamento numeriche che rappresentano un intervallo percentile. Si noti l'uso di [let](let-clause.md) come comoda posizione di archiviazione del risultato della chiamata a un metodo, in modo da non dover chiamare il metodo due volte nella clausola `group`. Per ulteriori informazioni su come utilizzare in modo sicuro i metodi nelle espressioni di query, vedere [Gestire le eccezioni nelle espressioni](../../linq/handle-exceptions-in-query-expressions.md)di query.
 
 [!code-csharp[cscsrefQueryKeywords#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#15)]
 
@@ -65,7 +65,7 @@ Usare una chiave composta se si vuole raggruppare gli elementi in base a più di
 group person by new {name = person.surname, city = person.city};
 ```
 
-Usare un tipo denominato se è necessario passare la variabile di query a un altro metodo. Creare una classe speciale usando proprietà implementate automaticamente per le chiavi e quindi eseguire l'override dei metodi <xref:System.Object.Equals%2A> e <xref:System.Object.GetHashCode%2A>. È anche possibile usare uno struct e in questo caso non è strettamente necessario eseguire l'override dei metodi. Per ulteriori informazioni, vedere [come implementare una classe Lightweight con proprietà implementate automaticamente](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) e [come eseguire una query per i file duplicati in un albero di directory](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). Il secondo articolo contiene un esempio di codice che illustra come usare una chiave composta con un tipo denominato.
+Usare un tipo denominato se è necessario passare la variabile di query a un altro metodo. Creare una classe speciale usando proprietà implementate automaticamente per le chiavi e quindi eseguire l'override dei metodi <xref:System.Object.Equals%2A> e <xref:System.Object.GetHashCode%2A>. È anche possibile usare uno struct e in questo caso non è strettamente necessario eseguire l'override dei metodi. Per ulteriori informazioni, vedere [Come implementare una classe leggera con proprietà implementate automaticamente](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) e Come eseguire query per i file duplicati in una struttura di [directory.](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md) Il secondo articolo contiene un esempio di codice che illustra come usare una chiave composta con un tipo denominato.
 
 ## <a name="example"></a>Esempio
 
@@ -81,7 +81,7 @@ In questo esempio viene illustrato come eseguire la logica aggiuntiva per i grup
 
 [!code-csharp[cscsrefQueryKeywords#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#17)]
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 In fase di compilazione le clausole `group` vengono convertite in chiamate al metodo <xref:System.Linq.Enumerable.GroupBy%2A>.
 
@@ -92,7 +92,7 @@ In fase di compilazione le clausole `group` vengono convertite in chiamate al me
 - <xref:System.Linq.Enumerable.ThenBy%2A>
 - <xref:System.Linq.Enumerable.ThenByDescending%2A>
 - [Parole chiave per le query](query-keywords.md)
-- [LINQ (Language-Integrated Query)](../../linq/index.md)
-- [Creare un gruppo annidato](../../linq/create-a-nested-group.md)
-- [Raggruppare i risultati di una query](../../linq/group-query-results.md)
+- [Language Integrated Query (LINQ)](../../linq/index.md)
+- [Creare un gruppo nidificato](../../linq/create-a-nested-group.md)
+- [Raggruppare i risultati delle query](../../linq/group-query-results.md)
 - [Eseguire una sottoquery su un'operazione di raggruppamento](../../linq/perform-a-subquery-on-a-grouping-operation.md)

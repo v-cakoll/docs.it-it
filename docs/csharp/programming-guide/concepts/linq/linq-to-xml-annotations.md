@@ -3,10 +3,10 @@ title: Annotazioni LINQ to XML
 ms.date: 07/20/2015
 ms.assetid: 54e7b9d0-07f5-488f-9065-b6e6b870f810
 ms.openlocfilehash: 5f1940be2fc126ff9e9c7a4cb37e5cc7fc95d3c3
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "66689948"
 ---
 # <a name="linq-to-xml-annotations"></a>Annotazioni LINQ to XML
@@ -21,7 +21,7 @@ Si noti che le annotazioni non fanno parte dell'infoset XML; non sono serializza
 
 Con le annotazioni è possibile usare i metodi seguenti:
 
-|Metodo|Description|
+|Metodo|Descrizione|
 |------------|-----------------|
 |<xref:System.Xml.Linq.XObject.AddAnnotation%2A>|Consente di aggiungere un oggetto all'elenco di annotazioni di un oggetto <xref:System.Xml.Linq.XObject>.|
 |<xref:System.Xml.Linq.XObject.Annotation%2A>|Consente di ottenere il primo oggetto annotazione del tipo specificato da un oggetto <xref:System.Xml.Linq.XObject>.|

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - -target compiler options [C#], /target:exe
 ms.assetid: bda5717d-1b91-4848-956b-fcf85c30e432
 ms.openlocfilehash: 6087a64bea5a59bfcfc5372f6a9d6eb8b9c940cb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69606462"
 ---
 # <a name="-targetexe-c-compiler-options"></a>-target:exe (opzioni del compilatore C#)
@@ -37,7 +37,7 @@ L'opzione **-target:exe** indica al compilatore di creare un file eseguibile (EX
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1. Aprire la pagine **Proprietà** del progetto.  
+1. Aprire la pagina **Proprietà** del progetto.  
   
 2. Fare clic sulla pagina delle proprietà **Applicazione**.  
   
@@ -56,4 +56,4 @@ csc in.cs
 ## <a name="see-also"></a>Vedere anche
 
 - [-target (opzioni del compilatore C#)](./target-compiler-option.md)
-- [Opzioni del compilatore C#](./index.md)
+- [Opzioni del compilatore C](./index.md)

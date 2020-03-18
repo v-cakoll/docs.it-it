@@ -1,50 +1,50 @@
 ---
-title: 'Esercitazione: installare e usare gli strumenti locali di .NET Core'
+title: 'Esercitazione: Installare e usare gli strumenti locali .NET CoreTutorial: Install and use .NET Core local tools'
 description: Informazioni su come installare e usare uno strumento .NET come strumento locale.
 ms.date: 02/12/2020
 ms.openlocfilehash: a4355886513040e2436bdbd87905e5baee2dd7a5
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156699"
 ---
-# <a name="tutorial-install-and-use-a-net-core-local-tool-using-the-net-core-cli"></a>Esercitazione: installare e usare uno strumento locale di .NET Core usando il interfaccia della riga di comando di .NET Core
+# <a name="tutorial-install-and-use-a-net-core-local-tool-using-the-net-core-cli"></a>Esercitazione: Installare e usare uno strumento locale .NET Core usando l'interfaccia della riga di comando di .NET CoreTutorial: Install and use a .NET Core local tool using the .NET Core CLI
 
-**Questo articolo si applica a:** ✔️ .net core 3,0 SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .NET Core 3.0 SDK e versioni successive
 
-Questa esercitazione illustra come installare e usare uno strumento locale. Usare uno strumento creato nella [prima esercitazione di questa serie](global-tools-how-to-create.md).
+Questo tutorial ti insegna come installare e usare uno strumento locale. Si utilizza uno strumento creato nella [prima esercitazione di questa serie.](global-tools-how-to-create.md)
 
 ## <a name="prerequisites"></a>Prerequisites
 
-* Completare la [prima esercitazione di questa serie](global-tools-how-to-create.md).
-* Installare il runtime di .NET Core 2,1.
+* Completare la [prima esercitazione di questa serie.](global-tools-how-to-create.md)
+* Installare il runtime di .NET Core 2.1.
 
-  Per questa esercitazione si installa e si usa uno strumento destinato a .NET Core 2,1, quindi è necessario che il Runtime sia installato nel computer. Per installare il runtime di 2,1, passare alla [pagina di download di .NET Core 2,1](https://dotnet.microsoft.com/download/dotnet-core/2.1) e trovare il collegamento di installazione di runtime nella colonna **Run Apps-Runtime** .
+  Per questa esercitazione si installa e si usa uno strumento destinato a .NET Core 2.1, pertanto è necessario che tale runtime sia installato nel computer. Per installare il runtime 2.1, vai alla pagina di download di [.NET Core 2.1](https://dotnet.microsoft.com/download/dotnet-core/2.1) e trova il collegamento di installazione di runtime nella colonna **Esegui app - Runtime.**
 
-## <a name="create-a-manifest-file"></a>Creazione di un file manifesto
+## <a name="create-a-manifest-file"></a>Creare un file manifestoCreate a manifest file
 
-Per installare uno strumento solo per l'accesso locale (per la directory e le sottodirectory correnti), è necessario aggiungerlo a un file manifesto.
+Per installare uno strumento solo per l'accesso locale (per la directory corrente e le sottodirectory), è necessario aggiungerlo a un file manifesto.
 
-Dalla cartella *Microsoft. botsay* passare a un livello superiore nella cartella del *repository* :
+Dalla cartella *microsoft.botsay,* passare verso l'alto di un livello fino alla cartella del *repository:*
 
 ```console
 cd ..
 ```
 
-Creare un file manifesto eseguendo il comando [DotNet New](dotnet-new.md) :
+Creare un file manifesto eseguendo il comando [dotnet new:](dotnet-new.md)
 
 ```dotnetcli
 dotnet new tool-manifest
 ```
 
-L'output indica che la creazione del file è riuscita.
+L'output indica la corretta creazione del file.
 
 ```console
 The template "Dotnet local tool manifest file" was created successfully.
 ```
 
-Il file *. config/DotNet-Tools. JSON* non contiene ancora strumenti:
+Il file *.config/dotnet-tools.json* non contiene ancora strumenti:
 
 ```json
 {
@@ -54,19 +54,19 @@ Il file *. config/DotNet-Tools. JSON* non contiene ancora strumenti:
 }
 ```
 
-Gli strumenti elencati in un file manifesto sono disponibili per la directory e le sottodirectory correnti. La directory corrente è quella che contiene la directory *. config* con il file manifesto.
+Gli strumenti elencati in un file manifesto sono disponibili per la directory e le sottodirectory correnti. La directory corrente è quella che contiene la directory *.config* con il file manifesto.
 
-Quando si usa un comando CLI che fa riferimento a uno strumento locale, l'SDK Cerca un file manifesto nella directory corrente e nelle directory padre. Se trova un file manifesto, ma il file non include lo strumento a cui si fa riferimento, continua la ricerca nelle directory padre. La ricerca termina quando trova lo strumento a cui si fa riferimento o trova un file manifesto con `isRoot` impostato su `true`.
+Quando si utilizza un comando dell'interfaccia della riga di comando che fa riferimento a uno strumento locale, l'SDK cerca un file manifesto nella directory corrente e nelle directory padre. Se trova un file manifesto, ma il file non include lo strumento di riferimento, continua la ricerca verso l'alto nelle directory padre. La ricerca termina quando trova lo strumento di riferimento `isRoot` o `true`trova un file manifesto con impostato su .
 
 ## <a name="install-botsay-as-a-local-tool"></a>Installare botsay come strumento locale
 
-Installare lo strumento dal pacchetto creato nella prima esercitazione:
+Installare lo strumento dal pacchetto creato nella prima esercitazione:Install the tool from the package that you created in the first tutorial:
 
 ```dotnetcli
 dotnet tool install --add-source ./microsoft.botsay/nupkg microsoft.botsay
 ```
 
-Questo comando aggiunge lo strumento al file manifesto creato nel passaggio precedente. L'output del comando Mostra il file manifesto in cui si trova lo strumento appena installato:
+Questo comando aggiunge lo strumento al file manifesto creato nel passaggio precedente. L'output del comando mostra in quale file manifesto si trova lo strumento appena installato:
 
  ```console
  You can invoke the tool from this directory using the following command:
@@ -75,7 +75,7 @@ Questo comando aggiunge lo strumento al file manifesto creato nel passaggio prec
  Entry is added to the manifest file /home/name/repository/.config/dotnet-tools.json
  ```
 
-Il file *. config/DotNet-Tools. JSON* dispone ora di uno strumento:
+Il file .config/dotnet-tools.json dispone ora di uno strumento:The *.config/dotnet-tools.json* file now has one tool:
 
 ```json
 {
@@ -94,17 +94,17 @@ Il file *. config/DotNet-Tools. JSON* dispone ora di uno strumento:
 
 ## <a name="use-the-tool"></a>Usare lo strumento
 
-Richiamare lo strumento eseguendo il comando `dotnet tool run` dalla cartella *repository* :
+Richiamare lo strumento `dotnet tool run` eseguendo il comando dalla cartella del *repository:*
 
 ```dotnetcli
 dotnet tool run botsay hello from the bot
 ```
 
-## <a name="restore-a-local-tool-installed-by-others"></a>Ripristinare uno strumento locale installato da altri utenti
+## <a name="restore-a-local-tool-installed-by-others"></a>Ripristinare uno strumento locale installato da altri
 
-Viene in genere installato uno strumento locale nella directory radice del repository. Dopo l'archiviazione del file manifesto nel repository, altri sviluppatori possono ottenere il file manifesto più recente. Per installare tutti gli strumenti elencati nel file manifesto, è possibile eseguire un singolo comando `dotnet tool restore`.
+In genere si installa uno strumento locale nella directory radice del repository. Dopo aver archiviato il file manifesto nel repository, altri sviluppatori possono ottenere il file manifesto più recente. Per installare tutti gli strumenti elencati nel file `dotnet tool restore` manifesto, è possibile eseguire un singolo comando.
 
-1. Aprire il file *config/DotNet-Tools. JSON* e sostituire il contenuto con il codice JSON seguente:
+1. Aprire il file *.config/dotnet-tools.json* e sostituire il contenuto con il seguente codice JSON:
 
    ```json
    {
@@ -127,11 +127,11 @@ Viene in genere installato uno strumento locale nella directory radice del repos
    }
    ```
 
-1. Sostituire `<name>` con il nome usato per creare il progetto.
+1. Sostituire `<name>` con il nome utilizzato per creare il progetto.
 
 1. Salvare le modifiche.
 
-   Per apportare questa modifica, è possibile ottenere la versione più recente dal repository dopo che un altro utente ha installato il pacchetto `dotnetsay` per la directory del progetto.
+   Apportare questa modifica equivale a ottenere la versione più recente `dotnetsay` dal repository dopo che un altro utente ha installato il pacchetto per la directory del progetto.
 
 1. Eseguire il comando `dotnet tool restore`.
 
@@ -139,7 +139,7 @@ Viene in genere installato uno strumento locale nella directory radice del repos
    dotnet tool restore
    ```
 
-   Il comando genera un output simile all'esempio seguente:
+   Il comando produce output simile all'esempio seguente:The command produces output like the following example:
 
    ```console
    Tool 'microsoft.botsay' (version '1.0.0') was restored. Available commands: botsay
@@ -153,7 +153,7 @@ Viene in genere installato uno strumento locale nella directory radice del repos
    dotnet tool list
    ```
 
-   L'output è un elenco di pacchetti e comandi, in modo simile all'esempio seguente:
+   L'output è un elenco di pacchetti e comandi, simile all'esempio seguente:The output is a list of packages and commands, similar to the following example:
 
    ```console
    Package Id      Version      Commands       Manifest
@@ -171,7 +171,7 @@ Viene in genere installato uno strumento locale nella directory radice del repos
 
 ## <a name="update-a-local-tool"></a>Aggiornare uno strumento locale
 
-La versione installata dello strumento locale `dotnetsay` è 2.1.3.  La versione più recente è 2.1.4. Usare il comando [DotNet Tool Update](dotnet-tool-update.md) per aggiornare lo strumento alla versione più recente.
+La versione installata `dotnetsay` dello strumento locale è 2.1.3.  L'ultima versione è 2.1.4. Utilizzare il comando [dotnet tool update](dotnet-tool-update.md) per aggiornare lo strumento alla versione più recente.
 
 ```dotnetcli
 dotnet tool update dotnetsay
@@ -184,11 +184,11 @@ Tool 'dotnetsay' was successfully updated from version '2.1.3' to version '2.1.4
 (manifest file /home/name/repository/.config/dotnet-tools.json).
 ```
 
-Il comando Update trova il primo file manifesto che contiene l'ID del pacchetto e lo aggiorna. Se non è presente alcun ID pacchetto in un file manifesto nell'ambito della ricerca, l'SDK aggiunge una nuova voce al file manifesto più vicino. L'ambito di ricerca è attivo attraverso le directory padre fino a quando non viene trovato un file manifesto con `isRoot = true`.
+Il comando update trova il primo file manifesto che contiene l'ID del pacchetto e lo aggiorna. Se tale ID pacchetto non è presente in alcun file manifesto incluso nell'ambito della ricerca, l'SDK aggiunge una nuova voce al file manifesto più vicino. L'ambito di ricerca si trova tramite le directory padre finché non viene trovato un file manifesto con. `isRoot = true`
 
-## <a name="remove-local-tools"></a>Rimuovi strumenti locali
+## <a name="remove-local-tools"></a>Rimuovere gli strumenti locali
 
-Rimuovere gli strumenti installati eseguendo il comando [DotNet Tool uninstall](dotnet-tool-uninstall.md) :
+Rimuovere gli strumenti installati eseguendo il comando [dotnet tool uninstall:](dotnet-tool-uninstall.md)
 
 ```dotnetcli
 dotnet tool uninstall microsoft.botsay
@@ -200,8 +200,8 @@ dotnet tool uninstall dotnetsay
 
 ## <a name="troubleshoot"></a>Risolvere problemi
 
-Se viene visualizzato un messaggio di errore mentre si segue l'esercitazione, vedere [risolvere i problemi di utilizzo degli strumenti .NET Core](troubleshoot-usage-issues.md).
+Se viene visualizzato un messaggio di errore durante l'esercitazione, vedere Risolvere i problemi di [utilizzo degli strumenti .NET Core](troubleshoot-usage-issues.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-Per altre informazioni, vedere [strumenti di .NET Core](global-tools.md)
+Per altre informazioni, vedere [Strumenti di .NET CoreFor](global-tools.md) more information, see .NET Core tools

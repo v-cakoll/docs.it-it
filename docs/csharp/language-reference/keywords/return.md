@@ -9,10 +9,10 @@ helpviewer_keywords:
 - return keyword [C#]
 ms.assetid: 6da6e152-5b58-4448-8f3f-470dd0617ecd
 ms.openlocfilehash: 116bad7a1f9f61311d287c575b52547d63c9e1c0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713131"
 ---
 # <a name="return-c-reference"></a>return (Riferimenti per C#)
@@ -33,7 +33,7 @@ L'istruzione `return` termina l'esecuzione del metodo in cui viene visualizzata 
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
+- [Guida di riferimento a C](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](index.md)
-- [Istruzione return](/cpp/cpp/return-statement-cpp)
+- [Return Statement (istruzione di ritorno)](/cpp/cpp/return-statement-cpp)

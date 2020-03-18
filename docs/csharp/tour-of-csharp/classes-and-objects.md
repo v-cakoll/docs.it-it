@@ -1,13 +1,13 @@
 ---
 title: Classi e oggetti in C# - Panoramica del linguaggio C#
-description: Introduzione a C# Leggere questa panoramica di classi, oggetti ed ereditarietà
+description: Introduzione a C# Leggere questa panoramica di classi, oggetti ed ereditarietàRead this overview of classes, objects, and inheritance
 ms.date: 02/27/2020
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
 ms.openlocfilehash: c178e11b5667905f75538555c8a309e2fdb4a9ef
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78159182"
 ---
 # <a name="classes-and-objects"></a>Classi e oggetti
@@ -16,7 +16,7 @@ Le *classi* sono il tipo C# più importante. Una classe è una struttura di dati
 
 Le nuove classi vengono create tramite dichiarazioni di classe. Una dichiarazione di classe inizia con un'intestazione che specifica gli attributi e i modificatori della classe, il nome della classe, la classe di base (se disponibile) e le interfacce implementate dalla classe. L'intestazione è seguita dal corpo della classe, costituito da un elenco di dichiarazioni di membro scritte tra i delimitatori `{` e `}`.
 
-Nel codice seguente viene illustrata una dichiarazione di una classe semplice denominata `Point`:
+Nel codice seguente viene illustrata `Point`una dichiarazione di una classe semplice denominata :
 
 [!code-csharp[PointClass](~/samples/snippets/csharp/tour/classes-and-objects/Point.cs#L3-L11)]
 
@@ -24,13 +24,13 @@ Le istanze delle classi vengono create usando l'operatore `new`, che alloca memo
 
 [!code-csharp[PointExample](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L9-L10)]
 
-La memoria occupata da un oggetto viene automaticamente recuperata nel momento in cui l'oggetto non è più raggiungibile. Non è né necessario né possibile deallocare in modo esplicito C#gli oggetti in.
+La memoria occupata da un oggetto viene automaticamente recuperata nel momento in cui l'oggetto non è più raggiungibile. Non è né necessario né possibile deallocare in modo esplicito gli oggetti in C .
 
 ## <a name="members"></a>Members
 
 I membri di una classe possono essere membri statici o membri di istanza. I primi appartengono a classi, mentre i secondi appartengono a oggetti, ovvero a istanze di classi.
 
-Nell'elenco seguente viene fornita una panoramica dei tipi di membri che possono essere contenuti in una classe.
+Nell'elenco seguente viene fornita una panoramica dei tipi di membri che una classe può contenere.
 
 - Costanti
   - Valori costanti associati alla classe
@@ -55,20 +55,20 @@ Nell'elenco seguente viene fornita una panoramica dei tipi di membri che possono
 
 ## <a name="accessibility"></a>Accessibilità
 
-Ogni membro di una classe dispone di un'accessibilità associata, che controlla le aree del testo del programma che possono accedere al membro. Esistono sei diverse forme di accessibilità, I modificatori di accesso sono riepilogati di seguito.
+A ogni membro di una classe è associata un'accessibilità, che controlla le aree del testo del programma che possono accedere al membro. Esistono sei diverse forme di accessibilità, I modificatori di accesso sono riepilogati di seguito.
 
 - `public`
   - L'accesso non è limitato.
 - `protected`
   - L'accesso è limitato a questa classe o alle classi derivate da questa classe.
 - `internal`
-  - L'accesso è limitato all'assembly corrente (. exe,. dll e così via).
+  - L'accesso è limitato all'assembly corrente (.exe, .dll e così via).
 - `protected internal`
-  - L'accesso è limitato alla classe che lo contiene, le classi derivate dalla classe che lo contiene o le classi all'interno dello stesso assembly.
+  - L'accesso è limitato alla classe contenitore, alle classi derivate dalla classe o alle classi che lo contengono all'interno dello stesso assembly.
 - `private`
   - L'accesso è limitato a questa classe.
 - `private protected`
-  - L'accesso è limitato alla classe o alle classi che lo contengono derivate dal tipo che lo contiene nello stesso assembly.
+  - L'accesso è limitato alla classe o alle classi che lo contengono derivate dal tipo che lo contiene all'interno dello stesso assembly.
 
 ## <a name="type-parameters"></a>Parametri di tipo
 
@@ -76,7 +76,7 @@ Una definizione di classe può specificare un set di parametri di tipo se si fa 
 
 [!code-csharp[Pair](~/samples/snippets/csharp/tour/classes-and-objects/Pair.cs#L3-L7)]
 
-Un tipo di classe dichiarato per accettare parametri di tipo prende il nome di *tipo di classe generico*. I tipi struct, Interface e Delegate possono anche essere generici.
+Un tipo di classe dichiarato per accettare parametri di tipo prende il nome di *tipo di classe generico*. Anche i tipi struct, interfaccia e delegato possono essere generici.
 Quando si usa la classe generica, è necessario specificare argomenti di tipo per ogni parametro di tipo:
 
 [!code-csharp[PairExample](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L15-L17)]
@@ -91,7 +91,7 @@ Una dichiarazione di classe può specificare una classe di base se si fa seguire
 
 Una classe eredita i membri della relativa classe di base. L'ereditarietà prevede che una classe contenga in modo implicito tutti i membri della relativa classe di base (ad eccezione dell'istanza e dei costruttori statici) e i relativi finalizzatori. Una classe derivata può aggiungere nuovi membri ai membri che eredita, ma non può rimuovere la definizione di un membro ereditato. Nell'esempio precedente `Point3D` eredita i campi `x` e `y` da `Point` e ogni istanza di `Point3D` contiene tre campi: `x`, `y` e `z`.
 
-Un tipo di classe viene implicitamente convertito in uno dei relativi tipi di classe di base. Una variabile di un tipo di classe può fare riferimento a un'istanza della classe o a un'istanza di una classe derivata. Nel caso delle dichiarazioni di classe precedenti, ad esempio, una variabile di tipo `Point` può fare riferimento a `Point` o `Point3D`:
+Un tipo di classe viene implicitamente convertito in uno dei relativi tipi di classe di base. Una variabile di un tipo di classe può fare riferimento a un'istanza di tale classe o a un'istanza di qualsiasi classe derivata. Nel caso delle dichiarazioni di classe precedenti, ad esempio, una variabile di tipo `Point` può fare riferimento a `Point` o `Point3D`:
 
 [!code-csharp[Point3DExample](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L22-L23)]
 
@@ -99,11 +99,11 @@ Un tipo di classe viene implicitamente convertito in uno dei relativi tipi di cl
 
 Un *campo* è una variabile associata a una classe o a un'istanza di una classe.
 
-Un campo dichiarato con il modificatore static definisce un campo statico, che identifica esattamente una posizione di memoria. Indipendentemente dal numero di istanze di una classe create, esiste una sola copia di un campo statico.
+Un campo dichiarato con il modificatore static definisce un campo statico, che identifica esattamente una posizione di memoria. Indipendentemente dal numero di istanze di una classe vengono create, è presente una sola copia di un campo statico.
 
 Un campo dichiarato senza il modificatore static definisce un campo di istanza. Ogni istanza di una classe contiene una copia separata di tutti i campi di istanza della classe.
 
-Nell'esempio seguente, ogni istanza della classe `Color` dispone di una copia separata dei campi di istanza `r`, `g`e `b`, ma esiste solo una copia dei campi statici `Black`, `White`, `Red`, `Green`e `Blue`:
+Nell'esempio seguente ogni istanza `Color` della classe dispone `r`di `g`una `b` copia separata dei campi di istanza `Black` `White`, `Red` `Green`, ma è presente una sola copia dei campi , , , e `Blue` statica :
 
 [!code-csharp[ColorClass](~/samples/snippets/csharp/tour/classes-and-objects/Color.cs#L3-L17)]
 
@@ -113,7 +113,7 @@ Come illustrato nell'esempio precedente, i *campi di sola lettura* possono esser
 
 Un *metodo* è un membro che implementa un calcolo o un'azione che può essere eseguita da un oggetto o una classe. I *metodi statici* sono accessibili tramite la classe, mentre i *metodi di istanza* sono accessibili tramite istanze della classe.
 
-I metodi possono avere un elenco di *parametri*, che rappresentano valori o riferimenti a variabili passati al metodo, e un *tipo restituito*, che specifica il tipo di valore calcolato e restituito dal metodo. Il tipo restituito di un metodo è `void` se non restituisce un valore.
+I metodi possono avere un elenco di *parametri*, che rappresentano valori o riferimenti a variabili passati al metodo, e un *tipo restituito*, che specifica il tipo di valore calcolato e restituito dal metodo. Il tipo restituito di `void` un metodo è se non restituisce un valore.
 
 Come i tipi, anche i metodi possono avere un set di parametri di tipo per i quali è necessario specificare argomenti di tipo quando vengono chiamati. A differenza dei tipi, gli argomenti di tipo possono essere spesso dedotti dagli argomenti di una chiamata al metodo e non devono essere assegnati in modo esplicito.
 
@@ -123,7 +123,7 @@ La *firma* di un metodo deve essere univoca nell'ambito della classe in cui vien
 
 I parametri consentono di passare ai metodi valori o riferimenti a variabili. I parametri di un metodo ottengono i valori effettivi dagli *argomenti* specificati quando viene richiamato il metodo. Esistono quattro tipi di parametri: parametri di valore, parametri di riferimento, i parametri di output e matrici di parametri.
 
-Un *parametro di valore* viene usato per passare argomenti di input. Corrisponde a una variabile locale che ottiene il valore iniziale dall'argomento passato per il parametro. Le modifiche a un parametro di valore non influiscono sull'argomento passato per il parametro.
+Un *parametro di valore* viene usato per passare argomenti di input. Corrisponde a una variabile locale che ottiene il valore iniziale dall'argomento passato per il parametro. Le modifiche apportate a un parametro value non influiscono sull'argomento passato per il parametro.
 
 I parametri di valore possono essere facoltativi specificando un valore predefinito. In questo caso gli argomenti corrispondenti possono essere omessi.
 
@@ -135,11 +135,11 @@ Un *parametro di output* viene usato per passare argomenti per riferimento. È s
 
 [!code-csharp[OutExample](~/samples/snippets/csharp/tour/classes-and-objects/OutExample.cs#L3-L17)]
 
-Una *matrice di parametri* consente di passare un numero variabile di argomenti a un metodo. Una matrice di parametri viene dichiarata con il modificatore `params`. Solo l'ultimo parametro di un metodo può essere costituito da una matrice di parametri, che deve essere sempre di tipo unidimensionale. I metodi Write e WriteLine della classe <xref:System.Console?displayProperty=nameWithType> sono ottimi esempi per illustrare l'uso delle matrici di parametri. Sono dichiarati come indicato di seguito.
+Una *matrice di parametri* consente di passare un numero variabile di argomenti a un metodo. Una matrice di parametri viene dichiarata con il modificatore `params`. Solo l'ultimo parametro di un metodo può essere costituito da una matrice di parametri, che deve essere sempre di tipo unidimensionale. I metodi Write e WriteLine della classe <xref:System.Console?displayProperty=nameWithType> sono ottimi esempi per illustrare l'uso delle matrici di parametri. Sono dichiarati come segue.
 
 [!code-csharp[ConsoleExample](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L78-L83)]
 
-All'interno di un metodo, una matrice di parametri si comporta esattamente come un normale parametro di tipo matrice. Tuttavia, in una chiamata a un metodo con una matrice di parametri, è possibile passare un solo argomento del tipo di matrice di parametri o un numero qualsiasi di argomenti del tipo di elemento della matrice di parametri. Nel secondo caso, un'istanza di matrice viene automaticamente creata e inizializzata con gli argomenti specificati. Esempio
+All'interno di un metodo, una matrice di parametri si comporta esattamente come un normale parametro di tipo matrice. Tuttavia, in una chiamata di un metodo con una matrice di parametri, è possibile passare un singolo argomento del tipo di matrice di parametri o un numero qualsiasi di argomenti del tipo di elemento della matrice di parametri. Nel secondo caso, un'istanza di matrice viene automaticamente creata e inizializzata con gli argomenti specificati. Questo esempio
 
 [!code-csharp[StringFormat](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L55-L55)]
 
@@ -155,21 +155,21 @@ Il corpo di un metodo può dichiarare variabili specifiche per la chiamata del m
 
 [!code-csharp[Squares](~/samples/snippets/csharp/tour/classes-and-objects/Squares.cs#L3-L17)]
 
-In C# è necessario *assegnare esplicitamente* una variabile locale prima di poterne ottenere il valore. Se, ad esempio, la dichiarazione del `i` precedente non includeva un valore iniziale, il compilatore segnalava un errore per gli utilizzi successivi di `i` perché `i` non sarebbe stato assegnato definitivamente a questi punti del programma.
+In C# è necessario *assegnare esplicitamente* una variabile locale prima di poterne ottenere il valore. Ad esempio, se la `i` dichiarazione del precedente non include un valore iniziale, il `i` `i` compilatore segnalerà un errore per gli utilizzi successivi di perché non verrebbe assegnato in modo definito in quei punti del programma.
 
-Un metodo può usare istruzioni `return` per restituire il controllo al chiamante. In un metodo che restituisce `void`, le istruzioni `return` non possono specificare un'espressione. In un metodo che restituisce un valore diverso da void, le istruzioni `return` devono includere un'espressione che calcola il valore restituito.
+Un metodo può usare istruzioni `return` per restituire il controllo al chiamante. In un metodo `void` `return` che restituisce , le istruzioni non possono specificare un'espressione. In un metodo che restituisce un valore diverso da void, le istruzioni `return` devono includere un'espressione che calcola il valore restituito.
 
 ### <a name="static-and-instance-methods"></a>Metodi statici e di istanza
 
-Un metodo dichiarato con un modificatore static è un *metodo statico*. Un metodo statico non agisce su un'istanza specifica e può accedere direttamente ai membri statici.
+Un metodo dichiarato con un modificatore static è un *metodo statico*. Un metodo statico non opera su un'istanza specifica e può accedere solo direttamente ai membri statici.
 
-Un metodo dichiarato senza un modificatore static è un *metodo di istanza*. Questo metodo agisce su un'istanza specifica e può accedere a membri statici e di istanza. L'istanza in cui è stato richiamato un metodo di istanza è accessibile in modo esplicito come `this`. Si tratta di un errore per fare riferimento a `this` in un metodo statico.
+Un metodo dichiarato senza un modificatore static è un *metodo di istanza*. Questo metodo agisce su un'istanza specifica e può accedere a membri statici e di istanza. L'istanza in cui è stato richiamato un metodo di istanza è accessibile in modo esplicito come `this`. È un errore a `this` cui fare riferimento in un metodo statico.
 
 La classe `Entity` seguente contiene sia membri statici sia membri di istanza.
 
 [!code-csharp[Entity](~/samples/snippets/csharp/tour/classes-and-objects/Entity.cs#L16-L36)]
 
-Ogni istanza di `Entity` contiene un numero di serie (e presumibilmente alcune altre informazioni non illustrate qui). Il costruttore `Entity` (simile a un metodo di istanza) inizializza la nuova istanza con il successivo numero di serie disponibile. Poiché il costruttore è un membro di istanza, è autorizzato ad accedere sia al campo `serialNo` istanza sia al campo statico `nextSerialNo`.
+Ogni `Entity` istanza contiene un numero di serie (e presumibilmente alcune altre informazioni che non sono mostrate qui). Il costruttore `Entity` (simile a un metodo di istanza) inizializza la nuova istanza con il successivo numero di serie disponibile. Poiché il costruttore è un membro di `serialNo` istanza, è `nextSerialNo` consentito accedere sia al campo di istanza che al campo statico.
 
 I metodi statici `GetNextSerialNo` e `SetNextSerialNo` possono accedere al campo statico `nextSerialNo`, ma si verificherebbe un errore se accedessero direttamente al campo di istanza `serialNo`.
 
@@ -177,7 +177,7 @@ Nell'esempio seguente viene illustrato l'uso della classe Entity.
 
 [!code-csharp[EntityExample](~/samples/snippets/csharp/tour/classes-and-objects/Entity.cs#L3-L15)]
 
-I metodi statici `SetNextSerialNo` e `GetNextSerialNo` vengono richiamati sulla classe mentre viene richiamato il metodo di istanza `GetSerialNo` sulle istanze della classe.
+I `SetNextSerialNo` `GetNextSerialNo` metodi e statici vengono richiamati sulla classe, mentre il `GetSerialNo` metodo di istanza viene richiamato sulle istanze della classe.
 
 ### <a name="virtual-override-and-abstract-methods"></a>Metodi virtuali, di override e astratti
 
@@ -189,7 +189,7 @@ Un metodo virtuale può essere *sottoposto a override* in una classe derivata. S
 
 Un *metodo astratto* è un metodo virtuale senza implementazione. Viene dichiarato con il modificatore abstract ed è consentito solo in una classe anch'essa dichiarata astratta. Un metodo astratto deve essere sottoposto a override in ogni classe derivata non astratta.
 
-Nell'esempio seguente viene dichiarata una classe astratta, `Expression`, che rappresenta un nodo dell'albero delle espressioni, e tre classi derivate, `Constant`, `VariableReference` e `Operation`, che implementano i nodi dell'albero delle espressioni relativi a costanti, riferimenti a variabili e operazioni aritmetiche. Questo esempio è simile a, ma non deve essere confuso con i tipi di albero delle espressioni.
+Nell'esempio seguente viene dichiarata una classe astratta, `Expression`, che rappresenta un nodo dell'albero delle espressioni, e tre classi derivate, `Constant`, `VariableReference` e `Operation`, che implementano i nodi dell'albero delle espressioni relativi a costanti, riferimenti a variabili e operazioni aritmetiche. (Questo esempio è simile, ma non deve essere confuso con i tipi di struttura ad albero dell'espressione).
 
 [!code-csharp[ExpressionClass](~/samples/snippets/csharp/tour/classes-and-objects/Expressions.cs#L3-L61)]
 
@@ -207,7 +207,7 @@ Il programma seguente usa le classi `Expression` per valutare l'espressione `x *
 
 ### <a name="method-overloading"></a>Overload di un metodo
 
-L'*overload* di un metodo consente a più metodi della stessa classe di avere lo stesso nome, purché abbiano firme univoche. Quando si compila una chiamata di un metodo di overload, il compilatore usa la *risoluzione dell'overload* per determinare il metodo specifico da richiamare. La risoluzione dell'overload trova il metodo che meglio corrisponde agli argomenti o segnala un errore se non riesce a trovare alcuna corrispondenza. Nell'esempio seguente viene illustrato il funzionamento effettivo della risoluzione dell'overload. Il commento per ogni chiamata nel metodo `UsageExample` indica quale metodo viene richiamato.
+L'*overload* di un metodo consente a più metodi della stessa classe di avere lo stesso nome, purché abbiano firme univoche. Quando si compila una chiamata di un metodo di overload, il compilatore usa la *risoluzione dell'overload* per determinare il metodo specifico da richiamare. La risoluzione dell'overload trova il metodo che meglio corrisponde agli argomenti o segnala un errore se non riesce a trovare alcuna corrispondenza. Nell'esempio seguente viene illustrato il funzionamento effettivo della risoluzione dell'overload. Il commento per ogni `UsageExample` chiamata nel metodo mostra quale metodo viene richiamato.
 
 [!code-csharp[OverloadUsage](~/samples/snippets/csharp/tour/classes-and-objects/Overloading.cs#L3-L41)]
 
@@ -215,9 +215,9 @@ Come illustrato nell'esempio, è sempre possibile selezionare un metodo specific
 
 ## <a name="other-function-members"></a>Altri membri di funzione
 
-I membri che contengono codice eseguibile sono noti come *membri funzione* di una classe. Nella sezione precedente vengono descritti i metodi, ovvero i tipi principali di membri di funzione. In questa sezione vengono descritti altri membri di funzione supportati da C#: costruttori, proprietà, indicizzatori, eventi, operatori e finalizzatori.
+I membri che contengono codice eseguibile sono noti come *membri funzione* di una classe. Nella sezione precedente vengono descritti i metodi, che sono i tipi principali dei membri funzione. In questa sezione vengono descritti altri membri di funzione supportati da C#: costruttori, proprietà, indicizzatori, eventi, operatori e finalizzatori.
 
-Nell'esempio seguente viene illustrata una classe generica denominata `MyList<T>`, che implementa un elenco di oggetti espandibile. Nella classe sono contenuti alcuni esempi di membri di funzione più comuni.
+Nell'esempio seguente viene `MyList<T>`illustrata una classe generica denominata , che implementa un elenco di oggetti che può essere creato. Nella classe sono contenuti alcuni esempi di membri di funzione più comuni.
 
 > [!NOTE]
 > Questo esempio crea una classe `MyList` che non corrisponde alla classe <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> .NET standard. Illustra i concetti necessari per questa presentazione, ma non può essere usata in sostituzione di tale classe.
@@ -226,7 +226,7 @@ Nell'esempio seguente viene illustrata una classe generica denominata `MyList<T>
 
 ### <a name="constructors"></a>Costruttori
 
-C# supporta sia costruttori di istanza sia costruttori statici. Un *costruttore di istanza* è un membro che implementa le azioni necessarie per inizializzare un'istanza di una classe, Un *costruttore statico* è un membro che implementa le azioni necessarie per inizializzare una classe quando viene caricata per la prima volta.
+C# supporta sia costruttori di istanza sia costruttori statici. Un *costruttore di istanza* è un membro che implementa le azioni necessarie per inizializzare un'istanza di una classe, Un *costruttore statico* è un membro che implementa le azioni necessarie per inizializzare una classe stessa quando viene caricata per la prima volta.
 
 Un costruttore viene dichiarato come un metodo, senza tipo restituito e con lo stesso nome della classe in cui è contenuto. Se una dichiarazione di costruttore include un modificatore static, dichiara un costruttore statico. In caso contrario, dichiara un costruttore di istanza.
 
@@ -234,11 +234,11 @@ I costruttori di istanza possono essere sottoposti a overload e avere parametri 
 
 [!code-csharp[ListExample1](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L95-L96)]
 
-A differenza di altri membri, i costruttori di istanza non vengono ereditati e una classe non ha costruttori di istanza diversi da quelli effettivamente dichiarati nella classe. Se per una classe non è specificato alcun costruttore di istanza, ne viene automaticamente fornito uno vuoto senza parametri.
+A differenza di altri membri, i costruttori di istanza non vengono ereditati e una classe non dispone di costruttori di istanza diversi da quelli effettivamente dichiarati nella classe. Se per una classe non è specificato alcun costruttore di istanza, ne viene automaticamente fornito uno vuoto senza parametri.
 
 ### <a name="properties"></a>Proprietà
 
-Le *proprietà* sono una naturale estensione dei campi. Entrambi sono membri denominati con tipi associati e la sintassi per accedere ai campi e alle proprietà è identica. Tuttavia, a differenza dei campi, le proprietà non denotano le posizioni di archiviazione. ma hanno *funzioni di accesso* che specificano le istruzioni da eseguire nel momento in cui ne vengono letti o scritti i valori.
+Le *proprietà* sono una naturale estensione dei campi. Entrambi sono membri denominati con tipi associati e la sintassi per accedere ai campi e alle proprietà è identica. Tuttavia, a differenza dei campi, le proprietà non indicano le posizioni di archiviazione. ma hanno *funzioni di accesso* che specificano le istruzioni da eseguire nel momento in cui ne vengono letti o scritti i valori.
 
 Una proprietà viene dichiarata come un campo, con la sola differenza che la dichiarazione termina con una funzione di accesso get e/o set scritta tra i delimitatori `{` e `}`, anziché con un punto e virgola. Una proprietà che include entrambe le funzioni di accesso get e set è una *proprietà di lettura/scrittura*, una proprietà che include solo una funzione di accesso get è una *proprietà di sola lettura* e una proprietà che include solo una funzione di accesso set è una *proprietà di sola scrittura*.
 
@@ -246,7 +246,7 @@ Una funzione di accesso get corrisponde a un metodo senza parametri con un valor
 
 Una funzione di accesso set corrisponde a un metodo con un singolo valore di parametro denominato e senza tipo restituito. Quando si fa riferimento a una proprietà come destinazione di un'assegnazione o come operando di ++ o --, la funzione di accesso set viene richiamata con un argomento che fornisce il nuovo valore.
 
-La classe `MyList<T>` dichiara due proprietà, `Count` e `Capacity`, che sono rispettivamente di sola lettura e di lettura/scrittura. Il codice seguente è un esempio di utilizzo di queste proprietà:
+La classe `MyList<T>` dichiara due proprietà, `Count` e `Capacity`, che sono rispettivamente di sola lettura e di lettura/scrittura. Il codice seguente è un esempio di utilizzo di queste proprietà:The following code is an example of use of these properties:
 
 [!code-csharp[ListExample2](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L101-L104)]
 
@@ -268,7 +268,7 @@ Gli indicizzatori possono essere sottoposti a overload, ovvero una classe può d
 
 Un *evento* è un membro che consente a una classe o a un oggetto di inviare notifiche. Un evento viene dichiarato come un campo, con la sola differenza che la dichiarazione deve includere una parola chiave evento e il tipo deve essere un tipo delegato.
 
-All'interno di una classe che dichiara un membro evento, l'evento si comporta esattamente come un campo di un tipo delegato (purché l'evento non sia astratto e non dichiara le funzioni di accesso). Il campo archivia un riferimento a un delegato che rappresenta i gestori eventi aggiunti all'evento. Se non è presente alcun gestore eventi, il campo è `null`.
+All'interno di una classe che dichiara un membro dell'evento, l'evento si comporta come un campo di un tipo delegato (purché l'evento non sia astratto e non dichiari funzioni di accesso). Il campo archivia un riferimento a un delegato che rappresenta i gestori eventi aggiunti all'evento. Se non è presente alcun gestore eventi, il campo è `null`.
 
 La classe `MyList<T>` dichiara un singolo membro di evento denominato `Changed`, con cui si indica che un nuovo elemento è stato aggiunto all'elenco. L'evento Changed viene generato dal metodo virtuale `OnChanged`, che prima controlla se l'evento è `null`, ovvero se non è presente alcun gestore. Generare un evento equivale a richiamare il delegato rappresentato dall'evento. Non sono quindi necessari speciali costrutti di linguaggio per generare eventi.
 
@@ -276,7 +276,7 @@ I client rispondono agli eventi tramite *gestori eventi*, che possono essere agg
 
 [!code-csharp[EventExample](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L132-L148)]
 
-Per gli scenari avanzati in cui si desidera controllare l'archiviazione sottostante di un evento, una dichiarazione di evento può fornire in modo esplicito `add` e `remove` funzioni di accesso, che sono simili alla funzione di accesso `set` di una proprietà.
+Per gli scenari avanzati in cui si desidera il controllo dell'archiviazione sottostante di un evento, una dichiarazione di evento può fornire `add` in modo esplicito e `remove` funzioni di accesso, che sono simili alla `set` funzione di accesso di una proprietà.
 
 ### <a name="operators"></a>Operatori
 
@@ -297,5 +297,5 @@ Al Garbage Collector viene lasciata ampia scelta per decidere quando raccogliere
 L'istruzione `using` offre una soluzione più efficace per l'eliminazione di oggetti.
 
 > [!div class="step-by-step"]
-> [Precedente](statements.md)
-> [Successivo](arrays.md)
+> [Successivo](statements.md)
+> [precedente](arrays.md)

@@ -1,36 +1,36 @@
 ---
 ms.openlocfilehash: 3eab49acd3eaa5b6d5802af5f4e6f0fe2699ee97
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937046"
 ---
 ### <a name="uselegacyimages-compatibility-switch-not-supported"></a>Opzione di compatibilità UseLegacyImages non supportata
 
-L'opzione di compatibilità `Switch.System.Windows.Forms.UseLegacyImages`, introdotta in .NET Framework 4,8, non è supportata in Windows Forms in .NET Core 3,0.
+L'opzione `Switch.System.Windows.Forms.UseLegacyImages` di compatibilità, introdotta in .NET Framework 4.8, non è supportata in Windows Form in .NET Core 3.0.
 
-#### <a name="change-description"></a>Descrizione delle modifiche
+#### <a name="change-description"></a>Descrizione modifica:
 
-A partire dalla .NET Framework 4,8, l'opzione di compatibilità `Switch.System.Windows.Forms.UseLegacyImages` ha risolto i possibili problemi di scalabilità delle immagini negli scenari ClickOnce negli ambienti ad alta risoluzione. Quando è impostato su `true`, l'opzione consente all'utente di ripristinare il ridimensionamento delle immagini legacy su schermi a DPI elevato la cui scala è impostata su un valore maggiore del 100%. Per ulteriori informazioni, vedere le [Note sulla versione di .NET Framework 4,8](https://github.com/microsoft/dotnet/blob/master/releases/net48/dotnet48-changes.md#clickonce) su GitHub.
+A partire da .NET Framework `Switch.System.Windows.Forms.UseLegacyImages` 4.8. Se impostato `true`su , l'opzione consente all'utente di ripristinare il ridimensionamento delle immagini legacy su schermi DPI elevati la cui scala è impostata su un valore superiore al 100%. Per altre informazioni, vedere Note sulla versione di .NET Framework 4.8 su GitHub.For more information, see [.NET Framework 4.8 Release Notes](https://github.com/microsoft/dotnet/blob/master/releases/net48/dotnet48-changes.md#clickonce) on GitHub.
 
-In .NET Core, l'opzione `Switch.System.Windows.Forms.UseLegacyImages` non è supportata.
+In .NET Core `Switch.System.Windows.Forms.UseLegacyImages` l'opzione non è supportata.
 
 #### <a name="version-introduced"></a>Versione introdotta
 
-3,0 Preview 9
+3.0 Anteprima 9
 
 #### <a name="recommended-action"></a>Azione consigliata
 
-Rimuovere l'opzione. L'opzione non è supportata e non è disponibile alcuna funzionalità alternativa.
+Rimuovere l'interruttore. L'opzione non è supportata e non sono disponibili funzionalità alternative.
 
-#### <a name="category"></a>Categoria
+#### <a name="category"></a>Category
 
 Windows Form
 
 #### <a name="affected-apis"></a>API interessate
 
-- nessuna
+- nessuno
 
 <!-- 
 
