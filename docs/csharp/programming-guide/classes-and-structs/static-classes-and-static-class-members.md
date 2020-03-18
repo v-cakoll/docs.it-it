@@ -9,10 +9,10 @@ helpviewer_keywords:
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
 ms.openlocfilehash: 7add512b262afbabe996f752c083566a2c394dfd
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705431"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Classi statiche e membri di classi statiche (Guida per programmatori C#)
@@ -84,15 +84,15 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
  Una chiamata a un metodo statico genera un'istruzione call in Microsoft Intermediate Language (MSIL), mentre una chiamata a un metodo di istanza genera un'istruzione `callvirt` che verifica anche la presenza di riferimenti a un oggetto null. Tuttavia, nella maggior parte dei casi, la differenza di prestazioni tra i due non è significativa.  
   
-## <a name="c-language-specification"></a>Specifica del linguaggio C#  
+## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
 
 Per altre informazioni, vedere [Classi statiche](~/_csharplang/spec/classes.md#static-classes) e [Membri statici e di istanza](~/_csharplang/spec/classes.md#static-and-instance-members) nella [specifica del linguaggio C#](/dotnet/csharp/language-reference/language-specification/introduction). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori C#](../index.md)
-- [static](../../language-reference/keywords/static.md)
+- [Statico](../../language-reference/keywords/static.md)
 - [Classi](./classes.md)
-- [classe](../../language-reference/keywords/class.md)
+- [Classe](../../language-reference/keywords/class.md)
 - [Costruttori statici](./static-constructors.md)
-- [Costruttori di istanza](./instance-constructors.md)
+- [Costruttori di istanze](./instance-constructors.md)

@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: dc5f608dc9eb4635e1282a9ca5e15ff1bf7d0e0d
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 711b51c590be149545fda3130148e2bcaef8be4f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449556"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78262671"
 ---
-### <a name="private-fields-added-to-built-in-struct-types"></a>Campi privati aggiunti ai tipi struct predefiniti
+### <a name="private-fields-added-to-built-in-struct-types"></a>Campi privati aggiunti ai tipi struct predefinitiPrivate fields added to built-in struct types
 
-I campi privati sono stati aggiunti ai tipi struct predefiniti negli [assembly di riferimento](../../../../docs/standard/assembly/reference-assemblies.md). Di conseguenza, in C#è necessario creare un'istanza dei tipi struct usando l' [operatore New](../../../../docs/csharp/language-reference/operators/new-operator.md) o il [valore letterale predefinito](../../../../docs/csharp/language-reference/operators/default.md#default-literal)oppure inizializzando ognuno dei campi privati.
+I campi privati sono stati aggiunti a [determinati tipi di struct](#affected-apis) negli assembly di [riferimento.](../../../../docs/standard/assembly/reference-assemblies.md) Di conseguenza, nel linguaggio C, è sempre necessario creare un'istanza di tali tipi struct utilizzando [l'operatore new](../../../../docs/csharp/language-reference/operators/new-operator.md) o [il valore letterale predefinito](../../../../docs/csharp/language-reference/operators/default.md#default-literal).
 
-#### <a name="change-description"></a>Descrizione della modifica
+#### <a name="change-description"></a>Descrizione modifica:
 
-In .NET Core 2,0 e versioni precedenti, è possibile creare un'istanza di alcuni tipi struct incorporati, ad esempio <xref:System.ConsoleKeyInfo>, senza usare l'operatore `new` o il [valore letterale predefinito](../../../../docs/csharp/language-reference/operators/default.md#default-literal) in C#. Questo perché gli [assembly di riferimento](../../../../docs/standard/assembly/reference-assemblies.md) utilizzati dal C# compilatore non contenevano i campi privati per gli struct. Tutti i campi privati per i tipi di struct .NET vengono aggiunti agli assembly di riferimento a partire da .NET Core 2,1.
+In .NET Core 2.0 e versioni precedenti, è <xref:System.ConsoleKeyInfo>possibile creare un'istanza `new` di alcuni tipi struct forniti, ad esempio , senza utilizzare l'operatore o il [valore letterale predefinito](../../../../docs/csharp/language-reference/operators/default.md#default-literal) in C. Ciò è dovuto al fatto che gli assembly di [riferimento](../../../../docs/standard/assembly/reference-assemblies.md) utilizzati dal compilatore C' non contenevano i campi privati per gli struct. Tutti i campi privati per i tipi struct .NET vengono aggiunti agli assembly di riferimento a partire da .NET Core 2.1.All private fields for .NET struct types are added to the reference assemblies starting in .NET Core 2.1.
 
-Ad esempio, il codice C# seguente viene compilato in .net core 2,0, ma non in .net core 2,1:
+Ad esempio, il seguente codice in c'è viene compilato in .NET Core 2.0, ma non in .NET Core 2.1:
 
 ```csharp
 ConsoleKeyInfo key;    // Struct type
@@ -25,7 +25,7 @@ if (key.ToString() == "y")
 }
 ```
 
-In .NET Core 2,1, il codice precedente genera il seguente errore del compilatore: **CS0165-uso della variabile locale non assegnata ' Key '**
+In .NET Core 2.1, il codice precedente restituisce il seguente errore del compilatore: **CS0165 - Utilizzo della variabile locale non assegnata 'chiave'**
 
 #### <a name="version-introduced"></a>Versione introdotta
 
@@ -33,9 +33,9 @@ In .NET Core 2,1, il codice precedente genera il seguente errore del compilatore
 
 #### <a name="recommended-action"></a>Azione consigliata
 
-Creare un'istanza dei tipi struct usando l'operatore `new` o il [valore letterale predefinito](../../../../docs/csharp/language-reference/operators/default.md#default-literal).
+Creare un'istanza `new` di tipi struct utilizzando l'operatore o il [valore letterale predefinito](../../../../docs/csharp/language-reference/operators/default.md#default-literal).
 
-Ad esempio,
+Ad esempio:
 
 ```csharp
 ConsoleKeyInfo key = new ConsoleKeyInfo();    // Struct type.
@@ -49,16 +49,6 @@ ConsoleKeyInfo key = default;    // Struct type.
 
 if (key.ToString() == "y")
     Console.WriteLine("Yes!");
-```
-
-```csharp
-ConsoleKeyInfo[] keys = new ConsoleKeyInfo[5];    // Array of structs.
-
-for (int i = 0; i < keys.Length; i++)
-{
-    // Initialize each array element with the new operator.
-    keys[i] = new ConsoleKeyInfo();
-}
 ```
 
 #### <a name="category"></a>Category

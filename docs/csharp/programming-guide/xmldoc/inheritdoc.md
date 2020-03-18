@@ -8,31 +8,31 @@ helpviewer_keywords:
 - <inheritdoc> C# XML tag
 - inheritdoc C# XML tag
 ms.assetid: 46d329b1-5b84-4537-9e17-73ca97313e4e
-ms.openlocfilehash: d660cb1739733c4e98ae0b7939476fe74e6cf200
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 6f42462f21d045428577cd2123e2180d866f1e1e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76795161"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156948"
 ---
-# <a name="inheritdoc-c-programming-guide"></a>> inheritdoc \<(C# guida per programmatori)
+# <a name="inheritdoc-c-programming-guide"></a>\<> inheritdoc (Guida per programmatori C
 
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-<inheritdoc/> 
+<inheritdoc/>
 ```  
 
-## <a name="inheritdoc"></a>InheritDoc
+## <a name="inheritdoc"></a>EreditatoreDoc
 
-Ereditano commenti XML da classi base, interfacce e metodi simili. In questo modo si elimina la copia indesiderata e si incollano i commenti XML duplicati e i commenti XML vengono sincronizzati automaticamente. 
+Ereditare i commenti XML dalle classi base, dalle interfacce e da metodi simili. In questo modo si eliminano le operazioni di copia e incolla indesiderate di commenti XML duplicati e mantiene automaticamente sincronizzati i commenti XML.
   
-## <a name="remarks"></a>Note  
-Aggiungere i commenti XML in classi o interfacce di base e consentire a InheritDoc di copiare i commenti alle classi di implementazione.
+## <a name="remarks"></a>Osservazioni  
+Aggiungere i commenti XML nelle classi di base o nelle interfacce e consentire a InheritDoc di copiare i commenti nelle classi di implementazione.
 
 Aggiungere i commenti XML ai metodi sincroni e consentire a InheritDoc di copiare i commenti nelle versioni asincrone degli stessi metodi.  
 
-Se si desidera copiare i commenti da un membro specifico, è possibile utilizzare l'attributo `cref` per specificare il membro.
+Se si desidera copiare i commenti da un `cref` membro specifico, è possibile utilizzare l'attributo per specificare il membro.
   
 ## <a name="examples"></a>Esempi
 [!code-csharp[csProgGuideDocComments#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#16)]  

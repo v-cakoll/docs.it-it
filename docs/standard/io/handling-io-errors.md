@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 51eb0e758f1ae8fb41c842ef9b32a9f8928af9ac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73120737"
 ---
 # <a name="handling-io-errors-in-net"></a>Gestione degli errori di I/O in .NET
@@ -23,12 +23,12 @@ ms.locfileid: "73120737"
 Oltre alle eccezioni che possono essere generate in qualsiasi chiamata a un metodo (ad esempio, <xref:System.OutOfMemoryException> quando un sistema è in sovraccarico o <xref:System.NullReferenceException> a causa di un errore del programmatore), i metodi del file system .NET possono generare le eccezioni seguenti:
 
 - <xref:System.IO.IOException?displayProperty=nameWithType>, la classe di base di tutti i tipi di eccezioni <xref:System.IO>. Viene generata per gli errori i cui codici restituiti dal sistema operativo non eseguono il mapping diretto a nessun altro tipo di eccezione.
-- <xref:System.IO.FileNotFoundException?displayProperty=nameWithType>
-- <xref:System.IO.DirectoryNotFoundException?displayProperty=nameWithType>
-- <xref:System.IO.DriveNotFoundException??displayProperty=nameWithType>
-- <xref:System.IO.PathTooLongException?displayProperty=nameWithType>
-- <xref:System.OperationCanceledException?displayProperty=nameWithType>
-- <xref:System.UnauthorizedAccessException?displayProperty=nameWithType>
+- <xref:System.IO.FileNotFoundException?displayProperty=nameWithType>.
+- <xref:System.IO.DirectoryNotFoundException?displayProperty=nameWithType>.
+- <xref:System.IO.DriveNotFoundException??displayProperty=nameWithType>.
+- <xref:System.IO.PathTooLongException?displayProperty=nameWithType>.
+- <xref:System.OperationCanceledException?displayProperty=nameWithType>.
+- <xref:System.UnauthorizedAccessException?displayProperty=nameWithType>.
 - <xref:System.ArgumentException?displayProperty=nameWithType>, generata per i caratteri non validi nel percorso in .NET Framework e in .NET Core 2.0 e versioni precedenti.
 - <xref:System.NotSupportedException?displayProperty=nameWithType>, generata per i caratteri due punti non validi in .NET Framework.
 - <xref:System.Security.SecurityException?displayProperty=nameWithType>, generata per le applicazioni in esecuzione con attendibilità limitata senza le autorizzazioni necessarie solo in .NET Framework. L'attendibilità totale è l'impostazione predefinita in .NET Framework.
@@ -47,15 +47,15 @@ A causa di questa dipendenza dal sistema operativo, con condizioni di eccezione 
 
 | Tipo di eccezione | .NET Core | .NET Framework |
 |---|---|---|
-| <xref:System.IO.IOException> | Yes | Yes |
-| <xref:System.IO.FileNotFoundException> | Yes | Yes |
-| <xref:System.IO.DirectoryNotFoundException> | Yes | Yes |
-| <xref:System.IO.DriveNotFoundException?> | Yes | Yes |
-| <xref:System.IO.PathTooLongException> | Yes | Yes |
-| <xref:System.OperationCanceledException> | Yes | Yes |
-| <xref:System.UnauthorizedAccessException> | Yes | Yes |
-| <xref:System.ArgumentException> | .NET Core 2.0 e versioni precedenti| Yes |
-| <xref:System.NotSupportedException> | No | Yes |
+| <xref:System.IO.IOException> | Sì | Sì |
+| <xref:System.IO.FileNotFoundException> | Sì | Sì |
+| <xref:System.IO.DirectoryNotFoundException> | Sì | Sì |
+| <xref:System.IO.DriveNotFoundException?> | Sì | Sì |
+| <xref:System.IO.PathTooLongException> | Sì | Sì |
+| <xref:System.OperationCanceledException> | Sì | Sì |
+| <xref:System.UnauthorizedAccessException> | Sì | Sì |
+| <xref:System.ArgumentException> | .NET Core 2.0 e versioni precedenti| Sì |
+| <xref:System.NotSupportedException> | No | Sì |
 | <xref:System.Security.SecurityException> | No | Solo attendibilità limitata |
 
 ## <a name="handling-ioexception"></a>Gestione di IOException

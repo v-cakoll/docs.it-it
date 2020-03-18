@@ -4,18 +4,18 @@ description: Informazioni sulla differenza tra i delegati e gli eventi e su quan
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0fdc8629-2fdb-4a7c-a433-5b9d04eaf911
-ms.openlocfilehash: ff90af1d2b1a92f06eed58228f8e8ca5ff6b93ca
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 04738ac2dd82da9c577e88598d0bb737a93333c1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037323"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146178"
 ---
 # <a name="distinguishing-delegates-and-events"></a>Distinzione di delegati ed eventi
 
-[Precedente](modern-events.md)
+[Indietro](modern-events.md)
 
-Gli sviluppatori che non hanno familiarità con la piattaforma .NET Core spesso sono in difficoltà quando devono scegliere tra due tipi di progettazione, uno basato su `delegates` e l'altro su `events`. Questo è un concetto difficile, poiché le due funzionalità del linguaggio sono molto simili. È persino possibile creare eventi usando il supporto del linguaggio per i delegati. 
+Gli sviluppatori che non hanno familiarità con la piattaforma .NET Core spesso sono in difficoltà quando devono scegliere tra due tipi di progettazione, uno basato su `delegates` e l'altro su `events`. Questo è un concetto difficile, poiché le due funzionalità del linguaggio sono molto simili. È persino possibile creare eventi usando il supporto del linguaggio per i delegati.
 
 Entrambi i tipi di progettazione consentono di usare scenari di associazione tardiva, in altre parole scenari in cui un componente comunica chiamando un metodo noto solo in runtime. Entrambi supportano metodi per sottoscrittori singoli e multipli. Questa funzionalità è nota anche come supporto singlecast e multicast. Entrambi i tipi di progettazione usano una sintassi simile per l'aggiunta e la rimozione di gestori. Per la chiamata dei metodi di generazione di eventi e di chiamata di delegati, infine, entrambi i tipi di progettazione usano esattamente la stessa sintassi. Supportano persino la stessa sintassi del metodo `Invoke()` con l'operatore `?.`.
 
@@ -23,7 +23,7 @@ Con tutte queste analogie, è comprensibile avere difficoltà nel determinare qu
 
 ## <a name="listening-to-events-is-optional"></a>L'ascolto di eventi è facoltativo
 
-La considerazione più importante per determinare quale funzionalità del linguaggio usare è la necessità di un sottoscrittore associato. Se il codice deve chiamare il codice fornito dal sottoscrittore, è necessario usare una progettazione basata su delegati. Se il codice è in grado di eseguire tutte le operazioni contenute senza chiamare alcun sottoscrittore, è necessario usare una progettazione basata su eventi. 
+La considerazione più importante per determinare quale funzionalità del linguaggio usare è la necessità di un sottoscrittore associato. Se il codice deve chiamare il codice fornito dal sottoscrittore, è necessario usare una progettazione basata su delegati. Se il codice è in grado di eseguire tutte le operazioni contenute senza chiamare alcun sottoscrittore, è necessario usare una progettazione basata su eventi.
 
 Si considerino gli esempi compilati nel corso di questa sezione. Perché il codice con `List.Sort()` compilato sia in grado di ordinare correttamente gli elementi, deve essere dotato di una funzione di confronto. Perché le query LINQ siano in grado di determinare quali elementi restituire, devono essere dotate di delegati. In entrambi i casi è stata usata una progettazione compilata con delegati.
 
@@ -38,7 +38,7 @@ Un'altra considerazione riguarda il prototipo che si vuole usare per il metodo d
 
 Si tenga presente che spesso questi due tipi di euristica sono presenti entrambi: se il metodo del delegato restituisce un valore, è probabile che in qualche modo influisca sull'algoritmo.
 
-## <a name="event-listeners-often-have-longer-lifetimes"></a>I listener di eventi hanno spesso una durata maggiore 
+## <a name="event-listeners-often-have-longer-lifetimes"></a>I listener di eventi hanno spesso una durata maggiore
 
 Questa è una giustificazione leggermente più debole. È tuttavia possibile che le progettazioni basate su eventi siano più naturali se l'origine degli eventi genera eventi per un periodo di tempo duraturo. Esempi di ciò sono riscontrabili per controlli UX presenti in molti sistemi. Dopo la sottoscrizione di un evento, l'origine di questo può generare eventi per tutta la durata del programma.
 È possibile annullare la sottoscrizione di eventi quando questi non sono più necessari.

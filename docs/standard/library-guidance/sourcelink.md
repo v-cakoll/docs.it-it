@@ -3,10 +3,10 @@ title: Collegamento all'origine e librerie .NET
 description: Procedure consigliate per l'uso del collegamento all'origine per migliorare il debug per le librerie .NET.
 ms.date: 01/15/2019
 ms.openlocfilehash: 3d768ae6e79efa23a8402ea37bc34cd58cd52c8c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76744543"
 ---
 # <a name="source-link"></a>Collegamento all'origine
@@ -21,11 +21,11 @@ Il collegamento all'origine è una tecnologia che consente il debug del codice s
 
 Le istruzioni per l'uso del collegamento all'origine sono reperibili nel repository GitHub [dotnet/sourcelink](https://github.com/dotnet/sourcelink/blob/master/README.md).
 
-È possibile usare [NuGet Package Explorer](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer) per confermare che i metadati di collegamento all'origine siano stati incorporati correttamente nel pacchetto. Controllare che i metadati di `Repository` siano presenti con un identificatore di commit e che i file con estensione PDB si trovino con la dll di ogni destinazione.
+È possibile usare [NuGet Package Explorer](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer) per confermare che i metadati di collegamento all'origine siano stati incorporati correttamente nel pacchetto. Controllare `Repository` che i metadati siano presenti con un identificatore di commit e che i file con estensione pdb si trovino con la DLL di ogni destinazione.
 
-![Collegamento all'origine in Esplora pacchetti NuGet](./media/sourcelink/nuget-package-explorer-sourcelink.png "Collegamento all'origine in Esplora pacchetti NuGet")
+![Collegamento di origine in Esplora pacchetti NuGetSource Link in NuGet Package Explorer](./media/sourcelink/nuget-package-explorer-sourcelink.png "Collegamento di origine in Esplora pacchetti NuGetSource Link in NuGet Package Explorer")
 
-✔️ PROVARE a usare il collegamento di origine per aggiungere metadati del controllo del codice sorgente agli assembly e ai pacchetti NuGet.
+✔️ VALUTARE l'uso del collegamento all'origine per aggiungere metadati di controllo del codice sorgente agli assembly e ai pacchetti NuGet.
 
 > [!TIP]
 > È possibile migliorare ulteriormente l'esperienza di debug di uno sviluppatore tramite l'aggiunta di attributi del debugger ai tipi in uso.
@@ -34,10 +34,10 @@ Le istruzioni per l'uso del collegamento all'origine sono reperibili nel reposit
 > * <xref:System.Diagnostics.DebuggerStepThroughAttribute> indica al debugger di eseguire il codice un'istruzione alla volta anziché eseguire un'istruzione nel codice.
 > * <xref:System.Diagnostics.DebuggerBrowsableAttribute> controlla se viene visualizzato un membro nelle finestre delle variabili del debugger.
 
-✔️ CONSIGLIABILE pubblicare i file di simboli (`*.pdb`).
+✔️ VALUTARE la pubblicazione dei file di simboli (`*.pdb`).
 
 > Per ottenere un'esperienza di debug ottimale, la libreria deve pubblicare i file di simboli oltre a usare il collegamento all'origine. Per altre informazioni sui file di simboli e i pacchetti di simboli, vedere [Pacchetti di simboli](./nuget.md#symbol-packages).
 
 >[!div class="step-by-step"]
->[Precedente](dependencies.md)
->[Successivo](publish-nuget-package.md)
+>[Successivo](dependencies.md)
+>[precedente](publish-nuget-package.md)

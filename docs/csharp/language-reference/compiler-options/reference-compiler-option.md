@@ -13,12 +13,12 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 247fb222eaacdb5ee60df2dded3a857f0395eb34
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 3e6a999d528be111ba2b92886f4e6e3ebf185d5c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606582"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173666"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference (opzioni del compilatore C#)
 Con l'opzione **-reference** il compilatore importa nel progetto corrente le informazioni sui tipi [public](../keywords/public.md) disponibili nel file specificato e consente quindi di fare riferimento ai metadati dai file di assembly specificati.  
@@ -61,7 +61,7 @@ Con l'opzione **-reference** il compilatore importa nel progetto corrente le inf
  Per impostazione predefinita, viene usato il file di risposta csc (.rsp), che fa riferimento agli assembly .NET Framework di uso comune. Usare [-noconfig](./noconfig-compiler-option.md) se non si vuole che il compilatore usi csc.rsp.  
   
 > [!NOTE]
-> In Visual Studio usare la finestra di dialogo **Aggiungi riferimento**. Per altre informazioni, vedere [Procedura: Aggiungere o rimuovere riferimenti tramite Gestione riferimenti](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager). Per garantire un comportamento equivalente tra l'aggiunta di riferimenti usare `-reference` e aggiungere riferimenti tramite la finestra di dialogo **Aggiungi riferimento**, impostando la proprietà **Incorpora tipi di interoperabilità** su **False** per l'assembly che si vuole aggiungere. Per questa proprietà il valore predefinito è **True**.  
+> In Visual Studio usare la finestra di dialogo **Aggiungi riferimento**. Per altre informazioni, vedere [Procedura: Aggiungere o rimuovere riferimenti mediante Gestione riferimenti](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager). Per garantire un comportamento equivalente tra l'aggiunta di riferimenti usare `-reference` e aggiungere riferimenti tramite la finestra di dialogo **Aggiungi riferimento**, impostando la proprietà **Incorpora tipi di interoperabilità** su **False** per l'assembly che si vuole aggiungere. Per questa proprietà il valore predefinito è **True**.  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente illustra come usare la funzionalità [extern alias](../keywords/extern-alias.md).  
@@ -89,10 +89,10 @@ GridV1::Grid
  È anche possibile fare riferimento al controllo griglia da `grid20.dll` aggiungendo il prefisso `GridV2` al nome del controllo, come riportato di seguito:  
   
 ```csharp  
-GridV2::Grid   
+GridV2::Grid
 ```  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Opzioni del compilatore C#](./index.md)
+- [Opzioni del compilatore C](./index.md)
 - [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)

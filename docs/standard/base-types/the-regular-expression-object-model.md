@@ -36,26 +36,26 @@ helpviewer_keywords:
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
 ms.openlocfilehash: 8956be3cf8f96a8dd255f378d4927404c172c908
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160001"
 ---
 # <a name="the-regular-expression-object-model"></a>Modello a oggetti delle espressioni regolari
 <a name="introduction"></a> In questo argomento viene illustrato il modello a oggetti usato con le espressioni regolari di .NET. Contiene le sezioni seguenti:  
   
-- [Motore delle espressioni regolari](#Engine)  
+- [Il motore delle espressioni regolariThe Regular Expression Engine](#Engine)  
   
 - [Oggetti MatchCollection e Match](#Match_and_MCollection)  
   
-- [Raccolta Group](#GroupCollection)  
+- [La Collezione Di Gruppo](#GroupCollection)  
   
-- [Gruppo acquisito](#the_captured_group)  
+- [Il gruppo catturato](#the_captured_group)  
   
-- [Raccolta Capture](#CaptureCollection)  
+- [La collezione Capture](#CaptureCollection)  
   
-- [Singola acquisizione](#the_individual_capture)  
+- [La cattura individuale](#the_individual_capture)  
   
 <a name="Engine"></a>
 ## <a name="the-regular-expression-engine"></a>Motore delle espressioni regolari  
@@ -87,7 +87,7 @@ ms.locfileid: "78160001"
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/validate1.cs#1)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/validate1.vb#1)]  
   
- Il criterio di espressione regolare `^\d{3}-\d{2}-\d{4}$` è interpretato nel modo illustrato nella tabella seguente.  
+ Il criterio di ricerca di espressioni regolari `^\d{3}-\d{2}-\d{4}$` è interpretato nel modo illustrato nella tabella seguente.  
   
 |Modello|Descrizione|  
 |-------------|-----------------|  
@@ -105,7 +105,7 @@ ms.locfileid: "78160001"
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/match1.cs#2)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/match1.vb#2)]  
   
- Il criterio di espressione regolare `\b(\w+)\W+(\1)\b` è interpretato nel modo illustrato nella tabella seguente.  
+ Il criterio di ricerca di espressioni regolari `\b(\w+)\W+(\1)\b` è interpretato nel modo illustrato nella tabella seguente.  
   
 |Modello|Descrizione|  
 |-------------|-----------------|  
@@ -127,7 +127,7 @@ ms.locfileid: "78160001"
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/replace1.cs#4)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/replace1.vb#4)]  
   
- Il criterio di espressione regolare `\b\d+\.\d{2}\b` è interpretato nel modo illustrato nella tabella seguente.  
+ Il criterio di ricerca di espressioni regolari `\b\d+\.\d{2}\b` è interpretato nel modo illustrato nella tabella seguente.  
   
 |Modello|Descrizione|  
 |-------------|-----------------|  
@@ -150,7 +150,7 @@ ms.locfileid: "78160001"
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/split1.cs#5)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/split1.vb#5)]  
   
- Il criterio di espressione regolare `\b\d{1,2}\.\s` è interpretato nel modo illustrato nella tabella seguente.  
+ Il criterio di ricerca di espressioni regolari `\b\d{1,2}\.\s` è interpretato nel modo illustrato nella tabella seguente.  
   
 |Modello|Descrizione|  
 |-------------|-----------------|  
@@ -213,7 +213,7 @@ ms.locfileid: "78160001"
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/result1.cs#9)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/result1.vb#9)]  
   
- Il criterio di espressione regolare `\b\d+(,\d{3})*\.\d{2}\b` è definito nel modo illustrato nella tabella seguente.  
+ Il criterio di ricerca di espressioni regolari `\b\d+(,\d{3})*\.\d{2}\b` è definito nel modo illustrato nella tabella seguente.  
   
 |Modello|Descrizione|  
 |-------------|-----------------|  
@@ -244,7 +244,7 @@ ms.locfileid: "78160001"
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/groupcollection1.cs#10)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/groupcollection1.vb#10)]  
   
- Il criterio di espressione regolare `\b(\w+)\s(\d{1,2}),\s(\d{4})\b` è definito nel modo illustrato nella tabella seguente.  
+ Il criterio di ricerca di espressioni regolari `\b(\w+)\s(\d{1,2}),\s(\d{4})\b` è definito nel modo illustrato nella tabella seguente.  
   
 |Modello|Descrizione|  
 |-------------|-----------------|  
@@ -273,7 +273,7 @@ ms.locfileid: "78160001"
  [!code-csharp[RegularExpressions.Classes#8](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Classes/cs/Example.cs#8)]
  [!code-vb[RegularExpressions.Classes#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Classes/vb/Example.vb#8)]  
   
- Il criterio di espressione regolare `^(?<name>\w+):(?<value>\w+)` è definito nel modo illustrato nella tabella seguente.  
+ Il criterio di ricerca di espressioni regolari `^(?<name>\w+):(?<value>\w+)` è definito nel modo illustrato nella tabella seguente.  
   
 |Modello|Descrizione|  
 |-------------|-----------------|  
@@ -353,4 +353,4 @@ ms.locfileid: "78160001"
 
 - <xref:System.Text.RegularExpressions>
 - [Espressioni regolari .NET](../../../docs/standard/base-types/regular-expressions.md)
-- [Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Linguaggio delle espressioni regolari - Guida di riferimento rapidoRegular Expression Language - Quick Reference](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

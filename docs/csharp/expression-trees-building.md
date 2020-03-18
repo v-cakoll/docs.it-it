@@ -4,18 +4,18 @@ description: Informazioni sulle tecniche per la creazione di alberi delle espres
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.openlocfilehash: 45628b00633c8d6ff51dbd5f5dbdda7ca25dd7c4
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c93eb16ebf2ff66dc0162afb6841f2cadfce174e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037099"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146047"
 ---
 # <a name="building-expression-trees"></a>Compilazione di alberi delle espressioni
 
 [Precedente -- Interpretazione di espressioni](expression-trees-interpreting.md)
 
-Tutti gli alberi delle espressioni visti finora sono stati creati dal compilatore C#. È stato sufficiente creare un'espressione lambda assegnata a una variabile tipizzata come un'espressione `Expression<Func<T>>` o di tipo simile. Questo tuttavia non è l'unico modo per creare un albero delle espressioni. In molti scenari potrebbe essere necessario compilare un'espressione in memoria in fase di esecuzione. 
+Tutti gli alberi delle espressioni visti finora sono stati creati dal compilatore C#. È stato sufficiente creare un'espressione lambda assegnata a una variabile tipizzata come un'espressione `Expression<Func<T>>` o di tipo simile. Questo tuttavia non è l'unico modo per creare un albero delle espressioni. In molti scenari potrebbe essere necessario compilare un'espressione in memoria in fase di esecuzione.
 
 La compilazione di alberi delle espressioni è complicata dal fatto che gli alberi delle espressioni non sono modificabili. Ciò significa che l'albero deve essere compilato dalle foglie alla radice. Ciò si riflette nelle API usate per compilare gli alberi delle espressioni: i metodi usati per compilare un nodo accettano tutti gli elementi figlio come argomenti. I seguenti esempi illustrano le tecniche.
 
@@ -71,7 +71,7 @@ Di seguito viene compilato un albero delle espressioni per creare questa espress
 Expression<Func<double, double, double>> distanceCalc =
     (x, y) => Math.Sqrt(x * x + y * y);
 ```
- 
+
 Si inizia creando espressioni per i parametri per `x` e `y`:
 
 ```csharp
@@ -111,7 +111,7 @@ Innanzitutto è necessario creare gli oggetti che rappresentano i parametri o le
 
 ## <a name="building-code-in-depth"></a>Compilazione di codice complesso
 
-Non ci sono limiti alle possibilità di creare usando queste API. Tuttavia, più complicato è l'albero delle espressioni che si vuole compilare, più difficile sarà da gestire e leggere il codice. 
+Non ci sono limiti alle possibilità di creare usando queste API. Tuttavia, più complicato è l'albero delle espressioni che si vuole compilare, più difficile sarà da gestire e leggere il codice.
 
 Viene ora creato un albero delle espressioni che è l'equivalente di questo codice:
 
@@ -128,7 +128,7 @@ Func<int, int> factorialFunc = (n) =>
 };
 ```
 
-Si noti che non è stato compilato l'albero delle espressioni, ma il delegato. Usando la classe `Expression` non è possibile compilare espressioni lambda dell'istruzione. Ecco il codice necessario per compilare la stessa funzionalità. È complicato dal fatto che non esiste un'API per compilare un ciclo `while`, ed è invece necessario creare un ciclo contenente un test condizionale e una destinazione dell'etichetta per uscire dal ciclo. 
+Si noti che non è stato compilato l'albero delle espressioni, ma il delegato. Usando la classe `Expression` non è possibile compilare espressioni lambda dell'istruzione. Ecco il codice necessario per compilare la stessa funzionalità. È complicato dal fatto che non esiste un'API per compilare un ciclo `while`, ed è invece necessario creare un ciclo contenente un test condizionale e una destinazione dell'etichetta per uscire dal ciclo.
 
 ```csharp
 var nArgument = Expression.Parameter(typeof(int), "n");
@@ -162,13 +162,13 @@ BlockExpression body = Expression.Block(
 );
 ```
 
-Il codice per creare l'albero delle espressioni per la funzione fattoriale è più lungo, più complesso, e include numerose etichette e istruzioni di interruzione che è preferibile evitare nelle quotidiane attività di codifica. 
+Il codice per creare l'albero delle espressioni per la funzione fattoriale è più lungo, più complesso, e include numerose etichette e istruzioni di interruzione che è preferibile evitare nelle quotidiane attività di codifica.
 
 Per questa sezione è stato anche aggiornato il codice visitatore, per visitare ogni nodo in questo albero delle espressioni e scrivere le informazioni relative ai nodi creati in questo esempio. È possibile [visualizzare o scaricare il codice di esempio](https://github.com/dotnet/samples/tree/master/csharp/expression-trees) dal repository GitHub dotnet/docs. Provare a compilare ed eseguire da soli gli esempi. Per istruzioni sul download, vedere [Esempi ed esercitazioni](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="examining-the-apis"></a>Analisi delle API
 
-Le API dell'albero delle espressioni sono tra le più difficili da esplorare .NET Core. La loro finalità è piuttosto complessa: consentono di scrivere codice che genera codice in fase di esecuzione. Sono intrinsecamente complicate perché devono offrire un equilibrio tra la capacità di supportare tutte le strutture di controllo disponibili nel linguaggio C# e mantenere l'area di superficie delle API di dimensioni ridotte. Questo equilibrio fa sì che molte strutture di controllo siano rappresentate non dai propri costrutti in C#, ma da costrutti che rappresentano la logica sottostante generata dal compilatore a partire da quei costrutti di livello superiore. 
+Le API dell'albero delle espressioni sono tra le più difficili da esplorare .NET Core. La loro finalità è piuttosto complessa: consentono di scrivere codice che genera codice in fase di esecuzione. Sono intrinsecamente complicate perché devono offrire un equilibrio tra la capacità di supportare tutte le strutture di controllo disponibili nel linguaggio C# e mantenere l'area di superficie delle API di dimensioni ridotte. Questo equilibrio fa sì che molte strutture di controllo siano rappresentate non dai propri costrutti in C#, ma da costrutti che rappresentano la logica sottostante generata dal compilatore a partire da quei costrutti di livello superiore.
 
 Inoltre, attualmente sono disponibili espressioni in C# che non possono essere compilate direttamente usando metodi della classe `Expression`. In generale, questi saranno gli operati e le espressioni più recenti aggiunte in C# 5 e C# 6. Ad esempio, non è possibile compilare espressioni `async` e non è possibile creare direttamente il nuovo operatore `?.`.
 

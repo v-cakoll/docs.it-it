@@ -7,10 +7,10 @@ helpviewer_keywords:
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 ms.openlocfilehash: 72cf742aae26f9441229b355dc6e70da7a5fc9cd
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75900575"
 ---
 # <a name="garbage-collection-and-performance"></a>Garbage Collection e prestazioni
@@ -133,7 +133,7 @@ La frammentazione si verifica sempre nell'heap oggetti grandi in quanto non vien
 
 La frammentazione può diventare un problema nella generazione 1 e nella generazione 2. Se in queste generazioni è disponibile una quantità elevata di spazio libero dopo un'operazione di Garbage Collection, potrebbe essere necessario modificare l'utilizzo degli oggetti di un'applicazione e provare a eseguire una nuova valutazione della durata degli oggetti a lungo termine.
 
-Il blocco eccessivo di oggetti può aumentare la frammentazione. Se la frammentazione è elevata, potrebbe essere stato aggiunto un numero eccessivo di oggetti.
+Il blocco eccessivo di oggetti può aumentare la frammentazione. Se la frammentazione è elevata, potrebbero essere stati bloccati troppi oggetti.
 
 Se la frammentazione della memoria virtuale impedisce a Garbage Collector di aggiungere segmenti, la causa può essere una delle seguenti:
 
@@ -209,7 +209,7 @@ Se non si usa un profiler, è necessario definire un modello di misurazione coer
 
 - Se si esegue una misurazione immediatamente prima di un'operazione di Garbage Collection, è necessario misurare tutta l'allocazione possibile prima dell'avvio dell'operazione di Garbage Collection.
 
-- La misurazione durante un'operazione di Garbage Collection è problematica, perché le strutture di dati di Garbage Collector non sono in uno stato valido per l'attraversamento e potrebbero non essere in grado di fornire i risultati completi. Questo rientra nel normale comportamento del prodotto.
+- La misurazione durante un'operazione di Garbage Collection è problematica, perché le strutture di dati di Garbage Collector non sono in uno stato valido per l'attraversamento e potrebbero non essere in grado di fornire i risultati completi. Questo si verifica per motivi strutturali.
 
 - Quando si usa un'operazione di Garbage Collection per workstation con un'operazione di Garbage Collection simultanea, gli oggetti recuperati non vengono compattati e di conseguenza le dimensioni dell'heap possono essere uguali o maggiori (la frammentazione può farle apparire maggiori).
 
@@ -235,7 +235,7 @@ La procedura seguente descrive come impostare un punto di interruzione per misur
 
 Questa sezione descrive le procedure per isolare la causa del problema di prestazioni:
 
-- [Determinare se il problema è causato da Garbage Collection](#IsGC)
+- [Determinare se il problema è causato da Garbage Collection.](#IsGC)
 
 - [Determinare se l'eccezione di memoria esaurita è gestita.](#OOMIsManaged)
 
@@ -271,9 +271,9 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
 - Esaminare i due contatori delle prestazioni della memoria seguenti:
 
-  - **Percentuale tempo in GC**. Visualizza la percentuale di tempo trascorso, impiegato per l'esecuzione di un'operazione di Garbage Collection dopo l'ultimo ciclo di Garbage Collection. Usare questo contatore per determinare se Garbage Collector sta impiegando troppo tempo per rendere disponibile lo spazio dell'heap gestito. Se il tempo impiegato nell'operazione di Garbage Collection è relativamente ridotto, ciò può indicare un problema di risorse all'esterno dell'heap gestito. Questo contatore potrebbe non essere accurato se sono interessate operazioni di Garbage Collection simultanee o in background.
+  - **% Tempo in GC**. Visualizza la percentuale di tempo trascorso, impiegato per l'esecuzione di un'operazione di Garbage Collection dopo l'ultimo ciclo di Garbage Collection. Usare questo contatore per determinare se Garbage Collector sta impiegando troppo tempo per rendere disponibile lo spazio dell'heap gestito. Se il tempo impiegato nell'operazione di Garbage Collection è relativamente ridotto, ciò può indicare un problema di risorse all'esterno dell'heap gestito. Questo contatore potrebbe non essere accurato se sono interessate operazioni di Garbage Collection simultanee o in background.
 
-  - **N. totale di byte con commit**. Visualizza la quantità di memoria virtuale di cui Garbage Collector ha attualmente eseguito il commit. Usare questo contatore per determinare se la memoria usata da Garbage Collector è una parte eccessiva della memoria usata dall'applicazione.
+  - **- Totale byte di cui è stato eseguito il commit**. Visualizza la quantità di memoria virtuale di cui Garbage Collector ha attualmente eseguito il commit. Usare questo contatore per determinare se la memoria usata da Garbage Collector è una parte eccessiva della memoria usata dall'applicazione.
 
   La maggior parte dei contatori delle prestazioni della memoria viene aggiornata alla fine di ogni operazione di Garbage Collection. Di conseguenza, i contatori potrebbero non riflettere le attuali condizioni su cui si vuole ottenere informazioni.
 
@@ -297,7 +297,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
 2. Se l'output non specifica un'eccezione, è necessario determinare il thread da cui proviene l'eccezione di memoria esaurita. Digitare il comando seguente nel debugger per mostrare tutti i thread con i rispettivi stack di chiamate:
 
-    **~\*kb**
+    **~\*Kb**
 
     Il thread con lo stack che include le chiamate dell'eccezione è indicato dall'argomento `RaiseTheException`. Si tratta dell'oggetto eccezione gestita.
 
@@ -327,7 +327,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
   In questo esempio la dimensione dell'area libera più grande è circa 24000 KB (3A980 in formato esadecimale). Questa area è molto minore rispetto alle dimensioni richieste da Garbage Collector per un segmento.
 
-  oppure
+  -oppure-
 
 - Utilizzare il comando **vmstat**:
 
@@ -713,7 +713,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
 - Nel debugger WinDbg o di Visual Studio con l'estensione del debugger SOS caricata, digitare il comando seguente per mostrare tutti i thread con i rispettivi stack di chiamate:
 
-  **~\*kb**
+  **~\*Kb**
 
   Questo comando genera un output simile al seguente.
 

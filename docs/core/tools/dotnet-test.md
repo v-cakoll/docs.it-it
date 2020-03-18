@@ -2,16 +2,16 @@
 title: Comando dotnet test
 description: Il comando dotnet test viene usato per eseguire unit test in un determinato progetto.
 ms.date: 02/27/2020
-ms.openlocfilehash: 6e906ab396a788905c99f50e73390b765b240efc
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: bac2f0e613c34bc9f657551a5eac4038207a93ed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157011"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847898"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
-**Questo articolo si applica a:** ✔️ .net core 2,1 SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .NET Core 2.1 SDK e versioni successive
 
 ## <a name="name"></a>Nome
 
@@ -20,11 +20,13 @@ ms.locfileid: "78157011"
 ## <a name="synopsis"></a>Riepilogo
 
 ```dotnetcli
-dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame]
-    [-c|--configuration] [--collect] [-d|--diag] [-f|--framework]
-    [--filter] [-l|--logger] [--no-build] [--no-restore]
-    [-o|--output] [-r|--results-directory] [-s|--settings]
-    [-t|--list-tests] [-v|--verbosity] [-- <RunSettings arguments>]
+dotnet test [<PROJECT> | <SOLUTION>]
+    [-a|--test-adapter-path] [--blame] [-c|--configuration]
+    [--collect] [-d|--diag] [-f|--framework] [--filter]
+    [--interactive] [-l|--logger] [--no-build] [--nologo]
+    [--no-restore] [-o|--output] [-r|--results-directory]
+    [--runtime] [-s|--settings] [-t|--list-tests]
+    [-v|--verbosity] [[--] <RunSettings arguments>]
 
 dotnet test [-h|--help]
 ```
@@ -39,9 +41,9 @@ I progetti di test specificano l'applicazione di esecuzione dei test usando un n
 
 ## <a name="arguments"></a>Argomenti
 
-- **`PROJECT`**
+- **`PROJECT | SOLUTION`**
 
-  Percorso del progetto di test. Se non specificato, per impostazione predefinita viene usata la directory corrente.
+  Percorso del progetto o della soluzione di test. Se non specificato, per impostazione predefinita viene usata la directory corrente.
 
 ## <a name="options"></a>Opzioni
 
@@ -51,9 +53,9 @@ I progetti di test specificano l'applicazione di esecuzione dei test usando un n
 
 - **`-blame`**
 
-  Esegue i test in modalità di segnalazione degli errori. Questa opzione è utile per isolare i test problematici che provocano l'arresto anomalo dell'host di test. Crea un file di output nella directory corrente denominato *Sequence.xml* che acquisisce l'ordine di esecuzione dei test prima dell'arresto anomalo.
+  Esegue i test in modalità di segnalazione degli errori. Questa opzione è utile per isolare i test problematici che causano l'arresto anomalo dell'host di test. Crea un file di output nella directory corrente denominato *Sequence.xml* che acquisisce l'ordine di esecuzione dei test prima dell'arresto anomalo.
 
-- **`c|--configuration {Debug|Release}`**
+- **`c|--configuration <CONFIGURATION>`**
 
   Definisce la configurazione di compilazione. Il valore predefinito è `Debug`, ma la configurazione del progetto può eseguire l'override di questa impostazione predefinita dell'SDK.
 
@@ -67,7 +69,7 @@ I progetti di test specificano l'applicazione di esecuzione dei test usando un n
 
 - **`f|--framework <FRAMEWORK>`**
 
-  Cerca i file binari di test per un [framework](../../standard/frameworks.md) specifico.
+  Cerca i file binari di test per un [framework](../../standard/frameworks.md)specifico.
 
 - **`--filter <EXPRESSION>`**
 
@@ -77,13 +79,21 @@ I progetti di test specificano l'applicazione di esecuzione dei test usando un n
 
   Stampa una breve guida per il comando.
 
+- **`--interactive`**
+
+  Consente al comando di arrestarsi e attendere l'input o l'azione dell'utente, ad esempio il completamento dell'autenticazione. Disponibile a partire da .NET Core 3.0 SDK.
+
 - **`l|--logger <LoggerUri/FriendlyName>`**
 
   Specifica un logger per i risultati di test.
 
 - **`--no-build`**
 
-  Non compila il progetto di test prima dell'esecuzione. Imposta anche in modo implicito il flag-`--no-restore`.
+  Non compila il progetto di test prima dell'esecuzione. Imposta anche in modo `--no-restore` implicito il - flag.
+
+- **`--nologo`**
+
+  Eseguire test senza visualizzare il banner Microsoft TestPlatform. Disponibile a partire da .NET Core 3.0 SDK.
 
 - **`--no-restore`**
 
@@ -97,6 +107,10 @@ I progetti di test specificano l'applicazione di esecuzione dei test usando un n
 
   Directory in cui verranno inseriti i risultati del test. Se la directory specificata non esiste, viene creata.
 
+- **`--runtime <RUNTIME_IDENTIFIER>`**
+
+  Tempo di esecuzione di destinazione per cui eseguire il test.
+
 - **`-s|--settings <SETTINGS_FILE>`**
 
   Il file `.runsettings` da usare per l'esecuzione dei test. [Configurare unit test usando un file `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
@@ -109,13 +123,13 @@ I progetti di test specificano l'applicazione di esecuzione dei test usando un n
 
   Imposta il livello di dettaglio del comando. I valori consentiti sono `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.
 
-- argomenti `RunSettings`
+- `RunSettings`Argomenti
 
-  Gli argomenti vengono passati come configurazioni di `RunSettings` per il test. Gli argomenti vengono specificati come coppie `[name]=[value]` dopo "-- ". Si noti lo spazio dopo --. Per separare più coppie `[name]=[value]`, viene usato uno spazio.
+  Gli argomenti `RunSettings` vengono passati come configurazioni per il test. Gli argomenti vengono specificati come coppie `[name]=[value]` dopo "-- ". Si noti lo spazio dopo --. Per separare più coppie `[name]=[value]`, viene usato uno spazio.
 
   Esempio: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
-  Per ulteriori informazioni, vedere [VSTest. Console. exe: passaggio di runsettings argomenti](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md).
+  Per ulteriori informazioni, vedere [vstest.console.exe: passaggio degli argomenti RunSettings](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md).
 
 ## <a name="examples"></a>Esempi
 
@@ -148,7 +162,7 @@ I progetti di test specificano l'applicazione di esecuzione dei test usando un n
 | Framework di test | Proprietà supportate                                                                                      |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
 | MSTest         | <ul><li>FullyQualifiedName</li><li>Nome</li><li>ClassName</li><li>Priorità</li><li>TestCategory</li></ul> |
-| xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Caratteristiche</li></ul>                                   |
+| xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Tratti</li></ul>                                   |
 
 `<operator>` descrive la relazione tra la proprietà e il valore:
 
@@ -176,5 +190,5 @@ Per altre informazioni ed esempi sull'uso del filtro degli unit test selettivi, 
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Frameworks and Targets](../../standard/frameworks.md) (Framework e destinazioni)
+- [Quadri e obiettivi](../../standard/frameworks.md)
 - [Catalogo dei RID (Runtime IDentifier) di .NET Core](../rid-catalog.md)

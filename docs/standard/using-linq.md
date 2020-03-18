@@ -1,6 +1,6 @@
 ---
 title: LINQ (Language Integrated Query)
-description: Informazioni su come LINQ fornisce funzionalità di query a livello di linguaggio e un' C# API a e Visual Basic come modo per scrivere codice dichiarativo espressivo.
+description: Informazioni su come LINQ fornisce funzionalità di query a livello di linguaggio e un'API per C ' c'è e Visual Basic come un modo per scrivere codice espressivo e dichiarativo.
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
@@ -10,17 +10,17 @@ dev_langs:
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
 ms.openlocfilehash: eafd8f78c3d8de1ba064021111f869571d5a570f
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160326"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (Language Integrated Query)
 
 ## <a name="what-is-it"></a>Che cos'è?
 
-LINQ fornisce funzionalità di query a livello di linguaggio e un'API di [funzione di ordine superiore](https://en.wikipedia.org/wiki/Higher-order_function) a C# e Visual Basic come modo per scrivere codice dichiarativo espressivo.
+LINQLINQ fornisce funzionalità di query a livello di linguaggio e un'API di funzione di [ordine superiore](https://en.wikipedia.org/wiki/Higher-order_function) per C .
 
 Sintassi di query a livello di linguaggio:
 
@@ -395,5 +395,5 @@ I processi basati su CPU parallelizzabili che possono essere espressi facilmente
 ## <a name="further-resources"></a>Altre risorse:
 
 * [101 esempi di LINQ](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
-* [LINQPad](https://www.linqpad.net/), un ambiente Playground e un motore di query di C#databaseF#per//Visual Basic
+* [Linqpad](https://www.linqpad.net/), un ambiente di gioco di gioco e motore di query di database per C
 * [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), un e-book per scoprire come implementare LINQ-to-objects

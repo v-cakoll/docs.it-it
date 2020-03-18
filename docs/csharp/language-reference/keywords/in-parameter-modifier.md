@@ -4,12 +4,12 @@ ms.date: 03/26/2019
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: 10e7b91f9a6bf280c5f0654b243492bac8cde1e0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cbde7a571fb71ed7577077c77a5c61db553ec859
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715245"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173614"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>Modificatore del parametro in (Riferimenti per C#)
 
@@ -19,7 +19,7 @@ La parola chiave `in` fa sì che gli argomenti vengono passati per riferimento. 
 
 L'esempio precedente dimostra che il modificatore `in` non è in genere necessario nel sito di chiamata. Viene richiesto soltanto nella dichiarazione di metodo.
 
-> [!NOTE] 
+> [!NOTE]
 > La parola chiave `in` può essere usata anche con un parametro di tipo generico per specificare che il parametro è di tipo controvariante, quale parte di un'istruzione `foreach` o parte di una clausola `join` in una query LINQ. Per altre informazioni sull'uso della parola chiave `in` in questi contesti, vedere la pagina [in](in.md), in cui sono presenti collegamenti a tutti gli usi.
   
 Le variabili passate come argomenti `in` devono essere inizializzate prima di essere passate in una chiamata al metodo. Tuttavia, il metodo chiamato non può assegnare un valore o modificare l'argomento.  
@@ -31,7 +31,7 @@ Le parole chiave `in`, `ref` e `out` non sono considerate parte della firma del 
 ```csharp
 class CS0663_Example
 {
-    // Compiler error CS0663: "Cannot define overloaded 
+    // Compiler error CS0663: "Cannot define overloaded
     // methods that differ only on in, ref and out".
     public void SampleMethod(in int i) { }
     public void SampleMethod(ref int i) { }
@@ -50,7 +50,7 @@ class InOverloads
 
 ## <a name="overload-resolution-rules"></a>Regole di risoluzione dell'overload
 
-È possibile comprendere le regole di risoluzione dell'overload per i metodi con argomenti per valore rispetto ai metodi con argomenti `in` se si comprende la motivazione per gli argomenti `in`. La definizione di metodi tramite parametri `in` costituisce un'ottimizzazione potenziale delle prestazioni. Alcuni argomenti di tipo `struct` possono essere di grandi dimensioni e quando vengono chiamati metodi all'interno di cicli ristretti o in percorsi di codice critici, il costo della copia di tali strutture ha una rilevanza fondamentale. I metodi dichiarano parametri `in` per specificare che è possibile passare argomenti per riferimento in modo sicuro, perché il metodo chiamato non modifica lo stato degli argomenti. Il passaggio di tali argomenti per riferimento consente di evitare una copia potenzialmente dispendiosa. 
+È possibile comprendere le regole di risoluzione dell'overload per i metodi con argomenti per valore rispetto ai metodi con argomenti `in` se si comprende la motivazione per gli argomenti `in`. La definizione di metodi tramite parametri `in` costituisce un'ottimizzazione potenziale delle prestazioni. Alcuni argomenti di tipo `struct` possono essere di grandi dimensioni e quando vengono chiamati metodi all'interno di cicli ristretti o in percorsi di codice critici, il costo della copia di tali strutture ha una rilevanza fondamentale. I metodi dichiarano parametri `in` per specificare che è possibile passare argomenti per riferimento in modo sicuro, perché il metodo chiamato non modifica lo stato degli argomenti. Il passaggio di tali argomenti per riferimento consente di evitare una copia potenzialmente dispendiosa.
 
 Specificare `in` per gli argomenti presso il sito di chiamata è in genere facoltativo. Non esiste alcuna differenza semantica tra il passaggio di argomenti per valore e il passaggio per riferimento tramite il modificatore `in`. Il modificatore `in` presso il sito di chiamata è facoltativo perché non è necessario indicare che il valore dell'argomento può essere modificato. Si aggiunge il modificatore `in` in modo esplicito presso il sito di chiamata per assicurarsi che l'argomento venga passato per riferimento, non per valore. L'uso di `in` in modo esplicito ha i due effetti seguenti:
 
@@ -108,7 +108,7 @@ Method(in i); // passed by readonly reference, explicitly using `in`
 L'unica chiamata a un metodo in cui l'argomento viene passato per riferimento è quella finale.
 
 > [!NOTE]
-> Per semplicità, il codice precedente usa `int` come tipo di argomento. Poiché nella maggior parte dei computer moderni le dimensioni di `int` non sono maggiori di quelle di un riferimento, non si ottiene alcun vantaggio dal passaggio di un unico `int` come riferimento di sola lettura. 
+> Per semplicità, il codice precedente usa `int` come tipo di argomento. Poiché nella maggior parte dei computer moderni le dimensioni di `int` non sono maggiori di quelle di un riferimento, non si ottiene alcun vantaggio dal passaggio di un unico `int` come riferimento di sola lettura.
 
 ## <a name="limitations-on-in-parameters"></a>Limitazioni dei parametri `in`
 
@@ -117,13 +117,13 @@ Non è possibile usare le parole chiave `in`, `ref` e `out` per i seguenti tipi 
 - Metodi asincroni definiti usando il modificatore [async](async.md).  
 - Metodi iteratori che includono un'istruzione [yield return](yield.md) o `yield break`.  
 
-## <a name="c-language-specification"></a>Specifica del linguaggio C#  
+## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
+- [Guida di riferimento a C](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](index.md)
-- [Parametri dei metodi](method-parameters.md)
+- [Parametri di metodo](method-parameters.md)
 - [Scrivere codice efficiente e sicuro](../../write-safe-efficient-code.md)

@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: 82835915efa0e113e81bb09bd5062ee3252f2a64
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 19359422f79f8240676b0057c7391f6b06f961ee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568171"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79147549"
 ---
 ### <a name="invalidasynchronousstateexception-moved-to-another-assembly"></a>InvalidAsynchronousStateException spostato in un altro assembly
 
-La classe <xref:System.ComponentModel.InvalidAsynchronousStateException> è stata spostata.
+La <xref:System.ComponentModel.InvalidAsynchronousStateException> classe è stata spostata.
 
-#### <a name="change-description"></a>Descrizione della modifica
+#### <a name="change-description"></a>Descrizione modifica:
 
-In .NET Core 2,2 e versioni precedenti, la classe <xref:System.ComponentModel.InvalidAsynchronousStateException> si trova nell'assembly *System. ComponentModel. TypeConverter* .
+In .NET Core 2.2 e <xref:System.ComponentModel.InvalidAsynchronousStateException> versioni precedenti, la classe si trova nell'assembly *System.ComponentModel.TypeConverter.*
 
-A partire da .NET Core 3,0, si trova nell'assembly *System. ComponentModel. Primitives* .
+A partire da .NET Core 3.0, si trova nell'assembly *System.ComponentModel.Primitives.*
 
 #### <a name="version-introduced"></a>Versione introdotta
 
@@ -22,7 +22,7 @@ A partire da .NET Core 3,0, si trova nell'assembly *System. ComponentModel. Prim
 
 #### <a name="recommended-action"></a>Azione consigliata
 
-Questa modifica riguarda solo le applicazioni che usano la reflection per caricare il <xref:System.ComponentModel.InvalidAsynchronousStateException> chiamando un metodo come <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> o un overload di <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> che presuppone che il tipo sia in un assembly specifico. In tal caso, l'assembly a cui si fa riferimento nella chiamata al metodo deve essere aggiornato per riflettere il nuovo percorso dell'assembly del tipo.
+Questa modifica ha effetto solo sulle <xref:System.ComponentModel.InvalidAsynchronousStateException> applicazioni che utilizzano la reflection per caricare l'oggetto chiamando un metodo, ad <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> esempio o un overload che <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> presuppone che il tipo si trova in un determinato assembly. In questo caso, l'assembly a cui si fa riferimento nella chiamata al metodo deve essere aggiornato per riflettere il nuovo percorso dell'assembly del tipo.
 
 #### <a name="category"></a>Category
 
@@ -30,7 +30,7 @@ CoreFx
 
 #### <a name="affected-apis"></a>API interessate
 
-- nessuna
+No.
 
 <!--
 

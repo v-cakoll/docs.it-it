@@ -19,10 +19,10 @@ helpviewer_keywords:
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 ms.openlocfilehash: c88776ea9d8ba17d86767b704e8b0eaff5b6cb89
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711480"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Procedure consigliate per l'uso delle stringhe in .NET
@@ -131,12 +131,12 @@ Questo confronto può causare problemi significativi se le impostazioni cultura 
 [!code-csharp[Conceptual.Strings.BestPractices#12](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/turkish1.cs#12)]
 [!code-vb[Conceptual.Strings.BestPractices#12](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/turkish1.vb#12)]
 
-In questo caso, poiché "file:" deve essere interpretato come un identificatore non linguistico, indipendente dalle impostazioni cultura, il codice deve essere scritto come illustrato nell'esempio seguente:
+In questo caso, poiché "file:" deve essere interpretato come un identificatore non linguistico e indipendente dalle impostazioni cultura, il codice deve invece essere scritto come illustrato nell'esempio seguente:In this case, because "file:" is meant to be interpreted as a non-linguistic, culture-insensitive identifier, the code should instead be written as shown in the following example:
 
 [!code-csharp[Conceptual.Strings.BestPractices#13](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/turkish1.cs#13)]
 [!code-vb[Conceptual.Strings.BestPractices#13](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/turkish1.vb#13)]
 
-### <a name="ordinal-string-operations"></a>Operazioni di stringa ordinali
+### <a name="ordinal-string-operations"></a>Operazioni sulle stringhe ordinali
 
 La specifica del valore <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> o <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> in una chiamata al metodo indica un confronto non linguistico in cui le funzionalità dei linguaggi naturali vengono ignorate. I metodi richiamati con questi valori <xref:System.StringComparison> basano le decisioni relative alle operazioni di stringa su confronti di byte semplici invece che sull'utilizzo di maiuscole e minuscole o di tabelle di equivalenza parametrizzate dalle impostazioni cultura. In molti casi, questo approccio risulta più adatto per l'interpretazione desiderata delle stringhe e rende il codice più veloce e affidabile.
 
@@ -147,12 +147,12 @@ Le stringhe in .NET possono contenere caratteri null incorporati. Una delle diff
 > [!IMPORTANT]
 > Anche se i metodi di confronto tra stringhe ignorano i caratteri null incorporati, i metodi di ricerca di stringhe come <xref:System.String.Contains%2A?displayProperty=nameWithType>, <xref:System.String.EndsWith%2A?displayProperty=nameWithType>, <xref:System.String.IndexOf%2A?displayProperty=nameWithType>, <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>e <xref:System.String.StartsWith%2A?displayProperty=nameWithType> li prendono in considerazione.
 
-Nell'esempio seguente viene eseguito un confronto con distinzione delle impostazioni cultura della stringa "AA" con una stringa simile che contiene diversi caratteri null incorporati tra "A" e "a" e Mostra in che modo le due stringhe vengono considerate uguali:
+Nell'esempio seguente viene eseguito un confronto dipendente dalle impostazioni cultura della stringa "Aa" con una stringa simile che contiene diversi caratteri null incorporati tra "A" e "a" e viene illustrato come le due stringhe sono considerate uguali:
 
 [!code-csharp[Conceptual.Strings.BestPractices#19](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/embeddednulls1.cs#19)]
  [!code-vb[Conceptual.Strings.BestPractices#19](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/embeddednulls1.vb#19)]
 
-Tuttavia, le stringhe non sono considerate uguali quando si usa il confronto ordinale, come illustrato nell'esempio seguente:
+Tuttavia, le stringhe non sono considerate uguali quando si utilizza il confronto ordinale, come illustrato nell'esempio seguente:However, the strings are not considered equal when you use ordinal comparison, as the following example shows:
   
 [!code-csharp[Conceptual.Strings.BestPractices#20](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/embeddednulls2.cs#20)]
 [!code-vb[Conceptual.Strings.BestPractices#20](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/embeddednulls2.vb#20)]
@@ -176,7 +176,7 @@ Questi confronti sono comunque molto rapidi.
 
 La semantica ordinale è l'impostazione predefinita per gli overload <xref:System.String.Equals%2A?displayProperty=nameWithType> che non includono un argomento <xref:System.StringComparison> (incluso l'operatore di uguaglianza). In ogni caso, si consiglia di chiamare un overload con un parametro <xref:System.StringComparison> .
 
-### <a name="string-operations-that-use-the-invariant-culture"></a>operazioni di stringa che usano la lingua inglese
+### <a name="string-operations-that-use-the-invariant-culture"></a>operazioni sulle stringhe che utilizzano le impostazioni cultura invarianti
 
 I confronti con la lingua inglese usano la proprietà <xref:System.Globalization.CultureInfo.CompareInfo%2A> restituita dalla proprietà statica <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> . Questo comportamento è uguale in tutti i sistemi. Converte i caratteri al di fuori dell'intervallo in quelli che considera caratteri equivalenti in lingua inglese. Questo criterio può essere utile per gestire il comportamento di un set di stringhe nelle impostazioni cultura, ma spesso produce risultati imprevisti.
 
@@ -197,16 +197,16 @@ In realtà la lingua inglese ha poche proprietà che la rendono utile per il con
 
 ## <a name="choosing-a-stringcomparison-member-for-your-method-call"></a>Scelta di un membro StringComparison per la chiamata al metodo
 
-La tabella seguente illustra il mapping tra il contesto di stringa semantico e un membro di enumerazione <xref:System.StringComparison>:
+Nella tabella seguente viene descritto il mapping <xref:System.StringComparison> dal contesto di stringa semantica a un membro di enumerazione:The following table outlines the mapping from semantic string context to a enumeration member:
 
-|Data|Comportamento di|System.StringComparison corrispondente<br /><br /> Valore di|
+|Data|Comportamento|System.StringComparison corrispondente<br /><br /> Valore|
 |----------|--------------|-----------------------------------------------------|
 |Identificatori interni con distinzione tra maiuscole e minuscole.<br /><br /> Identificatori con distinzione tra maiuscole e minuscole in standard come XML e HTTP.<br /><br /> Impostazioni relative alla sicurezza con distinzione tra maiuscole e minuscole.|Identificatore non linguistico, con una corrispondenza esatta dei byte.|<xref:System.StringComparison.Ordinal>|
 |Identificatori interni senza distinzione tra maiuscole e minuscole.<br /><br /> Identificatori senza distinzione tra maiuscole e minuscole in standard come XML e HTTP.<br /><br /> Percorsi di file.<br /><br /> Chiavi e valori del Registro di sistema.<br /><br /> Variabili di ambiente.<br /><br /> Identificatori di risorse (ad esempio, nomi di handle).<br /><br /> Impostazioni relative alla sicurezza senza distinzione tra maiuscole e minuscole.|Identificatore non linguistico, in cui la distinzione tra maiuscole e minuscole non è rilevante. In particolare, dati archiviati nella maggior parte dei servizi di sistema Windows.|<xref:System.StringComparison.OrdinalIgnoreCase>|
-|Alcuni dati persistenti e linguisticamente rilevanti.<br /><br /> Visualizzazione di dati linguistici che richiedono un ordinamento fisso.|Dati indipendenti dalle impostazioni cultura, ma ancora linguisticamente rilevanti.|<xref:System.StringComparison.InvariantCulture><br /><br /> oppure<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|
-|Dati visualizzati dall'utente.<br /><br /> La maggior parte dell'input utente.|Dati che richiedono personalizzazioni linguistiche locali.|<xref:System.StringComparison.CurrentCulture><br /><br /> oppure<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|
+|Alcuni dati persistenti e linguisticamente rilevanti.<br /><br /> Visualizzazione di dati linguistici che richiedono un ordinamento fisso.|Dati indipendenti dalle impostazioni cultura, ma ancora linguisticamente rilevanti.|<xref:System.StringComparison.InvariantCulture><br /><br /> -oppure-<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|
+|Dati visualizzati dall'utente.<br /><br /> La maggior parte dell'input utente.|Dati che richiedono personalizzazioni linguistiche locali.|<xref:System.StringComparison.CurrentCulture><br /><br /> -oppure-<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|
 
-## <a name="common-string-comparison-methods-in-net"></a>Metodi comuni per il confronto tra stringhe in .NET
+## <a name="common-string-comparison-methods-in-net"></a>Metodi comuni di confronto tra stringhe in .NETCommon string comparison methods in .NET
 
 Le sezioni seguenti descrivono i metodi più comuni per il confronto tra stringhe.
 
@@ -295,7 +295,7 @@ Se i dati vengono conservati e spostati nelle impostazioni cultura e l'ordinamen
 [!code-csharp[Conceptual.Strings.BestPractices#9](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/indirect1.cs#9)]
 [!code-vb[Conceptual.Strings.BestPractices#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/indirect1.vb#9)]
 
-### <a name="collections-example-hashtable-constructor"></a>Esempio di raccolte: Costruttore Hashtable
+### <a name="collections-example-hashtable-constructor"></a>Esempio di raccolte: costruttore Hashtable
 
 L'esecuzione dell'hashing nelle stringhe fornisce un secondo esempio di operazione interessata dal modo in cui vengono confrontate le stringhe.
 
@@ -341,7 +341,7 @@ L'esempio seguente illustra la limitazione della portabilità causata dall'uso d
 [!code-csharp[Conceptual.Strings.BestPractices#21](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/persistence.cs#21)]
 [!code-vb[Conceptual.Strings.BestPractices#21](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/persistence.vb#21)]
 
-Tuttavia, se si sostituisce la proprietà <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> con <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> nelle chiamate a <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> e <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>, i dati di data e ora salvati vengono ripristinati correttamente, come illustrato nell'output seguente:
+Tuttavia, se <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> si <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> sostituisce la <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>proprietà con nelle chiamate a e , i dati di data e ora persistenti vengono ripristinati correttamente, come illustrato nell'output seguente:
 
 ```console
 06.05.1758 21:26

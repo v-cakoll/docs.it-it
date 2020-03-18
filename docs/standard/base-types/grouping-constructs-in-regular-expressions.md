@@ -14,10 +14,10 @@ helpviewer_keywords:
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 ms.openlocfilehash: 5b2ea110837d9d5b905f97ab706af52a594f1c43
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159221"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Costrutti di raggruppamento nelle espressioni regolari
@@ -46,26 +46,26 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
 |[Asserzioni lookbehind negative di larghezza zero](#zerowidth_negative_lookbehind_assertion)|Non acquisizione|  
 |[Gruppi atomici](#atomic_groups)|Non acquisizione|  
   
- Per informazioni sui gruppi e sul modello a oggetti delle espressioni regolari, vedere l'argomento relativo ai [costrutti di raggruppamento e oggetti delle espressioni regolari](#Objects).  
+ Per informazioni sui gruppi e sul modello a oggetti delle espressioni regolari, vedere [Raggruppamento di costrutti e oggetti di espressioni regolari.](#Objects)  
   
 <a name="matched_subexpression"></a>
 ## <a name="matched-subexpressions"></a>Sottoespressioni corrispondenti  
  Nel costrutto di raggruppamento seguente viene acquisita una sottoespressione corrispondente:  
   
- `(` *sottoespressione* `)`  
+ `(` *subexpression* `)`  
   
- dove *sottoespressione* è un qualsiasi criterio di espressioni regolari valido. Le acquisizioni che usano parentesi sono numerate automaticamente da sinistra verso destra in base all'ordine delle parentesi di apertura nell'espressione regolare, a partire da uno. L'acquisizione che viene numerata zero è il testo corrispondente all'intero criterio dell'espressione regolare.  
+ dove *sottoespressione* è un qualsiasi criterio valido di espressione regolare. Le acquisizioni che usano parentesi sono numerate automaticamente da sinistra verso destra in base all'ordine delle parentesi di apertura nell'espressione regolare, a partire da uno. L'acquisizione che viene numerata zero è il testo corrispondente all'intero criterio dell'espressione regolare.  
   
 > [!NOTE]
-> Per impostazione predefinita, l'elemento di linguaggio `(`*sottoespressione*`)` acquisisce la sottoespressione corrispondente. Tuttavia, se il parametro <xref:System.Text.RegularExpressions.RegexOptions> di un metodo dei criteri di ricerca di espressioni regolari include il flag <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> o se l'opzione `n` viene applicata a questa sottoespressione (vedere [Opzioni di gruppo](#group_options) più avanti in questo argomento), la sottoespressione corrispondente non viene acquisita.  
+> Per impostazione `(`predefinita, l'elemento del linguaggio *delle sottoespressioni* `)` acquisisce la sottoespressione corrispondente. Tuttavia, se il parametro <xref:System.Text.RegularExpressions.RegexOptions> di un metodo dei criteri di ricerca di espressioni regolari include il flag <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> o se l'opzione `n` viene applicata a questa sottoespressione (vedere [Opzioni di gruppo](#group_options) più avanti in questo argomento), la sottoespressione corrispondente non viene acquisita.  
   
  È possibile accedere a questi gruppi acquisiti in quattro modi diversi:  
   
-- Tramite il costrutto del backreference all'interno dell'espressione regolare. Si fa riferimento alla sottoespressione corrispondente nella stessa espressione regolare tramite la sintassi `\`*numero*, dove *numero* è il numero ordinale della sottoespressione acquisita.  
+- Tramite il costrutto del backreference all'interno dell'espressione regolare. Alla sottoespressione corrispondente viene fatto riferimento nella stessa `\`espressione regolare utilizzando la sintassi *number*, dove *numero* è il numero ordinale della sottoespressione acquisita.  
   
-- Tramite il costrutto del backreference denominato all'interno dell'espressione regolare. Si fa riferimento alla sottoespressione corrispondente nella stessa espressione regolare tramite la sintassi `\k<`*nome*`>`, dove *nome* è il nome di un gruppo di acquisizione, o `\k<`*numero*`>`, dove *numero* è il numero ordinale di un gruppo di acquisizione. Un gruppo di acquisizione ha un nome predefinito identico al relativo numero ordinale. Per altre informazioni, vedere [Sottoespressioni corrispondenti denominate](#named_matched_subexpression) più avanti in questo argomento.  
+- Tramite il costrutto del backreference denominato all'interno dell'espressione regolare. Alla sottoespressione corrispondente viene fatto riferimento nella stessa `\k<`espressione regolare utilizzando il *nome*`>`della `\k<`sintassi , dove *nome* è il nome di un gruppo di acquisizione, o *numero*`>`, dove *numero* è il numero ordinale di un gruppo di acquisizione. Un gruppo di acquisizione ha un nome predefinito identico al relativo numero ordinale. Per altre informazioni, vedere [Sottoespressioni corrispondenti denominate](#named_matched_subexpression) più avanti in questo argomento.  
   
-- Tramite la sequenza di sostituzione `$`*numero* in una <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> o la chiamata al metodo <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> , dove *numero* è il numero ordinale della sottoespressione acquisita.  
+- Tramite la sequenza di sostituzione `$`*numero* in una chiamata al metodo <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> o <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> , dove *numero* è il numero ordinale della sottoespressione acquisita.  
   
 - A livello di codice, usando l'oggetto <xref:System.Text.RegularExpressions.GroupCollection> restituito dalla proprietà <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> . Il membro alla posizione zero nella raccolta rappresenta l'intera corrispondenza dell'espressione regolare. Ogni membro successivo rappresenta una sottoespressione corrispondente. Per altre informazioni, vedere la sezione [Grouping Constructs and Regular Expression Objects](#Objects) .  
   
@@ -104,13 +104,13 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  È possibile accedere ai gruppi acquisiti denominati nei modi seguenti:  
   
-- Tramite il costrutto del backreference denominato all'interno dell'espressione regolare. Si fa riferimento alla sottoespressione corrispondente nella stessa espressione regolare tramite la sintassi `\k<`*nome*`>`, dove *nome* è il nome della sottoespressione acquisita.  
+- Tramite il costrutto del backreference denominato all'interno dell'espressione regolare. Alla sottoespressione corrispondente viene fatto riferimento nella stessa `\k<`espressione regolare utilizzando il *nome*`>`della sintassi , dove *nome* è il nome della sottoespressione acquisita.  
   
-- Tramite il costrutto del backreference all'interno dell'espressione regolare. Si fa riferimento alla sottoespressione corrispondente nella stessa espressione regolare tramite la sintassi `\`*numero*, dove *numero* è il numero ordinale della sottoespressione acquisita. Le sottoespressioni corrispondenti denominate sono numerate consecutivamente da sinistra a destra dopo le sottoespressioni corrispondenti.  
+- Tramite il costrutto del backreference all'interno dell'espressione regolare. Alla sottoespressione corrispondente viene fatto riferimento nella stessa `\`espressione regolare utilizzando la sintassi *number*, dove *numero* è il numero ordinale della sottoespressione acquisita. Le sottoespressioni corrispondenti denominate sono numerate consecutivamente da sinistra a destra dopo le sottoespressioni corrispondenti.  
   
-- Tramite la sequenza di sostituzione `${`*nome*`}` in una <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> o la chiamata al metodo <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> , dove *nome* è il nome della sottoespressione acquisita.  
+- Utilizzando la `${`sequenza di <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> sostituzione del *nome* `}` in una <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> chiamata al metodo o, dove *nome* è il nome della sottoespressione acquisita.  
   
-- Tramite la sequenza di sostituzione `$`*numero* in una <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> o la chiamata al metodo <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> , dove *numero* è il numero ordinale della sottoespressione acquisita.  
+- Tramite la sequenza di sostituzione `$`*numero* in una chiamata al metodo <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> o <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> , dove *numero* è il numero ordinale della sottoespressione acquisita.  
   
 - A livello di codice, usando l'oggetto <xref:System.Text.RegularExpressions.GroupCollection> restituito dalla proprietà <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> . Il membro alla posizione zero nella raccolta rappresenta l'intera corrispondenza dell'espressione regolare. Ogni membro successivo rappresenta una sottoespressione corrispondente. I gruppi acquisiti denominati vengono archiviati nella raccolta dopo i gruppi acquisiti numerati.  
   
@@ -157,9 +157,9 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
 |Modello|Descrizione|  
 |-------------|-----------------|  
 |`\D+`|Corrisponde a una o più cifre non decimali.|  
-|`(?<digit>\d+)`|Corrisponde a una o più cifre decimali. Assegna la corrispondenza al gruppo denominato `digit`.|  
+|`(?<digit>\d+)`|Corrisponde a una o più cifre decimali. Assegna la corrispondenza al gruppo denominato `digit` .|  
 |`\D+`|Corrisponde a una o più cifre non decimali.|  
-|`(?<digit>\d+)?`|Corrisponde a zero o a un'occorrenza di una o più cifre decimali. Assegna la corrispondenza al gruppo denominato `digit`.|  
+|`(?<digit>\d+)?`|Corrisponde a zero o a un'occorrenza di una o più cifre decimali. Assegna la corrispondenza al gruppo denominato `digit` .|  
   
 <a name="balancing_group_definition"></a>
 ## <a name="balancing-group-definitions"></a>Definizioni di gruppo di bilanciamento  
@@ -196,7 +196,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
 |`(?'Open'<)`|Trova la corrispondenza di una parentesi uncinata aperta e la assegna a un gruppo denominato `Open`.|  
 |`[^<>]*`|Trova la corrispondenza di zero o più caratteri diversi da parentesi uncinate aperte o chiuse.|  
 |`((?'Open'<)[^<>]*)+`|Trova la corrispondenza di una o più occorrenze di una parentesi uncinata aperta seguita da zero o più caratteri diversi da parentesi uncinate aperte o chiuse. Equivale al secondo gruppo di acquisizione.|  
-|`(?'Close-Open'>)`|Trova la corrispondenza di una parentesi uncinata chiusa, assegna la sottostringa tra il gruppo `Open` e il gruppo corrente al gruppo `Close` ed elimina la definizione del gruppo `Open`.|  
+|`(?'Close-Open'>)`|Trova la corrispondenza di una parentesi uncinata chiusa, assegna la sottostringa tra il gruppo `Open` e il gruppo corrente al gruppo `Close` ed elimina la definizione del gruppo `Open` .|  
 |`[^<>]*`|Trova la corrispondenza di zero o più occorrenze di qualsiasi carattere diverso da parentesi uncinate aperte o chiuse.|  
 |`((?'Close-Open'>)[^<>]*)+`|Trova la corrispondenza di una o più occorrenze di una parentesi uncinata chiusa seguita da zero o più occorrenze di caratteri diversi da parentesi uncinate aperte o chiuse. In caso di corrispondenza di una parentesi uncinata chiusa, assegna la sottostringa tra il gruppo `Open` e il gruppo corrente al gruppo `Close` ed elimina la definizione del gruppo `Open` . Equivale al terzo gruppo di acquisizione.|  
 |`(((?'Open'<)[^<>]*)+((?'Close-Open'>)[^<>]*)+)*`|Trova la corrispondenza di zero o più occorrenze del criterio seguente: una o più occorrenze di una parentesi uncinata aperta seguite da zero o più parentesi uncinate, seguite da zero o più parentesi non uncinate, seguite da una o più occorrenze di parentesi uncinate chiuse, seguite da zero o più occorrenze di parentesi non uncinate. In caso di corrispondenza di una parentesi uncinata chiusa, elimina la definizione del gruppo `Open` e assegna la sottostringa tra il gruppo `Open` e il gruppo corrente al gruppo `Close` . Equivale al primo gruppo di acquisizione.|  
@@ -213,7 +213,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
 |2|`[^<>]*`|Cerca parentesi non uncinate prima della parentesi uncinata aperta; non trova corrispondenze.|  
 |3|`(((?'Open'<)`|Trova la corrispondenza della parentesi uncinata aperta in "\<abc>" e la assegna al gruppo `Open`.|  
 |4|`[^<>]*`|Trova la corrispondenza con "abc".|  
-|5|`)+`|"<abc" è il valore del secondo gruppo acquisito.<br /><br /> Il carattere successivo nella stringa di input non è una parentesi uncinata aperta, pertanto il motore delle espressioni regolari non esegue il loopback al criterio secondario `(?'Open'<)[^<>]*)`.|  
+|5|`)+`|"<abc" è il valore del secondo gruppo acquisito.<br /><br /> Il carattere successivo nella stringa di input non è una parentesi uncinata aperta, pertanto il motore delle espressioni regolari non esegue il loopback al criterio secondario `(?'Open'<)[^<>]*)` .|  
 |6|`((?'Close-Open'>)`|Trova la corrispondenza della parentesi uncinata chiusa in "\<abc>", che è la sottostringa tra il gruppo `Open` e la parentesi uncinata chiusa, al gruppo `Close` ed elimina il valore corrente ("<") del gruppo `Open`, lasciandolo vuoto.|  
 |7|`[^<>]*`|Cerca parentesi non uncinate dopo la parentesi uncinata chiusa; non trova corrispondenze.|  
 |8|`)+`|Il valore del terzo gruppo acquisito è ">".<br /><br /> Il carattere successivo nella stringa di input non è una parentesi uncinata chiusa, pertanto il motore delle espressioni regolari non esegue il loopback al criterio secondario `((?'Close-Open'>)[^<>]*)` .|  
@@ -223,14 +223,14 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
 |12|`)+`|"<mno" è il valore del secondo gruppo acquisito.<br /><br /> Il carattere successivo nella stringa di input è una parentesi uncinata aperta, pertanto il motore delle espressioni regolari esegue il loopback al criterio secondario `(?'Open'<)[^<>]*)` .|  
 |13|`(((?'Open'<)`|Trova la corrispondenza della parentesi uncinata aperta in "\<xyz>" e la assegna al gruppo `Open`. Nella raccolta <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> del gruppo `Open` sono ora incluse due acquisizioni: la parentesi uncinata aperta di "\<mno" e la parentesi uncinata aperta di "\<xyz>".|  
 |14|`[^<>]*`|Trova la corrispondenza con "xyz".|  
-|15|`)+`|"<xyz" è il valore del secondo gruppo acquisito.<br /><br /> Il carattere successivo nella stringa di input non è una parentesi uncinata aperta, pertanto il motore delle espressioni regolari non esegue il loopback al criterio secondario `(?'Open'<)[^<>]*)`.|  
-|16|`((?'Close-Open'>)`|Trova la corrispondenza della parentesi uncinata chiusa in "\<xyz>". "xyz", assegna la sottostringa tra il gruppo `Open` e la parentesi uncinata chiusa al gruppo `Close` ed elimina il valore corrente dal gruppo `Open`. Il valore dell'acquisizione precedente (la parentesi uncinata aperta in "\<mno") diventa il valore corrente del gruppo `Open`. Nella raccolta <xref:System.Text.RegularExpressions.Group.Captures%2A> del gruppo `Open` è ora inclusa una sola acquisizione, ovvero la parentesi uncinata aperta di "\<xyz>".|  
+|15|`)+`|"<xyz" è il valore del secondo gruppo acquisito.<br /><br /> Il carattere successivo nella stringa di input non è una parentesi uncinata aperta, pertanto il motore delle espressioni regolari non esegue il loopback al criterio secondario `(?'Open'<)[^<>]*)` .|  
+|16|`((?'Close-Open'>)`|Trova la corrispondenza della parentesi uncinata chiusa in "\<xyz>". "xyz", assegna la sottostringa tra il gruppo `Open` e la parentesi uncinata chiusa al gruppo `Close` ed elimina il valore corrente dal gruppo `Open` . Il valore dell'acquisizione precedente (la parentesi uncinata aperta in "\<mno") diventa il valore corrente del gruppo `Open`. Nella raccolta <xref:System.Text.RegularExpressions.Group.Captures%2A> del gruppo `Open` è ora inclusa una sola acquisizione, ovvero la parentesi uncinata aperta di "\<xyz>".|  
 |17|`[^<>]*`|Cerca parentesi non uncinate; non trova corrispondenze.|  
 |18|`)+`|Il valore del terzo gruppo acquisito è ">".<br /><br /> Il carattere successivo nella stringa di input è una parentesi uncinata chiusa, pertanto il motore delle espressioni regolari esegue il loopback al criterio secondario `((?'Close-Open'>)[^<>]*)` .|  
 |19|`((?'Close-Open'>)`|Trova la corrispondenza della parentesi uncinata chiusa finale in "xyz>>", assegna "mno\<xyz>" (la sottostringa tra il gruppo `Open` e la parentesi uncinata chiusa) al gruppo `Close` ed elimina il valore corrente del gruppo `Open`. Il gruppo `Open` è ora vuoto.|  
 |20|`[^<>]*`|Cerca parentesi non uncinate; non trova corrispondenze.|  
 |21|`)+`|Il valore del terzo gruppo acquisito è ">".<br /><br /> Il carattere successivo nella stringa di input non è una parentesi uncinata chiusa, pertanto il motore delle espressioni regolari non esegue il loopback al criterio secondario `((?'Close-Open'>)[^<>]*)` .|  
-|22|`)*`|Il valore del primo gruppo acquisito è "<mno\<xyz>>".<br /><br /> Il carattere successivo nella stringa di input non è una parentesi uncinata aperta, pertanto il motore delle espressioni regolari non esegue il loopback al criterio secondario `(((?'Open'<)`.|  
+|22|`)*`|Il valore del primo gruppo acquisito è "<mno\<xyz>>".<br /><br /> Il carattere successivo nella stringa di input non è una parentesi uncinata aperta, pertanto il motore delle espressioni regolari non esegue il loopback al criterio secondario `(((?'Open'<)` .|  
 |23|`(?(Open)(?!))`|Il gruppo `Open` non è definito, pertanto non viene tentato di trovare corrispondenze.|  
 |24|`$`|Trova la corrispondenza della fine della stringa di input.|  
   
@@ -240,7 +240,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
 `(?:subexpression)`
   
- dove *sottoespressione* è un qualsiasi criterio di espressioni regolari valido. Il costrutto del gruppo non di acquisizione viene generalmente usato quando un quantificatore è applicato a un gruppo, ma le sottostringhe acquisite dal gruppo non sono di alcun interesse.  
+ dove *sottoespressione* è un qualsiasi criterio valido di espressione regolare. Il costrutto del gruppo non di acquisizione viene generalmente usato quando un quantificatore è applicato a un gruppo, ma le sottostringhe acquisite dal gruppo non sono di alcun interesse.  
   
 > [!NOTE]
 > Se un'espressione regolare include costrutti di raggruppamento annidati, un costrutto del gruppo di non acquisizione esterno non si applica ai costrutti del gruppo annidati interni.  
@@ -264,12 +264,12 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
 ## <a name="group-options"></a>Opzioni di gruppo  
  Il costrutto di raggruppamento applica o disabilita le opzioni specificate all'interno di una sottoespressione:  
   
- `(?imnsx-imnsx:` *sottoespressione* `)`  
+ `(?imnsx-imnsx:` *subexpression* `)`  
   
- dove *sottoespressione* è un qualsiasi criterio di espressioni regolari valido. Ad esempio, `(?i-s:)` disattiva la differenziazione tra maiuscole e minuscole e disabilita la modalità riga singola. Per altre informazioni sulle opzioni inline che è possibile specificare, vedere [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).  
+ dove *sottoespressione* è un qualsiasi criterio valido di espressione regolare. Ad esempio, `(?i-s:)` disattiva la differenziazione tra maiuscole e minuscole e disabilita la modalità riga singola. Per ulteriori informazioni sulle opzioni inline che è possibile specificare, vedere [Opzioni delle espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).  
   
 > [!NOTE]
-> È possibile specificare opzioni che si applicano a un'espressione regolare intera anziché a una sottoespressione usando un costruttore della classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> o un metodo statico. È possibile specificare anche opzioni inline che si applicano dopo un punto specifico in un'espressione regolare usando il costrutto di linguaggio `(?imnsx-imnsx)` .  
+> È possibile specificare opzioni che si applicano a un'espressione regolare intera anziché a una sottoespressione usando un costruttore della classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> o un metodo statico. È possibile specificare anche opzioni inline che si applicano dopo un punto specifico in un'espressione regolare usando il costrutto di linguaggio `(?imnsx-imnsx)`.  
   
  Il costrutto delle opzioni di gruppo non è un gruppo di acquisizione. Ovvero, sebbene qualsiasi parte di una stringa acquisita dalla *sottoespressione* sia inclusa nella corrispondenza, non viene inclusa in un gruppo acquisito né usata per popolare l'oggetto <xref:System.Text.RegularExpressions.GroupCollection> .  
   
@@ -288,9 +288,9 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
 ## <a name="zero-width-positive-lookahead-assertions"></a>Asserzioni lookahead positive di larghezza zero  
  Il costrutto di raggruppamento seguente definisce un'asserzione lookbehind positiva di larghezza zero:  
   
- `(?=` *sottoespressione* `)`  
+ `(?=` *subexpression* `)`  
   
- dove *sottoespressione* è un qualsiasi criterio di espressioni regolari. Per trovare una corrispondenza, la stringa di input deve corrispondere al criterio di ricerca di espressioni regolari in *sottoespressione*, sebbene la sottostringa corrispondente non venga inclusa nel risultato della corrispondenza. Un'asserzione lookahead positiva di larghezza zero non esegue il backtracking.  
+ dove *sottoespressione* è un qualsiasi criterio di ricerca di espressioni regolari. Per trovare una corrispondenza, la stringa di input deve corrispondere al criterio di ricerca di espressioni regolari in *sottoespressione*, sebbene la sottostringa corrispondente non venga inclusa nel risultato della corrispondenza. Un'asserzione lookahead positiva di larghezza zero non esegue il backtracking.  
   
  In genere, un'asserzione lookahead positiva di larghezza zero viene trovata alla fine di un criterio di ricerca di espressioni regolari Definisce una sottostringa che deve essere trovata alla fine di una stringa affinché venga stabilita una corrispondenza ma che non deve essere inclusa nella corrispondenza. È anche utile per impedire un backtracking eccessivo. È possibile usare un'asserzione lookahead positiva di larghezza zero per assicurarsi che un particolare gruppo acquisito inizi con il testo che corrisponde a un subset del criterio definito per tale gruppo acquisito. Se, ad esempio, viene trovata la corrispondenza di un gruppo di acquisizioni con caratteri alfanumerici consecutivi, è possibile usare un'asserzione positiva lookahead di larghezza zero per richiedere che il primo carattere sia un carattere alfabetico maiuscolo.  
   
@@ -311,9 +311,9 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
 ## <a name="zero-width-negative-lookahead-assertions"></a>Asserzioni lookahead negative di larghezza zero  
  Nel costrutto di raggruppamento seguente viene definita un'asserzione lookahead negativa di larghezza zero:  
   
- `(?!` *sottoespressione* `)`  
+ `(?!` *subexpression* `)`  
   
- dove *sottoespressione* è un qualsiasi criterio di espressioni regolari. Per trovare una corrispondenza, la stringa di input non deve corrispondere al criterio di ricerca di espressioni regolari in *sottoespressione*, sebbene la stringa corrispondente non venga inclusa nel risultato della corrispondenza.  
+ dove *sottoespressione* è un qualsiasi criterio di ricerca di espressioni regolari. Per trovare una corrispondenza, la stringa di input non deve corrispondere al criterio di ricerca di espressioni regolari in *sottoespressione*, sebbene la stringa corrispondente non venga inclusa nel risultato della corrispondenza.  
   
  Un'asserzione lookahead negativa di larghezza zero viene usata in genere all'inizio o alla fine di un'espressione regolare. All'inizio di un'espressione regolare, può definire un criterio specifico per il quale non deve essere trovata una corrispondenza quando l'inizio dell'espressione regolare definisce un criterio simile ma più generale per cui stabilire la corrispondenza. In questo caso, viene spesso usata per limitare il backtracking. Alla fine di un'espressione regolare, può definire una sottoespressione che non può verificarsi alla fine di una corrispondenza.  
   
@@ -349,9 +349,9 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
 ## <a name="zero-width-positive-lookbehind-assertions"></a>Asserzioni lookbehind positive di larghezza zero  
  Nel costrutto di raggruppamento seguente viene definita un'asserzione lookbehind positiva di larghezza zero:  
   
- `(?<=` *sottoespressione* `)`  
+ `(?<=` *subexpression* `)`  
   
- dove *sottoespressione* è un qualsiasi criterio di espressioni regolari. Per trovare una corrispondenza, *sottoespressione* deve trovarsi nella stringa di input a sinistra della posizione corrente, sebbene `subexpression` non sia incluso nel risultato della corrispondenza. Un'asserzione lookbehind positiva di larghezza zero non esegue il backtracking.  
+ dove *sottoespressione* è un qualsiasi criterio di ricerca di espressioni regolari. Per trovare una corrispondenza, *sottoespressione* deve trovarsi nella stringa di input a sinistra della posizione corrente, sebbene `subexpression` non sia incluso nel risultato della corrispondenza. Un'asserzione lookbehind positiva di larghezza zero non esegue il backtracking.  
   
  Le asserzioni lookbehind positive di larghezza zero vengono usate in genere all'inizio delle espressioni regolari. Il criterio definito è una precondizione per una corrispondenza, anche se non fa parte del risultato della corrispondenza.  
   
@@ -360,7 +360,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
  [!code-csharp[RegularExpressions.Language.Grouping#9](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/lookbehind1.cs#9)]
  [!code-vb[RegularExpressions.Language.Grouping#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/lookbehind1.vb#9)]  
   
- Il criterio di espressione regolare `(?<=\b20)\d{2}\b` è interpretato nel modo illustrato nella tabella seguente.  
+ Il criterio di ricerca di espressioni regolari `(?<=\b20)\d{2}\b` è interpretato nel modo illustrato nella tabella seguente.  
   
 |Modello|Descrizione|  
 |-------------|-----------------|  
@@ -374,9 +374,9 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
 ## <a name="zero-width-negative-lookbehind-assertions"></a>Asserzioni lookbehind negative di larghezza zero  
  Nel costrutto di raggruppamento seguente viene definita un'asserzione lookbehind negativa di larghezza zero:  
   
- `(?<!` *sottoespressione* `)`  
+ `(?<!` *subexpression* `)`  
   
- dove *sottoespressione* è un qualsiasi criterio di espressioni regolari. Per trovare una corrispondenza, la *sottoespressione* non deve trovarsi nella stringa di input a sinistra della posizione corrente. Tuttavia, qualsiasi sottostringa che non corrisponde a `subexpression` non viene inclusa nel risultato della corrispondenza.  
+ dove *sottoespressione* è un qualsiasi criterio di ricerca di espressioni regolari. Per trovare una corrispondenza, *sottoespressione* non deve trovarsi nella stringa di input a sinistra della posizione corrente. Tuttavia, qualsiasi sottostringa che non corrisponde a `subexpression` non viene inclusa nel risultato della corrispondenza.  
   
  Le asserzioni lookbehind negative di larghezza zero vengono usate in genere all'inizio delle espressioni regolari. Il criterio definito preclude una corrispondenza nella stringa che segue. Queste asserzioni vengono usate anche per limitare il backtracking quando l'ultimo carattere o gli ultimi caratteri in un gruppo acquisito non devono essere costituiti da uno o più caratteri corrispondenti al criterio di ricerca di espressioni regolari di tale gruppo. Ad esempio, se un gruppo acquisisce tutti i caratteri alfanumerici consecutivi, è possibile usare un'asserzione positiva lookbehind di larghezza zero per richiedere che l'ultimo carattere non sia un carattere di sottolineatura (\_).  
   
@@ -385,7 +385,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
  [!code-csharp[RegularExpressions.Language.Grouping#10](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/negativelookbehind1.cs#10)]
  [!code-vb[RegularExpressions.Language.Grouping#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/negativelookbehind1.vb#10)]  
   
- Il criterio di espressione regolare `(?<!(Saturday|Sunday) )\b\w+ \d{1,2}, \d{4}\b` è interpretato nel modo illustrato nella tabella seguente.  
+ Il criterio di ricerca di espressioni regolari `(?<!(Saturday|Sunday) )\b\w+ \d{1,2}, \d{4}\b` è interpretato nel modo illustrato nella tabella seguente.  
   
 |Modello|Descrizione|  
 |-------------|-----------------|  
@@ -397,19 +397,19 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
 <a name="atomic_groups"></a>
 ## <a name="atomic-groups"></a>Gruppi atomici  
- Il costrutto di raggruppamento seguente rappresenta un gruppo atomico (noto in altri motori delle espressioni regolari come sottoespressione non di backtracking, una sottoespressione atomica o una sottoespressione solo una volta):
+ Il costrutto di raggruppamento seguente rappresenta un gruppo atomico (noto in alcuni altri motori di espressioni regolari come sottoespressione non di backtracking, sottoespressione atomica o sottoespressione una sola volta):The following grouping construct represents an atomic group (known in some other regular expression engines as a nonbacktracking subexpression, an atomic subexpression, or a once-only subexpression):
   
- `(?>` *sottoespressione* `)`  
+ `(?>` *subexpression* `)`  
   
- dove *sottoespressione* è un qualsiasi criterio di espressioni regolari.  
+ dove *sottoespressione* è un qualsiasi criterio di ricerca di espressioni regolari.  
   
  Normalmente, se un'espressione regolare include un criterio di ricerca facoltativo o alternativo e una corrispondenza ha esito negativo, il motore delle espressioni regolari può creare un ramo in più direzioni per trovare la corrispondenza di una stringa di input con un criterio. Se non viene trovata una corrispondenza quando viene esaminato il primo ramo, il motore delle espressioni regolari può tornare, o eseguire il backtracking, al punto in cui ha trovato la prima corrispondenza e tenta la corrispondenza usando il secondo ramo. Questo processo può continuare fino a che non sono stati provati tutti i rami.  
   
- Il gruppo `(?>`*sottoespressione*`)` disabilita il backtracking. Il motore delle espressioni regolari troverà la corrispondenza con il numero massimo possibile di caratteri nella stringa di input. Quando non sarà più possibile trovare altre corrispondenze, non eseguirà il backtracking per trovare corrispondenze alternative con i criteri. Viene pertanto trovata la corrispondenza della sottoespressione solo con stringhe corrispondenti esclusivamente alla sottoespressione; non tenta di trovare una corrispondenza per una stringa in base alla sottoespressione e a qualsiasi sottoespressione successiva.  
+ Il `(?>`costrutto del linguaggio *delle sottoespressioni* `)` disabilita il backtracking. Il motore delle espressioni regolari troverà la corrispondenza con il numero massimo possibile di caratteri nella stringa di input. Quando non sarà più possibile trovare altre corrispondenze, non eseguirà il backtracking per trovare corrispondenze alternative con i criteri. Viene pertanto trovata la corrispondenza della sottoespressione solo con stringhe corrispondenti esclusivamente alla sottoespressione; non tenta di trovare una corrispondenza per una stringa in base alla sottoespressione e a qualsiasi sottoespressione successiva.  
   
  Questa opzione è consigliata solo se si è certi che il backtracking avrà esito negativo. Impedendo al motore delle espressioni regolari di eseguire ricerche non necessarie si registra un miglioramento delle prestazioni.  
   
- Nell'esempio seguente viene illustrato il modo in cui un gruppo atomico modifica i risultati di una corrispondenza di criteri. L'espressione regolare di backtracking trova una corrispondenza per una serie di caratteri ripetuti seguiti da una o più occorrenze dello stesso carattere su un confine di parola, diversamente dall'espressione regolare di non backtracking.  
+ Nell'esempio seguente viene illustrato come un gruppo atomico modifica i risultati di una corrispondenza di modello. L'espressione regolare di backtracking trova una corrispondenza per una serie di caratteri ripetuti seguiti da una o più occorrenze dello stesso carattere su un confine di parola, diversamente dall'espressione regolare di non backtracking.  
   
  [!code-csharp[RegularExpressions.Language.Grouping#11](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/nonbacktracking1.cs#11)]
  [!code-vb[RegularExpressions.Language.Grouping#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/nonbacktracking1.vb#11)]  
@@ -454,5 +454,5 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Linguaggio delle espressioni regolari - Guida di riferimento rapidoRegular Expression Language - Quick Reference](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)

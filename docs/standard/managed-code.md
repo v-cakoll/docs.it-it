@@ -5,11 +5,11 @@ ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
 ms.openlocfilehash: 9133859bd9c999e076effcf0d4d631c59db02f33
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678758"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "61910117"
 ---
 # <a name="what-is-managed-code"></a>Informazioni sul codice gestito
 
@@ -19,7 +19,7 @@ Detto in parole povere, il codice gestito è un codice la cui esecuzione è gest
 
 Il modo in cui viene eseguito un programma C/C++, denominato anche "codice non gestito", è opposto a quanto sopra esposto. Nel "mondo non gestito", il programmatore è responsabile di tutte le attività relative al codice. Il programma effettivo è essenzialmente un file binario che il sistema operativo carica in memoria e avvia. Tutti gli altri aspetti, dalla gestione della memoria alle considerazioni sulla sicurezza, sono a carico del programmatore.
 
-Il codice gestito è scritto in uno dei linguaggi di alto livello eseguibili in .NET, ad esempio C#, Visual Basic, F# e altri. Quando si compila codice scritto in uno di questi linguaggi con il relativo compilatore, non si ottiene codice macchina. Si ottiene invece codice in **linguaggio intermedio**  che il runtime provvede a compilare ed eseguire. C++ è l'unica eccezione a questa regola, poiché può generare alche file binari nativi non gestiti eseguibili in Windows.
+Il codice gestito è scritto in uno dei linguaggi di alto livello eseguibili in .NET, ad esempio C#, Visual Basic, F# e altri. Quando si compila codice scritto in uno di questi linguaggi con il relativo compilatore, non si ottiene codice macchina. Si ottiene invece codice in **linguaggio intermedio ** che il runtime provvede a compilare ed eseguire. C++ è l'unica eccezione a questa regola, poiché può generare alche file binari nativi non gestiti eseguibili in Windows.
 
 ## <a name="intermediate-language--execution"></a>Linguaggio intermedio ed esecuzione
 

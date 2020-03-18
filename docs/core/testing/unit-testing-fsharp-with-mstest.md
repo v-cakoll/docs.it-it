@@ -5,10 +5,10 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.openlocfilehash: a685ed8a56393fb6e1c1b9400f0ed4bcef15f9b5
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714269"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>Testing unità di librerie F# in .NET Core usando il test dotnet e MSTest
@@ -20,7 +20,7 @@ In questa esercitazione viene illustrata un'esperienza interattiva di compilazio
 ## <a name="creating-the-source-project"></a>Creazione del progetto di origine
 
 Aprire una finestra della shell. Creare una directory denominata *unit-testing-with-fsharp* in cui archiviare la soluzione.
-All'interno di questa nuova directory eseguire `dotnet new sln` per creare una nuova soluzione. Questo rende più semplice gestire sia la libreria di classi che il progetto di unit test.
+In questa nuova directory eseguire `dotnet new sln` per creare una nuova soluzione. Questo rende più semplice gestire sia la libreria di classi che il progetto di unit test.
 All'interno della directory della soluzione creare una directory *MathService*. La struttura della directory e dei file fino a questo momento è la seguente:
 
 ```
@@ -29,14 +29,14 @@ All'interno della directory della soluzione creare una directory *MathService*. 
     /MathService
 ```
 
-Rendere *MathService* la directory corrente ed eseguire `dotnet new classlib -lang "F#"` per creare il progetto di origine.  Si creerà un'implementazione non corretta del servizio matematico:
+Impostare *MathService* come directory corrente ed eseguire `dotnet new classlib -lang "F#"` per creare il progetto di origine.  Si creerà un'implementazione non corretta del servizio matematico:
 
 ```fsharp
 module MyMath =
     let squaresOfOdds xs = raise (System.NotImplementedException("You haven't written a test yet!"))
 ```
 
-Tornare alla directory *unit-test-con-fsharp*. Eseguire `dotnet sln add .\MathService\MathService.fsproj` per aggiungere il progetto libreria di classi alla soluzione.
+Tornare alla directory *unit-test-con-fsharp*. Eseguire `dotnet sln add .\MathService\MathService.fsproj` per aggiungere il progetto di libreria di classi alla soluzione.
 
 ## <a name="creating-the-test-project"></a>Creazione del progetto di test
 
@@ -51,7 +51,7 @@ Creare quindi la directory *MathService.Tests*. Di seguito è illustrata la stru
     /MathService.Tests
 ```
 
-Rendere la directory *MathService. tests* la directory corrente e creare un nuovo progetto usando `dotnet new mstest -lang "F#"`. Ciò crea un progetto di test che usa MSTest come framework di test. Il modello generato configura il Test Runner nel file *MathServiceTests.fsproj*:
+Impostare *MathService.Tests* come directory corrente e creare un nuovo progetto usando `dotnet new mstest -lang "F#"`. Ciò crea un progetto di test che usa MSTest come framework di test. Il modello generato configura il Test Runner nel file *MathServiceTests.fsproj*:
 
 ```xml
 <ItemGroup>
@@ -61,7 +61,7 @@ Rendere la directory *MathService. tests* la directory corrente e creare un nuov
 </ItemGroup>
 ```
 
-Per creare ed eseguire unit test, il progetto di test richiede altri pacchetti. Nel passaggio precedente `dotnet new` ha aggiunto MSTest e il Runner di MSTest. Aggiungere ora la libreria di classi `MathService` come un'altra dipendenza del progetto. Usare il comando `dotnet add reference`:
+Per creare ed eseguire unit test, il progetto di test richiede altri pacchetti. Nel passaggio precedente `dotnet new` ha aggiunto MSTest e il Runner di MSTest. Aggiungere ora la libreria di classi `MathService` come un'altra dipendenza del progetto. Utilizzare `dotnet add reference` il comando:
 
 ```dotnetcli
 dotnet add reference ../MathService/MathService.fsproj
@@ -82,7 +82,7 @@ Il layout della soluzione finale è il seguente:
         MathServiceTests.fsproj
 ```
 
-Eseguire `dotnet sln add .\MathService.Tests\MathService.Tests.fsproj` nella directory *Unit-Testing-with-FSharp* .
+Eseguire `dotnet sln add .\MathService.Tests\MathService.Tests.fsproj` nella directory *unit-testing-with-fsharp*.
 
 ## <a name="creating-the-first-test"></a>Creazione del primo test
 
@@ -106,7 +106,7 @@ type TestClass () =
      member this.FailEveryTime() = Assert.IsTrue(false)
 ```
 
-L'attributo `[<TestClass>]` indica una classe che contiene test. L'attributo `[<TestMethod>]` indica un metodo di test eseguito dal Test Runner. Dalla directory *Unit-Testing-with-FSharp* eseguire `dotnet test` per compilare i test e la libreria di classi, quindi eseguire i test. Il Test Runner di MSTest include il punto d'ingresso del programma per l'esecuzione dei test. `dotnet test` avvia il Test Runner usando il progetto di unit test creato.
+L'attributo `[<TestClass>]` indica una classe che contiene test. L'attributo `[<TestMethod>]` indica un metodo di test eseguito dal Test Runner. Dalla directory *unit-test-con-fsharp* eseguire `dotnet test` per compilare i test e la libreria di classi, quindi eseguire i test. Il Test Runner di MSTest include il punto d'ingresso del programma per l'esecuzione dei test. `dotnet test` avvia il Test Runner usando il progetto di unit test creato.
 
 Questi due test mostrano i test più semplici superati e non superati. `My test` viene superato e `Fail every time` non viene superato. A questo punto, creare un test per il metodo `squaresOfOdds`. Il metodo `squaresOfOdds` restituisce un elenco di quadrati di tutti i valori interi dispari che fanno parte della sequenza di input. Anziché tentare di scrivere tutte queste funzioni in una sola volta, è possibile creare in modo iterativo test per la convalida della funzionalità. Fare in modo che ogni test venga superato significa creare le funzionalità necessarie per il metodo.
 
@@ -185,4 +185,4 @@ let squaresOfOdds xs =
 - [dotnet new](../tools/dotnet-new.md)
 - [dotnet sln](../tools/dotnet-sln.md)
 - [dotnet add reference](../tools/dotnet-add-reference.md)
-- [dotnet test](../tools/dotnet-test.md)
+- [test dotnet](../tools/dotnet-test.md)

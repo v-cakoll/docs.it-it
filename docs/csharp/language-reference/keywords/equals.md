@@ -8,15 +8,15 @@ helpviewer_keywords:
 - equals keyword [C#]
 ms.assetid: e981309a-e4bf-444c-8a2b-5c695e6114b1
 ms.openlocfilehash: fc190433b37b027a92d8e8338a35b06d5d1e1824
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713569"
 ---
 # <a name="equals-c-reference"></a>equals (Riferimenti per C#)
 
-La parola chiave contestuale `equals` viene usata in una clausola `join` in un'espressione di query per confrontare gli elementi di due sequenze. Per altre informazioni, vedere [Clausola join](join-clause.md).
+La parola chiave contestuale `equals` viene usata in una clausola `join` in un'espressione di query per confrontare gli elementi di due sequenze. Per ulteriori informazioni, vedere [Clausola join](join-clause.md).
 
 ## <a name="example"></a>Esempio
 
@@ -26,4 +26,4 @@ L'esempio seguente illustra l'uso della parola chiave `equals` in una clausola `
 
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ (Language-Integrated Query)](../../linq/index.md)
+- [Language Integrated Query (LINQ)](../../linq/index.md)

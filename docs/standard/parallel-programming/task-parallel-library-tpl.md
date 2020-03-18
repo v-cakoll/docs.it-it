@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Parallel Programming
 ms.assetid: b8f99f43-9104-45fd-9bff-385a20488a23
 ms.openlocfilehash: 487fe48462803ac19318f450f2576989f196a9be
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139964"
 ---
 # <a name="task-parallel-library-tpl"></a>Task Parallel Library (TPL)
@@ -24,7 +24,7 @@ La libreria Task Parallel Library (TPL) è un set di tipi e API pubblici negli s
 |Titolo|Descrizione|  
 |-|-|  
 |[Parallelismo dei dati](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|Viene descritto come creare cicli `for` e `foreach` paralleli (`For` e `For Each` in Visual Basic).|  
-|[Programmazione asincrona basata su attività](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)|Viene descritto come creare ed eseguire attività tramite <xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=nameWithType> in modo implicito o direttamente tramite oggetti <xref:System.Threading.Tasks.Task> in modo esplicito.|  
+|[Programmazione asincrona basata su attivitàTask-based Asynchronous Programming](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)|Viene descritto come creare ed eseguire attività tramite <xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=nameWithType> in modo implicito o direttamente tramite oggetti <xref:System.Threading.Tasks.Task> in modo esplicito.|  
 |[Flusso di dati](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)|Viene descritto come utilizzare i componenti del flusso di dati nella libreria del flusso di dati TPL per gestire più operazioni che devono comunicare tra loro o elaborare dati man mano che diventano disponibili.|  
 |[Uso di TPL con altri modelli asincroni](../../../docs/standard/parallel-programming/using-tpl-with-other-asynchronous-patterns.md)|Viene descritto come usare TPL con altri modelli asincroni in .NET|  
 |[Problemi potenziali nel parallelismo di dati e attività](../../../docs/standard/parallel-programming/potential-pitfalls-in-data-and-task-parallelism.md)|Vengono descritti alcuni problemi comuni e il modo per evitarli.|  

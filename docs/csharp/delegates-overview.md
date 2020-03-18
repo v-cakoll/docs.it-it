@@ -4,12 +4,12 @@ description: Questo argomento di panoramica fornisce informazioni sui delegati p
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 59b61d77-84e5-457b-8da5-fb5f24ca6ed6
-ms.openlocfilehash: deff297ccce6cd14a7cd21c49638a9c6030a9996
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: fd594f77c034533a1d5aee1d8279e9b727284311
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037409"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146229"
 ---
 # <a name="introduction-to-delegates"></a>Introduzione ai delegati
 
@@ -31,9 +31,10 @@ I designer del linguaggio hanno enumerato diversi obiettivi per la funzionalità
 
 Il team voleva un costrutto di linguaggio comune che potesse essere usato per i successivi algoritmi di associazione tardiva. Ciò consente agli sviluppatori di apprendere un solo concetto e di usare lo stesso concetto in diversi problemi software.
 
-In secondo luogo, il team voleva supportare le chiamate al metodo sia singole che multicast. I delegati multicast sono i delegati che concatenano più chiamate al metodo. Alcuni esempi sono disponibili [più avanti in questa serie](delegate-class.md). 
+In secondo luogo, il team voleva supportare le chiamate al metodo sia singole che multicast. I delegati multicast sono i delegati che concatenano più chiamate al metodo.
+Alcuni esempi sono disponibili [più avanti in questa serie](delegate-class.md).
 
-Il team voleva che i delegati supportassero la stessa indipendenza dai tipi stesso che gli sviluppatori si aspettano da tutti i costrutti C#. 
+Il team voleva che i delegati supportassero la stessa indipendenza dai tipi stesso che gli sviluppatori si aspettano da tutti i costrutti C#.
 
 Infine il team ha riconosciuto che un modello di evento è un modello specifico, in cui i delegati o qualsiasi algoritmo di associazione tardiva risultano molto utili. Il team voleva assicurarsi che il codice per i delegati potesse offrire la base per il modello di evento di .NET.
 
@@ -43,6 +44,6 @@ Verranno fornite informazioni sulla parola chiave `delegate` e sul codice genera
 
 In generale, sarà possibile osservare in che modo i delegati sono parte integrante della programmazione in .NET e dell'uso con le API del framework.
 
-Ma veniamo al dunque.
+È ora possibile iniziare.
 
-[avanti](delegate-class.md)
+[Avanti](delegate-class.md)

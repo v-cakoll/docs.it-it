@@ -10,10 +10,10 @@ helpviewer_keywords:
 - inter-process communication
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 ms.openlocfilehash: 004da94bc7345bdc294562f0e1bedf6f1735adec
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159715"
 ---
 # <a name="memory-mapped-files"></a>File mappati alla memoria
@@ -147,4 +147,4 @@ Process C says: True
   
 ## <a name="see-also"></a>Vedere anche
 
-- [I/O di file e di flussi](../../../docs/standard/io/index.md)
+- [I/O su file e flusso](../../../docs/standard/io/index.md)

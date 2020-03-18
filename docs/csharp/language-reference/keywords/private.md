@@ -8,17 +8,17 @@ helpviewer_keywords:
 - private keyword [C#]
 ms.assetid: 654c0bb8-e6ac-4086-bf96-7474fa6aa1c8
 ms.openlocfilehash: a13e9ef18b0f6452c3ff1497dc97110bc21c433d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75715195"
 ---
 # <a name="private-c-reference"></a>private (Riferimenti per C#)
 
 La parola chiave `private` è un modificatore di accesso ai membri.
 
-> Questa pagina illustra l'accesso `private`. La parola chiave `private` fa anche parte del modificatore di accesso [`private protected`](./private-protected.md).
+> Questa pagina illustra l'accesso `private`. La `private` parola chiave fa [`private protected`](./private-protected.md) anche parte del modificatore di accesso.
 
 L'accesso privato è il livello di accesso più restrittivo. I membri privati sono accessibili solo all'interno del corpo della classe o dello struct in cui sono stati dichiarati, come nell'esempio seguente:
 
@@ -48,12 +48,12 @@ Per altre informazioni, vedere [Accessibilità dichiarata](~/_csharplang/spec/ba
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
+- [Guida di riferimento a C](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](index.md)
 - [Modificatori di accesso](access-modifiers.md)
 - [Livelli di accessibilità](accessibility-levels.md)
 - [Modificatori](index.md)
-- [public](public.md)
-- [protected](protected.md)
-- [internal](internal.md)
+- [pubblico](public.md)
+- [Protetto](protected.md)
+- [Interno](internal.md)

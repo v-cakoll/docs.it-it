@@ -14,10 +14,10 @@ helpviewer_keywords:
 - data stores, enumerating
 ms.assetid: 0fcf279a-f241-48f0-8034-2e3d331f1fcb
 ms.openlocfilehash: 3ba38093e9e978c89cdb2bb7a584ed9e04c1096d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75707528"
 ---
 # <a name="how-to-enumerate-stores-for-isolated-storage"></a>Procedura: Enumerare gli archivi per lo spazio di memorizzazione isolato
@@ -32,4 +32,4 @@ ms.locfileid: "75707528"
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
-- [Spazio di memorizzazione isolato](../../../docs/standard/io/isolated-storage.md)
+- [Archiviazione isolata](../../../docs/standard/io/isolated-storage.md)

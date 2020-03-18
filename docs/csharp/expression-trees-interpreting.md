@@ -4,12 +4,12 @@ description: Informazioni su come scrivere codice per esaminare la struttura di 
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 34434a633d866b82da3da713aaecc218c7d35124
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 1283d7d957c72558652b96cb428efd0f071f0184
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036905"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146008"
 ---
 # <a name="interpreting-expressions"></a>Interpretazione di espressioni
 
@@ -260,9 +260,9 @@ Expression<Func<int>> sum5 = () => (1 + (2 + 3)) + 4;
 ```
 
 Si può visualizzare la separazione in due possibili risposte per evidenziare quella più efficace. La prima possibilità rappresenta le espressioni *associative all'operando destro*. La seconda rappresenta le espressioni *associative all'operando sinistro*.
-Il vantaggio di entrambi i formati è che il formato si adatta a qualsiasi numero arbitrario di espressioni di addizione. 
+Il vantaggio di entrambi i formati è che il formato si adatta a qualsiasi numero arbitrario di espressioni di addizione.
 
-Se si esegue questa espressione tramite il visitatore, verrà visualizzato questo output, che verifica che l'espressione di addizione semplice è *associativa all'operando sinistro*. 
+Se si esegue questa espressione tramite il visitatore, verrà visualizzato questo output, che verifica che l'espressione di addizione semplice è *associativa all'operando sinistro*.
 
 Per eseguire questo esempio e visualizzare l'albero delle espressioni completo, è stato necessario apportare una modifica all'albero delle espressioni di origine. Quando l'albero delle espressioni contiene tutte le costanti, l'albero risultante contiene semplicemente il valore costante di `10`. Il compilatore esegue tutta l'addizione e riduce l'espressione alla sua forma più semplice. La semplice aggiunta di una variabile nell'espressione è sufficiente per visualizzare l'albero originale:
 
@@ -349,8 +349,8 @@ L'esempio riguarda solo gli alberi delle espressioni più elementari. Il codice 
 
 ```csharp
 Expression<Func<int, int>> factorial = (n) =>
-    n == 0 ? 
-    1 : 
+    n == 0 ?
+    1 :
     Enumerable.Range(1, n).Aggregate((product, factor) => product * factor);
 ```
 
@@ -509,7 +509,7 @@ The expression body is:
 
 ## <a name="extending-the-sample-library"></a>Estensione della libreria degli esempi
 
-Gli esempi in questa sezione illustrano le tecniche principali per visitare ed esaminare i nodi in un albero delle espressioni. Sono state tralasciate molte azioni che potrebbero essere necessarie in modo da concentrarsi sulle attività di base relative alla visita e all'accesso ai nodi in un albero delle espressioni. 
+Gli esempi in questa sezione illustrano le tecniche principali per visitare ed esaminare i nodi in un albero delle espressioni. Sono state tralasciate molte azioni che potrebbero essere necessarie in modo da concentrarsi sulle attività di base relative alla visita e all'accesso ai nodi in un albero delle espressioni.
 
 In primo luogo, i visitatori gestiscono solo le costanti che sono valori interi. I valori costanti potrebbero essere di qualsiasi altro tipo numerico e il linguaggio C# supporta le conversioni e le promozioni tra tali tipi. Una versione più affidabile di questo codice rispecchierebbe tutte queste funzionalità.
 

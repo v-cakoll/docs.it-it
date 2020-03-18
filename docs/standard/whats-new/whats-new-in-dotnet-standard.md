@@ -5,17 +5,17 @@ ms.custom: updateeachrelease
 ms.date: 04/12/2018
 ms.technology: dotnet-standard
 ms.openlocfilehash: a90df0360211c3b02f4f2d8697890180099c5807
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76921064"
 ---
 # <a name="whats-new-in-the-net-standard"></a>Novità di .NET Standard
 
 .NET Standard è una specifica formale che definisce un set di API con versioni specifiche che devono essere disponibili nelle implementazioni .NET conformi a tale versione dello standard. .NET Standard è destinato agli sviluppatori di librerie. Una libreria che ha come destinazione una versione di .NET Standard è utilizzabile in qualsiasi implementazione di .NET Framework, .NET Core o Xamarin che supporta tale versione dello standard.
 
-La versione più recente di .NET Standard è la versione 2.0. È incluso in .NET Core 2,0 SDK, nonché con Visual Studio 2017 versione 15,3 con il carico di lavoro di .NET Core installato.
+La versione più recente di .NET Standard è la versione 2.0. È incluso in .NET Core 2.0 SDK, nonché con Visual Studio 2017 versione 15.3 con il carico di lavoro di .NET Core installato.
 
 ## <a name="supported-net-implementations"></a>Implementazioni di .NET supportate
 
@@ -59,17 +59,17 @@ L'unico requisito è che le API chiamate dalla libreria di classi di .NET Framew
 
 ### <a name="support-for-visual-basic"></a>Supporto per Visual Basic
 
-È ora possibile sviluppare librerie .NET Standard in Visual Basic. Per Visual Basic sviluppatori che usano Visual Studio 2017 versione 15,3 o successiva con il carico di lavoro di .NET Core installato, Visual Studio ora include un modello di libreria di classi .NET Standard. Per gli sviluppatori Visual Basic che usano altri strumenti e ambienti di sviluppo, è possibile usare il comando [dotnet new](../../core/tools/dotnet-new.md) per creare un progetto di libreria .NET Standard. Per altre informazioni, vedere [Supporto degli strumenti per librerie .NET Standard](#tooling-support-for-net-standard-libraries).
+È ora possibile sviluppare librerie .NET Standard in Visual Basic. Per gli sviluppatori di Visual Basic che usano Visual Studio 2017 versione 15.3 o successiva con il carico di lavoro di .NET Core installato, Visual Studio include ora un modello di libreria di classi standard .NET. Per gli sviluppatori Visual Basic che usano altri strumenti e ambienti di sviluppo, è possibile usare il comando [dotnet new](../../core/tools/dotnet-new.md) per creare un progetto di libreria .NET Standard. Per altre informazioni, vedere [Supporto degli strumenti per librerie .NET Standard](#tooling-support-for-net-standard-libraries).
 
 ### <a name="tooling-support-for-net-standard-libraries"></a>Supporto degli strumenti per librerie .NET Standard
 
-Con il rilascio di .NET Core 2,0 e .NET Standard 2,0, sia Visual Studio 2017 che i [interfaccia della riga di comando di .NET Core](../../core/tools/index.md) includono il supporto degli strumenti per la creazione di librerie di .NET standard.
+Con il rilascio di .NET Core 2.0 e .NET Standard 2.0, sia Visual Studio 2017 [che .NET Core CLI](../../core/tools/index.md) includono il supporto degli strumenti per la creazione di librerie .NET Standard.
 
-Se si installa Visual Studio con il carico di lavoro **Sviluppo multipiattaforma .NET Core**, è possibile creare un progetto di libreria .NET Standard 2.0 usando un modello di progetto, come illustrato nella figura seguente:
+Se si installa Visual Studio con il carico di lavoro di **sviluppo multipiattaforma .NET Core,** è possibile creare un progetto di libreria .NET Standard 2.0 utilizzando un modello di progetto, come illustrato nella figura seguente:
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C #](#tab/csharp)
 
 ![Aggiungere un nuovo progetto di libreria .NET Standard](./media/std-project-cs.png)
 
@@ -79,7 +79,7 @@ Se si usa l'interfaccia della riga di comando di .NET Core, il comando [dotnet n
 dotnet new classlib
 ```
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 ![Aggiungere un nuovo progetto di libreria .NET Standard](./media/std-project-vb.png)
 

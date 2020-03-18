@@ -1,18 +1,18 @@
 ---
-title: Come usare i puntatori per copiare una matrice di byte- C# Guida alla programmazione
+title: Come utilizzare i puntatori per copiare una matrice di byte - Guida per programmatori C
 ms.date: 04/20/2018
 helpviewer_keywords:
 - byte arrays [C#]
 - arrays [C#], byte
 - pointers [C#], to copy bytes
 ms.openlocfilehash: 4929699c2d1e07b16d4694cff79f9b1394b1de38
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75698456"
 ---
-# <a name="how-to-use-pointers-to-copy-an-array-of-bytes-c-programming-guide"></a>Come usare i puntatori per copiare una matrice di byte (C# guida per programmatori)
+# <a name="how-to-use-pointers-to-copy-an-array-of-bytes-c-programming-guide"></a>Come utilizzare i puntatori per copiare una matrice di byte (Guida per programmatori C
 
 Nell'esempio seguente vengono usati i puntatori per copiare i byte da una matrice a un'altra.
 

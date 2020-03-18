@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -linkresource compiler option [C#]
 - linkresource compiler option [C#]
 ms.assetid: 440c26c2-77c1-4811-a0a3-57cce3f5fc96
-ms.openlocfilehash: 454915454f3faf15933257f3e3e221afec51d0ee
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 41af8e0ba8ffebd07d3cb1d2bc5fbc04b8cd595d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606757"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173731"
 ---
 # <a name="-linkresource-c-compiler-options"></a>-linkresource (opzioni del compilatore C#)
 Crea un collegamento a una risorsa di .NET Framework nel file di output. Il file di risorse non viene aggiunto al file di output. Questa opzione è diversa dall'opzione [-resource](./resource-compiler-option.md), che invece incorpora un file di risorse nel file di output.  
@@ -35,7 +35,7 @@ Crea un collegamento a una risorsa di .NET Framework nel file di output. Il file
  Nome logico della risorsa, usato per caricare la risorsa stessa. L'impostazione predefinita corrisponde al nome del file.  
   
  `accessibility-modifier` (facoltativo)  
- Accessibilità della risorsa: public o private. L'impostazione predefinita è public.  
+ Accessibilità della risorsa: public o private. Il valore predefinito è public.  
   
 ## <a name="remarks"></a>Osservazioni  
  Per impostazione predefinita, le risorse collegate sono pubbliche nell'assembly quando vengono create con il compilatore C#. Per renderle private, specificare `private` come modificatore di accessibilità. Non è consentito alcun modificatore diverso da `public` o `private`.  
@@ -70,13 +70,13 @@ gacutil -i A.dll
   
 ```console  
 csc -t:module A.cs  
-al -out:A.dll A.netmodule -link:N.dll   
+al -out:A.dll A.netmodule -link:N.dll
 gacutil -i A.dll  
 ```  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Opzioni del compilatore C#](./index.md)
+- [Opzioni del compilatore C](./index.md)
 - [Al.exe (Assembly Linker)](../../../framework/tools/al-exe-assembly-linker.md)
 - [Uso di assembly e della Global Assembly Cache](../../../framework/app-domains/working-with-assemblies-and-the-gac.md)
 - [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)

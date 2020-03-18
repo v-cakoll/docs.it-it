@@ -10,10 +10,10 @@ helpviewer_keywords:
 - long paths
 - path formats, Windows
 ms.openlocfilehash: b3510be5d417b555d2db163636eac5ce0c0779e4
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77628046"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formati dei percorsi di file nei sistemi Windows
@@ -30,7 +30,7 @@ Un percorso DOS standard può essere costituito da tre componenti:
 
 Se sono presenti tutti e tre i componenti, il percorso è assoluto. Se non si specifica alcun volume o lettera di unità e il nome della directory inizia con il [carattere separatore di directory](<xref:System.IO.Path.DirectorySeparatorChar>), il percorso è relativo dalla radice dell'unità corrente. In caso contrario, il percorso è relativo alla directory corrente. La tabella seguente illustra alcuni percorsi possibili di directory e file.
 
-|Percorso  |Descrizione  |
+|Path  |Descrizione  |
 | -- | -- |
 | `C:\Documents\Newsletters\Summer2018.pdf` | Percorso file assoluto dalla radice dell'unità C: |
 | `\Program Files\Custom Utilities\StringFinder.exe` | Percorso assoluto dalla radice dell'unità corrente. |
@@ -44,7 +44,7 @@ Se sono presenti tutti e tre i componenti, il percorso è assoluto. Se non si sp
 
 È possibile determinare se un percorso di file è completo (ovvero se il percorso è indipendente dalla directory corrente e non cambia quando la directory corrente viene modificata) chiamando il metodo <xref:System.IO.Path.IsPathFullyQualified%2A?displayProperty=nameWthType>. Si noti che tale percorso può includere segmenti di directory relativi (`.` e `..`) ed essere comunque completo se il percorso risolto punta sempre alla stessa posizione.
 
-L'esempio seguente illustra la differenza fra percorsi assoluti e relativi. Si presuppone che la directory D:\FY2018\ esista e che non sia stata impostata alcuna directory corrente per D:\ dal prompt dei comandi prima di eseguire l'esempio.
+L'esempio seguente illustra la differenza fra percorsi assoluti e relativi. Si presuppone che esista la directory D: dal prompt dei comandi prima di eseguire l'esempio.
 
 [!code-csharp[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/cs/paths.cs)]
 [!code-vb[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/vb/paths.vb)]
@@ -62,7 +62,7 @@ I percorsi UNC (Universal Naming Convention), che vengono usati per accedere all
 
 Di seguito sono riportati alcuni esempi di percorsi UNC:
 
-|Percorso  |Descrizione  |
+|Path  |Descrizione  |
 | -- | -- |
 | `\\system07\C$\` | Directory radice dell'unità C: in `system07`. |
 | `\\Server2\Share\Test\Foo.txt` | File Foo.txt nella directory Test del volume \\\\Server2\\Share.|
@@ -95,7 +95,7 @@ Il percorso del dispositivo DOS è costituito dai componenti seguenti:
 
    Il primo segmento del percorso del dispositivo DOS dopo l'identificatore del percorso del dispositivo identifica il volume o l'unità (ad esempio, `\\?\C:\` e `\\.\BootPartition\`).
 
-   È disponibile un collegamento specifico per i percorsi UNC, chiamato `UNC`. Ad esempio,
+   È disponibile un collegamento specifico per i percorsi UNC, chiamato `UNC`. Ad esempio:
 
   `\\.\UNC\Server\Share\Test\Foo.txt`
   `\\?\UNC\Server\Share\Test\Foo.txt`
@@ -202,7 +202,7 @@ L'esclusione della normalizzazione e dei controlli MAX_PATH è l'unica differenz
 
 I percorsi che iniziano con `\\?\` vengono comunque normalizzati se si passano in modo esplicito alla [funzione GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).
 
-È possibile passare i percorsi di più di `MAX_PATH` caratteri a [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) senza `\\?\`. Supporta percorsi di lunghezza arbitraria fino alla dimensione massima delle stringhe che Windows è in grado di gestire.
+È possibile passare percorsi di più `MAX_PATH` caratteri `\\?\`a [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) senza . Supporta percorsi di lunghezza arbitraria fino alla dimensione massima delle stringhe che Windows è in grado di gestire.
 
 ## <a name="case-and-the-windows-file-system"></a>Maiuscole/minuscole e file system di Windows
 

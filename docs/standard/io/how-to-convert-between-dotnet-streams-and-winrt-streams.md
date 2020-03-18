@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: eseguire la conversione tra flussi .NET Framework e Windows Runtime (solo Windows)'
+title: 'Procedura: eseguire la conversione tra flussi di .NET Framework e Windows Runtime (solo Windows)'
 ms.date: 01/14/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -7,13 +7,13 @@ dev_langs:
 - vb
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
 ms.openlocfilehash: 7413c3fae7d7189ec8dca43b0c77f6b56158f416
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159468"
 ---
-# <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>Procedura: eseguire la conversione tra flussi .NET Framework e Windows Runtime (solo Windows)
+# <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>Procedura: eseguire la conversione tra flussi di .NET Framework e Windows Runtime (solo Windows)
 
 .NET Framework per le app UWP è un subset della versione completa di .NET Framework. Per motivi di sicurezza e di altri requisiti per le app UWP, non è possibile usare l'intero set di API di .NET Framework per aprire e leggere i file. Per altre informazioni, vedere [.NET for UWP apps overview](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)) (Panoramica di .NET per le app UWP). Tuttavia, è possibile usare le API di .NET Framework per altre operazioni di manipolazione di un flusso. Per modificare questi flussi, è possibile eseguire la conversione tra un tipo di flusso di .NET Framework come <xref:System.IO.MemoryStream> o <xref:System.IO.FileStream> e un flusso di Windows Runtime come <xref:Windows.Storage.Streams.IInputStream>, <xref:Windows.Storage.Streams.IOutputStream> o <xref:Windows.Storage.Streams.IRandomAccessStream>.
 
@@ -32,7 +32,7 @@ Windows Runtime offre tipi di flusso che supportano solo la lettura, solo la scr
 
 È consigliabile usare il metodo di conversione corrispondente alle funzionalità del flusso di Windows Runtime da convertire. Tuttavia, dato che <xref:Windows.Storage.Streams.IRandomAccessStream> è leggibile e modificabile (implementa sia <xref:Windows.Storage.Streams.IOutputStream> che <xref:Windows.Storage.Streams.IInputStream>) i metodi di conversione mantengono le funzionalità del flusso originale. Ad esempio, se si usa <xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead%2A?displayProperty=nameWithType> per convertire <xref:Windows.Storage.Streams.IRandomAccessStream>, il flusso convertito di .NET Framework non viene limitato alla sola lettura, ma è accessibile anche in scrittura.
 
-## <a name="example-convert-windows-runtime-random-access-to-net-framework-stream"></a>Esempio: convertire Windows Runtime accesso casuale al flusso .NET Framework
+## <a name="example-convert-windows-runtime-random-access-to-net-framework-stream"></a>Esempio: convertire l'accesso casuale di Windows Runtime nel flusso di .NET FrameworkExample: Convert Windows Runtime random-access to .NET Framework stream
 Per convertire un flusso ad accesso casuale di Windows Runtime in un flusso di .NET Framework, usare il metodo <xref:System.IO.WindowsRuntimeStreamExtensions.AsStream%2A?displayProperty=nameWithType>.
 
 Nell'esempio di codice seguente viene richiesto di selezionare un file, che viene poi aperto con le API di Windows Runtime e convertito in un flusso di .NET Framework. L'esempio legge il flusso e genera l'output in un blocco di testo. Il flusso viene in genere manipolato tramite le API di .NET Framework prima di restituire i risultati.
@@ -55,7 +55,7 @@ Quando si converte un flusso di .NET Framework in un flusso di Windows Runtime, 
 
 I flussi di .NET Framework non supportano la clonazione, anche dopo la conversione. Se si converte un flusso di .NET Framework in un flusso di Windows Runtime e si chiama <xref:Windows.Storage.Streams.InMemoryRandomAccessStream.GetInputStreamAt%2A> o <xref:Windows.Storage.Streams.IRandomAccessStream.GetOutputStreamAt%2A>, che chiama <xref:Windows.Storage.Streams.RandomAccessStreamOverStream.CloneStream%2A> oppure si chiama <xref:Windows.Storage.Streams.RandomAccessStreamOverStream.CloneStream%2A> direttamente, si verifica un'eccezione.
 
-## <a name="example-convert-net-framework-to-windows-runtime-random-access-stream"></a>Esempio: convertire .NET Framework in Windows Runtime flusso ad accesso casuale
+## <a name="example-convert-net-framework-to-windows-runtime-random-access-stream"></a>Esempio: convertire .NET Framework nel flusso di accesso casuale di Windows RuntimeExample: Convert .NET Framework to Windows Runtime random-access stream
 
 Per convertire un flusso di .NET Framework in un flusso ad accesso casuale di Windows Runtime usare il metodo <xref:System.IO.WindowsRuntimeStreamExtensions.AsRandomAccessStream%2A>, come illustrato nell'esempio seguente:
 
@@ -69,6 +69,6 @@ Per eseguire l'esempio, creare un'app XAML UWP destinata a .NET Framework 4.5.1 
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida introduttiva: lettura e scrittura di un file (Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh464978(v=win.10))  
+- [Guida introduttiva: Leggere e scrivere un file (Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh464978(v=win.10))  
 - [Panoramica di .NET per le app di Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))  
 - [.NET per le API delle app di Windows Store](https://docs.microsoft.com/previous-versions/br230232(v=vs.120))  

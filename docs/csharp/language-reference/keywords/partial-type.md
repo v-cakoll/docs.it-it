@@ -8,10 +8,10 @@ helpviewer_keywords:
 - partial types [C#]
 ms.assetid: 27320743-a22e-4c7b-b0b3-53afe3607334
 ms.openlocfilehash: 551145b9cdf5fa24f3ae365665e8ff06cf5e9307
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75715214"
 ---
 # <a name="partial-type-c-reference"></a>partial (Tipo) (Riferimenti per C#)
@@ -22,11 +22,11 @@ In *File1.cs*:
 
 [!code-csharp[csrefKeywordsContextual#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#3)]  
 
-In *File2.cs* la dichiarazione:
+Nel *File2.cs* la dichiarazione:
 
 [!code-csharp[csrefKeywordsContextual#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#4)]  
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 La suddivisione di un tipo di classe, struttura o interfaccia in più file può essere utile per progetti di grandi dimensioni o quando si usa codice generato automaticamente come quello fornito da [Progettazione Windows Form](../../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md). Un tipo parziale può contenere un [metodo parziale](partial-method.md). Per altre informazioni, vedere [Classi e metodi parziali](../../programming-guide/classes-and-structs/partial-classes-and-methods.md).
 
@@ -36,7 +36,7 @@ La suddivisione di un tipo di classe, struttura o interfaccia in più file può 
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
+- [Guida di riferimento a C](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Modificatori](index.md)
 - [Introduzione ai generics](../../programming-guide/generics/index.md)

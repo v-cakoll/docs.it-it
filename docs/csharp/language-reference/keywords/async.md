@@ -8,12 +8,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 30ee13a4174a137481fbcd36ccef721958b94a12
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 92e94d6fe1c07ab5cd8f29d040401a737a1db78e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450856"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173653"
 ---
 # <a name="async-c-reference"></a>async (Riferimenti per C#)
 
@@ -26,7 +26,7 @@ public async Task<int> ExampleMethodAsync()
 }  
 ```  
 
-Se non si ha esperienza di programmazione asincrona o non si sa in che modo un metodo asincrono usa l'[operatore `await`](../operators/await.md) per eseguire attività potenzialmente prolungate senza bloccare il thread del chiamante, leggere l'introduzione in [Programmazione asincrona con async e await](../../programming-guide/concepts/async/index.md). Il codice seguente si trova all'interno di un metodo asincrono e chiama il metodo <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType>:
+Se non si ha familiarità con la programmazione asincrona o non si capisce come un metodo asincrono utilizza [ `await` l'operatore](../operators/await.md) per eseguire operazioni potenzialmente a esecuzione prolungata senza bloccare il thread del chiamante, leggere l'introduzione in [Programmazione asincrona con async e await](../../programming-guide/concepts/async/index.md). Il codice seguente si trova all'interno di un metodo asincrono e chiama il metodo <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType>:
   
 ```csharp  
 string contents = await httpClient.GetStringAsync(requestUrl);  
@@ -46,7 +46,7 @@ Nell'esempio seguente vengono illustrati la struttura e il flusso di controllo t
 ```xaml
 <Button Content="Button" HorizontalAlignment="Left" Margin="88,77,0,0" VerticalAlignment="Top" Width="75"  
         Click="StartButton_Click" Name="StartButton"/>  
-<TextBox HorizontalAlignment="Left" Height="137" Margin="88,140,0,0" TextWrapping="Wrap"   
+<TextBox HorizontalAlignment="Left" Height="137" Margin="88,140,0,0" TextWrapping="Wrap"
          Text="&lt;Enter a URL&gt;" VerticalAlignment="Top" Width="310" Name="ResultsTextBox"/>  
 ```
   
@@ -71,8 +71,8 @@ Un metodo asincrono può avere i tipi restituiti seguenti:
 
 - <xref:System.Threading.Tasks.Task>
 - <xref:System.Threading.Tasks.Task%601>
-- [void](../builtin-types/void.md). I metodi `async void` sono in genere sconsigliati per il codice diverso dai gestori eventi perché i chiamanti non possono usare `await` per questi metodi e devono implementare un meccanismo diverso per segnalare il completamento corretto o condizioni di errore.
-- A partire da C# 7.0, qualsiasi tipo con un metodo `GetAwaiter` accessibile. Il tipo `System.Threading.Tasks.ValueTask<TResult>` è una di queste implementazioni ed è disponibile aggiungendo il pacchetto NuGet `System.Threading.Tasks.Extensions`. 
+- [nullo](../builtin-types/void.md). I metodi `async void` sono in genere sconsigliati per il codice diverso dai gestori eventi perché i chiamanti non possono usare `await` per questi metodi e devono implementare un meccanismo diverso per segnalare il completamento corretto o condizioni di errore.
+- A partire da C# 7.0, qualsiasi tipo con un metodo `GetAwaiter` accessibile. Il tipo `System.Threading.Tasks.ValueTask<TResult>` è una di queste implementazioni ed è disponibile aggiungendo il pacchetto NuGet `System.Threading.Tasks.Extensions`.
 
 Un metodo asincrono non può dichiarare parametri [in](./in-parameter-modifier.md), [ref](./ref.md) o [out](./out-parameter-modifier.md) e nemmeno avere un [valore di riferimento restituito ](../../programming-guide/classes-and-structs/ref-returns.md), ma può chiamare metodi con tali parametri.  
   
@@ -80,13 +80,13 @@ Specificare `Task<TResult>` come tipo restituito di un metodo asincrono se l'ist
   
 Utilizzare il tipo restituito `void` principalmente per definire gestori eventi, che richiedono tale tipo restituito. Il chiamante di un metodo asincrono che restituisce `void` non può attendere il metodo e non può acquisire eccezioni generate dal metodo.  
 
-A partire da C# 7.0, viene restituito un altro tipo, in genere un tipo valore, che ha un metodo `GetAwaiter` per ridurre al minimo le allocazioni di memoria nelle sezioni di codice critiche per le prestazioni. 
+A partire da C# 7.0, viene restituito un altro tipo, in genere un tipo valore, che ha un metodo `GetAwaiter` per ridurre al minimo le allocazioni di memoria nelle sezioni di codice critiche per le prestazioni.
 
 Per altre informazioni ed esempi, vedere [Tipi restituiti asincroni](../../programming-guide/concepts/async/async-return-types.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>
-- [await](../operators/await.md)
-- [Procedura dettagliata: Accesso al Web tramite Async e Await](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Attendono](../operators/await.md)
+- [Procedura dettagliata: accesso al Web tramite Async e AwaitWalkthrough: Accessing the Web by Using Async and Await](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Programmazione asincrona con async e await](../../programming-guide/concepts/async/index.md)

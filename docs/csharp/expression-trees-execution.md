@@ -4,12 +4,12 @@ description: Informazioni sull'esecuzione di alberi delle espressioni convertend
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: 9af4b346962cb743daddf774e8b3c1f8fa722ae4
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 802a83f52f9c05a99c3f49f8f6511eff81ef3eaa
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037105"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146021"
 ---
 # <a name="executing-expression-trees"></a>Esecuzione di alberi delle espressioni
 
@@ -20,8 +20,8 @@ Non è codice compilato ed eseguibile. Se si vuole eseguire il codice .NET che �
 
 ## <a name="lambda-expressions-to-functions"></a>Espressioni lambda per funzioni
 
-È possibile convertire qualsiasi LambdaExpression o qualsiasi tipo derivato da LambdaExpression in IL eseguibile. Altri tipi di espressioni non possono essere convertiti direttamente in codice. Questa restrizione ha un effetto limitato nella pratica. Le espressioni lambda sono gli unici tipi di espressioni che potrebbero essere eseguite convertendole in linguaggio intermedio eseguibile (IL). (Riflettere su cosa significherebbe eseguire direttamente una `ConstantExpression`. Potrebbe significare qualcosa di utile?) Qualsiasi albero delle espressioni che è un `LambdaExpression`o un tipo derivato da `LambdaExpression` può essere convertito in IL.
-Il tipo di espressione `Expression<TDelegate>` è l'unico esempio concreto nelle librerie di .NET Core. Viene usato per rappresentare un'espressione che esegue il mapping a qualsiasi tipo delegato. Poiché questo tipo è mappato a un tipo delegato, .NET può esaminare l'espressione e generare IL per un delegato appropriato che corrisponda alla firma dell'espressione lambda. 
+È possibile convertire qualsiasi LambdaExpression o qualsiasi tipo derivato da LambdaExpression in IL eseguibile. Altri tipi di espressioni non possono essere convertiti direttamente in codice. Questa restrizione ha un effetto limitato nella pratica. Le espressioni lambda sono gli unici tipi di espressioni che potrebbero essere eseguite convertendole in linguaggio intermedio eseguibile (IL). (Riflettere su cosa significherebbe eseguire direttamente una `ConstantExpression`. Significherebbe qualcosa di utile?) Qualsiasi struttura ad `LambdaExpression`albero dell'espressione `LambdaExpression` che è un , o un tipo derivato da può essere convertito in IL.
+Il tipo di espressione `Expression<TDelegate>` è l'unico esempio concreto nelle librerie di .NET Core. Viene usato per rappresentare un'espressione che esegue il mapping a qualsiasi tipo delegato. Poiché questo tipo è mappato a un tipo delegato, .NET può esaminare l'espressione e generare IL per un delegato appropriato che corrisponda alla firma dell'espressione lambda.
 
 Nella maggior parte dei casi, verrà creato un mapping semplice tra un'espressione e il delegato corrispondente. Ad esempio, un albero delle espressioni che è rappresentato da `Expression<Func<int>>` viene convertito in un delegato del tipo `Func<int>`. Per un'espressione lambda con qualsiasi tipo restituito e un elenco di argomenti, esiste un tipo delegato che rappresenta il tipo di destinazione per il codice eseguibile rappresentato dall'espressione lambda.
 
@@ -48,9 +48,9 @@ Il delegato rappresenta il codice nell'albero delle espressioni. È possibile ma
 
 È consigliabile prestare la massima attenzione quando si tenta di creare un meccanismo di memorizzazione nella cache più sofisticato per migliorare le prestazioni evitando chiamate di compilazione non necessarie. Il confronto tra due alberi delle espressioni arbitrari per determinare se rappresentino lo stesso algoritmo richiederà anche molto tempo. Probabilmente si scoprirà che il tempo di calcolo risparmiato evitando le chiamate aggiuntive a `LambdaExpression.Compile()` verrà abbondantemente consumato dal tempo per l'esecuzione del codice che determina due risultati diversi degli alberi delle espressioni nello stesso codice eseguibile.
 
-## <a name="caveats"></a>Avvertenze
+## <a name="caveats"></a>Precisazioni
 
-La compilazione di un'espressione lambda a un delegato e la chiamata al delegato è una delle operazioni più semplici che si possono eseguire con un albero delle espressioni. Anche con questa semplice operazione vi sono tuttavia alcune avvertenze da tenere in considerazione. 
+La compilazione di un'espressione lambda a un delegato e la chiamata al delegato è una delle operazioni più semplici che si possono eseguire con un albero delle espressioni. Anche con questa semplice operazione vi sono tuttavia alcune avvertenze da tenere in considerazione.
 
 Le espressioni lambda creano chiusure su tutte le variabili locali a cui si fa riferimento nell'espressione. È necessario garantire che tutte le variabili che fanno parte del delegato siano utilizzabili in corrispondenza della posizione in cui viene chiamato `Compile` e quando si esegue il delegato risultante.
 
@@ -108,7 +108,7 @@ private static Func<int, int> CreateBoundResource()
 }
 ```
 
-Il delegato restituito da questo metodo è stato chiuso sull'oggetto `constant`, che è stato eliminato. (È stato eliminato, perché è stato dichiarato in un'istruzione `using`.) 
+Il delegato restituito da questo metodo è stato chiuso sull'oggetto `constant`, che è stato eliminato. (È stato eliminato, perché è stato dichiarato in un'istruzione `using`.)
 
 A questo punto, quando si esegue il delegato restituito da questo metodo, si avrà una `ObjectDisposedException` generata al momento dell'esecuzione.
 
@@ -118,7 +118,7 @@ Esistono molte variazioni di questo problema, pertanto è difficile offrire indi
 
 Il codice nell'espressione può fare riferimento a metodi o proprietà in altri assembly. Tale assembly deve essere accessibile quando viene definita l'espressione, quando viene compilata e quando viene richiamato il delegato risultante. Quando non è presente, si incontrerà una `ReferencedAssemblyNotFoundException`.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Gli alberi delle espressioni che rappresentano le espressioni lambda possono essere compilati per creare un delegato che è possibile eseguire. Questo offre un meccanismo per eseguire il codice rappresentato da un albero delle espressioni.
 

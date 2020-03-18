@@ -7,15 +7,15 @@ ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
 ms.openlocfilehash: 91fd37ce329c03b43b5472e4579be7f5ef961738
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70169112"
 ---
 # <a name="async-in-depth"></a>La programmazione asincrona in dettaglio
 
-La scrittura di codice asincrono associato a I/O e CPU risulta notevolmente semplificata dall'uso del modello asincrono basato su attività di .NET. Il modello viene esposto dai tipi `Task` e `Task<T>` e dalle parole chiave `async` e `await` in C# e Visual Basic. Le risorse specifiche del linguaggio sono disponibili nella sezione [Vedere anche](#see-also). In questo articolo viene illustrato come usare il codice asincrono di .NET e vengono specificate informazioni approfondite sul framework asincrono che ne è alla base.
+La scrittura di codice asincrono associato a I/O e CPU risulta notevolmente semplificata dall'uso del modello asincrono basato su attività di .NET. Il modello viene esposto dai tipi `Task` e `Task<T>` e dalle parole chiave `async` e `await` in C# e Visual Basic. Le risorse specifiche della lingua sono disponibili nella sezione [Vedere anche.](#see-also) Questo articolo spiega come usare async .NET e fornisce informazioni dettagliate sul framework asincrono usato nelle copertine.
 
 ## <a name="task-and-taskt"></a>Task e Task\<T>
 
@@ -147,6 +147,6 @@ Quando viene rilevato `await`, l'esecuzione di `CalculateResult()` viene ceduta 
 ## <a name="see-also"></a>Vedere anche
 
 - [Programmazione asincrona in C#](../csharp/async.md)
-- [Programmazione asincrona con async e await (C#)](../csharp/programming-guide/concepts/async/index.md)
+- [Programmazione asincrona con async e await (C )Asynchronous programming with async and await (C](../csharp/programming-guide/concepts/async/index.md)
 - [Programmazione asincrona in F#](../fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
 - [Programmazione asincrona con Async e Await (Visual Basic)](../visual-basic/programming-guide/concepts/async/index.md)

@@ -3,11 +3,11 @@ title: Novità di C# 7.1
 description: Panoramica delle nuove funzionalità in C# 7.1.
 ms.date: 04/09/2019
 ms.openlocfilehash: 5d2d6f51b6422f5b4db5c6bd275b5ffce1f695f8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714587"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399707"
 ---
 # <a name="whats-new-in-c-71"></a>Novità di C# 7.1
 
@@ -17,9 +17,9 @@ C# 7.1 aggiunge l'elemento di configurazione per la [selezione della versione de
 
 Le nuove funzionalità relative al linguaggio in questa versione sono:
 
-- [Metodo di `Main` `async`](#async-main)
+- [`async``Main` metodo](#async-main)
   - Il punto di ingresso per un'applicazione può avere il modificatore `async`.
-- Espressioni letterali [`default`](#default-literal-expressions)
+- [`default`espressioni letterali](#default-literal-expressions)
   - Quando è possibile dedurre il tipo di destinazione, si possono usare espressioni letterali predefinite nelle espressioni con valore predefinito.
 - [Nomi di elemento di tupla dedotti](#inferred-tuple-element-names)
   - In molti casi i nomi degli elementi della tupla possono essere dedotti dall'inizializzazione tupla.

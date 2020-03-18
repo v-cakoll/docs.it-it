@@ -13,15 +13,15 @@ helpviewer_keywords:
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
 ms.openlocfilehash: e5580e81b9175cd95491fdba724bacbffa692a5e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345398"
 ---
 # <a name="switch-c-reference"></a>switch (Riferimenti per C#)
 
-`switch` è un'istruzione di selezione che sceglie una sola *sezione opzioni* da eseguire da un elenco di candidati in base a un criterio di ricerca con l'*espressione di ricerca*.
+`switch`è un'istruzione di selezione che sceglie una singola *sezione switch* da eseguire da un elenco di candidati in base a una corrispondenza di criteri con *l'espressione di corrispondenza.*
 
 [!code-csharp[switch#1](~/samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]
 
@@ -35,7 +35,7 @@ L'istruzione `switch` viene spesso usata come alternativa a un costrutto [if-els
 
 ## <a name="the-match-expression"></a>Espressione di ricerca
 
-L'espressione di ricerca fornisce il valore da confrontare con i modelli nelle etichette `case`. La sintassi è la seguente:
+L'espressione di ricerca fornisce il valore da confrontare con i modelli nelle etichette `case`. La relativa sintassi è la seguente:
 
 ```csharp
    switch (expr)
@@ -44,10 +44,10 @@ L'espressione di ricerca fornisce il valore da confrontare con i modelli nelle e
 In C# 6 e versioni precedenti l'espressione di ricerca deve essere un'espressione che restituisce un valore dei tipi seguenti:
 
 - un [char](../builtin-types/char.md).
-- una [string](../builtin-types/reference-types.md).
+- una [stringa](../builtin-types/reference-types.md).
 - un [bool](../builtin-types/bool.md).
-- valore [integrale](../builtin-types/integral-numeric-types.md) , ad esempio un `int` o una `long`.
-- un valore [enum](../builtin-types/enum.md).
+- un valore [integrale,](../builtin-types/integral-numeric-types.md) ad esempio un `int` oggetto `long`.
+- un valore [di enumerazione.](../builtin-types/enum.md)
 
 A partire da C# 7.0, l'espressione di ricerca può essere qualsiasi espressione non null.
 
@@ -59,7 +59,7 @@ Un'istruzione `switch` può contenere qualsiasi numero di sezioni opzioni e ogni
 
 [!code-csharp[switch#2](~/samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
-Viene eseguita una sola sezione opzioni in un'istruzione switch. C# non consente di continuare l'esecuzione da una sezione opzioni a quella successiva. Per questo motivo, il codice seguente genera un errore del compilatore, CS0163: "il controllo non può passare da un'etichetta case (\<etichetta case >) a un'altra".
+Viene eseguita una sola sezione opzioni in un'istruzione switch. C# non consente di continuare l'esecuzione da una sezione opzioni a quella successiva. Per questo motivo, il codice seguente genera un errore del compilatore, CS0163: "Il controllo non può passare da un'etichetta caso (etichetta\<caso>) a un'altra."
 
 ```csharp
 switch (caseSwitch)
@@ -112,7 +112,7 @@ Ogni istruzione `case` definisce un criterio che, in caso di corrispondenza con 
 
 ### <a name="constant-pattern"></a>Criterio costante
 
-Il criterio costante verifica se un'espressione di ricerca è uguale a una costante specificata. La sintassi è la seguente:
+Il criterio costante verifica se un'espressione di ricerca è uguale a una costante specificata. La relativa sintassi è la seguente:
 
 ```csharp
    case constant:
@@ -120,8 +120,8 @@ Il criterio costante verifica se un'espressione di ricerca è uguale a una costa
 
 dove *costant* è il valore su cui eseguire il test. *constant* può essere una delle espressioni costanti seguenti:
 
-- Valore letterale [bool](../builtin-types/bool.md) : `true` o `false`.
-- Qualsiasi costante [integrale](../builtin-types/integral-numeric-types.md) , ad esempio un `int`, un `long`o un `byte`.
+- Un valore letterale `true` [bool:](../builtin-types/bool.md) o `false`.
+- Qualsiasi costante [integrale,](../builtin-types/integral-numeric-types.md) ad esempio un `int`oggetto , un `long`, o un `byte`oggetto .
 - Il nome di una variabile `const` dichiarata.
 - Una costante di enumerazione.
 - Un valore letterale [char](../builtin-types/char.md).
@@ -143,7 +143,7 @@ L'esempio seguente usa il modello costante per gestire l'input dell'utente in un
 
 ### <a name="type-pattern"></a>Criterio del tipo
 
-Il criterio del tipo consente la conversione e valutazione concise del tipo. Quando si usa con l'espressione `switch` per eseguire i criteri di ricerca, verifica se un'espressione può essere convertita in un tipo specificato e, in tal caso, esegue il cast a una variabile di quel tipo. La sintassi è la seguente:
+Il criterio del tipo consente la conversione e valutazione concise del tipo. Quando si usa con l'espressione `switch` per eseguire i criteri di ricerca, verifica se un'espressione può essere convertita in un tipo specificato e, in tal caso, esegue il cast a una variabile di quel tipo. La relativa sintassi è la seguente:
 
 ```csharp
    case type varname
@@ -199,8 +199,8 @@ Per altre informazioni, vedere la sezione relativa all'[istruzione switch](~/_cs
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
+- [Guida di riferimento a C](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](index.md)
 - [if-else](if-else.md)
-- [Criteri di ricerca](../../pattern-matching.md)
+- [Criteri](../../pattern-matching.md)

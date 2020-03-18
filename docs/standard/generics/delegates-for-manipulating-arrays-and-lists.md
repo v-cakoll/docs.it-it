@@ -11,10 +11,10 @@ helpviewer_keywords:
 - generics [.NET Framework], delegates
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
 ms.openlocfilehash: baf8497289ee71c2dbdc544607212de90928289c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75708384"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>Delegati generici per la modifica di matrici ed elenchi
@@ -44,6 +44,6 @@ Questo argomento offre una panoramica dei delegati generici per conversioni, pre
 - <xref:System.Collections.Generic?displayProperty=nameWithType>
 - <xref:System.Collections.ObjectModel?displayProperty=nameWithType>
 - [Generics](../../../docs/standard/generics/index.md)
-- [Raccolte generiche in .NET Framework](../../../docs/standard/generics/collections.md)
+- [Collection generiche in .NET Framework](../../../docs/standard/generics/collections.md)
 - [Interfacce generiche](../../../docs/standard/generics/interfaces.md)
 - [Covarianza e controvarianza](../../../docs/standard/generics/covariance-and-contravariance.md)

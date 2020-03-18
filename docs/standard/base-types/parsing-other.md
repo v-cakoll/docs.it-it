@@ -14,10 +14,10 @@ helpviewer_keywords:
 - Boolean data type, parsing strings
 ms.assetid: d139bc00-3c4e-4d78-ac9a-5c951b258d28
 ms.openlocfilehash: 08e891501bbefcf8b32eff10dd7294af9d81adac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73127577"
 ---
 # <a name="parsing-other-strings-in-net"></a>Analisi di altre stringhe in .NET
@@ -30,7 +30,7 @@ Oltre alle stringhe numeriche e<xref:System.DateTime> è possibile analizzare le
  [!code-csharp[Conceptual.String.Parse#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.parse/cs/parse.cs#2)]
  [!code-vb[Conceptual.String.Parse#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.parse/vb/parse.vb#2)]  
   
-## <a name="boolean"></a>Booleano  
+## <a name="boolean"></a>Boolean  
  Il tipo di dati **Boolean** contiene un metodo **Parse** che può essere usato per convertire una stringa che rappresenta un valore booleano in un vero e proprio tipo **Boolean**. Questo metodo non fa distinzione tra maiuscole e minuscole e consente di analizzare correttamente una stringa contenente "True" o "False". Il metodo **Parse** associato al tipo **Boolean** consente anche di analizzare stringhe precedute e seguite da spazi vuoti. Se viene passata qualsiasi altra stringa, viene generata un'eccezione <xref:System.FormatException>.  
   
  Nell'esempio di codice seguente viene usato il metodo **Parse** per convertire una stringa in un valore di tipo Boolean.  
@@ -50,6 +50,6 @@ Oltre alle stringhe numeriche e<xref:System.DateTime> è possibile analizzare le
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Analisi di stringhe](../../../docs/standard/base-types/parsing-strings.md)
+- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)
 - [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)
 - [Conversione di tipi in .NET](../../../docs/standard/base-types/type-conversion.md)

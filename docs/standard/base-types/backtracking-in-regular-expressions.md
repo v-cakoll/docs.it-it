@@ -18,10 +18,10 @@ helpviewer_keywords:
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 ms.openlocfilehash: 1b61cc88de4f73abfe6d8e77f8f32c2c71e70a9d
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78158064"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Backtracking nelle espressioni regolari
@@ -60,7 +60,7 @@ Il backtracking si verifica quando un modello di espressione regolare contiene [
 |16|e|"eed" (indice 11)|Possibile corrispondenza.|  
 |17|e{2}|"ed" (indice 12)|Possibile corrispondenza.|  
 |18|\w|"d" (indice 13)|Possibile corrispondenza.|  
-|19|\b|"" (indice 14)|Confronto.|  
+|19|\b|"" (indice 14)|Corrispondenza.|  
   
  Se un modello di espressione regolare non include quantificatori facoltativi o costrutti di alternanza, il numero massimo di confronti necessari per trovare una corrispondenza tra il modello di espressione regolare e la stringa di input equivale approssimativamente al numero di caratteri della stringa di input. In questo caso, l'espressione regolare utilizza 19 confronti per identificare le possibili corrispondenze nella stringa di 13 caratteri.  In altre parole, il motore delle espressioni regolari viene eseguito in un tempo quasi lineare se non contiene quantificatori facoltativi o costrutti di alternanza.
 
@@ -103,7 +103,7 @@ Il backtracking si verifica quando un modello di espressione regolare contiene [
  Il confronto della stringa di input con l'espressione regolare continua in questo modo fino a quando il motore delle espressioni regolari non ha tentato tutte le combinazioni di corrispondenze possibili, concludendo infine che non vi è alcuna corrispondenza. A causa dei quantificatori annidati, questo confronto è un'operazione O(2<sup>n</sup>) o un'operazione esponenziale, dove *n* è il numero di caratteri all'interno della stringa di input. Ciò significa che nei casi peggiori una stringa di input di 30 caratteri richiede circa 1.073.741.824 confronti e una stringa di input di 40 caratteri richiede circa 1.099.511.627.776 confronti. Se si utilizzano stringhe di queste lunghezze o di lunghezze ancora maggiore, i metodi delle espressioni regolari possono richiedere una quantità di tempo eccessiva per il completamento quando elaborano un input che non corrisponde al modello di espressione regolare.
 
 ## <a name="controlling-backtracking"></a>Controllo del backtracking  
- Il backtracking consente di creare espressioni regolari potenti e flessibili. Tuttavia, come illustrato nella sezione precedente, insieme a questi vantaggi si ottiene una notevole riduzione delle prestazioni. Per evitare un utilizzo eccessivo del backtracking, è necessario definire un intervallo di timeout quando si crea un'istanza di un oggetto <xref:System.Text.RegularExpressions.Regex> o si chiama un metodo di espressione regolare statica corrispondente. Questo è discusso nella sezione seguente. .NET supporta inoltre tre elementi del linguaggio di espressioni regolari che limitano o eliminano il backtracking e che supportano espressioni regolari complesse con una riduzione delle prestazioni minima o ridotta: [gruppi atomici](#atomic-groups), [asserzioni lookbehind](#lookbehind-assertions)e [asserzioni lookahead](#lookahead-assertions). Per altre informazioni su ogni elemento del linguaggio, vedere [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+ Il backtracking consente di creare espressioni regolari potenti e flessibili. Tuttavia, come illustrato nella sezione precedente, insieme a questi vantaggi si ottiene una notevole riduzione delle prestazioni. Per evitare un utilizzo eccessivo del backtracking, è necessario definire un intervallo di timeout quando si crea un'istanza di un oggetto <xref:System.Text.RegularExpressions.Regex> o si chiama un metodo di espressione regolare statica corrispondente. Questo è discusso nella sezione seguente. Inoltre, .NET supporta tre elementi del linguaggio delle espressioni regolari che limitano o eliminano il backtracking e che supportano espressioni regolari complesse con una riduzione delle prestazioni minime o nulla: [gruppi](#atomic-groups) [atomici, asserzioni lookbehind](#lookbehind-assertions)e [asserzioni lookahead](#lookahead-assertions). Per altre informazioni su ogni elemento del linguaggio, vedere [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
 
 ### <a name="defining-a-time-out-interval"></a>Definizione di un intervallo di timeout  
  A partire da .NET Framework 4.5, è possibile impostare un valore di timeout che rappresenta l'intervallo più lungo durante il quale il motore delle espressioni regolari cercherà una singola corrispondenza prima di abbandonare il tentativo e generare un'eccezione <xref:System.Text.RegularExpressions.RegexMatchTimeoutException>. Specificare l'intervallo di timeout fornendo un valore <xref:System.TimeSpan> al costruttore <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> per instanziare espressioni regolari. Inoltre, ogni metodo statico di criteri di ricerca ha un overload con un parametro <xref:System.TimeSpan> che consente di specificare un valore di timeout. Per impostazione predefinita, l'intervallo di timeout viene impostato su <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> e il motore delle espressioni regolari non ha timeout.  
@@ -119,7 +119,7 @@ Il backtracking si verifica quando un modello di espressione regolare contiene [
  [!code-vb[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/vb/ctor1.vb#1)]  
 
 ### <a name="atomic-groups"></a>Gruppi atomici
- L'elemento di linguaggio `(?>` *sottoespressione*`)` Elimina il backtracking nella sottoespressione. Una volta completata la corrispondenza, non verrà restituita alcuna parte della relativa corrispondenza al backtracking successivo. Nel modello `(?>\w*\d*)1`, ad esempio, se non è possibile trovare una corrispondenza per il `1`, il `\d*` non restituirà alcuna corrispondenza, neanche se ciò consentirebbe una corrispondenza corretta del `1`. I gruppi atomici possono aiutare a evitare i problemi di prestazioni associati alle corrispondenze non riuscite.
+ L'elemento `(?>` del linguaggio *delle sottoespressioni* `)` elimina il backtracking nella sottoespressione. Una volta che ha abbinato con successo, non rinuncerà a nessuna parte della sua corrispondenza al successivo backtracking. Ad esempio, nel `(?>\w*\d*)1`modello `1` , se l'oggetto non può essere abbinato, l'oggetto `\d*` `1` non rinuncerà a nessuna delle sue corrispondenze anche se ciò significa che consentirebbe l'oggetto di corrispondenza corretta. I gruppi atomici consentono di evitare i problemi di prestazioni associati a corrispondenze non riuscite.
   
  Nell'esempio seguente vengono illustrati i miglioramenti nelle prestazioni con i quantificatori annidati quando non si utilizza il backtracking. Viene calcolato il tempo impiegato dal motore delle espressioni regolari per determinare che una stringa di input non corrisponde a due espressioni regolari. La prima espressione regolare utilizza il backtracking per tentare di trovare una corrispondenza con una stringa contenente una o più occorrenze di una o più cifre esadecimali seguite da due punti, seguiti da una o più cifre esadecimali, seguite da un doppio due punti. La seconda espressione regolare è identica alla prima, con la differenza che il backtracking è disabilitato. Come illustrato nell'output dell'esempio, il miglioramento delle prestazioni derivante dalla disabilitazione del backtracking è significativo.  
   
@@ -127,9 +127,9 @@ Il backtracking si verifica quando un modello di espressione regolare contiene [
  [!code-vb[Conceptual.RegularExpressions.Backtracking#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking4.vb#4)]  
 
 ### <a name="lookbehind-assertions"></a>asserzioni lookbehind  
- .NET include due elementi del linguaggio, `(?<=`*sottoespressione*`)` e `(?<!`*sottoespressione*`)`, che trovano il carattere o i caratteri precedenti nella stringa di input. Entrambi gli elementi di linguaggio sono asserzioni di larghezza zero, ovvero determinano se il carattere o i caratteri che precedono immediatamente il carattere corrente possono essere trovati da una *sottoespressione*, senza avanzamento o backtracking.  
+ .NET include due `(?<=`elementi del `(?<!`linguaggio, *sottoespressione* `)` e *sottoespressione*`)`, che corrispondono al carattere o ai caratteri precedenti nella stringa di input. Entrambi gli elementi di linguaggio sono asserzioni di larghezza zero, ovvero determinano se il carattere o i caratteri che precedono immediatamente il carattere corrente possono essere trovati da una *sottoespressione*, senza avanzamento o backtracking.  
   
- `(?<=` *sottoespressione* `)` è un'asserzione lookbehind positiva; ovvero il carattere o i caratteri prima della posizione corrente devono corrispondere alla *sottoespressione*. `(?<!`*sottoespressione*`)` è un'asserzione lookbehind negativa, ovvero il carattere o i caratteri prima della posizione corrente non devono corrispondere a *sottoespressione*. Le asserzioni lookbehind positive e negative sono entrambe particolarmente utili quando *sottoespressione* è un subset della sottoespressione precedente.  
+ `(?<=`*sottoespressione* `)` è un'asserzione lookbehind positiva; ovvero, il carattere o i caratteri prima della posizione corrente devono corrispondere alla *sottoespressione*. `(?<!`*sottoespressione* `)` è un'asserzione lookbehind negativa; ovvero, il carattere o i caratteri precedenti alla posizione corrente non devono corrispondere alla *sottoespressione*. Entrambe le asserzioni lookbehind positive e negative sono più utili quando *la sottoespressione* è un sottoinsieme della sottoespressione precedente.  
   
  L'esempio seguente usa due modelli di espressione regolare equivalenti che convalidano il nome utente in un indirizzo di posta elettronica. Il primo modello è soggetto a una riduzione delle prestazioni a causa di un utilizzo eccessivo del backtracking. Il secondo modello modifica la prima espressione regolare sostituendo un quantificatore annidato con un'asserzione lookbehind positiva. Nell'output dell'esempio viene visualizzato il tempo di esecuzione del metodo <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> .  
   
@@ -158,9 +158,9 @@ Il backtracking si verifica quando un modello di espressione regolare contiene [
 |`@`|Trova la corrispondenza di una chiocciola ("\@").|  
 
 ### <a name="lookahead-assertions"></a>asserzioni lookahead  
- .NET include due elementi di linguaggio, `(?=`*sottoespressione*`)` e `(?!`*sottoespressione*`)`, che trovano il carattere o i caratteri successivi nella stringa di input. Entrambi gli elementi di linguaggio sono asserzioni di larghezza zero, ovvero determinano se il carattere o i caratteri che seguono immediatamente il carattere corrente possono essere trovati dalla *sottoespressione*, senza avanzamento o backtracking.  
+ .NET include due `(?=`elementi del `(?!`linguaggio, *sottoespressione* `)` e *sottoespressione*`)`, che corrispondono al carattere o ai caratteri successivi nella stringa di input. Entrambi gli elementi di linguaggio sono asserzioni di larghezza zero, ovvero determinano se il carattere o i caratteri che seguono immediatamente il carattere corrente possono essere trovati dalla *sottoespressione*, senza avanzamento o backtracking.  
   
- `(?=` *sottoespressione* `)` è un'asserzione lookahead positiva; ovvero il carattere o i caratteri successivi alla posizione corrente devono corrispondere alla *sottoespressione*. `(?!`*sottoespressione*`)` è un'asserzione lookahead negativa, ovvero il carattere o i caratteri dopo la posizione corrente non devono corrispondere a *sottoespressione*. Le asserzioni lookahead positive e negative sono entrambe particolarmente utili quando *sottoespressione* è un subset della sottoespressione successiva.  
+ `(?=`*sottoespressione* `)` è un'asserzione lookahead positiva; ovvero, il carattere o i caratteri dopo la posizione corrente devono corrispondere alla *sottoespressione*. `(?!`*la sottoespressione* `)` è un'asserzione lookahead negativa; ovvero, il carattere o i caratteri dopo la posizione corrente non devono corrispondere alla *sottoespressione*. Entrambe le asserzioni lookahead positive e negative sono più utili quando *la sottoespressione* è un sottoinsieme della sottoespressione successiva.  
   
  Nell'esempio seguente vengono utilizzati due modelli di espressione regolare equivalenti per verificare un nome di tipo completo. Il primo modello è soggetto a una riduzione delle prestazioni a causa di un utilizzo eccessivo del backtracking. Il secondo modello modifica la prima espressione regolare sostituendo un quantificatore annidato con un'asserzione lookahead positiva. Nell'output dell'esempio viene visualizzato il tempo di esecuzione del metodo <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> .  
   
@@ -191,7 +191,7 @@ Il backtracking si verifica quando un modello di espressione regolare contiene [
 ## <a name="see-also"></a>Vedere anche
 
 - [Espressioni regolari .NET](../../../docs/standard/base-types/regular-expressions.md)
-- [Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Linguaggio delle espressioni regolari - Guida di riferimento rapidoRegular Expression Language - Quick Reference](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [Quantificatori](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)
 - [Costrutti di alternanza](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)
 - [Costrutti di raggruppamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)

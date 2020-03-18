@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Exception class
 ms.assetid: e2e1f8c4-e7b4-467d-9a66-13c90861221d
 ms.openlocfilehash: df05150a5bdd5d24766be252f5cec9a436720d8c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75708945"
 ---
 # <a name="exception-class-and-properties"></a>Classe e proprietà dell'eccezione
@@ -24,7 +24,7 @@ La classe <xref:System.Exception> è la classe di base da cui vengono ereditate 
 
 La classe <xref:System.Exception> include le proprietà seguenti che facilitano la comprensione di un'eccezione.
 
-| Nome proprietà: | Descrizione |
+| Nome proprietà | Descrizione |
 | ------------- | ----------- |
 | <xref:System.Exception.Data> | <xref:System.Collections.IDictionary> contenente dati arbitrari in coppie chiave-valore. |
 | <xref:System.Exception.HelpLink> | Può contenere un URL (o URN) di un file della Guida che offre informazioni dettagliate sulla causa di un'eccezione. |

@@ -5,13 +5,13 @@ author: cesardl
 ms.author: cesardl
 ms.date: 12/23/2019
 ms.custom: mvc
-ms.topic: tutorial
-ms.openlocfilehash: 38ca93f62a066bade988a89b704fca26368b0b2b
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.topic: tutorial,mlnet-tooling
+ms.openlocfilehash: d817e173239d2848fb16e94cca8ead563bc900a5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504153"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187615"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>Analizzare il sentiment usando l'interfaccia della riga di comando di ML.NET
 
@@ -27,7 +27,7 @@ In questa esercitazione verranno eseguite le operazioni seguenti:
 > - Esplorare il codice C# generato usato per il training del modello
 
 > [!NOTE]
-> Questo argomento si riferisce all'interfaccia della riga di comando ML.NET, attualmente in anteprima, e il materiale può essere soggetto a modifiche. Per ulteriori informazioni, visitare la pagina [ml.NET](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet) .
+> Questo argomento si riferisce all'interfaccia della riga di comando ML.NET, attualmente in anteprima, e il materiale può essere soggetto a modifiche. Per ulteriori informazioni, visita la [pagina ML.NET.](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet)
 
 L'interfaccia della riga di comando ML.NET fa parte di ML.NET e l'obiettivo principale è "democratizzare" ML.NET per gli sviluppatori di .NET in modo che non sia necessario scrivere codice da zero quando iniziano a usarlo.
 
@@ -48,7 +48,7 @@ Verrà usato un set di dati esistente per uno scenario di 'analisi del sentiment
 1. Scaricare il [file ZIP del set di dati Sentiment Labeled Sentences UCI (vedere le citazioni nella nota seguente)](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) e decomprimerlo in una cartella a scelta.
 
     > [!NOTE]
-    > I set di dati usati in questa esercitazione provengono da 'From Group to Individual Labels using Deep Features', Kotzias et al, KDD 2015 e ospitato nel repository di Machine Learning UCI-Dua, D. e Karra Taniskidou, E. (2017). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml]. Irvine, CA: University of California, School of Information and Computer Science.
+    > I set di dati usati in questa esercitazione provengono da 'From Group to Individual Labels using Deep Features', Kotzias et al, KDD 2015, e ha ospitato presso l'UCI Machine Learning Repository - Dua, D. e Karra Taniskidou, E. (2017). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml]. Irvine, CA: University of California, School of Information and Computer Science.
 
 2. Copiare il file `yelp_labelled.txt` in qualsiasi cartella creata in precedenza, ad esempio `/cli-test`.
 
@@ -66,8 +66,8 @@ Verrà usato un set di dati esistente per uno scenario di 'analisi del sentiment
 
         | Testo (indice di colonna 0) | Etichetta (indice di colonna 1)|
         |--------------------------|-------|
-        | Wow... Questo posto è stato apprezzato. | 1 |
-        | Lo strato esterno non è buono. | 0 |
+        | Wow... Mi è piaciuto molto questo posto. | 1 |
+        | Crust is not good. | 0 |
         | Not tasty and the texture was just nasty. | 0 |
         | ...MOLTE ALTRE RIGHE DI TESTO... | ...(1 o 0)... |
 
@@ -76,7 +76,7 @@ Verrà usato un set di dati esistente per uno scenario di 'analisi del sentiment
     Ora è possibile iniziare a usare l'interfaccia della riga di comando per questo scenario di 'analisi del sentiment'.
 
     > [!NOTE]
-    > Dopo aver completato questa esercitazione, è anche possibile provare a usare set di dati personalizzati, purché siano pronti per l'uso con qualsiasi attività di ML attualmente supportata dall'anteprima dell'interfaccia della riga di comando ML.NET CLI, ossia *'classificazione binaria', 'classificazione multiclasse' e 'regressione'* .
+    > Dopo aver completato questa esercitazione, è anche possibile provare a usare set di dati personalizzati, purché siano pronti per l'uso con qualsiasi attività di ML attualmente supportata dall'anteprima dell'interfaccia della riga di comando ML.NET CLI, ossia *'classificazione binaria', 'classificazione multiclasse' e 'regressione'*.
 
 ## <a name="run-the-mlnet-auto-train-command"></a>Eseguire il comando 'mlnet auto-train'
 
@@ -86,10 +86,10 @@ Verrà usato un set di dati esistente per uno scenario di 'analisi del sentiment
     mlnet auto-train --task binary-classification --dataset "yelp_labelled.txt" --label-column-index 1 --has-header false --max-exploration-time 10
     ```
 
-    Questo comando esegue il comando **`mlnet auto-train`** :
+    Questo comando ** `mlnet auto-train` **esegue il comando :
     - Per qualsiasi **attività di ML** di tipo **`binary-classification`**
     - Usa il **file del set di dati `yelp_labelled.txt`** come set di dati di training e di test (internamente l'interfaccia della riga di comando usa la convalida incrociata oppure lo divide in due set di dati, uno per il training e l'altro per il test)
-    - Dove la **colonna obiettivo/destinazione** da stimare (solitamente definita **'etichetta'** ) è la **colonna con indice 1**, ossia la seconda colonna, perché l'indice è a base zero
+    - Dove la **colonna obiettivo/destinazione** da stimare (solitamente definita **'etichetta'**) è la **colonna con indice 1**, ossia la seconda colonna, perché l'indice è a base zero
     - Non **usa un'intestazione di file** con i nomi di colonna perché questo specifico set di dati non ha un'intestazione
     - Il **tempo di esplorazione obiettivo** per l'esperimento è di **10 secondi**
 
@@ -115,7 +115,7 @@ Verrà usato un set di dati esistente per uno scenario di 'analisi del sentiment
 
     Tuttavia, in alcuni casi la misurazione con la semplice metrica dell'accuratezza non è sufficiente, in particolare quando l'etichetta (0 e 1 in questo esempio) non è bilanciata nel set di dati di test.
 
-    Per altre metriche e informazioni più **dettagliate sulle metriche** , ad esempio l'accuratezza, l'AUC, il AUCPR e il Punteggio F1 usati per valutare i diversi modelli, vedere informazioni sulle [metriche di ml.NET](../resources/metrics.md).
+    Per metriche aggiuntive e informazioni più **dettagliate sulle metriche** quali Accuratezza, AUC, AUCPR e Punteggio F1 utilizzato per valutare i diversi modelli, vedere [Informazioni ML.NET metriche](../resources/metrics.md).
 
     > [!NOTE]
     > È possibile provare questo stesso set di dati e specificare alcuni minuti per `--max-exploration-time` (ad esempio, tre minuti in modo da specificare 180 secondi) in modo da trovare un "modello ottimale" migliore con una configurazione della pipeline di training diversa per questo set di dati, che con 1000 righe è piuttosto piccolo.
@@ -124,8 +124,8 @@ Verrà usato un set di dati esistente per uno scenario di 'analisi del sentiment
 
 1. L'esecuzione del comando precedente ha generato gli asset seguenti:
 
-    - Un file di modello serializzato con estensione zip ("miglior modello") pronto per l'uso.
-    - Il codice C# per eseguire/assegnare un punteggio al modello generato (per effettuare previsioni nelle app degli utenti finali con il modello).
+    - Un file ZIP di modello serializzato ("modello ottimale") pronto per l'uso.
+    - Il codice C# per eseguire e assegnare punteggi al modello generato (per eseguire stime nelle app per utenti finali con il modello).
     - Il codice di training C# usato per generare il modello (a scopo di apprendimento).
     - Un file di log con tutte le iterazioni esplorate che include specifiche informazioni dettagliate su ogni algoritmo provato con la relativa combinazione di iperparametri e trasformazioni di dati.
 
@@ -233,8 +233,8 @@ Per il secondo oggetto, `PredictionEngine`, non è così facile perché l'oggett
 
 Tuttavia, la situazione è più semplice rispetto a quanto spiegato in questo post. Abbiamo adottato un approccio più semplice e abbiamo creato un utile **'pacchetto di integrazione .NET Core'** che è possibile usare con facilità nelle app e nei servizi ASP.NET Core registrandolo nei servizi DI (Dependency Injection) per poi usarlo direttamente dal codice. Per informazioni, vedere l'esercitazione e l'esempio seguenti:
 
-- [Esercitazione: esecuzione di modelli ML.NET su app Web scalabili ASP.NET Core e WebAPI](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
-- [Esempio: modello di ML.NET scalabile in ASP.NET Core WebAPI](https://aka.ms/mlnet-sample-netcoreintegrationpkg)
+- [Esercitazione: Esecuzione di modelli di ASP.NET ML.NET su app Web e WebAPdi base scalabili](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
+- [Esempio: modello di ML.NET scalabile in ASP.NET WebAPI di base](https://aka.ms/mlnet-sample-netcoreintegrationpkg)
 
 ## <a name="explore-the-generated-c-code-that-was-used-to-train-the-best-quality-model"></a>Esplorare il codice C# generato usato per il training del modello di "qualità ottimale"
 
@@ -244,7 +244,7 @@ Questo 'codice di training del modello' viene attualmente generato nella classe 
 
 Soprattutto, per questo specifico scenario (modello di analisi del sentiment) è anche possibile confrontare il codice di training generato con il codice descritto nell'esercitazione seguente:
 
-- Confrontare: [esercitazione: usare ml.NET in uno scenario di classificazione binaria di analisi dei sentimenti](sentiment-analysis.md).
+- Confrontare: [Esercitazione: utilizzare ML.NET in uno scenario di classificazione binaria dell'analisi](sentiment-analysis.md)del sentiment.
 
 È interessante confrontare l'algoritmo scelto e la configurazione della pipeline dell'esercitazione con il codice generato dall'interfaccia della riga di comando. A seconda del tempo dedicato all'iterazione e alla ricerca di modelli migliori, l'algoritmo scelto può essere diverso, così come gli specifici iperparametri e la configurazione della pipeline.
 
@@ -259,8 +259,8 @@ In questa esercitazione sono state illustrate le procedure per:
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Automatizzare il training del modello con l'interfaccia della riga di comando ML.NET](../automate-training-with-cli.md)
-- [Esercitazione: esecuzione di modelli ML.NET su app Web scalabili ASP.NET Core e WebAPI](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
-- [Esempio: modello di ML.NET scalabile in ASP.NET Core WebAPI](https://aka.ms/mlnet-sample-netcoreintegrationpkg)
-- [Guida di riferimento per i comandi di training automatico dell'interfaccia della riga di comando di ML.NET](../reference/ml-net-cli-reference.md)
-- [Telemetria nell'interfaccia della riga di comando di ML.NET](../resources/ml-net-cli-telemetry.md)
+- [Automatizzare il training del modello con l'interfaccia della riga di comando di ML.NET](../automate-training-with-cli.md)
+- [Esercitazione: Esecuzione di modelli di ASP.NET ML.NET su app Web e WebAPdi base scalabili](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
+- [Esempio: modello di ML.NET scalabile in ASP.NET WebAPI di base](https://aka.ms/mlnet-sample-netcoreintegrationpkg)
+- [Guida di riferimento per i comandi di training automatico dell'interfaccia della riga di comando ML.NET](../reference/ml-net-cli-reference.md)
+- [Telemetria nell'interfaccia della riga di comando ML.NET](../resources/ml-net-cli-telemetry.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - tasks, how to wrap EAP patterns
 ms.assetid: f11ed467-af2f-4504-8a2e-299a6c36d44e
 ms.openlocfilehash: ac7436892c644340286bb4670bf75c9cd63a8ce5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73106826"
 ---
 # <a name="how-to-wrap-eap-patterns-in-a-task"></a>Procedura: eseguire il wrapping di modelli EAP in un'attività

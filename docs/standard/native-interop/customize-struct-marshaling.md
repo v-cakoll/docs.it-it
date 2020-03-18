@@ -6,11 +6,11 @@ dev_langs:
 - csharp
 - cpp
 ms.openlocfilehash: 7f8d1ad93633d6feef9c3c6f5d19aad52105968c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741526"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79400372"
 ---
 # <a name="customizing-structure-marshaling"></a>Personalizzazione del marshalling delle strutture
 
@@ -20,17 +20,17 @@ In alcuni casi le regole di marshalling predefinite per le strutture non sono es
 
 .NET offre l'attributo <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType> e l'enumerazione <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType> per consentire di personalizzare il modo in cui i campi vengono inseriti nella memoria. Le linee guida seguenti saranno utili per evitare problemi comuni.
 
-✔️ CONSIGLIABILE utilizzare `LayoutKind.Sequential` quando possibile.
+✔️ PRENDERE IN CONSIDERAZIONE l'uso di `LayoutKind.Sequential` laddove possibile.
 
-✔️ utilizzano solo `LayoutKind.Explicit` nel marshalling quando lo struct nativo dispone anche di un layout esplicito, ad esempio un'Unione.
+✔️ USARE solo `LayoutKind.Explicit` nel marshalling quando lo struct nativo ha anche un layout esplicito, ad esempio un'unione.
 
-❌ evitare di usare `LayoutKind.Explicit` quando si effettua il marshalling di strutture su piattaforme non Windows se è necessario destinare i runtime prima di .NET Core 3,0. Il runtime di .NET Core prima del 3,0 non supporta il passaggio di strutture esplicite per valore a funzioni native su sistemi non Windows Intel o AMD a 64 bit. Tuttavia, il runtime supporta il passaggio di strutture esplicite per riferimento in tutte le piattaforme.
+❌AVOID `LayoutKind.Explicit` utilizzato quando si esegue il marshalling di strutture su piattaforme non Windows se è necessario eseguire il tempo di esecuzione di destinazione prima di .NET Core 3.0. Il runtime .NET Core precedente alla 3.0 non supporta il passaggio di strutture esplicite per valore a funzioni native su sistemi non Windows Intel o AMD a 64 bit. Tuttavia, il runtime supporta il passaggio di strutture esplicite per riferimento in tutte le piattaforme.
 
 ## <a name="customizing-boolean-field-marshaling"></a>Personalizzazione del marshalling di campi booleani
 
 Il codice nativo include molte rappresentazioni booleane diverse. Solo in Windows esistono tre modi per rappresentare valori booleani. Il runtime non conosce la definizione nativa della struttura, quindi può al massimo fare supposizioni su come effettuare il marshalling dei valori booleani. Il runtime .NET offre un modo per indicare come effettuare il marshalling del campo booleano. Gli esempi seguenti illustrano come eseguire il marshalling del tipo `bool` .NET in diversi tipi booleani nativi.
 
-Per impostazione predefinita, il marshalling dei valori booleani viene effettuato come valore [`BOOL`](/windows/desktop/winprog/windows-data-types#BOOL) Win32 a 4 byte nativo, come illustrato nell'esempio seguente:
+Per impostazione predefinita, i valori booleani [`BOOL`](/windows/desktop/winprog/windows-data-types#BOOL) vengono sottoposti a marshalling come valore Win32 nativo a 4 byte, come illustrato nell'esempio seguente:Boolean values default to marshaling as a native 4-byte Win32 value as shown in the following example:
 
 ```csharp
 public struct WinBool
@@ -317,7 +317,7 @@ struct DefaultString
 
 ## <a name="customizing-decimal-field-marshaling"></a>Personalizzazione del marshalling dei campi decimali
 
-In Windows è possibile riscontrare alcune API che usano la struttura [`CY` o `CURRENCY`](/windows/win32/api/wtypes/ns-wtypes-cy~r1) nativa. Per impostazione predefinita, il tipo .NET `decimal` effettua il marshalling nella struttura [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) nativa. Tuttavia, è possibile usare un <xref:System.Runtime.InteropServices.MarshalAsAttribute> con il valore <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> per indicare al gestore di marshalling di convertire un valore `decimal` in un valore `CY` nativo.
+Se si lavora su Windows, è possibile riscontrare alcune [ `CY` `CURRENCY` ](/windows/win32/api/wtypes/ns-wtypes-cy~r1) API che utilizzano il nativo o la struttura. Per impostazione predefinita, il tipo `decimal` [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) .NET esegue il marshalling nella struttura nativa. Tuttavia, è possibile usare un <xref:System.Runtime.InteropServices.MarshalAsAttribute> con il valore <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> per indicare al gestore di marshalling di convertire un valore `decimal` in un valore `CY` nativo.
 
 ```csharp
 public struct Currency
@@ -394,7 +394,7 @@ struct ObjectVariant
 
 La tabella seguente descrive i mapping tra i diversi tipi di runtime del campo `obj` e i vari tipi archiviati in un `VARIANT`:
 
-| Tipo .NET | Tipo VARIANT | | Tipo .NET | Tipo VARIANT |
+| Tipo di .NET | Tipo VARIANT | | Tipo di .NET | Tipo VARIANT |
 |------------|--------------|-|----------|--------------|
 |  `byte`  | `VT_UI1` |     | `System.Runtime.InteropServices.BStrWrapper` | `VT_BSTR` |
 | `sbyte`  | `VT_I1`  |     | `object`  | `VT_DISPATCH` |

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - let keyword [C#]
 - let clause [C#]
 ms.assetid: 13c9c1a4-ce57-48ef-8e1b-4c2a59b99fb4
-ms.openlocfilehash: 32bb5d2138c0b86bf58d26015aa208f655229129
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3ce2b663e5678de6b53db610b489f85ab1427b9d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715222"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173588"
 ---
 # <a name="let-clause-c-reference"></a>Clausola let (Riferimento C#)
 
@@ -31,8 +31,8 @@ Nell'esempio seguente, `let` viene usato in due modi:
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../../language-reference/index.md)
-- [Parole chiave di query (LINQ)](query-keywords.md)
-- [LINQ (Language-Integrated Query)](../../linq/index.md)
-- [Nozioni di base su LINQ in C#](/dotnet/csharp/programming-guide/concepts/linq/)
+- [Guida di riferimento a C](../../language-reference/index.md)
+- [Parole chiave di query (LINQ)Query Keywords (LINQ)](query-keywords.md)
+- [LINQ in C#](../../linq/index.md)
+- [Language Integrated Query (LINQ)](../../programming-guide/concepts/linq/index.md)
 - [Gestire le eccezioni nelle espressioni di query](../../linq/handle-exceptions-in-query-expressions.md)

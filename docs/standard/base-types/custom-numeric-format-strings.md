@@ -17,10 +17,10 @@ helpviewer_keywords:
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 ms.openlocfilehash: 1eb9c3c189d7bba3a12fdcd0c3d600a66bf819ca
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75348300"
 ---
 # <a name="custom-numeric-format-strings"></a>Stringhe in formato numerico personalizzato
@@ -34,19 +34,19 @@ Le stringhe di formato numerico personalizzate sono supportate da alcuni overloa
 
 <a name="table"></a> Nella tabella seguente vengono descritti gli identificatori di formato numerico personalizzati e viene visualizzato l'output di esempio prodotto da ogni identificatore di formato. Vedere la sezione [Note](#NotesCustomFormatting) per informazioni aggiuntive sull'utilizzo di stringhe di formato numerico personalizzate e la sezione [Esempio](#example) per un'illustrazione completa dell'utilizzo.
 
-|Identificatore di formato|Name|Descrizione|Esempi|
+|Identificatore di formato|Nome|Descrizione|Esempi|
 |----------------------|----------|-----------------|--------------|
 |"0"|Segnaposto zero|Sostituisce lo zero con la cifra corrispondente, se disponibile; in caso contrario, lo zero viene visualizzato nella stringa di risultato.<br /><br /> Ulteriori informazioni: [Identificatore personalizzato "0"](#Specifier0).|1234.5678 ("00000") -> 01235<br /><br /> 0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|
 |"#"|Segnaposto per cifre|Sostituisce il simbolo "#" con la cifra corrispondente, se disponibile; in caso contrario, nella stringa di risultato non viene visualizzata nessuna cifra.<br /><br /> Si noti che nella stringa di risultato non viene visualizzata nessuna cifra se la cifra corrispondente nella stringa di input equivale a uno 0 non significativo. Ad esempio, 0003 ("####") -> 3.<br /><br /> Ulteriori informazioni: [Identificatore personalizzato "#"](#SpecifierD).|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#.##", en-US) -> .46<br /><br /> 0.45678 ("#.##", fr-FR) -> ,46|
-|"."|Separatore decimale|Determina la posizione del separatore decimale nella stringa di risultato.<br /><br /> Altre informazioni: ["." Identificatore personalizzato](#SpecifierPt).|0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|
-|","|Separatore di gruppi e rappresentazione in scala dei numeri|Viene usato sia come separatore di gruppi che come identificatore di rappresentazione in scala dei numeri. Come separatore di gruppi, inserisce un carattere separatore di gruppi localizzato tra ogni gruppo. Come identificatore di rappresentazione in scala dei numeri, divide un numero per 1000 per ogni virgola specificata.<br /><br /> Ulteriori informazioni: [Identificatore personalizzato ","](#SpecifierTh).|Identificatore del separatore di gruppi:<br /><br /> 2147483647 ("##,#", en-US) -> 2,147,483,647<br /><br /> 2147483647 ("##,#", es-ES) -> 2.147.483.647<br /><br /> Identificatore di rappresentazione in scala:<br /><br /> 2147483647 ("#,#,,", en-US) -> 2,147<br /><br /> 2147483647 ("#,#,,", es-ES) -> 2.147|
-|"%"|Segnaposto percentuale|Moltiplica un numero per 100 e inserisce un simbolo di percentuale localizzato nella stringa di risultato.<br /><br /> Ulteriori informazioni: [Identificatore personalizzato "%"](#SpecifierPct).|0.3697 ("%#0.00", en-US) -> %36.97<br /><br /> 0.3697 ("%#0.00", el-GR) -> %36,97<br /><br /> 0.3697 ("##.0 %", en-US) -> 37.0 %<br /><br /> 0.3697 ("##.0 %", el-GR) -> 37,0 %|
-|"‰"|Segnaposto per mille|Moltiplica un numero per 1000 e inserisce un simbolo di per mille localizzato nella stringa di risultato.<br /><br /> Ulteriori informazioni: [Identificatore personalizzato "‰"](#SpecifierPerMille).|0.03697 ("#0.00‰", en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) -> 36,97‰|
+|"."|Separatore decimale|Determina la posizione del separatore decimale nella stringa di risultato.<br /><br /> Ulteriori informazioni: [Il "." Identificatore personalizzato](#SpecifierPt).|0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|
+|","|Separatore di gruppi e rappresentazione in scala dei numeri|Viene usato sia come separatore di gruppi che come identificatore di rappresentazione in scala dei numeri. Come separatore di gruppi, inserisce un carattere separatore di gruppi localizzato tra ogni gruppo. Come identificatore di rappresentazione in scala dei numeri, divide un numero per 1000 per ogni virgola specificata.<br /><br /> Ulteriori [informazioni:L'identificatore personalizzato "," Custom](#SpecifierTh).|Identificatore del separatore di gruppi:<br /><br /> 2147483647 ("##,#", en-US) -> 2,147,483,647<br /><br /> 2147483647 ("##,#", es-ES) -> 2.147.483.647<br /><br /> Identificatore di rappresentazione in scala:<br /><br /> 2147483647 ("#,#,,", en-US) -> 2,147<br /><br /> 2147483647 ("#,#,,", es-ES) -> 2.147|
+|"%"|Segnaposto percentuale|Moltiplica un numero per 100 e inserisce un simbolo di percentuale localizzato nella stringa di risultato.<br /><br /> Ulteriori informazioni: [L'identificatore personalizzato "%".](#SpecifierPct)|0.3697 ("%#0.00", en-US) -> %36.97<br /><br /> 0.3697 ("%#0.00", el-GR) -> %36,97<br /><br /> 0.3697 ("##.0 %", en-US) -> 37.0 %<br /><br /> 0.3697 ("##.0 %", el-GR) -> 37,0 %|
+|"‰"|Segnaposto per mille|Moltiplica un numero per 1000 e inserisce un simbolo di per mille localizzato nella stringa di risultato.<br /><br /> Ulteriori informazioni: [L'identificatore personalizzato """](#SpecifierPerMille).|0.03697 ("#0.00‰", en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) -> 36,97‰|
 |"E0"<br /><br /> "E+0"<br /><br /> "E-0"<br /><br /> "E0"<br /><br /> "E+0"<br /><br /> "E-0"|Notazione esponenziale|Se è seguito da almeno uno 0 (zero), formatta il risultato usando la notazione esponenziale. L'utilizzo di "E" o "e" indica se il simbolo dell'esponente nella stringa di risultato deve essere, rispettivamente, maiuscolo o minuscolo. Il numero di zeri che seguono il carattere "E" o "e" determina il numero minimo di cifre nell'esponente. Un segno più (+) indica che l'esponente è sempre preceduto da un carattere di segno. Un segno meno (-) indica che solo gli esponenti negativi sono preceduti da un carattere di segno.<br /><br /> Ulteriori informazioni: [Identificatori personalizzati "E" e "e"](#SpecifierExponent).|987654 ("#0.0e0") -> 98.8e4<br /><br /> 1503.92311 ("0.0##e+00") -> 1.504e+03<br /><br /> 1.8901385E-16 ("0.0e+00") -> 1.9e-16|
-|"\\"|Carattere escape|Fa in modo che il carattere successivo venga interpretato come valore letterale anziché come identificatore di formato personalizzato.<br /><br /> Altre informazioni: [Carattere di escape "\\"](#SpecifierEscape).|987654 ("\\###00\\#") -> #987654#|
-|'*string*'<br /><br /> "*string*"|Delimitatore di stringa letterale|Indica che i caratteri contenuti devono essere copiati nella stringa di risultato senza essere modificati.<br/><br/>Altre informazioni: [caratteri letterali](#character-literals).|68 ("# 'gradi'") -> 68 gradi<br /><br /> 68 ("# ' gradi'") -> 68 gradi|
+|"\\"|Carattere di escape|Fa in modo che il carattere successivo venga interpretato come valore letterale anziché come identificatore di formato personalizzato.<br /><br /> Altre informazioni: [Carattere di escape "\\"](#SpecifierEscape).|987654 ("\\###00\\#") -> #987654#|
+|'*stringa*'<br /><br /> "*stringa*"|Delimitatore di stringa letterale|Indica che i caratteri contenuti devono essere copiati nella stringa di risultato senza essere modificati.<br/><br/>Altre informazioni: [caratteri letterali](#character-literals).|68 ("# 'gradi'") -> 68 gradi<br /><br /> 68 ("# ' gradi'") -> 68 gradi|
 |;|Separatore di sezione|Definisce le sezioni con stringhe di formato separate per numeri positivi, negativi e zero.<br /><br /> Ulteriori informazioni: [Separatore di sezione ";"](#SectionSeparator).|12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#);-\0-") -> -0-<br /><br /> -12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)<br /><br /> 12.345 ("#0.0#;(#0.0#)") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#)") -> 0.0<br /><br /> -12.345 ("#0.0#;(#0.0#)") -> (12.35)|
-|Altro|Tutti gli altri caratteri|Il carattere viene copiato nella stringa di risultato senza alcuna modifica.<br/><br/>Altre informazioni: [caratteri letterali](#character-literals).|68 ("# °") -> 68 °|
+|Altri|Tutti gli altri caratteri|Il carattere viene copiato nella stringa di risultato senza alcuna modifica.<br/><br/>Altre informazioni: [caratteri letterali](#character-literals).|68 ("# °") -> 68 °|
 
 Nelle sezioni seguenti vengono fornite informazioni dettagliate su ognuno degli identificatori di formato numerico personalizzati.
 
@@ -207,9 +207,9 @@ Il punto e virgola (;) è un identificatore di formato condizionale che applica 
 
 |Numero di sezioni|Descrizione|
 |------------------------|-----------------|
-|Una|La stringa di formato viene applicata a tutti i valori.|
-|Due|La prima sezione viene applicata ai valori positivi e agli zeri, la seconda ai valori negativi.<br /><br /> Se il numero da formattare è negativo, ma diventa zero dopo l'arrotondamento in base al formato della seconda sezione, lo zero risultante viene formattato in base alla prima sezione.|
-|Tre|La prima sezione viene applicata ai valori positivi, la seconda ai valori negativi e la terza agli zeri.<br /><br /> È possibile che la seconda sezione venga lasciata vuota, ovvero senza alcun valore tra i punti e virgola. In questo caso la prima sezione viene applicata a tutti i valori diversi da zero.<br /><br /> Se il numero da formattare è diverso da zero, ma diventa zero dopo l'arrotondamento in base al formato della prima o della seconda sezione, lo zero risultante viene formattato in base alla terza sezione.|
+|Una sezione|La stringa di formato viene applicata a tutti i valori.|
+|Due sezioni|La prima sezione viene applicata ai valori positivi e agli zeri, la seconda ai valori negativi.<br /><br /> Se il numero da formattare è negativo, ma diventa zero dopo l'arrotondamento in base al formato della seconda sezione, lo zero risultante viene formattato in base alla prima sezione.|
+|Tre sezioni|La prima sezione viene applicata ai valori positivi, la seconda ai valori negativi e la terza agli zeri.<br /><br /> È possibile che la seconda sezione venga lasciata vuota, ovvero senza alcun valore tra i punti e virgola. In questo caso la prima sezione viene applicata a tutti i valori diversi da zero.<br /><br /> Se il numero da formattare è diverso da zero, ma diventa zero dopo l'arrotondamento in base al formato della prima o della seconda sezione, lo zero risultante viene formattato in base alla terza sezione.|
 
 Con i separatori di sezione, quando viene formattato il valore finale viene ignorata qualsiasi formattazione preesistente associata a un numero. Quando vengono usati separatori di sezione, ad esempio, i numeri negativi vengono sempre visualizzati senza segno meno. Se si desidera che il valore formattato finale disponga di un segno meno, è opportuno includere il segno meno in modo esplicito nell'ambito dell'identificatore di formato personalizzato.
 
@@ -289,7 +289,7 @@ Nell'esempio seguente vengono illustrate due stringhe di formato numerico person
 
 - <xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>
 - [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)
-- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)
-- [Procedura: Aggiungere zeri iniziali a un numero](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)
+- [Stringhe di formato numerico standard](../../../docs/standard/base-types/standard-numeric-format-strings.md)
+- [Procedura: aggiungere zeri iniziali a un numero](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)
 - [Esempio: Utilità di formattazione di .NET Core WinForms (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)
 - [Esempio: Utilità di formattazione di .NET Core WinForms (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb)

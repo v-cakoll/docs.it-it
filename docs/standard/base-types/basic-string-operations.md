@@ -9,10 +9,10 @@ helpviewer_keywords:
 ms.assetid: 8133d357-90b5-4b62-9927-43323d99b6b6
 ms.custom: seadec18
 ms.openlocfilehash: 05cdf399e104fc9e528c954adb19634a5c136664
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73132917"
 ---
 # <a name="basic-string-operations-in-net"></a>Operazioni di base su stringhe in .NET
@@ -25,16 +25,16 @@ Le applicazioni spesso interagiscono con gli utenti creando messaggi in base all
  [Eliminazione di spazi iniziali e finali e rimozione di caratteri](../../../docs/standard/base-types/trimming.md)  
  Descrive come eliminare gli spazi iniziali o finali o rimuovere caratteri in una stringa.  
   
- [Aggiunta di spaziatura interna alle stringhe](../../../docs/standard/base-types/padding.md)  
+ [Stringhe di riempimento](../../../docs/standard/base-types/padding.md)  
  Viene descritto come inserire caratteri o spazi vuoti in una stringa.  
   
  [Confronto di stringhe](../../../docs/standard/base-types/comparing.md)  
  Descrive come confrontare il contenuto di due o più stringhe.  
   
- [Modifica della combinazione di maiuscole e minuscole](../../../docs/standard/base-types/changing-case.md)  
+ [Modifica caso](../../../docs/standard/base-types/changing-case.md)  
  Descrive come modificare la combinazione di maiuscole e minuscole dei caratteri all'interno di una stringa.  
   
- [Uso della classe StringBuilder](../../../docs/standard/base-types/stringbuilder.md)  
+ [Utilizzo della classe StringBuilder](../../../docs/standard/base-types/stringbuilder.md)  
  Descrive come creare e modificare oggetti stringa dinamici con la classe <xref:System.Text.StringBuilder>.  
   
  [Procedura: Eseguire modifiche di base delle stringhe](../../../docs/standard/base-types/basic-manipulations.md)  

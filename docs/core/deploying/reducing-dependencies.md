@@ -4,10 +4,10 @@ description: Ridurre le dipendenze dei pacchetti durante la creazione di libreri
 author: cartermp
 ms.date: 06/20/2016
 ms.openlocfilehash: 48ba3ef578388fd98fe7cb830df313512d359483
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75740830"
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>Riduzione delle dipendenze dei pacchetti con project.json
@@ -16,13 +16,13 @@ Questo articolo descrive cosa è necessario conoscere sulla riduzione delle dipe
 
 ## <a name="why-its-important"></a>Perché è importante?
 
-.NET Core è un prodotto costituito da pacchetti NuGet.  Un pacchetto fondamentale è il [metapacchetto .NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library), ovvero un pacchetto NuGet composto da altri pacchetti. Fornisce il set di pacchetti che sono garantiti per lavorare su più implementazioni di .NET, ad esempio .NET Framework, .NET Core e Novell/mono.
+.NET Core è un prodotto costituito da pacchetti NuGet.  Un pacchetto fondamentale è il [metapacchetto .NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library), ovvero un pacchetto NuGet composto da altri pacchetti. Fornisce il set di pacchetti che è garantito per funzionare su più implementazioni di .NET, ad esempio .NET Framework, .NET Core e Xamarin/Mono.
 
 È tuttavia probabile che la libreria non usi tutti i pacchetti che contiene.  Quando si crea una libreria e la si distribuisce tramite NuGet, è opportuno ridurre il numero delle dipendenze ai soli pacchetti che vengono effettivamente usati.  In questo modo, si otterrà un impatto minore per i pacchetti NuGet.
 
-## <a name="how-to-do-it"></a>Come procedere?
+## <a name="how-to-do-it"></a>Procedura
 
-Attualmente non è presente alcun comando ufficiale `dotnet` che ritaglia i riferimenti ai pacchetti.  È tuttavia possibile eseguire questa operazione manualmente.  Il processo generale è simile al seguente:
+Attualmente, non esiste `dotnet` alcun comando ufficiale che taglia i riferimenti del pacchetto.  È tuttavia possibile eseguire questa operazione manualmente.  Il processo generale è simile al seguente:
 
 1. Fare riferimento a `NETStandard.Library` versione `1.6.0` in una sezione `dependencies` di `project.json`.
 2. Ripristinare i pacchetti con `dotnet restore` ([vedere la nota](#dotnet-restore-note)) dalla riga di comando.
@@ -38,7 +38,7 @@ Attualmente non è presente alcun comando ufficiale `dotnet` che ritaglia i rife
 
 ## <a name="example"></a>Esempio
 
-Si supponga di aver scritto una libreria che fornisce funzionalità aggiuntive ai tipi di raccolte generiche. Tale libreria deve dipendere da pacchetti come `System.Collections`, ma può non dipendere da pacchetti come `System.Net.Http`. Di conseguenza, può essere opportuno ridurre le dipendenze dei pacchetti alla quantità necessaria per la libreria.
+Si supponga di aver scritto una libreria che ha fornito funzionalità aggiuntive ai tipi di raccolta generici. Tale libreria deve dipendere da pacchetti come `System.Collections`, ma può non dipendere da pacchetti come `System.Net.Http`. Di conseguenza, può essere opportuno ridurre le dipendenze dei pacchetti alla quantità necessaria per la libreria.
 
 Per ridurre questa libreria, iniziare con il file `project.json` e aggiungere un riferimento a `NETStandard.Library` versione `1.6.0`.
 

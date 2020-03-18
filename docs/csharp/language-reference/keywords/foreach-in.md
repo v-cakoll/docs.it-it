@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: 9c1521f39dea72b51801a81b13e8a0203956731c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: dbe4f4e95c2b99f1be47885e39d51db81ba3a97d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422803"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173705"
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in (Riferimenti per C#)
 
@@ -23,11 +23,13 @@ L'istruzione `foreach` esegue un'istruzione o un blocco di istruzioni per ogni e
 - include il metodo `GetEnumerator` pubblico senza parametri con tipo restituito classe, struct o interfaccia,
 - il tipo restituito del metodo `GetEnumerator` include la proprietà `Current` pubblica e il metodo `MoveNext` pubblico senza parametri con tipo restituito <xref:System.Boolean>.
 
-A partire da C# 7.3, se la proprietà `Current` dell'enumeratore restituisce un [valore restituito di riferimento](ref.md#reference-return-values) (`ref T` dove `T` è il tipo dell'elemento della raccolta), è possibile dichiarare la variabile di iterazione con il modificatore `ref` o `ref readonly`.
+A partire dalla versione 7.3 di `Current` C, se la `T` proprietà dell'enumeratore restituisce un valore restituito `ref` di `ref readonly` [riferimento](ref.md#reference-return-values) (dove`ref T` è il tipo dell'elemento della raccolta), è possibile dichiarare la variabile di iterazione con il modificatore o .
+
+A partire dalla versione 8.0 di C, l'operatore `await` può essere applicato all'istruzione `foreach` quando il tipo di raccolta implementa l'interfaccia. <xref:System.Collections.Generic.IAsyncEnumerable%601> Ogni iterazione del ciclo può essere sospesa mentre l'elemento successivo viene recuperato in modo asincrono. Per impostazione predefinita, gli elementi di flusso vengono elaborati nel contesto acquisito. Se si desidera disabilitare l'acquisizione del contesto, utilizzare il <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType> metodo di estensione. Per ulteriori informazioni sui contesti di sincronizzazione e sull'acquisizione del contesto corrente, vedere l'articolo [sull'utilizzo del modello asincrono basato su attività](../../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).
 
 In un punto qualsiasi all'interno del blocco dell'istruzione `foreach` è possibile uscire dal ciclo usando l'istruzione [break](break.md) o passare all'iterazione successiva nel ciclo con l'istruzione [continue](continue.md). Si può uscire da un ciclo `foreach` anche usando l'istruzione [goto](goto.md), [return](return.md) o [throw](throw.md).
 
-Se l'istruzione `foreach` viene applicata a `null`, viene generata una <xref:System.NullReferenceException>. Se la raccolta di origine dell'istruzione `foreach` è vuota, il corpo del ciclo `foreach` non viene eseguito e viene ignorato.
+Se l'istruzione `foreach` viene applicata a `null`, viene generata una <xref:System.NullReferenceException>. Se la raccolta `foreach` di origine dell'istruzione `foreach` è vuota, il corpo del ciclo non viene eseguito e ignorato.
 
 ## <a name="examples"></a>Esempi
 
@@ -45,14 +47,18 @@ L'esempio seguente usa una variabile di iterazione `ref` per impostare il valore
 
 [!code-csharp[ref span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#RefSpan)]
 
+L'esempio `await foreach` seguente usa per scorrere una raccolta che genera ogni elemento in modo asincrono:The following example uses to iterate a collection that generates each element asynchronously:
+
+[!code-csharp[ref span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#AwaitForeach)]
+
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
 Per altre informazioni, vedere la sezione [L'istruzione foreach](~/_csharplang/spec/statements.md#the-foreach-statement) della [specifica del linguaggio C#](/dotnet/csharp/language-reference/language-specification/introduction).
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
+- [Guida di riferimento a C](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](index.md)
-- [Uso di foreach con matrici](../../programming-guide/arrays/using-foreach-with-arrays.md)
-- [Istruzione For](for.md)
+- [Utilizzo di foreach con array](../../programming-guide/arrays/using-foreach-with-arrays.md)
+- [per istruzione](for.md)

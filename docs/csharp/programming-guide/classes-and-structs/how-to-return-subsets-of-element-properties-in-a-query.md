@@ -1,17 +1,17 @@
 ---
-title: Come restituire subset di proprietà degli elementi in una guida per la C# programmazione di query
+title: Come restituire sottoinsiemi di proprietà dell'elemento in una query - Guida per programmatori C
 ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
 ms.openlocfilehash: 27a2626fc46307a7195040adf746d8d8757d2f82
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714863"
 ---
-# <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>Come restituire subset di proprietà degli elementi in una query (C# guida per programmatori)
+# <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>Come restituire sottoinsiemi di proprietà dell'elemento in una query (Guida per programmatori C
 Usare un tipo anonimo in un'espressione di query quando si verificano entrambe le condizioni seguenti:  
   
 - Si vogliono restituire solo alcune delle proprietà di ogni elemento di origine.  

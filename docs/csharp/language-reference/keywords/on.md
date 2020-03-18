@@ -8,10 +8,10 @@ helpviewer_keywords:
 - on keyword [C#]
 ms.assetid: 06abc536-e07c-4e34-88c1-425208bdcb21
 ms.openlocfilehash: 0c443b395ff41ac4584da706722186cf9247ad24
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713309"
 ---
 # <a name="on-c-reference"></a>on (Riferimenti per C#)
@@ -26,5 +26,5 @@ Nell'esempio seguente viene illustrato l'utilizzo di `on` in una clausola `join`
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
-- [LINQ (Language-Integrated Query)](../../linq/index.md)
+- [Guida di riferimento a C](../index.md)
+- [Language Integrated Query (LINQ)](../../linq/index.md)

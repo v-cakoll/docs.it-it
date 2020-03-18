@@ -4,37 +4,37 @@ description: ML.NET offre la possibilità di aggiungere funzionalità di Machine
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: bc157b22201c66bceecf78aaa36b9c653fe6a131
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 169250adf81992ad0025e78eb9c8f151107bcf40
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794566"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79185861"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>Che cos'è ML.NET e come funziona?
 
-ML.NET offre la possibilità di aggiungere funzionalità di Machine Learning alle applicazioni .NET, in scenari online o offline. Con questa funzionalità è possibile eseguire stime automatiche usando i dati disponibili per l'applicazione. Le applicazioni di Machine Learning usano i modelli nei dati per eseguire stime anziché dover essere programmate in modo esplicito.
+ML.NET offre la possibilità di aggiungere funzionalità di Machine Learning alle applicazioni .NET, in scenari online o offline. Con questa funzionalità è possibile eseguire stime automatiche usando i dati disponibili per l'applicazione. Le applicazioni di apprendimento automatico usano modelli nei dati per fare previsioni piuttosto che dover essere programmate in modo esplicito.
 
-Central per ML.NET è un **modello**di machine learning. Il modello specifica i passaggi necessari per trasformare i dati di input in una stima. Con ML.NET è possibile eseguire il training di un modello personalizzato specificando un algoritmo oppure è possibile importare modelli TensorFlow e ONNX con training preliminare.
+Centrale per ML.NET è un **modello**di apprendimento automatico. Il modello specifica i passaggi necessari per trasformare i dati di input in una stima. Con ML.NET, è possibile eseguire il training di un modello personalizzato specificando un algoritmo oppure importare modelli TensorFlow e ONNX con training preliminare.
 
-Quando si dispone di un modello, è possibile aggiungerlo all'applicazione per eseguire le stime.
+Dopo aver a disposizione un modello, è possibile aggiungerlo all'applicazione per eseguire le stime.
 
-ML.NET viene eseguito in Windows, Linux e macOS con .NET Core o Windows con .NET Framework. 64 bit è supportato in tutte le piattaforme. 32 bit è supportato in Windows, ad eccezione delle funzionalità correlate a TensorFlow, LightGBM e ONNX.
+ML.NET vengono eseguiti in Windows, Linux e macOS usando .NET Core o Windows con .NET Framework. 64 bit è supportato su tutte le piattaforme. La funzionalità relativa a 32 bit è supportata in Windows, ad eccezione di TensorFlow, LightGBM e ONNX.
 
-Esempi del tipo di stime che è possibile apportare con ML.NET:
+Esempi del tipo di stime che è possibile eseguire con ML.NET:
 
 |||
 |-|-|
-|Classificazione/categorizzazione|Suddivisione automatica del feedback dei clienti in categorie positive e negative|
-|Regressione/stima di valori continui|Stimare il prezzo di unità immobiliari sulla base di dimensioni e posizione|
-|Rilevamento anomalie|Rilevare le transazioni bancarie illecite |
-|Suggerimenti|Suggerire prodotti che possono risultare interessanti agli acquirenti online sulla base dei loro acquisti precedenti|
-|Serie temporali/dati sequenziali|Prevedere le vendite Meteo/prodotto|
-|Classificazione immagini|Categorizzare le patologie nelle immagini medicali|
+|Classificazione/categorizzazione|Suddivisione automatica dei commenti e dei suggerimenti degli utenti in categorie positive e negative|
+|Regressione/stima di valori continui|Previsione del prezzo delle case in base alle dimensioni e alla posizione|
+|Anomaly Detection|Rilevamento di transazioni bancarie fraudolente |
+|Consigli|Suggerimento di prodotti che gli acquirenti online potrebbero voler acquistare, in base agli acquisti precedenti|
+|Serie temporali/dati sequenziali|Prevedere le vendite meteo/prodotto|
+|Classificazione di immagini|Categorizzare le patologie nelle immagini mediche|
 
 ## <a name="hello-mlnet-world"></a>Hello ML.NET World
 
-Il codice del frammento seguente illustra l'applicazione più semplice di ML.NET. Questo esempio crea un modello di regressione lineare per stimare i prezzi di unità immobiliari usando i dati delle dimensioni e del prezzo dell'unità immobiliare. 
+Il codice del frammento seguente illustra l'applicazione più semplice di ML.NET. Questo esempio crea un modello di regressione lineare per stimare i prezzi di unità immobiliari usando i dati delle dimensioni e del prezzo dell'unità immobiliare.
 
  ```csharp
     using System;
@@ -125,15 +125,15 @@ Sia il modello di tariffazione delle unità immobiliari sia il modello di classi
 
 ## <a name="data-preparation"></a>Preparazione dei dati
 
-Nella maggior parte dei casi i dati disponibili non sono pronti per l'uso nel training di un modello di Machine Learning. I dati non elaborati devono essere preparati o pre-elaborati prima di poter essere utilizzati per trovare i parametri del modello. Può essere necessaria la conversione dei dati da valori stringa a una rappresentazione numerica. I dati di input potrebbero contenere informazioni ridondanti. Potrebbe essere necessario ridurre o espandere le dimensioni dei dati di input. I dati potrebbero richiedere la normalizzazione o la scalatura.
+Nella maggior parte dei casi i dati disponibili non sono pronti per l'uso nel training di un modello di Machine Learning. I dati non elaborati devono essere preparati, o pre-elaborati, prima di poter essere utilizzati per trovare i parametri del modello. Può essere necessaria la conversione dei dati da valori stringa a una rappresentazione numerica. I dati di input potrebbero contenere informazioni ridondanti. Potrebbe essere necessario ridurre o espandere le dimensioni dei dati di input. I dati potrebbero richiedere la normalizzazione o la scalatura.
 
 Le [esercitazioni di ML.NET](./tutorials/index.md) illustrano diverse pipeline di elaborazione per dati di testo, immagini, serie temporali e dati numerici usati per attività di apprendimento automatico specifiche.
 
-La [procedura per preparare i dati](./how-to-guides/prepare-data-ml-net.md) Mostra come applicare la preparazione dei dati più in generale.
+[Come preparare i dati](./how-to-guides/prepare-data-ml-net.md) mostra come applicare la preparazione dei dati in modo più generale.
 
 Un'appendice con tutte le [trasformazioni](./resources/transforms.md) è disponibile nella sezione delle risorse.
 
-## <a name="model-evaluation"></a>Valutazione del modello
+## <a name="model-evaluation"></a>Valutazione del modello.
 
 Dopo aver eseguito il training del modello, come si sa se le stime future verranno eseguite correttamente? Con ML.NET è possibile valutare il modello rispetto a nuovi dati di test.
 
@@ -176,12 +176,12 @@ Un'applicazione ML.NET inizia con un oggetto <xref:Microsoft.ML.MLContext>. Ques
 |Preparazione dei dati||<xref:Microsoft.ML.TransformsCatalog>||
 |Algoritmi di training|Classificazione binaria|<xref:Microsoft.ML.BinaryClassificationCatalog>||
 ||Classificazione multiclasse|<xref:Microsoft.ML.MulticlassClassificationCatalog>||
-||Rilevamento di anomalie|<xref:Microsoft.ML.AnomalyDetectionCatalog>||
+||Rilevamento anomalie|<xref:Microsoft.ML.AnomalyDetectionCatalog>||
 ||Clustering|<xref:Microsoft.ML.ClusteringCatalog>||
 ||Previsione|<xref:Microsoft.ML.ForecastingCatalog>||
-||Ranking|<xref:Microsoft.ML.RankingCatalog>||
+||Rango|<xref:Microsoft.ML.RankingCatalog>||
 ||Regressione|<xref:Microsoft.ML.RegressionCatalog>||
-||Indicazione|<xref:Microsoft.ML.RecommendationCatalog>|Aggiungere il pacchetto NuGet `Microsoft.ML.Recommender`|
+||Recommendation|<xref:Microsoft.ML.RecommendationCatalog>|Aggiungere il pacchetto NuGet `Microsoft.ML.Recommender`|
 ||TimeSeries|<xref:Microsoft.ML.TimeSeriesCatalog>|Aggiungere il pacchetto NuGet `Microsoft.ML.TimeSeries`|
 |Uso dei modelli ||<xref:Microsoft.ML.ModelOperationsCatalog>||
 
@@ -210,9 +210,9 @@ Dopo che sono stati creati gli oggetti nella pipeline, è possibile usare i dati
     var model = pipeline.Fit(trainingData);
 ```
 
-La chiamata di `Fit()` usa i dati di training di input per stimare i parametri del modello. Tale processo è noto come training del modello. Ricordare che il modello di regressione lineare precedente aveva due parametri di modello: **bias** e **weight**. Dopo la chiamata `Fit()` i valori dei parametri sono noti. La maggior parte dei modelli ha un numero di parametri di molto superiore a questo.
+La chiamata di `Fit()` usa i dati di training di input per stimare i parametri del modello. Questo processo è noto come training del modello. Ricordare che il modello di regressione lineare precedente aveva due parametri di modello: **bias** e **weight**. Dopo la chiamata `Fit()` i valori dei parametri sono noti. La maggior parte dei modelli ha un numero di parametri di molto superiore a questo.
 
-Per ulteriori informazioni sul training del modello [, vedere come eseguire il training del modello](./how-to-guides/train-machine-learning-model-ml-net.md).
+Per ulteriori informazioni sul training dei modelli, vedere [Come eseguire il training del modello.](./how-to-guides/train-machine-learning-model-ml-net.md)
 
 L'oggetto modello risultante implementa l'interfaccia <xref:Microsoft.ML.ITransformer>. In altre parole il modello trasforma i dati di input in stime.
 
@@ -240,7 +240,7 @@ Ogni trasformazione nella pipeline presenta uno schema di input (nomi, tipi e di
 
 Se lo schema di output di una trasformazione della pipeline non corrisponde allo schema di input della trasformazione successiva, ML.NET genera un'eccezione.
 
-Un oggetto visualizzazione include colonne e righe. Ogni colonna ha un nome, un tipo e una lunghezza. Ad esempio, le colonne di input nell'esempio del prezzo della casa sono **size** e **Price**. Sono entrambi di tipo e sono quantità scalari piuttosto che vettoriali.
+Un oggetto visualizzazione include colonne e righe. Ogni colonna ha un nome, un tipo e una lunghezza. Ad esempio, le colonne di input nell'esempio di prezzo della casa sono **Dimensione** e **Prezzo**. Sono entrambi di tipo e sono quantità scalari piuttosto che vettoriali.
 
    ![Esempio di visualizzazione dati ML.NET con dati di stima dei prezzi di unità immobiliari](./media/ml-net-dataview.png)
 
@@ -280,8 +280,8 @@ Nelle applicazioni reali il codice di training e valutazione del modello è sepa
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-* Informazioni su come creare applicazioni usando diverse attività di Machine Learning con set di dati più realistici nelle [esercitazioni](./tutorials/index.md).
+* Informazioni su come creare applicazioni usando diverse attività di apprendimento automatico con set di dati più realistici nelle [esercitazioni.](./tutorials/index.md)
 
-* Per informazioni dettagliate sugli argomenti specifici, vedere la [Guida alle procedure](./how-to-guides/index.md).
+* Per ulteriori informazioni, vedere Come eseguire le [guide.](./how-to-guides/index.md)
 
-* Se si è molto appassionati, è possibile passare direttamente alla [documentazione di riferimento delle API](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet).
+* Se sei super appassionato, puoi immergerti direttamente nella documentazione di [riferimento dell'API.](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet)

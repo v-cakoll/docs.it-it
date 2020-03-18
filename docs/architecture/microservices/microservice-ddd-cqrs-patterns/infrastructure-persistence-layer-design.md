@@ -2,12 +2,12 @@
 title: Progettazione del livello di persistenza dell'infrastruttura
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Esplorare lo schema repository nella progettazione del livello di persistenza dell'infrastruttura.
 ms.date: 10/08/2018
-ms.openlocfilehash: f1c5df1cc5672760374610a416ae22b45cd76c25
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: e10c8c1569089d5c8274df655ad7a12f2ebb7c22
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737931"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846809"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>Progettare il livello di persistenza dell'infrastruttura
 
@@ -33,11 +33,11 @@ Se l'utente apporta modifiche, i dati da aggiornare proverranno dal livello di p
 
 È importante sottolineare di nuovo che è consigliabile definire un solo repository per ogni radice di aggregazione, come illustrato nella figura 7-17. Per raggiungere l'obiettivo della radice dell'aggregazione per mantenere la coerenza delle transazioni tra tutti gli oggetti all'interno dell'aggregazione, è consigliabile non creare mai un repository per ogni tabella nel database.
 
-![Diagramma che illustra le relazioni del dominio e di altre infrastrutture.](./media/infrastructure-persistence-layer-design/repository-aggregate-database-table-relationships.png)
+![Diagramma che mostra le relazioni tra dominio e altre infrastrutture.](./media/infrastructure-persistence-layer-design/repository-aggregate-database-table-relationships.png)
 
 **Figura 7-17**. Relazione tra repository, aggregazioni e tabelle del database
 
-Il diagramma precedente mostra le relazioni tra i livelli di dominio e infrastruttura: l'aggregazione buyer dipende da IBuyerRepository e dall'aggregazione Order dipende dalle interfacce IOrderRepository, queste interfacce vengono implementate nel livello infrastruttura i repository corrispondenti che dipendono da UnitOfWork, implementati anche in questa posizione, che accede alle tabelle nel livello dati.
+Il diagramma precedente mostra le relazioni tra i livelli di dominio e infrastruttura: Buyer Aggregate dipende da IBuyerRepository e Order Aggregate dipende dalle interfacce IOrderRepository, queste interfacce vengono implementate nel livello Infrastructure dai repository corrispondenti che dipendono da UnitOfWork, anch'esso implementato in tale posizione, che accede alle tabelle nel livello Dati.
 
 ### <a name="enforce-one-aggregate-root-per-repository"></a>Applicare una radice di aggregazione per ogni repository
 
@@ -110,13 +110,10 @@ I repository possono essere utili ma non sono fondamentali per la progettazione 
 
 ### <a name="repository-pattern"></a>Schema Repository
 
-- **The Repository pattern** \ (Lo schema Repository)\
-  <https://deviq.com/repository-pattern/>
-
 - **Edward Hieatt e Rob me. Modello di repository.** \
   <https://martinfowler.com/eaaCatalog/repository.html>
 
-- **The Repository pattern** \ (Lo schema Repository)\
+- **Il modello Repository** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10)>
 
 - **Eric Evans. Progettazione basata su domini: affrontare la complessità nel cuore del software.** (Libro; include una trattazione dello schema repository) \
@@ -127,9 +124,9 @@ I repository possono essere utili ma non sono fondamentali per la progettazione 
 - **Martin Fowler. Modello di unità di lavoro.** \
   <https://martinfowler.com/eaaCatalog/unitOfWork.html>
 
-- **Implementazione degli schemi Repository e Unit of Work in un'applicazione ASP.NET MVC** \
+- **Implementazione del repository e dei modelli di unità di lavoro in un'applicazione MVC ASP.NET** \
   <https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
 
 >[!div class="step-by-step"]
->[Precedente](domain-events-design-implementation.md)
->[Successivo](infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+>[Successivo](domain-events-design-implementation.md)
+>[precedente](infrastructure-persistence-layer-implemenation-entity-framework-core.md)

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - garbage collection, encapsulating resources
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
 ms.openlocfilehash: c5232aa89064c514e71f3a18bc754159e9c9b15b
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160281"
 ---
 # <a name="using-objects-that-implement-idisposable"></a>Uso di oggetti che implementano IDisposable
@@ -61,5 +61,5 @@ L'esempio seguente è simile a quello precedente, con la differenza che in quest
 ## <a name="see-also"></a>Vedere anche
 
 - [Pulizia delle risorse non gestite](../../../docs/standard/garbage-collection/unmanaged.md)
-- [Istruzione using (Riferimenti per C#)](../../csharp/language-reference/keywords/using-statement.md)
+- [Istruzione using (Riferimenti per C](../../csharp/language-reference/keywords/using-statement.md)
 - [Istruzione using (Visual Basic)](../../visual-basic/language-reference/statements/using-statement.md)

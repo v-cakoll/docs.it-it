@@ -8,10 +8,10 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 ms.openlocfilehash: a70bd3070d8b1dcd06e55d330a01d29071293f6c
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159390"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Sincronizzazione dei dati per il multithreading
@@ -61,7 +61,7 @@ Se più thread sono in grado di effettuare chiamate alle proprietà e ai metodi 
 ### <a name="compiler-support"></a>Supporto del compilatore  
  Visual Basic e C# supportano una parola chiave del linguaggio che usa <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> e <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> per bloccare l'oggetto. Visual Basic supporta l'istruzione [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md), C# supporta l'istruzione [lock](../../csharp/language-reference/keywords/lock-statement.md).  
   
- In entrambi i casi, se viene generata un'eccezione nell'area di codice, il blocco acquisito da **lock** o **SyncLock** viene rilasciato automaticamente. I compilatori C# e Visual Basic creano un blocco **try**/**finally** con **Monitor.Enter** all'inizio del blocco try e **Monitor.Exit** nel blocco **finally**. Se viene generata un'eccezione all'interno del blocco **lock** o **SyncLock**, viene eseguito il gestore **finally** per consentire l'esecuzione di operazioni di pulizia.  
+ In entrambi i casi, se viene generata un'eccezione nell'area di codice, il blocco acquisito da **lock** o **SyncLock** viene rilasciato automaticamente. I compilatori di C e Visual Basic generano un blocco **finally try**/**finally** con **Monitor.Enter** all'inizio di try e **Monitor.Exit** nel blocco **finally.** Se viene generata un'eccezione all'interno del blocco **lock** o **SyncLock**, viene eseguito il gestore **finally** per consentire l'esecuzione di operazioni di pulizia.  
   
 ## <a name="synchronized-context"></a>Contesto sincronizzato  
 
@@ -70,7 +70,7 @@ Solo nelle applicazioni .NET Framework e Xamarin è possibile usare <xref:System
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
-- [Threads and Threading](../../../docs/standard/threading/threads-and-threading.md) (Thread e threading)
-- [Panoramica sulle primitive di sincronizzazione](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
+- [Thread e threading](../../../docs/standard/threading/threads-and-threading.md)
+- [Panoramica delle primitive di sincronizzazione](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
 - [Istruzione SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md)
 - [Istruzione lock](../../csharp/language-reference/keywords/lock-statement.md)

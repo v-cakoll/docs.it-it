@@ -3,10 +3,10 @@ title: Novità di C# 7.2
 description: Panoramica delle nuove funzionalità in C# 7.2.
 ms.date: 08/16/2017
 ms.openlocfilehash: 7febefb81bbea6f24690adb05488ad6a18bbf552
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75694595"
 ---
 # <a name="whats-new-in-c-72"></a>Novità di C# 7.2
@@ -26,9 +26,9 @@ Le nuove funzionalità relative al linguaggio in questa versione sono:
   - Gli argomenti denominati possono essere seguiti da argomenti posizionali.
 - [Caratteri di sottolineatura iniziali nei valori letterali numerici](#leading-underscores-in-numeric-literals)
   - I valori letterali numerici possono ora includere caratteri di sottolineatura iniziali prima di qualsiasi cifra stampata.
-- [Modificatore di accesso `private protected`](#private-protected-access-modifier)
+- [`private protected`modificatore di accesso](#private-protected-access-modifier)
   - Il modificatore di accesso `private protected` consente l'accesso per le classi derivate nello stesso assembly.
-- [Espressioni condizionali `ref`](#conditional-ref-expressions)
+- [Espressioni `ref` condizionali](#conditional-ref-expressions)
   - Il risultato di un'espressione condizionale (`?:`) può ora essere un riferimento.
 
 La parte restante di questo articolo illustra una panoramica di ogni funzionalità. Per ogni funzionalità verranno illustrati i concetti di base e si apprenderà la sintassi. È possibile esplorare queste funzionalità nell'ambiente in uso tramite lo strumento globale `dotnet try`:
@@ -40,7 +40,7 @@ La parte restante di questo articolo illustra una panoramica di ogni funzionalit
 
 ## <a name="safe-efficient-code-enhancements"></a>Miglioramenti per un codice efficiente e sicuro
 
-Le funzionalità del linguaggio introdotte nella versione 7.2 consentono di lavorare con i tipi valore usando allo stesso tempo la semantica di riferimento. Queste funzionalità sono state progettate per migliorare le prestazioni riducendo al minimo la copia dei tipi valore senza dover sostenere le allocazioni di memoria associate all'uso dei tipi riferimento. Sono incluse le funzionalità seguenti:
+Le funzionalità del linguaggio introdotte nella versione 7.2 consentono di lavorare con i tipi valore usando allo stesso tempo la semantica di riferimento. Queste funzionalità sono state progettate per migliorare le prestazioni riducendo al minimo la copia dei tipi valore senza dover sostenere le allocazioni di memoria associate all'uso dei tipi riferimento. Le funzionalità includono:
 
 - Il modificatore `in` per i parametri, per specificare che un argomento viene passato per riferimento, ma non modificato dal metodo chiamato. L'aggiunta del modificatore `in` a un argomento è una [modifica compatibile a livello di codice sorgente](version-update-considerations.md#source-compatible-changes).
 - Il modificatore `ref readonly` per i valori restituiti dai metodi, per indicare che un metodo restituisce il valore per riferimento, ma non consente scritture su tale oggetto. L'aggiunta del modificatore `ref readonly` è una [modifica compatibile a livello di codice sorgente](version-update-considerations.md#source-compatible-changes), se il valore restituito viene assegnato a un valore. L'aggiunta del modificatore `readonly` a un'istruzione return `ref` esistente è una [modifica incompatibile](version-update-considerations.md#incompatible-changes). Richiede ai chiamanti di aggiornare la dichiarazione delle variabili locali `ref` per includere il modificatore `readonly`.

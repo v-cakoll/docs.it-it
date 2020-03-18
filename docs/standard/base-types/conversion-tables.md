@@ -13,10 +13,10 @@ helpviewer_keywords:
 - data types [.NET Framework], converting
 ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
 ms.openlocfilehash: aa1ef8397338af949bd147fd3252b2d9ecaf53ef
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73103881"
 ---
 # <a name="type-conversion-tables-in-net"></a>Tabelle di conversione dei tipi in .NET
@@ -25,7 +25,7 @@ Si parla di conversione verso un tipo di dati più grande quando un valore di un
 ## <a name="widening-conversions"></a>conversioni verso un tipo di dati più grande  
  Nella tabella seguente sono elencate le conversioni verso un tipo di dati più grande che possono essere eseguite senza la perdita di informazioni.  
   
-|Digitare|Conversione senza perdita di dati in|  
+|Type|Conversione senza perdita di dati in|  
 |----------|-------------------------------------------|  
 |<xref:System.Byte>|<xref:System.UInt16>, <xref:System.Int16>, <xref:System.UInt32>, <xref:System.Int32>, <xref:System.UInt64>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
 |<xref:System.SByte>|<xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
@@ -40,7 +40,7 @@ Si parla di conversione verso un tipo di dati più grande quando un valore di un
   
  Alcune conversioni verso il tipo di dati più grande <xref:System.Single> o <xref:System.Double> possono causare una perdita di precisione. Nella tabella seguente sono elencate le conversioni verso un tipo di dati più grande che possono generare una perdita di informazioni.  
   
-|Digitare|Conversione in|  
+|Type|Conversione in|  
 |----------|-------------------------|  
 |<xref:System.Int32>|<xref:System.Single>|  
 |<xref:System.UInt32>|<xref:System.Single>|  
@@ -55,7 +55,7 @@ Si parla di conversione verso un tipo di dati più grande quando un valore di un
   
  Nella tabella seguente sono elencate le conversioni che generano un evento <xref:System.OverflowException> tramite <xref:System.Convert?displayProperty=nameWithType> o qualsiasi conversione controllata se il valore del tipo convertito non rientra nell'intervallo specificato per il tipo risultante.  
   
-|Digitare|Conversione in|  
+|Type|Conversione in|  
 |----------|-------------------------|  
 |<xref:System.Byte>|<xref:System.SByte>|  
 |<xref:System.SByte>|<xref:System.Byte>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>|  

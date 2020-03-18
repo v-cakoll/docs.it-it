@@ -8,12 +8,12 @@ helpviewer_keywords:
 - parameters [C#], params
 - params keyword [C#]
 ms.assetid: 1690815e-b52b-4967-8380-5780aff08012
-ms.openlocfilehash: 90d224080f607cbac96514aaf5ac6d67affef9e0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f462ccc2421fef3ea111d263ec035a701cf04775
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713235"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173549"
 ---
 # <a name="params-c-reference"></a>params (Riferimenti per C#)
 
@@ -29,7 +29,7 @@ Il tipo dichiarato del parametro `params` deve essere una matrice unidimensional
 
 Nell'esempio seguente vengono illustrati i vari modi in cui è possibile inviare argomenti al parametro `params`.
 
-[!code-csharp[csrefKeywordsMethodParams#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsMethodParams/CS/csrefKeywordsMethodParams.cs#5)] 
+[!code-csharp[csrefKeywordsMethodParams#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsMethodParams/CS/csrefKeywordsMethodParams.cs#5)]
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
@@ -37,7 +37,7 @@ Nell'esempio seguente vengono illustrati i vari modi in cui è possibile inviare
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
+- [Guida di riferimento a C](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](index.md)
-- [Parametri dei metodi](method-parameters.md)
+- [Parametri di metodo](method-parameters.md)

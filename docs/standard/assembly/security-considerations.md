@@ -16,10 +16,10 @@ helpviewer_keywords:
 - integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 ms.openlocfilehash: 77c9f9131b556e0b8fa639cd723bf1ca8cd6602e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73972301"
 ---
 # <a name="assembly-security-considerations"></a>Considerazioni sulla sicurezza degli assembly
@@ -29,7 +29,7 @@ Quando si compila un assembly, è possibile specificare l'insieme di autorizzazi
   
 - L'evidenza di input viene unita all'evidenza acquisita durante il caricamento per creare un set di evidenze finale utilizzato per la risoluzione dei criteri. I metodi in cui viene usata tale semantica sono **Assembly.Load**, **Assembly.LoadFrom** e **Activator.CreateInstance**.  
   
-- L'evidenza di input viene utilizzata non modificata come set di evidenze finale per la risoluzione dei criteri. I metodi in cui viene usata tale semantica sono **Assembly.Load(byte[])** e **AppDomain.DefineDynamicAssembly()** .  
+- L'evidenza di input viene utilizzata non modificata come set di evidenze finale per la risoluzione dei criteri. I metodi in cui viene usata tale semantica sono **Assembly.Load(byte[])** e **AppDomain.DefineDynamicAssembly()**.  
   
   Autorizzazioni facoltative possono essere concesse dai [criteri di sicurezza](../../framework/misc/code-access-security-basics.md) impostati per il computer che eseguirà l'assembly. Se si desidera che il proprio codice gestisca tutte le possibili eccezioni di sicurezza, si può procedere in uno dei modi seguenti:  
   
@@ -42,7 +42,7 @@ Quando si compila un assembly, è possibile specificare l'insieme di autorizzazi
   
  In fase di caricamento, l'evidenza dell'assembly viene utilizzata come input per i criteri di sicurezza. I criteri di sicurezza vengono stabiliti dall'azienda e dall'amministratore dei computer, così come dalle impostazioni adottate dallo stesso utente, e determinano l'insieme di autorizzazioni concesse a tutto il codice gestito che viene eseguito sul computer. È possibile stabilire criteri di sicurezza basati sull'autore dell'assembly (se questo dispone di una firma generata da uno strumento firma digitale), sul sito Web e la zona (come è definita in Internet Explorer) da cui è stato effettuato il download dell'assembly o sul nome sicuro dell'assembly. L'amministratore di un computer può ad esempio stabilire criteri di sicurezza che consentono a tutto il codice scaricato da un sito Web e firmato da una determinata azienda di software di accedere al database presente su un computer, ma non di scrivere sul disco rigido.  
   
-## <a name="strong-named-assemblies-and-signing-tools"></a>Assembly con nome sicuro e strumenti per la firma  
+## <a name="strong-named-assemblies-and-signing-tools"></a>Assembly con nome sicuro e strumenti di firma  
 
  > [!WARNING]
  > Non usare i nomi sicuri per la sicurezza, poiché forniscono solo un'identità univoca.
@@ -62,6 +62,6 @@ Quando si compila un assembly, è possibile specificare l'insieme di autorizzazi
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Assembly con nomi sicuri](strong-named.md)
+- [Assembly con nome sicuro](strong-named.md)
 - [Assembly in .NET](index.md)
 - [SignTool.exe (strumento per la firma)](../../framework/tools/signtool-exe.md)

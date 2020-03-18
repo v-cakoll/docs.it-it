@@ -19,10 +19,10 @@ helpviewer_keywords:
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 ms.openlocfilehash: 99e1f3f96465d05c100a0dbb2bc5218810c33754
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159429"
 ---
 # <a name="types-of-isolation"></a>Tipi di isolamento
@@ -38,9 +38,9 @@ L'accesso allo spazio di memorizzazione isolato è sempre limitato all'utente ch
   
  Combinando i concetti di identità di utente, dominio e assembly, lo spazio di memorizzazione isolato può isolare i dati nei modi seguenti, ciascuno dei quali presenta specifici scenari di utilizzo:  
   
-- [Isolamento in base all'utente e all'assembly](#UserAssembly)  
+- [Isolamento per utente e assemblaggio](#UserAssembly)  
   
-- [Isolamento in base all'utente, al dominio e all'assembly](#UserDomainAssembly)  
+- [Isolamento per utente, dominio e assembly](#UserDomainAssembly)  
   
  Ognuno di questi isolamenti può essere combinato con un profilo di utente roaming. Per altre informazioni, vedere la sezione [Spazio di memorizzazione isolato e roaming](#Roaming).  
   
@@ -51,7 +51,7 @@ L'accesso allo spazio di memorizzazione isolato è sempre limitato all'utente ch
  Si osservi che, fatta eccezione per gli spazi di memorizzazione roaming, lo spazio di memorizzazione isolato viene sempre isolato implicitamente in base al computer, poiché usa le funzioni di memorizzazione locali del computer in uso.  
   
 > [!IMPORTANT]
-> Lo spazio di memorizzazione isolato non è disponibile per le app di Windows 8. x Store. Al contrario, usare le classi di dati dell'applicazione negli spazi dei nomi `Windows.Storage` inclusi nell'API di Windows Runtime per archiviare dati e file locali. Per altre informazioni, vedere [Dati dell'applicazione](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) nel Centro per sviluppatori Windows.  
+> L'archiviazione isolata non è disponibile per le app di Windows 8.x Store. Al contrario, usare le classi di dati dell'applicazione negli spazi dei nomi `Windows.Storage` inclusi nell'API di Windows Runtime per archiviare dati e file locali. Per altre informazioni, vedere [Dati dell'applicazione](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) nel Centro per sviluppatori Windows.  
   
 <a name="UserAssembly"></a>
 ## <a name="isolation-by-user-and-assembly"></a>Isolamento in base all'utente e all'assembly  
@@ -106,4 +106,4 @@ L'accesso allo spazio di memorizzazione isolato è sempre limitato all'utente ch
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageScope>
-- [Spazio di memorizzazione isolato](../../../docs/standard/io/isolated-storage.md)
+- [Archiviazione isolata](../../../docs/standard/io/isolated-storage.md)

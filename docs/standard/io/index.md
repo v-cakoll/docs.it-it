@@ -11,13 +11,13 @@ helpviewer_keywords:
 - data streams, I/O
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 ms.openlocfilehash: 3c69e0fd23b1f8bc11fe908c66ba492f31a53f30
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75706595"
 ---
-# <a name="file-and-stream-io"></a>I/O di file e flussi
+# <a name="file-and-stream-io"></a>I/O di file e di flussi
 
 I/O (input/output) di file e di flussi fa riferimento al trasferimento di dati da o verso un supporto di archiviazione. In .NET Framework gli spazi dei nomi `System.IO` contengono i tipi che consentono la lettura e la scrittura, sia in modo sincrono che in modo asincrono, su flussi di dati e file. Questi spazi dei nomi contengono anche i tipi che eseguono la compressione e la decompressione dei file e i tipi che consentono la comunicazione tra le pipe e le porte seriali.
 
@@ -97,7 +97,7 @@ Vedere [Procedura: leggere testo da un file](how-to-read-text-from-a-file.md), [
 
 ## <a name="asynchronous-io-operations"></a>Operazioni di I/O asincrone
 
-La lettura o la scrittura di grandi quantità di dati può portare ad un elevato consumo di risorse. È necessario eseguire queste attività in modo asincrono se l'applicazione deve mantenersi reattiva verso utente. Usando operazioni di I/O sincrone, il thread di interfaccia utente rimane bloccato fino a quando l'operazione, che richiede un elevato utilizzo di risorse, non sarà completata.  Usare le operazioni di I/O asincrone quando si sviluppano app di Windows 8. x Store per evitare di creare l'impressione che l'app abbia smesso di funzionare.
+La lettura o la scrittura di grandi quantità di dati può portare ad un elevato consumo di risorse. È necessario eseguire queste attività in modo asincrono se l'applicazione deve mantenersi reattiva verso utente. Usando operazioni di I/O sincrone, il thread di interfaccia utente rimane bloccato fino a quando l'operazione, che richiede un elevato utilizzo di risorse, non sarà completata.  Usa le operazioni di I/O asincrone quando sviluppi app di Windows 8.x Store per evitare di creare l'impressione che l'app abbia smesso di funzionare.
 
 I membri asincroni contengono nei propri nomi la parola `Async`, ad esempio i metodi <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.FlushAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> e <xref:System.IO.Stream.WriteAsync%2A>. È possibile usare questi metodi tramite le parole chiave `async` e `await`.
 
@@ -127,7 +127,7 @@ Vedere [Procedura: comprimere ed estrarre file](how-to-compress-and-extract-file
 
 L'archiviazione isolata è un meccanismo di archiviazione dati che offre isolamento e sicurezza definendo modi standardizzati di associare il codice ai dati salvati. L'archiviazione offre un file system virtuale che è isolato dall'utente, dall'assembly ed eventualmente dal dominio. Lo spazio di memorizzazione isolato è particolarmente utile quando l'applicazione non dispone delle autorizzazioni di accesso ai file dell'utente. È possibile salvare le impostazioni o i file per l'applicazione in modo tale che vengano controllati dai criteri di sicurezza del computer.
 
-Lo spazio di memorizzazione isolato non è disponibile per le app di Windows 8. x Store; usare invece le classi di dati dell'applicazione nello spazio dei nomi <xref:Windows.Storage?displayProperty=nameWithType>. Per altre informazioni, vedere [Application data](https://docs.microsoft.com/previous-versions/windows/apps/hh464917%28v=win.10%29) (Dati delle applicazioni).
+L'archiviazione isolata non è disponibile per le app di Windows 8.x Store; utilizzare invece le classi <xref:Windows.Storage?displayProperty=nameWithType> di dati dell'applicazione nello spazio dei nomi. Per altre informazioni, vedere [Application data](https://docs.microsoft.com/previous-versions/windows/apps/hh464917%28v=win.10%29) (Dati delle applicazioni).
 
 Le classi seguenti vengono spesso usate nell'implementazione dello spazio di memorizzazione isolato:
 
@@ -141,11 +141,11 @@ Vedere [Spazio di memorizzazione isolato](isolated-storage.md).
 
 ## <a name="io-operations-in-windows-store-apps"></a>Operazioni di I/O nelle applicazioni Windows Store
 
-.NET per app di Windows 8. x Store contiene molti tipi per la lettura e la scrittura nei flussi; Tuttavia, questo set non include tutti i tipi di i/O .NET Framework.
+Le app di .NET per Windows 8.x Store contengono molti dei tipi per la lettura e la scrittura nei flussi; tuttavia, questo set non include tutti i tipi di I/O di .NET Framework.
 
-Alcune differenze importanti da tenere presente quando si usano le operazioni di I/O nelle app di Windows 8. x Store:
+Alcune importanti differenze da notare quando si usano operazioni di I/O nelle app di Windows 8.x Store:
 
-- I tipi specificamente correlati alle operazioni sui file, ad esempio <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> e <xref:System.IO.DirectoryInfo>, non sono inclusi in .NET per le app di Windows 8. x Store. Usare invece i tipi nello spazio dei nomi <xref:Windows.Storage?displayProperty=nameWithType> di Windows Runtime, ad esempio <xref:Windows.Storage.StorageFile> e <xref:Windows.Storage.StorageFolder>.
+- I tipi specificamente correlati alle <xref:System.IO.File> <xref:System.IO.FileInfo>operazioni <xref:System.IO.Directory> <xref:System.IO.DirectoryInfo>sui file, ad esempio , e , non sono inclusi in .NET per le app di .NET per Windows 8.x Store. Usare invece i tipi nello spazio dei nomi <xref:Windows.Storage?displayProperty=nameWithType> di Windows Runtime, ad esempio <xref:Windows.Storage.StorageFile> e <xref:Windows.Storage.StorageFolder>.
 
 - Lo spazio di memorizzazione isolato non è disponibile; usare invece i [dati dell'applicazione](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)).
 
@@ -153,30 +153,30 @@ Alcune differenze importanti da tenere presente quando si usano le operazioni di
 
 - I tipi di compressione <xref:System.IO.Compression.ZipFile> e <xref:System.IO.Compression.ZipFileExtensions>, che si basano sul percorso, non sono disponibili. Usare invece i tipi nello spazio dei nomi <xref:Windows.Storage.Compression?displayProperty=nameWithType>.
 
-Se necessario è possibile passare da flussi di .NET Framework a flussi di Windows Runtime e viceversa. Per altre informazioni, vedere [procedura: eseguire la conversione tra flussi .NET Framework e flussi Windows Runtime](how-to-convert-between-dotnet-streams-and-winrt-streams.md) o <xref:System.IO.WindowsRuntimeStreamExtensions>.
+Se necessario è possibile passare da flussi di .NET Framework a flussi di Windows Runtime e viceversa. Per altre informazioni, vedere Procedura: eseguire la [conversione tra flussi di .NET Framework e flussi](how-to-convert-between-dotnet-streams-and-winrt-streams.md) di Windows Runtime o . <xref:System.IO.WindowsRuntimeStreamExtensions>
 
-Per ulteriori informazioni sulle operazioni di I/O in un'app di Windows 8. x Store, vedere [Guida introduttiva: lettura e scrittura di file](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10)).
+Per altre informazioni sulle operazioni di I/O in un'app di Windows 8.x Store, vedere [Guida introduttiva: Lettura e scrittura](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10))di file.
 
 ## <a name="io-and-security"></a>I/O e sicurezza
 
 Quando si utilizzano le classi nello spazio dei nomi <xref:System.IO?displayProperty=nameWithType>, è necessario soddisfare i requisiti di sicurezza del sistema operativo, ad esempio gli elenchi di controllo dell'accesso (ACL), che controllano l'accesso ai file e alle directory. Vanno anche soddisfatti i requisiti imposti da <xref:System.Security.Permissions.FileIOPermission>. Gli elenchi di controllo dell'accesso (ACL) possono essere gestiti a livello di codice. Per altre informazioni, vedere [Procedura: aggiungere o rimuovere voci dell'elenco di controllo di accesso (ACL)](how-to-add-or-remove-access-control-list-entries.md).
 
-I criteri di sicurezza predefiniti impediscono alle applicazioni Internet o Intranet di accedere ai file nel computer dell'utente. Pertanto, nello scrivere codice che verrà scaricato da Internet o Intranet, non usare classi I/O che richiedono un percorso a un file fisico. Usare invece lo [spazio di memorizzazione isolato](isolated-storage.md) per le applicazioni di .NET Framework tradizionali o usare [i dati dell'applicazione](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) per le app di Windows 8. x Store.
+I criteri di sicurezza predefiniti impediscono alle applicazioni Internet o Intranet di accedere ai file nel computer dell'utente. Pertanto, nello scrivere codice che verrà scaricato da Internet o Intranet, non usare classi I/O che richiedono un percorso a un file fisico. Usa invece [l'archiviazione isolata](isolated-storage.md) per le applicazioni .NET Framework tradizionali o usa i [dati dell'applicazione](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) per le app di Windows 8.x Store.
 
 Un controllo di sicurezza viene eseguito solo quando il flusso viene costruito. Di conseguenza, non aprire un flusso per poi passarlo a codice o domini di applicazione meno attendibili.
 
 ## <a name="related-topics"></a>Argomenti correlati
 
-- [Attività di I/O comuni](common-i-o-tasks.md)\
+- [Attività i/o comuni](common-i-o-tasks.md)\
 Fornisce un elenco delle attività I/O associate ai file, alle directory e ai flussi, e i collegamenti al contenuto rilevante e ad esempi relativi a ogni attività.
 
-- [I/O di file asincrono](asynchronous-file-i-o.md)\
+- [I/O file asincrono](asynchronous-file-i-o.md)\
 Vengono descritti il funzionamento di base dell'I/O asincrono e i relativi vantaggi in termini di prestazioni.
 
-- [Spazio di memorizzazione isolato](isolated-storage.md)\
+- [Archiviazione isolata](isolated-storage.md)\
 Viene descritto un meccanismo di archiviazione dei dati che fornisce isolamento e sicurezza tramite la definizione di modi standardizzati di associare il codice ai dati salvati.
 
-- [Pipe](pipe-operations.md)\
+- [Tubi](pipe-operations.md)\
 Vengono descritte le operazioni di pipe named e unnamed in .NET Framework.
 
 - [File mappati alla memoria](memory-mapped-files.md)\

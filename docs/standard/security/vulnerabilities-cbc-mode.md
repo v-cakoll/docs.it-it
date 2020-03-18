@@ -1,120 +1,120 @@
 ---
-title: Vulnerabilità della decrittografia CBC
-description: Informazioni su come rilevare e attenuare le vulnerabilità temporali con la decrittografia simmetrica della modalità CBC (Cipher-Block-Chaining) usando la spaziatura interna.
+title: Vulnerabilità di decrittografia CBC
+description: Scopri come rilevare e ridurre le vulnerabilità di temporizzazione con la decrittografia simmetrica in modalità CBC (Cipher-Block-Chaining) usando la spaziatura interna.
 ms.date: 06/12/2018
 author: blowdart
-ms.openlocfilehash: 4616ef9015b47ff232a17f058c7a0f1449f42e81
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 47520ea4c9c7d0ef4d79378c93c6ce1f2ba7dd6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159962"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186088"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Vulnerabilità di temporizzazione con decrittografia simmetrica modalità CBC usando il riempimento
 
-Microsoft ritiene che non sia più sicuro decrittografare i dati crittografati con la modalità CBC (Cipher-Block-Chaining) della crittografia simmetrica quando è stata applicata la spaziatura verificabile senza prima verificare l'integrità del testo crittografato, ad eccezione di quelli specifici circostanze. Questo giudizio è basato sulla ricerca crittografica attualmente nota.
+Microsoft ritiene che non sia più sicuro decrittografare i dati crittografati con la modalità Cipher-Block-Chaining (CBC) di crittografia simmetrica quando è stata applicata una spaziatura interna verificabile senza prima garantire l'integrità del testo crittografato, ad eccezione di Circostanze. Questo giudizio si basa su ricerche crittografiche attualmente note.
 
 ## <a name="introduction"></a>Introduzione
 
-Un attacco Oracle di riempimento è un tipo di attacco contro i dati crittografati che consente all'autore dell'attacco di decrittografare il contenuto dei dati, senza conoscere la chiave.
+Un attacco oracolo imbottitura è un tipo di attacco contro i dati crittografati che consente all'utente malintenzionato di decrittografare il contenuto dei dati, senza conoscere la chiave.
 
-Un Oracle si riferisce a "Tell", che fornisce a un utente malintenzionato informazioni sull'eventuale correttezza dell'azione che sta eseguendo. Immaginate di giocare una lavagna o un gioco di carte con un figlio. Quando il suo volto è illuminato da un grande sorriso perché pensa di avere un ottimo spostamento, si tratta di un Oracle. L'utente, come avversario, può utilizzare questo Oracle per pianificare il prossimo spostamento in modo appropriato.
+Un oracolo si riferisce a un "racconto" che fornisce a un utente malintenzionato informazioni sul fatto che l'azione che sta eseguendo sia corretta o meno. Immagina di giocare a un gioco da tavolo o a carte con un bambino. Quando il loro viso si illumina con un grande sorriso perché pensano di fare una buona mossa, è un oracolo. Tu, come avversario, puoi usare questo oracolo per pianificare la tua prossima mossa in modo appropriato.
 
-La spaziatura interna è un termine di crittografia specifico. Alcune crittografie, ovvero gli algoritmi usati per crittografare i dati, funzionano su blocchi di dati in cui ogni blocco è a dimensione fissa. Se i dati che si desidera crittografare non sono di dimensioni corrette per riempire i blocchi, i dati vengono riempiti fino a quando non vengono completati. Molte forme di riempimento richiedono che la spaziatura interna sia sempre presente, anche se l'input originale ha dimensioni corrette. Ciò consente di rimuovere sempre la spaziatura interna in modo sicuro al momento della decrittografia.
+Padding è un termine crittografico specifico. Alcuni cifrari, che sono gli algoritmi utilizzati per crittografare i dati, funzionano su blocchi di dati in cui ogni blocco è di dimensioni fisse. Se i dati che si desidera crittografare non sono la dimensione corretta per riempire i blocchi, i dati vengono riempiti fino a quando non lo fa. Molte forme di riempimento richiedono che la spaziatura interna sia sempre presente, anche se l'input originale era della dimensione corretta. Ciò consente di rimuovere sempre l'imbottitura in modo sicuro al momento della decrittografia.
 
-Unendo i due elementi, un'implementazione del software con un Oracle di riempimento rivela se i dati decrittografati hanno un riempimento valido. Oracle potrebbe essere semplice come restituire un valore che indica "riempimento non valido" o qualcosa di più complicato, ad esempio per l'elaborazione di un blocco valido anziché un blocco non valido.
+Mettendo insieme le due cose, un'implementazione software con un oracolo imbottitura rivela se i dati decrittografati hanno una spaziatura interna valida. L'oracolo potrebbe essere qualcosa di semplice come la restituzione di un valore che dice "padding non valido" o qualcosa di più complicato come prendere un tempo misurabilmente diverso per elaborare un blocco valido al contrario di un blocco non valido.
 
-Le crittografie basate su blocchi hanno un'altra proprietà, denominata mode, che determina la relazione tra i dati nel primo blocco e i dati nel secondo blocco e così via. Una delle modalità più diffuse è CBC. CBC introduce un blocco iniziale casuale, noto come vettore di inizializzazione (IV), e combina il blocco precedente con il risultato della crittografia statica per fare in modo che la crittografia dello stesso messaggio con la stessa chiave non produca sempre lo stesso output crittografato.
+Le crittografie basate su blocchi hanno un'altra proprietà, denominata modalità, che determina la relazione dei dati nel primo blocco con i dati nel secondo blocco e così via. Una delle modalità più comunemente utilizzate è CBC. CBC introduce un blocco casuale iniziale, noto come vettore di inizializzazione (IV), e combina il blocco precedente con il risultato della crittografia statica per rendere tale che la crittografia dello stesso messaggio con la stessa chiave non produca sempre lo stesso output crittografato.
 
-Un utente malintenzionato può utilizzare una spaziatura interna Oracle, in combinazione con il modo in cui i dati CBC sono strutturati, per inviare messaggi leggermente modificati al codice che espone Oracle e per restare in attesa dell'invio dei dati fino a quando Oracle non indica che i dati sono corretti. Da questa risposta, l'autore dell'attacco può decrittografare il byte del messaggio per byte.
+Un utente malintenzionato può utilizzare un oracolo di spaziatura interna, in combinazione con il modo in cui sono strutturati i dati CBC, per inviare messaggi leggermente modificati al codice che espone l'oracolo e continuare a inviare dati fino a quando l'oracolo non indica che i dati sono corretti. Da questa risposta, l'utente malintenzionato può decrittografare il byte del messaggio per byte.
 
-Le reti di computer moderne hanno una qualità elevata che un utente malintenzionato può rilevare le differenze minime (meno di 0,1 ms) nel tempo di esecuzione nei sistemi remoti.Le applicazioni che presuppongono una corretta decrittografia possono verificarsi solo quando i dati non sono stati manomessi possono essere vulnerabili ad attacchi da strumenti progettati per osservare le differenze di decrittografia con esito positivo e negativo. Questa differenza di tempo può essere più significativa in alcune lingue o librerie rispetto ad altre, ora si ritiene che si tratti di una minaccia pratica per tutte le lingue e le librerie quando viene presa in considerazione la risposta dell'applicazione a un errore.
+Le reti di computer moderne sono di qualità così elevata che un utente malintenzionato può rilevare differenze molto piccole (meno di 0,1 ms) nel tempo di esecuzione sui sistemi remoti.Le applicazioni che assumono che una decrittografia di successo può verificarsi solo quando i dati non è stato manomesso potrebbe essere vulnerabile agli attacchi da strumenti che sono progettati per osservare le differenze nella decrittografia riuscita e non riuscita. Anche se questa differenza di temporizzazione può essere più significativa in alcuni linguaggi o librerie rispetto ad altri, si ritiene ora che questa sia una minaccia pratica per tutti i linguaggi e le librerie quando viene presa in considerazione la risposta dell'applicazione all'errore.
 
-Questo attacco si basa sulla possibilità di modificare i dati crittografati e di testare il risultato con Oracle. L'unico modo per attenuare completamente l'attacco consiste nel rilevare le modifiche apportate ai dati crittografati e rifiutare di eseguire azioni su di essa. Il modo standard per eseguire questa operazione consiste nel creare una firma per i dati e convalidare tale firma prima di eseguire qualsiasi operazione. La firma deve essere verificabile, non può essere creata dall'utente malintenzionato. in caso contrario, modifica i dati crittografati, quindi calcola una nuova firma in base ai dati modificati. Un tipo comune di firma appropriata è noto come codice HMAC (chiave-hash Message Authentication Code). Un HMAC differisce da un checksum in quanto accetta una chiave privata, nota solo alla persona che produce l'HMAC e alla persona che la convalida. Senza il possesso della chiave, non è possibile produrre un HMAC corretto. Quando si ricevono i dati, si accettano i dati crittografati, si calcola in modo indipendente il HMAC usando la chiave privata e la condivisione del mittente, quindi si confronta il HMAC inviato rispetto a quello calcolato. Questo confronto deve essere un tempo costante, in caso contrario è stato aggiunto un altro Oracle rilevabile, che consente un tipo diverso di attacco.
+Questo attacco si basa sulla possibilità di modificare i dati crittografati e testare il risultato con l'oracolo. L'unico modo per mitigare completamente l'attacco è quello di rilevare le modifiche ai dati crittografati e rifiutare di eseguire qualsiasi azione su di esso. Il modo standard per eseguire questa operazione consiste nel creare una firma per i dati e convalidare tale firma prima che vengano eseguite le operazioni. La firma deve essere verificabile, non può essere creata dall'utente malintenzionato, altrimenti modificherebbe i dati crittografati, quindi calcola una nuova firma in base ai dati modificati. Un tipo comune di firma appropriata è noto come codice HMAC (Keyed-Hash Message Authentication Code). Un HMAC differisce da un checksum in quanto richiede una chiave segreta, nota solo alla persona che produce l'HMAC e alla persona che la convalida. Senza il possesso della chiave, non è possibile produrre un HMAC corretto. Quando si ricevono i dati, è necessario prendere i dati crittografati, calcolare in modo indipendente l'HMAC utilizzando la chiave segreta che tu e il mittente condividete, quindi confrontare l'HMAC inviato con quello calcolato. Questo confronto deve essere un tempo costante, altrimenti hai aggiunto un altro oracolo rilevabile, consentendo un diverso tipo di attacco.
 
-In sintesi, per utilizzare le crittografie a blocchi con CBC in modo sicuro, è necessario combinarle con un HMAC (o un altro controllo di integrità dei dati) convalidato utilizzando un confronto temporale costante prima di tentare di decrittografare i dati. Poiché tutti i messaggi modificati hanno la stessa quantità di tempo per produrre una risposta, l'attacco viene impedito.
+In sintesi, per utilizzare i cifrari a blocchi CBC imbottiti in modo sicuro, è necessario combinarli con un HMAC (o un altro controllo di integrità dei dati) convalidato utilizzando un confronto temporale costante prima di tentare di decrittografare i dati. Poiché tutti i messaggi alterati richiedono la stessa quantità di tempo per produrre una risposta, l'attacco viene impedito.
 
-## <a name="who-is-vulnerable"></a>Utenti vulnerabili
+## <a name="who-is-vulnerable"></a>Chi è vulnerabile
 
-Questa vulnerabilità è valida per le applicazioni gestite e native che eseguono la crittografia e la decrittografia. Sono inclusi, ad esempio:
+Questa vulnerabilità si applica sia alle applicazioni gestite che native che eseguono la propria crittografia e decrittografia. Ciò include, ad esempio:
 
-- Applicazione che esegue la crittografia di un cookie per la decrittografia successiva nel server.
-- Un'applicazione di database che consente agli utenti di inserire dati in una tabella le cui colonne vengono decrittografate in un secondo momento.
-- Applicazione per il trasferimento dei dati basata sulla crittografia mediante una chiave condivisa per proteggere i dati in transito.
-- Applicazione che esegue la crittografia e la decrittografia dei messaggi "all'interno" del tunnel TLS.
+- Applicazione che crittografa un cookie per la decrittografia successiva sul server.
+- Applicazione di database che consente agli utenti di inserire dati in una tabella le cui colonne vengono successivamente decrittografate.
+- Un'applicazione di trasferimento dati che si basa sulla crittografia utilizzando una chiave condivisa per proteggere i dati in transito.
+- Un'applicazione che crittografa e decrittografa i messaggi "all'interno" del tunnel TLS.
 
-Si noti che l'uso di TLS autonomo potrebbe non essere protetto in questi scenari.
+Tieni presente che l'utilizzo di TLS da solo potrebbe non proteggere l'utente in questi scenari.
 
-Applicazione vulnerabile:
+Un'applicazione vulnerabile:
 
-- Decrittografa i dati utilizzando la modalità di crittografia CBC con una modalità di riempimento verificabile, ad esempio PKCS # 7 o ANSI X. 923.
-- Esegue la decrittografia senza avere eseguito un controllo di integrità dei dati (tramite un MAC o una firma digitale asimmetrica).
+- Decrittografa i dati utilizzando la modalità di crittografia CBC con una modalità di riempimento verificabile, ad esempio PKCS-7 o ANSI X.923.
+- Esegue la decrittografia senza aver eseguito un controllo di integrità dei dati (tramite un MAC o una firma digitale asimmetrica).
 
-Questo vale anche per le applicazioni basate su astrazioni rispetto a quelle primitive, ad esempio la struttura EnvelopedData della sintassi del messaggio crittografico (PKCS # 7/CMS).
+Questo vale anche per le applicazioni basate sulle astrazioni sopra queste primitive, ad esempio la struttura EnvelopedData della sintassi dei messaggi di crittografia (PKCS/7/CMS).
 
-## <a name="related-areas-of-concern"></a>Aree problematiche correlate
+## <a name="related-areas-of-concern"></a>Aree di interesse correlate
 
-La ricerca ha indotto Microsoft a preoccuparsi dei messaggi CBC riempiti con riempimento ISO 10126 equivalente quando il messaggio presenta una struttura di piè di pagina nota o prevedibile. Ad esempio, contenuto preparato secondo le regole del W3C XML Encryption Syntax and Processing Recommendation (xmlenc, EncryptedXml). Sebbene il materiale sussidiario W3C per firmare il messaggio e quindi crittografato sia stato considerato appropriato al momento, Microsoft ora consiglia di eseguire sempre la crittografia-then-sign.
+La ricerca ha portato Microsoft a essere ulteriormente preoccupato per i messaggi CBC che sono imbottiti con spaziatura interna equivalente ISO 10126 quando il messaggio ha una struttura di piè di pagina nota o prevedibile. Ad esempio, il contenuto preparato in base alle regole del W3C XML Encryption Syntax and Processing Recommendation (xmlenc, EncryptedXml). Mentre le linee guida W3C per firmare il messaggio quindi crittografare è stato considerato appropriato al momento, Microsoft ora consiglia di eseguire sempre crittografia-poi-firma.
 
-Gli sviluppatori di applicazioni devono essere sempre consapevoli di verificare l'applicabilità di una chiave di firma asimmetrica, in quanto non esiste alcuna relazione di trust intrinseca tra una chiave asimmetrica e un messaggio arbitrario.
+Gli sviluppatori di applicazioni devono sempre tenere presente l'applicabilità di una chiave di firma asimmetrica, in quanto non esiste alcuna relazione di trust intrinseca tra una chiave asimmetrica e un messaggio arbitrario.
 
 ## <a name="details"></a>Dettagli
 
-Storicamente, è stato concordato che è importante sia crittografare che autenticare i dati importanti, usando mezzi quali le firme HMAC o RSA. Tuttavia, sono state apportate indicazioni meno chiare su come sequenziare le operazioni di crittografia e autenticazione. A causa della vulnerabilità descritta in questo articolo, le linee guida di Microsoft ora utilizzano sempre il paradigma "crittografia-firma". Per prima cosa, crittografare i dati usando una chiave simmetrica, quindi calcolare un MAC o una firma asimmetrica sul testo crittografato (dati crittografati). Per la decrittografia dei dati, eseguire il contrario. Prima di tutto, confermare il MAC o la firma del testo crittografato, quindi decrittografarlo.
+Storicamente, c'è stato consenso sul fatto che sia importante crittografare e autenticare i dati importanti, utilizzando mezzi come le firme HMAC o RSA. Tuttavia, sono state fornite indicazioni meno chiare su come sequenziare le operazioni di crittografia e autenticazione. A causa della vulnerabilità descritta in questo articolo, la guida di Microsoft è ora di utilizzare sempre il paradigma "crittografa-allora-firma". Ovvero, prima crittografare i dati utilizzando una chiave simmetrica, quindi calcolare una firma MAC o asimmetrica sul testo crittografato (dati crittografati). Quando si decrittografano i dati, eseguire l'inverso. In primo luogo, confermare il MAC o la firma del testo cifrato, quindi decrittografarlo.
 
-Una classe di vulnerabilità nota come "attacchi Oracle di riempimento" è nota per più di 10 anni. Queste vulnerabilità consentono a un utente malintenzionato di decrittografare i dati crittografati da algoritmi di blocco simmetrico, ad esempio AES e 3DES, usando non più di 4096 tentativi per blocco di dati. Queste vulnerabilità utilizzano il fatto che le crittografie a blocchi vengono utilizzate più di frequente con i dati di riempimento verificabili alla fine. È stato rilevato che se un utente malintenzionato può manomettere il testo crittografato e verificare se la manomissione ha causato un errore nel formato del riempimento alla fine, l'autore dell'attacco può decrittografare i dati.
+Una classe di vulnerabilità note come "attacchi oracolo imbottitura" sono stati conosciuti per esistere per oltre 10 anni. Queste vulnerabilità consentono a un utente malintenzionato di decrittografare i dati crittografati da algoritmi a blocchi simmetrici, ad esempio AES e 3DES, utilizzando non più di 4096 tentativi per blocco di dati. Queste vulnerabilità fanno uso del fatto che i cifrari a blocchi sono più frequentemente utilizzati con i dati di riempimento verificabili alla fine. Si è scoperto che se un utente malintenzionato può manomettere il testo crittografato e scoprire se la manomissione ha causato un errore nel formato della spaziatura interna alla fine, l'utente malintenzionato può decrittografare i dati.
 
-Inizialmente gli attacchi pratici si basavano su servizi che restituivano codici di errore diversi a seconda che il riempimento fosse valido, ad esempio la vulnerabilità ASP.NET [MS10-070](/security-updates/SecurityBulletins/2010/ms10-070). Microsoft ora ritiene tuttavia che sia pratica eseguire attacchi simili utilizzando solo le differenze di tempo tra l'elaborazione di spazi di riempimento validi e non validi.
+Inizialmente, gli attacchi pratici erano basati su servizi che restituivano codici di errore diversi a seconda che la spaziatura interna fosse valida, ad esempio la vulnerabilità ASP.NET [MS10-070](/security-updates/SecurityBulletins/2010/ms10-070). Tuttavia, Microsoft ritiene ora che sia pratico condurre attacchi simili utilizzando solo le differenze di tempo tra l'elaborazione di riempimento valido e non valido.
 
-Se lo schema di crittografia usa una firma e la verifica della firma viene eseguita con un runtime fisso per una data lunghezza dei dati (indipendentemente dal contenuto), l'integrità dei dati può essere verificata senza emettere informazioni a un utente malintenzionato tramite un [canale laterale](https://en.wikipedia.org/wiki/Side-channel_attack). Poiché il controllo di integrità rifiuta tutti i messaggi manomessi, la minaccia Oracle di riempimento viene mitigata.
+A condizione che lo schema di crittografia impieghi una firma e che la verifica della firma venga eseguita con un runtime fisso per una determinata lunghezza di dati (indipendentemente dal contenuto), l'integrità dei dati può essere verificata senza emettere alcuna informazione a un utente malintenzionato tramite un [canale laterale.](https://en.wikipedia.org/wiki/Side-channel_attack) Poiché il controllo di integrità rifiuta tutti i messaggi manomessi, la minaccia dell'oracolo della spaziatura interna viene attenuata.
 
 ## <a name="guidance"></a>Materiale sussidiario
 
-Prima di tutto, Microsoft consiglia che tutti i dati con riservatezza devono essere trasmessi tramite Transport Layer Security (TLS), il successore di Secure Sockets Layer (SSL).
+In primo luogo, Microsoft consiglia di trasmettere tutti i dati con necessità di riservatezza tramite Transport Layer Security (TLS), il successore di Secure Sockets Layer (SSL).
 
-Analizzare quindi l'applicazione per:
+Successivamente, analizzare l'applicazione per:Next, analyze your application to:
 
-- Comprendere con precisione la crittografia che si sta eseguendo e la crittografia fornita dalle piattaforme e dalle API in uso.
-- Accertarsi che ogni utilizzo a ogni livello di un algoritmo di crittografia a [blocchi](https://en.wikipedia.org/wiki/Block_cipher#Notable_block_ciphers)simmetrico, ad esempio AES e 3DES, in modalità CBC includa l'uso di un controllo di integrità dei dati con chiave segreta (una firma asimmetrica, un HMAC o la modalità di crittografia in una modalità di [crittografia autenticata](https://en.wikipedia.org/wiki/Authenticated_encryption) (AE), ad esempio GCM o CCM.
+- Comprendere con precisione quale crittografia si sta eseguendo e quale crittografia viene fornita dalle piattaforme e API in uso.
+- Assicurarsi che ogni utilizzo a ogni livello di un algoritmo di crittografia a [blocchi simmetrico,](https://en.wikipedia.org/wiki/Block_cipher#Notable_block_ciphers)ad esempio AES e 3DES, in modalità CBC incorpori l'utilizzo di un controllo di integrità dei dati con chiave segreta (una firma asimmetrica, un HMAC o per modificare la modalità di crittografia in una modalità di [crittografia autenticata](https://en.wikipedia.org/wiki/Authenticated_encryption) (AE), ad esempio GCM o CCM.
 
-In base alla ricerca corrente, in genere si ritiene che, quando i passaggi di autenticazione e di crittografia vengono eseguiti in modo indipendente per le modalità di crittografia non AE, l'autenticazione del testo crittografato (Encrypt-then-sign) è la migliore opzione generale. Tuttavia, non esiste alcuna risposta corretta per la crittografia e questa generalizzazione non è altrettanto valida come consigli diretti da un crittografista professionale.
+Sulla base della ricerca corrente, è generalmente creduto che quando i passaggi di autenticazione e crittografia vengono eseguiti in modo indipendente per le modalità di crittografia non AE, l'autenticazione del testo crittografato (crittografia-poi-firma) è la migliore opzione generale. Tuttavia, non c'è nessuna risposta corretta per tutti e questa generalizzazione non è buona come la consulenza diretta di un crittografo professionista.
 
-Le applicazioni che non sono in grado di modificare il formato di messaggistica ma eseguono la decrittografia CBC non autenticata sono incoraggiate a provare a incorporare le mitigazioni, ad esempio:
+Le applicazioni che non sono in grado di modificare il formato di messaggistica ma eseguono la decrittografia CBC non autenticata sono incoraggiate a provare a incorporare attenuazioni come:
 
-- Decrittografare senza consentire al Decryptor di verificare o rimuovere la spaziatura interna:
-  - È necessario rimuovere o ignorare qualsiasi riempimento applicato, che verrà spostato nell'applicazione.
-  - Il vantaggio è che la verifica e la rimozione della spaziatura interna possono essere incorporate in altre logiche di verifica dei dati delle applicazioni. Se la verifica della spaziatura interna e la verifica dei dati possono essere eseguite in un tempo costante, la minaccia viene ridotta.
-  - Poiché l'interpretazione del riempimento modifica la lunghezza del messaggio percepito, è possibile che siano ancora presenti informazioni sui tempi emesse da questo approccio.
-- Modificare la modalità di riempimento decrittografia in ISO10126:
-  - Il riempimento della decrittografia ISO10126 è compatibile con la spaziatura interna della crittografia PKCS7 e la spaziatura con crittografia ANSIX923.
-  - Se si modifica la modalità, le informazioni Oracle di riempimento vengono ridotte a 1 byte anziché all'intero blocco. Tuttavia, se il contenuto dispone di un piè di pagina noto, ad esempio un elemento XML di chiusura, gli attacchi correlati possono continuare ad attaccare il resto del messaggio.
-  - Questo non impedisce inoltre il ripristino in testo non crittografato nelle situazioni in cui l'autore dell'attacco può assegnare lo stesso testo normale crittografato più volte con un offset del messaggio diverso.
-- Controllare la valutazione di una chiamata di decrittografia per smorzare il segnale di temporizzazione:
-  - Il calcolo del tempo di attesa deve avere un valore minimo superiore alla quantità massima di tempo che l'operazione di decrittografia richiederebbe per qualsiasi segmento di dati che contiene spaziatura interna.
-  - I calcoli temporali devono essere eseguiti in base alle linee guida per l' [acquisizione di timestamp ad alta risoluzione](/windows/desktop/sysinfo/acquiring-high-resolution-time-stamps), non usando <xref:System.Environment.TickCount?displayProperty=nameWithType> (soggetto a capovolgimento/overflow) o sottraendo due timestamp di sistema (soggetto a errori di regolazione NTP).
-  - I calcoli temporali devono essere inclusi nell'operazione di decrittografia, incluse tutte le potenziali eccezioni C++ nelle applicazioni gestite o, non solo per la fine.
-  - Se l'esito positivo o negativo è stato ancora determinato, il Gate di temporizzazione deve restituire un errore alla scadenza.
-- I servizi che eseguono la decrittografia non autenticata devono avere il monitoraggio per rilevare che è stato raggiunto un diluvio di messaggi "non validi".
-  - Tenere presente che questo segnale contiene sia falsi positivi (dati legittimamente danneggiati) che falsi negativi (diffondendo l'attacco in un tempo sufficientemente lungo per eludere il rilevamento).
+- Decrittografare senza consentire al decryptor di verificare o rimuovere la spaziatura interna:
+  - Qualsiasi riempimento che è stato applicato deve ancora essere rimosso o ignorato, si sta spostando il carico nell'applicazione.
+  - Il vantaggio è che la verifica e la rimozione della spaziatura interna possono essere incorporate in altre logiche di verifica dei dati dell'applicazione. Se la verifica dell'imbottitura e la verifica dei dati possono essere eseguite in tempi costanti, la minaccia viene ridotta.
+  - Poiché l'interpretazione della spaziatura interna modifica la lunghezza del messaggio percepito, potrebbero essere ancora presenti informazioni di temporizzazione generate da questo approccio.
+- Modificare la modalità di decrittografia padding in ISO10126:
+  - La spaziatura interna di decrittografia ISO10126 è compatibile sia con la spaziatura interna di crittografia PKCS7 che con la spaziatura interna di crittografia ANSIX923.
+  - La modifica della modalità riduce la conoscenza dell'oracolo di riempimento a 1 byte anziché l'intero blocco. Tuttavia, se il contenuto ha un piè di pagina noto, ad esempio un elemento XML di chiusura, gli attacchi correlati possono continuare ad attaccare il resto del messaggio.
+  - In questo modo non viene inoltre impedito il ripristino in testo normale in situazioni in cui l'utente malintenzionato può coemettere lo stesso testo in chiaro da crittografare più volte con un offset del messaggio diverso.
+- Gate la valutazione di una chiamata di decrittazione per smorzare il segnale di temporizzazione:
+  - Il calcolo del tempo di conservazione deve avere un valore minimo superiore alla quantità massima di tempo necessaria per l'operazione di decrittografia per qualsiasi segmento di dati che contiene spaziatura interna.
+  - I calcoli temporali devono essere eseguiti in base alle indicazioni fornite <xref:System.Environment.TickCount?displayProperty=nameWithType> in Acquisizione di timestamp ad alta [risoluzione,](/windows/desktop/sysinfo/acquiring-high-resolution-time-stamps)non utilizzando (soggetto a rollover/overflow) o sottraendo due timestamp di sistema (soggetto a errori di regolazione NTP).
+  - I calcoli temporali devono includere l'operazione di decrittografia, incluse tutte le potenziali eccezioni nelle applicazioni gestite o in C, non solo riempite alla fine.
+  - Se l'esito positivo o negativo è stato determinato ancora, il gate di temporizzazione deve restituire l'errore alla scadenza.
+- I servizi che eseguono la decrittografia non autenticata devono disporre di un monitoraggio per rilevare che è arrivata una marea di messaggi "non validi".
+  - Tenete a mente che questo segnale trasporta sia falsi positivi (dati legittimamente corrotti) e falsi negativi (diffondendo l'attacco in un tempo sufficientemente lungo per eludere il rilevamento).
 
-## <a name="finding-vulnerable-code---native-applications"></a>Individuazione di applicazioni native del codice vulnerabili
+## <a name="finding-vulnerable-code---native-applications"></a>Ricerca di codice vulnerabile - applicazioni nativeFinding vulnerable code - native applications
 
-Per i programmi compilati con la libreria di crittografia di Windows: Next Generation (CNG):
+Per i programmi creati in base alla libreria CNG (Windows Cryptography: Next Generation):
 
-- La chiamata di decrittografia è [BCryptDecrypt](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptdecrypt), specificando il flag `BCRYPT_BLOCK_PADDING`.
-- L'handle di chiave è stato inizializzato chiamando [BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty) con [BCRYPT_CHAINING_MODE](/windows/desktop/SecCNG/cng-property-identifiers#BCRYPT_CHAINING_MODE) impostato su `BCRYPT_CHAIN_MODE_CBC`.
-  - Poiché `BCRYPT_CHAIN_MODE_CBC` è l'impostazione predefinita, il codice interessato potrebbe non avere assegnato alcun valore per `BCRYPT_CHAINING_MODE`.
+- La chiamata di decrittografia è a [BCryptDecrypt](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptdecrypt), specificando il `BCRYPT_BLOCK_PADDING` flag.
+- L'handle di chiave è stato inizializzato [BCRYPT_CHAINING_MODE](/windows/desktop/SecCNG/cng-property-identifiers#BCRYPT_CHAINING_MODE) chiamando `BCRYPT_CHAIN_MODE_CBC` [BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty) con BCRYPT_CHAINING_MODE impostato su .
+  - Poiché `BCRYPT_CHAIN_MODE_CBC` è l'impostazione predefinita, il `BCRYPT_CHAINING_MODE`codice interessato potrebbe non avere assegnato alcun valore per .
 
-Per i programmi compilati con l'API di crittografia Windows precedente:
+Per i programmi creati in base alla precedente API di crittografia di Windows:
 
-- La chiamata di decrittografia è [CryptDecrypt](/windows/desktop/api/wincrypt/nf-wincrypt-cryptdecrypt) con `Final=TRUE`.
-- L'handle di chiave è stato inizializzato chiamando [CryptSetKeyParam](/windows/desktop/api/wincrypt/nf-wincrypt-cryptsetkeyparam) con [KP_MODE](/windows/desktop/api/wincrypt/nf-wincrypt-cryptgetkeyparam) impostato su `CRYPT_MODE_CBC`.
-  - Poiché `CRYPT_MODE_CBC` è l'impostazione predefinita, il codice interessato potrebbe non avere assegnato alcun valore per `KP_MODE`.
+- La chiamata di decrittografia è `Final=TRUE`a [CryptDecrypt](/windows/desktop/api/wincrypt/nf-wincrypt-cryptdecrypt) con .
+- L'handle di chiave è stato inizializzato [KP_MODE](/windows/desktop/api/wincrypt/nf-wincrypt-cryptgetkeyparam) chiamando `CRYPT_MODE_CBC` [CryptSetKeyParam](/windows/desktop/api/wincrypt/nf-wincrypt-cryptsetkeyparam) con KP_MODE impostato su .
+  - Poiché `CRYPT_MODE_CBC` è l'impostazione predefinita, il `KP_MODE`codice interessato potrebbe non avere assegnato alcun valore per .
 
-## <a name="finding-vulnerable-code---managed-applications"></a>Individuazione di applicazioni gestite dal codice vulnerabili
+## <a name="finding-vulnerable-code---managed-applications"></a>Ricerca di codice vulnerabile - applicazioni gestiteFinding vulnerable code - managed applications
 
-- La chiamata di decrittografia è relativa ai metodi <xref:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor> o <xref:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor(System.Byte[],System.Byte[])> in <xref:System.Security.Cryptography.SymmetricAlgorithm?displayProperty=nameWithType>.
-  - Sono inclusi i seguenti tipi derivati all'interno di .NET, ma possono includere anche tipi di terze parti:
+- La chiamata di decrittografia <xref:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor> <xref:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor(System.Byte[],System.Byte[])> è <xref:System.Security.Cryptography.SymmetricAlgorithm?displayProperty=nameWithType>ai metodi o su .
+  - Sono inclusi i seguenti tipi derivati all'interno di .NET, ma possono anche includere tipi di terze parti:
     - <xref:System.Security.Cryptography.Aes>
     - <xref:System.Security.Cryptography.AesCng>
     - <xref:System.Security.Cryptography.AesCryptoServiceProvider>
@@ -128,24 +128,24 @@ Per i programmi compilati con l'API di crittografia Windows precedente:
     - <xref:System.Security.Cryptography.TripleDES>
     - <xref:System.Security.Cryptography.TripleDESCng>
     - <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>
-- La proprietà <xref:System.Security.Cryptography.SymmetricAlgorithm.Padding?displayProperty=nameWithType> è stata impostata su <xref:System.Security.Cryptography.PaddingMode.PKCS7?displayProperty=nameWithType>, <xref:System.Security.Cryptography.PaddingMode.ANSIX923?displayProperty=nameWithType>o <xref:System.Security.Cryptography.PaddingMode.ISO10126?displayProperty=nameWithType>.
-  - Poiché <xref:System.Security.Cryptography.PaddingMode.PKCS7?displayProperty=nameWithType> è l'impostazione predefinita, il codice interessato potrebbe non avere mai assegnato la proprietà <xref:System.Security.Cryptography.SymmetricAlgorithm.Padding?displayProperty=nameWithType>.
-- La proprietà <xref:System.Security.Cryptography.SymmetricAlgorithm.Mode?displayProperty=nameWithType> è stata impostata su <xref:System.Security.Cryptography.CipherMode.CBC?displayProperty=nameWithType>
-  - Poiché <xref:System.Security.Cryptography.CipherMode.CBC?displayProperty=nameWithType> è l'impostazione predefinita, il codice interessato potrebbe non avere mai assegnato la proprietà <xref:System.Security.Cryptography.SymmetricAlgorithm.Mode?displayProperty=nameWithType>.
+- La <xref:System.Security.Cryptography.SymmetricAlgorithm.Padding?displayProperty=nameWithType> proprietà è <xref:System.Security.Cryptography.PaddingMode.PKCS7?displayProperty=nameWithType> <xref:System.Security.Cryptography.PaddingMode.ANSIX923?displayProperty=nameWithType>stata <xref:System.Security.Cryptography.PaddingMode.ISO10126?displayProperty=nameWithType>impostata su , , o .
+  - Poiché <xref:System.Security.Cryptography.PaddingMode.PKCS7?displayProperty=nameWithType> è l'impostazione predefinita, <xref:System.Security.Cryptography.SymmetricAlgorithm.Padding?displayProperty=nameWithType> il codice interessato potrebbe non aver mai assegnato la proprietà.
+- La <xref:System.Security.Cryptography.SymmetricAlgorithm.Mode?displayProperty=nameWithType> proprietà è stata impostata su<xref:System.Security.Cryptography.CipherMode.CBC?displayProperty=nameWithType>
+  - Poiché <xref:System.Security.Cryptography.CipherMode.CBC?displayProperty=nameWithType> è l'impostazione predefinita, <xref:System.Security.Cryptography.SymmetricAlgorithm.Mode?displayProperty=nameWithType> il codice interessato potrebbe non aver mai assegnato la proprietà.
 
-## <a name="finding-vulnerable-code---cryptographic-message-syntax"></a>Ricerca del codice vulnerabile sintassi del messaggio crittografico
+## <a name="finding-vulnerable-code---cryptographic-message-syntax"></a>Ricerca di codice vulnerabile - sintassi dei messaggi crittograficiFinding vulnerable code - cryptographic message syntax
 
-Un messaggio EnvelopedData CMS non autenticato il cui contenuto crittografato usa la modalità CBC di AES (2.16.840.1.101.3.4.1.2, 2.16.840.1.101.3.4.1.22, 2.16.840.1.101.3.4.1.42), DES (1.3.14.3.2.7), 3DES (1.2.840.113549.3.7) o RC2 (1.2.840.113549.3.2) vulnerabile, oltre ai messaggi che utilizzano altri algoritmi di crittografia a blocchi in modalità CBC.
+Un messaggio CMS EnvelopedData non autenticato il cui contenuto crittografato utilizza la modalità CBC di AES (2.16.840.1.101.3.4.1.2, 2.16.840.1.101.3.4.1.22, 2.16.840.1.101.3.4.1.42), DES (1.3.14.3.2.7), 3DES (1.2.840.113549.3.7) o RC2 (1.2.840.113549.3.2) è vulnerabili, così come i messaggi che utilizzano qualsiasi altro algoritmo di crittografia a blocchi in modalità CBC.
 
-Sebbene le crittografie di flusso non siano soggette a questa particolare vulnerabilità, Microsoft consiglia sempre di autenticare i dati controllando il valore di ContentEncryptionAlgorithm.
+Sebbene le crittografie di flusso non siano soggette a questa particolare vulnerabilità, Microsoft consiglia di autenticare sempre i dati durante l'ispezione del valore ContentEncryptionAlgorithm.
 
-Per le applicazioni gestite, un BLOB EnvelopedData CMS può essere rilevato come qualsiasi valore passato a <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decode(System.Byte[])?displayProperty=fullName>.
+Per le applicazioni gestite, un BLOB CMS EnvelopedData <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decode(System.Byte[])?displayProperty=fullName>può essere rilevato come qualsiasi valore passato a .
 
-Per le applicazioni native, è possibile rilevare un BLOB EnvelopedData CMS come qualsiasi valore fornito a un handle CMS tramite [CryptMsgUpdate](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsgupdate) il cui [CMSG_TYPE_PARAM](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsggetparam) risultante è `CMSG_ENVELOPED` e/o l'handle del CMS viene inviato in un secondo momento `CMSG_CTRL_DECRYPT` istruzione tramite [CryptMsgControl](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsgcontrol).
+Per le applicazioni native, un BLOB CMS EnvelopedData può essere rilevato come qualsiasi valore `CMSG_ENVELOPED` fornito a un handle CMS `CMSG_CTRL_DECRYPT` tramite [CryptMsgUpdate](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsgupdate) il cui [CMSG_TYPE_PARAM](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsggetparam) risultante è e/o l'handle CMS viene successivamente inviato un'istruzione tramite [CryptMsgControl](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsgcontrol).
 
-## <a name="vulnerable-code-example---managed"></a>Esempio di codice vulnerabile-gestito
+## <a name="vulnerable-code-example---managed"></a>Esempio di codice vulnerabile - gestitoVulnerable code example - managed
 
-Questo metodo legge un cookie e lo decrittografa e non è visibile alcun controllo di integrità dei dati. Il contenuto di un cookie letto da questo metodo può pertanto essere attaccato dall'utente che lo ha ricevuto o da qualsiasi utente malintenzionato che ha ottenuto il valore del cookie crittografato.
+Questo metodo legge un cookie e lo decrittografa e non è visibile alcun controllo dell'integrità dei dati. Pertanto, il contenuto di un cookie letto da questo metodo può essere attaccato dall'utente che lo ha ricevuto o da qualsiasi utente malintenzionato che ha ottenuto il valore del cookie crittografato.
 
 ```csharp
 private byte[] DecryptCookie(string cookieName)
@@ -170,17 +170,17 @@ private byte[] DecryptCookie(string cookieName)
 }
 ```
 
-## <a name="example-code-following-recommended-practices---managed"></a>Codice di esempio che segue le procedure consigliate-gestito
+## <a name="example-code-following-recommended-practices---managed"></a>Codice di esempio che segue le procedure consigliate : gestito
 
 Il codice di esempio seguente usa un formato di messaggio non standard
 
 `cipher_algorithm_id || hmac_algorithm_id || hmac_tag || iv || ciphertext`
 
-dove gli identificatori dell'algoritmo `cipher_algorithm_id` e `hmac_algorithm_id` sono rappresentazioni locali dell'applicazione (non standard) di questi algoritmi. Questi identificatori possono avere senso in altre parti del protocollo di messaggistica esistente, anziché come ByteStream concatenato bare.
+dove `cipher_algorithm_id` gli `hmac_algorithm_id` identificatori e gli identificatori di algoritmo sono rappresentazioni locali dell'applicazione (non standard) di tali algoritmi. Questi identificatori possono avere senso in altre parti del protocollo di messaggistica esistente anziché come un flusso di byte concatenato a livello bare.
 
-Questo esempio usa anche una singola chiave master per derivare una chiave di crittografia e una chiave HMAC. Questa operazione viene fornita sia per praticità per trasformare un'applicazione con chiave singola in un'applicazione a doppia chiave che per favorire la conservazione delle due chiavi come valori diversi. Garantisce inoltre che la chiave HMAC e la chiave di crittografia non possano uscire dalla sincronizzazione.
+In questo esempio viene inoltre utilizzata una singola chiave master per derivare sia una chiave di crittografia che una chiave HMAC. Questo viene fornito sia per comodità per trasformare un'applicazione con chiave in modo singly in un'applicazione dual-keyed, sia per incoraggiare a mantenere le due chiavi come valori diversi. Garantisce inoltre che la chiave HMAC e la chiave di crittografia non possano uscire dalla sincronizzazione.
 
-Questo esempio non accetta un <xref:System.IO.Stream> per la crittografia o la decrittografia. Il formato dati corrente semplifica la crittografia di un passaggio, perché il valore `hmac_tag` precede il testo crittografato. Tuttavia, questo formato è stato scelto perché mantiene tutti gli elementi a dimensione fissa all'inizio per mantenere più semplice il parser. Con questo formato di dati, è possibile decrittografare un passaggio, anche se un implementatore viene avvertito per chiamare GetHashAndReset e verificare il risultato prima di chiamare TransformFinalBlock. Se la crittografia del flusso è importante, potrebbe essere necessaria una modalità AE diversa.
+In questo esempio non <xref:System.IO.Stream> viene accettato un per la crittografia o la decrittografia. Il formato dati corrente rende difficile `hmac_tag` la crittografia a un passaggio perché il valore precede il testo crittografato. Tuttavia, questo formato è stato scelto perché mantiene tutti gli elementi di dimensioni fisse all'inizio per mantenere il parser più semplice. Con questo formato di dati, è possibile la decrittografia un passaggio, anche se un implementatore viene avvertito di chiamare GetHashAndReset e verificare il risultato prima di chiamare TransformFinalBlock.With this data format, one-pass decrypt is possible, though an implementer is cautioned to call GetHashAndReset and verify the result before calling TransformFinalBlock. Se la crittografia di streaming è importante, potrebbe essere necessaria una modalità AE diversa.
 
 ```csharp
 // ==++==

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - strong naming [.NET Framework], enhanced
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
 ms.openlocfilehash: 1d582513b10de88e4e5b9b9ef8c338599d6980f2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141163"
 ---
 # <a name="enhanced-strong-naming"></a>Denominazione sicura avanzata
@@ -17,7 +17,7 @@ Una firma con nome sicuro è un meccanismo di identità in .NET Framework per l'
   
  Le firme con nome sicuro consentono di evitare che utenti malintenzionati possano manomettere un assembly e firmarlo nuovamente con la chiave del firmatario originale. Tuttavia, le chiavi con nome sicuro non contengono informazioni affidabili sul server di pubblicazione e non contengono una gerarchia di certificati. Una firma con nome sicuro non garantisce l'affidabilità della persona che ha firmato l'assembly né indica se la persona è un legittimo proprietario della chiave, indica solo che il proprietario della chiave ha firmato l'assembly. Di conseguenza, non è consigliabile usare una firma con nome sicuro come validator di sicurezza per concedere l'attendibilità a codice di terze parti. Microsoft Authenticode è lo strumento consigliato per l'autenticazione di codice.  
   
-## <a name="limitations-of-conventional-strong-names"></a>Limitazioni dei nomi sicuri convenzionali  
+## <a name="limitations-of-conventional-strong-names"></a>Limitazioni dei nomi forti convenzionali  
  La tecnologia di denominazione sicura usata nelle versioni precedenti a .NET Framework 4.5 presenta queste limitazioni:  
   
 - Le chiavi sono costantemente sotto attacco e grazie all'uso di tecniche e hardware più evoluti è più semplice dedurre una chiave privata da una chiave pubblica. Per proteggersi dagli attacchi, sono necessarie chiavi di dimensioni maggiori. Le versioni di .NET Framework precedenti a .NET Framework 4.5 offrono la possibilità di accedere con chiavi di qualsiasi dimensione (quella predefinita è 1024 bit), ma firmare un assembly con una nuova chiave interrompe tutti i file binari che fanno riferimento all'identità precedente dell'assembly. È quindi estremamente difficile aggiornare la dimensione di una chiave di firma se si vuole mantenere la compatibilità.  
@@ -31,12 +31,12 @@ Una firma con nome sicuro è un meccanismo di identità in .NET Framework per l'
   
 - Gli sviluppatori che creano nuovi assembly e non ritengono rilevanti le firme con nome sicuro preesistenti possono usare gli algoritmi SHA-2, più sicuri, e firmare gli assembly come in precedenza.  
   
-## <a name="use-enhanced-strong-names"></a>Usa nomi sicuri avanzati  
+## <a name="use-enhanced-strong-names"></a>Utilizzare nomi sicuri avanzati  
  Le chiavi con nome sicuro sono costituite da una chiave di firma e una chiave di identità. L'assembly è firmato con la chiave di firma e identificato dalla chiave di identità. Nelle versioni precedenti a .NET Framework 4.5 queste due chiavi erano identiche. A partire da .NET Framework 4.5, la chiave di identità rimane la stessa delle versioni precedenti di .NET Framework, ma la chiave di firma è stata migliorata con un algoritmo hash più avanzato. Inoltre, la chiave di firma viene firmata con la chiave di identità per creare una controfirma.  
   
  L'attributo <xref:System.Reflection.AssemblySignatureKeyAttribute> consente ai metadati dell'assembly di usare la chiave pubblica preesistente per l'identità dell'assembly e quindi i vecchi riferimenti all'assembly continuano a funzionare.  L'attributo <xref:System.Reflection.AssemblySignatureKeyAttribute> usa la controfirma per verificare che il proprietario della nuova chiave di firma sia anche il proprietario della chiave di identità precedente.  
   
-### <a name="sign-with-sha-2-without-key-migration"></a>Firma con SHA-2, senza migrazione della chiave  
+### <a name="sign-with-sha-2-without-key-migration"></a>Firma con SHA-2, senza migrazione chiave  
  Eseguire i comandi seguenti da un prompt dei comandi per firmare un assembly senza eseguire la migrazione di una firma con nome sicuro:  
   
 1. Generare la nuova chiave di identità, se necessario.  
@@ -63,8 +63,8 @@ Una firma con nome sicuro è un meccanismo di identità in .NET Framework per l'
     sn -Ra MyAssembly.exe IdentityKey.snk  
     ```  
   
-### <a name="sign-with-sha-2-with-key-migration"></a>Firma con SHA-2, con migrazione della chiave  
- Eseguire i comandi seguenti da un prompt dei comandi per firmare un assembly con una firma con nome sicuro migrata.  
+### <a name="sign-with-sha-2-with-key-migration"></a>Firma con SHA-2, con migrazione chiave  
+ Eseguire i comandi seguenti da un prompt dei comandi per firmare un assembly con una firma con nome sicuro mire.  
   
 1. Generare una coppia di chiavi di identità e firma, se necessario.  
   
@@ -133,4 +133,4 @@ Una firma con nome sicuro è un meccanismo di identità in .NET Framework per l'
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Creazione e utilizzo di assembly con nome sicuro](create-use-strong-named.md)
+- [Creare e usare gli assembly con nome sicuro](create-use-strong-named.md)

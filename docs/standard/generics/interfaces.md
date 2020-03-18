@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ordering comparisons [.NET Framework]
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
 ms.openlocfilehash: 704ada32d428c468d5b71a3f1390568ca586079e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75708324"
 ---
 # <a name="generic-interfaces"></a>Interfacce generiche
@@ -45,6 +45,6 @@ Questo argomento fornisce una panoramica delle interfacce generiche che fornisco
 - <xref:System.Collections.Generic?displayProperty=nameWithType>
 - <xref:System.Collections.ObjectModel?displayProperty=nameWithType>
 - [Generics](../../../docs/standard/generics/index.md)
-- [Raccolte generiche in .NET Framework](../../../docs/standard/generics/collections.md)
+- [Collection generiche in .NET Framework](../../../docs/standard/generics/collections.md)
 - [Delegati generici per la modifica di matrici ed elenchi](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)
 - [Covarianza e controvarianza](../../../docs/standard/generics/covariance-and-contravariance.md)

@@ -1,13 +1,13 @@
 ---
 title: Implementazione dello schema Circuit Breaker
 description: Informazioni su come implementare lo schema Circuit Breaker come sistema complementare per i tentativi HTTP.
-ms.date: 10/16/2018
-ms.openlocfilehash: 00ca39b4b6fac37ff60adf128c3f4e22c5fc14e2
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 03/03/2020
+ms.openlocfilehash: a79c6fcca1e29f3c30d697cb369060d59a72c121
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73732837"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847245"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Implementazione dello schema Circuit Breaker
 
@@ -15,7 +15,7 @@ Come notato in precedenza, è necessario gestire gli errori che potrebbero richi
 
 In un ambiente distribuito, le chiamate a servizi e risorse remote possono non riuscire a causa di errori temporanei, ad esempio connessioni di rete lente e timeout oppure se le risorse rispondono lentamente o sono temporaneamente non disponibili. Questi errori in genere si correggono autonomamente dopo un breve periodo di tempo e un'applicazione cloud affidabile deve essere preparata a gestirli usando una strategia simile allo "schema Retry".
 
-Tuttavia, in alcune situazioni gli errori sono dovuti a eventi imprevisti, la cui risoluzione potrebbe richiedere molto più tempo. La gravità di questi errori può variare, da una perdita parziale di connettività a un errore generale di un servizio. In questi casi è inutile continuare a ripetere in un'applicazione un'operazione che difficilmente avrà esito positivo.
+Tuttavia, in alcune situazioni gli errori sono dovuti a eventi imprevisti, la cui risoluzione potrebbe richiedere molto più tempo. Questi errori possono variare, in base alla gravità, dalla perdita parziale della connettività alla totale interruzione di un servizio. In questi casi è inutile continuare a ripetere in un'applicazione un'operazione che difficilmente avrà esito positivo.
 
 È consigliabile invece codificare l'applicazione in modo che accetti l'errore dell'operazione e lo gestisca di conseguenza.
 
@@ -25,11 +25,11 @@ L'uso improprio di tentativi HTTP potrebbe causare la creazione un attacco Denia
 
 Lo schema Circuit Breaker ha uno scopo diverso rispetto allo "schema Retry". Lo "schema Retry" consente a un'applicazione di ripetere un'operazione che si prevede possa essere completata correttamente. Lo schema Circuit Breaker impedisce a un'applicazione di eseguire un'operazione che ha probabilità minime di riuscire. Un'applicazione può combinare questi due modelli. Tuttavia, la logica di ripetizione deve essere sensibile alle eventuali eccezioni restituite dall'interruttore di circuito e deve sospendere i tentativi se l'interruttore di circuito indica che un errore non è temporaneo.
 
-## <a name="implement-circuit-breaker-pattern-with-httpclientfactory-and-polly"></a>Implementare lo schema Circuit Breaker con HttpClientFactory e Polly
+## <a name="implement-circuit-breaker-pattern-with-ihttpclientfactory-and-polly"></a>Implementare il `IHttpClientFactory` modello Circuit Breaker con e Polly
 
-Come accade quando si implementano i tentativi, l'approccio consigliato per gli interruttori di circuito prevede l'uso di librerie .NET collaudate come Polly e la sua integrazione nativa con HttpClientFactory.
+Come quando si implementano i tentativi, l'approccio consigliato per gli interruttori di `IHttpClientFactory`circuito consiste nell'utilizzare le librerie .NET collaudate come Polly e la relativa integrazione nativa con .
 
-Aggiungere dei criteri dell'interruttore di circuito nella pipeline middleware in uscita HttpClientFactory è semplice come aggiungere un singolo segmento di codice incrementale a quello già presente quando si usa HttpClientFactory.
+L'aggiunta di un `IHttpClientFactory` criterio di interruttore nella pipeline middleware in uscita è semplice `IHttpClientFactory`come aggiungere una singola parte di codice incrementale a ciò che si dispone già quando si utilizza .
 
 In questo scenario l'unica aggiunta al codice usato per i tentativi di chiamata HTTP è il codice in cui viene aggiunto il criterio dell'interruttore di circuito all'elenco di criteri da usare, come illustrato nel codice incrementale seguente, parte del metodo ConfigureServices().
 
@@ -61,7 +61,7 @@ Gli interruttori di circuito devono essere usati anche per reindirizzare le rich
 
 Tutte queste funzionalità riguardano casi in cui il failover viene gestito internamente nel codice .NET, e non automaticamente da Azure, con la trasparenza dei percorsi.
 
-Dal punto di vista dell'utilizzo, quando si usa HttpClient non occorre aggiungere nulla di nuovo, perché il codice è lo stesso di quando si usa HttpClient con HttpClientFactory, come mostrato nelle sezioni precedenti.
+Dal punto di vista dell'utilizzo, quando si utilizza HttpClient, non è necessario aggiungere `HttpClient` qui `IHttpClientFactory`nulla di nuovo perché il codice è lo stesso di quando si utilizza con , come illustrato nelle sezioni precedenti.
 
 ## <a name="test-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>Eseguire test per i tentativi HTTP e gli interruttori di circuito in eShopOnContainers
 
@@ -94,7 +94,7 @@ Ad esempio, quando l'applicazione è in esecuzione, è possibile abilitare il mi
 
 È quindi possibile controllare lo stato usando l'URI `http://localhost:5103/failing`, come illustrato nella figura 8-5.
 
-![Screenshot del controllo dello stato della simulazione del middleware non riuscita.](./media/implement-circuit-breaker-pattern/failing-middleware-simulation.png)
+![Screenshot del controllo dello stato della simulazione middleware non riuscita.](./media/implement-circuit-breaker-pattern/failing-middleware-simulation.png)
 
 **Figura 8-5**. Verifica dello stato di errore del middleware ASP.NET. In questo caso, è disabilitato.
 
@@ -134,7 +134,7 @@ public class CartController : Controller
 
 Ecco un riepilogo. I criteri di ripetizione provano più volte a eseguire la richiesta HTTP e ottengono errori HTTP. Quando il numero di tentativi raggiunge il valore massimo impostato per i criteri dell'interruttore di circuito (in questo caso, 5), l'applicazione genera un'eccezione BrokenCircuitException. Il risultato è un messaggio descrittivo, come illustrato nella figura 8-6.
 
-![Screenshot dell'app Web MVC con errore inoperativo del servizio basket.](./media/implement-circuit-breaker-pattern/basket-service-inoperative.png)
+![Screenshot dell'app Web MVC con errore di inoperativi del servizio di basket.](./media/implement-circuit-breaker-pattern/basket-service-inoperative.png)
 
 **Figura 8-6**. Interruttore di circuito che restituisce un errore nell'interfaccia utente
 
@@ -144,9 +144,9 @@ Infine, un'altra possibilità per `CircuitBreakerPolicy` prevede l'uso di `Isola
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Schema Circuit Breaker**\
+- **Modello Interruttore circuito**\
   [https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker](/azure/architecture/patterns/circuit-breaker)
 
 >[!div class="step-by-step"]
->[Precedente](implement-http-call-retries-exponential-backoff-polly.md)
->[Successivo](monitor-app-health.md)
+>[Successivo](implement-http-call-retries-exponential-backoff-polly.md)
+>[precedente](monitor-app-health.md)

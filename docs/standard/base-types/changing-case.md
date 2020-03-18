@@ -14,17 +14,18 @@ helpviewer_keywords:
 - uppercase
 - lowercase
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
-ms.openlocfilehash: 135cfa815c10d1a9dd9056604a4601678da9d5c4
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 19795cbed27ca979af813b6060163e76fc5b3780
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159351"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187224"
 ---
-# <a name="changing-case-in-net"></a>Modifica della combinazione di maiuscole e minuscole in .NET
-Quando si scrive un'applicazione che accetta input dall'utente non si può conoscere la combinazione di maiuscole e minuscole che verrà usata durante l'immissione dei dati. Spesso è desiderabile che le la combinazione di maiuscole e minuscole nelle stringhe sia coerente, in particolare se le stringhe vengono visualizzate nell'interfaccia utente. La tabella seguente descrive tre metodi per la modifica della combinazione di maiuscole e minuscole. I primi due metodi forniscono un overload che accetta determinate impostazioni cultura.  
+# <a name="change-case-in-net"></a>Maiuscole/minuscole in .NET
+
+Se si scrive un'applicazione che accetta input da un utente, non si può mai essere sicuri di quale caso (superiore o inferiore) verrà utilizzato per immettere i dati. Spesso è desiderabile che le la combinazione di maiuscole e minuscole nelle stringhe sia coerente, in particolare se le stringhe vengono visualizzate nell'interfaccia utente. La tabella seguente descrive tre metodi per la modifica della combinazione di maiuscole e minuscole. I primi due metodi forniscono un overload che accetta determinate impostazioni cultura.  
   
-|Nome del metodo|Uso|  
+|Nome metodo|Uso|  
 |-----------------|---------|  
 |<xref:System.String.ToUpper%2A?displayProperty=nameWithType>|Converte tutti i caratteri di una stringa in lettere maiuscole.|  
 |<xref:System.String.ToLower%2A?displayProperty=nameWithType>|Converte tutti i caratteri di una stringa in lettere minuscole.|  
@@ -34,7 +35,8 @@ Quando si scrive un'applicazione che accetta input dall'utente non si può conos
 > Si noti che i metodi <xref:System.String.ToUpper%2A?displayProperty=nameWithType> e <xref:System.String.ToLower%2A?displayProperty=nameWithType> non vanno usati per convertire le stringhe a scopo di confronto o verifica dell'uguaglianza. Per altre informazioni, vedere la sezione [Confronto di stringhe con una combinazione mista di maiuscole e minuscole](#Comparing).  
   
 <a name="Comparing"></a>
-## <a name="comparing-strings-of-mixed-case"></a>Confronto di stringhe con una combinazione mista di maiuscole e minuscole  
+## <a name="compare-strings-of-mixed-case"></a>Confronta stringhe di lettere maiuscole e minuscole  
+
  Per confrontare stringhe composte da una combinazione mista di maiuscole e minuscole allo scopo di determinarne l'ordinamento, chiamare uno degli overload del metodo <xref:System.String.CompareTo%2A?displayProperty=nameWithType> con un parametro `comparisonType` e quindi fornire un valore di <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType>, <xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType> o <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> per l'argomento `comparisonType`. Per eseguire un confronto usando impostazioni cultura diverse da quelle correnti, chiamare un overload del metodo <xref:System.String.CompareTo%2A?displayProperty=nameWithType> con un parametro `culture` e un parametro `options` e fornire un valore di <xref:System.Globalization.CompareOptions.IgnoreCase?displayProperty=nameWithType> come argomento `options`.  
   
  Per confrontare stringhe in caratteri maiuscoli e minuscoli allo scopo di determinarne se sono uguali, chiamare uno degli overload del metodo <xref:System.String.Equals%2A?displayProperty=nameWithType> con un parametro `comparisonType` e quindi fornire un valore di <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType>, <xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType> o <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> per l'argomento `comparisonType`.  
@@ -71,5 +73,5 @@ Quando si scrive un'applicazione che accetta input dall'utente non si può conos
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Operazioni di base su stringhe](../../../docs/standard/base-types/basic-string-operations.md)
+- [Operazioni di base sulle stringheBasic String Operations](../../../docs/standard/base-types/basic-string-operations.md)
 - [Esecuzione di operazioni sulle stringhe indipendenti dalle impostazioni cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

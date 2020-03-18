@@ -26,13 +26,13 @@ helpviewer_keywords:
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
 ms.openlocfilehash: a1f4d9107427140bcfa6b49bc8a850432fb204f7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75348258"
 ---
-# <a name="format-types-in-net"></a>Tipi di formato in .NET
+# <a name="format-types-in-net"></a>Tipi di formato in .NETFormat types in .NET
 
 La formattazione è il processo di conversione di un'istanza di una classe, una struttura o un valore di enumerazione nella relativa rappresentazione di stringa, eseguito spesso in modo che la stringa risultante possa essere visualizzata dagli utenti o deserializzata per ripristinare il tipo di dati originale. Questa conversione può comportare le difficoltà seguenti:
 
@@ -40,7 +40,7 @@ La formattazione è il processo di conversione di un'istanza di una classe, una 
 
 - La conversione di un oggetto nella relativa rappresentazione di stringa non è sempre intuitiva. Non è ad esempio chiaro come dovrebbe venire visualizzata la rappresentazione di stringa di un oggetto Temperature o di un oggetto Person. Per un esempio in cui viene formattato un oggetto Temperature in modi diversi, vedere la sezione [Stringhe di formato standard](#standard-format-strings) .
 
-- I valori richiedono spesso una formattazione dipendente dalle impostazioni cultura. In un'applicazione in cui vengono usati i numeri per riflettere valori monetari, ad esempio, le stringhe numeriche devono includere il simbolo di valuta, il separatore di gruppi, che nella maggior parte delle impostazioni cultura corrisponde al separatore delle migliaia, e il separatore decimale delle impostazioni cultura correnti. Per un esempio, vedere la sezione [formattazione dipendente dalle impostazioni cultura con provider di formato](#culture-sensitive-formatting-with-format-providers) .
+- I valori richiedono spesso una formattazione dipendente dalle impostazioni cultura. In un'applicazione in cui vengono usati i numeri per riflettere valori monetari, ad esempio, le stringhe numeriche devono includere il simbolo di valuta, il separatore di gruppi, che nella maggior parte delle impostazioni cultura corrisponde al separatore delle migliaia, e il separatore decimale delle impostazioni cultura correnti. Per un esempio, vedere la sezione [Formattazione dipendente dalle impostazioni cultura con provider](#culture-sensitive-formatting-with-format-providers) di formato.
 
 - È possibile che in un'applicazione lo stesso valore debba essere visualizzato in diversi modi. È ad esempio possibile che un membro di enumerazione venga rappresentato visualizzando una rappresentazione di stringa del relativo nome oppure visualizzando il relativo valore sottostante. Per un esempio in cui viene formattato un membro dell'enumerazione <xref:System.DayOfWeek> in modi diversi, vedere la sezione [Stringhe di formato standard](#standard-format-strings) .
 
@@ -53,7 +53,7 @@ In .NET è disponibile un supporto avanzato della formattazione che consente agl
 
 Il meccanismo di base per la formattazione è costituito dall'implementazione predefinita del metodo <xref:System.Object.ToString%2A?displayProperty=nameWithType>, illustrato nella sezione [Formattazione predefinita tramite il metodo ToString](#default-formatting-using-the-tostring-method) più avanti in questo argomento. In .NET sono tuttavia disponibili diversi metodi per modificare ed estendere il supporto predefinito della formattazione, tra cui:
 
-- Override del metodo <xref:System.Object.ToString%2A?displayProperty=nameWithType> per definire una rappresentazione di stringa personalizzata del valore di un oggetto. Per ulteriori informazioni, vedere la sezione [override del metodo ToString](#override-the-tostring-method) più avanti in questo argomento.
+- Override del metodo <xref:System.Object.ToString%2A?displayProperty=nameWithType> per definire una rappresentazione di stringa personalizzata del valore di un oggetto. Per altre informazioni, vedere la sezione [Eseguire l'override del metodo ToString](#override-the-tostring-method) più avanti in questo argomento.
 
 - Definizione di identificatori di formato che consentono l'assunzione di più forme da parte della rappresentazione di stringa del valore di un oggetto. L'identificatore di formato "X" nell'istruzione seguente consente, ad esempio, di convertire un valore intero nella rappresentazione di stringa di un valore esadecimale.
 
@@ -67,7 +67,7 @@ Il meccanismo di base per la formattazione è costituito dall'implementazione pr
      [!code-csharp[Conceptual.Formatting.Overview#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/specifier1.cs#10)]
      [!code-vb[Conceptual.Formatting.Overview#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/specifier1.vb#10)]
 
-     Per ulteriori informazioni sulla formattazione con i provider di formato, vedere la sezione [provider di formato](#culture-sensitive-formatting-with-format-providers) .
+     Per altre informazioni sulla formattazione con i provider di formato, vedere la sezione [Provider](#culture-sensitive-formatting-with-format-providers) di formato.
 
 - Implementazione dell'interfaccia <xref:System.IFormattable> per supportare sia la conversione di stringa con la classe <xref:System.Convert> che la formattazione composita. Per altre informazioni, vedere la sezione [Interfaccia IFormattable](#the-iformattable-interface) .
 
@@ -85,7 +85,7 @@ Ogni tipo derivato da <xref:System.Object?displayProperty=nameWithType> eredita 
 [!code-vb[Conceptual.Formatting.Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/default1.vb#1)]
 
 > [!WARNING]
-> A partire da Windows 8.1, il Windows Runtime include un'interfaccia <xref:Windows.Foundation.IStringable> con un solo metodo, che è il [. ToString](xref:Windows.Foundation.IStringable.ToString%2A), che fornisce il supporto predefinito per la formattazione. È tuttavia consigliabile che i tipi gestiti non implementino l'interfaccia `IStringable` . Per altre informazioni, vedere la sezione "Windows Runtime e l'interfaccia `IStringable`" nella pagina di riferimento <xref:System.Object.ToString%2A?displayProperty=nameWithType>.
+> A partire da Windows 8.1, <xref:Windows.Foundation.IStringable> Windows Runtime include un'interfaccia con un singolo metodo, [IStringable.ToString](xref:Windows.Foundation.IStringable.ToString%2A), che fornisce il supporto di formattazione predefinito. È tuttavia consigliabile che i tipi gestiti non implementino l'interfaccia `IStringable` . Per altre informazioni, vedere la sezione "Windows Runtime e l'interfaccia `IStringable`" nella pagina di riferimento <xref:System.Object.ToString%2A?displayProperty=nameWithType>.
 
 Poiché tutti i tipi diversi dalle interfacce sono derivati da <xref:System.Object>, questa funzionalità viene fornita automaticamente alle classi o alle strutture personalizzate. La funzionalità offerta dal metodo `ToString` predefinito è tuttavia limitata poiché non fornisce informazioni su un'istanza del tipo sebbene consenta di identificarlo. Per fornire una rappresentazione di stringa di un oggetto che fornisce informazioni su tale oggetto, è necessario eseguire l'override del metodo `ToString` .
 
@@ -101,7 +101,7 @@ La visualizzazione del nome di un tipo ha spesso un uso limitato e non consente 
 
 In .NET è stato eseguito l'override del metodo `ToString` di ogni tipo di valore primitivo per visualizzare il valore dell'oggetto invece del nome. Nella tabella seguente viene illustrato l'override per ogni tipo primitivo. Si noti che la maggior parte dei metodi sottoposti a override chiama un altro overload del metodo `ToString` e passa a esso l'identificatore di formato "G", che definisce il formato generale per il tipo, e un oggetto <xref:System.IFormatProvider> , che rappresenta le impostazioni cultura correnti.
 
-|Tipo di|Override di ToString|
+|Type|Override di ToString|
 |----------|-----------------------|
 |<xref:System.Boolean>|Restituisce <xref:System.Boolean.TrueString?displayProperty=nameWithType> o <xref:System.Boolean.FalseString?displayProperty=nameWithType>.|
 |<xref:System.Byte>|Chiama `Byte.ToString("G", NumberFormatInfo.CurrentInfo)` per formattare il valore <xref:System.Byte> per le impostazioni cultura correnti.|
@@ -168,7 +168,7 @@ Le stringhe di formato numerico possono inoltre includere un identificatore di p
 
 Per altre informazioni sulle stringhe di formattazione numerica standard, vedere [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md).
 
-Le stringhe di formato standard per i valori di data e ora sono alias per stringhe di formato personalizzate archiviate da una proprietà <xref:System.Globalization.DateTimeFormatInfo> specifica. Se viene chiamato, ad esempio, il metodo `ToString` di un valore di data e ora con l'identificatore di formato "D", la data e l'ora vengono visualizzate usando la stringa di formato personalizzata archiviata nella proprietà <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> delle impostazioni cultura correnti. Per ulteriori informazioni sulle stringhe di formato personalizzate, vedere la [sezione successiva](#custom-format-strings). Nell'esempio seguente viene illustrata questa relazione.
+Le stringhe di formato standard per i valori di data e ora sono alias per stringhe di formato personalizzate archiviate da una proprietà <xref:System.Globalization.DateTimeFormatInfo> specifica. Se viene chiamato, ad esempio, il metodo `ToString` di un valore di data e ora con l'identificatore di formato "D", la data e l'ora vengono visualizzate usando la stringa di formato personalizzata archiviata nella proprietà <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> delle impostazioni cultura correnti. Per ulteriori informazioni sulle stringhe di formato personalizzate, vedere la [sezione successiva.](#custom-format-strings) Nell'esempio seguente viene illustrata questa relazione.
 
 [!code-csharp[Conceptual.Formatting.Overview#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/alias1.cs#5)]
 [!code-vb[Conceptual.Formatting.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/alias1.vb#5)]
@@ -181,7 +181,7 @@ Per altre informazioni sulle stringhe di formato di data e ora standard, vedere 
 
 - Supporto per un identificatore di formato equivalente a un riferimento Null (`Nothing` in Visual Basic). Un identificatore di formato equivalente a un riferimento Null deve essere considerato equivalente all'identificatore di formato "G".
 
-Una classe `Temperature` può, ad esempio, archiviare internamente la temperatura in gradi Celsius e usare gli identificatori di formato per rappresentare il valore dell'oggetto `Temperature` in gradi Celsius, gradi Fahrenheit e gradi Kelvin. Nell'esempio seguente viene illustrato questo concetto.
+Una classe `Temperature` può, ad esempio, archiviare internamente la temperatura in gradi Celsius e usare gli identificatori di formato per rappresentare il valore dell'oggetto `Temperature` in gradi Celsius, gradi Fahrenheit e gradi Kelvin. Di seguito ne viene illustrato un esempio.
 
 [!code-csharp[Conceptual.Formatting.Overview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/appstandard1.cs#7)]
 [!code-vb[Conceptual.Formatting.Overview#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/appstandard1.vb#7)]
@@ -213,11 +213,11 @@ Tutti i tipi numerici (ovvero i tipi <xref:System.Byte>, <xref:System.Decimal>, 
 
 |Titolo|Definizione|
 |-----------|----------------|
-|[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)|Vengono descritte le stringhe di formato standard che consentono di creare rappresentazioni di stringa usate comunemente di valori numerici.|
-|[Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|Vengono descritte le stringhe di formato personalizzate che consentono di creare formati specifici dell'applicazione per valori numerici.|
+|[Stringhe di formato numerico standard](../../../docs/standard/base-types/standard-numeric-format-strings.md)|Vengono descritte le stringhe di formato standard che consentono di creare rappresentazioni di stringa usate comunemente di valori numerici.|
+|[Stringhe di formato numerico personalizzato](../../../docs/standard/base-types/custom-numeric-format-strings.md)|Vengono descritte le stringhe di formato personalizzate che consentono di creare formati specifici dell'applicazione per valori numerici.|
 |[Stringhe di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|Vengono descritte le stringhe di formato standard che consentono di creare rappresentazioni di stringa usate comunemente di valori <xref:System.DateTime> e <xref:System.DateTimeOffset>.|
-|[Stringhe di formato di data e ora personalizzato](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|Vengono descritte le stringhe di formato personalizzate che consentono di creare formati specifici dell'applicazione per valori <xref:System.DateTime> e <xref:System.DateTimeOffset>.|
-|[Stringhe di formato TimeSpan standard](../../../docs/standard/base-types/standard-timespan-format-strings.md)|Vengono descritte le stringhe di formato standard che consentono di creare rappresentazioni di stringa usate comunemente di intervalli di tempo.|
+|[Stringhe di formato di data e ora personalizzateCustom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|Vengono descritte le stringhe di formato personalizzate che consentono di creare formati specifici dell'applicazione per valori <xref:System.DateTime> e <xref:System.DateTimeOffset>.|
+|[Stringhe di formato TimeSpan standardStandard TimeSpan Format Strings](../../../docs/standard/base-types/standard-timespan-format-strings.md)|Vengono descritte le stringhe di formato standard che consentono di creare rappresentazioni di stringa usate comunemente di intervalli di tempo.|
 |[Stringhe di formato TimeSpan personalizzate](../../../docs/standard/base-types/custom-timespan-format-strings.md)|Vengono descritte le stringhe di formato personalizzate che consentono di creare formati specifici dell'applicazione per intervalli di tempo.|
 |[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|Vengono descritte le stringhe di formato standard che consentono di creare rappresentazioni di stringa di valori di enumerazione.|
 |<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|Descrive le stringhe di formato standard per i valori <xref:System.Guid> .|
@@ -237,7 +237,7 @@ Diversi metodi di conversione di stringhe o di formattazione includono un parame
 
 |Metodo|Tipo di parametro `formatType`|
 |------------|------------------------------------|
-|Metodo`ToString` di tipi numerici|<xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>|
+|Metodo `ToString` di tipi numerici|<xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>|
 |Metodo`ToString` di tipi di data e ora|<xref:System.Globalization.DateTimeFormatInfo?displayProperty=nameWithType>|
 |<xref:System.String.Format%2A?displayProperty=nameWithType>|<xref:System.ICustomFormatter?displayProperty=nameWithType>|
 |<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>|<xref:System.ICustomFormatter?displayProperty=nameWithType>|
@@ -299,7 +299,7 @@ L'implementazione dell'interfaccia <xref:System.IFormattable> per la classe defi
 
 - Supporto per la conversione di stringhe da parte della classe <xref:System.Convert> . Le chiamate ai metodi <xref:System.Convert.ToString%28System.Object%29?displayProperty=nameWithType> e <xref:System.Convert.ToString%28System.Object%2CSystem.IFormatProvider%29?displayProperty=nameWithType> comportano una chiamata direttamente all'implementazione di <xref:System.IFormattable> .
 
-- Supporto per la formattazione composita. Se viene usato un elemento di formato che include una stringa di formato per formattare il tipo personalizzato, tramite Common Language Runtime viene chiamata automaticamente l'implementazione di <xref:System.IFormattable> , che viene passata alla stringa di formato. Per altre informazioni sulla formattazione composita con metodi come <xref:System.String.Format%2A?displayProperty=nameWithType> o <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, vedere la sezione [Formattazione composita](#composite-formatting) .
+- Supporto per la formattazione composita. Se viene usato un elemento di formato che include una stringa di formato per formattare il tipo personalizzato, tramite Common Language Runtime viene chiamata automaticamente l'implementazione di <xref:System.IFormattable> , che viene passata alla stringa di formato. Per ulteriori informazioni sulla formattazione <xref:System.String.Format%2A?displayProperty=nameWithType> <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>composita con metodi quali o , vedere la sezione [Formattazione composita](#composite-formatting) .
 
 Nell'esempio seguente viene definita una classe `Temperature` che implementa l'interfaccia <xref:System.IFormattable> . Sono supportati gli identificatori di formato "C" e "G" per visualizzare la temperatura in Celsius, l'identificatore di formato "F" per visualizzare la temperatura in Fahrenheit e l'identificatore di formato "K" per visualizzare la temperatura in Kelvin.
 
@@ -351,18 +351,18 @@ Nell'esempio seguente viene usata la classe `ByteByByteFormatter` per formattare
 
 |Titolo|Definizione|
 |-----------|----------------|
-|[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)|Vengono descritte le stringhe di formato standard che consentono di creare rappresentazioni di stringa usate comunemente di valori numerici.|
-|[Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|Vengono descritte le stringhe di formato personalizzate che consentono di creare formati specifici dell'applicazione per valori numerici.|
+|[Stringhe di formato numerico standard](../../../docs/standard/base-types/standard-numeric-format-strings.md)|Vengono descritte le stringhe di formato standard che consentono di creare rappresentazioni di stringa usate comunemente di valori numerici.|
+|[Stringhe di formato numerico personalizzato](../../../docs/standard/base-types/custom-numeric-format-strings.md)|Vengono descritte le stringhe di formato personalizzate che consentono di creare formati specifici dell'applicazione per valori numerici.|
 |[Stringhe di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|Vengono descritte le stringhe di formato standard che consentono di creare rappresentazioni di stringa usate comunemente di valori <xref:System.DateTime> .|
-|[Stringhe di formato di data e ora personalizzato](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|Vengono descritte le stringhe di formato personalizzate che consentono di creare formati specifici dell'applicazione per valori <xref:System.DateTime> .|
-|[Stringhe di formato TimeSpan standard](../../../docs/standard/base-types/standard-timespan-format-strings.md)|Vengono descritte le stringhe di formato standard che consentono di creare rappresentazioni di stringa usate comunemente di intervalli di tempo.|
+|[Stringhe di formato di data e ora personalizzateCustom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|Vengono descritte le stringhe di formato personalizzate che consentono di creare formati specifici dell'applicazione per valori <xref:System.DateTime> .|
+|[Stringhe di formato TimeSpan standardStandard TimeSpan Format Strings](../../../docs/standard/base-types/standard-timespan-format-strings.md)|Vengono descritte le stringhe di formato standard che consentono di creare rappresentazioni di stringa usate comunemente di intervalli di tempo.|
 |[Stringhe di formato TimeSpan personalizzate](../../../docs/standard/base-types/custom-timespan-format-strings.md)|Vengono descritte le stringhe di formato personalizzate che consentono di creare formati specifici dell'applicazione per intervalli di tempo.|
 |[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|Vengono descritte le stringhe di formato standard che consentono di creare rappresentazioni di stringa di valori di enumerazione.|
 |[Formattazione composita](../../../docs/standard/base-types/composite-formatting.md)|Viene descritto come incorporare uno o più valori formattati in una stringa, che successivamente può essere visualizzata nella console oppure scritta in un flusso.|
 |[Esecuzione di operazioni di formattazione](../../../docs/standard/base-types/performing-formatting-operations.md)|Sono elencati gli argomenti contenenti istruzioni dettagliate per l'esecuzione di operazioni di formattazione specifiche.|
 |[Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)|Viene descritta l'inizializzazione di oggetti sui valori descritti dalle rappresentazioni in forma di stringa di tali oggetti. L'analisi è l'operazione contraria alla formattazione.|
 
-## <a name="reference"></a>Riferimenti
+## <a name="reference"></a>Informazioni di riferimento
 
 - <xref:System.IFormattable?displayProperty=nameWithType>
 - <xref:System.IFormatProvider?displayProperty=nameWithType>

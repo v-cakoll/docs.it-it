@@ -5,28 +5,28 @@ author: janvorli
 ms.author: janvorli
 ms.date: 02/05/2019
 ms.openlocfilehash: 267c2209556b66ab3541c9c79c99d7eceb2024da
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159741"
 ---
 # <a name="how-to-use-and-debug-assembly-unloadability-in-net-core"></a>Come usare ed eseguire il debug di assembly non caricabili in .NET Core
 
 A partire da .NET Core 3.0, è supportata la possibilità di caricare e successivamente scaricare un set di assembly. In .NET Framework, per questo scopo vengono usati domini di app personalizzati, ma .NET Core supporta un singolo dominio di app predefinito.
 
-.NET Core 3.0 e versioni successive supportano la possibilità di scaricamento tramite la classe <xref:System.Runtime.Loader.AssemblyLoadContext>. È possibile caricare un set di assembly in un oggetto `AssemblyLoadContext` ritirabile, eseguirvi metodi o semplicemente ispezionarli tramite reflection e infine scaricare l'`AssemblyLoadContext`. Che Scarica gli assembly caricati nel `AssemblyLoadContext`.
+.NET Core 3.0 e versioni successive supportano la possibilità di scaricamento tramite la classe <xref:System.Runtime.Loader.AssemblyLoadContext>. È possibile caricare un set di assembly in un oggetto `AssemblyLoadContext` ritirabile, eseguirvi metodi o semplicemente ispezionarli tramite reflection e infine scaricare l'`AssemblyLoadContext`. Che scarica gli assembly `AssemblyLoadContext`caricati nel file .
 
-Esiste una differenza rilevante tra lo scaricamento tramite `AssemblyLoadContext` e con l'uso di AppDomain. Con gli AppDomain, lo scaricamento è forzato. In fase di scaricamento, tutti i thread in esecuzione nell'AppDomain di destinazione vengono interrotti, gli oggetti COM gestiti creati nell'AppDomain di destinazione vengono eliminati definitivamente e così via. Con `AssemblyLoadContext`, lo scaricamento è di tipo "cooperativo". La chiamata al metodo <xref:System.Runtime.Loader.AssemblyLoadContext.Unload%2A?displayProperty=nameWithType> avvia semplicemente lo scaricamento. Lo scaricamento termina dopo che si sono verificate le condizioni seguenti:
+Esiste una differenza rilevante tra lo scaricamento tramite `AssemblyLoadContext` e con l'uso di AppDomain. Con gli AppDomain, lo scaricamento è forzato. In fase di scaricamento, tutti i thread in esecuzione nell'AppDomain di destinazione vengono interrotti, gli oggetti COM gestiti creati nell'AppDomain di destinazione vengono eliminati e così via. Con `AssemblyLoadContext`, lo scaricamento è di tipo "cooperativo". La chiamata al metodo <xref:System.Runtime.Loader.AssemblyLoadContext.Unload%2A?displayProperty=nameWithType> avvia semplicemente lo scaricamento. Lo scaricamento termina dopo che si sono verificate le condizioni seguenti:
 
 - Nessuno dei thread include metodi relativi agli assembly caricati nell'`AssemblyLoadContext` nel rispettivo stack di chiamate.
-- Nessuno dei tipi degli assembly caricati nel `AssemblyLoadContext`, le istanze di tali tipi e gli assembly a cui viene fatto riferimento:
+- Nessuno dei tipi degli assembly caricati nelle `AssemblyLoadContext`istanze di tali tipi e gli assembly stessi fanno riferimento a:
   - Riferimenti esterni all'`AssemblyLoadContext`, ad eccezione di riferimenti deboli (<xref:System.WeakReference> o <xref:System.WeakReference%601>).
-  - Handle di Garbage Collector forte (GC) ([GCHandleType. Normal](xref:System.Runtime.InteropServices.GCHandleType.Normal) o [GCHandleType. bloccato](xref:System.Runtime.InteropServices.GCHandleType.Pinned)) sia all'interno che all'esterno del `AssemblyLoadContext`.
+  - Il Garbage Collector (GC)[(GC), ovvero GCHandleType.Normal](xref:System.Runtime.InteropServices.GCHandleType.Normal) o [GCHandleType.Pinned](xref:System.Runtime.InteropServices.GCHandleType.Pinned), viene gestito da un Garbage Collector (GC) sia all'interno che all'esterno dell'oggetto `AssemblyLoadContext`.
 
-## <a name="use-collectible-assemblyloadcontext"></a>USA AssemblyLoadContext da collezione
+## <a name="use-collectible-assemblyloadcontext"></a>Usare AssemblyLoadContext ritirabileUse collectible AssemblyLoadContext
 
-Questa sezione contiene un'esercitazione dettagliata che illustra come caricare in modo semplice un'applicazione .NET Core in un `AssemblyLoadContext` ritirabile, eseguirne il punto di ingresso e quindi scaricarlo. È possibile trovare un esempio completo in [https://github.com/dotnet/samples/tree/master/core/tutorials/Unloading](https://github.com/dotnet/samples/tree/master/core/tutorials/Unloading).
+Questa sezione contiene un'esercitazione dettagliata che illustra come caricare in modo semplice un'applicazione .NET Core in un `AssemblyLoadContext` ritirabile, eseguirne il punto di ingresso e quindi scaricarlo. È possibile trovare un [https://github.com/dotnet/samples/tree/master/core/tutorials/Unloading](https://github.com/dotnet/samples/tree/master/core/tutorials/Unloading)esempio completo in .
 
 ### <a name="create-a-collectible-assemblyloadcontext"></a>Creare un AssemblyLoadContext ritirabile
 
@@ -38,7 +38,7 @@ Il codice seguente offre un esempio della versione più semplice dell'`AssemblyL
 
 Come si può notare, il metodo `Load` restituisce `null`. Ciò significa che tutti gli assembly di dipendenza vengono caricati nel contesto predefinito e il nuovo contesto contiene solo gli assembly che vi sono stati caricati in modo esplicito.
 
-Se si vuole che nell'`AssemblyLoadContext` vengano caricate anche alcune o tutte le dipendenze, è possibile usare l'oggetto `AssemblyDependencyResolver` nel metodo `Load`. Il `AssemblyDependencyResolver` risolve i nomi degli assembly nei percorsi assoluti dei file di assembly. Il resolver usa il file con estensione *Deps. JSON* e i file di assembly nella directory dell'assembly principale caricato nel contesto.
+Se si vuole che nell'`AssemblyLoadContext` vengano caricate anche alcune o tutte le dipendenze, è possibile usare l'oggetto `AssemblyDependencyResolver` nel metodo `Load`. L'oggetto `AssemblyDependencyResolver` risolve i nomi degli assiemi in percorsi assoluti dei file di assieme. Il sistema di risoluzione utilizza il file *.deps.json* e i file di assembly nella directory dell'assembly principale caricato nel contesto.
 
 [!code-csharp[Advanced custom AssemblyLoadContext](~/samples/snippets/standard/assembly/unloading/complex_assemblyloadcontext.cs)]
 
@@ -70,35 +70,35 @@ A questo punto è possibile eseguire questa funzione per caricare, eseguire e sc
 
 [!code-csharp[Part 5](~/samples/snippets/standard/assembly/unloading/simple_example.cs#6)]
 
-Lo scaricamento non viene tuttavia completato immediatamente. Come indicato in precedenza, si basa sulla Garbage Collector raccogliere tutti gli oggetti dall'assembly di test. In molti casi non è necessario attendere il completamento dello scaricamento. Vi sono tuttavia casi in cui è utile sapere che l'operazione è stata completata, ad esempio quando è necessario eliminare il file di assembly caricato nell'`AssemblyLoadContext` personalizzato dal disco. In casi come questo è possibile usare il frammento di codice seguente. Attiva Garbage Collection e attende che i finalizzatori in sospeso si trovino in un ciclo fino a quando il riferimento debole al `AssemblyLoadContext` personalizzato non è impostato su `null`, a indicare che l'oggetto di destinazione è stato raccolto. Nella maggior parte dei casi, è necessario solo un pass-through del ciclo. Tuttavia, per i casi più complessi, in cui gli oggetti creati dal codice in esecuzione nell'`AssemblyLoadContext` hanno finalizzatori, può essere necessario un numero maggiore di passaggi.
+Lo scaricamento non viene tuttavia completato immediatamente. Come accennato in precedenza, si basa sul Garbage Collector per raccogliere tutti gli oggetti dall'assembly di test. In molti casi non è necessario attendere il completamento dello scaricamento. Vi sono tuttavia casi in cui è utile sapere che l'operazione è stata completata, ad esempio quando è necessario eliminare il file di assembly caricato nell'`AssemblyLoadContext` personalizzato dal disco. In casi come questo è possibile usare il frammento di codice seguente. Attiva la procedura di Garbage Collection e attende i finalizzatori `AssemblyLoadContext` in `null`sospeso in un ciclo finché il riferimento debole all'oggetto custom non viene impostato su , a indicare che l'oggetto di destinazione è stato raccolto. Nella maggior parte dei casi, è necessario un solo passaggio attraverso il ciclo. Tuttavia, per i casi più complessi, in cui gli oggetti creati dal codice in esecuzione nell'`AssemblyLoadContext` hanno finalizzatori, può essere necessario un numero maggiore di passaggi.
 
 [!code-csharp[Part 6](~/samples/snippets/standard/assembly/unloading/simple_example.cs#7)]
 
 ### <a name="the-unloading-event"></a>L'evento di scaricamento
 
-Talvolta può essere necessario che il codice caricato in un `AssemblyLoadContext` personalizzato esegua alcune operazioni di pulizia in fase di avvio dello scaricamento. Ad esempio, potrebbe essere necessario arrestare i thread o pulire gli handle GC complessi. In questi casi può essere usato l'evento `Unloading`. A questo evento può essere associato un gestore che esegue la pulizia necessaria.
+Talvolta può essere necessario che il codice caricato in un `AssemblyLoadContext` personalizzato esegua alcune operazioni di pulizia in fase di avvio dello scaricamento. Ad esempio, potrebbe essere necessario arrestare i thread o pulire handle GC sicuri. In questi casi può essere usato l'evento `Unloading`. A questo evento può essere associato un gestore che esegue la pulizia necessaria.
 
 ### <a name="troubleshoot-unloadability-issues"></a>Risolvere i problemi di scaricamento
 
-A causa della natura cooperativa dello scaricamento, è facile dimenticare i riferimenti che potrebbero mantenere il materiale in un `AssemblyLoadContext` ritirabile e impedire lo scaricamento. Di seguito è riportato un riepilogo delle entità (alcune delle quali non sono ovvie) che possono conservare i riferimenti:
+A causa della natura cooperativa dello scarico, è facile dimenticare i riferimenti che `AssemblyLoadContext` possono essere mantenendo viva la roba in un oggetto da collezione e prevenire lo scarico. Di seguito è riportato un riepilogo delle entità (alcune delle quali non ovvie) che possono contenere i riferimenti:Here is a summary of entities (some of them non-obvious) that can hold the references:
 
-- I riferimenti regolari detenuti dall'esterno dei `AssemblyLoadContext` ritirabili archiviati in uno slot dello stack o in un registro del processore (variabili locali del metodo, creati in modo esplicito dal codice utente o in modo implicito dal compilatore just-in-time (JIT)), una variabile statica o un handle GC sicuro (blocco) e che puntano in modo transitivo a:
+- Riferimenti regolari conservati dall'esterno `AssemblyLoadContext` dell'oggetto collectible che vengono archiviati in uno stack slot o in un registro del processore (variabili locali del metodo, create in modo esplicito dal codice utente o implicitamente dal compilatore JIT (Just-In-Time), una variabile statica o una maniglia GC forte (pinning) e che punta in modo transitivo a:
   - Un assembly caricato nell'`AssemblyLoadContext` ritirabile.
   - Un tipo di tale assembly.
   - Un'istanza di un tipo incluso in tale assembly.
 - Thread che eseguono codice da un assembly caricato nell'`AssemblyLoadContext` ritirabile.
-- Istanze di tipi di `AssemblyLoadContext` personalizzati e non ritirabili creati all'interno del `AssemblyLoadContext`ritirabile.
-- In sospeso <xref:System.Threading.RegisteredWaitHandle> istanze con callback impostati sui metodi nel `AssemblyLoadContext`personalizzato.
+- Istanze di tipi personalizzati `AssemblyLoadContext` non ritirabile creati all'interno dell'oggetto da collezione `AssemblyLoadContext`.
+- Istanze in sospeso <xref:System.Threading.RegisteredWaitHandle> con callback `AssemblyLoadContext`impostati su metodi nell'oggetto custom .
 
 > [!TIP]
-> I riferimenti agli oggetti archiviati negli slot dello stack o nei registri del processore e che potrebbero impedire lo scaricamento di un `AssemblyLoadContext` possono verificarsi nelle situazioni seguenti:
+> I riferimenti agli oggetti archiviati negli slot dello stack o `AssemblyLoadContext` nei registri del processore e che potrebbero impedire lo scaricamento di un oggetto possono verificarsi nelle seguenti situazioni:
 >
-> - Quando i risultati della chiamata di funzione vengono passati direttamente a un'altra funzione, anche se non è presente alcuna variabile locale creata dall'utente.
-> - Quando il compilatore JIT mantiene un riferimento a un oggetto che era disponibile in un determinato punto di un metodo.
+> - Quando i risultati della chiamata di funzione vengono passati direttamente a un'altra funzione, anche se non esiste alcuna variabile locale creata dall'utente.
+> - Quando il compilatore JIT mantiene un riferimento a un oggetto che era disponibile a un certo punto in un metodo.
 
 ## <a name="debug-unloading-issues"></a>Eseguire il debug dei problemi di scaricamento
 
-Il debug dei problemi relativi allo scaricamento può essere tedioso. Possono verificarsi situazioni in cui non si riesce a capire ciò che mantiene attivo un `AssemblyLoadContext`, ma lo scaricamento ha esito negativo. La strategia migliore per risolvere problemi di questo tipo è quella di usare WinDbg (LLDB su Unix) con il plug-in SOS. È necessario trovare ciò che mantiene attiva un'istanza di `LoaderAllocator` appartenente allo specifico `AssemblyLoadContext`. Il plug-in SOS consente di esaminare gli oggetti heap GC, le gerarchie e le radici.
+Il debug dei problemi relativi allo scaricamento può essere tedioso. Possono verificarsi situazioni in cui non si riesce a capire ciò che mantiene attivo un `AssemblyLoadContext`, ma lo scaricamento ha esito negativo. La strategia migliore per risolvere problemi di questo tipo è quella di usare WinDbg (LLDB su Unix) con il plug-in SOS. È necessario trovare ciò che mantiene attiva un'istanza di `LoaderAllocator` appartenente allo specifico `AssemblyLoadContext`. Il plug-in SOS consente di esaminare gli oggetti heap GC, le relative gerarchie e radici.
 
 Per caricare il plug-in nel debugger, immettere il comando seguente nella riga di comando del debugger:
 
@@ -114,10 +114,10 @@ In LLDB:
 plugin load /path/to/libsosplugin.so
 ```
 
-Viene ora eseguito il debug di un programma di esempio con problemi di scaricamento. Di seguito è incluso il codice sorgente. Quando viene eseguito in WinDbg, il programma si interrompe nel debugger subito dopo il tentativo di verifica dello scaricamento. A questo punto è possibile iniziare a cercare i colpevoli.
+Esaminiamo un programma di esempio che presenta problemi di scaricamento. Di seguito è incluso il codice sorgente. Quando viene eseguito in WinDbg, il programma si interrompe nel debugger subito dopo il tentativo di verifica dello scaricamento. A questo punto è possibile iniziare a cercare i colpevoli.
 
 > [!TIP]
-> Se si esegue il debug con LLDB in UNIX, i comandi SOS negli esempi seguenti non hanno le `!` di fronte.
+> Se si esegue il debug di LLDB su Unix, i `!` comandi SOS negli esempi seguenti non hanno l'inprimoa di essi.
 
 ```console
 !dumpheap -type LoaderAllocator
@@ -137,15 +137,15 @@ Statistics:
 Total 2 objects
 ```
 
-Nella sezione "Statistics:" controllare l'oggetto `MT` (`MethodTable`) appartenente alla classe `System.Reflection.LoaderAllocator`, che è l'oggetto a cui si è interessati. Quindi, nell'elenco all'inizio, trovare la voce con `MT` corrispondente a tale voce e ottenere l'indirizzo dell'oggetto stesso. In questo caso, è "000002b78000ce40".
+Nella sezione "Statistics:" controllare l'oggetto `MT` (`MethodTable`) appartenente alla classe `System.Reflection.LoaderAllocator`, che è l'oggetto a cui si è interessati. Quindi, nell'elenco all'inizio, trovare `MT` la voce con corrispondente a quella e ottenere l'indirizzo dell'oggetto stesso. Nel nostro caso, è "000002b78000ce40".
 
-Ora che si conosce l'indirizzo dell'oggetto `LoaderAllocator`, è possibile usare un altro comando per trovare le relative radici GC:
+Ora che conosciamo l'indirizzo dell'oggetto, `LoaderAllocator` possiamo usare un altro comando per trovare le sue radici GC:
 
 ```console
 !gcroot -all 0x000002b78000ce40
 ```
 
-Questo comando esegue il dump della catena di riferimenti agli oggetti che portano all'istanza di `LoaderAllocator`. L'elenco inizia con la radice, ovvero l'entità che mantiene il `LoaderAllocator` attivo e pertanto è il nucleo del problema. La radice può essere uno slot dello stack, un registro del processore, un handle GC o una variabile statica.
+Questo comando esegue il dump della catena di riferimenti agli oggetti che portano all'istanza di `LoaderAllocator`. L'elenco inizia con la radice, che `LoaderAllocator` è l'entità che mantiene la nostra vita e quindi è il nucleo del problema. La radice può essere uno slot dello stack, un registro del processore, un handle GC o una variabile statica.
 
 Di seguito è riportato un esempio dell'output del comando `gcroot`:
 
@@ -174,13 +174,13 @@ HandleTable:
 Found 3 roots.
 ```
 
-Il passaggio successivo consiste nel determinare dove si trova la radice in modo che sia possibile risolverlo. Il caso più semplice è quello in cui la radice è uno slot dello stack o un registro del processore. In tal caso, il `gcroot` Mostra il nome della funzione il cui frame contiene la radice e il thread che esegue tale funzione. Il caso più complicato è quello in cui la radice è una variabile statica o un handle GC.
+Il passo successivo è quello di capire dove si trova la radice in modo da poter risolvere il problema. Il caso più semplice è quello in cui la radice è uno slot dello stack o un registro del processore. In tal caso, mostra `gcroot` il nome della funzione il cui frame contiene la radice e il thread che esegue tale funzione. Il caso più complicato è quello in cui la radice è una variabile statica o un handle GC.
 
 Nell'esempio precedente, la prima radice è una variabile locale di tipo `System.Reflection.RuntimeMethodInfo` memorizzata nel frame della funzione `example.Program.Main(System.String[])` all'indirizzo `rbp-20` (`rbp` è il registro del processore `rbp` e -20 è un offset esadecimale rispetto a tale registro).
 
 La seconda radice è un oggetto `GCHandle` normale (sicuro) che contiene un riferimento a un'istanza della classe `test.Test`.
 
-La terza radice è un oggetto `GCHandle` bloccato. Questo è in realtà una variabile statica, ma sfortunatamente non esiste alcun modo per indicare. Le entità statiche per i tipi di riferimento vengono memorizzate in una matrice di oggetti gestiti in strutture di runtime interne.
+La terza radice è un oggetto `GCHandle` bloccato. Questa è in realtà una variabile statica, ma purtroppo, non c'è modo di dire. Le entità statiche per i tipi di riferimento vengono memorizzate in una matrice di oggetti gestiti in strutture di runtime interne.
 
 Un altro caso che può impedire lo scaricamento di un `AssemblyLoadContext` è quello in cui un thread presenta un frame di un metodo di un assembly caricato nell'`AssemblyLoadContext` nel relativo stack. È possibile verificarlo eseguendo il dump degli stack di chiamate gestite di tutti i thread:
 
@@ -188,7 +188,7 @@ Un altro caso che può impedire lo scaricamento di un `AssemblyLoadContext` è q
 ~*e !clrstack
 ```
 
-Questo comando indica di applicare il comando `!clrstack` a tutti i thread. Di seguito è riportato l'output del comando per l'esempio. Sfortunatamente, LLDB in UNIX non ha alcun modo per applicare un comando a tutti i thread, quindi è necessario cambiare manualmente i thread e ripetere il comando `clrstack`. Ignorare tutti i thread in cui il debugger indica che "non è possibile esaminare lo stack gestito".
+Questo comando indica di applicare il comando `!clrstack` a tutti i thread. Di seguito è riportato l'output del comando per l'esempio. Sfortunatamente, LLDB su Unix non ha alcun modo per applicare un comando a `clrstack` tutti i thread, quindi è necessario cambiare manualmente i thread e ripetere il comando. Ignorare tutti i thread in cui il debugger dice "Impossibile esaminare lo stack gestito".
 
 ```console
 OS Thread Id: 0x6ba8 (0)
@@ -249,6 +249,6 @@ Il codice seguente viene usato nell'esempio di debug precedente.
 
 ## <a name="program-loaded-into-the-testassemblyloadcontext"></a>Programma caricato in TestAssemblyLoadContext
 
-Il codice seguente rappresenta il file *test. dll* passato al metodo `ExecuteAndUnload` nel programma di test principale.
+Il codice seguente rappresenta il file `ExecuteAndUnload` *test.dll* passato al metodo nel programma di test principale.
 
 [!code-csharp[Program loaded into the TestAssemblyLoadContext](~/samples/snippets/standard/assembly/unloading/unloadability_issues_example_test.cs)]

@@ -6,41 +6,42 @@
   href: get-started/
 - name: Guida all'installazione
   href: install/
-- name: Guida di migrazione
+- name: Guida alla migrazione
   href: migration-guide/
-- name: Guida di sviluppo
+- name: Guida allo sviluppo
   href: development-guide.md
   items:
     - name: Domini applicazione e assembly
       href: app-domains/
-    - name: Risorse nelle applicazioni desktop
+    - name: Risorse nelle app desktop
       href: resources/
     - name: Accessibilità
       href: ui-automation/
     - name: Dati e modellazione
       href: data/
-    - name: Applicazioni client
-      href: develop-client-apps.md
+    - name: App client
       items:
+        - name: Panoramica
+          href: develop-client-apps.md
         - name: Windows Presentation Foundation
           href: wpf/
         - name: Windows Form
           href: winforms/
-    - name: Applicazioni orientate ai servizi con WCF
+    - name: App orientate ai servizi con WCF
       href: wcf/
     - name: Windows Workflow Foundation
       href: windows-workflow-foundation/
-    - name: Applicazioni di servizio Windows
+    - name: App del servizio Windows
       href: windows-services/
-    - name: Applicazioni a 64 bit
+    - name: App a 64 bit
       href: 64-bit-apps.md
-    - name: Applicazioni Web con ASP.NET
+    - name: App Web con ASP.NET
       href: develop-web-apps-with-aspnet.md
-    - name: Programmazione di rete in .NET Framework
+    - name: Programmazione di rete
       href: network-programming/
-    - name: Configurazione di app
+    - name: Configurare le app
       href: configure-apps/
-    - name: Compilazione di app con .NET Native
+    - name: Compilare app con .NET Native
       href: net-native/
     - name: 'Debug, traccia e profilatura'
       href: debug-trace-profile/
@@ -54,7 +55,7 @@
       href: mef/
     - name: Interoperabilità con codice non gestito
       href: interop/
-    - name: Riferimenti alle API non gestite
+    - name: Informazioni di riferimento sulle API non gestite
       href: unmanaged-api/
     - name: Servizi XAML
       href: ../desktop-wpf/xaml-services/

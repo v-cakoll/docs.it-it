@@ -1,19 +1,19 @@
 ---
-title: Come generare XML da file CSV (C#)
+title: Come generare xml da file CSV (C
 ms.date: 07/20/2015
 ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
 ms.openlocfilehash: 643c05cb440165c4461c3e9c80e69701241ab8d1
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635808"
 ---
-# <a name="how-to-generate-xml-from-csv-files-c"></a>Come generare XML da file CSV (C#)
-Questo esempio illustra come usare LINQ (Language-Integrated Query) e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] per generare un file XML da un file con valori delimitati da virgole (CSV).  
+# <a name="how-to-generate-xml-from-csv-files-c"></a>Come generare xml da file CSV (C
+In questo esempio viene illustrato come utilizzare [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Language-Integrated Query (LINQ) e generare un file XML da un file con valori delimitati da virgole (CSV).  
   
 ## <a name="example"></a>Esempio  
- Nel codice seguente viene eseguita una query LINQ su una matrice di stringhe.  
+ Il codice seguente esegue una query LINQ su una matrice di stringhe.  
   
  Nella query viene usata la clausola `let` per suddividere ogni stringa in una matrice di campi.  
   

@@ -1,18 +1,18 @@
 ---
-title: LINQ to XML rispetto ad altri tecnologie XML
+title: LINQ to XML e altre tecnologie XML3
 ms.date: 07/20/2015
 ms.assetid: 01b8e746-12d3-471d-b811-7539e4547784
 ms.openlocfilehash: 4cade6ecbee95ee288db34246986858609697731
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635678"
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML e altre tecnologie XML
 In questo argomento viene illustrato un confronto tra [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] e le seguenti tecnologie XML: <xref:System.Xml.XmlReader>, XSLT, MSXML e XmlLite. Queste informazioni possono risultare utili per decidere quale tecnologia usare.  
   
- Per un confronto tra [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] e il Document Object Model (DOM), vedere [LINQ to XML e Dom (C#)](./linq-to-xml-vs-dom.md).  
+ Per un [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] confronto tra il modello DOM (Document Object Model), vedere [LINQ to XML e DOM (C)](./linq-to-xml-vs-dom.md).  
   
 ## <a name="linq-to-xml-vs-xmlreader"></a>Differenze tra LINQ to XML e XmlReader  
  <xref:System.Xml.XmlReader> è un parser rapido, di tipo forward-only, che non supporta la memorizzazione nella cache.  
@@ -50,7 +50,7 @@ In questo argomento viene illustrato un confronto tra [!INCLUDE[sqltecxlinq](~/i
   
  Il vantaggio principale di XmlLite è che si tratta di un parser XML veloce e leggero, sicuro nella maggior parte degli scenari. La superficie di rischio è molto ridotta. Se è necessario analizzare documenti non attendibili e si desidera proteggersi da attacchi di tipo Denial of Service o esposizione di dati, XmlLite rappresenta una buona soluzione.  
   
- XmlLite non è integrato con LINQ (Language-Integrated Query). Non produce i miglioramenti alla produttività dei programmatori che sono la forza motivazione alla base di LINQ.  
+ XmlLite non è integrato con Language-Integrated Query (LINQ). Non produce miglioramenti di produttività del programmatore che sono la forza motivante dietro LINQ.  
   
 ## <a name="see-also"></a>Vedere anche
 

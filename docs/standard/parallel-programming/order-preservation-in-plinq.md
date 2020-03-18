@@ -9,10 +9,10 @@ helpviewer_keywords:
 - PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
 ms.openlocfilehash: 5b067fa277816e6105d37047c6c4996a4cbb9b5a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138214"
 ---
 # <a name="order-preservation-in-plinq"></a>Conservazione dell'ordine in PLINQ
@@ -64,7 +64,7 @@ In PLINQ, l'obiettivo è ottimizzare le prestazioni, mantenendo la correttezza. 
   
  Alcuni operatori di query PLINQ si comportano in modo diverso, a seconda che la sequenza di origine sia ordinata o non ordinata. Questi operatori sono elencati nella tabella seguente.  
   
-|??|Risultato quando la sequenza di origine è ordinata|Risultato quando la sequenza di origine non è ordinata|  
+|Operatore|Risultato quando la sequenza di origine è ordinata|Risultato quando la sequenza di origine non è ordinata|  
 |--------------|------------------------------------------------|--------------------------------------------------|  
 |<xref:System.Linq.ParallelEnumerable.Aggregate%2A>|Output non deterministico per operazioni non associative o non commutative|Output non deterministico per operazioni non associative o non commutative|  
 |<xref:System.Linq.ParallelEnumerable.All%2A>|Non applicabile|Non applicabile|  

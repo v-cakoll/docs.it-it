@@ -4,38 +4,38 @@ description: Informazioni su come documentare il codice con commenti della docum
 ms.date: 01/21/2020
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 1ec088db1de7c953bdb20b1129c5fd40f9e31454
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 1ed39c4733c36b3932fcb85bf50d4f4c0e53aa6f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965932"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146317"
 ---
-# <a name="document-your-code-with-xml-comments"></a>Documentare il codice con commenti XML
+# <a name="document-your-code-with-xml-comments"></a>Documentare il codice con commenti XMLDocument your code with XML comments
 
 I commenti in formato documentazione XML sono commenti speciali, aggiunti alla definizione di ogni tipo o membro definito dall'utente.
 Sono speciali perché possono essere elaborati dal compilatore per generare un file di documentazione XML in fase di compilazione.
-Il file XML generato dal compilatore può essere distribuito insieme all'assembly .NET in modo che Visual Studio e altri IDE possano usare IntelliSense per visualizzare informazioni rapide sui tipi o i membri. È anche possibile eseguire il file XML tramite strumenti, ad esempio [DocFX](https://dotnet.github.io/docfx/) e [Sandcastle](https://github.com/EWSoftware/SHFB) per generare i siti Web di riferimento all'API.
+Il file XML generato dal compilatore può essere distribuito insieme all'assembly .NET in modo che Visual Studio e altri IDE possano usare IntelliSense per visualizzare informazioni rapide su tipi o membri. È anche possibile eseguire il file XML tramite strumenti, ad esempio [DocFX](https://dotnet.github.io/docfx/) e [Sandcastle](https://github.com/EWSoftware/SHFB) per generare i siti Web di riferimento all'API.
 
 I commenti in formato documentazione XML, come tutti gli altri commenti, vengono ignorati dal compilatore.
 
 È possibile generare il file XML in fase di compilazione eseguendo una delle operazioni seguenti:
 
-- Se si sviluppa un'applicazione con .NET Core dalla riga di comando, è possibile aggiungere un elemento `GenerateDocumentationFile` alla sezione `<PropertyGroup>` del file di progetto con estensione csproj. È anche possibile specificare il percorso del file di documentazione direttamente usando [`DocumentationFile` elemento](/visualstudio/msbuild/common-msbuild-project-properties). L'esempio seguente genera un file XML nella directory del progetto con lo stesso nome file radice dell'assembly:
+- Se si sviluppa un'applicazione con .NET Core dalla `GenerateDocumentationFile` riga di `<PropertyGroup>` comando, è possibile aggiungere un elemento alla sezione del file di progetto con estensione csproj. È inoltre possibile specificare direttamente il percorso del file di documentazione [ `DocumentationFile` utilizzando](/visualstudio/msbuild/common-msbuild-project-properties)element . L'esempio seguente genera un file XML nella directory del progetto con lo stesso nome file radice dell'assembly:
 
    ```xml
    <GenerateDocumentationFile>true</GenerateDocumentationFile>
    ```
-   
+
    L'espressione equivale alla seguente:
-   
+
    ```xml
    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
    ```
 
 - Se si sviluppa un'applicazione tramite Visual Studio, fare clic con il pulsante destro del mouse sul progetto e scegliere **Proprietà**. Nella finestra di dialogo Proprietà selezionare la scheda **Genera** e controllare **File di documentazione XML**. È anche possibile modificare il percorso in cui il compilatore scrive il file.
 
-- Se si compila un'applicazione .NET Framework dalla riga di comando, aggiungere l'opzione del [compilatore-doc](language-reference/compiler-options/doc-compiler-option.md) durante la compilazione.  
+- Se si compila un'applicazione .NET Framework dalla riga di comando, aggiungere [l'opzione del compilatore -doc](language-reference/compiler-options/doc-compiler-option.md) durante la compilazione.  
 
 I commenti in formato documentazione XML usano tre barre (`///`) e un corpo di commento in formato XML. Ad esempio:
 
@@ -43,15 +43,15 @@ I commenti in formato documentazione XML usano tre barre (`///`) e un corpo di c
 
 ## <a name="walkthrough"></a>Procedura dettagliata
 
-Esaminiamo la documentazione di una libreria matematica molto semplice per semplificare la comprensione e la collaborazione da parte di nuovi sviluppatori e per gli sviluppatori di terze parti a usare.
+Esaminiamo la documentazione di una libreria matematica molto semplice per semplificare la comprensione/contributo dei nuovi sviluppatori e l'utilizzo da parte degli sviluppatori di terze parti.
 
 Questo è il codice per la semplice libreria matematica:
 
 [!code-csharp[Sample Library](../../samples/snippets/csharp/concepts/codedoc/sample-library.cs)]
 
-La libreria di esempio supporta quattro operazioni aritmetiche principali (`add`, `subtract`, `multiply`e `divide`) sui tipi di dati `int` e `double`.
+La libreria di esempio supporta`add`quattro `subtract` `multiply`operazioni `divide`aritmetiche `int` `double` principali ( , , , e ) e i tipi di dati .
 
-È ora possibile creare un documento di riferimento per le API dal codice per gli sviluppatori di terze parti che usano la libreria ma non hanno accesso al codice sorgente.
+Ora vuoi essere in grado di creare un documento di riferimento API dal tuo codice per gli sviluppatori di terze parti che usano la tua libreria ma non hanno accesso al codice sorgente.
 Come accennato in precedenza, è possibile usare tag della documentazione XML a questo scopo. Verranno ora presentati i tag XML standard supportati dal compilatore C#.
 
 ## <a name="summary"></a>\<summary>
@@ -61,7 +61,7 @@ Ne viene illustrato l'uso aggiungendolo alla definizione di classe `Math` e al p
 
 [!code-csharp[Summary Tag](~/samples/snippets/csharp/concepts/codedoc/summary-tag.cs)]
 
-Il tag `<summary>` è importante ed è consigliabile includerlo perché il relativo contenuto è la fonte principale di informazioni sul tipo o sul membro in IntelliSense o un documento di riferimento dell'API.
+Il `<summary>` tag è importante e si consiglia di includerlo perché il relativo contenuto è l'origine primaria di informazioni sul tipo o sul membro in IntelliSense o in un documento di riferimento API.
 
 ## <a name="remarks"></a>\<remarks>
 
@@ -137,7 +137,7 @@ Ciò può essere qualsiasi tipo definito nel progetto o in un assembly di riferi
 
 ## <a name="param"></a>\<param>
 
-Il tag `<param>` viene usato per descrivere i parametri del metodo. Di seguito è riportato un esempio relativo al metodo Double `Add`: il parametro descritto dal tag è specificato nell'attributo `name` **obbligatorio** .
+Il tag `<param>` viene usato per descrivere i parametri del metodo. Ecco un esempio sul `Add` metodo double: il parametro descritto dal tag è specificato nell'attributo **obbligatorio.** `name`
 
 [!code-csharp[Param Tag](~/samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 
@@ -150,7 +150,7 @@ Aggiungere un metodo generico semplice alla classe `Math` per verificare se una 
 
 ## <a name="paramref"></a>\<paramref>
 
-A volte è possibile che durante la descrizione dell'operazione di un metodo in un tag `<summary>` si vuole fare un riferimento a un parametro. Il tag `<paramref>` è molto utile per questa operazione. Ora si aggiorna il riepilogo del metodo `Add` basato su double. Analogamente al tag `<param>`, il nome del parametro viene specificato nell'attributo `name` **obbligatorio** .
+A volte è possibile che durante la descrizione dell'operazione di un metodo in un tag `<summary>` si vuole fare un riferimento a un parametro. Il tag `<paramref>` è molto utile per questa operazione. Ora si aggiorna il riepilogo del metodo `Add` basato su double. Come `<param>` il tag, il nome del parametro viene specificato nell'attributo **obbligatorio.** `name`
 
 [!code-csharp[Paramref Tag](~/samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
 
@@ -163,19 +163,19 @@ Il tag `<typeparamref>` viene usato allo stesso modo del tag `<paramref>`, ma in
 
 ## <a name="list"></a>\<list>
 
-Usare il tag `<list>` per formattare le informazioni di documentazione come un elenco ordinato, un elenco non ordinato o una tabella. Creare un elenco non ordinato di ogni operazione matematica supportata dalla libreria `Math`.
+Utilizzare il `<list>` tag per formattare le informazioni sulla documentazione come elenco ordinato, elenco non ordinato o tabella. Creare un elenco non ordinato di ogni operazione matematica supportata dalla libreria `Math`.
 
 [!code-csharp[List Tag](~/samples/snippets/csharp/concepts/codedoc/list-tag.cs)]
 
 È possibile creare un elenco ordinato o una tabella sostituendo l'attributo `type` con `number` o `table` rispettivamente.
 
-## <a name="inheritdoc"></a>\<inheritdoc >
+## <a name="inheritdoc"></a>\<eredita>
 
-È possibile usare il tag `<inheritdoc>` per ereditare i commenti XML da classi base, interfacce e metodi simili. In questo modo si elimina la copia indesiderata e si incollano i commenti XML duplicati e i commenti XML vengono sincronizzati automaticamente.
+È possibile `<inheritdoc>` utilizzare il tag per ereditare i commenti XML dalle classi base, dalle interfacce e da metodi simili. In questo modo si eliminano le operazioni di copia e incolla indesiderate di commenti XML duplicati e mantiene automaticamente sincronizzati i commenti XML.
 
 [!code-csharp-interactive[InheritDoc Tag](~/samples/snippets/csharp/concepts/codedoc/inheritdoc-tag.cs)]
 
-### <a name="put-it-all-together"></a>Riuniamo
+### <a name="put-it-all-together"></a>Combinare tutti gli elementi
 
 Dopo aver eseguito questa esercitazione e applicato i tag al codice, dove necessario, il codice dovrebbe ora essere simile al seguente:
 
@@ -206,15 +206,15 @@ L'attributo `path` rappresenta una query [XPath](../standard/data/xml/xpath-quer
 
 L'attributo `name` rappresenta l'identificatore di nome nel tag che precede i commenti.
 
-L'attributo `id`, che può essere usato al posto di `name`, rappresenta l'ID del tag che precede i commenti.
+L'attributo `id` , che può `name`essere utilizzato al posto di , rappresenta l'ID per il tag che precede i commenti.
 
 ### <a name="user-defined-tags"></a>Tag definiti dall'utente
 
 Tutti i tag specificati in precedenza rappresentano i tag riconosciuti dal compilatore C#. Gli utenti comunque possono definire tag personalizzati.
-Strumenti come Sandcastle portano il supporto per tag aggiuntivi come [\<> di eventi](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm) e [\<nota >](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm)e supportano anche la [documentazione degli spazi dei nomi](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm).
+Strumenti come Sandcastle portano il [ \<](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm) supporto per tag aggiuntivi come>di eventi e [ \<>, ](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm)e supportano anche gli spazi dei nomi di [documentazione.](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm)
 Gli strumenti di creazione della documentazione interna o personalizzata possono anche essere usati con i tag standard e con più formati di output da HTML a PDF.
 
-## <a name="recommendations"></a>Suggerimenti
+## <a name="recommendations"></a>Consigli
 
 La documentazione del codice è consigliabile per vari motivi. Di seguito vengono illustrate alcune procedure consigliate, scenari di uso generale e altre operazioni che è necessario conoscere quando si usano i tag in formato documentazione XML nel codice C#.
 
@@ -223,10 +223,10 @@ La documentazione del codice è consigliabile per vari motivi. Di seguito vengon
 - Il minimo necessario è che i tipi e i loro membri abbiano i tag `<summary>` perché il loro contenuto è necessario per IntelliSense.
 - Il testo della documentazione deve essere scritto usando frasi complete che terminano con un punto.
 - Le classi parziali sono completamente supportate e le informazioni sulla documentazione verranno concatenate in una singola voce per tale tipo.
-- Il compilatore verifica la sintassi dei tag `<exception>`, `<include>`, `<param>`, `<see>`, `<seealso>`e `<typeparam>`.
+- Il compilatore verifica la sintassi `<param>` `<see>`dei `<seealso>`tag `<typeparam>` `<exception>`, `<include>`, , , e .
 - Il compilatore convalida i parametri che contengono i percorsi dei file e i riferimenti ad altre parti del codice.
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Commenti in formato documentazione XML (Guida per programmatori C#)](programming-guide/xmldoc/index.md)
-- [Tag consigliati per i commenti della documentazione (Guida per programmatori C#)](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [Tag consigliati per i commenti relativi alla documentazione (Guida per programmatori C#)](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

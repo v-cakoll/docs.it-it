@@ -1,17 +1,17 @@
 ---
-title: Come usare le matrici e le variabili locali tipizzate in modo implicito in un' C# espressione di query-Guida alla programmazione
+title: Come utilizzare le matrici e le variabili locali tipizzate in modo implicito in un'espressione di query - Guida per programmatori C
 ms.date: 07/20/2015
 helpviewer_keywords:
 - implicitly-typed local variables [C#], how to use
 ms.assetid: 6b7354d2-af79-427a-b6a8-f74eb8fd0b91
 ms.openlocfilehash: f4ff71fc4dc1a0b2affa1f032ab1d3d6bb04d297
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705561"
 ---
-# <a name="how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression-c-programming-guide"></a>Come usare le matrici e le variabili locali tipizzate in modo implicito in un'C# espressione di query (Guida per programmatori)
+# <a name="how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression-c-programming-guide"></a>Come utilizzare le matrici e le variabili locali tipizzate in modo implicito in un'espressione di query (Guida per programmatori C
 È possibile usare le variabili locali tipizzate in modo implicito ogni volta che si vuole che il compilatore determini il tipo di una variabile locale. È necessario usare le variabili locali tipizzate in modo implicito per archiviare i tipi anonimi, che vengono spesso usati nelle espressioni di query. Gli esempi seguenti illustrano tipi d'uso facoltativi e obbligatori delle variabili locali tipizzate in modo implicito nelle query.  
   
  Le variabili locali tipizzate in modo implicito vengono dichiarate usando la parola chiave contestuale [var](../../language-reference/keywords/var.md). Per altre informazioni, vedere [Variabili locali tipizzate in modo implicito](./implicitly-typed-local-variables.md) e [Matrici tipizzate in modo implicito](../arrays/implicitly-typed-arrays.md).  
@@ -31,5 +31,5 @@ ms.locfileid: "75705561"
 - [Guida per programmatori C#](../index.md)
 - [Metodi di estensione](./extension-methods.md)
 - [LINQ (Language-Integrated Query)](../../linq/index.md)
-- [var](../../language-reference/keywords/var.md)
+- [Var](../../language-reference/keywords/var.md)
 - [LINQ in C#](../../linq/index.md)

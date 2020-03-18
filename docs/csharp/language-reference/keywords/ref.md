@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 25c74317ce9033ef10735ee0087f275632b6bd17
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 05f0bd8566851678203a3f064b96bfff7dee18b6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715190"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399364"
 ---
 # <a name="ref-c-reference"></a>ref (Riferimenti per C#)
 
@@ -41,7 +41,7 @@ I membri di una classe non possono avere firme che differiscono solo per `ref`, 
 ```csharp
 class CS0663_Example
 {
-    // Compiler error CS0663: "Cannot define overloaded 
+    // Compiler error CS0663: "Cannot define overloaded
     // methods that differ only on ref and out".
     public void SampleMethod(out int i) { }
     public void SampleMethod(ref int i) { }
@@ -91,7 +91,7 @@ Affinché il chiamante modifichi lo stato dell'oggetto, il valore restituito di 
 
 Il metodo chiamato può anche dichiarare il valore restituito come `ref readonly` per restituire il valore per riferimento e specificare che il codice chiamante non può modificare il valore restituito. Il metodo chiamante può evitare la copia del valore restituito archiviando il valore in una variabile [ref readonly](#ref-readonly-locals) locale.
 
-Per un esempio, vedere [Esempio di valori restituiti e variabili locali ref](#a-ref-returns-and-ref-locals-example).
+Per un esempio, vedere A ref returns and ref locals example (Esempio di [valori restituiti ref e variabili locali di riferimento).](#a-ref-returns-and-ref-locals-example)
 
 ## <a name="ref-locals"></a>Variabili locali ref
 
@@ -115,9 +115,11 @@ Si noti che nei due esempi la parola chiave `ref` deve essere usata in entrambe 
 
 A partire da C# 7.3, la variabile di iterazione dell'istruzione `foreach` può essere una variabile locale ref o locale ref readonly. Per altre informazioni, vedere l'articolo sull'[istruzione foreach](foreach-in.md).
 
+Inoltre, a partire dalla versione 7.3 di C, è possibile riassegnare una variabile locale ref o ref readonly con l'operatore di [assegnazione ref](../operators/assignment-operator.md#ref-assignment-operator).
+
 ## <a name="ref-readonly-locals"></a>Variabili ref readonly
 
-Una variabile locale ref readonly viene usata per fare riferimento ai valori restituiti dal metodo o dalla proprietà che include `ref readonly` nella propria firma e usa `return ref`. Una variabile `ref readonly` combina le proprietà di una variabile locale `ref` con una variabile `readonly`: è un alias per l'archiviazione cui è assegnata e non può essere modificata. 
+Una variabile locale ref readonly viene usata per fare riferimento ai valori restituiti dal metodo o dalla proprietà che include `ref readonly` nella propria firma e usa `return ref`. Una variabile `ref readonly` combina le proprietà di una variabile locale `ref` con una variabile `readonly`: è un alias per l'archiviazione cui è assegnata e non può essere modificata.
 
 ## <a name="a-ref-returns-and-ref-locals-example"></a>Esempio di valori restituiti e variabili locali ref
 
@@ -137,7 +139,7 @@ L'obiettivo di mantenere un tipo `ref struct` come variabile allocata nello stac
 
 - Non è possibile eseguire il boxing di `ref struct`. Non è possibile assegnare un tipo `ref struct` a una variabile di tipo `object`, `dynamic` o qualsiasi tipo di interfaccia.
 - I tipi `ref struct` non possono implementare interfacce.
-- Non è possibile dichiarare `ref struct` come campo membro di una classe o di un normale struct. Questo include la dichiarazione di una proprietà implementata automaticamente, che crea un campo sottostante generato dal compilatore. 
+- Non è possibile dichiarare `ref struct` come campo membro di una classe o di un normale struct. Questo include la dichiarazione di una proprietà implementata automaticamente, che crea un campo sottostante generato dal compilatore.
 - Non è possibile dichiarare variabili locali che sono tipi `ref struct` nei metodi asincroni. È possibile dichiararle nei metodi sincroni che restituiscono tipi simili a <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> o `Task`.
 - Non è possibile dichiarare variabili locali `ref struct` negli iteratori.
 - Non è possibile acquisire variabili `ref struct` in espressioni lambda o funzioni locali.
@@ -153,11 +155,10 @@ Queste restrizioni evitano l'uso accidentale di un tipo `ref struct` in modo che
 ## <a name="see-also"></a>Vedere anche
 
 - [Scrivere codice efficiente e sicuro](../../write-safe-efficient-code.md)
-- [Valori restituiti e variabili locali per riferimento](../../programming-guide/classes-and-structs/ref-returns.md)
+- [Valori restituiti e variabili locali ref](../../programming-guide/classes-and-structs/ref-returns.md)
 - [Espressione condizionale ref](../operators/conditional-operator.md#conditional-ref-expression)
-- [Operatore di assegnazione ref](../operators/assignment-operator.md#ref-assignment-operator)
 - [Passaggio di parametri](../../programming-guide/classes-and-structs/passing-parameters.md)
-- [Parametri dei metodi](method-parameters.md)
-- [Riferimenti per C#](../index.md)
+- [Parametri di metodo](method-parameters.md)
+- [Guida di riferimento a C](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](index.md)

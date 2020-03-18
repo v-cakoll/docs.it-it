@@ -13,14 +13,14 @@ helpviewer_keywords:
 - runtime, automatic memory management
 ms.assetid: d4850de5-fa63-4936-a250-5678d118acba
 ms.openlocfilehash: 1038f16dca507e58005189c9558a9ec8dae4b34f
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159702"
 ---
 # <a name="automatic-memory-management"></a>Automatic Memory Management
-Gestione automatica della memoria è uno dei servizi offerti da Common Language Runtime durante l'[esecuzione gestita](../../docs/standard/managed-execution-process.md). L'allocazione e il rilascio di memoria per un'applicazione vengono gestiti da Garbage Collector di Common Language Runtime. Agli sviluppatori non viene quindi richiesta la scrittura di codice per eseguire attività di gestione della memoria quando si sviluppano applicazioni gestite. La gestione automatica della memoria consente di evitare che si verifichino i problemi consueti legati alla gestione della memoria, quale la mancata liberazione di un oggetto e il conseguente spreco di memoria allocata ma non più referenziabile o il tentativo di accesso alla memoria per un oggetto già liberato. In questa sezione viene descritta la modalità utilizzata dal Garbage Collector per l'allocazione e il rilascio di memoria.  
+La gestione automatica della memoria è uno dei servizi forniti da Common Language Runtime durante [l'esecuzione gestita.](../../docs/standard/managed-execution-process.md) L'allocazione e il rilascio di memoria per un'applicazione vengono gestiti da Garbage Collector di Common Language Runtime. Agli sviluppatori non viene quindi richiesta la scrittura di codice per eseguire attività di gestione della memoria quando si sviluppano applicazioni gestite. La gestione automatica della memoria consente di evitare che si verifichino i problemi consueti legati alla gestione della memoria, quale la mancata liberazione di un oggetto e il conseguente spreco di memoria allocata ma non più referenziabile o il tentativo di accesso alla memoria per un oggetto già liberato. In questa sezione viene descritta la modalità utilizzata dal Garbage Collector per l'allocazione e il rilascio di memoria.  
   
 ## <a name="allocating-memory"></a>Allocazione di memoria  
  Quando si inizializza un nuovo processo, per tale processo viene riservata una regione contigua di spazio degli indirizzi. Lo spazio degli indirizzi riservato viene definito heap gestito. Nell'heap gestito viene conservato un puntatore all'indirizzo in cui verrà allocato il successivo oggetto dell'heap. Le impostazioni iniziali del puntatore corrispondono all'indirizzo di base dell'heap gestito. Tutti i [tipi di riferimento](../../docs/standard/base-types/common-type-system.md) vengono allocati nell'heap gestito. Quando il primo tipo di riferimento viene creato da un'applicazione, per tale tipo viene allocata memoria nell'indirizzo di base dell'heap gestito. Quando l'oggetto successivo viene creato dall'applicazione, la memoria destinata a tale oggetto viene allocata dal Garbage Collector nello spazio degli indirizzi immediatamente successivo al primo oggetto. Lo spazio per i nuovi oggetti verrà allocato in questo modo dal Garbage Collector fino all'esaurimento dello spazio degli indirizzi.  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-ms.openlocfilehash: 1055b10d0e3e971a6b0963c1ed950fef903ac5bd
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: fe03bbdd7d037a9f1fb4985b62b447c6ef9c6535
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239950"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79174784"
 ---
 # <a name="globalization"></a>Globalizzazione
 
@@ -38,7 +38,7 @@ Per impostazione predefinita, .NET usa stringhe Unicode. Una stringa Unicode è 
 
 In molti sistemi operativi e applicazioni, incluso il sistema operativo Windows, è possibile usare anche tabelle codici per rappresentare i set di caratteri. Le tabelle codici in genere contengono i valori ASCII standard compresi tra 0x00 e 0x7F ed eseguono il mapping degli altri caratteri ai valori rimanenti compresi tra 0x80 e 0xFF. L'interpretazione dei valori da 0x80 a 0xFF dipende dalla tabella codici specifica. Per questo motivo, se possibile, è consigliabile evitare l'uso di tabelle codici in un'app globalizzata.
 
-Nell'esempio seguente vengono illustrati i rischi di interpretazione dei dati della tabella codici quando la tabella codici predefinita in un sistema è diversa dalla tabella codici in cui i sono stati salvati i dati. (Per simulare questo scenario, l'esempio specifica in modo esplicito tabelle codici diverse). Innanzitutto, nell'esempio viene definita una matrice costituita dai caratteri maiuscoli dell'alfabeto greco. I caratteri vengono codificati in una matrice di byte usando la tabella codici 737 (nota anche come Greco MS-DOS) e la matrice di byte viene salvata in un file. Se viene recuperato il file e viene decodificata la relativa matrice di byte tramite la tabella codici 737, vengono ripristinati i caratteri originali. Tuttavia, se viene recuperato il file e viene decodificata la relativa matrice di byte usando la tabella codici 1252 (o Windows-1252, che rappresenta i caratteri nell'alfabeto latino), i caratteri originali vengono persi.
+Nell'esempio seguente vengono illustrati i rischi di interpretazione dei dati della tabella codici quando la tabella codici predefinita in un sistema è diversa dalla tabella codici in cui i sono stati salvati i dati. Per simulare questo scenario, nell'esempio vengono specificate in modo esplicito tabelle codici diverse. In primo luogo, nell'esempio viene definita una matrice costituita dai caratteri maiuscoli dell'alfabeto greco. I caratteri vengono codificati in una matrice di byte usando la tabella codici 737 (nota anche come Greco MS-DOS) e la matrice di byte viene salvata in un file. Se viene recuperato il file e viene decodificata la relativa matrice di byte tramite la tabella codici 737, vengono ripristinati i caratteri originali. Tuttavia, se viene recuperato il file e viene decodificata la relativa matrice di byte usando la tabella codici 1252 (o Windows-1252, che rappresenta i caratteri nell'alfabeto latino), i caratteri originali vengono persi.
 
 [!code-csharp[Conceptual.Globalization#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/codepages1.cs#1)]
 [!code-vb[Conceptual.Globalization#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/codepages1.vb#1)]
@@ -66,7 +66,7 @@ Quando possibile, si raccomanda di gestire le stringhe come unità intere, anzic
 > [!TIP]
 > È possibile usare la classe <xref:System.Globalization.StringInfo> per gestire gli elementi di testo anziché i singoli caratteri in una stringa.
 
-Nelle ricerche e nei confronti di stringhe, un errore comune consiste nel gestire la stringa come una raccolta di caratteri, ognuno dei quali è rappresentato da un oggetto <xref:System.Char>. Infatti, un singolo carattere può essere costituito da uno, due o più oggetti <xref:System.Char>. Caratteri di questo tipo vengono trovati più frequentemente nelle stringhe delle impostazioni cultura i cui alfabeti sono costituiti da caratteri esterni all'intervallo di caratteri latini di base Unicode (da U+0021 a U+007E). Nell'esempio seguente si tenta di trovare l'indice del carattere LETTERA LATINA A MAIUSCOLA CON accento GRAVE (U+00C0) in una stringa. Tuttavia, questo carattere può essere rappresentato in due modi diversi: come singola unità di codice (U + 00C0) o come carattere composito (due unità di codice: U + 0041 e U + 0300). In questo caso, il carattere è rappresentato nell'istanza della stringa da due oggetti <xref:System.Char>, U + 0041 e U + 0300. Il codice di esempio chiama gli overload <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> e <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> per trovare la posizione del carattere incluso nell'istanza della stringa, ma questi restituiscono risultati diversi. La prima chiamata al metodo dispone di un argomento <xref:System.Char>; esegue un confronto ordinale e pertanto non può trovare una corrispondenza. La seconda chiamata dispone di un argomento <xref:System.String>; esegue un confronto dipendente dalle impostazioni cultura e pertanto trova una corrispondenza.
+Nelle ricerche e nei confronti di stringhe, un errore comune consiste nel gestire la stringa come una raccolta di caratteri, ognuno dei quali è rappresentato da un oggetto <xref:System.Char>. Infatti, un singolo carattere può essere costituito da uno, due o più oggetti <xref:System.Char>. Caratteri di questo tipo vengono trovati più frequentemente nelle stringhe delle impostazioni cultura i cui alfabeti sono costituiti da caratteri esterni all'intervallo di caratteri latini di base Unicode (da U+0021 a U+007E). Nell'esempio seguente si tenta di trovare l'indice del carattere LETTERA LATINA A MAIUSCOLA CON accento GRAVE (U+00C0) in una stringa. Tuttavia, questo carattere può essere rappresentato in due modi diversi: come una singola unità di codice (U-00C0) o come un carattere composito (due unità di codice: U-0041 e U-0300). In questo caso, il carattere è <xref:System.Char> rappresentato nell'istanza di stringa da due oggetti, U-0041 e U-0300. Il codice di esempio chiama gli overload <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> e <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> per trovare la posizione del carattere incluso nell'istanza della stringa, ma questi restituiscono risultati diversi. La prima chiamata al metodo dispone di un argomento <xref:System.Char>; esegue un confronto ordinale e pertanto non può trovare una corrispondenza. La seconda chiamata dispone di un argomento <xref:System.String>; esegue un confronto dipendente dalle impostazioni cultura e pertanto trova una corrispondenza.
 
 [!code-csharp[Conceptual.Globalization#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/search1.cs#18)]
 [!code-vb[Conceptual.Globalization#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/search1.vb#18)]
@@ -108,8 +108,8 @@ Il confronto di stringhe dipendenti dalle impostazioni cultura viene definito da
 |----------------------------|----------------------|---------------------|
 |.NET Framework 2.0|Tutti i sistemi operativi|Unicode 4.1|
 |.NET Framework 3.0|Tutti i sistemi operativi|Unicode 4.1|
-|.NET Framework 3.5|Tutti i sistemi operativi|Unicode 4.1|
-|.NET Framework 4|Tutti i sistemi operativi|Unicode 5.0|
+|.NET Framework 3.5|Tutti i sistemi operativi|Unicode 4.1|
+|.NET Framework 4|Tutti i sistemi operativi|Unicode 5.0|
 |.NET Framework 4.5 e versioni successive in Windows 7|Unicode 5.0|
 |.NET Framework 4.5 e versioni successive in Windows 8 e sistemi operativi successivi|Unicode 6.3.0|
 |.NET Core (tutte le versioni)|Dipende dalla versione dello standard Unicode supportato dal sistema operativo sottostante.|
@@ -336,7 +336,7 @@ In genere, non fare supposizioni sui valori della proprietà <xref:System.Global
 
 - .NET supporta impostazioni cultura sostitutive. Ciò consente di definire nuove impostazioni cultura personalizzate che completano le impostazioni cultura standard esistenti o li sostituiscono completamente.
 
-- Nei sistemi Windows l'utente può personalizzare aspetti specifici delle impostazioni cultura usando l'app **Paese e lingua** nel Pannello di controllo. Quando viene creata un'istanza di un oggetto <xref:System.Globalization.CultureInfo>, è possibile determinare se rifletta le personalizzazioni dell'utente chiamando il costruttore <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>. In genere, per le app degli utenti finali, è necessario rispettare le preferenze dell'utente in modo da offrirgli i dati in un formato che l'utente si aspetta.
+- Nei sistemi Windows l'utente può personalizzare aspetti specifici delle impostazioni cultura usando l'app **Paese e lingua** nel Pannello di controllo. Quando viene creata un'istanza di un oggetto <xref:System.Globalization.CultureInfo>, è possibile determinare se rifletta le personalizzazioni dell'utente chiamando il costruttore <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>. In genere, per le app per l'utente finale, è necessario rispettare le preferenze dell'utente in modo che all'utente vengano presentati i dati in un formato previsto.
 
 ## <a name="see-also"></a>Vedere anche
 

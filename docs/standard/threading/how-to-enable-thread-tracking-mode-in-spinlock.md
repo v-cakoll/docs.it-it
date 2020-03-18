@@ -9,10 +9,10 @@ helpviewer_keywords:
 - SpinLock, how to enable thread-tracking
 ms.assetid: 62ee2e68-0bdd-4869-afc9-f0a57a11ae01
 ms.openlocfilehash: f52a844284cf46bcace3f54f8b320d336050a64e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138039"
 ---
 # <a name="how-to-enable-thread-tracking-mode-in-spinlock"></a>Procedura: abilitare la modalità di rilevamento thread in SpinLock
@@ -30,4 +30,4 @@ ms.locfileid: "73138039"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [SpinLock](../../../docs/standard/threading/spinlock.md)
+- [Spinlock](../../../docs/standard/threading/spinlock.md)

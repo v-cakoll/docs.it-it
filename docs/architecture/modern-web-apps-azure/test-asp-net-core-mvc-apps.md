@@ -4,23 +4,23 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Test
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 164e820ffa6030b3dcb9180d56e57ce39bb03143
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 2b347442c4a9b7b6cf912ec461248f901dc45417
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503942"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79147491"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testare app ASP.NET Core MVC
 
 > *"Non vi piace fare lo unit test dei vostri prodotti? Molto probabilmente non piacerà neanche ai vostri clienti."*
  > \_- Anonimo-
 
-Qualsiasi software, indipendentemente dalla complessità, può generare errori imprevisti dopo che è stato modificato. È quindi assolutamente necessario sottoporre a test tutte le applicazioni che non siano banali o poco importanti. Il test manuale è il modo più lento, meno affidabile e più costoso per testare il software, ma se le applicazioni non sono progettate per essere testabili, è l'unico modo disponibile. Le applicazioni scritte per seguire i principi architetturali presentati nel [capitolo 4](architectural-principles.md) devono essere unità testabili. Le applicazioni ASP.NET Core supportano l'integrazione automatizzata e i test funzionali.
+Qualsiasi software, indipendentemente dalla complessità, può generare errori imprevisti dopo che è stato modificato. È quindi assolutamente necessario sottoporre a test tutte le applicazioni che non siano banali o poco importanti. Il test manuale è il modo più lento, meno affidabile e più costoso per testare il software, ma se le applicazioni non sono progettate per essere testabili, è l'unico modo disponibile. Le applicazioni scritte per seguire i principi architettonici delineati nel [capitolo 4](architectural-principles.md) devono essere unit testable. ASP.NET applicazioni core supportano l'integrazione automatizzata e i test funzionali.
 
 ## <a name="kinds-of-automated-tests"></a>Tipi di test automatizzati
 
-Esistono molti tipi di test automatizzati per le applicazioni software. Il test più semplice e di livello più basso è lo unit test. A un livello leggermente superiore sono presenti test di integrazione e test funzionali. Altri tipi di test, ad esempio test dell'interfaccia utente, test di carico, test di stress e test di fumo, esulano dall'ambito di questo documento.
+Esistono molti tipi di test automatizzati per le applicazioni software. Il test più semplice e di livello più basso è lo unit test. A un livello leggermente superiore, sono disponibili test di integrazione e test funzionali. Altri tipi di test, ad esempio test dell'interfaccia utente, test di carico, test di stress e test di fumo, non rientrano nell'ambito di questo documento.
 
 ### <a name="unit-tests"></a>Unit test
 
@@ -58,7 +58,7 @@ I diversi livelli della piramide e le dimensioni relative rappresentano i divers
 
 ### <a name="what-to-test"></a>Cosa testare
 
-Un problema comune agli sviluppatori che non hanno dimestichezza con la scrittura di test automatizzati è decidere che cosa testare. Un buon punto di partenza è il test della logica condizionale. Ovunque sia presente un metodo con il comportamento modificato in base a un'istruzione condizionale (if-else, switch e così via), è possibile ottenere almeno un paio di test che confermino il comportamento corretto per determinate condizioni. Se il codice prevede condizioni di errore, è consigliabile scrivere almeno un test per il percorso corretto attraverso il codice (senza errori) e almeno un test per il percorso non corretto (con errori o risultati atipici) per confermare che l'applicazione si comporti come previsto in caso di errori. Provare infine a concentrarsi sul test delle operazioni che possono non riuscire, piuttosto che su metriche quali il code coverage. Un code coverage maggiore è meglio di un code coverage minore, in genere, Tuttavia, la scrittura di un numero ancora maggiore di test di un metodo complesso e cruciale per l'azienda è in genere un uso migliore del tempo rispetto alla scrittura di test per le proprietà automatiche solo per migliorare le metriche del code coverage di test.
+Un problema comune agli sviluppatori che non hanno dimestichezza con la scrittura di test automatizzati è decidere che cosa testare. Un buon punto di partenza è il test della logica condizionale. Ovunque si disponga di un metodo con un comportamento che cambia in base a un'istruzione condizionale (if-else, switch e così via), si dovrebbe essere in grado di venire con almeno un paio di test che confermano il comportamento corretto per determinate condizioni. Se il codice prevede condizioni di errore, è consigliabile scrivere almeno un test per il percorso corretto attraverso il codice (senza errori) e almeno un test per il percorso non corretto (con errori o risultati atipici) per confermare che l'applicazione si comporti come previsto in caso di errori. Provare infine a concentrarsi sul test delle operazioni che possono non riuscire, piuttosto che su metriche quali il code coverage. Un code coverage maggiore è meglio di un code coverage minore, in genere, Tuttavia, la scrittura di alcuni altri test di un metodo complesso e business-critical è in genere un uso migliore del tempo rispetto alla scrittura di test per le proprietà automatiche solo per migliorare le metriche di code coverage di test.
 
 ## <a name="organizing-test-projects"></a>Organizzazione dei progetti di test
 
@@ -66,19 +66,19 @@ Un problema comune agli sviluppatori che non hanno dimestichezza con la scrittur
 
 Un approccio comune consiste nell'organizzare i progetti dell'applicazione in una cartella 'src' e i progetti di test dell'applicazione in una cartella 'tests' parallela. Nel caso si ritenga utile questo tipo di organizzazione, Visual Studio consente di creare cartelle della soluzione corrispondenti.
 
-![Organizzazione di test nella soluzione](./media/image9-2.png)
+![Testare l'organizzazione nella soluzioneTest organization in your solution](./media/image9-2.png)
 
-**Figura 9-2**. Organizzazione di test nella soluzione
+**Figura 9-2**. Testare l'organizzazione nella soluzioneTest organization in your solution
 
-È possibile usare qualsiasi framework di test si preferisca. Il framework xUnit, in cui sono scritti tutti i test di ASP.NET Core ed EF Core, funziona in modo efficiente. È possibile aggiungere un progetto di test xUnit in Visual Studio usando il modello illustrato nella figura 9-3 o dall'interfaccia della riga di comando usando `dotnet new xunit`.
+È possibile usare qualsiasi framework di test si preferisca. Il framework xUnit, in cui sono scritti tutti i test di ASP.NET Core ed EF Core, funziona in modo efficiente. È possibile aggiungere un progetto di test xUnit in Visual Studio utilizzando il `dotnet new xunit`modello illustrato nella Figura 9-3 o dalla riga di comando utilizzando .
 
-![Aggiungere un progetto di test xUnit in Visual Studio](./media/image9-3.png)
+![Aggiungere un progetto xUnit Test in Visual StudioAdd an xUnit Test Project in Visual Studio](./media/image9-3.png)
 
-**Figura 9-3**. Aggiungere un progetto di test xUnit in Visual Studio
+**Figura 9-3**. Aggiungere un progetto xUnit Test in Visual StudioAdd an xUnit Test Project in Visual Studio
 
 ### <a name="test-naming"></a>Denominazione dei test
 
-Assegnare un nome ai test in modo coerente, con nomi che indichino il funzionamento di ogni test. Un approccio molto efficace è assegnare alle classi di test nomi basati sulla classe e sul metodo testato. Il risultato è un numero elevato di classi di test, ma la funzione di ogni test è estremamente chiara. Con il nome della classe di test impostato per identificare la classe e il metodo da sottoporre a test, è possibile usare il nome di ogni metodo di test per specificare il comportamento sottoposto a test. Deve essere incluso il comportamento previsto e l'eventuale input o gli eventuali presupposti che devono generare questo comportamento. Ecco alcuni esempi di nomi di test:
+Assegnare un nome ai test in modo coerente, con nomi che indicano le operazioni eseguite da ogni test. Un approccio molto efficace è assegnare alle classi di test nomi basati sulla classe e sul metodo testato. Il risultato è un numero elevato di classi di test, ma la funzione di ogni test è estremamente chiara. Con il nome della classe di test impostato per identificare la classe e il metodo da sottoporre a test, è possibile usare il nome di ogni metodo di test per specificare il comportamento sottoposto a test. Deve essere incluso il comportamento previsto e l'eventuale input o gli eventuali presupposti che devono generare questo comportamento. Ecco alcuni esempi di nomi di test:
 
 - `CatalogControllerGetImage.CallsImageServiceWithId`
 
@@ -90,23 +90,23 @@ Assegnare un nome ai test in modo coerente, con nomi che indichino il funzioname
 
 Una variante di questo approccio consiste nel terminare ogni nome di classe di test con "Should" e nel modificare leggermente i tempi verbali:
 
-- `CatalogControllerGetImage`**Should**`.`**Call**`ImageServiceWithId`
+- `CatalogControllerGetImage`**Dovrebbe**`.`**chiamare**`ImageServiceWithId`
 
-- `CatalogControllerGetImage`**Should**`.`**Log**`WarningGivenImageMissingException`
+- `CatalogControllerGetImage`**Dovrebbe**`.`**Log**`WarningGivenImageMissingException`
 
-Alcuni team trovano il secondo approccio più chiaro, anche se leggermente più prolisso. In ogni caso, è consigliabile usare una convenzione di denominazione che consenta di comprendere il comportamento del test. In questo modo, se uno o più test hanno esito negativo, risulta evidente dai nomi quali casi non sono riusciti. Evitare di denominare i test in modo vago, ad esempio ControllerTests. test1, perché questi non offrono alcun valore quando vengono visualizzati nei risultati dei test.
+Alcuni team trovano il secondo approccio più chiaro, anche se leggermente più prolisso. In ogni caso, è consigliabile usare una convenzione di denominazione che consenta di comprendere il comportamento del test. In questo modo, se uno o più test hanno esito negativo, risulta evidente dai nomi quali casi non sono riusciti. Evitare di denominare i test in modo vago, ad esempio ControllerTests.Test1, in quanto non offrono alcun valore quando vengono visualizzati nei risultati dei test.
 
 Se si segue una convenzione di denominazione simile a quella illustrata sopra, che genera molte classi di test di piccole dimensioni, è consigliabile organizzare ulteriormente i test tramite cartelle e spazi dei nomi. La figura 9-4 illustra un approccio di organizzazione dei test per cartella all'interno di diversi progetti di test.
 
-![Organizzazione delle classi di test per cartella basata sulla classe sottoposta a test](./media/image9-4.png)
+![Organizzazione delle classi di test per cartella in base alla classe testata](./media/image9-4.png)
 
 **Figura 9-4.** Organizzazione delle classi di test per cartella in base alla classe da testare.
 
-Se una particolare classe dell'applicazione dispone di molti metodi sottoposti a test (e di conseguenza molte classi di test), potrebbe essere opportuno inserire questi elementi in una cartella corrispondente alla classe dell'applicazione. Questo tipo di organizzazione è analogo all'organizzazione di file in cartelle in un altro contesto. Se si hanno più di tre o quattro file correlati in una cartella contenente molti altri file, è spesso utile spostare i primi in una sottocartella specifica.
+Se una particolare classe di applicazione dispone di molti metodi sottoposti a test (e quindi molte classi di test), può essere opportuno inserirli in una cartella corrispondente alla classe dell'applicazione. Questo tipo di organizzazione è analogo all'organizzazione di file in cartelle in un altro contesto. Se si hanno più di tre o quattro file correlati in una cartella contenente molti altri file, è spesso utile spostare i primi in una sottocartella specifica.
 
 ## <a name="unit-testing-aspnet-core-apps"></a>Unit test di app ASP.NET Core
 
-In un'applicazione ASP.NET Core ben progettata, la maggior parte della complessità e della logica di business viene incapsulata in entità di business e in una varietà di servizi. L'app ASP.NET Core MVC stessa, con i controller, i filtri, i ViewModel e le visualizzazioni, deve richiedere un numero molto ridotto di unit test. Buona parte delle funzionalità di un'azione specifica si trova all'esterno del metodo di azione stesso. Il test del funzionamento del routing o la gestione globale degli errori non può essere eseguita in modo efficiente con uno unit test. Analogamente, qualsiasi filtro, inclusi i filtri di convalida del modello e di autenticazione e autorizzazione, non può essere unit test con un test destinato al metodo di azione di un controller. Senza queste origini di comportamento, la maggior parte dei metodi di azione sarebbero incredibilmente piccoli e delegherebbero la maggior parte delle proprie funzioni a servizi che possono essere testati indipendentemente dal controller che li usa.
+In un'applicazione ASP.NET Core ben progettata, la maggior parte della complessità e della logica di business viene incapsulata in entità di business e in una varietà di servizi. L'app ASP.NET Core MVC stessa, con i controller, i filtri, i ViewModel e le visualizzazioni, deve richiedere un numero molto ridotto di unit test. Buona parte delle funzionalità di un'azione specifica si trova all'esterno del metodo di azione stesso. Il test del funzionamento del routing o la gestione globale degli errori non può essere eseguita in modo efficiente con uno unit test. Analogamente, tutti i filtri, inclusi i filtri di convalida e autenticazione e autorizzazione del modello, non possono essere sottoposti a unit test con un metodo di azione di destinazione di test. Senza queste origini di comportamento, la maggior parte dei metodi di azione sarebbero incredibilmente piccoli e delegherebbero la maggior parte delle proprie funzioni a servizi che possono essere testati indipendentemente dal controller che li usa.
 
 In alcuni casi, per eseguire lo unit test del codice è necessario effettuare il refactoring di quest'ultimo. Spesso ciò comporta l'identificazione di astrazioni e l'uso dell'inserimento di dipendenze per accedere all'astrazione nel codice che si vuole testare, anziché la scrittura di codice direttamente a fronte dell'infrastruttura. Si consideri ad esempio, questo semplice metodo di azione per la visualizzazione di immagini:
 
@@ -143,7 +143,7 @@ public IActionResult GetImage(int id)
 }
 ```
 
-`_logger` e `_imageService` vengono entrambi inseriti come dipendenze. A questo punto è possibile verificare che lo stesso ID passato al metodo di azione venga passato a `_imageService`e che i byte risultanti vengano restituiti come parte del FileResult. È anche possibile verificare che la registrazione degli errori si verifichi come previsto e che venga restituito un risultato `NotFound` se l'immagine non è presente, supponendo che si tratta di un comportamento importante dell'applicazione, ovvero non solo il codice temporaneo che lo sviluppatore ha aggiunto per diagnosticare un problema. La logica effettiva del file è stata spostata in un servizio di implementazione separato ed è stata migliorata perché venga restituita un'eccezione specifica dell'applicazione in caso di mancanza di un file. È possibile testare questa implementazione in modo indipendente, usando un test di integrazione.
+`_logger`e `_imageService` sono entrambi iniettati come dipendenze. A questo punto è possibile verificare che lo stesso `_imageService`ID passato al metodo di azione venga passato a e che i byte risultanti vengano restituiti come parte di FileResult. È anche possibile verificare che la registrazione `NotFound` degli errori si verifichi come previsto e che venga restituito un risultato se l'immagine non è presente, presupponendo che si tratti di un comportamento importante dell'applicazione, ovvero non solo del codice temporaneo aggiunto dallo sviluppatore per diagnosticare un problema. La logica effettiva del file è stata spostata in un servizio di implementazione separato ed è stata migliorata perché venga restituita un'eccezione specifica dell'applicazione in caso di mancanza di un file. È possibile testare questa implementazione in modo indipendente, usando un test di integrazione.
 
 Nella maggior parte dei casi è opportuno usare i gestori di eccezioni globali nei controller, per ridurre al minimo la quantità di codice e di conseguenza la necessità di esecuzione di unit test. È consigliabile eseguire la maggior parte dei test di azioni dei controller mediante i test funzionali e la classe `TestServer` descritta di seguito.
 
@@ -153,7 +153,7 @@ La maggior parte dei test di integrazione nelle app ASP.NET Core dovrebbe riguar
 
 ## <a name="functional-testing-aspnet-core-apps"></a>Test funzionale di app ASP.NET Core
 
-Per le applicazioni ASP.NET Core, la classe `TestServer` semplifica notevolmente la scrittura di test funzionali. È possibile configurare un `TestServer` usando direttamente una `WebHostBuilder` (o `HostBuilder`), come si fa normalmente per l'applicazione, oppure con il tipo di `WebApplicationFactory` (disponibile a partire dalla versione 2,1). È consigliabile cercare la corrispondenza più esatta possibile tra l'host di test e l'host di produzione, in modo che i test abbiano un comportamento simile a quello dell'app in produzione. La classe `WebApplicationFactory` è utile per configurare ContentRoot di TestServer, che viene usata da ASP.NET Core per trovare una risorsa statica come Views.
+Per le applicazioni ASP.NET Core, la classe `TestServer` semplifica notevolmente la scrittura di test funzionali. È possibile `TestServer` configurare un utilizzando un `WebHostBuilder` (o `HostBuilder`) direttamente (come si fa normalmente per l'applicazione) o con il `WebApplicationFactory` tipo (disponibile dalla versione 2.1). È consigliabile cercare la corrispondenza più esatta possibile tra l'host di test e l'host di produzione, in modo che i test abbiano un comportamento simile a quello dell'app in produzione. La classe `WebApplicationFactory` è utile per configurare ContentRoot di TestServer, che viene usata da ASP.NET Core per trovare una risorsa statica come Views.
 
 È possibile generare test funzionali semplici creando una classe di test che implementa IClassFixture \<WebApplicationFactoryTEntry\<>>, dove TEntry è la classe Startup dell'applicazione Web. In questo modo, la fixture di test può creare un client usando il metodo CreateClient della factory:
 
@@ -202,7 +202,7 @@ namespace Microsoft.eShopWeb.FunctionalTests.Web
                     .AddEntityFrameworkInMemoryDatabase()
                     .BuildServiceProvider();
 
-                // Add a database context (ApplicationDbContext) using an in-memory 
+                // Add a database context (ApplicationDbContext) using an in-memory
                 // database for testing.
                 services.AddDbContext<CatalogContext>(options =>
                 {
@@ -294,15 +294,15 @@ Questo test funzionale interessa tutto lo stack dell'applicazione ASP.NET Core M
 
 > ### <a name="references--test-aspnet-core-mvc-apps"></a>Riferimenti: testare app ASP.NET Core MVC
 >
-> - **Test in ASP.NET Core** \
+> - **Test in ASP.NET CoreTesting in ASP.NET Core** \
 >   <https://docs.microsoft.com/aspnet/core/testing/>
-> - **Convenzione di denominazione per Unit Test** \
+> - **Convenzione di denominazione degli unit test** \
 >   <https://ardalis.com/unit-test-naming-convention>
-> - **Test EF Core** \
+> - **Test di EF Core** \
 >   <https://docs.microsoft.com/ef/core/miscellaneous/testing/>
 > - **Test di integrazione in ASP.NET Core** \
 >   <https://docs.microsoft.com/aspnet/core/test/integration-tests>
 
 >[!div class="step-by-step"]
->[Precedente](work-with-data-in-asp-net-core-apps.md)
->[Successivo](development-process-for-azure.md)
+>[Successivo](work-with-data-in-asp-net-core-apps.md)
+>[precedente](development-process-for-azure.md)

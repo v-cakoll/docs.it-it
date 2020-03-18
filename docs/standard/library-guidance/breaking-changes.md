@@ -3,13 +3,13 @@ title: Modifiche di rilievo e librerie .NET
 description: Procedure consigliate per esplorare le modifiche di rilievo durante la creazione di librerie .NET.
 ms.date: 10/02/2018
 ms.openlocfilehash: 2cbd9e0a818b52aede6c9b1f60fdf52dcbd7b96f
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76731469"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79400421"
 ---
-# <a name="breaking-changes"></a>Modifiche che causano un'interruzione
+# <a name="breaking-changes"></a>Modifiche di rilievo
 
 Per una libreria .NET è importante trovare un equilibrio tra la stabilità per gli utenti esistenti e l'innovazione per il futuro. Gli autori di libreria effettuano il refactoring e rielaborano il codice finché non è perfetto. Interrompere gli utenti esistenti ha tuttavia un impatto negativo, soprattutto per le librerie di basso livello.
 
@@ -25,11 +25,11 @@ A seconda di come una libreria viene usata dalla community .NET, cambia l'effett
 
   Le librerie di alto livello hanno un riferimento diretto all'interno di un'applicazione per utenti finali. In caso di modifiche di rilievo, lo sviluppatore può scegliere di eseguire l'aggiornamento alla versione più recente oppure può modificare l'applicazione per accettare le modifiche di rilievo.
 
-✔️ si pensi alla modalità di utilizzo della libreria. Valutare l'effetto che le modifiche di rilievo avranno sulle applicazioni e sulle librerie in cui è usata la libreria.
+✔️ CONSIDERARE quale sarà l'uso della libreria. Valutare l'effetto che le modifiche di rilievo avranno sulle applicazioni e sulle librerie in cui è usata la libreria.
 
-✔️ ridurre al minimo le modifiche di rilievo durante lo sviluppo di una libreria .NET di basso livello.
+✔️ RIDURRE AL MINIMO le modifiche di rilievo quando si sviluppa una libreria .NET di basso livello.
 
-✔️ CONSIGLIABILE pubblicare una riscrittura principale di una libreria come nuovo pacchetto NuGet.
+✔️CONSIDERARE  la possibilità di pubblicare una riscrittura principale di una libreria come nuovo pacchetto NuGet.
 
 ## <a name="types-of-breaking-changes"></a>Tipi di modifiche di rilievo
 
@@ -56,7 +56,7 @@ Le modifiche del comportamento sono i tipi di modifica più comuni. Quasi tutte 
 
 Ad esempio, ASP.NET Core MVC include il concetto di una [versione di compatibilità](/aspnet/core/mvc/compatibility-version) che consente di modificare la funzionalità abilitate e disabilitate in `MvcOptions`.
 
-✔️ CONSIGLIABILE lasciare le nuove funzionalità disattivate per impostazione predefinita, se hanno effetto sugli utenti esistenti e consentire agli sviluppatori di acconsentire esplicitamente alla funzionalità con un'impostazione.
+✔️ CONSIDERARE di lasciare disabilitate le nuove funzionalità per impostazione predefinita qualora abbiano effetto sugli utenti esistenti, e consentire agli sviluppatori di accettare esplicitamente la funzionalità con un'impostazione.
 
 ### <a name="binary-breaking-change"></a>Modifica di tipo binario
 
@@ -64,15 +64,15 @@ Una modifica di tipo binario si verifica quando viene modificata l'API pubblica 
 
 Una modifica di tipo binario può interrompere anche un **intero assembly**. La rinomina di un assembly con `AssemblyName` modificherà l'identità dell'assembly, esattamente come succede se si aggiunge, rimuove o modifica la chiave per la creazione di nomi sicuri. La modifica di un'identità dell'assembly interrompe l'intero codice compilato in cui viene usata.
 
-❌ non modificare il nome di un assembly.
+❌NON modificare il nome di un assembly.
 
-❌ non aggiungere, rimuovere o modificare la chiave di denominazione sicura.
+❌NON aggiungere, rimuovere o modificare la chiave di denominazione sicura.
 
-✔️ CONSIGLIABILE utilizzare le classi base astratte anziché le interfacce.
+✔️ CONSIDERARE l'uso di classi di base astratte al posto di interfacce.
 
 > Se si aggiunge un qualsiasi elemento a un'interfaccia, i tipi esistenti che la implementano non saranno eseguiti correttamente. Una classe di base astratta consente di aggiungere un'impostazione virtuale.
 
-✔️ CONSIGLIABILE inserire il <xref:System.ObsoleteAttribute> sui tipi e i membri che si intende rimuovere. L'attributo deve avere istruzioni per l'aggiornamento del codice affinché non sia più usata l'API obsoleta.
+✔️ CONSIDERARE di posizionare la classe <xref:System.ObsoleteAttribute> su tipi e membri che non saranno rimossi. L'attributo deve avere istruzioni per l'aggiornamento del codice affinché non sia più usata l'API obsoleta.
 
 > Il codice che chiama i tipi e i metodi con la classe <xref:System.ObsoleteAttribute> genererà un avviso di compilazione con il messaggio specificato per l'attributo. Gli avvisi consentono a chi usa la superficie dell'API obsoleta di avere il tempo necessario per eseguire la migrazione. In questo modo, al momento della rimozione dell'API obsoleta, non sarà più usata da molti.
 
@@ -92,7 +92,7 @@ public class Document
 }
 ```
 
-✔️ considerare la possibilità di mantenere i tipi e i metodi con l'<xref:System.ObsoleteAttribute> a tempo indeterminato nelle librerie di livello basso e medio.
+✔️ CONSIDERARE di mantenere tipi e metodi con la classe <xref:System.ObsoleteAttribute> in modo illimitato nelle librerie di livello medio e basso.
 
 > La rimozione delle API è considerata una modifica di tipo binario. Valutare di mantenere tipi e metodi obsoleti se i costi di manutenzione sono bassi e non si richiedono interventi tecnici importanti alla libreria. Se i tipi e i metodi non vengono rimossi, si evita di assistere agli scenari peggiori descritti in precedenza.
 
@@ -100,7 +100,7 @@ public class Document
 
 - [Considerazioni su versione e aggiornamento per gli sviluppatori C#](../../csharp/whats-new/version-update-considerations.md)
 - [A definitive guide to API-breaking changes in .NET](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net) (Ottima guida alle modifiche di rilievo delle API in .NET)
-- [Regole per le modifiche di rilievo .NET](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/breaking-change-rules.md)
+- [Regole di modifica di rilievo .NET](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/breaking-change-rules.md)
 
 >[!div class="step-by-step"]
->[Precedente](versioning.md)
+>[Indietro](versioning.md)

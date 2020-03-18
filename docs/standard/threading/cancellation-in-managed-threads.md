@@ -9,10 +9,10 @@ helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
 ms.openlocfilehash: d4bbf30923d65ad7aeced80efa626136ae27491b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138145"
 ---
 # <a name="cancellation-in-managed-threads"></a>Annullamento in thread gestiti
@@ -52,7 +52,7 @@ A partire da .NET Framework 4, .NET Framework usa un modello unificato per l'ann
 ## <a name="cancellation-types"></a>Tipi di annullamento  
  Il framework di annullamento viene implementato come set di tipi correlati, elencati nella tabella seguente.  
   
-|Nome del tipo|Descrizione|  
+|Nome tipo|Descrizione|  
 |---------------|-----------------|  
 |<xref:System.Threading.CancellationTokenSource>|Oggetto che crea un token di annullamento e che invia inoltre la richiesta di annullamento per tutte le copie del token.|  
 |<xref:System.Threading.CancellationToken>|Tipo di valore leggero passato a uno o più listener, in genere come parametro di un metodo. I listener monitorano il valore della proprietà `IsCancellationRequested` del token tramite polling, callback o handle di attesa.|  
@@ -84,7 +84,7 @@ A partire da .NET Framework 4, .NET Framework usa un modello unificato per l'ann
   
  Tuttavia, in casi più complessi il delegato dell'utente potrebbe dover notificare al codice di libreria il verificarsi dell'annullamento. In questi casi, il modo corretto di terminare l'operazione per il delegato consiste nel chiamare il metodo <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A>, che provoca la generazione di un'eccezione <xref:System.OperationCanceledException>. Il codice di libreria può rilevare l'eccezione nel thread del delegato dell'utente ed esaminare il token dell'eccezione per determinare se l'eccezione indica l'annullamento cooperativo o un'altra situazione eccezionale.  
   
- La classe <xref:System.Threading.Tasks.Task> gestisce <xref:System.OperationCanceledException> in questo modo. Per altre informazioni, vedere [Annullamento delle attività](../../../docs/standard/parallel-programming/task-cancellation.md).  
+ La classe <xref:System.Threading.Tasks.Task> gestisce <xref:System.OperationCanceledException> in questo modo. Per altre informazioni, vedere [Task Cancellation](../../../docs/standard/parallel-programming/task-cancellation.md).  
   
 ### <a name="listening-by-polling"></a>Ascolto tramite polling  
  Per calcoli a esecuzione prolungata che eseguono cicli o sono ricorsivi, è possibile restare in ascolto di una richiesta di annullamento eseguendo periodicamente il polling del valore della proprietà <xref:System.Threading.CancellationToken.IsCancellationRequested%2A?displayProperty=nameWithType>. Se il valore della proprietà è `true`, il metodo deve eseguire la pulizia e quindi deve essere terminato il più rapidamente possibile. La frequenza di polling ottimale dipende dal tipo di applicazione. È compito dello sviluppatore determinare la migliore frequenza di polling per qualsiasi programma specifico. Il polling in sé non ha un impatto significativo sulle prestazioni. L'esempio seguente mostra uno dei modi in cui è possibile eseguire il polling.  
@@ -144,7 +144,7 @@ A partire da .NET Framework 4, .NET Framework usa un modello unificato per l'ann
   
 - I delegati dell'utente devono tentare di rispondere alle richieste di annullamento dal codice di libreria in modo tempestivo.  
   
- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> e <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> sono esempi di classi che seguono queste linee guida. Per altre informazioni, vedere [annullamento delle attività](../../../docs/standard/parallel-programming/task-cancellation.md) e [procedura: annullare una query PLINQ](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md).  
+ <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> e <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> sono esempi di classi che seguono queste linee guida. Per ulteriori informazioni, vedere [Annullamento di attività](../../../docs/standard/parallel-programming/task-cancellation.md) e [Procedura: annullare una query PLINQ](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -15,10 +15,10 @@ helpviewer_keywords:
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 ms.openlocfilehash: b8ed028bc1edabf14d7b2dd67d94b28d574d2eb4
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159624"
 ---
 # <a name="handling-and-raising-events"></a>Gestione e generazione di eventi
@@ -31,7 +31,7 @@ Gli eventi in .NET si basano sul modello di delegato. Il modello di delegato seg
 
 Un evento è un messaggio inviato da un oggetto per segnalare l'occorrenza di un'azione. L'azione può essere causata dall'interazione dell'utente, ad esempio il clic su un pulsante, oppure essere il risultato di altre logiche di programma, ad esempio la modifica di un valore della proprietà. L'oggetto che genera l'evento viene chiamato *mittente dell'evento*. Il mente dell'evento non sa quale oggetto o metodo riceverà (handle) gli eventi che egli genera. L'evento è in genere un membro del mittente dell'evento. Ad esempio, l'evento <xref:System.Web.UI.WebControls.Button.Click> è un membro della classe <xref:System.Web.UI.WebControls.Button> e l'evento <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> è un membro della classe che implementa l'interfaccia <xref:System.ComponentModel.INotifyPropertyChanged>.  
   
-Per definire un evento, usare la parola chiave [`event`](../../csharp/language-reference/keywords/event.md) (in C#) o [`Event`](../../visual-basic/language-reference/statements/event-statement.md) (in Visual Basic) nella firma della classe dell'evento e specificare il tipo di delegato per l'evento. I delegati vengono descritti nella sezione successiva.  
+Per definire un evento, utilizzare [`event`](../../csharp/language-reference/keywords/event.md) la parola [`Event`](../../visual-basic/language-reference/statements/event-statement.md) chiave di C o Visual Basic nella firma della classe di evento e specificare il tipo di delegato per l'evento. I delegati vengono descritti nella sezione successiva.  
   
 In genere, per generare un evento, aggiungere un metodo contrassegnato come `protected` e `virtual` (in C#) o `Protected` e `Overridable` (in Visual Basic). Denominare il metodo `On`*NomeEvento*; ad esempio, `OnDataReceived`. Il metodo deve accettare un parametro che specifica un oggetto dati dell'evento, ovvero un oggetto di tipo <xref:System.EventArgs> o un tipo derivato. Fornire questo metodo per consentire alle classi derivate di sostituire la logica per la generazione dell'evento. Affinché l'evento sia ricevuto da delegati registrati, occorre che tramite una classe derivata venga sempre chiamato il metodo `On`*NomeEvento* della classe di base.  
 
@@ -50,7 +50,7 @@ Sono molti gli usi dei delegati in .NET. Nel contesto degli eventi, un delegato 
   
 I delegati sono [multicast](xref:System.MulticastDelegate), il che significa che possono mantenere riferimenti a più di un metodo di gestione degli eventi. Per informazioni dettagliate, vedere la pagina di riferimento per <xref:System.Delegate>. I delegati offrono flessibilità e controlli specifici nella gestione degli eventi. Un delegato agisce come un dispatcher di eventi per la classe che genera l'evento compilando un elenco di gestori eventi registrati per l'evento.  
   
-Per gli scenari in cui i delegati <xref:System.EventHandler> e <xref:System.EventHandler%601> non sono appropriati, è possibile definire un delegato. Gli scenari che richiedono di definire un delegato sono molto rari, ad esempio quando è necessario lavorare con un codice che non riconosce i generics. Nella dichiarazione contrassegnare un delegato con la parola chiave [`delegate`](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type) (in C#) o [`Delegate`](../../visual-basic/language-reference/statements/delegate-statement.md) (in Visual Basic). Nell'esempio riportato di seguito viene illustrato come dichiarare un delegato denominato `ThresholdReachedEventHandler`.  
+Per gli scenari in cui i delegati <xref:System.EventHandler> e <xref:System.EventHandler%601> non sono appropriati, è possibile definire un delegato. Gli scenari che richiedono di definire un delegato sono molto rari, ad esempio quando è necessario lavorare con un codice che non riconosce i generics. Contrassegnare un delegato con [`delegate`](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type) la [`Delegate`](../../visual-basic/language-reference/statements/delegate-statement.md) parola chiave di C e Visual Basic nella dichiarazione. Nell'esempio riportato di seguito viene illustrato come dichiarare un delegato denominato `ThresholdReachedEventHandler`.  
   
 [!code-csharp[EventsOverview#4](~/samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)]
 [!code-vb[EventsOverview#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  

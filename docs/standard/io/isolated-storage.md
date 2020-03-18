@@ -19,19 +19,19 @@ helpviewer_keywords:
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
 ms.openlocfilehash: ed784bafda2aed829f2e97d7e7e8b2716c48c7ba
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75706582"
 ---
 # <a name="isolated-storage"></a>Spazio di memorizzazione isolato
 <a name="top"></a> Per le applicazioni desktop, lo spazio di memorizzazione isolato è un meccanismo di archiviazione dati che offre isolamento e sicurezza definendo modi standardizzati di associare il codice ai dati salvati. La standardizzazione offre anche altri vantaggi. Gli amministratori possono utilizzare strumenti in grado di modificare l'archiviazione isolata per configurare lo spazio di archiviazione dei file, per impostare i criteri di sicurezza e per eliminare dati inutilizzati. Con lo spazio di memorizzazione isolato, non occorre più fornire al codice percorsi univoci per individuare posizioni sicure nel file system e i dati sono protetti da altre applicazioni che dispongono esclusivamente dell'accesso allo spazio di memorizzazione isolato. Non è necessario specificare informazioni hardcoded che indicano il percorso dell'area di archiviazione di un'applicazione.
 
 > [!IMPORTANT]
-> Lo spazio di memorizzazione isolato non è disponibile per le app di Windows 8. x Store. Al contrario, usare le classi di dati dell'applicazione negli spazi dei nomi `Windows.Storage` inclusi nell'API di Windows Runtime per archiviare dati e file locali. Per altre informazioni, vedere [Dati dell'applicazione](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) nel Centro per sviluppatori Windows.
+> L'archiviazione isolata non è disponibile per le app di Windows 8.x Store. Al contrario, usare le classi di dati dell'applicazione negli spazi dei nomi `Windows.Storage` inclusi nell'API di Windows Runtime per archiviare dati e file locali. Per altre informazioni, vedere [Dati dell'applicazione](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) nel Centro per sviluppatori Windows.
 
-Di seguito sono elencate le diverse sezioni di questo argomento:
+In questo argomento sono incluse le sezioni seguenti:
 
 - [Raggruppamenti e archivi dati](#data_compartments_and_stores)
 
@@ -49,7 +49,7 @@ Di seguito sono elencate le diverse sezioni di questo argomento:
 
 - [Argomenti correlati](#related_topics)
 
-- [Reference](#reference)
+- [Riferimento](#reference)
 
 <a name="data_compartments_and_stores"></a>
 
@@ -144,7 +144,7 @@ Lo spazio di memorizzazione isolato risulta utile in molte situazioni, inclusi i
 
 - Archiviazione di componenti condivisi. I componenti condivisi tra le applicazioni possono utilizzare l'archiviazione isolata per fornire accesso controllato agli archivi di dati.
 
-- Archiviazione server. Le applicazioni server possono utilizzare l'archiviazione isolata per fornire singoli archivi a un ampio numero di utenti che inoltrano richieste all'applicazione. Poiché l'archiviazione isolata è sempre isolata dall'utente, il server deve impersonare l'utente che inoltra la richiesta. In questo caso, i dati vengono isolati in base all'identità del principale, che è la stessa utilizzata dall'applicazione per distinguere gli utenti.
+- Archiviazione server. Le applicazioni server possono utilizzare l'archiviazione isolata per fornire singoli archivi a un ampio numero di utenti che inoltrano richieste all'applicazione. Poiché l'archiviazione isolata è sempre isolata dall'utente, il server deve impersonare l'utente che inoltra la richiesta. In questo caso, i dati vengono isolati in base all'identità del principale, che è la stessa usata dall'applicazione per distinguere gli utenti.
 
 - Roaming. Le applicazioni possono anche utilizzare l'archiviazione isolata con i profili di utente roaming. In questo modo gli archivi isolati di un utente possono spostarsi con il profilo.
 
@@ -171,13 +171,13 @@ Molte applicazioni utilizzano un database per memorizzare e isolare dati. In que
 |[Procedura: Anticipare le condizioni di spazio insufficiente con lo spazio di memorizzazione isolato](../../../docs/standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md)|Viene illustrato come misurare lo spazio rimanente in un archivio isolato.|
 |[Procedura: Creare file e directory nello spazio di memorizzazione isolato](../../../docs/standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|Vengono forniti alcuni esempi di creazione di file e directory in un archivio isolato.|
 |[Procedura: Trovare file e directory esistenti nello spazio di memorizzazione isolato](../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|Viene illustrato come leggere la struttura di directory e i file dell'archiviazione isolata.|
-|[Procedura: Leggere e scrivere sui file nello spazio di memorizzazione isolato](../../../docs/standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|Viene fornito un esempio di scrittura e rilettura di una stringa in un file di spazio di memorizzazione isolato.|
+|[Procedura: leggere e scrivere sui file nello spazio di memorizzazione isolato](../../../docs/standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|Viene fornito un esempio di scrittura e rilettura di una stringa in un file di spazio di memorizzazione isolato.|
 |[Procedura: Eliminare file e directory nello spazio di memorizzazione isolato](../../../docs/standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|Viene illustrato come eliminare file e directory di uno spazio di memorizzazione isolato.|
-|[I/O di file e di flussi](../../../docs/standard/io/index.md)|Illustra le modalità di esecuzione di un file sincrono e asincrono e dell'accesso al flusso di dati.|
+|[I/O su file e flusso](../../../docs/standard/io/index.md)|Illustra le modalità di esecuzione di un file sincrono e asincrono e dell'accesso al flusso di dati.|
 
 <a name="reference"></a>
 
-## <a name="reference"></a>Riferimenti
+## <a name="reference"></a>Informazioni di riferimento
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorage?displayProperty=nameWithType>
 

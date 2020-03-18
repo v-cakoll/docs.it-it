@@ -1,5 +1,6 @@
 ---
 title: Esposizione di componenti .NET Core a COM
+description: In questa esercitazione viene illustrato come esporre una classe a COM da .NET Core.This tutorial shows you how to expose a class to COM from .NET Core. Generare un server COM e un manifesto del server side-by-side per COM senza Registro di sistema.
 ms.date: 07/12/2019
 helpviewer_keywords:
 - exposing .NET Core components to COM
@@ -8,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: f6665e18e51af96761941e419fabc409e4b9391d
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 98d303c99693a8aadb23da509a700772db69c0e0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78240974"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146658"
 ---
 # <a name="exposing-net-core-components-to-com"></a>Esposizione di componenti .NET Core a COM
 
@@ -25,7 +26,7 @@ In .NET Core, il processo di esposizione degli oggetti .NET a COM è stato signi
 
 ## <a name="prerequisites"></a>Prerequisites
 
-- Installare [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download) o una versione più recente.
+- Installare [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download) o una versione più recente.
 
 ## <a name="create-the-library"></a>Creare la libreria
 
@@ -90,6 +91,6 @@ L'output risultante includerà ora anche un file `ProjectName.X.manifest`. Quest
 
 ## <a name="additional-notes"></a>Note aggiuntive
 
-Diversamente da .NET Framework, in .NET Core non è disponibile alcun supporto per la generazione di una libreria dei tipi COM (TLB) da un assembly .NET Core. Le linee guida consentono di scrivere manualmente un file IDL o un'intestazione CC++ /per le dichiarazioni native delle interfacce com.
+Diversamente da .NET Framework, in .NET Core non è disponibile alcun supporto per la generazione di una libreria dei tipi COM (TLB) da un assembly .NET Core. La guida consiste nel scrivere manualmente un file IDL o un'intestazione C/C, per le dichiarazioni native delle interfacce COM.
 
-Inoltre, il caricamento di .NET Framework e .NET Core nello stesso processo ha limitazioni di diagnostica. Il limite principale è il debug dei componenti gestiti, poiché non è possibile eseguire contemporaneamente il debug di .NET Framework e .NET Core. Inoltre, le due istanze di runtime non condividono assembly gestiti. Ciò significa che non è possibile condividere i tipi .NET effettivi tra i due runtime, ma tutte le interazioni devono essere limitate ai contratti di interfaccia COM esposti.
+Inoltre, il caricamento di .NET Framework e .NET Core nello stesso processo ha limitazioni diagnostiche. La limitazione principale è il debug dei componenti gestiti in quanto non è possibile eseguire il debug contemporaneamente di .NET Framework e .NET Core. Inoltre, le due istanze di runtime non condividono assembly gestiti. Ciò significa che non è possibile condividere i tipi .NET effettivi tra i due runtime e invece tutte le interazioni devono essere limitate ai contratti di interfaccia COM esposti.

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: uso del flusso di dati in Windows Forms Application'
+title: "Procedura dettagliata: Uso del flusso di dati in un'applicazione Windows Forms"
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - Windows Forms, and TPL
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 ms.openlocfilehash: 794253514edf63f02276e1ece21c60a85c534390
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159767"
 ---
-# <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Procedura dettagliata: uso del flusso di dati in Windows Forms Application
+# <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Procedura dettagliata: Uso del flusso di dati in un'applicazione Windows Forms
 Questo documento illustra come creare una rete di blocchi di flussi di dati tramite cui viene eseguita l'elaborazione di immagini in una Windows Forms Application.  
   
  Questo esempio carica i file di immagine dalla cartella specificata, crea un'immagine composita e visualizza il risultato. L'esempio utilizza il modello di flusso di dati per instradare le immagini tramite la rete. Nel modello del flusso di dati, i componenti indipendenti di un programma di comunicano tra loro mediante l'invio di messaggi. Quando un componente riceve un messaggio, esegue una determinata azione e quindi passa il risultato a un altro componente. Confrontare questo modello con il modello di flusso di controllo, in cui un'applicazione utilizza le strutture di controllo, ad esempio le istruzioni condizionali, i cicli e così via, per controllare l'ordine delle operazioni in un programma.  
@@ -127,7 +127,7 @@ Questo documento illustra come creare una rete di blocchi di flussi di dati tram
   
  La figura seguente mostra un output tipico per la cartella common\Sample Pictures\.  
   
- ![Applicazione Windows Forms](../../../docs/standard/parallel-programming/media/tpldataflow-compositeimages.gif "TPLDataflow_CompositeImages")  
+ ![Applicazione Windows Form](../../../docs/standard/parallel-programming/media/tpldataflow-compositeimages.gif "TPLDataflow_CompositeImages")  
 
 ## <a name="see-also"></a>Vedere anche
 

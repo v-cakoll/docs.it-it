@@ -7,12 +7,12 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: 42932809d58c739afc165676c0b90c5a23f568de
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 33616e4eacb484b9c6eda3862cd86fdd1e6df165
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712819"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173484"
 ---
 # <a name="where-clause-c-reference"></a>Clausola where (Riferimento C#)
 
@@ -26,7 +26,7 @@ Nell'esempio seguente la clausola `where` esclude tutti i numeri tranne quelli m
 
 ## <a name="example"></a>Esempio
 
-In una singola clausola `where` è possibile specificare tutti i predicati necessari usando gli operatori [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) e [&#124;&#124;](../operators/boolean-logical-operators.md#conditional-logical-or-operator-). Nell'esempio seguente la query specifica due predicati per selezionare solo i numeri pari minori di cinque.
+All'interno `where` di una singola clausola, è possibile specificare tutti i predicati necessari utilizzando gli [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) operatori e [&#124;&#124;](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) . Nell'esempio seguente la query specifica due predicati per selezionare solo i numeri pari minori di cinque.
 
 [!code-csharp[cscsrefQueryKeywords#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Where.cs#6)]  
 
@@ -36,19 +36,19 @@ Una clausola `where` può contenere uno o più metodi che restituiscono valori b
 
 [!code-csharp[cscsrefQueryKeywords#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Where.cs#7)]
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 La clausola `where` è un meccanismo di filtro. Può essere posizionata praticamente ovunque in un'espressione di query, ma non può essere la prima o l'ultima clausola. Una clausola `where` la può apparire prima o dopo una clausola [group](group-clause.md) a seconda se gli elementi di origine devono essere filtrati prima o dopo essere stati raggruppati.
 
-Se un predicato specificato non è valido per gli elementi nell'origine dati, si verificherà un errore in fase di compilazione. Questo è un vantaggio del controllo del tipo forte fornito da LINQ.
+Se un predicato specificato non è valido per gli elementi nell'origine dati, si verificherà un errore in fase di compilazione. Questo è uno dei vantaggi del controllo dei tipi forte fornito da LINQ.
 
 In fase di compilazione, la parola chiave `where` viene convertita in una chiamata al metodo <xref:System.Linq.Enumerable.Where%2A> dell'operatore query standard.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Parole chiave di query (LINQ)](query-keywords.md)
-- [Clausola from](from-clause.md)
-- [Clausola select](select-clause.md)
-- [Filtraggio dei dati](../../programming-guide/concepts/linq/filtering-data.md)
+- [Parole chiave di query (LINQ)Query Keywords (LINQ)](query-keywords.md)
+- [clausola from](from-clause.md)
+- [clausola select](select-clause.md)
+- [Filtro dei dati](../../programming-guide/concepts/linq/filtering-data.md)
 - [LINQ in C#](../../linq/index.md)
-- [Nozioni di base su LINQ in C#](/dotnet/csharp/programming-guide/concepts/linq/)
+- [Language Integrated Query (LINQ)](../../programming-guide/concepts/linq/index.md)

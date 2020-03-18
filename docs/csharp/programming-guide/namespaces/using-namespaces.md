@@ -8,10 +8,10 @@ helpviewer_keywords:
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
 ms.openlocfilehash: 5193fc7aaae83cbc0c75e81835244eaaaece69a5
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75700198"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Uso degli spazi dei nomi (Guida per programmatori C#)
@@ -30,13 +30,13 @@ Gli spazi dei nomi vengono usati frequentemente nei programmi C# in due modi. In
   
  [!code-csharp[csProgGuide#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#31)]  
   
- Invece di:  
+ Anziché:  
   
  [!code-csharp[csProgGuide#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#30)]  
   
 ## <a name="namespace-aliases"></a>Alias dello spazio dei nomi
 
- È anche possibile usare la [direttiva `using`](../../language-reference/keywords/using-directive.md) per creare un alias per uno spazio dei nomi. Usare il [qualificatore di alias dello spazio dei nomi `::`](../../language-reference/operators/namespace-alias-qualifier.md) per accedere ai membri dello spazio dei nomi con alias. Nell'esempio seguente viene illustrato come creare e usare un alias dello spazio dei nomi:
+ È inoltre possibile utilizzare la [ `using` direttiva](../../language-reference/keywords/using-directive.md) per creare un alias per uno spazio dei nomi. Usare il [qualificatore di alias dello spazio dei nomi `::`](../../language-reference/operators/namespace-alias-qualifier.md) per accedere ai membri dello spazio dei nomi con alias. Nell'esempio seguente viene illustrato come creare e usare un alias dello spazio dei nomi:
   
 [!code-csharp[csProgGuideNamespaces#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#5)]
   
@@ -94,6 +94,6 @@ Gli spazi dei nomi vengono usati frequentemente nei programmi C# in due modi. In
 
 - [Guida per programmatori C#](../index.md)
 - [Spazi dei nomi](./index.md)
-- [Operatore .](../../language-reference/operators/member-access-operators.md#member-access-operator-)
-- [Operatore ::](../../language-reference/operators/namespace-alias-qualifier.md)
-- [alias extern](../../language-reference/keywords/extern-alias.md)
+- [. Operatore](../../language-reference/operators/member-access-operators.md#member-access-operator-)
+- [:: operatore](../../language-reference/operators/namespace-alias-qualifier.md)
+- [Alias extern](../../language-reference/keywords/extern-alias.md)

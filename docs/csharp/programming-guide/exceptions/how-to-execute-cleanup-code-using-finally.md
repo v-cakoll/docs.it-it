@@ -1,5 +1,5 @@
 ---
-title: Come eseguire il codice di pulitura usando C# infine la guida alla programmazione
+title: Come eseguire il codice di pulitura utilizzando infine - Guida per programmatori C
 ms.date: 07/20/2015
 helpviewer_keywords:
 - try/finally blocks [C#]
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - exception handling [C#], try/finally block
 ms.assetid: 1b1e5aef-3f32-4a88-9d39-b5fffb33bdaf
 ms.openlocfilehash: d1ba761e64053d656ad4cd004133fc455a57c6f6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705275"
 ---
-# <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>Come eseguire il codice di pulizia con finally (C# guida per programmatori)
+# <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>Come eseguire il codice di pulitura utilizzando finally (Guida per programmatori C
 Lo scopo di un'istruzione `finally` consiste nel garantire che la pulizia necessaria di oggetti, in genere oggetti che contengono risorse esterne, venga eseguita immediatamente, anche se viene generata un'eccezione. Un esempio di questo tipo di pulizia è la chiamata di <xref:System.IO.Stream.Close%2A> in un oggetto <xref:System.IO.FileStream> immediatamente dopo l'uso, invece di aspettare che l'oggetto venga sottoposto a Garbage Collection da Common Language Runtime, come illustrato di seguito:  
   
  [!code-csharp[csProgGuideExceptions#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#16)]  
@@ -34,5 +34,5 @@ Lo scopo di un'istruzione `finally` consiste nel garantire che la pulizia necess
 - [Gestione delle eccezioni](./exception-handling.md)
 - [Istruzione using](../../language-reference/keywords/using-statement.md)
 - [try-catch](../../language-reference/keywords/try-catch.md)
-- [try-finally](../../language-reference/keywords/try-finally.md)
+- [try...finally](../../language-reference/keywords/try-finally.md)
 - [try-catch-finally](../../language-reference/keywords/try-catch-finally.md)

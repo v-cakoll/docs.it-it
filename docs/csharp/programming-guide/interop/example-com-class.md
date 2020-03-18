@@ -6,10 +6,10 @@ helpviewer_keywords:
 - COM, exposing Visual C# objects to
 ms.assetid: 6504dea9-ad1c-4993-a794-830fec5270af
 ms.openlocfilehash: 6af85d0314a44acbde0996cecbe6dad82cdcc8db
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712078"
 ---
 # <a name="example-com-class-c-programming-guide"></a>Esempio di classe COM (Guida per programmatori C#)
@@ -40,4 +40,4 @@ Di seguito è riportato un esempio di una classe esposta come oggetto COM. Dopo 
 
 - [Guida per programmatori C#](../index.md)
 - [Interoperabilità](./index.md)
-- [Pagina Compilazione, Creazione progetti (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)
+- [Build Page, Project Designer (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp) (Pagina Compilazione, Progettazione progetti (C#))

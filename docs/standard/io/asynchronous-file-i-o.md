@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data streams, synchronous streams
 ms.assetid: dbdd55e7-d6b9-4f9e-8abb-ab0edd4457f7
 ms.openlocfilehash: 66e7d01f37a1119b9d2076a9131aa40f26d15625
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75708191"
 ---
 # <a name="asynchronous-file-io"></a>I/O di file asincrono
 
-Le operazioni asincrone consentono di eseguire operazioni di I/O a elevato utilizzo di risorse senza bloccare il thread principale. Questa considerazione sulle prestazioni è particolarmente importante in un'app di Windows 8. x Store o in un'app desktop in cui un'operazione di flusso che richiede molto tempo può bloccare il thread dell'interfaccia utente e fare in modo che l'app appaia come se non fosse funzionante.
+Le operazioni asincrone consentono di eseguire operazioni di I/O a elevato utilizzo di risorse senza bloccare il thread principale. Questa considerazione sulle prestazioni è particolarmente importante in un'app di Windows 8.x Store o in un'app desktop in cui un'operazione di flusso che richiede molto tempo può bloccare il thread dell'interfaccia utente e far apparire l'app come se non funzionasse.
 
 A partire da .NET Framework 4.5, i tipi di I/O includono metodi async per semplificare le operazioni asincrone. Un metodo asincrono contiene `Async` nel nome, ad esempio <xref:System.IO.Stream.ReadAsync%2A>, <xref:System.IO.Stream.WriteAsync%2A>, <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.FlushAsync%2A>, <xref:System.IO.TextReader.ReadLineAsync%2A>e <xref:System.IO.TextReader.ReadToEndAsync%2A>. Questi metodi asincroni sono implementati nelle classi di flusso, come <xref:System.IO.Stream>, <xref:System.IO.FileStream>e <xref:System.IO.MemoryStream>, e nelle classi usate per la lettura o la scrittura nei flussi, come <xref:System.IO.TextReader> e <xref:System.IO.TextWriter>.
 
@@ -50,7 +50,7 @@ L'esempio seguente è simile a quello precedente ma usa gli oggetti <xref:System
 [!code-csharp[Asynchronous_File_IO_async#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Asynchronous_File_IO_async/cs/example2.cs#2)]
 [!code-vb[Asynchronous_File_IO_async#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Asynchronous_File_IO_async/vb/example2.vb#2)]
 
-L'esempio seguente mostra il file code-behind e il file XAML usati per aprire un file come <xref:System.IO.Stream> in un'app di Windows 8. x Store e leggerne il contenuto usando un'istanza della classe <xref:System.IO.StreamReader>. Usa i metodi asincroni per aprire il file come flusso e leggerne il contenuto.
+L'esempio successivo mostra il file code-behind e il file <xref:System.IO.Stream> XAML usati per aprire un file come in un'app <xref:System.IO.StreamReader> di Windows 8.x Store e leggerne il contenuto usando un'istanza della classe. Usa i metodi asincroni per aprire il file come flusso e leggerne il contenuto.
 
 [!code-csharp[System.IO.WindowsRuntimeStorageExtensions#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.windowsruntimestorageextensions/cs/blankpage.xaml.cs#2)]
 [!code-vb[System.IO.WindowsRuntimeStorageExtensions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.windowsruntimestorageextensions/vb/blankpage.xaml.vb#2)]
@@ -60,6 +60,6 @@ L'esempio seguente mostra il file code-behind e il file XAML usati per aprire un
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.IO.Stream>
-- [I/O di file e di flussi](index.md)
-- [Programmazione asincrona con async e await (C#)](../../csharp/programming-guide/concepts/async/index.md)
+- [I/O su file e flusso](index.md)
+- [Programmazione asincrona con async e await (C )Asynchronous programming with async and await (C](../../csharp/programming-guide/concepts/async/index.md)
 - [Programmazione asincrona con Async e Await (Visual Basic)](../../visual-basic/programming-guide/concepts/async/index.md)

@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '#endregion directive [C#]'
 ms.assetid: 16099660-91b2-49e5-9646-77f9ef069526
-ms.openlocfilehash: b334691689da8b3e8f74f4899e34061bfc921c07
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c61c7a890811014acc69a43e422be53480bfb6f9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712533"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173419"
 ---
 # <a name="endregion-c-reference"></a>#endregion (Riferimenti per C#)
 `#endregion` indica la fine di un blocco [#region](./preprocessor-region.md). Ad esempio:  
   
 ```csharp
 #region MyClass definition  
-class MyClass   
+class MyClass
 {  
-    static void Main()   
+    static void Main()
     {  
     }  
 }  
@@ -29,6 +29,6 @@ class MyClass
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
+- [Guida di riferimento a C](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
-- [Direttive per il preprocessore C#](./index.md)
+- [Direttive per il preprocessore di C](./index.md)

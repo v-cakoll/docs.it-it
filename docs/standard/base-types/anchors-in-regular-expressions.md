@@ -17,10 +17,10 @@ helpviewer_keywords:
 - .NET Framework regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 ms.openlocfilehash: c4853a6854f5da1a3217c976a03ddbde3b528560
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159663"
 ---
 # <a name="anchors-in-regular-expressions"></a>Ancoraggi in espressioni regolari
@@ -49,12 +49,12 @@ Gli ancoraggi, o asserzioni atomiche di larghezza zero, specificano una posizion
  [!code-csharp[Conceptual.RegEx.Language.Assertions#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/startofstring1.cs#1)]
  [!code-vb[Conceptual.RegEx.Language.Assertions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/startofstring1.vb#1)]  
   
- Il criterio di espressione regolare `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+` è definito nel modo illustrato nella tabella seguente.  
+ Il criterio di ricerca di espressioni regolari `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+` è definito nel modo illustrato nella tabella seguente.  
   
 |Modello|Descrizione|  
 |-------------|-----------------|  
 |`^`|La corrispondenza deve iniziare all'inizio della stringa di input (o all'inizio della riga se il metodo viene chiamato con l'opzione <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> ).|  
-|`((\w+(\s?)){2,}`|Trova uno o più caratteri alfanumerici seguiti da nessuno o uno spazio almeno due volte. Equivale al primo gruppo di acquisizione. Questa espressione definisce anche un secondo e un terzo gruppo di acquisizione: il secondo è costituito dalla parola acquisita e il terzo è costituito dallo spazio vuoto acquisito.|  
+|`((\w+(\s?)){2,}`|Trova uno o più caratteri alfanumerici seguiti da nessuno o uno spazio almeno due volte. Equivale al primo gruppo di acquisizione. Questa espressione definisce anche un secondo e terzo gruppo di acquisizione: il secondo è costituito dalla parola acquisita e il terzo è costituito dallo spazio vuoto acquisito.|  
 |`,\s`|Trova una virgola seguita da uno spazio vuoto.|  
 |`(\w+\s\w+)`|Trova uno o più caratteri alfanumerici seguiti da uno spazio, seguito da uno o più caratteri alfanumerici. Questo è il quarto gruppo di acquisizione.|  
 |`,`|Trova la corrispondenza con una virgola.|  
@@ -86,7 +86,7 @@ Gli ancoraggi, o asserzioni atomiche di larghezza zero, specificano una posizion
   
  Notare che `\Z` corrisponde a `\n` , ma non a `\r\n` (combinazione di caratteri CR/LF). Per trovare la combinazione di caratteri CR/LF, includere `\r?\Z` nel criterio di espressione regolare.  
   
- L'esempio seguente usa l'ancoraggio `\Z` in un'espressione regolare simile all'esempio della sezione [Inizio di stringa o riga](#start-of-string-or-line-) , che estrae informazioni sugli anni durante i quali sono esistite alcune squadre di baseball professionale. La sottoespressione `\r?\Z` nell'espressione regolare `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d`\r\n`(-(\d`\r\n`|present))?,?)+\r?\Z` trova la fine di una stringa e anche una stringa che termina con `\n` o `\r\n`. Di conseguenza, ogni elemento nella matrice corrisponde al criterio di espressione regolare.  
+ L'esempio seguente usa l'ancoraggio `\Z` in un'espressione regolare simile all'esempio della sezione [Inizio di stringa o riga](#start-of-string-or-line-) , che estrae informazioni sugli anni durante i quali sono esistite alcune squadre di baseball professionale. La sottoespressione `\r?\Z` nell'espressione regolare `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+\r?\Z` trova la fine di una stringa e anche una stringa che termina con `\n` o `\r\n`. Di conseguenza, ogni elemento nella matrice corrisponde al criterio di espressione regolare.  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/endofstring2.cs#4)]
  [!code-vb[Conceptual.RegEx.Language.Assertions#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring2.vb#4)]
@@ -119,7 +119,7 @@ Gli ancoraggi, o asserzioni atomiche di larghezza zero, specificano una posizion
 |`,?`|Trova nessuna o una occorrenza di un carattere virgola letterale.|
 
 ## <a name="word-boundary-b"></a>Confine di parola: \b  
- L'ancoraggio `\b` specifica che la corrispondenza deve verificarsi in un confine tra un carattere alfanumerico (elemento del linguaggio `\w` ) e uno non alfanumerico (elemento del linguaggio `\W` ). I caratteri alfanumerici sono costituiti da lettere, cifre e caratteri di sottolineatura. Un carattere non alfanumerico è qualsiasi carattere diverso da lettere, cifre e carattere di sottolineatura. Per ulteriori informazioni, vedere [classi di caratteri](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). La corrispondenza può verificarsi anche su un confine di parola all'inizio o alla fine della stringa.  
+ L'ancoraggio `\b` specifica che la corrispondenza deve verificarsi in un confine tra un carattere alfanumerico (elemento del linguaggio `\w` ) e uno non alfanumerico (elemento del linguaggio `\W` ). I caratteri alfanumerici sono costituiti da lettere, cifre e caratteri di sottolineatura. Un carattere non alfanumerico è qualsiasi carattere diverso da lettere, cifre e carattere di sottolineatura. Per ulteriori informazioni, vedere [Classi di caratteri.](../../../docs/standard/base-types/character-classes-in-regular-expressions.md) La corrispondenza può verificarsi anche su un limite di parola all'inizio o alla fine della stringa.  
   
  L'ancoraggio `\b` viene usato di frequente per garantire che una sottoespressione corrisponda a un'intera parola anziché solo all'inizio o alla fine di una parola. L'espressione regolare `\bare\w*\b` nell'esempio seguente mostra questo utilizzo. L'espressione trova qualsiasi parola che inizia con la sottostringa "are". L'output dell'esempio mostra anche che `\b` trova sia l'inizio sia la fine della stringa di input.  
   
@@ -153,5 +153,5 @@ Gli ancoraggi, o asserzioni atomiche di larghezza zero, specificano una posizion
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Linguaggio delle espressioni regolari - Guida di riferimento rapidoRegular Expression Language - Quick Reference](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md)

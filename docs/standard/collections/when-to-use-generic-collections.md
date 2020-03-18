@@ -1,5 +1,5 @@
 ---
-title: Quando usare raccolte generiche
+title: Quando utilizzare raccolte generiche
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - generic collections [.NET Framework]
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
 ms.openlocfilehash: 7d59259c1cab6842ef62888bf5326225394d8d44
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711207"
 ---
-# <a name="when-to-use-generic-collections"></a>Quando usare raccolte generiche
+# <a name="when-to-use-generic-collections"></a>Quando utilizzare raccolte generiche
 L'uso di raccolte generiche è in genere consigliato perché offre l'immediato vantaggio dell'indipendenza dai tipi senza la necessità di derivare da un tipo di raccolta di base e implementare membri specifici di tipo. I tipi di raccolte generiche offrono anche prestazioni migliori rispetto ai tipi di raccolte non generiche corrispondenti (e tipi derivati dai tipi di raccolte base non generiche) quando gli elementi della raccolta sono tipi di valore, perché con i generics non è necessario il boxing degli elementi.  
   
  Per programmi destinati a .NET Framework 4 o versione successiva, è necessario usare le classi di raccolte generiche nello spazio dei nomi <xref:System.Collections.Concurrent> quando più thread potrebbero aggiungere o rimuovere elementi dalla raccolta contemporaneamente.  
@@ -31,7 +31,7 @@ L'uso di raccolte generiche è in genere consigliato perché offre l'immediato v
 - Le classi generiche <xref:System.Collections.Generic.Queue%601>, <xref:System.Collections.Concurrent.ConcurrentQueue%601>, <xref:System.Collections.Generic.Stack%601>, <xref:System.Collections.Concurrent.ConcurrentStack%601>e <xref:System.Collections.Generic.SortedList%602> corrispondono alle rispettive classi non generiche con gli stessi nomi.  
   
 ## <a name="additional-types"></a>Tipi aggiuntivi  
- Diversi tipi di raccolte generiche non hanno controparti non generiche. Essi includono quanto segue:  
+ Diversi tipi di raccolte generiche non hanno controparti non generiche. incluse le seguenti:  
   
 - <xref:System.Collections.Generic.LinkedList%601> è un elenco collegato di uso generale che fornisce le operazioni di inserimento e rimozione O(1).  
   
@@ -54,5 +54,5 @@ L'uso di raccolte generiche è in genere consigliato perché offre l'immediato v
 ## <a name="see-also"></a>Vedere anche
 
 - [Raccolte e strutture di dati](../../../docs/standard/collections/index.md)
-- [Tipi di raccolte usate comunemente](../../../docs/standard/collections/commonly-used-collection-types.md)
+- [Tipi di Collection comunemente utilizzate](../../../docs/standard/collections/commonly-used-collection-types.md)
 - [Generics](../../../docs/standard/generics/index.md)

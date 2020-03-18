@@ -4,12 +4,12 @@ description: Informazioni sugli schemi di eventi .NET standard e su come creare 
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 517e46ffec163a9bd49baa58fc0b37b54b2b2809
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: dec516767e43a6bf4edfa555e34f3adcc21a46e3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239859"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146141"
 ---
 # <a name="standard-net-event-patterns"></a>Schemi di eventi .NET standard
 
@@ -31,14 +31,14 @@ Il tipo restituito è void. Gli eventi sono basati su delegati e sono delegati m
 
 Gli argomenti sono due: mittente e argomenti evento. Il tipo di `sender` della fase di compilazione è `System.Object`, anche se si conosce probabilmente un tipo più derivato che va sempre bene. Per convenzione si usa `object`.
 
-Il secondo argomento era in genere un tipo derivato da `System.EventArgs`. Nella [sezione successiva](modern-events.md) si vedrà che questa convenzione non viene più applicata. Se il tipo di evento non necessita di argomenti aggiuntivi, saranno comunque disponibili entrambi gli argomenti.
+Il secondo argomento era in genere un tipo derivato da `System.EventArgs`. Nella [sezione successiva](modern-events.md) non verrà più applicata questa convenzione. Se il tipo di evento non richiede argomenti aggiuntivi, verranno comunque forniti entrambi gli argomenti.
 È previsto un valore speciale, `EventArgs.Empty`, che si deve usare per indicare che l'evento non contiene informazioni aggiuntive.
 
 Creare ora una classe in cui sono elencati i file di una directory o di una delle sue sottodirectory che seguono uno schema. Questo componente genera un evento per ogni file individuato che corrisponde allo schema.
 
 L'uso di un modello di eventi offre alcuni vantaggi di progettazione. È possibile creare più listener di evento che eseguono azioni diverse quando viene trovato uno dei file cercati. Combinando i diversi listener è possibile creare algoritmi più affidabili.
 
-Ecco la dichiarazione iniziale di argomenti evento per trovare un file: 
+Ecco la dichiarazione iniziale di argomenti evento per trovare un file:
 
 [!code-csharp[EventArgs](../../samples/snippets/csharp/events/Program.cs#EventArgsV1 "Define event arguments")]
 
@@ -76,7 +76,7 @@ Quando si genera l'evento found, i listener devono essere in grado di arrestare 
 
 I gestori di eventi non restituiscono un valore, pertanto è necessario comunicarlo in un altro modo. Lo schema di evento standard usa l'oggetto EventArgs per includere i campi che i sottoscrittori di evento possono usare per comunicare l'annullamento.
 
-Esistono due schemi diversi che potrebbero essere usati, in base alla semantica del contratto di annullamento. In entrambi i casi si aggiungerà un campo booleano a EventArguments per l'evento found file. 
+Esistono due schemi diversi che potrebbero essere usati, in base alla semantica del contratto di annullamento. In entrambi i casi si aggiungerà un campo booleano a EventArguments per l'evento found file.
 
 Uno degli schemi consente a qualsiasi sottoscrittore di annullare l'operazione.
 Per questo schema il nuovo campo viene inizializzato su `false`. Qualsiasi sottoscrittore può cambiarlo in `true`. Dopo che tutti i sottoscrittori hanno visto l'evento generato, il componente FileSearcher esamina il valore booleano e interviene.
@@ -122,7 +122,7 @@ Aggiungeremo ora un'altra funzionalità e dimostreremo altri idiomi del linguagg
 
 L'operazione potrebbe rivelarsi piuttosto lunga in una directory con molte sottodirectory. Aggiungiamo un evento che viene generato quando inizia la ricerca in una nuova directory. Questo consente ai sottoscrittori di tenere traccia dell'avanzamento e di aggiornare l'utente sullo stato dell'avanzamento. Tutti gli esempi creati finora sono pubblici. Rendiamo questo evento interno. Ciò significa che è possibile rendere interni anche i tipi utilizzati per gli argomenti.
 
-Si inizierà creando la nuova classe EventArgs derivata per la segnalazione della nuova directory e dell'avanzamento. 
+Si inizierà creando la nuova classe EventArgs derivata per la segnalazione della nuova directory e dell'avanzamento.
 
 [!code-csharp[DirEventArgs](../../samples/snippets/csharp/events/Program.cs#SearchDirEventArgs "Define search directory event arguments")]
 
@@ -140,7 +140,7 @@ Quindi, si aggiunge l'overload del metodo `Search` che attraversa le sottodirect
 
 A questo punto è possibile eseguire l'applicazione chiamando l'overload per cercare in tutte le sottodirectory. Non sono presenti sottoscrittori per il nuovo evento `ChangeDirectory`, ma l'uso dell'idioma `?.Invoke()` garantisce il funzionamento corretto.
 
- Aggiungiamo un gestore per scrivere una riga che mostra l'avanzamento nella finestra della console. 
+ Aggiungiamo un gestore per scrivere una riga che mostra l'avanzamento nella finestra della console.
 
 [!code-csharp[Search](../../samples/snippets/csharp/events/Program.cs#Search "Declare event handler")]
 

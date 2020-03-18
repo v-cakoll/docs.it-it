@@ -1,25 +1,25 @@
 ---
 title: System.Delegate e la parola chiave `delegate`
-description: Informazioni sulle classi di .NET che supportano i delegati e sul modo in cui vengono mappati alla parola chiave ' Delegate '.
+description: Informazioni sulle classi in .NET che supportano i delegati e su come tali informazioni vengono mappate alla parola chiave 'delegate'.
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 3cfc9925be0f191dc3fc93c02f4a8f9a40b71895
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 87fdf19c4ea810c5ac4409fe16c3cba9d5fc6574
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450921"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146281"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate e la parola chiave `delegate`
 
-[Precedente](delegates-overview.md)
+[Indietro](delegates-overview.md)
 
-In questo articolo vengono illustrate le classi di .NET che supportano i delegati e il modo in cui vengono mappati alla parola chiave `delegate`.
+In questo articolo vengono illustrate le classi in .NET `delegate` che supportano i delegati e come eseguire il mapping di tali argomenti alla parola chiave.
 
-## <a name="define-delegate-types"></a>Definire i tipi di delegati
+## <a name="define-delegate-types"></a>Definire i tipi delegati
 
-Iniziamo con la parola chiave "delegate" che è essenzialmente quello che si userà per lavorare con i delegati. Il codice che il compilatore genera quando si usa la parola chiave `delegate` eseguirà il mapping alle chiamate ai metodi che richiamano i membri delle classi <xref:System.Delegate> e <xref:System.MulticastDelegate>. 
+Iniziamo con la parola chiave "delegate" che è essenzialmente quello che si userà per lavorare con i delegati. Il codice che il compilatore genera quando si usa la parola chiave `delegate` eseguirà il mapping alle chiamate ai metodi che richiamano i membri delle classi <xref:System.Delegate> e <xref:System.MulticastDelegate>.
 
 Per definire un tipo delegato si usa una sintassi simile alla definizione di una firma di metodo. È sufficiente aggiungere la parola chiave `delegate` alla definizione.
 
@@ -37,11 +37,11 @@ Il compilatore genera una classe, derivata da `System.Delegate` che corrisponde 
 Si noti che può sembrare che la sintassi dichiari una variabile, ma in effetti viene dichiarato un *tipo*. È possibile definire tipi delegato all'interno di classi, direttamente all'interno di spazi dei nomi o anche nello spazio dei nomi globale.
 
 > [!NOTE]
-> La dichiarazione di tipi delegato (o altri tipi) direttamente nello spazio dei nomi globale non è consigliata. 
+> La dichiarazione di tipi delegato (o altri tipi) direttamente nello spazio dei nomi globale non è consigliata.
 
-Il compilatore genera anche gestori di aggiunta e rimozione per questo nuovo tipo in modo che i client di questa classe siano in grado di aggiungere e rimuovere metodi dall'elenco delle chiamate di un'istanza. Il compilatore impone che la firma del metodo aggiunto o rimosso corrisponda alla firma usata per la dichiarazione del metodo. 
+Il compilatore genera anche gestori di aggiunta e rimozione per questo nuovo tipo in modo che i client di questa classe siano in grado di aggiungere e rimuovere metodi dall'elenco delle chiamate di un'istanza. Il compilatore impone che la firma del metodo aggiunto o rimosso corrisponda alla firma usata per la dichiarazione del metodo.
 
-## <a name="declare-instances-of-delegates"></a>Dichiarare istanze di delegati
+## <a name="declare-instances-of-delegates"></a>Dichiarare istanze di delegatiDeclare instances of delegates
 
 Dopo aver definito il delegato è possibile creare un'istanza di quel tipo.
 Come per tutte le variabili in C#, non è possibile dichiarare le istanze di delegato direttamente in uno spazio dei nomi o nello spazio dei nomi globale.
@@ -54,10 +54,10 @@ public Comparison<T> comparator;
 ```
 
 Il tipo della variabile è `Comparison<T>`, il tipo delegato definito in precedenza. Il nome della variabile è `comparator`.
- 
+
  Il frammento di codice riportato sopra dichiara una variabile membro all'interno di una classe. È anche possibile dichiarare variabili delegato che sono variabili locali o argomenti per i metodi.
 
-## <a name="invoke-delegates"></a>Richiama delegati
+## <a name="invoke-delegates"></a>Richiamare delegati
 
 Per richiamare i metodi inclusi nell'elenco chiamate di un delegato, chiamare quel delegato. All'interno del metodo `Sort()` il codice chiamerà il metodo di confronto per determinare l'ordine in cui inserire gli oggetti:
 
@@ -70,7 +70,7 @@ La variabile viene trattata come nome di metodo e per richiamarla viene usata us
 
 Quella riga di codice presuppone che non esista alcuna garanzia che una destinazione sia stata aggiunta al delegato. Se non sono state associate destinazioni, la riga precedente causerebbe la generazione di `NullReferenceException`. Gli idiomi usati per risolvere questo problema sono più complessi rispetto a un semplice controllo null e sono trattati più avanti in questa [serie](delegates-patterns.md).
 
-## <a name="assign-add-and-remove-invocation-targets"></a>Assegnare, aggiungere e rimuovere destinazioni di chiamata
+## <a name="assign-add-and-remove-invocation-targets"></a>Assegnare, aggiungere e rimuovere destinazioni di chiamataAssign, add, and remove invocation targets
 
 Questo è il modo in cui viene definito un tipo delegato e in cui le istanze dei delegati vengono dichiarate e richiamate.
 
@@ -107,7 +107,7 @@ Comparison<string> comparer = (left, right) => left.Length.CompareTo(right.Lengt
 phrases.Sort(comparer);
 ```
 
-L'uso delle espressioni lambda per le destinazioni di delegato è descritto in dettaglio in una [sezione successiva](delegates-patterns.md).
+L'utilizzo delle espressioni lambda per le destinazioni dei delegati è illustrato più avanti in una [sezione successiva.](delegates-patterns.md)
 
 L'esempio Sort() di solito associa un singolo metodo di destinazione al delegato. Tuttavia, gli oggetti delegati supportano gli elenchi delle chiamate con più metodi di destinazione associati a un oggetto delegato.
 
@@ -115,10 +115,10 @@ L'esempio Sort() di solito associa un singolo metodo di destinazione al delegato
 
 Il supporto del linguaggio descritto in precedenza offre le funzionalità e il supporto in genere necessari quando si lavora con i delegati. Tali funzionalità si basano su due classi di .NET Core Framework: <xref:System.Delegate> e <xref:System.MulticastDelegate>.
 
-La classe `System.Delegate` e la relativa sottoclasse diretta, `System.MulticastDelegate`, forniscono il supporto del Framework per la creazione di delegati, la registrazione di metodi come destinazioni delegate e la chiamata di tutti i metodi registrati come destinazione del delegato. 
+La `System.Delegate` classe e la relativa `System.MulticastDelegate`singola sottoclasse diretta, , forniscono il supporto del framework per la creazione di delegati, la registrazione dei metodi come destinazioni del delegato e la chiamata di tutti i metodi registrati come destinazione del delegato.
 
 È interessante notare che le classi `System.Delegate` e `System.MulticastDelegate` non sono tipi di delegati. Offrono la base per tutti i tipi di delegati specifici. Lo stesso processo di progettazione del linguaggio stabilisce che non è possibile dichiarare una classe che derivi da `Delegate` o `MulticastDelegate`. Le regole del linguaggio C# lo proibiscono.
- 
+
 Al contrario, il compilatore C# crea istanze di una classe derivata da `MulticastDelegate` quando si usa la parola chiave del linguaggio C# per dichiarare i tipi di delegati.
 
 Questa progettazione ha le sue radici nella prima versione di C# e .NET. Uno degli obiettivi per il team di progettazione era assicurarsi che il linguaggio applicasse l'indipendenza dai tipi nell'uso dei delegati. Ciò significava garantire che i delegati venissero richiamati con il tipo e il numero di argomenti corretti. E che ogni tipo restituito fosse correttamente indicato in fase di compilazione. I delegati facevano parte della versione 1.0 di .NET, precedente ai generics.
@@ -131,6 +131,6 @@ Il primo è più importante aspetto da ricordare è che ogni delegato con cui si
 
 I metodi che si usano più di frequente con i delegati sono `Invoke()` e `BeginInvoke()` / `EndInvoke()`. `Invoke()` richiamerà tutti i metodi che sono stati associati a un'istanza particolare del delegato. Come osservato in precedenza, in genere i delegati vengono richiamati usando la sintassi di chiamata di metodo per la variabile delegato. Come si vedrà [più avanti in questa serie](delegates-patterns.md), sono disponibili modelli che funzionano direttamente con questi metodi.
 
-Ora che è stata esaminata la sintassi del linguaggio e le classi che supportano i delegati, esaminiamo il modo in cui vengono usati, creati e richiamati i delegati fortemente tipizzati.
+Ora che hai visto la sintassi del linguaggio e le classi che supportano i delegati, esaminiamo come vengono utilizzati, creati e richiamati fortemente i delegati tipati.
 
-[avanti](delegates-strongly-typed.md)
+[Avanti](delegates-strongly-typed.md)

@@ -1,17 +1,17 @@
 ---
-title: Indexers (Indicizzatori)
+title: Indicizzatori
 description: Informazioni sugli indicizzatori C# e su come implementano proprietà indicizzate, ovvero proprietà a cui si fa riferimento usando uno o più argomenti.
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 966483e80d8dd0421dce1b7fabdb0d443d73a0fc
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 8e583b8a7cedab61ea6fdd56587608907610b6b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450882"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79145684"
 ---
-# <a name="indexers"></a>Indexers (Indicizzatori)
+# <a name="indexers"></a>Indicizzatori
 
 Gli *indicizzatori* sono simili alle proprietà e per molti aspetti si basano sulle stesse funzionalità del linguaggio delle [proprietà](properties.md). Gli indicizzatori consentono proprietà *indicizzate*, ovvero proprietà a cui si fa riferimento tramite uno o più argomenti, che forniscono un indice per una raccolta di valori.
 
@@ -39,7 +39,7 @@ Da questo esempio iniziale è possibile rendersi conto della relazione tra la si
 
 È possibile applicare agli indicizzatori quasi tutto ciò che si apprende dall'uso delle proprietà. L'unica eccezione a tale regola è costituita dalle *proprietà implementate automaticamente*. Il compilatore non è sempre in grado di generare l'archiviazione corretta per un indicizzatore.
 
-La differenza tra indicizzatori e proprietà è costituita dalla presenza negli indicizzatori di argomenti che consentono di fare riferimento a un elemento all'interno di un set di elementi. È possibile definire più indicizzatori in un tipo, a condizione che gli elenchi di argomenti per ogni indicizzatore siano univoci. Verranno ora esaminati diversi scenari in cui è possibile usare uno o più indicizzatori in una definizione di classe. 
+La differenza tra indicizzatori e proprietà è costituita dalla presenza negli indicizzatori di argomenti che consentono di fare riferimento a un elemento all'interno di un set di elementi. È possibile definire più indicizzatori in un tipo, a condizione che gli elenchi di argomenti per ogni indicizzatore siano univoci. Verranno ora esaminati diversi scenari in cui è possibile usare uno o più indicizzatori in una definizione di classe.
 
 ## <a name="scenarios"></a>Scenari
 
@@ -50,7 +50,7 @@ Di seguito è riportata la descrizione dettagliata di alcuni scenari comuni per 
 
 ### <a name="arrays-and-vectors"></a>Matrici e vettori
 
-Uno degli scenari più comuni per la creazione di indicizzatori si presenta quando il tipo modella una matrice o un vettore. È possibile creare un indicizzatore per modellare un elenco ordinato di dati. 
+Uno degli scenari più comuni per la creazione di indicizzatori si presenta quando il tipo modella una matrice o un vettore. È possibile creare un indicizzatore per modellare un elenco ordinato di dati.
 
 Il vantaggio di creare un indicizzatore personalizzato è la possibilità di definire la modalità di archiviazione della raccolta più adatta alle proprie esigenze. Si immagini uno scenario in cui il tipo debba modellare una quantità di dati cronologici troppo grande perché sia possibile caricarla in memoria in una sola volta. È quindi necessario caricare e scaricare sezioni della raccolta in base all'utilizzo. L'esempio seguente riproduce questo comportamento. L'esempio indica il numero di punti dati esistenti, crea pagine in cui inserire sezioni di dati su richiesta e rimuove le pagine dalla memoria per liberare spazio per le pagine relative alle richieste più recenti.
 
@@ -224,9 +224,10 @@ La funzione `get` determina se un'opzione specifica è stata configurata. In cas
 
 ### <a name="multi-dimensional-maps"></a>Mappe multidimensionali
 
-È possibile creare indicizzatori che usano più argomenti, che, in più, non devono necessariamente essere dello stesso tipo. Di seguito sono riportati due esempi.   
+È possibile creare indicizzatori che usano più argomenti, che, in più, non devono necessariamente essere dello stesso tipo. Di seguito sono riportati due esempi.
 
-Il primo esempio illustra una classe che genera valori per un set di Mandelbrot. Per altre informazioni sulle regole matematiche alla base di questo, leggere [questo articolo](https://en.wikipedia.org/wiki/Mandelbrot_set). L'indicizzatore usa due valori double per definire un punto del piano X, Y.
+Il primo esempio illustra una classe che genera valori per un set di Mandelbrot. Per altre informazioni sulle regole matematiche alla base di questo, leggere [questo articolo](https://en.wikipedia.org/wiki/Mandelbrot_set).
+L'indicizzatore usa due valori double per definire un punto del piano X, Y.
 La funzione di accesso get calcola il numero di iterazioni necessarie a stabilire che un punto non appartiene al set. Se viene raggiunto il numero massimo di iterazioni, il punto si trova nel set e viene restituito il valore maxIterations della classe. Nelle immagini generate tramite computer comunemente note per il set di Mandelbrot sono definiti colori per il numero di iterazioni necessarie a determinare se un punto è esterno al set.
 
 ```csharp
@@ -267,9 +268,9 @@ Ciò consente di definire un dizionario che può contenere un numero infinito di
 Verrà ora illustrato l'ultimo caso di uso degli indicizzatori, in cui l'indicizzatore riceve più argomenti di tipi diversi. Si consideri un programma per la gestione dei dati cronologici relativi alle temperature. Questo indicizzatore imposta o riceve la temperatura massima e la temperatura minima di una determinata posizione in base alla città corrispondente e alla data:
 
 ```csharp
-using DateMeasurements = 
+using DateMeasurements =
     System.Collections.Generic.Dictionary<System.DateTime, IndexersSamples.Common.Measurements>;
-using CityDataMeasurements = 
+using CityDataMeasurements =
     System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<System.DateTime, IndexersSamples.Common.Measurements>>;
 
 public class HistoricalWeatherData
@@ -319,12 +320,13 @@ using DateMeasurements = System.Collections.Generic.Dictionary<System.DateTime, 
 using CityDataMeasurements = System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<System.DateTime, IndexersSamples.Common.Measurements>>;
 ```
 
-creano un *alias* per un tipo generico costruito. Queste istruzioni consentono al codice successivo di usare i nomi `DateMeasurements` e `CityDateMeasurements`, più descrittivi, anziché la costruzione generica di `Dictionary<DateTime, Measurements>` e `Dictionary<string, Dictionary<DateTime, Measurements> >`. Questo costrutto richiede però l'uso di nomi completi di tipo sul lato destro del segno `=`.
+creano un *alias* per un tipo generico costruito. Queste istruzioni consentono al codice successivo di usare i nomi `DateMeasurements` e `CityDateMeasurements`, più descrittivi, anziché la costruzione generica di `Dictionary<DateTime, Measurements>` e `Dictionary<string, Dictionary<DateTime, Measurements> >`.
+Questo costrutto richiede però l'uso di nomi completi di tipo sul lato destro del segno `=`.
 
-La seconda tecnica consiste nel rimuovere le parti relative all'ora di qualsiasi oggetto `DateTime` usato per effettuare l'indicizzazione all'interno delle raccolte. .NET non include un tipo di solo data.
+La seconda tecnica consiste nel rimuovere le parti relative all'ora di qualsiasi oggetto `DateTime` usato per effettuare l'indicizzazione all'interno delle raccolte. .NET non include un tipo di sola data.
 Gli sviluppatori usano il tipo `DateTime`, ma usano la proprietà `Date` per assicurarsi che tutti gli oggetti `DateTime` di quel giorno siano uguali.
 
 ## <a name="summing-up"></a>Conclusioni
 
 È necessario creare indicizzatori ogni volta che all'interno di una classe è presente un elemento analogo a una proprietà e tale proprietà rappresenta non un singolo valore, ma una raccolta di valori in cui ogni singolo elemento è identificato da un set di argomenti. Tali argomenti consentono di identificare in modo univoco un elemento della raccolta a cui fare riferimento.
-Gli indicizzatori estendono il concetto di [Proprietà](properties.md), in cui un membro viene considerato come un elemento dati dall'esterno della classe, ma come un metodo all'interno. Gli indicizzatori consentono agli argomenti di individuare un singolo elemento all'interno di una proprietà che rappresenta un set di elementi.
+Gli indicizzatori estendono il concetto di [proprietà](properties.md), in cui un membro viene trattato come un elemento di dati dall'esterno della classe, ma come un metodo all'interno. Gli indicizzatori consentono agli argomenti di individuare un singolo elemento all'interno di una proprietà che rappresenta un set di elementi.

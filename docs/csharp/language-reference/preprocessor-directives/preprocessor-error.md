@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#error directive [C#]'
 ms.assetid: f2a7f3af-4cf9-4111-b369-70204d24b26b
-ms.openlocfilehash: 7203e1271da66e78bfbd70717b0f5e536a7ebd86
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 28e77304edee617adc1422e6a52d0a617cd9b3bb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712520"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173406"
 ---
 # <a name="error-c-reference"></a>#error (Riferimenti per C#)
 `#error` consente di generare l'errore definito dall'utente [CS1029](../compiler-messages/cs1029.md) da una posizione specifica nel codice. Ad esempio:  
@@ -20,7 +20,7 @@ ms.locfileid: "75712520"
 #error Deprecated code in this method.  
 ```  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  La direttiva `#error` viene generalmente usata nelle direttive condizionali.  
   
  È possibile anche generare un avviso definito dall'utente tramite [#warning](./preprocessor-warning.md).  
@@ -31,9 +31,9 @@ ms.locfileid: "75712520"
 // preprocessor_error.cs  
 // CS1029 expected  
 #define DEBUG  
-class MainClass   
+class MainClass
 {  
-    static void Main()   
+    static void Main()
     {  
 #if DEBUG  
 #error DEBUG is defined  
@@ -44,6 +44,6 @@ class MainClass
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
+- [Guida di riferimento a C](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
-- [Direttive per il preprocessore C#](./index.md)
+- [Direttive per il preprocessore di C](./index.md)

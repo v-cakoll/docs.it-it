@@ -12,10 +12,10 @@ helpviewer_keywords:
 - events [.NET Framework], samples
 ms.assetid: 42afade7-3a02-4f2e-868b-95845f302f8f
 ms.openlocfilehash: 256b5ae9ac2145e339136985872dfa5423aca730
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73131589"
 ---
 # <a name="how-to-raise-and-consume-events"></a>Procedura: generare e utilizzare eventi
@@ -44,4 +44,4 @@ Gli esempi in questo argomento illustrano come usare gli eventi. Sono inclusi es
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Eventi](../../../docs/standard/events/index.md)
+- [Events](../../../docs/standard/events/index.md)
