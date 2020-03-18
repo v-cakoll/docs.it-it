@@ -2,23 +2,23 @@
 title: Programmazione con nodi (C#)
 ms.date: 07/20/2015
 ms.assetid: c38df0f2-c805-431a-93ff-9103a4284c2f
-ms.openlocfilehash: 8c4c858cbc1fad4041c2e5ce62ca8a01dd1cfb2c
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 05c2e95fe97effda7b537a7ac2d8f5780f4e212b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253153"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168314"
 ---
-# <a name="programming-with-nodes-c"></a><span data-ttu-id="2c8af-102">Programmazione con nodi (C#)</span><span class="sxs-lookup"><span data-stu-id="2c8af-102">Programming with Nodes (C#)</span></span>
-<span data-ttu-id="2c8af-103">Gli sviluppatori di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] che hanno la necessità di scrivere programmi come un editor XML, un sistema di trasformazioni o un writer di rapporti, spesso devono scrivere programmi che funzionano a un livello di granularità maggiore rispetto a elementi e attributi.</span><span class="sxs-lookup"><span data-stu-id="2c8af-103">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] developers who need to write programs such as an XML editor, a transform system, or a report writer often need to write programs that work at a finer level of granularity than elements and attributes.</span></span> <span data-ttu-id="2c8af-104">Devono spesso operare a livello di nodo, modificando i nodi di testo, elaborando istruzioni e commenti.</span><span class="sxs-lookup"><span data-stu-id="2c8af-104">They often need to work at the node level, manipulating text nodes, processing instructions, and comments.</span></span> <span data-ttu-id="2c8af-105">In questo argomento vengono forniti dettagli sulla programmazione a livello di nodo.</span><span class="sxs-lookup"><span data-stu-id="2c8af-105">This topic provides some details about programming at the node level.</span></span>  
+# <a name="programming-with-nodes-c"></a><span data-ttu-id="dfe45-102">Programmazione con nodi (C#)</span><span class="sxs-lookup"><span data-stu-id="dfe45-102">Programming with Nodes (C#)</span></span>
+<span data-ttu-id="dfe45-103">Gli sviluppatori di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] che hanno la necessità di scrivere programmi come un editor XML, un sistema di trasformazioni o un writer di rapporti, spesso devono scrivere programmi che funzionano a un livello di granularità maggiore rispetto a elementi e attributi.</span><span class="sxs-lookup"><span data-stu-id="dfe45-103">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] developers who need to write programs such as an XML editor, a transform system, or a report writer often need to write programs that work at a finer level of granularity than elements and attributes.</span></span> <span data-ttu-id="dfe45-104">Devono spesso operare a livello di nodo, modificando i nodi di testo, elaborando istruzioni e commenti.</span><span class="sxs-lookup"><span data-stu-id="dfe45-104">They often need to work at the node level, manipulating text nodes, processing instructions, and comments.</span></span> <span data-ttu-id="dfe45-105">In questo argomento vengono forniti dettagli sulla programmazione a livello di nodo.</span><span class="sxs-lookup"><span data-stu-id="dfe45-105">This topic provides some details about programming at the node level.</span></span>  
   
-## <a name="node-details"></a><span data-ttu-id="2c8af-106">Dettagli sui nodi</span><span class="sxs-lookup"><span data-stu-id="2c8af-106">Node Details</span></span>  
- <span data-ttu-id="2c8af-107">I programmatori che operano a livello di nodo devono conoscere diversi dettagli di programmazione.</span><span class="sxs-lookup"><span data-stu-id="2c8af-107">There are a number of details of programming that a programmer working at the node level should know.</span></span>  
+## <a name="node-details"></a><span data-ttu-id="dfe45-106">Dettagli sui nodi</span><span class="sxs-lookup"><span data-stu-id="dfe45-106">Node Details</span></span>  
+ <span data-ttu-id="dfe45-107">I programmatori che operano a livello di nodo devono conoscere diversi dettagli di programmazione.</span><span class="sxs-lookup"><span data-stu-id="dfe45-107">There are a number of details of programming that a programmer working at the node level should know.</span></span>  
   
-### <a name="parent-property-of-children-nodes-of-xdocument-is-set-to-null"></a><span data-ttu-id="2c8af-108">La proprietà padre dei nodi figlio di XDocument è impostata su Null</span><span class="sxs-lookup"><span data-stu-id="2c8af-108">Parent Property of Children Nodes of XDocument is Set to Null</span></span>  
- <span data-ttu-id="2c8af-109">La proprietà <xref:System.Xml.Linq.XObject.Parent%2A> contiene l'elemento padre <xref:System.Xml.Linq.XElement>, non il nodo padre.</span><span class="sxs-lookup"><span data-stu-id="2c8af-109">The <xref:System.Xml.Linq.XObject.Parent%2A> property contains the parent <xref:System.Xml.Linq.XElement>, not the parent node.</span></span> <span data-ttu-id="2c8af-110">I nodi figlio di <xref:System.Xml.Linq.XDocument> non hanno un elemento <xref:System.Xml.Linq.XElement> padre.</span><span class="sxs-lookup"><span data-stu-id="2c8af-110">Child nodes of <xref:System.Xml.Linq.XDocument> have no parent <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="2c8af-111">L'elemento padre è il documento, pertanto la proprietà <xref:System.Xml.Linq.XObject.Parent%2A> per tali nodi è impostata su Null.</span><span class="sxs-lookup"><span data-stu-id="2c8af-111">Their parent is the document, so the <xref:System.Xml.Linq.XObject.Parent%2A> property for those nodes is set to null.</span></span>  
+### <a name="parent-property-of-children-nodes-of-xdocument-is-set-to-null"></a><span data-ttu-id="dfe45-108">La proprietà padre dei nodi figlio di XDocument è impostata su Null</span><span class="sxs-lookup"><span data-stu-id="dfe45-108">Parent Property of Children Nodes of XDocument is Set to Null</span></span>  
+ <span data-ttu-id="dfe45-109">La proprietà <xref:System.Xml.Linq.XObject.Parent%2A> contiene l'elemento padre <xref:System.Xml.Linq.XElement>, non il nodo padre.</span><span class="sxs-lookup"><span data-stu-id="dfe45-109">The <xref:System.Xml.Linq.XObject.Parent%2A> property contains the parent <xref:System.Xml.Linq.XElement>, not the parent node.</span></span> <span data-ttu-id="dfe45-110">I nodi figlio di <xref:System.Xml.Linq.XDocument> non hanno un elemento <xref:System.Xml.Linq.XElement> padre.</span><span class="sxs-lookup"><span data-stu-id="dfe45-110">Child nodes of <xref:System.Xml.Linq.XDocument> have no parent <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="dfe45-111">L'elemento padre è il documento, pertanto la proprietà <xref:System.Xml.Linq.XObject.Parent%2A> per tali nodi è impostata su Null.</span><span class="sxs-lookup"><span data-stu-id="dfe45-111">Their parent is the document, so the <xref:System.Xml.Linq.XObject.Parent%2A> property for those nodes is set to null.</span></span>  
   
- <span data-ttu-id="2c8af-112">Questo concetto è illustrato nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="2c8af-112">The following example demonstrates this:</span></span>  
+ <span data-ttu-id="dfe45-112">Questo concetto è illustrato nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="dfe45-112">The following example demonstrates this:</span></span>  
   
 ```csharp  
 XDocument doc = XDocument.Parse(@"<!-- a comment --><Root/>");  
@@ -26,17 +26,17 @@ Console.WriteLine(doc.Nodes().OfType<XComment>().First().Parent == null);
 Console.WriteLine(doc.Root.Parent == null);  
 ```  
   
- <span data-ttu-id="2c8af-113">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="2c8af-113">This example produces the following output:</span></span>  
+ <span data-ttu-id="dfe45-113">Nell'esempio viene prodotto l'output seguente:</span><span class="sxs-lookup"><span data-stu-id="dfe45-113">This example produces the following output:</span></span>  
   
 ```output  
 True  
 True  
 ```  
   
-### <a name="adjacent-text-nodes-are-possible"></a><span data-ttu-id="2c8af-114">I nodi di testo adiacenti sono possibili</span><span class="sxs-lookup"><span data-stu-id="2c8af-114">Adjacent Text Nodes are Possible</span></span>  
- <span data-ttu-id="2c8af-115">In diversi modelli di programmazione XML i nodi di testo adiacenti vengono sempre uniti.</span><span class="sxs-lookup"><span data-stu-id="2c8af-115">In a number of XML programming models, adjacent text nodes are always merged.</span></span> <span data-ttu-id="2c8af-116">Questa operazione è denominata normalizzazione dei nodi di testo.</span><span class="sxs-lookup"><span data-stu-id="2c8af-116">This is sometimes called normalization of text nodes.</span></span> <span data-ttu-id="2c8af-117">In [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] i nodi di testo non vengono normalizzati.</span><span class="sxs-lookup"><span data-stu-id="2c8af-117">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] does not normalize text nodes.</span></span> <span data-ttu-id="2c8af-118">Se si aggiungono due nodi di testo allo stesso elemento, si otterranno nodi di testo adiacenti.</span><span class="sxs-lookup"><span data-stu-id="2c8af-118">If you add two text nodes to the same element, it will result in adjacent text nodes.</span></span> <span data-ttu-id="2c8af-119">Se, tuttavia, si aggiunge contenuto specificato come stringa anziché come nodo <xref:System.Xml.Linq.XText>, è possibile che in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] la stringa venga unita con un nodo di testo adiacente.</span><span class="sxs-lookup"><span data-stu-id="2c8af-119">However, if you add content specified as a string rather than as an <xref:System.Xml.Linq.XText> node, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] might merge the string with an adjacent text node.</span></span>  
+### <a name="adjacent-text-nodes-are-possible"></a><span data-ttu-id="dfe45-114">I nodi di testo adiacenti sono possibili</span><span class="sxs-lookup"><span data-stu-id="dfe45-114">Adjacent Text Nodes are Possible</span></span>  
+ <span data-ttu-id="dfe45-115">In diversi modelli di programmazione XML i nodi di testo adiacenti vengono sempre uniti.</span><span class="sxs-lookup"><span data-stu-id="dfe45-115">In a number of XML programming models, adjacent text nodes are always merged.</span></span> <span data-ttu-id="dfe45-116">Questa operazione è denominata normalizzazione dei nodi di testo.</span><span class="sxs-lookup"><span data-stu-id="dfe45-116">This is sometimes called normalization of text nodes.</span></span> <span data-ttu-id="dfe45-117">In [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] i nodi di testo non vengono normalizzati.</span><span class="sxs-lookup"><span data-stu-id="dfe45-117">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] does not normalize text nodes.</span></span> <span data-ttu-id="dfe45-118">Se si aggiungono due nodi di testo allo stesso elemento, si otterranno nodi di testo adiacenti.</span><span class="sxs-lookup"><span data-stu-id="dfe45-118">If you add two text nodes to the same element, it will result in adjacent text nodes.</span></span> <span data-ttu-id="dfe45-119">Se, tuttavia, si aggiunge contenuto specificato come stringa anziché come nodo <xref:System.Xml.Linq.XText>, è possibile che in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] la stringa venga unita con un nodo di testo adiacente.</span><span class="sxs-lookup"><span data-stu-id="dfe45-119">However, if you add content specified as a string rather than as an <xref:System.Xml.Linq.XText> node, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] might merge the string with an adjacent text node.</span></span>  
   
- <span data-ttu-id="2c8af-120">Questo concetto è illustrato nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="2c8af-120">The following example demonstrates this:</span></span>  
+ <span data-ttu-id="dfe45-120">Questo concetto è illustrato nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="dfe45-120">The following example demonstrates this:</span></span>  
   
 ```csharp  
 XElement xmlTree = new XElement("Root", "Content");  
@@ -52,7 +52,7 @@ xmlTree.Add(new XText("more text"));
 Console.WriteLine(xmlTree.Nodes().OfType<XText>().Count());  
 ```  
   
- <span data-ttu-id="2c8af-121">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="2c8af-121">This example produces the following output:</span></span>  
+ <span data-ttu-id="dfe45-121">Nell'esempio viene prodotto l'output seguente:</span><span class="sxs-lookup"><span data-stu-id="dfe45-121">This example produces the following output:</span></span>  
   
 ```output  
 1  
@@ -60,8 +60,8 @@ Console.WriteLine(xmlTree.Nodes().OfType<XText>().Count());
 2  
 ```  
   
-### <a name="empty-text-nodes-are-possible"></a><span data-ttu-id="2c8af-122">I nodi di testo vuoti sono possibili</span><span class="sxs-lookup"><span data-stu-id="2c8af-122">Empty Text Nodes are Possible</span></span>  
- <span data-ttu-id="2c8af-123">In alcuni modelli di programmazione di XML è garantito che i nodi di testo non contengono la stringa vuota.</span><span class="sxs-lookup"><span data-stu-id="2c8af-123">In some XML programming models, text nodes are guaranteed to not contain the empty string.</span></span> <span data-ttu-id="2c8af-124">Il concetto di base è che un nodo di testo di questo tipo non ha impatto sulla serializzazione dell'XML.</span><span class="sxs-lookup"><span data-stu-id="2c8af-124">The reasoning is that such a text node has no impact on serialization of the XML.</span></span> <span data-ttu-id="2c8af-125">Tuttavia, per lo stesso motivo per cui i nodi di testo sono possibili, la rimozione di testo da un nodo di testo impostandone il valore sulla stringa vuota non comporta l'eliminazione del nodo di testo stesso.</span><span class="sxs-lookup"><span data-stu-id="2c8af-125">However, for the same reason that adjacent text nodes are possible, if you remove the text from a text node by setting its value to the empty string, the text node itself will not be deleted.</span></span>  
+### <a name="empty-text-nodes-are-possible"></a><span data-ttu-id="dfe45-122">I nodi di testo vuoti sono possibili</span><span class="sxs-lookup"><span data-stu-id="dfe45-122">Empty Text Nodes are Possible</span></span>  
+ <span data-ttu-id="dfe45-123">In alcuni modelli di programmazione di XML è garantito che i nodi di testo non contengono la stringa vuota.</span><span class="sxs-lookup"><span data-stu-id="dfe45-123">In some XML programming models, text nodes are guaranteed to not contain the empty string.</span></span> <span data-ttu-id="dfe45-124">Il concetto di base è che un nodo di testo di questo tipo non ha impatto sulla serializzazione dell'XML.</span><span class="sxs-lookup"><span data-stu-id="dfe45-124">The reasoning is that such a text node has no impact on serialization of the XML.</span></span> <span data-ttu-id="dfe45-125">Tuttavia, per lo stesso motivo per cui i nodi di testo sono possibili, la rimozione di testo da un nodo di testo impostandone il valore sulla stringa vuota non comporta l'eliminazione del nodo di testo stesso.</span><span class="sxs-lookup"><span data-stu-id="dfe45-125">However, for the same reason that adjacent text nodes are possible, if you remove the text from a text node by setting its value to the empty string, the text node itself will not be deleted.</span></span>  
   
 ```csharp  
 XElement xmlTree = new XElement("Root", "Content");  
@@ -71,17 +71,17 @@ XText textNode = xmlTree.Nodes().OfType<XText>().First();
 textNode.Value = "";  
   
 XText textNode2 = xmlTree.Nodes().OfType<XText>().First();  
-Console.WriteLine(">>{0}<<", textNode2);   
+Console.WriteLine(">>{0}<<", textNode2);
 ```  
   
- <span data-ttu-id="2c8af-126">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="2c8af-126">This example produces the following output:</span></span>  
+ <span data-ttu-id="dfe45-126">Nell'esempio viene prodotto l'output seguente:</span><span class="sxs-lookup"><span data-stu-id="dfe45-126">This example produces the following output:</span></span>  
   
 ```output  
 >><<  
 ```  
   
-### <a name="an-empty-text-node-impacts-serialization"></a><span data-ttu-id="2c8af-127">Un nodo di testo vuoto ha effetto sulla serializzazione</span><span class="sxs-lookup"><span data-stu-id="2c8af-127">An Empty Text Node Impacts Serialization</span></span>  
- <span data-ttu-id="2c8af-128">Se un elemento contiene solo un nodo di testo figlio vuoto, verrà serializzato con la sintassi lunga dei tag: `<Child></Child>`.</span><span class="sxs-lookup"><span data-stu-id="2c8af-128">If an element contains only a child text node that is empty, it is serialized with the long tag syntax: `<Child></Child>`.</span></span> <span data-ttu-id="2c8af-129">Se un elemento non contiene alcun tipo di nodo figlio, verrà serializzato con la sintassi breve dei tag: `<Child />`.</span><span class="sxs-lookup"><span data-stu-id="2c8af-129">If an element contains no child nodes whatsoever, it is serialized with the short tag syntax: `<Child />`.</span></span>  
+### <a name="an-empty-text-node-impacts-serialization"></a><span data-ttu-id="dfe45-127">Un nodo di testo vuoto ha effetto sulla serializzazione</span><span class="sxs-lookup"><span data-stu-id="dfe45-127">An Empty Text Node Impacts Serialization</span></span>  
+ <span data-ttu-id="dfe45-128">Se un elemento contiene solo un nodo di testo figlio vuoto, verrà serializzato con la sintassi lunga dei tag: `<Child></Child>`.</span><span class="sxs-lookup"><span data-stu-id="dfe45-128">If an element contains only a child text node that is empty, it is serialized with the long tag syntax: `<Child></Child>`.</span></span> <span data-ttu-id="dfe45-129">Se un elemento non contiene alcun tipo di nodo figlio, verrà serializzato con la sintassi breve dei tag: `<Child />`.</span><span class="sxs-lookup"><span data-stu-id="dfe45-129">If an element contains no child nodes whatsoever, it is serialized with the short tag syntax: `<Child />`.</span></span>  
   
 ```csharp  
 XElement child1 = new XElement("Child1",  
@@ -89,20 +89,20 @@ XElement child1 = new XElement("Child1",
 );  
 XElement child2 = new XElement("Child2");  
 Console.WriteLine(child1);  
-Console.WriteLine(child2);   
+Console.WriteLine(child2);
 ```  
   
- <span data-ttu-id="2c8af-130">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="2c8af-130">This example produces the following output:</span></span>  
+ <span data-ttu-id="dfe45-130">Nell'esempio viene prodotto l'output seguente:</span><span class="sxs-lookup"><span data-stu-id="dfe45-130">This example produces the following output:</span></span>  
   
 ```xml  
 <Child1></Child1>  
 <Child2 />  
 ```  
   
-### <a name="namespaces-are-attributes-in-the-linq-to-xml-tree"></a><span data-ttu-id="2c8af-131">Gli spazi dei nomi sono attributi nell'albero LINQ to XML</span><span class="sxs-lookup"><span data-stu-id="2c8af-131">Namespaces are Attributes in the LINQ to XML Tree</span></span>  
- <span data-ttu-id="2c8af-132">Anche se la sintassi delle dichiarazioni di spazi dei nomi è identica a quella degli attributi, in alcune interfacce di programmazione, ad esempio XSLT e XPath, le dichiarazioni di spazi dei nomi non sono considerati attributi.</span><span class="sxs-lookup"><span data-stu-id="2c8af-132">Even though namespace declarations have identical syntax to attributes, in some programming interfaces, such as XSLT and XPath, namespace declarations are not considered to be attributes.</span></span> <span data-ttu-id="2c8af-133">Tuttavia, in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] gli spazi dei nomi vengono archiviati come oggetti <xref:System.Xml.Linq.XAttribute> nell'albero XML.</span><span class="sxs-lookup"><span data-stu-id="2c8af-133">However, in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], namespaces are stored as <xref:System.Xml.Linq.XAttribute> objects in the XML tree.</span></span> <span data-ttu-id="2c8af-134">Se si scorrono gli attributi per un elemento che contiene una dichiarazione di spazio dei nomi, le dichiarazioni di spazi dei nomi verranno visualizzate come uno degli elementi nella raccolta restituita.</span><span class="sxs-lookup"><span data-stu-id="2c8af-134">If you iterate through the attributes for an element that contains a namespace declaration, you will see the namespace declaration as one of the items in the returned collection.</span></span>  
+### <a name="namespaces-are-attributes-in-the-linq-to-xml-tree"></a><span data-ttu-id="dfe45-131">Gli spazi dei nomi sono attributi nell'albero LINQ to XML</span><span class="sxs-lookup"><span data-stu-id="dfe45-131">Namespaces are Attributes in the LINQ to XML Tree</span></span>  
+ <span data-ttu-id="dfe45-132">Anche se la sintassi delle dichiarazioni di spazi dei nomi è identica a quella degli attributi, in alcune interfacce di programmazione, ad esempio XSLT e XPath, le dichiarazioni di spazi dei nomi non sono considerati attributi.</span><span class="sxs-lookup"><span data-stu-id="dfe45-132">Even though namespace declarations have identical syntax to attributes, in some programming interfaces, such as XSLT and XPath, namespace declarations are not considered to be attributes.</span></span> <span data-ttu-id="dfe45-133">Tuttavia, in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] gli spazi dei nomi vengono archiviati come oggetti <xref:System.Xml.Linq.XAttribute> nell'albero XML.</span><span class="sxs-lookup"><span data-stu-id="dfe45-133">However, in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], namespaces are stored as <xref:System.Xml.Linq.XAttribute> objects in the XML tree.</span></span> <span data-ttu-id="dfe45-134">Se si scorrono gli attributi per un elemento che contiene una dichiarazione di spazio dei nomi, le dichiarazioni di spazi dei nomi verranno visualizzate come uno degli elementi nella raccolta restituita.</span><span class="sxs-lookup"><span data-stu-id="dfe45-134">If you iterate through the attributes for an element that contains a namespace declaration, you will see the namespace declaration as one of the items in the returned collection.</span></span>  
   
- <span data-ttu-id="2c8af-135">La proprietà <xref:System.Xml.Linq.XAttribute.IsNamespaceDeclaration%2A> indica se un attributo è una dichiarazione di spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="2c8af-135">The <xref:System.Xml.Linq.XAttribute.IsNamespaceDeclaration%2A> property indicates whether an attribute is a namespace declaration.</span></span>  
+ <span data-ttu-id="dfe45-135">La proprietà <xref:System.Xml.Linq.XAttribute.IsNamespaceDeclaration%2A> indica se un attributo è una dichiarazione di spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="dfe45-135">The <xref:System.Xml.Linq.XAttribute.IsNamespaceDeclaration%2A> property indicates whether an attribute is a namespace declaration.</span></span>  
   
 ```csharp  
 XElement root = XElement.Parse(  
@@ -114,7 +114,7 @@ foreach (XAttribute att in root.Attributes())
     Console.WriteLine("{0}  IsNamespaceDeclaration:{1}", att, att.IsNamespaceDeclaration);  
 ```  
   
- <span data-ttu-id="2c8af-136">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="2c8af-136">This example produces the following output:</span></span>  
+ <span data-ttu-id="dfe45-136">Nell'esempio viene prodotto l'output seguente:</span><span class="sxs-lookup"><span data-stu-id="dfe45-136">This example produces the following output:</span></span>  
   
 ```output  
 xmlns="http://www.adventure-works.com"  IsNamespaceDeclaration:True  
@@ -122,8 +122,8 @@ xmlns:fc="www.fourthcoffee.com"  IsNamespaceDeclaration:True
 AnAttribute="abc"  IsNamespaceDeclaration:False  
 ```  
   
-### <a name="xpath-axis-methods-do-not-return-child-white-space-of-xdocument"></a><span data-ttu-id="2c8af-137">I metodi dell'asse di XPath non restituiscono lo spazio vuoto figlio di XDocument</span><span class="sxs-lookup"><span data-stu-id="2c8af-137">XPath Axis Methods Do Not Return Child White Space of XDocument</span></span>  
- <span data-ttu-id="2c8af-138">In [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è possibile usare nodi di testo figlio di un oggetto <xref:System.Xml.Linq.XDocument>, purché i nodi di testo contengano solo spazio vuoto.</span><span class="sxs-lookup"><span data-stu-id="2c8af-138">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] allows for child text nodes of an <xref:System.Xml.Linq.XDocument>, as long as the text nodes contain only white space.</span></span> <span data-ttu-id="2c8af-139">Tuttavia, il modello a oggetti di XPath non include spazio vuoto come nodi figlio di un documento, pertanto quando si scorrono gli elementi figlio di <xref:System.Xml.Linq.XDocument> usando l'asse <xref:System.Xml.Linq.XContainer.Nodes%2A>, verranno restituiti nodi di testo di tipo spazio vuoto.</span><span class="sxs-lookup"><span data-stu-id="2c8af-139">However, the XPath object model does not include white space as child nodes of a document, so when you iterate through the children of an <xref:System.Xml.Linq.XDocument> using the <xref:System.Xml.Linq.XContainer.Nodes%2A> axis, white-space text nodes will be returned.</span></span> <span data-ttu-id="2c8af-140">Tuttavia, quando si scorrono gli elementi figlio di <xref:System.Xml.Linq.XDocument> usando i metodi dell'asse di XPath, i nodi di testo di tipo spazio vuoto non verranno restituiti.</span><span class="sxs-lookup"><span data-stu-id="2c8af-140">However, when you iterate through the children of an <xref:System.Xml.Linq.XDocument> using the XPath axis methods, white-space text nodes will not be returned.</span></span>  
+### <a name="xpath-axis-methods-do-not-return-child-white-space-of-xdocument"></a><span data-ttu-id="dfe45-137">I metodi dell'asse di XPath non restituiscono lo spazio vuoto figlio di XDocument</span><span class="sxs-lookup"><span data-stu-id="dfe45-137">XPath Axis Methods Do Not Return Child White Space of XDocument</span></span>  
+ <span data-ttu-id="dfe45-138">In [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è possibile usare nodi di testo figlio di un oggetto <xref:System.Xml.Linq.XDocument>, purché i nodi di testo contengano solo spazio vuoto.</span><span class="sxs-lookup"><span data-stu-id="dfe45-138">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] allows for child text nodes of an <xref:System.Xml.Linq.XDocument>, as long as the text nodes contain only white space.</span></span> <span data-ttu-id="dfe45-139">Tuttavia, il modello a oggetti di XPath non include spazio vuoto come nodi figlio di un documento, pertanto quando si scorrono gli elementi figlio di <xref:System.Xml.Linq.XDocument> usando l'asse <xref:System.Xml.Linq.XContainer.Nodes%2A>, verranno restituiti nodi di testo di tipo spazio vuoto.</span><span class="sxs-lookup"><span data-stu-id="dfe45-139">However, the XPath object model does not include white space as child nodes of a document, so when you iterate through the children of an <xref:System.Xml.Linq.XDocument> using the <xref:System.Xml.Linq.XContainer.Nodes%2A> axis, white-space text nodes will be returned.</span></span> <span data-ttu-id="dfe45-140">Tuttavia, quando si scorrono gli elementi figlio di <xref:System.Xml.Linq.XDocument> usando i metodi dell'asse di XPath, i nodi di testo di tipo spazio vuoto non verranno restituiti.</span><span class="sxs-lookup"><span data-stu-id="dfe45-140">However, when you iterate through the children of an <xref:System.Xml.Linq.XDocument> using the XPath axis methods, white-space text nodes will not be returned.</span></span>  
   
 ```csharp  
 // Create a document with some white-space child nodes of the document.  
@@ -139,18 +139,18 @@ XDocument root = XDocument.Parse(
 Console.WriteLine(root.Nodes().OfType<XText>().Count());  
   
 // count the white-space child nodes using XPathEvaluate  
-Console.WriteLine(((IEnumerable)root.XPathEvaluate("text()")).OfType<XText>().Count());   
+Console.WriteLine(((IEnumerable)root.XPathEvaluate("text()")).OfType<XText>().Count());
 ```  
   
- <span data-ttu-id="2c8af-141">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="2c8af-141">This example produces the following output:</span></span>  
+ <span data-ttu-id="dfe45-141">Nell'esempio viene prodotto l'output seguente:</span><span class="sxs-lookup"><span data-stu-id="dfe45-141">This example produces the following output:</span></span>  
   
 ```output  
 3  
 0  
 ```  
   
-### <a name="xdeclaration-objects-are-not-nodes"></a><span data-ttu-id="2c8af-142">Gli oggetti XDeclaration non sono nodi</span><span class="sxs-lookup"><span data-stu-id="2c8af-142">XDeclaration Objects are not Nodes</span></span>  
- <span data-ttu-id="2c8af-143">Quando si scorrono i nodi figlio di <xref:System.Xml.Linq.XDocument>, l'oggetto dichiarazione XML non verrà visualizzato.</span><span class="sxs-lookup"><span data-stu-id="2c8af-143">When you iterate through the children nodes of an <xref:System.Xml.Linq.XDocument>, you will not see the XML declaration object.</span></span> <span data-ttu-id="2c8af-144">Si tratta di una proprietà, non di un nodo figlio del documento.</span><span class="sxs-lookup"><span data-stu-id="2c8af-144">It is a property of the document, not a child node of it.</span></span>  
+### <a name="xdeclaration-objects-are-not-nodes"></a><span data-ttu-id="dfe45-142">Gli oggetti XDeclaration non sono nodi</span><span class="sxs-lookup"><span data-stu-id="dfe45-142">XDeclaration Objects are not Nodes</span></span>  
+ <span data-ttu-id="dfe45-143">Quando si scorrono i nodi figlio di <xref:System.Xml.Linq.XDocument>, l'oggetto dichiarazione XML non verrà visualizzato.</span><span class="sxs-lookup"><span data-stu-id="dfe45-143">When you iterate through the children nodes of an <xref:System.Xml.Linq.XDocument>, you will not see the XML declaration object.</span></span> <span data-ttu-id="dfe45-144">Si tratta di una proprietà, non di un nodo figlio del documento.</span><span class="sxs-lookup"><span data-stu-id="dfe45-144">It is a property of the document, not a child node of it.</span></span>  
   
 ```csharp  
 XDocument doc = new XDocument(  
@@ -164,7 +164,7 @@ Console.WriteLine(File.ReadAllText("Temp.xml"));
 Console.WriteLine(doc.Nodes().Count());  
 ```  
   
- <span data-ttu-id="2c8af-145">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="2c8af-145">This example produces the following output:</span></span>  
+ <span data-ttu-id="dfe45-145">Nell'esempio viene prodotto l'output seguente:</span><span class="sxs-lookup"><span data-stu-id="dfe45-145">This example produces the following output:</span></span>  
   
 ```output  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
