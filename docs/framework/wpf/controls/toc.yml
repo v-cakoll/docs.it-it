@@ -15,7 +15,7 @@
               href: how-to-animate-a-borderthickness-value.md
         - name: BulletDecorator
           href: bulletdecorator.md
-        - name: Button
+        - name: Pulsante
           href: button.md
           items:
             - name: Creare un pulsante con un'immagine
@@ -28,7 +28,7 @@
             - name: Procedure relative
               href: canvas-how-to-topics.md
               items:
-                - name: Disporre un bordo intorno al contenuto di un'area di disegno
+                - name: Disporre di un bordo intorno al contenuto di un'area di disegno
                   href: how-to-wrap-a-border-around-the-content-of-a-canvas.md
                 - name: Ottenere o impostare le proprietà di posizionamento delle aree di disegno
                   href: how-to-get-or-set-canvas-positioning-properties.md
@@ -52,13 +52,13 @@
           items:
             - name: Comportamento predefinito di tastiera e mouse nel controllo DataGrid
               href: default-keyboard-and-mouse-behavior-in-the-datagrid-control.md
-            - name: 'Procedura: Aggiungere dettagli di riga a un controllo DataGrid'
+            - name: 'Procedura: aggiungere dettagli di riga un controllo DataGrid'
               href: how-to-add-row-details-to-a-datagrid-control.md
-            - name: 'Procedura: Raggruppare, ordinare e filtrare dati nel controllo DataGrid'
+            - name: 'Procedura: raggruppare, ordinare e filtrare dati nel controllo DataGrid'
               href: how-to-group-sort-and-filter-data-in-the-datagrid-control.md
-            - name: 'Procedura: Implementare la convalida con il controllo DataGrid'
+            - name: 'Procedura: implementare la convalida con il controllo DataGrid'
               href: how-to-implement-validation-with-the-datagrid-control.md
-            - name: 'Procedura dettagliata: Visualizzare i dati di un database di SQL Server in un controllo DataGrid'
+            - name: 'Procedura dettagliata: aggiunta di dati di un database di SQL Server in un controllo DataGrid'
               href: walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md
             - name: Opzioni di ridimensionamento nel controllo DataGrid
               href: sizing-options-in-the-datagrid-control.md
@@ -104,17 +104,17 @@
               items:
                 - name: Compilare una finestra di dialogo dell'interfaccia utente standard usando l'elemento Grid
                   href: how-to-build-a-standard-ui-dialog-box-by-using-grid.md
-                - name: Creare un elemento Grid complesso
+                - name: Creare una griglia complessa
                   href: how-to-create-a-complex-grid.md
-                - name: Creare un elemento Grid
+                - name: Creare un elemento griglia
                   href: how-to-create-a-grid-element.md
-                - name: Creare e usare un oggetto GridLengthConverter
+                - name: Creare e utilizzare un oggetto GridLengthConverter
                   href: how-to-create-and-use-a-gridlengthconverter-object.md
-                - name: Modificare colonne e righe usando ColumnDefinitionsCollections e RowDefinitionsCollections
+                - name: Modificare colonne e righe utilizzando ColumnDefinitionsCollections e RowDefinitionsCollections
                   href: manipulate-columns-and-rows-by-using-columndefinitionscollections.md
-                - name: Posizionare gli elementi figlio di un elemento Grid
+                - name: Posizionare gli elementi figlio di una griglia
                   href: how-to-position-the-child-elements-of-a-grid.md
-                - name: Condividere le proprietà di ridimensionamento tra elementi Grid
+                - name: Condividere le proprietà di ridimensionamento tra griglie
                   href: how-to-share-sizing-properties-between-grids.md
         - name: GridSplitter
           href: gridsplitter.md
@@ -147,10 +147,10 @@
                   href: how-to-crop-an-image.md
                 - name: Ruotare un'immagine
                   href: how-to-rotate-an-image.md
-        - name: Label
+        - name: Etichetta
           href: label.md
           items:
-            - name: Creare un controllo con un tasto di scelta e la disposizione testo
+            - name: Creare un controllo che dispone di un tasto di scelta e di una disposizione di testo
               href: how-to-create-a-control-that-has-an-access-key-and-text-wrapping.md
         - name: ListBox
           href: listbox.md
@@ -183,21 +183,21 @@
                   href: how-to-sort-a-gridview-column-when-a-header-is-clicked.md
                 - name: Creare una modalità di visualizzazione personalizzata per un oggetto ListView
                   href: how-to-create-a-custom-view-mode-for-a-listview.md
-                - name: Usare i modelli per applicare uno stile a un ListView che usa un oggetto GridView
+                - name: Utilizzare i modelli per applicare uno stile a un ListView che utilizza una GridView
                   href: how-to-use-templates-to-style-a-listview-that-uses-gridview.md
                 - name: Creare uno stile per un'intestazione di colonna GridView trascinata
                   href: how-to-create-a-style-for-a-dragged-gridview-column-header.md
                 - name: Visualizzare il contenuto dell'oggetto ListView usando un oggetto GridView
                   href: how-to-display-listview-contents-by-using-a-gridview.md
-                - name: Usare i trigger per applicare uno stile agli elementi selezionati in un controllo ListView
+                - name: Utilizzare i trigger per applicare uno stile agli elementi selezionati in un controllo ListView
                   href: how-to-use-triggers-to-style-selected-items-in-a-listview.md
                 - name: Creare ListViewItems con un CheckBox
                   href: how-to-create-listviewitems-with-a-checkbox.md
-                - name: Visualizzare i dati usando GridViewRowPresenter
+                - name: Visualizzare i dati utilizzando GridViewRowPresenter
                   href: how-to-display-data-by-using-gridviewrowpresenter.md
-                - name: Raggruppare gli elementi di un controllo ListView che implementa un oggetto GridView
+                - name: Raggruppare gli elementi di un controllo ListView che implementa una GridView
                   href: how-to-group-items-in-a-listview-that-implements-a-gridview.md
-                - name: Applicare uno stile a una riga in un ListView che implementa un oggetto GridView
+                - name: Applicare uno stile a una riga in un ListView che implementa una GridView
                   href: how-to-style-a-row-in-a-listview-that-implements-a-gridview.md
                 - name: Modificare l'allineamento orizzontale di una colonna in ListView
                   href: how-to-change-the-horizontal-alignment-of-a-column-in-a-listview.md
@@ -238,7 +238,7 @@
               items:
                 - name: Animare un controllo Popup
                   href: how-to-animate-a-popup.md
-                - name: Specificare una posizione personalizzata per un controllo Popup
+                - name: Specificare un posizione personalizzata per un controllo Popup
                   href: how-to-specify-a-custom-popup-position.md
         - name: ProgressBar
           href: progressbar.md
@@ -281,9 +281,9 @@
                   href: how-to-handle-the-scrollchanged-event.md
                 - name: Scorrere il contenuto usando l'interfaccia IScrollInfo
                   href: how-to-scroll-content-by-using-the-iscrollinfo-interface.md
-                - name: Usare i metodi di scorrimento del contenuto di ScrollViewer
+                - name: Utilizzare i metodi di scorrimento del contenuto di ScrollViewer
                   href: how-to-use-the-content-scrolling-methods-of-scrollviewer.md
-        - name: Separatore
+        - name: Separator
           href: separator.md
         - name: Slider
           href: slider.md
@@ -339,9 +339,9 @@
                   href: how-to-set-the-text-content-of-a-textbox-control.md
                 - name: Attivare il controllo ortografico in un controllo di modifica del testo
                   href: how-to-enable-spell-checking-in-a-text-editing-control.md
-                - name: Usare un menu di scelta rapida personalizzato con un oggetto TextBox
+                - name: Utilizzare un menu di scelta rapida personalizzato con un oggetto TextBox
                   href: how-to-use-a-custom-context-menu-with-a-textbox.md
-                - name: Usare il controllo ortografico con un menu di scelta rapida
+                - name: Utilizzare il controllo ortografico con un menu di scelta rapida
                   href: how-to-use-spell-checking-with-a-context-menu.md
                 - name: Aggiungere una filigrana a un oggetto TextBox
                   href: how-to-add-a-watermark-to-a-textbox.md
@@ -362,7 +362,7 @@
               items:
                 - name: Posizionare un oggetto ToolTip
                   href: how-to-position-a-tooltip.md
-                - name: Usare la proprietà BetweenShowDelay
+                - name: Utilizzare la proprietà BetweenShowDelay
                   href: how-to-use-the-betweenshowdelay-property.md
         - name: TreeView
           href: treeview.md
@@ -374,11 +374,11 @@
               items:
                 - name: Creare controlli TreeView semplici o complessi
                   href: how-to-create-simple-or-complex-treeviews.md
-                - name: 'Usare gli oggetti SelectedValue, SelectedValuePath e SelectedItem'
+                - name: 'Utilizzare gli oggetti SelectedValue, SelectedValuePath e SelectedItem'
                   href: how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md
-                - name: Associare una visualizzazione struttura ad albero a dati di profondità non determinabile
+                - name: Associazione di una visualizzazione struttura ad albero a dati di profondità non determinabile
                   href: how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md
-                - name: Migliorare le prestazioni di un controllo TreeView
+                - name: Miglioramento delle prestazioni di un controllo TreeView
                   href: how-to-improve-the-performance-of-a-treeview.md
                 - name: Trovare un oggetto TreeViewItem in un oggetto TreeView
                   href: how-to-find-a-treeviewitem-in-a-treeview.md
@@ -396,7 +396,7 @@
           href: styling-and-templating.md
         - name: Personalizzazione di un controllo esistente con un oggetto ControlTemplate
           href: ../../../desktop-wpf/themes/how-to-create-apply-template.md
-        - name: 'Procedura: Trovare elementi generati da un oggetto ControlTemplate'
+        - name: 'Procedura: trovare elementi generati da un oggetto ControlTemplate'
           href: how-to-find-controltemplate-generated-elements.md
     - name: Personalizzazione dei controlli
       href: control-customization.md
@@ -415,11 +415,11 @@
             - name: Procedure relative
               href: adorners-how-to-topics.md
               items:
-                - name: Implementare uno strumento decorativo
+                - name: Implementare uno strumento decorativo visuale
                   href: how-to-implement-an-adorner.md
-                - name: Associare uno strumento decorativo a un elemento
+                - name: Associare uno strumento decorativo visuale a un elemento
                   href: how-to-bind-an-adorner-to-an-element.md
-                - name: Decorare gli elementi figlio di un riquadro
+                - name: Adornare gli elementi figlio di un oggetto Panel
                   href: how-to-adorn-the-children-of-a-panel.md
                 - name: Rimuovere uno strumento decorativo da un elemento
                   href: how-to-remove-an-adorner-from-an-element.md
@@ -494,7 +494,7 @@
               href: window-styles-and-templates.md
         - name: Automazione interfaccia utente di un controllo personalizzato WPF
           href: ui-automation-of-a-wpf-custom-control.md
-        - name: 'Procedure dettagliate: Creare un pulsante personalizzato a cui è stata aggiunta un''animazione'
+        - name: 'Procedure dettagliate: creazione di un pulsante personalizzato a cui è stata aggiunta un''animazione'
           href: walkthroughs-create-a-custom-animated-button.md
           items:
             - name: Creare un pulsante tramite Blend

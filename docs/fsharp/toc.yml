@@ -146,7 +146,7 @@
       href: language-reference/interfaces.md
     - name: Classi astratte
       href: language-reference/abstract-classes.md
-    - name: Membri
+    - name: Members
       href: language-reference/members/index.md
       items:
         - name: Associazioni let nelle classi
@@ -161,9 +161,9 @@
           href: language-reference/members/methods.md
         - name: Costruttori
           href: language-reference/members/constructors.md
-        - name: Events
+        - name: eventi
           href: language-reference/members/events.md
-        - name: 'Campi espliciti: Parola chiave `val`'
+        - name: 'Campi espliciti: parola chiave `val`'
           href: language-reference/members/explicit-fields-the-val-keyword.md
     - name: Estensioni di tipo
       href: language-reference/type-extensions.md
@@ -216,11 +216,11 @@
       href: language-reference/attributes.md
     - name: 'Gestione di risorse: parola chiave use'
       href: language-reference/resource-management-the-use-keyword.md
-    - name: Spazi dei nomi
+    - name: Namespaces
       href: language-reference/namespaces.md
     - name: Moduli
       href: language-reference/modules.md
-    - name: 'Dichiarazioni di importazione: Parola chiave open'
+    - name: 'Dichiarazioni di importazione: parola chiave open'
       href: language-reference/import-declarations-the-open-keyword.md
     - name: File di firma
       href: language-reference/signature-files.md

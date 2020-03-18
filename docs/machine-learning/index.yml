@@ -11,13 +11,13 @@ metadata:
   ms.author: nakersha
   ms.date: 10/30/2019
   ms.openlocfilehash: 05d357af2088321524841bfc05f94f816f1bc306
-  ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
   ms.translationtype: MT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 11/01/2019
+  ms.lasthandoff: 03/15/2020
   ms.locfileid: "73423934"
 landingContent:
-- title: Nozioni fondamentali su ML.NET
+- title: Nozioni di base sui ML.NET
   linkLists:
   - linkListType: overview
     links:
@@ -29,65 +29,65 @@ landingContent:
       url: https://channel9.msdn.com/Series/MLNET/MLNET-Machine-Learning-Introduction-1-of-8
   - linkListType: concept
     links:
-    - text: Attività di Machine Learning & algoritmi
+    - text: Le attività di apprendimento automatico & algoritmi
       url: resources/tasks.md
     - text: Come scegliere un algoritmo
       url: how-to-choose-an-ml-net-algorithm.md
-- title: Iniziare tra 10 minuti
+- title: Per iniziare in 10 minuti
   linkLists:
   - linkListType: quickstart
     links:
-    - text: Configurare il generatore di modelli in Visual Studio
+    - text: Configurare Model Builder in Visual StudioSet up Model Builder in Visual Studio
       url: how-to-guides/install-model-builder.md
     - text: Introduzione all'API ML.NET
       url: https://dotnet.microsoft.com/learn/ml-dotnet/get-started-tutorial/intro
-    - text: Installare l'interfaccia della riga di comando in Mac OS, Windows o Linux
+    - text: Installare l'interfaccia della riga di comando su Mac OS, Windows o Linux
       url: how-to-guides/install-ml-net-cli.md
 - title: Esercitazioni
   linkLists:
   - linkListType: tutorial
     links:
-    - text: Analizzare i commenti del sito Web (Generatore di modelli)
+    - text: Analizzare il sentiment dei commenti dei commenti del sito Web (Model Builder)
       url: tutorials/sentiment-analysis-model-builder.md
-    - text: Prezzi stimati (Generatore di modelli)
+    - text: Prevedere i prezzi (Model Builder)
       url: tutorials/predict-prices-with-model-builder.md
-    - text: Categorizzare le violazioni di integrità (Generatore di modelli & SQL Server)
+    - text: Categorizzare le violazioni di integrità (Model Builder & SQL Server)Categorize health violations (Model Builder & SQL Server)
       url: tutorials/health-violation-classification-model-builder.md
     - text: Categorizzare i problemi di supporto (API)
       url: tutorials/github-issue-classification.md
-    - text: Classificare le immagini con l'API di classificazione immagini (API)
+    - text: Classificare le immagini con l'API (Image Classification API)
       url: tutorials/image-classification-api-transfer-learning.md
-    - text: Classificare le immagini usando la composizione del modello (API)
+    - text: Classificare le immagini usando la composizione del modello (API)Classify images using model composition (API)
       url: tutorials/image-classification.md
     - text: Rilevare gli oggetti nelle immagini (API)
       url: tutorials/object-detection-onnx.md
-    - text: Rilevare le anomalie nelle vendite di prodotti (API)
+    - text: Rilevare le anomalie nelle vendite dei prodotti (API)
       url: tutorials/sales-anomaly-detection.md
-    - text: Previsione della richiesta di noleggio biciclette (API & SQL Server)
+    - text: Prevedere la domanda di noleggio biciclette (API & SQL Server)Forecast bike rental demand (API & SQL Server)
       url: tutorials/time-series-demand-forecasting.md
-    - text: Creazione di un Movie Recommender (API)
+    - text: Creare un consigliatoore di film (API)
       url: tutorials/movie-recommendation.md
 - title: Guide pratiche
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Caricare dati da diverse origini
+    - text: Caricare dati da varie origini
       url: how-to-guides/load-data-ml-net.md
     - text: Preparare i dati per la creazione di un modello
       url: how-to-guides/prepare-data-ml-net.md
-    - text: Eseguire il Training & valutare un modello
+    - text: Addestrare & valutare un modello
       url: how-to-guides/train-machine-learning-model-ml-net.md
     - text: Effettuare previsioni con un modello con training
       url: how-to-guides/machine-learning-model-predictions-ml-net.md
-    - text: Salva & caricare un modello sottoposto a training
+    - text: Salvare & caricare un modello sottoposto a trainingSave a load a trained model
       url: how-to-guides/save-load-machine-learning-models-ml-net.md
     - text: Ripetere il training di un modello
       url: how-to-guides/retrain-model-ml-net.md
-- title: Reference
+- title: Informazioni di riferimento
   linkLists:
   - linkListType: reference
     links:
     - text: Informazioni di riferimento sulle API ML.NET
       url: https://docs.microsoft.com/dotnet/api/?view=ml-dotnet
-    - text: Esempi di ML.NET
+    - text: ML.NET campioni
       url: https://github.com/dotnet/machinelearning-samples
