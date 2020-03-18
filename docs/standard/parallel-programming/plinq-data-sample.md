@@ -9,10 +9,10 @@ helpviewer_keywords:
 - PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
 ms.openlocfilehash: b13a2608df486f1de42514d4f8eaac49f04d345e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73140006"
 ---
 # <a name="plinq-data-sample"></a>PLINQ Data Sample
@@ -29,7 +29,7 @@ Questo esempio contiene dati in formato CSV, nonché metodi che trasformano tali
   
 2. Sostituire il contenuto di Module1.vb o Program.cs con il codice riportato dopo questi passaggi.  
   
-3. Nel menu **Progetto** fare clic su **Aggiungi nuovo elemento**. Selezionare **File di testo** e quindi fare clic su **OK**. Copiare i dati in questo argomento e quindi incollarli nel nuovo file di testo. Nel menu **File** fare clic su **Salva**, denominare il file Plinqdata.csv e quindi salvarlo nella cartella che contiene i file del codice sorgente.  
+3. Dal menu **Progetto** fare clic su **Aggiungi nuovo elemento**. Selezionare **File di testo** e quindi fare clic su **OK**. Copiare i dati in questo argomento e quindi incollarli nel nuovo file di testo. Nel menu **File** fare clic su **Salva**, denominare il file Plinqdata.csv e quindi salvarlo nella cartella che contiene i file del codice sorgente.  
   
 4. Premere F5 per verificare che il progetto venga compilato ed eseguito correttamente. Nella finestra della console verrà visualizzato l'output seguente.  
   
@@ -44,7 +44,7 @@ Questo esempio contiene dati in formato CSV, nonché metodi che trasformano tali
  [!code-csharp[PLINQ#50](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#50)]
  [!code-vb[PLINQ#50](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#50)]  
   
-## <a name="data"></a>Dati  
+## <a name="data"></a>Data  
   
 ```console  
 CUSTOMERS  

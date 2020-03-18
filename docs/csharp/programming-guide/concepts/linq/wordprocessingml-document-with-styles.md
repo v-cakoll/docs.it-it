@@ -2,12 +2,12 @@
 title: Documento WordprocessingML con stili3
 ms.date: 07/20/2015
 ms.assetid: 40e35de6-ac93-4bba-88ab-a018cbe93873
-ms.openlocfilehash: 8f335303f2e288103520d0bedf81e295ab56efef
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 10697744680276a40fb7a175e4c04920c9e3c243
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590878"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167868"
 ---
 # <a name="wordprocessingml-document-with-styles"></a>Documento WordprocessingML con stili
 I documenti WordprocessingML più complicati includono paragrafi formattati con stili.  
@@ -17,7 +17,7 @@ I documenti WordprocessingML più complicati includono paragrafi formattati con 
  È importante che per l'accesso ai pacchetti vengano usate le relazioni tra le parti, anziché un percorso arbitrario. Questo aspetto esula dagli argomenti previsti dall'esercitazione sulla modifica del contenuto in un documento WordprocessingML, tuttavia i programmi di esempio inclusi nell'esercitazione illustrano l'approccio corretto.  
   
 ## <a name="a-document-that-uses-styles"></a>Documento con stili  
- L'esempio WordML illustrato nell'argomento [Forma dei documenti WordprocessingML](./shape-of-wordprocessingml-documents.md) è molto semplice. Il documento seguente è più complicato: include paragrafi formattati con stili. Il modo più semplice per visualizzare il codice XML che costituisce un documento Office Open XML consiste nell'eseguire l'[Esempio che genera parti di documento Office Open XML (C#)](./example-that-outputs-office-open-xml-document-parts.md).  
+ L'esempio WordML illustrato nell'argomento [Forma dei documenti WordprocessingML](./shape-of-wordprocessingml-documents.md) è molto semplice. Il documento seguente è più complicato perché include paragrafi formattati con stili. Il modo più semplice per visualizzare il codice XML che costituisce un documento Office Open XML consiste nell'eseguire l'[Esempio che genera parti di documento Office Open XML (C#)](./example-that-outputs-office-open-xml-document-parts.md).  
   
  Nel documento seguente al primo paragrafo è applicato lo stile `Heading1`. Vi sono poi diversi paragrafi cui è applicato lo stile predefinito e altri cui è applicato lo stile `Code`. In virtù di questa relativa complessità, si tratta di un documento più interessante da analizzare con LINQ to XML.  
   
@@ -136,4 +136,3 @@ I documenti WordprocessingML più complicati includono paragrafi formattati con 
   </w:body>  
 </w:document>  
 ```  
- 

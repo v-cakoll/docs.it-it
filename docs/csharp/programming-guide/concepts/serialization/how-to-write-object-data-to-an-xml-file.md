@@ -1,15 +1,15 @@
 ---
-title: Come scrivere i dati di un oggetto in un fileC#XML ()
+title: Come scrivere i dati dell'oggetto in un file XML (C
 ms.date: 07/20/2015
 ms.assetid: 7681eb98-703d-4005-a369-26a7bca0f894
-ms.openlocfilehash: 475e9398f20a2a4db9fb537d0b8d44f0273e980b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f7ffb47a22d3cd94cd7cb6f702b64180a8790eb4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346441"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167510"
 ---
-# <a name="how-to-write-object-data-to-an-xml-file-c"></a>Come scrivere i dati di un oggetto in un fileC#XML ()
+# <a name="how-to-write-object-data-to-an-xml-file-c"></a>Come scrivere i dati dell'oggetto in un file XML (C
 Questo esempio scrive l'oggetto da una classe in un file XML usando la classe <xref:System.Xml.Serialization.XmlSerializer>.  
   
 ## <a name="example"></a>Esempio  
@@ -25,14 +25,14 @@ public class XMLWrite
   
     public class Book  
     {  
-        public String title;   
+        public String title;
     }  
   
     public static void WriteXML()  
     {  
         Book overview = new Book();  
         overview.title = "Serialization Overview";  
-        System.Xml.Serialization.XmlSerializer writer =   
+        System.Xml.Serialization.XmlSerializer writer =
             new System.Xml.Serialization.XmlSerializer(typeof(Book));  
   
         var path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "//SerializationOverview.xml";  
@@ -64,5 +64,5 @@ public class XMLWrite
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.IO.StreamWriter>
-- [Come leggere i dati di un oggetto da un fileC#XML ()](./how-to-read-object-data-from-an-xml-file.md)
+- [Come leggere i dati dell'oggetto da un file XML (C](./how-to-read-object-data-from-an-xml-file.md)
 - [Serializzazione (C#)](./index.md)

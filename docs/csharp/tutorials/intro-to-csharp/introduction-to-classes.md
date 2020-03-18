@@ -3,16 +3,16 @@ title: Classi e oggetti - Esercitazione introduttiva su C#
 description: Creare il primo programma C# ed esplorare i concetti della programmazione orientata a oggetti
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 5715124a307c7b7fe41b584df82dd328c873ae29
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: b6ad72997647b80b981f1a1871e384791404bdf7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78240080"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156593"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Esplorare la programmazione orientata agli oggetti con classi e oggetti
 
-Questa esercitazione prevede la presenza di un computer da usare per lo sviluppo. L'esercitazione .NET [Hello World in 10 minuti](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) contiene le istruzioni per configurare l'ambiente di sviluppo locale in Windows, Linux o MacOS. Una breve panoramica dei comandi usati è disponibile in [Acquisire familiarità con gli strumenti di sviluppo](local-environment.md), che contiene collegamenti a informazioni più dettagliate.
+Questa esercitazione prevede la presenza di un computer da usare per lo sviluppo. L'esercitazione di .NET [Hello World in 10 minuti](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) contiene istruzioni per la configurazione dell'ambiente di sviluppo locale in Windows, Linux o macOS. Una breve panoramica dei comandi usati è disponibile in [Acquisire familiarità con gli strumenti di sviluppo](local-environment.md), che contiene collegamenti a informazioni più dettagliate.
 
 ## <a name="create-your-application"></a>Creare l'applicazione
 
@@ -33,7 +33,7 @@ namespace classes
 }
 ```
 
-In questa esercitazione verranno creati nuovi tipi che rappresentano un conto bancario. In genere, gli sviluppatori definiscono ogni classe in un file di testo diverso. In questo modo è più semplice gestire l'aumento di dimensioni di un programma. Creare un nuovo file denominato *BankAccount.cs* nella directory *classes*. 
+In questa esercitazione verranno creati nuovi tipi che rappresentano un conto bancario. In genere, gli sviluppatori definiscono ogni classe in un file di testo diverso. In questo modo è più semplice gestire l'aumento di dimensioni di un programma. Creare un nuovo file denominato *BankAccount.cs* nella directory *classes*.
 
 Questo file conterrà la definizione di un ***conto bancario***. Nella programmazione orientata a oggetti il codice viene organizzato tramite la creazione di tipi sotto forma di ***classi***. Queste classi contengono il codice che rappresenta un'entità specifica. La classe `BankAccount` rappresenta un conto bancario. Il codice implementa operazioni specifiche tramite metodi e proprietà. In questa esercitazione il conto bancario supporta questo comportamento:
 
@@ -71,13 +71,13 @@ namespace classes
 }
 ```
 
-Prima di procedere, è opportuno esaminare il codice finora creato.  La dichiarazione `namespace` offre un modo per organizzare logicamente il codice. Poiché questa esercitazione è relativamente breve, si inserirà il codice in uno spazio dei nomi. 
+Prima di procedere, è opportuno esaminare il codice finora creato.  La dichiarazione `namespace` offre un modo per organizzare logicamente il codice. Poiché questa esercitazione è relativamente breve, si inserirà il codice in uno spazio dei nomi.
 
-`public class BankAccount` definisce la classe, o tipo, che si sta creando. Tutti gli elementi all'interno del `{` e `}` che seguono la dichiarazione di classe definiscono lo stato e il comportamento della classe. Esistono cinque ***membri*** della classe `BankAccount`. I primi tre sono ***proprietà***. Le proprietà sono elementi di dati e possono contenere codice per l'applicazione della convalida o di altre regole. Gli ultimi due sono ***metodi***. I metodi sono blocchi di codice che eseguono una singola funzione. La lettura dei nomi di ogni membro dovrebbe fornire informazioni sufficienti per consentire all'utente o a un altro sviluppatore di capire gli scopi della classe.
+`public class BankAccount` definisce la classe, o tipo, che si sta creando. Tutto ciò che si all'interno di `{` e `}` che segue la dichiarazione di classe definisce lo stato e il comportamento della classe. Esistono cinque ***membri*** della classe `BankAccount`. I primi tre sono ***proprietà***. Le proprietà sono elementi di dati e possono contenere codice per l'applicazione della convalida o di altre regole. Gli ultimi due sono ***metodi***. I metodi sono blocchi di codice che eseguono una singola funzione. La lettura dei nomi di ogni membro dovrebbe fornire informazioni sufficienti per consentire all'utente o a un altro sviluppatore di capire gli scopi della classe.
 
 ## <a name="open-a-new-account"></a>Aprire un nuovo conto
 
-La prima funzionalità da implementare è l'apertura di un conto bancario. Quando un cliente apre un conto, deve specificare il saldo iniziale e informazioni sul titolare o i titolari del conto. 
+La prima funzionalità da implementare è l'apertura di un conto bancario. Quando un cliente apre un conto, deve specificare il saldo iniziale e informazioni sul titolare o i titolari del conto.
 
 La creazione di un nuovo oggetto di tipo `BankAccount` implica la definizione di un ***costruttore*** che assegna questi valori. Un ***costruttore*** è un membro con lo stesso nome della classe e viene usato per inizializzare oggetti di quel tipo di classe. Aggiungere il costruttore seguente al tipo `BankAccount`:
 
@@ -89,7 +89,7 @@ public BankAccount(string name, decimal initialBalance)
 }
 ```
 
-I costruttori vengono chiamati quando si crea un oggetto con [`new`](../../language-reference/operators/new-operator.md). Sostituire la riga `Console.WriteLine("Hello World!");` in *Program.cs* con il codice seguente (sostituire `<name>` con il proprio nome):
+I costruttori vengono chiamati quando [`new`](../../language-reference/operators/new-operator.md)si crea un oggetto utilizzando . Sostituire la `Console.WriteLine("Hello World!");` riga in *Program.cs* con `<name>` il codice seguente (sostituire con il proprio nome):
 
 ```csharp
 var account = new BankAccount("<name>", 1000);
@@ -106,7 +106,7 @@ Aggiungere la dichiarazione di membro seguente alla classe `BankAccount`:
 private static int accountNumberSeed = 1234567890;
 ```
 
-Questo è un membro dati. Il membro è `private`, ovvero è accessibile solo dal codice all'interno della classe `BankAccount`. Si tratta di un modo per separare le responsabilità pubbliche, ad esempio la presenza di un numero di conto, dall'implementazione privata (in che modo vengono generati i numeri di account). È anche `static`, ovvero è condiviso tra tutti gli oggetti `BankAccount`. Il valore di una variabile non statica è univoco per ogni istanza dell'oggetto `BankAccount`. Aggiungere le due righe seguenti al costruttore per assegnare il numero di conto:
+Questo è un membro dati. Il membro è `private`, ovvero è accessibile solo dal codice all'interno della classe `BankAccount`. È un modo per separare le responsabilità pubbliche (come avere un numero di conto) dall'implementazione privata (come vengono generati i numeri di conto). È anche `static`, ovvero è condiviso tra tutti gli oggetti `BankAccount`. Il valore di una variabile non statica è univoco per ogni istanza dell'oggetto `BankAccount`. Aggiungere le due righe seguenti al costruttore per assegnare il numero di conto:
 
 ```csharp
 this.Number = accountNumberSeed.ToString();
@@ -139,13 +139,13 @@ A questo punto, occorre modificare il modo in cui viene indicato il saldo (`Bala
 
 Questo esempio illustra un aspetto importante delle ***proprietà***. Il saldo viene ora calcolato quando un altro programmatore richiede il valore. Il calcolo enumera tutte le transazioni e fornisce la somma come saldo corrente.
 
-Implementare ora i metodi `MakeDeposit` e `MakeWithdrawal`. Questi metodi applicheranno le due regole finali, ovvero che il saldo iniziale deve essere positivo e che qualsiasi prelievo non può risultare in un saldo negativo. 
+Implementare ora i metodi `MakeDeposit` e `MakeWithdrawal`. Questi metodi applicheranno le due regole finali, ovvero che il saldo iniziale deve essere positivo e che qualsiasi prelievo non può risultare in un saldo negativo.
 
 Viene così introdotto il concetto di ***eccezioni***. Il modo standard per indicare che un metodo non può completare correttamente le operazioni previste consiste nel generare un'eccezione. Il tipo di eccezione e il messaggio associato descrivono l'errore. In questo caso, il metodo `MakeDeposit` genera un'eccezione se l'importo del versamento è negativo. Il metodo `MakeWithdrawal` genera un'eccezione se l'importo del prelievo è negativo oppure se dalla conferma del prelievo risulta un saldo negativo:
 
 [!code-csharp[DepositAndWithdrawal](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal)]
 
-L'istruzione [`throw`](../../language-reference/keywords/throw.md)**genera** un'eccezione. L'esecuzione del blocco corrente termina e il controllo viene trasferito al primo blocco `catch` corrispondente trovato nello stack di chiamate. Più avanti si aggiungerà un blocco `catch` per testare questo codice.
+L'istruzione [`throw`](../../language-reference/keywords/throw.md) **genera** un'eccezione. L'esecuzione del blocco corrente termina e il controllo viene trasferito al primo blocco `catch` corrispondente trovato nello stack di chiamate. Più avanti si aggiungerà un blocco `catch` per testare questo codice.
 
 Il costruttore deve ottenere una modifica in modo da aggiungere una transazione iniziale, invece di aggiornare direttamente il saldo. Dato che il metodo `MakeDeposit` è già stato scritto, chiamarlo dal costruttore. Il costruttore completato dovrebbe essere simile al seguente:
 
@@ -175,7 +175,7 @@ catch (ArgumentOutOfRangeException e)
 }
 ```
 
-Usare le istruzioni [, `try` e `catch`](../../language-reference/keywords/try-catch.md) per contrassegnare un blocco di codice che può generare eccezioni e intercettare gli errori previsti. È possibile usare la stessa tecnica per testare il codice che genera un'eccezione per un saldo negativo:
+Utilizzare le [ `try` `catch` istruzioni e](../../language-reference/keywords/try-catch.md) per contrassegnare un blocco di codice che può generare eccezioni e intercettare gli errori previsti. È possibile usare la stessa tecnica per testare il codice che genera un'eccezione per un saldo negativo:
 
 ```csharp
 // Test for a negative balance.
@@ -210,6 +210,6 @@ Digitare `dotnet run` per visualizzare i risultati.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Se si è rimasti bloccati, è possibile visualizzare l'origine di questa esercitazione [nel repository GitHub](https://github.com/dotnet/samples/tree/master/csharp/classes-quickstart/).
+Se sei rimasto bloccato, puoi vedere la fonte di questo tutorial [nel nostro repository GitHub](https://github.com/dotnet/samples/tree/master/csharp/classes-quickstart/).
 
-Congratulazioni, sono state completate tutte le esercitazioni introduttive su C#. Per ulteriori informazioni, provare a eseguire altre [esercitazioni](../index.md).
+Congratulazioni, sono state completate tutte le esercitazioni introduttive su C#. Se siete desiderosi di saperne di più, provare più dei nostri [tutorial](../index.md).

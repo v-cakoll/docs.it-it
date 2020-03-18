@@ -1,17 +1,17 @@
 ---
-title: Campi ripetuti per elenchi e matrici-gRPC per sviluppatori WCF
-description: Informazioni sul modo in cui protobuf gestisce le raccolte e le relative correlazioni con le raccolte .NET.
+title: Campi ripetuti per elenchi e matrici - gRPC per gli sviluppatori WCF
+description: Comprendere in che modo Protobuf gestisce le raccolte e il modo in cui sono correlate alle raccolte .NET.
 ms.date: 09/09/2019
-ms.openlocfilehash: 16f2b5a54b032f32c8fcb9d572d5284fe589cb01
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 63d99532d14deea7800673dd5a6350dd9362ad54
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77542959"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79147971"
 ---
 # <a name="repeated-fields-for-lists-and-arrays"></a>Campi ripetuti per elenchi e matrici
 
-Per specificare gli elenchi nel buffer del protocollo (protobuf), usare la parola chiave `repeated` prefix. Nell'esempio seguente viene illustrato come creare un elenco:
+Gli elenchi vengono specificati nel buffer di protocollo `repeated` (Protobuf) utilizzando la parola chiave prefix. Nell'esempio seguente viene illustrato come creare un elenco:The following example shows how to create a list:
 
 ```protobuf
 message Person {
@@ -20,10 +20,10 @@ message Person {
 }
 ```
 
-Nel codice generato i campi `repeated` sono rappresentati dal tipo generico `Google.Protobuf.Collections.RepeatedField<T>` invece che da uno qualsiasi dei tipi di raccolta .NET incorporati. 
+Nel codice generato, `repeated` i campi `Google.Protobuf.Collections.RepeatedField<T>` sono rappresentati dal tipo generico anziché da qualsiasi tipo di raccolta .NET incorporato.
 
-Il tipo di `RepeatedField<T>` include il codice necessario per serializzare e deserializzare l'elenco nel formato wire binario. Implementa tutte le interfacce di raccolta .NET standard, ad esempio <xref:System.Collections.Generic.IList%601> e <xref:System.Collections.Generic.IEnumerable%601>. Quindi, è possibile usare le query LINQ o convertirle in una matrice o in un elenco con facilità.
+Il `RepeatedField<T>` tipo include il codice necessario per serializzare e deserializzare l'elenco nel formato wire binario. Implementa tutte le interfacce di raccolta <xref:System.Collections.Generic.IList%601> .NET standard, ad esempio e <xref:System.Collections.Generic.IEnumerable%601>. È quindi possibile utilizzare query LINQ o convertirle facilmente in una matrice o in un elenco.
 
 >[!div class="step-by-step"]
->[Precedente](protobuf-nested-types.md)
->[Successivo](protobuf-reserved.md)
+>[Successivo](protobuf-nested-types.md)
+>[precedente](protobuf-reserved.md)

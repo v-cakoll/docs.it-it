@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 author: ViktorHofer
 ms.openlocfilehash: 9df9b73a1a1347b952d76b76c9058578f5e9f401
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901049"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79400638"
 ---
 # <a name="binary-serialization"></a>Serializzazione binaria
 
@@ -28,16 +28,16 @@ Quando si implementa un meccanismo di serializzazione in un ambiente orientato a
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
 
-Con la serializzazione binaria è possibile modificare membri privati all'interno di un oggetto e quindi modificarne lo stato. Per questo motivo, sono consigliati altri Framework di serializzazione, come <xref:System.Text.Json?displayProperty=fullName>, che operano sulla superficie dell'API pubblica.
+La serializzazione binaria consente di modificare i membri privati all'interno di un oggetto e quindi modificarne lo stato. Per questo motivo, sono <xref:System.Text.Json?displayProperty=fullName>consigliati altri framework di serializzazione, ad esempio , che operano sulla superficie API pubblica.
 
 ## <a name="net-core"></a>.NET Core
 
-.NET Core supporta la serializzazione binaria per un subset di tipi. È possibile visualizzare l'elenco dei tipi supportati nella sezione [tipi serializzabili](#serializable-types) riportata di seguito. I tipi elencati sono sicuramente serializzabili tra .NET Framework 4.5.1 e versioni successive e tra .NET Core 2,0 e versioni successive. Altre implementazioni di .NET, ad esempio mono, non sono ufficialmente supportate, ma dovrebbero anche funzionare.
+.NET Core supporta la serializzazione binaria per un subset di tipi. È possibile visualizzare l'elenco dei tipi supportati nella sezione [Tipi serializzabili](#serializable-types) di seguito. I tipi elencati sono garantiti per essere serializzabili tra .NET Framework 4.5.1 e versioni successive e tra .NET Core 2.0 e versioni successive. Altre implementazioni di .NET, ad esempio Mono, non sono ufficialmente supportate, ma devono funzionare.
 
 ### <a name="serializable-types"></a>Tipi serializzabili
 
 > [!div class="mx-tdCol2BreakAll"]
-> | Tipo di | Note |
+> | Type | Note |
 > | - | - |
 > | <xref:Microsoft.CSharp.RuntimeBinder.RuntimeBinderException?displayProperty=nameWithType> | A partire da .NET Core 2.0.4. |
 > | <xref:Microsoft.CSharp.RuntimeBinder.RuntimeBinderInternalCompilerException?displayProperty=nameWithType> | A partire da .NET Core 2.0.4. |
@@ -112,7 +112,7 @@ Con la serializzazione binaria è possibile modificare membri privati all'intern
 > | <xref:System.Data.DBConcurrencyException?displayProperty=nameWithType> | A partire da .NET Core 2.0.4. |
 > | <xref:System.Data.DataException?displayProperty=nameWithType> | A partire da .NET Core 2.0.4. |
 > | <xref:System.Data.DataSet?displayProperty=nameWithType> | |
-> | <xref:System.Data.DataTable?displayProperty=nameWithType> | Se si imposta `RemotingFormat` su `SerializationFormat.Binary`, è possibile scambiarlo solo con .NET Core 2,1 e versioni successive. |
+> | <xref:System.Data.DataTable?displayProperty=nameWithType> | Se si `RemotingFormat` `SerializationFormat.Binary`imposta su , è possibile scambiarlo solo con .NET Core 2.1 e versioni successive. |
 > | <xref:System.Data.DeletedRowInaccessibleException?displayProperty=nameWithType> | A partire da .NET Core 2.0.4. |
 > | <xref:System.Data.DuplicateNameException?displayProperty=nameWithType> | A partire da .NET Core 2.0.4. |
 > | <xref:System.Data.EvaluateException?displayProperty=nameWithType> | A partire da .NET Core 2.0.4. |
@@ -325,7 +325,7 @@ Con la serializzazione binaria è possibile modificare membri privati all'intern
 > | <xref:System.UnauthorizedAccessException?displayProperty=nameWithType> | A partire da .NET Core 2.0.4. |
 > | <xref:System.Uri?displayProperty=nameWithType> | |
 > | <xref:System.UriFormatException?displayProperty=nameWithType> | A partire da .NET Core 2.0.4. |
-> | <xref:System.ValueTuple?displayProperty=nameWithType> | Non serializzabile in .NET Framework 4,7 e versioni precedenti. |
+> | <xref:System.ValueTuple?displayProperty=nameWithType> | Non serializzabile in .NET Framework 4.7 e versioni precedenti. |
 > | <xref:System.ValueType?displayProperty=nameWithType> | |
 > | <xref:System.Version?displayProperty=nameWithType> | |
 > | <xref:System.WeakReference%601?displayProperty=nameWithType> | |
@@ -343,14 +343,14 @@ Con la serializzazione binaria è possibile modificare membri privati all'intern
 - <xref:System.Runtime.Serialization>\
 Contiene classi utilizzabili per la serializzazione e la deserializzazione di oggetti.
 
-- [Serializzazione SOAP e XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)\
+- [Serializzazione XML e SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)\
 Descrive il meccanismo della serializzazione XML incluso nel Common Language Runtime.
 
 - [Sicurezza e serializzazione](../../../docs/framework/misc/security-and-serialization.md)\
 Descrive le linee guida per la creazione di codice protetto da seguire in caso di scrittura di codice che esegue la serializzazione.
 
-- \ [.NET Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
-Vengono descritti i vari metodi a partire da .NET Framework per le comunicazioni remote.
+- [Servizi remoti .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
+Vengono descritti i vari metodi A partire da .NET Framework per le comunicazioni remote.
 
-- [I servizi Web XML creati utilizzando ASP.NET e i client del servizio Web xml](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))\
-Articoli che descrivono e spiegano come programmare i servizi Web XML creati con ASP.NET.
+- [Servizi Web XML creati utilizzando client di servizi Web e ASP.NET e XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))\
+Articoli che descrivono e spiegano come programmare servizi Web XML creati utilizzando ASP.NET.

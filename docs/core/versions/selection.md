@@ -5,11 +5,11 @@ author: thraka
 ms.author: adegeo
 ms.date: 06/26/2019
 ms.openlocfilehash: 55f04ce81f63753831fca8fa2e44811c44049733
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450999"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398825"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Selezionare la versione di .NET Core da usare
 
@@ -38,7 +38,7 @@ I comandi dell'SDK includono `dotnet new` e `dotnet run`. L'interfaccia della ri
 
 In casi rari potrebbe essere necessario usare una versione meno recente dell'SDK. La versione deve essere specificata in un file [*global.json*](../tools/global-json.md). I criteri dell'"uso della versione più recente" indicano che si usa solo il file *global.json* per specificare una versione di .NET Core SDK antecedente a quella installata, che è la più recente.
 
-Il file *global.json* può essere memorizzato in un punto qualsiasi della gerarchia di file. L'interfaccia della riga di comando cerca a ritroso il primo file *global.json* che trova partendo dalla directory di progetto. Si controlla a quali progetti si applica un determinato file *global.json* in base alla sua posizione nel file system. L'interfaccia della riga di comando .NET cerca ripetutamente un file *global.json* esplorando il percorso a ritroso partendo dalla directory di lavoro corrente. Il primo file *global.json* trovato specifica la versione usata. Se la versione dell'SDK è installata, verrà usata la versione. Se l'SDK specificato nel file *Global. JSON* non viene trovato, l'interfaccia della riga di comando di .NET usa le [regole di corrispondenza](../tools/global-json.md#matching-rules) per selezionare un SDK compatibile oppure ha esito negativo se non ne viene trovato nessuno.
+Il file *global.json* può essere memorizzato in un punto qualsiasi della gerarchia di file. L'interfaccia della riga di comando cerca a ritroso il primo file *global.json* che trova partendo dalla directory di progetto. Si controlla a quali progetti si applica un determinato file *global.json* in base alla sua posizione nel file system. L'interfaccia della riga di comando .NET cerca ripetutamente un file *global.json* esplorando il percorso a ritroso partendo dalla directory di lavoro corrente. Il primo file *global.json* trovato specifica la versione usata. Se tale versione sdk è installata, viene utilizzata tale versione. Se l'SDK specificato in *global.json* non viene trovato, l'interfaccia della riga di comando di .NET utilizza [le regole corrispondenti](../tools/global-json.md#matching-rules) per selezionare un SDK compatibile oppure ha esito negativo se non ne viene trovata alcuna.
 
 L'esempio seguente mostra la sintassi del file *global.json*:
 
@@ -78,7 +78,7 @@ I framework di destinazione .NET Standard sono anche limitati al framework di de
 
 ## <a name="framework-dependent-apps-roll-forward"></a>Roll forward delle app dipendenti dal framework
 
-Quando si esegue un'applicazione dall'origine con [`dotnet run`](../tools/dotnet-run.md), da una [**distribuzione dipendente dal framework**](../deploying/index.md#publish-runtime-dependent) con [`dotnet myapp.dll`](../tools/dotnet.md#description) o da un [**file eseguibile dipendente dal framework**](../deploying/index.md#publish-runtime-dependent) con `myapp.exe`, il file eseguibile `dotnet` è l'**host** dell'applicazione.
+Quando si esegue un'applicazione dall'origine [`dotnet run`](../tools/dotnet-run.md)con , da una distribuzione dipendente dal [**framework**](../deploying/index.md#publish-runtime-dependent) con [`dotnet myapp.dll`](../tools/dotnet.md#description), o da un [**eseguibile dipendente dal framework**](../deploying/index.md#publish-runtime-dependent) con `myapp.exe`, l'eseguibile `dotnet` è l'host dell'applicazione. **host**
 
 L'host sceglie la versione di patch più recente installata nel computer. Se ad esempio è stato specificato `netcoreapp2.0` nel file di progetto e `2.0.4` è il runtime .NET più recente installato, viene usato il runtime `2.0.4`.
 

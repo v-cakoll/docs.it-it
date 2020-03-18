@@ -12,10 +12,10 @@ helpviewer_keywords:
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
 ms.openlocfilehash: e5815058898cac165e7a47d761ee86bb9c4cb940
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73091596"
 ---
 # <a name="numerics-in-net"></a>Valori numerici in .NET
@@ -26,14 +26,14 @@ ms.locfileid: "73091596"
 
 .NET supporta tipi integer a 8, 16, 32 e 64 bit con o senza segno, elencati nella tabella seguente:
   
-|Digitare|Con segno/Senza segno|Dimensioni (in byte)|Valore minimo|Valore massimo|  
+|Type|Con segno/Senza segno|Dimensioni (in byte)|Valore minimo|Valore massimo|  
 |----------|----------------------|--------------------|-------------------|-------------------|  
 |<xref:System.Byte?displayProperty=nameWithType>|Senza segno|1|0|255|  
-|<xref:System.Int16?displayProperty=nameWithType>|Firmato|2|-32,768|32,767|  
-|<xref:System.Int32?displayProperty=nameWithType>|Firmato|4|-2,147,483,648|2,147,483,647|  
+|<xref:System.Int16?displayProperty=nameWithType>|Firmato|2|-32,768|32.767|  
+|<xref:System.Int32?displayProperty=nameWithType>|Firmato|4|-2,147,483,648|2.147.483.647|  
 |<xref:System.Int64?displayProperty=nameWithType>|Firmato|8|-9,223,372,036,854,775,808|9,223,372,036,854,775,807|  
 |<xref:System.SByte?displayProperty=nameWithType>|Firmato|1|-128|127|  
-|<xref:System.UInt16?displayProperty=nameWithType>|Senza segno|2|0|65,535|  
+|<xref:System.UInt16?displayProperty=nameWithType>|Senza segno|2|0|65.535|  
 |<xref:System.UInt32?displayProperty=nameWithType>|Senza segno|4|0|4,294,967,295|  
 |<xref:System.UInt64?displayProperty=nameWithType>|Senza segno|8|0|18,446,744,073,709,551,615|  
   
@@ -52,7 +52,7 @@ La struttura <xref:System.Numerics.BigInteger?displayProperty=nameWithType> è u
 
 .NET include tre tipi primitivi a virgola mobile, elencati nella tabella seguente:
   
-|Digitare|Dimensioni (in byte)|Intervallo approssimativo|Precisione|  
+|Type|Dimensioni (in byte)|Intervallo approssimativo|Precision|  
 |----------|--------|---------------------|--------------------|  
 |<xref:System.Single?displayProperty=nameWithType>|4|Compreso tra ±1.5 x 10<sup>−45</sup> e ±3.4 x 10<sup>38</sup>|~6-9 cifre|  
 |<xref:System.Double?displayProperty=nameWithType>|8|Compreso tra ±5,0 × 10<sup>−324</sup> e ±1,7 × 10<sup>308</sup>|~15-17 cifre|  

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - .NET Framework development
 ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
 ms.openlocfilehash: 494f3305f225e0130df30433f3fa0d06ca218068
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73122543"
 ---
 # <a name="net-framework-application-essentials"></a>Concetti di base sulle applicazioni .NET Framework
@@ -28,16 +28,16 @@ Questa sezione della documentazione di .NET Framework fornisce informazioni sull
  [Tipi numerici](../../docs/standard/numerics.md)  
  Descrive i tipi numerici in .NET Framework.  
   
- [Eventi](../../docs/standard/events/index.md)  
+ [Events](../../docs/standard/events/index.md)  
  Viene fornita una panoramica del modello di eventi usato in .NET Framework.  
   
  [Eccezioni](../../docs/standard/exceptions/index.md)  
  Vengono descritte le funzionalità di gestione degli errori fornite da .NET Framework e vengono illustrate le nozioni fondamentali sulla gestione delle eccezioni.  
   
- [I/O di file e di flussi](../../docs/standard/io/index.md)  
+ [I/O su file e flusso](../../docs/standard/io/index.md)  
  Illustra come effettuare l'accesso sincrono e asincrono al flusso dei dati e ai file nonché come usare lo spazio di memorizzazione isolato.  
   
- [Date, ore e fusi orari](../../docs/standard/datetime/index.md)  
+ [Date, ora e fusi orari](../../docs/standard/datetime/index.md)  
  Viene descritto come usare fusi orari e conversioni di fusi orari in applicazioni che dipendono dal fuso orario.  
   
  [Domini applicazione e assembly](../../docs/framework/app-domains/index.md)  
@@ -52,7 +52,7 @@ Questa sezione della documentazione di .NET Framework fornisce informazioni sull
  [Globalizzazione e localizzazione](../../docs/standard/globalization-localization/index.md)  
  Fornisce informazioni per la progettazione e lo sviluppo di applicazioni internazionali.  
   
- [Accessibilità](../../docs/framework/ui-automation/index.md) Fornisce informazioni sull'automazione dell'interfaccia utente Microsoft, ovvero un Framework di accessibilità che soddisfa le esigenze dei prodotti tecnologici per l'accessibilità e i Framework di test automatizzati, fornendo l'accesso a livello di codice alle informazioni sull'interfaccia utente (UI).  
+ [Accessibilità](../../docs/framework/ui-automation/index.md) Fornisce informazioni su Automazione interfaccia utente Microsoft, un framework di accessibilità che soddisfa le esigenze dei prodotti di assistive technology e dei framework di test automatizzati fornendo accesso a livello di codice alle informazioni sull'interfaccia utente.  
   
  [Attributi](../../docs/standard/attributes/index.md)  
  Viene descritto come usare gli attributi per personalizzare i metadati.  
@@ -64,5 +64,5 @@ Questa sezione della documentazione di .NET Framework fornisce informazioni sull
  [Guida di sviluppo](../../docs/framework/development-guide.md)  
  Viene fornita una guida per tutte le aree e attività principali per lo sviluppo di applicazioni, quali la creazione, la configurazione, il debug, la sicurezza e la distribuzione dell'applicazione e informazioni su programmazione dinamica, interoperabilità, estendibilità, gestione della memoria e threading.  
   
- [Security](../../docs/standard/security/index.md)  
+ [Sicurezza](../../docs/standard/security/index.md)  
  Fornisce informazioni sulle classi e sui servizi in Common Language Runtime e .NET Framework che semplificano lo sviluppo di applicazioni protette.

@@ -3,10 +3,10 @@ title: Linee guida per le librerie .NET open source
 description: Procedure consigliate per gli sviluppatori nella creazione di librerie .NET di qualità.
 ms.date: 10/17/2018
 ms.openlocfilehash: 4c76dfae6ffc39df7f15381be64e33657067d79d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76731432"
 ---
 # <a name="open-source-library-guidance"></a>Linee guida per le librerie open source
@@ -24,27 +24,27 @@ Aspetti delle librerie .NET open source di qualità:
 > * **Attendibili**: le librerie .NET devono risultare attendibili per gli sviluppatori grazie alla pubblicazione in NuGet con le procedure di sicurezza consigliate.
 
 > [!div class="nextstepaction"]
-> [Introduzione](./get-started.md)
+> [Guida introduttiva](./get-started.md)
 
 ## <a name="types-of-recommendations"></a>Tipi di suggerimenti
 
 Ogni articolo presenta quattro tipi di suggerimenti: **Da fare**, **Da considerare**, **Da evitare** e **Da non fare**. Il tipo di suggerimento indica quanto è importante che venga osservato.
 
-È opportuno seguire quasi sempre un suggerimento di tipo **Da fare**. Ad esempio,
+È opportuno seguire quasi sempre un suggerimento di tipo **Da fare**. Ad esempio:
 
-✔️ distribuire la libreria usando un pacchetto NuGet.
+✔️ DA FARE Distribuire la libreria usando un pacchetto NuGet.
 
 In genere è utile osservare le indicazioni di tipo **Da considerare**, ma esistono eccezioni giustificate alla regola e il fatto di non osservarla non deve rappresentare un problema:
 
-✔️ CONSIDERARE l'uso di [SemVer 2.0.0](https://semver.org/) per la versione del pacchetto NuGet.
+✔️ DA CONSIDERARE Usare [SemVer 2.0.0](https://semver.org/) per la gestione versioni del pacchetto NuGet.
 
 I suggerimenti di tipo **Da evitare** si riferiscono a operazioni in genere non consigliabili, ma che talvolta possono avere un'utilità:
 
-❌ evitare i riferimenti ai pacchetti NuGet che richiedono una versione esatta.
+❌AVOID NuGet riferimenti al pacchetto che richiedono una versione esatta.
 
 E infine, i suggerimenti di tipo **Da non fare** indicano operazioni che quasi sempre è necessario evitare:
 
-❌ non pubblicare versioni con nome sicuro e senza nome sicuro della libreria. Ad esempio, `Contoso.Api` e `Contoso.Api.StrongNamed`.
+❌NON pubblicare versioni con nome sicuro e senza nome sicuro della libreria. Ad esempio, `Contoso.Api` e `Contoso.Api.StrongNamed`.
 
 >[!div class="step-by-step"]
->[avanti](get-started.md)
+>[Avanti](get-started.md)

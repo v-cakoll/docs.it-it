@@ -6,12 +6,12 @@ helpviewer_keywords:
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: 0a209b9522202649765654013fdc3a468913c6b1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 493c6c5f5bf47c6b2cd140ac0f6922f91ca4252b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714784"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170260"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Sapere quando utilizzare le parole chiave Override e New (Guida per programmatori C#)
 
@@ -180,7 +180,7 @@ namespace OverrideAndNew
             // Derived - Method1  
             // Derived - Method2  
   
-            // The following two calls produce different results, depending   
+            // The following two calls produce different results, depending
             // on whether override (Method1) or new (Method2) is used.  
             bcdc.Method1();  
             bcdc.Method2();  
@@ -276,7 +276,7 @@ public static void TestCars1()
   
     // Notice the output from this test case. The new modifier is  
     // used in the definition of ShowDetails in the ConvertibleCar  
-    // class.    
+    // class.
   
     ConvertibleCar car2 = new ConvertibleCar();  
     car2.DescribeCar();  
@@ -312,7 +312,7 @@ public static void TestCars2()
     System.Console.WriteLine("\nTestCars2");  
     System.Console.WriteLine("----------");  
   
-    var cars = new List<Car> { new Car(), new ConvertibleCar(),   
+    var cars = new List<Car> { new Car(), new ConvertibleCar(),
         new Minivan() };  
   
     foreach (var car in cars)  
@@ -419,7 +419,7 @@ namespace OverrideAndNew2
   
             // Notice the output from this test case. The new modifier is  
             // used in the definition of ShowDetails in the ConvertibleCar  
-            // class.    
+            // class.
             ConvertibleCar car2 = new ConvertibleCar();  
             car2.DescribeCar();  
             System.Console.WriteLine("----------");  
@@ -446,7 +446,7 @@ namespace OverrideAndNew2
             System.Console.WriteLine("\nTestCars2");  
             System.Console.WriteLine("----------");  
   
-            var cars = new List<Car> { new Car(), new ConvertibleCar(),   
+            var cars = new List<Car> { new Car(), new ConvertibleCar(),
                 new Minivan() };  
   
             foreach (var car in cars)  
@@ -548,4 +548,4 @@ namespace OverrideAndNew2
 - [Classi e struct](./index.md)
 - [Controllo delle versioni con le parole chiave Override e New](./versioning-with-the-override-and-new-keywords.md)
 - [base](../../language-reference/keywords/base.md)
-- [abstract](../../language-reference/keywords/abstract.md)
+- [astratto](../../language-reference/keywords/abstract.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 832095e1d9712c85ad588836e8eba8f523719021
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: aadf555fb47963eab323bbb6105227c5b119e6f4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714983"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170312"
 ---
 # <a name="classes-c-programming-guide"></a>Classi (Guida per programmatori C#)
 
@@ -26,7 +26,7 @@ MyClass mc = new MyClass();
 MyClass mc2 = mc;
 ```
 
-Quando viene creato l'oggetto, una quantità di memoria sufficiente viene allocata nell'heap gestito per l'oggetto specifico e la variabile mantiene solo un riferimento al percorso dell'oggetto. I tipi nell'heap gestito richiedono un overhead quando vengono allocati e recuperati dalla funzionalità di gestione automatica della memoria del CLR, nota come *Garbage Collection*. La Garbage Collection, tuttavia, è anche altamente ottimizzata e, nella maggior parte degli scenari, non genera un problema di prestazioni. Per altre informazioni sulla Garbage Collection, vedere [Gestione automatica della memoria e Garbage Collection](../../../standard/garbage-collection/gc.md).  
+Quando viene creato l'oggetto, una quantità di memoria sufficiente viene allocata nell'heap gestito per l'oggetto specifico e la variabile mantiene solo un riferimento al percorso dell'oggetto. I tipi nell'heap gestito richiedono un overhead quando vengono allocati e recuperati dalla funzionalità di gestione automatica della memoria di CLR, nota come *Garbage Collection*. La Garbage Collection, tuttavia, è anche altamente ottimizzata e, nella maggior parte degli scenari, non genera un problema di prestazioni. Per altre informazioni sulla Garbage Collection, vedere [Gestione automatica della memoria e Garbage Collection](../../../standard/garbage-collection/gc.md).  
   
 ## <a name="declaring-classes"></a>Dichiarazione di classi
 
@@ -53,11 +53,11 @@ Anche se vengono talvolta usati in modo intercambiabile, una classe e un oggetto
  ```
 
  Quando viene creata un'istanza di una classe, viene passato al programmatore un riferimento all'oggetto. Nell'esempio precedente, `object1` è un riferimento a un oggetto basato su `Customer`. Questo riferimento indica il nuovo oggetto, ma non contiene i dati dell'oggetto. Infatti, è possibile creare un riferimento all'oggetto senza creare un oggetto:  
- 
+
 ```csharp
  Customer object2;
 ```
- 
+
  Non è consigliabile creare riferimenti a oggetti come questo che non fanno riferimento a un oggetto reale perché il tentativo di accedere a un oggetto tramite tale riferimento avrà esito negativo in fase di esecuzione. Tuttavia, tale riferimento può essere creato per fare riferimento a un oggetto, creando un nuovo oggetto oppure assegnandolo a un oggetto esistente, come illustrato di seguito:  
 
  ```csharp
@@ -85,7 +85,7 @@ Quando una classe dichiara una classe di base, eredita tutti i membri della clas
   
 Diversamente da C++, una classe di C# può ereditare direttamente solo da una classe di base. Tuttavia, poiché una classe di base può ereditare da un'altra classe, una classe può ereditare indirettamente più classi di base. Una classe può anche implementare direttamente più di un'interfaccia. Per ulteriori informazioni, vedi [Interfacce](../interfaces/index.md).  
   
-Una classe può essere dichiarata come [astratta](../../language-reference/keywords/abstract.md). Una classe astratta contiene metodi astratti che hanno una definizione di firma, ma senza implementazione. Non è possibile creare un'istanza di classi astratte. Le classi astratte possono essere usate solo tramite classi derivate che implementano i metodi astratti. Al contrario, una classe [sealed](../../language-reference/keywords/sealed.md) non consente ad altre classi di derivare da tale classe. Per altre informazioni, vedere [Classi e membri delle classi astratte e sealed](abstract-and-sealed-classes-and-class-members.md).  
+Una classe può essere dichiarata come [astratta](../../language-reference/keywords/abstract.md). Una classe astratta contiene metodi astratti che hanno una definizione di firma, ma senza implementazione. Non è possibile creare un'istanza di classi astratte. Le classi astratte possono essere usate solo tramite classi derivate che implementano i metodi astratti. Al contrario, una classe [sealed](../../language-reference/keywords/sealed.md) non consente ad altre classi di derivare da tale classe. Per ulteriori informazioni, vedere [Classi astratte e sealed e Membri di classe](abstract-and-sealed-classes-and-class-members.md).  
   
 Le definizioni di classe possono essere suddivise tra file di origine diversa. Per altre informazioni, vedere [Classi e metodi parziali](partial-classes-and-methods.md).  
   
@@ -93,9 +93,9 @@ Le definizioni di classe possono essere suddivise tra file di origine diversa. P
 
 L'esempio seguente definisce una classe pubblica che contiene una [proprietà implementata automaticamente](auto-implemented-properties.md), un metodo e un metodo speciale denominato costruttore. Per altre informazioni, vedere gli argomenti [Proprietà](properties.md), [Metodi](methods.md) e [Costruttori](constructors.md). Le istanze della classe vengono quindi create con la parola chiave `new`.  
   
-[!code-csharp[Class Example](~/samples/snippets/csharp/programming-guide/classes-and-structs/class-example.cs)] 
+[!code-csharp[Class Example](~/samples/snippets/csharp/programming-guide/classes-and-structs/class-example.cs)]
   
-## <a name="c-language-specification"></a>Specifica del linguaggio C#
+## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   

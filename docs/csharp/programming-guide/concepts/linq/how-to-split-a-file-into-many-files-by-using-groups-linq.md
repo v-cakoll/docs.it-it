@@ -1,15 +1,15 @@
 ---
-title: Come suddividere un file in molti file usando i gruppi (LINQ) (C#)
+title: Come dividere un file in molti file utilizzando i gruppi (LINQ) (C
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: 934b6385a8634c23a4e29098367c9aaa7355f11c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 654b444c26f2868c4e2b0e2893a639ebc6cacabf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347312"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168570"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>Come suddividere un file in molti file usando i gruppi (LINQ) (C#)
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>Come dividere un file in molti file utilizzando i gruppi (LINQ) (C
 Questo esempio illustra un modo per unire il contenuto di due file e creare quindi un set di nuovi file in cui i dati sono organizzati in modo diverso.  
   
 ### <a name="to-create-the-data-files"></a>Per creare i file di dati  
@@ -92,7 +92,7 @@ class SplitWithGroups
         Console.ReadKey();  
     }  
 }  
-/* Output:   
+/* Output:
     A  
        Aw, Kam Foo  
     B  

@@ -1,15 +1,15 @@
 ---
-title: Come caricare XML da un file (C#)
+title: Come caricare il codice XML da un file (c'è)How to load XML from a file (C
 ms.date: 07/20/2015
 ms.assetid: 3ed38487-8028-4209-9872-c8dce0ed4dfe
-ms.openlocfilehash: f57d7a8375d04d1d7eda6d09aef81f42dd3e4b51
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 635b338bbaf9c15779bccab4d4c824037858b338
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345829"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169052"
 ---
-# <a name="how-to-load-xml-from-a-file-c"></a>Come caricare XML da un file (C#)
+# <a name="how-to-load-xml-from-a-file-c"></a>Come caricare il codice XML da un file (c'è)How to load XML from a file (C
 In questo argomento viene illustrato come caricare XML da un URI tramite il metodo <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Esempio  
@@ -32,7 +32,7 @@ Console.WriteLine(booksFromFile);
     <Genre>Computer</Genre>  
     <Price>44.95</Price>  
     <PublishDate>2000-10-01</PublishDate>  
-    <Description>An in-depth look at creating applications   
+    <Description>An in-depth look at creating applications
       with XML.</Description>  
   </Book>  
   <Book id="bk102">  
@@ -41,8 +41,8 @@ Console.WriteLine(booksFromFile);
     <Genre>Fantasy</Genre>  
     <Price>5.95</Price>  
     <PublishDate>2000-12-16</PublishDate>  
-    <Description>A former architect battles corporate zombies,   
-      an evil sorceress, and her own childhood to become queen   
+    <Description>A former architect battles corporate zombies,
+      an evil sorceress, and her own childhood to become queen
       of the world.</Description>  
   </Book>  
 </Catalog>  

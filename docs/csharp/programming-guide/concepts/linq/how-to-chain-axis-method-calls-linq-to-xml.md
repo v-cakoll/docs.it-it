@@ -1,15 +1,15 @@
 ---
-title: Come concatenare le chiamate al metodo dell'asseC#(LINQ to XML) ()
+title: Come concatenare le chiamate al metodo axis (LINQ to XML) (C
 ms.date: 07/20/2015
 ms.assetid: 067e6da2-ee32-486d-803c-e611b328e39a
-ms.openlocfilehash: ccfbf516a7fddbef357bfb0072288e250768616b
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 56fa5c9e8358883d838b68e99664240aa97f347f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141428"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169467"
 ---
-# <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>Come concatenare le chiamate al metodo dell'asseC#(LINQ to XML) ()
+# <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>Come concatenare le chiamate al metodo axis (LINQ to XML) (C
 Uno schema comune da usare nel codice consiste nel chiamare un metodo dell'asse e quindi chiamare uno degli assi del metodo di estensione.  
   
  Sono disponibili due assi denominati `Elements` che restituiscono una raccolta di elementi: il metodo <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> e il metodo <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>. È possibile combinare questi due assi per individuare tutti gli elementi con un nome specificato a una data profondità dell'albero.  
@@ -31,7 +31,7 @@ foreach (XElement e in names)
     Console.WriteLine(e);  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```xml  
 <Name>Ellen Adams</Name>  
@@ -73,14 +73,14 @@ foreach (XElement e in names)
   
 ```csharp  
 XElement root = XElement.Load("Irregular.xml");  
-IEnumerable<XElement> configParameters =   
+IEnumerable<XElement> configParameters =
     root.Elements("Customer").Elements("Config").  
     Elements("ConfigParameter");  
 foreach (XElement cp in configParameters)  
     Console.WriteLine(cp);  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```xml  
 <ConfigParameter>FirstConfigParameter</ConfigParameter>  
@@ -105,7 +105,7 @@ foreach (XElement e in names)
     Console.WriteLine(e);  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```xml  
 <aw:Name xmlns:aw="http://www.adventure-works.com">Ellen Adams</aw:Name>  

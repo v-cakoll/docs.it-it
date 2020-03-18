@@ -10,10 +10,10 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
 ms.openlocfilehash: 6ab0cc7c1ec2f7bbc633ac966dd18ab3ea7a395b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73127548"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Threading gestito e non gestito in Windows
@@ -37,7 +37,7 @@ La gestione di tutti i thread viene eseguita tramite la classe <xref:System.Thre
 |**TerminateThread**|<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>|  
 |**SuspendThread**|<xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType>|  
 |**ResumeThread**|<xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType>|  
-|**Sleep**|<xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>|  
+|**Sospendi**|<xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>|  
 |**WaitForSingleObject** sull'handle del thread|<xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>|  
 |**ExitThread**|Nessun equivalente|  
 |**GetCurrentThread**|<xref:System.Threading.Thread.CurrentThread%2A?displayProperty=nameWithType>|  
@@ -48,7 +48,7 @@ La gestione di tutti i thread viene eseguita tramite la classe <xref:System.Thre
   
 ## <a name="managed-threads-and-com-apartments"></a>Thread gestiti e apartment COM
 
-Un thread gestito può essere contrassegnato per indicare che ospita un apartment [a thread singolo](/windows/desktop/com/single-threaded-apartments) o [a thread multipli](/windows/desktop/com/multithreaded-apartments) . Per ulteriori informazioni sull'architettura di threading COM, vedere [processi, thread e Apartment](/windows/desktop/com/processes--threads--and-apartments). I metodi <xref:System.Threading.Thread.GetApartmentState%2A>, <xref:System.Threading.Thread.SetApartmentState%2A>e <xref:System.Threading.Thread.TrySetApartmentState%2A> della classe <xref:System.Threading.Thread> restituiscono e assegnano lo stato dell'Apartment di un thread. Se lo stato non è stato impostato, <xref:System.Threading.Thread.GetApartmentState%2A> restituisce <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>.  
+Un thread gestito può essere contrassegnato per indicare che ospita un apartment [a thread singolo](/windows/desktop/com/single-threaded-apartments) o [a thread multipli](/windows/desktop/com/multithreaded-apartments). Per altre informazioni sull'architettura del threading COM, vedere [Processi, thread e apartment.](/windows/desktop/com/processes--threads--and-apartments) I <xref:System.Threading.Thread.GetApartmentState%2A> <xref:System.Threading.Thread.SetApartmentState%2A> <xref:System.Threading.Thread.TrySetApartmentState%2A> metodi , e <xref:System.Threading.Thread> della classe restituiscono e assegnano lo stato apartment di un thread. Se lo stato non è stato impostato, <xref:System.Threading.Thread.GetApartmentState%2A> restituisce <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>.  
   
  La proprietà può essere impostata solo quando il thread è nello stato <xref:System.Threading.ThreadState.Unstarted?displayProperty=nameWithType> e solo una volta per ogni thread.  
   
@@ -63,7 +63,7 @@ Un thread gestito può essere contrassegnato per indicare che ospita un apartmen
   
  Quando il codice gestito effettua una chiamata agli oggetti COM, segue sempre le regole COM. In altre parole, la chiamata viene eseguita tramite proxy di apartment COM e wrapper del contesto COM+ 1.0 come indicato da OLE32.  
   
-## <a name="blocking-issues"></a>Problemi di blocco  
+## <a name="blocking-issues"></a>Problemi che causano il blocco  
 
 Se un thread effettua una chiamata non gestita all'interno del sistema operativo che ha bloccato il thread nel codice non gestito, l'ambiente di esecuzione non ne assumerà il controllo per <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> o <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Nel caso di <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>, il runtime contrassegna il thread per **Abort** e ne assume il controllo al rientro nel codice gestito. È preferibile usare il blocco gestito anziché quello non gestito. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>,<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>, <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>, <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>, <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> e così via sono tutti reattivi rispetto a <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> e <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Inoltre, se il thread è incluso in un apartment a thread singolo, tutte queste operazioni di blocco gestite eseguiranno correttamente il pumping dei messaggi nell'apartment fintanto che il thread è bloccato.  
 

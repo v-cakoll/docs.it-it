@@ -11,10 +11,10 @@ helpviewer_keywords:
 - regular expressions, miscellaneous constructs
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 ms.openlocfilehash: a43ce44e11a9231dee2961ee02bac745d9ca71cb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141610"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Costrutti vari nelle espressioni regolari
@@ -38,7 +38,7 @@ Le espressioni regolari in .NET includono tre costrutti vari di linguaggio. Uno 
  Qualsiasi modifica nelle opzioni dell'espressione regolare definita dal costrutto `(?imnsx-imnsx)` rimane attiva fino alla fine del gruppo di inclusione.  
   
 > [!NOTE]
-> Il costrutto di raggruppamento `(?imnsx-imnsx:`*subexpression*`)` offre la stessa funzionalità per una sottoespressione. Per altre informazioni, vedere [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+> Il `(?imnsx-imnsx:` *costrutto* `)` di raggruppamento delle sottoespressioni fornisce funzionalità identiche per una sottoespressione. Per altre informazioni, vedere [Costrutti di raggruppamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
  Nell'esempio seguente vengono usate le opzioni `i`, `n` e `x` per disabilitare la distinzione tra maiuscole e minuscole e abilitare le acquisizioni esplicite, nonché per ignorare lo spazio vuoto nel modello dell'espressione regolare all'interno di un'espressione regolare.  
   
@@ -47,7 +47,7 @@ Le espressioni regolari in .NET includono tre costrutti vari di linguaggio. Uno 
   
  Nell'esempio vengono definite due espressioni regolari. La prima, `\b(D\w+)\s(d\w+)\b`, corrisponde a due parole consecutive che iniziano con una "D" maiuscola e una "d" minuscola. La seconda espressione regolare, `\b(D\w+)(?ixn) \s (d\w+) \b`, usa opzioni inline per modificare questo modello, come descritto nella tabella seguente. Confrontando i risultati viene confermato l'effetto del costrutto `(?ixn)`.  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`(D\w+)`|Trovare la corrispondenza di una "D" maiuscola seguita da uno o più caratteri alfanumerici. Equivale al primo gruppo di acquisizione.|  
@@ -57,11 +57,11 @@ Le espressioni regolari in .NET includono tre costrutti vari di linguaggio. Uno 
 |`\b`|Trova la corrispondenza di un confine di parola.|  
   
 ## <a name="inline-comment"></a>Commento inline  
- Il costrutto `(?#` *comment*`)` consente di includere un commento inline in un'espressione regolare. Il motore delle espressioni regolari non usa una parte del commento nella corrispondenza tra modelli, anche se il commento è incluso nella stringa restituita dal metodo <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType>. Il commento termina in corrispondenza della prima parentesi chiusa.  
+ Il `(?#` costrutto di *commento* `)` consente di includere un commento inline in un'espressione regolare. Il motore delle espressioni regolari non usa una parte del commento nella corrispondenza tra modelli, anche se il commento è incluso nella stringa restituita dal metodo <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType>. Il commento termina in corrispondenza della prima parentesi chiusa.  
   
  Nell'esempio seguente viene ripetuto il primo criterio dell'espressione regolare dell'esempio nella sezione precedente. Vengono aggiunti due commenti inline all'espressione regolare per indicare se il confronto fa distinzione tra maiuscole e minuscole. Il modello dell'espressione regolare, `\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b`, viene definito nel modo seguente.  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`(?# case-sensitive comparison)`|Un commento. Non influisce sul comportamento della corrispondenza tra modelli.|  
@@ -82,7 +82,7 @@ Le espressioni regolari in .NET includono tre costrutti vari di linguaggio. Uno 
   
  `\{\d+(,-*\d+)*(\:\w{1,4}?)*\}(?x) # Looks for a composite format item.`  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`\{`|Trovare la corrispondenza con una parentesi graffa di apertura.|  
 |`\d+`|Trova la corrispondenza con una o più cifre decimali.|  
@@ -99,4 +99,4 @@ Le espressioni regolari in .NET includono tre costrutti vari di linguaggio. Uno 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Linguaggio delle espressioni regolari - Guida di riferimento rapidoRegular Expression Language - Quick Reference](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

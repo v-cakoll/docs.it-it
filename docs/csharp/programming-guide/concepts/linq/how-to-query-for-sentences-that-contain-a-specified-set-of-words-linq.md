@@ -1,15 +1,15 @@
 ---
-title: Come eseguire una query per trovare frasi che contengono un set specificato di parole (LINQ)C#()
+title: Come eseguire una query per frasi che contengono un set specificato di parole (LINQ) (C
 ms.date: 07/20/2015
 ms.assetid: 0724b429-4b87-4d26-a7b1-409358f3fc20
-ms.openlocfilehash: efb0eb60a9695c19e16b507d29ef6994e904cff9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: df279f57d9965d796397cbcf7a0f3ba05bf9e5c1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347687"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168856"
 ---
-# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>Come eseguire una query per trovare frasi che contengono un set specificato di parole (LINQ)C#()
+# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>Come eseguire una query per frasi che contengono un set specificato di parole (LINQ) (C
 Questo esempio illustra come trovare frasi in un file di testo che contengono corrispondenze per ogni set di parole specificato. Sebbene la matrice dei termini di ricerca sia hardcoded in questo esempio, può essere anche popolata in modo dinamico durante il runtime. In questo esempio la query restituisce le frasi che contengono le parole "Historically", "data" e "integrated".  
   
 ## <a name="example"></a>Esempio  
@@ -46,7 +46,7 @@ class FindSentences
   
         // Execute the query. Note that you can explicitly type  
         // the iteration variable here even though sentenceQuery  
-        // was implicitly typed.   
+        // was implicitly typed.
         foreach (string str in sentenceQuery)  
         {  
             Console.WriteLine(str);  

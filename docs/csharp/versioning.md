@@ -4,12 +4,12 @@ description: Informazioni sul funzionamento del controllo delle versioni in C# e
 ms.date: 01/08/2017
 ms.technology: csharp-advanced-concepts
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: ee123893ac8baa0a55bdf69ce49fb6fcb87601b4
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 124cce51865f04a555bc121fb6ce18cc95591bdc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78240002"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156467"
 ---
 # <a name="versioning-in-c"></a>Controllo delle versioni in C\#
 
@@ -35,35 +35,36 @@ Esistono anche dei modi per specificare altri scenari, ad esempio le versioni no
 ### <a name="backwards-compatibility"></a>Compatibilità con le versioni precedenti
 
 Quando si rilasciano nuove versioni della libreria, la compatibilità con le versioni precedenti probabilmente è una delle principali preoccupazioni.
-Una nuova versione della libreria è compatibile a livello di codice sorgente con una versione precedente se il codice che dipende dalla versione precedente, quando viene ricompilato, funziona con la nuova versione. Una nuova versione della libreria è compatibile a livello binario se un'applicazione che dipende dalla versione precedente funziona, senza ricompilazione, con la nuova versione.
+Una nuova versione della libreria è compatibile a livello di codice sorgente con una versione precedente se il codice che dipende dalla versione precedente, quando viene ricompilato, funziona con la nuova versione.
+Una nuova versione della libreria è compatibile a livello binario se un'applicazione che dipende dalla versione precedente funziona, senza ricompilazione, con la nuova versione.
 
 Di seguito sono riportati alcuni aspetti da considerare quando si tenta di gestire la compatibilità della libreria con le versioni precedenti:
 
 - Metodi virtuali: quando si trasforma un metodo virtuale in non virtuale nella nuova versione, sarà necessario aggiornare i progetti che eseguono l'override di tale metodo. Questa è una modifica sostanziale di grande impatto ed è fortemente sconsigliata.
-- Firme del metodo: quando si aggiorna il comportamento di un metodo è necessario modificare anche la firma, è necessario creare un overload in modo tale che il codice che chiama il metodo continuerà a funzionare.
+- Firme del metodo: quando si aggiorna il comportamento di un metodo è necessario modificare anche la firma, è invece necessario creare un overload in modo che il codice che chiama in tale metodo continuerà a funzionare.
 È sempre possibile modificare la firma del metodo precedente per chiamare la firma del nuovo metodo in modo che l'implementazione resti coerente.
 - [Attributo Obsolete](programming-guide/concepts/attributes/common-attributes.md#Obsolete): è possibile usare questo attributo nel codice per specificare le classi o i membri di classe deprecati che potrebbero essere rimossi nelle versioni future. Ciò consente di predisporre meglio gli sviluppatori che usano la libreria a eventuali modifiche di rilievo.
 - Argomenti di metodo facoltativi: se si rendono obbligatori argomenti di metodo che in precedenza erano facoltativi o si modifica il valore predefinito degli argomenti, tutto il codice che non specifica tali argomenti dovrà essere aggiornato.
 
 > [!NOTE]
-> L'esecuzione di argomenti obbligatori facoltativi dovrebbe avere un effetto minimo, soprattutto se il comportamento del metodo non viene modificato.
+> Rendere facoltativi gli argomenti facoltativi dovrebbe avere pochissimo effetto, soprattutto se non modifica il comportamento del metodo.
 
 Più è facile per gli utenti eseguire l'aggiornamento alla nuova versione della libreria, più rapido sarà l'aggiornamento.
 
 ### <a name="application-configuration-file"></a>File di configurazione dell'applicazione
 
 Gli sviluppatori .NET molto probabilmente hanno trovato [il file `app.config`](../framework/configure-apps/file-schema/index.md) nella maggior parte dei tipi di progetto.
-Questo semplice file di configurazione è in grado di ottimizzare la distribuzione dei nuovi aggiornamenti. In genere è consigliabile progettare le librerie in modo che le informazioni che probabilmente cambiano regolarmente vengano archiviate nel file di `app.config`, in questo modo quando tali informazioni vengono aggiornate, il file di configurazione delle versioni precedenti deve essere sostituito con quello nuovo senza la necessità di ricompilare la libreria.
+Questo semplice file di configurazione è in grado di ottimizzare la distribuzione dei nuovi aggiornamenti. In genere è necessario progettare le librerie in modo che le `app.config` informazioni che potrebbero cambiare regolarmente vengono memorizzate nel file, in questo modo quando tali informazioni vengono aggiornate, il file di configurazione delle versioni precedenti deve solo essere sostituito con quello nuovo senza la necessità di ricompilazione della libreria.
 
 ## <a name="consuming-libraries"></a>Elaborazione delle librerie
 
 Uno sviluppatore che elabora librerie .NET compilate da altri sviluppatori probabilmente sa che una nuova versione di una libreria potrebbe non essere completamente compatibile con il progetto e che spesso è necessario aggiornare il codice perché funzioni con le modifiche.
 
-Per fortuna, C# l'ecosistema .NET include funzionalità e tecniche che consentono di aggiornare facilmente l'app per lavorare con le nuove versioni delle librerie che potrebbero introdurre modifiche di rilievo.
+Fortunatamente per te, il linguaggio .NET e l'ecosistema .NET sono dotati di funzionalità e tecniche che consentono di aggiornare facilmente la nostra app per lavorare con nuove versioni di librerie che potrebbero introdurre modifiche di rilievo.
 
 ### <a name="assembly-binding-redirection"></a>Reindirizzamento dell'associazione di assembly
 
-È possibile usare il file *app. config* per aggiornare la versione di una libreria usata dall'app. Aggiungendo un elemento definito reindirizzamento dell' [*associazione*](../framework/configure-apps/redirect-assembly-versions.md), è possibile usare la nuova versione della libreria senza dover ricompilare l'app. L'esempio seguente illustra come aggiornare il file *app. config* dell'app per usare la versione `1.0.1` patch di `ReferencedLibrary` invece della versione `1.0.0` in cui è stata originariamente compilata.
+Puoi usare il file *app.config* per aggiornare la versione di una raccolta usata dall'app. Aggiungendo quello che viene chiamato [*un reindirizzamento dell'associazione*](../framework/configure-apps/redirect-assembly-versions.md), è possibile utilizzare la nuova versione della libreria senza dover ricompilare l'app. L'esempio seguente mostra come aggiornare il file *app.config* dell'app per usare la `1.0.1` versione della patch anziché `ReferencedLibrary` la `1.0.0` versione con cui è stata compilata in origine.
 
 ```xml
 <dependentAssembly>
@@ -111,4 +112,4 @@ Derived Method One: Derived Method One
 
 Il modificatore `override` viene valutato in fase di compilazione e il compilatore genera un errore se non trova un membro virtuale di cui eseguire l'override.
 
-La conoscenza delle tecniche discusse e la comprensione delle situazioni in cui utilizzarle sono molto utili per facilitare la transizione tra le versioni di una libreria.
+La vostra conoscenza delle tecniche discusse e la vostra comprensione delle situazioni in cui utilizzarle, andrà un lungo cammino verso l'allentamento della transizione tra le versioni di una libreria.

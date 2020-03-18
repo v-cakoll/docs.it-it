@@ -1,32 +1,33 @@
 ---
-title: comando DotNet Tool Run
-description: Il comando DotNet Tool Run richiama uno strumento locale.
+title: Comando di esecuzione dello strumento dotnet
+description: Il comando dotnet tool run richiama uno strumento locale.
 ms.date: 02/14/2020
-ms.openlocfilehash: 76830b8a8088fbf21f14ab0722b9547eabde7ba4
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: a088cd0b7f4bba014234a8189a42a63aa6d88f4e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156959"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847846"
 ---
 # <a name="dotnet-tool-run"></a>dotnet tool run
 
-**Questo articolo si applica a:** ✔️ .net core 3,0 SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .NET Core 3.0 SDK e versioni successive
 
 ## <a name="name"></a>Nome
 
-`dotnet tool run`: richiama uno strumento locale.
+`dotnet tool run`- Richiama uno strumento locale.- Invokes a local tool.
 
 ## <a name="synopsis"></a>Riepilogo
 
 ```dotnetcli
 dotnet tool run <COMMAND NAME>
+
 dotnet tool run <-h|--help>
 ```
 
 ## <a name="description"></a>Descrizione
 
-Il comando `dotnet tool run` Cerca i file manifesto degli strumenti che rientrano nell'ambito della directory corrente. Quando viene trovato un riferimento allo strumento specificato, viene eseguito lo strumento. Per ulteriori informazioni, vedere [Invoke a local Tool](global-tools.md#invoke-a-local-tool).
+Il `dotnet tool run` comando cerca i file manifesto dello strumento che si trovano nell'ambito della directory corrente. Quando trova un riferimento allo strumento specificato, esegue lo strumento. Per ulteriori informazioni, consultate [Richiamare uno strumento locale.](global-tools.md#invoke-a-local-tool)
 
 ## <a name="arguments"></a>Argomenti
 
@@ -44,8 +45,9 @@ Il comando `dotnet tool run` Cerca i file manifesto degli strumenti che rientran
 
 - **`dotnet tool run dotnetsay`**
 
-  Esegue lo strumento locale `dotnetsay`.
+  Esegue `dotnetsay` lo strumento locale.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Strumenti di .NET Core](global-tools.md)
+- [Strumenti .NET Core](global-tools.md)
+- [Esercitazione: Installare e usare uno strumento locale .NET Core usando l'interfaccia della riga di comando di .NET CoreTutorial: Install and use a .NET Core local tool using the .NET Core CLI](local-tools-how-to-use.md)

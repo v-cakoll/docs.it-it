@@ -21,10 +21,10 @@ helpviewer_keywords:
 - status information [.NET Framework], asynchronous operations
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
 ms.openlocfilehash: 06df584f0120fbd4978e18647854a3ee844a2095
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73105120"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>Chiamata asincrona dei metodi sincroni
@@ -32,11 +32,11 @@ ms.locfileid: "73105120"
 .NET Framework consente di chiamare qualsiasi metodo in modo asincrono. A questo scopo occorre definire un delegato con la stessa firma del metodo che si vuole chiamare. Common Language Runtime definisce automaticamente i metodi `BeginInvoke` e `EndInvoke` per il delegato, con le firme appropriate.
 
 > [!NOTE]
-> Le chiamate asincrone dei delegati, con particolare riferimento ai metodi `BeginInvoke` e `EndInvoke`, non sono supportate in .NET Compact Framework.
+> Le chiamate asincrone dei delegati, con particolare riferimento ai metodi `BeginInvoke` e `EndInvoke` , non sono supportate in .NET Compact Framework.
 
-Il metodo `BeginInvoke` avvia la chiamata asincrona. Presenta gli stessi parametri del metodo da eseguire in modo asincrono, con due parametri aggiuntivi facoltativi. Il primo parametro è un delegato <xref:System.AsyncCallback> che fa riferimento a un metodo da chiamare al completamento della chiamata asincrona. Il secondo parametro è un oggetto definito dall'utente che passa informazioni al metodo di callback. `BeginInvoke` restituisce immediatamente un valore e non attende il completamento della chiamata asincrona. `BeginInvoke` restituisce un oggetto <xref:System.IAsyncResult>che può essere usato per monitorare lo stato di avanzamento della chiamata asincrona.
+Il `BeginInvoke` metodo avvia la chiamata asincrona. Presenta gli stessi parametri del metodo da eseguire in modo asincrono, con due parametri aggiuntivi facoltativi. Il primo parametro è un delegato <xref:System.AsyncCallback> che fa riferimento a un metodo da chiamare al completamento della chiamata asincrona. Il secondo parametro è un oggetto definito dall'utente che passa informazioni al metodo di callback. `BeginInvoke` restituisce immediatamente un valore e non attende il completamento della chiamata asincrona. `BeginInvoke` restituisce un oggetto <xref:System.IAsyncResult>che può essere usato per monitorare lo stato di avanzamento della chiamata asincrona.
 
-Il metodo `EndInvoke` recupera i risultati della chiamata asincrona. Può essere chiamato in qualsiasi momento dopo `BeginInvoke`. Se la chiamata asincrona non è stata completata, `EndInvoke` blocca il thread chiamante fino al suo completamento. Nei parametri di `EndInvoke` sono inclusi quelli di tipo `out` e `ref` (`<Out>` `ByRef` e `ByRef` in Visual Basic) del metodo da eseguire in modo asincrono, oltre all'oggetto <xref:System.IAsyncResult> restituito da `BeginInvoke`.
+Il metodo `EndInvoke` recupera i risultati della chiamata asincrona. Può essere chiamato in qualsiasi momento dopo `BeginInvoke`. Se la chiamata asincrona non è stata completata, `EndInvoke` blocca il thread chiamante fino al suo completamento. I parametri `EndInvoke` di `out` `ref` includono`<Out>` `ByRef` i `ByRef` parametri e ( e in Visual Basic) del <xref:System.IAsyncResult> metodo `BeginInvoke`che si desidera eseguire in modo asincrono, oltre a quelli restituiti da .
 
 > [!NOTE]
 > La funzionalità IntelliSense in Visual Studio visualizza i parametri di `BeginInvoke` e `EndInvoke`. Se non si usa Visual Studio o uno strumento analogo o se si usa C# con Visual Studio, vedere [Modello di programmazione asincrona (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) per una descrizione dei parametri definiti per tali metodi.
@@ -45,7 +45,7 @@ Gli esempi di codice in questo argomento presentano quattro modi comuni per usar
 
 - Eseguire alcune operazioni, quindi chiamare `EndInvoke` per bloccare l'esecuzione fino al completamento della chiamata.
 
-- Ottenere un oggetto <xref:System.Threading.WaitHandle> con la proprietà <xref:System.IAsyncResult.AsyncWaitHandle%2A?displayProperty=nameWithType>, usare il relativo metodo <xref:System.Threading.WaitHandle.WaitOne%2A> per bloccare l'esecuzione fino a quando non viene segnalato <xref:System.Threading.WaitHandle>, quindi chiamare `EndInvoke`.
+- Ottenere un oggetto <xref:System.Threading.WaitHandle> mediante la proprietà <xref:System.IAsyncResult.AsyncWaitHandle%2A?displayProperty=nameWithType> , usare il relativo metodo <xref:System.Threading.WaitHandle.WaitOne%2A> per bloccare l'esecuzione fino a quando non viene segnalato <xref:System.Threading.WaitHandle> , quindi chiamare `EndInvoke`.
 
 - Eseguire il polling dell'oggetto <xref:System.IAsyncResult> restituito da `BeginInvoke` per stabilire quando viene completata la chiamata, quindi chiamare `EndInvoke`.
 
@@ -57,7 +57,7 @@ Gli esempi di codice in questo argomento presentano quattro modi comuni per usar
 ## <a name="defining-the-test-method-and-asynchronous-delegate"></a>Definizione del metodo di test e del delegato asincrono
  Gli esempi di codice seguenti illustrano diversi modi per chiamare lo stesso metodo di lunga durata, `TestMethod`, in modo asincrono. Il metodo `TestMethod` visualizza un messaggio di console per indicare che ha iniziato l'elaborazione, si disattiva per alcuni secondi e quindi termina. `TestMethod` include un parametro `out` per dimostrare in che modo tali parametri vengono aggiunti alle firme di `BeginInvoke` e `EndInvoke`. I parametri `ref` possono essere gestiti in modo analogo.
 
- L'esempio di codice seguente illustra la definizione di `TestMethod` e il delegato denominato `AsyncMethodCaller` che può essere usato per chiamare `TestMethod` in modo asincrono. Per compilare gli esempi di codice, è necessario includere le definizioni per `TestMethod` e il delegato `AsyncMethodCaller` .
+ L'esempio di codice seguente illustra la definizione di `TestMethod` e il delegato denominato `AsyncMethodCaller` che può essere usato per chiamare `TestMethod` in modo asincrono. Per compilare gli esempi di codice, è necessario includere le definizioni per `TestMethod` e il delegato `AsyncMethodCaller`.
 
  [!code-cpp[AsyncDelegateExamples#1](../../../samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/TestMethod.cpp#1)]
  [!code-csharp[AsyncDelegateExamples#1](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/TestMethod.cs#1)]
@@ -79,7 +79,7 @@ Gli esempi di codice in questo argomento presentano quattro modi comuni per usar
  Se si usa un <xref:System.Threading.WaitHandle>, è possibile eseguire altre operazioni prima o dopo il completamento della chiamata asincrona, ma prima di chiamare `EndInvoke` per recuperare i risultati.
 
 > [!NOTE]
-> L'handle di attesa non viene chiuso automaticamente quando si chiama `EndInvoke`. Se si rilasciano tutti i riferimenti all'handle di attesa, le risorse di sistema vengono liberate quando Garbage Collection recupera l'handle di attesa. Per liberare le risorse di sistema non appena si ha finito di usare l'handle di attesa, eliminarlo chiamando il metodo <xref:System.Threading.WaitHandle.Close%2A?displayProperty=nameWithType>. Garbage Collection opera in modo più efficiente quando gli oggetti eliminabili vengono eliminati in modo esplicito.
+> L'handle di attesa non viene chiuso automaticamente quando si chiama `EndInvoke`. Se si rilasciano tutti i riferimenti all'handle di attesa, le risorse di sistema vengono liberate quando Garbage Collection recupera l'handle di attesa. Per liberare le risorse di sistema non appena si ha finito di usare l'handle di attesa, eliminarlo chiamando il metodo <xref:System.Threading.WaitHandle.Close%2A?displayProperty=nameWithType> . Garbage Collection opera in modo più efficiente quando gli oggetti eliminabili vengono eliminati in modo esplicito.
 
  [!code-cpp[AsyncDelegateExamples#3](../../../samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/waithandle.cpp#3)]
  [!code-csharp[AsyncDelegateExamples#3](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/waithandle.cs#3)]
@@ -99,7 +99,7 @@ Gli esempi di codice in questo argomento presentano quattro modi comuni per usar
 
  Note sull'esempio:
 
-- Il parametro `threadId` di `TestMethod` è un parametro `out` ([`<Out>` `ByRef` in Visual Basic), quindi il valore di input non viene mai usato da `TestMethod`. Viene passata una variabile fittizia alla chiamata `BeginInvoke` . Se il parametro `threadId` fosse un parametro `ref` (`ByRef` in Visual Basic), la variabile dovrebbe essere un campo a livello di classe perché possa essere passata sia a `BeginInvoke` che a `EndInvoke`.
+- Il `threadId` parametro `TestMethod` `out` di è`<Out>` `ByRef` un parametro ([ in Visual `TestMethod`Basic), pertanto il relativo valore di input non viene mai utilizzato da . Viene passata una variabile fittizia alla chiamata `BeginInvoke` . Se il parametro `threadId` fosse un parametro `ref` (`ByRef` in Visual Basic), la variabile dovrebbe essere un campo a livello di classe perché possa essere passata sia a `BeginInvoke` che a `EndInvoke`.
 
 - Le informazioni sullo stato che vengono passate a `BeginInvoke` sono costituite da una stringa di formato, che viene usata dal metodo di callback per formattare un messaggio di output. Dato che le informazioni sullo stato vengono passate come tipo <xref:System.Object>, è necessario eseguirne il cast al tipo appropriato prima di poterle usare.
 

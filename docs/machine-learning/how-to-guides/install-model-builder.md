@@ -4,13 +4,13 @@ description: Informazioni su come installare lo strumento del generatore di mode
 author: luisquintanilla
 ms.author: luquinta
 ms.date: 11/21/2019
-ms.custom: mvc, how-to
-ms.openlocfilehash: b87f712ad7a8b2229c1d42db4bad1fe511475ac7
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.custom: mvc, how-to, mlnet-tooling
+ms.openlocfilehash: b944d7f6044553251132824e7e4213119e34500e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552946"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78848652"
 ---
 # <a name="how-to-install-mlnet-model-builder"></a>Come installare il generatore di modelli di ML.NET
 
@@ -21,11 +21,11 @@ Di seguito viene descritto come installare il generatore di modelli di ML.NET pe
 
 ## <a name="prerequisites"></a>Prerequisites
 
-- Visual Studio 2017 versione 15.9.12 o successiva/Visual Studio 2019
-- .NET Core 2,1 SDK o versione successiva.
+- Visual Studio 2017 versione 15.9.12 o successiva / Visual Studio 2019
+- .NET Core 2.1 SDK o versione successiva.
 
 > [!NOTE]
-> .NET Core 3,0 SDK non è attualmente supportato.
+> .NET Core 3.0 SDK non è attualmente supportato.
 
 ## <a name="limitations"></a>Limitazioni
 
@@ -34,7 +34,7 @@ Di seguito viene descritto come installare il generatore di modelli di ML.NET pe
 - SQL Server ha un limite di 100 migliaia di righe per il training
 - Microsoft SQL Server Data Tools per Visual Studio 2017 non è supportato
 
-## <a name="install"></a>Installazione di
+## <a name="install"></a>Installazione
 
 Il generatore di modelli di ML.NET può essere installato tramite Visual Studio Marketplace o dall'interno di Visual Studio.
 
@@ -45,55 +45,55 @@ Il generatore di modelli di ML.NET può essere installato tramite Visual Studio 
 
 ### <a name="visual-studio-2017"></a>Visual Studio 2017
 
-1. Nella barra dei menu selezionare **Strumenti** > **Estensioni e aggiornamenti**
+1. Nella barra dei menu, selezionare**Estensioni e aggiornamenti** degli **strumenti** > 
 
-    ![Finestra di dialogo VS2017 Open Extensions Manager](./media/install-model-builder/vs2017-open-extensions-manager.png)
+    ![Finestra di dialogo Gestione estensioni aperte VS2017](./media/install-model-builder/vs2017-open-extensions-manager.png)
 
 1. All'interno del prompt *Estensioni e aggiornamenti* selezionare il nodo *Online*.
 1. Nella barra di ricerca cercare *ML.NET Model Builder* e selezionare ML.NET Model Builder (Preview) dai risultati
 
-    ![VS2017 cercare e installare l'estensione del generatore di modelli nella finestra di dialogo Gestione estensioni](./media/install-model-builder/vs2017-install-model-builder.png)
+    ![Vs2017 ricerca e installare l'estensione di Model Builder nella finestra di dialogo Gestione estensioni](./media/install-model-builder/vs2017-install-model-builder.png)
 
 1. Seguire i messaggi visualizzati per completare l'installazione
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
-1. Nella barra dei menu selezionare **Estensioni** > **Gestisci estensioni**
+1. Nella barra dei menu, seleziona **Gestione estensioni** > **Manage Extensions**
 
-    ![Finestra di dialogo VS2019 Open Extensions Manager](./media/install-model-builder/vs2019-open-extensions-manager.png)
+    ![Finestra di dialogo Gestione estensioni aperte VS2019](./media/install-model-builder/vs2019-open-extensions-manager.png)
 
 1. All'interno del prompt *Estensioni e aggiornamenti* selezionare il nodo *Online*.
 1. Digitare *ML.NET Model Builder* nella barra di ricerca e selezionare ML.NET Model Builder (Preview)
 
-    ![VS2019 cercare e installare l'estensione del generatore di modelli nella finestra di dialogo Gestione estensioni](./media/install-model-builder/vs2019-install-model-builder.png)
+    ![VS2019 ricerca e installare l'estensione di Model Builder nella finestra di dialogo Gestione estensioni](./media/install-model-builder/vs2019-install-model-builder.png)
 
 1. Seguire i messaggi visualizzati per completare l'installazione
 
-## <a name="uninstall"></a>Disinstalla
+## <a name="uninstall"></a>Disinstallare
 
 ### <a name="visual-studio-2017"></a>Visual Studio 2017
 
-1. Nella barra dei menu selezionare **Strumenti** > **Estensioni e aggiornamenti**
+1. Nella barra dei menu, selezionare**Estensioni e aggiornamenti** degli **strumenti** > 
 
-    ![Finestra di dialogo Apri Gestione estensioni di VS2017](./media/install-model-builder/vs2017-open-extensions-manager.png)
+    ![Finestra di dialogo Gestione estensioni di apertura VS2017](./media/install-model-builder/vs2017-open-extensions-manager.png)
 
 1. All'interno del prompt *Estensioni e aggiornamenti* espandere il nodo *Installati* e selezionare *Strumenti*
 1. Selezionare ML.NET Model Builder (Preview) dall'elenco degli strumenti e quindi selezionare *Disinstalla*
 
-    ![VS2017 ricerca e Disinstalla estensione del generatore di modelli nella finestra di dialogo Gestione estensioni](./media/install-model-builder/vs2017-uninstall-model-builder.png)
+    ![Estensione di ricerca e disinstallazione di Generatore di modelli VS2017 nella finestra di dialogo Gestione estensioni](./media/install-model-builder/vs2017-uninstall-model-builder.png)
 
 1. Seguire i messaggi visualizzati per completare la disinstallazione.
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
-1. Nella barra dei menu selezionare **Estensioni** > **Gestisci estensioni**
+1. Nella barra dei menu, seleziona **Gestione estensioni** > **Manage Extensions**
 
-    ![Finestra di dialogo Apri Gestione estensioni di VS2019](./media/install-model-builder/vs2019-open-extensions-manager.png)
+    ![Finestra di dialogo Apri gestione estensioni VS2019](./media/install-model-builder/vs2019-open-extensions-manager.png)
 
 1. All'interno del prompt *Estensioni e aggiornamenti* espandere il nodo *Installati* e selezionare *Strumenti*
 1. Selezionare ML.NET Model Builder (Preview) dall'elenco degli strumenti e quindi selezionare *Disinstalla*
 
-    ![VS2019 ricerca e Disinstalla estensione del generatore di modelli nella finestra di dialogo Gestione estensioni](./media/install-model-builder/vs2019-uninstall-model-builder.png)
+    ![Vs2019 ricerca e disinstallazione dell'estensione di Model Builder nella finestra di dialogo Gestione estensioni](./media/install-model-builder/vs2019-uninstall-model-builder.png)
 
 1. Seguire i messaggi visualizzati per completare la disinstallazione.
 

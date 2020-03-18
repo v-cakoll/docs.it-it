@@ -13,10 +13,10 @@ helpviewer_keywords:
 - synchronous calling in asynchronous manner
 ms.assetid: 38a345ca-6963-4436-9608-5c9defef9c64
 ms.openlocfilehash: 4e17e6a96a12b705cf455d70add7e12a30f5fa90
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73121737"
 ---
 # <a name="asynchronous-programming-using-delegates"></a>Programmazione asincrona tramite delegati
@@ -26,7 +26,7 @@ I delegati consentono di chiamare un metodo sincrono in modo asincrono. Quando s
 > I compilatori devono creare classi delegate con metodi `Invoke`, `BeginInvoke`e `EndInvoke` usando la firma del delegato specificata dall'utente. I metodi `BeginInvoke` e `EndInvoke` devono essere contrassegnati come nativi. Poiché tali metodi sono contrassegnati come nativi, Common Language Runtime ne specifica automaticamente l'implementazione in fase di caricamento della classe. Il caricatore garantisce anche che non ne venga eseguito l'override.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
- [Chiamata sincrona dei metodi asincroni](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
+ [Chiamata di metodi sincroni in modalità asincrona](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
  Descrive l'uso di delegati per eseguire chiamate asincrone a metodi comuni e contiene semplici esempi di codice in cui si illustrano i quattro modi disponibili per attendere la risposta di una chiamata asincrona.  
   
 ## <a name="related-sections"></a>Sezioni correlate  

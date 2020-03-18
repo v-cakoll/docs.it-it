@@ -2,17 +2,17 @@
 title: Ordinamento dei dati (C#)
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
-ms.openlocfilehash: 8db5ab2ead0e59b8d41d83704ff237d4493155c3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 29a5e3e685bdc73536961b7783f4986796b46bdf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346460"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167907"
 ---
 # <a name="sorting-data-c"></a>Ordinamento dei dati (C#)
 Un'operazione di ordinamento consente di ordinare gli elementi di una sequenza in base a uno o più attributi. Il primo criterio di ordinamento consente di applicare un ordinamento principale agli elementi. Specificando un secondo criterio di ordinamento, è possibile ordinare gli elementi all'interno di ogni gruppo di ordinamento principale.  
   
- La figura seguente illustra i risultati di un'operazione di ordinamento alfabetico in una sequenza di caratteri: 
+ La figura seguente illustra i risultati di un'operazione di ordinamento alfabetico in una sequenza di caratteri:
   
  ![Immagine che illustra un'operazione di ordinamento alfabetico.](./media/sorting-data/alphabetical-sort-operation.png)  
   
@@ -129,7 +129,7 @@ foreach (string str in query)
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Linq>
-- [Panoramica degli operatori di query standard (C#)](./standard-query-operators-overview.md)
+- [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md) (Panoramica degli operatori di query standard)
 - [Clausola orderby](../../../language-reference/keywords/orderby-clause.md)
 - [Ordinare i risultati di una clausola join](../../../linq/order-the-results-of-a-join-clause.md)
-- [Come ordinare o filtrare i dati di testo in base a qualsiasi parola o campo (C#LINQ) ()](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [Come ordinare o filtrare i dati di testo in base a parole o campi (LINQ) (C](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

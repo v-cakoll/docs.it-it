@@ -4,11 +4,11 @@ description: Glossario dei principali termini relativi all'apprendimento automat
 ms.topic: reference
 ms.date: 07/31/2019
 ms.openlocfilehash: 32ccb6df1cb08db45ebd25a0d1c0ea4396a6c50b
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739884"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398937"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Glossario dell'apprendimento automatico
 
@@ -30,7 +30,7 @@ Un caso di [classificazione](#classification) in cui l'[etichetta](#label) può 
 
 La calibrazione è il processo di mapping di un punteggio non elaborato a un'appartenenza di classe, per la classificazione binaria e multiclasse. Alcuni formatori ML.NET hanno un suffisso `NonCalibrated`. Questi algoritmi producono un punteggio non elaborato che deve quindi essere mappato a una probabilità di classe.
 
-## <a name="catalog"></a>di catalogo
+## <a name="catalog"></a>Catalogo
 
 In ML.NET un catalogo è una raccolta di funzioni di estensione, raggruppate in base a uno scopo comune.
 
@@ -64,11 +64,11 @@ Metodo .NET che fa parte di una classe ma è definito all'esterno della classe. 
 
 I metodi di estensione vengono usati spesso in ML.NET per costruire istanze di [trasformatori](#estimator).
 
-## <a name="feature"></a>Caratteristica
+## <a name="feature"></a>Funzionalità
 
 Una proprietà misurabile del fenomeno misurato, in genere un valore numerico (double). Più funzionalità sono denominate **vettore di funzionalità**, generalmente archiviato come `double[]`. Le funzionalità definiscono le caratteristiche importanti del fenomeno misurato. Per altre informazioni, vedere l'articolo relativo alle [funzionalità](https://en.wikipedia.org/wiki/Feature_(machine_learning)) su Wikipedia.
 
-## <a name="feature-engineering"></a>Progettazione di funzionalità
+## <a name="feature-engineering"></a>Progettazione delle funzioni
 
 La progettazione di funzionalità è il processo che comprende la definizione di un set di [funzionalità](#feature) e lo sviluppo di software che produce vettori di funzionalità dai dati disponibili sul fenomeno, ovvero l'estrazione di funzionalità. Per altre informazioni, vedere l'articolo relativo alla [progettazione di funzionalità](https://en.wikipedia.org/wiki/Feature_engineering) su Wikipedia.
 
@@ -80,7 +80,7 @@ Nell'ambito della [classificazione](#classification), una metrica di valutazione
 
 Un parametro di un algoritmo di apprendimento automatico. Alcuni esempi sono il numero di alberi da apprendere in una foresta delle decisioni o la dimensione di incremento in un algoritmo di discesa del gradiente. I valori degli *iperparametri* sono impostati prima di eseguire il training del modello e gestiscono il processo di individuazione dei parametri della funzione di stima, ad esempio i punti di confronto in un albero delle decisioni o i pesi in un modello di regressione lineare. Per altre informazioni, vedere l'articolo relativo agli [iperparametri](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning)) su Wikipedia.
 
-## <a name="label"></a>Label
+## <a name="label"></a>Etichetta
 
 L'elemento da stimare con il modello di apprendimento automatico. Ad esempio, la razza di un cane o il prezzo di un'azione in futuro.
 
@@ -110,7 +110,7 @@ Un caso di [classificazione](#classification) in cui l'[etichetta](#label) può 
 
 Uno schema di estrazione delle funzionalità per i dati di testo: qualsiasi sequenza di N parole viene trasformata in un valore di [funzionalità](#feature).
 
-## <a name="normalization"></a>Normalization
+## <a name="normalization"></a>Normalizzazione
 
 La normalizzazione è il processo di ridimensionamento dei dati a virgola mobile in valori compresi tra 0 e 1. Molti degli algoritmi di training usati in ML.NET richiedono la normalizzazione dei dati della funzionalità di input. ML.NET fornisce una serie di [trasformazioni per la normalizzazione](transforms.md#normalization-and-scaling)
 
@@ -122,7 +122,7 @@ Un vettore di [funzionalità](#feature) costituito solo da valori numerici. È s
 
 Tutte le operazioni necessarie per adattare un modello a un set di dati. Una pipeline è costituita dai passaggi di importazione dei dati, trasformazione, estrazione delle funzionalità e apprendimento. Una volta eseguito il training, una pipeline si trasforma in un modello.
 
-## <a name="precision"></a>Precisione
+## <a name="precision"></a>Precision
 
 Nell'ambito della [classificazione](#classification), la precisione di una classe è il numero di elementi stimati correttamente come appartenenti alla classe diviso per il numero totale di elementi previsti come appartenenti alla classe.
 
@@ -130,12 +130,12 @@ Nell'ambito della [classificazione](#classification), la precisione di una class
 
 Nell'ambito della [classificazione](#classification), il richiamo di una classe è il numero di elementi stimati correttamente come appartenenti alla classe diviso per il numero totale di elementi effettivamente appartenenti alla classe.
 
-## <a name="regularization"></a>Regularization
+## <a name="regularization"></a>Regolarizzazione
 
  La regolarizzazione penalizza un modello lineare per essere troppo complicato. Sono disponibili due tipi di regolarizzazione:
 
 - La regolarizzazione $L_1$ azzera i pesi per le funzionalità non significative. La dimensione del modello salvato può ridursi dopo questo tipo di regolarizzazione.
-- $L regolarizzazione _2 $ riduce al minimo l'intervallo di ponderazione per le funzionalità non significative. Si tratta di un processo più generale ed è meno sensibile agli outlier.
+- La regolarizzazione di $L_2) riduce al minimo la gamma di peso per le lavorazioni non significative. Questo è un processo più generale ed è meno sensibile agli outlier.
 
 ## <a name="regression"></a>Regressione
 
@@ -153,7 +153,7 @@ Nell'ambito della [regressione](#regression), una metrica di valutazione costitu
 
 Nell'ambito della [regressione](#regression), una metrica di valutazione costituita dalla radice quadrata della media dei quadrati degli errori.
 
-## <a name="scoring"></a>Punteggio
+## <a name="scoring"></a>Assegnazione dei punteggi
 
 L'assegnazione dei punteggi è il processo di applicazione di nuovi dati a un modello di apprendimento automatico sottoposto a training e la successiva generazione di stime. L'assegnazione dei punteggi è nota anche come inferenza. A seconda del tipo di modello, il punteggio può essere un valore non elaborato, una probabilità o una categoria.
 

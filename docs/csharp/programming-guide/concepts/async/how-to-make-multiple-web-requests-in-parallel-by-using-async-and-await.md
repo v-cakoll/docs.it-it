@@ -1,15 +1,15 @@
 ---
-title: Come eseguire più richieste Web in parallelo tramite Async e await (C#)
+title: Come effettuare più richieste Web in parallelo utilizzando async e await (C
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: a6eef947e8f657cff574ffdf3afcd8943c665b8d
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 9f7420113d4af83d7d057b772af307bd8d4bcc00
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969957"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169949"
 ---
-# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Come eseguire più richieste Web in parallelo tramite Async e await (C#)
+# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Come effettuare più richieste Web in parallelo utilizzando async e await (C
 In un metodo asincrono le attività vengono avviate al momento della creazione. L'operatore [await](../../../language-reference/operators/await.md) viene applicato all'attività in un punto del metodo in cui è impossibile continuare l'elaborazione finché l'attività non è terminata. Spesso un'attività viene messa in attesa al momento della creazione, come illustrato nell'esempio seguente.  
   
 ```csharp  
@@ -37,7 +37,7 @@ var result = await myTask;
 > [!NOTE]
 > Per completare il progetto, è necessario che nel computer siano installati Visual Studio 2012 o versioni successive e .NET Framework 4.5 o versioni successive.  
   
- Per un altro esempio in cui vengono avviate più attività contemporaneamente, vedere [come estendere la procedura dettagliata asincrona tramite Task. WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
+ Per un altro esempio in cui vengono avviate più attività contemporaneamente, vedere [Come estendere la procedura dettagliata asincrona utilizzando Task.WhenAll (C )](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
   
  È possibile scaricare il codice per l'esempio da [Developer Code Samples](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e) (Esempi di codice per sviluppatori).  
   
@@ -83,7 +83,7 @@ var result = await myTask;
   
     private void DisplayResults(string url, byte[] content)  
     {  
-        // Display the length of each website. The string format   
+        // Display the length of each website. The string format
         // is designed to be used with a monospaced font, such as  
         // Lucida Console or Global Monospace.  
         var bytes = content.Length;  
@@ -113,13 +113,13 @@ var result = await myTask;
         HttpClient client =  
             new HttpClient() { MaxResponseContentBufferSize = 1000000 };  
   
-        // Create and start the tasks. As each task finishes, DisplayResults   
+        // Create and start the tasks. As each task finishes, DisplayResults
         // displays its length.  
-        Task<int> download1 =   
+        Task<int> download1 =
             ProcessURLAsync("https://msdn.microsoft.com", client);  
-        Task<int> download2 =   
+        Task<int> download2 =
             ProcessURLAsync("https://msdn.microsoft.com/library/hh156528(VS.110).aspx", client);  
-        Task<int> download3 =   
+        Task<int> download3 =
             ProcessURLAsync("https://msdn.microsoft.com/library/67w7t67f.aspx", client);  
   
         // Await each task.  
@@ -134,7 +134,7 @@ var result = await myTask;
     }  
     ```  
   
-5. Premere il tasto F5 per eseguire il programma e quindi scegliere il pulsante **Start** .  
+5. Premere F5 per eseguire il programma e quindi scegliere il pulsante **Avvia**.  
   
      Eseguire il programma più volte per verificare che le tre attività non vengano completate sempre nello stesso ordine e che l'ordine in cui vengono completate non è necessariamente l'ordine in cui sono state create e messe in attesa.  
   
@@ -183,13 +183,13 @@ namespace AsyncExample_MultipleTasks
             HttpClient client =  
                 new HttpClient() { MaxResponseContentBufferSize = 1000000 };  
   
-            // Create and start the tasks. As each task finishes, DisplayResults   
+            // Create and start the tasks. As each task finishes, DisplayResults
             // displays its length.  
-            Task<int> download1 =   
+            Task<int> download1 =
                 ProcessURLAsync("https://msdn.microsoft.com", client);  
-            Task<int> download2 =   
+            Task<int> download2 =
                 ProcessURLAsync("https://msdn.microsoft.com/library/hh156528(VS.110).aspx", client);  
-            Task<int> download3 =   
+            Task<int> download3 =
                 ProcessURLAsync("https://msdn.microsoft.com/library/67w7t67f.aspx", client);  
   
             // Await each task.  
@@ -212,7 +212,7 @@ namespace AsyncExample_MultipleTasks
   
         private void DisplayResults(string url, byte[] content)  
         {  
-            // Display the length of each website. The string format   
+            // Display the length of each website. The string format
             // is designed to be used with a monospaced font, such as  
             // Lucida Console or Global Monospace.  
             var bytes = content.Length;  
@@ -226,6 +226,6 @@ namespace AsyncExample_MultipleTasks
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura dettagliata: Accesso al Web con Async e Await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Programmazione asincrona con Async e Await (C#)](./index.md)
-- [Come estendere la procedura dettagliata asincrona tramite Task. WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [Procedura dettagliata: accesso al Web tramite async e await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Programmazione asincrona con async e await (C#)](./index.md)
+- [Come estendere la procedura dettagliata asincrona utilizzando Task.WhenAll (C )How to extend the async walkthrough by using Task.WhenAll (C](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)

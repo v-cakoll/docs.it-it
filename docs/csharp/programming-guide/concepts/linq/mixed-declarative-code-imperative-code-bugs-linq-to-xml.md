@@ -2,12 +2,12 @@
 title: Bug nel codice dichiarativo/imperativo misto (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: fada62d0-0680-4e73-945a-2b00d7a507af
-ms.openlocfilehash: 30760999a264c81e16104c0c9b112d442ce66121
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 76a9bb5abf6ce2700a2a0698ebc109f65e2b7eb1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591632"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168349"
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-c"></a>Bug nel codice dichiarativo/imperativo misto (LINQ to XML) (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] contiene i vari metodi che consentono di modificare direttamente un albero XML. È possibile aggiungere elementi, eliminare elementi, modificare il contenuto di un elemento, aggiungere attributi e così via. Questa interfaccia di programmazione è descritta in [Modifica di alberi XML (LINQ to XML) (C#)](./in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md). Se si scorre uno degli assi, ad esempio <xref:System.Xml.Linq.XContainer.Elements%2A>, e si modifica l'albero XML durante lo scorrimento dell'asse, è possibile che vengano individuati alcuni bug strani.  
@@ -17,7 +17,7 @@ ms.locfileid: "69591632"
 ## <a name="definition-of-the-problem"></a>Definizione del problema  
  Quando si scrive codice usando LINQ che scorre in una raccolta, si usa uno stile dichiarativo. Si tratta in pratica più di descrivere *cosa* si vuole eseguire, anziché *come* si vuole che venga eseguito. Se invece si scrive codice che 1) ottiene il primo elemento, 2) lo verifica in base ad alcune condizioni, 3) lo modifica e 4) lo reinserisce nell'elenco, si usa lo stile del codice imperativo. In pratica si indica al computer *come* eseguire le operazioni desiderate.  
   
- È proprio la combinazione di questi stili di codice nella stessa operazione a comportare problemi. Si consideri quanto segue.  
+ È proprio la combinazione di questi stili di codice nella stessa operazione a comportare problemi. Valutare gli aspetti seguenti:  
   
  Si supponga di disporre di un elenco collegato contenente tre elementi (a, b e c):  
   
@@ -110,7 +110,7 @@ foreach (XElement e in root.Elements().ToList())
 Console.WriteLine(root);  
 ```  
   
- L'output ottenuto è il seguente:  
+ Viene prodotto l'output seguente:  
   
 ```xml  
 <Root />  
@@ -146,7 +146,7 @@ var z =
   
  È responsabilità dell'utente evitare questi problemi.  
   
-## <a name="guidance"></a>Informazioni aggiuntive  
+## <a name="guidance"></a>Materiale sussidiario  
  In primo luogo, non combinare codice dichiarativo e codice imperativo.  
   
  Anche se si conosce esattamente la semantica delle raccolte e la semantica dei metodi che modificano l'albero XML, eventuale codice scritto appositamente per evitare queste categorie di problemi dovrà essere gestito da altri sviluppatori in futuro che potrebbero non avere ugualmente chiara la situazione. Se si combinano stili di codifica dichiarativa e imperativa, il codice sarà più fragile.  
@@ -167,4 +167,3 @@ XElement newRoot = new XElement("Root",
 );  
 Console.WriteLine(newRoot);  
 ```  
- 

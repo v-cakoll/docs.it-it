@@ -6,17 +6,17 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 9c00f14da9d79418e4fb204bac30e539b234197f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c8ad738baa3ff76cf9ae8367f2fd2a1fb44a79d6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715018"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170299"
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizzatori (Guida per programmatori C#)
 I finalizzatori (detti anche **distruttori**) vengono usati per eseguire operazioni di pulizia finale eventualmente necessarie quando un'istanza di classe viene raccolta da Garbage Collector.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 - I finalizzatori non possono essere definiti negli struct. Vengono usati solo con le classi.  
   
@@ -57,9 +57,9 @@ protected override void Finalize()
 > [!NOTE]
 > I finalizzatori vuoti non devono essere usati. Quando una classe contiene un finalizzatore, viene creata una voce nella coda `Finalize`. Quando si chiama il finalizzatore, viene richiamato Garbage Collector per elaborare la coda. Se il finalizzatore è vuoto, si verifica semplicemente un calo di prestazioni.  
   
- Il programmatore non ha alcun controllo sul momento in cui viene chiamato il finalizzatore, poiché il momento è determinato dal Garbage Collector. Il Garbage Collector controlla gli oggetti che non vengono più usati dall'applicazione e, se considera un oggetto idoneo per la finalizzazione, chiama il finalizzatore (se presente) e recupera la memoria usata per archiviare l'oggetto. 
- 
- Nelle applicazioni .NET Framework (ma non nelle applicazioni .NET Core) i finalizzatori vengono chiamati anche alla chiusura del programma. 
+ Il programmatore non ha alcun controllo sul momento in cui viene chiamato il finalizzatore, poiché il momento è determinato dal Garbage Collector. Il Garbage Collector controlla gli oggetti che non vengono più usati dall'applicazione e, se considera un oggetto idoneo per la finalizzazione, chiama il finalizzatore (se presente) e recupera la memoria usata per archiviare l'oggetto.
+
+ Nelle applicazioni .NET Framework (ma non nelle applicazioni .NET Core) i finalizzatori vengono chiamati anche alla chiusura del programma.
   
  Sebbene sia possibile forzare l'esecuzione di Garbage Collection chiamando <xref:System.GC.Collect%2A>, nella maggior parte dei casi è preferibile non effettuare questa operazione per evitare problemi di prestazioni.  
   
@@ -73,7 +73,7 @@ protected override void Finalize()
   
 - [Pulizia delle risorse non gestite](../../../standard/garbage-collection/unmanaged.md)  
   
-- [Implementazione di un metodo Dispose](../../../standard/garbage-collection/implementing-dispose.md)  
+- [Implementazione di un metodo DisposeImplementing a Dispose Method](../../../standard/garbage-collection/implementing-dispose.md)  
   
 - [Istruzione using](../../language-reference/keywords/using-statement.md)  
   

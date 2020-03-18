@@ -1,5 +1,5 @@
 ---
-title: Come dichiarare e usare le proprietà di lettura/ C# scrittura-Guida alla programmazione
+title: Come dichiarare e utilizzare le proprietà di lettura di scrittura - Guida per programmatori C
 ms.date: 07/20/2015
 helpviewer_keywords:
 - get accessor [C#], declaring properties
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - read/write properties [C#]
 - accessors [C#], declaring properties with
 ms.assetid: a4962fef-af7e-4c4b-a929-4ae4d646ab8a
-ms.openlocfilehash: 5b880cfc3ace197a3bad2f707cf55543dbe7b78e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4b9db5f15746ab9a1f42239150c6783154723371
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714924"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170286"
 ---
-# <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>Come dichiarare e usare le proprietà di lettura/C# scrittura (Guida per programmatori)
+# <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>Come dichiarare e utilizzare le proprietà di scrittura in lettura (Guida per programmatori C
 Le proprietà offrono i vantaggi dei membri dati pubblici senza i rischi associati all'accesso non protetto, non controllato e non verificato ai dati di un oggetto. Ciò si ottiene tramite le *funzioni di accesso*, ovvero metodi speciali che assegnano e recuperano valori dal membro dati sottostante. La funzione di accesso [set](../../language-reference/keywords/set.md) consente l'assegnazione di valori ai membri dati, mentre la funzione di accesso [get](../../language-reference/keywords/get.md) recupera i valori dei membri dati.  
   
  Questo esempio mostra una classe `Person` con due proprietà: `Name` (string) e `Age` (int). Entrambe le proprietà forniscono le funzioni di accesso `get` e `set`, quindi vengono considerate proprietà di lettura/scrittura.  
@@ -45,7 +45,7 @@ Le proprietà offrono i vantaggi dei membri dati pubblici senza i rischi associa
  Se per modellare le proprietà venissero usati metodi `set` e `get` distinti, il codice equivalente sarebbe simile al seguente:  
   
 ```csharp  
-person.SetAge(person.GetAge() + 1);   
+person.SetAge(person.GetAge() + 1);
 ```  
   
  In questo esempio viene eseguito l'override del metodo `ToString`:  

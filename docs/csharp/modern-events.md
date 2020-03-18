@@ -4,16 +4,16 @@ description: Informazioni su come lo schema di eventi .NET Core favorisca la fle
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: a916a09b622f8df9bf99fafe52f35c706220f484
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c8858158ede761db8a3002beb26e521880f77feb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039783"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170436"
 ---
 # <a name="the-updated-net-core-event-pattern"></a>Schema di eventi .NET Core aggiornato
 
-[Precedente](event-pattern.md)
+[Indietro](event-pattern.md)
 
 L'articolo precedente descriveva gli schemi di eventi più comuni. .NET Core ha uno schema più flessibile. In questa versione la definizione `EventHandler<TEventArgs>` non ha più il vincolo che prevede che `TEventArgs` deve essere una classe derivata da `System.EventArgs`.
 
@@ -59,7 +59,7 @@ Queste richieste contrastanti devono essere conciliate. In qualche modo, è nece
 ```csharp
 worker.StartWorking += async (sender, eventArgs) =>
 {
-    try 
+    try
     {
         await DoWorkAsync();
     }
@@ -72,7 +72,7 @@ worker.StartWorking += async (sender, eventArgs) =>
 };
 ```
 
-Si noti innanzitutto che il gestore è contrassegnato come gestore asincrono. Poiché viene assegnato al tipo delegato di un gestore eventi, avrà un tipo restituito void. Per questa ragione è necessario seguire il modello indicato nel gestore e non consentire la generazione di eccezioni dal contesto del gestore asincrono. Poiché non restituisce attività, non sarà presente alcuna attività che segnala l'errore attivando lo stato di errore. Poiché è asincrono, il metodo non può generare l'eccezione. Il metodo chiamante ha continuato l'esecuzione perché è `async`. Il comportamento effettivo del runtime verrà definito in modo diverso per ambienti diversi. Potrebbe terminare il thread o il processo che possiede il thread o lasciare il processo in uno stato indeterminato. Tutti questi potenziali risultati sono estremamente indesiderati.
+Si noti innanzitutto che il gestore è contrassegnato come gestore asincrono. Poiché viene assegnato al tipo delegato di un gestore eventi, avrà un tipo restituito void. Per questa ragione è necessario seguire il modello indicato nel gestore e non consentire la generazione di eccezioni dal contesto del gestore asincrono. Poiché non restituisce attività, non sarà presente alcuna attività che segnala l'errore attivando lo stato di errore. Poiché è asincrono, il metodo non può generare l'eccezione. (Il metodo chiamante ha `async`continuato l'esecuzione perché è .) Il comportamento di runtime effettivo verrà definito in modo diverso per ambienti diversi. Può terminare il thread o il processo proprietario del thread o lasciare il processo in uno stato indeterminato. Tutti questi potenziali risultati sono altamente indesiderabili.
 
 Per questo motivo è necessario includere l'istruzione await per l'attività asincrona nel proprio blocco try. Se causa un'attività non riuscita, è possibile registrare l'errore. Se si tratta di un errore dal quale non è possibile ripristinare l'applicazione, è possibile uscire rapidamente dal programma.
 
@@ -80,4 +80,4 @@ Questi sono gli aggiornamenti più importanti per il modello di eventi .NET. Nel
 
 L'articolo successivo descrive come distinguere l'uso di `delegates` e `events` nelle progettazioni. Si tratta di concetti simili e l'articolo risulterà utile per effettuare la scelta più adatta ai propri programmi.
 
-[avanti](distinguish-delegates-events.md)
+[Avanti](distinguish-delegates-events.md)

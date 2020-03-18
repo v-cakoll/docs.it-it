@@ -1,16 +1,16 @@
 ---
-title: Come eseguire una query per i file duplicati in un albero di directoryC#(LINQ) ()
+title: Come eseguire una query per i file duplicati in un albero di directory (LINQ) (C
 ms.date: 07/20/2015
 ms.assetid: 1ff5562b-0d30-46d1-b426-a04e8f78c840
-ms.openlocfilehash: 7c84dba3e87077077f28bc2e665ea3774cf44d3b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 0578d6c85c7d2e38c840c278c7ad2775467ac741
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347869"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168882"
 ---
-# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>Come eseguire una query per i file duplicati in un albero di directoryC#(LINQ) ()
-Talvolta i file con lo stesso nome possono trovarsi in più di una cartella. Ad esempio, nella cartella di installazione di Visual Studio diverse cartelle hanno un file readme.htm. In questo esempio viene illustrato come eseguire una query per trovare tali nomi di file duplicati in una cartella radice specificata. Nel secondo esempio viene illustrato come eseguire una query per i file la cui dimensione e i tempi di ultima scrittura corrispondono.  
+# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>Come eseguire una query per i file duplicati in un albero di directory (LINQ) (C
+Talvolta i file con lo stesso nome possono trovarsi in più di una cartella. Ad esempio, nella cartella di installazione di Visual Studio diverse cartelle hanno un file readme.htm. In questo esempio viene illustrato come eseguire una query per trovare tali nomi di file duplicati in una cartella radice specificata. Nel secondo esempio viene illustrato come eseguire una query per i file le cui dimensioni e LastWrite volte corrispondono anche.  
   
 ## <a name="example"></a>Esempio  
   
@@ -99,7 +99,7 @@ class QueryDuplicateFileNames
         // A named type is used to enable the query to be  
         // passed to another method. Anonymous types can also be used  
         // for composite keys but cannot be passed across method boundaries  
-        //   
+        //
         var queryDupFiles =  
             from file in fileList  
             group file.FullName.Substring(charsToSkip) by  

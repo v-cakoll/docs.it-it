@@ -3,16 +3,16 @@ title: Concetti e modello a oggetti di .NET Compiler Platform SDK
 description: Questa panoramica include le informazioni di base necessarie per utilizzare in modo efficiente l'SDK del compilatore .NET. Vengono presentati i livelli dell'API, i tipi principali coinvolti e il modello a oggetti generale.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: ee8f902bf1df8b63e229fd518e7a0c592fcd47ca
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: HT
+ms.openlocfilehash: e563260e21fb8807017db90ff63e30fec0415a48
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675706"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156961"
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>Informazioni sul modello di .NET Compiler Platform SDK
 
-I compilatori elaborano il codice scritto seguendo regole strutturate spesso diverse dal modo in cui gli essere umani leggono e interpretano il codice. Una conoscenza di base del modello usato dai compilatori è essenziale per comprendere le API usate durante la compilazione di strumenti basati su Roslyn. 
+I compilatori elaborano il codice scritto seguendo regole strutturate spesso diverse dal modo in cui gli essere umani leggono e interpretano il codice. Una conoscenza di base del modello usato dai compilatori è essenziale per comprendere le API usate durante la compilazione di strumenti basati su Roslyn.
 
 ## <a name="compiler-pipeline-functional-areas"></a>Aree funzionali della pipeline del compilatore
 
@@ -30,7 +30,7 @@ In modo corrispondente a ciascuna di queste fasi, .NET Compiler Platform SDK esp
 
 Ogni compilatore combina questi componenti come singola unità completa.
 
-Queste API sono le stesse usate da Visual Studio. Ad esempio, le funzionalità per la struttura e la formattazione del codice usano gli alberi della sintassi, le funzionalità di Visualizzatore oggetti e navigazione usano la tabella dei simboli, refactoring e Vai a definizione usano il modello semantico e Modifica e continuazione usa tutti questi elementi, inclusa l'API Emit. 
+Queste API sono le stesse usate da Visual Studio. Ad esempio, le funzionalità per la struttura e la formattazione del codice usano gli alberi della sintassi, le funzionalità di Visualizzatore oggetti e navigazione usano la tabella dei simboli, refactoring e Vai a definizione usano il modello semantico e Modifica e continuazione usa tutti questi elementi, inclusa l'API Emit.
 
 ## <a name="api-layers"></a>Livelli delle API
 

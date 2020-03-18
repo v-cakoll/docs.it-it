@@ -10,11 +10,11 @@ helpviewer_keywords:
 - threading [.NET], pooling
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
 ms.openlocfilehash: 2671ce7c9721b15de8a3805da27040e973a62804
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127529"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79400631"
 ---
 # <a name="the-managed-thread-pool"></a>Pool di thread gestiti
 
@@ -30,7 +30,7 @@ I thread del pool sono thread in [background](foreground-and-background-threads.
   
 ### <a name="exceptions-in-thread-pool-threads"></a>Eccezioni nei thread del pool
 
-Le eccezioni non gestite nei thread del pool terminano il processo. Vi sono tre eccezioni a questa regola:  
+Le eccezioni non gestite nei thread del pool terminano il processo. Sono previste tre eccezioni a questa regola:  
   
 - L'eccezione <xref:System.Threading.ThreadAbortException?displayProperty=nameWithType> viene generata in un thread del pool perché è stato chiamato <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.  
 - L'eccezione <xref:System.AppDomainUnloadedException?displayProperty=nameWithType> viene generata in un thread del pool perché è in corso lo scaricamento del dominio dell'applicazione.  
@@ -45,7 +45,7 @@ Il numero di operazioni che possono essere accodate al pool di thread è limitat
 È possibile controllare il numero massimo di thread usando i metodi <xref:System.Threading.ThreadPool.GetMaxThreads%2A?displayProperty=nameWithType> e <xref:System.Threading.ThreadPool.SetMaxThreads%2A?displayProperty=nameWithType>.  
 
 > [!NOTE]
-> Il codice che ospita Common Language Runtime può impostare la dimensione tramite il metodo [`ICorThreadpool::CorSetMaxThreads`](../../framework/unmanaged-api/hosting/icorthreadpool-corsetmaxthreads-method.md).  
+> Il codice che ospita Common Language Runtime [`ICorThreadpool::CorSetMaxThreads`](../../framework/unmanaged-api/hosting/icorthreadpool-corsetmaxthreads-method.md) può impostare la dimensione utilizzando il metodo .  
   
 ### <a name="thread-pool-minimums"></a>Valori minimi del pool di thread
 
@@ -63,7 +63,7 @@ Quando viene raggiunto un valore minimo, il pool di thread può creare thread ag
 
 A partire da .NET Framework 4 il modo più semplice per usare il pool di thread consiste nell'uso di [Task Parallel Library (TPL)](../parallel-programming/task-parallel-library-tpl.md). Per impostazione predefinita i tipi TPL come <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601> usano i thread del pool per eseguire le attività.
 
-È anche possibile usare il pool di thread chiamando <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> dal codice gestito (o [`ICorThreadpool::CorQueueUserWorkItem`](../../framework/unmanaged-api/hosting/icorthreadpool-corqueueuserworkitem-method.md) dal codice non gestito) e passando un delegato <xref:System.Threading.WaitCallback?displayProperty=nameWithType> che rappresenta il metodo che esegue l'attività.
+È inoltre possibile utilizzare il <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> pool di [`ICorThreadpool::CorQueueUserWorkItem`](../../framework/unmanaged-api/hosting/icorthreadpool-corqueueuserworkitem-method.md) thread chiamando da codice <xref:System.Threading.WaitCallback?displayProperty=nameWithType> gestito (o da codice non gestito) e passando un delegato che rappresenta il metodo che esegue l'attività.
 
 Un altro metodo per usare il pool di thread consiste nell'accodare gli elementi di lavoro correlati a un'operazione di attesa usando il metodo <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> e passando un oggetto <xref:System.Threading.WaitHandle?displayProperty=nameWithType> che, quando viene segnalato o in caso di time out, chiama il metodo rappresentato dal delegato <xref:System.Threading.WaitOrTimerCallback?displayProperty=nameWithType>. I thread del pool vengono usati per richiamare i metodi di callback.  
 
@@ -90,7 +90,7 @@ Vi sono diversi scenari in cui è opportuno creare e gestire i propri thread anz
 - <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>
 - [Task Parallel Library (TPL)](../parallel-programming/task-parallel-library-tpl.md)
 - [Procedura: Restituire un valore da un'attività](../parallel-programming/how-to-return-a-value-from-a-task.md)
-- [Threading Objects and Features](threading-objects-and-features.md) (Oggetti e funzionalità del threading)
-- [Thread e Threading](threads-and-threading.md)
-- [Asynchronous File I/O](../io/asynchronous-file-i-o.md)
+- [Funzionalità e oggetti di threading](threading-objects-and-features.md)
+- [Thread e threading](threads-and-threading.md)
+- [I/O di file asincrono](../io/asynchronous-file-i-o.md)
 - [Timer](timers.md)

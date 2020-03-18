@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: creare una coppia di chiavi pubblica/privata'
+title: 'Procedura: Creare una coppia di chiavi pubblica/privata'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - key pairs for strong-named assemblies
@@ -16,20 +16,20 @@ dev_langs:
 - vb
 - cpp
 ms.openlocfilehash: 8a9845e3cd18ff86ec04216ad0e9c5606186b113
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73122524"
 ---
-# <a name="how-to-create-a-public-private-key-pair"></a>Procedura: creare una coppia di chiavi pubblica/privata
+# <a name="how-to-create-a-public-private-key-pair"></a>Procedura: Creare una coppia di chiavi pubblica/privata
 
-Per firmare un assembly con un nome sicuro, è necessario disporre di una coppia di chiavi pubblica/privata. Questa coppia di chiavi crittografiche, pubblica e privata, viene usata durante la compilazione per creare un assembly con nome sicuro. È possibile creare una coppia di chiavi usando lo [strumento Nome sicuro (Sn.exe)](../../framework/tools/sn-exe-strong-name-tool.md). I file delle coppie di chiavi hanno in genere un'estensione *SNK* .
+Per firmare un assembly con un nome sicuro, è necessario disporre di una coppia di chiavi pubblica/privata. Questa coppia di chiavi crittografiche, pubblica e privata, viene usata durante la compilazione per creare un assembly con nome sicuro. È possibile creare una coppia di chiavi usando lo [strumento Nome sicuro (Sn.exe)](../../framework/tools/sn-exe-strong-name-tool.md). I file di coppia di chiavi hanno in genere un'estensione *.snk.*
 
 > [!NOTE]
-> In Visual Studio, le C# pagine delle proprietà del progetto e Visual Basic includono una scheda **firma** che consente di selezionare i file di chiave esistenti o di generare nuovi file di chiave senza utilizzare *sn. exe*. In Visual C++ è possibile specificare il percorso di un file di chiave esistente nella pagina delle proprietà **Avanzate** nella sezione **Linker** della sezione **Proprietà di configurazione** della finestra **Pagine delle proprietà**. L'uso dell'attributo <xref:System.Reflection.AssemblyKeyFileAttribute> per identificare le coppie di file di chiave è diventato obsoleto a partire da Visual Studio 2005.
+> In Visual Studio, le pagine delle proprietà del progetto di Visual Basic e di Visual Basic includono una scheda **Firma** che consente di selezionare i file di chiave esistenti o di generare nuovi file di chiave senza *utilizzare Sn.exe*. In Visual C++ è possibile specificare il percorso di un file di chiave esistente nella pagina delle proprietà **Avanzate** nella sezione **Linker** della sezione **Proprietà di configurazione** della finestra **Pagine delle proprietà**. L'utilizzo <xref:System.Reflection.AssemblyKeyFileAttribute> dell'attributo per identificare le coppie di file di chiave è stato reso obsoleto a partire da Visual Studio 2005.
 
-## <a name="create-a-key-pair"></a>Creare una coppia di chiavi
+## <a name="create-a-key-pair"></a>Creare una coppia di chiaviCreate a key pair
 
 Per creare una coppia di chiavi, al prompt dei comandi digitare il comando seguente:
 
@@ -37,7 +37,7 @@ Per creare una coppia di chiavi, al prompt dei comandi digitare il comando segue
 
 In questo comando *nome file* corrisponde al nome del file di output contenente la coppia di chiavi.
 
-Nell'esempio seguente viene creata una coppia di chiavi denominata *sgKey. snk*.
+Nell'esempio riportato di seguito viene creata una coppia di chiavi denominata *sgKey.snk*.
 
 ```cmd
 sn -k sgKey.snk
@@ -75,4 +75,4 @@ Se si usa una versione precedente di Visual Studio in cui non è disponibile una
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Creazione e utilizzo di assembly con nome sicuro](create-use-strong-named.md)
+- [Creare e usare gli assembly con nome sicuro](create-use-strong-named.md)

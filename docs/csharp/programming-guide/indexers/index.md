@@ -7,12 +7,12 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: c00f506a682ec5d9805537b80159fd41d2174b67
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 539b2861e975c0c758c43c8a5d4cca86e3d2bb2c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75702948"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79167541"
 ---
 # <a name="indexers-c-programming-guide"></a>Indicizzatori (Guida per programmatori C#)
 
@@ -26,12 +26,12 @@ Gli indicizzatori consentono di indicizzare le istanze di una classe o struct es
 > Per altri esempi, vedere [Sezioni correlate](./index.md#BKMK_RelatedSections).  
   
 ## <a name="expression-body-definitions"></a>Definizioni del corpo dell'espressione  
- 
+
 È normale che un indicizzatore ottenga o imposti una funzione di accesso in modo che sia costituita da una singola istruzione che restituisce o imposta un valore. I membri con corpo di espressione offrono una sintassi semplificata per supportare questo scenario. A partire da C# 6 è possibile implementare un indicizzatore di sola lettura come membro con corpo di espressione, come mostrato nell'esempio seguente.
 
 [!code-csharp[indexers#2](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-2.cs)]  
 
-Si noti che `=>` introduce il corpo dell'espressione e che la parola chiave `get` non è usata. 
+Si noti che `=>` introduce il corpo dell'espressione e che la parola chiave `get` non è usata.
 
 A partire da C# 7.0, le funzioni di accesso get e set possono essere implementate entrambe come membri con corpo di espressione. In questo caso, è necessario usare entrambe le parole chiave `get` e `set`. Ad esempio:
 
@@ -53,7 +53,7 @@ A partire da C# 7.0, le funzioni di accesso get e set possono essere implementat
   
 - Gli indicizzatori possono avere più di un parametro formale, ad esempio quando si accede a una matrice bidimensionale.  
   
-## <a name="BKMK_RelatedSections"></a> Sezioni correlate  
+## <a name="BKMK_RelatedSections"></a>Sezioni correlate  
   
 - [Uso degli indicizzatori](./using-indexers.md)  
   
@@ -63,7 +63,7 @@ A partire da C# 7.0, le funzioni di accesso get e set possono essere implementat
   
 - [Limitazione dell'accessibilità delle funzioni di accesso](../classes-and-structs/restricting-accessor-accessibility.md)  
   
-## <a name="c-language-specification"></a>Specifica del linguaggio C#  
+## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
 
 Per altre informazioni, vedere [Indicizzatori](~/_csharplang/spec/classes.md#indexers) nella [Specifica del linguaggio C#](/dotnet/csharp/language-reference/language-specification/introduction). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
   

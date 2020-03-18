@@ -9,10 +9,10 @@ helpviewer_keywords:
 - garbage collection, weak references
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
 ms.openlocfilehash: 120777ca3c26b1634bd2143863547cfa4ea5deac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141326"
 ---
 # <a name="weak-references"></a>Riferimenti deboli
@@ -35,7 +35,7 @@ Il Garbage Collector non può raccogliere un oggetto usato da un'applicazione fi
   
      La destinazione di un riferimento debole breve diventa `null` quando l'oggetto viene raccolto dall'operazione di Garbage Collection. Il riferimento debole è in sé un oggetto gestito ed è soggetto a Garbage Collection come qualsiasi altro oggetto gestito.  Un riferimento debole breve è il costruttore senza parametri per <xref:System.WeakReference>.  
   
-- Long  
+- long  
   
      Un riferimento debole lungo viene mantenuto dopo la chiamata al metodo <xref:System.Object.Finalize%2A> dell'oggetto. Ciò consente che l'oggetto venga ricreato, ma lo stato dell'oggetto non è prevedibile. Per usare un riferimento lungo, specificare `true` nel costruttore <xref:System.WeakReference>.  
   

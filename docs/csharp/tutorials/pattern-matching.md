@@ -4,14 +4,14 @@ description: Questa esercitazione avanzata illustra come usare le tecniche dei c
 ms.date: 03/13/2019
 ms-technology: csharp-whats-new
 ms.custom: mvc
-ms.openlocfilehash: fd08e707402bfcd552997111a9c3fa58841a5466
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: df1054d8e0ec2b2539e6a1d00bf353d8ca927397
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78240054"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156532"
 ---
-# <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Esercitazione: uso delle funzionalità di criteri di ricerca per estendere i tipi di dati
+# <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Esercitazione: Utilizzo delle funzionalità di criteri di ricerca per estendere i tipi di datiTutorial: Using pattern matching features to extend data types
 
 In C# 7 sono state introdotte le funzionalità dei criteri di ricerca di base. Tali funzionalità vengono estese in C# 8 con nuove espressioni e criteri. È possibile scrivere funzionalità che si comportano come se si estendessero tipi che potrebbero essere in altre librerie. I criteri possono essere usati anche per creare funzionalità necessarie per l'applicazione che non sono funzioni fondamentali del tipo da estendere.
 
@@ -25,7 +25,7 @@ In questa esercitazione si apprenderà come:
 
 ## <a name="prerequisites"></a>Prerequisites
 
-È necessario configurare il computer per l'esecuzione di .NET Core, incluso il C# compilatore 8,0. Il C# compilatore 8 è disponibile a partire da [Visual Studio 2019 versione 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download).
+È necessario configurare il computer per l'esecuzione di .NET Core, incluso il compilatore c'è 8.0. Il compilatore di C'è 8 è disponibile a partire da [Visual Studio 2019 versione 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o [.NET Core 3.0 SDK.](https://dotnet.microsoft.com/download)
 
 Per questa esercitazione si presuppone che l'utente abbia familiarità con C# e .NET, inclusa l'interfaccia della riga di comando di .NET Core o Visual Studio.
 
@@ -138,7 +138,7 @@ namespace toll_calculator
 }
 ```
 
-Il codice è incluso nel progetto iniziale, ma è impostato come commento. Rimuovere i commenti ed è possibile testare quello che è stato scritto.
+Tale codice è incluso nel progetto di avvio, ma è commentato. Rimuovere i commenti e testare ciò che hai scritto.
 
 Si può già osservare come i criteri consentano di creare algoritmi in cui il codice e i dati sono separati. L'espressione `switch` testa il tipo e genera valori diversi in base ai risultati. Si tratta solo dell'inizio.
 
@@ -241,7 +241,7 @@ vehicle switch
     DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
     DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
     DeliveryTruck t => 10.00m,
-    
+
     { }     => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
     null    => throw new ArgumentNullException(nameof(vehicle))
 };
@@ -300,21 +300,21 @@ La tabella seguente mostra le combinazioni dei valori di input e il moltiplicato
 
 | Giorno        | Tempo         | Direction | Premium |
 | ---------- | ------------ | --------- |--------:|
-| Giorno della settimana    | ore di punta del mattino | inbound   | x 2,00  |
+| Giorno della settimana    | ore di punta del mattino | in entrata   | x 2,00  |
 | Giorno della settimana    | ore di punta del mattino | in uscita  | x 1,00  |
-| Giorno della settimana    | giorno      | inbound   | x 1,50  |
+| Giorno della settimana    | giorno      | in entrata   | x 1,50  |
 | Giorno della settimana    | giorno      | in uscita  | x 1,50  |
-| Giorno della settimana    | ore di punta serali | inbound   | x 1,00  |
+| Giorno della settimana    | ore di punta serali | in entrata   | x 1,00  |
 | Giorno della settimana    | ore di punta serali | in uscita  | x 2,00  |
-| Giorno della settimana    | notte    | inbound   | x 0,75  |
+| Giorno della settimana    | notte    | in entrata   | x 0,75  |
 | Giorno della settimana    | notte    | in uscita  | x 0,75  |
-| fine settimana    | ore di punta del mattino | inbound   | x 1,00  |
+| fine settimana    | ore di punta del mattino | in entrata   | x 1,00  |
 | fine settimana    | ore di punta del mattino | in uscita  | x 1,00  |
-| fine settimana    | giorno      | inbound   | x 1,00  |
+| fine settimana    | giorno      | in entrata   | x 1,00  |
 | fine settimana    | giorno      | in uscita  | x 1,00  |
-| fine settimana    | ore di punta serali | inbound   | x 1,00  |
+| fine settimana    | ore di punta serali | in entrata   | x 1,00  |
 | fine settimana    | ore di punta serali | in uscita  | x 1,00  |
-| fine settimana    | notte    | inbound   | x 1,00  |
+| fine settimana    | notte    | in entrata   | x 1,00  |
 | fine settimana    | notte    | in uscita  | x 1,00  |
 
 Sono presenti 16 combinazioni diverse delle tre variabili. Combinando alcune delle condizioni, si semplificherà l'espressione switch finale.

@@ -1,15 +1,15 @@
 ---
-title: LINQ to XML rispetto a DOM (C#)
+title: LINQ to XML e DOM (C )
 ms.date: 07/20/2015
 ms.assetid: 51c0e3d2-c047-4e6a-a423-d61a882400b7
-ms.openlocfilehash: f6a89bba1ff2753f04406a060beb37bf2bf6552c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 92d0da494829d57517d52fe93a3cbcf1398fdbe4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344789"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168389"
 ---
-# <a name="linq-to-xml-vs-dom-c"></a>LINQ to XML rispetto a DOM (C#)
+# <a name="linq-to-xml-vs-dom-c"></a>LINQ to XML e DOM (C )
 Questa sezione descrive alcune delle differenze principali tra [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] e l'API di programmazione XML attualmente più diffusa, ovvero DOM (Document Object Model) W3C.  
   
 ## <a name="new-ways-to-construct-xml-trees"></a>Nuove modalità di creazione degli alberi XML  
@@ -23,11 +23,11 @@ XmlElement name = doc.CreateElement("Name");
 name.InnerText = "Patrick Hines";  
 XmlElement phone1 = doc.CreateElement("Phone");  
 phone1.SetAttribute("Type", "Home");  
-phone1.InnerText = "206-555-0144";          
+phone1.InnerText = "206-555-0144";
 XmlElement phone2 = doc.CreateElement("Phone");  
 phone2.SetAttribute("Type", "Work");  
-phone2.InnerText = "425-555-0145";          
-XmlElement street1 = doc.CreateElement("Street1");          
+phone2.InnerText = "425-555-0145";
+XmlElement street1 = doc.CreateElement("Street1");
 street1.InnerText = "123 Main St";  
 XmlElement city = doc.CreateElement("City");  
 city.InnerText = "Mercer Island";  
@@ -59,7 +59,7 @@ XElement contacts =
     new XElement("Contacts",  
         new XElement("Contact",  
             new XElement("Name", "Patrick Hines"),  
-            new XElement("Phone", "206-555-0144",   
+            new XElement("Phone", "206-555-0144",
                 new XAttribute("Type", "Home")),  
             new XElement("phone", "425-555-0145",  
                 new XAttribute("Type", "Work")),  
@@ -78,7 +78,7 @@ XElement contacts =
  Per altre informazioni, vedere [Creazione di alberi XML (C#)](./linq-to-xml-overview.md).  
   
 ## <a name="working-directly-with-xml-elements"></a>Utilizzo diretto di elementi XML  
- Quando si programma con XML, l'obiettivo principale riguarda in genere gli elementi XML e talvolta gli attributi. In [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è possibile usare direttamente gli elementi e gli attributi XML. È ad esempio possibile eseguire le operazioni seguenti:  
+ Quando si programma con XML, l'obiettivo principale riguarda in genere gli elementi XML e talvolta gli attributi. In [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è possibile usare direttamente gli elementi e gli attributi XML. Ad esempio, è possibile eseguire quanto le operazioni seguenti:  
   
 - Creare elementi XML senza usare affatto un oggetto documento. In questo modo la programmazione risulta semplificata quando è necessario usare frammenti di alberi XML.  
   
@@ -105,7 +105,7 @@ doc.AppendChild(name);
  Un altro problema di DOM è che non consente di modificare il nome di un nodo. È invece necessario creare un nuovo nodo e copiarvi tutti i nodi figlio, perdendo l'identità del nodo originale. In [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] questo problema viene evitato grazie alla possibilità di impostare la proprietà <xref:System.Xml.Linq.XName> in un nodo.  
   
 ## <a name="static-method-support-for-loading-xml"></a>Supporto dei metodi statici per il caricamento di XML  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] consente di caricare XML usando metodi statici anziché metodi di istanza, semplificando le operazioni di caricamento e analisi. Per ulteriori informazioni, vedere [come caricare XML da un fileC#()](./how-to-load-xml-from-a-file.md).  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] consente di caricare XML usando metodi statici anziché metodi di istanza, semplificando le operazioni di caricamento e analisi. Per ulteriori informazioni, vedere [Come caricare il codice XML da un file (C)](./how-to-load-xml-from-a-file.md).  
   
 ## <a name="removal-of-support-for-dtd-constructs"></a>Rimozione del supporto per i costrutti DTD  
  In [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] la programmazione XML risulta ulteriormente semplificata tramite la rimozione del supporto per entità e riferimenti di entità. Oltre a essere complessa, la gestione di entità viene utilizzata raramente. Rimuovendone il supporto è possibile riscontrare un aumento delle prestazioni e un'interfaccia di programmazione semplificata. Quando un albero [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] viene popolato, tutte le entità DTD vengono espanse.  
@@ -114,7 +114,7 @@ doc.AppendChild(name);
  In [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] non sono disponibili equivalenti per la classe `XmlDocumentFragment`. In molti casi, tuttavia, il concetto di `XmlDocumentFragment` può essere gestito dal risultato di una query digitato come <xref:System.Collections.Generic.IEnumerable%601> di <xref:System.Xml.Linq.XNode> o <xref:System.Collections.Generic.IEnumerable%601> di <xref:System.Xml.Linq.XElement>.  
   
 ## <a name="support-for-xpathnavigator"></a>Supporto per XPathNavigator  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] supporta <xref:System.Xml.XPath.XPathNavigator> tramite i metodi di estensione nello spazio dei nomi <xref:System.Xml.XPath?displayProperty=nameWithType>. Per ulteriori informazioni, vedere <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] supporta <xref:System.Xml.XPath.XPathNavigator> tramite i metodi di estensione nello spazio dei nomi <xref:System.Xml.XPath?displayProperty=nameWithType>. Per altre informazioni, vedere <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.  
   
 ## <a name="support-for-white-space-and-indentation"></a>Supporto per lo spazio vuoto e il rientro  
  In [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] lo spazio vuoto viene gestito più agevolmente rispetto a DOM.  
@@ -129,7 +129,7 @@ doc.AppendChild(name);
  Gli elementi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] supportano un set estensibile di annotazioni. Questa funzione è utile per tenere traccia di varie informazioni su un elemento, ad esempio informazioni sullo schema, informazioni su se l'elemento è associato a un'interfaccia utente o altri tipi di informazioni specifiche dell'applicazione. Per altre informazioni, vedere [Annotazioni LINQ to XML](./linq-to-xml-annotations.md).  
   
 ## <a name="support-for-schema-information"></a>Supporto per le informazioni sullo schema  
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] supporta la convalida XSD tramite i metodi di estensione nello spazio dei nomi <xref:System.Xml.Schema?displayProperty=nameWithType>. È possibile verificare che un albero XML sia conforme a un XSD. È possibile popolare l'albero XML con le informazioni sulla convalida post-schema. Per ulteriori informazioni, vedere [How to Validate Using XSD](./how-to-validate-using-xsd-linq-to-xml.md) and <xref:System.Xml.Schema.Extensions>.
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] supporta la convalida XSD tramite i metodi di estensione nello spazio dei nomi <xref:System.Xml.Schema?displayProperty=nameWithType>. È possibile verificare che un albero XML sia conforme a un XSD. È possibile popolare l'albero XML con le informazioni sulla convalida post-schema. Per ulteriori informazioni, vedere [Come eseguire la convalida mediante XSD](./how-to-validate-using-xsd-linq-to-xml.md) e <xref:System.Xml.Schema.Extensions>.
   
 ## <a name="see-also"></a>Vedere anche
 

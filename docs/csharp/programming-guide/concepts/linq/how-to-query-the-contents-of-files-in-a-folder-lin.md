@@ -1,16 +1,16 @@
 ---
-title: Come eseguire una query sul contenuto dei file di testo in una cartella (LINQC#) ()
+title: Come eseguire una query sul contenuto dei file di testo in una cartella (LINQ) (C
 ms.date: 07/20/2015
 ms.assetid: f5b4dce7-1a34-4eb4-9bf1-60d5bdda264c
-ms.openlocfilehash: 9487e00ac4cb69180ad3744183a3ef8467cbac28
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 998fddd3f59ee64df9adcee1acc720d82861c3d9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347674"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168739"
 ---
-# <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a>Come eseguire una query sul contenuto dei file di testo in una cartella (LINQC#) ()
-Questo esempio illustra come eseguire una query su tutti i file in un albero di directory specificato, aprire ogni file e controllarne il contenuto. Questo tipo di tecnica può essere usato per creare indici o indici inversi del contenuto di un albero di directory. In questo esempio viene eseguita una semplice ricerca di una stringa. Tuttavia, con un'espressione regolare è possibile eseguire tipi di criteri di ricerca più complessi. Per ulteriori informazioni, vedere [come combinare query LINQ con espressioni regolari (C#)](./how-to-combine-linq-queries-with-regular-expressions.md).  
+# <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a>Come eseguire una query sul contenuto dei file di testo in una cartella (LINQ) (C
+Questo esempio illustra come eseguire una query su tutti i file in un albero di directory specificato, aprire ogni file e controllarne il contenuto. Questo tipo di tecnica può essere usato per creare indici o indici inversi del contenuto di un albero di directory. In questo esempio viene eseguita una semplice ricerca di una stringa. Tuttavia, con un'espressione regolare è possibile eseguire tipi di criteri di ricerca più complessi. Per ulteriori informazioni, vedere [Come combinare le query LINQ con le espressioni regolari (C )](./how-to-combine-linq-queries-with-regular-expressions.md).  
   
 ## <a name="example"></a>Esempio  
   
@@ -59,7 +59,7 @@ class QueryContents
     {  
         string fileContents = String.Empty;  
   
-        // If the file has been deleted since we took   
+        // If the file has been deleted since we took
         // the snapshot, ignore it and return the empty string.  
         if (System.IO.File.Exists(name))  
         {  

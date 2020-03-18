@@ -6,10 +6,10 @@ helpviewer_keywords:
 - data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 ms.openlocfilehash: a2271feae78100940b4ecac3c42c9bfefa7e1769
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73123143"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Strutture di dati per la programmazione in parallelo
@@ -20,7 +20,7 @@ In .NET Framework versione 4 sono stati introdotti diversi nuovi tipi utili nell
   
  Nella tabella seguente vengono elencate le nuove classi di raccolta simultanee:  
   
-|Digitare|Descrizione|  
+|Type|Descrizione|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>|Fornisce funzionalità di blocco e limitazione per le raccolte thread-safe che implementano <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType>. I thread producer vengono bloccati se non sono disponibili slot o se la raccolta è completa. I thread consumer vengono bloccati se la raccolta è vuota. Questo tipo supporta anche l'accesso che non causa blocchi da parte di consumer e producer. <xref:System.Collections.Concurrent.BlockingCollection%601> può essere usata come classe di base o archivio di backup per fornire funzionalità di blocco limitazione per le classi di raccolta che supportano <xref:System.Collections.Generic.IEnumerable%601>.|  
 |<xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>|Implementazione di un contenitore thread-safe che fornisce operazioni add e get scalabili.|  
@@ -35,7 +35,7 @@ In .NET Framework versione 4 sono stati introdotti diversi nuovi tipi utili nell
   
  La tabella seguente elenca i nuovi tipi di sincronizzazione:  
   
-|Digitare|Descrizione|  
+|Type|Descrizione|  
 |----------|-----------------|  
 |<xref:System.Threading.Barrier?displayProperty=nameWithType>|Consente a più thread di usare un algoritmo in parallelo fornendo un punto in cui ogni attività può segnalare il proprio arrivo e quindi venire bloccata finché non arrivano alcune o tutte le attività. Per altre informazioni, vedere [Barriera](../../../docs/standard/threading/barrier.md).|  
 |<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|Semplifica gli scenari di fork e join fornendo un agevole meccanismo di rendezvous. Per altre informazioni, vedere [CountdownEvent](../../../docs/standard/threading/countdownevent.md).|  
@@ -46,16 +46,16 @@ In .NET Framework versione 4 sono stati introdotti diversi nuovi tipi utili nell
   
  Per altre informazioni, vedere:  
   
-- [Procedura: Usare SpinLock per la sincronizzazione di basso livello](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
+- [Procedura: utilizzare SpinLock per la sincronizzazione di basso livelloHow to: Use SpinLock for Low-Level Synchronization](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
   
-- [Procedura: Sincronizzare operazioni simultanee con una barriera](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
+- [Procedura: sincronizzare operazioni simultanee con una barriera](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
   
 ## <a name="lazy-initialization-classes"></a>Classi di inizializzazione differita  
  Con l'inizializzazione differita, la memoria per un oggetto non viene allocata fino a quando non è necessaria. L'inizializzazione differita può migliorare le prestazioni distribuendo le allocazioni degli oggetti in modo uniforme per l'intera durata di un programma. È possibile abilitare l'inizializzazione differita per qualsiasi tipo personalizzato eseguendo il wrapping del tipo <xref:System.Lazy%601>.  
   
  La tabella seguente elenca i nuovi tipi di inizializzazione differita:  
   
-|Digitare|Descrizione|  
+|Type|Descrizione|  
 |----------|-----------------|  
 |<xref:System.Lazy%601?displayProperty=nameWithType>|Fornisce l'inizializzazione differita leggera e thread-safe.|  
 |<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>|Fornisce un valore con inizializzazione differita per ogni thread e ogni thread richiama in modo differito la funzione di inizializzazione.|  

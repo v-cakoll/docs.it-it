@@ -3,25 +3,25 @@ title: Articoli sulla procedura (Guida a C#)
 description: Raccolta di suggerimenti rapidi e brevi esempi di codice evidenziati
 ms.date: 12/20/2017
 ms.openlocfilehash: e6cb657726b82a1710bbcd596fe48037b5c26352
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75339212"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79399322"
 ---
 # <a name="how-to-c"></a>Procedura (C#)
 
-Nella sezione How to della guida è C# possibile trovare risposte rapide alle domande più comuni. In alcuni casi gli articoli possono essere elencati in più sezioni. Volevamo semplificarne la ricerca rendendoli disponibili in più percorsi.
+Nella sezione Procedure della Guida in C, è possibile trovare risposte rapide alle domande più comuni. In alcuni casi gli articoli possono essere elencati in più sezioni. Volevamo semplificarne la ricerca rendendoli disponibili in più percorsi.
 
 ## <a name="general-c-concepts"></a>Concetti generali di C#
 
-Sono disponibili diversi suggerimenti e consigli che sono procedure C# comuni per gli sviluppatori:
+Sono disponibili diversi suggerimenti e suggerimenti che sono procedure comuni per gli sviluppatori di C:
 
 - [Inizializzare oggetti usando un inizializzatore di oggetto](../programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md).
 - [Informazioni sulle differenze tra il passaggio a un metodo di uno struct e di una classe](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md).
 - [Usare l'overload degli operatori](../language-reference/operators/operator-overloading.md).
-- [Implementare e chiamare un metodo di estensione personalizzato](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).
-- Anche C# i programmatori potrebbero voler [usare lo spazio dei nomi `My` da Visual Basic](../programming-guide/namespaces/how-to-use-the-my-namespace.md).
+- [Implementare e chiamare un metodo](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md)di estensione personalizzato.
+- Anche i programmatori di C, possono [utilizzare lo `My` spazio dei nomi di Visual Basic](../programming-guide/namespaces/how-to-use-the-my-namespace.md).
 - [Creare un nuovo metodo per un tipo `enum` usando i metodi di estensione](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
 
 ### <a name="class-and-struct-members"></a>Membri di classi e struct
@@ -32,7 +32,7 @@ Per implementare il programma è necessario creare classi e struct. Queste tecni
 - [Dichiarare e usare proprietà di lettura/scrittura](../programming-guide/classes-and-structs/how-to-declare-and-use-read-write-properties.md).
 - [Definire costanti](../programming-guide/classes-and-structs/how-to-define-constants.md).
 - [Eseguire l'override del metodo `ToString` per specificare l'output della stringa](../programming-guide/classes-and-structs/how-to-override-the-tostring-method.md).
-- [Definire proprietà astratte](../programming-guide/classes-and-structs/how-to-define-abstract-properties.md).
+- [Definire le proprietà astratte](../programming-guide/classes-and-structs/how-to-define-abstract-properties.md).
 - [Usare le funzionalità relative alla documentazione XML per documentare il codice](../programming-guide/xmldoc/how-to-use-the-xml-documentation-features.md).
 - [Implementare in modo esplicito i membri di interfaccia](../programming-guide/interfaces/how-to-explicitly-implement-interface-members.md) per mantenere concisa l'interfaccia pubblica.
 - [Implementare in modo esplicito i membri di due interfacce](../programming-guide/interfaces/how-to-explicitly-implement-members-of-two-interfaces.md).
@@ -47,7 +47,7 @@ Questi articoli contengono informazioni sull'uso delle raccolte di dati.
 
 Le stringhe sono il tipo di dati di base usato per visualizzare o modificare il testo. Questi articoli illustrano le procedure comuni da seguire con le stringhe.
 
-- [Confrontare stringhe](compare-strings.md).
+- [Confrontare le stringhe](compare-strings.md).
 - [Modificare il contenuto di una stringa](modify-string-contents.md).
 - [Determinare se una stringa rappresenta un numero](../programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md).
 - [Usare `String.Split` per separare stringhe](parse-strings-using-split.md).
@@ -103,7 +103,7 @@ Gli eventi offrono un meccanismo per pubblicare o sottoscrivere notifiche.
 LINQ consente di scrivere codice per eseguire query su qualsiasi origine dati che supporta il criterio di espressione di query LINQ. Questi articoli contengono informazioni sul criterio e sull'uso di origini dati diverse.
 
 - [Eseguire la query di una raccolta](../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).
-- [Usare espressioni lambda in una query](../programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-in-a-query.md).
+- [Utilizzare espressioni lambda in una query](../programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-in-a-query.md).
 - [Usare `var` in espressioni di query](../programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md).
 - [Restituire sottoinsiemi di proprietà degli elementi in una query](../programming-guide/classes-and-structs/how-to-return-subsets-of-element-properties-in-a-query.md).
 - [Scrivere query con filtro complesso](../programming-guide/concepts/linq/how-to-write-queries-with-complex-filtering.md).

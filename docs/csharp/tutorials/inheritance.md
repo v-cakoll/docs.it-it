@@ -4,12 +4,12 @@ description: Informazioni su come usare l'ereditarietà nelle applicazioni e nel
 ms.date: 07/05/2018
 ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: b69da841c7c7a2e518191ad34f2ff5b368899728
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b72badb7833e018dfcbf5d2583b17f17c800c382
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120124"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156753"
 ---
 # <a name="inheritance-in-c-and-net"></a>Ereditarietà in C# e .NET
 
@@ -17,7 +17,7 @@ Questa esercitazione presenta l'ereditarietà in C#. L'ereditarietà è una cara
 
 ## <a name="prerequisites"></a>Prerequisites
 
-In questa esercitazione si presuppone che sia stato installato il .NET Core SDK. Visitare la pagina di [download di .NET Core](https://dotnet.microsoft.com/download) per scaricarlo. È necessario anche un editor di codice. In questa esercitazione viene usato [Visual Studio Code](https://code.visualstudio.com), ma è possibile usare qualsiasi editor di codice desiderato.
+In questa esercitazione si presuppone che sia stato installato .NET Core SDK. Visita la pagina dei download di [.NET Core](https://dotnet.microsoft.com/download) per scaricarlo. È necessario anche un editor di codice. In questa esercitazione viene usato [Visual Studio Code](https://code.visualstudio.com), ma è possibile usare qualsiasi editor di codice desiderato.
 
 ## <a name="running-the-examples"></a>Esecuzione degli esempi
 
@@ -141,7 +141,7 @@ Nella tabella seguente sono elencate le categorie di tipi che è possibile crear
 
 | Categoria di tipi | Eredita in modo implicito da                                                      |
 | ------------- | ----------------------------------------------------------------------------- |
-| classe         | <xref:System.Object>                                                          |
+| class         | <xref:System.Object>                                                          |
 | struct        | <xref:System.ValueType>, <xref:System.Object>                                 |
 | enum          | <xref:System.Enum>, <xref:System.ValueType>, <xref:System.Object>             |
 | delegato      | <xref:System.MulticastDelegate>, <xref:System.Delegate>, <xref:System.Object> |
@@ -165,7 +165,7 @@ In questo caso è opportuno non fare affidamento sull'ereditarietà per rapprese
 
 ## <a name="designing-the-base-class-and-derived-classes"></a>Progettazione della classe di base e delle classi derivate
 
-Si esaminerà ora il processo di progettazione della classe di base e delle relative classi derivate. In questa sezione si definirà una classe di base, `Publication`, che rappresenta una pubblicazione di qualsiasi tipo, ad esempio un libro, una rivista, un giornale, un journal, un articolo e così via. Si definirà anche una classe `Book` che deriva da `Publication`. L'esempio può essere facilmente esteso alla definizione di altre classi derivate, ad esempio `Magazine`, `Journal`, `Newspaper` e `Article`.
+Si esaminerà ora il processo di progettazione della classe di base e delle relative classi derivate. In questa sezione verrà definita una `Publication`classe base, , che rappresenta una pubblicazione di qualsiasi tipo, ad esempio un libro, una rivista, un giornale, un giornale, un articolo e così via. Verrà inoltre definita `Book` una classe che `Publication`deriva da . L'esempio può essere facilmente esteso alla definizione di altre classi derivate, ad esempio `Magazine`, `Journal`, `Newspaper` e `Article`.
 
 ### <a name="the-base-publication-class"></a>Classe di base Publication
 
@@ -291,7 +291,7 @@ L'esempio seguente definisce una classe di base astratta denominata `Shape` che 
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#2)]
 
-Nell'esempio seguente vengono usati gli oggetti derivati da `Shape`. Viene creata un'istanza di una matrice di oggetti derivati da `Shape` e vengono chiamati i metodi statici della classe `Shape`, che esegue il wrapping dei valori restituiti della proprietà `Shape`. Il runtime recupera i valori dalle proprietà dei tipi derivati sottoposte a override. Nell'esempio viene anche eseguito il cast di ogni oggetto `Shape` nella matrice al relativo tipo derivato e, se il cast ha esito positivo, vengono recuperate le proprietà di quella sottoclasse specifica di `Shape`. 
+Nell'esempio seguente vengono usati gli oggetti derivati da `Shape`. Viene creata un'istanza di una matrice di oggetti derivati da `Shape` e vengono chiamati i metodi statici della classe `Shape`, che esegue il wrapping dei valori restituiti della proprietà `Shape`. Il runtime recupera i valori dalle proprietà dei tipi derivati sottoposte a override. Nell'esempio viene anche eseguito il cast di ogni oggetto `Shape` nella matrice al relativo tipo derivato e, se il cast ha esito positivo, vengono recuperate le proprietà di quella sottoclasse specifica di `Shape`.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 

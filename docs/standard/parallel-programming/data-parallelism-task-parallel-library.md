@@ -9,10 +9,10 @@ helpviewer_keywords:
 - parallelism, data
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
 ms.openlocfilehash: 72696a41cd3b71f47fdcf43e4ece70ebeb7d34d1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73123155"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>Parallelismo dei dati (Task Parallel Library)
@@ -21,7 +21,7 @@ Con l'espressione *parallelismo dei dati* ci si riferisce a scenari in cui la st
  La libreria Task Parallel Library (TPL) supporta il parallelismo dei dati tramite la classe <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>. Questa classe fornisce le implementazioni in parallelo basate su metodo dei cicli [for](../../csharp/language-reference/keywords/for.md) e [foreach](../../csharp/language-reference/keywords/foreach-in.md) (`For` e `For Each` in Visual Basic). La scrittura della logica di un ciclo <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> o <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> è molto simile a quella della logica di un ciclo sequenziale. Non è necessario creare thread o accodare elementi di lavoro. Nei cicli di base non è necessario acquisire blocchi. La libreria TPL gestisce automaticamente tutto il lavoro di basso livello. Per informazioni dettagliate sull'uso di <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>, scaricare il documento [Patterns for Parallel Programming: Understanding and Applying Parallel Patterns with the .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222) (Modelli per la programmazione parallela: informazioni sui modelli paralleli con .NET Framework 4 e su come applicarli). L'esempio di codice seguente mostra un ciclo `foreach` semplice e il relativo equivalente parallelo.  
   
 > [!NOTE]
-> Questa documentazione usa espressioni lambda per definire delegati in TPL. Se non si ha familiarità con le espressioni lambda in C# o Visual Basic, vedere [Espressioni lambda in PLINQ e TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
+> Questa documentazione usa espressioni lambda per definire delegati in TPL. Se non si ha familiarità con le espressioni lambda in Visual Basic o in Visual Basic, vedere [Espressioni lambda in PLINQ e TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
   
  [!code-csharp[TPL#20](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl/cs/tpl.cs#20)]
  [!code-vb[TPL#20](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl/vb/tpl_vb.vb#20)]  
@@ -45,7 +45,7 @@ Con l'espressione *parallelismo dei dati* ci si riferisce a scenari in cui la st
 |[Procedura: scrivere un ciclo Parallel.ForEach semplice](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md)|Descrive come scrivere un ciclo <xref:System.Threading.Tasks.Parallel.ForEach%2A> su qualsiasi raccolta di origine <xref:System.Collections.Generic.IEnumerable%601>.|  
 |[Procedura: arrestare o interrompere un ciclo Parallel.For](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd460721(v=vs.100))|Descrive come arrestare o interrompere un ciclo parallelo in modo che tutti i thread siano informati dell'azione.|  
 |[Procedura: scrivere un ciclo Parallel.For con variabili di thread locali](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)|Descrive come scrivere un ciclo <xref:System.Threading.Tasks.Parallel.For%2A> in cui ogni thread gestisce una variabile privata che non è visibile a qualsiasi altro thread e come sincronizzare i risultati di tutti i thread quando il ciclo viene completato.|  
-|[Procedura: Scrivere un ciclo Parallel.ForEach con variabili di partizione locali](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)|Descrive come scrivere un ciclo <xref:System.Threading.Tasks.Parallel.ForEach%2A> in cui ogni thread gestisce una variabile privata che non è visibile a qualsiasi altro thread e come sincronizzare i risultati di tutti i thread quando il ciclo viene completato.|  
+|[Procedura: scrivere un ciclo Parallel.ForEach con variabili locali di partizioneHow to: Write a Parallel.ForEach Loop with Partition-Local Variables](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)|Descrive come scrivere un ciclo <xref:System.Threading.Tasks.Parallel.ForEach%2A> in cui ogni thread gestisce una variabile privata che non è visibile a qualsiasi altro thread e come sincronizzare i risultati di tutti i thread quando il ciclo viene completato.|  
 |[Procedura: annullare un ciclo Parallel.For o ForEach](../../../docs/standard/parallel-programming/how-to-cancel-a-parallel-for-or-foreach-loop.md)|Descrive come annullare un ciclo parallelo tramite un oggetto <xref:System.Threading.CancellationToken?displayProperty=nameWithType>.|  
 |[Procedura: aumentare la velocità di corpi di ciclo di dimensioni ridotte](../../../docs/standard/parallel-programming/how-to-speed-up-small-loop-bodies.md)|Descrive come aumentare la velocità di esecuzione nel caso di un corpo di ciclo molto piccolo.|  
 |[Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|Contiene la panoramica di Task Parallel Library.|  

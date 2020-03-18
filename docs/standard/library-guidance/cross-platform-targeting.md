@@ -3,10 +3,10 @@ title: Specifica di destinazioni multipiattaforma per librerie .NET
 description: Procedure consigliate per la creazione di librerie .NET multipiattaforma.
 ms.date: 08/12/2019
 ms.openlocfilehash: 61adff3759984554bb83531b4f9d8a49e29c929c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76731453"
 ---
 # <a name="cross-platform-targeting"></a>Specifica di destinazioni multipiattaforma
@@ -27,19 +27,19 @@ La scelta di .NET Standard come destinazione e la corretta compilazione del prog
 > [!TIP]
 > Il team di .NET [offre un analizzatore Roslyn](../analyzers/api-analyzer.md) che consente di individuare i possibili problemi.
 
-✔️ iniziare con l'inclusione di una `netstandard2.0` destinazione.
+✔️ INIZIARE includendo una destinazione `netstandard2.0`.
 
 > La maggior parte delle librerie per utilizzo generico non necessita di API al di fuori di .NET Standard 2.0. .NET standard 2.0 è supportato da tutte le piattaforme moderne ed è il modo consigliato per supportare più piattaforme con una sola destinazione.
 
-❌ evitare di includere una destinazione di `netstandard1.x`.
+❌AVOID che `netstandard1.x` include un bersaglio.
 
 > .NET standard 1.x è distribuito come set granulare di pacchetti NuGet, che crea un grafo delle dipendenze dei pacchetti di grandi dimensioni e obbliga gli sviluppatori a scaricare numerosi pacchetti durante la compilazione. Le moderne piattaforme .NET, tra cui .NET Framework 4.6.1, la piattaforma UWP e Xamarin, supportano tutte .NET Standard 2.0. Scegliere come destinazione .NET Standard 1.x solo se è necessaria una piattaforma di destinazione meno recente.
 
-✔️ includere una destinazione `netstandard2.0` se è necessaria una destinazione `netstandard1.x`.
+✔️ INCLUDERE una destinazione `netstandard2.0` se è necessaria una destinazione `netstandard1.x`.
 
 > Tutte le piattaforme che supportano .NET Standard 2.0 useranno la destinazione `netstandard2.0` con il vantaggio di avere un grafo dei pacchetti più piccolo, mentre le piattaforme precedenti continueranno a funzionare ed eseguiranno il fallback alla destinazione `netstandard1.x`.
 
-❌ non includere una destinazione .NET Standard se la libreria si basa su un modello di app specifico della piattaforma.
+❌NON includere una destinazione .NET Standard se la libreria si basa su un modello di app specifico della piattaforma.
 
 > Una libreria di toolkit di controlli della piattaforma UWP, ad esempio, dipende da un modello di app che è disponibile solo nella piattaforma UWP. Le API specifiche del modello di app non saranno disponibili in .NET Standard.
 
@@ -49,9 +49,9 @@ In alcuni casi è necessario accedere alle API specifiche del framework dalle li
 
 Per evitare ai consumer di dover eseguire la compilazione per i singoli framework, è consigliabile cercare di avere un output .NET Standard e uno o più output specifici del framework. Con il multitargeting, tutti gli assembly vengono inseriti all'interno di un singolo pacchetto NuGet. I consumer possono quindi fare riferimento allo stesso pacchetto NuGet e scegliere l'implementazione appropriata. La libreria .NET Standard serve come libreria di fallback usata in tutti i casi ad eccezione di quelli in cui il pacchetto NuGet offre un'implementazione specifica del framework. Il multitargeting consente di usare la compilazione condizionale nel codice e chiamare API specifiche del framework.
 
-![Pacchetto NuGet con più assembly](./media/cross-platform-targeting/nuget-package-multiple-assemblies.png "Pacchetto NuGet con più assembly")
+![Pacchetto NuGet con più assemblyNuGet package with multiple assemblies](./media/cross-platform-targeting/nuget-package-multiple-assemblies.png "Pacchetto NuGet con più assemblyNuGet package with multiple assemblies")
 
-✔️ CONSIDERARE come destinazione le implementazioni di .NET oltre a .NET Standard.
+✔️ Valutare la scelta delle implementazioni .NET come destinazione in aggiunta a .NET Standard.
 
 > La scelta delle implementazioni .NET come destinazione consente di chiamare API specifiche della piattaforma al di fuori di .NET Standard.
 >
@@ -88,19 +88,19 @@ public static class GpsLocation
 }
 ```
 
-❌ evitare il multitargeting, nonché la destinazione .NET Standard, se il codice sorgente è lo stesso per tutte le destinazioni.
+❌AVOID multi-targeting e targeting .NET Standard, se il codice sorgente è lo stesso per tutte le destinazioni.
 
 > L'assembly .NET Standard verrà usato automaticamente da NuGet. La scelta come destinazione di singole implementazioni .NET comporta un aumento delle dimensioni di `*.nupkg` senza offrire alcun vantaggio.
 
-✔️ CONSIGLIABILE aggiungere una destinazione per `net461` quando si sta offrendo una destinazione `netstandard2.0`.
+✔️ VALUTARE l'aggiunta di una destinazione per `net461` quando si offre una destinazione `netstandard2.0`.
 
 > L'uso di .NET Standard 2.0 da .NET Framework presenta alcuni problemi che sono stati risolti in .NET Framework 4.7.2. È possibile migliorare l'esperienza per gli sviluppatori che usano ancora .NET Framework 4.6.1-4.7.1 offrendo loro un file binario compilato per .NET Framework 4.6.1.
 
-✔️ distribuire la libreria usando un pacchetto NuGet.
+✔️ DA FARE Distribuire la libreria usando un pacchetto NuGet.
 
 > NuGet selezionerà la destinazione migliore per lo sviluppatore evitandogli di dover scegliere l'implementazione appropriata.
 
-✔️ utilizzare la proprietà `TargetFrameworks` di un file di progetto durante il multitargeting.
+✔️ USARE la proprietà `TargetFrameworks` di un file di progetto quando si usa il multitargeting.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -111,18 +111,18 @@ public static class GpsLocation
 </Project>
 ```
 
-✔️ si consiglia di usare [MSBuild. Sdk. Extras](https://github.com/onovotny/MSBuildSdkExtras) quando il multitargeting per UWP e Novell si semplifica notevolmente il file di progetto.
+✔️ VALUTARE l'uso di [MSBuild.Sdk.Extras](https://github.com/onovotny/MSBuildSdkExtras) con il multitargeting per la piattaforma UWP e Xamarin in quanto semplifica notevolmente il file di progetto.
 
 ## <a name="older-targets"></a>Destinazioni precedenti
 
 .NET consente di scegliere come destinazione versioni di .NET Framework per le quali non è più disponibile il supporto e piattaforme non più comunemente usate. In questo modo, la libreria funzionerà con il maggior numero di destinazioni possibili, tuttavia sarà necessario lavoro aggiuntivo per trovare una soluzione alternativa per le API mancanti. Considerando la copertura e le limitazioni, non vale più la pena scegliere come destinazione determinati framework.
 
-❌ non includere una destinazione libreria di classi portabile (PCL). Ad esempio, `portable-net45+win8+wpa81+wp8`.
+❌NON includere una destinazione libreria di classi portabile (PCL). Ad esempio: `portable-net45+win8+wpa81+wp8`.
 
 > .NET standard è il modo moderno per supportare le librerie .NET multipiattaforma e sostituisce le librerie di classi portabili.
 
-❌ non includono destinazioni per le piattaforme .NET che non sono più supportate. Ad esempio, `SL4`, `WP`.
+❌DO NOT includere destinazioni per le piattaforme .NET che non sono più supportate. Ad esempio, `SL4`, `WP`.
 
 >[!div class="step-by-step"]
->[Precedente](get-started.md)
->[Successivo](strong-naming.md)
+>[Successivo](get-started.md)
+>[precedente](strong-naming.md)

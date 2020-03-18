@@ -1,15 +1,15 @@
 ---
-title: Come scrivere un metodo dell'asse LINQ to XML (C#)
+title: Come scrivere un metodo dell'asse LINQ to XML (C )How to write a LINQ to XML axis method (C
 ms.date: 07/20/2015
 ms.assetid: 50aef06b-1d22-4718-a18a-21237e26d7c1
-ms.openlocfilehash: fc602f91dc6da16c4a019bb42ff178ae3de4ea03
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 7810afd1a181523fb30f6702993bc0ad469f66aa
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348352"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168544"
 ---
-# <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>Come scrivere un metodo dell'asse LINQ to XML (C#)
+# <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>Come scrivere un metodo dell'asse LINQ to XML (C )How to write a LINQ to XML axis method (C
 È possibile scrivere metodi dell'asse personalizzati per recuperare raccolte da un albero XML. Uno dei modi migliori per eseguire questa operazione consiste nello scrivere un metodo di estensione che restituisce una raccolta di elementi o attributi. È possibile scrivere il metodo di estensione per restituire subset specifici di elementi o attributi, in base ai requisiti dell'applicazione.  
   
 ## <a name="example"></a>Esempio  
@@ -42,7 +42,7 @@ public static class MyExtensions
     private static string NameWithPredicate(XElement el)  
     {  
         if (el.Parent != null && el.Parent.Elements(el.Name).Count() != 1)  
-            return GetQName(el) + "[" +   
+            return GetQName(el) + "[" +
                 (el.ElementsBeforeSelf(el.Name).Count() + 1) + "]";  
         else  
             return GetQName(el);  

@@ -4,12 +4,12 @@ description: Informazioni sui tipi di tupla denominati e non denominati in C#
 ms.date: 05/15/2018
 ms.technology: csharp-fundamentals
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: f551a1df4a31c3311119a0327e02fbc6096ce0a0
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 9ce9e1d4395d1a75f36004384ec215c615cd9802
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039717"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156909"
 ---
 # <a name="c-tuple-types"></a>Tipi tupla in C#
 
@@ -19,7 +19,7 @@ Questo articolo descrive le regole del linguaggio che controllano le tuple in C#
 
 > [!NOTE]
 > Le nuove funzionalità delle tuple richiedono i tipi <xref:System.ValueTuple>.
-> È necessario aggiungere il pacchetto NuGet [ `System.ValueTuple` ](https://www.nuget.org/packages/System.ValueTuple/) per usarlo nelle piattaforme che non includono i tipi.
+> È necessario aggiungere il [`System.ValueTuple`](https://www.nuget.org/packages/System.ValueTuple/) pacchetto NuGet per utilizzarlo su piattaforme che non includono i tipi.
 >
 > È simile ad altre funzionalità del linguaggio basate sui tipi resi disponibili nel framework. Alcuni esempi sono `async` e `await`, basati sull'interfaccia `INotifyCompletion`, e LINQ, basato su `IEnumerable<T>`. Tuttavia, il meccanismo di distribuzione sta cambiando perché .NET sta diventando più indipendente dalla piattaforma. .NET Framework potrebbe non essere sempre distribuito secondo la stessa cadenza del compilatore del linguaggio. Quando nuove funzionalità del linguaggio si basano su nuovi tipi, tali tipi saranno disponibili come pacchetti NuGet al momento della distribuzione delle funzionalità del linguaggio. Una volta che questi nuovi tipi vengono aggiunti all'API standard .NET e distribuiti come parte del framework, il requisito del pacchetto NuGet viene rimosso.
 
@@ -54,7 +54,7 @@ Creare una tupla con nome specificando i nomi per ogni elemento. Un modo consist
 
 I sinonimi vengono gestiti dal compilatore e dal linguaggio in modo che sia possibile usare efficacemente le tuple con nome. Gli editor e gli IDE possono leggere questi nomi semantici tramite le API di Roslyn. È possibile fare riferimento agli elementi di una tupla denominata tramite questi nomi semantici in qualsiasi punto dello stesso assembly. Il compilatore sostituisce i nomi definiti con equivalenti `Item*` durante la generazione dell'output compilato. Il Microsoft Intermediate Language (MSIL) compilato non include i nomi assegnati a questi elementi.
 
-A partire da C# 7.1, i nomi dei campi per una tupla possono essere forniti dalle variabili utilizzate per inizializzare la tupla. Si parla di **[inizializzatori di proiezione tupla](#tuple-projection-initializers)** . Il codice seguente crea una tupla denominata `accumulation` con elementi `count` (integer) e `sum` (double).
+A partire da C# 7.1, i nomi dei campi per una tupla possono essere forniti dalle variabili utilizzate per inizializzare la tupla. Si parla di **[inizializzatori di proiezione tupla](#tuple-projection-initializers)**. Il codice seguente crea una tupla denominata `accumulation` con elementi `count` (integer) e `sum` (double).
 
 [!code-csharp[ProjectedTuple](../../samples/snippets/csharp/tuples/program.cs#ProjectedTupleNames "Named tuple")]
 
@@ -78,7 +78,7 @@ Per i campi in cui non viene specificato un nome esplicito, viene proiettato un 
 
 Esistono due condizioni in cui i nomi dei campi candidati non sono previsti nel campo di tupla:
 
-1. Quando il nome candidato è un nome di tupla riservato. Alcuni esempi sono `Item3`, `ToString` o `Rest`.
+1. Quando il nome candidato è un nome di tupla riservato. Gli `Item3`esempi `ToString`includono `Rest`, , o .
 1. Quando il nome candidato è un duplicato di un altro nome di campo di tupla, implicito o esplicito.
 
 Queste condizioni evitano ogni ambiguità. Questi nomi creerebbero un'ambiguità se utilizzati come nomi di campo per un campo in una tupla. Nessuna di queste condizioni causa errori in fase di compilazione. Al contrario, per gli elementi senza nomi previsti non esistono nomi semantici previsti.  Gli esempi seguenti illustrano queste condizioni:
@@ -165,7 +165,7 @@ Aggiorniamo questo metodo in modo tale che i tre valori calcolati durante l'enum
 Il supporto del refactoring di Visual Studio semplifica l'estrazione delle funzionalità per le statistiche principali in un metodo privato. Ciò offre un metodo `private static` che restituisce il tipo di tupla con tre valori di `Sum`, `SumOfSquares`, e `Count`:
 
 [!code-csharp[TupleMethodVersion](../../samples/snippets/csharp/tuples/statistics.cs#08_TupleMethodVersion "After extracting utility method")]
- 
+
 Il linguaggio fornisce due opzioni aggiuntive che è possibile usare se si desidera apportare manualmente rapide modifiche. In primo luogo, è possibile usare la dichiarazione `var` per inizializzare il risultato della tupla dalla chiamata al metodo `ComputeSumAndSumOfSquares`. È anche possibile creare tre variabili discrete all'interno del metodo `ComputeSumAndSumOfSquares`. La versione finale è illustrata nel codice seguente:
 
 [!code-csharp[CleanedTupleVersion](../../samples/snippets/csharp/tuples/statistics.cs#09_CleanedTupleVersion "After final cleanup")]
@@ -225,7 +225,7 @@ La tupla con nome può essere parte della firma. Consente al compilatore e agli 
 
 [!code-csharp[DeconstructToVar](../../samples/snippets/csharp/tuples/statistics.cs#11_DeconstructToVar "Deconstruct to Var")]
 
-In aggiunta, è possibile usare la parola chiave `var` con una o tutte le dichiarazioni di variabili all'interno delle parentesi. 
+In aggiunta, è possibile usare la parola chiave `var` con una o tutte le dichiarazioni di variabili all'interno delle parentesi.
 
 ```csharp
 (double sum, var sumOfSquares, var count) = ComputeSumAndSumOfSquares(sequence);
@@ -282,15 +282,15 @@ if (("Althea", "Goodwin") == p)
     Console.WriteLine(p);
 ```
 
-Il metodo `Deconstruct` potrebbe convertire l'oggetto `Person` `p` in una tupla che contiene due stringhe, ma ciò non è applicabile nel contesto dei test di uguaglianza.
+Il metodo `Deconstruct` potrebbe convertire l'oggetto `Person``p` in una tupla che contiene due stringhe, ma ciò non è applicabile nel contesto dei test di uguaglianza.
 
-## <a name="tuples-as-out-parameters"></a>Tuple come parametri out
+## <a name="tuples-as-out-parameters"></a>Tuple come parametri outTuples as out parameters
 
-Le tuple possono essere utilizzate *come parametri out*. Da non confondere con qualsiasi ambiguità citata in precedenza nella sezione [decostruzione](#deconstruction) . In una chiamata al metodo è necessario descrivere solo la forma della tupla:
+Le tuple possono essere utilizzate come parametri *out.* Da non confondere con alcuna ambiguità menzionata in precedenza nella sezione [Decostruzione.](#deconstruction) In una chiamata al metodo, è necessario descrivere solo la forma della tupla:In a method call, you need only describe the tuple's shape:
 
 [!code-csharp[TuplesAsOutParameters](~/samples/snippets/csharp/tuples/program.cs#01_TupleAsOutVariable "Tuples as out parameters")]
 
-In alternativa, è possibile usare una tupla [_senza nome_](#named-and-unnamed-tuples) e fare riferimento ai relativi campi come `Item1` e `Item2`:
+In alternativa, è possibile utilizzare una tupla `Item1` `Item2` [_senza nome_](#named-and-unnamed-tuples) e fare riferimento ai relativi campi come e :
 
 ```csharp
 dict.TryGetValue(2, out (int, string) pair);
@@ -298,6 +298,6 @@ dict.TryGetValue(2, out (int, string) pair);
 Console.WriteLine($"{pair.Item1}: {pair.Item2}");
 ```
 
-## <a name="conclusion"></a>Conclusione 
+## <a name="conclusion"></a>Conclusioni
 
 Il nuovo supporto per linguaggio e libreria per le tuple con nome rende più semplice lavorare con schemi che usano strutture di dati che archiviano più elementi, ma non definiscono il comportamento, come le classi e gli struct. Usare le tuple per questi tipi è semplice e veloce. Si ottengono tutti i vantaggi del controllo del tipo statico, senza la necessità di creare tipi tramite la sintassi più dettagliata `class` o `struct`. Anche in questo caso, risultano particolarmente utili per i metodi di utilità `private` o `internal`. Creare tipi definiti dall'utente, tipi `class` o `struct` quando i metodi pubblici restituiscono un valore che contiene più elementi.

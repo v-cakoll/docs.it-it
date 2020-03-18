@@ -2,12 +2,12 @@
 title: Valori restituiti e variabili locali ref (Guida a C#)
 description: Informazioni su come definire e usare valori restituiti e variabili locali ref
 ms.date: 04/04/2018
-ms.openlocfilehash: 7ade422b5b3805ef2e1f487252a98fb85cdfe70c
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 87a9538db60d69062f0fb48ed9683a9d4f972b91
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736825"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170073"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Valori restituiti e variabili locali ref
 
@@ -25,7 +25,7 @@ Esistono alcune restrizioni per l'espressione che un metodo può restituire come
 
 - Il valore restituito non può essere il valore letterale `null`. La restituzione di `null` genera l'errore del compilatore CS8156, "Non è possibile usare un'espressione in questo contesto perché non può essere restituita per riferimento".
 
-   Un metodo con un valore restituito ref può restituire un alias a una variabile il cui valore è attualmente il valore null (privo di istanze) o un [tipo di valore Nullable](../../language-reference/builtin-types/nullable-value-types.md) per un tipo valore.
+   Un metodo con un ref restituito può restituire un alias a una variabile il cui valore è attualmente il valore null (senza istanze) o un tipo di [valore nullable](../../language-reference/builtin-types/nullable-value-types.md) per un tipo di valore.
 
 - Il valore restituito non può essere una costante, un membro di enumerazione, il valore restituito per valore da una proprietà o un metodo di un oggetto `class` o `struct`. La violazione di questa regola genera l'errore del compilatore CS8156, "Non è possibile usare un'espressione in questo contesto perché non può essere restituita per riferimento".
 
@@ -82,7 +82,7 @@ ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 
 L'utilizzo successivo di `p` è uguale all'utilizzo della variabile restituita da `GetContactInformation` perché `p` è un alias per tale variabile. Le modifiche apportate a `p` modificano anche la variabile restituita da `GetContactInformation`.
 
-La parola chiave `ref` viene usata sia prima della dichiarazione di variabile locale *che* prima della chiamata al metodo. 
+La parola chiave `ref` viene usata sia prima della dichiarazione di variabile locale *che* prima della chiamata al metodo.
 
 È possibile accedere a un valore per riferimento nello stesso modo. In alcuni casi, l'accesso a un valore per riferimento migliora le prestazioni evitando un'operazione di copia potenzialmente dispendiosa. L'istruzione seguente, ad esempio, spiega come sia possibile definire un valore locale di riferimento usato per fare riferimento a un valore.
 
@@ -90,7 +90,7 @@ La parola chiave `ref` viene usata sia prima della dichiarazione di variabile lo
 ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ```
 
-La parola chiave `ref` viene usata sia prima della dichiarazione di variabile locale *che* prima del valore nel secondo esempio. Se non si includono entrambe le parole chiave `ref` nella dichiarazione di variabile e nell'assegnazione nei due esempi, viene generato l'errore del compilatore CS8172, "Non è possibile inizializzare una variabile per riferimento con un valore". 
+La parola chiave `ref` viene usata sia prima della dichiarazione di variabile locale *che* prima del valore nel secondo esempio. Se non si includono entrambe le parole chiave `ref` nella dichiarazione di variabile e nell'assegnazione nei due esempi, viene generato l'errore del compilatore CS8172, "Non è possibile inizializzare una variabile per riferimento con un valore".
 
 Prima di C# 7.3, le variabili locali di riferimento non potevano essere riassegnate per fare riferimento a una risorsa di archiviazione diversa dopo l'inizializzazione. Questa restrizione è stata rimossa. L'esempio seguente mostra una riassegnazione:
 
@@ -103,7 +103,7 @@ refLocal = ref anotherVeryLargeStruct; // reassigned, refLocal refers to differe
 
 ## <a name="ref-returns-and-ref-locals-an-example"></a>Valori restituiti e variabili locali ref: un esempio
 
-L'esempio seguente definisce una classe `NumberStore` che archivia una matrice di valori integer. Il metodo `FindNumber` restituisce per riferimento il primo numero maggiore o uguale al numero passato come argomento. Se nessun numero è maggiore o uguale all'argomento, il metodo restituisce il numero nell'indice 0. 
+L'esempio seguente definisce una classe `NumberStore` che archivia una matrice di valori integer. Il metodo `FindNumber` restituisce per riferimento il primo numero maggiore o uguale al numero passato come argomento. Se nessun numero è maggiore o uguale all'argomento, il metodo restituisce il numero nell'indice 0.
 
 [!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/NumberStore.cs#1)]
 

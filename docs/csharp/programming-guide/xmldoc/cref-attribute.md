@@ -1,23 +1,23 @@
 ---
-title: Guida alla programmazione C# degli attributi di cref
+title: Cref (attributo) - Guida alla programmazione in C
 ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: 2a9b9966a28b62c41ac6091268ae172bae3a40d7
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b06d0c9d447124dec7d8cf3c0cbbfd0daca78fe3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793439"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79157013"
 ---
-# <a name="cref-attribute-c-programming-guide"></a>attributo cref (C# guida per programmatori)
+# <a name="cref-attribute-c-programming-guide"></a>attributo cref (Guida per programmatori C
 
 L'attributo `cref` in un tag della documentazione XML indica un "riferimento al codice". Specifica che il testo all'interno del tag è un elemento di codice, ad esempio un tipo, un metodo o una proprietà. Gli strumenti per la creazione di documentazione, come [DocFX](https://dotnet.github.io/docfx/) e [Sandcastle](https://github.com/EWSoftware/SHFB), usano attributi `cref` per generare automaticamente collegamenti ipertestuali alla pagina in cui è documentato il tipo o il membro.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente illustra attributi `cref` usati nei tag [\<see>](./see.md).
+L'esempio `cref` seguente mostra gli attributi utilizzati nei [ \<](./see.md) tag>.
 
 [!code-csharp[csProgGuideDocComments#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#3)]
 
@@ -49,12 +49,12 @@ Durante la compilazione, il programma crea il file XML seguente. Si noti che l'a
             <summary>
             The GetZero method.
             </summary>
-            <example> 
+            <example>
             This sample shows how to call the <see cref="M:TestNamespace.TestClass.GetZero"/> method.
             <code>
-            class TestClass 
+            class TestClass
             {
-                static int Main() 
+                static int Main()
                 {
                     return GetZero();
                 }
@@ -66,7 +66,7 @@ Durante la compilazione, il programma crea il file XML seguente. Si noti che l'a
             <summary>
             The GetGenericValue method.
             </summary>
-            <remarks> 
+            <remarks>
             This sample shows how to specify the <see cref="M:TestNamespace.TestClass.GetGenericValue``1(``0)"/> method as a cref attribute.
             </remarks>
         </member>
@@ -74,7 +74,7 @@ Durante la compilazione, il programma crea il file XML seguente. Si noti che l'a
             <summary>
             GenericClass.
             </summary>
-            <remarks> 
+            <remarks>
             This example shows how to specify the <see cref="T:TestNamespace.GenericClass`1"/> type as a cref attribute.
             </remarks>
         </member>

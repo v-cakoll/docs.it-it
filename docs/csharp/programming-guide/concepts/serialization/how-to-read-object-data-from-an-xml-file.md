@@ -1,15 +1,15 @@
 ---
-title: Come leggere i dati di un oggetto da un fileC#XML ()
+title: Come leggere i dati dell'oggetto da un file XML (C
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: 2da5919c11ed2d6e43f4f9fc406f43e3ed48060f
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 18428cbe2f2d3b9434a77ee4d063ceabbba6bcb8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346427"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167818"
 ---
-# <a name="how-to-read-object-data-from-an-xml-file-c"></a>Come leggere i dati di un oggetto da un fileC#XML ()
+# <a name="how-to-read-object-data-from-an-xml-file-c"></a>Come leggere i dati dell'oggetto da un file XML (C
 Questo esempio legge i dati oggetto scritti in precedenza in un file XML usando la classe <xref:System.Xml.Serialization.XmlSerializer>.  
   
 ## <a name="example"></a>Esempio  
@@ -18,7 +18,7 @@ Questo esempio legge i dati oggetto scritti in precedenza in un file XML usando 
 public class Book  
 {  
     public String title;  
-}         
+}
   
 public void ReadXML()  
 {  
@@ -30,7 +30,7 @@ public void ReadXML()
     wfile.Close();  
   
     // Now we can read the serialized book ...  
-    System.Xml.Serialization.XmlSerializer reader =   
+    System.Xml.Serialization.XmlSerializer reader =
         new System.Xml.Serialization.XmlSerializer(typeof(Book));  
     System.IO.StreamReader file = new System.IO.StreamReader(  
         @"c:\temp\SerializationOverview.xml");  
@@ -43,7 +43,7 @@ public void ReadXML()
 ```  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
-Sostituire il nome di file "c:\temp\SerializationOverview.xml" con il nome del file contenente i dati serializzati. Per ulteriori informazioni sulla serializzazione dei dati, vedere la pagina relativa [alla modalità di scrittura dei datiC#di un oggetto in un file XML ()](./how-to-write-object-data-to-an-xml-file.md).
+Sostituire il nome di file "c:\temp\SerializationOverview.xml" con il nome del file contenente i dati serializzati. Per ulteriori informazioni sulla serializzazione dei dati, vedere Come scrivere i [dati dell'oggetto in un file XML (Cè)](./how-to-write-object-data-to-an-xml-file.md).
   
  La classe deve avere un costruttore public senza parametri.  
   
@@ -64,6 +64,6 @@ Sostituire il nome di file "c:\temp\SerializationOverview.xml" con il nome del f
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.IO.StreamWriter>
-- [Come scrivere i dati di un oggetto in un fileC#XML ()](./how-to-write-object-data-to-an-xml-file.md)
+- [Come scrivere i dati dell'oggetto in un file XML (C](./how-to-write-object-data-to-an-xml-file.md)
 - [Serializzazione (C#)](./index.md)
 - [Guida per programmatori C#](../../index.md)

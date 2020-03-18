@@ -12,10 +12,10 @@ helpviewer_keywords:
 - .NET Framework, asynchronous design patterns
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
 ms.openlocfilehash: 6218aa1a7b813601e9b718abf862e20a7cbcd313
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73124308"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>Implementazione del modello asincrono basato su attività
@@ -27,7 +27,7 @@ ms.locfileid: "73124308"
 A partire da .NET Framework 4.5, qualsiasi metodo con la parola chiave `async` (`Async` in Visual Basic) viene considerato un metodo asincrono e i compilatori C# e Visual Basic eseguono le trasformazioni necessarie per implementare il metodo in modo asincrono tramite TAP. Un metodo asincrono deve restituire un oggetto <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> o <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>. Nel secondo caso, il corpo della funzione deve restituire un oggetto `TResult` e il compilatore garantisce che il risultato sia reso disponibile tramite l'oggetto attività risultante. Allo stesso modo, viene effettuato il marshalling di qualsiasi eccezione gestita all'interno del corpo del metodo per l'attività di output, per far sì che l'attività risultante termini con lo stato <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType>. L'eccezione si verifica quando un <xref:System.OperationCanceledException> (o tipo derivato) non viene gestito, in qual caso l'attività risultante termina nello stato <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType>.
 
 ### <a name="generating-tap-methods-manually"></a>Generazione manuale di metodi TAP
-È possibile implementare il modello TAP manualmente per un controllo migliore sull'implementazione. Il compilatore si basa sull'area di superficie esposta dallo spazio dei nomi <xref:System.Threading.Tasks?displayProperty=nameWithType> e i tipi di supporto nello spazio dei nomi <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>. Per implementare autonomamente il modello TAP, creare un oggetto <xref:System.Threading.Tasks.TaskCompletionSource%601>, eseguire l'operazione asincrona e, al completamento, chiamare il metodo <xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult%2A>, <xref:System.Threading.Tasks.TaskCompletionSource%601.SetException%2A> o <xref:System.Threading.Tasks.TaskCompletionSource%601.SetCanceled%2A> oppure la versione `Try` di uno di questi metodi. Quando si implementa un metodo TAP manualmente, è necessario completare l'attività risultante al completamento dell'operazione asincrona rappresentata. Esempio:
+È possibile implementare il modello TAP manualmente per un controllo migliore sull'implementazione. Il compilatore si basa sull'area di superficie esposta dallo spazio dei nomi <xref:System.Threading.Tasks?displayProperty=nameWithType> e i tipi di supporto nello spazio dei nomi <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>. Per implementare autonomamente il modello TAP, creare un oggetto <xref:System.Threading.Tasks.TaskCompletionSource%601>, eseguire l'operazione asincrona e, al completamento, chiamare il metodo <xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult%2A>, <xref:System.Threading.Tasks.TaskCompletionSource%601.SetException%2A> o <xref:System.Threading.Tasks.TaskCompletionSource%601.SetCanceled%2A> oppure la versione `Try` di uno di questi metodi. Quando si implementa un metodo TAP manualmente, è necessario completare l'attività risultante al completamento dell'operazione asincrona rappresentata. Ad esempio:
 
 [!code-csharp[Conceptual.TAP_Patterns#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#1)]
 [!code-vb[Conceptual.TAP_Patterns#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#1)]
@@ -102,5 +102,5 @@ In questo esempio viene illustrato come un unico token di annullamento può esse
 ## <a name="see-also"></a>Vedere anche
 
 - [Modello asincrono basato su attività (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)
-- [Utilizzo del modello asincrono basato su attività](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)
+- [Consuming the Task-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)
 - [Interoperabilità con altri tipi e modelli asincroni](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)

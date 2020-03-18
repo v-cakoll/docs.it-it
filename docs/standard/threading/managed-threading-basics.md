@@ -9,10 +9,10 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
 ms.openlocfilehash: bec769043ab630b37609bed12302ceff5b90474a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139238"
 ---
 # <a name="managed-threading-basics"></a>Nozioni di base sul threading gestito
@@ -22,11 +22,11 @@ I primi cinque argomenti di questa sezione contengono informazioni utili per det
  Gli altri argomenti di questa sezione illustrano funzionalità avanzate, tra cui l'interazione del threading gestito con il sistema operativo Windows.  
   
 > [!NOTE]
-> In .NET Framework 4, Task Parallel Library e PLINQ forniscono le API per il parallelismo di attività e dati nei programmi multithread. Per altre informazioni, vedere [Programmazione parallela](../../../docs/standard/parallel-programming/index.md).  
+> In .NET Framework 4, Task Parallel Library e PLINQ forniscono le API per il parallelismo di attività e dati nei programmi multithread. Per ulteriori informazioni, vedere [Programmazione parallela](../../../docs/standard/parallel-programming/index.md).  
   
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
- [Thread e Threading](../../../docs/standard/threading/threads-and-threading.md)  
+ [Thread e threading](../../../docs/standard/threading/threads-and-threading.md)  
  Illustra i vantaggi e gli svantaggi di più thread e descrive gli scenari in cui è possibile creare thread o usare thread di pool di thread.  
   
  [Eccezioni in thread gestiti](../../../docs/standard/threading/exceptions-in-managed-threads.md)  
@@ -44,7 +44,7 @@ I primi cinque argomenti di questa sezione contengono informazioni utili per det
  [Archiviazione locale del thread: slot di dati e campi statici relativi ai thread](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
  Illustra i meccanismi di archiviazione relativi ai thread.  
   
-## <a name="reference"></a>Reference
+## <a name="reference"></a>Informazioni di riferimento
 
  <xref:System.Threading.Thread>  
  Rende disponibile la documentazione di riferimento per la classe **Thread**, che rappresenta un thread gestito, indipendentemente dal fatto che derivi da codice non gestito o sia stato creato in un'applicazione gestita.  
@@ -54,10 +54,10 @@ I primi cinque argomenti di questa sezione contengono informazioni utili per det
   
 ## <a name="related-sections"></a>Sezioni correlate
 
- [Cenni preliminari sulle primitive di sincronizzazione](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
+ [Panoramica delle primitive di sincronizzazione](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
  Illustra le classi gestite usate per sincronizzare le attività di più thread.  
   
- [Suggerimenti per l'utilizzo del threading gestito](../../../docs/standard/threading/managed-threading-best-practices.md)  
+ [Procedure consigliate per il threading gestitoManaged Threading Best Practices](../../../docs/standard/threading/managed-threading-best-practices.md)  
  Illustra i problemi comuni del multithreading e le strategie per evitarli.  
   
  [Programmazione parallela](../../../docs/standard/parallel-programming/index.md)  

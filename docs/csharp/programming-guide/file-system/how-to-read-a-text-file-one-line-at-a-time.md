@@ -1,19 +1,19 @@
 ---
-title: Come leggere un file di testo una riga in una guida di C# programmazione temporale
+title: Come leggere un file di testo una riga alla volta - Guida alla programmazione in C
 ms.date: 07/20/2015
 helpviewer_keywords:
 - ReadLine method [C#]
 - reading text files, line by line
 - text files [C#]
 ms.assetid: d62e22c5-a13c-48db-af9b-f10c801b0cb1
-ms.openlocfilehash: a6af48cdacd836465d776a3fd4e1d17aa0298b77
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: e4a9ba2da2548991f442c2f5ab09d39243137875
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635340"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167512"
 ---
-# <a name="how-to-read-a-text-file-one-line-at-a-time-c-programming-guide"></a>Come leggere un file di testo una riga alla volta (C# guida per programmatori)
+# <a name="how-to-read-a-text-file-one-line-at-a-time-c-programming-guide"></a>Come leggere un file di testo una riga alla volta (Guida per programmatori C
 Questo esempio legge il contenuto di un file di testo, una riga alla volta, in una stringa usando il metodo `ReadLine` della classe `StreamReader`. Ogni riga di testo è memorizzata nella stringa `line` e visualizzata nella schermata.  
   
 ## <a name="example"></a>Esempio  
@@ -23,7 +23,7 @@ int counter = 0;
 string line;  
   
 // Read the file and display it line by line.  
-System.IO.StreamReader file =   
+System.IO.StreamReader file =
     new System.IO.StreamReader(@"c:\test.txt");  
 while((line = file.ReadLine()) != null)  
 {  

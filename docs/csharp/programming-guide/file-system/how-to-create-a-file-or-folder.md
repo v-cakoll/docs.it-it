@@ -1,5 +1,5 @@
 ---
-title: Come creare un file o una cartella- C# Guida alla programmazione
+title: Come creare un file o una cartella - Guida per programmatori C
 ms.date: 07/20/2015
 helpviewer_keywords:
 - folders [C#]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: e0d0a7fbbc7e6a5c9a0bd00dec1188c5cfdcf896
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cdcc0a375aa1eca29c024d1e0c9008f337d0c772
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705249"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167557"
 ---
-# <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Come creare un file o una cartella (C# guida per programmatori)
+# <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Come creare un file o una cartella (Guida per programmatori C
 A livello di codice è possibile creare una cartella, una sottocartella e un file nella sottocartella e quindi scrivere dati nel file.  
   
 ## <a name="example"></a>Esempio  
@@ -37,7 +37,7 @@ A livello di codice è possibile creare una cartella, una sottocartella e un fil
 - Sostituire l'istruzione `if`-`else` con l'istruzione `using` riportata nel codice seguente.  
   
     ```csharp  
-    using (System.IO.FileStream fs = new System.IO.FileStream(pathString, FileMode.Append))   
+    using (System.IO.FileStream fs = new System.IO.FileStream(pathString, FileMode.Append))
     {  
         for (byte i = 0; i < 100; i++)  
         {  
