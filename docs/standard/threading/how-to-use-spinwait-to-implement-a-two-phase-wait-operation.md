@@ -9,17 +9,17 @@ helpviewer_keywords:
 - SpinWait, how to synchronize two-phase wait
 ms.assetid: b2ac4e4a-051a-4f65-b4b9-f8e103aff195
 ms.openlocfilehash: 5bac174660177fd47e1f345e64581e35ae4c0ffc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73137945"
 ---
 # <a name="how-to-use-spinwait-to-implement-a-two-phase-wait-operation"></a>Procedura: utilizzare SpinWait per implementare un'operazione di attesa a due fasi
 L'esempio seguente mostra come usare un oggetto <xref:System.Threading.SpinWait?displayProperty=nameWithType> per implementare un'operazione di attesa a due fasi. Nella prima fase, l'oggetto di sincronizzazione, `Latch`, ruota per alcuni cicli mentre controlla se il blocco è diventato disponibile. Nella seconda fase, se il blocco diventa disponibile, il metodo `Wait` restituisce un risultato senza usare <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> per l'attesa; in caso contrario, `Wait` esegue l'attesa.  
   
 ## <a name="example"></a>Esempio  
- Questo esempio illustra un'implementazione di base di una primitiva di sincronizzazione Latch. È possibile usare questa struttura dei dati quando si prevedono tempi di attesa molto brevi. L'esempio ha solo scopo dimostrativo. Se sono necessarie funzionalità di tipo latch nel programma, è consigliabile usare <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>.  
+ Questo esempio illustra un'implementazione di base di una primitiva di sincronizzazione Latch. È possibile usare questa struttura dei dati quando si prevedono tempi di attesa molto brevi. Questo esempio viene fornito solo per scopi dimostrativi. Se sono necessarie funzionalità di tipo latch nel programma, è consigliabile usare <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>.  
   
  [!code-csharp[CDS_SpinWait#03](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_spinwait/cs/spinwait03.cs#03)]
  [!code-vb[CDS_SpinWait#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_spinwait/vb/spinwait2.vb#03)]  
@@ -31,4 +31,4 @@ L'esempio seguente mostra come usare un oggetto <xref:System.Threading.SpinWait?
 ## <a name="see-also"></a>Vedere anche
 
 - [SpinWait](../../../docs/standard/threading/spinwait.md)
-- [Threading Objects and Features](../../../docs/standard/threading/threading-objects-and-features.md) (Oggetti e funzionalità del threading)
+- [Funzionalità e oggetti di threading](../../../docs/standard/threading/threading-objects-and-features.md)

@@ -1,15 +1,15 @@
 ---
-title: Come combinare e confrontare raccolte di stringhe (LINQ) (C#)
+title: Come combinare e confrontare raccolte di stringhe (LINQ) (C
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: 23089835e710a7905693f8e3e3b57173085d0694
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: f73a31e109933a4b6dd0078934d89d3bb770de5c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141425"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169454"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Come combinare e confrontare raccolte di stringhe (LINQ) (C#)
+# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Come combinare e confrontare raccolte di stringhe (LINQ) (C
 In questo esempio viene illustrato come unire i file che contengono righe di testo e quindi ordinare i risultati. In particolare viene illustrato come eseguire una concatenazione semplice, un'unione e un'intersezione su due set di righe di testo.  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>Per impostare il progetto e i file di testo  
@@ -74,7 +74,7 @@ class MergeStrings
                 fileA.Intersect(fileB);  
             OutputQueryResults(commonNamesQuery, "Merge based on intersect:");  
   
-            // Find the matching fields in each list. Merge the two   
+            // Find the matching fields in each list. Merge the two
             // results by using Concat, and then  
             // sort using the default string comparer.  
             string nameMatch = "Garcia";  

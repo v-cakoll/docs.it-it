@@ -8,10 +8,10 @@ helpviewer_keywords:
 - when keyword [C#]
 ms.assetid: dd543335-ae37-48ac-9560-bd5f047b9aea
 ms.openlocfilehash: 6a61c42ba2d01e84ffae376bf95c99877437be85
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712832"
 ---
 # <a name="when-c-reference"></a>when (Riferimenti per C#)
@@ -23,7 +23,7 @@ ms.locfileid: "75712832"
 
 ## <a name="when-in-a-catch-statement"></a>`when` in un'istruzione `catch`
 
-A partire da C# 6 `when` può essere usata in un'istruzione `catch` per specificare una condizione che deve essere vera per eseguire il gestore di una determinata eccezione. La sintassi è la seguente:
+A partire da C# 6 `when` può essere usata in un'istruzione `catch` per specificare una condizione che deve essere vera per eseguire il gestore di una determinata eccezione. La relativa sintassi è la seguente:
 
 ```csharp
 catch (ExceptionType [e]) when (expr)
@@ -37,7 +37,7 @@ Nell'esempio seguente viene usata la parola chiave `when` per eseguire in modo c
 
 ## <a name="when-in-a-switch-statement"></a>`when` in un'istruzione `switch`
 
-A partire da C# 7.0 non è più necessario che le etichette `case` siano reciprocamente esclusive e l'ordine in cui le etichette `case` appaiono in un'istruzione `switch` può determinare quale blocco switch eseguire. La parola chiave `when` può essere usata per specificare una condizione di filtro che fa sì che l'etichetta case associata sia vera solo se è vera anche la condizione di filtro. La sintassi è la seguente:
+A partire da C# 7.0 non è più necessario che le etichette `case` siano reciprocamente esclusive e l'ordine in cui le etichette `case` appaiono in un'istruzione `switch` può determinare quale blocco switch eseguire. La parola chiave `when` può essere usata per specificare una condizione di filtro che fa sì che l'etichetta case associata sia vera solo se è vera anche la condizione di filtro. La relativa sintassi è la seguente:
 
 ```csharp
 case (expr) when (when-condition):

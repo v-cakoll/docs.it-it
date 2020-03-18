@@ -2,12 +2,12 @@
 title: Recupero del testo dei paragrafi (C#)
 ms.date: 07/20/2015
 ms.assetid: 127d635e-e559-408f-90c8-2bb621ca50ac
-ms.openlocfilehash: cedca9df84ee687a9e304cde0015b46d07956364
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7c47420045def3fe973169e01143646c0f60a8eb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423335"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168245"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a>Recupero del testo dei paragrafi (C#)
 Questo esempio si basa sull'esempio precedente, [Recupero dei paragrafi e dei relativi stili (C#)](./retrieving-the-paragraphs-and-their-styles.md). Questo nuovo esempio consente di recuperare il testo di ciascun paragrafo sotto forma di stringa.  
@@ -23,7 +23,7 @@ Questo esempio si basa sull'esempio precedente, [Recupero dei paragrafi e dei re
 ## <a name="example"></a>Esempio  
  In questo esempio viene elaborato un documento WordprocessingML, determinando il nodo dell'elemento, il nome dello stile e il testo di ciascun paragrafo. Questo esempio si basa su esempi precedenti di questa esercitazione. La nuova query è indicata nei commenti del codice riportato di seguito.  
   
- Per istruzioni per la creazione del documento di origine di questo esempio, vedere [Creazione del documento Office Open XML di origine (C#)](./creating-the-source-office-open-xml-document.md).  
+ Per istruzioni sulla creazione del documento di origine di questo esempio, vedere [Creazione del documento Office Open XML di origine (C#)](./creating-the-source-office-open-xml-document.md).  
   
  In questo esempio vengono usate classi dell'assembly WindowsBase e i tipi dello spazio dei nomi <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -68,7 +68,7 @@ using (Package wdPackage = Package.Open(fileName, FileMode.Open, FileAccess.Read
     }  
 }  
   
-string defaultStyle =   
+string defaultStyle =
     (string)(  
         from style in styleDoc.Root.Elements(w + "style")  
         where (string)style.Attribute(w + "type") == "paragraph"&&  

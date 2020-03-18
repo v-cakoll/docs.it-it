@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
 ms.openlocfilehash: 77b173a420f26834855e0bdca3c8d04406ac65d4
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452006"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399735"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>Convenzioni di codifica C# (Guida per programmatori C#)
 
@@ -25,7 +25,7 @@ Le convenzioni di codifica hanno gli scopi seguenti:
   
 - Illustrano procedure consigliate di C#.  
 
-Le linee guida riportate in questo articolo sono utilizzate da Microsoft per sviluppare esempi e documentazione.  
+Le linee guida in questo articolo vengono utilizzate da Microsoft per sviluppare esempi e documentazione.  
   
 ## <a name="naming-conventions"></a>Convenzioni di denominazione  
   
@@ -97,20 +97,20 @@ Nelle sezioni seguenti vengono descritte le procedure che il team C# deve seguir
   
 - Evitare l'uso di `var` al posto di [dynamic](../../language-reference/builtin-types/reference-types.md).  
   
-- Usare la tipizzazione implicita per determinare il tipo della variabile del ciclo nei cicli [for](../../language-reference/keywords/for.md) .  
+- Utilizzare la tipizzazione implicita per determinare il tipo della variabile di ciclo nei cicli [for.](../../language-reference/keywords/for.md)  
   
      Nell'esempio seguente viene usata la tipizzazione implicita in un'istruzione `for`.  
   
      [!code-csharp[csProgGuideCodingConventions#7](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#7)]  
 
-- Non usare la tipizzazione implicita per determinare il tipo della variabile del ciclo nei cicli [foreach](../../language-reference/keywords/foreach-in.md) .
+- Non utilizzare la tipizzazione implicita per determinare il tipo della variabile di ciclo nei cicli [foreach.](../../language-reference/keywords/foreach-in.md)
 
-     Nell'esempio seguente viene usata la tipizzazione esplicita in un'istruzione `foreach`.
+     Nell'esempio seguente viene `foreach` utilizzata la tipizzazione esplicita in un'istruzione.
 
      [!code-csharp[csProgGuideCodingConventions#12](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#12)]
 
      > [!NOTE]
-     > Prestare attenzione a non modificare accidentalmente un tipo di elemento della raccolta iterable. Ad esempio, è facile passare da <xref:System.Linq.IQueryable?displayProperty=nameWithType> a <xref:System.Collections.IEnumerable?displayProperty=nameWithType> in un'istruzione `foreach`, che modifica l'esecuzione di una query.
+     > Prestare attenzione a non modificare accidentalmente un tipo di un elemento della raccolta iterabile. Ad esempio, è facile <xref:System.Linq.IQueryable?displayProperty=nameWithType> passare <xref:System.Collections.IEnumerable?displayProperty=nameWithType> da `foreach` a in un'istruzione, che modifica l'esecuzione di una query.
 
 ### <a name="unsigned-data-type"></a>Tipi di dati non firmati  
   
@@ -142,11 +142,11 @@ Usare la sintassi concisa per creare istanze di un tipo delegato.
   
 ### <a name="-and-124124-operators"></a>Operatori && e &#124;&#124;  
   
-Per evitare eccezioni e migliorare le prestazioni ignorando i confronti non necessari, usare [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) invece di [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) e [&#124;&#124;](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) invece di [&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-) quando si eseguono confronti, come illustrato nell'esempio seguente.  
+Per evitare eccezioni e migliorare le prestazioni [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) ignorando confronti non necessari, utilizzare e [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) [&#124;&#124;](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) anziché [&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-) quando si eseguono confronti, come illustrato nell'esempio seguente.  
   
 [!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
   
-### <a name="new-operator"></a>Operatore New  
+### <a name="new-operator"></a>New Operator  
   
 - Usare il modulo conciso della creazione dell'istanza di oggetto, con la tipizzazione implicita, come illustrato nella dichiarazione seguente.  
   
@@ -200,11 +200,11 @@ Chiamare i membri [static](../../language-reference/keywords/static.md) usando i
   
      [!code-csharp[csProgGuideCodingConventions#30](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#30)]  
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
 
 Seguire le indicazioni in [Linee guida per la generazione di codice sicuro](../../../standard/security/secure-coding-guidelines.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Convenzioni di scrittura codice di Visual Basic](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)
+- [Convenzioni di codifica di Visual Basic](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)
 - [Linee guida per la generazione di codice sicuro](../../../standard/security/secure-coding-guidelines.md)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
 ms.openlocfilehash: d50b50bb291d0d087015ea5bd075ae90ced66ff5
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75711935"
 ---
 # <a name="statements-c-programming-guide"></a>Istruzioni (Guida per programmatori C#)
@@ -24,21 +24,21 @@ Un'istruzione può essere costituito da una singola riga di codice che termina c
 
 Nella tabella seguente sono elencati i vari tipi di istruzioni in C# e le parole chiave associate, con link ad argomenti contenenti maggiori informazioni:
 
-|Categoria|Parole chiave C#/note|
+|Category|Parole chiave C#/note|
 |--------------|---------------------------|
 |[Istruzioni di dichiarazione](#declaration-statements)|Un'istruzione di dichiarazione introduce una nuova variabile o costante. Una dichiarazione di variabile può facoltativamente assegnare un valore alla variabile. In una dichiarazione di costante, l'assegnazione è necessaria.|
 |[Istruzioni di espressione](expressions.md)|Le istruzioni di espressione che calcolano un valore devono archiviare il valore in una variabile. Per altre informazioni, vedere [Istruzioni di espressione](#expression-statements).|
-|Istruzioni di selezione|Le istruzioni di selezione consentono di creare un ramo tra le diverse sezioni di codice, in base a una o più condizioni specificate. Per altre informazioni, vedere i seguenti argomenti: <ul><li>[if](../../language-reference/keywords/if-else.md)</li><li>[else](../../language-reference/keywords/if-else.md)</li><li>[switch](../../language-reference/keywords/switch.md)</li><li>[case](../../language-reference/keywords/switch.md)</li></ul>|
-|Istruzioni di iterazione|Le istruzioni di iterazione consentono di eseguire un ciclo tra le raccolte come matrici o eseguono ripetutamente lo stesso set di istruzioni finché non viene soddisfatta una condizione specificata. Per altre informazioni, vedere i seguenti argomenti: <ul><li>[do](../../language-reference/keywords/do.md)</li><li>[for](../../language-reference/keywords/for.md)</li><li>[foreach](../../language-reference/keywords/foreach-in.md)</li><li>[in](../../language-reference/keywords/foreach-in.md)</li><li>[while](../../language-reference/keywords/while.md)</li></ul>|
-|Istruzioni di salto|Le istruzioni di salto trasferiscono il controllo a un'altra sezione di codice. Per altre informazioni, vedere i seguenti argomenti: <ul><li>[break](../../language-reference/keywords/break.md)</li><li>[continue](../../language-reference/keywords/continue.md)</li><li>[default](../../language-reference/keywords/switch.md)</li><li>[goto](../../language-reference/keywords/goto.md)</li><li>[return](../../language-reference/keywords/return.md)</li><li>[yield](../../language-reference/keywords/yield.md)</li></ul>|
-|Istruzioni di gestione delle eccezioni|Le istruzioni di gestione delle eccezioni consentono di recuperare condizioni eccezionali che si verificano in fase di esecuzione. Per altre informazioni, vedere i seguenti argomenti: <ul><li>[throw](../../language-reference/keywords/throw.md)</li><li>[try-catch](../../language-reference/keywords/try-catch.md)</li><li>[try-finally](../../language-reference/keywords/try-finally.md)</li><li>[try-catch-finally](../../language-reference/keywords/try-catch-finally.md)</li></ul>|
-|[Checked e Unchecked](../../language-reference/keywords/checked-and-unchecked.md)|Le istruzioni Checked e Unchecked consentono di specificare se le operazioni numeriche possono provocare un overflow quando il risultato viene archiviato in una variabile troppo piccola per contenere il valore risultante. Per altre informazioni, vedere [checked](../../language-reference/keywords/checked.md) e [unchecked](../../language-reference/keywords/unchecked.md).|
+|Istruzioni di selezione|Le istruzioni di selezione consentono di creare un ramo tra le diverse sezioni di codice, in base a una o più condizioni specificate. Per altre informazioni, vedere gli argomenti seguenti: <ul><li>[Se](../../language-reference/keywords/if-else.md)</li><li>[else](../../language-reference/keywords/if-else.md)</li><li>[Interruttore](../../language-reference/keywords/switch.md)</li><li>[case](../../language-reference/keywords/switch.md)</li></ul>|
+|Istruzioni di iterazione|Le istruzioni di iterazione consentono di eseguire un ciclo tra le raccolte come matrici o eseguono ripetutamente lo stesso set di istruzioni finché non viene soddisfatta una condizione specificata. Per altre informazioni, vedere gli argomenti seguenti: <ul><li>[fare](../../language-reference/keywords/do.md)</li><li>[Per](../../language-reference/keywords/for.md)</li><li>[Foreach](../../language-reference/keywords/foreach-in.md)</li><li>[in](../../language-reference/keywords/foreach-in.md)</li><li>[mentre](../../language-reference/keywords/while.md)</li></ul>|
+|Istruzioni di salto|Le istruzioni di salto trasferiscono il controllo a un'altra sezione di codice. Per altre informazioni, vedere gli argomenti seguenti: <ul><li>[Pausa](../../language-reference/keywords/break.md)</li><li>[Continuare](../../language-reference/keywords/continue.md)</li><li>[Predefinito](../../language-reference/keywords/switch.md)</li><li>[Goto](../../language-reference/keywords/goto.md)</li><li>[Ritorno](../../language-reference/keywords/return.md)</li><li>[yield](../../language-reference/keywords/yield.md)</li></ul>|
+|Istruzioni di gestione delle eccezioni|Le istruzioni di gestione delle eccezioni consentono di recuperare condizioni eccezionali che si verificano in fase di esecuzione. Per altre informazioni, vedere gli argomenti seguenti: <ul><li>[generazione](../../language-reference/keywords/throw.md)</li><li>[try-catch](../../language-reference/keywords/try-catch.md)</li><li>[try...finally](../../language-reference/keywords/try-finally.md)</li><li>[try-catch-finally](../../language-reference/keywords/try-catch-finally.md)</li></ul>|
+|[Selezionato e deselezionato](../../language-reference/keywords/checked-and-unchecked.md)|Le istruzioni Checked e Unchecked consentono di specificare se le operazioni numeriche possono provocare un overflow quando il risultato viene archiviato in una variabile troppo piccola per contenere il valore risultante. Per altre informazioni, vedere [checked](../../language-reference/keywords/checked.md) e [unchecked](../../language-reference/keywords/unchecked.md).|
 |Istruzione `await`|Se si contrassegna un metodo con il modificatore [async](../../language-reference/keywords/async.md), è possibile usare l'operatore [await](../../language-reference/operators/await.md) nel metodo. Quando il controllo raggiunge un'espressione `await` nel metodo asincrono, il controllo torna al chiamante e l'avanzamento nel metodo viene sospeso fino al completamento dell'attività attesa. Una volta completata l'attività, l'esecuzione del metodo può riprendere.<br /><br /> Per un esempio semplice, vedere la sezione "Metodi asincroni" in [Metodi](../classes-and-structs/methods.md). Per altre informazioni, vedere [Programmazione asincrona con async e await](../concepts/async/index.md).|
-|Istruzione `yield return`|Un iteratore esegue un'iterazione personalizzata su una raccolta, ad esempio un elenco o una matrice. Un iteratore usa l'istruzione [yield return](../../language-reference/keywords/yield.md) per restituire un elemento alla volta. Quando viene raggiunta un'istruzione `yield return`, la posizione corrente nel codice viene memorizzata. L'esecuzione viene riavviata a partire da quella posizione la volta successiva che viene chiamato l'iteratore.<br /><br /> Per altre informazioni, vedere [Iteratori](../concepts/iterators.md).|
+|Istruzione `yield return`|Un iteratore esegue un'iterazione personalizzata su una raccolta, ad esempio un elenco o una matrice. Un iteratore usa l'istruzione [yield return](../../language-reference/keywords/yield.md) per restituire un elemento alla volta. Quando viene raggiunta un'istruzione `yield return`, la posizione corrente nel codice viene memorizzata. L'esecuzione viene riavviata a partire da quella posizione la volta successiva che viene chiamato l'iteratore.<br /><br /> Per ulteriori informazioni, vedere [Iteratori](../concepts/iterators.md).|
 |Istruzione `fixed`|L'istruzione fixed impedisce che il Garbage Collector esegua la rilocazione di una variabile mobile. Per altre informazioni, vedere [fixed](../../language-reference/keywords/fixed-statement.md).|
 |Istruzione `lock`|L'istruzione lock consente di limitare l'accesso ai blocchi di codice a un solo thread per volta. Per altre informazioni, vedere [lock](../../language-reference/keywords/lock-statement.md).|
 |Istruzioni con etichetta|È possibile assegnare un'etichetta a un'istruzione e quindi usare la parola chiave [goto](../../language-reference/keywords/goto.md) per passare all'istruzione con etichetta. Vedere l'esempio nell'argomento seguente.|
-|[Istruzione vuota](#the-empty-statement)|L'istruzione vuota è costituita da un singolo punto e virgola. Non esegue alcuna operazione e può essere usata in posizioni in cui è richiesta un'istruzione ma non deve essere eseguita alcuna azione.|
+|[L'istruzione vuota](#the-empty-statement)|L'istruzione vuota è costituita da un singolo punto e virgola. Non esegue alcuna operazione e può essere usata in posizioni in cui è richiesta un'istruzione ma non deve essere eseguita alcuna azione.|
 
 ## <a name="declaration-statements"></a>Istruzioni di dichiarazione
 
@@ -58,7 +58,7 @@ Gli esempi seguenti illustrano due usi di un'istruzione vuota:
 
 [!code-csharp[csProgGuideStatements#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#25)]
 
-## <a name="embedded-statements"></a>Istruzioni incorporate
+## <a name="embedded-statements"></a>Dichiarazioni incorporate
 
 Alcune istruzioni, fra cui [do](../../language-reference/keywords/do.md), [while](../../language-reference/keywords/while.md), [for](../../language-reference/keywords/for.md) e [foreach](../../language-reference/keywords/foreach-in.md), dispongono sempre di un'istruzione incorporata che le segue. Questa istruzione incorporata può essere una singola istruzione o più istruzioni racchiuse tra parentesi {} in un blocco di istruzioni. Anche le istruzioni incorporate a riga singola possono essere racchiuse tra parentesi {}, come illustrato nell'esempio seguente:
 
@@ -72,13 +72,13 @@ Inserire l'istruzione incorporata in un blocco per correggere l'errore:
 
 [!code-csharp[csProgGuideStatements#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#28)]
 
-## <a name="nested-statement-blocks"></a>Blocchi di istruzioni annidati
+## <a name="nested-statement-blocks"></a>Blocchi di istruzioni annidatiNested statement blocks
 
 I blocchi di istruzioni possono essere annidati, come illustrato nel codice seguente:
 
 [!code-csharp[csProgGuideStatements#29](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#29)]
 
-## <a name="unreachable-statements"></a>Istruzioni non raggiungibili
+## <a name="unreachable-statements"></a>Dichiarazioni irraggiungibili
 
 Se il compilatore determina che il flusso di controllo non può raggiungere mai una particolare istruzione in nessuna circostanza, genererà l'avviso CS0162, come illustrato nell'esempio seguente:
 
@@ -91,5 +91,5 @@ Per altre informazioni, vedere la sezione [Istruzioni](~/_csharplang/spec/statem
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori C#](../index.md)
-- [Parole chiave per le istruzioni](../../language-reference/keywords/statement-keywords.md)  
+- [Parole chiave di istruzione](../../language-reference/keywords/statement-keywords.md)  
 - [Espressioni](expressions.md)  

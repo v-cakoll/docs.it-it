@@ -11,10 +11,10 @@ helpviewer_keywords:
 - producer-consumer patterns, implementing [TPL]
 ms.assetid: 47a1d38c-fe9c-44aa-bd15-937bd5659b0b
 ms.openlocfilehash: 2db8cfcfc26b001703e08a501c430be4313aca03
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73091494"
 ---
 # <a name="how-to-implement-a-producer-consumer-dataflow-pattern"></a>Procedura: implementare un modello di flusso di dati producer-consumer

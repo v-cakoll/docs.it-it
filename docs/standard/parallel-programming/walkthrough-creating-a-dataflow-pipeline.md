@@ -11,10 +11,10 @@ helpviewer_keywords:
 - TPL dataflow library, creating dataflow pipeline
 ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
 ms.openlocfilehash: 284be7789b6411055a6421fd07cc1b0605f6ea0c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139866"
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>Procedura dettagliata: creazione di una pipeline del flusso di dati
@@ -53,7 +53,7 @@ Sebbene sia possibile usare i metodi <xref:System.Threading.Tasks.Dataflow.Dataf
  [!code-csharp[TPLDataflow_Palindromes#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#3)]
  [!code-vb[TPLDataflow_Palindromes#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#3)]  
   
-|Member|Digitare|Descrizione|  
+|Membro|Type|Descrizione|  
 |------------|----------|-----------------|  
 |`downloadString`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Scarica il testo del libro dal Web.|  
 |`createWordList`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Suddivide il testo del libro in una matrice di parole.|  

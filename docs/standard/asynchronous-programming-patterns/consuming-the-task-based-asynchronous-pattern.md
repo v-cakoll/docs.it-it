@@ -10,10 +10,10 @@ helpviewer_keywords:
 - .NET Framework, asynchronous design patterns
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 ms.openlocfilehash: f80e6ae520ab03c0f5f4edc30c0b7102193ee6c5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139820"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Utilizzo del modello asincrono basato su attività
@@ -631,7 +631,7 @@ double currentPrice = await NeedOnlyOne(
 ```
 
 ### <a name="interleaved-operations"></a>Operazioni con interfoliazione
- Esiste un potenziale problema di prestazioni quando si usa il metodo <xref:System.Threading.Tasks.Task.WhenAny%2A> per supportare uno scenario di interfoliazione nel caso in cui si usino set di attività molto grandi. Ogni chiamata a <xref:System.Threading.Tasks.Task.WhenAny%2A> comporta la registrazione di una continuazione con ogni attività. Per il numero N di attività, il risultato è una continuazione di O (N<sup>2</sup>) creata per la durata dell'operazione di interfoliazione. Se si lavora con un ampio set di attività, è possibile usare un combinatore (`Interleaved` nell'esempio seguente) per risolvere il problema di prestazioni:
+ Esiste un potenziale problema di prestazioni quando si usa il metodo <xref:System.Threading.Tasks.Task.WhenAny%2A> per supportare uno scenario di interfoliazione nel caso in cui si usino set di attività molto grandi. Ogni chiamata a <xref:System.Threading.Tasks.Task.WhenAny%2A> comporta la registrazione di una continuazione con ogni attività. Per il numero N di attività, ciò comporta la creazione di continuazioni O(N<sup>2)</sup>per tutta la durata dell'operazione di interfoliazione. Se si utilizza un set di attività di grandi dimensioni, è possibile utilizzare un combinatore (nell'esempio`Interleaved` seguente) per risolvere il problema di prestazioni:
 
 ```csharp
 static IEnumerable<Task<T>> Interleaved<T>(IEnumerable<Task<T>> tasks)

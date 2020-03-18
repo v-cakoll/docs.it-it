@@ -10,10 +10,10 @@ helpviewer_keywords:
 - cancellation, PLINQ
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
 ms.openlocfilehash: 272f25d62cb63c60209be3bc54dc5e76fb30df54
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73134223"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>Procedura: annullare una query PLINQ

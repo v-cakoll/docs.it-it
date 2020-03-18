@@ -12,10 +12,10 @@ helpviewer_keywords:
 - common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
 ms.openlocfilehash: 8e78b2a8d7a815637e143eeb88bcfb51ded33771
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75741351"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>Gestione e generazione di eccezioni in .NET
@@ -59,12 +59,12 @@ Nella tabella seguente sono elencate alcune eccezioni comuni con esempi di possi
 ## <a name="see-also"></a>Vedere anche
 
 - [Classe e proprietà dell'eccezione](exception-class-and-properties.md)
-- [Procedura: Usare il blocco try/catch per l'intercettazione di eccezioni](how-to-use-the-try-catch-block-to-catch-exceptions.md)
-- [Procedura: Usare eccezioni specifiche in un blocco catch](how-to-use-specific-exceptions-in-a-catch-block.md)
+- [Procedura: Usare il blocco try/catch per intercettare le eccezioni](how-to-use-the-try-catch-block-to-catch-exceptions.md)
+- [Procedura: utilizzare eccezioni specifiche in un blocco CatchHow to: Use Specific Exceptions in a Catch Block](how-to-use-specific-exceptions-in-a-catch-block.md)
 - [Procedura: Come generare in modo esplicito le eccezioni](how-to-explicitly-throw-exceptions.md)
-- [Procedura: Creare eccezioni definite dall'utente](how-to-create-user-defined-exceptions.md)
-- [Uso di gestori eccezioni filtrati dall'utente](using-user-filtered-exception-handlers.md)
-- [Procedura: Usare blocchi Finally](how-to-use-finally-blocks.md)
+- [Procedura: creare eccezioni definite dall'utente](how-to-create-user-defined-exceptions.md)
+- [Utilizzo di gestori eccezioni filtrati dall'utente](using-user-filtered-exception-handlers.md)
+- [Procedura: utilizzare blocchi Finally](how-to-use-finally-blocks.md)
 - [Gestione di eccezioni per interoperabilità COM](handling-com-interop-exceptions.md)
-- [Procedure consigliate per le eccezioni](best-practices-for-exceptions.md)
+- [Suggerimenti per le eccezioni](best-practices-for-exceptions.md)
 - [What Every Dev needs to Know About Exceptions in the Runtime](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/exceptions.md) (Tutto quello che ogni sviluppatore deve sapere sulle eccezioni in runtime)

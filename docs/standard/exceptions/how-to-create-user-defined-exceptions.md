@@ -12,10 +12,10 @@ helpviewer_keywords:
 - exceptions, user-defined
 ms.assetid: 25819a5a-f915-4fc8-b924-a76915674e04
 ms.openlocfilehash: 6de00490a17fff005dd50a7acc5247089c073f68
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75708875"
 ---
 # <a name="how-to-create-user-defined-exceptions"></a>Come creare eccezioni definite dall'utente
@@ -29,7 +29,7 @@ Quando si creano eccezioni personalizzate, terminare il nome della classe dell'e
 [!code-vb[dg_exceptionDesign#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/dg_exceptionDesign/vb/example2.vb#14)]  
 
 > [!NOTE]
-> Nei casi in cui viene usata la comunicazione remota, è necessario assicurarsi che i metadati di tutte le eccezioni definite dall'utente siano disponibili nel server chiamato e nel client (oggetto proxy o chiamante). Per altre informazioni, vedere [Procedure consigliate per le eccezioni](best-practices-for-exceptions.md).
+> Nei casi in cui viene usata la comunicazione remota, è necessario assicurarsi che i metadati di tutte le eccezioni definite dall'utente siano disponibili nel server chiamato e nel client (oggetto proxy o chiamante). Per ulteriori informazioni, vedere [Procedure consigliate per le eccezioni](best-practices-for-exceptions.md).
 
 ## <a name="see-also"></a>Vedere anche
 

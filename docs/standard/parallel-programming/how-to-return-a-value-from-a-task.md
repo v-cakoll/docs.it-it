@@ -9,10 +9,10 @@ helpviewer_keywords:
 - tasks, how to return a value
 ms.assetid: c4bc0f44-eba2-4e96-9e03-1cc787461e61
 ms.openlocfilehash: 495f68114bfe960b8182be4ab76b72043b2d0cc7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141666"
 ---
 # <a name="how-to-return-a-value-from-a-task"></a>Procedura: Restituire un valore da un'attività
@@ -28,5 +28,5 @@ In questo esempio viene illustrato come usare il tipo <xref:System.Threading.Tas
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Programmazione asincrona basata su attività](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)
+- [Programmazione asincrona basata su attivitàTask-based Asynchronous Programming](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)
 - [Espressioni lambda in PLINQ e TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

@@ -1,15 +1,15 @@
 ---
-title: Come unire due raccolte (LINQ to XML) (C#)
+title: Come unire due raccolte (LINQ to XML) (C
 ms.date: 07/20/2015
 ms.assetid: 7b817ede-911a-4cff-9dd3-639c3fc228c9
 ms.openlocfilehash: a5044778bbfd9529faf5fe63c72076f6a973c815
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345866"
 ---
-# <a name="how-to-join-two-collections-linq-to-xml-c"></a>Come unire due raccolte (LINQ to XML) (C#)
+# <a name="how-to-join-two-collections-linq-to-xml-c"></a>Come unire due raccolte (LINQ to XML) (C
 
 Un elemento o un attributo di un documento XML può talvolta fare riferimento a un altro elemento o attributo. Ad esempio, il documento XML [File XML di esempio: Customers e Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md) contiene un elenco di clienti e un elenco di ordini. Ogni elemento `Customer` contiene un attributo `CustomerID`. Ogni elemento `Order` contiene un elemento `CustomerID`. L'elemento `CustomerID` di ciascun ordine si riferisce all'attributo `CustomerID` di un cliente.
 
@@ -17,7 +17,7 @@ L'argomento [File XSD di esempio: Customers e Orders](./sample-xsd-file-customer
 
 Con [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è possibile sfruttare questa relazione usando la clausola `join`.
 
-Poiché non è disponibile alcun indice, tale Unione avrà prestazioni di run-time insufficienti.
+Poiché non è disponibile alcun indice, tale join avrà prestazioni in fase di esecuzione scarse.
 
 Per altre informazioni su `join`, vedere [Operazioni Join (C#)](./join-operations.md).
 
@@ -33,7 +33,7 @@ Questo esempio usa il documento XML seguente: [File XML di esempio: clienti e or
 
 Questo esempio usa lo schema XSD seguente: [File XSD di esempio: Customers e Orders](./sample-xsd-file-customers-and-orders1.md).
 
-L'Unione in questo modo non verrà eseguita correttamente. I join vengono eseguiti tramite una ricerca lineare, pertanto l'assenza di tabelle hash o indici influisce negativamente sulle prestazioni.
+Partecipare a questo modo non si esibirà bene. I join vengono eseguiti tramite una ricerca lineare, pertanto l'assenza di tabelle hash o indici influisce negativamente sulle prestazioni.
 
 ```csharp
 XmlSchemaSet schemas = new XmlSchemaSet();

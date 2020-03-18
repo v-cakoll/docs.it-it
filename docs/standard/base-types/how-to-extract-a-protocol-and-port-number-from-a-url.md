@@ -14,10 +14,10 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, examples
 ms.assetid: ab7f62b3-6d2c-4efb-8ac6-28600df5fd5c
 ms.openlocfilehash: f2704e3fb5ceb68609a475d52e11030177ad760b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138730"
 ---
 # <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a>Procedura: Estrarre un protocollo e un numero di porta da un URL
@@ -31,7 +31,7 @@ L'esempio seguente estrae un protocollo e un numero di porta da un URL.
   
  Il modello di espressione regolare `^(?<proto>\w+)://[^/]+?(?<port>:\d+)?/` può essere interpretato come indicato nella tabella seguente.  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`^`|Iniziare la ricerca della corrispondenza all'inizio della stringa.|  
 |`(?<proto>\w+)`|Trova la corrispondenza di uno o più caratteri alfanumerici. Assegnare al gruppo il nome `proto`.|  

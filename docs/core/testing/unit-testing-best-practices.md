@@ -5,10 +5,10 @@ author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
 ms.openlocfilehash: 586373381bcb18384cbf29bb2ca2bd220a2b2d3d
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78240961"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Procedure consigliate di testing unità con .NET Core e .NET Standard

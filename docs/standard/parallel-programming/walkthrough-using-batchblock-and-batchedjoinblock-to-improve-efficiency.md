@@ -10,10 +10,10 @@ helpviewer_keywords:
 - TPL dataflow library, improving efficiency
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
 ms.openlocfilehash: 4b2b6a6124bf8cc0fb3b379607135283678e3268
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73091353"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Procedura dettagliata: utilizzo di BatchBlock e BatchedJoinBlock per migliorare l'efficienza
@@ -39,7 +39,7 @@ Questa procedura dettagliata contiene le sezioni seguenti:
 
 - [Definizione delle operazioni dei dipendenti sul database](#operations)
 
-- [Aggiunta di dati dei dipendenti al database senza usare la memorizzazione nel buffer](#nonBuffering)
+- [Aggiunta di dati dei dipendenti al database senza utilizzare il bufferingAdding Employee Data to the Database without Using Buffering](#nonBuffering)
 
 - [Uso della memorizzazione nel buffer per aggiungere dati dei dipendenti nel database](#buffering)
 
@@ -51,7 +51,7 @@ Questa procedura dettagliata contiene le sezioni seguenti:
 
 ## <a name="creating-the-console-application"></a>Creazione dell'applicazione console
 
-1. In Visual Studio creare un progetto **Applicazione console** di Visual C# o Visual Basic. In questo documento, il progetto viene denominato `DataflowBatchDatabase`.
+1. In Visual Studio creare un progetto **di applicazione console** di Visual C. In questo documento, il progetto viene denominato `DataflowBatchDatabase`.
 
 2. Nel progetto aggiungere un riferimento a System.Data.SqlServerCe.dll e un riferimento a System.Threading.Tasks.Dataflow.dll.
 

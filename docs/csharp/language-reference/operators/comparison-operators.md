@@ -19,51 +19,51 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: 5a9235762effef6f9c0ef501a55bca47ef2510cb
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 68502205193a1fc8ab7410053e13274560ffffb0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239420"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399245"
 ---
 # <a name="comparison-operators-c-reference"></a>Operatori di confronto (Riferimenti per C#)
 
-Gli operatori di confronto [`<` (minore di)](#less-than-operator-), [`>` (maggiore di)](#greater-than-operator-), [`<=` (minore o uguale a)](#less-than-or-equal-operator-) e [`>=` (maggiore o uguale a)](#greater-than-or-equal-operator-), noti anche come operatori relazionali, confrontano gli operandi. Questi operatori sono supportati da tutti i tipi numerici [integrali](../builtin-types/integral-numeric-types.md) e a [virgola mobile](../builtin-types/floating-point-numeric-types.md) .
+Gli [ `<` operatori (minore di)](#less-than-operator-), [ `>` (maggiore di)](#greater-than-operator-), [ `<=` (minore o uguale a)](#less-than-or-equal-operator-)e [ `>=` (maggiore o uguale a)](#greater-than-or-equal-operator-) confronto, noti anche come operatori relazionali, confrontano i relativi operandi. Tali operatori sono supportati da tutti i tipi [numerici integrali](../builtin-types/integral-numeric-types.md) e [a virgola mobile.](../builtin-types/floating-point-numeric-types.md)
 
 > [!NOTE]
 > Per gli operatori `==`, `<`, `>`, `<=` e `>=`, se uno degli operandi non è un numero (<xref:System.Double.NaN?displayProperty=nameWithType> oppure <xref:System.Single.NaN?displayProperty=nameWithType>) il risultato dell'operazione è `false`. Questo significa che il valore `NaN` non è maggiore di, minore di, né uguale a qualsiasi altro valore `double` (o `float`), incluso `NaN`. Per altre informazioni ed esempi, vedere l'articolo di riferimento per <xref:System.Double.NaN?displayProperty=nameWithType> o <xref:System.Single.NaN?displayProperty=nameWithType>.
 
 Anche i tipi di enumerazione supportano gli operatori di confronto. Per gli operandi dello stesso tipo [enum](../builtin-types/enum.md), i valori corrispondenti del tipo integrale sottostante vengono confrontati.
 
-Gli operatori [`==` e `!=`](equality-operators.md) controllano se i relativi operandi sono uguali oppure no.
+Gli [ `==` `!=` operatori e](equality-operators.md) controllano se i relativi operandi sono uguali o meno.
 
 ## <a name="less-than-operator-"></a>Operatore "minore di" \<
 
 L'operatore `<` restituisce `true` se l'operando di sinistra è minore dell'operando di destra, `false` in caso contrario:
 
-[!code-csharp-interactive[less than example](~/samples/snippets/csharp/language-reference/operators/ComparisonOperators.cs#Less)]
+[!code-csharp-interactive[less than example](snippets/ComparisonOperators.cs#Less)]
 
 ## <a name="greater-than-operator-"></a>Operatore "maggiore di" >
 
 L'operatore `>` restituisce `true` se l'operando di sinistra è maggiore dell'operando di destra, `false` in caso contrario:
 
-[!code-csharp-interactive[greater than example](~/samples/snippets/csharp/language-reference/operators/ComparisonOperators.cs#Greater)]
+[!code-csharp-interactive[greater than example](snippets/ComparisonOperators.cs#Greater)]
 
 ## <a name="less-than-or-equal-operator-"></a>Operatore "minore o uguale a" \<=
 
 L'operatore `<=` restituisce `true` se l'operando di sinistra è minore o uguale all'operatore di destra, `false` in caso contrario:
 
-[!code-csharp-interactive[less than or equal example](~/samples/snippets/csharp/language-reference/operators/ComparisonOperators.cs#LessOrEqual)]
+[!code-csharp-interactive[less than or equal example](snippets/ComparisonOperators.cs#LessOrEqual)]
 
 ## <a name="greater-than-or-equal-operator-"></a>Operatore "maggiore o uguale a" >=
 
 L'operatore `>=` restituisce `true` se l'operando di sinistra è maggiore o uguale all'operatore di destra, `false` in caso contrario:
 
-[!code-csharp-interactive[greater than or equal example](~/samples/snippets/csharp/language-reference/operators/ComparisonOperators.cs#GreaterOrEqual)]
+[!code-csharp-interactive[greater than or equal example](snippets/ComparisonOperators.cs#GreaterOrEqual)]
 
 ## <a name="operator-overloadability"></a>Overload degli operatori
 
-Un tipo definito dall'utente può eseguire l'[overload](operator-overloading.md) degli operatori `<`, `>`, `<=` e `>=`.
+Un tipo definito dall'utente `>` `<=`può `>=` [eseguire l'overload](operator-overloading.md) degli `<`operatori , , e .
 
 Se un tipo esegue l'overload di uno degli operatori `<` o `>`, deve eseguire l'overload sia di `<` che di `>`. Se un tipo esegue l'overload di uno degli operatori `<=` o `>=`, deve eseguire l'overload sia di `<=` che di `>=`.
 
@@ -73,7 +73,7 @@ Per altre informazioni, vedere la sezione [Operatori relazionali e di test del t
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
+- [Informazioni di riferimento su C#](../index.md)
 - [Operatori C#](index.md)
 - <xref:System.IComparable%601?displayProperty=nameWithType>
 - [Operatori di uguaglianza](equality-operators.md)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
 ms.openlocfilehash: 4bbee8f15c2591e8b172df9a6759449d48697804
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75699093"
 ---
 # <a name="expressions-c-programming-guide"></a>Espressioni (Guida per programmatori C#)
@@ -32,7 +32,7 @@ System.Convert.ToInt32("35");
   
 ## <a name="overflows"></a>Overflow
 
- Le espressioni numeriche possono causare overflow se il valore è maggiore del valore massimo del tipo del valore. Per ulteriori informazioni, vedere [checked e unchecked](../../language-reference/keywords/checked-and-unchecked.md) e la sezione [conversioni numeriche esplicite](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions) dell'articolo [conversioni numeriche predefinite](../../language-reference/builtin-types/numeric-conversions.md) .
+ Le espressioni numeriche possono causare overflow se il valore è maggiore del valore massimo del tipo del valore. Per ulteriori informazioni, vedere [Checked e Unchecked (Opzione Checked)](../../language-reference/keywords/checked-and-unchecked.md) e la sezione [Conversioni numeriche esplicite](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions) dell'articolo [Conversioni numeriche predefinite.](../../language-reference/builtin-types/numeric-conversions.md)
   
 ## <a name="operator-precedence-and-associativity"></a>Precedenza e associatività degli operatori
 
@@ -68,7 +68,7 @@ DoWork();
   
 ## <a name="lambda-expressions"></a>Espressioni lambda
 
- Le espressioni lambda rappresentano "metodi inline" che non hanno nome ma possono avere parametri di input e più istruzioni. Vengono ampiamente usate in LINQ per passare gli argomenti ai metodi. Le espressioni lambda vengono compilate in delegati o alberi delle espressioni a seconda del contesto in cui vengono usate. Per altre informazioni, vedere [Espressioni lambda](lambda-expressions.md).  
+ Le espressioni lambda rappresentano "metodi inline" che non hanno nome ma possono avere parametri di input e più istruzioni. Vengono ampiamente usate in LINQ per passare gli argomenti ai metodi. Le espressioni lambda vengono compilate in delegati o alberi delle espressioni a seconda del contesto in cui vengono usate. Per ulteriori informazioni, vedere [Espressioni lambda](lambda-expressions.md).  
   
 ## <a name="expression-trees"></a>Alberi delle espressioni
 
@@ -78,7 +78,7 @@ Gli alberi delle espressioni consentono di rappresentare le espressioni come str
 
 C# supporta i *membri con corpo di espressione*, che consentono di specificare una definizione concisa del corpo dell'espressione per metodi, costruttori, finalizzatori, proprietà e indicizzatori. Per altre informazioni, vedere [Membri con corpo di espressione](expression-bodied-members.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
  Ogni volta che un'espressione identifica una variabile, una proprietà dell'oggetto o l'accesso a un indicizzatore di oggetti, il valore di tale elemento viene usato come valore dell'espressione. Un'espressione può essere inserita ovunque sia richiesto un valore o un oggetto in C#, purché l'espressione alla fine restituisca il tipo richiesto.  
 

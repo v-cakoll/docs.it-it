@@ -3,10 +3,10 @@ title: costruzione funzionale (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 57a82bcf-de03-4f1c-a0c8-9a76e989d542
 ms.openlocfilehash: e55b0010a5f75eee8137d1e9bcefc573b5e07e72
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635756"
 ---
 # <a name="functional-construction-linq-to-xml-c"></a>costruzione funzionale (LINQ to XML) (C#)
@@ -20,7 +20,7 @@ In [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è disponibile una pote
   
 - Se un oggetto implementa <xref:System.Collections.Generic.IEnumerable%601>, la raccolta nell'oggetto viene enumerata e vengono aggiunti tutti gli elementi della raccolta. Se la raccolta contiene oggetti <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XAttribute>, ogni elemento della raccolta viene aggiunto separatamente. Questo è importante perché consente di passare i risultati di una query LINQ al costruttore.  
   
- Queste funzionalità consentono di scrivere codice per creare un albero XML. Di seguito si riporta un esempio.  
+ Queste funzionalità consentono di scrivere codice per creare un albero XML. Di seguito è riportato un esempio:  
   
 ```csharp  
 XElement contacts =  
@@ -38,7 +38,7 @@ XElement contacts =
     );  
 ```  
   
- Queste funzionalità consentono inoltre di scrivere codice che utilizza i risultati delle query LINQ quando si crea un albero XML, come indicato di seguito:  
+ Queste funzionalità consentono inoltre di scrivere codice che utilizza i risultati delle query LINQ quando si crea una struttura ad albero XML, come indicato di seguito:These features also enable you to write code that uses the results of LINQ queries when you create an XML tree, as follows:  
   
 ```csharp  
 XElement srcTree = new XElement("Root",  
@@ -58,7 +58,7 @@ XElement xmlTree = new XElement("Root",
 Console.WriteLine(xmlTree);  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```xml  
 <Root>  

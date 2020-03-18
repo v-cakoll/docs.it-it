@@ -1,17 +1,17 @@
 ---
-title: Come dichiarare, creare un'istanza e usare una guida per la C# programmazione di delegati
+title: Come dichiarare, creare un'istanza e usare un delegato - Guida per programmatori C
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
 ms.openlocfilehash: 7ac1d736e19c4dcf1c8408db944505c399762778
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712364"
 ---
-# <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Come dichiarare, creare un'istanza e usare un delegato (C# guida per programmatori)
+# <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Come dichiarare, creare un'istanza e usare un delegato (Guida per programmatori C
 In C# 1.0 e versioni successive i delegati possono essere dichiarati come illustrato nell'esempio seguente.  
   
  [!code-csharp[csProgGuideDelegates#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#13)]  
@@ -30,7 +30,7 @@ In C# 1.0 e versioni successive i delegati possono essere dichiarati come illust
   
  [!code-csharp[csProgGuideDelegates#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#31)]  
   
- Per altre informazioni, vedere [Espressioni lambda](../statements-expressions-operators/lambda-expressions.md).  
+ Per ulteriori informazioni, vedere [Espressioni lambda](../statements-expressions-operators/lambda-expressions.md).  
   
  Nell'esempio che segue viene illustrato come dichiarare un delegato, crearne un'istanza e usarlo. La classe `BookDB` incapsula il database di una libreria che gestisce un database di volumi. Espone un metodo, `ProcessPaperbackBooks`, che ricerca tutti i tascabili all'interno del database e chiama un delegato per ognuno di essi. Il tipo `delegate` usato viene denominato `ProcessBookDelegate`. La classe `Test` usa questa classe per stampare i titoli e il prezzo medio dei tascabili.  
   
@@ -74,5 +74,5 @@ In C# 1.0 e versioni successive i delegati possono essere dichiarati come illust
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori C#](../index.md)
-- [Eventi](../events/index.md)
+- [Events](../events/index.md)
 - [Delegati](./index.md)

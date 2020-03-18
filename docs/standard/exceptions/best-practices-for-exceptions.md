@@ -10,10 +10,10 @@ helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
 ms.openlocfilehash: 1de231b01e3fa97e78a87ae6b0595a9b5536374e
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160170"
 ---
 # <a name="best-practices-for-exceptions"></a>Procedure consigliate per le eccezioni
@@ -110,9 +110,9 @@ Scrivere frasi chiare e includere la punteggiatura finale. Ogni frase della stri
 
 Il messaggio di errore visualizzato all'utente è derivato dalla proprietà <xref:System.Exception.Message?displayProperty=nameWithType> dell'eccezione generata e non dal nome della classe di eccezione. In genere, si assegna un valore alla proprietà <xref:System.Exception.Message?displayProperty=nameWithType> passando la stringa del messaggio all'argomento `message` di un [costruttore di eccezione](xref:System.Exception.%23ctor%2A).
 
-Per le applicazioni localizzate, è necessario specificare una stringa di messaggio localizzata per ogni eccezione che può essere generata dall'applicazione. Usare i file di risorse per specificare i messaggi di errore localizzati. Per informazioni sulla localizzazione delle applicazioni e il recupero di stringhe localizzate, vedere gli articoli seguenti:
+Per le applicazioni localizzate, è necessario specificare una stringa di messaggio localizzata per ogni eccezione che può essere generata dall'applicazione. Usare i file di risorse per specificare i messaggi di errore localizzati. Per informazioni sulla localizzazione di applicazioni e il recupero di stringhe localizzate, vedere gli articoli seguenti:For information on localizing applications and retrieving localized strings, see the following articles:
 
-- [Procedura: creare eccezioni definite dall'utente con messaggi di eccezione localizzati](how-to-create-localized-exception-messages.md)
+- [Procedura: Creare eccezioni definite dall'utente con messaggi di eccezione localizzati](how-to-create-localized-exception-messages.md)
 - [Risorse nelle applicazioni desktop](../../framework/resources/index.md)
 - <xref:System.Resources.ResourceManager?displayProperty=nameWithType>
 

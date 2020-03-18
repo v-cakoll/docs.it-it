@@ -12,10 +12,10 @@ helpviewer_keywords:
 - displaying date and time data
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 ms.openlocfilehash: 455996d091f92367667e7077a4524898cd8face6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138746"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Procedura: Visualizzare le date in calendari non gregoriani

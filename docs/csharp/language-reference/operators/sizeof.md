@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: 711005479eea2757b4ef18f6710a4453bfca02f9
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: a9e80ecb3288479a2ca81b43c9d088809ed5f2f0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78238833"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847287"
 ---
 # <a name="sizeof-operator-c-reference"></a>Operatore sizeof (Riferimenti per C#)
 
@@ -40,7 +40,7 @@ Non è inoltre necessario usare un contesto unsafe quando l'operando dell'operat
 
 Nell'esempio seguente viene illustrato l'uso dell'operatore `sizeof`:
 
-[!code-csharp[sizeof examples](~/samples/snippets/csharp/language-reference/operators/SizeOfOperator.cs)]
+[!code-csharp[sizeof examples](snippets/SizeOfOperator.cs)]
 
 L'operatore `sizeof` restituisce un numero di byte che verrebbero allocati dal Common Language Runtime in managed memory. Per i tipi [struct](../builtin-types/struct.md) questo valore include l'eventuale riempimento, come illustrato nell'esempio precedente. Il risultato dell'operatore `sizeof` può essere diverso da quello del metodo <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType>, che restituisce le dimensioni di un tipo nella memoria *non gestita*.
 
@@ -50,9 +50,9 @@ Per altre informazioni, vedere la sezione [Operatore sizeof](~/_csharplang/spec/
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
+- [Informazioni di riferimento su C#](../index.md)
 - [Operatori C#](index.md)
 - [Operatori relativi al puntatore](pointer-related-operators.md)
-- [Tipi di puntatori](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [Tipi di puntatore](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Tipi correlati alla memoria e agli intervalli](../../../standard/memory-and-spans/index.md)
 - [Generics in .NET](../../../standard/generics/index.md)

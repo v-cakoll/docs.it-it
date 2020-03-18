@@ -6,10 +6,10 @@ helpviewer_keywords:
 - synchronization primitives, SpinLock
 ms.assetid: f9af93bb-7a0d-4ba5-afe8-74f48b6b6958
 ms.openlocfilehash: eac9a1be38ea81e8ccee1d05d9061ceeb597627f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73106176"
 ---
 # <a name="spinlock"></a>SpinLock
@@ -21,8 +21,8 @@ La struttura <xref:System.Threading.SpinLock> è una primitiva di sincronizzazio
   
  Per altre informazioni sull'uso di questo tipo, vedere <xref:System.Threading.SpinLock?displayProperty=nameWithType>. Per un esempio, vedere [Procedura: Usare SpinLock per la sincronizzazione di basso livello](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md).  
   
- <xref:System.Threading.SpinLock> supporta una modalità di *rilevamento*-*thread* da usare durante la fase di sviluppo per rilevare il thread che contiene il blocco in un momento specifico. La modalità di rilevamento thread è molto utile per il debug, ma si consiglia di disattivarla nella versione di rilascio del programma in quanto può ridurre le prestazioni. Per altre informazioni, vedere [Procedura: Abilitare la modalità di rilevamento thread in SpinLock](../../../docs/standard/threading/how-to-enable-thread-tracking-mode-in-spinlock.md).  
+ <xref:System.Threading.SpinLock>supporta una modalità di*rilevamento* *dei thread*-che è possibile utilizzare durante la fase di sviluppo per tenere traccia del thread che tiene il blocco in un momento specifico. La modalità di rilevamento thread è molto utile per il debug, ma si consiglia di disattivarla nella versione di rilascio del programma in quanto può ridurre le prestazioni. Per altre informazioni, vedere [Procedura: Abilitare la modalità di rilevamento thread in SpinLock](../../../docs/standard/threading/how-to-enable-thread-tracking-mode-in-spinlock.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Threading Objects and Features](../../../docs/standard/threading/threading-objects-and-features.md) (Oggetti e funzionalità del threading)
+- [Funzionalità e oggetti di threading](../../../docs/standard/threading/threading-objects-and-features.md)

@@ -6,10 +6,10 @@ ms.date: 06/20/2016
 ms.technology: csharp-async
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.openlocfilehash: 38d7c856e9a536db9ef26349175ad440a49f5fe2
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713945"
 ---
 # <a name="asynchronous-programming"></a>Programmazione asincrona
@@ -48,7 +48,7 @@ downloadButton.Clicked += async (o, e) =>
 };
 ```
 
-E questo è sufficiente. Il codice esprime lo scopo (scaricando alcuni dati in modo asincrono) senza perdere tempo per interagire con gli oggetti Task.
+L'operazione è terminata. Il codice esprime lo scopo (scaricando alcuni dati in modo asincrono) senza perdere tempo per interagire con gli oggetti Task.
 
 ### <a name="cpu-bound-example-performing-a-calculation-for-a-game"></a>Esempio associato alla CPU: esecuzione di un calcolo per un gioco
 
@@ -74,7 +74,7 @@ calculateButton.Clicked += async (o, e) =>
 };
 ```
 
-L'operazione è ora completata.  Questo codice esprime con precisione lo scopo dell'evento clic del pulsante, non è necessario gestire manualmente un thread in background e non blocca le funzionalità.
+L'attività è terminata.  Questo codice esprime con precisione lo scopo dell'evento clic del pulsante, non è necessario gestire manualmente un thread in background e non blocca le funzionalità.
 
 ### <a name="what-happens-under-the-covers"></a>Operazioni eseguite in background
 
@@ -106,9 +106,9 @@ Rispondere a queste due domande prima di scrivere il codice:
 
     Se la risposta è "Sì", l'operazione è **associata alla CPU**.
 
-Se il lavoro è associato a **i/O**, usare `async` e `await` *senza* `Task.Run`.  *Non si deve* usare la libreria Task Parallel Library.  Il motivo viene illustrato nell'articolo [La programmazione asincrona in dettaglio](../standard/async-in-depth.md).
+Se l'operazione è **associata a I/O**, usare `async` e `await` *senza* `Task.Run`.  *Non si deve* usare la libreria Task Parallel Library.  Il motivo viene illustrato nell'articolo [La programmazione asincrona in dettaglio](../standard/async-in-depth.md).
 
-Se il lavoro di cui si dispone è **associato alla CPU** e si è interessati alla velocità di risposta, utilizzare `async` e `await` ma generare il lavoro in un altro thread *con* `Task.Run`.  Se l'operazione è appropriata per parallelismo e concorrenza, è consigliabile usare anche la libreria [Task Parallel Library](../standard/parallel-programming/task-parallel-library-tpl.md).
+Se l'operazione è **associata alla CPU** e si è interessati nella velocità di risposta, usare `async` e `await`, ma passare l'operazione a un altro thread *con* `Task.Run`.  Se l'operazione è appropriata per parallelismo e concorrenza, è consigliabile usare anche la libreria [Task Parallel Library](../standard/parallel-programming/task-parallel-library-tpl.md).
 
 È anche necessario valutare sempre l'esecuzione del codice.  Ad esempio, ci si potrebbe trovare in una situazione in cui l'operazione associata alla CPU non è abbastanza onerosa confrontata al sovraccarico di commutazioni di contesto durante il multithreading.  Ogni scelta presenta un compromesso ed è necessario selezionare il compromesso più adatto alla situazione.
 
@@ -218,11 +218,11 @@ Sebbene produca una quantità minore di codice, è necessario prestare molta att
 
 Sebbene la programmazione asincrona è relativamente semplice, ci sono alcuni dettagli da tenere presente per evitare comportamenti non previsti.
 
-* `async` **metodi devono avere una** **parola chiave `await` nel corpo o non verranno mai procedono.**
+* I metodi `async` ** devono avere una parola chiave ** `await` ** nel corpo, altrimenti non verranno eseguiti.**
 
 Questo è importante da tenere presente.  Se `await` non viene usato nel corpo di un metodo `async`, il compilatore C# genererà un avviso, ma il codice verrà compilato ed eseguito come se fosse un metodo normale.  Si noti che anche questo sarebbe estremamente inefficiente, perché la macchina a stati generata dal compilatore C# per il metodo asincrono non produrrebbe niente.
 
-* **È consigliabile aggiungere "async" come suffisso di ogni nome di metodo scritto.**
+* **È necessario aggiungere "Async" come suffisso di ogni nome di metodo asincrono che si scrive.**
 
 Questa è la convenzione usata in .NET per differenziare più facilmente i metodi sincroni dai metodi asincroni. Si noti che alcuni metodi non chiamati in modo esplicito dal codice, ad esempio un gestore di eventi o un metodo di controller del Web, non vengono necessariamente applicati. Poiché questi metodi non vengono chiamati in modo esplicito dal codice, non è importante denominarli in modo esplicito.
 
@@ -242,7 +242,7 @@ Le espressioni lambda in LINQ usano esecuzioni posticipate, ovvero il codice pot
 
 Il blocco del thread corrente come mezzo per attendere il completamento di un'attività può risultare in deadlock e in thread di contesto bloccati e può richiedere una gestione degli errori più complessa. La tabella seguente offre indicazioni su come gestire l'attesa di attività in un modo non bloccante:
 
-| Usare questo | Invece di questo | Quando si vuole eseguire questa operazione |
+| Opzione | Invece di questo | Quando si vuole eseguire questa operazione |
 | --- | --- | --- |
 | `await` | `Task.Wait` o `Task.Result` | Recuperare il risultato di un'attività in background |
 | `await Task.WhenAny` | `Task.WaitAny` | Attendere che un'attività sia completa |
@@ -262,8 +262,8 @@ Il blocco del thread corrente come mezzo per attendere il completamento di un'at
 
 È consigliabile raggiungere una completa o quasi completa [trasparenza referenziale](https://en.wikipedia.org/wiki/Referential_transparency_%28computer_science%29) nel codice. Ciò risulterà in una base di codice completamente prevedibile, testabile e gestibile.
 
-## <a name="other-resources"></a>Altre risorse
+## <a name="other-resources"></a>Risorse aggiuntive
 
 * L'articolo [La programmazione asincrona in dettaglio](../standard/async-in-depth.md) offre altre informazioni sul funzionamento di Task.
-* [Programmazione asincrona con async e await (C#)](./programming-guide/concepts/async/index.md)
+* [Programmazione asincrona con async e await (C )Asynchronous programming with async and await (C](./programming-guide/concepts/async/index.md)
 * L'articolo [Six Essential Tips for Async](https://channel9.msdn.com/Series/Three-Essential-Tips-for-Async) (Sei suggerimenti essenziali per la modalità asincrona) di Lucian Wischik è una risorsa eccellente per la programmazione asincrona.

@@ -1,5 +1,5 @@
 ---
-title: Tipi di raccolte comunemente usate
+title: Tipi di raccolte comunemente utilizzate
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - generic collections
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
 ms.openlocfilehash: 1004a2f9a0594d9150d147dec1e16b56205e0d13
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711402"
 ---
-# <a name="commonly-used-collection-types"></a>Tipi di raccolte comunemente usate
+# <a name="commonly-used-collection-types"></a>Tipi di raccolte comunemente utilizzate
 I tipi di raccolta sono le varianti comuni delle raccolte di dati, ad esempio tabelle hash, code, stack, contenitori, dizionari ed elenchi.  
   
  Le raccolte si basano sull'interfaccia <xref:System.Collections.ICollection>, l'interfaccia <xref:System.Collections.IList>, l'interfaccia <xref:System.Collections.IDictionary> oppure sulle relative controparti generiche. L'interfaccia <xref:System.Collections.IList> e l'interfaccia <xref:System.Collections.IDictionary> derivano entrambe dall'interfaccia <xref:System.Collections.ICollection>. Di conseguenza, tutte le raccolte sono basate direttamente o indirettamente sull'interfaccia <xref:System.Collections.ICollection>. Nelle raccolte basate sull'interfaccia <xref:System.Collections.IList> (come ad esempio <xref:System.Array>, <xref:System.Collections.ArrayList> o <xref:System.Collections.Generic.List%601>) oppure direttamente sull'interfaccia <xref:System.Collections.ICollection> (come ad esempio <xref:System.Collections.Queue>, <xref:System.Collections.Concurrent.ConcurrentQueue%601>, <xref:System.Collections.Stack>, <xref:System.Collections.Concurrent.ConcurrentStack%601> o <xref:System.Collections.Generic.LinkedList%601>), ogni elemento contiene un valore. Nelle raccolte basate sull'interfaccia <xref:System.Collections.IDictionary> (come ad esempio le classi <xref:System.Collections.Hashtable> e <xref:System.Collections.SortedList>, le classi generiche <xref:System.Collections.Generic.Dictionary%602> e <xref:System.Collections.Generic.SortedList%602>), oppure sulle classi <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, ogni elemento contiene sia una chiave sia un valore.  La classe <xref:System.Collections.ObjectModel.KeyedCollection%602> è univoca perché è un elenco di valori con le chiavi incorporate nei valori e quindi funge da elenco e da dizionario.  
@@ -39,7 +39,7 @@ I tipi di raccolta sono le varianti comuni delle raccolte di dati, ad esempio ta
 |[Tipi di raccolta ordinati](../../../docs/standard/collections/sorted-collection-types.md)|Vengono descritte le classi che forniscono funzionalità di ordinamento per elenchi e set.|  
 |[Generics](../../../docs/standard/generics/index.md)|Viene descritta la funzionalità Generics, compresi delegati, interfacce e Collection generiche fornite da .NET Framework. Vengono forniti collegamenti alla documentazione sulle funzionalità per i linguaggi C#, Visual Basic e Visual C++ e a tecnologie di supporto come reflection.|  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Informazioni di riferimento  
  <xref:System.Collections?displayProperty=nameWithType>  
   
  <xref:System.Collections.Generic?displayProperty=nameWithType>  

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
 ms.openlocfilehash: c5ac5b3692266010f0be8672ef744baaa32e6a03
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75711857"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>Utilizzo del tipo dinamico (Guida per programmatori C#)
@@ -24,7 +24,7 @@ Se, ad esempio, il metodo di istanza `exampleMethod1` nel codice seguente dispon
 
 Il ruolo del compilatore in questi esempi consiste nel raggruppare le informazioni sull'operazione prevista da ogni istruzione in relazione all'oggetto o all'espressione tipizzata come `dynamic`. In fase di esecuzione, le informazioni archiviate vengono esaminate e qualsiasi istruzione non valida provoca un'eccezione in fase di esecuzione.
 
-Il risultato della maggior parte delle operazioni dinamiche è `dynamic`. Se, ad esempio, si posiziona il puntatore del mouse sull'utilizzo di `testSum` nell'esempio seguente, IntelliSense visualizza il tipo  **(variabile locale) dynamic testSum**.
+Il risultato della maggior parte delle operazioni dinamiche è `dynamic`. Se, ad esempio, si posiziona il puntatore del mouse sull'utilizzo di `testSum` nell'esempio seguente, IntelliSense visualizza il tipo ** (variabile locale) dynamic testSum**.
 
 [!code-csharp[CsProgGuideTypes#51](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/usingdynamic.cs#51)]
 
@@ -65,7 +65,7 @@ DLR (Dynamic Language Runtime) è una nuova API in .NET Framework 4. Fornisce l'
 
 C# 4 include diverse funzionalità che migliorano l'esperienza di interoperabilità con le API COM, ad esempio le API di automazione di Office. Tra i miglioramenti è compreso l'utilizzo del tipo `dynamic` e di [argomenti denominati e facoltativi](../classes-and-structs/named-and-optional-arguments.md).
 
-Diversi metodi COM consentono la variazione nei tipi di argomento e nel tipo restituito designando i tipi come `object`. Per questo motivo è necessario il cast esplicito dei valori per la coordinazione con le variabili fortemente tipizzate in C#. Se si esegue la compilazione utilizzando l'opzione [-C# link (opzioni del compilatore)](../../language-reference/compiler-options/link-compiler-option.md) , l'introduzione del tipo di `dynamic` consente di gestire le occorrenze di `object` nelle firme com come se fossero di tipo `dynamic`ed evitare così la maggior parte del cast. Le istruzioni seguenti sono ad esempio in contrasto con la modalità di accesso a una cella in un foglio di calcolo di Microsoft Office Excel con il tipo `dynamic` e senza il tipo `dynamic`.
+Diversi metodi COM consentono la variazione nei tipi di argomento e nel tipo restituito designando i tipi come `object`. Per questo motivo è necessario il cast esplicito dei valori per la coordinazione con le variabili fortemente tipizzate in C#. Se si esegue la compilazione utilizzando l'opzione [-link (opzioni del compilatore C)](../../language-reference/compiler-options/link-compiler-option.md) , l'introduzione del `dynamic` tipo consente di trattare le occorrenze di `object` nelle firme COM come se fossero di tipo `dynamic`e quindi di evitare gran parte del cast. Le istruzioni seguenti sono ad esempio in contrasto con la modalità di accesso a una cella in un foglio di calcolo di Microsoft Office Excel con il tipo `dynamic` e senza il tipo `dynamic`.
 
 [!code-csharp[csOfficeWalkthrough#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#12)]
 
@@ -75,7 +75,7 @@ Diversi metodi COM consentono la variazione nei tipi di argomento e nel tipo res
 
 |Titolo|Descrizione|
 |-----------|-----------------|
-|[dynamic](../../language-reference/builtin-types/reference-types.md)|Viene descritto l'utilizzo della parola chiave `dynamic`.|
-|[Dynamic Language Runtime Overview](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md) (Panoramica su Dynamic Language Runtime)|Viene fornita una panoramica di DLR, un ambiente di runtime che estende Common Language Runtime (CLR) con un set di servizi per linguaggi dinamici.|
-|[Procedura dettagliata: Creazione e utilizzo di oggetti dinamici](walkthrough-creating-and-using-dynamic-objects.md)|Fornisce istruzioni dettagliate per la creazione di un oggetto dinamico personalizzato e per la creazione di un progetto che accede a una libreria `IronPython`.|
-|[Come accedere agli oggetti di interoperabilità C# di Office usando le funzionalità](../interop/how-to-access-office-onterop-objects.md)|Viene illustrato come creare un progetto che usa argomenti denominati e facoltativi, il tipo `dynamic` e altri miglioramenti che semplificano l'accesso agli oggetti API di Office.|
+|[dinamico](../../language-reference/builtin-types/reference-types.md)|Viene descritto l'utilizzo della parola chiave `dynamic`.|
+|[Panoramica di Dynamic Language Runtime](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)|Viene fornita una panoramica di DLR, un ambiente di runtime che estende Common Language Runtime (CLR) con un set di servizi per linguaggi dinamici.|
+|[Procedura dettagliata: creazione e utilizzo di oggetti dinamiciWalkthrough: Creating and Using Dynamic Objects](walkthrough-creating-and-using-dynamic-objects.md)|Fornisce istruzioni dettagliate per la creazione di un oggetto dinamico personalizzato e per la creazione di un progetto che accede a una libreria `IronPython`.|
+|[Come accedere agli oggetti di interoperabilità di Office usando le funzionalità di C#](../interop/how-to-access-office-onterop-objects.md)|Viene illustrato come creare un progetto che usa argomenti denominati e facoltativi, il tipo `dynamic` e altri miglioramenti che semplificano l'accesso agli oggetti API di Office.|

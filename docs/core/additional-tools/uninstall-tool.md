@@ -1,51 +1,51 @@
 ---
 title: Strumento di disinstallazione
-description: Panoramica dello strumento di disinstallazione di .NET Core, uno strumento guidato che consente la pulizia controllata degli SDK e dei runtime di .NET Core.
+description: Una panoramica dello strumento di disinstallazione di .NET Core, uno strumento guidato che consente la pulizia controllata di .NET Core SDK e runtime.
 author: sfoslund
 ms.date: 01/06/2020
-ms.openlocfilehash: 4944c983cbd02b456c3a09a1b03bc28ba6e458cc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: bd20cba133cbb754dcca48e48b76a391a9efacba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714549"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847052"
 ---
 # <a name="net-core-uninstall-tool"></a>Strumento di disinstallazione di .NET Core
 
-Lo [strumento di disinstallazione di .NET Core](https://github.com/dotnet/cli-lab/releases) (`dotnet-core-uninstall`) consente di rimuovere gli SDK e i runtime di .NET Core da un sistema. È disponibile una raccolta di opzioni per specificare quali versioni si desidera disinstallare.
+Lo strumento di [disinstallazione](https://aka.ms/dotnet-core-uninstall-tool) di .NET Core (`dotnet-core-uninstall`) consente di rimuovere gli SDK e i runtime di .NET Core da un sistema. È disponibile una raccolta di opzioni per specificare le versioni che si desidera disinstallare.
 
 Lo strumento supporta Windows e macOS. Linux non è attualmente supportato.
 
-In Windows, lo strumento può disinstallare solo gli SDK e i runtime installati usando uno dei programmi di installazione seguenti:
+In Windows, lo strumento può disinstallare solo SDK e runtime installati utilizzando uno dei seguenti programmi di installazione:
 
-- Il programma di installazione di .NET Core SDK e Runtime.
-- Programma di installazione di Visual Studio nelle versioni precedenti a Visual Studio 2019 versione 16,3.
+- Il programma di installazione di .NET Core SDK e runtime.
+- Il programma di installazione di Visual Studio nelle versioni precedenti a Visual Studio 2019 versione 16.3.The Visual Studio installer in versions earlier than Visual Studio 2019 version 16.3.
 
-In macOS lo strumento può disinstallare solo gli SDK e i runtime che si trovano nella cartella */usr/local/share/DotNet* .
+In macOS, lo strumento può disinstallare solo SDK e runtime che si trovano nella cartella */usr/local/share/dotnet.*
 
-A causa di queste limitazioni, lo strumento potrebbe non essere in grado di disinstallare tutti gli SDK e i runtime di .NET Core nel computer. È possibile usare il comando `dotnet --info` per trovare tutti gli SDK e i runtime di .NET Core installati, inclusi gli SDK e i runtime che questo strumento non è in grado di rimuovere. Il comando `dotnet-core-uninstall list` Visualizza gli SDK che è possibile disinstallare con lo strumento.
+A causa di queste limitazioni, lo strumento potrebbe non essere in grado di disinstallare tutti gli SDK e runtime di .NET Core nel computer. È possibile `dotnet --info` utilizzare il comando per trovare tutti gli SDK e runtime di .NET Core installati, inclusi gli SDK e i runtime che questo strumento non può rimuovere. Il `dotnet-core-uninstall list` comando mostra quali SDK possono essere disinstallati con lo strumento.
 
 ## <a name="install-the-tool"></a>Installare lo strumento
 
-È possibile scaricare lo strumento di disinstallazione di .NET Core dal repository GitHub [DotNet/CLI-Lab](https://github.com/dotnet/cli-lab/releases) .
+È possibile scaricare lo strumento di disinstallazione di .NET Core da qui e trovare il codice sorgente nel repository dotnet/cli-lab GitHub.You can download the .NET Core Uninstall Tool from [here](https://aka.ms/dotnet-core-uninstall-tool) and find the source code at the [dotnet/cli-lab](https://github.com/dotnet/cli-lab) GitHub repository.
 
 > [!NOTE]
-> Per disinstallare SDK e runtime di .NET Core, lo strumento richiede l'elevazione dei privilegi. Pertanto, deve essere installato in una directory protetta da scrittura, ad esempio *c:\Programmi* in Windows o */usr/local/bin* in MacOS. Vedere anche [accesso con privilegi elevati per i comandi DotNet](../tools/elevated-access.md). Le istruzioni dettagliate per l'installazione sono disponibili nella [pagina delle versioni di GitHub](https://github.com/dotnet/cli-lab/releases).
+> Lo strumento richiede l'elevazione dei privilegi per disinstallare gli SDK e i runtime di .NET Core.The tool requires elevation to uninstall .NET Core SDKs and runtimes. Pertanto, deve essere installato in una directory protetta da scrittura, ad esempio *C:* , Programmi su Windows o */usr/local/bin* su macOS. Vedere anche [Accesso elevato per i comandi dotnet](../tools/elevated-access.md). Per ulteriori informazioni, vedere le [istruzioni dettagliate per l'installazione.](https://aka.ms/dotnet-core-uninstall-tool)
 
 ## <a name="run-the-tool"></a>Eseguire lo strumento
 
-Nei passaggi seguenti viene illustrato l'approccio consigliato per l'esecuzione dello strumento di disinstallazione:
+I passaggi seguenti illustrano l'approccio consigliato per l'esecuzione dello strumento di disinstallazione:
 
-- [Passaggio 1: visualizzare gli SDK e i runtime di .NET Core installati](#step-1---display-installed-net-core-sdks-and-runtimes)
-- [Passaggio 2: eseguire un'esecuzione a secco](#step-2---do-a-dry-run)
-- [Passaggio 3: disinstallare SDK e runtime di .NET Core](#step-3---uninstall-net-core-sdks-and-runtimes)
-- [Passaggio 4: eliminare la cartella di fallback NuGet (facoltativo)](#step-4---delete-the-nuget-fallback-folder-optional)
+- [Passaggio 1 - Visualizzare gli SDK e i runtime di .NET Core installatiStep 1 - Display installed .NET Core SDKs and runtimes](#step-1---display-installed-net-core-sdks-and-runtimes)
+- [Fase 2 - Eseguire una corsa a secco](#step-2---do-a-dry-run)
+- [Passaggio 3 - Disinstallare gli SDK e i runtime di .NET CoreStep 3 - Uninstall .NET Core SDKs and Runtimes](#step-3---uninstall-net-core-sdks-and-runtimes)
+- [Passaggio 4 - Eliminare la cartella di fallback NuGet (facoltativo)Step 4 - Delete the NuGet fallback folder (optional)](#step-4---delete-the-nuget-fallback-folder-optional)
 
-### <a name="step-1---display-installed-net-core-sdks-and-runtimes"></a>Passaggio 1: visualizzare gli SDK e i runtime di .NET Core installati
+### <a name="step-1---display-installed-net-core-sdks-and-runtimes"></a>Passaggio 1 - Visualizzare gli SDK e i runtime di .NET Core installatiStep 1 - Display installed .NET Core SDKs and runtimes
 
-Il comando `dotnet-core-uninstall list` elenca gli SDK di .NET Core installati e i runtime che possono essere rimossi con questo strumento. Alcuni SDK e Runtime possono essere richiesti da Visual Studio e vengono visualizzati con una nota del motivo per cui non è consigliabile disinstallarli.
+Il `dotnet-core-uninstall list` comando elenca gli SDK e i runtime .NET Core installati che possono essere rimossi con questo strumento. Alcuni SDK e runtime potrebbero essere richiesti da Visual Studio e vengono visualizzati con una nota del motivo per cui non è consigliabile disinstallarli.
 
-**elenco di disinstallazione DotNet-Core**
+**elenco dotnet-core-uninstall**
 
 #### <a name="synopsis"></a>Riepilogo
 
@@ -53,9 +53,9 @@ Il comando `dotnet-core-uninstall list` elenca gli SDK di .NET Core installati e
 dotnet-core-uninstall list [options]
 ```
 
-#### <a name="options"></a>Options
+#### <a name="options"></a>Opzioni
 
-## <a name="windowstabwindows"></a>[Windows](#tab/windows)
+## <a name="windows"></a>[Windows](#tab/windows)
 
 * **`--aspnet-runtime`**
 
@@ -63,7 +63,7 @@ dotnet-core-uninstall list [options]
 
 * **`--hosting-bundle`**
 
-  Elenca tutti i pacchetti di runtime e hosting di .NET Core che possono essere disinstallati con questo strumento.
+  Elenca tutti i pacchetti di runtime e di hosting di .NET Core che possono essere disinstallati con questo strumento.
 
 * **`--runtime`**
 
@@ -79,13 +79,13 @@ dotnet-core-uninstall list [options]
 
 * **`--x64`**
 
-  Elenca tutti i runtime e gli SDK .NET Core x64 che possono essere disinstallati con questo strumento.
+  Elenca tutti gli SDK e i runtime x64 .NET Core che possono essere disinstallati con questo strumento.
 
 * **`--x86`**
 
-  Elenca tutti gli SDK di .NET core x86 e i runtime che possono essere disinstallati con questo strumento.
+  Elenca tutti gli SDK e i runtime x86 .NET Core che possono essere disinstallati con questo strumento.
 
-## <a name="macostabmacos"></a>[macOS](#tab/macos)
+## <a name="macos"></a>[Macos](#tab/macos)
 
 * **`--runtime`**
 
@@ -103,29 +103,29 @@ dotnet-core-uninstall list [options]
 
 #### <a name="examples"></a>Esempi
 
-* Elencare tutti i runtime e gli SDK di .NET Core che possono essere rimossi con questo strumento:
+* Elencare tutti gli SDK e i runtime di .NET Core che possono essere rimossi con questo strumento:List all .NET Core SDKs and runtimes that can be removed with this tool:
 
   ```console
   dotnet-core-uninstall list
   ```
 
-* Elencare tutti i runtime e gli SDK di .NET Core x64:
+* Elencare tutti gli SDK e i runtime x64 di .NET Core:
 
   ```console
   dotnet-core-uninstall list --x64
   ```
 
-* Elencare tutti gli SDK di .NET core x86:
+* Elencare tutti gli SDK x86 .NET Core:
 
   ```console
   dotnet-core-uninstall list --sdk --x86
   ```
 
-### <a name="step-2---do-a-dry-run"></a>Passaggio 2: eseguire un'esecuzione a secco
+### <a name="step-2---do-a-dry-run"></a>Fase 2 - Eseguire una corsa a secco
 
-I comandi `dotnet-core-uninstall dry-run` e `dotnet-core-uninstall whatif` visualizzano gli SDK e i runtime di .NET Core che verranno rimossi in base alle opzioni fornite senza eseguire la disinstallazione. Questi comandi sono sinonimi.
+I `dotnet-core-uninstall dry-run` `dotnet-core-uninstall whatif` comandi e visualizzano gli SDK e i runtime di .NET Core che verranno rimossi in base alle opzioni fornite senza eseguire la disinstallazione. Questi comandi sono sinonimi.
 
-**DotNet-Core-Uninstall Dry-Run e DotNet-Core-Uninstall WhatIf**
+**dotnet-core-uninstall dry-run e dotnet-core-uninstall whatif**
 
 #### <a name="synopsis"></a>Riepilogo
 
@@ -143,56 +143,56 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
   > [!TIP]
   > I file di risposta sono un'alternativa all'inserimento di tutte le versioni nella riga di comando.
-  > Si tratta di file di testo, in genere con un'estensione \*. rsp e ogni versione è elencata in una riga separata.
-  > Per specificare un file di risposta per l'argomento `VERSION`, usare il carattere \@ immediatamente seguito dal nome del file di risposta.
+  > Si tratta di file di \*testo, in genere con estensione rsp, e ogni versione è elencata su una riga separata.
+  > Per specificare un `VERSION` file di \@ risposta per l'argomento, utilizzare il carattere immediatamente seguito dal nome del file di risposta.
 
-#### <a name="options"></a>Options
+#### <a name="options"></a>Opzioni
 
-## <a name="windowstabwindows"></a>[Windows](#tab/windows)
+## <a name="windows"></a>[Windows](#tab/windows)
 
 * **`--all`**
 
-  Rimuove tutti i runtime e gli SDK di .NET Core.
+  Rimuove tutti gli SDK e runtime di .NET Core.
 
 * **`--all-below <VERSION>`**
 
-  Rimuove solo gli SDK di .NET Core e i runtime con una versione inferiore alla versione specificata. La versione specificata rimane installata.
+  Rimuove solo gli SDK e i runtime di .NET Core con una versione inferiore a quella specificata. La versione specificata rimane installata.
 
 * **`--all-but <VERSIONS>`**
 
-  Rimuove tutti i runtime e gli SDK di .NET Core, ad eccezione di quelli specificati.
+  Rimuove tutti gli SDK e runtime di .NET Core, ad eccezione di quelli specificati.
 
 * **`--all-but-latest`**
 
-  Rimuove gli SDK di .NET Core e i runtime, ad eccezione di una versione più recente.
+  Rimuove gli SDK e i runtime di .NET Core, ad eccezione di quella più alta.
 
 * **`--all-lower-patches`**
 
-  Rimuove gli SDK di .NET Core e i runtime sostituiti da patch più elevate. Questa opzione protegge Global. JSON.
+  Rimuove gli SDK e i runtime di .NET Core sostituiti da patch più elevate. Questa opzione protegge global.json.
 
 * **`--all-previews`**
 
-  Rimuove gli SDK di .NET Core e i runtime contrassegnati come anteprime.
+  Rimuove gli SDK e i runtime di .NET Core contrassegnati come anteprime.
 
 * **`--all-previews-but-latest`**
 
-  Rimuove gli SDK di .NET Core e i runtime contrassegnati come anteprime eccetto quella più alta.
+  Rimuove gli SDK e i runtime di .NET Core contrassegnati come anteprime tranne quello più alto.
 
 * **`--aspnet-runtime`**
 
-  Rimuove solo i runtime ASP.NET Core.
+  Rimuove solo i runtime di ASP.NET Core.
 
 * **`--hosting-bundle`**
 
-  Rimuove solo i pacchetti di runtime e hosting di .NET Core.
+  Rimuove solo i bundle di runtime e di hosting di .NET Core.
 
 * **`--major-minor <MAJOR_MINOR>`**
 
-  Rimuove gli SDK di .NET Core e i runtime che corrispondono alla versione del `major.minor` specificata.
+  Rimuove gli SDK e i runtime di `major.minor` .NET Core che corrispondono alla versione specificata.
 
 * **`--runtime`**
 
-  Rimuove solo i runtime di .NET Core.
+  Rimuove solo i runtime .NET Core.
 
 * **`--sdk`**
 
@@ -204,57 +204,57 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
 * **`--x64`**
 
-  Deve essere usato con `--sdk`, `--runtime`e `--aspnet-runtime` per rimuovere gli SDK o i runtime x64.
+  Deve essere `--sdk`utilizzato `--runtime`con `--aspnet-runtime` , e per rimuovere SDK o runtime x64.
 
 * **`--x86`**
 
-  Deve essere usato con `--sdk`, `--runtime`e `--aspnet-runtime` per rimuovere gli SDK o i Runtime x86.
+  Deve essere `--sdk`utilizzato `--runtime`con `--aspnet-runtime` , e per rimuovere SDK o runtime x86.
 
-* **`--force`** Forza la rimozione di versioni che potrebbero essere usate da Visual Studio.
+* **`--force`** Forza la rimozione delle versioni che potrebbero essere utilizzate da Visual Studio.
 
 Note:
 
-1. È necessario specificare esattamente uno dei `--sdk`, `--runtime`, `--aspnet-runtime`e `--hosting-bundle`.
-2. `--all`, `--all-below`, `--all-but`, `--all-but-latest`, `--all-lower-patches`, `--all-previews`, `--all-previews-but-latest`, `--major-minor`e `[<VERSION>...]` sono esclusive.
-3. Se non si specifica `--x64` o `--x86`, verranno rimossi sia x64 che x86.
+1. Esattamente uno `--sdk` `--runtime`dei `--aspnet-runtime`, `--hosting-bundle` , , ed è obbligatorio.
+2. `--all`, `--all-below` `--all-but`, `--all-but-latest` `--all-lower-patches`, `--all-previews` `--all-previews-but-latest`, `--major-minor`, `[<VERSION>...]` , , e sono esclusivi.
+3. Se `--x64` `--x86` o non sono specificati, verranno rimossi sia x64 che x86.
 
-## <a name="macostabmacos"></a>[macOS](#tab/macos)
+## <a name="macos"></a>[Macos](#tab/macos)
 
 * **`--all`**
 
-  Rimuove tutti i runtime e gli SDK di .NET Core.
+  Rimuove tutti gli SDK e runtime di .NET Core.
 
 * **`--all-below <VERSION>`**
 
-  Rimuove gli SDK e i Runtime .NET Core sotto la versione specificata. La versione specificata rimarrà.
+  Rimuove gli SDK e i runtime di .NET Core al di sotto della versione specificata. La versione specificata rimarrà.
 
 * **`--all-but <VERSIONS>`**
 
-  Rimuove gli SDK di .NET Core e i runtime, ad eccezione delle versioni specificate.
+  Rimuove gli SDK e i runtime di .NET Core, ad eccezione di quelli specificati.
 
 * **`--all-but-latest`**
 
-  Rimuove gli SDK di .NET Core e i runtime, ad eccezione di una versione più recente.
+  Rimuove gli SDK e i runtime di .NET Core, ad eccezione di quella più alta.
 
 * **`--all-lower-patches`**
 
-  Rimuove gli SDK di .NET Core e i runtime sostituiti da patch più elevate. Questa opzione protegge Global. JSON.
+  Rimuove gli SDK e i runtime di .NET Core sostituiti da patch più elevate. Questa opzione protegge global.json.
 
 * **`--all-previews`**
 
-  Rimuove gli SDK di .NET Core e i runtime contrassegnati come anteprime.
+  Rimuove gli SDK e i runtime di .NET Core contrassegnati come anteprime.
 
 * **`--all-previews-but-latest`**
 
-  Rimuove gli SDK di .NET Core e i runtime contrassegnati come anteprime eccetto quella più alta.
+  Rimuove gli SDK e i runtime di .NET Core contrassegnati come anteprime tranne quello più alto.
 
 * **`--major-minor <MAJOR_MINOR>`**
 
-  Rimuove gli SDK di .NET Core e i runtime che corrispondono alla versione del `major.minor` specificata.
+  Rimuove gli SDK e i runtime di `major.minor` .NET Core che corrispondono alla versione specificata.
 
 * **`--runtime`**
 
-  Rimuove solo i runtime di .NET Core.
+  Rimuove solo i runtime .NET Core.
 
 * **`--sdk`**
 
@@ -264,50 +264,50 @@ Note:
 
   Imposta il livello di dettaglio. I valori consentiti sono `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`. Il valore predefinito è `normal`.
   
-* **`--force`** Forza la rimozione di versioni che potrebbero essere usate da Visual Studio o da SDK.
+* **`--force`** Forza la rimozione delle versioni che potrebbero essere utilizzate da Visual Studio o SDK.
 
 Note:
 
-1. È necessario specificare esattamente uno dei `--sdk` e `--runtime`.
-2. `--all`, `--all-below`, `--all-but`, `--all-but-latest`, `--all-lower-patches`, `--all-previews`, `--all-previews-but-latest`, `--major-minor`e `[<VERSION>...]` sono esclusive.
+1. Esattamente uno `--sdk` `--runtime` di ed è richiesto.
+2. `--all`, `--all-below` `--all-but`, `--all-but-latest` `--all-lower-patches`, `--all-previews` `--all-previews-but-latest`, `--major-minor`, `[<VERSION>...]` , , e sono esclusivi.
 
 ---
 
 #### <a name="examples"></a>Esempi
 
 > [!NOTE]
-> Per impostazione predefinita, gli SDK di .NET Core e i runtime che potrebbero essere richiesti da Visual Studio o altri SDK non sono inclusi nell'output `dotnet-core-uninstall dry-run`. Negli esempi seguenti alcuni degli SDK e dei runtime specificati potrebbero non essere inclusi nell'output, a seconda dello stato del computer. Per includere tutti gli SDK e i runtime, elencarli in modo esplicito come argomenti oppure usare l'opzione `--force`.
+> Per impostazione predefinita, gli SDK e i runtime di .NET Core che potrebbero `dotnet-core-uninstall dry-run` essere richiesti da Visual Studio o da altri SDK non sono inclusi nell'output. Negli esempi seguenti, alcuni SDK e runtime specificati potrebbero non essere inclusi nell'output, a seconda dello stato del computer. Per includere tutti gli SDK e i runtime, elencarli in modo esplicito come argomenti o utilizzare l'opzione `--force` .
 
-* Esecuzione a secco della rimozione di tutti i runtime di .NET Core sostituiti da patch superiori:
+* Esecuzione a secco di rimozione di tutti i runtime .NET Core che sono stati sostituiti da patch più elevate:
 
   ```console
   dotnet-core-uninstall dry-run --all-lower-patches --runtime
   ```
 
-* Esecuzione a secco della rimozione di tutti gli SDK di .NET Core sotto la versione `2.2.301`:
+* Esecuzione a secco di rimozione di tutti `2.2.301`gli SDK di .NET Core sotto la versione :
 
   ```console
   dotnet-core-uninstall whatif --all-below 2.2.301 --sdk
   ```
 
-### <a name="step-3---uninstall-net-core-sdks-and-runtimes"></a>Passaggio 3: disinstallare SDK e runtime di .NET Core
+### <a name="step-3---uninstall-net-core-sdks-and-runtimes"></a>Passaggio 3 - Disinstallare gli SDK e i runtime di .NET CoreStep 3 - Uninstall .NET Core SDKs and Runtimes
 
-`dotnet-core-uninstall remove` disinstalla gli SDK e i Runtime .NET Core specificati da una raccolta di opzioni. Non è possibile usare lo strumento per disinstallare SDK e Runtime con la versione 5,0 o successive.
+`dotnet-core-uninstall remove`disinstalla gli SDK e i runtime di .NET Core specificati da una raccolta di opzioni. Lo strumento non può essere utilizzato per disinstallare SDK e runtime con la versione 5.0 o successiva.
 
-Poiché questo strumento presenta un comportamento distruttivo, è **consigliabile eseguire** un'esecuzione a secco prima di eseguire il comando Rimuovi. L'esecuzione a secco mostrerà quali SDK e runtime di .NET Core verranno rimossi quando si usa il comando `remove`. Per informazioni su quali SDK e Runtime è possibile rimuovere, fare [riferimento a.](../versions/remove-runtime-sdk-versions.md#should-i-remove-a-version)
+Poiché questo strumento ha un comportamento distruttivo, è **consigliabile** eseguire un'esecuzione a secco prima di eseguire il comando remove. L'esecuzione a secco mostrerà quali SDK e runtime di .NET Core verranno rimossi quando si utilizza il `remove` comando. Fare riferimento a [È necessario rimuovere una versione?](../versions/remove-runtime-sdk-versions.md#should-i-remove-a-version) per sapere quali SDK e runtime sono sicuri da rimuovere.
 
 > [!CAUTION]
 > Tenere presenti le indicazioni seguenti:
 >
->- Questo strumento consente di disinstallare le versioni dei .NET Core SDK richieste da `global.json` file nel computer. È possibile reinstallare gli SDK di .NET Core dalla pagina [Scarica .NET Core](https://dotnet.microsoft.com/download/dotnet-core) .
->- Questo strumento consente di disinstallare le versioni del runtime di .NET Core richieste dalle applicazioni dipendenti dal Framework nel computer. È possibile reinstallare i runtime di .NET Core dalla pagina [Scarica .NET Core](https://dotnet.microsoft.com/download/dotnet-core) .
->- Questo strumento consente di disinstallare le versioni del .NET Core SDK e del runtime su cui si basa Visual Studio. Se si interrompe l'installazione di Visual Studio, eseguire "Repair" nel programma di installazione di Visual Studio per tornare allo stato di lavoro.
+>- Questo strumento può disinstallare le versioni di `global.json` .NET Core SDK richieste dai file nel computer. È possibile reinstallare gli SDK di .NET Core dalla pagina [Scarica .NET Core.You can](https://dotnet.microsoft.com/download/dotnet-core) reinstall .NET Core SDKs from the Download .NET Core page.
+>- Questo strumento può disinstallare le versioni del runtime di .NET Core richieste dalle applicazioni dipendenti dal framework nel computer. È possibile reinstallare i runtime .NET Core dalla pagina [Scarica .NET Core.You can](https://dotnet.microsoft.com/download/dotnet-core) reinstall .NET Core runtimes from the Download .NET Core page.
+>- Questo strumento può disinstallare le versioni di .NET Core SDK e runtime su cui si basa Visual Studio. Se si interrompe l'installazione di Visual Studio, eseguire "Ripristina" nel programma di installazione di Visual Studio per tornare a uno stato funzionante.
 
-Per impostazione predefinita, tutti i comandi mantengono gli SDK e i Runtime .NET Core che potrebbero essere richiesti da Visual Studio o da altri SDK. Questi SDK e Runtime possono essere disinstallati elencando in modo esplicito come argomenti o usando l'opzione `--force`.
+Per impostazione predefinita, tutti i comandi mantengono gli SDK e i runtime di .NET Core che potrebbero essere richiesti da Visual Studio o da altri SDK. Questi SDK e runtime possono essere disinstallati elencandoli in modo `--force` esplicito come argomenti o utilizzando l'opzione .
 
-Per disinstallare SDK e runtime di .NET Core, lo strumento richiede l'elevazione dei privilegi. Eseguire lo strumento in un prompt dei comandi di amministratore in Windows e con `sudo` in macOS. I comandi `dry-run` e `whatif` non richiedono l'elevazione dei privilegi.
+Lo strumento richiede l'elevazione dei privilegi per disinstallare gli SDK e i runtime di .NET Core.The tool requires elevation to uninstall .NET Core SDKs and runtimes. Esegui lo strumento in un prompt `sudo` dei comandi di amministratore su Windows e con macOS. I `dry-run` `whatif` comandi e non richiedono l'elevazione dei privilegi.
 
-**DotNet-Core-Disinstalla Rimuovi**
+**dotnet-core-uninstall rimuovere**
 
 #### <a name="synopsis"></a>Riepilogo
 
@@ -323,56 +323,56 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
   > [!TIP]
   > I file di risposta sono un'alternativa all'inserimento di tutte le versioni nella riga di comando.
-  > Si tratta di file di testo, in genere con un'estensione \*. rsp e ogni versione è elencata in una riga separata.
-  > Per specificare un file di risposta per l'argomento `VERSION`, usare il carattere \@ immediatamente seguito dal nome del file di risposta.
+  > Si tratta di file di \*testo, in genere con estensione rsp, e ogni versione è elencata su una riga separata.
+  > Per specificare un `VERSION` file di \@ risposta per l'argomento, utilizzare il carattere immediatamente seguito dal nome del file di risposta.
 
-#### <a name="options"></a>Options
+#### <a name="options"></a>Opzioni
 
-## <a name="windowstabwindows"></a>[Windows](#tab/windows)
+## <a name="windows"></a>[Windows](#tab/windows)
 
 * **`--all`**
 
-  Rimuove tutti i runtime e gli SDK di .NET Core.
+  Rimuove tutti gli SDK e runtime di .NET Core.
 
 * **`--all-below <VERSION>`**
 
-  Rimuove solo gli SDK di .NET Core e i runtime con una versione inferiore alla versione specificata. La versione specificata rimane installata.
+  Rimuove solo gli SDK e i runtime di .NET Core con una versione inferiore a quella specificata. La versione specificata rimane installata.
 
 * **`--all-but <VERSIONS>`**
 
-  Rimuove tutti i runtime e gli SDK di .NET Core, ad eccezione di quelli specificati.
+  Rimuove tutti gli SDK e runtime di .NET Core, ad eccezione di quelli specificati.
 
 * **`--all-but-latest`**
 
-  Rimuove gli SDK di .NET Core e i runtime, ad eccezione di una versione più recente.
+  Rimuove gli SDK e i runtime di .NET Core, ad eccezione di quella più alta.
 
 * **`--all-lower-patches`**
 
-  Rimuove gli SDK di .NET Core e i runtime sostituiti da patch più elevate. Questa opzione protegge Global. JSON.
+  Rimuove gli SDK e i runtime di .NET Core sostituiti da patch più elevate. Questa opzione protegge global.json.
 
 * **`--all-previews`**
 
-  Rimuove gli SDK di .NET Core e i runtime contrassegnati come anteprime.
+  Rimuove gli SDK e i runtime di .NET Core contrassegnati come anteprime.
 
 * **`--all-previews-but-latest`**
 
-  Rimuove gli SDK di .NET Core e i runtime contrassegnati come anteprime eccetto quella più alta.
+  Rimuove gli SDK e i runtime di .NET Core contrassegnati come anteprime tranne quello più alto.
 
 * **`--aspnet-runtime`**
 
-  Rimuove solo i runtime ASP.NET Core.
+  Rimuove solo i runtime di ASP.NET Core.
 
 * **`--hosting-bundle`**
 
-  Rimuove solo i pacchetti di runtime e hosting di .NET Core.
+  Rimuove solo i bundle di runtime e di hosting di .NET Core.
 
 * **`--major-minor <MAJOR_MINOR>`**
 
-  Rimuove gli SDK di .NET Core e i runtime che corrispondono alla versione del `major.minor` specificata.
+  Rimuove gli SDK e i runtime di `major.minor` .NET Core che corrispondono alla versione specificata.
 
 * **`--runtime`**
 
-  Rimuove solo i runtime di .NET Core.
+  Rimuove solo i runtime .NET Core.
 
 * **`--sdk`**
 
@@ -384,59 +384,59 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 * **`--x64`**
 
-  Deve essere usato con `--sdk`, `--runtime`e `--aspnet-runtime` per rimuovere gli SDK o i runtime x64.
+  Deve essere `--sdk`utilizzato `--runtime`con `--aspnet-runtime` , e per rimuovere SDK o runtime x64.
 
 * **`--x86`**
 
-  Deve essere usato con `--sdk`, `--runtime`e `--aspnet-runtime` per rimuovere gli SDK o i Runtime x86.
+  Deve essere `--sdk`utilizzato `--runtime`con `--aspnet-runtime` , e per rimuovere SDK o runtime x86.
 
-* **`-y, --yes`** Esegue il comando senza richiedere una conferma Yes o no.
+* **`-y, --yes`** Esegue il comando senza richiedere una conferma sì o no.
 
-* **`--force`** Forza la rimozione di versioni che potrebbero essere usate da Visual Studio.
+* **`--force`** Forza la rimozione delle versioni che potrebbero essere utilizzate da Visual Studio.
 
 Note:
 
-1. È necessario specificare esattamente uno dei `--sdk`, `--runtime`, `--aspnet-runtime`e `--hosting-bundle`.
-2. `--all`, `--all-below`, `--all-but`, `--all-but-latest`, `--all-lower-patches`, `--all-previews`, `--all-previews-but-latest`, `--major-minor`e `[<VERSION>...]` sono esclusive.
-3. Se non si specifica `--x64` o `--x86`, verranno rimossi sia x64 che x86.
+1. Esattamente uno `--sdk` `--runtime`dei `--aspnet-runtime`, `--hosting-bundle` , , ed è obbligatorio.
+2. `--all`, `--all-below` `--all-but`, `--all-but-latest` `--all-lower-patches`, `--all-previews` `--all-previews-but-latest`, `--major-minor`, `[<VERSION>...]` , , e sono esclusivi.
+3. Se `--x64` `--x86` o non sono specificati, verranno rimossi sia x64 che x86.
 
-## <a name="macostabmacos"></a>[macOS](#tab/macos)
+## <a name="macos"></a>[Macos](#tab/macos)
 
 * **`--all`**
 
-  Rimuove tutti i runtime e gli SDK di .NET Core.
+  Rimuove tutti gli SDK e runtime di .NET Core.
 
 * **`--all-below <VERSION>`**
 
-  Rimuove gli SDK e i Runtime .NET Core sotto la versione specificata. La versione specificata rimarrà.
+  Rimuove gli SDK e i runtime di .NET Core al di sotto della versione specificata. La versione specificata rimarrà.
 
 * **`--all-but <VERSIONS>`**
 
-  Rimuove gli SDK di .NET Core e i runtime, ad eccezione delle versioni specificate.
+  Rimuove gli SDK e i runtime di .NET Core, ad eccezione di quelli specificati.
 
 * **`--all-but-latest`**
 
-  Rimuove gli SDK di .NET Core e i runtime, ad eccezione di una versione più recente.
+  Rimuove gli SDK e i runtime di .NET Core, ad eccezione di quella più alta.
 
 * **`--all-lower-patches`**
 
-  Rimuove gli SDK di .NET Core e i runtime sostituiti da patch più elevate. Questa opzione protegge Global. JSON.
+  Rimuove gli SDK e i runtime di .NET Core sostituiti da patch più elevate. Questa opzione protegge global.json.
 
 * **`--all-previews`**
 
-  Rimuove gli SDK di .NET Core e i runtime contrassegnati come anteprime.
+  Rimuove gli SDK e i runtime di .NET Core contrassegnati come anteprime.
 
 * **`--all-previews-but-latest`**
 
-  Rimuove gli SDK di .NET Core e i runtime contrassegnati come anteprime eccetto quella più alta.
+  Rimuove gli SDK e i runtime di .NET Core contrassegnati come anteprime tranne quello più alto.
 
 * **`--major-minor <MAJOR_MINOR>`**
 
-  Rimuove gli SDK di .NET Core e i runtime che corrispondono alla versione del `major.minor` specificata.
+  Rimuove gli SDK e i runtime di `major.minor` .NET Core che corrispondono alla versione specificata.
 
 * **`--runtime`**
 
-  Rimuove solo i runtime di .NET Core.
+  Rimuove solo i runtime .NET Core.
 
 * **`--sdk`**
 
@@ -448,27 +448,27 @@ Note:
 
 * **`-y, --yes`** Esegue il comando senza richiedere la conferma Y/N.
   
-* **`--force`** Forza la rimozione di versioni che potrebbero essere usate da Visual Studio o da SDK.
+* **`--force`** Forza la rimozione delle versioni che potrebbero essere utilizzate da Visual Studio o SDK.
 
 Note:
 
-1. È necessario specificare esattamente uno dei `--sdk` e `--runtime`.
-2. `--all`, `--all-below`, `--all-but`, `--all-but-latest`, `--all-lower-patches`, `--all-previews`, `--all-previews-but-latest`, `--major-minor`e `[<VERSION>...]` sono esclusive.
+1. Esattamente uno `--sdk` `--runtime` di ed è richiesto.
+2. `--all`, `--all-below` `--all-but`, `--all-but-latest` `--all-lower-patches`, `--all-previews` `--all-previews-but-latest`, `--major-minor`, `[<VERSION>...]` , , e sono esclusivi.
 
 ---
 
 #### <a name="examples"></a>Esempi
 
 > [!NOTE]
-> Per impostazione predefinita, vengono conservati gli SDK e i Runtime .NET Core che potrebbero essere richiesti da Visual Studio o altri SDK. Negli esempi seguenti è possibile che alcuni degli SDK e dei runtime specificati rimangano, a seconda dello stato del computer. Per rimuovere tutti gli SDK e i runtime, elencarli in modo esplicito come argomenti oppure usare l'opzione `--force`.
+> Per impostazione predefinita, gli SDK e i runtime di .NET Core che potrebbero essere richiesti da Visual Studio o da altri SDK vengono mantenuti. Negli esempi seguenti, alcuni degli SDK e dei runtime specificati possono rimanere, a seconda dello stato del computer. Per rimuovere tutti gli SDK e i runtime, elencarli in modo esplicito come argomenti o utilizzare l'opzione `--force` .
 
-* Rimuovere tutti i runtime di .NET Core eccetto la versione `3.0.0-preview6-27804-01` senza richiedere la conferma Y/N:
+* Rimuovere tutti i runtime .NET `3.0.0-preview6-27804-01` Core tranne la versione senza richiedere la conferma Y/N:
 
   ```console
   dotnet-core-uninstall remove --all-but 3.0.0-preview6-27804-01 --runtime --yes
   ```
 
-* Rimuovere tutti gli SDK di .NET Core 1,1 senza richiedere la conferma Y/n:
+* Rimuovere tutti gli SDK di .NET Core 1.1 senza richiedere la conferma Y/n:Remove all .NET Core 1.1 SDKs without requiring Y/n confirmation:
 
   ```console
   dotnet-core-uninstall remove --sdk --major-minor 1.1 -y
@@ -480,7 +480,7 @@ Note:
   dotnet-core-uninstall remove 1.1.11 --sdk --yes --verbosity q
   ```
 
-* Rimuovere tutti gli SDK di .NET Core che possono essere rimossi in modo sicuro da questo strumento:
+* Rimuovere tutti gli SDK di .NET Core che possono essere rimossi in modo sicuro da questo strumento:Remove all .NET Core SDKs that can safely be removed by this tool:
 
   ```console
   dotnet-core-uninstall remove --all --sdk
@@ -492,33 +492,33 @@ Note:
   dotnet-core-uninstall remove --all --sdk --force
   ```
 
-* Rimuovere tutti gli SDK di .NET Core specificati nel file di risposta `versions.rsp`
+* Rimuovere tutti gli SDK di .NET Core specificati nel file di rispostaRemove all .NET Core SDKs that are specified in the response file`versions.rsp`
 
   ```console
   dotnet-core-uninstall remove --sdk @versions.rsp
   ```
 
-  Il contenuto di *Versions. rsp* è il seguente:
+  Il contenuto di *versions.rsp* è il seguente:
   
   ```text
   2.2.300
   2.1.700
   ```
 
-### <a name="step-4---delete-the-nuget-fallback-folder-optional"></a>Passaggio 4: eliminare la cartella di fallback NuGet (facoltativo)
+### <a name="step-4---delete-the-nuget-fallback-folder-optional"></a>Passaggio 4 - Eliminare la cartella di fallback NuGet (facoltativo)Step 4 - Delete the NuGet fallback folder (optional)
 
-In alcuni casi non è più necessario il `NuGetFallbackFolder` e potrebbe essere opportuno eliminarlo. Per ulteriori informazioni sull'eliminazione di questa cartella, vedere [Remove the NuGetFallbackFolder](../versions/remove-runtime-sdk-versions.md#remove-the-nuget-fallback-folder).
+In alcuni casi, non `NuGetFallbackFolder` è più necessario il e potrebbe voler eliminarlo. Per ulteriori informazioni sull'eliminazione di questa cartella, vedere [Rimuovere NuGetFallbackFolder](../versions/remove-runtime-sdk-versions.md#remove-the-nuget-fallback-folder).
 
-## <a name="uninstall-the-tool"></a>Disinstalla lo strumento
+## <a name="uninstall-the-tool"></a>Disinstallare lo strumento
 
-## <a name="windowstabwindows"></a>[Windows](#tab/windows)
+## <a name="windows"></a>[Windows](#tab/windows)
 
 1. Aprire **Installazione applicazioni**.
 2. Cercare `Microsoft .NET Core SDK Uninstall Tool`.
 3. Selezionare **Disinstalla**.
 
-## <a name="macostabmacos"></a>[macOS](#tab/macos)
+## <a name="macos"></a>[Macos](#tab/macos)
 
-Eliminare il file *DotNet-Core-Uninstall. tar. gz* scaricato dalla directory in cui è stato installato. Se il contenuto di questo file è stato decompresso in un'altra directory, assicurarsi di eliminare anche tale contenuto.
+Eliminare il file *dotnet-core-uninstall.tar.gz* scaricato dalla directory in cui è stato installato. Se hai decompresso il contenuto di questo file in un'altra directory, assicurati di eliminare anche quel contenuto.
 
 ---

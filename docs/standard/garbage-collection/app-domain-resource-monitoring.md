@@ -9,10 +9,10 @@ helpviewer_keywords:
 - application domains, resource monitoring
 ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
 ms.openlocfilehash: 54e300bef1818fd08f27d7920eec68ee1f2c45bb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141387"
 ---
 # <a name="application-domain-resource-monitoring"></a>Monitoraggio delle risorse del dominio applicazione
@@ -29,7 +29,7 @@ Il monitoraggio delle risorse del dominio applicazione può essere abilitato in 
 
 Non appena il monitoraggio viene abilitato, inizia a raccogliere dati su tutti i domini applicazione nel processo. Se un dominio applicazione è stato creato prima dell'abilitazione del monitoraggio, l'accumulo dei dati inizia quando viene abilitato il monitoraggio e non quando è stato creato il dominio dell'applicazione. Una volta attivato, il monitoraggio delle risorse del dominio applicazione non può essere disabilitato.
 
-- È possibile abilitare il monitoraggio all'avvio di CLR aggiungendo l'elemento [\<appDomainResourceMonitoring >](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md) nel file di configurazione e impostando l'attributo `enabled` su `true`. Il valore `false` (predefinito) indica solo che il monitoraggio non viene abilitato all'avvio. È possibile attivarlo in un secondo momento usando uno degli altri meccanismi di attivazione.
+- È possibile abilitare ARM all'avvio di CLR aggiungendo l'elemento `enabled` `true` [ \<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md) al file di configurazione e impostando l'attributo su . Il valore `false` (predefinito) indica solo che il monitoraggio non viene abilitato all'avvio. È possibile attivarlo in un secondo momento usando uno degli altri meccanismi di attivazione.
 
 - L'host può abilitare il monitoraggio richiedendo l'interfaccia di hosting [ICLRAppDomainResourceMonitor](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md). Dopo aver ottenuto correttamente questa interfaccia, il monitoraggio viene abilitato.
 
@@ -57,7 +57,7 @@ Il monitoraggio delle risorse del dominio applicazione fornisce il tempo totale 
 
   - Eventi ETW: evento `AppDomainMemAllocated`, campo `Allocated`.
 
-- **Memoria gestita, in byte, a cui fa riferimento un dominio applicazione ed esclusa dalla Garbage Collection di blocco completa più recente**: questo numero è preciso solo dopo una Garbage Collection di blocco completa. Questo si differenzia dalle raccolte simultanee, che si verificano in background e non bloccano l'applicazione. Ad esempio, l'overload del metodo <xref:System.GC.Collect?displayProperty=nameWithType> causa una raccolta di blocco completa.
+- **Memoria gestita, in byte, a cui fa riferimento un dominio applicazione ed esclusa dalla Garbage Collection di blocco completa più recente**: questo numero è preciso solo dopo una Garbage Collection di blocco completa. Ciò è in contrasto con le raccolte simultanee, che si verificano in background e non bloccano l'applicazione. Ad esempio, <xref:System.GC.Collect?displayProperty=nameWithType> l'overload del metodo causa una raccolta completa di blocco.
 
   - API gestita: proprietà <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType>.
 
@@ -91,5 +91,5 @@ Se si usa l'API di hosting non gestita, l'host deve passare a CLR un'implementaz
 
 - <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>
 - [Interfaccia ICLRAppDomainResourceMonitor](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
-- [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)
+- [\<>appDomainResourceMonitoring](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)
 - [Eventi ETW di CLR](../../../docs/framework/performance/clr-etw-events.md)

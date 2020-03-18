@@ -3,19 +3,19 @@ title: Guide pratiche di ML.NET
 description: Informazioni su come eseguire attività specifiche per agevolare la creazione di soluzioni di intelligenza artificiale personalizzate e l'integrazione di Machine Learning nelle applicazioni .NET.
 ms.date: 03/01/2019
 ms.openlocfilehash: 4ce2de77c35062aa19449e3ba6bb3d5abd003d60
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75715660"
 ---
 # <a name="net-machine-learning-how-to-guides"></a>Guide pratiche di Machine Learning in .NET
 
 Nella sezione Guida pratica della guida di ML.NET sono disponibili le risposte alle domande più frequenti. In alcuni casi gli articoli sono presenti in più sezioni per facilitarne la lettura.
 
-## <a name="load-data"></a>Caricare i dati
+## <a name="load-data"></a>Caricare dati
 
-* [Caricare i dati da file e database SQL.](load-data-ml-net.md)
+* [Caricare dati da file e database SQL.](load-data-ml-net.md)
 
 ### <a name="prepare-the-data"></a>Preparare i dati
 
@@ -31,13 +31,13 @@ Nella sezione Guida pratica della guida di ML.NET sono disponibili le risposte a
 
 * [Calcolare le metriche per valutare la qualità di un modello.](verify-model-quality-ml-net.md)
 
-### <a name="model-explainability"></a>Comprensibilità dei modelli
+### <a name="model-explainability"></a>Spiegabilità del modello
 
 * [Determinare l'importanza delle funzionalità dei modelli con Permutation Feature Importance.](explain-machine-learning-model-permutation-feature-importance-ml-net.md)
 
 * [Usare modelli additivi generalizzati e funzioni di forma per la comprensibilità dei modelli.](use-gams-for-model-explainability.md)
 
-## <a name="run"></a>Eseguire
+## <a name="run"></a>Esegui
 
 * [Esaminare i valori dei dati intermedi durante l'elaborazione della pipeline di ML.NET.](inspect-intermediate-data-ml-net.md)
 

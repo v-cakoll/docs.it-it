@@ -17,11 +17,11 @@ helpviewer_keywords:
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 ms.openlocfilehash: c574719da9b89b468b92b042e1f2b5b10fbe3c0d
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159325"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79400491"
 ---
 # <a name="common-type-system"></a>Common Type System
 Common Type System definisce le modalità di dichiarazione, utilizzo e gestione dei tipi in Common Language Runtime e rappresenta una parte importante del supporto runtime per l'integrazione di più linguaggi. Le funzioni assolte dal sistema di tipi comuni sono le seguenti:  
@@ -38,11 +38,11 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
   
 - [Tipi in .NET](#types_in_the_net_framework)  
   
-- [Definizioni di tipo](#type_definitions)  
+- [Definizioni dei tipi](#type_definitions)  
   
-- [Membri dei tipi](#type_members)  
+- [Membri Type](#type_members)  
   
-- [Caratteristiche dei membri dei tipi](#characteristics_of_type_members)  
+- [Caratteristiche dei membri di tipo](#characteristics_of_type_members)  
   
 <a name="types_in_the_net_framework"></a>
 ## <a name="types-in-net"></a>Tipi in .NET  
@@ -75,11 +75,11 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
 |sealed|Specifica che da questo tipo non è possibile derivare un'altra classe.|  
 |implementa|Indica che la classe utilizza una o più interfacce fornendo implementazioni dei membri di interfaccia.|  
 |abstract|Indica che non è possibile creare un'istanza della classe. Per utilizzarla è necessario derivare da essa un'altra classe.|  
-|inherits|Indica che le istanze della classe possono essere utilizzate ovunque la classe sia specificata. Una classe derivata che eredita da una classe di base può utilizzare l'implementazione di qualsiasi membro pubblico fornito dalla classe di base oppure la classe derivata può eseguire l'override dell'implementazione dei membri pubblici con la propria implementazione.|  
+|eredita|Indica che le istanze della classe possono essere utilizzate ovunque la classe sia specificata. Una classe derivata che eredita da una classe di base può utilizzare l'implementazione di qualsiasi membro pubblico fornito dalla classe di base oppure la classe derivata può eseguire l'override dell'implementazione dei membri pubblici con la propria implementazione.|  
 |exported o not exported|Indica se una classe è visibile all'esterno dell'assembly in cui è definita. Questa caratteristica è applicabile unicamente alle classi di primo livello e non alle classi annidate.|  
   
 > [!NOTE]
-> Una classe può anche essere annidata in una struttura o una classe padre. Anche le classi annidate possiedono le caratteristiche dei membri. Per altre informazioni, vedere [Tipi annidati](#NestedTypes).  
+> Una classe può anche essere annidata in una struttura o una classe padre. Anche le classi annidate possiedono le caratteristiche dei membri. Per ulteriori informazioni, vedere [Tipi annidati](#NestedTypes).  
   
  I membri di classe privi di implementazione sono membri astratti. Una classe con uno o più membri astratti è essa stessa astratta e non è possibile crearne nuove istanze. Con alcuni linguaggi destinati al runtime è possibile contrassegnare una classe come astratta anche se nessuno dei relativi membri è astratto. È possibile utilizzare una classe astratta quando si desidera incapsulare un set di base di funzionalità che le classi derivate possono ereditare oppure sottoporre a override nelle circostanze appropriate. Alle classi che non sono astratte viene fatto riferimento come a classi concrete.  
   
@@ -109,7 +109,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
   
 - Con un'enumerazione non è possibile definire proprietà o eventi.  
   
-- Le enumerazioni non possono essere generiche, a meno che non siano generiche solo perché annidate all'interno di un tipo generico. In altre parole, un'enumerazione non può disporre di parametri dei tipi propri.  
+- Le enumerazioni non possono essere generiche, a meno che non siano generiche solo perché annidate all'interno di un tipo generico. In altre parole, un'enumerazione non può disporre di parametri di tipo propri.  
   
     > [!NOTE]
     > I tipi annidati, incluse le enumerazioni, creati con Visual Basic, C# e C++ comprendono i parametri di tutti i tipi generici che li comprendono e sono pertanto generici anche se non dispongono di propri parametri di tipo. Per ulteriori informazioni, vedere "Tipi annidati" nell'argomento di riferimento <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>.  
@@ -215,7 +215,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
   
  La maggior parte dei linguaggi impone tuttavia restrizioni aggiuntive per i nomi dei tipi. Poiché tutti i confronti vengono effettuati byte per byte, sono indipendenti dalle impostazioni locali e fanno distinzione tra maiuscole e minuscole.  
   
- Sebbene un tipo possa fare riferimento a tipi di altri moduli e assembly, deve essere definito completamente all'interno di un modulo .NET. A seconda del supporto del compilatore, tuttavia, può essere diviso in più file di codice sorgente. I nomi dei tipi devono essere univoci solo all'interno di uno spazio dei nomi. Per identificare completamente un tipo, il relativo nome deve essere qualificato dallo spazio dei nomi che contiene l'implementazione del tipo.  
+ Sebbene un tipo possa fare riferimento a tipi di altri moduli e assembly, deve essere definito completamente all'interno di un modulo .NET. A seconda del supporto del compilatore, tuttavia, può essere suddiviso in più file di codice sorgente. I nomi dei tipi devono essere univoci solo all'interno di uno spazio dei nomi. Per identificare completamente un tipo, il relativo nome deve essere qualificato dallo spazio dei nomi che contiene l'implementazione del tipo.  
   
 ### <a name="base-types-and-interfaces"></a>Tipi base e interfacce  
  Un tipo può ereditare valori e comportamenti da un altro tipo. Common Type System non consente ai tipi di ereditare da più di un tipo base.  
@@ -226,7 +226,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
 ## <a name="type-members"></a>Membri dei tipi  
  Il runtime consente di definire membri del tipo per specificare il comportamento e lo stato di un tipo. I membri dei tipi includono gli elementi seguenti:  
   
-- [Fields](#Fields)  
+- [Campi](#Fields)  
   
 - [Proprietà](#Properties)  
   
@@ -234,7 +234,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
   
 - [Costruttori](#Constructors)  
   
-- [Eventi](#Events)  
+- [Events](#Events)  
   
 - [Tipi annidati](#NestedTypes)  
   
@@ -276,10 +276,10 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
   
 <a name="Events"></a>
 ### <a name="events"></a>Eventi  
- Un evento definisce una situazione a cui è possibile fornire risposta e metodi per la sottoscrizione, l'annullamento della sottoscrizione e la generazione dell'evento. Gli eventi sono spesso utilizzati per indicare modifiche di stato a tipi diversi. Per ulteriori informazioni, vedi [Eventi](../../../docs/standard/events/index.md).  
+ Un evento definisce una situazione a cui è possibile fornire risposta e metodi per la sottoscrizione, l'annullamento della sottoscrizione e la generazione dell'evento. Gli eventi sono spesso utilizzati per indicare modifiche di stato a tipi diversi. Per altre informazioni, vedere [Eventi](../../../docs/standard/events/index.md).  
   
 <a name="NestedTypes"></a>
-### <a name="nested-types"></a>Tipi nidificati  
+### <a name="nested-types"></a>Tipi annidati  
  I tipi annidati sono tipi membri di altri tipi. I tipi annidati devono essere strettamente collegati ai rispettivi tipi contenitori e non devono essere utilizzati come tipi generici. I tipi annidati risultano utili quando il tipo dichiarante utilizza e crea istanze del tipo annidato e quando il loro utilizzo non viene esposto in membri pubblici.  
   
  Per alcuni sviluppatori i tipi annidati possono generare confusione e dovrebbero essere visibili pubblicamente solo in casi di assoluta necessità. In una libreria progettata correttamente è improbabile che gli sviluppatori debbano utilizzare tipi annidati per creare istanze di oggetti o dichiarare variabili.  
@@ -298,7 +298,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
 |valore letterale|Campi|Il valore assegnato al campo è un valore fisso, noto in fase di compilazione, di un tipo di valore incorporato. Ai campi literal viene a volte fatto riferimento come a costanti.|  
 |newslot o override|Tutti|Definisce il modo in cui il membro interagisce con membri ereditati aventi la stessa firma:<br /><br /> newslot<br /> Nasconde i membri ereditati aventi la stessa firma.<br /><br /> override<br /> Sostituisce la definizione di un metodo virtuale ereditato.<br /><br /> Il valore predefinito è newslot.|  
 |Statica|Campi, metodi, proprietà ed eventi|Il membro appartiene al tipo sul quale viene definito, non a un'istanza specifica del tipo. Il membro esiste anche se non viene creata un'istanza del tipo ed è condiviso tra tutte le istanze del tipo.|  
-|virtuali|Metodi, proprietà ed eventi|Il metodo può essere implementato da un tipo derivato e può essere richiamato in modo statico o dinamico. Se viene utilizzata la chiamata dinamica, il tipo dell'istanza che effettua la chiamata in fase di esecuzione, e non il tipo noto in fase di compilazione, determina l'implementazione del metodo chiamata. Per richiamare un metodo virtuale in modo statico, potrebbe essere necessario eseguire il cast della variabile in un tipo che utilizza la versione desiderata del metodo.|  
+|virtuale|Metodi, proprietà ed eventi|Il metodo può essere implementato da un tipo derivato e può essere richiamato in modo statico o dinamico. Se viene utilizzata la chiamata dinamica, il tipo dell'istanza che effettua la chiamata in fase di esecuzione, e non il tipo noto in fase di compilazione, determina l'implementazione del metodo chiamata. Per richiamare un metodo virtuale in modo statico, potrebbe essere necessario eseguire il cast della variabile in un tipo che utilizza la versione desiderata del metodo.|  
   
 ### <a name="overloading"></a>Overload  
  Ciascun membro di tipo dispone di una firma univoca. La firma di un metodo è costituita dal nome del metodo e da un elenco di parametri, ovvero l'ordine e i tipi degli argomenti del metodo. All'interno di un tipo è possibile definire più metodi con lo stesso nome, purché la relativa firma sia diversa. Quando vengono definiti due o più metodi con lo stesso nome si dice che il metodo è stato sottoposto a overload. In <xref:System.Char?displayProperty=nameWithType>, ad esempio, il metodo <xref:System.Char.IsDigit%2A> è sottoposto a overload. Un metodo accetta un oggetto <xref:System.Char>. L'altro metodo accetta un oggetto <xref:System.String> e un oggetto <xref:System.Int32>.  

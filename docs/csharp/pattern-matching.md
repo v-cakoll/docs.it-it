@@ -4,12 +4,12 @@ description: Informazioni sulle espressioni di criteri di ricerca in C#
 ms.date: 04/10/2019
 ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: ffa59d073ad891fd93e0f8d7ad8889de0499b106
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 0c302499543c90bd01427e2791435968d580f644
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78241013"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170384"
 ---
 # <a name="pattern-matching"></a>Criteri di ricerca
 
@@ -47,7 +47,7 @@ In questa versione aggiornata l'espressione `is` esegue il test della variabile 
 
 Le regole del linguaggio per i criteri di ricerca consentono di evitare un uso errato dei risultati di un'espressione di confronto. Nell'esempio precedente le variabili `s`, `c` e `r` sono nell'ambito e assegnate definitivamente solo quando le relative espressioni di criteri di ricerca hanno risultati `true`. Se si tenta di usare una variabile in un altro percorso, il codice genera errori del compilatore.
 
-Vengono ora esaminate entrambe le regole nel dettaglio iniziando con l'ambito. La variabile `c` è nell'ambito solo nel ramo `else` della prima istruzione `if`. La variabile `s` è nell'ambito nel metodo `ComputeAreaModernIs`. Ciò accade perché ogni ramo di un'istruzione `if` definisce un ambito separato per le variabili. Tuttavia, l'istruzione `if` stessa non esegue questa operazione. Ciò significa che le variabili dichiarate nell'istruzione `if` si trovano nello stesso ambito dell'istruzione `if` (in questo caso il metodo). Questo comportamento non è specifico per i criteri di ricerca, ma è il comportamento definito per gli ambiti delle variabili e le istruzioni `if` e `else`.
+Vengono ora esaminate entrambe le regole nel dettaglio iniziando con l'ambito. La variabile `c` è nell'ambito solo nel ramo `else` della prima istruzione `if`. La variabile `s` è nell'ambito nel metodo `ComputeAreaModernIs`. Ciò accade perché ogni ramo di un'istruzione `if` definisce un ambito separato per le variabili. Tuttavia, l'istruzione `if` stessa non esegue questa operazione. Ciò significa che `if` le variabili dichiarate `if` nell'istruzione si trovano nello stesso ambito dell'istruzione (il metodo in questo caso). Questo comportamento non è specifico dei criteri di ricerca, ma `if` `else` è il comportamento definito per gli ambiti e le istruzioni e gli ambiti delle variabili.
 
 Le variabili `c` e `s` vengono assegnate quando le rispettive istruzioni `if` sono vere a causa del meccanismo di assegnazione definitiva quando sono vere.
 
@@ -59,7 +59,7 @@ Queste regole comportano l'impossibilità di accedere accidentalmente al risulta
 
 ## <a name="using-pattern-matching-switch-statements"></a>Uso di istruzioni `switch` di criteri di ricerca
 
-È possibile sia necessario in seguito supportare altri tipi di forme. Man mano che aumenta il numero di condizioni da testare, l'uso di espressioni di criteri di ricerca `is` può risultare troppo complesso. Oltre a richiedere istruzioni `if` in ogni tipo da controllare, le espressioni `is` sono limitate all'esecuzione di test se l'input corrisponde a un singolo tipo. In questo caso, le espressioni di criteri di ricerca `switch` risultano una scelta migliore. 
+È possibile sia necessario in seguito supportare altri tipi di forme. Man mano che aumenta il numero di condizioni da testare, l'uso di espressioni di criteri di ricerca `is` può risultare troppo complesso. Oltre a richiedere istruzioni `if` in ogni tipo da controllare, le espressioni `is` sono limitate all'esecuzione di test se l'input corrisponde a un singolo tipo. In questo caso, le espressioni di criteri di ricerca `switch` risultano una scelta migliore.
 
 L'istruzione `switch` tradizionale era un'espressione di criteri che supportava i criteri costanti.
 Era possibile confrontare una variabile con qualsiasi costante in un'istruzione `case`:
@@ -100,7 +100,7 @@ Dopo aver aggiunto le forme con area 0, si aggiungono due tipi di forme aggiunti
 
 [!code-csharp[AddRectangleAndTriangle](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#09_AddRectangleAndTriangle "Add rectangle and triangle")]
 
- Questo set di modifiche aggiunge etichette `case` per il caso degenere ed etichette e blocchi per ogni nuova forma. 
+ Questo set di modifiche aggiunge etichette `case` per il caso degenere ed etichette e blocchi per ogni nuova forma.
 
 È possibile infine aggiungere un case `null` per assicurarsi che l'argomento non sia `null`:
 
@@ -139,4 +139,4 @@ Confrontare il codice dell'esempio con la progettazione che deriverebbe dalla cr
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Esercitazione: uso delle funzionalità di criteri di ricerca per estendere i tipi di dati](tutorials/pattern-matching.md)
+- [Esercitazione: Utilizzo delle funzionalità di criteri di ricerca per estendere i tipi di datiTutorial: Using pattern matching features to extend data types](tutorials/pattern-matching.md)

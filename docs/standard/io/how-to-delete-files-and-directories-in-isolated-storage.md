@@ -18,10 +18,10 @@ helpviewer_keywords:
 - deleting directories within isolated stage file
 ms.assetid: 8fcc0dea-435b-4d40-ba4d-ba056265c202
 ms.openlocfilehash: ec4de3e3a139cfcf66f1f6252c03c467f4ccfbc5
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75707857"
 ---
 # <a name="how-to-delete-files-and-directories-in-isolated-storage"></a>Procedura: Eliminare file e directory nello spazio di memorizzazione isolato
@@ -41,4 +41,4 @@ ms.locfileid: "75707857"
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile?displayProperty=nameWithType>
-- [Spazio di memorizzazione isolato](../../../docs/standard/io/isolated-storage.md)
+- [Archiviazione isolata](../../../docs/standard/io/isolated-storage.md)

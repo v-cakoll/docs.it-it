@@ -10,19 +10,19 @@ helpviewer_keywords:
 - garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
 ms.openlocfilehash: d5646c4969c95350ab4cd63b16f6f99ffba3a4ec
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73131540"
 ---
 # <a name="garbage-collection-notifications"></a>Notifiche di Garbage Collection
-In alcune situazioni un'operazione completa di Garbage Collection (cioè di generazione 2) eseguita da Common Language Runtime può influire negativamente sulle prestazioni. Questo può costituire un problema in particolare con i server che elaborano volumi elevati di richieste. in questo caso, un Garbage Collection lungo può causare un timeout della richiesta. Per evitare che si verifichi una raccolta completa durante un periodo critico, è possibile ricevere una notifica del raggiungimento di un Garbage Collection completo e quindi eseguire un'azione per reindirizzare il carico di lavoro a un'altra istanza del server. È anche possibile indurre manualmente una raccolta, a condizione che l'istanza del server corrente non sia necessaria per elaborare le richieste.  
+In alcune situazioni un'operazione completa di Garbage Collection (cioè di generazione 2) eseguita da Common Language Runtime può influire negativamente sulle prestazioni. Questo può essere un problema in particolare con i server che elaborano grandi volumi di richieste; In questo caso, una lunga garbage collection può causare un timeout della richiesta. Per evitare che si verifichi una raccolta completa durante un periodo critico, è possibile ricevere una notifica che si sta avvicinando a un'operazione completa di Garbage Collection e quindi intervenire per reindirizzare il carico di lavoro a un'altra istanza del server. È anche possibile indurre manualmente una raccolta, a condizione che l'istanza del server corrente non sia necessaria per elaborare le richieste.  
   
  Il metodo <xref:System.GC.RegisterForFullGCNotification%2A> registra la generazione di una notifica quando il runtime rileva che sta per essere eseguita una Garbage Collection completa. Esistono due parti per questa notifica: quando sta per essere eseguita la Garbage Collection completa e quando la Garbage Collection completa è terminata.  
   
 > [!WARNING]
-> Le notifiche vengono generate solo in caso di blocco delle operazioni di Garbage Collection. Quando l'elemento di configurazione [\<gcConcurrent>](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) è abilitato, le operazioni di Garbage Collection in background non genereranno notifiche.  
+> Le notifiche vengono generate solo in caso di blocco delle operazioni di Garbage Collection. Quando [ \<](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) l'elemento di configurazione gcConcurrent>è abilitato, le operazioni di Garbage Collection in background non genereranno notifiche.  
   
  Per determinare quando è stata generata una notifica, usare i metodi <xref:System.GC.WaitForFullGCApproach%2A> e <xref:System.GC.WaitForFullGCComplete%2A>. Questi metodi vengono in genere usati in un ciclo `while` per ottenere continuamente un'enumerazione <xref:System.GCNotificationStatus> che indica lo stato della notifica. Se tale valore è <xref:System.GCNotificationStatus.Succeeded>, è possibile procedere nel modo seguente:  
   

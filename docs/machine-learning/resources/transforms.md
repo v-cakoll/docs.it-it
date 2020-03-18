@@ -1,15 +1,15 @@
 ---
-title: Trasformazioni dati
+title: Trasformazioni di dati
 description: Esplorare i componenti di progettazione delle funzionalità supportati in ML.NET.
 ms.date: 04/02/2019
 ms.openlocfilehash: ca410b475c556db5ad4c3862fb79755b455d6830
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739595"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398923"
 ---
-# <a name="data-transformations"></a>Trasformazioni dati
+# <a name="data-transformations"></a>Trasformazioni di dati
 
 Le trasformazioni dati vengono usate per:
 
@@ -25,7 +25,7 @@ Altre trasformazioni dati non richiedono dati di training. Ad esempio, la trasfo
 
 ## <a name="column-mapping-and-grouping"></a>Mapping e raggruppamento di colonne
 
-| Transform | Definizione |
+| Trasformare | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate%2A> | Concatenare una o più colonne di input in una nuova colonna di output |
 | <xref:Microsoft.ML.TransformExtensionsCatalog.CopyColumns%2A> | Copiare e rinominare una o più colonne di input |
@@ -34,7 +34,7 @@ Altre trasformazioni dati non richiedono dati di training. Ad esempio, la trasfo
 
 ## <a name="normalization-and-scaling"></a>Normalizzazione e ridimensionamento
 
-| Transform | Definizione |
+| Trasformare | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> | Sottrarre la media (dei dati di training) e dividere per la varianza (dei dati di training) |
 | <xref:Microsoft.ML.NormalizationCatalog.NormalizeLogMeanVariance%2A> | Normalizzare in base al logaritmo dei dati di training |
@@ -46,7 +46,7 @@ Altre trasformazioni dati non richiedono dati di training. Ad esempio, la trasfo
 
 ## <a name="conversions-between-data-types"></a>Conversioni tra tipi di dati
 
-| Transform | Definizione |
+| Trasformare | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.ConversionsExtensionsCatalog.ConvertType%2A> | Convertire il tipo di una colonna di input in un nuovo tipo |
 | <xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValue%2A> | Eseguire il mapping dei valori alle chiavi (categorie) in base al dizionario dei mapping fornito |
@@ -58,7 +58,7 @@ Altre trasformazioni dati non richiedono dati di training. Ad esempio, la trasfo
 
 ## <a name="text-transformations"></a>Trasformazioni di testo
 
-| Transform | Definizione |
+| Trasformare | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.TextCatalog.FeaturizeText%2A> | Trasformare una colonna di testo in una matrice float di conteggi normalizzati di n-grammi e char-grammi |
 | <xref:Microsoft.ML.TextCatalog.TokenizeIntoWords%2A> | Suddividere una o più colonne di testo in singole parole |
@@ -75,7 +75,7 @@ Altre trasformazioni dati non richiedono dati di training. Ad esempio, la trasfo
 
 ## <a name="image-transformations"></a>Trasformazioni di immagini
 
-| Transform | Definizione |
+| Trasformare | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToGrayscale%2A> | Convertire un'immagine in gradazioni di grigio |
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToImage%2A> | Convertire un vettore di pixel in <xref:Microsoft.ML.Transforms.Image.ImageDataViewType> |
@@ -86,14 +86,14 @@ Altre trasformazioni dati non richiedono dati di training. Ad esempio, la trasfo
 
 ## <a name="categorical-data-transformations"></a>Trasformazioni dati categoriche
 
-| Transform | Definizione |
+| Trasformare | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.CategoricalCatalog.OneHotEncoding%2A> | Convertire una o più colonne di testo in vettori con codifica [one-hot](https://en.wikipedia.org/wiki/One-hot) |
 | <xref:Microsoft.ML.CategoricalCatalog.OneHotHashEncoding%2A> | Convertire una o più colonne di testo in vettori con codifica one-hot basati su hash |
 
 ## <a name="time-series-data-transformations"></a>Trasformazioni dati di serie temporali
 
-| Transform | Definizione |
+| Trasformare | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.TimeSeriesCatalog.DetectAnomalyBySrCnn%2A> | Rilevare anomalie nei dati delle serie temporali di input usando l'algoritmo SR (Spectral Residual) |
 | <xref:Microsoft.ML.TimeSeriesCatalog.DetectChangePointBySsa%2A> | Rilevare punti di modifica nei dati delle serie temporali usando l'analisi SSA (Singular Spectrum Analysis) |
@@ -104,34 +104,34 @@ Altre trasformazioni dati non richiedono dati di training. Ad esempio, la trasfo
 
 ## <a name="missing-values"></a>Valori mancanti
 
-| Transform | Definizione |
+| Trasformare | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.ExtensionsCatalog.IndicateMissingValues%2A> | Creare una nuova colonna di output booleana, il cui valore è true quando manca il valore nella colonna di input |
 | <xref:Microsoft.ML.ExtensionsCatalog.ReplaceMissingValues%2A> | Creare una nuova colonna di output, il cui valore è impostato su un valore predefinito se manca il valore dalla colonna di input, e il valore di input in caso contrario |
 
-## <a name="feature-selection"></a>Selezione funzionalità
+## <a name="feature-selection"></a>Selezione delle funzionalità
 
-| Transform | Definizione |
+| Trasformare | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.FeatureSelectionCatalog.SelectFeaturesBasedOnCount%2A> | Selezionare le caratteristiche i cui valori non predefiniti sono superiori a una soglia |
 | <xref:Microsoft.ML.FeatureSelectionCatalog.SelectFeaturesBasedOnMutualInformation%2A> | Selezionare le caratteristiche da cui i dati nella colonna etichetta dipendono maggiormente |
 
 ## <a name="feature-transformations"></a>Trasformazioni di caratteristiche
 
-| Transform | Definizione |
+| Trasformare | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.KernelExpansionCatalog.ApproximatedKernelMap%2A> | Eseguire il mapping di ogni vettore di input a uno spazio di caratteristiche dimensionali inferiore, dove i prodotti interni approssimano una funzione kernel, in modo che le caratteristiche possano essere usate come input per gli algoritmi lineari |
 | <xref:Microsoft.ML.PcaCatalog.ProjectToPrincipalComponents%2A> | Ridurre le dimensioni del vettore di caratteristiche di input applicando l'algoritmo PCA (Principal Component Analysis) |
 
 ## <a name="explainability-transformations"></a>Trasformazioni di interpretabilità
 
-| Transform | Definizione |
+| Trasformare | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.ExplainabilityCatalog.CalculateFeatureContribution%2A> | Calcolare i punteggi dei contributi per ogni elemento di un vettore di caratteristiche |
 
 ## <a name="calibration-transformations"></a>Trasformazioni di calibrazione
 
-| Transform | Definizione |
+| Trasformare | Definizione |
 | --- | --- |
 |<xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Platt%28System.String%2CSystem.String%2CSystem.String%29> | Trasformare un punteggio non elaborato di un classificatore binario in una probabilità di classe usando la regressione logistica con parametri stimati in base ai dati di training |
 | <xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Platt%28System.Double%2CSystem.Double%2CSystem.String%29> | Trasformare un punteggio non elaborato di un classificatore binario in una probabilità di classe usando la regressione logistica con parametri fissi |
@@ -140,13 +140,13 @@ Altre trasformazioni dati non richiedono dati di training. Ad esempio, la trasfo
 
 ## <a name="deep-learning-transformations"></a>Trasformazioni di Deep Learning
 
-| Transform | Definizione |
+| Trasformare | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.OnnxCatalog.ApplyOnnxModel%2A> | Trasformare i dati di input con un modello ONNX importato |
 | <xref:Microsoft.ML.TensorflowCatalog.LoadTensorFlowModel%2A> | Trasformare i dati di input con un modello TensorFlow importato |
 
 ## <a name="custom-transformations"></a>Trasformazioni personalizzate
 
-| Transform | Definizione |
+| Trasformare | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.CustomMappingCatalog.CustomMapping%2A> | Trasformare le colonne esistenti in colonne nuove con un mapping definito dall'utente |

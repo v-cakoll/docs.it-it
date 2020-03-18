@@ -12,10 +12,10 @@ helpviewer_keywords:
 - numbers [.NET Framework], format strings
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
 ms.openlocfilehash: bc3c4b75c484274c214141d8fbfcf8ac592b0b99
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73131985"
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a>Procedura: aggiungere zeri iniziali a un numero
@@ -83,7 +83,7 @@ L'esempio seguente formatta diversi valori numerici con gli zeri iniziali. Di co
 
     1. In questo caso, determinare il numero di caratteri alla sinistra del separatore decimale.
 
-         oppure
+         -oppure-
 
          In caso contrario, determinare la lunghezza della stringa.
 

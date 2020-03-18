@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
 ms.openlocfilehash: 50b192d5a7416a982f41d0c3ac13e9c1bfe3397c
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77673355"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399819"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Classi e metodi parziali (Guida per programmatori C#)
 
@@ -60,7 +60,7 @@ Gli elementi seguenti vengono uniti da tutte le definizioni di tipi parziali:
 
 - attributi class
 
-- membri
+- Membri di
 
 Si considerino ad esempio le dichiarazioni seguenti:
 
@@ -90,17 +90,17 @@ Quando si usano le definizioni parziali di classi è necessario rispettare diver
 
 - Le parole chiave riportate di seguito sono facoltative in una definizione di tipi parziali. Tuttavia, se presenti in una definizione, tali parole chiave non possono essere in conflitto con quelle specificate in un'altra definizione parziale per lo stesso tipo:
 
-  - [public](../../language-reference/keywords/public.md)
+  - [pubblico](../../language-reference/keywords/public.md)
 
-  - [private](../../language-reference/keywords/private.md)
+  - [Privato](../../language-reference/keywords/private.md)
 
-  - [protected](../../language-reference/keywords/protected.md)
+  - [Protetto](../../language-reference/keywords/protected.md)
 
-  - [internal](../../language-reference/keywords/internal.md)
+  - [Interno](../../language-reference/keywords/internal.md)
 
-  - [abstract](../../language-reference/keywords/abstract.md)
+  - [astratto](../../language-reference/keywords/abstract.md)
 
-  - [sealed](../../language-reference/keywords/sealed.md)
+  - [Sigillato](../../language-reference/keywords/sealed.md)
 
   - classi base
 
@@ -165,7 +165,7 @@ partial void onNameChanged()
 
 - È possibile creare un [delegato](../../language-reference/builtin-types/reference-types.md) di un metodo parziale che è stato definito e implementato, ma non di un metodo parziale che è stato solo definito.
 
-## <a name="c-language-specification"></a>Specifica del linguaggio C#
+## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
 Per altre informazioni, vedere [Tipi parziali](~/_csharplang/spec/classes.md#partial-types) in [Specifica del linguaggio C#](/dotnet/csharp/language-reference/language-specification/introduction). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
 
@@ -175,4 +175,4 @@ Per altre informazioni, vedere [Tipi parziali](~/_csharplang/spec/classes.md#par
 - [Classi](./classes.md)
 - [Tipi di struttura](../../language-reference/builtin-types/struct.md)
 - [Interfacce](../interfaces/index.md)
-- [partial (tipo)](../../language-reference/keywords/partial-type.md)
+- [partial (Tipo)](../../language-reference/keywords/partial-type.md)

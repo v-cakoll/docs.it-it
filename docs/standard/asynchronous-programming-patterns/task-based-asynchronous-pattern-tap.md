@@ -13,10 +13,10 @@ helpviewer_keywords:
 - .NET Framework, asynchronous design patterns
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
 ms.openlocfilehash: 89c486618729c334bf74f0a1f4f9dd1b3cee8b0e
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78158168"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>Modello asincrono basato su attività (TAP)
@@ -193,5 +193,5 @@ Public MethodNameAsync(…, cancellationToken As CancellationToken,
 |-----------|-----------------|  
 |[Modelli di programmazione asincrona](../../../docs/standard/asynchronous-programming-patterns/index.md)|Vengono illustrati i tre modelli per eseguire le operazioni asincrone: il modello asincrono basato su attività (TAP), il modello di programmazione asincrono (APM) e il modello asincrono basato su eventi (EAP).|  
 |[Implementazione del modello asincrono basato su attività](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)|Vengono descritti i tre modi per implementare il modello asincrono basato su attività (TAP): tramite i compilatori C# e Visual Basic in Visual Studio, manualmente oppure mediante una combinazione dei primi due.|  
-|[Utilizzo del modello asincrono basato su attività](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)|Viene descritto come usare le attività e i callback per ottenere l'attesa senza blocchi.|  
+|[Consuming the Task-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)|Viene descritto come usare le attività e i callback per ottenere l'attesa senza blocchi.|  
 |[Interoperabilità con altri tipi e modelli asincroni](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)|Viene descritto come usare il modello asincrono basato su attività (TAP) per implementare il modello di programmazione asincrono (APM) e il modello asincrono basato su eventi (EAP).|

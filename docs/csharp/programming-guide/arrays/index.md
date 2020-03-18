@@ -6,15 +6,15 @@ helpviewer_keywords:
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
 ms.openlocfilehash: bbabc84c144e5b3415c19f346b890782e251662c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75715061"
 ---
 # <a name="arrays-c-programming-guide"></a>Matrici (Guida per programmatori C#)
 
-È possibile archiviare più variabili dello stesso tipo in una struttura di dati a matrice. Una matrice viene dichiarata specificando il tipo degli elementi. Se si desidera che la matrice memorizzi elementi di qualsiasi tipo, è possibile specificare `object` come tipo. Nel sistema di tipi unificato di C#, tutti i tipi, predefiniti e definiti dall'utente, i tipi riferimento e i tipi valore ereditano direttamente o indirettamente da <xref:System.Object>.
+È possibile archiviare più variabili dello stesso tipo in una struttura di dati a matrice. Una matrice viene dichiarata specificando il tipo degli elementi. Se si desidera che la matrice memorizzi `object` elementi di qualsiasi tipo, è possibile specificare come tipo. Nel sistema di tipi unificato di C#, tutti i tipi, predefiniti e definiti dall'utente, i tipi riferimento e i tipi valore ereditano direttamente o indirettamente da <xref:System.Object>.
 
 ```csharp
 type[] arrayName;
@@ -51,4 +51,4 @@ Le matrici hanno le proprietà seguenti:
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori C#](../index.md)
-- [raccolte](../concepts/collections.md)
+- [Raccolte](../concepts/collections.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - tasks, creating pre-computed
 ms.assetid: a73eafa2-1f49-4106-a19e-997186029b58
 ms.openlocfilehash: f5d2a70685fe0401d0219b99ada6936ac04691f2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73123134"
 ---
 # <a name="how-to-create-pre-computed-tasks"></a>Procedura: Creare attività precalcolate
@@ -28,4 +28,4 @@ In questo documento viene descritto come utilizzare il metodo <xref:System.Threa
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Programmazione asincrona basata su attività](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)
+- [Programmazione asincrona basata su attivitàTask-based Asynchronous Programming](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)

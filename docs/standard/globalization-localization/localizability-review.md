@@ -17,10 +17,10 @@ helpviewer_keywords:
 - localizing resources
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
 ms.openlocfilehash: b286bdd2c5d7b03a0a2b5f94478e252da6cd0ae2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73120854"
 ---
 # <a name="localizability-review"></a>Revisione della localizzabilità
@@ -38,7 +38,7 @@ L'analisi della localizzabilità è costituita dai tre controlli seguenti:
 <a name="global"></a>
 ## <a name="implement-globalization-recommendations"></a>Implementare le raccomandazioni per la globalizzazione
 
-Se l'applicazione è stata progettata e sviluppata pensando alla localizzazione e se sono stati seguiti i consigli forniti nell'articolo [Globalizzazione](../../../docs/standard/globalization-localization/globalization.md), la revisione della localizzabilità sarà principalmente un passaggio di controllo di qualità. In caso contrario, in questa fase sarà necessario rivedere e implementare le raccomandazioni per la [globalizzazione](../../../docs/standard/globalization-localization/globalization.md) e correggere gli errori nel codice sorgente che impediscono la localizzazione.
+Se l'applicazione è stata progettata e sviluppata pensando alla localizzazione e se sono stati seguiti i consigli forniti nell'articolo [Globalizzazione](../../../docs/standard/globalization-localization/globalization.md), la revisione della localizzabilità sarà principalmente un passaggio di controllo di qualità. In caso contrario, durante questa fase è necessario esaminare e implementare i suggerimenti per la [globalizzazione](../../../docs/standard/globalization-localization/globalization.md) e correggere gli errori nel codice sorgente che impediscono la localizzazione.
 
 <a name="culture"></a>
 ## <a name="handle-culture-sensitive-features"></a>Gestire le funzionalità dipendenti dalle impostazioni cultura
@@ -59,7 +59,7 @@ Se l'applicazione è stata progettata e sviluppata pensando alla localizzazione 
    [!code-vb[Conceptual.Localizability#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.localizability/vb/ismetric1.vb#1)]
 
 <a name="test"></a>
-## <a name="test-your-application"></a>Eseguire il test dell'applicazione
+## <a name="test-your-application"></a>Testare l'applicazione
 
 Prima di localizzare l'applicazione, è necessario testarla utilizzando i dati internazionali in versioni internazionali del sistema operativo. Sebbene la maggior parte dell'interfaccia utente non sarà localizzata in questa fase, sarà possibile rilevare problemi come i seguenti:
 

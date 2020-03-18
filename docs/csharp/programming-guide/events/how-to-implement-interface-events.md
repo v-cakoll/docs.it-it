@@ -1,18 +1,18 @@
 ---
-title: Come implementare gli eventi di interfaccia C# -Guida alla programmazione
+title: Come implementare gli eventi di interfaccia - Guida per programmatori C
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: b84b96245310bce557bcd3865e41cf152e7ae9df
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8c0d221ef1272a43e2682ef2af3fa37d2d12d35e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712338"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167480"
 ---
-# <a name="how-to-implement-interface-events-c-programming-guide"></a>Come implementare gli eventi di interfacciaC# (Guida per programmatori)
+# <a name="how-to-implement-interface-events-c-programming-guide"></a>Come implementare gli eventi di interfaccia (Guida per programmatori C
 Un'[interfaccia](../../language-reference/keywords/interface.md) consente di dichiarare un [evento](../../language-reference/keywords/event.md). Nell'esempio seguente viene illustrato come implementare eventi di interfaccia in una classe. Le regole sono le stesse usate per l'implementazione di qualsiasi metodo di interfaccia o proprietà.  
   
 ## <a name="to-implement-interface-events-in-a-class"></a>Per implementare eventi di interfaccia in una classe  
@@ -26,7 +26,7 @@ namespace ImplementInterfaceEvents
     {  
         event EventHandler ShapeChanged;  
     }  
-    public class MyEventArgs : EventArgs   
+    public class MyEventArgs : EventArgs
     {  
         // class members  
     }  
@@ -39,7 +39,7 @@ namespace ImplementInterfaceEvents
 
             OnShapeChanged(new MyEventArgs(/*arguments*/));  
 
-            // or do something here after the event.   
+            // or do something here after the event.
         }  
         protected virtual void OnShapeChanged(MyEventArgs e)  
         {  
@@ -60,7 +60,7 @@ Fornendo funzioni di accesso personalizzate, è possibile specificare se i due e
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori C#](../index.md)
-- [Eventi](./index.md)
+- [Events](./index.md)
 - [Delegati](../delegates/index.md)
-- [Implementazione esplicita dell'interfaccia](../interfaces/explicit-interface-implementation.md)
+- [Implementazione esplicita dell'interfacciaExplicit Interface Implementation](../interfaces/explicit-interface-implementation.md)
 - [Come generare eventi di classe base nelle classi derivate](./how-to-raise-base-class-events-in-derived-classes.md)

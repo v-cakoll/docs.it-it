@@ -3,10 +3,10 @@ title: Progettazione di convalide nel livello del modello di dominio
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Informazioni sui concetti chiave delle convalide del modello di dominio.
 ms.date: 10/08/2018
 ms.openlocfilehash: 98ccc5df84c9f6f402ecbee83b077c806d6a76fc
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75899673"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>Progettare convalide nel livello del modello di dominio
@@ -61,7 +61,7 @@ Una volta chiarita la differenza concettuale, è possibile comunque usare le ann
 
 È ancora possibile implementare la convalida personalizzata nella classe entità con le annotazioni dei dati e il metodo `IValidatableObject.Validate`, eseguendo l'override del metodo SaveChanges di DbContext.
 
-È possibile visualizzare un esempio di implementazione della convalida delle entità `IValidatableObject` in [questo commento in GitHub](https://github.com/dotnet/efcore/issues/3680#issuecomment-155502539). Questo esempio non esegue convalide basate su attributi, ma dovrebbe essere facile da implementare usando la reflection nella stessa sostituzione.
+È possibile visualizzare un esempio di implementazione della convalida delle entità `IValidatableObject` in [questo commento in GitHub](https://github.com/dotnet/efcore/issues/3680#issuecomment-155502539). Questo esempio non esegue convalide basate su attributi, ma devono essere facili da implementare usando la reflection nello stesso override.
 
 Dal punto di vista di DDD, tuttavia, è consigliabile mantenere un modello di dominio molto semplice tramite l'uso di eccezioni nei metodi di comportamento dell'entità o tramite l'implementazione degli schemi Specification e Notification per applicare le regole di convalida.
 
@@ -85,27 +85,27 @@ L'uso della convalida dei campi con le annotazioni dei dati, ad esempio, consent
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Rachel Appel. Introduzione alla convalida del modello in ASP.NET Core MVC** \
+- **Rachel Appel. Introduzione alla convalida del modello in ASP.NET Core MVCIntroduction to model validation in ASP.NET Core MVC** \
   <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
 
-- **Rick Anderson. Aggiunta** di \ di convalida
+- **Rick Anderson. Aggiunta della convalida** \
   <https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation>
 
-- **Martin Fowler. Sostituzione della generazione di eccezioni con la notifica nelle convalide** \
+- **Martin Fowler. Sostituzione delle eccezioni di generazione con la notifica nelle convalideReplacing Throwing Exceptions with Notification in Validations** \
   <https://martinfowler.com/articles/replaceThrowWithNotification.html>
 
-- **Specification and Notification Patterns** \ (Schema Specification e Notification)\
+- **Specifiche e modelli di notifica** \
   <https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns>
 
-- **Gorodinski Lev. Convalida in progettazione basata su domini (DDD)**  \
+- **Lev Gorodinski. Convalida nella progettazione basata su dominio (DDD)Validation in Domain-Driven Design (DDD)** \
   <http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/>
 
-- **Colin Jack.**  \ di convalida del modello di dominio
+- **Colin Jack. Convalida del modello di dominioDomain Model Validation** \
   <https://colinjack.blogspot.com/2008/03/domain-model-validation.html>
 
-- **Jimmy Bogard. Convalida in una \ del mondo DDD**
+- **Jimmy Bogard. Convalida in un mondo DDD** \
   <https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/>
 
 > [!div class="step-by-step"]
-> [Precedente](enumeration-classes-over-enum-types.md)
-> [Successivo](client-side-validation.md)
+> [Successivo](enumeration-classes-over-enum-types.md)
+> [precedente](client-side-validation.md)

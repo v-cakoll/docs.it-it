@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: c29833ece83e386446aaf0a5d242bda366cbfbb0
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 037ddc8eeda418b2e4858ab98be6cd362ca0e1e2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239040"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399469"
 ---
 # <a name="type-testing-and-cast-operators-c-reference"></a>Operatori di cast e di test del tipo (Riferimenti per C#)
 
@@ -36,7 +36,7 @@ ms.locfileid: "78239040"
 
 ## <a name="is-operator"></a>Operatore is
 
-L' operatore `is` controlla se il tipo di runtime del risultato di un'espressione è compatibile con un determinato tipo. A partire C# da 7,0, l'operatore `is` testa anche il risultato di un'espressione rispetto a un criterio.
+L' operatore `is` controlla se il tipo di runtime del risultato di un'espressione è compatibile con un determinato tipo. A partire dalla versione 7.0 di C, l'operatore verifica anche il `is` risultato di un'espressione rispetto a un modello.
 
 L'espressione con l'operatore di test del tipo `is` ha il formato seguente:
 
@@ -50,17 +50,17 @@ L'espressione `E is T` restituisce `true` se il risultato di `E` è diverso da n
 
 L'esempio seguente dimostra che l'operatore `is` restituisce `true` se il tipo di runtime del risultato di un'espressione deriva da un determinato tipo, ovvero se esiste una conversione di riferimento tra i tipi:
 
-[!code-csharp[is with reference conversion](~/samples/snippets/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#IsWithReferenceConversion)]
+[!code-csharp[is with reference conversion](snippets/TypeTestingAndConversionOperators.cs#IsWithReferenceConversion)]
 
-Nell'esempio seguente viene illustrato che l'operatore `is` prende in considerazione le conversioni boxing e unboxing, ma non considera le [conversioni numeriche](../builtin-types/numeric-conversions.md):
+L'esempio seguente `is` mostra che l'operatore prende in considerazione le conversioni boxing e unboxing, ma non considera [le conversioni numeriche:](../builtin-types/numeric-conversions.md)
 
-[!code-csharp-interactive[is with int](~/samples/snippets/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#IsWithInt)]
+[!code-csharp-interactive[is with int](snippets/TypeTestingAndConversionOperators.cs#IsWithInt)]
 
 Per informazioni sulle conversioni C#, vedere il capito [Conversioni](~/_csharplang/spec/conversions.md) della [specifica del linguaggio C#](~/_csharplang/spec/introduction.md).
 
 ### <a name="type-testing-with-pattern-matching"></a>Test del tipo con criteri di ricerca
 
-A partire C# da 7,0, l'operatore `is` testa anche il risultato di un'espressione rispetto a un criterio. In particolare, supporta il criterio del tipo nel formato seguente:
+A partire dalla versione 7.0 di C, l'operatore verifica anche il `is` risultato di un'espressione rispetto a un modello. In particolare, supporta il criterio del tipo nel formato seguente:
 
 ```csharp
 E is T v
@@ -70,7 +70,7 @@ in cui `E` è un'espressione che restituisce un valore, `T` è il nome di un tip
 
 L'esempio seguente illustra l'uso dell'operatore `is` con un criterio del tipo:
 
-[!code-csharp-interactive[is with type pattern](~/samples/snippets/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#IsTypePattern)]
+[!code-csharp-interactive[is with type pattern](snippets/TypeTestingAndConversionOperators.cs#IsTypePattern)]
 
 Per altre informazioni sul criterio del tipo e sugli altri criteri supportati, vedere [Criteri di ricerca con is](../keywords/is.md#pattern-matching-with-is).
 
@@ -96,18 +96,18 @@ L'operatore `as` considera solo conversioni di riferimenti, nullable, boxing e u
 
 Nell'esempio seguente viene illustrato l'uso dell'operatore `as`:
 
-[!code-csharp-interactive[as operator](~/samples/snippets/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#AsOperator)]
+[!code-csharp-interactive[as operator](snippets/TypeTestingAndConversionOperators.cs#AsOperator)]
 
 > [!NOTE]
-> Come mostrato nell'esempio precedente, è necessario confrontare il risultato dell'espressione `as` con `null` per verificare se la conversione riesce. A partire C# da 7,0, è possibile usare l' [operatore is](#type-testing-with-pattern-matching) per verificare se la conversione ha esito positivo e, in caso di esito positivo, assegnare il risultato a una nuova variabile.
+> Come mostrato nell'esempio precedente, è necessario confrontare il risultato dell'espressione `as` con `null` per verificare se la conversione riesce. A partire dalla versione 7.0 di C, è possibile usare [l'operatore is](#type-testing-with-pattern-matching) sia per verificare se la conversione ha esito positivo e, in caso di esito positivo, assegnare il risultato a una nuova variabile.
 
-## <a name="cast-operator-"></a>Operatore di cast ()
+## <a name="cast-operator-"></a>Operatore cast ()
 
 Un'espressione cast nel formato `(T)E` esegue una conversione esplicita del risultato dell'espressione `E` nel tipo `T`. Se non esiste alcuna conversione esplicita dal tipo `E` al tipo `T`, si verifica un errore in fase di compilazione. In fase di esecuzione, è possibile che una conversione esplicita non riesca e che un'espressione cast generi un'eccezione.
 
 L'esempio seguente illustra conversioni esplicite numeriche e di riferimento:
 
-[!code-csharp-interactive[cast expression](~/samples/snippets/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#Cast)]
+[!code-csharp-interactive[cast expression](snippets/TypeTestingAndConversionOperators.cs#Cast)]
 
 Per informazioni sulle conversioni esplicite supportate, vedere la sezione [Conversioni esplicite](~/_csharplang/spec/conversions.md#explicit-conversions) della [specifica del linguaggio C#](~/_csharplang/spec/introduction.md). Per informazioni su come definire una conversione personalizzata del tipo esplicito o implicito, vedere [Operatori di conversione definiti dall'utente](user-defined-conversion-operators.md).
 
@@ -117,27 +117,27 @@ Per informazioni sulle conversioni esplicite supportate, vedere la sezione [Conv
 
 Le parentesi possono essere usate anche per specificare l'ordine in cui valutare le operazioni in un'espressione. Per altre informazioni, vedere [Operatori C#](index.md).
 
-## <a name="typeof-operator"></a>typeof (operatore)
+## <a name="typeof-operator"></a>Operatore typeof
 
 L'operatore `typeof` ottiene l'istanza <xref:System.Type?displayProperty=nameWithType> per un tipo. L'argomento dell'operatore `typeof` deve essere il nome o il parametro di un tipo, come illustrato nell'esempio seguente:
 
-[!code-csharp-interactive[typeof operator](~/samples/snippets/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#TypeOf)]
+[!code-csharp-interactive[typeof operator](snippets/TypeTestingAndConversionOperators.cs#TypeOf)]
 
 È possibile usare l'operatore `typeof` anche con tipi generici non associati. Il nome di un tipo generico non associato deve contenere il numero appropriato di virgole, ovvero una in meno rispetto al numero di parametri del tipo. L'esempio seguente illustra l'uso dell'operatore `typeof` con un tipo generico non associato:
 
-[!code-csharp-interactive[typeof unbound generic](~/samples/snippets/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#TypeOfUnboundGeneric)]
+[!code-csharp-interactive[typeof unbound generic](snippets/TypeTestingAndConversionOperators.cs#TypeOfUnboundGeneric)]
 
-Un'espressione non può essere un argomento dell'operatore `typeof`. Per ottenere l'istanza <xref:System.Type?displayProperty=nameWithType> per il tipo di runtime di un risultato di un'espressione, usare il metodo <xref:System.Object.GetType%2A?displayProperty=nameWithType>.
+Un'espressione non può essere un argomento dell'operatore `typeof`. Per ottenere <xref:System.Type?displayProperty=nameWithType> l'istanza per il tipo di <xref:System.Object.GetType%2A?displayProperty=nameWithType> runtime di un risultato dell'espressione, utilizzare il metodo .
 
 ### <a name="type-testing-with-the-typeof-operator"></a>Test del tipo con l'operatore `typeof`
 
 Usare l'operatore `typeof` per controllare se il tipo di runtime del risultato dell'espressione corrisponde esattamente a un determinato tipo. L'esempio seguente illustra la differenza tra il controllo del tipo eseguito con l'operatore `typeof` e il controllo del tipo con l'[operatore is](#is-operator):
 
-[!code-csharp[typeof vs is](~/samples/snippets/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#TypeCheckWithTypeOf)]
+[!code-csharp[typeof vs is](snippets/TypeTestingAndConversionOperators.cs#TypeCheckWithTypeOf)]
 
 ## <a name="operator-overloadability"></a>Overload degli operatori
 
-Non è possibile eseguire l'overload degli operatori `is`, `as`e `typeof`.
+Gli `is` `as`operatori `typeof` , e non possono essere sottoposti a overload.
 
 Un tipo definito dall'utente non può eseguire l'overload dell'operatore `()`, ma può definire conversioni di tipi personalizzate che possano essere eseguite da un'espressione cast. Per altre informazioni, vedere [Operatori di conversione definiti dall'utente](user-defined-conversion-operators.md).
 
@@ -152,7 +152,7 @@ Per altre informazioni, vedere le sezioni seguenti delle [specifiche del linguag
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
+- [Informazioni di riferimento su C#](../index.md)
 - [Operatori C#](index.md)
-- [Come eseguire il cast in modo sicuro usando i criteri di ricerca e gli operatori is e As](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
+- [Come eseguire il cast in modo sicuro utilizzando criteri di ricerca e gli operatori is e as](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
 - [Generics in .NET](../../../standard/generics/index.md)

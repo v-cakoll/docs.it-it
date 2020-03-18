@@ -16,10 +16,10 @@ helpviewer_keywords:
 - custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
 ms.openlocfilehash: 151bf40cf042517b7441b89688122373259dc7dc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73140058"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Procedura: definire e utilizzare provider di formati numerici personalizzati
@@ -49,7 +49,7 @@ ms.locfileid: "73140058"
   
     1. Facoltativamente, è possibile verificare che il metodo sia legittimamente responsabile di fornire servizi di formattazione esaminando il parametro `provider`. Per la formattazione di oggetti che implementano sia <xref:System.IFormatProvider> sia <xref:System.ICustomFormatter>, questa operazione comporta l'esecuzione di test sul parametro `provider` per verificarne l'uguaglianza all'oggetto di formattazione corrente.  
   
-    2. Stabilire se l'oggetto di formattazione deve supportare identificatori di formato personalizzato. Ad esempio, un identificatore di formato "N" potrebbe indicare che un numero di telefono degli Stati Uniti deve essere restituito in formato NANP e un "I" potrebbe indicare l'output in formato ITU-T Recommendation E. 123. Se vengono utilizzati identificatori di formato, il metodo deve gestire l'identificatore di formato specifico. Quest'ultimo viene passato al metodo nel parametro `format`. Se non è disponibile alcun identificatore, il valore del parametro `format` è <xref:System.String.Empty?displayProperty=nameWithType>.  
+    2. Stabilire se l'oggetto di formattazione deve supportare identificatori di formato personalizzato. Ad esempio, un identificatore di formato "N" potrebbe indicare che un numero di telefono degli Stati Uniti deve essere emesso in formato NANP e una "I" potrebbe indicare l'output nel formato ITU-T Recommendation E.123. Se vengono utilizzati gli identificatori di formato, il metodo deve gestire l'identificatore di formato specifico. Quest'ultimo viene passato al metodo nel parametro `format`. Se non è disponibile alcun identificatore, il valore del parametro `format` è <xref:System.String.Empty?displayProperty=nameWithType>.  
   
     3. Recuperare il valore numerico passato al metodo come parametro `arg`. Eseguire le eventuali modifiche necessarie per convertirlo nella relativa rappresentazione di stringa.  
   

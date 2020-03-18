@@ -19,10 +19,10 @@ helpviewer_keywords:
 - IsMatch method
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 ms.openlocfilehash: c02fc215fa66951ae3333175191ab96a226a2afe
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73197577"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Come verificare che le stringhe siano in formato di posta elettronica valido
@@ -35,7 +35,7 @@ Nell'esempio viene definito un metodo `IsValidEmail` che restituisce `true` se n
 
 Per verificare che l'indirizzo di posta elettronica sia valido, il metodo `IsValidEmail` chiama il metodo <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.MatchEvaluator%29?displayProperty=nameWithType> con il criterio di espressione regolare `(@)(.+)$` per separare il nome di dominio dall'indirizzo di posta elettronica. Il terzo parametro è un delegato <xref:System.Text.RegularExpressions.MatchEvaluator> che rappresenta il metodo che elabora e sostituisce il testo corrispondente. Il criterio di espressione regolare viene interpretato nel modo seguente.
 
-|Criterio|Descrizione|
+|Modello|Descrizione|
 |-------------|-----------------|
 |`(@)`|Trova la corrispondenza con il carattere @. Equivale al primo gruppo di acquisizione.|
 |`(.+)`|Trova la corrispondenza con una o più occorrenze di qualsiasi carattere. Equivale al secondo gruppo di acquisizione.|
@@ -45,40 +45,40 @@ Il nome di dominio con il carattere @ viene passato al metodo `DomainMapper` che
 
 Il metodo `IsValidEmail` chiama quindi il metodo <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%29?displayProperty=nameWithType> per verificare che l'indirizzo sia conforme a un criterio di espressione regolare.
 
-Si noti che il metodo `IsValidEmail` non esegue l'autenticazione per convalidare l'indirizzo di posta elettronica e si limita a stabilire se il formato è valido per un indirizzo di posta elettronica. Inoltre il metodo `IsValidEmail` non verifica che il nome di dominio di primo livello sia un nome di dominio valido elencato nella pagina del [Database delle aree radice sul sito IANA](https://www.iana.org/domains/root/db), cosa che richiederebbe un'operazione di ricerca. L'espressione regolare verifica invece solo che il nome di dominio di primo livello sia costituito da un numero di caratteri ASCII compreso tra due e 24. Il nome deve iniziare e finire con caratteri alfanumerici e i caratteri rimanenti possono essere alfanumerici o un trattino (-).
+Si noti che il metodo `IsValidEmail` non esegue l'autenticazione per convalidare l'indirizzo di posta elettronica e si limita a stabilire se il formato è valido per un indirizzo di posta elettronica. Inoltre, il metodo `IsValidEmail` non verifica che il nome di dominio di primo livello sia un nome di dominio valido elencato nella pagina del [Database delle aree radice sul sito IANA](https://www.iana.org/domains/root/db), cosa che richiederebbe un'operazione di ricerca. L'espressione regolare verifica invece solo che il nome di dominio di primo livello sia costituito da un numero di caratteri ASCII compreso tra due e 24. Il nome deve iniziare e finire con caratteri alfanumerici e i caratteri rimanenti possono essere alfanumerici o un trattino (-).
 
 [!code-csharp[RegularExpressions.Examples.Email#7](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Email/cs/example4.cs#7)]
 [!code-vb[RegularExpressions.Examples.Email#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Email/vb/example4.vb#7)]
 
-In questo esempio, il modello di espressione regolare ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$`` viene interpretato come illustrato nella legenda seguente. L'espressione regolare viene compilata usando il flag <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.
+In questo esempio, il ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$`` modello di espressione regolare viene interpretato come illustrato nella legenda seguente. L'espressione regolare <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> viene compilata utilizzando il flag .
 
-Pattern `^`: inizia la corrispondenza all'inizio della stringa.
+Pattern `^`: Inizia la corrispondenza all'inizio della stringa.
 
-Pattern `(?(")`: determinare se il primo carattere è una virgoletta. `(?(")` è l'inizio di un costrutto di alternanza.
+Modello `(?(")`: Determinare se il primo carattere è una virgoletta. `(?(")` è l'inizio di un costrutto di alternanza.
 
-Pattern `(?(")(".+?(?<!\\)"@)`: se il primo carattere è una virgoletta, trovare la corrispondenza con una virgoletta iniziale seguita da almeno un'occorrenza di qualsiasi carattere, seguita da una virgoletta finale. La virgoletta finale non deve essere preceduta da un carattere di barra rovesciata (\\). `(?<!` è l'inizio dell'asserzione lookbehind negativa di larghezza zero. La stringa dovrebbe terminare con il simbolo @.
+Modello `(?(")(".+?(?<!\\)"@)`: Se il primo carattere è una virgoletta, trovare una corrispondenza con una virgoletta iniziale seguita da almeno un'occorrenza di qualsiasi carattere, seguita da una virgoletta finale. La virgoletta finale non deve essere preceduta da un carattere di barra rovesciata (\\). `(?<!` è l'inizio dell'asserzione lookbehind negativa di larghezza zero. La stringa dovrebbe terminare con il simbolo @.
 
-Pattern `|(([0-9a-z]`: se il primo carattere non è una virgoletta, trovare la corrispondenza con qualsiasi carattere alfabetico da a a z o da a a Z (il confronto non fa distinzione tra maiuscole e minuscole) o qualsiasi carattere numerico compreso tra 0 e 9.
+Modello `|(([0-9a-z]`: Se il primo carattere non è una virgoletta, trova la corrispondenza con qualsiasi carattere alfabetico compreso tra a a o a z (il confronto non fa distinzione tra maiuscole e minuscole) o qualsiasi carattere numerico compreso tra 0 e 9.
 
-Pattern `(\.(?!\.))`: se il carattere successivo è un punto, trovarne la corrispondenza. Se non è un punto, eseguire il look ahead del carattere successivo e continuare la ricerca della corrispondenza. `(?!\.)` è un'asserzione lookahead negativa di larghezza zero che impedisce la comparsa di due punti consecutivi nella parte locale di un indirizzo di posta elettronica.
+Pattern `(\.(?!\.))`: Se il carattere successivo è un punto, corrisponderlo. Se non è un punto, eseguire il look ahead del carattere successivo e continuare la ricerca della corrispondenza. `(?!\.)` è un'asserzione lookahead negativa di larghezza zero che impedisce la comparsa di due punti consecutivi nella parte locale di un indirizzo di posta elettronica.
 
-Pattern ``|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w]``: se il carattere successivo non è un punto, trovare la corrispondenza con qualsiasi carattere alfanumerico o con uno dei caratteri seguenti:-! # $% &'\*+/=? ^\`{}| ~
+Modello ``|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w]``: Se il carattere successivo non è un punto, trova la corrispondenza\*con qualsiasi carattere alfanumerico o a uno dei caratteri seguenti: -&!\`{}
 
-Pattern ``((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*``: corrisponde al modello di alternanza (un punto seguito da un punto o da uno di un numero di caratteri) zero o più volte.
+Modello ``((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*``: Corrisponde al modello di alternanza (un punto seguito da un non punto o da uno di un numero di caratteri) zero o più volte.
 
-Pattern `@`: trovare la corrispondenza con il carattere @.
+Modello `@`: Corrisponde al carattere .
 
-Pattern `(?<=[0-9a-z])`: continua la ricerca della corrispondenza se il carattere che precede il carattere @ è compreso tra A e Z, da a a z o da 0 a 9. Questo modello definisce un'asserzione lookbehind positiva di larghezza zero.
+Pattern `(?<=[0-9a-z])`: Continuare la corrispondenza se il carattere che precede il carattere , è da A a z, da a a z o da 0 a 9. Questo modello definisce un'asserzione lookbehind positiva di larghezza zero.
 
-Pattern `(?(\[)`: controllare se il carattere che segue @ è una parentesi di apertura.
+Modello `(?(\[)`: Controllare se il carattere che segue il carattere , è una parentesi quadra di apertura.
 
-Pattern `(\[(\d{1,3}\.){3}\d{1,3}\])`: se è una parentesi di apertura, trovare la corrispondenza con la parentesi di apertura seguita da un indirizzo IP (quattro set da una a tre cifre, con ogni set separato da un punto) e una parentesi di chiusura.
+Modello `(\[(\d{1,3}\.){3}\d{1,3}\])`: Se si tratta di una parentesi quadra di apertura, abbinare la parentesi quadra di apertura seguita da un indirizzo IP (quattro serie di una o tre cifre, con ogni set separato da un punto) e una parentesi quadra di chiusura.
 
-Pattern `|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+`: se il carattere che segue @ non è una parentesi di apertura, trova la corrispondenza di un carattere alfanumerico con un valore A-Z, a-z o 0-9, seguito da zero o più occorrenze di un trattino, seguite da zero o da un carattere alfanumerico con un valore A-Z , a-z o 0-9, seguito da un punto. Questo modello può essere ripetuto una o più volte e deve essere seguito dal nome di dominio di primo livello.
+Modello `|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+`: Se il carattere che segue il carattere , non è una parentesi quadra di apertura, è possibile trovare una corrispondenza con un carattere alfanumerico con un valore di A-z, a-z o 0-9, seguito da zero o più occorrenze di un trattino, seguito da zero o da un carattere alfanumerico con un valore di A-z, a-z o 0-9, seguito da un punto. Questo modello può essere ripetuto una o più volte e deve essere seguito dal nome di dominio di primo livello.
 
-Pattern `[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))`: il nome di dominio di primo livello deve iniziare e terminare con un carattere alfanumerico (a-z, A-Z e 0-9). Può anche includere da zero a 22 caratteri ASCII, che possono essere caratteri alfanumerici o trattini.
+Modello `[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))`: Il nome di dominio di primo livello deve iniziare e terminare con un carattere alfanumerico (a-z, A-z e 0-9). Può anche includere da zero a 22 caratteri ASCII, che possono essere caratteri alfanumerici o trattini.
 
-Pattern `$`: termina la corrispondenza alla fine della stringa.
+Pattern `$`(Modello): termina la corrispondenza alla fine della stringa.
 
 ## <a name="compile-the-code"></a>Compilare il codice
 

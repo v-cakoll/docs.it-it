@@ -1,22 +1,22 @@
 ---
 ms.openlocfilehash: 30580b3fde5b8a99862896bb7d31c6c4024f97e8
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568204"
 ---
-### <a name="floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception"></a>Le operazioni di analisi a virgola mobile non hanno più esito negativo o generano OverflowException
+### <a name="floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception"></a>Le operazioni di analisi a virgola mobile non hanno più esito negativo o generano un'eccezione OverflowException
 
-I metodi di analisi a virgola mobile non generano più un <xref:System.OverflowException> o restituiscono `false` quando analizzano una stringa il cui valore numerico non è compreso nell'intervallo del <xref:System.Single> o <xref:System.Double> tipo a virgola mobile.
+I metodi di analisi a virgola <xref:System.OverflowException> mobile `false` non generano più un o restituito quando <xref:System.Single> <xref:System.Double> analizzano una stringa il cui valore numerico non è compreso nell'intervallo del tipo o a virgola mobile.
 
-#### <a name="change-description"></a>Descrizione della modifica
+#### <a name="change-description"></a>Descrizione modifica:
 
-In .NET Core 2,2 e versioni precedenti, i metodi <xref:System.Double.Parse%2A?displayProperty=nameWithType> e <xref:System.Single.Parse%2A?displayProperty=nameWithType> generano un'<xref:System.OverflowException> per i valori che non rientrano nell'intervallo del rispettivo tipo. I metodi <xref:System.Double.TryParse%2A?displayProperty=nameWithType> e <xref:System.Single.TryParse%2A?displayProperty=nameWithType> restituiscono `false` per le rappresentazioni di stringa di valori numerici fuori intervallo.
+In .NET Core 2.2 e <xref:System.Double.Parse%2A?displayProperty=nameWithType> <xref:System.Single.Parse%2A?displayProperty=nameWithType> versioni precedenti, i metodi e generano un <xref:System.OverflowException> for valori che non rientrano nell'intervallo del rispettivo tipo. I <xref:System.Double.TryParse%2A?displayProperty=nameWithType> <xref:System.Single.TryParse%2A?displayProperty=nameWithType> metodi `false` e restituiscono per le rappresentazioni di stringa di valori numerici non compresi nell'intervallo.
 
-A partire da .NET Core 3,0, i metodi <xref:System.Double.Parse%2A?displayProperty=nameWithType>, <xref:System.Double.TryParse%2A?displayProperty=nameWithType>, <xref:System.Single.Parse%2A?displayProperty=nameWithType>e <xref:System.Single.TryParse%2A?displayProperty=nameWithType> non hanno più esito negativo durante l'analisi di stringhe numeriche non comprese nell'intervallo. Al contrario, i metodi di analisi del <xref:System.Double> restituiscono <xref:System.Double.PositiveInfinity?displayProperty=nameWithType> per i valori che superano <xref:System.Double.MaxValue?displayProperty=nameWithType>e restituiscono <xref:System.Double.NegativeInfinity?displayProperty=nameWithType> per i valori minori di <xref:System.Double.MinValue?displayProperty=nameWithType>. Analogamente, i metodi di analisi <xref:System.Single> restituiscono <xref:System.Single.PositiveInfinity?displayProperty=nameWithType> per i valori che superano <xref:System.Single.MaxValue?displayProperty=nameWithType>e restituiscono <xref:System.Single.NegativeInfinity?displayProperty=nameWithType> per i valori minori di <xref:System.Single.MinValue?displayProperty=nameWithType>.
+A partire da .NET Core <xref:System.Double.Parse%2A?displayProperty=nameWithType> <xref:System.Double.TryParse%2A?displayProperty=nameWithType>3.0, i metodi , , <xref:System.Single.Parse%2A?displayProperty=nameWithType>e <xref:System.Single.TryParse%2A?displayProperty=nameWithType> non hanno più esito negativo durante l'analisi di stringhe numeriche non di intervallo. Al contrario, <xref:System.Double> i <xref:System.Double.PositiveInfinity?displayProperty=nameWithType> metodi di <xref:System.Double.MaxValue?displayProperty=nameWithType>analisi restituiscono <xref:System.Double.NegativeInfinity?displayProperty=nameWithType> valori che superano e restituiscono valori minori di <xref:System.Double.MinValue?displayProperty=nameWithType>. Analogamente, <xref:System.Single> i metodi <xref:System.Single.PositiveInfinity?displayProperty=nameWithType> di analisi <xref:System.Single.MaxValue?displayProperty=nameWithType>restituiscono valori <xref:System.Single.NegativeInfinity?displayProperty=nameWithType> che superano <xref:System.Single.MinValue?displayProperty=nameWithType>e restituiscono valori minori di .
 
-Questa modifica è stata apportata per una conformità IEEE 754:2008 migliorata.
+Questa modifica è stata apportata per migliorare la conformità IEEE 754:2008.
 
 #### <a name="version-introduced"></a>Versione introdotta
 
@@ -24,11 +24,11 @@ Questa modifica è stata apportata per una conformità IEEE 754:2008 migliorata.
 
 #### <a name="recommended-action"></a>Azione consigliata
 
-Questa modifica può influire sul codice in uno dei due modi seguenti:
+Questa modifica può influire sul codice in due modi:This change can affect your code in either of two ways:
 
-- Il codice dipende dal gestore per l'esecuzione del <xref:System.OverflowException> quando si verifica un overflow. In tal caso, è necessario rimuovere l'istruzione `catch` e inserire qualsiasi codice necessario in un'istruzione `If` che verifica se <xref:System.Double.IsInfinity%2A?displayProperty=nameWithType> o <xref:System.Single.IsInfinity%2A?displayProperty=nameWithType> è `true`.
+- Il codice dipende dal <xref:System.OverflowException> gestore per l'esecuzione quando si verifica un overflow. In questo caso, è `catch` necessario rimuovere l'istruzione `If` e inserire <xref:System.Double.IsInfinity%2A?displayProperty=nameWithType> <xref:System.Single.IsInfinity%2A?displayProperty=nameWithType> il `true`codice necessario in un'istruzione che verifica se o è .
 
-- Il codice presuppone che i valori a virgola mobile non siano `Infinity`. In questo caso, è necessario aggiungere il codice necessario per verificare la presenza di valori a virgola mobile di `PositiveInfinity` e `NegativeInfinity`.
+- Il codice presuppone che i valori `Infinity`a virgola mobile non siano . In questo caso, è necessario aggiungere il codice necessario `PositiveInfinity` `NegativeInfinity`per verificare la presenza di valori a virgola mobile di e .
 
 #### <a name="category"></a>Category
 

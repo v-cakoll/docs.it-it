@@ -11,10 +11,10 @@ helpviewer_keywords:
 - attributes [.NET Framework], applying
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
 ms.openlocfilehash: 14cd6fef80ff9ae3a9d78531785edab0da7cc6b9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73130909"
 ---
 # <a name="applying-attributes"></a>Applicazione di attributi
@@ -42,7 +42,7 @@ Usare il processo seguente per applicare un attributo a un elemento del codice.
  [!code-vb[Conceptual.Attributes.Usage#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source1.vb#3)]  
   
 ## <a name="applying-attributes-at-the-assembly-level"></a>Applicazione di attributi a livello di assembly  
- Se si desidera applicare un attributo a livello di assembly usare la parola chiave **assembly** (`Assembly` in Visual Basic). Nel codice riportato di seguito viene illustrato l'attributo **AssemblyTitleAttribute** applicato a livello di assembly.  
+ Se si desidera applicare un attributo a **assembly** livello`Assembly` di assembly, utilizzare la parola chiave assembly ( in Visual Basic). Nel codice riportato di seguito viene illustrato l'attributo **AssemblyTitleAttribute** applicato a livello di assembly.  
   
  [!code-cpp[Conceptual.Attributes.Usage#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source1.cpp#2)]
  [!code-csharp[Conceptual.Attributes.Usage#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source1.cs#2)]

@@ -17,10 +17,10 @@ helpviewer_keywords:
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 ms.custom: updateeachrelease
 ms.openlocfilehash: 6f9ad8aafc37039b55ae3bf6eb743e07ad8e2235
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74884410"
 ---
 # <a name="common-language-runtime-clr-overview"></a>Panoramica di CLR (Common Language Runtime)
@@ -44,7 +44,7 @@ I compilatori e gli strumenti dei linguaggi sono progettati per esporre le funzi
 
 - Miglioramenti delle prestazioni.
 
-- La possibilità di usare con facilità componenti sviluppati in altri linguaggi.
+- Possibilità di utilizzare con facilità componenti sviluppati in altri linguaggi.
 
 - La disponibilità dei tipi estensibili forniti da una libreria di classi.
 
@@ -62,7 +62,7 @@ I compilatori e gli strumenti dei linguaggi sono progettati per esporre le funzi
 
 ## <a name="clr-versions"></a>Versioni CLR
 
-Il numero di versione del .NET Framework non corrisponde necessariamente al numero di versione di CLR incluso. Per un elenco delle versioni di .NET Framework e delle versioni CLR corrispondenti, vedere [.NET Framework versioni e dipendenze](../framework/migration-guide/versions-and-dependencies.md). Le versioni di .NET Core hanno una sola versione del prodotto, ovvero non esiste una versione CLR separata. Per un elenco delle versioni di .NET Core, vedere [scaricare .NET Core](https://dotnet.microsoft.com/download/dotnet-core).
+Il numero di versione di .NET Framework non corrisponde necessariamente al numero di versione di CLR incluso. Per un elenco delle versioni di .NET Framework e delle corrispondenti versioni CLR, vedere Versioni e dipendenze di [.NET Framework.](../framework/migration-guide/versions-and-dependencies.md) Le versioni di .NET Core hanno una singola versione del prodotto, ovvero non esiste una versione CLR separata. Per un elenco delle versioni di .NET Core, vedere [Scaricare .NET Core](https://dotnet.microsoft.com/download/dotnet-core).
 
 ## <a name="related-topics"></a>Argomenti correlati
 

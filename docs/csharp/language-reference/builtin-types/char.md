@@ -1,5 +1,5 @@
 ---
-title: tipo char- C# riferimento
+title: Tipo di char - Riferimenti per C
 ms.date: 11/22/2019
 f1_keywords:
 - char
@@ -7,55 +7,55 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: a5aca12e4037d517c3bcfb403c990605a052d48f
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: c4e29e6437edfe549b36a04a2050f63caa0d3d2a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239846"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846522"
 ---
-# <a name="char-c-reference"></a>char (C# riferimento)
+# <a name="char-c-reference"></a>char (riferimenti per C
 
-La parola chiave `char` Type è un alias per il tipo di struttura <xref:System.Char?displayProperty=nameWithType> .NET che rappresenta un carattere Unicode UTF-16.
+La `char` parola chiave type è <xref:System.Char?displayProperty=nameWithType> un alias per il tipo di struttura .NET che rappresenta un carattere Unicode UTF-16.
 
 |Type|Range|Dimensione|Tipo .NET|
 |----------|-----------|----------|-------------------------|
 |`char`|U+0000 a U+FFFF|16 bit|<xref:System.Char?displayProperty=nameWithType>|
 
-Il valore predefinito del tipo di `char` è `\0`, ovvero U + 0000.
+Il valore predefinito `char` del `\0`tipo è , ovvero U.
 
-Il tipo [stringa](reference-types.md#the-string-type) rappresenta il testo come sequenza di valori `char`.
+Il tipo [string](reference-types.md#the-string-type) rappresenta il `char` testo come una sequenza di valori.
 
 ## <a name="literals"></a>Valori letterali
 
-È possibile specificare un valore `char` con:
+È possibile `char` specificare un valore con:You can specify a value with:
 
-- valore letterale carattere.
-- sequenza di escape Unicode, che è `\u` seguita dalla rappresentazione esadecimale a quattro simboli di un codice carattere.
-- sequenza di escape esadecimale, `\x` seguita dalla rappresentazione esadecimale di un codice carattere.
+- un valore letterale carattere.
+- una sequenza di `\u` escape Unicode, seguita dalla rappresentazione esadecimale a quattro simboli di un codice di carattere.
+- una sequenza di escape esadecimale, `\x` seguita dalla rappresentazione esadecimale di un codice di carattere.
 
-[!code-csharp-interactive[char literals](~/samples/snippets/csharp/language-reference/builtin-types/CharType.cs#Literals)]
+[!code-csharp-interactive[char literals](snippets/CharType.cs#Literals)]
 
-Come illustrato nell'esempio precedente, è anche possibile eseguire il cast del valore di un codice carattere nel valore `char` corrispondente.
+Come illustrato nell'esempio precedente, è anche possibile eseguire il `char` cast del valore di un codice carattere nel valore corrispondente.
 
 > [!NOTE]
-> Nel caso di una sequenza di escape Unicode, è necessario specificare tutte e quattro le cifre esadecimali. Ovvero, `\u006A` è una sequenza di escape valida, mentre `\u06A` e `\u6A` non sono validi.
+> Nel caso di una sequenza di escape Unicode, è necessario specificare tutte e quattro le cifre esadecimali. Ovvero, `\u006A` è una sequenza `\u06A` di `\u6A` escape valida, mentre e non sono validi.
 >
-> Nel caso di una sequenza di escape esadecimale, è possibile omettere gli zeri iniziali. Ovvero le sequenze di escape `\x006A`, `\x06A`e `\x6A` sono valide e corrispondono allo stesso carattere.
+> Nel caso di una sequenza di escape esadecimale, è possibile omettere gli zeri iniziali. Ovvero, le `\x006A` `\x06A`sequenze `\x6A` , e escape sono valide e corrispondono allo stesso carattere.
 
 ## <a name="conversions"></a>Conversioni
 
-Il tipo di `char` è convertibile in modo implicito nei tipi [integrali](integral-numeric-types.md) seguenti: `ushort`, `int`, `uint`, `long`e `ulong`. È anche convertibile in modo implicito nei tipi numerici a [virgola mobile](floating-point-numeric-types.md) predefiniti: `float`, `double`e `decimal`. È convertibile in modo esplicito in `sbyte`, `byte`e `short` i tipi integrali.
+Il `char` tipo è convertibile in modo implicito `uint` `long`nei `ulong`seguenti tipi [integrali:](integral-numeric-types.md) `ushort`, `int`, , , e . È inoltre convertibile in modo implicito nei tipi numerici `double`a `decimal` [virgola mobile](floating-point-numeric-types.md) incorporati: `float`, , e . È convertibile in `sbyte`modo `byte`esplicito in tipi , e `short` integrali.
 
-Non esistono conversioni implicite da altri tipi al tipo di `char`. Tuttavia, qualsiasi tipo numerico [integrale](integral-numeric-types.md) o a [virgola mobile](floating-point-numeric-types.md) è convertibile in modo esplicito in `char`.
+Non esistono conversioni implicite da `char` altri tipi al tipo. Tuttavia, qualsiasi tipo numerico [integrale](integral-numeric-types.md) o `char`a virgola [mobile](floating-point-numeric-types.md) è convertibile in modo esplicito in .
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
-Per ulteriori informazioni, vedere la sezione [tipi integrali](~/_csharplang/spec/types.md#integral-types) della [ C# specifica del linguaggio](~/_csharplang/spec/introduction.md).
+Per ulteriori informazioni, vedere la sezione [relativa ai tipi integrali](~/_csharplang/spec/types.md#integral-types) della specifica del [linguaggio C.](~/_csharplang/spec/introduction.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
-- [Tipi di valore](value-types.md)
+- [Informazioni di riferimento su C#](../index.md)
+- [Tipi valore](value-types.md)
 - [Stringhe](../../programming-guide/strings/index.md)
 - <xref:System.Text.Rune?displayProperty=nameWithType>

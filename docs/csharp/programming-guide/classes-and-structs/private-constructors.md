@@ -6,10 +6,10 @@ helpviewer_keywords:
 - private constructors [C#]
 ms.assetid: 29eeaa7d-8d81-453c-94b9-0e2800172621
 ms.openlocfilehash: 2f8b93fbeb7c2996f3e2683fe86f159fbfa61a92
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705444"
 ---
 # <a name="private-constructors-c-programming-guide"></a>Costruttori privati (Guida per programmatori C#)
@@ -30,7 +30,7 @@ Un costruttore privato è un costruttore di istanza speciale. Viene generalmente
   
  [!code-csharp[csProgGuideObjects#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#13)]  
   
-## <a name="c-language-specification"></a>Specifica del linguaggio C#  
+## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
 
 Per altre informazioni, vedere [Operatore as](~/_csharplang/spec/classes.md#private-constructors) in [Specifica del linguaggio C#](/dotnet/csharp/language-reference/language-specification/introduction). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
   
@@ -40,5 +40,5 @@ Per altre informazioni, vedere [Operatore as](~/_csharplang/spec/classes.md#priv
 - [Classi e struct](./index.md)
 - [Costruttori](./constructors.md)
 - [Finalizzatori](./destructors.md)
-- [private](../../language-reference/keywords/private.md)
-- [public](../../language-reference/keywords/public.md)
+- [Privato](../../language-reference/keywords/private.md)
+- [pubblico](../../language-reference/keywords/public.md)

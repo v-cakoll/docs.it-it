@@ -1,19 +1,19 @@
 ---
-title: Campi riservati protobuf-gRPC per sviluppatori WCF
-description: Informazioni sui campi riservati per la compatibilità tra versioni.
+title: Campi riservati protobuf - gRPC per gli sviluppatori WCFProtobuf reserved fields - gRPC for WCF developers
+description: Informazioni sui campi riservati per la compatibilità tra versioni diverse.
 ms.date: 09/09/2019
-ms.openlocfilehash: 50082a1aab2e7707a1839b9d56455124a9e4a6a1
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: bde658c671e970b7ec841d71d5b4284eb91195f0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77542976"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79147945"
 ---
 # <a name="protobuf-reserved-fields"></a>Campi riservati protobuf
 
-Le garanzie di compatibilità con le versioni precedenti nel buffer del protocollo (protobuf) si basano sui numeri dei campi che rappresentano sempre lo stesso elemento di dati. Se un campo viene rimosso da un messaggio in una nuova versione del servizio, il numero di campo non deve mai essere riutilizzato. A questo scopo, è possibile usare la parola chiave `reserved`. 
+Le garanzie di compatibilità con le versioni precedenti nel buffer del protocollo (Protobuf) si basano sui numeri di campo che rappresentano sempre lo stesso elemento di dati. Se un campo viene rimosso da un messaggio in una nuova versione del servizio, tale numero non deve mai essere riutilizzato. È possibile enfore questo `reserved` utilizzando la parola chiave.
 
-Se i campi `displayName` e `marketId` sono stati rimossi dal messaggio `Stock` definito in precedenza, i rispettivi numeri di campo devono essere riservati come nell'esempio seguente.
+Se `displayName` i `marketId` campi e `Stock` sono stati rimossi dal messaggio definito in precedenza, i relativi numeri di campo devono essere riservati come nell'esempio seguente.
 
 ```protobuf
 syntax "proto3";
@@ -27,7 +27,7 @@ message Stock {
 }
 ```
 
-È anche possibile usare la parola chiave `reserved` come segnaposto per i campi che potrebbero essere aggiunti in futuro. È possibile esprimere i numeri di campo contigui come un intervallo usando la parola chiave `to`.
+È inoltre possibile `reserved` utilizzare la parola chiave come segnaposto per i campi che potrebbero essere aggiunti in futuro. È possibile esprimere numeri di campo contigui `to` come intervallo utilizzando la parola chiave .
 
 ```protobuf
 syntax "proto3";
@@ -40,5 +40,5 @@ message Info {
 ```
 
 >[!div class="step-by-step"]
->[Precedente](protobuf-repeated.md)
->[Successivo](protobuf-any-oneof.md)
+>[Successivo](protobuf-repeated.md)
+>[precedente](protobuf-any-oneof.md)

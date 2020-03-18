@@ -3,10 +3,10 @@ title: LINQ to Objects (C#)
 ms.date: 07/20/2015
 ms.assetid: c5c2c178-3529-4f6c-b3df-2d5267af7f22
 ms.openlocfilehash: ae4389aa1ce049edc71bff42c38f66fb328ba034
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75344787"
 ---
 # <a name="linq-to-objects-c"></a>LINQ to Objects (C#)
@@ -26,7 +26,7 @@ Il termine "LINQ to Objects" si riferisce all'utilizzo diretto di query LINQ con
   
  Lo scopo di questa sezione è illustrare l'approccio LINQ con alcuni esempi specificamente selezionati. Tali informazioni non devono essere ritenute esaustive.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [LINQ e stringhe (C#)](./linq-and-strings.md)  
  Viene illustrato come usare LINQ per eseguire query e trasformare stringhe e raccolte di stringhe. Include anche collegamenti ad argomenti che illustrano questi principi.  
   
@@ -36,10 +36,10 @@ Il termine "LINQ to Objects" si riferisce all'utilizzo diretto di query LINQ con
  [Directory di file e LINQ (C#)](./linq-and-file-directories.md)  
  Viene illustrato come usare LINQ per interagire con i file system. Include anche collegamenti ad argomenti che illustrano questi concetti.  
   
- [Come eseguire una query su un ArrayList con LINQC#()](./how-to-query-an-arraylist-with-linq.md)  
+ [Come eseguire una query su un ArrayList con LINQ (C )How to query an ArrayList with LINQ (C](./how-to-query-an-arraylist-with-linq.md)  
  Viene illustrato come eseguire una query su un oggetto ArrayList in C#.  
   
- [Come aggiungere metodi personalizzati per le query LINQ (C#)](./how-to-add-custom-methods-for-linq-queries.md)  
+ [Come aggiungere metodi personalizzati per le query LINQ (C )How to add custom methods for LINQ queries (C](./how-to-add-custom-methods-for-linq-queries.md)  
  Spiega come estendere il set di metodi utilizzabili per le query LINQ aggiungendo metodi di estensione all'interfaccia <xref:System.Collections.Generic.IEnumerable%601>.  
   
  [LINQ (Language-Integrated Query) (C#)](./index.md)  

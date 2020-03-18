@@ -9,10 +9,10 @@ helpviewer_keywords:
 - tasks, with other asynchronous models
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
 ms.openlocfilehash: 27766c10d0624b5eda8256a3211662036a1b16b3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139944"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>Task Parallel Library e programmazione asincrona .NET Framework tradizionale

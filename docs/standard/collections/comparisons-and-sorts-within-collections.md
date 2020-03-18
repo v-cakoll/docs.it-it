@@ -13,10 +13,10 @@ helpviewer_keywords:
 - collections [.NET Framework], comparisons
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
 ms.openlocfilehash: 3360652f22ed39ccfd99f9863052fe584b78562f
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159260"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>Confronti e ordinamenti all'interno delle raccolte
@@ -26,11 +26,11 @@ Le classi <xref:System.Collections> eseguono confronti in quasi tutti i processi
   
 <a name="BKMK_Checkingforequality"></a>
 ## <a name="checking-for-equality"></a>Verifica dell'uguaglianza  
- I metodi come `Contains`, <xref:System.Collections.IList.IndexOf%2A>, <xref:System.Collections.Generic.List%601.LastIndexOf%2A> e `Remove` usano un confronto di uguaglianza per gli elementi della raccolta. Se la raccolta è generica, viene verificata l'uguaglianza degli elementi secondo le istruzioni seguenti:  
+ I metodi come `Contains`, <xref:System.Collections.IList.IndexOf%2A>, <xref:System.Collections.Generic.List%601.LastIndexOf%2A>e `Remove` usano un confronto di uguaglianza per gli elementi della raccolta. Se la raccolta è generica, viene verificata l'uguaglianza degli elementi secondo le istruzioni seguenti:  
   
 - Se il tipo T implementa l'interfaccia generica <xref:System.IEquatable%601> , il confronto di uguaglianza è il metodo <xref:System.IEquatable%601.Equals%2A> di tale interfaccia.  
   
-- Se il tipo T non implementa <xref:System.IEquatable%601>, viene usato <xref:System.Object.Equals%2A?displayProperty=nameWithType>.  
+- Se il tipo T non implementa <xref:System.IEquatable%601>, viene usato <xref:System.Object.Equals%2A?displayProperty=nameWithType> .  
   
  Inoltre, alcuni overload del costruttore per le raccolte dizionario accettano un'implementazione di <xref:System.Collections.Generic.IEqualityComparer%601>, che viene usata per confrontare l'uguaglianza delle chiavi. Per un esempio, vedere il costruttore <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A?displayProperty=nameWithType> .  
   

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
 ms.openlocfilehash: 79033fa652af62c76d54737fbf0a0b47cf3aae99
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712494"
 ---
 # <a name="line-c-reference"></a>#line (Riferimenti per C#)
@@ -48,7 +48,7 @@ MainClass.cs(12,16): warning CS0168: The variable 's' is declared but never used
 MainClass.cs(13,16): warning CS0168: The variable 'd' is declared but never used
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 La direttiva `#line` può essere usata in un'istruzione automatizzata intermedia nel processo di compilazione. Se, ad esempio, sono state rimosse delle righe dal file del codice sorgente originale e si vuole che il compilatore generi comunque un output basato sulla numerazione originale delle righe del file, è possibile rimuovere le righe e simulare la numerazione originale tramite `#line`.
 
@@ -82,6 +82,6 @@ class MainClass
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
+- [Guida di riferimento a C](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
-- [Direttive per il preprocessore C#](./index.md)
+- [Direttive per il preprocessore di C](./index.md)

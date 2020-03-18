@@ -1,5 +1,5 @@
 ---
-title: Come concatenare più stringhe (C# guida)
+title: Come concatenare più stringhe (Guida di C
 description: Esistono diversi modi per concatenare le stringhe in C#. Di seguito sono descritte le opzioni e le motivazioni delle diverse scelte.
 ms.date: 02/20/2018
 helpviewer_keywords:
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
 ms.openlocfilehash: 9a0640a7ce73fa8454442cd301157bf5c265f9de
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713892"
 ---
-# <a name="how-to-concatenate-multiple-strings-c-guide"></a>Come concatenare più stringhe (C# guida)
+# <a name="how-to-concatenate-multiple-strings-c-guide"></a>Come concatenare più stringhe (Guida di C
 
 La *concatenazione* è il processo di aggiunta di una stringa alla fine di un'altra stringa. Le stringhe vengono concatenate usando l'operatore `+`. Per i valori letterali e le costanti di stringa, la concatenazione viene eseguita in fase di compilazione; non viene eseguita alcuna concatenazione in fase di esecuzione. Per le variabili di stringa, la concatenazione viene eseguita solo in fase di esecuzione.
 
@@ -24,7 +24,7 @@ L'esempio seguente usa la concatenazione per suddividere un valore letterale di 
   
  [!code-csharp-interactive[Combining strings at compile time](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#1)]  
 
-Per concatenare le variabili di stringa, è possibile usare gli operatori `+` o `+=`, l'[interpolazione di stringa](../language-reference/tokens/interpolated.md) oppure i metodi <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.String.Concat%2A?displayProperty=nameWithType>, <xref:System.String.Join%2A?displayProperty=nameWithType> o <xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType>. L'operatore `+` è facile da usare e rende il codice intuitivo. Anche se si usano diversi operatori `+` in un'unica istruzione, il contenuto della stringa viene copiato una sola volta. Il codice seguente mostra esempi dell'uso degli operatori `+` e `+=` per concatenare le stringhe:
+Per concatenare le variabili stringa, è possibile utilizzare gli `+` operatori `+=` o , l'interpolazione di [stringa](../language-reference/tokens/interpolated.md) o i <xref:System.String.Format%2A?displayProperty=nameWithType>metodi , <xref:System.String.Concat%2A?displayProperty=nameWithType>, <xref:System.String.Join%2A?displayProperty=nameWithType> o <xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType> . L'operatore `+` è facile da usare e rende il codice intuitivo. Anche se si usano diversi operatori `+` in un'unica istruzione, il contenuto della stringa viene copiato una sola volta. Il codice seguente mostra esempi dell'uso degli operatori `+` e `+=` per concatenare le stringhe:
 
 [!code-csharp-interactive[combining strings using +](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#2)]  
 
@@ -41,7 +41,7 @@ In altri casi è possibile combinare le stringhe in un ciclo, se non si conosce 
   
 [!code-csharp-interactive[string concatenation using string builder](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#4)]  
 
-Per altre informazioni sui [motivi per scegliere la concatenazione di stringhe o la classe `StringBuilder`](xref:System.Text.StringBuilder#StringAndSB), vedere.
+Ulteriori informazioni sui motivi per scegliere la [concatenazione `StringBuilder` di stringhe o la classe](xref:System.Text.StringBuilder#StringAndSB).
 
 Un'altra opzione per unire le stringhe di una raccolta consiste nell'usare il metodo <xref:System.String.Concat%2A?displayProperty=nameWithType>. Usare il metodo <xref:System.String.Join%2A?displayProperty=nameWithType> se le stringhe di origine devono essere separate da un delimitatore. Il codice seguente combina una matrice di parole con entrambi i metodi:
 
@@ -51,7 +51,7 @@ Infine, è possibile usare [LINQ](../programming-guide/concepts/linq/index.md) e
 
 [!code-csharp-interactive[string concatenation using LINQ expressions](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#6)]  
 
-È possibile provare questi esempi esaminando il codice nel [repository GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Oppure è possibile scaricare gli esempi [come file ZIP](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
+È possibile provare questi esempi esaminando il codice nel repository [GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Oppure è possibile scaricare gli esempi [come file ZIP](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
 ## <a name="see-also"></a>Vedere anche
 

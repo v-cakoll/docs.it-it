@@ -14,10 +14,10 @@ helpviewer_keywords:
 - blocking application execution
 ms.assetid: 3e32daf2-8161-4e8f-addd-9fd9ff101b03
 ms.openlocfilehash: 16b5a297c13cd9096548ed489e4994b72a48da67
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73121432"
 ---
 # <a name="blocking-application-execution-using-an-asyncwaithandle"></a>Blocco dell'esecuzione dell'applicazione tramite AsyncWaitHandle
@@ -38,4 +38,4 @@ Le applicazioni che non possono continuare a eseguire altre attività in attesa 
 ## <a name="see-also"></a>Vedere anche
 
 - [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) (Modello asincrono basato su eventi, EAP)
-- [Panoramica sul modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Cenni preliminari sul modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

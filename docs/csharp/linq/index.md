@@ -4,15 +4,15 @@ description: Introduzione a LINQ (Language-Integrated Query) in C#.
 ms.date: 11/30/2016
 ms.assetid: 007cc736-f5cf-4919-b99b-0c00ab2814ce
 ms.openlocfilehash: fe408210b30b5f6118dc66b4c8f7057fb6654881
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66482988"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79399441"
 ---
 # <a name="language-integrated-query-linq"></a>LINQ (Language-Integrated Query)
 
-LINQ (Language-Integrated Query) è il nome di un set di tecnologie basate sull'integrazione delle funzionalità di query direttamente nel linguaggio C#. In genere, le query sui dati vengono espresse come stringhe semplici senza il controllo dei tipi in fase di compilazione o il supporto di IntelliSense. È anche necessario apprendere un linguaggio di query diverso per ogni tipo di origine dati: database SQL, documenti XML, vari servizi Web e così via. Con LINQ, una query è un costrutto del linguaggio di prima classe, come le classi, i metodi e gli eventi.
+LINQ (Language-Integrated Query) è il nome di un set di tecnologie basate sull'integrazione delle funzionalità di query direttamente nel linguaggio C#. In genere, le query sui dati vengono espresse come stringhe semplici senza il controllo dei tipi in fase di compilazione o il supporto IntelliSense. È anche necessario imparare un linguaggio di query diverso per ogni tipo di origine dati: database SQL, documenti XML, svariati servizi Web e così via. Con LINQ, una query è un costrutto del linguaggio di prima classe, come le classi, i metodi e gli eventi.
 
 Per uno sviluppatore che scrive query, la parte integrata nel linguaggio più visibile di LINQ è l'espressione di query. Le espressioni di query vengono scritte con una *sintassi di query* dichiarativa. Tramite la sintassi di query è possibile eseguire operazioni di filtro, ordinamento e raggruppamento sulle origini dati usando una quantità minima di codice. Vengono usati gli stessi modelli di espressioni di query di base per eseguire una query e trasformare i dati in database SQL, set di dati ADO .NET, documenti e flussi XML e raccolte .NET.
 
@@ -34,7 +34,7 @@ L'esempio seguente mostra l'operazione di query completa. L'operazione completa 
 
 - Come regola di scrittura delle query LINQ, è consigliabile usare la sintassi di query quando possibile e la sintassi dei metodi quando necessario. Tra le due diverse forme non esiste differenza semantica o a livello di prestazioni. Le espressioni di query sono spesso più leggibili delle espressioni equivalenti scritte nella sintassi dei metodi.
 
-- Per alcune operazioni di query, ad esempio <xref:System.Linq.Enumerable.Count%2A> o <xref:System.Linq.Enumerable.Max%2A>, non è presente una clausola dell'espressione di query equivalente. Tali espressioni devono quindi essere espresse come chiamata di metodo. La sintassi dei metodi può essere combinata con la sintassi di query in diversi modi. Per altre informazioni, vedere [Sintassi di query e sintassi di metodi in LINQ](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).
+- Per alcune operazioni di query, ad esempio <xref:System.Linq.Enumerable.Count%2A> o <xref:System.Linq.Enumerable.Max%2A>, non è presente una clausola dell'espressione di query equivalente. Tali espressioni devono quindi essere espresse come chiamata di metodo. La sintassi dei metodi può essere combinata con la sintassi di query in diversi modi. Per ulteriori informazioni, vedere [Sintassi delle query e sintassi dei metodi in LINQ](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).
 
 - Le espressioni di query possono essere compilate in alberi delle espressioni o in delegati, a seconda del tipo al quale viene applicata la query. Le query <xref:System.Collections.Generic.IEnumerable%601> vengono compilate in delegati. Le query <xref:System.Linq.IQueryable> e <xref:System.Linq.IQueryable%601> vengono compilate in alberi delle espressioni. Per altre informazioni, vedere [Alberi delle espressioni](../expression-trees.md).
 
@@ -46,7 +46,7 @@ Per altre informazioni dettagliate su LINQ, iniziare ad acquisire dimestichezza 
 
 - ADO.NET Entity Framework: [LINQ to Entities](../../framework/data/adonet/ef/language-reference/linq-to-entities.md)
 
-- Raccolte, file e stringhe .NET e così via: [LINQ to Objects](../programming-guide/concepts/linq/linq-to-objects.md)
+- Raccolte, file e stringhe .NET: [LINQ to Objects](../programming-guide/concepts/linq/linq-to-objects.md)
 
 Per approfondire LINQ in generale, vedere [LINQ in C#](linq-in-csharp.md).
 

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - parsing strings
 ms.assetid: 5e758b41-db93-456b-8999-99b7304b090d
 ms.openlocfilehash: e4bf14981e538d95aebac3b0f36d38b61747989f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73084308"
 ---
 # <a name="parsing-strings-in-net"></a>Analisi di stringhe in .NET
@@ -23,7 +23,7 @@ Un'operazione di analisi converte una stringa che rappresenta un tipo di base .N
  [Analisi di stringhe numeriche](../../../docs/standard/base-types/parsing-numeric.md)  
  Descrive come eseguire la conversione di stringhe in tipi numerici .NET.  
   
- [Analisi di stringhe di data e ora](../../../docs/standard/base-types/parsing-datetime.md)  
+ [Analisi delle stringhe di data e ora](../../../docs/standard/base-types/parsing-datetime.md)  
  Descrive come eseguire la conversione di stringhe in tipi **DateTime** .NET.  
   
  [Analisi di altre stringhe](../../../docs/standard/base-types/parsing-other.md)  

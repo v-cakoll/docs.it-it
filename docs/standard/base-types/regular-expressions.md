@@ -21,10 +21,10 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
 ms.openlocfilehash: ac034ff37b0b39f41d6f58381286706f9a9ac602
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73121709"
 ---
 # <a name="net-regular-expressions"></a>Espressioni regolari .NET
@@ -95,7 +95,7 @@ Le espressioni regolari ("regular expression") garantiscono un metodo efficace e
   
 |||  
 |-|-|  
-|`\$`|Cerca una singola occorrenza del simbolo del dollaro (`$`) nella stringa di input. La stringa del criterio di espressione regolare include una barra rovesciata per indicare che il simbolo di dollaro deve essere interpretato letteralmente e non come un ancoraggio dell'espressione regolare. Il simbolo di `$` da solo indica che il motore delle espressioni regolari deve tentare di iniziare la corrispondenza alla fine di una stringa. Per assicurarsi che il simbolo di valuta delle impostazioni cultura correnti non venga interpretato erroneamente come simbolo dell'espressione regolare, l'esempio chiama il metodo <xref:System.Text.RegularExpressions.Regex.Escape%2A?displayProperty=nameWithType> per eseguire l'escape del carattere.|  
+|`\$`|Cerca una singola occorrenza del simbolo del dollaro (`$`) nella stringa di input. La stringa del criterio di espressione regolare include una barra rovesciata per indicare che il simbolo di dollaro deve essere interpretato letteralmente e non come un ancoraggio dell'espressione regolare. (Il `$` simbolo da solo indicherebbe che il motore delle espressioni regolari deve tentare di iniziare la corrispondenza alla fine di una stringa.) Per garantire che il simbolo di valuta delle impostazioni cultura correnti non <xref:System.Text.RegularExpressions.Regex.Escape%2A?displayProperty=nameWithType> venga interpretato erroneamente come simbolo di espressione regolare, nell'esempio viene chiamato il metodo per eseguire l'escape del carattere.|  
 |`\s*`|Cerca zero o più occorrenze di uno spazio vuoto.|  
 |`[-+]?`|Cerca zero o una occorrenza di un segno positivo o negativo.|  
 |`([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)`|Le parentesi esterne che delimitano questa espressione la definiscono come gruppo di acquisizione o come sottoespressione. Se viene trovata una corrispondenza, è possibile recuperare informazioni relative a questa parte della stringa corrispondente dal secondo oggetto <xref:System.Text.RegularExpressions.Group> nell'oggetto <xref:System.Text.RegularExpressions.GroupCollection> restituito dalla proprietà <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>. Il primo elemento della raccolta rappresenta la corrispondenza completa.|  
@@ -111,12 +111,12 @@ Le espressioni regolari ("regular expression") garantiscono un metodo efficace e
   
 |Titolo|Descrizione|  
 |-----------|-----------------|  
-|[Linguaggio di espressioni regolari - Riferimento rapido](regular-expression-language-quick-reference.md)|Fornisce informazioni sul set di caratteri, di operatori e di costrutti che è possibile usare per definire le espressioni regolari.|  
-|[Modello a oggetti delle espressioni regolari](the-regular-expression-object-model.md)|Fornisce esempi di codice e informazioni che illustrano l'uso delle classi di espressioni regolari.|  
+|[Linguaggio delle espressioni regolari - Guida di riferimento rapidoRegular Expression Language - Quick Reference](regular-expression-language-quick-reference.md)|Fornisce informazioni sul set di caratteri, di operatori e di costrutti che è possibile usare per definire le espressioni regolari.|  
+|[Modello a oggetti delle espressioni regolariThe Regular Expression Object Model](the-regular-expression-object-model.md)|Fornisce esempi di codice e informazioni che illustrano l'uso delle classi di espressioni regolari.|  
 |[Dettagli sul comportamento delle espressioni regolari](details-of-regular-expression-behavior.md)|Offre informazioni sulle funzionalità e il funzionamento delle espressioni regolari di .NET.|  
 |[Esempi di espressioni regolari](regular-expression-examples.md)|Fornisce esempi di codice che illustrano gli usi tipici delle espressioni regolari.|  
   
-## <a name="reference"></a>Reference  
+## <a name="reference"></a>Informazioni di riferimento  
  <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
  <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>  
  [Espressioni regolari - Guida di riferimento rapido (download in formato Word)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  

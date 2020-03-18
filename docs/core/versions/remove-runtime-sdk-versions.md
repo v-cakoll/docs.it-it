@@ -6,11 +6,11 @@ author: billwagner
 ms.author: wiwagn
 ms.custom: updateeachrelease
 ms.openlocfilehash: 71c11825981c6259a779e1ac8f947a41618e922d
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503470"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398839"
 ---
 # <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>Come rimuovere Runtime di .NET Core e .NET Core SDK
 
@@ -20,11 +20,11 @@ Nel corso del tempo, via via che si installano le versioni aggiornate di runtime
 
 La [selezione delle versioni di .NET Core](selection.md) e la compatibilità di runtime di .NET Core tra gli aggiornamenti consente la rimozione sicura delle versioni precedenti. Gli aggiornamenti al runtime di .NET Core sono compatibili all'interno delle versioni principali, ad esempio 1.x e 2.x. Inoltre, le nuove versioni di .NET Core SDK mantengono in genere la possibilità di creare applicazioni destinate a versioni precedenti del runtime in modo compatibile.
 
-In generale, sono necessari solo l'SDK più recente e l'ultima versione patch dei runtime richiesti per l'applicazione. Istanze in cui mantenere le versioni precedenti di SDK o Runtime includono la gestione di applicazioni basate su **Project. JSON**. Se l'applicazione non ha ragioni specifiche per mantenere le versioni precedenti di SDK o Runtime, è possibile rimuovere le versioni precedenti in modo sicuro.
+In generale, sono necessari solo l'SDK più recente e l'ultima versione patch dei runtime richiesti per l'applicazione. Le istanze in cui mantenere le versioni precedenti dell'SDK o del runtime includono la gestione delle applicazioni basate su **project.json.** Se l'applicazione non ha ragioni specifiche per mantenere le versioni precedenti di SDK o Runtime, è possibile rimuovere le versioni precedenti in modo sicuro.
 
 ## <a name="determine-what-is-installed"></a>Determinare che cosa è installato
 
-A partire da .NET Core 2.1, la CLI di .NET include opzioni che è possibile usare per elencare le versioni di SDK e runtime installate nel computer.  Usare [`dotnet --list-sdks`](../tools/dotnet.md#options) per visualizzare l'elenco degli SDK installati nel computer. Usare [`dotnet --list-runtimes`](../tools/dotnet.md#options) per visualizzare l'elenco dei runtime installati nel computer. Il testo seguente illustra un output tipico per Windows, macOS o Linux:
+A partire da .NET Core 2.1, la CLI di .NET include opzioni che è possibile usare per elencare le versioni di SDK e runtime installate nel computer.  Consente [`dotnet --list-sdks`](../tools/dotnet.md#options) di visualizzare l'elenco degli SDK installati nel computer. Consente [`dotnet --list-runtimes`](../tools/dotnet.md#options) di visualizzare l'elenco dei runtime installati nel computer. Il testo seguente illustra un output tipico per Windows, macOS o Linux:
 
 <!-- markdownlint-disable MD025 -->
 
@@ -36,7 +36,7 @@ Eseguendo il comando seguente:
 dotnet --list-sdks
 ```
 
-Si otterrà un output simile al seguente:
+Si ottiene un output simile al seguente:
 
 ```console
 2.1.200-preview-007474 [C:\Program Files\dotnet\sdk]
@@ -56,13 +56,13 @@ Si otterrà un output simile al seguente:
 2.1.400-preview-009171 [C:\Program Files\dotnet\sdk]
 ```
 
-Eseguire quindi il comando seguente:
+Ed eseguendo il seguente comando:
 
 ```dotnetcli
 dotnet --list-runtimes
 ```
 
-Si otterrà un output simile al seguente:
+Si ottiene un output simile al seguente:
 
 ```console
 Microsoft.AspNetCore.All 2.1.0-preview2-final [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.All]
@@ -90,7 +90,7 @@ Eseguendo il comando seguente:
 dotnet --list-sdks
 ```
 
-Si otterrà un output simile al seguente:
+Si ottiene un output simile al seguente:
 
 ```console
 1.0.1 [/usr/share/dotnet/sdk]
@@ -104,13 +104,13 @@ Si otterrà un output simile al seguente:
 2.1.301 [/usr/share/dotnet/sdk]
 ```
 
-Eseguire quindi il comando seguente:
+Ed eseguendo il seguente comando:
 
 ```dotnetcli
 dotnet --list-runtimes
 ```
 
-Si otterrà un output simile al seguente:
+Si ottiene un output simile al seguente:
 
 ```console
 Microsoft.AspNetCore.All 2.1.0-preview2-final [/usr/share/dotnet/shared/Microsoft.AspNetCore.All]
@@ -132,7 +132,7 @@ Microsoft.NETCore.App 2.1.0 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
 Microsoft.NETCore.App 2.1.1 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
 ```
 
-# <a name="macos"></a>[macOS](#tab/macos)
+# <a name="macos"></a>[Macos](#tab/macos)
 
 Eseguendo il comando seguente:
 
@@ -140,7 +140,7 @@ Eseguendo il comando seguente:
 dotnet --list-sdks
 ```
 
-Si otterrà un output simile al seguente:
+Si ottiene un output simile al seguente:
 
 ```console
 1.0.1 [/usr/local/share/dotnet/sdk]
@@ -154,13 +154,13 @@ Si otterrà un output simile al seguente:
 2.1.301 [/usr/local/share/dotnet/sdk]
 ```
 
-Eseguire quindi il comando seguente:
+Ed eseguendo il seguente comando:
 
 ```dotnetcli
 dotnet --list-runtimes
 ```
 
-Si otterrà un output simile al seguente:
+Si ottiene un output simile al seguente:
 
 ```console
 Microsoft.AspNetCore.All 2.1.0-preview2-final [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.All]
@@ -201,7 +201,7 @@ Per disinstallare .NET Core (SDK o runtime) in Linux sono disponibili varie opzi
 > [!IMPORTANT]
 > Per le installazioni di Red Hat, vedere l'[introduzione a Red Hat](https://access.redhat.com/documentation/en-us/net_core/2.0/html/getting_started_guide/gs_install_dotnet#install_register_rehel) per informazioni sull'installazione e la disinstallazione di .NET Core.
 
-A partire da .NET Core 2,1, non è necessario disinstallare il .NET Core SDK durante l'aggiornamento con gestione pacchetti. La gestione pacchetti o i comandi `update` o `refresh` rimuoveranno automaticamente la versione precedente al termine dell'installazione di una versione più recente.
+A partire da .NET Core 2.1, non è necessario disinstallare .NET Core SDK durante l'aggiornamento utilizzando un gestore di pacchetti. La gestione pacchetti o i comandi `update` o `refresh` rimuoveranno automaticamente la versione precedente al termine dell'installazione di una versione più recente.
 
 Se si è installato .NET Core usando uno strumento di gestione pacchetti, si userà la stessa gestione pacchetti per la disinstallazione dell'SDK o runtime .NET. Le installazioni di .NET Core supportano gli strumenti di gestione pacchetti più diffusi. Vedere la documentazione relativa alla gestione pacchetti della propria distribuzione per l'esatta sintassi nel proprio ambiente:
 
@@ -216,13 +216,13 @@ Il nome del pacchetto per l'installazione di .NET Core SDK per la maggior parte 
 
 Per i computer su cui è installato solo il runtime e non l'SDK, il nome del pacchetto è `dotnet-runtime-<version>` per il runtime di .NET Core e `aspnetcore-runtime-<version>` per lo stack di runtime intero.
 
-Le installazioni di .NET Core precedenti alla 2,0 non hanno disinstallato l'applicazione host quando l'SDK è stato disinstallato tramite Gestione pacchetti. Usando `apt-get`, il comando è:
+Le installazioni .NET Core precedenti alla 2.0 non hanno disinstallato l'applicazione host quando l'SDK è stato disinstallato utilizzando il gestore di pacchetti. Usando `apt-get`, il comando è:
 
 ```bash
 apt-get remove dotnet-host
 ```
 
-Si noti che non è presente alcuna versione collegata a `dotnet-host`.
+Si noti che non è `dotnet-host`presente alcuna versione collegata a .
 
 Se è l'installazione è stata eseguita tramite un file tarball, è necessario rimuovere .NET Core usando il metodo manuale.
 
@@ -237,7 +237,7 @@ sudo rm -rf /usr/share/dotnet/host/fxr/1.0.1
 
 Le directory padre per l'SDK e il runtime sono elencate nell'output dai comandi `dotnet --list-sdks` e `dotnet --list-runtimes`, come illustrato nella tabella precedente.
 
-# <a name="macos"></a>[macOS](#tab/macos)
+# <a name="macos"></a>[Macos](#tab/macos)
 
 In Mac, rimuovere separatamente gli SDK e i runtime rimuovendo la directory contenente la relativa versione. Ad esempio, per rimuovere l'SDK e il runtime versione 1.0.1, è necessario usare i comandi bash seguenti:
 
@@ -254,34 +254,34 @@ Le directory padre per l'SDK e il runtime sono elencate nell'output dai comandi 
 
 ## <a name="net-core-uninstall-tool"></a>Strumento di disinstallazione di .NET Core
 
-Lo [strumento di disinstallazione di .NET Core](../additional-tools/uninstall-tool.md) (`dotnet-core-uninstall`) consente di rimuovere gli SDK e i runtime di .NET Core da un sistema. È disponibile una raccolta di opzioni per specificare le versioni che devono essere disinstallate.
+Lo strumento di [disinstallazione](../additional-tools/uninstall-tool.md) di .NET Core (`dotnet-core-uninstall`) consente di rimuovere gli SDK e i runtime di .NET Core da un sistema. È disponibile una raccolta di opzioni per specificare le versioni da disinstallare.
 
-## <a name="visual-studio-dependency-on-net-core-sdk-versions"></a>Dipendenza di Visual Studio dalle versioni .NET Core SDK
+## <a name="visual-studio-dependency-on-net-core-sdk-versions"></a>Dipendenza di Visual Studio dalle versioni di .NET Core SDK
 
-Prima di Visual Studio 2019 versione 16,3, i programmi di installazione di Visual Studio denominavano il programma di installazione .NET Core SDK autonomo. Di conseguenza, le versioni dell'SDK vengono visualizzate nella finestra di dialogo **Installazione applicazioni** di Windows. La rimozione di SDK di .NET Core installati da Visual Studio usando il programma di installazione autonomo potrebbe interrompere Visual Studio. Se si verificano problemi in Visual Studio dopo la disinstallazione di SDK, eseguire Repair sulla versione specifica di Visual Studio. La tabella seguente illustra alcune delle dipendenze di Visual Studio sulle versioni .NET Core SDK:
+Prima di Visual Studio 2019 versione 16.3, i programmi di installazione di Visual Studio chiamarono il programma di installazione autonomo di .NET Core SDK. Di conseguenza, le versioni dell'SDK vengono visualizzate nella finestra di dialogo **Installazione applicazioni** di Windows. La rimozione degli SDK di .NET Core installati da Visual Studio tramite il programma di installazione autonomo può interrompere Visual Studio. Se Visual Studio presenta problemi dopo la disinstallazione degli SDK, eseguire Ripristina la versione specifica di Visual Studio. Nella tabella seguente vengono illustrate alcune delle dipendenze di Visual Studio nelle versioni di .NET Core SDK:
 
-| Versione di Visual Studio | Versione .NET Core SDK |
+| Versione di Visual Studio | Versione di .NET Core SDK |
 | -- | -- |
-| Visual Studio 2019 versione 16.2 | .NET Core SDK 2.2.4 XX, 2.1.8 XX |
-| Visual Studio 2019 versione 16.1 | .NET Core SDK 2.2.3 XX, 2.1.7 XX |
-| Visual Studio 2019 versione 16,0 | .NET Core SDK 2.2.2 XX, 2.1.6 XX |
-| Visual Studio 2017 versione 15,9 | .NET Core SDK 2.2.1 XX, 2.1.5 XX |
-| Visual Studio 2017 versione 15.8 | .NET Core SDK 2.1.4 XX |
+| Visual Studio 2019 versione 16.2 | .NET Core SDK 2.2.4xx, 2.1.8xx |
+| Visual Studio 2019 versione 16.1 | .NET Core SDK 2.2.3xx, 2.1.7xx |
+| Visual Studio 2019 versione 16.0 | .NET Core SDK 2.2.2xx, 2.1.6xx |
+| Visual Studio 2017 versione 15.9 | .NET Core SDK 2.2.1xx, 2.1.5xx |
+| Visual Studio 2017 versione 15.8 | .NET Core SDK 2.1.4xx |
 
-A partire da Visual Studio 2019 versione 16,3, Visual Studio è responsabile della propria copia del .NET Core SDK. Per questo motivo, le versioni dell'SDK non vengono più visualizzate nella finestra di dialogo **Installazione applicazioni** .
+A partire da Visual Studio 2019 versione 16.3, Visual Studio è responsabile della propria copia di .NET Core SDK. Per questo motivo, tali versioni SDK non vengono più visualizzate nella finestra di dialogo **Installazione applicazioni.**
 
 ## <a name="remove-the-nuget-fallback-folder"></a>Rimuovere la cartella di fallback NuGet
 
-Prima di .NET Core 3,0 SDK, i programmi di .NET Core SDK hanno usato *NuGetFallbackFolder* per archiviare una cache di pacchetti NuGet. Questa cache è stata utilizzata durante le operazioni, ad esempio `dotnet restore` o `dotnet build /t:Restore`. Il `NuGetFallbackFolder` si trova in *C:\Program Files\dotnet\sdk* in Windows e in */usr/local/share/DotNet/SDK* in MacOS.
+Prima di .NET Core 3.0 SDK, i programmi di installazione di .NET Core SDK usavano *NuGetFallbackFolder* per archiviare una cache dei pacchetti NuGet. Questa cache è stata `dotnet restore` utilizzata `dotnet build /t:Restore`durante operazioni quali o . Il `NuGetFallbackFolder` si trova in C: , *Programmi , dotnet , sdk* in Windows e in */usr/local/share/dotnet/sdk* su macOS.
 
-Potrebbe essere necessario rimuovere questa cartella, se:
+Si consiglia di rimuovere questa cartella, se:
 
-* Si sta sviluppando solo usando .NET Core 3,0 SDK o versioni successive.
-* Si sta sviluppando usando .NET Core SDK versioni precedenti alla 3,0, ma è possibile lavorare online e le cose possono risultare più lente una volta.
+* Si sta sviluppando solo utilizzando .NET Core 3.0 SDK o versioni successive.
+* Si sta sviluppando utilizzando le versioni di .NET Core SDK precedenti alla 3.0, ma è possibile lavorare online e le cose possono essere più lente una volta.
 
-Se si vuole rimuovere la cartella fallback di NuGet, è possibile eliminarla, ma saranno necessari i privilegi di amministratore.
+Se si desidera rimuovere la cartella di fallback NuGet, è possibile eliminarla, ma è necessario disporre dei privilegi di amministratore per eseguire questa operazione.
 
-Non è consigliabile eliminare la cartella *DotNet* . Questa operazione rimuoverà tutti gli strumenti globali installati in precedenza. Inoltre, in Windows:
+Non è consigliabile eliminare la cartella *dotnet.* In questo modo rimuoveremo tutti gli strumenti globali installati in precedenza. Inoltre, su Windows:
 
-- Si interrompe Visual Studio 2019 versione 16,3 e versioni successive. È possibile eseguire **Repair** per il ripristino.
-- Se sono presenti .NET Core SDK voci nella finestra di dialogo **Aggiungi/Rimuovi programmi** , saranno orfane.
+- Si interromperà Visual Studio 2019 versione 16.3 e versioni successive. È possibile eseguire **Ripristina** per il ripristino.
+- Se sono presenti voci di .NET Core SDK nella finestra di dialogo **Installazione applicazioni,** rimarranno orfane.

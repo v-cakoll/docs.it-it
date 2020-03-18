@@ -5,38 +5,38 @@ ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
 ms.openlocfilehash: e0a5c791926b36fe5a35c5446471c3dcdb75cd7b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "72774383"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
-È possibile fare in modo che le librerie in uso supportino architetture multi-piattaforma Si vuole vedere quanto lavoro è necessario per l'esecuzione dell'applicazione .NET Framework in .NET Core? [.NET Portability Analyzer](https://github.com/microsoft/dotnet-apiport) è uno strumento che analizza gli assembly e fornisce un report dettagliato sulle API .NET mancanti affinché le applicazioni o le librerie siano portabili sulle piattaforme .NET di destinazione specificate. Portability Analyzer è offerto come [estensione di Visual Studio](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer), che analizza un assembly per ogni progetto e come [app console ApiPort](https://aka.ms/apiportdownload), che analizza gli assembly in base ai file o alla directory specificati.
+È possibile fare in modo che le librerie in uso supportino architetture multi-piattaforma Si desidera vedere quanto lavoro è necessario per eseguire l'applicazione .NET Framework in .NET Core? [.NET Portability Analyzer](https://github.com/microsoft/dotnet-apiport) è uno strumento che analizza gli assembly e fornisce un rapporto dettagliato sulle API .NET che risultano mancanti per le applicazioni o le librerie da portabili nelle piattaforme .NET di destinazione specificate. L'analizzatore di portabilità viene offerto come estensione di [Visual Studio](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer), che analizza un assembly per progetto e come app [console ApiPort](https://aka.ms/apiportdownload), che analizza gli assembly in base ai file o alla directory specificati.
 
-Dopo aver convertito il progetto in modo che sia destinato alla nuova piattaforma, ad esempio .NET Core, è possibile usare lo [strumento Analizzatore di API](api-analyzer.md) basato su Roslyn per identificare le API che generano <xref:System.PlatformNotSupportedException> eccezioni e altri problemi di compatibilità.
+Dopo aver convertito il progetto per la nuova piattaforma, ad esempio .NET Core, è possibile utilizzare [lo strumento Analizzatore API](api-analyzer.md) basato su Roslyn per identificare le API che generano <xref:System.PlatformNotSupportedException> eccezioni e altri problemi di compatibilità.
 
 ## <a name="common-targets"></a>Destinazioni comuni
 
 - [.NET Core](../../core/index.md): ha una struttura modulare, con assembly affiancato ed è destinato a scenari multi-piattaforma. La modalità affiancata consente di adottare le nuove versioni di .NET Core senza interrompere le altre applicazioni. Se l'obiettivo è di convertire l'app in una versione di .NET Core che supporta architetture multipiattaforma, questa è la destinazione consigliata.
-- . [NET standard](../../standard/net-standard.md): include le API .NET standard disponibili in tutte le implementazioni di .NET. Se l'obiettivo è poter eseguire la libreria in tutte le piattaforme supportate da .NET, questa è la destinazione consigliata.
-- [ASP.NET Core](/aspnet/core): un framework Web moderno basato su .NET Core. Se l'obiettivo è di convertire l'app Web in .NET Core per supportare più piattaforme, questa è la destinazione consigliata.
-- .NET Core + [estensioni della piattaforma](../../core/porting/windows-compat-pack.md): include le API di .NET Core, oltre a Windows Compatibility Pack, che offre molte delle .NET Framework tecnologie disponibili. Questa è una destinazione consigliata per la conversione dell'app da .NET Framework a .NET Core in Windows.
-- .NET Standard + [estensioni della piattaforma](../../core/porting/windows-compat-pack.md): include le API .NET standard, oltre a Windows Compatibility Pack, che offre molte delle tecnologie .NET Framework disponibili. Questa è una destinazione consigliata per la conversione della libreria da .NET Framework a .NET Core in Windows.
+- . [NET Standard](../../standard/net-standard.md): Include le API .NET Standard disponibili in tutte le implementazioni di .NET. Se l'obiettivo è poter eseguire la libreria in tutte le piattaforme supportate da .NET, questa è la destinazione consigliata.
+- [ASP.NET Core](/aspnet/core): un moderno framework Web basato su .NET Core. Se l'obiettivo è di convertire l'app Web in .NET Core per supportare più piattaforme, questa è la destinazione consigliata.
+- Estensioni di [piattaforma](../../core/porting/windows-compat-pack.md).NET Core : include le API di .NET Core oltre a Windows Compatibility Pack, che fornisce molte delle tecnologie disponibili per .NET Framework. Questa è una destinazione consigliata per la conversione dell'app da .NET Framework a .NET Core in Windows.
+- Estensioni di [piattaforma](../../core/porting/windows-compat-pack.md).NET Standard - Include le API .NET Standard oltre a Windows Compatibility Pack, che fornisce molte delle tecnologie disponibili per .NET Framework. Questa è una destinazione consigliata per la conversione della libreria da .NET Framework a .NET Core in Windows.
 
 ## <a name="how-to-use-the-net-portability-analyzer"></a>Come usare .NET Portability Analyzer
 
-Per iniziare a usare .NET Portability Analyzer in Visual Studio, è prima necessario scaricare l'estensione da [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer) e installarla. Funziona in Visual Studio 2017 e versioni successive. È possibile configurare Portability Analyzer in Visual Studio tramite **Analizza** > **Impostazioni Portability Analyzer** e selezionare le piattaforme di destinazione, ovvero le piattaforme o le versioni di .NET di cui si vogliono valutare i gap di portabilità rispetto alla piattaforma o alla versione con cui è compilato l'assembly corrente.
+Per iniziare a usare .NET Portability Analyzer in Visual Studio, è prima necessario scaricare l'estensione da [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer) e installarla. Funziona in Visual Studio 2017 e versioni successive. È possibile configurarlo in Visual Studio tramite **Analizza** > **impostazioni analizzatore di portabilità** e selezionare le piattaforme di destinazione, ovvero le piattaforme/versioni .NET che si desidera valutare le lacune di portabilità confrontate con la piattaforma/versione con cui viene compilato l'assembly corrente.
 
-![Screenshot di Portability Analyzer.](./media/portability-analyzer/portability-screenshot.png)
+![Screenshot dell'analizzatore di portabilità.](./media/portability-analyzer/portability-screenshot.png)
 
 È anche possibile usare l'applicazione console ApiPort, scaricandola dal [repository ApiPort](https://aka.ms/apiportdownload). È possibile usare l'opzione di comando `listTargets` per visualizzare l'elenco di destinazioni disponibili e quindi selezionare le piattaforme di destinazione specificando l'opzione di comando `-t` o `--target`.
 
 ### <a name="analyze-portability"></a>Analizzare la portabilità
 Per analizzare l'intero progetto in Visual Studio, fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e selezionare **Analyze Assembly Portability** (Analizza portabilità dell'assembly). In caso contrario, accedere al menu **Analizza** e selezionare **Analyze Assembly Portability** (Analizza portabilità assembly). Da qui selezionare il file eseguibile o DLL del progetto.
 
-![Screenshot di Portability Analyzer da Esplora soluzioni.](./media/portability-analyzer/portability-solution-explorer.png)
+![Screenshot di Analizzatore di portabilità da Esplora soluzioni.](./media/portability-analyzer/portability-solution-explorer.png)
 
 È anche possibile usare l'[app console ApiPort](https://aka.ms/apiportdownload).
 
@@ -53,20 +53,20 @@ Dopo aver eseguito l'analisi in Visual Studio, si vedrà comparire il collegamen
 
 #### <a name="portability-summary"></a>Riepilogo della portabilità
 
-![Screenshot del riepilogo della portabilità.](./media/portability-analyzer/api-catalog-portablility-summary.png)
+![Screenshot del Riepilogo portabilità.](./media/portability-analyzer/api-catalog-portablility-summary.png)
 
 La sezione Portability Summary (Riepilogo della portabilità) del report indica la percentuale di portabilità per ogni assembly incluso nell'esecuzione. Nell'esempio precedente, il 71,24% delle API .NET Framework usate nell'app `svcutil` sono disponibili in .NET Core + Estensioni della piattaforma. Se si esegue lo strumento .NET Portability Analyzer per più assembly, per ognuno di questi deve essere presente una riga nel report di riepilogo della portabilità.
 
 #### <a name="details"></a>Dettagli
 
-![Schermata dei dettagli relativi alla portabilità.](./media/portability-analyzer/api-catalog-portablility-details.png)
+![Screenshot dei dettagli della portabilità.](./media/portability-analyzer/api-catalog-portablility-details.png)
 
-La sezione dei **Dettagli** del report elenca le API mancanti da una delle piattaforme di **destinazione**selezionate.
+Nella sezione **Dettagli** del report sono elencate le API mancanti in una delle **piattaforme di destinazione**selezionate.
 
 - Target type (Tipo di destinazione): per il tipo manca un'API da una piattaforma di destinazione
 - Target member (Membro di destinazione): il metodo manca da una piattaforma di destinazione
 - Assembly name (Nome dell'assembly): assembly .NET Framework in cui deve trovarsi l'API mancante.
-- Ognuna delle piattaforme di destinazione selezionate è una colonna, ad esempio ".NET Core": il valore "non supportato" indica che l'API non è supportata in questa piattaforma di destinazione.
+- Ognuna delle piattaforme di destinazione selezionate è una colonna, ad esempio ".NET Core": il valore "Non supportato" indica che l'API non è supportata in questa piattaforma di destinazione.
 - Recommended Changes (Modifiche consigliate): API o tecnologia consigliata a cui passare. Questo campo è attualmente vuoto o non aggiornato per molte API. A causa dell'elevato numero di API, è molto difficile tenerlo aggiornato. È in corso l'esame di soluzioni alternative che consentano di offrire informazioni utili ai clienti.
 
 #### <a name="missing-assemblies"></a>Assembly mancanti

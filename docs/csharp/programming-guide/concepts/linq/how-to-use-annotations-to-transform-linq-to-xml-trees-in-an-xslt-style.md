@@ -1,15 +1,15 @@
 ---
-title: Come usare le annotazioni per trasformare alberi LINQ to XML in uno stile XSLTC#()
+title: Come usare le annotazioni per trasformare gli alberi LINQ to XML in uno stile XSLT (C )How to use annotations to transform LINQ to XML trees in an XSLT style (C
 ms.date: 07/20/2015
 ms.assetid: 12a95902-a6b7-4a1e-ad52-04a518db226f
-ms.openlocfilehash: 109e1a49530f34e7197f8c975de8c04245b11734
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 7d6d646bb9b7b344750c22cb24bc81999da5210d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347288"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168557"
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a>Come usare le annotazioni per trasformare alberi LINQ to XML in uno stile XSLTC#()
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a>Come usare le annotazioni per trasformare gli alberi LINQ to XML in uno stile XSLT (C )How to use annotations to transform LINQ to XML trees in an XSLT style (C
 Le annotazioni possono essere usate per facilitare le trasformazioni di un albero XML.  
   
  Alcuni documenti XML sono "basati su documenti con contenuto misto". Con tali documenti, la forma dei nodi figlio di un elemento non è necessariamente nota. Ad esempio, un nodo che contiene testo può essere analogo al seguente:  
@@ -68,7 +68,7 @@ XElement newRoot = XForm(root);
 Console.WriteLine(newRoot);  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```xml  
 <Root>  
@@ -120,7 +120,7 @@ Console.WriteLine("----------------");
 Console.WriteLine(newData);  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```output  
 Before Transform  
@@ -148,7 +148,7 @@ After Transform
 - Lo pseudo-codice per la funzione è piuttosto semplice:  
   
 ```text  
-The function takes an XElement as an argument and returns an XElement.   
+The function takes an XElement as an argument and returns an XElement.
 If an element has an XElement annotation, then  
     Return a new XElement  
         The name of the new XElement is the annotation element's name.  
@@ -233,7 +233,7 @@ static XElement XForm(XElement source)
                 )  
         );  
     }  
-}   
+}
 ```  
   
 ## <a name="complete-example"></a>Esempio completo  
@@ -391,7 +391,7 @@ class Program
 }  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```output  
 Before Transform  

@@ -2,12 +2,12 @@
 title: Cenni preliminari sugli operatori di query standard (C#)
 ms.date: 07/20/2015
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
-ms.openlocfilehash: e6419fef5c211995aa4d2bd0796a0d0336dc47a9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 76c2c4684f33c3fb30748b5f08efd215548661ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590971"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167855"
 ---
 # <a name="standard-query-operators-overview-c"></a>Cenni preliminari sugli operatori di query standard (C#)
 Gli *operatori di query standard* sono metodi che costituiscono il modello LINQ. La maggior parte di questi metodi agisce sulle sequenze. Una sequenza è un oggetto il cui tipo implementa l'interfaccia <xref:System.Collections.Generic.IEnumerable%601> o l'interfaccia <xref:System.Linq.IQueryable%601>. Gli operatori di query standard forniscono le funzionalità di query che includono filtro, proiezione, aggregazione, ordinamento e altro ancora.  
@@ -63,11 +63,11 @@ foreach (var obj in query)
 // Words of length 5:  
 // QUICK  
 // BROWN  
-// JUMPS   
+// JUMPS
 ```  
   
 ## <a name="query-expression-syntax"></a>Sintassi delle espressioni di query  
- Alcuni degli operatori di query standard usati più di frequente dispongono di sintassi dedicata delle parole chiave per i linguaggi C# e Visual Basic che consente di chiamare gli operatori come parte di un'*espressione* di *query*. Per altre informazioni sugli operatori di query standard con parole chiave dedicate e le relative sintassi, vedere [Sintassi di espressione della query per operatori di query standard (C#)](./query-expression-syntax-for-standard-query-operators.md).  
+ Alcuni degli operatori di query standard usati più di frequente dispongono di sintassi dedicata delle parole chiave per i linguaggi C# e Visual Basic che consente di chiamare gli operatori come parte di un'*espressione di * *query*. Per altre informazioni sugli operatori di query standard con parole chiave dedicate e le relative sintassi, vedere [Sintassi di espressione della query per operatori di query standard (C#)](./query-expression-syntax-for-standard-query-operators.md).  
   
 ## <a name="extending-the-standard-query-operators"></a>Estensione degli operatori di query standard  
  È possibile estendere il set di operatori di query standard creando metodi specifici del dominio appropriati per la tecnologia o il dominio di destinazione. È possibile anche sostituire gli operatori di query standard con implementazioni personalizzate che forniscono servizi aggiuntivi, ad esempio la valutazione remota, la conversione delle query e l'ottimizzazione. Per un esempio, vedere <xref:System.Linq.Enumerable.AsEnumerable%2A>.  
@@ -109,5 +109,5 @@ foreach (var obj in query)
 - <xref:System.Linq.Queryable>
 - [Introduzione alle query LINQ (C#)](./introduction-to-linq-queries.md)
 - [Sintassi di espressione di query per operatori di query standard (C#)](./query-expression-syntax-for-standard-query-operators.md)
-- [Classificazione degli operatori di query standard in base alla modalità di esecuzione (C#)](./classification-of-standard-query-operators-by-manner-of-execution.md)
+- [Classificazione degli operatori di query standard in base alla modalità di esecuzione](./classification-of-standard-query-operators-by-manner-of-execution.md)
 - [Metodi di estensione](../../classes-and-structs/extension-methods.md)
