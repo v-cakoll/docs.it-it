@@ -3,7 +3,7 @@
   items:
     - name: Tipi di dati comuni
       href: common-data-types-unmanaged-api-reference.md
-    - name: API Alink
+    - name: ALink (API)
       href: alink/
     - name: Authenticode
       href: authenticode/
@@ -25,7 +25,7 @@
       href: strong-naming/
     - name: WMI e contatori delle prestazioni
       href: wmi/
-    - name: Funzioni helper Tlbexp
+    - name: Funzioni di supporto Tlbexp
       href: tlbexp/
     - name: Attributo GUID_ManagedName
       href: guid-managedname-attribute.md

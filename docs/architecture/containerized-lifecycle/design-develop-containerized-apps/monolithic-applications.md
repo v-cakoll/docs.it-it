@@ -3,10 +3,10 @@ title: Applicazioni monolitiche
 description: Concetti di base dell'inserimento di applicazioni monolitiche in contenitori.
 ms.date: 02/15/2019
 ms.openlocfilehash: 8664153ee2e9d1d253164e43ac13105f6dbf476c
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72771040"
 ---
 # <a name="monolithic-applications"></a>Applicazioni monolitiche
@@ -17,7 +17,7 @@ Per gestire questo modello, distribuire un singolo contenitore per rappresentare
 
 Tuttavia, in base al principio secondo il quale un contenitore esegue solo un'operazione e la esegue in un unico processo, lo schema monolitico potrebbe generare conflitti. È possibile includere più componenti/librerie o livelli interni in ogni contenitore, come illustrato nella figura 4-1.
 
-![Diagramma che illustra un'app monolitica che consente di scalare in orizzontale clonando l'app.](./media/monolithic-applications/monolithic-application-architecture-example.png)
+![Diagramma che mostra un'app monolitica scalabile clonando l'app.](./media/monolithic-applications/monolithic-application-architecture-example.png)
 
 **Figura 4-1.** Esempio di architettura di un'applicazione monolitica
 
@@ -31,9 +31,9 @@ L'approccio monolitico è comune e molte organizzazioni usano questo metodo nell
 
 Dal punto di vista dell'infrastruttura, ogni server può eseguire molte applicazioni all'interno dello stesso host e avere un rapporto accettabile di efficienza nell'utilizzo di risorse, come illustrato nella figura 4-2.
 
-![Diagramma che mostra un host con più app in contenitori distinti.](./media/monolithic-applications/host-with-multiple-apps-containers.png)
+![Diagramma che mostra un host con più app in contenitori separati.](./media/monolithic-applications/host-with-multiple-apps-containers.png)
 
-**Figura 4-2**. Host che esegue più app in contenitori separati
+**Come grafico 4-2.** Host che esegue più app in contenitori separati
 
 Infine, dal punto di vista della disponibilità, le applicazioni monolitiche devono essere distribuite come un unico elemento. Questo significa che, in caso sia necessario eseguire un'operazione di *arresto e avvio*, questa interesserà tutte le funzionalità e tutti gli utenti durante la finestra di distribuzione. In alcuni casi, l'uso di Azure e di contenitori può ridurre al minimo queste situazioni e ridurre le probabilità di tempo di inattività dell'applicazione, come illustrato nella figura 4-3.
 
@@ -43,9 +43,9 @@ Infine, dal punto di vista della disponibilità, le applicazioni monolitiche dev
 
 È possibile distribuire più VM come host Docker ed eseguire un numero qualsiasi di contenitori per VM. Quindi, usando Azure Load Balancer è possibile gestire la scalabilità, come illustrato nella figura 4-3.
 
-![Diagramma che mostra un'app monolitica ridimensionata in host diversi.](./media/monolithic-applications/multiple-hosts-from-single-docker-container.png)
+![Diagramma che mostra un'app monolitica scalata orizzontalmente in host diversi.](./media/monolithic-applications/multiple-hosts-from-single-docker-container.png)
 
-**Figura 4-3**. Più host con scalabilità orizzontale di una singola applicazione Docker
+**Figura 4-3**. Più host scalare una singola applicazione DockerMultiple hosts scaling out a single Docker application
 
 È possibile gestire la distribuzione degli stessi host tramite le tecniche di distribuzione tradizionali.
 
@@ -61,7 +61,7 @@ Poiché i contenitori sono implicitamente non modificabili per impostazione pred
 
 Anche se le applicazioni monolitiche possano trarre vantaggio da Docker, in questo articolo i vantaggi vengono trattati solo in modo rapido. I vantaggi maggiori della gestione dei contenitori derivano dalla distribuzione con agenti di orchestrazione del contenitore, che gestiscono le varie istanze e il ciclo di vita di ogni istanza del contenitore. La suddivisione dell'applicazione monolitica in sottosistemi scalabili, sviluppabili e distribuibili a livello individuale è il punto di ingresso al campo dei microservizi.
 
-Per informazioni su come trasferire in modalità Lift-and-Shift le applicazioni monolitiche con i contenitori e come è possibile modernizzare le applicazioni, è possibile leggere questa guida Microsoft aggiuntiva, [modernizzare le applicazioni .NET esistenti con i contenitori cloud e Windows di Azure](../../modernize-with-azure-containers/index.md), che è anche possibile scaricare come PDF dal <https://aka.ms/LiftAndShiftWithContainersEbook>.
+Per informazioni su come "sollevare e spostare" le applicazioni monolitiche con i contenitori e come è possibile modernizzare le applicazioni, è possibile leggere <https://aka.ms/LiftAndShiftWithContainersEbook>questa guida Microsoft aggiuntiva, [Modernizzare le applicazioni .NET esistenti con cloud azure e contenitori di Windows](../../modernize-with-azure-containers/index.md), che è anche possibile scaricare in formato PDF da .
 
 ## <a name="publish-a-single-docker-container-app-to-azure-app-service"></a>Pubblicare una singola app contenitore Docker in Servizio app di Azure
 
@@ -71,12 +71,12 @@ Servizio app di Azure è intuitivo e consente di essere operativi in tempi rapid
 
 Ora quando si usa Visual Studio 2017, il supporto dei contenitori in Servizio app di Azure offre la possibilità di includere ciò che si vuole nell'ambiente dell'applicazione, come illustrato nella figura 4-4. Se è stata aggiunta una dipendenza all'app perché l'app viene eseguita in un contenitore, è possibile includere tale dipendenza nel Dockerfile o nell'immagine Docker.
 
-![Screenshot della finestra di dialogo Crea servizio app che mostra un Container Registry.](./media/monolithic-applications/publish-azure-app-service-container.png)
+![Screenshot della finestra di dialogo Crea servizio app che mostra un Registro di sistema del contenitore.](./media/monolithic-applications/publish-azure-app-service-container.png)
 
 **Figura 4-4**. Pubblicazione di un contenitore in Servizio app di Azure da app/contenitori di Visual Studio
 
 La figura 4-4 illustra anche che il flusso di pubblicazione esegue il push di un'immagine tramite un Registro Azure Container, ovvero un registro vicino alle distribuzioni in Azure e protetto dai gruppi e dagli account di Azure Active Directory, oppure in qualsiasi altro registro Docker, come Docker Hub o i registri locali.
 
 >[!div class="step-by-step"]
->[Precedente](common-container-design-principles.md)
->[Successivo](state-and-data-in-docker-applications.md)
+>[Successivo](common-container-design-principles.md)
+>[precedente](state-and-data-in-docker-applications.md)

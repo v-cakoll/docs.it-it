@@ -6,22 +6,22 @@ helpviewer_keywords:
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
 ms.openlocfilehash: 114fa2973c50be9a4199db9729e3cd9ea6122866
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77626529"
 ---
 # <a name="methods-c-programming-guide"></a>Metodi (Guida per programmatori C#)
 
-Un metodo è un blocco di codice che contiene una serie di istruzioni. Un programma fa in modo che le istruzioni vengano eseguite chiamando il metodo e specificando gli argomenti del metodo obbligatori. In C#, ogni istruzione eseguita viene attuata nel contesto di un metodo. Il `Main` metodo è il punto di ingresso per C# ogni applicazione e viene chiamato dal Common Language Runtime (CLR) all'avvio del programma.
+Un metodo è un blocco di codice che contiene una serie di istruzioni. Un programma fa in modo che le istruzioni vengano eseguite chiamando il metodo e specificando gli argomenti del metodo obbligatori. In C#, ogni istruzione eseguita viene attuata nel contesto di un metodo. Il `Main` metodo è il punto di ingresso per ogni applicazione c'è e viene chiamato da Common Language Runtime (CLR) quando viene avviato il programma.
 
 > [!NOTE]
-> Questo articolo illustra i metodi denominati. Per informazioni sulle funzioni anonime, vedere [Funzioni anonime](../statements-expressions-operators/anonymous-functions.md).
+> In questo articolo vengono illustrati i metodi denominati. Per informazioni sulle funzioni anonime, vedere [Funzioni anonime](../statements-expressions-operators/anonymous-functions.md).
 
 ## <a name="method-signatures"></a>Firme del metodo
 
-I metodi vengono dichiarati in una [classe](../../language-reference/keywords/class.md), uno [struct](../../language-reference/builtin-types/struct.md)o un' [interfaccia](../interfaces/index.md) specificando il livello di accesso, ad esempio `public` o `private`, i modificatori facoltativi, ad esempio `abstract` o `sealed`, il valore restituito, il nome del metodo e tutti i parametri del metodo. Queste parti costituiscono la firma del metodo.
+I metodi vengono dichiarati in una [classe](../../language-reference/keywords/class.md), [uno struct](../../language-reference/builtin-types/struct.md)o [un'interfaccia](../interfaces/index.md) specificando il livello di accesso, ad `public` esempio modificatori o `private`, facoltativi quali `abstract` o `sealed`, il valore restituito, il nome del metodo e gli eventuali parametri del metodo. Queste parti costituiscono la firma del metodo.
 
 > [!NOTE]
 > Un tipo restituito di un metodo non fa parte della firma del metodo in caso di overload dei metodi. Fa tuttavia parte della firma del metodo quando si determina la compatibilità tra un delegato e il metodo a cui fa riferimento.
@@ -30,29 +30,29 @@ I parametri del metodo vengono racchiusi tra parentesi e separati da virgole. Le
 
 [!code-csharp[csProgGuideObjects#40](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#40)]
 
-## <a name="method-access"></a>Accesso ai metodi
+## <a name="method-access"></a>Accesso al metodo
 
 Chiamare un metodo su un oggetto è come accedere a un campo. Dopo il nome dell'oggetto aggiungere un punto, il nome del metodo e le parentesi. Gli argomenti vengono elencati tra parentesi e separati da virgole. I metodi della classe `Motorcycle` possono quindi essere chiamati come nell'esempio seguente:
 
 [!code-csharp[csProgGuideObjects#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#41)]
 
-## <a name="method-parameters-vs-arguments"></a>Parametri di metodo e argomenti
+## <a name="method-parameters-vs-arguments"></a>Parametri del metodo e argomentiMethod parameters vs.
 
-La definizione del metodo specifica i nomi e i tipi di tutti i parametri obbligatori. Quando il codice chiamante chiama il metodo, fornisce valori concreti, detti argomenti, per ogni parametro. Gli argomenti devono essere compatibili con il tipo di parametro, ma il nome dell'argomento (se presente) usato nel codice chiamante non deve essere lo stesso del parametro denominato definito nel metodo. Ad esempio,
+La definizione del metodo specifica i nomi e i tipi di tutti i parametri obbligatori. Quando il codice chiamante chiama il metodo, fornisce valori concreti, detti argomenti, per ogni parametro. Gli argomenti devono essere compatibili con il tipo di parametro, ma il nome dell'argomento (se presente) utilizzato nel codice chiamante non deve essere uguale al parametro denominato definito nel metodo. Ad esempio:
 
 [!code-csharp[csProgGuideObjects#74](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#74)]
 
-## <a name="passing-by-reference-vs-passing-by-value"></a>Passaggio per riferimento e passaggio per valore
+## <a name="passing-by-reference-vs-passing-by-value"></a>Passaggio per riferimento e passaggio per valorePassing by reference vs.
 
-Per impostazione predefinita, quando un'istanza di un [tipo di valore](../../language-reference/builtin-types/value-types.md) viene passata a un metodo, la relativa copia viene passata al posto dell'istanza stessa. Pertanto, le modifiche apportate all'argomento non hanno alcun effetto sull'istanza originale nel metodo chiamante. Per passare un'istanza di tipo valore per riferimento, usare la parola chiave `ref`. Per altre informazioni, vedere [Passaggio di parametri di tipi di valore](./passing-value-type-parameters.md).
+Per impostazione predefinita, quando un'istanza di un tipo di [valore](../../language-reference/builtin-types/value-types.md) viene passata a un metodo, la relativa copia viene passata anziché l'istanza stessa. Pertanto, le modifiche apportate all'argomento non hanno alcun effetto sull'istanza originale nel metodo chiamante. Per passare un'istanza di tipo `ref` di valore per riferimento, usare la parola chiave . Per altre informazioni, vedere [Passaggio di parametri di tipi di valore](./passing-value-type-parameters.md).
 
 Quando viene passato un oggetto di un tipo riferimento a un metodo, viene passato un riferimento all'oggetto, ovvero, il metodo riceve un argomento che indica la posizione dell'oggetto, ma non l'oggetto stesso. Se si modifica un membro dell'oggetto usando questo riferimento, la modifica si riflette nell'argomento nel metodo chiamante, anche se si passa l'oggetto per valore.
 
-Per creare un tipo riferimento, usare la parola chiave `class`, come illustrato nell'esempio seguente:
+Per creare un tipo `class` di riferimento, utilizzare la parola chiave , come illustrato nell'esempio seguente:
 
 [!code-csharp[csProgGuideObjects#42](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#42)]
 
-Se ora si passa un oggetto basato su questo tipo a un metodo, viene passato un riferimento all'oggetto. Nell'esempio seguente viene passato un oggetto di tipo `SampleRefType` al metodo `ModifyObject`:
+Se ora si passa un oggetto basato su questo tipo a un metodo, viene passato un riferimento all'oggetto. Nell'esempio seguente viene `SampleRefType` passato `ModifyObject`un oggetto di tipo al metodo :
 
 [!code-csharp[csProgGuideObjects#75](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#75)]
 
@@ -91,7 +91,7 @@ Per usare un valore restituito da un metodo per riferimento, è necessario dichi
 ref int distance = plant
 ```
 
-Non è necessario restituire una matrice multidimensionale da un metodo, `M`, che modifica il contenuto della matrice, se la funzione chiamante ha passato la matrice a `M`.  Si può restituire la matrice risultante da `M` per un flusso di valori corretto o funzionale, ma non è necessario perché C# passa tutti i tipi riferimento per valore e il valore di un riferimento a una matrice è il puntatore alla matrice. Nel metodo `M`, tutte le modifiche apportate al contenuto della matrice sono osservabili da qualsiasi codice che contiene un riferimento alla matrice, come illustrato nell'esempio seguente:
+Non è necessario restituire una matrice multidimensionale da un metodo, `M`, che modifica il contenuto della matrice, se la funzione chiamante ha passato la matrice a `M`.  Si può restituire la matrice risultante da `M` per un flusso di valori corretto o funzionale, ma non è necessario perché C# passa tutti i tipi riferimento per valore e il valore di un riferimento a una matrice è il puntatore alla matrice. Nel metodo `M`, qualsiasi modifica apportata al contenuto della matrice è osservabile da qualsiasi codice che contesto di riferimento alla matrice, come illustrato nell'esempio seguente:
 
 ```csharp
 static void Main(string[] args)
@@ -119,7 +119,7 @@ Per altre informazioni, vedere [return](../../language-reference/keywords/return
 
 Tramite la funzionalità async, è possibile richiamare i metodi asincroni senza usare callback espliciti o suddividere manualmente il codice in più metodi o espressioni lambda.
 
-Se si contrassegna un metodo con il modificatore [async](../../language-reference/keywords/async.md) , è possibile usare l'operatore [await](../../language-reference/operators/await.md) nel metodo. Quando il controllo raggiunge un'espressione await nel metodo asincrono, il controllo torna al chiamante e l'avanzamento nel metodo viene sospeso fino al completamento dell'attività attesa. Una volta completata l'attività, l'esecuzione del metodo può riprendere.
+Se si contrassegna un metodo con il modificatore [async](../../language-reference/keywords/async.md), è possibile usare l'operatore [await](../../language-reference/operators/await.md) nel metodo. Quando il controllo raggiunge un'espressione await nel metodo asincrono, il controllo torna al chiamante e l'avanzamento nel metodo viene sospeso fino al completamento dell'attività attesa. Una volta completata l'attività, l'esecuzione del metodo può riprendere.
 
 > [!NOTE]
 > Un metodo async viene restituito al chiamante quando rileva il primo oggetto atteso che non è ancora completo o raggiunge la fine del metodo async, qualunque si verifichi prima.
@@ -132,9 +132,9 @@ Il metodo `startButton_Click` è un esempio di un metodo asincrono con un tipo r
 
 [!code-csharp[csAsyncMethod#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csasyncmethod/cs/mainwindow.xaml.cs#2)]
 
-Un metodo asincrono non può dichiarare parametri [ref](../../language-reference/keywords/ref.md) o [out](../../language-reference/keywords/out-parameter-modifier.md), ma può chiamare metodi che hanno tali parametri.
+Un metodo asincrono non può dichiarare parametri [ref](../../language-reference/keywords/ref.md) o [out](../../language-reference/keywords/out-parameter-modifier.md) , ma può chiamare metodi che hanno tali parametri.
 
-Per altre informazioni sui metodi asincroni, vedere [Programmazione asincrona con Async e Await](../concepts/async/index.md), [Flusso di controllo in programmi asincroni](../concepts/async/control-flow-in-async-programs.md) e [Tipi restituiti asincroni](../concepts/async/async-return-types.md).
+Per ulteriori informazioni sui metodi asincroni, vedere [Programmazione asincrona con async e await](../concepts/async/index.md), [flusso di controllo nei programmi asincroni](../concepts/async/control-flow-in-async-programs.md)e Tipi [restituiti asincroni](../concepts/async/async-return-types.md).
 
 ## <a name="expression-body-definitions"></a>Definizioni del corpo dell'espressione
 
@@ -153,13 +153,13 @@ Se il metodo restituisce `void` o è un metodo asincrono, il corpo del metodo de
 
 ## <a name="iterators"></a>Iteratori
 
-Un iteratore esegue un'iterazione personalizzata su una raccolta, ad esempio un elenco o una matrice. Un iteratore usa l'istruzione [yield return](../../language-reference/keywords/yield.md) per restituire un elemento per volta. Quando viene raggiunta un'istruzione [yield return](../../language-reference/keywords/yield.md) , la posizione corrente nel codice viene memorizzata. L'esecuzione viene riavviata a partire da quella posizione la volta successiva che viene chiamato l'iteratore.
+Un iteratore esegue un'iterazione personalizzata su una raccolta, ad esempio un elenco o una matrice. Un iteratore usa l'istruzione [yield return](../../language-reference/keywords/yield.md) per restituire un elemento alla volta. Quando viene raggiunta un'istruzione [yield return](../../language-reference/keywords/yield.md) , la posizione corrente nel codice viene memorizzata. L'esecuzione viene riavviata a partire da quella posizione la volta successiva che viene chiamato l'iteratore.
 
 Per chiamare un iteratore dal codice client, usare un'istruzione [foreach](../../language-reference/keywords/foreach-in.md) .
 
-Il tipo restituito di un iteratore può essere <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> o <xref:System.Collections.Generic.IEnumerator%601>.
+Il tipo restituito di un iteratore può essere <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>o <xref:System.Collections.Generic.IEnumerator%601>.
 
-Per altre informazioni, vedere [Iteratori](../concepts/iterators.md).
+Per ulteriori informazioni, vedere [Iteratori](../concepts/iterators.md).
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
@@ -173,8 +173,8 @@ Per altre informazioni, vedere [Iteratori](../concepts/iterators.md).
 - [Classi statiche e membri di classi statiche](static-classes-and-static-class-members.md)
 - [Ereditarietà](inheritance.md)
 - [Classi e membri delle classi astratte e sealed](abstract-and-sealed-classes-and-class-members.md)
-- [params](../../language-reference/keywords/params.md)
-- [return](../../language-reference/keywords/return.md)
-- [out](../../language-reference/keywords/out.md)
+- [Params](../../language-reference/keywords/params.md)
+- [Ritorno](../../language-reference/keywords/return.md)
+- [Cambio](../../language-reference/keywords/out.md)
 - [ref](../../language-reference/keywords/ref.md)
 - [Passaggio di parametri](passing-parameters.md)

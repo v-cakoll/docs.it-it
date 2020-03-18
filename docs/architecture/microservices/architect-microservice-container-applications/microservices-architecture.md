@@ -3,10 +3,10 @@ title: Architettura di microservizi
 description: Architettura di microservizi .NET per applicazioni .NET incluse in contenitori | Il quadro generale dell'architettura di microservizi.
 ms.date: 09/20/2018
 ms.openlocfilehash: d1c58d218be9e5f8c0ae8ae732f9bdd06674a2c2
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71834391"
 ---
 # <a name="microservices-architecture"></a>Architettura di microservizi
@@ -23,7 +23,7 @@ I microservizi, inoltre, possono essere ampliati in modo indipendente. In altre 
 
 **Figura 4-6**. Confronto tra distribuzione monolitica e approccio basato su microservizi
 
-Come illustrato nella figura 4-6, nell'approccio monolitico tradizionale l'applicazione viene ridimensionata clonando l'intera app in diversi server/VM. Nell'approccio con microservizi le funzionalità sono separate in servizi più piccoli, in modo che ognuno di essi si possa ridimensionare in modo indipendente. L'approccio basato su microservizi consente modifiche agili e iterazione rapida di ogni microservizio, in quanto è possibile modificare aree specifiche, piccole e complesse di applicazioni complesse, di grandi dimensioni.
+Come illustrato nella figura 4-6, nell'approccio monolitico tradizionale, l'applicazione viene ridimensionata clonando l'intera app in diversi server/VM. Nell'approccio con microservizi le funzionalità sono separate in servizi più piccoli, in modo che ognuno di essi si possa ridimensionare in modo indipendente. L'approccio dei microservizi consente modifiche agili e un'iterazione rapida di ogni microservizio, perché è possibile modificare aree specifiche e piccole di applicazioni complesse, di grandi dimensioni e scalabili.
 
 La progettazione di applicazioni basate su microservizi con granularità fine consente processi di integrazione continua e recapito continuo. Accelera inoltre la distribuzione di nuove funzioni nell'applicazione. La composizione di applicazioni con granularità fine consente inoltre di eseguire e testare microservizi in isolamento ed evolverli in modo autonomo, pur mantenendo contratti precisi tra di essi. A condizione che non vengano apportate modifiche alle interfacce o ai contratti, è possibile modificare l'implementazione interna di qualsiasi microservizio o aggiungere nuove funzionalità senza interrompere gli altri microservizi.
 
@@ -43,21 +43,21 @@ Solo i prime tre aspetti sono descritti o introdotti nella presente guida. Gli u
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Contrassegnare Russinovich. Microservizi: una rivoluzione delle applicazioni basata sul cloud** \
+- **Mark Russinovich. Microservizi: una rivoluzione delle applicazioni basata sul cloud** \
   <https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/>
 
-- **Martin Fowler. \ di microservizi**
+- **Martin Fowler. Microservizi** \
   <https://www.martinfowler.com/articles/microservices.html>
 
-- **Martin Fowler. Prerequisiti per i microservizi** \
+- **Martin Fowler. Prerequisiti del microservizio** \
   <https://martinfowler.com/bliki/MicroservicePrerequisites.html>
 
-- **Jimmy Nilsson. Blocco del cloud computing** \
+- **Jimmy Nilsson. Chunk Cloud Computing** \
   <https://www.infoq.com/articles/CCC-Jimmy-Nilsson>
 
-- **Cesar de la Torre. Ciclo di vita delle applicazioni Docker in contenitori con piattaforma e strumenti Microsoft** (e-book scaricabile) \
+- **Cesar de la Torre. Ciclo di vita dell'applicazione Docker in contenitore con piattaforma e strumenti Microsoft** (e-book scaricabile)
   <https://aka.ms/dockerlifecycleebook>
 
 >[!div class="step-by-step"]
->[Precedente](service-oriented-architecture.md)
->[Successivo](data-sovereignty-per-microservice.md)
+>[Successivo](service-oriented-architecture.md)
+>[precedente](data-sovereignty-per-microservice.md)

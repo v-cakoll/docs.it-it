@@ -1,102 +1,102 @@
 ---
-title: Informazioni su AssemblyLoadContext-.NET Core
-description: Concetti chiave per comprendere lo scopo e il comportamento di AssemblyLoadContext in .NET Core.
+title: Informazioni su AssemblyLoadContext - .NET CoreUnderstanding AssemblyLoadContext - .NET Core
+description: Concetti chiave per comprendere lo scopo e il comportamento di AssemblyLoadContext in .NET Core.Key concepts to understand the purpose and behavior of AssemblyLoadContext in .NET Core.
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.openlocfilehash: 8a73a432bf8cc72cced77cf6c62a785b72032913
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72291258"
 ---
-# <a name="understanding-systemruntimeloaderassemblyloadcontext"></a>Informazioni su System. Runtime. loader. AssemblyLoadContext
+# <a name="understanding-systemruntimeloaderassemblyloadcontext"></a>Informazioni su System.Runtime.Loader.AssemblyLoadContextUnderstanding System.Runtime.Loader.AssemblyLoadContext
 
-La classe <xref:System.Runtime.Loader.AssemblyLoadContext> è univoca per .NET Core. Questo articolo tenta di integrare la documentazione dell'API <xref:System.Runtime.Loader.AssemblyLoadContext> con informazioni concettuali.
+La <xref:System.Runtime.Loader.AssemblyLoadContext> classe è univoca per .NET Core.The class is unique to .NET Core. Questo articolo tenta <xref:System.Runtime.Loader.AssemblyLoadContext> di integrare la documentazione dell'API con informazioni concettuali.
 
-Questo articolo è pertinente per gli sviluppatori che implementano il caricamento dinamico, soprattutto per gli sviluppatori di Framework con caricamento dinamico
+Questo articolo è rilevante per gli sviluppatori che implementano il caricamento dinamico, in particolare gli sviluppatori di framework di caricamento dinamico.
 
 ## <a name="what-is-the-assemblyloadcontext"></a>Che cos'è AssemblyLoadContext?
 
-Ogni applicazione .NET Core usa in modo implicito il <xref:System.Runtime.Loader.AssemblyLoadContext>.
-È il provider del runtime per l'individuazione e il caricamento delle dipendenze. Ogni volta che viene caricata una dipendenza, viene richiamata un'istanza di <xref:System.Runtime.Loader.AssemblyLoadContext> per individuarla.
+Ogni applicazione .NET Core <xref:System.Runtime.Loader.AssemblyLoadContext>utilizza in modo implicito l'oggetto .
+È il provider del runtime per l'individuazione e il caricamento delle dipendenze. Ogni volta che viene <xref:System.Runtime.Loader.AssemblyLoadContext> caricata una dipendenza, viene richiamata un'istanza per individuarla.
 
-- Fornisce un servizio per l'individuazione, il caricamento e la memorizzazione nella cache di assembly gestiti e altre dipendenze.
+- Fornisce un servizio di individuazione, caricamento e memorizzazione nella cache di assembly gestiti e altre dipendenze.
 
-- Per supportare il caricamento e lo scaricamento di codice dinamico, viene creato un contesto isolato per il caricamento del codice e delle relative dipendenze nella propria istanza <xref:System.Runtime.Loader.AssemblyLoadContext>.
+- Per supportare il caricamento e lo scaricamento dinamici del codice, <xref:System.Runtime.Loader.AssemblyLoadContext> crea un contesto isolato per il caricamento del codice e le relative dipendenze nella propria istanza.
 
 ## <a name="when-do-you-need-multiple-assemblyloadcontext-instances"></a>Quando sono necessarie più istanze di AssemblyLoadContext?
 
-Una singola istanza di <xref:System.Runtime.Loader.AssemblyLoadContext> è limitata al caricamento di una sola versione di un <xref:System.Reflection.Assembly> per nome di assembly semplice, <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType>.
+Una <xref:System.Runtime.Loader.AssemblyLoadContext> singola istanza è limitata al <xref:System.Reflection.Assembly> caricamento di esattamente <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType>una versione di un nome di assembly per un nome di assembly semplice, .
 
-Questa restrizione può costituire un problema durante il caricamento dinamico dei moduli di codice. Ogni modulo è compilato in modo indipendente e può dipendere da versioni diverse di un <xref:System.Reflection.Assembly>. Questo problema si verifica in genere quando diversi moduli dipendono da versioni diverse di una libreria di uso comune.
+Questa restrizione può diventare un problema durante il caricamento dinamico dei moduli di codice. Ogni modulo è compilato in modo indipendente <xref:System.Reflection.Assembly>e può dipendere da versioni diverse di un file . Questo problema si verifica in genere quando diversi moduli dipendono da versioni diverse di una libreria di uso comune.
 
-Per supportare il caricamento dinamico del codice, l'API <xref:System.Runtime.Loader.AssemblyLoadContext> fornisce per il caricamento di versioni in conflitto di un <xref:System.Reflection.Assembly> nella stessa applicazione. Ogni istanza di <xref:System.Runtime.Loader.AssemblyLoadContext> fornisce un mapping del dizionario univoco ogni <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> a una specifica istanza di <xref:System.Reflection.Assembly>.
+Per supportare il <xref:System.Runtime.Loader.AssemblyLoadContext> caricamento dinamico del codice, <xref:System.Reflection.Assembly> l'API fornisce per il caricamento di versioni in conflitto di un oggetto nella stessa applicazione. Ogni <xref:System.Runtime.Loader.AssemblyLoadContext> istanza fornisce un <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> dizionario <xref:System.Reflection.Assembly> univoco che esegue il mapping di ogni istanza a un'istanza specifica.
 
-Fornisce inoltre un meccanismo pratico per raggruppare le dipendenze correlate a un modulo di codice per uno scaricamento successivo.
+Fornisce inoltre un pratico meccanismo per raggruppare le dipendenze correlate a un modulo di codice per uno scaricamento successivo.
 
-## <a name="what-is-special-about-the-assemblyloadcontextdefault-instance"></a>Cosa è speciale per l'istanza di AssemblyLoadContext. default?
+## <a name="what-is-special-about-the-assemblyloadcontextdefault-instance"></a>Quali sono le caratteristiche speciali dell'istanza di AssemblyLoadContext.Default?
 
-L'istanza di <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType> viene popolata automaticamente dal runtime all'avvio.  Usa il [Probe predefinito](default-probing.md) per individuare e trovare tutte le dipendenze statiche.
+L'istanza <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType> viene popolata automaticamente dal runtime all'avvio.  Utilizza il [probe predefinito](default-probing.md) per individuare e trovare tutte le dipendenze statiche.
 
-Risolve gli scenari più comuni di caricamento delle dipendenze.
+Risolve gli scenari di caricamento delle dipendenze più comuni.
 
 ## <a name="how-does-assemblyloadcontext-support-dynamic-dependencies"></a>In che modo AssemblyLoadContext supporta le dipendenze dinamiche?
 
-<xref:System.Runtime.Loader.AssemblyLoadContext> dispone di vari eventi e funzioni virtuali di cui è possibile eseguire l'override.
+<xref:System.Runtime.Loader.AssemblyLoadContext>ha vari eventi e funzioni virtuali che possono essere sostituiti.
 
-L'istanza di <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType> supporta solo l'override degli eventi.
+L'istanza <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType> supporta solo l'override degli eventi.
 
-Gli articoli [algoritmo di caricamento assembly gestito](loading-managed.md), [algoritmo di caricamento assembly satellite](loading-resources.md)e [algoritmo di caricamento libreria non gestito (nativo)](loading-unmanaged.md) fanno riferimento a tutti gli eventi e le funzioni virtuali disponibili.  Gli articoli mostrano la posizione relativa di ogni evento e funzione negli algoritmi di caricamento. Questo articolo non riproduce tali informazioni.
+Gli articoli Algoritmo di [caricamento assembly gestiti](loading-managed.md), [Algoritmo](loading-resources.md)di caricamento assembly Satellite e Algoritmo di [caricamento libreria non gestita (nativa)](loading-unmanaged.md) fanno riferimento a tutti gli eventi e le funzioni virtuali disponibili.  Gli articoli mostrano la posizione relativa di ogni evento e funzione negli algoritmi di caricamento. In questo articolo non vengono riprodotti tali informazioni.
 
-In questa sezione vengono illustrati i principi generali per gli eventi e le funzioni rilevanti.
+In questa sezione vengono illustrati i principi generali per gli eventi e le funzioni pertinenti.
 
-- **Essere ripetibile**. Una query per una dipendenza specifica deve sempre generare la stessa risposta. È necessario che venga restituita la stessa istanza di dipendenza caricata. Questo requisito è fondamentale per la coerenza della cache. Per gli assembly gestiti in particolare, viene creato un <xref:System.Reflection.Assembly> cache. La chiave di cache è un nome di assembly semplice, <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType>.
-- **In genere non generano**.  Si prevede che queste funzioni restituiscano `null` anziché generate quando non è in grado di trovare la dipendenza richiesta. La generazione di terminerà in modo anomalo la ricerca e propagherà un'eccezione al chiamante. La generazione deve essere limitata a errori imprevisti come un assembly danneggiato o una condizione di memoria insufficiente.
-- **Evitare la ricorsione**. Tenere presente che queste funzioni e gestori implementano le regole di caricamento per l'individuazione delle dipendenze. L'implementazione non deve chiamare le API che attivano la ricorsione. Il codice deve in genere chiamare le funzioni di caricamento **AssemblyLoadContext** che richiedono un percorso specifico o un argomento di riferimento alla memoria.
-- **Caricare nel AssemblyLoadContext corretto**. La scelta della posizione in cui caricare le dipendenze è specifica dell'applicazione.  La scelta è implementata da questi eventi e funzioni. Quando il codice chiama **AssemblyLoadContext** funzioni di caricamento per percorso, chiamarle nell'istanza in cui si vuole caricare il codice. A volte la restituzione di `null` e il <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType> gestire il carico potrebbe essere l'opzione più semplice.
-- Tenere **presente le gare di thread**. Il caricamento può essere attivato da più thread. AssemblyLoadContext gestisce le corse di thread mediante l'aggiunta atomica di assembly alla relativa cache. L'istanza di Race Loser è stata eliminata. Nella logica di implementazione non aggiungere una logica aggiuntiva che non gestisca correttamente più thread.
+- **Essere ripetibile**. Una query per una dipendenza specifica deve sempre generare la stessa risposta. Deve essere restituita la stessa istanza di dipendenza caricata. Questo requisito è fondamentale per la coerenza della cache. Per gli assembly gestiti in <xref:System.Reflection.Assembly> particolare, stiamo creando una cache. La chiave di cache è <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType>un nome di assembly semplice, .
+- **In genere non gettare**.  Si prevede che queste `null` funzioni restituiscano anziché generare quando non è possibile trovare la dipendenza richiesta. La generazione terminerà prematuramente la ricerca e verrà propagata un'eccezione al chiamante. La generazione deve essere limitata a errori imprevisti, ad esempio un assembly danneggiato o una condizione di memoria insufficiente.
+- **Evitare la ricorsione**. Tenere presente che queste funzioni e gestori implementano le regole di caricamento per individuare le dipendenze. L'implementazione non deve chiamare API che attivano la ricorsione. Il codice deve in genere chiamare funzioni di caricamento **AssemblyLoadContext** che richiedono un percorso specifico o un argomento di riferimento alla memoria.
+- **Caricare nell'assemblyLoadContext corretto.** La scelta della posizione in cui caricare le dipendenze è specifica dell'applicazione.  La scelta è implementata da questi eventi e funzioni. Quando il codice chiama le funzioni load-by-path **AssemblyLoadContext** le chiamano nell'istanza in cui si desidera caricare il codice. A volte `null` la restituzione e la lasciare che il <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType> carico possa essere l'opzione più semplice.
+- **Essere consapevoli delle gare di thread**. Il caricamento può essere attivato da più thread. Il AssemblyLoadContext gestisce le gare di thread aggiungendo in modo atomico gli assembly alla relativa cache. L'istanza del perdente di razza viene scartata. Nella logica di implementazione, non aggiungere logica aggiuntiva che non gestisce correttamente più thread.
 
-## <a name="how-are-dynamic-dependencies-isolated"></a>Come sono isolate le dipendenze dinamiche?
+## <a name="how-are-dynamic-dependencies-isolated"></a>Come vengono isolate le dipendenze dinamiche?
 
-Ogni istanza di <xref:System.Runtime.Loader.AssemblyLoadContext> rappresenta un ambito univoco per <xref:System.Reflection.Assembly> le istanze e <xref:System.Type> definizioni.
+Ogni <xref:System.Runtime.Loader.AssemblyLoadContext> istanza rappresenta un <xref:System.Reflection.Assembly> ambito <xref:System.Type> univoco per istanze e definizioni.
 
-Non esiste un isolamento binario tra queste dipendenze. Sono isolate solo se non vengono individuate in base al nome.
+Non esiste alcun isolamento binario tra queste dipendenze. Sono isolati solo non trovandosi l'un l'altro per nome.
 
-In ogni <xref:System.Runtime.Loader.AssemblyLoadContext>:
+In <xref:System.Runtime.Loader.AssemblyLoadContext>ogni :
 
-- <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> possibile fare riferimento a un'istanza di <xref:System.Reflection.Assembly> diversa.
-- <xref:System.Type.GetType%2A?displayProperty=nameWithType> può restituire un'istanza di tipo diversa per lo stesso tipo `name`.
+- <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType>può riferirsi <xref:System.Reflection.Assembly> a un'istanza diversa.
+- <xref:System.Type.GetType%2A?displayProperty=nameWithType>può restituire un'istanza di `name`tipo diversa per lo stesso tipo .
 
 ## <a name="how-are-dependencies-shared"></a>Come vengono condivise le dipendenze?
 
-Le dipendenze possono essere condivise facilmente tra <xref:System.Runtime.Loader.AssemblyLoadContext> istanze. Il modello generale è per un <xref:System.Runtime.Loader.AssemblyLoadContext> caricare una dipendenza.  L'altra condivide la dipendenza utilizzando un riferimento all'assembly caricato.
+Le dipendenze possono <xref:System.Runtime.Loader.AssemblyLoadContext> essere facilmente condivise tra le istanze. Il modello generale <xref:System.Runtime.Loader.AssemblyLoadContext> prevede che uno carichi una dipendenza.  L'altro condivide la dipendenza utilizzando un riferimento all'assembly caricato.
 
-Questa condivisione è necessaria per gli assembly di Runtime. Questi assembly possono essere caricati solo nell'<xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType>. Lo stesso è necessario per i Framework come `ASP.NET`, `WPF`o `WinForms`.
+Questa condivisione è obbligatoria per gli assembly di runtime. Questi assembly possono essere <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType>caricati solo nel file . Lo stesso è necessario `ASP.NET`per `WPF`framework `WinForms`come , , o .
 
-È consigliabile caricare le dipendenze condivise in <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType>. Questa condivisione è il modello di progettazione comune.
+È consigliabile caricare le dipendenze <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType>condivise in . Questa condivisione è il modello di progettazione comune.
 
-La condivisione viene implementata nel codice dell'istanza di <xref:System.Runtime.Loader.AssemblyLoadContext> personalizzata. <xref:System.Runtime.Loader.AssemblyLoadContext> dispone di vari eventi e funzioni virtuali di cui è possibile eseguire l'override. Quando una di queste funzioni restituisce un riferimento a un'istanza di <xref:System.Reflection.Assembly> caricata in un'altra istanza di <xref:System.Runtime.Loader.AssemblyLoadContext>, l'istanza di <xref:System.Reflection.Assembly> è condivisa. L'algoritmo Load standard rinvia a <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType> per il caricamento per semplificare il modello di condivisione comune.  Vedere [algoritmo di caricamento assembly gestito](loading-managed.md).
+La condivisione viene implementata <xref:System.Runtime.Loader.AssemblyLoadContext> nella codifica dell'istanza personalizzata. <xref:System.Runtime.Loader.AssemblyLoadContext>ha vari eventi e funzioni virtuali che possono essere sostituiti. Quando una di queste funzioni <xref:System.Reflection.Assembly> restituisce un riferimento <xref:System.Runtime.Loader.AssemblyLoadContext> a <xref:System.Reflection.Assembly> un'istanza caricata in un'altra istanza, l'istanza viene condivisa. L'algoritmo di <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType> caricamento standard rinvia a per il caricamento per semplificare il modello di condivisione comune.  Vedere Algoritmo di [caricamento di assembly gestiti](loading-managed.md).
 
 ## <a name="complications"></a>Complicazioni
 
 ### <a name="type-conversion-issues"></a>Problemi di conversione dei tipi
 
-Quando due istanze di <xref:System.Runtime.Loader.AssemblyLoadContext> contengono definizioni di tipi con lo stesso `name`, non sono dello stesso tipo. Si tratta dello stesso tipo se e solo se provengono dalla stessa istanza di <xref:System.Reflection.Assembly>.
+Quando <xref:System.Runtime.Loader.AssemblyLoadContext> due istanze contengono `name`definizioni di tipo con lo stesso , non sono dello stesso tipo. Sono dello stesso tipo se e solo se <xref:System.Reflection.Assembly> provengono dalla stessa istanza.
 
-Per complicare le problematiche, i messaggi di eccezione relativi a questi tipi non corrispondenti possono generare confusione. Ai tipi viene fatto riferimento nei messaggi di eccezione in base ai relativi nomi di tipo semplice. Il messaggio di eccezione comune in questo caso sarà nel formato seguente:
+Per complicare le cose, i messaggi di eccezione su questi tipi non corrispondenti possono creare confusione. I tipi sono indicati nei messaggi di eccezione dai relativi nomi di tipo semplice. Il messaggio di eccezione comune in questo caso sarebbe nel formato:
 
-> Non è possibile convertire l'oggetto di tipo ' IsolatedType ' nel tipo ' IsolatedType '.
+> Impossibile convertire l'oggetto di tipo 'IsolatedType' nel tipo 'IsolatedType'.
 
-### <a name="debugging-type-conversion-issues"></a>Problemi di conversione dei tipi di debug
+### <a name="debugging-type-conversion-issues"></a>Problemi di conversione dei tipi di debugDebugging type conversion issues
 
-Data una coppia di tipi non corrispondenti è importante tenere presente anche quanto segue:
+Data una coppia di tipi non corrispondenti è importante conoscere anche:
 
-- <xref:System.Type.Assembly?displayProperty=nameWithType> di ogni tipo
-- Il <xref:System.Runtime.Loader.AssemblyLoadContext>di ogni tipo, che può essere ottenuto tramite la funzione <xref:System.Runtime.Loader.AssemblyLoadContext.GetLoadContext(System.Reflection.Assembly)?displayProperty=nameWithType>.
+- Ogni tipo di<xref:System.Type.Assembly?displayProperty=nameWithType>
+- Di <xref:System.Runtime.Loader.AssemblyLoadContext>ogni tipo, che può <xref:System.Runtime.Loader.AssemblyLoadContext.GetLoadContext(System.Reflection.Assembly)?displayProperty=nameWithType> essere ottenuto tramite la funzione.
 
-Considerati due oggetti `a` e `b`, la valutazione dei seguenti elementi nel debugger sarà utile:
+Dato due `a` `b`oggetti e , la valutazione di quanto segue nel debugger sarà utile:
 
 ```csharp
 // In debugger look at each assembly's instance, Location, and FullName
@@ -109,8 +109,8 @@ System.Runtime.AssemblyLoadContext.GetLoadContext(b.GetType().Assembly)
 
 ### <a name="resolving-type-conversion-issues"></a>Risoluzione dei problemi di conversione dei tipi
 
-Esistono due modelli di progettazione per la risoluzione di questi problemi di conversione dei tipi.
+Esistono due modelli di progettazione per risolvere questi problemi di conversione dei tipi.
 
-1. Usare i tipi condivisi comuni. Questo tipo condiviso può essere un tipo di runtime primitivo oppure può implicare la creazione di un nuovo tipo condiviso in un assembly condiviso.  Spesso il tipo condiviso è un' [interfaccia](../../csharp/language-reference/keywords/interface.md) definita in un assembly dell'applicazione. Vedere anche: [come vengono condivise le dipendenze?](#how-are-dependencies-shared)
+1. Utilizzare tipi condivisi comuni. Questo tipo condiviso può essere un tipo di runtime primitivo o può comportare la creazione di un nuovo tipo condiviso in un assembly condiviso.  Spesso il tipo condiviso è [un'interfaccia](../../csharp/language-reference/keywords/interface.md) definita in un assembly dell'applicazione. Vedere anche: [Come vengono condivise le dipendenze?](#how-are-dependencies-shared).
 
-2. Utilizzare le tecniche di marshalling per convertire un tipo in un altro.
+2. Utilizzare tecniche di marshalling per eseguire la conversione da un tipo a un altro.

@@ -23,26 +23,26 @@
     - name: Esercitazione introduttiva
       href: getting-started-tutorial.md
       items:
-        - name: 'Procedura: Creare un''attività'
+        - name: 'Procedura: creare un''attività'
           href: how-to-create-an-activity.md
-        - name: 'Procedura: Creare un flusso di lavoro'
+        - name: 'Procedura: creare un flusso di lavoro'
           href: how-to-create-a-workflow.md
           items:
-            - name: 'Procedura: Creare un flusso di lavoro del diagramma di flusso'
+            - name: 'Procedura: creare un flusso di lavoro del diagramma di flusso'
               href: how-to-create-a-flowchart-workflow.md
-            - name: 'Procedura: Creare un flusso di lavoro sequenziale'
+            - name: 'Procedura: creare un flusso di lavoro sequenziale'
               href: how-to-create-a-sequential-workflow.md
-            - name: 'Procedura: Creare un flusso di lavoro della macchina a stati'
+            - name: 'Procedura: creare un flusso di lavoro della macchina a stati'
               href: how-to-create-a-state-machine-workflow.md
-        - name: 'Procedura: Eseguire un flusso di lavoro'
+        - name: 'Procedura: eseguire un flusso di lavoro'
           href: how-to-run-a-workflow.md
-        - name: 'Procedura: Creare ed eseguire un flusso di lavoro con esecuzione prolungata'
+        - name: 'Procedura: creare ed eseguire un flusso di lavoro con esecuzione prolungata'
           href: how-to-create-and-run-a-long-running-workflow.md
-        - name: 'Procedura: Creare un partecipante del rilevamento personalizzato'
+        - name: 'Procedura: creare un partecipante del rilevamento personalizzato'
           href: how-to-create-a-custom-tracking-participant.md
-        - name: 'Procedura: Ospitare più versioni di un flusso di lavoro side-by-side'
+        - name: 'Procedura: ospitare più versioni di un flusso di lavoro side-by-side'
           href: how-to-host-multiple-versions-of-a-workflow-side-by-side.md
-        - name: 'Procedura: Aggiornare la definizione di un''istanza del flusso di lavoro in esecuzione'
+        - name: 'Procedura: aggiornare la definizione di un''istanza del flusso di lavoro in esecuzione'
           href: how-to-update-the-definition-of-a-running-workflow-instance.md
     - name: Programmazione di Windows Workflow Foundation
       href: programming.md
@@ -138,7 +138,7 @@
               href: expressions.md
             - name: 'Espressioni C#'
               href: csharp-expressions.md
-            - name: Proprietà e Argomenti
+            - name: Utilizzo delle proprietà rispetto agli argomenti
               href: properties-vs-arguments.md
             - name: Esposizione dei dati con CacheMetadata
               href: exposing-data-with-cachemetadata.md
@@ -177,7 +177,7 @@
           href: dynamic-update.md
         - name: Sviluppo del servizio del flusso di lavoro con priorità al contratto ("contract-first")
           href: contract-first-workflow-service-development.md
-        - name: 'Procedura: Creare un servizio di flusso di lavoro che utilizza un contratto di servizio esistente'
+        - name: 'Procedura: creare un servizio di flusso di lavoro che utilizza un contratto di servizio esistente'
           href: how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md
         - name: Persistenza del flusso di lavoro
           href: workflow-persistence.md
@@ -200,7 +200,7 @@
                       href: runnable-instances-detection-period.md
                     - name: Connection String e Connection String Name
                       href: connection-string-and-connection-string-name.md
-                - name: 'Procedura: Abilitare la persistenza SQL per i flussi di lavoro e i relativi servizi'
+                - name: 'Procedura: abilitare la persistenza SQL per i flussi di lavoro e i relativi servizi'
                   href: how-to-enable-sql-persistence-for-workflows-and-workflow-services.md
                 - name: Attivazione di istanze
                   href: instance-activation.md
@@ -215,21 +215,21 @@
                   items:
                     - name: Schema di database di persistenza
                       href: persistence-database-schema.md
-                    - name: 'Procedura: Deserializzare le proprietà dei dati dell''istanza'
+                    - name: 'Procedura: deserializzare le proprietà dei dati dell''istanza'
                       href: how-to-deserialize-instance-data-properties.md
                     - name: 'Procedura: Eseguire query per istanze non persistenti'
                       href: how-to-query-for-non-persisted-instances.md
             - name: Archivio di istanze
               href: instance-stores.md
               items:
-                - name: 'Procedura: Abilitare la persistenza per i flussi di lavoro e i relativi servizi'
+                - name: 'Procedura: abilitare la persistenza per i flussi di lavoro e i relativi servizi'
                   href: how-to-enable-persistence-for-workflows-and-workflow-services.md
-                - name: 'Procedura: Creare un archivio di istanze personalizzato'
+                - name: 'Procedura: creare un archivio di istanze personalizzato'
                   href: how-to-create-a-custom-instance-store.md
             - name: Partecipanti di persistenza
               href: persistence-participants.md
               items:
-                - name: 'Procedura: Creare un partecipante di persistenza personalizzato'
+                - name: 'Procedura: creare un partecipante di persistenza personalizzato'
                   href: how-to-create-a-custom-persistence-participant.md
             - name: Procedure consigliate per la persistenza
               href: persistence-best-practices.md
@@ -534,11 +534,11 @@
             - name: Riallocazione dell'utilità di progettazione del flusso di lavoro
               href: rehosting-the-workflow-designer.md
               items:
-                - name: 'Attività 1: Creare una nuova applicazione Windows Presentation Foundation'
+                - name: 'Attività 1: creare una nuova applicazione Windows Presentation Foundation'
                   href: task-1-create-a-new-wpf-app.md
-                - name: 'Attività 2: Ospitare Progettazione flussi di lavoro'
+                - name: 'Attività 2: ospitare l''utilità di progettazione del flusso di lavoro'
                   href: task-2-host-the-workflow-designer.md
-                - name: 'Attività 3: Creare i riquadri Casella degli strumenti e PropertyGrid'
+                - name: 'Attività 3: creare i riquadri Casella degli strumenti e PropertyGrid'
                   href: task-3-create-the-toolbox-and-propertygrid-panes.md
                 - name: 'Procedura: Visualizzare errori di convalida in una finestra di progettazione riallocata'
                   href: how-to-display-validation-errors-in-a-rehosted-designer.md

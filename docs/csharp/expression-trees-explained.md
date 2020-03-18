@@ -5,10 +5,10 @@ ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
 ms.openlocfilehash: 12093e9c9246c87cc5ea3aedaca6ba34acacce4d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73036998"
 ---
 # <a name="expression-trees-explained"></a>Nozioni di base sugli alberi delle espressioni
@@ -16,7 +16,7 @@ ms.locfileid: "73036998"
 [Precedente -- Panoramica](expression-trees.md)
 
 Un albero delle espressioni è una struttura dei dati che definisce il codice. Si basa sulle stesse strutture usate da un compilatore per analizzare il codice e generare l'output compilato. Nel corso di questa esercitazione si noterà una certa similarità tra gli alberi delle espressioni e i tipi usati nelle API di Roslyn per compilare [analizzatori e correzioni di codice](https://github.com/dotnet/roslyn-analyzers).
-Gli analizzatori e le correzioni di codice sono pacchetti NuGet che eseguono l'analisi statica del codice e possono suggerire potenziali correzioni per uno sviluppatore. I concetti sono simili e il risultato finale è una struttura di dati che consente di esaminare il codice sorgente in modo significativo. Gli alberi delle espressioni si basano tuttavia su un set di classi e API completamente diverso dalle API di Roslyn.
+(Analyzers e CodeFixes sono pacchetti NuGet che eseguono l'analisi statica sul codice e possono suggerire potenziali correzioni per uno sviluppatore.) I concetti sono simili e il risultato finale è una struttura di dati che consente di esaminare il codice sorgente in modo significativo. Gli alberi delle espressioni si basano tuttavia su un set di classi e API completamente diverso dalle API di Roslyn.
 
 Si osservi l'esempio seguente.
 Ecco una riga di codice:

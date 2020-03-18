@@ -3,10 +3,10 @@ title: Sovranità dei dati per microservizio
 description: La sovranità dei dati per microservizio è uno dei punti chiave dei microservizi. Ogni microservizio deve essere l'unico proprietario del proprio database, che non viene condiviso con nessun altro. Naturalmente, tutte le istanze di un microservizio si connettono allo stesso database a disponibilità elevata.
 ms.date: 09/20/2018
 ms.openlocfilehash: f606d6314f38bf3e2c163871af432806dddc7446
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73191915"
 ---
 # <a name="data-sovereignty-per-microservice"></a>Sovranità dei dati per microservizio
@@ -19,15 +19,15 @@ Questo principio è simile nella [progettazione basata su domini (DDD, Domain-Dr
 
 L'approccio tradizionale (dati monolitici) usato in molte applicazioni prevede tuttavia un singolo database centralizzato o qualche database. Si tratta spesso di un database SQL normalizzato, usato per l'intera applicazione e per tutti i rispettivi sottosistemi interni, come mostrato nella figura 4-7.
 
-![Diagramma che illustra i due approcci di database.](./media/data-sovereignty-per-microservice/data-sovereignty-comparison.png)
+![Diagramma che mostra i due approcci al database.](./media/data-sovereignty-per-microservice/data-sovereignty-comparison.png)
 
 **Figura 4-7**. Confronto relativo alla sovranità dei dati: database monolitico e microservizi
 
-Nell'approccio tradizionale, è presente un database singolo condiviso tra tutti i servizi, in genere in un'architettura a più livelli. Nell'approccio basato su microservizi, ogni microservizio è proprietario del modello/dati. L'approccio basato sul database centralizzato risulta apparentemente più semplice e sembra consentire il riutilizzo delle entità nei diversi sottosistemi per assicurare la coerenza complessiva. In realtà si ottengono tuttavia tabelle di grandi dimensioni che gestiscono molti sottosistemi diversi e che includono attributi e colonne che risultano nella maggior parte dei casi superflui. Questo approccio è paragonabile all'uso della stessa mappa fisica per una breve passeggiata, per una gita di un giorno in auto e per l'apprendimento della geografia.
+Nell'approccio tradizionale, è presente un database singolo condiviso tra tutti i servizi, in genere in un'architettura a più livelli. Nell'approccio dei microservizi, ogni microservizio possiede il proprio modello/dati. L'approccio basato sul database centralizzato risulta apparentemente più semplice e sembra consentire il riutilizzo delle entità nei diversi sottosistemi per assicurare la coerenza complessiva. In realtà si ottengono tuttavia tabelle di grandi dimensioni che gestiscono molti sottosistemi diversi e che includono attributi e colonne che risultano nella maggior parte dei casi superflui. Questo approccio è paragonabile all'uso della stessa mappa fisica per una breve passeggiata, per una gita di un giorno in auto e per l'apprendimento della geografia.
 
 Un'applicazione monolitica con in genere un singolo database relazionale offre due vantaggi importanti, ovvero le [transazioni ACID](https://en.wikipedia.org/wiki/ACID) e il linguaggio SQL, che possono essere usati in tutte le tabelle e in tutti i dati correlati all'applicazione. Questo approccio consente di scrivere con facilità una query che combina dati da più tabelle.
 
-Tuttavia, l'accesso ai dati diventa molto più complicato quando si passa a un'architettura di microservizi. Anche quando si usano transazioni ACID all'interno di un microservizio o di un contesto delimitato, è fondamentale considerare che i dati di proprietà di ogni microservizio sono privati per quel microservizio ed è necessario accedervi solo in modo sincrono tramite gli endpoint dell'API (REST, gRPC, SOAP e così via) o in modo asincrono tramite messaggistica (AMQP o simile).
+Tuttavia, l'accesso ai dati diventa molto più complicato quando si passa a un'architettura di microservizi. Anche quando si utilizzano transazioni ACID all'interno di un microservizio o di un contesto delimitato, è fondamentale considerare che i dati di proprietà di ogni microservizio sono privati per tale microservizio e devono essere accessibili solo in modo sincrono tramite i relativi endpoint API (REST, gRPC, SOAP, ecc)o in modo asincrono tramite messaggistica (AMQP o simili).
 
 L'incapsulamento dei dati assicura che i microservizi siano a regime di controllo libero e possano evolversi in modo indipendente. Se più servizi accedono agli stessi dati, gli aggiornamenti dello schema richiederebbero aggiornamenti coordinati per tutti i servizi. Ciò comprometterebbe l'autonomia del ciclo di vita dei microservizi. Le strutture di dati distribuite tuttavia non consentono di eseguire alcuna transazione ACID tra microservizi. È quindi necessario usare la coerenza finale quando un processo aziendale interessa più microservizi. Ciò è molto più difficile da implementare rispetto ai semplici join SQL, perché non è possibile creare vincoli di integrità o usare le transazioni distribuite tra database distinti, come verrà spiegato in un secondo momento. Analogamente, molte altre funzionalità di database relazionali non sono disponibili tra più microservizi.
 
@@ -49,18 +49,18 @@ I microservizi risultano vantaggiosi per DDD perché forniscono limiti reali sot
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Chris Richardson. Modello: database per servizio** \
+- **Chris Richardson. Modello: database per servizioPattern: Database per service** \
   <https://microservices.io/patterns/data/database-per-service.html>
 
-- **Martin Fowler. \ BoundedContext**
+- **Martin Fowler. BoundedContext** \
   <https://martinfowler.com/bliki/BoundedContext.html>
 
-- **Martin Fowler. \ PolyglotPersistence**
+- **Martin Fowler. PolyglotPersistence (Persistenza di Polyglot)** \
   <https://martinfowler.com/bliki/PolyglotPersistence.html>
 
-- **Alberto Brandolini. Progettazione basata su domini strategici con mapping del contesto** \
+- **Alberto Brandolini. Progettazione strategica basata sul dominio con mappatura del contesto** \
   <https://www.infoq.com/articles/ddd-contextmapping>
 
 >[!div class="step-by-step"]
->[Precedente](microservices-architecture.md)
->[Successivo](logical-versus-physical-architecture.md)
+>[Successivo](microservices-architecture.md)
+>[precedente](logical-versus-physical-architecture.md)

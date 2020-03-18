@@ -4,17 +4,17 @@ description: Descrive il supporto in C# delle variabili discard, che sono variab
 ms.technology: csharp-fundamentals
 ms.date: 07/21/2017
 ms.openlocfilehash: a76e7fc13f92ec0de87153bb35eb3924bb317616
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73100635"
 ---
 # <a name="discards---c-guide"></a>Variabili discard - Guida di C#
 
 A partire dalla versione 7.0, C# supporta le variabili discard, variabili dummy temporanee intenzionalmente inutilizzate nel codice dell'applicazione. Le variabili discard sono equivalenti alle variabili non assegnate e non hanno un valore. Dato che è presente un'unica variabile discard alla quale potrebbe non essere allocata nessuna archiviazione, le variabili discard possono ridurre le allocazioni di memoria. Dato che rendono chiaro l'obiettivo del codice, ne migliorano la leggibilità e la gestibilità.
 
-Per indicare che una variabile è una variabile discard le si assegna come nome il carattere di sottolineatura (`_`). Ad esempio, la chiamata al metodo seguente restituisce una tupla con 3 elementi in cui il primo e il secondo valore sono discard e *area* è una variabile dichiarata in precedenza da impostare in base al corrispondente terzo componente restituito da  *GetCityInformation*:
+Per indicare che una variabile è una variabile discard le si assegna come nome il carattere di sottolineatura (`_`). Ad esempio, la chiamata al metodo seguente restituisce una tupla con 3 elementi in cui il primo e il secondo valore sono discard e *area* è una variabile dichiarata in precedenza da impostare in base al corrispondente terzo componente restituito da * GetCityInformation*:
 
 ```csharp
 (_, _, area) = city.GetCityInformation(cityName);
@@ -22,7 +22,7 @@ Per indicare che una variabile è una variabile discard le si assegna come nome 
 
 In C# 7.0 le variabili discard sono supportate nelle assegnazioni nei contesti seguenti:
 
-- [Decostruzione](deconstruct.md) di tuple e oggetti.
+- Tupla e [decostruzione di](deconstruct.md)oggetti .
 - Criteri di ricerca con [is](language-reference/keywords/is.md) e [switch](language-reference/keywords/switch.md).
 - Chiamate a metodi con parametri `out`.
 - Un `_` standalone quando l'ambito non include nessun `_`.
@@ -67,20 +67,20 @@ Nel seguente esempio viene chiamato il metodo [DateTime.TryParse(String, out Dat
 
 Si noti che anche `_` è un identificatore valido. Quando viene usata fuori da un contesto supportato, `_` non viene considerata come una variabile discard ma come una variabile valida. Se un identificatore con nome `_` è già incluso nell'ambito, l'uso di `_` come variabile discard standalone può causare:
 
-- La modifica accidentale della variabile `_` dell'ambito, alla quale viene assegnato il valore della variabile discard prevista. Esempio:
+- La modifica accidentale della variabile `_` dell'ambito, alla quale viene assegnato il valore della variabile discard prevista. Ad esempio:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#1)]
 
-- Un errore del compilatore per la violazione dell'indipendenza dai tipi. Esempio:
+- Un errore del compilatore per la violazione dell'indipendenza dai tipi. Ad esempio:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#2)]
 
-- Errore del compilatore CS0136: "Non è possibile dichiarare in questo ambito una variabile locale o un parametro denominato "\_" perché tale nome viene usato in un ambito locale di inclusione per definire una variabile locale o un parametro". Esempio:
+- Errore del compilatore CS0136: "Non è possibile dichiarare in questo ambito una variabile locale o un parametro denominato "\_" perché tale nome viene usato in un ambito locale di inclusione per definire una variabile locale o un parametro". Ad esempio:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#3)]
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Decostruzione di tuple e altri tipi](deconstruct.md)
-- [`is` - Parola chiave](language-reference/keywords/is.md)
-- [`switch` - Parola chiave](language-reference/keywords/switch.md)
+- [`is`Parola chiave](language-reference/keywords/is.md)
+- [`switch`Parola chiave](language-reference/keywords/switch.md)

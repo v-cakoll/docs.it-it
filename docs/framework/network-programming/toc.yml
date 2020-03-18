@@ -140,7 +140,7 @@
           items:
             - name: 'Procedura: Impostare criteri di cache basati sulla posizione per un''applicazione'
               href: how-to-set-a-location-based-cache-policy-for-an-application.md
-            - name: 'Procedura: Impostare criteri di cache predefiniti basati sul tempo per un''applicazione'
+            - name: 'Procedura: Impostare criteri di cache predefiniti basati sull''ora per un''applicazione'
               href: how-to-set-the-default-time-based-cache-policy-for-an-application.md
             - name: 'Procedura: Personalizzare criteri di cache basati sul tempo'
               href: how-to-customize-a-time-based-cache-policy.md

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
 ms.openlocfilehash: d8e5c0ec148754c3e4cebfa32ad9f44a0bb0119e
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70202905"
 ---
 # <a name="-c-compiler-options"></a>@ (opzioni del compilatore C#)
@@ -42,7 +42,7 @@ L'opzione @ consente di specificare un file che contiene le opzioni del compilat
   
  Il compilatore elabora le opzioni di comando quando vengono rilevate. Di conseguenza, gli argomenti della riga di comando possono eseguire l'override di opzioni elencate in precedenza nei file di risposta. Viceversa, le opzioni in un file di risposta eseguiranno l'override delle opzioni elencate in precedenza nella riga di comando o in altri file di risposta.  
   
- In C# è disponibile il file csc.rsp, che si trova nella stessa directory del file csc.exe. Per altre informazioni su csc.rsp, vedere [-noconfig](./noconfig-compiler-option.md).  
+ In C# è disponibile il file csc.rsp, che si trova nella stessa directory del file csc.exe. Vedere [-noconfig](./noconfig-compiler-option.md) per ulteriori informazioni su csc.rsp.  
   
  Questa opzione del compilatore non può essere impostata nell'ambiente di sviluppo di Visual Studio, né modificata a livello di codice.  
   
@@ -56,4 +56,4 @@ L'opzione @ consente di specificare un file che contiene le opzioni del compilat
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Opzioni del compilatore C#](./index.md)
+- [Opzioni del compilatore C](./index.md)

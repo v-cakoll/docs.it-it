@@ -3,10 +3,10 @@ title: Materializzazione intermedia (C#)
 ms.date: 07/20/2015
 ms.assetid: 7922d38f-5044-41cf-8e17-7173d6553a5e
 ms.openlocfilehash: af1eb7df7da02d8e72fc102cda4ee5f329dc7974
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70253155"
 ---
 # <a name="intermediate-materialization-c"></a>Materializzazione intermedia (C#)
@@ -64,7 +64,7 @@ class Program
 }  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```output  
 ToUpper: source >abc<  

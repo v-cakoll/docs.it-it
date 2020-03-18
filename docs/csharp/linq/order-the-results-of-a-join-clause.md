@@ -4,11 +4,11 @@ description: Informazioni su come ordinare i risultati di una clausola join LINQ
 ms.date: 12/01/2016
 ms.assetid: a7458901-1201-4c25-b8d9-c04ca52e0eb9
 ms.openlocfilehash: f60000b83bf378dd8740b7255d421dd4335614c4
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857888"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61659865"
 ---
 # <a name="order-the-results-of-a-join-clause"></a>Ordinare i risultati di una clausola join
 
@@ -22,6 +22,6 @@ Questa query crea un join di gruppo e quindi ordina i gruppi in base all'element
 
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ (Language-Integrated Query)](index.md)
+- [Language Integrated Query (LINQ)](index.md)
 - [Clausola orderby](../language-reference/keywords/orderby-clause.md)
-- [Clausola join](../language-reference/keywords/join-clause.md)
+- [clausola join](../language-reference/keywords/join-clause.md)

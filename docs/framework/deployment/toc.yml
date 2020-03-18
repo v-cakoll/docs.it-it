@@ -6,13 +6,13 @@
       items:
         - name: Guida alla distribuzione per gli sviluppatori
           href: deployment-guide-for-developers.md
-        - name: Guida alla distribuzione per amministratori
+        - name: Guida alla distribuzione per gli amministratori
           href: guide-for-administrators.md
         - name: Riduzione dei riavvii del sistema durante le installazioni di .NET Framework 4.5
           href: reducing-system-restarts.md
-        - name: 'Procedura: Ottenere lo stato di avanzamento dal programma d''installazione di .NET Framework 4.5'
+        - name: 'Procedura: ottenere lo stato di avanzamento dal programma d''installazione di .NET Framework 4.5'
           href: how-to-get-progress-from-the-dotnet-installer.md
-        - name: 'Errori di inizializzazione di .NET Framework: gestione dell''esperienza utente'
+        - name: 'Errori di inizializzazione di .NET Framework: gestione dell''interfaccia utente'
           href: initialization-errors-managing-the-user-experience.md
         - name: 'Procedura: debug dei problemi di attivazione CLR'
           href: how-to-debug-clr-activation-issues.md

@@ -1,35 +1,35 @@
 ---
-title: Algoritmo di caricamento della libreria non gestita-.NET Core
-description: Descrizione dei dettagli dell'algoritmo di caricamento dell'assembly non gestito in .NET Core
+title: Algoritmo di caricamento della libreria non gestita - .NET CoreUnmanaged library loading algorithm - .NET Core
+description: Descrizione dei dettagli dell'algoritmo di caricamento di assembly non gestito in .NET Core
 ms.date: 10/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.openlocfilehash: c651aa6e0f37a968e6f8b26d1909def6fa488ccd
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72250040"
 ---
-# <a name="unmanaged-native-library-loading-algorithm"></a>Algoritmo di caricamento libreria non gestito (nativo)
+# <a name="unmanaged-native-library-loading-algorithm"></a>Algoritmo di caricamento della libreria non gestita (nativa) Unmanaged (native) library loading algorithm
 
-Le librerie non gestite vengono individuate e caricate con un algoritmo che prevede varie fasi.
+Le librerie non gestite vengono individuate e caricate con un algoritmo che coinvolge varie fasi.
 
-Nell'algoritmo seguente viene descritto come vengono caricate le librerie native tramite `PInvoke`.
+L'algoritmo seguente descrive il `PInvoke`modo in cui le librerie native vengono caricate tramite .
 
-## <a name="pinvoke-load-library-algorithm"></a>algoritmo di caricamento della libreria `PInvoke`
+## <a name="pinvoke-load-library-algorithm"></a>`PInvoke`algoritmo della libreria di caricamento
 
-`PInvoke` usa l'algoritmo seguente quando si tenta di caricare un assembly non gestito:
+`PInvoke`utilizza il seguente algoritmo quando si tenta di caricare un assembly non gestito:
 
-1. Determinare il `active` <xref:System.Runtime.Loader.AssemblyLoadContext>. Per una libreria di caricamento non gestita, il AssemblyLoadContext `active` è quello con l'assembly che definisce il `PInvoke`.
+1. Determinare `active` <xref:System.Runtime.Loader.AssemblyLoadContext>il file . Per una libreria di `active` caricamento non gestita, AssemblyLoadContext è `PInvoke`quello con l'assembly che definisce l'oggetto .
 
-2. Per la `active` <xref:System.Runtime.Loader.AssemblyLoadContext>, provare a trovare l'assembly in ordine di priorità:
-    * Verifica della cache.
+2. Per `active` <xref:System.Runtime.Loader.AssemblyLoadContext>, provare a trovare l'assieme in ordine di priorità per:
+    * Controllo della cache.
 
-    * Chiamata al delegato <xref:System.Runtime.InteropServices.DllImportResolver?displayProperty=nameWithType> corrente impostato dalla funzione <xref:System.Runtime.InteropServices.NativeLibrary.SetDllImportResolver(System.Reflection.Assembly,System.Runtime.InteropServices.DllImportResolver)?displayProperty=nameWithType>.
+    * Chiamata del <xref:System.Runtime.InteropServices.DllImportResolver?displayProperty=nameWithType> delegato corrente <xref:System.Runtime.InteropServices.NativeLibrary.SetDllImportResolver(System.Reflection.Assembly,System.Runtime.InteropServices.DllImportResolver)?displayProperty=nameWithType> impostato dalla funzione.
 
-    * Chiamata della funzione <xref:System.Runtime.Loader.AssemblyLoadContext.LoadUnmanagedDll%2A?displayProperty=nameWithType> sul AssemblyLoadContext `active`.
+    * Chiamata <xref:System.Runtime.Loader.AssemblyLoadContext.LoadUnmanagedDll%2A?displayProperty=nameWithType> della funzione `active` su AssemblyLoadContext.
 
-    * Controllo della cache dell'istanza di <xref:System.AppDomain> ed esecuzione della logica di [probe della libreria non gestita (nativa)](default-probing.md#unmanaged-native-library-probing) .
+    * Controllo <xref:System.AppDomain> della cache dell'istanza e esecuzione della logica di [probe della libreria Unmanaged (nativa).](default-probing.md#unmanaged-native-library-probing)
 
-    * Generazione dell'evento <xref:System.Runtime.Loader.AssemblyLoadContext.ResolvingUnmanagedDll?displayProperty=nameWithType> per il AssemblyLoadContext `active`.
+    * Generazione <xref:System.Runtime.Loader.AssemblyLoadContext.ResolvingUnmanagedDll?displayProperty=nameWithType> dell'evento `active` per AssemblyLoadContext.

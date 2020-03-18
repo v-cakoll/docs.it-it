@@ -3,10 +3,10 @@ title: Problemi e soluzioni per la gestione dei dati distribuiti
 description: Informazioni sulle problematiche e le soluzioni per la gestione dei dati distribuiti nell'area dei microservizi.
 ms.date: 09/20/2018
 ms.openlocfilehash: c30de24591d5a73fd34087f34a69e9c7ed54cd35
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71834453"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Problemi e soluzioni per la gestione dei dati distribuiti
@@ -23,7 +23,7 @@ Il modo in cui vengono identificati i limiti tra più contesti dell'applicazione
 
 Il secondo problema si pone quando si tratta di implementare query che recuperano dati di più microservizi, evitando comunicazioni frammentate con i microservizi dalle app client remote. Un esempio può essere una singola schermata di un'app per dispositivi mobili che deve visualizzare all'utente le informazioni appartenenti ai microservizi del carrello, del catalogo e dell'identità utente. Un altro esempio è un report complesso che include molte tabelle distribuite in più microservizi. La soluzione giusta dipende dalla complessità delle query. In ogni caso, per migliorare l'efficienza nelle comunicazioni del sistema è necessario elaborare un modello per aggregare le informazioni. Le soluzioni più comuni sono le seguenti.
 
-**API Gateway.** Per la semplice aggregazione di dati da più microservizi che sono proprietari di database diversi, l'approccio consigliato è un microservizio di aggregazione noto come API Gateway. Bisogna però prestare attenzione implementare questo schema perché può diventare un collo di bottiglia nel sistema e violare il principio di autonomia dei microservizi. Per evitare questi inconvenienti è possibile definire più schemi API Gateway specifici, ognuno incentrato su una sezione verticale o area aziendale del sistema. Lo schema API Gateway è illustrato in dettaglio più avanti, nella sezione [API Gateway](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md#why-consider-api-gateways-instead-of-direct-client-to-microservice-communication).
+**Gateway API.** Per la semplice aggregazione di dati da più microservizi che sono proprietari di database diversi, l'approccio consigliato è un microservizio di aggregazione noto come API Gateway. Bisogna però prestare attenzione implementare questo schema perché può diventare un collo di bottiglia nel sistema e violare il principio di autonomia dei microservizi. Per evitare questi inconvenienti è possibile definire più schemi API Gateway specifici, ognuno incentrato su una sezione verticale o area aziendale del sistema. Lo schema API Gateway è illustrato in dettaglio più avanti, nella sezione [API Gateway](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md#why-consider-api-gateways-instead-of-direct-client-to-microservice-communication).
 
 **CQRS con tabelle di query/letture.** Un'altra soluzione per aggregare i dati di più microservizi è lo [schema Materialized View](https://docs.microsoft.com/azure/architecture/patterns/materialized-view). In questo approccio si genera in anticipo una tabella di sola lettura con i dati appartenenti a più microservizi, ovvero si preparano i dati denormalizzati prima delle query effettive. Il formato della tabella è adatto alle esigenze dell'app client.
 
@@ -35,7 +35,7 @@ Questo approccio consente non solo di risolvere il problema originale (come eseg
 
 Tenere presente che questo database centralizzato verrà usato solo per query e report che non richiedono dati in tempo reale. Gli aggiornamenti e le transazioni originali, da usare come fonte affidabile, devono essere presenti nei dati dei microservizi. Per la sincronizzazione dei dati, si può scegliere di usare la comunicazione basata su eventi (illustrata nelle sezioni successive) o altri strumenti di importazione/esportazione dell'infrastruttura di database. Se si usa la comunicazione basata su eventi, il processo di integrazione sarà simile alla procedura di propagazione dei dati descritto in precedenza per le tabelle di query CQRS.
 
-Se però la progettazione dell'applicazione implica l'aggregazione costante di informazioni di più microservizi per le query complesse, questo potrebbe essere un sintomo di una progettazione non appropriata, dal momento che un microservizio deve essere il più possibile isolato da altri microservizi. Questa operazione esclude i report e le analisi che devono sempre usare i database centrali con dati a freddo. Questo problema spesso potrebbe essere un motivo per unire i microservizi. È necessario bilanciare l'autonomia dell'evoluzione e la distribuzione di ogni microservizio con dipendenze complesse, coesione e aggregazione dei dati.
+Se però la progettazione dell'applicazione implica l'aggregazione costante di informazioni di più microservizi per le query complesse, questo potrebbe essere un sintomo di una progettazione non appropriata, dal momento che un microservizio deve essere il più possibile isolato da altri microservizi. Sono esclusi i report/analitici che devono sempre utilizzare database centrali con dati a freddo. Questo problema spesso potrebbe essere un motivo per unire i microservizi. È necessario bilanciare l'autonomia dell'evoluzione e la distribuzione di ogni microservizio con dipendenze complesse, coesione e aggregazione dei dati.
 
 ## <a name="challenge-3-how-to-achieve-consistency-across-multiple-microservices"></a>Problema \#3: Come ottenere la coerenza tra più microservizi
 
@@ -47,7 +47,7 @@ In un'ipotetica versione monolitica di questa applicazione, quando il prezzo vie
 
 Tuttavia, in un'applicazione basata su microservizi le tabelle Product e Basket appartengono ai rispettivi microservizi. Nessun microservizio deve includere tabelle/risorse di archiviazione di proprietà di un altro microservizio nelle proprie transazioni e nemmeno nelle query dirette, come illustrato nella figura 4-9.
 
-![Diagramma che mostra che i dati del database di microservizi non possono essere condivisi.](./media/distributed-data-management/indepentent-microservice-databases.png)
+![Diagramma che mostra che i dati del database dei microservizi non possono essere condivisi.](./media/distributed-data-management/indepentent-microservice-databases.png)
 
 **Figura 4-9**. Un microservizio non può accedere direttamente a una tabella in un altro microservizio
 
@@ -89,24 +89,24 @@ Per altre informazioni sull'uso della comunicazione asincrona, vedere le sezioni
 - **Coerenza finale** \
   <https://en.wikipedia.org/wiki/Eventual_consistency>
 
-- **Introduzione alla coerenza dei dati** \
+- **Primer di coerenza dei dati** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
-- **Martin Fowler. CQRS (separazione di responsabilità per query e comandi)**  \
+- **Martin Fowler. CQRS (Command and Query Responsibility Segregation)** \
   <https://martinfowler.com/bliki/CQRS.html>
 
 - **Vista materializzata** \
   <https://docs.microsoft.com/azure/architecture/patterns/materialized-view>
 
-- **Riga Carlo. ACID rispetto a BASE: il pH di spostamento dell'elaborazione delle transazioni di database** \
+- **Charles Row. ACID vs BASE: il pH in tcambio dell'elaborazione delle transazioni di database** \
   <https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/>
 
-- **Transazione di compensazione** \
+- **Compensazione della transazione** \
   <https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction>
 
-- **UDI. Composizione orientata ai servizi** \
+- **Udi Dahan. Composizione orientata al servizio** \
   <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
 >[!div class="step-by-step"]
->[Precedente](logical-versus-physical-architecture.md)
->[Successivo](identify-microservice-domain-model-boundaries.md)
+>[Successivo](logical-versus-physical-architecture.md)
+>[precedente](identify-microservice-domain-model-boundaries.md)

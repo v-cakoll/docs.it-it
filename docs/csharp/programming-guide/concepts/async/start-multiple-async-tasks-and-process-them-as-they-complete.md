@@ -3,10 +3,10 @@ title: Elaborare le attività asincrone quando vengono completate
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
 ms.openlocfilehash: b618fd6bf80551231d2b285fd0e8aef688d00d93
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71736734"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>Avviare più attività asincrone ed elaborarle quando vengono completate (C#)
@@ -20,20 +20,20 @@ Nell'esempio seguente viene usata una query per creare una Collection di attivit
 
 ## <a name="download-an-example-solution"></a>Scaricare una soluzione di esempio
 
-È possibile scaricare i progetti completi di Windows Presentation Foundation (WPF) da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di codice asincrono: ottimizzazione dell'applicazione) e quindi seguire questa procedura.
+È possibile scaricare il progetto completo di Windows Presentation Foundation (WPF) da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: ottimizzazione dell'applicazione) e seguire la procedura seguente.
 
 > [!TIP]
-> Se non si vuole scaricare il progetto, è invece possibile esaminare il file *MainWindow.XAML.cs* alla fine di questo argomento.
+> Se non si desidera scaricare il progetto, è possibile esaminare il file *di MainWindow.xaml.cs* alla fine di questo argomento.
 
-1. Estrarre i file scaricati dal file *zip* e quindi avviare Visual Studio.
+1. Estrarre i file scaricati dal file *con estensione zip,* quindi avviare Visual Studio.
 
-2. Nella barra dei menu scegliere **File** > **Apri** > **Progetto/soluzione**.
+2. Nella barra dei menu scegliere**Apri** > **progetto/soluzione** **apri file** > .
 
-3. Nella finestra di dialogo **Apri progetto** aprire la cartella che include il codice di esempio scaricato e quindi aprire il file di soluzione (con*estensione sln*) per *AsyncFineTuningCS*/*AsyncFineTuningVB*.
+3. Nella finestra di dialogo **Apri progetto** aprire la cartella contenente il codice di esempio scaricato, quindi aprire il file di soluzione (*sln*) per *AsyncFineTuningCS*/*AsyncFineTuningVB*.
 
 4. In **Esplora soluzioni** aprire il menu di scelta rapida per il progetto **ProcessTasksAsTheyFinish** e quindi scegliere **Imposta come progetto di avvio**.
 
-5. Premere il tasto <kbd>F5</kbd> per eseguire il programma con il debug oppure premere <kbd>CTRL</kbd>+<kbd>F5</kbd> tasti per eseguire il programma senza eseguirne il debug.
+5. Premere il tasto <kbd>F5</kbd> per eseguire il programma con il debug oppure premere i tasti <kbd>Ctrl</kbd>+<kbd>F5</kbd> per eseguire il programma senza eseguirne il debug.
 
 6. Eseguire il progetto più volte per verificare che le lunghezze scaricate non siano sempre nello stesso ordine.
 
@@ -49,7 +49,7 @@ Il progetto **CancelAfterOneTask** include già una query che, se eseguita, crea
 IEnumerable<Task<int>> downloadTasksQuery = from url in urlList select ProcessURL(url, client, ct);
 ```
 
-Nel file *MainWindow.XAML.cs* del progetto apportare le seguenti modifiche al metodo `AccessTheWebAsync`:
+Nel *file MainWindow.xaml.cs* del progetto, apportare `AccessTheWebAsync` le seguenti modifiche al metodo:
 
 - Eseguire la query applicando <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> anziché <xref:System.Linq.Enumerable.ToArray%2A>.
 
@@ -71,7 +71,7 @@ Nel file *MainWindow.XAML.cs* del progetto apportare le seguenti modifiche al me
         downloadTasks.Remove(firstFinishedTask);
         ```
 
-    3. Attende `firstFinishedTask`, che viene restituito da una chiamata a `ProcessURLAsync`. La variabile `firstFinishedTask` è un <xref:System.Threading.Tasks.Task%601> dove `TReturn` è un valore intero. L'attività è già stata completata, ma è possibile metterla in attesa per recuperare la lunghezza del sito Web scaricato, come illustrato di seguito. Se si verifica un errore nell'attività, `await` genererà la prima eccezione figlio archiviata nel `AggregateException`, a differenza della lettura della proprietà `Result` che genererebbe il `AggregateException`.
+    3. Attende `firstFinishedTask`, che viene restituito da una chiamata a `ProcessURLAsync`. La variabile `firstFinishedTask` è un <xref:System.Threading.Tasks.Task%601> dove `TReturn` è un valore intero. L'attività è già stata completata, ma è possibile metterla in attesa per recuperare la lunghezza del sito Web scaricato, come illustrato di seguito. Se l'attività ha `await` un errore, genererà `AggregateException`la prima `Result` eccezione figlio `AggregateException`archiviata in , a differenza della lettura della proprietà che genererebbe l'oggetto .
 
         ```csharp
         int length = await firstFinishedTask;
@@ -81,13 +81,13 @@ Nel file *MainWindow.XAML.cs* del progetto apportare le seguenti modifiche al me
 Eseguire il programma più volte per verificare che le lunghezze scaricate non siano sempre nello stesso ordine.
 
 > [!CAUTION]
-> È possibile usare `WhenAny` in un ciclo, come descritto nell'esempio, per risolvere i problemi che includono un numero limitato di attività. Tuttavia, se ci sono molte attività da elaborare, altri approcci sono più efficienti. Per altre informazioni ed esempi, vedere [Processing tasks as they complete](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/) (Elaborazione di attività completate).
+> È possibile usare `WhenAny` in un ciclo, come descritto nell'esempio, per risolvere i problemi che includono un numero limitato di attività. Tuttavia, se ci sono molte attività da elaborare, altri approcci sono più efficienti. Per ulteriori informazioni ed esempi, vedere Elaborazione delle attività durante il [completamento.](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/)
 
 ## <a name="complete-example"></a>Esempio completo
 
-Il codice seguente è il testo completo del file *MainWindow.XAML.cs* per l'esempio. Gli asterischi contrassegnano gli elementi che sono stati aggiunti per questo esempio. Si noti inoltre che è necessario aggiungere un riferimento per <xref:System.Net.Http>.
+Il codice seguente è il testo completo del file *MainWindow.xaml.cs* per l'esempio. Gli asterischi contrassegnano gli elementi che sono stati aggiunti per questo esempio. Si noti inoltre che è necessario aggiungere un riferimento per <xref:System.Net.Http>.
 
-È possibile scaricare il progetto da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di codice asincrono: ottimizzazione dell'applicazione).
+È possibile scaricare il progetto da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: ottimizzazione dell'applicazione).
 
 ```csharp
 using System;
@@ -228,6 +228,6 @@ namespace ProcessTasksAsTheyFinish
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
-- [Ottimizzazione dell'applicazione Async (C#)](fine-tuning-your-async-application.md)
-- [Programmazione asincrona con Async e Await (C#)](index.md)
-- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di codice asincrono: Ottimizzazione dell'applicazione)
+- [Ottimizzazione dell'applicazione asincrona (C#)](fine-tuning-your-async-application.md)
+- [Programmazione asincrona con async e await (C#)](index.md)
+- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: Ottimizzazione dell'applicazione)

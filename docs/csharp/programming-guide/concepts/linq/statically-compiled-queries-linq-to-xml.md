@@ -3,10 +3,10 @@ title: Query compilate in modo statico (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 3bf558fe-0705-479d-86d4-00188f5fcf9c
 ms.openlocfilehash: 98725cece1006ba13afb64bb8ae17ae6e62c53cf
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70253025"
 ---
 # <a name="statically-compiled-queries-linq-to-xml-c"></a>Query compilate in modo statico (LINQ to XML) (C#)
@@ -15,7 +15,7 @@ Uno dei più importanti vantaggi a livello di prestazioni di LINQ to XML, rispet
 ## <a name="statically-compiled-queries-vs-xpath"></a>Confronto tra query compilate in modo statico e XPath  
  Nell'esempio seguente viene illustrato come ottenere gli elementi discendenti con un nome specificato e con un attributo con un valore specificato.  
   
- Di seguito è riportata l'espressione XPath equivalente:`//Address[@Type='Shipping']`
+ Di seguito è riportato l'espressione XPath equivalente:The following is the equivalent XPath expression:`//Address[@Type='Shipping']`
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  

@@ -1,11 +1,11 @@
 - name: Programmazione asincrona con Async e Await
   href: index.md
   items:
-    - name: 'Procedura dettagliata: Accesso al Web con Async e Await'
+    - name: 'Procedura dettagliata: accesso al Web tramite Async e Await'
       href: walkthrough-accessing-the-web-by-using-async-and-await.md
-    - name: 'Procedura: Estendere la procedura dettagliata asincrona tramite Task.WhenAll'
+    - name: 'Procedura: estendere la procedura dettagliata asincrona tramite Task.WhenAll'
       href: how-to-extend-the-async-walkthrough-by-using-task-whenall.md
-    - name: 'Procedura: Eseguire più richieste Web in parallelo tramite Async e Await'
+    - name: 'Procedura: effettuare più richieste Web in parallelo tramite Async e Await'
       href: how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md
     - name: Tipi restituiti asincroni
       href: async-return-types.md

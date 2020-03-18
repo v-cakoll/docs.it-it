@@ -6,12 +6,12 @@
       items:
         - name: Creazione di interfacce generiche variant
           href: creating-variant-generic-interfaces.md
-        - name: Uso della varianza nelle interfacce per le raccolte generiche
+        - name: Utilizzo della varianza nelle interfacce per le raccolte generiche
           href: using-variance-in-interfaces-for-generic-collections.md
     - name: Varianza nei delegati
       href: variance-in-delegates.md
       items:
-        - name: Uso della varianza nei delegati
+        - name: Utilizzo della varianza nei delegati
           href: using-variance-in-delegates.md
-        - name: Uso della varianza per i delegati generici Func e Action
+        - name: Utilizzo della varianza per i delegati generici Func e Action
           href: using-variance-for-func-and-action-generic-delegates.md

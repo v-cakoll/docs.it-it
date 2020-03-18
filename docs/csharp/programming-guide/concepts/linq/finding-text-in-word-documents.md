@@ -3,10 +3,10 @@ title: Ricerca di testo nei documenti di Word (C#)
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
 ms.openlocfilehash: 173472b9dbd669476c3e5529655d111b88b0dba2
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70205391"
 ---
 # <a name="finding-text-in-word-documents-c"></a>Ricerca di testo nei documenti di Word (C#)
@@ -165,7 +165,7 @@ class Program
 }  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```output  
 StyleName:Code >        Console.WriteLine("Hello World");<  
@@ -312,7 +312,7 @@ class Program
 }  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```output  
 StyleName:Code ><  
@@ -325,7 +325,7 @@ StyleName:Code ><
 ## <a name="next-steps"></a>Passaggi successivi  
  Nella sezione successiva vengono fornite ulteriori informazioni sui documenti WordprocessingML:  
   
-- [Details of Office Open XML WordprocessingML Documents (C#)](./wordprocessingml-document-with-styles.md) (Dettagli di documenti WordprocessingML Office Open XML (C#))  
+- [Dettagli di documenti WordprocessingML Office Open XML (C#)](./wordprocessingml-document-with-styles.md)  
   
 ## <a name="see-also"></a>Vedere anche
 

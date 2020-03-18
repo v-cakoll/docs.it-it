@@ -3,14 +3,14 @@ title: Concatenamento di operatori di query standard (C#)
 ms.date: 07/20/2015
 ms.assetid: 66f2b0a9-2c23-4735-988e-bbc9dfb55c7b
 ms.openlocfilehash: 37df654b2bfdcc135460e5ded2ceec1eca33b35a
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70204213"
 ---
 # <a name="chaining-standard-query-operators-together-c"></a>Concatenamento di operatori di query standard (C#)
-Questo è l'argomento finale nell'[Esercitazione: Concatenamento di query (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
+Questo è l'argomento finale dell'[Esercitazione: concatenamento di query (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)  
   
  È anche possibile concatenare gli operatori di query standard. Ad esempio, è possibile inserire l'operatore <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> che opera anch'esso in modo lazy. Questo operatore non materializza nessun risultato intermedio.  
   
@@ -73,7 +73,7 @@ class Program
 }  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```output  
 ToUpper: source >abc<  

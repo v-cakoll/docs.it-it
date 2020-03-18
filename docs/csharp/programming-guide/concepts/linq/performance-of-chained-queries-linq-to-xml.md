@@ -3,10 +3,10 @@ title: Prestazioni delle query concatenate (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b2f1d715-8946-4dc0-8d56-fb3d1bba54a6
 ms.openlocfilehash: 7deff9205e6535877efabd85257baa5b3906f41a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70253115"
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-c"></a>Prestazioni delle query concatenate (LINQ to XML) (C#)
@@ -35,7 +35,7 @@ foreach (var i in query2)
     Console.WriteLine("{0}", (int)i);
 ```
 
-Questo esempio produce il seguente output:
+Nell'esempio viene prodotto l'output seguente:
 
 ```output
 4
@@ -55,4 +55,4 @@ L'iterazione in `query2` è pertanto direttamente proporzionale al numero di ele
 
 Per altre informazioni sugli iteratori, vedere [yield](../../../language-reference/keywords/yield.md).
 
-Per un'esercitazione più dettagliata sul concatenamento di query, vedere [Esercitazione: Concatenamento di query](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
+Per un'esercitazione dettagliata sul concatenamento di query, vedere [Esercitazione: concatenamento di query](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).

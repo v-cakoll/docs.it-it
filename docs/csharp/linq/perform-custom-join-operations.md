@@ -4,11 +4,11 @@ description: Informazioni su come eseguire operazioni di join LINQ personalizzat
 ms.date: 12/01/2016
 ms.assetid: 56a2a4a5-7299-497d-b3c3-23c848678911
 ms.openlocfilehash: 7051007c67bd64cd11ede2f4d5352ce3d497255f
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857866"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61659852"
 ---
 # <a name="perform-custom-join-operations"></a>Eseguire operazioni di join personalizzate
 
@@ -25,7 +25,7 @@ Non è tuttavia possibile usare la clausola `join` nei casi seguenti:
  Per eseguire join che non sono equijoin, è possibile usare più clausole `from` per introdurre ogni origine dati in modo indipendente. Si applica quindi un'espressione di predicato in una clausola `where` alla variabile di intervallo per ogni origine. L'espressione può inoltre avere il formato di una chiamata al metodo.
 
 > [!NOTE]
-> Non confondere questo tipo di operazione di join personalizzata con l'uso di più clausole `from` per accedere a raccolte interne. Per altre informazioni, vedere [Clausola join](../language-reference/keywords/join-clause.md).
+> Non confondere questo tipo di operazione di join personalizzata con l'uso di più clausole `from` per accedere a raccolte interne. Per ulteriori informazioni, vedere [Clausola join](../language-reference/keywords/join-clause.md).
 
 ## <a name="example"></a>Esempio
 
@@ -43,6 +43,6 @@ Nell'esempio seguente la query deve creare un join di due sequenze basate su chi
 
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ (Language-Integrated Query)](index.md)
-- [Clausola join](../language-reference/keywords/join-clause.md)
+- [Language Integrated Query (LINQ)](index.md)
+- [clausola join](../language-reference/keywords/join-clause.md)
 - [Ordinare i risultati di una clausola join](order-the-results-of-a-join-clause.md)

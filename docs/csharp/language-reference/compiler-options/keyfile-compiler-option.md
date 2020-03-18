@@ -9,10 +9,10 @@ helpviewer_keywords:
 - keyfile compiler option [C#]
 ms.assetid: 0815f9de-ace4-4e98-b4c6-13c55dea40c2
 ms.openlocfilehash: bf271cc6b6887e930911071d4603b51daed55e61
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70970265"
 ---
 # <a name="-keyfile-c-compiler-options"></a>-keyfile (opzioni del compilatore C#)
@@ -30,7 +30,7 @@ Specifica il nome file contenente la chiave crittografica.
 |----------|----------------|  
 |`file`|Nome del file che contiene la chiave con nome sicuro.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Se si usa questa opzione, il compilatore inserisce la chiave pubblica dal file specificato nel manifesto dell'assembly e quindi firma l'assembly finale con la chiave privata. Per generare un file di chiave, digitare sn -k `file` nella riga di comando.  
   
  Se si esegue la compilazione con **-target:module**, il nome del file di chiave verrà mantenuto nel modulo e incorporato nell'assembly creato quando si compila un assembly con [-addmodule](./addmodule-compiler-option.md).  
@@ -55,5 +55,5 @@ Specifica il nome file contenente la chiave crittografica.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Opzioni del compilatore C#](./index.md)
+- [Opzioni del compilatore C](./index.md)
 - [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)

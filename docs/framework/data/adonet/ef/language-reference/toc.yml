@@ -7,43 +7,43 @@
         - name: Query in LINQ to Entities
           href: queries-in-linq-to-entities.md
           items:
-            - name: 'Esempi di sintassi delle query basate su metodo: Proiezione'
+            - name: 'Esempi di sintassi di query basate sul metodo: proiezione'
               href: method-based-query-syntax-examples-projection.md
-            - name: 'Esempi di sintassi delle query basate su metodo: Filtro'
+            - name: 'Esempi di sintassi di query basate sul metodo: filtro'
               href: method-based-query-syntax-examples-filtering.md
-            - name: 'Esempi di sintassi delle query basate su metodo: Ordering'
+            - name: 'Esempi di sintassi di query basate sul metodo: ordinamento'
               href: method-based-query-syntax-examples-ordering.md
-            - name: 'Esempi di sintassi delle query basate su metodo: Operatori di aggregazione'
+            - name: 'Esempi di sintassi di query basate sul metodo: operatori di aggregazione'
               href: method-based-query-syntax-examples-aggregate-operators.md
-            - name: 'Esempi di sintassi delle query basate su metodo: Partizionamento'
+            - name: 'Esempi di sintassi di query basate sul metodo: partizionamento'
               href: method-based-query-syntax-examples-partitioning.md
-            - name: 'Esempi di sintassi delle query basate su metodo: Conversione'
+            - name: 'Esempi di sintassi di query basate sul metodo: conversione'
               href: method-based-query-syntax-examples-conversion.md
-            - name: 'Esempi di sintassi delle query basate su metodo: Operatori di join'
+            - name: 'Esempi di sintassi di query basate sul metodo: operatori di join'
               href: method-based-query-syntax-examples-join-operators.md
-            - name: 'Esempi di sintassi delle query basate su metodo: Operatori di elemento'
+            - name: 'Esempi di sintassi di query basate sul metodo: operatori di elemento'
               href: method-based-query-syntax-examples-element-operators.md
-            - name: 'Esempi di sintassi delle query basate su metodo: Raggruppamento'
+            - name: 'Esempi di sintassi di query basate sul metodo: raggruppamento'
               href: method-based-query-syntax-examples-grouping.md
-            - name: 'Esempi di sintassi delle query basate su metodo: Spostamento tra relazioni'
+            - name: 'Esempi di sintassi di query basate sul metodo: esplorazione di relazioni'
               href: method-based-query-syntax-examples-navigating-relationships.md
-            - name: 'Esempi di sintassi delle espressioni di query: Proiezione'
+            - name: 'Esempi di sintassi dell''espressione di query: proiezione'
               href: query-expression-syntax-examples-projection.md
-            - name: 'Esempi di sintassi delle espressioni di query: Filtro'
+            - name: 'Esempi di sintassi dell''espressione di query: filtro'
               href: query-expression-syntax-examples-filtering.md
-            - name: 'Esempi di sintassi delle espressioni di query: Ordering'
+            - name: 'Esempi di sintassi dell''espressione di query: ordinamento'
               href: query-expression-syntax-examples-ordering.md
-            - name: 'Esempi di sintassi delle espressioni di query: Operatori di aggregazione'
+            - name: 'Esempi di sintassi di espressione di query: operatori di aggregazione'
               href: query-expression-syntax-examples-aggregate-operators.md
-            - name: 'Esempi di sintassi delle espressioni di query: Partizionamento'
+            - name: 'Esempi di sintassi dell''espressione di query: partizionamento'
               href: query-expression-syntax-examples-partitioning.md
-            - name: 'Esempi di sintassi delle espressioni di query: Operatori di join'
+            - name: 'Esempi di sintassi di espressione di query: operatori di join'
               href: query-expression-syntax-examples-join-operators.md
-            - name: 'Esempi di sintassi delle espressioni di query: Operatori di elemento'
+            - name: 'Esempi di sintassi di espressione di query: operatori di elemento'
               href: query-expression-syntax-examples-element-operators.md
-            - name: 'Esempi di sintassi delle espressioni di query: Raggruppamento'
+            - name: 'Esempi di sintassi dell''espressione di query: raggruppamento'
               href: query-expression-syntax-examples-grouping.md
-            - name: 'Esempi di sintassi delle espressioni di query: Spostamento tra relazioni'
+            - name: 'Esempi di sintassi di espressione di query: esplorazione di relazioni'
               href: query-expression-syntax-examples-navigating-relationships.md
         - name: Espressioni in query di LINQ to Entities
           href: expressions-in-linq-to-entities-queries.md
@@ -59,15 +59,15 @@
         - name: Chiamata di funzioni in query di LINQ to Entities
           href: calling-functions-in-linq-to-entities-queries.md
           items:
-            - name: 'Procedura: Chiamare funzioni canoniche'
+            - name: 'Procedura: chiamare funzioni canoniche'
               href: how-to-call-canonical-functions.md
-            - name: 'Procedura: Chiamare funzioni di database'
+            - name: 'Procedura: chiamare funzioni di database'
               href: how-to-call-database-functions.md
-            - name: 'Procedura: Chiamare funzioni di database personalizzate'
+            - name: 'Procedura: chiamare funzioni di database personalizzate'
               href: how-to-call-custom-database-functions.md
-            - name: 'Procedura: Chiamare funzioni definite dal modello in query'
+            - name: 'Procedura: chiamare funzioni definite dal modello in query'
               href: how-to-call-model-defined-functions-in-queries.md
-            - name: 'Procedura: Chiamare funzioni definite dal modello come metodi di oggetto'
+            - name: 'Procedura: chiamare funzioni definite dal modello come metodi di oggetto'
               href: how-to-call-model-defined-functions-as-object-methods.md
         - name: Query compilate (LINQ to Entities)
           href: compiled-queries-linq-to-entities.md
@@ -101,7 +101,7 @@
               href: constructing-types-entity-sql.md
             - name: Memorizzazione nella cache di piani di query
               href: query-plan-caching-entity-sql.md
-            - name: Spazi dei nomi
+            - name: Namespaces
               href: namespaces-entity-sql.md
             - name: Identificatori
               href: identifiers-entity-sql.md
@@ -173,7 +173,7 @@
               href: less-than-or-equal-to-entity-sql.md
             - name: '!= (diverso da)'
               href: not-equal-to-entity-sql.md
-            - name: . (accesso a membro)
+            - name: . (Accesso ai membri)
               href: member-access-entity-sql.md
             - name: '-- (commento)'
               href: comment-entity-sql.md

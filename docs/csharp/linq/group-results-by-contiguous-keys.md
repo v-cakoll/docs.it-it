@@ -4,26 +4,26 @@ description: Come raggruppare i risultati per chiavi contigue usando LINQ in C#.
 ms.date: 08/14/2018
 ms.assetid: cbda9c08-151b-4c9e-82f7-c3d7f3dac66b
 ms.openlocfilehash: b5753c85bb07be4fc84b78a299eece961969ff9d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47193005"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61659904"
 ---
 # <a name="group-results-by-contiguous-keys"></a>Raggruppare i risultati per chiavi contigue
 
 Nell'esempio seguente viene illustrato come raggruppare elementi in blocchi che rappresentano sottosequenze di chiavi contigue. Si supponga di avere ad esempio la sequenza di coppie chiave-valore riportata di seguito:
 
-|Chiave|Valore|
+|Chiave|valore|
 |---------|-----------|
-|A|Me|
-|A|think|
-|A|that|
-|B|Linq|
+|Una |Me|
+|Una |think|
+|Una |that|
+|b|Linq|
 |C|is|
-|A|really|
-|B|cool|
-|B|!|
+|Una |really|
+|b|cool|
+|b|!|
 
 Verranno creati i gruppi seguenti in questo ordine:
 
@@ -51,4 +51,4 @@ Per usare il metodo di estensione nel progetto, copiare la classe statica `MyExt
 
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ (Language-Integrated Query)](index.md)
+- [Language Integrated Query (LINQ)](index.md)

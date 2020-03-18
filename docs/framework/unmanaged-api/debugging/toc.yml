@@ -75,7 +75,7 @@
         - name: Interfaccia ICLRMetadataLocator
           href: iclrmetadatalocator-interface.md
           items:
-            - name: Metodo GetMetaData
+            - name: Metodo GetMetadata
               href: iclrmetadatalocator-getmetadata-method.md
         - name: Interfaccia ICorDebug
           href: icordebug-interface.md

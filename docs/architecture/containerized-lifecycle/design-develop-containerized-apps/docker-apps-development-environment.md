@@ -3,10 +3,10 @@ title: Ambiente di sviluppo per le app di Docker
 description: Informazioni sulle opzioni più importanti dello strumento di sviluppo che supportano il ciclo di vita di sviluppo Docker.
 ms.date: 02/15/2019
 ms.openlocfilehash: 35236e75f47e830d0970ca9cfd074d9a69e6f85c
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71214298"
 ---
 # <a name="development-environment-for-docker-apps"></a>Ambiente di sviluppo per le app di Docker
@@ -38,7 +38,7 @@ Si consiglia di usare Visual Studio 2017 (o versione successiva) con gli strumen
 
 - .NET Core e ASP.NET Core
 - Node.js
-- Vai
+- Go
 - Java
 - Ruby
 - Python
@@ -46,5 +46,5 @@ Si consiglia di usare Visual Studio 2017 (o versione successiva) con gli strumen
 In pratica, è possibile usare qualsiasi linguaggio moderno supportato da Docker in Linux o Windows.
 
 >[!div class="step-by-step"]
->[Precedente](deploy-azure-kubernetes-service.md)
->[Successivo](docker-apps-inner-loop-workflow.md)
+>[Successivo](deploy-azure-kubernetes-service.md)
+>[precedente](docker-apps-inner-loop-workflow.md)

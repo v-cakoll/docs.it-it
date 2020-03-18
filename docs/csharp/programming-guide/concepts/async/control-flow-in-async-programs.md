@@ -3,10 +3,10 @@ title: Flusso di controllo in programmi asincroni (C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
 ms.openlocfilehash: 99f80a86f14179c5f270064a9f96e35f8611ef13
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70204438"
 ---
 # <a name="control-flow-in-async-programs-c"></a>Flusso di controllo in programmi asincroni (C#)
@@ -97,13 +97,13 @@ Length of the downloaded string: 33946.
 
 ### <a name="download-the-program"></a>Scaricare il programma
 
-È possibile scaricare l'applicazione di questo argomento da [Async Sample: Control Flow in Async Programs](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0) (Esempio di codice asincrono: flusso di controllo in programmi asincroni). I passaggi seguenti consentono di aprire ed eseguire il programma.
+È possibile scaricare l'applicazione di questo argomento da [Async Sample: Control Flow in Async Programs](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0) (Esempio di attività asincrona: flusso di controllo in programmi asincroni). I passaggi seguenti consentono di aprire ed eseguire il programma.
 
 1. Decomprimere il file scaricato e quindi avviare Visual Studio.
 
-2. Nella barra dei menu scegliere **File** > **Apri** > **Progetto/soluzione**.
+2. Nella barra dei menu scegliere**Apri** > **progetto/soluzione** **apri file** > .
 
-3. Passare alla cartella che contiene il codice di esempio decompresso, aprire il file della soluzione (SLN) e quindi premere **F5** per compilare ed eseguire il progetto.
+3. Passare alla cartella che contiene il codice di esempio decompresso, aprire il file di soluzione (sln) e quindi premere **F5** per compilare ed eseguire il progetto.
 
 ### <a name="create-the-program-yourself"></a>Creare il programma autonomamente
 
@@ -113,11 +113,11 @@ Per eseguire il progetto, effettuare i passaggi seguenti:
 
 1. Avviare Visual Studio.
 
-2. Nella barra dei menu scegliere **File** > **Nuovo** > **Progetto**.
+2. Nella barra dei menu scegliere **File** > **Nuovo** > **progetto**.
 
      Verrà visualizzata la finestra di dialogo **Nuovo progetto** .
 
-3. Scegliere la categoria **Installato** > **Visual C#**  > **Desktop di Windows**, quindi scegliere **App WPF** dall'elenco dei modelli di progetto.
+3. Scegliere la categoria**Desktop di Windows** **di** > **Visual C,** > quindi scegliere **App WPF** dall'elenco dei modelli di progetto.
 
 4. Immettere `AsyncTracer` come nome del progetto, quindi scegliere il pulsante **OK**.
 
@@ -147,7 +147,7 @@ Per eseguire il progetto, effettuare i passaggi seguenti:
 
 7. Aggiunge un riferimento a <xref:System.Net.Http>.
 
-8. In **Esplora soluzioni** aprire il menu di scelta rapida per MainWindow.xaml.cs e quindi scegliere **Visualizza codice**.
+8. In **Esplora soluzioni** aprire il menu di scelta rapida per MainWindow.xaml.cs e scegliere **Visualizza codice**.
 
 9. Sostituire il codice in MainWindow.xaml.cs con quello riportato di seguito.
 
@@ -306,7 +306,7 @@ string urlContents = await getStringTask;
 
  L'immagine che segue illustra il flusso di controllo da `client.GetStringAsync` all'assegnazione a `getStringTask` e dalla creazione di `getStringTask` all'applicazione di un operatore await.
 
- ![Passaggio TRE](./media/asynctrace-three.png "AsyncTrace tre")
+ ![Fase TRE](./media/asynctrace-three.png "AsyncTrace-TreAsyncTrace-Three")
 
  L'espressione await sospende `AccessTheWebAsync` finché non viene restituito `client.GetStringAsync`. Nel frattempo il controllo viene restituito al chiamante di `AccessTheWebAsync`, `startButton_Click`.
 
@@ -341,7 +341,7 @@ int contentLength = await getLengthTask;
 
  Nella figura seguente le frecce indicano il flusso di controllo dall'espressione await in `AccessTheWebAsync` all'assegnazione di un valore a `getLengthTask`, seguita dall'elaborazione normale in `startButton_Click` finché si è in attesa di `getLengthTask`.
 
- ![Passaggio QUATTRO](./media/asynctrace-four.png "AsyncTrace-FOUR")
+ ![Passo QUATTRO](./media/asynctrace-four.png "AsyncTrace-FOUR")
 
 ### <a name="step-five"></a>Passaggio CINQUE
 
@@ -387,7 +387,7 @@ int contentLength = await getLengthTask;
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Programmazione asincrona con Async e Await (C#)](./index.md)
-- [Tipi restituiti asincroni (C#)](./async-return-types.md)
-- [Procedura dettagliata: Accesso al Web con Async e Await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Async Sample: Control Flow in Async Programs (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0) (Esempio di codice asincrono: Flusso di controllo in programmi asincroni - C# e Visual Basic)
+- [Programmazione asincrona con async e await (C#)](./index.md)
+- [Tipi restituiti async (C#)](./async-return-types.md)
+- [Procedura dettagliata: accesso al Web tramite async e await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Async Sample: Control Flow in Async Programs (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0) (Esempio di attività asincrona: Flusso di controllo in programmi asincroni (C# e Visual Basic))

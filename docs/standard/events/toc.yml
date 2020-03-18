@@ -1,11 +1,11 @@
-- name: Eventi
+- name: eventi
   href: index.md
   items:
-    - name: 'Procedura: Generare e utilizzare eventi'
+    - name: 'Procedura: generare e utilizzare eventi'
       href: how-to-raise-and-consume-events.md
-    - name: 'Procedura: Gestire più eventi mediante le relative proprietà'
+    - name: 'Procedura: gestire più eventi mediante le relative proprietà'
       href: how-to-handle-multiple-events-using-event-properties.md
-    - name: 'Procedura: Usare eventi in un''applicazione Web Forms'
+    - name: 'Procedura: Usare eventi in un''applicazione Web Form'
       href: how-to-consume-events-in-a-web-forms-application.md
     - name: Modello di progettazione observer
       href: observer-design-pattern.md

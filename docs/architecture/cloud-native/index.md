@@ -1,16 +1,16 @@
 ---
-title: Architettura di applicazioni .NET cloud native per Azure
-description: Guida per la creazione di applicazioni native del cloud che sfruttano contenitori, microservizi e funzionalità senza server di Azure.
+title: Architettura delle applicazioni .NET native cloud per AzureArchitecting Cloud Native .NET Applications for Azure
+description: Guida per la creazione di applicazioni native nel cloud sfruttando contenitori, microservizi e funzionalità senza server di Azure.A guide for building cloud-native applications leveraging containers, microservices, and serverless features of Azure.
 author: ardalis
 ms.date: 03/07/2019
 ms.openlocfilehash: 7f14a690d0153edc43f0ce7f4e91c9e9cd2c6858
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71696783"
 ---
-# <a name="architecting-cloud-native-net-applications-for-azure"></a>Architettura di applicazioni .NET cloud native per Azure
+# <a name="architecting-cloud-native-net-applications-for-azure"></a>Architettura delle applicazioni .NET native cloud per AzureArchitecting Cloud Native .NET Applications for Azure
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -32,41 +32,41 @@ Tutti i diritti sono riservati. Nessuna parte del contenuto di questo libro può
 
 Questo libro viene fornito "così com'è" ed esprime i punti di vista e le opinioni dell'autore. I punti di vista, le opinioni e le informazioni contenute nel presente libro, inclusi gli URL e altri riferimenti a siti Web, possono essere soggetti a modifiche senza preavviso.
 
-Alcuni esempi contenuti nella presente guida vengono forniti solo a fini illustrativi e sono fittizi. Nessuna associazione o connessione reale è intenzionale o può essere presupposta.
+ Alcuni esempi usati in questo documento vengono forniti a scopo puramente illustrativo e sono fittizi. Nessuna associazione reale o connessione è intenzionale o può essere desunta.
 
 Microsoft e i marchi elencati nella pagina Web relativa ai marchi all'indirizzo https://www.microsoft.com sono marchi delle società del gruppo Microsoft.
 
 Mac e macOS sono marchi registrati di Apple Inc.
 
-Il logo Docker con la balena è un marchio registrato di Docker, Inc. Usato su autorizzazione.
+Il logo Docker whale è un marchio registrato di Docker, Inc.
 
 Tutti gli altri marchi e logo appartengono ai rispettivi proprietari.
 
-Autori
+Autori:
 
 > **Steve "ardalis" Smith** - Software Architect e Trainer - [Ardalis.com](https://ardalis.com)
 >
-> **Rob Vettor** -Microsoft-Principal Cloud System Architect/IP architect- [RobVettor.com](https://robvettor.com)
+> **Rob Vettor** - Microsoft - Principal Cloud System Architect/IP Architect - [RobVettor.com](https://robvettor.com)
 
 Partecipanti e revisori:
 
-> **Cesar de la Torre**, responsabile del programma principale, team di .NET, Microsoft
+> **Cesar De la Torre**, Principal Program Manager, .NET team, Microsoft
 >
 > **Nish Anil**, Senior Program Manager, team di .NET, Microsoft
 
 Editor:
 
-> **Maira Wenzel**, Sr. Content Developer, team di .NET, Microsoft
+> **Maira Wenzel**, Sr. Content Developer, Team .NET, Microsoft
 
 ## <a name="who-should-use-this-guide"></a>Destinatari della guida
 
-I destinatari di questa guida sono principalmente sviluppatori, lead di sviluppo e architetti che sono interessati ad apprendere come creare applicazioni progettate per il cloud.
+Il pubblico di questa guida è composto principalmente da sviluppatori, responsabili dello sviluppo e architetti interessati a imparare a creare applicazioni progettate per il cloud.
 
-Un pubblico secondario è costituito da Decision Maker tecnici che pianificano di scegliere se compilare le proprie applicazioni usando un approccio nativo per il cloud.
+Un pubblico secondario è un pubblico tecnico che prevede di scegliere se creare le proprie applicazioni utilizzando un approccio cloud-native.
 
 ## <a name="how-you-can-use-this-guide"></a>Come usare questa guida
 
-Questa guida inizia definendo cloud native e introducendo un'applicazione di riferimento compilata usando principi e tecnologie native del cloud. Oltre a questi primi due capitoli, il resto del libro è suddiviso in capitoli specifici che riguardano argomenti comuni alla maggior parte delle applicazioni native del cloud. È possibile passare a uno di questi capitoli per ottenere informazioni sugli approcci nativi del cloud per:
+Questa guida inizia definendo cloud nativo e introducendo un'applicazione di riferimento creata utilizzando principi e tecnologie native cloud. Al di là di questi primi due capitoli, il resto del libro è suddiviso in capitoli specifici incentrati su argomenti comuni alla maggior parte delle applicazioni native nel cloud. È possibile passare a uno qualsiasi di questi capitoli per informazioni sugli approcci nativi al cloud:
 
 - Accesso ai dati e ai dati
 - Modelli di comunicazione
@@ -76,7 +76,7 @@ Questa guida inizia definendo cloud native e introducendo un'applicazione di rif
 - Identità e sicurezza
 - DevOps
 
-Questa guida è disponibile sia in formato PDF che in linea. È possibile inviare questo documento o collegamenti alla relativa versione online al team per garantire una conoscenza comune di questi argomenti. La maggior parte di questi argomenti trae vantaggio da una comprensione coerente dei principi e dei modelli sottostanti, nonché dei compromessi che interessano le decisioni correlate a questi argomenti. Il nostro obiettivo di questo documento è quello di dotare i team e i loro leader con le informazioni necessarie per prendere decisioni ben informate per l'architettura, lo sviluppo e l'hosting delle proprie applicazioni.
+Questa guida è disponibile sia in formato PDF che online. Sentitevi liberi di inoltrare questo documento o collegamenti alla sua versione online al vostro team per contribuire a garantire una comprensione comune di questi argomenti. La maggior parte di questi argomenti beneficiano di una comprensione coerente dei principi e dei modelli sottostanti, nonché dei compromessi coinvolti nelle decisioni relative a questi argomenti. Il nostro obiettivo con questo documento è quello di dotare i team e i loro leader delle informazioni di cui hanno bisogno per prendere decisioni ben informate per l'architettura, lo sviluppo e l'hosting delle loro applicazioni.
 
 >[!div class="step-by-step"]
->[avanti](introduction.md)
+>[Avanti](introduction.md)

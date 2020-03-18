@@ -3,10 +3,10 @@ title: Identificazione dei limiti del modello di dominio per ogni microservizio
 description: Esplorare l'essenza del partizionamento di un'applicazione di grandi dimensioni in microservizi per ottenere un'architettura solida.
 ms.date: 09/20/2018
 ms.openlocfilehash: 9c433066dd8e93dbb09b15e58c9c85617775723d
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71834410"
 ---
 # <a name="identify-domain-model-boundaries-for-each-microservice"></a>Identificare i limiti del modello di dominio per ogni microservizio
@@ -27,11 +27,11 @@ Si può dedurre che sono stati ottenuti i limiti e le dimensioni giusti per ogni
 
 Probabilmente la risposta migliore alla domanda su quali dovrebbero essere le dimensioni di un modello di dominio per ogni microservizio è la seguente: deve contenere un BC autonomo, che consente di lavorare senza dover continuamente passare ad altri contesti (altri modelli di microservizio). Nella figura 4-10 è possibile osservare che ciascuno dei molteplici microservizi (più BC) ha il proprio modello e che è possibile definire le relative entità, a seconda dei requisiti specifici per ognuno dei domini identificati nell'applicazione.
 
-![Diagramma che mostra le entità in diversi limiti del modello.](./media/identify-microservice-domain-model-boundaries/identify-entities-microservice-model-boundries.png)
+![Diagramma che mostra le entità in diversi contorni del modello.](./media/identify-microservice-domain-model-boundaries/identify-entities-microservice-model-boundries.png)
 
 **Figura 4-10**. Identificazione di entità e dei limiti del modello di microservizio
 
-La figura 4-10 illustra un esempio di scenario correlato a un sistema di gestione di conferenze online. La stessa entità viene visualizzata come "Users", "Buyers", "Payers" e "Customers", a seconda del contesto delimitato. Sono stati identificati diversi BC implementabili come microservizi, in base ai domini definiti per l'utente dagli esperti di dominio. Come si può notare, ci sono entità presenti solo in un modello di microservizio singolo, ad esempio Payments nel microservizio Payment, che saranno facili da implementare.
+La figura 4-10 illustra un esempio di scenario correlato a un sistema di gestione di conferenze online. La stessa entità viene visualizzata come "Utenti", "Acquirenti", "Pagamenti" e "Clienti" a seconda del contesto limitato. Sono stati identificati diversi BC implementabili come microservizi, in base ai domini definiti per l'utente dagli esperti di dominio. Come si può notare, ci sono entità presenti solo in un modello di microservizio singolo, ad esempio Payments nel microservizio Payment, che saranno facili da implementare.
 
 Tuttavia, potrebbero esserci anche entità con una forma differente, ma che condividono la stessa identità tra più modelli di dominio di più microservizi. Ad esempio, l'entità User viene identificata nel microservizio Conferences Management. Lo stesso utente, con la stessa identità, è quello denominato Buyers nel microservizio degli ordini o Payer nel microservizio Payment, e persino quello denominato Customer nel microservizio Customer Service. Questo avviene perché, a seconda del [linguaggio comune](https://martinfowler.com/bliki/UbiquitousLanguage.html) usato da ogni esperto di dominio, un utente potrebbe avere una prospettiva diversa, anche con attributi diversi. L'entità utente nel modello di microservizio denominato Conferences Management potrebbe contenere la maggior parte dei relativi attributi dati personali. Tuttavia, lo stesso utente sotto forma di Payer nel microservizio Payment o sotto forma di Customer nel microservizio Customer Service potrebbe non aver bisogno dello stesso elenco di attributi.
 
@@ -50,5 +50,5 @@ In pratica, è un concetto condiviso di utente esistente in più servizi (domini
 La mancata condivisione tra domini della stessa entità utente con lo stesso numero di attributi comporta diversi vantaggi. Uno dei vantaggi consiste nella riduzione delle duplicazioni, così che i modelli di microservizio non contengano alcun dato superfluo. Un altro vantaggio consiste nell'avere un microservizio master che sia proprietario di un certo tipo di dati per ogni entità, in modo che gli aggiornamenti e le query per tale tipo di dati siano basati solo su tale microservizio.
 
 >[!div class="step-by-step"]
->[Precedente](distributed-data-management.md)
->[Successivo](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)
+>[Successivo](distributed-data-management.md)
+>[precedente](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)

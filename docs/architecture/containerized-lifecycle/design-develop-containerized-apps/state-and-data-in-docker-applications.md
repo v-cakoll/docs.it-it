@@ -3,10 +3,10 @@ title: Stato e dati nelle applicazioni di Docker
 description: Informazioni sull'opzione disponibile per salvare lo stato nelle applicazioni in contenitori.
 ms.date: 02/15/2019
 ms.openlocfilehash: b2368efb0eff2bdce48b77b2addcc4de89822c74
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394631"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Stato e dati nelle applicazioni di Docker
@@ -43,7 +43,7 @@ I volumi possono essere denominati o possono essere anonimi (opzione predefinita
 
 I **montaggi di associazione** sono disponibili da molto tempo e consentono il mapping di qualsiasi cartella a un punto di montaggio in un contenitore. I montaggi di associazione presentano più limitazioni rispetto ai volumi e generano alcuni problemi importanti in termini di sicurezza. È quindi consigliabile usare i volumi.
 
-I **montaggi `tmpfs`** sono cartelle virtuali presenti solo nella memoria dell'host e non vengono mai scritte nel file system. Sono sicuri e veloci, consumano la memoria e sono applicabili solo a dati non permanenti.
+le cavalcature sono cartelle virtuali che risiedono solo nella memoria dell'host e non vengono mai scritte nel file system. ** `tmpfs` ** Sono sicuri e veloci, consumano la memoria e sono applicabili solo a dati non permanenti.
 
 Come illustrato nella figura 4-5, i volumi Docker normali possono essere archiviati fuori dai contenitori stessi, ma all'interno dei limiti fisici del server host o della macchina virtuale. Tuttavia, i contenitori Docker non possono accedere a un volume da un server host o da una macchina virtuale a un'altra. In altre parole, con questi volumi non è possibile gestire i dati condivisi tra contenitori che vengono eseguiti in host Docker diversi. A tale scopo, si può tuttavia usare un driver del volume che supporta gli host remoti.
 
@@ -55,16 +55,16 @@ Quando i contenitori Docker vengono gestiti da un agente di orchestrazione, i co
 
 **Gli strumenti per le origini dati remote e la cache**, ad esempio i database SQL di Azure, Azure Cosmos DB o le cache remote come Redis, possono essere usati nelle applicazioni incluse in contenitori allo stesso modo con cui vengono usati durante lo sviluppo senza contenitori. Si tratta di un modo consolidato per archiviare i dati delle applicazioni aziendali.
 
-**Archiviazione di Azure.** I dati aziendali in genere devono essere inseriti in risorse o database esterni, ad esempio Archiviazione di Azure. Archiviazione di Azure offre i servizi seguenti nel cloud:
+**Archiviazione di Azure.Azure Storage.** I dati aziendali in genere devono essere inseriti in risorse o database esterni, ad esempio Archiviazione di Azure. Archiviazione di Azure offre i servizi seguenti nel cloud:
 
-- L'archiviazione BLOB archivia i dati oggetto non strutturati. Un BLOB può essere costituito da qualsiasi tipo di dati di testo o binari, ad esempio documenti o file multimediali (file di immagini, audio e video). L'archiviazione BLOB viene chiamata anche archiviazione di oggetti.
+- L'archiviazione BLOB archivia i dati oggetto non strutturati. Un BLOB può essere costituito da qualsiasi tipo di dati di testo o binari, ad esempio documenti o file multimediali (file di immagini, audio e video). L'archivio BLOB è anche denominato archivio di oggetti.
 
 - L'archiviazione file offre risorse di archiviazione condivise per le applicazioni legacy con il protocollo SMB standard. Le macchine virtuali di Azure e i servizi cloud possono condividere i dati dei file nei componenti delle applicazioni tramite condivisioni montate. Le applicazioni locali possono accedere ai dati dei file in una condivisione tramite l'API REST del servizio file.
 
-- L'archiviazione tabelle archivia i set di dati strutturati. L'archiviazione tabelle è un archivio dati chiave-attributo NoSQL, che consente di sviluppare e di accedere rapidamente a quantità elevate di dati.
+- Nell'archivio tabelle sono archiviati set di dati strutturati. L'archiviazione tabelle è un archivio dati chiave-attributo NoSQL, che consente di sviluppare e di accedere rapidamente a quantità elevate di dati.
 
-**Database relazionali e database NoSQL.** Sono disponibili molte opzioni per i database esterni, da database relazionali come SQL Server, PostgreSQL, Oracle o database NoSQL come Azure Cosmos DB, MongoDB e così via. Questi database non verranno spiegati come parte di questa guida perché sono un argomento completamente diverso.
+**Database relazionali e database NoSQL.** Esistono molte opzioni per i database esterni, da database relazionali come SQL Server, PostgreSQL, Oracle o NoSQL database come Azure Cosmos DB, MongoDB e così via. Questi database non verranno spiegati come parte di questa guida poiché sono un argomento completamente diverso.
 
 >[!div class="step-by-step"]
->[Precedente](monolithic-applications.md)
->[Successivo](soa-applications.md)
+>[Successivo](monolithic-applications.md)
+>[precedente](soa-applications.md)

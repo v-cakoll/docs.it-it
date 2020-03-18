@@ -5,15 +5,15 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 9dea7dbccb5c9e125f792e6a7287a7dd2fad26f1
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73093544"
 ---
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>App serverless: architettura, modelli e implementazione di Azure
 
-![Screenshot che mostra le app senza server e-book cover.](./media/index/serverless-apps-cover.jpg)
+![Screenshot che mostra la copertina dell'e-book App senza server.](./media/index/serverless-apps-cover.jpg)
 
 > Download disponibile all'indirizzo: <https://aka.ms/serverless-ebook>
 
@@ -33,7 +33,7 @@ Tutti i diritti sono riservati. Nessuna parte del contenuto di questo libro può
 
 Questo libro viene fornito "così com'è" ed esprime i punti di vista e le opinioni dell'autore. I punti di vista, le opinioni e le informazioni contenute nel presente libro, inclusi gli URL e altri riferimenti a siti Web, possono essere soggetti a modifiche senza preavviso.
 
-Alcuni esempi contenuti nella presente guida vengono forniti solo a fini illustrativi e sono fittizi. Nessuna associazione o connessione reale è intenzionale o può essere presupposta.
+ Alcuni esempi usati in questo documento vengono forniti a scopo puramente illustrativo e sono fittizi. Nessuna associazione reale o connessione è intenzionale o può essere desunta.
 
 Microsoft e i marchi elencati nella pagina Web relativa ai marchi all'indirizzo <https://www.microsoft.com> sono marchi delle società del gruppo Microsoft.
 
@@ -41,27 +41,27 @@ Mac e macOS sono marchi registrati di Apple Inc.
 
 Tutti gli altri marchi e logo appartengono ai rispettivi proprietari.
 
-Autore:
+Author (Autore):
 
-> **[Jeremy Likness](https://twitter.com/jeremylikness)** , senior cloud Advocate, Microsoft Corp.
+> **[Jeremy Likness](https://twitter.com/jeremylikness)**, Senior Cloud Advocate, Microsoft Corp.
 
 Collaboratore:
 
-> **[Cecil Phillip](https://twitter.com/cecilphillip)** , senior cloud Advocate, Microsoft Corp.
+> **[Cecil Phillip](https://twitter.com/cecilphillip)**, Senior Cloud Advocate, Microsoft Corp.
 
 Editor:
 
-> **[Bill Wagner](https://twitter.com/billwagner)** , Senior Content Developer, Microsoft Corp.
+> **[Bill Wagner](https://twitter.com/billwagner)**, Senior Content Developer, Microsoft Corp.
 
-> **[Maira Wenzel](https://twitter.com/mairacw)** , Senior Content Developer, Microsoft Corp.
+> **[Maira Wenzel](https://twitter.com/mairacw)**, Senior Content Developer, Microsoft Corp.
 
 Collaboratori e revisori:
 
-> **[Steve Smith](https://twitter.com/ardalis)** , Owner, Ardalis Services.
+> **[Steve Smith](https://twitter.com/ardalis)**, Owner, Ardalis Services.
 
 ## <a name="introduction"></a>Introduzione
 
-[Serverless](https://azure.microsoft.com/solutions/serverless/) è l'evoluzione delle piattaforme cloud nella direzione del codice nativo cloud puro. Un'infrastruttura serverless avvicina gli sviluppatori alla logica di business senza le preoccupazioni derivanti dall'infrastruttura. Questo modello non implica che non è richiesto "alcun server", ma piuttosto che sono richiesti "meno server". Il codice serverless è basato sugli eventi. Il codice può essere attivato da qualsiasi elemento, da una richiesta Web HTTP tradizionale a un timer o dal risultato del caricamento di un file. L'infrastruttura serverless consente la scalabilità immediata per soddisfare richieste diverse e offre la micro-fatturazione per un reale "pagamento a consumo". L'elaborazione serverless richiede un nuovo approccio e un nuovo modo di pensare alla compilazione delle applicazioni e non è la soluzione ideale per tutti i problemi. Come sviluppatore, è necessario stabilire:
+[Serverless](https://azure.microsoft.com/solutions/serverless/) è l'evoluzione delle piattaforme cloud in direzione del codice nativo cloud puro. Un'infrastruttura serverless avvicina gli sviluppatori alla logica di business senza le preoccupazioni derivanti dall'infrastruttura. Questo modello non implica che non è richiesto "alcun server", ma piuttosto che sono richiesti "meno server". Il codice serverless è basato sugli eventi. Il codice può essere attivato da qualsiasi elemento, da una richiesta Web HTTP tradizionale a un timer o dal risultato del caricamento di un file. L'infrastruttura serverless consente la scalabilità immediata per soddisfare richieste diverse e offre la micro-fatturazione per un reale "pagamento a consumo". L'elaborazione serverless richiede un nuovo approccio e un nuovo modo di pensare alla compilazione delle applicazioni e non è la soluzione ideale per tutti i problemi. Come sviluppatore, è necessario stabilire:
 
 - Quali sono i vantaggi e gli svantaggi dell'elaborazione serverless?
 - Perché sarebbe opportuno considerare l'elaborazione serverless per le proprie applicazioni?
@@ -88,9 +88,9 @@ Prima del cloud, esisteva un confine distinguibile tra lo sviluppo e le operazio
 - Dove vengono inviati i backup di archiviazione?
 - È necessaria l'alimentazione ridondante?
 
-L'elenco continua e i costi erano altissimi. In molte situazioni, i reparti IT sono stati costretti a gestire incredibili sprechi. Gli sprechi sono dovuti all'eccessiva allocazione di server come computer di backup per il ripristino di emergenza e i server di standby per abilitare la scalabilità orizzontale. Fortunatamente, l'introduzione della tecnologia di virtualizzazione, ad esempio [Hyper-V](/virtualization/hyper-v-on-windows/about/), con macchine virtuali (VM) ha dato luogo all'infrastruttura distribuita come servizio (IaaS). L'infrastruttura virtualizzata ha consentito operazioni di configurazione di un set standard di server backbone, determinando un ambiente flessibile in grado di eseguire il provisioning di server univoci "su richiesta". Ancora più importante, la virtualizzazione ha posto le basi per l'utilizzo del cloud per fornire macchine virtuali "come servizio". Le aziende hanno potuto facilmente smettere di preoccuparsi dell'alimentazione ridondante o dei computer fisici. Si sono concentrate invece sull'ambiente virtuale.
+L'elenco continua e i costi erano altissimi. In molte situazioni, i reparti IT sono stati costretti a gestire incredibili sprechi. I rifiuti erano dovuti alla sovraallocazione dei server come computer di backup per i server di ripristino di emergenza e standby per abilitare la scalabilità orizzontale. Fortunatamente, l'introduzione della tecnologia di virtualizzazione (come [Hyper-V](/virtualization/hyper-v-on-windows/about/)) con macchine virtuali (VM) ha dato origine all'infrastruttura come servizio (IaaS). L'infrastruttura virtualizzata ha consentito operazioni di configurazione di un set standard di server backbone, determinando un ambiente flessibile in grado di eseguire il provisioning di server univoci "su richiesta". Ancora più importante, la virtualizzazione ha posto le basi per l'utilizzo del cloud per fornire macchine virtuali "come servizio". Le aziende hanno potuto facilmente smettere di preoccuparsi dell'alimentazione ridondante o dei computer fisici. Si sono concentrate invece sull'ambiente virtuale.
 
-IaaS ha comunque un costo importante perché ci sono varie attività che richiedono interventi. Tali attività includono:
+IaaS ha comunque un costo importante perché ci sono varie attività che richiedono interventi. Queste attività includono:
 
 - L'applicazione di patch e il backup dei server.
 - L'installazione di pacchetti.
@@ -118,8 +118,8 @@ Questa guida tratta in particolare degli approcci di architettura e gli schemi p
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
-- [Centro architettura di Azure](https://docs.microsoft.com/azure/architecture/)
-- [Procedura consigliata per le applicazioni cloud](https://docs.microsoft.com/azure/architecture/best-practices/api-design)
+- [Centro architettura di AzureAzure Architecture center](https://docs.microsoft.com/azure/architecture/)
+- [Procedure consigliate per le applicazioni cloud](https://docs.microsoft.com/azure/architecture/best-practices/api-design)
 
 ## <a name="who-should-use-the-guide"></a>Destinatari della guida
 
@@ -138,4 +138,4 @@ La prima parte di questa guida esamina i motivi per cui serverless è un'opzione
 La guida e gli esempi correlati sono in continua evoluzione, pertanto sono graditi commenti e suggerimenti. Se ci sono commenti sul modo in cui può essere migliorata la guida, usare la sezione commenti e suggerimenti nella parte inferiore di ogni pagina basata sui [problemi di GitHub](https://github.com/dotnet/docs/issues).
 
 >[!div class="step-by-step"]
->[avanti](architecture-approaches.md)
+>[Avanti](architecture-approaches.md)

@@ -1,73 +1,73 @@
 ---
-title: Griglia di eventi di Azure-app senza server
-description: Griglia di eventi di Azure è una soluzione senza server per il recapito di eventi affidabili e il routing su larga scala su un modello con pagamento per evento.
+title: Griglia di eventi di Azure - App senza serverAzure Event Grid - Serverless apps
+description: Griglia di eventi di Azure è una soluzione senza server per il recapito e il routing di eventi affidabili su larga scala in un modello a pagamento per evento.
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 3c577139c12567e762aabd58c9dc29457fa37aa1
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72522710"
 ---
 # <a name="event-grid"></a>Griglia di eventi
 
-[Griglia di eventi di Azure](/azure/event-grid/overview) offre un'infrastruttura senza server per le applicazioni basate su eventi. È possibile pubblicare in griglia di eventi da qualsiasi origine e utilizzare i messaggi di qualsiasi piattaforma. Griglia di eventi include anche il supporto integrato per gli eventi delle risorse di Azure per semplificare l'integrazione con le applicazioni. Ad esempio, è possibile sottoscrivere gli eventi di archiviazione BLOB per inviare una notifica all'app quando viene caricato un file. L'applicazione può quindi pubblicare un messaggio di griglia di eventi personalizzato che viene utilizzato da altre applicazioni cloud o locali. Griglia di eventi è stata creata per gestire in modo affidabile un'ampia scalabilità. Si ottengono i vantaggi della pubblicazione e della sottoscrizione ai messaggi senza l'overhead della configurazione dell'infrastruttura necessaria.
+[Griglia di eventi](/azure/event-grid/overview) di Azure offre un'infrastruttura senza server per le applicazioni basate su eventi. È possibile pubblicare in Griglia di eventi da qualsiasi origine e utilizzare i messaggi da qualsiasi piattaforma. Griglia di eventi include anche il supporto incorporato per gli eventi dalle risorse di Azure per semplificare l'integrazione con le applicazioni. Ad esempio, è possibile sottoscrivere gli eventi di archiviazione BLOB per notificare all'app quando viene caricato un file. L'applicazione può quindi pubblicare un messaggio della griglia di eventi personalizzato utilizzato da altre applicazioni cloud o locali. Event Grid è stato costruito per gestire in modo affidabile la scala massiccia. È possibile ottenere i vantaggi della pubblicazione e dell'iscrizione ai messaggi senza il sovraccarico di configurare l'infrastruttura necessaria.
 
-![Logo di griglia di eventi](./media/event-grid-logo.png)
+![Logo della griglia di eventi](./media/event-grid-logo.png)
 
-Le funzionalità principali di griglia di eventi includono:
+Le principali caratteristiche della griglia degli eventi includono:
 
-- Routing di eventi completamente gestito.
-- Recapito di eventi quasi in tempo reale su larga scala.
+- Routing degli eventi completamente gestito.
+- Recapito quasi in tempo reale degli eventi su larga scala.
 - Ampia copertura sia all'interno che all'esterno di Azure.
 
 ## <a name="scenarios"></a>Scenari
 
-Griglia di eventi affronta diversi scenari diversi. Questa sezione descrive tre dei più comuni.
+Griglia di eventi affronta diversi scenari. Questa sezione copre tre dei più comuni.
 
 ### <a name="ops-automation"></a>Automazione delle operazioni
 
 ![Automazione delle operazioni](./media/ops-automation.png)
 
-Griglia di eventi consente di velocizzare l'automazione e semplificare l'applicazione dei criteri inviando una notifica ad [automazione di Azure](https://docs.microsoft.com/azure/automation) quando viene effettuato il provisioning dell'infrastruttura.
+Griglia di eventi consente di velocizzare l'automazione e semplificare l'applicazione dei criteri notificando [l'automazione](https://docs.microsoft.com/azure/automation) di Azure quando viene eseguito il provisioning dell'infrastruttura.
 
 ### <a name="application-integration"></a>Integrazione di applicazioni
 
 ![Integrazione di applicazioni](./media/app-integration.png)
 
-È possibile usare griglia di eventi per connettere l'app ad altri servizi. Usando i protocolli HTTP standard, anche le app legacy possono essere facilmente modificate per pubblicare i messaggi della griglia di eventi. Gli hook Web sono disponibili per altri servizi e piattaforme per l'utilizzo di messaggi di griglia di eventi.
+Puoi usare Griglia di eventi per connettere l'app ad altri servizi. Utilizzando i protocolli HTTP standard, anche le app legacy possono essere facilmente modificate per pubblicare i messaggi della griglia di eventi. Gli hook Web sono disponibili per altri servizi e piattaforme per l'utilizzo dei messaggi della griglia di eventi.
 
-### <a name="serverless-apps"></a>App senza server
+### <a name="serverless-apps"></a>App serverless
 
-![App senza server](./media/serverless-apps.png)
+![App serverless](./media/serverless-apps.png)
 
-Griglia di eventi può attivare funzioni di Azure, app per la logica o codice personalizzato. Un importante vantaggio dell'uso di griglia di eventi è che usa un meccanismo di *push* per inviare messaggi quando si verificano eventi. L'architettura Push utilizza un minor numero di risorse e scalabilità migliore rispetto ai meccanismi di *polling* . Il polling deve verificare la disponibilità di aggiornamenti a intervalli regolari.
+Griglia di eventi può attivare Funzioni di Azure, App per la logica o il proprio codice personalizzato. Uno dei principali vantaggi dell'utilizzo di Griglia di eventi è che utilizza un meccanismo *push* per inviare messaggi quando si verificano eventi. L'architettura push utilizza meno risorse e scala meglio rispetto ai meccanismi di *polling.* Il polling deve verificare la disponibilità di aggiornamenti a intervalli regolari.
 
-## <a name="event-grid-vs-other-azure-messaging-services"></a>Griglia di eventi rispetto ad altri servizi di messaggistica di Azure
+## <a name="event-grid-vs-other-azure-messaging-services"></a>Griglia di eventi e altri servizi di messaggistica di AzureEvent Grid vs.
 
-Azure offre diversi servizi di messaggistica, tra cui [Hub eventi](https://docs.microsoft.com/azure/event-hubs) e [bus di servizio](https://docs.microsoft.com/azure/service-bus-messaging). Ogni è progettato per risolvere un set specifico di casi d'uso. Il diagramma seguente fornisce una panoramica di alto livello delle differenze tra i servizi.
+Azure fornisce diversi servizi di messaggistica, tra cui [Hub eventi](https://docs.microsoft.com/azure/event-hubs) e Bus [di servizio.](https://docs.microsoft.com/azure/service-bus-messaging) Ciascuno di essi è progettato per affrontare una serie specifica di casi d'uso. Nel diagramma seguente viene fornita una panoramica generale delle differenze tra i servizi.
 
-![Confronto tra messaggistica di Azure](./media/azure-messaging-services.png)
+![Confronto tra messaggistica di AzureAzure messaging comparison](./media/azure-messaging-services.png)
 
-Per un confronto più dettagliato, vedere confrontare i [servizi di messaggistica](https://docs.microsoft.com/azure/event-grid/compare-messaging-services).
+Per un confronto più approfondito, vedere [Confrontare i servizi di messaggistica.](https://docs.microsoft.com/azure/event-grid/compare-messaging-services)
 
-## <a name="performance-targets"></a>Obiettivi di prestazioni
+## <a name="performance-targets"></a>Prestazioni richieste
 
-Utilizzando griglia di eventi è possibile sfruttare le garanzie di prestazioni seguenti:
+Utilizzando Griglia di eventi è possibile sfruttare le seguenti garanzie di prestazioni:
 
-- Latenza end-to-end secondaria nel 99 ° percentile.
-- disponibilità del 99,99%.
-- 10 milioni eventi al secondo per area.
-- 100 milioni sottoscrizioni per area.
-- 50-latenza autore ms.
-- tentativo di 24 ore con il back-off esponenziale per il recapito garantito nella finestra di un giorno.
-- Failover a livello di area trasparente.
+- Latenza end-to-end del 99esimo percentile.
+- Disponibilità del 99.99%.
+- 10 milioni di eventi al secondo per regione.
+- 100 milioni di abbonamenti per regione.
+- Latenza del server di pubblicazione di 50 ms.
+- Nuovo tentativo di 24 ore su 24 con back-off esponenziale per la consegna garantita nella finestra di 1 giorno.
+- Failover regionale trasparente.
 
-## <a name="event-grid-schema"></a>Schema griglia di eventi
+## <a name="event-grid-schema"></a>Schema di Griglia di eventi
 
-Griglia di eventi usa uno schema standard per eseguire il wrapping degli eventi personalizzati. Lo schema è simile a una busta che esegue il wrapping dell'elemento dati personalizzato. Di seguito è riportato un esempio di messaggio di griglia di eventi:
+Griglia di eventi utilizza uno schema standard per eseguire il wrapping degli eventi personalizzati. Lo schema è simile a una busta che esegue il wrapping dell'elemento dati personalizzato. Di seguito è riportato un messaggio griglia di eventi di esempio:Here is an example Event Grid message:
 
 ```json
 [{
@@ -84,13 +84,13 @@ Griglia di eventi usa uno schema standard per eseguire il wrapping degli eventi 
 }]
 ```
 
-Tutte le informazioni sul messaggio sono standard, ad eccezione della proprietà `data`. È possibile esaminare il messaggio e utilizzare il `eventType` e `dataVersion` per deserializzare la porzione personalizzata del payload.
+Tutto ciò che riguarda `data` il messaggio è standard tranne la proprietà. È possibile esaminare il `eventType` `dataVersion` messaggio e utilizzare e deserializzare la parte personalizzata del payload.
 
-## <a name="azure-resources"></a>risorse di Azure
+## <a name="azure-resources"></a>Risorse di Azure
 
-Un vantaggio principale dell'uso di griglia di eventi è costituito dai messaggi automatici prodotti da Azure. In Azure le risorse vengono pubblicate automaticamente in un *argomento* che consente di effettuare la sottoscrizione per diversi eventi. Nella tabella seguente sono elencati i tipi di risorse, i tipi di messaggi e gli eventi disponibili automaticamente.
+Uno dei principali vantaggi dell'uso di Griglia di eventi sono i messaggi automatici prodotti da Azure.A major benefit of using Event Grid is the automatic messages produced by Azure. In Azure le risorse vengono pubblicate automaticamente in un *argomento* che consente di sottoscrivere vari eventi. Nella tabella seguente sono elencati i tipi di risorse, i tipi di messaggio e gli eventi disponibili automaticamente.
 
-| Risorsa di Azure | Tipo evento | description |
+| Risorsa di Azure | Tipo di evento | Descrizione |
 | -------------- | ---------- | ----------- |
 | Sottoscrizione di Azure | Microsoft.Resources.ResourceWriteSuccess | Generato quando un'operazione di creazione o aggiornamento di una risorsa ha esito positivo. |
 | | Microsoft.Resources.ResourceWriteFailure | Generato quando un'operazione di creazione o aggiornamento di una risorsa ha esito negativo. |
@@ -98,11 +98,11 @@ Un vantaggio principale dell'uso di griglia di eventi è costituito dai messaggi
 |  | Microsoft.Resources.ResourceDeleteSuccess | Generato quando un'operazione di eliminazione di una risorsa ha esito positivo. |
 |  | Microsoft.Resources.ResourceDeleteFailure | Generato quando un'operazione di eliminazione di una risorsa ha esito negativo. |
 | | Microsoft.Resources.ResourceDeleteCancel | Generato quando un'operazione di eliminazione di una risorsa viene annullata. Questo evento si verifica quando viene annullata la distribuzione di un modello. |
-| Archiviazione - BLOB | Microsoft.Storage.BlobCreated | Generato quando viene creato un BLOB. |
+| Archiviazione BLOB | Microsoft.Storage.BlobCreated | Generato quando viene creato un BLOB. |
 | | Microsoft.Storage.BlobDeleted | Generato quando viene eliminato un BLOB. |
 | Hub eventi | Microsoft.EventHub.CaptureFileCreated | Generato quando viene creato un file di acquisizione.
-| Hub IoT | Microsoft.Devices.DeviceCreated | Pubblicato quando un dispositivo viene registrato in un hub Internet. |
-| | Microsoft.Devices.DeviceDeleted | Pubblicato quando un dispositivo viene eliminato da un hub Internet. |
+| Hub IoT | Microsoft.Devices.DeviceCreated | Pubblicato quando un dispositivo viene registrato in un hub IoT. |
+| | Microsoft.Devices.DeviceDeleted | Pubblicato quando un dispositivo viene eliminato da un hub IoT. |
 | Gruppi di risorse | Microsoft.Resources.ResourceWriteSuccess | Generato quando un'operazione di creazione o aggiornamento di una risorsa ha esito positivo. |
 | | Microsoft.Resources.ResourceWriteFailure | Generato quando un'operazione di creazione o aggiornamento di una risorsa ha esito negativo. |
 | | Microsoft.Resources.ResourceWriteCancel | Generato quando un'operazione di creazione o aggiornamento di una risorsa viene annullata. |
@@ -110,37 +110,37 @@ Un vantaggio principale dell'uso di griglia di eventi è costituito dai messaggi
 | | Microsoft.Resources.ResourceDeleteFailure | Generato quando un'operazione di eliminazione di una risorsa ha esito negativo. |
 | | Microsoft.Resources.ResourceDeleteCancel | Generato quando un'operazione di eliminazione di una risorsa viene annullata. Questo evento si verifica quando viene annullata la distribuzione di un modello. |
 
-Per altre informazioni, vedere [schema di eventi di griglia di eventi di Azure](https://docs.microsoft.com/azure/event-grid/event-schema).
+Per altre informazioni, vedere [Schema di eventi Griglia di eventi](https://docs.microsoft.com/azure/event-grid/event-schema)di Azure.For more information, see Azure Event Grid event schema .
 
-È possibile accedere a griglia di eventi da qualsiasi tipo di applicazione, anche se eseguita in locale.
+È possibile accedere a Griglia di eventi da qualsiasi tipo di applicazione, anche in locale.
 
-## <a name="conclusion"></a>Conclusione
+## <a name="conclusion"></a>Conclusioni
 
-In questo capitolo sono state illustrate le informazioni sulla piattaforma senza server di Azure composta da funzioni di Azure, app per la logica e griglia di eventi. È possibile usare queste risorse per creare un'architettura di app interamente senza server oppure creare una soluzione ibrida che interagisce con altre risorse cloud e server locali. In combinazione con una piattaforma dati senza server come [Azure SQL](https://docs.microsoft.com/azure/sql-database) o [CosmosDB](https://docs.microsoft.com/azure/cosmos-db/introduction), è possibile creare applicazioni native cloud completamente gestite.
+In questo capitolo si è appresa la piattaforma senza server di Azure composta da Funzioni di Azure, App per la logica e Griglia di eventi. È possibile usare queste risorse per creare un'architettura di app completamente senza server o creare una soluzione ibrida che interagisce con altre risorse cloud e server locali. In combinazione con una piattaforma dati senza server, ad esempio SQL di [Azure](https://docs.microsoft.com/azure/sql-database) o [CosmosDB](https://docs.microsoft.com/azure/cosmos-db/introduction), è possibile creare applicazioni native cloud completamente gestite.
 
 ## <a name="recommended-resources"></a>Risorse consigliate
 
 - [Piani di servizio app](https://docs.microsoft.com/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)
 - [Application Insights](https://docs.microsoft.com/azure/application-insights)
-- [Analisi Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-analytics)
-- [Azure: porta la tua app nel cloud con funzioni di Azure senza server](https://channel9.msdn.com/events/Connect/2017/E102)
-- [Griglia di eventi di Azure](https://docs.microsoft.com/azure/event-grid/overview)
-- [Schema di eventi di griglia di eventi di Azure](https://docs.microsoft.com/azure/event-grid/event-schema)
+- [Analytics in Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-analytics)
+- [Azure: Bring your app to the cloud with serverless Azure Functions](https://channel9.msdn.com/events/Connect/2017/E102)
+- [Griglia di eventi di AzureAzure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
+- [Schema di eventi di Griglia di eventi di Azure](https://docs.microsoft.com/azure/event-grid/event-schema)
 - [Hub eventi di Azure](https://docs.microsoft.com/azure/event-hubs)
-- [Documentazione di funzioni di Azure](https://docs.microsoft.com/azure/azure-functions)
-- [Concetti relativi a trigger e associazioni di funzioni di Azure](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings)
-- [App per la logica di Azure](https://docs.microsoft.com/azure/logic-apps)
-- [Bus di servizio di Azure](https://docs.microsoft.com/azure/service-bus-messaging)
-- [Archiviazione tabelle di Azure](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
-- [Confrontare le funzioni 1. x e 2. x](https://docs.microsoft.com/azure/azure-functions/functions-versions)
+- [Documentazione di Funzioni di AzureAzure Functions documentation](https://docs.microsoft.com/azure/azure-functions)
+- [Concetti relativi a trigger e associazioni in Funzioni di Azure](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings)
+- [App per la logica di AzureAzure Logic Apps](https://docs.microsoft.com/azure/logic-apps)
+- [Bus di servizio di AzureAzure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging)
+- [Archiviazione tabelle di AzureAzure Table Storage](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
+- [Confrontare le funzioni 1.x e 2.x](https://docs.microsoft.com/azure/azure-functions/functions-versions)
 - [Connessione a origini dati locali con gateway dati locale di Azure](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway)
-- [Creare la prima funzione nell'portale di Azure](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function)
+- [Creare la prima funzione nel portale di Azure](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function)
 - [Creare la prima funzione usando l'interfaccia della riga di comando di Azure](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function-azure-cli)
 - [Creare la prima funzione con Visual Studio](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio)
-- [Lingue supportate dalle funzioni](https://docs.microsoft.com/azure/azure-functions/supported-languages)
-- [Monitorare funzioni di Azure](https://docs.microsoft.com/azure/azure-functions/functions-monitoring)
-- [Usare Proxy di Funzioni di Azure](https://docs.microsoft.com/azure/azure-functions/functions-proxies)
+- [Lingue supportate da funzioni](https://docs.microsoft.com/azure/azure-functions/supported-languages)
+- [Monitorare Funzioni di Azure](https://docs.microsoft.com/azure/azure-functions/functions-monitoring)
+- [Usare i proxy di Funzioni di Azure](https://docs.microsoft.com/azure/azure-functions/functions-proxies)
 
 >[!div class="step-by-step"]
->[Precedente](logic-apps.md)
->[Successivo](durable-azure-functions.md)
+>[Successivo](logic-apps.md)
+>[precedente](durable-azure-functions.md)

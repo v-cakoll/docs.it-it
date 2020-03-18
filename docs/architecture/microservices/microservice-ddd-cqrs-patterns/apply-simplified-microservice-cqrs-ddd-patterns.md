@@ -3,10 +3,10 @@ title: Applicazione di schemi CQRS e DDD semplificati in un microservizio
 description: Architettura dei microservizi .NET per le applicazioni .NET in contenitori | Riconoscere la relazione globale tra criteri CQRS e DDD.
 ms.date: 10/08/2018
 ms.openlocfilehash: f42b553fd30fdffdc6e325b11740fe9162aab7c8
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71834312"
 ---
 # <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>Applicare modelli CQRS e DDD semplificati in un microservizio
@@ -31,15 +31,15 @@ Un esempio di questo tipo di servizio è il microservizio per gli ordini dell'ap
 
 **Figura 7-2**. Microservizio semplificato basato su CQRS e DDD
 
-Il microservizio logico "ordering" include il database di ordinamento, che può essere, ma non necessariamente, lo stesso host docker. Il fatto che il database sia incluso nello stesso host Docker è ottimale per lo sviluppo, ma non per la produzione.
+Il Microservizio logico "Ordinante" include il database di ordinazione, che può essere, ma non deve essere lo stesso host Docker. Il fatto che il database sia incluso nello stesso host Docker è ottimale per lo sviluppo, ma non per la produzione.
 
 Il livello dell'applicazione può essere la stessa API Web. L'aspetto di progettazione importante a questo proposito è che il microservizio ha suddiviso le query e i ViewModel (modelli di dati creati appositamente per le applicazioni client) dai comandi, dal modello di dominio e dalle transazioni seguendo lo schema CQRS. Questo approccio mantiene le query indipendenti da restrizioni e vincoli provenienti da schemi DDD che sono applicabili esclusivamente per le transazioni e gli aggiornamenti, come descritto nelle sezioni successive.
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Greg Young. Controllo delle versioni in un sistema originato da eventi** (gratuito per leggere l'e-book online) \
+- **Greg Young. Controllo delle versioni in un sistema** di origine di eventi (gratuito per la lettura online e-book)
    <https://leanpub.com/esversioning/read>
 
 >[!div class="step-by-step"]
->[Precedente](index.md)
->[Successivo](eshoponcontainers-cqrs-ddd-microservice.md)
+>[Successivo](index.md)
+>[precedente](eshoponcontainers-cqrs-ddd-microservice.md)

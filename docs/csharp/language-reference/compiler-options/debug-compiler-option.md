@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /debug compiler option [C#]
 ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
 ms.openlocfilehash: 8bb2b411dc867b6a43e52058dccf2ac980cf0b1e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69922505"
 ---
 # <a name="-debug-c-compiler-options"></a>-debug (opzioni del compilatore C#)
@@ -46,11 +46,11 @@ L'opzione **-debug** indica al compilatore di generare informazioni di debug e d
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1. Aprire la pagine **Proprietà** del progetto.  
+1. Aprire la pagina **Proprietà** del progetto.  
   
 2. Fare clic sulla pagina della proprietà **Compilazione**.  
   
-3. Fare clic su **Avanzate** .  
+3. Fare clic sul pulsante **Avanzate**.  
   
 4. Modificare la proprietà **Informazioni di Debug**.  
   
@@ -65,5 +65,5 @@ csc -debug -pdb:app.pdb test.cs
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Opzioni del compilatore C#](./index.md)
+- [Opzioni del compilatore C](./index.md)
 - [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)

@@ -3,10 +3,10 @@ title: Orchestrazione di microservizi e applicazioni a più contenitori per la s
 description: Informazioni su come distribuire un'app usando il servizio Azure Kubernetes.
 ms.date: 02/15/2019
 ms.openlocfilehash: 0aa2f83fbf8f9a8815d65730002943cca748643d
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71182367"
 ---
 # <a name="deploy-to-azure-kubernetes-service-aks"></a>Distribuire nel servizio Azure Kubernetes
@@ -18,7 +18,7 @@ Prerequisiti per l'uso del servizio Azure Kubernetes:
 - Computer di sviluppo Linux o Mac
 - Computer di sviluppo Windows
   - Modalità sviluppatore abilitata in Windows
-  - Sottosistema Windows per Linux
+  - Sottosistema di Windows per Linux
 - Interfaccia della riga di comando di Azure installata in [Windows, Mac o Linux](https://docs.microsoft.com/cli/azure/install-azure-cli)
 
 > [!NOTE]
@@ -64,7 +64,7 @@ Ottenere prima di tutto le credenziali:
 az aks get-credentials --resource-group MSSampleK8ClusterRG --name MSSampleK8Cluster
 ```
 
-![Output della console dal comando precedente: merge di "MsSampleK8Cluster come contesto corrente in/root/.Kube/config.](media/get-credentials-command-result.png)
+![Output della console dal comando precedente: Merged "MsSampleK8Cluster as current context in /root/.kube/config.](media/get-credentials-command-result.png)
 
 **Figura 4-19**. Risultato del comando `aks get-credentials`.
 
@@ -74,10 +74,10 @@ E quindi recupero dei nodi da Kubectl:
 kubectl get nodes
 ```
 
-![Output della console dal comando precedente: elenco di nodi con stato, età (tempo in esecuzione) e versione](media/kubectl-get-nodes-command-result.png)
+![Comando Output della console dall'alto: elenco di nodi con stato, età (tempo di esecuzione) e versione](media/kubectl-get-nodes-command-result.png)
 
 **Figura 4-20**. Risultato del comando `kubectl get nodes`.
 
 >[!div class="step-by-step"]
->[Precedente](orchestrate-high-scalability-availability.md)
->[Successivo](docker-apps-development-environment.md)
+>[Successivo](orchestrate-high-scalability-availability.md)
+>[precedente](docker-apps-development-environment.md)

@@ -3,15 +3,15 @@ title: Modernizzare le app .NET esistenti come applicazioni ottimizzate per il c
 description: Modernizzare le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows.
 ms.date: 04/28/2018
 ms.openlocfilehash: cd7e2886b135eb89c381965a327b6e62baa39736
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "72318590"
 ---
 # <a name="modernize-existing-net-apps-to-cloud-optimized-applications"></a>Modernizzare le app .NET esistenti come applicazioni ottimizzate per il cloud
 
-> Visione: modernizzare le applicazioni di .NET Framework esistenti con applicazioni ottimizzate per il cloud per migliorare drasticamente la flessibilità di distribuzione, in modo da fornire i costi di recapito delle applicazioni più veloci e inferiori.
+> Visione: modernizza le applicazioni .NET Framework esistenti alle applicazioni ottimizzate per il cloud per migliorare drasticamente l'agilità di distribuzione, in modo da poter fornire costi di distribuzione più rapidi e inferiori.
 
 Per sfruttare i vantaggi del cloud e le nuove tecnologie come i contenitori, è consigliabile modernizzare almeno parzialmente le applicazioni .NET esistenti. In definitiva, la modernizzazione delle applicazioni aziendali consentirà una riduzione del costo totale di proprietà.
 
@@ -22,5 +22,5 @@ La modernizzazione parziale di un'app non significa necessariamente una migrazio
 **Figura 4-1.** Posizionamento delle applicazioni ottimizzate per il cloud
 
 >[!div class="step-by-step"]
->[Precedente](../migrate-your-relational-databases-to-azure.md)
->[Successivo](reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications.md)
+>[Successivo](../migrate-your-relational-databases-to-azure.md)
+>[precedente](reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications.md)

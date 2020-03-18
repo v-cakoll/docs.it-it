@@ -4,11 +4,11 @@ description: Informazioni su come specificare dinamicamente i filtri dei predica
 ms.date: 12/01/2016
 ms.assetid: 90238470-0767-497c-916c-52d0d16845e0
 ms.openlocfilehash: 314be8f98b9ff014f14bef11a1f3581eff8574b4
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857736"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61659943"
 ---
 # <a name="dynamically-specify-predicate-filters-at-runtime"></a>Specificare dinamicamente i filtri dei predicati in fase di esecuzione
 
@@ -70,5 +70,5 @@ In alcuni casi, fino alla fase di esecuzione non si sa quanti predicati è neces
 
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ (Language-Integrated Query)](index.md)
-- [Clausola where](../language-reference/keywords/where-clause.md)
+- [Language Integrated Query (LINQ)](index.md)
+- [clausola where](../language-reference/keywords/where-clause.md)

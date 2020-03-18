@@ -9,10 +9,10 @@ helpviewer_keywords:
 - appconfig compiler option [C#]
 ms.assetid: 1cdbcbcc-7813-4010-b5b8-e67c107c5a98
 ms.openlocfilehash: 7a7e8e61f65704a2e99385a1be320048d950324c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69922514"
 ---
 # <a name="-appconfig-c-compiler-options"></a>-appconfig (opzioni del compilatore C#)
@@ -56,5 +56,5 @@ L'opzione **-appconfig** del compilatore consente a un'applicazione C# di specif
   
 ## <a name="see-also"></a>Vedere anche
 
-- [\<supportPortability> Element](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md) (Elemento <supportPortability>)
+- [\<Elemento> supportPortability](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)
 - [Opzioni del compilatore C# in ordine alfabetico](./listed-alphabetically.md)

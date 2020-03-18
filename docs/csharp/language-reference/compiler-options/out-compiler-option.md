@@ -9,10 +9,10 @@ helpviewer_keywords:
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
 ms.openlocfilehash: 6c8408c0c613e361dae0c1db19f854e9421ca467
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70970371"
 ---
 # <a name="-out-c-compiler-options"></a>-out (opzioni del compilatore C#)
@@ -28,7 +28,7 @@ L'opzione **-out** specifica il nome del file di output.
  `filename`  
  Il nome del file di output creato dal compilatore.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Nella riga di comando è possibile specificare più file di output per la compilazione. Dopo l'opzione **-out** è prevista la presenza di uno o più file di codice sorgente. Tutti i file di codice sorgente verranno quindi compilati nel file di output specificato con l'opzione **-out**.  
   
  Specificare il nome completo e l'estensione del file che si vuole creare.  
@@ -49,7 +49,7 @@ L'opzione **-out** specifica il nome del file di output.
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1. Aprire la pagine **Proprietà** del progetto.  
+1. Aprire la pagina **Proprietà** del progetto.  
   
 2. Fare clic sulla pagina delle proprietà **Applicazione**.  
   
@@ -66,6 +66,6 @@ csc t.cs -out:mymodule.netmodule -target:module t2.cs
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Opzioni del compilatore C#](./index.md)
-- [Assembly Friend](../../../standard/assembly/friend.md)
+- [Opzioni del compilatore C](./index.md)
+- [Assemblaggi amici](../../../standard/assembly/friend.md)
 - [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)

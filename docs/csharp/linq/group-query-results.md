@@ -4,11 +4,11 @@ description: Informazioni su come raggruppare i risultati usando LINQ in C#.
 ms.date: 12/01/2016
 ms.assetid: 2e4ec27f-06fb-4de7-8973-0189906d4520
 ms.openlocfilehash: 577a358c31fcf5346e7aab7a2e2b6be10fd1beff
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857853"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61688462"
 ---
 # <a name="group-query-results"></a>Raggruppare i risultati di una query
 
@@ -78,7 +78,7 @@ Incollare il metodo seguente nella classe `StudentClass`. Modificare l'istruzion
 
 - <xref:System.Linq.Enumerable.GroupBy%2A>
 - <xref:System.Linq.IGrouping%602>
-- [LINQ (Language-Integrated Query)](index.md)
+- [Language Integrated Query (LINQ)](index.md)
 - [Clausola group](../language-reference/keywords/group-clause.md)
 - [Tipi anonimi](../programming-guide/classes-and-structs/anonymous-types.md)
 - [Eseguire una sottoquery su un'operazione di raggruppamento](perform-a-subquery-on-a-grouping-operation.md)

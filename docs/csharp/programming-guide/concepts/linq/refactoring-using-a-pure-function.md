@@ -3,10 +3,10 @@ title: Refactoring con una funzione pura (C#)
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
 ms.openlocfilehash: f264a0028ed265a5a4fbe1dc32f430c648724c20
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70253086"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>Refactoring con una funzione pura (C#)
@@ -15,7 +15,7 @@ Nell'esempio seguente viene eseguito il refactoring dell'esempio precedente, [Re
 ## <a name="example"></a>Esempio  
  In questo esempio viene elaborato un documento WordprocessingML, recuperandone i nodi dei paragrafi da un documento WordprocessingML. Viene inoltre identificato lo stile di ciascun paragrafo. Questo esempio si basa su esempi precedenti di questa esercitazione. Il codice oggetto del refactoring è indicato nei commenti del codice riportato di seguito.  
   
- Per istruzioni per la creazione del documento di origine di questo esempio, vedere [Creazione del documento Office Open XML di origine (C#)](./creating-the-source-office-open-xml-document.md).  
+ Per istruzioni sulla creazione del documento di origine di questo esempio, vedere [Creazione del documento Office Open XML di origine (C#)](./creating-the-source-office-open-xml-document.md).  
   
  In questo esempio vengono usate classi dell'assembly WindowsBase e i tipi dello spazio dei nomi <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -174,7 +174,7 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
-### <a name="next-steps"></a>Fasi successive  
+### <a name="next-steps"></a>Passaggi successivi  
  Nell'esempio seguente viene illustrato come proiettare il codice XML in una forma diversa:  
   
 - [Proiezione di XML in una forma diversa (C#)](./projecting-xml-in-a-different-shape.md)  

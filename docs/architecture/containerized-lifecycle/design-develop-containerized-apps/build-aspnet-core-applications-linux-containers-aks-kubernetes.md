@@ -3,10 +3,10 @@ title: Compilare applicazioni ASP.NET Core 2.2 distribuite come contenitori Linu
 description: Ciclo di vita delle applicazioni Docker in contenitori con piattaforma e strumenti Microsoft
 ms.date: 02/25/2019
 ms.openlocfilehash: ab64a0423ceceb8285c159af276d6d97e12379d8
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70848750"
 ---
 # <a name="build-aspnet-core-22-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Compilare applicazioni ASP.NET Core 2.2 distribuite come contenitori Linux in un agente di orchestrazione del servizio Azure Kubernetes
@@ -33,7 +33,7 @@ Questo esempio usa un semplice progetto che si basa su un modello API Web di Vis
 
 **Figura 4-36**. Creazione di un'applicazione ASP.NET Core
 
-Per creare il progetto di esempio in Visual Studio, selezionare **File** > **Nuovo** > **Progetto**, selezionare i tipi di progetto **Web**nel riquadro a sinistra e quindi **Applicazione Web ASP.NET Core**.
+Per creare il progetto di esempio in Visual Studio, selezionare **File** > **nuovo** > **progetto**, selezionare i tipi di progetto **Web** nel riquadro sinistro e **ASP.NETApplicazione Web principale**.
 
 Visual Studio elenca i modelli per i progetti Web. Per questo esempio, selezionare **API** per creare un'applicazione API Web ASP.NET.
 
@@ -45,9 +45,9 @@ Verificare di avere selezionato come framework ASP.NET Core 2.2. .NET core 2.2 �
 
 Se si ha una versione precedente di .NET Core, è possibile scaricare e installare la versione 2.2 da <https://dotnet.microsoft.com/download>.
 
-È possibile aggiungere il supporto per Docker al momento della creazione del progetto o in seguito, in qualsiasi momento. Per aggiungere il supporto per Docker dopo la creazione del progetto, fare clic con il pulsante destro del mouse sul nodo del progetto in Esplora soluzioni e selezionare **Aggiungi** > **Supporto Docker** nel menu di scelta rapida.
+È possibile aggiungere il supporto per Docker al momento della creazione del progetto o in seguito, in qualsiasi momento. Per aggiungere il supporto Docker dopo la creazione del progetto, fare clic con il pulsante destro del mouse sul nodo del progetto in Esplora soluzioni e scegliere **Aggiungi** > **supporto Docker** dal menu di scelta rapida.
 
-![Opzione del menu di scelta rapida per aggiungere il supporto di Docker a un progetto esistente: fare clic con il pulsante destro del mouse sul progetto > Aggiungi > supporto docker.](media/add-docker-support-to-project.png)
+![Opzione del menu di scelta rapida per aggiungere il supporto Docker a un progetto esistente: fare clic con il pulsante destro del mouse (sul progetto) > Aggiungi > supporto Docker.](media/add-docker-support-to-project.png)
 
 **Figura 4-38**. Aggiunta del supporto per Docker a un progetto esistente
 
@@ -69,7 +69,7 @@ Dopo aver eseguito il progetto, è possibile elencare le immagini usando il coma
 docker images
 ```
 
-![Output della console del comando Docker images, Mostra un elenco con: repository, tag, image ID, created (date) e size.](media/docker-images-command.png)
+![L'output della console dal comando docker images mostra un elenco con: Repository, Tag, ID immagine, Creato (data) e Dimensione.](media/docker-images-command.png)
 
 **Figura 4-40**. Visualizzazione immagini Docker
 
@@ -89,7 +89,7 @@ Se si esegue il comando `docker image`, vengono visualizzate entrambe le immagin
 
 ### <a name="create-a-new-tag-for-the-image"></a>Creare un nuovo tag per l'immagine
 
-Ogni immagine del contenitore deve essere contrassegnata con il nome del `loginServer` del registro di sistema. Questo tag viene usato per il routing quando si effettua il push di immagini del contenitore in un registro immagini.
+Ogni immagine del contenitore deve essere contrassegnata con il nome `loginServer` del registro. Questo tag viene usato per il routing quando si esegue il push delle immagini del contenitore nel registro delle immagini.
 
 È possibile visualizzare il nome `loginServer` dal portale di Azure. L'informazione deriva dal Registro Azure Container.
 
@@ -190,7 +190,7 @@ A questo punto si è quasi pronti per eseguire la distribuzione usando **Kubectl
 az aks get-credentials --resource-group MSSampleResourceGroupAKS --name mssampleclusterk801
 ```
 
-![Output della console dal comando precedente: merge di "MSSampleK8Cluster come contesto corrente in/root/.Kube/config](media/getting-aks-credentials.png)
+![Output della console dal comando precedente: Merged "MSSampleK8Cluster as current context in /root/.kube/config](media/getting-aks-credentials.png)
 
 **Figura 4-47**. Ottenere le credenziali
 
@@ -202,7 +202,7 @@ kubectl create -f mssample-deploy.yml
 
 ![Output della console del comando riportato sopra: deployment "mssamplesbook" created. service "mssample-kub-app" created.](media/kubectl-create-command.png)
 
-**Figura 4-48**. Distribuisci in Kubernetes
+**Figura 4-48**. Eseguire la distribuzione in Kubernetes
 
 Al termine della distribuzione, è possibile accedere alla console di Kubernetes con un proxy locale cui è possibile accedere temporaneamente con il comando seguente:
 
@@ -222,5 +222,5 @@ L'applicazione è stata distribuita in Azure usando un contenitore Linux e un cl
 > Per informazioni su come creare il cluster AKS per questo esempio, vedere la sezione [**Distribuire in servizio Azure Kubernetes**](deploy-azure-kubernetes-service.md) in questa Guida.
 
 >[!div class="step-by-step"]
->[Precedente](set-up-windows-containers-with-powershell.md)
->[Successivo](../docker-devops-workflow/index.md)
+>[Successivo](set-up-windows-containers-with-powershell.md)
+>[precedente](../docker-devops-workflow/index.md)

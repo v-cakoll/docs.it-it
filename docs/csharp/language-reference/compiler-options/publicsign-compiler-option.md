@@ -8,11 +8,11 @@ helpviewer_keywords:
 - publicsign compiler option [C#]
 - /publicsign compiler option [C#]
 ms.openlocfilehash: de7d9c98b0f279b52bc93711c5b986a2b2e57215
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738066"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61662530"
 ---
 # <a name="-publicsign-c-compiler-options"></a>-publicsign (opzioni del compilatore C#)
 
@@ -26,9 +26,9 @@ Questa opzione indica al compilatore di applicare una chiave pubblica ma non fir
 
 ## <a name="arguments"></a>Argomenti
 
-Nessuno.
+No.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'opzione **-publicsign** richiede l'uso di [-keyfile](keyfile-compiler-option.md) o [-keycontainer](keycontainer-compiler-option.md). Le opzioni **keyfile** o **keycontainer** specificano la chiave pubblica.
 
@@ -44,7 +44,7 @@ Talvolta denominata "firma falsa" o "firma OSS", la firma pubblica include la ch
 ## <a name="see-also"></a>Vedere anche
 
 - [Opzione -delaysign del compilatore C#](delaysign-compiler-option.md)
-- [Opzione - keyfile del compilatore C#](keyfile-compiler-option.md)
+- [Opzione -keyfile del compilatore C#](keyfile-compiler-option.md)
 - [Opzione -keycontainer del compilatore C#](keycontainer-compiler-option.md)
-- [Opzioni del compilatore C#](index.md)
+- [Opzioni del compilatore C](index.md)
 - [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)

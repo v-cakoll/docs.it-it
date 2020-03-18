@@ -3,10 +3,10 @@ title: Refactoring in funzioni pure (C#)
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
 ms.openlocfilehash: 4cf91ff078bd1c4582daa05475a91c4a4ecaba3e
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70253103"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>Refactoring in funzioni pure (C#)
@@ -24,7 +24,7 @@ Per le trasformazioni funzionali pure, è fondamentale comprendere come eseguire
   
  Per passare alla programmazione funzionale, è possibile eseguire il refactoring del codice esistente per eliminare inutili effetti collaterali e dipendenze esterne. In questo modo, è possibile creare versioni di funzioni pure del codice esistente.  
   
- In questo argomento vengono descritte le caratteristiche presenti e non presenti in una funzione pura. [Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md) illustra come modificare un documento WordprocessingML e include due esempi di esecuzione del refactoring usando una funzione pura.  
+ In questo argomento vengono descritte le caratteristiche presenti e non presenti in una funzione pura. L'[esercitazione sulla modifica del contenuto in un documento WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md) illustra come modificare un documento WordprocessingML e contiene due esempi su come eseguire il refactoring usando una funzione pura.  
   
 ## <a name="eliminating-side-effects-and-external-dependencies"></a>Eliminazione di effetti collaterali e dipendenze esterne  
  Negli esempi seguenti vengono confrontate due funzioni non pure e una funzione pura.  
@@ -115,4 +115,4 @@ class Program
 ## <a name="see-also"></a>Vedere anche
 
 - [Introduzione alle trasformazioni funzionali pure (C#)](./introduction-to-pure-functional-transformations.md)
-- [Differenze tra programmazione funzionale e programmazione imperativa (C#)](./functional-programming-vs-imperative-programming.md).
+- [Programmazione funzionale e programmazione imperativa (C )Functional Programming vs.](./functional-programming-vs-imperative-programming.md)

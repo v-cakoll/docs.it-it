@@ -3,10 +3,10 @@ title: Esempio di concatenamento di query (C#)
 ms.date: 07/20/2015
 ms.assetid: abbca162-d95e-43af-b92c-e46e6aa2540e
 ms.openlocfilehash: 45e3a4f341ca8eb06ff0f553e0f933956e6c6546
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70205422"
 ---
 # <a name="chaining-queries-example-c"></a>Esempio di concatenamento di query (C#)
@@ -62,7 +62,7 @@ class Program
 }  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```output  
 ToUpper: source >abc<  

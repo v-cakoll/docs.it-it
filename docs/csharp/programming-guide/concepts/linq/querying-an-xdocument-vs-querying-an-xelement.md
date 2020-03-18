@@ -1,15 +1,15 @@
 ---
-title: Esecuzione di query su XDocument e su XElement (C#)
+title: Esecuzione di query su un XDocument rispetto all'esecuzione di un'esecuzione di un elemento XElement
 ms.date: 07/20/2015
 ms.assetid: 46221ff5-62ee-4de8-93ba-66465facb5c1
 ms.openlocfilehash: 475c77934ad535bad9ef79ff58bbddf991dc8f5c
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70253135"
 ---
-# <a name="querying-an-xdocument-vs-querying-an-xelement-c"></a>Esecuzione di query su XDocument e su XElement (C#)
+# <a name="querying-an-xdocument-vs-querying-an-xelement-c"></a>Esecuzione di query su un XDocument rispetto all'esecuzione di un'esecuzione di un elemento XElement
 Quando si carica un documento tramite <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, si noterà che è necessario scrivere le query in modo leggermente diverso rispetto a quando si carica un documento tramite <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.  
   
 ## <a name="comparison-of-xdocumentload-and-xelementload"></a>Confronto tra XDocument.Load e XElement.Load  
@@ -65,7 +65,7 @@ foreach (XElement e in childList)
     Console.WriteLine(e);  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```output  
 Querying tree loaded with XDocument.Load  

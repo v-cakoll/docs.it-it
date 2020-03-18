@@ -1,14 +1,14 @@
 ---
 ms.openlocfilehash: b4a20599ce6b7d8fd642e4f0e5b5f7d3fbcdac92
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72393934"
 ---
-### <a name="obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed"></a>Sono state rimosse le API obsolete, CORS, Diagnostics, MVC e routing
+### <a name="obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed"></a>Rimosse le API obsolete antiforscigiano, CORS, diagnostica, MVC e routing
 
-I membri obsoleti e le opzioni di compatibilità in ASP.NET Core 2,2 sono stati rimossi.
+I membri obsoleti e le opzioni di compatibilità in ASP.NET Core 2.2 sono stati rimossi.
 
 #### <a name="version-introduced"></a>Versione introdotta
 
@@ -16,11 +16,11 @@ I membri obsoleti e le opzioni di compatibilità in ASP.NET Core 2,2 sono stati 
 
 #### <a name="reason-for-change"></a>Motivo della modifica
 
-Miglioramento della superficie dell'API nel tempo.
+Miglioramento della superficie API nel tempo.
 
 #### <a name="recommended-action"></a>Azione consigliata
 
-Se la destinazione è .NET Core 2,2, seguire le istruzioni contenute nei messaggi di compilazione obsoleti per adottare le nuove API.
+Mentre scegli come destinazione .NET Core 2.2, segui le linee guida nei messaggi di compilazione obsoleti per adottare invece nuove API.
 
 #### <a name="category"></a>Category
 
@@ -28,7 +28,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>API interessate
 
-I tipi e i membri seguenti sono stati contrassegnati come obsoleti per ASP.NET Core 2,1 e 2,2:
+I tipi e i membri seguenti sono stati contrassegnati come obsoleti per ASP.NET Core 2.1 e 2.2:
 
 **Tipi**
 

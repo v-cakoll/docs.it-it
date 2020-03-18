@@ -3,15 +3,15 @@ title: Progettazione di applicazioni basate su contenitori e microservizi
 description: La progettazione di applicazioni basate su contenitori e microservizi è un'opera tutt'altro che semplice e non è da prendere alla leggera. In questo capitolo vengono illustrati i concetti di base.
 ms.date: 09/20/2018
 ms.openlocfilehash: aff30c907f1140b94dbcae330ed7cb633b0a744b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70295518"
 ---
 # <a name="architecting-container-and-microservice-based-applications"></a>Progettazione di applicazioni basate su contenitori e microservizi
 
-*I microservizi offrono notevoli vantaggi, ma generano anche nuove problematiche importanti. I modelli di architettura di microservizi sono fondamentali per la creazione di un'applicazione basata su microservizi.*
+*I microservizi offrono grandi vantaggi, ma sollevano anche nuove enormi sfide. I modelli di architettura dei microservizi sono pilastri fondamentali durante la creazione di un'applicazione basata su microservizi.*
 
 Negli argomenti precedenti di questa Guida sono stati spiegati i concetti di base sui contenitori e Docker. Le informazioni fornite sono il minimo necessario per iniziare a usare i contenitori. Anche nei casi in cui i contenitori hanno la funzione di abilitatori e nonostante siano adatti per i microservizi, non sono obbligatori per un'architettura di microservizi e molti concetti relativi all'architettura presentati in questa sezione potrebbero essere applicati anche senza i contenitori. Queste istruzioni si concentrano tuttavia sulla combinazione di questi elementi, data l'importanza già descritta dei contenitori.
 
@@ -28,5 +28,5 @@ Se il processo ha esito negativo, il ciclo di vita del contenitore termina e sub
 In alcune situazioni occorre che più processi vengano eseguiti in un singolo contenitore. In questi casi, poiché può esserci un solo punto di ingresso per ogni contenitore, è possibile eseguire uno script all'interno del contenitore per avviare tutti i programmi necessari. È ad esempio possibile usare [Supervisor](http://supervisord.org/) o uno strumento simile per avviare più processi in un solo contenitore. Anche se è possibile trovare architetture che supportano più processi per ogni contenitore, questo approccio non è tuttavia molto comune.
 
 >[!div class="step-by-step"]
->[Precedente](../net-core-net-framework-containers/official-net-docker-images.md)
->[Successivo](containerize-monolithic-applications.md)
+>[Successivo](../net-core-net-framework-containers/official-net-docker-images.md)
+>[precedente](containerize-monolithic-applications.md)

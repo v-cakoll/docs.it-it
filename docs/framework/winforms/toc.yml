@@ -8,7 +8,7 @@
     - name: Creazione di un nuovo Windows Form
       href: creating-a-new-windows-form.md
       items:
-        - name: 'Procedura: Creare un''applicazione Windows Forms dalla riga di comando'
+        - name: 'Procedura: creare un''applicazione Windows Form dalla riga di comando'
           href: how-to-create-a-windows-forms-application-from-the-command-line.md
         - name: Coordinate di Windows Form
           href: windows-forms-coordinates.md
@@ -17,30 +17,30 @@
       items:
         - name: Cenni preliminari sugli eventi
           href: events-overview-windows-forms.md
-        - name: Panoramica sui gestori eventi
+        - name: Cenni preliminari sui gestori eventi
           href: event-handlers-overview-windows-forms.md
-        - name: 'Procedura: Creare gestori eventi in fase di esecuzione per Windows Forms'
+        - name: 'Procedura: creare gestori eventi in fase di esecuzione per Windows Form'
           href: how-to-create-event-handlers-at-run-time-for-windows-forms.md
-        - name: 'Procedura: Connettere più eventi a un unico gestore eventi in Windows Forms'
+        - name: 'Procedura: connettere più eventi a un unico gestore eventi in Windows Form'
           href: how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md
         - name: Ordine degli eventi in Windows Form
           href: order-of-events-in-windows-forms.md
-    - name: Regolazione delle dimensioni e della scala di Windows Forms
+    - name: Regolazione delle dimensioni e della scala di Windows Form
       href: adjusting-the-size-and-scale-of-windows-forms.md
       items:
-        - name: 'Procedura: Ridimensionare Windows Forms'
+        - name: 'Procedura: ridimensionare Windows Form'
           href: how-to-resize-windows-forms.md
         - name: Ridimensionamento automatico in Windows Form
           href: automatic-scaling-in-windows-forms.md
           items:
-            - name: 'Procedura: Rispondere a modifiche delle combinazioni dei tipi di carattere in un''applicazione Windows Forms'
+            - name: 'Procedura: Rispondere a modifiche delle combinazioni dei tipi di carattere in un''applicazione Windows Form'
               href: how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md
         - name: Supporto di valori DPI alti in Windows Form
           href: high-dpi-support-in-windows-forms.md
     - name: Modifica dell'aspetto di Windows Form
       href: changing-the-appearance-of-windows-forms.md
       items:
-        - name: 'Procedura: Modificare i bordi di Windows Forms'
+        - name: 'Procedura: modificare i bordi di Windows Form'
           href: how-to-change-the-borders-of-windows-forms.md
     - name: Controlli per Windows Form
       href: ./controls/
@@ -56,11 +56,11 @@
               href: how-keyboard-input-works.md
             - name: Utilizzo degli eventi di tastiera
               href: using-keyboard-events.md
-            - name: 'Procedura: Modificare l''input da tastiera in un controllo standard'
+            - name: 'Procedura: modificare l''input da tastiera in un controllo standard'
               href: how-to-modify-keyboard-input-to-a-standard-control.md
-            - name: 'Procedura: Determinare quale tasto di modifica è stato premuto'
+            - name: 'Procedura: determinare quale tasto di modifica è stato premuto'
               href: how-to-determine-which-modifier-key-was-pressed.md
-            - name: 'Procedura: Gestire l''input da tastiera a livello di modulo'
+            - name: 'Procedura: gestire gli input da tastiera a livello di form'
               href: how-to-handle-keyboard-input-at-the-form-level.md
         - name: Input del mouse in un'applicazione Windows Forms
           href: mouse-input-in-a-windows-forms-application.md
@@ -69,7 +69,7 @@
               href: how-mouse-input-works-in-windows-forms.md
             - name: Eventi mouse in Windows Form
               href: mouse-events-in-windows-forms.md
-            - name: 'Procedura: Distinguere tra clic e doppio clic'
+            - name: 'Procedura: distinguere tra clic e doppio clic'
               href: how-to-distinguish-between-clicks-and-double-clicks.md
             - name: Puntatori del mouse in Windows Form
               href: mouse-pointers-in-windows-forms.md
@@ -77,16 +77,16 @@
               href: mouse-capture-in-windows-forms.md
             - name: Funzionalità di trascinamento della selezione in Windows Form
               href: drag-and-drop-functionality-in-windows-forms.md
-        - name: 'Procedura: Simulare eventi di mouse e tastiera nel codice'
+        - name: 'Procedura: simulare eventi di mouse e tastiera nel codice'
           href: how-to-simulate-mouse-and-keyboard-events-in-code.md
-        - name: 'Procedura: Gestire eventi di input utente nei controlli Windows Forms'
+        - name: 'Procedura: gestire eventi di input degli utenti nei controlli Windows Form'
           href: how-to-handle-user-input-events-in-windows-forms-controls.md
         - name: Convalida dell'input utente in Windows Form
           href: user-input-validation-in-windows-forms.md
     - name: Finestre di dialogo in Windows Form
       href: dialog-boxes-in-windows-forms.md
       items:
-        - name: 'Procedura: Visualizzare le finestre di dialogo per Windows Forms'
+        - name: 'Procedura: visualizzare le finestre di dialogo per Windows Form'
           href: how-to-display-dialog-boxes-for-windows-forms.md
     - name: Data binding di Windows Form
       href: windows-forms-data-binding.md
@@ -99,23 +99,23 @@
           href: interfaces-related-to-data-binding.md
         - name: Notifica delle modifiche nell'associazione dati dei Windows Form
           href: change-notification-in-windows-forms-data-binding.md
-        - name: 'Procedura: Applicare il modello PropertyNameChanged'
+        - name: 'Procedura: applicare il modello PropertyNameChanged'
           href: how-to-apply-the-propertynamechanged-pattern.md
-        - name: 'Procedura: Creare un controllo con associazione e formattare i dati visualizzati'
+        - name: 'Procedura: creare un controllo con associazione e formattare i dati visualizzati'
           href: how-to-create-a-bound-control-and-format-the-displayed-data.md
-        - name: 'Procedura: Creare un controllo con associazione semplice in un Windows Form'
+        - name: 'Procedura: creare un controllo con associazione semplice in un Windows Form'
           href: how-to-create-a-simple-bound-control-on-a-windows-form.md
-        - name: 'Procedura: Garantire la sincronizzazione di più controlli associati alla stessa origine dati'
+        - name: 'Procedura: garantire la sincronizzazione di più controlli associati alla stessa origine dati'
           href: multiple-controls-bound-to-data-source-synchronized.md
-        - name: 'Procedura: Garantire che la riga selezionata in una tabella figlio rimanga nella posizione corretta'
+        - name: 'Procedura: garantire che la riga selezionata in una tabella figlio rimanga nella posizione corretta'
           href: ensure-the-selected-row-in-a-child-table-correct.md
-        - name: 'Procedura: Implementare l''interfaccia IListSource'
+        - name: 'Procedura: implementare l''interfaccia IListSource'
           href: how-to-implement-the-ilistsource-interface.md
-        - name: 'Procedura: Implementare l''interfaccia INotifyPropertyChanged'
+        - name: 'Procedura: implementare l''interfaccia INotifyPropertyChanged'
           href: how-to-implement-the-inotifypropertychanged-interface.md
-        - name: 'Procedura: Implementare l''interfaccia ITypedList'
+        - name: 'Procedura: implementare l''interfaccia ITypedList'
           href: how-to-implement-the-itypedlist-interface.md
-        - name: 'Procedura: Esplorare dati in Windows Forms'
+        - name: 'Procedura: esplorare dati in Windows Form'
           href: how-to-navigate-data-in-windows-forms.md
     - name: Sicurezza di Windows Form
       href: windows-forms-security.md
@@ -130,7 +130,7 @@
           href: additional-security-considerations-in-windows-forms.md
     - name: Distribuzione ClickOnce per Windows Form
       href: clickonce-deployment-for-windows-forms.md
-    - name: 'Procedura: Accedere a raccolte con chiavi in Windows Forms'
+    - name: 'Procedura: accedere a raccolte con chiavi in Windows Form'
       href: how-to-access-keyed-collections-in-windows-forms.md
     - name: Miglioramento delle applicazioni Windows Form
       href: ./advanced/

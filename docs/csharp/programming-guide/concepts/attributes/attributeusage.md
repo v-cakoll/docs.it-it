@@ -2,11 +2,11 @@
 title: AttributeUsage (C#)
 ms.date: 04/25/2018
 ms.openlocfilehash: a3a82e33d7259ec56ec3e907bc3d4d9f8a01167d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589311"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61668718"
 ---
 # <a name="attributeusage-c"></a>AttributeUsage (C#)
 
@@ -14,14 +14,14 @@ Determina come usare una classe di attributi personalizzati. <xref:System.Attrib
 
 - Elementi del programma a cui l'attributo può essere applicato. Se non se ne limita l'utilizzo, un attributo può essere applicato a uno qualsiasi degli elementi del programma seguenti:
   - assembly
-  - module
+  - modulo
   - campo
-  - event
-  - metodo
+  - evento
+  - method
   - param
   - proprietà
   - return
-  - tipo
+  - type
 - Se un attributo può essere applicato più volte a un singolo elemento del programma.
 - Se gli attributi vengono ereditati dalle classi derivate.
 
@@ -55,7 +55,7 @@ Se <xref:System.AttributeUsageAttribute.Inherited> è `false`, l'attributo non v
 
 In questo caso `NonInheritedAttribute` non viene applicato a `DClass` attraverso l'ereditarietà.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'attributo `AttributeUsage` è un attributo monouso ovvero non può essere applicato più volte alla stessa classe. `AttributeUsage` è un alias per <xref:System.AttributeUsageAttribute>.
 
@@ -67,7 +67,7 @@ L'esempio seguente illustra l'effetto degli argomenti <xref:System.AttributeUsag
 
 [!code-csharp[Applying and querying attributes](../../../../../samples/snippets/csharp/attributes/Program.cs#1)]
 
-## <a name="sample-output"></a>Esempio di output
+## <a name="sample-output"></a>Output di esempio
 
 ```text
 Attributes on Base Class:
@@ -88,4 +88,4 @@ SecondAttribute
 - [Reflection (C#)](../reflection.md)
 - [Attributi](index.md)
 - [Creazione di attributi personalizzati (C#)](creating-custom-attributes.md)
-- [Accessing Attributes by Using Reflection (C#)](accessing-attributes-by-using-reflection.md) (Accesso agli attributi tramite reflection (C#))
+- [Accessing Attributes by Using Reflection (C#)](accessing-attributes-by-using-reflection.md) (Accesso agli attributi con reflection (C#))

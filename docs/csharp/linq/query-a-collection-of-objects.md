@@ -4,11 +4,11 @@ description: Informazioni su come eseguire query in una raccolta usando LINQ in 
 ms.date: 11/30/2016
 ms.assetid: 87a76f8a-0b58-4791-90ea-2fe0a30416c9
 ms.openlocfilehash: 9b2f5dd09c540800e9a2498d48883357f58c0116
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734503"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61659813"
 ---
 # <a name="query-a-collection-of-objects"></a>Eseguire query in una raccolta di oggetti
 
@@ -26,5 +26,5 @@ Questa query è volutamente semplice per consentire la sperimentazione. Ad esemp
   
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ (Language-Integrated Query)](index.md)
+- [Language Integrated Query (LINQ)](index.md)
 - [Interpolazione di stringhe](../language-reference/tokens/interpolated.md)

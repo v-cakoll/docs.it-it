@@ -5,23 +5,23 @@
       href: com-integration.md
     - name: Configurazione
       href: configuration.md
-    - name: 'Comunicazioni di base: framework di canale'
+    - name: 'Comunicazioni principali: framework dei canali'
       href: core-communications-channel-framework.md
-    - name: 'Comunicazioni di base: framework di connessione'
+    - name: 'Comunicazioni principali: framework di connessione'
       href: core-communications-connection-framework.md
-    - name: 'Comunicazioni di base: canali di trasporto HTTP/HTTPS'
+    - name: 'Comunicazioni principali: canali di trasporto HTTP/HTTPS'
       href: core-communications-http-https-transport-channels.md
-    - name: 'Comunicazioni di base: canali di trasporto duplex interni'
+    - name: 'Comunicazioni principali: canali di trasporto duplex interni'
       href: core-communications-internal-duplex-transport-channels.md
-    - name: 'Comunicazioni di base: canali di trasporto named pipe'
+    - name: 'Comunicazioni principali: canali di trasporto delle named pipe'
       href: core-communications-named-pipe-transport-channels.md
-    - name: 'Comunicazioni di base: canali di trasporto TCP'
+    - name: 'Comunicazioni principali: canali di trasporto TCP'
       href: core-communications-tcp-transport-channels.md
-    - name: 'Comunicazioni di base: framework di trasporto'
+    - name: 'Comunicazioni principali: framework di trasporto'
       href: core-communications-transport-framework.md
-    - name: 'Comunicazioni di base: Utilità'
+    - name: Utilità di comunicazione principali
       href: core-communications-utilities.md
-    - name: 'Comunicazioni di base: supporto WebHost'
+    - name: 'Comunicazioni principali: supporto Webhost'
       href: core-communications-webhost-support.md
     - name: Hosting
       href: hosting-exceptions.md

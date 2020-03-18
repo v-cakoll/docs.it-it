@@ -1,0 +1,246 @@
+### YamlMime:Hub
+title: Documentazione di .NET
+summary: Informazioni sull'uso di .NET per creare applicazioni per qualsiasi piattaforma con C#, Visual Basic e F#. Informazioni di riferimento sulle API, codice di esempio, esercitazioni e altro ancora.
+brand: dotnet
+metadata:
+  title: Documentazione di .NET
+  description: Informazioni sull'uso di .NET per creare applicazioni per qualsiasi piattaforma con C#, Visual Basic e F#. Informazioni di riferimento sulle API, codice di esempio, esercitazioni e altro ancora.
+  ms.product: dotnet
+  ms.topic: hub-page
+  ms.collection: collection
+  author: BillWagner
+  ms.author: wiwagn
+  ms.date: 12/19/2019
+  ms.openlocfilehash: 6b23ab2f0214f23d45499fcf8ab7c3f2771be15c
+  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.translationtype: HT
+  ms.contentlocale: it-IT
+  ms.lasthandoff: 03/16/2020
+  ms.locfileid: "79416326"
+highlightedContent:
+  items:
+  - title: Introduzione a C#. Avvio interattivo rapido.
+    itemType: get-started
+    url: csharp/tutorials/intro-to-csharp/hello-world.yml
+  - title: Creare la prima app console.
+    itemType: tutorial
+    url: core/get-started.md
+  - title: Creare la prima app Web.
+    itemType: learn
+    url: https://dotnet.microsoft.com/learn/aspnet/hello-world-tutorial/intro
+  - title: Documentazione delle novità di .NET
+    itemType: whats-new
+    url: whats-new/index.yml
+conceptualContent:
+  title: '.NET: Libero. Funzionamento multipiattaforma. Open source.'
+  summary: 'Una piattaforma per sviluppatori per la creazione di tutti i tipi di app: Web, per dispositivi mobili, desktop, giochi, IoT e altro ancora. Supportato in Windows, Linux e macOS.'
+  items:
+  - title: .NET open source
+    summary: Informazioni su .NET Core
+    links:
+    - url: core/index.md
+      itemType: overview
+      text: Panoramica di .NET Core
+    - url: core/whats-new/dotnet-core-3-1.md
+      itemType: whats-new
+      text: Novità di .NET Core 3.1
+    - url: standard/tour.md
+      itemType: overview
+      text: Panoramica di .NET
+    - url: core/deploying/index.md
+      itemType: deploy
+      text: Distribuire app .NET Core
+    - url: core/docker/build-container.md
+      itemType: tutorial
+      text: App .NET Core in contenitori con Docker
+    - url: core/tutorials/index.md
+      itemType: tutorial
+      text: Esercitazioni
+  - title: Concetti relativi a .NET
+    summary: Informazioni sui concetti fondamentali di .NET
+    links:
+    - url: https://channel9.msdn.com/Series/NET-Core-101/What-is-NET
+      itemType: video
+      text: Che cos'è .NET?
+    - url: standard/index.md
+      itemType: overview
+      text: Panoramica di .NET
+    - url: standard/net-standard.md
+      itemType: overview
+      text: .NET Standard
+    - url: /aspnet/core/
+      itemType: overview
+      text: ASP.NET Core
+    - url: /ef/core/
+      itemType: overview
+      text: Entity Framework Core
+    - url: standard/get-started.md
+      itemType: get-started
+      text: Introduzione
+    - url: standard/components.md
+      itemType: concept
+      text: Componenti dell'architettura .NET
+    - url: framework/index.md
+      itemType: overview
+      text: App .NET Framework (Windows)
+  - title: Sviluppare app .NET
+    summary: Iniziare a sviluppare con .NET
+    links:
+    - url: core/sdk.md
+      itemType: download
+      text: Scaricare .NET Core SDK
+    - url: core/tools/index.md
+      itemType: overview
+      text: Panoramica dell'interfaccia della riga di comando di .NET Core
+    - url: core/porting/index.md
+      itemType: how-to-guide
+      text: Convertire da .NET Framework a .NET Core
+    - url: core/compatibility/index.md
+      itemType: concept
+      text: Modifiche di rilievo di .NET Core
+    - url: desktop-wpf/overview/index.md
+      itemType: overview
+      text: Creare app desktop .NET Core per Windows
+    - url: standard/library-guidance/index.md
+      itemType: concept
+      text: Linee guida per le librerie open source
+  - title: Guide per l'architettura .NET
+    summary: Linee guida di base per lo sviluppo e l'architettura per .NET
+    links:
+    - url: architecture/microservices/index.md
+      itemType: architecture
+      text: 'Microservizi .NET: Architettura per le app .NET incluse in contenitori'
+    - url: architecture/modern-web-apps-azure/index.md
+      itemType: architecture
+      text: Progettare applicazioni Web moderne con ASP.NET Core e Azure
+    - url: architecture/containerized-lifecycle/index.md
+      itemType: architecture
+      text: Ciclo di vita delle applicazioni Docker in contenitori con piattaforma e strumenti Microsoft
+    - url: architecture/modernize-with-azure-containers/index.md
+      itemType: architecture
+      text: Modernizzare le applicazioni .NET esistenti con cloud di Azure e i contenitori di Windows
+    footerLink:
+      url: architecture/index.yml
+      text: Tutte le guide all'architettura
+tools:
+  title: Linguaggi di programmazione
+  summary: È possibile scrivere app .NET in C#, F# o Visual Basic.
+  items:
+  - title: Un membro moderno, orientato a oggetti e indipendente dai tipi della famiglia C
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Csharp.svg
+    url: csharp/index.yml
+  - title: Un linguaggio di programmazione funzionale per .NET
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Fsharp.svg
+    url: fsharp/index.yml
+  - title: Un linguaggio accessibile con sintassi leggibile
+    imageSrc: https://docs.microsoft.com/media/logos/logo_VB.svg
+    url: visual-basic/index.yml
+additionalContent:
+  sections:
+  - title: Creare l'applicazione
+    summary: È possibile realizzare app Web, per dispositivi mobili, desktop, giochi, IoT e altro ancora.
+    items:
+    - title: Web
+      links:
+      - url: /aspnet/core/getting-started
+        text: Creare la prima app Web
+      - url: /aspnet/core/tutorials
+        text: Esercitazioni di ASP.NET Core
+      - url: /aspnet/core
+        text: Che cos'è ASP.NET Core?
+      - url: /aspnet/core/tutorials/first-mvc-app/start-mvc
+        text: ASP.NET Core in Visual Studio
+      - url: /aspnet/mvc/overview/deployment/docker-aspnetmvc
+        text: App ASP.NET MVC nei contenitori Windows
+      - url: /aspnet/core/blazor/
+        text: 'Blazor: Interfaccia utente Web interattiva sul lato client con .NET'
+    - title: Cloud nativo e microservizi
+      links:
+      - url: /dotnet/azure/
+        text: Documentazione di Azure per .NET
+      - url: /azure/storage
+        text: Archiviazione
+      - url: /dotnet/fsharp/using-fsharp-on-azure/
+        text: Uso di F# in Azure
+      - url: architecture/serverless/index.md
+        text: 'App serverless: architettura, modelli e implementazione di Azure'
+      - url: architecture/microservices/index.md
+        text: 'Microservizi .NET: Architettura per le applicazioni .NET incluse in contenitori'
+    - title: Cellulare
+      links:
+      - url: /xamarin/ios/
+        text: Xamarin.iOS
+      - url: /xamarin/android
+        text: Xamarin.Android
+      - url: /xamarin/xamarin-forms
+        text: Xamarin.Forms
+    - title: Desktop
+      links:
+      - url: /uwp
+        text: App di Windows universale
+      - url: desktop-wpf/index.md
+        text: Windows Presentation Foundation (.NET Core)
+      - url: framework/wpf/index.md
+        text: Windows Presentation Foundation (.NET Framework)
+      - url: framework/winforms/index.md
+        text: Windows Form
+      - url: /xamarin/mac
+        text: Xamarin per macOS
+    - title: Giochi
+      links:
+      - url: https://visualstudio.microsoft.com/vs/features/game-development/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link
+        text: Sviluppo di giochi con Visual Studio
+      - url: https://docs.cryengine.com/display/CEPROG/C%23+Programming
+        text: Informazioni su come usare CRYENGINE per creare giochi con C#
+      - url: http://www.monogame.net/documentation/?page=main
+        text: Crea giochi con C# usando la libreria MonoGame
+      - url: https://docs.unity3d.com/Manual/index.html
+        text: Informazioni su come usare Unity per creare giochi 2D e 3D con C#
+    - title: Machine Learning e AI
+      links:
+      - url: machine-learning/index.yml
+        text: Creare soluzioni di intelligenza artificiale personalizzate con ML.NET
+      - url: /azure/cognitive-services/
+        text: Servizi cognitivi di Azure
+      - url: /azure/machine-learning
+        text: Azure Machine Learning
+      - url: spark/index.yml
+        text: .NET per Apache Spark
+    - title: Internet delle cose (IoT)
+      links:
+      - url: https://channel9.msdn.com/Shows/On-NET/IoT-support-for-NET-Core
+        text: 'In .NET: Informazioni sul supporto di IoT in .NET Core'
+      - url: https://docs.microsoft.com/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0
+        text: Programmazione IoT multipiattaforma con .NET Core 3.0
+      - url: https://github.com/dotnet/iot
+        text: Librerie di .NET Core IoT
+      - url: https://www.nuget.org/packages/System.Device.Gpio
+        text: Pacchetto NuGet System.Device.Gpio
+  - title: Sezioni di riferimento API
+    summary: Eseguire una ricerca nella documentazione di riferimento dell'API .NET, con ambito di interesse.
+    items:
+    - title: Informazioni di riferimento all'API di .NET Core
+      summary: Documentazione di riferimento delle API per .NET Core
+      url: https://docs.microsoft.com/dotnet/api/?view=netcore-3.1
+    - title: Informazioni di riferimento all'API di .NET Framework
+      summary: Documentazione di riferimento delle API per .NET Framework
+      url: https://docs.microsoft.com/dotnet/api/?view=netframework-4.8
+    - title: Informazioni di riferimento sulle API di ASP.NET Core
+      summary: Documentazione di riferimento delle API per ASP.NET Core
+      url: https://docs.microsoft.com/dotnet/api/?view=aspnetcore-3.1
+    - title: Informazioni di riferimento sulle API ML.NET
+      summary: Documentazione di riferimento delle API per ML.NET
+      url: https://docs.microsoft.com/dotnet/api/?view=ml-dotnet
+    - title: Informazioni di riferimento sulle API .NET per Apache Spark
+      summary: Documentazione di riferimento delle API per .NET per Apache Spark
+      url: https://docs.microsoft.com/dotnet/api/?view=spark-dotnet
+    - title: Riferimenti per il linguaggio C#
+      summary: Informazioni di riferimento e specifica per il linguaggio C#
+      url: csharp/language-reference/index.md
+    - title: Informazioni di riferimento sul linguaggio F#
+      summary: Informazioni di riferimento sul linguaggio F#
+      url: fsharp/language-reference/index.md
+    - title: Informazioni di riferimento per il linguaggio Visual Basic
+      summary: Informazioni di riferimento e specifica per il linguaggio Visual Basic
+      url: visual-basic/language-reference/index.md
+  footer: Contribuire alla documentazione di .NET. Leggere la [Guida per i collaboratori](https://github.com/dotnet/Docs/blob/master/CONTRIBUTING.md).
