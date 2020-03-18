@@ -3,11 +3,11 @@
   items:
     - name: 'Procedura: Eseguire alberi delle espressioni'
       href: how-to-execute-expression-trees.md
-    - name: 'Procedura: Modificare alberi delle espressioni'
+    - name: 'Procedura: modificare strutture ad albero dell''espressione'
       href: how-to-modify-expression-trees.md
     - name: 'Procedura: Usare alberi delle espressioni per la compilazione di query dinamiche'
       href: how-to-use-expression-trees-to-build-dynamic-queries.md
-    - name: Debug degli alberi delle espressioni
+    - name: Debug delle strutture ad albero dell'espressione
       href: debugging-expression-trees-in-visual-studio.md
     - name: Sintassi di DebugView
       href: debugview-syntax.md

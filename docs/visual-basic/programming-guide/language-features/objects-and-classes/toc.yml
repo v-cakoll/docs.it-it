@@ -1,7 +1,7 @@
 - name: Oggetti e classi
   href: index.md
   items:
-    - name: 'Procedura dettagliata: Definizione delle classi'
+    - name: 'Procedura dettagliata: definizione delle classi'
       href: walkthrough-defining-classes.md
     - name: Metodi e proprietà di overload
       href: overloaded-properties-and-methods.md
@@ -9,15 +9,15 @@
       href: inheritance-basics.md
     - name: 'Durata degli oggetti: come creare e distruggere oggetti'
       href: object-lifetime-how-objects-are-created-and-destroyed.md
-    - name: 'Inizializzatori di oggetti: tipi anonimi e denominati'
+    - name: 'Inizializzatori di oggetto: tipi denominati e tipi anonimi'
       href: object-initializers-named-and-anonymous-types.md
       items:
-        - name: 'Procedura: Dichiarare un oggetto usando un inizializzatore di oggetto'
+        - name: 'Procedura: dichiarare un oggetto utilizzando un inizializzatore di oggetto'
           href: how-to-declare-an-object-by-using-an-object-initializer.md
     - name: Tipi anonimi
       href: anonymous-types.md
       items:
-        - name: 'Procedura: Dedurre tipi e nomi di proprietà nelle dichiarazioni di tipo anonimo'
+        - name: 'Procedura: dedurre tipi e nomi di proprietà nelle dichiarazioni di tipo anonimo'
           href: how-to-infer-property-names-and-types-in-anonymous-type-declarations.md
         - name: Definizione di tipo anonimo
           href: anonymous-type-definition.md

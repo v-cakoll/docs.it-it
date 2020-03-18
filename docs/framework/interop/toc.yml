@@ -6,9 +6,9 @@
       items:
         - name: Importazione di una libreria dei tipi come assembly
           href: importing-a-type-library-as-an-assembly.md
-        - name: 'Procedura: Aggiungere riferimenti alle librerie dei tipi'
+        - name: 'Procedura: aggiungere riferimenti alle librerie dei tipi'
           href: how-to-add-references-to-type-libraries.md
-        - name: 'Procedura: Generare assembly di interoperabilità da librerie dei tipi'
+        - name: 'Procedura: generare assembly di interoperabilità da librerie dei tipi'
           href: how-to-generate-interop-assemblies-from-type-libraries.md
         - name: Compilazione di un progetto di interoperabilità
           href: compiling-an-interop-project.md
@@ -23,9 +23,9 @@
           href: packaging-an-assembly-for-com.md
         - name: Registrazione di assembly presso COM
           href: registering-assemblies-with-com.md
-        - name: 'Procedura: Fare riferimento a tipi .NET da COM'
+        - name: 'Procedura: fare riferimento a tipi .NET da COM'
           href: how-to-reference-net-types-from-com.md
-        - name: 'Esempio di interoperabilità COM: client COM e server .NET'
+        - name: 'Esempio di interoperabilità: client COM e server .NET'
           href: com-interop-sample-com-client-and-net-server.md
     - name: Utilizzo di funzioni di DLL non gestite
       href: consuming-unmanaged-dll-functions.md
@@ -50,7 +50,7 @@
               href: passing-structures.md
             - name: Funzioni di callback
               href: callback-functions.md
-            - name: 'Procedura: Implementare funzioni di callback'
+            - name: 'Procedura: implementare funzioni di callback'
               href: how-to-implement-callback-functions.md
     - name: Marshalling di interoperabilità
       href: interop-marshaling.md
@@ -84,21 +84,21 @@
         - name: dati di marshalling con interoperabilità COM
           href: marshaling-data-with-com-interop.md
           items:
-            - name: 'Procedura: Creare wrapper manualmente'
+            - name: 'Procedura: creare wrapper manualmente'
               href: how-to-create-wrappers-manually.md
             - name: 'Procedura: Eseguire la migrazione di codice gestito da DCOM a WCF'
               href: how-to-migrate-managed-code-dcom-to-wcf.md
-    - name: 'Procedura: Eseguire il mapping di HRESULT ed eccezioni'
+    - name: 'Procedura: eseguire il mapping di HRESULT ed eccezioni'
       href: how-to-map-hresults-and-exceptions.md
-    - name: 'Procedura: Creare wrapper COM'
+    - name: 'Procedura: creare wrapper COM'
       href: how-to-create-com-wrappers.md
     - name: Equivalenza del tipo e tipi di interoperabilità incorporati
       href: type-equivalence-and-embedded-interop-types.md
-    - name: 'Procedura: Generare assembly di interoperabilità primari tramite Tlbimp.exe'
+    - name: 'Procedura: generare assembly di interoperabilità tramite Tlbimp.exe'
       href: how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md
-    - name: 'Procedura: Registrare assembly di interoperabilità primari'
+    - name: 'Procedura: registrare assembly di interoperabilità primari'
       href: how-to-register-primary-interop-assemblies.md
     - name: Interoperabilità COM senza registrazione
       href: registration-free-com-interop.md
-    - name: 'Procedura: Configurare i componenti COM basati su .NET Framework per l''attivazione senza registrazione'
+    - name: 'Procedura: configurare i componenti COM basati su .NET Framework per l''attivazione senza registrazione'
       href: configure-net-framework-based-com-components-for-reg.md

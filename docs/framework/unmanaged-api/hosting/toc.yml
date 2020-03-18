@@ -246,7 +246,7 @@
               items:
                 - name: Metodo Autodone
                   href: icatalogservices-autodone-method.md
-                - name: Metodo NotAutodone
+                - name: Metodo NoAutodone
                   href: icatalogservices-notautodone-method.md
             - name: Interfaccia ICLRAssemblyIdentityManager
               href: iclrassemblyidentitymanager-interface.md

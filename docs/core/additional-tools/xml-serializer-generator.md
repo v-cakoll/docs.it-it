@@ -6,65 +6,65 @@ ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc
 ms.openlocfilehash: 094dd1227033e167050ad73121b3005a592a0ae4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714516"
 ---
-# <a name="using-microsoft-xml-serializer-generator-on-net-core"></a><span data-ttu-id="e2814-104">Uso dello strumento Microsoft per la generazione di serializzatori XML in .NET Core</span><span class="sxs-lookup"><span data-stu-id="e2814-104">Using Microsoft XML Serializer Generator on .NET Core</span></span>
+# <a name="using-microsoft-xml-serializer-generator-on-net-core"></a><span data-ttu-id="0d30c-104">Uso dello strumento Microsoft per la generazione di serializzatori XML in .NET Core</span><span class="sxs-lookup"><span data-stu-id="0d30c-104">Using Microsoft XML Serializer Generator on .NET Core</span></span>
 
-<span data-ttu-id="e2814-105">In questa esercitazione viene illustrato come usare lo strumento Microsoft per la generazione di serializzatori XML in un'applicazione .NET Core di C#.</span><span class="sxs-lookup"><span data-stu-id="e2814-105">This tutorial teaches you how to use the Microsoft XML Serializer Generator in a C# .NET Core application.</span></span> <span data-ttu-id="e2814-106">Nel corso di questa esercitazione verranno illustrate le attività seguenti:</span><span class="sxs-lookup"><span data-stu-id="e2814-106">During the course of this tutorial, you learn:</span></span>
+<span data-ttu-id="0d30c-105">In questa esercitazione viene illustrato come usare lo strumento Microsoft per la generazione di serializzatori XML in un'applicazione .NET Core di C#.</span><span class="sxs-lookup"><span data-stu-id="0d30c-105">This tutorial teaches you how to use the Microsoft XML Serializer Generator in a C# .NET Core application.</span></span> <span data-ttu-id="0d30c-106">Nel corso di questa esercitazione verranno illustrate le attività seguenti:</span><span class="sxs-lookup"><span data-stu-id="0d30c-106">During the course of this tutorial, you learn:</span></span>
 
 > [!div class="checklist"]
 >
-> - <span data-ttu-id="e2814-107">Come creare un'app .NET Core</span><span class="sxs-lookup"><span data-stu-id="e2814-107">How to create a .NET Core app</span></span>
-> - <span data-ttu-id="e2814-108">Come aggiungere un riferimento al pacchetto Microsoft.XmlSerializer.Generator</span><span class="sxs-lookup"><span data-stu-id="e2814-108">How to add a reference to the Microsoft.XmlSerializer.Generator package</span></span>
-> - <span data-ttu-id="e2814-109">Come modificare il file MyApp.cspro per aggiungere dipendenze</span><span class="sxs-lookup"><span data-stu-id="e2814-109">How to edit your MyApp.csproj to add dependencies</span></span>
-> - <span data-ttu-id="e2814-110">Come aggiungere una classe e un oggetto XmlSerializer</span><span class="sxs-lookup"><span data-stu-id="e2814-110">How to add a class and an XmlSerializer</span></span>
-> - <span data-ttu-id="e2814-111">Come compilare ed eseguire l'applicazione</span><span class="sxs-lookup"><span data-stu-id="e2814-111">How to build and run the application</span></span>
+> - <span data-ttu-id="0d30c-107">Come creare un'app .NET Core</span><span class="sxs-lookup"><span data-stu-id="0d30c-107">How to create a .NET Core app</span></span>
+> - <span data-ttu-id="0d30c-108">Come aggiungere un riferimento al pacchetto Microsoft.XmlSerializer.Generator</span><span class="sxs-lookup"><span data-stu-id="0d30c-108">How to add a reference to the Microsoft.XmlSerializer.Generator package</span></span>
+> - <span data-ttu-id="0d30c-109">Come modificare il file MyApp.cspro per aggiungere dipendenze</span><span class="sxs-lookup"><span data-stu-id="0d30c-109">How to edit your MyApp.csproj to add dependencies</span></span>
+> - <span data-ttu-id="0d30c-110">Come aggiungere una classe e un oggetto XmlSerializer</span><span class="sxs-lookup"><span data-stu-id="0d30c-110">How to add a class and an XmlSerializer</span></span>
+> - <span data-ttu-id="0d30c-111">Come compilare ed eseguire l'applicazione</span><span class="sxs-lookup"><span data-stu-id="0d30c-111">How to build and run the application</span></span>
 
-<span data-ttu-id="e2814-112">Lo [strumento per la generazione di serializzatori XML (sgen.exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md) è la soluzione per .NET Framework, mentre il [pacchetto NuGet Microsoft.XmlSerializer.Generator](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator) è la soluzione equivalente per NET Core e .NET Standard.</span><span class="sxs-lookup"><span data-stu-id="e2814-112">Like the [Xml Serializer Generator (sgen.exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md) for the .NET Framework, the [Microsoft.XmlSerializer.Generator NuGet package](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator) is the equivalent for .NET Core and .NET Standard projects.</span></span> <span data-ttu-id="e2814-113">Crea un assembly di serializzazione XML per tipi contenuti in un assembly per migliorare le prestazioni di avvio della serializzazione XML durante la serializzazione o deserializzazione di oggetti di questi tipi usando <xref:System.Xml.Serialization.XmlSerializer>.</span><span class="sxs-lookup"><span data-stu-id="e2814-113">It creates an XML serialization assembly for types contained in an assembly to improve the startup performance of XML serialization when serializing or de-serializing objects of those types using <xref:System.Xml.Serialization.XmlSerializer>.</span></span>
+<span data-ttu-id="0d30c-112">Lo [strumento per la generazione di serializzatori XML (sgen.exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md) è la soluzione per .NET Framework, mentre il [pacchetto NuGet Microsoft.XmlSerializer.Generator](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator) è la soluzione equivalente per NET Core e .NET Standard.</span><span class="sxs-lookup"><span data-stu-id="0d30c-112">Like the [Xml Serializer Generator (sgen.exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md) for the .NET Framework, the [Microsoft.XmlSerializer.Generator NuGet package](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator) is the equivalent for .NET Core and .NET Standard projects.</span></span> <span data-ttu-id="0d30c-113">Crea un assembly di serializzazione XML per tipi contenuti in un assembly per migliorare le prestazioni di avvio della serializzazione XML durante la serializzazione o deserializzazione di oggetti di questi tipi usando <xref:System.Xml.Serialization.XmlSerializer>.</span><span class="sxs-lookup"><span data-stu-id="0d30c-113">It creates an XML serialization assembly for types contained in an assembly to improve the startup performance of XML serialization when serializing or de-serializing objects of those types using <xref:System.Xml.Serialization.XmlSerializer>.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="e2814-114">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="e2814-114">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="0d30c-114">Prerequisites</span><span class="sxs-lookup"><span data-stu-id="0d30c-114">Prerequisites</span></span>
 
-<span data-ttu-id="e2814-115">Per completare questa esercitazione:</span><span class="sxs-lookup"><span data-stu-id="e2814-115">To complete this tutorial:</span></span>
+<span data-ttu-id="0d30c-115">Per completare questa esercitazione:</span><span class="sxs-lookup"><span data-stu-id="0d30c-115">To complete this tutorial:</span></span>
 
-- <span data-ttu-id="e2814-116">[.NET Core 2,1 SDK](https://dotnet.microsoft.com/download) o versione successiva.</span><span class="sxs-lookup"><span data-stu-id="e2814-116">[.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) or later.</span></span>
-- <span data-ttu-id="e2814-117">Editor di codice preferito.</span><span class="sxs-lookup"><span data-stu-id="e2814-117">Your favorite code editor.</span></span>
+- <span data-ttu-id="0d30c-116">[.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) o versione successiva.</span><span class="sxs-lookup"><span data-stu-id="0d30c-116">[.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) or later.</span></span>
+- <span data-ttu-id="0d30c-117">Editor di codice preferito.</span><span class="sxs-lookup"><span data-stu-id="0d30c-117">Your favorite code editor.</span></span>
 
 > [!TIP]
-> <span data-ttu-id="e2814-118">È necessario installare un editor del codice?</span><span class="sxs-lookup"><span data-stu-id="e2814-118">Need to install a code editor?</span></span> <span data-ttu-id="e2814-119">Provare [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs).</span><span class="sxs-lookup"><span data-stu-id="e2814-119">Try [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)!</span></span>
+> <span data-ttu-id="0d30c-118">È necessario installare un editor del codice?</span><span class="sxs-lookup"><span data-stu-id="0d30c-118">Need to install a code editor?</span></span> <span data-ttu-id="0d30c-119">Provare [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs).</span><span class="sxs-lookup"><span data-stu-id="0d30c-119">Try [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)!</span></span>
 
-## <a name="use-microsoft-xml-serializer-generator-in-a-net-core-console-application"></a><span data-ttu-id="e2814-120">Usare lo strumento Microsoft per la generazione di serializzatori XML in un'applicazione console .NET Core</span><span class="sxs-lookup"><span data-stu-id="e2814-120">Use Microsoft XML Serializer Generator in a .NET Core console application</span></span>
+## <a name="use-microsoft-xml-serializer-generator-in-a-net-core-console-application"></a><span data-ttu-id="0d30c-120">Usare lo strumento Microsoft per la generazione di serializzatori XML in un'applicazione console .NET Core</span><span class="sxs-lookup"><span data-stu-id="0d30c-120">Use Microsoft XML Serializer Generator in a .NET Core console application</span></span>
 
-<span data-ttu-id="e2814-121">Le istruzioni seguenti illustrano come usare lo strumento per la generazione di serializzatori XML in un'applicazione console .NET Core.</span><span class="sxs-lookup"><span data-stu-id="e2814-121">The following instructions show you how to use XML Serializer Generator in a .NET Core console application.</span></span>
+<span data-ttu-id="0d30c-121">Le istruzioni seguenti illustrano come usare lo strumento per la generazione di serializzatori XML in un'applicazione console .NET Core.</span><span class="sxs-lookup"><span data-stu-id="0d30c-121">The following instructions show you how to use XML Serializer Generator in a .NET Core console application.</span></span>
 
-### <a name="create-a-net-core-console-application"></a><span data-ttu-id="e2814-122">Creare un'applicazione console .NET Core</span><span class="sxs-lookup"><span data-stu-id="e2814-122">Create a .NET Core console application</span></span>
+### <a name="create-a-net-core-console-application"></a><span data-ttu-id="0d30c-122">Creare un'applicazione console .NET Core</span><span class="sxs-lookup"><span data-stu-id="0d30c-122">Create a .NET Core console application</span></span>
 
-<span data-ttu-id="e2814-123">Aprire un prompt dei comandi e creare una cartella denominata *MyApp*.</span><span class="sxs-lookup"><span data-stu-id="e2814-123">Open a command prompt and create a folder named *MyApp*.</span></span> <span data-ttu-id="e2814-124">Passare alla cartella creata e digitare il comando seguente:</span><span class="sxs-lookup"><span data-stu-id="e2814-124">Navigate to the folder you created and type the following command:</span></span>
+<span data-ttu-id="0d30c-123">Aprire un prompt dei comandi e creare una cartella denominata *MyApp*.</span><span class="sxs-lookup"><span data-stu-id="0d30c-123">Open a command prompt and create a folder named *MyApp*.</span></span> <span data-ttu-id="0d30c-124">Passare alla cartella creata e digitare il comando seguente:</span><span class="sxs-lookup"><span data-stu-id="0d30c-124">Navigate to the folder you created and type the following command:</span></span>
 
 ```dotnetcli
 dotnet new console
 ```
 
-### <a name="add-a-reference-to-the-microsoftxmlserializergenerator-package-in-the-myapp-project"></a><span data-ttu-id="e2814-125">Aggiungere un riferimento al pacchetto Microsoft.XmlSerializer.Generator nel progetto MyApp</span><span class="sxs-lookup"><span data-stu-id="e2814-125">Add a reference to the Microsoft.XmlSerializer.Generator package in the MyApp project</span></span>
+### <a name="add-a-reference-to-the-microsoftxmlserializergenerator-package-in-the-myapp-project"></a><span data-ttu-id="0d30c-125">Aggiungere un riferimento al pacchetto Microsoft.XmlSerializer.Generator nel progetto MyApp</span><span class="sxs-lookup"><span data-stu-id="0d30c-125">Add a reference to the Microsoft.XmlSerializer.Generator package in the MyApp project</span></span>
 
-<span data-ttu-id="e2814-126">Usare il comando [`dotnet add package`](../tools//dotnet-add-package.md) per aggiungere il riferimento nel progetto.</span><span class="sxs-lookup"><span data-stu-id="e2814-126">Use the [`dotnet add package`](../tools//dotnet-add-package.md) command to add the reference in your project.</span></span>
+<span data-ttu-id="0d30c-126">Utilizzare [`dotnet add package`](../tools//dotnet-add-package.md) il comando per aggiungere il riferimento nel progetto.</span><span class="sxs-lookup"><span data-stu-id="0d30c-126">Use the [`dotnet add package`](../tools//dotnet-add-package.md) command to add the reference in your project.</span></span>
 
-<span data-ttu-id="e2814-127">Tipo:</span><span class="sxs-lookup"><span data-stu-id="e2814-127">Type:</span></span>
+<span data-ttu-id="0d30c-127">Digitare:</span><span class="sxs-lookup"><span data-stu-id="0d30c-127">Type:</span></span>
 
 ```dotnetcli
 dotnet add package Microsoft.XmlSerializer.Generator -v 1.0.0
 ```
 
-### <a name="verify-changes-to-myappcsproj-after-adding-the-package"></a><span data-ttu-id="e2814-128">Verificare le modifiche a MyApp.csproj dopo aver aggiunto il pacchetto</span><span class="sxs-lookup"><span data-stu-id="e2814-128">Verify changes to MyApp.csproj after adding the package</span></span>
+### <a name="verify-changes-to-myappcsproj-after-adding-the-package"></a><span data-ttu-id="0d30c-128">Verificare le modifiche a MyApp.csproj dopo aver aggiunto il pacchetto</span><span class="sxs-lookup"><span data-stu-id="0d30c-128">Verify changes to MyApp.csproj after adding the package</span></span>
 
-<span data-ttu-id="e2814-129">Prima di iniziare, aprire l'editor del codice.</span><span class="sxs-lookup"><span data-stu-id="e2814-129">Open your code editor and let's get started!</span></span> <span data-ttu-id="e2814-130">Si lavorerà ancora dalla directory *MyApp* in cui è stata compilata l'app.</span><span class="sxs-lookup"><span data-stu-id="e2814-130">We're still working from the *MyApp* directory we built the app in.</span></span>
+<span data-ttu-id="0d30c-129">Prima di iniziare, aprire l'editor del codice.</span><span class="sxs-lookup"><span data-stu-id="0d30c-129">Open your code editor and let's get started!</span></span> <span data-ttu-id="0d30c-130">Si lavorerà ancora dalla directory *MyApp* in cui è stata compilata l'app.</span><span class="sxs-lookup"><span data-stu-id="0d30c-130">We're still working from the *MyApp* directory we built the app in.</span></span>
 
-<span data-ttu-id="e2814-131">Aprire *MyApp.csproj* nell'editor di testo.</span><span class="sxs-lookup"><span data-stu-id="e2814-131">Open *MyApp.csproj* in your text editor.</span></span>
+<span data-ttu-id="0d30c-131">Aprire *MyApp.csproj* nell'editor di testo.</span><span class="sxs-lookup"><span data-stu-id="0d30c-131">Open *MyApp.csproj* in your text editor.</span></span>
 
-<span data-ttu-id="e2814-132">Dopo aver eseguito il comando [`dotnet add package`](../tools//dotnet-add-package.md), al file di progetto *MyApp.csproj* vengono aggiunte le righe seguenti:</span><span class="sxs-lookup"><span data-stu-id="e2814-132">After running the [`dotnet add package`](../tools//dotnet-add-package.md) command, the following lines are added to your *MyApp.csproj* project file:</span></span>
+<span data-ttu-id="0d30c-132">Dopo aver [`dotnet add package`](../tools//dotnet-add-package.md) eseguito il comando, le seguenti righe vengono aggiunte al file di progetto *MyApp.csproj:*</span><span class="sxs-lookup"><span data-stu-id="0d30c-132">After running the [`dotnet add package`](../tools//dotnet-add-package.md) command, the following lines are added to your *MyApp.csproj* project file:</span></span>
 
  ```xml
  <ItemGroup>
@@ -72,9 +72,9 @@ dotnet add package Microsoft.XmlSerializer.Generator -v 1.0.0
  </ItemGroup>
  ```
 
-### <a name="add-another-itemgroup-section-for-net-core-cli-tool-support"></a><span data-ttu-id="e2814-133">Aggiungere un'altra sezione denominata ItemGroup per il supporto dello strumento dell'interfaccia della riga di comando .NET Core</span><span class="sxs-lookup"><span data-stu-id="e2814-133">Add another ItemGroup section for .NET Core CLI Tool support</span></span>
+### <a name="add-another-itemgroup-section-for-net-core-cli-tool-support"></a><span data-ttu-id="0d30c-133">Aggiungere un'altra sezione denominata ItemGroup per il supporto dello strumento dell'interfaccia della riga di comando .NET Core</span><span class="sxs-lookup"><span data-stu-id="0d30c-133">Add another ItemGroup section for .NET Core CLI Tool support</span></span>
 
-<span data-ttu-id="e2814-134">Aggiungere le righe seguenti dopo la sezione `ItemGroup` analizzata:</span><span class="sxs-lookup"><span data-stu-id="e2814-134">Add the following lines after the `ItemGroup` section that we inspected:</span></span>
+<span data-ttu-id="0d30c-134">Aggiungere le righe seguenti dopo la sezione `ItemGroup` analizzata:</span><span class="sxs-lookup"><span data-stu-id="0d30c-134">Add the following lines after the `ItemGroup` section that we inspected:</span></span>
 
  ```xml
  <ItemGroup>
@@ -82,9 +82,9 @@ dotnet add package Microsoft.XmlSerializer.Generator -v 1.0.0
  </ItemGroup>
  ```
 
-### <a name="add-a-class-in-the-application"></a><span data-ttu-id="e2814-135">Aggiungere una classe nell'applicazione</span><span class="sxs-lookup"><span data-stu-id="e2814-135">Add a class in the application</span></span>
+### <a name="add-a-class-in-the-application"></a><span data-ttu-id="0d30c-135">Aggiungere una classe nell'applicazione</span><span class="sxs-lookup"><span data-stu-id="0d30c-135">Add a class in the application</span></span>
 
-<span data-ttu-id="e2814-136">Aprire *Program.cs* nell'editor di testo.</span><span class="sxs-lookup"><span data-stu-id="e2814-136">Open *Program.cs* in your text editor.</span></span> <span data-ttu-id="e2814-137">Aggiungere la classe denominata *MyClass* in *Program.cs*.</span><span class="sxs-lookup"><span data-stu-id="e2814-137">Add the class named *MyClass* in *Program.cs*.</span></span>
+<span data-ttu-id="0d30c-136">Aprire *Program.cs* nell'editor di testo.</span><span class="sxs-lookup"><span data-stu-id="0d30c-136">Open *Program.cs* in your text editor.</span></span> <span data-ttu-id="0d30c-137">Aggiungere la classe denominata *MyClass* in *Program.cs*.</span><span class="sxs-lookup"><span data-stu-id="0d30c-137">Add the class named *MyClass* in *Program.cs*.</span></span>
 
 ```csharp
 public class MyClass
@@ -93,43 +93,43 @@ public class MyClass
 }
 ```
 
-### <a name="create-an-xmlserializer-for-myclass"></a><span data-ttu-id="e2814-138">Creare un oggetto `XmlSerializer` per MyClass</span><span class="sxs-lookup"><span data-stu-id="e2814-138">Create an `XmlSerializer` for MyClass</span></span>
+### <a name="create-an-xmlserializer-for-myclass"></a><span data-ttu-id="0d30c-138">Creare un oggetto `XmlSerializer` per MyClass</span><span class="sxs-lookup"><span data-stu-id="0d30c-138">Create an `XmlSerializer` for MyClass</span></span>
 
-<span data-ttu-id="e2814-139">Aggiungere la riga seguente in *Main* per creare un oggetto `XmlSerializer` per MyClass:</span><span class="sxs-lookup"><span data-stu-id="e2814-139">Add the following line inside *Main* to create an `XmlSerializer` for MyClass:</span></span>
+<span data-ttu-id="0d30c-139">Aggiungere la riga seguente in *Main* per creare un oggetto `XmlSerializer` per MyClass:</span><span class="sxs-lookup"><span data-stu-id="0d30c-139">Add the following line inside *Main* to create an `XmlSerializer` for MyClass:</span></span>
 
 ```csharp
 var serializer = new System.Xml.Serialization.XmlSerializer(typeof(MyClass));
 ```
 
-### <a name="build-and-run-the-application"></a><span data-ttu-id="e2814-140">Compilazione ed esecuzione dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="e2814-140">Build and run the application</span></span>
+### <a name="build-and-run-the-application"></a><span data-ttu-id="0d30c-140">Compilare ed eseguire l'applicazione</span><span class="sxs-lookup"><span data-stu-id="0d30c-140">Build and run the application</span></span>
 
-<span data-ttu-id="e2814-141">All'interno della cartella *MyApp* eseguire l'applicazione tramite [`dotnet run`](../tools/dotnet-run.md). In automatico vengono caricati e usati i serializzatori generati in precedenza in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="e2814-141">Still within the *MyApp* folder, run the application via [`dotnet run`](../tools/dotnet-run.md) and it automatically loads and uses the pre-generated serializers at runtime.</span></span>
+<span data-ttu-id="0d30c-141">All'interno della cartella *MyApp* eseguire l'applicazione tramite [`dotnet run`](../tools/dotnet-run.md). In automatico vengono caricati e usati i serializzatori generati in precedenza in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="0d30c-141">Still within the *MyApp* folder, run the application via [`dotnet run`](../tools/dotnet-run.md) and it automatically loads and uses the pre-generated serializers at runtime.</span></span>
 
-<span data-ttu-id="e2814-142">Nella finestra di console digitare il comando seguente:</span><span class="sxs-lookup"><span data-stu-id="e2814-142">Type the following command in your console window:</span></span>
+<span data-ttu-id="0d30c-142">Nella finestra di console digitare il comando seguente:</span><span class="sxs-lookup"><span data-stu-id="0d30c-142">Type the following command in your console window:</span></span>
 
 ```dotnetcli
 dotnet run
 ```
 
 > [!NOTE]
-> <span data-ttu-id="e2814-143">[`dotnet run`](../tools/dotnet-run.md) chiama [`dotnet build`](../tools/dotnet-build.md) per assicurarsi che le destinazioni siano state compilate e quindi chiama `dotnet <assembly.dll>` per eseguire l'applicazione di destinazione.</span><span class="sxs-lookup"><span data-stu-id="e2814-143">[`dotnet run`](../tools/dotnet-run.md) calls [`dotnet build`](../tools/dotnet-build.md) to ensure that the build targets have been built, and then calls `dotnet <assembly.dll>` to run the target application.</span></span>
+> <span data-ttu-id="0d30c-143">[`dotnet run`](../tools/dotnet-run.md)chiama [`dotnet build`](../tools/dotnet-build.md) per garantire che le destinazioni di `dotnet <assembly.dll>` compilazione siano state compilate e quindi chiamate per eseguire l'applicazione di destinazione.</span><span class="sxs-lookup"><span data-stu-id="0d30c-143">[`dotnet run`](../tools/dotnet-run.md) calls [`dotnet build`](../tools/dotnet-build.md) to ensure that the build targets have been built, and then calls `dotnet <assembly.dll>` to run the target application.</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="e2814-144">I comandi e i passaggi illustrati in questa esercitazione per eseguire l'applicazione vengono usati solo durante la fase di sviluppo.</span><span class="sxs-lookup"><span data-stu-id="e2814-144">The commands and steps shown in this tutorial to run your application are used during development time only.</span></span> <span data-ttu-id="e2814-145">Quando si è pronti a distribuire l'app, è opportuno esaminare le diverse [strategie di distribuzione](../deploying/index.md) per le app .NET Core e il comando [`dotnet publish`](../tools/dotnet-publish.md).</span><span class="sxs-lookup"><span data-stu-id="e2814-145">Once you're ready to deploy your app, take a look at the different [deployment strategies](../deploying/index.md) for .NET Core apps and the [`dotnet publish`](../tools/dotnet-publish.md) command.</span></span>
+> <span data-ttu-id="0d30c-144">I comandi e i passaggi illustrati in questa esercitazione per eseguire l'applicazione vengono usati solo durante la fase di sviluppo.</span><span class="sxs-lookup"><span data-stu-id="0d30c-144">The commands and steps shown in this tutorial to run your application are used during development time only.</span></span> <span data-ttu-id="0d30c-145">Quando si è pronti a distribuire l'app, è opportuno esaminare le diverse [strategie di distribuzione](../deploying/index.md) per le app .NET Core e il comando [`dotnet publish`](../tools/dotnet-publish.md).</span><span class="sxs-lookup"><span data-stu-id="0d30c-145">Once you're ready to deploy your app, take a look at the different [deployment strategies](../deploying/index.md) for .NET Core apps and the [`dotnet publish`](../tools/dotnet-publish.md) command.</span></span>
 
-<span data-ttu-id="e2814-146">Se è stato eseguito tutto correttamente, un assembly denominato *MyApp.XmlSerializers.dll* viene generato nella cartella di output.</span><span class="sxs-lookup"><span data-stu-id="e2814-146">If everything succeeds, an assembly named *MyApp.XmlSerializers.dll* is generated in the output folder.</span></span>
+<span data-ttu-id="0d30c-146">Se è stato eseguito tutto correttamente, un assembly denominato *MyApp.XmlSerializers.dll* viene generato nella cartella di output.</span><span class="sxs-lookup"><span data-stu-id="0d30c-146">If everything succeeds, an assembly named *MyApp.XmlSerializers.dll* is generated in the output folder.</span></span>
 
-<span data-ttu-id="e2814-147">La procedura è stata completata.</span><span class="sxs-lookup"><span data-stu-id="e2814-147">Congratulations!</span></span> <span data-ttu-id="e2814-148">Sono state eseguite le attività seguenti:</span><span class="sxs-lookup"><span data-stu-id="e2814-148">You have just:</span></span>
+<span data-ttu-id="0d30c-147">Congratulazioni!</span><span class="sxs-lookup"><span data-stu-id="0d30c-147">Congratulations!</span></span> <span data-ttu-id="0d30c-148">Sono state eseguite le attività seguenti:</span><span class="sxs-lookup"><span data-stu-id="0d30c-148">You have just:</span></span>
 > [!div class="checklist"]
 >
-> - <span data-ttu-id="e2814-149">Creazione di un'app .NET Core.</span><span class="sxs-lookup"><span data-stu-id="e2814-149">Created a .NET Core app.</span></span>
-> - <span data-ttu-id="e2814-150">Aggiunta di un riferimento al pacchetto Microsoft.XmlSerializer.Generator.</span><span class="sxs-lookup"><span data-stu-id="e2814-150">Added a reference to the Microsoft.XmlSerializer.Generator package.</span></span>
-> - <span data-ttu-id="e2814-151">Modifica del file MyApp.cspro per l'aggiunta di dipendenze.</span><span class="sxs-lookup"><span data-stu-id="e2814-151">Edited your MyApp.csproj to add dependencies.</span></span>
-> - <span data-ttu-id="e2814-152">Aggiunta di una classe e un oggetto XmlSerializer.</span><span class="sxs-lookup"><span data-stu-id="e2814-152">Added a class and an XmlSerializer.</span></span>
-> - <span data-ttu-id="e2814-153">Compilazione ed esecuzione dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="e2814-153">Built and ran the application.</span></span>
+> - <span data-ttu-id="0d30c-149">Creazione di un'app .NET Core.</span><span class="sxs-lookup"><span data-stu-id="0d30c-149">Created a .NET Core app.</span></span>
+> - <span data-ttu-id="0d30c-150">Aggiunta di un riferimento al pacchetto Microsoft.XmlSerializer.Generator.</span><span class="sxs-lookup"><span data-stu-id="0d30c-150">Added a reference to the Microsoft.XmlSerializer.Generator package.</span></span>
+> - <span data-ttu-id="0d30c-151">Modifica del file MyApp.cspro per l'aggiunta di dipendenze.</span><span class="sxs-lookup"><span data-stu-id="0d30c-151">Edited your MyApp.csproj to add dependencies.</span></span>
+> - <span data-ttu-id="0d30c-152">Aggiunta di una classe e un oggetto XmlSerializer.</span><span class="sxs-lookup"><span data-stu-id="0d30c-152">Added a class and an XmlSerializer.</span></span>
+> - <span data-ttu-id="0d30c-153">Compilazione ed esecuzione dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="0d30c-153">Built and ran the application.</span></span>
 
-## <a name="related-resources"></a><span data-ttu-id="e2814-154">Risorse correlate</span><span class="sxs-lookup"><span data-stu-id="e2814-154">Related resources</span></span>
+## <a name="related-resources"></a><span data-ttu-id="0d30c-154">Risorse correlate</span><span class="sxs-lookup"><span data-stu-id="0d30c-154">Related resources</span></span>
 
-- [<span data-ttu-id="e2814-155">Introduzione alla serializzazione XML</span><span class="sxs-lookup"><span data-stu-id="e2814-155">Introducing XML Serialization</span></span>](../../standard/serialization/introducing-xml-serialization.md)
-- [<span data-ttu-id="e2814-156">Come serializzare tramite XmlSerializer (C#)</span><span class="sxs-lookup"><span data-stu-id="e2814-156">How to serialize using XmlSerializer (C#)</span></span>](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
-- [<span data-ttu-id="e2814-157">Procedura: Serializzare tramite XmlSerializer (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e2814-157">How to: Serialize Using XmlSerializer (Visual Basic)</span></span>](../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
+- [<span data-ttu-id="0d30c-155">Introduzione alla serializzazione XML</span><span class="sxs-lookup"><span data-stu-id="0d30c-155">Introducing XML Serialization</span></span>](../../standard/serialization/introducing-xml-serialization.md)
+- [<span data-ttu-id="0d30c-156">Come serializzare utilizzando XmlSerializer (C</span><span class="sxs-lookup"><span data-stu-id="0d30c-156">How to serialize using XmlSerializer (C#)</span></span>](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
+- [<span data-ttu-id="0d30c-157">Procedura: Serializzare tramite XmlSerializer (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0d30c-157">How to: Serialize Using XmlSerializer (Visual Basic)</span></span>](../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)

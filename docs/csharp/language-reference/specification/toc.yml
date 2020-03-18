@@ -14,9 +14,9 @@
       href: ../../../../_csharplang/spec/conversions.md
     - name: Espressioni
       href: ../../../../_csharplang/spec/expressions.md
-    - name: Istruzioni
+    - name: Statements (Istruzioni)
       href: ../../../../_csharplang/spec/statements.md
-    - name: Spazi dei nomi
+    - name: Namespaces
       href: ../../../../_csharplang/spec/namespaces.md
     - name: Classi
       href: ../../../../_csharplang/spec/classes.md

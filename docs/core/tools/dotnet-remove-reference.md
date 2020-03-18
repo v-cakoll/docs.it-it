@@ -3,65 +3,65 @@ title: Comando dotnet remove reference
 description: Il comando dotnet remove reference offre un'opzione utile per rimuovere riferimenti da progetto a progetto.
 ms.date: 02/14/2020
 ms.openlocfilehash: fcadf677faaf9281fb019c3c4bb16efc906b1aa1
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503628"
 ---
-# <a name="dotnet-remove-reference"></a><span data-ttu-id="69c33-103">dotnet remove reference</span><span class="sxs-lookup"><span data-stu-id="69c33-103">dotnet remove reference</span></span>
+# <a name="dotnet-remove-reference"></a><span data-ttu-id="2791f-103">dotnet remove reference</span><span class="sxs-lookup"><span data-stu-id="2791f-103">dotnet remove reference</span></span>
 
-<span data-ttu-id="69c33-104">**Questo articolo si applica a:** ✔️ .NET Core 2. x SDK e versioni successive</span><span class="sxs-lookup"><span data-stu-id="69c33-104">**This article applies to:** ✔️ .NET Core 2.x SDK and later versions</span></span>
+<span data-ttu-id="2791f-104">**Questo articolo si applica a:** ✔️ .NET Core 2.x SDK e versioni successive</span><span class="sxs-lookup"><span data-stu-id="2791f-104">**This article applies to:** ✔️ .NET Core 2.x SDK and later versions</span></span>
 
-## <a name="name"></a><span data-ttu-id="69c33-105">Nome</span><span class="sxs-lookup"><span data-stu-id="69c33-105">Name</span></span>
+## <a name="name"></a><span data-ttu-id="2791f-105">Nome</span><span class="sxs-lookup"><span data-stu-id="2791f-105">Name</span></span>
 
-<span data-ttu-id="69c33-106">`dotnet remove reference`: rimuove i riferimenti da progetto a progetto.</span><span class="sxs-lookup"><span data-stu-id="69c33-106">`dotnet remove reference` - Removes project-to-project references.</span></span>
+<span data-ttu-id="2791f-106">`dotnet remove reference`: rimuove i riferimenti da progetto a progetto.</span><span class="sxs-lookup"><span data-stu-id="2791f-106">`dotnet remove reference` - Removes project-to-project references.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="69c33-107">Riepilogo</span><span class="sxs-lookup"><span data-stu-id="69c33-107">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="2791f-107">Riepilogo</span><span class="sxs-lookup"><span data-stu-id="2791f-107">Synopsis</span></span>
 
 ```dotnetcli
 dotnet remove [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help]
 ```
 
-## <a name="description"></a><span data-ttu-id="69c33-108">Descrizione</span><span class="sxs-lookup"><span data-stu-id="69c33-108">Description</span></span>
+## <a name="description"></a><span data-ttu-id="2791f-108">Descrizione</span><span class="sxs-lookup"><span data-stu-id="2791f-108">Description</span></span>
 
-<span data-ttu-id="69c33-109">Il comando `dotnet remove reference` offre un'opzione utile per rimuovere i riferimenti al progetto da un progetto.</span><span class="sxs-lookup"><span data-stu-id="69c33-109">The `dotnet remove reference` command provides a convenient option to remove project references from a project.</span></span>
+<span data-ttu-id="2791f-109">Il comando `dotnet remove reference` offre un'opzione utile per rimuovere i riferimenti al progetto da un progetto.</span><span class="sxs-lookup"><span data-stu-id="2791f-109">The `dotnet remove reference` command provides a convenient option to remove project references from a project.</span></span>
 
-## <a name="arguments"></a><span data-ttu-id="69c33-110">Argomenti</span><span class="sxs-lookup"><span data-stu-id="69c33-110">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="2791f-110">Argomenti</span><span class="sxs-lookup"><span data-stu-id="2791f-110">Arguments</span></span>
 
 `PROJECT`
 
-<span data-ttu-id="69c33-111">File di progetto di destinazione.</span><span class="sxs-lookup"><span data-stu-id="69c33-111">Target project file.</span></span> <span data-ttu-id="69c33-112">Se non specificato, il comando ne cerca uno nella directory corrente.</span><span class="sxs-lookup"><span data-stu-id="69c33-112">If not specified, the command searches the current directory for one.</span></span>
+<span data-ttu-id="2791f-111">File di progetto di destinazione.</span><span class="sxs-lookup"><span data-stu-id="2791f-111">Target project file.</span></span> <span data-ttu-id="2791f-112">Se non specificato, il comando ne cerca uno nella directory corrente.</span><span class="sxs-lookup"><span data-stu-id="2791f-112">If not specified, the command searches the current directory for one.</span></span>
 
 `PROJECT_REFERENCES`
 
-<span data-ttu-id="69c33-113">Riferimenti da progetto a progetto da rimuovere.</span><span class="sxs-lookup"><span data-stu-id="69c33-113">Project-to-project (P2P) references to remove.</span></span> <span data-ttu-id="69c33-114">È possibile specificare uno o più progetti.</span><span class="sxs-lookup"><span data-stu-id="69c33-114">You can specify one or multiple projects.</span></span> <span data-ttu-id="69c33-115">I [criteri GLOB](https://en.wikipedia.org/wiki/Glob_(programming)) sono supportati nei terminali basati su Unix/Linux.</span><span class="sxs-lookup"><span data-stu-id="69c33-115">[Glob patterns](https://en.wikipedia.org/wiki/Glob_(programming)) are supported on Unix/Linux based terminals.</span></span>
+<span data-ttu-id="2791f-113">Riferimenti da progetto a progetto da rimuovere.</span><span class="sxs-lookup"><span data-stu-id="2791f-113">Project-to-project (P2P) references to remove.</span></span> <span data-ttu-id="2791f-114">È possibile specificare uno o più progetti.</span><span class="sxs-lookup"><span data-stu-id="2791f-114">You can specify one or multiple projects.</span></span> <span data-ttu-id="2791f-115">I [criteri GLOB](https://en.wikipedia.org/wiki/Glob_(programming)) sono supportati nei terminali basati su Unix/Linux.</span><span class="sxs-lookup"><span data-stu-id="2791f-115">[Glob patterns](https://en.wikipedia.org/wiki/Glob_(programming)) are supported on Unix/Linux based terminals.</span></span>
 
-## <a name="options"></a><span data-ttu-id="69c33-116">Opzioni</span><span class="sxs-lookup"><span data-stu-id="69c33-116">Options</span></span>
+## <a name="options"></a><span data-ttu-id="2791f-116">Opzioni</span><span class="sxs-lookup"><span data-stu-id="2791f-116">Options</span></span>
 
 - **`-h|--help`**
 
-  <span data-ttu-id="69c33-117">Stampa una breve guida per il comando.</span><span class="sxs-lookup"><span data-stu-id="69c33-117">Prints out a short help for the command.</span></span>
+  <span data-ttu-id="2791f-117">Stampa una breve guida per il comando.</span><span class="sxs-lookup"><span data-stu-id="2791f-117">Prints out a short help for the command.</span></span>
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  <span data-ttu-id="69c33-118">Rimuove il riferimento solo quando la destinazione è un [framework](../../standard/frameworks.md) specifico.</span><span class="sxs-lookup"><span data-stu-id="69c33-118">Removes the reference only when targeting a specific [framework](../../standard/frameworks.md).</span></span>
+  <span data-ttu-id="2791f-118">Rimuove il riferimento solo quando la destinazione è un [framework](../../standard/frameworks.md) specifico.</span><span class="sxs-lookup"><span data-stu-id="2791f-118">Removes the reference only when targeting a specific [framework](../../standard/frameworks.md).</span></span>
 
-## <a name="examples"></a><span data-ttu-id="69c33-119">Esempi</span><span class="sxs-lookup"><span data-stu-id="69c33-119">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="2791f-119">Esempi</span><span class="sxs-lookup"><span data-stu-id="2791f-119">Examples</span></span>
 
-- <span data-ttu-id="69c33-120">Rimuovere un riferimento al progetto dal progetto specificato:</span><span class="sxs-lookup"><span data-stu-id="69c33-120">Remove a project reference from the specified project:</span></span>
+- <span data-ttu-id="2791f-120">Rimuovere un riferimento al progetto dal progetto specificato:</span><span class="sxs-lookup"><span data-stu-id="2791f-120">Remove a project reference from the specified project:</span></span>
 
   ```dotnetcli
   dotnet remove app/app.csproj reference lib/lib.csproj
   ```
 
-- <span data-ttu-id="69c33-121">Rimuovere più riferimenti al progetto dal progetto nella directory corrente:</span><span class="sxs-lookup"><span data-stu-id="69c33-121">Remove multiple project references from the project in the current directory:</span></span>
+- <span data-ttu-id="2791f-121">Rimuovere più riferimenti al progetto dal progetto nella directory corrente:</span><span class="sxs-lookup"><span data-stu-id="2791f-121">Remove multiple project references from the project in the current directory:</span></span>
 
   ```dotnetcli
   dotnet remove reference lib1/lib1.csproj lib2/lib2.csproj
   ```
 
-- <span data-ttu-id="69c33-122">Rimuovere più riferimenti al progetto usando un criterio GLOB in Unix/Linux:</span><span class="sxs-lookup"><span data-stu-id="69c33-122">Remove multiple project references using a glob pattern on Unix/Linux:</span></span>
+- <span data-ttu-id="2791f-122">Rimuovere più riferimenti al progetto usando un criterio GLOB in Unix/Linux:</span><span class="sxs-lookup"><span data-stu-id="2791f-122">Remove multiple project references using a glob pattern on Unix/Linux:</span></span>
 
   ```dotnetcli
   dotnet remove app/app.csproj reference **/*.csproj`
