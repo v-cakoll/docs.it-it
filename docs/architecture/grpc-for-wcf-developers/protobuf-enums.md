@@ -1,21 +1,21 @@
 ---
-title: Enumerazioni protobuf-gRPC per sviluppatori WCF
-description: Informazioni su come dichiarare e usare le enumerazioni in protobuf.
+title: Enumerazioni Protobuf - gRPC per gli sviluppatori WCFProtobuf enumerations - gRPC for WCF developers
+description: Scopri come dichiarare e usare le enumerazioni in Protobuf.
 ms.date: 09/09/2019
-ms.openlocfilehash: 01cf4a4e5e0eda1e7ddff2a6780119fcb3120dad
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 2177f568a671fa0e651625c6e025ac70c243feb5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543144"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79148075"
 ---
-# <a name="protobuf-enumerations"></a><span data-ttu-id="d2634-103">Enumerazioni protobuf</span><span class="sxs-lookup"><span data-stu-id="d2634-103">Protobuf enumerations</span></span>
+# <a name="protobuf-enumerations"></a><span data-ttu-id="2e9c4-103">Enumerazioni protobuf</span><span class="sxs-lookup"><span data-stu-id="2e9c4-103">Protobuf enumerations</span></span>
 
-<span data-ttu-id="d2634-104">Protobuf supporta i tipi di enumerazione.</span><span class="sxs-lookup"><span data-stu-id="d2634-104">Protobuf supports enumeration types.</span></span> <span data-ttu-id="d2634-105">Questo supporto è stato visualizzato nella sezione precedente, in cui è stata usata un'enumerazione per determinare il tipo di un campo di `Oneof`.</span><span class="sxs-lookup"><span data-stu-id="d2634-105">You saw this support in the previous section, where an enum was used to determine the type of a `Oneof` field.</span></span> <span data-ttu-id="d2634-106">È possibile definire tipi di enumerazione personalizzati e protobuf li compilerà ai C# tipi enum.</span><span class="sxs-lookup"><span data-stu-id="d2634-106">You can define your own enumeration types, and Protobuf will compile them to C# enum types.</span></span> 
+<span data-ttu-id="2e9c4-104">Protobuf supporta i tipi di enumerazione.</span><span class="sxs-lookup"><span data-stu-id="2e9c4-104">Protobuf supports enumeration types.</span></span> <span data-ttu-id="2e9c4-105">Questo supporto è stato illustrato nella sezione precedente, in cui `Oneof` è stata utilizzata un'enumerazione per determinare il tipo di un campo.</span><span class="sxs-lookup"><span data-stu-id="2e9c4-105">You saw this support in the previous section, where an enum was used to determine the type of a `Oneof` field.</span></span> <span data-ttu-id="2e9c4-106">È possibile definire i propri tipi di enumerazione e Protobuf li compilerà in tipi enum c'è.</span><span class="sxs-lookup"><span data-stu-id="2e9c4-106">You can define your own enumeration types, and Protobuf will compile them to C# enum types.</span></span>
 
-<span data-ttu-id="d2634-107">Poiché è possibile utilizzare protobuf con diversi linguaggi, le convenzioni di denominazione per le enumerazioni sono C# diverse dalle convenzioni.</span><span class="sxs-lookup"><span data-stu-id="d2634-107">Because you can use Protobuf with various languages, the naming conventions for enumerations are different from the C# conventions.</span></span> <span data-ttu-id="d2634-108">Tuttavia, il generatore di codice converte i nomi nel caso C# tradizionale.</span><span class="sxs-lookup"><span data-stu-id="d2634-108">However, the code generator converts the names to the traditional C# case.</span></span> <span data-ttu-id="d2634-109">Se l'equivalente del case Pascal del nome del campo inizia con il nome dell'enumerazione, viene rimosso.</span><span class="sxs-lookup"><span data-stu-id="d2634-109">If the Pascal-case equivalent of the field name starts with the enumeration name, then it's removed.</span></span>
+<span data-ttu-id="2e9c4-107">Poiché è possibile usare Protobuf con vari linguaggi, le convenzioni di denominazione per le enumerazioni sono diverse dalle convenzioni di C.</span><span class="sxs-lookup"><span data-stu-id="2e9c4-107">Because you can use Protobuf with various languages, the naming conventions for enumerations are different from the C# conventions.</span></span> <span data-ttu-id="2e9c4-108">Tuttavia, il generatore di codice converte i nomi nel caso tradizionale di C .</span><span class="sxs-lookup"><span data-stu-id="2e9c4-108">However, the code generator converts the names to the traditional C# case.</span></span> <span data-ttu-id="2e9c4-109">Se l'equivalente in caso di maiuscole e minuscole Pascal del nome del campo inizia con il nome dell'enumerazione, viene rimosso.</span><span class="sxs-lookup"><span data-stu-id="2e9c4-109">If the Pascal-case equivalent of the field name starts with the enumeration name, then it's removed.</span></span>
 
-<span data-ttu-id="d2634-110">Nell'enumerazione protobuf seguente, ad esempio, i campi sono preceduti dal prefisso `ACCOUNT_STATUS`.</span><span class="sxs-lookup"><span data-stu-id="d2634-110">For example, in the following Protobuf enumeration, the fields are prefixed with `ACCOUNT_STATUS`.</span></span> <span data-ttu-id="d2634-111">Questo prefisso è equivalente al nome dell'enumerazione del case Pascal, `AccountStatus`.</span><span class="sxs-lookup"><span data-stu-id="d2634-111">This prefix is equivalent to the Pascal-case enum name, `AccountStatus`.</span></span>
+<span data-ttu-id="2e9c4-110">Ad esempio, nell'enumerazione Protobuf seguente, `ACCOUNT_STATUS`i campi sono preceduti da .</span><span class="sxs-lookup"><span data-stu-id="2e9c4-110">For example, in the following Protobuf enumeration, the fields are prefixed with `ACCOUNT_STATUS`.</span></span> <span data-ttu-id="2e9c4-111">Questo prefisso è equivalente al nome `AccountStatus`dell'enumerazione pascal-case, .</span><span class="sxs-lookup"><span data-stu-id="2e9c4-111">This prefix is equivalent to the Pascal-case enum name, `AccountStatus`.</span></span>
 
 ```protobuf
 enum AccountStatus {
@@ -27,7 +27,7 @@ enum AccountStatus {
 }
 ```
 
-<span data-ttu-id="d2634-112">Il generatore crea un' C# enumerazione equivalente al codice seguente:</span><span class="sxs-lookup"><span data-stu-id="d2634-112">The generator creates a C# enum equivalent to the following code:</span></span>
+<span data-ttu-id="2e9c4-112">Il generatore consente di creare un'enumerazione di C' equivalente al codice seguente:The generator creates a C' enum equivalent to the following code:</span><span class="sxs-lookup"><span data-stu-id="2e9c4-112">The generator creates a C# enum equivalent to the following code:</span></span>
 
 ```csharp
 public enum AccountStatus
@@ -40,7 +40,7 @@ public enum AccountStatus
 }
 ```
 
-<span data-ttu-id="d2634-113">Le definizioni di enumerazione protobuf *devono* avere una costante zero come primo campo.</span><span class="sxs-lookup"><span data-stu-id="d2634-113">Protobuf enumeration definitions *must* have a zero constant as their first field.</span></span> <span data-ttu-id="d2634-114">Come in C#, è possibile dichiarare più campi con lo stesso valore.</span><span class="sxs-lookup"><span data-stu-id="d2634-114">As in C#, you can declare multiple fields with the same value.</span></span> <span data-ttu-id="d2634-115">Tuttavia, è necessario abilitare questa opzione in modo esplicito tramite l'opzione `allow_alias` nell'enumerazione:</span><span class="sxs-lookup"><span data-stu-id="d2634-115">But you must explicitly enable this option by using the `allow_alias` option in the enum:</span></span>
+<span data-ttu-id="2e9c4-113">Le definizioni di enumerazione Protobuf *devono* avere una costante zero come primo campo.</span><span class="sxs-lookup"><span data-stu-id="2e9c4-113">Protobuf enumeration definitions *must* have a zero constant as their first field.</span></span> <span data-ttu-id="2e9c4-114">Come in C, è possibile dichiarare più campi con lo stesso valore.</span><span class="sxs-lookup"><span data-stu-id="2e9c4-114">As in C#, you can declare multiple fields with the same value.</span></span> <span data-ttu-id="2e9c4-115">Ma è necessario abilitare in `allow_alias` modo esplicito questa opzione utilizzando l'opzione nell'enumerazione:</span><span class="sxs-lookup"><span data-stu-id="2e9c4-115">But you must explicitly enable this option by using the `allow_alias` option in the enum:</span></span>
 
 ```protobuf
 enum AccountStatus {
@@ -54,9 +54,9 @@ enum AccountStatus {
 }
 ```
 
-<span data-ttu-id="d2634-116">È possibile dichiarare Enumerazioni al livello principale in un file di `.proto` o annidate all'interno di una definizione del messaggio.</span><span class="sxs-lookup"><span data-stu-id="d2634-116">You can declare enumerations at the top level in a `.proto` file, or nested within a message definition.</span></span> <span data-ttu-id="d2634-117">Le enumerazioni annidate, ad esempio i messaggi annidati, verranno dichiarate all'interno della classe statica `.Types` nella classe messaggio generata.</span><span class="sxs-lookup"><span data-stu-id="d2634-117">Nested enumerations—like nested messages—will be declared within the `.Types` static class in the generated message class.</span></span>
+<span data-ttu-id="2e9c4-116">È possibile dichiarare le enumerazioni `.proto` al livello superiore in un file o annidate all'interno di una definizione di messaggio.</span><span class="sxs-lookup"><span data-stu-id="2e9c4-116">You can declare enumerations at the top level in a `.proto` file, or nested within a message definition.</span></span> <span data-ttu-id="2e9c4-117">Le enumerazioni annidate, come i `.Types` messaggi annidati, verranno dichiarate all'interno della classe statica nella classe messaggio generata.</span><span class="sxs-lookup"><span data-stu-id="2e9c4-117">Nested enumerations—like nested messages—will be declared within the `.Types` static class in the generated message class.</span></span>
 
-<span data-ttu-id="d2634-118">Non è possibile applicare l'attributo [[flags]](xref:System.FlagsAttribute) a un'enumerazione generata da protobuf e protobuf non riconosce le combinazioni di enumerazione bit per bit.</span><span class="sxs-lookup"><span data-stu-id="d2634-118">There's no way to apply the [[Flags]](xref:System.FlagsAttribute) attribute to a Protobuf-generated enum, and Protobuf doesn't understand bitwise enum combinations.</span></span> <span data-ttu-id="d2634-119">Esaminare l'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="d2634-119">Look at the following example:</span></span>
+<span data-ttu-id="2e9c4-118">Non è possibile applicare l'attributo [[Flags]](xref:System.FlagsAttribute) a un'enumerazione generata da Protobuf e Protobuf non comprende le combinazioni di enumerazioni bit per bit.</span><span class="sxs-lookup"><span data-stu-id="2e9c4-118">There's no way to apply the [[Flags]](xref:System.FlagsAttribute) attribute to a Protobuf-generated enum, and Protobuf doesn't understand bitwise enum combinations.</span></span> <span data-ttu-id="2e9c4-119">Guardate l'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="2e9c4-119">Look at the following example:</span></span>
 
 ```protobuf
 enum Region {
@@ -72,11 +72,11 @@ message Product {
 }
 ```
 
-<span data-ttu-id="d2634-120">Se si imposta `product.AvailableIn` su `Region.NorthAmerica | Region.SouthAmerica`, questo viene serializzato come valore integer `3`.</span><span class="sxs-lookup"><span data-stu-id="d2634-120">If you set `product.AvailableIn` to `Region.NorthAmerica | Region.SouthAmerica`, it's serialized as the integer value `3`.</span></span> <span data-ttu-id="d2634-121">Quando un client o un server tenta di deserializzare il valore, non troverà una corrispondenza nella definizione di enumerazione per `3`.</span><span class="sxs-lookup"><span data-stu-id="d2634-121">When a client or server tries to deserialize the value, it won't find a match in the enum definition for `3`.</span></span> <span data-ttu-id="d2634-122">Il risultato sarà `Region.None`.</span><span class="sxs-lookup"><span data-stu-id="d2634-122">The result will be `Region.None`.</span></span>
+<span data-ttu-id="2e9c4-120">Se si `product.AvailableIn` `Region.NorthAmerica | Region.SouthAmerica`imposta su , viene serializzato `3`come valore intero .</span><span class="sxs-lookup"><span data-stu-id="2e9c4-120">If you set `product.AvailableIn` to `Region.NorthAmerica | Region.SouthAmerica`, it's serialized as the integer value `3`.</span></span> <span data-ttu-id="2e9c4-121">Quando un client o un server tenta di deserializzare il valore, `3`non troverà una corrispondenza nella definizione di enumerazione per .</span><span class="sxs-lookup"><span data-stu-id="2e9c4-121">When a client or server tries to deserialize the value, it won't find a match in the enum definition for `3`.</span></span> <span data-ttu-id="2e9c4-122">Il risultato `Region.None`sarà .</span><span class="sxs-lookup"><span data-stu-id="2e9c4-122">The result will be `Region.None`.</span></span>
 
-<span data-ttu-id="d2634-123">Il modo migliore per lavorare con più valori enum in protobuf consiste nell'usare un campo `repeated` di tipo enum.</span><span class="sxs-lookup"><span data-stu-id="d2634-123">The best way to work with multiple enum values in Protobuf is to use a `repeated` field of the enum type.</span></span>
+<span data-ttu-id="2e9c4-123">Il modo migliore per lavorare con più valori di enumerazione in Protobuf consiste nell'utilizzare un `repeated` campo del tipo enum.</span><span class="sxs-lookup"><span data-stu-id="2e9c4-123">The best way to work with multiple enum values in Protobuf is to use a `repeated` field of the enum type.</span></span>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="d2634-124">[Precedente](protobuf-any-oneof.md)
->[Successivo](protobuf-maps.md)</span><span class="sxs-lookup"><span data-stu-id="d2634-124">[Previous](protobuf-any-oneof.md)
+><span data-ttu-id="2e9c4-124">[Successivo](protobuf-any-oneof.md)
+>[precedente](protobuf-maps.md)</span><span class="sxs-lookup"><span data-stu-id="2e9c4-124">[Previous](protobuf-any-oneof.md)
 [Next](protobuf-maps.md)</span></span>
