@@ -1,4 +1,4 @@
-- name: Schema di configurazione di Windows Identity Foundation
+- name: Schema di configurazione di WIF
   href: index.md
   items:
     - name: <system.identityModel>

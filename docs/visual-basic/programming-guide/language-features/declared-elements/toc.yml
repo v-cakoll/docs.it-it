@@ -11,14 +11,14 @@
         - name: Ambito
           href: scope.md
           items:
-            - name: 'Procedura: Controllare l''ambito di una variabile'
+            - name: 'Procedura: controllare l''ambito di una variabile'
               href: how-to-control-the-scope-of-a-variable.md
             - name: Promozione tipo
               href: type-promotion.md
         - name: Livelli di accesso
           href: access-levels.md
           items:
-            - name: 'Procedura: Controllare la disponibilità di una variabile'
+            - name: 'Procedura: controllare la disponibilità di una variabile'
               href: how-to-control-the-availability-of-a-variable.md
         - name: References to Declared Elements
           href: references-to-declared-elements.md
@@ -27,9 +27,9 @@
           items:
             - name: Differenze tra shadowing e override
               href: differences-between-shadowing-and-overriding.md
-            - name: 'Procedura: Nascondere una variabile con lo stesso nome di un''altra variabile'
+            - name: 'Procedura: nascondere una variabile con lo stesso nome di un''altra variabile'
               href: how-to-hide-a-variable-with-the-same-name-as-your-variable.md
-            - name: 'Procedura: Nascondere una variabile ereditata'
+            - name: 'Procedura: nascondere una variabile ereditata'
               href: how-to-hide-an-inherited-variable.md
-            - name: 'Procedura: Accedere a una variabile nascosta da una classe derivata'
+            - name: 'Procedura: accedere a una variabile nascosta da una classe derivata'
               href: how-to-access-a-variable-hidden-by-a-derived-class.md

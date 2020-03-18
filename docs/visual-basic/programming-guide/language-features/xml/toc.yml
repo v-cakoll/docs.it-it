@@ -16,27 +16,27 @@
           href: xml-literals-and-the-xml-1-0-specification.md
         - name: Spazi vuoti nei valori letterali XML
           href: white-space-in-xml-literals.md
-        - name: 'Procedura: Creare valori letterali XML'
+        - name: 'Procedura: creare valori letterali XML'
           href: how-to-create-xml-literals.md
-        - name: 'Procedura: Incorporare espressioni nei valori letterali XML'
+        - name: 'Procedura: incorporare espressioni nei valori letterali XML'
           href: how-to-embed-expressions-in-xml-literals.md
     - name: Modifica di XML
       href: manipulating-xml.md
       items:
-        - name: 'Procedura: Caricare XML da un file, da una stringa o da un flusso'
+        - name: 'Procedura: caricare XML da un file, da una stringa o da un flusso'
           href: how-to-load-xml-from-a-file-string-or-stream.md
-        - name: 'Procedura: Trasformare XML usando LINQ'
+        - name: 'Procedura: trasformare XML utilizzando LINQ'
           href: how-to-transform-xml-by-using-linq.md
-        - name: 'Procedura: Modificare valori letterali XML'
+        - name: 'Procedura: modificare valori letterali XML'
           href: how-to-modify-xml-literals.md
     - name: Accesso a XML
       href: accessing-xml.md
       items:
-        - name: 'Procedura: Accedere agli elementi discendenti XML'
+        - name: 'Procedura: accedere agli elementi discendenti XML'
           href: how-to-access-xml-descendant-elements.md
-        - name: 'Procedura: Accedere agli elementi figlio XML'
+        - name: 'Procedura: accedere agli elementi figlio XML'
           href: how-to-access-xml-child-elements.md
-        - name: 'Procedura: Accedere agli attributi XML'
+        - name: 'Procedura: accedere agli attributi XML'
           href: how-to-access-xml-attributes.md
-        - name: 'Procedura: Dichiarare e usare prefissi dello spazio dei nomi XML'
+        - name: 'Procedura: dichiarare e utilizzare prefissi dello spazio dei nomi XML'
           href: how-to-declare-and-use-xml-namespace-prefixes.md

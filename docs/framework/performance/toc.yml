@@ -8,7 +8,7 @@
     - name: Inizializzazione differita
       href: lazy-initialization.md
       items:
-        - name: 'Procedura: Eseguire l''inizializzazione lazy di oggetti'
+        - name: 'Procedura: eseguire l''inizializzazione lenta di oggetti'
           href: how-to-perform-lazy-initialization-of-objects.md
     - name: Eventi ETW in .NET Framework
       href: etw-events.md

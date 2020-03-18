@@ -19,7 +19,7 @@
       href: ../../../../_vblang/spec/conversions.md
     - name: Membri dei tipi
       href: ../../../../_vblang/spec/type-members.md
-    - name: Istruzioni
+    - name: Statements (Istruzioni)
       href: ../../../../_vblang/spec/statements.md
     - name: Espressioni
       href: ../../../../_vblang/spec/expressions.md
