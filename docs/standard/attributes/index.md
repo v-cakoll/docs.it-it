@@ -13,10 +13,10 @@ helpviewer_keywords:
 - extending metadata
 ms.assetid: 30386922-1e00-4602-9ebf-526b271a8b87
 ms.openlocfilehash: b3a106eb58de4865e260a43c8466019e738510f5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73130896"
 ---
 # <a name="extending-metadata-using-attributes"></a>Estensione di metadati mediante attributi
@@ -32,7 +32,7 @@ Common Language Runtime consente di aggiungere dichiarazioni descrittive simili 
 |[Scrittura di attributi personalizzati](../../../docs/standard/attributes/writing-custom-attributes.md)|Descrive come progettare le classi di attributi personalizzati.|  
 |[Recupero di informazioni memorizzate negli attributi](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)|Descrive come recuperare attributi personalizzati per codice che viene caricato nel contesto di esecuzione.|  
 |[Metadati e componenti auto-descrittivi](../../../docs/standard/metadata-and-self-describing-components.md)|Fornisce una panoramica dei metadati e descrive come vengono implementati in un file eseguibile (PE) di .NET Framework.|  
-|[Procedura: Caricare assembly nel contesto Reflection-Only](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|Illustra come recuperare informazioni sugli attributi personalizzati nel contesto reflection-only.|  
+|[Procedura: caricare assembly nel contesto Reflection-Only](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|Illustra come recuperare informazioni sugli attributi personalizzati nel contesto reflection-only.|  
   
-## <a name="reference"></a>Reference  
+## <a name="reference"></a>Informazioni di riferimento  
  <xref:System.Attribute?displayProperty=nameWithType>

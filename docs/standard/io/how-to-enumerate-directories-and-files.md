@@ -9,10 +9,10 @@ helpviewer_keywords:
 - I/O [.NET Framework], enumerating directories and files
 ms.assetid: 86b69a08-3bfa-4e5f-b4e1-3b7cb8478215
 ms.openlocfilehash: 6a26d0ef529b81976c4d2caafed34bb5f08d8d46
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75707745"
 ---
 # <a name="how-to-enumerate-directories-and-files"></a>Procedura: enumerare directory e file
@@ -37,7 +37,7 @@ La tabella seguente riepiloga i metodi che restituiscono raccolte enumerabili di
 > [!NOTE]
 > Anche se è possibile enumerare immediatamente tutti i file presenti nelle sottodirectory della directory padre usando l'opzione <xref:System.IO.SearchOption.AllDirectories> dell'enumerazione <xref:System.IO.SearchOption> facoltativa, errori <xref:System.UnauthorizedAccessException> possono rendere incompleta l'enumerazione. È possibile intercettare queste eccezioni enumerando prima di tutto le directory e quindi i file.  
   
-## <a name="examples-use-the-directory-class"></a>Esempi: usare la classe Directory  
+## <a name="examples-use-the-directory-class"></a>Esempi: utilizzare la classe Directory  
   
 L'esempio seguente usa il metodo <xref:System.IO.Directory.EnumerateDirectories%28System.String%29?displayProperty=nameWithType> per ottenere un elenco dei nomi delle directory di primo livello in un percorso specificato.  
 
@@ -49,7 +49,7 @@ L'esempio seguente usa il metodo <xref:System.IO.Directory.EnumerateFiles%28Syst
 [!code-csharp[System.IO.Directory.EnumerateFiles#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directory.enumeratefiles/cs/program.cs#1)]
 [!code-vb[System.IO.Directory.EnumerateFiles#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directory.enumeratefiles/vb/program.vb#1)]  
   
-## <a name="examples-use-the-directoryinfo-class"></a>Esempi: usare la classe DirectoryInfo  
+## <a name="examples-use-the-directoryinfo-class"></a>Esempi: utilizzare la classe DirectoryInfo  
   
 L'esempio seguente usa il metodo <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A?displayProperty=nameWithType> per elencare una raccolta di directory di primo livello la cui proprietà <xref:System.IO.FileSystemInfo.CreationTimeUtc> è precedente a un valore <xref:System.DateTime> specifico.  
 

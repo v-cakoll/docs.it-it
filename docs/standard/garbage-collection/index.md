@@ -19,10 +19,10 @@ helpviewer_keywords:
 - garbage collection, about
 ms.assetid: 22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9
 ms.openlocfilehash: 846df5ecb1e681e8d0440e627586a681bf071efa
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160144"
 ---
 # <a name="garbage-collection"></a>Garbage Collection
@@ -39,10 +39,10 @@ Il Garbage Collector di .NET gestisce l'allocazione e il rilascio di memoria per
 |[Modalità di latenza](../../../docs/standard/garbage-collection/latency.md)|Descrive i modi per determinare l'ingerenza di Garbage Collection.|  
 |[Ottimizzazione per l'hosting Web condiviso](../../../docs/standard/garbage-collection/optimization-for-shared-web-hosting.md)|Descrive come ottimizzare l'operazione di Garbage Collection nei server condivisi da più siti Web di piccole dimensioni.|  
 |[Notifiche di Garbage Collection](../../../docs/standard/garbage-collection/notifications.md)|Descrive come determinare quando è imminente una Garbage Collection completa e quando è stata completata.|  
-|[Monitoraggio delle risorse del dominio dell'applicazione](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)|Descrive come monitorare l'utilizzo della CPU e della memoria da un dominio dell'applicazione.|  
+|[Monitoraggio delle risorse del dominio applicazione](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)|Descrive come monitorare l'utilizzo della CPU e della memoria da un dominio dell'applicazione.|  
 |[Riferimenti deboli](../../../docs/standard/garbage-collection/weak-references.md)|Descrive i riferimenti che consentono al Garbage Collector di raccogliere un oggetto, pur senza impedire all'applicazione di accedervi.|  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Informazioni di riferimento  
  <xref:System.GC?displayProperty=nameWithType>  
   
  <xref:System.GCCollectionMode?displayProperty=nameWithType>  

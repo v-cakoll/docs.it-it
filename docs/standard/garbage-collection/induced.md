@@ -6,10 +6,10 @@ helpviewer_keywords:
 - garbage collection, forced
 ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
 ms.openlocfilehash: 604b49ef577a46204b523ebf5a8575a30b81635e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73120925"
 ---
 # <a name="induced-collections"></a>Raccolte indotte
@@ -20,7 +20,7 @@ Nella maggior parte dei casi, tramite il Garbage Collector è possibile determin
 ## <a name="gc-collection-mode"></a>Modalità di raccolta Garbage Collection  
  È possibile usare uno degli overload del metodo <xref:System.GC.Collect%2A?displayProperty=nameWithType> che include un valore <xref:System.GCCollectionMode> per specificare il comportamento di una raccolta forzata, come indicato di seguito.  
   
-|Valore di`GCCollectionMode`|Descrizione|  
+|Valore della proprietà `GCCollectionMode`|Descrizione|  
 |------------------------------|-----------------|  
 |<xref:System.GCCollectionMode.Default>|Usa l'impostazione di Garbage Collection predefinita per la versione di .NET in esecuzione.|  
 |<xref:System.GCCollectionMode.Forced>|Forza l'esecuzione immediata dell'operazione di Garbage Collection. Equivale alla chiamata dell'overload di <xref:System.GC.Collect?displayProperty=nameWithType>. Restituisce una raccolta di blocco completa di tutte le generazioni.<br /><br /> È anche possibile compattare l'heap di oggetti di grandi dimensioni impostando la proprietà <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> su <xref:System.Runtime.GCLargeObjectHeapCompactionMode.CompactOnce?displayProperty=nameWithType> prima di forzare una procedura completa immediata di Garbage Collection di blocco.|  

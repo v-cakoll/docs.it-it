@@ -11,10 +11,10 @@ helpviewer_keywords:
 - pausing threads
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
 ms.openlocfilehash: 3020694b93479d5f1d64d31c203f8fe033a10320
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73128998"
 ---
 # <a name="pausing-and-interrupting-threads"></a>Sospensione e interruzione di thread
@@ -41,7 +41,7 @@ Le tecniche più comuni per sincronizzare le attività dei thread consistono nel
 > [!NOTE]
 > Se il thread di destinazione non è bloccato al momento della chiamata del metodo <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>, il thread non subisce interruzioni finché non viene bloccato. Se il thread non si blocca, verrà completato senza subire alcuna interruzione.  
   
- Se un'attesa è di tipo gestito, sia <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> che <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> riporteranno immediatamente il thread allo stato di attività. Nel caso di un'attesa non gestita, ad esempio un platform invoke alla funzione Win32 [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject), né <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> né <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> potrà assumere il controllo del thread fino alla restituzione o alla chiamata nel codice gestito. Di seguito è descritto il comportamento nel codice gestito.  
+  Se un'attesa è di tipo gestito, sia <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> che <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> riporteranno immediatamente il thread allo stato di attività. Nel caso di un'attesa non gestita, ad esempio un platform invoke alla funzione Win32 [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject), né <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> né <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> potrà assumere il controllo del thread fino alla restituzione o alla chiamata nel codice gestito. Di seguito è descritto il comportamento nel codice gestito.  
   
 - <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> fa uscire un thread da qualsiasi attesa e genera un'eccezione <xref:System.Threading.ThreadInterruptedException> nel thread di destinazione.  
   
@@ -54,4 +54,4 @@ Le tecniche più comuni per sincronizzare le attività dei thread consistono nel
 - <xref:System.Threading.ThreadAbortException>
 - [Threading](../../../docs/standard/threading/index.md)
 - [Utilizzo di thread e threading](../../../docs/standard/threading/using-threads-and-threading.md)
-- [Cenni preliminari sulle primitive di sincronizzazione](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
+- [Panoramica delle primitive di sincronizzazione](../../../docs/standard/threading/overview-of-synchronization-primitives.md)

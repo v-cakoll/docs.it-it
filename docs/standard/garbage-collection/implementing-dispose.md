@@ -10,10 +10,10 @@ helpviewer_keywords:
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
 ms.openlocfilehash: f3d3269ccf56954f963762503d2bc1c53b9e6b83
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78238988"
 ---
 # <a name="implementing-a-dispose-method"></a>Implementazione di un metodo Dispose
@@ -33,7 +33,7 @@ Il modello Dispose precede due variazioni:
   
 Al fine di garantire la corretta pulitura delle risorse in ogni occasione, deve essere possibile chiamare il metodo <xref:System.IDisposable.Dispose%2A> più volte senza che venga generata un'eccezione.  
   
-Nell'esempio di codice fornito per il metodo <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> viene illustrato il modo in cui Garbage Collection può causare l'esecuzione di un finalizzatore, mentre un riferimento non gestito all'oggetto o ai relativi membri è ancora in uso. Potrebbe essere utile usare <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> per rendere l'oggetto non idoneo per Garbage Collection dall'inizio della routine corrente fino al punto in cui viene chiamato il metodo.
+Nell'esempio di <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> codice fornito per il metodo viene illustrato come la procedura di Garbage Collection può causare l'esecuzione di un finalizzatore, mentre un riferimento non gestito all'oggetto o ai relativi membri è ancora in uso. Può essere utile <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> utilizzare per rendere l'oggetto non idoneo per la procedura di Garbage Collection dall'inizio della routine corrente fino al punto in cui viene chiamato questo metodo.
   
 <a name="Dispose2"></a>
 ## <a name="dispose-and-disposeboolean"></a>Dispose() e Dispose(Boolean)  
@@ -103,7 +103,7 @@ Di seguito è illustrato il modello generale per implementare il modello Dispose
   
 ## <a name="implementing-the-dispose-pattern-for-a-derived-class"></a>Implementazione del modello Dispose per una classe derivata
 
-Una classe derivata da una classe che implementa l'interfaccia <xref:System.IDisposable> non deve implementare <xref:System.IDisposable>, poiché l'implementazione della classe di base di <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> viene ereditata dalle classi derivate. Per rilasciare le risorse di una classe derivata, è invece necessario specificare quanto segue:  
+Una classe derivata da una classe che implementa l'interfaccia <xref:System.IDisposable> non deve implementare <xref:System.IDisposable>, poiché l'implementazione della classe di base di <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> viene ereditata dalle classi derivate. Al contrario, per rilasciare le risorse di una classe derivata, è necessario fornire quanto segue:Instead, to release resources of a derived class, you provide the following:  
   
 - Un metodo `protected Dispose(Boolean)` che esegua l'override del metodo della classe di base ed esegua l'effettiva operazione di rilascio delle risorse della classe derivata. Questo metodo deve anche chiamare il metodo `Dispose(Boolean)` della classe di base e passarne lo stato di eliminazione per l'argomento.  
   
@@ -167,4 +167,4 @@ Nell'esempio seguente viene illustrato il modello Dispose per una classe derivat
 - <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>
 - <xref:System.Object.Finalize%2A?displayProperty=nameWithType>
 - [Procedura: Definire e usare classi e struct (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)
-- [Criterio Dispose](implementing-dispose.md)
+- [Modello Dispose](implementing-dispose.md)

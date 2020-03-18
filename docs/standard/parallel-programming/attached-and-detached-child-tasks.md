@@ -9,10 +9,10 @@ helpviewer_keywords:
 - tasks, child tasks
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
 ms.openlocfilehash: 8f15ee4f136e3e2df1a4e1c7683467f2a4bc9bc0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73123191"
 ---
 # <a name="attached-and-detached-child-tasks"></a>Attività figlio connesse e disconnesse
@@ -22,9 +22,9 @@ Un'*attività figlio* (o *attività annidata*) è un'istanza <xref:System.Thread
   
 |Category|Attività figlio scollegate|Attività figlio collegate|  
 |--------------|--------------------------|--------------------------|  
-|L'attività padre attende il completamento delle attività figlio.|No|Yes|  
-|L'attività padre propaga le eccezioni generate dalle attività figlio.|No|Yes|  
-|Lo stato dell'attività padre dipende dallo stato dell'attività figlio.|No|Yes|  
+|L'attività padre attende il completamento delle attività figlio.|No|Sì|  
+|L'attività padre propaga le eccezioni generate dalle attività figlio.|No|Sì|  
+|Lo stato dell'attività padre dipende dallo stato dell'attività figlio.|No|Sì|  
   
  Nella maggior parte degli scenari, è consigliabile usare l'attività figlio scollegata perché le relazioni con altre attività risultano meno complesse. Per questo motivo le attività create all'interno delle attività padre sono di tipo scollegato per impostazione predefinita ed è necessario specificare esplicitamente l'opzione <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> per creare un'attività figlio collegata.  
   
@@ -59,7 +59,7 @@ Un'*attività figlio* (o *attività annidata*) è un'istanza <xref:System.Thread
  L'annullamento delle attività è cooperativo, ossia, per essere annullabile, ogni attività figlio collegata o scollegata deve monitorare lo stato del token di annullamento. Per annullare un'attività padre e le relative attività figlio usando un'unica richiesta, è necessario passare lo stesso token come argomento a tutte le attività e fornire la logica di risposta alla richiesta in ogni attività. Per altre informazioni, vedere [Annullamento delle attività](../../../docs/standard/parallel-programming/task-cancellation.md) e [Procedura: Annullare un'attività e i relativi figli](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
   
 ### <a name="when-the-parent-cancels"></a>Annullamento dell'attività padre  
- Se un'attività padre annulla se stessa prima dell'avvio dell'attività figlio, quest'ultima non viene avviata. Se un'attività padre annulla se stessa dopo l'avvio dell'attività figlio, quest'ultima viene completata a meno che non abbia una propria logica di annullamento. Per altre informazioni, vedere [Annullamento delle attività](../../../docs/standard/parallel-programming/task-cancellation.md).  
+ Se un'attività padre annulla se stessa prima dell'avvio dell'attività figlio, quest'ultima non viene avviata. Se un'attività padre annulla se stessa dopo l'avvio dell'attività figlio, quest'ultima viene completata a meno che non abbia una propria logica di annullamento. Per altre informazioni, vedere [Task Cancellation](../../../docs/standard/parallel-programming/task-cancellation.md).  
   
 ### <a name="when-a-detached-child-task-cancels"></a>Annullamento di un'attività figlio scollegata  
  Se un'attività figlio scollegata annulla se stessa usando lo stesso token passato all'attività padre e quest'ultima non attende l'attività figlio, non viene propagata alcuna eccezione poiché l'eccezione viene considerata come un annullamento cooperativo sicuro. Questo comportamento è uguale a quello di qualsiasi attività di primo livello.  

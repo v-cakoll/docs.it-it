@@ -9,10 +9,10 @@ helpviewer_keywords:
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
 ms.openlocfilehash: c121d810e64b5fa27f105f814253c0752e028a95
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713531"
 ---
 # <a name="extern-c-reference"></a>extern (Riferimenti per C#)
@@ -90,7 +90,7 @@ In questo esempio viene illustrato un programma C# che chiama una libreria C (un
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=nameWithType>
-- [Riferimenti per C#](../index.md)
+- [Guida di riferimento a C](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](index.md)
 - [Modificatori](index.md)

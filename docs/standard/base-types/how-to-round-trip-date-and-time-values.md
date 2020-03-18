@@ -13,10 +13,10 @@ helpviewer_keywords:
 - formatting strings [.NET Framework], round-trip values
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 ms.openlocfilehash: 2e3a58ffe8332e0afec62461f6897d673e1da09f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73132002"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>Procedura: Eseguire il round trip dei valori di data e ora
@@ -87,13 +87,13 @@ Gli esempi presentano i requisiti seguenti:
 
   - <xref:System> (solo C#).
 
-  - <xref:System.Globalization?displayProperty=nameWithType>
+  - <xref:System.Globalization?displayProperty=nameWithType>.
 
-  - <xref:System.IO?displayProperty=nameWithType>
+  - <xref:System.IO?displayProperty=nameWithType>.
 
-  - <xref:System.Runtime.Serialization?displayProperty=nameWithType>
+  - <xref:System.Runtime.Serialization?displayProperty=nameWithType>.
 
-  - <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>
+  - <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>.
 
 - Ogni esempio di codice, ad eccezione della classe `DateInTimeZone`, deve essere incluso in una classe o un modulo di Visual Basic, ne deve essere eseguito il wrapping nei metodi e deve essere chiamato dal metodo `Main`.
 

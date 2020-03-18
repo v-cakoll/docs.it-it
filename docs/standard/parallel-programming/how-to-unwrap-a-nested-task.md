@@ -9,10 +9,10 @@ helpviewer_keywords:
 - tasks, how to unwrap nested tasks
 ms.assetid: a0769dd2-0f6d-48ca-8418-a9d39de7f450
 ms.openlocfilehash: c72654a2bc21035fe706d76018bb163d8ba01ee8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73106899"
 ---
 # <a name="how-to-unwrap-a-nested-task"></a>Procedura: annullare il wrapping di un'attività annidata
@@ -44,4 +44,4 @@ ms.locfileid: "73106899"
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Threading.Tasks.TaskExtensions?displayProperty=nameWithType>
-- [Programmazione asincrona basata su attività](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)
+- [Programmazione asincrona basata su attivitàTask-based Asynchronous Programming](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)

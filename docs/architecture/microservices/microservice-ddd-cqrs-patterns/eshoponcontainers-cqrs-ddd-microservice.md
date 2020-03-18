@@ -1,13 +1,13 @@
 ---
 title: Applicazione degli approcci CQRS e CQS in un microservizio DDD in eShopOnContainers
 description: Architettura di microservizi .NET per applicazioni .NET incluse in contenitori | Modalità di implementazione di CQRS nel microservizio degli ordini in eShopOnContainers.
-ms.date: 10/08/2018
-ms.openlocfilehash: 0380e759595e8a159e89f858a5ced4dacfa4e9b4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.date: 03/03/2020
+ms.openlocfilehash: 16fe46189a5b43591adebbb764d4acef2f7efbfb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674128"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847154"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Applicare gli approcci CQRS e CQS in un microservizio DDD in eShopOnContainers
 
@@ -23,7 +23,7 @@ Gli schemi DDD presentati in questa guida non devono essere applicati a livello 
 
 Uno di questi schemi è lo schema Aggregate che verrà esaminato più in dettaglio nelle sezioni successive. In breve, nello schema Aggregate, gli oggetti di dominio vengono considerati come una singola unità in virtù della relativa relazione nel dominio. Non sempre questo schema genera vantaggi nelle query, in quanto può aumentare la complessità della logica di query. Per le query di sola lettura non è vantaggioso considerare più oggetti come una singola aggregazione. Aumenta solo la complessità.
 
-Come illustrato nella figura 7-2, questa guida suggerisce l'uso di schemi di progettazione DDD solo nell'area transazionale e degli aggiornamenti del microservizio, ovvero quella attivata dai comandi. Le query possono seguire un approccio più semplice e devono essere separate dai comandi, secondo quanto previsto dall'approccio CQRS.
+Come illustrato nella Figura 7-2 della sezione precedente, questa guida suggerisce l'utilizzo di modelli DDD solo nell'area transazionale/aggiornamenti del microservizio, ovvero come attivato dai comandi. Le query possono seguire un approccio più semplice e devono essere separate dai comandi, secondo quanto previsto dall'approccio CQRS.
 
 Per implementare il "lato query" è possibile scegliere tra numerosi approcci, ad esempio uno basato su ORM (Object-Relational Mapping), come EF Core, proiezioni di AutoMapper, stored procedure, viste, viste materializzate o micro ORM.
 
@@ -41,15 +41,15 @@ Esiste una sola architettura dell'applicazione: l'architettura del sistema o del
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Martin Fowler. CQRS** \
+- **Martin Fowler. CQRS (Informazioni in stato di CQRS** \
   <https://martinfowler.com/bliki/CQRS.html>
 
 - **Greg Young. Documenti CQRS** \
   <https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf>
 
-- **Udi Dahan. Definizione di CQRS** \
+- **Udi Dahan. Chiarito CQRS** \
   <http://udidahan.com/2009/12/09/clarified-cqrs/>
 
 >[!div class="step-by-step"]
->[Precedente](apply-simplified-microservice-cqrs-ddd-patterns.md)
->[Successivo](cqrs-microservice-reads.md)
+>[Successivo](apply-simplified-microservice-cqrs-ddd-patterns.md)
+>[precedente](cqrs-microservice-reads.md)

@@ -16,16 +16,16 @@ helpviewer_keywords:
 - removing characters
 ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
 ms.openlocfilehash: bdbe267bb178e90c0008422e6543a23178c2c4d8
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159988"
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a>Eliminazione di spazi iniziali e finali e rimozione di caratteri dalle stringhe in .NET
 Se si sta analizzando una frase in singole parole, è possibile che si ottengano parole con spazi vuoti alle estremità. In questo caso è possibile usare uno dei metodi trim della classe **System.String** per rimuovere un numero qualsiasi di spazi o altri caratteri da una posizione specificata nella stringa. La tabella seguente illustra i metodi trim disponibili.  
   
-|Nome del metodo|Uso|  
+|Nome metodo|Uso|  
 |-----------------|---------|  
 |<xref:System.String.Trim%2A?displayProperty=nameWithType>|Rimuove gli spazi vuoti o i caratteri specificati in una matrice di caratteri all'inizio e alla fine di una stringa.|  
 |<xref:System.String.TrimEnd%2A?displayProperty=nameWithType>|Rimuove i caratteri specificati in una matrice di caratteri alla fine di una stringa.|  
@@ -96,4 +96,4 @@ Se si sta analizzando una frase in singole parole, è possibile che si ottengano
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Operazioni di base su stringhe](../../../docs/standard/base-types/basic-string-operations.md)
+- [Operazioni di base sulle stringheBasic String Operations](../../../docs/standard/base-types/basic-string-operations.md)

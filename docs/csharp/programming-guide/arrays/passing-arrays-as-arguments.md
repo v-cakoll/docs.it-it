@@ -5,10 +5,10 @@ helpviewer_keywords:
 - arrays [C#], passing as arguments
 ms.assetid: f3a0971e-c87c-4a1f-8262-bc0a3b712772
 ms.openlocfilehash: 2e53008910a9062ada25680eb4b8e54a225fd226
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705691"
 ---
 # <a name="passing-arrays-as-arguments-c-programming-guide"></a>Passaggio di matrici come argomenti (Guida per programmatori C#)
@@ -61,4 +61,4 @@ Nell'esempio seguente, una matrice bidimensionale di Integer viene inizializzata
 - [Matrici](index.md)
 - [Matrici unidimensionali](single-dimensional-arrays.md)
 - [Matrici multidimensionali](multidimensional-arrays.md)
-- [Matrici irregolari](jagged-arrays.md)
+- [Matrici frastagliate](jagged-arrays.md)

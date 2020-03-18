@@ -8,17 +8,17 @@ helpviewer_keywords:
 - protected keyword [C#]
 ms.assetid: 05ce3794-6675-4025-bddb-eaaa0ec22892
 ms.openlocfilehash: bec619d4f49bd26daa742c18c830909c14948adf
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713183"
 ---
 # <a name="protected-c-reference"></a>protected (Riferimenti per C#)
 
 La parola chiave `protected` è un modificatore di accesso ai membri.
 
- > Questa pagina illustra l'accesso `protected`. La parola chiave `protected` fa anche parte dei modificatori di accesso [`protected internal`](protected-internal.md) e [`private protected`](private-protected.md).
+ > Questa pagina illustra l'accesso `protected`. La `protected` parola chiave fa [`protected internal`](protected-internal.md) [`private protected`](private-protected.md) anche parte dei modificatori di accesso e .
 
 Un membro protetto è accessibile all'interno della classe di appartenenza e dalle istanze della classe derivata.
 
@@ -52,13 +52,13 @@ Per altre informazioni, vedere [Accessibilità dichiarata](~/_csharplang/spec/ba
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
+- [Guida di riferimento a C](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](index.md)
 - [Modificatori di accesso](access-modifiers.md)
 - [Livelli di accessibilità](accessibility-levels.md)
 - [Modificatori](index.md)
-- [public](public.md)
-- [private](private.md)
-- [internal](internal.md)
+- [pubblico](public.md)
+- [Privato](private.md)
+- [Interno](internal.md)
 - [Problemi di sicurezza per le parole chiave virtuali interne](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - compress files
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
 ms.openlocfilehash: 5aa25e265ed6ffb613e9916414c6f2335a4aaf57
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159377"
 ---
 # <a name="how-to-compress-and-extract-files"></a>Procedura: Comprimere ed estrarre file
@@ -29,7 +29,7 @@ Lo spazio dei nomi <xref:System.IO.Compression> contiene i tipi seguenti per la 
 
 Gli esempi seguenti mostrano alcune delle operazioni che è possibile eseguire con i file compressi.
 
-## <a name="example-1-create-and-extract-a-zip-file"></a>Esempio 1: creare ed estrarre un file zip
+## <a name="example-1-create-and-extract-a-zip-file"></a>Esempio 1: Creare ed estrarre un file .zipExample 1: Create and extract a .zip file
 
 Nell'esempio seguente viene illustrato come creare ed estrarre un file *ZIP* compresso usando la classe <xref:System.IO.Compression.ZipFile>. L'esempio comprime il contenuto di una cartella in un nuovo file *ZIP* e quindi estrae il contenuto in una nuova cartella.
 
@@ -40,7 +40,7 @@ Se viene visualizzato l'errore di compilazione "Il nome 'ZipFile' non esiste nel
 [!code-csharp[System.IO.Compression.ZipFile#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.zipfile/cs/program1.cs#1)]
 [!code-vb[System.IO.Compression.ZipFile#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.zipfile/vb/program1.vb#1)]
 
-## <a name="example-2-extract-specific-file-extensions"></a>Esempio 2: estrarre estensioni di file specifiche
+## <a name="example-2-extract-specific-file-extensions"></a>Esempio 2: Estrarre estensioni di file specificheExample 2: Extract specific file extensions
 
 Il prossimo esempio mostra come eseguire l'iterazione del contenuto di un file *ZIP* esistente ed estrarre i file con estensione *txt*. Usa la classe <xref:System.IO.Compression.ZipArchive> per accedere al file ZIP e la classe <xref:System.IO.Compression.ZipArchiveEntry> per controllare le singole voci. Il metodo di estensione <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A> per l'oggetto <xref:System.IO.Compression.ZipArchiveEntry> è disponibile nella classe <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType>.
 
@@ -56,14 +56,14 @@ Se viene visualizzato l'errore "Il tipo 'ZipArchive' è definito in un assembly 
 [!code-csharp[System.IO.Compression.ZipArchive#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchive/cs/program1.cs#1)]
 [!code-vb[System.IO.Compression.ZipArchive#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchive/vb/program1.vb#1)]
 
-## <a name="example-3-add-a-file-to-an-existing-zip"></a>Esempio 3: aggiungere un file a un file Zip esistente
+## <a name="example-3-add-a-file-to-an-existing-zip"></a>Esempio 3: Aggiungere un file a un file zip esistenteExample 3: Add a file to an existing zip
 
 L'esempio seguente usa la classe <xref:System.IO.Compression.ZipArchive> per accedere a un file *ZIP* esistente e aggiunge un nuovo file al file compresso. Il nuovo file viene compresso quando lo si aggiunge al file ZIP esistente.
 
 [!code-csharp[System.IO.Compression.ZipArchiveMode#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchivemode/cs/program1.cs#1)]
 [!code-vb[System.IO.Compression.ZipArchiveMode#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchivemode/vb/program1.vb#1)]
 
-## <a name="example-4-compress-and-decompress-gz-files"></a>Esempio 4: comprimere e decomprimere i file. gz
+## <a name="example-4-compress-and-decompress-gz-files"></a>Esempio 4: comprimere e decomprimere i file .gz
 
 È possibile usare anche le classi <xref:System.IO.Compression.GZipStream> e <xref:System.IO.Compression.DeflateStream> per comprimere e decomprimere dati. Queste due classi usano lo stesso algoritmo di compressione. È possibile decomprimere gli oggetti <xref:System.IO.Compression.GZipStream> scritti in un file con estensione *gz* con molti strumenti comuni. L'esempio seguente illustra come comprimere e decomprimere una directory di file usando la classe <xref:System.IO.Compression.GZipStream>:
 

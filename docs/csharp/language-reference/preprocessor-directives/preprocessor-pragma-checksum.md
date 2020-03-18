@@ -7,10 +7,10 @@ helpviewer_keywords:
 - '#pragma checksum [C#]'
 ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
 ms.openlocfilehash: 1bbb404e1183daa5e68e512e7439b6ae52abd605
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712481"
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma checksum (Riferimenti per C#)
@@ -32,7 +32,7 @@ Genera i checksum per i file di origine per favorire il debug delle pagine ASP.N
  `"checksum_bytes"`  
  Stringa di cifre esadecimali che rappresenta i byte del checksum. Deve essere un numero pari di cifre esadecimali. Un numero dispari di cifre genera un avviso in fase di compilazione, pertanto la direttiva viene ignorata.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Il debugger di Visual Studio usa un checksum per trovare sempre l'origine corretta. Il compilatore calcola il checksum di un file di origine, quindi genera l'output nel file del database di programma (PDB). Il PDB viene quindi usato dal debugger per eseguire il confronto con il checksum calcolato per il file di origine.  
   
  Questa soluzione non funziona per i progetti ASP.NET, perché il checksum calcolato fa riferimento al file di origine generato anziché al file con estensione aspx. Per risolvere questo problema, `#pragma checksum` offre il supporto del checksum per le pagine ASP.NET.  
@@ -55,6 +55,6 @@ class TestClass
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
+- [Guida di riferimento a C](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
-- [Direttive per il preprocessore C#](./index.md)
+- [Direttive per il preprocessore di C](./index.md)

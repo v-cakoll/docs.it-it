@@ -15,10 +15,10 @@ helpviewer_keywords:
 - DateTime object
 - time strings
 ms.openlocfilehash: 9555304e570226b2ed3b040735cf099b5a018f93
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78156543"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Analisi di stringhe di data e ora in .NET
@@ -56,7 +56,7 @@ L'esempio seguente illustra l'uso del metodo <xref:System.DateTime.Parse%2A?disp
 > Tutti gli esempi C# in questo articolo vengono eseguiti nel browser. Premere il pulsante **Run** (Esegui) per visualizzare l'output. È anche possibile modificarli per sperimentare.
 
 > [!NOTE]
-> Questi esempi sono disponibili nel repository docs di GitHub per [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/conversions) e [Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/how-to/conversions). In alternativa, è possibile scaricare il progetto come file zip per [C#](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/conversions.zip) o [Visual Basic](https://github.com/dotnet/samples/raw/master/snippets/visualbasic/how-to/conversions.zip).
+> Questi esempi sono disponibili nel repository GitHub docs [Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/how-to/conversions)sia per [C.](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/conversions) In alternativa, è possibile scaricare il progetto come file zip per [C ,](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/conversions.zip) o [Visual Basic](https://github.com/dotnet/samples/raw/master/snippets/visualbasic/how-to/conversions.zip).
 
 [!code-csharp-interactive[Parsing.DateAndTime#1](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#1)]
 [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#1)]
@@ -86,7 +86,7 @@ Ogni overload dei metodi <xref:System.DateTime.Parse%2A> e <xref:System.DateTime
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Analisi di stringhe](parsing-strings.md)
+- [Parsing Strings](parsing-strings.md)
 - [Formattazione di tipi](formatting-types.md)
 - [Conversione di tipi in .NET](type-conversion.md)
 - [Formati di data e ora standard](standard-date-and-time-format-strings.md)

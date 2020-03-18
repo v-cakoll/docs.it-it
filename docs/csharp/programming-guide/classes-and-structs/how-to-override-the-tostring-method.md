@@ -1,18 +1,18 @@
 ---
-title: Come eseguire l'override del metodo ToString- C# Guida alla programmazione
+title: Come eseguire l'override del metodo ToString - Guida per programmatori C
 ms.date: 07/20/2015
 helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
 ms.openlocfilehash: 7c7196df56821c134b31982d7956a75039e9f929
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705574"
 ---
-# <a name="how-to-override-the-tostring-method-c-programming-guide"></a>Come eseguire l'override del metodo ToString (C# guida per programmatori)
+# <a name="how-to-override-the-tostring-method-c-programming-guide"></a>Come eseguire l'override del metodo ToString (Guida per programmatori C
 
 Ogni classe o struct in C# eredita in modo implicito la classe <xref:System.Object>. Ogni oggetto in C# ottiene quindi il metodo <xref:System.Object.ToString%2A>, che restituisce una rappresentazione di stringa dell'oggetto. Ad esempio, tutte le variabili di tipo `int` hanno un metodo `ToString` che consente loro di restituire il rispettivo contenuto sotto forma di stringa:  
   
@@ -49,7 +49,7 @@ Per eseguire l'override del metodo `ToString` nella classe o nello struct:
 - [Guida per programmatori C#](../index.md)
 - [Classi e struct](./index.md)
 - [Stringhe](../strings/index.md)
-- [string](../../language-reference/builtin-types/reference-types.md)
-- [override](../../language-reference/keywords/override.md)
-- [virtual](../../language-reference/keywords/virtual.md)
+- [Stringa](../../language-reference/builtin-types/reference-types.md)
+- [prevalere](../../language-reference/keywords/override.md)
+- [Virtuale](../../language-reference/keywords/virtual.md)
 - [Formattazione di tipi](../../../standard/base-types/formatting-types.md)

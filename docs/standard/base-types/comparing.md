@@ -19,16 +19,16 @@ helpviewer_keywords:
 - StartsWith method
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 ms.openlocfilehash: e63b2a8ac44d6171f9c48990882780ea420f8c76
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73101663"
 ---
 # <a name="comparing-strings-in-net"></a>Confronto di stringhe in .NET
 .NET offre diversi metodi per confrontare i valori delle stringhe. La tabella seguente elenca e descrive i metodi di confronto di valori.  
   
-|Nome metodo|Usa|  
+|Nome metodo|Uso|  
 |-----------------|---------|  
 |<xref:System.String.Compare%2A?displayProperty=nameWithType>|Confronta i valori di due stringhe. Restituisce un valore intero.|  
 |<xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType>|Confronta due stringhe senza tenere in considerazione le impostazioni cultura locali. Restituisce un valore intero.|  
@@ -39,14 +39,14 @@ ms.locfileid: "73101663"
 |<xref:System.String.IndexOf%2A?displayProperty=nameWithType>|Restituisce la posizione di indice di un carattere o una stringa, a partire dall'inizio della stringa esaminata. Restituisce un valore intero.|  
 |<xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>|Restituisce la posizione di indice di un carattere o una stringa, a partire dalla fine della stringa esaminata. Restituisce un valore intero.|  
   
-## <a name="compare"></a>Compare  
+## <a name="compare"></a>Confronto  
  Il metodo statico <xref:System.String.Compare%2A?displayProperty=nameWithType> consente di confrontare due stringhe. Questo metodo fa distinzione tra le impostazioni cultura. È possibile usare questa funzione per confrontare due stringhe o le sottostringhe di due stringhe. Sono inoltre disponibili overload che consentono o meno di fare distinzione tra maiuscole e minuscole e di tenere o meno in considerazione le differenze nelle impostazioni cultura. La tabella seguente illustra i tre valori interi che questo metodo può restituire.  
   
 |Valore restituito|Condizione|  
 |------------------|---------------|  
-|Intero negativo|La prima stringa precede la seconda stringa nella sequenza di ordinamento.<br /><br /> oppure<br /><br /> La prima stringa è `null`.|  
-|0|La prima stringa e la seconda stringa sono uguali.<br /><br /> oppure<br /><br /> Entrambe le stringhe sono `null`.|  
-|Intero positivo<br /><br /> oppure<br /><br /> 1|La prima stringa segue la seconda stringa nella sequenza di ordinamento.<br /><br /> oppure<br /><br /> La seconda stringa è `null`.|  
+|Intero negativo|La prima stringa precede la seconda stringa nella sequenza di ordinamento.<br /><br /> -oppure-<br /><br /> La prima stringa è `null`.|  
+|0|La prima stringa e la seconda stringa sono uguali.<br /><br /> -oppure-<br /><br /> Entrambe le stringhe sono `null`.|  
+|Numero intero positivo<br /><br /> -oppure-<br /><br /> 1|La prima stringa segue la seconda stringa nella sequenza di ordinamento.<br /><br /> -oppure-<br /><br /> La seconda stringa è `null`.|  
   
 > [!IMPORTANT]
 > Il metodo <xref:System.String.Compare%2A?displayProperty=nameWithType> è destinato principalmente a essere usato quando si ordinano o si dispongono le stringhe. Non usare il metodo <xref:System.String.Compare%2A?displayProperty=nameWithType> per verificare l'uguaglianza (ovvero, per cercare in modo esplicito un valore restituito pari a 0 senza considerare se una stringa è minore o maggiore di un'altra). Per determinare se due stringhe sono uguali, usare invece il metodo <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> .  
@@ -81,7 +81,7 @@ ms.locfileid: "73101663"
 > [!IMPORTANT]
 > Il metodo <xref:System.String.CompareTo%2A?displayProperty=nameWithType> è destinato principalmente a essere usato quando si ordinano o si dispongono le stringhe. Non usare il metodo <xref:System.String.CompareTo%2A?displayProperty=nameWithType> per verificare l'uguaglianza (ovvero, per cercare in modo esplicito un valore restituito pari a 0 senza considerare se una stringa è minore o maggiore di un'altra). Per determinare se due stringhe sono uguali, usare invece il metodo <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> .  
   
- L'esempio seguente usa il metodo <xref:System.String.CompareTo%2A?displayProperty=nameWithType> per confrontare l'oggetto `string1` con l'oggetto `string2` .  
+ L'esempio seguente usa il metodo <xref:System.String.CompareTo%2A?displayProperty=nameWithType> per confrontare l'oggetto `string1` con l'oggetto `string2`.  
   
  [!code-cpp[Conceptual.String.BasicOps#8](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#8)]
  [!code-csharp[Conceptual.String.BasicOps#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#8)]
@@ -91,7 +91,7 @@ ms.locfileid: "73101663"
   
  Tutti gli overload del metodo <xref:System.String.CompareTo%2A?displayProperty=nameWithType> eseguono per impostazione predefinita confronti che fanno distinzione tra le impostazioni cultura e tra maiuscole e minuscole. Non sono disponibili overload di questo metodo per eseguire un confronto senza distinzione tra le impostazioni cultura. Per maggiore chiarezza del codice, è consigliabile usare invece il metodo **String.Compare**, specificando <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> per operazioni con distinzione tra le impostazioni cultura o <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> per operazioni senza distinzione tra le impostazioni cultura. Per un esempio che illustra come usare il metodo **String.Compare** per eseguire confronti con e senza distinzione tra le impostazioni cultura, vedere [Esecuzione di confronti di stringhe indipendenti dalle impostazioni cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).  
   
-## <a name="equals"></a>Equals  
+## <a name="equals"></a>Uguale a  
  Il metodo **Equals** consente di determinare in modo semplice se due stringhe sono uguali. Questo metodo, che fa distinzione tra maiuscole e minuscole, restituisce un valore booleano **true** o **false** . Può essere usato da una classe esistente, come illustrato nell'esempio seguente. L'esempio seguente usa il metodo **Equals** per determinare se un oggetto stringa contiene la frase "Hello World".  
   
  [!code-cpp[Conceptual.String.BasicOps#9](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#9)]
@@ -150,7 +150,7 @@ ms.locfileid: "73101663"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Operazioni di base su stringhe](../../../docs/standard/base-types/basic-string-operations.md)
+- [Operazioni di base sulle stringheBasic String Operations](../../../docs/standard/base-types/basic-string-operations.md)
 - [Esecuzione di operazioni sulle stringhe indipendenti dalle impostazioni cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
 - [Sorting Weight Tables (for .NET on Windows)](https://www.microsoft.com/download/details.aspx?id=10921) (Tabelle di ordinamento spessore - Per .NET in Windows)
 - [Default Unicode Collation Element Table (for .NET Core on Linux and macOS)](https://www.unicode.org/Public/UCA/latest/allkeys.txt) (Tabella degli elementi delle regole di confronto Unicode predefinite - Per .NET Core in Linux e MacOS)

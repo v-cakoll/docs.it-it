@@ -14,10 +14,10 @@ helpviewer_keywords:
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
 ms.openlocfilehash: ef65c50111d6ba91ab70d0b9c8cb90c606f9366c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73103822"
 ---
 # <a name="creating-new-strings-in-net"></a>Creazione di nuove stringhe in .NET
@@ -32,7 +32,7 @@ ms.locfileid: "73103822"
 ## <a name="methods-that-return-strings"></a>Metodi che restituiscono stringhe  
  Nella tabella seguente sono elencati diversi metodi utili che restituiscono nuovi oggetti stringa.  
   
-|Nome metodo|Usa|  
+|Nome metodo|Uso|  
 |-----------------|---------|  
 |<xref:System.String.Format%2A?displayProperty=nameWithType>|Compila una stringa formattata da un insieme di oggetti di input.|  
 |<xref:System.String.Concat%2A?displayProperty=nameWithType>|Compila stringhe da due o più stringhe.|  
@@ -40,7 +40,7 @@ ms.locfileid: "73103822"
 |<xref:System.String.Insert%2A?displayProperty=nameWithType>|Compila una nuova stringa inserendo una stringa in corrispondenza dell'indice specificato di una stringa esistente.|  
 |<xref:System.String.CopyTo%2A?displayProperty=nameWithType>|Copia i caratteri specificati di una stringa in una determinata posizione all'interno di una matrice di caratteri.|  
   
-### <a name="format"></a>Formato  
+### <a name="format"></a>Format  
  È possibile usare il metodo **String.Format** per creare stringhe formattate e concatenare stringhe che rappresentano più oggetti. Qualsiasi oggetto venga passato a questo metodo viene automaticamente convertito in una stringa. Se ad esempio l'applicazione deve visualizzare un valore **Int32** e un valore **DateTime**, è possibile costruire con facilità una stringa che rappresenti tali valori usando il metodo **Format**. Per altre informazioni sulle convenzioni di formattazione usate con questo metodo, vedere la sezione relativa alla [formattazione composita](../../../docs/standard/base-types/composite-formatting.md).  
   
  L'esempio di codice seguente usa il metodo **Format** per creare una stringa che usa una variabile integer.  
@@ -64,7 +64,7 @@ ms.locfileid: "73103822"
  [!code-csharp[Strings.Creating#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#3)]
  [!code-vb[Strings.Creating#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#3)]  
   
-### <a name="insert"></a>INS  
+### <a name="insert"></a>Insert  
  Il metodo **String.Insert** consente di creare una nuova stringa inserendo una stringa in una posizione specificata in un'altra stringa. Questo metodo usa un indice a base zero. Nell'esempio di codice che segue viene inserita una stringa in corrispondenza della quinta posizione di indice di `MyString` e viene creata una nuova stringa con tale valore.  
   
  [!code-csharp[Strings.Creating#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#4)]
@@ -80,5 +80,5 @@ ms.locfileid: "73103822"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Operazioni di base su stringhe](../../../docs/standard/base-types/basic-string-operations.md)
+- [Operazioni di base sulle stringheBasic String Operations](../../../docs/standard/base-types/basic-string-operations.md)
 - [Formattazione composita](../../../docs/standard/base-types/composite-formatting.md)

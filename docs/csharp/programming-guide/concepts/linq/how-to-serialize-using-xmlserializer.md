@@ -1,15 +1,15 @@
 ---
-title: Come serializzare tramite XmlSerializer (C#)
+title: Come serializzare utilizzando XmlSerializer (C
 ms.date: 07/20/2015
 ms.assetid: 2e0a0bbc-c548-4fe2-8741-be5a9ccd0cbb
 ms.openlocfilehash: 0ec19e964471382c6f10f07d6d4bb25f88fd532f
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347389"
 ---
-# <a name="how-to-serialize-using-xmlserializer-c"></a>Come serializzare tramite XmlSerializer (C#)
+# <a name="how-to-serialize-using-xmlserializer-c"></a>Come serializzare utilizzando XmlSerializer (C
 In questo argomento viene illustrato un esempio in cui viene usato <xref:System.Xml.Serialization.XmlSerializer> per eseguire la serializzazione e la deserializzazione.  
   
 ## <a name="example"></a>Esempio  
@@ -78,7 +78,7 @@ class XLinqTest
 }  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```output  
 Testing for type: XElementNullContainer  

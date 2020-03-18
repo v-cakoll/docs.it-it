@@ -17,10 +17,10 @@ helpviewer_keywords:
 - strings [.NET Framework], StringBuilder object
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
 ms.openlocfilehash: 19ee90f3300e3b610eeefd4949baa2759b834a60
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73121683"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>Uso della classe StringBuilder in .NET
@@ -60,7 +60,7 @@ L'oggetto <xref:System.String> non è modificabile. Ogni volta che si usa uno de
 ## <a name="modifying-the-stringbuilder-string"></a>Modifica della stringa StringBuilder  
  La tabella seguente elenca i metodi che è possibile usare per modificare il contenuto di **StringBuilder**.  
   
-|Nome metodo|Usa|  
+|Nome metodo|Uso|  
 |-----------------|---------|  
 |<xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType>|Aggiunge informazioni alla fine dell'oggetto **StringBuilder** corrente.|  
 |<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>|Sostituisce un identificatore di formato passato in una stringa con il testo formattato.|  
@@ -68,7 +68,7 @@ L'oggetto <xref:System.String> non è modificabile. Ogni volta che si usa uno de
 |<xref:System.Text.StringBuilder.Remove%2A?displayProperty=nameWithType>|Rimuove un numero specificato di caratteri dall'oggetto **StringBuilder** corrente.|  
 |<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|Sostituisce un determinato carattere nell'indice specificato.|  
   
-### <a name="append"></a>Aggiungi  
+### <a name="append"></a>Accoda  
  Il metodo **Append** può essere usato per aggiungere testo o una rappresentazione di stringa di un oggetto alla fine di una stringa rappresentata dall'oggetto **StringBuilder** corrente. Nell'esempio seguente viene inizializzato un oggetto **StringBuilder** su "Hello World" e quindi viene aggiunto il testo alla fine dell'oggetto. Lo spazio viene allocato automaticamente in base alle esigenze.  
   
  [!code-cpp[Conceptual.StringBuilder#4](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#4)]
@@ -76,27 +76,27 @@ L'oggetto <xref:System.String> non è modificabile. Ogni volta che si usa uno de
  [!code-vb[Conceptual.StringBuilder#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#4)]  
   
 ### <a name="appendformat"></a>AppendFormat  
- Il metodo <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> aggiunge il testo alla fine dell'oggetto <xref:System.Text.StringBuilder>. Supporta la funzionalità di formattazione composita (per altre informazioni, vedere [Formattazione composita](../../../docs/standard/base-types/composite-formatting.md)) chiamando l'implementazione <xref:System.IFormattable> dell'oggetto o degli oggetti da formattare. Pertanto, accetta le stringhe di formato standard per i valori numerici, di data e ora e di enumerazione, le stringhe di formato personalizzato per i valori numerici e di data e ora e le stringhe di formato definite per i tipi personalizzati. Per informazioni sulla formattazione, vedere [formattazione dei tipi](../../../docs/standard/base-types/formatting-types.md). È possibile utilizzare questo metodo per personalizzare il formato delle variabili e aggiungere tali valori a un <xref:System.Text.StringBuilder>. L'esempio seguente usa il metodo <xref:System.Text.StringBuilder.AppendFormat%2A> per inserire un valore Integer formattato come valore di valuta alla fine di un oggetto <xref:System.Text.StringBuilder>.  
+ Il metodo <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> aggiunge il testo alla fine dell'oggetto <xref:System.Text.StringBuilder>. Supporta la funzionalità di formattazione composita (per altre informazioni, vedere [Formattazione composita](../../../docs/standard/base-types/composite-formatting.md)) chiamando l'implementazione <xref:System.IFormattable> dell'oggetto o degli oggetti da formattare. Pertanto, accetta le stringhe di formato standard per i valori numerici, di data e ora e di enumerazione, le stringhe di formato personalizzato per i valori numerici e di data e ora e le stringhe di formato definite per i tipi personalizzati. Per informazioni sulla formattazione, vedere [Formattazione dei tipi.](../../../docs/standard/base-types/formatting-types.md) È possibile utilizzare questo metodo per personalizzare il formato <xref:System.Text.StringBuilder>delle variabili e aggiungere tali valori a un oggetto . L'esempio seguente usa il metodo <xref:System.Text.StringBuilder.AppendFormat%2A> per inserire un valore Integer formattato come valore di valuta alla fine di un oggetto <xref:System.Text.StringBuilder>.  
   
  [!code-cpp[Conceptual.StringBuilder#5](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#5)]
  [!code-csharp[Conceptual.StringBuilder#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#5)]
  [!code-vb[Conceptual.StringBuilder#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#5)]  
   
-### <a name="insert"></a>INS  
+### <a name="insert"></a>Insert  
  Il metodo <xref:System.Text.StringBuilder.Insert%2A> aggiunge una stringa o un oggetto in una posizione specificata nell'oggetto <xref:System.Text.StringBuilder> corrente. L'esempio seguente usa questo metodo per inserire una parola nella sesta posizione di un oggetto <xref:System.Text.StringBuilder>.  
   
  [!code-cpp[Conceptual.StringBuilder#6](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#6)]
  [!code-csharp[Conceptual.StringBuilder#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#6)]
  [!code-vb[Conceptual.StringBuilder#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#6)]  
   
-### <a name="remove"></a>Rimuovi  
+### <a name="remove"></a>Rimuovere  
  È possibile usare il metodo **Remove** per rimuovere un numero specificato di caratteri dall'oggetto <xref:System.Text.StringBuilder> corrente, a partire dall'indice in base zero specificato. L'esempio seguente usa il metodo **Remove** per abbreviare un oggetto <xref:System.Text.StringBuilder>.  
   
  [!code-cpp[Conceptual.StringBuilder#7](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#7)]
  [!code-csharp[Conceptual.StringBuilder#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#7)]
  [!code-vb[Conceptual.StringBuilder#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#7)]  
   
-### <a name="replace"></a>Sostituisci  
+### <a name="replace"></a>Replace  
  Il metodo **Replace** può essere usato per sostituire i caratteri all'interno dell'oggetto <xref:System.Text.StringBuilder> con un altro carattere specificato. L'esempio seguente usa il metodo **Replace** per cercare un oggetto <xref:System.Text.StringBuilder> per tutte le istanze del carattere punto esclamativo (!) e per sostituirle con il carattere punto interrogativo (?).  
   
  [!code-cpp[Conceptual.StringBuilder#8](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#8)]
@@ -112,5 +112,5 @@ L'oggetto <xref:System.String> non è modificabile. Ogni volta che si usa uno de
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Text.StringBuilder?displayProperty=nameWithType>
-- [Operazioni di base su stringhe](../../../docs/standard/base-types/basic-string-operations.md)
+- [Operazioni di base sulle stringheBasic String Operations](../../../docs/standard/base-types/basic-string-operations.md)
 - [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)

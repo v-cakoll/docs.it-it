@@ -1,80 +1,80 @@
 ---
-title: Caricare i dati di training per il generatore di modelli
-description: Informazioni su come caricare i dati di training da un database SQL Server o da un file da usare in uno degli scenari di generatore di modelli per ML.NET.
+title: Caricare i dati di training per Model BuilderLoad training data for Model Builder
+description: Informazioni su come caricare i dati di training da un database di SQL ServerSQL Server o un file da usare in uno degli scenari di Model Builder per ML.NET.
 ms.date: 10/29/2019
 author: luisquintanilla
 ms.author: luquinta
-ms.custom: mvc, how-to
-ms.openlocfilehash: cc93b3f77284ed283a8d7cbd52b8cd02b4fd9066
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.custom: mvc, how-to, mlnet-tooling
+ms.openlocfilehash: 23de2d06090f4c1eaa2c79178ba4c346698d45e1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977058"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78849159"
 ---
-# <a name="load-training-data-into-model-builder"></a>Caricare i dati di training in Generatore di modelli
+# <a name="load-training-data-into-model-builder"></a>Caricare i dati di training in Model BuilderLoad training data into Model Builder
 
-Informazioni su come caricare i set di dati di training da un file o da un database di SQL Server per l'uso in uno degli scenari di generatore di modelli per ML.NET. Gli scenari di generatore di modelli possono utilizzare database SQL Server, file di immagine e formati di file CSV o TSV come dati di training.
+Informazioni su come caricare i set di dati di training da un file o da un database di SQL Serversql Server da usare in uno degli scenari di Model Builder per ML.NET. Gli scenari di Generatore di modelli possono usare database di SQL Server, file di immagine e formati di file CSV o TSV come dati di training.
 
-## <a name="training-dataset-limitations-in-model-builder"></a>Limitazioni del set di dati di training in Generatore di modelli
+## <a name="training-dataset-limitations-in-model-builder"></a>Limitazioni dei set di dati di training in Model Builder
 
-Il generatore di modelli limita la quantità e il tipo di dati che è possibile usare per i modelli di training:
+Model Builder limita la quantità e il tipo di dati che è possibile utilizzare per i modelli di training:
 
-- Dati SQL Server: 100.000 righe
+- Dati di SQL Server: 100.000 righe
 - File CSV e TSV: nessun limite di dimensione
 - Immagini: solo PNG e JPG.
 
-## <a name="model-builder-scenarios"></a>Scenari di generatore di modelli
+## <a name="model-builder-scenarios"></a>Scenari di Model Builder
 
-Il generatore di modelli consente di creare modelli per gli scenari di apprendimento automatico seguenti:
+Model Builder consente di creare modelli per i seguenti scenari di apprendimento automatico:
 
-- Analisi dei sentimenti (classificazione binaria): classificare i dati testuali in due categorie.
+- Analisi del sentiment (classificazione binaria): classificare i dati testuali in due categorie.
 - Classificazione dei problemi (classificazione multiclasse): classificare i dati testuali in 3 o più categorie.
-- Stima del prezzo (regressione): stimare un valore numerico.
-- Classificazione immagini (Deep Learning): categorizzare le immagini in base alle caratteristiche.
-- Scenario personalizzato: creare scenari personalizzati dai dati tramite regressione, classificazione e altre attività.
+- Previsione prezzo (regressione): stima redimare un valore numerico.
+- Classificazione delle immagini (apprendimento approfondito): categorizza le immagini in base alle caratteristiche.
+- Scenario personalizzato: creare scenari personalizzati dai dati usando la regressione, la classificazione e altre attività.
 
 Questo articolo illustra gli scenari di classificazione e regressione con dati testuali o numerici e scenari di classificazione delle immagini.
 
-## <a name="load-text-or-numeric-data-from-a-file"></a>Carica dati numerici o di testo da un file
+## <a name="load-text-or-numeric-data-from-a-file"></a>Caricare testo o dati numerici da un file
 
-È possibile caricare dati di tipo text o numeric da un file in Generatore di modelli. Accetta formati di file delimitati da virgole (CSV) o di tabulazione (TSV).
+È possibile caricare dati di testo o numerici da un file in Model Builder. Accetta formati di file delimitati da virgole (CSV) o da tabulazioni (TSV).
 
-1. Nel passaggio dati di generatore modelli selezionare **file** dall'elenco a discesa origine dati.
-2. Selezionare il pulsante accanto alla casella di testo **selezionare un file** e utilizzare Esplora file per individuare e selezionare il file di dati.
-3. Scegliere una categoria nell'elenco **a discesa colonna da stimare (etichetta)** .
-4. Dall'elenco a discesa **colonne di input (funzionalità)** verificare che le colonne di dati che si desidera includere siano selezionate.
+1. Nel passaggio dati di Model Builder selezionare **File** dall'elenco a discesa dell'origine dati.
+2. Selezionare il pulsante accanto alla casella di testo **Selezionare un file** e utilizzare Esplora file per sfogliare e selezionare il file di dati.
+3. Scegliere una categoria nell'elenco a discesa **Colonna da stimare (etichetta).**
+4. Nell'elenco a discesa Colonne di **input (funzionalità)** verificare che le colonne di dati da includere siano selezionate.
 
-La configurazione del file di origine dati per il generatore di modelli è stata eseguita. Selezionare il collegamento **Train (Train** ) per passare al passaggio successivo in Generatore di modelli.
+La configurazione del file di origine dati per Model Builder è stata completata. Selezionare il collegamento **Allenatore** per passare al passaggio successivo in Generatore di modelli.
 
-## <a name="load-data-from-a-sql-server-database"></a>Caricare dati da un database di SQL Server
+## <a name="load-data-from-a-sql-server-database"></a>Caricare dati da un database di SQL ServerLoad data from a SQL Server database
 
-Il generatore di modelli supporta il caricamento di dati da database SQL Server locali e remoti.
+Model Builder supporta il caricamento di dati da database SQL Server locali e remoti.
 
-Per caricare i dati da un database di SQL Server in Module Builder:
+Per caricare dati da un database di SQL Server in Module Builder:
 
-1. Nel passaggio dati di generatore modelli selezionare **SQL Server** dall'elenco a discesa origine dati.
-1. Selezionare il pulsante accanto alla casella di testo **Connetti a SQL Server database** .
-    1. Nella finestra di dialogo **Scegli dati** selezionare **Microsoft SQL Server file di database**.
-    1. Deselezionare la casella di controllo **Usa sempre questa selezione** e selezionare **continua** .
-    1. Nella finestra di dialogo **Proprietà connessione** selezionare **Sfoglia** e selezionare il scaricato. File MDF.
-    1. Scegliere **OK**.
-1. Scegliere il nome del set di dati dall'elenco a discesa **nome tabella** .
-1. Dall'elenco **a discesa colonna da stimare (etichetta)** scegliere la categoria di dati in base alla quale si desidera eseguire una stima.
-1. Dall'elenco a discesa **colonne di input (funzionalità)** verificare che le colonne che si desidera includere siano selezionate.
+1. Nel passaggio dati di Model Builder selezionare **SQL Server** dall'elenco a discesa dell'origine dati.
+1. Selezionare il pulsante accanto alla casella di testo **Connetti al database sql Server.**
+    1. Nella finestra di dialogo **Scegli dati** selezionare File di database di Microsoft **SQL Server**.
+    1. Deselezionare la casella di controllo **Usa sempre questa selezione** e selezionare **Continua**
+    1. Nella finestra di dialogo **Proprietà connessione,** selezionare **Sfoglia** e selezionare il file scaricato . MDF.
+    1. Seleziona **OK**.
+1. Scegliere il nome del set di dati dall'elenco a discesa **Nome tabella.**
+1. Dall'elenco a discesa **Da colonna a previsione (etichetta)** scegliere la categoria di dati in cui si vuole eseguire una stima.
+1. Nell'elenco a discesa Colonne di **input (funzionalità)** verificare che le colonne da includere siano selezionate.
 
-La configurazione del file di origine dati per il generatore di modelli è stata eseguita. Selezionare il collegamento **Train (Train** ) per passare al passaggio successivo in Generatore di modelli.
+La configurazione del file di origine dati per Model Builder è stata completata. Selezionare il collegamento **Allenatore** per passare al passaggio successivo in Generatore di modelli.
 
-## <a name="set-up-image-data-files"></a>Configurare i file di dati di immagine
+## <a name="set-up-image-data-files"></a>Impostare i file di dati immagine
 
-Il generatore di modelli prevede che i dati dell'immagine siano file JPG o PNG organizzati in cartelle che corrispondono alle categorie della classificazione.
+Model Builder prevede che i dati immagine siano file JPG o PNG organizzati in cartelle che corrispondono alle categorie della classificazione.
 
-Per caricare immagini in Generatore di modelli, specificare il percorso di una singola directory di primo livello:
+Per caricare le immagini in Model Builder, fornire il percorso di una singola directory di primo livello:To load images into Model Builder, provide the path to a single top-level directory:
 
-- Questa directory di livello superiore contiene una sottocartella per ogni categoria da stimare.
+- Questa directory di primo livello contiene una sottocartella per ciascuna delle categorie da stimare.
 - Ogni sottocartella contiene i file di immagine appartenenti alla relativa categoria.
 
-Nella struttura di cartelle illustrata di seguito, la directory di primo livello è *flower_photos*. Sono presenti cinque sottodirectory che corrispondono alle categorie che si desidera stimare: Daisy, Dandelion, Roses, girasoli e tulipani. Ognuna di queste sottodirectory contiene immagini appartenenti alla rispettiva categoria.
+Nella struttura di cartelle illustrata di seguito, la directory di primo livello è *flower_photos*. Ci sono cinque sottodirectory corrispondenti alle categorie che si desidera prevedere: margherita, dente di leone, rose, girasoli e tulipani. Ognuna di queste sottodirectory contiene immagini appartenenti alla rispettiva categoria.
 
 ```text
 \---flower_photos
@@ -106,9 +106,9 @@ Nella struttura di cartelle illustrata di seguito, la directory di primo livello
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Segui queste esercitazioni per creare app di Machine Learning con generatore di modelli:
+Seguire queste esercitazioni per creare app di apprendimento automatico con Model Builder:Follow these tutorials to build machine learning apps with Model Builder:
 
-- [Stimare i prezzi tramite regressione](../tutorials/predict-prices-with-model-builder.md)
-- [Analizzare i sentimenti in un'applicazione Web usando la classificazione binaria](../tutorials/sentiment-analysis-model-builder.md )
+- [Stimare i prezzi usando la regressione](../tutorials/predict-prices-with-model-builder.md)
+- [Analizzare il sentiment in un'applicazione Web usando la classificazione binariaAnalyze sentiment in a web application using binary classification](../tutorials/sentiment-analysis-model-builder.md )
 
-Se si sta eseguendo il training di un modello usando il codice, vedere [informazioni su come caricare i dati usando l'API ml.NET](load-data-ml-net.md).
+Se si sta visualizzando il training di un modello usando il codice, vedere come caricare i [dati usando l'API ML.NET.](load-data-ml-net.md)

@@ -5,10 +5,10 @@ author: oliag
 ms.date: 02/20/2020
 ms.technology: dotnet-standard
 ms.openlocfilehash: e214c91f2beebc7f3b3324f4879deba9a5623f86
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78156134"
 ---
 # <a name="net-api-analyzer"></a>Analizzatore di API .NET
@@ -36,21 +36,21 @@ La famiglia .NET è un set di prodotti di grandi dimensioni che vengono aggiorna
 
 L'analizzatore di API usa codici di errore specifici dell'API che iniziano con DE (acronimo di Deprecation Errore, ovvero errore di deprecazione), che consente di controllare la visualizzazione dei singoli avvisi. Le API deprecate identificate dall'analizzatore sono definite nel repository [dotnet/platform-compat](https://github.com/dotnet/platform-compat).
 
-### <a name="add-the-api-analyzer-to-your-project"></a>Aggiungere l'analizzatore di API al progetto
+### <a name="add-the-api-analyzer-to-your-project"></a>Aggiungere l'analizzatore API al progetto
 
 1. Aprire Visual Studio.
-2. Aprire il progetto in cui si vuole eseguire l'analizzatore.
-3. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto e scegliere **Gestisci pacchetti NuGet**. Questa opzione è disponibile anche nel menu **Progetto**.
-4. Nella scheda Gestione pacchetti NuGet:
+2. Aprire il progetto su cui si desidera eseguire l'analizzatore.
+3. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto e **scegliere Gestisci pacchetti NuGet**. Questa opzione è disponibile anche nel menu **Progetto**.
+4. Nella scheda NuGet Package Manager:On the NuGet Package Manager tab:
    1. Selezionare "nuget.org" come origine del pacchetto.
-   2. Passare alla scheda **Sfoglia** .
+   2. Passare alla scheda **Sfoglia.**
    3. Selezionare **Includi versione preliminare**.
-   4. Cercare **Microsoft. dotnet. Analyzers. Compatibility**.
+   4. Cercare **Microsoft.DotNet.Analyzers.Compatibility**.
    5. Selezionare il pacchetto nell'elenco.
    6. Selezionare il pulsante **Installa**.
    7. Selezionare il pulsante **OK** nella finestra di dialogo **Anteprima modifiche** e quindi selezionare il pulsante **Accetto** nella finestra di dialogo **Accettazione della licenza** se si accettano le condizioni di licenza per i pacchetti elencati.
 
-### <a name="use-the-api-analyzer"></a>Usare l'analizzatore di API
+### <a name="use-the-api-analyzer"></a>Utilizzare l'analizzatore API
 
 Quando un'API deprecata, ad esempio <xref:System.Net.WebClient>, viene usata nel codice, l'analizzatore di API la evidenzia con una riga ondulata verde. Quando si passa il mouse sulla chiamata dell'API viene visualizzata una lampadina con informazioni sulla deprecazione dell'API, come nell'esempio seguente:
 
@@ -58,7 +58,7 @@ Quando un'API deprecata, ad esempio <xref:System.Net.WebClient>, viene usata nel
 
 La finestra **Elenco errori** contiene avvisi con un ID univoco per ogni API deprecata, come illustrato nell'esempio seguente (`DE004`):
 
-!["Screenshot della finestra di Elenco errori che mostra l'ID e la descrizione dell'avviso"](media/api-analyzer/warnings-id-and-descriptions.jpg "Elenco errori finestra che include avvisi.")
+!["Screenshot della finestra Elenco errori con l'ID e la descrizione dell'avviso"](media/api-analyzer/warnings-id-and-descriptions.jpg "Finestra Elenco errori che include avvisi.")
 
 Facendo clic sull'ID si passa a una pagina Web con informazioni dettagliate sul motivo per cui l'API è stata deprecata e suggerimenti per le API alternative utilizzabili.
 
@@ -67,13 +67,13 @@ Tutti gli avvisi possono essere eliminati facendo clic con il pulsante destro de
 - [in locale (nell'origine)](#suppress-warnings-locally)
 - [a livello globale (in un file di eliminazione)](#suppress-warnings-globally) - scelta consigliata
 
-### <a name="suppress-warnings-locally"></a>Non visualizzare gli avvisi localmente
+### <a name="suppress-warnings-locally"></a>Eliminazione locale degli avvisi
 
-Per eliminare gli avvisi in locale, fare clic con il pulsante destro del mouse sul membro per cui si vogliono eliminare gli avvisi e quindi scegliere **Azioni rapide e refactoring** > **Elimina *ID diagnostica*\<ID diagnostica>** > **nell'origine**. La direttiva del preprocessore [#pragma warning](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) viene aggiunta al codice sorgente nell'ambito definito: !["Screenshot di codice evidenziato con #pragma warning disable"](media/api-analyzer/suppress-in-source.jpg)
+Per eliminare gli avvisi in locale, fare clic con il pulsante destro del mouse sul membro per il quale si desidera eliminare gli avvisi, quindi selezionare **Azioni rapide e refactoring** > **Sopprimi *ID*\<diagnostica>**  >  **nell'origine**. La direttiva del preprocessore [#pragma warning](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) viene aggiunta al codice sorgente nell'ambito definito: !["Screenshot di codice evidenziato con #pragma warning disable"](media/api-analyzer/suppress-in-source.jpg)
 
-### <a name="suppress-warnings-globally"></a>Non visualizzare avvisi a livello globale
+### <a name="suppress-warnings-globally"></a>Eliminazione degli avvisi a livello globale
 
-Per eliminare gli avvisi a livello globale, fare clic con il pulsante destro del mouse sul membro per cui si vogliono eliminare gli avvisi e quindi scegliere **Azioni rapide e refactoring** > **Elimina *ID diagnostica*\<ID diagnostica>** > **nel file di eliminazione**.
+Per eliminare gli avvisi a livello globale, fare clic con il pulsante destro del mouse sul membro per il quale si desidera eliminare gli avvisi, quindi selezionare **Azioni rapide e refactoring** > **Elimina *ID*\<diagnostica>**  >  **in File di eliminazione**.
 
 !["Screenshot dell'API WebClient API con sottolineatura ondulata verde e lampadina a sinistra"](media/api-analyzer/suppress-in-sup-file.jpg)
 
@@ -83,7 +83,7 @@ Viene aggiunto un file *GlobalSuppressions.cs* al progetto dopo la prima elimina
 
 L'eliminazione globale è il modo consigliato per garantire la coerenza di utilizzo delle API tra progetti.
 
-## <a name="discover-cross-platform-issues"></a>Individuare i problemi tra piattaforme diverse
+## <a name="discover-cross-platform-issues"></a>Scopri i problemi multipiattaforma
 
 Come per le API deprecate, l'analizzatore identifica tutte le API che non sono multipiattaforma. Ad esempio, <xref:System.Console.WindowWidth?displayProperty=nameWithType> funziona in Windows, ma non in Linux e macOS. L'ID di diagnostica viene visualizzato nella finestra **Elenco errori**. Per eliminare l'avviso, è possibile fare clic con il pulsante destro del mouse e scegliere **Azioni rapide e refactoring**. Diversamente dai casi di deprecazione per i quali sono disponibili due opzioni (continuare a usare il membro deprecato ed eliminare gli avvisi oppure non usarlo affatto), se si sviluppa codice solo per determinate piattaforme, è possibile eliminare tutti gli avvisi per tutte le altre piattaforme in cui non si prevede di eseguire il codice. A tale scopo, è sufficiente modificare il file di progetto e aggiungere la proprietà `PlatformCompatIgnore` che elenca tutte le piattaforme da ignorare. I valori accettati sono `Linux`, `macOS` e `Windows`.
 
@@ -121,7 +121,7 @@ Tutti questi dati diagnostici non sono disponibili solo nell'IDE, ma anche nella
 
 ## <a name="configuration"></a>Configurazione
 
-L'utente decide come devono essere gestiti i dati diagnostici, ovvero come avvisi, errori o suggerimenti oppure se devono essere disattivati. Ad esempio, un progettista può decidere che i problemi di compatibilità devono essere considerati come errori, che le chiamate ad alcune API devono generare avvisi, mentre altre devono generare solo suggerimenti. Queste configurazioni possono essere effettuate separatamente in base all'ID di diagnostica e al progetto. Per eseguire questa operazione, in **Esplora soluzioni** passare al nodo **Dipendenze** nel progetto. Espandere i nodi **Dipendenze** > **Analizzatori** > **Microsoft.DotNet.Analyzers.Compatibility**. Fare clic con il pulsante destro del mouse sull'ID di diagnostica, scegliere **Imposta gravità set di regole** e selezionare l'opzione desiderata.
+L'utente decide come devono essere gestiti i dati diagnostici, ovvero come avvisi, errori o suggerimenti oppure se devono essere disattivati. Ad esempio, un progettista può decidere che i problemi di compatibilità devono essere considerati come errori, che le chiamate ad alcune API devono generare avvisi, mentre altre devono generare solo suggerimenti. Queste configurazioni possono essere effettuate separatamente in base all'ID di diagnostica e al progetto. Per eseguire questa operazione, in **Esplora soluzioni** passare al nodo **Dipendenze** nel progetto. Espandere i nodi **Analizzatori** > **dipendenze** > **Microsoft.DotNet.Analyzers.Compatibility**. Fare clic con il pulsante destro del mouse sull'ID di diagnostica, scegliere **Imposta gravità set di regole** e selezionare l'opzione desiderata.
 
 !["Screenshot di Esplora soluzioni che mostra i dati di diagnostica e la finestra di dialogo popup con la gravità del set di regole"](media/api-analyzer/disable-notifications.jpg)
 

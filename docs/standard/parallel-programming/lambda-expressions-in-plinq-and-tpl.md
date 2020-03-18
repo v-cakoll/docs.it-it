@@ -11,10 +11,10 @@ helpviewer_keywords:
 - lambda expressions, with Action and Func
 ms.assetid: 645b2c17-29d0-4ffa-8684-430743cc2f2d
 ms.openlocfilehash: 4e5be295a52edc1a7f0a0a3aa98f55335ae3e31b
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77453000"
 ---
 # <a name="lambda-expressions-in-plinq-and-tpl"></a>Espressioni lambda in PLINQ e TPL
@@ -22,15 +22,15 @@ ms.locfileid: "77453000"
 Task Parallel Library (TPL) contiene numerosi metodi che accettano una delle famiglie di delegati <xref:System.Func%601?displayProperty=nameWithType> o <xref:System.Action?displayProperty=nameWithType> come parametri di input. Questi delegati vengono usati per passare la logica di programma personalizzata al ciclo, all'attività o alla query parallela. Gli esempi di codice per TPL e PLINQ usano espressioni lambda per creare istanze dei delegati come blocchi di codice inline. Questo argomento offre una breve introduzione a Func e Action e illustra come usare le espressioni lambda in TPL e PLINQ.
 
 > [!NOTE]
-> Per ulteriori informazioni sui delegati in generale [, vedere delegati](../../csharp/programming-guide/delegates/index.md) [e delegati](../../visual-basic/programming-guide/language-features/delegates/index.md). Per altre informazioni sulle espressioni lambda in C# e Visual Basic, vedere [Espressioni lambda (Guida per programmatori C#)](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) e [Espressioni lambda (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).
+> Per ulteriori informazioni sui delegati in generale, vedere [Delegati](../../csharp/programming-guide/delegates/index.md) e [delegati](../../visual-basic/programming-guide/language-features/delegates/index.md). Per altre informazioni sulle espressioni lambda in C# e Visual Basic, vedere [Espressioni lambda (Guida per programmatori C#)](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) e [Espressioni lambda (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).
 
 ## <a name="func-delegate"></a>Delegato Func
 
-Un delegato `Func` incapsula un metodo che restituisce un valore. In una firma `Func`, l'ultimo parametro di tipo, o più a destra, specifica sempre il tipo restituito. Una causa comune degli errori del compilatore è il tentativo di passare due parametri di input a un tipo <xref:System.Func%602?displayProperty=nameWithType>, che accetta un solo parametro di input. .NET definisce 17 versioni di `Func`: <xref:System.Func%601?displayProperty=nameWithType>, <xref:System.Func%602?displayProperty=nameWithType>, <xref:System.Func%603?displayProperty=nameWithType>e così via fino a <xref:System.Func%6017?displayProperty=nameWithType>.
+Un delegato `Func` incapsula un metodo che restituisce un valore. In `Func` una firma, l'ultimo parametro di tipo o all'estrema destra specifica sempre il tipo restituito. Una causa comune degli errori del compilatore è il tentativo di passare due parametri di input a un tipo <xref:System.Func%602?displayProperty=nameWithType>, che accetta un solo parametro di input. .NET definisce 17 `Func` <xref:System.Func%601?displayProperty=nameWithType>versioni <xref:System.Func%602?displayProperty=nameWithType> <xref:System.Func%603?displayProperty=nameWithType>di : , <xref:System.Func%6017?displayProperty=nameWithType>, , e così via fino a .
 
 ## <a name="action-delegate"></a>Delegato Action
 
-Un delegato <xref:System.Action?displayProperty=nameWithType> incapsula un metodo (Sub in Visual Basic) che non restituisce un valore. In una firma di tipo `Action`, i parametri di tipo rappresentano solo i parametri di input. Come `Func`, .NET definisce 17 versioni di `Action`, da una versione priva di parametri di tipo fino a una versione con 16 parametri di tipo.
+Un <xref:System.Action?displayProperty=nameWithType> delegato incapsula un metodo (Sub in Visual Basic) che non restituisce un valore. In `Action` una firma del tipo, i parametri di tipo rappresentano solo parametri di input. Analogamente `Func`a . .NET `Action`definisce 17 versioni di , da una versione che non dispone di parametri di tipo fino a una versione con 16 parametri di tipo.
 
 ## <a name="example"></a>Esempio
 

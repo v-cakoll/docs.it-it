@@ -10,10 +10,10 @@ helpviewer_keywords:
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
 ms.openlocfilehash: a332fef814f0c81914eb7b8c308de68f719fbaac
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714686"
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>Limitazione dell'accessibilità delle funzioni di accesso (Guida per programmatori C#)
@@ -56,7 +56,7 @@ Le parti [get](../../language-reference/keywords/get.md) e [set](../../language-
   
  [!code-csharp[csProgGuideIndexers#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#5)]  
   
-## <a name="comments"></a>Comments  
+## <a name="comments"></a>Commenti  
  Si noti che sostituendo la dichiarazione `new private string Id` con `new public string Id`, si otterrà l'output:  
   
  `Name and ID in the base class: Name-BaseClass, ID-BaseClass`  

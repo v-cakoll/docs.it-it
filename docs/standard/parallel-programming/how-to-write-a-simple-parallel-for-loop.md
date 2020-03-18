@@ -11,10 +11,10 @@ helpviewer_keywords:
 - parallel for loops, how to use
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
 ms.openlocfilehash: 78f07a4f0118c6bce7a043f111988281ddd6add0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139662"
 ---
 # <a name="how-to-write-a-simple-parallelfor-loop"></a>Procedura: scrivere un ciclo Parallel.For semplice
@@ -22,7 +22,7 @@ ms.locfileid: "73139662"
 Questo argomento contiene due esempi che mostrano il metodo <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. Il primo usa l'overload del metodo <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType>, mentre il secondo usa l'overload <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType>, ovvero i due overload più semplici del metodo <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. È possibile usare questi due overload del metodo <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> quando non è necessario annullare il ciclo, interrompere le iterazioni del ciclo o mantenere qualsiasi stato locale dei thread.
 
 > [!NOTE]
-> Questa documentazione usa espressioni lambda per definire delegati in TPL. Se non si ha familiarità con le espressioni lambda in C# o Visual Basic, vedere [Espressioni lambda in PLINQ e TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).
+> Questa documentazione usa espressioni lambda per definire delegati in TPL. Se non si ha familiarità con le espressioni lambda in Visual Basic o in Visual Basic, vedere [Espressioni lambda in PLINQ e TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).
 
 Il primo esempio calcola le dimensioni dei file in una singola directory. Il secondo calcola il prodotto di due matrici.
 

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
 ms.openlocfilehash: 18f233ac4c5afa63ec31e83d5fff8f0a57f9146f
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74203991"
 ---
 # <a name="merge-options-in-plinq"></a>Opzioni di merge in PLINQ
@@ -32,7 +32,7 @@ Quando una query è in esecuzione come parallela, PLINQ partiziona la sequenza d
   
 - `Not Buffered`  
   
-     L'opzione <xref:System.Linq.ParallelMergeOptions.NotBuffered> fa in modo che ogni elemento elaborato venga restituito da ogni thread non appena viene prodotto. Questo comportamento è simile alla "trasmissione" dell'output. Se l'operatore <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> è presente nella query, `NotBuffered` mantiene l'ordine degli elementi di origine. Anche se `NotBuffered` inizia a produrre risultati non appena sono disponibili, il tempo totale per produrre tutti i risultati potrebbe essere ancora più lungo rispetto all'uso di una delle altre opzioni di merge.  
+     L'opzione <xref:System.Linq.ParallelMergeOptions.NotBuffered> fa in modo che ogni elemento elaborato venga restituito da ogni thread non appena viene prodotto. Questo comportamento è simile alla "trasmissione" dell'output. Se l'operatore <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> è presente nella query, `NotBuffered` mantiene l'ordine degli elementi di origine. Anche `NotBuffered` se inizia a produrre risultati non appena sono disponibili, il tempo totale per produrre tutti i risultati potrebbe essere ancora più lungo rispetto all'utilizzo di una delle altre opzioni di unione.  
   
 - `Auto Buffered`  
   
@@ -47,17 +47,17 @@ Quando una query è in esecuzione come parallela, PLINQ partiziona la sequenza d
   
 |Operatore|Restrizioni|  
 |--------------|------------------|  
-|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|Nessuna|  
-|<xref:System.Linq.ParallelEnumerable.Cast%2A>|Nessuna|  
+|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|nessuno|  
+|<xref:System.Linq.ParallelEnumerable.Cast%2A>|nessuno|  
 |<xref:System.Linq.ParallelEnumerable.Concat%2A>|Query non ordinate che hanno solo un'origine matrice o elenco.|  
-|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|Nessuna|  
-|<xref:System.Linq.ParallelEnumerable.OfType%2A>|Nessuna|  
+|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|nessuno|  
+|<xref:System.Linq.ParallelEnumerable.OfType%2A>|nessuno|  
 |<xref:System.Linq.ParallelEnumerable.Reverse%2A>|Query non ordinate che hanno solo un'origine matrice o elenco.|  
-|<xref:System.Linq.ParallelEnumerable.Select%2A>|Nessuna|  
-|<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|Nessuna|  
-|<xref:System.Linq.ParallelEnumerable.Skip%2A>|Nessuna|  
-|<xref:System.Linq.ParallelEnumerable.Take%2A>|Nessuna|  
-|<xref:System.Linq.ParallelEnumerable.Where%2A>|Nessuna|  
+|<xref:System.Linq.ParallelEnumerable.Select%2A>|nessuno|  
+|<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|nessuno|  
+|<xref:System.Linq.ParallelEnumerable.Skip%2A>|nessuno|  
+|<xref:System.Linq.ParallelEnumerable.Take%2A>|nessuno|  
+|<xref:System.Linq.ParallelEnumerable.Where%2A>|nessuno|  
   
  Tutti gli altri operatori di query PLINQ potrebbero ignorare le opzioni di merge fornito dall'utente. Alcuni operatori di query, ad esempio <xref:System.Linq.ParallelEnumerable.Reverse%2A> e <xref:System.Linq.ParallelEnumerable.OrderBy%2A>, non possono generare elementi finché tutti non sono stati prodotti e riordinati. Quando viene usato <xref:System.Linq.ParallelMergeOptions> in una query che contiene anche un operatore, ad esempio <xref:System.Linq.ParallelEnumerable.Reverse%2A>, il comportamento di merge non verrà quindi applicato nella query finché tale operatore non avrà prodotto i risultati.  
   
@@ -66,4 +66,4 @@ Quando una query è in esecuzione come parallela, PLINQ partiziona la sequenza d
 ## <a name="see-also"></a>Vedere anche
 
 - [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
-- [Procedura: Specificare le opzioni di merge in PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)
+- [Procedura: specificare le opzioni di merge in PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)

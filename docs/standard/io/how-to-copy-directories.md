@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: copiare le directory'
+title: 'Procedura: copiare directory'
 ms.date: 12/27/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - directories [.NET Framework], copying
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
 ms.openlocfilehash: 5d40db7f902dac8bd6bbdc1510be8e56a321be30
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159455"
 ---
-# <a name="how-to-copy-directories"></a>Procedura: copiare le directory
+# <a name="how-to-copy-directories"></a>Procedura: copiare directory
 Questo argomento illustra come usare le classi di I/O per copiare in modalità sincrona il contenuto di una directory in un'altra posizione.
 
 Per un esempio di copia di file asincrona, vedere [I/O di file asincrono](../../../docs/standard/io/asynchronous-file-i-o.md).
@@ -39,4 +39,4 @@ In questo esempio le sottodirectory vengono copiate impostando l'elemento `copyS
 - <xref:System.IO.FileStream>
 - [I/O di file e di flussi](../../../docs/standard/io/index.md)
 - [Attività di I/O comuni](../../../docs/standard/io/common-i-o-tasks.md)
-- [I/O di file asincrono](../../../docs/standard/io/asynchronous-file-i-o.md)
+- [I/O di file asincroni](../../../docs/standard/io/asynchronous-file-i-o.md)

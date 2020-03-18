@@ -10,10 +10,10 @@ helpviewer_keywords:
 - TPL dataflow library
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
 ms.openlocfilehash: 6c589e85a0bbfb3f0b5858698ffb2a294ff88cf2
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73973774"
 ---
 # <a name="dataflow-task-parallel-library"></a>Flusso di dati (Task Parallel Library)
@@ -36,7 +36,7 @@ La libreria Task Parallel Library (TPL) fornisce componenti del flusso di dati p
   
  Per un esempio di connessione di blocchi di flussi di dati per formare una pipeline di base, vedere [Procedura dettagliata: creazione di una pipeline del flusso di dati](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md). Per un esempio di connessione di blocchi di flussi di dati per formare una rete più complessa, vedere [Procedura dettagliata: uso del flusso di dati in un'applicazione Windows Forms](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md). Per un esempio di scollegamento di una destinazione da un'origine dopo l'offerta di un messaggio alla destinazione da parte dell'origine, vedere [Procedura: Scollegare i blocchi di flussi di dati](../../../docs/standard/parallel-programming/how-to-unlink-dataflow-blocks.md).  
   
-#### <a name="filtering"></a>Filtro  
+#### <a name="filtering"></a>Filtri  
  Quando si chiama il metodo <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A?displayProperty=nameWithType> per collegare un'origine a una destinazione, è possibile fornire un delegato tramite cui si stabilisce se da parte del blocco di destinazione viene accettato o rifiutato un messaggio in base al valore del messaggio in questione. Questo meccanismo di filtro è utile per garantire la ricezione solo di determinati valori da parte di un blocco di flussi di dati. Per la maggior parte dei tipi di blocchi di flussi di dati predefiniti, se un blocco di origine è connesso a più blocchi di destinazione, quando da parte di un blocco di destinazione viene rifiutato un messaggio, quest'ultimo tramite l'origine viene offerto alla destinazione successiva. L'ordine di offerta dei messaggi da parte dell'origine alle destinazioni viene definito dall'origine e può variare a seconda del tipo di origine. L'offerta di un messaggio da parte della maggior parte dei tipi di blocco di origine viene arrestata dopo l'accettazione del messaggio in questione da una destinazione. Un'eccezione a questa regola è la classe <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> mediante la quale ogni messaggio viene offerto a tutte le destinazioni, anche se viene rifiutato da alcune di queste. Per un esempio che usa il filtro per elaborare solo determinati messaggi, vedere [Procedura dettagliata: uso del flusso di dati in un'applicazione Windows Forms](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
   
 > [!IMPORTANT]
@@ -143,7 +143,7 @@ La libreria Task Parallel Library (TPL) fornisce componenti del flusso di dati p
 #### <a name="summary-of-delegate-types"></a>Riepilogo dei tipi delegati  
  Nella tabella seguente vengono riepilogati i tipi delegati che possono essere forniti agli oggetti <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> e <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602>. Viene inoltre specificato se il tipo delegato viene eseguito in modo sincrono o asincrono.  
   
-|Digitare|Tipo delegato sincrono|Tipo delegato asincrono|  
+|Type|Tipo delegato sincrono|Tipo delegato asincrono|  
 |----------|-------------------------------|--------------------------------|  
 |<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|`System.Action`|`System.Func<TInput, Task>`|  
 |<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|`System.Func<TInput, TOutput>`|`System.Func<TInput, Task<TOutput>>`|  
@@ -191,7 +191,7 @@ La libreria Task Parallel Library (TPL) fornisce componenti del flusso di dati p
 ## <a name="configuring-dataflow--block-behavior"></a>Configurazione del comportamento dei blocchi di flussi di dati  
  È possibile abilitare opzioni aggiuntive fornendo un oggetto <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions?displayProperty=nameWithType> al costruttore dei tipi di blocchi di flussi di dati. Tramite queste opzioni viene controllato il comportamento dell'utilità di pianificazione mediante la quale vengono gestiti l'attività sottostante e il grado di parallelismo. L'oggetto <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions> dispone inoltre di tipi derivati tramite cui viene fornito il comportamento specifico di determinati tipi di blocchi di flussi di dati. Nella tabella seguente viene riepilogato il tipo di opzioni associato a ogni tipo di blocco di flussi di dati.  
   
-|Tipo di blocco di flussi di dati|Tipo <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions>|  
+|Tipo di blocco di flussi di dati|Tipo di<xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions>|  
 |-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Threading.Tasks.Dataflow.BufferBlock%601>|<xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions>|  
 |<xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601>|<xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions>|  
@@ -253,9 +253,9 @@ La libreria Task Parallel Library (TPL) fornisce componenti del flusso di dati p
 |[Procedura: scollegare i blocchi di flussi di dati](../../../docs/standard/parallel-programming/how-to-unlink-dataflow-blocks.md)|Illustra come usare il metodo <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> per scollegare un blocco di destinazione dall'origine dopo che l'origine ha offerto un messaggio alla destinazione.|  
 |[Procedura dettagliata: uso del flusso di dati in un'applicazione Windows Forms](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)|Viene illustrato come creare una rete di blocchi di flussi di dati tramite cui viene eseguita l'elaborazione di immagini in un'applicazione Windows Form.|  
 |[Procedura: annullare un blocco di flussi di dati](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md)|Viene illustrato come utilizzare l'annullamento in un'applicazione Windows Form.|  
-|[Procedura: usare JoinBlock per leggere dati da più origini](../../../docs/standard/parallel-programming/how-to-use-joinblock-to-read-data-from-multiple-sources.md)|Viene illustrato come utilizzare la classe <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> per eseguire un'operazione quando i dati sono disponibili da più origini e come utilizzare la modalità non greedy per consentire a più blocchi join di condividere in modo più efficiente un'origine dati.|  
+|[Procedura: utilizzare JoinBlock per leggere dati da più origini](../../../docs/standard/parallel-programming/how-to-use-joinblock-to-read-data-from-multiple-sources.md)|Viene illustrato come utilizzare la classe <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> per eseguire un'operazione quando i dati sono disponibili da più origini e come utilizzare la modalità non greedy per consentire a più blocchi join di condividere in modo più efficiente un'origine dati.|  
 |[Procedura: specificare il grado di parallelismo in un blocco di flussi di dati](../../../docs/standard/parallel-programming/how-to-specify-the-degree-of-parallelism-in-a-dataflow-block.md)|Viene illustrato come impostare la proprietà <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions.MaxDegreeOfParallelism%2A> per consentire a un blocco di flussi di dati di esecuzione di elaborare più messaggi alla volta.|  
 |[Procedura: specificare un'utilità di pianificazione in un blocco di flussi di dati](../../../docs/standard/parallel-programming/how-to-specify-a-task-scheduler-in-a-dataflow-block.md)|Viene illustrato come associare una specifica Utilità di pianificazione quando si utilizza il flusso di dati nell'applicazione.|  
-|[Procedura dettagliata: uso di BatchBlock e BatchedJoinBlock per migliorare l'efficienza](../../../docs/standard/parallel-programming/walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md)|Viene descritto come utilizzare la classe <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> per migliorare l'efficienza delle operazioni di inserimento nel database e come utilizzare la classe <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> per acquisire i risultati e tutte le eccezioni che si verificano durante la lettura da un database da parte del programma.|  
+|[Procedura dettagliata: utilizzo di BatchBlock e BatchedJoinBlock per migliorare l'efficienza](../../../docs/standard/parallel-programming/walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md)|Viene descritto come utilizzare la classe <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> per migliorare l'efficienza delle operazioni di inserimento nel database e come utilizzare la classe <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> per acquisire i risultati e tutte le eccezioni che si verificano durante la lettura da un database da parte del programma.|  
 |[Procedura dettagliata: creazione di un tipo di blocco di flussi di dati personalizzato](../../../docs/standard/parallel-programming/walkthrough-creating-a-custom-dataflow-block-type.md)|Vengono illustrati due modi per creare un tipo di blocco di flussi di dati tramite cui viene implementato il comportamento personalizzato.|  
 |[Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|Viene introdotta TPL, una libreria tramite cui viene semplificata la programmazione parallela e concorrente nelle applicazioni .NET Framework.|

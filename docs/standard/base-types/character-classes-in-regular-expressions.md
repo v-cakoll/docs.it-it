@@ -13,42 +13,42 @@ helpviewer_keywords:
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 ms.openlocfilehash: 07bd63c90bc8d78c9831e2007695a232a85111b1
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159338"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Classi di caratteri nelle espressioni regolari
 
 Una classe di caratteri definisce un set di caratteri, di cui uno qualsiasi può verificarsi in una stringa di input per trovare una corrispondenza. Il linguaggio delle espressioni regolari di .NET supporta le classi di caratteri seguenti:  
   
-- Gruppi di caratteri positivi. Un carattere nella stringa di input deve corrispondere a un set di caratteri specificato. Per altre informazioni, vedere [Gruppo di caratteri positivi](#PositiveGroup).  
+- Gruppi di caratteri positivi. Un carattere nella stringa di input deve corrispondere a un set di caratteri specificato. Per ulteriori informazioni, consultate [Gruppo di caratteri positivi.](#PositiveGroup)  
   
-- Gruppi di caratteri negativi. Un carattere nella stringa di input non deve corrispondere a un set di caratteri specificato. Per altre informazioni, vedere [Gruppo di caratteri negativi](#NegativeGroup).  
+- Gruppi di caratteri negativi. Un carattere nella stringa di input non deve corrispondere a un set di caratteri specificato. Per ulteriori informazioni, consultate [Gruppo di caratteri negativi.](#NegativeGroup)  
   
-- Qualsiasi carattere. Il carattere `.` (punto) in un'espressione regolare è un carattere jolly che corrisponde a qualsiasi carattere, eccetto `\n`. Per altre informazioni, vedere [Qualsiasi carattere](#AnyCharacter).  
+- Qualsiasi carattere. Il carattere `.` (punto) in un'espressione regolare è un carattere jolly che corrisponde a qualsiasi carattere, eccetto `\n`. Per ulteriori informazioni, consultate [Qualsiasi carattere.](#AnyCharacter)  
   
-- Categoria generale Unicode o blocco denominato. Per trovare una corrispondenza, un carattere nella stringa di input deve appartenere a una particolare categoria Unicode o essere compreso in un intervallo contiguo di caratteri Unicode. Per altre informazioni, vedere [Categoria Unicode o blocco Unicode](#CategoryOrBlock).  
+- Categoria generale Unicode o blocco denominato. Per trovare una corrispondenza, un carattere nella stringa di input deve appartenere a una particolare categoria Unicode o essere compreso in un intervallo contiguo di caratteri Unicode. Per ulteriori informazioni, vedere [Categoria Unicode o Blocco Unicode](#CategoryOrBlock).  
   
-- Categoria Unicode generale o blocco denominato. Per trovare una corrispondenza, un carattere nella stringa di input non deve appartenere a una particolare categoria Unicode o non deve essere compreso in un intervallo contiguo di caratteri Unicode. Per altre informazioni, vedere [Categoria Unicode negativa o blocco Unicode](#NegativeCategoryOrBlock).  
+- Categoria Unicode generale o blocco denominato. Per trovare una corrispondenza, un carattere nella stringa di input non deve appartenere a una particolare categoria Unicode o non deve essere compreso in un intervallo contiguo di caratteri Unicode. Per ulteriori informazioni, vedere [Categoria Unicode negativa o Blocco Unicode](#NegativeCategoryOrBlock).  
   
-- Carattere alfanumerico. Un carattere nella stringa di input può appartenere a qualsiasi categoria Unicode appropriata per i caratteri alfanumerico. Per altre informazioni, vedere [Carattere alfanumerico](#WordCharacter).  
+- Carattere alfanumerico. Un carattere nella stringa di input può appartenere a qualsiasi categoria Unicode appropriata per i caratteri alfanumerico. Per ulteriori informazioni, vedere [Carattere di Word](#WordCharacter).  
   
-- Carattere non alfanumerico. Un carattere nella stringa di input può appartenere a qualsiasi categoria Unicode che non sia un carattere alfanumerico. Per altre informazioni, vedere [Carattere non alfanumerico](#NonWordCharacter).  
+- Carattere non alfanumerico. Un carattere nella stringa di input può appartenere a qualsiasi categoria Unicode che non sia un carattere alfanumerico. Per ulteriori informazioni, vedere [Carattere non word](#NonWordCharacter).  
   
-- Spazio vuoto. Un carattere nella stringa di input può essere qualsiasi carattere separatore Unicode, nonché un numero qualsiasi di caratteri di controllo. Per altre informazioni, vedere [Spazio vuoto](#WhitespaceCharacter).  
+- Spazio vuoto. Un carattere nella stringa di input può essere qualsiasi carattere separatore Unicode, nonché un numero qualsiasi di caratteri di controllo. Per ulteriori informazioni, consultate [Carattere spazio vuoto.](#WhitespaceCharacter)  
   
-- Carattere diverso da uno spazio vuoto. Un carattere nella stringa di input può essere qualsiasi carattere diverso da uno spazio vuoto. Per altre informazioni, vedere [Carattere diverso da uno spazio vuoto](#NonWhitespaceCharacter).  
+- Carattere diverso da uno spazio vuoto. Un carattere nella stringa di input può essere qualsiasi carattere diverso da uno spazio vuoto. Per ulteriori informazioni, vedere [Carattere diverso da uno spazio](#NonWhitespaceCharacter)vuoto .  
   
-- Cifra decimale. Un carattere nella stringa di input può essere qualsiasi numero di caratteri classificati come cifre decimali Unicode. Per altre informazioni, vedere [Carattere cifra decimale](#DigitCharacter).  
+- Cifra decimale. Un carattere nella stringa di input può essere qualsiasi numero di caratteri classificati come cifre decimali Unicode. Per ulteriori informazioni, vedere [Carattere numerico decimale](#DigitCharacter).  
   
-- Cifra non decimale. Un carattere nella stringa di input può essere qualsiasi carattere tranne una cifra decimale Unicode. Per altre informazioni, vedere [Carattere cifra decimale](#NonDigitCharacter).  
+- Cifra non decimale. Un carattere nella stringa di input può essere qualsiasi carattere tranne una cifra decimale Unicode. Per ulteriori informazioni, vedere [Carattere numerico decimale](#NonDigitCharacter).  
   
- .NET supporta espressioni di sottrazione di classi di caratteri che consentono di definire un set di caratteri come risultato dell'esclusione di una classe di caratteri da un'altra classe di caratteri. Per altre informazioni, vedere [Sottrazione di classi di caratteri](#CharacterClassSubtraction).  
+ .NET supporta espressioni di sottrazione di classi di caratteri che consentono di definire un set di caratteri come risultato dell'esclusione di una classe di caratteri da un'altra classe di caratteri. Per ulteriori informazioni, consultate [Sottrazione di classi di caratteri.](#CharacterClassSubtraction)  
   
 > [!NOTE]
-> Le classi di caratteri che corrispondono a caratteri in base alla categoria, ad esempio [\w](#WordCharacter) per la corrispondenza con caratteri alfanumerici o [\p{}](#CategoryOrBlock) per la corrispondenza con una categoria Unicode, si basano sulla classe <xref:System.Globalization.CharUnicodeInfo> per offrire informazioni sulle categorie di caratteri.  A partire da .NET Framework 4.6.2, le categorie di caratteri si basano sullo [standard Unicode, versione 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). Da .NET Framework 4 a .NET Framework 4.6.1, si basano sullo [standard Unicode, versione 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
+> Le classi di caratteri che corrispondono ai caratteri per categoria, ad esempio ["w"](#WordCharacter) per trovare la corrispondenza con i caratteri alfanumerici o i caratteri [{} "p"](#CategoryOrBlock) per trovare una corrispondenza con una categoria Unicode, si basano sulla <xref:System.Globalization.CharUnicodeInfo> classe per fornire informazioni sulle categorie di caratteri.  A partire da .NET Framework 4.6.2, le categorie di caratteri si basano sullo [standard Unicode, versione 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). Da .NET Framework 4 a .NET Framework 4.6.1, si basano sullo [standard Unicode, versione 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
   
 <a name="PositiveGroup"></a>
 ## <a name="positive-character-group--"></a>Gruppo di caratteri positivi: [ ]  
@@ -58,13 +58,13 @@ Una classe di caratteri definisce un set di caratteri, di cui uno qualsiasi può
 
 `[*character_group*]`
 
- dove *character_group* è un elenco dei singoli caratteri che possono essere inclusi nella stringa di input affinché una corrispondenza riesca. *character_group* può contenere qualsiasi combinazione di uno o più caratteri letterali, [caratteri di escape](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md) o classi di caratteri.  
+ dove *character_group* è un elenco dei singoli caratteri che possono essere inclusi nella stringa di input affinché una corrispondenza riesca. *character_group* possono essere costituiti da qualsiasi combinazione di uno o più caratteri letterali, caratteri di [escape](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)o classi di caratteri.  
   
  Di seguito viene indicata la sintassi per specificare un intervallo di caratteri:  
   
 `[firstCharacter-lastCharacter]`  
   
- dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacter* è il carattere alla fine dell'intervallo. Un intervallo di caratteri è una serie contigua di caratteri definita specificando il primo carattere della serie, un trattino (-), quindi l'ultimo carattere della serie. Due caratteri sono contigui se hanno punti di codice Unicode adiacenti. *firstCharacter* deve essere il carattere con il punto di codice più basso, e *lastCharacter* deve essere il carattere con il punto di codice più alto.
+ dove *firstCharacter* è il carattere che inizia l'intervallo e *lastCharacter* è il carattere che termina l'intervallo. Un intervallo di caratteri è una serie contigua di caratteri definita specificando il primo carattere della serie, un trattino (-), quindi l'ultimo carattere della serie. Due caratteri sono contigui se hanno punti di codice Unicode adiacenti. *firstCharacter* deve essere il carattere con il punto di codice più basso, e *lastCharacter* deve essere il carattere con il punto di codice più alto.
 
 > [!NOTE]
 > Poiché un gruppo di caratteri positivi può includere sia un set di caratteri che un intervallo di caratteri, un carattere trattino (`-`) viene sempre interpretato come separatore di intervallo, a meno che non sia il primo o l'ultimo carattere del gruppo.
@@ -114,20 +114,20 @@ Di seguito viene indicata la sintassi per specificare un elenco di singoli carat
 
 `[*^character_group*]`
 
- dove *character_group* è un elenco dei singoli caratteri che non possono essere inclusi nella stringa di input affinché una corrispondenza riesca. *character_group* può contenere qualsiasi combinazione di uno o più caratteri letterali, [caratteri di escape](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md) o classi di caratteri.  
+ dove *character_group* è un elenco dei singoli caratteri che non possono essere inclusi nella stringa di input affinché una corrispondenza riesca. *character_group* possono essere costituiti da qualsiasi combinazione di uno o più caratteri letterali, caratteri di [escape](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)o classi di caratteri.  
   
  Di seguito viene indicata la sintassi per specificare un intervallo di caratteri:  
 
 `[^*firstCharacter*-*lastCharacter*]`
 
-dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacter* è il carattere alla fine dell'intervallo. Un intervallo di caratteri è una serie contigua di caratteri definita specificando il primo carattere della serie, un trattino (-), quindi l'ultimo carattere della serie. Due caratteri sono contigui se hanno punti di codice Unicode adiacenti. *firstCharacter* deve essere il carattere con il punto di codice più basso, e *lastCharacter* deve essere il carattere con il punto di codice più alto.
+dove *firstCharacter* è il carattere che inizia l'intervallo e *lastCharacter* è il carattere che termina l'intervallo. Un intervallo di caratteri è una serie contigua di caratteri definita specificando il primo carattere della serie, un trattino (-), quindi l'ultimo carattere della serie. Due caratteri sono contigui se hanno punti di codice Unicode adiacenti. *firstCharacter* deve essere il carattere con il punto di codice più basso, e *lastCharacter* deve essere il carattere con il punto di codice più alto.
 
 > [!NOTE]
 > Poiché un gruppo di caratteri negativi può includere sia un set di caratteri che un intervallo di caratteri, un carattere trattino (`-`) viene sempre interpretato come separatore di intervallo, a meno che non sia il primo o l'ultimo carattere del gruppo.
   
  Due o più intervalli di caratteri possono essere concatenati. Ad esempio, per specificare l'intervallo di cifre decimali comprese tra "0" e "9", l'intervallo di lettere minuscole comprese tra "a" e "f" e l'intervallo di lettere maiuscole comprese tra "A" e "F", usare `[0-9a-fA-F]`.  
   
- Il carattere di cursore principale (`^`) in un gruppo di caratteri negativi è obbligatorio e indica che il gruppo di caratteri è un gruppo di caratteri negativi anziché un gruppo di caratteri positivi.  
+ Il carattere di`^`inserimento iniziale ( ) in un gruppo di caratteri negativo è obbligatorio e indica che il gruppo di caratteri è un gruppo di caratteri negativi anziché un gruppo di caratteri positivi.  
   
 > [!IMPORTANT]
 > Un gruppo di caratteri negativi in un criterio di ricerca di espressioni regolari più grande non è un'asserzione di larghezza zero. Ovvero, dopo avere valutato il gruppo di caratteri negativi, il motore delle espressioni regolari avanza di un carattere nella stringa di input.  
@@ -182,11 +182,11 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  Costrutto dell'espressione regolare  
   
- *nome* `\p{` `}`  
+ `\p{`*nome*`}`  
   
- corrisponde a qualsiasi carattere appartenente a una categoria generale Unicode o a un blocco denominato, dove *name* è l'abbreviazione della categoria o il nome del blocco denominato. Per un elenco di abbreviazioni della categoria, vedere la sezione [Categorie generali Unicode supportate](#SupportedUnicodeGeneralCategories) successiva in questo argomento. Per un elenco dei blocchi denominati, vedere la sezione [Blocchi denominati supportati](#SupportedNamedBlocks) successiva in questo argomento.  
+ corrisponde a qualsiasi carattere che appartiene a una categoria generale Unicode o a un blocco denominato, dove *nome* è l'abbreviazione di categoria o il nome del blocco denominato. Per un elenco delle abbreviazioni di categoria, vedere la sezione [Categorie generali Unicode supportate](#SupportedUnicodeGeneralCategories) più avanti in questo argomento. Per un elenco dei blocchi denominati, vedere la sezione [Blocchi denominati supportati](#SupportedNamedBlocks) più avanti in questo argomento.  
   
- Nell'esempio seguente viene usato il costrutto `\p{`*name*`}` per individuare una corrispondenza per una categoria generale Unicode (in questo caso la categoria `Pd` o Punctuation, Dash) e un blocco denominato (i blocchi denominati `IsGreek` e `IsBasicLatin`).  
+ Nell'esempio riportato di seguito viene `\p{`utilizzato il costrutto *name* `}` per trovare una corrispondenza sia con una categoria generale Unicode (in questo caso, la `Pd`categoria , o Punteggiatura, Dash) sia un blocco denominato (i `IsGreek` blocchi e `IsBasicLatin` i blocchi denominati).  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/category1.cs#6)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/category1.vb#6)]  
@@ -211,11 +211,11 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  Costrutto dell'espressione regolare  
   
- *nome* `\P{` `}`  
+ `\P{`*nome*`}`  
   
- corrisponde a qualsiasi carattere non appartenente a una categoria generale Unicode o a un blocco denominato, dove *name* è l'abbreviazione della categoria o il nome del blocco denominato. Per un elenco di abbreviazioni della categoria, vedere la sezione [Categorie generali Unicode supportate](#SupportedUnicodeGeneralCategories) successiva in questo argomento. Per un elenco dei blocchi denominati, vedere la sezione [Blocchi denominati supportati](#SupportedNamedBlocks) successiva in questo argomento.  
+ corrisponde a qualsiasi carattere non appartenente a una categoria generale Unicode o a un blocco denominato, dove *name* è l'abbreviazione della categoria o il nome del blocco denominato. Per un elenco delle abbreviazioni di categoria, vedere la sezione [Categorie generali Unicode supportate](#SupportedUnicodeGeneralCategories) più avanti in questo argomento. Per un elenco dei blocchi denominati, vedere la sezione [Blocchi denominati supportati](#SupportedNamedBlocks) più avanti in questo argomento.  
   
- L'esempio seguente usa il costrutto `\P{`*name*`}` per rimuovere qualsiasi simbolo di valuta (in questo caso la categoria `Sc` o Symbol, Currency) dalle stringhe numeriche.  
+ Nell'esempio seguente `\P{`viene utilizzato il costrutto *name* `}` `Sc`per rimuovere tutti i simboli di valuta (in questo caso, la categoria , o Symbol, Currency) dalle stringhe numeriche.  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/notcategory1.cs#7)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/notcategory1.vb#7)]  
@@ -237,7 +237,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
 |Nd|Number, Decimal Digit|  
 |Pc|Punctuation, Connector. Questa categoria include dieci caratteri, tra cui quello più comunemente usato è (_) LOWLINE, u+005F.|  
   
- Se viene specificato il comportamento conforme a ECMAScript, `\w` equivale a `[a-zA-Z_0-9]`. Per informazioni sulle espressioni regolari ECMAScript, vedere la sezione "Comportamento di corrispondenza ECMAScript" in [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).  
+ Se viene specificato il comportamento conforme a ECMAScript, `\w` equivale a `[a-zA-Z_0-9]`. Per informazioni sulle espressioni regolari ECMAScript, vedere la sezione ["Comportamento](../../../docs/standard/base-types/regular-expression-options.md)di corrispondenza ECMAScript" in Opzioni espressioni regolari .  
   
 > [!NOTE]
 > Poiché corrisponde a qualsiasi carattere alfanumerico, l'elemento di linguaggio `\w` viene spesso usato con un quantificatore lazy se un criterio di ricerca di espressioni regolari tenta di ottenere più volte una corrispondenza con ogni carattere alfanumerico, seguito da un carattere alfanumerico specifico. Per altre informazioni, vedere [Quantificatori ](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
@@ -271,7 +271,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
 |Nd|Number, Decimal Digit|  
 |Pc|Punctuation, Connector. Questa categoria include dieci caratteri, tra cui quello più comunemente usato è (_) LOWLINE, u+005F.|  
   
- Se viene specificato il comportamento conforme a ECMAScript, `\W` equivale a `[^a-zA-Z_0-9]`. Per informazioni sulle espressioni regolari ECMAScript, vedere la sezione "Comportamento di corrispondenza ECMAScript" in [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).  
+ Se viene specificato il comportamento conforme a ECMAScript, `\W` equivale a `[^a-zA-Z_0-9]`. Per informazioni sulle espressioni regolari ECMAScript, vedere la sezione ["Comportamento](../../../docs/standard/base-types/regular-expression-options.md)di corrispondenza ECMAScript" in Opzioni espressioni regolari .  
   
 > [!NOTE]
 > Poiché corrisponde a qualsiasi carattere non alfanumerico, l'elemento di linguaggio `\W` viene spesso usato con un quantificatore lazy se un criterio di ricerca di espressioni regolari tenta di ottenere più volte una corrispondenza con ogni carattere non alfanumerico, seguito da un carattere non alfanumerico specifico. Per altre informazioni, vedere [Quantificatori ](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
@@ -303,7 +303,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
 |`\x85`|Puntini di sospensione o carattere NEXT LINE (NEL) (...), \u0085.|  
 |`\p{Z}`|Corrisponde a qualsiasi carattere separatore.|  
   
- Se viene specificato il comportamento conforme a ECMAScript, `\s` equivale a `[ \f\n\r\t\v]`. Per informazioni sulle espressioni regolari ECMAScript, vedere la sezione "Comportamento di corrispondenza ECMAScript" in [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).  
+ Se viene specificato il comportamento conforme a ECMAScript, `\s` equivale a `[ \f\n\r\t\v]`. Per informazioni sulle espressioni regolari ECMAScript, vedere la sezione ["Comportamento](../../../docs/standard/base-types/regular-expression-options.md)di corrispondenza ECMAScript" in Opzioni espressioni regolari .  
   
  L'esempio seguente illustra la classe di caratteri `\s`. Definisce un criterio di ricerca di espressioni regolari, `\b\w+(e)?s(\s|$)`, che corrisponde a una parola che termina in "s" o "es" seguita da uno spazio vuoto o dalla fine della stringa di input. L'espressione regolare viene interpretata come illustrato nella tabella seguente.  
   
@@ -322,7 +322,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
 ## <a name="non-whitespace-character-s"></a>Carattere diverso dallo spazio vuoto: \S  
  `\S` trova la corrispondenza con qualsiasi carattere diverso da uno spazio. È equivalente al criterio di ricerca di espressioni regolari `[^\f\n\r\t\v\x85\p{Z}]` o è il contrario del criterio di ricerca di espressioni regolari equivalente a `\s`, che corrisponde a spazi vuoti. Per altre informazioni, vedere [Spazio vuoto: \s](#WhitespaceCharacter).  
   
- Se viene specificato il comportamento conforme a ECMAScript, `\S` equivale a `[^ \f\n\r\t\v]`. Per informazioni sulle espressioni regolari ECMAScript, vedere la sezione "Comportamento di corrispondenza ECMAScript" in [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).  
+ Se viene specificato il comportamento conforme a ECMAScript, `\S` equivale a `[^ \f\n\r\t\v]`. Per informazioni sulle espressioni regolari ECMAScript, vedere la sezione ["Comportamento](../../../docs/standard/base-types/regular-expression-options.md)di corrispondenza ECMAScript" in Opzioni espressioni regolari .  
   
  L'esempio seguente illustra l'elemento di linguaggio `\S`. Il criterio di espressione regolare `\b(\S+)\s?` corrisponde a stringhe delimitate da spazi vuoti. Il secondo elemento nell'oggetto <xref:System.Text.RegularExpressions.GroupCollection> della corrispondenza contiene la stringa corrispondente. L'espressione regolare può essere interpretata come indicato nella tabella seguente.  
   
@@ -339,9 +339,9 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
 ## <a name="decimal-digit-character-d"></a>Carattere cifra decimale: \d  
  `\d` trova la corrispondenza con qualsiasi cifra decimale. È equivalente al criterio di ricerca di espressioni regolari `\p{Nd}` che include le cifre decimali standard da 0 a 9 e le cifre decimali di diversi altri set di caratteri.  
   
- Se viene specificato il comportamento conforme a ECMAScript, `\d` equivale a `[0-9]`. Per informazioni sulle espressioni regolari ECMAScript, vedere la sezione "Comportamento di corrispondenza ECMAScript" in [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).  
+ Se viene specificato il comportamento conforme a ECMAScript, `\d` equivale a `[0-9]`. Per informazioni sulle espressioni regolari ECMAScript, vedere la sezione ["Comportamento](../../../docs/standard/base-types/regular-expression-options.md)di corrispondenza ECMAScript" in Opzioni espressioni regolari .  
   
- L'esempio seguente illustra l'elemento di linguaggio `\d`. Viene verificato se una stringa di input rappresenta un numero di telefono valido negli Stati Uniti e in Canada. Il criterio di espressione regolare `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` è definito nel modo illustrato nella tabella seguente.  
+ L'esempio seguente illustra l'elemento di linguaggio `\d`. Viene verificato se una stringa di input rappresenta un numero di telefono valido negli Stati Uniti e in Canada. Il criterio di ricerca di espressioni regolari `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` è definito nel modo illustrato nella tabella seguente.  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
@@ -361,9 +361,9 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
 ## <a name="non-digit-character-d"></a>Carattere non numerico: \D  
  `\D` trova la corrispondenza con qualsiasi carattere non numerico. È equivalente al criterio di ricerca di espressioni regolari `\P{Nd}`.  
   
- Se viene specificato il comportamento conforme a ECMAScript, `\D` equivale a `[^0-9]`. Per informazioni sulle espressioni regolari ECMAScript, vedere la sezione "Comportamento di corrispondenza ECMAScript" in [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).  
+ Se viene specificato il comportamento conforme a ECMAScript, `\D` equivale a `[^0-9]`. Per informazioni sulle espressioni regolari ECMAScript, vedere la sezione ["Comportamento](../../../docs/standard/base-types/regular-expression-options.md)di corrispondenza ECMAScript" in Opzioni espressioni regolari .  
   
- Nell'esempio seguente viene illustrato l'elemento di linguaggio \D. Verifica se una stringa, ad esempio un numero parte, è formata dalla combinazione corretta di caratteri decimali e non decimali. Il criterio di espressione regolare `^\D\d{1,5}\D*$` è definito nel modo illustrato nella tabella seguente.  
+ Nell'esempio seguente viene illustrato l'elemento di linguaggio \D. Verifica se una stringa, ad esempio un numero parte, è formata dalla combinazione corretta di caratteri decimali e non decimali. Il criterio di ricerca di espressioni regolari `^\D\d{1,5}\D*$` è definito nel modo illustrato nella tabella seguente.  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
@@ -570,5 +570,5 @@ In .NET sono supportati i blocchi denominati elencati nella tabella seguente. Il
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Char.GetUnicodeCategory%2A>
-- [Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Linguaggio delle espressioni regolari - Guida di riferimento rapidoRegular Expression Language - Quick Reference](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md)

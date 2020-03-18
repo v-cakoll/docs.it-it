@@ -10,18 +10,18 @@ helpviewer_keywords:
 - implicit keyword [C#]
 - conversion operator [C#]
 - user-defined conversion [C#]
-ms.openlocfilehash: cddb3139742329303989c6fed9e9b64474e6b1f9
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: b6061492cc1a4f756196fb8a9050b68651431e38
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78238858"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847267"
 ---
 # <a name="user-defined-conversion-operators-c-reference"></a>Operatori di conversione definiti dall'utente (riferimenti per C#)
 
 Un tipo definito dall'utente può definire una conversione implicita o esplicita da o in un altro tipo.
 
-Le conversioni implicite non richiedono una sintassi specifica per essere richiamate e possono essere usate in diverse situazioni, ad esempio durante le chiamate di metodi e assegnazioni. Le conversioni implicite predefinite C# hanno sempre esito positivo e non generano mai un'eccezione. Anche le conversioni implicite definite dall'utente si devono comportare nello stesso modo. Se una conversione personalizzata può generare un'eccezione o una perdita di informazioni, è necessario definirla come conversione esplicita.
+Le conversioni implicite non richiedono una sintassi specifica per essere richiamate e possono essere usate in diverse situazioni, ad esempio durante le chiamate di metodi e assegnazioni. Le conversioni implicite predefinite di C' hanno sempre esito positivo e non generano mai un'eccezione. Anche le conversioni implicite definite dall'utente si devono comportare nello stesso modo. Se una conversione personalizzata può generare un'eccezione o una perdita di informazioni, è necessario definirla come conversione esplicita.
 
 Le conversioni definite dall'utente non vengono considerate dagli operatori [is](type-testing-and-cast.md#is-operator) e [as](type-testing-and-cast.md#as-operator). Usare l'[operatore cast ()](type-testing-and-cast.md#cast-operator-) per richiamare una conversione esplicita definita dall'utente.
 
@@ -29,7 +29,7 @@ Usare `operator` e `implicit` o le parole chiave `explicit` per definire rispett
 
 L'esempio seguente illustra come definire una conversione implicita ed esplicita:
 
-[!code-csharp[implicit an explicit conversions](~/samples/snippets/csharp/language-reference/operators/UserDefinedConversions.cs)]
+[!code-csharp[implicit an explicit conversions](snippets/UserDefinedConversions.cs)]
 
 È anche possibile usare la parola chiave `operator` per eseguire l'overload di un operatore C# predefinito. Per altre informazioni, vedere [Overload degli operatori](operator-overloading.md).
 
@@ -40,14 +40,14 @@ Per altre informazioni, vedere le sezioni seguenti delle [specifiche del linguag
 - [Operatori di conversione](~/_csharplang/spec/classes.md#conversion-operators)
 - [Conversioni definite dall'utente](~/_csharplang/spec/conversions.md#user-defined-conversions)
 - [Conversioni implicite](~/_csharplang/spec/conversions.md#implicit-conversions)
-- [Conversioni esplicite](~/_csharplang/spec/conversions.md#explicit-conversions)
+- [Conversioni espliciteExplicit conversions](~/_csharplang/spec/conversions.md#explicit-conversions)
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
+- [Informazioni di riferimento su C#](../index.md)
 - [Operatori C#](index.md)
-- [Overload degli operatori](operator-overloading.md)
+- [Sovraccarico dell'operatore](operator-overloading.md)
 - [Operatori di cast e di test del tipo](type-testing-and-cast.md)
 - [Esecuzione del cast e conversioni di tipi](../../programming-guide/types/casting-and-type-conversions.md)
-- [Linee guida di progettazione-operatori di conversione](../../../standard/design-guidelines/operator-overloads.md#conversion-operators)
+- [Linee guida di progettazione - Operatori di conversione](../../../standard/design-guidelines/operator-overloads.md#conversion-operators)
 - [Conversioni esplicite concatenate definite dall'utente in C#](https://docs.microsoft.com/archive/blogs/ericlippert/chained-user-defined-explicit-conversions-in-c)
