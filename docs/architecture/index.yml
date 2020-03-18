@@ -12,20 +12,20 @@ sections:
   - title: E-book pubblicati
     items:
       - html: <ul><li><p><a href="grpc-for-wcf-developers/index">ASP.NET Core gRPC per sviluppatori WCF</a></p>
-      - html: '<p>In questa guida vengono illustrate le funzionalità di gRPC, che riguardano ogni concetto per le funzionalità equivalenti di WCF e vengono fornite indicazioni per la migrazione di un''applicazione WCF esistente a gRPC.</p></li></ul>'
-      - html: <ul><li><p><a href="containerized-lifecycle/index">Ciclo di vita delle applicazioni Docker in contenitori con la piattaforma e gli strumenti Microsoft</a></p>
+      - html: '<p>Questa guida spiega cos''è gRPC, che si relaziona ogni concetto alle funzionalità equivalenti di WCF e offre indicazioni per la migrazione di un''app WCF esistente a gRPC.</p></li></ul>'
+      - html: <ul><li><p><a href="containerized-lifecycle/index">Ciclo di vita dell'applicazione Docker in contenitore con la piattaforma e gli strumenti Microsoft</a></p>
       - html: '<p>In questa guida viene fornita un''introduzione ai processi end-to-end consigliati del ciclo di vita che verranno usati per sviluppare, convalidare e distribuire applicazioni in contenitori Docker con Visual Studio e Microsoft Azure.</p></li></ul>'
-      - html: <ul><li><p><a href="modernize-with-azure-containers/index">Modernizza le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows</a></p>
+      - html: <ul><li><p><a href="modernize-with-azure-containers/index">Modernizza le applicazioni .NET esistenti con i contenitori cloud e Windows di Azure</a></p>
       - html: '<p>In questa guida viene fornita un''introduzione alle strategie necessarie per eseguire la migrazione di applicazioni Web esistenti nel cloud di Azure e nei contenitori di Windows. Si apprenderanno informazioni importanti su strategie a livello di codice, migrazione dei dati, agenti di orchestrazione e processi Integrazione continua/Recapito continuo.</p></li></ul>'
-      - html: <ul><li><p><a href="modern-web-apps-azure/index">Progettare applicazioni Web moderne con ASP.NET Core e Azure</a></p>
+      - html: <ul><li><p><a href="modern-web-apps-azure/index">Progetta applicazioni web moderne con ASP.NET Core e Azure</a></p>
       - html: '<p>In questa guida viene fornita un''introduzione all''architettura consigliata, alla progettazione e ai processi di distribuzione usati per compilare applicazioni ASP.NET e ASP.NET Core e per ospitare tali applicazioni in Azure.</p></li></ul>'
-      - html: <ul><li><p><a href="microservices/index">Architettura di applicazioni basate su contenitori e microservizi</a></p>
+      - html: <ul><li><p><a href="microservices/index">Progettazione di applicazioni basate su contenitori e microservizi</a></p>
       - html: <p>Questa guida offre un'introduzione allo sviluppo di applicazioni basate su microservizi e alla relativa gestione tramite i contenitori. Vengono descritti gli approcci alla progettazione e all'implementazione dell'architettura mediante i contenitori di .NET Core e Docker.</p></li></ul>
       - html: '<ul><li><p><a href="serverless/index">App serverless: architettura, modelli e implementazione di Azure</a></p>'
       - html: '<p>Questa guida illustra come compilare applicazioni serverless con esempi che usano Azure. Illustra vari approcci di architettura e progettazione, i vantaggi e le sfide del serverless, oltre a fornisce gli scenari e casi d''uso per le app serverless.</p></li></ul>'
   - title: E-book in anteprima
     items:
-      - html: <ul><li><p><a href="cloud-native/index">Architettura di app .NET native del cloud per Azure</a></p>
-      - html: '<p>Questa guida definisce il cloud nativo, introduce un''app di esempio compilata usando principi nativi del cloud e illustra gli argomenti comuni alla maggior parte delle applicazioni native del cloud.</p></li></ul>'
-      - html: <ul><li><p><a href="blazor-for-web-forms-developers/index">Blazer per sviluppatori Web Form ASP.NET</a></p>
-      - html: <p>Introduzione a blazer per gli sviluppatori di Web Form ASP.NET. Scopri come creare app Web con stack completo con .NET usando blazer e .NET Core in modo semplice e familiare.</p></li></ul>
+      - html: <ul><li><p><a href="cloud-native/index">Architettura di app .NET cloud native per Azure</a></p>
+      - html: '<p>Questa guida definisce il cloud nativo, introduce un''app di esempio creata con principi nativi nel cloud e copre gli argomenti comuni alla maggior parte delle applicazioni native nel cloud.</p></li></ul>'
+      - html: <ul><li><p><a href="blazor-for-web-forms-developers/index">Blazor per sviluppatori Web Forms ASP.NET</a></p>
+      - html: <p>Introduzione a Blazor per sviluppatori web Form ASP.NET. Scopri come creare app Web full-stack con .NET usando Blazor e .NET Core in modo semplice e familiare.</p></li></ul>

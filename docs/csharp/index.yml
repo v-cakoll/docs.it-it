@@ -1,45 +1,45 @@
 ### YamlMime:Landing
 title: Documentazione di C#
-summary: Informazioni su come scrivere qualsiasi applicazione usando il C# linguaggio di programmazione sulla piattaforma .NET.
+summary: Informazioni su come scrivere qualsiasi applicazione usando il linguaggio di programmazione C ' nella piattaforma .NET.
 metadata:
-  title: 'C#documenti: introduzione, esercitazioni e informazioni di riferimento.'
-  description: 'Apprendimento C# della programmazione: per gli sviluppatori principianti, sviluppatori C#nuovi e esperti C# di .NET'
+  title: Documenti di C, per iniziare, esercitazioni, informazioni di riferimento.
+  description: Imparare la programmazione in C - per gli sviluppatori principianti, gli sviluppatori non hanno familiarità con c'è e gli sviluppatori esperti di C / .NET
   ms.topic: landing-page
   ms.date: 11/19/2019
   ms.openlocfilehash: 2bec49d0832a7d00d0fea247166a9ec073f37e11
-  ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
   ms.translationtype: MT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 12/25/2019
+  ms.lasthandoff: 03/15/2020
   ms.locfileid: "75339164"
 landingContent:
-- title: Impara a programmare inC#
+- title: 'Imparare a programmare in C #'
   linkLists:
   - linkListType: get-started
     links:
-    - text: Online, Interactive Hello World
+    - text: Online, interattivo Hello mondo
       url: tutorials/intro-to-csharp/hello-world.yml
-    - text: Matematica e numeri inC#
+    - text: 'Matematica e numeri in C #'
       url: tutorials/intro-to-csharp/numbers-in-csharp.yml
     - text: Esercitazioni introduttive
       url: tutorials/intro-to-csharp/index.md
-    - text: Creazione C# di app con Visual Studio
+    - text: Creazione di app in C' con Visual Studio
       url: https://docs.microsoft.com/visualstudio/get-started/csharp/tutorial-console
   - linkListType: video
     links:
     - text: Che cos'è C#?
       url: https://channel9.msdn.com/Series/CSharp-101/What-is-C/player
-    - text: C#serie di video 101
+    - text: Serie di video di C
       url: https://aka.ms/dotnet3-csharp
   - linkListType: download
     links:
     - text: Scaricare .NET Core SDK
       url: https://dotnet.microsoft.com/download
-- title: C#Nozioni
+- title: Nozioni fondamentali su C
   linkLists:
   - linkListType: overview
     links:
-    - text: Panoramica diC#
+    - text: 'Un tour di C #'
       url: tour-of-csharp/index.md
     - text: Contenuto di un programma C#
       url: programming-guide/inside-a-program/index.md
@@ -47,23 +47,23 @@ landingContent:
       url: programming-guide/main-and-command-args/index.md
   - linkListType: concept
     links:
-    - text: Sistema C# di tipi e .NET
+    - text: Il sistema di tipi C .
       url: programming-guide/types/index.md
     - text: LINQ (Language-Integrated Query)
       url: linq/index.md
-    - text: Async e await
+    - text: async e await
       url: programming-guide/concepts/async/index.md
   - linkListType: tutorial
     links:
-    - text: Ereditarietà orientata a oggetti
+    - text: Ereditarietà orientata agli oggetti
       url: tutorials/inheritance.md
-    - text: Usare LINQ per eseguire query sui dati
+    - text: Usare LINQ per eseguire query sui datiUse LINQ to query data
       url: tutorials/working-with-linq.md
-    - text: Formattare il testo usando l'interpolazione di stringhe
+    - text: Formattare il testo utilizzando l'interpolazione di stringhe
       url: tutorials/string-interpolation.md
-    - text: Esplora tutte le esercitazioni
+    - text: Sfoglia tutte le esercitazioni
       url: tutorials/index.md
-- title: Nuove funzionalità di C# 8,0
+- title: Nuove funzionalità di C .
   linkLists:
   - linkListType: whats-new
     links:
@@ -71,39 +71,39 @@ landingContent:
       url: whats-new/csharp-8.md
   - linkListType: overview
     links:
-    - text: Criteri di ricerca
+    - text: Corrispondenza dei criteri
       url: pattern-matching.md
     - text: Tipi riferimento nullable
       url: nullable-references.md
   - linkListType: concept
     links:
-    - text: Annotare le API per il supporto di valori null
+    - text: Annotare le API per il supporto dei valori NullAntate APIs for nullability
       url: nullable-attributes.md
   - linkListType: tutorial
     links:
-    - text: Utilizzare e generare flussi asincroni
+    - text: Usare e generare flussi asincroniConsume and generate async streams
       url: tutorials/generate-consume-asynchronous-stream.md
-    - text: Sviluppare con tipi di riferimento Nullable
+    - text: Sviluppare con tipi di riferimento nullableDevelop with nullable reference types
       url: tutorials/nullable-reference-types.md
-    - text: Aggiornare il codice esistente per usare i tipi di riferimento Nullable
+    - text: Aggiornare il codice esistente per usare i tipi di riferimento nullableUpgrade existing code to use nullable reference types
       url: tutorials/upgrade-to-nullable-references.md
-    - text: Usare i criteri di ricerca per algoritmi più espressivi
+    - text: Usare criteri di ricerca per algoritmi più espressiviUse pattern matching for more expressive algorithms
       url: tutorials/pattern-matching.md
-    - text: Interfacce di versione in modo sicuro con membri di interfaccia predefiniti
+    - text: Interfacce di versione sicura con membri di interfaccia predefiniti
       url: tutorials/default-interface-methods-versions.md
-    - text: Combinare le funzionalità con i membri di interfaccia predefiniti
+    - text: Combinazione di funzionalità con membri di interfaccia predefiniti
       url: tutorials/mixins-with-default-interface-methods.md
-    - text: Utilizzare subset utilizzando intervalli e indici
+    - text: Lavorare con sottoinsiemi utilizzando intervalli e indici
       url: tutorials/ranges-indexes.md
   - linkListType: reference
     links:
-    - text: Modifiche di rilievo nel C# compilatore
+    - text: Interruzione delle modifiche nel compilatore C
       url: whats-new/breaking-changes.md
 - title: Riferimenti per il linguaggio C#
   linkLists:
   - linkListType: reference
     links:
-    - text: Riferimenti per il linguaggio
+    - text: Informazioni di riferimento sul linguaggio
       url: language-reference/index.md
     - text: Parole chiave di C#
       url: language-reference/keywords/index.md

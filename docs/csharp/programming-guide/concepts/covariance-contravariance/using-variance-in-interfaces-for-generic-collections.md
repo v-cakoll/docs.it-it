@@ -2,22 +2,22 @@
 title: Uso della varianza nelle interfacce per le raccolte generiche (C#)
 ms.date: 07/20/2015
 ms.assetid: a44f0708-10fa-4c76-82cd-daa6e6b31e8e
-ms.openlocfilehash: 53aaf49ee0802c0d207e0b0a29661cee7c628b4d
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: b891ccde93e18baf5d5e814911666e9c6268e009
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595214"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169740"
 ---
-# <a name="using-variance-in-interfaces-for-generic-collections-c"></a><span data-ttu-id="65b59-102">Uso della varianza nelle interfacce per le raccolte generiche (C#)</span><span class="sxs-lookup"><span data-stu-id="65b59-102">Using Variance in Interfaces for Generic Collections (C#)</span></span>
-<span data-ttu-id="65b59-103">Un'interfaccia covariante consente ai propri metodi di restituire più tipi derivati rispetto a quelli specificati nell'interfaccia.</span><span class="sxs-lookup"><span data-stu-id="65b59-103">A covariant interface allows its methods to return more derived types than those specified in the interface.</span></span> <span data-ttu-id="65b59-104">Un'interfaccia controvariante consente ai propri metodi di accettare parametri di meno tipi derivati rispetto a quelli specificati nell'interfaccia.</span><span class="sxs-lookup"><span data-stu-id="65b59-104">A contravariant interface allows its methods to accept parameters of less derived types than those specified in the interface.</span></span>  
+# <a name="using-variance-in-interfaces-for-generic-collections-c"></a><span data-ttu-id="5b323-102">Uso della varianza nelle interfacce per le raccolte generiche (C#)</span><span class="sxs-lookup"><span data-stu-id="5b323-102">Using Variance in Interfaces for Generic Collections (C#)</span></span>
+<span data-ttu-id="5b323-103">Un'interfaccia covariante consente ai propri metodi di restituire più tipi derivati rispetto a quelli specificati nell'interfaccia.</span><span class="sxs-lookup"><span data-stu-id="5b323-103">A covariant interface allows its methods to return more derived types than those specified in the interface.</span></span> <span data-ttu-id="5b323-104">Un'interfaccia controvariante consente ai propri metodi di accettare parametri di meno tipi derivati rispetto a quelli specificati nell'interfaccia.</span><span class="sxs-lookup"><span data-stu-id="5b323-104">A contravariant interface allows its methods to accept parameters of less derived types than those specified in the interface.</span></span>  
   
- <span data-ttu-id="65b59-105">In .NET Framework 4 diverse interfacce già esistenti sono diventate covarianti e controvarianti.</span><span class="sxs-lookup"><span data-stu-id="65b59-105">In .NET Framework 4, several existing interfaces became covariant and contravariant.</span></span> <span data-ttu-id="65b59-106">Tra queste sono inclusi i tipi  <xref:System.Collections.Generic.IEnumerable%601> e <xref:System.IComparable%601>.</span><span class="sxs-lookup"><span data-stu-id="65b59-106">These include <xref:System.Collections.Generic.IEnumerable%601> and <xref:System.IComparable%601>.</span></span> <span data-ttu-id="65b59-107">In questo modo è possibile riutilizzare i metodi che funzionano con raccolte generiche di tipi di base per le raccolte di tipi derivati.</span><span class="sxs-lookup"><span data-stu-id="65b59-107">This enables you to reuse methods that operate with generic collections of base types for collections of derived types.</span></span>  
+ <span data-ttu-id="5b323-105">In .NET Framework 4 diverse interfacce già esistenti sono diventate covarianti e controvarianti.</span><span class="sxs-lookup"><span data-stu-id="5b323-105">In .NET Framework 4, several existing interfaces became covariant and contravariant.</span></span> <span data-ttu-id="5b323-106">Tra queste sono inclusi i tipi  <xref:System.Collections.Generic.IEnumerable%601> e <xref:System.IComparable%601>.</span><span class="sxs-lookup"><span data-stu-id="5b323-106">These include <xref:System.Collections.Generic.IEnumerable%601> and <xref:System.IComparable%601>.</span></span> <span data-ttu-id="5b323-107">In questo modo è possibile riutilizzare i metodi che funzionano con raccolte generiche di tipi di base per le raccolte di tipi derivati.</span><span class="sxs-lookup"><span data-stu-id="5b323-107">This enables you to reuse methods that operate with generic collections of base types for collections of derived types.</span></span>  
   
- <span data-ttu-id="65b59-108">Per un elenco di interfacce varianti in .NET Framework, vedere [Varianza nelle interfacce generiche (C#)](./variance-in-generic-interfaces.md).</span><span class="sxs-lookup"><span data-stu-id="65b59-108">For a list of variant interfaces in the .NET Framework, see [Variance in Generic Interfaces (C#)](./variance-in-generic-interfaces.md).</span></span>  
+ <span data-ttu-id="5b323-108">Per un elenco di interfacce varianti in .NET Framework, vedere [Varianza nelle interfacce generiche (C#)](./variance-in-generic-interfaces.md).</span><span class="sxs-lookup"><span data-stu-id="5b323-108">For a list of variant interfaces in the .NET Framework, see [Variance in Generic Interfaces (C#)](./variance-in-generic-interfaces.md).</span></span>  
   
-## <a name="converting-generic-collections"></a><span data-ttu-id="65b59-109">Convertire le raccolte generiche</span><span class="sxs-lookup"><span data-stu-id="65b59-109">Converting Generic Collections</span></span>  
- <span data-ttu-id="65b59-110">L'esempio seguente illustra i vantaggi del supporto di covarianza nell'interfaccia <xref:System.Collections.Generic.IEnumerable%601>.</span><span class="sxs-lookup"><span data-stu-id="65b59-110">The following example illustrates the benefits of covariance support in the <xref:System.Collections.Generic.IEnumerable%601> interface.</span></span> <span data-ttu-id="65b59-111">Il metodo `PrintFullName` accetta una raccolta del tipo `IEnumerable<Person>` come parametro.</span><span class="sxs-lookup"><span data-stu-id="65b59-111">The `PrintFullName` method accepts a collection of the `IEnumerable<Person>` type as a parameter.</span></span> <span data-ttu-id="65b59-112">Tuttavia, è possibile riutilizzarlo per una raccolta del tipo `IEnumerable<Employee>` perché `Employee` eredita `Person`.</span><span class="sxs-lookup"><span data-stu-id="65b59-112">However, you can reuse it for a collection of the `IEnumerable<Employee>` type because `Employee` inherits `Person`.</span></span>  
+## <a name="converting-generic-collections"></a><span data-ttu-id="5b323-109">Convertire le raccolte generiche</span><span class="sxs-lookup"><span data-stu-id="5b323-109">Converting Generic Collections</span></span>  
+ <span data-ttu-id="5b323-110">L'esempio seguente illustra i vantaggi del supporto di covarianza nell'interfaccia <xref:System.Collections.Generic.IEnumerable%601>.</span><span class="sxs-lookup"><span data-stu-id="5b323-110">The following example illustrates the benefits of covariance support in the <xref:System.Collections.Generic.IEnumerable%601> interface.</span></span> <span data-ttu-id="5b323-111">Il metodo `PrintFullName` accetta una raccolta del tipo `IEnumerable<Person>` come parametro.</span><span class="sxs-lookup"><span data-stu-id="5b323-111">The `PrintFullName` method accepts a collection of the `IEnumerable<Person>` type as a parameter.</span></span> <span data-ttu-id="5b323-112">Tuttavia, è possibile riutilizzarlo per una raccolta del tipo `IEnumerable<Employee>` perché `Employee` eredita `Person`.</span><span class="sxs-lookup"><span data-stu-id="5b323-112">However, you can reuse it for a collection of the `IEnumerable<Employee>` type because `Employee` inherits `Person`.</span></span>  
   
 ```csharp  
 // Simple hierarchy of classes.  
@@ -45,7 +45,7 @@ class Program
     {  
         IEnumerable<Employee> employees = new List<Employee>();  
   
-        // You can pass IEnumerable<Employee>,   
+        // You can pass IEnumerable<Employee>,
         // although the method expects IEnumerable<Person>.  
   
         PrintFullName(employees);  
@@ -54,8 +54,8 @@ class Program
 }  
 ```  
   
-## <a name="comparing-generic-collections"></a><span data-ttu-id="65b59-113">Confrontare le raccolte generiche</span><span class="sxs-lookup"><span data-stu-id="65b59-113">Comparing Generic Collections</span></span>  
- <span data-ttu-id="65b59-114">L'esempio seguente illustra i vantaggi del supporto di controvarianza nell'interfaccia <xref:System.Collections.Generic.IComparer%601>.</span><span class="sxs-lookup"><span data-stu-id="65b59-114">The following example illustrates the benefits of contravariance support in the <xref:System.Collections.Generic.IComparer%601> interface.</span></span> <span data-ttu-id="65b59-115">La classe `PersonComparer` implementa l'interfaccia `IComparer<Person>`.</span><span class="sxs-lookup"><span data-stu-id="65b59-115">The `PersonComparer` class implements the `IComparer<Person>` interface.</span></span> <span data-ttu-id="65b59-116">Tuttavia, è possibile riutilizzare questa classe per confrontare una sequenza di oggetti del tipo `Employee` perché `Employee` eredita `Person`.</span><span class="sxs-lookup"><span data-stu-id="65b59-116">However, you can reuse this class to compare a sequence of objects of the `Employee` type because `Employee` inherits `Person`.</span></span>  
+## <a name="comparing-generic-collections"></a><span data-ttu-id="5b323-113">Confrontare le raccolte generiche</span><span class="sxs-lookup"><span data-stu-id="5b323-113">Comparing Generic Collections</span></span>  
+ <span data-ttu-id="5b323-114">L'esempio seguente illustra i vantaggi del supporto di controvarianza nell'interfaccia <xref:System.Collections.Generic.IComparer%601>.</span><span class="sxs-lookup"><span data-stu-id="5b323-114">The following example illustrates the benefits of contravariance support in the <xref:System.Collections.Generic.IComparer%601> interface.</span></span> <span data-ttu-id="5b323-115">La classe `PersonComparer` implementa l'interfaccia `IComparer<Person>`.</span><span class="sxs-lookup"><span data-stu-id="5b323-115">The `PersonComparer` class implements the `IComparer<Person>` interface.</span></span> <span data-ttu-id="5b323-116">Tuttavia, è possibile riutilizzare questa classe per confrontare una sequenza di oggetti del tipo `Employee` perché `Employee` eredita `Person`.</span><span class="sxs-lookup"><span data-stu-id="5b323-116">However, you can reuse this class to compare a sequence of objects of the `Employee` type because `Employee` inherits `Person`.</span></span>  
   
 ```csharp  
 // Simple hierarchy of classes.  
@@ -73,11 +73,11 @@ public class Employee : Person { }
 class PersonComparer : IEqualityComparer<Person>  
 {  
     public bool Equals(Person x, Person y)  
-    {              
+    {
         if (Object.ReferenceEquals(x, y)) return true;  
         if (Object.ReferenceEquals(x, null) ||  
             Object.ReferenceEquals(y, null))  
-            return false;              
+            return false;
         return x.FirstName == y.FirstName && x.LastName == y.LastName;  
     }  
     public int GetHashCode(Person person)  
@@ -100,7 +100,7 @@ class Program
                new Employee() {FirstName = "Jeff", LastName = "Price"}  
             };  
   
-        // You can pass PersonComparer,   
+        // You can pass PersonComparer,
         // which implements IEqualityComparer<Person>,  
         // although the method expects IEqualityComparer<Employee>.  
   
@@ -113,6 +113,6 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="65b59-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="65b59-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5b323-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5b323-117">See also</span></span>
 
-- [<span data-ttu-id="65b59-118">Varianza nelle interfacce generiche (C#)</span><span class="sxs-lookup"><span data-stu-id="65b59-118">Variance in Generic Interfaces (C#)</span></span>](./variance-in-generic-interfaces.md)
+- [<span data-ttu-id="5b323-118">Varianza nelle interfacce generiche (C#)</span><span class="sxs-lookup"><span data-stu-id="5b323-118">Variance in Generic Interfaces (C#)</span></span>](./variance-in-generic-interfaces.md)
