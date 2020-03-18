@@ -3,10 +3,10 @@ title: Implementazione di letture/query in un microservizio CQRS
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Riconoscere l'implementazione del lato query di CQRS nel microservizio degli ordini in eShopOnContainers con Dapper.
 ms.date: 10/08/2018
 ms.openlocfilehash: 235b0e471a17e2a37a883a111cf499b7837f3ea1
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73972080"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>Implementare le letture/query in un microservizio CQRS
@@ -15,7 +15,7 @@ Per le operazioni di lettura/query, il microservizio degli ordini dall'applicazi
 
 L'approccio è semplice, come illustrato nella figura 7-3. L'interfaccia API viene implementata dai controller API Web usando qualsiasi infrastruttura, ad esempio un micro ORM (Object Relational Mapper) come Dapper, e restituendo ViewModel dinamici a seconda delle esigenze delle applicazioni dell'interfaccia utente.
 
-![Diagramma che mostra le query di alto livello sul lato CQRS semplificato.](./media/cqrs-microservice-reads/simple-approach-cqrs-queries.png)
+![Diagramma che mostra query di alto livello sul lato nel CQRS semplificato.](./media/cqrs-microservice-reads/simple-approach-cqrs-queries.png)
 
 **Figura 7-3**. L'approccio più semplice per le query in un microservizio CQRS
 
@@ -23,7 +23,7 @@ L'approccio più semplice per il lato query in un approccio CQRS semplificato pu
 
 Visto che si tratta di un approccio semplice, il codice necessario per il lato di query (ad esempio il codice che usa un micro ORM come [Dapper](https://github.com/StackExchange/Dapper)) può essere implementato [nello stesso progetto API Web](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Queries/OrderQueries.cs). La figura 7-4 mostra un esempio. Le query sono definite nel progetto di microservizio **Ordering.API** all'interno della soluzione eShopOnContainers.
 
-![Screenshot della cartella query del progetto ordering. API.](./media/cqrs-microservice-reads/ordering-api-queries-folder.png)
+![Screenshot della cartella Query del progetto Ordering.API.](./media/cqrs-microservice-reads/ordering-api-queries-folder.png)
 
 **Figura 7-4**. Query nel microservizio degli ordini in eShopOnContainers
 
@@ -41,7 +41,7 @@ I ViewModel possono essere tipi statici definiti nelle classi, oppure possono es
 
 Dapper è un progetto open source (originalmente creato da Sam Saffron) e fa parte dei blocchi predefiniti usati nell'[Overflow dello stack](https://stackoverflow.com/). Per usare Dapper, è sufficiente installarlo con il [pacchetto NuGet Dapper](https://www.nuget.org/packages/Dapper), come illustrato nella figura riportata di seguito:
 
-![Screenshot del pacchetto elegante nella visualizzazione pacchetti NuGet.](./media/cqrs-microservice-reads/drapper-package-nuget.png)
+![Screenshot del pacchetto Dapper nella visualizzazione pacchetti NuGet.](./media/cqrs-microservice-reads/drapper-package-nuget.png)
 
 È anche necessario aggiungere un'istruzione Using, in modo che il codice abbia accesso ai metodi di estensione di Dapper.
 
@@ -177,7 +177,7 @@ Si tratta di un altro motivo per cui i tipi restituiti espliciti sono migliori r
 
 Nella figura seguente, è possibile vedere in che modo l'interfaccia utente di Swagger mostra le informazioni ResponseType.
 
-![Screenshot della pagina dell'interfaccia utente di spavalderia per l'API di ordinamento.](./media/cqrs-microservice-reads/swagger-ordering-http-api.png)
+![Screenshot della pagina dell'interfaccia utente di Swagger per l'API di ordinazione.](./media/cqrs-microservice-reads/swagger-ordering-http-api.png)
 
 **Figura 7-5.** Interfaccia utente di Swagger che mostra i tipi di risposta e i possibili codici di stato HTTP da un'API Web
 
@@ -188,12 +188,12 @@ Nella figura seguente, è possibile vedere in che modo l'interfaccia utente di S
 - **Dapper**  
  <https://github.com/StackExchange/dapper-dot-net>
 
-- **Julie Lerman. Punti dati-app elegante, Entity Framework e ibride (articolo di MSDN Magazine)**  
+- **Julie Lerman. Punti dati - Dapper, Entity Framework e applicazioni ibride (articolo sulla rivista MSDN)**  
   <https://docs.microsoft.com/archive/msdn-magazine/2016/may/data-points-dapper-entity-framework-and-hybrid-apps>
 
-- **Pagine della Guida dell'API Web ASP.NET Core con Swagger**  
+- **ASP.NET pagine principali della Guida dell'API Web tramite Swagger**  
   <https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio>
 
 >[!div class="step-by-step"]
->[Precedente](eshoponcontainers-cqrs-ddd-microservice.md)
->[Successivo](ddd-oriented-microservice.md)
+>[Successivo](eshoponcontainers-cqrs-ddd-microservice.md)
+>[precedente](ddd-oriented-microservice.md)

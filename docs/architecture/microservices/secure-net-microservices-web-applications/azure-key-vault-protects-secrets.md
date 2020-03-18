@@ -4,10 +4,10 @@ description: Sicurezza in microservizi .NET e applicazioni Web - Azure Key Vault
 author: mjrousos
 ms.date: 01/30/2020
 ms.openlocfilehash: cc95d491136c945255408cec2bd49d4d6579e29a
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77501758"
 ---
 # <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a>Usare Azure Key Vault per proteggere i segreti in fase di produzione
@@ -16,7 +16,7 @@ I segreti archiviati come variabili di ambiente o dallo strumento Secret Manager
 
 Il pacchetto **Microsoft.Extensions.Configuration.AzureKeyVault** consente alle applicazioni ASP.NET Core di leggere le informazioni di configurazione da Azure Key Vault. Per iniziare a usare segreti da Azure Key Vault, eseguire i passaggi seguenti:
 
-1. Registrare l'applicazione come applicazione Azure AD. L'accesso agli insiemi di credenziali delle chiavi è gestito da Azure AD. Questa operazione può essere eseguita tramite il portale di gestione di Azure.
+1. Registrare l'applicazione come applicazione Azure AD. L'accesso agli insiemi di credenziali delle chiavi è gestito da Azure AD. Questa operazione può essere eseguita tramite il portale di gestione di Azure..
 
    In alternativa, se si vuole che l'applicazione effettui l'autenticazione tramite certificato anziché tramite password o segreto client, è possibile usare il cmdlet PowerShell [New-AzADApplication](/powershell/module/az.resources/new-azadapplication). Il certificato che si registra con Azure Key Vault ha bisogno della sola chiave pubblica. L'applicazione userà la chiave privata.
 
@@ -32,25 +32,25 @@ Il pacchetto **Microsoft.Extensions.Configuration.AzureKeyVault** consente alle 
    È anche possibile usare un overload di `AddAzureKeyVault` che accetta un certificato al posto del segreto client, includendo solo un riferimento al pacchetto [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory).
 
 > [!IMPORTANT]
-> Si consiglia di registrare Azure Key Vault come ultimo provider di configurazione, in modo che sia possibile eseguire l'override dei valori di configurazione dei provider precedenti.
+> È consigliabile registrare l'insieme di credenziali delle chiavi di Azure come ultimo provider di configurazione, in modo che possa sostituire i valori di configurazione dei provider precedenti.
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Usare Azure Key Vault per proteggere i segreti dell'applicazione** \
+- **Uso dell'insieme di credenziali delle chiavi di Azure per proteggere i segreti dell'applicazioneUsing Azure Key Vault to protect application secrets** \
   [https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault](/azure/guidance/guidance-multitenant-identity-keyvault)
 
-- **Archiviazione sicura di segreti dell'app durante lo sviluppo** \
+- **Archiviazione sicura dei segreti delle app durante lo sviluppo** \
   [https://docs.microsoft.com/aspnet/core/security/app-secrets](/aspnet/core/security/app-secrets)
 
-- **Configurazione della protezione dati** \
+- **Configurazione della protezione dei dati** \
   [https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview](/aspnet/core/security/data-protection/configuration/overview)
 
-- **Gestione e durata delle chiavi di protezione dati in ASP.NET Core** \
+- **Gestione delle chiavi e durata della protezione dei dati in ASP.NET CoreData Protection key management and lifetime in ASP.NET Core** \
   [https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings](/aspnet/core/security/data-protection/configuration/default-settings)
 
 - Repository GitHub **Microsoft.Extensions.Configuration.KeyPerFile**. \
   <https://github.com/dotnet/extensions/tree/master/src/Configuration/Config.KeyPerFile>
 
 >[!div class="step-by-step"]
->[Precedente](developer-app-secrets-storage.md)
->[Successivo](../key-takeaways.md)
+>[Successivo](developer-app-secrets-storage.md)
+>[precedente](../key-takeaways.md)

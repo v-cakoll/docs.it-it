@@ -5,17 +5,17 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.openlocfilehash: 1263bfe337b9d6609c0ca7df70aa299a61a7f1a0
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78157401"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Testing unità in .NET Core e .NET Standard
 
 Con .NET Core creare unit test è semplice. Questo articolo include un'introduzione agli unit test e ne descrive le differenze rispetto ad altri tipi di test. Le risorse di collegamento riportate in fondo alla pagina contengono informazioni su come aggiungere un progetto di test alla soluzione. Dopo aver configurato il progetto di test, sarà possibile eseguire gli unit test usando la riga di comando o Visual Studio.
 
-Se si sta testando un progetto di **ASP.NET Core** , vedere [test di integrazione in ASP.NET Core](/aspnet/core/test/integration-tests#test-app-prerequisites).
+Se si sta testando un progetto **ASP.NET Core,** vedere Test di [integrazione in ASP.NET Core](/aspnet/core/test/integration-tests#test-app-prerequisites).
 
 In .NET Core 2.0 e versioni successive è supportato [.NET Standard 2.0](../../standard/net-standard.md), le cui librerie saranno usate per eseguire una dimostrazione degli unit test.
 
@@ -38,8 +38,8 @@ Altre informazioni sul testing unità sono disponibili nei progetti .NET Core:
 
 I progetti di unit test .NET Core sono supportati per i linguaggi seguenti:
 
-- [C#](../../csharp/index.yml)
-- [F#](../../fsharp/index.yml)
+- [C #](../../csharp/index.yml)
+- [F #](../../fsharp/index.yml)
 - [Visual Basic](../../visual-basic/index.yml)
 
 È anche possibile scegliere tra le opzioni seguenti:

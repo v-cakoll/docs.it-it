@@ -1,7 +1,7 @@
 - name: Informazioni di riferimento sul linguaggio XAML
   href: index.md
   items:
-    - name: 'Spazio dei nomi XAML (x:) Funzionalità del linguaggio'
+    - name: 'Funzionalità del linguaggio dello spazio dei nomi XAML (x:)'
       href: namespace-language-features.md
       items:
         - name: Funzionalità del linguaggio XAML 2009 (non WPF)

@@ -6,15 +6,15 @@ helpviewer_keywords:
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
 ms.openlocfilehash: 21452e259596c9ab10b3d653ec1d8fb90fad131d
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75937618"
 ---
 # <a name="namespaces-c-programming-guide"></a>Spazi dei nomi (Guida per programmatori C#)
 
-Gli spazi dei nomi vengono usati frequentemente nella programmazione C# in due modi. In primo luogo, .NET usa gli spazi dei nomi per organizzare le numerose classi, come indicato di seguito:  
+Gli spazi dei nomi vengono usati frequentemente nella programmazione C# in due modi. In primo luogo, .NET utilizza gli spazi dei nomi per organizzare le molte classi, come indicato di seguito:First, .NET uses namespaces to organize its many classes, as follows:  
 
 [!code-csharp[csProgGuide#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#22)]
 
@@ -32,7 +32,7 @@ Secondo, dichiarando i propri spazi dei nomi è possibile controllare l'ambito d
 
 Il nome dello spazio dei nomi deve essere un [nome di identificatore](../inside-a-program/identifier-names.md) C# valido.
 
-## <a name="namespaces-overview"></a>Panoramica degli spazi dei nomi
+## <a name="namespaces-overview"></a>Panoramica degli spazi dei nomiNamespaces overview
 
 Gli spazi dei nomi hanno le proprietà riportate di seguito:
 
@@ -51,5 +51,5 @@ Per altre informazioni, vedere la sezione [Spazi dei nomi](~/_csharplang/spec/na
 - [Uso degli spazi dei nomi](using-namespaces.md)
 - [Come usare lo spazio dei nomi My](how-to-use-the-my-namespace.md)
 - [Nomi di identificatore](../inside-a-program/identifier-names.md)
-- [Direttiva using](../../language-reference/keywords/using-directive.md)
-- [Operatore ::](../../language-reference/operators/namespace-alias-qualifier.md)
+- [using Direttiva](../../language-reference/keywords/using-directive.md)
+- [:: Operatore](../../language-reference/operators/namespace-alias-qualifier.md)

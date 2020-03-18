@@ -1,13 +1,13 @@
 ---
-title: Infer.NET gioco-up app-programmazione probabilistica
-description: Scopri come usare la programmazione probabilistica con Infer.NET per creare un'app per elenchi di corrispondenze di gioco basata su una versione semplificata di TrueSkill.
+title: Infer.NET'app di match-up di gioco - programmazione probabilistica
+description: Scopri come usare la programmazione probabilistica con Infer.NET per creare un'app elenco di match-up di gioco basata su una versione semplificata di TrueSkill.
 ms.date: 01/30/2020
 ms.custom: mvc,how-to
 ms.openlocfilehash: 8e489d61c5e6cca53ba12b13fddd0b73c7f85ef9
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77092603"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Creare un'app elenco di corrispondenze di gioco con Infer.NET e la programmazione probabilistica
@@ -22,7 +22,7 @@ La programmazione probabilistica permette di creare modelli statistici di proces
 
 - Configurazione di un ambiente di sviluppo locale
 
-  Questa guida pratica presuppone la presenza di un computer che possa essere usato per lo sviluppo. L'esercitazione .NET [Hello World in 10 minuti](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) contiene le istruzioni per configurare l'ambiente di sviluppo locale in MacOS, Windows o Linux.
+  Questa guida pratica presuppone la presenza di un computer che possa essere usato per lo sviluppo. L'esercitazione di .NET Hello World in 10 minuti contiene istruzioni per la configurazione dell'ambiente di sviluppo locale in macOS, Windows o Linux.The .NET tutorial [Hello World in 10 minutes](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) has instructions for setting up your local development environment on macOS, Windows, or Linux.
 
 ## <a name="create-your-app"></a>Creare l'app
 

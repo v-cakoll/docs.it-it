@@ -1,15 +1,15 @@
 ---
-title: Come filtrare in un attributo (XPath-LINQ to XML) (C#)
+title: Come filtrare in base a un attributo (XPath-LINQ to XML) (C
 ms.date: 07/20/2015
 ms.assetid: 208d6256-1bd7-4237-b2c9-909f26dfd0e2
 ms.openlocfilehash: ab2cd439f4dd1454de4fa565658ef5dac14b8c22
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141282"
 ---
-# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a>Come filtrare in un attributo (XPath-LINQ to XML) (C#)
+# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a>Come filtrare in base a un attributo (XPath-LINQ to XML) (C
 In questo argomento viene illustrato come ottenere gli elementi discendente con un nome specificato e con un attributo con un valore specificato.  
   
  L'espressione XPath è:  
@@ -42,7 +42,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```output  
 Results are identical  

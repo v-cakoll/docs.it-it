@@ -6,17 +6,17 @@ author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
 ms.openlocfilehash: 182350cc5143155133385c6fd77986b271f6db91
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73977037"
 ---
 # <a name="make-predictions-with-a-trained-model"></a>Effettuare previsioni con un modello con training
 
 Informazioni su come usare un modello con training per effettuare previsioni
 
-## <a name="create-data-models"></a>Creare modelli di dati
+## <a name="create-data-models"></a>Creare i modelli di dati
 
 ### <a name="input-data"></a>Dati di input
 
@@ -40,7 +40,7 @@ public class HousingData
 
 Analogamente ai nomi delle colonne di input `Features` e `Label`, ML.NET include nomi predefiniti per le colonne di valori previsti prodotte da un modello. I nomi possono variare a seconda dell'attività.
 
-Poiché l'algoritmo usato in questo esempio è un algoritmo di regressione lineare, il nome predefinito della colonna di output è `Score` definito dall'attributo [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) nella proprietà `PredictedPrice`.
+Poiché l'algoritmo utilizzato in questo esempio è un algoritmo di regressione lineare, il nome predefinito della colonna di output è `Score` definito dall'attributo [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) nella `PredictedPrice` proprietà .
 
 ```csharp
 class HousingPrediction
@@ -65,14 +65,14 @@ ITransformer predictionPipeline = mlContext.Model.Load("model.zip", out predicti
 
 ## <a name="single-prediction"></a>Previsione singola
 
-Per effettuare una previsione singola, creare una classe [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) usando la pipeline di previsione caricata.
+Per eseguire una singola [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) stima, creare un usando la pipeline di stima caricata.
 
 ```csharp
 // Create PredictionEngines
 PredictionEngine<HousingData, HousingPrediction> predictionEngine = mlContext.Model.CreatePredictionEngine<HousingData, HousingPrediction>(predictionPipeline);
 ```
 
-Quindi usare il metodo [`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict*) e passare i dati di input come parametro. Si noti che per usare il metodo [`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict*) non è necessario che l'input sia [`IDataView`](xref:Microsoft.ML.IDataView). Poiché il metodo acquisisce la modifica del tipo di dati dell'input, è possibile passare un oggetto del tipo di dati dell'input. Inoltre, poiché `CurrentPrice` è la destinazione o etichetta per cui si tenta di effettuare la previsione usando i nuovi dati, si presuppone che non includa ancora alcun valore.
+Quindi, utilizzare [`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict*) il metodo e passare i dati di input come parametro. Si noti [`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict*) che l'utilizzo del [`IDataView`](xref:Microsoft.ML.IDataView)metodo non richiede che l'input sia un oggetto ). Poiché il metodo acquisisce la modifica del tipo di dati dell'input, è possibile passare un oggetto del tipo di dati dell'input. Inoltre, poiché `CurrentPrice` è la destinazione o etichetta per cui si tenta di effettuare la previsione usando i nuovi dati, si presuppone che non includa ancora alcun valore.
 
 ```csharp
 // Input Data
@@ -90,7 +90,7 @@ Se si accede alla proprietà `Score` dell'oggetto `prediction`, si otterrà un v
 
 ## <a name="multiple-predictions"></a>Più stime
 
-Caricare i dati seguenti in [`IDataView`](xref:Microsoft.ML.IDataView). In questo caso, il nome di [`IDataView`](xref:Microsoft.ML.IDataView) è `inputData`. Poiché `CurrentPrice` è la destinazione o etichetta per cui si tenta di effettuare la previsione usando i nuovi dati, si presuppone che non includa ancora alcun valore.
+Dati i dati seguenti, [`IDataView`](xref:Microsoft.ML.IDataView)caricarli in un file . In questo caso, il [`IDataView`](xref:Microsoft.ML.IDataView) `inputData`nome del è . Poiché `CurrentPrice` è la destinazione o etichetta per cui si tenta di effettuare la previsione usando i nuovi dati, si presuppone che non includa ancora alcun valore.
 
 ```csharp
 // Actual data
@@ -114,14 +114,14 @@ HousingData[] housingData = new HousingData[]
 };
 ```
 
-Quindi usare il metodo [`Transform`](xref:Microsoft.ML.ITransformer.Transform*) per applicare le trasformazioni di dati e generare le previsioni.
+Quindi, utilizzare [`Transform`](xref:Microsoft.ML.ITransformer.Transform*) il metodo per applicare le trasformazioni dei dati e generare stime.
 
 ```csharp
 // Predicted Data
 IDataView predictions = predictionPipeline.Transform(inputData);
 ```
 
-Esaminare i valori previsti usando il metodo [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*).
+Esaminare i valori [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*) previsti utilizzando il metodo .
 
 ```csharp
 // Get Predictions
@@ -134,4 +134,4 @@ I valori previsti nella colonna di punteggio dovrebbero essere simili ai seguent
 |---|---|
 | 1 | 144638.2 |
 | 2 | 150079.4 |
-| 3\. | 107789.8 |
+| 3 | 107789.8 |

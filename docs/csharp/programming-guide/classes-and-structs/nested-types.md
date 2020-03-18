@@ -5,19 +5,19 @@ helpviewer_keywords:
 - nested types [C#]
 ms.assetid: f2e1b315-e3d1-48ce-977f-7bae0960ba99
 ms.openlocfilehash: 12e44ccc1254424c152a238c8390f133550fa54c
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77626490"
 ---
 # <a name="nested-types-c-programming-guide"></a>Tipi annidati (Guida per programmatori C#)
 
-Un tipo definito all'interno di una [classe](../../language-reference/keywords/class.md), uno [struct](../../language-reference/builtin-types/struct.md)o un' [interfaccia](../../language-reference/keywords/interface.md) viene definito tipo annidato. Ad esempio:
+Un tipo definito all'interno di una [classe](../../language-reference/keywords/class.md), [uno struct](../../language-reference/builtin-types/struct.md)o [un'interfaccia](../../language-reference/keywords/interface.md) viene definito tipo annidato. Ad esempio:
 
 [!code-csharp[DeclareNestedClass](~/samples/snippets/csharp/objectoriented/nestedtypes.cs#DeclareNestedClass)]
 
-Indipendentemente dal fatto che il tipo esterno sia una classe, un'interfaccia o uno struct, i tipi annidati per impostazione predefinita sono [privati](../../language-reference/keywords/private.md); sono accessibili solo dal tipo che lo contiene. Nell'esempio precedente, la classe `Nested` non è accessibile a tipi esterni.
+Indipendentemente dal fatto che il tipo esterno sia una classe, un'interfaccia o uno struct, il valore predefinito dei tipi annidati è [private](../../language-reference/keywords/private.md); sono accessibili solo dal tipo che li contiene. Nell'esempio precedente, la classe `Nested` non è accessibile a tipi esterni.
 
 È possibile anche specificare un [modificatore di accesso](../../language-reference/keywords/access-modifiers.md) per definire l'accessibilità di un tipo annidato, come indicato di seguito:
 
@@ -31,7 +31,7 @@ Nell'esempio seguente, la classe `Nested` viene resa public:
 
 [!code-csharp[PublicNestedClass](~/samples/snippets/csharp/objectoriented/nestedtypes.cs#PublicNestedClass)]
 
-Il tipo annidato, o interno, può accedere al tipo contenitore, o esterno. Per accedere al tipo contenitore, passarlo come argomento al costruttore del tipo annidato. Ad esempio,
+Il tipo annidato, o interno, può accedere al tipo contenitore, o esterno. Per accedere al tipo contenitore, passarlo come argomento al costruttore del tipo annidato. Ad esempio:
 
 [!code-csharp[DeclareNestedInstance](~/samples/snippets/csharp/objectoriented/nestedtypes.cs#DeclareNestedInstance)]
 

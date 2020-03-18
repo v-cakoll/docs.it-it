@@ -1,20 +1,20 @@
 ---
 ms.openlocfilehash: 79901d0b57816915ca7ea73cfe7fa3d40820434e
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568216"
 ---
-### <a name="jsonelement-api-changes"></a>Modifiche all'API jsonelement
+### <a name="jsonelement-api-changes"></a>Modifiche all'API JsonElement
 
-A partire da .NET Core 3,0 Preview 7, alcune API <xref:System.Text.Json.JsonElement> sono state modificate per consentire un'individuazione più semplice e una maggiore usabilità.
+A partire da .NET Core 3.0 Preview 7, alcune <xref:System.Text.Json.JsonElement> API sono state modificate per consentire un'individuazione più semplice e una maggiore usabilità.
 
-#### <a name="change-description"></a>Descrizione della modifica
+#### <a name="change-description"></a>Descrizione modifica:
 
-In .NET Core 3,0 Preview 7, <xref:System.Text.Json.JsonElement> le API sono state modificate come indicato di seguito per facilitare l'individuazione e una maggiore usabilità.
+In .NET Core 3.0 <xref:System.Text.Json.JsonElement> Preview 7, le API sono state modificate come segue per consentire un'individuazione più semplice e una maggiore usabilità.
 
-1. Tutti gli overload del metodo `WriteProperty` sono stati rimossi da <xref:System.Text.Json.JsonElement>. Questa operazione influisca sul codice come il seguente:
+1. Tutti `WriteProperty` gli overload del <xref:System.Text.Json.JsonElement>metodo sono stati rimossi da . Ciò influisce sul codice come il seguente:
 
    ```csharp
    using (JsonDocument doc = JsonDocument.Parse(jsonString))
@@ -31,7 +31,7 @@ In .NET Core 3,0 Preview 7, <xref:System.Text.Json.JsonElement> le API sono stat
    }
    ```
 
-1. `WriteValue` stato rinominato come <xref:System.Text.Json.JsonElement.WriteTo%2A>. Questa operazione influisca sul codice come il seguente:
+1. `WriteValue`è stato <xref:System.Text.Json.JsonElement.WriteTo%2A>rinominato come . Ciò influisce sul codice come il seguente:
 
    ```csharp
     using (JsonDocument doc = JsonDocument.Parse(jsonString))
@@ -41,17 +41,17 @@ In .NET Core 3,0 Preview 7, <xref:System.Text.Json.JsonElement> le API sono stat
     }
     ```
 
-1. <xref:System.Text.Json.JsonElement.WriteTo%2A> genera ora un'<xref:System.ArgumentNullException> quando viene `null`il relativo parametro del metodo.
+1. <xref:System.Text.Json.JsonElement.WriteTo%2A>ora genera <xref:System.ArgumentNullException> un quando il `null`relativo parametro del metodo è .
 
 #### <a name="version-introduced"></a>Versione introdotta
 
-3,0 Anteprima 7
+3.0 Anteprima 7
 
 #### <a name="recommended-action"></a>Azione consigliata
 
-Se il codice è interessato da queste modifiche, è possibile eseguire le operazioni seguenti:
+Se il codice è interessato da queste modifiche, è possibile eseguire le operazioni seguenti:If your code is affected by these changes, you can do the following:
 
-- Non è disponibile alcuna API sostitutiva per gli overload `WriteProperty` in <xref:System.Text.Json.JsonElement>. È invece possibile chiamare uno degli overload <xref:System.Text.Json.Utf8JsonWriter.WritePropertyName%2A?displayProperty=nameWithType> insieme al metodo <xref:System.Text.Json.JsonElement.WriteTo%2A> per ottenere lo stesso risultato. Ad esempio:
+- Non esiste alcuna `WriteProperty` API di <xref:System.Text.Json.JsonElement>sostituzione per gli overload in . Al contrario, è <xref:System.Text.Json.Utf8JsonWriter.WritePropertyName%2A?displayProperty=nameWithType> possibile chiamare uno <xref:System.Text.Json.JsonElement.WriteTo%2A> degli overload insieme al metodo per ottenere lo stesso risultato. Ad esempio:
 
    ```csharp
    using (JsonDocument doc = JsonDocument.Parse(jsonString))
@@ -62,7 +62,7 @@ Se il codice è interessato da queste modifiche, è possibile eseguire le operaz
    }
    ```
 
-- Rinominare il metodo `WriteValue` per <xref:System.Text.Json.JsonElement.WriteTo(System.Text.Json.Utf8JsonWriter)>. Il parametro del metodo rimane invariato. Il codice precedente, ad esempio, deve essere modificato nel modo seguente:
+- Rinominare `WriteValue` il <xref:System.Text.Json.JsonElement.WriteTo(System.Text.Json.Utf8JsonWriter)>metodo in . Il parametro del metodo rimane invariato. Ad esempio, il codice precedente deve essere modificato nel modo seguente:For example, the previous code should be changed to the following:
 
    ```csharp
    using (JsonDocument doc = JsonDocument.Parse(jsonString))
@@ -72,7 +72,7 @@ Se il codice è interessato da queste modifiche, è possibile eseguire le operaz
    }
    ```
 
-- Gestire la <xref:System.ArgumentNullException> nelle chiamate al metodo <xref:System.Text.Json.JsonElement.WriteTo%2A>.
+- Gestire <xref:System.ArgumentNullException> le chiamate <xref:System.Text.Json.JsonElement.WriteTo%2A> in al metodo .
 
 #### <a name="affected-apis"></a>API interessate
 

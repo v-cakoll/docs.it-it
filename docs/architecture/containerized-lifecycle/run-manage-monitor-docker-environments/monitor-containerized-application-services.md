@@ -3,10 +3,10 @@ title: Monitorare i servizi delle applicazioni nei contenitori
 description: Informazioni su alcuni aspetti fondamentali del monitoraggio delle architetture dei contenitori
 ms.date: 02/15/2019
 ms.openlocfilehash: e14553d510751d8a75020a1b6beb9fd7bc29596e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68673458"
 ---
 # <a name="monitor-containerized-application-services"></a>Monitorare i servizi delle applicazioni nei contenitori
@@ -19,16 +19,16 @@ ms.locfileid: "68673458"
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Panoramica di Monitoraggio di Azure** \
+- **Panoramica di Monitoraggio di AzureOverview of Azure Monitor** \
   <https://docs.microsoft.com/azure/azure-monitor/overview>
 
-- **Informazioni su Azure Application Insights** \
+- **Che cos'è Application Insights?** \
   <https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview>
 
 - **Cosa sono le metriche di Monitoraggio di Azure?** \
   <https://docs.microsoft.com/azure/azure-monitor/platform/data-platform-metrics>
 
-- **Soluzione di monitoraggio dei contenitori in Monitoraggio di Azure** \
+- **Soluzione di monitoraggio dei contenitori in Monitoraggio di AzureContainer Monitoring solution in Azure Monitor** \
   <https://docs.microsoft.com/azure/azure-monitor/insights/containers>
 
 ## <a name="security-and-backup-services"></a>Servizi di sicurezza e backup
@@ -50,5 +50,5 @@ Azure include gli strumenti per gestire e offrire una vista unificata dei quattr
 - **Risorse locali**. Con un [cloud ibrido coerente](https://azure.microsoft.com/resources/truly-consistent-hybrid-cloud-with-microsoft-azure/).
 
 >[!div class="step-by-step"]
->[Precedente](manage-production-docker-environments.md)
->[Successivo](../key-takeaways/index.md)
+>[Successivo](manage-production-docker-environments.md)
+>[precedente](../key-takeaways/index.md)

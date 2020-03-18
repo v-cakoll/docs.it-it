@@ -3,10 +3,10 @@ title: Inserimento di applicazioni monolitiche nei contenitori
 description: L'inserimento di applicazioni monolitiche nei contenitori, anche se non consente di usufruire di tutti i vantaggi dell'architettura dei microservizi, offre fin dall'inizio vantaggi notevoli per la distribuzione.
 ms.date: 01/30/2020
 ms.openlocfilehash: 0e6f7504a91d2b1a89193471746168fc34f50956
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503276"
 ---
 # <a name="containerizing-monolithic-applications"></a>Inserimento di applicazioni monolitiche nei contenitori
@@ -15,15 +15,15 @@ Può essere utile creare una singola applicazione o un singolo servizio Web con 
 
 Per gestire questo modello, distribuire un singolo contenitore per rappresentare l'applicazione. Per aumentare la capacità, è possibile aumentare il numero di istanze, in altre parole, è sufficiente aggiungere altre copie con un servizio di bilanciamento del carico al di sopra di queste. La semplicità deriva dalla gestione di un'unica distribuzione in un singolo contenitore o una singola macchina virtuale.
 
-![Diagramma che illustra i componenti di un'applicazione con contenitori monolitici.](./media/containerize-monolithic-applications/monolithic-containerized-application.png)
+![Diagramma che mostra i componenti di un'applicazione containerizzata monolitica.](./media/containerize-monolithic-applications/monolithic-containerized-application.png)
 
 **Figura 4-1**. Esempio dell'architettura di un'applicazione monolitica inclusa in contenitori
 
-È possibile includere più componenti, librerie o livelli interni in ogni contenitore, come illustrato nella figura 4-1. Un'applicazione monolitica in contenitori ha la maggior parte delle funzionalità all'interno di un singolo contenitore, con librerie o livelli interni, e aumenta la scalabilità orizzontale clonando il contenitore su più server/VM. Questo schema monolitico è in conflitto con il principio secondo il quale un contenitore esegue una sola operazione in un unico processo, ma in alcuni casi può comunque essere adatto.
+È possibile includere più componenti, librerie o livelli interni in ogni contenitore, come illustrato nella figura 4-1. Un'applicazione containerizzata monolitica ha la maggior parte delle sue funzionalità all'interno di un singolo contenitore, con livelli o librerie interne, e scala orizzontalmente clonando il contenitore in più server/VM. Questo schema monolitico è in conflitto con il principio secondo il quale un contenitore esegue una sola operazione in un unico processo, ma in alcuni casi può comunque essere adatto.
 
 Lo svantaggio di questo approccio diventa evidente con l'eventuale crescita dell'applicazione, che ne richiede la scalabilità. Se è possibile ridimensionare l'intera applicazione, questo non rappresenta un problema. Tuttavia, nella maggior parte dei casi, solo alcune parti dell'applicazione rappresentano colli di bottiglia che richiedono il ridimensionamento, mentre altri componenti vengono usati di meno.
 
-Ad esempio, in una tipica applicazione di e-commerce, potrebbe essere necessario ridimensionare il sottosistema delle informazioni sul prodotto, perché molti più clienti danno un'occhiata ai prodotti prima di acquistarli. Molti più clienti usano il carrello per poi usare la pipeline di pagamento, meno clienti aggiungono commenti o visualizzano la cronologia degli acquisti. Potrebbero essere presenti solo pochi dipendenti che devono gestire il contenuto e le campagne di marketing. Se si modifica la scala della progettazione monolitica, tutto il codice per le diverse attività viene distribuito più volte e scalato allo stesso grado.
+Ad esempio, in una tipica applicazione di e-commerce, potrebbe essere necessario ridimensionare il sottosistema delle informazioni sul prodotto, perché molti più clienti danno un'occhiata ai prodotti prima di acquistarli. Molti più clienti usano il carrello per poi usare la pipeline di pagamento, meno clienti aggiungono commenti o visualizzano la cronologia degli acquisti. E potresti avere solo una manciata di dipendenti che hanno bisogno di gestire i contenuti e le campagne di marketing. Se si modifica la scala della progettazione monolitica, tutto il codice per le diverse attività viene distribuito più volte e scalato allo stesso grado.
 
 Esistono diversi modi per ridimensionare un'applicazione: duplicazione orizzontale, suddivisione di aree diverse dell'applicazione e partizionamento di concetti o dati aziendali simili. Tuttavia, oltre al problema di ridimensionamento di tutti i componenti, le modifiche apportate a un singolo componente richiedono la completa riesecuzione del test dell'intera applicazione e una ridistribuzione completa di tutte le istanze.
 
@@ -39,7 +39,7 @@ Le applicazioni monolitiche in Microsoft Azure possono essere distribuite usando
 
 In un ambiente di controllo di qualità o ambiente di produzione limitato, è possibile distribuire più macchine virtuali host Docker e bilanciarle usando il bilanciamento del carico di Azure, come illustrato in figura 4-3. Ciò consente di gestire il ridimensionamento con un approccio con granularità grossolana, perché l'intera applicazione risiede all'interno di un singolo contenitore.
 
-![Diagramma che mostra diversi host che eseguono i contenitori di applicazioni monolitiche.](./media/containerize-monolithic-applications/docker-infrastructure-monolithic-application.png)
+![Diagramma che mostra diversi host che eseguono i contenitori di app monolitici.](./media/containerize-monolithic-applications/docker-infrastructure-monolithic-application.png)
 
 **Figura 4-3**. Esempio di più host che scalano verticalmente una singola applicazione contenitore
 
@@ -59,9 +59,9 @@ Le applicazioni monolitiche possano trarre vantaggio da Docker, ma in questo art
 
 Se si vuole ottenere la convalida di un contenitore distribuito in Azure o quando un'applicazione è semplicemente un'applicazione a un solo contenitore, il Servizio app di Azure offre un ottimo modo per fornire servizi scalabili basati su un singolo contenitore. L'uso del Servizio app di Azure è semplice e offre un'ottima integrazione con Git per semplificare la creazione del codice in Visual Studio e la sua distribuzione diretta in Azure.
 
-![Screenshot della finestra di dialogo Crea servizio app che mostra un Container Registry.](./media/containerize-monolithic-applications/publish-azure-app-service-container.png)
+![Screenshot della finestra di dialogo Crea servizio app che mostra un Registro di sistema del contenitore.](./media/containerize-monolithic-applications/publish-azure-app-service-container.png)
 
-**Figura 4-4**. Pubblicazione di un'applicazione a contenitore singolo nel servizio app Azure da Visual Studio 2019
+**Figura 4-4**. Pubblicazione di un'applicazione a contenitore singolo nel servizio app di Azure da Visual Studio 2019Publishing a single-container application to Azure App Service from Visual Studio 2019
 
 Senza Docker, se erano necessari altri framework, funzionalità o dipendenze non supportati nel Servizio app di Azure, bisognava attendere che il team di Azure aggiornasse tali dipendenze nel Servizio app. In alternativa, si doveva passare ad altri servizi come Servizi cloud di Azure o macchine virtuali, in cui si otteneva un ulteriore controllo ed era possibile installare un componente o un framework richiesto per l'applicazione.
 
@@ -70,5 +70,5 @@ Il supporto dei contenitori in Visual Studio 2017 e versioni successive offre la
 Come illustrato anche nella figura 4-4, il flusso di pubblicazione esegue il push di un'immagine con un registro contenitori. Può trattarsi del Registro Azure Container (un registro vicino alle distribuzioni in Azure e protetto dai gruppi e dagli account di Azure Active Directory) oppure di qualsiasi altro registro di Docker, come l'hub Docker o un registro locale.
 
 >[!div class="step-by-step"]
->[Precedente](index.md)
->[Successivo](docker-application-state-data.md)
+>[Successivo](index.md)
+>[precedente](docker-application-state-data.md)

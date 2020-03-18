@@ -1,72 +1,72 @@
 ---
-title: Esercitazione sul debug di una perdita di memoria
-description: Informazioni su come eseguire il debug di una perdita di memoria in .NET Core.
+title: Esercitazione sul debug di una perdita di memoriaDebug a memory leak tutorial
+description: Informazioni su come eseguire il debug di una perdita di memoria in .NET Core.Learn how to debug a memory leak in .NET Core.
 ms.topic: tutorial
 ms.date: 12/17/2019
 ms.openlocfilehash: 014945394f87edd02c94f7c3b28043bd07470d8b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76737738"
 ---
-# <a name="tutorial-debug-a-memory-leak-in-net-core"></a>Esercitazione: eseguire il debug di una perdita di memoria in .NET Core
+# <a name="tutorial-debug-a-memory-leak-in-net-core"></a>Esercitazione: Eseguire il debug di una perdita di memoria in .NET CoreTutorial: Debug a memory leak in .NET Core
 
-**Questo articolo si applica a:** ✔️ .net core 3,0 SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .NET Core 3.0 SDK e versioni successive
 
-Questa esercitazione illustra gli strumenti per analizzare una perdita di memoria di .NET Core.
+Questa esercitazione illustra gli strumenti per analizzare una perdita di memoria .NET Core.This tutorial demonstrates the tools to analyze a .NET Core memory leak.
 
-Questa esercitazione usa un'app di esempio progettata per la perdita di memoria intenzionalmente. L'esempio viene fornito come esercizio. È possibile analizzare un'app che ha inavvertitamente una perdita di memoria.
+Questa esercitazione usa un'app di esempio progettata per causare una perdita intenzionale di memoria. Il campione viene fornito come esercizio. È possibile analizzare un'applicazione che perde involontariamente memoria troppo.
 
-In questa esercitazione si eseguono le attività seguenti:
+In questa esercitazione si apprenderà come:
 
 > [!div class="checklist"]
 >
-> - Esaminare managed memory utilizzo con i [contatori DotNet](dotnet-counters.md).
-> - Genera un file dump.
-> - Analizzare l'utilizzo della memoria utilizzando il file dump.
+> - Esaminare l'utilizzo della memoria gestita con [dotnet-counters](dotnet-counters.md).
+> - Generare un file dump.
+> - Analizzare l'utilizzo della memoria utilizzando il file di dump.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 L'esercitazione usa:
 
 - [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) o versione successiva.
-- [DotNet-Trace](dotnet-trace.md) per elencare i processi.
-- [DotNet-contatori](dotnet-counters.md) per controllare l'utilizzo del managed memory.
-- [DotNet-dump](dotnet-dump.md) per la raccolta e l'analisi di un file dump.
-- App di [destinazione di debug di esempio](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) da diagnosticare.
+- [dotnet-trace](dotnet-trace.md) per elencare i processi.
+- [dotnet-counters](dotnet-counters.md) per controllare l'utilizzo della memoria gestita.
+- [dotnet-dump](dotnet-dump.md) per raccogliere e analizzare un file dump.
+- Esempio [di app di destinazione](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) del debug da diagnosticare.
 
-Nell'esercitazione si presuppone che gli strumenti e gli esempi siano installati e pronti per l'utilizzo.
+L'esercitazione presuppone che l'esempio e gli strumenti siano installati e pronti per l'uso.
 
-## <a name="examine-managed-memory-usage"></a>Esaminare l'utilizzo di managed memory
+## <a name="examine-managed-memory-usage"></a>Esaminare l'utilizzo della memoria gestitaExamine managed memory usage
 
-Prima di iniziare a raccogliere i dati di diagnostica per aiutare la radice a causa di questo scenario, è necessario assicurarsi che si stia effettivamente osservando una perdita di memoria (aumento della memoria). È possibile utilizzare lo strumento [DotNet-Counters](dotnet-counters.md) per verificare che.
+Prima di iniziare a raccogliere i dati di diagnostica per aiutare a causa principale questo scenario, è necessario assicurarsi che si sta effettivamente vedendo una perdita di memoria (crescita della memoria). È possibile utilizzare lo strumento [dotnet-counters](dotnet-counters.md) per confermarlo.
 
-Aprire una finestra della console e passare alla directory in cui è stata scaricata e decompressa la [destinazione di debug di esempio](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/). Eseguire la destinazione:
+Aprire una finestra della console e passare alla directory in cui è stato scaricato e decompresso la destinazione di [debug di esempio.](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) Eseguire la destinazione:
 
 ```dotnetcli
 dotnet run
 ```
 
-Da una console separata, trovare l'ID processo usando lo strumento [DotNet-Trace](dotnet-trace.md) :
+Da una console separata, trovare l'ID processo utilizzando lo strumento [dotnet-trace:](dotnet-trace.md)
 
 ```console
 dotnet-trace ps
 ```
 
-L'output dovrebbe essere simile a:
+L'output dovrebbe essere simile al:
 
 ```console
 4807 DiagnosticScena /home/user/git/samples/core/diagnostics/DiagnosticScenarios/bin/Debug/netcoreapp3.0/DiagnosticScenarios
 ```
 
-A questo punto, controllare managed memory utilizzo con lo strumento [DotNet-Counters](dotnet-counters.md) . Il `--refresh-interval` specifica il numero di secondi tra gli aggiornamenti:
+A questo punto, controllare l'utilizzo della memoria gestita con lo strumento [dotnet-counters.](dotnet-counters.md) L'oggetto `--refresh-interval` specifica il numero di secondi tra gli aggiornamenti:
 
 ```console
 dotnet-counters monitor --refresh-interval 1 -p 4807
 ```
 
-L'output Live dovrebbe essere simile al seguente:
+L'output live dovrebbe essere simile al:
 
 ```console
 Press p to pause, r to resume, q to quit.
@@ -94,61 +94,61 @@ Press p to pause, r to resume, q to quit.
     Working Set (MB)                                  83
 ```
 
-Attenzione a questa riga:
+Concentrandosi su questa linea:
 
 ```console
     GC Heap Size (MB)                                  4
 ```
 
-È possibile osservare che la memoria heap gestita è 4 MB subito dopo l'avvio.
+Si può vedere che la memoria heap gestita è 4 MB subito dopo l'avvio.
 
-A questo punto, fare clic sull'URL `http://localhost:5000/api/diagscenario/memleak/20000`.
+A questo punto, premere l'URL `http://localhost:5000/api/diagscenario/memleak/20000`.
 
-Osservare che l'utilizzo della memoria è aumentato fino a 30 MB.
+Osservare che l'utilizzo della memoria è cresciuto fino a 30 MB.
 
 ```console
     GC Heap Size (MB)                                 30
 ```
 
-Osservando l'utilizzo della memoria, è possibile tranquillamente indicare che la memoria sta crescendo o perdendo. Il passaggio successivo consiste nel raccogliere i dati appropriati per l'analisi della memoria.
+Guardando l'utilizzo della memoria, si può tranquillamente dire che la memoria è in crescita o perdite. Il passo successivo è quello di raccogliere i dati giusti per l'analisi della memoria.
 
-### <a name="generate-memory-dump"></a>Genera dump della memoria
+### <a name="generate-memory-dump"></a>Genera immagine della memoria
 
-Quando si analizzano possibili perdite di memoria, è necessario accedere all'heap di memoria dell'app. È quindi possibile analizzare il contenuto della memoria. Esaminando le relazioni tra gli oggetti, è possibile creare teorie sui motivi per cui la memoria non viene liberata. Un'origine dati di diagnostica comune è un dump della memoria in Windows o il dump di core equivalente in Linux. Per generare un dump di un'applicazione .NET Core, è possibile usare lo strumento [DotNet-dump](dotnet-dump.md) .
+Quando si analizzano possibili perdite di memoria, è necessario accedere all'heap di memoria dell'app. Quindi è possibile analizzare il contenuto della memoria. Esaminando le relazioni tra gli oggetti, si creano teorie sul motivo per cui la memoria non viene liberata. A common diagnostics data source is a memory dump on Windows or the equivalent core dump on Linux. Per generare un dump di un'applicazione .NET Core, è possibile utilizzare lo strumento [dotnet-dump).](dotnet-dump.md)
 
-Usando la [destinazione di debug di esempio](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) precedentemente avviata, eseguire il comando seguente per generare un dump di Linux Core:
+Utilizzando la destinazione di debug di esempio avviata in precedenza, eseguire il comando seguente per generare un dump principale di Linux:Using the [sample debug target](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) previously started, run the following command to generate a Linux core dump:
 
 ```dotnetcli
 dotnet-dump collect -p 4807
 ```
 
-Il risultato è un dump di base che si trova nella stessa cartella.
+Il risultato è un dump principale che si trova nella stessa cartella.
 
 ```console
 Writing minidump with heap to ./core_20190430_185145
 Complete
 ```
 
-### <a name="restart-the-failed-process"></a>Riavvia il processo non riuscito
+### <a name="restart-the-failed-process"></a>Riavviare il processo non riuscito
 
-Una volta raccolto il dump, è necessario disporre di informazioni sufficienti per diagnosticare il processo non riuscito. Se il processo non riuscito viene eseguito in un server di produzione, è ora ideale per la correzione a breve termine riavviando il processo.
+Una volta raccolto il dump, è necessario disporre di informazioni sufficienti per diagnosticare il processo non riuscito. Se il processo non riuscito è in esecuzione su un server di produzione, ora è il momento ideale per la correzione a breve termine riavviando il processo.
 
-In questa esercitazione viene ora eseguita la [destinazione di debug di esempio](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) , che può essere chiusa. Passare al terminale che ha avviato il server e premere `Control-C`.
+In questa esercitazione è ora completata [l'obiettivo](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) di debug di esempio ed è possibile chiuderla. Passare al terminale che ha `Control-C`avviato il server e premere .
 
-### <a name="analyze-the-core-dump"></a>Analizzare il dump di base
+### <a name="analyze-the-core-dump"></a>Analizzare il dump principale
 
-Ora che è stato generato un dump di base, usare lo strumento [DotNet-dump)](dotnet-dump.md) per analizzare il dump:
+Ora che si dispone di un dump principale generato, utilizzare lo strumento dotnet-dump) per analizzare il dump:Now that you have a core dump generated, use the [dotnet-dump)](dotnet-dump.md) tool to analyze the dump:
 
 ```dotnetcli
 dotnet-dump analyze core_20190430_185145
 ```
 
-Dove `core_20190430_185145` è il nome del dump di base che si vuole analizzare.
+Dove `core_20190430_185145` è il nome del dump principale che si desidera analizzare.
 
 > [!NOTE]
-> Se viene visualizzato un errore che segnala che non è possibile trovare *libdl.so* , potrebbe essere necessario installare il pacchetto *libc6-dev* . Per altre informazioni, vedere [Prerequisiti per .NET Core in Linux](../linux-prerequisites.md).
+> Se viene visualizzato un errore che si lamenta che non è possibile *trovare libdl.so,* potrebbe essere necessario installare il pacchetto *libc6-dev.* Per altre informazioni, vedere [Prerequisiti per .NET Core in Linux](../linux-prerequisites.md).
 
-Verrà visualizzato un prompt in cui è possibile immettere i comandi SOS. In genere, la prima cosa che si vuole esaminare è lo stato complessivo dell'heap gestito:
+Verrà visualizzato un messaggio di richiesta in cui è possibile immettere i comandi SOS. In genere, la prima cosa che si desidera esaminare è lo stato complessivo dell'heap gestito:
 
 ```console
 > dumpheap -stat
@@ -168,9 +168,9 @@ Statistics:
 Total 428516 objects
 ```
 
-Qui è possibile notare che la maggior parte degli oggetti è `String` o `Customer` oggetti.
+Qui potete vedere che `String` la `Customer` maggior parte degli oggetti sono o oggetti.
 
-È possibile usare di nuovo il comando `dumpheap` con la tabella dei metodi (MT) per ottenere un elenco di tutte le istanze di `String`:
+È possibile `dumpheap` utilizzare nuovamente il comando con la tabella dei metodi `String` (MT) per ottenere un elenco di tutte le istanze:You can use the command again with the method table (MT) to get a list of all the instances:
 
 ```console
 > dumpheap -mt 00007faddaa50f90
@@ -191,7 +191,7 @@ Statistics:
 Total 206770 objects
 ```
 
-È ora possibile usare il comando `gcroot` in un'istanza di `System.String` per vedere come e perché l'oggetto è radicato. Essere paziente perché questo comando richiede diversi minuti con un heap di 30 MB:
+È ora possibile `gcroot` utilizzare `System.String` il comando su un'istanza per vedere come e perché l'oggetto è radicato. Siate pazienti perché questo comando richiede alcuni minuti con un heap di 30 MB:
 
 ```console
 > gcroot -all 00007f6ad09421f8
@@ -220,26 +220,26 @@ HandleTable:
 Found 2 roots.
 ```
 
-È possibile osservare che l'`String` viene mantenuta direttamente dall'oggetto `Customer` e che è indirettamente utilizzata da un oggetto `CustomerCache`.
+Si può vedere `String` che il `Customer` è tenuto direttamente dall'oggetto e indirettamente tenuto da un `CustomerCache` oggetto.
 
-È possibile continuare a eseguire il dump degli oggetti per vedere che la maggior parte degli oggetti `String` segue un modello simile. A questo punto, l'indagine forniva informazioni sufficienti per identificare la causa radice nel codice.
+È possibile continuare il dump degli `String` oggetti per verificare che la maggior parte degli oggetti segua un modello simile. A questo punto, l'indagine ha fornito informazioni sufficienti per identificare la causa principale nel codice.
 
 Questa procedura generale consente di identificare l'origine delle perdite di memoria principali.
 
 ## <a name="clean-up-resources"></a>Pulire le risorse
 
-In questa esercitazione è stato avviato un server Web di esempio. Questo server dovrebbe essere stato arrestato come illustrato nella sezione [riavviare il processo non riuscito](#restart-the-failed-process) .
+In questa esercitazione è stato avviato un server Web di esempio. Questo server dovrebbe essere stato arrestato come spiegato nella sezione [Riavviare il processo non riuscito.](#restart-the-failed-process)
 
-È anche possibile eliminare il file di dump creato.
+È inoltre possibile eliminare il file dump creato.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Congratulazioni per aver completato questa esercitazione.
+Congratulazioni per aver completato questo tutorial.
 
-Stiamo ancora pubblicando altre esercitazioni diagnostiche. È possibile leggere le versioni bozza nel repository [DotNet/Diagnostics](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial) .
+Stiamo ancora pubblicando altre esercitazioni di diagnostica. È possibile leggere le versioni bozza nel repository [dotnet/diagnostics.](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial)
 
-Questa esercitazione ha trattato le nozioni di base degli strumenti di diagnostica .NET principali. Per informazioni sull'utilizzo avanzato, vedere la documentazione di riferimento seguente:
+In questa esercitazione sono illustrate le nozioni di base degli strumenti di diagnostica .NET principali. Per l'utilizzo avanzato, vedere la documentazione di riferimento seguente:For advanced usage, see the following reference documentation:
 
-* [DotNet-Trace](dotnet-trace.md) per elencare i processi.
-* [DotNet-contatori](dotnet-counters.md) per controllare l'utilizzo del managed memory.
-* [DotNet-dump](dotnet-dump.md) per la raccolta e l'analisi di un file dump.
+* [dotnet-trace](dotnet-trace.md) per elencare i processi.
+* [dotnet-counters](dotnet-counters.md) per controllare l'utilizzo della memoria gestita.
+* [dotnet-dump](dotnet-dump.md) per raccogliere e analizzare un file dump.

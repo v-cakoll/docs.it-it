@@ -5,10 +5,10 @@ helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
 ms.openlocfilehash: dc03744559a87a2548c5bee9452c22cd20f337b8
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77627710"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Tipi di puntatori (Guida per programmatori C#)
@@ -24,7 +24,7 @@ Il tipo specificato prima di `*` in un tipo di puntatore viene chiamato **tipo r
 
 I tipi di puntatore non ereditano da [object](../../language-reference/builtin-types/reference-types.md). Non sono inoltre previste conversioni tra i tipi di puntatore e `object`. Con i puntatori non sono inoltre supportate le operazioni di boxing e unboxing. È tuttavia possibile eseguire conversioni tra tipi di puntatore diversi e tra tipi di puntatore e tipi integrali.
 
-Quando si dichiarano più puntatori nella stessa dichiarazione, l'asterisco (*) viene scritto solo con il tipo sottostante. Non viene utilizzato come prefisso di ogni nome di puntatore. Ad esempio,
+Quando si dichiarano più puntatori nella stessa dichiarazione, l'asterisco (*) viene scritto solo con il tipo sottostante. Non viene utilizzato come prefisso di ogni nome di puntatore. Ad esempio:
 
 ```csharp
 int* p1, p2, p3;   // Ok
@@ -63,7 +63,7 @@ Tenere presente che il passaggio di puntatori tra metodi può generare un compor
 
 Nella tabella riportata di seguito sono elencati gli operatori e le istruzioni che è possibile utilizzare con i puntatori in un contesto unsafe:
 
-|Operatore/istruzione|Utilizzo|
+|Operatore/istruzione|Uso|
 |-------------------------|---------|
 |`*`|Esegue il riferimento indiretto al puntatore.|
 |`->`|Accede a un membro di struct tramite un puntatore.|
@@ -72,8 +72,8 @@ Nella tabella riportata di seguito sono elencati gli operatori e le istruzioni c
 |`++` e `--`|Incrementa e decrementa puntatori.|
 |`+` e `-`|Utilizza l'aritmetica dei puntatori.|
 |`==`, `!=`, `<`, `>`, `<=` e `>=`|Confronta puntatori.|
-|[Operatore `stackalloc`](../../language-reference/operators/stackalloc.md)|Alloca memoria nello stack.|
-|[Istruzione `fixed`](../../language-reference/keywords/fixed-statement.md)|Corregge temporaneamente una variabile per consentire di trovarne l'indirizzo.|
+|[`stackalloc`Operatore](../../language-reference/operators/stackalloc.md)|Alloca memoria nello stack.|
+|[`fixed`affermazione](../../language-reference/keywords/fixed-statement.md)|Corregge temporaneamente una variabile per consentire di trovarne l'indirizzo.|
 
 Per altre informazioni sugli operatori correlati ai puntatori, vedere [Operatori correlati ai puntatori](../../language-reference/operators/pointer-related-operators.md).
 
@@ -85,7 +85,7 @@ Per altre informazioni, vedere la sezione [Tipi puntatore](~/_csharplang/spec/un
 
 - [Guida per programmatori C#](../index.md)
 - [Codice unsafe e puntatori](index.md)
-- [Conversioni puntatore](pointer-conversions.md)
+- [Conversioni di puntatori](pointer-conversions.md)
 - [Tipi riferimento](../../language-reference/keywords/reference-types.md)
-- [Tipi di valore](../../language-reference/builtin-types/value-types.md)
-- [unsafe](../../language-reference/keywords/unsafe.md)
+- [Tipi valore](../../language-reference/builtin-types/value-types.md)
+- [Pericoloso](../../language-reference/keywords/unsafe.md)

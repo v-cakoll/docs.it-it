@@ -1,15 +1,15 @@
 ---
-title: Programmazione funzionale e programmazione procedurale (LINQ to XML) (C#)
+title: Programmazione funzionale e procedurale (LINQ to XML) (C
 ms.date: 07/20/2015
 ms.assetid: fc64e39c-a487-4882-9169-da4de97917d9
 ms.openlocfilehash: e87114d2edcda4b2df14eb2d84f62ebe9638b5eb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69594257"
 ---
-# <a name="functional-vs-procedural-programming-linq-to-xml-c"></a>Programmazione funzionale e programmazione procedurale (LINQ to XML) (C#)
+# <a name="functional-vs-procedural-programming-linq-to-xml-c"></a>Programmazione funzionale e procedurale (LINQ to XML) (C
 Sono disponibili diversi tipi di applicazioni XML:  
   
 - In alcune applicazioni da documenti XML di origine vengono prodotti nuovi documenti XML con una forma diversa.  
@@ -36,7 +36,7 @@ Sono disponibili diversi tipi di applicazioni XML:
   
  È possibile usare LINQ to XML con uno di questi due approcci. Si usano le stesse classe e in alcuni casi gli stessi metodi. Tuttavia, la struttura e gli obiettivi dei due approcci sono molto diversi. In situazioni diverse, ad esempio, un approccio offre in genere prestazioni più elevate dell'altro e usa una quantità maggiore o minore di memoria. Inoltre, un approccio sarà più facile da scrivere dell'altro e produrrà codice più facilmente gestibile.  
   
- Per un confronto tra i due approcci, vedere [Differenze tra la modifica dell'albero XML in memoria e la costruzione funzionale (LINQ to XML) (C#)](./in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md).  
+ Per vedere i due approcci a contrasto, vedere Modifica della struttura [ad albero XML in memoria e costruzione funzionale (LINQ to XML) (C )](./in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md).  
   
  Per un'esercitazione sulla scrittura delle trasformazioni funzionali, vedere [Trasformazioni funzionali pure di XML (C#)](./introduction-to-pure-functional-transformations.md).  
   

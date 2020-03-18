@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Visual C#, program structure
 ms.assetid: 9551354b-33f0-4e11-bbf0-1a35e3702b22
 ms.openlocfilehash: a180dc30c7fab11e5b939682244dbb90eb7615eb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "69589263"
 ---
 # <a name="inside-a-c-program"></a>Contenuto di un programma C#
@@ -32,7 +32,7 @@ La sezione illustra la struttura generale di un programma C# e include l'esempio
 
 - [Guida per programmatori C#](../index.md)
 
-- [Riferimenti per C#](../../language-reference/index.md)
+- [Guida di riferimento a C](../../language-reference/index.md)
 
 - [Esempi ed esercitazioni](../../../samples-and-tutorials/index.md)
 

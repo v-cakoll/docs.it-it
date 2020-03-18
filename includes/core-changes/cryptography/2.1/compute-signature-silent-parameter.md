@@ -1,20 +1,20 @@
 ---
 ms.openlocfilehash: 9583d868ee01117d7bd6e465e7d89a734489d1a8
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77449220"
 ---
-### <a name="boolean-parameter-of-signedcmscomputesignature-is-respected"></a>Il parametro booleano di SignedCms. ComputeSignature è rispettato
+### <a name="boolean-parameter-of-signedcmscomputesignature-is-respected"></a>Il parametro booleano di SignedCms.ComputeSignature è rispettato
 
-In .NET Core viene rispettato il parametro booleano `silent` del metodo <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType>. Se questo parametro è impostato su `true`, non viene visualizzata una richiesta PIN.
+In .NET Core `silent` il parametro booleano del <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> metodo viene rispettato. Un prompt PIN non viene visualizzato `true`se questo parametro è impostato su .
 
-#### <a name="change-description"></a>Descrizione della modifica
+#### <a name="change-description"></a>Descrizione modifica:
 
-In .NET Framework, il parametro `silent` del metodo <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> viene ignorato e viene sempre visualizzata una richiesta di PIN se richiesto dal provider. In .NET Core il parametro `silent` viene rispettato e, se impostato su `true`, una richiesta di PIN non viene mai visualizzata, anche se è richiesta dal provider.
+In .NET Framework `silent` il <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> parametro del metodo viene ignorato e viene sempre visualizzato un prompt del PIN se richiesto dal provider. In .NET Core `silent` il parametro viene `true`rispettato e, se impostato su , non viene mai visualizzato un prompt del PIN, anche se richiesto dal provider.
 
-Il supporto per i messaggi CMS/PKCS #7 è stato introdotto in .NET Core nella versione 2,1.
+Il supporto per CMS/PKCS #7 messaggi è stato introdotto in .NET Core nella versione 2.1.
 
 #### <a name="version-introduced"></a>Versione introdotta
 
@@ -22,7 +22,7 @@ Il supporto per i messaggi CMS/PKCS #7 è stato introdotto in .NET Core nella ve
 
 #### <a name="recommended-action"></a>Azione consigliata
 
-Per assicurarsi che venga visualizzata una richiesta PIN, le applicazioni desktop devono chiamare <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> e impostare il parametro booleano su `false`. Il comportamento risultante è identico a quello di .NET Framework indipendentemente dal fatto che il contesto invisibile sia disabilitato.
+Per garantire che venga visualizzato un prompt <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> PIN, se `false`necessario, le applicazioni desktop devono chiamare e impostare il parametro Boolean su . Il comportamento risultante è lo stesso di .NET Framework indipendentemente dal fatto che il contesto invisibile all'utente sia disabilitato.
 
 ### <a name="category"></a>Category
 

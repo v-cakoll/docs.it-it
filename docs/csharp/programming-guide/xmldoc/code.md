@@ -9,13 +9,13 @@ helpviewer_keywords:
 - <code> C# XML tag
 ms.assetid: f235e3bc-a709-43cf-8a9f-bd57cabdf6da
 ms.openlocfilehash: 1b292f0e1f93f815cc31ef3dfb7015b8950bf8a6
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789841"
 ---
-# <a name="code-c-programming-guide"></a>> del codice \<C# (Guida per programmatori)
+# <a name="code-c-programming-guide"></a>\<> del codice (Guida per programmatori C
 
 ## <a name="syntax"></a>Sintassi
 
@@ -29,17 +29,17 @@ ms.locfileid: "76789841"
 
   Testo da contrassegnare come codice.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il tag \<code> rappresenta un modo per indicare più righe come codice. Usare [\<c>](./code-inline.md) per indicare che il testo all'interno di una descrizione deve essere contrassegnato come codice.
+Il tag \<code> rappresenta un modo per indicare più righe come codice. Utilizzare [ \<c>](./code-inline.md) per indicare che il testo all'interno di una descrizione deve essere contrassegnato come codice.
 
 Compilare con [-doc](../../language-reference/compiler-options/doc-compiler-option.md) per elaborare i commenti relativi alla documentazione in un file.
 
 ## <a name="example"></a>Esempio
 
-Vedere l'argomento [\<example>](./example.md) per un esempio di come usare il tag \<code>.
+Per un esempio di utilizzo del \<tag code>, vedere l'argomento [ \<>](./example.md) di esempio.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../index.md)
+- [Guida alla programmazione in C](../index.md)
 - [Tag consigliati per i commenti relativi alla documentazione](./recommended-tags-for-documentation-comments.md)

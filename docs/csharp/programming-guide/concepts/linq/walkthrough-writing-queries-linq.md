@@ -8,10 +8,10 @@ helpviewer_keywords:
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
 ms.openlocfilehash: f2135c6c3649ba2fc87e3b49770439688a58269b
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73418060"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>Procedura dettagliata: scrittura di query in C# (LINQ)
@@ -30,7 +30,7 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
   
      Verrà visualizzata la finestra di dialogo **Nuovo progetto** .  
   
-3. Espandere **Installato**, **Modelli**, **Visual C#** e **Applicazione console**.  
+3. Espandere **Installati**, **Modelli** e **Visual C#** e scegliere **Applicazione console**.  
   
 4. Nella casella di testo **Nome** immettere un nome diverso o accettare il nome predefinito e quindi scegliere il pulsante **OK**.  
   
@@ -63,7 +63,7 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
   
 #### <a name="to-create-a-simple-query"></a>Per creare una query semplice  
   
-- Nel metodo `Main` dell'applicazione creare una query semplice che, quando viene eseguita, genera un elenco di tutti gli studenti il cui punteggio del primo test è maggiore di 90. Si noti che, poiché è selezionato l'intero oggetto `Student`, il tipo di query è `IEnumerable<Student>`. Il codice potrebbe usare anche la tipizzazione implicita mediante la parola chiave [var](../../../language-reference/keywords/var.md), ma si usa la tipizzazione esplicita per illustrare dettagliatamente i risultati. Per altre informazioni su `var`, vedere [Variabili locali tipizzate in modo implicito](../../classes-and-structs/implicitly-typed-local-variables.md).  
+- Nel metodo `Main` dell'applicazione creare una query semplice che, quando viene eseguita, genera un elenco di tutti gli studenti il cui punteggio del primo test è maggiore di 90. Si noti che, poiché è selezionato l'intero oggetto `Student`, il tipo di query è `IEnumerable<Student>`. Il codice potrebbe usare anche la tipizzazione implicita mediante la parola chiave [var](../../../language-reference/keywords/var.md), ma si usa la tipizzazione esplicita per illustrare dettagliatamente i risultati. Per ulteriori informazioni `var`sulle variabili [locali tipizzate in modo implicito, vedere Variabili locali tipizzate in modo implicito.](../../classes-and-structs/implicitly-typed-local-variables.md)  
   
      Si noti anche che la variabile di intervallo della query, `student`, funge da riferimento a ogni `Student` nell'origine, fornendo l'accesso di membro per ogni oggetto.  
   
@@ -91,7 +91,7 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
     where student.Scores[0] > 90 && student.Scores[3] < 80  
     ```  
   
-     Per altre informazioni, vedere [Clausola where](../../../language-reference/keywords/where-clause.md).  
+     Per ulteriori informazioni, vedere [clausola where](../../../language-reference/keywords/where-clause.md).  
   
 ## <a name="modify-the-query"></a>Modificare la query  
   
@@ -184,5 +184,5 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Language-Integrated Query (LINQ) (C#)](./index.md)
-- [Espressioni di query LINQ](../../../linq/index.md)
+- [LINQ (Language-Integrated Query) (C#)](./index.md)
+- [Espressioni di query LINQLINQ Query Expressions](../../../linq/index.md)

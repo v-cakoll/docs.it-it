@@ -1,70 +1,70 @@
 ---
-title: Algoritmo di caricamento degli assembly gestiti-.NET Core
+title: Algoritmo di caricamento di assembly gestito - .NET CoreManaged assembly loading algorithm - .NET Core
 description: Descrizione dei dettagli dell'algoritmo di caricamento dell'assembly gestito in .NET Core
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.openlocfilehash: 312a320676be6eb453697e0704ab771a6707618b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73973506"
 ---
-# <a name="managed-assembly-loading-algorithm"></a>Algoritmo di caricamento assembly gestito
+# <a name="managed-assembly-loading-algorithm"></a>Algoritmo di caricamento dell'assembly gestito
 
-Gli assembly gestiti vengono individuati e caricati con un algoritmo che prevede varie fasi.
+Gli assembly gestiti vengono individuati e caricati con un algoritmo che coinvolge varie fasi.
 
-Tutti gli assembly gestiti ad eccezione degli assembly satellite e degli assembly `WinRT` utilizzano lo stesso algoritmo.
+Tutti gli assembly gestiti, ad eccezione degli assembly e `WinRT` assembly satellite, utilizzano lo stesso algoritmo.
 
 ## <a name="when-are-managed-assemblies-loaded"></a>Quando vengono caricati gli assembly gestiti?
 
-Il meccanismo più comune per attivare un caricamento dell'assembly gestito è un riferimento a un assembly statico. Questi riferimenti vengono inseriti dal compilatore ogni volta che il codice utilizza un tipo definito in un altro assembly. Questi assembly vengono caricati (`load-by-name`) in base alle esigenze del runtime.
+Il meccanismo più comune per attivare il caricamento di un assembly gestito è un riferimento statico all'assembly. Questi riferimenti vengono inseriti dal compilatore ogni volta che il codice utilizza un tipo definito in un altro assembly. Questi assembly vengono`load-by-name`caricati ( ) in base alle esigenze del runtime.
 
 Anche l'uso diretto di API specifiche attiverà i caricamenti:
 
 |API  |Descrizione  |`Active` <xref:System.Runtime.Loader.AssemblyLoadContext> |
 |---------|---------|---------|
-|<xref:System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyName%2A?displayProperty=nameWithType>|`Load-by-name`|Istanza [di](../../csharp/language-reference/keywords/this.md) .|
-|<xref:System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyPath%2A?displayProperty=nameWithType><p><xref:System.Runtime.Loader.AssemblyLoadContext.LoadFromNativeImagePath%2A?displayProperty=nameWithType>|Carica da percorso.|Istanza [di](../../csharp/language-reference/keywords/this.md) .|
-<xref:System.Runtime.Loader.AssemblyLoadContext.LoadFromStream%2A?displayProperty=nameWithType>|Caricamento da un oggetto.|Istanza [di](../../csharp/language-reference/keywords/this.md) .|
-|<xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType>|Carica da percorso in una nuova istanza di <xref:System.Runtime.Loader.AssemblyLoadContext>|Nuova istanza di <xref:System.Runtime.Loader.AssemblyLoadContext>.|
-<xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>|Carica da percorso nell'istanza di <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType>.<p>Aggiunge un gestore di <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving> al <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType>. Il gestore caricherà le dipendenze dell'assembly dalla relativa directory.|Istanza di <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType>.|
-|<xref:System.Reflection.Assembly.Load(System.Reflection.AssemblyName)?displayProperty=nameWithType><p><xref:System.Reflection.Assembly.Load(System.String)?displayProperty=nameWithType><p><xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>|`Load-by-name`|Dedotto dal chiamante.<p>Preferisce <xref:System.Runtime.Loader.AssemblyLoadContext> metodi.|
-|<xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType><p><xref:System.Reflection.Assembly.Load(System.Byte[],System.Byte[])?displayProperty=nameWithType>|Caricamento da un oggetto in una nuova istanza di <xref:System.Runtime.Loader.AssemblyLoadContext>.|Nuova istanza di <xref:System.Runtime.Loader.AssemblyLoadContext>.|
-<xref:System.Type.GetType(System.String)?displayProperty=nameWithType><p><xref:System.Type.GetType(System.String,System.Boolean)?displayProperty=nameWithType><p><xref:System.Type.GetType(System.String,System.Boolean,System.Boolean)?displayProperty=nameWithType>|`Load-by-name`|Dedotto dal chiamante.<p>Preferisce <xref:System.Type.GetType%2A?displayProperty=nameWithType> metodi con un argomento `assemblyResolver`.|
-<xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>|Se Type `name` descrive un tipo generico completo di assembly, attivare una `Load-by-name`.|Dedotto dal chiamante.<p>Preferisce <xref:System.Type.GetType%2A?displayProperty=nameWithType> quando si usano nomi di tipo completi di assembly.|
-<xref:System.Activator.CreateInstance(System.String,System.String)?displayProperty=nameWithType><p><xref:System.Activator.CreateInstance(System.String,System.String,System.Object[])?displayProperty=nameWithType><p><xref:System.Activator.CreateInstance(System.String,System.String,System.Boolean,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo,System.Object[])?displayProperty=nameWithType>|`Load-by-name`|Dedotto dal chiamante.<p>Preferisce <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> metodi che accettano un argomento <xref:System.Type>.|
+|<xref:System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyName%2A?displayProperty=nameWithType>|`Load-by-name`|L'istanza [di questa.](../../csharp/language-reference/keywords/this.md)|
+|<xref:System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyPath%2A?displayProperty=nameWithType><p><xref:System.Runtime.Loader.AssemblyLoadContext.LoadFromNativeImagePath%2A?displayProperty=nameWithType>|Carica dal percorso.|L'istanza [di questa.](../../csharp/language-reference/keywords/this.md)|
+<xref:System.Runtime.Loader.AssemblyLoadContext.LoadFromStream%2A?displayProperty=nameWithType>|Carica dall'oggetto.|L'istanza [di questa.](../../csharp/language-reference/keywords/this.md)|
+|<xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType>|Carica dal percorso <xref:System.Runtime.Loader.AssemblyLoadContext> in una nuova istanza|Nuova istanza di <xref:System.Runtime.Loader.AssemblyLoadContext>.|
+<xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>|Caricare dal percorso <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> nell'istanza.<p>Aggiunge <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving> un <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType>gestore a . Il gestore caricherà le dipendenze dell'assembly dalla relativa directory.|Istanza <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType>.|
+|<xref:System.Reflection.Assembly.Load(System.Reflection.AssemblyName)?displayProperty=nameWithType><p><xref:System.Reflection.Assembly.Load(System.String)?displayProperty=nameWithType><p><xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>|`Load-by-name`.|Dedotta dal chiamante.<p>Preferisci i <xref:System.Runtime.Loader.AssemblyLoadContext> metodi.|
+|<xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType><p><xref:System.Reflection.Assembly.Load(System.Byte[],System.Byte[])?displayProperty=nameWithType>|Caricare dall'oggetto <xref:System.Runtime.Loader.AssemblyLoadContext> in una nuova istanza.|Nuova istanza di <xref:System.Runtime.Loader.AssemblyLoadContext>.|
+<xref:System.Type.GetType(System.String)?displayProperty=nameWithType><p><xref:System.Type.GetType(System.String,System.Boolean)?displayProperty=nameWithType><p><xref:System.Type.GetType(System.String,System.Boolean,System.Boolean)?displayProperty=nameWithType>|`Load-by-name`.|Dedotta dal chiamante.<p>Preferisci <xref:System.Type.GetType%2A?displayProperty=nameWithType> i `assemblyResolver` metodi con un argomento.|
+<xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>|Se `name` type descrive un tipo generico `Load-by-name`qualificato dall'assembly, attivare un file .|Dedotta dal chiamante.<p>Preferire <xref:System.Type.GetType%2A?displayProperty=nameWithType> quando si utilizzano i nomi di tipo completo dell'assembly.|
+<xref:System.Activator.CreateInstance(System.String,System.String)?displayProperty=nameWithType><p><xref:System.Activator.CreateInstance(System.String,System.String,System.Object[])?displayProperty=nameWithType><p><xref:System.Activator.CreateInstance(System.String,System.String,System.Boolean,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo,System.Object[])?displayProperty=nameWithType>|`Load-by-name`.|Dedotta dal chiamante.<p>Preferire <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> i <xref:System.Type> metodi che prendono un argomento.|
 
 ## <a name="algorithm"></a>Algoritmo
 
-Nell'algoritmo seguente viene descritto il modo in cui il runtime carica un assembly gestito.
+L'algoritmo seguente descrive il modo in cui il runtime carica un assembly gestito.
 
-1. Determinare l'<xref:System.Runtime.Loader.AssemblyLoadContext>di `active`.
+1. Determinare `active` <xref:System.Runtime.Loader.AssemblyLoadContext>il file .
 
-    - Per un riferimento a un assembly statico, il `active` <xref:System.Runtime.Loader.AssemblyLoadContext> è l'istanza che ha caricato l'assembly di riferimento.
-    - Le API preferite rendono esplicito il `active` <xref:System.Runtime.Loader.AssemblyLoadContext>.
-    - Altre API derivano i <xref:System.Runtime.Loader.AssemblyLoadContext>di `active`. Per queste API, viene utilizzata la proprietà <xref:System.Runtime.Loader.AssemblyLoadContext.CurrentContextualReflectionContext?displayProperty=nameWithType>. Se il valore è `null`, viene utilizzata l'istanza <xref:System.Runtime.Loader.AssemblyLoadContext> dedotta.
-    - Vedere la tabella sopra.
+    - Per un riferimento statico `active` <xref:System.Runtime.Loader.AssemblyLoadContext> all'assembly, è l'istanza che ha caricato l'assembly di riferimento.
+    - Le API preferite `active` <xref:System.Runtime.Loader.AssemblyLoadContext> rendono l'explicit.
+    - Altre API deducono il `active` <xref:System.Runtime.Loader.AssemblyLoadContext>file . Per queste API, <xref:System.Runtime.Loader.AssemblyLoadContext.CurrentContextualReflectionContext?displayProperty=nameWithType> viene utilizzata la proprietà. Se il `null`valore è , <xref:System.Runtime.Loader.AssemblyLoadContext> viene utilizzata l'istanza dedotta.
+    - Vedere la tabella precedente.
 
-2. Per i metodi di `Load-by-name`, il <xref:System.Runtime.Loader.AssemblyLoadContext> attivo carica l'assembly. In ordine di priorità:
-    - Verifica della `cache-by-name`.
+2. Per `Load-by-name` i metodi, <xref:System.Runtime.Loader.AssemblyLoadContext> l'attivo carica l'assieme. In ordine di priorità per:
+    - Verifica `cache-by-name`del suo file .
 
-    - Chiamata della funzione <xref:System.Runtime.Loader.AssemblyLoadContext.Load%2A?displayProperty=nameWithType>.
+    - Chiamata <xref:System.Runtime.Loader.AssemblyLoadContext.Load%2A?displayProperty=nameWithType> della funzione.
 
-    - Controllo della cache delle istanze <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> e esecuzione della logica di [Probe predefinita dell'assembly gestito](default-probing.md#managed-assembly-default-probing) .
+    - Controllo <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> della cache delle istanze e esecuzione della logica di probe predefinita dell'assembly [gestito.](default-probing.md#managed-assembly-default-probing)
 
-    - Generazione dell'evento <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> per il AssemblyLoadContext attivo.
+    - Generazione <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> dell'evento per l'oggetto AssemblyLoadContext attivo.
 
-    - Generazione dell'evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>.
+    - Generazione <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> dell'evento.
 
-3. Per gli altri tipi di caricamenti, il `active` <xref:System.Runtime.Loader.AssemblyLoadContext> carica l'assembly. In ordine di priorità:
-    - Verifica della `cache-by-name`.
+3. Per gli altri tipi `active` <xref:System.Runtime.Loader.AssemblyLoadContext> di carichi, l'assieme viene caricato. In ordine di priorità per:
+    - Verifica `cache-by-name`del suo file .
 
     - Caricamento dal percorso specificato o dall'oggetto assembly non elaborato.
 
-4. In entrambi i casi, se un assembly viene caricato di nuovo,:
+4. In entrambi i casi, se un assembly è appena caricato, allora:
    - Viene generato l'evento <xref:System.AppDomain.AssemblyLoad?displayProperty=nameWithType>.
-   - Viene aggiunto un riferimento al `cache-by-name`dell'istanza di <xref:System.Runtime.Loader.AssemblyLoadContext> dell'assembly.
+   - Viene aggiunto un riferimento all'istanza <xref:System.Runtime.Loader.AssemblyLoadContext> `cache-by-name`dell'assembly.
 
-5. Se l'assembly viene trovato, viene aggiunto un riferimento in base alle esigenze al `cache-by-name`dell'istanza di <xref:System.Runtime.Loader.AssemblyLoadContext> di `active`.
+5. Se l'assembly viene trovato, viene aggiunto `active` <xref:System.Runtime.Loader.AssemblyLoadContext> un `cache-by-name`riferimento in base alle esigenze dell'istanza .

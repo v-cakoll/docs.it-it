@@ -5,17 +5,17 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 12/4/2019
 ms.openlocfilehash: c19e5e90cfb96463f744cfb064abe72ee5db2e9f
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77449328"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Progettare applicazioni Web moderne con ASP.NET Core e Azure
 
-![Book Cover image of the Architect Modern Web Applications guide.](./media/index/web-application-guide-cover-image.png)
+![Immagine di copertina del manuale Architect Modern Web Applications.](./media/index/web-application-guide-cover-image.png)
 
-**Edizione v 3.1** -aggiornata alla ASP.NET Core 3,1
+**EDITION v3.1** - Aggiornato per ASP.NET Core 3.1
 
 PUBBLICATO DA
 
@@ -27,23 +27,23 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2020 di Microsoft Corporation
+Copyright © 2020 da Microsoft Corporation
 
 Tutti i diritti sono riservati. Nessuna parte del contenuto di questo libro può essere riprodotta o trasmessa in qualsiasi forma o con qualsiasi mezzo, senza il permesso scritto dell'editore.
 
 Questo libro viene fornito "così com'è" ed esprime i punti di vista e le opinioni dell'autore. I punti di vista, le opinioni e le informazioni contenute nel presente libro, inclusi gli URL e altri riferimenti a siti Web, possono essere soggetti a modifiche senza preavviso.
 
-Alcuni esempi contenuti nella presente guida vengono forniti solo a fini illustrativi e sono fittizi. Nessuna associazione o connessione reale è intenzionale o può essere presupposta.
+ Alcuni esempi usati in questo documento vengono forniti a scopo puramente illustrativo e sono fittizi. Nessuna associazione reale o connessione è intenzionale o può essere desunta.
 
 Microsoft e i marchi elencati nella pagina Web relativa ai marchi all'indirizzo https://www.microsoft.com sono marchi delle società del gruppo Microsoft.
 
 Mac e macOS sono marchi registrati di Apple Inc.
 
-Il logo Docker Whale è un marchio registrato di Docker, Inc. usato dall'autorizzazione.
+Il logo Docker whale è un marchio registrato di Docker, Inc.
 
 Tutti gli altri marchi e logo appartengono ai rispettivi proprietari.
 
-Autore:
+Author (Autore):
 
 > **Steve "ardalis" Smith** - Software Architect e Trainer - [Ardalis.com](https://ardalis.com)
 
@@ -83,13 +83,13 @@ La compilazione di applicazioni Web con ASP.NET Core, ospitato in Azure, offre m
 
 ## <a name="purpose"></a>Scopo
 
-Questa guida offre linee guida end-to-end sulla compilazione di applicazioni Web *monolitiche* usando ASP.NET Core e Azure. In questo contesto "monolitico" si riferisce al fatto che queste applicazioni vengono distribuite come una singola unità, non come una raccolta di applicazioni e servizi che interagiscono tra loro.
+Questa guida fornisce indicazioni end-to-end sulla creazione di applicazioni Web monolitiche usando ASP.NET Core e Azure.This guide provides end-to-end guidance on building *monolithic* web applications using ASP.NET Core and Azure. In questo contesto "monolitico" si riferisce al fatto che queste applicazioni vengono distribuite come una singola unità, non come una raccolta di applicazioni e servizi che interagiscono tra loro.
 
-Questa guida è complementare ai [_microservizi .NET. Architettura per le applicazioni .NET in contenitori_"](../microservices/index.md) , che è incentrato maggiormente sui Docker, sui microservizi e sulla distribuzione di contenitori per ospitare le applicazioni aziendali.
+Questa guida è complementare [ai "_Microservizi .NET. Architettura per le applicazioni .NET containerizzate_"](../microservices/index.md) che si concentra maggiormente su Docker, Microservices e distribuzione di contenitori per ospitare applicazioni aziendali.
 
 ### <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microservizi .NET. Architettura per le applicazioni .NET incluse in contenitori
 
-- **eBook**  
+- **e-book**  
   <https://aka.ms/MicroservicesEbook>
 - **Applicazione di esempio**  
   <https://aka.ms/microservicesarchitecture>
@@ -112,4 +112,4 @@ Questa guida è stata condensata in un documento relativamente piccolo, incentra
   [https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server](../../standard/choosing-core-framework-server.md)
 
 >[!div class="step-by-step"]
->[avanti](modern-web-applications-characteristics.md)
+>[Avanti](modern-web-applications-characteristics.md)

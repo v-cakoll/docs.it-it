@@ -1,15 +1,15 @@
 ---
-title: Come trovare l'elemento di pari livello immediatamente precedente (XPath-LINQ to XMLC#) ()
+title: Come trovare l'elemento di pari livello immediatamente precedente (XPath-LINQ to XML) (C
 ms.date: 07/20/2015
 ms.assetid: 74c06201-0b1b-4b5e-b3ac-0092980614e6
 ms.openlocfilehash: 1e5aece41021642d43b7f6f7b78bb105156ee4ee
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74140998"
 ---
-# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-c"></a>Come trovare l'elemento di pari livello immediatamente precedente (XPath-LINQ to XMLC#) ()
+# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-c"></a>Come trovare l'elemento di pari livello immediatamente precedente (XPath-LINQ to XML) (C
 A volte è necessario trovare l'elemento di pari livello immediatamente precedente a un nodo. A causa della differenza nella semantica dei predicati di posizione per gli assi di pari livello precedenti in XPath rispetto a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], si tratta di uno dei confronti più interessanti.  
   
 ## <a name="example"></a>Esempio  
@@ -45,7 +45,7 @@ else
 Console.WriteLine(el1);  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```output  
 Results are identical  

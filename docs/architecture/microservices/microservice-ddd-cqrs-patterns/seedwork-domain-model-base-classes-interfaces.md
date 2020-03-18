@@ -3,25 +3,25 @@ title: Seedwork (classi di base riutilizzabili e interfacce per il modello di do
 description: Architettura dei microservizi .NET per applicazioni .NET in contenitori | Usare il concetto di cartella SeedWork come punto di partenza per avviare l'implementazione di un modello di dominio orientato a DDD.
 ms.date: 10/08/2018
 ms.openlocfilehash: ab0aadc28dbd1175c75b04dadca29b7b0947f29b
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76116573"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (classi di base riutilizzabili e interfacce per il modello di dominio)
 
-La cartella della soluzione contiene una cartella denominata *SeedWork*. Tale cartella contiene classi di base personalizzate che è possibile usare come base per le entità di dominio e gli oggetti valore. Usare queste classi di base in modo che non si disponga di codice ridondante nella classe di oggetti di ogni dominio. La cartella per questi tipi di classi è denominata *SeedWork* e non *Framework* o qualcosa di simile. Viene chiamato *seeding* perché la cartella contiene solo un piccolo subset di classi riutilizzabili che non può essere considerato un Framework. Il termine *Seedwork* è stato introdotto da [Michael Feathers](https://www.artima.com/forums/flat.jsp?forum=106&thread=8826) ed è diventato noto grazie a [Martin Fowler](https://martinfowler.com/bliki/Seedwork.html). Questa cartella può tuttavia essere denominata Common, SharedKernel o avere un nome simile.
+La cartella della soluzione contiene una cartella denominata *SeedWork*. Tale cartella contiene classi di base personalizzate che è possibile usare come base per le entità di dominio e gli oggetti valore. Utilizzare queste classi di base in modo da non avere codice ridondante nella classe di oggetti di ogni dominio. La cartella per questi tipi di classi è denominata *SeedWork* e non *Framework* o qualcosa di simile. Si chiama *SeedWork* perché la cartella contiene solo un piccolo sottoinsieme di classi riutilizzabili che non possono essere considerate un framework. Il termine *Seedwork* è stato introdotto da [Michael Feathers](https://www.artima.com/forums/flat.jsp?forum=106&thread=8826) ed è diventato noto grazie a [Martin Fowler](https://martinfowler.com/bliki/Seedwork.html). Questa cartella può tuttavia essere denominata Common, SharedKernel o avere un nome simile.
 
 La figura 7-12 illustra le classi che costituiscono la cartella SeedWork del modello di dominio nel microservizio degli ordini. La cartella contiene alcune classi di base personalizzate come Entity, ValueObject ed Enumeration e alcune interfacce. Queste interfacce (IRepository e IUnitOfWork) indicano al livello infrastruttura le implementazioni necessarie. Queste interfacce vengono usate anche dal livello dell'applicazione tramite l'inserimento delle dipendenze.
 
-:::image type="complex" source="./media/seedwork-domain-model-base-classes-interfaces/vs-solution-seedwork-classes.png" alt-text="Screenshot delle classi contenute nella cartella seeding.":::
-Contenuto dettagliato della cartella seeding che contiene le classi e le interfacce di base: Entity.cs, Enumeration.cs, IAggregateRoot.cs, IRepository.cs, IUnitOfWork.cs e ValueObject.cs.
+:::image type="complex" source="./media/seedwork-domain-model-base-classes-interfaces/vs-solution-seedwork-classes.png" alt-text="Screenshot delle classi contenute nella cartella SeedWork.":::
+Contenuto dettagliato della cartella SeedWork, contenente classi base e interfacce: Entity.cs, Enumeration.cs, IAggregateRoot.cs, IRepository.cs, IUnitOfWork.cs e ValueObject.cs.
 :::image-end:::
 
 **Figura 7-12**. Set di esempio di classi di base e interfacce nella cartella"Seedwork" per il modello di dominio
 
-Si tratta di un tipo di riutilizzo che può essere copiato e incollato e che molti sviluppatori condividono nei progetti. Non è un framework formale. È possibile avere cartelle Seedwork in qualsiasi livello o libreria. Tuttavia, se il set di classi e interfacce è sufficientemente grande, potrebbe essere necessario creare una singola libreria di classi.
+Si tratta di un tipo di riutilizzo che può essere copiato e incollato e che molti sviluppatori condividono nei progetti. Non è un framework formale. È possibile avere cartelle Seedwork in qualsiasi livello o libreria. Tuttavia, se il set di classi e interfacce diventa sufficientemente grande, è possibile creare una singola libreria di classi.
 
 ## <a name="the-custom-entity-base-class"></a>Classe di base Entity personalizzata
 
@@ -143,5 +143,5 @@ public interface IRepository<T> where T : IAggregateRoot
   <https://www.martinfowler.com/eaaCatalog/separatedInterface.html>
 
 >[!div class="step-by-step"]
->[Precedente](net-core-microservice-domain-model.md)
->[Successivo](implement-value-objects.md)
+>[Successivo](net-core-microservice-domain-model.md)
+>[precedente](implement-value-objects.md)

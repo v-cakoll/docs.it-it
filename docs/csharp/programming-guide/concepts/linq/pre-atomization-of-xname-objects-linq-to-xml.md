@@ -3,10 +3,10 @@ title: Pre-atomizzazione di oggetti XName (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: e84fbbe7-f072-4771-bfbb-059d18e1ad15
 ms.openlocfilehash: 2fd754a352bd2988e52ec9c67a9915a8e587b107
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69591490"
 ---
 # <a name="pre-atomization-of-xname-objects-linq-to-xml-c"></a>Pre-atomizzazione di oggetti XName (LINQ to XML) (C#)
@@ -17,7 +17,7 @@ Per migliorare le prestazioni in LINQ to XML, è possibile pre-atomizzare gli og
  Se si decide di usare la pre-atomizzazione, è prima necessario testarla nel proprio scenario.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio che segue viene illustrato quanto descritto.  
+ L'esempio seguente illustra questa operazione.  
   
 ```csharp  
 XName Root = "Root";  
@@ -39,7 +39,7 @@ XElement root = new XElement(Root,
 Console.WriteLine(root);  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```xml  
 <Root>  
@@ -73,7 +73,7 @@ XElement root = new XElement(Root,
 Console.WriteLine(root);  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```xml  
 <aw:Root xmlns:aw="http://www.adventure-works.com">  

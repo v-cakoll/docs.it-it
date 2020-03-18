@@ -3,10 +3,10 @@ title: Nomi di identificatore
 description: Informazioni sulle regole per assegnare un nome valido agli identificatori nel linguaggio di programmazione C#.
 ms.date: 08/21/2018
 ms.openlocfilehash: bef6e2ea285b5391af3350ae42a4105d140c6d1b
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77673368"
 ---
 # <a name="identifier-names"></a>Nomi di identificatore
@@ -28,7 +28,7 @@ Oltre alle regole, esiste una serie di [convenzioni di denominazione](../../../s
 - I tipi enumerazione usano un sostantivo singolare per non flag e uno plurale per flag.
 - Gli identificatori non devono contenere due caratteri `_` consecutivi. Tali nomi sono riservati per gli identificatori generati dal compilatore.
 
-## <a name="c-language-specification"></a>Specifica del linguaggio C#
+## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
@@ -36,7 +36,7 @@ Oltre alle regole, esiste una serie di [convenzioni di denominazione](../../../s
 
 - [Guida per programmatori C#](../index.md)
 - [Contenuto di un programma C#](./index.md)
-- [Riferimenti per C#](../../language-reference/index.md)
+- [Guida di riferimento a C](../../language-reference/index.md)
 - [Classi](../classes-and-structs/classes.md)
 - [Tipi di struttura](../../language-reference/builtin-types/struct.md)
 - [Spazi dei nomi](../namespaces/index.md)

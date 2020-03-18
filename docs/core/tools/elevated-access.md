@@ -4,10 +4,10 @@ description: Informazioni sulle procedure consigliate per comandi dotnet che ric
 author: wli3
 ms.date: 06/26/2019
 ms.openlocfilehash: 4aff9badfa8ad9b83adc4496d4ebd6df29252e36
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156764"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>Accesso con privilegi elevati per comandi dotnet
@@ -35,8 +35,8 @@ Le istruzioni seguenti illustrano il modo consigliato per installare, eseguire e
 
 Se la cartella `%ProgramFiles%\dotnet-tools` è già esistente, eseguire le operazioni seguenti per verificare se il gruppo "Utenti" dispone dell'autorizzazione per scrivere o modificare tale directory:
 
-- Fare clic con il pulsante destro del mouse sulla cartella `%ProgramFiles%\dotnet-tools` e selezionare **Proprietà**. Verrà visualizzata la finestra di dialogo **Proprietà comuni**.
-- Selezionare la scheda **sicurezza** . In utenti e **gruppi**controllare se il gruppo "utenti" dispone dell'autorizzazione per scrivere o modificare la directory.
+- Fare clic `%ProgramFiles%\dotnet-tools` con il pulsante destro del mouse sulla cartella e scegliere **Proprietà**. Verrà visualizzata la finestra di dialogo **Proprietà comuni**.
+- Selezionare la scheda **Protezione.** In **Utenti e gruppi**verificare se il gruppo "Utenti" dispone dell'autorizzazione per scrivere o modificare la directory.
 - Se il gruppo "Utenti" è autorizzato alla scrittura o alla modifica della directory, usare un nome di directory diverso quando si installano gli strumenti anziché usare *dotnet-tools*.
 
 Per installare gli strumenti, eseguire il comando seguente al prompt con privilegi elevati. Verrà creata la cartella *dotnet-tools* durante l'installazione.
@@ -77,7 +77,7 @@ dotnet tool uninstall PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools"
 
 [!INCLUDE [elevated-access-unix](../../../includes/elevated-access-unix.md)]
 
-# <a name="macos"></a>[macOS](#tab/macos)
+# <a name="macos"></a>[Macos](#tab/macos)
 
 [!INCLUDE [elevated-access-unix](../../../includes/elevated-access-unix.md)]
 

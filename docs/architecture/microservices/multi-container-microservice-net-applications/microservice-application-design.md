@@ -3,10 +3,10 @@ title: Progettazione di un'applicazione orientata ai microservizi
 description: Architettura di microservizi .NET per applicazioni .NET incluse in contenitori | Conoscere i vantaggi e gli svantaggi di un'applicazione orientata ai microservizi, in modo da poter prendere una decisione consapevole.
 ms.date: 10/02/2018
 ms.openlocfilehash: 619440c02c1a82e05adb2cec9ddba933cd3e0a65
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76965763"
 ---
 # <a name="design-a-microservice-oriented-application"></a>Progettare un'applicazione orientata ai microservizi
@@ -65,13 +65,13 @@ Nell'intento di concentrarsi maggiormente sull'architettura e le tecnologie anzi
 
 L'applicazione è costituita da più sottosistemi, inclusi diversi front-end con interfaccia utente per negozi (un'applicazione Web e un'app per dispositivi mobili nativa), oltre a microservizi e contenitori back-end per tutte le operazioni richieste sul lato server con diversi gateway API come punti di ingresso consolidati ai microservizi interni. La figura 6-1 illustra l'architettura dell'applicazione di riferimento.
 
-![Diagramma delle app client che usano eShopOnContainers in un singolo host docker.](./media/microservice-application-design/eshoponcontainers-reference-application-architecture.png)
+![Diagramma delle app client che usano eShopOnContainers in un singolo host Docker.](./media/microservice-application-design/eshoponcontainers-reference-application-architecture.png)
 
 **Figura 6-1**. L'architettura dell'applicazione di riferimento eShopOnContainers per l'ambiente di sviluppo
 
-Il diagramma precedente mostra che i client per dispositivi mobili e SPA comunicano con endpoint di gateway API singoli, che quindi comunicano con i microservizi. I client Web tradizionali comunicano con microservizi MVC, che comunica con i microservizi tramite il gateway API.
+Il diagramma precedente mostra che i client Mobile e SPA comunicano con singoli endpoint gateway API, che comunicano quindi con i microservizi. I client Web tradizionali comunicano al microservizio MVC, che comunica con i microservizi tramite il gateway API.
 
-**Ambiente host**. Nella figura 6-1 sono visibili diversi contenitori distribuiti all'interno di un singolo host Docker, ovvero la situazione che si verifica durante la distribuzione in un singolo host Docker con il comando docker-compose up. Tuttavia, se si usa un agente di orchestrazione o un cluster di contenitori, ogni contenitore potrebbe essere eseguito in un host (nodo) differente e i nodi potrebbero eseguire un numero qualsiasi di contenitori, come illustrato in precedenza nella sezione sull'architettura.
+**Ambiente di hosting**. Nella figura 6-1 sono visibili diversi contenitori distribuiti all'interno di un singolo host Docker, ovvero la situazione che si verifica durante la distribuzione in un singolo host Docker con il comando docker-compose up. Tuttavia, se si usa un agente di orchestrazione o un cluster di contenitori, ogni contenitore potrebbe essere eseguito in un host (nodo) differente e i nodi potrebbero eseguire un numero qualsiasi di contenitori, come illustrato in precedenza nella sezione sull'architettura.
 
 **Architettura di comunicazione**. L'applicazione eShopOnContainers usa due tipi di comunicazione, a seconda del tipo di azione funzionale (query o aggiornamenti e transazioni):
 
@@ -83,7 +83,7 @@ L'applicazione viene distribuita come un set di microservizi sotto forma di cont
 
 ### <a name="data-sovereignty-per-microservice"></a>Sovranità dei dati per microservizio
 
-Nell'applicazione di esempio ogni microservizio è proprietario di un database o un'origine dati, benché tutti i database di SQL Server vengano distribuiti come un singolo contenitore. Questa decisione progettuale è stata presa solo per semplificare l'acquisizione del codice da GitHub, la clonazione e l'apertura in Visual Studio o Visual Studio Code da parte dello sviluppatore. In alternativa, consente di compilare facilmente le immagini Docker personalizzate usando il interfaccia della riga di comando di .NET Core e l'interfaccia della riga di comando di Docker e quindi di distribuirle ed eseguirle in un ambiente di sviluppo docker. In entrambi i casi, l'uso di contenitori per le origini dati consente agli sviluppatori di compilare e distribuire in pochi minuti senza dover eseguire il provisioning di un database esterno o di qualsiasi altra origine dati con dipendenze rigide dall'infrastruttura (cloud o locale).
+Nell'applicazione di esempio ogni microservizio è proprietario di un database o un'origine dati, benché tutti i database di SQL Server vengano distribuiti come un singolo contenitore. Questa decisione progettuale è stata presa solo per semplificare l'acquisizione del codice da GitHub, la clonazione e l'apertura in Visual Studio o Visual Studio Code da parte dello sviluppatore. In alternativa, semplifica la compilazione delle immagini Docker personalizzate usando l'interfaccia della riga di comando di .NET Core e l'interfaccia della riga di comando di Docker, quindi la distribuzione e l'esecuzione in un ambiente di sviluppo Docker. In entrambi i casi, l'uso di contenitori per le origini dati consente agli sviluppatori di compilare e distribuire in pochi minuti senza dover eseguire il provisioning di un database esterno o di qualsiasi altra origine dati con dipendenze rigide dall'infrastruttura (cloud o locale).
 
 In un ambiente di produzione reale, per la disponibilità elevata e la scalabilità i database dovrebbero essere basati su server di database nel cloud o in locale, ma non nei contenitori.
 
@@ -91,12 +91,12 @@ Pertanto, le unità di distribuzione per i microservizi (e anche per i database 
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **repository GitHub eShopOnContainers. Codice sorgente per l'applicazione di riferimento** \
+- **eShopOnContainers GitHub repo. Codice sorgente per l'applicazione di riferimento** \
   <https://aka.ms/eShopOnContainers/>
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>Vantaggi di una soluzione basata su microservizi
 
-Una soluzione basata su microservizi come questa presenta molti vantaggi:
+Una soluzione basata su microservizi come questa offre molti vantaggi:A microservice-based solution like this has many benefits:
 
 **Ogni microservizio è relativamente piccolo, semplice da gestire e da sviluppare**. In particolare:
 
@@ -118,9 +118,9 @@ Una soluzione basata su microservizi come questa presenta molti vantaggi:
 
 ## <a name="downsides-of-a-microservice-based-solution"></a>Svantaggi di una soluzione basata su microservizi
 
-Una soluzione basata su microservizi come questa presenta anche alcuni svantaggi:
+Una soluzione basata su microservizi come questa presenta anche alcuni svantaggi:A microservice-based solution like this also has some strabacks:
 
-**Applicazione distribuita**. La distribuzione dell'applicazione aumenta la complessità per gli sviluppatori in fase di progettazione e compilazione dei servizi. Ad esempio, gli sviluppatori devono implementare la comunicazione tra servizi usando protocolli come HTTP o AMPQ, che aggiunge complessità per i test e la gestione delle eccezioni. Anche la latenza per il sistema aumenta.
+**Applicazione distribuita**. La distribuzione dell'applicazione aumenta la complessità per gli sviluppatori in fase di progettazione e compilazione dei servizi. Ad esempio, gli sviluppatori devono implementare la comunicazione tra servizi utilizzando protocolli come HTTP o AMPQ, che aggiunge complessità per il test e la gestione delle eccezioni. Anche la latenza per il sistema aumenta.
 
 **Complessità della distribuzione**. Un'applicazione che dispone di decine di tipi di microservizi e necessita di scalabilità elevata (dovendo essere in grado di creare molte istanze per ogni servizio e di bilanciare tali servizi su molti host) comporta un livello elevato di complessità di distribuzione per le operazioni IT e la gestione. Se non si usa un'infrastruttura orientata ai microservizi (come un agente di orchestrazione e un'utilità di pianificazione), questa ulteriore complessità può richiedere molte più attività di sviluppo dell'applicazione aziendale stessa.
 
@@ -142,7 +142,7 @@ Come accennato nella sezione relativa all'architettura, durante la progettazione
 
 L'architettura esterna è costituita dall'architettura di microservizi composta da più servizi, in base ai principi descritti nella sezione sull'architettura di questa guida. Tuttavia, a seconda della natura di ogni microservizio e indipendentemente dall'architettura di microservizi di alto livello scelta, è comune e in alcuni casi consigliabile disporre di diverse architetture interne, ognuna basata su schemi differenti, per microservizi diversi. I microservizi possono anche usare tecnologie e linguaggi di programmazione differenti. La figura 6-2 illustra questa diversità.
 
-![Diagramma che confronta modelli di architettura interni ed esterni.](./media/microservice-application-design/external-versus-internal-architecture.png)
+![Diagramma di confronto dei modelli di architettura esterni e interni.](./media/microservice-application-design/external-versus-internal-architecture.png)
 
 **Figura 6-2**. Architettura e progettazione esterne e interne a confronto
 
@@ -164,7 +164,7 @@ Esistono molti schemi architetturali usati dagli sviluppatori e dai progettisti 
 
 - [Architettura pulita](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) (come quella usata con [eShopOnWeb](https://aka.ms/WebAppArchitecture))
 
-- [Command and Query Responsibility Segregation](https://martinfowler.com/bliki/CQRS.html) (CQRS).
+- [Separazione](https://martinfowler.com/bliki/CQRS.html) di responsabilità di comando e query (CQRS).
 
 - [Architettura basata su eventi](https://en.wikipedia.org/wiki/Event-driven_architecture) (EDA).
 
@@ -172,7 +172,7 @@ Esistono molti schemi architetturali usati dagli sviluppatori e dai progettisti 
 
 Il concetto fondamentale da comprendere è che nessuno stile o schema architetturale particolare né nessuna tecnologia specifica è appropriata per tutte le situazioni. La figura 6-3 illustra alcuni approcci e tecnologie (anche se non in un ordine specifico) che possono essere usati nei diversi microservizi.
 
-![Diagramma che mostra 12 microservizi complessi in un'architettura del mondo poliglotta.](./media/microservice-application-design/multi-architectural-patterns-polyglot-microservices.png)
+![Diagramma che mostra 12 microservizi complessi in un'architettura poliglotta nel mondo.](./media/microservice-application-design/multi-architectural-patterns-polyglot-microservices.png)
 
 **Figura 6-3**. Il mondo dei diversi schemi architetturali e microservizi poliglotti
 
@@ -180,10 +180,10 @@ Usare uno schema a più architetture e microservizi poliglotti significa combina
 
 Ad esempio, per una semplice applicazione di manutenzione CRUD, potrebbe non avere senso progettare e implementare schemi DDD. Ma per il dominio base o l'attività principale, potrebbe essere necessario applicare schemi più avanzati per gestire la complessità aziendale con regole business in continua evoluzione.
 
-Soprattutto quando si gestiscono applicazioni di grandi dimensioni composte da più sottosistemi, è consigliabile non applicare una singola architettura di primo livello basata su un unico modello di architettura. Ad esempio, CQRS non dovrebbe essere applicato come un'architettura di primo livello per un'intera applicazione, ma potrebbe essere utile per un set specifico di servizi.
+Soprattutto quando si gestiscono applicazioni di grandi dimensioni composte da più sottosistemi, non è consigliabile applicare una singola architettura di primo livello basata su un singolo modello di architettura. Ad esempio, CQRS non dovrebbe essere applicato come un'architettura di primo livello per un'intera applicazione, ma potrebbe essere utile per un set specifico di servizi.
 
 Non esiste un metodo infallibile o il giusto schema architetturale per ogni singolo caso. Non è possibile avere un solo schema architetturale applicabile a tutte le situazioni. In base alle priorità di ogni microservizio, è necessario scegliere un approccio differente, come illustrato nelle sezioni successive.
 
 >[!div class="step-by-step"]
->[Precedente](index.md)
->[Successivo](data-driven-crud-microservice.md)
+>[Successivo](index.md)
+>[precedente](data-driven-crud-microservice.md)

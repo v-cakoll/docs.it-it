@@ -1,15 +1,15 @@
 ---
-title: Come trovare i discendenti con un nome di elemento specificoC#()
+title: Come trovare i discendenti con un nome di elemento specifico (c'è)How to find descendants with a specific element name (C
 ms.date: 07/20/2015
 ms.assetid: f684da20-bee9-47f5-9607-7e3fd7e67470
 ms.openlocfilehash: b3200a2fdf75dbf52079a2b3d27aa1a88d313406
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141088"
 ---
-# <a name="how-to-find-descendants-with-a-specific-element-name-c"></a>Come trovare i discendenti con un nome di elemento specificoC#()
+# <a name="how-to-find-descendants-with-a-specific-element-name-c"></a>Come trovare i discendenti con un nome di elemento specifico (c'è)How to find descendants with a specific element name (C
 Talvolta si desidera individuare tutti i discendenti con un determinato nome. È possibile scrivere codice per scorrere tutti i discendenti, tuttavia è più agevole usare l'asse <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
   
 ## <a name="example"></a>Esempio  

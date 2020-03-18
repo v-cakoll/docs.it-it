@@ -1,26 +1,28 @@
 ---
 title: Controllo delle versioni del linguaggio C# - Guida a C#
-description: Informazioni sul modo in C# cui la versione della lingua viene determinata in base al progetto e ai motivi alla base di tale scelta. Informazioni su come eseguire manualmente l'override del valore predefinito.
+description: Informazioni su come viene determinata la versione del linguaggio C'è determinato in base al progetto e i motivi alla base di tale scelta. Scopri come sostituire manualmente l'impostazione predefinita.
 ms.date: 02/21/2020
-ms.openlocfilehash: 2be76fdac471a7175b661d896b0da2910b3609f3
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: ef7275aad7638f52ecbfca1dfbdb962ae242fb48
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77626764"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399539"
 ---
 # <a name="c-language-versioning"></a>Controllo delle versioni del linguaggio C#
 
-Il compilatore C# più recente determina la versione di un linguaggio predefinito in base ai framework di destinazione del progetto. Visual Studio non fornisce un'interfaccia utente per modificare il valore, ma è possibile modificarlo modificando il file *csproj* . La scelta del valore predefinito consente di usare la versione più recente del linguaggio compatibile con il Framework di destinazione. È possibile trarre vantaggio dall'accesso alle funzionalità più recenti del linguaggio compatibili con la destinazione del progetto. Questa scelta predefinita garantisce anche di non usare un linguaggio che richiede tipi o comportamenti di runtime non disponibili nel Framework di destinazione. La scelta di una versione della lingua più recente di quella predefinita può causare difficoltà nella diagnosi degli errori di runtime e della fase di compilazione.
+Il compilatore C# più recente determina la versione di un linguaggio predefinito in base ai framework di destinazione del progetto. Visual Studio non fornisce un'interfaccia utente per modificare il valore, ma è possibile modificarlo modificando il file *csproj.* La scelta di default assicura di utilizzare la versione della lingua più recente compatibile con il framework di destinazione. Approfittadellete dell'accesso alle più recenti funzionalità linguistiche compatibili con il target del progetto. Questa scelta predefinita garantisce inoltre di non usare un linguaggio che richiede tipi o comportamenti di runtime non disponibili nel framework di destinazione. La scelta di una versione della lingua più recente dell'impostazione predefinita può causare la diagnosi di errori di runtime e in fase di compilazione.
 
-C#8,0 (e versioni successive) è supportato solo in .NET Core 3. x e versioni successive. Molte delle funzionalità più recenti richiedono la libreria e le funzionalità di runtime introdotte in .NET Core 3. x:
+Le regole in questo articolo si applicano al compilatore fornito con Visual Studio 2019 o .NET Core 3.0 SDK. I compilatori C# che fanno parte dell'installazione di Visual Studio 2017 o di versioni precedenti di .NET Core SDK usano C# 7.0 come destinazione per impostazione predefinita.
 
-- L'implementazione del membro di interfaccia predefinito richiede nuove funzionalità in CLR di .NET Core 3,0.
-- I flussi asincroni richiedono i nuovi tipi <xref:System.IAsyncDisposable?displayProperty=nameWithType>, <xref:System.Collections.Generic.IAsyncEnumerable%601?displayProperty=nameWithType>e <xref:System.Collections.Generic.IAsyncEnumerator%601?displayProperty=nameWithType>.
-- Per gli indici e gli intervalli sono necessari i nuovi tipi <xref:System.Index?displayProperty=nameWithType> e <xref:System.Range?displayProperty=nameWithType>.
-- I tipi di riferimento Nullable fanno uso di diversi [attributi](../nullable-attributes.md) per fornire avvisi migliori. Questi attributi sono stati aggiunti in .NET Core 3,0. Altri Framework di destinazione non sono stati annotati con nessuno di questi attributi. Questo significa che gli avvisi Nullable potrebbero non riflettere accuratamente i potenziali problemi.
+La versione 8.0 (e successive) di Cè è supportata solo in .NET Core 3.x e versioni più recenti. Molte delle funzionalità più recenti richiedono funzionalità di libreria e runtime introdotte in .NET Core 3.x:
 
-## <a name="defaults"></a>Impostazioni predefinite
+- L'implementazione predefinita dei membri di interfaccia richiede nuove funzionalità in .NET Core 3.0 CLR.
+- I flussi asincroni <xref:System.IAsyncDisposable?displayProperty=nameWithType> <xref:System.Collections.Generic.IAsyncEnumerable%601?displayProperty=nameWithType>richiedono <xref:System.Collections.Generic.IAsyncEnumerator%601?displayProperty=nameWithType>i nuovi tipi , e .
+- Gli indici e gli intervalli richiedono i nuovi tipi <xref:System.Index?displayProperty=nameWithType> e <xref:System.Range?displayProperty=nameWithType>.
+- I tipi di riferimento nullable utilizzano diversi [attributi](../nullable-attributes.md) per fornire avvisi migliori. Tali attributi sono stati aggiunti in .NET Core 3.0. Altri framework di destinazione non sono stati annotati con uno di questi attributi. Ciò significa che gli avvisi nullable potrebbero non riflettere accuratamente i potenziali problemi.
+
+## <a name="defaults"></a>Valori predefiniti
 
 Il compilatore determina un'impostazione predefinita in base a queste regole:
 
@@ -33,7 +35,7 @@ Il compilatore determina un'impostazione predefinita in base a queste regole:
 |.NET Standard|1.x|C# 7.3|
 |.NET Framework|all|C# 7.3|
 
-Quando il progetto ha come destinazione un framework in anteprima con una versione del linguaggio in anteprima corrispondente, la versione del linguaggio usata è la versione del linguaggio in anteprima. Si usano le funzionalità più recenti con questa anteprima in qualsiasi ambiente, senza influire sui progetti destinati a una versione di .NET Core rilasciata.
+Quando il progetto ha come destinazione un framework in anteprima con una versione del linguaggio in anteprima corrispondente, la versione del linguaggio usata è la versione del linguaggio in anteprima. Utilizzare le funzionalità più recenti con tale anteprima in qualsiasi ambiente, senza influire sui progetti destinati a una versione di .NET Core rilasciata.
 
 ## <a name="override-a-default"></a>Sostituire un valore predefinito
 
@@ -41,7 +43,7 @@ Se è necessario specificare in modo esplicito la versione di C#, è possibile f
 
 - Modificare manualmente il [file di progetto](#edit-the-project-file).
 - Impostare la versione del linguaggio [per più progetti in una sottodirectory](#configure-multiple-projects).
-- Configurare l'[opzione del compilatore `-langversion`](compiler-options/langversion-compiler-option.md).
+- Configurare [ `-langversion` l'opzione del compilatore](compiler-options/langversion-compiler-option.md).
 
 ### <a name="edit-the-project-file"></a>Modificare il file di progetto
 
@@ -57,7 +59,7 @@ Il valore `preview` usa la versione del linguaggio C# in anteprima disponibile p
 
 ### <a name="configure-multiple-projects"></a>Configurare più progetti
 
-Per configurare più progetti, è possibile creare un file **Directory. Build. props** che contiene l'elemento `<LangVersion>`. Questa operazione viene in genere eseguita nella directory della soluzione. Aggiungere il codice seguente a un file **Directory.Build.props** nella directory della soluzione:
+Per configurare più progetti, è possibile creare un file `<LangVersion>` **Directory.Build.props** contenente l'elemento. Questa operazione viene in genere eseguita nella directory della soluzione. Aggiungere quanto segue a un file **Directory.Build.props** nella directory della soluzione:
 
 ```xml
 <Project>
@@ -67,13 +69,13 @@ Per configurare più progetti, è possibile creare un file **Directory. Build. p
 </Project>
 ```
 
-Compilazioni in tutte le sottodirectory della directory che contiene il file utilizzerà C# la versione di anteprima. Per altre informazioni, vedere l'articolo [Personalizzare la compilazione](/visualstudio/msbuild/customize-your-build).
+Viene compilato in tutte le sottodirectory della directory che contiene tale file verrà utilizzata la versione di anteprima di C. Per altre informazioni, vedere l'articolo [Personalizzare la compilazione](/visualstudio/msbuild/customize-your-build).
 
 ## <a name="c-language-version-reference"></a>Informazioni di riferimento sulle versioni del linguaggio C#
 
-La tabella seguente illustra tutte le versioni del linguaggio C# correnti. Il compilatore potrebbe non comprendere necessariamente ogni valore se è meno recente. Se si installa .NET Core 3,0 o versione successiva, è possibile accedere a tutti gli elementi elencati.
+La tabella seguente illustra tutte le versioni del linguaggio C# correnti. Il compilatore potrebbe non comprendere necessariamente ogni valore se è più vecchio. Se si installa .NET Core 3.0 o versione successiva, è possibile accedere a tutti gli elementi elencati.
 
-|Valore|Significato|
+|valore|Significato|
 |------------|-------------|
 |preview|Il compilatore accetta tutte le sintassi di linguaggio valide dalla versione di anteprima più recente.|
 |più recenti|Il compilatore accetta la sintassi dalla versione rilasciata più recente del compilatore (inclusa la versione secondaria).|
@@ -87,5 +89,5 @@ La tabella seguente illustra tutte le versioni del linguaggio C# correnti. Il co
 |5|Il compilatore accetta solo la sintassi inclusa in C# 5.0 o versione precedente.|
 |4|Il compilatore accetta solo la sintassi inclusa in C# 4.0 o versione precedente.|
 |3|Il compilatore accetta solo la sintassi inclusa in C# 3.0 o versione precedente.|
-|ISO-2|Il compilatore accetta solo la sintassi inclusa in ISO/IEC 23270:2006 C# (2,0). |
-|ISO-1|Il compilatore accetta solo la sintassi inclusa in ISO/IEC 23270:2003 C# (1.0/1.2). |
+|ISO-2|Il compilatore accetta solo la sintassi inclusa in ISO/IEC 23270:2006 in C |
+|ISO-1|Il compilatore accetta solo la sintassi inclusa in ISO/IEC 23270:2003 c'è (1.0/1.2). |

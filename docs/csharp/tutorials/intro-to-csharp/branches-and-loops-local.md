@@ -4,21 +4,21 @@ description: In questa esercitazione su rami e cicli si scriverà codice C# per 
 ms.date: 10/31/2017
 ms.custom: mvc
 ms.openlocfilehash: 44b634e3c2120116ee7fd66770398a6b66c8ed8c
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73739132"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Informazioni sulla logica condizionale con istruzioni per rami e cicli
 
 Questa esercitazione descrive come scrivere codice che esamina le variabili e modifica il percorso di esecuzione in base a queste variabili. Verranno descritte le procedure per scrivere codice C# e visualizzare i risultati della compilazione ed esecuzione del codice. L'esercitazione contiene una serie di lezioni che esplorano i costrutti per rami e cicli in C#. Queste lezioni presentano le nozioni fondamentali del linguaggio C#.
 
-Questa esercitazione prevede la presenza di un computer da usare per lo sviluppo. L'esercitazione .NET [Hello World in 10 minuti](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) contiene le istruzioni per configurare l'ambiente di sviluppo locale in Windows, Linux o MacOS. Una breve panoramica dei comandi usati è disponibile in [Acquisire familiarità con gli strumenti di sviluppo](local-environment.md), che contiene collegamenti a informazioni più dettagliate.
+Questa esercitazione prevede la presenza di un computer da usare per lo sviluppo. L'esercitazione di .NET [Hello World in 10 minuti](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) contiene istruzioni per la configurazione dell'ambiente di sviluppo locale in Windows, Linux o macOS. Una breve panoramica dei comandi usati è disponibile in [Acquisire familiarità con gli strumenti di sviluppo](local-environment.md), che contiene collegamenti a informazioni più dettagliate.
 
 ## <a name="make-decisions-using-the-if-statement"></a>Prendere decisioni usando l'istruzione `if`
 
-Creare una directory denominata *branches-tutorial*. Rendere la directory corrente ed eseguire il comando seguente:
+Creare una directory denominata *branches-tutorial*. Assicurarsi che la directory corrente ed eseguire il comando seguente:
 
 ```dotnetcli
 dotnet new console -n BranchesAndLoops -o .
@@ -235,11 +235,11 @@ for (int index = 0; index < 10; index++)
 
 Questo codice esegue le stesse operazioni di ciclo `while` e `do` già usate. L'istruzione `for` è composta da tre parti che ne controllano il funzionamento.
 
-La prima parte è l'**inizializzatore for**: `int index = 0;` dichiara che `index` è la variabile di ciclo e imposta il valore iniziale su `0`.
+La prima parte è **for initializer**: `int index = 0;` dichiara che `index` è la `0`variabile di ciclo e imposta il valore iniziale su .
 
-La parte centrale è la **condizione for**: `index < 10` dichiara che questo ciclo `for` continua l'esecuzione fino a quando il valore del contatore è minore di 10.
+La parte centrale è `index < 10` la condizione `for` **for**: dichiara che questo ciclo continua a essere eseguito finché il valore di counter è minore di 10.
 
-La parte finale è l'**iteratore for**: `index++` specifica come modificare la variabile di ciclo dopo l'esecuzione del blocco successivo all'istruzione `for`. In questo caso, specifica che `index` deve essere incrementato di 1 a ogni esecuzione del blocco.
+La parte finale è `index++` `for` **l'iteratore for**: specifica come modificare la variabile di ciclo dopo l'esecuzione del blocco che segue l'istruzione . In questo caso, specifica che `index` deve essere incrementato di 1 a ogni esecuzione del blocco.
 
 Sperimentare da soli questi elementi. Eseguire queste prove:
 

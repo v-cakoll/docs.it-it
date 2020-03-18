@@ -1,38 +1,38 @@
 ---
-title: App per la logica di Azure-app senza server
-description: App per la logica di Azure consente di creare flussi di lavoro scalabili automatizzati che integrano le app e i dati tra servizi cloud e sistemi locali.
+title: App per la logica di Azure - App senza serverAzure Logic Apps - Serverless apps
+description: Le app per la logica di Azure consentono la creazione di flussi di lavoro scalabili automatizzati che integrano app e dati tra servizi cloud e sistemi locali.
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 7ece3d30209713d42ee44ef9c1be1cf0fe82464a
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69577454"
 ---
 # <a name="azure-logic-apps"></a>App per la logica di Azure
 
-[App](https://docs.microsoft.com/azure/logic-apps) per la logica di Azure offre un motore senza server per creare flussi di lavoro automatizzati per integrare app e dati tra i servizi cloud e i sistemi locali. I flussi di lavoro vengono compilati utilizzando una finestra di progettazione visiva. È possibile attivare flussi di lavoro basati su eventi o timer e sfruttare i connettori per le applicazioni di integrazione e semplificare le comunicazioni business-to-business (B2B). App per la logica si integra perfettamente con funzioni di Azure.
+[App per](https://docs.microsoft.com/azure/logic-apps) la logica di Azure offre un motore senza server per creare flussi di lavoro automatizzati per integrare app e dati tra servizi cloud e sistemi locali. I flussi di lavoro vengono compilati utilizzando una finestra di progettazione visiva. È possibile attivare i flussi di lavoro in base a eventi o timer e sfruttare i connettori alle applicazioni di integrazione e facilitare la comunicazione business-to-business (B2B). App per la logica si integra perfettamente con Funzioni di Azure.Logic Apps integrates seamlessly with Azure Functions.
 
-![Logo app per la logica di Azure](./media/logic-apps-logo.png)
+![Logo delle app per la logica di AzureAzure Logic Apps logo](./media/logic-apps-logo.png)
 
-Le app per la logica non possono semplicemente connettere i servizi cloud, ad esempio le funzioni, con risorse cloud, ad esempio code e database. È anche possibile orchestrare i flussi di lavoro locali con il gateway locale. Ad esempio, è possibile usare l'app per la logica per attivare un stored procedure SQL locale in risposta a un evento basato sul cloud o a una logica condizionale nel flusso di lavoro. Altre informazioni sulla [connessione a origini dati locali con il gateway dati locale di Azure](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway).
+Le app per la logica possono fare di più che connettere i servizi cloud (come le funzioni) con le risorse cloud (ad esempio code e database). È anche possibile orchestrare i flussi di lavoro locali con il gateway locale. Ad esempio, è possibile usare l'app per la logica per attivare una stored procedure SQL locale in risposta a un evento basato su cloud o a una logica condizionale nel flusso di lavoro. Altre informazioni sulla connessione a origini dati locali con il gateway dati locale di Azure.Learn more about [Connecting to on-premises data Gateway](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway).
 
-![Architettura di app per la logica](./media/logic-apps-architecture.png)
+![Architettura delle app per la logica](./media/logic-apps-architecture.png)
 
-Analogamente alle funzioni di Azure, è possibile avviare i flussi di lavoro delle app per la logica con un trigger. È possibile scegliere tra molti trigger. L'acquisizione seguente mostra solo alcuni dei più diffusi da centinaia disponibili.
+Come Funzioni di Azure, è possibile avviare i flussi di lavoro dell'app per la logica con un trigger. Ci sono molti trigger tra cui scegliere. La cattura seguente mostra solo alcuni dei più popolari su centinaia che sono disponibili.
 
-![Trigger di app per la logica](./media/logic-app-triggers.png)
+![Trigger delle app per la logica](./media/logic-app-triggers.png)
 
-Una volta attivata l'app, è possibile usare la finestra di progettazione visiva per compilare passaggi, cicli, condizioni e azioni. Tutti i dati inseriti in un passaggio precedente sono disponibili per l'uso nei passaggi successivi. Il flusso di lavoro seguente carica URL da un database CosmosDB. Trova quelli con un host di `t.co` quindi li cerca su Twitter. Se vengono trovati Tweet corrispondenti, i documenti vengono aggiornati con i Tweet correlati chiamando una funzione.
+Dopo aver attivato l'app, puoi usare la finestra di progettazione visiva per compilare passaggi, cicli, condizioni e azioni. Tutti i dati ingeriti in un passaggio precedente sono disponibili per l'utilizzo nei passaggi successivi. Il flusso di lavoro seguente carica gli URL da un database CosmosDB. Trova quelli con una `t.co` miriade di poi cerca rli su Twitter. Se trova i tweet corrispondenti, aggiorna i documenti con i tweet correlati chiamando una funzione.
 
 ![Flusso di lavoro dell'app per la logica](./media/logic-app-workflow.png)
 
-Il Dashboard app per la logica Mostra la cronologia di esecuzione dei flussi di lavoro e se ogni esecuzione è stata completata correttamente. È possibile passare a una determinata esecuzione ed esaminare i dati utilizzati da ogni passaggio per la risoluzione dei problemi. App per la logica fornisce anche modelli esistenti che è possibile modificare e sono particolarmente adatti per flussi di lavoro aziendali complessi.
+Il dashboard App per la logica mostra la cronologia dell'esecuzione dei flussi di lavoro e indica se ogni esecuzione è stata completata correttamente o meno. È possibile passare a qualsiasi esecuzione e controllare i dati utilizzati da ogni passaggio per la risoluzione dei problemi. App per la logica fornisce anche modelli esistenti che è possibile modificare e sono adatti per flussi di lavoro aziendali complessi.
 
-Per altre informazioni, vedere [app](https://docs.microsoft.com/azure/logic-apps)per la logica di Azure.
+Per altre informazioni, vedere [App per la logica](https://docs.microsoft.com/azure/logic-apps)di Azure.To learn more, see Azure Logic Apps .
 
 >[!div class="step-by-step"]
->[Precedente](application-insights.md)
->[Successivo](event-grid.md)
+>[Successivo](application-insights.md)
+>[precedente](event-grid.md)

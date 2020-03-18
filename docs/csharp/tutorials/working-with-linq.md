@@ -5,41 +5,41 @@ ms.date: 10/29/2018
 ms.technology: csharp-linq
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
 ms.openlocfilehash: ece001e82c0aa44a91999bea78d2fd695ff9362b
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78240015"
 ---
-# <a name="work-with-language-integrated-query-linq"></a>Usare LINQ (Language-Integrated Query)
+# <a name="work-with-language-integrated-query-linq"></a>Utilizzare LINQ (Language-Integrated Query)
 
 ## <a name="introduction"></a>Introduzione
 
 Questa esercitazione illustra le funzionalità disponibili in .NET Core e nel linguaggio C#. Verrà descritto come:
 
 - Generare sequenze con LINQ.
-- Scrivere metodi che possono essere usati facilmente nelle query LINQ.
-- Distinguere tra valutazione eager e Lazy.
+- Scrivere metodi che possono essere facilmente utilizzati nelle query LINQLINQ.
+- Distinguere tra valutazione eager e lazy.
 
 Si apprenderanno queste tecniche creando un'applicazione che illustra una delle abilità di base di un prestigiatore: il [miscuglio faro](https://en.wikipedia.org/wiki/Faro_shuffle). In breve, il miscuglio faro è una tecnica che consiste nel tagliare un mazzo di carte esattamente a metà e quindi nel sovrapporre alternativamente le carte delle due metà per ricostruire il mazzo originale.
 
 I prestigiatori adottano questa tecnica perché, dopo ogni miscuglio, ciascuna carta si trova in una posizione nota e le carte vengono ordinate in base a uno schema ripetitivo.
 
-Ai fini dell'esercitazione, questa tecnica offre un modo scherzoso per illustrare la manipolazione di sequenze di dati. L'applicazione da compilare costruisce un mazzo di schede e quindi esegue una sequenza di shuffle, scrivendo ogni volta la sequenza. Si confronterà inoltre l'ordine aggiornato con quello originale.
+Ai fini dell'esercitazione, questa tecnica offre un modo scherzoso per illustrare la manipolazione di sequenze di dati. L'applicazione che costruirai costruisce un mazzo di carte e poi esegue una sequenza di mescolamenti, scrivendo la sequenza ogni volta. Si confronterà inoltre l'ordine aggiornato con quello originale.
 
 Questa esercitazione prevede diversi passaggi. Dopo ogni passaggio, è possibile eseguire l'applicazione e verificare lo stato di avanzamento. È anche possibile vedere l'[esempio completo](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq) disponibile nel repository dotnet/samples su GitHub. Per istruzioni sul download, vedere [Esempi ed esercitazioni](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="prerequisites"></a>Prerequisites
 
-È necessario configurare il computer per l'esecuzione di .NET core. È possibile trovare le istruzioni di installazione nella pagina di [download di .NET Core](https://dotnet.microsoft.com/download) . È possibile eseguire questa applicazione in Windows, Ubuntu Linux o OS X oppure in un contenitore docker. È necessario installare l'editor di codice preferito. Le descrizioni seguenti usano [Visual Studio Code](https://code.visualstudio.com/) un editor multipiattaforma open source. ma è possibile usare gli strumenti con cui si ha maggiore familiarità.
+È necessario configurare il computer per l'esecuzione di .NET core. Le istruzioni di installazione sono disponibili nella pagina di download di .NET Core.You can find the installation instructions on the [.NET Core Download page.](https://dotnet.microsoft.com/download) È possibile eseguire questa applicazione su Windows, Ubuntu Linux o OS X o in un contenitore Docker. È necessario installare l'editor di codice preferito. Le descrizioni seguenti usano [Visual Studio Code,](https://code.visualstudio.com/) che è un editor open source e multipiattaforma. ma è possibile usare gli strumenti con cui si ha maggiore familiarità.
 
 ## <a name="create-the-application"></a>Creare l'applicazione
 
-Il primo passaggio consiste nel creare una nuova applicazione. Aprire un prompt dei comandi e creare una nuova directory per l'applicazione, impostandola come directory corrente. Digitare il comando `dotnet new console` al prompt dei comandi per creare i file di avvio per un'applicazione "Hello World" di base.
+Il primo passaggio consiste nel creare una nuova applicazione. Aprire un prompt dei comandi e creare una nuova directory per l'applicazione, impostandola come directory corrente. Digitare il comando `dotnet new console` al prompt dei comandi Questa operazione crea i file iniziali per un'applicazione "Hello World" di base.
 
 Se non si è mai usato C#, [questa esercitazione](console-teleprompter.md) illustra la struttura di un programma C#. È possibile leggerla e tornare qui per ottenere altre informazioni su LINQ.
 
-## <a name="create-the-data-set"></a>Creare il set di dati
+## <a name="create-the-data-set"></a>Creare il set di datiCreate the Data Set
 
 Prima di iniziare, verificare che le righe seguenti si trovino all'inizio del file `Program.cs` generato da `dotnet new console`:
 
@@ -118,7 +118,7 @@ Andare avanti ed eseguire l'esempio che si è creato finora. Verranno visualizza
 
 ![Una finestra della console con l'app che scrive 52 carte.](./media/working-with-linq/console-52-card-application.png)
 
-## <a name="manipulate-the-order"></a>Modificare l'ordine
+## <a name="manipulate-the-order"></a>Manipolare l'ordine
 
 A questo punto occorre concentrarsi sul modo in cui si mischieranno le carte nel mazzo. Il primo passaggio consiste nel tagliare il mazzo in due. I metodi <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> inclusi nelle API LINQ offrono questa funzionalità. Inserirli sotto il ciclo `foreach`:
 
@@ -173,7 +173,7 @@ public static IEnumerable<T> InterleaveSequenceWith<T> (this IEnumerable<T> firs
 
 È possibile notare l'aggiunta del modificatore `this` nel primo argomento del metodo. Ciò significa che il metodo viene chiamato come se fosse un membro del tipo del primo argomento. Questa dichiarazione di metodo segue anche un termine standard in cui i tipi di input e output sono `IEnumerable<T>`. Ciò consente la concatenazione dei metodi LINQ per l'esecuzione di query più complesse.
 
-Naturalmente, dato che il mazzo è stato diviso in due, occorrerà unire queste due metà. Nel codice questo significa enumerare entrambe le sequenze acquisite tramite <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> contemporaneamente, *`interleaving`* gli elementi e creare una sola sequenza, ossia il mazzo di carte ora mischiato. Per scrivere un metodo LINQ utilizzabile con le due sequenze è necessario comprendere il funzionamento di <xref:System.Collections.Generic.IEnumerable%601>.
+Naturalmente, dato che il mazzo è stato diviso in due, occorrerà unire queste due metà. Nel codice, questo significa che eseguerai entrambe <xref:System.Linq.Enumerable.Take%2A> <xref:System.Linq.Enumerable.Skip%2A> le sequenze che hai acquisito attraverso e subito gli *`interleaving`* elementi e creerai una sequenza: il tuo mazzo di carte ora mescolato. Per scrivere un metodo LINQ utilizzabile con le due sequenze è necessario comprendere il funzionamento di <xref:System.Collections.Generic.IEnumerable%601>.
 
 L'interfaccia <xref:System.Collections.Generic.IEnumerable%601> ha un unico metodo: <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A>. L'oggetto restituito da <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> ha un metodo per passare all'elemento successivo e una proprietà che recupera l'elemento corrente nella sequenza. Si useranno questi due membri per enumerare la raccolta e restituire gli elementi. Questo metodo Interleave sarà un metodo iteratore. Di conseguenza, anziché creare una raccolta e restituirla, si userà la sintassi `yield return` mostrata in precedenza.
 
@@ -350,9 +350,9 @@ Oltre a LINQ, è stata illustrata una tecnica usata dai prestigiatori per i truc
 
 Per altre informazioni su LINQ, vedere:
 
-- [LINQ (Language-Integrated Query)](../programming-guide/concepts/linq/index.md)
+- [Language Integrated Query (LINQ)](../programming-guide/concepts/linq/index.md)
 - [Introduzione a LINQ](../programming-guide/concepts/linq/index.md)
 - [Operazioni di query LINQ di base (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
-- [Trasformazioni dati con LINQ (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
+- [Trasformazioni dei dati con LINQ (C )Data Transformations with LINQ (C](../programming-guide/concepts/linq/data-transformations-with-linq.md)
 - [Sintassi di query e sintassi di metodi in LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
-- [Funzionalità di C# che supportano LINQ](../programming-guide/concepts/linq/features-that-support-linq.md)
+- [Funzionalità di C.](../programming-guide/concepts/linq/features-that-support-linq.md)

@@ -1,15 +1,15 @@
 ---
-title: Come eseguire il debug di set di risultatiC#di query vuoti ()
+title: Come eseguire il debug di set di risultati di query vuoti (c'è)How to debug empty query results sets (C
 ms.date: 07/20/2015
 ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
 ms.openlocfilehash: 2716f7c525ac6bee8d2fb374e4ecc4c975d852a0
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141287"
 ---
-# <a name="how-to-debug-empty-query-results-sets-c"></a>Come eseguire il debug di set di risultatiC#di query vuoti ()
+# <a name="how-to-debug-empty-query-results-sets-c"></a>Come eseguire il debug di set di risultati di query vuoti (c'è)How to debug empty query results sets (C
 Uno dei problemi più comuni che viene riscontrato durante l'esecuzione di query su alberi XML è che, se l'albero XML include uno spazio dei nomi predefinito, lo sviluppatore scrive talvolta la query come se il codice XML non fosse incluso in uno spazio dei nomi.  
   
  Nel primo set di esempi riportati in questo argomento viene illustrato il tipico caricamento del codice XML in uno spazio dei nomi predefinito e l'esecuzione errata di query su tale codice.  

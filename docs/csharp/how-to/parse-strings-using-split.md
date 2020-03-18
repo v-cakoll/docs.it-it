@@ -1,5 +1,5 @@
 ---
-title: Come analizzare le stringhe con String. Split (C# guida)
+title: Come analizzare le stringhe utilizzando String.Split (Guida di C
 description: String.Split restituisce una matrice di stringhe divise da un set di delimitatori e rappresenta un modo semplice per analizzare le stringhe.
 ms.date: 01/03/2018
 helpviewer_keywords:
@@ -10,13 +10,13 @@ helpviewer_keywords:
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
 ms.openlocfilehash: b46429f3b55658e1f2a7d21eed714c1d02236c57
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73973226"
 ---
-# <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>Come analizzare le stringhe con String. Split (C# guida)
+# <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>Come analizzare le stringhe utilizzando String.Split (Guida di C
 
 Il metodo <xref:System.String.Split%2A?displayProperty=nameWithType> crea una matrice di sottostringhe dividendo la stringa di input in base a uno o più delimitatori. È spesso il modo più semplice per separare una stringa in corrispondenza della fine delle parole. Questo metodo viene usato anche per dividere le stringhe in corrispondenza di altri caratteri o di altre stringhe specifiche.
 
@@ -48,7 +48,7 @@ Istanze consecutive di un separatore generano una stringa vuota nella matrice di
   
 [!code-csharp-interactive[split strings using strings as separators](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#5)]
 
-È possibile provare questi esempi esaminando il codice nel [repository GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Oppure è possibile scaricare gli esempi [come file ZIP](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
+È possibile provare questi esempi esaminando il codice nel repository [GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Oppure è possibile scaricare gli esempi [come file ZIP](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
 ## <a name="see-also"></a>Vedere anche
 

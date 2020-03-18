@@ -4,15 +4,15 @@ description: Il comando dotnet nuget locals cancella o elenca le risorse NuGet l
 author: karann-msft
 ms.date: 02/14/2020
 ms.openlocfilehash: 3fdd7d946b08b4c18cfaeb65013de259b927a7fa
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503691"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
-**Questo articolo si applica a:** ✔️ .NET Core 2. x SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .NET Core 2.x SDK e versioni successive
 
 ## <a name="name"></a>Nome
 
@@ -90,6 +90,6 @@ Il comando `dotnet nuget locals` cancella o elenca risorse NuGet locali presenti
   dotnet nuget locals temp -c
   ```
 
-## <a name="troubleshooting"></a>risoluzione dei problemi
+## <a name="troubleshooting"></a>Risoluzione dei problemi
 
 Per informazioni su problemi ed errori comuni relativi all'uso del comando `dotnet nuget locals`, vedere [Managing the NuGet cache](/nuget/consume-packages/managing-the-nuget-cache) (Gestione della cache NuGet).

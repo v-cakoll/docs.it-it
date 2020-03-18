@@ -1,22 +1,22 @@
 ---
 ms.openlocfilehash: 9520f8c6b6671917f5694bc602293a00e2dab82d
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568194"
 ---
-### <a name="ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes"></a>ZipArchiveEntry non gestisce più gli archivi con dimensioni di voce incoerenti
+### <a name="ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes"></a>La voce non gestisce più gli archivi con dimensioni di voce incoerenti
 
-Gli archivi zip elencano le dimensioni compresse e le dimensioni non compresse nella directory centrale e nell'intestazione locale.  Anche i dati di immissione indicano le relative dimensioni.  In .NET Core 2,2 e versioni precedenti, questi valori non venivano mai controllati per verificarne la coerenza. A partire da .NET Core 3,0, sono ora disponibili.
+Gli archivi zip elencano sia le dimensioni compresse che le dimensioni non compresse nella directory centrale e nell'intestazione locale.  Anche i dati di entrata ne indicano le dimensioni.  In .NET Core 2.2 e versioni precedenti, questi valori non sono mai stati verificati per verificarne la coerenza. A partire da .NET Core 3.0, ora lo sono.
 
-#### <a name="change-description"></a>Descrizione della modifica
+#### <a name="change-description"></a>Descrizione modifica:
 
-In .NET Core 2,2 e versioni precedenti, <xref:System.IO.Compression.ZipArchiveEntry.Open?displayProperty=nameWithType> ha esito positivo anche se l'intestazione locale non accetta l'intestazione centrale del file zip. I dati vengono decompressi fino a quando non viene raggiunta la fine del flusso compresso, anche se la lunghezza supera la dimensione del file non compresso elencata nell'intestazione directory centrale/locale.
+In .NET Core 2.2 <xref:System.IO.Compression.ZipArchiveEntry.Open?displayProperty=nameWithType> e versioni precedenti, ha esito positivo anche se l'intestazione locale non è in disaccordo con l'intestazione centrale del file zip. I dati vengono decompressi fino al raggiungimento della fine del flusso compresso, anche se la sua lunghezza supera la dimensione del file non compresso elencato nella directory centrale/intestazione locale.
 
-A partire da .NET Core 3,0, il metodo <xref:System.IO.Compression.ZipArchiveEntry.Open?displayProperty=nameWithType> verifica che l'intestazione locale e l'intestazione centrale accettino le dimensioni compresse e non compresse di una voce.  In caso contrario, il metodo genera un'<xref:System.IO.InvalidDataException> se l'intestazione locale dell'archivio e/o le dimensioni dell'elenco descrittore dati non sono consentite con la directory centrale del file zip. Quando si legge una voce, i dati decompressi vengono troncati nelle dimensioni dei file non compressi elencati nell'intestazione.
+A partire da .NET Core <xref:System.IO.Compression.ZipArchiveEntry.Open?displayProperty=nameWithType> 3.0, il metodo verifica che l'intestazione locale e l'intestazione centrale concordino sulle dimensioni compresse e non compresse di una voce.  In caso contrario, il <xref:System.IO.InvalidDataException> metodo genera un'eccezione se l'intestazione locale dell'archivio e/o le dimensioni dell'elenco dei descrittori di dati non sono d'accordo con la directory centrale del file zip. Durante la lettura di una voce, i dati decompressi vengono troncati alla dimensione del file non compresso elencato nell'intestazione.
 
-Questa modifica è stata apportata per garantire che un <xref:System.IO.Compression.ZipArchiveEntry> rappresenti correttamente le dimensioni dei dati e che venga letta solo tale quantità di dati.
+Questa modifica è stata <xref:System.IO.Compression.ZipArchiveEntry> apportata per garantire che un rappresenta correttamente la dimensione dei dati e che solo la quantità di dati viene letta.
 
 #### <a name="version-introduced"></a>Versione introdotta
 
@@ -24,7 +24,7 @@ Questa modifica è stata apportata per garantire che un <xref:System.IO.Compress
 
 #### <a name="recommended-action"></a>Azione consigliata
 
-Riassemblare qualsiasi archivio zip che presenta questi problemi.
+Riconfezionare qualsiasi archivio zip che presenta questi problemi.
 
 #### <a name="category"></a>Category
 

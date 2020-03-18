@@ -1,17 +1,17 @@
 ---
-title: 'Esercitazione: rilevare le anomalie nelle vendite di prodotti'
+title: 'Esercitazione: Rilevare le anomalie nelle vendite dei prodottiTutorial: Detect anomalies in product sales'
 description: Informazioni su come creare un'applicazione di rilevamento delle anomalie per i dati di vendita dei prodotti. Questa esercitazione crea un'applicazione console .NET Core usando C# in Visual Studio 2019.
 ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
 ms.openlocfilehash: c3fd4aa715a64a20f1eff9b789f6a87eaa749163
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78239989"
 ---
-# <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>Esercitazione: rilevare le anomalie nelle vendite di prodotti con ML.NET
+# <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>Esercitazione: Rilevare le anomalie nelle vendite di prodotti con ML.NET
 
 Informazioni su come creare un'applicazione di rilevamento delle anomalie per i dati di vendita dei prodotti. Questa esercitazione crea un'applicazione console .NET Core usando C# in Visual Studio.
 
@@ -28,7 +28,7 @@ In questa esercitazione verranno illustrate le procedure per:
 
 ## <a name="prerequisites"></a>Prerequisites
 
-* [Visual Studio 2017 versione 15,6 o successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) con il carico di lavoro "sviluppo multipiattaforma .NET Core" installato.
+* [Visual Studio 2017 versione 15.6 o successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) con il carico di lavoro ".NET Core cross-platform development" installato.
 
 * [Set di dati product-sales.csv](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)
 
@@ -40,11 +40,11 @@ In questa esercitazione verranno illustrate le procedure per:
 
 1. Creare un'**applicazione Console .NET Core** denominata "ProductSalesAnomalyDetection".
 
-2. Creare una directory denominata *Dati* nel progetto per salvare i file del set di dati.
+2. Creare una directory denominata *Data* nel progetto per salvare i file del set di dati.
 
 3. Installare il **pacchetto NuGet Microsoft.ML**:
 
-    In Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto e selezionare **Gestisci pacchetti NuGet**. Scegliere "nuget.org" come origine del pacchetto, selezionare la scheda Sfoglia, cercare **Microsoft.ml** e selezionare il pulsante **Installa** . Selezionare il pulsante **OK** nella finestra di dialogo **Anteprima modifiche** e quindi selezionare il pulsante **Accetto** nella finestra di dialogo **Accettazione della licenza** se si accettano le condizioni di licenza per i pacchetti elencati. Ripetere questi passaggi per **Microsoft. ml. TimeSeries**.
+    In Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto e selezionare **Gestisci pacchetti NuGet**. Scegliere "nuget.org" come origine del pacchetto, selezionare la scheda Sfoglia, cercare **Microsoft.ML** e selezionare il pulsante **Installa.** Selezionare il pulsante **OK** nella finestra di dialogo **Anteprima modifiche** e quindi selezionare il pulsante **Accetto** nella finestra di dialogo **Accettazione della licenza** se si accettano le condizioni di licenza per i pacchetti elencati. Ripetere questi passaggi per **Microsoft.ML.TimeSeries**.
 
 4. Aggiungere le istruzioni `using` seguenti all'inizio del file *Program.cs*:
 
@@ -58,7 +58,7 @@ In questa esercitazione verranno illustrate le procedure per:
 
      Assicurarsi di salvare i file \*.csv nella cartella *Dati* oppure, dopo averli salvati in un altro percorso, spostare i file \*.csv nella cartella *Dati*.
 
-2. In Esplora soluzioni fare clic con il pulsante destro del mouse sul file \*.csv e scegliere **Proprietà**. In **Avanzate** impostare il valore di **Copia nella directory di output** su **Copia se più recente**.
+2. In Esplora soluzioni fare clic con il pulsante destro del mouse sul file \*.csv e scegliere **Proprietà**. In **Avanzate**, modificare il valore di **Copia nella directory** di output in Copia se **più recente**.
 
 Nella tabella seguente è riportata un'anteprima dei dati del file \*.csv:
 
@@ -127,14 +127,14 @@ I dati in ML.NET sono rappresentati come una [classe IDataView](xref:Microsoft.M
 
 Il rilevamento delle anomalie segnala eventi o comportamenti imprevisti o insoliti. Fornisce indizi su dove cercare i problemi e consente di rispondere alla domanda "È strano?".
 
-![Esempio del rilevamento anomalie "è questo strano".](./media/sales-anomaly-detection/time-series-anomaly-detection.png)
+![Esempio di rilevamento di anomalie "È così strano".](./media/sales-anomaly-detection/time-series-anomaly-detection.png)
 
 Il rilevamento delle anomalie è il processo di rilevamento degli outlier dati delle serie temporali; indica una determinata serie temporale di input in cui il comportamento non è quello previsto o è "strano".
 
 Il rilevamento delle anomalie può essere utile in molte situazioni. Ad esempio:
 
-Se si dispone di un'auto, è possibile che si desideri essere a conoscenza della normale presenza di questo misuratore.
-Se si sta monitorando il consumo di energia elettrica, è opportuno essere a conoscenza della presenza di un'interruzione.
+Se si dispone di una macchina, si potrebbe desiderare di sapere: Questo indicatore di olio di lettura normale, o ho una perdita?
+Se si monitora il consumo di energia, è necessario sapere: Si è verificato un'interruzione?
 
 Esistono due tipi di anomalie di serie temporali che possono essere rilevati:
 
@@ -207,7 +207,7 @@ Il metodo `DetectSpike()`:
     * `Score` è il valore `ProductSales` per un punto dati specificato nel set di dati.
     * `P-Value` "P" è l'acronimo di probabilità. Quanto più vicino a 0 è il valore p, tanto maggiore è la probabilità che il punto dati costituisca un'anomalia.
 
-1. Usare il codice seguente per scorrere il `predictions` `IEnumerable` e visualizzare i risultati:
+1. Utilizzare il codice seguente `predictions` `IEnumerable` per scorrere e visualizzare i risultati:
 
     [!code-csharp[DisplayResults1](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#DisplayResults1)]
 
@@ -312,7 +312,7 @@ Il metodo `DetectChangepoint()` esegue le attività seguenti:
     * `P-Value` "P" è l'acronimo di probabilità. Quanto più vicino a 0 è il valore P, tanto maggiore è la probabilità che il punto dati costituisca un'anomalia.
     * `Martingale value` viene usato per identificare il livello di "anomalia" del punto dati, in base alla sequenza di valori di P.
 
-1. Scorrere il `predictions` `IEnumerable` e visualizzare i risultati con il codice seguente:
+1. Scorrere e `predictions` `IEnumerable` visualizzare i risultati con il codice seguente:
 
     [!code-csharp[DisplayResults2](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#DisplayResults2)]
 

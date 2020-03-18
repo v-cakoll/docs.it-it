@@ -1,15 +1,15 @@
 ---
-title: Come trovare elementi con un attributo specifico (XPath-LINQ to XML) (C#)
+title: Come trovare gli elementi con un attributo specifico (XPath-LINQ to XML) (C
 ms.date: 07/20/2015
 ms.assetid: daed00dd-923a-43be-8a90-eee406f6f574
 ms.openlocfilehash: e79cad3ad6fb0bf88e388b552f8e39327acfb4ad
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141048"
 ---
-# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a>Come trovare elementi con un attributo specifico (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a>Come trovare gli elementi con un attributo specifico (XPath-LINQ to XML) (C
 Talvolta si desidera individuare tutti gli elementi con un attributo specifico. Il contenuto dell'attributo non è rilevante perché si desidera solo individuare gli elementi in cui tale attributo è presente.  
   
  L'espressione XPath è:  
@@ -48,7 +48,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```output  
 Results are identical  

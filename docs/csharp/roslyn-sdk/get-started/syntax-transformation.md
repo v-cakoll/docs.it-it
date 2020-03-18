@@ -4,10 +4,10 @@ description: Introduzione all'attraversamento, all'esecuzione di query e all'esp
 ms.date: 06/01/2018
 ms.custom: mvc
 ms.openlocfilehash: 5045dca839daba1070b34720e72cc9c4f7b94828
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78240610"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Introduzione alla trasformazione della sintassi
@@ -30,7 +30,7 @@ La **non modificabilità** è un principio fondamentale della piattaforma del co
 
 La prima trasformazione della sintassi illustra i metodi factory. Si sostituirà un'istruzione `using System.Collections;` con un'istruzione `using System.Collections.Generic;`. Questo esempio illustra come creare oggetti <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode?displayProperty=nameWithType> mediante i metodi factory <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType>. Per ogni tipo di **nodo**, **token** o **elemento semplice** è disponibile un metodo factory che crea un'istanza del tipo corrispondente. È possibile creare alberi della sintassi componendo gerarchicamente i nodi dal basso verso l'alto. Si trasformerà quindi il programma esistente sostituendo i nodi esistenti con il nuovo albero creato.
 
-Avviare Visual Studio e creare un nuovo progetto C# **Stand-Alone Code Analysis Tool** (Strumento di analisi del codice autonomo). In Visual Studio scegliere **File** > **Nuovo** > **Progetto** per visualizzare la finestra di dialogo Nuovo progetto. In **Visual C#** > **Estendibilità** scegliere uno **Stand-Alone Code Analysis Tool** (Strumento di analisi del codice autonomo). Questa guida include due progetti di esempio, quindi denominare la soluzione **SyntaxTransformationQuickStart** e il progetto **ConstructionCS**. Fare clic su **OK**.
+Avviare Visual Studio e creare un nuovo progetto C# **Stand-Alone Code Analysis Tool** (Strumento di analisi del codice autonomo). In Visual Studio scegliere **File** > **nuovo** > **progetto** per visualizzare la finestra di dialogo Nuovo progetto. In**Estensibilità** di **Visual C,** > scegliere uno strumento di analisi del **codice autonomo**. Questa guida include due progetti di esempio, quindi denominare la soluzione **SyntaxTransformationQuickStart** e il progetto **ConstructionCS**. Fare clic su **OK**.
 
 Questo progetto usa i metodi della classe <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> per costruire un <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType> che rappresenta lo spazio dei nomi `System.Collections.Generic`.
 
@@ -94,9 +94,9 @@ Eseguire di nuovo il programma. Questa volta l'albero importa correttamente lo s
 
 I metodi `With*` e <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> offrono una pratica soluzione per trasformare singoli rami di un albero della sintassi. La classe <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter?displayProperty=nameWithType> esegue più trasformazioni in una struttura della sintassi. La classe <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter?displayProperty=nameWithType> è una sottoclasse di <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor%601?displayProperty=nameWithType>. <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> applica una trasformazione a un tipo specifico di <xref:Microsoft.CodeAnalysis.SyntaxNode>. È possibile applicare trasformazioni a vari tipi di oggetti <xref:Microsoft.CodeAnalysis.SyntaxNode> ogni volta che compaiono in un albero della sintassi. Il secondo progetto in questa guida introduttiva crea un refactoring dalla riga di comando che rimuove i tipi espliciti nelle dichiarazioni di variabili locali ovunque sia possibile usare l'inferenza del tipo.
 
-Creare un nuovo progetto C# **Stand-Alone Code Analysis Tool** (Strumento di analisi del codice autonomo). In Visual Studio fare doppio clic sul nodo `SyntaxTransformationQuickStart` della soluzione. Scegliere **Aggiungi** > **Nuovo progetto** per visualizzare la finestra di dialogo **Nuovo progetto**. In **Visual C#** > **Estendibilità** scegliere **Stand-Alone Code Analysis Tool** (Strumento di analisi del codice autonomo). Assegnare al progetto il nome `TransformationCS` e fare clic su OK.
+Creare un nuovo progetto **di strumento** di analisi del codice autonomo di C. In Visual Studio fare doppio clic sul nodo `SyntaxTransformationQuickStart` della soluzione. Scegliere **Aggiungi** > **nuovo progetto** per visualizzare la finestra di **dialogo Nuovo progetto**. In**Estensibilità** **di Visual C,** > scegliere **Strumento di analisi**del codice autonomo . Assegnare al progetto il nome `TransformationCS` e fare clic su OK.
 
-Il primo passaggio consiste nella creazione di una classe che deriva da <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> per eseguire le trasformazioni. Aggiungere un nuovo file di classe al progetto. In Visual Studio scegliere **progetto** > **Aggiungi classe...**. Nella finestra di dialogo **Aggiungi nuovo elemento** Digitare `TypeInferenceRewriter.cs` come nome file.
+Il primo passaggio consiste nella creazione di una classe che deriva da <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> per eseguire le trasformazioni. Aggiungere un nuovo file di classe al progetto. In Visual Studio scegliere **Progetto** > **Aggiungi classe...**. Nella finestra di dialogo **Aggiungi nuovo elemento** digitare `TypeInferenceRewriter.cs` come nome del file.
 
 Aggiungere le direttive using seguenti al file `TypeInferenceRewriter.cs`:
 
@@ -178,6 +178,6 @@ Ci siamo quasi. Manca solo un passaggio: creare un <xref:Microsoft.CodeAnalysis.
 
 [!code-csharp[CreateTestCompilation](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/Program.cs#CreateTestCompilation "Create a test compilation using the code written for this quickstart.")]
 
-Eseguire il progetto. In Visual Studio scegliere **Debug** > **Avvia debug**. Visual Studio dovrebbe segnalare che i file nel progetto sono stati modificati. Fare clic su **Sì a tutti** per ricaricare i file modificati. Esaminarli per osservare i risultati ottenuti. Si noti quanto risulta più pulito il codice senza tutti gli identificatori di tipi espliciti e ridondanti.
+Eseguire il progetto. In Visual Studio scegliere **Debug avvio** > **debug**. Visual Studio dovrebbe segnalare che i file nel progetto sono stati modificati. Fare clic su **Sì a tutti** per ricaricare i file modificati. Esaminarli per osservare i risultati ottenuti. Si noti quanto risulta più pulito il codice senza tutti gli identificatori di tipi espliciti e ridondanti.
 
 Congratulazioni! Sono state usate le **API del compilatore** per scrivere un refactoring che cerca alcuni modelli sintattici in tutti i file in un progetto C#, analizza la semantica del codice sorgente che corrisponde a tali modelli e la trasforma. A questo punto, la creazione del refactoring è conclusa.

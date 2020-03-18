@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /main compiler option [C#]
 ms.assetid: 975cf4d5-36ac-4530-826c-4aad0c7f2049
 ms.openlocfilehash: 6c842abc1423e7ee0d98b71392e02410c6cf9172
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69602731"
 ---
 # <a name="-main-c-compiler-options"></a>-main (opzioni del compilatore C#)
@@ -36,7 +36,7 @@ Questa opzione specifica la classe che contiene il punto di ingresso al programm
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1. Aprire la pagine **Proprietà** del progetto.  
+1. Aprire la pagina **Proprietà** del progetto.  
   
 2. Fare clic sulla pagina delle proprietà **Applicazione**.  
   
@@ -53,5 +53,5 @@ csc t2.cs t3.cs -main:Test2
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Opzioni del compilatore C#](./index.md)
+- [Opzioni del compilatore C](./index.md)
 - [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)

@@ -33,15 +33,15 @@ helpviewer_keywords:
 - long keyword [C#]
 - ulong keyword [C#]
 ms.openlocfilehash: 394a809a9a2f45f4aee652d0eca892f62f0f2e54
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093201"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Tipi numerici integrali (Riferimenti per C#)
 
-I *tipi numerici integrali* rappresentano numeri interi. Tutti i tipi numerici integrali sono [tipi valore](value-types.md). Sono anche [tipi semplici](value-types.md#built-in-value-types) e possono essere inizializzati con [valori letterali](#integer-literals). Tutti i tipi numerici integrali supportano gli operatori [aritmetici](../operators/arithmetic-operators.md), [logici bit per bit](../operators/bitwise-and-shift-operators.md), di [confronto](../operators/comparison-operators.md)e di [uguaglianza](../operators/equality-operators.md) .
+I *tipi numerici integrali* rappresentano numeri interi. Tutti i tipi numerici integrali sono [tipi di valore](value-types.md). Sono anche [tipi semplici](value-types.md#built-in-value-types) e possono essere inizializzati con valori [letterali](#integer-literals). Tutti i tipi numerici integrali supportano gli operatori [aritmetici,](../operators/arithmetic-operators.md) [logici bit per bit](../operators/bitwise-and-shift-operators.md), [di confronto](../operators/comparison-operators.md)e [di uguaglianza.](../operators/equality-operators.md)
 
 ## <a name="characteristics-of-the-integral-types"></a>Caratteristiche dei tipi integrali
 
@@ -73,11 +73,11 @@ Usare la struttura <xref:System.Numerics.BigInteger?displayProperty=nameWithType
 
 I valori letterali integer possono essere
 
-- *Decimal*: senza prefisso
-- *esadecimale*: con il prefisso `0x` o `0X`
-- *Binary*: con il prefisso `0b` o `0B` (disponibile in C# 7,0 e versioni successive)
+- *decimal*: senza prefisso
+- *esadecimale*: con `0x` il `0X` prefisso o
+- *binary*: `0b` con `0B` il prefisso o (disponibile in C , 7.0 e versioni successive)
 
-Il codice seguente illustra un esempio di ogni:
+Il codice seguente illustra un esempio di ogni codice:The following code demonstrates an example of each:
 
 ```csharp
 var decimalLiteral = 42;
@@ -85,31 +85,31 @@ var hexLiteral = 0x2A;
 var binaryLiteral = 0b_0010_1010;
 ```
 
-Nell'esempio precedente viene inoltre illustrato l'utilizzo di `_` come *separatore di cifre*, supportato a partire C# da 7,0. È possibile usare il separatore di cifre con tutti i tipi di valori letterali numerici.
+Nell'esempio precedente viene illustrato `_` anche l'utilizzo di come separatore di *cifre*, che è supportato a partire da C . È possibile utilizzare il separatore di cifre con tutti i tipi di valori letterali numerici.
 
-Il tipo di un valore letterale integer è determinato dal suffisso, come indicato di seguito:
+Il tipo di un valore letterale integer è determinato dal relativo suffisso come segue:
 
-- Se il valore letterale non ha alcun suffisso, il tipo è il primo dei tipi seguenti in cui è possibile rappresentare il relativo valore: `int`, `uint`, `long``ulong`.
-- Se il valore letterale è suffisso per `U` o `u`, il tipo è il primo dei tipi seguenti in cui è possibile rappresentare il relativo valore: `uint`, `ulong`.
-- Se il valore letterale è suffisso per `L` o `l`, il tipo è il primo dei tipi seguenti in cui è possibile rappresentare il relativo valore: `long`, `ulong`.
+- Se il valore letterale non ha alcun suffisso, il tipo è `int` `uint`il `long` `ulong`primo dei seguenti tipi in cui il relativo valore può essere rappresentato: , , , .
+- Se il valore `U` letterale `u`è suffisso da o , il tipo è `uint`il `ulong`primo dei seguenti tipi in cui il relativo valore può essere rappresentato: , .
+- Se il valore `L` letterale `l`è suffisso da o , il tipo è `long`il `ulong`primo dei seguenti tipi in cui il relativo valore può essere rappresentato: , .
 
   > [!NOTE]
-  > È possibile usare la lettera minuscola `l` come suffisso. Viene tuttavia generato un avviso del compilatore perché la lettera `l` può essere confusa con la cifra `1`. Per maggiore chiarezza, utilizzare `L`.
+  > È possibile utilizzare la `l` lettera minuscola come suffisso. Tuttavia, questo genera un `l` avviso del compilatore `1`perché la lettera può essere confusa con la cifra . Utilizzare `L` per chiarezza.
 
-- Se il valore letterale è suffisso in `UL`, `Ul`, `uL`, `ul`, `LU`, `Lu`, `lU`o `lu`, il tipo è `ulong`.
+- Se il valore letterale `uL`è `ul` `LU`suffisso `lU`da `lu` `UL`, `Ul`, `ulong`, , , `Lu`, o , il tipo è .
 
 Se il valore rappresentato da un valore letterale Integer supera <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, si verifica un errore di compilazione [CS1021](../../misc/cs1021.md).
 
-Se il tipo determinato di un valore letterale integer è `int` e il valore rappresentato dal valore letterale è compreso nell'intervallo del tipo di destinazione, il valore può essere convertito in modo implicito in `sbyte`, `byte`, `short`, `ushort`, `uint`o `ulong`:
+Se il tipo determinato di `int` un valore letterale integer è e il valore rappresentato dal valore `sbyte` `byte`letterale è compreso nell'intervallo del tipo di destinazione, il valore può essere convertito in modo implicito `short`in , , `ushort`, , `uint`o `ulong`:
 
 ```csharp
 byte a = 17;
 byte b = 300;   // CS0031: Constant value '300' cannot be converted to a 'byte'
 ```
 
-Come illustrato nell'esempio precedente, se il valore del valore letterale non è compreso nell'intervallo del tipo di destinazione, si verifica un errore del compilatore [CS0031](../../misc/cs0031.md) .
+Come illustrato nell'esempio precedente, se il valore letterale non è compreso nell'intervallo del tipo di destinazione, si verifica un errore del compilatore [CS0031.](../../misc/cs0031.md)
 
-È anche possibile usare un cast per convertire il valore rappresentato da un valore letterale integer nel tipo diverso dal tipo determinato del valore letterale:
+È inoltre possibile utilizzare un cast per convertire il valore rappresentato da un valore letterale integer nel tipo diverso dal tipo determinato del valore letterale:
 
 ```csharp
 var signedByte = (sbyte)42;
@@ -118,19 +118,19 @@ var longVariable = (long)42;
 
 ## <a name="conversions"></a>Conversioni
 
-È possibile convertire qualsiasi tipo numerico integrale in qualsiasi altro tipo numerico integrale. Se il tipo di destinazione può archiviare tutti i valori del tipo di origine, la conversione è implicita. In caso contrario, è necessario usare l' [operatore cast `()`](../operators/type-testing-and-cast.md#cast-operator-) per richiamare una conversione esplicita. Per altre informazioni, vedere [conversioni numeriche predefinite](numeric-conversions.md).
+È possibile convertire qualsiasi tipo numerico integrale in qualsiasi altro tipo numerico integrale. Se il tipo di destinazione può archiviare tutti i valori del tipo di origine, la conversione è implicita. In caso contrario, è necessario utilizzare [l'operatore `()` cast](../operators/type-testing-and-cast.md#cast-operator-) per richiamare una conversione esplicita. Per ulteriori informazioni, consultate [Conversioni numeriche predefinite.](numeric-conversions.md)
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
 Per altre informazioni, vedere le sezioni seguenti delle [specifiche del linguaggio C#](~/_csharplang/spec/introduction.md):
 
 - [Tipi integrali](~/_csharplang/spec/types.md#integral-types)
-- [Valori letterali integer](~/_csharplang/spec/lexical-structure.md#integer-literals)
+- [Valori letterali Integer](~/_csharplang/spec/lexical-structure.md#integer-literals)
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
-- [Tipi di valore](value-types.md)
+- [Informazioni di riferimento su C#](../index.md)
+- [Tipi valore](value-types.md)
 - [Tipi a virgola mobile](floating-point-numeric-types.md)
 - [Stringhe di formato numerico standard](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Dati numerici in .NET](../../../standard/numerics.md)

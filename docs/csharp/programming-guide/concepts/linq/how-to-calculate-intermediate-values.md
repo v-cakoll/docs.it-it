@@ -1,21 +1,21 @@
 ---
-title: Come calcolare i valori intermedi (C#)
+title: Come calcolare i valori intermedi (C )
 ms.date: 07/20/2015
 ms.assetid: 7fd3001f-f8f9-4bce-879f-d4c7af8a04fe
 ms.openlocfilehash: 3ead3bfb02f7c9192db96996c1f1e01a86a4191a
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141444"
 ---
-# <a name="how-to-calculate-intermediate-values-c"></a>Come calcolare i valori intermedi (C#)
+# <a name="how-to-calculate-intermediate-values-c"></a>Come calcolare i valori intermedi (C )
 In questo esempio viene illustrato come calcolare valori intermedi che è possibile usare in operazioni di ordinamento, filtro e selezione.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene usata la clausola `Let`.  
   
- Nell'esempio viene usato il documento XML seguente: [File XML di esempio: dati numerici (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).  
+ Questo esempio usa il documento XML seguente: [File XML di esempio: dati numerici (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```csharp  
 XElement root = XElement.Load("Data.xml");  

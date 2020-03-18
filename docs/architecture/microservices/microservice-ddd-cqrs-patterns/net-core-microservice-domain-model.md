@@ -3,10 +3,10 @@ title: Implementazione di un modello di dominio del microservizio con .NET Core
 description: Architettura di microservizi .NET per applicazioni .NET incluse in contenitori | Informazioni dettagliate sull'implementazione di un modello di dominio orientato a DDD.
 ms.date: 10/08/2018
 ms.openlocfilehash: bff9cbda08e519038056268151a1721427f0ac01
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73972050"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementare un modello di dominio del microservizio con .NET Core
@@ -17,7 +17,7 @@ La sezione precedente ha illustrato i principi e gli schemi fondamentali per la 
 
 L'organizzazione della cartella usata per l'applicazione di riferimento eShopOnContainers dimostra il modello DDD per l'applicazione. Un'organizzazione della cartella differente potrebbe comunicare in maniera più chiara le scelte di progettazione effettuate per la propria applicazione. Come si vede nella figura 7-10, nel modello di dominio di ordinamento sono presenti due aggregazioni: l'aggregazione order e l'aggregazione buyer. Ogni aggregazione è un gruppo di entità di dominio e oggetti valore, anche se è possibile avere un aggregato costituito da una singola entità di dominio (radice dell'aggregazione o entità radice).
 
-:::image type="complex" source="./media/net-core-microservice-domain-model/ordering-microservice-container.png" alt-text="Screenshot del progetto ordering. Domain in Esplora soluzioni.":::
+:::image type="complex" source="./media/net-core-microservice-domain-model/ordering-microservice-container.png" alt-text="Screenshot del progetto Ordering.Domain in Esplora soluzioni.":::
 Nella visualizzazione Esplora soluzioni per il progetto Ordering.Domain appare la cartella AggregatesModel contenente le cartelle BuyerAggregate e OrderAggregate, ognuna delle quali contiene le proprie classi di entità, i file di oggetti valore e così via.
 :::image-end:::
 
@@ -109,7 +109,7 @@ Un problema comune nei modelli di entità è che espongono le proprietà di navi
 
 Nel codice precedente molti attributi sono di sola lettura o privati e possono essere aggiornati solo dai metodi della classe, quindi qualsiasi aggiornamento tiene conto delle invarianti del dominio aziendale e della logica specificata all'interno dei metodi delle classi.
 
-Ad esempio, seguendo gli schemi DDD, **non *è* consigliabile** eseguire le operazioni seguenti da qualsiasi metodo del gestore dei comandi o classe del livello dell'applicazione (in realtà per l'utente deve essere impossibile eseguire questa operazione):
+Ad esempio, seguendo gli schemi DDD, **non* è* consigliabile** eseguire le operazioni seguenti da qualsiasi metodo del gestore dei comandi o classe del livello dell'applicazione (in realtà per l'utente deve essere impossibile eseguire questa operazione):
 
 ```csharp
 // WRONG ACCORDING TO DDD PATTERNS – CODE AT THE APPLICATION LAYER OR
@@ -170,15 +170,15 @@ Ad esempio, nell'esempio di codice OrderAggregate precedente, sono presenti dive
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Vaughn Vernon. Modellazione delle aggregazioni con DDD e Entity Framework.** Si osservi che *non* si tratta di Entity Framework Core. \
+- **Vaughn Vernon. Modellazione di aggregazioni con DDD ed Entity Framework.** Si osservi che *non* si tratta di Entity Framework Core. \
   <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
-- **Julie Lerman. Punti dati-codifica per la progettazione basata su dominio: suggerimenti per gli sviluppatori incentrati sui dati** \
+- **Julie Lerman. Punti dati - Codifica per la progettazione basata su dominio: suggerimenti per gli sviluppatori incentrati sui datiData Points - Coding for Domain-Driven Design: Tips for Data-Focused Devs** \
   <https://docs.microsoft.com/archive/msdn-magazine/2013/august/data-points-coding-for-domain-driven-design-tips-for-data-focused-devs>
 
-- **UDI. Come creare modelli di dominio completamente incapsulati** \
+- **Udi Dahan. Come creare modelli di dominio completamente incapsulatiHow to create fully encapsulated Domain Models** \
   <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
 > [!div class="step-by-step"]
-> [Precedente](microservice-domain-model.md)
-> [Successivo](seedwork-domain-model-base-classes-interfaces.md)
+> [Successivo](microservice-domain-model.md)
+> [precedente](seedwork-domain-model-base-classes-interfaces.md)

@@ -1,5 +1,5 @@
 ---
-title: Guida alla C# programmazione di <typeparamref>
+title: <typeparamref>- Guida alla programmazione in C
 ms.date: 07/20/2015
 f1_keywords:
 - typeparamref
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - <typeparamref> C# XML tag
 ms.assetid: 6d8ffc58-12c5-4688-8db6-833a7ded5886
 ms.openlocfilehash: 266eadad322fd3c4167c7a911cb57ef1e1333012
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789655"
 ---
-# <a name="typeparamref-c-programming-guide"></a>> typeparamref \<(C# guida per programmatori)
+# <a name="typeparamref-c-programming-guide"></a>\<> di typeparamref (Guida per programmatori C
 
 ## <a name="syntax"></a>Sintassi
 
@@ -28,7 +28,7 @@ ms.locfileid: "76789655"
 
   Nome del parametro di tipo. Racchiudere il nome tra virgolette doppie (" ").
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Per altre informazioni sui parametri di tipo in tipi e metodi generici, vedere [Generics](../generics/index.md).
 
@@ -42,5 +42,5 @@ Compilare con [-doc](../../language-reference/compiler-options/doc-compiler-opti
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../index.md)
+- [Guida alla programmazione in C](../index.md)
 - [Tag consigliati per i commenti relativi alla documentazione](./recommended-tags-for-documentation-comments.md)

@@ -1,20 +1,20 @@
 ---
-title: Elaborazione della Guida alla C# programmazione dei file XML
+title: Elaborazione del file XML - Guida alla programmazione in C
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
 ms.openlocfilehash: bc72cade9ce6edddb88d741a3424405bba0a7ad8
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76793385"
 ---
-# <a name="processing-the-xml-file-c-programming-guide"></a>Elaborazione del file XML (C# guida per programmatori)
+# <a name="processing-the-xml-file-c-programming-guide"></a>Elaborazione del file XML (Guida per programmatori C
 
-Il compilatore genera una stringa identificativa (ID) per ciascun costrutto del codice che contiene tag per la creazione della documentazione. Per informazioni su come contrassegnare il codice, vedere [Tag consigliati per i commenti relativi alla documentazione](./recommended-tags-for-documentation-comments.md). La stringa ID identifica in modo univoco il costrutto. I programmi che elaborano il file XML possono usare la stringa ID per identificare il corrispondente elemento metadati/reflection di .NET Framework a cui si applica la documentazione.
+Il compilatore genera una stringa identificativa (ID) per ciascun costrutto del codice che contiene tag per la creazione della documentazione. Per informazioni su come contrassegnare il codice, vedere Tag consigliati per i commenti relativi alla [documentazione.](./recommended-tags-for-documentation-comments.md) La stringa ID identifica in modo univoco il costrutto. I programmi che elaborano il file XML possono usare la stringa ID per identificare il corrispondente elemento metadati/reflection di .NET Framework a cui si applica la documentazione.
 
 Il file XML non è una rappresentazione gerarchica del codice, bensì un normale elenco contenente un ID generato per ogni elemento.
 
@@ -26,12 +26,12 @@ Per generare gli ID, il compilatore applica le regole seguenti:
 
     |Carattere|Descrizione|
     |---------------|-----------------|
-    |N|Spazio dei nomi<br /><br /> Non è possibile aggiungere a uno spazio dei nomi commenti relativi alla documentazione, ma, se supportati, è possibile creare riferimenti cref a tali commenti.|
-    |Elemento|Tipo: classe, interfaccia, struct, enumerazione o delegato|
+    |N|spazio dei nomi<br /><br /> Non è possibile aggiungere a uno spazio dei nomi commenti relativi alla documentazione, ma, se supportati, è possibile creare riferimenti cref a tali commenti.|
+    |T|tipo: classe, interfaccia, struct, enum o delegato|
     |F|campo|
     |P|proprietà (compresi gli indicizzatori o altre proprietà indicizzate)|
     |M|metodo (compresi i metodi speciali, ad esempio costruttori, operatori e così via)|
-    |E|event|
+    |E|evento|
     |!|stringa di errore<br /><br /> Nella parte restante della stringa vengono fornite informazioni sull'errore. Il compilatore C# genera informazioni sugli errori per tutti i collegamenti che non è possibile risolvere.|
 
 - La seconda parte della stringa identifica il nome completo dell'elemento, a partire dalla radice dello spazio dei nomi. Il nome dell'elemento, i tipi di inclusione e lo spazio dei nomi sono separati da punti. Se il nome dell'elemento contiene dei punti, questi verranno sostituiti con il segno di cancelletto ('#'), in base al presupposto che nessun nome di elemento contiene direttamente tale segno. Ad esempio, il nome completo del costruttore String è "System.String.#ctor".
@@ -56,7 +56,7 @@ Per generare gli ID, il compilatore applica le regole seguenti:
 
   - ELEMENT_TYPE_GENERICARRAY viene rappresentato con "[?]" dopo il tipo di elemento della matrice. Non viene mai generato dal compilatore C#.
 
-  - ELEMENT_TYPE_ARRAY viene rappresentato con [*limite inferiore*:`size`,*limite inferiore*:`size`], dove il numero di virgole indica il numero di dimensioni - 1. I limiti inferiori e le dimensioni di ogni dimensione, qualora noti, vengono rappresentati con valori decimali. Se non è specificato alcun valore, il limite o la dimensione inferiore viene omesso. Se vengono omessi il limite inferiore e la dimensione per una dimensione specifica, viene omesso anche ':'. Ad esempio, una matrice a due dimensioni con limiti inferiori pari a 1 e dimensioni non specificate viene rappresentata con [1:,1:].
+  - ELEMENT_TYPE_ARRAY è rappresentato come`size`[ limite*inferiore*: ,*lowerbound*:`size`] dove il numero di virgole è il rango - 1 e i limiti inferiori e le dimensioni di ogni dimensione, se noti, sono rappresentati in formato decimale. Se non è specificato alcun valore, il limite o la dimensione inferiore viene omesso. Se vengono omessi il limite inferiore e la dimensione per una dimensione specifica, viene omesso anche ':'. Ad esempio, una matrice a due dimensioni con limiti inferiori pari a 1 e dimensioni non specificate viene rappresentata con [1:,1:].
 
   - ELEMENT_TYPE_FNPTR viene rappresentato con "=FUNC:`type`(*signature*)", dove `type` rappresenta il tipo restituito e *signature* identifica gli argomenti del metodo. Se non vi sono argomenti, le parentesi vengono omesse. Non viene mai generato dal compilatore C#.
 
@@ -84,6 +84,6 @@ Negli esempi seguenti viene illustrato come vengono generate le stringhe di ID p
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../index.md)
-- [-DOC (C# opzioni del compilatore)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [Guida alla programmazione in C](../index.md)
+- [-doc (opzioni del compilatore C](../../language-reference/compiler-options/doc-compiler-option.md)
 - [Commenti relativi alla documentazione XML](./index.md)

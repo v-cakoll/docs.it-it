@@ -1,23 +1,23 @@
 ---
-title: Tipi incorporati- C# riferimento
-description: Informazioni C# sui tipi di valore e riferimento predefiniti
+title: Tipi incorporati - Informazioni di riferimento su C
+description: Imparare i tipi di riferimento e valori predefiniti di C
 ms.date: 02/04/2020
 helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
 ms.openlocfilehash: 4f748373350ed0596a5f1d595c273243ae3227c3
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77095309"
 ---
-# <a name="built-in-types-c-reference"></a>Tipi predefiniti (C# riferimento)
+# <a name="built-in-types-c-reference"></a>Tipi incorporati (riferimenti in C
 
-Nella tabella seguente sono elencati C# i tipi di [valore](value-types.md) predefiniti:
+Nella tabella seguente sono elencati i tipi di [valore](value-types.md) incorporati di C' :
 
-|C#parola chiave Type|Tipo .NET|
+|Parola chiave del tipo C|Tipo .NET|
 |--------------|-------------------------|
 |[`bool`](bool.md)|<xref:System.Boolean?displayProperty=nameWithType>|
 |[`byte`](integral-numeric-types.md)|<xref:System.Byte?displayProperty=nameWithType>|
@@ -33,14 +33,14 @@ Nella tabella seguente sono elencati C# i tipi di [valore](value-types.md) prede
 |[`short`](integral-numeric-types.md)|<xref:System.Int16?displayProperty=nameWithType>|
 |[`ushort`](integral-numeric-types.md)|<xref:System.UInt16?displayProperty=nameWithType>|
 
-Nella tabella seguente sono elencati C# i tipi di [riferimento](../keywords/reference-types.md) incorporati:
+Nella tabella seguente sono elencati i tipi di [riferimento](../keywords/reference-types.md) incorporati in C' :
 
-|C#parola chiave Type|Tipo .NET|
+|Parola chiave del tipo C|Tipo .NET|
 |--------------|-------------------------|
 |[`object`](reference-types.md#the-object-type)|<xref:System.Object?displayProperty=nameWithType>|
 |[`string`](reference-types.md#the-string-type)|<xref:System.String?displayProperty=nameWithType>|
 
-Nelle tabelle precedenti ogni C# parola chiave Type della colonna Left è un alias per il tipo .NET corrispondente. Sono intercambiabili. Ad esempio, le dichiarazioni seguenti dichiarano variabili dello stesso tipo:
+Nelle tabelle precedenti, ogni parola chiave di tipo C , dalla colonna di sinistra è un alias per il tipo .NET corrispondente. Sono intercambiabili. Ad esempio, le dichiarazioni seguenti dichiarano variabili dello stesso tipo:
 
 ```csharp
 int a = 123;
@@ -49,6 +49,6 @@ System.Int32 b = 123;
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
-- [Valori predefiniti dei C# tipi](default-values.md)
-- [`dynamic` - Parola chiave](reference-types.md#the-dynamic-type)
+- [Informazioni di riferimento su C#](../index.md)
+- [Valori predefiniti dei tipi c'è](default-values.md)
+- [`dynamic`Parola chiave](reference-types.md#the-dynamic-type)

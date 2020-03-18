@@ -4,10 +4,10 @@ description: Informazioni su come scrivere query LINQ in C#.
 ms.date: 12/01/2016
 ms.assetid: 30703f79-cf3a-4d02-b892-c95d58a1d9ed
 ms.openlocfilehash: ed32543b0422e0664a8577f2c27f7c7c00a719a1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "65632887"
 ---
 # <a name="write-linq-queries-in-c"></a>Scrivere query LINQ in C\#
@@ -35,7 +35,7 @@ Si noti che il tipo delle query è <xref:System.Collections.Generic.IEnumerable%
 
 `var query = from num in numbers...`
 
-In ognuno degli esempi precedenti le query non vengono effettivamente eseguite finché non si esegue l'iterazione della variabile di query in un'istruzione `foreach` o un'altra istruzione. Per altre informazioni, vedere l'[introduzione alle query LINQ](../programming-guide/concepts/linq/introduction-to-linq-queries.md).
+In ognuno degli esempi precedenti le query non vengono effettivamente eseguite finché non si esegue l'iterazione della variabile di query in un'istruzione `foreach` o un'altra istruzione. Per ulteriori informazioni, vedere [Introduzione alle query LINQ](../programming-guide/concepts/linq/introduction-to-linq-queries.md).
 
 ## <a name="example---method-syntax"></a>Esempio - Sintassi del metodo
 
@@ -81,6 +81,6 @@ int numCount = numbers.Where(n => n < 3 || n > 7).Count();
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura dettagliata: Scrittura di query in C#](../programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
-- [LINQ (Language-Integrated Query)](index.md)
-- [Clausola where](../language-reference/keywords/where-clause.md)
+- [Procedura dettagliata: scrittura di query in C#](../programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
+- [Language Integrated Query (LINQ)](index.md)
+- [clausola where](../language-reference/keywords/where-clause.md)

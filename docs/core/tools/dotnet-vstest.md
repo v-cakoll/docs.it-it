@@ -3,15 +3,15 @@ title: Comando dotnet vstest
 description: Il comando dotnet vstest consente di compilare un progetto e tutte le relative dipendenze.
 ms.date: 02/27/2020
 ms.openlocfilehash: 88e5b6a8966d78d0746f9ea5ccbccab142a2e0f6
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156933"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
-**Questo articolo si applica a:** ✔️ .net core 2,1 SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .NET Core 2.1 SDK e versioni successive
 
 ## <a name="name"></a>Nome
 
@@ -61,11 +61,11 @@ Il comando `dotnet-vstest` esegue l'applicazione della riga di comando `VSTest.C
 
 - **`--Parallel`**
 
-  Eseguire i test in parallelo. Per impostazione predefinita, tutti i core presenti nel computer sono disponibili per l'uso. Specificare un numero esplicito di core impostando la proprietà `MaxCpuCount` nel nodo `RunConfiguration` del file *runsettings* .
+  Eseguire test in parallelo. Per impostazione predefinita, tutti i core presenti nel computer sono disponibili per l'uso. Specificare un numero esplicito `MaxCpuCount` di core `RunConfiguration` impostando la proprietà nel nodo nel file *runsettings.*
 
 - **`--TestCaseFilter <Expression>`**
 
-  Esegue test corrispondenti all'espressione specificata. `<Expression>` è in formato `<property>Operator<value>[|&<Expression>]`, dove Operator è `=`, `!=` o `~`. L'operatore `~` usa la semantica 'contains' ed è applicabile per le proprietà stringa come `DisplayName`. Le parentesi `()` vengono usate per raggruppare le sottoespressioni.
+  Esegue test corrispondenti all'espressione specificata. `<Expression>` è in formato `<property>Operator<value>[|&<Expression>]`, dove Operator è `=`, `!=` o `~`. L'operatore `~` usa la semantica 'contains' ed è applicabile per le proprietà stringa come `DisplayName`. Le `()` parentesi vengono utilizzate per raggruppare le sottoespressioni.
 
 - **`-?|--Help`**
 
@@ -73,7 +73,7 @@ Il comando `dotnet-vstest` esegue l'applicazione della riga di comando `VSTest.C
 
 - **`--logger <Logger Uri/FriendlyName>`**
 
-  Specifica un logger per i risultati dei test.
+  Specifica un logger per i risultati di test.
 
   - Per pubblicare i risultati dei test in Team Foundation Server, usare il provider di logger `TfsPublisher`:
 
@@ -127,19 +127,19 @@ Il comando `dotnet-vstest` esegue l'applicazione della riga di comando `VSTest.C
 
 ## <a name="examples"></a>Esempi
 
-Eseguire i test in *mytestproject. dll*:
+Eseguire test in *mytestproject.dll*:
 
 ```dotnetcli
 dotnet vstest mytestproject.dll
 ```
 
-Eseguire i test in *mytestproject. dll*, esportando nella cartella personalizzata con nome personalizzato:
+Eseguire test in *mytestproject.dll*, esportando in una cartella personalizzata con nome personalizzato:
 
 ```dotnetcli
 dotnet vstest mytestproject.dll --logger:"trx;LogFileName=custom_file_name.trx" --ResultsDirectory:custom/file/path
 ```
 
-Eseguire i test in *mytestproject. dll* e *myothertestproject. exe*:
+Eseguire test in *mytestproject.dll* e *myothertestproject.exe*:
 
 ```dotnetcli
 dotnet vstest mytestproject.dll myothertestproject.exe

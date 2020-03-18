@@ -151,7 +151,7 @@
             - name: Unit test
               tocHref: /dotnet/core/testing/
               topicHref: /dotnet/core/testing/index
-            - name: Controllo delle versioni
+            - name: Versionamento
               tocHref: /dotnet/core/versions/
               topicHref: /dotnet/core/versions/index
             - name: Progetti SDK
@@ -160,7 +160,7 @@
             - name: Strumenti
               tocHref: /dotnet/core/tools/
               topicHref: /dotnet/core/tools/index
-            - name: Strumenti aggiuntivi
+            - name: Altri strumenti
               tocHref: /dotnet/core/additional-tools/
               topicHref: /dotnet/core/additional-tools/index
             - name: Conversione
@@ -391,7 +391,7 @@
                 - name: Migliorare le applicazioni Windows Form
                   tocHref: /dotnet/framework/winforms/advanced/
                   topicHref: /dotnet/framework/winforms/advanced/index
-                - name: Controlli Windows Form
+                - name: Controlli Windows Forms
                   tocHref: /dotnet/framework/winforms/controls/
                   topicHref: /dotnet/framework/winforms/controls/index
             - name: Windows Presentation Foundation
@@ -470,7 +470,7 @@
                 - name: Delegati
                   tocHref: /dotnet/csharp/programming-guide/delegates/
                   topicHref: /dotnet/csharp/programming-guide/delegates/index
-                - name: Events
+                - name: eventi
                   tocHref: /dotnet/csharp/programming-guide/events/
                   topicHref: /dotnet/csharp/programming-guide/events/index
                 - name: Eccezioni e gestione delle eccezioni
@@ -482,7 +482,7 @@
                 - name: Generics
                   tocHref: /dotnet/csharp/programming-guide/generics/
                   topicHref: /dotnet/csharp/programming-guide/generics/index
-                - name: Indicizzatori
+                - name: Indexers (Indicizzatori)
                   tocHref: /dotnet/csharp/programming-guide/indexers/
                   topicHref: /dotnet/csharp/programming-guide/indexers/index
                 - name: Interfacce
@@ -494,7 +494,7 @@
                 - name: Main() e argomenti della riga di comando
                   tocHref: /dotnet/csharp/programming-guide/main-and-command-args/
                   topicHref: /dotnet/csharp/programming-guide/main-and-command-args/index
-                - name: Spazi dei nomi
+                - name: Namespaces
                   tocHref: /dotnet/csharp/programming-guide/namespaces/
                   topicHref: /dotnet/csharp/programming-guide/namespaces/index
                 - name: Tipi nullable
@@ -646,7 +646,7 @@
                 - name: Associazione anticipata e tardiva
                   tocHref: /dotnet/visual-basic/programming-guide/language-features/early-late-binding/
                   topicHref: /dotnet/visual-basic/programming-guide/language-features/early-late-binding/index
-                - name: Events
+                - name: eventi
                   tocHref: /dotnet/visual-basic/programming-guide/language-features/events/
                   topicHref: /dotnet/visual-basic/programming-guide/language-features/events/index
                 - name: LINQ
@@ -676,14 +676,14 @@
             - name: Riferimenti per il linguaggio
               tocHref: /dotnet/visual-basic/language-reference/
               topicHref: /dotnet/visual-basic/language-reference/index
-            - name: Riferimento
+            - name: Reference
               tocHref: /dotnet/visual-basic/reference/
               topicHref: /dotnet/visual-basic/reference/index
         - name: Guida a ML.NET
           tocHref: /dotnet/machine-learning/
           topicHref: /dotnet/machine-learning/index
           items:
-            - name: Guide pratiche
+            - name: 'Guide pratiche:'
               tocHref: /dotnet/machine-learning/how-to-guides/
               topicHref: /dotnet/machine-learning/how-to-guides/index
             - name: Risorse

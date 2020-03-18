@@ -12,10 +12,10 @@ metadata:
   interactive: csharp
   ms.custom: mvc
   ms.openlocfilehash: 365cf0b2ef36dd0be624d022e3dea5e16a9eb58c
-  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
   ms.translationtype: MT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 11/12/2019
+  ms.lasthandoff: 03/14/2020
   ms.locfileid: "73969415"
 items:
 - durationInMinutes: 1
@@ -24,7 +24,7 @@ items:
 - title: Eseguire il primo programma C#
   durationInMinutes: 2
   content: >
-    Eseguire il codice seguente nella finestra interattiva. Selezionare il pulsante **Attiva modalità messa a fuoco** . Quindi, digitare il blocco di codice seguente nella finestra interattiva e selezionare **Esegui**:
+    Eseguire il codice seguente nella finestra interattiva. Selezionare il **pulsante Attiva modalità messa a fuoco.** Quindi, digitare il seguente blocco di codice nella finestra interattiva e selezionare **Esegui**:
 
 
     ```csharp
@@ -34,7 +34,7 @@ items:
     ```
 
 
-    La procedura è stata completata. È stato eseguito il primo programma C#, ovvero un semplice programma che stampa il messaggio "Hello World!". Per stampare il messaggio, viene usato il metodo <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>. `Console` è un tipo che rappresenta la finestra della console. `WriteLine` è un metodo del tipo `Console` che stampa una riga di testo nella console di testo.
+    Congratulazioni! È stato eseguito il primo programma C#, ovvero un semplice programma che stampa il messaggio "Hello World!". Per stampare il messaggio, viene usato il metodo <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>. `Console` è un tipo che rappresenta la finestra della console. `WriteLine` è un metodo del tipo `Console` che stampa una riga di testo nella console di testo.
 
 
     Nel resto di questa lezione viene descritto l'uso del tipo `string`, che rappresenta il testo in C#. Come il tipo `Console`, anche per il tipo `string` sono disponibili metodi. I metodi `string` operano sul testo.
@@ -96,7 +96,7 @@ items:
     ```
 
 
-    Selezionare **Esegui** di nuovo per visualizzare i risultati.
+    Selezionare di nuovo **Esegui** per visualizzare i risultati.
 
 
     Finora è stato usato `+` per creare nuove stringhe da stringhe **variabili** e **costanti**. Esiste un modo migliore.
@@ -118,7 +118,7 @@ items:
     ```
 
 
-    Selezionare **Esegui** di nuovo per visualizzare i risultati. Anziché "Hello {aFriend}", il messaggio deve essere "Hello Maira".
+    Selezionare di nuovo **Esegui** per visualizzare i risultati. Anziché "Hello {aFriend}", il messaggio deve essere "Hello Maira".
 
 
     > [!NOTE]
@@ -130,7 +130,7 @@ items:
     L'ultima modifica era solo un assaggio di quello che si può fare con le stringhe. L'esplorazione continua nelle prossime lezioni.
 
 
-    È possibile includere più di una variabile tra parentesi graffe. Provare questo codice:
+    È possibile includere più di una variabile tra parentesi graffe. Provare a eseguire quanto segue:
 
 
     ```csharp
@@ -167,7 +167,7 @@ items:
 - title: Altre operazioni sulle stringhe
   durationInMinutes: 5
   content: >
-    Si è visto come usare un **metodo**, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, per stampare messaggi. Un **metodo** è un blocco di codice che implementa un'azione. I metodi hanno un nome, quindi sono accessibili.
+    È stato utilizzato **method**un <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>metodo , , per stampare i messaggi. Un **metodo** è un blocco di codice che implementa un'azione. I metodi hanno un nome, quindi sono accessibili.
 
 
     Si supponga che le stringhe contengano spazi iniziali o finali che non si vuole visualizzare. È quindi necessario **tagliare** gli spazi dalle stringhe.
@@ -202,7 +202,7 @@ items:
     Questo esempio mette in rilievo un paio di concetti importanti correlati all'uso delle stringhe. I metodi che operano sulle stringhe restituiscono nuovi oggetti stringa, anziché apportare le modifiche sul posto. Si può notare che ogni chiamata di uno qualsiasi dei metodi `Trim` restituisce una nuova stringa, ma non modifica il messaggio originale.
 
 
-    Sono disponibili altri metodi per lavorare su una stringa. È probabile, ad esempio, che in precedenza si sia usato un comando per la ricerca e la sostituzione in un editor o un elaboratore di testo. Il metodo <xref:System.String.Replace%2A> esegue un'operazione simile in una stringa, ovvero cerca una sottostringa e la sostituisce con testo diverso. Il metodo <xref:System.String.Replace%2A> accetta due **parametri**. Queste sono le stringhe tra parentesi. La prima stringa è il testo da cercare. La seconda stringa è il testo sostitutivo. Provare direttamente. Aggiungere questo codice. Digitarlo per visualizzare i suggerimenti fin dal momento in cui si inizia a digitare `.Re` dopo la variabile `sayHello`:
+    Sono disponibili altri metodi per lavorare su una stringa. È probabile, ad esempio, che in precedenza si sia usato un comando per la ricerca e la sostituzione in un editor o un elaboratore di testo. Il metodo <xref:System.String.Replace%2A> esegue un'operazione simile in una stringa, ovvero cerca una sottostringa e la sostituisce con testo diverso. Il <xref:System.String.Replace%2A> metodo accetta due **parametri**. Queste sono le stringhe tra parentesi. La prima stringa è il testo da cercare. La seconda stringa è il testo sostitutivo. Provare direttamente. Aggiungere questo codice. Digitarlo per visualizzare i suggerimenti fin dal momento in cui si inizia a digitare `.Re` dopo la variabile `sayHello`:
 
 
     ```csharp
@@ -296,7 +296,7 @@ items:
 
     > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
-    È stata completata l'esercitazione introduttiva "Hello C#". È possibile selezionare i **numeri nel C# ** collegamento seguente per avviare la successiva esercitazione interattiva. in alternativa, è possibile visitare il [sito .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) per scaricare il .NET Core SDK, creare un progetto nel computer e rimanere codificati. La sezione "passaggi successivi" riporta a queste esercitazioni.
+    È stata completata l'esercitazione introduttiva "Hello C#". È possibile selezionare il collegamento **numeri in C ,** di seguito per avviare la successiva esercitazione interattiva, oppure è possibile visitare il sito [.NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) per scaricare .NET Core SDK, creare un progetto nel computer e continuare a codificare. La sezione "Passaggi successivi" riporta a queste esercitazioni.
 
 
     Altre informazioni sul tipo `string`:

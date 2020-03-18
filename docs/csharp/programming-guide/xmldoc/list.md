@@ -1,5 +1,5 @@
 ---
-title: <list> - C# Guida alla programmazione
+title: <list> - Guida alla programmazione in C
 ms.date: 07/20/2015
 f1_keywords:
 - list
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
 ms.openlocfilehash: cb289b26e9bc12d561892c421fb40da18d8c3513
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789744"
 ---
-# <a name="list-c-programming-guide"></a>elenco di \<>C# (Guida per programmatori)
+# <a name="list-c-programming-guide"></a>\<elenco> (Guida per programmatori C
 
 ## <a name="syntax"></a>Sintassi
 
@@ -46,7 +46,7 @@ ms.locfileid: "76789744"
 
   Elemento di un elenco puntato o numerato oppure la definizione di un `term`.
   
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Il blocco \<listheader> viene usato per definire la riga di intestazione di una tabella o di un elenco di definizioni. Per definire una tabella, è sufficiente specificare una voce per il termine nell'intestazione.
 
@@ -62,5 +62,5 @@ Compilare con [-doc](../../language-reference/compiler-options/doc-compiler-opti
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../index.md)
+- [Guida alla programmazione in C](../index.md)
 - [Tag consigliati per i commenti relativi alla documentazione](./recommended-tags-for-documentation-comments.md)

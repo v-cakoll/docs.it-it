@@ -7,10 +7,10 @@ helpviewer_keywords:
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
 ms.openlocfilehash: b883012cf8f72247ff4e0b47a46eee1854e2d534
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76735655"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Eccezioni e gestione delle eccezioni (Guida per programmatori C#)
@@ -31,7 +31,7 @@ Le eccezioni hanno le proprietà seguenti:
 - Racchiudere all'interno di un blocco `try` le istruzioni che potrebbero generare un'eccezione.
 - Quando si verifica un'eccezione nel blocco `try`, il flusso di controllo passa al primo gestore delle eccezioni associato presente in qualsiasi punto nello stack di chiamate. In C#, per definire un gestore di eccezioni viene usata la parola chiave `catch`.
 - Se non è presente alcun gestore di eccezioni per una determinata eccezione, il programma interrompe l'esecuzione con un messaggio di errore.
-- Non intercettare un'eccezione a meno che non sia possibile gestirla e lasciare l'applicazione in uno stato noto. Se si rilevano `System.Exception`, generarlo nuovamente utilizzando la parola chiave `throw` alla fine del blocco `catch`.
+- Non intercettare un'eccezione a meno che non sia possibile gestirla e lasciare l'applicazione in uno stato noto. Se si `System.Exception`rileva , generarlo `throw` nuovamente utilizzando la `catch` parola chiave alla fine del blocco.
 - Se un blocco `catch` definisce una variabile di eccezione, è possibile usarla per ottenere altre informazioni sul tipo di eccezione che si è verificato.
 - Le eccezioni possono essere generate in modo esplicito da un programma usando la parola chiave `throw`.
 - Gli oggetti eccezione contengono informazioni dettagliate sull'errore, ad esempio lo stato dello stack di chiamate e una descrizione testuale dell'errore.
@@ -40,17 +40,17 @@ Le eccezioni hanno le proprietà seguenti:
 
 ## <a name="related-sections"></a>Sezioni correlate
 
-Per ulteriori informazioni sulle eccezioni e la gestione delle eccezioni, vedere gli articoli seguenti:
+Per altre informazioni sulle eccezioni e sulla gestione delle eccezioni, vedere gli articoli seguenti:See the following articles for more information about exceptions and exception handling:
 
 - [Uso delle eccezioni](using-exceptions.md)
 - [Gestione delle eccezioni](exception-handling.md)
 - [Creazione e generazione di eccezioni](creating-and-throwing-exceptions.md)
 - [Eccezioni generate dal compilatore](compiler-generated-exceptions.md)
-- [Come gestire un'eccezione usando try/catch (C# guida per programmatori)](how-to-handle-an-exception-using-try-catch.md)
-- [Come eseguire il codice di pulitura usando infine](how-to-execute-cleanup-code-using-finally.md)
+- [Come gestire un'eccezione utilizzando try/catch (Guida per programmatori C](how-to-handle-an-exception-using-try-catch.md)
+- [Come eseguire codice di pulitura mediante finally](how-to-execute-cleanup-code-using-finally.md)
 - [Come intercettare un'eccezione non CLS](how-to-catch-a-non-cls-exception.md)
 
-## <a name="c-language-specification"></a>Specifica del linguaggio C#
+## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
 Per altre informazioni, vedere [Eccezioni](~/_csharplang/spec/exceptions.md) nella [Specifica del linguaggio C#](/dotnet/csharp/language-reference/language-specification/introduction). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
 
@@ -59,8 +59,8 @@ Per altre informazioni, vedere [Eccezioni](~/_csharplang/spec/exceptions.md) nel
 - <xref:System.SystemException>
 - [Guida per programmatori C#](../index.md)
 - [Parole chiave di C#](../../language-reference/keywords/index.md)
-- [throw](../../language-reference/keywords/throw.md)
+- [generazione](../../language-reference/keywords/throw.md)
 - [try-catch](../../language-reference/keywords/try-catch.md)
-- [try-finally](../../language-reference/keywords/try-finally.md)
+- [try...finally](../../language-reference/keywords/try-finally.md)
 - [try-catch-finally](../../language-reference/keywords/try-catch-finally.md)
 - [Eccezioni](../../../standard/exceptions/index.md)

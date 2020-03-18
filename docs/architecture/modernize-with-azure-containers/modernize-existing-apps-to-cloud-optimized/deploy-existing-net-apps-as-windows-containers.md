@@ -1,131 +1,131 @@
 ---
 title: Distribuire app .NET esistenti come contenitori Windows
-description: Modernizzare le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows | Distribuire app .NET esistenti come contenitori di Windows
+description: Modernizza le applicazioni .NET esistenti con i contenitori di Azure Cloud e Windows . Distribuire le app .NET esistenti come contenitori di WindowsDeploy existing .NET apps as Windows containers
 ms.date: 04/29/2018
 ms.openlocfilehash: 28568ca363bfc8100f78b100f8a7f0242c4f04c9
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73089552"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Distribuire app .NET esistenti come contenitori Windows
 
-Le distribuzioni basate sui contenitori di Windows sono applicabili alle applicazioni ottimizzate per il cloud e alle applicazioni native del cloud.
+Le distribuzioni basate su contenitori di Windows sono applicabili alle applicazioni ottimizzate per il cloud e alle applicazioni Cloud-Native.Deployments that are based on Windows Containers are applicable to Cloud-Optimized applications and Cloud-Native applications.
 
-Tuttavia, in questa guida e soprattutto nelle sezioni seguenti, si concentra principalmente sull'uso di contenitori di Windows per applicazioni *ottimizzate* per il cloud in cui non è necessario riprogettare l'applicazione.
+Tuttavia, in questa guida e soprattutto nelle sezioni seguenti, si concentra principalmente sull'utilizzo di contenitori di Windows per applicazioni *ottimizzate* per il cloud in cui non è necessario riprogettare l'applicazione.
 
-## <a name="what-are-containers-linux-or-windows"></a>Che cosa sono i contenitori? (Linux o Windows)
+## <a name="what-are-containers-linux-or-windows"></a>Informazioni sui contenitori (Linux o Windows)
 
-I contenitori sono un modo per eseguire il wrapping di un'applicazione nel proprio pacchetto isolato. Nel contenitore, l'applicazione non è interessata dalle applicazioni o dai processi esistenti all'esterno del contenitore. Tutti gli elementi da cui dipende l'applicazione vengono eseguiti correttamente quando un processo si trova all'interno del contenitore. Laddove il contenitore potrebbe essere spostato, i requisiti dell'applicazione verranno sempre soddisfatti, in termini di dipendenze dirette, perché sono aggregati con tutti gli elementi necessari per l'esecuzione (dipendenze della libreria, Runtime e così via).
+I contenitori sono un modo per eseguire il wrapping di un'applicazione nel proprio pacchetto isolato. Nel relativo contenitore, l'applicazione non è interessata da applicazioni o processi esistenti all'esterno del contenitore. Tutto ciò da cui dipende l'esecuzione dell'applicazione quando un processo si trova all'interno del contenitore. Ovunque il contenitore possa essere spostato, i requisiti dell'applicazione saranno sempre soddisfatti, in termini di dipendenze dirette, perché è in bundle con tutto ciò che è necessario eseguire (dipendenze di libreria, runtime e così via).
 
-La caratteristica principale di un contenitore è che rende l'ambiente lo stesso in distribuzioni diverse perché il contenitore stesso è dotato di tutte le dipendenze necessarie. È possibile eseguire il debug dell'applicazione nel computer, quindi distribuirla in un altro computer, con lo stesso ambiente garantito.
+La caratteristica principale di un contenitore è che rende l'ambiente lo stesso tra diverse distribuzioni perché il contenitore stesso viene fornito con tutte le dipendenze necessarie. È possibile eseguire il debug dell'applicazione nel computer e quindi distribuirla in un altro computer, con lo stesso ambiente garantito.
 
-Un contenitore è un'istanza di un'immagine del contenitore. Un'immagine del contenitore è un modo per creare un pacchetto di un'app o di un servizio (ad esempio uno snapshot) e quindi distribuirla in modo affidabile e riproducibile. Si potrebbe dire che Docker non è solo una tecnologia, ma anche una filosofia e un processo.
+Un contenitore è un'istanza di un'immagine contenitore. Un'immagine contenitore è un modo per creare un pacchetto di un'app o un servizio (ad esempio uno snapshot) e quindi distribuirla in modo affidabile e riproducibile. Si potrebbe dire che Docker non è solo una tecnologia, è anche una filosofia e un processo.
 
-Poiché i contenitori quotidianamente diventano più comuni, stanno diventando un'unità di distribuzione "a livello di settore".
+Man mano che i contenitori diventano più comuni, stanno diventando un'"unità di distribuzione" a livello di settore.
 
-## <a name="benefits-of-containers-docker-engine-on-linux-or-windows"></a>Vantaggi dei contenitori (motore Docker in Linux o Windows)
+## <a name="benefits-of-containers-docker-engine-on-linux-or-windows"></a>Vantaggi dei contenitori (Docker Engine su Linux o Windows)
 
-La creazione di applicazioni tramite contenitori, che possono essere definiti come blocchi predefiniti leggeri, offre un aumento significativo della flessibilità per la creazione, la distribuzione e l'esecuzione di qualsiasi applicazione, in qualsiasi infrastruttura.
+La creazione di applicazioni utilizzando contenitori, che possono anche essere definiti come blocchi predefiniti leggeri, offre un aumento significativo dell'agilità per la creazione, la spedizione e l'esecuzione di qualsiasi applicazione in qualsiasi infrastruttura.
 
-Con i contenitori, è possibile usare qualsiasi app dallo sviluppo alla produzione con modifiche minime o senza modifiche al codice, grazie all'integrazione di Docker su strumenti di sviluppo Microsoft, sistemi operativi e cloud.
+Con i contenitori, puoi portare qualsiasi app dallo sviluppo alla produzione con poche o nessuna modifica del codice, grazie all'integrazione di Docker tra gli strumenti di sviluppo Microsoft, i sistemi operativi e il cloud.
 
-Quando si esegue la distribuzione in macchine virtuali semplici, probabilmente è già presente un metodo per la distribuzione delle app ASP.NET nelle VM. È probabile, tuttavia, che il metodo includa più passaggi manuali o processi automatici complessi usando uno strumento di distribuzione come Puppet o uno strumento simile. Potrebbe essere necessario eseguire attività quali la modifica di elementi di configurazione, la copia del contenuto dell'applicazione tra server e l'esecuzione di programmi di installazione interattiva basati su configurazioni con estensione msi, seguiti dai test. Tutti i passaggi della distribuzione aggiungono tempo e rischi per le distribuzioni. Si otterranno errori ogni volta che una dipendenza non è presente nell'ambiente di destinazione.
+Quando si esegue la distribuzione in macchine virtuali semplici, è probabile che si disponga già di un metodo per la distribuzione di app ASP.NET nelle macchine virtuali. È probabile, tuttavia, che il metodo prevede più passaggi manuali o processi automatizzati complessi utilizzando uno strumento di distribuzione come Puppet o uno strumento simile. Potrebbe essere necessario eseguire attività come la modifica degli elementi di configurazione, la copia del contenuto dell'applicazione tra i server e l'esecuzione di programmi di installazione interattivi basati su configurazioni con estensione msi, seguite da test. Tutti questi passaggi nella distribuzione aggiungono tempo e rischi alle distribuzioni. Si otterranno errori ogni volta che una dipendenza non è presente nell'ambiente di destinazione.
 
-Nei contenitori di Windows, il processo di creazione dei pacchetti di applicazioni è completamente automatizzato. I contenitori di Windows sono basati sulla piattaforma Docker, che offre aggiornamenti automatici e rollback per le distribuzioni di contenitori. Il miglioramento principale ottenuto dall'uso del motore Docker è la creazione di immagini, simili agli snapshot dell'applicazione, con tutte le relative dipendenze. Le immagini sono immagini Docker, in questo caso un'immagine contenitore di Windows. Le immagini eseguono app ASP.NET nei contenitori, senza tornare al codice sorgente. Lo snapshot del contenitore diventa l'unità di distribuzione.
+Nei contenitori Windows, il processo di creazione del pacchetto delle applicazioni è completamente automatizzato. Contenitori di Windows si basa sulla piattaforma Docker, che offre aggiornamenti automatici e rollback per le distribuzioni di contenitori. Il miglioramento principale che si ottiene dall'utilizzo del motore Docker è che si creano immagini, che sono come istantanee dell'applicazione, con tutte le relative dipendenze. Le immagini sono immagini Docker (un'immagine del contenitore Windows, in questo caso). Le immagini vengono eseguite ASP.NET le app in contenitori, senza tornare al codice sorgente. Lo snapshot del contenitore diventa l'unità di distribuzione.
 
-Molte organizzazioni sono inserimento applicazioni monolitiche esistenti per i motivi seguenti:
+Molte organizzazioni stanno containerizzando le applicazioni monolitiche esistenti per i motivi seguenti:Many organizations are containerizing existing monolithic applications for the following reasons:
 
-- **Rilascia agilità grazie a una distribuzione migliorata**. I contenitori offrono un contratto di distribuzione coerente tra lo sviluppo e le operazioni. Quando si usano i contenitori, gli sviluppatori non dicono che "funziona nel computer, perché non sono in produzione?" Si può dire che "viene eseguito come contenitore, in modo che venga eseguito in produzione". L'applicazione in pacchetto, con tutte le relative dipendenze, può essere eseguita in qualsiasi ambiente basato su contenitori supportato. Verrà eseguito il modo in cui è stato progettato per essere eseguito in tutti gli obiettivi di distribuzione (sviluppo, controllo di qualità, gestione temporanea, produzione). I contenitori eliminano la maggior parte degli attriti quando passano da una fase all'altra, migliorando notevolmente la distribuzione, ed è possibile spedire più velocemente.
+- **Libera agilità grazie a una migliore distribuzione.** I contenitori offrono un contratto di distribuzione coerente tra sviluppo e operazioni. Quando si utilizzano i contenitori, non si sente gli sviluppatori dire, "Funziona sul mio computer, perché non in produzione?" Possono dire, "Funziona come un contenitore, quindi verrà eseguito in produzione." L'applicazione in pacchetto, con tutte le relative dipendenze, può essere eseguita in qualsiasi ambiente basato su contenitori supportato. Verrà eseguito nel modo in cui è stato progettato l'esecuzione in tutte le destinazioni di distribuzione (dev, QA, staging, produzione). I contenitori eliminano la maggior parte degli attriti quando si spostano da una fase all'altra, il che migliora notevolmente la distribuzione ed è possibile spedire più velocemente.
 
-- **Riduzioni dei costi**. I contenitori portano a costi ridotti, sia per il consolidamento che per la rimozione dell'hardware esistente o per l'esecuzione di applicazioni a una densità più elevata per unità di hardware.
+- **Riduzione dei costi**. I contenitori comportano costi inferiori, grazie al consolidamento e alla rimozione dell'hardware esistente o all'esecuzione di applicazioni a una densità più elevata per unità di hardware.
 
-- **Portabilità**. I contenitori sono modulari e portatili. I contenitori Docker sono supportati in qualsiasi sistema operativo server (Linux e Windows), in qualsiasi cloud pubblico principale (Microsoft Azure, Amazon AWS, Google, IBM) e in ambienti cloud in locale e privato o ibrido.
+- **Portabilità**. I contenitori sono modulari e portatili. I contenitori Docker sono supportati in qualsiasi sistema operativo server (Linux e Windows), in qualsiasi cloud pubblico principale (Microsoft Azure, Amazon AWS, Google, IBM) e in ambienti cloud locali e privati o ibridi.
 
-- **Controllo**. I contenitori offrono un ambiente flessibile e sicuro che è controllato a livello di contenitore. Un contenitore può essere protetto, isolato e persino limitato impostando criteri di vincolo di esecuzione nel contenitore. Come descritto in dettaglio nella sezione relativa ai contenitori di Windows, i contenitori di Windows Server 2016 e Hyper-V offrono opzioni di supporto aziendale aggiuntive.
+- **Controllare**. I contenitori offrono un ambiente flessibile e sicuro controllato a livello di contenitore. Un contenitore può essere protetto, isolato e persino limitato impostando criteri dei vincoli di esecuzione nel contenitore. Come descritto in dettaglio nella sezione sui contenitori di Windows, i contenitori di Windows Server 2016 e Hyper-V offrono ulteriori opzioni di supporto aziendale.
 
-I miglioramenti significativi in termini di agilità, portabilità e controllo, infine, comportano riduzioni dei costi significative quando si usano i contenitori per sviluppare e gestire le applicazioni.
+Miglioramenti significativi in termini di agilità, portabilità e controllo in ultima analisi portano a riduzioni significative dei costi quando si utilizzano i contenitori per sviluppare e gestire le applicazioni.
 
 ## <a name="what-is-docker"></a>Che cos'è Docker?
 
-[Docker](https://www.docker.com/) è un [progetto open source](https://github.com/docker/docker) che automatizza la distribuzione di applicazioni come contenitori portabili e autosufficienti che possono essere eseguiti nel cloud o in locale. Docker è anche un'[azienda](https://www.docker.com/) che promuove questa tecnologia e ne guida l'evoluzione. La società collabora con i fornitori di cloud, Linux e Windows, tra cui Microsoft.
+[Docker](https://www.docker.com/) è un [progetto open source](https://github.com/docker/docker) che automatizza la distribuzione di applicazioni come contenitori portatili e autosufficienti che possono essere eseguiti nel cloud o in locale. Docker è anche un'[azienda](https://www.docker.com/) che promuove questa tecnologia e ne guida l'evoluzione. L'azienda lavora in collaborazione con fornitori di cloud, Linux e Windows, tra cui Microsoft.
 
-![Diagramma che illustra in che modo Docker distribuisce i contenitori nel cloud ibrido.](./media/deploy-existing-net-apps-as-windows-containers/docker-deploys-containers-all-layers.png)
+![Diagramma che mostra come Docker distribuisce i contenitori nel cloud ibrido.](./media/deploy-existing-net-apps-as-windows-containers/docker-deploys-containers-all-layers.png)
 
 **Figura 4-6.** Docker distribuisce contenitori a tutti i livelli del cloud ibrido
 
-Per chi ha familiarità con le macchine virtuali, i contenitori potrebbero sembrare molto simili. Un contenitore esegue un sistema operativo, dispone di un file system ed è possibile accedervi tramite una rete, proprio come un computer fisico o virtuale. Tuttavia, la tecnologia e i concetti alla base dei contenitori sono molto diversi dalle macchine virtuali. Dal punto di vista dello sviluppatore, un contenitore deve essere trattato in modo più simile a un singolo processo. Un contenitore dispone infatti di un singolo punto di ingresso per un processo.
+Per gli utenti che hanno familiarità con le macchine virtuali, i contenitori potrebbero sembrare notevolmente simili. Un contenitore esegue un sistema operativo, dispone di un file system ed è accessibile tramite una rete, proprio come un sistema di computer fisico o virtuale. Ciò premesso, la tecnologia e i concetti alla base dei contenitori sono molto diversi da quelli delle macchine virtuali. Dal punto di vista dello sviluppatore, un contenitore deve essere trattato più come un singolo processo. Infatti, un contenitore ha un singolo punto di ingresso per un processo.
 
-I contenitori Docker (per semplicità, *contenitori*) possono essere eseguiti in modo nativo in Linux e Windows. Quando si eseguono contenitori normali, i contenitori di Windows possono essere eseguiti solo in host Windows (un server host o una macchina virtuale) e i contenitori Linux possono essere eseguiti solo su host Linux. Nelle versioni recenti di contenitori di Windows Server e Hyper-V, tuttavia, un contenitore Linux può essere eseguito in modo nativo in Windows Server usando la tecnologia di isolamento Hyper-V attualmente disponibile solo nei contenitori di Windows Server.
+I contenitori Docker (per semplicità, contenitori ) possono essere eseguiti in modo nativo in Linux e Windows.Docker containers (for simplicity, *containers)* can run natively on Linux and Windows. Quando si eseguono contenitori normali, i contenitori di Windows possono essere eseguiti solo su host Windows (un server host o una macchina virtuale) e i contenitori Linux possono essere eseguiti solo su host Linux.When running regular containers, Windows containers can run only on Windows hosts (a host server or a VM), and Linux containers can run only on Linux hosts. Tuttavia, nelle versioni recenti di Windows Server e contenitori Hyper-V, un contenitore Linux può anche essere eseguito in modo nativo in Windows Server utilizzando la tecnologia di isolamento Hyper-V che attualmente è disponibile solo nei contenitori di Windows Server.
 
-Nel prossimo futuro, saranno possibili e persino comuni gli ambienti misti con contenitori sia Linux che Windows.
+Nel prossimo futuro, gli ambienti misti che dispongono di contenitori Linux e Windows saranno possibili e persino comuni.
 
-## <a name="benefits-of-windows-containers-for-your-existing-net-applications"></a>Vantaggi dei contenitori Windows per le applicazioni .NET esistenti
+## <a name="benefits-of-windows-containers-for-your-existing-net-applications"></a>Vantaggi dei contenitori di Windows per le applicazioni .NET esistenti
 
-I vantaggi derivanti dall'uso dei contenitori di Windows sono fondamentalmente gli stessi vantaggi che si ottengono dai contenitori in generale. L'uso dei contenitori di Windows consiste nel migliorare significativamente l'agilità, la portabilità e il controllo.
+I vantaggi dell'utilizzo dei contenitori di Windows sono fondamentalmente gli stessi vantaggi che si ottengono dai contenitori in generale. L'utilizzo dei contenitori di Windows consente di migliorare notevolmente l'agilità, la portabilità e il controllo.
 
-Le applicazioni .NET esistenti fanno riferimento a tali applicazioni create usando il .NET Framework. Ad esempio, possono essere applicazioni Web ASP.NET tradizionali. non usano .NET Core, che è più recente ed esegue multipiattaforma in Linux, Windows e MacOS.
+Le applicazioni .NET esistenti fanno riferimento alle applicazioni create utilizzando .NET Framework. Ad esempio, potrebbero essere applicazioni web ASP.NET tradizionali, ovvero non usano .NET Core, che è più recente ed esegue multipiattaforma su Linux, Windows e MacOS.
 
-La dipendenza principale nella .NET Framework è Windows. Ha anche dipendenze secondarie, ad esempio IIS e System. Web in ASP.NET tradizionali.
+La dipendenza principale in .NET Framework è Windows. Ha anche dipendenze secondarie, come IIS, e System.Web nei ASP.NET tradizionali.
 
-Un'applicazione .NET Framework deve essere eseguita in Windows, punto. Se si vuole distribuire le applicazioni .NET Framework esistenti e non si può o non si vuole investire in una migrazione a .NET Core ("se funziona correttamente, non eseguire la migrazione"), l'unica scelta per i contenitori consiste nell'usare i contenitori di Windows.
+Un'applicazione .NET Framework deve essere eseguita in Windows, punto. Se si desidera containerizzare le applicazioni .NET Framework esistenti e non è possibile o non si desidera investire in una migrazione a .NET Core ("Se funziona correttamente, non eseguirne la migrazione"), l'unica scelta disponibile per i contenitori consiste nell'utilizzare i contenitori di Windows.
 
-Uno dei principali vantaggi derivanti dai contenitori di Windows è quello di offrire una soluzione per modernizzare le applicazioni .NET Framework esistenti in esecuzione in contenitori di Windows. In definitiva, i contenitori di Windows ottengono i vantaggi che si stanno cercando usando i contenitori: agilità, portabilità e controllo migliore.
+Pertanto, uno dei principali vantaggi dei contenitori di Windows è che offrono un modo per modernizzare le applicazioni .NET Framework esistenti in esecuzione su contenitori Windows-through. In definitiva, Windows Containers offre i vantaggi che si stanno cercando utilizzando l'agilità dei contenitori, la portabilità e un migliore controllo.
 
-## <a name="choose-an-os-to-target-with-net-based-containers"></a>Scegliere un sistema operativo con cui eseguire la destinazione. Contenitori basati su rete
+## <a name="choose-an-os-to-target-with-net-based-containers"></a>Scegliere un sistema operativo di destinazione con . Contenitori basati su rete
 
-Considerata la diversità dei sistemi operativi supportati da Docker, nonché le differenze tra .NET Framework e .NET Core, è consigliabile usare come destinazione un sistema operativo specifico e versioni specifiche in base al Framework in uso.
+Data la diversità dei sistemi operativi supportati da Docker, nonché le differenze tra .NET Framework e .NET Core, è necessario scegliere come destinazione un sistema operativo specifico e versioni specifiche in base al framework in uso.
 
-Per Windows, è possibile usare Windows Server Core o Windows Nano Server. Queste versioni di Windows forniscono caratteristiche diverse, ad esempio IIS rispetto a un server Web self-hosted come gheppio, che potrebbero essere necessarie per applicazioni .NET Framework o .NET Core.
+Per Windows, è possibile usare Windows Server Core o Windows Nano Server. Queste versioni di Windows forniscono caratteristiche diverse (ad esempio IIS rispetto a un server Web self-hosted come Kestrel) che potrebbero essere necessarie per le applicazioni .NET Framework o .NET Core.
 
 Per Linux, sono disponibili più distribuzioni supportate in immagini Docker. NET ufficiali, ad esempio Debian.
 
-La figura 4-7 illustra le versioni del sistema operativo a cui è possibile fare riferimento, a seconda della versione dell'app del .NET Framework.
+Figura 4-7 Mostra le versioni del sistema operativo che è possibile destinazione, a seconda della versione dell'applicazione di.NET Framework.
 
-![Diagramma che mostra il sistema operativo di destinazione in base alla versione .NET Framework.](./media/deploy-existing-net-apps-as-windows-containers/dotnet-framework-operating-systems.png)
+![Diagramma che mostra il sistema operativo di destinazione in base alla versione di .NET Framework.Diagram showing what OS to target based on .NET Framework version.](./media/deploy-existing-net-apps-as-windows-containers/dotnet-framework-operating-systems.png)
 
-**Figura 4-7.** Sistemi operativi di destinazione in base alla versione .NET Framework
+**Figura 4-7.** Sistemi operativi di destinazione in base alla versione di .NET Framework
 
-Negli scenari di migrazione di applicazioni esistenti o legacy basate su .NET Framework applicazioni, le dipendenze principali si trovano in Windows e IIS. L'unica opzione consiste nell'usare le immagini Docker basate su Windows Server Core e la .NET Framework.
+Negli scenari di migrazione per le applicazioni esistenti o legacy basate su applicazioni .NET Framework, le dipendenze principali sono in Windows e IIS. L'unica opzione consiste nell'utilizzare immagini Docker basate su Windows Server Core e .NET Framework.
 
-Quando si aggiunge il nome dell'immagine al file Dockerfile, è possibile selezionare il sistema operativo e la versione usando un tag, come negli esempi seguenti per le immagini del contenitore di Windows basate su .NET Framework:
+Quando si aggiunge il nome dell'immagine al file Dockerfile, è possibile selezionare il sistema operativo e la versione utilizzando un tag, come negli esempi seguenti per le immagini contenitore Windows basate su .NET Framework:
 
 > | **Tag** | **Sistema e versione** |
 > |---|---|
-> | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET Framework 4. x in Windows Server Core |
-> | **microsoft/aspnet:4.x-windowsservercore** | .NET Framework 4. x con personalizzazione ASP.NET aggiuntiva, in Windows Server Core |
+> | **Microsoft/dotnet-framework:4.x-windowsservercore** | .NET Framework 4.x in Windows Server Core |
+> | **microsoft/aspnet:4.x-windowsservercore** | .NET Framework 4.x con personalizzazione di ASP.NET aggiuntiva in Windows Server Core |
 
-Per .NET Core (multipiattaforma per Linux e Windows), i tag avranno un aspetto simile al seguente:
+Per .NET Core (multipiattaforma per Linux e Windows), i tag sono simili ai seguenti:
 
 > | **Tag** | **Sistema e versione**
 > |---|---|
-> | **microsoft/dotnet:2.0.0-runtime** | Runtime di .NET Core 2,0-solo in Linux |
-> | **microsoft/dotnet:2.0.0-runtime-nanoserver** | Runtime di .NET Core 2,0-solo in Windows nano server |
+> | **Microsoft/dotnet:2.0.0-runtime** | Solo runtime di .NET Core 2.0 in Linux |
+> | **microsoft/dotnet:2.0.0-runtime-nanoserver** | .NET Core 2.0 solo runtime in Windows Nano Server |
 
-### <a name="multi-arch-images"></a>Immagini a più Arch
+### <a name="multi-arch-images"></a>Immagini multi-arco
 
-A partire da metà 2017, è anche possibile usare una nuova funzionalità di Docker denominata immagini [multiarch](https://github.com/moby/moby/issues/15866) . Le immagini Docker per .NET Core possono usare tag a più Arch. I file Dockerfile non devono più definire il sistema operativo di destinazione. La funzionalità multi-arch consente l'uso di un singolo tag in più configurazioni di computer. Ad esempio, con più Arch è possibile usare un tag comune: **Microsoft/DotNet: 2.0.0-Runtime**. Se si esegue il pull di tale tag da un ambiente contenitore Linux, si ottiene l'immagine basata su Debian. Se si estrae il tag da un ambiente contenitore Windows, si ottiene l'immagine basata su nano server.
+A partire dalla metà del 2017, è anche possibile utilizzare una nuova funzionalità in Docker denominata immagini [multi-arco.](https://github.com/moby/moby/issues/15866) Le immagini Docker di .NET Core possono usare tag multi-arco. I file Dockerfile non è più necessario definire il sistema operativo di destinazione. La funzione multi-arco consente di utilizzare un singolo tag in più configurazioni della macchina. Ad esempio, con multi-arch, è possibile utilizzare un tag comune: **microsoft/dotnet:2.0.0-runtime**. Se si estrae il tag da un ambiente contenitore Linux, si ottiene l'immagine basata su Debian. Se si estrae il tag da un ambiente contenitore Windows, si ottiene l'immagine basata su Nano Server.If you pull that tag from a Windows container environment, you get the Nano Server-based image.
 
-Per .NET Framework immagini, perché il .NET Framework tradizionale supporta solo le finestre, non è possibile usare la funzionalità multiarch.
+Per le immagini .NET Framework, poiché la tradizionale .NET Framework supporta solo Windows, non è possibile utilizzare la funzionalità multi-arco.
 
-## <a name="windows-container-types"></a>Tipi di contenitore di Windows
+## <a name="windows-container-types"></a>Tipi di contenitori di Windows
 
-Come i contenitori Linux, i contenitori di Windows Server vengono gestiti tramite il motore docker. A differenza dei contenitori Linux, i contenitori di Windows includono due tipi di contenitori diversi, o esecuzioni, i contenitori di Windows Server e l'isolamento di Hyper-V.
+Come i contenitori Linux, i contenitori di Windows Server vengono gestiti tramite Docker Engine.Like Linux containers, Windows Server containers are managed by using Docker Engine. A differenza dei contenitori Linux, i contenitori di Windows includono due tipi di contenitori diversi o i contenitori di Windows Server di esecuzione e l'isolamento Hyper-V.
 
-**Contenitori di Windows Server**: fornisce l'isolamento delle applicazioni tramite la tecnologia di isolamento processo e spazio dei nomi. Un contenitore di Windows Server condivide un kernel con l'host contenitore e tutti i contenitori in esecuzione nell'host. Questi contenitori non forniscono un limite di sicurezza ostile e non devono essere usati per isolare il codice non attendibile. A causa dello spazio del kernel condiviso, questi contenitori richiedono la stessa versione e la stessa configurazione del kernel.
+**Contenitori**di Windows Server: fornisce l'isolamento delle applicazioni tramite la tecnologia di isolamento di processi e spazi dei nomi. Un contenitore di Windows Server condivide un kernel con l'host contenitore e tutti i contenitori in esecuzione nell'host. Questi contenitori non forniscono un limite di sicurezza ostile e non devono essere utilizzati per isolare il codice non attendibile. Poiché lo spazio kernel è condiviso, è necessario che questi contenitori abbiano la stessa versione di kernel e la stessa configurazione.
 
-**Isolamento di Hyper-V**: espande l'isolamento fornito dai contenitori di Windows Server eseguendo ogni contenitore in una macchina virtuale altamente ottimizzata. In questa configurazione il kernel dell'host contenitore non viene condiviso con altri contenitori nello stesso host. Questi contenitori sono progettati per l'hosting multi-tenant ostile con le stesse garanzie di sicurezza di una macchina virtuale. Poiché questi contenitori non condividono il kernel con l'host o altri contenitori nell'host, possono eseguire kernel con versioni e configurazioni diverse (con versioni supportate). Ad esempio, tutti i contenitori di Windows in Windows 10 usano l'isolamento Hyper-V per usare la versione e la configurazione del kernel di Windows Server.
+**Isolamento Hyper-V:** espande l'isolamento fornito dai contenitori di Windows Server eseguendo ogni contenitore in una macchina virtuale altamente ottimizzata. In questa configurazione il kernel dell'host contenitore non è condiviso con gli altri contenitori dello stesso host. Questi contenitori sono progettati per l'hosting multi-tenant ostile, con le stesse garanzie di sicurezza di una macchina virtuale. Poiché questi contenitori non condividono il kernel con l'host o altri contenitori nell'host, possono eseguire kernel con versioni e configurazioni diverse (con versioni supportate). Ad esempio, tutti i contenitori di Windows in Windows 10 utilizzano l'isolamento Hyper-V per utilizzare la versione e la configurazione del kernel di Windows Server.
 
-L'esecuzione di un contenitore in Windows con o senza isolamento Hyper-V è una decisione in fase di esecuzione. È possibile scegliere di creare inizialmente il contenitore con isolamento Hyper-V e in fase di esecuzione scegliere di eseguirlo come contenitore di Windows Server.
+L'esecuzione di un contenitore in Windows con o senza isolamento Hyper-V è una decisione in fase di esecuzione. È possibile scegliere di creare inizialmente il contenitore con isolamento Hyper-V e, in fase di esecuzione, scegliere di eseguirlo come contenitore di Windows Server.You might choose to create the container with Hyper-V isolation initially, and at run time, choose to run it as a Windows Server container instead.
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Documentazione dei contenitori di Windows**
+- **Documentazione relativa ai contenitori di WindowsWindows Containers**
 
     <https://docs.microsoft.com/virtualization/windowscontainers/>
 
-- **Nozioni fondamentali sui contenitori di Windows**
+- **Nozioni fondamentali sui contenitori di WindowsWindows Containers fundamentals**
 
     <https://docs.microsoft.com/virtualization/windowscontainers/about/>
 
@@ -133,35 +133,35 @@ L'esecuzione di un contenitore in Windows con o senza isolamento Hyper-V è una 
 
     <https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf>
 
-## <a name="the-container-ecosystem-in-azure"></a>Ecosistema di contenitori in Azure
+## <a name="the-container-ecosystem-in-azure"></a>L'ecosistema dei contenitori in AzureThe container ecosystem in Azure
 
-Nelle sezioni precedenti sono stati illustrati i vantaggi dei contenitori Docker e i dettagli sulle immagini del contenitore specifiche per le applicazioni .NET. Tutte le informazioni generiche sono fondamentali per lo sviluppo o la distribuire di un'applicazione.
-Tuttavia, quando si pensa all'ambiente di distribuzione di produzione o anche agli ambienti di test e sviluppo/test, Microsoft Azure offre un'ampia gamma di opzioni, un ecosistema di contenitori completo nel cloud (illustrato nel diagramma seguente). A seconda delle esigenze specifiche dell'applicazione, è necessario scegliere uno o un altro prodotto Azure.
+Nelle sezioni precedenti, è stato spiegato quali sono i vantaggi dei contenitori Docker e i dettagli sulle immagini specifiche del contenitore per le applicazioni .NET. Tutte queste informazioni generiche sono fondamentali per sviluppare o containerizzare un'applicazione.
+Tuttavia, quando si pensa all'ambiente di distribuzione di produzione o anche agli ambienti di controllo qualità e sviluppo/test, Microsoft Azure offre una gamma aperta e ampia di scelte, un ecosistema di contenitori completo nel cloud (illustrato nel diagramma seguente). A seconda delle esigenze dell'applicazione specifica, è consigliabile scegliere uno o un altro prodotto Azure.Depending on your specific application's needs, you should choose one or another Azure product.
 
-![Diagramma dell'ecosistema di contenitori in Azure.](./media/deploy-existing-net-apps-as-windows-containers/azure-container-ecosystem.png)
+![Diagramma dell'ecosistema del contenitore in Azure.Diagram of the container ecosystem in Azure.](./media/deploy-existing-net-apps-as-windows-containers/azure-container-ecosystem.png)
 
-**Figura 4-7.5.** Ecosistema di contenitori in Azure
+**Figura 4-7,5.** L'ecosistema dei contenitori in AzureThe container ecosystem in Azure
 
-Dall'ecosistema di contenitori di Azure, i prodotti seguenti supportano i contenitori considerati infrastruttura:
+Dall'ecosistema dei contenitori in Azure, i prodotti seguenti supportano i contenitori considerati infrastruttura:From the container ecosystem in Azure, the following products supporting containers that are considered infrastructure:
 
-- **Istanze di contenitore di Azure (ACI)**
-- **Macchine virtuali di Azure** (con supporto del contenitore)
-- **Set di scalabilità di macchine virtuali di Azure** (con supporto del contenitore)
+- **Istanze di Azure Container**
+- **Macchine virtuali di Azure** (con il supporto del contenitore)Azure Virtual Machines (With container's support)
+- Set di **scalabilità di macchine virtuali di Azure** (con il supporto del contenitore)Azure Virtual Machine Scale Sets (With container's support)
 
-Da queste tre, ACI offre un notevole vantaggio, ovvero il fatto che non è necessario gestire il sistema operativo sottostante, non è necessario eseguire l'aggiornamento/patch e così via, ma ACI è ancora posizionato a livello di infrastruttura, come illustrato in modo più appropriato nelle prossime sezioni di questo libro.
+Da questi tre, ACI fornisce un grande vantaggio, che è il fatto che non è necessario mantenere il sistema operativo sottostante, non c'è bisogno di aggiornare / patch, ecc, ma ACI è ancora posizionato a livello di infrastruttura, come meglio spiegato nelle prossime sezioni di questo libro.
 
-I prodotti in Azure che supportano i contenitori che si trovano allo stesso tempo posizionati più nel livello PaaS (piattaforma distribuita come servizio) sono:
+I prodotti in Azure che supportano i contenitori che sono allo stesso tempo posizionati più nel livello PaaS (Piattaforma come servizio) sono:The products in Azure supporting containers that are at the same time positioned more in the PaaS (Platform as a Service) level are:
 
 - **Servizio app di Azure**
 - **Servizio Azure Kubernetes (AKS e ACS)**
 - **Azure Batch**
 
-Azure Container Registry, quindi, è un registro contenitori altamente scalabile ospitato in Azure che può essere usato da tutti i prodotti precedenti per la registrazione e la distribuzione delle immagini del contenitore personalizzato.
+Il Registro di sistema contenitore di Azure è quindi un registro contenitore scalabile elevato ospitato in Azure che è possibile usare da tutti i prodotti precedenti durante la registrazione e la distribuzione delle immagini del contenitore personalizzato.
 
-Dai contenitori è inoltre possibile utilizzare altri servizi gestiti in Azure, ad esempio il database SQL di Azure, cache Redis di Azure, Azure Cosmos DB e così via. in Azure Marketplace sono inoltre disponibili soluzioni/piattaforme di terze parti, ad esempio Cloud Foundry e OpenShift, in cui è possibile usare i contenitori anche in Azure.
+Inoltre, dai contenitori, è possibile usare altri servizi gestiti in Azure come il database SQL di Azure, la cache di Azure Redis, il database Cosmos di Azure e così via. sono disponibili soluzioni/piattaforme di terze parti in Azure Marketplace come Cloud Foundry e OpenShift, dove è anche possibile usare i contenitori all'interno di Azure.
 
-Nelle sezioni successive è possibile esaminare le raccomandazioni di Microsoft su quando usare i prodotti e le soluzioni di Azure in modo specifico per i contenitori di Windows.
+In the next sections, you can explore Microsoft's recommendations on when to use each of those Azure products and solutions specifically when targeting Windows Containers.
 
 >[!div class="step-by-step"]
->[Precedente](what-about-cloud-native-applications.md)
->[Successivo](when-not-to-deploy-to-windows-containers.md)
+>[Successivo](what-about-cloud-native-applications.md)
+>[precedente](when-not-to-deploy-to-windows-containers.md)

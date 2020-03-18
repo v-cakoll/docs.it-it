@@ -5,10 +5,10 @@ helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
 ms.openlocfilehash: 7c227b61c6d5b4ead00fced0dba046b90683fde1
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77626412"
 ---
 # <a name="using-constructors-c-programming-guide"></a>Utilizzo di costruttori (Guida per programmatori C#)
@@ -21,7 +21,7 @@ Quando si crea una [classe](../../language-reference/keywords/class.md) o uno [s
   
  Un costruttore che non accetta parametri è detto *costruttore senza parametri*. I costruttori senza parametri vengono richiamati ogni volta che si crea un'istanza per un oggetto usando l'operatore `new` e non vengono specificati argomenti per `new`. Per altre informazioni, vedere [Costruttori di istanze](./instance-constructors.md).  
   
- A meno che la classe non sia [statica](../../language-reference/keywords/static.md), le classi senza costruttori ricevono un costruttore senza parametri pubblico dal compilatore C# perché possano creare istanze di classi. Per altre informazioni, vedere [Classi statiche e membri di classi statiche](./static-classes-and-static-class-members.md).  
+ A meno che la classe non sia [statica](../../language-reference/keywords/static.md), le classi senza costruttori ricevono un costruttore senza parametri pubblico dal compilatore C# perché possano creare istanze di classi. Per ulteriori informazioni, vedere [Classi statiche e Membri di classi statiche](./static-classes-and-static-class-members.md).  
   
  È possibile impedire che venga creata un'istanza per una classe rendendo il costruttore privato, come indicato di seguito:  
   
@@ -29,7 +29,7 @@ Quando si crea una [classe](../../language-reference/keywords/class.md) o uno [s
   
  Per altre informazioni, vedere [Costruttori privati](./private-constructors.md).  
   
- I costruttori per i tipi [struct](../../language-reference/builtin-types/struct.md) sono simili ai costruttori di classi, ma gli `structs` non possono contenere un costruttore senza parametri esplicito poiché ne viene specificato automaticamente uno dal compilatore. Questo costruttore inizializza ogni campo nell'`struct` sul [valore predefinito](../../language-reference/builtin-types/default-values.md). Il costruttore senza parametri viene tuttavia chiamato solo se si crea un'istanza dello `struct` con `new`. Questo codice, ad esempio, usa il costruttore senza parametri per <xref:System.Int32>, in modo da garantire che venga inizializzato l'Integer:  
+ I costruttori per i tipi [struct](../../language-reference/builtin-types/struct.md) sono simili ai costruttori di classi, ma gli `structs` non possono contenere un costruttore senza parametri esplicito poiché ne viene specificato automaticamente uno dal compilatore. Questo costruttore inizializza ogni `struct` campo nel [valore predefinito](../../language-reference/builtin-types/default-values.md). Il costruttore senza parametri viene tuttavia chiamato solo se si crea un'istanza dello `struct` con `new`. Questo codice, ad esempio, usa il costruttore senza parametri per <xref:System.Int32>, in modo da garantire che venga inizializzato l'Integer:  
   
 ```csharp  
 int i = new int();  
@@ -54,7 +54,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
  La chiamata al costruttore senza parametri per un tipo di valore non è quindi necessaria.  
   
- Sia le classi che gli `structs` possono definire costruttori che accettano parametri. I costruttori che accettano parametri devono essere chiamati con un'istruzione `new` o un'istruzione di [base](../../language-reference/keywords/base.md). Le classi e gli `structs` possono anche definire più costruttori. Né le une né gli altri devono necessariamente definire un costruttore senza parametri. Ad esempio,  
+ Sia le classi che gli `structs` possono definire costruttori che accettano parametri. I costruttori che accettano parametri devono essere chiamati con un'istruzione `new` o un'istruzione di [base](../../language-reference/keywords/base.md). Le classi e gli `structs` possono anche definire più costruttori. Né le une né gli altri devono necessariamente definire un costruttore senza parametri. Ad esempio:  
   
  [!code-csharp[csProgGuideObjects#54](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#54)]  
   
@@ -62,7 +62,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
  [!code-csharp[csProgGuideObjects#55](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#55)]  
   
- Un costruttore può usare la parola chiave `base` per chiamare il costruttore di una classe di base. Ad esempio,  
+ Un costruttore può usare la parola chiave `base` per chiamare il costruttore di una classe di base. Ad esempio:  
   
  [!code-csharp[csProgGuideObjects#56](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#56)]  
   
@@ -84,11 +84,11 @@ Console.WriteLine("{0}, {1}", a, b);
   
  [!code-csharp[csProgGuideObjects#60](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#60)]  
   
- I costruttori possono essere contrassegnati come [public](../../language-reference/keywords/public.md), [private](../../language-reference/keywords/private.md), [protected](../../language-reference/keywords/protected.md), [internal](../../language-reference/keywords/internal.md), [protected internal](../../language-reference/keywords/protected-internal.md) o [private protected](../../language-reference/keywords/private-protected.md). Questi modificatori di accesso definiscono il modo in cui gli utenti della classe possono costruire la classe. Per altre informazioni, vedere [Access Modifiers](./access-modifiers.md) (Modificatori di accesso).  
+ I costruttori possono essere contrassegnati come [public](../../language-reference/keywords/public.md), [private](../../language-reference/keywords/private.md), [protected](../../language-reference/keywords/protected.md), [internal](../../language-reference/keywords/internal.md), [protected internal](../../language-reference/keywords/protected-internal.md) o [private protected](../../language-reference/keywords/private-protected.md). Questi modificatori di accesso definiscono il modo in cui gli utenti della classe possono costruire la classe. Per altre informazioni, vedere [Modificatori di accesso](./access-modifiers.md).  
   
  Un costruttore può essere dichiarato statico usando la parola chiave [static](../../language-reference/keywords/static.md). I costruttori statici vengono chiamati automaticamente subito prima dell'accesso ai campi statici e in genere vengono usati per inizializzare i membri delle classi statiche. Per altre informazioni, vedere [Costruttori statici](./static-constructors.md).  
   
-## <a name="c-language-specification"></a>Specifica del linguaggio C#  
+## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
 
 Per altre informazioni, vedere [Costruttori di istanze](~/_csharplang/spec/classes.md#instance-constructors) e [Costruttori statici](~/_csharplang/spec/classes.md#static-constructors) in [Specifica del linguaggio C#](/dotnet/csharp/language-reference/language-specification/introduction). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
   

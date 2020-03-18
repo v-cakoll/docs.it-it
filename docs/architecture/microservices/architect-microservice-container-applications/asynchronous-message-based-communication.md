@@ -3,10 +3,10 @@ title: Comunicazione asincrona basata su messaggi
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | La comunicazione asincrona basata su messaggi è un concetto essenziale nell'architettura dei microservizi, perché è il modo migliore per mantenere i microservizi al contempo indipendenti uno dall'altro e sincronizzati.
 ms.date: 09/20/2018
 ms.openlocfilehash: 84eaf70178cce91a86dae8a55badb0b4ddd6a7c1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73454228"
 ---
 # <a name="asynchronous-message-based-communication"></a>Comunicazione asincrona basata su messaggi
@@ -83,16 +83,16 @@ Altri aspetti da considerare quando si usa la comunicazione asincrona sono l'ide
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Messaggistica basata su eventi** \
+- **Messaggi guidati da eventi** \
   <https://soapatterns.org/design_patterns/event_driven_messaging>
 
-- **Canale di pubblicazione/sottoscrizione** \
+- **Pubblica/Sottoscrivi canale** \
   <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
 
-- **UDI. \ CQRS chiarificato**
+- **Udi Dahan. Chiarito CQRS** \
   <http://udidahan.com/2009/12/09/clarified-cqrs/>
 
-- **Command and Query Responsibility Segregation (CQRS) (Separazione di responsabilità per query e comandi (CQRS))**  \
+- **Separazione responsabilità di comando e query (CQRS)Command and Query Responsibility Segregation (CQRS)** \
   <https://docs.microsoft.com/azure/architecture/patterns/cqrs>
 
 - **Comunicazione tra contesti delimitati** \
@@ -101,9 +101,9 @@ Altri aspetti da considerare quando si usa la comunicazione asincrona sono l'ide
 - **Coerenza finale** \
   <https://en.wikipedia.org/wiki/Eventual_consistency>
 
-- **Jimmy Bogard. Refactoring per la resilienza: valutazione** del \ di accoppiamento
+- **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling** \
   <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
 > [!div class="step-by-step"]
-> [Precedente](communication-in-microservice-architecture.md)
-> [Successivo](maintain-microservice-apis.md)
+> [Successivo](communication-in-microservice-architecture.md)
+> [precedente](maintain-microservice-apis.md)

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
 ms.openlocfilehash: 4f7ddad8c3dc12391ef6bf345a73ebb384400b38
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093149"
 ---
 # <a name="using-directive-c-reference"></a>Direttiva using (Riferimenti per C#)
@@ -95,9 +95,9 @@ Per altre informazioni, vedere [Direttive using](~/_csharplang/spec/namespaces.m
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
+- [Guida di riferimento a C](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Uso degli spazi dei nomi](../../programming-guide/namespaces/using-namespaces.md)
 - [Parole chiave di C#](index.md)
-- [Namespaces](../../programming-guide/namespaces/index.md) (Spazi dei nomi)
+- [Spazi dei nomi](../../programming-guide/namespaces/index.md)
 - [Istruzione using](using-statement.md)

@@ -1,15 +1,15 @@
 ---
-title: Come trovare tutti i nodi in uno spazio deiC#nomi ()
+title: Come trovare tutti i nodi in uno spazio dei nomi (c'è)How to find all nodes in a namespace (C
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
 ms.openlocfilehash: 408f4207798720428d0dd3821d33fd3edf2f897e
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141190"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Come trovare tutti i nodi in uno spazio deiC#nomi ()
+# <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Come trovare tutti i nodi in uno spazio dei nomi (c'è)How to find all nodes in a namespace (C
 È possibile applicare un filtro sullo spazio dei nomi di ogni elemento o attributo per trovare tutti i nodi inclusi in questo determinato spazio dei nomi.  
   
 ## <a name="example"></a>Esempio  

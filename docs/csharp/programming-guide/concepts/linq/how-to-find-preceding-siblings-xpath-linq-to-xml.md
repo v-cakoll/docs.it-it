@@ -1,15 +1,15 @@
 ---
-title: Come trovare elementi di pari livello precedenti (XPath-LINQ to XML)C#()
+title: Come trovare gli elementi di pari livello precedenti (XPath-LINQ to XML) (C
 ms.date: 07/20/2015
 ms.assetid: b281ff99-d08a-43d0-bea1-eff831b2f8ae
 ms.openlocfilehash: 08fc2073f76f37bd0381a05a7969d1c7748d6252
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141052"
 ---
-# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>Come trovare elementi di pari livello precedenti (XPath-LINQ to XML)C#()
+# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>Come trovare gli elementi di pari livello precedenti (XPath-LINQ to XML) (C
 Questo argomento confronta l'asse `preceding-sibling` XPath con l'asse <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> dell'elemento figlio di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
  L'espressione XPath è:  
@@ -43,7 +43,7 @@ foreach (XElement el in list2)
     Console.WriteLine(el);  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```output  
 Results are identical  

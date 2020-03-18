@@ -1,5 +1,5 @@
 ---
-title: $-String Interpolation C# -Reference
+title: '- Interpolazione di stringhe - Riferimento c'
 description: L'interpolazione di stringhe offro una sintassi più leggibile e pratica per la formattazione dell'output di tipo stringa rispetto alla formattazione composita tradizionale.
 ms.date: 09/02/2019
 f1_keywords:
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.openlocfilehash: 97bc606569b83bd14cd3b32495deb8e529747e9c
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76980119"
 ---
-# <a name="---string-interpolation-c-reference"></a>interpolazione di $-C# String (riferimento)
+# <a name="---string-interpolation-c-reference"></a>- interpolazione di stringhe (riferimenti in C
 
-Il carattere speciale `$` identifica una stringa letterale come *stringa interpolata*. Una stringa interpolata è un valore letterale stringa che può contenere *espressioni di interpolazione*. Quando una stringa interpolata viene risolta in una stringa di risultato, gli elementi con espressioni di interpolazione vengono sostituiti dalle rappresentazioni stringa dei risultati dell'espressione. Questa funzionalità è disponibile a partire C# da 6.
+Il carattere speciale `$` identifica una stringa letterale come *stringa interpolata*. Una stringa interpolata è un valore letterale stringa che può contenere *espressioni di interpolazione*. Quando una stringa interpolata viene risolta in una stringa di risultato, gli elementi con espressioni di interpolazione vengono sostituiti dalle rappresentazioni stringa dei risultati dell'espressione. Questa funzionalità è disponibile a partire da C .
 
 L'interpolazione di stringhe offre una sintassi più leggibile e pratica per creare stringhe formattate rispetto alla funzionalità di [formattazione composita delle stringhe](../../../standard/base-types/composite-formatting.md). L'esempio seguente usa entrambe le funzionalità per produrre lo stesso output:
 
@@ -39,7 +39,7 @@ Gli elementi tra parentesi quadre sono facoltativi. La tabella seguente descrive
 
 |Elemento|Descrizione|
 |-------------|-----------------|
-|`interpolationExpression`|Espressione che produce un risultato da formattare. La rappresentazione di stringa di `null` è <xref:System.String.Empty?displayProperty=nameWithType>.|
+|`interpolationExpression`|Espressione che produce un risultato da formattare. La rappresentazione di stringa di `null` is . <xref:System.String.Empty?displayProperty=nameWithType>|
 |`alignment`|Espressione costante il cui valore definisce il numero minimo di caratteri nella rappresentazione di stringa del risultato dell'espressione. Se è positivo, la rappresentazione stringa è allineata a destra; se è negativo la rappresentazione stringa è allineata a sinistra. Per altre informazioni, vedere [Componente di allineamento](../../../standard/base-types/composite-formatting.md#alignment-component).|
 |`formatString`|Stringa di formato supportata dal tipo di risultato dell'espressione. Per altre informazioni, vedere [Componente della stringa di formato](../../../standard/base-types/composite-formatting.md#format-string-component).|
 
@@ -57,24 +57,24 @@ L'esempio seguente illustra come includere una parentesi graffa in una stringa d
 
 [!code-csharp-interactive[example with ternary conditional operator](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
 
-Una stringa Verbatim interpolata inizia con il carattere `$` seguito dal carattere di `@`. Per altre informazioni sulle stringhe verbatim, vedere gli argomenti relativi a [string](../builtin-types/reference-types.md) e all'[identificatore verbatim](verbatim.md).
+Una stringa verbatim interpolata `$` inizia con `@` il carattere seguito dal carattere. Per altre informazioni sulle stringhe verbatim, vedere gli argomenti relativi a [string](../builtin-types/reference-types.md) e all'[identificatore verbatim](verbatim.md).
 
 > [!NOTE]
-> A partire C# da 8,0, è possibile usare i token di `$` e di `@` in qualsiasi ordine: sia `$@"..."` che `@$"..."` sono stringhe verbatim interpolate valide. Nelle versioni C# precedenti, il token di `$` deve essere visualizzato prima del token di `@`.
+> A partire dalla versione 8.0 `$` di `@` C, è possibile `$@"..."` `@$"..."` usare i token e in qualsiasi ordine: entrambi e sono stringhe letterali interpolate valide. Nelle versioni precedenti di `$` C, il `@` token deve essere visualizzato prima del token.
 
-## <a name="implicit-conversions-and-how-to-specify-iformatprovider-implementation"></a>Conversioni implicite e come specificare l'implementazione di `IFormatProvider`
+## <a name="implicit-conversions-and-how-to-specify-iformatprovider-implementation"></a>Conversioni implicite e `IFormatProvider` come specificare l'implementazione
 
 Da una stringa interpolata vengono effettuate tre conversioni implicite:
 
-1. Conversione di una stringa interpolata in un'istanza <xref:System.String> che rappresenta il risultato della risoluzione della stringa interpolata, dove gli elementi dell'espressione di interpolazione vengono sostituiti con le rappresentazioni stringa dei risultati, formattate correttamente. Questa conversione usa il <xref:System.Globalization.CultureInfo.CurrentCulture> per formattare i risultati dell'espressione.
+1. Conversione di una stringa interpolata in un'istanza <xref:System.String> che rappresenta il risultato della risoluzione della stringa interpolata, dove gli elementi dell'espressione di interpolazione vengono sostituiti con le rappresentazioni stringa dei risultati, formattate correttamente. Questa conversione <xref:System.Globalization.CultureInfo.CurrentCulture> utilizza l'oggetto to format expression results.
 
-1. Conversione di una stringa interpolata in un'istanza di <xref:System.FormattableString> che rappresenta una stringa di formato composito e i risultati dell'espressione da formattare. Questa opzione consente di creare più stringhe risultato con contenuto specifico delle impostazioni cultura da una singola istanza di <xref:System.FormattableString>. A tale scopo, chiamare uno dei metodi seguenti:
+1. Conversione di una stringa interpolata in un'istanza di <xref:System.FormattableString> che rappresenta una stringa di formato composito e i risultati dell'espressione da formattare. Questa opzione consente di creare più stringhe risultato con contenuto specifico delle impostazioni cultura da una singola istanza di <xref:System.FormattableString>. A tale scopo, chiamare uno dei seguenti metodi:
 
       - Un overload <xref:System.FormattableString.ToString> che produce una stringa risultato per <xref:System.Globalization.CultureInfo.CurrentCulture>.
       - Un metodo <xref:System.FormattableString.Invariant%2A> che produce una stringa risultato per <xref:System.Globalization.CultureInfo.InvariantCulture>.
       - Un metodo <xref:System.FormattableString.ToString(System.IFormatProvider)> che produce una stringa risultato per impostazioni cultura specifiche.
 
-    È anche possibile usare il metodo <xref:System.FormattableString.ToString(System.IFormatProvider)> per fornire un'implementazione definita dall'utente dell'interfaccia <xref:System.IFormatProvider> che supporta la formattazione personalizzata. Per altre informazioni, vedere la sezione [formattazione personalizzata con ICustomFormatter](../../../standard/base-types/formatting-types.md#custom-formatting-with-icustomformatter) nell'articolo [formattazione di tipi in .NET](../../../standard/base-types/formatting-types.md) .
+    È anche possibile usare il metodo <xref:System.FormattableString.ToString(System.IFormatProvider)> per fornire un'implementazione definita dall'utente dell'interfaccia <xref:System.IFormatProvider> che supporta la formattazione personalizzata. Per altre informazioni, vedere la sezione [Formattazione personalizzata con ICustomFormatter](../../../standard/base-types/formatting-types.md#custom-formatting-with-icustomformatter) dell'articolo [Formattazione dei tipi in .NET.](../../../standard/base-types/formatting-types.md)
 
 1. Conversione di una stringa interpolata in un'istanza di <xref:System.IFormattable> che consente anche di creare più stringhe risultato con contenuto associato a impostazioni cultura specifiche da una singola istanza di <xref:System.IFormattable>.
 
@@ -98,8 +98,8 @@ Per altre informazioni, vedere la sezione [Stringhe interpolate](~/_csharplang/s
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
-- [Caratteri speciali di C#](index.md)
+- [Informazioni di riferimento su C#](../index.md)
+- [Caratteri speciali di C](index.md)
 - [Stringhe](../../programming-guide/strings/index.md)
 - [Stringhe di formato numerico standard](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Formattazione composita](../../../standard/base-types/composite-formatting.md)

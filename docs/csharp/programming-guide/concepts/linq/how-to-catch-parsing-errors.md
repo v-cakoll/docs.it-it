@@ -1,15 +1,15 @@
 ---
-title: Come intercettare gli errori di analisiC#()
+title: Come rilevare gli errori di analisi (C
 ms.date: 07/20/2015
 ms.assetid: bfb612d4-5605-48ef-8c93-915cf9d5dcfb
 ms.openlocfilehash: 1a05037892061dec85e7837472e8ec13e076724b
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141491"
 ---
-# <a name="how-to-catch-parsing-errors-c"></a>Come intercettare gli errori di analisiC#()
+# <a name="how-to-catch-parsing-errors-c"></a>Come rilevare gli errori di analisi (C
 In questo argomento viene illustrato come rilevare XML non corretto o non valido.  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] viene implementato usando <xref:System.Xml.XmlReader>. Se a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] viene passato XML non corretto o non valido, la classe <xref:System.Xml.XmlReader> sottostante genererà un'eccezione. I vari metodi che analizzano il codice XML, ad esempio <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, non intercettano l'eccezione, che può quindi essere intercettata dall'applicazione.  

@@ -3,17 +3,17 @@ title: Microservizi .NET. Architettura per le applicazioni .NET incluse in conte
 description: Architettura dei microservizi .NET per le applicazioni .NET in contenitori | I microservizi sono servizi modulari e distribuibili in modo indipendente. I contenitori Docker (per Linux e Windows) semplificano le attività di distribuzione e test riunendo un servizio e le relative dipendenze in una singola unità che viene quindi eseguita in un ambiente isolato.
 ms.date: 01/30/2020
 ms.openlocfilehash: 1337fe56e78e03a85627737bd52a089fd946b842
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77543534"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microservizi .NET: architettura per le applicazioni .NET incluse in contenitori
 
 ![Copertina](./media/cover-small.png)
 
-**Edizione v 3.1** -aggiornata alla ASP.NET Core 3,1
+**EDITION v3.1** - Aggiornato per ASP.NET Core 3.1
 
 Questa guida offre un'introduzione allo sviluppo di applicazioni basate su microservizi e alla relativa gestione tramite i contenitori. Vengono descritti gli approcci alla progettazione e all'implementazione dell'architettura mediante i contenitori di .NET Core e Docker.
 
@@ -21,7 +21,7 @@ Per rendere più semplice iniziare, la guida illustra un'applicazione di riferim
 
 ## <a name="action-links"></a>Collegamenti all'azione
 
-- Questo e-book è disponibile anche in formato PDF (solo versione in lingua inglese [)](https://aka.ms/microservicesebook)
+- Questo e-book è disponibile anche in formato PDF (solo versione inglese) [Scarica](https://aka.ms/microservicesebook)
 
 - Clonare o eseguire il fork dell'applicazione di riferimento [eShopOnContainers su GitHub](https://github.com/dotnet-architecture/eShopOnContainers)
 
@@ -33,7 +33,7 @@ Per rendere più semplice iniziare, la guida illustra un'applicazione di riferim
 
 Sempre più spesso nelle aziende vengono usati i contenitori per realizzare risparmi sui costi, risolvere i problemi di distribuzione e migliorare DevOps e operazioni di produzione. Microsoft ha introdotto innovazioni dei contenitori per Windows e Linux tramite la creazione di prodotti come il servizio Azure Kubernetes e Azure Service Fabric, oltre che attraverso la collaborazione con aziende leader del settore come Docker, Mesosphere e Kubernetes. Questi prodotti offrono soluzioni per i contenitori che consentono alle aziende di creare e distribuire le applicazioni con la velocità e la scalabilità del cloud, indipendentemente dalla piattaforma o dagli strumenti scelti.
 
-Docker sta diventando lo standard di fatto nel settore dei contenitori, supportato dai più significativi fornitori negli ecosistemi Windows e Linux Microsoft è uno dei principali fornitori di cloud che supportano docker. In futuro, Docker sarà probabilmente onnipresente in qualsiasi Data Center nel cloud o in locale.
+Docker sta diventando lo standard di fatto nel settore dei contenitori, supportato dai più significativi fornitori negli ecosistemi Windows e Linux (Microsoft è uno dei principali fornitori di cloud che supportano Docker.) In futuro, Docker sarà probabilmente onnipresente in qualsiasi data center nel cloud o in locale.
 
 Inoltre, l'architettura dei [microservizi](https://martinfowler.com/articles/microservices.html) sta emergendo come un importante approccio alle applicazioni distribuite di importanza strategica. In un'architettura basata su microservizi, l'applicazione si basa su una raccolta di servizi che possono essere sviluppati, testati, distribuiti e sottoposti a controllo della versione in modo indipendente.
 
@@ -47,7 +47,7 @@ Dopo aver consultato questa guida, il passaggio successivo sarà acquisire infor
 
 ## <a name="version"></a>Versione
 
-Questa guida è stata modificata per coprire la versione di **.net core 3,1** insieme a molti aggiornamenti aggiuntivi relativi alla stessa "Wave" delle tecnologie (ovvero Azure e altre tecnologie di terze parti) in concomitanza con la versione di .net core 3,1. Per questo motivo la versione del libro è stata aggiornata anche alla versione **3,1**.
+Questa guida è stata rivista per coprire la versione **.NET Core 3.1** insieme a molti aggiornamenti aggiuntivi correlati alla stessa "onda" di tecnologie (vale a dire, Azure e tecnologie di terze parti aggiuntive) che colazzano in tempo con la versione 3.1 di .NET Core. Ecco perché la versione del libro è stata aggiornata anche alla versione **3.1**.
 
 ## <a name="what-this-guide-does-not-cover"></a>Argomenti non trattati dalla guida
 
@@ -78,9 +78,9 @@ Lo scopo dell'applicazione consiste nel presentare i modelli di architettura. **
 
 ## <a name="send-us-your-feedback"></a>Inviateci i vostri commenti!
 
-Questa guida è stata scritta per aiutare il lettore a comprendere l'architettura delle applicazioni incluse in contenitori e dei microservizi in .NET. La guida e l'applicazione di riferimento correlata sono in evoluzione, pertanto qualsiasi commento è molto apprezzato. Per Commenti su come migliorare questa guida, inviare commenti e suggerimenti in <https://aka.ms/ebookfeedback>.
+Questa guida è stata scritta per aiutare il lettore a comprendere l'architettura delle applicazioni incluse in contenitori e dei microservizi in .NET. La guida e l'applicazione di riferimento correlata sono in evoluzione, pertanto qualsiasi commento è molto apprezzato. Se hai commenti su come migliorare questa guida, <https://aka.ms/ebookfeedback>invia un feedback all'indirizzo .
 
-## <a name="credits"></a>Crediti
+## <a name="credits"></a>Credits
 
 Coautori:
 
@@ -144,7 +144,7 @@ Collaboratori e revisori:
 >
 > **Charles Lowell**, Software Engineer, team VS CAT, Microsoft
 >
-> **Miguel Veloso**, Software Development Engineer in Plain Concepts
+> **Miguel Veloso**, Software Development Engineer presso Plain Concepts
 
 ## <a name="copyright"></a>Copyright
 
@@ -158,21 +158,21 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2020 di Microsoft Corporation
+Copyright © 2020 da Microsoft Corporation
 
-Tutti i diritti riservati. Nessuna parte del contenuto di questo libro può essere riprodotta o trasmessa in qualsiasi forma o con qualsiasi mezzo, senza il permesso scritto dell'editore.
+Tutti i diritti sono riservati. Nessuna parte del contenuto di questo libro può essere riprodotta o trasmessa in qualsiasi forma o con qualsiasi mezzo, senza il permesso scritto dell'editore.
 
 Questo libro viene fornito "così com'è" ed esprime i punti di vista e le opinioni dell'autore. I punti di vista, le opinioni e le informazioni contenute nel presente libro, inclusi gli URL e altri riferimenti a siti Web, possono essere soggetti a modifiche senza preavviso.
 
-Alcuni esempi contenuti nella presente guida vengono forniti solo a fini illustrativi e sono fittizi. Nessuna associazione o connessione reale è intenzionale o può essere presupposta.
+ Alcuni esempi usati in questo documento vengono forniti a scopo puramente illustrativo e sono fittizi. Nessuna associazione reale o connessione è intenzionale o può essere desunta.
 
 Microsoft e i marchi elencati nella pagina Web relativa ai marchi all'indirizzo <https://www.microsoft.com> sono marchi delle società del gruppo Microsoft.
 
 Mac e macOS sono marchi registrati di Apple Inc.
 
-Il logo Docker Whale è un marchio registrato di Docker, Inc. usato dall'autorizzazione.
+Il logo Docker whale è un marchio registrato di Docker, Inc.
 
 Tutti gli altri marchi e logo appartengono ai rispettivi proprietari.
 
 >[!div class="step-by-step"]
->[avanti](container-docker-introduction/index.md)
+>[Avanti](container-docker-introduction/index.md)

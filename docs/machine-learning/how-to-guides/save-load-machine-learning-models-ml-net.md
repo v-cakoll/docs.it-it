@@ -6,10 +6,10 @@ author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
 ms.openlocfilehash: e3cebe979b5c279ce8cb90db5510f8758c24c2b4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73977001"
 ---
 # <a name="save-and-load-trained-models"></a>Salvare e caricare i modelli con training
@@ -60,16 +60,16 @@ ITransformer trainedModel = pipelineEstimator.Fit(data);
 mlContext.Model.Save(trainedModel, data.Schema, "model.zip");
 ```
 
-Poiché la maggior parte dei modelli e delle pipeline di preparazione dei dati ereditano dallo stesso set di classi, le firme del metodo di salvataggio e caricamento per questi componenti sono le stesse. A seconda del caso d'uso, è possibile riunire la pipeline di preparazione dei dati e il modello in un unico [`EstimatorChain`](xref:Microsoft.ML.Data.TransformerChain%601) che genererà un singolo [`ITransformer`](xref:Microsoft.ML.ITransformer) o separarli creando un'interfaccia [`ITransformer`](xref:Microsoft.ML.ITransformer) distinta per ognuno dei due elementi.
+Poiché la maggior parte dei modelli e delle pipeline di preparazione dei dati ereditano dallo stesso set di classi, le firme del metodo di salvataggio e caricamento per questi componenti sono le stesse. A seconda del caso d'uso, è possibile combinare [`EstimatorChain`](xref:Microsoft.ML.Data.TransformerChain%601) la pipeline di [`ITransformer`](xref:Microsoft.ML.ITransformer) preparazione dei dati [`ITransformer`](xref:Microsoft.ML.ITransformer) e il modello in un unico che genererebbe un'output singola o separarli creando in modo separato per ognuno di essi.
 
 ## <a name="save-a-model-locally"></a>Salvare un modello in locale
 
 Quando si salva un modello sono necessari due elementi:
 
-1. L'interfaccia [`ITransformer`](xref:Microsoft.ML.ITransformer) del modello.
-2. La classe [`DataViewSchema`](xref:Microsoft.ML.DataViewSchema) dell'input previsto di [`ITransformer`](xref:Microsoft.ML.ITransformer).
+1. Il [`ITransformer`](xref:Microsoft.ML.ITransformer) del modello.
+2. L'dell'input [`DataViewSchema`](xref:Microsoft.ML.DataViewSchema) [`ITransformer`](xref:Microsoft.ML.ITransformer)previsto.
 
-Dopo aver eseguito il training del modello, usare il metodo [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) per salvare il modello con training in un file denominato `model.zip` usando `DataViewSchema` dei dati di input.
+Dopo il training del [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) modello, usare il metodo `model.zip` per `DataViewSchema` salvare il modello sottoposto a training in un file chiamato usando il dati di input.
 
 ```csharp
 // Save Trained Model
@@ -80,7 +80,7 @@ mlContext.Model.Save(trainedModel, data.Schema, "model.zip");
 
 I modelli archiviati in locale possono essere usati in altri processi o applicazioni come `ASP.NET Core` e `Serverless Web Applications`. Per altre informazioni, vedere gli articoli su come [usare ML.NET nell'API Web](./serve-model-web-api-ml-net.md) e [distribuire l'app Web serverless ML.NET](./serve-model-serverless-azure-functions-ml-net.md).
 
-In un'applicazione o processo separato usare il metodo [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*) con il percorso di file per ottenere il modello con training nell'applicazione.
+In un'applicazione o un [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*) processo separato, utilizzare il metodo insieme al percorso del file per ottenere il modello sottoposto a training nell'applicazione.
 
 ```csharp
 //Define DataViewSchema for data preparation pipeline and trained model
@@ -92,7 +92,7 @@ ITransformer trainedModel = mlContext.Model.Load("model.zip", out modelSchema);
 
 ## <a name="load-a-model-stored-remotely"></a>Caricare un modello archiviato in remoto
 
-Per caricare le pipeline di preparazione dei dati e i modelli archiviati in una posizione remota all'interno dell'applicazione, usare una classe [`Stream`](xref:System.IO.Stream) anziché un percorso di file nel metodo [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*).
+Per caricare pipeline di preparazione dei dati e modelli archiviati in una posizione remota nell'applicazione, utilizzare un [`Stream`](xref:System.IO.Stream) percorso di file anziché un percorso di [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*) file nel metodo.
 
 ```csharp
 // Create MLContext

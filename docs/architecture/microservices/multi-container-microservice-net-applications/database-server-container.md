@@ -1,23 +1,23 @@
 ---
-title: Usare un server di database in esecuzione come contenitore
-description: Comprendere l'importanza dell'utilizzo di un server di database che esegue come contenitore solo per lo sviluppo. Mai per la produzione.
+title: Usare un server di database in esecuzione come contenitoreUse a database server running as a container
+description: Comprendere l'importanza di utilizzare un server di database in esecuzione come contenitore solo per lo sviluppo. Mai per la produzione.
 ms.date: 01/30/2020
 ms.openlocfilehash: 0cbc933003aac10970814378c27e88b5cb0ddbe5
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77628527"
 ---
-# <a name="use-a-database-server-running-as-a-container"></a>Usare un server di database in esecuzione come contenitore
+# <a name="use-a-database-server-running-as-a-container"></a>Usare un server di database in esecuzione come contenitoreUse a database server running as a container
 
-È possibile eseguire i database (SQL Server, PostgreSQL, MySQL e così via) su server autonomi normali, in cluster locali o in servizi PaaS sul cloud come il database SQL di Azure. Tuttavia, per gli ambienti di sviluppo e test, è consigliabile disporre di database in esecuzione come contenitori, perché non si ha una dipendenza esterna ed è sufficiente eseguire il comando `docker-compose up` avvia l'intera applicazione. L'esecuzione dei database come contenitori risulta inoltre vantaggiosa per i test di integrazione, perché il database viene avviato nel contenitore e viene sempre popolato con gli stessi dati di esempio, in modo che i test siano più prevedibili.
+È possibile eseguire i database (SQL Server, PostgreSQL, MySQL e così via) su server autonomi normali, in cluster locali o in servizi PaaS sul cloud come il database SQL di Azure. Tuttavia, per gli ambienti di sviluppo e test, è utile che i database vengano `docker-compose up` eseguiti come contenitori, perché non si dispone di alcuna dipendenza esterna e si esegue semplicemente il comando per avviare l'intera applicazione. L'esecuzione dei database come contenitori risulta inoltre vantaggiosa per i test di integrazione, perché il database viene avviato nel contenitore e viene sempre popolato con gli stessi dati di esempio, in modo che i test siano più prevedibili.
 
 ## <a name="sql-server-running-as-a-container-with-a-microservice-related-database"></a>SQL Server in esecuzione come contenitore con un database correlato ai microservizi
 
-In eShopOnContainers è presente un contenitore denominato `sqldata`, come definito nel file [Docker-compose. yml](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/docker-compose.yml) , che esegue un'istanza SQL Server per Linux con i database SQL per tutti i microservizi per i quali ne è necessario uno.
+In eShopOnContainers è presente un `sqldata`contenitore denominato , come definito nel file [docker-compose.yml,](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/docker-compose.yml) che esegue un'istanza di SQL Server per Linux con i database SQL per tutti i microservizi che ne hanno bisogno.
 
-Un punto chiave nei microservizi è che ogni microservizio è proprietario dei dati correlati, quindi deve avere il proprio database. Tuttavia, i database possono trovarsi ovunque. In questo caso, si trovano tutti nello stesso contenitore per rispettare i requisiti di memoria di Docker il più basso possibile. Tenere presente che si tratta di una soluzione abbastanza efficace per lo sviluppo e, forse, per i test ma non per la produzione.
+Un punto chiave nei microservizi è che ogni microservizio possiede i dati correlati, pertanto deve avere un proprio database. Tuttavia, i database possono essere ovunque. In questo caso, sono tutti nello stesso contenitore per mantenere i requisiti di memoria Docker il più basso possibile. Tenete a mente che questa è una soluzione sufficiente per lo sviluppo e, forse, test, ma non per la produzione.
 
 Il contenitore SQL Server nell'applicazione di esempio viene configurato con il codice YAML seguente nel file docker-compose.yml, che viene eseguito quando si esegue `docker-compose up`. Si noti che il codice YAML ha consolidato le informazioni di configurazione dal file docker-compose.yml generico e dal file docker-compose.override.yml. È in genere necessario separare le impostazioni dell'ambiente dalle informazioni di base o statiche correlate all'immagine di SQL Server.
 
@@ -47,15 +47,15 @@ L'esecuzione di SQL Server come contenitore non è solo utile per una demo, in c
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Eseguire l'immagine di SQL Server Docker in Linux, Mac o Windows** \
+- **Eseguire l'immagine Docker di SQL Server in Linux, Mac o Windows** \
   <https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker>
 
-- **Connettere ed eseguire query di SQL Server in Linux con sqlcmd** \
+- **Connetti ed esegui query su SQL Server su Linux con sqlcmd** \
   <https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd>
 
 ## <a name="seeding-with-test-data-on-web-application-startup"></a>Seeding con dati di test all'avvio di un'applicazione Web
 
-Per aggiungere dati al database all'avvio dell'applicazione, è possibile aggiungere codice simile al seguente al metodo `Main` nella classe `Program` del progetto API Web:
+Per aggiungere dati al database all'avvio dell'applicazione, è `Main` possibile `Program` aggiungere codice simile al seguente al metodo nella classe del progetto API Web:
 
 ```csharp
 public static int Main(string[] args)
@@ -99,7 +99,7 @@ public static int Main(string[] args)
 }
 ```
 
-Quando si applicano migrazioni e si esegue il seeding di un database durante l'avvio di un contenitore, si verifica un importante avvertimento. Poiché il server di database potrebbe non essere disponibile per qualsiasi motivo, è necessario gestire i tentativi in attesa che il server sia disponibile. Questa logica di ripetizione dei tentativi viene gestita dal metodo di estensione `MigrateDbContext()`, come illustrato nel codice seguente:
+C'è un avvertimento importante quando si applicano le migrazioni e seeding di un database durante l'avvio del contenitore. Poiché il server di database potrebbe non essere disponibile per qualsiasi motivo, è necessario gestire i tentativi durante l'attesa che il server sia disponibile. Questa logica di ripetizione `MigrateDbContext()` dei tentativi viene gestita dal metodo di estensione, come illustrato nel codice seguente:This retry logic is handled by the extension method, as shown in the following code:
 
 ```cs
 public static IWebHost MigrateDbContext<TContext>(
@@ -259,7 +259,7 @@ docker run --name some-redis -d redis
 
 L'immagine Redis include expose:6379 (porta usata da Redis), quindi i collegamenti standard dei contenitori la renderanno automaticamente disponibile ai contenitori collegati.
 
-In eShopOnContainers il microservizio `basket-api` usa una cache Redis in esecuzione come contenitore. Che `basketdata` contenitore viene definito come parte del file *Docker-compose. yml* a più contenitori, come illustrato nell'esempio seguente:
+In eShopOnContainers, `basket-api` il microservizio usa una cache Redis in esecuzione come contenitore. Tale `basketdata` contenitore è definito come parte del file *docker-compose.yml multi-contenitore,* come illustrato nell'esempio seguente:
 
 ```yml
 #docker-compose.yml file
@@ -270,9 +270,9 @@ In eShopOnContainers il microservizio `basket-api` usa una cache Redis in esecuz
       - "6379"
 ```
 
-Questo codice in Docker-compose. yml definisce un contenitore denominato `basketdata` basato sull'immagine Redis e la pubblicazione interna della porta 6379. Ciò significa che sarà accessibile solo da altri contenitori in esecuzione nell'host docker.
+Questo codice in docker-compose.yml definisce `basketdata` un contenitore denominato in base all'immagine redis e la pubblicazione della porta 6379 internamente. Ciò significa che sarà accessibile solo da altri contenitori in esecuzione all'interno dell'host Docker.
 
-Infine, nel file *Docker-compose. override. yml* , il microservizio `basket-api` per l'esempio eShopOnContainers definisce la stringa di connessione da usare per il contenitore redis:
+Infine, nel file *docker-compose.override.yml,* il `basket-api` microservizio per l'esempio eShopOnContainers definisce la stringa di connessione da utilizzare per il contenitore Redis:
 
 ```yml
   basket-api:
@@ -282,8 +282,8 @@ Infine, nel file *Docker-compose. override. yml* , il microservizio `basket-api`
       - EventBusConnection=rabbitmq
 ```
 
-Come indicato in precedenza, il nome del microservizio `basketdata` viene risolto dal DNS di rete interno di Docker.
+Come accennato in precedenza, il nome del microservizio `basketdata` viene risolto dal DNS della rete interna di Docker.
 
 >[!div class="step-by-step"]
->[Precedente](multi-container-applications-docker-compose.md)
->[Successivo](integration-event-based-microservice-communications.md)
+>[Successivo](multi-container-applications-docker-compose.md)
+>[precedente](integration-event-based-microservice-communications.md)

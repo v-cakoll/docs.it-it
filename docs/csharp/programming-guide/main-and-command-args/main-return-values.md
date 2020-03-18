@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
 ms.openlocfilehash: eaa78c33613093bb0e108870669392d07d346a95
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77504004"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Valori restituiti da Main() (Guida per programmatori C#)
@@ -33,7 +33,7 @@ Convertire il metodo `Main` in *program.cs* come indicato di seguito:
 
 Quando si esegue un programma in ambiente Windows, qualsiasi valore restituito dalla funzione `Main` viene archiviato in una variabile di ambiente. Questa variabile di ambiente può essere recuperata mediante `ERRORLEVEL` da un file batch o mediante `$LastExitCode` da PowerShell.
 
-È possibile compilare l'applicazione usando il comando [DotNet CLI](../../../core/tools/dotnet.md) `dotnet build`.
+È possibile compilare l'applicazione usando il comando [dotnet CLI](../../../core/tools/dotnet.md) `dotnet build`.
 
 Quindi creare uno script di PowerShell per eseguire l'applicazione e visualizzare il risultato. Incollare il codice seguente in un file di testo e salvarlo come `test.ps1` nella cartella che contiene il progetto. Eseguire lo script di PowerShell digitando `test.ps1` al prompt di PowerShell.
 
@@ -98,6 +98,6 @@ Quando il punto di ingresso dell'applicazione restituisce `Task` o `Task<int>` i
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori C#](../index.md)
-- [Riferimenti per C#](../index.md)
+- [Guida di riferimento a C](../index.md)
 - [Main() e argomenti della riga di comando](index.md)
 - [Come visualizzare gli argomenti della riga di comando](./how-to-display-command-line-arguments.md)

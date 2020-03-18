@@ -5,10 +5,10 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
 ms.openlocfilehash: df167e0559c841510df17ba39801e43315036241
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78240935"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>Testing unità di librerie .NET Core di Visual Basic usando il test dotnet e MSTest
@@ -20,7 +20,7 @@ In questa esercitazione viene illustrata un'esperienza interattiva di compilazio
 ## <a name="creating-the-source-project"></a>Creazione del progetto di origine
 
 Aprire una finestra della shell. Creare una directory denominata *unit-testing-vb-mstest* in cui archiviare la soluzione.
-In questa nuova directory eseguire [`dotnet new sln`](../tools/dotnet-new.md) per creare una nuova soluzione. Questa procedura semplifica la gestione sia della libreria di classi che del progetto di unit test.
+All'interno di [`dotnet new sln`](../tools/dotnet-new.md) questa nuova directory, eseguire per creare una nuova soluzione. Questa procedura semplifica la gestione sia della libreria di classi che del progetto di unit test.
 All'interno della directory della soluzione creare una directory *PrimeService*. Finora è stata creata la struttura di directory e file seguente:
 
 ```console
@@ -29,7 +29,7 @@ All'interno della directory della soluzione creare una directory *PrimeService*.
     /PrimeService
 ```
 
-Impostare *PrimeService* come directory corrente ed eseguire [`dotnet new classlib -lang VB`](../tools/dotnet-new.md) per creare il progetto di origine. Rinominare *Class1.VB* in *PrimeService.VB*. Si crea un'implementazione non corretta della classe `PrimeService`:
+Impostare *PrimeService* come [`dotnet new classlib -lang VB`](../tools/dotnet-new.md) directory corrente ed eseguire per creare il progetto di origine. Rinominare *Class1.VB* in *PrimeService.VB*. Si crea un'implementazione non corretta della classe `PrimeService`:
 
 ```vb
 Namespace Prime.Services
@@ -41,7 +41,7 @@ Namespace Prime.Services
 End Namespace
 ```
 
-Tornare alla directory *unit-testing-vb-using-mstest*. Eseguire [`dotnet sln add .\PrimeService\PrimeService.vbproj`](../tools/dotnet-sln.md) per aggiungere il progetto di libreria di classi alla soluzione.
+Tornare alla directory *unit-testing-vb-using-mstest*. Esegui [`dotnet sln add .\PrimeService\PrimeService.vbproj`](../tools/dotnet-sln.md) per aggiungere il progetto di libreria di classi alla soluzione.
 
 ## <a name="creating-the-test-project"></a>Creazione del progetto di test
 
@@ -56,7 +56,7 @@ Creare quindi la directory *PrimeService.Tests*. Di seguito è illustrata la str
     /PrimeService.Tests
 ```
 
-Impostare *PrimeService.Tests* come directory corrente e creare un nuovo progetto usando [`dotnet new mstest -lang VB`](../tools/dotnet-new.md). Questo comando crea un progetto di test che usa MSTest come libreria di test. Il modello generato configura il Test Runner nel file *PrimeServiceTests.vbproj*:
+Impostare la directory *PrimeService.Tests* come directory [`dotnet new mstest -lang VB`](../tools/dotnet-new.md)corrente e creare un nuovo progetto utilizzando . Questo comando crea un progetto di test che usa MSTest come libreria di test. Il modello generato configura il Test Runner nel file *PrimeServiceTests.vbproj*:
 
 ```xml
 <ItemGroup>
@@ -66,7 +66,7 @@ Impostare *PrimeService.Tests* come directory corrente e creare un nuovo progett
 </ItemGroup>
 ```
 
-Per creare ed eseguire unit test, il progetto di test richiede altri pacchetti. Nel passaggio precedente `dotnet new` ha aggiunto MSTest e il Runner di MSTest. Aggiungere ora la libreria di classi `PrimeService` come un'altra dipendenza del progetto. Usare il comando [`dotnet add reference`](../tools/dotnet-add-reference.md):
+Per creare ed eseguire unit test, il progetto di test richiede altri pacchetti. Nel passaggio precedente `dotnet new` ha aggiunto MSTest e il Runner di MSTest. Aggiungere ora la libreria di classi `PrimeService` come un'altra dipendenza del progetto. Utilizzare [`dotnet add reference`](../tools/dotnet-add-reference.md) il comando:
 
 ```dotnetcli
 dotnet add reference ../PrimeService/PrimeService.vbproj
@@ -87,7 +87,7 @@ Il layout della soluzione finale è il seguente:
         PrimeServiceTests.vbproj
 ```
 
-Eseguire [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj`](../tools/dotnet-sln.md) nella directory *unit-testing-vb-mstest*.
+Eseguire [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj`](../tools/dotnet-sln.md) nella directory *unit-testing-vb-mstest.*
 
 ## <a name="creating-the-first-test"></a>Creazione del primo test
 
@@ -125,7 +125,7 @@ Public Function IsPrime(candidate As Integer) As Boolean
 End Function
 ```
 
-Eseguire di nuovo *nella directory*unit-testing-vb-mstest`dotnet test`. Il comando `dotnet test` esegue prima una compilazione del progetto `PrimeService` e quindi del progetto `PrimeService.Tests`. Dopo la compilazione di entrambi i progetti, verrà eseguito il test singolo, Procede.
+Eseguire di nuovo `dotnet test` nella directory *unit-testing-vb-mstest*. Il comando `dotnet test` esegue prima una compilazione del progetto `PrimeService` e quindi del progetto `PrimeService.Tests`. Dopo la compilazione di entrambi i progetti, verrà eseguito il test singolo, che viene superato.
 
 ## <a name="adding-more-features"></a>Aggiunta di altre funzionalità
 

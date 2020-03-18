@@ -3,19 +3,19 @@ title: Creazione dell'interfaccia utente composita basata su microservizi
 description: L'architettura di microservizi non è destinata solo al back-end. Di seguito se ne analizza brevemente l'uso nei contesti front-end.
 ms.date: 09/20/2018
 ms.openlocfilehash: 1861d3bb6e5d4a0226aa8f3f72a2e0d3e83be56f
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72275735"
 ---
 # <a name="creating-composite-ui-based-on-microservices"></a>Creazione dell'interfaccia utente composita basata su microservizi
 
-L'architettura di microservizi spesso inizia con la gestione dei dati e della logica sul lato server, ma in molti casi l'interfaccia utente viene ancora gestita come Monolith. Tuttavia, un approccio più avanzato, denominato [micro](https://martinfowler.com/articles/micro-frontends.html)-front-end, consiste nel progettare l'interfaccia utente dell'applicazione in base ai microservizi. Ciò significa avere un'interfaccia utente composita generata dai microservizi, invece di avere i microservizi sul server e solo un'app client monolitica che utilizza i microservizi. Con questo approccio, i microservizi creati possono essere completati con la rappresentazione sia logica che visiva.
+L'architettura dei microservizi inizia spesso con i dati e la logica di gestione lato server, ma, in molti casi, l'interfaccia utente viene ancora gestita come un monolite. Tuttavia, un approccio più avanzato, denominato [microfrontend](https://martinfowler.com/articles/micro-frontends.html), consiste nel progettare anche l'interfaccia utente dell'applicazione in base ai microservizi. Ciò significa avere un'interfaccia utente composita generata dai microservizi, invece di avere i microservizi sul server e solo un'app client monolitica che utilizza i microservizi. Con questo approccio, i microservizi creati possono essere completati con la rappresentazione sia logica che visiva.
 
 La figura 4-20 illustra l'approccio più semplice in cui i microservizi vengono utilizzati da un'applicazione client monolitica. Nel mezzo è ovviamente possibile avere un servizio MVC ASP.NET che genera il codice HTML e JavaScript. La figura è una rappresentazione semplificata che evidenzia la presenza di una sola interfaccia utente client (monolitica) che utilizza i microservizi, concentrati solo sulla logica e sui dati e non sulla forma dell'interfaccia utente (HTML e JavaScript).
 
-![Diagramma di un'app di interfaccia utente monolitica che si connette ai microservizi.](./media/microservice-based-composite-ui-shape-layout/monolith-ui-consume-microservices.png)
+![Diagramma di un'app monolitica dell'interfaccia utente che si connette ai microservizi.](./media/microservice-based-composite-ui-shape-layout/monolith-ui-consume-microservices.png)
 
 **Figura 4-20**. Applicazione dell'interfaccia utente monolitica che utilizza i microservizi back-end
 
@@ -29,7 +29,7 @@ La figura 4-21 illustra una versione di questo approccio basato sull'interfaccia
 
 **Figura 4-21**. Esempio di applicazione con interfaccia utente composita modellata da microservizi back-end
 
-Ogni microservizio di composizione dell'interfaccia utente dovrebbe essere simile a un gateway API di piccole dimensioni,. Ma in questo caso ognuno è responsabile di una piccola area dell'interfaccia utente.
+Ogni microservizio di composizione dell'interfaccia utente dovrebbe essere simile a un gateway API di piccole dimensioni,. Ma in questo caso, ognuno è responsabile di una piccola area dell'interfaccia utente.
 
 Un approccio basato sull'interfaccia utente composita gestito dai microservizi può essere più o meno complesso a seconda delle tecnologie usate per l'interfaccia utente. Per compilare un' applicazione Web tradizionale, ad esempio, non si usano le stesse tecniche usate per compilare un'applicazione a pagina singola o per le app per dispositivi mobili native (come nello sviluppo di app Xamarin, che può essere più complesso con questo approccio).
 
@@ -39,27 +39,27 @@ Per altre informazioni sull'interfaccia utente composita basata sui microservizi
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Micro front-end (Blog di Martin Fowler)**  
+- **Micro Frontends (blog di Martin Fowler)**  
   <https://martinfowler.com/articles/micro-frontends.html>
   
-- **Micro-front-end (sito Michael Geers)**  
+- **Micro Frontends (sito di Michael Geers)**  
   <https://micro-frontends.org/>
   
-- **Interfaccia utente composita con ASP.NET (officina particolare)**  
+- **Composite UI using ASP.NET (Interfaccia utente composita con ASP.NET - Workshop di Particular)**  
   <https://github.com/Particular/Workshop/tree/master/demos/asp-net-core>
 
-- **Ruben Oostinga. Front-end monolitico nell'architettura di microservizi**  
+- **Ruben Oostinga. Il front-end monolitico nell'architettura dei microservizi**  
   <https://xebia.com/blog/the-monolithic-frontend-in-the-microservices-architecture/>
 
-- **Mauro Servienti. Il segreto della migliore composizione dell'interfaccia utente**  
+- **Mauro Servienti. Il segreto di una migliore composizione dell'interfaccia utente**  
   <https://particular.net/blog/secret-of-better-ui-composition>
 
-- **Viktor Farcic. Inclusione di componenti Web front-end in microservizi**  
+- **Viktor Farcic. Inclusione di componenti Web front-end nei microservizi**  
   <https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/>
 
-- **Gestione di front-end nell'architettura di microservizi**  
+- **Managing Frontend in the Microservices Architecture (Gestione del front-end nell'architettura di microservizi)**  
   <https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html>
 
 >[!div class="step-by-step"]
->[Precedente](microservices-addressability-service-registry.md)
->[Successivo](resilient-high-availability-microservices.md)
+>[Successivo](microservices-addressability-service-registry.md)
+>[precedente](resilient-high-availability-microservices.md)

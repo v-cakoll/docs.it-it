@@ -1,16 +1,16 @@
 ---
-title: Come modificare il contenuto di una C# stringa-Guida
+title: Come modificare il contenuto della stringa - Guida di C
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
 ms.openlocfilehash: ecedd9a9027aa925c753f8e187d611b19d3db991
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77543261"
 ---
-# <a name="how-to-modify-string-contents-in-c"></a>Come modificare il contenuto di una stringa in C\#
+# <a name="how-to-modify-string-contents-in-c"></a>Come modificare il contenuto della stringa in CHow to modify string contents in C\#
 
 Questo articolo illustra diverse tecniche per produrre un oggetto `string` modificando un oggetto `string` esistente. Tutte le tecniche illustrate restituiscono il risultato delle modifiche come nuovo oggetto `string`. Per maggior chiarezza, gli esempi archiviano il risultato in una nuova variabile. Quindi quando si esegue ogni esempio è possibile esaminare sia l'oggetto `string` originale che l'oggetto `string` derivante dalla modifica.
 
@@ -48,7 +48,7 @@ La stringa di origine non viene modificata e viene restituita una nuova stringa 
 
 È possibile usare le [espressioni regolari](../../standard/base-types/regular-expressions.md) per sostituire il testo corrispondente a determinati criteri con nuovo testo, che a sua volta può essere definito da un criterio. Nell'esempio seguente viene usata la classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> per trovare un criterio in una stringa di origine e sostituirlo con la combinazione corretta di maiuscole e minuscole. Il metodo <xref:System.Text.RegularExpressions.Regex.Replace(System.String,System.String,System.Text.RegularExpressions.MatchEvaluator,System.Text.RegularExpressions.RegexOptions)?displayProperty=nameWithType> accetta una funzione che include tra i suoi argomenti la logica di sostituzione. In questo esempio la funzione (`LocalReplaceMatchCase`) è una **funzione locale** dichiarata all'interno del metodo di esempio. `LocalReplaceMatchCase` usa la classe <xref:System.Text.StringBuilder?displayProperty=nameWithType> per compilare la stringa di sostituzione con la combinazione corretta di maiuscole e minuscole.
 
-Le espressioni regolari sono utili soprattutto per la ricerca e sostituzione di testo corrispondente a un criterio, anziché di testo noto. Per ulteriori informazioni, vedere la pagina relativa [alla ricerca di stringhe](search-strings.md) . Il criterio di ricerca "the\s" cerca la parola "the" seguita da uno spazio. Tale parte del criterio garantisce che nella stringa di origine non venga rilevata la corrispondenza con "there". Per altre informazioni sugli elementi del linguaggio delle espressioni regolari, vedere [Linguaggio di espressioni regolari - Riferimento rapido](../../standard/base-types/regular-expression-language-quick-reference.md).
+Le espressioni regolari sono utili soprattutto per la ricerca e sostituzione di testo corrispondente a un criterio, anziché di testo noto. Per ulteriori informazioni, vedere [Come cercare stringhe.](search-strings.md) Il criterio di ricerca "the\s" cerca la parola "the" seguita da uno spazio. Tale parte del criterio garantisce che nella stringa di origine non venga rilevata la corrispondenza con "there". Per altre informazioni sugli elementi del linguaggio delle espressioni regolari, vedere [Linguaggio di espressioni regolari - Riferimento rapido](../../standard/base-types/regular-expression-language-quick-reference.md).
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#5)]
 
@@ -62,17 +62,17 @@ Nell'esempio seguente viene illustrato come sostituire un gruppo di caratteri in
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#6)]
 
-## <a name="programmatically-build-up-string-content"></a>Compilare contenuto stringa a livello di codice
+## <a name="programmatically-build-up-string-content"></a>Compilazione di contenuto di stringhe a livello di codiceProgrammatically build up string content
 
-Poiché le stringhe non sono modificabili, negli esempi precedenti vengono create stringhe temporanee o matrici di caratteri. Negli scenari a prestazioni elevate può essere utile evitare queste allocazioni di heap. .NET Core fornisce un metodo di <xref:System.String.Create%2A?displayProperty=nameWithType> che consente di compilare a livello di codice il contenuto di una stringa tramite un callback evitando al tempo stesso le allocazioni di stringhe temporanee intermedie.
+Poiché le stringhe non sono modificabili, negli esempi precedenti vengono tutti create stringhe temporanee o matrici di caratteri. Negli scenari ad alte prestazioni, può essere opportuno evitare queste allocazioni di heap. .NET Core <xref:System.String.Create%2A?displayProperty=nameWithType> fornisce un metodo che consente di compilare a livello di codice il contenuto del carattere di una stringa tramite un callback evitando le allocazioni di stringhe temporanee intermedie.
 
 [!code-csharp[using string.Create to programmatically build the string content for a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
 
-È possibile modificare una stringa in un blocco fisso con codice non sicuro, ma è **fortemente** sconsigliata modificare il contenuto della stringa dopo la creazione di una stringa. In questo modo si interrompono le operazioni in modi imprevedibili. Se, ad esempio, un utente centralizza una stringa con lo stesso contenuto, otterrà la copia e non si aspetta che la stringa venga modificata.
+È possibile modificare una stringa in un blocco fisso con codice unsafe, ma è **consigliabile** modificare il contenuto della stringa dopo la creazione di una stringa. In questo modo si romperanno le cose in modi imprevedibili. Ad esempio, se qualcuno stagna una stringa che ha lo stesso contenuto del tuo, otterrà la tua copia e non si aspetta che tu stia modificando la sua stringa.
 
-È possibile provare questi esempi esaminando il codice nel [repository GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Oppure è possibile scaricare gli esempi [come file ZIP](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
+È possibile provare questi esempi esaminando il codice nel repository [GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Oppure è possibile scaricare gli esempi [come file ZIP](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Espressioni regolari di .NET Framework](../../standard/base-types/regular-expressions.md)
-- [Linguaggio di espressioni regolari - Riferimento rapido](../../standard/base-types/regular-expression-language-quick-reference.md)
+- [Linguaggio delle espressioni regolari - Guida di riferimento rapidoRegular Expression Language - Quick Reference](../../standard/base-types/regular-expression-language-quick-reference.md)

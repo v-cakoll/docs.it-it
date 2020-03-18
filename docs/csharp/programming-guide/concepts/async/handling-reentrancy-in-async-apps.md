@@ -3,10 +3,10 @@ title: Gestione della reentrancy nelle app asincrone (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
 ms.openlocfilehash: 67fbbd294ffe6219b58065f974543b2dd483a92c
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77451863"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Gestione della reentrancy nelle app asincrone (C#)
@@ -17,7 +17,7 @@ Quando si include codice asincrono nell'applicazione, è consigliabile prevedere
 
 - [Riconoscimento della reentrancy](#BKMK_RecognizingReentrancy)
 
-- [Gestione della reentrancy](#BKMK_HandlingReentrancy)
+- [Gestione della rientranza](#BKMK_HandlingReentrancy)
 
   - [Disabilitare il pulsante Start](#BKMK_DisableTheStartButton)
 
@@ -28,12 +28,12 @@ Quando si include codice asincrono nell'applicazione, è consigliabile prevedere
 - [Revisione ed esecuzione dell'app di esempio](#BKMD_SettingUpTheExample)
 
 > [!NOTE]
-> Per eseguire l'esempio, è necessario che nel computer sia installato Visual Studio 2012 o versione successiva e .NET Framework 4,5 o versione successiva.
+> Per eseguire l'esempio, è necessario disporre di Visual Studio 2012 o versione successiva e .NET Framework 4.5 o versione successiva nel computer.
 
 > [!NOTE]
-> Transport Layer Security (TLS) versione 1,2 è ora la versione minima da usare nello sviluppo di app. Se l'app è destinata a una versione di .NET Framework precedente alla 4,7, vedere l'articolo seguente per [le procedure consigliate per Transport Layer Security (TLS) con il .NET Framework](../../../../framework/network-programming/tls.md).
+> Transport Layer Security (TLS) versione 1.2 è ora la versione minima da usare nello sviluppo dell'app. Se l'app è destinata a una versione di .NET Framework precedente alla 4.7, vedere il seguente articolo per [le procedure consigliate TLS (Transport Layer Security) con .NET Framework.](../../../../framework/network-programming/tls.md)
 
-## <a name="BKMK_RecognizingReentrancy"></a> Riconoscimento della reentrancy
+## <a name="BKMK_RecognizingReentrancy"></a>Riconoscere la rientranza
 
 Nell'esempio riportato in questo argomento viene scelto un pulsante **Start** per avviare un'app asincrona che scarica una serie di siti Web e calcola il numero totale di byte scaricati. Una versione sincrona dell'esempio avrebbe risposto allo stesso modo indipendentemente dal numero di volte che un utente sceglie il pulsante perché, dopo la prima volta, il thread dell'interfaccia utente ignora tali eventi fino al termine dell'esecuzione dell'applicazione. In un'applicazione asincrona, tuttavia, il thread dell'interfaccia utente continua a rispondere e potrebbe essere possibile riattivare l'operazione asincrona prima del suo completamento.
 
@@ -107,7 +107,7 @@ TOTAL bytes returned:  890591
 
   Consentire l'esecuzione asincrona di tutte le operazioni richieste, ma coordinare la visualizzazione dell'output in modo che vengano visualizzati i risultati di ogni operazione tutti insieme e ordinati.
 
-### <a name="BKMK_DisableTheStartButton"></a> Disabilitare il pulsante Start
+### <a name="BKMK_DisableTheStartButton"></a>Disattivare il pulsante Start
 
 È possibile bloccare il pulsante **Start** durante l'esecuzione di un'operazione disabilitando il pulsante nella parte superiore del gestore eventi `StartButton_Click`. È possibile riabilitare il pulsante dall'interno un blocco `finally` al termine dell'operazione in modo che gli utenti possano eseguire nuovamente l'applicazione.
 
@@ -301,7 +301,7 @@ TOTAL bytes returned:  890591
 
 Per eliminare gli elenchi parziali, rimuovere la prima riga di codice in `StartButton_Click` per cancellare la casella di testo ogni volta che l'utente riavvia l'operazione.
 
-### <a name="BKMK_RunMultipleOperations"></a> Eseguire più operazioni e mettere in coda l'output
+### <a name="BKMK_RunMultipleOperations"></a>Esecuzione di più operazioni e accodamento dell'outputRun Multiple Operations and Queue the Output
 
 Il terzo esempio è il più complesso in quanto l'app avvia un'altra operazione asincrona ogni volta che l'utente sceglie il pulsante **Start** e tutte le operazioni vengono eseguite fino al completamento. Tutte le operazioni richieste scaricano i siti Web dall'elenco in modo asincrono, ma l'output delle operazioni viene visualizzato in sequenza. In altre parole, l'attività di download effettiva è di tipo interleaved, come illustrato nell'output in [Riconoscimento della reentrancy](#BKMK_RecognizingReentrancy), ma l'elenco dei risultati per ogni gruppo viene visualizzato separatamente.
 
@@ -547,7 +547,7 @@ L'output mostra i modelli seguenti.
 
     Dopo che un gruppo entra in `StartButton_Click`, l'operazione non completa un'espressione await fino a quando l'operazione non entra in `FinishOneGroupAsync`. Pertanto, nessuna operazione può assumere il controllo durante l'esecuzione di tale segmento di codice.
 
-## <a name="BKMD_SettingUpTheExample"></a> Revisione ed esecuzione dell'app di esempio
+## <a name="BKMD_SettingUpTheExample"></a>Revisione ed esecuzione dell'app di esempio
 
 Per comprendere meglio l'applicazione di esempio, è possibile scaricarla, compilarla manualmente o esaminare il codice alla fine di questo argomento senza implementare l'applicazione.
 
@@ -584,7 +584,7 @@ Nella sezione seguente viene illustrato il codice per compilare l'esempio come a
 
 4. Dall'elenco dei tipi di progetto scegliere **Applicazione WPF**.
 
-5. Assegnare al progetto il nome `WebsiteDownloadWPF`, scegliere .NET Framework versione 4,6 o successiva, quindi fare clic sul pulsante **OK** .
+5. Denominare `WebsiteDownloadWPF`il progetto , scegliere .NET Framework versione 4.6 o successiva e quindi fare clic sul pulsante **OK** .
 
      Il nuovo progetto verrà visualizzato in **Esplora soluzioni**.
 
@@ -612,11 +612,11 @@ Nella sezione seguente viene illustrato il codice per compilare l'esempio come a
 
      Nella visualizzazione **Progettazione** di MainWindow.xaml viene visualizzata una finestra semplice contenente una casella di testo e un pulsante.
 
-8. In **Esplora soluzioni**fare clic con il pulsante destro del mouse su **riferimenti** e scegliere **Aggiungi riferimento**.
+8. In **Esplora soluzioni**fare clic con il pulsante destro del mouse su **Riferimenti** e scegliere **Aggiungi riferimento**.
 
-     Aggiungere un riferimento per <xref:System.Net.Http>, se non è già selezionato.
+     Aggiungere un <xref:System.Net.Http>riferimento per , se non è già selezionato.
 
-9. In **Esplora soluzioni** aprire il menu di scelta rapida per MainWindow.xaml.cs e quindi scegliere **Visualizza codice**.
+9. In **Esplora soluzioni** aprire il menu di scelta rapida per MainWindow.xaml.cs e scegliere **Visualizza codice**.
 
 10. Sostituire il codice in MainWindow.xaml.cs con quello riportato di seguito.
 
@@ -730,5 +730,5 @@ Nella sezione seguente viene illustrato il codice per compilare l'esempio come a
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura dettagliata: Accesso al Web con Async e Await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Procedura dettagliata: accesso al Web tramite async e await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Programmazione asincrona con async e await (C#)](./index.md)

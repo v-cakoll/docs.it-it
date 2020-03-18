@@ -3,10 +3,10 @@ title: Creazione, evoluzione e controllo delle versioni di API e contratti dei m
 description: Creare API e contratti dei microservizi tenendo in considerazione l'evoluzione e il controllo delle versioni poiché le esigenze cambiano.
 ms.date: 09/20/2018
 ms.openlocfilehash: 1972d02d8bf7935c71bfd383707ae19ea2baded9
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68672898"
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>Creazione, evoluzione e controllo delle versioni di API e contratti dei microservizi
@@ -25,15 +25,15 @@ Infine, se si usa un'architettura REST, [Hypermedia](https://www.infoq.com/artic
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Scott Hanselman. ASP.NET Core RESTful Web API versioning made easy (Controllo facilitato delle versioni delle API Web ASP.NET Core RESTful)**  \
+- **Scott Hanselman. ASP.NET il controllo delle versioni delle API Web RESTful di base semplificato** \
   <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
-- **Versioning a RESTful web API (Controllo delle versioni delle API Web RESTful)**  \
+- **Controllo delle versioni di un'API Web RESTfulVersioning a RESTful web API** \
   <https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api>
 
-- **Roy Fielding. Versioning, Hypermedia, and REST (Controllo delle versioni, ipermedia e REST)**  \
+- **Roy Fielding. Controllo delle versioni, Hypermedia e RESTVersioning, Hypermedia, and REST** \
   <https://www.infoq.com/articles/roy-fielding-on-versioning>
 
 >[!div class="step-by-step"]
->[Precedente](asynchronous-message-based-communication.md)
->[Successivo](microservices-addressability-service-registry.md)
+>[Successivo](asynchronous-message-based-communication.md)
+>[precedente](microservices-addressability-service-registry.md)

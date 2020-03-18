@@ -3,15 +3,15 @@ title: Introduzione a contenitori e Docker
 description: Ottenere una panoramica generale dei vantaggi principali derivanti dall'uso di Docker.
 ms.date: 02/15/2019
 ms.openlocfilehash: 9ac08a64cd2465b4b88a266c1ec0925f37680bf9
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73738122"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Introduzione ai contenitori e a Docker
 
-*Il contenitore è un approccio allo sviluppo del software in cui un'applicazione o un servizio, le relative dipendenze e la relativa configurazione (astratte come file manifesto di distribuzione) vengono assemblati insieme come immagine del contenitore. È quindi possibile testare l'applicazione in contenitori come un'unità e distribuirla come un'istanza dell'immagine del contenitore nel sistema operativo host.*
+*La containerizzazione è un approccio allo sviluppo software in cui un'applicazione o un servizio, le relative dipendenze e la relativa configurazione (astratta come file manifesto di distribuzione) vengono inclusi nel pacchetto come immagine contenitore. È quindi possibile testare l'applicazione in contenitore come unità e distribuirla come istanza dell'immagine contenitore al sistema operativo host.*
 
 Proprio come i container consentono il trasporto delle merci via nave, treno o camion indipendentemente dal contenuto del carico, i contenitori software fungono da unità standard di distribuzione software in grado di contenere codice e dipendenze diversi. Questa modalità di containerizzazione del software consente a sviluppatori e professionisti IT di distribuire applicazioni tra ambienti diversi con modifiche minime se non inesistenti.
 
@@ -28,4 +28,4 @@ Un altro vantaggio offerto dai contenitori è la scalabilità. La scalabilità o
 In breve, i contenitori offrono vantaggi in termini di isolamento, portabilità, flessibilità, scalabilità e controllo nel flusso di lavoro dell'intero ciclo di vita dell'applicazione. Il vantaggio più importante è l'isolamento dell'ambiente fornito tra sviluppo e operazioni.
 
 >[!div class="step-by-step"]
->[avanti](what-is-docker.md)
+>[Avanti](what-is-docker.md)

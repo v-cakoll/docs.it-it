@@ -3,10 +3,10 @@ title: Principi comuni di progettazione dei contenitori
 description: 'Informazioni su un principio fondamentale per la progettazione corretta di contenitori: un contenitore deve ospitare un unico processo.'
 ms.date: 02/15/2019
 ms.openlocfilehash: 69f3ff6c9303f0c4082695d861a8c90031295b6a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68672498"
 ---
 # <a name="common-container-design-principles"></a>Principi comuni di progettazione dei contenitori
@@ -20,5 +20,5 @@ Nel modello di contenitore, un contenitore rappresenta un singolo processo. Con 
 In alcuni scenari è necessario che più processi vengano eseguiti in un singolo contenitore. Nei documenti relativi a qualsiasi architettura non vengono mai usati i termini "mai" e "sempre". Per gli scenari che richiedono più processi, un motivo ricorrente consiste nell'uso di [Supervisor](http://supervisord.org/).
 
 >[!div class="step-by-step"]
->[Precedente](design-docker-applications.md)
->[Successivo](monolithic-applications.md)
+>[Successivo](design-docker-applications.md)
+>[precedente](monolithic-applications.md)

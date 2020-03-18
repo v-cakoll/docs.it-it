@@ -1,15 +1,15 @@
 ---
-title: Come trovare un'Unione di due percorsi di posizione (XPath-LINQ to XML) (C#)
+title: Come trovare un'unione di due percorsi di percorso (XPath-LINQ to XML) (C
 ms.date: 07/20/2015
 ms.assetid: 069622d3-2b58-4919-8903-710a564c0788
 ms.openlocfilehash: 17a3310f367cb68b3b80b1a3f30af40428f6d2c7
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141218"
 ---
-# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-c"></a>Come trovare un'Unione di due percorsi di posizione (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-c"></a>Come trovare un'unione di due percorsi di percorso (XPath-LINQ to XML) (C
 In XPath è possibile trovare l'unione dei risultati di due percorsi di posizione XPath.  
   
  L'espressione XPath è:  
@@ -21,7 +21,7 @@ In XPath è possibile trovare l'unione dei risultati di due percorsi di posizion
 ## <a name="example"></a>Esempio  
  In questo esempio vengono trovati tutti gli elementi `Category` e tutti gli elementi `Price`, che vengono concatenati in un'unica raccolta. Si noti che la query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] chiama <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> per ordinare i risultati. Anche i risultati della valutazione dell'espressione di XPath sono nell'ordine del documento.  
   
- Nell'esempio viene usato il documento XML seguente: [File XML di esempio: dati numerici (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).  
+ Questo esempio usa il documento XML seguente: [File XML di esempio: dati numerici (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```csharp  
 XDocument data = XDocument.Load("Data.xml");  
@@ -48,7 +48,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```output  
 Results are identical  

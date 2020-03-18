@@ -1,14 +1,14 @@
 ---
 ms.openlocfilehash: be1fad236dd3eed047b010e93285aec8bc607b61
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394179"
 ---
 ### <a name="hosting-ihostingenvironment-and-iapplicationlifetime-types-marked-obsolete-and-replaced"></a>Hosting: tipi IHostingEnvironment e IApplicationLifetime contrassegnati come obsoleti e sostituiti
 
-Sono stati introdotti nuovi tipi per sostituire i tipi esistenti `IHostingEnvironment` e `IApplicationLifetime`.
+Sono stati introdotti nuovi `IHostingEnvironment` `IApplicationLifetime` tipi per sostituire i tipi esistenti.
 
 #### <a name="version-introduced"></a>Versione introdotta
 
@@ -16,19 +16,19 @@ Sono stati introdotti nuovi tipi per sostituire i tipi esistenti `IHostingEnviro
 
 #### <a name="old-behavior"></a>Comportamento precedente
 
-Sono presenti due tipi `IHostingEnvironment` e `IApplicationLifetime` diversi da `Microsoft.Extensions.Hosting` e `Microsoft.AspNetCore.Hosting`.
+C'erano `IHostingEnvironment` due `IApplicationLifetime` diversi `Microsoft.Extensions.Hosting` `Microsoft.AspNetCore.Hosting`e tipi da e .
 
 #### <a name="new-behavior"></a>Nuovo comportamento
 
-I tipi precedenti sono stati contrassegnati come obsoleti e sostituiti con nuovi tipi.
+I vecchi tipi sono stati contrassegnati come obsoleti e sostituiti con nuovi tipi.
 
 #### <a name="reason-for-change"></a>Motivo della modifica
 
-Quando `Microsoft.Extensions.Hosting` è stato introdotto in ASP.NET Core 2,1, alcuni tipi come `IHostingEnvironment` e `IApplicationLifetime` sono stati copiati da `Microsoft.AspNetCore.Hosting`. Alcune modifiche ASP.NET Core 3,0 provocano l'inclusione degli spazi dei nomi `Microsoft.Extensions.Hosting` e `Microsoft.AspNetCore.Hosting` da parte delle app. Qualsiasi utilizzo di questi tipi duplicati genera un errore del compilatore "riferimento ambiguo" quando viene fatto riferimento a entrambi gli spazi dei nomi.
+Quando `Microsoft.Extensions.Hosting` è stato introdotto in ASP.NET `IHostingEnvironment` Core `IApplicationLifetime` 2.1, alcuni tipi come e sono stati copiati da `Microsoft.AspNetCore.Hosting`. Alcune modifiche di ASP.NET Core 3.0 `Microsoft.Extensions.Hosting` `Microsoft.AspNetCore.Hosting` fanno sì che le app includano sia gli spazi dei nomi che quelli. Qualsiasi utilizzo di tali tipi duplicati causa un errore del compilatore "riferimento ambiguo" quando viene fatto riferimento a entrambi gli spazi dei nomi.
 
 #### <a name="recommended-action"></a>Azione consigliata
 
-Sono stati sostituiti tutti gli utilizzi dei tipi obsoleti con i nuovi tipi introdotti come indicato di seguito:
+Sostituiti tutti gli usi dei vecchi tipi con i tipi appena introdotti come di seguito:
 
 **Tipi obsoleti (avviso):**
 
@@ -46,7 +46,7 @@ Sono stati sostituiti tutti gli utilizzi dei tipi obsoleti con i nuovi tipi intr
 - <xref:Microsoft.Extensions.Hosting.IHostApplicationLifetime?displayProperty=nameWithType>
 - <xref:Microsoft.Extensions.Hosting.Environments?displayProperty=nameWithType>
 
-I nuovi metodi di estensione `IHostEnvironment` `IsDevelopment` e `IsProduction` si trovano nello spazio dei nomi `Microsoft.Extensions.Hosting`. È possibile che lo spazio dei nomi debba essere aggiunto al progetto.
+I `IHostEnvironment` `IsDevelopment` metodi `IsProduction` new e `Microsoft.Extensions.Hosting` extension si trovano nello spazio dei nomi. Potrebbe essere necessario aggiungere tale spazio dei nomi al progetto.
 
 #### <a name="category"></a>Category
 

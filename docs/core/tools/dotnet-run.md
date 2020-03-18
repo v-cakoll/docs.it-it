@@ -3,15 +3,15 @@ title: Comando dotnet run
 description: Il comando dotnet run offre un modo pratico per eseguire l'applicazione dal codice sorgente.
 ms.date: 02/19/2020
 ms.openlocfilehash: e442ed56d676ffd189ef6d394d840cea671c2dc6
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78157076"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
-**Questo articolo si applica a:** ✔️ .NET Core 2. x SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .NET Core 2.x SDK e versioni successive
 
 ## <a name="name"></a>Nome
 
@@ -28,7 +28,7 @@ dotnet run [-h|--help]
 
 ## <a name="description"></a>Descrizione
 
-Il comando `dotnet run` offre un modo pratico per eseguire l'applicazione dal codice sorgente con un solo comando. Questo comando è utile per lo sviluppo iterativo veloce dalla riga di comando. Il comando dipende dal comando [`dotnet build`](dotnet-build.md) per compilare il codice. I requisiti per la compilazione, ad esempio il ripristino preliminare del progetto, si applicano anche a `dotnet run`.
+Il comando `dotnet run` offre un modo pratico per eseguire l'applicazione dal codice sorgente con un solo comando. Questo comando è utile per lo sviluppo iterativo veloce dalla riga di comando. Il comando dipende [`dotnet build`](dotnet-build.md) dal comando per compilare il codice. I requisiti per la compilazione, ad esempio il ripristino preliminare del progetto, si applicano anche a `dotnet run`.
 
 I file di output vengono scritti nel percorso predefinito, ovvero `bin/<configuration>/<target>`. Se ad esempio si ha un'applicazione `netcoreapp2.1` e si esegue `dotnet run`, l'output viene inserito in `bin/Debug/netcoreapp2.1`. I file vengono sovrascritti in base alle esigenze. I file temporanei vengono inseriti nella directory `obj`.
 
@@ -54,7 +54,7 @@ Per eseguire l'applicazione, il comando `dotnet run` risolve le dipendenze dell'
 
 - **`-c|--configuration <CONFIGURATION>`**
 
-  Definisce la configurazione di compilazione. Il valore predefinito per la maggior parte dei progetti è `Debug`, ma è possibile eseguire l'override delle impostazioni di configurazione della build nel progetto.
+  Definisce la configurazione di compilazione. L'impostazione predefinita `Debug`per la maggior parte dei progetti è , ma è possibile eseguire l'override delle impostazioni di configurazione della compilazione nel progetto.
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -74,7 +74,7 @@ Per eseguire l'applicazione, il comando `dotnet run` risolve le dipendenze dell'
 
 - **`--launch-profile <NAME>`**
 
-  Il nome del profilo di avvio, se presente, da usare all'avvio dell'applicazione. I profili di avvio vengono definiti nel file *launchSettings.json* e in genere vengono denominati `Development`, `Staging` e `Production`. Per altre informazioni, vedere [Working with multiple environments](/aspnet/core/fundamentals/environments) (Utilizzo con più ambienti).
+  Il nome del profilo di avvio, se presente, da usare all'avvio dell'applicazione. I profili di avvio sono definiti nel `Development`file `Staging` *launchSettings.json* e sono in genere denominati , , e `Production`. Per ulteriori informazioni, consultate [Operazioni con più ambienti.](/aspnet/core/fundamentals/environments)
 
 - **`--no-build`**
 
@@ -98,11 +98,11 @@ Per eseguire l'applicazione, il comando `dotnet run` risolve le dipendenze dell'
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  Specifica il runtime di destinazione per cui ripristinare i pacchetti. Per un elenco degli identificatori di runtime (RID, Runtime Identifier), vedere il [catalogo RID](../rid-catalog.md). `-r` opzione short disponibile a partire da .NET Core 3,0 SDK.
+  Specifica il runtime di destinazione per cui ripristinare i pacchetti. Per un elenco degli identificatori di runtime (RID, Runtime Identifier), vedere il [catalogo RID](../rid-catalog.md). `-r`breve opzione disponibile dopo .NET Core 3.0 SDK.
 
 - **`-v|--verbosity <LEVEL>`**
 
-  Imposta il livello di dettaglio del comando. I valori consentiti sono `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`. Il valore predefinito è `m`. Disponibile a partire da .NET Core 2,1 SDK.
+  Imposta il livello di dettaglio del comando. I valori consentiti sono `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`. Il valore predefinito è `m`. Disponibile da .NET Core 2.1 SDK.
 
 ## <a name="examples"></a>Esempi
 

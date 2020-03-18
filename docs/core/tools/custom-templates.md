@@ -4,17 +4,17 @@ description: Informazioni sui modelli personalizzati per qualsiasi tipo di file 
 author: thraka
 ms.date: 06/14/2019
 ms.openlocfilehash: 8e1ac4ca21a8a90ad0f7c9bd3dd11281eb4a6e02
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73420874"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Modelli personalizzati per dotnet new
 
-[.NET Core SDK](https://dotnet.microsoft.com/download) viene distribuito con molti modelli già installati e pronti per l'uso. Il [comando `dotnet new`](dotnet-new.md) non consente solo di usare un modello, ma anche di installarlo e disinstallarlo. A partire da .NET Core 2.0, è possibile creare modelli personalizzati per qualsiasi tipo di progetto, ad esempio un'app, un servizio, uno strumento o una libreria di classi. È possibile anche creare un modello che restituisce uno o più file indipendenti, ad esempio un file di configurazione.
+[.NET Core SDK](https://dotnet.microsoft.com/download) viene distribuito con molti modelli già installati e pronti per l'uso. Il [ `dotnet new` comando](dotnet-new.md) non è solo il modo di utilizzare un modello, ma anche come installare e disinstallare i modelli. A partire da .NET Core 2.0, è possibile creare modelli personalizzati per qualsiasi tipo di progetto, ad esempio un'app, un servizio, uno strumento o una libreria di classi. È possibile anche creare un modello che restituisce uno o più file indipendenti, ad esempio un file di configurazione.
 
-È possibile installare modelli personalizzati da un pacchetto NuGet in qualsiasi feed NuGet, facendo direttamente riferimento a un file NuGet con estensione *nupkg* o specificando una directory del file system che contiene il modello. Il motore del modello offre funzionalità che consentono di sostituire i valori, includere ed escludere file ed eseguire operazioni di elaborazione personalizzate quando si usa il modello.
+È possibile installare modelli personalizzati da un pacchetto NuGet in qualsiasi feed NuGet, facendo riferimento direttamente a un file *NGet .nupkg* o specificando una directory del file system contenente il modello. Il motore del modello offre funzionalità che consentono di sostituire i valori, includere ed escludere file ed eseguire operazioni di elaborazione personalizzate quando si usa il modello.
 
 Il motore del modello è open source e il repository del codice online si trova in [dotnet/templating](https://github.com/dotnet/templating/) su GitHub. Visitare il repository [dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples) per gli esempi di modelli. Più modelli, inclusi i modelli di terze parti, sono disponibili in [Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new) (Modelli disponibili per dotnet new) su GitHub. Per altre informazioni sulla creazione e l'uso di modelli personalizzati, vedere [Come creare modelli personalizzati per dotnet new](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/) e la [wiki del repository GitHub dotnet/templating](https://github.com/dotnet/templating/wiki).
 
@@ -52,7 +52,7 @@ I file generati dal modello possono essere modificati in base alla logica e alle
 
 Il file *template.json* si trova in una cartella *.template.config* nella directory radice del modello. Il file fornisce informazioni di configurazione al motore del modello. Per la configurazione minima sono necessari i membri visualizzati nella tabella seguente, sufficiente per creare un modello funzionale.
 
-| Member            | Digitare          | Descrizione |
+| Membro            | Type          | Descrizione |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | Lo schema JSON per il file *template.json*. Gli editor che supportano gli schemi JSON abilitano le funzionalità di modifica JSON quando viene specificato lo schema. Ad esempio, [Visual Studio Code](https://code.visualstudio.com/) richiede questo membro per abilitare IntelliSense. Usare un valore di `http://json.schemastore.org/template`. |
 | `author`          | string        | L'autore del modello. |
@@ -95,7 +95,7 @@ La cartella *mytemplate* è un pacchetto di modelli installabile. Dopo aver inst
 
 Un modello personalizzato viene compresso in un pacchetto con il comando [dotnet pack](dotnet-pack.md) e un file con estensione *csproj*. In alternativa, è possibile usare [NuGet](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference) con il comando [nuget pack](https://docs.microsoft.com/nuget/tools/cli-ref-pack) e un file con estensione *nuspec*. Per l'uso di NuGet, tuttavia, è necessario .NET Framework su Windows e [Mono](https://www.mono-project.com/) su Linux e MacOS.
 
-Il file con estensione *csproj* è leggermente diverso da un file *csproj* di un progetto di codice tradizionale. Osservare le seguenti impostazioni:
+Il file con estensione *csproj* è leggermente diverso da un file *csproj* di un progetto di codice tradizionale. Si notino le impostazioni seguenti:
 
 01. È inclusa l'impostazione `<PackageType>` con il valore `Template`.
 01. È inclusa l'impostazione `<PackageVersion>` con un [numero di versione NuGet](/nuget/reference/package-versioning) valido.

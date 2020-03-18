@@ -3,15 +3,15 @@ title: Comando dotnet clean
 description: Il comando dotnet clean consente di pulire la directory corrente.
 ms.date: 02/14/2020
 ms.openlocfilehash: 186f1ea07718a8e178f88c3d079cf6e2f1f8660b
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503750"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
-**Questo articolo si applica a:** ✔️ .NET Core 2. x SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .NET Core 2.x SDK e versioni successive
 
 ## <a name="name"></a>Nome
 
@@ -39,7 +39,7 @@ Progetto o soluzione MSBuild da pulire. Se non viene specificato alcun file di p
 
 * **`-c|--configuration <CONFIGURATION>`**
 
-  Definisce la configurazione di compilazione. Il valore predefinito per la maggior parte dei progetti è `Debug`, ma è possibile eseguire l'override delle impostazioni di configurazione della build nel progetto. Se è stata specificata durante la fase di compilazione, questa opzione è necessaria soltanto al momento della pulizia.
+  Definisce la configurazione di compilazione. L'impostazione predefinita `Debug`per la maggior parte dei progetti è , ma è possibile eseguire l'override delle impostazioni di configurazione della compilazione nel progetto. Se è stata specificata durante la fase di compilazione, questa opzione è necessaria soltanto al momento della pulizia.
 
 * **`-f|--framework <FRAMEWORK>`**
 

@@ -1,26 +1,26 @@
 ---
-title: Piattaforma senza server di Azure-app senza server
-description: La piattaforma senza server di Azure offre funzionalità che includono codice di scalabilità immediata attivato da eventi, pub/sub basato su cloud, orchestrazione del flusso di lavoro e altro ancora.
+title: Piattaforma senza server di Azure - App senza server
+description: La piattaforma senza server di Azure offre funzionalità, tra cui codice di scalabilità istantanea attivato da eventi, pub/sub basato su cloud, orchestrazione del flusso di lavoro e altro ancora.
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 43646db564ae31d26fe59e1ad7392e51d2d4e953
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69577594"
 ---
-# <a name="azure-serverless-platform"></a>Piattaforma senza server di Azure
+# <a name="azure-serverless-platform"></a>Piattaforma senza server di AzureAzure serverless platform
 
-La piattaforma senza server di Azure include funzioni di Azure, app per la logica e griglia di eventi. Questi servizi interagiscono tra loro e si connettono con innumerevoli altre risorse. La piattaforma senza server funziona con tutti i dati, dai database e dalle risorse di archiviazione a Analytics e Machine Learning/intelligenza artificiale.
+La piattaforma senza server di Azure include Funzioni di Azure, App per la logica e Griglia di eventi. Questi servizi lavorano insieme e si collegano con una miriade di altre risorse. La piattaforma senza server funziona con tutto, dai database e storage per l'analisi e machine learning / intelligenza artificiale.
 
-È anche possibile usare Application Insights, una piattaforma senza server per l'acquisizione di tracce di diagnostica e dati di telemetria. Application Insights sono disponibili per le applicazioni di tutti i tipi (desktop, dispositivi mobili o Web) e per le implementazioni senza server. La piattaforma viene visualizzata nel diagramma seguente:
+È anche possibile usare Application Insights, una piattaforma senza server per l'acquisizione di tracce diagnostiche e dati di telemetria. Application Insights è disponibile per applicazioni di tutti i tipi (desktop, mobile o Web) e per le implementazioni senza server. La piattaforma è visualizzata nel seguente diagramma:
 
-![Piattaforma senza server di Azure](./media/azure-serverless-platform.png)
+![Piattaforma senza server di AzureAzure serverless platform](./media/azure-serverless-platform.png)
 
-Questo capitolo suddivide le nozioni di base di ogni componente.
+Questo capitolo suddivide i fondamenti di ogni componente.
 
 >[!div class="step-by-step"]
->[Precedente](serverless-design-examples.md)
->[Successivo](azure-functions.md)
+>[Successivo](serverless-design-examples.md)
+>[precedente](azure-functions.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
 ms.openlocfilehash: 500160d3bc9280b866e5f5ba24c5edc623e752c1
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77673095"
 ---
 # <a name="class-c-reference"></a>class (Riferimenti per C#)
@@ -26,13 +26,13 @@ class TestClass
 }
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 In C# è consentita solo l'eredità singola. In altre parole, una classe può ereditare l'implementazione solo da una classe di base singola. Una classe può tuttavia implementare più di un'interfaccia. La tabella seguente illustra esempi di ereditarietà di classi e di implementazione di interfacce:
 
 |Ereditarietà|Esempio|
 |-----------------|-------------|
-|None|`class ClassA { }`|
+|nessuno|`class ClassA { }`|
 |Single|`class DerivedClass : BaseClass { }`|
 |Nessuna, implementa due interfacce|`class ImplClass : IFace1, IFace2 { }`|
 |Singola, implementa una sola interfaccia|`class ImplDerivedClass : BaseClass, IFace1 { }`|
@@ -41,7 +41,7 @@ Una classe dichiarata direttamente all'interno di uno spazio dei nomi, non annid
 
 I membri di classe, incluse le classi annidate, possono essere [public](public.md), [protected internal](protected-internal.md), [protected](protected.md), [internal](internal.md), [private](private.md) o [private protected](private-protected.md). I membri sono `private` per impostazione predefinita.
 
-Per altre informazioni, vedere [Access Modifiers](../../programming-guide/classes-and-structs/access-modifiers.md) (Modificatori di accesso).
+Per altre informazioni, vedere [Modificatori di accesso](../../programming-guide/classes-and-structs/access-modifiers.md).
 
 È possibile dichiarare classi generiche che hanno parametri di tipo. Per altre informazioni, vedere [Generic Classes](../../programming-guide/generics/generic-classes.md) (Classi generiche).
 
@@ -63,7 +63,7 @@ Una classe può contenere dichiarazioni dei membri seguenti:
 
 - [Operatori](../operators/index.md)
 
-- [Eventi](../../programming-guide/events/index.md)
+- [Events](../../programming-guide/events/index.md)
 
 - [Delegati](../../programming-guide/delegates/index.md)
 
@@ -81,7 +81,7 @@ L'esempio seguente illustra la dichiarazione di campi di classe, costruttori e m
 
 [!code-csharp[csrefKeywordsTypes#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#5)]
 
-## <a name="comments"></a>Comments
+## <a name="comments"></a>Commenti
 
 Si noti che, nell'esempio precedente, i campi privati (`name` e `age`) sono accessibili solo tramite i metodi pubblici della classe `Child`. Ad esempio, non è possibile stampare il nome del figlio, dal metodo `Main`, usando un'istruzione simile alla seguente:
 
@@ -101,7 +101,7 @@ Infine, si noti che per l'oggetto creato usando il costruttore senza parametri (
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)
+- [Guida di riferimento a C](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](./index.md)
 - [Tipi di riferimento](./reference-types.md)

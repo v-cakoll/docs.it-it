@@ -3,17 +3,17 @@ title: Passaggi nel flusso di lavoro DevOps del ciclo esterno per un'applicazion
 description: Ciclo di vita delle applicazioni Docker in contenitori con piattaforma e strumenti Microsoft
 ms.date: 02/15/2019
 ms.openlocfilehash: 9fdc5acfd375e4f2266859f061ef1c854286b914
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68673778"
 ---
 # <a name="creating-cicd-pipelines-in-azure-devops-services-for-a-net-core-20-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>Creazione di pipeline CI/CD in Azure DevOps Services per un'applicazione .NET Core 2.0 in contenitori e distribuzione in un cluster Kubernetes
 
 Nella figura 5-12 è possibile vedere lo scenario DevOps end-to-end relativo alla gestione e alla compilazione del codice, alla compilazione delle immagini Docker, al push delle immagini Docker in un registro Docker e infine alla distribuzione in un cluster Kubernetes in Azure.
 
-![Flusso di lavoro: Inizia nel computer di sviluppo. Il push in un repository inizia l'attività di compilazione/integrazione continua tramite un'immagine personalizzata che viene inserita in un registro Docker e quindi usata dall'attività di distribuzione/distribuzione continua per eseguire infine il push al servizio Azure Kubernetes.](media/docker-workflow-ci-cd-aks.png)
+![Flusso di lavoro: avvia nel computer di sviluppo. Il push in un repository inizia l'attività di compilazione/integrazione continua tramite un'immagine personalizzata che viene inserita in un registro Docker e quindi usata dall'attività di distribuzione/distribuzione continua per eseguire infine il push al servizio Azure Kubernetes.](media/docker-workflow-ci-cd-aks.png)
 
 **Figura 5-12**. Scenario di integrazione continua/distribuzione continua che crea immagini Docker e le distribuisce in un cluster Kubernetes in Azure
 
@@ -37,5 +37,5 @@ La seconda fase consiste nella creazione di una pipeline di distribuzione/rilasc
 ><https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-CI-CD)>
 
 >[!div class="step-by-step"]
->[Precedente](docker-application-outer-loop-devops-workflow.md)
->[Successivo](../run-manage-monitor-docker-environments/index.md)
+>[Successivo](docker-application-outer-loop-devops-workflow.md)
+>[precedente](../run-manage-monitor-docker-environments/index.md)

@@ -1,14 +1,14 @@
 ---
 ms.openlocfilehash: 958dede03e1c15f69f4ee676f13713ff43c29e96
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394396"
 ---
-### <a name="logging-debuglogger-class-made-internal"></a>Registrazione: classe DebugLogger creata internamente
+### <a name="logging-debuglogger-class-made-internal"></a>Registrazione: la classe DebugLogger resa internaLogging: DebugLogger class made internal
 
-Prima di ASP.NET Core 3,0, il modificatore di accesso `DebugLogger` era `public`. In ASP.NET Core 3,0, il modificatore di accesso è stato modificato in `internal`.
+Prima di ASP.NET Core `DebugLogger`3.0, `public`il modificatore di accesso 'era . In ASP.NET Core 3.0, il `internal`modificatore di accesso è cambiato in .
 
 #### <a name="version-introduced"></a>Versione introdotta
 
@@ -16,14 +16,14 @@ Prima di ASP.NET Core 3,0, il modificatore di accesso `DebugLogger` era `public`
 
 #### <a name="reason-for-change"></a>Motivo della modifica
 
-La modifica viene apportata a:
+La modifica è in corso per:
 
-* Applicare la coerenza con altre implementazioni del logger, ad esempio `ConsoleLogger`.
+* Applicare la coerenza con altre `ConsoleLogger`implementazioni del logger, ad esempio .
 * Ridurre la superficie dell'API.
 
 #### <a name="recommended-action"></a>Azione consigliata
 
-Usare il metodo di estensione <xref:Microsoft.Extensions.Logging.DebugLoggerFactoryExtensions.AddDebug%2A> `ILoggingBuilder` per abilitare la registrazione del debug. anche <xref:Microsoft.Extensions.Logging.Debug.DebugLoggerProvider> è ancora `public` nel caso in cui il servizio debba essere registrato manualmente.
+Utilizzare <xref:Microsoft.Extensions.Logging.DebugLoggerFactoryExtensions.AddDebug%2A> `ILoggingBuilder` il metodo di estensione per abilitare la registrazione di debug. <xref:Microsoft.Extensions.Logging.Debug.DebugLoggerProvider>è anche `public` ancora nel caso in cui il servizio deve essere registrato manualmente.
 
 #### <a name="category"></a>Category
 

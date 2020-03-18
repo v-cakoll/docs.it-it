@@ -3,10 +3,10 @@ title: Introduzione a contenitori e Docker
 description: Architettura di microservizi .NET per le applicazioni .NET incluse in contenitori | Introduzione a contenitori e Docker
 ms.date: 08/31/2018
 ms.openlocfilehash: 364cbc0ba8149be1873df628a1ca243f420e7d0b
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73740056"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Introduzione a contenitori e Docker
@@ -28,5 +28,5 @@ Un altro vantaggio della containerizzazione consiste nella scalabilità. La scal
 In breve, i contenitori assicurano vantaggi in termini di isolamento, portabilità, flessibilità, scalabilità e controllo nel flusso di lavoro dell'intero ciclo di vita dell'applicazione. Il vantaggio più importante è l'isolamento dell'ambiente fornito tra sviluppo e operazioni.
 
 >[!div class="step-by-step"]
->[Precedente](../index.md)
->[Successivo](docker-defined.md)
+>[Successivo](../index.md)
+>[precedente](docker-defined.md)

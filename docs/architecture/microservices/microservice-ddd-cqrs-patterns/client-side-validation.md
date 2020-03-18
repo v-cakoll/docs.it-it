@@ -3,10 +3,10 @@ title: Convalida lato client (convalida nei livelli di presentazione)
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Panoramica dei concetti chiave delle convalide lato client.
 ms.date: 10/08/2018
 ms.openlocfilehash: 4e72dcafafc3144a75afe1fd23a4a779f5667459
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68674358"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>Convalida lato client (convalida nei livelli di presentazione)
@@ -27,10 +27,10 @@ L'implementazione della convalida del lato client dipende dalla tipologia di app
 
 ### <a name="validation-in-xamarin-mobile-apps"></a>Convalida nelle app per dispositivi mobili in Xamarin
 
-- **Convalidare l'input di testo e visualizzare gli errori** \
+- **Convalida dell'input di testo e visualizzazione degli errori** \
   [https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
-- **Callback di convalida** \
+- **Callback di convalidaValidation Callback** \
   <https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/>
 
 ### <a name="validation-in-aspnet-core-apps"></a>Convalida nelle app ASP.NET Core
@@ -40,10 +40,10 @@ L'implementazione della convalida del lato client dipende dalla tipologia di app
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>Convalida nelle app Web a pagina singola (Angular 2, TypeScript, JavaScript)
 
-- **Ado Kukic. Convalida del modulo Angular 2** \
+- **Ado Kukic. Convalida angolare 2 del modulo** \
   <https://scotch.io/tutorials/angular-2-form-validation>
 
-- **Convalida del modulo** \
+- **Convalida modulo** \
   <https://angular.io/guide/form-validation>
 
 - **Convalida.** Documentazione per Breeze. \
@@ -60,5 +60,5 @@ In breve, questi sono i concetti più importanti in merito alla convalida:
 - Nella maggior parte dei client, è consigliabile adottare una convalida ridondante sul lato client, per aumentare la proattività dell'applicazione.
 
 >[!div class="step-by-step"]
->[Precedente](domain-model-layer-validations.md)
->[Successivo](domain-events-design-implementation.md)
+>[Successivo](domain-model-layer-validations.md)
+>[precedente](domain-events-design-implementation.md)

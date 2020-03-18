@@ -1,5 +1,5 @@
 ---
-title: Guida alla C# programmazione di <exception>
+title: <exception>- Guida alla programmazione in C
 ms.date: 07/20/2015
 f1_keywords:
 - exception
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - exception C# XML tag
 ms.assetid: dd73aac5-3c74-4fcf-9498-f11bff3a2f3c
 ms.openlocfilehash: 14318ac0b0cdf781d0488eecaf934879017d91f6
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789795"
 ---
-# <a name="exception-c-programming-guide"></a>\<> eccezioni (C# guida per programmatori)
+# <a name="exception-c-programming-guide"></a>\<> di eccezione (Guida per programmatori C
 
 ## <a name="syntax"></a>Sintassi
 
@@ -35,7 +35,7 @@ ms.locfileid: "76789795"
 
   Descrizione dell'eccezione.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Il tag \<exception> consente di specificare le eccezioni che possono essere generate. Questo tag può essere applicato alle definizioni di metodi, proprietà, eventi e indicizzatori.
 
@@ -49,5 +49,5 @@ Per altre informazioni sulla gestione delle eccezioni, vedere [Eccezioni e gesti
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../index.md)
+- [Guida alla programmazione in C](../index.md)
 - [Tag consigliati per i commenti relativi alla documentazione](recommended-tags-for-documentation-comments.md)

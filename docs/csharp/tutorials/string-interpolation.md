@@ -5,10 +5,10 @@ author: pkulikov
 ms.technology: csharp-fundamentals
 ms.date: 09/02/2019
 ms.openlocfilehash: b901ae661ebd4af625d9f3c999b0eb50dda1990d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73039203"
 ---
 # <a name="string-interpolation-in-c"></a>Interpolazione di stringhe in C\#
@@ -75,7 +75,7 @@ Per altre informazioni, vedere la sezione [Componente di allineamento](../../sta
 
 Le stringhe interpolate supportano tutte le sequenze di escape che è possibile usare all'interno di valori letterali stringa normali. Per altre informazioni, vedere [Sequenze di escape delle stringhe](../programming-guide/strings/index.md#string-escape-sequences).
 
-Per interpretare le sequenze di escape letteralmente, usare un valore letterale stringa [verbatim](../language-reference/tokens/verbatim.md). Una stringa Verbatim interpolata inizia con il carattere `$` seguito dal carattere di `@`. A partire C# da 8,0, è possibile usare i token di`$`e di`@`in qualsiasi ordine: sia `$@"..."`che`@$"..."`sono stringhe verbatim interpolate valide.
+Per interpretare le sequenze di escape letteralmente, usare un valore letterale stringa [verbatim](../language-reference/tokens/verbatim.md). Una stringa verbatim interpolata `$` inizia con `@` il carattere seguito dal carattere. A partire dalla versione 8.0 `$` di `@` C, è possibile `$@"..."` `@$"..."` usare i token e in qualsiasi ordine: entrambi e sono stringhe letterali interpolate valide.
 
 Per includere una parentesi graffa, "{" o "}", in una stringa di risultato, usare due parentesi graffe, "{{" o "}}". Per altre informazioni, vedere la sezione [Sequenze di escape delle parentesi graffe](../../standard/base-types/composite-formatting.md#escaping-braces) dell'argomento [Formattazione composita](../../standard/base-types/composite-formatting.md).
 
@@ -103,7 +103,7 @@ Insieme al metodo <xref:System.FormattableString.ToString(System.IFormatProvider
 
 [!code-csharp-interactive[format with invariant culture](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#7)]
 
-## <a name="conclusion"></a>Conclusione
+## <a name="conclusion"></a>Conclusioni
 
 Questa esercitazione descrive scenari comuni di utilizzo dell'interpolazione di stringhe. Per altre informazioni sull'interpolazione di stringhe, vedere l'argomento [Interpolazione di stringhe](../language-reference/tokens/interpolated.md). Per altre informazioni sulla formattazione dei tipi in .NET, vedere gli argomenti [Formattazione di tipi in .NET](../../standard/base-types/formatting-types.md) e [Formattazione composita](../../standard/base-types/composite-formatting.md).
 

@@ -4,10 +4,10 @@ description: Le matrici costituiscono il tipo di raccolta di base del linguaggio
 ms.date: 02/27/2020
 ms.assetid: a440704c-9e88-4c75-97dd-bfe30ca0fb97
 ms.openlocfilehash: 3e045c0933a21beab6958c7851546ba6e0b55ef9
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78159195"
 ---
 # <a name="arrays"></a>Matrici
@@ -25,7 +25,7 @@ In questo esempio viene creata e usata una ***matrice unidimensionale***. C# sup
 [!code-csharp[ArrayRank](../../../samples/snippets/csharp/tour/arrays/Program.cs#L24-L26)]
 
 La matrice `a1` contiene 10 elementi, la matrice `a2` contiene 50 (10 × 5) elementi e la `a3` matrice contiene 100 (10 × 5 × 2) elementi.
-L'elemento di una matrice può essere di qualsiasi tipo, anche di tipo matrice. Una matrice con elementi di un tipo di matrice viene talvolta definita ***matrice irregolare*** perché le lunghezze delle matrici di elementi non devono necessariamente essere uguali. Nell'esempio seguente viene allocata una matrice di matrici di `int`:
+L'elemento di una matrice può essere di qualsiasi tipo, anche di tipo matrice. Una matrice con elementi di un tipo matrice viene talvolta definita ***matrice frastagliata*** perché le lunghezze delle matrici di elementi non devono essere tutte uguali. Nell'esempio seguente viene allocata una matrice di matrici di `int`:
 
 [!code-csharp[ArrayAllocation](../../../samples/snippets/csharp/tour/arrays/Program.cs#L31-L34)]
 
@@ -35,7 +35,7 @@ L'operatore new consente di specificare i valori iniziali degli elementi di matr
 
 [!code-csharp[ArrayInitialization](../../../samples/snippets/csharp/tour/arrays/Program.cs#L39-L39)]
 
-La lunghezza della matrice viene dedotta dal numero di espressioni comprese tra {e}. Per evitare di ridefinire il tipo di matrice, è possibile abbreviare le dichiarazioni di campo e variabile locale.
+La lunghezza della matrice viene dedotta dal numero di espressioni comprese tra i caratteri . Per evitare di ridefinire il tipo di matrice, è possibile abbreviare le dichiarazioni di campo e variabile locale.
 
 [!code-csharp[ArrayInitialization](../../../samples/snippets/csharp/tour/arrays/Program.cs#L44-L44)]
 
@@ -44,5 +44,5 @@ Entrambi gli esempi precedenti sono equivalenti al codice seguente:
 [!code-csharp[ArrayAssignment](../../../samples/snippets/csharp/tour/arrays/Program.cs#L49-L53)]
 
 >[!div class="step-by-step"]
->[Precedente](classes-and-objects.md)
->[Successivo](interfaces.md)
+>[Successivo](classes-and-objects.md)
+>[precedente](interfaces.md)

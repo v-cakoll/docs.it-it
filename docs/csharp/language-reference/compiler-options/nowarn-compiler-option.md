@@ -9,10 +9,10 @@ helpviewer_keywords:
 - -nowarn compiler option [C#]
 ms.assetid: 6dcbc5e8-ae67-4566-9df3-f63cfdd9c4e4
 ms.openlocfilehash: fa3079bf1431ba1a16b5a2eef0dd5500fe95909c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69606609"
 ---
 # <a name="-nowarn-c-compiler-options"></a>-nowarn (opzioni del compilatore C#)
@@ -45,7 +45,7 @@ L'opzione **-nowarn** impedisce al compilatore di visualizzare uno o più avvisi
   
 1. Aprire la pagina **Proprietà** del progetto. Per informazioni dettagliate, vedere [Pagina Compilazione, Creazione progetti (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
-2. Fare clic sulla pagina delle proprietà **Compilazione**.  
+2. Fare clic sulla pagina della proprietà **Compilazione**.  
   
 3. Modificare la proprietà **Non visualizzare avvisi**.  
   
@@ -53,6 +53,6 @@ L'opzione **-nowarn** impedisce al compilatore di visualizzare uno o più avvisi
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Opzioni del compilatore C#](./index.md)
+- [Opzioni del compilatore C](./index.md)
 - [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)
 - [Errori del compilatore C#](../compiler-messages/index.md)

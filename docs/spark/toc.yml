@@ -21,7 +21,7 @@
       href: tutorials/batch-processing.md
     - name: Flussi strutturati
       href: tutorials/streaming.md
-- name: Guide pratiche
+- name: 'Guide pratiche:'
   items:
     - name: Eseguire il debug dell'applicazione
       href: how-to-guides/debug.md
@@ -35,7 +35,7 @@
       href: how-to-guides/ubuntu-instructions.md
     - name: Compilare l'applicazione in Windows
       href: how-to-guides/windows-instructions.md
-- name: Riferimento
+- name: Reference
   items:
     - name: Riferimento API
       href: 'https://docs.microsoft.com/dotnet/api/?view=spark-dotnet'

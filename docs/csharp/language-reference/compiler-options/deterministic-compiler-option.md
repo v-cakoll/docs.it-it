@@ -8,10 +8,10 @@ helpviewer_keywords:
 - deterministic compiler option [C#]
 - /deterministic compiler option [C#]
 ms.openlocfilehash: ed5d1db4618649391f88affad67e62dd9fc95925
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73455180"
 ---
 # <a name="-deterministic"></a>-deterministic
@@ -24,7 +24,7 @@ Fa sì che il compilatore generi un assembly il cui output byte per byte è iden
 -deterministic
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Per impostazione predefinita, l'output del compilatore che deriva da un determinato set di input è univoco, poiché il compilatore aggiunge un timestamp e un GUID generato da numeri casuali. L'opzione `-deterministic` si usa per generare un *assembly deterministico* il cui contenuto binario è identico in tutte le compilazioni purché l'input rimanga lo stesso.
 
@@ -54,5 +54,5 @@ Quando le origini sono disponibili pubblicamente, la compilazione deterministica
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Opzioni del compilatore C#](./index.md)
+- [Opzioni del compilatore C](./index.md)
 - [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)

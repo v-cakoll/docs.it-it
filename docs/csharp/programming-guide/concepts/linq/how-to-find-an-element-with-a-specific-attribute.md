@@ -1,21 +1,21 @@
 ---
-title: Come trovare un elemento con un attributo specifico (C#)
+title: Come trovare un elemento con un attributo specifico (c'è)How to find an element with a specific attribute (C
 ms.date: 07/20/2015
 ms.assetid: b92591aa-3cfb-490e-99f6-da8de335e362
 ms.openlocfilehash: 106885b8658c493caab3101e6b4ce921589076eb
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141158"
 ---
-# <a name="how-to-find-an-element-with-a-specific-attribute-c"></a>Come trovare un elemento con un attributo specifico (C#)
+# <a name="how-to-find-an-element-with-a-specific-attribute-c"></a>Come trovare un elemento con un attributo specifico (c'è)How to find an element with a specific attribute (C
 In questo argomento viene illustrato come trovare un elemento che include un attributo con un valore specifico.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio viene illustrato come trovare l'elemento `Address` contenente un attributo `Type` con valore "Billing".  
   
- Questo esempio usa il documento XML seguente: [File XML di esempio: ordine di acquisto tipico (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
+ Nell'esempio viene usato il documento XML seguente: [File XML di esempio: ordine di acquisto tipico (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrder.xml");  
@@ -73,5 +73,5 @@ foreach (XElement el in address)
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [Panoramica degli operatori di query standard (C#)](./standard-query-operators-overview.md)
+- [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md) (Panoramica degli operatori di query standard)
 - [Operazioni di proiezione (C#)](./projection-operations.md)

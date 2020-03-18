@@ -10,10 +10,10 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.openlocfilehash: f7fd68120defbfcda6ac11e14bc749bf4d69c109
-  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
   ms.translationtype: MT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 11/12/2019
+  ms.lasthandoff: 03/14/2020
   ms.locfileid: "73969382"
 items:
 - durationInMinutes: 1
@@ -22,7 +22,7 @@ items:
 - title: Creare elenchi
   durationInMinutes: 2
   content: >
-    Eseguire il codice seguente nella finestra interattiva. Selezionare il pulsante **Attiva modalità messa a fuoco** . Quindi, digitare il blocco di codice seguente nella finestra interattiva (sostituire `<name>` con il proprio nome) e selezionare **Esegui**:
+    Eseguire il codice seguente nella finestra interattiva. Selezionare il **pulsante Attiva modalità messa a fuoco.** Quindi, digitare il seguente blocco di `<name>` codice nella finestra interattiva (sostituire con il proprio nome) e selezionare **Esegui**:
 
 
     ```csharp
@@ -38,7 +38,7 @@ items:
     ```
 
 
-    Se si esegue questa operazione nell'ambiente in uso, è consigliabile seguire invece le istruzioni per la [versione locale](arrays-and-collections.md) .
+    Se si esegue questa operazione nell'ambiente, è necessario seguire le istruzioni per la [versione locale.](arrays-and-collections.md)
 
 
     Questo codice consente di creare un elenco di stringhe, aggiungere tre nomi all'elenco e stampare i nomi in lettere maiuscole. Vengono usati i concetti appresi nelle esercitazioni precedenti per eseguire il ciclo dell'elenco.
@@ -106,7 +106,7 @@ items:
     ```
 
 
-    Selezionare **Esegui** di nuovo per visualizzare i risultati. In C# gli indici iniziano da 0, pertanto l'indice massimo valido è minore di un'unità rispetto al numero di elementi nell'elenco.
+    Selezionare di nuovo **Esegui** per visualizzare i risultati. In C# gli indici iniziano da 0, pertanto l'indice massimo valido è minore di un'unità rispetto al numero di elementi nell'elenco.
 
 
     > [!NOTE]
@@ -230,13 +230,13 @@ items:
 
     > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
-    È stata completata questa esercitazione interattiva dedicata agli elenchi. Si tratta dell'introduzione finale all'esercitazione interattiva su C#. È possibile visitare il [sito Web .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) per scaricare .NET Core SDK, creare un progetto nel computer e continuare a scrivere codice. La sezione "passaggi successivi" riporta a queste esercitazioni.
+    È stata completata questa esercitazione interattiva dedicata agli elenchi. Si tratta dell'introduzione finale all'esercitazione interattiva su C#. È possibile visitare il [sito Web .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) per scaricare .NET Core SDK, creare un progetto nel computer e continuare a scrivere codice. La sezione "Passaggi successivi" riporta a queste esercitazioni.
 
 
     Per altre informazioni sulle [raccolte .NET](../../../standard/collections/index.md), vedere gli articoli seguenti:
 
     - [Selezione di una classe Collection](../../../standard/collections/selecting-a-collection-class.md)
 
-    - [Tipi di raccolte comunemente utilizzate](../../../standard/collections/commonly-used-collection-types.md)
+    - [Tipi di raccolta comunemente utilizzati](../../../standard/collections/commonly-used-collection-types.md)
 
     - [Quando utilizzare raccolte generiche](../../../standard/collections/when-to-use-generic-collections.md)

@@ -119,7 +119,7 @@
   href: numerics.md
 - name: 'Date, ore e fusi orari'
   href: datetime/
-- name: Events
+- name: eventi
   href: events/
 - name: processo di esecuzione gestita
   href: managed-execution-process.md
@@ -141,7 +141,7 @@
   href: data/sqlite/
 - name: Documenti e dati XML
   href: data/xml/
-- name: Security
+- name: Sicurezza
   href: security/
 - name: Serializzazione
   href: serialization/

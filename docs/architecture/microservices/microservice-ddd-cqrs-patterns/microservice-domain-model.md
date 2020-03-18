@@ -3,10 +3,10 @@ title: Progettazione di un modello di dominio del microservizio
 description: Architettura di microservizi .NET per applicazioni .NET incluse in contenitori | Comprendere i concetti principali quando si progetta un modello di dominio orientato a DDD.
 ms.date: 01/30/2020
 ms.openlocfilehash: 628fb5c76362ec8f48367b3d69d16ea6ebd24f09
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77502330"
 ---
 # <a name="design-a-microservice-domain-model"></a>Progettare un modello di dominio del microservizio
@@ -55,10 +55,10 @@ Alcune persone sostengono che il modello di dominio anemico sia un antipattern: 
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **DevIQ. \ entità di dominio**
+- **DevIQ. Entità di dominio** \
   <https://deviq.com/entity/>
 
-- **Martin Fowler. Il modello di dominio** \
+- **Martin Fowler. Il modello di dominioThe Domain Model** \
   <https://martinfowler.com/eaaCatalog/domainModel.html>
 
 - **Martin Fowler. Il modello di dominio anemico** \
@@ -74,16 +74,16 @@ Un'entità richiede un'identità, che non è necessaria invece in molti oggetti 
 
 Una persona con un nome e un cognome, in genere, costituisce un'entità perché ogni persona ha un'identità, anche se il nome e il cognome coincidono con un altro set di valori, come nel caso in cui i nomi facciano riferimento anche a una persona diversa.
 
-Gli oggetti valore sono difficili da gestire nei database relazionali e ORM come Entity Framework (EF), mentre nei database orientati ai documenti sono più facili da implementare e usare.
+Gli oggetti valore sono difficili da gestire nei database relazionali e ORM come Entity Framework (EF), mentre nei database orientati ai documenti sono più facili da implementare e utilizzare.
 
-EF Core 2,0 e versioni successive includono la funzionalità [entità di proprietà](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting) che semplifica la gestione degli oggetti valore, come si vedrà in dettaglio più avanti.
+EF Core 2.0 e versioni successive includono la funzionalità [entità](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting) di proprietà che semplifica la gestione degli oggetti valore, come vedremo in dettaglio più avanti.
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Martin Fowler. Modello oggetto valore** \
+- **Martin Fowler. Modello Oggetto valore** \
   <https://martinfowler.com/bliki/ValueObject.html>
 
-- **Oggetto valore** \
+- **Oggetto Value** \
   <https://deviq.com/value-object/>
 
 - **Oggetti valore nello sviluppo basato su test** \
@@ -108,7 +108,7 @@ Lo scopo di una radice di aggregazione è garantire la coerenza dell'aggregazion
 
 Nella figura 7-9 è possibile osservare aggregazioni di esempio come l'aggregazione Buyer (acquirente), che contiene un'unica entità (la radice di aggregazione Buyer). L'aggregazione Order contiene invece più entità e un oggetto valore.
 
-![Diagramma che confronta un'aggregazione buyer e un'aggregazione Order.](./media/microservice-domain-model/buyer-order-aggregate-pattern.png)
+![Diagramma che confronta un'aggregazione di acquirenti e un'aggregazione di ordini.](./media/microservice-domain-model/buyer-order-aggregate-pattern.png)
 
 **Figura 7-9**. Esempio di aggregazioni con una o più entità
 
@@ -133,24 +133,24 @@ Identificare ed eseguire operazioni sulle aggregazioni richiede esperienza e ric
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Vaughn Vernon. Progettazione aggregata efficace-parte I: modellazione di una singola aggregazione** (da <http://dddcommunity.org/>) \
+- **Vaughn Vernon. Progettazione effettiva dell'aggregazione - Parte I: Modellazione di un singolo aggregato** (da <http://dddcommunity.org/>)
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_1.pdf>
 
-- **Vaughn Vernon. Struttura di aggregazione efficace-parte II: creazione di aggregazioni** interagiscono (da <http://dddcommunity.org/>) \
+- **Vaughn Vernon. Progettazione aggregata efficace - Parte II: Rendere gli aggregati insieme** (da) <http://dddcommunity.org/>
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf>
 
-- **Vaughn Vernon. Progettazione aggregata efficace-parte III: acquisizione di informazioni dettagliate tramite individuazione** (da <http://dddcommunity.org/>) \
+- **Vaughn Vernon. Efficace progettazione aggregato - Parte III: Guadagno di Insight Attraverso la scoperta** (da <http://dddcommunity.org/>)
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
 
-- **Sergey Grybniak. Modelli di progettazione tattici di DDD** \
+- **Sergey Grybniak. Modelli di progettazione tattica DDD** \
   <https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part>
 
-- **Chris Richardson. Sviluppo di microservizi transazionali tramite aggregazioni** \
+- **Chris Richardson. Sviluppo di microservizi transazionali tramite aggregazioniDeveloping Transactional Microservices Using Aggregates** \
   <https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson>
 
-- **DevIQ. Modello di aggregazione** \
+- **DevIQ. Il modello Aggregazione** \
   <https://deviq.com/aggregate-pattern/>
 
 >[!div class="step-by-step"]
->[Precedente](ddd-oriented-microservice.md)
->[Successivo](net-core-microservice-domain-model.md)
+>[Successivo](ddd-oriented-microservice.md)
+>[precedente](net-core-microservice-domain-model.md)

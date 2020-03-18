@@ -1,13 +1,13 @@
-- name: Eventi
+- name: eventi
   href: index.md
   items:
-    - name: 'Procedura dettagliata: Dichiarazione e generazione di eventi'
+    - name: 'Procedura dettagliata: dichiarazione e generazione di eventi'
       href: walkthrough-declaring-and-raising-events.md
-    - name: 'Procedura dettagliata: Gestione degli eventi'
+    - name: 'Procedura dettagliata: gestione di eventi'
       href: walkthrough-handling-events.md
-    - name: 'Procedura: Dichiarare eventi personalizzati per evitare il blocco'
+    - name: 'Procedura: dichiarare eventi personalizzati per evitare il blocco'
       href: how-to-declare-custom-events-to-avoid-blocking.md
-    - name: 'Procedura: Dichiarare eventi personalizzati per proteggere la memoria'
+    - name: 'Procedura: dichiarare eventi personalizzati per proteggere la memoria'
       href: how-to-declare-custom-events-to-conserve-memory.md
     - name: Risoluzione dei problemi relativi ai gestori eventi ereditati
       href: troubleshooting-inherited-event-handlers.md

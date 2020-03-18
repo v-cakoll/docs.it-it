@@ -3,19 +3,19 @@ title: Comando dotnet sln
 description: Il comando dotnet-sln rappresenta un'opzione comoda per aggiungere, rimuovere ed elencare i progetti in un file di soluzione.
 ms.date: 02/14/2020
 ms.openlocfilehash: b2455c04a46b2a10b8142d8ddc2d8129f2154b27
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77543482"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
-**Questo articolo si applica a:** ✔️ .NET Core 2. x SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .NET Core 2.x SDK e versioni successive
 
 ## <a name="name"></a>Nome
 
-`dotnet sln`-elenca o modifica i progetti in un file di soluzione .NET Core.
+`dotnet sln`- Elenca o modifica i progetti in un file di soluzione .NET Core.- Lists or modifies the projects in a .NET Core solution file.
 
 ## <a name="synopsis"></a>Riepilogo
 
@@ -25,9 +25,9 @@ dotnet sln [<SOLUTION_FILE>] [command] [-h|--help]
 
 ## <a name="description"></a>Descrizione
 
-Il `dotnet sln` comando rappresenta un modo pratico per elencare e modificare i progetti in un file di soluzione.
+Il `dotnet sln` comando fornisce un modo pratico per elencare e modificare i progetti in un file di soluzione.
 
-Per usare il comando `dotnet sln`, il file di soluzione deve essere già esistente. Se è necessario crearne uno, usare il comando [DotNet New](dotnet-new.md) , come nell'esempio seguente:
+Per usare il comando `dotnet sln`, il file di soluzione deve essere già esistente. Se è necessario crearne uno, utilizzare il comando [dotnet new,](dotnet-new.md) come nell'esempio seguente:
 
 ```dotnetcli
 dotnet new sln
@@ -37,13 +37,13 @@ dotnet new sln
 
 - **`SOLUTION_FILE`**
 
-  File di soluzione da utilizzare. Se questo argomento viene omesso, il comando Cerca una directory corrente. Se non viene trovato alcun file di soluzione o più file di soluzione, il comando ha esito negativo.
+  File di soluzione da utilizzare. Se questo argomento viene omesso, il comando ne cerca uno nella directory corrente. Se non trova alcun file di soluzione o più file di soluzione, il comando ha esito negativo.
 
 ## <a name="options"></a>Opzioni
 
 - **`-h|--help`**
 
-  Stampa una descrizione dell'uso del comando.
+  Stampa una descrizione dell'utilizzo del comando.
 
 ## <a name="commands"></a>Comandi:
 
@@ -61,13 +61,13 @@ dotnet sln list [-h|--help]
 
 - **`SOLUTION_FILE`**
 
-  File di soluzione da utilizzare. Se questo argomento viene omesso, il comando Cerca una directory corrente. Se non viene trovato alcun file di soluzione o più file di soluzione, il comando ha esito negativo.
+  File di soluzione da utilizzare. Se questo argomento viene omesso, il comando ne cerca uno nella directory corrente. Se non trova alcun file di soluzione o più file di soluzione, il comando ha esito negativo.
 
 #### <a name="options"></a>Opzioni
 
 - **`-h|--help`**
 
-  Stampa una descrizione dell'uso del comando.
+  Stampa una descrizione dell'utilizzo del comando.
   
 ### `add`
 
@@ -84,17 +84,17 @@ dotnet sln add [-h|--help]
 
 - **`SOLUTION_FILE`**
 
-  File di soluzione da utilizzare. Se non è specificato, il comando Cerca una directory corrente e non riesce se sono presenti più file di soluzione.
+  File di soluzione da utilizzare. Se non è specificato, il comando cerca nella directory corrente uno e ha esito negativo se sono presenti più file di soluzione.
 
 - **`PROJECT_PATH`**
 
-  Percorso del progetto o dei progetti da aggiungere alla soluzione. Le espansioni del [modello glob](https://en.wikipedia.org/wiki/Glob_(programming)) della shell UNIX/Linux vengono elaborate correttamente tramite il comando `dotnet sln`.
+  Percorso del progetto o dei progetti da aggiungere alla soluzione. Le espansioni del [modello di globbing](https://en.wikipedia.org/wiki/Glob_(programming)) `dotnet sln` della shell Unix/Linux vengono elaborate correttamente dal comando.
 
 #### <a name="options"></a>Opzioni
 
 - **`-h|--help`**
 
-  Stampa una descrizione dell'uso del comando.
+  Stampa una descrizione dell'utilizzo del comando.
 
 - **`--in-root`**
 
@@ -119,21 +119,21 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
 
 - **`SOLUTION_FILE`**
 
-  File di soluzione da utilizzare. Se non viene specificato, il comando Cerca una directory corrente e non riesce se sono presenti più file di soluzione.
+  File di soluzione da utilizzare. Se non viene specificato, il comando cerca nella directory corrente uno e ha esito negativo se sono presenti più file di soluzione.
 
 - **`PROJECT_PATH`**
 
-  Percorso del progetto o dei progetti da aggiungere alla soluzione. Le espansioni del [modello glob](https://en.wikipedia.org/wiki/Glob_(programming)) della shell UNIX/Linux vengono elaborate correttamente tramite il comando `dotnet sln`.
+  Percorso del progetto o dei progetti da aggiungere alla soluzione. Le espansioni del [modello di globbing](https://en.wikipedia.org/wiki/Glob_(programming)) `dotnet sln` della shell Unix/Linux vengono elaborate correttamente dal comando.
 
 #### <a name="options"></a>Opzioni
 
 - **`-h|--help`**
 
-  Stampa una descrizione dell'uso del comando.
+  Stampa una descrizione dell'utilizzo del comando.
 
 ## <a name="examples"></a>Esempi
 
-- Elencare i progetti in una soluzione:
+- Elencare i progetti in una soluzione:List the projects in a solution:
 
   ```dotnetcli
   dotnet sln todo.sln list
@@ -151,7 +151,7 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
   dotnet sln remove todo-app/todo-app.csproj
   ```
 
-- Aggiungere più C# progetti alla radice di una soluzione:
+- Aggiungere più progetti in linguaggio C, alla radice di una soluzione:Add multiple C ' c' to the root of a solution:
 
   ```dotnetcli
   dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj --in-root
@@ -169,13 +169,13 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
   dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj
   ```
 
-- Aggiungere più C# progetti a una soluzione usando un modello glob (solo UNIX/Linux):
+- Aggiungere più progetti in linguaggio C, usando un modello di globbing (solo Unix/Linux):Add multiple C' projects to a solution using a globbing pattern (Unix/Linux only):
 
   ```dotnetcli
   dotnet sln todo.sln add **/*.csproj
   ```
 
-- Rimuovere più C# progetti da una soluzione usando un modello glob (solo UNIX/Linux):
+- Rimuovere più progetti in c'è da una soluzione utilizzando un modello di globbing (solo Unix/Linux):Remove multiple C' projects from a solution using a globbing pattern (Unix/Linux only):
 
   ```dotnetcli
   dotnet sln todo.sln remove **/*.csproj

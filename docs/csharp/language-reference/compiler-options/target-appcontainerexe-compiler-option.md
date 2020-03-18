@@ -3,14 +3,14 @@ title: -target:appcontainerexe (opzioni del compilatore C#)
 ms.date: 07/20/2015
 ms.assetid: e7e62229-23ea-4e53-bef5-380d951bf95f
 ms.openlocfilehash: 64661e72f9efe190606cadd93558678cb849e8cc
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74204529"
 ---
 # <a name="-targetappcontainerexe-c-compiler-options"></a>-target:appcontainerexe (opzioni del compilatore C#)
-Se si usa l'opzione del compilatore **-target:appcontainerexe**, il compilatore crea un file eseguibile Windows (con estensione exe) che deve essere eseguito in un contenitore di app. Questa opzione equivale a [-target: winexe](./target-winexe-compiler-option.md) , ma è progettata per le app di Windows 8. x Store.  
+Se si usa l'opzione del compilatore **-target:appcontainerexe**, il compilatore crea un file eseguibile Windows (con estensione exe) che deve essere eseguito in un contenitore di app. Questa opzione è equivalente a [-target:winexe,](./target-winexe-compiler-option.md) ma è progettata per le app di Windows 8.x Store.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -27,11 +27,11 @@ Se si usa l'opzione del compilatore **-target:appcontainerexe**, il compilatore 
   
 ### <a name="to-set-this-compiler-option-in-the-ide"></a>Per impostare l'opzione del compilatore nell'IDE  
   
-1. In **Esplora soluzioni** aprire il menu di scelta rapida per il progetto e scegliere **Proprietà**.  
+1. In **Esplora soluzioni**aprire il menu di scelta rapida per il progetto, quindi scegliere **Proprietà**.  
   
 2. Nell'elenco **Tipo di output** della scheda **Applicazione** scegliere **Applicazione Windows Store**.  
   
-     Questa opzione è disponibile solo per i modelli di app di Windows 8. x Store.  
+     Questa opzione è disponibile solo per i modelli di app di Windows 8.x Store.  
   
  Per informazioni su come impostare questa opzione del compilatore a livello di codice, vedere <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   
@@ -45,5 +45,5 @@ csc -target:appcontainerexe filename.cs
 ## <a name="see-also"></a>Vedere anche
 
 - [-target (opzioni del compilatore C#)](./target-compiler-option.md)
-- [-target:winexe (opzioni del compilatore C#)](./target-winexe-compiler-option.md)
-- [Opzioni del compilatore C#](./index.md)
+- [-target:winexe (opzioni del compilatore C](./target-winexe-compiler-option.md)
+- [Opzioni del compilatore C](./index.md)

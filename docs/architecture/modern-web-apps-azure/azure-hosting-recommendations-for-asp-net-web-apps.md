@@ -5,16 +5,16 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 06/06/2019
 ms.openlocfilehash: 5587b8b20da8a6801d77b722e9c3326f6e695574
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73416720"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Consigli relativi all'hosting di Azure per le applicazioni Web ASP.NET Core
 
 > "I responsabili line-of-business ignorano l'ufficio IT e acquistano direttamente abbonamenti ad applicazioni nel cloud (note anche come SaaS), come se si trattasse di abbonamenti a riviste. Quando il servizio non è più necessario, possono annullare l'abbonamento senza dover gestire componenti obsoleti".  
-> _\- Daryl Plummer, analista Gartner_
+> _\-Daryl Plummer, analista di Gartner_
 
 Microsoft Azure supporta le esigenze e l'architettura di qualsiasi applicazione. Le esigenze di hosting possono essere semplici come quelle di un sito Web statico o sofisticate come quelle di applicazioni costituite da decine di servizi. Per le applicazioni Web monolitiche e i servizi di supporto ASP.NET Core è possibile consigliare l'uso di diverse combinazioni note. Le indicazioni riportate in questo articolo sono raggruppate in base al tipo di risorse da ospitare, a seconda che si tratti di applicazioni complete, singoli processi o dati.
 
@@ -44,7 +44,7 @@ Le app Web del servizio app offrono una piattaforma completamente gestita, ottim
 
 - Integrazione con Visual Studio.
 
-Il servizio app di Azure è la scelta ottimale per la maggior parte delle applicazioni Web. La gestione e la distribuzione sono integrate nella piattaforma e i siti possono essere ridimensionati rapidamente per gestire volumi di traffico elevati, mentre il bilanciamento e la gestione del traffico incorporati garantiscono una disponibilità elevata. È possibile spostare facilmente siti esistenti al servizio app di Azure con uno strumento di migrazione online, usare un'app open source dalla Raccolta di app Web o creare un nuovo sito usando il framework e gli strumenti preferiti. La funzionalità Processi Web semplifica l'aggiunta dell'elaborazione di processi in background all'app Web del servizio app. Se si usa un'applicazione ASP.NET ospitata in un database locale, è disponibile un percorso diretto per la migrazione dell'app in un'app Web del servizio app tramite un database SQL di Azure (o, se si preferisce, per la protezione dell'accesso al server di database locale).
+Azure App Service è la scelta migliore per la maggior parte delle app Web. La distribuzione e la gestione sono integrate nella piattaforma ed è possibile scalare rapidamente i siti per gestire carichi di traffico elevato; inoltre, il bilanciamento del carico e la gestione del traffico predefiniti offrono disponibilità elevata. È possibile spostare facilmente siti esistenti al servizio app di Azure con uno strumento di migrazione online, usare un'app open source dalla Raccolta di app Web o creare un nuovo sito usando il framework e gli strumenti preferiti. La funzionalità Processi Web semplifica l'aggiunta dell'elaborazione di processi in background all'app Web del servizio app. Se si usa un'applicazione ASP.NET ospitata in un database locale, è disponibile un percorso diretto per la migrazione dell'app in un'app Web del servizio app tramite un database SQL di Azure (o, se si preferisce, per la protezione dell'accesso al server di database locale).
 
 ![Strategia consigliata per la migrazione di app .NET locali al servizio app di Azure](./media/image1-6.png)
 
@@ -78,18 +78,18 @@ Quando parti di applicazioni più grandi vengono suddivise in *microservizi* ind
 
 ### <a name="azure-kubernetes-service"></a>Servizio Azure Kubernetes
 
-Il servizio Azure Kubernetes gestisce l'ambiente Kubernetes ospitato, rendendo veloce e facile distribuire e gestire applicazioni in contenitori senza competenze nell'orchestrazione di contenitori. Elimina inoltre il carico delle operazioni in corso e la manutenzione con il provisioning, l'aggiornamento e il ridimensionamento delle risorse su richiesta, senza portare offline le applicazioni.
+Il servizio Azure Kubernetes gestisce l'ambiente Kubernetes ospitato consentendo di distribuire e gestire applicazioni in contenitori in modo semplice e rapido senza competenze nell'orchestrazione di contenitori. Elimina anche l'impegno delle operazioni in corso e della manutenzione effettuando il provisioning, l'aggiornamento e il ridimensionamento delle risorse su richiesta, senza portare le applicazioni offline.
 
-Il servizio Azure Kubernetes riduce la complessità e i costi operativi di gestione di un cluster Kubernetes addossando gran parte di tale responsabilità ad Azure. Come un servizio Kubernetes ospitato, Azure gestisce attività critiche come il monitoraggio dell'integrità e la manutenzione per conto dell'utente. Inoltre, vengono addebitati solo i costi relativi ai nodi agente all'interno del cluster, non per i master. Come servizio Kubernetes gestito, il servizio Azure Kubernetes fornisce:
+servizio Azure Kubernetes riduce la complessità e costi operativi di gestione di un cluster Kubernetes addossando gran parte di tale responsabilità ad Azure. Come servizio Kubernetes ospitato, Azure gestisce attività critiche quali il monitoraggio dell'integrità e la manutenzione per l'utente. Inoltre, vengono addebitati solo i costi relativi ai nodi agente all'interno del cluster, non per i master. Come servizio Kubernetes gestito, servizio Azure Kubernetes fornisce:
 
 - Aggiornamenti e patch automatizzati della versione di Kubernetes.
 - Ridimensionamento semplice dei cluster.
 - Piano di controllo ospitato di riparazione automatica (master).
 - Risparmio sui costi: vengono addebitati solo i costi di esecuzione dei nodi dei pool di agenti.
 
-Grazie alla gestione dei nodi nel cluster del servizio Azure Kubernetes da parte di Azure, non è più necessario eseguire molte attività manualmente, ad esempio gli aggiornamenti del cluster. Poiché Azure gestisce queste attività di manutenzione critiche per l'utente, il servizio Azure Kubernetes non fornisce accesso diretto (ad esempio con SSH) al cluster.
+Con la gestione dei nodi da parte di Azure nel cluster servizio Azure Kubernetes non è più necessario eseguire manualmente numerose attività, ad esempio gli aggiornamenti dei cluster. Poiché Azure gestisce queste attività di manutenzione critiche per l'utente, il servizio Azure Kubernetes non fornisce accesso diretto (ad esempio con SSH) al cluster.
 
-I team che usano il servizio Azure Kubernetes possono avvalersi anche di Azure Dev Spaces. Azure Dev Spaces consente ai team di concentrarsi sullo sviluppo e l'iterazione dell'applicazione di microservizi in tempi rapidi, consentendo loro di eseguire le operazioni direttamente sull'intera architettura di microservizi o su un'applicazione in esecuzione nel servizio Azure Kubernetes. Azure Dev Spaces offre inoltre la possibilità di aggiornare in modo indipendente parti dell'architettura di microservizi in isolamento, senza influire sul resto del cluster del servizio Azure Kubernetes o sugli altri sviluppatori.
+I team che usano il servizio Azure Kubernetes possono avvalersi anche di Azure Dev Spaces. Con Azure Dev Spaces i team possono concentrarsi sullo sviluppo e sulla rapida iterazione della propria applicazione di microservizi, grazie alla possibilità di lavorare direttamente con l'intera architettura o applicazione di microservizi nel servizio Azure Kubernetes. Azure Dev Spaces consente anche di aggiornare parti dell'architettura di microservizi in modo indipendente e in completo isolamento, senza alcun impatto sul resto del cluster del servizio Azure Kubernetes o su altri sviluppatori.
 
 ![Esempio di flusso di lavoro di Azure Dev Spaces](./media/image1-9.gif)
 
@@ -110,13 +110,13 @@ Se un'applicazione esistente richiede modifiche sostanziali per l'esecuzione nel
 
 I singoli processi logici separabili dal resto dell'applicazione possono essere distribuiti in modo indipendente a Funzioni di Azure con la modalità "senza server". Funzioni di Azure consente di scrivere solo il codice necessario per un problema specifico, senza preoccuparsi dell'applicazione o dell'infrastruttura necessarie per eseguire l'applicazione. È possibile scegliere il linguaggio più produttivo per l'attività in questione tra una vasta gamma di linguaggi di programmazione, che include C\#, F\#, Node.js, Python e PHP. Come per la maggior parte delle soluzioni basate sul cloud si paga solo per il tempo d'uso ed è possibile espandere Funzioni di Azure a piacere per soddisfare qualsiasi esigenza.
 
-## <a name="data"></a>Dati
+## <a name="data"></a>Data
 
 Azure offre una vasta gamma di opzioni per l'archiviazione di dati, pertanto l'applicazione può usare il provider appropriato per i dati in questione.
 
 Per i dati transazionali e relazionali la soluzione migliore è rappresentata dai database SQL di Azure. Per dati che richiedono prestazioni elevate e sono prevalentemente di sola lettura, una cache Redis supportata da un database SQL di Azure può essere una soluzione ottimale.
 
-I dati JSON non strutturati possono essere archiviati in diversi modi, dalle colonne del database SQL ai BLOB o alle tabelle in archiviazione di Azure, per Azure Cosmos DB. Azure Cosmos DB offre la migliore funzionalità di query ed è l'opzione consigliata per un numero elevato di documenti basati su JSON che devono supportare l'esecuzione di query.
+I dati JSON non strutturati possono essere archiviati in diversi modi, dalle colonne del database SQL ai BLOB o alle tabelle in Archiviazione di Azure, al database Cosmos di Azure.Unstructured JSON data can be stored in a variety of ways, from SQL Database columns to Blobs or Tables in Azure Storage, to Azure Cosmos DB. Di questi, Azure Cosmos DB offre la migliore funzionalità di query ed è l'opzione consigliata per un numero elevato di documenti basati su JSON che devono supportare l'esecuzione di query.
 
 Per i dati temporanei basati su comandi o eventi e usati per orchestrare il comportamento dell'applicazione è consigliabile usare il bus di servizio di Azure o le code di Archiviazione di Azure. Il bus di archiviazione di Azure offre maggior flessibilità ed è il servizio consigliato per la messaggistica non semplice all'interno dell'applicazione e tra le applicazioni.
 
@@ -124,13 +124,13 @@ Per i dati temporanei basati su comandi o eventi e usati per orchestrare il comp
 
 L'architettura dovrebbe dipendere dai requisiti dell'applicazione. Sono disponibili molti servizi di Azure diversi. La scelta di quello giusto è una decisione importante. Microsoft offre una raccolta di architetture di riferimento per favorire l'identificazione delle architetture tipiche ottimizzate per scenari comuni. È possibile associare l'architettura di riferimento più conforme ai requisiti dell'applicazione o quantomeno un'architettura che garantisca un punto di partenza.
 
-La figura 11-1 illustra un'architettura di riferimento di esempio. Questo diagramma illustra un approccio di architettura consigliato per un sito Web CMS (Content Management System) Sitecore, ottimizzato per il marketing.
+Nella figura 11-1 viene illustrata un'architettura di riferimento di esempio. Questo diagramma illustra un approccio di architettura consigliato per un sito Web CMS (Content Management System) Sitecore, ottimizzato per il marketing.
 
 ![Figura 11-1](./media/image11-2.png)
 
-**Figura 11-1.** Architettura di riferimento del sito Web di marketing Sitecore.
+**figura 11-1.** Architettura di riferimento del sito Web di marketing Sitecore.
 
-**Riferimenti - Consigli relativi all'hosting di Azure**
+**Riferimenti – Consigli per l'hosting di AzureReferences – Azure hosting recommendations**
 
 - Architetture delle soluzioni Azure\
   <https://azure.microsoft.com/solutions/architecture/>
@@ -154,4 +154,4 @@ La figura 11-1 illustra un'architettura di riferimento di esempio. Questo diagra
   <https://docs.microsoft.com/azure/aks/intro-kubernetes>
 
 >[!div class="step-by-step"]
->[Precedente](development-process-for-azure.md)
+>[Indietro](development-process-for-azure.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - target compiler options [C#], /target:winexe
 ms.assetid: b5a0619c-8caa-46a5-a743-1cf68408ad7a
 ms.openlocfilehash: 981f1b0b6ca9f708bb022a3662ab181a4f472040
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69606383"
 ---
 # <a name="-targetwinexe-c-compiler-options"></a>-target:winexe (opzioni del compilatore C#)
@@ -37,7 +37,7 @@ Con l'opzione **-target:winexe** il compilatore crea un file eseguibile (EXE), o
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1. Aprire la pagine **Proprietà** del progetto.  
+1. Aprire la pagina **Proprietà** del progetto.  
   
 2. Fare clic sulla pagina delle proprietà **Applicazione**.  
   
@@ -55,4 +55,4 @@ csc -target:winexe in.cs
 ## <a name="see-also"></a>Vedere anche
 
 - [-target (opzioni del compilatore C#)](./target-compiler-option.md)
-- [Opzioni del compilatore C#](./index.md)
+- [Opzioni del compilatore C](./index.md)

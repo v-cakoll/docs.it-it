@@ -3,10 +3,10 @@ title: Implementazione dei tentativi con backoff esponenziale
 description: Informazioni su come implementare i tentativi con backoff esponenziale.
 ms.date: 10/16/2018
 ms.openlocfilehash: 1b948e399495eeb12016006442ac08d2b04f2e69
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68674538"
 ---
 # <a name="implement-retries-with-exponential-backoff"></a>Implementazione dei tentativi con backoff esponenziale
@@ -16,5 +16,5 @@ I [*tentativi con backoff esponenziale*](/azure/architecture/patterns/retry) son
 Esistono molti approcci all'implementazione della logica per i tentativi con backoff esponenziale.
 
 >[!div class="step-by-step"]
->[Precedente](partial-failure-strategies.md)
->[Successivo](implement-resilient-entity-framework-core-sql-connections.md)
+>[Successivo](partial-failure-strategies.md)
+>[precedente](implement-resilient-entity-framework-core-sql-connections.md)

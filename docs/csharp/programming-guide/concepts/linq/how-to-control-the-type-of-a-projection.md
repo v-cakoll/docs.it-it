@@ -1,15 +1,15 @@
 ---
-title: Come controllare il tipo di una proiezione (C#)
+title: Come controllare il tipo di una proiezione (C )
 ms.date: 07/20/2015
 ms.assetid: e4db6b7e-4cc9-4c8f-af85-94acf32aa348
 ms.openlocfilehash: cb7c272fbe67c0700b5740691befc483993f4e29
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141360"
 ---
-# <a name="how-to-control-the-type-of-a-projection-c"></a>Come controllare il tipo di una proiezione (C#)
+# <a name="how-to-control-the-type-of-a-projection-c"></a>Come controllare il tipo di una proiezione (C )
 Per proiezione si intende il processo in cui un unico set di dati viene accettato e filtrato, ne viene cambiata la forma e persino il tipo. Le proiezioni vengono eseguite nella maggior parte delle espressioni di query. Quasi tutte le espressioni di query illustrate in questa sezione restituiscono il tipo <xref:System.Collections.Generic.IEnumerable%601> di <xref:System.Xml.Linq.XElement>, tuttavia è possibile controllare il tipo della proiezione per creare raccolte di altri tipi. In questo argomento viene illustrato come eseguire questa operazione.  
   
 ## <a name="example"></a>Esempio  

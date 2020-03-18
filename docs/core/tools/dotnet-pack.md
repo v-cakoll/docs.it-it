@@ -3,15 +3,15 @@ title: Comando dotnet pack
 description: Il comando dotnet pack consente di creare pacchetti NuGet per il progetto .NET Core.
 ms.date: 02/14/2020
 ms.openlocfilehash: 865262f1eb314f9b7e8ee713c573a965e89ded93
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503652"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
-**Questo articolo si applica a:** ✔️ .NET Core 2. x SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .NET Core 2.x SDK e versioni successive
 
 ## <a name="name"></a>Nome
 
@@ -28,12 +28,12 @@ dotnet pack [-h|--help]
 
 ## <a name="description"></a>Descrizione
 
-Il comando `dotnet pack` consente di compilare il progetto e creare pacchetti NuGet. Il risultato di questo comando è un pacchetto NuGet, ovvero un file con *estensione nupkg* .
+Il comando `dotnet pack` consente di compilare il progetto e creare pacchetti NuGet. Il risultato di questo comando è un pacchetto NuGet, ovvero un file *con estensione nupkg.*
 
-Se si desidera generare un pacchetto che contiene i simboli di debug, sono disponibili due opzioni:
+Se si desidera generare un pacchetto che contiene i simboli di debug, sono disponibili due opzioni:If you want to generate a package that contains the debug symbols, you have two options available:
 
-- `--include-symbols`: crea il pacchetto di simboli.
-- `--include-source`: crea il pacchetto di simboli con una cartella `src` all'interno di che contiene i file di origine.
+- `--include-symbols`- crea il pacchetto simboli.
+- `--include-source`- crea il pacchetto `src` di simboli con una cartella all'interno contenente i file di origine.
 
 Le dipendenze NuGet del progetto compresso vengono aggiunte al file con estensione *nuspec*, in modo da poter essere risolte durante l'installazione del pacchetto. I riferimenti da progetto a progetto non sono inseriti all'interno del progetto. Attualmente è necessario disporre di un pacchetto per ogni progetto se sono presenti dipendenze da progetto a progetto.
 
@@ -55,13 +55,13 @@ Per impostazione predefinita, non è possibile creare un pacchetto dei progetti 
 
 `PROJECT | SOLUTION`
 
-  Progetto o soluzione da comprimere. Si tratta di un percorso di un [file csproj](csproj.md), di un file di soluzione o di una directory. Se non specificato, il comando Cerca nella directory corrente un file di progetto o di soluzione.
+  Progetto o soluzione da comprimere. Si tratta di un percorso a un [file csproj](csproj.md), un file di soluzione o una directory. Se non specificato, il comando cerca nella directory corrente un file di progetto o di soluzione.
 
 ## <a name="options"></a>Opzioni
 
 - **`-c|--configuration <CONFIGURATION>`**
 
-  Definisce la configurazione di compilazione. Il valore predefinito per la maggior parte dei progetti è `Debug`, ma è possibile eseguire l'override delle impostazioni di configurazione della build nel progetto.
+  Definisce la configurazione di compilazione. L'impostazione predefinita `Debug`per la maggior parte dei progetti è , ma è possibile eseguire l'override delle impostazioni di configurazione della compilazione nel progetto.
 
 - **`--force`**
 
@@ -73,11 +73,11 @@ Per impostazione predefinita, non è possibile creare un pacchetto dei progetti 
 
 - **`--include-source`**
 
-  Include i pacchetti NuGet dei simboli di debug oltre ai pacchetti NuGet normali nella directory di output. I file di origine sono inclusi nella cartella `src` all'interno del pacchetto di simboli.
+  Include i simboli di debug NuGet pacchetti oltre ai normali pacchetti NuGet nella directory di output. I file di origine `src` sono inclusi nella cartella all'interno del pacchetto di simboli.
 
 - **`--include-symbols`**
 
-  Include i pacchetti NuGet dei simboli di debug oltre ai pacchetti NuGet normali nella directory di output.
+  Include i simboli di debug NuGet pacchetti oltre ai normali pacchetti NuGet nella directory di output.
 
 - **`--interactive`**
 
@@ -163,7 +163,7 @@ Per impostazione predefinita, non è possibile creare un pacchetto dei progetti 
   dotnet pack -p:TargetFrameworks=net45
   ```
 
-- Comprimere il progetto e usare un runtime specifico (Windows 10) per l'operazione di ripristino:
+- Comprimere il progetto e usare un runtime specifico (Windows 10) per l'operazione di ripristino:Pack the project and use a specific runtime (Windows 10) for the restore operation:
 
   ```dotnetcli
   dotnet pack --runtime win10-x64

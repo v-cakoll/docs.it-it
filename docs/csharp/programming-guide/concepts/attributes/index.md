@@ -2,11 +2,11 @@
 title: Attributi (C#)
 ms.date: 04/26/2018
 ms.openlocfilehash: 2a07035ea97bb0ff1a8f4793fe8a30d3a42c34a7
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141561"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79399749"
 ---
 # <a name="attributes-c"></a>Attributi (C#)
 
@@ -19,7 +19,7 @@ Di seguito sono riportate le proprietà degli attributi:
 - Gli attributi possono accettare argomenti nello stesso modo dei metodi e delle proprietà.
 - Il programma può esaminare i propri metadati oppure i metadati di un altro programma tramite reflection. Per altre informazioni, vedere [Accesso agli attributi tramite reflection (C#)](accessing-attributes-by-using-reflection.md).
 
-## <a name="using-attributes"></a>Uso degli attributi
+## <a name="using-attributes"></a>Utilizzo di attributi
 
 È possibile usare attributi nella maggior parte delle dichiarazioni, anche se la validità di un attributo specifico può essere limitata ad alcuni tipi di dichiarazione. Per specificare un attributo in C# inserire il nome dell'attributo racchiuso tra parentesi quadre ([]) sopra la dichiarazione dell'entità a cui è applicato.
 
@@ -57,7 +57,7 @@ Il primo parametro, ovvero il nome della DLL, è posizionale ed è sempre specif
 
 ### <a name="attribute-targets"></a>Destinazioni degli attributi
 
-La *destinazione* di un attributo è l'entità a cui tale attributo viene applicato. Un attributo, ad esempio, può essere applicato a una classe, a un metodo particolare o a un intero assembly. Per impostazione predefinita, un attributo viene applicato all'elemento che lo segue. È tuttavia possibile identificare in modo esplicito, ad esempio, se un attributo viene applicato a un metodo, al relativo parametro o al relativo valore restituito.
+La *destinazione* di un attributo è l'entità a cui tale attributo viene applicato. Un attributo, ad esempio, può essere applicato a una classe, a un metodo particolare o a un intero assembly. Per impostazione predefinita, un attributo si applica all'elemento che lo segue. È tuttavia possibile identificare in modo esplicito, ad esempio, se un attributo viene applicato a un metodo, al relativo parametro o al relativo valore restituito.
 
 Per identificare in modo esplicito la destinazione di un attributo, usare la sintassi seguente:
 
@@ -72,10 +72,10 @@ Nella tabella seguente sono elencati i possibili valori di `target`.
 |`assembly`|Intero assembly|
 |`module`|Modulo di assembly corrente|
 |`field`|Campo in una classe o uno struct|
-|`event`|event|
+|`event`|Event|
 |`method`|Metodo o funzioni di accesso alle proprietà `get` e `set`|
 |`param`|Parametri del metodo o parametri della funzione di accesso alla proprietà `set`|
-|`property`|proprietà|
+|`property`|Proprietà|
 |`return`|Valore restituito di un metodo, un indicizzatore di proprietà o una funzione di accesso alla proprietà `get`|
 |`type`|Struct, classe, interfaccia, enumeratore o delegato|
 
@@ -101,8 +101,8 @@ Nell'esempio seguente viene illustrato come applicare gli attributi a metodi, pa
 
 Di seguito vengono elencati alcuni degli usi comuni degli attributi nel codice:
 
-- Contrassegno dei metodi mediante l'attributo `WebMethod` nei servizi Web per indicare che è possibile chiamare il metodo tramite il protocollo SOAP. Per ulteriori informazioni, vedere <xref:System.Web.Services.WebMethodAttribute>.
-- Descrizione della procedura di marshalling dei parametri del metodo durante l'interazione con il codice nativo. Per ulteriori informazioni, vedere <xref:System.Runtime.InteropServices.MarshalAsAttribute>.
+- Contrassegno dei metodi mediante l'attributo `WebMethod` nei servizi Web per indicare che è possibile chiamare il metodo tramite il protocollo SOAP. Per altre informazioni, vedere <xref:System.Web.Services.WebMethodAttribute>.
+- Descrizione della procedura di marshalling dei parametri del metodo durante l'interazione con il codice nativo. Per altre informazioni, vedere <xref:System.Runtime.InteropServices.MarshalAsAttribute>.
 - Descrizione delle proprietà COM per classi, metodi e interfacce.
 - Chiamata al codice non gestito che usa la classe <xref:System.Runtime.InteropServices.DllImportAttribute>.
 - Descrizione dell'assembly con indicazione di titolo, versione, descrizione o marchio.
@@ -118,8 +118,8 @@ Di seguito vengono elencati alcuni degli usi comuni degli attributi nel codice:
 Per altre informazioni, vedere:
 
 - [Creazione di attributi personalizzati (C#)](creating-custom-attributes.md)  
-- [Accessing Attributes by Using Reflection (C#)](accessing-attributes-by-using-reflection.md) (Accesso agli attributi tramite reflection (C#))  
-- [Come creare un'Unione C/C++ Unione usando gli attributi (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
+- [Accessing Attributes by Using Reflection (C#)](accessing-attributes-by-using-reflection.md) (Accesso agli attributi con reflection (C#))  
+- [Come creare un'unione C/C](how-to-create-a-c-cpp-union-by-using-attributes.md)  
 - [Attributi comuni (C#)](common-attributes.md)  
 - [Informazioni sul chiamante (C#)](../caller-information.md)  
 

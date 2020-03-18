@@ -1,15 +1,15 @@
 ---
-title: Come trovare un elemento con un elemento figlio specifico (C#)
+title: Come trovare un elemento con un elemento figlio specifico (c'è)How to find an element with a specific child element (C
 ms.date: 07/20/2015
 ms.assetid: 00cf5555-374e-4369-bf93-7bd2e7f21db3
 ms.openlocfilehash: 0536b1b92d4d7fc18b5d406bbcd24aefc6a840c6
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141151"
 ---
-# <a name="how-to-find-an-element-with-a-specific-child-element-c"></a>Come trovare un elemento con un elemento figlio specifico (C#)
+# <a name="how-to-find-an-element-with-a-specific-child-element-c"></a>Come trovare un elemento con un elemento figlio specifico (c'è)How to find an element with a specific child element (C
 In questo argomento viene illustrato come trovare un determinato elemento che include un elemento figlio con un valore specifico.  
   
 ## <a name="example"></a>Esempio  
@@ -61,5 +61,5 @@ foreach (XElement el in tests)
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [Panoramica degli operatori di query standard (C#)](./standard-query-operators-overview.md)
+- [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md) (Panoramica degli operatori di query standard)
 - [Operazioni di proiezione (C#)](./projection-operations.md)

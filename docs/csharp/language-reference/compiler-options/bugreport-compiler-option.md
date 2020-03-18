@@ -9,10 +9,10 @@ helpviewer_keywords:
 - bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
 ms.openlocfilehash: 0989678be070910c410d71717fe66679e1b70557
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69603075"
 ---
 # <a name="-bugreport-c-compiler-options"></a>-bugreport (opzioni del compilatore C#s)
@@ -29,7 +29,7 @@ Specifica che le informazioni di debug devono essere inserite in un file per ana
  Nome del file in cui si vuole inserire il report sui bug.  
   
 ## <a name="remarks"></a>Osservazioni  
- L'opzione **-bugreport** specifica che in `file` devono essere inserite le informazioni seguenti:  
+ L'opzione **-bugreport** specifica che le seguenti `file`informazioni devono essere inserite in :  
   
 - Una copia di tutti i file di codice sorgente nella compilazione.  
   
@@ -45,7 +45,7 @@ Specifica che le informazioni di debug devono essere inserite in un file per ana
   
 - Una descrizione del modo in cui si può risolvere il problema, che verrà richiesta.  
   
- Se questa opzione viene usata con **-errorreport:prompt** o **-errorreport:send**, le informazioni nel file verranno inviate a Microsoft Corporation.  
+ Se questa opzione viene utilizzata con **-errorreport:prompt** o **-errorreport:send**, le informazioni contenute nel file verranno inviate a Microsoft Corporation.  
   
  Dato che una copia di tutti i file di codice sorgente verrà inserita in `file`, potrebbe essere utile riprodurre il sospetto difetto del codice nel programma più breve possibile.  
   
@@ -55,6 +55,6 @@ Specifica che le informazioni di debug devono essere inserite in un file per ana
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Opzioni del compilatore C#](./index.md)
-- [-errorreport (opzioni del compilatore C#)](./errorreport-compiler-option.md)
+- [Opzioni del compilatore C](./index.md)
+- [-errorreport (opzioni del compilatore C](./errorreport-compiler-option.md)
 - [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)

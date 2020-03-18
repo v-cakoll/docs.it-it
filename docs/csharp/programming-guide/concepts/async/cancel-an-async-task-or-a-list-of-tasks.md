@@ -3,10 +3,10 @@ title: Annullare un'attività asincrona o un elenco di attività (C#)
 ms.date: 07/20/2015
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
 ms.openlocfilehash: 93526f772f79e993767fd8f29087b6caf4e29468
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69595725"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>Annullare un'attività asincrona o un elenco di attività (C#)
@@ -24,11 +24,11 @@ Il primo esempio associa il pulsante **Annulla** con un'attività di download si
 
 ### <a name="download-the-example"></a>Scaricare l'esempio
 
-È possibile scaricare i progetti completi di Windows Presentation Foundation (WPF) da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di codice asincrono: ottimizzazione dell'applicazione) e quindi seguire questa procedura.
+È possibile scaricare il progetto completo di Windows Presentation Foundation (WPF) da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: ottimizzazione dell'applicazione) e seguire la procedura seguente.
 
 1. Decomprimere il file scaricato e quindi avviare Visual Studio.
 
-2. Nella barra dei menu scegliere **File** > **Apri** > **Progetto/soluzione**.
+2. Nella barra dei menu scegliere**Apri** > **progetto/soluzione** **apri file** > .
 
 3. Nella finestra di dialogo **Apri progetto** aprire la cartella che contiene il codice di esempio che è stato decompresso e aprire il file di soluzione (SLN) per AsyncFineTuningCS.
 
@@ -144,11 +144,11 @@ Il primo esempio associa il pulsante **Annulla** con un'attività di download si
 
 ### <a name="download-the-example"></a>Scaricare l'esempio
 
-È possibile scaricare i progetti completi di Windows Presentation Foundation (WPF) da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di codice asincrono: ottimizzazione dell'applicazione) e quindi seguire questa procedura.
+È possibile scaricare il progetto completo di Windows Presentation Foundation (WPF) da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: ottimizzazione dell'applicazione) e seguire la procedura seguente.
 
 1. Decomprimere il file scaricato e quindi avviare Visual Studio.
 
-2. Nella barra dei menu scegliere **File** > **Apri** > **Progetto/soluzione**.
+2. Nella barra dei menu scegliere**Apri** > **progetto/soluzione** **apri file** > .
 
 3. Nella finestra di dialogo **Apri progetto** aprire la cartella che contiene il codice di esempio che è stato decompresso e aprire il file di soluzione (SLN) per AsyncFineTuningCS.
 
@@ -156,7 +156,7 @@ Il primo esempio associa il pulsante **Annulla** con un'attività di download si
 
 5. Premere **F5** per eseguire il progetto.
 
-     Premere **CTRL**+**F5** per eseguire il progetto senza il debug.
+     Scegliere i tasti **Ctrl**+**F5** per eseguire il progetto senza eseguirne il debug.
 
 Se non si vuole scaricare il progetto, è possibile rivedere i file MainWindow.xaml.cs alla fine di questo argomento.
 
@@ -258,7 +258,7 @@ Per estendere l'esempio passo a passo, seguire le istruzioni nella sezione "Down
 
 Le sezioni seguenti contengono il codice per ognuno degli esempi precedenti. Si noti che è necessario aggiungere un riferimento per <xref:System.Net.Http>.
 
-È possibile scaricare i progetti da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di codice asincrono: Ottimizzazione dell'applicazione).
+È possibile scaricare i progetti da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: ottimizzazione dell'applicazione).
 
 ### <a name="example---cancel-a-task"></a>Esempio - Annullare un'attività
 
@@ -521,6 +521,6 @@ namespace CancelAListOfTasks
 
 - <xref:System.Threading.CancellationTokenSource>
 - <xref:System.Threading.CancellationToken>
-- [Programmazione asincrona con Async e Await (C#)](./index.md)
-- [Ottimizzazione dell'applicazione Async (C#)](./fine-tuning-your-async-application.md)
-- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di codice asincrono: Ottimizzazione dell'applicazione)
+- [Programmazione asincrona con async e await (C#)](./index.md)
+- [Ottimizzazione dell'applicazione asincrona (C#)](./fine-tuning-your-async-application.md)
+- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: Ottimizzazione dell'applicazione)

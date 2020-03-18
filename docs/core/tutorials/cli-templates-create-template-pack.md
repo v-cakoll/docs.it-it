@@ -6,21 +6,21 @@ ms.date: 12/10/2019
 ms.topic: tutorial
 ms.author: adegeo
 ms.openlocfilehash: 5bc926861dd6a501d7c2d24bd5f7c4116cc78b2c
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503498"
 ---
-# <a name="tutorial-create-a-template-pack"></a>Esercitazione: creare un pacchetto di modelli
+# <a name="tutorial-create-a-template-pack"></a>Esercitazione: Creare un pacchetto di modelliTutorial: Create a template pack
 
-Con .NET Core è possibile creare e distribuire modelli per generare progetti, file e persino risorse. Questa esercitazione è la terza parte di una serie che illustra come creare, installare e disinstallare i modelli da usare con il comando `dotnet new`.
+Con .NET Core è possibile creare e distribuire modelli per generare progetti, file e persino risorse. Questa esercitazione è la terza parte di una serie che illustra come creare, installare e disinstallare modelli da usare con il `dotnet new` comando.
 
 In questa parte della serie si apprenderà come:
 
 > [!div class="checklist"]
 >
-> * Creare un progetto \*. csproj per compilare un pacchetto di modelli
+> * Creare \*un progetto con estensione csproj per compilare un pacchetto di modelliCreate a .csproj project to build a template pack
 > * Configurare il file di progetto per la creazione del pacchetto
 > * Installare un modello da un file di pacchetto NuGet
 > * Disinstallare un modello in base all'ID del pacchetto
@@ -29,9 +29,9 @@ In questa parte della serie si apprenderà come:
 
 * Completare la [parte 1](cli-templates-create-item-template.md) e la [parte 2](cli-templates-create-project-template.md) di questa serie di esercitazioni.
 
-  Questa esercitazione usa i due modelli creati nelle prime due parti di questa esercitazione. È possibile usare un modello diverso, purché si copi il modello, come cartella, nella cartella _working\templates\\_ .
+  Questa esercitazione usa i due modelli creati nelle prime due parti di questa esercitazione. È possibile utilizzare un modello diverso, purché si copi il modello, come cartella, nella cartella _working/templates.\\ _
 
-* Aprire un terminale e passare alla cartella _working\\_ .
+* Aprire un terminale e passare alla cartella _di lavoro.\\ _
 
 ## <a name="create-a-template-pack-project"></a>Creare un progetto per il pacchetto di modelli
 
@@ -41,7 +41,7 @@ I pacchetti di modelli sono rappresentati da un file di pacchetto NuGet (con est
 
 Normalmente si usa un file di progetto C# per compilare il codice e generare un file binario. Tuttavia, il progetto può essere usato anche per generare un pacchetto di modelli. Modificando le impostazioni del file _.csproj_, è possibile evitare la compilazione del codice e includere invece tutti gli asset dei modelli come risorse. Quando il progetto viene compilato, viene prodotto un pacchetto NuGet del pacchetto di modelli.
 
-Il pacchetto che verrà creato includerà il [modello di elemento](cli-templates-create-item-template.md) e il [modello di pacchetto](cli-templates-create-project-template.md) creati in precedenza. Dato che i due modelli sono stati raggruppati nella cartella _working\templates\\_ , è possibile usare la cartella _working_ per il file con estensione _csproj_.
+Il pacchetto che verrà creato includerà il [modello di elemento](cli-templates-create-item-template.md) e il [modello di pacchetto](cli-templates-create-project-template.md) creati in precedenza. Dato che i due modelli sono stati raggruppati nella cartella _working\templates\\_, è possibile usare la cartella _working_ per il file con estensione _csproj_.
 
 Nel terminale passare alla cartella _working_. Creare un nuovo progetto e impostare il nome su `templatepack` e la cartella di output sulla cartella corrente.
 
@@ -49,7 +49,7 @@ Nel terminale passare alla cartella _working_. Creare un nuovo progetto e impost
 dotnet new console -n templatepack -o .
 ```
 
-Il parametro `-n` imposta il nome del file con _estensione csproj_ su _TemplatePack. csproj_. Il parametro `-o` crea i file nella directory corrente. Viene visualizzato un risultato simile all'output seguente.
+Il `-n` parametro imposta il nome file _con estensione csproj_ su _templatepack.csproj_. Il `-o` parametro crea i file nella directory corrente. Viene visualizzato un risultato simile all'output seguente.
 
 ```dotnetcli
 dotnet new console -n templatepack -o .

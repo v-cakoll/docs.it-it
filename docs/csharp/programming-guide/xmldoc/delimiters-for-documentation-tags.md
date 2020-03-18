@@ -1,5 +1,5 @@
 ---
-title: Delimitatori per i tag della C# documentazione-Guida alla programmazione
+title: Delimitatori per i tag di documentazione - Guida alla programmazione in C
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML [C#], delimiters
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
 ms.openlocfilehash: dd4ddb3b324bd6d235efb541c90875dbe9ed4c2d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789825"
 ---
-# <a name="delimiters-for-documentation-tags-c-programming-guide"></a>Delimitatori per i tag dellaC# documentazione (Guida per programmatori)
+# <a name="delimiters-for-documentation-tags-c-programming-guide"></a>Delimitatori per i tag di documentazione (Guida per programmatori C
 
 L'uso dei commenti XML relativi alla documentazione richiede la specifica di delimitatori per indicare al compilatore il punto di inizio e di fine di un commento relativo alla documentazione. È possibile usare con i tag della documentazione XML i tipi di delimitatori seguenti:
 
@@ -28,7 +28,7 @@ L'uso dei commenti XML relativi alla documentazione richiede la specifica di del
 
   Delimitatori di più righe.
 
-  Quando si usano i delimitatori di `/** */`, è necessario seguire alcune regole di formattazione:
+  Esistono alcune regole di formattazione `/** */` da seguire quando si utilizzano i delimitatori:
   
   - Nella riga contenente il delimitatore `/**` se la parte restante della riga è rappresentata da uno spazio vuoto, la riga non viene elaborata per i commenti. Se il primo carattere dopo il delimitatore `/**` è uno spazio vuoto, lo spazio vuoto viene ignorato e il resto della riga viene elaborato. In caso contrario, l'intero testo della riga dopo il delimitatore `/**` viene elaborato come parte del commento.
 
@@ -52,7 +52,7 @@ L'uso dei commenti XML relativi alla documentazione richiede la specifica di del
     */
     ```
 
-  - Il compilatore identifica un modello comune di "\*" all'inizio della seconda e della terza riga. Il modello non è incluso nell'output.
+  - Il compilatore identifica un \* modello comune di " " all'inizio della seconda e della terza riga. Il modello non è incluso nell'output.
 
     ```csharp
     /**
@@ -84,6 +84,6 @@ L'uso dei commenti XML relativi alla documentazione richiede la specifica di del
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../index.md)
+- [Guida alla programmazione in C](../index.md)
 - [Commenti relativi alla documentazione XML](./index.md)
-- [-DOC (C# opzioni del compilatore)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [-doc (opzioni del compilatore C](../../language-reference/compiler-options/doc-compiler-option.md)

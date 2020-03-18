@@ -1,15 +1,15 @@
 ---
-title: Come controllare i prefissi degli spaziC#dei nomi () (LINQ to XML)
+title: Come controllare i prefissi degli spazi dei nomi (C )(LINQ to XML)How to control namespace prefixes (C'è) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 64de5186-b81a-4ddd-8327-8693df59a01b
 ms.openlocfilehash: 9f43c0804d8c830fa75f1e1390cb578c5f5d5106
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141376"
 ---
-# <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>Come controllare i prefissi degli spaziC#dei nomi () (LINQ to XML)
+# <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>Come controllare i prefissi degli spazi dei nomi (C )(LINQ to XML)How to control namespace prefixes (C'è) (LINQ to XML)
 In questo argomento viene descritto come controllare i prefissi degli spazi dei nomi durante la serializzazione di un albero XML.  
   
  In molte situazioni non è necessario controllare i prefissi degli spazi dei nomi.  
@@ -42,7 +42,7 @@ XElement root = new XElement(aw + "Root",
 Console.WriteLine(root);  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```xml  
 <aw:Root xmlns:aw="http://www.adventure-works.com" xmlns:fc="www.fourthcoffee.com">  

@@ -1,14 +1,14 @@
 ---
 ms.openlocfilehash: c8f44ae1a500ed240dbff7d9a2c1479af368b7f1
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72393907"
 ---
-### <a name="identity-default-bootstrap-version-of-ui-changed"></a>Identità: versione bootstrap predefinita dell'interfaccia utente modificata
+### <a name="identity-default-bootstrap-version-of-ui-changed"></a>Identità: è stata modificata la versione Bootstrap predefinita dell'interfaccia utente
 
-A partire da ASP.NET Core 3,0, per impostazione predefinita l'interfaccia utente Identity usa la versione 4 di bootstrap.
+A partire da ASP.NET Core 3.0, l'interfaccia utente di identità utilizza per impostazione predefinita la versione 4 di Bootstrap.
 
 #### <a name="version-introduced"></a>Versione introdotta
 
@@ -16,28 +16,28 @@ A partire da ASP.NET Core 3,0, per impostazione predefinita l'interfaccia utente
 
 #### <a name="old-behavior"></a>Comportamento precedente
 
-La chiamata al metodo `services.AddDefaultIdentity<IdentityUser>().AddDefaultUI();` corrisponde a `services.AddDefaultIdentity<IdentityUser>().AddDefaultUI(UIFramework.Bootstrap3);`
+La `services.AddDefaultIdentity<IdentityUser>().AddDefaultUI();` chiamata al metodo è stata la stessa`services.AddDefaultIdentity<IdentityUser>().AddDefaultUI(UIFramework.Bootstrap3);`
 
 #### <a name="new-behavior"></a>Nuovo comportamento
 
-La chiamata al metodo `services.AddDefaultIdentity<IdentityUser>().AddDefaultUI();` corrisponde a `services.AddDefaultIdentity<IdentityUser>().AddDefaultUI(UIFramework.Bootstrap4);`
+La `services.AddDefaultIdentity<IdentityUser>().AddDefaultUI();` chiamata al metodo è la stessa`services.AddDefaultIdentity<IdentityUser>().AddDefaultUI(UIFramework.Bootstrap4);`
 
 #### <a name="reason-for-change"></a>Motivo della modifica
 
-Il bootstrap 4 è stato rilasciato durante ASP.NET Core intervallo di 3,0.
+Bootstrap 4 è stato rilasciato durante ASP.NET Core 3.0.
 
 #### <a name="recommended-action"></a>Azione consigliata
 
-Questo cambiamento è influenzato da questa modifica se si usa l'interfaccia utente di identità predefinita e la si aggiunge in `Startup.ConfigureServices`, come illustrato nell'esempio seguente:
+Si è interessati da questa modifica se si utilizza l'interfaccia utente di identità predefinita e l'utente l'ha aggiunta, come illustrato nell'esempio seguente:You're impacted by this change if you use the default Identity UI and have added in `Startup.ConfigureServices` as shown in the following example:
 
 ```csharp
 services.AddDefaultIdentity<IdentityUser>().AddDefaultUI();
 ```
 
-Eseguire una delle azioni seguenti:
+eseguendo una delle operazioni seguenti:
 
-- Eseguire la migrazione dell'applicazione per utilizzare bootstrap 4 utilizzando la relativa [Guida alla migrazione](https://getbootstrap.com/docs/4.0/migration).
-- Aggiornare `Startup.ConfigureServices` per applicare l'utilizzo di bootstrap 3. Esempio:
+- Eseguire la migrazione dell'app per l'utilizzo di Bootstrap 4 usando la [relativa guida alla migrazione.](https://getbootstrap.com/docs/4.0/migration)
+- Aggiornamento `Startup.ConfigureServices` per imporre l'utilizzo di Bootstrap 3. Ad esempio:
 
     ```csharp
     services.AddDefaultIdentity<IdentityUser>().AddDefaultUI(UIFramework.Bootstrap3);
@@ -49,7 +49,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>API interessate
 
-Nessuno
+nessuno
 
 <!-- 
 

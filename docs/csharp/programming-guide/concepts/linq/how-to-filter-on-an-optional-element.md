@@ -1,15 +1,15 @@
 ---
-title: Come filtrare in un elemento facoltativo (C#)
+title: Come filtrare in base a un elemento facoltativo (C )How to filter on an optional element (C
 ms.date: 07/20/2015
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
 ms.openlocfilehash: c9f844619cbb3d7a66ca66989baa900e0fd7bc2f
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141248"
 ---
-# <a name="how-to-filter-on-an-optional-element-c"></a>Come filtrare in un elemento facoltativo (C#)
+# <a name="how-to-filter-on-an-optional-element-c"></a>Come filtrare in base a un elemento facoltativo (C )How to filter on an optional element (C
 Talvolta si desidera filtrare in base a un elemento anche se non si è certi che esista nel documento XML. La ricerca deve essere eseguita in modo che se l'elemento specifico non include l'elemento figlio, non viene generata un'eccezione di riferimento null quando si applica un filtro sull'elemento. Nell'esempio seguente l'elemento `Child5` non contiene un elemento figlio `Type`, tuttavia la query viene comunque eseguita correttamente.  
   
 ## <a name="example"></a>Esempio  
@@ -100,5 +100,5 @@ Child Four Text
 - <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>
-- [Panoramica degli operatori di query standard (C#)](./standard-query-operators-overview.md)
+- [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md) (Panoramica degli operatori di query standard)
 - [Operazioni di proiezione (C#)](./projection-operations.md)

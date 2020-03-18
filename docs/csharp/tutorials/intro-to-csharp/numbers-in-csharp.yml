@@ -12,10 +12,10 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.openlocfilehash: 48268c6e839ae4f72aae0e872c837b153325b68b
-  ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
   ms.translationtype: MT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 02/20/2020
+  ms.lasthandoff: 03/14/2020
   ms.locfileid: "77504016"
 items:
 - durationInMinutes: 1
@@ -24,7 +24,7 @@ items:
 - title: Esplorare le operazioni matematiche su interi
   durationInMinutes: 4
   content: >
-    Eseguire il codice seguente nella finestra interattiva. Selezionare il pulsante **Attiva modalità messa a fuoco** . Quindi, digitare il blocco di codice seguente nella finestra interattiva e selezionare **Esegui**:
+    Eseguire il codice seguente nella finestra interattiva. Selezionare il **pulsante Attiva modalità messa a fuoco.** Quindi, digitare il seguente blocco di codice nella finestra interattiva e selezionare **Esegui**:
 
 
     ```csharp
@@ -40,7 +40,7 @@ items:
     ```
 
 
-    Se si esegue questa operazione nell'ambiente in uso, è consigliabile seguire invece le istruzioni per la [versione locale](numbers-in-csharp-local.md) .
+    Se si esegue questa operazione nell'ambiente, è necessario seguire le istruzioni per la [versione locale.](numbers-in-csharp-local.md)
 
 
     Questa è una delle operazioni matematiche fondamentali su interi. Il tipo `int` rappresenta un **intero**, ovvero un numero intero positivo o negativo. Per l'addizione si usa il simbolo `+`. Altre operazioni matematiche comuni per gli interi includono:
@@ -58,7 +58,7 @@ items:
     > In tutte le parti di questa esercitazione interattiva è possibile esplorare liberamente i contenuti modificando il codice scritto nella finestra interattiva. Questa esercitazione offre esempi che è possibile provare a ogni passaggio.
 
 
-    Per iniziare, esplorare le diverse operazioni. Modificare la terza riga per provare ognuna di queste operazioni. Dopo ogni modifica, selezionare il pulsante **Esegui** .
+    Per iniziare, esplorare le diverse operazioni. Modificare la terza riga per provare ognuna di queste operazioni. Dopo ogni modifica, selezionare il pulsante **Esegui.**
 
 
     Sottrazione:
@@ -181,7 +181,7 @@ items:
     ```
 
 
-    Selezionare **Esegui** di nuovo per visualizzare i risultati.
+    Selezionare di nuovo **Esegui** per visualizzare i risultati.
 
 
     > [!NOTE]
@@ -192,7 +192,7 @@ items:
   content: >
     L'ultimo esempio dimostra che la divisione di interi tronca il risultato.
 
-    È possibile ottenere il **resto** usando l'operatore **resto** , il carattere `%`:
+    È possibile ottenere il **resto** utilizzando `%` l'operatore **resto,** il carattere:
 
 
     ```csharp
@@ -415,7 +415,7 @@ items:
 
     > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
-    È stata completata l'esercitazione interattiva "Numeri in C#". Per avviare la prossima esercitazione interattiva, è possibile selezionare il collegamento **rami e cicli** . in alternativa, è possibile visitare il [sito .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) per scaricare il .NET Core SDK, creare un progetto nel computer e seguire la codifica. La sezione "passaggi successivi" riporta a queste esercitazioni.
+    È stata completata l'esercitazione interattiva "Numeri in C#". È possibile selezionare il collegamento **Rami e cicli** di seguito per avviare la successiva esercitazione interattiva oppure visitare il sito [.NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) per scaricare .NET Core SDK, creare un progetto nel computer e continuare a eseguire la codifica. La sezione "Passaggi successivi" riporta a queste esercitazioni.
 
 
     Negli argomenti seguenti sono disponibili ulteriori informazioni sui numeri in C#:

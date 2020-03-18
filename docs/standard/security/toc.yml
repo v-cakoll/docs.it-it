@@ -1,4 +1,4 @@
-- name: Security
+- name: Sicurezza
   href: index.md
   items:
     - name: Concetti principali sulla sicurezza
@@ -10,9 +10,9 @@
       items:
         - name: Oggetti Principal e Identity
           href: principal-and-identity-objects.md
-        - name: 'Procedura: Creare un oggetto WindowsPrincipal'
+        - name: 'Procedura: creare un oggetto WindowsPrincipal'
           href: how-to-create-a-windowsprincipal-object.md
-        - name: 'Procedura: Creare oggetti GenericPrincipal e GenericIdentity'
+        - name: 'Procedura: creare oggetti GenericPrincipal e GenericIdentity'
           href: how-to-create-genericprincipal-and-genericidentity-objects.md
         - name: Sostituzione di oggetti Principal
           href: replacing-a-principal-object.md
@@ -25,7 +25,7 @@
           href: cryptographic-services.md
         - name: Generazione di chiavi per crittografia e decrittografia
           href: generating-keys-for-encryption-and-decryption.md
-        - name: 'Procedura: Archiviare chiavi asimmetriche in un contenitore di chiavi'
+        - name: 'Procedura: archiviare chiavi asimmetriche in un contenitore di chiavi'
           href: how-to-store-asymmetric-keys-in-a-key-container.md
         - name: Crittografia dei dati
           href: encrypting-data.md
@@ -37,27 +37,27 @@
           href: ensuring-data-integrity-with-hash-codes.md
         - name: Creazione di uno schema di crittografia
           href: creating-a-cryptographic-scheme.md
-        - name: 'Procedura: Crittografare gli elementi XML con chiavi simmetriche'
+        - name: 'Procedura: crittografare gli elementi XML con chiavi simmetriche'
           href: how-to-encrypt-xml-elements-with-symmetric-keys.md
-        - name: 'Procedura: Decrittografare gli elementi XML con chiavi simmetriche'
+        - name: 'Procedura: decrittografare gli elementi XML con chiavi simmetriche'
           href: how-to-decrypt-xml-elements-with-symmetric-keys.md
-        - name: 'Procedura: Crittografare gli elementi XML con chiavi asimmetriche'
+        - name: 'Procedura: crittografare gli elementi XML con chiavi asimmetriche'
           href: how-to-encrypt-xml-elements-with-asymmetric-keys.md
-        - name: 'Procedura: Decrittografare gli elementi XML con chiavi asimmetriche'
+        - name: 'Procedura: decrittografare gli elementi XML con chiavi asimmetriche'
           href: how-to-decrypt-xml-elements-with-asymmetric-keys.md
-        - name: 'Procedura: Crittografare gli elementi XML con certificati X.509'
+        - name: 'Procedura: crittografare gli elementi XML con certificati X.509'
           href: how-to-encrypt-xml-elements-with-x-509-certificates.md
-        - name: 'Procedura: Decrittografare gli elementi XML con certificati X.509'
+        - name: 'Procedura: decrittografare gli elementi XML con certificati X.509'
           href: how-to-decrypt-xml-elements-with-x-509-certificates.md
-        - name: 'Procedura: Firmare documenti XML con firme digitali'
+        - name: 'Procedura: firmare documenti XML con firme digitali'
           href: how-to-sign-xml-documents-with-digital-signatures.md
-        - name: 'Procedura: Verificare le firme digitali dei documenti XML'
+        - name: 'Procedura: verificare le firme digitali dei documenti XML'
           href: how-to-verify-the-digital-signatures-of-xml-documents.md
-        - name: 'Procedura: Usare la protezione dati'
+        - name: 'Procedura: utilizzare la protezione dati'
           href: how-to-use-data-protection.md
-        - name: 'Procedura: Accedere ai dispositivi di crittografia hardware'
+        - name: 'Procedura: accedere ai dispositivi di crittografia hardware'
           href: how-to-access-hardware-encryption-devices.md
-        - name: 'Procedura dettagliata: Creazione di un''applicazione di crittografia'
+        - name: 'Procedura dettagliata: creazione di un''applicazione di crittografia'
           href: walkthrough-creating-a-cryptographic-application.md
     - name: Linee guida per la generazione di codice sicuro
       href: secure-coding-guidelines.md

@@ -3,10 +3,10 @@ title: Strategie di gestione degli errori parziali
 description: Informazioni su diverse strategie per la gestione normale degli errori parziali.
 ms.date: 10/16/2018
 ms.openlocfilehash: e96fe99ab44b924460e01abaad30aa3e2432117a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68674508"
 ---
 # <a name="strategies-to-handle-partial-failure"></a>Strategie di gestione degli errori parziali
@@ -19,7 +19,7 @@ Le strategie di gestione degli errori parziali sono le seguenti.
 
 **Usare i timeout di rete**. In generale, i client devono essere progettati in modo da non bloccarsi a tempo indefinito e per usare sempre i timeout durante l'attesa per una risposta. L'uso dei timeout garantisce che le risorse non rimangano bloccate per un periodo di tempo indefinito.
 
-**Usare lo schema Circuit Breaker**. Con questo approccio, il processo client tiene traccia del numero di richieste non riuscite. Se la frequenza di errori supera un limite configurato, si attiva un "interruttore di circuito" affinché i tentativi successivi abbiano immediatamente esito negativo. Se un numero elevato di richieste presenta errori, il servizio potrebbe non essere disponibile e risulta inutile inviare altre richieste. Trascorso il periodo di timeout, il client deve riprovare e, se le nuove richieste hanno esito positivo, l'interruttore di circuito si chiude.
+**Usare lo schema Circuit Breaker**. Con questo approccio, il processo client tiene traccia del numero di richieste non riuscite. Se la frequenza di errori supera un limite configurato, si attiva un "interruttore di circuito" affinché i tentativi successivi abbiano immediatamente esito negativo. Se un numero elevato di richieste non riesce, significa che il servizio non è disponibile e che l'invio di richieste è inutile. Dopo un periodo di timeout, il client deve riprovare e, se le nuove richieste hanno esito positivo, chiudere l'interruttore.
 
 **Fornire fallback**. Con questo approccio, il processo client esegue la logica di fallback in caso di esito negativo di una richiesta, ad esempio restituendo i dati memorizzati nella cache o un valore predefinito. Questo approccio è adatto alle query, ma risulta più complesso per gli aggiornamenti o i comandi.
 
@@ -27,21 +27,21 @@ Le strategie di gestione degli errori parziali sono le seguenti.
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Modelli di resilienza**\
+- **Modelli di resilienzaResiliency patterns**\
   [https://docs.microsoft.com/azure/architecture/patterns/category/resiliency](/azure/architecture/patterns/category/resiliency)
 
-- **Aggiunta di resilienza e ottimizzazione delle prestazioni**\
+- **Aggiunta di resilienza e ottimizzazione delle prestazioniAdding Resilience and Optimizing Performance**\
   <https://docs.microsoft.com/previous-versions/msp-n-p/jj591574(v=pandp.10)>
 
-- **Bulkhead.** Repository GitHub. Implementazione con i criteri Polly.\
+- **Paratia.** Repository GitHub. Implementazione con i criteri Polly.\
   <https://github.com/App-vNext/Polly/wiki/Bulkhead>
 
-- **Progettazione di applicazioni resilienti per Azure**\
+- **Progettazione di applicazioni resilienti per AzureDesigning resilient applications for Azure**\
   [https://docs.microsoft.com/azure/architecture/resiliency/](/azure/architecture/resiliency/)
 
-- **Gestione degli errori temporanei**\
+- **Gestione temporanea degli errori**\
   [https://docs.microsoft.com/azure/architecture/best-practices/transient-faults](/azure/architecture/best-practices/transient-faults)
 
 >[!div class="step-by-step"]
->[Precedente](handle-partial-failure.md)
->[Successivo](implement-retries-exponential-backoff.md)
+>[Successivo](handle-partial-failure.md)
+>[precedente](implement-retries-exponential-backoff.md)

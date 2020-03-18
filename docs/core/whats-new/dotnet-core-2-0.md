@@ -3,22 +3,22 @@ title: Novità di .NET Core 2.0
 description: Informazioni sulle nuove funzionalità in .NET Core.
 ms.date: 08/13/2017
 ms.openlocfilehash: 115b3adc72b6798c6a7bac9cc18044a8822808a6
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801888"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398832"
 ---
 # <a name="whats-new-in-net-core-20"></a>Novità di .NET Core 2.0
 
 .NET Core 2.0 include miglioramenti e nuove funzionalità nelle aree seguenti:
 
 - [Strumenti](#tooling)
-- [Supporto dei linguaggi](#language-support)
+- [Lingue supportate](#language-support)
 - [Miglioramenti della piattaforma](#platform-improvements)
-- [Modifiche dell'API](#api-changes-and-library-support)
+- [Modifiche all'API](#api-changes-and-library-support)
 - [Integrazione con Visual Studio](#visual-studio-integration)
-- [Miglioramenti della documentazione](#documentation-improvements)
+- [Miglioramenti alla documentazione](#documentation-improvements)
 
 ## <a name="tooling"></a>Strumenti
 
@@ -52,11 +52,11 @@ Per ridestinare un progetto a .NET Core 2.0, modificare il file di progetto camb
 
 Per altre informazioni sulla migrazione del progetto a .NET Core 2.0, vedere [Migrating from ASP.NET Core 1.x to ASP.NET Core 2.0](/aspnet/core/migration/1x-to-2x/index) (Migrazione da ASP.NET Core 1.x a ASP.NET Core 2.0).
 
-## <a name="language-support"></a>Supporto delle lingue
+## <a name="language-support"></a>Lingue supportate
 
 Oltre a supportare C# e F#, .NET Core 2.0 supporta anche Visual Basic.
 
-### <a name="visual-basic"></a>Visual Basic -
+### <a name="visual-basic"></a>Visual Basic
 
 Con la versione 2.0, .NET Core supporta ora Visual Basic 2017. È possibile usare Visual Basic per creare i tipi di progetto seguenti:
 
@@ -110,7 +110,7 @@ Per .NET Core 1.x in macOS era richiesta la libreria di crittografia del toolkit
 
 Anche le librerie di classi di .NET Standard 2.0 fanno riferimento alle librerie di classi di .NET Framework, a condizione che chiamino API presenti in .NET Standard 2.0. Non è richiesta alcuna ricompilazione delle librerie di .NET Framework.
 
-Per un elenco delle API aggiunte alla .NET Standard dall'ultima versione, .NET Standard 1,6, vedere [.NET Standard 2,0 rispetto a 1,6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md).
+Per un elenco delle API che sono state aggiunte allo standard .NET dall'ultima versione, .NET Standard 1.6, vedere [.NET Standard 2.0 vs. 1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md).
 
 ### <a name="expanded-surface-area"></a>Superficie estesa
 
@@ -122,7 +122,7 @@ Con [Windows Compatibility Pack](../porting/windows-compat-pack.md) il trasferim
 
 Il codice .NET Core può fare riferimento a librerie esistenti di .NET Framework, inclusi pacchetti NuGet esistenti. Si noti che le librerie devono usare le API disponibili in .NET Standard.
 
-## <a name="visual-studio-integration"></a>integrazione con Visual Studio
+## <a name="visual-studio-integration"></a>Integrazione di Visual Studio
 
 Visual Studio 2017 versione 15.3 e in alcuni casi Visual Studio per Mac offrono numerosi miglioramenti significativi per gli sviluppatori che usano .NET Core.
 
@@ -136,7 +136,7 @@ Per ridestinare il progetto in Visual Studio, aprire la scheda **Applicazione** 
 
 Ogni volta che si modifica il codice, Live Unit Testing esegue automaticamente tutti gli unit test interessati in background, visualizzando in tempo reale i risultati e il code coverage nell'ambiente di Visual Studio. .NET Core 2.0 ora supporta Live Unit Testing. In precedenza, Live Unit Testing era disponibile solo per le applicazioni .NET Framework.
 
-Per altre informazioni, vedere [Live unit testing con Visual Studio](/visualstudio/test/live-unit-testing) e le [domande frequenti su Live unit testing](/visualstudio/test/live-unit-testing-faq).
+Per ulteriori informazioni, vedere [Live Unit Testing con Visual Studio](/visualstudio/test/live-unit-testing) e le domande frequenti su Live Unit [Testing](/visualstudio/test/live-unit-testing-faq).
 
 ### <a name="better-support-for-multiple-target-frameworks"></a>Supporto migliorato per più framework di destinazione
 
@@ -148,15 +148,15 @@ Se è necessario ricompilare un progetto per più framework di destinazione, è 
 
 È ora possibile installare .NET Core SDK in modo indipendente da Visual Studio. In questo modo, una singola versione di Visual Studio consente di compilare progetti destinati a versioni diverse di .NET Core. In precedenza, Visual Studio e .NET Core SDK erano strettamente collegati e associati in base a versioni specifiche.
 
-## <a name="documentation-improvements"></a>Miglioramenti della documentazione
+## <a name="documentation-improvements"></a>Miglioramenti alla documentazione
 
 ### <a name="net-application-architecture"></a>.NET Application Architecture
 
 Dalla pagina [.NET Application Architecture](https://dotnet.microsoft.com/learn/dotnet/architecture-guides) (Architettura delle applicazioni .NET) è possibile accedere a una serie di eBook che offrono linee guida, procedure consigliate e applicazioni di esempio per l'uso di .NET per creare:
 
-- [Microservizi e contenitori Docker](../../architecture/microservices/index.md)
+- [Contenitori di microservizi e Docker](../../architecture/microservices/index.md)
 - [Applicazioni Web con ASP.NET](../../architecture/modern-web-apps-azure/index.md)
-- [Applicazioni per dispositivi mobili con Xamarin](/xamarin/xamarin-forms/enterprise-application-patterns/index)
+- [Applicazioni mobili con Xamarin](/xamarin/xamarin-forms/enterprise-application-patterns/index)
 - [Applicazioni distribuite nel cloud con Azure](/azure/architecture/reference-architectures/index)
 
 ## <a name="see-also"></a>Vedere anche

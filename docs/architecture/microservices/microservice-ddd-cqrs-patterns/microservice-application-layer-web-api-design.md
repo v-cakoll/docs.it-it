@@ -3,10 +3,10 @@ title: Progettazione del livello dell'applicazione di microservizi e dell'API We
 description: Architettura dei microservizi .NET per le applicazioni .NET in contenitori | Brevi cenni sui principi SOLID per la progettazione del livello dell'applicazione.
 ms.date: 10/08/2018
 ms.openlocfilehash: 3c3b9f74e76e01deafa1f97de5d3250d57716014
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68676518"
 ---
 # <a name="design-the-microservice-application-layer-and-web-api"></a>Progettare il livello dell'applicazione di microservizi e dell'API Web
@@ -35,15 +35,15 @@ Per illustrare SOLID in dettaglio, servirebbe un'altra guida. Questa guida presu
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **SOLID: SOLID: principi OOP fondamentali** \
+- **SOLID: Principi OOP fondamentali** \
   <https://deviq.com/solid/>
 
-- **Contenitori di inversione del controllo e schema di inserimento delle dipendenze** \
+- **Inversione dei contenitori di controllo e il modello di inserimento delle dipendenzeInversion of Control Containers and the Dependency Injection pattern** \
   <https://martinfowler.com/articles/injection.html>
 
-- **Steve Smith. New is Glue** \
+- **Steve Smith. Nuovo è colla** \
   <https://ardalis.com/new-is-glue>
 
 > [!div class="step-by-step"]
-> [Precedente](nosql-database-persistence-infrastructure.md)
-> [Successivo](microservice-application-layer-implementation-web-api.md)
+> [Successivo](nosql-database-persistence-infrastructure.md)
+> [precedente](microservice-application-layer-implementation-web-api.md)

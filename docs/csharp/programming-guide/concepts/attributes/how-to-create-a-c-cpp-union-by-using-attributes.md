@@ -1,17 +1,17 @@
 ---
-title: Come creare un'Unione C/C++ Unione usando gli attributi (C#)
+title: Come creare un'unione C/C
 ms.date: 07/20/2015
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
 ms.openlocfilehash: ff8ce560444581a28b257820573224f89a274cd9
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141579"
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Come creare un'Unione C/C++ Unione usando gli attributi (C#)
+# <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Come creare un'unione C/C
 
-Usando gli attributi, è possibile personalizzare la disposizione dei struct in memoria. Ad esempio, tramite gli attributi `StructLayout(LayoutKind.Explicit)` e `FieldOffset` è possibile creare una struttura che in C/C++ è nota come unione.
+Utilizzando gli attributi, è possibile personalizzare il modo in cui gli struct vengono disposti in memoria. Ad esempio, tramite gli attributi `StructLayout(LayoutKind.Explicit)` e `FieldOffset` è possibile creare una struttura che in C/C++ è nota come unione.
 
 ## <a name="example"></a>Esempio
 
@@ -78,4 +78,4 @@ I due campi integer, `i1` e `i2`, condividono le stesse posizioni di memoria di 
 - [Reflection (C#)](../reflection.md)
 - [Attributi (C#)](index.md)
 - [Creazione di attributi personalizzati (C#)](creating-custom-attributes.md)
-- [Accessing Attributes by Using Reflection (C#)](accessing-attributes-by-using-reflection.md) (Accesso agli attributi tramite reflection (C#))
+- [Accessing Attributes by Using Reflection (C#)](accessing-attributes-by-using-reflection.md) (Accesso agli attributi con reflection (C#))

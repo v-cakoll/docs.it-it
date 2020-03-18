@@ -1,21 +1,21 @@
 ---
-title: Come creare una gerarchia utilizzando il raggruppamento (C#)
+title: Come creare una gerarchia usando il raggruppamento (C )How to create hierarchy using grouping (C
 ms.date: 07/20/2015
 ms.assetid: 0213d59e-5f76-438c-9cab-4bf11f7b971d
 ms.openlocfilehash: c5a96b02595446b2efa01868cc88377c3a5151c9
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141297"
 ---
-# <a name="how-to-create-hierarchy-using-grouping-c"></a>Come creare una gerarchia utilizzando il raggruppamento (C#)
+# <a name="how-to-create-hierarchy-using-grouping-c"></a>Come creare una gerarchia usando il raggruppamento (C )How to create hierarchy using grouping (C
 In questo esempio viene illustrato come raggruppare dati e quindi generare codice XML basato sul raggruppamento.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio vengono prima raggruppati i dati in base a una categoria, quindi viene generato un nuovo file XML in cui la gerarchia XML riflette il raggruppamento.  
   
- Nell'esempio viene usato il documento XML seguente: [File XML di esempio: dati numerici (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).  
+ Questo esempio usa il documento XML seguente: [File XML di esempio: dati numerici (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```csharp  
 XElement doc = XElement.Load("Data.xml");  
@@ -35,7 +35,7 @@ var newData =
 Console.WriteLine(newData);  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```xml  
 <Root>  

@@ -4,10 +4,10 @@ description: Come archiviare i risultati.
 ms.date: 11/30/2016
 ms.assetid: 5b863961-1750-4cf9-9607-acea5054d15a
 ms.openlocfilehash: 66a7a95c74db4062e76c54d4339ccb7343f44067
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "65633560"
 ---
 # <a name="store-the-results-of-a-query-in-memory"></a>Archiviare i risultati di una query in memoria
@@ -30,4 +30,4 @@ Una query è fondamentalmente un set di istruzioni per il recupero e l'organizza
 
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ (Language-Integrated Query)](index.md)
+- [Language Integrated Query (LINQ)](index.md)

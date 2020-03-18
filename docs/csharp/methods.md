@@ -5,11 +5,11 @@ ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
 ms.openlocfilehash: f44c83408e884d76eef5e2b5abbca511fbae2a1f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73101490"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399448"
 ---
 # <a name="methods"></a>Metodi
 
@@ -43,7 +43,7 @@ Si noti che la classe `Motorcycle` include un metodo sottoposto a overload, ovve
 
 <a name="invocation"></a>
 
-## <a name="method-invocation"></a>Chiamata del metodo
+## <a name="method-invocation"></a>Chiamata al metodo
 
 I metodi possono essere di *istanza* o *statici*. Per chiamare un metodo di istanza è necessario creare un'istanza di un oggetto e chiamare il metodo nell'oggetto; un metodo di istanza agisce sull'istanza e i relativi dati. La chiamata a un metodo statico viene eseguita facendo riferimento al nome del tipo a cui appartiene il metodo; i metodi statici non agiscono sui dati dell'istanza. Se si tenta di chiamare un metodo statico attraverso un'istanza di un oggetto viene generato un errore del compilatore.
 
@@ -79,7 +79,7 @@ I tipi possono eseguire l'override dei membri ereditati usando la parola chiave 
 
 <a name="passing"></a>
 
-## <a name="passing-parameters"></a>Passaggio di parametri
+## <a name="passing-parameters"></a>Passaggio dei parametri
 
 I tipi in C# sono *tipi di valore* o *tipi di riferimento*. Per un elenco dei tipi di valore predefiniti, vedere [Tipi e variabili](./tour-of-csharp/types-and-variables.md). Per impostazione predefinita, i tipi di valore e i tipi di riferimento vengono passati a un metodo per valore.
 
@@ -103,7 +103,7 @@ L'esempio seguente definisce una classe (che è un tipo riferimento) denominata 
 
 ### <a name="passing-parameters-by-reference"></a>Passaggio di parametri per riferimento
 
-È necessario passare un parametro per riferimento quando si vuole modificare il valore di un argomento in un metodo e questa modifica deve essere applicata quando il controllo torna al metodo chiamante. Per passare un parametro per riferimento, usare la parola chiave [`ref`](language-reference/keywords/ref.md) o [`out`](language-reference/keywords/out-parameter-modifier.md). È anche possibile passare un valore per riferimento per evitare la copia, ma comunque impedire modifiche usando la parola chiave [`in`](language-reference/keywords/in-parameter-modifier.md).
+È necessario passare un parametro per riferimento quando si vuole modificare il valore di un argomento in un metodo e questa modifica deve essere applicata quando il controllo torna al metodo chiamante. Per passare un parametro per [`ref`](language-reference/keywords/ref.md) [`out`](language-reference/keywords/out-parameter-modifier.md) riferimento, utilizzare la parola chiave o . È anche possibile passare un valore per riferimento per [`in`](language-reference/keywords/in-parameter-modifier.md) evitare la copia, ma comunque impedire modifiche utilizzando la parola chiave .
 
 L'esempio seguente è identico a quello precedente, ad eccezione del fatto che il valore viene passato per riferimento al metodo `ModifyValue`. Quando il valore del parametro è modificato nel metodo `ModifyValue`, la modifica del valore si riflette quando il controllo torna al chiamante.
 
@@ -274,13 +274,13 @@ Se il metodo restituisce `void` o è un metodo asincrono, il corpo del metodo de
 
 <a name="iterators"></a>
 
-## <a name="iterators"></a>Iterators
+## <a name="iterators"></a>Iteratori
 
 Un iteratore esegue un'iterazione personalizzata su una raccolta, ad esempio un elenco o una matrice. Un iteratore usa l'istruzione [yield return](language-reference/keywords/yield.md) per restituire un elemento alla volta. Quando viene raggiunta un'istruzione `yield return`, viene memorizzata la posizione corrente in modo che il chiamante possa richiedere l'elemento successivo della sequenza.
 
-Il tipo restituito di un iteratore può essere <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> o <xref:System.Collections.Generic.IEnumerator%601>.
+Il tipo restituito di un iteratore può essere <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>o <xref:System.Collections.Generic.IEnumerator%601>.
 
-Per altre informazioni, vedere [Iteratori](programming-guide/concepts/iterators.md).
+Per ulteriori informazioni, vedere [Iteratori](programming-guide/concepts/iterators.md).
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -288,8 +288,8 @@ Per altre informazioni, vedere [Iteratori](programming-guide/concepts/iterators.
 - [Classi statiche e membri di classi statiche](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
 - [Ereditarietà](programming-guide/classes-and-structs/inheritance.md)
 - [Classi e membri delle classi astratte e sealed](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
-- [params](language-reference/keywords/params.md)
-- [out](language-reference/keywords/out-parameter-modifier.md)
+- [Params](language-reference/keywords/params.md)
+- [Cambio](language-reference/keywords/out-parameter-modifier.md)
 - [ref](language-reference/keywords/ref.md)
 - [in](language-reference/keywords/in-parameter-modifier.md)
 - [Passaggio di parametri](programming-guide/classes-and-structs/passing-parameters.md)

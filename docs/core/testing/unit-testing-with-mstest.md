@@ -5,10 +5,10 @@ author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
 ms.openlocfilehash: bd7891243d84277a7578089f8b4629ff5bada577
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78240909"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>Testing unità di C# con MSTest e .NET Core
@@ -19,7 +19,7 @@ In questa esercitazione viene illustrata un'esperienza interattiva di compilazio
 
 ## <a name="create-the-source-project"></a>Creare il progetto di origine
 
-Aprire una finestra della shell. Creare una directory denominata *unit-testing-using-mstest* in cui archiviare la soluzione. In questa nuova directory, eseguire [`dotnet new sln`](../tools/dotnet-new.md) per creare un nuovo file di soluzione per la libreria di classi e il progetto di test. Creare quindi una directory *PrimeService*. Finora è stata creata la struttura di directory e file seguente:
+Aprire una finestra della shell. Creare una directory denominata *unit-testing-using-mstest* in cui archiviare la soluzione. All'interno di [`dotnet new sln`](../tools/dotnet-new.md) questa nuova directory, eseguire per creare un nuovo file di soluzione per la libreria di classi e il progetto di test. Creare quindi una directory *PrimeService*. Finora è stata creata la struttura di directory e file seguente:
 
 ```console
 /unit-testing-using-mstest
@@ -27,7 +27,7 @@ Aprire una finestra della shell. Creare una directory denominata *unit-testing-u
     /PrimeService
 ```
 
-Impostare *PrimeService* come directory corrente ed eseguire [`dotnet new classlib`](../tools/dotnet-new.md) per creare il progetto di origine. Assegnare il nome *PrimeService.cs* al file *Class1.cs*. Si crea un'implementazione non corretta della classe `PrimeService`:
+Impostare *PrimeService* come [`dotnet new classlib`](../tools/dotnet-new.md) directory corrente ed eseguire per creare il progetto di origine. Assegnare il nome *PrimeService.cs* al file *Class1.cs*. Si crea un'implementazione non corretta della classe `PrimeService`:
 
 ```csharp
 using System;
@@ -44,7 +44,7 @@ namespace Prime.Services
 }
 ```
 
-Tornare alla directory *unit-testing-using-mstest*. Eseguire [`dotnet sln add PrimeService/PrimeService.csproj`](../tools/dotnet-sln.md) per aggiungere il progetto di libreria di classi alla soluzione.
+Tornare alla directory *unit-testing-using-mstest*. Esegui [`dotnet sln add PrimeService/PrimeService.csproj`](../tools/dotnet-sln.md) per aggiungere il progetto di libreria di classi alla soluzione.
 
 ## <a name="create-the-test-project"></a>Creare il progetto di test
 
@@ -59,7 +59,7 @@ Creare quindi la directory *PrimeService.Tests*. Di seguito è illustrata la str
     /PrimeService.Tests
 ```
 
-Impostare *PrimeService.Tests* come directory corrente e creare un nuovo progetto usando [`dotnet new mstest`](../tools/dotnet-new.md). Il comando dotnet new crea un progetto di test che usa MSTest come libreria di test. Il modello generato configura il Test Runner nel file *PrimeServiceTests.csproj*:
+Impostare la directory *PrimeService.Tests* come directory [`dotnet new mstest`](../tools/dotnet-new.md)corrente e creare un nuovo progetto utilizzando . Il comando dotnet new crea un progetto di test che usa MSTest come libreria di test. Il modello generato configura il Test Runner nel file *PrimeServiceTests.csproj*:
 
 ```xml
 <ItemGroup>
@@ -69,7 +69,7 @@ Impostare *PrimeService.Tests* come directory corrente e creare un nuovo progett
 </ItemGroup>
 ```
 
-Per creare ed eseguire unit test, il progetto di test richiede altri pacchetti. Nel passaggio precedente `dotnet new` ha aggiunto l'SDK MSTest, il framework di test MSTest e il Test Runner MSTest. Aggiungere ora la libreria di classi `PrimeService` come un'altra dipendenza del progetto. Usare il comando [`dotnet add reference`](../tools/dotnet-add-reference.md):
+Per creare ed eseguire unit test, il progetto di test richiede altri pacchetti. Nel passaggio precedente `dotnet new` ha aggiunto l'SDK MSTest, il framework di test MSTest e il Test Runner MSTest. Aggiungere ora la libreria di classi `PrimeService` come un'altra dipendenza del progetto. Utilizzare [`dotnet add reference`](../tools/dotnet-add-reference.md) il comando:
 
 ```dotnetcli
 dotnet add reference ../PrimeService/PrimeService.csproj
@@ -90,11 +90,11 @@ Il layout della soluzione finale è il seguente:
         PrimeServiceTests.csproj
 ```
 
-Eseguire [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md) nella directory *unit-testing-using-mstest*.
+Eseguire [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md) nella directory *unit-testing-using-mstest.*
 
 ## <a name="create-the-first-test"></a>Creare il primo test
 
-Scrivere un test che genera errore, fare in modo che venga superato e quindi ripetere il processo. Rimuovere *UnitTest1.cs* dalla directory *PrimeService.Tests* e creare un nuovo file C# denominato *PrimeService_IsPrimeShould.cs* con il contenuto seguente:
+Scrivere un test che genera errore, fare in modo che venga superato e quindi ripetere il processo. Rimuovere *UnitTest1.cs* dalla directory *PrimeService.Tests* e creare un nuovo file C , denominato *PrimeService_IsPrimeShould.cs* con il contenuto seguente:
 
 ```csharp
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -125,7 +125,7 @@ namespace Prime.UnitTests.Services
 
 L'[attributo TestClass](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute) indica una classe che contiene unit test. L'[attributo TestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) indica che il metodo è un metodo di test.
 
-Salvare questo file ed eseguire [`dotnet test`](../tools/dotnet-test.md) per compilare i test e la libreria di classi, quindi eseguire i test. Il Test Runner di MSTest include il punto d'ingresso del programma per l'esecuzione dei test. `dotnet test` avvia il Test Runner usando il progetto di unit test creato.
+Salvare il file [`dotnet test`](../tools/dotnet-test.md) ed eseguire per compilare i test e la libreria di classi e quindi eseguire i test. Il Test Runner di MSTest include il punto d'ingresso del programma per l'esecuzione dei test. `dotnet test` avvia il Test Runner usando il progetto di unit test creato.
 
 Il test ha esito negativo. Non è stata ancora creata l'implementazione. Fare in modo che questo test venga superato scrivendo il codice più semplice e funzionante nella classe `PrimeService`:
 
@@ -140,7 +140,7 @@ public bool IsPrime(int candidate)
 }
 ```
 
-Eseguire di nuovo *nella directory*unit-testing-using-mstest`dotnet test`. Il comando `dotnet test` esegue prima una compilazione del progetto `PrimeService` e quindi del progetto `PrimeService.Tests`. Dopo la compilazione di entrambi i progetti, verrà eseguito il test singolo, Procede.
+Eseguire di nuovo `dotnet test` nella directory *unit-testing-using-mstest*. Il comando `dotnet test` esegue prima una compilazione del progetto `PrimeService` e quindi del progetto `PrimeService.Tests`. Dopo la compilazione di entrambi i progetti, verrà eseguito il test singolo, che viene superato.
 
 ## <a name="add-more-features"></a>Aggiungere altre funzionalità
 

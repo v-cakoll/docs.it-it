@@ -7,18 +7,18 @@ helpviewer_keywords:
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
 ms.openlocfilehash: ce35ef4d4286310aa6c8b6e40c3a448b0d91ea7d
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937527"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Metodi di estensione (Guida per programmatori C#)
 I metodi di estensione consentono di "aggiungere" metodi ai tipi esistenti senza creare un nuovo tipo derivato, ricompilare o modificare in altro modo il tipo originale. I metodi di estensione sono uno speciale tipo di metodo statico, ma vengono chiamati come se fossero metodi di istanza sul tipo esteso. Per il codice client scritto in C#, F# e Visual Basic non esistono differenze evidenti tra la chiamata a un metodo di estensione e ai metodi effettivamente definiti in un tipo.  
   
- I metodi di estensione più comuni sono gli operatori di query standard LINQ che aggiungono la funzionalità di query ai tipi di <xref:System.Collections.IEnumerable?displayProperty=nameWithType> e di <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> esistenti. Per utilizzare gli operatori query standard, inserirli innanzitutto nell'ambito con una direttiva `using System.Linq`. In questo modo qualsiasi tipo che implementa <xref:System.Collections.Generic.IEnumerable%601> avrà apparentemente metodi di istanza quali <xref:System.Linq.Enumerable.GroupBy%2A>, <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Average%2A>e così via. È possibile visualizzare questi metodi aggiuntivi con la funzionalità di completamento istruzioni di IntelliSense quando si digita "punto" dopo un'istanza di un tipo <xref:System.Collections.Generic.IEnumerable%601>, ad esempio <xref:System.Collections.Generic.List%601> o <xref:System.Array>.  
+ I metodi di estensione più comuni sono gli operatori <xref:System.Collections.IEnumerable?displayProperty=nameWithType> di <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> query standard LINQ che aggiungono funzionalità di query ai tipi e esistenti. Per utilizzare gli operatori query standard, inserirli innanzitutto nell'ambito con una direttiva `using System.Linq`. In questo modo qualsiasi tipo che implementa <xref:System.Collections.Generic.IEnumerable%601> avrà apparentemente metodi di istanza quali <xref:System.Linq.Enumerable.GroupBy%2A>, <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Average%2A>e così via. È possibile visualizzare questi metodi aggiuntivi con la funzionalità di completamento istruzioni di IntelliSense quando si digita "punto" dopo un'istanza di un tipo <xref:System.Collections.Generic.IEnumerable%601>, ad esempio <xref:System.Collections.Generic.List%601> o <xref:System.Array>.  
   
- Nell'esempio seguente viene illustrato come chiamare il metodo `OrderBy` dell'operatore query standard su una matrice di Integer. L'espressione tra parentesi è un'espressione lambda. Molti operatori query standard accettano espressioni lambda come parametri, sebbene non sia un requisito per i metodi di estensione. Per altre informazioni, vedere [Espressioni lambda](../statements-expressions-operators/lambda-expressions.md).  
+ Nell'esempio seguente viene illustrato come chiamare il metodo `OrderBy` dell'operatore query standard su una matrice di Integer. L'espressione tra parentesi è un'espressione lambda. Molti operatori query standard accettano espressioni lambda come parametri, sebbene non sia un requisito per i metodi di estensione. Per ulteriori informazioni, vedere [Espressioni lambda](../statements-expressions-operators/lambda-expressions.md).  
   
  [!code-csharp[csProgGuideExtensionMethods#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#3)]  
   
@@ -43,7 +43,7 @@ int i = s.WordCount();
   
  Nel codice si richiama il metodo di estensione con la sintassi del metodo di istanza. Microsoft Intermediate Language (IL) generato dal compilatore converte tuttavia il codice in una chiamata sul metodo statico. Il principio di incapsulamento non viene pertanto realmente violato. Infatti, i metodi di estensione non possono accedere a variabili private nel tipo che stanno estendendo.  
   
- Per ulteriori informazioni, vedere [come implementare e chiamare un metodo di estensione personalizzato](./how-to-implement-and-call-a-custom-extension-method.md).
+ Per ulteriori informazioni, vedere [Come implementare e chiamare un metodo](./how-to-implement-and-call-a-custom-extension-method.md)di estensione personalizzato .
   
  In generale, è molto più frequente chiamare i metodi di estensione che implementarne di personalizzati. Perché i metodi di estensione vengono chiamati utilizzando la sintassi del metodo di istanza, non è necessaria alcuna particolare conoscenza per utilizzarli dal codice client. Per abilitare i metodi di estensione per un particolare tipo, aggiungere una direttiva `using` per lo spazio dei nomi nel quale sono definiti i metodi. Per utilizzare ad esempio gli operatori query standard, aggiungere questa direttiva `using` al codice:  
   
@@ -51,7 +51,7 @@ int i = s.WordCount();
 using System.Linq;  
 ```  
   
- Potrebbe anche essere necessario aggiungere un riferimento a System. Core. dll. Si noterà che gli operatori di query standard vengono ora visualizzati in IntelliSense come metodi aggiuntivi disponibili per la maggior parte dei tipi di <xref:System.Collections.Generic.IEnumerable%601>.  
+ Potrebbe anche essere necessario aggiungere un riferimento a System.Core.dll. Si noterà che gli operatori di query standard vengono <xref:System.Collections.Generic.IEnumerable%601> ora visualizzati in IntelliSense come metodi aggiuntivi disponibili per la maggior parte dei tipi.  
   
 ## <a name="binding-extension-methods-at-compile-time"></a>Associazione di metodi di estensione in fase di compilazione  
  È possibile utilizzare metodi di estensione per estendere una classe o un'interfaccia, ma non per eseguirne l'override. Un metodo di estensione con lo stesso nome e la stessa firma di un metodo di interfaccia o di classe non verrà mai chiamato. In fase di compilazione, i metodi di estensione hanno sempre una priorità più bassa dei metodi di istanza definiti nel tipo stesso. In altre parole, se un tipo dispone di un metodo denominato `Process(int i)` e si dispone di un metodo di estensione con la stessa firma, il compilatore eseguirà sempre l'associazione al metodo di istanza. Quando il compilatore rileva una chiamata al metodo, cerca innanzitutto una corrispondenza nei metodi di istanza del tipo. Se non viene trovata alcuna corrispondenza, cercherà eventuali metodi di estensione definiti per il tipo ed eseguirà l'associazione al primo metodo di estensione trovato. Nell'esempio seguente viene dimostrato come il compilatore determina a quale metodo di estensione o metodo di istanza eseguire l'associazione.  
@@ -65,7 +65,7 @@ using System.Linq;
   
  [!code-csharp[csProgGuideExtensionMethods#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#5)]  
   
-## <a name="general-guidelines"></a>Indicazioni generali  
+## <a name="general-guidelines"></a>Linee guida generali  
  In generale, si consiglia di implementare i metodi di estensione sporadicamente e solo se necessario. Se possibile, è opportuno che il codice client che deve estendere un tipo esistente esegua questa operazione creando un nuovo tipo derivato dal tipo esistente. Per altre informazioni, vedere [Ereditarietà](./inheritance.md).  
   
  Quando si utilizza un metodo di estensione per estendere un tipo di cui non è possibile modificare il codice sorgente, si corre il rischio che una modifica nell'implementazione del tipo provochi l'interruzione del metodo di estensione.  
@@ -82,8 +82,8 @@ using System.Linq;
 
 - [Guida per programmatori C#](../index.md)
 - [Esempi di programmazione parallela (sono inclusi molti metodi di estensione di esempio)](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
-- [Espressioni lambda](../statements-expressions-operators/lambda-expressions.md)
-- [Cenni preliminari sugli operatori di query standard](../concepts/linq/standard-query-operators-overview.md)
+- [Espressioni lambdaLambda Expressions](../statements-expressions-operators/lambda-expressions.md)
+- [Panoramica degli operatori di query standardStandard Query Operators Overview](../concepts/linq/standard-query-operators-overview.md)
 - [Regole di conversione per parametri Instance e relativo impatto](https://docs.microsoft.com/archive/blogs/sreekarc/conversion-rules-for-instance-parameters-and-their-impact)
 - [Interoperabilità dei metodi di estensione tra linguaggi](https://docs.microsoft.com/archive/blogs/sreekarc/extension-methods-interoperability-between-languages)
 - [Metodi di estensione e delegati sottoposti a currying](https://docs.microsoft.com/archive/blogs/sreekarc/extension-methods-and-curried-delegates)

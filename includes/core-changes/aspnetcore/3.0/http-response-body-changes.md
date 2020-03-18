@@ -1,14 +1,14 @@
 ---
 ms.openlocfilehash: cd66317bc93343e03a73dec74dff534776ca42e4
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73198463"
 ---
-### <a name="http-response-body-infrastructure-changes"></a>HTTP: modifiche dell'infrastruttura del corpo della risposta
+### <a name="http-response-body-infrastructure-changes"></a>HTTP: Modifiche all'infrastruttura del corpo della risposta
 
-L'infrastruttura supportata da un corpo della risposta HTTP è cambiata. Se si usa direttamente `HttpResponse`, non è necessario apportare modifiche al codice. Leggere ulteriormente se si esegue il wrapping o si sostituisce `HttpResponse.Body` o si accede a `HttpContext.Features`.
+L'infrastruttura che esegue il backup di un corpo della risposta HTTP è stata modificata. Se si utilizza `HttpResponse` direttamente, non è necessario apportare modifiche al codice. Leggere ulteriormente se si sta `HttpResponse.Body` avvolgendo `HttpContext.Features`o sostituendo o accedendo .
 
 #### <a name="version-introduced"></a>Versione introdotta
 
@@ -16,7 +16,7 @@ L'infrastruttura supportata da un corpo della risposta HTTP è cambiata. Se si u
 
 #### <a name="old-behavior"></a>Comportamento precedente
 
-Sono presenti tre API associate al corpo della risposta HTTP:
+Al corpo della risposta HTTP erano associate tre API:
 
 - `IHttpResponseFeature.Body`
 - `IHttpSendFileFeature.SendFileAsync`
@@ -24,7 +24,7 @@ Sono presenti tre API associate al corpo della risposta HTTP:
 
 #### <a name="new-behavior"></a>Nuovo comportamento
 
-Se si sostituisce `HttpResponse.Body`, l'intero `IHttpResponseBodyFeature` viene sostituito con un wrapper per il flusso specificato tramite `StreamResponseBodyFeature` per fornire implementazioni predefinite per tutte le API previste. Se si imposta di nuovo il flusso originale, questa modifica viene ripristinata.
+Se sostituisci `HttpResponse.Body`, sostituisce `IHttpResponseBodyFeature` l'intero con un `StreamResponseBodyFeature` wrapper intorno al flusso specificato utilizzando per fornire implementazioni predefinite per tutte le API previste. L'impostazione del flusso originale annulla questa modifica.
 
 #### <a name="reason-for-change"></a>Motivo della modifica
 
@@ -32,7 +32,7 @@ La motivazione consiste nel combinare le API del corpo della risposta in un'unic
 
 #### <a name="recommended-action"></a>Azione consigliata
 
-Utilizzare `IHttpResponseBodyFeature`, in cui in precedenza veniva utilizzato `IHttpResponseFeature.Body`, `IHttpSendFileFeature` o `IHttpBufferingFeature`.
+Utilizzare `IHttpResponseBodyFeature` la posizione `IHttpResponseFeature.Body`in `IHttpSendFileFeature`cui `IHttpBufferingFeature`si utilizzava in precedenza , , o .
 
 #### <a name="category"></a>Category
 

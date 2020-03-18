@@ -4,15 +4,15 @@ description: Sicurezza nei microservizi .NET e nelle applicazioni Web - Panorami
 author: mjrousos
 ms.date: 01/30/2020
 ms.openlocfilehash: f6b69faceac9a9b4819212cc04f89080f3ddad56
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77501773"
 ---
 # <a name="about-authorization-in-net-microservices-and-web-applications"></a>Informazioni sull'autorizzazione in microservizi .NET e applicazioni Web
 
-Dopo l'autenticazione, le API Web di ASP.NET Core devono autorizzare l'accesso. Questo processo consente a un servizio di rendere disponibili le API ad alcuni utenti autenticati, ma non a tutti. L'[autorizzazione](/aspnet/core/security/authorization/introduction) può essere eseguita in base ai ruoli degli utenti o in base a criteri personalizzati, che possono includere l'analisi delle attestazioni o altre regole euristiche.
+Dopo l'autenticazione, le API Web di ASP.NET Core devono autorizzare l'accesso. Questo processo, ad esempio, consente a un servizio di rendere le API disponibili per alcuni utenti autenticati, ma non per tutti. L'[autorizzazione](/aspnet/core/security/authorization/introduction) può essere eseguita in base ai ruoli degli utenti o in base a criteri personalizzati, che possono includere l'analisi delle attestazioni o altre regole euristiche.
 
 Per limitare l'accesso a una route ASP.NET Core MVC è sufficiente applicare un attributo Authorize al metodo di azione (o alla classe del controller, se tutte le azioni del controller richiedono l'autorizzazione), come illustrato nell'esempio seguente:
 
@@ -115,18 +115,18 @@ Un esempio di requisito di autorizzazione personalizzato e un gestore per la ver
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Autenticazione in ASP.NET Core** \
+- **Autenticazione di base di ASP.NET** \
   [https://docs.microsoft.com/aspnet/core/security/authentication/identity](/aspnet/core/security/authentication/identity)
 
-- **Autorizzazione in ASP.NET Core** \
+- **Autorizzazione ASP.NET core** \
   [https://docs.microsoft.com/aspnet/core/security/authorization/introduction](/aspnet/core/security/authorization/introduction)
 
 - **Autorizzazione basata sui ruoli** \
   [https://docs.microsoft.com/aspnet/core/security/authorization/roles](/aspnet/core/security/authorization/roles)
 
-- **Autorizzazione personalizzata basata su criteri** \
+- **Autorizzazione basata su criteri personalizzatiCustom Policy-Based Authorization** \
   [https://docs.microsoft.com/aspnet/core/security/authorization/policies](/aspnet/core/security/authorization/policies)
 
 >[!div class="step-by-step"]
->[Precedente](index.md)
->[Successivo](developer-app-secrets-storage.md)
+>[Successivo](index.md)
+>[precedente](developer-app-secrets-storage.md)

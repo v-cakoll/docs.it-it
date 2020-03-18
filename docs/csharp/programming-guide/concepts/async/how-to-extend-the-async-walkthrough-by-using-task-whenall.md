@@ -1,15 +1,15 @@
 ---
-title: Come estendere la procedura dettagliata asincrona tramite Task. WhenAll (C#)
+title: Come estendere la procedura dettagliata asincrona utilizzando Task.WhenAll (C )How to extend the async walkthrough by using Task.WhenAll (C
 ms.date: 07/20/2015
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
 ms.openlocfilehash: afd7dda4e876b7faa54ae4a8e62d640d2b9aaf07
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73970031"
 ---
-# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>Come estendere la procedura dettagliata asincrona tramite Task. WhenAll (C#)
+# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>Come estendere la procedura dettagliata asincrona utilizzando Task.WhenAll (C )How to extend the async walkthrough by using Task.WhenAll (C
 
 È possibile migliorare le prestazioni della soluzione asincrona in [Procedura dettagliata: accesso al Web con Async e Await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md) usando il metodo <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Questo metodo mette in attesa più operazioni asincrone, rappresentate come una raccolta di attività.
 
@@ -440,4 +440,4 @@ namespace AsyncExampleWPF_HttpClient_WhenAll
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>
-- [Procedura dettagliata: Accesso al Web con Async e Await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Procedura dettagliata: accesso al Web tramite async e await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
