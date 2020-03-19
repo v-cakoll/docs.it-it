@@ -1,33 +1,33 @@
 ---
 title: Parametri e argomenti
-description: Informazioni sul F# supporto delle lingue per la definizione dei parametri e il passaggio di argomenti a funzioni, metodi e proprietà.
+description: Informazioni sul supporto del linguaggio F , per la definizione di parametri e il passaggio di argomenti a funzioni, metodi e proprietà.
 ms.date: 12/04/2019
 ms.openlocfilehash: b234ef939128e7cf09d35f9580d4d5010d7dc639
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837129"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79400197"
 ---
 # <a name="parameters-and-arguments"></a>Parametri e argomenti
 
-Questo argomento descrive il supporto del linguaggio per la definizione dei parametri e il passaggio di argomenti a funzioni, metodi e proprietà. Sono incluse informazioni su come passare per riferimento e su come definire e usare metodi che possono assumere un numero variabile di argomenti.
+In questo argomento viene descritto il supporto del linguaggio per la definizione di parametri e il passaggio di argomenti a funzioni, metodi e proprietà. Include informazioni su come passare per riferimento e su come definire e utilizzare metodi che possono accettare un numero variabile di argomenti.
 
 ## <a name="parameters-and-arguments"></a>Parametri e argomenti
 
-Il termine *parametro* viene usato per descrivere i nomi dei valori che devono essere forniti. Il termine *argomento* viene usato per i valori forniti per ogni parametro.
+Il termine *parametro* viene utilizzato per descrivere i nomi per i valori che si prevede di fornire. Il termine *argomento* viene utilizzato per i valori forniti per ogni parametro.
 
-I parametri possono essere specificati in formato tupla o sottoposto a currying o in una combinazione dei due. È possibile passare gli argomenti usando un nome di parametro esplicito. I parametri dei metodi possono essere specificati come facoltativi e dato un valore predefinito.
+I parametri possono essere specificati in formato tupla o sottoposto a currying o in una combinazione dei due. È possibile passare argomenti utilizzando un nome di parametro esplicito. I parametri dei metodi possono essere specificati come facoltativi e viene assegnato un valore predefinito.
 
-## <a name="parameter-patterns"></a>Modelli di parametri
+## <a name="parameter-patterns"></a>Modelli di parametroParameter Patterns
 
-I parametri forniti alle funzioni e ai metodi sono, in generale, i modelli separati da spazi. Ciò significa che, in linea di principio, i modelli descritti nelle [espressioni di corrispondenza](match-expressions.md) possono essere utilizzati in un elenco di parametri per una funzione o un membro.
+I parametri forniti a funzioni e metodi sono, in generale, modelli separati da spazi. Ciò significa che, in linea di principio, qualsiasi modello descritto in [Espressioni](match-expressions.md) di corrispondenza può essere utilizzato in un elenco di parametri per una funzione o un membro.
 
-I metodi usano in genere il formato tupla per passare argomenti. Ciò consente di ottenere un risultato più chiaro dal punto di vista di altri linguaggi .NET perché il form della tupla corrisponde al modo in cui gli argomenti vengono passati nei metodi .NET.
+I metodi usano in genere la forma di tupla di passaggio di argomenti. Ciò consente di ottenere un risultato più chiaro dal punto di vista di altri linguaggi .NET perché il formato della tupla corrisponde al modo in cui gli argomenti vengono passati nei metodi .NET.
 
-Il modulo sottoposto a currying viene spesso usato con le funzioni create usando associazioni `let`.
+Il formato sottoposto a currysima viene `let` utilizzato più spesso con le funzioni create tramite associazioni.
 
-Lo pseudocodice seguente mostra esempi di tupla e argomenti sottoposti a currying.
+Lo pseudocodice seguente mostra esempi di tuple e argomenti sottoposti a currying.
 
 ```fsharp
 // Tuple form.
@@ -36,21 +36,21 @@ member this.SomeMethod(param1, param2) = ...
 let function1 param1 param2 = ...
 ```
 
-I moduli combinati sono possibili quando alcuni argomenti si trovano in tuple e altri non lo sono.
+Le forme combinate sono possibili quando alcuni argomenti sono in tuple e altri no.
 
 ```fsharp
 let function2 param1 (param2a, param2b) param3 = ...
 ```
 
-Gli altri modelli possono essere usati anche negli elenchi di parametri, ma se il criterio del parametro non corrisponde a tutti gli input possibili, potrebbe essere presente una corrispondenza incompleta in fase di esecuzione. Il `MatchFailureException` di eccezione viene generato quando il valore di un argomento non corrisponde ai criteri specificati nell'elenco di parametri. Il compilatore genera un avviso quando un modello di parametro consente corrispondenze incomplete. Almeno un altro criterio è comunemente utile per gli elenchi di parametri e questo è il modello con caratteri jolly. Usare il modello con caratteri jolly in un elenco di parametri quando si desidera semplicemente ignorare gli argomenti forniti. Il codice seguente illustra l'uso del modello con caratteri jolly in un elenco di argomenti.
+Altri modelli possono essere usati anche negli elenchi di parametri, ma se il modello di parametro non corrisponde a tutti i possibili input, potrebbe esserci una corrispondenza incompleta in fase di esecuzione. L'eccezione `MatchFailureException` viene generata quando il valore di un argomento non corrisponde ai modelli specificati nell'elenco di parametri. Il compilatore genera un avviso quando un modello di parametro consente corrispondenze incomplete. Almeno un altro modello è in genere utile per gli elenchi di parametri, ovvero il modello con caratteri jolly. Utilizzare il modello con caratteri jolly in un elenco di parametri quando si desidera semplicemente ignorare gli argomenti forniti. Nel codice seguente viene illustrato l'utilizzo del modello con caratteri jolly in un elenco di argomenti.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3801.fs)]
 
-Il modello con caratteri jolly può essere utile quando non sono necessari gli argomenti passati, ad esempio nel punto di ingresso principale a un programma, quando non si è interessati agli argomenti della riga di comando normalmente specificati come matrice di stringhe, come nel codice seguente.
+Il modello con caratteri jolly può essere utile ogni volta che non sono necessari gli argomenti passati, ad esempio nel punto di ingresso principale di un programma, quando non si è interessati agli argomenti della riga di comando normalmente forniti come matrice di stringhe, come nel codice seguente.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3802.fs)]
 
-Altri modelli che vengono talvolta utilizzati negli argomenti sono il modello di `as` e i modelli di identificatore associati alle unioni discriminate e ai modelli attivi. È possibile usare il modello di unione discriminata a caso singolo come indicato di seguito.
+Altri modelli che vengono talvolta `as` utilizzati negli argomenti sono il modello e i modelli di identificatore associati alle unioni discriminate e ai modelli attivi. È possibile utilizzare il modello di unione discriminato caso singolo come indicato di seguito.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3803.fs)]
 
@@ -61,7 +61,7 @@ Data begins at 0 and ends at 4 in string Et tu, Brute?
 Et tu
 ```
 
-I criteri attivi possono essere utili come parametri, ad esempio quando si trasforma un argomento nel formato desiderato, come nell'esempio seguente:
+I modelli attivi possono essere utili come parametri, ad esempio quando si trasforma un argomento in un formato desiderato, come nell'esempio seguente:
 
 ```fsharp
 type Point = { x : float; y : float }
@@ -73,47 +73,47 @@ let radius (Polar(r, _)) = r
 let angle (Polar(_, theta)) = theta
 ```
 
-È possibile usare il modello di `as` per archiviare un valore corrispondente come valore locale, come illustrato nella riga di codice seguente.
+È possibile `as` utilizzare il modello per archiviare un valore corrispondente come valore locale, come illustrato nella riga di codice seguente.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3805.fs)]
 
-Un altro modello usato occasionalmente è una funzione che lascia l'ultimo argomento senza nome fornendo, come il corpo della funzione, un'espressione lambda che esegue immediatamente una corrispondenza del criterio nell'argomento implicito. Un esempio è la seguente riga di codice.
+Un altro modello utilizzato occasionalmente è una funzione che lascia l'ultimo argomento senza nome fornendo, come corpo della funzione, un'espressione lambda che esegue immediatamente una corrispondenza del modello sull'argomento implicito. Un esempio è la seguente riga di codice.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3804.fs)]
 
-Questo codice definisce una funzione che accetta un elenco generico e restituisce `true` se l'elenco è vuoto e `false` in caso contrario. L'utilizzo di tali tecniche può rendere il codice più difficile da leggere.
+Questo codice definisce una funzione che `true` accetta un elenco generico e restituisce se l'elenco è vuoto e `false` in caso contrario. L'uso di tali tecniche può rendere il codice più difficile da leggere.
 
-Occasionalmente, i modelli che coinvolgono corrispondenze incomplete sono utili, ad esempio, se si è certi che gli elenchi nel programma hanno solo tre elementi, è possibile usare un modello simile al seguente in un elenco di parametri.
+Occasionalmente, i modelli che implicano corrispondenze incomplete sono utili, ad esempio, se si sa che gli elenchi nel programma hanno solo tre elementi, è possibile utilizzare un modello simile al seguente in un elenco di parametri.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3806.fs)]
 
-L'uso di modelli con corrispondenze incomplete è particolarmente riservato per la creazione rapida di prototipi e per altri usi temporanei. Il compilatore emetterà un avviso per tale codice. Questi modelli non sono in grado di coprire il caso generale di tutti gli input possibili e pertanto non sono adatti alle API dei componenti.
+L'uso di modelli con corrispondenze incomplete è meglio riservato per la prototipazione rapida e altri usi temporanei. Il compilatore genererà un avviso per tale codice. Tali modelli non possono coprire il caso generale di tutti i possibili input e pertanto non sono adatti per le API dei componenti.
 
 ## <a name="named-arguments"></a>Argomenti denominati
 
-Gli argomenti per i metodi possono essere specificati in base alla posizione in un elenco di argomenti delimitati da virgole oppure possono essere passati a un metodo in modo esplicito fornendo il nome, seguito da un segno di uguale e dal valore da passare. Se specificato specificando il nome, questi possono essere visualizzati in un ordine diverso rispetto a quello usato nella dichiarazione.
+Gli argomenti per i metodi possono essere specificati in base alla posizione in un elenco di argomenti delimitati da virgole oppure possono essere passati a un metodo in modo esplicito fornendo il nome, seguito da un segno di uguale e dal valore da passare. Se specificati specificando il nome, possono essere visualizzati in un ordine diverso da quello utilizzato nella dichiarazione.
 
 Gli argomenti denominati possono rendere il codice più leggibile e più adattabile a determinati tipi di modifiche nell'API, ad esempio un riordinamento dei parametri del metodo.
 
-Gli argomenti denominati sono consentiti solo per i metodi, non per le funzioni associate a `let`, i valori di funzione o le espressioni lambda.
+Gli argomenti denominati sono consentiti solo per i metodi, non per `let`le funzioni associate, i valori di funzione o le espressioni lambda.
 
 Nell'esempio di codice riportato di seguito viene illustrato l'utilizzo di argomenti denominati.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3807.fs)]
 
-In una chiamata a un costruttore di classe, è possibile impostare i valori delle proprietà della classe usando una sintassi simile a quella degli argomenti denominati. Nell'esempio seguente viene illustrata questa sintassi.
+In una chiamata a un costruttore di classe, è possibile impostare i valori delle proprietà della classe utilizzando una sintassi simile a quella degli argomenti denominati. Nell'esempio seguente viene illustrata questa sintassi.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
 
-Per ulteriori informazioni, vedere [costruttori (F#)](https://msdn.microsoft.com/library/2cd0ed07-d214-4125-8317-4f288af99f05).
+Per ulteriori informazioni, vedere [Costruttori (F )](https://msdn.microsoft.com/library/2cd0ed07-d214-4125-8317-4f288af99f05).
 
 ## <a name="optional-parameters"></a>Parametri facoltativi
 
-È possibile specificare un parametro facoltativo per un metodo usando un punto interrogativo davanti al nome del parametro. I parametri facoltativi vengono interpretati come tipo di F# opzione, quindi è possibile eseguire query su di essi nel modo normale in cui vengono eseguite query sui tipi di opzioni, usando un'espressione `match` con `Some` e `None`. I parametri facoltativi sono consentiti solo per i membri, non per le funzioni create usando associazioni `let`.
+È possibile specificare un parametro facoltativo per un metodo utilizzando un punto interrogativo prima del nome del parametro. I parametri facoltativi vengono interpretati come il tipo di opzione F, pertanto è possibile `match` eseguire `Some` `None`una query in modo regolare in cui vengono eseguite query sui tipi di opzione, utilizzando un'espressione con e . I parametri facoltativi sono consentiti solo `let` sui membri, non sulle funzioni create tramite associazioni.
 
-È possibile passare i valori facoltativi esistenti al metodo in base al nome del parametro, ad esempio `?arg=None` o `?arg=Some(3)` o `?arg=arg`. Questa operazione può essere utile quando si compila un metodo che passa argomenti facoltativi a un altro metodo.
+È possibile passare i valori facoltativi esistenti `?arg=None` `?arg=Some(3)` al `?arg=arg`metodo in base al nome del parametro, ad esempio o o . Ciò può essere utile quando si compila un metodo che passa argomenti facoltativi a un altro metodo.
 
-È anche possibile usare una funzione `defaultArg`, che imposta un valore predefinito di un argomento facoltativo. La funzione `defaultArg` accetta il parametro facoltativo come primo argomento e il valore predefinito come secondo.
+È inoltre possibile `defaultArg`utilizzare una funzione , che imposta un valore predefinito di un argomento facoltativo. La `defaultArg` funzione accetta il parametro facoltativo come primo argomento e il valore predefinito come secondo.
 
 Nell'esempio seguente viene illustrato l'utilizzo di parametri facoltativi.
 
@@ -130,7 +130,7 @@ Baud Rate: 9600 Duplex: Full Parity: false
 Baud Rate: 4800 Duplex: Half Parity: false
 ```
 
-Ai fini di C# e Visual Basic interoperabilità è possibile utilizzare gli attributi `[<Optional; DefaultParameterValue<(...)>]` F#in, in modo che i chiamanti visualizzino un argomento come facoltativo. Questa operazione equivale a definire l'argomento come facoltativo in C# come in `MyMethod(int i = 3)`.
+Ai fini dell'interoperabilità di C e `[<Optional; DefaultParameterValue<(...)>]` Visual Basic è possibile utilizzare gli attributi in F , in modo che i chiamanti vedranno un argomento come facoltativo. Ciò equivale a definire l'argomento come `MyMethod(int i = 3)`facoltativo in C , come in .
 
 ```fsharp
 open System
@@ -140,7 +140,7 @@ type C =
         printfn "%s" message
 ```
 
-È anche possibile specificare un nuovo oggetto come valore di parametro predefinito. È possibile, ad esempio, che il membro `Foo` disponga di un `CancellationToken` facoltativo come input:
+È inoltre possibile specificare un nuovo oggetto come valore di parametro predefinito. Ad esempio, `Foo` il membro `CancellationToken` potrebbe avere un optional come input invece:For example, the member could have an optional as input instead:
 
 ```fsharp
 open System.Threading
@@ -150,22 +150,22 @@ type C =
         printfn "%A" ct
 ```
 
-Il valore specificato come argomento per `DefaultParameterValue` deve corrispondere al tipo del parametro. Ad esempio, non sono consentiti gli elementi seguenti:
+Il valore fornito `DefaultParameterValue` come argomento deve corrispondere al tipo del parametro. Ad esempio, non è consentito quanto segue:
 
 ```fsharp
 type C =
     static member Wrong([<Optional; DefaultParameterValue("string")>] i:int) = ()
 ```
 
-In questo caso, il compilatore genera un avviso e ignorerà il totale di entrambi gli attributi. Si noti che il valore predefinito `null` deve essere con annotazioni di tipo, altrimenti il compilatore deduce il tipo errato, ad esempio `[<Optional; DefaultParameterValue(null:obj)>] o:obj`.
+In questo caso, il compilatore genera un avviso e ignorerà entrambi gli attributi del tutto. Si noti `null` che il valore predefinito deve essere annotato in tipo, altrimenti il `[<Optional; DefaultParameterValue(null:obj)>] o:obj`compilatore deduce il tipo errato, ad esempio .
 
-## <a name="passing-by-reference"></a>Passaggio per riferimento
+## <a name="passing-by-reference"></a>Passaggio per riferimentoPassing by Reference
 
-Il passaggio F# di un valore per riferimento comporta [ByRef](byrefs.md), che sono tipi di puntatore gestiti. Di seguito sono riportate le linee guida per il tipo da usare:
+Il passaggio di un valore F , per riferimento, implica byrefs , che sono tipi puntatore [gestiti.](byrefs.md) Le indicazioni per il tipo da utilizzare sono le seguenti:
 
-- Utilizzare `inref<'T>` se è necessario leggere solo il puntatore.
-- Utilizzare `outref<'T>` se è necessario scrivere solo sull'indicatore di misura.
-- Usare `byref<'T>` se è necessario leggere e scrivere sul puntatore.
+- Utilizzare `inref<'T>` se è sufficiente leggere il puntatore.
+- Utilizzare `outref<'T>` se è necessario scrivere solo nel puntatore.
+- Utilizzare `byref<'T>` se è necessario leggere e scrivere nel puntatore.
 
 ```fsharp
 let example1 (x: inref<int>) = printfn "It's %d" x
@@ -189,19 +189,19 @@ let test () =
 
 Poiché il parametro è un puntatore e il valore è modificabile, tutte le modifiche apportate al valore vengono mantenute dopo l'esecuzione della funzione.
 
-È possibile utilizzare una tupla come valore restituito per archiviare qualsiasi parametro di `out` nei metodi della libreria .NET. In alternativa, è possibile considerare il parametro `out` come parametro di `byref`. Nell'esempio di codice seguente vengono illustrate entrambe le modalità.
+È possibile usare una tupla `out` come valore restituito per archiviare tutti i parametri nei metodi della libreria .NET. In alternativa, è `out` possibile considerare `byref` il parametro come parametro. Nell'esempio di codice riportato di seguito vengono illustrate entrambe le modalità.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3810.fs)]
 
 ## <a name="parameter-arrays"></a>Matrici di parametri
 
-Occasionalmente è necessario definire una funzione che accetta un numero arbitrario di parametri di tipo eterogeneo. Non sarebbe pratico creare tutti i possibili metodi di overload per tenere conto di tutti i tipi che potevano essere usati. Le implementazioni di .NET forniscono supporto per tali metodi tramite la funzionalità di matrice di parametri. Un metodo che accetta una matrice di parametri nella relativa firma può essere fornito con un numero arbitrario di parametri. I parametri vengono inseriti in una matrice. Il tipo degli elementi della matrice determina i tipi di parametro che è possibile passare alla funzione. Se si definisce la matrice di parametri con `System.Object` come tipo di elemento, il codice client può passare valori di qualsiasi tipo.
+Occasionalmente è necessario definire una funzione che accetta un numero arbitrario di parametri di tipo eterogeneo. Non sarebbe pratico creare tutti i possibili metodi di overload per tenere conto di tutti i tipi che potrebbero essere utilizzati. Le implementazioni di .NET forniscono il supporto per tali metodi tramite la funzionalità di matrice di parametri. Un metodo che accetta una matrice di parametri nella firma può essere fornito con un numero arbitrario di parametri. I parametri vengono inseriti in una matrice. Il tipo degli elementi della matrice determina i tipi di parametro che possono essere passati alla funzione. Se si definisce `System.Object` la matrice di parametri con il tipo di elemento, il codice client può passare valori di qualsiasi tipo.
 
-In F#le matrici di parametri possono essere definite solo nei metodi. Non possono essere usati in funzioni o funzioni autonome definite nei moduli.
+In F , le matrici di parametri possono essere definite solo nei metodi. Non possono essere utilizzati in funzioni autonome o funzioni definite nei moduli.
 
-Per definire una matrice di parametri, usare l'attributo `ParamArray`. L'attributo `ParamArray` può essere applicato solo all'ultimo parametro.
+Per definire una matrice `ParamArray` di parametri, utilizzare l'attributo . L'attributo `ParamArray` può essere applicato solo all'ultimo parametro.
 
-Nel codice seguente viene illustrata la chiamata a un metodo .NET che accetta una matrice di parametri e la definizione di F# un tipo in che dispone di un metodo che accetta una matrice di parametri.
+Nel codice riportato di seguito viene illustrata la chiamata a un metodo .NET che accetta una matrice di parametri e la definizione di un tipo in F , che dispone di un metodo che accetta una matrice di parametri.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-2/snippet3811.fs)]
 
