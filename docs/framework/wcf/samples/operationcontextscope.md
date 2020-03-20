@@ -2,35 +2,35 @@
 title: OperationContextScope
 ms.date: 03/30/2017
 ms.assetid: 11c11108-8eb4-4d49-95a0-83285a812262
-ms.openlocfilehash: 581f75ece1a601b3baf590c1923a17a353de1ff1
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ce21d9d099d893015ea828bdc3b136ab83f6d8e8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714615"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183425"
 ---
-# <a name="operationcontextscope"></a><span data-ttu-id="5b182-102">OperationContextScope</span><span class="sxs-lookup"><span data-stu-id="5b182-102">OperationContextScope</span></span>
-<span data-ttu-id="5b182-103">Nell'esempio OperationContextScope viene illustrato come inviare informazioni aggiuntive su una chiamata Windows Communication Foundation (WCF) utilizzando le intestazioni.</span><span class="sxs-lookup"><span data-stu-id="5b182-103">The OperationContextScope sample demonstrates how to send extra information on a Windows Communication Foundation (WCF) call using headers.</span></span> <span data-ttu-id="5b182-104">In questo esempio sia il server che il client sono applicazioni console.</span><span class="sxs-lookup"><span data-stu-id="5b182-104">In this sample, both the server and client are console applications.</span></span>  
+# <a name="operationcontextscope"></a><span data-ttu-id="74404-102">OperationContextScope</span><span class="sxs-lookup"><span data-stu-id="74404-102">OperationContextScope</span></span>
+<span data-ttu-id="74404-103">Nell'esempio OperationContextScope viene illustrato come inviare informazioni aggiuntive in una chiamata di Windows Communication Foundation (WCF) usando le intestazioni.</span><span class="sxs-lookup"><span data-stu-id="74404-103">The OperationContextScope sample demonstrates how to send extra information on a Windows Communication Foundation (WCF) call using headers.</span></span> <span data-ttu-id="74404-104">In questo esempio sia il server che il client sono applicazioni console.</span><span class="sxs-lookup"><span data-stu-id="74404-104">In this sample, both the server and client are console applications.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="5b182-105">La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.</span><span class="sxs-lookup"><span data-stu-id="5b182-105">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+> <span data-ttu-id="74404-105">La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.</span><span class="sxs-lookup"><span data-stu-id="74404-105">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="5b182-106">Nell'esempio viene illustrato in che modo un client può inviare informazioni aggiuntive come un <xref:System.ServiceModel.Channels.MessageHeader> utilizzando <xref:System.ServiceModel.OperationContextScope>.</span><span class="sxs-lookup"><span data-stu-id="5b182-106">The sample demonstrates how a client can send additional information as a <xref:System.ServiceModel.Channels.MessageHeader> using <xref:System.ServiceModel.OperationContextScope>.</span></span> <span data-ttu-id="5b182-107">Un oggetto <xref:System.ServiceModel.OperationContextScope> viene creato definendone l'ambito su un canale.</span><span class="sxs-lookup"><span data-stu-id="5b182-107">An <xref:System.ServiceModel.OperationContextScope> object is created by scoping it to a channel.</span></span> <span data-ttu-id="5b182-108">Le intestazioni che devono essere tradotte nel servizio remoto possono essere aggiunte alla raccolta <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A>.</span><span class="sxs-lookup"><span data-stu-id="5b182-108">Headers that must be translated to the remote service can be added to the <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> collection.</span></span> <span data-ttu-id="5b182-109">Le intestazioni aggiunte alla raccolta possono essere recuperate nel servizio accedendo alla proprietà <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A>.</span><span class="sxs-lookup"><span data-stu-id="5b182-109">Headers added to this collection can be retrieved on the service by accessing <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A>.</span></span> <span data-ttu-id="5b182-110">Le chiamate a questa proprietà vengono effettuate sui più canali e quindi le intestazioni aggiunte al client possono essere applicate solo al canale utilizzato per creare <xref:System.ServiceModel.OperationContextScope>.</span><span class="sxs-lookup"><span data-stu-id="5b182-110">Its calls are made on multiple channels and then the headers added to the client only apply to the channel that was used to create the <xref:System.ServiceModel.OperationContextScope>.</span></span>  
+ <span data-ttu-id="74404-106">Nell'esempio viene illustrato in che modo un client può inviare informazioni aggiuntive come un <xref:System.ServiceModel.Channels.MessageHeader> utilizzando <xref:System.ServiceModel.OperationContextScope>.</span><span class="sxs-lookup"><span data-stu-id="74404-106">The sample demonstrates how a client can send additional information as a <xref:System.ServiceModel.Channels.MessageHeader> using <xref:System.ServiceModel.OperationContextScope>.</span></span> <span data-ttu-id="74404-107">Un oggetto <xref:System.ServiceModel.OperationContextScope> viene creato definendone l'ambito su un canale.</span><span class="sxs-lookup"><span data-stu-id="74404-107">An <xref:System.ServiceModel.OperationContextScope> object is created by scoping it to a channel.</span></span> <span data-ttu-id="74404-108">Le intestazioni che devono essere tradotte nel servizio remoto possono essere aggiunte alla raccolta <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A>.</span><span class="sxs-lookup"><span data-stu-id="74404-108">Headers that must be translated to the remote service can be added to the <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> collection.</span></span> <span data-ttu-id="74404-109">Le intestazioni aggiunte alla raccolta possono essere recuperate nel servizio accedendo alla proprietà <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A>.</span><span class="sxs-lookup"><span data-stu-id="74404-109">Headers added to this collection can be retrieved on the service by accessing <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A>.</span></span> <span data-ttu-id="74404-110">Le chiamate a questa proprietà vengono effettuate sui più canali e quindi le intestazioni aggiunte al client possono essere applicate solo al canale utilizzato per creare <xref:System.ServiceModel.OperationContextScope>.</span><span class="sxs-lookup"><span data-stu-id="74404-110">Its calls are made on multiple channels and then the headers added to the client only apply to the channel that was used to create the <xref:System.ServiceModel.OperationContextScope>.</span></span>  
   
-## <a name="messageheaderreader"></a><span data-ttu-id="5b182-111">MessageHeaderReader</span><span class="sxs-lookup"><span data-stu-id="5b182-111">MessageHeaderReader</span></span>  
- <span data-ttu-id="5b182-112">Si tratta del servizio di esempio che riceve un messaggio dal client e tenta di cercare l'intestazione nella raccolta <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A>.</span><span class="sxs-lookup"><span data-stu-id="5b182-112">This is the sample service that receives a message from the client and tries to look up the header in the <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A> collection.</span></span> <span data-ttu-id="5b182-113">Il client passa il GUID inviato nell'intestazione, quindi il servizio recupera l'intestazione personalizzata e, se presente, lo confronta con il GUID passato come argomento dal client.</span><span class="sxs-lookup"><span data-stu-id="5b182-113">The client passes the GUID that it sent in the header and the service retrieves the custom header and, if present, compares it with the GUID passed as the argument by the client.</span></span>  
+## <a name="messageheaderreader"></a><span data-ttu-id="74404-111">MessageHeaderReader</span><span class="sxs-lookup"><span data-stu-id="74404-111">MessageHeaderReader</span></span>  
+ <span data-ttu-id="74404-112">Si tratta del servizio di esempio che riceve un messaggio dal client e tenta di cercare l'intestazione nella raccolta <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A>.</span><span class="sxs-lookup"><span data-stu-id="74404-112">This is the sample service that receives a message from the client and tries to look up the header in the <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A> collection.</span></span> <span data-ttu-id="74404-113">Il client passa il GUID inviato nell'intestazione, quindi il servizio recupera l'intestazione personalizzata e, se presente, lo confronta con il GUID passato come argomento dal client.</span><span class="sxs-lookup"><span data-stu-id="74404-113">The client passes the GUID that it sent in the header and the service retrieves the custom header and, if present, compares it with the GUID passed as the argument by the client.</span></span>  
   
 ```csharp
 public bool RetrieveHeader(string guid)  
 {  
-     MessageHeaders messageHeaderCollection =   
+     MessageHeaders messageHeaderCollection =
              OperationContext.Current.IncomingMessageHeaders;  
      String guidHeader = null;  
   
      Console.WriteLine("Trying to check if IncomingMessageHeader " +  
                " collection contains header with value {0}", guid);  
      if (messageHeaderCollection.FindHeader(  
-                       CustomHeader.HeaderName,   
+                       CustomHeader.HeaderName,
                        CustomHeader.HeaderNamespace) != -1)  
      {  
           guidHeader = messageHeaderCollection.GetHeader<String>(  
@@ -42,8 +42,8 @@ public bool RetrieveHeader(string guid)
      }  
      if (guidHeader != null)  
      {  
-          Console.WriteLine("Found header with value {0}. "+   
-         "Does it match with GUID sent as parameter: {1}",   
+          Console.WriteLine("Found header with value {0}. "+
+         "Does it match with GUID sent as parameter: {1}",
           guidHeader, guidHeader.Equals(guid));  
       }  
   
@@ -54,8 +54,8 @@ public bool RetrieveHeader(string guid)
 }  
 ```  
   
-## <a name="messageheaderclient"></a><span data-ttu-id="5b182-114">MessageHeaderClient</span><span class="sxs-lookup"><span data-stu-id="5b182-114">MessageHeaderClient</span></span>  
- <span data-ttu-id="5b182-115">Si tratta dell'implementazione client che utilizza il proxy generato dallo [strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per comunicare con il servizio remoto.</span><span class="sxs-lookup"><span data-stu-id="5b182-115">This is the client implementation that uses the proxy generated by [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to communicate with the remote service.</span></span> <span data-ttu-id="5b182-116">Crea innanzitutto due oggetti proxy di `MessageHeaderReaderClient`.</span><span class="sxs-lookup"><span data-stu-id="5b182-116">It first creates two proxy objects of `MessageHeaderReaderClient`.</span></span>  
+## <a name="messageheaderclient"></a><span data-ttu-id="74404-114">MessageHeaderClient</span><span class="sxs-lookup"><span data-stu-id="74404-114">MessageHeaderClient</span></span>  
+ <span data-ttu-id="74404-115">Si tratta dell'implementazione client che utilizza il proxy generato dallo [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per comunicare con il servizio remoto.</span><span class="sxs-lookup"><span data-stu-id="74404-115">This is the client implementation that uses the proxy generated by [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to communicate with the remote service.</span></span> <span data-ttu-id="74404-116">Crea innanzitutto due oggetti proxy di `MessageHeaderReaderClient`.</span><span class="sxs-lookup"><span data-stu-id="74404-116">It first creates two proxy objects of `MessageHeaderReaderClient`.</span></span>  
   
 ```csharp
 //Create two clients to the remote service.  
@@ -63,7 +63,7 @@ MessageHeaderReaderClient client1 = new MessageHeaderReaderClient();
 MessageHeaderReaderClient client2 = new MessageHeaderReaderClient();  
 ```  
   
- <span data-ttu-id="5b182-117">Il client crea quindi un OperationContextScope e ne definisce l'ambito su `client1`.</span><span class="sxs-lookup"><span data-stu-id="5b182-117">Client then creates an OperationContextScope and scopes it to `client1`.</span></span> <span data-ttu-id="5b182-118">Aggiunge un <xref:System.ServiceModel.Channels.MessageHeader> a <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> ed esegue una chiamata su entrambi i client.</span><span class="sxs-lookup"><span data-stu-id="5b182-118">It adds a <xref:System.ServiceModel.Channels.MessageHeader> to <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> and invokes one call on both clients.</span></span> <span data-ttu-id="5b182-119">Garantisce che l'intestazione venga inviata solo su `client1` e non su `client2` controllando il valore restituito dalla chiamata `RetrieveHeader`.</span><span class="sxs-lookup"><span data-stu-id="5b182-119">It ensures that the header is sent only on `client1` and not on `client2` by checking the return value from the `RetrieveHeader` call.</span></span>  
+ <span data-ttu-id="74404-117">Il client crea quindi un OperationContextScope e ne definisce l'ambito su `client1`.</span><span class="sxs-lookup"><span data-stu-id="74404-117">Client then creates an OperationContextScope and scopes it to `client1`.</span></span> <span data-ttu-id="74404-118">Aggiunge un <xref:System.ServiceModel.Channels.MessageHeader> a <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> ed esegue una chiamata su entrambi i client.</span><span class="sxs-lookup"><span data-stu-id="74404-118">It adds a <xref:System.ServiceModel.Channels.MessageHeader> to <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> and invokes one call on both clients.</span></span> <span data-ttu-id="74404-119">Garantisce che l'intestazione `client1` venga inviata `client2` solo su e `RetrieveHeader` non su controllando il valore restituito dalla chiamata.</span><span class="sxs-lookup"><span data-stu-id="74404-119">It ensures that the header is sent only on `client1` and not on `client2` by checking the return value from the `RetrieveHeader` call.</span></span>  
   
 ```csharp
 using (new OperationContextScope(client1.InnerChannel))  
@@ -77,7 +77,7 @@ using (new OperationContextScope(client1.InnerChannel))
     //Add the header to the OutgoingMessageHeader collection.  
     OperationContext.Current.OutgoingMessageHeaders.Add(customHeader);  
   
-    //Now call RetrieveHeader on both the proxies. Since the OperationContextScope is tied to   
+    //Now call RetrieveHeader on both the proxies. Since the OperationContextScope is tied to
     //client1's InnerChannel, the header should only be added to calls made on that client.  
     //Calls made on client2 should not be sending the header across even though the call  
     //is made in the same OperationContextScope.  
@@ -90,7 +90,7 @@ using (new OperationContextScope(client1.InnerChannel))
 }  
 ```  
   
- <span data-ttu-id="5b182-120">Questo esempio è indipendente.</span><span class="sxs-lookup"><span data-stu-id="5b182-120">This sample is self-hosted.</span></span> <span data-ttu-id="5b182-121">L'esecuzione dell'esempio fornisce l'output di esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="5b182-121">The following sample output from running the sample is provided:</span></span>  
+ <span data-ttu-id="74404-120">Questo esempio è indipendente.</span><span class="sxs-lookup"><span data-stu-id="74404-120">This sample is self-hosted.</span></span> <span data-ttu-id="74404-121">L'esecuzione dell'esempio fornisce l'output di esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="74404-121">The following sample output from running the sample is provided:</span></span>  
   
 ```console  
 Prompt> Service.exe  
@@ -113,19 +113,19 @@ Did server retrieve the header? : Actual: False, Expected: False
 Press <ENTER> to terminate client.  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="5b182-122">Per impostare, compilare ed eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="5b182-122">To set up, build, and run the sample</span></span>  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="74404-122">Per impostare, compilare ed eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="74404-122">To set up, build, and run the sample</span></span>  
   
-1. <span data-ttu-id="5b182-123">Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="5b182-123">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1. <span data-ttu-id="74404-123">Assicurarsi di aver eseguito la procedura di [installazione una tantera per Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="74404-123">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2. <span data-ttu-id="5b182-124">Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="5b182-124">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2. <span data-ttu-id="74404-124">Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="74404-124">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3. <span data-ttu-id="5b182-125">Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="5b182-125">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3. <span data-ttu-id="74404-125">Per eseguire l'esempio in una configurazione su un singolo o più computer, seguire le istruzioni in Esecuzione di [Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="74404-125">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
-> <span data-ttu-id="5b182-126">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="5b182-126">The samples may already be installed on your machine.</span></span> <span data-ttu-id="5b182-127">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="5b182-127">Check for the following (default) directory before continuing.</span></span>  
->   
+> <span data-ttu-id="74404-126">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="74404-126">The samples may already be installed on your machine.</span></span> <span data-ttu-id="74404-127">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="74404-127">Check for the following (default) directory before continuing.</span></span>  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> <span data-ttu-id="5b182-128">Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi.</span><span class="sxs-lookup"><span data-stu-id="5b182-128">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="5b182-129">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="5b182-129">This sample is located in the following directory.</span></span>  
->   
+>
+> <span data-ttu-id="74404-128">Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) Esempi per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti gli esempi e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="74404-128">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="74404-129">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="74404-129">This sample is located in the following directory.</span></span>  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\OperationContextScope`  

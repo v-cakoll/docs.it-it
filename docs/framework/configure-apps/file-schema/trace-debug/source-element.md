@@ -7,60 +7,60 @@ f1_keywords:
 helpviewer_keywords:
 - <source> element
 - source element
-ms.openlocfilehash: b59144f4772c940f8c7e6ca19aa21666069b4b55
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 417722ce2f3865350158413307495e3ab435d386
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088822"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153295"
 ---
-# <a name="source-element"></a><span data-ttu-id="4c08f-102">Elemento > \<source</span><span class="sxs-lookup"><span data-stu-id="4c08f-102">\<source> Element</span></span>
-<span data-ttu-id="4c08f-103">Specifica un'origine di traccia che avvia i messaggi di traccia.</span><span class="sxs-lookup"><span data-stu-id="4c08f-103">Specifies a trace source that initiates tracing messages.</span></span>  
+# <a name="source-element"></a><span data-ttu-id="fbf69-102">\<Elemento> di origine</span><span class="sxs-lookup"><span data-stu-id="fbf69-102">\<source> Element</span></span>
+<span data-ttu-id="fbf69-103">Specifica un'origine di traccia che avvia i messaggi di traccia.</span><span class="sxs-lookup"><span data-stu-id="fbf69-103">Specifies a trace source that initiates tracing messages.</span></span>  
 
-<span data-ttu-id="4c08f-104">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="4c08f-104">[**\<configuration>**](../configuration-element.md)</span></span>\
-<span data-ttu-id="4c08f-105">&nbsp;&nbsp;[ **\<System. diagnostics >** ](system-diagnostics-element.md)</span><span class="sxs-lookup"><span data-stu-id="4c08f-105">&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)</span></span>\
-<span data-ttu-id="4c08f-106">&nbsp;&nbsp;&nbsp;&nbsp;\<[**origini**](sources-element.md) ></span><span class="sxs-lookup"><span data-stu-id="4c08f-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<sources>**](sources-element.md)</span></span>\
-<span data-ttu-id="4c08f-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**origine** ></span><span class="sxs-lookup"><span data-stu-id="4c08f-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<source>**</span></span>
+<span data-ttu-id="fbf69-104">[**\<>di configurazione**](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="fbf69-104">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="fbf69-105">&nbsp;&nbsp;[**\<>system.diagnostics**](system-diagnostics-element.md)</span><span class="sxs-lookup"><span data-stu-id="fbf69-105">&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)</span></span>\
+<span data-ttu-id="fbf69-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<fonti>**](sources-element.md)</span><span class="sxs-lookup"><span data-stu-id="fbf69-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<sources>**](sources-element.md)</span></span>\
+<span data-ttu-id="fbf69-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>**</span><span class="sxs-lookup"><span data-stu-id="fbf69-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<source>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="4c08f-108">Sintassi</span><span class="sxs-lookup"><span data-stu-id="4c08f-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fbf69-108">Sintassi</span><span class="sxs-lookup"><span data-stu-id="fbf69-108">Syntax</span></span>  
   
 ```xml  
-<source>   
+<source>
   <listeners>...</listeners>  
 </source>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="4c08f-109">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="4c08f-109">Attributes and Elements</span></span>  
- <span data-ttu-id="4c08f-110">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="4c08f-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="fbf69-109">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="fbf69-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="fbf69-110">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="fbf69-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="4c08f-111">Attributi</span><span class="sxs-lookup"><span data-stu-id="4c08f-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="fbf69-111">Attributes</span><span class="sxs-lookup"><span data-stu-id="fbf69-111">Attributes</span></span>  
   
-|<span data-ttu-id="4c08f-112">Attributo</span><span class="sxs-lookup"><span data-stu-id="4c08f-112">Attribute</span></span>|<span data-ttu-id="4c08f-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="4c08f-113">Description</span></span>|  
+|<span data-ttu-id="fbf69-112">Attributo</span><span class="sxs-lookup"><span data-stu-id="fbf69-112">Attribute</span></span>|<span data-ttu-id="fbf69-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="fbf69-113">Description</span></span>|  
 |---------------|-----------------|  
-|`name`|<span data-ttu-id="4c08f-114">Attributo facoltativo.</span><span class="sxs-lookup"><span data-stu-id="4c08f-114">Optional attribute.</span></span><br /><br /> <span data-ttu-id="4c08f-115">Specifica il nome dell'origine di traccia.</span><span class="sxs-lookup"><span data-stu-id="4c08f-115">Specifies the name of the trace source.</span></span>|  
-|`switchName`|<span data-ttu-id="4c08f-116">Attributo facoltativo.</span><span class="sxs-lookup"><span data-stu-id="4c08f-116">Optional attribute.</span></span><br /><br /> <span data-ttu-id="4c08f-117">Specifica il nome di un'istanza dell'opzione di traccia nell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="4c08f-117">Specifies the name of a trace switch instance in the application.</span></span> <span data-ttu-id="4c08f-118">Se l'opzione non è identificata in un elemento `<switches>`, il valore specifica il livello per l'opzione.</span><span class="sxs-lookup"><span data-stu-id="4c08f-118">If the switch is not identified in a `<switches>` element, the value specifies the level for the switch.</span></span>|  
-|`switchType`|<span data-ttu-id="4c08f-119">Attributo facoltativo.</span><span class="sxs-lookup"><span data-stu-id="4c08f-119">Optional attribute.</span></span><br /><br /> <span data-ttu-id="4c08f-120">Specifica il tipo di opzione di traccia.</span><span class="sxs-lookup"><span data-stu-id="4c08f-120">Specifies the type of the trace switch.</span></span> <span data-ttu-id="4c08f-121">Se presente, il tipo deve essere un nome di classe valido e non può essere una stringa vuota.</span><span class="sxs-lookup"><span data-stu-id="4c08f-121">If present, the type must be a valid class name and cannot be an empty string.</span></span>|  
-|`extraAttribute`|<span data-ttu-id="4c08f-122">Attributo facoltativo.</span><span class="sxs-lookup"><span data-stu-id="4c08f-122">Optional attribute.</span></span><br /><br /> <span data-ttu-id="4c08f-123">Specifica il valore per un attributo specifico dell'origine di traccia identificato dal metodo <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> per l'origine di traccia.</span><span class="sxs-lookup"><span data-stu-id="4c08f-123">Specifies the value for a trace source-specific attribute identified by the <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> method for that trace source.</span></span>|  
+|`name`|<span data-ttu-id="fbf69-114">Attributo facoltativo.</span><span class="sxs-lookup"><span data-stu-id="fbf69-114">Optional attribute.</span></span><br /><br /> <span data-ttu-id="fbf69-115">Specifica il nome dell'origine di traccia.</span><span class="sxs-lookup"><span data-stu-id="fbf69-115">Specifies the name of the trace source.</span></span>|  
+|`switchName`|<span data-ttu-id="fbf69-116">Attributo facoltativo.</span><span class="sxs-lookup"><span data-stu-id="fbf69-116">Optional attribute.</span></span><br /><br /> <span data-ttu-id="fbf69-117">Specifica il nome di un'istanza dell'opzione di traccia nell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="fbf69-117">Specifies the name of a trace switch instance in the application.</span></span> <span data-ttu-id="fbf69-118">Se l'opzione non `<switches>` è identificata in un elemento, il valore specifica il livello per l'opzione.</span><span class="sxs-lookup"><span data-stu-id="fbf69-118">If the switch is not identified in a `<switches>` element, the value specifies the level for the switch.</span></span>|  
+|`switchType`|<span data-ttu-id="fbf69-119">Attributo facoltativo.</span><span class="sxs-lookup"><span data-stu-id="fbf69-119">Optional attribute.</span></span><br /><br /> <span data-ttu-id="fbf69-120">Specifica il tipo dell'opzione di traccia.</span><span class="sxs-lookup"><span data-stu-id="fbf69-120">Specifies the type of the trace switch.</span></span> <span data-ttu-id="fbf69-121">Se presente, il tipo deve essere un nome di classe valido e non può essere una stringa vuota.</span><span class="sxs-lookup"><span data-stu-id="fbf69-121">If present, the type must be a valid class name and cannot be an empty string.</span></span>|  
+|`extraAttribute`|<span data-ttu-id="fbf69-122">Attributo facoltativo.</span><span class="sxs-lookup"><span data-stu-id="fbf69-122">Optional attribute.</span></span><br /><br /> <span data-ttu-id="fbf69-123">Specifica il valore di un attributo specifico <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> dell'origine di traccia identificato dal metodo per tale origine di traccia.</span><span class="sxs-lookup"><span data-stu-id="fbf69-123">Specifies the value for a trace source-specific attribute identified by the <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> method for that trace source.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="4c08f-124">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="4c08f-124">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="fbf69-124">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="fbf69-124">Child Elements</span></span>  
   
-|<span data-ttu-id="4c08f-125">Elemento</span><span class="sxs-lookup"><span data-stu-id="4c08f-125">Element</span></span>|<span data-ttu-id="4c08f-126">Descrizione</span><span class="sxs-lookup"><span data-stu-id="4c08f-126">Description</span></span>|  
+|<span data-ttu-id="fbf69-125">Elemento</span><span class="sxs-lookup"><span data-stu-id="fbf69-125">Element</span></span>|<span data-ttu-id="fbf69-126">Descrizione</span><span class="sxs-lookup"><span data-stu-id="fbf69-126">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="4c08f-127">\<listeners></span><span class="sxs-lookup"><span data-stu-id="4c08f-127">\<listeners></span></span>](listeners-element-for-source.md)|<span data-ttu-id="4c08f-128">Contiene i listener che raccolgono, archiviano e indirizzano i messaggi.</span><span class="sxs-lookup"><span data-stu-id="4c08f-128">Contains listeners that collect, store, and route messages.</span></span>|  
+|[<span data-ttu-id="fbf69-127">\<>di ascoltatori</span><span class="sxs-lookup"><span data-stu-id="fbf69-127">\<listeners></span></span>](listeners-element-for-source.md)|<span data-ttu-id="fbf69-128">Contiene i listener che raccolgono, archiviano e instradano i messaggi.</span><span class="sxs-lookup"><span data-stu-id="fbf69-128">Contains listeners that collect, store, and route messages.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="4c08f-129">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="4c08f-129">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="fbf69-129">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="fbf69-129">Parent Elements</span></span>  
   
-|<span data-ttu-id="4c08f-130">Elemento</span><span class="sxs-lookup"><span data-stu-id="4c08f-130">Element</span></span>|<span data-ttu-id="4c08f-131">Descrizione</span><span class="sxs-lookup"><span data-stu-id="4c08f-131">Description</span></span>|  
+|<span data-ttu-id="fbf69-130">Elemento</span><span class="sxs-lookup"><span data-stu-id="fbf69-130">Element</span></span>|<span data-ttu-id="fbf69-131">Descrizione</span><span class="sxs-lookup"><span data-stu-id="fbf69-131">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="4c08f-132">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="4c08f-132">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`system.diagnostics`|<span data-ttu-id="4c08f-133">Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.</span><span class="sxs-lookup"><span data-stu-id="4c08f-133">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
-|`sources`|<span data-ttu-id="4c08f-134">Contiene le origini di traccia che avviano i messaggi di traccia.</span><span class="sxs-lookup"><span data-stu-id="4c08f-134">Contains trace sources that initiate tracing messages.</span></span>|  
+|`configuration`|<span data-ttu-id="fbf69-132">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="fbf69-132">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="fbf69-133">Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.</span><span class="sxs-lookup"><span data-stu-id="fbf69-133">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`sources`|<span data-ttu-id="fbf69-134">Contiene le origini di traccia che avviano i messaggi di traccia.</span><span class="sxs-lookup"><span data-stu-id="fbf69-134">Contains trace sources that initiate tracing messages.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="4c08f-135">Note</span><span class="sxs-lookup"><span data-stu-id="4c08f-135">Remarks</span></span>  
- <span data-ttu-id="4c08f-136">Questo elemento può essere utilizzato nel file di configurazione del computer (Machine. config) e nel file di configurazione dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="4c08f-136">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fbf69-135">Osservazioni</span><span class="sxs-lookup"><span data-stu-id="fbf69-135">Remarks</span></span>  
+ <span data-ttu-id="fbf69-136">Questo elemento può essere utilizzato nel file di configurazione del computer (Machine.config) e nel file di configurazione dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="fbf69-136">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4c08f-137">Esempio</span><span class="sxs-lookup"><span data-stu-id="4c08f-137">Example</span></span>  
- <span data-ttu-id="4c08f-138">Nell'esempio seguente viene illustrato come utilizzare l'elemento `<source>` per aggiungere l'origine di traccia `mySource` e impostare il livello per l'opzione di origine denominata `sourceSwitch`.</span><span class="sxs-lookup"><span data-stu-id="4c08f-138">The following example shows how to use the `<source>` element to add the trace source `mySource` and to set the level for the source switch named `sourceSwitch`.</span></span> <span data-ttu-id="4c08f-139">Viene aggiunto un listener di traccia della console che scrive le informazioni di traccia nella console.</span><span class="sxs-lookup"><span data-stu-id="4c08f-139">A console trace listener is added that writes trace information to the console.</span></span>  
+## <a name="example"></a><span data-ttu-id="fbf69-137">Esempio</span><span class="sxs-lookup"><span data-stu-id="fbf69-137">Example</span></span>  
+ <span data-ttu-id="fbf69-138">Nell'esempio riportato di `<source>` seguito viene illustrato `mySource` come utilizzare l'elemento per `sourceSwitch`aggiungere l'origine di traccia e impostare il livello per l'opzione di origine denominata .</span><span class="sxs-lookup"><span data-stu-id="fbf69-138">The following example shows how to use the `<source>` element to add the trace source `mySource` and to set the level for the source switch named `sourceSwitch`.</span></span> <span data-ttu-id="fbf69-139">Viene aggiunto un listener di traccia della console che scrive le informazioni di traccia nella console.</span><span class="sxs-lookup"><span data-stu-id="fbf69-139">A console trace listener is added that writes trace information to the console.</span></span>  
   
 ```xml  
 <configuration>  
@@ -77,12 +77,12 @@ ms.locfileid: "74088822"
     </sources>  
         <switches>  
            <add name="sourceSwitch" value="Warning" />  
-        </switches>    
-  </system.diagnostics>   
+        </switches>
+  </system.diagnostics>
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4c08f-140">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4c08f-140">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fbf69-140">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="fbf69-140">See also</span></span>
 
-- [<span data-ttu-id="4c08f-141">Schema delle impostazioni di traccia e debug</span><span class="sxs-lookup"><span data-stu-id="4c08f-141">Trace and Debug Settings Schema</span></span>](index.md)
-- [<span data-ttu-id="4c08f-142">Opzioni di traccia</span><span class="sxs-lookup"><span data-stu-id="4c08f-142">Trace Switches</span></span>](../../../debug-trace-profile/trace-switches.md)
+- [<span data-ttu-id="fbf69-141">Schema delle impostazioni di traccia e debug</span><span class="sxs-lookup"><span data-stu-id="fbf69-141">Trace and Debug Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="fbf69-142">Opzioni di traccia</span><span class="sxs-lookup"><span data-stu-id="fbf69-142">Trace Switches</span></span>](../../../debug-trace-profile/trace-switches.md)
