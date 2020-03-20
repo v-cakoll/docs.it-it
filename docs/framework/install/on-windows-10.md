@@ -4,10 +4,10 @@ description: Informazioni sull'installazione di .NET Framework in Windows 10 o W
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
 ms.openlocfilehash: eed15b9088d6ba46d8f5bc6d16ba779dd6115b0d
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76965971"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>Installare .NET Framework in Windows 10 e Windows Server 2016 e versioni successive
@@ -22,10 +22,10 @@ ms.locfileid: "76965971"
 
 .NET Framework 4.8 è incluso in:
 
-- [Aggiornamento di Windows di 10 maggio 2019](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
+- [Aggiornamento di Windows 10 di maggio 2019](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
 
 > [!div class="button"]
-> [Download di .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+> [Scaricare .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
 È possibile usare [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) per eseguire applicazioni compilate per le versioni di .NET Framework da 4.0 a 4.7.2.
 
@@ -54,7 +54,7 @@ Se si usa Windows 10 1507 o 1511 e si vuole installare .NET Framework 4.8, è pr
 
 .NET Framework 4.6.2 supporta le app create per .NET Framework da 4.0 a 4.6.2.
 
-## <a name="net-framework-35"></a>.NET Framework 3.5
+## <a name="net-framework-35"></a>.NET Framework 3.5
 
 Seguire le istruzioni per l'installazione di [.NET Framework 3.5 in Windows 10](dotnet-35-windows-10.md).
 
@@ -72,7 +72,7 @@ Le versioni 4.x di .NET Framework sono aggiornamenti sul posto di versioni prece
 
 Per un elenco di tutte le versioni di .NET Framework disponibili per il download, vedere la pagina [.NET Downloads](https://dotnet.microsoft.com/download) (Download di .NET).
 
-## <a name="help"></a>Guida di
+## <a name="help"></a>Guida
 
 Se non si riesce a installare la versione corretta di .NET Framework, è possibile [contattare Microsoft per assistenza](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help).
 

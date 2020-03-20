@@ -8,10 +8,10 @@ helpviewer_keywords:
 - running .NET Framework tools
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 ms.openlocfilehash: 4503e2cff18f4aa901d20c76cfe4076a7fed3600
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75715772"
 ---
 # <a name="net-framework-tools"></a>Strumenti di .NET Framework
@@ -20,23 +20,23 @@ Gli strumenti di .NET Framework facilitano la creazione, la distribuzione e la g
 
 La maggior parte degli strumenti di .NET Framework descritti in questa sezione vengono installati automaticamente con Visual Studio. Per scaricare Visual Studio, visitare la pagina [Download di Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019).
 
-È possibile eseguire tutti gli strumenti dalla riga di comando, ad eccezione del Visualizzatore assembly cache (*Shfusion. dll*). È necessario accedere a *Shfusion. dll* da Esplora file.
+È possibile eseguire tutti gli strumenti dalla riga di comando, ad eccezione del Visualizzatore cache assembly (*Shfusion.dll*). È necessario accedere a *Shfusion.dll* da Esplora file.
   
 Il modo migliore per eseguire gli strumenti da riga di comando è tramite il prompt dei comandi per gli sviluppatori per Visual Studio. Queste utilità consentono di eseguire gli strumenti facilmente, senza dover passare alla cartella di installazione. Per altre informazioni, vedere [Prompt dei comandi](developer-command-prompt-for-vs.md).
 
 > [!NOTE]
 > Alcuni strumenti sono specifici per computer a 32 bit o computer a 64 bit. Assicurarsi di eseguire la versione dello strumento appropriata per il computer.
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 - [Al.exe (Assembly Linker)](al-exe-assembly-linker.md)  
 Genera un file che dispone di un manifesto dell'assembly ricavato da moduli o file di risorse.
 
-- [Aximp.exe (utilità di importazione di controlli ActiveX di Windows Form)](aximp-exe-windows-forms-activex-control-importer.md)  
+- [Aximp.exe (utilità di importazione di controlli ActiveX di Windows Forms)](aximp-exe-windows-forms-activex-control-importer.md)  
 Consente di convertire le definizioni dei tipi in una libreria di tipi COM per un controllo ActiveX in un controllo Windows Form.
 
 - [Caspol.exe (strumento per i criteri di sicurezza dall'accesso di codice)](caspol-exe-code-access-security-policy-tool.md)  
-Consente di visualizzare e configurare i criteri di sicurezza stabiliti a livello di computer, di utente o dell'intera azienda. In .NET Framework 4 e versioni successive questo strumento influisce sui criteri di sicurezza dall'accesso di codice solo se l'[elemento \<legacyCasPolicy>](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) è impostato su `true`. Per altre informazioni, vedere [Modifiche della sicurezza](../security/security-changes.md).
+Consente di visualizzare e configurare i criteri di sicurezza stabiliti a livello di computer, di utente o dell'intera azienda. In .NET Framework 4 e versioni successive, questo strumento non influisce sui criteri di sicurezza `true`dall'accesso di codice, a meno che l'elemento [ \<> legacyCasPolicy](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) non sia impostato su . Per altre informazioni, vedere [Modifiche della sicurezza](../security/security-changes.md).
 
 - [Cert2spc.exe (strumento di test dei certificati del distributore di software)](cert2spc-exe-software-publisher-certificate-test-tool.md)  
 Crea un certificato dell'editore del software (SPC, Software Publisher's Certificate) da uno o più certificati X.509. Questo strumento è finalizzato unicamente ai test.
@@ -45,15 +45,15 @@ Crea un certificato dell'editore del software (SPC, Software Publisher's Certifi
 Consente di gestire certificati, elenchi di certificati attendibili (CTL, Certificate Trust List) ed elenchi di certificati revocati (CRL, Certificate Revocation List).
 
 - [Clrver.exe (Strumento della versione CLR)](clrver-exe-clr-version-tool.md)  
-Segnala tutte le versioni installate del Common Language Runtime (CLR) nel computer.
+Segnala tutte le versioni installate di Common Language Runtime (CLR) nel computer.
 
 - [Prompt dei comandi](developer-command-prompt-for-vs.md)  
-Consente di usare gli strumenti di .NET Framework più facilmente. Questo prompt dei comandi imposta automaticamente variabili di ambiente specifiche.
+Consente di utilizzare gli strumenti di .NET Framework più facilmente. Questo prompt dei comandi imposta automaticamente variabili di ambiente specifiche.
 
 - [CorFlags.exe (strumento di conversione CorFlags)](corflags-exe-corflags-conversion-tool.md)  
 Consente di configurare la sezione CorFlags dell'intestazione di un'immagine PE.
 
-- [Fuslogvw.exe (Visualizzatore log binding assembly)](fuslogvw-exe-assembly-binding-log-viewer.md)  
+- [Fuslogvw.exe (Visualizzatore log associazioni assembly)](fuslogvw-exe-assembly-binding-log-viewer.md)  
 Visualizza informazioni sulle associazioni di assembly per consentire di diagnosticare per quale motivo non sia possibile individuare un assembly in fase di esecuzione.
 
 - [Gacutil.exe (strumento Global Assembly Cache)](gacutil-exe-gac-tool.md)  
@@ -62,25 +62,25 @@ Consente di visualizzare e modificare il contenuto della Global Assembly Cache e
 - [Ilasm.exe (Assembler IL)](ilasm-exe-il-assembler.md)  
 Genera un file eseguibile di tipo PE dal linguaggio intermedio (IL). È possibile eseguire il file eseguibile così ottenuto per determinare se il codice IL funziona come previsto.
 
-- [Ildasm.exe (Disassembler IL)](ildasm-exe-il-disassembler.md)  
+- [Ildasm.exe (disassembler IL)](ildasm-exe-il-disassembler.md)  
 Accetta un file eseguibile di tipo PE contenente codice del linguaggio intermedio (IL) e crea un file di testo utilizzabile come input per l'assembler IL (Ilasm.exe).
 
 - [Installutil.exe (Strumento Programma di installazione)](installutil-exe-installer-tool.md)  
 Consente di installare e disinstallare le risorse del server eseguendo i componenti del programma di installazione di un assembly specificato. Funziona con le classi dello spazio dei nomi <xref:System.Configuration.Install>.
 
 - [Lc.exe (Compilatore licenze)](lc-exe-license-compiler.md)  
-Legge i file di testo che contengono informazioni sulla licenza e genera un file con *estensione licenses* che può essere incorporato in un Common Language runtime eseguibile come risorsa.
+Legge i file di testo che contengono informazioni sulle licenze e produce un file *con estensione licenses* che può essere incorporato in un eseguibile di Common Language Runtime come risorsa.
 
 - [Mage.exe (Strumento per la generazione e la modifica di manifesti)](mage-exe-manifest-generation-and-editing-tool.md)  
 Consente di creare, modificare e firmare manifesti dell'applicazione e di distribuzione. Come strumento della riga di comando, *Mage.exe* può essere eseguito da script batch e altre applicazioni basate su Windows, incluse le applicazioni ASP.NET.
 
 - [MageUI.exe (Strumento per la generazione e la modifica di manifesti, client grafico)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)  
-Supporta le stesse funzionalità dello strumento della riga di comando Mage.exe, ma usa un'interfaccia utente basata su Windows. Supporta le stesse funzionalità dello strumento da riga di comando *Mage. exe*, ma usa un'interfaccia utente basata su Windows.
+Supporta le stesse funzionalità dello strumento della riga di comando Mage.exe, ma usa un'interfaccia utente basata su Windows. Supporta la stessa funzionalità dello strumento della riga di comando *Mage.exe*, ma utilizza un'interfaccia utente basata su Windows.
 
 - [MDbg.exe (Debugger della riga di comando di .NET Framework)](mdbg-exe.md)  
 Consente ai fornitori di strumenti e agli sviluppatori di applicazioni di individuare e correggere i bug dei programmi basati sul Common Language Runtime di .NET Framework. Questo strumento usa l'API di debug del runtime per offrire servizi di debug.
 
-- [Mgmtclassgen.exe (Generatore di classi di gestione fortemente tipizzate)](mgmtclassgen-exe.md)  
+- [Mgmtclassgen.exe (Management Strongly Typed Class Generator)](mgmtclassgen-exe.md)  
 Consente di generare una classe gestita con associazione anticipata per una classe Windows Management Instrumentation (WMI) specificata.
 
 - [Mpgo.exe (strumento per l'ottimizzazione guidata da profilo gestito)](mpgo-exe-managed-profile-guided-optimization-tool.md)  
@@ -99,7 +99,7 @@ Legge i metadati in un assembly e aggiunge le voci necessarie nel Registro di si
 Carica e registra un assembly, genera e installa una libreria dei tipi in un'applicazione specificata della versione 1.0 di COM+ e configura i servizi aggiunti a livello di codice a una classe.
 
 - [Resgen.exe (generatore di file di risorse)](resgen-exe-resource-file-generator.md)  
-Converte i file di testo (con*estensione txt* o *RESTEXT*) e i file di formato di risorsa basato su XML (con*estensione resx*) Common Language Runtime in file binari con*estensione resources*che possono essere incorporati in un eseguibile binario di runtime o compilati in assembly satellite.
+Converte i file di testo (*txt* o *restext*) e i file in formato di risorsa basato su XML (*resx*) in file binari di Common Language Runtime (*.resources*) che possono essere incorporati in un eseguibile binario di runtime o compilati in assembly satellite.
 
 - [SecAnnotate.exe (strumento .NET Security Annotator)](secannotate-exe-net-security-annotator-tool.md)  
 Identifica le parti `SecurityCritical` e `SecuritySafeCritical` di un assembly.
@@ -125,16 +125,16 @@ Genera una libreria dei tipi che descrive i tipi definiti in un assembly di Comm
 - [Tlbimp.exe (utilità di importazione della libreria dei tipi)](tlbimp-exe-type-library-importer.md)  
 Converte le definizioni dei tipi presenti in una libreria dei tipi COM nelle definizioni equivalenti di un assembly di Common Language Runtime.
 
-- [Winmdexp.exe (strumento di esportazione di metadati di Windows Runtime)](winmdexp-exe-windows-runtime-metadata-export-tool.md)  
-Esporta un assembly .NET Framework compilato come file con *estensione winmdobj* in un componente Windows Runtime, che viene incluso in un pacchetto come file con *estensione WinMD* che contiene sia Windows Runtime metadati che le informazioni di implementazione.
+- [Winmdexp.exe (Strumento di esportazione di metadati di Windows Runtime)](winmdexp-exe-windows-runtime-metadata-export-tool.md)  
+Esporta un assembly .NET Framework compilato come file *con estensione winmdobj* in un componente di Windows Runtime, incluso nel pacchetto come file *con estensione winmd* contenente sia i metadati di Windows Runtime che le informazioni di implementazione.
 
 - [Winres.exe (editor di risorse di Windows Form)](winres-exe-windows-forms-resource-editor.md)  
-Consente di localizzare le risorse dell'interfaccia utente (file con*estensione resx* o *Resources* ) utilizzate da Windows Forms. È possibile tradurre stringhe e quindi ridimensionare, spostare e nascondere i controlli per adattarli alle stringhe localizzate.
+Consente di localizzare le risorse dell'interfaccia utente (file*con estensione resx* o *resources)* utilizzate da Windows Form. È possibile tradurre stringhe e quindi ridimensionare, spostare e nascondere i controlli per adattarli alle stringhe localizzate.
 
 ## <a name="related-sections"></a>Sezioni correlate
 
 - [strumenti WPF](https://docs.microsoft.com/previous-versions/ms742404(v=vs.110))  
 Include strumenti quali lo strumento di conformità isXPS (isXPS.exe) e gli strumenti di profilatura delle prestazioni.
 
-- [Strumenti Windows Communication Foundation](../wcf/tools.md)  
+- [Windows Communication Foundation Tools](../wcf/tools.md)  
 Include strumenti che semplificano la creazione, la distribuzione e la gestione di applicazioni Windows Communication Foundation (WCF).

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
 ms.openlocfilehash: 1e7f0123ab07fd4e83eea957b72bf79eeeecef2b
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74204686"
 ---
 # <a name="network-programming-in-the-net-framework"></a>Programmazione di rete in .NET Framework
@@ -25,13 +25,13 @@ Con Microsoft .NET Framework viene fornita un'implementazione a più livelli, es
  [Richiesta di dati](requesting-data.md)  
  Viene illustrato come utilizzare i protocolli modulari per caricare e scaricare i dati dalle risorse Internet.  
   
- [Programmazione di protocolli di collegamento](programming-pluggable-protocols.md)  
+ [programmazione di protocolli di collegamento](programming-pluggable-protocols.md)  
  Viene illustrato come derivare classi specifiche del protocollo per implementare protocolli modulari.  
   
  [Uso di protocolli applicativi](using-application-protocols.md)  
  Viene descritta la programmazione di applicazioni che utilizzano protocolli di rete come TCP, UDP e HTTP.  
   
- [Protocollo IPv6](internet-protocol-version-6.md)  
+ [Protocollo Internet versione 6](internet-protocol-version-6.md)  
  Vengono illustrati i vantaggi della versione 6 (IPv6) del protocollo Internet rispetto alla versione corrente della famiglia di prodotti del protocollo Internet (IPv4), vengono descritti l'indirizzamento, il routing e la configurazione automatica del protocollo IPv6 e come abilitare e disabilitare il protocollo IPv6.  
   
  [Configurazione di applicazioni Internet](configuring-internet-applications.md)  
@@ -49,13 +49,13 @@ Con Microsoft .NET Framework viene fornita un'implementazione a più livelli, es
  [Procedure consigliate per le classi System.Net](best-practices-for-system-net-classes.md)  
  Vengono forniti consigli e suggerimenti per usufruire al meglio delle applicazioni Internet.  
   
- [Accesso a Internet con un proxy](accessing-the-internet-through-a-proxy.md)  
+ [Accesso a Internet tramite un proxy](accessing-the-internet-through-a-proxy.md)  
  Viene descritto come configurare i proxy.  
   
  [NetworkInformation](networkinformation.md)  
  Viene descritto come raccogliere informazioni sugli eventi, le modifiche, le statistiche e le proprietà di rete e viene inoltre illustrato come determinare se un host remoto è raggiungibile tramite la classe <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType> .  
   
- [Modifiche apportate allo spazio dei nomi System.Uri nella versione 2.0](changes-to-the-system-uri-namespace-in-version-2-0.md)  
+ [Modifiche allo spazio dei nomi System.Uri nella versione 2.0Changes to the System.Uri namespace in Version 2.0](changes-to-the-system-uri-namespace-in-version-2-0.md)  
  Vengono illustrate varie modifiche apportate alla classe <xref:System.Uri?displayProperty=nameWithType> nella versione 2.0 per correggere un comportamento non corretto, migliorare l'usabilità e aumentare la sicurezza.  
   
  [Supporto per IRI (International Resource Identifier) in System.Uri](international-resource-identifier-support-in-system-uri.md)  
@@ -73,21 +73,21 @@ Con Microsoft .NET Framework viene fornita un'implementazione a più livelli, es
  [Modifiche apportate all'autenticazione NTLM per HttpWebRequest nella versione 3.5 SP1](changes-to-ntlm-authentication-for-httpwebrequest-in-version-3-5-sp1.md)  
  Vengono descritte le modifiche di sicurezza apportate nella versione 3.5 SP1 che influiscono sul modo in cui l'autenticazione Windows integrata viene gestita da <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>, <xref:System.Net.HttpListener?displayProperty=nameWithType>, <xref:System.Net.Security.NegotiateStream?displayProperty=nameWithType>e le classi correlate nello spazio dei nomi System.Net.  
   
- [Autenticazione di Windows integrata con protezione estesa](integrated-windows-authentication-with-extended-protection.md)  
+ [Integrated Windows Authentication with Extended Protection (autenticazione integrata di Windows con protezione estesa)](integrated-windows-authentication-with-extended-protection.md)  
  Vengono descritti i miglioramenti alla protezione estesa che influiscono sul modo in cui l'autenticazione Windows integrata viene gestita da <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>, <xref:System.Net.HttpListener?displayProperty=nameWithType>, <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>, <xref:System.Net.Security.SslStream?displayProperty=nameWithType>, <xref:System.Net.Security.NegotiateStream?displayProperty=nameWithType>e le classi correlate nello spazio dei nomi <xref:System.Net?displayProperty=nameWithType> e in quelli correlati.  
   
  [NAT Traversal using IPv6 and Teredo](nat-traversal-using-ipv6-and-teredo.md) (Attraversamento NAT con IPv6 e Teredo)  
  Vengono descritti i miglioramenti aggiunti agli spazi dei nomi <xref:System.Net?displayProperty=nameWithType>, <xref:System.Net.NetworkInformation?displayProperty=nameWithType>e <xref:System.Net.Sockets?displayProperty=nameWithType> per il supporto dell'attraversamento NAT tramite IPv6 e Teredo.  
   
  [Network Isolation for Windows Store Apps](network-isolation-for-windows-store-apps.md) (Isolamento rete per app di Windows Store)  
- Descrive l'effetto dell'isolamento di rete quando le classi negli spazi dei nomi <xref:System.Net>, <xref:System.Net.Http>e <xref:System.Net.Http.Headers> vengono usate nelle app di Windows 8. x Store.  
+ Descrive l'impatto dell'isolamento rete <xref:System.Net> <xref:System.Net.Http>quando <xref:System.Net.Http.Headers> le classi negli spazi dei nomi , , e vengono utilizzate nelle app di Windows 8.x Store.  
   
  [Esempi di programmazione di rete](network-programming-samples.md)  
  Collegamenti a esempi scaricabili di programmazione di rete che utilizzano le classi negli spazi dei nomi <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.PeerToPeer>, <xref:System.Net.Security>, <xref:System.Net.Sockets> .  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Informazioni di riferimento  
  <xref:System.Net?displayProperty=nameWithType>  
- Viene fornita una semplice interfaccia di programmazione per molti dei protocolli attualmente utilizzati per le reti. Le classi <xref:System.Net.WebRequest?displayProperty=nameWithType> e <xref:System.Net.WebResponse?displayProperty=nameWithType> in questo spazio dei nomi sono la base dei protocolli modulari.  
+ Fornisce una semplice interfaccia di programmazione per molti dei protocolli attualmente usati per le reti. Le classi <xref:System.Net.WebRequest?displayProperty=nameWithType> e <xref:System.Net.WebResponse?displayProperty=nameWithType> in questo spazio dei nomi sono la base dei protocolli modulari.  
   
  <xref:System.Net.Cache?displayProperty=nameWithType>  
  Definisce i tipi e le enumerazioni utilizzati per specificare i criteri di cache per le risorse ottenute mediante le classi <xref:System.Net.WebRequest?displayProperty=nameWithType> e <xref:System.Net.HttpWebRequest?displayProperty=nameWithType> .  
@@ -126,7 +126,7 @@ Con Microsoft .NET Framework viene fornita un'implementazione a più livelli, es
  Fornisce un'implementazione gestita dell'interfaccia WebSocket per gli sviluppatori.  
   
  <xref:System.Uri?displayProperty=nameWithType>  
- Fornisce una rappresentazione in forma di oggetto di un identificatore URI (Uniform Resource Identifier) e un pratico accesso alle parti dell'URI.  
+ Fornisce una rappresentazione dell'oggetto di un URI (Uniform Resource Identifier) e l'accesso facile alle parti dell'URI.  
   
  <xref:System.Security.Authentication.ExtendedProtection?displayProperty=nameWithType>  
  Fornisce il supporto per l'autenticazione utilizzando la protezione estesa per le applicazioni.  
@@ -139,4 +139,4 @@ Con Microsoft .NET Framework viene fornita un'implementazione a più livelli, es
 - [Procedure consigliate per Transport Layer Security (TLS) con .NET Framework](tls.md)
 - [Procedure per la programmazione di rete](network-programming-how-to-topics.md)
 - [Esempi di programmazione di rete](network-programming-samples.md)
-- [Esempio con HttpClient](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)
+- [HttpClient Sample](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664) (Esempio con HttpClient)

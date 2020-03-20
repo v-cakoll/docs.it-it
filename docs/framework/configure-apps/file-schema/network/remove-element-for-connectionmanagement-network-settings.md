@@ -10,40 +10,40 @@ helpviewer_keywords:
 - <connectionManagement>, remove element
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
-ms.openlocfilehash: 287e36dce65be7a002499d2cd22481018a1f4742
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 39ce85c3c15a2d4bdfce801a35e9ca088bd5091b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089160"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154738"
 ---
-# <a name="remove-element-for-connectionmanagement-network-settings"></a>\<rimuovere > elemento per connectionManagement (impostazioni di rete)
-Rimuove un indirizzo IP o un nome DNS dall'elenco di gestione della connessione.  
+# <a name="remove-element-for-connectionmanagement-network-settings"></a>\<rimuovi> elemento per connectionManagement (impostazioni di rete)
+Rimuove un indirizzo IP o un nome DNS dall'elenco di gestione delle connessioni.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<connectionManagement**](connectionmanagement-element-network-settings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**rimuovere >**
+[**\<>di configurazione**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<>system.net**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<>connectionManagement**](connectionmanagement-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<rimuovere>**
 
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-<remove   
-  address="server name or IP address"   
+<remove
+  address="server name or IP address"
 />  
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### <a name="attributes"></a>Attributi  
+### <a name="attributes"></a>Attributes  
   
 |**Attributo**|**Descrizione**|  
 |-------------------|---------------------|  
 |`address`|Un indirizzo IP o un nome DNS.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuna.  
+ No.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -51,16 +51,16 @@ Rimuove un indirizzo IP o un nome DNS dall'elenco di gestione della connessione.
 |-----------------|---------------------|  
 |[connectionManagement](connectionmanagement-element-network-settings.md)|Specifica il numero massimo di connessioni a un host di rete.|  
   
-## <a name="remarks"></a>Note  
- L'elemento `remove` rimuove la voce dell'elenco di gestione connessione per il server specificato.  
+## <a name="remarks"></a>Osservazioni  
+ L'elemento `remove` rimuove la voce dell'elenco di gestione delle connessioni per il server specificato.  
   
- Il valore dell'attributo `address` deve essere un indirizzo IP o un nome host valido.  
+ Il valore `address` dell'attributo deve essere un indirizzo IP o un nome host valido.  
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente vengono rimosse tutte le voci dell'elenco di gestione connessione per il server `www.adventure-works.com` e quindi viene configurata un'applicazione per l'utilizzo di quattro connessioni al server `www.contoso.com` e due connessioni a tutti gli altri server.  
+ Nell'esempio seguente vengono rimosse tutte `www.adventure-works.com` le voci dell'elenco di gestione delle `www.contoso.com` connessioni per il server e quindi viene configurata un'applicazione per l'utilizzo di quattro connessioni al server e di due connessioni a tutti gli altri server.  
   
 ```xml  
 <configuration>  

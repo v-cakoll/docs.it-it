@@ -1,5 +1,5 @@
 ---
-title: Metodo XpsDocumentWriter. raise__WritingPrintTicketRequired (System. Windows. Xps)
+title: Metodo XpsDocumentWriter.raise__WritingPrintTicketRequired (System.Windows.Xps)
 ms.date: 12/12/2007
 api_location:
 - system.printing.dll
@@ -9,21 +9,21 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: a8d687197d21f54282f04190761b079d702b185e
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 4baa5a568f73f60e2448db968283e2b7b64844c4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524925"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155648"
 ---
-# <a name="xpsdocumentwriterraise__writingprintticketrequired-method"></a>XpsDocumentWriter. Raise \_ metodo \_WritingPrintTicketRequired
+# <a name="xpsdocumentwriterraise__writingprintticketrequired-method"></a>Metodo WritingPrintTicketRequired\_\_di XpsDocumentWriter.raise
 
 Genera l'evento <xref:System.Windows.Xps.XpsDocumentWriter.WritingPrintTicketRequired>.
 
 ## <a name="syntax"></a>Sintassi
 
 ```csharp
-public void raise__WritingPrintTicketRequired (object value0, 
+public void raise__WritingPrintTicketRequired (object value0,
   System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs value1);
 ```
 
@@ -37,8 +37,8 @@ public void raise__WritingPrintTicketRequired (object value0,
 
 ## <a name="requirements"></a>Requisiti
 
-**Spazio dei nomi:** <xref:System.Windows.Xps>
+**Spazio dei nomi:**<xref:System.Windows.Xps>
 
-**Assembly:** System. Printing (in System. Printing. dll)
+**Assemblaggio:** System.Printing (in system.printing.dll)
 
-**Versioni .NET Framework:** 3,0
+Versioni di **.NET Framework:** 3.0

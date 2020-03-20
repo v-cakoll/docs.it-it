@@ -8,21 +8,21 @@ helpviewer_keywords:
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 ms.openlocfilehash: e0de18b5a40875d1fec2633c16688111d8f4b9ee
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73974960"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>Compatibilità tra le versioni in .NET Framework
 
 Per compatibilità con le versioni precedenti si intende che un'app sviluppata per una particolare versione di una piattaforma sarà eseguita su versioni successive di quella piattaforma. .NET Framework tenta di ottimizzare la compatibilità con le versioni precedenti: il codice sorgente scritto per una versione di .NET Framework deve essere compilato su versioni successive di .NET Framework e i file binari in esecuzione su una versione di .NET Framework devono comportarsi in modo analogo nelle versioni successive di .NET Framework.
 
-## <a name="Apps"></a> Compatibilità tra le versioni per app
+## <a name="version-compatibility-for-apps"></a><a name="Apps"></a> Compatibilità tra le versioni per app
 
 Per impostazione predefinita, un'app viene eseguita sulla versione di .NET Framework per cui è stata creata. Se tale versione non è presente e il file di configurazione dell'app non definisce le versioni supportate, potrebbe verificarsi un errore di inizializzazione di .NET Framework. In questo caso, il tentativo di esecuzione dell'app avrà esito negativo.
 
-Per definire le versioni specifiche in cui viene eseguita l'app, aggiungere uno o più elementi [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) al file di configurazione dell'app. Ogni elemento `<supportedRuntime>` elenca una versione supportata del runtime, con il primo che specifica la versione preferita e l'ultimo che specifica l'ultima versione nell'elenco delle preferenze.
+Per definire le versioni specifiche in cui viene [ \<](../configure-apps/file-schema/startup/supportedruntime-element.md) eseguita l'app, aggiungi uno o più elementi di>supportedRuntime al file di configurazione dell'app. Ogni elemento `<supportedRuntime>` elenca una versione supportata del runtime, con il primo che specifica la versione preferita e l'ultimo che specifica l'ultima versione nell'elenco delle preferenze.
 
 ```xml
 <configuration>
@@ -49,7 +49,7 @@ In pratica, questa compatibilità può essere interrotta da modifiche apparentem
 
 Se l'app o il componente non funziona come previsto in .NET Framework 4.5 (e versioni intermedie: .NET Framework 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 o 4.8), usare gli elenchi di controllo seguenti:
 
-- Se l'app è stata sviluppata per l'esecuzione in qualsiasi versione del .NET Framework a partire dal .NET Framework 4,0, vedere [compatibilità delle applicazioni](application-compatibility.md) per generare elenchi di modifiche tra la versione di .NET Framework di destinazione e la versione in cui è in esecuzione l'app.
+- Se l'app è stata sviluppata per l'esecuzione in qualsiasi versione di .NET Framework a partire da .NET Framework 4.0, vedere [Compatibilità delle](application-compatibility.md) applicazioni per generare elenchi di modifiche tra la versione di .NET Framework di destinazione e la versione in cui è in esecuzione l'app.
 
 - Se si dispone di un'app .NET Framework 3.5, vedere anche [Problemi di migrazione di .NET Framework 4](../migration-guide/net-framework-4-migration-issues.md).
 
@@ -72,5 +72,5 @@ Se non si riesce a trovare una soluzione alternativa adatta al problema, ricorda
 - [Novità](../whats-new/index.md)
 - [Elementi obsoleti nella libreria di classi](../whats-new/whats-obsolete.md)
 - [Compatibilità delle applicazioni](../migration-guide/application-compatibility.md)
-- [.NET Framework criteri di supporto ufficiale](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)
+- [Politica di supporto ufficiale di .NET Framework](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)
 - [Problemi di migrazione di .NET Framework 4](../migration-guide/net-framework-4-migration-issues.md)

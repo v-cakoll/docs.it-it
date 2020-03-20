@@ -2,24 +2,24 @@
 title: Reliable Secure Profile
 ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
-ms.openlocfilehash: ef4680673f37655603a42f6da8aaf7eceaa01f56
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 9ddd0d78396bba6712650620e6b46c62f13337e2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094943"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144214"
 ---
 # <a name="reliable-secure-profile"></a>Reliable Secure Profile
 
-In questo esempio viene illustrato come comporre WCF e un [profilo sicuro affidabile (RSP)](http://www.ws-i.org/Profiles/ReliableSecureProfile-1.0.html). In questo esempio viene illustrata l'implementazione di un canale di [connessione make](http://docs.oasis-open.org/ws-rx/wsmc/200702/wsmc-1.0-spec-cs-01.pdf) , che può essere composto insieme a Reliable Messaging ed eventualmente un canale sicuro per creare un'associazione sicura affidabile basata sulla specifica RSP.  
+In questo esempio viene illustrato come comporre WCF e [Reliable Secure Profile (RSP)](http://www.ws-i.org/Profiles/ReliableSecureProfile-1.0.html). In questo esempio viene illustrata l'implementazione di un canale [Crea connessione,](http://docs.oasis-open.org/ws-rx/wsmc/200702/wsmc-1.0-spec-cs-01.pdf) che può essere composto con Reliable Messaging e facoltativamente un canale sicuro per creare un'associazione sicura affidabile basata sulla specifica RSP.  
   
 > [!IMPORTANT]
 > È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
->   
+>
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) Esempi per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti gli esempi e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (WCF). Questo esempio si trova nella directory seguente.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ReliableSecureProfile`  
   
 ## <a name="discussion"></a>Discussione  
@@ -27,11 +27,11 @@ In questo esempio viene illustrato come comporre WCF e un [profilo sicuro affida
   
 ## <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1. Aprire la soluzione **ReliableSecureProfile** .  
+1. Aprire la soluzione **ReliableSecureProfile.**  
   
-2. Fare clic con il pulsante destro del mouse sul progetto di **servizio** in **Esplora soluzioni**, scegliere **debug**, **Avvia nuova istanza** dal menu di scelta rapida. In questo modo, viene avviato l'host del servizio.  
+2. Fare clic con il pulsante destro del mouse sul progetto **Servizio** in **Esplora soluzioni**, selezionare **Debug**, Avvia **nuova istanza** dal menu di scelta rapida. In questo modo, viene avviato l'host del servizio.  
   
-3. Fare clic con il pulsante destro del mouse sul progetto **client** in **Esplora soluzioni**, scegliere **debug**, **Avvia nuova istanza** dal menu di scelta rapida. In questo modo, il client viene avviato.  
+3. Fare clic con il pulsante destro del mouse sul progetto **Client** in **Esplora soluzioni**, selezionare **Debug**, Avvia **nuova istanza** dal menu di scelta rapida. In questo modo, il client viene avviato.  
   
 4. Digitare qualsiasi stringa nel messaggio di richiesta nella finestra della console client e fare clic su INVIO. In questo modo, la stringa di input viene inviata al servizio, che calcola un hash di tale stringa.  
   

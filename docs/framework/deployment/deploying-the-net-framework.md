@@ -6,21 +6,21 @@ helpviewer_keywords:
 - deployment [.NET Framework]
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
 ms.openlocfilehash: cc4f9c38138a37b6068d33ffa4229a955db08c07
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716538"
 ---
 # <a name="deploying-the-net-framework"></a>Distribuzione di .NET Framework
 Questa sezione della documentazione di .NET Framework fornisce informazioni destinate agli sviluppatori che vogliono installare .NET Framework con le proprie applicazioni e agli amministratori che vogliono distribuire .NET Framework in una rete. Questa sezione tratta anche i problemi di attivazione e riavvio associati alla distribuzione e descrive come monitorare lo stato dell'installazione di .NET Framework.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Guida alla distribuzione per gli sviluppatori](deployment-guide-for-developers.md)  
  Illustra come gli sviluppatori possono installare .NET Framework nei computer dei rispettivi utenti con le rispettive applicazioni.  
   
  [Guida alla distribuzione per amministratori](guide-for-administrators.md)  
- Viene illustrato come un amministratore di sistema può distribuire il .NET Framework e le relative dipendenze di sistema attraverso una rete usando Microsoft endpoint Configuration Manager.  
+ Viene illustrato come un amministratore di sistema può distribuire .NET Framework e le relative dipendenze di sistema in una rete utilizzando Microsoft Endpoint Configuration Manager.  
   
  [Riduzione dei riavvii del sistema durante le installazioni di .NET Framework 4.5](reducing-system-restarts.md)  
  Descrive il gestore di riavvio, che impedisce automaticamente il riavvio quando possibile, e viene illustrato come le applicazioni che installano .NET Framework possano usufruirne.  
@@ -31,7 +31,7 @@ Questa sezione della documentazione di .NET Framework fornisce informazioni dest
  [Errori di inizializzazione di .NET Framework: gestione dell'interfaccia utente](initialization-errors-managing-the-user-experience.md)  
  Spiega cosa accade quando un'applicazione .NET Framework richiede una versione CLR non valida o non installata nel computer dell'utente, come risolvere questi errori e come controllare il messaggio di errore visualizzato per l'utente.  
   
- [Procedura: Debug dei problemi di attivazione CLR](how-to-debug-clr-activation-issues.md)  
+ [Procedura: debug dei problemi di attivazione CLR](how-to-debug-clr-activation-issues.md)  
  Spiega come visualizzare i log di attivazione CLR ed eseguirne il debug per risolvere eventuali problemi di esecuzione dell'applicazione con la versione corretta di CLR.  
   
 ## <a name="see-also"></a>Vedere anche

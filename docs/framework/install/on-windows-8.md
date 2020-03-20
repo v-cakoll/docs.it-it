@@ -4,10 +4,10 @@ ms.custom: updateeachrelease
 description: Informazioni sull'installazione di .NET Framework in Windows 8
 ms.date: 04/18/2019
 ms.openlocfilehash: 1db8ac9837821eb7111b9d0015787509bc27b398
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76965997"
 ---
 # <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a>Installare .NET Framework in Windows 8 e Windows Server 2012
@@ -21,7 +21,7 @@ Queste istruzioni saranno utili per installare le versioni di .NET Framework nec
 ## <a name="net-framework-48"></a>.NET Framework 4.8
 
 > [!div class="button"]
-> [Download di .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+> [Scaricare .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
 .NET Framework 4.8 è supportato in Windows Server 2012. Non è supportato in Windows 8.
 
@@ -33,18 +33,18 @@ Queste istruzioni saranno utili per installare le versioni di .NET Framework nec
 
 .NET Framework 4.6 supporta le app create per .NET Framework da 4.0 a 4.6.
 
-## <a name="net-framework-35"></a>.NET Framework 3.5
+## <a name="net-framework-35"></a>.NET Framework 3.5
 
 Seguire le istruzioni per l'installazione di [.NET Framework 3.5 in Windows 8 e 10](dotnet-35-windows-10.md).
 
 .NET Framework 3.5 supporta le app create per .NET Framework da 1.0 a 3.5.
 
-## <a name="help"></a>Guida di
+## <a name="help"></a>Guida
 
 È possibile [contattare Microsoft per assistenza](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help) se non si riesce a installare la versione corretta di .NET Framework.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Scaricare .NET Framework](https://dotnet.microsoft.com/download)
+- [Scarica .NET Framework](https://dotnet.microsoft.com/download)
 - [Risolvere i problemi relativi alle installazioni e alle disinstallazioni bloccate di .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)
 - [Installare .NET Framework per sviluppatori](guide-for-developers.md)

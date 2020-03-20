@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: b73dd4f4-f2dc-47a2-9425-3896e92321fb
 ms.openlocfilehash: 99cc1eae08697909d89e5c1e46cd604c7da543bc
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457746"
 ---
 # <a name="mitigation-xml-schema-validation"></a>Attenuazione: Convalida di XML Schema
@@ -18,7 +18,7 @@ In .NET Framework 4.6 la convalida dello schema XSD rileva la violazione di vinc
 ## <a name="impact"></a>Impatto  
  L'impatto di questa modifica potrebbe essere minimo: basato sulla specifica dello schema, un errore di convalida dello schema è previsto se `xsd:unique` viene violato da una chiave composta con una chiave vuota.  
   
-## <a name="mitigation"></a>Attenuazione  
+## <a name="mitigation"></a>Strategia di riduzione del rischio  
  La rilevazione di un errore di convalida dello schema se una chiave composta possiede una chiave vuota è una funzione configurabile:  
   
 - A partire dalle app destinate a .NET Framework 4.6, la rilevazione dell'errore di convalida dello schema viene abilitata per impostazione predefinita; tuttavia, è possibile escluderla, in modo che l'errore di convalida dello schema non venga rilevato.  
@@ -37,4 +37,4 @@ In .NET Framework 4.6 la convalida dello schema XSD rileva la violazione di vinc
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Compatibilità delle applicazioni](application-compatibility.md)
+- [Compatibilità tra le versioni](application-compatibility.md)

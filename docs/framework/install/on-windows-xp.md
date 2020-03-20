@@ -4,10 +4,10 @@ description: Informazioni sull'installazione di .NET Framework in Windows XP.
 ms.custom: updateeachrelease
 ms.date: 04/18/2019
 ms.openlocfilehash: 8d05c8c9cf961d3902b1d1287be5b1c2c73d349e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716293"
 ---
 # <a name="install-the-net-framework-on-windows-xp-and-windows-server-2003"></a>Installare .NET Framework in Windows XP e Windows Server 2003
@@ -25,11 +25,11 @@ Queste istruzioni saranno utili per installare le versioni di .NET Framework nec
 
 [.NET Framework 4.0.3](https://www.microsoft.com/download/details.aspx?id=29053) è la versione di .NET Framework supportata più recente in Windows XP e Windows Server 2003. .NET Framework 4.0.3 richiede l'installazione di [.NET Framework 4](https://dotnet.microsoft.com/download/dotnet-framework/net40). Entrambe queste versioni di .NET Framework non sono più supportate da Microsoft.
 
-## <a name="net-framework-4"></a>.NET Framework 4
+## <a name="net-framework-4"></a>.NET Framework 4
 
 È possibile installare [.NET Framework 4](https://dotnet.microsoft.com/download/dotnet-framework/net40) in Windows XP. Questa versione non è più supportata da Microsoft.
 
-## <a name="net-framework-35"></a>.NET Framework 3.5
+## <a name="net-framework-35"></a>.NET Framework 3.5
 
 È possibile installare [.NET Framework 3.5](https://dotnet.microsoft.com/download/dotnet-framework/net35-sp1) in Windows XP.
 
@@ -37,6 +37,6 @@ Queste istruzioni saranno utili per installare le versioni di .NET Framework nec
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Scaricare .NET Framework](https://dotnet.microsoft.com/download)
+- [Scarica .NET Framework](https://dotnet.microsoft.com/download)
 - [Risolvere i problemi relativi alle installazioni e alle disinstallazioni bloccate di .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)
 - [Installare .NET Framework per sviluppatori](guide-for-developers.md)

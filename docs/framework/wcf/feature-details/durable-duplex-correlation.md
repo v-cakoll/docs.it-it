@@ -2,12 +2,12 @@
 title: Correlazione duplex durevole
 ms.date: 03/30/2017
 ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
-ms.openlocfilehash: efc647b8a39f419f2165fe355529ba145663b753
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: bb73cef5190a0b146e713ef1adae24219dc2eed8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291587"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185165"
 ---
 # <a name="durable-duplex-correlation"></a>Correlazione duplex durevole
 La correlazione duplex durevole, nota anche come correlazione di callback, risulta utile se un servizio flusso di lavoro dispone del requisito adatto a inviare un callback al chiamante iniziale. A differenza del duplex WCF, il callback si può verificare in qualsiasi momento nel futuro e non è legato allo stesso canale o al canale di durata. L'unico requisito è costituito dal fatto che il chiamante dispone di un endpoint attivo in ascolto del messaggio di callback. In questo modo due servizi flusso di lavoro possono comunicare in una conversazione prolungata. In questo argomento vengono forniti cenni preliminari sulla correlazione duplex durevole.  
@@ -16,7 +16,7 @@ La correlazione duplex durevole, nota anche come correlazione di callback, risul
  Per utilizzare la correlazione duplex durevole, i due servizi devono utilizzare un'associazione abilitata per il contesto che supporta operazioni bidirezionali, ad esempio <xref:System.ServiceModel.NetTcpContextBinding> o <xref:System.ServiceModel.WSHttpContextBinding>. Il servizio chiamante registra un <xref:System.ServiceModel.WSHttpContextBinding.ClientCallbackAddress%2A> con l'associazione desiderata sul client <xref:System.ServiceModel.Endpoint>. Il servizio ricevente riceve questi dati nella chiamata iniziale, quindi li utilizza sul proprio <xref:System.ServiceModel.Endpoint> nell'attività <xref:System.ServiceModel.Activities.Send> che effettua nuovamente la chiamata al servizio chiamante. In questo esempio, due servizi comunicano l'uno con l'altro. Il primo servizio richiama un metodo nel secondo servizio, quindi attende una risposta. Il secondo servizio conosce il nome del metodo di callback, ma l'endpoint del servizio che implementa questo metodo non è noto in fase di progettazione.  
   
 > [!NOTE]
-> La correlazione duplex durevole può essere utilizzata soltanto quando <xref:System.ServiceModel.Channels.AddressingVersion> dell'endpoint è configurato con <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>. In caso contrario, viene generata un'eccezione <xref:System.InvalidOperationException> con il messaggio seguente: "Il messaggio contiene un'intestazione del contesto di callback con un riferimento all'endpoint per [AddressingVersion](http://schemas.xmlsoap.org/ws/2004/08/addressing). Il contesto di callback può essere trasmesso solo quando AddressingVersion è configurato con ' WSAddressing10'.
+> La correlazione duplex durevole può essere utilizzata soltanto quando <xref:System.ServiceModel.Channels.AddressingVersion> dell'endpoint è configurato con <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>. In caso contrario, <xref:System.InvalidOperationException> viene generata un'eccezione con il messaggio seguente: "Il messaggio contiene un'intestazione del contesto di callback con un riferimento all'endpoint per [AddressingVersion](http://schemas.xmlsoap.org/ws/2004/08/addressing). Il contesto di callback può essere trasmesso solo quando AddressingVersion è configurato con 'WSAddressing10'.
   
  Nell'esempio seguente viene ospitato un servizio flusso di lavoro che crea un <xref:System.ServiceModel.Endpoint> del callback mediante <xref:System.ServiceModel.WSHttpContextBinding>.  
   
@@ -51,7 +51,7 @@ Receive StartOrder = new Receive
   
 Send GetItems = new Send  
 {  
-    CorrelationInitializers =   
+    CorrelationInitializers =
     {  
         new CallbackCorrelationInitializer  
         {  
@@ -65,7 +65,7 @@ Send GetItems = new Send
         AddressUri = new Uri("http://localhost:8081/Service2"),  
         Binding = new WSHttpContextBinding  
         {  
-            ClientCallbackAddress = new Uri("http://localhost:8080/Service1/ItemsReady")                          
+            ClientCallbackAddress = new Uri("http://localhost:8080/Service1/ItemsReady")
         }  
     }  
 };  
@@ -127,7 +127,7 @@ Variable<CorrelationHandle> ItemsCallbackHandle = new Variable<CorrelationHandle
   
 Receive StartItems = new Receive  
 {  
-    CorrelationInitializers =   
+    CorrelationInitializers =
     {  
         new CallbackCorrelationInitializer  
         {  
@@ -189,7 +189,7 @@ Activity wf = new Sequence
 ```output  
 Service1 waiting at: http://localhost:8080/Service1  
 Service2 waiting at: http://localhost:8081/Service2  
-Press enter to exit.   
+Press enter to exit.
 WF1 - Started  
 WF2 - Request Received  
 WF1 - Request Submitted  

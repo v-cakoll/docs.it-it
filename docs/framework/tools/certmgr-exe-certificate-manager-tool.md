@@ -14,10 +14,10 @@ helpviewer_keywords:
 - certificate revocation lists
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 ms.openlocfilehash: 06fe3a78d0b19720d4f83111980b88806312205f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73129867"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (strumento di gestione certificati)
@@ -51,18 +51,18 @@ Lo strumento di gestione certificati (Certmgr.exe) gestisce certificati, elenchi
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
-|**/add**|Aggiunge certificati, elenchi di scopi consentiti ai certificati e CRL a un archivio certificati.|  
-|**/all**|Aggiunge tutte le voci se usata con **/add**, Elimina tutte le voci se utilizzate con **/del**. Visualizza tutte le voci se usate senza le opzioni **/Add** o **/del** . Non è possibile usare l'opzione **/all** con **/put**.|  
-|**/c**|Aggiunge i certificati se usata con **/add**, Elimina i certificati se utilizzati con **/del**. Salva i certificati se usati con **/put**. Visualizza certificati quando usata senza le opzioni **/add**, **/del** o **/put**.|  
-|**/CRL**|Aggiunge i CRL se usata con **/add**, Elimina i CRL se utilizzati con **/del**. Salva i CRL se utilizzati con **/put**. Visualizza CRL quando usata senza le opzioni **/add**, **/del** o **/put**.|  
-|**/CTL**|Aggiunge gli elenchi di scopi consentiti se usata con **/add**, Elimina scopi consentiti se usato con **/del**. Salva scopi consentiti se usato con **/put**. Visualizza gli elenchi di scopi consentiti quando usata senza le opzioni **/add**, **/del** o **/put**.|  
-|**/del**|Elimina certificati, elenchi di scopi consentiti e CRL da un archivio certificati.|  
+|**/add (aggiungi)**|Aggiunge certificati, elenchi di scopi consentiti ai certificati e CRL a un archivio certificati.|  
+|**/all (tutti)**|Aggiunge tutte le voci se usata con **/add**, Elimina tutte le voci quando vengono utilizzate con **/del**. Visualizza tutte le voci quando vengono utilizzate senza le opzioni **/add** o **/del.** Non è possibile usare l'opzione **/all** con **/put**.|  
+|**/c**|Aggiunge i certificati se usata con **/add**, Elimina i certificati quando vengono utilizzati con **/del**. Salva i certificati quando vengono utilizzati con **/put**. Visualizza certificati quando usata senza le opzioni **/add**, **/del** o **/put**.|  
+|**/CRL**|Aggiunge i CRL se usata con **/add**, Elimina i CRL quando vengono utilizzati con **/del**. Salva i CRL quando vengono utilizzati con **/put**. Visualizza CRL quando usata senza le opzioni **/add**, **/del** o **/put**.|  
+|**/CTL**|Aggiunge gli elenchi di scopi consentiti se usata con **/add**, Elimina gli ELEMENTI consentiti quando vengono utilizzati con **/del**. Salva gli CTL quando vengono utilizzati con **/put**. Visualizza gli elenchi di scopi consentiti quando usata senza le opzioni **/add**, **/del** o **/put**.|  
+|**/del (in inglese)**|Elimina certificati, elenchi di scopi consentiti e CRL da un archivio certificati.|  
 |**/e** *encodingType*|Specifica il tipo di codifica dei certificati. Il valore predefinito è `X509_ASN_ENCODING`.|  
 |**/f** *dwFlags*|Specifica il flag di archivio aperto. Si tratta del parametro *dwFlags* passato a **CertOpenStore**. Il valore predefinito è CERT_SYSTEM_STORE_CURRENT_USER. Questa opzione viene considerata solo se viene usata l'opzione **/y**.|  
 |**/h**[**elp**]|Visualizza la sintassi e le opzioni di comando dello strumento.|  
 |**/n** *nam*|Specifica il nome comune del certificato da aggiungere, eliminare o salvare. È possibile usare questa opzione solo con certificati, non con elenchi di scopi consentiti o CRL.|  
-|**/put**|Salva su file un certificato X.509, un elenco di scopi consentiti o un CRL da un archivio certificati. Il file viene salvato nel formato X.509. È possibile usare l'opzione **/7** con l'opzione **/put** per salvare il file nel formato PKCS #7. L'opzione **/put** deve essere seguita da **/c**, **/CTL** o **/CRL**. Non è possibile usare l'opzione **/all** con **/put**.|  
-|**/r** *location*|Identifica la posizione dell'archivio di sistema all'interno del Registro di sistema. Questa opzione viene considerata solo se viene specificata l'opzione **/s**. *location* deve essere uno degli elementi seguenti:<br /><br /> -   `currentUser` indica che l'archivio certificati si trova sotto la chiave HKEY_CURRENT_USER. Questa è l'impostazione predefinita.<br />-   `localMachine` indica che l'archivio certificati si trova sotto la chiave HKEY_LOCAL_MACHINE.|  
+|**/put (metti)**|Salva su file un certificato X.509, un elenco di scopi consentiti o un CRL da un archivio certificati. Il file viene salvato nel formato X.509. È possibile usare l'opzione **/7** con l'opzione **/put** per salvare il file nel formato PKCS #7. L'opzione **/put** deve essere seguita da **/c**, **/CTL** o **/CRL**. Non è possibile usare l'opzione **/all** con **/put**.|  
+|**/r** *location*|Identifica la posizione dell'archivio di sistema all'interno del Registro di sistema. Questa opzione viene considerata solo se viene specificata l'opzione **/s**. *location* deve essere uno degli elementi seguenti:<br /><br /> -   `currentUser` indica che l'archivio certificati si trova sotto la chiave HKEY_CURRENT_USER. Questa è la modalità predefinita.<br />-   `localMachine` indica che l'archivio certificati si trova sotto la chiave HKEY_LOCAL_MACHINE.|  
 |**/s**|Indica che l'archivio certificati è un archivio di sistema. Se non si specifica questa opzione, l'archivio viene considerato come **StoreFile**.|  
 |**/sha1** *sha1Hash*|Specifica l'hash SHA1 del certificato, dell'elenco di scopi consentiti o del CRL da aggiungere, eliminare o salvare.|  
 |**/v**|Specifica la modalità dettagliata. Visualizza informazioni dettagliate su certificati, elenchi di scopi consentiti e CRL. Non è possibile usare questa opzione con le opzioni **/add**, **/del** o **/put**.|  
@@ -70,7 +70,7 @@ Lo strumento di gestione certificati (Certmgr.exe) gestisce certificati, elenchi
 |**/7**|Salva l'archivio di destinazione come oggetto PKCS #7.|  
 |**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Certmgr.exe svolge le seguenti funzioni di base:  
   
 - Visualizza certificati, elenchi di scopi consentiti e CRL sulla console.  

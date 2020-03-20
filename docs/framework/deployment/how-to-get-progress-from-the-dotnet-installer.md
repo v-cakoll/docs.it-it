@@ -8,19 +8,19 @@ helpviewer_keywords:
 - .NET Framework, installing
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 ms.openlocfilehash: cd81ad83aee80341d0334cfa8caa165b25ee0564
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716494"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Procedura: ottenere lo stato di avanzamento dal programma d'installazione di .NET Framework 4.5
 
 .NET Framework 4.5 è un runtime ridistribuibile. Se si sviluppano app per questa versione di .NET Framework, è possibile includere (a catena) l'installazione di .NET Framework 4.5 come componente prerequisito nell'installazione dell'app. Per offrire un'esperienza d'installazione personalizzata o unificata, è consigliabile avviare l'installazione di .NET Framework 4.5 n modo invisibile all'utente e tenere traccia dello stato di avanzamento visualizzando l'avanzamento dell'installazione dell'app. Per abilitare la gestione invisibile all'utente, l'installazione di .NET Framework 4.5, che può essere controllata, definisce un protocollo usando un segmento di I/O mappato alla memoria (MMIO) per comunicare con l'installazione, vale a dire con il watcher o il chainer. Questo protocollo definisce come un chainer può ottenere informazioni sullo stato di avanzamento, ottenere risultati dettagliati, rispondere ai messaggi e annullare l'installazione di .NET Framework 4.5.
 
-- **Chiamata**. Per chiamare l'installazione di .NET Framework 4.5 e ricevere informazioni sullo stato di avanzamento della sezione MMIO, il programma di installazione deve eseguire le operazioni seguenti:
+- **Invocazione**. Per chiamare l'installazione di .NET Framework 4.5 e ricevere informazioni sullo stato di avanzamento della sezione MMIO, il programma di installazione deve eseguire le operazioni seguenti:
 
-    1. Chiamare il programma ridistribuibile .NET Framework 4,5:
+    1. Chiamare il programma ridistribuibile di .NET Framework 4.5:
 
         `dotNetFx45_Full_x86_x64.exe /q /norestart /pipe section-name`
 
@@ -32,7 +32,7 @@ ms.locfileid: "75716494"
 
         Sostituire i nomi con nomi univoci per il programma di installazione.
 
-    2. Leggere dalla sezione MMIO. Nel .NET Framework 4,5, le operazioni di download e installazione sono simultanee: una parte del .NET Framework potrebbe essere installata mentre è in corso il download di un'altra parte. Di conseguenza, lo stato di avanzamento viene restituito, ovvero scritto, nella sezione MMIO come due numeri (`m_downloadSoFar` e `m_installSoFar`) crescenti da 0 a 255. Quando viene scritto 255 e viene chiuso .NET Framework, l'installazione è completa.
+    2. Leggere dalla sezione MMIO. In .NET Framework 4.5. Di conseguenza, lo stato di avanzamento viene restituito, ovvero scritto, nella sezione MMIO come due numeri (`m_downloadSoFar` e `m_installSoFar`) crescenti da 0 a 255. Quando viene scritto 255 e viene chiuso .NET Framework, l'installazione è completa.
 
 - **Codici di uscita**. I codici di uscita seguenti del comando per la chiamata al programma ridistribuibile .NET Framework 4.5 indicano se l'installazione è riuscita o meno:
 

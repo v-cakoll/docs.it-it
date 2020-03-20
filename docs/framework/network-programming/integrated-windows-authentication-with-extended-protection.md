@@ -1,15 +1,15 @@
 ---
-title: Autenticazione integrata di Windows con protezione estesa
+title: Integrated Windows Authentication with Extended Protection
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
 ms.openlocfilehash: c4afc008f600c9be0040f8d7623f5e20623dfd7d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74444237"
 ---
-# <a name="integrated-windows-authentication-with-extended-protection"></a>Autenticazione integrata di Windows con protezione estesa
+# <a name="integrated-windows-authentication-with-extended-protection"></a>Integrated Windows Authentication with Extended Protection
 Sono stati apportati alcuni miglioramenti che influiscono sul modo in cui l'autenticazione integrata di Windows viene gestita da <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream> e dalle classi correlate in <xref:System.Net> e negli spazi dei nomi correlati. È stato aggiunto il supporto per la protezione estesa per migliorare la sicurezza.  
   
  Queste modifiche possono influire sulle applicazioni che usano queste classi per effettuare richieste Web e ricevere risposte in cui viene usata l'autenticazione integrata di Windows. Questa modifica può anche influire sulle applicazioni client e sui server Web configurati per l'uso dell'autenticazione integrata di Windows.  
@@ -84,7 +84,7 @@ Sono stati apportati alcuni miglioramenti che influiscono sul modo in cui l'aute
   
  Lo spazio dei nomi <xref:System.Security.Authentication.ExtendedProtection.Configuration> fornisce il supporto per la configurazione dell'autenticazione con protezione estesa per le applicazioni.  
   
- Sono state apportate alcune modifiche alle funzionalità per supportare la protezione estesa nello spazio dei nomi <xref:System.Net> esistente. Le modifiche includono le seguenti:  
+ Sono state apportate alcune modifiche alle funzionalità per supportare la protezione estesa nello spazio dei nomi <xref:System.Net> esistente. Queste modifiche includono, ad esempio:  
   
 - Nuova classe <xref:System.Net.TransportContext> aggiunta allo spazio dei nomi <xref:System.Net> che rappresenta un contesto di trasporto.  
   
@@ -96,7 +96,7 @@ Sono stati apportati alcuni miglioramenti che influiscono sul modo in cui l'aute
   
 - Proprietà <xref:System.Net.Mail.SmtpClient.TargetName%2A> nella classe <xref:System.Net.Mail.SmtpClient> che rappresenta l'SPN da usare per l'autenticazione quando si usa la protezione estesa per applicazioni client SMTP.  
   
- Sono state apportate alcune modifiche alle funzionalità per supportare la protezione estesa nello spazio dei nomi <xref:System.Net.Security> esistente. Le modifiche includono le seguenti:  
+ Sono state apportate alcune modifiche alle funzionalità per supportare la protezione estesa nello spazio dei nomi <xref:System.Net.Security> esistente. Queste modifiche includono, ad esempio:  
   
 - Nuovi metodi di overload <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsClient%2A> e <xref:System.Net.Security.NegotiateStream.AuthenticateAsClient%2A> nella classe <xref:System.Net.Security.NegotiateStream> che permettono il passaggio di un token di associazione del canale per supportare la protezione estesa per le applicazioni client.  
   
@@ -128,7 +128,7 @@ Sono stati apportati alcuni miglioramenti che influiscono sul modo in cui l'aute
   
 3. Il client specifica l'associazione di canali corretta o viene autorizzato a connettersi senza specificare alcuna associazione, in quanto i criteri di protezione estesa nel server sono configurati con <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported>. La richiesta viene restituita all'applicazione per l'elaborazione. Non viene eseguito automaticamente alcun controllo del nome di servizio. Un'applicazione può scegliere di eseguire la propria convalida del nome di servizio usando la proprietà <xref:System.Net.HttpListenerRequest.ServiceName%2A>, ma in questo caso il controllo è superfluo.  
   
- Se un'applicazione effettua le proprie chiamate SSPI per eseguire l'autenticazione in base a BLOB scambiati all'interno del corpo di una richiesta HTTP e vuole supportare l'associazione di canali, deve recuperare l'associazione di canali prevista dal canale sicuro esterno usando <xref:System.Net.HttpListener> per passarla alla funzione [AcceptSecurityContext](/windows/win32/api/sspi/nf-sspi-acceptsecuritycontext) Win32 nativa. A questo scopo, usare la proprietà <xref:System.Net.HttpListenerRequest.TransportContext%2A> e chiamare il metodo <xref:System.Net.TransportContext.GetChannelBinding%2A> per recuperare il token di associazione del canale. Sono supportate solo le associazioni di endpoint. Se si specifica altro rispetto a <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint>, viene generata un'eccezione <xref:System.NotSupportedException>. Se il sistema operativo sottostante supporta l'associazione di canali, il metodo <xref:System.Net.TransportContext.GetChannelBinding%2A> restituisce un oggetto <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding><xref:System.Runtime.InteropServices.SafeHandle> che esegue il wrapping di un puntatore a un'associazione di canali adatta per il passaggio alla funzione [AcceptSecurityContext](/windows/win32/api/sspi/nf-sspi-acceptsecuritycontext) come membro pvBuffer di una struttura SecBuffer passata nel parametro `pInput`. La proprietà <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding.Size%2A> contiene la lunghezza in byte dell'associazione di canali. Se il sistema operativo sottostante non supporta le associazioni di canali, la funzione restituisce `null`.  
+ Se un'applicazione effettua le proprie chiamate SSPI per eseguire l'autenticazione in base a BLOB scambiati all'interno del corpo di una richiesta HTTP e vuole supportare l'associazione di canali, deve recuperare l'associazione di canali prevista dal canale sicuro esterno usando <xref:System.Net.HttpListener> per passarla alla funzione [AcceptSecurityContext](/windows/win32/api/sspi/nf-sspi-acceptsecuritycontext) Win32 nativa. A questo scopo, usare la proprietà <xref:System.Net.HttpListenerRequest.TransportContext%2A> e chiamare il metodo <xref:System.Net.TransportContext.GetChannelBinding%2A> per recuperare il token di associazione del canale. Sono supportate solo le associazioni di endpoint. Se si specifica altro rispetto a <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint>, viene generata un'eccezione <xref:System.NotSupportedException>. Se il sistema operativo sottostante <xref:System.Net.TransportContext.GetChannelBinding%2A> supporta l'associazione di canale, il metodo restituirà <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding> <xref:System.Runtime.InteropServices.SafeHandle> un ritorno a capo di un puntatore a un'associazione di canale adatta per passare alla funzione [AcceptSecurityContext](/windows/win32/api/sspi/nf-sspi-acceptsecuritycontext) come membro pvBuffer di una struttura SecBuffer passata nel `pInput` parametro. La proprietà <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding.Size%2A> contiene la lunghezza in byte dell'associazione di canali. Se il sistema operativo sottostante non supporta le associazioni di canali, la funzione restituisce `null`.  
   
  Un altro possibile scenario consiste nell'abilitare la protezione estesa per i prefissi HTTP:// quando non si usano proxy. In questo caso, impostare <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A?displayProperty=nameWithType> su <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> con <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> impostato su <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> o <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> e <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> impostato su <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TransportSelected>. Il valore <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> attiva la modalità parzialmente avanzata per <xref:System.Net.HttpListener>, mentre <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> corrisponde alla modalità completamente avanzata.  
   

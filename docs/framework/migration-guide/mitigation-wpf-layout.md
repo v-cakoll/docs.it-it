@@ -3,10 +3,10 @@ title: 'Mitigazione: Layout WPF'
 ms.date: 03/30/2017
 ms.assetid: 805ffd7f-8d1e-427e-a648-601ca8ec37a5
 ms.openlocfilehash: 7a074698fd203d0c5f9b799bfee8a6a9cb40800e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457778"
 ---
 # <a name="mitigation-wpf-layout"></a>Mitigazione: Layout WPF
@@ -23,7 +23,7 @@ Il layout dei controlli WPF può cambiare leggermente.
   
  Per impostazione predefinita, questo nuovo layout è disponibile solo per app destinate a .NET Framework 4.6.  
   
-## <a name="mitigation"></a>Attenuazione  
+## <a name="mitigation"></a>Strategia di riduzione del rischio  
  Poiché questa modifica tende a eliminare il ritaglio del lato destro o inferiore dei controlli WPF a DPI elevati, le app destinate a versioni precedenti di .NET Framework ma eseguite su .NET Framework 4.6 possono adottare questo nuovo comportamento aggiungendo la riga seguente alla sezione `<runtime>` del file app.config:  
   
 ```xml  
@@ -38,4 +38,4 @@ Il layout dei controlli WPF può cambiare leggermente.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Compatibilità delle applicazioni](application-compatibility.md)
+- [Compatibilità tra le versioni](application-compatibility.md)

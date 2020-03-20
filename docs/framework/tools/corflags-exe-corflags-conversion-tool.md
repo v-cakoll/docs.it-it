@@ -7,10 +7,10 @@ helpviewer_keywords:
 - portable executable files, CorFlags section
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
 ms.openlocfilehash: e1251b6660db45f3af4f6e57114b1b10da18bd0a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73129855"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (strumento di conversione CorFlags)
@@ -47,7 +47,7 @@ CorFlags.exe assembly [options]
 |`-RevertCLRHeader`|Ripristina la versione 2.0 dell'intestazione CLR.|  
 |`-UpgradeCLRHeader`|Esegue l'aggiornamento dell'intestazione CLR alla versione 2.5. **Nota:** per essere eseguiti a livello nativo, gli assembly devono disporre di un'intestazione CLR versione 2.5 o successiva.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Se non viene specificata alcuna opzione, lo strumento di conversione CorFlags visualizza i flag relativi all'assembly specificato.  
   
 ## <a name="see-also"></a>Vedere anche

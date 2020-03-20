@@ -3,10 +3,10 @@ title: 'Mitigazione: Periodo di blocco del pool'
 ms.date: 03/30/2017
 ms.assetid: 92d2de20-79be-4df1-b182-144143a8866a
 ms.openlocfilehash: 98396d4254975d1806a8477cbcd2380cb52ceaf3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457853"
 ---
 # <a name="mitigation-pool-blocking-period"></a>Mitigazione: Periodo di blocco del pool
@@ -20,7 +20,7 @@ Il periodo di blocco del pool di connessioni è stato rimosso per le connessioni
 ## <a name="impact"></a>Impatto  
  Questa modifica consente di ritentare immediatamente l'apertura di una connessione a database SQL di Azure, migliorando così le prestazioni delle app abilitate per il cloud.  
   
-## <a name="mitigation"></a>Attenuazione  
+## <a name="mitigation"></a>Strategia di riduzione del rischio  
  Per le app che subiscono effetti negativi da questa modifica, è possibile configurare il periodo di blocco del pool di connessioni impostando la nuova proprietà <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A?displayProperty=nameWithType>.  Il valore della proprietà è un membro dell'enumerazione <xref:System.Data.SqlClient.PoolBlockingPeriod?displayProperty=nameWithType> che può assumere uno dei tre valori seguenti:  
   
 - <xref:System.Data.SqlClient.PoolBlockingPeriod.AlwaysBlock?displayProperty=nameWithType>
@@ -33,4 +33,4 @@ Il periodo di blocco del pool di connessioni è stato rimosso per le connessioni
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Compatibilità delle applicazioni](application-compatibility.md)
+- [Compatibilità tra le versioni](application-compatibility.md)

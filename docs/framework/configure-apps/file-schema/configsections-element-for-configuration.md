@@ -7,19 +7,18 @@ helpviewer_keywords:
 - configSections Element
 - <configSections> Element
 ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
-ms.openlocfilehash: 5b71eb81769db1188f97b1646a608df172ff56c5
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 55116f1fe6fdffffea8f26d8a4de783c7305ada3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77214829"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155349"
 ---
-# <a name="configsections-element-for-configuration"></a>\<elemento > configSections per \<Configuration >
+# <a name="configsections-element-for-configuration"></a>\<elemento di> \<configSections per la> di configurazione
 
-Contiene la sezione di configurazione e le dichiarazioni dello spazio dei nomi.
+Contiene le dichiarazioni della sezione di configurazione e dello spazio dei nomi.
 
-[ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp; **\<configSections >**
+[** \<>**](configuration-element.md) &nbsp; &nbsp;configurazione configSections>** \<**
 
 ## <a name="attributes"></a>Attributes
 
@@ -29,24 +28,24 @@ nessuno
 
 |     | Descrizione |
 | --- | ----------- |
-| [ **\<configuration>** ](configuration-element.md) | Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework. |
+| [**\<>di configurazione**](configuration-element.md) | Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework. |
 
 ## <a name="child-elements"></a>Elementi figlio
 
 |     | Descrizione |
 | --- | ----------- |
-| [ **\<sezione >** ](section-element.md) | Contiene una dichiarazione della sezione di configurazione. |
-| [ **\<sectionGroup >** ](sectiongroup-element-for-configsections.md) | Definisce uno spazio dei nomi per le sezioni di configurazione. |
-| [ **\<remove>** ](remove-element-for-configsections.md) | Rimuove una sezione o un gruppo di sezioni predefinito. |
-| [ **\<clear>** ](clear-element-for-configsections.md) | Cancella tutte le sezioni e i gruppi di sezioni definiti in precedenza. |
+| [**\<sezione>**](section-element.md) | Contiene una dichiarazione di sezione di configurazione. |
+| [**\<>gruppo section**](sectiongroup-element-for-configsections.md) | Definisce uno spazio dei nomi per le sezioni di configurazione. |
+| [**\<rimuovere>**](remove-element-for-configsections.md) | Rimuove una sezione o un gruppo di sezioni predefinito. |
+| [**\<>chiari**](clear-element-for-configsections.md) | Cancella tutte le sezioni e i gruppi di sezioni definiti in precedenza. |
 
 ## <a name="remarks"></a>Osservazioni
 
-Se questo elemento si trova in un file di configurazione, deve essere il primo elemento figlio dell'elemento **\<configuration >** .
+Se questo elemento si trova in un file di configurazione, deve essere il primo elemento figlio dell'elemento ** \<>configurazione.**
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come definire una sezione di configurazione e definire le impostazioni per la sezione:
+L'esempio seguente mostra come definire una sezione di configurazione e definire le impostazioni per tale sezione:The following example shows how to define a configuration section and define settings for that section:
 
 ```xml
 <configuration>
@@ -54,16 +53,16 @@ Nell'esempio seguente viene illustrato come definire una sezione di configurazio
     <section name="sampleSection"
              type="System.Configuration.SingleTagSectionHandler" />
   </configSections>
-  <sampleSection setting1="Value1" 
-                 setting2="value two" 
+  <sampleSection setting1="Value1"
+                 setting2="value two"
                  setting3="third value" />
 </configuration>
 ```
 
 ## <a name="configuration-file"></a>File di configurazione
 
-Questo elemento può essere utilizzato nel file di configurazione dell'applicazione, nel file di configurazione del computer (*Machine. config*) e nei file *Web. config* che non sono a livello di directory dell'applicazione.
+Questo elemento può essere utilizzato nei file di configurazione dell'applicazione, nel file di configurazione del computer (*Machine.config*) e nei file *Web.config* che non si trovano a livello di directory dell'applicazione.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Schema del file di configurazione per il .NET Framework](index.md)
+- [Schema del file di configurazione per .NET Framework](index.md)

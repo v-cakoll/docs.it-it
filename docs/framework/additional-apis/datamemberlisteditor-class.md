@@ -1,5 +1,5 @@
 ---
-title: Classe DataMemberListEditor
+title: DataMemberListEditor (classe)
 ms.date: 03/30/2017
 ms.technology: dotnet-winforms
 api_name:
@@ -11,16 +11,16 @@ api_type:
 ms.assetid: c11d5231-78f2-45a7-9210-3b2d0969370e
 topic_type:
 - apiref
-ms.openlocfilehash: d0f8063dd85537f81a1ae145b4526e10ad90b77e
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 407bbe87e3d186dc901b18dbfee38e2ff69d356a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215614"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155999"
 ---
-# <a name="datamemberlisteditor-class"></a>Classe DataMemberListEditor
+# <a name="datamemberlisteditor-class"></a>DataMemberListEditor (classe)
 
-Fornisce un'interfaccia utente a discesa per la modifica delle proprietà di oggetti associati a dati (oggetti con proprietà `DataSource` non null) elencando tutte le proprietà dell'oggetto `DataSource` da cui selezionare l'origine del valore.  
+Fornisce un'interfaccia utente a discesa per la modifica delle proprietà `DataSource` degli oggetti con associazione `DataSource` a dati (oggetti con proprietà non null) elencando tutte le proprietà dell'oggetto da cui selezionare l'origine del valore.  
   
 ## <a name="syntax"></a>Sintassi
   
@@ -29,17 +29,17 @@ internal class DataMemberListEditor : UITypeEditor
 ```
 
 > [!WARNING]
-> Il `DataMemberListEditor` classe è interno e non deve essere usato direttamente nel codice.
-> 
-> Microsoft non supporta l'utilizzo di questa classe in un'applicazione di produzione in qualsiasi circostanza.
+> La `DataMemberListEditor` classe è interna e non deve essere utilizzata direttamente nel codice.
+>
+> Microsoft non supporta in nessun caso l'utilizzo di questa classe in un'applicazione di produzione.
   
 ## <a name="requirements"></a>Requisiti
 
-**Spazio dei nomi:** <xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
+**Spazio dei nomi:**<xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
   
-**Assembly:** System. Design (in System. Design. dll)  
+**Assemblaggio:** System.Design (in System.Design.dll)  
   
-**Versioni .NET Framework:** Disponibile a partire da 2,0.  
+Versioni di **.NET Framework:** Disponibile dalla 2.0.  
   
 ## <a name="see-also"></a>Vedere anche
 

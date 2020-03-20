@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: personalizzare criteri di cache basati sul tempo'
+title: 'Procedura: Personalizzare criteri di cache basati sul tempo'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - cache [.NET Framework], time-based policies
 ms.assetid: 8d84f936-2376-4356-9264-03162e0f9279
 ms.openlocfilehash: 1a2ba404e333eeec2a23758c834876d0df5aba81
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73040639"
 ---
-# <a name="how-to-customize-a-time-based-cache-policy"></a>Procedura: personalizzare criteri di cache basati sul tempo
+# <a name="how-to-customize-a-time-based-cache-policy"></a>Procedura: Personalizzare criteri di cache basati sul tempo
 
 Quando si creano criteri di cache basati sul tempo, è possibile personalizzare il comportamento di memorizzazione nella cache specificando i valori per durata massima, validità minima, obsolescenza massima o data di sincronizzazione della cache. L'oggetto <xref:System.Net.Cache.HttpRequestCachePolicy> fornisce più costruttori che consentono di specificare le combinazioni valide di questi valori.
 
 ## <a name="to-create-a-time-based-cache-policy-that-uses-a-cache-synchronization-date"></a>Per creare un criterio di cache basato sul tempo che usa una data di sincronizzazione della cache
 
-Creare un criterio di cache basato sul tempo che usa una data di sincronizzazione della cache passando un oggetto <xref:System.DateTime> al costruttore <xref:System.Net.Cache.HttpRequestCachePolicy>:
+Creare criteri di cache basati sul tempo che <xref:System.DateTime> utilizzano <xref:System.Net.Cache.HttpRequestCachePolicy> una data di sincronizzazione della cache passando un oggetto al costruttore:Create a time-based cache policy that uses a cache synchronization date by passing a object to the constructor:
 
 ```csharp
 public static HttpRequestCachePolicy CreateLastSyncPolicy(DateTime when)
@@ -52,7 +52,7 @@ Level:Default CacheSyncDate:1/14/2004 8:07:30 AM
 
 ## <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness"></a>Per creare un criterio di cache basato sul tempo con impostazione della validità minima
 
-Creare criteri di cache basati sul tempo basati sulla validità minima specificando <xref:System.Net.Cache.HttpCacheAgeControl.MinFresh> come valore del parametro di `cacheAgeControl` e passando un oggetto <xref:System.TimeSpan> al costruttore <xref:System.Net.Cache.HttpRequestCachePolicy>:
+Creare criteri di cache basati sul tempo basati <xref:System.Net.Cache.HttpCacheAgeControl.MinFresh> sull'aggiornamento minimo specificando come valore del `cacheAgeControl` parametro e passando un <xref:System.TimeSpan> oggetto al <xref:System.Net.Cache.HttpRequestCachePolicy> costruttore:
 
 ```csharp
 public static HttpRequestCachePolicy CreateMinFreshPolicy(TimeSpan span)
@@ -85,7 +85,7 @@ Level:Default MinFresh:3600
 
 ## <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness-and-maximum-age"></a>Per creare un criterio di cache basato sul tempo con impostazione della validità minima e della durata massima
 
-Creare un criterio di cache basato sul tempo che si basa sulla validità minima e la durata massima specificando <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh> come valore del parametro di `cacheAgeControl` e passando due oggetti <xref:System.TimeSpan> al costruttore <xref:System.Net.Cache.HttpRequestCachePolicy>, uno per specificare la durata massima per le risorse e un secondo a specificare la validità minima consentita per un oggetto restituito dalla cache:
+Creare criteri di cache basati sul tempo basati sull'aggiornamento `cacheAgeControl` minimo e sulla <xref:System.TimeSpan> validità <xref:System.Net.Cache.HttpRequestCachePolicy> massima specificando <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh> come valore del parametro e passando due oggetti al costruttore, uno per specificare la validità massima delle risorse e un secondo per specificare l'aggiornamento minimo consentito per un oggetto restituito dalla cache:
 
 ```csharp
 public static HttpRequestCachePolicy CreateFreshAndAgePolicy(TimeSpan freshMinimum, TimeSpan ageMaximum)
@@ -119,7 +119,7 @@ Level:Default MaxAge:36000 MinFresh:18000
 ## <a name="see-also"></a>Vedere anche
 
 - [Gestione della cache per le applicazioni di rete](cache-management-for-network-applications.md)
-- [Criteri di cache](cache-policy.md)
+- [Criteri cache](cache-policy.md)
 - [Criteri di cache basati sulla posizione](location-based-cache-policies.md)
-- [Criteri di cache basati sull'ora](time-based-cache-policies.md)
-- [Elemento \<requestCaching> (impostazioni di rete)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [Time-Based Cache Policies](time-based-cache-policies.md)
+- [\<elemento> requestCaching (impostazioni di rete)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

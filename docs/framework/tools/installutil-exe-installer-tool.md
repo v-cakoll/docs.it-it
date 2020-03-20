@@ -14,10 +14,10 @@ helpviewer_keywords:
 - reporting installation progress
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
 ms.openlocfilehash: caca946617c681ce6516b7184a9ea506cc67158d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73105067"
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (Strumento Programma di installazione)
@@ -46,11 +46,11 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 
 |Opzione|Descrizione|
 |------------|-----------------|
-|`/h[elp]`<br /><br /> oppure<br /><br /> `/?`|Visualizza la sintassi e le opzioni di comando dello strumento.|
-|`/help` *assembly*<br /><br /> oppure<br /><br /> `/?` *assembly*|Visualizza le opzioni aggiuntive riconosciute dai singoli programmi di installazione all'interno dell'assembly specificato, insieme alla sintassi e alle opzioni di comando di InstallUtil.exe. Questa opzione aggiunge il testo restituito dalla proprietà <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> di ogni componente del programma di installazione al testo della Guida di InstallUtil.exe.|
-|`/AssemblyName` "*assemblyName*<br /><br /> ,Version=*major.minor.build.revision*<br /><br /> ,Culture=*locale*<br /><br /> ,PublicKeyToken=*publicKeyToken*"|Specifica il nome sicuro di un assembly, che verrà registrato nella Global Assembly Cache. Il nome dell'assembly deve essere completo, con versione, impostazioni cultura e token di chiave pubblica. Il nome completo deve essere racchiuso tra virgolette.<br /><br /> Ad esempio, "myAssembly, Culture=neutral, PublicKeyToken=0038abc9deabfle5, Version=4.0.0.0" è un nome di assembly completo.|
-|`/InstallStateDir=[` *directoryName* `]`|Specifica la directory del file con estensione InstallState contenente i dati utilizzati per la disinstallazione dell'assembly. La directory predefinita è quella che contiene l'assembly.|
-|`/LogFile=`[*filename*]|Specifica il nome del file di log in cui è registrato lo stato dell'installazione. Per impostazione predefinita, se l'opzione `/LogFile` viene omessa, viene creato un file di log denominato *assemblyname*.InstallLog. Se *filename* viene omesso, non verrà generato alcun file di log.|
+|`/h[elp]`<br /><br /> -oppure-<br /><br /> `/?`|Visualizza la sintassi e le opzioni di comando dello strumento.|
+|`/help`*assemblaggio*<br /><br /> -oppure-<br /><br /> `/?`*assemblaggio*|Visualizza le opzioni aggiuntive riconosciute dai singoli programmi di installazione all'interno dell'assembly specificato, insieme alla sintassi e alle opzioni di comando di InstallUtil.exe. Questa opzione aggiunge il testo restituito dalla proprietà <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> di ogni componente del programma di installazione al testo della Guida di InstallUtil.exe.|
+|`/AssemblyName`"*nomeassembly*<br /><br /> ,Version=*major.minor.build.revision*<br /><br /> ,Culture=*locale*<br /><br /> ,PublicKeyToken=*publicKeyToken*"|Specifica il nome sicuro di un assembly, che verrà registrato nella Global Assembly Cache. Il nome dell'assembly deve essere completo, con versione, impostazioni cultura e token di chiave pubblica. Il nome completo deve essere racchiuso tra virgolette.<br /><br /> Ad esempio, "myAssembly, Culture=neutral, PublicKeyToken=0038abc9deabfle5, Version=4.0.0.0" è un nome di assembly completo.|
+|`/InstallStateDir=[`*nomedirectory*`]`|Specifica la directory del file con estensione InstallState contenente i dati utilizzati per la disinstallazione dell'assembly. La directory predefinita è quella che contiene l'assembly.|
+|`/LogFile=`[*nomefile*]|Specifica il nome del file di log in cui è registrato lo stato dell'installazione. Per impostazione predefinita, se l'opzione `/LogFile` viene omessa, viene creato un file di log denominato *assemblyname*.InstallLog. Se *filename* viene omesso, non verrà generato alcun file di log.|
 |`/LogToConsole`={`true`&#124;`false`}|Se `true`, visualizza l'output sulla console. Se `false` (impostazione predefinita), evita la visualizzazione dell'output sulla console.|
 |`/ShowCallStack`|Restituisce lo stack di chiamate al file di log se si verifica un'eccezione durante l'installazione.|
 |`/u`[`ninstall`]|Disinstalla gli assembly specificati. A differenza delle altre opzioni, `/u` si applica a tutti gli assembly, indipendentemente dalla posizione dell'opzione nella riga di comando.|
@@ -69,7 +69,7 @@ Tutte le opzioni e i parametri della riga di comando vengono scritti nel file di
 > [!IMPORTANT]
 > In alcuni casi, i parametri passati al programma di installazione possono includere informazioni riservate o personali che, per impostazione predefinita, vengono scritte in un file di log di testo normale. Per evitare questo comportamento, è possibile eliminare il file di log specificando `/LogFile=` (senza l'argomento *filename*) dopo Installutil.exe nella riga di comando.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Le applicazioni .NET Framework sono costituite da file di programma tradizionali e risorse associate, quali code di messaggi, log eventi e contatori delle prestazioni, che è necessario creare quando l'applicazione viene distribuita. È possibile utilizzare i componenti del programma di installazione di un assembly per creare queste risorse quando l'applicazione viene installata e rimuoverle quando l'applicazione viene disinstallata. Installutil.exe rileva ed esegue questi componenti del programma di installazione.
 

@@ -4,10 +4,10 @@ ms.custom: updateeachrelease
 description: Informazioni sull'installazione di .NET Framework in Windows 8.1
 ms.date: 04/18/2019
 ms.openlocfilehash: a13f31641be8a9289abbbac17bc4866b8f2dc4ee
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716762"
 ---
 # <a name="install-the-net-framework-on-windows-81-and-windows-server-2012-r2"></a>Installare .NET Framework in Windows 8.1 e Windows Server 2012 R2
@@ -21,22 +21,22 @@ Queste istruzioni saranno utili per installare le versioni di .NET Framework nec
 ## <a name="net-framework-48"></a>.NET Framework 4.8
 
 > [!div class="button"]
-> [Download di .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+> [Scaricare .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
 [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) può essere usato per eseguire applicazioni compilate per .NET Framework 4.0 o versioni successive.
 
-## <a name="net-framework-35"></a>.NET Framework 3.5
+## <a name="net-framework-35"></a>.NET Framework 3.5
 
 Seguire le istruzioni per l'installazione di [.NET Framework 3.5 in Windows 8.1 e 10](dotnet-35-windows-10.md).
 
 .NET Framework 3.5 supporta le app create per .NET Framework da 1.0 a 3.5.
 
-## <a name="help"></a>Guida di
+## <a name="help"></a>Guida
 
 È possibile [contattare Microsoft per assistenza](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help) se non si riesce a installare la versione corretta di .NET Framework.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Scaricare .NET Framework](https://dotnet.microsoft.com/download)
+- [Scarica .NET Framework](https://dotnet.microsoft.com/download)
 - [Risolvere i problemi relativi alle installazioni e alle disinstallazioni bloccate di .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)
 - [Installare .NET Framework per sviluppatori](guide-for-developers.md)

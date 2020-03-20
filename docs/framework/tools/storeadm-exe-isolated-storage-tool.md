@@ -9,10 +9,10 @@ helpviewer_keywords:
 - removing stores
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
 ms.openlocfilehash: 46e846eaf92835fb2a9130b85ed20749934ca5a1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75715721"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (strumento per lo spazio di memorizzazione isolato)
@@ -34,13 +34,13 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
 |------------|-----------------|  
 |**/h**[**elp**]|Visualizza la sintassi e le opzioni di comando dello strumento.|  
 |**/list**|Visualizza tutti gli archivi esistenti dell'utente attualmente connesso, inclusi gli archivi di tutte le applicazioni e di tutti gli assembly eseguiti da tale utente.|  
-|**/machine**|Seleziona l'archivio computer. Usare questa opzione con l'opzione **/list** o **/remove** per specificare che l'operazione deve essere applicata all'archivio computer.<br /><br /> Questa è una nuova opzione di .NET Framework versione 2.0.|  
+|**/machine (computer)**|Seleziona l'archivio computer. Usare questa opzione con l'opzione **/list** o **/remove** per specificare che l'operazione deve essere applicata all'archivio computer.<br /><br /> Questa è una nuova opzione di .NET Framework versione 2.0.|  
 |**/quiet**|Specifica la modalità non interattiva. Evita la visualizzazione dell'output informativo, in modo che vengano visualizzati solo i messaggi di errore.|  
-|**/remove**|Rimuove definitivamente tutti gli archivi esistenti dell'utente attualmente connesso.|  
+|**/rimuovi**|Rimuove definitivamente tutti gli archivi esistenti dell'utente attualmente connesso.|  
 |**/roaming**|Seleziona l'archivio roaming. Usare questa opzione con l'opzione **/list** o **/remove** per specificare che l'operazione deve essere applicata all'archivio roaming.|  
 |**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Se si esegue Storeadm.exe dalla riga di comando senza specificare alcuna opzione, verranno visualizzate la sintassi e le opzioni dello strumento.  
   
  Le opzioni **/list** e **/remove** sono in genere usate singolarmente. Se tuttavia vengono specificate due o più opzioni, queste verranno eseguite nell'ordine in cui sono state immesse sulla riga di comando.  
@@ -61,5 +61,5 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
 ## <a name="see-also"></a>Vedere anche
 
 - [Strumenti](index.md)
-- [Spazio di memorizzazione isolato](../../standard/io/isolated-storage.md)
+- [Archiviazione isolata](../../standard/io/isolated-storage.md)
 - [Prompt dei comandi](developer-command-prompt-for-vs.md)

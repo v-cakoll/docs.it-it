@@ -1,5 +1,5 @@
 ---
-title: Metodo XpsDocumentWriter. raise__WritingProgressChanged (System. Windows. Xps)
+title: Metodo XpsDocumentWriter.raise__WritingProgressChanged (System.Windows.Xps)
 ms.date: 12/12/2007
 api_location:
 - system.printing.dll
@@ -9,21 +9,21 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: bbff992891db5d6bd8ea9c001262adb4bcd0547b
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: cceabb2b4b1fad68fdda44fea8172cb21319b4bc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524911"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155635"
 ---
-# <a name="xpsdocumentwriterraise__writingprogresschanged-method"></a>XpsDocumentWriter. Raise \_ metodo \_WritingProgressChanged
+# <a name="xpsdocumentwriterraise__writingprogresschanged-method"></a>Metodo XpsDocumentWriter.raise\_\_WritingProgressChanged
 
 Genera l'evento <xref:System.Windows.Xps.XpsDocumentWriter.WritingProgressChanged>.
 
 ## <a name="syntax"></a>Sintassi
 
 ```csharp
-public void raise__WritingProgressChanged (object value0, 
+public void raise__WritingProgressChanged (object value0,
   System.Windows.Documents.Serialization.WritingProgressChangedEventArgs value1);
 ```
 
@@ -37,8 +37,8 @@ public void raise__WritingProgressChanged (object value0,
   
 ## <a name="requirements"></a>Requisiti
 
-**Spazio dei nomi:** <xref:System.Windows.Xps>
+**Spazio dei nomi:**<xref:System.Windows.Xps>
 
-**Assembly:** System. Printing (in System. Printing. dll)
+**Assemblaggio:** System.Printing (in system.printing.dll)
 
-**Versioni .NET Framework:** 3,0
+Versioni di **.NET Framework:** 3.0

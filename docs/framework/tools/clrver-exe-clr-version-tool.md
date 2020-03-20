@@ -1,18 +1,18 @@
 ---
-title: Clrver.exe (strumento della versione CLR)
+title: Clrver.exe (Strumento della versione CLR)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Clrver.exe
 - CLR Version tool
 ms.assetid: cbc2ee86-bdc8-4a65-a8f1-ba23bce3a699
 ms.openlocfilehash: bfc612ef5455e1b4a03d15fd99a8a1873d2c7c08
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75715791"
 ---
-# <a name="clrverexe-clr-version-tool"></a>Clrver.exe (strumento della versione CLR)
+# <a name="clrverexe-clr-version-tool"></a>Clrver.exe (Strumento della versione CLR)
 Lo strumento della versione CLR (Clrver.exe) segnala tutte le versioni di CRL (Common Language Runtime) installate nel computer.  
   
  Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](developer-command-prompt-for-vs.md).  
@@ -25,15 +25,15 @@ Lo strumento della versione CLR (Clrver.exe) segnala tutte le versioni di CRL (C
 clrver [option]  
 ```  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>Opzioni  
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
 |`-all`|Visualizza tutti i processi sul computer che utilizzano CLR.|  
-|*pid*|Visualizza le versioni di CLR utilizzate dal processo con l'ID processo (PID) specificato.|  
+|*Pid*|Visualizza le versioni di CLR utilizzate dal processo con l'ID processo (PID) specificato.|  
 |`-?`|Visualizza la sintassi e le opzioni di comando dello strumento.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Se si chiama Clrver.exe senza opzioni, vengono visualizzate tutte le versioni CLR installate. Se si specifica un PID per un altro utente, è necessario disporre di autorizzazioni amministrative per ottenere le informazioni sulla versione.  
   
 > [!NOTE]

@@ -2,12 +2,12 @@
 title: KEY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cbaa97a8-c89c-4460-8c74-00474695789f
-ms.openlocfilehash: 14c0b5d273b26c71c9c63e8bbbcef863ac95a5f3
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 894a9d41aa3a14ad66b537433aa315823a299f95
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319709"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150169"
 ---
 # <a name="key-entity-sql"></a>KEY (Entity SQL)
 Estrae la chiave di un riferimento o di un'espressione di entità.  
@@ -18,13 +18,13 @@ Estrae la chiave di un riferimento o di un'espressione di entità.
 KEY(createref_expression)  
 ```  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Una chiave di entità contiene nell'ordine corretto i valori di chiave relativi all'entità o al riferimento all'entità specificato. Poiché più set di entità possono essere basati sullo stesso tipo di entità, è possibile che venga visualizzata la stessa chiave in ogni set. Per ottenere un riferimento univoco, usare `REF`. Il tipo restituito dell'operatore KEY è un tipo di riga che include un campo per ogni chiave dell'entità, nello stesso ordine.  
   
  Nell'esempio seguente all'operatore Key viene passato un riferimento all'entità BadOrder. Viene restituita la parte relativa alla chiave del riferimento in questione, che in questo caso è un tipo di record con un campo esattamente corrispondente alla proprietà `Id` .  
   
 ```sql  
-select Key( CreateRef(LOB.BadOrders, row(o.Id)) )   
+select Key( CreateRef(LOB.BadOrders, row(o.Id)) )
 from LOB.Orders as o  
 ```  
   
@@ -41,5 +41,5 @@ from LOB.Orders as o
 
 - [Riferimento a Entity SQL](entity-sql-reference.md)
 - [CREATEREF](createref-entity-sql.md)
-- [REF](ref-entity-sql.md)
+- [Ref](ref-entity-sql.md)
 - [DEREF](deref-entity-sql.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 ms.openlocfilehash: b1ba9810b4b0d5a1688318db1093a9ce9bdf8fda
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716469"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Distribuzione di .NET Framework e delle applicazioni
@@ -30,7 +30,7 @@ Usare i seguenti collegamenti ad altri argomenti di MSDN per informazioni specif
 
   - Opzioni del programma di installazione:
 
-    - [Web installer](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
+    - [programma di installazione Web](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
     - [Offline installer](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
@@ -44,7 +44,7 @@ Usare i seguenti collegamenti ad altri argomenti di MSDN per informazioni specif
 
   - [Risolvere i problemi relativi alle installazioni e alle disinstallazioni bloccate di .NET Framework](../install/troubleshoot-blocked-installations-and-uninstallations.md)
 
-- Distribuzione di .NET Framework in un'applicazione client (per gli sviluppatori):
+- Distribuzione di .NET Framework in un'applicazione client (per gli sviluppatori): 
 
   - [Uso di InstallShield](deployment-guide-for-developers.md#installshield-deployment) in un progetto di installazione e distribuzione
 
@@ -64,7 +64,7 @@ Usare i seguenti collegamenti ad altri argomenti di MSDN per informazioni specif
 
 **Manutenzione**
 
-- Per informazioni generali, vedere il [blog .NET Framework](https://devblogs.microsoft.com/dotnet/).
+- Per informazioni generali, vedere il blog di [.NET Framework](https://devblogs.microsoft.com/dotnet/).
 
 - [Determinazione delle versioni](../migration-guide/how-to-determine-which-versions-are-installed.md)
 
@@ -118,7 +118,7 @@ In .NET Framework sono disponibili diverse funzionalità di base che semplifican
 
 Alcuni concetti relativi alla creazione di pacchetti e alla distribuzione in .NET Framework vengono illustrati in altre sezioni della documentazione. Queste sezioni includono informazioni sulle unità autodescrittive denominate [assembly](../../standard/assembly/index.md), che non richiedono voci nel Registro di sistema, sugli [assembly con nome sicuro](../../standard/assembly/strong-named.md), che assicurano l'univocità dei nomi e prevengono lo spoofing dei nomi e sul [controllo delle versioni degli assembly](../../standard/assembly/versioning.md), che consente di risolvere molti dei problemi associati ai conflitti di DLL. Le sezioni seguenti forniscono informazioni sulla creazione di pacchetti e sulla distribuzione di applicazioni .NET Framework.
 
-### <a name="packaging"></a>Creazione del package
+### <a name="packaging"></a>Packaging
 
 .NET Framework consente di creare i pacchetti delle applicazioni nei seguenti modi:
 
@@ -134,7 +134,7 @@ Alcuni concetti relativi alla creazione di pacchetti e alla distribuzione in .NE
 
      Con questa opzione vengono creati file MSI che possono essere usati con Windows Installer oppure viene creato un pacchetto dell'applicazione per l'uso con altri programmi di installazione.
 
-### <a name="distribution"></a>Punto di
+### <a name="distribution"></a>Distribuzione
 
 .NET Framework consente di distribuire le applicazioni nei seguenti modi:
 
@@ -163,11 +163,11 @@ La modalità di distribuzione delle applicazioni dipende anche da alcune conside
 |[Come il runtime individua gli assembly](how-the-runtime-locates-assemblies.md)|Descrive come Common Language Runtime determina l'assembly da usare per eseguire una richiesta di associazione.|
 |[Procedure consigliate per il caricamento di assembly](best-practices-for-assembly-loading.md)|Illustra come evitare problemi di identità del tipo che possono causare la generazione di eccezioni <xref:System.InvalidCastException>, <xref:System.MissingMethodException> e altri errori.|
 |[Riduzione dei riavvii del sistema durante le installazioni di .NET Framework 4.5](reducing-system-restarts.md)|Descrive il gestore di riavvio, che impedisce automaticamente il riavvio quando possibile, e viene illustrato come le applicazioni che installano .NET Framework possano usufruirne.|
-|[Guida alla distribuzione per amministratori](guide-for-administrators.md)|Viene illustrato come un amministratore di sistema può distribuire il .NET Framework e le relative dipendenze di sistema attraverso una rete usando Microsoft endpoint Configuration Manager.|
+|[Guida alla distribuzione per amministratori](guide-for-administrators.md)|Viene illustrato come un amministratore di sistema può distribuire .NET Framework e le relative dipendenze di sistema in una rete utilizzando Microsoft Endpoint Configuration Manager.|
 |[Guida alla distribuzione per gli sviluppatori](deployment-guide-for-developers.md)|Illustra come gli sviluppatori possono installare .NET Framework nei computer dei rispettivi utenti con le rispettive applicazioni.|
 |[Distribuzione di applicazioni, servizi e componenti](/visualstudio/deployment/deploying-applications-services-and-components)|Illustra le opzioni di distribuzione di Visual Studio, incluse le istruzioni per la pubblicazione di un'applicazione usando le tecnologie ClickOnce e Windows Installer.|
 |[Pubblicazione di applicazioni ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)|Descrive come creare il pacchetto di un'applicazione Windows Forms e distribuirla con ClickOnce nei computer client di una rete.|
-|[Creazione del pacchetto e distribuzione delle risorse](../resources/packaging-and-deploying-resources-in-desktop-apps.md)|Descrive il modello hub e spoke usato da .NET Framework per creare pacchetti e distribuire le risorse. Vengono illustrate le convenzioni di denominazione, i processi di fallback e le possibilità alternative di creazione di pacchetti delle risorse.|
+|[Packaging and Deploying Resources](../resources/packaging-and-deploying-resources-in-desktop-apps.md)|Descrive il modello hub e spoke usato da .NET Framework per creare pacchetti e distribuire le risorse. Vengono illustrate le convenzioni di denominazione, i processi di fallback e le possibilità alternative di creazione di pacchetti delle risorse.|
 |[Distribuzione di una applicazione di interoperabilità](../interop/deploying-an-interop-application.md)|Illustra come fornire e installare applicazioni di interoperabilità, che in genere includono un assembly client .NET Framework, uno o più assembly di interoperabilità che rappresentano librerie dei tipi COM distinte e uno o più componenti COM registrati.|
 |[Procedura: Ottenere lo stato di avanzamento dal programma d'installazione di .NET Framework 4.5](how-to-get-progress-from-the-dotnet-installer.md)|Descrive come avviare e rilevare automaticamente il processo di installazione di .NET Framework pur mostrando la propria visualizzazione dello stato di avanzamento dell'installazione.|
 

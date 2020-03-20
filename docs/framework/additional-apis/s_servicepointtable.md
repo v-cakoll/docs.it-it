@@ -1,5 +1,5 @@
 ---
-title: ServicePointManager. s_ServicePointTable campo
+title: ServicePointManager.s_ServicePointTable Campo
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 24459679-291c-401a-9def-e42b29466fcf
-ms.openlocfilehash: 272a0c113fd70d804c763ba0e7e6e9a4a4ee04ce
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 6a56ecd6fc85005f5987c3c2ad0d1680ca63c398
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77214914"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155813"
 ---
-# <a name="servicepointmanagers_servicepointtable-field"></a>Campo ServicePointTable di ServicePointManager. s\_
+# <a name="servicepointmanagers_servicepointtable-field"></a>ServicePointManager.s\_Campo ServicePointTable
 
-`ServicePointManager.s_ServicePointTable` è un <xref:System.Collections.Hashtable> che contiene l'elenco di connessioni HTTP attive (<xref:System.Net.ServicePoint>s) nell'<xref:System.AppDomain>.
+`ServicePointManager.s_ServicePointTable`è <xref:System.Collections.Hashtable> un che contiene l'elenco<xref:System.Net.ServicePoint>delle connessioni <xref:System.AppDomain>HTTP attive ( s) nel file .
 
 ## <a name="syntax"></a>Sintassi
   
@@ -28,14 +28,14 @@ private static Hashtable s_ServicePointTable
 ```
 
 > [!WARNING]
-> Il campo `ServicePointManager.s_ServicePointTable` è privato e non è destinato a essere usato direttamente nel codice.
-> 
-> Microsoft non supporta l'utilizzo di questo campo in un'applicazione di produzione in qualsiasi circostanza.
+> Il `ServicePointManager.s_ServicePointTable` campo è privato e non deve essere utilizzato direttamente nel codice.
+>
+> Microsoft non supporta in nessun caso l'utilizzo di questo campo in un'applicazione di produzione.
 
 ## <a name="requirements"></a>Requisiti
 
-**Spazio dei nomi:** <xref:System.Net>
+**Spazio dei nomi:**<xref:System.Net>
 
-**Assembly:** System (in System. dll)
+**Assemblaggio:** Sistema (in System.dll)
 
-**Versioni .NET Framework:** Disponibile a partire da 2,0.
+Versioni di **.NET Framework:** Disponibile dalla 2.0.

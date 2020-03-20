@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DateTimePicker control [Windows Forms], setting and returning dates
 - examples [Windows Forms], DateTimePicker control
 ms.assetid: a8a48d68-e4b5-426e-9764-51230fc9acd2
-ms.openlocfilehash: 1e0aa58e98748ccde9411f0f4871adbae3a5f14d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: f958097640316715b38828e72107ab5bdb9389aa
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76747105"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141913"
 ---
 # <a name="how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control"></a>Procedura: impostare e restituire date con il controllo DateTimePicker Windows Form
 La data o l'ora selezionata nel controllo <xref:System.Windows.Forms.DateTimePicker> Windows Form è determinata dalla proprietà <xref:System.Windows.Forms.DateTimePicker.Value%2A>, che può essere impostata sulla proprietà <xref:System.Windows.Forms.DateTimePicker.Value%2A> prima della visualizzazione del controllo, ad esempio in fase di progettazione o nell'evento <xref:System.Windows.Forms.Form.Load>, per determinare la data che verrà inizialmente selezionata nel controllo. Per impostazione predefinita, la proprietà <xref:System.Windows.Forms.DateTimePicker.Value%2A> del controllo è impostata sulla data corrente. Se la proprietà <xref:System.Windows.Forms.DateTimePicker.Value%2A> del controllo viene modificata nel codice, il controllo viene automaticamente aggiornato nel form in base alla nuova impostazione.  
@@ -24,7 +24,7 @@ La data o l'ora selezionata nel controllo <xref:System.Windows.Forms.DateTimePic
   
 - Per i valori relativi alla data, le proprietà <xref:System.DateTime.Month%2A>, <xref:System.DateTime.Day%2A> e <xref:System.DateTime.Year%2A> restituiscono valori Integer per le unità di tempo corrispondenti della data selezionata. La proprietà <xref:System.DateTime.DayOfWeek%2A> restituisce un valore che indica il giorno della settimana selezionato. Per un elenco dei valori disponibili, vedere l'enumerazione <xref:System.DayOfWeek>.  
   
-- Per i valori relativi all'ora, le proprietà <xref:System.DateTime.Hour%2A>, <xref:System.DateTime.Minute%2A>, <xref:System.DateTime.Second%2A> e <xref:System.DateTime.Millisecond%2A> restituiscono valori Integer per le unità di tempo corrispondenti. Per configurare il controllo in modo da visualizzare gli orari, vedere [procedura: visualizzare l'ora con il controllo DateTimePicker](how-to-display-time-with-the-datetimepicker-control.md).  
+- Per i valori relativi all'ora, le proprietà <xref:System.DateTime.Hour%2A>, <xref:System.DateTime.Minute%2A>, <xref:System.DateTime.Second%2A> e <xref:System.DateTime.Millisecond%2A> restituiscono valori Integer per le unità di tempo corrispondenti. Per configurare il controllo in modo che venga visualizzato, vedere [Procedura: visualizzare l'ora con il controllo DateTimePicker](how-to-display-time-with-the-datetimepicker-control.md).  
   
 ### <a name="to-set-the-date-and-time-value-of-the-control"></a>Per impostare i valori di data e di ora del controllo  
   
@@ -48,18 +48,18 @@ La data o l'ora selezionata nel controllo <xref:System.Windows.Forms.DateTimePic
   
     ```vb  
     MessageBox.Show("The selected value is ", DateTimePicker1.Text)  
-    MessageBox.Show("The day of the week is ",   
+    MessageBox.Show("The day of the week is ",
        DateTimePicker1.Value.DayOfWeek.ToString)  
-    MessageBox.Show("Millisecond is: ",   
+    MessageBox.Show("Millisecond is: ",
        DateTimePicker1.Value.Millisecond.ToString)  
     ```  
   
     ```csharp  
-    MessageBox.Show ("The selected value is " +   
+    MessageBox.Show ("The selected value is " +
        dateTimePicker1.Text);  
-    MessageBox.Show ("The day of the week is " +   
+    MessageBox.Show ("The day of the week is " +
        dateTimePicker1.Value.DayOfWeek.ToString());  
-    MessageBox.Show("Millisecond is: " +   
+    MessageBox.Show("Millisecond is: " +
        dateTimePicker1.Value.Millisecond.ToString());  
     ```  
   
@@ -75,4 +75,4 @@ La data o l'ora selezionata nel controllo <xref:System.Windows.Forms.DateTimePic
 ## <a name="see-also"></a>Vedere anche
 
 - [Controllo DateTimePicker](datetimepicker-control-windows-forms.md)
-- [Procedura: Visualizzare una data in un formato personalizzato con il controllo DateTimePicker di Windows Form](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)
+- [Procedura: visualizzare una data in un formato personalizzato con il controllo DateTimePicker di Windows Form](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)

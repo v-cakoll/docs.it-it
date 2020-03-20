@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 63c0ef2c-44b5-4c54-9804-ba0b9b001ac7
 ms.openlocfilehash: 8b38973e4cb2c83ce32b8a08e54d828a8eeef879
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73039543"
 ---
 # <a name="how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet"></a>Procedura: Consentire a un elemento WebRequest di usare un proxy per comunicare con Internet
@@ -32,10 +32,10 @@ GlobalProxySelection.Select = proxyObject
 
 L'esempio presenta i requisiti seguenti:
 
-- C# [Direttiva`using`](../../csharp/language-reference/keywords/using-directive.md) per lo spazio dei nomi **System.NET** .
-- Visual Basic [`Imports` istruzione](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) per lo spazio dei nomi **System.NET** .
+- Una [ `using` direttiva](../../csharp/language-reference/keywords/using-directive.md) di C per lo spazio dei nomi **System.Net.**
+- [ `Imports` Un'istruzione](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) di Visual Basic per lo spazio dei nomi **System.Net.**
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Uso di protocolli applicativi](using-application-protocols.md)
-- [Accesso a Internet con un proxy](accessing-the-internet-through-a-proxy.md)
+- [Accesso a Internet tramite un proxy](accessing-the-internet-through-a-proxy.md)

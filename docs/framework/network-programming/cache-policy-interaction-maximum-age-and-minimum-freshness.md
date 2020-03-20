@@ -11,10 +11,10 @@ helpviewer_keywords:
 - age of cached resources
 ms.assetid: 6567d451-ecec-496c-95a3-a415b99ba52a
 ms.openlocfilehash: 2ec958cc035ac62086cdd3e2844811accc181d47
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048808"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-minimum-freshness"></a>Interazione tra criteri di cache: durata massima e validità minima
@@ -31,8 +31,8 @@ Per garantire che all'applicazione client venga restituito il contenuto più agg
 ## <a name="see-also"></a>Vedere anche
 
 - [Gestione della cache per le applicazioni di rete](cache-management-for-network-applications.md)
-- [Criteri di cache](cache-policy.md)
+- [Criteri cache](cache-policy.md)
 - [Criteri di cache basati sulla posizione](location-based-cache-policies.md)
-- [Criteri di cache basati sull'ora](time-based-cache-policies.md)
+- [Time-Based Cache Policies](time-based-cache-policies.md)
 - [Configurazione della memorizzazione nella cache per applicazioni di rete](configuring-caching-in-network-applications.md)
 - [Interazione tra criteri di cache: durata massima e obsolescenza massima](cache-policy-interaction-maximum-age-and-maximum-staleness.md)

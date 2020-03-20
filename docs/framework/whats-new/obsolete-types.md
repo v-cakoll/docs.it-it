@@ -7,10 +7,10 @@ helpviewer_keywords:
 - obsolete types [.NET Framework]
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 ms.openlocfilehash: b7932a553f39e1f1da2a3946878d6224099da8da
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74802687"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Tipi obsoleti in .NET Framework
@@ -79,7 +79,7 @@ Nelle seguenti tabelle sono elencati i tipi dichiarati obsoleti negli assembly d
 
 ### <a name="assembly-mscorlibdll"></a>Assembly: mscorlib.dll
 
-|Tipo di|Message|
+|Type|Message|
 |----------|-------------|
 |<xref:System.ExecutionEngineException?displayProperty=nameWithType>|Questo tipo indicava in precedenza un errore di runtime irreversibile non specificato. Il runtime non genera più questa eccezione, pertanto il tipo è obsoleto.|
 |<xref:System.Collections.CaseInsensitiveHashCodeProvider?displayProperty=nameWithType>|Usare invece <xref:System.StringComparer?displayProperty=nameWithType>.|
@@ -87,52 +87,52 @@ Nelle seguenti tabelle sono elencati i tipi dichiarati obsoleti negli assembly d
 |<xref:System.Configuration.Assemblies.AssemblyHash?displayProperty=nameWithType>|La classe <xref:System.Configuration.Assemblies.AssemblyHash> è stata deprecata.|
 |<xref:System.Diagnostics.Contracts.Internal.ContractHelper?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5. Usare invece la classe <xref:System.Runtime.CompilerServices.ContractHelper?displayProperty=nameWithType> nello spazio dei nomi System.Runtime.CompilerServices.|
 |<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|È disponibile un'API alternativa: creare invece l'attributo personalizzato <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.BINDPTR?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.BINDPTR?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.CALLCONV?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.CALLCONV?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.CONNECTDATA?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.CONNECTDATA?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.DESCKIND?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.DESCKIND?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.DISPPARAMS?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.DISPPARAMS?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.ELEMDESC?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.ELEMDESC?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.EXCEPINFO?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.EXCEPINFO?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.FILETIME?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.FILETIME?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.FUNCDESC?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.FUNCDESC?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.FUNCFLAGS?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.FUNCFLAGS?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.FUNCKIND?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.FUNCKIND?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.BINDPTR?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.BINDPTR?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.CALLCONV?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.CALLCONV?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.CONNECTDATA?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.CONNECTDATA?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.DESCKIND?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.DESCKIND?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.DISPPARAMS?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.DISPPARAMS?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.ELEMDESC?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.ELEMDESC?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.EXCEPINFO?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.EXCEPINFO?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.FILETIME?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.FILETIME?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.FUNCDESC?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.FUNCDESC?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.FUNCFLAGS?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.FUNCFLAGS?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.FUNCKIND?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.FUNCKIND?displayProperty=nameWithType>.|
 |<xref:System.Runtime.InteropServices.IDispatchImplAttribute?displayProperty=nameWithType>|Questo attributo è stato deprecato e sarà rimosso nelle versioni future.|
 |<xref:System.Runtime.InteropServices.IDispatchImplType?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.IDispatchImplAttribute?displayProperty=nameWithType> è stato deprecato.|
-|<xref:System.Runtime.InteropServices.IDLDESC?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.IDLDESC?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.IDLFLAG?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.IDLFLAG?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.IMPLTYPEFLAGS?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.INVOKEKIND?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.INVOKEKIND?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.LIBFLAGS?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.LIBFLAGS?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.PARAMDESC?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.PARAMDESC?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.PARAMFLAG?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.PARAMFLAG?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.IDLDESC?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.IDLDESC?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.IDLFLAG?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.IDLFLAG?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.IMPLTYPEFLAGS?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.INVOKEKIND?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.INVOKEKIND?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.LIBFLAGS?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.LIBFLAGS?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.PARAMDESC?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.PARAMDESC?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.PARAMFLAG?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.PARAMFLAG?displayProperty=nameWithType>.|
 |<xref:System.Runtime.InteropServices.SetWin32ContextInIDispatchAttribute?displayProperty=nameWithType>|Questo attributo è stato deprecato. I domini applicazione non rispettano più i limiti del contesto di attivazione nelle chiamate a IDispatch.|
-|<xref:System.Runtime.InteropServices.STATSTG?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.STATSTG?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.SYSKIND?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.SYSKIND?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.TYPEATTR?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.TYPEATTR?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.TYPEDESC?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.TYPEDESC?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.TYPEFLAGS?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.TYPEFLAGS?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.TYPEKIND?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.TYPEKIND?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.TYPELIBATTR?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.TYPELIBATTR?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.UCOMIBindCtx?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.IBindCtx?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.UCOMIConnectionPoint?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.UCOMIConnectionPointContainer?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.UCOMIEnumConnectionPoints?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.UCOMIEnumConnections?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.IEnumConnections?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.UCOMIEnumMoniker?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.IEnumMoniker?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.UCOMIEnumString?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.IEnumString?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.UCOMIEnumVARIANT?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.UCOMIMoniker?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.IMoniker?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.UCOMIPersistFile?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.IPersistFile?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.UCOMIRunningObjectTable?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.IRunningObjectTable?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.UCOMIStream?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.IStream?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.UCOMITypeComp?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.ITypeComp?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.UCOMITypeInfo?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.UCOMITypeLib?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.ITypeLib?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.VARDESC?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.VARDESC?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.STATSTG?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.STATSTG?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.SYSKIND?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.SYSKIND?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.TYPEATTR?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.TYPEATTR?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.TYPEDESC?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.TYPEDESC?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.TYPEFLAGS?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.TYPEFLAGS?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.TYPEKIND?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.TYPEKIND?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.TYPELIBATTR?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.TYPELIBATTR?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.UCOMIBindCtx?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.IBindCtx?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.UCOMIConnectionPoint?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.UCOMIConnectionPointContainer?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.UCOMIEnumConnectionPoints?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.UCOMIEnumConnections?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.IEnumConnections?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.UCOMIEnumMoniker?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.IEnumMoniker?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.UCOMIEnumString?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.IEnumString?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.UCOMIEnumVARIANT?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.UCOMIMoniker?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.IMoniker?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.UCOMIPersistFile?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.IPersistFile?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.UCOMIRunningObjectTable?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.IRunningObjectTable?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.UCOMIStream?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.IStream?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.UCOMITypeComp?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.ITypeComp?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.UCOMITypeInfo?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.UCOMITypeLib?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.ITypeLib?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.VARDESC?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.VARDESC?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=nameWithType>|Usare invece <xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=nameWithType>.|
 |<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalScope> viene usato solo per la compatibilità con la trasparenza di .NET Framework 2.0.|
 |<xref:System.Security.SecurityTreatAsSafeAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityTreatAsSafeAttribute> viene usato solo per la compatibilità con la trasparenza di .NET Framework 2.0. In alternativa, usare <xref:System.Security.SecuritySafeCriticalAttribute?displayProperty=nameWithType>.|
 |<xref:System.Security.Policy.FirstMatchCodeGroup?displayProperty=nameWithType>|Questo tipo è obsoleto e sarà rimosso nelle versioni future di .NET Framework.|
@@ -145,7 +145,7 @@ Nelle seguenti tabelle sono elencati i tipi dichiarati obsoleti negli assembly d
 
 ### <a name="assembly-systemcoredll"></a>Assembly: System.Core.dll
 
-|Tipo di|Message|
+|Type|Message|
 |----------|-------------|
 |<xref:System.Runtime.CompilerServices.ExecutionScope?displayProperty=nameWithType>|L'utilizzo di questo tipo genera un errore del compilatore.<br /><br /> Non usare questo tipo.|
 
@@ -155,7 +155,7 @@ Nelle seguenti tabelle sono elencati i tipi dichiarati obsoleti negli assembly d
 
 ### <a name="assembly-systemdatadll"></a>Assembly: System.Data.dll
 
-|Tipo di|Message|
+|Type|Message|
 |----------|-------------|
 |<xref:System.Data.DataSysDescriptionAttribute?displayProperty=nameWithType>|<xref:System.Data.DataSysDescriptionAttribute> è stato deprecato.|
 |<xref:System.Data.PropertyAttributes?displayProperty=nameWithType>|<xref:System.Data.PropertyAttributes> è stato deprecato.|
@@ -168,7 +168,7 @@ Nelle seguenti tabelle sono elencati i tipi dichiarati obsoleti negli assembly d
 
 ### <a name="assembly-systemdataoracleclientdll"></a>Assembly: System.Data.OracleClient.dll
 
-|Tipo di|Message|
+|Type|Message|
 |----------|-------------|
 |<xref:System.Data.OracleClient.OracleClientFactory?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleClientFactory> è stato deprecato.|
 |<xref:System.Data.OracleClient.OracleCommand?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleCommand> è stato deprecato.|
@@ -185,9 +185,9 @@ Nelle seguenti tabelle sono elencati i tipi dichiarati obsoleti negli assembly d
 
 ### <a name="assembly-systemdesigndll"></a>Assembly: System.Design.dll
 
-|Tipo di|Message|
+|Type|Message|
 |----------|-------------|
-|<xref:System.ComponentModel.Design.LocalizationExtenderProvider?displayProperty=nameWithType>|Questa classe è stata deprecata. In alternativa, utilizzare <xref:System.ComponentModel.Design.Serialization.CodeDomLocalizationProvider?displayProperty=nameWithType>.|
+|<xref:System.ComponentModel.Design.LocalizationExtenderProvider?displayProperty=nameWithType>|Questa classe è stata deprecata. Usare invece <xref:System.ComponentModel.Design.Serialization.CodeDomLocalizationProvider?displayProperty=nameWithType>.|
 |<xref:System.Web.UI.Design.DataBindingCollectionConverter?displayProperty=nameWithType>|Non è consigliabile usare questo tipo in quanto la modifica dei DataBindings viene avviata tramite un oggetto <xref:System.ComponentModel.Design.DesignerActionList?displayProperty=nameWithType> anziché la griglia delle proprietà.|
 |<xref:System.Web.UI.Design.DataBindingCollectionEditor?displayProperty=nameWithType>|Non è consigliabile usare questo tipo in quanto la modifica dei DataBindings viene avviata tramite un oggetto <xref:System.ComponentModel.Design.DesignerActionList?displayProperty=nameWithType> anziché la griglia delle proprietà.|
 |<xref:System.Web.UI.Design.IControlDesignerBehavior?displayProperty=nameWithType>|L'alternativa consigliata è <xref:System.Web.UI.Design.IControlDesignerTag?displayProperty=nameWithType> e <xref:System.Web.UI.Design.IControlDesignerView?displayProperty=nameWithType>.|
@@ -208,15 +208,15 @@ Nelle seguenti tabelle sono elencati i tipi dichiarati obsoleti negli assembly d
 
 ### <a name="assembly-systemdll"></a>Assembly: System.dll
 
-|Tipo di|Message|
+|Type|Message|
 |----------|-------------|
 |<xref:System.ComponentModel.IComNativeDescriptorHandler?displayProperty=nameWithType>|Questa interfaccia è stata deprecata. Aggiungere un oggetto <xref:System.ComponentModel.TypeDescriptionProvider?displayProperty=nameWithType> per gestire la proprietà <xref:System.ComponentModel.TypeDescriptor.ComObjectType%2A?displayProperty=nameWithType> del tipo.|
 |<xref:System.ComponentModel.RecommendedAsConfigurableAttribute?displayProperty=nameWithType>|In alternativa, usare <xref:System.ComponentModel.SettingsBindableAttribute?displayProperty=nameWithType> per usare il nuovo modello delle impostazioni.|
-|<xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute?displayProperty=nameWithType>|Questo attributo è stato deprecato. In alternativa, utilizzare <xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute?displayProperty=nameWithType>.|
+|<xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute?displayProperty=nameWithType>|Questo attributo è stato deprecato. Usare invece <xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute?displayProperty=nameWithType>.|
 |<xref:System.Diagnostics.DiagnosticsConfigurationHandler?displayProperty=nameWithType>|Questa classe è stata deprecata.|
 |<xref:System.Diagnostics.PerformanceCounterManager?displayProperty=nameWithType>|Questa classe è stata deprecata. In alternativa, usare i contatori di prestazioni tramite la classe <xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType>.|
 |<xref:System.Net.GlobalProxySelection?displayProperty=nameWithType>|Questa classe è stata deprecata. Usare in alternativa <xref:System.Net.WebRequest.DefaultWebProxy%2A?displayProperty=nameWithType> per l'accesso e l'impostazione del proxy globale predefinito. Usare "null" anziché <xref:System.Net.GlobalProxySelection.GetEmptyWebProxy%2A?displayProperty=nameWithType>.|
-|<xref:System.Net.Sockets.SocketClientAccessPolicyProtocol?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> L'utilizzo di questo tipo genera un errore del compilatore.<br /><br /> Questa API supporta l'infrastruttura .NET Framework e non deve essere utilizzata direttamente dal codice.|
+|<xref:System.Net.Sockets.SocketClientAccessPolicyProtocol?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> L'utilizzo di questo tipo genera un errore del compilatore.<br /><br /> Questa API supporta l'infrastruttura .NET Framework e non deve essere usata direttamente dal codice.|
 
 [Torna all'inizio](#introduction)
 
@@ -224,7 +224,7 @@ Nelle seguenti tabelle sono elencati i tipi dichiarati obsoleti negli assembly d
 
 ### <a name="assembly-systementerpriseservicesdll"></a>Assembly: System.EnterpriseServices.dll
 
-|Tipo di|Message|
+|Type|Message|
 |----------|-------------|
 |<xref:System.EnterpriseServices.RegistrationHelperTx?displayProperty=nameWithType>|La classe <xref:System.EnterpriseServices.RegistrationHelperTx> è stata deprecata.|
 
@@ -234,17 +234,17 @@ Nelle seguenti tabelle sono elencati i tipi dichiarati obsoleti negli assembly d
 
 ### <a name="assembly-systemnetdll"></a>Assembly: System.Net.dll
 
-|Tipo di|Message|
+|Type|Message|
 |----------|-------------|
-|<xref:System.Net.INetworkProgress?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> L'utilizzo di questo tipo genera un errore del compilatore.<br /><br /> Questa API supporta l'infrastruttura .NET Framework e non deve essere utilizzata direttamente dal codice.|
-|<xref:System.Net.IUnsafeWebRequestCreate?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> L'utilizzo di questo tipo genera un errore del compilatore.<br /><br /> Questa API supporta l'infrastruttura .NET Framework e non deve essere utilizzata direttamente dal codice.|
-|<xref:System.Net.NetworkProgressChangedEventArgs?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> L'utilizzo di questo tipo genera un errore del compilatore.<br /><br /> Questa API supporta l'infrastruttura .NET Framework e non deve essere utilizzata direttamente dal codice.|
-|<xref:System.Net.UiSynchronizationContext?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> L'utilizzo di questo tipo genera un errore del compilatore.<br /><br /> Questa API supporta l'infrastruttura .NET Framework e non deve essere utilizzata direttamente dal codice.|
-|<xref:System.Net.Sockets.HttpPolicyDownloaderProtocol?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> L'utilizzo di questo tipo genera un errore del compilatore.<br /><br /> Questa API supporta l'infrastruttura .NET Framework e non deve essere utilizzata direttamente dal codice.|
-|<xref:System.Net.Sockets.SecurityCriticalAction?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> L'utilizzo di questo tipo genera un errore del compilatore.<br /><br /> Questa API supporta l'infrastruttura .NET Framework e non deve essere utilizzata direttamente dal codice.|
-|<xref:System.Net.Sockets.SocketPolicy?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> L'utilizzo di questo tipo genera un errore del compilatore.<br /><br /> Questa API supporta l'infrastruttura .NET Framework e non deve essere utilizzata direttamente dal codice.|
-|<xref:System.Net.Sockets.UdpAnySourceMulticastClient?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> L'utilizzo di questo tipo genera un errore del compilatore.<br /><br /> Questa API supporta l'infrastruttura .NET Framework e non deve essere utilizzata direttamente dal codice.|
-|<xref:System.Net.Sockets.UdpSingleSourceMulticastClient?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> L'utilizzo di questo tipo genera un errore del compilatore.<br /><br /> Questa API supporta l'infrastruttura .NET Framework e non deve essere utilizzata direttamente dal codice.|
+|<xref:System.Net.INetworkProgress?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> L'utilizzo di questo tipo genera un errore del compilatore.<br /><br /> Questa API supporta l'infrastruttura .NET Framework e non deve essere usata direttamente dal codice.|
+|<xref:System.Net.IUnsafeWebRequestCreate?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> L'utilizzo di questo tipo genera un errore del compilatore.<br /><br /> Questa API supporta l'infrastruttura .NET Framework e non deve essere usata direttamente dal codice.|
+|<xref:System.Net.NetworkProgressChangedEventArgs?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> L'utilizzo di questo tipo genera un errore del compilatore.<br /><br /> Questa API supporta l'infrastruttura .NET Framework e non deve essere usata direttamente dal codice.|
+|<xref:System.Net.UiSynchronizationContext?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> L'utilizzo di questo tipo genera un errore del compilatore.<br /><br /> Questa API supporta l'infrastruttura .NET Framework e non deve essere usata direttamente dal codice.|
+|<xref:System.Net.Sockets.HttpPolicyDownloaderProtocol?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> L'utilizzo di questo tipo genera un errore del compilatore.<br /><br /> Questa API supporta l'infrastruttura .NET Framework e non deve essere usata direttamente dal codice.|
+|<xref:System.Net.Sockets.SecurityCriticalAction?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> L'utilizzo di questo tipo genera un errore del compilatore.<br /><br /> Questa API supporta l'infrastruttura .NET Framework e non deve essere usata direttamente dal codice.|
+|<xref:System.Net.Sockets.SocketPolicy?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> L'utilizzo di questo tipo genera un errore del compilatore.<br /><br /> Questa API supporta l'infrastruttura .NET Framework e non deve essere usata direttamente dal codice.|
+|<xref:System.Net.Sockets.UdpAnySourceMulticastClient?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> L'utilizzo di questo tipo genera un errore del compilatore.<br /><br /> Questa API supporta l'infrastruttura .NET Framework e non deve essere usata direttamente dal codice.|
+|<xref:System.Net.Sockets.UdpSingleSourceMulticastClient?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> L'utilizzo di questo tipo genera un errore del compilatore.<br /><br /> Questa API supporta l'infrastruttura .NET Framework e non deve essere usata direttamente dal codice.|
 
 [Torna all'inizio](#introduction)
 
@@ -252,7 +252,7 @@ Nelle seguenti tabelle sono elencati i tipi dichiarati obsoleti negli assembly d
 
 ### <a name="assembly-systemservicemodeldll"></a>Assembly: System.ServiceModel.dll
 
-|Tipo di|Message|
+|Type|Message|
 |----------|-------------|
 |<xref:System.ServiceModel.NetPeerTcpBinding?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> La funzionalità del canale peer è obsoleta e verrà rimossa in futuro.|
 |<xref:System.ServiceModel.Channels.HttpCookieContainerBindingElement?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> Questo tipo è obsoleto. Per abilitare l'oggetto <xref:System.Net.CookieContainer> HTTP, usare la proprietà `AllowCookies` nell'associazione HTTP o in <xref:System.ServiceModel.Channels.HttpTransportBindingElement>.|
@@ -269,20 +269,20 @@ Nelle seguenti tabelle sono elencati i tipi dichiarati obsoleti negli assembly d
 
 ### <a name="assembly-systemwebdll"></a>Assembly: System.Web.dll
 
-|Tipo di|Message|
+|Type|Message|
 |----------|-------------|
-|<xref:System.Web.Configuration.PassportAuthentication?displayProperty=nameWithType>|Questo tipo è obsoleto. Il prodotto di autenticazione Passport non è più supportato ed è stato sostituito dall'[account Microsoft](https://account.microsoft.com/account/Account?destrt=home-index)|
+|<xref:System.Web.Configuration.PassportAuthentication?displayProperty=nameWithType>|Questo tipo è obsoleto. Il prodotto di autenticazione Passport non è più supportato ed è stato sostituito [dall'account Microsoft](https://account.microsoft.com/account/Account?destrt=home-index)|
 |<xref:System.Web.Mail.MailAttachment?displayProperty=nameWithType>|L'alternativa consigliata è <xref:System.Net.Mail.Attachment?displayProperty=nameWithType>.|
 |<xref:System.Web.Mail.MailEncoding?displayProperty=nameWithType>|L'alternativa consigliata è <xref:System.Net.Mime.TransferEncoding?displayProperty=nameWithType>.|
 |<xref:System.Web.Mail.MailFormat?displayProperty=nameWithType>|L'alternativa consigliata è <xref:System.Net.Mail.MailMessage.IsBodyHtml%2A?displayProperty=nameWithType>.|
 |<xref:System.Web.Mail.MailMessage?displayProperty=nameWithType>|L'alternativa consigliata è <xref:System.Net.Mail.MailMessage?displayProperty=nameWithType>.|
 |<xref:System.Web.Mail.MailPriority?displayProperty=nameWithType>|L'alternativa consigliata è <xref:System.Net.Mail.MailPriority?displayProperty=nameWithType>.|
 |<xref:System.Web.Mail.SmtpMail?displayProperty=nameWithType>|L'alternativa consigliata è <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>.|
-|<xref:System.Web.Security.PassportAuthenticationEventArgs?displayProperty=nameWithType>|Questo tipo è obsoleto. Il prodotto di autenticazione Passport non è più supportato ed è stato sostituito dall'[account Microsoft](https://account.microsoft.com/account/Account?destrt=home-index)|
-|<xref:System.Web.Security.PassportAuthenticationEventHandler?displayProperty=nameWithType>|Questo tipo è obsoleto. Il prodotto di autenticazione Passport non è più supportato ed è stato sostituito dall'[account Microsoft](https://account.microsoft.com/account/Account?destrt=home-index)|
-|<xref:System.Web.Security.PassportAuthenticationModule?displayProperty=nameWithType>|Questo tipo è obsoleto. Il prodotto di autenticazione Passport non è più supportato ed è stato sostituito dall'[account Microsoft](https://account.microsoft.com/account/Account?destrt=home-index)|
-|<xref:System.Web.Security.PassportIdentity?displayProperty=nameWithType>|Questo tipo è obsoleto. Il prodotto di autenticazione Passport non è più supportato ed è stato sostituito dall'[account Microsoft](https://account.microsoft.com/account/Account?destrt=home-index)|
-|<xref:System.Web.Security.PassportPrincipal?displayProperty=nameWithType>|Questo tipo è obsoleto. Il prodotto di autenticazione Passport non è più supportato ed è stato sostituito dall'[account Microsoft](https://account.microsoft.com/account/Account?destrt=home-index)|
+|<xref:System.Web.Security.PassportAuthenticationEventArgs?displayProperty=nameWithType>|Questo tipo è obsoleto. Il prodotto di autenticazione Passport non è più supportato ed è stato sostituito [dall'account Microsoft](https://account.microsoft.com/account/Account?destrt=home-index)|
+|<xref:System.Web.Security.PassportAuthenticationEventHandler?displayProperty=nameWithType>|Questo tipo è obsoleto. Il prodotto di autenticazione Passport non è più supportato ed è stato sostituito [dall'account Microsoft](https://account.microsoft.com/account/Account?destrt=home-index)|
+|<xref:System.Web.Security.PassportAuthenticationModule?displayProperty=nameWithType>|Questo tipo è obsoleto. Il prodotto di autenticazione Passport non è più supportato ed è stato sostituito [dall'account Microsoft](https://account.microsoft.com/account/Account?destrt=home-index)|
+|<xref:System.Web.Security.PassportIdentity?displayProperty=nameWithType>|Questo tipo è obsoleto. Il prodotto di autenticazione Passport non è più supportato ed è stato sostituito [dall'account Microsoft](https://account.microsoft.com/account/Account?destrt=home-index)|
+|<xref:System.Web.Security.PassportPrincipal?displayProperty=nameWithType>|Questo tipo è obsoleto. Il prodotto di autenticazione Passport non è più supportato ed è stato sostituito [dall'account Microsoft](https://account.microsoft.com/account/Account?destrt=home-index)|
 |<xref:System.Web.UI.ObjectConverter?displayProperty=nameWithType>|L'alternativa consigliata è <xref:System.Convert?displayProperty=nameWithType> e <xref:System.String.Format%2A?displayProperty=nameWithType>.|
 
 [Torna all'inizio](#introduction)
@@ -291,7 +291,7 @@ Nelle seguenti tabelle sono elencati i tipi dichiarati obsoleti negli assembly d
 
 ### <a name="assembly-systemwebmobiledll"></a>Assembly: System.Web.Mobile.dll
 
-|Tipo di|Message|
+|Type|Message|
 |----------|-------------|
 |<xref:System.Web.Mobile.CookielessData?displayProperty=nameWithType>|L'assembly System.Web.Mobile.dll è stato deprecato e non deve più essere usato. Per informazioni su come sviluppare applicazioni ASP.NET per dispositivi mobili, vedere la pagina su [ASP.NET per dispositivi mobili](/aspnet/mobile/overview).|
 |<xref:System.Web.Mobile.DeviceFilterElement?displayProperty=nameWithType>|L'assembly System.Web.Mobile.dll è stato deprecato e non deve più essere usato. Per informazioni su come sviluppare applicazioni ASP.NET per dispositivi mobili, vedere la pagina su [ASP.NET per dispositivi mobili](/aspnet/mobile/overview).|
@@ -492,7 +492,7 @@ Nelle seguenti tabelle sono elencati i tipi dichiarati obsoleti negli assembly d
 
 ### <a name="assembly-systemworkflowactivitiesdll"></a>Assembly: System.Workflow.Activities.dll
 
-|Tipo di|Message|
+|Type|Message|
 |----------|-------------|
 |Tutti i tipi nello spazio dei nomi <xref:System.Workflow.Activities?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>\*.|
 |<xref:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>\*.|
@@ -506,7 +506,7 @@ Nelle seguenti tabelle sono elencati i tipi dichiarati obsoleti negli assembly d
 
 ### <a name="assembly-systemworkflowcomponentmodeldll"></a>Assembly: System.Workflow.ComponentModel.dll
 
-|Tipo di|Message|
+|Type|Message|
 |----------|-------------|
 |Tutti i tipi nello spazio dei nomi <xref:System.Workflow.ComponentModel> fatta eccezione per <xref:System.Workflow.ComponentModel.GetValueOverride?displayProperty=nameWithType> e <xref:System.Workflow.ComponentModel.SetValueOverride?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>\*.|
 |Tutti i tipi nello spazio dei nomi <xref:System.Workflow.ComponentModel.Compiler> fatta eccezione per <xref:System.Workflow.ComponentModel.Compiler.ValidationError?displayProperty=nameWithType> e <xref:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>\*.|
@@ -525,7 +525,7 @@ Nelle seguenti tabelle sono elencati i tipi dichiarati obsoleti negli assembly d
 
 ### <a name="assembly-systemworkflowruntimedll"></a>Assembly: System.Workflow.Runtime.dll
 
-|Tipo di|Message|
+|Type|Message|
 |----------|-------------|
 |<xref:System.Activities.Statements.Interop?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br />I tipi di Workflow Foundation 3.0 sono stati deprecati. Usare invece i nuovi tipi Workflow 4.0 da <xref:System.Activities>\*.|
 |<xref:System.Activities.Tracking.InteropTrackingRecord?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br />I tipi di Workflow Foundation 3.0 sono stati deprecati. Usare invece i nuovi tipi Workflow 4.0 da <xref:System.Activities>\*.|
@@ -541,7 +541,7 @@ Nelle seguenti tabelle sono elencati i tipi dichiarati obsoleti negli assembly d
 
 ### <a name="assembly-systemworkflowservicesdll"></a>Assembly: System.WorkflowServices.dll
 
-|Tipo di|Message|
+|Type|Message|
 |----------|-------------|
 |<xref:System.ServiceModel.WorkflowServiceHost?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>\*.|
 |<xref:System.ServiceModel.Activation.WorkflowServiceHostFactory?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>\*.|
@@ -571,7 +571,7 @@ Nelle seguenti tabelle sono elencati i tipi dichiarati obsoleti negli assembly d
 
 ### <a name="assembly-systemxamldll"></a>Assembly: System.Xaml.dll
 
-|Tipo di|Message|
+|Type|Message|
 |----------|-------------|
 |<xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute?displayProperty=nameWithType>|Non viene usato dal parser XAML. Considerare l'utilizzo di <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=nameWithType>.|
 
@@ -581,12 +581,12 @@ Nelle seguenti tabelle sono elencati i tipi dichiarati obsoleti negli assembly d
 
 ### <a name="assembly-systemxmldll"></a>Assembly: System.Xml.dll
 
-|Tipo di|Message|
+|Type|Message|
 |----------|-------------|
-|<xref:System.Xml.IApplicationResourceStreamResolver?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> L'utilizzo di questo tipo genera un errore del compilatore.<br /><br /> Questa API supporta l'infrastruttura .NET Framework e non deve essere utilizzata direttamente dal codice.|
+|<xref:System.Xml.IApplicationResourceStreamResolver?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> L'utilizzo di questo tipo genera un errore del compilatore.<br /><br /> Questa API supporta l'infrastruttura .NET Framework e non deve essere usata direttamente dal codice.|
 |<xref:System.Xml.Schema.XmlSchemaCollection?displayProperty=nameWithType>|Usare <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> per la compilazione e la convalida dello schema.|
 |<xref:System.Xml.XmlValidatingReader?displayProperty=nameWithType>|Usare invece l'oggetto <xref:System.Xml.XmlReader?displayProperty=nameWithType> creato dal metodo <xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType> mediante l'oggetto <xref:System.Xml.XmlReaderSettings?displayProperty=nameWithType> appropriato.|
-|<xref:System.Xml.XmlXapResolver?displayProperty=nameWithType>|L'utilizzo di questo tipo genera un errore del compilatore. Questa API supporta l'infrastruttura .NET Framework e non deve essere utilizzata direttamente dal codice.|
+|<xref:System.Xml.XmlXapResolver?displayProperty=nameWithType>|L'utilizzo di questo tipo genera un errore del compilatore. Questa API supporta l'infrastruttura .NET Framework e non deve essere usata direttamente dal codice.|
 |<xref:System.Xml.Xsl.XslTransform?displayProperty=nameWithType>|Questa classe è stata deprecata. Usare invece <xref:System.Xml.Xsl.XslCompiledTransform?displayProperty=nameWithType>.|
 
 [Torna all'inizio](#introduction)
@@ -595,7 +595,7 @@ Nelle seguenti tabelle sono elencati i tipi dichiarati obsoleti negli assembly d
 
 ### <a name="assembly-windowsbasedll"></a>Assembly: WindowsBase.dll
 
-|Tipo di|Message|
+|Type|Message|
 |----------|-------------|
 |<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType>|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType> è stato deprecato. Questa interfaccia non è più usata.|
 
@@ -619,7 +619,7 @@ Gli assembly IEHost.dll e IEExec.dll sono stati rimossi da .NET Framework. Tutti
 
 ### <a name="assembly-microsoftbuildenginedll"></a>Assembly: Microsoft.Build.Engine.dll
 
-|Tipo di|Message|
+|Type|Message|
 |----------|-------------|
 |<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|Questa classe è stata deprecata. Usare invece <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType> dall'assembly *Microsoft.Build*.|
 |<xref:Microsoft.Build.BuildEngine.Project?displayProperty=nameWithType>|Questa classe è stata deprecata. Usare invece <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType> dall'assembly *Microsoft.Build*.|
@@ -630,7 +630,7 @@ Gli assembly IEHost.dll e IEExec.dll sono stati rimossi da .NET Framework. Tutti
 
 ### <a name="assembly-microsoftjscriptdll"></a>Assembly: Microsoft.JScript.dll
 
-|Tipo di|Message|
+|Type|Message|
 |----------|-------------|
 |<xref:Microsoft.JScript.Vsa.BaseVsaEngine?displayProperty=nameWithType>|Questo tipo è stato deprecato in Visual Studio 2005. Non sono disponibili sostituzioni per questa funzionalità. Per altre informazioni, vedere la documentazione relativa a <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType>.|
 |<xref:Microsoft.JScript.Vsa.BaseVsaSite?displayProperty=nameWithType>|Questo tipo è stato deprecato in Visual Studio 2005. Non sono disponibili sostituzioni per questa funzionalità. Per altre informazioni, vedere la documentazione relativa a <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType>.|
@@ -659,7 +659,7 @@ Gli assembly IEHost.dll e IEExec.dll sono stati rimossi da .NET Framework. Tutti
 
 Per informazioni sulla migrazione da Visual Basic 6, vedere [Visual Basic 6.0 Resource Center](https://docs.microsoft.com/previous-versions/visualstudio/visual-basic-6/visual-basic-6.0-documentation).
 
-|Tipo di|Message|
+|Type|Message|
 |----------|-------------|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray?displayProperty=nameWithType>|Questo membro è obsoleto.|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray?displayProperty=nameWithType>|Questo membro è obsoleto.|
@@ -735,7 +735,7 @@ Per informazioni sulla migrazione da Visual Basic 6, vedere [Visual Basic 6.0 Re
 
 ### <a name="assembly-microsoftvisualbasiccompatibilitydatadll"></a>Assembly: Microsoft.VisualBasic.Compatibility.Data.dll
 
-|Tipo di|Message|
+|Type|Message|
 |----------|-------------|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.ADODC?displayProperty=nameWithType>|Questo membro è obsoleto.|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.ADODC.BOFActionEnum?displayProperty=nameWithType>|Questo membro è obsoleto.|
@@ -793,7 +793,7 @@ Per informazioni sulla migrazione da Visual Basic 6, vedere [Visual Basic 6.0 Re
 
 ### <a name="assembly-microsoftvisualcdll"></a>Assembly: Microsoft.VisualC.dll
 
-|Tipo di|Message|
+|Type|Message|
 |----------|-------------|
 |<xref:Microsoft.VisualC.DebugInfoInPDBAttribute?displayProperty=nameWithType>|Microsoft.VisualC.dll è un assembly obsoleto e viene mantenuto ai soli fini della compatibilità con le versioni precedenti.|
 |<xref:Microsoft.VisualC.DecoratedNameAttribute?displayProperty=nameWithType>|Microsoft.VisualC.dll è un assembly obsoleto e viene mantenuto ai soli fini della compatibilità con le versioni precedenti.|

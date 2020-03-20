@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 33f97d13-3022-43da-8b18-cdb5c88df9c2
 ms.openlocfilehash: 45225d73ac60564d3e22c73270faab6b4e04d697
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457832"
 ---
 # <a name="mitigation-tls-protocols"></a>Mitigazione: Protocolli TLS
@@ -22,7 +22,7 @@ A partire da .NET Framework 4.6, le classi <xref:System.Net.ServicePointManager?
   
 - Qualsiasi app sul lato server che non può essere aggiornata per supportare Tls1.0, Tls1.1 o Tls 1.2.  
   
-## <a name="mitigation"></a>Attenuazione  
+## <a name="mitigation"></a>Strategia di riduzione del rischio  
  L'attenuazione consigliata consiste nell'aggiornare l'app sul lato server a Tls1.0, Tls1.1 o Tls 1.2. Se ciò non è fattibile o se le app client non funzionano, è possibile usare la classe <xref:System.AppContext> per rifiutare esplicitamente questa funzionalità in uno dei due modi seguenti:  
   
 - A livello di codice, usando un frammento di codice simile al seguente:  
@@ -32,7 +32,7 @@ A partire da .NET Framework 4.6, le classi <xref:System.Net.ServicePointManager?
   
      Poiché l'oggetto <xref:System.Net.ServicePointManager> viene inizializzato una sola volta, la definizione di queste impostazioni di compatibilità deve essere la prima attività eseguita dall'applicazione.  
   
-- Aggiungendo la riga seguente alla sezione [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) del file app.config:  
+- Aggiungendo la riga seguente [ \<](../configure-apps/file-schema/runtime/runtime-element.md) alla sezione runtime>del file app.config:  
   
     ```xml  
     <AppContextSwitchOverrides value="Switch.System.Net.DontEnableSchUseStrongCrypto=true"/>  
@@ -42,4 +42,4 @@ A partire da .NET Framework 4.6, le classi <xref:System.Net.ServicePointManager?
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Compatibilità delle applicazioni](application-compatibility.md)
+- [Compatibilità tra le versioni](application-compatibility.md)

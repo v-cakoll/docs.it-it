@@ -9,10 +9,10 @@ helpviewer_keywords:
 - retargeting changes
 ms.assetid: 8d575722-4fb6-49a2-8a06-f72d62dc3766
 ms.openlocfilehash: 021d22e90ba39a4d01cf7d64588fab2d724b6640
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457726"
 ---
 # <a name="mitigation-ziparchiveentryfullname-path-separator"></a>Mitigazione: Separatore di percorsi ZipArchiveEntry.FullName
@@ -25,8 +25,8 @@ A partire dalle applicazioni che hanno come destinazione .NET Framework 4.6.1, i
   
  L'impatto di questa modifica sui file ZIP che vengono decompressi nel sistema operativo Windows dalle API nello spazio dei nomi .NET Framework <xref:System.IO> dovrebbe essere minimo, poiché queste API possono gestire facilmente una barra ("/") o una barra rovesciata ("\\") come carattere separatore di percorso.  
   
-## <a name="mitigation"></a>Attenuazione  
- Se questo comportamento è inaccettabile, è possibile scegliere di aggiungere un'impostazione di configurazione per la sezione [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) del file di configurazione dell'applicazione. Di seguito viene illustrato sia la sezione `<runtime>` sia il commutatore di rifiuto.  
+## <a name="mitigation"></a>Strategia di riduzione del rischio  
+ Se questo comportamento è indesiderato, è possibile rifiutare [ \<](../configure-apps/file-schema/runtime/runtime-element.md) esplicitamente aggiungendo un'impostazione di configurazione alla sezione>di runtime del file di configurazione dell'applicazione. Di seguito viene illustrato sia la sezione `<runtime>` sia il commutatore di rifiuto.  
   
 ```xml  
 <runtime>  
@@ -34,7 +34,7 @@ A partire dalle applicazioni che hanno come destinazione .NET Framework 4.6.1, i
 </runtime>  
 ```  
   
- Inoltre, le app destinate a versioni precedenti di .NET Framework ma in esecuzione su NET Framework 4.6.1 e versioni successive possono acconsentire esplicitamente a questo comportamento aggiungendo un'impostazione di configurazione alla sezione [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) del file di configurazione dell'applicazione. Di seguito viene illustrato sia la sezione `<runtime>` sia il commutatore di consenso.  
+ Inoltre, le app destinate alle versioni precedenti di .NET Framework ma in esecuzione su .NET Framework 4.6.1 [ \<](../configure-apps/file-schema/runtime/runtime-element.md) e versioni successive possono acconsentire esplicitamente a questo comportamento aggiungendo un'impostazione di configurazione alla sezione>di runtime del file di configurazione dell'applicazione. Di seguito viene illustrato sia la sezione `<runtime>` sia il commutatore di consenso.  
   
 ```xml  
 <runtime>  
@@ -44,5 +44,5 @@ A partire dalle applicazioni che hanno come destinazione .NET Framework 4.6.1, i
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Modifiche di reindirizzamento](retargeting-changes-in-the-net-framework-4-6-1.md)
-- [Compatibilità delle applicazioni](application-compatibility.md)
+- [Reindirizzamento delle modifiche](retargeting-changes-in-the-net-framework-4-6-1.md)
+- [Compatibilità tra le versioni](application-compatibility.md)

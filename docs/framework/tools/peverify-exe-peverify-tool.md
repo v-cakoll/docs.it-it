@@ -11,10 +11,10 @@ helpviewer_keywords:
 - PE files, PEVerify
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 ms.openlocfilehash: 9d5f8c80937c36e975d42d6efb0a83295cb28be9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73104973"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (strumento PEVerify)
@@ -34,27 +34,27 @@ peverify filename [options]
   
 |Argomento|Descrizione|  
 |--------------|-----------------|  
-|*filename*|File eseguibile di tipo PE per il quale controllare il codice MSIL e i metadati.|  
+|*Filename*|File eseguibile di tipo PE per il quale controllare il codice MSIL e i metadati.|  
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
 |**/break=** *maxErrorCount*|Interrompe la verifica dopo un numero di errori pari a *maxErrorCount*.<br /><br /> Questo parametro non è supportato in .NET Framework 2.0 o versione successiva.|  
 |**/clock**|Misura e segnala i seguenti tempi di verifica in millisecondi:<br /><br /> **MD Val. cycle**<br /> Ciclo di convalida dei metadati<br /><br /> **MD Val. pure**<br /> Pure di convalida dei metadati<br /><br /> **IL Ver. cycle**<br /> Ciclo di verifica di MSIL (Microsoft Intermediate Language)<br /><br /> **IL Ver pure**<br /> Pure di verifica MSIL<br /><br /> I tempi **MD Val. cycle** e **IL Ver. cycle** includono il tempo richiesto per l'esecuzione delle procedure di avvio e chiusura necessarie. I tempi **MD Val. pure** e **IL Ver pure** corrispondono al tempo richiesto solo per l'esecuzione della convalida o della verifica.|  
 |**/help**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
-|**/hresult**|Visualizza i codici di errore in formato esadecimale.|  
+|**/hresult (in inglese)**|Visualizza i codici di errore in formato esadecimale.|  
 |**/ignore=** *hex.code* [, *hex.code*]|Ignora i codici di errore specificati.|  
 |**/ignore=@** *responseFile*|Ignora i codici di errore elencati nel file di risposta specificato.|  
 |**/il**|Esegue i controlli di verifica dell'indipendenza dai tipi del codice MSIL per i metodi implementati nell'assembly specificato da *filename*. Vengono restituite descrizioni dettagliate per ogni problema rilevato, a meno che non si specifichi l'opzione **/quiet**.|  
-|**/md**|Esegue controlli di convalida dei metadati sull'assembly specificato da *filename*. Esamina l'intera struttura dei metadati nel file e segnala tutti i problemi di convalida rilevati.|  
+|**/md (informazioni in inglese)**|Esegue controlli di convalida dei metadati sull'assembly specificato da *filename*. Esamina l'intera struttura dei metadati nel file e segnala tutti i problemi di convalida rilevati.|  
 |**/nologo**|Evita la visualizzazione delle informazioni sul copyright e sulla versione del prodotto.|  
 |**/nosymbols**|In .NET Framework versione 2.0 evita la visualizzazione dei numeri di riga per compatibilità con le versioni precedenti.|  
 |**/quiet**|Specifica la modalità non interattiva. Evita la visualizzazione dell'output dei report dei problemi di verifica. Viene comunque indicato se il file è indipendente dai tipi, ma non vengono fornite informazioni sui problemi che impediscono la verifica dell'indipendenza dai tipi.|  
 |`/transparent`|Verifica solo i metodi trasparenti.|  
-|**/unique**|Ignora i codici di errore ripetuti.|  
-|**/verbose**|In .NET Framework versione 2.0 determina la visualizzazione di informazioni aggiuntive nei messaggi di verifica MSIL.|  
+|**/unique (univoco)**|Ignora i codici di errore ripetuti.|  
+|**/verbose (in inglese)**|In .NET Framework versione 2.0 determina la visualizzazione di informazioni aggiuntive nei messaggi di verifica MSIL.|  
 |**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Common Language Runtime si basa sull'esecuzione indipendente dai tipi del codice dell'applicazione per applicare meccanismi di sicurezza e isolamento. In genere il codice di cui non è [verificabile l'indipendenza dai tipi](../../standard/security/key-security-concepts.md#type-safety-and-security) non può essere eseguito, anche se è possibile impostare criteri di sicurezza per consentire l'esecuzione del codice attendibile ma non verificabile.  
   
  Se non sono state specificate né l'opzione **/md** né l'opzione **/il** verranno eseguiti entrambi i tipi di controllo, iniziando dai controlli **/md**. Se non sono presenti errori vengono effettuati i controlli **/il**. Se si specifica sia **/md** sia **/il** i controlli **/il** vengono effettuati anche in presenza di errori nei metadati. Pertanto in assenza di errori nei metadati, **peverify** *filename* è equivalente a **peverify** *filename* **/md** **/il**.  

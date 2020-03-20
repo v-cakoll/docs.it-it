@@ -3,10 +3,10 @@ title: 'Mitigazione: Controllo delle versioni del prodotto'
 ms.date: 03/30/2017
 ms.assetid: 1c4de9d7-9aba-427a-8f38-0ab9bfb8f85e
 ms.openlocfilehash: 64a68d2b79a0a3ccdd806949ffd6cb3760974390
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457816"
 ---
 # <a name="mitigation-product-versioning"></a>Mitigazione: Controllo delle versioni del prodotto
@@ -19,7 +19,7 @@ Di seguito sono illustrate in modo dettagliato le modifiche:
 
 - Il valore della voce `Version` nella chiave `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` è stato modificato in `4.6.`*xxxxx* per .NET Framework 4.6 e versioni intermedie e in `4.7.`*xxxxx* per .NET Framework 4.7. In .NET Framework 4.5, 4.5.1 e 4.5.2, il formato era `4.5.`*xxxxx*.
 
-- Il controllo delle versioni di file e prodotti per i file di .NET Framework è stato modificato dal precedente schema di controllo delle versioni `4.0.30319.x` in `4.6.X.0` per .NET Framework 4.6 e versioni intermedie e in `4.7.X.0` per .NET Framework 4.7 e versioni intermedie. È possibile visualizzare questi nuovi valori scegliendo **Proprietà** dopo aver fatto clic con il pulsante destro del mouse su un file.
+- Il controllo delle versioni di file e prodotti per i file di .NET Framework è stato modificato dal precedente schema di controllo delle versioni `4.0.30319.x` in `4.6.X.0` per .NET Framework 4.6 e versioni intermedie e in `4.7.X.0` per .NET Framework 4.7 e versioni intermedie. È possibile visualizzare questi nuovi valori quando si visualizzano le **proprietà** del file dopo aver fatto clic con il pulsante destro del mouse su un file.
 
 - Gli attributi <xref:System.Reflection.AssemblyFileVersionAttribute> e <xref:System.Reflection.AssemblyInformationalVersionAttribute> per gli assembly gestiti hanno valori <xref:System.Version> nel formato `4.6.X.0` per .NET Framework 4.6 e versioni intermedie e `4.7.X.0` per .NET Framework 4.7.
 
@@ -42,4 +42,4 @@ In generale, le applicazioni dovrebbero dipendere dalle tecniche consigliate per
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Compatibilità delle applicazioni](application-compatibility.md)
+- [Compatibilità tra le versioni](application-compatibility.md)

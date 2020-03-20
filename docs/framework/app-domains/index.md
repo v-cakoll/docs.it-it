@@ -8,10 +8,10 @@ helpviewer_keywords:
 - programming application domains
 ms.assetid: 96d3b8e3-bef8-4da0-9a81-9841e23a94e9
 ms.openlocfilehash: 2c849d27c70971d17bf4359ee7ae1081ee976a5f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73119824"
 ---
 # <a name="programming-with-application-domains-and-assemblies"></a>Programmazione con i domini applicazione e gli assembly
@@ -39,7 +39,7 @@ Descrive come creare gli assembly dinamici.
 [Assembly in .NET](../../standard/assembly/index.md)  
 Viene fornita una panoramica sui concetti di base relativi agli assembly.  
   
-[Domini dell'applicazione](application-domains.md)  
+[Domini applicazione](application-domains.md)  
 Viene fornita una panoramica sui concetti di base relativi ai domini applicazione.  
   
 [Panoramica della reflection](../reflection-and-codedom/reflection.md)  

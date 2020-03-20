@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: cce19d6c9afa5f5ce9bb17b5b5d92f2060a08414
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
-ms.translationtype: HT
+ms.openlocfilehash: 190bca720504535cb54e498ca8da23fbb6634ad4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67804476"
 ---
 ### <a name="currentculture-is-not-preserved-across-wpf-dispatcher-operations"></a>CurrentCulture non viene mantenuto nelle operazioni Dispatcher di WPF
@@ -12,7 +12,6 @@ ms.locfileid: "67804476"
 |---|---|
 |Dettagli|A partire da .NET Framework 4.6, le modifiche apportate a <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name> o <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name> all'interno di un <xref:System.Windows.Threading.Dispatcher?displayProperty=name> vanno perdute al termine dell'operazione del dispatcher. In modo analogo, le modifiche apportate a <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name> o <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name> all'esterno di un'operazione di Dispatcher potrebbero non essere disponibili quando viene eseguita l'operazione. In pratica, ciò significa che le modifiche <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name> e <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name> potrebbero non essere trasferite tra i callback UI di WPF e altro codice in un'applicazione WPF. Questo è dovuto a una modifica in <xref:System.Threading.ExecutionContext?displayProperty=name> in seguito alla quale <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name> e <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name> vengono archiviati nel contesto di esecuzione a partire dalle app destinate a .NET Framework 4.6. Le operazioni del dispatcher WPF archiviano il contesto di esecuzione usato per avviare l'operazione e ripristinano il contesto precedente dopo il completamento dell'operazione. Dato che <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name> e <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name> fanno ora parte di tale contesto, le modifiche di questi elementi all'interno di un'operazione di Dispatcher non vengono mantenute all'esterno dell'operazione.|
 |Suggerimento|Le app interessate da questa modifica possono risolvere il problema archiviando i valori <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name> o <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name> desiderati in un campo e controllando che siano impostati i valori corretti di <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name> e <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name> in tutti i corpi delle operazioni del dispatcher (inclusi i gestori di callback degli eventi dell'interfaccia utente). In alternativa, dato che la modifica di ExecutionContext sottostante questa modifica WPF influisce solo sulle app destinate a .NET Framework 4.6 o versione successiva, è possibile evitare il problema destinando le app a .NET Framework 4.5.2. Anche le app destinate a .NET Framework 4.6 o versioni successive possono evitare il problema impostando la seguente opzione di compatibilità:<pre><code class="lang-csharp">AppContext.SetSwitch(&quot;Switch.System.Globalization.NoAsyncCurrentCulture&quot;, true);&#13;&#10;</code></pre>Il problema è stato risolto da WPF in .NET Framework 4.6.2. È stato risolto anche in .NET Framework 4.6 e 4.6.1 mediante [KB 3139549](https://support.microsoft.com/kb/3139549). Le applicazioni destinate a .NET Framework 4.6 o versioni successive otterranno automaticamente il comportamento corretto nelle applicazioni WPF: le proprietà <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name>/<xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name> vengono mantenute tra operazioni Dispatcher.|
-|Ambito|Secondario|
+|Scope|Minorenne|
 |Versione|4.6|
-|Tipo|Ridestinazione|
-
+|Type|Ridestinazione|

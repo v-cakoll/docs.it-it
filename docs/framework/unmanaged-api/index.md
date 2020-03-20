@@ -8,10 +8,10 @@ helpviewer_keywords:
 - unmanaged API reference [.NET Framework]
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
 ms.openlocfilehash: f7dd78b889129998dee31a22f5dd23325613b8ea
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73092023"
 ---
 # <a name="unmanaged-api-reference"></a>Riferimenti alle API non gestite
@@ -36,10 +36,10 @@ Questa sezione include informazioni sulle API non gestite che possono essere usa
  [Debug](./debugging/index.md)  
  Viene descritta l'API di debug, che consente a un debugger di effettuare il debug del codice in esecuzione nell'ambiente di Common Language Runtime.  
   
- [Archivio dei simboli di diagnostica](./diagnostics/index.md)  
+ [Archivio simboli di diagnostica](./diagnostics/index.md)  
  Viene descritta l'API dell'archivio dei simboli di diagnostica, che consente a un compilatore di generare informazioni relative ai simboli che possono essere usate da un debugger.  
   
- [Fusion](./fusion/index.md)  
+ [Fusione](./fusion/index.md)  
  Viene descritta l'API Fusion, che consente a un host di runtime di accedere alle proprietà delle risorse di un'applicazione per individuare le versioni corrette di tali risorse per l'applicazione.  
   
  [Hosting](./hosting/index.md)  
@@ -51,13 +51,13 @@ Questa sezione include informazioni sulle API non gestite che possono essere usa
  [Profilatura](./profiling/index.md)  
  Viene descritta l'API di profilatura, che consente a un profiler di monitorare l'esecuzione di un programma da parte di CLR.  
   
- [Nome sicuro](./strong-naming/index.md)  
+ [Denominazione forte](./strong-naming/index.md)  
  Viene descritta l'API di denominazione sicura, che consente a un client di amministrare la firma con nome sicuro per gli assembly.  
 
- [WMI e contatori delle prestazioni](wmi/index.md)  
+ [Contatori delle prestazioni e WMI](wmi/index.md)  
  Descrive le API che eseguono il wrapping di chiamate in librerie di Strumentazione gestione Windows (WMI).
   
- [Funzioni di supporto Tlbexp](./tlbexp/index.md)  
+ [Funzioni helper Tlbexp](./tlbexp/index.md)  
  Vengono descritte le due funzioni di supporto e un'interfaccia usata dall'utilità di esportazione della libreria dei tipi (Tlbexp.exe) durante il processo di conversione da assembly a libreria dei tipi.  
   
 ## <a name="related-sections"></a>Sezioni correlate  

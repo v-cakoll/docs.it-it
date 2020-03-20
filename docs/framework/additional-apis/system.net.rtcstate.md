@@ -11,16 +11,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 6f0b8902-f31c-4ab9-a8c9-de43228995ec
-ms.openlocfilehash: 1a88adeefe0095bf514d36cadc9b44efd8ab61ee
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 861bf2fc0dfef8f836e98e45ba22c7e2e24e19f4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77214876"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155778"
 ---
 # <a name="rtcstate-class"></a>Classe RtcState
 
-La classe `RtcState` rappresenta i dati di stato per una richiesta di comunicazione in tempo reale (RTC).
+La `RtcState` classe rappresenta i dati di stato per una richiesta di comunicazione in tempo reale (RTC).
 
 ## <a name="syntax"></a>Sintassi
   
@@ -29,14 +29,14 @@ internal class RtcState
 ```
 
 > [!WARNING]
-> Il `RtcState` classe è interno e non deve essere usato direttamente nel codice.
-> 
-> Microsoft non supporta l'utilizzo di questa classe in un'applicazione di produzione in qualsiasi circostanza.
+> La `RtcState` classe è interna e non deve essere utilizzata direttamente nel codice.
+>
+> Microsoft non supporta in nessun caso l'utilizzo di questa classe in un'applicazione di produzione.
 
 ## <a name="requirements"></a>Requisiti
 
-**Spazio dei nomi:** <xref:System.Net>
+**Spazio dei nomi:**<xref:System.Net>
 
-**Assembly:** System (in System. dll)
+**Assemblaggio:** Sistema (in System.dll)
 
-**Versioni .NET Framework:** Disponibile a partire da 4,5.
+Versioni di **.NET Framework:** Disponibile dalla 4.5.

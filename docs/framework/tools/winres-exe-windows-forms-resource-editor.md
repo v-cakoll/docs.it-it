@@ -12,10 +12,10 @@ helpviewer_keywords:
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 ms.openlocfilehash: 2cfb2d9874b34eef78fe462e0270fd70307a9f61
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75715700"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Editor per la localizzazione di risorse Windows)
@@ -41,7 +41,7 @@ winres /?
 |------------|-----------------|
 |**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Lo stato degli elementi dell'interfaccia utente di un form in un progetto Windows Form viene in genere archiviato nei file di risorse, che possono essere file basati su XML con estensione .resx oppure le corrispondenti versioni binarie compilate con estensione .resources. Winres.exe fornisce funzionalità di modifica limitate per questi tipi di file all'esterno dell'ambiente di progettazione Visual Studio. In particolare, consente i seguenti tipi di operazioni di modifica:
 
@@ -108,7 +108,7 @@ Si consiglia di usare la versione di Winres.exe rilasciata con la versione di .N
 
 2. Per aprire il file di risorse predefinito relativo a un modulo da localizzare, scegliere il comando **Apri** dal menu **File** e selezionare il file desiderato.
 
-     oppure
+     -oppure-
 
      All'avvio di Winres.exe, specificare il file da aprire dalla riga di comando.
 
