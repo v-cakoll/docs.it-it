@@ -6,21 +6,21 @@ helpviewer_keywords:
 - MEF, Composition Analysis Tool
 - Mefx [MEF], Composition Analysis Tool
 ms.assetid: c48a7f93-83bb-4a06-aea0-d8e7bd1502ad
-ms.openlocfilehash: bb2748b16a16d7d01b076402889829f5b31a1912
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7d0acf16ace5aad60b32b7139a58a258fb080ee0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126364"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181293"
 ---
 # <a name="composition-analysis-tool-mefx"></a>Strumento di analisi composizione (Mefx)
 Lo strumento di analisi composizione (Mefx) è un'applicazione della riga di comando che analizza i file di libreria (DLL) e di applicazione (EXE) che contengono le parti MEF (Managed Extensibility Framework). Lo scopo principale di Mefx è fornire agli sviluppatori un modo per diagnosticare gli errori di composizione nelle relative applicazioni MEF senza la necessità di aggiungere codice di analisi complesso all'applicazione stessa. Può essere utile anche per comprendere le parti di una libreria fornita da terze parti. Questo argomento descrive come usare Mefx e fornisce un riferimento per la relativa sintassi.  
   
-<a name="getting_mefx"></a>   
+<a name="getting_mefx"></a>
 ## <a name="getting-mefx"></a>Come ottenere Mefx  
  Mefx è disponibile su GitHub in [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef/releases/tag/4.0). Scaricare e decomprimere semplicemente lo strumento.  
   
-<a name="basic_syntax"></a>   
+<a name="basic_syntax"></a>
 ## <a name="basic-syntax"></a>Sintassi di base  
  Mefx viene richiamato dalla riga di comando nel formato seguente:  
   
@@ -39,7 +39,7 @@ mefx /file:MyAddIn.dll /directory:Program\AddIns [action...]
   
  Dopo l'elenco dei file e delle directory è necessario specificare un comando e tutte le opzioni per il comando.  
   
-<a name="listing_available_parts"></a>   
+<a name="listing_available_parts"></a>
 ## <a name="listing-available-parts"></a>Elenco delle parti disponibili  
  Usare l'azione `/parts` per elencare tutte le parti dichiarate nei file caricati. Il risultato è un semplice elenco di nomi di parti.  
   
@@ -57,7 +57,7 @@ mefx /file:MyAddIn.dll /type:MyAddIn.AddIn /verbose
   [Export] MyAddIn.MemberPart (ContractName=" MyAddIn.MemberPart")  
 ```  
   
-<a name="listing_imports_and_exports"></a>   
+<a name="listing_imports_and_exports"></a>
 ## <a name="listing-imports-and-exports"></a>Elenco delle importazioni e delle esportazioni  
  Le azioni `/imports` e `/exports` elencheranno rispettivamente tutte le parti importate e tutte le parti esportate. È anche possibile elencare le parti che importano o esportano un tipo specifico usando le azioni `/importers` o `/exporters` .  
   
@@ -68,7 +68,7 @@ MyAddin.AddIn
   
  A queste azioni è anche possibile applicare l'opzione `/verbose` .  
   
-<a name="finding_rejected_parts"></a>   
+<a name="finding_rejected_parts"></a>
 ## <a name="finding-rejected-parts"></a>Individuazione delle parti rifiutate  
  Una volta caricate le parti disponibili, Mefx usa il motore di composizione MEF per comporle. Le parti che non possono essere composte correttamente vengono definite *rifiutate*. Per elencare tutte le parti rifiutate, usare l'azione `/rejected` .  
   
@@ -105,7 +105,7 @@ from: ClassLibrary1.ChainOne from: AssemblyCatalog (Assembly="ClassLibrary1, Ver
   
  Le informazioni interessanti sono contenute nei risultati `[Exception]` e `[Unsuitable]` . Il risultato `[Exception]` fornisce informazioni sul motivo per cui una parte è stata rifiutata. Il risultato `[Unsuitable]` indica il motivo per cui non è possibile usare una parte con una diversa corrispondenza per soddisfare un'importazione. In questo caso il motivo è dovuto al fatto che la parte stessa è stata rifiutata a causa di importazioni mancanti.  
   
-<a name="analyzing_primary_causes"></a>   
+<a name="analyzing_primary_causes"></a>
 ## <a name="analyzing-primary-causes"></a>Analisi delle cause principali  
  Se alcune parti sono collegate in una lunga catena di dipendenza, un problema che riguarda la parte finale può causare il rifiuto dell'intera catena. La diagnosi di questi problemi può essere difficile perché la causa radice dell'errore non è sempre ovvia. Per risolvere il problema, è possibile usare l'azione `/causes` , che tenta di individuare la causa radice di qualsiasi rifiuto a cascata.  
   
@@ -114,7 +114,7 @@ from: ClassLibrary1.ChainOne from: AssemblyCatalog (Assembly="ClassLibrary1, Ver
 > [!NOTE]
 > Nella maggior parte dei casi, Mefx sarà in grado di diagnosticare la causa radice di un errore a cascata. Tuttavia, nei casi in cui le parti vengono aggiunte a un contenitore a livello di codice, nei casi che riguardano contenitori gerarchici o nei casi che riguardano implementazioni personalizzate di `ExportProvider` , Mefx non sarà in grado di diagnosticare la causa. In generale, i casi descritti precedentemente devono essere evitati laddove possibile, poiché la diagnosi degli errori è generalmente complessa.  
   
-<a name="white_lists"></a>   
+<a name="white_lists"></a>
 ## <a name="white-lists"></a>Elenchi degli elementi consentiti  
  L'opzione `/whitelist` consente di specificare un file di testo che elenca le parti di cui è previsto il rifiuto. I rifiuti imprevisti verranno quindi contrassegnati. Ciò può essere utile quando si analizza una libreria incompleta o una sottolibreria in cui mancano alcune dipendenze. L'opzione `/whitelist` può essere applicata alle azioni `/rejected` o `/causes` .  
   

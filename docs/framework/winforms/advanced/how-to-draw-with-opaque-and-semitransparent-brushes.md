@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Disegnare con pennelli opachi e semitrasparenti'
+title: 'Procedura: disegnare con pennelli opachi e semitrasparenti'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - alpha blending [Windows Forms], brush
 - brushes [Windows Forms], using semi-transparent
 ms.assetid: a4f6f6b8-3bc8-440a-84af-d62ef0f8ff40
-ms.openlocfilehash: 1be3fd2ce10f6681e531559a6e9594fe3d021f5f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 1e48bbd563f6377380848949325962b568fa432c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582581"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142407"
 ---
-# <a name="how-to-draw-with-opaque-and-semitransparent-brushes"></a>Procedura: Disegnare con pennelli opachi e semitrasparenti
+# <a name="how-to-draw-with-opaque-and-semitransparent-brushes"></a>Procedura: disegnare con pennelli opachi e semitrasparenti
 Quando si riempie una forma, è necessario passare un oggetto <xref:System.Drawing.Brush> a uno dei metodi di riempimento della classe <xref:System.Drawing.Graphics>. L'unico parametro del costruttore <xref:System.Drawing.SolidBrush.%23ctor%2A> è un oggetto <xref:System.Drawing.Color>. Per riempire una forma opaca, impostare il componente alfa del colore su 255. Per riempire una forma semitrasparente, impostare il componente alfa su un valore qualsiasi compreso tra 1 e 254.  
   
  Quando si riempie una forma semitrasparente, il colore della forma viene sfumato con i colori dello sfondo. Il componente alfa specifica come si combinano i colori della forma e dello sfondo. I valori alfa vicini a 0 rendono più intensi i colori di sfondo, mentre i valori alfa più vicini a 255 rendono più intenso il colore della forma.  
@@ -28,16 +28,16 @@ Quando si riempie una forma, è necessario passare un oggetto <xref:System.Drawi
  [!code-csharp[System.Drawing.AlphaBlending#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.AlphaBlending#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#31)]  
 
- Nella figura seguente mostra l'output del codice seguente: 
+ Nella figura seguente viene illustrato l'output del codice seguente:
   
- ![Figura che mostra l'output opache e semitrasparenti.](./media/how-to-draw-with-opaque-and-semitransparent-brushes/compositingquality-ellipse-semitransparent.png)  
+ ![Illustrazione che mostra l'output opaco e semitrasparente.](./media/how-to-draw-with-opaque-and-semitransparent-brushes/compositingquality-ellipse-semitransparent.png)  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, ovvero un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
+ L'esempio precedente è progettato per l'utilizzo con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, che è un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Grafica e disegno in Windows Form](graphics-and-drawing-in-windows-forms.md)
 - [Linee e riempimenti con fusione alfa](alpha-blending-lines-and-fills.md)
-- [Procedura: Assegnare al controllo uno sfondo trasparente](../controls/how-to-give-your-control-a-transparent-background.md)
-- [Procedura: Disegnare linee opache e semitrasparenti](how-to-draw-opaque-and-semitransparent-lines.md)
+- [Procedura: assegnare uno sfondo trasparente al controllo](../controls/how-to-give-your-control-a-transparent-background.md)
+- [Procedura: disegnare linee opache e semitrasparenti](how-to-draw-opaque-and-semitransparent-lines.md)

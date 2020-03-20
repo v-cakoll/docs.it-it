@@ -5,17 +5,17 @@ helpviewer_keywords:
 - in-process side-by-side execution
 - side-by-side execution, in-process
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
-ms.openlocfilehash: 0c699f90143a87b7e7bee24c892efe2936a9399e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5ca2f03576946a23b3133bbe7532d46c4ad758ab
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716474"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181658"
 ---
 # <a name="in-process-side-by-side-execution"></a>Esecuzione side-by-side in-process
 A partire da .NET Framework 4, è possibile usare l'hosting side-by-side in-process per eseguire più versioni di Common Language Runtime (CLR) in un unico processo. Per impostazione predefinita, i componenti COM gestiti vengono eseguiti con la versione di .NET Framework con cui sono stati compilati, indipendentemente dalla versione di .NET Framework che viene caricata per il processo.  
   
-## <a name="background"></a>Informazioni di background sul  
+## <a name="background"></a>Background  
  .NET Framework ha sempre offerto l'hosting side-by-side per applicazioni di codice gestito, ma prima di .NET Framework 4 tale funzionalità non era disponibile per i componenti COM gestiti. In passato, i componenti COM gestiti che venivano caricati in un processo venivano eseguiti con la versione di runtime già caricata o con l'ultima versione di .NET Framework installata. Se tale versione non era compatibile con il componente COM, l'esecuzione di quest'ultimo aveva esito negativo.  
   
  .NET Framework 4 offre un nuovo approccio all'hosting side-by-side che assicura quanto segue:  
@@ -45,18 +45,18 @@ A partire da .NET Framework 4, è possibile usare l'hosting side-by-side in-proc
 > [!NOTE]
 > Le versioni di .NET framework 3.0 e 3.5 sono state compilate in modo incrementale dalla versione 2.0 e non necessitano dell'esecuzione side-by-side. Sono praticamente la stessa versione.  
   
-<a name="scenarios"></a>   
+<a name="scenarios"></a>
 ## <a name="common-side-by-side-hosting-scenarios"></a>Scenari comuni di hosting side-by-side  
   
 - **Scenario 1:** applicazione nativa che usa i componenti COM compilati con versioni precedenti di .NET Framework.  
   
-     .NET Framework versioni installate: .NET Framework 4 e tutte le altre versioni del .NET Framework utilizzate dai componenti COM.  
+     Versioni di .NET Framework installate: .NET Framework 4 e tutte le altre versioni di .NET Framework utilizzate dai componenti COM.  
   
      Cosa fare: in questo scenario, non eseguire alcuna operazione. I componenti COM verranno eseguiti con la versione di .NET Framework con la quale sono stati registrati.  
   
-- **Scenario 2**: applicazione gestita compilata con la .NET Framework 2,0 SP1 che è preferibile eseguire con l'.NET Framework 2,0, ma che è disponibile per l'esecuzione in .NET Framework 4 se la versione 2,0 non è presente.  
+- **Scenario 2:** applicazione gestita compilata con .NET Framework 2.0 SP1 che si preferisce eseguire con .NET Framework 2.0, ma è disposto a essere eseguito su .NET Framework 4 se non è presente la versione 2.0.  
   
-     .NET Framework versioni installate: una versione precedente del .NET Framework e il .NET Framework 4.  
+     Versioni di .NET Framework installate: una versione precedente di .NET Framework e .NET Framework 4.  
   
      Cosa fare: nel [file di configurazione dell'applicazione](../configure-apps/index.md) contenuto nella directory dell'applicazione usare [l'elemento \<startup>](../configure-apps/file-schema/startup/startup-element.md) e [l'elemento \<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) impostati nel modo seguente:  
   
@@ -69,9 +69,9 @@ A partire da .NET Framework 4, è possibile usare l'hosting side-by-side in-proc
     </configuration>  
     ```  
   
-- **Scenario 3:** Applicazione nativa che usa componenti COM compilati con le versioni precedenti del .NET Framework che si vuole eseguire con la .NET Framework 4.  
+- **Scenario 3:** Applicazione nativa che utilizza componenti COM compilati con versioni precedenti di .NET Framework che si desidera eseguire con .NET Framework 4.  
   
-     .NET Framework versioni installate: .NET Framework 4.  
+     Versioni di .NET Framework installate: .NET Framework 4.  
   
      Cosa fare: nel file di configurazione dell'applicazione contenuto nella directory dell'applicazione usare l'elemento `<startup>` con l'attributo `useLegacyV2RuntimeActivationPolicy` impostato su `true` e l'elemento `<supportedRuntime>` impostato nel modo seguente:  
   
@@ -151,7 +151,7 @@ int _tmain(int argc, _TCHAR* argv[])
     IDispatch* pPrintInfo;  
     pUnk->QueryInterface(IID_IDispatch, (void**)&pPrintInfo);  
     OLECHAR FAR* szMethod[1];  
-    szMethod[0]=OLESTR("PrintInfo");   
+    szMethod[0]=OLESTR("PrintInfo");
     hr = pPrintInfo->GetIDsOfNames(IID_NULL,szMethod, 1, LOCALE_SYSTEM_DEFAULT, &dispid);  
     DISPPARAMS dispparams;  
     dispparams.cNamedArgs = 0;  
@@ -173,5 +173,5 @@ int _tmain(int argc, _TCHAR* argv[])
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Elemento \<startup](../configure-apps/file-schema/startup/startup-element.md)
-- [Elemento \<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md)
+- [\<elemento> di avvio](../configure-apps/file-schema/startup/startup-element.md)
+- [\<supportedRuntime> elemento](../configure-apps/file-schema/startup/supportedruntime-element.md)

@@ -10,19 +10,19 @@ helpviewer_keywords:
 - <gcConcurrent> element
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
 ms.openlocfilehash: 5957337aa960a0d5f445249b410dbfaddb7b08e9
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969225"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79400043"
 ---
-# <a name="gcconcurrent-element"></a>\<elemento > gcConcurrent
+# <a name="gcconcurrent-element"></a>\<elemento> gcConcurrent
 
 Specifica se in Common Language Runtime viene eseguita una procedura di Garbage Collection in un thread separato.
 
-[\<configuration>](../configuration-element.md)\
-&nbsp;&nbsp;[\<runtime >](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<gcConcurrent >
+[\<>di configurazione](../configuration-element.md)\
+&nbsp;&nbsp;[\<>di runtime](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;\<> di gcConcurrent
 
 ## <a name="syntax"></a>Sintassi
 
@@ -35,7 +35,7 @@ Specifica se in Common Language Runtime viene eseguita una procedura di Garbage 
 
 Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.
 
-### <a name="attributes"></a>Attributi
+### <a name="attributes"></a>Attributes
 
 |Attributo|Descrizione|
 |---------------|-----------------|
@@ -43,14 +43,14 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 #### <a name="enabled-attribute"></a>attributo enabled
 
-|Value|Descrizione|
+|valore|Descrizione|
 |-----------|-----------------|
-|`false`|Non viene eseguito Garbage Collection simultaneamente.|
-|`true`|Viene eseguita la procedura di Garbage Collection in modo concorrente. Questa è l'impostazione predefinita.|
+|`false`|Non esegue la procedura di Garbage Collection contemporaneamente.|
+|`true`|Viene eseguita la procedura di Garbage Collection in modo concorrente. Questa è la modalità predefinita.|
 
 ### <a name="child-elements"></a>Elementi figlio
 
-Nessuna.
+No.
 
 ### <a name="parent-elements"></a>Elementi padre
 
@@ -59,18 +59,18 @@ Nessuna.
 |`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Prima di .NET Framework 4, la workstation Garbage Collection supportava Garbage Collection simultanee, che eseguivano Garbage Collection in background in un thread separato. In .NET Framework 4, il Garbage Collection simultaneo è stato sostituito da GC in background, che esegue anche Garbage Collection in background in un thread separato. A partire da .NET Framework 4,5, la raccolta in background è diventata disponibile nell'Garbage Collection server. L'elemento **gcConcurrent** controlla se il runtime esegue le Garbage Collection simultanee o in background, se disponibile, o se esegue Garbage Collection in primo piano.
+Prima di .NET Framework 4, l'operazione di Garbage Collection per workstation supportava l'operazione di Garbage Collection simultanea, che eseguiva operazioni di Garbage Collection in background in un thread separato. In .NET Framework 4.NET Framework 4, la Garbage Collection simultanea è stata sostituita da GC in background, che esegue anche la garbage collection in background in un thread separato. A partire da .NET Framework 4.5.NET Framework 4.5,NET Framework 4.5, la raccolta in background è diventata disponibile nell'operazione di Garbage Collection per server. L'elemento **gcConcurrent** controlla se il runtime esegue un'operazione di Garbage Collection simultanea o in background, se disponibile o se esegue operazioni di Garbage Collection in primo piano.
 
-### <a name="to-disable-background-garbage-collection"></a>Per disabilitare lo sfondo Garbage Collection
+### <a name="to-disable-background-garbage-collection"></a>Per disabilitare l'operazione di Garbage Collection in background
 
 > [!WARNING]
-> A partire da .NET Framework 4, il Garbage Collection simultaneo viene sostituito da Garbage Collection in background. I termini *simultanei* e in *background* vengono usati in modo interscambiabile nella documentazione di .NET Framework. Per disabilitare Garbage Collection in background, usare l'elemento **gcConcurrent** , come descritto in questo articolo.
+> A partire da .NET Framework 4.NET Framework 4, l'operazione di Garbage Collection simultanea viene sostituita da Garbage Collection in background. I termini *simultanei* e *in background* vengono utilizzati in modo intercambiabile nella documentazione di .NET Framework. Per disabilitare l'operazione di Garbage Collection in background, usare l'elemento **gcConcurrent,** come descritto in questo articolo.
 
-Per impostazione predefinita, il runtime usa la Garbage Collection in modalità simultanea che è ottimizzata per la latenza. Se si usa un'applicazione che prevede una notevole interazione da parte dell'utente, non disabilitare l'esecuzione simultanea di Garbage Collection in modo da ridurre il tempo di sospensione dell'applicazione durante l'esecuzione di Garbage Collection. Se si imposta l'attributo `enabled` dell'elemento **gcConcurrent** su `false`, il runtime USA Garbage Collection non simultanee, che è ottimizzato per la velocità effettiva.
+Per impostazione predefinita, il runtime usa la Garbage Collection in modalità simultanea che è ottimizzata per la latenza. Se si usa un'applicazione che prevede una notevole interazione da parte dell'utente, non disabilitare l'esecuzione simultanea di Garbage Collection in modo da ridurre il tempo di sospensione dell'applicazione durante l'esecuzione di Garbage Collection. Se si `enabled` imposta l'attributo dell'elemento **gcConcurrent** su `false`, il runtime utilizza un'operazione di Garbage Collection non simultanea, ottimizzata per la velocità effettiva.
 
-Il file di configurazione seguente Disabilita Garbage Collection di sfondo:
+Il file di configurazione seguente disabilita l'operazione di Garbage Collection in background:The following configuration file disables background garbage collection:
 
 ```xml
 <configuration>
@@ -80,13 +80,13 @@ Il file di configurazione seguente Disabilita Garbage Collection di sfondo:
 </configuration>
 ```
 
-Se è presente un'impostazione **gcConcurrentSetting** nel file di configurazione del computer, definisce il valore predefinito per tutte le applicazioni .NET Framework. Con l'impostazione del file di configurazione del computer viene eseguito l'override dell'impostazione del file di configurazione dell'applicazione.
+Se è presente **un'impostazione gcConcurrentSetting** nel file di configurazione del computer, definisce il valore predefinito per tutte le applicazioni .NET Framework. Con l'impostazione del file di configurazione del computer viene eseguito l'override dell'impostazione del file di configurazione dell'applicazione.
 
-Per altre informazioni sulle Garbage Collection simultanee e in background, vedere le sezioni [Garbage Collection simultanea](../../../../standard/garbage-collection/fundamentals.md#concurrent-garbage-collection), [Garbage Collection workstation in background](../../../../standard/garbage-collection/fundamentals.md#background-workstation-garbage-collection)e [server in background Garbage Collection](../../../../standard/garbage-collection/fundamentals.md#background-server-garbage-collection) nell'articolo [nozioni fondamentali di Garbage Collection](../../../../standard/garbage-collection/fundamentals.md) .
+Per ulteriori informazioni sull'operazione di Garbage Collection simultanea e in background, vedere le [sezioni](../../../../standard/garbage-collection/fundamentals.md#background-server-garbage-collection) Operazioni di Garbage Collection [simultanee](../../../../standard/garbage-collection/fundamentals.md#concurrent-garbage-collection)e in background, vedere le sezioni Operazioni di Garbage [Collection](../../../../standard/garbage-collection/fundamentals.md#background-workstation-garbage-collection)simultanee e in background nell'articolo [Nozioni fondamentali sulla Garbage Collection](../../../../standard/garbage-collection/fundamentals.md) .
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene abilitata la Garbage Collection in background:
+L'esempio seguente abilita l'operazione di Garbage Collection in background:The following example enables background garbage collection:
 
 ```xml
 <configuration>
@@ -99,5 +99,5 @@ Nell'esempio seguente viene abilitata la Garbage Collection in background:
 ## <a name="see-also"></a>Vedere anche
 
 - [Schema delle impostazioni di runtime](index.md)
-- [Schema dei file di configurazione](../index.md)
-- [Principi fondamentali di Garbage Collection](../../../../standard/garbage-collection/fundamentals.md)
+- [Schema del file di configurazione](../index.md)
+- [Nozioni fondamentali di Garbage Collection](../../../../standard/garbage-collection/fundamentals.md)

@@ -1,5 +1,5 @@
 ---
-title: Metodo IXCLRDataProcess::EnumMethodInstanceByAddress
+title: Metodo IXCLRDataProcess::EnumMethodInstanceByAddressIXCLRDataProcess::EnumMethodInstanceByAddress Method
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess::EnumMethodInstanceByAddress Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 89b89a0cb056a0515bf0859069455a73f62aae4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: afc5fc377dd45d5e8d4d2d7b3385ca0524df69e1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769625"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176656"
 ---
-# <a name="ixclrdataprocessenummethodinstancebyaddress-method"></a>Metodo IXCLRDataProcess::EnumMethodInstanceByAddress
+# <a name="ixclrdataprocessenummethodinstancebyaddress-method"></a>Metodo IXCLRDataProcess::EnumMethodInstanceByAddressIXCLRDataProcess::EnumMethodInstanceByAddress Method
 
-Enumera le istanze di metodo di questo processo iniziando in corrispondenza di un offset di indirizzo.
+Enumera le istanze del metodo di questo processo a partire da un offset di indirizzo.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -40,24 +40,22 @@ HRESULT EnumMethodInstanceByAddress(
 ## <a name="parameters"></a>Parametri
 
 `handle`\
-[in] Handle per l'enumerazione delle istanze di metodo.
+[in] Handle per l'enumerazione delle istanze del metodo.
 
 `mod`\
-[out] L'istanza del metodo enumerate.
+[fuori] Istanza del metodo enumerato.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il metodo specificato fa parte di `IXCLRDataProcess` interfaccia e corrisponde al 28 slot della tabella di metodo virtuale.
+Il metodo fornito fa `IXCLRDataProcess` parte dell'interfaccia e corrisponde al 28esimo slot della tabella dei metodi virtuali.
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).   
-**Intestazione:** nessuno   
-**Libreria:** nessuno   
-**Versioni di .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]   
- 
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).
+**Intestazione:** Nessuno **libreria:** nessuna versione di **.NET Framework:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
+
 ## <a name="see-also"></a>Vedere anche
 
 - [Enumerazione CLRDataSourceType](clrdatasourcetype-enumeration.md)
 - [Debug](index.md)
-- [IXCLRDataProcess Interface](ixclrdataprocess-interface.md)
+- [Interfaccia IXCLRDataProcess](ixclrdataprocess-interface.md)

@@ -15,74 +15,74 @@ helpviewer_keywords:
 ms.assetid: 47915d33-b7bf-409e-b484-4ee1df15de22
 topic_type:
 - apiref
-ms.openlocfilehash: cea84f47a5289df4bc9c50381e18d7077b3b8dad
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2662af41fbd2cdc3ce8a6df1e036dfc5b22ff6a3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440480"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175551"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>Metodo IMetaDataEmit::TranslateSigWithScope
-Importa un assembly nell'ambito corrente e ottiene una nuova firma dei metadati per l'ambito Unito.  
+Importa un assembly nell'ambito corrente e ottiene una nuova firma dei metadati per l'ambito unito.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
-HRESULT TranslateSigWithScope (   
-    [in]  IMetaDataAssemblyImport   *pAssemImport,   
-    [in]  const void                *pbHashValue,   
-    [in]  ULONG                     cbHashValue,   
-    [in]  IMetaDataImport           *import,   
-    [in]  PCCOR_SIGNATURE           pbSigBlob,   
+HRESULT TranslateSigWithScope (
+    [in]  IMetaDataAssemblyImport   *pAssemImport,
+    [in]  const void                *pbHashValue,
+    [in]  ULONG                     cbHashValue,
+    [in]  IMetaDataImport           *import,
+    [in]  PCCOR_SIGNATURE           pbSigBlob,
     [in]  ULONG                     cbSigBlob,  
-    [in]  IMetaDataAssemblyEmit     *pAssemEmit,   
-    [in]  IMetaDataEmit             *emit,   
-    [out] PCOR_SIGNATURE            pvTranslatedSig,   
-    [in]  ULONG                     cbTranslatedSigMax,   
-    [out] ULONG                     *pcbTranslatedSig   
+    [in]  IMetaDataAssemblyEmit     *pAssemEmit,
+    [in]  IMetaDataEmit             *emit,
+    [out] PCOR_SIGNATURE            pvTranslatedSig,
+    [in]  ULONG                     cbTranslatedSigMax,
+    [out] ULONG                     *pcbTranslatedSig
 );  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `pAssemImport`  
- in Interfaccia per l'assembly di importazione (in cui è definita la firma).  
+ [in] Interfaccia per l'assembly di importazione (in cui è definita la firma).  
   
  `pbHashValue`  
- in Blob hash per l'assembly.  
+ [in] BLOB hash per l'assembly.  
   
  `cbHashValue`  
- in Conteggio dei byte in `pbHashValue`.  
+ [in] Numero di byte `pbHashValue`in .  
   
  `import`  
- in Interfaccia per l'ambito dell'importazione dei metadati.  
+ [in] Interfaccia per l'ambito dei metadati di importazione.  
   
  `pbSigBlob`  
- in Firma da importare.  
+ [in] Firma da importare.  
   
  `cbSigBlob`  
- in Dimensione, in byte, del `pbSigBlob`.  
+ [in] Dimensione, in byte, `pbSigBlob`di .  
   
  `pAssemEmit`  
- in Interfaccia per l'esportazione dell'assembly.  
+ [in] Interfaccia per l'assembly di esportazione.  
   
  `emit`  
- in Interfaccia per l'ambito di esportazione dei metadati.  
+ [in] Interfaccia per l'ambito dei metadati di esportazione.  
   
  `pvTranslatedSig`  
- out Buffer in cui memorizzare il BLOB di firma tradotto.  
+ [fuori] Buffer per contenere il BLOB della firma convertito.  
   
  `cbTranslatedSigMax`  
- in Capacità, in byte, di `pvTranslatedSig`.  
+ [in] La capacità, in `pvTranslatedSig`byte, di .  
   
  `pcbTranslatedSig`  
- out Numero di byte effettivi nella firma tradotta.  
+ [fuori] Numero di byte effettivi nella firma tradotta.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Usato come risorsa in MSCorEE. dll  
+ **Biblioteca:** Utilizzato come risorsa in MSCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

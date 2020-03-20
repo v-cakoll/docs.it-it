@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: e1f8d636e793b2d8b984fe1aa0b823fa58a4981d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 8cadeac0bcbf301f7d973e93435885de82052603
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040173"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151663"
 ---
 # <a name="connection-string-builders"></a>Generatori di stringhe di connessione
-Nelle versioni precedenti di ADO.NET, il controllo in fase di compilazione delle stringhe di connessione con valori di stringa concatenati non è stato eseguito, quindi, in fase di esecuzione, una parola chiave non corretta ha generato un <xref:System.ArgumentException>. Ogni provider di dati .NET Framework supportava una sintassi diversa per le parole chiave della stringa di connessione, rendendo difficoltosa la costruzione di stringhe di connessione valide se effettuate manualmente. Per risolvere questo problema, in ADO.NET 2,0 sono stati introdotti nuovi generatori di stringhe di connessione per ogni provider di dati .NET Framework. Ogni provider di dati include una classe di generatori di stringhe di connessione fortemente tipizzata che eredita da <xref:System.Data.Common.DbConnectionStringBuilder>. Nella tabella seguente sono elencati i provider di dati .NET Framework e le classi del generatore di stringhe di connessione associate.  
+Nelle versioni precedenti di ADO.NET, il controllo in fase di compilazione delle stringhe di connessione con <xref:System.ArgumentException>valori stringa concatenati non si verificava, pertanto in fase di esecuzione una parola chiave non corretta generava un'estensione . Ognuno dei provider di dati .NET Framework supportava una sintassi diversa per le parole chiave delle stringhe di connessione, che rendeva difficile la costruzione di stringhe di connessione valide se eseguita manualmente. Per risolvere questo problema, ADO.NET 2.0 sono stati introdotti nuovi generatori di stringhe di connessione per ogni provider di dati .NET Framework. Ogni provider di dati include una classe di generatori di stringhe di connessione fortemente tipizzata che eredita da <xref:System.Data.Common.DbConnectionStringBuilder>. Nella tabella seguente sono elencati i provider di dati .NET Framework e le classi del generatore di stringhe di connessione associate.  
   
 |Provider|Classe ConnectionStringBuilder|  
 |--------------|-----------------------------------|  
@@ -59,7 +59,7 @@ initial catalog="AdventureWorks;NewValue=Bad"
  Uno dei costruttori di overload per un generatore di stringhe di connessione accetta <xref:System.String> come argomento, consentendo di specificare una stringa di connessione parziale che può essere quindi completata dall'input dell'utente. La stringa di connessione parziale può essere archiviata in un file di configurazione e recuperata in fase di esecuzione.  
   
 > [!NOTE]
-> Lo spazio dei nomi <xref:System.Configuration> consente l'accesso a livello di codice ai file di configurazione che usano <xref:System.Web.Configuration.WebConfigurationManager> per le applicazioni Web e <xref:System.Configuration.ConfigurationManager> per le applicazioni Windows. Per ulteriori informazioni sull'utilizzo delle stringhe di connessione e dei file di configurazione, vedere [stringhe di connessione e file di configurazione](connection-strings-and-configuration-files.md).  
+> Lo spazio dei nomi <xref:System.Configuration> consente l'accesso a livello di codice ai file di configurazione che usano <xref:System.Web.Configuration.WebConfigurationManager> per le applicazioni Web e <xref:System.Configuration.ConfigurationManager> per le applicazioni Windows. Per ulteriori informazioni sull'utilizzo delle stringhe di connessione e dei file di configurazione, vedere [Stringhe di connessione e file](connection-strings-and-configuration-files.md)di configurazione .  
   
 ### <a name="example"></a>Esempio  
  In questo esempio vengono illustrati il recupero di una stringa di connessione da un file di configurazione e il relativo completamento tramite l'impostazione delle proprietà <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A>, <xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserID%2A> e <xref:System.Data.SqlClient.SqlConnectionStringBuilder.Password%2A> di <xref:System.Data.SqlClient.SqlConnectionStringBuilder>. Il file di configurazione viene definito come segue.  
@@ -67,7 +67,7 @@ initial catalog="AdventureWorks;NewValue=Bad"
 ```xml  
 <connectionStrings>  
   <clear/>  
-  <add name="partialConnectString"   
+  <add name="partialConnectString"
     connectionString="Initial Catalog=Northwind;"  
     providerName="System.Data.SqlClient" />  
 </connectionStrings>  

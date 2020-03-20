@@ -1,5 +1,5 @@
 ---
-title: Associare un menu di scelta rapida al componente NotifyIcon
+title: Associazione di un menu di scelta rapida al componente NotifyIcon
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,46 +10,46 @@ helpviewer_keywords:
 - NotifyIcon component [Windows Forms], associating shortcut menus
 - shortcut menus [Windows Forms], for background processes
 ms.assetid: d68f3926-08d3-4f7d-949f-1981b29cf188
-ms.openlocfilehash: 392c04f73feaec201033ad76f9419a0e070bec70
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 15a4a06726de348745e5eef03217d693db496a42
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742054"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182260"
 ---
 # <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>Procedura: associare un menu di scelta rapida a un componente NotifyIcon di Windows Form
 > [!NOTE]
-> Anche se <xref:System.Windows.Forms.MenuStrip> e <xref:System.Windows.Forms.ContextMenuStrip> sostituiscono e aggiungono funzionalità ai controlli <xref:System.Windows.Forms.MainMenu> e <xref:System.Windows.Forms.ContextMenu> delle versioni precedenti, <xref:System.Windows.Forms.MainMenu> e <xref:System.Windows.Forms.ContextMenu> vengono conservati sia per la compatibilità con le versioni precedenti che per un uso futuro, se lo si desidera.  
+> Anche <xref:System.Windows.Forms.MenuStrip> <xref:System.Windows.Forms.ContextMenuStrip> se e sostituire <xref:System.Windows.Forms.MainMenu> e <xref:System.Windows.Forms.ContextMenu> aggiungere funzionalità <xref:System.Windows.Forms.MainMenu> ai controlli e delle versioni precedenti, e <xref:System.Windows.Forms.ContextMenu> vengono mantenuti sia per la compatibilità con le versioni precedenti e l'uso futuro, se lo si desidera.  
   
- Il componente <xref:System.Windows.Forms.NotifyIcon> Visualizza un'icona nell'area di notifica dello stato della barra delle applicazioni. In genere, le applicazioni consentono di fare clic con il pulsante destro del mouse su questa icona per inviare comandi all'applicazione che rappresenta. Associando un componente <xref:System.Windows.Forms.ContextMenu> al componente <xref:System.Windows.Forms.NotifyIcon>, è possibile aggiungere questa funzionalità alle applicazioni.  
+ Il <xref:System.Windows.Forms.NotifyIcon> componente visualizza un'icona nell'area di notifica dello stato della barra delle applicazioni. In genere, le applicazioni consentono di fare clic con il pulsante destro del mouse su questa icona per inviare comandi all'applicazione che rappresenta. Associando un <xref:System.Windows.Forms.ContextMenu> componente <xref:System.Windows.Forms.NotifyIcon> al componente, è possibile aggiungere questa funzionalità alle applicazioni.  
   
 > [!NOTE]
-> Se si desidera che l'applicazione venga ridotta a icona all'avvio durante la visualizzazione di un'istanza del componente <xref:System.Windows.Forms.NotifyIcon> nella barra delle applicazioni, impostare la proprietà <xref:System.Windows.Forms.Form.WindowState%2A> del form principale su <xref:System.Windows.Forms.FormWindowState.Minimized> e verificare che la proprietà <xref:System.Windows.Forms.NotifyIcon.Visible%2A> del componente <xref:System.Windows.Forms.NotifyIcon> sia impostata su `true`.  
+> Se si desidera che l'applicazione venga ridotta a <xref:System.Windows.Forms.NotifyIcon> icona all'avvio durante la <xref:System.Windows.Forms.Form.WindowState%2A> visualizzazione <xref:System.Windows.Forms.FormWindowState.Minimized> di un'istanza del componente nella barra delle applicazioni, impostare la proprietà del form principale su e assicurarsi che la <xref:System.Windows.Forms.NotifyIcon> proprietà del <xref:System.Windows.Forms.NotifyIcon.Visible%2A> componente sia impostata su . `true`  
   
-### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-at-design-time"></a>Per associare un menu di scelta rapida al componente NotifyIcon in fase di progettazione  
+### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-at-design-time"></a>Per associare un menu di scelta rapida al componente NotifyIcon in fase di progettazioneTo associate a shortcut menu with the NotifyIcon component at design time  
   
-1. Aggiungere un componente <xref:System.Windows.Forms.NotifyIcon> al form e impostare le proprietà importanti, ad esempio le proprietà <xref:System.Windows.Forms.NotifyIcon.Icon%2A> e <xref:System.Windows.Forms.NotifyIcon.Visible%2A>.  
+1. Aggiungere <xref:System.Windows.Forms.NotifyIcon> un componente al form e impostare le <xref:System.Windows.Forms.NotifyIcon.Icon%2A> <xref:System.Windows.Forms.NotifyIcon.Visible%2A> proprietà importanti, ad esempio le proprietà e .  
   
-     Per ulteriori informazioni, vedere [procedura: aggiungere icone dell'applicazione alla barra delle applicazioni con il componente NotifyIcon Windows Forms](app-icons-to-the-taskbar-with-wf-notifyicon.md).  
+     Per ulteriori informazioni, vedere [Procedura: aggiungere icone dell'applicazione alla barra delle applicazioni con il componente NotifyIcon di Windows Form](app-icons-to-the-taskbar-with-wf-notifyicon.md).  
   
-2. Aggiungere un componente <xref:System.Windows.Forms.ContextMenu> al Windows Form.  
+2. Aggiungere <xref:System.Windows.Forms.ContextMenu> un componente al Windows Form.  
   
-     Aggiungere voci di menu al menu di scelta rapida che rappresenta i comandi che si desidera rendere disponibili in fase di esecuzione. Questo è anche il momento opportuno per aggiungere miglioramenti del menu a queste voci di menu, ad esempio le chiavi di accesso.  
+     Aggiungere voci di menu al menu di scelta rapida che rappresenta i comandi che si desidera rendere disponibili in fase di esecuzione. Questo è anche un buon momento per aggiungere miglioramenti di menu a queste voci di menu, come i tasti di scelta.  
   
-3. Impostare la proprietà <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> del componente <xref:System.Windows.Forms.NotifyIcon> sul menu di scelta rapida aggiunto.  
+3. Impostare <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> la <xref:System.Windows.Forms.NotifyIcon> proprietà del componente sul menu di scelta rapida aggiunto.  
   
-     Con questa proprietà impostata, il menu di scelta rapida viene visualizzato quando si fa clic sull'icona sulla barra delle applicazioni.  
+     Con questa proprietà impostata, il menu di scelta rapida verrà visualizzato quando si fa clic sull'icona sulla barra delle applicazioni.  
   
-### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-programmatically"></a>Per associare un menu di scelta rapida al componente NotifyIcon a livello di codice  
+### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-programmatically"></a>Per associare un menu di scelta rapida al componente NotifyIcon a livello di codiceTo associate a shortcut menu with the NotifyIcon component programmatically  
   
-1. Creare un'istanza della classe <xref:System.Windows.Forms.NotifyIcon> e una classe <xref:System.Windows.Forms.ContextMenu>, con le impostazioni delle proprietà necessarie per l'applicazione (<xref:System.Windows.Forms.NotifyIcon.Icon%2A> e le proprietà <xref:System.Windows.Forms.NotifyIcon.Visible%2A> per il componente <xref:System.Windows.Forms.NotifyIcon>, le voci di menu per il componente <xref:System.Windows.Forms.ContextMenu>).  
+1. Creare un'istanza <xref:System.Windows.Forms.NotifyIcon> della <xref:System.Windows.Forms.ContextMenu> classe e una classe, con le<xref:System.Windows.Forms.NotifyIcon.Icon%2A> <xref:System.Windows.Forms.NotifyIcon.Visible%2A> impostazioni delle <xref:System.Windows.Forms.NotifyIcon> proprietà necessarie per <xref:System.Windows.Forms.ContextMenu> l'applicazione (e le proprietà per il componente, le voci di menu per il componente).  
   
-2. Impostare la proprietà <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> del componente <xref:System.Windows.Forms.NotifyIcon> sul menu di scelta rapida aggiunto.  
+2. Impostare <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> la <xref:System.Windows.Forms.NotifyIcon> proprietà del componente sul menu di scelta rapida aggiunto.  
   
-     Con questa proprietà impostata, il menu di scelta rapida viene visualizzato quando si fa clic sull'icona sulla barra delle applicazioni.  
+     Con questa proprietà impostata, il menu di scelta rapida verrà visualizzato quando si fa clic sull'icona sulla barra delle applicazioni.  
   
     > [!NOTE]
-    > Nell'esempio di codice seguente viene creata una struttura di menu di base. Sarà necessario personalizzare le scelte di menu per quelle adatte all'applicazione che si sta sviluppando. Inoltre, sarà necessario scrivere il codice per gestire gli eventi <xref:System.Windows.Forms.MenuItem.Click> per queste voci di menu.  
+    > Esempio di codice seguente crea una struttura di menu di base. Sarà necessario personalizzare le scelte di menu per quelle che si adattano all'applicazione che si sta sviluppando. Inoltre, è necessario scrivere codice per <xref:System.Windows.Forms.MenuItem.Click> gestire gli eventi per queste voci di menu.  
   
     ```vb  
     Public ContextMenu1 As New ContextMenu  
@@ -62,9 +62,9 @@ ms.locfileid: "76742054"
        ContextMenu1.MenuItems.Add("E&xit")  
   
        ' Set properties of NotifyIcon component.  
-       NotifyIcon1.Icon = New System.Drawing.Icon _   
-          (System.Environment.GetFolderPath _   
-          (System.Environment.SpecialFolder.Personal)  _   
+       NotifyIcon1.Icon = New System.Drawing.Icon _
+          (System.Environment.GetFolderPath _
+          (System.Environment.SpecialFolder.Personal)  _
           & "\Icon.ico")  
        NotifyIcon1.Text = "Right-click me!"  
        NotifyIcon1.Visible = True  
@@ -119,7 +119,7 @@ public:
 ```  
   
 > [!NOTE]
-> È necessario inizializzare `notifyIcon1` e `contextMenu1,` che è possibile eseguire includendo le istruzioni seguenti nel costruttore del modulo:  
+> È necessario `notifyIcon1` `contextMenu1,` inizializzare e che è possibile eseguire includendo le istruzioni seguenti nel costruttore del form:  
   
 ```cpp  
 notifyIcon1 = gcnew System::Windows::Forms::NotifyIcon();  
@@ -130,6 +130,6 @@ contextMenu1 = gcnew System::Windows::Forms::ContextMenu();
 
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
-- [Procedura: Aggiungere icone alla barra delle applicazioni con il componente NotifyIcon di Windows Form](app-icons-to-the-taskbar-with-wf-notifyicon.md)
+- [Procedura: aggiungere icone alla barra delle applicazioni mediante il componente NotifyIcon Windows Form](app-icons-to-the-taskbar-with-wf-notifyicon.md)
 - [Componente NotifyIcon](notifyicon-component-windows-forms.md)
-- [Panoramica sul componente NotifyIcon](notifyicon-component-overview-windows-forms.md)
+- [Cenni preliminari sul componente NotifyIcon](notifyicon-component-overview-windows-forms.md)

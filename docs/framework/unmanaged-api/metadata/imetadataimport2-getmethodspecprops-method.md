@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9544b711-e669-4eaf-8630-ee862e5e4489
 topic_type:
 - apiref
-ms.openlocfilehash: 6b5b3b3b5a3613668f4470f48083ae010cc9d336
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0bfbfec930c193ea05a01bd5bd9f46d2ec6714b1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445249"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175291"
 ---
 # <a name="imetadataimport2getmethodspecprops-method"></a>Metodo IMetaDataImport2::GetMethodSpecProps
 Ottiene la firma dei metadati del metodo a cui fa riferimento il token MethodSpec specificato.  
@@ -31,30 +31,30 @@ Ottiene la firma dei metadati del metodo a cui fa riferimento il token MethodSpe
 HRESULT GetMethodSpecProps (  
    [in]  mdMethodSpec     mi,  
    [out] mdToken          *tkParent,  
-   [out] PCCOR_SIGNATURE  *ppvSigBlob,   
+   [out] PCCOR_SIGNATURE  *ppvSigBlob,
    [out] ULONG            *pcbSigBlob  
-);   
+);
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `mi`  
- in Token MethodSpec che rappresenta la creazione di un'istanza del metodo.  
+ [in] Token MethodSpec che rappresenta la creazione di istanze del metodo.  
   
  `tkParent`  
- out Puntatore al token MethodDef o MethodRef che rappresenta la definizione del metodo.  
+ [fuori] Puntatore al token MethodDef o MethodRef che rappresenta la definizione del metodo.  
   
  `ppvSigBlob`  
- out Puntatore alla firma dei metadati binari del metodo.  
+ [fuori] Puntatore alla firma dei metadati binari del metodo.  
   
  `pcbSigBlob`  
- out Dimensione, in byte, del `ppvSigBlob`.  
+ [fuori] Dimensione, in byte, `ppvSigBlob`di .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Usato come risorsa in MsCorEE. dll  
+ **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

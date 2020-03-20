@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-ms.openlocfilehash: 8438a7b54ca19625687ab96386384cf62ae62d11
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d01198d158c4e1c64f12e8a0756c3d4e599fce74
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783803"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149544"
 ---
 # <a name="handling-dataadapter-events"></a>Gestione di eventi DataAdapter
 <xref:System.Data.Common.DataAdapter> di ADO.NET espone tre eventi che è possibile usare per rispondere alle modifiche apportate ai dati nell'origine dati. Nella tabella seguente vengono descritti gli eventi di `DataAdapter`.  
   
-|event|Descrizione|  
+|Event|Descrizione|  
 |-----------|-----------------|  
 |`RowUpdating`|Sta per iniziare un'operazione UPDATE, INSERT o DELETE su una riga tramite la chiamata a uno dei metodi `Update`.|  
 |`RowUpdated`|È stata completata un'operazione UPDATE, INSERT o DELETE su una riga tramite la chiamata a uno dei metodi `Update`.|  
@@ -39,7 +39,7 @@ ms.locfileid: "70783803"
   
  È inoltre possibile usare la proprietà `ContinueUpdateOnError` per gestire gli errori relativi alle righe aggiornate. Se `DataAdapter.ContinueUpdateOnError` è `true`, quando un aggiornamento di una riga determina la generazione di un'eccezione, il testo dell'eccezione viene inserito nelle informazioni `RowError` della stessa riga e l'elaborazione continua senza generare un'eccezione. In questo modo è possibile rispondere agli errori quando l'evento `Update` è completato, a differenza di quanto avviene con l'evento `RowUpdated` che consente di rispondere agli errori nel momento in cui si verificano.  
   
- Nell'esempio di codice seguente viene illustrato come aggiungere e rimuovere i gestori eventi. Il gestore dell'evento `RowUpdating` scrive un log di tutti i record eliminati con un timestamp. Il `RowUpdated` gestore eventi aggiunge informazioni sull'errore `RowError` alla proprietà `DataSet`della riga in, evita l'eccezione e continua l'elaborazione (il mirroring del comportamento di `ContinueUpdateOnError`  =  `true`).  
+ Nell'esempio di codice seguente viene illustrato come aggiungere e rimuovere i gestori eventi. Il gestore dell'evento `RowUpdating` scrive un log di tutti i record eliminati con un timestamp. Il `RowUpdated` gestore eventi aggiunge `RowError` informazioni sull'errore `DataSet`alla proprietà della riga in , elimina `ContinueUpdateOnError`  =  `true`l'eccezione e continua l'elaborazione (mirroring del comportamento di ).  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection object.  
@@ -107,7 +107,7 @@ protected static void OnRowUpdating(
   {  
     System.IO.TextWriter tw = System.IO.File.AppendText("Deletes.log");  
     tw.WriteLine(  
-      "{0}: Customer {1} Deleted.", DateTime.Now,   
+      "{0}: Customer {1} Deleted.", DateTime.Now,
        args.Row["CustomerID", DataRowVersion.Original]);  
     tw.Close();  
   }  
@@ -178,7 +178,7 @@ protected static void FillError(object sender, FillErrorEventArgs args)
     DataRow myRow = args.DataTable.Rows.Add(new object[]  
        {args.Values[0], args.Values[1], DBNull.Value});  
     //Set the RowError containing the value for the third column.  
-    myRow.RowError =   
+    myRow.RowError =
        "OverflowException Encountered. Value from data source: " +  
        args.Values[2];  
     args.Continue = true;  
@@ -189,7 +189,7 @@ protected static void FillError(object sender, FillErrorEventArgs args)
 ## <a name="see-also"></a>Vedere anche
 
 - [DataAdapter e DataReader](dataadapters-and-datareaders.md)
-- [Gestione di eventi di set di dati](./dataset-datatable-dataview/handling-dataset-events.md)
+- [Gestione di eventi dataset](./dataset-datatable-dataview/handling-dataset-events.md)
 - [Gestione di eventi DataTable](./dataset-datatable-dataview/handling-datatable-events.md)
-- [Eventi](../../../standard/events/index.md)
+- [Events](../../../standard/events/index.md)
 - [Panoramica di ADO.NET](ado-net-overview.md)
