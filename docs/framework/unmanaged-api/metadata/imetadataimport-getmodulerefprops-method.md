@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b558e766-4c11-4628-ae47-b4e0a1800168
 topic_type:
 - apiref
-ms.openlocfilehash: dce9b9c20cbc73c6a70a34afa6c348c23164ed9e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f46033b9e643ef6b4a0063c4995b8c024b8c1f7e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437327"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175356"
 ---
 # <a name="imetadataimportgetmodulerefprops-method"></a>Metodo IMetaDataImport::GetModuleRefProps
 Ottiene il nome del modulo a cui fa riferimento il token di metadati specificato.  
@@ -30,31 +30,31 @@ Ottiene il nome del modulo a cui fa riferimento il token di metadati specificato
 ```cpp  
 HRESULT GetModuleRefProps (  
    [in]  mdModuleRef         mur,  
-   [out] LPWSTR              szName,   
-   [in]  ULONG               cchName,   
-   [out] ULONG               *pchName   
+   [out] LPWSTR              szName,
+   [in]  ULONG               cchName,
+   [out] ULONG               *pchName
 );  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `mur`  
- in Token di metadati ModuleRef che fa riferimento al modulo per il quale ottenere informazioni sui metadati.  
+ [in] Token di metadati ModuleRef che fa riferimento al modulo per cui ottenere informazioni sui metadati.  
   
  `szName`  
- out Un buffer in cui memorizzare il nome del modulo.  
+ [fuori] Un buffer per contenere il nome del modulo.  
   
  `cchName`  
- in Dimensioni richieste di `szName` in caratteri wide.  
+ [in] Dimensione richiesta `szName` di caratteri di tipo wide.  
   
  `pchName`  
- out Dimensioni restituite di `szName` in caratteri wide.  
+ [fuori] Dimensione restituita `szName` di caratteri di tipo wide.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Incluso come risorsa in MsCorEE. dll  
+ **Biblioteca:** Incluso come risorsa in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

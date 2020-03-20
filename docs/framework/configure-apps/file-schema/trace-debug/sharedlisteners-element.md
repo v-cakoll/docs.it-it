@@ -11,54 +11,54 @@ helpviewer_keywords:
 - trace listeners, <sharedListeners> element
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
-ms.openlocfilehash: b419ecf451b79808e545525c7b8761175f390200
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 69f15cc9583b397017ac30a0c567914495867c18
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699296"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153321"
 ---
-# <a name="sharedlisteners-element"></a>\<elemento > sharedListeners
-Contiene i listener a cui può fare riferimento qualsiasi origine o elemento di traccia.  Questi listener non ricevono alcuna traccia per impostazione predefinita e non è possibile recuperare questi listener in fase di esecuzione. I listener identificati come listener condivisi possono essere aggiunti alle origini o alle tracce in base al nome.  
+# <a name="sharedlisteners-element"></a>\<Elemento> sharedListeners
+Contiene i listener a cui può fare riferimento qualsiasi origine o elemento di traccia.  Questi listener non ricevono alcuna traccia per impostazione predefinita e non è possibile recuperarli in fase di esecuzione. I listener identificati come listener condivisi possono essere aggiunti alle origini o alle tracce in base al nome.  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<System. diagnostics >** ](system-diagnostics-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp; **\<sharedListeners >**  
+[**\<>di configurazione**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<>system.diagnostics**](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<>sharedListeners**  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-<sharedListeners>   
+<sharedListeners>
   <add>...</add>  
 </sharedListeners>  
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
- Le sezioni seguenti descrivono gli attributi, gli elementi figlio e gli elementi padre.  
+ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### <a name="attributes"></a>Attributi  
- Nessuno.  
+### <a name="attributes"></a>Attributes  
+ No.  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
-|Elemento|description|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<add>](add-element-for-listeners-for-trace.md)|Aggiunge un listener alla raccolta `sharedListeners`.|  
+|[\<aggiungere>](add-element-for-listeners-for-trace.md)|Aggiunge un listener alla raccolta `sharedListeners`.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|description|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |`Configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
 |`system.diagnostics`|Consente di specificare l'elemento radice per la sezione di configurazione ASP.NET.|  
   
 ## <a name="remarks"></a>Osservazioni  
- L'aggiunta di un listener alla raccolta di listener condivisi non lo rende un listener attivo. È comunque necessario aggiungerlo a un'origine di traccia o a una traccia aggiungendolo alla raccolta `Listeners` per tale elemento Trace. Le classi listener nel .NET Framework derivano dalla classe <xref:System.Diagnostics.TraceListener>.  
+ L'aggiunta di un listener alla raccolta di listener condivisi non lo rende un listener attivo. Deve comunque essere aggiunto a un'origine di `Listeners` traccia o a una traccia aggiungendola alla raccolta per tale elemento di traccia. Le classi listener in .NET <xref:System.Diagnostics.TraceListener> Framework derivano dalla classe .  
   
- Questo elemento può essere utilizzato nel file di configurazione del computer (Machine. config) e nel file di configurazione dell'applicazione.  
+ Questo elemento può essere utilizzato nel file di configurazione del computer (Machine.config) e nel file di configurazione dell'applicazione.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare l'elemento `<sharedListeners>` per aggiungere il listener `console` alla raccolta di `Listeners` sia per le classi <xref:System.Diagnostics.TraceSource> che <xref:System.Diagnostics.Trace>. Il listener di traccia della console scrive le informazioni di traccia nella console tramite chiamate a <xref:System.Diagnostics.TraceSource> o <xref:System.Diagnostics.Trace>.  
+ Nell'esempio seguente viene `<sharedListeners>` illustrato come utilizzare `console` l'elemento per aggiungere il listener alla `Listeners` raccolta per le classi <xref:System.Diagnostics.TraceSource> e <xref:System.Diagnostics.Trace> . Il listener di traccia della console scrive <xref:System.Diagnostics.TraceSource> le <xref:System.Diagnostics.Trace>informazioni di traccia nella console tramite chiamate a o .  
   
 ```xml  
 <configuration>  

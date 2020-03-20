@@ -15,54 +15,54 @@ helpviewer_keywords:
 ms.assetid: 1e994de6-4628-459c-b967-b34be1e9fe4f
 topic_type:
 - apiref
-ms.openlocfilehash: 5d985e22ba77053127610445374b8c13ca6b97f1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3b8fd9876563bace52a6088747d1ca4ed26ea872
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431700"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175811"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>Metodo IMetaDataEmit::DefineNestedType
-Crea la firma dei metadati di una definizione di tipo, restituisce un token di `mdTypeDef` per quel tipo e specifica che il tipo definito è un membro del tipo a cui fa riferimento il parametro `tdEncloser`.  
+Crea la firma dei metadati `mdTypeDef` di una definizione di tipo, restituisce un token per tale `tdEncloser` tipo e specifica che il tipo definito è un membro del tipo a cui fa riferimento il parametro.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
-HRESULT DefineNestedType (   
+HRESULT DefineNestedType (
     [in]  LPCWSTR     szTypeDef,  
-    [in]  DWORD       dwTypeDefFlags,   
-    [in]  mdToken     tkExtends,   
-    [in]  mdToken     rtkImplements[],   
-    [in]  mdTypeDef   tdEncloser,   
+    [in]  DWORD       dwTypeDefFlags,
+    [in]  mdToken     tkExtends,
+    [in]  mdToken     rtkImplements[],
+    [in]  mdTypeDef   tdEncloser,
     [out] mdTypeDef   *ptd  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `szTypeDef`  
- in Nome del tipo in Unicode.  
+ [in] Nome del tipo in Unicode.  
   
  `dwTypeDefFlags`  
- [in] attributi `TypeDef`. Si tratta di una maschera di maschera dei valori `CorTypeAttr`.  
+ [in] `TypeDef` attributi. Si tratta di `CorTypeAttr` una maschera di bit di valori.  
   
  `tkExtends`  
- in Token della classe di base. Si tratta di un token `mdTypeDef` o `mdTypeRef`.  
+ [in] Token della classe base. Si tratta `mdTypeDef` di `mdTypeRef` un o un token.  
   
  `rtkImplements`[]  
- in Matrice di token che specificano le interfacce implementate da questa classe o interfaccia.  
+ [in] Matrice di token che specificano le interfacce implementate da questa classe o interfaccia.  
   
  `tdEncloser`  
- in Token del tipo di inclusione. L'ultimo elemento della matrice deve essere `mdTokenNil`.  
+ [in] Token del tipo di inclusione. L'ultimo elemento della `mdTokenNil`matrice deve essere .  
   
  `ptd`  
- out Token `mdTypeDef` assegnato.  
+ [fuori] Token `mdTypeDef` assegnato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Usato come risorsa in MSCorEE. dll  
+ **Biblioteca:** Utilizzato come risorsa in MSCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

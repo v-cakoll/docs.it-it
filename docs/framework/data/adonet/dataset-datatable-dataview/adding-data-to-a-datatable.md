@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
-ms.openlocfilehash: 2a001ac8b3d4b8cd9618b3ced7bdf578ebae2e22
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 02d7f94259cc56513be404c5539ca7015d5f3533
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786590"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151533"
 ---
 # <a name="adding-data-to-a-datatable"></a>Aggiunta di dati a un oggetto DataTable
-Una volta creata una <xref:System.Data.DataTable> e definita la relativa struttura tramite colonne e vincoli, è possibile aggiungere nuove righe di dati alla tabella. Per aggiungere una nuova riga, dichiarare una nuova variabile come tipo <xref:System.Data.DataRow>. Quando si chiama il <xref:System.Data.DataTable.NewRow%2A> metodo, viene restituito un nuovo oggetto DataRow. Il **DataTable** crea quindi l'oggetto **DataRow** in base alla struttura della tabella, come <xref:System.Data.DataColumnCollection>definito da.  
+Una volta creata una <xref:System.Data.DataTable> e definita la relativa struttura tramite colonne e vincoli, è possibile aggiungere nuove righe di dati alla tabella. Per aggiungere una nuova riga, dichiarare una nuova variabile come tipo <xref:System.Data.DataRow>. Un nuovo **oggetto DataRow** viene restituito <xref:System.Data.DataTable.NewRow%2A> quando si chiama il metodo. Il **DataTable** crea quindi il **DataRow** oggetto in base alla <xref:System.Data.DataColumnCollection>struttura della tabella, come definito dal metodo .  
   
- Nell'esempio seguente viene illustrato come creare una nuova riga chiamando il metodo **NewRow** .  
+ Nell'esempio seguente viene illustrato come creare una nuova riga chiamando il **NewRow** metodo.  
   
 ```vb  
 Dim workRow As DataRow = workTable.NewRow()  
@@ -37,7 +37,7 @@ workRow["CustLName"] = "Smith";
 workRow[1] = "Smith";  
 ```  
   
- Dopo l'inserimento dei dati nella nuova riga, il metodo **Add** viene utilizzato per aggiungere la riga a <xref:System.Data.DataRowCollection>, illustrato nel codice seguente.  
+ Dopo l'inserimento dei dati **Add** nella nuova riga, il <xref:System.Data.DataRowCollection>Add metodo viene utilizzato per aggiungere la riga all'oggetto , illustrato nel codice seguente.  
   
 ```vb  
 workTable.Rows.Add(workRow)  
@@ -47,7 +47,7 @@ workTable.Rows.Add(workRow)
 workTable.Rows.Add(workRow);  
 ```  
   
- È anche possibile chiamare il metodo **Add** per aggiungere una nuova riga passando una matrice di valori, tipizzata come <xref:System.Object>, come illustrato nell'esempio seguente.  
+ È inoltre possibile chiamare il **metodo Add** per aggiungere una nuova riga <xref:System.Object>passando una matrice di valori, tipizzata come , come illustrato nell'esempio seguente.  
   
 ```vb  
 workTable.Rows.Add(new Object() {1, "Smith"})  
@@ -57,7 +57,7 @@ workTable.Rows.Add(new Object() {1, "Smith"})
 workTable.Rows.Add(new Object[] {1, "Smith"});  
 ```  
   
- Il passaggio di una matrice di valori, tipizzato come **oggetto**, al metodo **Add** crea una nuova riga all'interno della tabella e imposta i relativi valori di colonna sui valori nella matrice di oggetti. Notare che i valori contenuti nella matrice vengono associati in modo sequenziale alle colonne, in base all'ordine in cui sono presenti nella tabella.  
+ Il passaggio di una matrice di valori, tipizzata come **Object**, al metodo **Add** crea una nuova riga all'interno della tabella e ne imposta i valori di colonna sui valori nella matrice di oggetti. Notare che i valori contenuti nella matrice vengono associati in modo sequenziale alle colonne, in base all'ordine in cui sono presenti nella tabella.  
   
  Nell'esempio seguente vengono aggiunte 10 righe alla tabella **Customers** appena creata.  
   
@@ -76,7 +76,7 @@ Next
 ```csharp  
 DataRow workRow;  
   
-for (int i = 0; i <= 9; i++)   
+for (int i = 0; i <= 9; i++)
 {  
   workRow = workTable.NewRow();  
   workRow[0] = i;  

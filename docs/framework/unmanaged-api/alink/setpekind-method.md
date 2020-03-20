@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 050e77ee-3014-45c0-9e29-2ebe29347b0d
 topic_type:
 - apiref
-ms.openlocfilehash: dfbc10bdbe633450dee2e27524c29ead21fb739e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5a8442b1f0869e1592a05dfeeb0f5e6d583f3ea8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445543"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179381"
 ---
 # <a name="setpekind-method"></a>Metodo SetPEKind
-Determina il tipo di eseguibile portatile, specifico del computer o indipendente dal computer.  
+Determina il tipo di eseguibile portabile, specifico del computer o indipendente dal computer.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -32,7 +32,7 @@ HRESULT SetPEKind(
     mdToken FileToken,  
     DWORD dwPEKind,  
     DWORD dwMachine  
-) PURE;   
+) PURE;
 ```  
   
 ## <a name="parameters"></a>Parametri  
@@ -40,23 +40,23 @@ HRESULT SetPEKind(
  ID dell'assembly.  
   
  `FileToken`  
- Token del file per il quale deve essere impostato il tipo PE. Può essere NULL se `AssemblyID` non indica un netmodule non associato.  
+ Token del file per il quale deve essere impostato il tipo PE. Può essere `AssemblyID` NULL se non indica un netmodule non associato.  
   
  `dwPEKind`  
- Tipo di PE, come indicato dall' [enumerazione CorPEKind](../metadata/corpekind-enumeration.md).  
+ Tipo di PE, come indicato [dall'enumerazione CorPEKind](../metadata/corpekind-enumeration.md).  
   
  `dwMachine`  
- L'architettura del computer di destinazione, come indicato nell'intestazione NT.  
+ Architettura del computer di destinazione, come indicato nell'intestazione NT.  
   
 ## <a name="return-value"></a>Valore restituito  
  Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- Richiede ALink. h.  
+ Richiede alink.h.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Metodo GetPEKind](../metadata/imetadataimport2-getpekind-method.md)
 - [Interfaccia IALink2](ialink2-interface.md)
 - [Interfaccia IALink](ialink-interface.md)
-- [Alink (API)](index.md)
+- [API Alink](index.md)

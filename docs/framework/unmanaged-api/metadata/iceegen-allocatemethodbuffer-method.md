@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: 845ab77e-9639-47f5-99fb-f3b619e3e779
 topic_type:
 - apiref
-ms.openlocfilehash: 34636f1ca8e42c452aa41f6145d439a26f01b0a7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 38b9ea2ffab439f55f0a6d34d7f42c7669629168
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436400"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177919"
 ---
 # <a name="iceegenallocatemethodbuffer-method"></a>Metodo ICeeGen::AllocateMethodBuffer
-Crea un buffer con la dimensione specificata per un metodo e ottiene l'indirizzo virtuale relativo del metodo.  
+Crea un buffer della dimensione specificata per un metodo e ottiene l'indirizzo virtuale relativo del metodo.  
   
  Questo metodo è obsoleto e non deve essere utilizzato.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
-HRESULT AllocateMethodBuffer (   
-    [in]  ULONG    cchBuffer,   
+HRESULT AllocateMethodBuffer (
+    [in]  ULONG    cchBuffer,
     [out] UCHAR    **lpBuffer,  
     [out] ULONG    *RVA  
 );  
@@ -39,20 +39,20 @@ HRESULT AllocateMethodBuffer (
   
 ## <a name="parameters"></a>Parametri  
  `cchBuffer`  
- in Lunghezza del buffer da creare.  
+ [in] Lunghezza del buffer da creare.  
   
  `lpBuffer`  
- out Buffer restituito.  
+ [fuori] Buffer restituito.  
   
  `RVA`  
- out Indirizzo virtuale relativo del metodo.  
+ [fuori] Indirizzo virtuale relativo del metodo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Usato come risorsa in MsCorEE. dll  
+ **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

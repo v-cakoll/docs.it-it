@@ -11,12 +11,12 @@ helpviewer_keywords:
 - emitting dynamic assemblies,partial trust scenarios
 - dynamic assemblies, security
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
-ms.openlocfilehash: f04b40edde0755315f3b4fd4284fc7c804a54313
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 11eb4c9bc4ba1b1fe9051a04d12f893e693fb175
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130040"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180467"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Problemi di sicurezza nella reflection emit
 .NET Framework offre tre modalità per creare codice Microsoft Intermediate Language (MSIL), ciascuna con specifici problemi di sicurezza:  
@@ -32,9 +32,9 @@ ms.locfileid: "73130040"
 > [!NOTE]
 > Le autorizzazioni necessarie per la reflection sul codice e sul codice di creazione sono state modificate nelle versioni successive di .NET Framework. Vedere [Informazioni sulla versione](#Version_Information) più avanti in questo argomento.  
   
-<a name="Dynamic_Assemblies"></a>   
+<a name="Dynamic_Assemblies"></a>
 ## <a name="dynamic-assemblies"></a>Assembly dinamici  
- Gli assembly dinamici vengono creati usando gli overload del metodo <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>. La maggior parte degli overload di questo metodo sono deprecati in .NET Framework 4 a causa dell'eliminazione dei criteri di sicurezza a livello di computer. Vedere [modifiche della sicurezza](../security/security-changes.md). Gli overload rimanenti possono essere eseguiti da qualsiasi codice, indipendentemente dal livello di attendibilità. Questi overload rientrano in due gruppi: quelli che specificano un elenco di attributi da applicare all'assembly dinamico quando viene creato e quelli che non lo specificano. Se non si specifica il modello di trasparenza per l'assembly, applicando l'attributo <xref:System.Security.SecurityRulesAttribute> durante la creazione, il modello di trasparenza viene ereditato dall'assembly di creazione.  
+ Gli assembly dinamici vengono creati usando gli overload del metodo <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>. La maggior parte degli overload di questo metodo sono deprecati in .NET Framework 4 a causa dell'eliminazione dei criteri di sicurezza a livello di computer. (Vedere [Modifiche alla sicurezza](../security/security-changes.md). Gli overload rimanenti possono essere eseguiti da qualsiasi codice, indipendentemente dal livello di attendibilità. Questi overload rientrano in due gruppi: quelli che specificano un elenco di attributi da applicare all'assembly dinamico quando viene creato e quelli che non lo specificano. Se non si specifica il modello di trasparenza per l'assembly, applicando l'attributo <xref:System.Security.SecurityRulesAttribute> durante la creazione, il modello di trasparenza viene ereditato dall'assembly di creazione.  
   
 > [!NOTE]
 > Gli attributi applicati all'assembly dinamico dopo averlo creato mediante il metodo <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A> non sono effettivi fino a quando l'assembly non viene salvato su disco e caricato di nuovo in memoria.  
@@ -57,7 +57,7 @@ ms.locfileid: "73130040"
   
 - I simboli di debug non vengono generati. I set di autorizzazioni `Internet` e `LocalIntranet` non includono le autorizzazioni necessarie.  
   
-<a name="Anonymously_Hosted_Dynamic_Methods"></a>   
+<a name="Anonymously_Hosted_Dynamic_Methods"></a>
 ## <a name="anonymously-hosted-dynamic-methods"></a>Metodi dinamici ospitati anonimamente  
  I metodi dinamici ospitati anonimamente vengono creati usando i due costruttori <xref:System.Reflection.Emit.DynamicMethod> che non specificano un tipo o un modulo associato, <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%29> e <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%2CSystem.Boolean%29>. Questi costruttori inseriscono i metodi dinamici in un assembly fornito dal sistema, completamente attendibile, trasparente per la sicurezza. Non sono necessarie autorizzazioni per usare questi costruttori o per generare il codice per i metodi dinamici.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "73130040"
 > [!NOTE]
 > I metodi dinamici non supportano i simboli di debug.  
   
-<a name="Dynamic_Methods_Associated_with_Existing_Assemblies"></a>   
+<a name="Dynamic_Methods_Associated_with_Existing_Assemblies"></a>
 ## <a name="dynamic-methods-associated-with-existing-assemblies"></a>Metodi dinamici associati ad assembly esistenti  
  Per associare un metodo dinamico a un tipo o a un modulo in un assembly esistente, usare uno qualsiasi dei costruttori <xref:System.Reflection.Emit.DynamicMethod> che specificano il tipo o il modulo associato. Le autorizzazioni necessarie per chiamare questi costruttori variano, poiché l'associazione di un metodo dinamico a un tipo o a un modulo esistente fornisce al metodo dinamico l'accesso ai membri e ai tipi non pubblici:  
   
@@ -135,7 +135,7 @@ ms.locfileid: "73130040"
 > [!NOTE]
 > I metodi dinamici non supportano i simboli di debug.  
   
-<a name="Version_Information"></a>   
+<a name="Version_Information"></a>
 ## <a name="version-information"></a>Informazioni sulla versione  
  A partire da .NET Framework 4, i criteri di sicurezza a livello di computer vengono eliminati e la trasparenza della sicurezza diventa il meccanismo di imposizione predefinito. Vedere [Modifiche di sicurezza](../security/security-changes.md).  
   

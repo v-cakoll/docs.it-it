@@ -15,31 +15,31 @@ helpviewer_keywords:
 ms.assetid: 5eaf3b4a-92b7-4d5b-97e0-1e83721e0052
 topic_type:
 - apiref
-ms.openlocfilehash: 18fe0c834506d0ac4cd15fd7af4c4f15904b0f81
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 306c1748b4997309ee15fb7751bc818b0287aaf0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437579"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177261"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>Metodo IMetaDataImport::GetEventProps
-Ottiene le informazioni sui metadati per l'evento rappresentato dal token di evento specificato, inclusi il tipo dichiarante, i metodi di aggiunta e rimozione per i delegati e tutti i flag e altri dati associati.  
+Ottiene informazioni sui metadati per l'evento rappresentato dal token di evento specificato, inclusi il tipo dichiarante, i metodi di aggiunta e rimozione per i delegati ed eventuali flag e altri dati associati.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT GetEventProps (  
    [in]  mdEvent       ev,  
-   [out] mdTypeDef     *pClass,   
-   [out] LPCWSTR       szEvent,   
-   [in]  ULONG         cchEvent,   
-   [out] ULONG         *pchEvent,   
+   [out] mdTypeDef     *pClass,
+   [out] LPCWSTR       szEvent,
+   [in]  ULONG         cchEvent,
+   [out] ULONG         *pchEvent,
    [out] DWORD         *pdwEventFlags,  
    [out] mdToken       *ptkEventType,  
-   [out] mdMethodDef   *pmdAddOn,   
-   [out] mdMethodDef   *pmdRemoveOn,   
-   [out] mdMethodDef   *pmdFire,   
-   [out] mdMethodDef   rmdOtherMethod[],   
+   [out] mdMethodDef   *pmdAddOn,
+   [out] mdMethodDef   *pmdRemoveOn,
+   [out] mdMethodDef   *pmdFire,
+   [out] mdMethodDef   rmdOtherMethod[],
    [in]  ULONG         cMax,  
    [out] ULONG         *pcOtherMethod  
 );  
@@ -47,47 +47,47 @@ HRESULT GetEventProps (
   
 ## <a name="parameters"></a>Parametri  
  `ev`  
- in Token di metadati dell'evento che rappresenta l'evento per il quale ottenere i metadati.  
+ [in] Token dei metadati dell'evento che rappresenta l'evento per cui ottenere i metadati.  
   
  `pClass`  
- out Puntatore al token TypeDef che rappresenta la classe che dichiara l'evento.  
+ [fuori] Puntatore al token TypeDef che rappresenta la classe che dichiara l'evento.  
   
  `szEvent`  
- out Nome dell'evento a cui fa riferimento `ev`.  
+ [fuori] Nome dell'evento a `ev`cui fa riferimento .  
   
  `pchEvent`  
- in Lunghezza richiesta in caratteri wide di `szEvent`.  
+ [in] Lunghezza richiesta in caratteri `szEvent`di tipo "wide" di .  
   
  `pdwEventFlags`  
- out Lunghezza restituita in caratteri wide di `szEvent`.  
+ [fuori] Lunghezza restituita in caratteri `szEvent`di tipo "wide" di .  
   
  `ptkEventType`  
- out Puntatore a un token di metadati TypeRef o TypeDef che rappresenta il tipo <xref:System.Delegate> dell'evento.  
+ [fuori] Puntatore a un token di metadati <xref:System.Delegate> TypeRef o TypeDef che rappresenta il tipo dell'evento.  
   
  `pmdAddOn`  
- out Puntatore al token di metadati che rappresenta il metodo che aggiunge gestori per l'evento.  
+ [fuori] Puntatore al token di metadati che rappresenta il metodo che aggiunge gestori per l'evento.  
   
  `pmdRemoveOn`  
- out Puntatore al token di metadati che rappresenta il metodo che rimuove i gestori per l'evento.  
+ [fuori] Puntatore al token di metadati che rappresenta il metodo che rimuove i gestori per l'evento.  
   
  `pmdFire`  
- out Puntatore al token di metadati che rappresenta il metodo che genera l'evento.  
+ [fuori] Puntatore al token di metadati che rappresenta il metodo che genera l'evento.  
   
  `rmdOtherMethod`  
- out Matrice di puntatori del token ad altri metodi associati all'evento.  
+ [fuori] Matrice di puntatori token ad altri metodi associati all'evento.  
   
  `cMax`  
  [in] Dimensione massima della matrice `rmdOtherMethod`.  
   
  `pcOtherMethod`  
- out Numero di token restituiti in `rmdOtherMethod`.  
+ [fuori] Numero di token restituiti `rmdOtherMethod`in .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Incluso come risorsa in MsCorEE. dll  
+ **Biblioteca:** Incluso come risorsa in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

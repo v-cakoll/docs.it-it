@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2b94bda7-09ee-435d-91b9-c4e31af1896c
 topic_type:
 - apiref
-ms.openlocfilehash: c4b01b2c346d3173b2a5ecc144474d7fb1e6dce5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e23133176cbd703a58c92f9bf1ead530b0bbb8a8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138978"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178504"
 ---
 # <a name="icordebugstringvaluegetstring-method"></a>Metodo ICorDebugStringValue::GetString
 Ottiene la stringa a cui fa riferimento questo ICorDebugStringValue.  
@@ -31,7 +31,7 @@ Ottiene la stringa a cui fa riferimento questo ICorDebugStringValue.
 HRESULT GetString (  
     [in] ULONG32    cchString,  
     [out] ULONG32   *pcchString,  
-    [out, size_is(cchString), length_is(*pcchString)]   
+    [out, size_is(cchString), length_is(*pcchString)]
         WCHAR       szString[]  
 );  
 ```  
@@ -41,10 +41,10 @@ HRESULT GetString (
  [in] Dimensione della matrice `szString`.  
   
  `pcchString`  
- out Puntatore al numero di caratteri restituiti nella matrice `szString`.  
+ [fuori] Puntatore al numero di caratteri `szString` restituiti nella matrice.  
   
  `szString`  
- out Matrice che archivia la stringa recuperata.  
+ [fuori] Matrice in cui viene archiviata la stringa recuperata.  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  

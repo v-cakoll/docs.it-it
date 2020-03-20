@@ -2,12 +2,12 @@
 title: '|| (OR) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 8e649648-eb9a-4380-9d74-36e62260628c
-ms.openlocfilehash: 6437b17fe1c1277701f06988ef6c02f4caf70e62
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 8c93e68095a0e0ff63532f53152f166d6c3d047c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319466"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150093"
 ---
 # <a name="-or-entity-sql"></a>|| (OR) (Entity SQL)
 Combina due espressioni `Boolean` .  
@@ -16,29 +16,29 @@ Combina due espressioni `Boolean` .
   
 ```sql  
 boolean_expression OR boolean_expression  
--- or   
+-- or
 boolean_expression || boolean_expression  
 ```  
   
-## <a name="arguments"></a>argomenti  
+## <a name="arguments"></a>Argomenti  
  `boolean_expression`  
  Qualsiasi espressione valida che restituisce un valore `Boolean`.  
   
 ## <a name="return-value"></a>Valore restituito  
  `true` se una delle condizioni è `true`; in caso contrario `false`.  
   
-## <a name="remarks"></a>Note  
- OR è un operatore logico [!INCLUDE[esql](../../../../../../includes/esql-md.md)] usato per combinare due condizioni. Quando in un'istruzione si usa più di un operatore logico, gli operatori OR vengono valutati dopo gli operatori AND. È tuttavia possibile modificare l'ordine di valutazione tramite l'uso delle parentesi.  
+## <a name="remarks"></a>Osservazioni  
+ OR è un operatore logico [!INCLUDE[esql](../../../../../../includes/esql-md.md)] usato per combinare due condizioni. Quando un'istruzione include più operatori logici, gli operatori OR vengono valutati dopo gli operatori AND. È tuttavia possibile modificare l'ordine di valutazione tramite l'utilizzo delle parentesi.  
   
- La doppia barra verticale&#124;&#124;() ha la stessa funzionalità dell'operatore o.  
+ Le barre verticali doppie (&#124;&#124;) hanno la stessa funzionalità dell'operatore OR.  
   
  Nella tabella seguente sono inclusi i possibili valori di input e i tipi restituiti.  
   
 ||`TRUE`|`FALSE`|`NULL`|  
 |-|------------|-------------|------------|  
-|`TRUE`|true|true|true|  
-|`FALSE`|true|false|NULL|  
-|`NULL`|true|NULL|NULL|  
+|`TRUE`|TRUE|TRUE|TRUE|  
+|`FALSE`|TRUE|FALSE|NULL|  
+|`NULL`|TRUE|NULL|NULL|  
   
 ## <a name="example"></a>Esempio  
  Nella query Entity SQL seguente viene usato l'operatore OR per combinare due espressioni `Boolean` . La query è basata sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:  

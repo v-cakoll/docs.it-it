@@ -11,21 +11,21 @@ helpviewer_keywords:
 - logs, trace
 - destination for tracing output
 ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
-ms.openlocfilehash: 62a24e45339b93af2c62db440f0611f16705116d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 61ffd422463ca70cc34c39dd216ce8e660809dcb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048533"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180886"
 ---
 # <a name="enabling-network-tracing"></a>Abilitazione della traccia di rete
 La funzionalità di traccia di rete consente di accedere alle informazioni sulle chiamate ai metodi e sul traffico di rete generato da un'applicazione gestita. È necessario completare le attività seguenti per abilitare la traccia di rete nell'applicazione:  
   
-- Compilare il codice con la traccia abilitata. Vedere [Procedura: Compilare in modo condizionale con traccia e debug](../debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md) per altre informazioni sulle opzioni del compilatore necessarie per abilitare la traccia.  
+- Compilare il codice con la traccia abilitata. Per altre informazioni sulle opzioni del compilatore necessarie per abilitare la traccia, vedere [Procedura: compilare in modo condizionale con traccia e debug](../debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md).  
   
 - Specificare una destinazione per l'output di traccia.  
   
-- Configurare il comportamento della traccia di rete. Vedere [Procedura: Configurare la traccia di rete](how-to-configure-network-tracing.md) per informazioni dettagliate.  
+- Configurare il comportamento della traccia di rete. Per informazioni dettagliate, vedere [Procedura: Configurare la traccia di rete](how-to-configure-network-tracing.md).  
   
  Le destinazioni di traccia più comuni, dette anche listener di traccia, sono il listener predefinito e il file di log.  
   
@@ -40,7 +40,7 @@ La funzionalità di traccia di rete consente di accedere alle informazioni sulle
   <trace autoflush="true" indentsize="4">  
     <listeners>  
       <add name="file" type="System.Diagnostics.TextWriterTraceListener" initializeData="trace.log"/>  
-    </listeners>   
+    </listeners>
   </trace>  
 </system.diagnostics>  
 ```  

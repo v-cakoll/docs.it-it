@@ -1,5 +1,5 @@
 ---
-title: Cenni preliminari sull'uso dei controlli
+title: Panoramica dell'utilizzo dei controlli
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,24 +9,24 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
-ms.openlocfilehash: ca8b9fab3c53e256792faf0969b5066d5e35f6c7
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: bcd0e81b730c2fc7b741662ae803633de4f6199e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744356"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141731"
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>Cenni preliminari sull'utilizzo di controlli in Windows Form
-In questo argomento vengono descritti gli elementi essenziali di un Windows Forms Application e viene fornito un semplice esempio in cui vengono utilizzati i controlli e vengono gestiti gli eventi in una Windows Forms Application.  
+In questo argomento vengono descritti gli elementi essenziali di un'applicazione Windows Form e viene fornito un semplice esempio che utilizza i controlli e gestisce gli eventi in un'applicazione Windows Form.This topic describes the essential elements of a Windows Forms application and provides a simple example that uses controls and handles events in a Windows Forms application.  
   
-## <a name="simple-windows-forms-applications"></a>Applicazioni Windows Forms semplici  
- Come minimo, un Windows Forms Application è costituito dagli elementi seguenti:  
+## <a name="simple-windows-forms-applications"></a>Applicazioni Windows Form semplici  
+ Come minimo, un'applicazione Windows Form è costituita dai seguenti elementi:  
   
-- Una o più classi che derivano da <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.  
+- Una o più classi <xref:System.Windows.Forms.Form?displayProperty=nameWithType>che derivano da .  
   
-- Metodo `Main` che richiama il metodo di <xref:System.Windows.Forms.Application.Run%2A> `static` (`shared` in Visual Basic) e passa un'istanza di <xref:System.Windows.Forms.Form>. Il metodo <xref:System.Windows.Forms.Application.Run%2A> elabora i messaggi dal sistema operativo all'applicazione.  
+- Metodo `Main` che richiama `static` il`shared` metodo ( <xref:System.Windows.Forms.Application.Run%2A> in Visual <xref:System.Windows.Forms.Form> Basic) e vi passa un'istanza. Il <xref:System.Windows.Forms.Application.Run%2A> metodo elabora i messaggi dal sistema operativo all'applicazione.  
   
- Nell'esempio di codice seguente vengono illustrati gli elementi essenziali di un Windows Forms Application.  
+ Nell'esempio di codice riportato di seguito vengono illustrati gli elementi essenziali di un'applicazione Windows Form.The following code example shows the essential elements of a Windows Forms application.  
   
 ```vb  
 Option Explicit  
@@ -45,8 +45,8 @@ Public Class MyForm
    <STAThread()> _  
    Public Shared Sub Main()  
       Dim aform As New MyForm()  
-      ' The Application.Run method processes messages from the operating system   
-      ' to your application. If you comment out the next line of code,   
+      ' The Application.Run method processes messages from the operating system
+      ' to your application. If you comment out the next line of code,
       ' your application will compile and execute, but because it is not in the  
       ' message loop, it will exit after an instance of the form is created.  
       Application.Run(aform)  
@@ -66,16 +66,16 @@ public class MyForm : Form {
    [STAThread]  
    public static void Main(string[] args) {  
      MyForm aform = new MyForm();  
-// The Application.Run method processes messages from the operating system   
-// to your application. If you comment out the next line of code,   
+// The Application.Run method processes messages from the operating system
+// to your application. If you comment out the next line of code,
 // your application will compile and execute, but because it is not in the // message loop, it will exit after an instance of the form is created.  
       Application.Run(aform);  
    }  
 }  
 ```  
   
-## <a name="using-controls-in-a-windows-forms-application"></a>Uso di controlli in un'applicazione Windows Forms  
- Nell'esempio di codice seguente viene illustrata una semplice applicazione che illustra il modo in cui le applicazioni Windows Forms utilizzano i controlli e gestiscono gli eventi. L'esempio è costituito da tre pulsanti in un form; Quando si fa clic su ogni pulsante, viene modificato il colore di sfondo.  
+## <a name="using-controls-in-a-windows-forms-application"></a>Utilizzo di controlli in un'applicazione Windows FormUsing Controls in a Windows Forms Application  
+ Nell'esempio di codice riportato di seguito viene illustrata una semplice applicazione che illustra come le applicazioni Windows Form utilizzano i controlli e gestiscono gli eventi. L'esempio è costituito da tre pulsanti in un form; ogni pulsante cambia il colore di sfondo quando si fa clic.  
   
 ```vb  
 Option Explicit  
@@ -101,9 +101,9 @@ Public Class MyForm
       MyBase.Dispose(disposing)  
    End Sub  
   
-   ' InitializeComponent is a helper method for the constructor.   
-   ' It is included for consistency with code that is   
-   ' auto-generated by the Windows Forms designer in Visual Studio.   
+   ' InitializeComponent is a helper method for the constructor.
+   ' It is included for consistency with code that is
+   ' auto-generated by the Windows Forms designer in Visual Studio.
    Private Sub InitializeComponent()  
   
       ' Creates three buttons, sets their properties, and attaches  
@@ -140,7 +140,7 @@ Public Class MyForm
          Else  
             Me.BackColor = Color.Green  
          End If  
-      End If   
+      End If
    End Sub  
   
    ' The STAThreadAttribute informs the common language runtime that  
@@ -164,21 +164,21 @@ public class MyForm : Form {
    private Button blue;  
    private Button green;  
   
-   public MyForm() : base() {     
-      InitializeComponent();     
+   public MyForm() : base() {
+      InitializeComponent();
    }  
   
    protected override void Dispose(bool disposing) {  
       base.Dispose(disposing);  
    }  
   
-// InitializeComponent is a helper method for the constructor.   
-// It is included for consistency with code that is   
-// auto-generated by the Windows Forms designer in Visual Studio.   
+// InitializeComponent is a helper method for the constructor.
+// It is included for consistency with code that is
+// auto-generated by the Windows Forms designer in Visual Studio.
    private void InitializeComponent() {  
   
-// A delegate for the click event of a button. The argument to   
-// the constructor contains a reference to the method that performs the   
+// A delegate for the click event of a button. The argument to
+// the constructor contains a reference to the method that performs the
 // event handling logic.  
       EventHandler handler = new EventHandler(button_Click);  
   
@@ -204,7 +204,7 @@ public class MyForm : Form {
       green.Location = new Point(100, 150);  
       green.Size = new Size(50, 50);  
       green.Click += handler;  
-      Controls.Add(green);        
+      Controls.Add(green);
       }  
   
    // Event handler.  

@@ -5,25 +5,25 @@ helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-ms.openlocfilehash: 4f9c2700d8163988b7ea1e75bec1427778cf571c
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 7281ca6d76f0d2ffb5020feba236b4e4cf948bdd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004898"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141588"
 ---
 # <a name="localization-attributes-and-comments"></a>Attributi e commenti di localizzazione
-i commenti di localizzazione [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sono proprietà, all'interno del codice sorgente XAML, fornite dagli sviluppatori per fornire regole e suggerimenti per la localizzazione. I commenti di localizzazione [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] contengono due set di informazioni: attributi di localizzabilità e commenti di localizzazione in formato libero. Gli attributi di localizzabilità vengono usati dall'API di localizzazione di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] per indicare le risorse da localizzare. I commenti in formato libero comprendono tutte le informazioni che l'autore dell'applicazione vuole includere.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]I commenti di localizzazione sono proprietà, all'interno del codice sorgente XAML, fornite dagli sviluppatori per fornire regole e suggerimenti per la localizzazione. I commenti di localizzazione [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] contengono due set di informazioni: attributi di localizzabilità e commenti di localizzazione in formato libero. Gli attributi di localizzabilità vengono usati dall'API di localizzazione di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] per indicare le risorse da localizzare. I commenti in formato libero comprendono tutte le informazioni che l'autore dell'applicazione vuole includere.  
 
-<a name="Localizer_Comments_"></a>   
+<a name="Localizer_Comments_"></a>
 ## <a name="localization-comments"></a>Commenti di localizzazione  
- Se gli autori dell'applicazione di markup hanno requisiti per elementi specifici in XAML, ad esempio vincoli sulla lunghezza del testo, la famiglia di caratteri o la dimensione del carattere, possono inviare tali informazioni ai localizzatori con commenti nel codice XAML. Il processo di aggiunta di commenti al codice sorgente è il seguente:  
+ Se gli autori di applicazioni di markup hanno requisiti per elementi specifici in XAML, ad esempio vincoli sulla lunghezza del testo, la famiglia di caratteri o la dimensione del carattere, possono trasmettere queste informazioni ai localizzatori con commenti nel codice XAML. Il processo di aggiunta di commenti al codice sorgente è il seguente:  
   
-1. Lo sviluppatore di applicazioni aggiunge commenti di localizzazione al codice sorgente XAML.  
+1. Lo sviluppatore dell'applicazione aggiunge commenti di localizzazione al codice sorgente XAML.  
   
 2. Durante il processo di compilazione, nel file con estensione proj è possibile specificare se mantenere i commenti di localizzazione in formato libero nell'assembly, se rimuoverne una parte o se rimuoverli tutti. I commenti rimossi vengono inseriti in un file separato. Per indicare la scelta si usa un tag `LocalizationDirectivesToLocFile`, ad esempio:  
   
-     `<LocalizationDirectivesToLocFile>` *valore* `</LocalizationDirectivesToLocFile>`  
+     `<LocalizationDirectivesToLocFile>`*valore*`</LocalizationDirectivesToLocFile>`  
   
 3. I valori che è possibile assegnare sono:  
   
@@ -74,7 +74,7 @@ i commenti di localizzazione [!INCLUDE[TLA#tla_winclient](../../../../includes/t
   
  Sono disponibili tre tipi di attributi:  
   
-- **Category**. Specifica se un valore può essere modificato con uno strumento del localizzatore. Vedere <xref:System.Windows.LocalizabilityAttribute.Category%2A>.  
+- **Categoria**. Specifica se un valore può essere modificato con uno strumento del localizzatore. Vedere <xref:System.Windows.LocalizabilityAttribute.Category%2A>.  
   
 - **Leggibilità**. Specifica se uno strumento del localizzatore deve essere in grado di leggere (e visualizzare) un valore. Vedere <xref:System.Windows.LocalizabilityAttribute.Readability%2A>.  
   
@@ -82,7 +82,7 @@ i commenti di localizzazione [!INCLUDE[TLA#tla_winclient](../../../../includes/t
   
  Questi attributi possono essere specificati in qualsiasi ordine e devono essere delimitati da uno spazio. Nel caso in cui vengano specificati attributi duplicati, l'ultimo sostituisce i precedenti. Ad esempio, Localization.Attributes = "Unmodifiable Modifiable" imposta Modifiability su Modifiable poiché questo è l'ultimo valore.  
   
- Gli attributi Modifiability e Readability sono di facile comprensione. L'attributo Category fornisce categorie predefinite che supportano il localizzatore nella traduzione del testo. Categorie quali Text, Label e Title offrono al localizzatore informazioni sulla modalità di traduzione del testo. Sono disponibili anche categorie speciali: None, inherit, ignore e NeverLocalize.  
+ Gli attributi Modifiability e Readability sono di facile comprensione. L'attributo Category fornisce categorie predefinite che supportano il localizzatore nella traduzione del testo. Categorie quali Text, Label e Title offrono al localizzatore informazioni sulla modalità di traduzione del testo. Sono disponibili anche categorie speciali: None, Inherit, Ignore e NeverLocalize.  
   
  La tabella seguente illustra il significato delle categorie speciali.  
   
@@ -93,13 +93,13 @@ i commenti di localizzazione [!INCLUDE[TLA#tla_winclient](../../../../includes/t
 |Ignora|Il valore di destinazione viene ignorato nel processo di localizzazione. Questa categoria influisce solo sul valore corrente e non sui nodi figlio.|  
 |NeverLocalize|Il valore corrente non può essere localizzato. Questa categoria viene ereditata dagli elementi figlio di un elemento.|  
   
-<a name="Localization_Comments"></a>   
+<a name="Localization_Comments"></a>
 ## <a name="localization-comments"></a>Commenti di localizzazione  
  La sezione Localization.Comments contiene le stringhe in formato libero relative al valore di destinazione. Gli sviluppatori dell'applicazione possono aggiungere informazioni per offrire ai localizzatori suggerimenti sulla modalità di traduzione del testo delle applicazioni. Il formato dei commenti può essere una qualsiasi stringa racchiusa tra "()". Usare '\\' come carattere di escape.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Globalizzazione per WPF](globalization-for-wpf.md)
-- [Utilizzare un layout automatico per creare un pulsante](how-to-use-automatic-layout-to-create-a-button.md)
+- [Usare il layout automatico per creare un pulsante](how-to-use-automatic-layout-to-create-a-button.md)
 - [Usare una griglia per il layout automatico](how-to-use-a-grid-for-automatic-layout.md)
-- [Localizzare un'applicazione](how-to-localize-an-application.md)
+- [Localizzare un'applicazioneLocalize an Application](how-to-localize-an-application.md)

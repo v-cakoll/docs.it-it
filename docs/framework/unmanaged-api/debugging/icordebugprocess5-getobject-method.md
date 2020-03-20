@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c8111502-5a20-447f-9dc2-76e8acd7ed5a
 topic_type:
 - apiref
-ms.openlocfilehash: 540ca78c5548d4fbdd3338671ea02314736f15cd
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4b48132ee60bcaebb218d8f583de6558372f5055
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792358"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178600"
 ---
 # <a name="icordebugprocess5getobject-method"></a>Metodo ICorDebugProcess5::GetObject
 Converte un indirizzo di oggetto in un oggetto "ICorDebugObjectValue".  
@@ -29,29 +29,29 @@ Converte un indirizzo di oggetto in un oggetto "ICorDebugObjectValue".
   
 ```cpp  
 HRESULT GetObject(  
-    [in] CORDB_ADDRESS addr,   
+    [in] CORDB_ADDRESS addr,
     [out] ICorDebugObjectValue **ppObject  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `addr`  
- in Indirizzo dell'oggetto.  
+ [in] Indirizzo dell'oggetto.  
   
  `ppObject`  
- out Puntatore all'indirizzo di un oggetto "ICorDebugObjectValue".  
+ [fuori] Puntatore all'indirizzo di un oggetto "ICorDebugObjectValue".  
   
-## <a name="remarks"></a>Note  
- Se `addr` non punta a un oggetto gestito valido, il metodo `GetObject` restituisce `E_FAIL`.  
+## <a name="remarks"></a>Osservazioni  
+ Se `addr` non punta a un oggetto `GetObject` gestito `E_FAIL`valido, il metodo restituisce .  
   
-## <a name="requirements"></a>Requisiti di  
+## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

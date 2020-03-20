@@ -2,12 +2,12 @@
 title: Gestione della concorrenza con DependentTransaction
 ms.date: 03/30/2017
 ms.assetid: b85a97d8-8e02-4555-95df-34c8af095148
-ms.openlocfilehash: 8de7cc6257317ff7128f25968a9dcf80ae5af89d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a8ddcab4b065c3400f9f9f7ec9ce04befdd0f29b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040426"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174381"
 ---
 # <a name="managing-concurrency-with-dependenttransaction"></a>Gestione della concorrenza con DependentTransaction
 Il metodo <xref:System.Transactions.Transaction> consente di clonare un oggetto <xref:System.Transactions.Transaction.DependentClone%2A>. L'unico scopo di questo metodo è impedire il commit della transazione mentre altri blocchi di codice (ad esempio un thread di lavoro) stanno agendo su di essa. Quando le operazioni eseguite all'interno della transazione clonata sono state completate e il sistema è pronto ad eseguirne il commit, la transazione clonata può utilizzare il metodo <xref:System.Transactions.DependentTransaction.Complete%2A> per informare il creatore della transazione originale in merito. In questo modo è possibile preservare la coerenza e la correttezza dei dati.  
@@ -31,33 +31,33 @@ public class WorkerThread
     public void DoWork(DependentTransaction dependentTransaction)  
     {  
         Thread thread = new Thread(ThreadMethod);  
-        thread.Start(dependentTransaction);   
+        thread.Start(dependentTransaction);
     }  
   
-    public void ThreadMethod(object transaction)   
-    {   
+    public void ThreadMethod(object transaction)
+    {
         DependentTransaction dependentTransaction = transaction as DependentTransaction;  
-        Debug.Assert(dependentTransaction != null);   
+        Debug.Assert(dependentTransaction != null);
         try  
         {  
             using(TransactionScope ts = new TransactionScope(dependentTransaction))  
             {  
-                /* Perform transactional work here */   
+                /* Perform transactional work here */
                 ts.Complete();  
             }  
         }  
         finally  
         {  
-            dependentTransaction.Complete();   
-             dependentTransaction.Dispose();   
+            dependentTransaction.Complete();
+             dependentTransaction.Dispose();
         }  
     }  
   
-//Client code   
+//Client code
 using(TransactionScope scope = new TransactionScope())  
 {  
     Transaction currentTransaction = Transaction.Current;  
-    DependentTransaction dependentTransaction;      
+    DependentTransaction dependentTransaction;
     dependentTransaction = currentTransaction.DependentClone(DependentCloneOption.BlockCommitUntilComplete);  
     WorkerThread workerThread = new WorkerThread();  
     workerThread.DoWork(dependentTransaction);  
@@ -70,7 +70,7 @@ using(TransactionScope scope = new TransactionScope())
   
  Il metodo `ThreadMethod` viene eseguito nel nuovo thread. Il client avvia un nuovo thread, passando la transazione dipendente come parametro `ThreadMethod`.  
   
- Poiché la transazione dipendente viene creata con il valore <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete>, il commit della transazione può avvenire solo dopo il completamento di tutte le operazioni transazionali nel secondo thread e dopo che il metodo <xref:System.Transactions.DependentTransaction.Complete%2A> sia stato chiamato sulla transazione dipendente. Ciò implica che se l'ambito client termina (quando il client tenta di eliminare l'oggetto di transazione al termine dell'istruzione `using`) prima che il nuovo thread chiami il metodo <xref:System.Transactions.DependentTransaction.Complete%2A> sulla transazione dipendente, il codice client si blocca finché il metodo <xref:System.Transactions.DependentTransaction.Complete%2A> non viene chiamato sulla transazione dipendente. A questo punto, la transazione può concludere la procedura di commit o di interruzione.  
+ Poiché la transazione dipendente viene creata con il valore <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete>, il commit della transazione può avvenire solo dopo il completamento di tutte le operazioni transazionali nel secondo thread e dopo che il metodo <xref:System.Transactions.DependentTransaction.Complete%2A> sia stato chiamato sulla transazione dipendente. Ciò significa che se l'ambito del client termina (quando tenta di `using` eliminare l'oggetto <xref:System.Transactions.DependentTransaction.Complete%2A> transazione alla fine dell'istruzione) prima che il nuovo thread chiami la transazione dipendente, il codice client si blocca fino a quando viene <xref:System.Transactions.DependentTransaction.Complete%2A> chiamato sul dipendente. A questo punto, la transazione può concludere la procedura di commit o di interruzione.  
   
 ## <a name="concurrency-issues"></a>Problemi di concorrenza  
  Quando si utilizza la classe <xref:System.Transactions.DependentTransaction> occorre prendere in considerazione alcuni problemi di concorrenza aggiuntivi:  

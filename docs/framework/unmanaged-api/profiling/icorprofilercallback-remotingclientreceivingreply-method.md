@@ -15,47 +15,47 @@ helpviewer_keywords:
 ms.assetid: 15cfc300-8231-4ecb-9a04-19851c3eb484
 topic_type:
 - apiref
-ms.openlocfilehash: 62973a36e899b1a8c618888e5245bfc00d8ad777
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: f7a943627e2087e6b8c78ced9fc32824843d44fc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866066"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175135"
 ---
 # <a name="icorprofilercallbackremotingclientreceivingreply-method"></a>Metodo ICorProfilerCallback::RemotingClientReceivingReply
-Notifica al profiler che la parte lato server di una chiamata remota è stata completata e che il client sta ricevendo e sta per elaborare la risposta.  
+Notifica al profiler che la parte lato server di una chiamata remota è stata completata e che il client sta ora ricevendo e sta per elaborare la risposta.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT RemotingClientReceivingReply(  
     [in] GUID *pCookie,  
-    [in] BOOL fIsAsync);   
+    [in] BOOL fIsAsync);
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `pCookie`  
- in Valore che corrisponderà al valore fornito in [ICorProfilerCallback:: RemotingServerSendingReply](icorprofilercallback-remotingserversendingreply-method.md) in queste condizioni:  
+ [in] Valore che corrisponderà al valore fornito in [ICorProfilerCallback::RemotingServerSendingReply](icorprofilercallback-remotingserversendingreply-method.md) nelle condizioni seguenti:  
   
-- I cookie GUID di comunicazione remota sono attivi.  
+- I cookie GUID remoti sono attivi.  
   
 - Il canale riesce a trasmettere il messaggio.  
   
-- I cookie GUID sono attivi sul processo sul lato server.  
+- I cookie GUID sono attivi nel processo lato server.  
   
- In questo modo è possibile associare agevolmente le chiamate remote.  
+ Ciò consente un facile accoppiamento delle chiamate remote.  
   
  `fIsAsync`  
- in Valore `true` se la chiamata è asincrona. in caso contrario, `false`.  
+ [in] Valore che `true` è se la chiamata è asincrona; in `false`caso contrario, .  
   
-## <a name="requirements"></a>Requisiti di  
+## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

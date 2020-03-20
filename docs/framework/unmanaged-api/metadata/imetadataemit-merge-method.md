@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7596220c-f699-4b6c-8ae7-c83220610650
 topic_type:
 - apiref
-ms.openlocfilehash: 06894f238f9fda3111d5484bb1b2add183a5abb2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 759358822ed865c89f6f55084d1e7f6143506e93
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448064"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175707"
 ---
 # <a name="imetadataemitmerge-method"></a>Metodo IMetaDataEmit::Merge
 Aggiunge l'ambito importato specificato all'elenco di ambiti da unire.  
@@ -28,32 +28,32 @@ Aggiunge l'ambito importato specificato all'elenco di ambiti da unire.
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
-HRESULT Merge (   
-    [in]  IMetaDataImport  *pImport,   
-    [in]  IMapToken        *pHostMapToken,   
-    [in]  IUnknown         *pHandler   
+HRESULT Merge (
+    [in]  IMetaDataImport  *pImport,
+    [in]  IMapToken        *pHostMapToken,
+    [in]  IUnknown         *pHandler
 );  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `pImport`  
- in Puntatore a un oggetto [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) che identifica l'ambito importato da unire.  
+ [in] Puntatore a un oggetto [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) che identifica l'ambito importato da unire.  
   
  `pIMap`  
- in Puntatore a un oggetto [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) che specifica il mapping di nuovo token.  
+ [in] Puntatore a un oggetto [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) che specifica il nuovo mapping del token.  
   
  `pHandler`  
- in Puntatore a un oggetto [IUnknown](/cpp/atl/iunknown) che specifica gli errori.  
+ [in] Puntatore a un oggetto [IUnknown](/cpp/atl/iunknown) che specifica gli errori.  
   
-## <a name="remarks"></a>Note  
- Chiamare [IMetaDataEmit:: MergeEnd](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md) per attivare l'Unione dei metadati in un singolo ambito.  
+## <a name="remarks"></a>Osservazioni  
+ Chiamare [IMetaDataEmit::MergeEnd](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md) per attivare la fusione dei metadati in un singolo ambito.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Usato come risorsa in MSCorEE. dll  
+ **Biblioteca:** Utilizzato come risorsa in MSCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

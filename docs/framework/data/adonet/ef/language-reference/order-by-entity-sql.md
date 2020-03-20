@@ -2,12 +2,12 @@
 title: ORDER BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c0b61572-ecee-41eb-9d7f-74132ec8a26c
-ms.openlocfilehash: 2010ef9d6fe37e65824cac877074453db1b789db
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 1233971b172079aa48227d0ec520068afbdf0952
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319437"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150069"
 ---
 # <a name="order-by-entity-sql"></a>ORDER BY (Entity SQL)
 Specifica il tipo di ordinamento usato per gli oggetti restituiti in un'istruzione SELECT.  
@@ -15,17 +15,17 @@ Specifica il tipo di ordinamento usato per gli oggetti restituiti in un'istruzio
 ## <a name="syntax"></a>Sintassi  
   
 ```sql  
-[ ORDER BY   
+[ ORDER BY
    {  
       order_by_expression [SKIP n] [LIMIT n]  
       [ COLLATE collation_name ]  
       [ ASC | DESC ]  
    }  
-   [ ,…n ]   
+   [ ,…n ]
 ]  
 ```  
   
-## <a name="arguments"></a>argomenti  
+## <a name="arguments"></a>Argomenti  
  `order_by_expression`  
  Qualsiasi espressione di query valida che specifica una proprietà in base a cui eseguire l'ordinamento. È possibile specificare più espressioni di ordinamento. La sequenza delle espressioni di ordinamento nella clausola ORDER BY definisce l'organizzazione del set di risultati ordinato.  
   
@@ -33,7 +33,7 @@ Specifica il tipo di ordinamento usato per gli oggetti restituiti in un'istruzio
  Indica che l'operazione ORDER BY deve essere eseguita in base alle regole di confronto specificate in `collation_name`. È possibile applicare COLLATE solo alle espressioni stringa.  
   
  ASC  
- Specifica che i valori nella proprietà specificata devono essere ordinati in modo crescente, dal valore più basso a quello più alto. Questa è l'impostazione predefinita.  
+ Specifica che i valori nella proprietà specificata devono essere ordinati in modo crescente, dal valore più basso a quello più alto. Questa è la modalità predefinita.  
   
  DESC  
  Specifica che i valori nella proprietà specificata devono essere ordinati in modo decrescente, dal valore più alto a quello più basso.  
@@ -44,7 +44,7 @@ Specifica il tipo di ordinamento usato per gli oggetti restituiti in un'istruzio
  SKIP `n`  
  I primi `n` elementi verranno ignorati.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  La clausola ORDER BY viene applicata logicamente al risultato della clausola SELECT. La clausola ORDER BY può fare riferimento agli elementi nell'elenco di selezione tramite i relativi alias. La clausola ORDER BY può fare riferimento anche ad altre variabili attualmente incluse nell'ambito. Se, tuttavia, la clausola SELECT è stata specificata con un modificatore DISTINCT, la clausola ORDER BY può fare riferimento solo agli alias della clausola SELECT.  
   
  `SELECT c AS c1 FROM cs AS c ORDER BY c1.e1, c.e2`  
@@ -53,7 +53,7 @@ Specifica il tipo di ordinamento usato per gli oggetti restituiti in un'istruzio
   
  Se il codice scorre un set ordinato, non è garantito che l'ordine venga mantenuto, ad eccezione del caso di una proiezione di livello principale.  
 
-Nell'esempio seguente è garantita la conservazione dell'ordine:
+Nell'esempio seguente, l'ordine è garantito per essere mantenuto:
 
 ```sql  
 SELECT C1.FirstName, C1.LastName  
@@ -61,7 +61,7 @@ SELECT C1.FirstName, C1.LastName
         ORDER BY C1.LastName  
 ```  
 
-Nella query seguente l'ordinamento della query nidificata viene ignorato:  
+Nella query seguente, l'ordinamento della query nidificata viene ignorato:  
 
 ```sql  
 SELECT C2.FirstName, C2.LastName  
@@ -97,12 +97,12 @@ ORDER BY ...
   
 - ROW  
   
-- VALUE  
+- VALORE  
   
 ## <a name="ordering-nested-queries"></a>Ordinamento di query annidate  
  In Entity Framework un'espressione annidata può essere inserita in una posizione qualsiasi nella query. L'ordine di una query annidata non viene mantenuto.  
 
-Nella query seguente i risultati vengono ordinati in base al cognome:  
+La query seguente ordinerà i risultati in base al cognome:  
 
 ```sql  
 SELECT C1.FirstName, C1.LastName  
@@ -110,7 +110,7 @@ SELECT C1.FirstName, C1.LastName
         ORDER BY C1.LastName  
 ```  
 
-Nella query seguente l'ordinamento della query nidificata viene ignorato:  
+Nella query seguente, l'ordinamento della query nidificata viene ignorato:  
 
 ```sql  
 SELECT C2.FirstName, C2.LastName  
@@ -130,8 +130,8 @@ SELECT C2.FirstName, C2.LastName
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Espressioni di query](query-expressions-entity-sql.md)
+- [Espressioni di queryQuery Expressions](query-expressions-entity-sql.md)
 - [Riferimento a Entity SQL](entity-sql-reference.md)
-- [SKIP](skip-entity-sql.md)
-- [LIMIT](limit-entity-sql.md)
-- [TOP](top-entity-sql.md)
+- [Saltare](skip-entity-sql.md)
+- [Limite](limit-entity-sql.md)
+- [Torna all'inizio](top-entity-sql.md)

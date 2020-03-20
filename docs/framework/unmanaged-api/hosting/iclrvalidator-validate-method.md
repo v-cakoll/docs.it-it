@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0b1b432a-d234-4002-839b-81366c3a8bdc
 topic_type:
 - apiref
-ms.openlocfilehash: 497a115b980bb58a3906fda68d7ff564efe78089
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 427895ffea94e6c657d775ebdeb8571070a61c6e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127833"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178056"
 ---
 # <a name="iclrvalidatorvalidate-method"></a>Metodo ICLRValidator::Validate
-Convalida il file eseguibile portatile (PE) o il linguaggio MSIL (Microsoft Intermediate Language) nel file specificato.  
+Convalida l'eseguibile portabile (PE) o Microsoft Intermediate Language (MSIL) nel file specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,51 +37,51 @@ HRESULT Validate (
     [in] LPWSTR             fileName,  
     [in, size_is(ulSize)] BYTE *pe,  
     [in] unsigned long      ulSize  
-);      
+);
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `veh`  
- in Puntatore a un'istanza di `IVEHandler` che gestisce gli errori di convalida.  
+ [in] Puntatore a `IVEHandler` un'istanza che gestisce gli errori di convalida.  
   
  `ulAppDomainId`  
- in Identificatore per l'<xref:System.AppDomain>corrente.  
+ [in] Identificatore dell'oggetto corrente. <xref:System.AppDomain>  
   
  `ulFlags`  
- in Combinazione di valori [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) , che indica il tipo di convalida da eseguire.  
+ [in] Combinazione di [validatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) valori, che indica il tipo di convalida che deve essere eseguita.  
   
  `ulMaxError`  
- in Numero massimo di errori da consentire prima di uscire dalla convalida.  
+ [in] Numero massimo di errori da consentire prima di uscire dalla convalida.  
   
  `token`  
- in Inutilizzati.  
+ [in] Non utilizzato.  
   
  `fileName`  
- in Nome del file da convalidare.  
+ [in] Nome del file da convalidare.  
   
  `pe`  
- in Puntatore al buffer di file.  
+ [in] Puntatore al buffer di file.  
   
  `ulSize`  
- in Dimensione, in byte, del file da convalidare.  
+ [in] Dimensione, in byte, del file da convalidare.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`Validate` ha restituito un esito positivo.|  
-|HOST_E_CLRNOTAVAILABLE|Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
+|S_OK|`Validate`restituito con successo.|  
+|HOST_E_CLRNOTAVAILABLE|Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
-|HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
-|HOST_E_ABANDONED|Un evento è stato annullato mentre un thread bloccato o Fiber era in attesa su di esso.|  
+|HOST_E_NOT_OWNER|Il chiamante non è proprietario del blocco.|  
+|HOST_E_ABANDONED|Un evento è stato annullato mentre un thread bloccato o una fibra era in attesa su di esso.|  
 |E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** IValidator. idl, IValidator. h  
+ **Intestazione:** IValidator.idl, IValidator.h  
   
- **Libreria:** Incluso come risorsa in MSCorEE. dll  
+ **Biblioteca:** Incluso come risorsa in MSCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

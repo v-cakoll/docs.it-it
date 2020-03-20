@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c1de8400-adfe-4a71-b828-a1d0cc1ea505
 topic_type:
 - apiref
-ms.openlocfilehash: afd60cdf566bea459816ee890d44cc09258de516
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 76f18336808e6832b2ded94349efd7948f23a1ee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435942"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175694"
 ---
 # <a name="imetadataemitsave-method"></a>Metodo IMetaDataEmit::Save
 Salva tutti i metadati nell'ambito corrente nel file in corrispondenza dell'indirizzo specificato.  
@@ -28,25 +28,25 @@ Salva tutti i metadati nell'ambito corrente nel file in corrispondenza dell'indi
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
-HRESULT Save (   
-    [in]  LPCWSTR     szFile,   
+HRESULT Save (
+    [in]  LPCWSTR     szFile,
     [in]  DWORD       dwSaveFlags  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `wzFile`  
- in Nome del file in cui salvare. Se questo valore è null, la copia in memoria verrà salvata nell'ultima posizione utilizzata.  
+ [in] Nome del file in cui salvare. Se questo valore è null, la copia in memoria verrà salvata nell'ultima posizione utilizzata.  
   
  `dwSaveFlags`  
  [in] Riservato. Deve essere zero.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Usato come risorsa in MSCorEE. dll  
+ **Biblioteca:** Utilizzato come risorsa in MSCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 05c78aaf-5bbd-497e-9ae2-55f4fae0c5fb
 topic_type:
 - apiref
-ms.openlocfilehash: 0731053fb37c775d25052a5fd99a479a44ff5862
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a494b1aaa762549528e92ab93d18929ef73eb8da
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434871"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176084"
 ---
 # <a name="iceegengetsectionblock-method"></a>Metodo ICeeGen::GetSectionBlock
-Ottiene un blocco di sezione della codebase.  
+Ottiene un blocco di sezione della base di codice.  
   
  Questo metodo è obsoleto e non deve essere utilizzato.  
   
@@ -31,35 +31,35 @@ Ottiene un blocco di sezione della codebase.
   
 ```cpp  
 HRESULT GetSectionBlock (  
-    [in]  HCEESECTION    section,     
+    [in]  HCEESECTION    section,
     [in]  ULONG          len,  
     [in]  ULONG          align     = 1,  
     [out] void           **ppBytes = 0  
-);   
+);
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `section`  
- in Sezione da cui recuperare un blocco della codebase.  
+ [in] Sezione da cui recuperare un blocco della base di codice.  
   
  `len`  
- in Lunghezza del blocco da recuperare.  
+ [in] Lunghezza del blocco da recuperare.  
   
  `align`  
- in Byte, relativo all'inizio della sezione, con cui allineare il primo byte del blocco. Si tratta della posizione del blocco all'interno della sezione.  
+ [in] Byte, relativo all'inizio della sezione, con cui allineare il primo byte del blocco. Questa è la posizione del blocco all'interno della sezione.  
   
  `ppBytes`  
- out Puntatore a una posizione che riceve l'indirizzo del blocco recuperato.  
+ [fuori] Puntatore a una posizione che riceve l'indirizzo del blocco recuperato.  
   
-## <a name="remarks"></a>Note  
- Chiamare `GetSectionBlock` solo se si dispone di requisiti speciali per la sezione che non sono gestiti da altri metodi.  
+## <a name="remarks"></a>Osservazioni  
+ Chiamare `GetSectionBlock` solo se si dispone di requisiti di sezione speciali che non sono gestiti da altri metodi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Usato come risorsa in MsCorEE. dll  
+ **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

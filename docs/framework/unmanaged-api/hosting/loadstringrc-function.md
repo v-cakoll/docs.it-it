@@ -14,59 +14,59 @@ helpviewer_keywords:
 ms.assetid: 752e49b4-987c-4c28-a118-1a0c1ed510c5
 topic_type:
 - apiref
-ms.openlocfilehash: 66d4c14234c7929af443922f86098b46a4aa6eb7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 56ae7b7cf3b577bfe41ebd0bdd98e0da68047b44
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122009"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176240"
 ---
 # <a name="loadstringrc-function"></a>Funzione LoadStringRC
 Converte un valore HRESULT in un messaggio di errore utilizzando le impostazioni cultura predefinite del thread corrente.  
   
- Questa funzione è stata deprecata nel .NET Framework 4.  
+ Questa funzione è stata deprecata in .NET Framework 4.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT LoadStringRC (  
-    [in]  UINT    iResourceID,   
-    [out] LPWSTR  szBuffer,   
-    [in]  int     iMax,   
+    [in]  UINT    iResourceID,
+    [out] LPWSTR  szBuffer,
+    [in]  int     iMax,
     [in]  int     bQuiet  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `iResourceID`  
- in HRESULT.  
+ [in] Un HRESULT.  
   
  `szBuffer`  
- out Un buffer che contiene il messaggio di errore al completamento dell'operazione.  
+ [fuori] Buffer che contiene il messaggio di errore al completamento.  
   
  `iMax`  
- in Dimensioni del buffer dei messaggi di errore.  
+ [in] Dimensione del buffer dei messaggi di errore.  
   
  `bQuiet`  
- in Ignorato.  
+ [in] Ignorato.  
   
 ## <a name="return-value"></a>Valore restituito  
- Questo metodo restituisce i codici di errore standard Component Object Model (COM), come definito in WinError. h, oltre ai valori seguenti.  
+ Questo metodo restituisce i codici di errore COM (Component Object Model) standard, come definito in WinError.h, oltre ai valori seguenti.  
   
 |Codice restituito|Descrizione|  
 |-----------------|-----------------|  
 |S_OK|Metodo completato correttamente.|  
-|E_INVALIDARG|`szBuffer` è null o `iMax` è zero (0).|  
+|E_INVALIDARG|`szBuffer`è null `iMax` o è zero (0).|  
   
-## <a name="remarks"></a>Note  
- Se il metodo non viene completato correttamente, `szBuffer` contiene una stringa vuota.  
+## <a name="remarks"></a>Osservazioni  
+ Se il metodo non `szBuffer` viene completato correttamente, contiene una stringa vuota.  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE. h  
+ **Intestazione:** MSCorEE.h  
   
- **Libreria:** MSCorEE. dll e mscorwks. dll. Utilizzare MSCorEE. dll invece di mscorwks. dll per assicurarsi di avere come destinazione la versione corretta del .NET Framework.  
+ **Biblioteca:** MSCorEE.dll e Mscorwks.dll. Utilizzare MSCorEE.dll anziché Mscorwks.dll per assicurarsi che sia destinata alla versione corretta di .NET Framework.  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

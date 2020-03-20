@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d9720428-c353-4f07-a7e8-899e106a1b37
 topic_type:
 - apiref
-ms.openlocfilehash: 8d25f178a3c5e160e78e042d5016bb93aabf3e2d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a1cd932051a9ed90a29ff5eeaa818a67104192bb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443441"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175252"
 ---
 # <a name="imetadatatablesgetnextstring-method"></a>Metodo IMetaDataTables::GetNextString
 Ottiene l'indice della stringa successiva nella colonna della tabella corrente.  
@@ -28,7 +28,7 @@ Ottiene l'indice della stringa successiva nella colonna della tabella corrente.
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
-HRESULT GetNextString (   
+HRESULT GetNextString (
     [in]  ULONG   ixString,  
     [out] ULONG   *pNext  
 );  
@@ -36,17 +36,17 @@ HRESULT GetNextString (
   
 ## <a name="parameters"></a>Parametri  
  `ixString`  
- in Valore di indice da una colonna della tabella di stringhe.  
+ [in] Valore di indice da una colonna di tabella di stringhe.  
   
  `pNext`  
- out Puntatore all'indice della stringa successiva nella colonna.  
+ [fuori] Puntatore all'indice della stringa successiva nella colonna.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Usato come risorsa in MsCorEE. dll  
+ **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

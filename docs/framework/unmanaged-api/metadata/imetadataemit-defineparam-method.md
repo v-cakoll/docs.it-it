@@ -15,65 +15,65 @@ helpviewer_keywords:
 ms.assetid: d86a3d14-4796-4909-9591-dfafe3de5ce4
 topic_type:
 - apiref
-ms.openlocfilehash: 5c81bc82e19bce658336e4860a61f2721e17423d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2807458549db02598ba05f2aa80fa6ea6fbc5a13
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431697"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177699"
 ---
 # <a name="imetadataemitdefineparam-method"></a>Metodo IMetaDataEmit::DefineParam
-Crea una definizione di parametro con la firma specificata per il metodo a cui fa riferimento il token specificato e ottiene un token per la definizione del parametro.  
+Crea una definizione di parametro con la firma specificata per il metodo a cui fa riferimento il token specificato e ottiene un token per tale definizione di parametro.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT DefineParam (  
-    [in]  mdMethodDef md,   
-    [in]  ULONG       ulParamSeq,   
-    [in]  LPCWSTR     szName,   
-    [in]  DWORD       dwParamFlags,   
-    [in]  DWORD       dwCPlusTypeFlag,   
+    [in]  mdMethodDef md,
+    [in]  ULONG       ulParamSeq,
+    [in]  LPCWSTR     szName,
+    [in]  DWORD       dwParamFlags,
+    [in]  DWORD       dwCPlusTypeFlag,
     [in]  void const  *pValue,  
-    [in]  ULONG       cchValue,   
-    [out] mdParamDef  *ppd   
+    [in]  ULONG       cchValue,
+    [out] mdParamDef  *ppd
 );  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `md`  
- in Token per il metodo di cui viene definito il parametro.  
+ [in] Token per il metodo il cui parametro viene definito.  
   
  `ulParamSeq`  
- in Numero di sequenza del parametro.  
+ [in] Numero di sequenza del parametro.  
   
  `szName`  
- in Nome del parametro in formato Unicode.  
+ [in] Nome del parametro in Unicode.  
   
  `dwParamFlags`  
- in Flag per il parametro. Si tratta di una maschera di maschera dei valori `CorParamAttr`.  
+ [in] Flag per il parametro. Si tratta di `CorParamAttr` una maschera di bit di valori.  
   
  `dwCPlusTypeFlag`  
- [in] `ELEMENT_TYPE_` *\** per il valore costante.  
+ [in] `ELEMENT_TYPE_` per il valore *\** costante.  
   
  `pValue`  
- in Valore costante per il parametro.  
+ [in] Valore costante per il parametro.  
   
  `cchValue`  
- in Dimensione, in caratteri Unicode, di `pValue`.  
+ [in] La dimensione, in caratteri `pValue`Unicode, di .  
   
  `ppd`  
- out Token `mdParamDef` assegnato.  
+ [fuori] Token `mdParamDef` assegnato.  
   
 ## <a name="remarks"></a>Osservazioni  
- I valori di sequenza in `ulParamSeq` iniziano con 1 per i parametri. Il numero di sequenza di un valore restituito è 0.  
+ I valori `ulParamSeq` di sequenza iniziano con 1 per i parametri. Un valore restituito ha un numero di sequenza pari a 0.A return value has a sequence number of 0.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Usato come risorsa in MSCorEE. dll  
+ **Biblioteca:** Utilizzato come risorsa in MSCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

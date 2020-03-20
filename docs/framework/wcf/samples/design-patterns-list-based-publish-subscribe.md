@@ -2,20 +2,20 @@
 title: 'Modelli di progettazione: pubblicazione-sottoscrizione basata su elenchi'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 3a62b09a29ec0b7e241bf2fdc09df6eaba5420c7
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7342b3702338d5cd1fcc27d80e4e70cee019cc22
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76728836"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144760"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Modelli di progettazione: pubblicazione-sottoscrizione basata su elenchi
-Questo esempio illustra il modello di pubblicazione-sottoscrizione basato su elenchi implementato come programma Windows Communication Foundation (WCF).  
+In questo esempio viene illustrato il modello Publish-Subscribe basato su elenco implementato come programma Windows Communication Foundation (WCF).  
   
 > [!NOTE]
 > La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
   
- Il modello di progettazione di pubblicazione-sottoscrizione basato su elenchi viene descritto nella pubblicazione di Microsoft Patterns & Practices, [modelli di integrazione](https://docs.microsoft.com/previous-versions/msp-n-p/ff647309(v=pandp.10)). Il modello di pubblicazione-sottoscrizione passa le informazioni a una raccolta di destinatari che hanno sottoscritto un argomento di informazioni. La pubblicazione-sottoscrizione basata su elenchi gestisce un elenco di sottoscrittori. Quando esistono informazioni da condividere, una copia viene inviata a ogni sottoscrittore presente nell'elenco. In questo esempio viene illustrato un modello di pubblicazione-sottoscrizione basato su elenchi dinamici, in cui i client possono effettuare la sottoscrizione o annullare la sottoscrizione ogni volta che lo desiderano.  
+ Il modello di progettazione Publish-Subscribe basato su elenco è descritto nella pubblicazione Microsoft Patterns & Practices, [Integration Patterns](https://docs.microsoft.com/previous-versions/msp-n-p/ff647309(v=pandp.10)). Il modello di pubblicazione-sottoscrizione passa le informazioni a una raccolta di destinatari che hanno sottoscritto un argomento di informazioni. La pubblicazione-sottoscrizione basata su elenchi gestisce un elenco di sottoscrittori. Quando esistono informazioni da condividere, una copia viene inviata a ogni sottoscrittore presente nell'elenco. In questo esempio viene illustrato un modello di pubblicazione-sottoscrizione basato su elenchi dinamici, in cui i client possono effettuare la sottoscrizione o annullare la sottoscrizione ogni volta che lo desiderano.  
   
  L'esempio di pubblicazione-sottoscrizione basata su elenchi consiste in un client, un servizio e un programma dell'origine dati. È consentita l'esecuzione di più client e più programmi delle origini dati. I client sottoscrivono il servizio, ricevono le notifiche e annullano la sottoscrizione. I programmi delle origini dati inviano informazioni al servizio da condividere con tutti i sottoscrittori correnti.  
   
@@ -35,7 +35,7 @@ public interface ISampleContract
     [OperationContract(IsOneWay = false, IsTerminating=true)]  
     void Unsubscribe();  
     [OperationContract(IsOneWay = true)]  
-    void PublishPriceChange(string item, double price,   
+    void PublishPriceChange(string item, double price,
                                      double change);  
 }  
   
@@ -112,25 +112,25 @@ public class PriceChangeEventArgs : EventArgs
   
 ### <a name="to-set-up-and-build-the-sample"></a>Per impostare e compilare l'esempio  
   
-1. Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Assicurarsi di aver eseguito la procedura di [installazione una tantera per Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>Per eseguire l'esempio sullo stesso computer  
   
-1. Verificare che sia possibile accedere al servizio utilizzando un browser immettendo l'indirizzo seguente: `http://localhost/servicemodelsamples/service.svc`. In risposta, viene visualizzata un pagina di conferma.  
+1. Verificare che sia possibile accedere al servizio utilizzando `http://localhost/servicemodelsamples/service.svc`un browser immettendo il seguente indirizzo: . In risposta, viene visualizzata un pagina di conferma.  
   
-2. Eseguire client. exe da \client\bin\\\, dalla cartella specifica del linguaggio. L'attività del client viene visualizzata nella finestra della console client. Avviare più client.  
+2. Eseguire Client.exe da ,\\nella cartella specifica del linguaggio. L'attività del client viene visualizzata nella finestra della console client. Avviare più client.  
   
-3. Eseguire DataSource. exe da \datasource\bin\\, dalla cartella specifica del linguaggio. L'attività dell'origine dati viene visualizzata nella finestra della console. Dopo l'invio delle informazioni al servizio da parte dell'origine dati, è necessario che tali informazioni vengano inviate a ogni client.  
+3. Eseguire Datasource.exe dalla\\cartella specifica del linguaggio nella cartella specifica del linguaggio. L'attività dell'origine dati viene visualizzata nella finestra della console. Dopo l'invio delle informazioni al servizio da parte dell'origine dati, è necessario che tali informazioni vengano inviate a ogni client.  
   
-4. Se il client, l'origine dati e i programmi di servizio non sono in grado di comunicare, vedere [Suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. Se i programmi client, origine dati e servizio non sono in grado di comunicare, vedere [Suggerimenti per la risoluzione dei problemi per gli esempi WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-machines"></a>Per eseguire l'esempio tra più computer  
   
 1. Configurare il computer del servizio:  
   
-    1. Sul computer del servizio, creare una directory virtuale denominata ServiceModelSamples. Il file batch Setupvroot. bat dalla [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) può essere utilizzato per creare la directory del disco e la directory virtuale.  
+    1. Sul computer del servizio, creare una directory virtuale denominata ServiceModelSamples. Il file batch Setupvroot.bat della procedura di [installazione monouso per gli esempi](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) di Windows Communication Foundation può essere utilizzato per creare la directory del disco e la directory virtuale.  
   
     2. Copiare i file del programma del servizio da %SystemDrive%\Inetpub\wwwroot\servicemodelsamples alla directory virtuale di ServiceModelSamples sul computer del servizio. Verificare di includere i file nella directory \bin.  
   
@@ -154,9 +154,9 @@ public class PriceChangeEventArgs : EventArgs
   
 > [!IMPORTANT]
 > È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
->   
+>
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) Esempi per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti gli esempi e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (WCF). Questo esempio si trova nella directory seguente.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DesignPatterns/ListBasedPublishSubscribe`  

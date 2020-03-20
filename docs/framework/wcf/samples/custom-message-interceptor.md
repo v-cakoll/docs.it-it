@@ -2,12 +2,12 @@
 title: Intercettore dei messaggi personalizzati
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: 53005212bc834d73ab5cbb4545d1477112f29c75
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 433b14433a7e2dd6edad551a2732e9049a9861ea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716807"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79145086"
 ---
 # <a name="custom-message-interceptor"></a>Intercettore dei messaggi personalizzati
 In questo esempio viene illustrato l'utilizzo del modello di estensibilità del canale. In particolare, viene illustrato come implementare un elemento di associazione personalizzato che crea channel factory e listener del canale per intercettare tutti i messaggi in ingresso e in uscita in un particolare punto nello stack di runtime. L'esempio include anche un client e un server che illustrano l'utilizzo di queste factory personalizzate.  
@@ -19,14 +19,14 @@ In questo esempio viene illustrato l'utilizzo del modello di estensibilità del 
   
 > [!IMPORTANT]
 > È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
->   
+>
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) Esempi per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti gli esempi e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (WCF). Questo esempio si trova nella directory seguente.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\MessageInterceptor`  
   
- Nell'esempio viene descritta la procedura consigliata per la creazione di un canale su più livelli personalizzato in Windows Communication Foundation (WCF) utilizzando il Framework del canale e le procedure consigliate WCF seguenti. I passaggi per creare un canale su più livelli personalizzato sono i seguenti.  
+ Nell'esempio viene descritta la procedura consigliata per la creazione di un canale a più livelli personalizzato in Windows Communication Foundation (WCF), utilizzando il framework di canale e seguendo le procedure consigliate WCF. I passaggi per creare un canale su più livelli personalizzato sono i seguenti.  
   
 1. Decidere quali forme del canale saranno supportate dalla channel factory e dal listener del canale.  
   
@@ -46,18 +46,18 @@ In questo esempio viene illustrato l'utilizzo del modello di estensibilità del 
   
 ```csharp
 class InterceptingChannelFactory<TChannel> : ChannelFactoryBase<TChannel>  
-{ 
-    //... 
+{
+    //...
 }
 
 class InterceptingChannelListener<TChannel> : ListenerFactoryBase<TChannel>  
-{ 
+{
     //...
 }  
 ```  
   
 ## <a name="adding-a-binding-element"></a>Aggiunta di un elemento di associazione.  
- L'esempio definisce un elemento di associazione personalizzato: `InterceptingBindingElement`. `InterceptingBindingElement` accetta come input un `ChannelMessageInterceptor` e utilizza questo `ChannelMessageInterceptor` per modificare i messaggi che lo passano. Si tratta della sola classe che deve essere pubblica. La factory, il listener e i canali possono essere tutti implementazioni interne delle interfacce di runtime pubbliche.  
+ L'esempio definisce un elemento di associazione personalizzato: `InterceptingBindingElement`. `InterceptingBindingElement`prende `ChannelMessageInterceptor` un come input, `ChannelMessageInterceptor` e lo usa per manipolare i messaggi che passano attraverso di esso. Si tratta della sola classe che deve essere pubblica. La factory, il listener e i canali possono tutti essere implementazioni interne delle interfacce di runtime pubbliche.  
   
 ```csharp
 public class InterceptingBindingElement : BindingElement
@@ -69,9 +69,9 @@ public class InterceptingBindingElement : BindingElement
  Per integrare la configurazione di associazione la libreria definisce un gestore della sezione di configurazione come sezione di estensione dell'elemento di associazione. I file di configurazione del client e del server devono registrare l'estensione dell'elemento di associazione con il sistema di configurazione. Implementatori che vogliono esporre l'elemento di associazione al sistema di configurazione possono derivare da questa classe.  
   
 ```csharp
-public abstract class InterceptingElement : BindingElementExtensionElement 
-{ 
-    //... 
+public abstract class InterceptingElement : BindingElementExtensionElement
+{
+    //...
 }
 ```  
   
@@ -100,7 +100,7 @@ class DroppingServerElement : InterceptingElement
         ...  
         <extensions>  
             <bindingElementExtensions>  
-                <add name="droppingInterceptor"   
+                <add name="droppingInterceptor"
                    type=  
           "Microsoft.ServiceModel.Samples.DroppingServerElement, library"/>  
             </bindingElementExtensions>  
@@ -157,16 +157,16 @@ Dangerous wind detected! Reported speed (70) is greater than 64 kph.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1. Installare ASP.NET 4,0 usando il comando seguente.  
+1. Installare ASP.NET 4.0 utilizzando il comando seguente.  
   
     ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Assicurarsi di aver eseguito la procedura di [installazione una tantera per Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3. Per compilare la soluzione, seguire le istruzioni riportate in [compilazione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Per compilare la soluzione, seguire le istruzioni in [Compilazione di Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Per eseguire l'esempio in una configurazione su un singolo o più computer, seguire le istruzioni in Esecuzione di [Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 5. Eseguire prima Service.exe quindi Client.exe e controllare l'output di entrambe le finestre della console.  

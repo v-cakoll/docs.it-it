@@ -15,55 +15,55 @@ helpviewer_keywords:
 ms.assetid: 2576c449-388d-4434-a0e1-9f53991e11b6
 topic_type:
 - apiref
-ms.openlocfilehash: 5214298c6ad9594548ab45ed583cb5b14ce1f30d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e855868d18fc6cffdd5d92cfa401606caf45b76c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441769"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177567"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>Metodo IMetaDataEmit::SetClassLayout
-Completa il layout dei campi per una classe definita da una chiamata precedente al [Metodo DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
+Completa il layout dei campi per una classe definita da una precedente chiamata al metodo [DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT SetClassLayout (  
-    [in]  mdTypeDef           td,   
-    [in]  DWORD               dwPackSize,   
-    [in]  COR_FIELD_OFFSET    rFieldOffsets[],   
-    [in]  ULONG               ulClassSize   
+    [in]  mdTypeDef           td,
+    [in]  DWORD               dwPackSize,
+    [in]  COR_FIELD_OFFSET    rFieldOffsets[],
+    [in]  ULONG               ulClassSize
 );  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `td`  
- in Token `mdTypeDef` che specifica la classe da disposte.  
+ [in] Token `mdTypeDef` che specifica la classe da disporre.  
   
  `dwPackSize`  
- in Dimensioni di compressione: 1, 2, 4, 8 o 16 byte. La dimensione di compressione è il numero di byte tra i campi adiacenti.  
+ [in] La dimensione di compressione: 1, 2, 4, 8 o 16 byte. La dimensione di compressione è il numero di byte tra i campi adiacenti.  
   
  `rFieldOffsets`  
- in Matrice di strutture di [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) , ognuna delle quali specifica un campo della classe e l'offset del campo all'interno della classe. Terminare la matrice con `mdTokenNil`.  
+ [in] Matrice di [strutture COR_FIELD_OFFSET,](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) ognuna delle quali specifica un campo della classe e l'offset del campo all'interno della classe. Terminare la `mdTokenNil`matrice con .  
   
  `ulClassSize`  
- in Dimensione, in byte, della classe.  
+ [in] Dimensione, in byte, della classe.  
   
-## <a name="remarks"></a>Note  
- La classe viene definita inizialmente chiamando il metodo [IMetaDataEmit::D efinetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) e specificando uno dei tre layout per i campi della classe: automatico, sequenziale o esplicito. In genere, è possibile usare il layout automatico e consentire al runtime di scegliere il modo migliore per disporre i campi.  
+## <a name="remarks"></a>Osservazioni  
+ La classe viene inizialmente definita chiamando il metodo [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) e specificando uno dei tre layout per i campi della classe: automatico, sequenziale o esplicito. In genere, è necessario utilizzare il layout automatico e lasciare che il runtime scelga il modo migliore per definire il layout dei campi.  
   
- Tuttavia, è possibile che i campi siano disposti in base alla disposizione utilizzata dal codice non gestito. In questo caso, scegliere layout sequenziale o esplicito e chiamare `SetClassLayout` per completare il layout dei campi:  
+ Tuttavia, è possibile che si desideri che i campi vengano disposti in base alla disposizione utilizzata dal codice non gestito. In questo caso, scegliere il layout `SetClassLayout` sequenziale o esplicito e chiamare per completare il layout dei campi:  
   
-- Layout sequenziale: specificare le dimensioni di compressione. Un campo è allineato in base alla dimensione naturale o alla dimensione di compressione, a seconda del risultato dell'offset minore del campo. Impostare `rFieldOffsets` e `ulClassSize` su zero.  
+- Layout sequenziale: specificare le dimensioni di imballaggio. Un campo viene allineato in base alle dimensioni naturali o alle dimensioni di imballaggio, a seconda dell'offset più piccolo del campo. `rFieldOffsets` Impostare `ulClassSize` e a zero.  
   
-- Layout esplicito: specificare l'offset di ogni campo o specificare le dimensioni della classe e le dimensioni di compressione.  
+- Layout esplicito: specificare l'offset di ogni campo o specificare la dimensione della classe e la dimensione di compressione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Usato come risorsa in MSCorEE. dll  
+ **Biblioteca:** Utilizzato come risorsa in MSCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

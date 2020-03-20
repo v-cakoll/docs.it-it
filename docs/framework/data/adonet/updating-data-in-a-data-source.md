@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-ms.openlocfilehash: 0926e3c6513a698ae47b9983d0e6ad195394a4df
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 18bb03e17b19243ee1bc6e3f7ebd70afb4d4c60b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780621"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174446"
 ---
 # <a name="updating-data-in-a-data-source"></a>Aggiornamento di dati in un'origine dati
-Le istruzioni SQL che modificano i dati, ad esempio INSERT, UPDATE o DELETE, non restituiscono righe. Analogamente, molte stored procedure eseguono un'operazione ma non restituiscono righe. Per eseguire comandi che non restituiscono righe, creare un oggetto **Command** con il comando SQL appropriato e una **connessione**, inclusi eventuali **parametri**obbligatori. Eseguire il comando con il metodo **ExecuteNonQuery** dell'oggetto **Command** .  
+Le istruzioni SQL che modificano i dati, ad esempio INSERT, UPDATE o DELETE, non restituiscono righe. Analogamente, molte stored procedure eseguono un'operazione ma non restituiscono righe. Per eseguire comandi che non restituiscono righe, creare un oggetto **Command** con il comando SQL appropriato e un **oggetto Connection**, inclusi i **parametri**necessari. Eseguire il comando con il metodo **ExecuteNonQuery** dell'oggetto **Command.**  
   
- Il metodo **ExecuteNonQuery** restituisce un valore integer che rappresenta il numero di righe interessate dall'istruzione o dalla stored procedure eseguita. Se si eseguono più istruzioni, il valore restituito sarà la somma dei record interessati da ognuna delle istruzioni eseguite.  
+ Il **metodo ExecuteNonQuery** restituisce un numero intero che rappresenta il numero di righe interessate dall'istruzione o dalla stored procedure eseguita. Se si eseguono più istruzioni, il valore restituito sarà la somma dei record interessati da ognuna delle istruzioni eseguite.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio di codice seguente viene eseguita un'istruzione INSERT per inserire un record in un database utilizzando **ExecuteNonQuery**.  
+ Nell'esempio di codice riportato di seguito viene eseguita un'istruzione INSERT per inserire un record in un database utilizzando **ExecuteNonQuery**.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -42,9 +42,9 @@ SqlCommand command = new SqlCommand(queryString, connection);
 Int32 recordsAffected = command.ExecuteNonQuery();  
 ```  
   
- Nell'esempio di codice seguente viene eseguito il stored procedure creato dal codice di esempio in [esecuzione di operazioni di catalogo](performing-catalog-operations.md). Non viene restituita alcuna riga dal stored procedure, quindi viene utilizzato il metodo **ExecuteNonQuery** , ma il stored procedure riceve un parametro di input e restituisce un parametro di output e un valore restituito.  
+ Nell'esempio di codice riportato di seguito viene eseguita la stored procedure creata dal codice di esempio in [Esecuzione di operazioni](performing-catalog-operations.md)di catalogo . Nessuna riga viene restituita dalla stored procedure, pertanto viene utilizzato il metodo **ExecuteNonQuery,** ma la stored procedure riceve un parametro di input e restituisce un parametro di output e un valore restituito.  
   
- Per l' <xref:System.Data.OleDb.OleDbCommand> oggetto, è innanzitutto necessario aggiungere il parametro **returnValue** alla raccolta **Parameters** .  
+ Per <xref:System.Data.OleDb.OleDbCommand> l'oggetto, il parametro **ReturnValue** deve essere aggiunto prima all'insieme **Parameters.**  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -66,7 +66,7 @@ command.Parameters("@CategoryName").Value = "New Category"
 command.ExecuteNonQuery()  
   
 Dim categoryID As Int32 = CInt(command.Parameters("@Identity").Value)  
-Dim rowCount As Int32 = CInt(command.Parameters("@RowCount").Value)   
+Dim rowCount As Int32 = CInt(command.Parameters("@RowCount").Value)
 ```  
   
 ```csharp  

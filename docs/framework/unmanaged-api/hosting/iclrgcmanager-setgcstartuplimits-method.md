@@ -15,36 +15,36 @@ helpviewer_keywords:
 ms.assetid: 1c8d9959-95b5-4131-be4a-556d97774014
 topic_type:
 - apiref
-ms.openlocfilehash: f9d6c4f01b01944c885190f90e2195c3a308490a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 645b64c8b536029663c350bdcde9a716a715aab3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141211"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178090"
 ---
 # <a name="iclrgcmanagersetgcstartuplimits-method"></a>Metodo ICLRGCManager::SetGCStartupLimits
-Imposta la dimensione di un segmento di Garbage Collection e la dimensione massima della generazione 0 del sistema Garbage Collection.  
+Imposta la dimensione di un segmento di Garbage Collection e la dimensione massima della generazione 0 del sistema di Garbage Collection.  
   
 > [!IMPORTANT]
-> A partire da .NET Framework 4,5, è possibile impostare le dimensioni del segmento e le dimensioni massime 0 di generazione su valori maggiori di `DWORD` usando il metodo [ICLRGCManager2:: SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md) .  
+> A partire da .NET Framework 4.5.NET Framework 4.5, `DWORD` è possibile impostare la dimensione del segmento e la dimensione massima della generazione 0 su valori maggiori rispetto all'utilizzo del metodo [ICLRGCManager2::SetGCStartupLimitsEx.](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT SetGCStartupLimits (  
-    [in] DWORD SegmentSize,   
+    [in] DWORD SegmentSize,
     [in] DWORD MaxGen0Size  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `SegmentSize`  
- in Dimensione specificata di un segmento di Garbage Collection.  
+ [in] Dimensione specificata di un segmento di Garbage Collection.  
   
- La dimensione minima del segmento è 4 MB. I segmenti possono essere aumentati con incrementi di 1 MB o più grandi.  
+ La dimensione minima del segmento è 4 MB. I segmenti possono essere aumentati in incrementi di 1 MB o superiore.  
   
  `MaxGen0Size`  
- in Dimensione massima specificata per la generazione 0.  
+ [in] Dimensione massima specificata per la generazione 0.  
   
  La dimensione minima di generazione 0 è 64 KB.  
   
@@ -52,22 +52,22 @@ HRESULT SetGCStartupLimits (
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`SetGCStartupLimits` ha restituito un esito positivo.|  
-|HOST_E_CLRNOTAVAILABLE|Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
+|S_OK|`SetGCStartupLimits`restituito con successo.|  
+|HOST_E_CLRNOTAVAILABLE|Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
-|HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
-|HOST_E_ABANDONED|Un evento è stato annullato mentre un thread bloccato o Fiber era in attesa su di esso.|  
+|HOST_E_NOT_OWNER|Il chiamante non è proprietario del blocco.|  
+|HOST_E_ABANDONED|Un evento è stato annullato mentre un thread bloccato o una fibra era in attesa su di esso.|  
 |E_FAIL|Si è verificato un errore irreversibile sconosciuto. Dopo che un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Note  
- I valori che `SetGCStartupLimits` imposta possono essere specificati una sola volta. Le chiamate successive a `SetGCStartupLimits` verranno ignorate.  
+## <a name="remarks"></a>Osservazioni  
+ I valori `SetGCStartupLimits` impostati possono essere specificati una sola volta. Le chiamate `SetGCStartupLimits` successive a vengono ignorate.  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE. h  
+ **Intestazione:** MSCorEE.h  
   
- **Libreria:** Incluso come risorsa in MSCorEE. dll  
+ **Biblioteca:** Incluso come risorsa in MSCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

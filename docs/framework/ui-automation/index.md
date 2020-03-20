@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - UI Automation
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
-ms.openlocfilehash: 7305258570ad853afa88a231592fd4b6cd2dd74e
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 49d2988cbad33497f2214098bcde68f7d5434b5e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965867"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180028"
 ---
 # <a name="microsoft-ui-automation"></a>Automazione interfaccia utente Microsoft
 
 > [!NOTE]
-> Questa documentazione è destinata agli sviluppatori .NET che vogliono usare le classi di automazione interfaccia utente gestita definite nello spazio dei nomi <xref:System.Windows.Automation>. Per le informazioni più aggiornate sull'automazione dell'interfaccia utente, vedere [API di automazione di Windows: automazione interfaccia utente](/windows/win32/winauto/entry-uiauto-win32).
+> Questa documentazione è destinata agli sviluppatori .NET che desiderano <xref:System.Windows.Automation> usare le classi di automazione interfaccia utente gestite definite nello spazio dei nomi. Per le informazioni più recenti sull'automazione interfaccia utente, vedere [Windows Automation API: Automazione interfaccia utenteUI Automation](/windows/win32/winauto/entry-uiauto-win32).
 
- Automazione interfaccia utente Microsoft è un Framework di accessibilità per Microsoft Windows. Soddisfa le esigenze dei prodotti tecnologici per l'accessibilità e i Framework di test automatizzati, fornendo l'accesso a livello di codice alle informazioni sull'interfaccia utente (UI). Inoltre, l'automazione dell'interfaccia utente consente agli sviluppatori di controlli e applicazioni di rendere accessibili i loro prodotti.
+ Microsoft UI Automation is an accessibility framework for Microsoft Windows. Risponde alle esigenze dei prodotti di assistive technology e dei framework di test automatizzati fornendo accesso a livello di codice alle informazioni sull'interfaccia utente. Inoltre, Automazione interfaccia utenteUI Automation consente agli sviluppatori di controlli e applicazioni di rendere accessibili i propri prodotti.
 
- Questa documentazione descrive l'API di automazione interfaccia utente per il codice gestito. Per informazioni sulla programmazione per l'automazione dell' C++interfaccia utente in, vedere [automazione interfaccia utente per le applicazioni Win32](/windows/desktop/winauto/windows-automation-api-portal).
+ Questa documentazione descrive l'API di automazione interfaccia utente per il codice gestito. Per informazioni sulla programmazione per l'automazione dell'interfaccia utente in C, vedere [Automazione interfaccia utenteUI Automation per le applicazioni Win32](/windows/desktop/winauto/windows-automation-api-portal).
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 - [Procedure consigliate per l'accesso facilitato](accessibility-best-practices.md)
-- [Nozioni fondamentali sull'automazione interfaccia utente](ui-automation-fundamentals.md)
+- [Nozioni fondamentali sull'automazione interfaccia utenteUI Automation Fundamentals](ui-automation-fundamentals.md)
 - [Provider di automazione interfaccia utente per il codice gestito](ui-automation-providers-for-managed-code.md)
 - [Client di automazione interfaccia utente per il codice gestito](ui-automation-clients-for-managed-code.md)
 - [Pattern di controllo per automazione interfaccia utente](ui-automation-control-patterns.md)
 - [Pattern di testo per l'automazione interfaccia utente](ui-automation-text-pattern.md)
-- [UI Automation Control Types](ui-automation-control-types.md)
+- [Tipi di controllo per l'automazione dell'interfaccia utente](ui-automation-control-types.md)
 
 ## <a name="related-sections"></a>Sezioni correlate
 
-- [Esempi di accessibilità](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility) 
+- [Esempi di accessibilità](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility)

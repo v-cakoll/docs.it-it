@@ -15,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: 798513a0-68b1-4d04-bc5b-782a4445ea68
 topic_type:
 - apiref
-ms.openlocfilehash: a43c1883038e41cac1b58c78bc26f20d436ebbd1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 61b5678a546bdbadbcc6d8ee86447cb17ce72b99
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440247"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175525"
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>Metodo IMetaDataImport::EnumCustomAttributes
-Enumera i token di definizione degli attributi personalizzati associati al tipo o al membro specificato.  
+Enumera i token di definizione di attributo personalizzati associati al tipo o al membro specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
-HRESULT EnumCustomAttributes (   
+HRESULT EnumCustomAttributes (
    [in, out] HCORENUM      *phEnum,  
-   [in]  mdToken            tk,   
-   [in]  mdToken            tkType,   
-   [out] mdCustomAttribute  rCustomAttributes[],   
+   [in]  mdToken            tk,
+   [in]  mdToken            tkType,
+   [out] mdCustomAttribute  rCustomAttributes[],
    [in]  ULONG              cMax,  
    [out, optional] ULONG   *pcCustomAttributes  
 );  
@@ -43,33 +43,33 @@ HRESULT EnumCustomAttributes (
  [in, out] Puntatore all'enumeratore restituito.  
   
  `tk`  
- in Token per l'ambito dell'enumerazione o zero per tutti gli attributi personalizzati.  
+ [in] Token per l'ambito dell'enumerazione oppure zero per tutti gli attributi personalizzati.  
   
  `tkType`  
- in Token per il costruttore del tipo degli attributi da enumerare o `null` per tutti i tipi.  
+ [in] Token per il costruttore del tipo di attributi `null` da enumerare o per tutti i tipi.  
   
  `rCustomAttributes`  
- out Matrice di token di attributi personalizzati.  
+ [fuori] Matrice di token di attributo personalizzati.  
   
  `cMax`  
  [in] Dimensione massima della matrice `rCustomAttributes`.  
   
  `pcCustomAttributes`  
- [out, facoltativo] Numero effettivo di valori di token restituiti in `rCustomAttributes`.  
+ [out, opzionale] Numero effettivo di valori di `rCustomAttributes`token restituiti in .  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|`S_OK`|`EnumCustomAttributes` ha restituito un esito positivo.|  
-|`S_FALSE`|Nessun attributo personalizzato da enumerare. In tal caso, `pcCustomAttributes` è zero.|  
+|`S_OK`|`EnumCustomAttributes`restituito con successo.|  
+|`S_FALSE`|Non sono presenti attributi personalizzati da enumerare. In tal `pcCustomAttributes` caso, è zero.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Incluso come risorsa in MsCorEE. dll  
+ **Biblioteca:** Incluso come risorsa in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

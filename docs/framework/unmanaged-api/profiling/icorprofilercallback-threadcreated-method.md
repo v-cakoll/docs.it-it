@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cca0f799-09b8-4689-a33c-6d6537943a9b
 topic_type:
 - apiref
-ms.openlocfilehash: 6514606290bf006443d7011c1a428bebb4cca0f6
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 7fb58c0eb2446253bd658434fc9d68bb857fe0e6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76865831"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175122"
 ---
 # <a name="icorprofilercallbackthreadcreated-method"></a>Metodo ICorProfilerCallback::ThreadCreated
 Notifica al profiler che è stato creato un thread.  
@@ -29,24 +29,24 @@ Notifica al profiler che è stato creato un thread.
   
 ```cpp  
 HRESULT ThreadCreated(  
-    [in] ThreadID threadId);   
+    [in] ThreadID threadId);
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `threadId`  
- in ID del thread che è stato creato.  
+ [in] ID del thread creato.  
   
-## <a name="remarks"></a>Note  
- Il valore `threadId` è immediatamente valido.  
+## <a name="remarks"></a>Osservazioni  
+ Il `threadId` valore è immediatamente valido.  
   
-## <a name="requirements"></a>Requisiti di  
+## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

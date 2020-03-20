@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-ms.openlocfilehash: 075f62526ace1ac49d12e1bdec39d8df4b0a3ff1
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: f9c22d25bedc36b3515538a8785b488aaa547990
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321402"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143239"
 ---
 # <a name="specifying-client-run-time-behavior"></a>Specifica del comportamento in fase di esecuzione dei client
-I client Windows Communication Foundation (WCF), ad esempio i servizi Windows Communication Foundation (WCF), possono essere configurati per modificare il comportamento in fase di esecuzione in base all'applicazione client. Sono disponibili tre attributi per la specifica del comportamento in fase di esecuzione dei client. Gli oggetti callback dei client duplex possono usare gli attributi <xref:System.ServiceModel.CallbackBehaviorAttribute> e <xref:System.ServiceModel.Description.CallbackDebugBehavior> per modificare il proprio comportamento in fase di esecuzione. L'altro attributo, <xref:System.ServiceModel.Description.ClientViaBehavior>, può essere usato per separare la destinazione logica dalla destinazione di rete immediata. Inoltre, i tipi di callback dei client duplex possono usare alcuni dei comportamenti del lato servizi. Per ulteriori informazioni, vedere [specifica del comportamento in fase di esecuzione del servizio](specifying-service-run-time-behavior.md).  
+I client Windows Communication Foundation (WCF), ad esempio i servizi Windows Communication Foundation (WCF), possono essere configurati per modificare il comportamento in fase di esecuzione in base all'applicazione client. Sono disponibili tre attributi per la specifica del comportamento in fase di esecuzione dei client. Gli oggetti callback dei client duplex possono usare gli attributi <xref:System.ServiceModel.CallbackBehaviorAttribute> e <xref:System.ServiceModel.Description.CallbackDebugBehavior> per modificare il proprio comportamento in fase di esecuzione. L'altro attributo, <xref:System.ServiceModel.Description.ClientViaBehavior>, può essere usato per separare la destinazione logica dalla destinazione di rete immediata. Inoltre, i tipi di callback dei client duplex possono usare alcuni dei comportamenti del lato servizi. Per ulteriori informazioni, vedere [Specifica del comportamento in fase di esecuzione del servizio](specifying-service-run-time-behavior.md).  
   
 ## <a name="using-the-callbackbehaviorattribute"></a>Uso di CallbackBehaviorAttribute  
  È possibile configurare o estendere il comportamento di esecuzione dell'implementazione di un contratto di callback in un'applicazione client usando la classe <xref:System.ServiceModel.CallbackBehaviorAttribute>. Questo attributo esegue, per la classe di callback, una funzione simile a quella della classe <xref:System.ServiceModel.ServiceBehaviorAttribute>, fatta eccezione per il comportamento di creazione di istanze e le impostazioni di transazione.  
@@ -36,10 +36,10 @@ I client Windows Communication Foundation (WCF), ad esempio i servizi Windows Co
   
 - Si procede in questo modo solo negli scenari di debug controllati.  
   
- Nell'esempio di codice riportato di seguito viene illustrato un file di configurazione client che indica a WCF di restituire informazioni sulle eccezioni gestite da un oggetto callback del client nei messaggi SOAP.  
+ Esempio di codice seguente viene illustrato un file di configurazione client che indica a WCF di restituire informazioni sulle eccezioni gestite da un oggetto callback client nei messaggi SOAP.  
   
  [!code-xml[SCA.CallbackContract#4](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/client.exe.config#4)]  
- 
+
 ## <a name="using-the-clientviabehavior-behavior"></a>Utilizzo del comportamento ClientViaBehavior  
  È possibile usare il comportamento <xref:System.ServiceModel.Description.ClientViaBehavior> per specificare l'URI (Uniform Resource Identifier) per il quale deve essere creato il canale del trasporto. Usare questo comportamento quando la destinazione di rete immediata non è il processore desiderato del messaggio. Questo consente conversazioni multihop quando l'applicazione chiamante non conosce necessariamente la destinazione finale o quando l'intestazione `Via` della destinazione non è un indirizzo.  
   

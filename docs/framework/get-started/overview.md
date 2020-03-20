@@ -7,18 +7,18 @@ helpviewer_keywords:
 - common language runtime, about
 - common language runtime, overview
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
-ms.openlocfilehash: 397a78514dc5878e83708882ceeb4d92160d9a78
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: de9cbdab5d5786b9d59d23ba675fa3f78f807716
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975662"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181601"
 ---
-# <a name="overview-of-the-net-framework"></a>Panoramica di .NET Framework
+# <a name="overview-of-net-framework"></a>Panoramica di .NET Framework
 
-.NET Framework è una tecnologia che supporta la compilazione e l'esecuzione di app di ultima generazione e servizi Web XML. .NET Framework è progettata per ottenere gli obiettivi indicati di seguito:
+.NET Framework è una tecnologia che supporta la creazione e l'esecuzione di app E servizi Web di Windows. .NET Framework è progettato per soddisfare i seguenti obiettivi:
 
-- Fornire un ambiente di programmazione orientato agli oggetti coerente, sia che il codice degli oggetti sia memorizzato ed eseguito localmente, eseguito localmente ma distribuito su Internet oppure eseguito in modalità remota.
+- Per fornire un ambiente di programmazione orientato agli oggetti coerente, sia che il codice oggetto sia archiviato ed eseguito localmente, eseguito localmente ma distribuito dal Web o eseguito in remoto.
 
 - Fornire un ambiente di esecuzione del codice che minimizzi la distribuzione del software e i conflitti di versioni.
 
@@ -28,16 +28,16 @@ ms.locfileid: "73975662"
 
 - Rendere coerente l'esperienza dello sviluppatore su app di tipi diversi, dalle app basate su Windows a quelle basate sul Web.
 
-- Compilare tutte le comunicazioni in base agli standard di settore, per garantire l'integrazione del codice basato su .NET Framework con qualsiasi altro codice.
+- Per compilare tutte le comunicazioni sugli standard del settore per garantire che il codice basato su .NET Framework si integri con qualsiasi altro codice.
 
 > [!NOTE]
-> Per un'introduzione generale a .NET Framework per utenti e sviluppatori, vedere [Introduzione](index.md).
+> Per un'introduzione generale a .NET Framework sia per gli utenti che per gli sviluppatori, vedere [Guida introduttiva.](index.md)
 
-.NET Framework è costituito da Common Language Runtime (CLR) e dalla libreria di classi .NET Framework. Common Language Runtime rappresenta la base di .NET Framework e può essere considerato come un agente che gestisce il codice in fase di esecuzione, fornendo servizi di base quali gestione della memoria, gestione di thread e servizi remoti e attivando nel contempo una rigida indipendenza dai tipi e altre forme di accuratezza del codice che garantiscono sicurezza ed efficienza. Il concetto di gestione del codice è infatti un principio fondamentale di runtime. Il codice destinato al runtime è definito codice gestito, mentre quello non destinato al runtime è definito codice non gestito. La libreria di classi è una raccolta completa e orientata agli oggetti di tipi riusabili, da usare per lo sviluppo di app, da quelle tradizionali della riga di comando o con interfaccia utente grafica (GUI, Graphical User Interface) a quelle basate sulle più recenti innovazioni offerte da ASP.NET, quali Web Form e servizi Web XML.
+.NET Framework è costituito da Common Language Runtime (CLR) e dalla libreria di classi .NET Framework. Common Language Runtime è alla base di .NET Framework. e può essere considerato come un agente che gestisce il codice in fase di esecuzione, fornendo servizi di base quali gestione della memoria, gestione di thread e servizi remoti e attivando nel contempo una rigida indipendenza dai tipi e altre forme di accuratezza del codice che garantiscono sicurezza ed efficienza. Il concetto di gestione del codice è infatti un principio fondamentale di runtime. Il codice destinato al runtime è definito codice gestito, mentre quello non destinato al runtime è definito codice non gestito. La libreria di classi è una raccolta completa e orientata agli oggetti di tipi riutilizzabili che consentono di sviluppare app che vanno dalle tradizionali app della riga di comando o dell'interfaccia utente grafica (GUI) alle app basate sulle ultime innovazioni fornite da ASP.NET, ad esempio Web Moduli e servizi Web XML.
 
-.NET Framework può essere ospitato da componenti non gestiti che caricano Common Language Runtime nei processi e avviano l'esecuzione del codice gestito, creando un ambiente software in grado di sfruttare funzionalità sia gestite che non gestite. Oltre a includere vari host di runtime, .NET Framework supporta lo sviluppo di host di runtime di altri produttori.
+.NET Framework può essere ospitato da componenti non gestiti che caricano Common Language Runtime nei processi e avviano l'esecuzione di codice gestito, creando così un ambiente software che sfrutta sia le funzionalità gestite che le funzionalità non gestite. .NET Framework non solo fornisce diversi host di runtime, ma supporta anche lo sviluppo di host di runtime di terze parti.
 
-In ASP.NET è ad esempio disponibile il runtime per fornire un ambiente lato server scalabile per il codice gestito. È possibile usare ASP.NET direttamente con il runtime per attivare app ASP.NET e servizi Web XLM, entrambi trattati più avanti in questo argomento.
+In ASP.NET è ad esempio disponibile il runtime per fornire un ambiente lato server scalabile per il codice gestito. ASP.NET funziona direttamente con il runtime per abilitare le app ASP.NET e i servizi Web XML, entrambi illustrati più avanti in questo articolo.
 
 Internet Explorer è un esempio di app non gestita che contiene il runtime in forma di estensione di tipo MIME. L'hosting del runtime tramite Internet Explorer consente di incorporare componenti gestiti o controlli Windows Form nei documenti HTML. Questo tipo di hosting consente l'uso del codice mobile gestito, ma con miglioramenti significativi che solo il codice gestito può offrire, come l'esecuzione parzialmente attendibile e l'archiviazione di file isolati.
 
@@ -45,7 +45,7 @@ L'illustrazione seguente visualizza la relazione di Common Language Runtime e de
 
 ![Screenshot che visualizza il funzionamento del codice gestito all'interno di un'architettura più ampia.](./media/overview/language-runtime-class-library-relationship.gif)
 
-Nelle sezioni seguenti vengono descritte più dettagliatamente le principali funzionalità di .NET Framework.
+Nelle sezioni seguenti vengono descritte in modo più dettagliato le funzionalità principali di .NET Framework.
 
 ## <a name="features-of-the-common-language-runtime"></a>Funzionalità di Common Language Runtime
 

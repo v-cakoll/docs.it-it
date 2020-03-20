@@ -2,12 +2,12 @@
 title: '! (NOT) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: a1447a34-df06-4393-93c3-0612ebd41abc
-ms.openlocfilehash: 7755219c5238f78e59332c508643fe2ae1f5096f
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 0b69d4cb64adc1f9232631d50ec42af0d1ba47e3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319523"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150129"
 ---
 # <a name="-not-entity-sql"></a>! (NOT) (Entity SQL)
 Nega un'espressione `Boolean` .  
@@ -18,13 +18,13 @@ Nega un'espressione `Boolean` .
 NOT boolean_expression  
 -- or  
 ! boolean_expression  
-``` 
+```
   
-## <a name="arguments"></a>argomenti  
+## <a name="arguments"></a>Argomenti  
  `boolean_expression`  
  Qualsiasi espressione valida che restituisce un valore Boolean.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Il punto esclamativo (!) ha la stessa funzionalità dell'operatore NOT.  
   
 ## <a name="example"></a>Esempio  

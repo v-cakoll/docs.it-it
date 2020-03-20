@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 90368606-506e-40df-be1f-8d595159203f
 topic_type:
 - apiref
-ms.openlocfilehash: 6914437b9b238c1d82cf4cc8a480a15dd8dda7ad
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8f9761cc8bc881cd694f5d9620e5c4ab5987a2ed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126800"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176396"
 ---
 # <a name="iceefilegen-class"></a>Classe ICeeFileGen
-Fornisce la funzionalità per la creazione di un file eseguibile Portable (PE) nativo. L'interfaccia verrà in genere utilizzata dai compilatori per generare il file eseguibile di output compilato.  
+Fornisce funzionalità per la creazione di un file eseguibile portabile nativo (PE). L'interfaccia verrà in genere utilizzata dai compilatori per generare l'eseguibile di output compilato.  
   
 > [!NOTE]
-> `ICeeFileGen` supporta l'infrastruttura .NET Framework e non può essere utilizzato direttamente dal codice.  
+> `ICeeFileGen`supporta l'infrastruttura .NET Framework e non può essere utilizzato direttamente dal codice.  
   
- Questa interfaccia è stata deprecata e verrà rimossa in una versione futura.  
+ Questa interfaccia è deprecata e verrà rimossa in una versione futura.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -149,7 +149,7 @@ public:
         HCEESECTION section, ULONG num, ULONG size, ULONG offset = 0);  
   
     virtual HRESULT EmitMetaDataEx (HCEEFILE ceeFile,  
-        IMetaDataEmit *emitter);   
+        IMetaDataEmit *emitter);
   
     virtual HRESULT EmitLibraryNameEx (HCEEFILE ceeFile,  
         IMetaDataEmit *emitter);  
@@ -237,9 +237,9 @@ public:
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** ICeeFileGen. h  
+ **Intestazione:** ICeeFileGen.h  
   
- **Versione .NET Framework:** 1,0  
+ **Versione di .NET Framework:** 1.0  
   
 ## <a name="see-also"></a>Vedere anche
 

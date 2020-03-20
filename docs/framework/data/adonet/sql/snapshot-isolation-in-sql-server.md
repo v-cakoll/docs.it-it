@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 6d85cc041850300d1d079b227dcb8ed9201a0502
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 8313ffc8eef70c1e5efc24b09a160edb7cec1595
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699067"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174264"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>Isolamento dello snapshot in SQL Server
 L'isolamento dello snapshot migliora la concorrenza per le applicazioni OLTP.  
   
 ## <a name="understanding-snapshot-isolation-and-row-versioning"></a>Informazioni sull'isolamento dello snapshot e il controllo delle versioni delle righe  
- Una volta abilitato l'isolamento dello snapshot, è necessario mantenere aggiornate le versioni di riga per ogni transazione.  Prima del SQL Server 2019, queste versioni venivano archiviate in **tempdb**. SQL Server 2019 introduce una nuova funzionalità, il recupero accelerato del database (ADR), che richiede un proprio set di versioni di riga.  Quindi, a partire da SQL Server 2019, se ADR non è abilitato, le versioni di riga vengono mantenute in **tempdb** come sempre.  Se ADR è abilitato, tutte le versioni di riga, entrambe correlate all'isolamento dello snapshot e all'ADR, vengono mantenute nell'archivio versioni permanente (PVS) dell'ADR, che si trova nel database utente in un filegroup specificato dall'utente. Ciascuna transazione viene identificata mediante un numero di sequenza univoco. Questi numeri vengono registrati per ciascuna versione di riga. La transazione funziona con le versioni di riga più recenti che dispongono di un numero di sequenza che precede il numero di sequenza della transazione. La transazione ignora le versioni di riga più recenti, create dopo l'inizio della transazione stessa.  
+ Una volta abilitata l'isolamento dello snapshot, è necessario mantenere le versioni di riga aggiornate per ogni transazione.  Prima di SQL Server 2019, queste versioni erano archiviate in **tempdb**. SQL Server 2019 sql Server introduce una nuova funzionalità, Accelerated Database Recovery (ADR) che richiede il proprio set di versioni di riga.  Pertanto, a partire da SQL Server 2019, se ADR non è abilitato, le versioni di riga vengono mantenute in **tempdb** come sempre.  Se ADR è abilitato, tutte le versioni di riga, entrambe correlate all'isolamento dello snapshot e all'ADR, vengono mantenute nell'archivio versione persistente (PVS, Persistent Version Store) di ADR, che si trova nel database utente di un filegroup specificato dall'utente. Un numero di sequenza di transazioni univoco identifica ogni transazione. Questi numeri univoci vengono registrati per ogni versione di riga. La transazione usa le versioni di riga più recenti con un numero di sequenza precedente al numero di sequenza della transazione. Le versioni di riga più recenti create dopo l'inizio della transazione vengono ignorate dalla transazione.  
   
- Il termine "snapshot" è dovuto al fatto che tutte le query nella transazione rilevano la stessa versione, o snapshot, del database, in base allo stato del database all'inizio della transazione. In una transazione snapshot non vengono acquisiti blocchi sulle pagine di dati o sulle righe di dati sottostanti. In questo modo è possibile eseguire altre transazioni senza che vengano bloccate da una precedente transazione non completata. Le transazioni di modifica dei dati non bloccano le transazioni di lettura dei dati così come queste ultime non bloccano le transazioni di scrittura dei dati, esattamente come avviene nel livello di isolamento READ COMMITTED in SQL Server. Questo comportamento non bloccante riduce notevolmente la probabilità di blocchi critici per le transazioni complesse.  
+ Il termine "snapshot" riflette il fatto che tutte le query nella transazione visualizzano la stessa versione, o snapshot, del database, in base allo stato del database nel momento in cui viene avviata la transazione. In una transazione snapshot non vengono acquisiti blocchi sulle pagine di dati o sulle righe di dati sottostanti. In questo modo è possibile eseguire altre transazioni senza che vengano bloccate da una precedente transazione non completata. Le transazioni che modificano i dati non bloccano le transazioni che leggono i dati e viceversa, come normalmente accade nel livello di isolamento READ COMMITTED predefinito in SQL Server. Questo comportamento, oltre a non causare blocchi, riduce anche in modo significativo la probabilità di deadlock per le transazioni complesse.  
   
- L'isolamento dello snapshot usa un modello di concorrenza ottimistica. Se una transazione snapshot tenta di eseguire il commit delle modifiche apportate ai dati dall'inizio della transazione, verrà eseguito il rollback della transazione e verrà generato un errore. Per evitare che questo si verifichi, è possibile usare i suggerimenti UPDLOCK per le istruzioni SELECT che accedono ai dati da modificare. Per altre informazioni, vedere l'argomento relativo agli hint di blocco nella documentazione online di SQL Server.  
+ L'isolamento dello snapshot usa un modello di concorrenza ottimistica. Se una transazione snapshot tenta di eseguire il commit delle modifiche apportate ai dati modificati dall'inizio della transazione, verrà eseguito il rollback della transazione e verrà generato un errore. È possibile evitare questo problema usando hint UPDLOCK per le istruzioni SELECT che accedono ai dati da modificare. Per altre informazioni, vedere "Hint di blocco" nella documentazione online di SQL Server.  
   
- L'isolamento dello snapshot deve essere abilitato impostando l'opzione di database ALLOW_SNAPSHOT_ISOLATION ON prima di usarlo per le transazioni. Questo consente di attivare il meccanismo per l'archiviazione delle versioni di riga nel database temporaneo (**tempdb**). È necessario abilitare l'isolamento dello snapshot in ciascun database in cui esso viene usato con l'istruzione ALTER DATABASE di Transact-SQL. In questo senso, l'isolamento dello snapshot differisce dai livelli di isolamento tradizionali di READ COMMITTED, REPEATABLE READ, SERIALIZABLE e READ UNCOMMITTED, che non richiedono alcuna configurazione. Le istruzioni seguenti attivano l'isolamento dello snapshot e sostituiscono il comportamento READ COMMITTED predefinito con SNAPSHOT:  
+ Per abilitare l'isolamento dello snapshot, è necessario impostare l'opzione del database ALLOW_SNAPSHOT_ISOLATION su ON prima che il database venga usato nelle transazioni. Questa operazione consente di attivare il meccanismo di archiviazione delle versioni delle righe nel database temporaneo (**tempdb**). È necessario abilitare l'isolamento dello snapshot in ogni database che lo usa con l'istruzione Transact-SQL ALTER DATABASE. In questo senso l'isolamento dello snapshot è diverso dai livelli di isolamento tradizionali di READ COMMITTED, REPEATABLE READ, SERIALIZABLE e READ UNCOMMITTED, che non richiedono alcuna configurazione. Le istruzioni seguenti attivano l'isolamento dello snapshot e sostituiscono il comportamento di READ COMMITTED predefinito con SNAPSHOT:  
   
 ```sql  
 ALTER DATABASE MyDatabase  
@@ -32,51 +32,51 @@ ALTER DATABASE MyDatabase
 SET READ_COMMITTED_SNAPSHOT ON  
 ```  
   
- L'impostazione dell'opzione READ_COMMITTED_SNAPSHOT ON consente di accedere alle righe la cui versione è stata controllata, al livello di isolamento READ COMMITTED predefinito. Se l'opzione READ_COMMITTED_SNAPSHOT è impostata su OFF, per accedere alle righe della versione è necessario impostare il livello di isolamento dello snapshot in maniera esplicita per ciascuna sessione.  
+ L'impostazione dell'opzione READ_COMMITTED_SNAPSHOT su ON consente l'accesso alle righe con controllo delle versioni nel livello di isolamento READ COMMITTED predefinito. Se l'opzione READ_COMMITTED_SNAPSHOT è impostata su OFF, è necessario impostare in modo esplicito il livello di isolamento dello snapshot per ogni sessione per accedere alle righe con versione.  
   
 ## <a name="managing-concurrency-with-isolation-levels"></a>Gestione della concorrenza con livelli di isolamento  
- Il livello di isolamento al quale viene eseguita un'istruzione di Transact-SQL determina il comportamento di blocco e di controllo della versione della riga. Un livello di isolamento dispone di un ambito di connessione, che, una volta impostato per una connessione con l'istruzione SET TRANSACTION ISOLATION LEVEL, rimane attivo finché non viene chiusa la connessione o non viene impostato un livello di isolamento diverso. Quando una connessione viene chiusa e restituita al pool, il livello di isolamento dall'ultima istruzione SET TRANSACTION ISOLATION LEVEL viene mantenuto. Le successive connessioni che riutilizzano una connessione in pool usano il livello di isolamento che era attivo nel momento in cui la connessione è stata inserita nel pool.  
+ Il livello di isolamento in cui viene eseguita un'istruzione Transact-SQL determina il comportamento di blocco e di controllo delle versioni delle righe. Il livello di isolamento ha un ambito a livello di connessione e, una volta impostato per una connessione con l'istruzione SET TRANSACTION ISOLATION LEVEL, rimane attivo fino a quando la connessione non viene chiusa o viene impostato un altro livello di isolamento. Quando una connessione viene chiusa e restituita al pool, viene mantenuto il livello di isolamento dell'ultima istruzione SET TRANSACTION ISOLATION LEVEL. Le connessioni successive che riutilizzano una connessione in pool usano il livello di isolamento che era attivo nel momento in cui la connessione è diventata in pool.  
   
- Le singole query eseguite in una connessione possono contenere hint di blocco in grado di modificare l'isolamento per una singola istruzione o transazione, ma che non possono influire sul livello della connessione. I livelli di isolamento o gli hint di blocco impostati in funzioni o stored procedure non modificano il livello di isolamento della connessione che li ha chiamati e restano validi solo per la durata della stored procedure o della chiamata di funzione.  
+ Le singole query eseguite in una connessione possono contenere hint di blocco che modificano l'isolamento per una singola istruzione o transazione, ma non influiscono sul livello di isolamento della connessione. I livelli di isolamento o gli hint di blocco impostati in stored procedure o funzioni non modificano il livello di isolamento della connessione che li chiama e sono attivi solo per la durata della chiamata della stored procedure o della funzione.  
   
- I quattro livelli di isolamento definiti nello standard SQL-92 sono supportati nelle prime versioni di SQL Server:  
+ Nelle versioni precedenti di SQL Server sono supportati quattro livelli di isolamento definiti nello standard SQL-92:  
   
-- READ UNCOMMITTED rappresenta il livello di isolamento meno restrittivo perché ignora i blocchi inseriti da altre transazioni. Le transazioni eseguite in READ UNCOMMITTED possono leggere i valori dei dati modificati non ancora sottoposti a commit da altre transazioni. Queste letture vengono definite "dirty".  
+- READ UNCOMMITTED è il livello di isolamento meno restrittivo perché ignora i blocchi inseriti da altre transazioni. Le transazioni in esecuzione in READ UNCOMMITTED possono leggere i valori dei dati modificati non ancora sottoposti a commit da altre transazioni. Queste letture sono denominate "dirty".  
   
-- READ COMMITTED è il livello di isolamento predefinito per SQL Server. Questo livello consente di impedire le letture dirty, specificando che le istruzioni non possono leggere i valori dei dati modificati ma non ancora sottoposti a commit da altre transazioni. Altre transazioni possono ancora modificare, inserire o eliminare dati tra le esecuzioni di singole istruzioni all'interno della transazione corrente, dando luogo a letture non ripetibili o dati "fantasma".  
+- READ COMMITTED è il livello di isolamento predefinito per SQL Server. Evita le letture dirty specificando che le istruzioni non possono leggere i valori dei dati modificati da altre transazioni, ma di cui non è ancora stato eseguito il commit. Altre transazioni possono comunque modificare, inserire o eliminare i dati nell'intervallo tra l'esecuzione delle singole istruzioni nella transazione corrente, con conseguenze come letture irripetibili e la presenza di dati fantasma.  
   
-- REPEATABLE READ è un livello di isolamento più restrittivo di READ COMMITTED. Esso include il livello READ COMMITTED e aggiunge la limitazione in base alla quale nessun'altra transazione può modificare o eliminare dati letti dalla transazione corrente finché questa non viene sottoposta a commit. La concorrenza è minore rispetto al livello READ COMMITTED in quanto i blocchi condivisi sui dati letti vengono conservati per la durata della transazione anziché rilasciati al termine di ciascuna istruzione.  
+- REPEATABLE READ è un livello di isolamento più restrittivo rispetto a READ COMMITTED. Include READ COMMITTED e specifica anche che nessun'altra transazione può modificare o eliminare i dati letti dalla transazione corrente fino al commit della transazione corrente. Il livello di concorrenza è inferiore rispetto a READ COMMITTED poiché i blocchi condivisi nei dati di lettura vengono mantenuti attivi fino alla fine della transazione, anziché essere rilasciati alla fine di ogni istruzione.  
   
-- SERIALIZABLE è il livello di isolamento più restrittivo, in quanto blocca intere gamme di chiavi e trattiene i blocchi finché la transazione non è stata completata. Esso include il livello REPEATABLE READ e aggiunge la limitazione in base alla quale altre transazioni non possono inserire nuove righe negli intervalli letti dalla transazione finché quest'ultima non è stata completata.  
+- SERIALIZABLE è il livello di isolamento più restrittivo, perché blocca interi intervalli di chiavi e mantiene attivi tali blocchi fino al completamento della transazione. Include REPEATABLE READ e aggiunge la restrizione per cui le altre transazioni non possono inserire nuove righe negli intervalli letti dalla transazione finché la transazione non è stata completata.  
   
- Per ulteriori informazioni, vedere la [Guida al blocco delle transazioni e al controllo delle versioni delle righe](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).  
+ Per altre informazioni vedere [Guida per il controllo delle versioni delle righe e il blocco della transazione](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).  
   
 ### <a name="snapshot-isolation-level-extensions"></a>Estensione del livello di isolamento dello snapshot  
  In SQL Server sono state introdotte estensioni ai livelli di isolamento SQL-92 sotto forma del livello di isolamento SNAPSHOT e un'implementazione aggiuntiva di READ COMMITTED. Il livello di isolamento READ_COMMITTED_SNAPSHOT può sostituire READ COMMITTED per tutte le transazioni.  
   
-- L'isolamento SNAPSHOT specifica che i dati letti all'interno di una transazione non rifletteranno mai le modifiche apportate da altre transazioni simultanee. La transazione usa le versioni delle righe dei dati esistenti al momento in cui tale transazione viene iniziata. Sui dati non viene posizionato alcun blocco al momento della lettura, quindi le transazioni SNAPSHOT non impediscono la scrittura di dati da parte di altre transazioni. Le transazioni di scrittura dei dati non bloccano la lettura dei dati da parte delle transazioni snapshot. È necessario abilitare l'isolamento dello snapshot impostando l'opzione di database ALLOW_SNAPSHOT_ISOLATION.  
+- L'isolamento SNAPSHOT specifica che i dati letti all'interno di una transazione non rifletteranno mai le modifiche apportate da altre transazioni simultanee. La transazione usa le versioni delle righe di dati esistenti all'inizio della transazione. Nessun blocco viene inserito nei dati quando vengono letti, quindi le transazioni SNAPSHOT non impediscono la scrittura di dati da parte di altre transazioni. Viceversa, le transazioni che eseguono scritture di dati non impediscono la lettura di dati da transazioni snapshot. È necessario attivare l'isolamento dello snapshot impostando l'opzione del database ALLOW_SNAPSHOT_ISOLATION su ON.  
   
-- L'opzione di database READ_COMMITTED_SNAPSHOT determina il comportamento del livello di isolamento READ COMMITTED predefinito quando nel database viene abilitato l'isolamento dello snapshot. Se non si specifica in maniera esplicita l'opzione READ_COMMITTED_SNAPSHOT ON, il livello READ COMMITTED viene applicato a tutte le transazioni implicite. Ciò provoca lo stesso comportamento dell'impostazione READ_COMMITTED_SNAPSHOT OFF (predefinita). Quando è attiva l'impostazione READ_COMMITTED_SNAPSHOT OFF, il motore di database usa i blocchi condivisi per l'applicazione del livello di isolamento. Se si imposta l'opzione di database READ_COMMITTED_SNAPSHOT su ON, per impostazione predefinita il motore di database usa il controllo delle versioni delle righe e l'isolamento dello snapshot, anziché usare i blocchi per proteggere i dati.  
+- L'opzione del database READ_COMMITTED_SNAPSHOT determina il comportamento del livello di isolamento READ COMMITTED predefinito quando l'isolamento dello snapshot viene abilitato in un database. Se non si specifica in modo esplicito READ_COMMITTED_SNAPSHOT ON, READ COMMITTED viene applicato a tutte le transazioni implicite. Questa operazione produce lo stesso comportamento dell'impostazione READ_COMMITTED_SNAPSHOT OFF, che è l'impostazione predefinita. Quando l'opzione è READ_COMMITTED_SNAPSHOT OFF, il motore di database usa i blocchi condivisi per applicare il livello di isolamento predefinito. Se si imposta l'opzione del database READ_COMMITTED_SNAPSHOT su ON, il motore di database usa il controllo delle versioni delle righe e l'isolamento dello snapshot come impostazione predefinita, anziché usare i blocchi per proteggere i dati.  
   
 ## <a name="how-snapshot-isolation-and-row-versioning-work"></a>Funzionamento dell'isolamento dello snapshot e del controllo delle versioni delle righe  
- Quando il livello di isolamento dello SNAPSHOT è abilitato, ogni volta che viene aggiornata una riga, il SQL Server motore di database archivia una copia della riga originale in **tempdb**e aggiunge un numero di sequenza della transazione alla riga. Di seguito è riportata la sequenza degli eventi che si verificano:  
+ Quando viene abilitato il livello di isolamento SNAPSHOT, ogni volta che una riga viene aggiornata, il motore di database di SQL Server archivia una copia della riga originale in **tempdb** e aggiunge un numero di sequenza della transazione alla riga. Di seguito è riportata la sequenza di eventi che si verifica:  
   
-- Viene avviata una nuova transazione alla quale viene assegnato un numero di sequenza.  
+- Viene avviata una nuova transazione a cui viene assegnato un numero di sequenza delle transazioni.  
   
-- Il motore di database legge una riga all'interno della transazione e recupera la versione di riga da **tempdb** il cui numero di sequenza è più vicino a e minore di, il numero di sequenza della transazione.  
+- Il motore di database legge una riga all'interno della transazione e recupera da **tempdb** la versione della riga il cui numero di sequenza è il più vicino e inferiore al numero di sequenza della transazione.  
   
-- Il motore di database controlla se il numero di sequenza della transazione è presente nell'elenco dei numeri di sequenza delle transazioni attive non sottoposte a commit al momento dell'avvio della transazione snapshot.  
+- Il motore di database verifica se il numero di sequenza delle transazioni non è presente nell'elenco dei numeri di sequenza delle transazioni di cui non è stato eseguito il commit attive al momento dell'avvio della transazione snapshot.  
   
-- La transazione legge la versione della riga da **tempdb** aggiornata al momento dell'avvio della transazione. Non rileverà nuove righe inserite dopo che la transazione è stata avviata in quanto questi valori del numero di sequenza sono maggiori del valore del numero di sequenza della transazione.  
+- La transazione legge da **tempdb** la versione della riga disponibile all'inizio della transazione. Non visualizza le nuove righe inserite dopo l'avvio della transazione, perché queste avranno valori dei numeri di sequenza superiori al valore del numero di sequenza della transazione.  
   
-- La transazione corrente vedrà le righe che sono state eliminate dopo l'inizio della transazione, perché in **tempdb** sarà presente una versione di riga con un valore numerico di sequenza inferiore.  
+- La transazione corrente rileverà le righe eliminate dopo l'inizio della transazione, in quanto in **tempdb** sarà disponibile una versione della riga che presenta un valore del numero di sequenza minore.  
   
- L'effetto dell'isolamento consiste nel fatto che la transazione rileva tutti i dati esattamente come erano al momento dell'avvio della transazione stessa, senza rispettare o posizionare blocchi sulle tabelle sottostanti. Ciò può comportare un miglioramento delle prestazioni in situazioni di conflitto.  
+ L'effetto finale dell'isolamento dello snapshot è che la transazione visualizza tutti i dati esistenti all'inizio della transazione, senza rispettare o inserire blocchi nelle tabelle sottostanti. Ciò può comportare un miglioramento delle prestazioni in situazioni in cui si verificano contese.  
   
- Una transazione snapshot usa sempre il controllo della concorrenza ottimistica, rifiutando blocchi che potrebbero impedire l'aggiornamento delle righe da parte di altre transazioni. Se una transazione snapshot tenta di eseguire il commit di un aggiornamento per una riga modificata dopo l'inizio della transazione, viene eseguito il rollback della transazione e viene generato un errore.  
+ Una transazione snapshot usa sempre il controllo della concorrenza ottimistica, evitando i blocchi che impediscono alle altre transazioni di aggiornare le righe. Se una transazione snapshot tenta di eseguire il commit di un aggiornamento in una riga che è stata modificata dopo l'inizio della transazione, viene eseguito il rollback della transazione e viene generato un errore.  
   
 ## <a name="working-with-snapshot-isolation-in-adonet"></a>Utilizzo dell'isolamento dello snapshot in ADO.NET  
- L'isolamento dello snapshot è supportato in ADO.NET dalla classe <xref:System.Data.SqlClient.SqlTransaction>. Se un database è stato abilitato per l'isolamento dello snapshot ma non è configurato per READ_COMMITTED_SNAPSHOT in, è necessario avviare un <xref:System.Data.SqlClient.SqlTransaction> usando il valore di enumerazione **IsolationLevel. snapshot** quando si chiama il metodo <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A>. Questo frammento di codice presuppone che la connessione sia un oggetto <xref:System.Data.SqlClient.SqlConnection> aperto.  
+ L'isolamento dello snapshot è supportato in ADO.NET dalla classe <xref:System.Data.SqlClient.SqlTransaction>. Se un database è abilitato per l'isolamento dello snapshot ma non è configurato per READ_COMMITTED_SNAPSHOT ON, è necessario avviare una <xref:System.Data.SqlClient.SqlTransaction> usando il valore di enumerazione **IsolationLevel.Snapshot** quando viene chiamato il metodo <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A>. Questo frammento di codice presuppone che la connessione sia un oggetto <xref:System.Data.SqlClient.SqlConnection> aperto.  
   
 ```vb  
 Dim sqlTran As SqlTransaction = _  
@@ -84,65 +84,65 @@ Dim sqlTran As SqlTransaction = _
 ```  
   
 ```csharp  
-SqlTransaction sqlTran =   
+SqlTransaction sqlTran =
   connection.BeginTransaction(IsolationLevel.Snapshot);  
 ```  
   
 ### <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato il comportamento dei diversi livelli di isolamento mediante il tentativo di accesso ai dati bloccati. Questo esempio non può essere usato nel codice di produzione.  
+ L'esempio seguente illustra come i diversi livelli di isolamento si comportano tentando di accedere ai dati bloccati e non è inteso come da usare nel codice di produzione.  
   
- Il codice si connette al database di esempio **AdventureWorks** in SQL Server e crea una tabella denominata **TestSnapshot** e inserisce una riga di dati. Il codice usa l'istruzione ALTER DATABASE di Transact-SQL per attivare l'isolamento dello snapshot per il database, ma non imposta l'opzione READ_COMMITTED_SNAPSHOT, lasciando attivo il comportamento a livello di isolamento READ COMMITTED predefinito. Nel codice vengono eseguite le seguenti azioni:  
+ Il codice esegue la connessione al database di esempio **AdventureWorks** in SQL Server, crea una tabella denominata **TestSnapshot** e inserisce una riga di dati. Il codice usa l'istruzione Transact-SQL ALTER DATABASE per attivare l'isolamento dello snapshot per il database, ma non imposta l'opzione READ_COMMITTED_SNAPSHOT, lasciando attivo il comportamento del livello di isolamento READ COMMITTED predefinito. Il codice esegue quindi le azioni seguenti:  
   
-- Inizia, ma non completa, sqlTransaction1, che usa il livello di isolamento SERIALIZABLE per avviare la transazione di aggiornamento. Ciò consente di bloccare la tabella.  
+- Avvia, ma non completa, sqlTransaction1, che usa il livello di isolamento SERIALIZABLE per avviare una transazione di aggiornamento. Questo ha l'effetto di bloccare la tabella.  
   
-- Viene aperta una seconda connessione e viene avviata una seconda transazione utilizzando il livello di isolamento dello SNAPSHOT per leggere i dati nella tabella **TestSnapshot** . Poiché l'isolamento dello snapshot è abilitato, la transazione può leggere i dati esistenti prima che venga avviata sqlTransaction1.  
+- Apre una seconda connessione e avvia una seconda transazione usando il livello di isolamento SNAPSHOT per leggere i dati nella tabella **TestSnapshot**. Poiché l'isolamento dello snapshot è abilitato, questa transazione può leggere i dati esistenti prima dell'avvio di sqlTransaction1.  
   
-- Apre una terza connessione e avvia una transazione usando il livello di isolamento READ COMMITTED per tentare di leggere i dati nella tabella. In tal caso, il codice non può leggere i dati perché non è in grado di leggere informazioni successive al posizionamento dei blocchi sulla tabella nella prima transazione, pertanto verrà eseguito il timeout. Lo stesso risultato si ottiene con i livelli di isolamento REPEATABLE READ e SERIALIZABLE poiché questi non possono leggere le informazioni successive al posizionamento dei blocchi nella prima transazione.  
+- Apre una terza connessione e avvia una transazione usando il livello di isolamento READ COMMITTED per tentare di leggere i dati nella tabella. In questo caso, il codice non è in grado di leggere i dati perché non è in grado di leggere oltre i blocchi inseriti nella tabella nella prima transazione e si scade. Lo stesso risultato si verificherebbe se venissero utilizzati i livelli di isolamento REPEATABLE READ e SERIALI-ABLE perché anche questi livelli di isolamento non sono in grado di leggere oltre i blocchi inseriti nella prima transazione.  
   
-- Apre una quarta connessione e avvia una transazione usando il livello di isolamento READ UNCOMMITTED, che esegue una lettura dirty del valore del quale non è stato eseguito il commit in sqlTransaction1. Se non è stato eseguito il commit della prima transazione, questo valore non può esistere nel database.  
+- Apre una quarta connessione e avvia una transazione usando il livello di isolamento READ UNCOMMITTED, che esegue una lettura dirty del valore di cui non è stato eseguito il commit in sqlTransaction1. Questo valore potrebbe non esistere mai nel database se non viene eseguito il commit della prima transazione.  
   
-- Esegue il rollback della prima transazione e si pulisce eliminando la tabella **TestSnapshot** e disattivando l'isolamento dello snapshot per il database **AdventureWorks** .  
+- Esegue il rollback della prima transazione, elimina la tabella **TestSnapshot** e disattiva l'isolamento dello snapshot per il database **AdventureWorks**.  
   
 > [!NOTE]
-> Negli esempi seguenti viene usata la stessa stringa di connessione con il pool di connessioni disattivato. Se una connessione è in pool, la reimpostazione del relativo livello di isolamento non implica quella del livello di isolamento nel server. Di conseguenza, le connessioni successive che usano la stessa connessione interna in pool vengono avviate con i livelli di isolamento impostati su quello della connessione in pool. In alternativa a disattivare il pool di connessioni, è possibile impostare il livello di isolamento in modo esplicito per ogni connessione.  
+> Negli esempi seguenti viene usata la stessa stringa di connessione con il pooling delle connessioni disattivato. Se una connessione è in pool, la reimpostazione del livello di isolamento non comporta la reimpostazione del livello di isolamento nel server. Di conseguenza, le connessioni successive che usano la stessa connessione interna in pool vengono avviate con i livelli di isolamento impostati su quello della connessione in pool. Un'alternativa alla disattivazione del pooling delle connessioni consiste nell'impostare il livello di isolamento in modo esplicito per ogni connessione.  
   
  [!code-csharp[DataWorks SnapshotIsolation.Demo#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.Demo/CS/source.cs#1)]
  [!code-vb[DataWorks SnapshotIsolation.Demo#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.Demo/VB/source.vb#1)]  
   
 ### <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato il comportamento dell'isolamento dello snapshot durante la modifica dei dati. Nel codice vengono eseguite le seguenti azioni:  
+ Nell'esempio seguente viene illustrato il comportamento dell'isolamento dello snapshot quando i dati vengono modificati. Il codice esegue le azioni seguenti:  
   
-- Si connette al database di esempio **AdventureWorks** e Abilita l'isolamento dello snapshot.  
+- Si connette al database di esempio **AdventureWorks** e abilita l'isolamento SNAPSHOT.  
   
 - Crea una tabella denominata **TestSnapshotUpdate** e inserisce tre righe di dati di esempio.  
   
-- Inizia, ma non completa, sqlTransaction1 usando l'isolamento SNAPSHOT. Nella transazione vengono selezionate tre righe di dati.  
+- Avvia, ma non completa, sqlTransaction1 usando l'isolamento SNAPSHOT. Nella transazione vengono selezionate tre righe di dati.  
   
-- Crea una seconda **SqlConnection** in **AdventureWorks** e crea una seconda transazione usando il livello di isolamento Read committed che aggiorna un valore in una delle righe selezionate in sqlTransaction1.  
+- Crea una seconda **SqlConnection** ad **AdventureWorks** e crea una seconda transazione usando il livello di isolamento READ COMMITTED che aggiorna un valore in una delle righe selezionate in sqlTransaction1.  
   
 - Esegue il commit di sqlTransaction2.  
   
-- Torna a sqlTransaction1 e tenta di aggiornare la stessa riga di cui è già stato eseguito il commit da sqlTransaction1. Viene generato l'errore 3960 e viene eseguito il rollback automatico di sqlTransaction1. **SqlException. Number** e **SqlException. Message** vengono visualizzati nella finestra della console.  
+- Torna a sqlTransaction1 e tenta di aggiornare la stessa riga di cui sqlTransaction1 ha già eseguito il commit. Viene generato l'errore 3960 e viene eseguito il rollback automatico di sqlTransaction1. **SqlException.Number** e **SqlException.Message** sono visualizzati nella finestra della console.  
   
-- Esegue il codice di pulizia per disattivare l'isolamento dello snapshot in **AdventureWorks** ed eliminare la tabella **TestSnapshotUpdate** .  
+- Esegue il codice di pulizia per disattivare l'isolamento dello snapshot in **AdventureWorks** ed elimina la tabella **TestSnapshotUpdate**.  
   
  [!code-csharp[DataWorks SnapshotIsolation.DemoUpdate#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.DemoUpdate/CS/source.cs#1)]
  [!code-vb[DataWorks SnapshotIsolation.DemoUpdate#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.DemoUpdate/VB/source.vb#1)]  
   
 ### <a name="using-lock-hints-with-snapshot-isolation"></a>Utilizzo degli hint di blocco con l'isolamento dello snapshot  
- Nell'esempio precedente la prima transazione seleziona i dati mentre una seconda transazione li aggiorna prima del completamento della prima transazione, causando un conflitto di aggiornamento nel momento in cui la prima transazione tenta di aggiornare la stessa riga. È possibile limitare le probabilità che si verifichi un conflitto di aggiornamento nelle transazioni snapshot a esecuzione prolungata fornendo hint di blocco all'inizio della transazione. Nell'istruzione SELECT seguente viene usato l'hint UPDLOCK per bloccare le righe selezionate:  
+ Nell'esempio precedente la prima transazione seleziona i dati e una seconda transazione aggiorna i dati prima che la prima transazione venga completata, causando un conflitto di aggiornamento quando la prima transazione tenta di aggiornare la stessa riga. È possibile ridurre la probabilità di conflitti di aggiornamento nelle transazioni snapshot con esecuzione prolungata specificando hint di blocco all'inizio della transazione. Nell'istruzione SELECT seguente viene usato l'hint UPDLOCK per bloccare le righe selezionate:  
   
 ```sql  
-SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)   
+SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
   WHERE PriKey BETWEEN 1 AND 3  
 ```  
   
- L'utilizzo dell'hint di blocco UPDLOCK consente di bloccare eventuali tentativi di aggiornamento delle righe prima del completamento della prima transazione. Ciò garantisce che non si verifichino conflitti quando le righe vengono aggiornate in seguito nella transazione. Vedere l'argomento relativo agli hint di blocco nella documentazione online di SQL Server.  
+ L'uso dell'hint di blocco UPDLOCK blocca le righe che tentano di aggiornare le righe prima del completamento della prima transazione. Ciò garantisce che le righe selezionate non siano oggetto di conflitti quando vengono aggiornate nella transazione in un secondo momento. Vedere "Hint di blocco" nella documentazione online di SQL Server.  
   
- Se si verificano molti conflitti, l'isolamento dello snapshot potrebbe non rivelarsi la scelta migliore. Gli hint devono essere usati solo se veramente necessari. L'applicazione non è stata progettata per essere basata sugli hint di blocco dell'operazione.  
+ Se l'applicazione presenta molti conflitti, l'isolamento dello snapshot potrebbe non essere la scelta migliore. Gli hint devono essere usati solo quando strettamente necessario. L'applicazione non deve essere progettata in modo che il suo funzionamento si basi costantemente sugli hint di blocco.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [SQL Server e ADO.NET](index.md)
 - [Panoramica di ADO.NET](../ado-net-overview.md)
-- [Guida al controllo delle versioni delle righe e dei blocchi delle transazioni](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)
+- [Guida per il controllo delle versioni delle righe e il blocco della transazione](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)

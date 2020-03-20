@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 65063ad5-e0d9-4c01-8f8b-9a5950109fa6
 topic_type:
 - apiref
-ms.openlocfilehash: 5ce1af82631531f8f7105fbf92ba78db3cca437b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5185fb6663910c85ce5dae1225b9b10c5dd8bb28
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442324"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175941"
 ---
 # <a name="imetadatadispenseropenscope-method"></a>Metodo IMetaDataDispenser::OpenScope
 Apre un file su disco esistente ed esegue il mapping dei relativi metadati in memoria.  
@@ -29,43 +29,43 @@ Apre un file su disco esistente ed esegue il mapping dei relativi metadati in me
   
 ```cpp  
 HRESULT OpenScope (  
-    [in]  LPCWSTR     szScope,   
-    [in]  DWORD       dwOpenFlags,   
-    [in]  REFIID      riid,   
+    [in]  LPCWSTR     szScope,
+    [in]  DWORD       dwOpenFlags,
+    [in]  REFIID      riid,
     [out] IUnknown    **ppIUnk  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `szScope`  
- in Nome del file da aprire. Il file deve contenere Common Language Runtime metadati (CLR).  
+ [in] Nome del file da aprire. Il file deve contenere metadati CLR (Common Language Runtime).  
   
  `dwOpenFlags`  
- in Valore dell'enumerazione [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) per specificare la modalità (lettura, scrittura e così via) per l'apertura.  
+ [in] Valore dell'enumerazione [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) per specificare la modalità (lettura, scrittura e così via) per l'apertura.  
   
  `riid`  
- in IID dell'interfaccia di metadati desiderata da restituire. il chiamante utilizzerà l'interfaccia per importare (leggere) o creare (scrivere) metadati.  
+ [in] IID dell'interfaccia di metadati desiderata da restituire; il chiamante utilizzerà l'interfaccia per importare (leggere) o generare (scrivere) metadati.  
   
- Il valore di `riid` deve specificare una delle interfacce "Import" o "Emit". I valori validi sono IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2 o IID_IMetaDataImport2.  
+ Il valore `riid` di deve specificare una delle interfacce "import" o "emit". I valori validi sono IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2 o IID_IMetaDataImport2.  
   
  `ppIUnk`  
- out Puntatore all'interfaccia restituita.  
+ [fuori] Puntatore all'interfaccia restituita.  
   
 ## <a name="remarks"></a>Osservazioni  
- La copia in memoria dei metadati può essere sottoposta a query usando i metodi di una delle interfacce di "importazione" oppure aggiunti a usando i metodi di una delle interfacce "Emit".  
+ La copia in memoria dei metadati può essere interrogata utilizzando metodi da una delle interfacce "import" o aggiunta all'utilizzo di metodi da una delle interfacce "emit".  
   
- Se il file di destinazione non contiene metadati CLR, il `OpenScope` metodo avrà esito negativo.  
+ Se il file di destinazione non `OpenScope` contiene metadati CLR, il metodo avrà esito negativo.  
   
- Nel .NET Framework versione 1,0 e la versione 1,1, se viene aperto un ambito con `dwOpenFlags` impostato su ofRead, è idoneo per la condivisione. Ovvero, se le chiamate successive a `OpenScope` passano il nome di un file che è stato precedentemente aperto, l'ambito esistente viene riutilizzato e non viene creato un nuovo set di strutture di dati. Tuttavia, i problemi possono verificarsi a causa di questa condivisione.  
+ In .NET Framework versione 1.0 e 1.1, se `dwOpenFlags` un ambito viene aperto con impostato su ofRead, è idoneo per la condivisione. Ovvero, se le `OpenScope` chiamate successive pass-in di me di un file precedentemente aperto, l'ambito esistente viene riutilizzato e non viene creato un nuovo set di strutture di dati. Tuttavia, possono sorgere problemi a causa di questa condivisione.  
   
- Nella versione .NET Framework 2,0 gli ambiti aperti con `dwOpenFlags` impostati su ofRead non sono più condivisi. Usare il valore ofReadOnly per consentire la condivisione dell'ambito. Quando viene condiviso un ambito, le query che utilizzano le interfacce di metadati di "lettura/scrittura" avranno esito negativo.  
+ In .NET Framework versione 2.0 gli `dwOpenFlags` ambiti aperti con impostato su ofRead non sono più condivisi. Utilizzare il valore ofReadOnly per consentire la condivisione dell'ambito. Quando un ambito è condiviso, le query che utilizzano interfacce di metadati "lettura/scrittura" avranno esito negativo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Usato come risorsa in MsCorEE. dll  
+ **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

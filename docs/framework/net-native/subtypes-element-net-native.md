@@ -1,15 +1,15 @@
 ---
-title: Elemento <Subtypes> (.NET Native)
+title: <Subtypes>Elemento (.NET native)
 ms.date: 03/30/2017
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
-ms.openlocfilehash: 9f090e7d1558d31111345e2c9b8dabb55b7122c1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bb719449f3769c5dbbde6d05efdb865c18bb4ab2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128100"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180927"
 ---
-# <a name="subtypes-element-net-native"></a>Elemento > di sottotipi \<(.NET Native)
+# <a name="subtypes-element-net-native"></a>\<Sottotipi>elemento (.NET native)Subtypes> Element (.NET Native)
 Applica i criteri di runtime a tutte le classi ereditate per il tipo contenitore.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -18,7 +18,7 @@ Applica i criteri di runtime a tutte le classi ereditate per il tipo contenitore
 <Subtypes Activate="policy_type"  
           Browse="policy_type"  
           Dynamic="policy_type"  
-          Serialize="policy_type"   
+          Serialize="policy_type"
           DataContractSerializer="policy_setting"  
           DataContractJsonSerializer="policy_setting"  
           XmlSerializer="policy_setting"  
@@ -30,7 +30,7 @@ Applica i criteri di runtime a tutte le classi ereditate per il tipo contenitore
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### <a name="attributes"></a>Attributi  
+### <a name="attributes"></a>Attributes  
   
 |Attributo|Tipo di attributo|Descrizione|  
 |---------------|--------------------|-----------------|  
@@ -47,20 +47,20 @@ Applica i criteri di runtime a tutte le classi ereditate per il tipo contenitore
   
 ## <a name="all-attributes"></a>Tutti gli attributi  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |*policy_setting*|L'impostazione da applicare a questo tipo di criteri. I valori consentiti sono `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per altre informazioni, vedere [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuna.  
+ No.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<Type>](type-element-net-native.md)|Applica i criteri di reflection a un tipo e a tutti i membri.|  
+|[\<Tipo>](type-element-net-native.md)|Applica i criteri di reflection a un tipo e a tutti i membri.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  L'elemento `<Subtypes>` applica i criteri a tutti i sottotipi del tipo contenitore. Viene usato per applicare criteri diversi ai tipi derivati e alle classi base.  
   
  Gli attributi di reflection, serializzazione e interoperabilità sono tutti facoltativi, ma è necessario usarne almeno uno.  
@@ -89,7 +89,7 @@ Applica i criteri di runtime a tutte le classi ereditate per il tipo contenitore
   
 ## <a name="see-also"></a>Vedere anche
 
-- [\<tipo > elemento](type-element-net-native.md)
-- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [\<Tipo> elemento](type-element-net-native.md)
+- [Riferimento a file di configurazione di direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementi direttiva di runtime](runtime-directive-elements.md)
-- [Impostazioni dei criteri delle direttive di runtime](runtime-directive-policy-settings.md)
+- [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime)

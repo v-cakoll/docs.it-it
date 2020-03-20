@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7d90dcee-0206-4540-807b-06982fe65f1a
 topic_type:
 - apiref
-ms.openlocfilehash: 10f31d56a9727e99157f49038c19781f12cd9958
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 47377e892aaf2bdd96a297630c47fe52215b0564
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440425"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177386"
 ---
 # <a name="imetadatafilteristokenmarked-method"></a>Metodo IMetaDataFilter::IsTokenMarked
 Ottiene un valore che indica se il token di metadati specificato è stato contrassegnato come elaborato.  
@@ -29,24 +29,24 @@ Ottiene un valore che indica se il token di metadati specificato è stato contra
   
 ```cpp  
 HRESULT IsTokenMarked (  
-    [in]  mdToken  tk,   
+    [in]  mdToken  tk,
     [out] BOOL     *pIsMarked  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `tk`  
- in Token da esaminare per un contrassegno di elaborazione.  
+ [in] Token da esaminare per un contrassegno di elaborazione.  
   
  `pIsMarked`  
- out Valore `true` se `tk` è stato elaborato. in caso contrario `false`.  
+ [fuori] Valore che `true` è `tk` se è stato elaborato; in `false`caso contrario.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Usato come risorsa in MsCorEE. dll  
+ **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

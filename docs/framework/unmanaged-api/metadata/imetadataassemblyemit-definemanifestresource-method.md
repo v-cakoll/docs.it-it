@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 27f6d295-0fe9-4cda-b77e-6e7d5c53df09
 topic_type:
 - apiref
-ms.openlocfilehash: 83170815f4aa65988bb6a6394bd466a0ba376ebf
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5aa5d78faa8ca9261594e2a649b11088e1d78ee7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432060"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177865"
 ---
 # <a name="imetadataassemblyemitdefinemanifestresource-method"></a>Metodo IMetaDataAssemblyEmit::DefineManifestResource
 Crea una struttura `ManifestResource` che contiene i metadati per la risorsa di manifesto specificata e restituisce il token di metadati associato.  
@@ -29,9 +29,9 @@ Crea una struttura `ManifestResource` che contiene i metadati per la risorsa di 
   
 ```cpp  
 HRESULT DefineManifestResource (  
-    [in] LPCWSTR                szName,   
-    [in] mdToken                tkImplementation,   
-    [in] DWORD                  dwOffset,   
+    [in] LPCWSTR                szName,
+    [in] mdToken                tkImplementation,
+    [in] DWORD                  dwOffset,
     [in] DWORD                  dwResourceFlags,  
     [out] mdManifestResource    *pmdmr  
 );  
@@ -39,29 +39,29 @@ HRESULT DefineManifestResource (
   
 ## <a name="parameters"></a>Parametri  
  `szName`  
- in Nome della risorsa.  
+ [in] Nome della risorsa.  
   
  `tkImplementation`  
- in Token di metadati di tipo `mdtFile` o `mdtAssemblyRef` che esegue il mapping al provider di risorse. Un valore NULL indica che il file in cui sono incorporati i metadati è il provider di risorse.  
+ [in] Token di metadati di tipo `mdtFile` o `mdtAssemblyRef` che esegue il mapping al provider di risorse. Un valore NULL indica che il file in cui sono incorporati i metadati è il provider di risorse.  
   
  `dwOffset`  
- in Offset all'inizio della risorsa all'interno del file. Per le risorse in file autonomi, questo valore sarà sempre zero. Se la risorsa è incorporata in un file PE (Portable Executable), si tratta di un offset del BLOB di risorse, che inizia in corrispondenza della posizione specificata nel file di intestazione cor. h.  
+ [in] Offset all'inizio della risorsa all'interno del file. Per le risorse nei file autonomi, questo sarà sempre zero. Se la risorsa è incorporata in un file PE (eseguibile portabile), si tratta di un offset del BLOB di risorse, che inizia nella posizione specificata nel file di intestazione cor.h.  
   
  `dwResourceFlags`  
- in Combinazione bit per bit di valori di flag che specificano le impostazioni delle proprietà per la definizione di risorsa.  
+ [in] Combinazione bit per bit di valori di flag che specificano le impostazioni delle proprietà per la definizione della risorsa.  
   
  `pmdmr`  
- out Puntatore al token di metadati restituito.  
+ [fuori] Puntatore al token di metadati restituito.  
   
-## <a name="remarks"></a>Note  
- È necessario definire una `ManifestResource` struttura dei metadati per ogni risorsa implementata in ognuno dei file dell'assembly.  
+## <a name="remarks"></a>Osservazioni  
+ È `ManifestResource` necessario definire una struttura di metadati per ogni risorsa implementata in ogni file dell'assembly.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforma:** Vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforma:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Usato come risorsa in MsCorEE. dll  
+ **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -1,5 +1,5 @@
 ---
-title: Metodo ICorDebugProcess4::ProcessStateChanged
+title: Metodo ICorDebugProcess4::ProcessStateChangedICorDebugProcess4::ProcessStateChanged Method
 ms.date: 02/07/2019
 api_name:
 - ICorDebugProcess4::ProcessStateChanged
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: adfd563e19389642ac0ed0a3cef4aae8a32fa466
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a6f36f5b86b4fa58ce2a4ef4aa23d527f797a5a5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767193"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178635"
 ---
-# <a name="icordebugprocess4processstatechanged-method"></a>Metodo ICorDebugProcess4::ProcessStateChanged
+# <a name="icordebugprocess4processstatechanged-method"></a>Metodo ICorDebugProcess4::ProcessStateChangedICorDebugProcess4::ProcessStateChanged Method
 
-Notifica la pipeline ICorDebug che il timeout del debugger di processo è in continua l'esecuzione dell'oggetto del debug.
+Notifica alla pipeline ICorDebug che il debugger out-of-process sta continuando l'esecuzione del debug.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -37,20 +37,20 @@ HRESULT ProcessStateChanged(
 ## <a name="parameters"></a>Parametri
 
  `eChange`\
-[in] Un membro del [enumerazione CorDebugStateChange](cordebugstatechange-enumeration.md) che descrive una modifica nello stato di esecuzione del processo.
+[in] Membro [dell'enumerazione CorDebugStateChange](cordebugstatechange-enumeration.md) che descrive una modifica nello stato di esecuzione del processo.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il metodo specificato fa parte di `ICorDebugProcess4` interfaccia e corrisponde al quarto slot della tabella di metodo virtuale.
+Il metodo fornito fa `ICorDebugProcess4` parte dell'interfaccia e corrisponde al quarto slot della tabella dei metodi virtuali.
 
 ## <a name="requirements"></a>Requisiti
 
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).
 
- **Intestazione:** Nessuna
+ **Intestazione:** Nessuno
 
- **Libreria:** Nessuna
- 
+ **Biblioteca:** Nessuno
+
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
 
 ## <a name="see-also"></a>Vedere anche

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
-ms.openlocfilehash: 8667cffb032daf0043915d3bee7127ef9b70756b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 62a61051e5b9d896f8a89ed3d2745859fc07a7ec
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794515"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149258"
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>Esecuzione di operazioni batch tramite oggetti DataAdapter
 Il supporto batch in ADO.NET consente a un tipo <xref:System.Data.Common.DataAdapter> di raggruppare le operazioni INSERT, UPDATE e DELETE da un tipo <xref:System.Data.DataSet> o <xref:System.Data.DataTable> e di inviarle al server in batch, anziché inviare una singola operazione alla volta. La riduzione nel numero di percorsi di andata e ritorno al server determina in genere un notevole miglioramento delle prestazioni. Gli aggiornamenti batch sono supportati per i provider di dati .NET di SQL Server (<xref:System.Data.SqlClient>) e Oracle (<xref:System.Data.OracleClient>).  
@@ -24,7 +24,7 @@ Il supporto batch in ADO.NET consente a un tipo <xref:System.Data.Common.DataAda
 ## <a name="using-the-updatebatchsize-property"></a>Utilizzo della proprietà UpdateBatchSize  
  Quando gli aggiornamenti batch sono abilitati, il valore della proprietà <xref:System.Data.IDbCommand.UpdatedRowSource%2A> dei comandi `UpdateCommand`, `InsertCommand` e `DeleteCommand` di Data Adapter deve essere impostato su <xref:System.Data.UpdateRowSource.None> o su <xref:System.Data.UpdateRowSource.OutputParameters>. Quando si esegue un aggiornamento batch, il valore <xref:System.Data.IDbCommand.UpdatedRowSource%2A> o <xref:System.Data.UpdateRowSource.FirstReturnedRecord> della proprietà <xref:System.Data.UpdateRowSource.Both> del comando non è valido.  
   
- Nella procedura seguente viene illustrato l'uso della proprietà `UpdateBatchSize`. La routine accetta due argomenti, un <xref:System.Data.DataSet> oggetto con colonne che rappresentano i campi **ProductCategoryID** e **Name** della tabella **Production. ProductCategory** e un numero intero che rappresenta le dimensioni del batch (il numero di righe nel batch. Il codice crea un nuovo oggetto <xref:System.Data.SqlClient.SqlDataAdapter>, impostandone le proprietà <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> e <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A>. Nel codice si presuppone che l'oggetto <xref:System.Data.DataSet> contenga righe modificate. La proprietà `UpdateBatchSize` viene impostata e viene eseguito l'aggiornamento.  
+ Nella procedura seguente viene illustrato l'uso della proprietà `UpdateBatchSize`. La procedura accetta due <xref:System.Data.DataSet> argomenti, un oggetto con colonne che rappresentano i campi **ProductCategoryID** e **Name** nella tabella **Production.ProductCategory** e un numero intero che rappresenta la dimensione del batch (il numero di righe nel batch). Il codice crea un nuovo oggetto <xref:System.Data.SqlClient.SqlDataAdapter>, impostandone le proprietà <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> e <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A>. Nel codice si presuppone che l'oggetto <xref:System.Data.DataSet> contenga righe modificate. La proprietà `UpdateBatchSize` viene impostata e viene eseguito l'aggiornamento.  
   
 ```vb  
 Public Sub BatchUpdate( _  
@@ -82,7 +82,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
     string connectionString = GetConnectionString();  
   
     // Connect to the AdventureWorks database.  
-    using (SqlConnection connection = new   
+    using (SqlConnection connection = new
       SqlConnection(connectionString))  
     {  
   
@@ -92,19 +92,19 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
         // Set the UPDATE command and parameters.  
         adapter.UpdateCommand = new SqlCommand(  
             "UPDATE Production.ProductCategory SET "  
-            + "Name=@Name WHERE ProductCategoryID=@ProdCatID;",   
+            + "Name=@Name WHERE ProductCategoryID=@ProdCatID;",
             connection);  
-        adapter.UpdateCommand.Parameters.Add("@Name",   
+        adapter.UpdateCommand.Parameters.Add("@Name",
            SqlDbType.NVarChar, 50, "Name");  
-        adapter.UpdateCommand.Parameters.Add("@ProdCatID",   
+        adapter.UpdateCommand.Parameters.Add("@ProdCatID",
            SqlDbType.Int, 4, "ProductCategoryID");  
          adapter.UpdateCommand.UpdatedRowSource = UpdateRowSource.None;  
   
         // Set the INSERT command and parameter.  
         adapter.InsertCommand = new SqlCommand(  
-            "INSERT INTO Production.ProductCategory (Name) VALUES (@Name);",   
+            "INSERT INTO Production.ProductCategory (Name) VALUES (@Name);",
             connection);  
-        adapter.InsertCommand.Parameters.Add("@Name",   
+        adapter.InsertCommand.Parameters.Add("@Name",
           SqlDbType.NVarChar, 50, "Name");  
         adapter.InsertCommand.UpdatedRowSource = UpdateRowSource.None;  
   
@@ -112,7 +112,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
         adapter.DeleteCommand = new SqlCommand(  
             "DELETE FROM Production.ProductCategory "  
             + "WHERE ProductCategoryID=@ProdCatID;", connection);  
-        adapter.DeleteCommand.Parameters.Add("@ProdCatID",   
+        adapter.DeleteCommand.Parameters.Add("@ProdCatID",
           SqlDbType.Int, 4, "ProductCategoryID");  
         adapter.DeleteCommand.UpdatedRowSource = UpdateRowSource.None;  
   
@@ -126,7 +126,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
 ```  
   
 ## <a name="handling-batch-update-related-events-and-errors"></a>Gestione di eventi ed errori relativi all'aggiornamento batch  
- **DataAdapter** presenta due eventi correlati all'aggiornamento: **RowUpdating** e **RowUpdated**. In versioni precedenti di ADO.NET quando l'elaborazione batch è disabilitata, ciascuno di questi eventi viene generato una volta per ogni riga elaborata. **RowUpdating** viene generato prima che venga eseguito l'aggiornamento e **RowUpdated** viene generato dopo il completamento dell'aggiornamento del database.  
+ Il **DataAdapter** dispone di due eventi correlati all'aggiornamento: **RowUpdating** e **RowUpdated**. In versioni precedenti di ADO.NET quando l'elaborazione batch è disabilitata, ciascuno di questi eventi viene generato una volta per ogni riga elaborata. **RowUpdating** viene generato prima dell'aggiornamento e **RowUpdated** viene generato dopo il completamento dell'aggiornamento del database.  
   
 ### <a name="event-behavior-changes-with-batch-updates"></a>Modifiche al comportamento degli eventi con aggiornamenti batch  
  Quando l'elaborazione batch è abilitata, in un'unica operazione di database vengono aggiornate più righe. Pertanto, si verifica un solo evento `RowUpdated` per ogni batch, mentre l'evento `RowUpdating` si verifica per ogni riga elaborata. Quando l'elaborazione batch è disabilitata, i due eventi vengono generati con interfoliazione uno-a-uno, dove un evento `RowUpdating` e un evento `RowUpdated` vengono generati per una riga e un evento `RowUpdating` e un evento `RowUpdated` per la riga successiva, fino all'elaborazione di tutte le righe.  

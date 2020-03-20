@@ -9,27 +9,27 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
-ms.openlocfilehash: 50036f5bef323368b4970a080ca7a70cf94252d6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c68c8c88376cfe7295962264c466030115f2f3db
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966492"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182014"
 ---
 # <a name="user-drawn-controls"></a>Controlli creati dall'utente
-Il .NET Framework offre la possibilità di sviluppare facilmente controlli personalizzati. È possibile creare un controllo utente, ovvero un set di controlli standard associati dal codice, oppure è possibile progettare un controllo personalizzato da zero. È anche possibile usare l'ereditarietà per creare un controllo che eredita da un controllo esistente e aggiungervi le funzionalità intrinseche. Indipendentemente dall'approccio usato, il .NET Framework fornisce la funzionalità per creare un'interfaccia grafica personalizzata per qualsiasi controllo creato.  
+.NET Framework offre la possibilità di sviluppare facilmente controlli personalizzati. È possibile creare un controllo utente, ovvero un set di controlli standard associati dal codice, oppure è possibile progettare il proprio controllo da zero. È anche possibile usare l'ereditarietà per creare un controllo che eredita da un controllo esistente e aggiungere alla relativa funzionalità intrinseca. Indipendentemente dall'approccio utilizzato, .NET Framework fornisce la funzionalità per disegnare un'interfaccia grafica personalizzata per qualsiasi controllo creato.  
   
- Il disegno di un controllo viene eseguito dall'esecuzione del codice nel <xref:System.Windows.Forms.Control.OnPaint%2A> metodo del controllo. Il singolo argomento del <xref:System.Windows.Forms.Control.OnPaint%2A> metodo è un <xref:System.Windows.Forms.PaintEventArgs> oggetto che fornisce tutte le informazioni e le funzionalità necessarie per eseguire il rendering del controllo. <xref:System.Windows.Forms.PaintEventArgs> Fornisce come proprietà due oggetti Principal che verranno utilizzati nel rendering del controllo:  
+ Il disegno di un controllo viene eseguito dall'esecuzione di codice nel metodo del <xref:System.Windows.Forms.Control.OnPaint%2A> controllo. Il singolo argomento <xref:System.Windows.Forms.Control.OnPaint%2A> del <xref:System.Windows.Forms.PaintEventArgs> metodo è un oggetto che fornisce tutte le informazioni e le funzionalità necessarie per eseguire il rendering del controllo. L'oggetto <xref:System.Windows.Forms.PaintEventArgs> fornisce come proprietà due oggetti Principal che verranno utilizzati nel rendering del controllo:  
   
-- <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>oggetto: rettangolo che rappresenta la parte del controllo che verrà disegnata. Può trattarsi dell'intero controllo o parte del controllo a seconda della modalità di disegno del controllo.  
+- <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>object - il rettangolo che rappresenta la parte del controllo che verrà disegnata. Può trattarsi dell'intero controllo o di parte del controllo a seconda di come viene disegnato il controllo.  
   
-- <xref:System.Drawing.Graphics>oggetto: incapsula diversi oggetti e metodi orientati alla grafica che forniscono la funzionalità necessaria per creare il controllo.  
+- <xref:System.Drawing.Graphics>object : incapsula diversi oggetti e metodi orientati alla grafica che forniscono la funzionalità necessaria per disegnare il controllo.  
   
- Per altre informazioni sull' <xref:System.Drawing.Graphics> oggetto e su come usarlo, vedere [procedura: Creare oggetti grafici per il](../advanced/how-to-create-graphics-objects-for-drawing.md)disegno.  
+ Per ulteriori informazioni <xref:System.Drawing.Graphics> sull'oggetto e su come utilizzarlo, vedere [Procedura: creare oggetti grafici per](../advanced/how-to-create-graphics-objects-for-drawing.md)il disegno .  
   
- L' <xref:System.Windows.Forms.Control.OnPaint%2A> evento viene generato ogni volta che il controllo viene disegnato o aggiornato sullo schermo e l' <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> oggetto rappresenta il rettangolo in cui verrà eseguita la verniciatura. Se è necessario aggiornare l'intero controllo, il <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> rappresenterà le dimensioni dell'intero controllo. Se è necessario aggiornare solo parte del controllo, tuttavia, l' <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> oggetto rappresenterà solo l'area che deve essere ridisegnato. Un esempio di questo caso è che un controllo è stato parzialmente nascosto da un altro controllo o modulo nell'interfaccia utente.  
+ L'evento <xref:System.Windows.Forms.Control.OnPaint%2A> viene generato ogni volta che il controllo <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> viene disegnato o aggiornato sullo schermo e l'oggetto rappresenta il rettangolo in cui verrà eseguito il disegno. Se è necessario aggiornare l'intero controllo, <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> la funzione rappresenterà la dimensione dell'intero controllo. Se solo una parte del controllo deve essere <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> aggiornata, tuttavia, l'oggetto rappresenterà solo l'area che deve essere ridisegnata. Un esempio di tale caso potrebbe essere quando un controllo è stato parzialmente oscurato da un altro controllo o form nell'interfaccia utente.  
   
- Quando si eredita dalla <xref:System.Windows.Forms.Control> classe, è necessario eseguire l'override del metodo e fornire codice per il rendering della <xref:System.Windows.Forms.Control.OnPaint%2A> grafica all'interno di. Se si desidera fornire un'interfaccia grafica personalizzata a un controllo utente o a un controllo ereditato, è anche possibile eseguire questa operazione eseguendo l'override <xref:System.Windows.Forms.Control.OnPaint%2A> del metodo. Un esempio è illustrato di seguito:  
+ Quando si eredita <xref:System.Windows.Forms.Control> dalla classe , <xref:System.Windows.Forms.Control.OnPaint%2A> è necessario eseguire l'override del metodo e fornire il codice di rendering della grafica all'interno. Se si desidera fornire un'interfaccia grafica personalizzata a un controllo utente o a <xref:System.Windows.Forms.Control.OnPaint%2A> un controllo ereditato, è anche possibile eseguire l'override del metodo . Di seguito è riportato un esempio:  
   
 ```vb  
 Protected Overrides Sub OnPaint(ByVal e As PaintEventArgs)  
@@ -54,15 +54,15 @@ protected override void OnPaint(PaintEventArgs e)
    using (System.Drawing.Pen myPen = new System.Drawing.Pen(Color.Aqua))  
    {
       // Draw an aqua rectangle in the rectangle represented by the control.  
-      e.Graphics.DrawRectangle(myPen, new Rectangle(this.Location,   
+      e.Graphics.DrawRectangle(myPen, new Rectangle(this.Location,
          this.Size));  
    }
 }  
 ```  
   
- Nell'esempio precedente viene illustrato come eseguire il rendering di un controllo con una rappresentazione grafica molto semplice. Viene chiamato il <xref:System.Windows.Forms.Control.OnPaint%2A> metodo della classe di base, viene creato un <xref:System.Drawing.Pen> oggetto con il quale disegnare e infine viene disegnata un'ellisse nel rettangolo determinato da <xref:System.Windows.Forms.Control.Location%2A> e <xref:System.Windows.Forms.Control.Size%2A> del controllo. Sebbene la maggior parte del codice di rendering risulti significativamente più complicata, <xref:System.Drawing.Graphics> <xref:System.Windows.Forms.PaintEventArgs> in questo esempio viene illustrato l'utilizzo dell'oggetto contenuto nell'oggetto. Si noti che se si eredita da una classe che dispone già di una rappresentazione grafica, ad esempio <xref:System.Windows.Forms.UserControl> o <xref:System.Windows.Forms.Button>, e non si desidera incorporare tale rappresentazione nel rendering, non è necessario chiamare la classe di <xref:System.Windows.Forms.Control.OnPaint%2A> base Metodo.  
+ Nell'esempio precedente viene illustrato come eseguire il rendering di un controllo con una rappresentazione grafica molto semplice. Chiama il <xref:System.Windows.Forms.Control.OnPaint%2A> metodo della classe base, <xref:System.Drawing.Pen> crea un oggetto con cui disegnare e infine <xref:System.Windows.Forms.Control.Location%2A> disegna un'ellisse nel rettangolo determinato dal e <xref:System.Windows.Forms.Control.Size%2A> del controllo. Anche se la maggior parte del codice di rendering sarà <xref:System.Drawing.Graphics> significativamente più <xref:System.Windows.Forms.PaintEventArgs> complicato di questo, in questo esempio viene illustrato l'utilizzo dell'oggetto contenuto all'oggetto. Si noti che se si eredita da una classe <xref:System.Windows.Forms.UserControl> che <xref:System.Windows.Forms.Button>dispone già di una rappresentazione grafica, ad esempio o , <xref:System.Windows.Forms.Control.OnPaint%2A> e non si desidera incorporare tale rappresentazione nel rendering, non è necessario chiamare il metodo della classe base.  
   
- Il codice nel <xref:System.Windows.Forms.Control.OnPaint%2A> metodo del controllo verrà eseguito quando il controllo viene creato per la prima volta e ogni volta che viene aggiornato. Per assicurarsi che il controllo venga ridisegnato ogni volta che viene ridimensionato, aggiungere la riga seguente al costruttore del controllo:  
+ Il codice <xref:System.Windows.Forms.Control.OnPaint%2A> nel metodo del controllo verrà eseguito quando il controllo viene disegnato per la prima volta e ogni volta che viene aggiornato. Per assicurarsi che il controllo venga ridisegnato ogni volta che viene ridimensionato, aggiungere la riga seguente al costruttore del controllo:  
   
 ```vb  
 SetStyle(ControlStyles.ResizeRedraw, True)  
@@ -73,7 +73,7 @@ SetStyle(ControlStyles.ResizeRedraw, true);
 ```  
   
 > [!NOTE]
-> Utilizzare la <xref:System.Windows.Forms.Control.Region%2A?displayProperty=nameWithType> proprietà per implementare un controllo non rettangolare.  
+> Utilizzare <xref:System.Windows.Forms.Control.Region%2A?displayProperty=nameWithType> la proprietà per implementare un controllo non rettangolare.  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -82,6 +82,6 @@ SetStyle(ControlStyles.ResizeRedraw, true);
 - <xref:System.Drawing.Graphics>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - <xref:System.Windows.Forms.PaintEventArgs>
-- [Procedura: Creare oggetti grafici per il disegno](../advanced/how-to-create-graphics-objects-for-drawing.md)
+- [Procedura: creare oggetti Graphics per disegnare](../advanced/how-to-create-graphics-objects-for-drawing.md)
 - [Controlli costitutivi](constituent-controls.md)
 - [Tipi di controlli personalizzati](varieties-of-custom-controls.md)

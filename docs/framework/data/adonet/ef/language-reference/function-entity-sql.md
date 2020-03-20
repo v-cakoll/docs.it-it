@@ -2,12 +2,12 @@
 title: FUNCTION (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 0bb88992-37ed-4991-ace5-55be612a2c4d
-ms.openlocfilehash: bacc773351812a5db60f493f3025c8e4b07dbaa2
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: fd7f484733e7135d2d6c8094b6527d672a988088
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833794"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150298"
 ---
 # <a name="function-entity-sql"></a>FUNCTION (Entity SQL)
 Definisce una funzione nell'ambito di un comando di query Entity SQL.  
@@ -16,16 +16,16 @@ Definisce una funzione nell'ambito di un comando di query Entity SQL.
   
 ```sql  
 FUNCTION function-name  
-( [ { parameter_name <type_definition>   
+( [ { parameter_name <type_definition>
         [ ,...n ]  
   ]  
-) AS ( function_expression )   
+) AS ( function_expression )
   
 <type_definition>::=  
-    { data_type | COLLECTION ( <type_definition> )   
-                | REF ( data_type )   
-                | ROW ( row_expression )   
-        }   
+    { data_type | COLLECTION ( <type_definition> )
+                | REF ( data_type )
+                | ROW ( row_expression )
+        }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -41,13 +41,13 @@ FUNCTION function-name
  `data_type`  
  Nome di un tipo supportato.  
   
- RACCOLTA (< type_definition`>`)  
+ COLLECTION (`>` <type_definition )  
  Espressione che restituisce una raccolta di tipi supportati, righe o riferimenti.  
   
- REF **(** `data_type` **)**  
+ REF **(**`data_type`**)**  
  Espressione che restituisce un riferimento a un tipo di entità.  
   
- ROW **(** `row_expression` **)**  
+ RIGA **(**`row_expression`**)**  
  Espressione che restituisce record anonimi strutturalmente tipizzati da uno o più valori. Per altre informazioni, vedere [ROW](row-entity-sql.md).  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -63,7 +63,7 @@ FUNCTION function-name
   
  Per altre informazioni, vedere [Procedura: chiamare una funzione definita dall'utente](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100)).  
   
- Le funzioni possono essere dichiarate anche nel modello stesso. Le funzioni dichiarate nel modello vengono eseguite nello stesso modo delle funzioni dichiarate inline nel comando. Per ulteriori informazioni, vedere [funzioni definite dall'utente](user-defined-functions-entity-sql.md).  
+ Le funzioni possono essere dichiarate anche nel modello stesso. Le funzioni dichiarate nel modello vengono eseguite nello stesso modo delle funzioni dichiarate inline nel comando. Per ulteriori informazioni, vedere [Funzioni definite dall'utente](user-defined-functions-entity-sql.md).  
   
 ## <a name="example"></a>Esempio  
  Nel comando Entity SQL seguente viene definita una funzione `Products` che usa un valore Integer per filtrare i prodotti restituiti.  

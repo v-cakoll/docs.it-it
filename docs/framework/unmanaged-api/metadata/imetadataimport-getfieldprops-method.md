@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7b0e9b10-8cef-4ba6-8432-40bf63e65ab1
 topic_type:
 - apiref
-ms.openlocfilehash: 462512fd2c2b33905b45bb67599b23b301fc71f7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8c3f98a124dbbcae3b0500932a2357ed1757951f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438001"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177241"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>Metodo IMetaDataImport::GetFieldProps
 Ottiene i metadati associati al campo a cui fa riferimento il token FieldDef specificato.  
@@ -29,15 +29,15 @@ Ottiene i metadati associati al campo a cui fa riferimento il token FieldDef spe
   
 ```cpp  
 HRESULT GetFieldProps (  
-   [in]  mdFieldDef        mb,   
+   [in]  mdFieldDef        mb,
    [out] mdTypeDef         *pClass,  
    [out] LPWSTR            szField,  
-   [in]  ULONG             cchField,   
+   [in]  ULONG             cchField,
    [out] ULONG             *pchField,  
    [out] DWORD             *pdwAttr,  
-   [in]  PCCOR_SIGNATURE   *ppvSigBlob,   
-   [out] ULONG             *pcbSigBlob,   
-   [out] DWORD             *pdwCPlusTypeFlag,   
+   [in]  PCCOR_SIGNATURE   *ppvSigBlob,
+   [out] ULONG             *pcbSigBlob,
+   [out] DWORD             *pdwCPlusTypeFlag,
    [out] UVCP_CONSTANT     *ppValue,  
    [out] ULONG             *pcchValue  
 );  
@@ -45,44 +45,44 @@ HRESULT GetFieldProps (
   
 ## <a name="parameters"></a>Parametri  
  `mb`  
- in Token FieldDef che rappresenta il campo per il quale ottenere i metadati associati.  
+ [in] Token FieldDef che rappresenta il campo per cui ottenere i metadati associati.  
   
  `pClass`  
- out Puntatore a un token TypeDef che rappresenta il tipo della classe a cui appartiene il campo.  
+ [fuori] Puntatore a un token TypeDef che rappresenta il tipo della classe a cui appartiene il campo.  
   
  `szField`  
- out Nome del campo.  
+ [fuori] Nome del campo.  
   
  `cchField`  
- in Dimensioni in caratteri wide del buffer per *szField*.  
+ [in] Dimensione in caratteri di tipo "wide" del buffer per *szField*.  
   
  `pchField`  
- out Dimensioni effettive del buffer restituito.  
+ [fuori] Dimensione effettiva del buffer restituito.  
   
  `pdwAttr`  
- out Flag associati ai metadati del campo.  
+ [fuori] Flag associati ai metadati del campo.  
   
  `ppvSigBlob`  
- in Puntatore al valore dei metadati binari che descrive il campo.  
+ [in] Puntatore al valore binario dei metadati che descrive il campo.  
   
  `pcbSigBlob`  
- out Dimensioni in byte del `ppvSigBlob`.  
+ [fuori] Dimensione in byte `ppvSigBlob`di .  
   
  `pdwCPlusTypeFlag`  
- out Flag che specifica il tipo di valore del campo.  
+ [fuori] Flag che specifica il tipo di valore del campo.  
   
  `ppValue`  
- out Valore costante per il campo.  
+ [fuori] Valore costante per il campo.  
   
  `pcchValue`  
- out Dimensioni in caratteri di `ppValue`o zero se non esiste alcuna stringa.  
+ [fuori] Dimensione in caratteri `ppValue`di , o zero se non esiste alcuna stringa.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Incluso come risorsa in MsCorEE. dll  
+ **Biblioteca:** Incluso come risorsa in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b4896b8f-8e97-469c-8089-e72a025661b5
 topic_type:
 - apiref
-ms.openlocfilehash: 778ebf1d4fad0c8703964be88fdc3ff8c033bc28
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e5d4ddd43b27d733a63c2e0dc5e92ffd2ba94a7f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449986"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175434"
 ---
 # <a name="imetadataimportenumtyperefs-method"></a>Metodo IMetaDataImport::EnumTypeRefs
 Enumera i token TypeRef definiti nell'ambito dei metadati corrente.  
@@ -29,9 +29,9 @@ Enumera i token TypeRef definiti nell'ambito dei metadati corrente.
   
 ```cpp  
 HRESULT EnumTypeRefs (  
-   [in, out] HCORENUM    *phEnum,   
+   [in, out] HCORENUM    *phEnum,
    [out] mdTypeRef       rTypeRefs[],  
-   [in]  ULONG           cMax,   
+   [in]  ULONG           cMax,
    [out] ULONG           *pcTypeRefs  
 );  
 ```  
@@ -41,30 +41,30 @@ HRESULT EnumTypeRefs (
  [in, out] Puntatore all'enumeratore. Deve essere NULL per la prima chiamata di questo metodo.  
   
  `rTypeRefs`  
- out Matrice utilizzata per archiviare i token TypeRef.  
+ [fuori] Matrice utilizzata per archiviare i token TypeRef.  
   
  `cMax`  
  [in] Dimensione massima della matrice `rTypeRefs`.  
   
  `pcTypeRefs`  
- out Puntatore al numero di token TypeRef restituiti in `rTypeRefs`.  
+ [fuori] Puntatore al numero di token TypeRef `rTypeRefs`restituiti in .  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeRefs` ha restituito un esito positivo.|  
-|`S_FALSE`|Nessun token da enumerare. In tal caso, `pcTypeRefs` è zero.|  
+|`S_OK`|`EnumTypeRefs`restituito con successo.|  
+|`S_FALSE`|Non sono presenti token da enumerare. In tal `pcTypeRefs` caso, è zero.|  
   
 ## <a name="remarks"></a>Osservazioni  
  Un token TypeRef rappresenta un riferimento a un tipo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Incluso come risorsa in MsCorEE. dll  
+ **Biblioteca:** Incluso come risorsa in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

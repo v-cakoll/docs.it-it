@@ -5,38 +5,38 @@ helpviewer_keywords:
 - appDomainManagerType element
 - <appDomainManagerType> element
 ms.assetid: ae8d5a7e-e7f7-47f7-98d9-455cc243a322
-ms.openlocfilehash: bae4aa39f9c43480ac2ef984f78834b68646742d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8eb6129b3fafaeb81a94d5a4078e41a16583a226
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73118235"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154426"
 ---
-# <a name="appdomainmanagertype-element"></a>\<elemento > appDomainManagerType
+# <a name="appdomainmanagertype-element"></a>\<Elemento> appDomainManagerType
 Specifica il tipo che funge da gestore di dominio dell'applicazione per il dominio applicazione predefinito.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<appDomainManagerType >**  
+[**\<>di configurazione**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<>di runtime**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<>appDomainManagerType**  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-<appDomainManagerAssembly   
+<appDomainManagerAssembly
    value="type name" />  
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### <a name="attributes"></a>Attributi  
+### <a name="attributes"></a>Attributes  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`value`|Attributo obbligatorio. Specifica il nome del tipo, incluso lo spazio dei nomi, che funge da gestore del dominio dell'applicazione per il dominio applicazione predefinito nel processo.|  
+|`value`|Attributo obbligatorio. Specifica il nome del tipo, incluso lo spazio dei nomi, che funge da gestore del dominio applicazione per il dominio applicazione predefinito nel processo.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuna.  
+ No.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -45,27 +45,27 @@ Specifica il tipo che funge da gestore di dominio dell'applicazione per il domin
 |`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|  
   
-## <a name="remarks"></a>Note  
- Per specificare il tipo del gestore di dominio dell'applicazione, è necessario specificare sia questo elemento sia l'elemento [\<> AppDomainManagerAssembly](appdomainmanagerassembly-element.md) . Se uno di questi elementi non è specificato, l'altro viene ignorato.  
+## <a name="remarks"></a>Osservazioni  
+ Per specificare il tipo di gestore del dominio applicazione, è necessario specificare sia questo elemento che l'elemento [ \<>appDomainManagerAssembly.](appdomainmanagerassembly-element.md) Se uno di questi elementi non è specificato, l'altro viene ignorato.  
   
- Quando viene caricato il dominio applicazione predefinito, viene generata <xref:System.TypeLoadException> se il tipo specificato non esiste nell'assembly specificato dall'elemento [\<AppDomainManagerAssembly](appdomainmanagerassembly-element.md) . e il processo non viene avviato.  
+ Quando viene caricato il <xref:System.TypeLoadException> dominio applicazione predefinito, viene generata se il tipo specificato non esiste nell'assembly specificato dall'elemento [ \<appDomainManagerAssembly>;](appdomainmanagerassembly-element.md) e il processo non si avvia.  
   
- Quando si specifica il tipo di gestore di dominio dell'applicazione per il dominio applicazione predefinito, altri domini applicazione creati dal dominio applicazione predefinito ereditano il tipo di gestore di dominio dell'applicazione. Usare le proprietà <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType> e <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType> per specificare un tipo di gestore di dominio dell'applicazione diverso per un nuovo dominio applicazione.  
+ Quando si specifica il tipo di gestore del dominio applicazione per il dominio applicazione predefinito, gli altri domini applicazione creati dal dominio applicazione predefinito ereditano il tipo di gestore del dominio applicazione. Utilizzare <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType> le <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType> proprietà e per specificare un tipo di gestore del dominio applicazione diverso per un nuovo dominio applicazione.  
   
- Per specificare il tipo di gestore di dominio applicazione è necessario che l'applicazione disponga di attendibilità totale. Ad esempio, un'applicazione in esecuzione sul desktop ha attendibilità totale. Se l'applicazione non dispone di attendibilità totale, viene generata un'<xref:System.TypeLoadException>.  
+ Per specificare il tipo di gestore del dominio applicazione, è necessario che l'applicazione disponga dell'attendibilità totale. Ad esempio, un'applicazione in esecuzione sul desktop dispone di attendibilità totale. Se l'applicazione non dispone <xref:System.TypeLoadException> di attendibilità totale, viene generata un'eccezione .  
   
- Il formato del tipo e dello spazio dei nomi è identico a quello usato per la proprietà <xref:System.Type.FullName%2A?displayProperty=nameWithType>.  
+ Il formato del tipo e dello spazio dei <xref:System.Type.FullName%2A?displayProperty=nameWithType> nomi è lo stesso formato utilizzato per la proprietà.  
   
  Questo elemento di configurazione è disponibile solo in .NET Framework 4 e versioni successive.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come specificare che il gestore di dominio dell'applicazione per il dominio applicazione predefinito di un processo è il tipo `MyMgr` nell'assembly `AdMgrExample`.  
+ Nell'esempio seguente viene illustrato come specificare che il gestore `MyMgr` del dominio `AdMgrExample` applicazione per il dominio applicazione predefinito di un processo è il tipo nell'assembly.  
   
 ```xml  
 <configuration>  
    <runtime>  
       <appDomainManagerType value="MyMgr" />  
-      <appDomainManagerAssembly   
+      <appDomainManagerAssembly
          value="AdMgrExample, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6856bccf150f00b3" />  
    </runtime>  
 </configuration>  
@@ -75,7 +75,7 @@ Specifica il tipo che funge da gestore di dominio dell'applicazione per il domin
 
 - <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>
-- [\<elemento > appDomainManagerAssembly](appdomainmanagerassembly-element.md)
+- [\<Elemento> appDomainManagerAssembly](appdomainmanagerassembly-element.md)
 - [Schema delle impostazioni di runtime](index.md)
-- [Schema dei file di configurazione](../index.md)
+- [Schema del file di configurazione](../index.md)
 - [Metodo SetAppDomainManagerType](../../../unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)

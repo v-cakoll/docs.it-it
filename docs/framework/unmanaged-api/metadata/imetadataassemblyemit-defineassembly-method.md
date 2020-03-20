@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a0637d66-74bf-4f2d-8137-9ff838bccece
 topic_type:
 - apiref
-ms.openlocfilehash: 20628e708261076c6e172ff30c366a0d69c2e0f2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 14bd352099890e4ca36321d550b8e982d4373231
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432115"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177894"
 ---
 # <a name="imetadataassemblyemitdefineassembly-method"></a>Metodo IMetaDataAssemblyEmit::DefineAssembly
-Crea una struttura `Assembly` contenente i metadati per l'assembly specificato e restituisce il token di metadati associato.  
+Crea `Assembly` una struttura contenente i metadati per l'assembly specificato e restituisce il token di metadati associato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -32,7 +32,7 @@ HRESULT DefineAssembly (
     [in]  void                 *pbPublicKey,  
     [in]  ULONG                cbPublicKey,  
     [in]  ULONG                uHashAlgId,  
-    [in]  LPCWSTR              szName,   
+    [in]  LPCWSTR              szName,
     [in]  ASSEMBLYMETADATA     *pMetaData,  
     [in]  DWORD                dwAssemblyFlags,  
     [out] mdAssembly           *pmda  
@@ -41,35 +41,35 @@ HRESULT DefineAssembly (
   
 ## <a name="parameters"></a>Parametri  
  `pbPublicKey`  
- in Chiave pubblica che identifica il server di pubblicazione dell'assembly o NULL se l'assembly non ha un nome sicuro.  
+ [in] Chiave pubblica che identifica l'editore dell'assembly oppure NULL se l'assembly non ha un nome con nome sicuro.  
   
  `cbPublicKey`  
- in Dimensioni in byte del `pbPublicKey`.  
+ [in] Dimensione in byte `pbPublicKey`di .  
   
  `uHashAlgId`  
- in Identificatore dell'algoritmo hash da usare per crittografare i file nell'assembly o NULL per specificare l'algoritmo SHA-1.  
+ [in] Identificatore dell'algoritmo hash da utilizzare per crittografare i file nell'assembly oppure NULL per specificare l'algoritmo SHA-1.  
   
  `szName`  
- in Nome di testo leggibile dell'assembly. Questo valore non deve superare i 1024 caratteri.  
+ [in] Nome di testo leggibile dell'assembly. Questo valore non deve superare i 1024 caratteri.  
   
  `pMetaData`  
- in Puntatore a un'istanza di ASSEMBLYMETADATA che contiene le informazioni relative alla versione, alla piattaforma e alle impostazioni locali per l'assembly.  
+ [in] Puntatore a un'istanza assemblyMETADATA che contiene le informazioni sulla versione, sulla piattaforma e sulle impostazioni locali per l'assembly.  
   
  `dwAssemblyFlags`  
- in Combinazione di valori [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) che descrivono le funzionalità dell'assembly.  
+ [in] Combinazione di valori [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) che descrivono le funzionalità dell'assembly.  
   
  `pmda`  
- out Puntatore al token di metadati.  
+ [fuori] Puntatore al token di metadati.  
   
-## <a name="remarks"></a>Note  
- All'interno di un manifesto è possibile definire una sola struttura di metadati `Assembly`.  
+## <a name="remarks"></a>Osservazioni  
+ È `Assembly` possibile definire una sola struttura di metadati all'interno di un manifesto.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Incluso come risorsa in MsCorEE. dll  
+ **Biblioteca:** Incluso come risorsa in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

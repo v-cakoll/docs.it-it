@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab93b89-1221-427c-84ad-04803b3c64b4
-ms.openlocfilehash: 4ac0216ce2965d555f7283ba66a085ea9d7cac3c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e18c23e9bbec97a64110aba6eb7241761ecece06
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783834"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149557"
 ---
 # <a name="getschema-and-schema-collections"></a>Raccolte di schemi e GetSchema
-Le classi di **connessione** in ognuno dei provider .NET Framework gestiti implementano un metodo **GetSchema** utilizzato per recuperare le informazioni sullo schema relative al database attualmente connesso e le informazioni sullo schema restituite dalla classe  **Il metodo GetSchema** viene visualizzato sotto forma di <xref:System.Data.DataTable>. Il metodo **GetSchema** è un metodo di overload che fornisce parametri facoltativi per specificare la raccolta di schemi da restituire e per limitare la quantità di informazioni restituite.  
+Le classi **Connection** in ognuno dei provider gestiti di .NET Framework implementano un metodo **GetSchema** utilizzato per recuperare le informazioni sullo schema <xref:System.Data.DataTable>sul database attualmente connesso e le informazioni sullo schema restituite dal metodo **GetSchema** vengono fornite sotto forma di oggetto . Il **GetSchema** metodo è un metodo di overload che fornisce parametri facoltativi per specificare la raccolta di schemi da restituire e limitare la quantità di informazioni restituite.  
   
 ## <a name="specifying-the-schema-collections"></a>Specifica di raccolte di schemi  
- Il primo parametro facoltativo del metodo **GetSchema** è il nome della raccolta specificato come stringa. Sono disponibili due tipi di raccolte di schemi: raccolte di schemi comuni a tutti i provider e raccolte di schemi specifici, ovvero schemi specifici per ciascun provider.  
+ Il primo parametro facoltativo del **GetSchema** metodo è il nome della raccolta che viene specificato come stringa. Sono disponibili due tipi di raccolte di schemi: raccolte di schemi comuni a tutti i provider e raccolte di schemi specifici, ovvero schemi specifici per ciascun provider.  
   
- È possibile eseguire una query su un provider gestito .NET Framework per determinare l'elenco delle raccolte di schemi supportate chiamando il metodo **GetSchema** senza argomenti oppure con il nome della raccolta di schemi "MetaDataCollections". In questo modo verrà restituito un oggetto <xref:System.Data.DataTable> con un elenco delle raccolte di schemi supportati, il numero delle restrizioni supportate da ciascuna raccolta e il numero di parti identificatore usate.  
+ È possibile eseguire una query su un provider gestito .NET Framework per determinare l'elenco delle raccolte di schemi supportate chiamando il metodo **GetSchema** senza argomenti o con il nome della raccolta di schemi "MetaDataCollections". In questo modo verrà restituito un oggetto <xref:System.Data.DataTable> con un elenco delle raccolte di schemi supportati, il numero delle restrizioni supportate da ciascuna raccolta e il numero di parti identificatore usate.  
   
 ### <a name="retrieving-schema-collections-example"></a>Esempio di recupero di raccolte di schemi  
- Negli esempi seguenti viene illustrato come utilizzare il <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> metodo della .NET Framework provider di dati per la classe SQL Server <xref:System.Data.SqlClient.SqlConnection> per recuperare informazioni sullo schema relative a tutte le tabelle contenute nel database di esempio **AdventureWorks** :  
+ Negli esempi seguenti viene <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> illustrato come utilizzare il metodo del <xref:System.Data.SqlClient.SqlConnection> provider di dati .NET Framework per la classe SQL Server per recuperare informazioni sullo schema relative a tutte le tabelle contenute nel database di esempio **AdventureWorks:**  
   
 ```vb  
 Imports System.Data.SqlClient  
@@ -42,7 +42,7 @@ Module Module1
    End Sub  
   
    Private Function GetConnectionString() As String  
-      ' To avoid storing the connection string in your code,    
+      ' To avoid storing the connection string in your code,
       ' you can retrieve it from a configuration file.  
       Return "Data Source=(local);Database=AdventureWorks;" _  
          & "Integrated Security=true;"  

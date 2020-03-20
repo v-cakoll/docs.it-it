@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: d2221d1c-c9cb-48d1-b044-a3b4445c7f05
-ms.openlocfilehash: f46eb12078082614cd6cdc75b7bc7eedb7c94de9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8706eee341dd1a5852efae0aad5195e09f62fec4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69930438"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183499"
 ---
 # <a name="message-security-windows"></a>Sicurezza dei messaggi di Windows
-In questo esempio viene illustrato come configurare un'associazione <xref:System.ServiceModel.WSHttpBinding> per usare la sicurezza a livello di messaggio con autenticazione Windows. Questo esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md). In questo esempio, il servizio è ospitato da Internet Information Services (IIS) e il client è un'applicazione console (.exe).  
+In questo esempio viene illustrato come configurare un'associazione <xref:System.ServiceModel.WSHttpBinding> per usare la sicurezza a livello di messaggio con autenticazione Windows. Questo esempio è basato sulla [Guida introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md). In questo esempio, il servizio è ospitato da Internet Information Services (IIS) e il client è un'applicazione console (.exe).  
   
 > [!NOTE]
 > La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
   
- La sicurezza predefinita per il [ \<> WSHttpBinding](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) è la sicurezza dei messaggi con l'autenticazione di Windows. I `mode` file `Message` `Windows` `clientCredentialType` [ diconfigurazioneinquestoesempioimpostanoinmodoesplicitol'attributodel>disicurezzasuel'attributosu.\<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) Questi valori sono i valori predefiniti per questa associazione, ma sono stati configurati in modo esplicito, come illustrato nell'esempio di configurazione seguente per descriverne l'uso.  
+ La sicurezza predefinita per il [ \<>wsHttpBinding](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) è la sicurezza dei messaggi tramite l'autenticazione di Windows.The default security for the wsHttpBinding>is message security using Windows authentication. I file di configurazione in `mode` questo esempio impostano `clientCredentialType` in `Windows`modo esplicito l'attributo della [ \<>di sicurezza](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) `Message` e l'attributo su . Questi valori sono i valori predefiniti per questa associazione, ma sono stati configurati in modo esplicito, come illustrato nell'esempio di configurazione seguente per descriverne l'uso.  
   
 ```xml  
 <bindings>  
@@ -37,9 +37,9 @@ In questo esempio viene illustrato come configurare un'associazione <xref:System
 <system.serviceModel>  
   <client>  
     <endpoint address=  
-            "http://localhost/servicemodelsamples/service.svc"   
-            binding="wsHttpBinding"   
-            bindingConfiguration="Binding1"   
+            "http://localhost/servicemodelsamples/service.svc"
+            binding="wsHttpBinding"
+            bindingConfiguration="Binding1"
             contract="Microsoft.ServiceModel.Samples.ICalculator" />  
   </client>  
   
@@ -74,8 +74,8 @@ public string GetCallerIdentity()
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1. Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Assicurarsi di aver eseguito la procedura di [installazione una tantera per Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Per eseguire l'esempio in una configurazione a singolo o tra computer, seguire le istruzioni in Esecuzione di [Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).  

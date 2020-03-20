@@ -2,12 +2,12 @@
 title: Argomenti obbligatori e gruppi di overload
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-ms.openlocfilehash: 84384e90be0036036477d9b4249832f544e17d08
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 4eb62306f52b8ff890d5a5333c3789bd84ad7f60
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989305"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142940"
 ---
 # <a name="required-arguments-and-overload-groups"></a>Argomenti obbligatori e gruppi di overload
 Le attività possono essere configurate in modo che venga richiesta l'associazione di determinati argomenti affinché l'attività risulti valida per l'esecuzione. L'attributo `RequiredArgument` viene usato per indicare che determinati argomenti di un'attività sono obbligatori mentre l'attributo `OverloadGroup` viene usato per raggruppare insieme categorie di argomenti obbligatori. Tramite gli attributi, gli autori dell'attività possono fornire configurazioni di convalida di attività semplici o complesse.  
@@ -61,13 +61,13 @@ public sealed class Add : CodeActivity<int>
   
  Se viene usata l'attività e nessuno degli argomenti obbligatori viene associato, viene restituito il seguente errore di convalida.  
   
- **Valore non specificato per un argomento di attività' Operand1' obbligatorio.**  
+ **Valore non specificato per un argomento di attività 'Operand1' obbligatorio.**  
 > [!NOTE]
-> Per ulteriori informazioni sul controllo e la gestione degli errori e degli avvisi di convalida, vedere [richiamo della convalida delle attività](invoking-activity-validation.md).  
+> Per ulteriori informazioni sul controllo e la gestione di errori e avvisi di convalida, vedere Richiamare la [convalida dell'attività](invoking-activity-validation.md).  
   
 ## <a name="using-overload-groups"></a>Uso di gruppi di overload
 
-I gruppi di overload offrono un metodo per indicare le combinazioni di argomenti valide in un'attività. Gli argomenti vengono raggruppati insieme tramite l'oggetto <xref:System.Activities.OverloadGroupAttribute>. A ogni gruppo viene assegnato un nome specificato da <xref:System.Activities.OverloadGroupAttribute>. L'attività è valida quando viene associato un solo set di argomenti in un gruppo di overload. Nell'esempio seguente viene definita una classe `CreateLocation`.  
+I gruppi di overload offrono un metodo per indicare le combinazioni di argomenti valide in un'attività. Gli argomenti vengono raggruppati insieme tramite l'oggetto <xref:System.Activities.OverloadGroupAttribute>. A ogni gruppo viene assegnato un <xref:System.Activities.OverloadGroupAttribute>nome specificato dal metodo . L'attività è valida quando viene associato un solo set di argomenti in un gruppo di overload. Nell'esempio seguente viene definita una classe `CreateLocation`.  
   
 ```csharp  
 class CreateLocation: Activity  
@@ -100,13 +100,13 @@ class CreateLocation: Activity
   
     [RequiredArgument]  
     [OverloadGroup("G3")]  
-    public InArgument<int> Zip { get; set; }                  
+    public InArgument<int> Zip { get; set; }
 }  
 ```  
   
  L'obiettivo di questa attività è specificare un percorso negli Stati Uniti. A questo scopo, l'utente dell'attività può specificare il percorso usando uno di tre gruppi di argomenti. Per specificare le combinazioni di argomenti valide, vengono definiti tre gruppi di overload. `G1` contiene gli argomenti `Latitude` e `Longitude`. `G2` contiene `Street`, `City` e `State`. `G3` contiene `Street` e `Zip`. `Name` è anche un argomento obbligatorio, ma non fa parte di un gruppo di overload. Affinché questa attività sia valida, `Name` dovrebbe essere associato insieme a tutti gli argomenti di un unico gruppo di overload soltanto.  
   
- Nell'esempio seguente, tratto dall'esempio di [attività di accesso al database](./samples/database-access-activities.md) , sono disponibili due gruppi di `ConnectionString` overload `ConfigFileSectionName`: e. Perché questa attività sia valida, gli argomenti `ProviderName` e `ConnectionString` o l'argomento `ConfigName`, ma non tutti, devono essere associati.  
+ Nell'esempio seguente, tratto dall'esempio Attività di accesso `ConnectionString` al `ConfigFileSectionName` [database,](./samples/database-access-activities.md) sono disponibili due gruppi di overload: e . Perché questa attività sia valida, gli argomenti `ProviderName` e `ConnectionString` o l'argomento `ConfigName`, ma non tutti, devono essere associati.  
   
 ```csharp  
 public class DbUpdate: AsyncCodeActivity  
@@ -138,7 +138,7 @@ public class DbUpdate: AsyncCodeActivity
     public IDictionary<string, Argument> Parameters { get; }  
   
     [DependsOn("Parameters")]  
-    public OutArgument<int> AffectedRecords { get; set; }       
+    public OutArgument<int> AffectedRecords { get; set; }
 }  
 ```  
   
