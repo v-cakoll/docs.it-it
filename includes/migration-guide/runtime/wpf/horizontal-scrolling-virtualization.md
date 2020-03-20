@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 0825233c0dae131fa9d00565348fac6fdf0be063
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
-ms.translationtype: HT
+ms.openlocfilehash: ac7a56dc654ef4fd966077dd25012f0c50b0fc8d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67857592"
 ---
 ### <a name="horizontal-scrolling-and-virtualization"></a>Scorrimento orizzontale e virtualizzazione
@@ -12,8 +12,7 @@ ms.locfileid: "67857592"
 |---|---|
 |Dettagli|Questa modifica si applica a un elemento <xref:System.Windows.Controls.ItemsControl?displayProperty=name> che esegue la propria virtualizzazione in direzione ortogonale alla direzione di scorrimento principale (l'esempio principale è <xref:System.Windows.Controls.DataGrid?displayProperty=name> con EnableColumnVirtualization=&quot;True&quot;).  Il risultato di determinate operazioni di scorrimento orizzontale è stato modificato per produrre risultati più intuitivi e simili ai risultati delle operazioni verticali confrontabili.<p/>Le operazioni includono &quot;Scorri fino a qui&quot; e &quot;Margine destro&quot;, per usare i nomi del menu visualizzato facendo clic con il pulsante destro del mouse su una barra di scorrimento orizzontale.  Entrambe le operazioni calcolano un offset candidato ed eseguono una chiamata a <xref:System.Windows.Controls.Primitives.IScrollInfo.SetHorizontalOffset(System.Double)>.<p/>Dopo lo scorrimento al nuovo offset, la definizione di &quot;qui&quot; o &quot;margine destro&quot; potrebbe essere stata modificata, poiché il contenuto appena devirtualizzato ha modificato il valore di <xref:System.Windows.Controls.Primitives.IScrollInfo.ExtentWidth?displayProperty=name>.<p/>Nelle versioni precedenti a .NET Framework 4.6.2, l'operazione di scorrimento usa semplicemente l'offset candidato, anche se potrebbe non corrispondere più a &quot;qui&quot; o a &quot;margine destro&quot;.  Ciò potrebbe risultare in effetti come il &quot;rimbalzo&quot; dello scorrimento, illustrato nell'esempio. Si supponga che <xref:System.Windows.Controls.DataGrid?displayProperty=name> abbia ExtentWidth = 1000 e Width = 200.  Uno scorrimento al &quot;Bordo destro&quot; usa l'offset candidato 1000-200 = 800.  Durante lo scorrimento all'offset, le nuove colonne vengono devirtualizzate. Si supponga che siano molto ampie, in modo che <xref:System.Windows.Controls.Primitives.IScrollInfo.ExtentWidth?displayProperty=name> venga portato a 2000.  Lo scorrimento termina con HorizontalOffset=800 e il controllo &quot;rimbalza&quot; vicino al centro della barra di scorrimento, esattamente in corrispondenza di 800/2000 = 40%.<p/>La modifica consiste nel ricalcolare un nuovo offset candidato quando si verifica questa situazione e quindi nell'eseguire un nuovo tentativo. (Lo scorrimento verticale funziona già in questo modo.) <p/>La modifica produce un'esperienza più prevedibile e intuitiva per l'utente finale, ma può influire anche su qualsiasi applicazione che dipende dal valore esatto di <xref:System.Windows.Controls.Primitives.IScrollInfo.HorizontalOffset?displayProperty=name> dopo una operazione di scorrimento orizzontale, attivata dall'utente finale o da una chiamata esplicita a <xref:System.Windows.Controls.Primitives.IScrollInfo.SetHorizontalOffset(System.Double)>.|
 |Suggerimento|Un'app che usa un valore stimato per <xref:System.Windows.Controls.Primitives.IScrollInfo.HorizontalOffset?displayProperty=name> dovrebbe essere modificata per recuperare il valore effettivo (e il valore di <xref:System.Windows.Controls.Primitives.IScrollInfo.ExtentWidth?displayProperty=name>) dopo qualsiasi scorrimento orizzontale in grado di modificare <xref:System.Windows.Controls.Primitives.IScrollInfo.ExtentWidth?displayProperty=name> a causa della devirtualizzazione.|
-|Ambito|Secondario|
+|Scope|Minorenne|
 |Versione|4.6.2|
-|Tipo|Runtime|
+|Type|Runtime|
 |API interessate|<ul><li><xref:System.Windows.Controls.Primitives.IScrollInfo?displayProperty=nameWithType></li></ul>|
-

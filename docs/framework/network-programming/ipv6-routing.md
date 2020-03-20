@@ -3,10 +3,10 @@ title: Routing IPv6
 ms.date: 03/30/2017
 ms.assetid: c98731b4-b542-46a2-9947-1cea63c186b2
 ms.openlocfilehash: 93300107710164d755d578633b7fa6651f984987
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047784"
 ---
 # <a name="ipv6-routing"></a>Routing IPv6
@@ -35,5 +35,5 @@ Uno dei vantaggi di IPv6 è che fornisce un meccanismo di routing flessibile. A 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Protocollo IPv6](internet-protocol-version-6.md)
-- [Socket](sockets.md)
+- [Protocollo Internet versione 6](internet-protocol-version-6.md)
+- [socket](sockets.md)

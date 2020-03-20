@@ -16,10 +16,10 @@ helpviewer_keywords:
 - protocols, pluggable
 ms.assetid: 66ef8456-7576-4e97-8956-959b216373db
 ms.openlocfilehash: 94dfedd317782b9e518df02c84d9af55b1ef2b69
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047396"
 ---
 # <a name="programming-pluggable-protocols"></a>programmazione di protocolli di collegamento
