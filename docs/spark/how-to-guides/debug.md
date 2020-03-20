@@ -4,16 +4,16 @@ description: Informazioni su come eseguire il debug di un'applicazione .NET per 
 ms.date: 01/29/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 25f5291c47dc1cdf2668cb077fae7439e330cc1c
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: dac6aed1f7faba7f07b722a6dac0da930ab9ec66
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919930"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79185813"
 ---
 # <a name="debug-a-net-for-apache-spark-application"></a>Eseguire il debug di un'applicazione .NET per Apache Spark
 
-Questa procedura consente di eseguire il debug di .NET per Apache Spark applicazione in Windows.
+Questa procedura illustra i passaggi per eseguire il debug di .NET per l'applicazione Apache Spark in Windows.This how-to provides the steps to debug your .NET for Apache Spark application on Windows.
 
 ## <a name="debug-your-application"></a>Eseguire il debug dell'applicazione
 
@@ -35,22 +35,22 @@ Quando si esegue il comando viene visualizzato l'output seguente:
 ***********************************************************************
 ```
 
-In modalità di debug, DotnetRunner non avvia l'applicazione .NET, ma attende che venga avviata l'app .NET. Lasciare aperta questa finestra del prompt dei comandi e avviare l'applicazione C# .NET tramite il debugger per eseguire il debug dell'applicazione. Avviare l'applicazione .NET con un C# debugger ([debugger di Visual Studio per Windows/MacOS](https://visualstudio.microsoft.com/vs/) o [ C# estensione del debugger in Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)) per eseguire il debug dell'applicazione.
+In modalità di debug, DotnetRunner non avvia l'applicazione .NET, ma attende l'avvio dell'app .NET. Lasciare aperta questa finestra del prompt dei comandi e avviare l'applicazione .NET tramite il debugger C' per eseguire il debug dell'applicazione. Avviare l'applicazione .NET con un debugger di C, ([Visual Studio Debugger per Windows/macOS](https://visualstudio.microsoft.com/vs/) o Estensione del debugger [C'è nel codice](https://code.visualstudio.com/Docs/editor/debugging)di Visual Studio ) per eseguire il debug dell'applicazione.
 
-## <a name="debug-a-user-defined-function-udf"></a>Eseguire il debug di una funzione definita dall'utente (UDF)
+## <a name="debug-a-user-defined-function-udf"></a>Eseguire il debug di una funzione definita dall'utente
 
 > [!NOTE]
-> Le funzioni definite dall'utente sono supportate solo in Windows con il debugger di Visual Studio.
+> Le funzioni definite dall'utente sono supportate solo in Windows con Visual Studio Debugger.User-defined functions are supported only on Windows with Visual Studio Debugger.
 
-Prima di eseguire `spark-submit`, impostare la variabile di ambiente seguente:
+Prima `spark-submit`dell'esecuzione , impostare la seguente variabile di ambiente:
 
 ```bat
 set DOTNET_WORKER_DEBUG=1
 ```
 
-Quando si esegue l'applicazione Spark, viene visualizzata una finestra `Choose Just-In-Time Debugger`. Scegliere un debugger di Visual Studio.
+Quando si esegue l'applicazione `Choose Just-In-Time Debugger` Spark, verrà visualizzata una finestra. Scegliere un debugger di Visual Studio.Choose a Visual Studio debugger.
 
-Il debugger si interrompe nel percorso seguente in [TaskRunner.cs](https://github.com/dotnet/spark/blob/5e9c08b430b4bc56b5f42252c4b73437377afaed/src/csharp/Microsoft.Spark.Worker/TaskRunner.cs#L52):
+Il debugger si interrompo nel seguente percorso in [TaskRunner.cs:](https://github.com/dotnet/spark/blob/5e9c08b430b4bc56b5f42252c4b73437377afaed/src/csharp/Microsoft.Spark.Worker/TaskRunner.cs#L52)
 
 ```csharp
 if (EnvironmentUtils.GetEnvironmentVariableAsBool("DOTNET_WORKER_DEBUG"))
@@ -59,16 +59,16 @@ if (EnvironmentUtils.GetEnvironmentVariableAsBool("DOTNET_WORKER_DEBUG"))
 }
 ```
 
-Passare al file con *estensione cs* che contiene la funzione definita dall'utente di cui si intende eseguire il debug e [impostare un](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints?view=vs-2019)punto di interruzione. Il punto di interruzione indicherà `The breakpoint will not currently be hit` perché il ruolo di lavoro non ha ancora caricato l'assembly che contiene UDF.
+Passare al file *con estensione cs* che contiene la funzione definita dall'utente che si intende eseguire il debug e [impostare un punto di interruzione](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints?view=vs-2019). Il punto `The breakpoint will not currently be hit` di interruzione indica perché il worker non ha ancora caricato l'assembly che contiene la funzione definita dall'utente.
 
-Premere `F5` per continuare con l'applicazione e il punto di interruzione verrà raggiunto.
+Hit `F5` per continuare l'applicazione e il punto di interruzione verrà raggiunto alla fine.
 
-> [!NOTE] 
-> Viene visualizzata la finestra Scegli debugger JIT per ogni attività. Per evitare un numero eccessivo di popup, impostare il numero di esecutori su un numero basso. Ad esempio, è possibile usare l'opzione **--Master local [1]** per Spark-Submit per impostare il numero di attività su 1, che avvia una singola istanza del debugger.
+> [!NOTE]
+> Viene visualizzata la finestra Scegli debugger Just-In-Time per ogni attività. Per evitare un numero eccessivo di popup, impostare il numero di esecutori su un numero basso. Ad esempio, è possibile utilizzare l'opzione **--master local[1]** per spark-submit per impostare il numero di attività su 1, che avvia una singola istanza del debugger.
 
 ## <a name="debug-scala-code"></a>Debug del codice Scala
 
-Se è necessario eseguire il debug del codice sul lato scala (`DotnetRunner`, `DotnetBackendHandler`e così via), è possibile usare il comando seguente e aggiungere un debugger al processo in esecuzione usando [IntelliJ](https://www.jetbrains.com/help/idea/attaching-to-local-process.html):
+Se è necessario eseguire il debug`DotnetRunner` `DotnetBackendHandler`del codice lato Scala ( , , e così via), è possibile utilizzare il comando seguente e collegare un debugger al processo in esecuzione utilizzando [IntelliJ](https://www.jetbrains.com/help/idea/attaching-to-local-process.html):
 
 ```shell
 spark-submit \
