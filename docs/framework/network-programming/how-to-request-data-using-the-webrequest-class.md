@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Richiedere dati con la classe WebRequest'
+title: 'Procedura: richiedere dati utilizzando la classe WebRequest'
 ms.date: 03/21/2019
 dev_langs:
 - csharp
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - Internet, requesting data
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
 ms.openlocfilehash: e670a2a503ce704eff847e9e0b3ee340ab52fe62
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048159"
 ---
-# <a name="how-to-request-data-by-using-the-webrequest-class"></a>Procedura: Richiedere dati con la classe WebRequest
+# <a name="how-to-request-data-by-using-the-webrequest-class"></a>Procedura: richiedere dati utilizzando la classe WebRequest
 
 La procedura seguente descrive i passaggi per richiedere una risorsa da un server, ad esempio una pagina Web o un file. La risorsa deve essere identificata da un URI.
 
@@ -35,7 +35,7 @@ La procedura seguente descrive i passaggi per richiedere una risorsa da un serve
     ```
 
     > [!NOTE]
-    > .NET Framework offre le classi specifiche del protocollo derivate dalle classi <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> per gli URI che iniziano con *http:* , *https:* , *ftp:* e *file:* .
+    > .NET Framework offre le classi specifiche del protocollo derivate dalle classi <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> per gli URI che iniziano con *http:*, *https:*, *ftp:* e *file:*.
 
     Se è necessario impostare o eseguire la lettura di proprietà specifiche del protocollo, è necessario eseguire il cast dell'oggetto <xref:System.Net.WebRequest> o <xref:System.Net.WebResponse> su un tipo di oggetto specifico del protocollo. Per altre informazioni, vedere [Programmazione di protocolli di collegamento](programming-pluggable-protocols.md).
 
@@ -101,7 +101,7 @@ L'esempio di codice seguente illustra come creare una richiesta a un server Web 
 ## <a name="see-also"></a>Vedere anche
 
 - [Creazione di richieste Internet](creating-internet-requests.md)
-- [Uso di flussi nella rete](using-streams-on-the-network.md)
+- [Utilizzo dei flussi in rete](using-streams-on-the-network.md)
 - [Accesso a Internet con un proxy](accessing-the-internet-through-a-proxy.md)
 - [Richiesta di dati](requesting-data.md)
-- [Procedura: Inviare dati con la classe WebRequest](how-to-send-data-using-the-webrequest-class.md)
+- [Procedura: inviare dati utilizzando la classe WebRequest](how-to-send-data-using-the-webrequest-class.md)

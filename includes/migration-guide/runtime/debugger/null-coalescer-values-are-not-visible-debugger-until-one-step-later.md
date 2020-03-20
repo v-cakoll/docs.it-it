@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: c1a2d76b4e596acc395da6cefed008078e57a336
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
-ms.translationtype: HT
+ms.openlocfilehash: 22f8e3bb1ba72379b3f5fc87a077e5fe57f89bf8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67858601"
 ---
 ### <a name="null-coalescer-values-are-not-visible-in-debugger-until-one-step-later"></a>I valori di unione Null non risultano visibili nel debugger fino al passaggio successivo
@@ -12,7 +12,6 @@ ms.locfileid: "67858601"
 |---|---|
 |Dettagli|A causa di un bug in .NET Framework 4.5, i valori impostati tramite un'operazione di unione Null non sono visibili nel debugger immediatamente dopo l'esecuzione dell'operazione di assegnazione quando si usa la versione a 64 bit del framework.|
 |Suggerimento|L'esecuzione di un ulteriore passo nel debugger determinerà il corretto aggiornamento del valore locale o del valore del campo. Questo problema è stato corretto in .NET Framework 4.6. L'aggiornamento a questa versione del framework dovrebbe quindi risolvere il problema.|
-|Ambito|Microsoft Edge|
+|Scope|Microsoft Edge|
 |Versione|4.5|
-|Tipo|Runtime|
-
+|Type|Runtime|

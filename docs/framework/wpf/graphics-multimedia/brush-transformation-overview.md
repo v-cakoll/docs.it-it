@@ -9,91 +9,91 @@ helpviewer_keywords:
 - properties [WPF], transformation
 - transformation properties of brushes [WPF]
 ms.assetid: 8b9bfc09-12fd-4cd5-b445-99949f27bc39
-ms.openlocfilehash: 1d3a56014e0975f3616b7f90021b4290ced5daab
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: deac1be2fd19703055b76af8173111b4453f0d6b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77453130"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186523"
 ---
 # <a name="brush-transformation-overview"></a>Cenni preliminari sulle proprietà di trasformazione Brush
-La classe Brush fornisce due proprietà di trasformazione: <xref:System.Windows.Media.Brush.Transform%2A> e <xref:System.Windows.Media.Brush.RelativeTransform%2A>. Le proprietà consentono di ruotare, ridimensionare, inclinare e traslare il contenuto di un pennello. Questo argomento descrive le differenze tra le due proprietà e contiene gli esempi di uso.  
+La classe Brush fornisce <xref:System.Windows.Media.Brush.Transform%2A> due <xref:System.Windows.Media.Brush.RelativeTransform%2A>proprietà di trasformazione: e . Le proprietà consentono di ruotare, ridimensionare, inclinare e traslare il contenuto di un pennello. Questo argomento descrive le differenze tra le due proprietà e contiene gli esempi di uso.  
   
-<a name="prerequisites"></a>   
-## <a name="prerequisites"></a>Prerequisiti  
- Per comprendere questo argomento, è necessario capire le funzionalità del pennello che viene trasformato. Per <xref:System.Windows.Media.LinearGradientBrush> e <xref:System.Windows.Media.RadialGradientBrush>, vedere [Cenni preliminari sul disegno con colori a tinta unita e sfumature](painting-with-solid-colors-and-gradients-overview.md). Per <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>o <xref:System.Windows.Media.VisualBrush>, vedere [disegnare con immagini, disegni e oggetti visivi](painting-with-images-drawings-and-visuals.md). È anche necessario avere familiarità con le trasformazioni 2D descritte in [Cenni preliminari sulle trasformazioni](transforms-overview.md).  
+<a name="prerequisites"></a>
+## <a name="prerequisites"></a>Prerequisites  
+ Per comprendere questo argomento, è necessario capire le funzionalità del pennello che viene trasformato. Per <xref:System.Windows.Media.LinearGradientBrush> <xref:System.Windows.Media.RadialGradientBrush>e , vedere [Cenni preliminari sulla panoramica di pittura con colori e sfumature a tinta](painting-with-solid-colors-and-gradients-overview.md)unita . Per <xref:System.Windows.Media.ImageBrush> <xref:System.Windows.Media.DrawingBrush>, <xref:System.Windows.Media.VisualBrush>, o , vedere [Disegno con immagini, disegni e oggetti visivi](painting-with-images-drawings-and-visuals.md). È anche necessario avere familiarità con le trasformazioni 2D descritte in [Cenni preliminari sulle trasformazioni](transforms-overview.md).  
   
-<a name="transformversusrelativetransform"></a>   
+<a name="transformversusrelativetransform"></a>
 ## <a name="differences-between-the-transform-and-relativetransform-properties"></a>Differenze tra le proprietà Transform e RelativeTransform  
- Quando si applica una trasformazione alla proprietà <xref:System.Windows.Media.Brush.Transform%2A> di un pennello, è necessario conoscere le dimensioni dell'area disegnata se si desidera trasformare il contenuto del pennello intorno al relativo centro. Si supponga che l'area disegnata sia pari a 200 Device Independent Pixel di larghezza e 150 di altezza.  Se è stato usato un <xref:System.Windows.Media.RotateTransform> per ruotare l'output del pennello 45 gradi sul proprio centro, si darebbe al <xref:System.Windows.Media.RotateTransform> un <xref:System.Windows.Media.RotateTransform.CenterX%2A> di 100 e un <xref:System.Windows.Media.RotateTransform.CenterY%2A> 75.  
+ Quando applicate una trasformazione alla <xref:System.Windows.Media.Brush.Transform%2A> proprietà di un pennello, dovete conoscere le dimensioni dell'area disegnata se desiderate trasformare il contenuto del pennello rispetto al suo centro. Si supponga che l'area disegnata sia pari a 200 Device Independent Pixel di larghezza e 150 di altezza.  Se avete <xref:System.Windows.Media.RotateTransform> usato un per ruotare l'output del pennello di <xref:System.Windows.Media.RotateTransform> 45 gradi intorno al suo centro, dareste la a <xref:System.Windows.Media.RotateTransform.CenterX%2A> di 100 e a <xref:System.Windows.Media.RotateTransform.CenterY%2A> di 75.  
   
- Quando si applica una trasformazione alla proprietà <xref:System.Windows.Media.Brush.RelativeTransform%2A> di un pennello, tale trasformazione viene applicata al pennello prima che venga eseguito il mapping dell'output all'area disegnata. L'elenco seguente indica l'ordine in base al quale il contenuto di un pennello viene elaborato e trasformato.  
+ Quando si applica una trasformazione <xref:System.Windows.Media.Brush.RelativeTransform%2A> alla proprietà di un pennello, tale trasformazione viene applicata al pennello prima che il relativo output venga mappato all'area disegnata. L'elenco seguente indica l'ordine in base al quale il contenuto di un pennello viene elaborato e trasformato.  
   
-1. Elaborare il contenuto del pennello. Per un <xref:System.Windows.Media.GradientBrush>, significa determinare l'area sfumatura. Per un <xref:System.Windows.Media.TileBrush>, viene eseguito il mapping del <xref:System.Windows.Media.TileBrush.Viewbox%2A> al <xref:System.Windows.Media.TileBrush.Viewport%2A>. Questo diventa l'output del pennello.  
+1. Elaborare il contenuto del pennello. Per <xref:System.Windows.Media.GradientBrush>un oggetto , ciò significa determinare l'area della sfumatura. Per <xref:System.Windows.Media.TileBrush>un <xref:System.Windows.Media.TileBrush.Viewbox%2A> oggetto , l'oggetto viene mappato al <xref:System.Windows.Media.TileBrush.Viewport%2A>file . Questo diventa l'output del pennello.  
   
 2. Proiettare l'output del pennello sul rettangolo di trasformazione 1 x 1.  
   
-3. Applicare la <xref:System.Windows.Media.Brush.RelativeTransform%2A>del pennello, se presente.  
+3. Applicare il <xref:System.Windows.Media.Brush.RelativeTransform%2A>pennello, se ne ha uno.  
   
 4. Proiettare l'output trasformato sull'area da disegnare.  
   
-5. Applicare la <xref:System.Windows.Media.Transform>del pennello, se presente.  
+5. Applicare il <xref:System.Windows.Media.Transform>pennello, se ne ha uno.  
   
- Poiché il <xref:System.Windows.Media.Brush.RelativeTransform%2A> viene applicato mentre l'output del pennello viene mappato a un rettangolo 1 x 1, i valori di centro trasformazione e offset sembrano essere relativi. Se, ad esempio, è stato usato un <xref:System.Windows.Media.RotateTransform> per ruotare l'output del pennello 45 gradi sul centro, si darebbe al <xref:System.Windows.Media.RotateTransform> un <xref:System.Windows.Media.RotateTransform.CenterX%2A> di 0,5 e un <xref:System.Windows.Media.RotateTransform.CenterY%2A> 0,5.  
+ Poiché <xref:System.Windows.Media.Brush.RelativeTransform%2A> l'oggetto viene applicato mentre l'output del pennello è mappato a un rettangolo 1 x 1, i valori di centro e scostamento della trasformazione sembrano essere relativi. Ad esempio, se <xref:System.Windows.Media.RotateTransform> avete usato un per ruotare l'output del pennello <xref:System.Windows.Media.RotateTransform> di <xref:System.Windows.Media.RotateTransform.CenterX%2A> 45 gradi <xref:System.Windows.Media.RotateTransform.CenterY%2A> intorno al suo centro, darete a di 0,5 e a di 0,5.  
   
- La figura seguente mostra l'output di diversi pennelli che sono stati ruotati di 45 gradi usando le proprietà <xref:System.Windows.Media.Brush.RelativeTransform%2A> e <xref:System.Windows.Media.Brush.Transform%2A>.  
+ La figura seguente mostra l'output di diversi pennelli ruotati di <xref:System.Windows.Media.Brush.RelativeTransform%2A> <xref:System.Windows.Media.Brush.Transform%2A> 45 gradi utilizzando le proprietà e .  
   
  ![Proprietà RelativeTransform e Transform](./media/graphicsmm-brushrelativetransform-transform-small.png "graphicsmm_brushrelativetransform_transform_small")  
   
-<a name="relativetransformandtilebrush"></a>   
+<a name="relativetransformandtilebrush"></a>
 ## <a name="using-relativetransform-with-a-tilebrush"></a>Uso di RelativeTransform con TileBrush  
- Poiché i pennelli affiancati sono più complessi di altri pennelli, l'applicazione di una <xref:System.Windows.Media.Brush.RelativeTransform%2A> a una potrebbe produrre risultati imprevisti. Analizzare ad esempio l'immagine seguente.  
+ Poiché i pennelli tessera sono più complessi <xref:System.Windows.Media.Brush.RelativeTransform%2A> di altri pennelli, l'applicazione di un oggetto a uno potrebbe produrre risultati imprevisti. Analizzare ad esempio l'immagine seguente.  
   
  ![Immagine di origine](./media/graphicsmm-reltransform-1-original-image.jpg "graphicsmm_reltransform_1_original_image")  
   
- Nell'esempio seguente viene usato un <xref:System.Windows.Media.ImageBrush> per disegnare un'area rettangolare con l'immagine precedente. Applica una <xref:System.Windows.Media.RotateTransform> alla proprietà <xref:System.Windows.Media.Brush.RelativeTransform%2A> dell'oggetto <xref:System.Windows.Media.ImageBrush> e imposta la relativa proprietà <xref:System.Windows.Media.TileBrush.Stretch%2A> su <xref:System.Windows.Media.Stretch.UniformToFill>, che deve mantenere le proporzioni dell'immagine quando viene estesa per riempire completamente il rettangolo.  
+ Nell'esempio seguente <xref:System.Windows.Media.ImageBrush> viene utilizzato un oggetto per disegnare un'area rettangolare con l'immagine precedente. Applica un <xref:System.Windows.Media.RotateTransform> oggetto <xref:System.Windows.Media.ImageBrush> alla <xref:System.Windows.Media.Brush.RelativeTransform%2A> proprietà dell'oggetto <xref:System.Windows.Media.TileBrush.Stretch%2A> e <xref:System.Windows.Media.Stretch.UniformToFill>ne imposta la proprietà su , che deve mantenere le proporzioni dell'immagine quando viene allungata per riempire completamente il rettangolo.  
   
  [!code-xaml[BrushOverviewExamples_snip#GraphicsMMRelativeTransformExample2Inline](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/RelativeTransformIllustration.xaml#graphicsmmrelativetransformexample2inline)]  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
  ![Output trasformato](./media/graphicsmm-reltransform-6-output.png "graphicsmm_reltransform_6_output")  
   
- Si noti che l'immagine è distorta, anche se la <xref:System.Windows.Media.TileBrush.Stretch%2A> del pennello è stata impostata su <xref:System.Windows.Media.Stretch.UniformToFill>. Questo perché la trasformazione relativa viene applicata dopo che è stato eseguito il mapping del <xref:System.Windows.Media.TileBrush.Viewbox%2A> del pennello al relativo <xref:System.Windows.Media.TileBrush.Viewport%2A>. L'elenco seguente descrive tutti i passaggi del processo.  
+ Si noti che l'immagine è distorta, anche se il pennello <xref:System.Windows.Media.TileBrush.Stretch%2A> è stato impostato su <xref:System.Windows.Media.Stretch.UniformToFill>. Questo perché la trasformazione relativa viene applicata dopo il pennello <xref:System.Windows.Media.TileBrush.Viewbox%2A> è stato mappato al relativo <xref:System.Windows.Media.TileBrush.Viewport%2A>oggetto . L'elenco seguente descrive tutti i passaggi del processo.  
   
-1. Proietta il contenuto del pennello (<xref:System.Windows.Media.TileBrush.Viewbox%2A>) sulla tessera di base (<xref:System.Windows.Media.TileBrush.Viewport%2A>) utilizzando l'impostazione <xref:System.Windows.Media.TileBrush.Stretch%2A> del pennello.  
+1. Proiettare il contenuto<xref:System.Windows.Media.TileBrush.Viewbox%2A>del pennello (<xref:System.Windows.Media.TileBrush.Viewport%2A>) sulla relativa <xref:System.Windows.Media.TileBrush.Stretch%2A> tessera ( ) utilizzando l'impostazione del pennello.  
   
-     ![Estendere la Viewbox per adattarla al viewport](./media/graphicsmm-reltransform-2-viewbox-to-viewport.png "graphicsmm_reltransform_2_viewbox_to_viewport")  
+     ![Allungare l'oggetto Viewbox per adattarlo al viewport](./media/graphicsmm-reltransform-2-viewbox-to-viewport.png "graphicsmm_reltransform_2_viewbox_to_viewport")  
   
 2. Proiettare la tessera di base sul rettangolo di trasformazione 1 x 1.  
   
-     ![Eseguire il mapping del viewport al rettangolo di trasformazione](./media/graphicsmm-reltransform-3-output-to-transform.png "graphicsmm_reltransform_3_output_to_transform")  
+     ![Eseguire il mapping del riquadro di visualizzazione al rettangolo di trasformazione](./media/graphicsmm-reltransform-3-output-to-transform.png "graphicsmm_reltransform_3_output_to_transform")  
   
-3. Applicare la <xref:System.Windows.Media.RotateTransform>.  
+3. Applicare <xref:System.Windows.Media.RotateTransform>il file .  
   
-     ![Applicare la trasformazione relativa](./media/graphicsmm-reltransform-4-transform-rotate.png "graphicsmm_reltransform_4_transform_rotate")  
+     ![Applicare la relativa trasformazione](./media/graphicsmm-reltransform-4-transform-rotate.png "graphicsmm_reltransform_4_transform_rotate")  
   
 4. Proiettare la tessera di base trasformata sull'area da disegnare.  
   
      ![Proiettare il pennello trasformato nell'area di output](./media/graphicsmm-reltransform-5-transform-to-output.png "graphicsmm_reltransform_5_transform_to_output")  
   
-<a name="rotateexample"></a>   
+<a name="rotateexample"></a>
 ## <a name="example-rotate-an-imagebrush-45-degrees"></a>Esempio - Rotazione di un oggetto ImageBrush di 45 gradi  
- Nell'esempio seguente viene applicata una <xref:System.Windows.Media.RotateTransform> alla proprietà <xref:System.Windows.Media.Brush.RelativeTransform%2A> di un <xref:System.Windows.Media.ImageBrush>. Le proprietà <xref:System.Windows.Media.RotateTransform.CenterX%2A> e <xref:System.Windows.Media.RotateTransform.CenterY%2A> dell'oggetto <xref:System.Windows.Media.RotateTransform> sono entrambe impostate su 0,5, ovvero le coordinate relative del punto centrale del contenuto. Di conseguenza, il contenuto del pennello viene ruotato intorno al relativo centro.  
+ Nell'esempio riportato <xref:System.Windows.Media.Brush.RelativeTransform%2A> di seguito <xref:System.Windows.Media.ImageBrush>viene applicato un <xref:System.Windows.Media.RotateTransform> oggetto alla proprietà di un oggetto . Le <xref:System.Windows.Media.RotateTransform> proprietà <xref:System.Windows.Media.RotateTransform.CenterX%2A> e <xref:System.Windows.Media.RotateTransform.CenterY%2A> dell'oggetto sono entrambe impostate su 0,5, le coordinate relative del punto centrale del contenuto. Di conseguenza, il contenuto del pennello viene ruotato intorno al relativo centro.  
   
  [!code-csharp[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTransformExample.cs#imagebrushrelativetransformexample)]
  [!code-vb[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtransformexample.vb#imagebrushrelativetransformexample)]
  [!code-xaml[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTransformExample.xaml#imagebrushrelativetransformexample)]  
   
- Nell'esempio successivo viene inoltre applicata una <xref:System.Windows.Media.RotateTransform> a una <xref:System.Windows.Media.ImageBrush>, ma viene utilizzata la proprietà <xref:System.Windows.Media.Brush.Transform%2A> invece della proprietà <xref:System.Windows.Media.Brush.RelativeTransform%2A>. Per ruotare il pennello intorno al relativo centro, è necessario impostare la <xref:System.Windows.Media.RotateTransform.CenterX%2A> e il <xref:System.Windows.Media.RotateTransform.CenterY%2A> dell'oggetto <xref:System.Windows.Media.RotateTransform> su coordinate assolute. Poiché il rettangolo disegnato dal pennello è di 175 per 90 pixel, il punto centrale relativo è (87,5, 45).  
+ Nell'esempio successivo <xref:System.Windows.Media.RotateTransform> viene <xref:System.Windows.Media.ImageBrush>inoltre applicato <xref:System.Windows.Media.Brush.Transform%2A> a un <xref:System.Windows.Media.Brush.RelativeTransform%2A> oggetto , ma viene utilizzata la proprietà anziché la proprietà . Per ruotare il pennello <xref:System.Windows.Media.RotateTransform> intorno <xref:System.Windows.Media.RotateTransform.CenterX%2A> al <xref:System.Windows.Media.RotateTransform.CenterY%2A> suo centro, l'oggetto e deve essere impostato su coordinate assolute. Poiché il rettangolo disegnato dal pennello è di 175 per 90 pixel, il punto centrale relativo è (87,5, 45).  
   
  [!code-csharp[BrushesIntroduction_snip#ImageBrushTransformExample](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTransformExample.cs#imagebrushtransformexample)]
  [!code-vb[BrushesIntroduction_snip#ImageBrushTransformExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtransformexample.vb#imagebrushtransformexample)]
  [!code-xaml[BrushesIntroduction_snip#ImageBrushTransformExample](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTransformExample.xaml#imagebrushtransformexample)]  
   
- Nella figura seguente viene illustrato il pennello senza una trasformazione, con la trasformazione applicata alla proprietà <xref:System.Windows.Media.Brush.RelativeTransform%2A> e con la trasformazione applicata alla proprietà <xref:System.Windows.Media.Brush.Transform%2A>.  
+ Nella figura seguente viene illustrato il pennello senza <xref:System.Windows.Media.Brush.RelativeTransform%2A> trasformazione, con la <xref:System.Windows.Media.Brush.Transform%2A> trasformazione applicata alla proprietà e con la trasformazione applicata alla proprietà .  
   
- ![Impostazioni di RelativeTransform e trasformazione del pennello](./media/wcpsdk-graphicsmm-transformandrelativetransform.png "wcpsdk_graphicsmm_transformandrelativetransform")  
+ ![Impostazioni RelativeTransform e Transform di Brush](./media/wcpsdk-graphicsmm-transformandrelativetransform.png "wcpsdk_graphicsmm_transformandrelativetransform")  
   
  Questo esempio fa parte di un esempio più esaustivo. Per l'esempio completo, vedere [Brushes Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/Brushes) (Esempio di pennelli). Per altre informazioni sui pennelli, vedere  [Cenni preliminari sui pennelli di WPF](wpf-brushes-overview.md).  
   

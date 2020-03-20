@@ -1,19 +1,19 @@
 ---
-title: "Procedura: Configurare un servizio di Windows Communication Foundation per l'uso della condivisione delle porte"
+title: "Procedura: configurare un servizio Windows Communication Foundation per l'uso della condivisione delle porte"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6400bc71-a858-4ac2-8d5a-caa72d3b5482
-ms.openlocfilehash: e92ce3468bd43456ac3f838cfc44ea7c6624502b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cd8d76137ac195e452a7d66fb6ddbeda405a922f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912213"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185092"
 ---
-# <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>Procedura: Configurare un servizio di Windows Communication Foundation per l'uso della condivisione delle porte
-Il modo più semplice per utilizzare la <xref:System.ServiceModel.NetTcpBinding>condivisione delle porte net. TCP://nell'applicazione Windows Communication Foundation (WCF) consiste nell'esporre un servizio utilizzando.  
+# <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>Procedura: configurare un servizio Windows Communication Foundation per l'uso della condivisione delle porte
+Il modo più semplice per utilizzare la condivisione delle porte net.tcp:// nell'applicazione Windows Communication Foundation (WCF) consiste nell'esporre un servizio tramite il <xref:System.ServiceModel.NetTcpBinding>metodo .  
   
  Questa associazione fornisce una proprietà <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> che controlla se la condivisione delle porte net.tcp:// è attivata per il servizio configurato con questa associazione.  
   
@@ -21,7 +21,7 @@ Il modo più semplice per utilizzare la <xref:System.ServiceModel.NetTcpBinding>
   
 ### <a name="to-enable-nettcp-port-sharing-on-a-nettcpbinding-in-code"></a>Per attivare in codice la condivisione delle porte net.tcp:// in un'associazione NetTcpBinding  
   
-1. Creare un servizio per implementare un contratto denominato `IMyService` e `MyService`chiamarlo,.  
+1. Creare un servizio per `IMyService` implementare `MyService`un contratto denominato e chiamarlo, .  
   
      [!code-csharp[c_ConfigurePortSharing#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_configureportsharing/cs/source.cs#1)]
      [!code-vb[c_ConfigurePortSharing#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_configureportsharing/vb/source.vb#1)]  
@@ -46,7 +46,7 @@ Il modo più semplice per utilizzare la <xref:System.ServiceModel.NetTcpBinding>
 ```xml  
 <system.serviceModel>  
   <bindings>  
-    <netTcpBinding name="portSharingBinding"   
+    <netTcpBinding name="portSharingBinding"
                    portSharingEnabled="true" />  
   </bindings>  
   <services>  
@@ -63,4 +63,4 @@ Il modo più semplice per utilizzare la <xref:System.ServiceModel.NetTcpBinding>
 ## <a name="see-also"></a>Vedere anche
 
 - [Condivisione delle porte Net.TCP](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)
-- [Procedura: Abilitare il servizio di condivisione porte net. TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)
+- [Procedura: attivare il servizio di condivisione delle porte Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)

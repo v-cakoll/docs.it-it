@@ -2,15 +2,15 @@
 title: Attivazione UDP
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: 0f5d07e65abc0b29989834aff496f7c27ea557b5
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: c0b351adb0b45f42404e94c74bdcff7785c2d0ca
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715814"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143720"
 ---
 # <a name="udp-activation"></a>Attivazione UDP
-Questo esempio è basato sull'esempio [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) . Estende l'esempio [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) per supportare l'attivazione del processo mediante il servizio di attivazione dei processi di Windows (was).  
+Questo esempio è basato sull'esempio [Transport: UDP.](../../../../docs/framework/wcf/samples/transport-udp.md) Estende l'esempio [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) per supportare l'attivazione del processo tramite il servizio Attivazione processo Windows (WAS).  
   
  L'esempio è costituito da tre parti principali:  
   
@@ -21,7 +21,7 @@ Questo esempio è basato sull'esempio [Transport: UDP](../../../../docs/framewor
 - Un servizio (ospitato in un processo di lavoro attivato da WAS) che riceve messaggi sul trasporto personalizzato UDP.  
   
 ## <a name="udp-protocol-activator"></a>Attivatore del protocollo UDP  
- L'attivatore del protocollo UDP è un bridge tra il client WCF e il servizio WCF. Fornisce la comunicazione dati tramite il protocollo UDP a livello di trasporto. e ha due funzioni principali:  
+ L'attivatore di protocollo UDP è un ponte tra il client WCF e il servizio WCF. Fornisce la comunicazione dati tramite il protocollo UDP a livello di trasporto. e ha due funzioni principali:  
   
 - Adattatore listener (LA) WAS, che collabora con WAS per attivare processi in risposta ai messaggi in arrivo.  
   
@@ -46,7 +46,7 @@ Questo esempio è basato sull'esempio [Transport: UDP](../../../../docs/framewor
   
  Quando una nuova richiesta viene ricevuta per la prima volta per un'applicazione, l'adattatore del listener chiama `WebhostOpenListenerChannelInstance` in WAS per avviare il processo di lavoro, se non è ancora stato avviato. I gestori del protocollo vengono quindi caricati e la comunicazione tra l'adattatore del listener e l'applicazione virtuale può avere inizio.  
   
- L'adapter listener viene registrato in%SystemRoot%\System32\inetsrv\ApplicationHost.config nella sezione <`listenerAdapters`> come segue:  
+ L'adattatore listener è registrato nella sezione> %SystemRoot%, System32, `listenerAdapters` Inetsrv, ApplicationHost.config nella sezione> <come segue:  
   
 ```xml  
 <add name="net.udp" identity="S-1-5-21-2127521184-1604012920-1887927527-387045" />  
@@ -59,7 +59,7 @@ Questo esempio è basato sull'esempio [Transport: UDP](../../../../docs/framewor
  In questo esempio viene usato WCF per comunicare tra l'attivatore e il processo di lavoro WAS. Il servizio che si trova risiede nell'attivatore è definito servizio di controllo.  
   
 ## <a name="protocol-handlers"></a>Gestori del protocollo  
- Quando l'adattatore del listener chiama `WebhostOpenListenerChannelInstance`, la gestione processi WAS avvia il processo di lavoro, se non è stato avviato. La gestione applicazioni nel processo di lavoro carica quindi il gestore del protocollo del processo (PPH, Process Protocol Handler) di UDP con la richiesta per tale `ListenerChannelId`. Il gestore delle chiamate in viene chiamato `IAdphManager`.`StartAppDomainProtocolListenerChannel` per avviare il gestore del protocollo AppDomain UDP (ADPH).  
+ Quando l'adattatore del listener chiama `WebhostOpenListenerChannelInstance`, la gestione processi WAS avvia il processo di lavoro, se non è stato avviato. La gestione applicazioni nel processo di lavoro carica quindi il gestore del protocollo del processo (PPH, Process Protocol Handler) di UDP con la richiesta per tale `ListenerChannelId`. Il PPH chiama `IAdphManager`a sua volta .`StartAppDomainProtocolListenerChannel` per avviare il gestore protocollo AppDomain UDP (ADPH).  
   
 ## <a name="hostedudptransportconfiguration"></a>HostedUDPTransportConfiguration  
  Le informazioni vengono registrate in Web.config come segue:  
@@ -75,7 +75,7 @@ Questo esempio è basato sull'esempio [Transport: UDP](../../../../docs/framewor
   
 #### <a name="to-set-up-this-sample"></a>Per impostare questo esempio  
   
-1. Installare ASP.NET 4,0 usando il comando seguente.  
+1. Installare ASP.NET 4.0 utilizzando il comando seguente.  
   
     ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
@@ -89,25 +89,25 @@ Questo esempio è basato sull'esempio [Transport: UDP](../../../../docs/framewor
   
     - Abilita anche il protocollo "net.udp" per questa applicazione virtuale.  
   
-3. Avviare l'applicazione dell'interfaccia utente "WasNetActivator.exe". Fare clic sulla scheda **installazione** , selezionare le caselle di controllo seguenti e quindi fare clic su **Installa** per installarle:  
+3. Avviare l'applicazione dell'interfaccia utente "WasNetActivator.exe". Fare clic sulla scheda **Configurazione,** selezionare le seguenti caselle di controllo e quindi fare clic su **Installa** per installarle:  
   
     - Adattatore listener UDP  
   
     - Gestori del protocollo UDP  
   
-4. Fare clic sulla scheda **attivazione** dell'applicazione dell'interfaccia utente "WasNetActivator. exe". Fare clic sul pulsante **Start** per avviare l'adapter listener. È ora possibile eseguire il programma.  
+4. Fare clic sulla scheda **Attivazione** dell'applicazione dell'interfaccia utente "WasNetActivator.exe". Fare clic sul pulsante **Start** per avviare l'adattatore listener. È ora possibile eseguire il programma.  
   
     > [!NOTE]
     > Dopo aver concluso l'esempio, è necessario eseguire Cleanup.bat per rimuovere l'associazione net.udp dal "Sito Web predefinito".  
   
-## <a name="sample-usage"></a>Utilizzo dell'esempio  
+## <a name="sample-usage"></a>Esempio di utilizzo  
  Dopo la compilazione, vengono generati quattro file binari diversi:  
   
 - Client.exe: il codice del client. Il file App.config viene compilato nel file di configurazione del client Client.exe.config.  
   
 - UDPActivation.dll: la libreria che contiene tutte le principali implementazioni UDP.  
   
-- Service.dll: il codice del servizio. Questo file viene copiato nella directory \bin dell'applicazione virtuale ServiceModelSamples. Il file del servizio è Service. svc e il file di configurazione è Web. config. Dopo la compilazione, vengono copiati nel percorso seguente:%SystemDrive%\Inetpub\wwwroot\ServiceModelSamples.  
+- Service.dll: il codice del servizio. Questo file viene copiato nella directory \bin dell'applicazione virtuale ServiceModelSamples. Il file del servizio è Service.svc e il file di configurazione è Web.config. Dopo la compilazione, vengono copiati nel seguente percorso: %SystemDrive%  
   
 - WasNetActivator: il programma attivatore di UDP.  
   
@@ -119,7 +119,7 @@ Questo esempio è basato sull'esempio [Transport: UDP](../../../../docs/framewor
   
     - Internet Information Services (IIS): W3SVC.  
   
-2. Quindi avviare l'attivatore, WasNetActivator.exe. Nella scheda **attivazione** , l'unico protocollo **UDP**è selezionato nell'elenco a discesa. Fare clic sul pulsante **Start** per avviare l'attivatore.  
+2. Quindi avviare l'attivatore, WasNetActivator.exe. **Nell'elenco** a discesa è selezionato l'unico protocollo **UDP**. Fare clic sul pulsante **Start** per avviare l'attivatore.  
   
 3. Quando l'attivatore è stato avviato, è possibile eseguire il codice client eseguendo Client.exe da una finestra di comando. Di seguito è riportato un output di esempio:  
   
@@ -155,9 +155,9 @@ Questo esempio è basato sull'esempio [Transport: UDP](../../../../docs/framewor
   
 > [!IMPORTANT]
 > È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
->   
+>
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) Esempi per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti gli esempi e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (WCF). Questo esempio si trova nella directory seguente.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\UdpActivation`  

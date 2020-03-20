@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: Abilitare il flusso'
+title: 'Procedura: attivare il flusso'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-ms.openlocfilehash: bd1a52f1ce0f656af79928a20e3badc73661e89a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1d1eaa1ebf41ef86478dda795b3b199239cd37b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64635298"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184939"
 ---
-# <a name="how-to-enable-streaming"></a>Procedura: Abilitare il flusso
-Windows Communication Foundation (WCF) può inviare messaggi utilizzando trasferimenti con flusso o memorizzati nel buffer. Nella modalità predefinita, ovvero trasferimento con memorizzazione nel buffer, un messaggio deve essere recapitato completamente prima che un destinatario possa leggerlo. Nella modalità di trasferimento con flusso, il destinatario può iniziare a elaborare il messaggio prima che esso venga recapitato completamente. La modalità di trasmissione con flusso è utile quando le informazioni passate sono lunghe e possono essere elaborate in serie. La modalità di trasmissione con flusso è utile anche quando il messaggio è troppo grande da memorizzare completamente nel buffer.  
+# <a name="how-to-enable-streaming"></a>Procedura: attivare il flusso
+Windows Communication Foundation (WCF) può inviare messaggi usando trasferimenti memorizzati nel buffer o trasmessi. Nella modalità predefinita, ovvero trasferimento con memorizzazione nel buffer, un messaggio deve essere recapitato completamente prima che un destinatario possa leggerlo. Nella modalità di trasferimento con flusso, il destinatario può iniziare a elaborare il messaggio prima che esso venga recapitato completamente. La modalità di trasmissione con flusso è utile quando le informazioni passate sono lunghe e possono essere elaborate in serie. La modalità di trasmissione con flusso è utile anche quando il messaggio è troppo grande da memorizzare completamente nel buffer.  
   
  Per attivare il flusso, definire correttamente `OperationContract` e attivare il flusso a livello di trasporto.  
   
@@ -48,7 +48,7 @@ Windows Communication Foundation (WCF) può inviare messaggi utilizzando trasfer
   
     1. Nel frammento seguente di configurazione, preso dall'esempio, viene illustrata l'impostazione della proprietà `TransferMode` su trasmissione in `basicHttpBinding` e un'associazione HTTP personalizzata:  
   
-         [!code-xml[c_HowTo_EnableStreaming#103](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/common/app.config#103)]   
+         [!code-xml[c_HowTo_EnableStreaming#103](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/common/app.config#103)]
   
     2. Nel frammento di codice seguente viene illustrata l'impostazione della proprietà `TransferMode` su trasmissione in `basicHttpBinding` e un'associazione HTTP personalizzata.  
   
@@ -77,4 +77,4 @@ Windows Communication Foundation (WCF) può inviare messaggi utilizzando trasfer
 ## <a name="see-also"></a>Vedere anche
 
 - [Dati di grandi dimensioni e streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)
-- [Stream](../../../../docs/framework/wcf/samples/stream.md)
+- [Flusso](../../../../docs/framework/wcf/samples/stream.md)

@@ -2,15 +2,15 @@
 title: 'Procedura: creare un servizio che restituisca dati arbitrari usando il modello di programmazione HTTP Web WCF'
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 41d9f0e53401bcd6b57b04a38e76af5ddb9fb4cc
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c85ab6725876a2d523a18c817ce3fd89f0d2285a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976096"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184478"
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Procedura: creare un servizio che restituisca dati arbitrari usando il modello di programmazione HTTP Web WCF
-Talvolta gli sviluppatori devono disporre del controllo completo sulla modalità di restituzione dei dati da un'operazione del servizio, Questa situazione si verifica quando un'operazione del servizio deve restituire dati in un formato non supportato da WCF. In questo argomento viene illustrato l'utilizzo del modello di programmazione HTTP WEB WCF per creare un servizio di questo tipo. In questo servizio è presente un'operazione che restituisce un flusso.  
+Talvolta gli sviluppatori devono disporre del controllo completo sulla modalità di restituzione dei dati da un'operazione del servizio, Ciò avviene quando un'operazione del servizio deve restituire dati in un formato non supportato da WCF. In questo argomento viene illustrato l'utilizzo del modello di programmazione HTTP WEB WCF per creare un servizio di questo tipo. In questo servizio è presente un'operazione che restituisce un flusso.  
   
 ### <a name="to-implement-the-service-contract"></a>Per implementare il contratto di servizio  
   
@@ -25,7 +25,7 @@ Talvolta gli sviluppatori devono disporre del controllo completo sulla modalità
         }  
     ```  
   
-     Poiché il metodo restituisce un <xref:System.IO.Stream>, WCF presuppone che l'operazione abbia il controllo completo sui byte restituiti dall'operazione del servizio e non applica la formattazione ai dati restituiti.  
+     Poiché il <xref:System.IO.Stream>metodo restituisce un oggetto , WCF presuppone che l'operazione abbia il controllo completo sui byte restituiti dall'operazione del servizio e non applica alcuna formattazione ai dati restituiti.  
   
 2. Implementare il contratto di servizio Il contratto ha una sola operazione (`GetImage`). Questo metodo genera una bitmap, quindi la salva in <xref:System.IO.MemoryStream> in formato .jpg. L'operazione restituisce quindi il flusso al chiamante.  
   
@@ -53,7 +53,7 @@ Talvolta gli sviluppatori devono disporre del controllo completo sulla modalità
   
      Si noti il codice dalla seconda all'ultima riga: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
   
-     Questa operazione consente di impostare l'intestazione del tipo di contenuto su `"image/jpeg"`. Sebbene in questo esempio venga illustrato come restituire un file jpg, è possibile modificarlo per restituire qualsiasi tipo di dati necessario, in qualsiasi formato. L'operazione deve recuperare o generare i dati e scriverli in un flusso.  
+     In questo modo l'intestazione del tipo di contenuto viene impostata `"image/jpeg"`su . Sebbene in questo esempio venga illustrato come restituire un file jpg, è possibile modificarlo per restituire qualsiasi tipo di dati necessario, in qualsiasi formato. L'operazione deve recuperare o generare i dati e scriverli in un flusso.  
   
 ### <a name="to-host-the-service"></a>Per ospitare il servizio  
   
@@ -64,7 +64,7 @@ Talvolta gli sviluppatori devono disporre del controllo completo sulla modalità
     {  
         static void Main(string[] args)  
         {  
-        }   
+        }
     }  
     ```  
   
@@ -177,4 +177,4 @@ namespace RawImageService
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Modello di programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Modello di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

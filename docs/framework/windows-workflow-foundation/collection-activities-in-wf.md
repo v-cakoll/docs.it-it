@@ -2,15 +2,15 @@
 title: Attività di raccolta in WF
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-ms.openlocfilehash: b14d6f8bdebd349467004a8fa950927f848d0f21
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5935b569bc46a6f38a7158049336f1e57fd8b0e5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935450"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143148"
 ---
 # <a name="collection-activities-in-wf"></a>Attività di raccolta in WF
-Le attività di raccolta vengono usate per operare con gli oggetti di una raccolta in un flusso di lavoro. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] dispone di attività fornite dal sistema per l'aggiunta e la rimozione di elementi da una raccolta, la verifica dell'esistenza di un elemento in una raccolta e la cancellazione di una raccolta. `ExistsInCollection`e `RemoveFromCollection` hanno un <xref:System.Activities.OutArgument%601> di tipo <xref:System.Boolean>, che indica il risultato.  
+Le attività di raccolta vengono usate per operare con gli oggetti di una raccolta in un flusso di lavoro. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] dispone di attività fornite dal sistema per l'aggiunta e la rimozione di elementi da una raccolta, la verifica dell'esistenza di un elemento in una raccolta e la cancellazione di una raccolta. `ExistsInCollection`e `RemoveFromCollection` hanno <xref:System.Activities.OutArgument%601> un <xref:System.Boolean>di tipo , che indica il risultato.  
   
 > [!IMPORTANT]
 > Se un'attività di raccolta viene eseguita prima di impostare l'oggetto della raccolta sottostante, viene generata un'eccezione <xref:System.InvalidOperationException> e l'attività non riesce.  
@@ -43,7 +43,7 @@ Activity wf = new Sequence
 {  
     Variables = { fruitList, result },  
   
-    Activities =   
+    Activities =
     {  
         new If  
         {  
@@ -243,7 +243,7 @@ Activity wf = new Sequence
 {  
     Variables = { fruitList, result },  
   
-    Activities =   
+    Activities =
     {  
         new If  
         {  

@@ -1,22 +1,22 @@
 ---
-title: 'Procedura: Aggiungere individuazione a un client e un servizio WCF a livello di codice'
+title: 'Procedura: aggiungere capacità di individuazione a un client e un servizio WCF a livello di codice'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: a139eb4a15486be329bc6853ee6b3a3be06b0619
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: dd96bc168413eef99260a5251e74971aa1309ff4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291562"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184890"
 ---
-# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Procedura: Aggiungere individuazione a un client e un servizio WCF a livello di codice
-In questo argomento viene illustrato come rendere individuabile un servizio di Windows Communication Foundation (WCF). Si basa sull'esempio [self-host](https://go.microsoft.com/fwlink/?LinkId=145523) .  
+# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Procedura: aggiungere capacità di individuazione a un client e un servizio WCF a livello di codice
+In questo argomento viene illustrato come rendere individuabile un servizio Windows Communication Foundation (WCF). Si basa sull'esempio [Self-Host.](https://go.microsoft.com/fwlink/?LinkId=145523)  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Per configurare l'esempio di servizio indipendente esistente per l'individuazione  
   
-1. Aprire la soluzione self-host in Visual Studio 2012. L'esempio si trova nella directory TechnologySamples\Basic\Service\Hosting\SelfHost.  
+1. Aprire la soluzione Self-Host in Visual Studio 2012. L'esempio si trova nella directory TechnologySamples\Basic\Service\Hosting\SelfHost.  
   
-2. Aggiungere al progetto di servizio un riferimento a `System.ServiceModel.Discovery.dll`. Potrebbe essere visualizzato un messaggio di errore che informa che "System. ServiceModel. Discovery. dll o una delle relative dipendenze richiede una versione successiva del .NET Framework rispetto a quella specificata nel progetto... " Se viene visualizzato questo messaggio, fare clic con il pulsante destro del mouse sul progetto nella Esplora soluzioni e scegliere **Proprietà**. Nella finestra delle **proprietà del progetto** verificare che il Framework di **destinazione** sia [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+2. Aggiungere al progetto di servizio un riferimento a `System.ServiceModel.Discovery.dll`. È possibile che venga visualizzato un messaggio di errore che indica "Sistema. ServiceModel.Discovery.dll o una delle relative dipendenze richiede una versione successiva di .NET Framework rispetto a quella specificata nel progetto ..." Se viene visualizzato questo messaggio, fare clic con il pulsante destro del mouse sul progetto in Esplora soluzioni e scegliere **Proprietà**. Nella finestra **Proprietà progetto** verificare che il Framework di **destinazione** sia [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   
 3. Aprire il file Service.cs e aggiungere l'istruzione `using` seguente.  
   
@@ -33,7 +33,7 @@ In questo argomento viene illustrato come rendere individuabile un servizio di W
         using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService)))  
         {  
             // Add a ServiceDiscoveryBehavior  
-            serviceHost.Description.Behaviors.Add(new ServiceDiscoveryBehavior());                  
+            serviceHost.Description.Behaviors.Add(new ServiceDiscoveryBehavior());
   
             // ...  
         }  
@@ -60,11 +60,11 @@ In questo argomento viene illustrato come rendere individuabile un servizio di W
   
 2. Aggiungere un riferimento a `System.ServiceModel.dll` e `System.ServiceModel.Discovery.dll`  
   
-3. Copiare i file GeneratedClient.cs e App.config dal progetto client esistente al nuovo progetto DiscoveryClientApp. A tale scopo, fare clic con il pulsante destro del mouse sui file nel **Esplora soluzioni**, selezionare **copia**, quindi selezionare il progetto **DiscoveryClientApp** , fare clic con il pulsante destro del mouse e scegliere **Incolla**.  
+3. Copiare i file GeneratedClient.cs e App.config dal progetto client esistente al nuovo progetto DiscoveryClientApp. A tale scopo, fare clic con il pulsante destro del mouse sui file in **Esplora soluzioni**, scegliere **Copia**, quindi selezionare il progetto **DiscoveryClientApp** , fare clic con il pulsante destro del mouse e **scegliere Incolla**.  
   
 4. Aprire Program.cs.  
   
-5. Aggiungere le istruzioni `using` riportate di seguito.  
+5. Aggiungere le istruzioni `using` seguenti.  
   
     ```csharp  
     using System.ServiceModel;  
@@ -92,12 +92,12 @@ In questo argomento viene illustrato come rendere individuabile un servizio di W
     }  
     ```  
   
-     Indica a WCF che la classe <xref:System.ServiceModel.Discovery.DiscoveryClient> deve utilizzare l'endpoint di individuazione UDP standard per inviare e ricevere messaggi di individuazione.  
+     Ciò indica <xref:System.ServiceModel.Discovery.DiscoveryClient> a WCF che la classe deve utilizzare l'endpoint di individuazione UDP standard per inviare e ricevere messaggi di individuazione.  
   
 8. Alla riga successiva, chiamare il metodo <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> e specificare un'istanza <xref:System.ServiceModel.Discovery.FindCriteria> che contiene il contratto di servizio che si desiderare cercare. In questo caso specificare `ICalculator`.  
   
     ```csharp  
-    // Find ICalculatorService endpoints              
+    // Find ICalculatorService endpoints
     FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculator)));  
     ```  
   
@@ -124,7 +124,7 @@ In questo argomento viene illustrato come rendere individuabile un servizio di W
   
      Questo metodo utilizza l'indirizzo endpoint restituito da `FindCalculatorServiceAddress` per chiamare il servizio di calcolo.  
   
-11. Creare all'interno del metodo `InvokeCalculatorService` un'istanza della classe `CalculatorServiceClient`. Questa classe è definita dall'esempio [self-host](https://go.microsoft.com/fwlink/?LinkId=145523) . È stata generata utilizzando Svcutil.exe.  
+11. Creare all'interno del metodo `InvokeCalculatorService` un'istanza della classe `CalculatorServiceClient`. Questa classe è definita dall'esempio [Self-Host.This](https://go.microsoft.com/fwlink/?LinkId=145523) class is defined by the Self-Host sample. È stata generata utilizzando Svcutil.exe.  
   
     ```csharp  
     // Create a client  
@@ -188,7 +188,7 @@ In questo argomento viene illustrato come rendere individuabile un servizio di W
     Console.ReadLine();  
     ```  
   
-### <a name="to-test-the-application"></a>Per eseguire il test dell'applicazione  
+### <a name="to-test-the-application"></a>Per testare l'applicazione  
   
 1. Aprire un prompt dei comandi con privilegi elevati ed eseguire Service.exe.  
   
@@ -220,7 +220,7 @@ In questo argomento viene illustrato come rendere individuabile un servizio di W
     ```  
   
 ## <a name="example"></a>Esempio  
- Di seguito è riportato un elenco del codice per questo esempio. Poiché questo codice è basato sull'esempio [self-host](https://go.microsoft.com/fwlink/?LinkId=145523) , vengono elencati solo i file modificati. Per ulteriori informazioni sull'esempio Self-host, vedere [istruzioni di installazione](https://go.microsoft.com/fwlink/?LinkId=145522).  
+ Di seguito è riportato un elenco del codice per questo esempio. Poiché questo codice è basato sull'esempio [Self-Host,](https://go.microsoft.com/fwlink/?LinkId=145523) vengono elencati solo i file modificati. Per ulteriori informazioni sull'esempio Self-Host, vedere [Istruzioni di installazione](https://go.microsoft.com/fwlink/?LinkId=145522).  
   
 ```csharp  
 // Service.cs  
@@ -277,7 +277,7 @@ namespace DiscoveryClientApp
             // Create DiscoveryClient  
             DiscoveryClient discoveryClient = new DiscoveryClient(new UdpDiscoveryEndpoint());  
   
-            // Find ICalculatorService endpoints              
+            // Find ICalculatorService endpoints
             FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculator)));  
   
             if (findResponse.Endpoints.Count > 0)  

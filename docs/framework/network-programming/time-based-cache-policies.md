@@ -18,10 +18,10 @@ helpviewer_keywords:
 - age of cached resources
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
 ms.openlocfilehash: 0edde8e716d5ce3b1444e994234def5835341475
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047117"
 ---
 # <a name="time-based-cache-policies"></a>criteri di cache basati sull'ora
@@ -41,7 +41,7 @@ I criteri di cache basati sul tempo definiscono il livello di aggiornamento dell
 > [!NOTE]
 > L'uso dei criteri di cache basati sul tempo predefiniti non è da confondersi con l'impostazione di criteri di cache predefiniti per l'applicazione. I criteri basati sul tempo predefiniti sono criteri specifici che possono essere usati a livello di richiesta o di applicazione. I criteri di cache predefiniti per l'applicazione sono criteri (basati sulla posizione o sul tempo) applicati quando non è impostato alcun criterio per una richiesta. Per informazioni dettagliate sull'impostazione di criteri di cache predefiniti per l'applicazione, vedere <xref:System.Net.WebRequest.DefaultCachePolicy%2A>.  
   
-### <a name="maximum-age"></a>Durata massima  
+### <a name="maximum-age"></a>Maximum Age  
  L'impostazione di durata massima per i criteri specifica per quanto tempo è possibile usare una copia memorizzata nella cache di una risorsa. Se la copia memorizzata nella cache della risorsa è precedente al periodo di tempo specificato, la risorsa deve essere riconvalidata controllandola in base al contenuto nel server. Se la durata massima consente di usare la risorsa dopo la scadenza, questo requisito non viene applicato a meno che non venga specificato anche un valore di obsolescenza massima.  
   
 ### <a name="maximum-staleness"></a>Obsolescenza massima  
@@ -64,7 +64,7 @@ I criteri di cache basati sul tempo definiscono il livello di aggiornamento dell
 ## <a name="see-also"></a>Vedere anche
 
 - [Gestione della cache per le applicazioni di rete](cache-management-for-network-applications.md)
-- [Criteri di cache](cache-policy.md)
+- [Criteri cache](cache-policy.md)
 - [Criteri di cache basati sulla posizione](location-based-cache-policies.md)
 - [Configurazione della memorizzazione nella cache per applicazioni di rete](configuring-caching-in-network-applications.md)
-- [Elemento \<requestCaching> (impostazioni di rete)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [\<elemento> requestCaching (impostazioni di rete)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

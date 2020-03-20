@@ -1,55 +1,56 @@
 ---
-title: 'Procedura: Usare il provider di ruoli ASP.NET con un servizio'
+title: 'Procedura: usare il provider di ruoli ASP.NET con un servizio'
 ms.date: 03/30/2017
 ms.assetid: 88d33a81-8ac7-48de-978c-5c5b1257951e
-ms.openlocfilehash: f989252c7dd9b2ccdce8331e7cdd987042230ded
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: ddfedeb2491998f64ab241ceba303d50d0714351
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880238"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184766"
 ---
-# <a name="how-to-use-the-aspnet-role-provider-with-a-service"></a>Procedura: Usare il provider di ruoli ASP.NET con un servizio
-Il provider di ruoli ASP.NET (in combinazione con il provider di appartenenze ASP.NET) è una funzionalità che consente agli sviluppatori ASP.NET creare siti Web che consentono agli utenti di creare un account con un sito e assegnare ruoli a scopo di autorizzazione. Con questa funzionalità qualsiasi utente può stabilire un account nel sito e accedere in modo esclusivo al sito e ai relativi servizi. Si tratta di una funzionalità in contrasto con la protezione di Windows, in base alla quale è necessario che gli utenti dispongano di un account in un dominio Windows. Qualsiasi utente che fornisca le credenziali (ovvero nome utente e password) può utilizzare il sito e i relativi servizi.  
+# <a name="how-to-use-the-aspnet-role-provider-with-a-service"></a>Procedura: usare il provider di ruoli ASP.NET con un servizio
+
+Il provider di ruoli ASP.NET (in combinazione con il provider di appartenenze ASP.NET) è una funzionalità che consente agli sviluppatori di ASP.NET di creare siti Web che consentono agli utenti di creare un account con un sito e di assegnare ruoli per scopi di autorizzazione. Con questa funzionalità qualsiasi utente può stabilire un account nel sito e accedere in modo esclusivo al sito e ai relativi servizi. Si tratta di una funzionalità in contrasto con la protezione di Windows, in base alla quale è necessario che gli utenti dispongano di un account in un dominio Windows. Al contrario, qualsiasi utente che fornisce le proprie credenziali (la combinazione nome utente/password) può utilizzare il sito e i relativi servizi.  
   
- Per un'applicazione di esempio, vedere [Membership and Role Provider](../../../../docs/framework/wcf/samples/membership-and-role-provider.md). Per altre informazioni sulla funzionalità di provider di appartenenze ASP.NET, vedere [come: Usare il Provider di appartenenze ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md).  
+Per un'applicazione di esempio, vedere [Provider di appartenenze e ruoli](../../../../docs/framework/wcf/samples/membership-and-role-provider.md). Per ulteriori informazioni sulla funzionalità del provider di appartenenze ASP.NET, vedere [Procedura: utilizzare il provider](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)di appartenenze ASP.NET .  
   
- La funzionalità del provider di ruoli utilizza un database SQL Server per archiviare informazioni utente. Gli sviluppatori di Windows Communication Foundation (WCF) possono sfruttare queste funzionalità per motivi di sicurezza. Se è integrato in un'applicazione WCF, gli utenti devono fornire una combinazione nome utente/password per l'applicazione client WCF. Per abilitare WCF a utilizzare il database, è necessario creare un'istanza del <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> classe, impostare relativi <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> proprietà <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles>e aggiungere l'istanza alla raccolta dei comportamenti per il <xref:System.ServiceModel.ServiceHost> che ospita il servizio.  
+La funzionalità del provider di ruoli utilizza un database SQL Server per archiviare informazioni utente. Gli sviluppatori di Windows Communication Foundation (WCF) possono sfruttare queste funzionalità per motivi di sicurezza. Quando sono integrati in un'applicazione WCF, gli utenti devono fornire una combinazione nome utente/password all'applicazione client WCF. Per consentire a WCF di utilizzare il database, è <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> necessario <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles>creare un'istanza della classe, impostarne <xref:System.ServiceModel.ServiceHost> la <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> proprietà su e aggiungere l'istanza alla raccolta di comportamenti all'hosting del servizio.  
   
-### <a name="to-configure-the-role-provider"></a>Per configurare il provider di ruoli  
+## <a name="configure-the-role-provider"></a>Configurare il provider di ruoli  
   
-1. Nel file Web. config, sotto il <`system.web`> elemento, aggiungere un <`roleManager`> e impostare relativo `enabled` attributo `true`.  
+1. Nel file Web.config, sotto `system.web` l'elemento <`roleManager`>, aggiungere `enabled` un `true`elemento <> e impostarne l'attributo su .  
   
 2. Impostare l'attributo `defaultProvider` su `SqlRoleProvider`.  
   
-3. Come finestra figlio di <`roleManager`> elemento, aggiungere un <`providers`> elemento.  
+3. Come elemento figlio `roleManager` all'elemento> `providers` <, aggiungere un elemento <>.  
   
-4. Come finestra figlio di <`providers`> elemento, aggiungere un <`add`> elemento con gli attributi seguenti impostati sui valori appropriati: `name`, `type`, `connectionStringName`, e `applicationName`, come illustrato nell'esempio seguente.  
+4. Come elemento figlio `providers` dell'elemento <`add`> , aggiungere un elemento> `name` `type`<`connectionStringName`con `applicationName`i seguenti attributi impostati sui valori appropriati: , , e , come illustrato nell'esempio seguente.  
   
     ```xml  
     <!-- Configure the Sql Role Provider. -->  
-    <roleManager enabled ="true"   
+    <roleManager enabled ="true"
      defaultProvider ="SqlRoleProvider" >  
        <providers>  
-         <add name ="SqlRoleProvider"   
-           type="System.Web.Security.SqlRoleProvider"   
-           connectionStringName="SqlConn"   
+         <add name ="SqlRoleProvider"
+           type="System.Web.Security.SqlRoleProvider"
+           connectionStringName="SqlConn"
            applicationName="MembershipAndRoleProviderSample"/>  
        </providers>  
     </roleManager>  
     ```  
   
-### <a name="to-configure-the-service-to-use-the-role-provider"></a>Per configurare il servizio per l'utilizzo del provider di ruoli  
+## <a name="configure-the-service-to-use-the-role-provider"></a>Configurare il servizio per l'utilizzo del provider di ruoliConfigure the service to use the role provider  
   
-1. Nel file Web. config, aggiungere un [ \<System. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elemento.  
+1. Nel file Web.config aggiungere un [ \<elemento system.serviceModel>.](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)  
   
-2. Aggiungere un [ \<comportamenti >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elemento per il <`system.ServiceModel`> elemento.  
+2. Aggiungere [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) un elemento>dei `system.ServiceModel` comportamenti all'elemento <>.  
   
-3. Aggiungere un [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) per la <`behaviors`> elemento.  
+3. Aggiungere un [ \<>serviceBehaviors](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) all'elemento <`behaviors`>.  
   
-4. Aggiungere un [ \<comportamento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) e impostare il `name` attributo su un valore appropriato.  
+4. Aggiungere [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) un elemento>`name` di comportamento e impostare l'attributo su un valore appropriato.  
   
-5. Aggiungere un [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) per la <`behavior`> elemento.  
+5. Aggiungere un [ \<>serviceAuthorization](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) all'elemento> <. `behavior`  
   
 6. Impostare l'attributo `principalPermissionMode` su `UseAspNetRoles`.  
   
@@ -69,4 +70,4 @@ Il provider di ruoli ASP.NET (in combinazione con il provider di appartenenze AS
 ## <a name="see-also"></a>Vedere anche
 
 - [Provider di appartenenza e di ruoli](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)
-- [Procedura: Usare il Provider di appartenenze ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)
+- [Procedura: usare provider di appartenenza ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)

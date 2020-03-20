@@ -5,19 +5,19 @@ helpviewer_keywords:
 - ETW, CLR providers
 - CLR ETW providers
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
-ms.openlocfilehash: dbdd4ad862ae300c330dc56a82fcd65b866855b6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 33ef7491c2bffeda4ef737ed8f826cdfbfbb119d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716174"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79400078"
 ---
 # <a name="clr-etw-providers"></a>Provider ETW di CLR
 Common Language Runtime (CLR) dispone di due provider, ovvero il provider di runtime e quello di rundown.  
   
  Il provider di runtime genera eventi in base alle parole chiave (categorie di eventi) abilitate. È ad esempio possibile raccogliere gli eventi del caricatore abilitando la parola chiave `LoaderKeyword`.  
   
- Gli eventi Event Tracing for Windows (ETW) vengono registrati in un file con estensione ETL, che può essere successivamente elaborato in un file con valori delimitati da virgole (CSV) in base alle esigenze. Per informazioni su come convertire il file con estensione etl in un file con estensione csv, vedere [Controllo della registrazione di .NET Framework](controlling-logging.md).  
+ Gli eventi ETW (Event Tracing for Windows) vengono registrati in un file con estensione ETL, che può essere successivamente rielaborato in file con valori delimitati da virgole (con estensione csv) in base alle esigenze. Per informazioni su come convertire il file con estensione etl in un file con estensione csv, vedere [Controllo della registrazione di .NET Framework](controlling-logging.md).  
   
 ## <a name="the-runtime-provider"></a>Provider di runtime  
  Il provider di runtime è il principale provider ETW di CLR.  
@@ -35,7 +35,7 @@ Common Language Runtime (CLR) dispone di due provider, ovvero il provider di run
   
  La registrazione ETW viene in genere abilitata prima dell'avvio di un processo e disattivata al termine dello stesso. Se tuttavia la registrazione ETW viene attivata durante l'esecuzione del processo, sono necessarie informazioni aggiuntive sul processo. Per la risoluzione dei simboli, ad esempio, è necessario registrare gli eventi di metodo per i metodi già caricati prima dell'attivazione della registrazione.  
   
- Gli eventi `DCStart` e `DCEnd` acquisiscono lo stato del processo al momento dell'avvio e dell'arresto della raccolta dei dati. (Lo stato si riferisce alle informazioni a livello generale, inclusi i metodi che sono già stati compilati JIT (just-in-Time) e gli assembly caricati. Questi due eventi possono fornire informazioni sugli eventi che si sono già verificati nel processo. ad esempio, quali metodi sono stati compilati tramite JIT e così via.  
+ Gli eventi `DCStart` e `DCEnd` acquisiscono lo stato del processo al momento dell'avvio e dell'arresto della raccolta dei dati. (Stato si riferisce a informazioni di alto livello, inclusi i metodi che sono già stati compilati just-in-time (JIT) e gli assembly che sono stati caricati.) Questi due eventi possono fornire informazioni su ciò che è già accaduto nel processo; ad esempio, quali metodi sono stati compilati tramite JIT e così via.  
   
  Solo gli eventi il cui nome contiene `DC`, `DCStart`, `DCEnd` o `DCInit` vengono generati nel provider di rundown ed esclusivamente in questo provider.  
   
@@ -59,7 +59,7 @@ Common Language Runtime (CLR) dispone di due provider, ovvero il provider di run
 1. Attivare la registrazione ETW tramite il provider di runtime di CLR:  
   
     ```console
-    xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:0x5 -f clr1.etl      
+    xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:0x5 -f clr1.etl
     ```  
   
      Il log verrà salvato nel file clr1.etl.  
@@ -67,7 +67,7 @@ Common Language Runtime (CLR) dispone di due provider, ovvero il provider di run
 2. Per arrestare la profilatura mentre il processo è ancora in esecuzione, avviare il provider di rundown per acquisire gli eventi `DCEnd`:  
   
     ```console
-    xperf -start clrRundown -on A669021C-C450-4609-A035-5AF59AF4DF18:0xB8:0x5 -f clr2.etl      
+    xperf -start clrRundown -on A669021C-C450-4609-A035-5AF59AF4DF18:0xB8:0x5 -f clr2.etl
     ```  
   
      In questo modo, la raccolta di eventi `DCEnd` potrà avviare una sessione di rundown. La raccolta di tutti gli eventi può richiedere un tempo di attesa compreso fra 30 e 60 secondi. Il log verrà salvato nel file clr1.et2.  
@@ -75,7 +75,7 @@ Common Language Runtime (CLR) dispone di due provider, ovvero il provider di run
 3. Disattivare tutta la profilatura ETW:  
   
     ```console
-    xperf -stop clrRundown   
+    xperf -stop clrRundown
     xperf -stop clr  
     ```  
   

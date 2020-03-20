@@ -3,10 +3,10 @@ title: Selezione e convalida dei certificati
 ms.date: 03/30/2017
 ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
 ms.openlocfilehash: aea47360ab1bb9dad446a5a7b19a91ea688953c4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048753"
 ---
 # <a name="certificate-selection-and-validation"></a>Selezione e convalida dei certificati
@@ -40,7 +40,7 @@ Le classi <xref:System.Net> supportano diversi modi per selezionare e convalidar
   
  Per configurare i certificati client è possibile usare *Winhttpcertcfg.exe*. Lo strumento *Winhttpcertcfg.exe* è incluso in Windows Server 2003 Resource Kit ed è anche disponibile come download in Windows Server 2003 Resource Kit Tools sul sito [www.microsoft.com](https://www.microsoft.com).  
   
-Per configurare i certificati server per la classe <xref:System.Net.HttpListener> è possibile usare lo strumento *HttpCfg.exe*. Lo strumento *HttpCfg.exe* è incluso tra gli strumenti di supporto per Windows Server 2003 e Windows XP Service Pack 2. *HttpCfg.exe* e gli altri strumenti di supporto non vengono installati per impostazione predefinita in Windows Server 2003 o Windows XP. Per Windows Server 2003 gli strumenti di supporto vengono installati separatamente dalla cartella e dal file seguenti sul CD del sistema operativo:  
+Lo strumento *HttpCfg.exe* può essere utilizzato <xref:System.Net.HttpListener> per configurare i certificati server per la classe. Lo strumento *HttpCfg.exe* è incluso tra gli strumenti di supporto per Windows Server 2003 e Windows XP Service Pack 2. *HttpCfg.exe* e gli altri strumenti di supporto non vengono installati per impostazione predefinita in Windows Server 2003 o Windows XP. Per Windows Server 2003 gli strumenti di supporto vengono installati separatamente dalla cartella e dal file seguenti sul CD del sistema operativo:  
   
  \Support\Tools\Suptools.msi  
   

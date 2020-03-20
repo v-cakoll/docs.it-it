@@ -1,36 +1,36 @@
 ---
-title: Tipi di grandi dimensioni definiti dall'utente
+title: Tipi definiti dall'utente di grandi dimensioni
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: 012bddc0b4c29a0b50abc3a0df5c3cd34dc4725a
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: f55f6eccf3566a2391204e1ca4349ae5dff01954
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452396"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79148556"
 ---
-# <a name="large-udts"></a>Tipi di grandi dimensioni definiti dall'utente
-I tipi definiti dall'utente (UDT) consentono agli sviluppatori di estendere il sistema di tipi scalari del server archiviando oggetti CLR (Common Language Runtime) in un database di SQL Server. I tipi UDT possono contenere più elementi e presentare comportamenti diversi dai tipi di dati alias tradizionali, costituiti da un singolo tipo di dati di sistema SQL Server.  
+# <a name="large-udts"></a>Tipi definiti dall'utente di grandi dimensioni
+I tipi definiti dall'utente (UDT) consentono agli sviluppatori di estendere il sistema di tipi scalare del server archiviando oggetti Common Language Runtime (CLR) in un database di SQL Server. I tipi definiti dall'utente possono contenere più elementi e avere comportamenti che, a differenza dei tradizionali tipi di dati alias, sono costituiti da un solo tipo di dati di sistema di SQL Server.  
   
 > [!NOTE]
 > Per sfruttare il supporto SqlClient migliorato per i tipi UDT di grandi dimensioni, è necessario installare .NET Framework 3.5 SP1 (o versione successiva).  
   
- In precedenza, i tipi UDT avevano una dimensione massima di 8 kilobyte. In SQL Server 2008 questa limitazione è stata rimossa per i tipi UDT che hanno un formato <xref:Microsoft.SqlServer.Server.Format.UserDefined>.  
+ In precedenza, i tipi definiti dall'utente erano limitati a una dimensione massima di 8 kilobyte. In SQL Server 2008 questa limitazione è stata rimossa per i tipi definiti dall'utente con il formato <xref:Microsoft.SqlServer.Server.Format.UserDefined>.  
   
  Per informazioni complete sui tipi definiti dall'utente, vedere la documentazione online di SQL Server relativa alla versione di SQL Server in uso.  
   
  **Documentazione di SQL Server**  
   
-1. [Tipi definiti dall'utente CLR](/sql/relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types)  
+1. [Tipi definiti dall'utente per CLR](/sql/relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types)  
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>Recupero di schemi UDT tramite GetSchema  
- Il metodo <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> di <xref:System.Data.SqlClient.SqlConnection> restituisce informazioni sullo schema del database in un oggetto <xref:System.Data.DataTable>. Per ulteriori informazioni, vedere [SQL Server raccolte di schemi](../sql-server-schema-collections.md).  
+ Il metodo <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> di <xref:System.Data.SqlClient.SqlConnection> restituisce le informazioni sullo schema del database in un <xref:System.Data.DataTable>. Per ulteriori informazioni, vedere [Raccolte di schemi di SQL Server.](../sql-server-schema-collections.md)  
   
 ### <a name="getschematable-column-values-for-udts"></a>Valori della colonna GetSchemaTable per i tipi UDT  
- Il metodo <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> di <xref:System.Data.SqlClient.SqlDataReader> restituisce un oggetto <xref:System.Data.DataTable> che descrive i metadati della colonna. La tabella seguente descrive le differenze tra i metadati della colonna per i tipi UDT di grandi dimensioni tra SQL Server 2005 e SQL Server 2008.  
+ Il metodo <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> di un <xref:System.Data.SqlClient.SqlDataReader> restituisce un <xref:System.Data.DataTable> che descrive i metadati della colonna. Nella tabella seguente vengono descritte le differenze tra SQL Server 2005 e SQL Server 2008 riguardo ai metadati delle colonne per i tipi definiti dall'utente di grandi dimensioni.  
   
 |Colonna SqlDataReader|SQL Server 2005|SQL Server 2008 e versioni successive|  
 |--------------------------|---------------------|-------------------------------|  
@@ -45,9 +45,9 @@ I tipi definiti dall'utente (UDT) consentono agli sviluppatori di estendere il s
 |`IsLong`|Variabile|Variabile|  
   
 ## <a name="sqldatareader-considerations"></a>Considerazioni su SqlDataReader  
- <xref:System.Data.SqlClient.SqlDataReader> è stato esteso a partire da SQL Server 2008 per supportare il recupero di valori UDT di grandi dimensioni. La modalità di elaborazione dei valori UDT di grandi dimensioni da parte di <xref:System.Data.SqlClient.SqlDataReader> dipende dalla versione di SQL Server in uso, nonché dal valore di `Type System Version` specificato nella stringa di connessione. Per altre informazioni, vedere <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
+ <xref:System.Data.SqlClient.SqlDataReader> è stato esteso a partire da SQL Server 2008 per supportare il recupero di valori UDT di grandi dimensioni. La modalità di elaborazione dei valori UDT di grandi dimensioni da parte di un <xref:System.Data.SqlClient.SqlDataReader> dipende dalla versione di SQL Server in uso, nonché dall'elemento `Type System Version` specificato nella stringa di connessione. Per altre informazioni, vedere <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
- I seguenti metodi di <xref:System.Data.SqlClient.SqlDataReader> restituiranno <xref:System.Data.SqlTypes.SqlBinary> anziché un tipo definito dall'utente quando `Type System Version` è impostato su SQL Server 2005:  
+ I metodi seguenti di <xref:System.Data.SqlClient.SqlDataReader> restituiranno un <xref:System.Data.SqlTypes.SqlBinary> anziché un tipo definito dall'utente quando `Type System Version` è impostato su SQL Server 2005:  
   
 - <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificFieldType%2A>  
   
@@ -59,28 +59,28 @@ I tipi definiti dall'utente (UDT) consentono agli sviluppatori di estendere il s
   
 - <xref:System.Data.SqlClient.SqlDataReader.GetSqlValues%2A>  
   
- I seguenti metodi restituiranno una matrice di `Byte[]` anziché un tipo definito dall'utente quando `Type System Version` è impostato su SQL Server 2005:  
+ I metodi seguenti restituiranno una matrice di `Byte[]` anziché un tipo definito dall'utente quando `Type System Version` è impostato su SQL Server 2005:  
   
 - <xref:System.Data.SqlClient.SqlDataReader.GetValue%2A>  
   
 - <xref:System.Data.SqlClient.SqlDataReader.GetValues%2A>  
   
- Si noti che per la versione corrente di ADO.NET non vengono eseguite conversioni.  
+ Si noti che non viene eseguita alcuna conversione per la versione corrente di ADO.NET.  
   
-## <a name="specifying-sqlparameters"></a>Impostazione di SqlParameters  
- Le proprietà <xref:System.Data.SqlClient.SqlParameter> seguenti sono state estese per l'uso con i tipi UDT di grandi dimensioni.  
+## <a name="specifying-sqlparameters"></a>Specifica di SqlParameter  
+ Le proprietà <xref:System.Data.SqlClient.SqlParameter> seguenti sono state estese per funzionare con i tipi definiti dall'utente di grandi dimensioni.  
   
 |Proprietà SqlParameter|Descrizione|  
 |---------------------------|-----------------|  
-|<xref:System.Data.SqlClient.SqlParameter.Value%2A>|Ottiene o imposta un oggetto che rappresenta il valore del parametro. L'impostazione predefinita è null. La proprietà può essere `SqlBinary`, `Byte[]` o un oggetto gestito.|  
-|<xref:System.Data.SqlClient.SqlParameter.SqlValue%2A>|Ottiene o imposta un oggetto che rappresenta il valore del parametro. L'impostazione predefinita è null. La proprietà può essere `SqlBinary`, `Byte[]` o un oggetto gestito.|  
-|<xref:System.Data.SqlClient.SqlParameter.Size%2A>|Ottiene o imposta la dimensione del valore del parametro da risolvere. Il valore predefinito è 0. La proprietà può essere un integer che rappresenta la dimensione del valore del parametro. Per i tipi UDT di grandi dimensioni, può trattarsi delle dimensioni effettive del tipo UDT oppure può essere pari a -1 per i tipi sconosciuti.|  
+|<xref:System.Data.SqlClient.SqlParameter.Value%2A>|Ottiene o imposta un oggetto che rappresenta il valore del parametro. Il valore predefinito è Null. La proprietà può essere `SqlBinary`, `Byte[]` o un oggetto gestito.|  
+|<xref:System.Data.SqlClient.SqlParameter.SqlValue%2A>|Ottiene o imposta un oggetto che rappresenta il valore del parametro. Il valore predefinito è Null. La proprietà può essere `SqlBinary`, `Byte[]` o un oggetto gestito.|  
+|<xref:System.Data.SqlClient.SqlParameter.Size%2A>|Ottiene o imposta la dimensione del valore del parametro da risolvere. Il valore predefinito è 0. La proprietà può essere un numero intero che rappresenta la dimensione del valore del parametro. Per gli UDT di grandi dimensioni, può trattarsi delle dimensioni effettive dell'UDT oppure di -1 per i tipi sconosciuti.|  
   
 ## <a name="retrieving-data-example"></a>Esempio di recupero di dati  
- Nel frammento di codice seguente viene illustrato come recuperare i dati UDT di grandi dimensioni. La variabile `connectionString` presuppone una connessione valida a un database di SQL Server e la variabile `commandString` presuppone un'istruzione SELECT valida con la colonna della chiave primaria elencata per prima.  
+ Il frammento di codice seguente illustra come recuperare dati UDT di grandi dimensioni. La variabile `connectionString` presuppone una connessione valida a un database SQL Server e la variabile `commandString` presuppone un'istruzione SELECT valida con la colonna chiave primaria elencata per prima.  
   
 ```csharp  
-using (SqlConnection connection = new SqlConnection(   
+using (SqlConnection connection = new SqlConnection(
     connectionString, commandString))  
 {  
   connection.Open();  
@@ -136,5 +136,5 @@ End Using
 - [Configurazione di parametri e tipi di dati dei parametri](../configuring-parameters-and-parameter-data-types.md)
 - [Recupero di informazioni sullo schema del database](../retrieving-database-schema-information.md)
 - [Mapping dei tipi di dati SQL Server](../sql-server-data-type-mappings.md)
-- [Dati binari e con valori elevati SQL Server](sql-server-binary-and-large-value-data.md)
+- [SQL Server Binary and Large-Value Data](sql-server-binary-and-large-value-data.md)
 - [Panoramica di ADO.NET](../ado-net-overview.md)

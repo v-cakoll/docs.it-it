@@ -1,16 +1,16 @@
 ---
-title: 'Procedura: Creare un endpoint di servizio nella configurazione'
+title: 'Procedura: creare un endpoint di servizio nella configurazione'
 ms.date: 06/16/2016
 ms.assetid: f474e25d-2a27-4f31-84c5-395c442b8e70
-ms.openlocfilehash: 63a40576b805952197cec5af2f89a5dc4b5d3545
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9687d9537d6f166a02b79261743050168f677261
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787647"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185006"
 ---
-# <a name="how-to-create-a-service-endpoint-in-configuration"></a>Procedura: Creare un endpoint di servizio nella configurazione
-Gli endpoint forniscono ai client l'accesso alla funzionalità che offre un servizio Windows Communication Foundation (WCF). È possibile definire uno o più endpoint per un servizio usando una combinazione di indirizzi di endpoint assoluti e relativi. In alternativa, se non si definisce alcun endpoint per il servizio, il runtime ne fornirà automaticamente alcuni per impostazione predefinita. In questo argomento viene illustrato come aggiungere endpoint usando un file di configurazione che contiene indirizzi sia relativi che assoluti.  
+# <a name="how-to-create-a-service-endpoint-in-configuration"></a>Procedura: creare un endpoint di servizio nella configurazione
+Gli endpoint forniscono ai client l'accesso alle funzionalità offerte da un servizio Windows Communication Foundation (WCF). È possibile definire uno o più endpoint per un servizio usando una combinazione di indirizzi di endpoint assoluti e relativi. In alternativa, se non si definisce alcun endpoint per il servizio, il runtime ne fornirà automaticamente alcuni per impostazione predefinita. In questo argomento viene illustrato come aggiungere endpoint usando un file di configurazione che contiene indirizzi sia relativi che assoluti.  
   
 ## <a name="example"></a>Esempio  
  Nella configurazione del servizio seguente vengono specificati un indirizzo di base e cinque endpoint.  
@@ -73,7 +73,7 @@ Gli endpoint forniscono ai client l'accesso alla funzionalità che offre un serv
  L'indirizzo di base viene specificato usando l'elemento `add`, in service/host/baseAddresses, come illustrato nell'esempio seguente.  
   
 ```xml  
-<service   
+<service
     name="Microsoft.ServiceModel.Samples.CalculatorService">  
   <host>  
     <baseAddresses>  
@@ -83,16 +83,16 @@ Gli endpoint forniscono ai client l'accesso alla funzionalità che offre un serv
 ```  
   
 ## <a name="example"></a>Esempio  
- La prima definizione dell'endpoint descritta nella configurazione di esempio seguente specifica un indirizzo relativo, che indica che l'indirizzo endpoint è una combinazione dell'indirizzo di base e dell'indirizzo relativo, in base alle regole di composizione URI (Uniform Resource Identifier). L'indirizzo relativo è vuoto (""), pertanto l'indirizzo endpoint corrisponde all'indirizzo di base. L'indirizzo endpoint effettivo è `http://localhost:8000/servicemodelsamples/service`.  
+ La prima definizione dell'endpoint descritta nella configurazione di esempio seguente specifica un indirizzo relativo, che indica che l'indirizzo endpoint è una combinazione dell'indirizzo di base e dell'indirizzo relativo, in base alle regole di composizione URI (Uniform Resource Identifier). L'indirizzo relativo è vuoto (""), pertanto l'indirizzo endpoint corrisponde all'indirizzo di base. L'indirizzo endpoint `http://localhost:8000/servicemodelsamples/service`effettivo è .  
   
 ```xml  
-<endpoint address=""   
+<endpoint address=""
     binding="wsHttpBinding"  
     contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
 ## <a name="example"></a>Esempio  
- Anche la seconda definizione dell'endpoint specifica un indirizzo relativo, come illustrato nell'esempio di configurazione seguente. L'indirizzo relativo, "test", viene accodato all'indirizzo di base. L'indirizzo endpoint effettivo è `http://localhost:8000/servicemodelsamples/service/test`.  
+ Anche la seconda definizione dell'endpoint specifica un indirizzo relativo, come illustrato nell'esempio di configurazione seguente. L'indirizzo relativo, "test", viene accodato all'indirizzo di base. L'indirizzo endpoint `http://localhost:8000/servicemodelsamples/service/test`effettivo è .  
   
 ```xml  
 <endpoint address="/test"  
@@ -101,7 +101,7 @@ Gli endpoint forniscono ai client l'accesso alla funzionalità che offre un serv
 ```  
   
 ## <a name="example"></a>Esempio  
- La terza definizione dell'endpoint specifica un indirizzo assoluto, come illustrato nell'esempio di configurazione seguente. L'indirizzo di base non ha alcun ruolo nell'indirizzo. L'indirizzo endpoint effettivo è `http://localhost:8001/hello/servicemodelsamples`.  
+ La terza definizione dell'endpoint specifica un indirizzo assoluto, come illustrato nell'esempio di configurazione seguente. L'indirizzo di base non ha alcun ruolo nell'indirizzo. L'indirizzo endpoint `http://localhost:8001/hello/servicemodelsamples`effettivo è .  
   
 ```xml  
 <endpoint address="http://localhost:8001/hello/servicemodelsamples"  

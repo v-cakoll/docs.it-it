@@ -10,27 +10,27 @@ helpviewer_keywords:
 - WCF, custom bindings
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-ms.openlocfilehash: 450a99fc6604ccb3fa796e8a73e1ddc3e3adff9e
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 05bcddabf625e478616cce39f08b0ff8af282716
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964653"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184944"
 ---
 # <a name="how-to-enable-message-replay-detection"></a>Procedura: attivare il rilevamento di attacchi di tipo replay dei messaggi
-Un attacco di tipo replay si verifica quando un utente malintenzionato copia un flusso di messaggi tra due parti e lo riproduce verso una o più parti. Se l'attacco non viene contrastato, i computer colpiti elaboreranno il flusso come se i messaggi fossero legittimi, determinando una serie di conseguenze negative, ad esempio ordini ridondanti di un elemento.  
+Un attacco di tipo replay si verifica quando l'autore dell'attacco copia un flusso di messaggi tra due interessati e lo riproduce nei confronti di uno o più degli interessati. Se l'attacco non viene contrastato, i computer colpiti elaboreranno il flusso come se i messaggi fossero legittimi, determinando una serie di conseguenze negative, ad esempio ordini ridondanti di un elemento.  
   
- Per ulteriori informazioni sul rilevamento della riproduzione dei messaggi, vedere [rilevamento della riproduzione dei messaggi](https://docs.microsoft.com/previous-versions/msp-n-p/ff649371(v=pandp.10)).  
+ Per ulteriori informazioni sul rilevamento della riproduzione dei messaggi, vedere [Rilevamento della riproduzione dei](https://docs.microsoft.com/previous-versions/msp-n-p/ff649371(v=pandp.10))messaggi .  
   
- Nella procedura riportata di seguito vengono illustrate varie proprietà che è possibile utilizzare per controllare il rilevamento della riproduzione mediante Windows Communication Foundation (WCF).  
+ Nella procedura seguente vengono illustrate varie proprietà che è possibile utilizzare per controllare il rilevamento della riproduzione tramite Windows Communication Foundation (WCF).  
   
 ### <a name="to-control-replay-detection-on-the-client-using-code"></a>Per controllare il rilevamento di attacchi di tipo replay nel client mediante il codice  
   
-1. Creare un elemento <xref:System.ServiceModel.Channels.SecurityBindingElement> da utilizzare in una classe <xref:System.ServiceModel.Channels.CustomBinding>. Per altre informazioni, vedere [procedura: creare un'associazione personalizzata usando SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Nell'esempio seguente si utilizza un elemento <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> creato con il metodo <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> della classe <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
+1. Creare un elemento <xref:System.ServiceModel.Channels.SecurityBindingElement> da utilizzare in una classe <xref:System.ServiceModel.Channels.CustomBinding>. Per ulteriori informazioni, vedere [Procedura: creare un'associazione personalizzata utilizzando SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Nell'esempio seguente si utilizza un elemento <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> creato con il metodo <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> della classe <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
   
 2. Utilizzare la proprietà <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> per restituire un riferimento alla classe <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> e impostare le proprietà seguenti, in base alle esigenze:  
   
-    1. `DetectReplay`. Valore Boolean. Determina se il client deve rilevare attacchi di tipo replay dal server. Il valore predefinito è `true`.  
+    1. `DetectReplay`. Valore booleano. Determina se il client deve rilevare attacchi di tipo replay dal server. Il valore predefinito è `true`.  
   
     2. `MaxClockSkew`. Valore <xref:System.TimeSpan>. Determina lo sfasamento temporale tollerato dal meccanismo di replay tra client e server. Il meccanismo di sicurezza esamina il timestamp inviato e stabilisce se è troppo vecchio. Il valore predefinito è 5 minuti.  
   
@@ -46,25 +46,25 @@ Un attacco di tipo replay si verifica quando un utente malintenzionato copia un 
   
 ### <a name="to-control-replay-detection-in-configuration-for-the-client-or-service"></a>Per controllare il rilevamento di attacchi di tipo replay nella configurazione per il client o il servizio  
   
-1. Creare un [> di\<CustomBinding](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+1. Creare un [ \<>customBinding ](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
 2. Creare un elemento `<security>`.  
   
-3. Creare una [\<> LocalClientSettings](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md) o [\<> LocalServiceSettings](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md).  
+3. Creare [ \<un>localClientSettings>o](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md) [ \<localServiceSettings ](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md).  
   
-4. Se necessario, impostare gli attributi seguenti: `detectReplays`, `maxClockSkew`, `replayWindow` e `replayCacheSize`. Nell'esempio seguente vengono impostati entrambi gli elementi `<localServiceSettings>`&lt;localClientSettings&gt; e`<localClientSettings>`.  
+4. Se necessario, impostare gli attributi seguenti: `detectReplays`, `maxClockSkew`, `replayWindow` e `replayCacheSize`. Nell'esempio seguente vengono impostati entrambi gli elementi `<localServiceSettings>`.  
   
     ```xml  
     <customBinding>  
       <binding name="NewBinding0">  
        <textMessageEncoding />  
         <security>  
-         <localClientSettings   
-          replayCacheSize="800000"   
+         <localClientSettings
+          replayCacheSize="800000"
           maxClockSkew="00:03:00"  
           replayWindow="00:03:00" />  
-         <localServiceSettings   
-          replayCacheSize="800000"   
+         <localServiceSettings
+          replayCacheSize="800000"
           maxClockSkew="00:03:00"  
           replayWindow="00:03:00" />  
         <secureConversationBootstrap />  
@@ -106,6 +106,6 @@ Un attacco di tipo replay si verifica quando un utente malintenzionato copia un 
 
 - <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
-- [Conversazioni e sessioni sicure](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)
-- [\<localClientSettings>](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)
-- [Procedura: Creare un'associazione personalizzata usando SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Conversazioni e sessioni protette](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)
+- [\<>localClientSettings](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)
+- [Procedura: creare un'associazione personalizzata usando SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

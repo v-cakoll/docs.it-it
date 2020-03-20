@@ -2,12 +2,12 @@
 title: Creazione di applicazioni multicasting usando il trasporto UDP
 ms.date: 03/30/2017
 ms.assetid: 7485154a-6e85-4a67-a9d4-9008e741d4df
-ms.openlocfilehash: b65a277b6e76767d1e3bfdbebbac5051759986e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6825aaafe87ae362fd9266f7c7a82a36d054a69f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857194"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185249"
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>Creazione di applicazioni multicasting usando il trasporto UDP
 Le applicazioni multicasting inviano piccoli messaggi a numerosi destinatari contemporaneamente senza la necessità di stabilire connessioni punto a punto. In queste applicazioni viene data più importanza alla velocità che all'affidabilità. In altre parole, è più importante inviare dati in modo tempestivo che garantire l'effettiva ricezione degli specifici messaggi. In WCF è ora previsto il supporto della scrittura di applicazioni multicasting con <xref:System.ServiceModel.UdpBinding>. Questo trasporto è utile negli scenari in cui un servizio deve spedire contemporaneamente piccoli messaggi a una serie di client. Un'applicazione di teleborsa è un esempio di servizio di questo tipo.  
@@ -71,7 +71,7 @@ string serviceAddress = "soap.udp://224.0.0.1:40000";
 UdpBinding myBinding = new UdpBinding();
 
 // Channel factory
-ChannelFactory<IStockTicker> factory 
+ChannelFactory<IStockTicker> factory
     = new ChannelFactory<IStockTicker>(myBinding,
                 new EndpointAddress(serviceAddress));
 
@@ -91,7 +91,7 @@ while (true)
  Questo codice genera informazioni sulla borsa e utilizza il contratto di servizio IStockTicker per inviare messaggi multicast di chiamata ai servizi in attesa all'indirizzo UDP corretto.  
   
 ### <a name="udp-and-reliable-messaging"></a>UDP e messaggistica affidabile  
- L'associazione UDP non supporta la messaggistica affidabile a causa della semplicità del protocollo UDP. Se è necessario verificare che i messaggi vengano ricevuti da un endpoint remoto, utilizzare un trasporto che supporti la messaggistica affidabile, come HTTP o TCP. Per altre informazioni, vedere messaggistica affidabile https://go.microsoft.com/fwlink/?LinkId=231830  
+ L'associazione UDP non supporta la messaggistica affidabile a causa della semplicità del protocollo UDP. Se è necessario verificare che i messaggi vengano ricevuti da un endpoint remoto, utilizzare un trasporto che supporti la messaggistica affidabile, come HTTP o TCP. Per ulteriori informazioni sulla messaggistica affidabile, vederehttps://go.microsoft.com/fwlink/?LinkId=231830  
   
 ### <a name="two-way-multicast-messaging"></a>Messaggistica multicast bidirezionale  
  Mentre i messaggi multicast sono generalmente unidirezionali, UdpBinding supporta lo scambio di messaggi request/reply. I messaggi inviati tramite il trasporto UDP contengono sia l'indirizzo del mittente sia quello del destinatario. È necessario prestare attenzione quando si utilizza l'indirizzo del mittente poiché potrebbe essere modificato in modo intenzionalmente dannoso durante il trasferimento.  L'indirizzo può essere controllato utilizzando il codice seguente:  
@@ -112,7 +112,7 @@ else
   
  Questo codice controlla il primo byte dell'indirizzo del mittente per verificare se contiene 0xE0, cioè se si tratta di un indirizzo multicast.  
   
-### <a name="security-considerations"></a>Considerazioni sulla sicurezza  
+### <a name="security-considerations"></a>Considerazioni relative alla sicurezza  
  Se si è in attesa di messaggi multicast, un pacchetto ICMP viene inviato al router per notificare che l'utente è in attesa all'indirizzo multicast. Chiunque disponga delle autorizzazioni nella subnet locale può essere in attesa di questi tipi di pacchetti e determinare l'indirizzo multicast e la porta su cui l'utente è in ascolto.  
   
  Non utilizzare l'indirizzo IP del mittente per nessun fine di sicurezza. Queste informazioni possono essere sottoposte a spoofing e possono causare l'invio di risposte al computer sbagliato da parte di un'applicazione. Un modo per limitare questa minaccia consiste nell'abilitare la sicurezza a livello di messaggio. A livello di rete, è possibile utilizzare anche IPSec (Internet Protocol Security) e/o Protezione accesso alla rete.

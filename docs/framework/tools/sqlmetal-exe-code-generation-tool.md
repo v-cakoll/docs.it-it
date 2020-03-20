@@ -10,10 +10,10 @@ helpviewer_keywords:
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
 ms.openlocfilehash: d5b4c2b59b585b3d3a3584ef9055e70c9d998e85
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71044086"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (strumento per la generazione del codice)
@@ -45,19 +45,19 @@ sqlmetal [options] [<input file>]
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
-|**/server:** *\<nome>*|Specifica il nome del server di database.|  
-|**/database:** *\<nome>*|Specifica il catalogo del database contenuto nel server.|  
-|**/user:** *\<nome>*|Specifica l'ID utente di accesso. Valore predefinito: Usa autenticazione di Windows.|  
-|**/password:** *\<password>*|Specifica la password di accesso. Valore predefinito: Usa autenticazione di Windows.|  
-|**/conn:** *\<stringa di connessione>*|Specifica la stringa di connessione al database. Non può essere usata con l'opzione **/server**, **/database**, **/user**o **/password** .<br /><br /> Non includere il nome file nella stringa di connessione. Aggiungere invece il nome file alla riga di comando come file di input. La riga seguente, ad esempio, specifica "c:\northwnd.mdf" come file di input: **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"** .|  
-|**/timeout:** *\<secondi>*|Specifica il valore di timeout quando SqlMetal accede al database. Valore predefinito: 0 (ovvero nessun limite di tempo).|  
+|**/server:** * \<>del nome*|Specifica il nome del server di database.|  
+|**/database:** * \<>del nome*|Specifica il catalogo del database contenuto nel server.|  
+|**/user:** * \<>del nome*|Specifica l'ID utente di accesso. Valore predefinito: usare l'autenticazione di Windows.Default value: Use Windows authentication.|  
+|**/password:** * \<>password*|Specifica la password di accesso. Valore predefinito: autenticazione di Windows.|  
+|**/conn:** stringa di * \<connessione>*|Specifica la stringa di connessione al database. Non può essere usata con l'opzione **/server**, **/database**, **/user**o **/password** .<br /><br /> Non includere il nome file nella stringa di connessione. Aggiungere invece il nome file alla riga di comando come file di input. La riga seguente, ad esempio, specifica "c:\northwnd.mdf" come file di input: **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"**.|  
+|**/timeout:** * \<secondi>*|Specifica il valore di timeout quando SqlMetal accede al database. Valore predefinito: 0 (ovvero nessun limite di tempo).|  
   
  **Opzioni di estrazione**  
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
 |**/views**|Estrae viste di database.|  
-|**/functions**|Estrae funzioni di database.|  
+|**/functions (funzioni)**|Estrae funzioni di database.|  
 |**/sprocs**|Estrae stored procedure.|  
   
  **Opzioni di output**  
@@ -72,20 +72,20 @@ sqlmetal [options] [<input file>]
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
-|**/language:** *\<linguaggio>*|Specifica il linguaggio del codice sorgente.<br /><br /> Valori validi per *\<linguaggio>* : vb, csharp.<br /><br /> Valore predefinito: derivato dall'estensione nel nome file del codice.|  
-|**/namespace:** *\<nome>*|Specifica lo spazio dei nomi del codice generato. Valore predefinito: nessuno spazio dei nomi.|  
-|**/context:** *\<tipo>*|Specifica il nome della classe del contesto dati. Valore predefinito: derivato dal nome del database.|  
-|**/entitybase:** *\<tipo>*|Specifica la classe base delle classi di entità nel codice generato. Valore predefinito: le entità non dispongono di classe base.|  
+|**/language:** * \<>della lingua*|Specifica il linguaggio del codice sorgente.<br /><br /> * \<Linguaggio *valido>: vb, csharp.<br /><br /> Valore predefinito: derivato dall'estensione nel nome file del codice.|  
+|**/namespace:** * \<nome>*|Specifica lo spazio dei nomi del codice generato. Valore predefinito: nessuno spazio dei nomi.|  
+|**/context:** * \<tipo>*|Specifica il nome della classe del contesto dati. Valore predefinito: derivato dal nome del database.|  
+|**/entitybase:** * \<>del tipo*|Specifica la classe base delle classi di entità nel codice generato. Valore predefinito: le entità non dispongono di classe base.|  
 |**/pluralize**|Rende automaticamente plurali o singolari i nomi delle classi e dei membri.<br /><br /> Opzione disponibile solo nella versione in lingua inglese degli Stati Uniti.|  
-|**/serialization:** *\<opzione>*|Genera classi serializzabili.<br /><br /> Valori validi per *\<opzione>* : None, Unidirectional. Valore predefinito: No.<br /><br /> Per altre informazioni, vedere [Serializzazione](../data/adonet/sql/linq/serialization.md).|  
+|**/serialization:** * \<>delle opzioni*|Genera classi serializzabili.<br /><br /> Opzione * \<valida>*: Nessuno, Unidirezionale. Valore predefinito: None.<br /><br /> Per altre informazioni, vedere [Serializzazione](../data/adonet/sql/linq/serialization.md).|  
   
- **File di input**  
+ **Input File**  
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
-|**\<file input>**|Specifica un file con estensione mdf di SQL Server Express, un file con estensione sdf di SQL Server Compact 3.5 oppure un file con estensione dbml intermedio.|  
+|**\<>del file di input**|Specifica un file con estensione mdf di SQL Server Express, un file con estensione sdf di SQL Server Compact 3.5 oppure un file con estensione dbml intermedio.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Il funzionamento di SqlMetal prevede di fatto due passaggi:  
   
 - Estrazione dei metadati del database in un file .dbml.  
@@ -136,4 +136,4 @@ sqlmetal [options] [<input file>]
 
 - [Procedura: Generare il modello a oggetti in Visual Basic o C#](../data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
 - [Generazione di codice in LINQ to SQL](../data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
-- [External Mapping](../data/adonet/sql/linq/external-mapping.md) (Mapping esterno)
+- [Mapping esterno](../data/adonet/sql/linq/external-mapping.md)

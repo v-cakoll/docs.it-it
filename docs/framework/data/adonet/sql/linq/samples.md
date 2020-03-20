@@ -2,19 +2,19 @@
 title: Esempi
 ms.date: 03/30/2017
 ms.assetid: 3fcc0c4a-b952-4cfe-9e09-0c0cf874ba2c
-ms.openlocfilehash: 3d695825ff98388469ae68fec6223efa3d010969
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f76984051fe86f209ee23799df2c533c3f55d6ea
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792687"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78848795"
 ---
 # <a name="samples"></a>Esempi
-In questo argomento vengono forniti i collegamenti alla C# Visual Basic e alle [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] soluzioni che contengono codice di esempio.  
+In questo argomento vengono forniti collegamenti alle [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] soluzioni visualbasici e di C, che contengono codice di esempio.  
   
-## <a name="in-this-section"></a>In questa sezione  
- Visual Basic versione della soluzione SampleQueries  
- [Query di esempio (Visual Basic)](../../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ Versione Visual Basic della soluzione SampleQueries  
+ [Query di esempio (Visual Basic)Sample Queries (Visual Basic)](../../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
   
  Versione C# della soluzione SampleQueries  
  [Query di esempio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb397972(v=vs.90))  
@@ -23,9 +23,9 @@ In questo argomento vengono forniti i collegamenti alla C# Visual Basic e alle [
   
 - Cercare problemi specifici in Microsoft Docs.  
   
-- Partecipare al [Forum su LINQ](https://go.microsoft.com/fwlink/?LinkId=76488), in cui è possibile discutere in dettaglio argomenti più complessi con gli esperti.  
+- Partecipare al [forum LINQ](https://social.msdn.microsoft.com/forums/en-us/home?forum=linqtosql), in cui è possibile discutere argomenti più complessi in dettaglio con gli esperti.  
   
-- Studia i white paper la tecnologia [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dei dettagli, completati con C# Visual Basic ed esempi di codice. Per ulteriori informazioni, vedere [LINQ to SQL: .NET Language-Integrated Query per i dati relazionali](https://go.microsoft.com/fwlink/?LinkId=93205).  
+- Studiare il white [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] paper che illustra in dettaglio la tecnologia, completo di esempi di codice di Visual Basic e C. Per ulteriori informazioni, vedere [LINQ to SQL: Query integrata nel linguaggio .NET per dati relazionali](https://docs.microsoft.com/previous-versions/dotnet/articles/bb425822(v=msdn.10)).  
   
 ## <a name="see-also"></a>Vedere anche
 

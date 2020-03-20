@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-ms.openlocfilehash: 6e066bcbe02fa9cf498e11af431b9f6dcd4432ab
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e5135aca49a63aafa3330832c54f2d28d31d60d0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785518"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151351"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>Creazione di un oggetto DataTable da un oggetto DataView
-Una volta recuperati i dati da un'origine dati e compilato un tipo <xref:System.Data.DataTable>, è possibile ordinare, filtrare o limitare i dati restituiti senza doverli recuperare nuovamente. Questo è reso possibile dalla classe <xref:System.Data.DataView>. Inoltre, se è <xref:System.Data.DataTable> necessario creare un nuovo <xref:System.Data.DataView>da, è possibile utilizzare il <xref:System.Data.DataView.ToTable%2A> metodo per copiare tutte le righe e le colonne oppure un subset dei dati in un nuovo <xref:System.Data.DataTable>oggetto. Il metodo <xref:System.Data.DataView.ToTable%2A> fornisce gli overload per:  
+Una volta recuperati i dati da un'origine dati e compilato un tipo <xref:System.Data.DataTable>, è possibile ordinare, filtrare o limitare i dati restituiti senza doverli recuperare nuovamente. Questo è reso possibile dalla classe <xref:System.Data.DataView>. Inoltre, se è necessario creare <xref:System.Data.DataTable> un <xref:System.Data.DataView>nuovo da <xref:System.Data.DataView.ToTable%2A> , è possibile utilizzare il metodo per copiare tutte <xref:System.Data.DataTable>le righe e le colonne o un sottoinsieme dei dati in un nuovo oggetto . Il metodo <xref:System.Data.DataView.ToTable%2A> fornisce gli overload per:  
   
 - Creare un tipo <xref:System.Data.DataTable> contenente colonne che rappresentano un subset delle colonne del tipo <xref:System.Data.DataView>.  
   
-- Creare un <xref:System.Data.DataTable> oggetto che include solo righe distinte <xref:System.Data.DataView>dall'oggetto, in modo analogo alla parola chiave DISTINCT in Transact-SQL.  
+- Creare <xref:System.Data.DataTable> un oggetto che includa solo righe distinte dalla <xref:System.Data.DataView>parola chiave DISTINCT in Transact-SQLTransact-SQL .  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio di applicazione console seguente viene <xref:System.Data.DataTable> creato un oggetto contenente i dati della tabella **Person. Contact** del database di esempio **AdventureWorks** . Successivamente, nell'esempio viene creato un oggetto ordinato <xref:System.Data.DataView> e filtrato <xref:System.Data.DataTable>in base a. Dopo aver visualizzato il contenuto di <xref:System.Data.DataTable> <xref:System.Data.DataView>e, nell'esempio viene creato un nuovo <xref:System.Data.DataTable> oggetto dall' <xref:System.Data.DataView> oggetto chiamando il <xref:System.Data.DataView.ToTable%2A> metodo, selezionando solo un subset delle colonne disponibili. Infine, viene visualizzato il contenuto del nuovo tipo <xref:System.Data.DataTable>.  
+ Nell'esempio di applicazione <xref:System.Data.DataTable> console seguente viene creato un oggetto che contiene i dati della tabella **Person.Contact** nel database di esempio **AdventureWorks.** Successivamente, nell'esempio viene creato <xref:System.Data.DataView> un <xref:System.Data.DataTable>oggetto ordinato e filtrato in base al file . Dopo aver visualizzato il <xref:System.Data.DataTable> contenuto <xref:System.Data.DataView>di e , <xref:System.Data.DataTable> nell'esempio viene creata una nuova da <xref:System.Data.DataView> chiamando il <xref:System.Data.DataView.ToTable%2A> metodo , selezionando solo un sottoinsieme delle colonne disponibili. Infine, viene visualizzato il contenuto del nuovo tipo <xref:System.Data.DataTable>.  
   
 ```vb  
 Private Sub DemonstrateDataView()  
@@ -114,7 +114,7 @@ private static void DemonstrateDataView()
 // connectionString is assumed to be a valid connection string.  
 SqlDataAdapter adapter = new SqlDataAdapter(  
     "SELECT FirstName, LastName, EmailAddress " +  
-    "FROM Person.Contact WHERE FirstName LIKE 'Mich%'",   
+    "FROM Person.Contact WHERE FirstName LIKE 'Mich%'",
        GetConnectionString());  
 DataTable table = new DataTable();  
   

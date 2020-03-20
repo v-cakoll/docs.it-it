@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Variare le componenti cromatiche'
+title: 'Procedura: variare le componenti cromatiche'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - colors [Windows Forms], transforming with color matrices
 - colors [Windows Forms], shearing
 ms.assetid: 0a424171-5b8b-45c4-afef-e9720a6c3e22
-ms.openlocfilehash: b390caf644b86de0001387b2c3f41503fd34759a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 825e5a90ebb0d9df3b894ce7bd353e917b676939
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593205"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142394"
 ---
-# <a name="how-to-shear-colors"></a>Procedura: Variare le componenti cromatiche
-Inclinazione aumenta o diminuisce di un componente di colore in modo proporzionale a un altro componente di colore. Si consideri ad esempio la trasformazione in cui il componente rossa viene incrementato della metà di quella del valore del componente blu. In una trasformazione di questo tipo, il colore (0,2, 0.5, 1) diventerebbe (0,7, 0.5, 1). Il nuovo componente rossa è la 0.2 + (1/2)(1) = 0,7.  
+# <a name="how-to-shear-colors"></a>Procedura: variare le componenti cromatiche
+La tosatura aumenta o diminuisce una componente di colore di una quantità proporzionale a un'altra componente di colore. Si consideri, ad esempio, la trasformazione in cui il componente rosso viene aumentato della metà del valore del componente blu. In tale trasformazione, il colore (0.2, 0.5, 1) diventerebbe (0.7, 0.5, 1). Il nuovo componente rosso è 0,2 ( (1/2)(1) - 0,7.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente si costruisce un <xref:System.Drawing.Image> oggetto Colorbars4 nel file. Il codice applica quindi la trasformazione di inclinazione descritta nel paragrafo precedente per ogni pixel nell'immagine.  
+ Nell'esempio seguente <xref:System.Drawing.Image> viene creato un oggetto dal file ColorBars4.bmp. Il codice applica quindi la trasformazione di taglio descritta nel paragrafo precedente a ogni pixel dell'immagine.  
   
- Nella figura seguente mostra l'immagine originale a sinistra e l'immagine tagliata a destra: 
+ La figura seguente mostra l'immagine originale a sinistra e l'immagine tosata a destra:
   
- ![Due dei quadrati con strisce colorato side-by-side che illustra l'immagine originale e l'immagine tagliata.](./media/how-to-shear-colors/original-image-sheared-image.png)  
+ ![Due quadrati con strisce colorate affiancate che illustrano l'immagine originale e l'immagine tranciata.](./media/how-to-shear-colors/original-image-sheared-image.png)  
   
- La tabella seguente elenca i vettori di colore per le quattro barre prima e dopo la trasformazione di inclinazione.  
+ Nella tabella seguente sono elencati i vettori di colore per le quattro barre prima e dopo la trasformazione di taglio.  
   
-|Originale|Inclinato|  
+|Originale|Tosato|  
 |--------------|-------------|  
 |(0, 0, 1, 1)|(0.5, 0, 1, 1)|  
 |(0.5, 1, 0.5, 1)|(0.75, 1, 0.5, 1)|  
@@ -38,7 +38,7 @@ Inclinazione aumenta o diminuisce di un componente di colore in modo proporziona
  [!code-vb[System.Drawing.Misc3#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#9)]  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, ovvero un parametro del <xref:System.Windows.Forms.Control.Paint> gestore dell'evento. Sostituire `ColorBars.bmp` con un nome di immagine e un percorso valido nel sistema.  
+ L'esempio precedente è progettato per l'utilizzo con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, che è un parametro del <xref:System.Windows.Forms.Control.Paint> gestore eventi. Sostituire `ColorBars.bmp` con un nome di immagine e un percorso validi nel sistema.  
   
 ## <a name="see-also"></a>Vedere anche
 

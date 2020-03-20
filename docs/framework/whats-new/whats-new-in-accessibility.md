@@ -7,12 +7,12 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: 6f17cb0fb6e5b0457af745ea0d089f3e51d4706c
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 4dbc2024aa2e956b23030ae6eab987e65e006d12
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938152"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79400183"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Nuove funzionalità di accessibilità in .NET Framework
 
@@ -20,7 +20,7 @@ Uno degli obiettivi di .NET Framework è rendere le applicazioni più accessibil
 
 ## <a name="accessibility-switches"></a>Opzioni di accessibilità
 
-È possibile configurare l'app per acconsentire esplicitamente alle funzionalità di accessibilità se l'app è destinata a .NET Framework 4.7 o a una versione precedente, ma viene eseguita in .NET Framework 4.7.1 o versione successiva. È anche possibile configurare l'app per usare le funzionalità legacy (e rinunciare alle funzionalità di accessibilità) se l'app è destinata a .NET Framework 4.7.1 o versioni successive. Ogni versione di .NET Framework che include funzionalità di accessibilità ha un'opzione di accessibilità specifica per la versione, che è possibile aggiungere all'elemento [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) nella sezione [`<runtime>`](../configure-apps/file-schema/runtime/index.md) del file di configurazione dell'applicazione. Le opzioni supportate sono le seguenti:
+È possibile configurare l'app per acconsentire esplicitamente alle funzionalità di accessibilità se l'app è destinata a .NET Framework 4.7 o a una versione precedente, ma viene eseguita in .NET Framework 4.7.1 o versione successiva. È anche possibile configurare l'app per usare le funzionalità legacy (e rinunciare alle funzionalità di accessibilità) se l'app è destinata a .NET Framework 4.7.1 o versioni successive. Ogni versione di .NET Framework che include le funzionalità di accessibilità dispone [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) di [`<runtime>`](../configure-apps/file-schema/runtime/index.md) un'opzione di accessibilità specifica della versione, che viene aggiunta all'elemento nella sezione del file di configurazione dell'applicazione. Le opzioni supportate sono le seguenti:
 
 |Versione|Opzione|
 |---|---|
@@ -30,7 +30,7 @@ Uno degli obiettivi di .NET Framework è rendere le applicazioni più accessibil
 
 ### <a name="taking-advantage-of-accessibility-enhancements"></a>Sfruttare i vantaggi dei miglioramenti all'accessibilità
 
-Le nuove funzionalità di accessibilità sono abilitate per impostazione predefinita per le applicazioni destinate a .NET Framework 4.7.1 o versioni successive. Inoltre, le applicazioni destinate a una versione precedente di .NET Framework ma eseguite in .NET Framework 4.7.1 o versioni successive possono rifiutare esplicitamente comportamenti di accessibilità legacy (potendo così sfruttare i miglioramenti dell'accessibilità) aggiungendo opzioni all'elemento [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) nella sezione [`<runtime>`](../configure-apps/file-schema/runtime/index.md) del file di configurazione dell'applicazione e impostandone il valore su `false`. Di seguito viene illustrato come acconsentire esplicitamente ai miglioramenti apportati all'accessibilità introdotti in .NET Framework 4.7.1:
+Le nuove funzionalità di accessibilità sono abilitate per impostazione predefinita per le applicazioni destinate a .NET Framework 4.7.1 o versioni successive. Inoltre, le applicazioni destinate a una versione precedente di .NET Framework ma in esecuzione su .NET Framework 4.7.1 o versioni successive [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) possono rifiutare esplicitamente i comportamenti di accessibilità legacy (e quindi sfruttare i miglioramenti dell'accessibilità) aggiungendo opzioni all'elemento [`<runtime>`](../configure-apps/file-schema/runtime/index.md) nella sezione del file di configurazione dell'applicazione e impostandone il valore su `false`. Di seguito viene illustrato come acconsentire esplicitamente ai miglioramenti apportati all'accessibilità introdotti in .NET Framework 4.7.1:
 
 ```xml
 <runtime>
@@ -39,7 +39,7 @@ Le nuove funzionalità di accessibilità sono abilitate per impostazione predefi
 </runtime>
 ```
 
-Se si sceglie di acconsentire esplicitamente alle funzionalità di accessibilità in una versione successiva di .NET Framework, è necessario anche acconsentire esplicitamente alle funzionalità di versioni precedenti di .NET Framework. La configurazione dell'app per sfruttare i miglioramenti all'accessibilità in .NET Framework 4.7.1 e 4.7.2 richiede l'elemento [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) seguente:
+Se si sceglie di acconsentire esplicitamente alle funzionalità di accessibilità in una versione successiva di .NET Framework, è necessario anche acconsentire esplicitamente alle funzionalità di versioni precedenti di .NET Framework. La configurazione dell'app per sfruttare i miglioramenti dell'accessibilità in .NET Framework 4.7.1 e 4.7.2 richiede l'elemento seguente: [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)
 
 ```xml
 <runtime>
@@ -48,7 +48,7 @@ Se si sceglie di acconsentire esplicitamente alle funzionalità di accessibilit�
 </runtime>
 ```
 
-La configurazione dell'app per sfruttare i miglioramenti all'accessibilità in .NET Framework 4.7.1, 4.7.2 e 4.8 richiede l'elemento [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) seguente:
+La configurazione dell'app per sfruttare i miglioramenti dell'accessibilità in .NET Framework 4.7.1, 4.7.2 e 4.8 richiede l'elemento seguente: [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)
 
 ```xml
 <runtime>
@@ -59,7 +59,7 @@ La configurazione dell'app per sfruttare i miglioramenti all'accessibilità in .
 
 ### <a name="restoring-legacy-behavior"></a>Ripristino del comportamento legacy
 
-Le applicazioni destinate alle versioni di .NET Framework a partire dalla 4.7.1 possono disabilitare le funzionalità di accessibilità aggiungendo opzioni all'elemento [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) nella sezione [`<runtime>`](../configure-apps/file-schema/runtime/index.md) del file di configurazione dell'applicazione e impostandone il valore su `true`. Ad esempio, la configurazione seguente rifiuta esplicitamente le funzionalità di accessibilità introdotte in .NET Framework 4.7.2:
+Le applicazioni destinate alle versioni di .NET Framework a partire dalla [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 4.7.1 possono disabilitare le funzionalità di accessibilità aggiungendo opzioni all'elemento nella [`<runtime>`](../configure-apps/file-schema/runtime/index.md) sezione del file di configurazione dell'applicazione e impostandone il valore su `true`. Ad esempio, la configurazione seguente rifiuta esplicitamente le funzionalità di accessibilità introdotte in .NET Framework 4.7.2:
 
 ```xml
 <runtime>
@@ -187,7 +187,7 @@ In .NET Framework 4.7.2, WPF ha aggiunto la possibilità di disegnare una selezi
 
 Per usare questa proprietà, è sufficiente aggiungerla al codice XAML e usare il pennello o l'associazione appropriata. La selezione testo risultante è simile alla seguente:
 
-![Screenshot dell'app in esecuzione con le parole Hello World selezionate.](./media/whats-new-in-accessibility/selectiontextbrush-property.png)
+![Screenshot dell'app in esecuzione con le parole Hello World selezionata.](./media/whats-new-in-accessibility/selectiontextbrush-property.png)
 
 È possibile usare insieme le proprietà `SelectionBrush` e `SelectionTextBrush` per generare qualsiasi combinazione di colore primo piano e colore di sfondo che si ritiene appropriata.
 
@@ -224,11 +224,11 @@ internal class AutoSuggestTextBoxAutomationPeer : TextBoxAutomationPeer
 }
 ```
 
-**Descrizioni comando nell'accesso da tastiera**
+**Descrizioni comandi per l'accesso da tastiera**
 
 In .NET Framework 4.7.2 e versioni precedenti le descrizioni comando vengono visualizzate solo quando l'utente posiziona il cursore del mouse su un controllo. In .NET Framework 4.8 le descrizioni comando vengono visualizzate anche con lo stato attivo della tastiera e tramite un tasto di scelta rapida.
 
-Per abilitare questa funzionalità, un'applicazione deve avere come destinazione .NET Framework 4,8 o acconsentire esplicitamente usando le opzioni di `Switch.UseLegacyAccessibilityFeatures.3` e `Switch.UseLegacyToolTipDisplay` [AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) . Di seguito è riportato un file di configurazione dell'applicazione di esempio:
+Per abilitare questa funzionalità, è necessario che l'applicazione sia destinata a .NET Framework 4.8 o venga abilitata esplicitamente tramite le opzioni  [AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)`Switch.UseLegacyAccessibilityFeatures.3` e `Switch.UseLegacyToolTipDisplay`. Di seguito è riportato un file di configurazione dell'applicazione di esempio:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -291,7 +291,7 @@ A partire da .NET Framework 4.8, WPF espone queste due proprietà per l'automazi
 
 Inoltre, gli elementi nelle istanze <xref:System.Windows.Controls.ItemsControl> specificano automaticamente un valore per queste proprietà senza ulteriori azioni da parte dello sviluppatore. Se <xref:System.Windows.Controls.ItemsControl> è raggruppato, la raccolta di gruppi è rappresentata come set e ogni gruppo viene conteggiato come set separato in cui ogni elemento all'interno del gruppo specifica la propria posizione all'interno del gruppo e le dimensioni del gruppo. La virtualizzazione non ha effetto sui valori automatici. Anche se un elemento non è realizzato, viene comunque conteggiato nelle dimensioni totali del set e influisce sulla posizione dei relativi elementi di pari livello nel set.
 
-I valori automatici vengono forniti solo se l'applicazione è destinata a .NET Framework 4.8. Per le applicazioni destinate a una versione precedente del .NET Framework, è possibile impostare l' [opzione `Switch.UseLegacyAccessibilityFeatures.3` AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md), come illustrato nel file app. config seguente:
+I valori automatici vengono forniti solo se l'applicazione è destinata a .NET Framework 4.8. Per le applicazioni destinate a una versione precedente di .NET Framework, è possibile impostare l' [opzione AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)`Switch.UseLegacyAccessibilityFeatures.3`, come illustrato nel file App.config seguente:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -317,7 +317,7 @@ La finestra di progettazione dei flussi di lavoro include le modifiche seguenti 
 
 - Gli utenti che usano i temi a contrasto elevato noteranno miglioramenti nella visibilità di Progettazione flussi di lavoro e nei relativi controlli, ad esempio rapporti di contrasto più definiti tra gli elementi e caselle di selezione più evidenti per gli elementi con lo stato attivo.
 
-Se l'applicazione è destinata a .NET Framework 4.7.2 o a una versione precedente, è possibile acconsentire esplicitamente a queste modifiche impostando l' [opzione `Switch.UseLegacyAccessibilityFeatures.3` AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) su `false` nel file di configurazione dell'applicazione. Per altre informazioni, vedere la sezione [Sfruttare i vantaggi dei miglioramenti all'accessibilità](#taking-advantage-of-accessibility-enhancements) in questo articolo.
+Se l'applicazione è destinata a .NET Framework 4.7.2 o versione precedente, è possibile scegliere esplicitamente queste modifiche impostando l' [opzione AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)`Switch.UseLegacyAccessibilityFeatures.3` su `false` nel file di configurazione dell'applicazione. Per altre informazioni, vedere la sezione [Sfruttare i vantaggi dei miglioramenti all'accessibilità](#taking-advantage-of-accessibility-enhancements) in questo articolo.
 
 ## <a name="whats-new-in-accessibility-in-net-framework-472"></a>Nuove funzionalità di accessibilità in .NET Framework 4.7.2
 
@@ -435,7 +435,7 @@ Per supportare le aree dinamiche sono state aggiunte le API seguenti a WPF:
 
 - I campi <xref:System.Windows.Automation.AutomationElementIdentifiers.LiveSettingProperty?displayProperty=nameWithType> e <xref:System.Windows.Automation.AutomationElementIdentifiers.LiveRegionChangedEvent?displayProperty=nameWithType> che identificano la proprietà **LiveSetting** e l'evento **LiveRegionChanged**. Questi campi possono essere impostati tramite XAML.
 
-- La proprietà associata **AutomationProperties.LiveSetting** che segnala all'utilità per la lettura dello schermo l'importanza della modifica dell'interfaccia utente per l'utente.
+- La proprietà associata **AutomationProperties.LiveSetting**, che segnala all'utilità per la lettura dello schermo l'importanza della modifica dell'interfaccia utente per l'utente.
 
 - La proprietà <xref:System.Windows.Automation.AutomationProperties.LiveSettingProperty?displayProperty=nameWithType>, che identifica la proprietà associata **AutomationProperties.LiveSetting**.
 
@@ -472,85 +472,85 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 **Contrasto elevato**
 
-A partire da .NET Framework 4.7.1, sono stati apportati miglioramenti relativi al contrasto elevato per vari controlli WPF, che sono ora visibili quando viene impostato il tema <xref:System.Windows.SystemParameters.HighContrast%2A>. Sono inclusi:
+A partire da .NET Framework 4.7.1, sono stati apportati miglioramenti relativi al contrasto elevato per vari controlli WPF, che sono ora visibili quando viene impostato il tema <xref:System.Windows.SystemParameters.HighContrast%2A>. incluse le seguenti:
 
 - Controllo <xref:System.Windows.Controls.Expander>
 
   L'oggetto visivo per lo stato attivo per il controllo <xref:System.Windows.Controls.Expander> è ora visibile. Anche gli oggetti visivi della tastiera per i controlli <xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.ListBox> e <xref:System.Windows.Controls.RadioButton> sono visibili. Ad esempio:
 
-  Prima: 
+  Prima di:
 
-  ![Screenshot del controllo Expander con lo stato attivo e nessun oggetto visivo dello stato attivo.](./media/whats-new-in-accessibility/expander-control-before.png)
+  ![Screenshot del controllo expander con lo stato attivo e nessun oggetto visivo dello stato attivo.](./media/whats-new-in-accessibility/expander-control-before.png)
 
-  Dopo: 
+  Dopo:
 
-  ![Screenshot del controllo Expander con lo stato attivo che mostra una linea tratteggiata intorno al testo del controllo.](./media/whats-new-in-accessibility/expander-control-after.png)
+  ![Screenshot del controllo expander con lo stato attivo che mostra una linea tratteggiata intorno al testo del controllo.](./media/whats-new-in-accessibility/expander-control-after.png)
 
 - Controlli <xref:System.Windows.Controls.CheckBox> e <xref:System.Windows.Controls.RadioButton>
 
   Il testo nei controlli <xref:System.Windows.Controls.CheckBox> e <xref:System.Windows.Controls.RadioButton> è ora più semplice da vedere quando viene selezionato nei temi a contrasto elevato. Ad esempio:
 
-  Prima: 
+  Prima di:
 
-  ![Screenshot dei pulsanti di opzione e controllo con visibilità del testo insufficiente sui temi a contrasto elevato.](./media/whats-new-in-accessibility/high-contrast-radio-button-before.png)
+  ![Screenshot della radio e pulsanti di controllo con scarsa visibilità del testo sui temi ad alto contrasto.](./media/whats-new-in-accessibility/high-contrast-radio-button-before.png)
 
-  Dopo: 
+  Dopo:
 
-  ![Screenshot dei pulsanti di opzione e controllo con visibilità del testo migliore sui temi a contrasto elevato.](./media/whats-new-in-accessibility/high-contrast-radio-button-after.png)
+  ![Screenshot della radio e pulsanti di controllo con una migliore visibilità del testo sui temi ad alto contrasto.](./media/whats-new-in-accessibility/high-contrast-radio-button-after.png)
 
 - Controllo <xref:System.Windows.Controls.ComboBox>
 
   A partire da .NET Framework 4.7.1, il bordo di un controllo <xref:System.Windows.Controls.ComboBox> disabilitato ha lo stesso colore del testo disabilitato. Ad esempio:
 
-  Prima: 
+  Prima di:
 
-  ![Screenshot di un controllo ComboBox disabilitato con il testo del bordo e del controllo in colori diversi.](./media/whats-new-in-accessibility/combo-disabled-before.png)
+  ![Screenshot di un controllo ComboBox disabilitato con bordo e testo del controllo in colori diversi.](./media/whats-new-in-accessibility/combo-disabled-before.png)
 
-  Dopo:   
+  Dopo:
 
-  ![Screenshot di un controllo ComboBox disabilitato con bordo con lo stesso colore del testo del controllo.](./media/whats-new-in-accessibility/combo-disabled-after.png)
+  ![Screenshot di un controllo ComboBox disabilitato con bordo dello stesso colore del testo del controllo.](./media/whats-new-in-accessibility/combo-disabled-after.png)
 
   Inoltre, i pulsanti con lo stato attivo e disabilitati usano il colore del tema corretto.
 
-  Prima:
+  Prima di:
 
-  ![Screenshot di un pulsante nero con testo grigio che afferma lo stato attivo.](./media/whats-new-in-accessibility/button-theme-colors-before.png) 
+  ![Screenshot di un pulsante nero con testo grigio che indica "Focus Me".](./media/whats-new-in-accessibility/button-theme-colors-before.png)
 
-  Dopo: 
+  Dopo:
 
-  ![Screenshot di un pulsante blu con testo nero che indica lo stato attivo.](./media/whats-new-in-accessibility/button-theme-colors-after.png) 
+  ![Screenshot di un pulsante blu con testo nero che indica "Focus Me".](./media/whats-new-in-accessibility/button-theme-colors-after.png)
 
   Infine, in .NET Framework 4.7 e versioni precedenti, l'impostazione dello stile di un controllo <xref:System.Windows.Controls.ComboBox> su `Toolbar.ComboBoxStyleKey` rende invisibile la freccia a discesa. Questo problema è stato risolto a partire da .NET Framework 4.7.1. Ad esempio:
 
-  Prima: 
+  Prima di:
 
-  ![Screenshot di un controllo ComboBox con una freccia a discesa invisibile.](./media/whats-new-in-accessibility/combo-box-style-key-before.png) 
+  ![Screenshot di un controllo ComboBox con una freccia a discesa invisibile.](./media/whats-new-in-accessibility/combo-box-style-key-before.png)
 
-  Dopo: 
+  Dopo:
 
-  ![Screenshot di un controllo ComBoxBox che visualizza la freccia a discesa.](./media/whats-new-in-accessibility/combo-box-style-key-after.png) 
+  ![Screenshot di un controllo ComBoxBox che visualizza la freccia a discesa.](./media/whats-new-in-accessibility/combo-box-style-key-after.png)
 
 - Controllo <xref:System.Windows.Controls.DataGrid>
 
   A partire da .NET Framework 4.7.1, la freccia dell'indicatore di ordinamento nei controlli <xref:System.Windows.Controls.DataGrid> usa ora i colori del tema corretti. Ad esempio:
 
-  Prima: 
+  Prima di:
 
-  ![Screenshot della freccia dell'indicatore di ordinamento prima dei miglioramenti.](./media/whats-new-in-accessibility/sort-indicator-before.png) 
+  ![Screenshot della freccia dell'indicatore di ordinamento prima dei miglioramenti.](./media/whats-new-in-accessibility/sort-indicator-before.png)
 
-  Dopo:   
+  Dopo:
 
-  ![Screenshot della freccia dell'indicatore di ordinamento dopo i miglioramenti.](./media/whats-new-in-accessibility/sort-indicator-after.png) 
+  ![Screenshot della freccia dell'indicatore di ordinamento dopo i miglioramenti.](./media/whats-new-in-accessibility/sort-indicator-after.png)
 
   Inoltre, in .NET Framework 4.7 e versioni precedenti, per lo stile di collegamento predefinito viene usato un colore non corretto al passaggio del mouse in modalità a contrasto elevato. Questo problema è stato risolto a partire da .NET Framework 4.7.1. Analogamente, le colonne della casella di controllo per i controlli <xref:System.Windows.Controls.DataGrid> usano i colori previsti per il riscontro dello stato attivo della tastiera a partire da .NET Framework 4.7.1.
 
-  Prima: 
+  Prima di:
 
-  ![Screenshot di un collegamento che dice clic su me. in rosso.](./media/whats-new-in-accessibility/default-link-style-before.png) 
+  ![Screenshot di un collegamento che dice Clicca mi! in rosso.](./media/whats-new-in-accessibility/default-link-style-before.png)
 
-  Dopo:    
+  Dopo:
 
-  ![Screenshot di un collegamento che dice clic su me. in giallo.](./media/whats-new-in-accessibility/default-link-style-after.png) 
+  ![Screenshot di un collegamento che dice Clicca mi! in giallo.](./media/whats-new-in-accessibility/default-link-style-after.png)
 
 Per altre informazioni sui miglioramenti per l'accessibilità di WPF in .NET Framework 4.7.1, vedere [Miglioramenti di accessibilità in WPF](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf).
 
@@ -579,13 +579,13 @@ Alcuni esempi di modifiche per il contrasto elevato includono:
 
 - Il testo disabilitato è più facile da leggere. Ad esempio:
 
-  Prima:
+  Prima di:
 
-  ![Screenshot di un'app che usa diversi controlli eseguiti in modalità a contrasto elevato prima dei miglioramenti dell'accessibilità.](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-before.png) 
+  ![Screenshot di un'app che usa diversi controlli in esecuzione in modalità a contrasto elevato prima dei miglioramenti dell'accessibilità.](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-before.png)
 
   Dopo:
 
-  ![Screenshot di un'app che usa diversi controlli eseguiti in modalità a contrasto elevato dopo i miglioramenti dell'accessibilità.](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-after.png) 
+  ![Screenshot di un'app che usa diversi controlli in esecuzione in modalità a contrasto elevato dopo i miglioramenti dell'accessibilità.](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-after.png)
 
 - Miglioramenti per il contrasto elevato nella finestra di dialogo di eccezione del thread.
 
@@ -626,13 +626,13 @@ A partire da .NET Framework 4.7.1, Windows Forms include:
 
 ### <a name="aspnet-web-controls"></a>Controlli Web ASP.NET
 
-A partire da .NET Framework 4.7.1 e Visual Studio 2017 versione 15,3, ASP.NET migliora il funzionamento dei controlli Web ASP.NET con la tecnologia di accessibilità in Visual Studio. Le modifiche includono quanto segue:
+A partire da .NET Framework 4.7.1 e Visual Studio 2017 versione 15.3, ASP.NET migliora il funzionamento dei controlli Web ASP.NET con la tecnologia di accessibilità in Visual Studio. Le modifiche includono quanto segue:
 
-- Modifiche per implementare criteri di accessibilità dell'interfaccia utente mancanti nei controlli, come la finestra di dialogo **Aggiungi campo** nella procedura guidata **Visualizzazione dettagli** o la finestra di dialogo **Configura ListView** nella procedura guidata **ListView**.
+- Modifiche per implementare modelli di accessibilità dell'interfaccia utente mancanti nei controlli, ad esempio la finestra di dialogo **Aggiungi campo** nella **visualizzazione Dettagli** o la finestra di dialogo Configura **ListView** della procedura guidata **ListView.**
 
-- Modifiche per migliorare la visualizzazione nella modalità a contrasto elevato, ad esempio l'**Editor campi del pager di dati**.
+- Modifiche per migliorare la visualizzazione in modalità Contrasto elevato, ad esempio **l'Editor campi del pager**di dati .
 
-- Modifiche per migliorare la navigazione tramite tastiera per controlli, come la finestra di dialogo **Campi** nella procedura guidata **Modifica campi del pager** del controllo DataPager, la finestra di dialogo **Configura ObjectContext** o la finestra di dialogo **Configura selezione dati** della procedura guidata **Configura origine dati**.
+- Modifiche per migliorare le esperienze di spostamento tramite tastiera per i controlli, ad esempio la finestra di dialogo **Campi** nella procedura guidata Modifica campi del **pager** del controllo DataPager, della finestra di dialogo **Configura ObjectContext** o della finestra di dialogo **Configura selezione dati** della procedura guidata Configura **origine dati.**
 
 <a name="tools471"></a>
 

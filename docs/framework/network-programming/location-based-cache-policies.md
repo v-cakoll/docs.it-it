@@ -16,10 +16,10 @@ helpviewer_keywords:
 - Refresh policy
 ms.assetid: e41d7f1a-0a6a-4dee-97d1-c6a8b6a07fc2
 ms.openlocfilehash: e6896452fce89f69b40f1d03332355df72d93211
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047675"
 ---
 # <a name="location-based-cache-policies"></a>criteri di cache basati sulla posizione
@@ -49,7 +49,7 @@ I criteri di cache basati sulla posizione definiscono l'aggiornamento delle voci
 ## <a name="see-also"></a>Vedere anche
 
 - [Gestione della cache per le applicazioni di rete](cache-management-for-network-applications.md)
-- [Criteri di cache](cache-policy.md)
-- [Criteri di cache basati sull'ora](time-based-cache-policies.md)
+- [Criteri cache](cache-policy.md)
+- [Time-Based Cache Policies](time-based-cache-policies.md)
 - [Configurazione della memorizzazione nella cache per applicazioni di rete](configuring-caching-in-network-applications.md)
-- [Elemento \<requestCaching> (impostazioni di rete)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [\<elemento> requestCaching (impostazioni di rete)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

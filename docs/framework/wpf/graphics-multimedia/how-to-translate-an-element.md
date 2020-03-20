@@ -1,29 +1,29 @@
 ---
-title: 'Procedura: Convertire un elemento'
+title: 'Procedura: convertire un elemento'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], translations
 ms.assetid: 461c8273-15df-42f6-8672-89ba22887cc0
-ms.openlocfilehash: 9c1b873a89820e85efb99789f483c4832fb23cf7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba6bda09a4ee189cdd1a32eed8f65b32d1a9abe4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051442"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187311"
 ---
-# <a name="how-to-translate-an-element"></a>Procedura: Convertire un elemento
-In questo esempio viene illustrato come traslare (spostare) un elemento utilizzando un <xref:System.Windows.Media.TranslateTransform>.  
+# <a name="how-to-translate-an-element"></a>Procedura: convertire un elemento
+In questo esempio viene illustrato come convertire <xref:System.Windows.Media.TranslateTransform>(spostare) un elemento utilizzando un oggetto .  
   
- Il <xref:System.Windows.Media.TranslateTransform> classe è particolarmente utile per spostare elementi all'interno di pannelli che non supportano il posizionamento assoluto. Ad esempio, applicando una <xref:System.Windows.Media.TranslateTransform> per il <xref:System.Windows.UIElement.RenderTransform%2A> proprietà di un elemento, è possibile spostare un elemento all'interno di un <xref:System.Windows.Controls.StackPanel> o <xref:System.Windows.Controls.DockPanel>.  
+ La <xref:System.Windows.Media.TranslateTransform> classe è particolarmente utile per spostare gli elementi all'interno di pannelli che non supportano il posizionamento assoluto. Ad esempio, applicando <xref:System.Windows.Media.TranslateTransform> a <xref:System.Windows.UIElement.RenderTransform%2A> alla proprietà di un elemento, è <xref:System.Windows.Controls.StackPanel> <xref:System.Windows.Controls.DockPanel>possibile spostare un elemento all'interno di un oggetto o .  
   
- Usare la <xref:System.Windows.Media.TranslateTransform.X%2A> proprietà del <xref:System.Windows.Media.TranslateTransform> per specificare la quantità, in pixel, per spostare l'elemento lungo l'asse x. Usare il <xref:System.Windows.Media.TranslateTransform.Y%2A> proprietà per specificare la quantità, in pixel, per spostare l'elemento lungo l'asse y. Infine, applicare il <xref:System.Windows.Media.TranslateTransform> per il <xref:System.Windows.UIElement.RenderTransform%2A> proprietà dell'elemento.  
+ Utilizzare <xref:System.Windows.Media.TranslateTransform.X%2A> la proprietà <xref:System.Windows.Media.TranslateTransform> dell'oggetto per specificare la quantità, in pixel, per spostare l'elemento lungo l'asse x. Utilizzare <xref:System.Windows.Media.TranslateTransform.Y%2A> la proprietà per specificare la quantità, in pixel, per spostare l'elemento lungo l'asse y. Infine, applicare <xref:System.Windows.Media.TranslateTransform> l'oggetto alla <xref:System.Windows.UIElement.RenderTransform%2A> proprietà dell'elemento.  
   
- L'esempio seguente usa un <xref:System.Windows.Media.TranslateTransform> per spostare un pixel elemento 50 a destra e 50 pixel in basso.  
+ L'esempio seguente <xref:System.Windows.Media.TranslateTransform> usa un oggetto per spostare un elemento di 50 pixel a destra e di 50 pixel verso il basso.  
   
 ## <a name="example"></a>Esempio  
  [!code-xaml[transformsSample#53](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/TranslateTransformExample.xaml#53)]  
   
- Per l'esempio completo, vedere [2-D Transforms Sample (Esempio di trasformazioni 2D)](https://go.microsoft.com/fwlink/?LinkID=158252).  
+ Per l'esempio completo, vedere [2-D Transforms Sample (Esempio di trasformazioni 2D)](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms).  
   
 ## <a name="see-also"></a>Vedere anche
 

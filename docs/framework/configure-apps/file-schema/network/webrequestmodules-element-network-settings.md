@@ -8,40 +8,40 @@ helpviewer_keywords:
 - webRequestModules element
 - <webRequestModules> element
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
-ms.openlocfilehash: e119d9ce1f8bb6f07f8050612550db459a2f065c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 7f2805283f89e6165d336b3e593d34054e02115d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697469"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154543"
 ---
-# <a name="webrequestmodules-element-network-settings"></a>\<elemento > webRequestModules (impostazioni di rete)
-Specifica i moduli da usare per richiedere informazioni dagli host di rete.  
+# <a name="webrequestmodules-element-network-settings"></a>\<Elemento webRequestModules> (impostazioni di rete)
+Specifica i moduli da utilizzare per richiedere informazioni agli host di rete.  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;\<webRequestModules >  
+[**\<>di configurazione**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<>system.net**](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;\<> webRequestModules  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-<webRequestModules>   
+<webRequestModules>
 </webRequestModules>  
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
- Le sezioni seguenti descrivono gli attributi, gli elementi figlio e gli elementi padre.  
+ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### <a name="attributes"></a>Attributi  
- Nessuno.  
+### <a name="attributes"></a>Attributes  
+ No.  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[add](add-element-for-webrequestmodules-network-settings.md)|Aggiunge un modulo di richiesta Web personalizzato all'applicazione.|  
-|[clear](clear-element-for-webrequestmodules-network-settings.md)|Rimuove tutti i moduli di richiesta Web registrati dall'applicazione.|  
-|[remove](remove-element-for-webrequestmodules-network-settings.md)|Rimuove un modulo di richiesta Web personalizzato dall'applicazione.|  
+|[aggiungi](add-element-for-webrequestmodules-network-settings.md)|Aggiunge un modulo di richiesta Web personalizzato all'applicazione.|  
+|[Chiaro](clear-element-for-webrequestmodules-network-settings.md)|Rimuove tutti i moduli di richiesta Web registrati dall'applicazione.|  
+|[rimozione](remove-element-for-webrequestmodules-network-settings.md)|Rimuove un modulo di richiesta Web personalizzato dall'applicazione.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -50,9 +50,9 @@ Specifica i moduli da usare per richiedere informazioni dagli host di rete.
 |[system.net](system-net-element-network-settings.md)|Contiene le impostazioni di rete che specificano la modalità di connessione alla rete di .NET Framework.|  
   
 ## <a name="remarks"></a>Osservazioni  
- Con l'elemento `webRequestModules` vengono registrati i discendenti della classe <xref:System.Net.WebRequest> per gestire le richieste di informazioni inviate agli host di rete. I moduli di richiesta Web devono implementare l'interfaccia <xref:System.Net.IWebRequestCreate>.  
+ Con l'elemento `webRequestModules` vengono registrati i discendenti della classe <xref:System.Net.WebRequest> per gestire le richieste di informazioni inviate agli host di rete. I moduli di <xref:System.Net.IWebRequestCreate> richiesta Web devono implementare l'interfaccia.  
   
- Il .NET Framework include moduli di richiesta Web per gli URI che iniziano con `http://`, `https://`e `file://`. È possibile eseguire l'override dei moduli predefiniti solo registrando un modulo personalizzato nel file di configurazione.  
+ .NET Framework include moduli di richiesta Web `http://` `https://`per `file://`URI che iniziano con , e . È possibile sostituire i moduli predefiniti solo registrando un modulo personalizzato nel file di configurazione.  
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  

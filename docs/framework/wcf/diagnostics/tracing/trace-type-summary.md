@@ -2,28 +2,28 @@
 title: Riepilogo dei tipi di traccia
 ms.date: 03/30/2017
 ms.assetid: e639410b-d1d1-479c-b78e-a4701d4e4085
-ms.openlocfilehash: 8f54f71ef63338708a29fac5557c7c7e8f257f58
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 8ed6dceb19caa52f928f285064c60337e3f15a87
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856007"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78674831"
 ---
 # <a name="trace-type-summary"></a>Riepilogo dei tipi di traccia
-I [livelli di origine](https://go.microsoft.com/fwlink/?LinkID=94943) definiscono diversi livelli di traccia: Critical, Error, Warning, Information e Verbose, oltre a fornire una descrizione del `ActivityTracing` flag, che attiva o disattiva l'output degli eventi relativi al limite della traccia e al trasferimento di attività.  
+[Livelli di origine](xref:System.Diagnostics.SourceLevels) definisce vari livelli di traccia: critico, errore, avviso, informazioni `ActivityTracing` e dettagliato, nonché una descrizione del flag, che attiva/disattiva l'output degli eventi di limite di traccia e di trasferimento dell'attività.  
   
- È anche possibile esaminare [TraceEventType](https://go.microsoft.com/fwlink/?LinkId=95169) per i tipi di traccia che possono essere emessi da <xref:System.Diagnostics>.  
+ È inoltre <xref:System.Diagnostics.TraceEventType> possibile esaminare i tipi di tracce <xref:System.Diagnostics>che possono essere emessi da .  
   
  Nella tabella seguente sono elencati quelli più importanti.  
   
-|Tipo di traccia|DESCRIZIONE|  
+|Tipo di traccia|Descrizione|  
 |----------------|-----------------|  
 |Critico|Errore irreversibile o arresto anomalo dell'applicazione.|  
 |Errore|Errore risolvibile.|  
 |Avviso|Messaggio informativo.|  
 |Informazioni|Problema non critico.|  
 |Dettagliato|Traccia di debug.|  
-|Start|Avvio di un'unità logica di elaborazione.|  
+|Inizia|Avvio di un'unità logica di elaborazione.|  
 |Sospendi|Sospensione di un'unità logica di elaborazione.|  
 |Riprendi|Ripresa di un'unità logica di elaborazione.|  
 |Arresto|Interruzione di un'unità logica di elaborazione.|  

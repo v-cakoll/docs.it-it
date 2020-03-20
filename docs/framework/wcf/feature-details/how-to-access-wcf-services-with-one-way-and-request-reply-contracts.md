@@ -1,16 +1,16 @@
 ---
-title: 'Procedura: Accedere ai servizi WCF con un contratto unidirezionale e i contratti Request / Reply'
+title: 'Procedura: accedere a servizi WCF con un contratto unidirezionale o request/reply'
 ms.date: 03/30/2017
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-ms.openlocfilehash: 119a63978f6c45aa940ff999249c654c7cf96d91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 533b97892b15c9034679efba6e4da5e72b56099b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855114"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185147"
 ---
-# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>Procedura: Accedere ai servizi WCF con un contratto unidirezionale e i contratti Request / Reply
-Le procedure seguenti descrivono come per accedere a un servizio Windows Communication Foundation (WCF) che definisce un contratto unidirezionale e un contratto request / reply e che non usa il modello di comunicazione duplex.  
+# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>Procedura: accedere a servizi WCF con un contratto unidirezionale o request/reply
+Le procedure seguenti descrivono come accedere a un servizio Windows Communication Foundation (WCF) che definisce un contratto unidirezionale e un contratto di richiesta-risposta e che non utilizza il modello di comunicazione duplex.  
   
 ### <a name="to-define-the-service"></a>Per definire il servizio  
   
@@ -109,7 +109,7 @@ Le procedure seguenti descrivono come per accedere a un servizio Windows Communi
   
 ### <a name="to-access-the-service"></a>Per accedere al servizio  
   
-1. Eseguire la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) usando l'indirizzo dell'endpoint di scambio dei metadati per creare la classe client per il servizio utilizzando la riga di comando seguente: `Svcutil http://localhost:8000/Service` Il [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) genera un set di interfacce e classi, come illustrato nell'esempio di codice seguente.  
+1. Eseguire lo [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) utilizzando l'indirizzo dell'endpoint di `Svcutil http://localhost:8000/Service` scambio dei metadati per creare la classe client per il servizio utilizzando la seguente riga di comando: [Lo strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) genera un insieme di interfacce e classi, come illustrato nel codice di esempio seguente.  
   
     ```csharp  
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]  
@@ -147,22 +147,22 @@ Le procedure seguenti descrivono come per accedere a un servizio Windows Communi
         {  
         }  
   
-        public OneWayCalculatorClient(string endpointConfigurationName) :   
+        public OneWayCalculatorClient(string endpointConfigurationName) :
                 base(endpointConfigurationName)  
         {  
         }  
   
-        public OneWayCalculatorClient(string endpointConfigurationName, string remoteAddress) :   
+        public OneWayCalculatorClient(string endpointConfigurationName, string remoteAddress) :
                 base(endpointConfigurationName, remoteAddress)  
         {  
         }  
   
-        public OneWayCalculatorClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) :   
+        public OneWayCalculatorClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) :
                 base(endpointConfigurationName, remoteAddress)  
         {  
         }  
   
-        public OneWayCalculatorClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) :   
+        public OneWayCalculatorClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) :
                 base(binding, remoteAddress)  
         {  
         }  
@@ -258,7 +258,7 @@ using System.ServiceModel.Description;
   
 namespace Microsoft.ServiceModel.Samples  
 {  
-    // Define a service contract.   
+    // Define a service contract.
     [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
     public interface IOneWayCalculator  
     {  
@@ -341,7 +341,7 @@ namespace Microsoft.ServiceModel.Samples
             }  
         }  
     }  
-} 
+}
 ```
 
 ```csharp

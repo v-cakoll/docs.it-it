@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-ms.openlocfilehash: 2d9df4d479605c0a2514fe30a9150ab7bcfe904e
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 97ceef3377a67fc621a097843abade9c61c29ca1
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251161"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78848769"
 ---
 # <a name="compiled-queries--linq-to-entities"></a>Query compilate (LINQ to Entities)
 Quando si usa un'applicazione che esegue molte volte query strutturalmente simili in Entity Framework, è spesso possibile migliorare le prestazioni compilando la query una volta ed eseguendola più volte con parametri diversi. Un'applicazione potrebbe ad esempio essere usata per recuperare tutti i clienti di una determinata città, specificata in fase di runtime dall'utente in un modulo. In LINQ to Entities è supportato l'uso di query compilate per questo scopo.  
   
  A partire da.NET Framework 4.5, le query LINQ vengono memorizzate nella cache automaticamente. Tuttavia, è comunque possibile usare le query LINQ compilate per ridurre il costo nelle esecuzioni successive e le query compilate possono essere più efficienti di quelle LINQ che vengono memorizzate nella cache automaticamente. Si noti che le query LINQ to Entities che applicano l'operatore `Enumerable.Contains` alle raccolte in memoria non vengono memorizzate automaticamente nella cache. Inoltre, la parametrizzazione delle raccolte in memoria nelle query LINQ compilate non è consentita.  
   
- La classe <xref:System.Data.Objects.CompiledQuery> consente di compilare e memorizzare nella cache le query da riusare. Dal punto di vista concettuale, questa classe contiene un metodo <xref:System.Data.Objects.CompiledQuery> di `Compile` con numerosi overload. Chiamare il metodo `Compile` per creare un nuovo delegato che rappresenti la query compilata. I metodi `Compile` forniti con un oggetto <xref:System.Data.Objects.ObjectContext> e i valori di parametro restituiscono un delegato che produce un risultato, ad esempio un'istanza di <xref:System.Linq.IQueryable%601>. La query viene compilata solo una volta durante la prima esecuzione. Le opzioni di merge impostate per la query durante la compilazione non possono essere modificate successivamente. Una volta compilata la query, è possibile fornire solo parametri di tipo primitivo ma non è possibile sostituire parti della query che modificherebbe il codice SQL generato. Per altre informazioni, vedere [Entity Framework opzioni di merge e query compilate](https://go.microsoft.com/fwlink/?LinkId=199591)  
+ La classe <xref:System.Data.Objects.CompiledQuery> consente di compilare e memorizzare nella cache le query da riusare. Dal punto di vista concettuale, questa classe contiene un metodo <xref:System.Data.Objects.CompiledQuery> di `Compile` con numerosi overload. Chiamare il metodo `Compile` per creare un nuovo delegato che rappresenti la query compilata. I metodi `Compile` forniti con un oggetto <xref:System.Data.Objects.ObjectContext> e i valori di parametro restituiscono un delegato che produce un risultato, ad esempio un'istanza di <xref:System.Linq.IQueryable%601>. La query viene compilata solo una volta durante la prima esecuzione. Le opzioni di merge impostate per la query durante la compilazione non possono essere modificate successivamente. Una volta compilata la query, è possibile fornire solo parametri di tipo primitivo ma non è possibile sostituire parti della query che modificherebbe il codice SQL generato. Per ulteriori informazioni, vedere Opzioni di unione di Entity Framework [e query compilate](https://docs.microsoft.com/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries).
   
- Il LINQ to Entities espressione di query che <xref:System.Data.Objects.CompiledQuery>il `Compile` metodo di compila è rappresentato da uno dei delegati <xref:System.Func%605>generici `Func` , ad esempio. L'espressione di query può incapsulare al massimo un parametro `ObjectContext`, un parametro restituito e 16 parametri di query. Se sono richiesti più di 16 parametri di query, è possibile creare una struttura le cui proprietà rappresentino tali parametri. È possibile quindi usare le proprietà sulla struttura nell'espressione di query dopo averle impostate.  
+ L'espressione di query LINQ <xref:System.Data.Objects.CompiledQuery>to `Compile` Entities compilata dal metodo `Func` 'è rappresentata da uno dei delegati generici, ad <xref:System.Func%605>esempio . L'espressione di query può incapsulare al massimo un parametro `ObjectContext`, un parametro restituito e 16 parametri di query. Se sono richiesti più di 16 parametri di query, è possibile creare una struttura le cui proprietà rappresentino tali parametri. È possibile quindi usare le proprietà sulla struttura nell'espressione di query dopo averle impostate.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene compilata e quindi richiamata una query che accetta un parametro di input <xref:System.Decimal> e restituisce una sequenza di ordini in cui il totale dovuto è maggiore o uguale a 200,00 dollari:  
@@ -40,7 +40,7 @@ Quando si usa un'applicazione che esegue molte volte query strutturalmente simil
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery3_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery3_mq)]  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene compilata e quindi richiamata una query che <xref:System.String> accetta un parametro di input e `Contact` quindi restituisce un oggetto il cui indirizzo di posta elettronica inizia con la stringa specificata:  
+ Nell'esempio seguente viene compilata e quindi richiamata una query che accetta un <xref:System.String> parametro di input e quindi restituisce un cui indirizzo di posta elettronica inizia con la stringa specificata:The following example compiles and then invokes a query that accepts a input parameter and then returns a `Contact` whose email address starts with the specified string:  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery4_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery4_mq)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery4_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery4_mq)]  
@@ -72,4 +72,4 @@ Quando si usa un'applicazione che esegue molte volte query strutturalmente simil
 
 - [ADO.NET Entity Framework](../index.md)
 - [LINQ to Entities](linq-to-entities.md)
-- [Opzioni di Unione Entity Framework e query compilate](https://go.microsoft.com/fwlink/?LinkId=199591)
+- [Opzioni di unione di Entity Framework e query compilate](https://docs.microsoft.com/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries)

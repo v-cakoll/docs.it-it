@@ -2,18 +2,18 @@
 title: Supporto di configurazione e metadati
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
-ms.openlocfilehash: 3f6d506d719cbb1b2ecc8bae223dfe73e7e2d1a9
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 0ec8c3286037e7adbe6f5efb73e846a30b9d48d3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425138"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185670"
 ---
 # <a name="configuration-and-metadata-support"></a>Supporto di configurazione e metadati
 In questo argomento viene illustrato come abilitare il supporto della configurazione e dei metadati per associazioni ed elementi di associazione.  
   
 ## <a name="overview-of-configuration-and-metadata"></a>Panoramica della configurazione e dei metadati  
- In questo argomento vengono illustrate le attività seguenti, che sono elementi facoltativi 1, 2 e 4 nell'elenco attività [sviluppo di canali](developing-channels.md) .  
+ In questo argomento vengono illustrate le attività seguenti, ovvero elementi facoltativi 1, 2 e 4 nell'elenco attività Canali di [sviluppo.](developing-channels.md)  
   
 - Attivazione del supporto dei file di configurazione per un elemento di associazione.  
   
@@ -23,15 +23,15 @@ In questo argomento viene illustrato come abilitare il supporto della configuraz
   
 - Identificazione di asserzioni di criteri e WSDL per inserire e configurare l'associazione o l'elemento di associazione.  
   
- Per informazioni sulla creazione di associazioni definite dall'utente e di elementi di associazione, vedere [creazione di associazioni definite dall'utente](creating-user-defined-bindings.md) e [creazione di un](creating-a-bindingelement.md)BindingElement, rispettivamente.  
+ Per informazioni sulla creazione di associazioni definite dall'utente ed elementi di associazione, vedere rispettivamente [Creating User-Defined Bindings](creating-user-defined-bindings.md) e [Creating a BindingElement](creating-a-bindingelement.md).  
   
 ## <a name="adding-configuration-support"></a>Aggiunta del supporto di configurazione  
  Per abilitare il supporto del file di configurazione per un canale, è necessario implementare due sezioni di configurazione, <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType> che abilita il supporto della configurazione per gli elementi di associazione e <xref:System.ServiceModel.Configuration.StandardBindingElement?displayProperty=nameWithType> e <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602?displayProperty=nameWithType> che abilita il supporto della configurazione per le associazioni.  
   
- Un modo più semplice per eseguire questa operazione consiste nell'usare lo strumento di esempio [ConfigurationCodeGenerator](../samples/configurationcodegenerator.md) per generare il codice di configurazione per associazioni ed elementi di associazione.  
+ Un modo più semplice per eseguire questa operazione consiste nell'utilizzare lo strumento di esempio [ConfigurationCodeGenerator](../samples/configurationcodegenerator.md) per generare il codice di configurazione per le associazioni e gli elementi di associazione.  
   
 ### <a name="extending-bindingelementextensionelement"></a>Estensione BindingElementExtensionElement  
- Il codice di esempio seguente viene tratto dall'esempio [Transport: UDP](../samples/transport-udp.md) . `UdpTransportElement` è un oggetto <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> che espone `UdpTransportBindingElement` al sistema di configurazione. Con alcuni override di base, nell'esempio vengono definiti il nome della sezione di configurazione, il tipo dell'elemento di associazione e come creare l'elemento di associazione. Gli utenti possono quindi registrare la sezione di estensione in un file di configurazione come segue.  
+ Il codice di esempio seguente è tratto dall'esempio [Transport: UDP.](../samples/transport-udp.md) `UdpTransportElement` è un oggetto <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> che espone `UdpTransportBindingElement` al sistema di configurazione. Con alcuni override di base, nell'esempio vengono definiti il nome della sezione di configurazione, il tipo dell'elemento di associazione e come creare l'elemento di associazione. Gli utenti possono quindi registrare la sezione di estensione in un file di configurazione come segue.  
   
 ```xml  
 <configuration>  
@@ -62,9 +62,9 @@ In questo argomento viene illustrato come abilitare il supporto della configuraz
 ```  
   
 ### <a name="adding-configuration-for-a-binding"></a>Aggiunta di configurazione per un'associazione.  
- La sezione `SampleProfileUdpBindingCollectionElement` è una classe <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602> che espone `SampleProfileUdpBinding` al sistema di configurazione. La maggior parte dell'implementazione viene delegata a `SampleProfileUdpBindingConfigurationElement` che deriva da <xref:System.ServiceModel.Configuration.StandardBindingElement>. Il `SampleProfileUdpBindingConfigurationElement` dispone di proprietà che corrispondono alle proprietà di `SampleProfileUdpBinding`e alle funzioni di cui eseguire il mapping dall'associazione `ConfigurationElement`. Infine, viene eseguito l'override del metodo `OnApplyConfiguration` in `SampleProfileUdpBinding`, come illustrato nell'esempio di codice seguente.  
+ La sezione `SampleProfileUdpBindingCollectionElement` è una classe <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602> che espone `SampleProfileUdpBinding` al sistema di configurazione. La maggior parte dell'implementazione viene delegata a `SampleProfileUdpBindingConfigurationElement` che deriva da <xref:System.ServiceModel.Configuration.StandardBindingElement>. Dispone `SampleProfileUdpBindingConfigurationElement` di proprietà che corrispondono alle proprietà `SampleProfileUdpBinding`in `ConfigurationElement` , e funzioni di cui eseguire il mapping dall'associazione. Infine, viene eseguito l'override del metodo `OnApplyConfiguration` in `SampleProfileUdpBinding`, come illustrato nell'esempio di codice seguente.  
   
-```csharp 
+```csharp
 protected override void OnApplyConfiguration(string configurationName)  
 {  
             if (binding == null)  
@@ -100,16 +100,16 @@ protected override void OnApplyConfiguration(string configurationName)
 </configuration>  
 ```  
   
- È quindi possibile farvi riferimento dalla sezione di configurazione [\<System. serviceModel >](../../configure-apps/file-schema/wcf/system-servicemodel.md) .  
+ È quindi possibile farvi riferimento dalla sezione di configurazione [ \<del>system.serviceModel.](../../configure-apps/file-schema/wcf/system-servicemodel.md)  
   
 ```xml  
 <configuration>  
   <system.serviceModel>  
     <client>  
       <endpoint configurationName="calculator"  
-                address="soap.udp://localhost:8001/"   
+                address="soap.udp://localhost:8001/"
                 bindingConfiguration="CalculatorServer"  
-                binding="sampleProfileUdpBinding"   
+                binding="sampleProfileUdpBinding"
                 contract= "Microsoft.ServiceModel.Samples.ICalculatorContract">  
       </endpoint>  
     </client>  
@@ -118,13 +118,13 @@ protected override void OnApplyConfiguration(string configurationName)
 ```  
   
 ## <a name="adding-metadata-support-for-a-binding-element"></a>Aggiunta del supporto dei metadati per un elemento di associazione  
- Per essere integrato in un sistema di metadati, il canale deve supportare sia l'importazione che l'esportazione di un criterio. Ciò consente agli strumenti come [ServiceModel Metadata Utility Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) di generare client dell'elemento di associazione.  
+ Per essere integrato in un sistema di metadati, il canale deve supportare sia l'importazione che l'esportazione di un criterio. Ciò consente a strumenti quali [ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) di generare client dell'elemento di associazione.  
   
 ### <a name="adding-wsdl-support"></a>Aggiunta di supporto WSDL  
- L'elemento di associazione del trasporto in un'associazione è responsabile dell'esportazione e importazione delle informazioni di indirizzamento nei metadati. Quando si utilizza un'associazione SOAP, l'elemento di associazione del trasporto deve esportare anche un URI di trasporto corretto nei metadati. Il codice di esempio seguente viene tratto dall'esempio [Transport: UDP](../samples/transport-udp.md) .  
+ L'elemento di associazione del trasporto in un'associazione è responsabile dell'esportazione e importazione delle informazioni di indirizzamento nei metadati. Quando si utilizza un'associazione SOAP, l'elemento di associazione del trasporto deve esportare anche un URI di trasporto corretto nei metadati. Il codice di esempio seguente è tratto dall'esempio [Transport: UDP.](../samples/transport-udp.md)  
   
 #### <a name="wsdl-export"></a>Esportazione WSDL  
- Per esportare le informazioni di indirizzamento, il `UdpTransportBindingElement` implementa l'interfaccia <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType>. Il metodo <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A?displayProperty=nameWithType> aggiunge le informazioni di indirizzamento corrette alla porta WSDL.  
+ Per esportare le `UdpTransportBindingElement` informazioni <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> di indirizzamento, implementa l'interfaccia. Il metodo <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A?displayProperty=nameWithType> aggiunge le informazioni di indirizzamento corrette alla porta WSDL.  
   
 ```csharp  
 if (context.WsdlPort != null)  
@@ -162,7 +162,7 @@ if (soapBinding != null)
   
  Quando si esegue Svcutil.exe, esistono due opzioni per ottenere che Svcutil.exe carichi le estensioni di importazione WSDL:  
   
-1. Puntare Svcutil. exe al file di configurazione usando il file/SvcutilConfig:\<>.  
+1. Puntare Svcutil.exe al file di configurazione utilizzando\<il file /SvcutilConfig:>.  
   
 2. Aggiungere la sezione di configurazione a Svcutil.exe.config nella stessa directory di Svcutil.exe.  
   
@@ -178,10 +178,10 @@ if (transportBindingElement is UdpTransportBindingElement)
 ```  
   
 ### <a name="adding-policy-support"></a>Aggiunta del supporto dei criteri  
- L'elemento di associazione personalizzato è in grado di esportare asserzioni di criteri nell'associazione WSDL affinché un endpoint del servizio esprima le funzionalità di quell'elemento di associazione. Il codice di esempio seguente viene tratto dall'esempio [Transport: UDP](../samples/transport-udp.md) .  
+ L'elemento di associazione personalizzato è in grado di esportare asserzioni di criteri nell'associazione WSDL affinché un endpoint del servizio esprima le funzionalità di quell'elemento di associazione. Il codice di esempio seguente è tratto dall'esempio [Transport: UDP.](../samples/transport-udp.md)  
   
 #### <a name="policy-export"></a>Esportazione di criteri  
- Il tipo di `UdpTransportBindingElement` implementa <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> per aggiungere il supporto per l'esportazione dei criteri. Di conseguenza, <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> include `UdpTransportBindingElement` nella generazione del criterio per qualsiasi associazione in cui è incluso.  
+ Tipo `UdpTransportBindingElement` implementa <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> per aggiungere il supporto per l'esportazione dei criteri. Di conseguenza, <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> include `UdpTransportBindingElement` nella generazione del criterio per qualsiasi associazione in cui è incluso.  
   
  In <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A?displayProperty=nameWithType>, aggiungere un'asserzione per UDP e un'altra asserzione se il canale è in modalità multicast. Ciò è dovuto al fatto che la modalità multicast influisce sul modo in cui viene costruito lo stack di comunicazione, pertanto deve essere coordinato tra entrambi i lati.  
   
@@ -222,14 +222,14 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
   
  Implementare quindi <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> dalla classe registrata (`UdpBindingElementImporter`). In <xref:System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy%2A?displayProperty=nameWithType>, esaminare le asserzioni nello spazio dei nomi appropriato ed elaborare quelle per generare il trasporto e controllare se è multicast. Rimuovere inoltre dall'elenco delle asserzioni di associazione quelle gestite dall'importatore. Anche in questo caso, quando si esegue Svcutil.exe esistono due opzioni per l'integrazione:  
   
-1. Puntare Svcutil. exe al file di configurazione usando il file/SvcutilConfig:\<>.  
+1. Puntare Svcutil.exe al file di configurazione utilizzando\<il file /SvcutilConfig:>.  
   
 2. Aggiungere la sezione di configurazione a Svcutil.exe.config nella stessa directory di Svcutil.exe.  
   
 ### <a name="adding-a-custom-standard-binding-importer"></a>Aggiunta di un importatore di associazione standard personalizzato  
  Per impostazione predefinita, Svcutil.exe e il tipo <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> riconoscono e importano associazioni fornite dal sistema. In caso contrario, l'associazione viene importata come istanza <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>. Per consentire a Svcutil.exe e a <xref:System.ServiceModel.Description.WsdlImporter> di importare `SampleProfileUdpBinding`, `UdpBindingElementImporter` funge anche da importatore di associazione standard personalizzato.  
   
- Un importatore di associazione standard personalizzato implementa il metodo `ImportEndpoint` sull'interfaccia <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> per esaminare l'istanza di <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> importata dai metadati per verificare se poteva essere generata da un'associazione standard specifica.  
+ Un'utilità di importazione `ImportEndpoint` dell'associazione standard personalizzata implementa il metodo sull'interfaccia <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> per esaminare l'istanza <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> importata dai metadati per verificare se potrebbe essere stata generata da un'associazione standard specifica.  
   
 ```csharp  
 if (context.Endpoint.Binding is CustomBinding)  

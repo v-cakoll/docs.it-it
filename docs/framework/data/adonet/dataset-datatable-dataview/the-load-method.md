@@ -4,27 +4,27 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: e22e5812-89c6-41f0-9302-bb899a46dbff
-ms.openlocfilehash: da0695aff9447355b1fc44a033c1b4a1cc224435
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f1c819333225c22efb85946001a1fc8340d57989
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785878"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150727"
 ---
 # <a name="the-load-method"></a>Metodo Load
-È possibile usare il metodo <xref:System.Data.DataTable.Load%2A> per caricare un tipo <xref:System.Data.DataTable> con righe provenienti da un'origine dati. Si tratta di un metodo di overload che, nella sua forma più semplice, accetta un solo parametro, un **DataReader**. In questo formato, viene semplicemente caricato il **DataTable** con righe. Facoltativamente, è possibile specificare il parametro **LoadOption** per controllare la modalità di aggiunta dei dati alla **DataTable**.  
+È possibile usare il metodo <xref:System.Data.DataTable.Load%2A> per caricare un tipo <xref:System.Data.DataTable> con righe provenienti da un'origine dati. Si tratta di un metodo di overload che, nella sua forma più semplice, accetta un singolo parametro, un **oggetto DataReader**. In questo formato, carica semplicemente il **DataTable** con righe. Facoltativamente, è possibile specificare il parametro **LoadOption** per controllare la modalità di aggiunta dei dati all'oggetto **DataTable**.  
   
- Il parametro **LoadOption** è particolarmente utile nei casi in cui la **DataTable** contiene già righe di dati, in quanto descrive il modo in cui i dati in arrivo dall'origine dati verranno combinati con i dati già presenti nella tabella. Ad esempio, **PreserveCurrentValues** (impostazione predefinita) specifica che nei casi in cui una riga è contrassegnata come **aggiunta** nella **DataTable**, il valore **originale** o ogni colonna viene impostata sul contenuto della riga corrispondente dall'origine dati. Il valore **corrente** manterrà i valori assegnati al momento dell'aggiunta della riga e il valore di **RowState** della riga verrà impostato su **Changed**.  
+ Il parametro **LoadOption** è particolarmente utile nei casi in cui il **DataTable** contiene già righe di dati, perché descrive come i dati in ingresso dall'origine dati verranno combinati con i dati già presenti nella tabella. Ad esempio, **PreserveCurrentValues** (impostazione predefinita) specifica che nei casi in cui una riga è contrassegnata come **Added** in **DataTable**, il valore **Original** o ogni colonna viene impostata sul contenuto della riga corrispondente dell'origine dati. Il **valore Current** manterrà i valori assegnati quando la riga è stata aggiunta e **RowState** della riga verrà impostato su **Changed**.  
   
  Nella tabella seguente viene fornita una breve descrizione dei valori di enumerazione di <xref:System.Data.LoadOption>.  
   
 |Valore LoadOption|Descrizione|  
 |----------------------|-----------------|  
-|**OverwriteRow**|Se le righe in ingresso hanno lo stesso valore **PrimaryKey** di una riga già presente nella **DataTable**, i valori **originali** e **correnti** di ogni colonna vengono sostituiti con i valori nella riga in arrivo e la proprietà **RowState** è impostata su Non **modificato**.<br /><br /> Le righe dell'origine dati che non esistono già nella **DataTable** vengono aggiunte con un valore di **RowState** **invariato**.<br /><br /> Questa opzione attiva l'aggiornamento del contenuto della **DataTable** in modo che corrisponda al contenuto dell'origine dati.|  
-|**PreserveCurrentValues (impostazione predefinita)**|Se le righe in ingresso hanno lo stesso valore **PrimaryKey** di una riga già presente nella **DataTable**, il valore **originale** viene impostato sul contenuto della riga in arrivo e il valore **corrente** non viene modificato.<br /><br /> Se **RowState** viene **aggiunto** o **modificato**, viene impostato su **modified**.<br /><br /> Se il **RowState** è stato **eliminato**, rimane **eliminato**.<br /><br /> Vengono aggiunte le righe dell'origine dati che non esistono già nella **DataTable** e **RowState** viene impostato su **Unchanged**.|  
-|**UpdateCurrentValues**|Se le righe in ingresso hanno lo stesso valore **PrimaryKey** della riga già presente nella **DataTable**, il valore **corrente** viene copiato nel valore **originale** e il valore **corrente** viene quindi impostato sul contenuto della riga in arrivo.<br /><br /> Se è stato **aggiunto il valore** **RowState** nella **DataTable** , il valore di **RowState** rimane **aggiunto**. Per le righe contrassegnate come **modificate** o **eliminate**, **RowState** viene **modificato**.<br /><br /> Vengono aggiunte le righe dell'origine dati che non esistono già nella **DataTable** e l'oggetto **RowState** è impostato su **added**.|  
+|**OverwriteRow**|Se le righe in arrivo hanno lo stesso valore **PrimaryKey** di una riga già presente nella **DataTable**, i valori **Original** e **Current** di ogni colonna vengono sostituiti con i valori nella riga in arrivo e la proprietà **RowState** viene impostata su **Unchanged**.<br /><br /> Le righe dell'origine dati che non esistono già nel **DataTable** vengono aggiunte con un valore **RowState** **pari a Unchanged**.<br /><br /> Questa opzione aggiorna in effetti il contenuto del **DataTable** in modo che corrisponda al contenuto dell'origine dati.|  
+|**PreserveCurrentValues (impostazione predefinita)**|Se le righe in arrivo hanno lo stesso valore **PrimaryKey** di una riga già presente nella **DataTable**, il valore **Original** viene impostato sul contenuto della riga in ingresso e il valore **Current** non viene modificato.<br /><br /> Se **RowState** è **Added** o **Modified**, viene impostato su **Modified**.<br /><br /> Se **RowState** è stato **eliminato**, rimane **Deleted**.<br /><br /> Le righe dell'origine dati che non esistono già nel **DataTable** vengono aggiunte e **RowState** è impostato su **Unchanged**.|  
+|**UpdateCurrentValues**|Se le righe in arrivo hanno lo stesso valore **PrimaryKey** della riga già presente in **DataTable**, il valore **Current** viene copiato nel valore **Original** e il valore **Current** viene quindi impostato sul contenuto della riga in ingresso.<br /><br /> Se il **RowState** nel **DataTable** è stato **aggiunto**, il **RowState** rimane **Added**. Per le righe contrassegnate come **Modificato** o **Eliminato**, **RowState** è **Modified**.<br /><br /> Le righe dell'origine dati che non esistono già nel **DataTable** vengono aggiunte e **RowState** è impostato su **Added**.|  
   
- Nell'esempio seguente viene utilizzato il metodo **Load** per visualizzare un elenco di compleanni per i dipendenti nel database **Northwind** .  
+ Nell'esempio seguente viene utilizzato il **metodo Load** per visualizzare un elenco di compleanni per i dipendenti del database **Northwind.**  
   
 ```vb  
 Private Sub LoadBirthdays(ByVal connectionString As String)  
@@ -35,7 +35,7 @@ Private Sub LoadBirthdays(ByVal connectionString As String)
       " FROM dbo.Employees " & _  
       "ORDER BY BirthDate, LastName, FirstName"  
   
-    ' Open and fill a DataSet.   
+    ' Open and fill a DataSet.
     Dim adapter As SqlDataAdapter = New SqlDataAdapter( _  
         queryString, connectionString)  
     Dim employees As New DataSet  

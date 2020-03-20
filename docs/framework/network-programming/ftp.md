@@ -5,11 +5,11 @@ helpviewer_keywords:
 - FTP
 ms.assetid: 9b43f8b4-89d7-46a7-89fc-71aca916dd32
 ms.openlocfilehash: d945f03077a863d9e1baa6b59fe8a908566aba5a
-ms.sourcegitcommit: 90775b20343b6ad831af6f5380f8ab7553abb16b
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54186150"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "61642880"
 ---
 # <a name="ftp"></a>FTP
 
@@ -17,7 +17,7 @@ ms.locfileid: "54186150"
 
 ## <a name="examples"></a>Esempi
 
-Per altre informazioni, vedere i seguenti argomenti: [Procedura: Scaricare file con FTP](how-to-download-files-with-ftp.md), [Procedura: Caricare file con FTP](how-to-upload-files-with-ftp.md) e [Procedura: Elencare il contenuto della directory con FTP](how-to-list-directory-contents-with-ftp.md).
+Per altre informazioni, vedere gli argomenti seguenti: [Procedura: Scaricare file con FTP](how-to-download-files-with-ftp.md), [Procedura: Caricare file con FTP](how-to-upload-files-with-ftp.md), e [Procedura: Elencare il contenuto della directory con FTP](how-to-list-directory-contents-with-ftp.md).
 
 ## <a name="ftp-and-proxies"></a>FTP e proxy
 
@@ -25,6 +25,6 @@ Se un proxy (specificato dalla proprietà <xref:System.Net.FtpWebRequest.Proxy%2
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Accesso a Internet con un proxy](accessing-the-internet-through-a-proxy.md)
+- [Accesso a Internet tramite un proxy](accessing-the-internet-through-a-proxy.md)
 - [Esempi di programmazione di rete](network-programming-samples.md)
 - [Uso di protocolli applicativi](using-application-protocols.md)

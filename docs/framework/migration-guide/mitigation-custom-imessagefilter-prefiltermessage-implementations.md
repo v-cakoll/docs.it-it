@@ -3,11 +3,11 @@ title: 'Mitigazione: Implementazioni IMessageFilter.PreFilterMessage personalizz
 ms.date: 03/30/2017
 ms.assetid: 9cf47c5b-0bb2-45df-9437-61cd7e7c2f4d
 ms.openlocfilehash: 7757e8d1fd0258ab2d972b7321082e4afa37f710
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457936"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79400120"
 ---
 # <a name="mitigation-custom-imessagefilterprefiltermessage-implementations"></a>Mitigazione: Implementazioni IMessageFilter.PreFilterMessage personalizzate
 
@@ -27,9 +27,9 @@ Questa modifica riguarda solo app Windows Forms destinate a versioni di .NET Fra
 
 Per le app Windows Form destinate a versioni precedenti di .NET Framework, questo tipo di implementazioni in alcuni casi genera un'eccezione <xref:System.IndexOutOfRangeException> quando viene chiamato il metodo <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType>
 
-## <a name="mitigation"></a>Attenuazione
+## <a name="mitigation"></a>Strategia di riduzione del rischio
 
-Se la modifica è indesiderata, le app destinate a .NET Framework 4.6.1 o versione successiva la possono rifiutare esplicitamente aggiungendo l'impostazione di configurazione seguente alla sezione [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) del file di configurazione dell'app:
+Se questa modifica è indesiderabile, le app destinate a .NET Framework 4.6.1 o versione successiva possono rifiutarne esplicitamente aggiungendo l'impostazione di configurazione seguente alla sezione [ \<di runtime>](../configure-apps/file-schema/runtime/runtime-element.md) del file di configurazione dell'app:
 
 ```xml
 <runtime>
@@ -37,7 +37,7 @@ Se la modifica è indesiderata, le app destinate a .NET Framework 4.6.1 o versio
 </runtime>
 ```
 
-Le app destinate a versioni precedenti di .NET Framework ma in esecuzione su .NET Framework 4.6.1 o versione successiva possono optare per questo comportamento aggiungendo l'impostazione di configurazione seguente alla sezione [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) del file di configurazione dell'app:
+Inoltre, le app destinate a versioni precedenti di .NET Framework ma in esecuzione in .NET Framework 4.6.1 o [ \<](../configure-apps/file-schema/runtime/runtime-element.md) versione successiva possono acconsentire esplicitamente a questo comportamento aggiungendo l'impostazione di configurazione seguente alla sezione runtime>del file di configurazione dell'app:
 
 ```xml
 <runtime>
@@ -47,4 +47,4 @@ Le app destinate a versioni precedenti di .NET Framework ma in esecuzione su .NE
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Compatibilità delle applicazioni](application-compatibility.md)
+- [Compatibilità tra le versioni](application-compatibility.md)

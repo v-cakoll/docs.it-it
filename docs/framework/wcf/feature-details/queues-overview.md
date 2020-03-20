@@ -4,22 +4,23 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-ms.openlocfilehash: 548594379f95952c79363759b8570cf5e2709cff
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 78d80a88153ee15f7ab152da44801c77900f874d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643551"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184593"
 ---
 # <a name="queues-overview"></a>Panoramica delle code
-Contenuto della sezione vengono introdotti i concetti generali e fondamentali alla base delle comunicazioni in coda. Nelle sezioni successive esplorare in dettaglio come i concetti dell'accodamento descritti di seguito si applicano in Windows Communication Foundation (WCF).  
+
+Contenuto della sezione vengono introdotti i concetti generali e fondamentali alla base delle comunicazioni in coda. Sezioni successive esaminano in dettaglio come i concetti di accodamento descritti di seguito si manifestano in Windows Communication Foundation (WCF).  
   
 ## <a name="basic-queuing-concepts"></a>Concetti di base dell'accodamento  
  Durante la progettazione di un'applicazione distribuita, è importante scegliere il trasporto giusto per la comunicazione tra i servizi e i client. Molti fattori influiscono sul tipo di trasporto da usare. Un fattore importante, ovvero l'isolamento tra il servizio, il client e il trasporto, impone l'uso di un trasporto in coda o un trasporto diretto, ad esempio TCP o HTTP. A causa della natura dei trasporti diretti quali TCP e HTTP, la comunicazione si arresta completamente se il servizio o il client smette di funzionare o in caso di errore nella rete. Il servizio, il client e la rete devono essere in esecuzione contemporaneamente per consentire il funzionamento dell'applicazione. I trasporti in coda forniscono l'isolamento, ovvero se si verifica un errore nel servizio o nel client oppure nei collegamenti di comunicazione tra questi, il client e servizio possono continuare a funzionare.  
   
- Le code assicurano una comunicazione affidabile anche in caso di errori nelle parti in comunicazione o nella rete. I messaggi scambiati tra le parti in comunicazione vengono acquisiti e recapitati dalle code. In genere le code sono associate a qualche tipo di archivio che può essere volatile o durevole. Le code archiviano i messaggi di un client per conto di un servizio e in un secondo momento li inoltrano al servizio. Poiché le code di riferimento indiretto forniscono un isolamento garantito delle parti rispetto agli errori, questo rappresenta il meccanismo di comunicazione preferito per i sistemi a elevata disponibilità e i servizi non connessi. Il riferimento indiretto comporta tuttavia un elevato costo di latenza. *Latenza* è l'intervallo di tempo tra il momento in cui il client invia un messaggio e l'ora il servizio lo riceve. Di conseguenza, quando il messaggio è stato inviato, non è possibile stabilire quando tale messaggio verrà elaborato. La maggior parte delle applicazioni in coda deve gestire una latenza elevata. Nella figura seguente viene mostrato un modello concettuale della comunicazione in coda.  
+ Le code assicurano una comunicazione affidabile anche in caso di errori nelle parti in comunicazione o nella rete. I messaggi scambiati tra le parti in comunicazione vengono acquisiti e recapitati dalle code. In genere le code sono associate a qualche tipo di archivio che può essere volatile o durevole. Le code archiviano i messaggi di un client per conto di un servizio e in un secondo momento li inoltrano al servizio. Poiché le code di riferimento indiretto forniscono un isolamento garantito delle parti rispetto agli errori, questo rappresenta il meccanismo di comunicazione preferito per i sistemi a elevata disponibilità e i servizi non connessi. Il riferimento indiretto comporta tuttavia un elevato costo di latenza. *La latenza* è l'intervallo di tempo tra il momento in cui il client invia un messaggio e il momento in cui il servizio lo riceve. Di conseguenza, quando il messaggio è stato inviato, non è possibile stabilire quando tale messaggio verrà elaborato. La maggior parte delle applicazioni in coda deve gestire una latenza elevata. Nella figura seguente viene mostrato un modello concettuale della comunicazione in coda.  
   
- ![Modello di comunicazione in coda](../../../../docs/framework/wcf/feature-details/media/qconceptual-figure1c.gif "QConceptual Figure1c")  
+ ![Modello di comunicazione in coda](../../../../docs/framework/wcf/feature-details/media/qconceptual-figure1c.gif "QConcettuale-Figura1c")  
   
  Modello concettuale della comunicazione in coda  
   
@@ -27,14 +28,14 @@ Contenuto della sezione vengono introdotti i concetti generali e fondamentali al
   
  Quando un client invia un messaggio a una coda, lo indirizza alla coda di destinazione, che è la coda gestita dal gestore delle code del servizio. Il gestore delle code sul client invia il messaggio a una coda di trasmissione (o in uscita), ovvero una coda sul gestore delle code client che archivia i messaggi destinati alla trasmissione alla coda di destinazione. Il gestore delle code cerca quindi un percorso per il gestore delle code proprietario della coda di destinazione e trasferisce ad esso il messaggio. Per assicurare una comunicazione affidabile, i gestori delle code implementano un protocollo di trasferimento affidabile che consente di impedire la perdita di dati. Il gestore delle code di destinazione accetta i messaggi indirizzati alle code di destinazione di cui è proprietario e archivia i messaggi. Il servizio invia una richiesta per leggere dalla coda di destinazione, quindi il gestore delle code recapita il messaggio all'applicazione di destinazione. Nella figura seguente viene mostrata la comunicazione tra le quattro parti.  
   
- ![Diagramma applicazioni accodate](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Distributed-coda-figura")  
+ ![Diagramma di applicazioni in coda](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Distributed-Queue-Figure")  
   
  Comunicazione in coda in uno scenario di distribuzione tipico  
   
  In questo modo, il gestore delle code fornisce l'isolamento necessario per consentire eventuali errori nel mittente e nel destinatario senza influire sulla comunicazione effettiva. Il vantaggio dell'ulteriore riferimento indiretto fornito dalle code consente a più istanze dell'applicazione di leggere dalla stessa coda, in modo che il lavoro delle farm tra i nodi raggiunge velocità effettive più elevate. Di conseguenza, le code vengono spesso usate per soddisfare requisiti di maggiore scalabilità e velocità effettiva.  
   
 ## <a name="queues-and-transactions"></a>Code e transazioni  
- Le transazioni consentono di raggruppare un set di operazioni in modo che se si verifica un errore in un'operazione, tutte le operazioni avranno esito negativo. Per un esempio di come usare transazioni, si supponga che una persona utilizzi lo sportello bancomat per trasferire 1.000 euro dal conto di risparmio al conto corrente. Questo passaggio comporta le operazioni seguenti:  
+ Le transazioni consentono di raggruppare un set di operazioni in modo che se si verifica un errore in un'operazione, tutte le operazioni avranno esito negativo. Un esempio di come utilizzare le transazioni è quando una persona utilizza un bancomat per trasferire 1.000 dollari dal proprio conto di risparmio al proprio conto corrente. Questo passaggio comporta le operazioni seguenti:  
   
 - Prelievo di 1.000 euro dal conto di risparmio.  
   
@@ -46,7 +47,7 @@ Contenuto della sezione vengono introdotti i concetti generali e fondamentali al
   
  A causa della latenza elevata, quando si invia un messaggio non è possibile sapere quanto tempo impiega per raggiungere la coda di destinazione, né quanto tempo impiega il servizio per elaborare il messaggio. Per questo motivo, non è consigliabile usare una singola transazione per inviare il messaggio, ricevere il messaggio e quindi elaborarlo. Ciò crea una transazione di cui non viene eseguito il commit per un periodo di tempo indeterminato. Quando un client e un servizio comunicano tramite una coda usando una transazione, vengono usate due transazioni: una sul client e una sul servizio. Nella figura seguente vengono mostrati i limiti della transazione in una tipica comunicazione in coda.  
   
- ![Coda con transazioni](../../../../docs/framework/wcf/feature-details/media/qwithtransactions-figure3.gif "QWithTransactions Figure3")  
+ ![Coda con transazioni](../../../../docs/framework/wcf/feature-details/media/qwithtransactions-figure3.gif "QWithTransactions-Figure3")  
   
  Comunicazione in coda che mostra transazioni distinte per l'acquisizione e il recapito  
   

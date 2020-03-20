@@ -3,10 +3,10 @@ title: Abilitazione e disabilitazione di IPv6
 ms.date: 03/30/2017
 ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
 ms.openlocfilehash: 66c802dd5feb865faf7469cb7da04fbffcb4a2d6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048568"
 ---
 # <a name="enabling-and-disabling-ipv6"></a>Abilitazione e disabilitazione di IPv6
@@ -15,16 +15,16 @@ Per usare il protocollo IPv6, assicurarsi di eseguire una versione del sistema o
 ## <a name="configuration-steps"></a>Procedura di configurazione  
  La tabella seguente elenca diverse configurazioni  
   
-|Sistema operativo abilitato per IPv6|Classi di rete abilitate per IPv6|DESCRIZIONE|  
+|Sistema operativo abilitato per IPv6|Classi di rete abilitate per IPv6|Descrizione|  
 |-------------------------------------|---------------------------------------|-----------------|  
 |No|No|È possibile analizzare gli indirizzi IPv6.|  
 |No|Sì|È possibile analizzare gli indirizzi IPv6.|  
-|Yes|No|È possibile analizzare gli indirizzi IPv6 e risolvere gli indirizzi IPv6 usando metodi di risoluzione dei nomi non contrassegnati come obsoleti.|  
+|Sì|No|È possibile analizzare gli indirizzi IPv6 e risolvere gli indirizzi IPv6 usando metodi di risoluzione dei nomi non contrassegnati come obsoleti.|  
 |Sì|Sì|È possibile analizzare e risolvere gli indirizzi IPv6 usando tutti i metodi, inclusi quelli contrassegnati come obsoleti.|  
   
  Tenere presente che, per abilitare il supporto IPv6 per tutte le classi nello spazio dei nomi System.Net, è necessario modificare il file di configurazione del computer o il file di configurazione per l'applicazione. Il file di configurazione per un'applicazione ha la precedenza sul file di configurazione del computer.  
   
- Per un esempio di modifica del file di configurazione del computer, *machine.config*, per abilitare il supporto Ipv6, vedere [Procedura: Modificare il file di configurazione del computer per abilitare il supporto Ipv6](how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md). Verificare anche che il supporto IPv6 sia abilitato per il sistema operativo.  
+ Per un esempio di come modificare il file di configurazione del computer, *machine.config*, per abilitare il supporto Ipv6, vedere [Procedura: Modificare il file di configurazione del computer per abilitare il supporto IPv6](how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md). Verificare anche che il supporto IPv6 sia abilitato per il sistema operativo.  
   
  .NET Framework ha un'opzione di configurazione impostata in un file di configurazione nel modo seguente  
   
@@ -46,7 +46,7 @@ Per usare il protocollo IPv6, assicurarsi di eseguire una versione del sistema o
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Protocollo IPv6](internet-protocol-version-6.md)
-- [Socket](sockets.md)
+- [Protocollo Internet versione 6](internet-protocol-version-6.md)
+- [socket](sockets.md)
 - [Schema delle impostazioni di rete](../configure-apps/file-schema/network/index.md)
-- [Elemento \<ipv6> (impostazioni di rete)](../configure-apps/file-schema/network/ipv6-element-network-settings.md)
+- [\<Elemento> ipv6 (impostazioni di rete)](../configure-apps/file-schema/network/ipv6-element-network-settings.md)

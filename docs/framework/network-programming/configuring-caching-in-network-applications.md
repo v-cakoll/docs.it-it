@@ -5,10 +5,10 @@ helpviewer_keywords:
 - cache [.NET Framework], configuring
 ms.assetid: 3f694a1c-de5d-47cf-a6eb-cfc369fb8a9f
 ms.openlocfilehash: d8ff64e4ab42283732d7f632efab6b4e9afad0a0
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048695"
 ---
 # <a name="configuring-caching-in-network-applications"></a>Configurazione della memorizzazione nella cache per applicazioni di rete
@@ -22,11 +22,11 @@ Per configurare la memorizzazione nella cache è necessario specificare un crite
   
 - [Procedura: Impostare criteri di cache per una richiesta](how-to-set-cache-policy-for-a-request.md)  
   
- È anche possibile configurare criteri di cache mediante i file di configurazione dell'applicazione o del computer. Per altre informazioni, vedere &#124; [\<requestCaching> Element (Network Settings)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md) (Elemento <requestCaching> - impostazioni di rete).  
+ È anche possibile configurare criteri di cache mediante i file di configurazione dell'applicazione o del computer. Per ulteriori informazioni, vedere &#124; [ \<requestCaching> element (Impostazioni di rete)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Gestione della cache per le applicazioni di rete](cache-management-for-network-applications.md)
-- [Criteri di cache](cache-policy.md)
+- [Criteri cache](cache-policy.md)
 - [Criteri di cache basati sulla posizione](location-based-cache-policies.md)
-- [Criteri di cache basati sull'ora](time-based-cache-policies.md)
+- [Time-Based Cache Policies](time-based-cache-policies.md)

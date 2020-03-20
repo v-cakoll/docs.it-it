@@ -3,10 +3,10 @@ title: Nomi di peer e ID PNRP
 ms.date: 03/30/2017
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
 ms.openlocfilehash: 15b74317507f69d2339a2e5e49b54ae72cda1a7b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047495"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>Nomi di peer e ID PNRP
@@ -24,7 +24,7 @@ Il nome di peer rappresenta un endpoint per la comunicazione e può identificars
   
  Gli ID PNRP sono composti di:  
   
-- I 128 bit di ordine superiore, noti come ID peer-to-peer (P2P) sono un hash di un nome di peer assegnato all'endpoint. Il nome peer ha il formato seguente: *Authority.Classifier*. Nel caso dei nomi protetti, *Autorità* è l'hash SHA1 (Secure Hash Algorithm 1 ) della chiave pubblica del nome di peer in caratteri esadecimali. Per i nomi non protetti, *Autorità* è il singolo carattere: "0". *Classificatore* è una stringa che identifica l'applicazione. Nessun classificatore per nome di peer può essere più lungo di 149 caratteri, compreso il carattere di terminazione `null`.  
+- I 128 bit di ordine superiore, noti come ID peer-to-peer (P2P) sono un hash di un nome di peer assegnato all'endpoint. Il nome del peer ha il seguente formato: *Autorità.Classificatore*. Nel caso dei nomi protetti, *Autorità* è l'hash SHA1 (Secure Hash Algorithm 1 ) della chiave pubblica del nome di peer in caratteri esadecimali. Per i nomi non protetti, *Autorità* è il singolo carattere: "0". *Classificatore* è una stringa che identifica l'applicazione. Nessun classificatore per nome di peer può essere più lungo di 149 caratteri, compreso il carattere di terminazione `null`.  
   
 - I 128 bit di ordine inferiore vengono usati per la posizione del servizio, ovvero un numero generato che identifica diverse istanze dello stesso ID P2P nello stesso cloud.  
   

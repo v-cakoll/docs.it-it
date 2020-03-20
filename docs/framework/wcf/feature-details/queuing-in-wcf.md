@@ -2,30 +2,30 @@
 title: Accodamento in WCF
 ms.date: 03/30/2017
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
-ms.openlocfilehash: 6656ab0b2db88297e6ac9a28bb2ea18c0056d18c
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: e6608a3d556b546660be904eb8c853243e833d2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837324"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184555"
 ---
 # <a name="queuing-in-wcf"></a>Accodamento in WCF
 In questa sezione viene descritto come utilizzare la comunicazione in coda in Windows Communication Foundation (WCF).  
   
 ## <a name="queues-as-a-wcf-transport-binding"></a>Accodamento come associazione di trasporto WCF  
- In WCF i contratti specificano gli elementi che vengono scambiati. I contratti sono scambi di messaggi dipendenti dall'azienda o specifici dell'applicazione. Il meccanismo (o la modalità) usato per scambiare messaggi viene specificato nelle associazioni. Le associazioni in WCF incapsulano i dettagli dello scambio di messaggi. Espongono funzionalità di configurazione che consentono all'utente di controllare vari aspetti del trasporto o del protocollo rappresentato dall'associazione. L'accodamento in WCF viene considerato come qualsiasi altra associazione di trasporto, che rappresenta un grande vantaggio per molte applicazioni di Accodamento. Oggi, molte applicazioni di accodamento vengono scritte in modo diverso dalle applicazioni distribuite in stile chiamata di procedura remota (RPC), rendendone più difficile la gestione. Con WCF, lo stile di scrittura di un'applicazione distribuita è molto simile, rendendolo più semplice da seguire e gestire. Inoltre, eseguendo il factoring del meccanismo di scambio separatamente dalla regola business, è più semplice configurare il trasporto o apportarvi modifiche senza incidere sul codice specifico dell'applicazione. Nella figura seguente viene illustrata la struttura di un servizio e un client WCF usando MSMQ come trasporto.  
+ In WCF, i contratti specificano ciò che viene scambiato. I contratti sono scambi di messaggi dipendenti dall'azienda o specifici dell'applicazione. Il meccanismo (o la modalità) usato per scambiare messaggi viene specificato nelle associazioni. Le associazioni in WCF incapsulano i dettagli dello scambio di messaggi. Espongono funzionalità di configurazione che consentono all'utente di controllare vari aspetti del trasporto o del protocollo rappresentato dall'associazione. Accodamento in WCF viene considerato come qualsiasi altra associazione di trasporto, che è un grande vantaggio per molte applicazioni di accodamento. Oggi, molte applicazioni di accodamento vengono scritte in modo diverso dalle applicazioni distribuite in stile chiamata di procedura remota (RPC), rendendone più difficile la gestione. Con WCF, lo stile di scrittura di un'applicazione distribuita è molto simile, semplificando ne' il follow e la manutenzione. Inoltre, eseguendo il factoring del meccanismo di scambio separatamente dalla regola business, è più semplice configurare il trasporto o apportarvi modifiche senza incidere sul codice specifico dell'applicazione. Nella figura seguente viene illustrata la struttura di un servizio e un client WCF usando MSMQ come trasporto.  
   
- ![Diagramma dell'applicazione in coda](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Distributed-Queue-Figure")  
+ ![Diagramma di applicazioni in coda](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Distributed-Queue-Figure")  
   
- Come risulta evidente dalla figura precedente, il client e il servizio devono definire solo la semantica dell'applicazione, ovvero, il contratto e l'implementazione. Il servizio configura un'associazione in coda con le impostazioni preferite. Il client utilizza lo [strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per generare un client WCF per il servizio e per generare un file di configurazione che descrive i binding da utilizzare per l'invio di messaggi al servizio. Pertanto, per inviare un messaggio in coda, il client crea un'istanza di un client WCF e richiama un'operazione su di essa. Questo fa sì che il messaggio venga inviato alla coda di trasmissione e trasferito alla coda di destinazione. Tutte le complessità della comunicazione in coda vengono nascoste all'applicazione che sta inviando e ricevendo messaggi.  
+ Come risulta evidente dalla figura precedente, il client e il servizio devono definire solo la semantica dell'applicazione, ovvero, il contratto e l'implementazione. Il servizio configura un'associazione in coda con le impostazioni preferite. Il client utilizza lo [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per generare un client WCF al servizio e per generare un file di configurazione che descrive le associazioni da utilizzare per inviare messaggi al servizio. Pertanto, per inviare un messaggio in coda, il client crea un'istanza di un client WCF e richiama un'operazione su di esso. Questo fa sì che il messaggio venga inviato alla coda di trasmissione e trasferito alla coda di destinazione. Tutte le complessità della comunicazione in coda vengono nascoste all'applicazione che sta inviando e ricevendo messaggi.  
   
- Le avvertenze sull'associazione in coda in WCF includono:  
+ Gli avvertenze sull'associazione in coda in WCF includono:Caveats about queued binding in WCF include:  
   
-- Tutte le operazioni del servizio devono essere unidirezionali perché l'associazione in coda predefinita in WCF non supporta la comunicazione duplex con le code. Un esempio di comunicazione bidirezionale ([comunicazione bidirezionale](../../../../docs/framework/wcf/samples/two-way-communication.md)) illustra come usare i contratti a 2 1 per implementare la comunicazione duplex con le code.  
+- Tutte le operazioni del servizio devono essere unidirezionali perché l'associazione in coda predefinita in WCF non supporta la comunicazione duplex tramite code. Un esempio di comunicazione bidirezionale ([Comunicazione](../../../../docs/framework/wcf/samples/two-way-communication.md)bidirezionale ) illustra come utilizzare due contratti unidirezionali per implementare la comunicazione duplex tramite code.  
   
-- Per generare un client WCF mediante lo scambio di metadati, è necessario un endpoint HTTP aggiuntivo nel servizio in modo che sia possibile eseguire una query direttamente per generare il client WCF e ottenere informazioni di binding per configurare in modo appropriato la comunicazione in coda.  
+- Per generare un client WCF utilizzando lo scambio di metadati richiede un endpoint HTTP aggiuntivo nel servizio in modo che possa essere eseguita una query direttamente per generare il client WCF e ottenere informazioni di associazione per configurare in modo appropriato la comunicazione in coda.  
   
-- In base all'associazione in coda, è necessaria una configurazione aggiuntiva all'esterno di WCF. Ad esempio, la classe <xref:System.ServiceModel.NetMsmqBinding> fornita con WCF richiede la configurazione dei binding e la configurazione minima di Accodamento messaggi (MSMQ).  
+- In base all'associazione in coda, è necessaria una configurazione aggiuntiva all'esterno di WCF. Ad esempio, <xref:System.ServiceModel.NetMsmqBinding> la classe fornita con WCF richiede la configurazione delle associazioni e la configurazione minima di Accodamento messaggi (MSMQ).  
   
  Nelle sezioni seguenti vengono descritte le associazioni in coda specifiche fornite con WCF, basate su MSMQ.  
   
@@ -38,12 +38,12 @@ In questa sezione viene descritto come utilizzare la comunicazione in coda in Wi
   
  Le code MSMQ possono essere protette anche usando un'identità di Windows registrata con il servizio directory Active Directory. Quando si installa MSMQ, è possibile installare l'integrazione di Active Directory, che richiede che il computer faccia parte di una rete di dominio Windows.  
   
- Per ulteriori informazioni su MSMQ, vedere [installazione di Accodamento messaggi (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
+ Per ulteriori informazioni su MSMQ, vedere [Installazione di Accodamento messaggi (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
- Il [\<netmsmqbinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) è il binding in coda che WCF fornisce per la comunicazione tra due endpoint WCF mediante MSMQ. L'associazione, pertanto, espone proprietà specifiche di MSMQ. Tuttavia, non tutte le funzionalità e le proprietà di MSMQ vengono esposte in `NetMsmqBinding`. La classe compatta `NetMsmqBinding` è progettata con un set ottimale di funzionalità che la maggior parte dei clienti dovrebbe trovare sufficiente.  
+ Il [ \<netMsmqBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) è l'associazione in coda WCF fornisce per due endpoint WCF per comunicare utilizzando MSMQ. L'associazione, pertanto, espone proprietà specifiche di MSMQ. Tuttavia, non tutte le funzionalità e le proprietà di MSMQ vengono esposte in `NetMsmqBinding`. La classe compatta `NetMsmqBinding` è progettata con un set ottimale di funzionalità che la maggior parte dei clienti dovrebbe trovare sufficiente.  
   
- La classe `NetMsmqBinding` manifesta i principali concetti di accodamento descritti fino ad ora nella forma di proprietà sulle associazioni. Queste proprietà, a loro volta, comunicano a MSMQ come trasferire e recapitare i messaggi. Nelle sezioni seguenti vengono descritte le categorie di proprietà. Per ulteriori informazioni, vedere gli argomenti concettuali che descrivono le proprietà specifiche più completamente.  
+ La classe `NetMsmqBinding` manifesta i principali concetti di accodamento descritti fino ad ora nella forma di proprietà sulle associazioni. Queste proprietà, a loro volta, comunicano a MSMQ come trasferire e recapitare i messaggi. Nelle sezioni seguenti vengono descritte le categorie di proprietà. Per altre informazioni, vedere gli argomenti concettuali che descrivono più completamente le proprietà specifiche.  
   
 #### <a name="exactlyonce-and-durable-properties"></a>Proprietà ExactlyOnce e Durable  
  Le proprietà `ExactlyOnce` e `Durable` incidono sulla modalità di trasferimento dei messaggi tra le code:  
@@ -62,21 +62,21 @@ In questa sezione viene descritto come utilizzare la comunicazione in coda in Wi
   
  Molti sistemi di accodamento prevedono una coda di messaggi non recapitabili a livello di sistema. MSMQ include una coda di messaggi non recapitabili non transazionale a livello di sistema per i messaggi il cui recapito nelle code non transazionali ha esito negativo e una coda di messaggi non recapitabili transazionale a livello di sistema per i messaggi il cui recapito nelle code transazionali ha esito negativo.  
   
- Se più client che inviano messaggi a code di destinazione diverse condividono il servizio MSMQ, tutti i messaggi inviati dai client finiranno nella stessa coda di messaggi non recapitabili. Ciò non è sempre preferibile. Per un migliore isolamento, WCF e MSMQ in Windows Vista forniscono una coda di messaggi non recapitabili personalizzata, ovvero una coda di messaggi non recapitabili specifica dell'applicazione, che l'utente può specificare per archiviare i messaggi che non vengono recapitati. Pertanto, client diversi non condividono la stessa coda di messaggi non recapitabili.  
+ Se più client che inviano messaggi a code di destinazione diverse condividono il servizio MSMQ, tutti i messaggi inviati dai client finiranno nella stessa coda di messaggi non recapitabili. Ciò non è sempre preferibile. Per un migliore isolamento, WCF e MSMQ in Windows Vista forniscono una coda di messaggi non recapitabili personalizzata (o coda di messaggi non recapitabili specifici dell'applicazione) che l'utente può specificare per archiviare i messaggi che non riescono il recapito. Pertanto, client diversi non condividono la stessa coda di messaggi non recapitabili.  
   
  L'associazione dispone di due proprietà interessanti:  
   
-- `DeadLetterQueue`: questa proprietà è un'enumerazione che indica se è necessaria una coda di messaggi non recapitabili. Nel caso sia necessaria, l'enumerazione contiene anche il tipo di coda di messaggi non recapitabili. I valori sono `None`, `System` e `Custom`. Per ulteriori informazioni sull'interpretazione di queste proprietà, vedere [utilizzo di code di messaggi non recapitabili per gestire gli errori di trasferimento dei messaggi](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+- `DeadLetterQueue`: questa proprietà è un'enumerazione che indica se è necessaria una coda di messaggi non recapitabili. Nel caso sia necessaria, l'enumerazione contiene anche il tipo di coda di messaggi non recapitabili. I possibili valori sono `None`, `System` e `Custom`. Per ulteriori informazioni sull'interpretazione di queste proprietà, vedere Utilizzo di code di messaggi non recapitabili per gestire gli errori di trasferimento dei messaggiFor more information about the interpretation of these properties, see [Using Dead-Letter Queues to Handle Message Transfer Failures](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
   
-- `CustomDeadLetterQueue`: questa proprietà è l'indirizzo URI (Uniform Resource Identifier) della coda di messaggi non recapitabili specifica dell'applicazione. Questa operazione è obbligatoria se `DeadLetterQueue`.`Custom` viene scelto.  
+- `CustomDeadLetterQueue`: questa proprietà è l'indirizzo URI (Uniform Resource Identifier) della coda di messaggi non recapitabili specifica dell'applicazione. Questa operazione `DeadLetterQueue`è necessaria se .`Custom` viene scelto.  
   
 #### <a name="poison-message-handling-properties"></a>Proprietà di gestione dei messaggi non elaborabili  
- Quando il servizio legge un messaggio dalla coda di destinazione in una transazione, è possibile che non riesca a elaborarlo per vari motivi. Il messaggio viene quindi reinserito nella coda per essere nuovamente letto. Per gestire messaggi la cui elaborazione ripetutamente esito negativo, è possibile configurare nell'associazione un set di proprietà di gestione dei messaggi non elaborabili. Sono disponibili quattro proprietà: `ReceiveRetryCount`, `MaxRetryCycles`, `RetryCycleDelay` e `ReceiveErrorHandling`. Per ulteriori informazioni su queste proprietà, vedere [gestione dei messaggi non elaborabili](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
+ Quando il servizio legge un messaggio dalla coda di destinazione in una transazione, è possibile che non riesca a elaborarlo per vari motivi. Il messaggio viene quindi reinserito nella coda per essere nuovamente letto. Per gestire messaggi la cui elaborazione ripetutamente esito negativo, è possibile configurare nell'associazione un set di proprietà di gestione dei messaggi non elaborabili. Sono disponibili quattro proprietà: `ReceiveRetryCount`, `MaxRetryCycles`, `RetryCycleDelay` e `ReceiveErrorHandling`. Per ulteriori informazioni su queste proprietà, vedere [Gestione dei messaggi non elaborabili](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
   
 #### <a name="security-properties"></a>Proprietà di sicurezza  
- MSMQ espone il proprio modello di sicurezza, che prevede ad esempio l'applicazione di elenchi di controllo di accesso (ACL) su una coda o l'invio di messaggi autenticati. La classe `NetMsmqBinding` espone queste proprietà di sicurezza come parte delle proprie impostazioni di sicurezza del trasporto. Nell'associazione sono presenti due proprietà per la sicurezza del trasporto: `MsmqAuthenticationMode` e `MsmqProtectionLevel`. Le impostazioni in queste proprietà dipendono dalla modalità di configurazione di MSMQ. Per ulteriori informazioni, vedere [protezione dei messaggi mediante la sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  
+ MSMQ espone il proprio modello di sicurezza, che prevede ad esempio l'applicazione di elenchi di controllo di accesso (ACL) su una coda o l'invio di messaggi autenticati. La classe `NetMsmqBinding` espone queste proprietà di sicurezza come parte delle proprie impostazioni di sicurezza del trasporto. Nell'associazione sono presenti due proprietà per la sicurezza del trasporto: `MsmqAuthenticationMode` e `MsmqProtectionLevel`. Le impostazioni in queste proprietà dipendono dalla modalità di configurazione di MSMQ. Per ulteriori informazioni, vedere [Protezione dei messaggi mediante](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)la protezione del trasporto .  
   
- Oltre alla sicurezza del trasporto, il messaggio SOAP effettivo stesso può essere protetto usando la sicurezza dei messaggi. Per ulteriori informazioni, vedere [protezione dei messaggi mediante la sicurezza dei](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)messaggi.  
+ Oltre alla sicurezza del trasporto, il messaggio SOAP effettivo stesso può essere protetto usando la sicurezza dei messaggi. Per ulteriori informazioni, vedere [Protezione dei messaggi mediante la protezione](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)dei messaggi .  
   
  Anche `MsmqTransportSecurity` espone due proprietà, `MsmqEncryptionAlgorithm` e `MsmqHashAlgorithm`. Si tratta di enumerazioni di algoritmi diversi da scegliere per la crittografia del trasferimento da coda a coda di messaggi e l'hash delle firme.  
   
@@ -89,10 +89,10 @@ In questa sezione viene descritto come utilizzare la comunicazione in coda in Wi
   
 - `QueueTransferProtocol`: enumerazione del protocollo da usare per i trasferimenti di messaggi da coda a coda. MSMQ implementa un protocollo di trasferimento da coda a coda nativo e un protocollo basato su SOAP denominato SRMP (SOAP Reliable Messaging Protocol). SRMP viene usato quando si usa il trasporto HTTP per i trasferimenti da coda a coda. Viene invece usato il protocollo SRMP protetto quando si usa HTTPS per i trasferimenti da coda a coda.  
   
-- `UseActiveDirectory`: valore booleano che indica se è necessario usare Active Directory per la risoluzione degli indirizzi delle code. Per impostazione predefinita, questa funzionalità è disattivata. Per ulteriori informazioni, vedere [endpoint di servizio e indirizzamento delle code](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
+- `UseActiveDirectory`: valore booleano che indica se è necessario usare Active Directory per la risoluzione degli indirizzi delle code. Per impostazione predefinita, questa funzionalità è disattivata. Per ulteriori informazioni, vedere [Endpoint del servizio e indirizzamento delle](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)code .  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
- Il `MsmqIntegrationBinding` viene utilizzato quando si desidera che un endpoint WCF comunichi con un'applicazione MSMQ esistente scritta in API C C++,, com o System. Messaging.  
+ L'oggetto `MsmqIntegrationBinding` viene utilizzato quando si desidera che un endpoint WCF comunichi con un'applicazione MSMQ esistente scritta nelle API C, C, COM o System.Messaging.  
   
  Le proprietà dell'associazione sono le stesse di `NetMsmqBinding`. Esistono tuttavia le differenze seguenti:  
   
@@ -105,9 +105,9 @@ In questa sezione viene descritto come utilizzare la comunicazione in coda in Wi
 ### <a name="sample-code"></a>Codice di esempio  
  Per istruzioni dettagliate su come scrivere servizi WCF che usano MSMQ, vedere gli argomenti seguenti:  
   
-- [Procedura: Scambiare messaggi con endpoint WCF e con applicazioni di accodamento messaggi](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+- [Procedura: scambiare messaggi con endpoint WCF e con applicazioni del sistema di accodamento dei messaggi](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
   
-- [Procedura: Scambiare messaggi in coda con endpoint WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+- [Procedura: scambiare messaggi in coda con endpoint WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
   
  Per un esempio di codice completo in cui viene illustrato l'uso di MSMQ in WCF, vedere gli argomenti seguenti:  
   
@@ -119,7 +119,7 @@ In questa sezione viene descritto come utilizzare la comunicazione in coda in Wi
   
 - [Sessioni e code](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
   
-- [Comunicazione bidirezionale](../../../../docs/framework/wcf/samples/two-way-communication.md) 
+- [Comunicazione bidirezionale](../../../../docs/framework/wcf/samples/two-way-communication.md)
   
 - [SRMP](../../../../docs/framework/wcf/samples/srmp.md)  
   
@@ -127,5 +127,5 @@ In questa sezione viene descritto come utilizzare la comunicazione in coda in Wi
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Endpoint di servizio e indirizzamento delle code](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)
-- [Hosting Web di un'applicazione in coda](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+- [Mapping fra gli endpoint di servizio e l'indirizzamento delle code](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)
+- [Sito Web che ospita un'applicazione in coda](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

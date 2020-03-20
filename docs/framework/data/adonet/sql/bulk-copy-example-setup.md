@@ -2,30 +2,30 @@
 title: Creazione di esempi di copia di massa
 ms.date: 03/30/2017
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
-ms.openlocfilehash: 28fa5cde1dcbaf9f38450116a56fc11d904edc1c
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 80350d112da03c00e422432ce271ca5ea3ac58ab
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040260"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79148842"
 ---
 # <a name="bulk-copy-example-setup"></a>Creazione di esempi di copia di massa
-La classe <xref:System.Data.SqlClient.SqlBulkCopy> consente di scrivere dati solo su tabelle SQL Server. Negli esempi di codice illustrati in questo argomento viene utilizzato il database di esempio SQL Server, **AdventureWorks**. Per evitare di modificare gli esempi di codice delle tabelle esistenti, è necessario creare tabelle in cui scrivere i dati.  
+La classe <xref:System.Data.SqlClient.SqlBulkCopy> può essere usata per scrivere dati solo in tabelle di SQL Server. Negli esempi di codice illustrati in questo argomento viene usato il database di esempio di SQL Server, **AdventureWorks**. Per evitare di modificare le tabelle esistenti, gli esempi di codice scrivono i dati in tabelle che è prima necessario creare.  
   
- Le tabelle **BulkCopyDemoMatchingColumns** e **BulkCopyDemoDifferentColumns** sono entrambe basate sulla tabella **Production. Products** di AdventureWorks. Negli esempi di codice che usano queste tabelle, i dati vengono aggiunti dalla tabella **Production. Products** a una di queste tabelle di esempio. La tabella **BulkCopyDemoDifferentColumns** viene utilizzata quando nell'esempio viene illustrato come eseguire il mapping delle colonne dei dati di origine alla tabella di destinazione. **BulkCopyDemoMatchingColumns** viene usato per la maggior parte degli altri esempi.  
+ Le tabelle **BulkCopyDemoMatchingColumns** e **BulkCopyDemoDifferentColumns** sono entrambe basate sulla tabella **AdventureWorks** **Production.Products.** Negli esempi di codice che usano queste tabelle, i dati vengono aggiunti dalla tabella **Production.Products** a una di queste tabelle di esempio. La tabella **BulkCopyDemoDifferentColumns** viene usata quando l'esempio illustra come eseguire il mapping delle colonne dall'origine dati alla tabella di destinazione. **BulkCopyDemoMatchingColumns** viene usata per la maggior parte degli altri esempi.  
   
- Alcuni degli esempi di codice illustrano come usare una classe <xref:System.Data.SqlClient.SqlBulkCopy> per scrivere più tabelle. Per questi esempi, le tabelle **BulkCopyDemoOrderHeader** e **BulkCopyDemoOrderDetail** vengono utilizzate come tabelle di destinazione. Queste tabelle sono basate sulle tabelle **Sales. SalesOrderHeader** e **Sales. SalesOrderDetail** di **AdventureWorks**.  
+ Alcuni esempi di codice illustrano come usare una sola classe <xref:System.Data.SqlClient.SqlBulkCopy> per scrivere in più tabelle. Per questi esempi, le tabelle **BulkCopyDemoOrderHeader** e **BulkCopyDemoOrderDetail** vengono utilizzate come tabelle di destinazione. Queste tabelle sono basate sulle tabelle **Sales.SalesOrderHeader** e **Sales.SalesOrderDetail** in **AdventureWorks**.  
   
 > [!NOTE]
-> Gli esempi di codice **SqlBulkCopy** sono forniti per illustrare la sintassi per l'uso solo di **SqlBulkCopy** . Se la tabella di origine e quella di destinazione risiedono nella stessa istanza di SQL Server, per copiare i dati è più semplice e rapido usare un'istruzione `INSERT … SELECT` Transact-SQL.  
+> Negli esempi di codice di **SqlBulkCopy** viene illustrata la sintassi che consente di usare solo **SqlBulkCopy**. Se le tabelle di origine e di destinazione si trovano nella stessa istanza di SQL Server, è più semplice e rapido usare un'istruzione Transact-SQL `INSERT … SELECT` per copiare i dati.  
   
 ## <a name="table-setup"></a>Impostazione delle tabelle  
- Per creare le tabelle necessarie affinché i codici di esempio vengano eseguiti correttamente, è necessario eseguire le seguenti istruzioni Transact-SQL su un database SQL Server.  
+ Per creare le tabelle necessarie per il corretto funzionamento degli esempi di codice, è necessario eseguire le seguenti istruzioni Transact-SQL in un database di SQL Server.  
   
 ```sql
 USE AdventureWorks  
   
-IF EXISTS (SELECT * FROM dbo.sysobjects   
+IF EXISTS (SELECT * FROM dbo.sysobjects
  WHERE id = object_id(N'[dbo].[BulkCopyDemoMatchingColumns]')  
  AND OBJECTPROPERTY(id, N'IsUserTable') = 1)  
     DROP TABLE [dbo].[BulkCopyDemoMatchingColumns]  
@@ -38,7 +38,7 @@ CREATE TABLE [dbo].[BulkCopyDemoMatchingColumns]([ProductID] [int] IDENTITY(1,1)
     [ProductID] ASC  
 ) ON [PRIMARY]) ON [PRIMARY]  
   
-IF EXISTS (SELECT * FROM dbo.sysobjects   
+IF EXISTS (SELECT * FROM dbo.sysobjects
  WHERE id = object_id(N'[dbo].[BulkCopyDemoDifferentColumns]')  
  AND OBJECTPROPERTY(id, N'IsUserTable') = 1)  
     DROP TABLE [dbo].[BulkCopyDemoDifferentColumns]  
@@ -51,7 +51,7 @@ CREATE TABLE [dbo].[BulkCopyDemoDifferentColumns]([ProdID] [int] IDENTITY(1,1) N
     [ProdID] ASC  
 ) ON [PRIMARY]) ON [PRIMARY]  
   
-IF EXISTS (SELECT * FROM dbo.sysobjects   
+IF EXISTS (SELECT * FROM dbo.sysobjects
  WHERE id = object_id(N'[dbo].[BulkCopyDemoOrderHeader]')  
  AND OBJECTPROPERTY(id, N'IsUserTable') = 1)  
     DROP TABLE [dbo].[BulkCopyDemoOrderHeader]  
@@ -64,7 +64,7 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderHeader]([SalesOrderID] [int] IDENTITY(1,1) 
     [SalesOrderID] ASC  
 ) ON [PRIMARY]) ON [PRIMARY]  
   
-IF EXISTS (SELECT * FROM dbo.sysobjects   
+IF EXISTS (SELECT * FROM dbo.sysobjects
  WHERE id = object_id(N'[dbo].[BulkCopyDemoOrderDetail]')  
  AND OBJECTPROPERTY(id, N'IsUserTable') = 1)  
     DROP TABLE [dbo].[BulkCopyDemoOrderDetail]  
@@ -83,5 +83,5 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderDetail]([SalesOrderID] [int] NOT NULL,
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Operazioni di copia di massa in SQL Server](bulk-copy-operations-in-sql-server.md)
+- [Bulk Copy Operations in SQL Server](bulk-copy-operations-in-sql-server.md)
 - [Panoramica di ADO.NET](../ado-net-overview.md)

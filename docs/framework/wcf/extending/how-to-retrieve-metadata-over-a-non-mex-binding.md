@@ -1,16 +1,16 @@
 ---
-title: "Procedura: Recuperare metadati attraverso un'associazione non MEX"
+title: "Procedura: recuperare metadati attraverso un'associazione non MEX"
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: 3721657eb72663450261b4bc8627b250b1a4a14e
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: a006795c87a2ae845d03db90dce296692c4339fa
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856040"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186442"
 ---
-# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Procedura: Recuperare metadati attraverso un'associazione non MEX
-In questo argomento viene illustrato come recuperare metadati da un endpoint MEX attraverso un'associazione non MEX. Il codice in questo esempio è basato sull'esempio di [endpoint dei metadati protetti personalizzato](../samples/custom-secure-metadata-endpoint.md) .  
+# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Procedura: recuperare metadati attraverso un'associazione non MEX
+In questo argomento viene illustrato come recuperare metadati da un endpoint MEX attraverso un'associazione non MEX. Il codice in questo esempio è basato sull'esempio di endpoint di [metadati protetti personalizzati.](../samples/custom-secure-metadata-endpoint.md)  
   
 ### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>Per recuperare metadati attraverso un'associazione non MEX  
   
@@ -79,7 +79,7 @@ In questo argomento viene illustrato come recuperare metadati da un endpoint MEX
             </clientCredentials>  
           </behavior>  
         </endpointBehaviors>  
-      </behaviors>    
+      </behaviors>
     </system.serviceModel>  
     ```  
   
@@ -121,7 +121,7 @@ In questo argomento viene illustrato come recuperare metadati da un endpoint MEX
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5. A questo punto, si ha una raccolta di endpoint del servizio. Per ulteriori informazioni sull'importazione di metadati, [vedere Procedura: Importa i metadati in endpoint](../feature-details/how-to-import-metadata-into-service-endpoints.md)di servizio.  
+5. A questo punto, si ha una raccolta di endpoint del servizio. Per ulteriori informazioni sull'importazione di metadati, vedere [Procedura: importare metadati negli endpoint del servizio.](../feature-details/how-to-import-metadata-into-service-endpoints.md)  
   
 ## <a name="see-also"></a>Vedere anche
 

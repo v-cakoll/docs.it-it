@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Aggiornamento dinamico'
+title: 'Procedura: aggiornamento dinamico'
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: 95d99afd09daf4d9bf3937a71d7773332ff1bc14
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: aaeb4d9d42c289cf34a6aee9212fc2d74b8f8c01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834716"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184961"
 ---
-# <a name="how-to-dynamic-update"></a>Procedura: Aggiornamento dinamico
+# <a name="how-to-dynamic-update"></a>Procedura: aggiornamento dinamico
 In questo argomento vengono descritti i passaggi di base necessari per creare e aggiornare in modo dinamico la configurazione del routing. In questo esempio, la configurazione iniziale del routing viene ottenuta dal file di configurazione e indirizza tutti i messaggi al servizio di calcolo regularCalc. Viene tuttavia aggiornata in un secondo momento a livello di codice per modificare l'endpoint di destinazione del servizio roundingCalc.  
   
 > [!NOTE]
@@ -64,7 +64,7 @@ In questo argomento vengono descritti i passaggi di base necessari per creare e 
     </filterTables>  
     ```  
   
-3. Per valutare i messaggi in ingresso rispetto ai filtri contenuti nella rispettiva tabella, è necessario associare la tabella dei filtri agli endpoint servizio tramite il comportamento di routing. Nell'esempio seguente viene illustrata l'associazione di "filterTable1" all'endpoint di servizio.  
+3. Per valutare i messaggi in ingresso rispetto ai filtri contenuti nella rispettiva tabella, è necessario associare la tabella dei filtri agli endpoint servizio tramite il comportamento di routing. Nell'esempio seguente viene illustrata l'associazione di "filterTable1" all'endpoint del servizio.  
   
     ```xml  
     <behaviors>  
@@ -102,7 +102,7 @@ In questo argomento vengono descritti i passaggi di base necessari per creare e 
         using (ServiceHost serviceHost =  
             new ServiceHost(typeof(RoutingService)))  
         {  
-            // Open the ServiceHost to create listeners           
+            // Open the ServiceHost to create listeners
             // and start listening for messages.  
             Console.WriteLine("The Routing Service configured, opening....");  
             serviceHost.Open();  
@@ -185,12 +185,12 @@ namespace Microsoft.Samples.AdvancedFilters
     {  
         // Host the service within this EXE console application.  
         public static void Main()  
-        {             
+        {
             // Create a ServiceHost for the CalculatorService type.  
             using (ServiceHost serviceHost =  
                 new ServiceHost(typeof(RoutingService)))  
             {  
-                // Open the ServiceHost to create listeners           
+                // Open the ServiceHost to create listeners
                 // and start listening for messages.  
                 Console.WriteLine("The Routing Service configured, opening....");  
                 serviceHost.Open();  
@@ -242,8 +242,8 @@ namespace Microsoft.Samples.AdvancedFilters
 ```  
   
 ## <a name="example"></a>Esempio  
- 
-Di seguito è riportato un elenco completo del file di configurazione usato in questo esempio:
+
+Di seguito è riportato un elenco completo del file di configurazione utilizzato in questo esempio:
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  

@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: ad2f7bf981d56e06ec726942f1fd37dff6b5b09c
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
-ms.translationtype: HT
+ms.openlocfilehash: c8329fbaed68fde3a63a5c589896ffcdf64b1766
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67802697"
 ---
 ### <a name="performance-improvement-in-automation-tree-for-grouping-itemscontrols"></a>Miglioramento delle prestazioni nell'albero di automazione per il raggruppamento di ItemsControls
@@ -11,7 +11,6 @@ ms.locfileid: "67802697"
 |   |   |
 |---|---|
 |Dettagli|Sono state migliorate le prestazioni di ricompilazione dell'albero di automazione di una classe <xref:System.Windows.Controls.ItemsControl>, ad esempio ListBox o DataGrid, in cui è abilitato il raggruppamento.|
-|Ambito|Principale|
+|Scope|Principale|
 |Versione|4.8|
-|Tipo|Runtime|
-
+|Type|Runtime|

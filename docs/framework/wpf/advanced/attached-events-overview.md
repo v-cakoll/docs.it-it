@@ -12,84 +12,84 @@ helpviewer_keywords:
 - backing attached events with routed events [WPF]
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
-ms.openlocfilehash: 76ff60cfe26f9105d4504164802987115fc2a7e2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e125c9a57090049f4319da96c7004f06606d0147
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455468"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141562"
 ---
 # <a name="attached-events-overview"></a>Cenni preliminari sugli eventi associati
 
-Extensible Application Markup Language (XAML) definisce un componente del linguaggio e un tipo di evento chiamato *evento associato*. Il concetto di evento associato consente di aggiungere un gestore per un determinato evento a un elemento arbitrario, anziché a un elemento che definisce o eredita effettivamente l'evento. In questo caso, né l'oggetto che genera potenzialmente l'evento, né l'istanza di gestione di destinazione definisce o possiede in altro modo l'evento.  
+Extensible Application Markup Language (XAML)Extensible Application Markup Language (XAML) definisce un componente del linguaggio e un tipo di evento denominato *evento associato.* Il concetto di evento associato consente di aggiungere un gestore per un determinato evento a un elemento arbitrario, anziché a un elemento che definisce o eredita effettivamente l'evento. In questo caso, né l'oggetto che genera potenzialmente l'evento, né l'istanza di gestione di destinazione definisce o possiede in altro modo l'evento.  
 
-<a name="prerequisites"></a>   
+<a name="prerequisites"></a>
 ## <a name="prerequisites"></a>Prerequisites  
  Questo argomento si presuppone di aver letto [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md) e [Cenni preliminari su XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md).  
   
-<a name="Syntax"></a>   
+<a name="Syntax"></a>
 ## <a name="attached-event-syntax"></a>Sintassi per gli eventi associati  
- Gli eventi associati hanno una sintassi XAML e uno schema di codifica che deve essere usato dal codice di supporto per supportare l'utilizzo dell'evento associato.  
+ Gli eventi associati hanno una sintassi XAML e un modello di codifica che deve essere usato dal codice di supporto per supportare l'utilizzo dell'evento associato.  
   
  Nella sintassi XAML, l'evento associato viene specificato non solo dal nome dell'evento, ma dal tipo proprietario più il nome dell'evento, separato da un punto (.). Dato che il nome di evento è qualificato con il nome del tipo proprietario, la sintassi dell'evento associato consente l'associazione di tale evento a qualsiasi elemento di cui è possibile creare un'istanza.  
   
- Ad esempio, di seguito è riportata la sintassi XAML per collegare un gestore per un evento associato `NeedsCleaning` personalizzato:  
+ Ad esempio, di seguito è riportata la sintassi XAML per associare un gestore per un evento associato personalizzato:For example, the following is the XAML syntax for attaching a handler for a custom `NeedsCleaning` attached event:  
   
  [!code-xaml[WPFAquariumSln#AE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquarium/Window1.xaml#ae)]  
   
  Si noti il prefisso `aqua:`, necessario in questo caso perché l'evento associato è un evento personalizzato tratto da un xmlns mappato personalizzato.  
   
-<a name="WPFImplements"></a>   
+<a name="WPFImplements"></a>
 ## <a name="how-wpf-implements-attached-events"></a>Modalità di implementazione degli eventi associati in WPF
 
-In WPF gli eventi associati sono supportati da un campo <xref:System.Windows.RoutedEvent> e vengono instradati attraverso la struttura ad albero dopo la generazione. In genere, l'origine dell'evento associato (oggetto che genera l'evento) è un'origine di sistema o servizio e l'oggetto che esegue il codice che genera l'evento non è pertanto parte diretta dell'albero degli elementi.  
+In WPFWPF, gli eventi <xref:System.Windows.RoutedEvent> associati sono supportati da un campo e vengono indirizzati attraverso la struttura ad albero dopo essere stati generati. In genere, l'origine dell'evento associato (oggetto che genera l'evento) è un'origine di sistema o servizio e l'oggetto che esegue il codice che genera l'evento non è pertanto parte diretta dell'albero degli elementi.  
   
-<a name="Scenarios"></a>   
+<a name="Scenarios"></a>
 ## <a name="scenarios-for-attached-events"></a>Scenari per gli eventi associati  
- In WPF gli eventi associati sono presenti in determinate aree di funzionalità in cui è presente un'astrazione a livello di servizio, ad esempio per gli eventi abilitati dalla classe <xref:System.Windows.Input.Mouse> statica o dalla classe <xref:System.Windows.Controls.Validation>. Le classi che interagiscono con il servizio o lo usano possono usano l'evento nella sintassi dell'evento associato o scegliere di usarlo come un evento indirizzato che fa parte del modo in cui la classe integra le funzionalità del servizio.  
+ In WPFWPF, gli eventi associati sono presenti in determinate aree di funzionalità in cui <xref:System.Windows.Input.Mouse> è presente <xref:System.Windows.Controls.Validation> l'astrazione a livello di servizio, ad esempio per gli eventi abilitati dalla classe statica o dalla classe. Le classi che interagiscono con il servizio o lo usano possono usano l'evento nella sintassi dell'evento associato o scegliere di usarlo come un evento indirizzato che fa parte del modo in cui la classe integra le funzionalità del servizio.  
   
- Sebbene WPF definisca un certo numero di eventi associati, gli scenari in cui si utilizzerà o si gestirà direttamente l'evento associato sono molto limitati. In genere, l'evento associato serve a scopo di architettura, ma viene quindi inoltrato a un evento indirizzato non associato (supportato con un evento CLR "wrapper").  
+ Anche se WPFWPF definisce una serie di eventi associati, gli scenari in cui si utilizzerà o gestire direttamente l'evento associato sono molto limitati. In genere, l'evento associato ha uno scopo di architettura, ma viene quindi inoltrato a un evento indirizzato non associato (supportato con un evento CLR "wrapper").  
   
- Ad esempio, l'evento associato sottostante <xref:System.Windows.Input.Mouse.MouseDown?displayProperty=nameWithType> può essere gestito più facilmente in qualsiasi <xref:System.Windows.UIElement> specificato utilizzando <xref:System.Windows.UIElement.MouseDown> su tale <xref:System.Windows.UIElement> anziché gestire la sintassi degli eventi associati in XAML o nel codice. L'evento associato assolve a uno scopo nell'architettura perché consente l'espansione futura dei dispositivi di input. Il dispositivo ipotetico deve solo generare <xref:System.Windows.Input.Mouse.MouseDown?displayProperty=nameWithType> per simulare l'input del mouse e non deve derivare da <xref:System.Windows.Input.Mouse> a tale scopo. Tuttavia, questo scenario implica la gestione del codice degli eventi e la gestione XAML dell'evento associato non è pertinente per questo scenario.  
+ Ad esempio, l'evento <xref:System.Windows.Input.Mouse.MouseDown?displayProperty=nameWithType> associato sottostante può essere <xref:System.Windows.UIElement> gestito <xref:System.Windows.UIElement.MouseDown> più <xref:System.Windows.UIElement> facilmente in qualsiasi dato usandolo anziché gestire la sintassi dell'evento associato in XAML o nel codice. L'evento associato assolve a uno scopo nell'architettura perché consente l'espansione futura dei dispositivi di input. Il dispositivo ipotetico avrebbe solo <xref:System.Windows.Input.Mouse.MouseDown?displayProperty=nameWithType> bisogno di sollevare al fine di simulare l'input del mouse, e non avrebbe bisogno di derivare da <xref:System.Windows.Input.Mouse> per farlo. Tuttavia, questo scenario prevede la gestione del codice degli eventi e la gestione XAML dell'evento associato non è rilevante per questo scenario.  
   
-<a name="Handling"></a>   
+<a name="Handling"></a>
 ## <a name="handling-an-attached-event-in-wpf"></a>Gestione di un evento associato in WPF  
  Il processo di gestione di un evento associato e il codice del gestore che verrà scritto è fondamentalmente lo stesso necessario per un evento indirizzato.  
   
- In generale, un evento associato WPF non è molto diverso da un evento indirizzato WPF. Le differenze sono il modo in cui l'evento viene originato e il modo in cui viene esposto da una classe come membro (che influiscono anche sulla sintassi del gestore XAML).  
+ In generale, un WPFWPF evento associato non è molto diverso da un WPFWPF evento indirizzato. Le differenze sono il modo in cui l'evento viene originato e come viene esposto da una classe come membro (che influisce anche sulla sintassi del gestore XAML).  
   
- Tuttavia, come indicato in precedenza, gli eventi associati WPF esistenti non sono destinati in modo specifico alla gestione in WPF. Più spesso, lo scopo dell'evento è quello di consentire la segnalazione di uno stato da parte di un elemento composto a un elemento padre nella composizione, nel qual caso l'evento viene in genere generato nel codice e si basa inoltre sulla gestione della classe nella classe padre rilevante. Ad esempio, è previsto che gli elementi all'interno di un <xref:System.Windows.Controls.Primitives.Selector> generino l'evento Attached <xref:System.Windows.Controls.Primitives.Selector.Selected>, che è quindi gestito dalla classe <xref:System.Windows.Controls.Primitives.Selector> e quindi potenzialmente convertito dalla classe <xref:System.Windows.Controls.Primitives.Selector> in un evento indirizzato diverso, <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged>. Per altre informazioni sugli eventi indirizzati e sulla gestione delle classi, vedere [Contrassegno degli eventi indirizzati come gestiti e gestione delle classi](marking-routed-events-as-handled-and-class-handling.md).  
+ Tuttavia, come indicato in precedenza, gli eventi associati WPFWPF esistenti non sono particolarmente destinati alla gestione in WPFWPF. Più spesso, lo scopo dell'evento è quello di consentire la segnalazione di uno stato da parte di un elemento composto a un elemento padre nella composizione, nel qual caso l'evento viene in genere generato nel codice e si basa inoltre sulla gestione della classe nella classe padre rilevante. Ad esempio, gli <xref:System.Windows.Controls.Primitives.Selector> elementi all'interno <xref:System.Windows.Controls.Primitives.Selector.Selected> di un oggetto devono generare <xref:System.Windows.Controls.Primitives.Selector> l'evento associato, <xref:System.Windows.Controls.Primitives.Selector> che viene quindi gestito <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged>dalla classe e quindi potenzialmente convertiti dalla classe in un evento indirizzato diverso, . Per altre informazioni sugli eventi indirizzati e sulla gestione delle classi, vedere [Contrassegno degli eventi indirizzati come gestiti e gestione delle classi](marking-routed-events-as-handled-and-class-handling.md).  
   
-<a name="Custom"></a>   
+<a name="Custom"></a>
 ## <a name="defining-your-own-attached-events-as-routed-events"></a>Definizione di eventi associati personalizzati come eventi indirizzati  
- Se si esegue la derivazione da classi base WPF comuni, è possibile implementare eventi allegati personalizzati includendo determinati metodi di modello nella classe e usando metodi di utilità già presenti nelle classi di base.  
+ Se si deriva da classi di base WPFWPF comuni, è possibile implementare eventi associati personalizzati includendo determinati metodi di pattern nella classe e usando metodi di utilità già presenti nelle classi di base.  
   
  Il modello è il seguente:  
   
-- Metodo che __aggiunge il gestore*EventName*__ con due parametri. Il primo parametro è l'istanza di a cui viene aggiunto il gestore eventi. Il secondo parametro è il gestore eventi da aggiungere. Il metodo deve essere `public` e `static`, senza alcun valore restituito.  
+- Un metodo __Add*EventName*Handler__ con due parametri. Il primo parametro è l'istanza a cui viene aggiunto il gestore eventi. Il secondo parametro è il gestore eventi da aggiungere. Il metodo `public` deve `static`essere e , senza alcun valore restituito.  
   
-- Metodo __Remove*EventName*handler__ con due parametri. Il primo parametro è l'istanza da cui viene rimosso il gestore eventi. Il secondo parametro è il gestore eventi da rimuovere. Il metodo deve essere `public` e `static`, senza alcun valore restituito.  
+- Un metodo __Remove*EventName*Handler__ con due parametri. Il primo parametro è l'istanza da cui viene rimosso il gestore eventi. Il secondo parametro è il gestore eventi da rimuovere. Il metodo `public` deve `static`essere e , senza alcun valore restituito.  
   
- Il metodo della funzione di accesso del __gestore Add*EventName*__ facilita l'elaborazione XAML quando gli attributi del gestore eventi associati sono dichiarati su un elemento. Anche i metodi __Add*EventName*handler__ e __Remove*EventName*handler__ abilitano l'accesso al codice all'archivio del gestore eventi per l'evento associato.  
+ Il __Add*EventName*Handler__ metodo della funzione di accesso facilita l'elaborazione XAML quando gli attributi del gestore eventi associati vengono dichiarati su un elemento. I metodi __Add*EventName*Handler__ e __Remove*EventName*Handler__ consentono inoltre l'accesso al codice all'archivio dei gestori eventi per l'evento associato.  
   
- Questo modello generale non è ancora abbastanza preciso per l'implementazione pratica in un Framework, perché qualsiasi implementazione del reader XAML potrebbe avere schemi diversi per l'identificazione degli eventi sottostanti nel linguaggio e nell'architettura di supporto. Questo è uno dei motivi per cui WPF implementa gli eventi associati come eventi indirizzati. l'identificatore da utilizzare per un evento (<xref:System.Windows.RoutedEvent>) è già definito dal sistema di eventi WPF. Inoltre, il routing di un evento è un'estensione di implementazione naturale nel concetto a livello di linguaggio XAML di un evento associato.  
+ Questo modello generale non è ancora sufficientemente preciso per l'implementazione pratica in un framework, perché qualsiasi implementazione del lettore XAML potrebbe avere schemi diversi per identificare gli eventi sottostanti nel linguaggio e nell'architettura di supporto. Questo è uno dei motivi per cui WPFWPF implementa gli eventi associati come eventi indirizzati; l'identificatore da utilizzare<xref:System.Windows.RoutedEvent>per un evento ( ) è già definito dal sistema di eventi WPFWPF. Inoltre, il routing di un evento è un'estensione di implementazione naturale nel concetto a livello di linguaggio XAML di un evento associato.  
   
- L'implementazione dell' __aggiunta del gestore*EventName*__ per un evento associato WPF consiste nella chiamata di <xref:System.Windows.UIElement.AddHandler%2A> con l'evento indirizzato e il gestore come argomenti.  
+ Il __Add*EventName*Handler__ implementazione per un <xref:System.Windows.UIElement.AddHandler%2A> WPFWPF evento associato consiste nel chiamare il con l'evento indirizzato e gestore come argomenti.  
   
- Questa strategia di implementazione e il sistema di eventi indirizzati in generale limitano la gestione degli eventi associati a <xref:System.Windows.UIElement> classi derivate o <xref:System.Windows.ContentElement> classi derivate, perché solo le classi dispongono di implementazioni di <xref:System.Windows.UIElement.AddHandler%2A>.  
+ Questa strategia di implementazione e il sistema di eventi <xref:System.Windows.UIElement> indirizzati <xref:System.Windows.ContentElement> in generale limitano <xref:System.Windows.UIElement.AddHandler%2A> la gestione per gli eventi associati alle classi derivate o alle classi derivate, poiché solo tali classi dispongono di implementazioni.  
   
- Il codice seguente, ad esempio, definisce il `NeedsCleaning` evento associato sulla classe Owner `Aquarium`, usando la strategia di evento associato WPF di dichiarazione dell'evento associato come un evento indirizzato.  
+ Ad esempio, il codice `NeedsCleaning` seguente definisce l'evento associato nella classe `Aquarium`owner , utilizzando la strategia di evento associato WPFWPF per dichiarare l'evento associato come evento indirizzato.  
   
  [!code-csharp[WPFAquariumSln#AECode](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#aecode)]
  [!code-vb[WPFAquariumSln#AECode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#aecode)]  
   
- Si noti che il metodo usato per stabilire il campo dell'identificatore di evento associato, <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>, è in realtà lo stesso metodo usato per registrare un evento indirizzato non collegato. Gli eventi associati e gli eventi indirizzati vengono tutti registrati in un archivio interno centralizzato. Questa implementazione dell'archivio degli eventi consente la considerazione del concetto di "eventi come interfaccia" presentata in [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md).  
+ Si noti che il metodo utilizzato per <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>stabilire il campo dell'identificatore di evento associato, , è in realtà lo stesso metodo utilizzato per registrare un evento indirizzato non associato. Gli eventi associati e gli eventi indirizzati vengono tutti registrati in un archivio interno centralizzato. Questa implementazione dell'archivio degli eventi consente la considerazione del concetto di "eventi come interfaccia" presentata in [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md).  
   
-<a name="Raising"></a>   
+<a name="Raising"></a>
 ## <a name="raising-a-wpf-attached-event"></a>Generazione di un evento associato WPF  
- Non è in genere necessario generare eventi allegati esistenti definiti da WPF dal codice. Questi eventi seguono il modello concettuale generale "Service" e le classi di servizio come <xref:System.Windows.Input.InputManager> sono responsabili della generazione degli eventi.  
+ In genere non è necessario generare eventi associati definiti da WPF esistenti dal codice. Questi eventi seguono il modello concettuale generale <xref:System.Windows.Input.InputManager> "servizio" e le classi di servizio, ad esempio responsabili della generazione degli eventi.  
   
- Tuttavia, se si definisce un evento associato personalizzato basato sul modello WPF di eventi associati basandoli in <xref:System.Windows.RoutedEvent>, è possibile usare <xref:System.Windows.UIElement.RaiseEvent%2A> per generare un evento associato da qualsiasi <xref:System.Windows.UIElement> o <xref:System.Windows.ContentElement>. Per generare un evento indirizzato (collegato o meno), è necessario dichiarare un particolare elemento nell'albero degli elementi come origine evento; tale origine viene segnalata come il chiamante del <xref:System.Windows.UIElement.RaiseEvent%2A>. È responsabilità del servizio determinare quale elemento viene riportato come origine nell'albero.  
+ Tuttavia, se si definisce un evento associato personalizzato basato sul <xref:System.Windows.RoutedEvent>modello WPF <xref:System.Windows.UIElement.RaiseEvent%2A> di basare gli <xref:System.Windows.UIElement> eventi <xref:System.Windows.ContentElement>associati su , è possibile utilizzare per generare un evento associato da qualsiasi o . La generazione di un evento indirizzato (associato o meno) richiede la dichiarazione di un particolare elemento nella struttura ad albero dell'elemento come origine dell'evento. tale origine viene <xref:System.Windows.UIElement.RaiseEvent%2A> segnalata come chiamante. È responsabilità del servizio determinare quale elemento viene riportato come origine nell'albero.  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -3,10 +3,10 @@ title: Modifiche apportate all'autenticazione NTLM per HttpWebRequest nella vers
 ms.date: 03/30/2017
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
 ms.openlocfilehash: 388e6dc648e1fd68e24a852cb08de107f09f9c9f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "64754882"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>Modifiche apportate all'autenticazione NTLM per HttpWebRequest nella versione 3.5 SP1
@@ -43,7 +43,7 @@ Per specificare i nomi host di cui è stato eseguito il mapping con l'indirizzo 
 
 3. Fare clic con il pulsante destro del mouse su MSV1_0, scegliere Nuovo e quindi fare clic su Valore multistringa.
 
-4. Digitare `BackConnectionHostNames` e premere INVIO.
+4. Digitare `BackConnectionHostNames` e quindi premere INVIO.
 
 5. Fare clic con il pulsante destro del mouse su `BackConnectionHostNames` e quindi scegliere Modifica.
 

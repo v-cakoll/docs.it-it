@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6c0b353d-79ee-4e61-b348-be49ad0e9a16
-ms.openlocfilehash: 1bb7b227c3b46133616ff7cb3f59e2005c0fa340
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 47841b23dc3259aeb233192f396397745864d7ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715481"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79145164"
 ---
 # <a name="custom-binding-transport-and-encoding"></a>Trasporto dell'associazione personalizzata e codifica
 Un'associazione personalizzata viene definita da un elenco ordinato di elementi di associazione discreti. Questo esempio illustra come configurare un'associazione personalizzata con vari elementi di codifica di trasporto e messaggio.  
@@ -18,9 +18,9 @@ Un'associazione personalizzata viene definita da un elenco ordinato di elementi 
 > [!NOTE]
 > La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
   
- Questo esempio è basato sull' [host indipendente](../../../../docs/framework/wcf/samples/self-host.md)ed è stato modificato per configurare tre endpoint per supportare i trasporti HTTP, TCP e NamedPipe con binding personalizzati. La configurazione del client viene modificata in modo simile e il codice del client modificato per comunicare con ognuno dei tre endpoint.  
+ Questo esempio è basato sul [Self-Host](../../../../docs/framework/wcf/samples/self-host.md)ed è stato modificato per configurare tre endpoint per supportare i trasporti HTTP, TCP e NamedPipe con associazioni personalizzate. La configurazione del client viene modificata in modo simile e il codice del client modificato per comunicare con ognuno dei tre endpoint.  
   
- L'esempio illustra come configurare un'associazione personalizzata che supporta una particolare codifica di trasporto e messaggio. Ciò viene effettuato configurando un trasporto e un messaggio che codificano per l'elemento `binding`. L'ordinamento degli elementi di associazione è importante per la definizione di un'associazione personalizzata, perché ogni rappresenta un livello nello stack dei canali (vedere [binding personalizzati](../../../../docs/framework/wcf/extending/custom-bindings.md)). Questo esempio configura tre associazioni personalizzate: un trasporto HTTP con codifica di testo, un trasporto TCP con codifica di testo e un trasporto di NamedPipe con codifica binaria.  
+ L'esempio illustra come configurare un'associazione personalizzata che supporta una particolare codifica di trasporto e messaggio. Ciò viene effettuato configurando un trasporto e un messaggio che codificano per l'elemento `binding`. L'ordine degli elementi di associazione è importante nella definizione di un'associazione personalizzata, poiché ognuno rappresenta un livello nello stack di canali (vedere [Associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md)). Questo esempio configura tre associazioni personalizzate: un trasporto HTTP con codifica di testo, un trasporto TCP con codifica di testo e un trasporto di NamedPipe con codifica binaria.  
   
  La configurazione del servizio definisce l'associazione personalizzata nel modo seguente:  
   
@@ -28,7 +28,7 @@ Un'associazione personalizzata viene definita da un elenco ordinato di elementi 
 <bindings>  
     <customBinding>  
         <binding name="HttpBinding" >  
-            <textMessageEncoding   
+            <textMessageEncoding
                 messageVersion="Soap12Addressing10"/>  
             <httpTransport />  
         </binding>  
@@ -71,17 +71,17 @@ client.Close()
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1. Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Assicurarsi di aver eseguito la procedura di [installazione una tantera per Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Per compilare l' C#edizione C++di, o Visual Basic .NET della soluzione, seguire le istruzioni in [compilazione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Per compilare l'edizione della soluzione in C, C, o Visual Basic .NET, seguire le istruzioni riportate in [Compilazione degli esempi](../../../../docs/framework/wcf/samples/building-the-samples.md)di Windows Communication Foundation .  
   
-3. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Per eseguire l'esempio in una configurazione su un singolo o più computer, seguire le istruzioni in Esecuzione di [Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 > È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
->   
+>
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) Esempi per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti gli esempi e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (WCF). Questo esempio si trova nella directory seguente.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\Transport`  

@@ -1,21 +1,21 @@
 ---
-title: 'Procedura: Importare asserzioni di criteri personalizzate'
+title: 'Procedura: importare asserzioni di criteri personalizzati'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-ms.openlocfilehash: 4510eac2d9c1b3bb64420b0678b3a47a90887188
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ed8aae30875e3b17f65be5857c7d93af98db9b3e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795614"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185563"
 ---
-# <a name="how-to-import-custom-policy-assertions"></a>Procedura: Importare asserzioni di criteri personalizzate
+# <a name="how-to-import-custom-policy-assertions"></a>Procedura: importare asserzioni di criteri personalizzati
 Le asserzioni di criteri descrivono le funzionalità e i requisiti di un endpoint del servizio.  Le applicazioni client possono utilizzare asserzioni di criteri nei metadati del servizio per configurare l'associazione del client o per personalizzare il contratto di servizio per un endpoint del servizio.  
   
- Le asserzioni di criteri personalizzate vengono importate implementando l'interfaccia <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> e passando quell'oggetto al sistema di metadati o registrando il tipo di implementazione nel file di configurazione dell'applicazione.  Le <xref:System.ServiceModel.Description.IPolicyImportExtension> implementazioni dell'interfaccia devono fornire un costruttore senza parametri.  
+ Le asserzioni di criteri personalizzate vengono importate implementando l'interfaccia <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> e passando quell'oggetto al sistema di metadati o registrando il tipo di implementazione nel file di configurazione dell'applicazione.  Le implementazioni <xref:System.ServiceModel.Description.IPolicyImportExtension> dell'interfaccia devono fornire un costruttore senza parametri.  
   
 ### <a name="to-import-custom-policy-assertions"></a>Per importare asserzioni di criteri personalizzati  
   
@@ -25,7 +25,7 @@ Le asserzioni di criteri descrivono le funzionalità e i requisiti di un endpoin
   
 3. Utilizzando un file di configurazione. Vedere le procedure seguenti.  
   
-4. Utilizzo di un file di configurazione con [lo strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md). Vedere le procedure seguenti.  
+4. Utilizzo di un file di configurazione con [lo strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md). Vedere le procedure seguenti.  
   
 5. Inserendo a livello di programmazione l'unità di importazione dei criteri. Vedere le procedure seguenti.  
   
@@ -40,13 +40,13 @@ Le asserzioni di criteri descrivono le funzionalità e i requisiti di un endpoin
   
 3. Eseguire la personalizzazione dell'associazione o del contratto che supporta la funzionalità o il requisito specificato dall'asserzione del criterio. In genere, le asserzioni indicano che un'associazione richiede una particolare configurazione o uno specifico elemento di associazione. Apportare queste modifiche accedendo alla proprietà <xref:System.ServiceModel.Description.PolicyConversionContext.BindingElements%2A?displayProperty=nameWithType>. Le altre asserzioni richiedono che si modifichi il contratto.  È possibile accedere e modificare il contratto utilizzando la proprietà <xref:System.ServiceModel.Description.PolicyConversionContext.Contract%2A?displayProperty=nameWithType>.  Si noti che l'unità di importazione dei criteri può venire chiamata più volte per la stessa associazione e per lo stesso contratto, ma per alternative criteri diverse se l'importazione di un'alternativa criterio non riesce. Il codice deve adattarsi a questo comportamento.  
   
-4. Rimuovere l'asserzione di criteri personalizzata dalla raccolta di asserzioni. Se non si rimuove l'asserzione Windows Communication Foundation (WCF) presuppone che l'importazione dei criteri non sia stata completata correttamente e non importa l'associazione associata. Se è stato utilizzato il metodo <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> per individuare l'asserzione di criteri personalizzata e rimuoverla dalla raccolta in un unico passaggio, non è necessario eseguire questa procedura.  
+4. Rimuovere l'asserzione di criteri personalizzata dalla raccolta di asserzioni. Se non si rimuove l'asserzione Windows Communication Foundation (WCF) presuppone che l'importazione dei criteri non è riuscita e non importa l'associazione associata. Se è stato utilizzato il metodo <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> per individuare l'asserzione di criteri personalizzata e rimuoverla dalla raccolta in un unico passaggio, non è necessario eseguire questa procedura.  
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-a-configuration-file"></a>Per inserire l'unità di importazione di criteri personalizzata nel sistema di metadati utilizzando un file di configurazione  
   
-1. Aggiungere il tipo di utilità di importazione all' `<extensions>` elemento all'interno dell' [ \<elemento > policyImporters](../../configure-apps/file-schema/wcf/policyimporters.md) nel file di configurazione client.  
+1. Aggiungere il tipo di `<extensions>` utilità di importazione all'elemento all'interno dell'elemento [ \<policyImporters>](../../configure-apps/file-schema/wcf/policyimporters.md) nel file di configurazione client.  
   
-     [!code-xml[CustomPolicySample#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]   
+     [!code-xml[CustomPolicySample#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]
   
 2. Nell'applicazione client, utilizzare <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType> o <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> per risolvere i metadati. L'unità di importazione viene richiamata automaticamente.  
   
@@ -55,9 +55,9 @@ Le asserzioni di criteri descrivono le funzionalità e i requisiti di un endpoin
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-svcutilexe"></a>Per inserire l'unità di importazione di criteri personalizzata nel sistema di metadati utilizzando Svcutil.exe  
   
-1. Aggiungere il tipo di utilità di importazione all' `<extensions>` elemento all'interno dell' [ \<elemento > policyImporters](../../configure-apps/file-schema/wcf/policyimporters.md) nel file di configurazione Svcutil. exe. config. È anche possibile puntare a Svcutil.exe per caricare tipi di unità di importazione di criteri registrati in un file di configurazione diverso, utilizzando l'opzione `/svcutilConfig`.  
+1. Aggiungere il tipo di `<extensions>` utilità di importazione all'elemento all'interno dell'elemento [ \<policyImporters>](../../configure-apps/file-schema/wcf/policyimporters.md) nel file di configurazione Svcutil.exe.config. È anche possibile puntare a Svcutil.exe per caricare tipi di unità di importazione di criteri registrati in un file di configurazione diverso, utilizzando l'opzione `/svcutilConfig`.  
   
-2. Utilizzare [lo strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) per importare i metadati e l'utilità di importazione viene richiamata automaticamente.  
+2. Utilizzare [lo strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) per importare i metadati e l'utilità di importazione viene richiamata automaticamente.  
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-programmatically"></a>Per inserire l'unità di importazione di criteri personalizzata nel sistema di metadati a livello di programmazione  
   

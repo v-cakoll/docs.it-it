@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Creare un contratto Request/Reply'
+title: 'Procedura: creare un contratto request/reply'
 ms.date: 03/30/2017
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
-ms.openlocfilehash: f5af7f3a0954e9becf1b9098f372878b537fec9c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 793f7214f8319e87c3e344990577841fc029bc55
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645815"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185025"
 ---
-# <a name="how-to-create-a-request-reply-contract"></a>Procedura: Creare un contratto Request/Reply
+# <a name="how-to-create-a-request-reply-contract"></a>Procedura: creare un contratto request/reply
 Un contratto di tipo request/reply specifica un metodo che restituisce una risposta La replica deve essere inviata e correlata alla richiesta in base ai termini di questo contratto. Anche se il metodo non restituisce alcuna risposta (`void` in C# o `Sub` in Visual Basic), nell'infrastruttura viene creato e inviato un messaggio vuoto al chiamante. Per impedire l'invio di un messaggio di risposta vuoto, utilizzare un contratto unidirezionale per l'operazione.  
   
 ### <a name="to-create-a-request-reply-contract"></a>Per creare un contratto request/reply  
@@ -20,7 +20,7 @@ Un contratto di tipo request/reply specifica un metodo che restituisce una rispo
   
 3. Applicare l'attributo <xref:System.ServiceModel.OperationContractAttribute> a ciascun metodo che i client possono richiamare.  
   
-4. Facoltativo. Impostare il valore della proprietà <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> su `true` per impedire l'invio di un messaggio di risposta vuoto. Per impostazione predefinita, tutte le operazioni sono contratti di tipo request/reply.  
+4. Facoltativa. Impostare il valore della proprietà <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> su `true` per impedire l'invio di un messaggio di risposta vuoto. Per impostazione predefinita, tutte le operazioni sono contratti di tipo request/reply.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente è definito un contratto per un servizio calcolatrice che fornisce metodi `Add` e `Subtract`. Il metodo `Multiply` privato non fa parte del contratto perché non è contrassegnato dalla classe <xref:System.ServiceModel.OperationContractAttribute> e quindi non è accessibile ai client.  
@@ -35,20 +35,20 @@ public interface ICalculator
     // It would be equivalent to write explicitly:
     // [OperationContract(IsOneWay=false)]
     int Add(int a, int b);
-    
+
     [OperationContract]
     int Subtract(int a, int b);
-    
+
     int Multiply(int a, int b)
 }
 ```
   
-- Per altre informazioni su come specificare contratti di operazione, vedere la <xref:System.ServiceModel.OperationContractAttribute> classi e <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> proprietà.  
+- Per altre informazioni su come specificare <xref:System.ServiceModel.OperationContractAttribute> i contratti <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> di operazione, vedere la classe e la proprietà .  
   
-- L'applicazione degli attributi <xref:System.ServiceModel.ServiceContractAttribute> e <xref:System.ServiceModel.OperationContractAttribute> determina la generazione automatica delle definizioni del contratto di servizio in un documento del linguaggio di descrizione dei servizi Web (WSDL, Web Services Description Language) dopo la distribuzione del servizio. Il documento viene scaricato aggiungendo l'elemento `?wsdl` all'indirizzo di base HTTP per il servizio, Ad esempio, `http://microsoft/CalculatorService?wsdl`.  
+- L'applicazione degli attributi <xref:System.ServiceModel.ServiceContractAttribute> e <xref:System.ServiceModel.OperationContractAttribute> determina la generazione automatica delle definizioni del contratto di servizio in un documento del linguaggio di descrizione dei servizi Web (WSDL, Web Services Description Language) dopo la distribuzione del servizio. Il documento viene scaricato aggiungendo l'elemento `?wsdl` all'indirizzo di base HTTP per il servizio, Ad esempio, usare `http://microsoft/CalculatorService?wsdl`  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.ServiceModel.OperationContractAttribute>
 - [Progettazione dei contratti di servizio](../../../../docs/framework/wcf/designing-service-contracts.md)
-- [Procedura: Creare un contratto Duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [Procedura: creare un contratto duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)

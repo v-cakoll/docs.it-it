@@ -3,10 +3,10 @@ title: Collaborazione peer-to-peer
 ms.date: 03/30/2017
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
 ms.openlocfilehash: 7cf92f6bf3c269e584cb8b3cdcf910be5b89fd7e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047389"
 ---
 # <a name="peer-to-peer-collaboration"></a>Collaborazione peer-to-peer

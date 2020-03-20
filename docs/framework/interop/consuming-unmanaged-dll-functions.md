@@ -14,11 +14,11 @@ helpviewer_keywords:
 - DLL functions
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 ms.openlocfilehash: 7ec1f129dcc19300dd5a4e7c5e627d9e0edf29a1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123655"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399973"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Utilizzo di funzioni di DLL non gestite
 Platform invoke è un servizio che consente al codice gestito di chiamare funzioni non gestite implementate in librerie di collegamento dinamico (DLL), ad esempio quelle disponibili nell'API Windows. Individua e richiama una funzione esportata ed esegue il marshalling degli argomenti (Integer, stringhe, matrici, strutture e così via) nel limite dell'interazione, in base alle necessità.  
@@ -39,9 +39,9 @@ Platform invoke è un servizio che consente al codice gestito di chiamare funzio
   
      [Visual Basic] Usare l'istruzione **Declare** con le parole chiave **Function** e **Lib**. In pochissimi casi, è possibile usare **DllImportAttribute** con le parole chiave **Shared Function**. Questi casi vengono illustrati più avanti in questa sezione.  
   
-     [C#] Usare **DllImportAttribute** per identificare la DLL e la funzione. Contrassegnare il metodo con i modificatori **static** ed **extern**.  
+     [Cè] Utilizzare **DllImportAttribute** per identificare la DLL e la funzione. Contrassegnare il metodo con i modificatori **static** ed **extern**.  
   
-     [C++] Usare **DllImportAttribute** per identificare la DLL e la funzione. Contrassegnare il metodo o la funzione wrapper con **extern "C"** .  
+     [C++] Usare **DllImportAttribute** per identificare la DLL e la funzione. Contrassegnare il metodo o la funzione wrapper con **extern "C"**.  
   
 4. [Chiamare una funzione DLL](calling-a-dll-function.md).  
   
@@ -50,7 +50,7 @@ Platform invoke è un servizio che consente al codice gestito di chiamare funzio
  Per alcuni esempi che mostrano come costruire dichiarazioni basate su .NET da usare con platform invoke, vedere , vedere [Marshalling dei dati con platform invoke](marshaling-data-with-platform-invoke.md).  
   
 ## <a name="a-closer-look-at-platform-invoke"></a>Informazioni dettagliate su platform invoke  
- Platform invoke si basa sui metadati per individuare le funzioni esportate ed effettuare il marshalling degli argomenti in fase di esecuzione. Nella figura seguente viene illustrato questo processo.  
+ Platform invoke si basa sui metadati per individuare le funzioni esportate ed effettuare il marshalling degli argomenti in fase di esecuzione. Questo processo viene illustrato nella figura seguente.  
   
  ![Diagramma che illustra una chiamata PInvoke.](./media/consuming-unmanaged-dll-functions/platform-invoke-call.gif)  
   

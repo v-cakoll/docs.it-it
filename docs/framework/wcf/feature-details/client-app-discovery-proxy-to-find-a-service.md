@@ -1,16 +1,16 @@
 ---
-title: "Procedura: Implementare un'applicazione client per usare il proxy di individuazione e cercare un servizio"
+title: "Procedura: implementare un'applicazione client che usa il proxy di individuazione per cercare un servizio"
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-ms.openlocfilehash: 30db2bfc6191b1703f6d63ec2a925df42ecc93e4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 33ee5d2c9206b16b1667abd5f6d6c811ff955969
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963869"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185378"
 ---
-# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Procedura: Implementare un'applicazione client per usare il proxy di individuazione e cercare un servizio
-Quello che segue è il terzo di tre argomenti incentrato sull'implementazione di un proxy di individuazione. Nell'argomento precedente, [procedura: Implementare un servizio individuabile che esegue la registrazione con il proxy](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)di individuazione, è stato implementato un servizio WCF che si registra con il proxy di individuazione. In questo argomento viene creato un client WCF che utilizza il proxy di individuazione per trovare il servizio WCF.  
+# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Procedura: implementare un'applicazione client che usa il proxy di individuazione per cercare un servizio
+Quello che segue è il terzo di tre argomenti incentrato sull'implementazione di un proxy di individuazione. Nell'argomento precedente, [Procedura: implementare un servizio individuabile che si registra con il proxy](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)di individuazione , è stato implementato un servizio WCF che si registra con il proxy di individuazione. In questo argomento si crea un client WCF che utilizza il proxy di individuazione per trovare il servizio WCF.  
   
 ### <a name="implement-the-client"></a>Implementare il client  
   
@@ -62,7 +62,7 @@ Quello che segue è il terzo di tre argomenti incentrato sull'implementazione di
     }  
     ```  
   
-5. Aggiungere al metodo `Main` il seguente codice.  
+5. Aggiungere il codice seguente al metodo `Main` .  
   
     ```csharp  
     public static void Main()  
@@ -79,7 +79,7 @@ Quello che segue è il terzo di tre argomenti incentrato sull'implementazione di
 
         try  
         {  
-            // Search for services that implement ICalculatorService              
+            // Search for services that implement ICalculatorService
             FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculatorService)));  
 
             Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endpoints.Count);  
@@ -101,7 +101,7 @@ Quello che segue è il terzo di tre argomenti incentrato sull'implementazione di
     }  
     ```  
   
- L'implementazione dell'applicazione client è stata completata. Continuare con [la procedura seguente: Testare il proxy](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)di individuazione.  
+ L'implementazione dell'applicazione client è stata completata. Continuare con [Procedura: Testare il proxy di individuazione](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).  
   
 ## <a name="example"></a>Esempio  
  Di seguito è riportato il codice completo per questo argomento.  
@@ -226,7 +226,7 @@ namespace Microsoft.Samples.Discovery
   
             try  
             {  
-                // Find ICalculatorService endpoints              
+                // Find ICalculatorService endpoints
                 FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculatorService)));  
   
                 Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endpoints.Count);  
@@ -284,5 +284,5 @@ namespace Microsoft.Samples.Discovery
 ## <a name="see-also"></a>Vedere anche
 
 - [Panoramica di WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [Procedura: Implementare un proxy di individuazione](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [Procedura: Implementare un servizio individuabile che esegue la registrazione con il proxy di individuazione](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [Procedura: implementare un proxy di individuazione](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
+- [Procedura: implementare un servizio individuabile che esegue la registrazione al proxy di individuazione](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)

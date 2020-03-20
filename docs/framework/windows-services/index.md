@@ -12,10 +12,10 @@ helpviewer_keywords:
 ms.assetid: ba72d648-9553-4849-b829-069ad5ea014b
 author: ghogen
 ms.openlocfilehash: 61f969c22ac06bd6ed20ccfa9124db3bb35d0692
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71053548"
 ---
 # <a name="develop-windows-service-apps"></a>Sviluppare app di servizio Windows
@@ -27,11 +27,11 @@ Usando Visual Studio o .NET Framework SDK, è possibile creare facilmente serviz
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 
-[Introduzione alle applicazioni di servizio Windows](introduction-to-windows-service-applications.md)
+[Introduzione alle applicazioni di servizio WindowsIntroduction to Windows Service Applications](introduction-to-windows-service-applications.md)
 
 Offre una panoramica sulle applicazioni servizio Windows, sulla durata di un servizio e sulle differenze tra le applicazioni servizio e altri tipi di progetto comuni.
 
-[Procedura dettagliata: Creazione di un'applicazione di servizio Windows in Progettazione componenti](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+[Procedura dettagliata: creazione di un'applicazione di servizio Windows in Progettazione componenti](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
 
 Offre un esempio di creazione di un servizio in Visual Basic e Visual C#.
 
