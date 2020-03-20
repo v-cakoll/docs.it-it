@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: Creare un endpoint di servizio nella configurazione'
+title: 'Procedura: creare un endpoint di servizio nella configurazione'
 ms.date: 06/16/2016
 ms.assetid: f474e25d-2a27-4f31-84c5-395c442b8e70
-ms.openlocfilehash: 63a40576b805952197cec5af2f89a5dc4b5d3545
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9687d9537d6f166a02b79261743050168f677261
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787647"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185006"
 ---
-# <a name="how-to-create-a-service-endpoint-in-configuration"></a><span data-ttu-id="8f41d-102">Procedura: Creare un endpoint di servizio nella configurazione</span><span class="sxs-lookup"><span data-stu-id="8f41d-102">How to: Create a Service Endpoint in Configuration</span></span>
-<span data-ttu-id="8f41d-103">Gli endpoint forniscono ai client l'accesso alla funzionalità che offre un servizio Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="8f41d-103">Endpoints provide clients with access to the functionality a Windows Communication Foundation (WCF) service offers.</span></span> <span data-ttu-id="8f41d-104">È possibile definire uno o più endpoint per un servizio usando una combinazione di indirizzi di endpoint assoluti e relativi. In alternativa, se non si definisce alcun endpoint per il servizio, il runtime ne fornirà automaticamente alcuni per impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="8f41d-104">You can define one or more endpoints for a service by using a combination of relative and absolute endpoint addresses, or if you do not define any service endpoints, the runtime provides some by default for you.</span></span> <span data-ttu-id="8f41d-105">In questo argomento viene illustrato come aggiungere endpoint usando un file di configurazione che contiene indirizzi sia relativi che assoluti.</span><span class="sxs-lookup"><span data-stu-id="8f41d-105">This topic shows how to add endpoints using a configuration file that contain both relative and absolute addresses.</span></span>  
+# <a name="how-to-create-a-service-endpoint-in-configuration"></a><span data-ttu-id="1d1a2-102">Procedura: creare un endpoint di servizio nella configurazione</span><span class="sxs-lookup"><span data-stu-id="1d1a2-102">How to: Create a Service Endpoint in Configuration</span></span>
+<span data-ttu-id="1d1a2-103">Gli endpoint forniscono ai client l'accesso alle funzionalità offerte da un servizio Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="1d1a2-103">Endpoints provide clients with access to the functionality a Windows Communication Foundation (WCF) service offers.</span></span> <span data-ttu-id="1d1a2-104">È possibile definire uno o più endpoint per un servizio usando una combinazione di indirizzi di endpoint assoluti e relativi. In alternativa, se non si definisce alcun endpoint per il servizio, il runtime ne fornirà automaticamente alcuni per impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="1d1a2-104">You can define one or more endpoints for a service by using a combination of relative and absolute endpoint addresses, or if you do not define any service endpoints, the runtime provides some by default for you.</span></span> <span data-ttu-id="1d1a2-105">In questo argomento viene illustrato come aggiungere endpoint usando un file di configurazione che contiene indirizzi sia relativi che assoluti.</span><span class="sxs-lookup"><span data-stu-id="1d1a2-105">This topic shows how to add endpoints using a configuration file that contain both relative and absolute addresses.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8f41d-106">Esempio</span><span class="sxs-lookup"><span data-stu-id="8f41d-106">Example</span></span>  
- <span data-ttu-id="8f41d-107">Nella configurazione del servizio seguente vengono specificati un indirizzo di base e cinque endpoint.</span><span class="sxs-lookup"><span data-stu-id="8f41d-107">The following service configuration specifies a base address and five endpoints.</span></span>  
+## <a name="example"></a><span data-ttu-id="1d1a2-106">Esempio</span><span class="sxs-lookup"><span data-stu-id="1d1a2-106">Example</span></span>  
+ <span data-ttu-id="1d1a2-107">Nella configurazione del servizio seguente vengono specificati un indirizzo di base e cinque endpoint.</span><span class="sxs-lookup"><span data-stu-id="1d1a2-107">The following service configuration specifies a base address and five endpoints.</span></span>  
   
 ```xml  
 <configuration>  
@@ -69,11 +69,11 @@ ms.locfileid: "61787647"
 </configuration>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="8f41d-108">Esempio</span><span class="sxs-lookup"><span data-stu-id="8f41d-108">Example</span></span>  
- <span data-ttu-id="8f41d-109">L'indirizzo di base viene specificato usando l'elemento `add`, in service/host/baseAddresses, come illustrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="8f41d-109">The base address is specified using the `add` element, under service/host/baseAddresses, as shown in the following sample.</span></span>  
+## <a name="example"></a><span data-ttu-id="1d1a2-108">Esempio</span><span class="sxs-lookup"><span data-stu-id="1d1a2-108">Example</span></span>  
+ <span data-ttu-id="1d1a2-109">L'indirizzo di base viene specificato usando l'elemento `add`, in service/host/baseAddresses, come illustrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="1d1a2-109">The base address is specified using the `add` element, under service/host/baseAddresses, as shown in the following sample.</span></span>  
   
 ```xml  
-<service   
+<service
     name="Microsoft.ServiceModel.Samples.CalculatorService">  
   <host>  
     <baseAddresses>  
@@ -82,17 +82,17 @@ ms.locfileid: "61787647"
   </host>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="8f41d-110">Esempio</span><span class="sxs-lookup"><span data-stu-id="8f41d-110">Example</span></span>  
- <span data-ttu-id="8f41d-111">La prima definizione dell'endpoint descritta nella configurazione di esempio seguente specifica un indirizzo relativo, che indica che l'indirizzo endpoint è una combinazione dell'indirizzo di base e dell'indirizzo relativo, in base alle regole di composizione URI (Uniform Resource Identifier).</span><span class="sxs-lookup"><span data-stu-id="8f41d-111">The first endpoint definition shown in the following sample specifies a relative address, which means the endpoint address is a combination of the base address and the relative address following the rules of Uniform Resource Identifier (URI) composition.</span></span> <span data-ttu-id="8f41d-112">L'indirizzo relativo è vuoto (""), pertanto l'indirizzo endpoint corrisponde all'indirizzo di base.</span><span class="sxs-lookup"><span data-stu-id="8f41d-112">The relative address is empty (""), so the endpoint address is the same as the base address.</span></span> <span data-ttu-id="8f41d-113">L'indirizzo endpoint effettivo è `http://localhost:8000/servicemodelsamples/service`.</span><span class="sxs-lookup"><span data-stu-id="8f41d-113">The actual endpoint address is `http://localhost:8000/servicemodelsamples/service`.</span></span>  
+## <a name="example"></a><span data-ttu-id="1d1a2-110">Esempio</span><span class="sxs-lookup"><span data-stu-id="1d1a2-110">Example</span></span>  
+ <span data-ttu-id="1d1a2-111">La prima definizione dell'endpoint descritta nella configurazione di esempio seguente specifica un indirizzo relativo, che indica che l'indirizzo endpoint è una combinazione dell'indirizzo di base e dell'indirizzo relativo, in base alle regole di composizione URI (Uniform Resource Identifier).</span><span class="sxs-lookup"><span data-stu-id="1d1a2-111">The first endpoint definition shown in the following sample specifies a relative address, which means the endpoint address is a combination of the base address and the relative address following the rules of Uniform Resource Identifier (URI) composition.</span></span> <span data-ttu-id="1d1a2-112">L'indirizzo relativo è vuoto (""), pertanto l'indirizzo endpoint corrisponde all'indirizzo di base.</span><span class="sxs-lookup"><span data-stu-id="1d1a2-112">The relative address is empty (""), so the endpoint address is the same as the base address.</span></span> <span data-ttu-id="1d1a2-113">L'indirizzo endpoint `http://localhost:8000/servicemodelsamples/service`effettivo è .</span><span class="sxs-lookup"><span data-stu-id="1d1a2-113">The actual endpoint address is `http://localhost:8000/servicemodelsamples/service`.</span></span>  
   
 ```xml  
-<endpoint address=""   
+<endpoint address=""
     binding="wsHttpBinding"  
     contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
-## <a name="example"></a><span data-ttu-id="8f41d-114">Esempio</span><span class="sxs-lookup"><span data-stu-id="8f41d-114">Example</span></span>  
- <span data-ttu-id="8f41d-115">Anche la seconda definizione dell'endpoint specifica un indirizzo relativo, come illustrato nell'esempio di configurazione seguente.</span><span class="sxs-lookup"><span data-stu-id="8f41d-115">The second endpoint definition also specifies a relative address, as shown in the following sample configuration.</span></span> <span data-ttu-id="8f41d-116">L'indirizzo relativo, "test", viene accodato all'indirizzo di base.</span><span class="sxs-lookup"><span data-stu-id="8f41d-116">The relative address, "test", is appended to the base address.</span></span> <span data-ttu-id="8f41d-117">L'indirizzo endpoint effettivo è `http://localhost:8000/servicemodelsamples/service/test`.</span><span class="sxs-lookup"><span data-stu-id="8f41d-117">The actual endpoint address is `http://localhost:8000/servicemodelsamples/service/test`.</span></span>  
+## <a name="example"></a><span data-ttu-id="1d1a2-114">Esempio</span><span class="sxs-lookup"><span data-stu-id="1d1a2-114">Example</span></span>  
+ <span data-ttu-id="1d1a2-115">Anche la seconda definizione dell'endpoint specifica un indirizzo relativo, come illustrato nell'esempio di configurazione seguente.</span><span class="sxs-lookup"><span data-stu-id="1d1a2-115">The second endpoint definition also specifies a relative address, as shown in the following sample configuration.</span></span> <span data-ttu-id="1d1a2-116">L'indirizzo relativo, "test", viene accodato all'indirizzo di base.</span><span class="sxs-lookup"><span data-stu-id="1d1a2-116">The relative address, "test", is appended to the base address.</span></span> <span data-ttu-id="1d1a2-117">L'indirizzo endpoint `http://localhost:8000/servicemodelsamples/service/test`effettivo è .</span><span class="sxs-lookup"><span data-stu-id="1d1a2-117">The actual endpoint address is `http://localhost:8000/servicemodelsamples/service/test`.</span></span>  
   
 ```xml  
 <endpoint address="/test"  
@@ -100,8 +100,8 @@ ms.locfileid: "61787647"
     contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
-## <a name="example"></a><span data-ttu-id="8f41d-118">Esempio</span><span class="sxs-lookup"><span data-stu-id="8f41d-118">Example</span></span>  
- <span data-ttu-id="8f41d-119">La terza definizione dell'endpoint specifica un indirizzo assoluto, come illustrato nell'esempio di configurazione seguente.</span><span class="sxs-lookup"><span data-stu-id="8f41d-119">The third endpoint definition specifies an absolute address, as shown in the following sample configuration.</span></span> <span data-ttu-id="8f41d-120">L'indirizzo di base non ha alcun ruolo nell'indirizzo.</span><span class="sxs-lookup"><span data-stu-id="8f41d-120">The base address plays no role in the address.</span></span> <span data-ttu-id="8f41d-121">L'indirizzo endpoint effettivo è `http://localhost:8001/hello/servicemodelsamples`.</span><span class="sxs-lookup"><span data-stu-id="8f41d-121">The actual endpoint address is `http://localhost:8001/hello/servicemodelsamples`.</span></span>  
+## <a name="example"></a><span data-ttu-id="1d1a2-118">Esempio</span><span class="sxs-lookup"><span data-stu-id="1d1a2-118">Example</span></span>  
+ <span data-ttu-id="1d1a2-119">La terza definizione dell'endpoint specifica un indirizzo assoluto, come illustrato nell'esempio di configurazione seguente.</span><span class="sxs-lookup"><span data-stu-id="1d1a2-119">The third endpoint definition specifies an absolute address, as shown in the following sample configuration.</span></span> <span data-ttu-id="1d1a2-120">L'indirizzo di base non ha alcun ruolo nell'indirizzo.</span><span class="sxs-lookup"><span data-stu-id="1d1a2-120">The base address plays no role in the address.</span></span> <span data-ttu-id="1d1a2-121">L'indirizzo endpoint `http://localhost:8001/hello/servicemodelsamples`effettivo è .</span><span class="sxs-lookup"><span data-stu-id="1d1a2-121">The actual endpoint address is `http://localhost:8001/hello/servicemodelsamples`.</span></span>  
   
 ```xml  
 <endpoint address="http://localhost:8001/hello/servicemodelsamples"  
@@ -109,8 +109,8 @@ ms.locfileid: "61787647"
     contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
-## <a name="example"></a><span data-ttu-id="8f41d-122">Esempio</span><span class="sxs-lookup"><span data-stu-id="8f41d-122">Example</span></span>  
- <span data-ttu-id="8f41d-123">Il quarto indirizzo endpoint specifica un indirizzo assoluto e un trasporto diverso, cioè TCP.</span><span class="sxs-lookup"><span data-stu-id="8f41d-123">The fourth endpoint address specifies an absolute address and a different transport—TCP.</span></span> <span data-ttu-id="8f41d-124">L'indirizzo di base non ha alcun ruolo nell'indirizzo.</span><span class="sxs-lookup"><span data-stu-id="8f41d-124">The base address plays no role in the address.</span></span> <span data-ttu-id="8f41d-125">L'indirizzo dell'endpoint effettivo è net.tcp://localhost:9000/servicemodelsamples/service.</span><span class="sxs-lookup"><span data-stu-id="8f41d-125">The actual endpoint address is net.tcp://localhost:9000/servicemodelsamples/service.</span></span>  
+## <a name="example"></a><span data-ttu-id="1d1a2-122">Esempio</span><span class="sxs-lookup"><span data-stu-id="1d1a2-122">Example</span></span>  
+ <span data-ttu-id="1d1a2-123">Il quarto indirizzo endpoint specifica un indirizzo assoluto e un trasporto diverso, cioè TCP.</span><span class="sxs-lookup"><span data-stu-id="1d1a2-123">The fourth endpoint address specifies an absolute address and a different transport—TCP.</span></span> <span data-ttu-id="1d1a2-124">L'indirizzo di base non ha alcun ruolo nell'indirizzo.</span><span class="sxs-lookup"><span data-stu-id="1d1a2-124">The base address plays no role in the address.</span></span> <span data-ttu-id="1d1a2-125">L'indirizzo dell'endpoint effettivo è net.tcp://localhost:9000/servicemodelsamples/service.</span><span class="sxs-lookup"><span data-stu-id="1d1a2-125">The actual endpoint address is net.tcp://localhost:9000/servicemodelsamples/service.</span></span>  
   
 ```xml  
 <endpoint address="net.tcp://localhost:9000/servicemodelsamples/service"  
@@ -118,8 +118,8 @@ ms.locfileid: "61787647"
     contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
-## <a name="example"></a><span data-ttu-id="8f41d-126">Esempio</span><span class="sxs-lookup"><span data-stu-id="8f41d-126">Example</span></span>  
- <span data-ttu-id="8f41d-127">Per usare gli endpoint predefiniti forniti dal runtime, non specificare alcun endpoint del servizio nel codice né nel file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="8f41d-127">To use the default endpoints provided by the runtime, do not specify any service endpoints in either the code or the configuration file.</span></span> <span data-ttu-id="8f41d-128">In questo esempio, il runtime crea gli endpoint predefiniti all'apertura del servizio.</span><span class="sxs-lookup"><span data-stu-id="8f41d-128">In this example, the runtime creates the default endpoints when the service is opened.</span></span> <span data-ttu-id="8f41d-129">Per altre informazioni su endpoint, associazioni e comportamenti predefiniti, vedere [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) (Configurazione semplificata) e [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md) (Configurazione semplificata per servizi WCF).</span><span class="sxs-lookup"><span data-stu-id="8f41d-129">For more information about default endpoints, bindings, and behaviors, see [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="1d1a2-126">Esempio</span><span class="sxs-lookup"><span data-stu-id="1d1a2-126">Example</span></span>  
+ <span data-ttu-id="1d1a2-127">Per usare gli endpoint predefiniti forniti dal runtime, non specificare alcun endpoint del servizio nel codice né nel file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="1d1a2-127">To use the default endpoints provided by the runtime, do not specify any service endpoints in either the code or the configuration file.</span></span> <span data-ttu-id="1d1a2-128">In questo esempio, il runtime crea gli endpoint predefiniti all'apertura del servizio.</span><span class="sxs-lookup"><span data-stu-id="1d1a2-128">In this example, the runtime creates the default endpoints when the service is opened.</span></span> <span data-ttu-id="1d1a2-129">Per altre informazioni su endpoint, associazioni e comportamenti predefiniti, vedere [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) (Configurazione semplificata) e [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md) (Configurazione semplificata per servizi WCF).</span><span class="sxs-lookup"><span data-stu-id="1d1a2-129">For more information about default endpoints, bindings, and behaviors, see [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>  
   
 ```xml  
 <configuration>  

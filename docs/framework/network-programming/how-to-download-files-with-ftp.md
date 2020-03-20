@@ -7,17 +7,17 @@ dev_langs:
 - vb
 ms.assetid: 892548b8-954a-4f6a-9bca-2ae620c3700f
 ms.openlocfilehash: a0941d42de71029be9aab2fdbc69f8434fb73e2d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "65632978"
 ---
-# <a name="how-to-download-files-with-ftp"></a><span data-ttu-id="efa7c-103">Procedura: Scaricare file con FTP</span><span class="sxs-lookup"><span data-stu-id="efa7c-103">How to: Download files with FTP</span></span>
+# <a name="how-to-download-files-with-ftp"></a><span data-ttu-id="2b3d2-103">Procedura: Scaricare file con FTP</span><span class="sxs-lookup"><span data-stu-id="2b3d2-103">How to: Download files with FTP</span></span>
 
-<span data-ttu-id="efa7c-104">Questo esempio illustra come scaricare un file da un server FTP.</span><span class="sxs-lookup"><span data-stu-id="efa7c-104">This sample shows how to download a file from an FTP server.</span></span>
+<span data-ttu-id="2b3d2-104">Questo esempio illustra come scaricare un file da un server FTP.</span><span class="sxs-lookup"><span data-stu-id="2b3d2-104">This sample shows how to download a file from an FTP server.</span></span>
 
-## <a name="example"></a><span data-ttu-id="efa7c-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="efa7c-105">Example</span></span>
+## <a name="example"></a><span data-ttu-id="2b3d2-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="2b3d2-105">Example</span></span>
 
 ```csharp
 using System;

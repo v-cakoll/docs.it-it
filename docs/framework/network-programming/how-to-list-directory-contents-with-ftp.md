@@ -7,17 +7,17 @@ dev_langs:
 - vb
 ms.assetid: 130c64c9-7b7f-4672-9b3b-d946bd2616c5
 ms.openlocfilehash: 924e6731ce585f127af319fdbfbdc8c12e61c46d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197314"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "61642620"
 ---
-# <a name="how-to-list-directory-contents-with-ftp"></a><span data-ttu-id="35ca4-103">Procedura: Elencare il contenuto della directory con FTP</span><span class="sxs-lookup"><span data-stu-id="35ca4-103">How to: List directory contents with FTP</span></span>
+# <a name="how-to-list-directory-contents-with-ftp"></a><span data-ttu-id="a8d48-103">Procedura: Elencare il contenuto della directory con FTP</span><span class="sxs-lookup"><span data-stu-id="a8d48-103">How to: List directory contents with FTP</span></span>
 
-<span data-ttu-id="35ca4-104">Questo esempio mostra come elencare il contenuto delle directory di un server FTP.</span><span class="sxs-lookup"><span data-stu-id="35ca4-104">This sample shows how to list the directory contents of an FTP server.</span></span>
+<span data-ttu-id="a8d48-104">Questo esempio mostra come elencare il contenuto delle directory di un server FTP.</span><span class="sxs-lookup"><span data-stu-id="a8d48-104">This sample shows how to list the directory contents of an FTP server.</span></span>
 
-## <a name="example"></a><span data-ttu-id="35ca4-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="35ca4-105">Example</span></span>
+## <a name="example"></a><span data-ttu-id="a8d48-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="a8d48-105">Example</span></span>
 
 ```csharp
 using System;
@@ -81,7 +81,7 @@ Namespace Examples.System.Net
 End Namespace
 ```
 
-<span data-ttu-id="35ca4-106">Se è necessario elencare una directory specifica, aggiungere semplicemente la directory alla fine dell'URI usato nel metodo <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>:</span><span class="sxs-lookup"><span data-stu-id="35ca4-106">If you need to list a specific directory, just add the directory to the end of the URI you're using in the <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> method:</span></span>
+<span data-ttu-id="a8d48-106">Se è necessario elencare una directory specifica, aggiungere semplicemente la directory alla fine dell'URI usato nel metodo <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>:</span><span class="sxs-lookup"><span data-stu-id="a8d48-106">If you need to list a specific directory, just add the directory to the end of the URI you're using in the <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> method:</span></span>
 
 ```csharp
 FtpWebRequest request = (FtpWebRequest)WebRequest.Create("ftp://www.contoso.com/your_preferred_directory");

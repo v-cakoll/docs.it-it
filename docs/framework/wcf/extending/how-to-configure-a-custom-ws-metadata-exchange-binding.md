@@ -1,23 +1,23 @@
 ---
-title: "Procedura: Configurare un'associazione WS-Metadata Exchange personalizzata"
+title: "Procedura: configurare un'associazione WS-Metadata Exchange personalizzata"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: b4a4005a23c8c74edecb00475669e019b50a17af
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 4e0c583eeef4bf068c08b273c833506ce80cbc3a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851219"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185601"
 ---
-# <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a><span data-ttu-id="a5349-102">Procedura: Configurare un'associazione WS-Metadata Exchange personalizzata</span><span class="sxs-lookup"><span data-stu-id="a5349-102">How to: Configure a Custom WS-Metadata Exchange Binding</span></span>
-<span data-ttu-id="a5349-103">In questo argomento viene illustrato come configurare un'associazione WS-Metadata Exchange personalizzata.</span><span class="sxs-lookup"><span data-stu-id="a5349-103">This topic will explain how to configure a custom WS-Metadata exchange binding.</span></span> <span data-ttu-id="a5349-104">Windows Communication Foundation (WCF) include quattro associazioni di metadati definite dal sistema, ma è possibile pubblicare i metadati utilizzando qualsiasi binding desiderato.</span><span class="sxs-lookup"><span data-stu-id="a5349-104">Windows Communication Foundation (WCF) includes four system-defined metadata bindings, but you can publish metadata using any binding you want.</span></span> <span data-ttu-id="a5349-105">In questo argomento viene illustrato come pubblicare metadati usando `wsHttpBinding`.</span><span class="sxs-lookup"><span data-stu-id="a5349-105">This topic will show you how to publish metadata using the `wsHttpBinding`.</span></span> <span data-ttu-id="a5349-106">Questa associazione offre la possibilità di esporre i metadati in modo sicuro.</span><span class="sxs-lookup"><span data-stu-id="a5349-106">This binding gives you the option of exposing metadata in a secure way.</span></span> <span data-ttu-id="a5349-107">Il codice in questo articolo è basato sul [Introduzione](../samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="a5349-107">The code in this article is based on the [Getting Started](../samples/getting-started-sample.md).</span></span>  
+# <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a><span data-ttu-id="5e294-102">Procedura: configurare un'associazione WS-Metadata Exchange personalizzata</span><span class="sxs-lookup"><span data-stu-id="5e294-102">How to: Configure a Custom WS-Metadata Exchange Binding</span></span>
+<span data-ttu-id="5e294-103">In questo argomento viene illustrato come configurare un'associazione WS-Metadata Exchange personalizzata.</span><span class="sxs-lookup"><span data-stu-id="5e294-103">This topic will explain how to configure a custom WS-Metadata exchange binding.</span></span> <span data-ttu-id="5e294-104">Windows Communication Foundation (WCF) include quattro associazioni di metadati definite dal sistema, ma è possibile pubblicare i metadati usando qualsiasi associazione desiderata.</span><span class="sxs-lookup"><span data-stu-id="5e294-104">Windows Communication Foundation (WCF) includes four system-defined metadata bindings, but you can publish metadata using any binding you want.</span></span> <span data-ttu-id="5e294-105">In questo argomento viene illustrato come pubblicare metadati usando `wsHttpBinding`.</span><span class="sxs-lookup"><span data-stu-id="5e294-105">This topic will show you how to publish metadata using the `wsHttpBinding`.</span></span> <span data-ttu-id="5e294-106">Questa associazione offre la possibilità di esporre i metadati in modo sicuro.</span><span class="sxs-lookup"><span data-stu-id="5e294-106">This binding gives you the option of exposing metadata in a secure way.</span></span> <span data-ttu-id="5e294-107">Il codice in questo articolo è basato sulla [Guida introduttiva](../samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="5e294-107">The code in this article is based on the [Getting Started](../samples/getting-started-sample.md).</span></span>  
   
-### <a name="using-a-configuration-file"></a><span data-ttu-id="a5349-108">Uso di un file di configurazione</span><span class="sxs-lookup"><span data-stu-id="a5349-108">Using a configuration file</span></span>  
+### <a name="using-a-configuration-file"></a><span data-ttu-id="5e294-108">Uso di un file di configurazione</span><span class="sxs-lookup"><span data-stu-id="5e294-108">Using a configuration file</span></span>  
   
-1. <span data-ttu-id="a5349-109">Nel file di configurazione del servizio aggiungere un comportamento del servizio che contenga il tag `serviceMetadata`:</span><span class="sxs-lookup"><span data-stu-id="a5349-109">In the service's configuration file, add a service behavior that contains the `serviceMetadata` tag:</span></span>  
+1. <span data-ttu-id="5e294-109">Nel file di configurazione del servizio aggiungere un comportamento del servizio che contenga il tag `serviceMetadata`:</span><span class="sxs-lookup"><span data-stu-id="5e294-109">In the service's configuration file, add a service behavior that contains the `serviceMetadata` tag:</span></span>  
   
     ```xml  
     <behaviors>  
@@ -29,14 +29,14 @@ ms.locfileid: "70851219"
     </behaviors>  
     ```  
   
-2. <span data-ttu-id="a5349-110">Aggiungere un attributo `behaviorConfiguration` al tag del servizio che fa riferimento a questo nuovo comportamento:</span><span class="sxs-lookup"><span data-stu-id="a5349-110">Add a `behaviorConfiguration` attribute to the service tag that references this new behavior:</span></span>  
+2. <span data-ttu-id="5e294-110">Aggiungere un attributo `behaviorConfiguration` al tag del servizio che fa riferimento a questo nuovo comportamento:</span><span class="sxs-lookup"><span data-stu-id="5e294-110">Add a `behaviorConfiguration` attribute to the service tag that references this new behavior:</span></span>  
   
     ```xml  
     <service        name="Microsoft.ServiceModel.Samples.CalculatorService"  
-    behaviorConfiguration="CalculatorServiceBehavior">   
+    behaviorConfiguration="CalculatorServiceBehavior">
     ```  
   
-3. <span data-ttu-id="a5349-111">Aggiungere un endpoint dei metadati specificando mex come indirizzo, `wsHttpBinding` come associazione e <xref:System.ServiceModel.Description.IMetadataExchange> come contratto:</span><span class="sxs-lookup"><span data-stu-id="a5349-111">Add a metadata endpoint specifying mex as the address, `wsHttpBinding` as the binding, and <xref:System.ServiceModel.Description.IMetadataExchange> as the contract:</span></span>  
+3. <span data-ttu-id="5e294-111">Aggiungere un endpoint dei metadati specificando mex come indirizzo, `wsHttpBinding` come associazione e <xref:System.ServiceModel.Description.IMetadataExchange> come contratto:</span><span class="sxs-lookup"><span data-stu-id="5e294-111">Add a metadata endpoint specifying mex as the address, `wsHttpBinding` as the binding, and <xref:System.ServiceModel.Description.IMetadataExchange> as the contract:</span></span>  
   
     ```xml  
     <endpoint address="mex"  
@@ -44,7 +44,7 @@ ms.locfileid: "70851219"
               contract="IMetadataExchange" />  
     ```  
   
-4. <span data-ttu-id="a5349-112">Per verificare che l'endpoint dello scambio di metadati stia funzionando correttamente, aggiungere un tag dell'endpoint nel file di configurazione client:</span><span class="sxs-lookup"><span data-stu-id="a5349-112">To verify the metadata exchange endpoint is working correctly add an endpoint tag in the client configuration file:</span></span>  
+4. <span data-ttu-id="5e294-112">Per verificare che l'endpoint dello scambio di metadati stia funzionando correttamente, aggiungere un tag dell'endpoint nel file di configurazione client:</span><span class="sxs-lookup"><span data-stu-id="5e294-112">To verify the metadata exchange endpoint is working correctly add an endpoint tag in the client configuration file:</span></span>  
   
     ```xml  
     <endpoint name="MyMexEndpoint"               address="http://localhost:8000/servicemodelsamples/service/mex"  
@@ -52,7 +52,7 @@ ms.locfileid: "70851219"
               contract="IMetadataExchange"/>  
     ```  
   
-5. <span data-ttu-id="a5349-113">Nel metodo Main() del client creare una nuova istanza di <xref:System.ServiceModel.Description.MetadataExchangeClient>, impostare la proprietà <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A> su `true`, chiamare <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> e quindi eseguire un'iterazione nella raccolta di metadati restituita:</span><span class="sxs-lookup"><span data-stu-id="a5349-113">In the client's Main() method, create a new <xref:System.ServiceModel.Description.MetadataExchangeClient> instance, set its <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A> property to `true`, call <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> and then iterate through the collection of metadata returned:</span></span>  
+5. <span data-ttu-id="5e294-113">Nel metodo Main() del client creare una nuova istanza di <xref:System.ServiceModel.Description.MetadataExchangeClient>, impostare la proprietà <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A> su `true`, chiamare <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> e quindi eseguire un'iterazione nella raccolta di metadati restituita:</span><span class="sxs-lookup"><span data-stu-id="5e294-113">In the client's Main() method, create a new <xref:System.ServiceModel.Description.MetadataExchangeClient> instance, set its <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A> property to `true`, call <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> and then iterate through the collection of metadata returned:</span></span>  
   
     ```csharp
     string mexAddress = "http://localhost:8000/servicemodelsamples/service/mex";  
@@ -64,21 +64,21 @@ ms.locfileid: "70851219"
     Console.WriteLine("Metadata section: " + section.Dialect.ToString());  
     ```  
   
-### <a name="configuring-by-code"></a><span data-ttu-id="a5349-114">Configurazione mediante codice</span><span class="sxs-lookup"><span data-stu-id="a5349-114">Configuring by code</span></span>  
+### <a name="configuring-by-code"></a><span data-ttu-id="5e294-114">Configurazione mediante codice</span><span class="sxs-lookup"><span data-stu-id="5e294-114">Configuring by code</span></span>  
   
-1. <span data-ttu-id="a5349-115">Creare un'istanza dell'associazione <xref:System.ServiceModel.WSHttpBinding>:</span><span class="sxs-lookup"><span data-stu-id="a5349-115">Create a <xref:System.ServiceModel.WSHttpBinding> binding instance:</span></span>  
+1. <span data-ttu-id="5e294-115">Creare un'istanza dell'associazione <xref:System.ServiceModel.WSHttpBinding>:</span><span class="sxs-lookup"><span data-stu-id="5e294-115">Create a <xref:System.ServiceModel.WSHttpBinding> binding instance:</span></span>  
   
     ```csharp  
     WSHttpBinding binding = new WSHttpBinding();  
     ```  
   
-2. <span data-ttu-id="a5349-116">Creare un'istanza di <xref:System.ServiceModel.ServiceHost>:</span><span class="sxs-lookup"><span data-stu-id="a5349-116">Create a <xref:System.ServiceModel.ServiceHost> instance:</span></span>  
+2. <span data-ttu-id="5e294-116">Creare un'istanza di <xref:System.ServiceModel.ServiceHost>:</span><span class="sxs-lookup"><span data-stu-id="5e294-116">Create a <xref:System.ServiceModel.ServiceHost> instance:</span></span>  
   
     ```csharp  
     ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), baseAddress);  
     ```  
   
-3. <span data-ttu-id="a5349-117">Aggiungere un endpoint di servizio e un'istanza di <xref:System.ServiceModel.Description.ServiceMetadataBehavior>:</span><span class="sxs-lookup"><span data-stu-id="a5349-117">Add a service endpoint and add a <xref:System.ServiceModel.Description.ServiceMetadataBehavior> instance:</span></span>  
+3. <span data-ttu-id="5e294-117">Aggiungere un endpoint di servizio e un'istanza di <xref:System.ServiceModel.Description.ServiceMetadataBehavior>:</span><span class="sxs-lookup"><span data-stu-id="5e294-117">Add a service endpoint and add a <xref:System.ServiceModel.Description.ServiceMetadataBehavior> instance:</span></span>  
   
     ```csharp  
     serviceHost.AddServiceEndpoint(typeof(ICalculator), binding, baseAddress);  
@@ -87,13 +87,13 @@ ms.locfileid: "70851219"
     serviceHost.Description.Behaviors.Add(smb);  
     ```  
   
-4. <span data-ttu-id="a5349-118">Aggiungere un endpoint dello scambio di metadati, specificando la classe <xref:System.ServiceModel.WSHttpBinding> creata in precedenza:</span><span class="sxs-lookup"><span data-stu-id="a5349-118">Add a metadata exchange endpoint, specifying the <xref:System.ServiceModel.WSHttpBinding> created earlier:</span></span>  
+4. <span data-ttu-id="5e294-118">Aggiungere un endpoint dello scambio di metadati, specificando la classe <xref:System.ServiceModel.WSHttpBinding> creata in precedenza:</span><span class="sxs-lookup"><span data-stu-id="5e294-118">Add a metadata exchange endpoint, specifying the <xref:System.ServiceModel.WSHttpBinding> created earlier:</span></span>  
   
     ```csharp  
     serviceHost.AddServiceEndpoint(typeof(IMetadataExchange), binding, mexAddress);  
     ```  
   
-5. <span data-ttu-id="a5349-119">Per verificare che l'endpoint dello scambio di metadati stia funzionando correttamente, aggiungere un tag dell'endpoint nel file di configurazione client:</span><span class="sxs-lookup"><span data-stu-id="a5349-119">To verify that the metadata exchange endpoint is working correctly, add an endpoint tag in the client configuration file:</span></span>  
+5. <span data-ttu-id="5e294-119">Per verificare che l'endpoint dello scambio di metadati stia funzionando correttamente, aggiungere un tag dell'endpoint nel file di configurazione client:</span><span class="sxs-lookup"><span data-stu-id="5e294-119">To verify that the metadata exchange endpoint is working correctly, add an endpoint tag in the client configuration file:</span></span>  
   
     ```xml  
     <endpoint name="MyMexEndpoint"               address="http://localhost:8000/servicemodelsamples/service/mex"  
@@ -101,7 +101,7 @@ ms.locfileid: "70851219"
               contract="IMetadataExchange"/>  
     ```  
   
-6. <span data-ttu-id="a5349-120">Nel metodo Main() del client creare una nuova istanza di <xref:System.ServiceModel.Description.MetadataExchangeClient>, impostare la proprietà <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A> su `true`, chiamare <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> e quindi eseguire un'iterazione nella raccolta di metadati restituita:</span><span class="sxs-lookup"><span data-stu-id="a5349-120">In the client's Main() method, create a new <xref:System.ServiceModel.Description.MetadataExchangeClient> instance, set the <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A> property to `true`, call <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> and then iterate through the collection of metadata returned:</span></span>  
+6. <span data-ttu-id="5e294-120">Nel metodo Main() del client creare una nuova istanza di <xref:System.ServiceModel.Description.MetadataExchangeClient>, impostare la proprietà <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A> su `true`, chiamare <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> e quindi eseguire un'iterazione nella raccolta di metadati restituita:</span><span class="sxs-lookup"><span data-stu-id="5e294-120">In the client's Main() method, create a new <xref:System.ServiceModel.Description.MetadataExchangeClient> instance, set the <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A> property to `true`, call <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> and then iterate through the collection of metadata returned:</span></span>  
   
     ```csharp  
     string mexAddress = "http://localhost:8000/servicemodelsamples/service/mex";  
@@ -113,10 +113,10 @@ ms.locfileid: "70851219"
     Console.WriteLine("Metadata section: " + section.Dialect.ToString());  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="a5349-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a5349-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5e294-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5e294-121">See also</span></span>
 
-- [<span data-ttu-id="a5349-122">Comportamento di pubblicazione dei metadati</span><span class="sxs-lookup"><span data-stu-id="a5349-122">Metadata Publishing Behavior</span></span>](../samples/metadata-publishing-behavior.md)
-- [<span data-ttu-id="a5349-123">Recupero di metadati</span><span class="sxs-lookup"><span data-stu-id="a5349-123">Retrieve Metadata</span></span>](../samples/retrieve-metadata.md)
-- [<span data-ttu-id="a5349-124">Metadati</span><span class="sxs-lookup"><span data-stu-id="a5349-124">Metadata</span></span>](../feature-details/metadata.md)
-- [<span data-ttu-id="a5349-125">Pubblicazione di metadati</span><span class="sxs-lookup"><span data-stu-id="a5349-125">Publishing Metadata</span></span>](../feature-details/publishing-metadata.md)
-- [<span data-ttu-id="a5349-126">Pubblicazione di endpoint dei metadati</span><span class="sxs-lookup"><span data-stu-id="a5349-126">Publishing Metadata Endpoints</span></span>](../publishing-metadata-endpoints.md)
+- [<span data-ttu-id="5e294-122">Comportamento di pubblicazione dei metadati</span><span class="sxs-lookup"><span data-stu-id="5e294-122">Metadata Publishing Behavior</span></span>](../samples/metadata-publishing-behavior.md)
+- [<span data-ttu-id="5e294-123">Recupero di metadati</span><span class="sxs-lookup"><span data-stu-id="5e294-123">Retrieve Metadata</span></span>](../samples/retrieve-metadata.md)
+- [<span data-ttu-id="5e294-124">Metadati</span><span class="sxs-lookup"><span data-stu-id="5e294-124">Metadata</span></span>](../feature-details/metadata.md)
+- [<span data-ttu-id="5e294-125">Pubblicazione di metadati</span><span class="sxs-lookup"><span data-stu-id="5e294-125">Publishing Metadata</span></span>](../feature-details/publishing-metadata.md)
+- [<span data-ttu-id="5e294-126">Pubblicazione di endpoint dei metadati</span><span class="sxs-lookup"><span data-stu-id="5e294-126">Publishing Metadata Endpoints</span></span>](../publishing-metadata-endpoints.md)
