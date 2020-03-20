@@ -1,9 +1,9 @@
 ### YamlMime:Landing
-title: Documentazione di .NET per Apache Spark
-summary: Informazioni su come usare .NET per Apache Spark per elaborare batch di dati, flussi in tempo reale, Machine Learning e query ad hoc con Apache Spark ovunque si scriva il codice .NET.
+title: .NET per la documentazione di Apache Spark
+summary: 'Informazioni su come usare .NET per Apache Spark per elaborare batch di dati, flussi in tempo reale, apprendimento automatico e query ad hoc con Apache Spark ovunque si scriva il codice .NET.'
 metadata:
-  title: Documentazione di .NET per Apache Spark
-  description: Informazioni su come usare .NET per Apache Spark per elaborare batch di dati, flussi in tempo reale, Machine Learning e query ad hoc con Apache Spark ovunque si scriva il codice .NET.
+  title: .NET per la documentazione di Apache Spark
+  description: 'Informazioni su come usare .NET per Apache Spark per elaborare batch di dati, flussi in tempo reale, apprendimento automatico e query ad hoc con Apache Spark ovunque si scriva il codice .NET.'
   services: service
   ms.prod: dotnet-spark
   ms.topic: landing-page
@@ -11,50 +11,44 @@ metadata:
   author: mamccrea
   ms.author: mamccrea
   ms.date: 09/11/2019
-  ms.openlocfilehash: b75740fa84fd7c6fa383129075a082c4ea2ccdcc
-  ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
-  ms.translationtype: MT
-  ms.contentlocale: it-IT
-  ms.lasthandoff: 02/21/2020
-  ms.locfileid: "77542806"
 landingContent:
-- title: Informazioni su .NET per Apache Spark
-  linkLists:
-  - linkListType: whats-new
-    links:
-    - text: Documentazione delle novità di .NET
-      url: /dotnet/whats-new/index
-  - linkListType: overview
-    links:
-    - text: Che cos'è .NET per Apache Spark?
-      url: what-is-apache-spark-dotnet.md
-  - linkListType: reference
-    links:
-    - text: Informazioni di riferimento sulle API
-      url: /dotnet/api/?view=spark-dotnet
-    - text: GitHub
-      url: https://github.com/dotnet/spark
-- title: Introduzione
-  linkLists:
-  - linkListType: tutorial
-    links:
-    - text: Introduzione a .NET per Apache Spark
-      url: tutorials/get-started.md
-  - linkListType: learn
-    links:
-    - text: Inizia in 10 minuti su Windows o Linux
-      url: https://dotnet.microsoft.com/learn/data/spark-tutorial/intro
-- title: Distribuire .NET per Apache Spark applicazione
-  linkLists:
-  - linkListType: deploy
-    links:
-    - text: Distribuire in Azure HDInsight
-      url: tutorials/hdinsight-deployment.md
-    - text: Distribuire in AWS EMR Spark
-      url: tutorials/amazon-emr-spark-deployment.md
-    - text: Distribuire in Databricks
-      url: tutorials/databricks-deployment.md
-  - linkListType: how-to-guide
-    links:
-    - text: Eseguire il debug dell'applicazione
-      url: how-to-guides/debug.md
+  - title: Informazioni su .NET per Apache Spark
+    linkLists:
+      - linkListType: whats-new
+        links:
+          - text: Documentazione delle novità di .NET
+            url: /dotnet/whats-new/index
+      - linkListType: overview
+        links:
+          - text: Che cos'è .NET per Apache Spark?
+            url: what-is-apache-spark-dotnet.md
+      - linkListType: reference
+        links:
+          - text: Informazioni di riferimento sulle API
+            url: /dotnet/api/?view=spark-dotnet
+          - text: GitHub
+            url: 'https://github.com/dotnet/spark'
+  - title: Introduzione
+    linkLists:
+      - linkListType: tutorial
+        links:
+          - text: Introduzione a .NET per Apache Spark
+            url: tutorials/get-started.md
+      - linkListType: learn
+        links:
+          - text: Inizia in 10 minuti su Windows o Linux
+            url: 'https://dotnet.microsoft.com/learn/data/spark-tutorial/intro'
+  - title: Distribuire l'applicazione .NET per Apache Spark
+    linkLists:
+      - linkListType: deploy
+        links:
+          - text: Distribuire in Azure HDInsight
+            url: tutorials/hdinsight-deployment.md
+          - text: Distribuire in AWS EMR Spark
+            url: tutorials/amazon-emr-spark-deployment.md
+          - text: Distribuire in Databricks
+            url: tutorials/databricks-deployment.md
+      - linkListType: how-to-guide
+        links:
+          - text: Eseguire il debug dell'applicazione
+            url: how-to-guides/debug.md
