@@ -10,68 +10,68 @@ helpviewer_keywords:
 - trace element
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
-ms.openlocfilehash: 02fd794eb7b7b7f46f7f7bc4e43036cb4a4758ed
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 7d8a989219d84e8604e767456c84c0092bc73b22
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699174"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153166"
 ---
-# <a name="trace-element"></a><span data-ttu-id="969e8-102">\<elemento trace ></span><span class="sxs-lookup"><span data-stu-id="969e8-102">\<trace> Element</span></span>
-<span data-ttu-id="969e8-103">Contiene i listener che raccolgono, archiviano e indirizzano i messaggi di traccia.</span><span class="sxs-lookup"><span data-stu-id="969e8-103">Contains listeners that collect, store, and route tracing messages.</span></span>  
+# <a name="trace-element"></a><span data-ttu-id="7f446-102">\<elemento> di traccia</span><span class="sxs-lookup"><span data-stu-id="7f446-102">\<trace> Element</span></span>
+<span data-ttu-id="7f446-103">Contiene i listener che raccolgono, archiviano e indirizzano i messaggi di traccia.</span><span class="sxs-lookup"><span data-stu-id="7f446-103">Contains listeners that collect, store, and route tracing messages.</span></span>  
   
-[<span data-ttu-id="969e8-104"> **\<configuration>** </span><span class="sxs-lookup"><span data-stu-id="969e8-104">**\<configuration>**</span></span>](../configuration-element.md)  
-<span data-ttu-id="969e8-105">&nbsp;&nbsp;[ **\<System. diagnostics >** ](system-diagnostics-element.md)</span><span class="sxs-lookup"><span data-stu-id="969e8-105">&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)</span></span>  
-<span data-ttu-id="969e8-106">&nbsp;&nbsp;&nbsp;&nbsp; **\<traccia** ></span><span class="sxs-lookup"><span data-stu-id="969e8-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<trace>**</span></span>  
+[<span data-ttu-id="7f446-104">**\<>di configurazione**</span><span class="sxs-lookup"><span data-stu-id="7f446-104">**\<configuration>**</span></span>](../configuration-element.md)  
+<span data-ttu-id="7f446-105">&nbsp;&nbsp;[**\<>system.diagnostics**](system-diagnostics-element.md)</span><span class="sxs-lookup"><span data-stu-id="7f446-105">&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)</span></span>  
+<span data-ttu-id="7f446-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<>traccia**</span><span class="sxs-lookup"><span data-stu-id="7f446-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<trace>**</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="969e8-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="969e8-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7f446-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="7f446-107">Syntax</span></span>  
   
 ```xml  
-<trace autoflush="true|false"   
+<trace autoflush="true|false"
        indentsize="indent value"  
        useGlobalLock="true| false"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="969e8-108">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="969e8-108">Attributes and Elements</span></span>  
- <span data-ttu-id="969e8-109">Le sezioni seguenti descrivono gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="969e8-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="7f446-108">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="7f446-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="7f446-109">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="7f446-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="969e8-110">Attributi</span><span class="sxs-lookup"><span data-stu-id="969e8-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="7f446-110">Attributes</span><span class="sxs-lookup"><span data-stu-id="7f446-110">Attributes</span></span>  
   
-|<span data-ttu-id="969e8-111">Attributo</span><span class="sxs-lookup"><span data-stu-id="969e8-111">Attribute</span></span>|<span data-ttu-id="969e8-112">description</span><span class="sxs-lookup"><span data-stu-id="969e8-112">Description</span></span>|  
+|<span data-ttu-id="7f446-111">Attributo</span><span class="sxs-lookup"><span data-stu-id="7f446-111">Attribute</span></span>|<span data-ttu-id="7f446-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="7f446-112">Description</span></span>|  
 |---------------|-----------------|  
-|`autoflush`|<span data-ttu-id="969e8-113">Attributo facoltativo.</span><span class="sxs-lookup"><span data-stu-id="969e8-113">Optional attribute.</span></span><br /><br /> <span data-ttu-id="969e8-114">Specifica se i listener di traccia scaricano automaticamente il buffer di output dopo ogni operazione di scrittura.</span><span class="sxs-lookup"><span data-stu-id="969e8-114">Specifies whether the trace listeners automatically flush the output buffer after every write operation.</span></span>|  
-|`indentsize`|<span data-ttu-id="969e8-115">Attributo facoltativo.</span><span class="sxs-lookup"><span data-stu-id="969e8-115">Optional attribute.</span></span><br /><br /> <span data-ttu-id="969e8-116">Specifica il numero di spazi da rientrare.</span><span class="sxs-lookup"><span data-stu-id="969e8-116">Specifies the number of spaces to indent.</span></span>|  
-|`useGlobalLock`|<span data-ttu-id="969e8-117">Attributo facoltativo.</span><span class="sxs-lookup"><span data-stu-id="969e8-117">Optional attribute.</span></span><br /><br /> <span data-ttu-id="969e8-118">Indica se deve essere utilizzato il blocco globale.</span><span class="sxs-lookup"><span data-stu-id="969e8-118">Indicates whether the global lock should be used.</span></span>|  
+|`autoflush`|<span data-ttu-id="7f446-113">Attributo facoltativo.</span><span class="sxs-lookup"><span data-stu-id="7f446-113">Optional attribute.</span></span><br /><br /> <span data-ttu-id="7f446-114">Specifica se i listener di traccia scaricano automaticamente il buffer di output dopo ogni operazione di scrittura.</span><span class="sxs-lookup"><span data-stu-id="7f446-114">Specifies whether the trace listeners automatically flush the output buffer after every write operation.</span></span>|  
+|`indentsize`|<span data-ttu-id="7f446-115">Attributo facoltativo.</span><span class="sxs-lookup"><span data-stu-id="7f446-115">Optional attribute.</span></span><br /><br /> <span data-ttu-id="7f446-116">Specifica il numero di spazi per il rientro.</span><span class="sxs-lookup"><span data-stu-id="7f446-116">Specifies the number of spaces to indent.</span></span>|  
+|`useGlobalLock`|<span data-ttu-id="7f446-117">Attributo facoltativo.</span><span class="sxs-lookup"><span data-stu-id="7f446-117">Optional attribute.</span></span><br /><br /> <span data-ttu-id="7f446-118">Indica se deve essere utilizzato il blocco globale.</span><span class="sxs-lookup"><span data-stu-id="7f446-118">Indicates whether the global lock should be used.</span></span>|  
   
-## <a name="autoflush-attribute"></a><span data-ttu-id="969e8-119">AutoFlush (attributo)</span><span class="sxs-lookup"><span data-stu-id="969e8-119">autoflush Attribute</span></span>  
+## <a name="autoflush-attribute"></a><span data-ttu-id="7f446-119">Attributo autoflush</span><span class="sxs-lookup"><span data-stu-id="7f446-119">autoflush Attribute</span></span>  
   
-|<span data-ttu-id="969e8-120">Valore</span><span class="sxs-lookup"><span data-stu-id="969e8-120">Value</span></span>|<span data-ttu-id="969e8-121">description</span><span class="sxs-lookup"><span data-stu-id="969e8-121">Description</span></span>|  
+|<span data-ttu-id="7f446-120">valore</span><span class="sxs-lookup"><span data-stu-id="7f446-120">Value</span></span>|<span data-ttu-id="7f446-121">Descrizione</span><span class="sxs-lookup"><span data-stu-id="7f446-121">Description</span></span>|  
 |-----------|-----------------|  
-|`false`|<span data-ttu-id="969e8-122">Non Scarica automaticamente il buffer di output.</span><span class="sxs-lookup"><span data-stu-id="969e8-122">Does not automatically flush the output buffer.</span></span> <span data-ttu-id="969e8-123">Questa è l'impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="969e8-123">This is the default.</span></span>|  
-|`true`|<span data-ttu-id="969e8-124">Scarica automaticamente il buffer di output.</span><span class="sxs-lookup"><span data-stu-id="969e8-124">Automatically flushes the output buffer.</span></span>|  
+|`false`|<span data-ttu-id="7f446-122">Non scarica automaticamente il buffer di output.</span><span class="sxs-lookup"><span data-stu-id="7f446-122">Does not automatically flush the output buffer.</span></span> <span data-ttu-id="7f446-123">Questa è la modalità predefinita.</span><span class="sxs-lookup"><span data-stu-id="7f446-123">This is the default.</span></span>|  
+|`true`|<span data-ttu-id="7f446-124">Scarica automaticamente il buffer di output.</span><span class="sxs-lookup"><span data-stu-id="7f446-124">Automatically flushes the output buffer.</span></span>|  
   
-## <a name="usegloballock-attribute"></a><span data-ttu-id="969e8-125">Attributo useGlobalLock</span><span class="sxs-lookup"><span data-stu-id="969e8-125">useGlobalLock Attribute</span></span>  
+## <a name="usegloballock-attribute"></a><span data-ttu-id="7f446-125">UseGlobalLock Attributo</span><span class="sxs-lookup"><span data-stu-id="7f446-125">useGlobalLock Attribute</span></span>  
   
-|<span data-ttu-id="969e8-126">Valore</span><span class="sxs-lookup"><span data-stu-id="969e8-126">Value</span></span>|<span data-ttu-id="969e8-127">description</span><span class="sxs-lookup"><span data-stu-id="969e8-127">Description</span></span>|  
+|<span data-ttu-id="7f446-126">valore</span><span class="sxs-lookup"><span data-stu-id="7f446-126">Value</span></span>|<span data-ttu-id="7f446-127">Descrizione</span><span class="sxs-lookup"><span data-stu-id="7f446-127">Description</span></span>|  
 |-----------|-----------------|  
-|`false`|<span data-ttu-id="969e8-128">Non utilizza il blocco globale se il listener è thread-safe. in caso contrario, utilizza il blocco globale.</span><span class="sxs-lookup"><span data-stu-id="969e8-128">Does not use the global lock if the listener is thread safe; otherwise, uses the global lock.</span></span>|  
-|`true`|<span data-ttu-id="969e8-129">Usa il blocco globale indipendentemente dal fatto che il listener sia thread-safe.</span><span class="sxs-lookup"><span data-stu-id="969e8-129">Uses the global lock regardless of whether the listener is thread safe.</span></span> <span data-ttu-id="969e8-130">Questa è l'impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="969e8-130">This is the default.</span></span>|  
+|`false`|<span data-ttu-id="7f446-128">Non utilizza il blocco globale se il listener è thread-safe; in caso contrario, utilizza il blocco globale.</span><span class="sxs-lookup"><span data-stu-id="7f446-128">Does not use the global lock if the listener is thread safe; otherwise, uses the global lock.</span></span>|  
+|`true`|<span data-ttu-id="7f446-129">Utilizza il blocco globale indipendentemente dal fatto che il listener sia thread-safe.</span><span class="sxs-lookup"><span data-stu-id="7f446-129">Uses the global lock regardless of whether the listener is thread safe.</span></span> <span data-ttu-id="7f446-130">Questa è la modalità predefinita.</span><span class="sxs-lookup"><span data-stu-id="7f446-130">This is the default.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="969e8-131">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="969e8-131">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="7f446-131">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="7f446-131">Child Elements</span></span>  
   
-|<span data-ttu-id="969e8-132">Elemento</span><span class="sxs-lookup"><span data-stu-id="969e8-132">Element</span></span>|<span data-ttu-id="969e8-133">description</span><span class="sxs-lookup"><span data-stu-id="969e8-133">Description</span></span>|  
+|<span data-ttu-id="7f446-132">Elemento</span><span class="sxs-lookup"><span data-stu-id="7f446-132">Element</span></span>|<span data-ttu-id="7f446-133">Descrizione</span><span class="sxs-lookup"><span data-stu-id="7f446-133">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="969e8-134">\<listeners></span><span class="sxs-lookup"><span data-stu-id="969e8-134">\<listeners></span></span>](listeners-element-for-trace.md)|<span data-ttu-id="969e8-135">Specifica un listener che raccoglie, archivia e instrada i messaggi.</span><span class="sxs-lookup"><span data-stu-id="969e8-135">Specifies a listener that collects, stores, and routes messages.</span></span>|  
+|[<span data-ttu-id="7f446-134">\<>di ascoltatori</span><span class="sxs-lookup"><span data-stu-id="7f446-134">\<listeners></span></span>](listeners-element-for-trace.md)|<span data-ttu-id="7f446-135">Specifica un listener che raccoglie, archivia e instrada i messaggi.</span><span class="sxs-lookup"><span data-stu-id="7f446-135">Specifies a listener that collects, stores, and routes messages.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="969e8-136">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="969e8-136">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="7f446-136">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="7f446-136">Parent Elements</span></span>  
   
-|<span data-ttu-id="969e8-137">Elemento</span><span class="sxs-lookup"><span data-stu-id="969e8-137">Element</span></span>|<span data-ttu-id="969e8-138">description</span><span class="sxs-lookup"><span data-stu-id="969e8-138">Description</span></span>|  
+|<span data-ttu-id="7f446-137">Elemento</span><span class="sxs-lookup"><span data-stu-id="7f446-137">Element</span></span>|<span data-ttu-id="7f446-138">Descrizione</span><span class="sxs-lookup"><span data-stu-id="7f446-138">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="969e8-139">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="969e8-139">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`system.diagnostics`|<span data-ttu-id="969e8-140">Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.</span><span class="sxs-lookup"><span data-stu-id="969e8-140">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`configuration`|<span data-ttu-id="7f446-139">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="7f446-139">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="7f446-140">Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.</span><span class="sxs-lookup"><span data-stu-id="7f446-140">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="969e8-141">Esempio</span><span class="sxs-lookup"><span data-stu-id="969e8-141">Example</span></span>  
- <span data-ttu-id="969e8-142">Nell'esempio seguente viene illustrato come utilizzare l'elemento `<trace>` per aggiungere il listener `MyListener` alla raccolta di `Listeners`.</span><span class="sxs-lookup"><span data-stu-id="969e8-142">The following example shows how to use the `<trace>` element to add the listener `MyListener` to the `Listeners` collection.</span></span> <span data-ttu-id="969e8-143">`MyListener` crea un file denominato `MyListener.log` e scrive l'output nel file.</span><span class="sxs-lookup"><span data-stu-id="969e8-143">`MyListener` creates a file that is named `MyListener.log` and writes the output to the file.</span></span> <span data-ttu-id="969e8-144">L'attributo `useGlobalLock` è impostato su `false`, che impedisce l'utilizzo del blocco globale se il listener di traccia è thread-safe.</span><span class="sxs-lookup"><span data-stu-id="969e8-144">The `useGlobalLock` attribute is set to `false`, which causes the global lock not to be used if the trace listener is thread safe.</span></span> <span data-ttu-id="969e8-145">L'attributo `autoflush` è impostato su `true`, che fa sì che il listener di traccia scriva nel file indipendentemente dal fatto che venga chiamato il metodo <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="969e8-145">The `autoflush` attribute is set to `true`, which causes the trace listener to write to the file regardless of whether the <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> method is called.</span></span> <span data-ttu-id="969e8-146">L'attributo `indentsize` è impostato su 0 (zero), che fa sì che il listener rientri zero spazi quando viene chiamato il metodo <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="969e8-146">The `indentsize` attribute is set to 0 (zero), which causes the listener to indent zero spaces when the <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> method is called.</span></span>  
+## <a name="example"></a><span data-ttu-id="7f446-141">Esempio</span><span class="sxs-lookup"><span data-stu-id="7f446-141">Example</span></span>  
+ <span data-ttu-id="7f446-142">Nell'esempio seguente viene `<trace>` illustrato come utilizzare `MyListener` l'elemento per aggiungere il listener alla `Listeners` raccolta.</span><span class="sxs-lookup"><span data-stu-id="7f446-142">The following example shows how to use the `<trace>` element to add the listener `MyListener` to the `Listeners` collection.</span></span> <span data-ttu-id="7f446-143">`MyListener`crea un file `MyListener.log` denominato e scrive l'output nel file.</span><span class="sxs-lookup"><span data-stu-id="7f446-143">`MyListener` creates a file that is named `MyListener.log` and writes the output to the file.</span></span> <span data-ttu-id="7f446-144">L'attributo `useGlobalLock` `false`è impostato su , che determina la non utilizzo del blocco globale se il listener di traccia è thread-safe.</span><span class="sxs-lookup"><span data-stu-id="7f446-144">The `useGlobalLock` attribute is set to `false`, which causes the global lock not to be used if the trace listener is thread safe.</span></span> <span data-ttu-id="7f446-145">L'attributo `autoflush` `true`è impostato su , che fa sì che <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> il listener di traccia scriva nel file indipendentemente dal fatto che il metodo venga chiamato o meno.</span><span class="sxs-lookup"><span data-stu-id="7f446-145">The `autoflush` attribute is set to `true`, which causes the trace listener to write to the file regardless of whether the <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> method is called.</span></span> <span data-ttu-id="7f446-146">L'attributo `indentsize` è impostato su 0 (zero), che fa <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> sì che il listener indenta zero spazi quando viene chiamato il metodo.</span><span class="sxs-lookup"><span data-stu-id="7f446-146">The `indentsize` attribute is set to 0 (zero), which causes the listener to indent zero spaces when the <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> method is called.</span></span>  
   
 ```xml  
 <configuration>  
@@ -85,10 +85,10 @@ ms.locfileid: "71699174"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="969e8-147">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="969e8-147">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7f446-147">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7f446-147">See also</span></span>
 
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
-- [<span data-ttu-id="969e8-148">Schema delle impostazioni di traccia e debug</span><span class="sxs-lookup"><span data-stu-id="969e8-148">Trace and Debug Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="7f446-148">Schema delle impostazioni di traccia e debug</span><span class="sxs-lookup"><span data-stu-id="7f446-148">Trace and Debug Settings Schema</span></span>](index.md)

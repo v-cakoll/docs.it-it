@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-ms.openlocfilehash: 7b28cf6e27fa6f5a5d255621d8e21e9a565ddbc4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4ad74d69391da0e815faf9c278f2d9bea03937d4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048106"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180762"
 ---
-# <a name="how-to-set-cache-policy-for-a-request"></a><span data-ttu-id="30593-102">Procedura: Impostare criteri di cache per una richiesta</span><span class="sxs-lookup"><span data-stu-id="30593-102">How to: Set Cache Policy for a Request</span></span>
-<span data-ttu-id="30593-103">L'esempio seguente illustra l'impostazione di criteri di cache per una richiesta.</span><span class="sxs-lookup"><span data-stu-id="30593-103">The following example demonstrates setting a cache policy for a request.</span></span> <span data-ttu-id="30593-104">L'input di esempio è un URI, ad esempio `http://www.contoso.com/`.</span><span class="sxs-lookup"><span data-stu-id="30593-104">The example input is a URI such as `http://www.contoso.com/`.</span></span>  
+# <a name="how-to-set-cache-policy-for-a-request"></a><span data-ttu-id="850b3-102">Procedura: Impostare criteri di cache per una richiesta</span><span class="sxs-lookup"><span data-stu-id="850b3-102">How to: Set Cache Policy for a Request</span></span>
+<span data-ttu-id="850b3-103">L'esempio seguente illustra l'impostazione di criteri di cache per una richiesta.</span><span class="sxs-lookup"><span data-stu-id="850b3-103">The following example demonstrates setting a cache policy for a request.</span></span> <span data-ttu-id="850b3-104">L'input di esempio è un URI, ad esempio `http://www.contoso.com/`.</span><span class="sxs-lookup"><span data-stu-id="850b3-104">The example input is a URI such as `http://www.contoso.com/`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="30593-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="30593-105">Example</span></span>  
- <span data-ttu-id="30593-106">L'esempio di codice seguente crea un criterio di cache che consente di usare la risorsa richiesta dalla cache se non è rimasta nella cache per più di un giorno.</span><span class="sxs-lookup"><span data-stu-id="30593-106">The following code example creates a cache policy that allows the requested resource to be used from the cache if it has not been in the cache for longer than one day.</span></span> <span data-ttu-id="30593-107">L'esempio visualizza un messaggio che indica se la risorsa è stata usata dalla cache, ad esempio `"The response was retrieved from the cache : False."`, quindi visualizza la risorsa.</span><span class="sxs-lookup"><span data-stu-id="30593-107">The example displays a message that indicates whether the resource was used from the cache—for example, `"The response was retrieved from the cache : False."`—and then displays the resource.</span></span> <span data-ttu-id="30593-108">Una richiesta può essere soddisfatta da qualsiasi cache tra il client e il server.</span><span class="sxs-lookup"><span data-stu-id="30593-108">A request can be fulfilled by any cache between the client and server.</span></span>  
+## <a name="example"></a><span data-ttu-id="850b3-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="850b3-105">Example</span></span>  
+ <span data-ttu-id="850b3-106">L'esempio di codice seguente crea un criterio di cache che consente di usare la risorsa richiesta dalla cache se non è rimasta nella cache per più di un giorno.</span><span class="sxs-lookup"><span data-stu-id="850b3-106">The following code example creates a cache policy that allows the requested resource to be used from the cache if it has not been in the cache for longer than one day.</span></span> <span data-ttu-id="850b3-107">L'esempio visualizza un messaggio che indica se la risorsa è stata usata dalla cache, ad esempio `"The response was retrieved from the cache : False."`, quindi visualizza la risorsa.</span><span class="sxs-lookup"><span data-stu-id="850b3-107">The example displays a message that indicates whether the resource was used from the cache—for example, `"The response was retrieved from the cache : False."`—and then displays the resource.</span></span> <span data-ttu-id="850b3-108">Una richiesta può essere soddisfatta da qualsiasi cache tra il client e il server.</span><span class="sxs-lookup"><span data-stu-id="850b3-108">A request can be fulfilled by any cache between the client and server.</span></span>  
   
 ```csharp  
 using System;  
@@ -29,12 +29,12 @@ using System.IO;
 namespace Examples.System.Net.Cache  
 {  
     public class CacheExample  
-    {     
+    {
         public static void UseCacheForOneDay(Uri resource)  
         {  
             // Create a policy that allows items in the cache  
             // to be used if they have been cached one day or less.  
-            HttpRequestCachePolicy requestPolicy =   
+            HttpRequestCachePolicy requestPolicy =
                 new HttpRequestCachePolicy (HttpCacheAgeControl.MaxAge,  
                 TimeSpan.FromDays(1));  
   
@@ -105,10 +105,10 @@ Namespace Examples.System.Net.Cache
 End Namespace  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="30593-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="30593-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="850b3-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="850b3-109">See also</span></span>
 
-- [<span data-ttu-id="30593-110">Gestione della cache per le applicazioni di rete</span><span class="sxs-lookup"><span data-stu-id="30593-110">Cache Management for Network Applications</span></span>](cache-management-for-network-applications.md)
-- [<span data-ttu-id="30593-111">Criteri di cache</span><span class="sxs-lookup"><span data-stu-id="30593-111">Cache Policy</span></span>](cache-policy.md)
-- [<span data-ttu-id="30593-112">Criteri di cache basati sulla posizione</span><span class="sxs-lookup"><span data-stu-id="30593-112">Location-Based Cache Policies</span></span>](location-based-cache-policies.md)
-- [<span data-ttu-id="30593-113">Criteri di cache basati sull'ora</span><span class="sxs-lookup"><span data-stu-id="30593-113">Time-Based Cache Policies</span></span>](time-based-cache-policies.md)
-- [<span data-ttu-id="30593-114">Elemento \<requestCaching> (impostazioni di rete)</span><span class="sxs-lookup"><span data-stu-id="30593-114">\<requestCaching> Element (Network Settings)</span></span>](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [<span data-ttu-id="850b3-110">Gestione della cache per le applicazioni di rete</span><span class="sxs-lookup"><span data-stu-id="850b3-110">Cache Management for Network Applications</span></span>](cache-management-for-network-applications.md)
+- [<span data-ttu-id="850b3-111">Criteri cache</span><span class="sxs-lookup"><span data-stu-id="850b3-111">Cache Policy</span></span>](cache-policy.md)
+- [<span data-ttu-id="850b3-112">Criteri di cache basati sulla posizione</span><span class="sxs-lookup"><span data-stu-id="850b3-112">Location-Based Cache Policies</span></span>](location-based-cache-policies.md)
+- [<span data-ttu-id="850b3-113">Time-Based Cache Policies</span><span class="sxs-lookup"><span data-stu-id="850b3-113">Time-Based Cache Policies</span></span>](time-based-cache-policies.md)
+- [<span data-ttu-id="850b3-114">\<elemento> requestCaching (impostazioni di rete)</span><span class="sxs-lookup"><span data-stu-id="850b3-114">\<requestCaching> Element (Network Settings)</span></span>](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

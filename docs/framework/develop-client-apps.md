@@ -13,51 +13,43 @@ helpviewer_keywords:
 - Visual C#, creating applications
 - client/server applications, Windows applications
 ms.assetid: 2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68
-ms.openlocfilehash: 5cf10a4d50aec561fea4f8537098345f8e03a26a
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: b6b5f47980e7c0c87128b9efb782e637ed7144f4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457983"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79181641"
 ---
-# <a name="develop-client-applications-with-the-net-framework"></a><span data-ttu-id="fdda8-102">Sviluppare applicazioni client con la .NET Framework</span><span class="sxs-lookup"><span data-stu-id="fdda8-102">Develop client applications with the .NET Framework</span></span>
+# <a name="develop-client-applications-with-net-framework"></a><span data-ttu-id="fb3e4-102">Sviluppare applicazioni client con .NET FrameworkDevelop client applications with .NET Framework</span><span class="sxs-lookup"><span data-stu-id="fb3e4-102">Develop client applications with .NET Framework</span></span>
 
-<span data-ttu-id="fdda8-103">Esistono diversi modi per sviluppare applicazioni basate su Windows con .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="fdda8-103">There are several ways to develop Windows-based applications with the .NET Framework.</span></span> <span data-ttu-id="fdda8-104">È possibile usare uno di questi strumenti e framework:</span><span class="sxs-lookup"><span data-stu-id="fdda8-104">You can use any of these tools and frameworks:</span></span>
+<span data-ttu-id="fb3e4-103">Esistono diversi modi per sviluppare applicazioni basate su Windows con .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="fb3e4-103">There are several ways to develop Windows-based applications with .NET Framework.</span></span> <span data-ttu-id="fb3e4-104">È possibile usare uno di questi strumenti e framework:</span><span class="sxs-lookup"><span data-stu-id="fb3e4-104">You can use any of these tools and frameworks:</span></span>
 
-- [<span data-ttu-id="fdda8-105">Piattaforma UWP (Universal Windows Platform)</span><span class="sxs-lookup"><span data-stu-id="fdda8-105">Universal Windows Platform (UWP)</span></span>](https://developer.microsoft.com/windows/apps)
-- [<span data-ttu-id="fdda8-106">Windows Presentation Foundation (WPF)</span><span class="sxs-lookup"><span data-stu-id="fdda8-106">Windows Presentation Foundation (WPF)</span></span>](./wpf/index.md)
-- [<span data-ttu-id="fdda8-107">Windows Form</span><span class="sxs-lookup"><span data-stu-id="fdda8-107">Windows Forms</span></span>](./winforms/index.md)
+- [<span data-ttu-id="fb3e4-105">Piattaforma UWP (Universal Windows Platform)</span><span class="sxs-lookup"><span data-stu-id="fb3e4-105">Universal Windows Platform (UWP)</span></span>](/windows/uwp/)
+- [<span data-ttu-id="fb3e4-106">Windows Presentation Foundation (WPF)</span><span class="sxs-lookup"><span data-stu-id="fb3e4-106">Windows Presentation Foundation (WPF)</span></span>](./wpf/index.md)
+- [<span data-ttu-id="fb3e4-107">Windows Form</span><span class="sxs-lookup"><span data-stu-id="fb3e4-107">Windows Forms</span></span>](./winforms/index.md)
 
-<span data-ttu-id="fdda8-108">Questa sezione include argomenti che descrivono come creare applicazioni basate su Windows con Windows Presentation Foundation o Windows Form.</span><span class="sxs-lookup"><span data-stu-id="fdda8-108">This section contains topics that describe how to create Windows-based applications by using Windows Presentation Foundation or by using Windows Forms.</span></span> <span data-ttu-id="fdda8-109">Tuttavia, è anche possibile creare applicazioni Web con .NET Framework e applicazioni client per computer o dispositivi da rendere disponibili tramite Microsoft Store.</span><span class="sxs-lookup"><span data-stu-id="fdda8-109">However, you can also create web applications using the .NET Framework, and client applications for computers or devices that you make available through the Microsoft Store.</span></span>
+<span data-ttu-id="fb3e4-108">In questa sezione sono contenuti articoli che descrivono come creare applicazioni basate su Windows utilizzando Windows Presentation Foundation o Windows Form.</span><span class="sxs-lookup"><span data-stu-id="fb3e4-108">This section contains articles that describe how to create Windows-based applications by using Windows Presentation Foundation or Windows Forms.</span></span> <span data-ttu-id="fb3e4-109">Tuttavia, è anche possibile creare applicazioni Web utilizzando .NET Framework e applicazioni client per computer o dispositivi resi disponibili tramite Microsoft Store (applicazioni UWP).</span><span class="sxs-lookup"><span data-stu-id="fb3e4-109">However, you can also create web applications using .NET Framework and client applications for computers or devices that you make available through Microsoft Store (UWP apps).</span></span>
 
-## <a name="in-this-section"></a><span data-ttu-id="fdda8-110">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="fdda8-110">In this section</span></span>
+## <a name="related-sections"></a><span data-ttu-id="fb3e4-110">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="fb3e4-110">Related sections</span></span>
 
-[<span data-ttu-id="fdda8-111">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="fdda8-111">Windows Presentation Foundation</span></span>](./wpf/index.md)  
-<span data-ttu-id="fdda8-112">Vengono fornite informazioni sullo sviluppo di applicazioni con WPF.</span><span class="sxs-lookup"><span data-stu-id="fdda8-112">Provides information about developing applications by using WPF.</span></span>
+<span data-ttu-id="fb3e4-111">[Piattaforma Windows universale](/windows/uwp/)</span><span class="sxs-lookup"><span data-stu-id="fb3e4-111">[Universal Windows Platform](/windows/uwp/)</span></span>\
+<span data-ttu-id="fb3e4-112">Viene descritto come creare applicazioni UWP che è possibile rendere disponibili agli utenti tramite Microsoft Store.</span><span class="sxs-lookup"><span data-stu-id="fb3e4-112">Describes how to create UWP applications that you can make available to users through Microsoft Store.</span></span>
 
-[<span data-ttu-id="fdda8-113">Windows Form</span><span class="sxs-lookup"><span data-stu-id="fdda8-113">Windows Forms</span></span>](./winforms/index.md)  
-<span data-ttu-id="fdda8-114">Vengono fornite informazioni sullo sviluppo di applicazioni con Windows Form.</span><span class="sxs-lookup"><span data-stu-id="fdda8-114">Provides information about developing applications by using Windows Forms.</span></span>
-
-## <a name="related-sections"></a><span data-ttu-id="fdda8-115">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="fdda8-115">Related sections</span></span>
-
-[<span data-ttu-id="fdda8-116">Piattaforma UWP (Universal Windows Platform)</span><span class="sxs-lookup"><span data-stu-id="fdda8-116">Universal Windows Platform</span></span>](https://developer.microsoft.com/windows/apps)  
-<span data-ttu-id="fdda8-117">Viene descritto come creare applicazioni per Windows 10 che è possibile mettere a disposizione degli utenti tramite Windows Store.</span><span class="sxs-lookup"><span data-stu-id="fdda8-117">Describes how to create applications for Windows 10 that you can make available to users through the Windows Store.</span></span>
-
-[<span data-ttu-id="fdda8-118">.NET per app UWP</span><span class="sxs-lookup"><span data-stu-id="fdda8-118">.NET for UWP apps</span></span>](https://msdn.microsoft.com/library/windows/apps/mt185501.aspx)  
-<span data-ttu-id="fdda8-119">Viene descritto il supporto di .NET Framework per le app di Windows Store, che è possibile distribuire in computer e dispositivi Windows.</span><span class="sxs-lookup"><span data-stu-id="fdda8-119">Describes the .NET Framework support for Store apps, which can be deployed to Windows computers and devices.</span></span>
-
-<span data-ttu-id="fdda8-120">[.NET API per Windows Phone Silverlight](https://docs.microsoft.com/previous-versions/windows/apps/jj207211\(v=vs.105\))</span><span class="sxs-lookup"><span data-stu-id="fdda8-120">[.NET API for Windows Phone Silverlight](https://docs.microsoft.com/previous-versions/windows/apps/jj207211\(v=vs.105\))</span></span>  
-<span data-ttu-id="fdda8-121">Vengono elencate le API di .NET Framework che è possibile usare per creare app con Silverlight per Windows Phone.</span><span class="sxs-lookup"><span data-stu-id="fdda8-121">Lists the .NET Framework APIs you can use for building apps with Windows Phone Silverlight.</span></span>
+<span data-ttu-id="fb3e4-113">[API .NET per le app UWP](/dotnet/api/index?view=dotnet-uwp-10.0)</span><span class="sxs-lookup"><span data-stu-id="fb3e4-113">[.NET API for UWP apps](/dotnet/api/index?view=dotnet-uwp-10.0)</span></span>\
+<span data-ttu-id="fb3e4-114">Riferimento per i tipi .NET che supportano le app UWP.</span><span class="sxs-lookup"><span data-stu-id="fb3e4-114">Reference for .NET types that support UWP apps.</span></span>
   
-[<span data-ttu-id="fdda8-122">Sviluppo per piattaforme multiple</span><span class="sxs-lookup"><span data-stu-id="fdda8-122">Developing for Multiple Platforms</span></span>](../standard/cross-platform/index.md)  
-<span data-ttu-id="fdda8-123">Vengono descritti i diversi modi disponibili per usare .NET Framework con i diversi tipi di app client.</span><span class="sxs-lookup"><span data-stu-id="fdda8-123">Describes the different methods you can use the .NET Framework to target multiple client app types.</span></span>
+<span data-ttu-id="fb3e4-115">[Sviluppare per più piattaformeDevelop for Multiple Platforms](../standard/cross-platform/index.md)</span><span class="sxs-lookup"><span data-stu-id="fb3e4-115">[Develop for Multiple Platforms](../standard/cross-platform/index.md)</span></span>\
+<span data-ttu-id="fb3e4-116">Vengono descritti i diversi metodi che è possibile utilizzare .NET Framework per la destinazione di più tipi di app client.</span><span class="sxs-lookup"><span data-stu-id="fb3e4-116">Describes the different methods you can use .NET Framework to target multiple client app types.</span></span>
 
-[<span data-ttu-id="fdda8-124">Introduzione a siti Web ASP.NET</span><span class="sxs-lookup"><span data-stu-id="fdda8-124">Get Started with ASP.NET Web Sites</span></span>](https://www.asp.net/get-started/websites)  
-<span data-ttu-id="fdda8-125">Vengono descritti i diversi modi in cui sviluppare app Web con ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="fdda8-125">Describes the ways you can develop web apps using ASP.NET.</span></span>
+<span data-ttu-id="fb3e4-117">[Introduzione ai siti Web ASP.NET](https://dotnet.microsoft.com/apps/aspnet/web-apps)</span><span class="sxs-lookup"><span data-stu-id="fb3e4-117">[Get Started with ASP.NET Web Sites](https://dotnet.microsoft.com/apps/aspnet/web-apps)</span></span>\
+<span data-ttu-id="fb3e4-118">Vengono descritti i diversi modi in cui sviluppare app Web con ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="fb3e4-118">Describes the ways you can develop web apps using ASP.NET.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="fdda8-126">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="fdda8-126">See also</span></span>
+<span data-ttu-id="fb3e4-119">[API .NET per Silverlight per Windows Phone](https://docs.microsoft.com/previous-versions/windows/apps/jj207211\(v=vs.105\))</span><span class="sxs-lookup"><span data-stu-id="fb3e4-119">[.NET API for Windows Phone Silverlight](https://docs.microsoft.com/previous-versions/windows/apps/jj207211\(v=vs.105\))</span></span>\
+<span data-ttu-id="fb3e4-120">Elenca le API di .NET Framework che è possibile utilizzare per la creazione di app con Silverlight per Windows Phone.</span><span class="sxs-lookup"><span data-stu-id="fb3e4-120">Lists .NET Framework APIs you can use for building apps with Windows Phone Silverlight.</span></span>
 
-- [<span data-ttu-id="fdda8-127">.NET Standard</span><span class="sxs-lookup"><span data-stu-id="fdda8-127">.NET Standard</span></span>](../standard/net-standard.md)
-- [<span data-ttu-id="fdda8-128">Panoramica</span><span class="sxs-lookup"><span data-stu-id="fdda8-128">Overview</span></span>](./get-started/overview.md)
-- [<span data-ttu-id="fdda8-129">Guida di sviluppo</span><span class="sxs-lookup"><span data-stu-id="fdda8-129">Development Guide</span></span>](./development-guide.md)
-- [<span data-ttu-id="fdda8-130">Applicazioni di servizi Windows</span><span class="sxs-lookup"><span data-stu-id="fdda8-130">Windows Service Applications</span></span>](./windows-services/index.md)
+## <a name="see-also"></a><span data-ttu-id="fb3e4-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="fb3e4-121">See also</span></span>
+
+- [<span data-ttu-id="fb3e4-122">.NET Standard</span><span class="sxs-lookup"><span data-stu-id="fb3e4-122">.NET Standard</span></span>](../standard/net-standard.md)
+- [<span data-ttu-id="fb3e4-123">Panoramica</span><span class="sxs-lookup"><span data-stu-id="fb3e4-123">Overview</span></span>](./get-started/overview.md)
+- [<span data-ttu-id="fb3e4-124">Guida di sviluppo</span><span class="sxs-lookup"><span data-stu-id="fb3e4-124">Development Guide</span></span>](./development-guide.md)
+- [<span data-ttu-id="fb3e4-125">Applicazioni di servizio Windows</span><span class="sxs-lookup"><span data-stu-id="fb3e4-125">Windows Service Applications</span></span>](./windows-services/index.md)
