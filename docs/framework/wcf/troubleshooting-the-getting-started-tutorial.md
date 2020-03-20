@@ -1,102 +1,102 @@
 ---
-title: Risolvere i problemi relativi alle esercitazioni introduttive Windows Communication Foundation
+title: Risolvere i problemi relativi alle esercitazioni introduzione a Windows Communication Foundation
 ms.date: 01/25/2019
 ms.assetid: 69a21511-0871-4c41-9a53-93110e84d7fd
-ms.openlocfilehash: 10a2f8f718d802a7aab067b882f0d5cf3dc28dca
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 92e986370fe1b6e067d9f8aebc73179c1ac6a20f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928572"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183097"
 ---
-# <a name="troubleshoot-the-get-started-with-windows-communication-foundation-tutorials"></a>Risolvere i problemi relativi alle esercitazioni introduttive Windows Communication Foundation
+# <a name="troubleshoot-the-get-started-with-windows-communication-foundation-tutorials"></a>Risolvere i problemi relativi alle esercitazioni introduzione a Windows Communication Foundation
 
-Questo articolo fornisce soluzioni per i problemi e gli errori più comuni che possono verificarsi quando si seguono i passaggi [dell'esercitazione: Inizia a usare Windows Communication Foundation applicazioni](getting-started-tutorial.md). 
+In questo articolo vengono fornite le soluzioni per i problemi e gli errori più comuni che è possibile affrontare quando si esegue la procedura descritta [nell'esercitazione: Introduzione alle applicazioni Windows Communication Foundation](getting-started-tutorial.md).
   
-## <a name="common-problems"></a>Problemi comuni
+## <a name="common-problems"></a>Problemi frequenti
 
-**Non è possibile trovare i file di progetto nel disco rigido.**
+**Non riesco a trovare i file di progetto sul mio disco rigido.**
 
- Visual Studio salva i file di progetto nel *\\nome&gt;utente C:\Users&lt;\source\repos*.  
+ Visual Studio salva i file di progetto in *C:\\&lt;&gt;*.  
 
-**Non è possibile trovare il file *app. config* generato da *Svcutil. exe*.**
+**Impossibile trovare il file *App.config* generato da *Svcutil.exe*.**
 
- In Visual Studio la finestra **Aggiungi elemento esistente** Visualizza solo i file con le estensioni seguenti per impostazione predefinita: 
+ In Visual Studio, la finestra **Aggiungi elemento esistente** visualizza solo i file con le estensioni seguenti per impostazione predefinita:
 
-- *.cs* 
-- *.resx* 
-- *.settings*
-- *.xsd* 
-- *.wsdl*
+- *Cs*
+- *resx*
+- *.settings (impostazioni)*
+- *Xsd*
+- *wsdl*
 
-Per visualizzare tutti i tipi di file, selezionare **tutti\*i\*file (.)** nell'elenco a discesa nell'angolo inferiore destro della finestra **Aggiungi elemento esistente** .  
+Per visualizzare tutti i tipi di file, selezionare **Tutti i file\*( .\*)** nell'elenco a discesa nell'angolo inferiore destro della finestra Aggiungi elemento **esistente.**  
   
 ## <a name="common-errors"></a>Errori comuni
 
-### <a name="compile-the-service-application"></a>Compilare l'applicazione di servizio 
+### <a name="compile-the-service-application"></a>Compilare l'applicazione di servizioCompile the service application
 
-**Errore BC30420' Sub Main ' non trovato in ' GettingStartedHost. Module1'.**
+**Errore BC30420 'Sub Main' non trovato in 'GettingStartedHost.Module1'.**
 
-Il punto di ingresso non è corretto per l'applicazione Visual Basic. Apportare le modifiche seguenti:
+Il punto di ingresso non è corretto per l'applicazione Visual Basic. Apportare le seguenti modifiche:
 
-   1. Nella finestra di **Esplora soluzioni** selezionare la cartella **GettingStartedHost** e quindi selezionare **proprietà** dal menu di scelta rapida.
-    a. Nella finestra **GettingStartedHost** , per **oggetto di avvio**, selezionare **Service. Program** (oppure il punto di ingresso per l'applicazione specifica) dall'elenco. 
-    b. Dal menu principale selezionare **file** > **Salva tutto**.
+   1. Nella finestra **Esplora soluzioni** selezionare la cartella **GettingStartedHost** e quindi **scegliere Proprietà** dal menu di scelta rapida.
+    a. Nella finestra **GettingStartedHost,** per **oggetto Startup**, selezionare **Service.Program** (o il punto di ingresso per l'applicazione specifica) dall'elenco.
+    b. Dal menu principale, selezionare**Salva tutto** **.** > 
 
-### <a name="run-the-service-application"></a>Eseguire l'applicazione di servizio 
+### <a name="run-the-service-application"></a>Eseguire l'applicazione di servizioRun the service application
 
-**Http non è stato in grado di registrare\/l'URL ' http:/+: 8000/GettingStarted/CalculatorService '. Il processo non dispone dei diritti di accesso a questo spazio dei nomi.** 
+**HTTP non è stato\/in grado di registrare l'URL 'http: /:8000/GettingStarted/CalculatorService'. Il processo non dispone dei diritti di accesso a questo spazio dei nomi.**
 
- Per accedere correttamente, avviare il processo che ospita il servizio Windows Communication Foundation (WCF) con privilegi amministrativi:
+ Per un accesso corretto, avviare il processo che ospita il servizio Windows Communication Foundation (WCF) con privilegi amministrativi:For proper access, start the process hosting the Windows Communication Foundation (WCF) service with administrative privileges:
 
-- Per Visual Studio: Selezionare il programma di Visual Studio nel menu **Start** , quindi selezionare **altro** > **Esegui come amministratore** dal menu di scelta rapida.
-- Per una finestra della console: Selezionare **prompt dei comandi** nel **menu Start** , quindi selezionare **altro** > **Esegui come amministratore** dal menu di scelta rapida.
-- Per Esplora risorse: Selezionare il file eseguibile, quindi scegliere **Esegui come amministratore** dal menu di scelta rapida.
+- Per Visual Studio: selezionare il programma di Visual Studio nel menu **Start** e quindi selezionare **Altro** > **Esegui come amministratore** dal menu di scelta rapida.
+- Per una finestra della console: selezionare **Prompt dei comandi** nel menu **Start,** quindi selezionare **Altro** > amministratore Esegui**come** amministratore dal menu di scelta rapida.
+- Per Esplora risorse: selezionare l'eseguibile, quindi scegliere **Esegui come amministratore** dal menu di scelta rapida.
 
-### <a name="compile-the-client-application"></a>Compilare l'applicazione client
+### <a name="compile-the-client-application"></a>Compilare l'applicazione clientCompile the client application
 
-**' CalculatorClient ' non contiene una definizione per '\<Method name >' e non è stato trovato alcun metodo di estensione '\<Method name >' che accetta un primo argomento di tipo ' CalculatorClient ' (manca una direttiva using o un riferimento ad assembly**  
+**'CalculatorClient', non contiene una\<definizione per ' nome\<metodo>' e non è stato trovato alcun metodo di estensione ' nome metodo>' che accetta un primo argomento di tipo 'CalculatorClient' (manca una direttiva using o un riferimento all'assembly?)**  
 
-Vengono esposti pubblicamente solo i metodi contrassegnati `ServiceOperationAttribute` con l'attributo. Se si omette l' `ServiceOperationAttribute` attributo da un metodo nell'interfaccia `ICalculator` , viene visualizzato questo messaggio di errore durante la compilazione.  
+Solo i metodi contrassegnati `ServiceOperationAttribute` con l'attributo vengono esposti pubblicamente. Se si omettere `ServiceOperationAttribute` l'attributo `ICalculator` da un metodo nell'interfaccia, viene visualizzato questo messaggio di errore durante la compilazione.  
 
-**Impossibile trovare il tipo o il nome dello spazio dei nomi ' CalculatorClient '. manca una direttiva using o un riferimento a un assembly.**
+**Impossibile trovare il nome del tipo o dello spazio dei nomi 'CalculatorClient' (manca una direttiva using o un riferimento all'assembly?)**
 
- Questo errore viene visualizzato se non si aggiunge il file *generatedProxy.cs* (o *generatedProxy. vb*) al progetto client quando sono stati generati con lo strumento *Svcutil. exe* .  
+ Questo errore viene visualizzato se non si aggiunge il file *generatedProxy.cs* (o *generatedProxy.vb*) al progetto client quando vengono generati con lo strumento *Svcutil.exe.*  
 
 ### <a name="run-the-client-application"></a>Eseguire l'applicazione client
 
-**Eccezione non gestita: System.ServiceModel.EndpointNotFoundException: Non è stato possibile connettersi a'\/http:/localhost: 8000/GettingStarted/CalculatorService '. Codice di errore TCP 10061: Non è stato possibile connettersi perché il computer di destinazione lo ha rifiutato attivamente.**
+**Eccezione non gestita: System.ServiceModel.EndpointNotFoundException: Impossibile\/connettersi a 'http: /localhost:8000/GettingStarted/CalculatorService'. Codice di errore TCP 10061: Impossibile creare alcuna connessione perché il computer di destinazione l'ha rifiutata attivamente.**
 
-Questo errore si verifica se si esegue l'applicazione client senza prima avviare il servizio. Eseguire innanzitutto l'applicazione host per avviare il servizio, quindi eseguire l'applicazione client.
+Questo errore si verifica se si esegue l'applicazione client senza avviare prima il servizio. Eseguire innanzitutto l'applicazione host per avviare il servizio, quindi eseguire l'applicazione client.
 
-### <a name="use-the-svcutilexe-tool"></a>Utilizzare lo strumento Svcutil. exe
-   
-**' Svcutil ' non è riconosciuto come comando interno o esterno, programma eseguibile o file batch.**
+### <a name="use-the-svcutilexe-tool"></a>Utilizzare lo strumento Svcutil.exe
 
- *Svcutil. exe* deve trovarsi nel percorso di sistema. La soluzione più semplice consiste nell'usare il prompt dei comandi di Visual Studio. Dal menu **Start** , selezionare la **versione di Visual \<Studio >** directory  **\<** , quindi selezionare prompt dei comandi per gli sviluppatori per Visual Studio Version >. Questo prompt dei comandi imposta il percorso di sistema sui percorsi corretti per tutti gli strumenti forniti come parte di Visual Studio.  
+**'Svcutil' non è riconosciuto come comando interno o esterno, programma utilizzabile o file batch.**
+
+ *Svcutil.exe* deve essere nel percorso di sistema. La soluzione più semplice consiste nell'utilizzare il prompt dei comandi di Visual Studio.The easiest solution is to use the Visual Studio command prompt. Dal menu **Start** , selezionare la directory **di Visual Studio \<versione>** , quindi selezionare Prompt dei comandi per sviluppatori per la versione vs ** \<>**. Questo prompt dei comandi imposta il percorso di sistema per i percorsi corretti per tutti gli strumenti forniti come parte di Visual Studio.This command prompt sets the system path to the correct locations for all tools shipped as part of Visual Studio.  
   
-### <a name="run-the-service-and-client-applications"></a>Eseguire il servizio e le applicazioni client
+### <a name="run-the-service-and-client-applications"></a>Eseguire il servizio e le applicazioni clientRun the service and client applications
 
-**System.ServiceModel.Security.SecurityNegotiationException: Negoziazione di sicurezza SOAP con ' http\/:/localhost: 8000/GettingStarted/CalculatorService ' per la destinazione '\/http:/localhost: 8000/GettingStarted/CalculatorService ' non riuscita**  
+**System.ServiceModel.Security.SecurityNegotiationException: negoziazione di sicurezza\/SOAP con 'http: /localhost:8000/GettingStarted/CalculatorService' per la destinazione 'http:\//localhost:8000/GettingStarted/CalculatorService' non riuscita**  
 
-Questo errore si verifica in un computer aggiunto a un dominio che non dispone di connettività di rete. Connettere il computer alla rete o disattivare la sicurezza sia per il servizio che per il client. 
+Questo errore si verifica in un computer appartenente a un dominio che non dispone di connettività di rete. Connettere il computer alla rete o disattivare la sicurezza sia per il servizio che per il client.
 
 Per disattivare la sicurezza:
 
-- Per il servizio, sostituire il codice che crea l' `WSHttpBinding` oggetto con il codice seguente:  
+- Per il servizio, sostituire il `WSHttpBinding` codice che crea il codice con il codice seguente:For the service, replace the code that creates the with the following code:  
   
     ```csharp
     // Step 3: Add a service endpoint.
     selfhost.AddServiceEndpoint(typeof(ICalculator), new WSHttpBinding(SecurityMode.None), "CalculatorService");  
     ```
 
-- Per il client, nel file di configurazione aggiornare l'  **\<elemento Security >** nell'  **\<elemento binding >** , come indicato di seguito:  
+- Per il client, nel file ** \<** di configurazione, aggiornare l'elemento di>di sicurezza nell'elemento ** \<>** di associazione come segue:  
   
     ```xml
     <binding name="WSHttpBinding_ICalculator" security mode="None" />
     ```  
 
 ## <a name="see-also"></a>Vedere anche  
- [Introduzione alle applicazioni WCF](getting-started-tutorial.md)  
- [Guida introduttiva alla risoluzione dei problemi di WCF](wcf-troubleshooting-quickstart.md)  
+ [Introduzione alle applicazioni WCFGet started with WCF applications](getting-started-tutorial.md)  
+ [Guida introduttiva alla risoluzione dei problemi di WCFWCF troubleshooting quickstart](wcf-troubleshooting-quickstart.md)  
  [Risoluzione dei problemi di installazione](troubleshooting-setup-issues.md)

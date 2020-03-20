@@ -8,12 +8,12 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-ms.openlocfilehash: 61f5f0f3ec9a4386fa12e7511b4a518f2b56a21c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dedf5ab51ab5cf9befb5bd183968388406df4e5b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123660"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181471"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Procedura: configurare i componenti COM basati su .NET Framework per l'attivazione senza registrazione
 L'attivazione senza registrazione per i componenti basati su .NET Framework risulta solo leggermente più complessa rispetto a quella per i componenti COM. La configurazione richiede due manifesti:  
@@ -42,10 +42,10 @@ L'attivazione senza registrazione per i componenti basati su .NET Framework risu
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
-      <assemblyIdentity type="win32"   
-                        name="myOrganization.myDivision.myComApp"   
-                        version="1.0.0.0"   
-                        processorArchitecture="msil"   
+      <assemblyIdentity type="win32"
+                        name="myOrganization.myDivision.myComApp"
+                        version="1.0.0.0"
+                        processorArchitecture="msil"
       />  
     ```  
   
@@ -54,18 +54,18 @@ L'attivazione senza registrazione per i componenti basati su .NET Framework risu
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
-      <assemblyIdentity type="win32"   
-                        name="myOrganization.myDivision.myComApp"   
-                        version="1.0.0.0"   
-                        processorArchitecture="x86"   
+      <assemblyIdentity type="win32"
+                        name="myOrganization.myDivision.myComApp"
+                        version="1.0.0.0"
+                        processorArchitecture="x86"
                         publicKeyToken="8275b28176rcbbef"  
       />  
       <dependency>  
         <dependentAssembly>  
-          <assemblyIdentity type="win32"   
-                        name="myOrganization.myDivision.myManagedComp"   
-                        version="6.0.0.0"   
-                        processorArchitecture="X86"   
+          <assemblyIdentity type="win32"
+                        name="myOrganization.myDivision.myManagedComp"
+                        version="6.0.0.0"
+                        processorArchitecture="X86"
                         publicKeyToken="8275b28176rcbbef"  
           />  
         </dependentAssembly>  
@@ -103,11 +103,11 @@ L'attivazione senza registrazione per i componenti basati su .NET Framework risu
   
 4. Identificare ogni classe nell'assembly. Usare l'elemento `<clrClass>` per identificare in modo univoco ogni classe nell'assembly gestito. L'elemento, che costituisce un sottoelemento di `<assembly>` dispone degli attributi descritti nella tabella seguente.  
   
-    |Attributo|Descrizione|Richiesto|  
+    |Attributo|Descrizione|Obbligatoria|  
     |---------------|-----------------|--------------|  
-    |`clsid`|Identificatore che specifica la classe da attivare.|Yes|  
+    |`clsid`|Identificatore che specifica la classe da attivare.|Sì|  
     |`description`|Stringa contenente informazioni sul componente. Il valore predefinito è una stringa vuota.|No|  
-    |`name`|Stringa che rappresenta la classe gestita.|Yes|  
+    |`name`|Stringa che rappresenta la classe gestita.|Sì|  
     |`progid`|Identificatore da usare per l'attivazione con associazione tardiva.|No|  
     |`threadingModel`|Modello di threading COM. "Both" è il valore predefinito.|No|  
     |`runtimeVersion`|Specifica la versione di Common Language Runtime (CLR) da usare. Se questo attributo non viene specificato e CLR non è ancora stato caricato, il componente viene caricato con l'ultimo CLR installato prima della versione 4. Se si specifica v1.0.3705, v1.1.4322 o v2.0.50727, la versione esegue automaticamente il roll forward all'ultima versione di CLR installata prima della versione 4 (di solito v2.0.50727). Se è già stata caricata un'altra versione di CLR ed è possibile caricare la versione specificata side-by-side in-process, la versione specificata viene caricata; in caso contrario, viene usato il CLR caricato. Ciò potrebbe causare un errore di caricamento.|No|  
@@ -122,7 +122,7 @@ L'attivazione senza registrazione per i componenti basati su .NET Framework risu
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
            <assemblyIdentity  
                         name="myOrganization.myDivision.myManagedComp"  
-                        version="1.2.3.4"   
+                        version="1.2.3.4"
                         publicKeyToken="8275b28176rcbbef"  
            />  
            <clrClass  
@@ -156,7 +156,7 @@ L'attivazione senza registrazione per i componenti basati su .NET Framework risu
   
      In questa istruzione `myManagedComp.manifest` rappresenta il nome del manifesto del componente da incorporare. Nell'esempio, il nome file dello script è `myresource.rc`.  
   
-2. Compilare lo script tramite il compilatore di risorse di Microsoft Windows (Rc.exe) Al prompt dei comandi digitare il seguente comando:  
+2. Compilare lo script tramite il compilatore di risorse di Microsoft Windows (Rc.exe) Al prompt dei comandi digitare il comando seguente:  
   
      `rc myresource.rc`  
   
@@ -166,11 +166,11 @@ L'attivazione senza registrazione per i componenti basati su .NET Framework risu
   
     `/win32res:myresource.res`  
   
-     Anche in questo caso, `myresource.res` è il nome del file di risorse contenente le risorse incorporate.  
+     Anche `myresource.res` in questo caso, è il nome del file di risorse contenente le risorse incorporate.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Interoperabilità COM senza registrazione](registration-free-com-interop.md)
 - [Requisiti per l'interoperabilità COM senza registrazione](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
-- [Configurazione di componenti COM per l'attivazione senza registrazione](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
+- [Configurazione dei componenti COM per l'attivazione senza registrazione](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
 - [Registration-Free Activation of .NET-Based Components: A Walkthrough](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973915(v=msdn.10)) (Procedura dettagliata per l'attivazione senza registrazione di componenti basati su .NET)

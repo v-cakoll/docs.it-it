@@ -15,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: d627e8b7-a605-40ac-b9bb-da9a3f1b66d9
 topic_type:
 - apiref
-ms.openlocfilehash: 4382d3c9f69df2808f8cd0aaf7f8eaf19bc9891e
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: bd2f67c2d7230d3873b4dc0df73ac1be778a0828
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793673"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179106"
 ---
 # <a name="iclrdatatargetwritevirtual-method"></a>Metodo ICLRDataTarget::WriteVirtual
-Scrive i dati dal buffer specificato nell'indirizzo di memoria virtuale specificato.  
+Scrive i dati dal buffer specificato all'indirizzo di memoria virtuale specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT WriteVirtual (  
     [in] CLRDATA_ADDRESS    address,  
-    [in, size_is(bytesRequested)]   
+    [in, size_is(bytesRequested)]
         BYTE                *buffer,  
     [in] ULONG32            bytesRequested,  
     [out] ULONG32           *bytesWritten  
@@ -39,25 +39,25 @@ HRESULT WriteVirtual (
   
 ## <a name="parameters"></a>Parametri  
  `address`  
- in CLRDATA_ADDRESS che archivia l'indirizzo di memoria virtuale.  
+ [in] Un CLRDATA_ADDRESS in cui viene archiviato l'indirizzo di memoria virtuale.  
   
  `buffer`  
- in Puntatore a un buffer che archivia i dati da scrivere.  
+ [in] Puntatore a un buffer in cui sono archiviati i dati da scrivere.  
   
  `bytesRequested`  
- in Numero di byte da scrivere.  
+ [in] Numero di byte da scrivere.  
   
  `bytesWritten`  
- out Puntatore al numero effettivo di byte scritti.  
+ [fuori] Puntatore al numero effettivo di byte scritti.  
   
-## <a name="requirements"></a>Requisiti di  
+## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** ClrData. idl, ClrData. h  
+ **Intestazione:** ClrData.idl, ClrData.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3fb8e178-342b-4c89-9bcf-f7f834e6cb77
 topic_type:
 - apiref
-ms.openlocfilehash: acb772a64c8f13405f2836bb5f4f308986dce414
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 20c7a90f27defa18a5ef311d1f3a549b81fc5c40
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447650"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175486"
 ---
 # <a name="imetadataimportenummembers-method"></a>Metodo IMetaDataImport::EnumMembers
 Enumera i token MemberDef che rappresentano i membri del tipo specificato.  
@@ -28,11 +28,11 @@ Enumera i token MemberDef che rappresentano i membri del tipo specificato.
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
-HRESULT EnumMembers (   
-   [in, out]  HCORENUM    *phEnum,   
-   [in]  mdTypeDef   cl,   
-   [out] mdToken     rMembers[],   
-   [in]  ULONG       cMax,   
+HRESULT EnumMembers (
+   [in, out]  HCORENUM    *phEnum,
+   [in]  mdTypeDef   cl,
+   [out] mdToken     rMembers[],
+   [in]  ULONG       cMax,
    [out] ULONG       *pcTokens  
 );  
 ```  
@@ -42,35 +42,35 @@ HRESULT EnumMembers (
  [in, out] Puntatore all'enumeratore.  
   
  `cl`  
- in Token TypeDef che rappresenta il tipo di cui è necessario enumerare i membri.  
+ [in] Token TypeDef che rappresenta il tipo i cui membri devono essere enumerati.  
   
  `rMembers`  
- out Matrice utilizzata per conservare i token MemberDef.  
+ [fuori] Matrice utilizzata per contenere i token MemberDef.  
   
  `cMax`  
  [in] Dimensione massima della matrice `rMembers`.  
   
  `pcTokens`  
- out Numero effettivo di token MemberDef restituiti in `rMembers`.  
+ [fuori] Numero effettivo di token MemberDef `rMembers`restituiti in .  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMembers` ha restituito un esito positivo.|  
-|`S_FALSE`|Nessun token MemberDef da enumerare. In tal caso, `pcTokens` è zero.|  
+|`S_OK`|`EnumMembers`restituito con successo.|  
+|`S_FALSE`|Non sono presenti token MemberDef da enumerare. In tal `pcTokens` caso, è zero.|  
   
-## <a name="remarks"></a>Note  
- Quando si enumerano raccolte di membri per una classe, `EnumMembers` restituisce solo i membri (campi e metodi, ma **non** le proprietà o gli eventi) definiti direttamente nella classe. Non restituisce i membri ereditati dalla classe, anche se la classe fornisce un'implementazione per i membri ereditati. Per enumerare i membri ereditati, il chiamante deve esaminare in modo esplicito la catena di ereditarietà. Si noti che le regole per la catena di ereditarietà possono variare a seconda del linguaggio o del compilatore che ha emesso i metadati originali.
- 
- Proprietà ed eventi non vengono enumerati dal `EnumMembers`. Per enumerare tali, utilizzare [EnumProperties](imetadataimport-enumproperties-method.md) o [EnumEvents](imetadataimport-enumevents-method.md).
+## <a name="remarks"></a>Osservazioni  
+ Quando si enumerano raccolte di `EnumMembers` membri per una classe, restituisce solo i membri (campi e metodi, ma **non** le proprietà o gli eventi) definiti direttamente nella classe. Non restituisce alcun membro ereditato dalla classe, anche se la classe fornisce un'implementazione per tali membri ereditati. Per enumerare i membri ereditati, il chiamante deve esaminare in modo esplicito la catena di ereditarietà. Si noti che le regole per la catena di ereditarietà possono variare a seconda del linguaggio o del compilatore che ha generato i metadati originali.
+
+ Le proprietà e gli `EnumMembers`eventi non sono enumerati da . Per enumerarli, utilizzare [EnumProperties](imetadataimport-enumproperties-method.md) o [EnumEvents](imetadataimport-enumevents-method.md).
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Incluso come risorsa in MsCorEE. dll  
+ **Biblioteca:** Incluso come risorsa in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

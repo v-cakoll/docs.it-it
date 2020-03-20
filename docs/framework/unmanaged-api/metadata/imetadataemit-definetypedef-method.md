@@ -15,57 +15,57 @@ helpviewer_keywords:
 ms.assetid: dd11c485-be95-4b97-9cd8-68679a4fb432
 topic_type:
 - apiref
-ms.openlocfilehash: 031996813718a074eebab62ff54a2de52b898c22
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4f1c3e823b35fcf7d5935eee111e042b2291d216
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450220"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175759"
 ---
 # <a name="imetadataemitdefinetypedef-method"></a>Metodo IMetaDataEmit::DefineTypeDef
-Crea una definizione di tipo per un tipo di Common Language Runtime e ottiene un token di metadati per la definizione del tipo.  
+Crea una definizione di tipo per un tipo Common Language Runtime e ottiene un token di metadati per tale definizione di tipo.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
-HRESULT DefineTypeDef (   
-    [in]  LPCWSTR     szTypeDef,   
-    [in]  DWORD       dwTypeDefFlags,   
-    [in]  mdToken     tkExtends,   
-    [in]  mdToken     rtkImplements[],   
+HRESULT DefineTypeDef (
+    [in]  LPCWSTR     szTypeDef,
+    [in]  DWORD       dwTypeDefFlags,
+    [in]  mdToken     tkExtends,
+    [in]  mdToken     rtkImplements[],
     [out] mdTypeDef   *ptd  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `szTypeDef`  
- in Nome del tipo in Unicode.  
+ [in] Nome del tipo in Unicode.  
   
  `dwTypeDefFlags`  
- [in] attributi `TypeDef`. Si tratta di una maschera di maschera dei valori `CoreTypeAttr`.  
+ [in] `TypeDef` attributi. Si tratta di `CoreTypeAttr` una maschera di bit di valori.  
   
  `tkExtends`  
- in Token della classe di base. Deve essere un `mdTypeDef` o un token di `mdTypeRef`.  
+ [in] Token della classe base. Deve essere un `mdTypeDef` o `mdTypeRef` un token.  
   
  `rtkImplements`  
- in Matrice di token che specificano le interfacce implementate da questa classe o interfaccia.  
+ [in] Matrice di token che specificano le interfacce implementate da questa classe o interfaccia.  
   
  `ptd`  
- out Token `mdTypeDef` assegnato.  
+ [fuori] Token `mdTypeDef` assegnato.  
   
 ## <a name="remarks"></a>Osservazioni  
- Un flag in `dwTypeDefFlags` specifica se il tipo da creare è un tipo di riferimento Common Type System (classe o interfaccia) o un tipo di valore Common Type System.  
+ Un flag `dwTypeDefFlags` in specifica se il tipo creato è un tipo di riferimento del sistema di tipi comune (classe o interfaccia) o un tipo di valore di sistema di tipo comune.  
   
- A seconda dei parametri forniti, questo metodo, come effetto collaterale, può anche creare un record `mdInterfaceImpl` per ogni interfaccia ereditata o implementata da questo tipo. Tuttavia, questo metodo non restituisce alcuno di questi token di `mdInterfaceImpl`. Se un client desidera aggiungere o modificare un token di `mdInterfaceImpl` in un secondo momento, è necessario utilizzare l'interfaccia `IMetaDataImport` per enumerarli. Se si desidera utilizzare la semantica COM dell'interfaccia `[default]`, è necessario fornire l'interfaccia predefinita come primo elemento nel `rtkImplements`; un attributo personalizzato impostato sulla classe indicherà che la classe dispone di un'interfaccia predefinita (che viene sempre considerata il primo token di `mdInterfaceImpl` dichiarato per la classe).  
+ A seconda dei parametri forniti, questo metodo, come effetto `mdInterfaceImpl` collaterale, può anche creare un record per ogni interfaccia ereditata o implementata da questo tipo. Tuttavia, questo metodo non `mdInterfaceImpl` restituisce nessuno di questi token. Se un client desidera aggiungere `mdInterfaceImpl` o modificare un `IMetaDataImport` token in un secondo momento, deve utilizzare l'interfaccia per enumerarli. Se si desidera utilizzare la `[default]` semantica COM dell'interfaccia, è necessario `rtkImplements`fornire l'interfaccia predefinita come primo elemento in ; un attributo personalizzato impostato sulla classe indicherà che la classe dispone `mdInterfaceImpl` di un'interfaccia predefinita (che si presuppone sempre essere il primo token dichiarato per la classe).  
   
- Ogni elemento della matrice `rtkImplements` include un token `mdTypeDef` o `mdTypeRef`. L'ultimo elemento nella matrice deve essere `mdTokenNil`.  
+ Ogni elemento `rtkImplements` della matrice `mdTypeDef` `mdTypeRef` contiene un o token. L'ultimo elemento nella `mdTokenNil`matrice deve essere .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Usato come risorsa in MSCorEE. dll  
+ **Biblioteca:** Utilizzato come risorsa in MSCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

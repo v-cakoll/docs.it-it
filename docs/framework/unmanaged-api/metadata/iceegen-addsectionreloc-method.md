@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b500a260-1d57-4953-95e1-c27063f7c8da
 topic_type:
 - apiref
-ms.openlocfilehash: e5940f229e86b46bb8c5d5b2f9920a8261359f65
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 129750644962cee3206b9e38cbeaa77d38dddd71
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436416"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176110"
 ---
 # <a name="iceegenaddsectionreloc-method"></a>Metodo ICeeGen::AddSectionReloc
-Aggiunge un'istruzione. reloc alla codebase.  
+Aggiunge un'istruzione .reloc alla base di codice.  
   
  Questo metodo è obsoleto e non deve essere utilizzato.  
   
@@ -33,30 +33,30 @@ Aggiunge un'istruzione. reloc alla codebase.
 HRESULT AddSectionReloc (  
    [in] HCEESECTION            section,  
    [in] ULONG                  offset,  
-   [in] HCEESECTION            relativeTo,   
+   [in] HCEESECTION            relativeTo,
    [in] CeeSectionRelocType    relocType  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `section`  
- in Sezione del codice in memoria a cui aggiungere un'istruzione. reloc.  
+ [in] Sezione di codice in memoria a cui aggiungere un'istruzione .reloc.  
   
  `offset`  
- in Offset della sezione.  
+ [in] Offset della sezione.  
   
  `relativeTo`  
- in La sezione a cui si riferisce `offset`.  
+ [in] Sezione a `offset` cui si riferisce.  
   
  `relocType`  
- in Uno dei valori di [CeeSectionRelocType](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) , che indica il tipo di istruzione. reloc da aggiungere.  
+ [in] Uno dei [valori di CeeSectionRelocType,](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) che indica il tipo di istruzione .reloc da aggiungere.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Usato come risorsa in MsCorEE. dll  
+ **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

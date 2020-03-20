@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a3546316-e24d-417f-9909-e45d42c9d471
 topic_type:
 - apiref
-ms.openlocfilehash: 2ac29de437e746f1524fc1427c47eb8f5c761be7
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 57df124f15f78daad053d9634e1baa969a65cc35
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937805"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175278"
 ---
 # <a name="imetadatatablesgetguid-method"></a>Metodo IMetaDataTables::GetGuid
 Ottiene un GUID dalla riga in corrispondenza dell'indice specificato.  
@@ -28,7 +28,7 @@ Ottiene un GUID dalla riga in corrispondenza dell'indice specificato.
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
-HRESULT GetGuid (   
+HRESULT GetGuid (
     [in]  ULONG       ixGuid,  
     [out] const GUID  **ppGUID  
 );  
@@ -36,23 +36,23 @@ HRESULT GetGuid (
   
 ## <a name="parameters"></a>Parametri  
  `ixGuid`  
- in Indice della riga da cui ottenere il GUID.  
+ [in] Indice della riga da cui ottenere il GUID.  
   
  `ppGuid`  
- out Puntatore a un puntatore al GUID.  
+ [fuori] Puntatore a un puntatore al GUID.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
 
-  Non è consigliabile usare questo metodo, perché non restituisce risultati coerenti. Per informazioni sulla tabella GUID, vedere la documentazione Common Language Infrastructure (CLI), in particolare "Partition II: Metadata Definition and Semantics". La documentazione è disponibile online; vedere [ECMA C# and Common Language Infrastructure Standards](../../../standard/components.md#applicable-standards) e [standard ECMA-335-Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).  
+  Non è consigliabile utilizzare questo metodo, perché non restituisce risultati coerenti. Per informazioni sulla tabella GUID, vedere la documentazione di Common Language Infrastructure (CLI), in particolare "Partition II: Metadata Definition and Semantics". La documentazione è disponibile online; vedere [ECMA c'è e Common Language Infrastructure Standards](../../../standard/components.md#applicable-standards) e Standard [ECMA-335 - Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
-## <a name="requirements"></a>Requisiti di  
+## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Usato come risorsa in MsCorEE. dll  
+ **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

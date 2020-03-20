@@ -13,25 +13,25 @@ helpviewer_keywords:
 - images [Windows Forms], adding with PictureBox control [Windows Forms]
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
-ms.openlocfilehash: bd0509c05fd9c1cfc0c631fcd613c64d20296f6b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: cd599ac7e07b5210f8bcff1ffbc76b3d9ee563d7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746741"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182112"
 ---
 # <a name="how-to-set-pictures-at-run-time-windows-forms"></a>Procedura: impostare le immagini in fase di esecuzione (Windows Form)
-È possibile impostare a livello di codice l'immagine visualizzata da un Windows Forms controllo <xref:System.Windows.Forms.PictureBox>.  
+È possibile impostare a livello di <xref:System.Windows.Forms.PictureBox> codice l'immagine visualizzata da un controllo Windows Form.You can programmatically set the image displayed by a Windows Forms control.  
   
-### <a name="to-set-a-picture-programmatically"></a>Per impostare un'immagine a livello di codice  
+### <a name="to-set-a-picture-programmatically"></a>Per impostare un'immagine a livello di codiceTo set a picture programmatically  
   
-- Impostare la proprietà <xref:System.Windows.Forms.PictureBox.Image%2A> utilizzando il metodo <xref:System.Drawing.Image.FromFile%2A> della classe <xref:System.Drawing.Image>.  
+- Impostare <xref:System.Windows.Forms.PictureBox.Image%2A> la <xref:System.Drawing.Image.FromFile%2A> proprietà utilizzando <xref:System.Drawing.Image> il metodo della classe .  
   
-     Nell'esempio seguente, il percorso impostato per il percorso dell'immagine è la cartella documenti. Questa operazione viene eseguita perché è possibile presupporre che la maggior parte dei computer che eseguono il sistema operativo Windows includa questa directory. Ciò consente inoltre agli utenti del sistema con livelli di accesso minimo di eseguire l'applicazione senza problemi. Nell'esempio seguente si presuppone un modulo con un controllo <xref:System.Windows.Forms.PictureBox> già aggiunto.  
+     Nell'esempio seguente, il percorso impostato per il percorso dell'immagine è la cartella Documenti. Questo viene fatto, perché si può supporre che la maggior parte dei computer che eseguono il sistema operativo Windows includerà questa directory. Ciò consente inoltre agli utenti del sistema con livelli di accesso minimo di eseguire l'applicazione senza problemi. Nell'esempio riportato di <xref:System.Windows.Forms.PictureBox> seguito si presuppone che un form con un controllo sia già stato aggiunto.  
   
     ```vb  
     Private Sub LoadNewPict()  
-       ' You should replace the bold image   
+       ' You should replace the bold image
        ' in the sample below with an icon of your own choosing.  
        PictureBox1.Image = Image.FromFile _  
        (System.Environment.GetFolderPath _  
@@ -42,7 +42,7 @@ ms.locfileid: "76746741"
   
     ```csharp  
     private void LoadNewPict(){  
-       // You should replace the bold image   
+       // You should replace the bold image
        // in the sample below with an icon of your own choosing.  
        // Note the escape character used (@) when specifying the path.  
        pictureBox1.Image = Image.FromFile  
@@ -56,7 +56,7 @@ ms.locfileid: "76746741"
     private:  
        void LoadNewPict()  
        {  
-          // You should replace the bold image   
+          // You should replace the bold image
           // in the sample below with an icon of your own choosing.  
           pictureBox1->Image = Image::FromFile(String::Concat(  
              System::Environment::GetFolderPath(  
@@ -65,9 +65,9 @@ ms.locfileid: "76746741"
        }  
     ```  
   
-### <a name="to-clear-a-graphic"></a>Per cancellare una rappresentazione grafica  
+### <a name="to-clear-a-graphic"></a>Per cancellare un elemento grafico  
   
-- Per prima cosa, rilasciare la memoria usata dall'immagine, quindi deselezionare la rappresentazione grafica. Il processo di Garbage Collection libera la memoria in un secondo momento se la gestione della memoria costituisce un problema.  
+- Rilasciare innanzitutto la memoria utilizzata dall'immagine, quindi cancellare l'elemento grafico. Garbage Collection rilascerà la memoria in un secondo momento se la gestione della memoria diventa un problema.  
   
     ```vb  
     If Not (PictureBox1.Image Is Nothing) Then  
@@ -77,7 +77,7 @@ ms.locfileid: "76746741"
     ```  
   
     ```csharp  
-    if (pictureBox1.Image != null)   
+    if (pictureBox1.Image != null)
     {  
        pictureBox1.Image.Dispose();  
        pictureBox1.Image = null;  
@@ -93,15 +93,15 @@ ms.locfileid: "76746741"
     ```  
   
     > [!NOTE]
-    > Per altre informazioni sui motivi per cui è necessario usare il metodo <xref:System.Drawing.Image.Dispose%2A> in questo modo, vedere [pulizia delle risorse non gestite](../../../standard/garbage-collection/unmanaged.md).  
+    > Per ulteriori informazioni sui motivi <xref:System.Drawing.Image.Dispose%2A> per cui è necessario utilizzare il metodo in questo modo, vedere [Pulizia delle risorse non gestite](../../../standard/garbage-collection/unmanaged.md).  
   
-     Questo codice cancellerà l'immagine anche se un grafico è stato caricato nel controllo in fase di progettazione.  
+     Questo codice cancellerà l'immagine anche se un elemento grafico è stato caricato nel controllo in fase di progettazione.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.PictureBox>
 - <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>
-- [Panoramica sul controllo PictureBox](picturebox-control-overview-windows-forms.md)
-- [Procedura: Caricare un'immagine usando la finestra di progettazione](how-to-load-a-picture-using-the-designer-windows-forms.md)
-- [Procedura: Modificare le dimensioni o la posizione di un'immagine in fase di esecuzione](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [Cenni preliminari sul controllo PictureBox](picturebox-control-overview-windows-forms.md)
+- [Procedura: caricare un'immagine utilizzando la finestra di progettazione](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [Procedura: modificare le dimensioni o la posizione di un'immagine in fase di esecuzione](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
 - [Controllo PictureBox](picturebox-control-windows-forms.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Range Value control pattern
 - UI Automation, Range Value control pattern
 ms.assetid: 225feaa4-918e-418b-938e-7389338d0a69
-ms.openlocfilehash: 04db9f97ccea10cf8c65df0f0117c272a5e868dd
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 847a8aae3fd0c3d6965c910d19a4cec11cd2a3b7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435112"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180175"
 ---
 # <a name="implementing-the-ui-automation-rangevalue-control-pattern"></a>Implementazione del pattern di controllo RangeValue di automazione interfaccia utente
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74435112"
   
  Il pattern di controllo <xref:System.Windows.Automation.RangeValuePattern> viene usato per supportare i controlli che possono impostare un valore in un intervallo. Per esempi di controlli che implementano questo pattern di controllo, vedere [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md).  
   
-<a name="Implementation_Guidelines_and_Conventions"></a>   
+<a name="Implementation_Guidelines_and_Conventions"></a>
 ## <a name="implementation-guidelines-and-conventions"></a>Linee guida e convenzioni di implementazione  
  Quando si implementa il pattern di controllo RangeValue, tenere presenti le linee guida e le convenzioni seguenti:  
   
@@ -29,25 +29,25 @@ ms.locfileid: "74435112"
   
 - I controlli che dispongono di valori di intervallo ambigui, ad esempio le barre di avanzamento o i dispositivi di scorrimento, devono avere questi valori normalizzati.  
   
- ![Indicatore di stato.](./media/uia-rangevaluepattern-progress-bar.PNG "UIA_RangeValuePattern_Progress_Bar")  
+ ![Indicatore.](./media/uia-rangevaluepattern-progress-bar.PNG "UIA_RangeValuePattern_Progress_Bar")  
 Esempio di un indicatore di stato in cui valore è di tipo Integer e i relativi valori di proprietà minimo e massimo sono normalizzati rispettivamente a 0 e 100  
   
-<a name="Required_Members_for_the_IRangeValueProvider"></a>   
+<a name="Required_Members_for_the_IRangeValueProvider"></a>
 ## <a name="required-members-for-irangevalueprovider"></a>Membri obbligatori per IRangeValueProvider  
   
 |Membro obbligatorio|Tipo di membro|Note|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|Proprietà|Nessuna|  
-|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|Proprietà|Nessuna|  
-|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|Proprietà|Nessuna|  
-|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|Proprietà|Nessuna|  
-|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|Proprietà|Nessuna|  
-|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|Proprietà|Nessuna|  
-|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|Metodi|Nessuna|  
+|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|Proprietà|nessuno|  
+|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|Proprietà|nessuno|  
+|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|Proprietà|nessuno|  
+|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|Proprietà|nessuno|  
+|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|Proprietà|nessuno|  
+|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|Proprietà|nessuno|  
+|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|Metodi|nessuno|  
   
  Questo pattern di controllo non è associato a eventi.  
   
-<a name="Exceptions"></a>   
+<a name="Exceptions"></a>
 ## <a name="exceptions"></a>Eccezioni  
  I provider devono generare le eccezioni seguenti.  
   
@@ -57,8 +57,8 @@ Esempio di un indicatore di stato in cui valore è di tipo Integer e i relativi 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica dei pattern di controllo per l'automazione interfaccia utente](ui-automation-control-patterns-overview.md)
+- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
 - [Supportare pattern di controllo in un provider di automazione interfaccia utente](support-control-patterns-in-a-ui-automation-provider.md)
-- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
-- [Panoramica dell'albero di automazione interfaccia utente](ui-automation-tree-overview.md)
-- [Usare la memorizzazione nella cache in automazione interfaccia utente](use-caching-in-ui-automation.md)
+- [Pattern di controllo di automazione interfaccia utente per i client](ui-automation-control-patterns-for-clients.md)
+- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [Utilizzare la memorizzazione nella cache per l'automazione interfaccia utente](use-caching-in-ui-automation.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML documentation, creating using CodeDOM
 - Code Document Object Model, generating XML documentation
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
-ms.openlocfilehash: cdd1f173274b6bd33c4a67ed8eb0974c4c8e8e70
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a0ccb469a43c3a21a76eaf24fa7ce7b490dd5c4a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130180"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180515"
 ---
 # <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Procedura: creare un file di documentazione XML tramite CodeDOM
 CodeDOM consente di creare codice che genera documentazione XML. Il processo comporta la creazione del grafo CodeDOM contenente i commenti per la documentazione XML, la generazione del codice e la compilazione del codice generato con l'opzione del compilatore che crea l'output della documentazione XML.  
@@ -51,22 +51,22 @@ CodeDOM consente di creare codice che genera documentazione XML. Il processo com
  L'esempio di codice crea la documentazione XML seguente nel file HelloWorldDoc.xml.  
   
 ```xml  
-<?xml version="1.0" ?>   
+<?xml version="1.0" ?>
 <doc>  
   <assembly>  
-    <name>HelloWorld</name>   
+    <name>HelloWorld</name>
   </assembly>  
   <members>  
     <member name="T:Samples.Class1">  
       <summary>  
-        Create a Hello World application.   
-        <seealso cref="M:Samples.Class1.Main" />   
+        Create a Hello World application.
+        <seealso cref="M:Samples.Class1.Main" />
       </summary>  
     </member>  
     <member name="M:Samples.Class1.Main">  
       <summary>  
-        Main method for HelloWorld application.   
-        <para>Add a new paragraph to the description.</para>   
+        Main method for HelloWorld application.
+        <para>Add a new paragraph to the description.</para>
       </summary>  
     </member>  
   </members>  
@@ -80,5 +80,5 @@ CodeDOM consente di creare codice che genera documentazione XML. Il processo com
 ## <a name="see-also"></a>Vedere anche
 
 - [Documentazione del codice tramite XML](../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
-- [Commenti relativi alla documentazione XML](../../csharp/programming-guide/xmldoc/index.md)
+- [Commenti relativi alla documentazione XMLXML Documentation Comments](../../csharp/programming-guide/xmldoc/index.md)
 - [Documentazione di XML](/cpp/ide/xml-documentation-visual-cpp)

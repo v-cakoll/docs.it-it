@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Creare testo verticale'
+title: 'Procedura: creare testo verticale'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,30 +10,30 @@ helpviewer_keywords:
 - strings [Windows Forms], drawing vertical
 - vertical text [Windows Forms], drawing
 ms.assetid: 50c69046-4188-47d9-b949-cc2610ffd337
-ms.openlocfilehash: 009e8e392841ac6b846007a88efc33ef79f56967
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 86401342625f593945b801f7619ef9ca9681317c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582691"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182552"
 ---
-# <a name="how-to-create-vertical-text"></a>Procedura: Creare testo verticale
-È possibile usare un <xref:System.Drawing.StringFormat> oggetto per specificare che il testo da disegnare verticalmente anziché in orizzontale.  
+# <a name="how-to-create-vertical-text"></a>Procedura: creare testo verticale
+È possibile <xref:System.Drawing.StringFormat> utilizzare un oggetto per specificare che il testo venga disegnato verticalmente anziché orizzontalmente.  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente assegna il valore <xref:System.Drawing.StringFormatFlags.DirectionVertical> per il <xref:System.Drawing.StringFormat.FormatFlags%2A> proprietà di un <xref:System.Drawing.StringFormat> oggetto. Che <xref:System.Drawing.StringFormat> oggetto viene passato per il <xref:System.Drawing.Graphics.DrawString%2A> metodo del <xref:System.Drawing.Graphics> classe. Il valore <xref:System.Drawing.StringFormatFlags.DirectionVertical> è un membro del <xref:System.Drawing.StringFormatFlags> enumerazione.  
+ Nell'esempio seguente viene <xref:System.Drawing.StringFormatFlags.DirectionVertical> assegnato <xref:System.Drawing.StringFormat.FormatFlags%2A> il <xref:System.Drawing.StringFormat> valore alla proprietà di un oggetto . Tale <xref:System.Drawing.StringFormat> oggetto viene <xref:System.Drawing.Graphics.DrawString%2A> passato al <xref:System.Drawing.Graphics> metodo della classe. Il <xref:System.Drawing.StringFormatFlags.DirectionVertical> valore è un <xref:System.Drawing.StringFormatFlags> membro dell'enumerazione.  
   
- La figura seguente mostra il testo verticale: 
+ La figura seguente mostra il testo verticale:
   
- ![Grafico che mostra il testo verticale del tipo di carattere.](./media/how-to-create-vertical-text/vertical-font-text-graphic.png)  
+ ![Immagine che mostra il testo del carattere verticale.](./media/how-to-create-vertical-text/vertical-font-text-graphic.png)  
   
  [!code-csharp[System.Drawing.FontsAndText#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.FontsAndText#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#31)]  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
   
-- L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e` , ovvero un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
+- L'esempio precedente è progettato per l'utilizzo con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e` , che è un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Creare testo con GDI](how-to-draw-text-with-gdi.md)
+- [Procedura: creare testo con GDI](how-to-draw-text-with-gdi.md)

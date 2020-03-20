@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - callback function, implementing
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
-ms.openlocfilehash: 23355e16127b45c26a1d950c6a8b3cc27e265781
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b7aae1e70ac736d60bed1e79291235db1c220281
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123893"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181410"
 ---
 # <a name="how-to-implement-callback-functions"></a>Procedura: implementare funzioni di callback
 La procedura e l'esempio seguenti illustrano come un'applicazione gestita, usando il platform invoke, può stampare il valore di handle per ogni finestra sul computer locale. In particolare, la procedura e l'esempio usano la funzione **EnumWindows** per esaminare l'elenco di finestre e una funzione di callback gestita (denominata CallBack) per visualizzare il valore di handle della finestra.  
@@ -74,16 +74,16 @@ public delegate bool CallBack(int hwnd, int lParam);
 public class EnumReportApp  
 {  
     [DllImport("user32")]  
-    public static extern int EnumWindows(CallBack x, int y);   
+    public static extern int EnumWindows(CallBack x, int y);
   
-    public static void Main()   
+    public static void Main()
     {  
         CallBack myCallBack = new CallBack(EnumReportApp.Report);  
         EnumWindows(myCallBack, 0);  
     }  
   
     public static bool Report(int hwnd, int lParam)  
-    {   
+    {
         Console.Write("Window handle is ");  
         Console.WriteLine(hwnd);  
         return true;  

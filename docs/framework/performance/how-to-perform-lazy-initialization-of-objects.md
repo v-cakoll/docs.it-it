@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - lazy initialization in .NET, how to perform
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
-ms.openlocfilehash: 6efc89e5c22f53d9b2c48e535c783d488df16462
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d89d19a7a3edb57dcd6c0e37e6688701da8b3713
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130330"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180590"
 ---
 # <a name="how-to-perform-lazy-initialization-of-objects"></a>Procedura: eseguire l'inizializzazione lenta di oggetti
 La classe <xref:System.Lazy%601?displayProperty=nameWithType> semplifica le operazioni di inizializzazione differita e creazione di istanze di oggetti. L'inizializzazione di oggetti in modalità differita consente di evitare di doverli creare se non sono mai necessari oppure di posticiparne l'inizializzazione fino al primo accesso. Per altre informazioni, vedere [Inizializzazione differita](lazy-initialization.md).  
@@ -48,7 +48,7 @@ End Sub
 ```  
   
 ```csharp  
-  static bool someCondition = false;    
+  static bool someCondition = false;
   //Initializing a value with a big computation, computed in parallel  
   Lazy<int> _data = new Lazy<int>(delegate  
   {  

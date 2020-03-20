@@ -8,40 +8,40 @@ helpviewer_keywords:
 - .NET Framework, documentation
 - documentation, .NET Framework
 ms.assetid: f61f02f2-2f20-483d-8f56-a9c8f3a54986
-ms.openlocfilehash: e00fb73bf884446ec220a114c49863386da456ef
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d94d97cd1b519025ff360dc903558ea3656818d5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73114250"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181528"
 ---
 # <a name="net-framework-guide"></a>Guida a .NET Framework
 
 > [!NOTE]
-> Questo set di contenuti .NET Framework include informazioni per le versioni di .NET Framework da 4.5 a 4.8. Per scaricare .NET Framework, vedere [Installazione di .NET Framework](./install/guide-for-developers.md). Per un elenco delle nuove funzionalità e delle modifiche in .NET Framework, vedere [Novità di .NET Framework](./whats-new/index.md). Per un elenco delle piattaforme supportate, vedere [Requisiti di sistema di .NET Framework](./get-started/system-requirements.md). Per la documentazione sulle versioni precedenti di .NET Framework, vedere [Documentazione sulle versioni precedenti di .NET](https://docs.microsoft.com/previous-versions/dotnet/).
+> Questo set di contenuti .NET Framework include informazioni per le versioni di .NET Framework da 4.5 a 4.8. Per scaricare .NET Framework, vedere [Installare .NET Framework.](./install/guide-for-developers.md) Per un elenco delle nuove funzionalità e modifiche in .NET Framework, vedere Novità di [.NET Framework](./whats-new/index.md). Per un elenco delle piattaforme supportate, vedere [Requisiti di sistema di .NET Framework](./get-started/system-requirements.md). Per la documentazione relativa alle versioni precedenti di .NET Framework, vedere la documentazione relativa alle versioni precedenti di [.NET.](https://docs.microsoft.com/previous-versions/dotnet/)
 
-.NET Framework è una piattaforma di sviluppo per compilare app Web e app per Windows, Windows Phone, Windows Server e Microsoft Azure. Consiste del Common Language Runtime (CLR) e della libreria di classi .NET Framework, che include un'ampia gamma di funzionalità e supporto per numerosi standard di settore.
+.NET Framework è una piattaforma di sviluppo per la creazione di app per Web, Windows, Windows Server e Microsoft Azure. Consiste del Common Language Runtime (CLR) e della libreria di classi .NET Framework, che include un'ampia gamma di funzionalità e supporto per numerosi standard di settore.
 
-.NET Framework offre numerosi servizi, ad esempio gestione della memoria, sicurezza della memoria e del tipo, sicurezza, connessioni di reti e distribuzione di applicazioni. Offre anche strutture dati e API semplici che non usano il sistema operativo Windows ai livelli inferiori. È possibile usare vari linguaggi di programmazione con .NET Framework, ad esempio C#, F# e Visual Basic.
+.NET Framework fornisce molti servizi, tra cui la gestione della memoria, la sicurezza dei tipi e della memoria, la sicurezza, la rete e la distribuzione delle applicazioni. Offre anche strutture dati e API semplici che non usano il sistema operativo Windows ai livelli inferiori. Con .NET Framework è possibile utilizzare linguaggi di programmazione diversi, tra cui C, F e Visual Basic.
 
-Per un'introduzione generale a .NET Framework per utenti e sviluppatori, vedere [Introduzione](./get-started/index.md). Per un'introduzione all'architettura e alle principali funzionalità di .NET Framework, vedere la [panoramica](./get-started/overview.md).
+Per un'introduzione generale a .NET Framework sia per gli utenti che per gli sviluppatori, vedere [Guida introduttiva.](./get-started/index.md) Per un'introduzione all'architettura e alle funzionalità principali di .NET Framework, vedere i [cenni preliminari](./get-started/overview.md).
 
-.NET Framework può essere usato con Docker e con i [contenitori Windows](/virtualization/windowscontainers/about/).
+.NET Framework può essere utilizzato con Docker e con [i contenitori](/virtualization/windowscontainers/about/)di Windows .
 
 ## <a name="installation"></a>Installazione
 
-.NET Framework è incluso in Windows e consente di eseguire applicazioni .NET Framework. Potrebbe essere necessario usare una versione di .NET Framework successiva a quella inclusa nella versione di Windows installata. Per altre informazioni, vedere [Installazione di .NET Framework in Windows](./install/index.md).
+.NET Framework viene fornito con Windows, che consente di eseguire applicazioni .NET Framework. Potrebbe essere necessaria una versione successiva di .NET Framework rispetto a quella fornita con la versione di Windows. Per ulteriori informazioni, vedere [Installare .NET Framework in Windows.](./install/index.md)
 
-Vedere [Ripristinare .NET Framework](./install/repair.md) per informazioni su come ripristinare l'installazione se si verificano errori durante l'installazione di .NET Framework.
+Per informazioni su come ripristinare l'installazione di .NET Framework se si verificano errori durante l'installazione, vedere [Ripristinare .NET Framework](./install/repair.md).
 
-Per informazioni più dettagliate sul download di .NET Framework, vedere [Install the .NET Framework for developers](./install/guide-for-developers.md) (Installare .NET Framework per sviluppatori).
+Per informazioni più dettagliate sul download di .NET Framework, vedere [Installare .NET Framework per gli sviluppatori.](./install/guide-for-developers.md)
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 * [Novità](./whats-new/index.md)  
 Vengono descritte le nuove funzionalità e le modifiche principali incluse nelle versioni più recenti di .NET Framework. Sono inclusi elenchi di tipi e membri obsoleti e viene fornita una guida per eseguire la migrazione delle applicazioni dalla versione precedente di .NET Framework.
 
-* [Introduzione](./get-started/index.md)  
+* [Guida introduttiva](./get-started/index.md)  
 Offre una panoramica completa di .NET Framework, oltre ai collegamenti a risorse aggiuntive.
 
 * [Guida all'installazione](./install/index.md)  

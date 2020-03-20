@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
-ms.openlocfilehash: 19b62c24d00903d1494a755dbeabb460935cdacd
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: f8db79db6c4a66dfe13ec936313c4cf2c3b93be5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205935"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174407"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>Implementazione di una transazione esplicita utilizzando CommittableTransaction
 A differenza della classe <xref:System.Transactions.CommittableTransaction>, che consente di utilizzare le transazioni in modo implicito, la classe <xref:System.Transactions.TransactionScope> consente di utilizzare le transazioni in modo esplicito. Questa classe è utile nelle applicazioni che utilizzano la stessa transazione per più chiamate di funzione o di thread. A differenza della classe <xref:System.Transactions.TransactionScope>, il writer di applicazione deve chiamare in modo specifico i metodi <xref:System.Transactions.CommittableTransaction.Commit%2A> e <xref:System.Transactions.Transaction.Rollback%2A>, rispettivamente per interrompere la transazione o per eseguirne il commit.  
@@ -43,7 +43,7 @@ A differenza della classe <xref:System.Transactions.CommittableTransaction>, che
   
  È possibile chiamare il metodo <xref:System.Transactions.CommittableTransaction.BeginCommit%2A> per avviare la procedura di commit in un thread del pool di thread. È inoltre possibile chiamare il metodo <xref:System.Transactions.CommittableTransaction.EndCommit%2A> per determinare se il commit della transazione è stato effettivamente eseguito. Se per qualche motivo il commit della transazione ha avuto esito negativo, il metodo <xref:System.Transactions.CommittableTransaction.EndCommit%2A> genera un'eccezione di transazione. Se al momento della chiamata al metodo <xref:System.Transactions.CommittableTransaction.EndCommit%2A> il commit della transazione non è ancora stato eseguito, il chiamante resta bloccato finché la transazione non viene interrotta o non ne viene eseguito il commit.  
   
- Il modo più semplice per eseguire un commit asincrono è ricorrere a un metodo callback che viene chiamato al completamento della procedura di commit. Tuttavia, è necessario chiamare il metodo <xref:System.Transactions.CommittableTransaction.EndCommit%2A> sull'oggetto <xref:System.Transactions.CommittableTransaction> inizialmente utilizzato per effettuare la chiamata. Per ottenere tale oggetto, è possibile abbattuto del parametro *IAsyncResult* del metodo di callback, perché <xref:System.Transactions.CommittableTransaction> la classe <xref:System.IAsyncResult> implementa la classe.  
+ Il modo più semplice per eseguire un commit asincrono è ricorrere a un metodo callback che viene chiamato al completamento della procedura di commit. Tuttavia, è necessario chiamare il metodo <xref:System.Transactions.CommittableTransaction.EndCommit%2A> sull'oggetto <xref:System.Transactions.CommittableTransaction> inizialmente utilizzato per effettuare la chiamata. Per ottenere tale oggetto, è possibile eseguire il downcast di *IAsyncResult* parametro del metodo di callback, poiché la <xref:System.Transactions.CommittableTransaction> classe implementa <xref:System.IAsyncResult> classe.  
   
  L'esempio seguente illustra come eseguire un commit asincrono.  
   
@@ -62,14 +62,14 @@ public void DoTransactionalWork()
      }  
      finally  
      {  
-          //Restore the ambient transaction   
+          //Restore the ambient transaction
           Transaction.Current = oldAmbient;  
      }  
 }  
 void OnCommitted(IAsyncResult asyncResult)  
 {  
      CommittableTransaction committableTransaction;  
-     committableTransaction = asyncResult as CommittableTransaction;     
+     committableTransaction = asyncResult as CommittableTransaction;
      Debug.Assert(committableTransaction != null);  
      try  
      {  
@@ -88,4 +88,4 @@ void OnCommitted(IAsyncResult asyncResult)
 ## <a name="see-also"></a>Vedere anche
 
 - [Implementazione di una transazione implicita utilizzando l'ambito di transazione](implementing-an-implicit-transaction-using-transaction-scope.md)
-- [Elaborazione delle transazioni](index.md)
+- [Elaborazione delle transazioniTransaction Processing](index.md)

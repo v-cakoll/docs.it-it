@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f241b620-9ec5-42fd-92ef-3b22329db72a
 topic_type:
 - apiref
-ms.openlocfilehash: f7cd45a90a750c357706f720453ff23697875b58
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 45268929b6e9ad6ac6423aa0fa2b7b5022bc9179
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446245"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176617"
 ---
 # <a name="isymunmanagedscope2getconstants-method"></a>Metodo ISymUnmanagedScope2::GetConstants
 Ottiene le costanti locali definite all'interno di questo ambito.  
@@ -32,25 +32,25 @@ HRESULT GetConstants(
      [in]  ULONG32  cConstants,  
      [out] ULONG32  *pcConstants,  
      [out, size_is(cConstants),  
-         length_is(*pcConstants)] ISymUnmanagedConstant*   
+         length_is(*pcConstants)] ISymUnmanagedConstant*
              constants[]);  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `cConstants`  
- in Lunghezza del buffer a cui punta il parametro `pcConstants`.  
+ [in] Lunghezza del buffer a `pcConstants` cui punta il parametro.  
   
  `pcConstants`  
- out Puntatore a un `ULONG32` che riceve la dimensione, in caratteri, del buffer necessario per contenere le costanti.  
+ [fuori] Puntatore a `ULONG32` un che riceve la dimensione, in caratteri, del buffer necessario per contenere le costanti.  
   
  `constants`  
- out Buffer che archivia le costanti.  
+ [fuori] Buffer in cui sono archiviate le costanti.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym. idl, CorSym. h  
+ **Intestazione:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche
 

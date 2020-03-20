@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a0ad3ee-dacb-47e9-abae-4536bcc4804b
 topic_type:
 - apiref
-ms.openlocfilehash: 644b5ed751caaf1809250244b37badc8037b0f57
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 29006eba3d3a523fd24a461207ab12222a639782
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792346"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178597"
 ---
 # <a name="icordebugprocess5gettypefields-method"></a>Metodo ICorDebugProcess5::GetTypeFields
 Fornisce informazioni sui campi che appartengono a un tipo.  
@@ -31,35 +31,35 @@ Fornisce informazioni sui campi che appartengono a un tipo.
 HRESULT GetTypeFields(  
     [in] COR_TYPEID id,  
     [in] ULONG32 celt,  
-    [out] COR_FIELD fields[],   
+    [out] COR_FIELD fields[],
     [out] ULONG32 *pceltNeeded  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `id`  
- in Identificatore del tipo le cui informazioni sul campo vengono recuperate.  
+ [in] Identificatore del tipo di cui vengono recuperate le informazioni sul campo.  
   
  `celt`  
- in Numero di oggetti [COR_FIELD](cor-field-structure.md) le cui informazioni sul campo devono essere recuperate.  
+ [in] Numero di [COR_FIELD](cor-field-structure.md) oggetti di cui devono essere recuperate le informazioni sul campo.  
   
  `fields`  
- out Matrice di oggetti [COR_FIELD](cor-field-structure.md) che forniscono informazioni sui campi che appartengono al tipo.  
+ [fuori] Matrice di [oggetti COR_FIELD](cor-field-structure.md) che forniscono informazioni sui campi che appartengono al tipo.  
   
  `pceltNeeded`  
- out Puntatore al numero di oggetti [COR_FIELD](cor-field-structure.md) inclusi nel `fields`.  
+ [fuori] Puntatore al numero di oggetti `fields` [COR_FIELD](cor-field-structure.md) inclusi in .  
   
-## <a name="remarks"></a>Note  
- Il parametro `celt`, che specifica il numero di campi le cui informazioni sul campo utilizzate dal metodo per popolare `fields`, devono corrispondere al valore del campo `COR_TYPE_LAYOUT::numFields`.  
+## <a name="remarks"></a>Osservazioni  
+ Il `celt` parametro , che specifica il numero di campi `fields`le cui informazioni sul `COR_TYPE_LAYOUT::numFields` campo utilizza il metodo per popolare , devono corrispondere al valore del campo.  
   
-## <a name="requirements"></a>Requisiti di  
+## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

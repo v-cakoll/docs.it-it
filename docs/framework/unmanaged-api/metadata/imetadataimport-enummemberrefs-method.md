@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e97c97a6-6e4f-41f5-9af1-9b3cf3bdbd6b
 topic_type:
 - apiref
-ms.openlocfilehash: 743b6bed1a5d62f5214b8366b1a3c6e4ebecb98b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b8a65b0748fec0e474d8b3b5dc03473fbd716108
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441713"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177327"
 ---
 # <a name="imetadataimportenummemberrefs-method"></a>Metodo IMetaDataImport::EnumMemberRefs
 Enumera i token MemberRef che rappresentano i membri del tipo specificato.  
@@ -29,10 +29,10 @@ Enumera i token MemberRef che rappresentano i membri del tipo specificato.
   
 ```cpp  
 HRESULT EnumMemberRefs (  
-   [in, out] HCORENUM    *phEnum,   
-   [in]   mdToken        tkParent,   
-   [out]  mdMemberRef    rMemberRefs[],   
-   [in]   ULONG          cMax,   
+   [in, out] HCORENUM    *phEnum,
+   [in]   mdToken        tkParent,
+   [out]  mdMemberRef    rMemberRefs[],
+   [in]   ULONG          cMax,
    [out]  ULONG          *pcTokens  
 );  
 ```  
@@ -42,30 +42,30 @@ HRESULT EnumMemberRefs (
  [in, out] Puntatore all'enumeratore.  
   
  `tkParent`  
- in Un token TypeDef, TypeRef, MethodDef o ModuleRef per il tipo di cui è necessario enumerare i membri.  
+ [in] Token TypeDef, TypeRef, MethodDef o ModuleRef per il tipo i cui membri devono essere enumerati.  
   
  `rMemberRefs`  
- out Matrice utilizzata per archiviare i token MemberRef.  
+ [fuori] Matrice utilizzata per archiviare i token MemberRef.  
   
  `cMax`  
  [in] Dimensione massima della matrice `rMemberRefs`.  
   
  `pcTokens`  
- out Numero effettivo di token MemberRef restituiti in `rMemberRefs`.  
+ [fuori] Numero effettivo di token MemberRef `rMemberRefs`restituiti in .  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMemberRefs` ha restituito un esito positivo.|  
-|`S_FALSE`|Nessun token MemberRef da enumerare. In tal caso, `pcTokens` è pari a zero.|  
+|`S_OK`|`EnumMemberRefs`restituito con successo.|  
+|`S_FALSE`|Non sono presenti token MemberRef da enumerare. In tal `pcTokens` caso, è a zero.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Incluso come risorsa in MsCorEE. dll  
+ **Biblioteca:** Incluso come risorsa in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

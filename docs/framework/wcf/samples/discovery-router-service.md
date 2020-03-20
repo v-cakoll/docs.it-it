@@ -2,17 +2,17 @@
 title: Servizio router di individuazione
 ms.date: 03/30/2017
 ms.assetid: 3d30af47-b24f-40e5-833a-24d77125c9e6
-ms.openlocfilehash: 09309b23d2a3cc672811c2f617e6fb81a2b4e021
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 149dd69cdd1972465f4b7cb48ab657492d3f21d7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74712292"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183734"
 ---
 # <a name="discovery-router-service"></a>Servizio router di individuazione
 In questo esempio viene descritto come inoltrare messaggi di individuazione a un altro endpoint.  
   
-## <a name="demonstrates"></a>Dimostrazione  
+## <a name="demonstrates"></a>Dimostra  
  Routing di individuazione  
   
 ## <a name="discussion"></a>Discussione  
@@ -32,9 +32,9 @@ In questo esempio viene descritto come inoltrare messaggi di individuazione a un
   
 > [!IMPORTANT]
 > È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
->   
+>
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) Esempi per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti gli esempi e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (WCF). Questo esempio si trova nella directory seguente.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryRouter`

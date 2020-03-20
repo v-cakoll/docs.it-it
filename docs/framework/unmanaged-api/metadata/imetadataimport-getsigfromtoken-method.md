@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ab894dc4-f7b6-4afc-bfcb-582a4b7e53a2
 topic_type:
 - apiref
-ms.openlocfilehash: 205f48fb417365565695c72095187d349127e536
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5af59e158a34b06d304a98db1dfaa46585b22eb6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436857"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177199"
 ---
 # <a name="imetadataimportgetsigfromtoken-method"></a>Metodo IMetaDataImport::GetSigFromToken
 Ottiene la firma binaria dei metadati associata al token specificato.  
@@ -28,29 +28,29 @@ Ottiene la firma binaria dei metadati associata al token specificato.
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
-HRESULT GetSigFromToken (   
-   [in]   mdSignature        mdSig,   
-   [out]  PCCOR_SIGNATURE    *ppvSig,   
-   [out]  ULONG              *pcbSig   
+HRESULT GetSigFromToken (
+   [in]   mdSignature        mdSig,
+   [out]  PCCOR_SIGNATURE    *ppvSig,
+   [out]  ULONG              *pcbSig
 );  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `mdSig`  
- in Token per il quale restituire la firma dei metadati binari.  
+ [in] Token per cui restituire la firma di metadati binari.  
   
  `ppvSig`  
- out Puntatore alla firma dei metadati restituita.  
+ [fuori] Puntatore alla firma dei metadati restituita.  
   
  `pcbSig`  
- out Dimensioni in byte della firma dei metadati binari.  
+ [fuori] Dimensione in byte della firma dei metadati binari.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Incluso come risorsa in MsCorEE. dll  
+ **Biblioteca:** Incluso come risorsa in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

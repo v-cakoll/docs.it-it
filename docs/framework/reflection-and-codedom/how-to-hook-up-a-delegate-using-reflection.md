@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reflection, adding event-handler delegates
 - delegates [.NET Framework], adding event handlers with reflection
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
-ms.openlocfilehash: 14a9694708b36b23ecef453d530ad3b939a046ba
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d748d9f8bdd0b4d831880548d4aceb1c77a0b0c4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130124"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180509"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>Procedura: associare un delegato tramite reflection
 Quando viene usata la reflection per il caricamento e l'esecuzione di assembly, non è possibile usare le funzioni del linguaggio come l'operatore `+=` di C# o l'[istruzione AddHandler](../../visual-basic/language-reference/statements/addhandler-statement.md) di Visual Basic per associare gli eventi. Le procedure seguenti illustrano come associare un metodo esistente a un evento recuperando tutti i tipi necessari tramite reflection e come creare un metodo dinamico usando reflection emit e associarlo a un evento.  
@@ -67,7 +67,7 @@ Quando viene usata la reflection per il caricamento e l'esecuzione di assembly, 
      [!code-csharp[HookUpDelegate#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#12)]
      [!code-vb[HookUpDelegate#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#12)]  
   
-<a name="procedureSection1"></a>   
+<a name="procedureSection1"></a>
 ### <a name="to-generate-an-event-handler-at-run-time-by-using-a-dynamic-method"></a>Per generare un gestore dell'evento in fase di esecuzione usando un metodo dinamico  
   
 1. I metodi per la gestione degli eventi possono essere generati in fase di esecuzione usando metodi dinamici leggeri e reflection emit. Per costruire un gestore dell'evento, sono necessari il tipo restituito e i tipi di parametro del delegato, che possono essere ottenuti esaminando il metodo `Invoke` del delegato. Il codice seguente usa i metodi `GetDelegateReturnType` e `GetDelegateParameterTypes` per ottenere queste informazioni. Il codice per questi metodi è disponibile nella sezione Esempio più avanti in questo argomento.  
@@ -110,4 +110,4 @@ Quando viene usata la reflection per il caricamento e l'esecuzione di assembly, 
 - <xref:System.Activator.CreateInstance%2A>
 - <xref:System.Delegate.CreateDelegate%2A>
 - [Procedura: Definire ed eseguire metodi dinamici](how-to-define-and-execute-dynamic-methods.md)
-- [Reflection](reflection.md)
+- [Riflessione](reflection.md)

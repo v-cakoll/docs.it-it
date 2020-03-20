@@ -1,5 +1,5 @@
 ---
-title: Sicurezza con attendibilità parziale
+title: Sicurezza dell'attendibilità parzialePartial Trust Security
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,19 +15,19 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: 0d9bbcc32eea49afc6ecc713b0cf005b4434a67d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 99c7d9cfae2b137053ca77d9e3d7055b4674ce5b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743336"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174576"
 ---
 # <a name="wpf-partial-trust-security"></a>Sicurezza con attendibilità parziale in WPF
-<a name="introduction"></a>I n generale, sarebbe opportuno limitare l'accesso diretto alle risorse critiche del sistema da parte delle applicazioni Internet in modo da impedire qualsiasi danno. Per impostazione predefinita, i linguaggi di scripting lato client e HTML non sono in grado di accedere alle risorse di sistema critiche. Poiché le applicazioni ospitate da browser Windows Presentation Foundation (WPF) possono essere avviate dal browser, devono essere conformi a un set di restrizioni simile. Per applicare queste restrizioni, WPF si basa sia sulla sicurezza dall'accesso di codice (CAS) che su ClickOnce (vedere [strategia di sicurezza di WPF-sicurezza della piattaforma](wpf-security-strategy-platform-security.md)). Per impostazione predefinita, le applicazioni ospitate da browser richiedono il set di autorizzazioni dell'area Internet, indipendentemente dal fatto che vengano avviate da Internet, dall'Intranet locale o dal computer locale. Le applicazioni in esecuzione con un set di autorizzazioni incompleto vengono definite applicazioni in esecuzione con attendibilità parziale.  
+<a name="introduction"></a>I n generale, sarebbe opportuno limitare l'accesso diretto alle risorse critiche del sistema da parte delle applicazioni Internet in modo da impedire qualsiasi danno. Per impostazione predefinita, i linguaggi di script HTML e lato client non sono in grado di accedere alle risorse di sistema critiche. Poiché le applicazioni ospitate da browser Windows Presentation Foundation (WPF) possono essere avviate dal browser, devono essere conformi a un set di restrizioni simile. Per applicare queste restrizioni, WPFWPF si basa su sicurezza dall'accesso di codice (CAS) e ClickOnce (vedere [Strategia](wpf-security-strategy-platform-security.md)di sicurezza WPF - sicurezza della piattaforma ). Per impostazione predefinita, le applicazioni ospitate da browser richiedono il set di autorizzazioni CAS dell'area Internet, indipendentemente dal fatto che vengano avviate da Internet, dalla rete Intranet locale o dal computer locale. Le applicazioni in esecuzione con un set di autorizzazioni incompleto vengono definite applicazioni in esecuzione con attendibilità parziale.  
   
- WPF offre un'ampia gamma di supporto per garantire che il maggior numero possibile di funzionalità possa essere utilizzato in modo sicuro in attendibilità parziale e, insieme alle autorità di certificazione, fornisca ulteriore supporto per la programmazione parzialmente attendibile.  
+ WPFWPF fornisce un'ampia gamma di supporto per garantire che il maggior numero possibile di funzionalità possa essere utilizzato in modo sicuro in attendibilità parziale e, insieme a CAS, fornisce supporto aggiuntivo per la programmazione con attendibilità parziale.  
   
- Questo argomento è suddiviso nelle sezioni seguenti:  
+ In questo argomento sono incluse le sezioni seguenti:  
   
 - [Supporto con attendibilità parziale della funzionalità WPF](#WPF_Feature_Partial_Trust_Support)  
   
@@ -35,74 +35,74 @@ ms.locfileid: "76743336"
   
 - [Gestione delle autorizzazioni](#Managing_Permissions)  
   
-<a name="WPF_Feature_Partial_Trust_Support"></a>   
+<a name="WPF_Feature_Partial_Trust_Support"></a>
 ## <a name="wpf-feature-partial-trust-support"></a>Supporto con attendibilità parziale della funzionalità WPF  
- Nella tabella seguente sono elencate le funzionalità di alto livello di Windows Presentation Foundation (WPF) che possono essere utilizzate in modo sicuro entro i limiti del set di autorizzazioni dell'area Internet.  
+ Nella tabella seguente sono elencate le funzionalità generali di Windows Presentation Foundation (WPF) che possono essere utilizzate in modo sicuro entro i limiti del set di autorizzazioni dell'area Internet.  
   
  Tabella 1: Funzionalità WPF sicure in attendibilità parziale  
   
-|Area delle funzionalità|Caratteristica|  
+|Area di funzionalità|Funzionalità|  
 |------------------|-------------|  
 |Generale|Finestra del browser<br /><br /> Accesso al sito di origine<br /><br /> IsolatedStorage (limite di 512 KB)<br /><br /> Provider UIAutomation<br /><br /> Esecuzione di comandi<br /><br /> Input Method Editor (IME)<br /><br /> Stilo e input penna da tablet<br /><br /> Trascinamento della selezione simulato mediante eventi di acquisizione e spostamento del mouse<br /><br /> OpenFileDialog<br /><br /> Deserializzazione XAML (tramite XamlReader.Load)|  
 |Integrazione Web|Finestra di dialogo di download del browser<br /><br /> Navigazione di primo livello avviata dall'utente<br /><br /> Collegamenti mailto:<br /><br /> Parametri URI (Uniform Resource Identifier)<br /><br /> HTTPWebRequest<br /><br /> Contenuto WPF ospitato in IFRAME<br /><br /> Hosting di pagine HTML dello stesso sito usando Frame<br /><br /> Hosting di pagine HTML dello stesso sito usando WebBrowser<br /><br /> Servizi Web (ASMX)<br /><br /> Servizi Web (mediante Windows Communication Foundation)<br /><br /> Scripting<br /><br /> Document Object Model (DOM)|  
 |Elementi visivi|2D e 3D<br /><br /> Animazione<br /><br /> Elementi multimediali (sito di origine e tra domini)<br /><br /> Immagini/Audio/Video|  
 |Lettura|FlowDocument<br /><br /> Documenti XPS<br /><br /> Tipi di carattere incorporati e di sistema<br /><br /> Caratteri CFF e TrueType|  
 |Modifica|Controllo ortografico<br /><br /> RichTextBox<br /><br /> Supporto Appunti per testo non crittografato e input penna<br /><br /> Operazione Incolla avviata dall'utente<br /><br /> Copia di contenuto selezionato|  
-|Controls|Controlli generali|  
+|Controlli|Controlli generali|  
   
- Questa tabella include le funzionalità WPF a livello generale. Per informazioni più dettagliate, il Windows SDK documenta le autorizzazioni richieste da ogni membro in WPF. Inoltre, per le funzionalità seguenti sono disponibili informazioni più dettagliate sull'esecuzione in situazioni di attendibilità parziale, con alcune considerazioni speciali.  
+ Questa tabella illustra le funzionalità WPFWPF a livello generale. Per informazioni più dettagliate, Windows SDK documenta le autorizzazioni richieste da ogni membro in WPFWPF. Inoltre, per le funzionalità seguenti sono disponibili informazioni più dettagliate sull'esecuzione in situazioni di attendibilità parziale, con alcune considerazioni speciali.  
   
-- [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (vedere [Cenni preliminari su XAML (WPF)](../../desktop-wpf/fundamentals/xaml.md)).  
+- [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)](Vedere [Cenni preliminari su XAML (WPF)](../../desktop-wpf/fundamentals/xaml.md).  
   
 - Popup (vedere <xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>).  
   
-- Trascinamento della selezione (vedere [Cenni preliminari sul trascinamento della selezione](./advanced/drag-and-drop-overview.md)).  
+- Trascinae (consultate [Panoramica del trascinamento](./advanced/drag-and-drop-overview.md)della selezione).  
   
 - Appunti (vedere <xref:System.Windows.Clipboard?displayProperty=nameWithType>).  
   
-- Creazione di immagini (vedere <xref:System.Windows.Controls.Image?displayProperty=nameWithType>).  
+- Imaging (vedere <xref:System.Windows.Controls.Image?displayProperty=nameWithType>).  
   
-- Serializzazione (vedere <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>, <xref:System.Windows.Markup.XamlWriter.Save%2A?displayProperty=nameWithType>).  
+- Serializzazione <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>(vedere , <xref:System.Windows.Markup.XamlWriter.Save%2A?displayProperty=nameWithType>).  
   
-- Finestra di dialogo Apri file (vedere <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>).  
+- Finestra di dialogo <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>Apri file (vedere ).  
   
- Nella tabella seguente vengono descritte le funzionalità di WPF che non sono sicure per l'esecuzione entro i limiti del set di autorizzazioni dell'area Internet.  
+ Nella tabella seguente vengono descritte le funzionalità WPFWPF che non sono sicure per l'esecuzione entro i limiti del set di autorizzazioni dell'area Internet.  
   
  Tabella 2: Funzionalità WPF non sicure in attendibilità parziale  
   
-|Area delle funzionalità|Caratteristica|  
+|Area di funzionalità|Funzionalità|  
 |------------------|-------------|  
 |Generale|Finestra (finestre e finestre di dialogo definite dall'applicazione)<br /><br /> SaveFileDialog<br /><br /> File system<br /><br /> Accesso al Registro di sistema<br /><br /> Trascinamento e rilascio<br /><br /> Serializzazione XAML (mediante XamlWriter.Save)<br /><br /> Client UIAutomation<br /><br /> Accesso alla finestra di origine (HwndHost)<br /><br /> Supporto vocale completo<br /><br /> Interoperabilità con Windows Form|  
 |Elementi visivi|Effetti bitmap<br /><br /> Codifica delle immagini|  
 |Modifica|Appunti RTF (Rich-Text Format)<br /><br /> Supporto XAML completo|  
   
-<a name="Partial_Trust_Programming"></a>   
+<a name="Partial_Trust_Programming"></a>
 ## <a name="partial-trust-programming"></a>Programmazione con attendibilità parziale  
  Per le applicazioni XBAP, il codice che supera il set di autorizzazioni predefinito avrà un comportamento diverso a seconda dell'area di sicurezza. In alcuni casi, l'utente riceverà un avviso quando tenta di installare il codice. L'utente potrà scegliere se continuare o annullare l'installazione. La tabella seguente descrive il comportamento dell'applicazione per ogni area di sicurezza e le azioni necessarie relative all'applicazione per acquisire attendibilità totale.  
   
 |Area di sicurezza|Comportamento|Ottenere l'attendibilità totale|  
 |-------------------|--------------|------------------------|  
-|Computer locale|Attendibilità totale automatica|Non sono richieste azioni.|  
+|Computer locale|Attendibilità totale automatica|Non è richiesto alcun intervento.|  
 |Intranet e siti attendibili|Richiesta di attendibilità totale|Firma dell'applicazione XBAP con un certificato in modo che l'utente veda l'origine nel prompt.|  
 |Internet|Esito negativo con "Attendibilità non concessa"|Firma dell'applicazione XBAP con un certificato.|  
   
 > [!NOTE]
 > Il comportamento descritto nella tabella precedente è relativo alle applicazioni XBAP con attendibilità totale che non seguono il modello di distribuzione attendibile di ClickOnce.  
   
- In genere, è probabile che il codice che richiede autorizzazioni ulteriori rispetto a quelle consentite sia codice comune condiviso dalle applicazioni autonome e da quelle ospitate dal browser. CA e WPF offrono diverse tecniche per la gestione di questo scenario.  
+ In genere, è probabile che il codice che richiede autorizzazioni ulteriori rispetto a quelle consentite sia codice comune condiviso dalle applicazioni autonome e da quelle ospitate dal browser. CAS e WPFWPF offrono diverse tecniche per la gestione di questo scenario.  
   
-<a name="Detecting_Permissions_using_CAS"></a>   
+<a name="Detecting_Permissions_using_CAS"></a>
 ### <a name="detecting-permissions-using-cas"></a>Rilevamento delle autorizzazioni tramite CAS  
- In alcune situazioni è possibile che il codice condiviso negli assembly della libreria venga utilizzato sia dalle applicazioni autonome che dalle applicazioni XBAP. In questi casi, è possibile che il codice esegua funzionalità che potrebbero richiedere un numero di autorizzazioni maggiore rispetto al set assegnato all'applicazione. L'applicazione può rilevare se dispone o meno di una determinata autorizzazione usando Microsoft .NET sicurezza del Framework. In particolare, è possibile verificare se dispone di un'autorizzazione specifica chiamando il metodo <xref:System.Security.CodeAccessPermission.Demand%2A> sull'istanza dell'autorizzazione desiderata. Questa procedura è illustrata nell'esempio seguente, in cui il codice esegue una query per verificare la disponibilità dell'autorizzazione per salvare un file sul disco locale:  
+ In alcune situazioni, è possibile che il codice condiviso negli assembly di libreria venga utilizzato sia dalle applicazioni autonome che dalle applicazioni XBAP. In questi casi, è possibile che il codice esegua funzionalità che potrebbero richiedere un numero di autorizzazioni maggiore rispetto al set assegnato all'applicazione. L'applicazione può rilevare se dispone o meno di una determinata autorizzazione utilizzando la sicurezza di Microsoft .NET Framework. In particolare, è possibile verificare se <xref:System.Security.CodeAccessPermission.Demand%2A> dispone di un'autorizzazione specifica chiamando il metodo sull'istanza dell'autorizzazione desiderata. Questa procedura è illustrata nell'esempio seguente, in cui il codice esegue una query per verificare la disponibilità dell'autorizzazione per salvare un file sul disco locale:  
   
  [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](~/samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode1)]
  [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode1)]  
 [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](~/samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode2)]
 [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode2)]  
   
- Se un'applicazione non dispone dell'autorizzazione desiderata, la chiamata a <xref:System.Security.CodeAccessPermission.Demand%2A> genererà un'eccezione di sicurezza. In caso contrario, l'autorizzazione è disponibile. `IsPermissionGranted` incapsula questo comportamento e restituisce `true` o `false` in base alle esigenze.  
+ Se un'applicazione non dispone dell'autorizzazione <xref:System.Security.CodeAccessPermission.Demand%2A> desiderata, la chiamata a genererà un'eccezione di sicurezza. In caso contrario, l'autorizzazione è disponibile. `IsPermissionGranted`incapsula questo comportamento `true` `false` e restituisce o come appropriato.  
   
-<a name="Graceful_Degradation_of_Functionality"></a>   
+<a name="Graceful_Degradation_of_Functionality"></a>
 ### <a name="graceful-degradation-of-functionality"></a>Riduzione normale delle prestazioni della funzionalità  
  La capacità del codice di rilevare le autorizzazioni disponibili risulta particolarmente interessante quando il codice può essere eseguito da aree diverse. Sebbene il rilevamento dell'area sia importante, è meglio fornire un'alternativa all'utente, se possibile. Ad esempio, di solito un'applicazione con attendibilità totale consente agli utenti di creare file in qualsiasi posizione, mentre un'applicazione con attendibilità parziale consente di creare file unicamente in uno spazio di archiviazione isolato. Se il codice per la creazione di un file è contenuto in un assembly condiviso da applicazioni con attendibilità totale (autonome) e applicazioni con attendibilità parziale (ospitate dal browser) e si vuole che entrambi i tipi di applicazioni consentano la creazione di file, il codice condiviso dovrà rilevare se viene eseguito in attendibilità parziale o totale prima di creare un file nel percorso appropriato. I due casi sono illustrati nel codice seguente.  
   
@@ -113,18 +113,18 @@ ms.locfileid: "76743336"
   
  In molte situazioni è possibile trovare un'alternativa all'attendibilità parziale.  
   
- In un ambiente controllato, ad esempio una rete Intranet, è possibile installare Framework gestiti personalizzati attraverso la base client nella Global Assembly Cache (GAC). Queste librerie consentono di eseguire codice che richiede attendibilità totale ed è possibile farvi riferimento da applicazioni che sono consentite solo parzialmente attendibilità usando <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (per altre informazioni, vedere [sicurezza](security-wpf.md) e strategia di sicurezza di [WPF-sicurezza della piattaforma](wpf-security-strategy-platform-security.md)).  
+ In un ambiente controllato, ad esempio una rete Intranet, i framework gestiti personalizzati possono essere installati attraverso la base client nella Global Assembly Cache (GAC). Queste librerie possono eseguire codice che richiede attendibilità totale e farvi <xref:System.Security.AllowPartiallyTrustedCallersAttribute> riferimento solo da applicazioni a cui è consentito l'attendibilità parziale tramite (per ulteriori informazioni, vedere [Security](security-wpf.md) and [WPF Security Strategy - Platform Security](wpf-security-strategy-platform-security.md)).  
   
-<a name="Browser_Host_Detection"></a>   
+<a name="Browser_Host_Detection"></a>
 ### <a name="browser-host-detection"></a>Rilevamento host del browser  
- L'uso di CA per verificare le autorizzazioni è una tecnica adatta quando è necessario verificare l'autorizzazione per ogni singola autorizzazione. Tuttavia, tale tecnica dipende dal rilevamento di eccezioni durante la normale elaborazione, operazione che in genere non è consigliata e che può causare problemi di prestazioni. Se invece l'applicazione browser XAML (XBAP) viene eseguita solo nella sandbox dell'area Internet, è possibile usare la proprietà <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType>, che restituisce true per le applicazioni browser XAML (XBAPs).  
+ L'utilizzo di CAS per verificare le autorizzazioni è una tecnica adatta quando è necessario controllare in base alle autorizzazioni. Tuttavia, tale tecnica dipende dal rilevamento di eccezioni durante la normale elaborazione, operazione che in genere non è consigliata e che può causare problemi di prestazioni. Al contrario, se l'applicazione browser XAML (XBAP) viene <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType> eseguita solo all'interno della sandbox dell'area Internet, è possibile utilizzare la proprietà , che restituisce true per le applicazioni browser XAML (XBAP).  
   
 > [!NOTE]
-> <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A> distingue solo se un'applicazione è in esecuzione in un browser, non con il set di autorizzazioni con cui viene eseguita un'applicazione.  
+> <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A>distingue solo se un'applicazione è in esecuzione in un browser, non il set di autorizzazioni con cui viene eseguita un'applicazione.  
   
-<a name="Managing_Permissions"></a>   
-## <a name="managing-permissions"></a>Managing Permissions  
- Per impostazione predefinita, le applicazioni XBAPs vengono eseguite con attendibilità parziale (set di autorizzazioni predefinito dell'area Internet). Tuttavia, a seconda dei requisiti dell'applicazione, questo set predefinito può essere modificato. Se, ad esempio, un'applicazione XBAPs viene avviata da una rete Intranet locale, può usufruire di un set di autorizzazioni più elevato, illustrato nella tabella seguente.  
+<a name="Managing_Permissions"></a>
+## <a name="managing-permissions"></a>Gestione delle autorizzazioni  
+ Per impostazione predefinita, le applicazioni XBAP vengono eseguite con attendibilità parziale (set di autorizzazioni dell'area Internet predefinito). Tuttavia, a seconda dei requisiti dell'applicazione, questo set predefinito può essere modificato. Ad esempio, se un'applicazione XBAP viene avviata da una rete Intranet locale, può sfruttare un set di autorizzazioni maggiore, illustrato nella tabella seguente.  
   
  Tabella 3: Autorizzazioni LocalIntranet e Internet  
   
@@ -137,12 +137,12 @@ ms.locfileid: "76743336"
 |Spazio di memorizzazione isolato|Isolamento assembly in base all'utente|Sì|No|  
 |Spazio di memorizzazione isolato|Isolamento sconosciuto|Sì|Sì|  
 |Spazio di memorizzazione isolato|Quota utenti illimitata|Sì|No|  
-|Supporto|Audio, video e immagini sicuri|Sì|Sì|  
+|Contenuti multimediali|Audio, video e immagini sicuri|Sì|Sì|  
 |Stampa|Stampa predefinita|Sì|No|  
 |Stampa|Stampa sicura|Sì|Sì|  
 |Reflection|Emissione|Sì|No|  
-|Sicurezza|Esecuzione del codice gestito|Sì|Sì|  
-|Sicurezza|Asserzione autorizzazioni concesse|Sì|No|  
+|Security|Esecuzione del codice gestito|Sì|Sì|  
+|Security|Asserzione autorizzazioni concesse|Sì|No|  
 |Interfaccia utente|Senza restrizioni|Sì|No|  
 |Interfaccia utente|Finestre di primo livello sicure|Sì|Sì|  
 |Interfaccia utente|Appunti personali|Sì|Sì|  
@@ -153,15 +153,15 @@ ms.locfileid: "76743336"
   
  Per aumentare il numero di autorizzazioni, è necessario modificare le impostazioni del progetto e il manifesto dell'applicazione ClickOnce. Per altre informazioni, vedere [Panoramica delle applicazioni browser XAML di WPF](./app-development/wpf-xaml-browser-applications-overview.md). Anche i seguenti documenti possono rivelarsi utili.  
   
-- [Mage.exe (Strumento per la generazione e la modifica di manifesti)](../tools/mage-exe-manifest-generation-and-editing-tool.md).  
+- [Mage.exe (strumento di generazione e modifica di manifesti)](../tools/mage-exe-manifest-generation-and-editing-tool.md).  
   
-- [MageUI.exe (Strumento per la generazione e la modifica di manifesti, client grafico)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).  
+- [MageUI.exe (strumento di generazione e modifica di manifesti, client grafico)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).  
   
-- [Sicurezza di applicazioni ClickOnce](/visualstudio/deployment/securing-clickonce-applications).  
+- [Protezione delle applicazioni ClickOnce](/visualstudio/deployment/securing-clickonce-applications).  
   
- Se l'applicazione XBAP richiede l'attendibilità totale, è possibile utilizzare gli stessi strumenti per aumentare le autorizzazioni richieste. Anche se un'applicazione XBAP riceverà solo l'attendibilità totale se viene installata e avviata dal computer locale, dalla Intranet o da un URL elencato nei siti attendibili o consentiti del browser. Se l'applicazione viene installata dalla Intranet o da un sito attendibile, verrà visualizzato all'utente il prompt standard di ClickOnce con la notifica relativa alle autorizzazioni elevate. L'utente potrà scegliere se continuare o annullare l'installazione.  
+ Se l'applicazione XBAP richiede l'attendibilità totale, è possibile utilizzare gli stessi strumenti per aumentare le autorizzazioni richieste. Anche se un'applicazione XBAP riceverà l'attendibilità totale solo se è installata e avviata dal computer locale, dalla rete Intranet o da un URL elencato nei siti attendibili o consentiti del browser. Se l'applicazione viene installata dalla Intranet o da un sito attendibile, verrà visualizzato all'utente il prompt standard di ClickOnce con la notifica relativa alle autorizzazioni elevate. L'utente potrà scegliere se continuare o annullare l'installazione.  
   
- In alternativa, è possibile usare il modello di distribuzione attendibile di ClickOnce per una distribuzione con attendibilità totale da qualsiasi area di sicurezza. Per ulteriori informazioni, vedere [Cenni preliminari sulla distribuzione di applicazioni attendibili](/visualstudio/deployment/trusted-application-deployment-overview) e [sicurezza](security-wpf.md).  
+ In alternativa, è possibile usare il modello di distribuzione attendibile di ClickOnce per una distribuzione con attendibilità totale da qualsiasi area di sicurezza. Per ulteriori informazioni, vedere [Cenni preliminari](/visualstudio/deployment/trusted-application-deployment-overview) sulla distribuzione di applicazioni attendibili e [Sicurezza](security-wpf.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

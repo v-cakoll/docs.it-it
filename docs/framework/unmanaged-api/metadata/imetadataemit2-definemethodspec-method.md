@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3c24e552-fc69-4971-b65a-a3e4b5f7f1e8
 topic_type:
 - apiref
-ms.openlocfilehash: 7547d7557169b1279125141afb5b05e22341942a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a5d9342b8bfe650106ccf9daf2a91dfbcd575446
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432750"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175539"
 ---
 # <a name="imetadataemit2definemethodspec-method"></a>Metodo IMetaDataEmit2::DefineMethodSpec
 Crea un'istanza generica di un metodo e ottiene un token per la definizione.  
@@ -29,32 +29,32 @@ Crea un'istanza generica di un metodo e ottiene un token per la definizione.
   
 ```cpp  
 HRESULT DefineMethodSpec (  
-    [in]  mdToken           tkParent,   
-    [in]  PCCOR_SIGNATURE   pvSigBlob,   
-    [in]  ULONG             cbSigBlob,   
+    [in]  mdToken           tkParent,
+    [in]  PCCOR_SIGNATURE   pvSigBlob,
+    [in]  ULONG             cbSigBlob,
     [out] mdMethodSpec      *pmi  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `tkParent`  
- in Token per il metodo di cui creare l'istanza generica. Il token deve essere di tipo `mdMethodDef` o `mdMemberRef`.  
+ [in] Token per il metodo di cui creare l'istanza generica. Il token deve `mdMethodDef` essere `mdMemberRef`di tipo o .  
   
  `pvSigBlob`  
- in Puntatore alla firma COM+ binaria del metodo.  
+ [in] Un puntatore alla firma binaria COM.  
   
  `cbSibBlob`  
- in Dimensione, in byte, del `pvSigBlob`.  
+ [in] Dimensione, in byte, `pvSigBlob`di .  
   
  `pmi`  
- out Token per la definizione della firma dei metadati del metodo.  
+ [fuori] Token per la definizione della firma dei metadati del metodo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Usato come risorsa in MsCorEE. dll  
+ **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

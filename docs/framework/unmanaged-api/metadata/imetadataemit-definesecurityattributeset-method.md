@@ -15,46 +15,46 @@ helpviewer_keywords:
 ms.assetid: 27064ca2-4186-4433-90a7-3b297785e891
 topic_type:
 - apiref
-ms.openlocfilehash: b98fab6c6127c3f78151d3b84160d4ca0434b6cd
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fadd1974cd4fa8a51a06700835f46df24e37d7fd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428240"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175772"
 ---
 # <a name="imetadataemitdefinesecurityattributeset-method"></a>Metodo IMetaDataEmit::DefineSecurityAttributeSet
-Crea un set di autorizzazioni di sicurezza per la connessione all'oggetto a cui fa riferimento il token specificato.  
+Crea un set di autorizzazioni di sicurezza da collegare all'oggetto a cui fa riferimento il token specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
-HRESULT DefineSecurityAttributeSet (   
-    [in]  mdToken       tkObj,   
-    [in]  COR_SECATTR   rSecAttrs[],   
-    [in]  ULONG         cSecAttrs,   
-    [out] ULONG         *pulErrorAttr   
+HRESULT DefineSecurityAttributeSet (
+    [in]  mdToken       tkObj,
+    [in]  COR_SECATTR   rSecAttrs[],
+    [in]  ULONG         cSecAttrs,
+    [out] ULONG         *pulErrorAttr
 );  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `tkObj`  
- in Token a cui sono associate le informazioni di sicurezza.  
+ [in] Token a cui sono associate le informazioni di sicurezza.  
   
  `rSecAttrs`  
- in Matrice di strutture di `COR_SECATTR`.  
+ [in] Matrice di `COR_SECATTR` strutture.  
   
  `cSecAttrs`  
- in Numero di elementi in `rSecAttrs`.  
+ [in] Il numero di `rSecAttrs`elementi in .  
   
  `pulErrorAttr`  
- out Se il metodo ha esito negativo, specifica l'indice in `rSecAttrs` dell'elemento che ha causato il problema.  
+ [fuori] Se il metodo ha esito `rSecAttrs` negativo, specifica l'indice dell'elemento che ha causato il problema.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Usato come risorsa in MSCorEE. dll  
+ **Biblioteca:** Utilizzato come risorsa in MSCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

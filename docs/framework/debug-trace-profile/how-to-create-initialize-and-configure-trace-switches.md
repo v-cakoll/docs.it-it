@@ -11,17 +11,17 @@ helpviewer_keywords:
 - tracing [.NET Framework], enabling or disabling
 - Web.config configuration file, trace switches
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
-ms.openlocfilehash: 358e34b2ce5d896ba02b343ce060604f2d42eeeb
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 8bf3b974ff0ef9f719274ab684b3dce85295c917
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216485"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181836"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Procedura: Creare, inizializzare e configurare opzioni di traccia
 Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output di traccia.  
   
-<a name="create"></a>   
+<a name="create"></a>
 ## <a name="creating-and-initializing-a-trace-switch"></a>Creazione e inizializzazione di un'opzione di traccia  
  Per usare le opzioni di traccia, è necessario prima di tutto crearle e inserirle nel codice. Sono presenti due classi predefinite da cui è possibile creare oggetti opzione: <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> e <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>. Si utilizza l'oggetto <xref:System.Diagnostics.BooleanSwitch> solo se è necessario stabilire se i messaggi di traccia vengono visualizzati; l'oggetto <xref:System.Diagnostics.TraceSwitch> viene invece utilizzato se è necessario distinguere tra i livelli di traccia. Se si utilizza un oggetto <xref:System.Diagnostics.TraceSwitch> è possibile definire messaggi di debug personalizzati e associarli a diversi livelli di traccia. È possibile usare entrambi i tipi di opzioni sia per la traccia sia per il debug. Per impostazione predefinita, un oggetto <xref:System.Diagnostics.BooleanSwitch> è disabilitato e un oggetto <xref:System.Diagnostics.TraceSwitch> è impostato sul livello <xref:System.Diagnostics.TraceLevel.Off?displayProperty=nameWithType>. È possibile creare e inserire opzioni di traccia in un punto qualsiasi del codice in cui possano essere usate.  
   
@@ -31,7 +31,7 @@ Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output 
   
 1. Definire un'opzione di tipo <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> o <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> e impostare il nome e la descrizione dell'opzione.  
   
-2. Configurare l'opzione di traccia. Per altre informazioni, vedere [Configurazione delle opzioni di traccia](#configure).  
+2. Configurare l'opzione di traccia. Per ulteriori informazioni, vedere [Configurazione delle opzioni di traccia](#configure).  
   
      Il codice seguente crea due opzioni, una per ogni tipo:  
   
@@ -41,26 +41,26 @@ Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output 
     ```  
   
     ```csharp  
-    System.Diagnostics.BooleanSwitch dataSwitch =   
+    System.Diagnostics.BooleanSwitch dataSwitch =
        new System.Diagnostics.BooleanSwitch("Data", "DataAccess module");  
-    System.Diagnostics.TraceSwitch generalSwitch =   
-       new System.Diagnostics.TraceSwitch("General",   
+    System.Diagnostics.TraceSwitch generalSwitch =
+       new System.Diagnostics.TraceSwitch("General",
        "Entire application");  
     ```  
   
-<a name="configure"></a>   
+<a name="configure"></a>
 ## <a name="configuring-trace-switches"></a>Configurazione di opzioni di traccia  
  Una volta distribuita l'applicazione, è ancora possibile attivare o disabilitare l'output di traccia configurando le opzioni di traccia dell'applicazione. Configurare un'opzione significa modificarne il valore da un'origine esterna una volta inizializzata. È possibile modificare i valori degli oggetti opzione mediante il file di configurazione. Si configura un'opzione di traccia per attivarla e disabilitarla oppure per impostarne il livello, determinando la quantità e il tipo di messaggi da inviare ai listener.  
   
- Le opzioni vengono configurate tramite il file CONFIG. In caso di applicazioni Web si tratta del file Web.config associato al progetto. In un'applicazione Windows, questo file è denominato (nome applicazione). exe. config. In un'applicazione distribuita, questo file deve trovarsi nella stessa cartella del file eseguibile.  
+ Le opzioni vengono configurate tramite il file CONFIG. In caso di applicazioni Web si tratta del file Web.config associato al progetto. In un'applicazione Windows, questo file è denominato (nome applicazione).exe.config. In un'applicazione distribuita, questo file deve trovarsi nella stessa cartella dell'eseguibile.  
   
  Quando l'applicazione esegue il codice che crea un'istanza di un'opzione per la prima volta, viene verificata la presenza nel file di configurazione di informazioni sul livello di traccia relative all'opzione denominata. Il file di configurazione viene esaminato dal sistema di tracciatura solo una volta per ogni opzione, la prima volta che l'opzione in questione viene creata dall'applicazione.  
   
  In un'applicazione distribuita, il codice di traccia viene abilitato riconfigurando gli oggetti opzione quando l'applicazione non è in esecuzione. In genere questo implica l'attivazione e la disattivazione degli oggetti opzione o la modifica dei livelli di traccia, quindi il riavvio dell'applicazione.  
   
- Quando si crea un'istanza di un'opzione, la si inizializza anche specificando due argomenti: un argomento *displayName* e un argomento *description*. L'argomento *displayName* del costruttore imposta la proprietà <xref:System.Diagnostics.Switch.DisplayName%2A?displayProperty=nameWithType> dell'istanza della classe <xref:System.Diagnostics.Switch>. L'argomento *displayName* rappresenta il nome usato per configurare l'opzione nel file CONFIG, mentre l'argomento *description* restituisce una breve descrizione dell'opzione e dei messaggi che controlla.  
+ Quando si crea un'istanza di un'opzione, la si inizializza anche specificando due argomenti: un argomento *displayName* e un argomento *description*. L'argomento *displayName* del costruttore imposta la proprietà <xref:System.Diagnostics.Switch.DisplayName%2A?displayProperty=nameWithType> dell'istanza della classe <xref:System.Diagnostics.Switch>. L'argomento* displayName* rappresenta il nome usato per configurare l'opzione nel file CONFIG, mentre l'argomento *description* restituisce una breve descrizione dell'opzione e dei messaggi che controlla.  
   
- Oltre a specificare il nome di un'opzione da configurare, è necessario specificare un valore per l'opzione. Tale valore deve essere Integer. Per <xref:System.Diagnostics.BooleanSwitch>, un valore pari a 0 corrisponde a **Off**, mentre un valore diverso da 0 corrisponde a **On**. Per la classe <xref:System.Diagnostics.TraceSwitch>, 0,1,2,3 e 4 corrispondono rispettivamente a **Off**, **Error**, **Warning**, **Info** e **Verbose**. Tutti i numeri maggiori di 4 vengono considerati come **Verbose**, tutti i numeri minori di zero vengono considerati **Off**.  
+ Oltre a specificare il nome di un'opzione da configurare, è necessario specificare un valore per l'opzione.  Tale valore deve essere Integer. Per <xref:System.Diagnostics.BooleanSwitch>, un valore pari a 0 corrisponde a **Off**, mentre un valore diverso da 0 corrisponde a **On**. Per la classe <xref:System.Diagnostics.TraceSwitch>, 0,1,2,3 e 4 corrispondono rispettivamente a **Off**, **Error**, **Warning**, **Info** e **Verbose**. Tutti i numeri maggiori di 4 vengono considerati come **Verbose**, tutti i numeri minori di zero vengono considerati **Off**.  
   
 > [!NOTE]
 > In .NET Framework versione 2.0 è possibile usare testo per specificare il valore di un'opzione, ad esempio `true` per la classe <xref:System.Diagnostics.BooleanSwitch> o il testo che rappresenta un valore di enumerazione, come `Error` per la classe <xref:System.Diagnostics.TraceSwitch>. La riga `<add name="myTraceSwitch" value="Error" />` equivale a `<add name="myTraceSwitch" value="1" />`.  
@@ -77,7 +77,7 @@ Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output 
   
          Verrà creato e aperto il file di configurazione dell'applicazione. Si tratta di un documento XML il cui elemento radice è `<configuration>.`  
   
-    - **Visual C#:** nella finestra di dialogo **Aggiungi nuovo elemento** fare clic su **File XML**. Assegnare un nome al file **app. config**. Nell'editor XML, dopo la dichiarazione XML, aggiungere il codice XML seguente:  
+    - **Visual C#:** nella finestra di dialogo **Aggiungi nuovo elemento** fare clic su **File XML**. Denominare questo file **app.config**. Nell'editor XML, dopo la dichiarazione XML, aggiungere il codice XML seguente:  
   
         ```xml  
         <configuration>  

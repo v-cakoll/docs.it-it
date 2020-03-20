@@ -2,12 +2,12 @@
 title: Esempio di configurazione
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: eb02b5d01b3f95ef741aa689cc66616fd598577b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 5ac72db1fce0862381cd614499b5db4b9d95b2d0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741963"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183911"
 ---
 # <a name="configuration-sample"></a>Esempio di configurazione
 Questo esempio illustra l'utilizzo di un file di configurazione per rendere individuabile un servizio.  
@@ -17,14 +17,14 @@ Questo esempio illustra l'utilizzo di un file di configurazione per rendere indi
   
 > [!IMPORTANT]
 > È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
->   
+>
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) Esempi per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti gli esempi e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (WCF). Questo esempio si trova nella directory seguente.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Configuration`  
   
-## <a name="service-configuration"></a>Configurazione del servizio  
+## <a name="service-configuration"></a>Service Configuration  
  Il file di configurazione in questo esempio illustra due funzionalità:  
   
 - Rendere individuabile il servizio su un <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> standard.  
@@ -47,8 +47,8 @@ Questo esempio illustra l'utilizzo di un file di configurazione per rendere indi
                     binding="wsHttpBinding"  
                     contract="Microsoft.Samples.Discovery.ICalculatorService"  
                     behaviorConfiguration="endpointBehaviorConfiguration" />  
-          <endpoint name="udpDiscovery"   
-                    kind="udpDiscoveryEndpoint"   
+          <endpoint name="udpDiscovery"
+                    kind="udpDiscoveryEndpoint"
                 endpointConfiguration="adhocDiscoveryEndpointConfiguration"/>        </service>  
       </services>  
 ```  
@@ -81,7 +81,7 @@ Questo esempio illustra l'utilizzo di un file di configurazione per rendere indi
               </scopes>  
             </endpointDiscovery>  
   
-          </behavior>            
+          </behavior>
         </endpointBehaviors>  
 ```  
   
@@ -92,7 +92,7 @@ Questo esempio illustra l'utilizzo di un file di configurazione per rendere indi
 ```xml  
 <standardEndpoints>  
    <udpDiscoveryEndpoint>  
-      <standardEndpoint name="adhocDiscoveryEndpointConfiguration" discoveryVersion="WSDiscovery11" maxResponseDelay="00:00:00.600" />    
+      <standardEndpoint name="adhocDiscoveryEndpointConfiguration" discoveryVersion="WSDiscovery11" maxResponseDelay="00:00:00.600" />
    </udpDiscoveryEndpoint>  
 </standardEndpoints>  
 ```  
@@ -110,7 +110,7 @@ Questo esempio illustra l'utilizzo di un file di configurazione per rendere indi
                     binding="wsHttpBinding"  
                     contract="Microsoft.Samples.Discovery.ICalculatorService"  
                     behaviorConfiguration="endpointBehaviorConfiguration" />  
-         <!-- Define the discovery endpoint -->            
+         <!-- Define the discovery endpoint -->
 <endpoint name="udpDiscovery" kind="udpDiscoveryEndpoint" endpointConfiguration="adhocDiscoveryEndpointConfiguration"/>        </service>  
       </services>  
   
@@ -138,7 +138,7 @@ Questo esempio illustra l'utilizzo di un file di configurazione per rendere indi
               </scopes>  
             </endpointDiscovery>  
   
-          </behavior>            
+          </behavior>
         </endpointBehaviors>  
   
       </behaviors>  
@@ -146,7 +146,7 @@ Questo esempio illustra l'utilizzo di un file di configurazione per rendere indi
       <standardEndpoints>  
         <udpDiscoveryEndpoint>  
          <!-- Configure the UDP discovery endpoint -->  
-          <standardEndpoint name="adhocDiscoveryEndpointConfiguration" discoveryVersion="WSDiscovery11" maxResponseDelay="00:00:00.600" />    
+          <standardEndpoint name="adhocDiscoveryEndpointConfiguration" discoveryVersion="WSDiscovery11" maxResponseDelay="00:00:00.600" />
         </udpDiscoveryEndpoint>  
       </standardEndpoints>  
   
@@ -193,14 +193,14 @@ Questo esempio illustra l'utilizzo di un file di configurazione per rendere indi
  L'esempio estende tale funzionalità e modifica i <xref:System.ServiceModel.Discovery.FindCriteria> utilizzati dal client e alcune proprietà dell'`updDiscoveryEndpoint` standard utilizzate per l'individuazione. I <xref:System.ServiceModel.Discovery.FindCriteria> vengono modificati per utilizzare un ambito e un algoritmo `scopeMatchBy` specifico, oltre a criteri di chiusura personalizzati. Inoltre, l'esempio mostra anche come un client è in grado di inviare elementi XML utilizzando messaggi `Probe`. Infine, alcune modifiche vengono apportate a <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, ad esempio la versione del protocollo utilizzata e impostazioni specifiche dell'UDP, come mostrato nel file di configurazione seguente.  
   
 ```xml  
-<udpDiscoveryEndpoint>    
-        <!-- Specify the discovery protocol version and UDP transport settings. -->   
+<udpDiscoveryEndpoint>
+        <!-- Specify the discovery protocol version and UDP transport settings. -->
         <standardEndpoint name="adhocDiscoveryEndpointConfiguration" discoveryVersion="WSDiscovery11">  
           <transportSettings duplicateMessageHistoryLength="2048"  
                              maxPendingMessageCount="5"  
                              maxReceivedMessageSize="8192"  
                              maxBufferPoolSize="262144"/>  
-        </standardEndpoint>        
+        </standardEndpoint>
       </udpDiscoveryEndpoint>  
 ```  
   
@@ -222,7 +222,7 @@ Questo esempio illustra l'utilizzo di un file di configurazione per rendere indi
   
     <standardEndpoints>  
   
-      <dynamicEndpoint>        
+      <dynamicEndpoint>
         <standardEndpoint name="dynamicEndpointConfiguration">  
           <discoveryClientSettings>  
             <!-- Controls where the discovery happens. In this case, Probe message is sent over UdpDiscoveryEndpoint. -->  
@@ -239,17 +239,17 @@ Questo esempio illustra l'utilizzo di un file di configurazione per rendere indi
               </extensions>  
             </findCriteria>  
           </discoveryClientSettings>  
-        </standardEndpoint>     
+        </standardEndpoint>
       </dynamicEndpoint>  
   
-      <udpDiscoveryEndpoint>    
-        <!-- Specify the discovery protocol version and UDP transport settings. -->   
+      <udpDiscoveryEndpoint>
+        <!-- Specify the discovery protocol version and UDP transport settings. -->
         <standardEndpoint name="adhocDiscoveryEndpointConfiguration" discoveryVersion="WSDiscovery11">  
           <transportSettings duplicateMessageHistoryLength="2048"  
                              maxPendingMessageCount="5"  
                              maxReceivedMessageSize="8192"  
                              maxBufferPoolSize="262144"/>  
-        </standardEndpoint>        
+        </standardEndpoint>
       </udpDiscoveryEndpoint>  
   
     </standardEndpoints>  
@@ -259,9 +259,9 @@ Questo esempio illustra l'utilizzo di un file di configurazione per rendere indi
   
 #### <a name="to-use-this-sample"></a>Per usare questo esempio  
   
-1. Questo esempio usa endpoint HTTP e per eseguirlo è necessario aggiungere elenchi di controllo di accesso (ACL) agli URL appropriati. Per ulteriori informazioni, vedere [configurazione di http e HTTPS](../feature-details/configuring-http-and-https.md). L'esecuzione del comando seguente con privilegi elevati consente di aggiungere gli elenchi di controllo di accesso appropriati. È possibile che si desideri sostituire il dominio e il nome utente per gli argomenti seguenti quando il comando non funziona nella forma originale. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. Questo esempio usa endpoint HTTP e per eseguirlo è necessario aggiungere elenchi di controllo di accesso (ACL) agli URL appropriati. Per ulteriori informazioni, vedere [Configurazione di HTTP e HTTPS](../feature-details/configuring-http-and-https.md). L'esecuzione del comando seguente con privilegi elevati consente di aggiungere gli elenchi di controllo di accesso appropriati. È possibile che si desideri sostituire il dominio e il nome utente per gli argomenti seguenti quando il comando non funziona nella forma originale. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2. Compila la soluzione.  
+2. Compilare la soluzione.  
   
 3. Eseguire il servizio eseguibile dalla directory di compilazione.  
   

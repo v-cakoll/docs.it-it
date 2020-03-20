@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e0f865d-88b5-44bd-be35-492622e5e08e
 topic_type:
 - apiref
-ms.openlocfilehash: 193e8788d5a1b28f43f2fb0d4d935a18542dd923
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e766cec8fd84713e12c43cd1095650ed5b757bcb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427499"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175473"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>Metodo IMetaDataImport::EnumMethodImpls
 Enumera i token MethodBody e MethodDeclaration che rappresentano i metodi del tipo specificato.  
@@ -29,11 +29,11 @@ Enumera i token MethodBody e MethodDeclaration che rappresentano i metodi del ti
   
 ```cpp  
 HRESULT EnumMethodImpls (  
-   [in, out] HCORENUM    *phEnum,   
-   [in]      mdTypeDef   td,   
-   [out]     mdToken     rMethodBody[],   
-   [out]     mdToken     rMethodDecl[],   
-   [in]      ULONG       cMax,   
+   [in, out] HCORENUM    *phEnum,
+   [in]      mdTypeDef   td,
+   [out]     mdToken     rMethodBody[],
+   [out]     mdToken     rMethodDecl[],
+   [in]      ULONG       cMax,
    [in]      ULONG       *pcTokens  
 );  
 ```  
@@ -43,33 +43,33 @@ HRESULT EnumMethodImpls (
  [in, out] Puntatore all'enumeratore. Deve essere NULL per la prima chiamata di questo metodo.  
   
  `td`  
- in Token TypeDef per il tipo di cui è necessario enumerare le implementazioni del metodo.  
+ [in] Token TypeDef per il tipo di cui il metodo viene inizializzato per l'enumerazione.  
   
  `rMethodBody`  
- out Matrice in cui archiviare i token MethodBody.  
+ [fuori] Matrice in cui archiviare i token MethodBody.  
   
  `rMethodDecl`  
- out Matrice in cui archiviare i token MethodDeclaration.  
+ [fuori] Matrice in cui archiviare i token MethodDeclaration.  
   
  `cMax`  
- in Dimensioni massime delle matrici di `rMethodBody` e di `rMethodDecl`.  
+ [in] Dimensione massima delle `rMethodBody` `rMethodDecl` matrici e .  
   
  `pcTokens`  
- in Numero effettivo di metodi restituiti in `rMethodBody` e `rMethodDecl`.  
+ [in] Numero effettivo di metodi `rMethodBody` restituiti in e `rMethodDecl`.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodImpls` ha restituito un esito positivo.|  
-|`S_FALSE`|Nessun token di metodo da enumerare. In tal caso, `pcTokens` è zero.|  
+|`S_OK`|`EnumMethodImpls`restituito con successo.|  
+|`S_FALSE`|Non sono presenti token di metodo da enumerare. In tal `pcTokens` caso, è zero.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Incluso come risorsa in MsCorEE. dll  
+ **Biblioteca:** Incluso come risorsa in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

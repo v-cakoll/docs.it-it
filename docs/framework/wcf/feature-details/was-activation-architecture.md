@@ -2,12 +2,12 @@
 title: Architettura di attivazione WAS
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 01c30db1182ece6dd968b69cc4efcaa2d9fabd79
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 67ddcd97ac75ddeb0765c38bb9ce7b5e8f039272
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76737509"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184247"
 ---
 # <a name="was-activation-architecture"></a>Architettura di attivazione WAS
 In questo argomento vengono definiti e illustrati i componenti del servizio di attivazione dei processi di Windows (noto anche come WAS).  
@@ -30,11 +30,11 @@ In questo argomento vengono definiti e illustrati i componenti del servizio di a
  ![Screenshot che mostra l'architettura di WAS.](./media/was-activation-architecture/windows-process-application-service-architecture.gif)  
   
 ### <a name="listener-adapters"></a>Adattatori listener  
- Gli adattatori listener sono servizi di Windows singoli che implementano la logica di comunicazione di rete utilizzata per ricevere i messaggi tramite il protocollo di rete sul quale ascoltano. Nella tabella seguente sono elencati gli adapter listener per i protocolli Windows Communication Foundation (WCF).  
+ Gli adattatori listener sono servizi di Windows singoli che implementano la logica di comunicazione di rete utilizzata per ricevere i messaggi tramite il protocollo di rete sul quale ascoltano. Nella tabella seguente sono elencati gli adattatori listener per i protocolli Windows Communication Foundation (WCF).  
   
 |Nome del servizio dell’adattatore listener|Protocollo|Note|  
 |-----------------------------------|--------------|-----------|  
-|W3SVC|http|Componente comune che fornisce l'attivazione HTTP sia per IIS 7,0 che per WCF.|  
+|W3SVC|http|Componente comune che fornisce l'attivazione HTTP sia per IIS 7.0 che per WCF.|  
 |NetTcpActivator|net.tcp|Dipende dal servizio NetTcpPortSharing.|  
 |NetPipeActivator|net.pipe||  
 |NetMsmqActivator|net.msmq|Per l'utilizzo con le applicazioni di Accodamento messaggi basate su WCF.|  
@@ -46,13 +46,13 @@ In questo argomento vengono definiti e illustrati i componenti del servizio di a
 <system.applicationHost>  
     <listenerAdapters>  
         <add name="http" />  
-        <add name="net.tcp"   
+        <add name="net.tcp"
           identity="S-1-5-80-3579033775-2824656752-1522793541-1960352512-462907086" />  
-         <add name="net.pipe"   
+         <add name="net.pipe"
            identity="S-1-5-80-2943419899-937267781-4189664001-1229628381-3982115073" />  
-          <add name="net.msmq"   
+          <add name="net.msmq"
             identity="S-1-5-80-89244771-1762554971-1007993102-348796144-2203111529" />  
-           <add name="msmq.formatname"   
+           <add name="msmq.formatname"
              identity="S-1-5-80-89244771-1762554971-1007993102-348796144-2203111529" />  
     </listenerAdapters>  
 </system.applicationHost>  
@@ -64,13 +64,13 @@ In questo argomento vengono definiti e illustrati i componenti del servizio di a
 ```xml  
 <system.web>  
    <protocols>  
-      <add name="net.tcp"   
+      <add name="net.tcp"
         processHandlerType=  
          "System.ServiceModel.WasHosting.TcpProcessProtocolHandler"  
         appDomainHandlerType=  
          "System.ServiceModel.WasHosting.TcpAppDomainProtocolHandler"  
         validate="false" />  
-      <add name="net.pipe"   
+      <add name="net.pipe"
         processHandlerType=  
          "System.ServiceModel.WasHosting.NamedPipeProcessProtocolHandler"  
           appDomainHandlerType=  

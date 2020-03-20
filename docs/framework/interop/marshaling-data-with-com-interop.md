@@ -4,12 +4,12 @@ ms.date: 09/07/2017
 helpviewer_keywords:
 - COM interop, data marshaling
 - marshaling data, COM interop
-ms.openlocfilehash: 24fa390c94baaa0fe009ebe513f2eb7aa34d34fa
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ae41713d5349321725599c0c38d7c6fc515c374b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73114007"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181378"
 ---
 # <a name="marshaling-data-with-com-interop"></a>dati di marshalling con interoperabilità COM
 Grazie all'interoperabilità COM, è possibile usare oggetti COM dal codice gestito ed esporre oggetti gestiti a COM. Il supporto per effettuare il marshalling dei dati verso e da COM è estensivo e garantisce sempre il comportamento di marshalling corretto.  
@@ -23,9 +23,8 @@ Grazie all'interoperabilità COM, è possibile usare oggetti COM dal codice gest
  Le sezioni seguenti riportano collegamenti ad argomenti che descrivono i processi per la personalizzazione dei wrapper di interoperabilità quando è possibile o necessario fornire altre informazioni sui tipi al gestore di marshalling.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
-[Procedura: Creare wrapper manualmente](how-to-create-wrappers-manually.md)   
-Descrive come creare manualmente un wrapper COM nel codice sorgente gestito. 
- 
+[Procedura: creare manualmente wrapperHow to: Create Wrappers Manually](how-to-create-wrappers-manually.md) Viene descritto come creare manualmente un wrapper COM nel codice sorgente gestito.
+
  [Procedura: Eseguire la migrazione di codice gestito da DCOM a WCF](how-to-migrate-managed-code-dcom-to-wcf.md)  
  Descrive come eseguire la migrazione di codice gestito DCOM in WCF per la soluzione più sicura.  
   

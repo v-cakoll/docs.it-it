@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dock control pattern
 - UI Automation, dock control pattern
 ms.assetid: ea3d2212-7c8e-4dd7-bf08-73141ca2d4fb
-ms.openlocfilehash: 1e2084483a34709392b9d3ceab02472c36944132
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b1213791609245209fa37e3cdcb0876c963bfeb0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435430"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180201"
 ---
 # <a name="implementing-the-ui-automation-dock-control-pattern"></a>Implementazione del pattern di controllo Dock di automazione interfaccia utente
 > [!NOTE]
@@ -21,10 +21,10 @@ ms.locfileid: "74435430"
   
  Il pattern di controllo <xref:System.Windows.Automation.DockPattern> viene usato per esporre le proprietà di ancoraggio di un controllo all'interno di un contenitore di ancoraggio. Un contenitore di ancoraggio è un controllo che consente di disporre gli elementi figlio orizzontalmente e verticalmente, uno rispetto all'altro. Per esempi di controlli che implementano questo pattern di controllo, vedere [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md).  
   
- ![Ancoraggio del contenitore con due elementi figlio ancorati.](./media/uia-dockpattern-dockingexample.PNG "UIA_DockPattern_DockingExample")  
+ ![Contenitore di ancoraggio con due elementi figlio ancorati](./media/uia-dockpattern-dockingexample.PNG "UIA_DockPattern_DockingExample")  
 Esempio di ancoraggio da Visual Studio dove la finestra "Visualizzazione classi" è impostata su DockPosition.Right e la finestra "Elenco errori" è impostata su DockPosition.Bottom  
   
-<a name="Implementation_Guidelines_and_Conventions"></a>   
+<a name="Implementation_Guidelines_and_Conventions"></a>
 ## <a name="implementation-guidelines-and-conventions"></a>Linee guida e convenzioni di implementazione  
  Quando si implementa il pattern di controllo Dock, tenere presenti le linee guida e le convenzioni seguenti:  
   
@@ -36,29 +36,29 @@ Esempio di ancoraggio da Visual Studio dove la finestra "Visualizzazione classi"
   
 - In un sistema con più monitor i controlli devono essere ancorati al lato sinistro o destro del monitor corrente. Se ciò non è possibile, devono essere ancorati al lato sinistro del monitor all'estrema sinistra o al lato destro del monitor all'estrema destra.  
   
-<a name="Required_Members_for_IDockProvider"></a>   
+<a name="Required_Members_for_IDockProvider"></a>
 ## <a name="required-members-for-idockprovider"></a>Membri obbligatori per IDockProvider  
  Le proprietà e i metodi seguenti sono obbligatori per l'implementazione dell'interfaccia IDockProvider.  
   
 |Membri obbligatori|Tipo di membro|Note|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|Proprietà|Nessuna|  
-|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|Metodo|Nessuna|  
+|<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|Proprietà|nessuno|  
+|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|Metodo|nessuno|  
   
  Questo pattern di controllo non è associato a eventi.  
   
-<a name="Exceptions"></a>   
+<a name="Exceptions"></a>
 ## <a name="exceptions"></a>Eccezioni  
  I provider devono generare le eccezioni seguenti.  
   
 |Tipo di eccezione|Condizione|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> -Quando un controllo non è in grado di eseguire lo stile di ancoraggio richiesto.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> - Quando un controllo non è in grado di eseguire lo stile di ancoraggio richiesto.- When a control is not able to execute the requested dock style.|  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica dei pattern di controllo per l'automazione interfaccia utente](ui-automation-control-patterns-overview.md)
+- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
 - [Supportare pattern di controllo in un provider di automazione interfaccia utente](support-control-patterns-in-a-ui-automation-provider.md)
-- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
-- [Panoramica dell'albero di automazione interfaccia utente](ui-automation-tree-overview.md)
-- [Usare la memorizzazione nella cache in automazione interfaccia utente](use-caching-in-ui-automation.md)
+- [Pattern di controllo di automazione interfaccia utente per i client](ui-automation-control-patterns-for-clients.md)
+- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [Utilizzare la memorizzazione nella cache per l'automazione interfaccia utente](use-caching-in-ui-automation.md)

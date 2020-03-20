@@ -2,12 +2,12 @@
 title: Utilizzo del canale client di individuazione
 ms.date: 03/30/2017
 ms.assetid: 1494242a-1d64-4035-8ecd-eb4f06c8d2ba
-ms.openlocfilehash: 05ca54d62179d024e619bc5c9c70a4e08b9dd62f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2d9dd68d233541f4d8cb3185adc1023cd5a19de1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975945"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184256"
 ---
 # <a name="using-the-discovery-client-channel"></a>Utilizzo del canale client di individuazione
 In fase di scrittura di un'applicazione client WCF è necessario conoscere l'indirizzo endpoint del servizio che si sta chiamando. In molti casi l'indirizzo endpoint di un servizio non è noto in anticipo o l'indirizzo del servizio cambia con il tempo. Il canale client di individuazione consente di scrivere un'applicazione client WCF, descrivere il servizio che si desidera chiamare e il canale client invia automaticamente una richiesta del probe. Quando un servizio risponde, il canale client di individuazione recupera l'indirizzo endpoint per il servizio dalla risposta del probe e lo utilizza per chiamare il servizio.  
@@ -22,9 +22,9 @@ In fase di scrittura di un'applicazione client WCF è necessario conoscere l'ind
   
 1. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.FindCriteria%2A>, utilizzata per descrivere il servizio che si desidera chiamare.  
   
-2. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A> che specifica l'endpoint di individuazione a cui inviare i messaggi di individuazione.  
+2. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A>che specifica l'endpoint di individuazione a cui inviare i messaggi di individuazione.  
   
- La proprietà <xref:System.ServiceModel.Discovery.FindCriteria.%23ctor%2A> consente di specificare il contratto di servizio cercato, qualsiasi URI di ambito obbligatorio e il numero massimo di tentativi di aprire il canale. Il tipo di contratto viene specificato chiamando il costruttore <xref:System.ServiceModel.Discovery.FindCriteria>. È possibile aggiungere gli URI di ambito alla proprietà <xref:System.ServiceModel.Discovery.FindCriteria.Scopes%2A>. La proprietà <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> consente di specificare il numero massimo di risultati a cui il client tenta di connettersi. Se viene ricevuta una risposta del probe, il client tenta di aprire il canale utilizzando l'indirizzo endpoint dalla risposta del probe. Se si verifica un'eccezione, il client passa alla risposta del probe successivo, in attesa di ricezione di più risposte, se necessario. Questo schema continua finché il canale non viene aperto o viene raggiunto il numero massimo di risultati. Per ulteriori informazioni su queste impostazioni, vedere <xref:System.ServiceModel.Discovery.FindCriteria>.  
+ La proprietà <xref:System.ServiceModel.Discovery.FindCriteria.%23ctor%2A> consente di specificare il contratto di servizio cercato, qualsiasi URI di ambito obbligatorio e il numero massimo di tentativi di aprire il canale. Il tipo di contratto <xref:System.ServiceModel.Discovery.FindCriteria>viene specificato chiamando il costruttore . È possibile aggiungere gli URI di ambito alla proprietà <xref:System.ServiceModel.Discovery.FindCriteria.Scopes%2A>. La proprietà <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> consente di specificare il numero massimo di risultati a cui il client tenta di connettersi. Se viene ricevuta una risposta del probe, il client tenta di aprire il canale utilizzando l'indirizzo endpoint dalla risposta del probe. Se si verifica un'eccezione, il client passa alla risposta del probe successivo, in attesa di ricezione di più risposte, se necessario. Questo schema continua finché il canale non viene aperto o viene raggiunto il numero massimo di risultati. Per altre informazioni su queste impostazioni, vedere <xref:System.ServiceModel.Discovery.FindCriteria>.  
   
  La proprietà <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A> consente di specificare l'endpoint di individuazione da utilizzare. In genere si tratta di un <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, ma può essere rappresentato da qualsiasi endpoint valido.  
   
@@ -41,7 +41,7 @@ bindingElement.FindCriteria = new FindCriteria(typeof(ICalculator)) { MaxResults
 // Use the UdpDiscoveryEndpoint  
 bindingElement.DiscoveryEndpoint = new UdpDiscoveryEndpoint();  
   
-// The service uses the BasicHttpBinding, so use that and insert the DiscoveryClientBindingElement at the   
+// The service uses the BasicHttpBinding, so use that and insert the DiscoveryClientBindingElement at the
 // top of the stack  
 CustomBinding binding = new CustomBinding(new BasicHttpBinding());  
 binding.Elements.Insert(0,bindingElement);  
@@ -60,4 +60,4 @@ catch (EndpointNotFoundException ex)
 ```  
   
 ## <a name="security-and-the-discovery-client-channel"></a>Sicurezza e canale client di individuazione  
- In caso di utilizzo del canale client di individuazione, vengono specificati due endpoint. Uno viene utilizzato per messaggi di individuazione, in genere <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, e l'altro è l'endpoint dell'applicazione. In caso di implementazione di un servizio protetto, è necessario proteggere entrambi gli endpoint. Per ulteriori informazioni sulla sicurezza, vedere [protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).
+ In caso di utilizzo del canale client di individuazione, vengono specificati due endpoint. Uno viene utilizzato per messaggi di individuazione, in genere <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, e l'altro è l'endpoint dell'applicazione. In caso di implementazione di un servizio protetto, è necessario proteggere entrambi gli endpoint. Per ulteriori informazioni sulla sicurezza, vedere [Protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 49435665-6f5a-4acd-9034-8c9244a04a63
 topic_type:
 - apiref
-ms.openlocfilehash: a5b080443be94d5a298cc67591914d87470e6f48
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 40df78cdf99c2e0f53be9664f3f5c6386b6c6f93
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447194"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179401"
 ---
 # <a name="getscope2-method"></a>Metodo GetScope2
 Ottiene un ambito di importazione.  
@@ -32,7 +32,7 @@ HRESULT GetScope2(
     mdToken FileToken,  
     DWORD dwScope,  
     IMetaDataImport2** ppImportScope  
-) PURE;   
+) PURE;
 ```  
   
 ## <a name="parameters"></a>Parametri  
@@ -46,16 +46,16 @@ HRESULT GetScope2(
  Ambito in base zero da importare.  
   
  `ppImportScope`  
- Riceve il puntatore all'interfaccia dell' [interfaccia IMetaDataImport2](../metadata/imetadataimport2-interface.md) per l'ambito indicato.  
+ Riceve il puntatore [all'interfaccia IMetaDataImport2 per l'ambito](../metadata/imetadataimport2-interface.md) indicato.  
   
 ## <a name="return-value"></a>Valore restituito  
  Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- Richiede ALink. h.  
+ Richiede alink.h.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Interfaccia IALink2](ialink2-interface.md)
 - [Interfaccia IALink](ialink-interface.md)
-- [Alink (API)](index.md)
+- [API Alink](index.md)

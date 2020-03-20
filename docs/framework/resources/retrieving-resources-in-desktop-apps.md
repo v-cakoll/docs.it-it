@@ -18,24 +18,24 @@ helpviewer_keywords:
 - translating resources into languages
 - localizing resources
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
-ms.openlocfilehash: 39bb518306b6e76aea1ae4a791fca79fbbb1b6c8
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 17795db2cdec419a31fe862793c88506f9535ff9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445750"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180455"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Recupero di risorse nelle applicazioni desktop
 
-Quando si utilizzano le risorse localizzate in applicazioni desktop di .NET Framework, è consigliabile comprimere le risorse per le impostazioni cultura predefinite o non associate ad alcun paese con l'assembly principale e creare un assembly satellite separato per ciascuna lingua o impostazione cultura supportata dall'applicazione. È quindi possibile utilizzare la classe <xref:System.Resources.ResourceManager> come descritto nella sezione successiva per accedere alle risorse denominate. Se si sceglie di non includere le risorse nell'assembly principale e negli assembly satellite, è inoltre possibile accedere direttamente ai file binari .resources, come illustrato nella sezione [Recupero delle risorse dai file .resources](#from_file) più avanti in questo articolo.  Per recuperare le risorse nelle app di Windows 8. x Store, vedere [creazione e recupero di risorse nelle app di Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140)).  
+Quando si utilizzano le risorse localizzate in applicazioni desktop di .NET Framework, è consigliabile comprimere le risorse per le impostazioni cultura predefinite o non associate ad alcun paese con l'assembly principale e creare un assembly satellite separato per ciascuna lingua o impostazione cultura supportata dall'applicazione. È quindi possibile utilizzare la classe <xref:System.Resources.ResourceManager> come descritto nella sezione successiva per accedere alle risorse denominate. Se si sceglie di non includere le risorse nell'assembly principale e negli assembly satellite, è inoltre possibile accedere direttamente ai file binari .resources, come illustrato nella sezione [Recupero delle risorse dai file .resources](#from_file) più avanti in questo articolo.  Per recuperare le risorse nelle app di Windows 8.x Store, vedere Creazione e recupero di risorse nelle app di [Windows Store.](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140))  
   
-<a name="from_assembly"></a>   
+<a name="from_assembly"></a>
 ## <a name="retrieving-resources-from-assemblies"></a>Recupero delle risorse dagli assembly  
  La classe <xref:System.Resources.ResourceManager> fornisce l'accesso alle risorse in fase di esecuzione. Utilizzare il metodo <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> per recuperare le risorse di tipo stringa e il metodo <xref:System.Resources.ResourceManager.GetObject%2A?displayProperty=nameWithType> o <xref:System.Resources.ResourceManager.GetStream%2A?displayProperty=nameWithType> per recuperare le risorse non di tipo stringa. Ogni metodo dispone di due overload:  
   
-- Un overload di cui l'unico parametro è una stringa contenente il nome della risorsa. Il metodo tenta di recuperare la risorsa per le impostazioni cultura del thread corrente. Per ulteriori informazioni, vedere i metodi <xref:System.Resources.ResourceManager.GetString%28System.String%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%29>e <xref:System.Resources.ResourceManager.GetStream%28System.String%29> .  
+- Un overload di cui l'unico parametro è una stringa contenente il nome della risorsa. Il metodo tenta di recuperare la risorsa per le impostazioni cultura del thread corrente. Per ulteriori informazioni, vedere i metodi <xref:System.Resources.ResourceManager.GetString%28System.String%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%29> e <xref:System.Resources.ResourceManager.GetStream%28System.String%29>.  
   
-- Un overload che dispone di due parametri: una stringa contenente il nome della risorsa e un oggetto <xref:System.Globalization.CultureInfo> che rappresenta le impostazioni cultura di cui deve essere recuperata la risorsa. Se non è possibile trovare un set di risorse per le impostazioni cultura, il gestore di risorse utilizza le regole di fallback per recuperare una risorsa appropriata. Per ulteriori informazioni, vedere i metodi <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>e <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> .  
+- Un overload che dispone di due parametri: una stringa contenente il nome della risorsa e un oggetto <xref:System.Globalization.CultureInfo> che rappresenta le impostazioni cultura di cui deve essere recuperata la risorsa. Se non è possibile trovare un set di risorse per le impostazioni cultura, il gestore di risorse utilizza le regole di fallback per recuperare una risorsa appropriata. Per ulteriori informazioni, vedere i metodi <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29> e <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29>.  
   
  Il gestore di risorse utilizza il processo di fallback delle risorse per controllare come l'applicazione recupera le risorse specifiche delle impostazioni cultura. Per altre informazioni, vedere la sezione "Processo di recupero di una risorsa" in [Creazione del package e distribuzione delle risorse](packaging-and-deploying-resources-in-desktop-apps.md). Per informazioni sulla creazione di un'istanza di un oggetto <xref:System.Resources.ResourceManager> , vedere la sezione "Creazione di un'istanza di un oggetto ResourceManager" nell'argomento relativo alla classe <xref:System.Resources.ResourceManager> .  
   
@@ -88,12 +88,12 @@ al -embed:strings.ru-RU.resources -culture:ru-RU -out:ru-RU\GetString.resources.
  [!code-csharp[Conceptual.Resources.Retrieving#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/createresources.cs#4)]
  [!code-vb[Conceptual.Resources.Retrieving#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/createresources.vb#4)]  
   
- Il seguente codice recupera la risorsa e visualizza l'immagine in un controllo <xref:System.Windows.Forms.PictureBox> .  
+ Il seguente codice recupera la risorsa e visualizza l'immagine in un controllo <xref:System.Windows.Forms.PictureBox>.  
   
  [!code-csharp[Conceptual.Resources.Retrieving#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/getstream.cs#5)]
  [!code-vb[Conceptual.Resources.Retrieving#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/getstream.vb#5)]  
   
- È possibile usare il file batch seguente per compilare l'esempio in C#. Per Visual Basic, sostituire `csc` con `vbc` e modificare l'estensione del file del codice sorgente da `.cs` a `.vb`.  
+ È possibile usare il file batch seguente per compilare l'esempio in C#. Per Visual Basic, sostituire `csc` con `vbc`e modificare l'estensione del file del codice sorgente da `.cs` a `.vb`.  
   
 ```console
 csc CreateResources.cs  
@@ -143,13 +143,13 @@ GetObject.exe
   
  Per ulteriori informazioni sul controllo delle versioni degli assembly, vedere [Controllo delle versioni degli assembly](../../standard/assembly/versioning.md) e [Come il runtime individua gli assembly](../deployment/how-the-runtime-locates-assemblies.md).  
   
-<a name="from_file"></a>   
-## <a name="retrieving-resources-from-resources-files"></a>Recupero di risorse da file .resources  
+<a name="from_file"></a>
+## <a name="retrieving-resources-from-resources-files"></a>Recupero delle risorse dai file .resources  
  Se si sceglie di non distribuire le risorse in assembly satellite, è comunque possibile utilizzare direttamente un oggetto <xref:System.Resources.ResourceManager> per accedere alle risorse dai file .resources. A tale scopo, è necessario distribuire i file .resources correttamente. Utilizzare quindi il metodo <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%2A?displayProperty=nameWithType> per creare un'istanza di un oggetto <xref:System.Resources.ResourceManager> e specificare la directory contenente i file .resources autonomi.  
   
 ### <a name="deploying-resources-files"></a>Distribuzione di file .resources  
- Quando si incorporano i file .resources in un assembly dell'applicazione e in assembly satellite, ogni assembly satellite ha lo stesso nome file, ma viene collocato in una sottodirectory che corrisponde alle impostazioni cultura dell'assembly satellite. Al contrario, quando si accede direttamente alle risorse dai file .resources, è possibile inserire tutti i file .resources in una singola directory, in genere una sottodirectory della directory dell'applicazione. Il nome del file .resources predefinito dell'applicazione è costituito solo da un nome radice, senza indicare le impostazioni cultura, ad esempio strings.resources. Le risorse per ogni impostazione cultura localizzata vengono archiviate in un file il cui nome è costituito dal nome radice seguito dalle impostazioni cultura, ad esempio strings.ja.resources o strings.de-DE.resources. 
- 
+ Quando si incorporano i file .resources in un assembly dell'applicazione e in assembly satellite, ogni assembly satellite ha lo stesso nome file, ma viene collocato in una sottodirectory che corrisponde alle impostazioni cultura dell'assembly satellite. Al contrario, quando si accede direttamente alle risorse dai file .resources, è possibile inserire tutti i file .resources in una singola directory, in genere una sottodirectory della directory dell'applicazione. Il nome del file .resources predefinito dell'applicazione è costituito solo da un nome radice, senza indicare le impostazioni cultura, ad esempio strings.resources. Le risorse per ogni impostazione cultura localizzata vengono archiviate in un file il cui nome è costituito dal nome radice seguito dalle impostazioni cultura, ad esempio strings.ja.resources o strings.de-DE.resources.
+
  La figura seguente mostra dove collocare i file di risorse nella struttura di directory. Illustra anche le convenzioni di denominazione per i file di risorse.  
 
  ![Figura che illustra la directory principale per l'applicazione.](./media/retrieving-resources-in-desktop-apps/resource-application-directory.gif)  
@@ -172,7 +172,7 @@ Prompt=What is your name?
   
  Le risorse per le impostazioni cultura francesi (Francia) vengono archiviate nel seguente file, denominato Strings.fr-FR.txt:  
   
-```text 
+```text
 Greeting=Bon jour  
 Prompt=Comment vous appelez-vous?  
 ```  
@@ -189,7 +189,7 @@ Prompt=Как вас зовут?
  [!code-csharp[Conceptual.Resources.Retrieving#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/example3.cs#9)]
  [!code-vb[Conceptual.Resources.Retrieving#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/example3.vb#9)]  
   
- È possibile compilare la versione C# dell'esempio eseguendo il file batch riportato di seguito. Se si usa Visual Basic, sostituire `csc` con `vbc`e l'estensione `.cs` con `.vb`.  
+ È possibile compilare la versione C# dell'esempio eseguendo il file batch riportato di seguito. Se si usa Visual Basic, sostituire `csc` con `vbc` e l'estensione `.cs` con `.vb`.  
   
 ```console
 Md Resources  
@@ -204,6 +204,6 @@ csc Example.cs
 
 - <xref:System.Resources.ResourceManager>
 - [Risorse nelle applicazioni desktop](index.md)
-- [Creazione del pacchetto e distribuzione delle risorse](packaging-and-deploying-resources-in-desktop-apps.md)
+- [Packaging and Deploying Resources](packaging-and-deploying-resources-in-desktop-apps.md)
 - [Come il runtime individua gli assembly](../deployment/how-the-runtime-locates-assemblies.md)
 - [Creazione e recupero di risorse nelle app di Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140))

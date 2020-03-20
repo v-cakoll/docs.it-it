@@ -15,54 +15,54 @@ helpviewer_keywords:
 ms.assetid: a95a3908-9f87-4084-937e-8e01ef03ad63
 topic_type:
 - apiref
-ms.openlocfilehash: 813460aa027b259866b168d426fd28502b5c4465
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 13220dcfdd260688494d5aebc50f94abf8a82215
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432500"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177501"
 ---
 # <a name="imetadataemitsetparamprops-method"></a>Metodo IMetaDataEmit::SetParamProps
-Imposta o modifica le funzionalità di un parametro del metodo definito da una chiamata precedente a [IMetaDataEmit::D efineparam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md).  
+Imposta o modifica le funzionalità di un parametro di metodo definito da una precedente chiamata a [IMetaDataEmit::DefineParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
-HRESULT SetParamProps (   
-    [in]  mdParamDef  pd,   
-    [in]  LPCWSTR     szName,   
-    [in]  DWORD       dwParamFlags,   
-    [in]  DWORD       dwCPlusTypeFlag,   
-    [in]  void const  *pValue,   
-    [in]  ULONG       cchValue   
+HRESULT SetParamProps (
+    [in]  mdParamDef  pd,
+    [in]  LPCWSTR     szName,
+    [in]  DWORD       dwParamFlags,
+    [in]  DWORD       dwCPlusTypeFlag,
+    [in]  void const  *pValue,
+    [in]  ULONG       cchValue
 );  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `pd`  
- in Token per il parametro di destinazione.  
+ [in] Token per il parametro di destinazione.  
   
  `szName`  
- in Nome del parametro in formato Unicode.  
+ [in] Nome del parametro in Unicode.  
   
  `dwParamFlags`  
- in Flag per il parametro.  
+ [in] Flag per il parametro.  
   
  `dwCPlusTypeFlag`  
- in ELEMENT_TYPE_ * per il valore della costante.  
+ [in] Il valore di ELEMENT_TYPE_ per il valore costante.  
   
  `pValue`  
- in Valore costante per il parametro.  
+ [in] Valore costante per il parametro.  
   
  `cchValue`  
- in Dimensioni in caratteri (Unicode) del `pValue`.  
+ [in] La dimensione in caratteri `pValue`(Unicode) di .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Usato come risorsa in MSCorEE. dll  
+ **Biblioteca:** Utilizzato come risorsa in MSCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -1,15 +1,15 @@
 ---
-title: Elemento <ImpliesType> (.NET Native)
+title: <ImpliesType>Elemento (.NET native)
 ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
-ms.openlocfilehash: 2f0ce1a1587e190627212cba07db298c12f4b30e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 57f4208233cd5e8544b4f1c254e3b0e0eaacd508
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128397"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181011"
 ---
-# <a name="impliestype-element-net-native"></a>\<elemento ImpliesType > (.NET Native)
+# <a name="impliestype-element-net-native"></a>\<ImpliesType> elemento (.NET native)
 Applica criteri a un tipo, se tale criterio è stato applicato al metodo o al tipo contenitore.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -19,7 +19,7 @@ Applica criteri a un tipo, se tale criterio è stato applicato al metodo o al ti
              Activate="policy_type"  
              Browse="policy_type"  
              Dynamic="policy_type"  
-             Serialize="policy_type"   
+             Serialize="policy_type"
              DataContractSerializer="policy_setting"  
              DataContractJsonSerializer="policy_setting"  
              XmlSerializer="policy_setting"  
@@ -31,11 +31,11 @@ Applica criteri a un tipo, se tale criterio è stato applicato al metodo o al ti
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### <a name="attributes"></a>Attributi  
+### <a name="attributes"></a>Attributes  
   
 |Attributo|Tipo di attributo|Descrizione|  
 |---------------|--------------------|-----------------|  
-|`Name`|Generale|Attributo obbligatorio. Specifica il nome del tipo.|  
+|`Name`|Generale|Attributo obbligatorio. Specifica il nome tipo.|  
 |`Activate`|Reflection|Attributo facoltativo. Controlla l'accesso in fase di esecuzione ai costruttori per abilitare l'attivazione di istanze.|  
 |`Browse`|Reflection|Attributo facoltativo. Controlla le query per le informazioni sugli elementi di programma, ma non abilita l'accesso in fase di esecuzione.|  
 |`Dynamic`|Reflection|Attributo facoltativo. Controlla l'accesso in fase di esecuzione a tutti i membri dei tipi, inclusi costruttori, metodi, campi, proprietà ed eventi, per abilitare la programmazione dinamica.|  
@@ -49,28 +49,28 @@ Applica criteri a un tipo, se tale criterio è stato applicato al metodo o al ti
   
 ## <a name="name-attribute"></a>Name (attributo)  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|*type_name*|Nome del tipo. Se il tipo rappresentato da questo elemento `<ImpliesType>` si trova nello stesso spazio dei nomi dell'elemento `<Type>` contenitore, *type_name* può includere il nome del tipo senza lo spazio dei nomi. In caso contrario, *type_name* deve includere il nome completo del tipo.|  
+|*Type_name*|Nome del tipo. Se il tipo rappresentato da questo elemento `<ImpliesType>` si trova nello stesso spazio dei nomi dell'elemento `<Type>` contenitore, *type_name* può includere il nome del tipo senza lo spazio dei nomi. In caso contrario, *type_name* deve includere il nome completo del tipo.|  
   
 ## <a name="all-other-attributes"></a>Tutti gli altri attributi  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |*policy_setting*|L'impostazione da applicare a questo tipo di criteri. I valori consentiti sono `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per altre informazioni, vedere [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuna.  
+ No.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<Type>](type-element-net-native.md)|Applica i criteri di reflection a un tipo e a tutti i membri.|  
-|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Applica i criteri di reflection a un tipo generico costruito e a tutti i membri.|  
-|[\<Method>](method-element-net-native.md)|Applica i criteri di reflection a un metodo.|  
+|[\<Tipo>](type-element-net-native.md)|Applica i criteri di reflection a un tipo e a tutti i membri.|  
+|[\<>TypeInstantiation](typeinstantiation-element-net-native.md)|Applica i criteri di reflection a un tipo generico costruito e a tutti i membri.|  
+|[\<>del metodo](method-element-net-native.md)|Applica i criteri di reflection a un metodo.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  L'elemento `<ImpliesType>` viene usato principalmente dalle librerie. Consente di risolvere il seguente scenario:  
   
 - Se una routine deve eseguire la reflection su un tipo, deve necessariamente eseguirla anche su un secondo tipo.  
@@ -89,7 +89,7 @@ Applica criteri a un tipo, se tale criterio è stato applicato al metodo o al ti
   
  Questa direttiva non ha alcun effetto a meno che non sia stata definita un'impostazione di criteri `Explicit` per un'istanza di `Dynamic`. Se, ad esempio, è il caso per `Explicit<Int32>`, viene creata un'istanza di `Implicit<Int32>` con membri pubblici che contengono una radice e i relativi metadati vengono resi accessibili per la programmazione dinamica.  
   
- Di seguito è riportato un esempio reale che si applica ad almeno un serializzatore. Le direttive acquisiscono il requisito in base al quale la reflection su un elemento tipizzato come `IList<`*elemento*`>` comporta anche la reflection sul tipo `List<`*elemento*`>` corrispondente, senza che siano necessarie annotazioni per ogni applicazione.  
+ Di seguito è riportato un esempio reale che si applica ad almeno un serializzatore. Le direttive acquisiscono il requisito che `IList<`riflette su un elemento tipizzato come *qualcosa* `>` comporta anche riflettere sul tipo `List<` *di elemento* `>` corrispondente senza richiedere alcuna annotazione per applicazione.  
   
 ```xml  
 <Type Name="System.Collections.Generic.IList{T}">  
@@ -97,7 +97,7 @@ Applica criteri a un tipo, se tale criterio è stato applicato al metodo o al ti
 </Type>  
 ```  
   
- L'elemento `<ImpliesType>` può anche essere visualizzato all'interno di un elemento `<Method>`, perché in alcuni casi un'istanza di un metodo generico implica la reflection su un'istanza del tipo. Si supponga, ad esempio, che un metodo generico `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)` che una determinata libreria possa accedere dinamicamente insieme ai tipi di <xref:System.Collections.Generic.List%601> e <xref:System.Array> associati. Questa operazione può essere espressa nel seguente modo:  
+ L'elemento `<ImpliesType>` può anche essere visualizzato all'interno di un elemento `<Method>`, perché in alcuni casi un'istanza di un metodo generico implica la reflection su un'istanza del tipo. Ad esempio, si supponga un metodo generico `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)` al quale una determinata libreria accederà in modo dinamico con i tipi <xref:System.Collections.Generic.List%601> e <xref:System.Array> associati. Questa operazione può essere espressa nel seguente modo:  
   
 ```xml  
 <Type Name="MyType">  
@@ -110,6 +110,6 @@ Applica criteri a un tipo, se tale criterio è stato applicato al metodo o al ti
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Riferimento a file di configurazione di direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementi direttiva di runtime](runtime-directive-elements.md)
-- [Impostazioni dei criteri delle direttive di runtime](runtime-directive-policy-settings.md)
+- [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime)

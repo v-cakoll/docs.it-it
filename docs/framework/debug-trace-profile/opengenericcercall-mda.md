@@ -10,12 +10,12 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), CER calls
 - generics [.NET Framework], open generic CER calls
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
-ms.openlocfilehash: de1735103314dfedbabe27623f579ce2c1e728af
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 7492a4c0547680a6ace85a5f7c98567770f5575a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217274"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181773"
 ---
 # <a name="opengenericcercall-mda"></a>openGenericCERCall (MDA)
 
@@ -29,7 +29,7 @@ Il codice dell'area a esecuzione vincolata non viene eseguito quando un thread v
 
 In fase di compilazione JIT, la creazione di un'istanza che contiene un tipo riferimento oggetto è rappresentativa solo perché il codice risultante è condiviso e ognuna delle variabili di tipo riferimento oggetto potrebbe essere qualsiasi tipo riferimento oggetto. Ciò può impedire la preparazione anticipata di alcune risorse in fase di esecuzione.
 
-In particolare, i metodi con variabili di tipo generico possono allocare risorse in background in modo differito. Queste sono note come voci di dizionario generiche. Ad esempio, per l'istruzione `List<T> list = new List<T>();` in cui `T` è una variabile di tipo generico, è necessario che il runtime cerchi la ricerca ed eventualmente crei la creazione di un'istanza esatta in fase di esecuzione, ad esempio `List<Object>, List<String>`e così via. Questa operazione può non riuscire per svariati motivi non sotto il controllo dello sviluppatore, ad esempio memoria insufficiente.
+In particolare, i metodi con variabili di tipo generico possono allocare risorse in background in modo differito. Queste sono note come voci di dizionario generiche. Ad esempio, per `List<T> list = new List<T>();` `T` l'istruzione where è una variabile di tipo generico, il runtime deve `List<Object>, List<String>`cercare ed eventualmente creare l'istanza esatta in fase di esecuzione, ad esempio , e così via. Questa operazione può non riuscire per svariati motivi non sotto il controllo dello sviluppatore, ad esempio memoria insufficiente.
 
 Questo assistente al debug gestito deve essere attivato solo in fase di compilazione JIT e non quando è prevista la creazione di un'istanza esatta.
 
@@ -45,11 +45,11 @@ L'assistente al debug gestito non ha alcun effetto su CLR.
 
 ## <a name="output"></a>Output
 
-Di seguito è riportato un esempio di output di questo assistente al debug gestito:
+Di seguito è riportato un esempio di output da questo mando di proprietà:
   
  ```output
  Method 'GenericMethodWithCer', which contains at least one constrained execution region, cannot be prepared automatically since it has one or more unbound generic type parameters.
- The caller must ensure this method is prepared explicitly at run time prior to execution. 
+ The caller must ensure this method is prepared explicitly at run time prior to execution.
  method name="GenericMethodWithCer"
  declaringType name="OpenGenericCERCall"
  ```
@@ -86,7 +86,7 @@ class Program
         MyClass.GenericMethodWithCer<int>();
 
         // This call is incorrect. A shared version of the method that
-        // cannot be completely analyzed will be JIT-compiled. The 
+        // cannot be completely analyzed will be JIT-compiled. The
         // MDA will be activated at JIT-compile time, not at run time.
         MyClass.GenericMethodWithCer<String>();
     }

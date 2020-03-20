@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fad01d7a-3178-4c8c-9f0a-4641e3701c9b
 topic_type:
 - apiref
-ms.openlocfilehash: 44f97ef498eb8e64c55fc86b9f290b9e088293f6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 388f227377ddf73fe1297e1c777bb1c0607c13d2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432064"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177872"
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>Metodo IMetaDataAssemblyEmit::DefineExportedType
 Crea una struttura `ExportedType` che contiene i metadati per il tipo esportato specificato e restituisce il token di metadati associato.  
@@ -30,7 +30,7 @@ Crea una struttura `ExportedType` che contiene i metadati per il tipo esportato 
 ```cpp  
 HRESULT DefineExportedType (  
     [in]  LPCWSTR             szName,  
-    [in]  mdToken             tkImplementation,   
+    [in]  mdToken             tkImplementation,
     [in]  mdTypeDef           tkTypeDef,  
     [in]  DWORD               dwExportedTypeFlags,  
     [out] mdExportedType      *pmdct  
@@ -39,37 +39,37 @@ HRESULT DefineExportedType (
   
 ## <a name="parameters"></a>Parametri  
  `szName`  
- in Nome del tipo da esportare. Per la versione 1,1 della Common Language Runtime, il nome del tipo esportato deve corrispondere esattamente al nome specificato nel `TypeDef` per il tipo.  
+ [in] Nome del tipo da esportare. Per la versione 1.1 di Common Language Runtime, il nome del tipo `TypeDef` esportato deve corrispondere esattamente al nome specificato nel per il tipo.  
   
  `tkImplementation`  
- in Token che specifica la posizione in cui viene implementato il tipo esportato. I valori validi e i significati associati sono:  
+ [in] Token che specifica dove viene implementato il tipo esportato. I valori validi e i relativi significati associati sono:  
   
-- `mdFile` il tipo viene implementato in un file diverso all'interno dell'assembly.  
+- `mdFile`Il tipo viene implementato in un file diverso all'interno di questo assembly.  
   
-- `mdAssemblyRef` il tipo viene implementato in un assembly diverso.  
+- `mdAssemblyRef`Il tipo viene implementato in un assembly diverso.  
   
-- `mdExportedTYpe` il tipo è annidato all'interno di un altro tipo.  
+- `mdExportedTYpe`Il tipo è annidato all'interno di un altro tipo.  
   
-- `mdFileNil` il tipo si trova nello stesso file del manifesto e non è un tipo annidato.  
+- `mdFileNil`Il tipo si trova nello stesso file del manifesto e non è un tipo annidato.  
   
  `tkTypeDef`  
- in Token per i metadati che specifica il tipo da esportare. Questo valore viene immesso nella tabella `TypeDef` nel file che implementa il tipo ed è pertinente solo se tale file si trova in questo assembly.  
+ [in] Token per i metadati che specifica il tipo da esportare. Questo valore viene `TypeDef` immesso nella tabella del file che implementa il tipo ed è rilevante solo se tale file si trova in questo assembly.  
   
  `dwExportedTypeFlags`  
- in Combinazione bit per bit di valori di enumerazione [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) che definiscono le impostazioni delle proprietà per il tipo esportato.  
+ [in] Combinazione bit per bit di [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) valori di enumerazione che definiscono le impostazioni delle proprietà per il tipo esportato.  
   
  `pmdct`  
- out Puntatore al token di metadati restituito che indica il tipo esportato.  
+ [fuori] Puntatore al token di metadati restituito che indica il tipo esportato.  
   
 ## <a name="remarks"></a>Osservazioni  
- È necessario definire una struttura di metadati di `ExportedType` per ogni tipo esposto dall'assembly e che viene implementato in un modulo diverso da quello che contiene il manifesto.  
+ Una `ExportedType` struttura di metadati deve essere definita per ogni tipo esposto da questo assembly e implementato in un modulo diverso da quello contenente il manifesto.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforma:** Vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforma:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Usato come risorsa in MsCorEE. dll  
+ **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

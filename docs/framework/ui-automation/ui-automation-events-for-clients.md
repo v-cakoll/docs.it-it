@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: 497c05740fd9e1c05d877cfdb72881168fff6e2e
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d7105e9211c35e7d6125c3017e8b4b829a25b128
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76778760"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179910"
 ---
 # <a name="ui-automation-events-for-clients"></a>Eventi di automazione interfaccia utente per i client
 > [!NOTE]
@@ -23,15 +23,15 @@ ms.locfileid: "76778760"
  Una maggiore efficienza è ottenuta anche grazie alla possibilità di restare in ascolto di eventi solo in un ambito definito. Un client, ad esempio, può restare in ascolto di eventi di modifica dello stato attivo per tutti gli elementi di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dell'albero o solo per un elemento e i relativi discendenti.  
   
 > [!NOTE]
-> Non presupporre che tutti i possibili eventi vengano generati da un provider di [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]. Non tutte le modifiche alle proprietà, ad esempio, determinano la generazione di eventi da parte dei provider proxy standard per i controlli Windows Forms e Win32.  
+> Non presupporre che tutti i possibili eventi vengano generati da un provider di [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]. Ad esempio, non tutte le modifiche alle proprietà causano la generato di eventi dai provider proxy standard per i controlli Windows Form e Win32.For example, not all property changes cause events to be raised by the standard proxy providers for Windows Forms and Win32 controls.  
   
- Per una visualizzazione più ampia degli eventi di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Cenni preliminari sugli eventi di automazione interfaccia utente](ui-automation-events-overview.md).  
+ Per una visualizzazione [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] più ampia degli eventi, vedere [Cenni preliminari sugli eventi di automazione interfaccia utente.](ui-automation-events-overview.md)  
   
-<a name="Subscribing_to_Events"></a>   
+<a name="Subscribing_to_Events"></a>
 ## <a name="subscribing-to-events"></a>Sottoscrizione di eventi  
  Le applicazioni client sottoscrivono eventi di una particolare tipologia registrando un gestore eventi, con uno dei metodi seguenti.  
   
-|Metodo|Tipo di evento|Tipo argomenti evento|Tipo di delegato|  
+|Metodo|Tipo evento|Tipo argomenti evento|Tipo di delegato|  
 |------------|----------------|--------------------------|-------------------|  
 |<xref:System.Windows.Automation.Automation.AddAutomationFocusChangedEventHandler%2A>|Modifica dello stato attivo|<xref:System.Windows.Automation.AutomationFocusChangedEventArgs>|<xref:System.Windows.Automation.AutomationFocusChangedEventHandler>|  
 |<xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>|Modifica proprietà|<xref:System.Windows.Automation.AutomationPropertyChangedEventArgs>|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|  
@@ -55,11 +55,11 @@ ms.locfileid: "76778760"
 |<xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>|Annulla la registrazione di un gestore eventi che era stato registrato usando <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>.|  
 |<xref:System.Windows.Automation.Automation.RemoveAllEventHandlers%2A>|Annulla la registrazione di tutti i gestori eventi registrati.|  
   
- Per un esempio di codice, vedere [sottoscrivere eventi di automazione interfaccia utente](subscribe-to-ui-automation-events.md).  
+ Per il codice di esempio, vedere [Subscribe to UI Automation Events](subscribe-to-ui-automation-events.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Sottoscrivere gli eventi di automazione interfaccia utente](subscribe-to-ui-automation-events.md)
-- [Panoramica degli eventi di automazione interfaccia utente](ui-automation-events-overview.md)
-- [Panoramica delle proprietà di automazione interfaccia utente](ui-automation-properties-overview.md)
+- [Cenni preliminari sugli eventi di automazione interfaccia utente](ui-automation-events-overview.md)
+- [Cenni preliminari sulle proprietà di automazione interfaccia utente](ui-automation-properties-overview.md)
 - [Esempio TrackFocus](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FocusTracker)

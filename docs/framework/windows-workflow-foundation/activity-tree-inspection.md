@@ -2,12 +2,12 @@
 title: Ispezione dell'albero delle attività
 ms.date: 03/30/2017
 ms.assetid: 100d00e4-8c1d-4233-8fbb-dd443a01155d
-ms.openlocfilehash: 014795b79b3536b387096e4de64266e26649da21
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 692f36d993c3f9c27839122b388a24d0698a2b59
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774125"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183043"
 ---
 # <a name="activity-tree-inspection"></a>Ispezione dell'albero delle attività
 L'ispezione dell'albero delle attività viene usata dagli autori dell'applicazione flusso di lavoro per controllare i flussi di lavoro ospitati dall'applicazione. Tramite l'oggetto <xref:System.Activities.WorkflowInspectionServices>, nei flussi di lavoro è possibile cercare attività figlio specifiche, enumerare attività singole e le relative proprietà, nonché memorizzare nella cache i metadati di runtime delle attività in un momento specifico. In questo argomento viene fornita una panoramica sull'oggetto <xref:System.Activities.WorkflowInspectionServices> e viene descritto come usarlo per controllare un albero delle attività.  
@@ -23,28 +23,27 @@ L'ispezione dell'albero delle attività viene usata dagli autori dell'applicazio
   
  Questo codice di esempio fornisce l'output seguente.  
   
- **Voce di elenco 1**  
-**Elencare l'elemento 2**   
-**Elemento dell'elenco 3**   
-**Elemento dell'elenco 4**   
-**Elemento dell'elenco 5**   
-**Elementi aggiunti alla raccolta.**   
-**Sequenza**   
- **Valore letterale < elenco\<stringa >>**  
- **While**  
- **AddToCollection\<String>**  
- **Valorevariabile < ICollection\<stringa >>**  
- **LambdaValue\<String>**  
- **LocationReferenceValue < elenco\<stringa >>**  
- **LambdaValue\<Boolean>**  
- **LocationReferenceValue < elenco\<stringa >>**  
- **ForEach\<String>**  
- **VariableValue<IEnumerable\<String>>**  
+ **List Item 1**  
+**Voce di elenco 2**
+**Voce di elenco 3**
+Voce di**elenco 4**
+**Voce di elenco 5**
+**Elementi aggiunti alla raccolta.** 
+Stringa elenco<**literal di sequenzaSequence** **Literal<\<List String>>**  
+ **Mentre**  
+ **Stringa AddToCollection\<>**  
+ **>>stringa ICollection\<<VariableValue**  
+ **Stringa\<LambdaValue>**  
+ **Stringa elenco\<<LocationReferenceValue>>**  
+ **>\<booleana LambdaValue**  
+ **Stringa elenco\<<LocationReferenceValue>>**  
+ **>\<stringa ForEachForEach String>**  
+ **>>Stringa IEnumerable\<<VariableValue**  
  **WriteLine**  
- **DelegateArgumentValue\<String>**  
- **Sequence**  
+ **Stringa DelegateArgumentValue\<>**  
+ **Sequenza**  
  **WriteLine**  
- **Valore letterale\<String >** per recuperare un'attività specifica anziché enumerare tutte le attività, <xref:System.Activities.WorkflowInspectionServices.Resolve%2A> viene usato. Entrambi i metodi <xref:System.Activities.WorkflowInspectionServices.Resolve%2A> e <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> eseguono la memorizzazione dei metadati nella cache se non è stato precedentemente chiamato l'oggetto `WorkflowInspectionServices.CacheMetadata`. Se il metodo <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A> è stato chiamato, il metodo <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> si basa sui metadati esistenti. Pertanto, se sono state apportate modifiche all'albero dall'ultima chiamata al metodo <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A>, il metodo <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> potrebbe fornire risultati imprevisti. Se sono state apportate modifiche al flusso di lavoro dopo la chiamata <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A>, i metadati possono essere memorizzati nuovamente chiamando la <xref:System.Activities.Validation.ActivityValidationServices> <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> (metodo). La memorizzazione dei metadati nella cache è descritta nella prossima sezione.  
+ **Stringa\<letterale>** Per recuperare un'attività specifica <xref:System.Activities.WorkflowInspectionServices.Resolve%2A> anziché enumerare tutte le attività, viene utilizzato. Entrambi i metodi <xref:System.Activities.WorkflowInspectionServices.Resolve%2A> e <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> eseguono la memorizzazione dei metadati nella cache se non è stato precedentemente chiamato l'oggetto `WorkflowInspectionServices.CacheMetadata`. Se il metodo <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A> è stato chiamato, il metodo <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> si basa sui metadati esistenti. Pertanto, se sono state apportate modifiche all'albero dall'ultima chiamata al metodo <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A>, il metodo <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> potrebbe fornire risultati imprevisti. Se sono state apportate modifiche <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A>al flusso di lavoro dopo <xref:System.Activities.Validation.ActivityValidationServices> <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> la chiamata, i metadati possono essere nuovamente memorizzati nella cache chiamando il metodo . La memorizzazione dei metadati nella cache è descritta nella prossima sezione.  
   
 ### <a name="caching-metadata"></a>Memorizzazione dei metadati nella cache  
  La memorizzazione dei metadati nella cache per un'attività compila e convalida una descrizione degli argomenti dell'attività, delle variabili, delle attività figlio e dei delegati di attività. Per impostazione predefinita, i metadati vengono memorizzati nella cache dal runtime quando un'attività viene preparata per l'esecuzione. Se un autore dell'host del flusso di lavoro desidera memorizzare i metadati nella cache per un'attività o un albero delle attività prima di questa fase, ad esempio per accettare in anticipo tutto il costo, è possibile usare il metodo <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A> per memorizzare i metadati nella cache nel momento desiderato.

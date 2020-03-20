@@ -13,51 +13,43 @@ helpviewer_keywords:
 - Visual C#, creating applications
 - client/server applications, Windows applications
 ms.assetid: 2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68
-ms.openlocfilehash: 5cf10a4d50aec561fea4f8537098345f8e03a26a
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: b6b5f47980e7c0c87128b9efb782e637ed7144f4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457983"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79181641"
 ---
-# <a name="develop-client-applications-with-the-net-framework"></a>Sviluppare applicazioni client con la .NET Framework
+# <a name="develop-client-applications-with-net-framework"></a>Sviluppare applicazioni client con .NET FrameworkDevelop client applications with .NET Framework
 
 Esistono diversi modi per sviluppare applicazioni basate su Windows con .NET Framework. È possibile usare uno di questi strumenti e framework:
 
-- [Piattaforma UWP (Universal Windows Platform)](https://developer.microsoft.com/windows/apps)
+- [Piattaforma UWP (Universal Windows Platform)](/windows/uwp/)
 - [Windows Presentation Foundation (WPF)](./wpf/index.md)
 - [Windows Form](./winforms/index.md)
 
-Questa sezione include argomenti che descrivono come creare applicazioni basate su Windows con Windows Presentation Foundation o Windows Form. Tuttavia, è anche possibile creare applicazioni Web con .NET Framework e applicazioni client per computer o dispositivi da rendere disponibili tramite Microsoft Store.
-
-## <a name="in-this-section"></a>In questa sezione
-
-[Windows Presentation Foundation](./wpf/index.md)  
-Vengono fornite informazioni sullo sviluppo di applicazioni con WPF.
-
-[Windows Form](./winforms/index.md)  
-Vengono fornite informazioni sullo sviluppo di applicazioni con Windows Form.
+In questa sezione sono contenuti articoli che descrivono come creare applicazioni basate su Windows utilizzando Windows Presentation Foundation o Windows Form. Tuttavia, è anche possibile creare applicazioni Web utilizzando .NET Framework e applicazioni client per computer o dispositivi resi disponibili tramite Microsoft Store (applicazioni UWP).
 
 ## <a name="related-sections"></a>Sezioni correlate
 
-[Piattaforma UWP (Universal Windows Platform)](https://developer.microsoft.com/windows/apps)  
-Viene descritto come creare applicazioni per Windows 10 che è possibile mettere a disposizione degli utenti tramite Windows Store.
+[Piattaforma Windows universale](/windows/uwp/)\
+Viene descritto come creare applicazioni UWP che è possibile rendere disponibili agli utenti tramite Microsoft Store.
 
-[.NET per app UWP](https://msdn.microsoft.com/library/windows/apps/mt185501.aspx)  
-Viene descritto il supporto di .NET Framework per le app di Windows Store, che è possibile distribuire in computer e dispositivi Windows.
-
-[.NET API per Windows Phone Silverlight](https://docs.microsoft.com/previous-versions/windows/apps/jj207211\(v=vs.105\))  
-Vengono elencate le API di .NET Framework che è possibile usare per creare app con Silverlight per Windows Phone.
+[API .NET per le app UWP](/dotnet/api/index?view=dotnet-uwp-10.0)\
+Riferimento per i tipi .NET che supportano le app UWP.
   
-[Sviluppo per piattaforme multiple](../standard/cross-platform/index.md)  
-Vengono descritti i diversi modi disponibili per usare .NET Framework con i diversi tipi di app client.
+[Sviluppare per più piattaformeDevelop for Multiple Platforms](../standard/cross-platform/index.md)\
+Vengono descritti i diversi metodi che è possibile utilizzare .NET Framework per la destinazione di più tipi di app client.
 
-[Introduzione a siti Web ASP.NET](https://www.asp.net/get-started/websites)  
+[Introduzione ai siti Web ASP.NET](https://dotnet.microsoft.com/apps/aspnet/web-apps)\
 Vengono descritti i diversi modi in cui sviluppare app Web con ASP.NET.
+
+[API .NET per Silverlight per Windows Phone](https://docs.microsoft.com/previous-versions/windows/apps/jj207211\(v=vs.105\))\
+Elenca le API di .NET Framework che è possibile utilizzare per la creazione di app con Silverlight per Windows Phone.
 
 ## <a name="see-also"></a>Vedere anche
 
 - [.NET Standard](../standard/net-standard.md)
 - [Panoramica](./get-started/overview.md)
 - [Guida di sviluppo](./development-guide.md)
-- [Applicazioni di servizi Windows](./windows-services/index.md)
+- [Applicazioni di servizio Windows](./windows-services/index.md)

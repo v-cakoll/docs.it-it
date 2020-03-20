@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ad37cd10-0339-4d08-9b0e-4b3428bb4dc3
 topic_type:
 - apiref
-ms.openlocfilehash: c8866e98be0dd064138acdf5e0f6fb9c339fb3d2
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 6f7f400c51ded0b98c0c2286cb6f90bbd77e47d7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790643"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178404"
 ---
 # <a name="icorpublishappdomainenumnext-method"></a>Metodo ICorPublishAppDomainEnum::Next
 Ottiene il numero specificato di domini applicazione attualmente presenti nel processo, a partire dalla posizione corrente.  
@@ -30,7 +30,7 @@ Ottiene il numero specificato di domini applicazione attualmente presenti nel pr
 ```cpp  
 HRESULT Next (  
     [in] ULONG  celt,  
-    [out, size_is(celt), length_is(*pceltFetched)]   
+    [out, size_is(celt), length_is(*pceltFetched)]
         ICorPublishAppDomain **objects,  
     [out] ULONG *pceltFetched  
 );  
@@ -38,22 +38,22 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parametri  
  `celt`  
- in Numero di elementi da recuperare.  
+ [in] Numero di elementi da recuperare.  
   
  `objects`  
- out Puntatore alla matrice di oggetti [ICorPublishAppDomain](icorpublishappdomain-interface.md) recuperati, ognuno dei quali rappresenta un dominio dell'applicazione.  
+ [fuori] Puntatore alla matrice di oggetti [ICorPublishAppDomain](icorpublishappdomain-interface.md) recuperati, ognuno dei quali rappresenta un dominio applicazione.  
   
  `pceltFetched`  
- out Puntatore al numero di domini applicazione effettivamente restituiti. Se `celt` è uno, questo valore può essere null.  
+ [fuori] Puntatore al numero di domini applicazione effettivamente restituiti. Questo valore può `celt` essere null se è uno.  
   
-## <a name="requirements"></a>Requisiti di  
+## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorPub. idl, CorPub. h  
+ **Intestazione:** CorPub.idl, CorPub.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

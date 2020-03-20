@@ -14,12 +14,12 @@ helpviewer_keywords:
 - network
 - WPAD (Web Proxy Auto-Discovery)
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
-ms.openlocfilehash: 6a52a38473e339b892673e7c1a2f9e1f58dad359
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4c5bc9e0efb39032d388d141e8bccf3e520ebd45
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048940"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180890"
 ---
 # <a name="automatic-proxy-detection"></a>Rilevamento automatico proxy
 Il rilevamento automatico del proxy è un processo con cui un server proxy Web viene identificato dal sistema e usato per inviare richieste per conto del client. Questa funzionalità è nota anche come Rilevamento automatico proxy Web (WPAD). Quando il rilevamento automatico del proxy è abilitato, il sistema tenta di trovare uno script di configurazione del proxy responsabile della restituzione del set di proxy che possono essere usati per la richiesta. Se viene trovato, lo script di configurazione del proxy viene scaricato, compilato ed eseguito nel computer locale quando per una richiesta che usa un'istanza <xref:System.Net.WebProxy> vengono ottenute le informazioni del proxy, la risposta o il flusso di richieste.  
@@ -44,7 +44,7 @@ Il rilevamento automatico del proxy è un processo con cui un server proxy Web v
   
  I proxy vengono configurati a livello di singolo connettoide. Un connettoide è un elemento della finestra di dialogo di connessione di rete e può essere un dispositivo di rete fisico (modem o scheda Ethernet) o un'interfaccia virtuale (ad esempio, una connessione VPN in esecuzione su un dispositivo di rete). Se un connettoide cambia (ad esempio, una connessione wireless modifica un punto di accesso o viene abilitata una rete VPN), l'algoritmo di rilevamento del proxy viene eseguito nuovamente.  
   
- Per impostazione predefinita, per il rilevamento del proxy vengono usate le impostazioni del proxy definite in Internet Explorer. Se l'applicazione è in esecuzione con un account interattivo (senza un modo pratico per configurare le impostazioni del proxy in Internet Explorer) o se si vuole usare impostazioni del proxy diverse rispetto a quelle di Internet Explorer, è possibile configurare il proxy creando un file di configurazione con gli elementi [Elemento \<defaultProxy> (Impostazioni di rete)](../configure-apps/file-schema/network/defaultproxy-element-network-settings.md) ed [Elemento \<proxy> (Impostazioni di rete)](../configure-apps/file-schema/network/proxy-element-network-settings.md) definiti.  
+ Per impostazione predefinita, per il rilevamento del proxy vengono usate le impostazioni del proxy definite in Internet Explorer. Se l'applicazione viene eseguita con un account non interattivo (senza un modo pratico per configurare le impostazioni proxy di Internet Explorer) o se si desidera utilizzare impostazioni proxy diverse da quelle di Internet Explorer, è possibile configurare il proxy creando un file di configurazione con gli [ \<elementi predefinitiElemento> (impostazioni di rete)](../configure-apps/file-schema/network/defaultproxy-element-network-settings.md) e [ \<elemento> proxy (impostazioni di rete)](../configure-apps/file-schema/network/proxy-element-network-settings.md) definiti.  
   
  Per le richieste create, è possibile disabilitare il rilevamento automatico del proxy a livello di richiesta specificando un valore <xref:System.Net.WebRequest.Proxy%2A> null con la richiesta, come illustrato nell'esempio di codice seguente.  
   
@@ -62,7 +62,7 @@ Public Shared Sub DisableForMyRequest(ByVal resource As Uri)
     Dim request As WebRequest = WebRequest.Create(resource)  
     request.Proxy = Nothing  
     Dim response As WebResponse = request.GetResponse()  
-    End Sub   
+    End Sub
 ```  
   
  Le richieste in cui non è specificato un proxy usano il proxy predefinito del dominio dell'applicazione, disponibile nella proprietà <xref:System.Net.WebRequest.DefaultWebProxy%2A>.  
@@ -71,4 +71,4 @@ Public Shared Sub DisableForMyRequest(ByVal resource As Uri)
 
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.WebRequest>
-- [Elemento \<system.Net> (impostazioni di rete)](../configure-apps/file-schema/network/system-net-element-network-settings.md)
+- [\<elemento> system.Net (impostazioni di rete)](../configure-apps/file-schema/network/system-net-element-network-settings.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e2d88c6-8a3a-4fbe-900b-b4f4c06bf6bf
 topic_type:
 - apiref
-ms.openlocfilehash: 1a4f7703536bcfdae75b0bcffae8dca0734e9e0f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 91a19e5e15dddd446208dfa3b2c32826282067eb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437574"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175395"
 ---
 # <a name="imetadataimportgetfieldmarshal-method"></a>Metodo IMetaDataImport::GetFieldMarshal
 Ottiene un puntatore al tipo nativo non gestito del campo rappresentato dal token di metadati del campo specificato.  
@@ -29,28 +29,28 @@ Ottiene un puntatore al tipo nativo non gestito del campo rappresentato dal toke
   
 ```cpp  
 HRESULT GetFieldMarshal (  
-   [in]  mdToken             tk,   
+   [in]  mdToken             tk,
    [out] PCCOR_SIGNATURE     *ppvNativeType,  
-   [out] ULONG               *pcbNativeType   
+   [out] ULONG               *pcbNativeType
 );  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `tk`  
- in Token di metadati che rappresenta il campo per il quale ottenere le informazioni di marshalling di interoperabilità.  
+ [in] Token di metadati per cui rappresenta il campo per cui ottenere informazioni sul marshalling di interoperabilità.  
   
  `ppvNativeType`  
- out Puntatore alla firma dei metadati del tipo nativo del campo.  
+ [fuori] Puntatore alla firma dei metadati del tipo nativo del campo.  
   
  `pcbNativeType`  
- out Dimensioni in byte del `ppvNativeType`.  
+ [fuori] Dimensione in byte `ppvNativeType`di .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Incluso come risorsa in MsCorEE. dll  
+ **Biblioteca:** Incluso come risorsa in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

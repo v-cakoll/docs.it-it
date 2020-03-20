@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 440bad90-5a88-45e7-9157-4596801d8d19
 topic_type:
 - apiref
-ms.openlocfilehash: 71836108dbd0ce01a64b4d9ac773c28d385dfd7c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c24963a6e56adfb9f763c6521027744db82cc357
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73099682"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179354"
 ---
 # <a name="clrdatacreateinstance-function"></a>Funzione CLRDataCreateInstance
 Crea un oggetto interfaccia per l'elemento di destinazione specificato.  
@@ -29,29 +29,29 @@ Crea un oggetto interfaccia per l'elemento di destinazione specificato.
   
 ```cpp  
 HRESULT CLRDataCreateInstance (  
-    [in]  REFIID           iid,   
-    [in]  ICLRDataTarget  *target,   
+    [in]  REFIID           iid,
+    [in]  ICLRDataTarget  *target,
     [out] void           **iface  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `iid`  
- in Identificatore dell'interfaccia di cui creare un'istanza.  
+ [in] Identificatore dell'interfaccia di cui creare un'istanza.  
   
  `target`  
- in Puntatore a un oggetto [ICLRDataTarget](iclrdatatarget-interface.md) implementato dall'utente che rappresenta l'elemento di destinazione per il quale creare l'oggetto interfaccia.  
+ [in] Puntatore a un oggetto [ICLRDataTarget](iclrdatatarget-interface.md) implementato dall'utente che rappresenta l'elemento di destinazione per il quale creare l'oggetto interfaccia.  
   
  `iface`  
- out Puntatore all'indirizzo dell'oggetto interfaccia restituito.  
+ [fuori] Puntatore all'indirizzo dell'oggetto interfaccia restituito.  
   
-## <a name="remarks"></a>Note  
- L'oggetto `ICLRDataTarget` viene implementato dal writer dell'applicazione di debug. L'implementazione dipende dal tipo di elemento di destinazione rappresentato. L'elemento di destinazione può essere un processo, un dump della memoria, un computer remoto e così via.  
+## <a name="remarks"></a>Osservazioni  
+ L'oggetto `ICLRDataTarget` viene implementato dal writer dell'applicazione di debug. L'implementazione dipende dal tipo di elemento di destinazione rappresentato. L'elemento di destinazione può essere un processo, un'immagine della memoria, un computer remoto e così via.  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** ClrData. idl  
+ **Intestazione:** ClrData.idl  
   
  **Libreria:** CorGuids.lib  
   

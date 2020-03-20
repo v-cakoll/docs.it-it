@@ -11,15 +11,15 @@ helpviewer_keywords:
 - request cache policies
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
-ms.openlocfilehash: 150198c2bda220e4b37981e461e19b8e4e30e483
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6fe569e781b005461ea41e3d6b90859666f9601a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048128"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180771"
 ---
 # <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>Procedura: Impostare criteri di cache basati sulla posizione per un'applicazione
-I criteri di cache basati sulla posizione consentono a un'applicazione di definire in modo esplicito il comportamento di memorizzazione nella cache in base alla posizione della risorsa richiesta. Questo argomento illustra l'impostazione dei criteri di cache a livello di codice. Per informazioni sull'impostazione dei criteri per un'applicazione che usa file di configurazione, vedere [Elemento \<requestCaching> (impostazioni di rete)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
+I criteri di cache basati sulla posizione consentono a un'applicazione di definire in modo esplicito il comportamento di memorizzazione nella cache in base alla posizione della risorsa richiesta. Questo argomento illustra l'impostazione dei criteri di cache a livello di codice. Per informazioni sull'impostazione dei criteri per un'applicazione utilizzando i file di configurazione, vedere [ \<requestCaching> Element (Network Settings)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
   
 ### <a name="to-set-a-location-based-cache-policy-for-an-application"></a>Per impostare criteri di cache basati sulla posizione per un'applicazione  
   
@@ -55,7 +55,7 @@ I criteri di cache basati sulla posizione consentono a un'applicazione di defini
     ```csharp  
     public static void DoNotUseCache()  
     {  
-    HttpRequestCachePolicy policy = new HttpRequestCachePolicy   
+    HttpRequestCachePolicy policy = new HttpRequestCachePolicy
             (HttpRequestCacheLevel.NoCacheNoStore);  
         HttpWebRequest.DefaultCachePolicy = policy;  
     }  
@@ -76,7 +76,7 @@ I criteri di cache basati sulla posizione consentono a un'applicazione di defini
     ```csharp  
     public static void OnlyUseCache()  
     {  
-        HttpRequestCachePolicy policy = new HttpRequestCachePolicy   
+        HttpRequestCachePolicy policy = new HttpRequestCachePolicy
             (HttpRequestCacheLevel.CacheOnly);  
         HttpWebRequest.DefaultCachePolicy = policy;  
     }  
@@ -97,7 +97,7 @@ I criteri di cache basati sulla posizione consentono a un'applicazione di defini
     ```csharp  
     public static void DoNotUseLocalCache()  
     {  
-     HttpRequestCachePolicy policy = new HttpRequestCachePolicy   
+     HttpRequestCachePolicy policy = new HttpRequestCachePolicy
             (HttpRequestCacheLevel.Refresh);  
         HttpWebRequest.DefaultCachePolicy = policy;  
     }  
@@ -118,7 +118,7 @@ I criteri di cache basati sulla posizione consentono a un'applicazione di defini
     ```csharp  
     public static void SendToServer()  
     {  
-    HttpRequestCachePolicy policy = new HttpRequestCachePolicy   
+    HttpRequestCachePolicy policy = new HttpRequestCachePolicy
             (HttpRequestCacheLevel.Reload);  
         HttpWebRequest.DefaultCachePolicy = policy;  
     }  
@@ -156,7 +156,7 @@ I criteri di cache basati sulla posizione consentono a un'applicazione di defini
 ## <a name="see-also"></a>Vedere anche
 
 - [Gestione della cache per le applicazioni di rete](cache-management-for-network-applications.md)
-- [Criteri di cache](cache-policy.md)
+- [Criteri cache](cache-policy.md)
 - [Criteri di cache basati sulla posizione](location-based-cache-policies.md)
-- [Criteri di cache basati sull'ora](time-based-cache-policies.md)
-- [Elemento \<requestCaching> (impostazioni di rete)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [Time-Based Cache Policies](time-based-cache-policies.md)
+- [\<elemento> requestCaching (impostazioni di rete)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

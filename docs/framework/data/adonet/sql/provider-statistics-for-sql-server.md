@@ -5,50 +5,50 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: b6fa4207531e86cbde8657d0c47596f22c886f89
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5e37a04ff731a99664d636e0d4175f99214c2646
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791879"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174511"
 ---
 # <a name="provider-statistics-for-sql-server"></a>Statistiche di provider per SQL Server
-A partire da .NET Framework versione 2.0, il provider di dati .NET Framework per SQL Server supporta le statistiche in fase di esecuzione. È necessario abilitare le statistiche impostando la proprietà <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> dell'oggetto <xref:System.Data.SqlClient.SqlConnection> su `True` dopo aver creato un oggetto di connessione valido. Dopo aver abilitato le statistiche, è possibile visualizzarle come "snapshot" recuperando un riferimento <xref:System.Collections.IDictionary> mediante il metodo <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> dell'oggetto <xref:System.Data.SqlClient.SqlConnection>. È possibile enumerare l'elenco come un set di voci di dizionario delle coppie nome/valore. Queste coppie nome/valore non seguono alcun ordine. È possibile chiamare il metodo <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> dell'oggetto <xref:System.Data.SqlClient.SqlConnection> per azzerare i contatori in qualsiasi momento. Se non è stata abilitata la raccolta delle statistiche, non viene generata alcuna eccezione. Inoltre, se il metodo <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> viene chiamato senza la proprietà <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A>, i valori recuperati sono i valori iniziali per ciascuna voce. Se vengono abilitate le statistiche, eseguire l'applicazione, quindi disabilitare le statistiche. I valori recuperati rifletteranno i valori raccolti fino al momento in cui le statistiche sono state disabilitate. Tutti i valori delle statistiche vengono raccolti in base alla connessione.  
+A partire da .NET Framework versione 2.0, il provider di dati .NET Framework per SQL Server supporta le statistiche in fase di esecuzione. Le statistiche devono essere abilitate impostando la proprietà <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> dell'oggetto <xref:System.Data.SqlClient.SqlConnection> su `True` dopo aver creato un oggetto connessione valido. Una volta abilitate le statistiche, è possibile esaminarle come "snapshot in un dato momento" recuperando un riferimento <xref:System.Collections.IDictionary> tramite il metodo <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> dell'oggetto <xref:System.Data.SqlClient.SqlConnection>. È possibile enumerare l'elenco come un set di voci del dizionario delle coppie nome/valore. Queste coppie nome/valore non sono ordinate. In qualsiasi momento è possibile chiamare il metodo <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> dell'oggetto <xref:System.Data.SqlClient.SqlConnection> per reimpostare i contatori. Se la raccolta delle statistiche non è stata abilitata, non viene generata alcuna eccezione. Inoltre, se <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> viene chiamato senza che prima sia stato chiamato <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A>, i valori recuperati sono i valori iniziali per ogni voce. Se si abilitano le statistiche, si esegue l'applicazione per un periodo di tempo e si disabilitano le statistiche, i valori recuperati rifletteranno i valori raccolti fino al punto in cui le statistiche sono state disabilitate. Tutti i valori statistici raccolti sono in base alla connessione.  
   
 ## <a name="statistical-values-available"></a>Valori statistici disponibili  
- Attualmente sono disponibili 18 voci diverse del provider Microsoft SQL Server. È possibile accedere al numero di elementi disponibili tramite la proprietà **count** del riferimento <xref:System.Collections.IDictionary> all'interfaccia restituito da <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>. Tutti i contatori per le statistiche del provider utilizzano il <xref:System.Int64> tipo di Common Language Runtime ( C# **Long** in e Visual Basic), ovvero 64 bit. Valore massimo del tipo di dati **Int64** , definito da **Int64.** Il campo MaxValue è ((2 ^ 63)-1)). Quando i valori del contatore raggiungono il valore massimo, non possono più essere considerati esatti. Ciò significa che **Int64. MaxValue**-1 ((2 ^ 63)-2) è effettivamente il valore valido più grande per qualsiasi statistica.  
+ Attualmente il provider Microsoft SQL Server mette a disposizione 18 elementi diversi. È possibile accedere alle voci disponibili tramite la proprietà **Count** del riferimento dell'interfaccia <xref:System.Collections.IDictionary> restituito da <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>. Tutti i contatori delle statistiche del provider usano il tipo <xref:System.Int64> di Common Language Runtime (**long** in C# e Visual Basic), da 64 bit. Il valore massimo del tipo di dati **int64**, definito dal campo **int64.MaxValue**, è ((2^63)-1)). Quando i valori per i contatori raggiungono questo valore massimo, non vengono più considerati accurati. Ciò significa che **int64.MaxValue**-1((2^63)-2) è realmente il valore massimo valido per le statistiche.  
   
 > [!NOTE]
-> Viene usato un dizionario per restituire le statistiche del provider poiché il numero, i nomi e l'ordine delle statistiche restituite può variare nel tempo. Le applicazioni non devono fare riferimento a un valore specifico rilevato nel dizionario, ma devono controllare se il valore è presente e creare rami di conseguenza.  
+> Viene usato un dizionario per restituire le statistiche del provider poiché il numero, i nomi e l'ordine delle statistiche restituite in futuro possono cambiare. Le applicazioni non devono basarsi su un valore specifico trovato nel dizionario, ma devono invece verificare se il valore è presente e di conseguenza creare un ramo.  
   
- Nella tabella seguente vengono descritti i valori statistici disponibili. Si noti che i nomi delle chiavi per i singoli valori non sono localizzati nelle versioni internazionali di Microsoft .NET Framework.  
+ Nella tabella seguente vengono descritti i valori statistici correnti disponibili. Si noti che i nomi delle chiavi per i singoli valori non sono localizzati nelle versioni internazionali di Microsoft .NET Framework.  
   
-|Nome della chiave|Descrizione|  
+|Nome chiave|Descrizione|  
 |--------------|-----------------|  
-|`BuffersReceived`|Restituisce il numero dei pacchetti TSD ricevuti dal provider mediante SQL Server dopo che l'applicazione è stata avviata tramite il provider e le statistiche sono state abilitate.|  
-|`BuffersSent`|Restituisce il numero di pacchetti TDS inviati a SQL Server dal provider dopo l'abilitazione delle statistiche. I comandi di grandi dimensioni possono richiedere più buffer. Se, ad esempio, al server viene inviato un comando di grandi dimensioni per il quale sono necessari sei pacchetti, `ServerRoundtrips` viene incrementato di uno e `BuffersSent` di sei.|  
-|`BytesReceived`|Restituisce il numero di byte di dati nei pacchetti TDS ricevuti dal provider mediante SQL Server dopo che l'applicazione è stata avviata tramite il provider e le statistiche sono state abilitate.|  
-|`BytesSent`|Restituisce il numero di byte di dati inviati a SQL Server in pacchetti TDS dopo che l'applicazione è stata avviata tramite il provider e le statistiche sono state abilitate.|  
+|`BuffersReceived`|Restituisce il numero di pacchetti di flusso TDS (Tabular Data Stream) ricevuti dal provider da SQL Server dopo che l'applicazione è stata avviata usando il provider e con le statistiche abilitate.|  
+|`BuffersSent`|Restituisce il numero di pacchetti di flusso TDS inviati a SQL Server dal provider dopo che sono state abilitate le statistiche. I comandi di grandi dimensioni possono richiedere più buffer. Se, ad esempio, un comando di grandi dimensioni viene inviato al server e richiede sei pacchetti, `ServerRoundtrips` viene incrementato di uno e `BuffersSent` viene incrementato di sei.|  
+|`BytesReceived`|Restituisce il numero di byte di dati nei pacchetti di flusso TDS ricevuti dal provider da SQL Server dopo che l'applicazione è stata avviata usando il provider e con le statistiche abilitate.|  
+|`BytesSent`|Restituisce il numero di byte di dati inviati a SQL Server nei pacchetti di flusso TDS dopo che l'applicazione è stata avviata usando il provider e con le statistiche abilitate.|  
 |`ConnectionTime`|Il periodo di tempo (in millisecondi) durante il quale la connessione è stata aperta dopo l'abilitazione delle statistiche (tempo di connessione totale se le statistiche sono state abilitate prima di aprire la connessione).|  
-|`CursorOpens`|Restituisce il numero di volte che il cursore è stato aperto tramite la connessione dopo che l'applicazione è stata avviata e le statistiche sono state abilitate.<br /><br /> Notare che i risultati di sola lettura/forward-only restituiti dall'istruzione SELECT non sono considerati cursori e pertanto non influiscono su questo contatore.|  
-|`ExecutionTime`|Restituisce l'intervallo di tempo cumulativo (in millisecondi) usato dal provider per l'elaborazione dopo l'abilitazione delle statistiche, incluso il tempo di attesa per le risposte del server nonché il tempo di esecuzione del codice nel provider stesso.<br /><br /> Le classi che includono il codice relativo ai tempi sono:<br /><br /> SqlConnection<br /><br /> SqlCommand<br /><br /> SqlDataReader<br /><br /> SqlDataAdapter<br /><br /> SqlTransaction<br /><br /> SqlCommandBuilder<br /><br /> Per mantenere i membri performance-critical più piccoli possibile, per i membri seguenti non vengono monitorati i tempi:<br /><br /> SqlDataReader<br /><br /> this[] operator (all overloads)<br /><br /> GetBoolean<br /><br /> GetChar<br /><br /> GetDateTime<br /><br /> GetDecimal<br /><br /> GetDouble<br /><br /> GetFloat<br /><br /> GetGuid<br /><br /> GetInt16<br /><br /> GetInt32<br /><br /> GetInt64<br /><br /> GetName<br /><br /> GetOrdinal<br /><br /> GetSqlBinary<br /><br /> GetSqlBoolean<br /><br /> GetSqlByte<br /><br /> GetSqlDateTime<br /><br /> GetSqlDecimal<br /><br /> GetSqlDouble<br /><br /> GetSqlGuid<br /><br /> GetSqlInt16<br /><br /> GetSqlInt32<br /><br /> GetSqlInt64<br /><br /> GetSqlMoney<br /><br /> GetSqlSingle<br /><br /> GetSqlString<br /><br /> GetString<br /><br /> IsDBNull|  
-|`IduCount`|Restituisce il numero totale di istruzioni INSERT, DELETE e UPDATE eseguite tramite la connessione dopo che l'applicazione è stata avviata e le statistiche sono state abilitate.|  
-|`IduRows`|Restituisce il numero totale di righe interessate dalle istruzioni INSERT, DELETE e UPDATE eseguite tramite la connessione dopo che l'applicazione è stata avviata e le statistiche sono state abilitate.|  
-|`NetworkServerTime`|Restituisce il tempo cumulativo di attesa (in millisecondi) del provider per le risposte dal server dopo che l'applicazione è stata avviata e le statistiche sono state abilitate.|  
-|`PreparedExecs`|Restituisce il numero di comandi preparati eseguiti tramite la connessione dopo che l'applicazione è stata avviata e le statistiche sono state abilitate.|  
-|`Prepares`|Restituisce il numero di istruzioni preparate tramite la connessione dopo che l'applicazione è stata avviata e le statistiche sono state abilitate.|  
-|`SelectCount`|Restituisce il numero di istruzioni SELECT eseguite tramite la connessione dopo che l'applicazione è stata avviata e le statistiche sono state abilitate. Include le istruzioni FETCH per il recupero delle righe dai cursori e il conteggio per le istruzioni SELECT viene aggiornato quando viene raggiunta la fine di un tipo <xref:System.Data.SqlClient.SqlDataReader>.|  
-|`SelectRows`|Restituisce il numero di righe selezionate dopo che l'applicazione è stata avviata e le statistiche sono state abilitate. Il contatore riflette tutte le righe generate da istruzioni SQL, anche da quelle non usate dal chiamante. Ad esempio, se un lettore di dati viene arrestato prima di leggere l'intero set di risultati, il conteggio non verrà compromesso. Vengono incluse le righe recuperate dai cursori mediante istruzioni FETCH.|  
-|`ServerRoundtrips`|Restituisce il numero di volte che la connessione ha inviato i comandi al server e ottenuto una risposta dopo che l'applicazione è stata avviata e le statistiche sono state abilitate.|  
-|`SumResultSets`|Restituisce il numero dei set di risultati usati dopo che l'applicazione è stata avviata e le statistiche sono state abilitate. Ad esempio, viene incluso qualsiasi set di risultati restituito al client. Per i cursori, ciascuna operazione fetch o ciascuna operazione block-fetch viene considerata come un set di risultati indipendente.|  
-|`Transactions`|Restituisce il numero di transazioni utente iniziate dopo che l'applicazione è stata avviata e le statistiche sono state abilitate. Se una connessione viene eseguita in modalità di commit automatico, ciascun comando viene considerato come una transazione.<br /><br /> Il contatore incrementa il conteggio delle transazioni non appena viene eseguita l'istruzione BEGIN TRAN, indipendentemente dal fatto che successivamente venga eseguito il commit o il rollback della transazione.|  
-|`UnpreparedExecs`|Restituisce il numero di istruzioni non preparate eseguite tramite la connessione dopo che l'applicazione è stata avviata e le statistiche sono state abilitate.|  
+|`CursorOpens`|Restituisce il numero di volte in cui un cursore è stato aperto, per la durata della connessione, dopo che l'applicazione è stata avviata usando il provider e con le statistiche abilitate.<br /><br /> Si noti che i risultati di sola lettura o di solo invio restituiti dalle istruzioni SELECT non sono considerati cursori e pertanto non influiscono su questo contatore.|  
+|`ExecutionTime`|Restituisce l'intervallo di tempo cumulativo (in millisecondi) usato dal provider per l'elaborazione dopo l'abilitazione delle statistiche, incluso il tempo di attesa per le risposte del server nonché il tempo di esecuzione del codice nel provider stesso.<br /><br /> Le classi che includono il codice temporale sono:<br /><br /> SqlConnection<br /><br /> SqlCommand<br /><br /> SqlDataReader<br /><br /> SqlDataAdapter<br /><br /> SqlTransaction<br /><br /> SqlCommandBuilder<br /><br /> Per ridurre il più possibile i membri critici per le prestazioni, i membri seguenti non sono temporizzati:<br /><br /> SqlDataReader<br /><br /> this[] operator (all overloads)<br /><br /> GetBoolean<br /><br /> GetChar<br /><br /> GetDateTime<br /><br /> GetDecimal<br /><br /> GetDouble<br /><br /> GetFloat<br /><br /> GetGuid<br /><br /> GetInt16<br /><br /> GetInt32<br /><br /> GetInt64<br /><br /> GetName<br /><br /> GetOrdinal<br /><br /> GetSqlBinary<br /><br /> GetSqlBoolean<br /><br /> GetSqlByte<br /><br /> GetSqlDateTime<br /><br /> GetSqlDecimal<br /><br /> GetSqlDouble<br /><br /> GetSqlGuid<br /><br /> GetSqlInt16<br /><br /> GetSqlInt32<br /><br /> GetSqlInt64<br /><br /> GetSqlMoney<br /><br /> GetSqlSingle<br /><br /> GetSqlString<br /><br /> GetString<br /><br /> IsDBNull|  
+|`IduCount`|Restituisce il numero totale di istruzioni INSERT, DELETE e UPDATE eseguite per la durata della connessione, dopo che l'applicazione è stata avviata usando il provider e con le statistiche abilitate.|  
+|`IduRows`|Restituisce il numero totale di righe interessate dalle istruzioni INSERT, DELETE e UPDATE eseguite per la durata della connessione, dopo che l'applicazione è stata avviata usando il provider e con le statistiche abilitate.|  
+|`NetworkServerTime`|Restituisce il tempo cumulativo (in millisecondi) di attesa del provider per le risposte dal server dopo che l'avvio dell'applicazione e l'abilitazione delle statistiche.|  
+|`PreparedExecs`|Restituisce il numero di comandi preparati eseguiti per la durata della connessione, dopo che l'applicazione è stata avviata usando il provider e con le statistiche abilitate.|  
+|`Prepares`|Restituisce il numero di istruzioni preparate per la durata della connessione, dopo che l'applicazione è stata avviata usando il provider e con le statistiche abilitate.|  
+|`SelectCount`|Restituisce il numero di istruzioni SELECT eseguite per la durata della connessione, dopo che l'applicazione è stata avviata usando il provider e con le statistiche abilitate. Sono incluse le istruzioni FETCH per recuperare le righe dai cursori e il conteggio delle istruzioni SELECT viene aggiornato quando viene raggiunta la fine di una classe <xref:System.Data.SqlClient.SqlDataReader>.|  
+|`SelectRows`|Restituisce il numero di righe selezionate dopo che l'applicazione è stata avviata usando il provider e con le statistiche abilitate. Questo numero riflette tutte le righe generate da istruzioni SQL, anche da quelle non effettivamente usate dal chiamante. La chiusura di un lettore di dati prima della lettura dell'intero set di risultati, ad esempio, non influisce sul conteggio. Sono incluse le righe recuperate dai cursori tramite istruzioni FETCH.|  
+|`ServerRoundtrips`|Restituisce il numero di volte in cui la connessione ha inviato comandi al server e ha ricevuto una risposta, dopo che l'applicazione è stata avviata usando il provider e con le statistiche abilitate.|  
+|`SumResultSets`|Restituisce il numero di set di risultati usati dopo che l'applicazione è stata avviata usando il provider e con le statistiche abilitate. Sarebbero inclusi, ad esempio, i set di risultati restituiti al client. Per i cursori, ogni operazione di recupero o blocco di recupero viene considerata un set di risultati indipendente.|  
+|`Transactions`|Restituisce il numero di transazioni utente avviate dopo che l'applicazione è stata avviata usando il provider e con le statistiche abilitate, inclusi i rollback. Se la connessione è in esecuzione con il commit automatico abilitato, ogni comando viene considerato una transazione.<br /><br /> Questo contatore incrementa il conteggio delle transazioni non appena viene eseguita un'istruzione BEGIN TRAN, indipendentemente dal fatto che in un secondo momento venga eseguito il commit o il rollback della transazione.|  
+|`UnpreparedExecs`|Restituisce il numero di istruzioni non preparate eseguite per la durata della connessione, dopo che l'applicazione è stata avviata usando il provider e con le statistiche abilitate.|  
   
 ### <a name="retrieving-a-value"></a>Recupero di valori  
- Nell'applicazione console seguente viene illustrato come abilitare le statistiche su una connessione, recuperare quattro singoli valori statistici e riportarli nella finestra della console.  
+ Nell'applicazione console seguente viene illustrato come abilitare le statistiche in una connessione, recuperare quattro singoli valori statistici e scriverli nella finestra della console.  
   
 > [!NOTE]
-> Nell'esempio seguente viene utilizzato il database **AdventureWorks** di esempio incluso in SQL Server. Per la stringa di connessione fornita nel codice di esempio si presuppone che il database sia installato e disponibile nel computer locale. Modificare la stringa di connessione per adattarla all'ambiente, se necessario.  
+> Nell'esempio seguente viene usato il database di esempio **AdventureWorks** incluso in SQL Server. Per la stringa di connessione specificata nel codice di esempio si presuppone che il database sia installato e disponibile nel computer locale. Modificare la stringa di connessione in base alle esigenze dell'ambiente in uso.  
   
 ```vb  
 Option Strict On  
@@ -65,7 +65,7 @@ Module Module1
   
     Using awConnection As New SqlConnection(connectionString)  
       ' StatisticsEnabled is False by default.  
-      ' It must be set to True to start the   
+      ' It must be set to True to start the
       ' statistic collection process.  
       awConnection.StatisticsEnabled = True  
   
@@ -136,16 +136,16 @@ namespace CS_Stats_Console_GetValue
     {  
       string connectionString = GetConnectionString();  
   
-      using (SqlConnection awConnection =   
+      using (SqlConnection awConnection =
         new SqlConnection(connectionString))  
       {  
         // StatisticsEnabled is False by default.  
-        // It must be set to True to start the   
+        // It must be set to True to start the
         // statistic collection process.  
         awConnection.StatisticsEnabled = true;  
   
         string productSQL = "SELECT * FROM Production.Product";  
-        SqlDataAdapter productAdapter =   
+        SqlDataAdapter productAdapter =
           new SqlDataAdapter(productSQL, awConnection);  
   
         DataSet awDataSet = new DataSet();  
@@ -193,7 +193,7 @@ namespace CS_Stats_Console_GetValue
     {  
       // To avoid storing the connection string in your code,  
       // you can retrieve it from a configuration file.  
-      return "Data Source=localhost;Integrated Security=SSPI;" +   
+      return "Data Source=localhost;Integrated Security=SSPI;" +
         "Initial Catalog=AdventureWorks";  
     }  
   }  
@@ -201,10 +201,10 @@ namespace CS_Stats_Console_GetValue
 ```  
   
 ### <a name="retrieving-all-values"></a>Recupero di tutti i valori  
- Nell'applicazione console seguente viene illustrato come abilitare le statistiche su una connessione, recuperare tutti i valori statistici con l'enumeratore e riportarli nella finestra della console.  
+ Nell'applicazione console seguente viene illustrato come abilitare le statistiche in una connessione, recuperare tutti i valori statistici disponibili usando l'enumeratore e scriverli nella finestra della console.  
   
 > [!NOTE]
-> Nell'esempio seguente viene utilizzato il database **AdventureWorks** di esempio incluso in SQL Server. Per la stringa di connessione fornita nel codice di esempio si presuppone che il database sia installato e disponibile nel computer locale. Modificare la stringa di connessione per adattarla all'ambiente, se necessario.  
+> Nell'esempio seguente viene usato il database di esempio **AdventureWorks** incluso in SQL Server. Per la stringa di connessione specificata nel codice di esempio si presuppone che il database sia installato e disponibile nel computer locale. Modificare la stringa di connessione in base alle esigenze dell'ambiente in uso.  
   
 ```vb  
 Option Strict On  
@@ -220,7 +220,7 @@ Module Module1
   
     Using awConnection As New SqlConnection(connectionString)  
       ' StatisticsEnabled is False by default.  
-      ' It must be set to True to start the   
+      ' It must be set to True to start the
       ' statistic collection process.  
       awConnection.StatisticsEnabled = True  
   
@@ -284,11 +284,11 @@ namespace CS_Stats_Console_GetAll
     {  
       string connectionString = GetConnectionString();  
   
-      using (SqlConnection awConnection =   
+      using (SqlConnection awConnection =
         new SqlConnection(connectionString))  
       {  
         // StatisticsEnabled is False by default.  
-        // It must be set to True to start the   
+        // It must be set to True to start the
         // statistic collection process.  
         awConnection.StatisticsEnabled = true;  
   
@@ -331,7 +331,7 @@ namespace CS_Stats_Console_GetAll
     {  
       // To avoid storing the connection string in your code,  
       // you can retrieve it from a configuration file.  
-      return "Data Source=localhost;Integrated Security=SSPI;" +   
+      return "Data Source=localhost;Integrated Security=SSPI;" +
         "Initial Catalog=AdventureWorks";  
     }  
   }  

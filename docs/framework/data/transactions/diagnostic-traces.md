@@ -2,12 +2,12 @@
 title: Tracce di diagnostica
 ms.date: 03/30/2017
 ms.assetid: 28e77a63-d20d-4b6a-9caf-ddad86550427
-ms.openlocfilehash: 56f79fb9140785188996cc413eca4dd530037ccd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 76712710bf42f498ba859c7b1cd18a261387078c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934797"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174420"
 ---
 # <a name="diagnostic-traces"></a>Tracce di diagnostica
 Le tracce consistono nella pubblicazione di messaggi specifici generati durante l'esecuzione di un'applicazione. Quando si utilizza la tracciatura è necessario disporre di un meccanismo per raccogliere e registrare i messaggi inviati. I messaggi di traccia vengono ricevuti dai listener. Il compito di un listener è raccogliere, archiviare e inviare messaggi di errore. I listener indirizzano l'output di tracciatura a una destinazione appropriata, ad esempio un file di log, una finestra o un file di testo.  
@@ -23,8 +23,8 @@ Le tracce consistono nella pubblicazione di messaggi specifici generati durante 
      <sources>  
           <source name="System.Transactions" switchValue="Warning">  
                <listeners>  
-                    <add name="tx"   
-                     type="System.Diagnostics.XmlWriterTraceListener"   
+                    <add name="tx"
+                     type="System.Diagnostics.XmlWriterTraceListener"
                      initializeData= "tx.log" />  
                </listeners>  
           </source>  
@@ -39,13 +39,13 @@ Le tracce consistono nella pubblicazione di messaggi specifici generati durante 
   
 |Livello di traccia|Descrizione|  
 |-----------------|-----------------|  
-|Critico|Si sono verificati errori gravi. Ad esempio:<br /><br /> -Un errore che può causare una perdita immediata di funzionalità per l'utente.<br />-Un evento che richiede un amministratore di intervenire per evitare la perdita di funzionalità.<br />-Blocchi di codice.<br />-Questo livello di traccia può inoltre fornire un contesto per interpretare altre tracce critico. Ciò può semplificare l'identificazione della sequenza di operazioni che ha portato all'errore grave.|  
-|Error|Si è verificato un errore (ad esempio, un errore di configurazione o un comportamento di rete non valido) che può comportare la perdita di funzionalità dell'utente.|  
+|Critico|Si sono verificati errori gravi. Ad esempio:<br /><br /> - Un errore che può causare una perdita immediata nella funzionalità dell'utente.- An error that can cause an immediate loss in user functionality.<br />- Un evento che richiede a un amministratore di intervenire per evitare la perdita di funzionalità.<br />- Il codice si blocca.<br />- Questo livello di traccia può anche fornire un contesto sufficiente per l'interpretazione di altre tracce critiche.- This tracing level can also provide sufficient context for interpreting other critical traces. Ciò può semplificare l'identificazione della sequenza di operazioni che ha portato all'errore grave.|  
+|Errore|Si è verificato un errore (ad esempio, un errore di configurazione o un comportamento di rete non valido) che può comportare la perdita di funzionalità dell'utente.|  
 |Avviso|È stata rilevata una condizione che in seguito può dare luogo a un errore standard o critico, ad esempio un errore di allocazione o il raggiungimento di un limite. Gli avvisi possono anche essere generati durante la normale elaborazione degli errori del codice utente, ad esempio l'interruzione di una transazione, lo scadere di un timeout o l'esito negativo di un'autenticazione.|  
 |Informazioni|Il sistema genera messaggi informativi che semplificano il monitoraggio e la diagnosi dello stato di sistema, la valutazione delle prestazioni o il profiling. Questi messaggi possono ad esempio riguardare gli eventi durata di transazione e integrazione (quali la creazione o il commit di una transazione), l'attraversamento di un confine importante o l'allocazione di risorse significative. Gli sviluppatori possono quindi utilizzare queste informazioni durante la pianificazione delle capacità e la gestione delle prestazioni.|  
   
 ## <a name="trace-codes"></a>Codici di traccia  
- Nella tabella seguente sono elencati i codici di traccia generati dall'infrastruttura <xref:System.Transactions>. L'identificatore della tabella di traccia, sono inclusi nella tabella di <xref:System.Diagnostics.EventTypeFilter.EventType%2A> a livello di enumerazione per la traccia e i dati aggiuntivi contenuti nel **TraceRecord** per la traccia. Inoltre, il livello di traccia corrispondente della traccia viene inoltre archiviato nel **TraceRecord**.  
+ Nella tabella seguente sono elencati i codici di traccia generati dall'infrastruttura <xref:System.Transactions>. Nella tabella sono inclusi l'identificatore del codice di traccia, il <xref:System.Diagnostics.EventTypeFilter.EventType%2A> livello di enumerazione per la traccia e i dati aggiuntivi contenuti nel **TraceRecord** per la traccia. Inoltre, il livello di traccia corrispondente della traccia viene archiviato anche nel **TraceRecord**.  
   
 |TraceCode|EventType|Dati aggiuntivi in TraceRecord|  
 |---------------|---------------|-------------------------------|  
@@ -56,19 +56,19 @@ Le tracce consistono nella pubblicazione di messaggi specifici generati durante 
 |TransactionRollbackCalled|Avviso|TransactionTraceId|  
 |TransactionAborted|Avviso|TransactionTraceId|  
 |TransactionInDoubt|Avviso|TransactionTraceId|  
-|TransactionScopeCreated|Info|TransactionScopeResult. Risultati possibili:<br /><br /> -Nuova transazione.<br />-Transaction passato.<br />-Passaggio della transazione dipendente.<br />-Utilizzo della transazione corrente.<br />-Nessuna transazione.<br /><br /> nuovo TransactionTraceId corrente|  
-|TransactionScopeDisposed|Info|TransactionTraceId dell'ambito di transazione corrente "prevista".|  
-|TransactionScopeIncomplete|Avviso|TransactionTraceId dell'ambito di transazione corrente "prevista".|  
-|TransactionScopeNestedIncorrectly|Avviso|TransactionTraceId dell'ambito di transazione corrente "prevista".|  
+|TransactionScopeCreated|Info|TransactionScopeResult. Risultati possibili:<br /><br /> - Nuova transazione.<br />- Transazione trascorsa.<br />- Transazione dipendente passata.<br />- Utilizzando la transazione corrente.<br />- Nessuna transazione.<br /><br /> nuovo TransactionTraceId corrente|  
+|TransactionScopeDisposed|Info|TransactionTraceId della transazione corrente "prevista" dell'ambito.|  
+|TransactionScopeIncomplete|Avviso|TransactionTraceId della transazione corrente "prevista" dell'ambito.|  
+|TransactionScopeNestedIncorrectly|Avviso|TransactionTraceId della transazione corrente "prevista" dell'ambito.|  
 |TransactionScopeCurrentTransactionChanged|Avviso|vecchio TransactionTraceId corrente, altro TransactionTraceId|  
-|TransactionScopeTimeout|Avviso|TransactionTraceId dell'ambito di transazione corrente "prevista".|  
+|TransactionScopeTimeout|Avviso|TransactionTraceId della transazione corrente "prevista" dell'ambito.|  
 |DependentCloneCreated|Info|TransactionTraceId, tipo di transazione dipendente creata (RollbackIfNotComplete/BlockCommitUntilComplete)|  
 |DependentCloneComplete|Info|TransactionTraceId|  
 |RecoveryComplete|Info|GUID del gestore di risorse (dalla base)|  
 |Reenlist|Info|GUID del gestore di risorse (dalla base)|  
 |TransactionSerialized|Info|TransactionTraceId.|  
-|TransactionException|Error|Messaggio eccezione|  
-|InvalidOperationException|Error|Messaggio eccezione|  
+|TransactionException|Errore|Messaggio eccezione|  
+|InvalidOperationException|Errore|Messaggio eccezione|  
 |InternalError|Critico|Messaggio eccezione|  
 |TransferEvent||Quando una transazione viene deserializzata o promossa da transazione dello spazio dei nomi <xref:System.Transactions> a transazione distribuita, il sistema scrive l'ActivityID corrente ricavato dal contesto ExecutionContext e l'ID della transazione distribuita.<br /><br /> Quando il gestore DTC esegue il callback al codice gestito, l'ID della transazione distribuita viene impostato per la durata del callback come ActivityID del contesto ExecutionContext.|  
 |ConfiguredDefaultTimeoutAdjusted|Avviso|Nessun dato aggiuntivo|  
@@ -134,4 +134,4 @@ Le tracce consistono nella pubblicazione di messaggi specifici generati durante 
  `</ResourceManagerId>`  
   
 ## <a name="security-issues-for-tracing"></a>Problemi di sicurezza relativi alle tracce  
- Come amministratore di attivare la traccia, informazioni riservate potrebbero essere scritto in un log di traccia che è visibile pubblicamente per impostazione predefinita. Per attenuare i rischi di sicurezza, è consigliabile memorizzare il log di traccia in un luogo sicuro controllato dalle autorizzazioni di accesso di sistema di condivisione e file.
+ L'attivazione delle tracce può comportare la scrittura di informazioni personali in un log di traccia che per impostazione predefinita può essere visualizzato pubblicamente. Per ridurre i rischi di sicurezza è consigliabile memorizzare il registro di traccia in un percorso protetto tramite autorizzazioni di accesso a condivisioni e file system.

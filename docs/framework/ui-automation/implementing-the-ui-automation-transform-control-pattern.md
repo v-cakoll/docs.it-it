@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Transform control pattern
 - UI Automation, Transform control pattern
 ms.assetid: 5f49d843-5845-4800-9d9c-56ce0d146844
-ms.openlocfilehash: c0a46580ad2673b56fefe7228f2549a2e19d2c14
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5643bc85972ea33cc31b1a83ecf7615dbb275bc2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447061"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180044"
 ---
 # <a name="implementing-the-ui-automation-transform-control-pattern"></a>Implementazione del pattern di controllo Transform di automazione interfaccia utente
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74447061"
   
  Il pattern di controllo <xref:System.Windows.Automation.TransformPattern> viene usato per supportare i controlli che possono essere spostati, ridimensionati o ruotati in uno spazio bidimensionale. Per esempi di controlli che implementano questo pattern di controllo, vedere [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md).  
   
-<a name="Implementation_Guidelines_and_Conventions"></a>   
+<a name="Implementation_Guidelines_and_Conventions"></a>
 ## <a name="implementation-guidelines-and-conventions"></a>Linee guida e convenzioni di implementazione  
  Quando si implementa il pattern di controllo Transform, tenere presenti le linee guida e le convenzioni seguenti:  
   
@@ -33,7 +33,7 @@ ms.locfileid: "74447061"
   
 - Tutti i parametri e i valori delle proprietà sono assoluti e indipendenti dalle impostazioni locali.  
   
-<a name="Required_Members_for_the_IValueProvider_Interface"></a>   
+<a name="Required_Members_for_the_IValueProvider_Interface"></a>
 ## <a name="required-members-for-itransformprovider"></a>Membri obbligatori per ITransformProvider  
  Le proprietà e i metodi seguenti sono obbligatori per l'implementazione di <xref:System.Windows.Automation.Provider.ITransformProvider>.  
   
@@ -48,20 +48,20 @@ ms.locfileid: "74447061"
   
  Questo pattern di controllo non è associato a eventi.  
   
-<a name="Exceptions"></a>   
+<a name="Exceptions"></a>
 ## <a name="exceptions"></a>Eccezioni  
  I provider devono generare le eccezioni seguenti.  
   
 |Tipo di eccezione|Condizione|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A><br /><br /> -Se la <xref:System.Windows.Automation.TransformPatternIdentifiers.CanMoveProperty> è false.|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A><br /><br /> -Se la <xref:System.Windows.Automation.TransformPatternIdentifiers.CanResizeProperty> è false.|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A><br /><br /> -Se la <xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty> è false.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A><br /><br /> - Se <xref:System.Windows.Automation.TransformPatternIdentifiers.CanMoveProperty> l'è falso.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A><br /><br /> - Se <xref:System.Windows.Automation.TransformPatternIdentifiers.CanResizeProperty> l'è falso.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A><br /><br /> - Se <xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty> l'è falso.|  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica dei pattern di controllo per l'automazione interfaccia utente](ui-automation-control-patterns-overview.md)
+- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
 - [Supportare pattern di controllo in un provider di automazione interfaccia utente](support-control-patterns-in-a-ui-automation-provider.md)
-- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
-- [Panoramica dell'albero di automazione interfaccia utente](ui-automation-tree-overview.md)
-- [Usare la memorizzazione nella cache in automazione interfaccia utente](use-caching-in-ui-automation.md)
+- [Pattern di controllo di automazione interfaccia utente per i client](ui-automation-control-patterns-for-clients.md)
+- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [Utilizzare la memorizzazione nella cache per l'automazione interfaccia utente](use-caching-in-ui-automation.md)

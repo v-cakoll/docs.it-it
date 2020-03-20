@@ -15,58 +15,58 @@ helpviewer_keywords:
 ms.assetid: 47b2a3b6-907d-43dc-858d-1ae7dca1316a
 topic_type:
 - apiref
-ms.openlocfilehash: 3898b095809e2b84f71aba2036f4d7a294dfdf6a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 1868d13a9dbb73dbdf64e49c395bdbff02ce89d4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444648"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177447"
 ---
 # <a name="imetadataemit2definegenericparam-method"></a>Metodo IMetaDataEmit2::DefineGenericParam
-Crea una definizione per un parametro di tipo generico e ottiene un token per il parametro di tipo generico.  
+Crea una definizione per un parametro di tipo generico e ottiene un token per tale parametro di tipo generico.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
-HRESULT DefineGenericParam (   
-    [in]  mdToken         tk,   
-    [in]  ULONG           ulParamSeq,   
-    [in]  DWORD           dwParamFlags,   
-    [in]  LPCWSTR         szname,   
-    [in]  DWORD           reserved,   
-    [in]  mdToken         rtkConstraints[],   
+HRESULT DefineGenericParam (
+    [in]  mdToken         tk,
+    [in]  ULONG           ulParamSeq,
+    [in]  DWORD           dwParamFlags,
+    [in]  LPCWSTR         szname,
+    [in]  DWORD           reserved,
+    [in]  mdToken         rtkConstraints[],
     [out] mdGenericParam  *pgp  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `tk`  
- in Token `mdTypeDef` o `mdMethodDef` che rappresenta il metodo o il costruttore per cui definire un parametro generico.  
+ [in] Un `mdTypeDef` `mdMethodDef` o token che rappresenta il metodo o il costruttore per il quale definire un parametro generico.  
   
  `ulParamSeq`  
- in Indice del parametro generico.  
+ [in] Indice del parametro generico.  
   
  `dwParamFlags`  
- in Valore dell'enumerazione [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) che descrive il tipo per il parametro generico.  
+ [in] Valore dell'enumerazione [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) che descrive il tipo per il parametro generico.  
   
  `szname`  
- in Nome del parametro.  
+ [in] Nome del parametro.  
   
  `reserved`  
- in Questo parametro è riservato per l'estendibilità futura.  
+ [in] Questo parametro è riservato per l'estensibilità futura.  
   
  `rtkConstraints`  
- in Matrice con terminazione zero di vincoli di tipo. I membri della matrice devono essere un token di metadati `mdTypeDef`, `mdTypeRef`o `mdTypeSpec`.  
+ [in] Matrice con terminazione zero di vincoli di tipo. I membri della `mdTypeDef` `mdTypeRef`matrice `mdTypeSpec` devono essere un token , o di metadati.  
   
  `pgp`  
- out Token che rappresenta il parametro generico.  
+ [fuori] Token che rappresenta il parametro generico.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Usato come risorsa in MsCorEE. dll  
+ **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

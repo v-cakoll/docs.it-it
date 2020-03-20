@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Eseguire codice parzialmente attendibile in un oggetto sandbox'
+title: 'Procedura: eseguire codice parzialmente attendibile in un oggetto sandbox'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - restricted security environment
 - code security, sandboxing
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
-ms.openlocfilehash: 0191846f5589b0162ba342161fb5919ff20099d4
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: b2f5a72e747f6c71743a7b22fe9f1962ac2f6b53
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215853"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181185"
 ---
-# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Procedura: Eseguire codice parzialmente attendibile in un oggetto sandbox
+# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Procedura: eseguire codice parzialmente attendibile in un oggetto sandbox
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  Il termine sandboxing si riferisce all'esecuzione di codice in un ambiente di sicurezza con restrizioni che limita le autorizzazioni di accesso concesse al codice. Se, ad esempio, si dispone di una libreria gestita proveniente da un'origine non considerata completamente attendibile, è consigliabile non eseguirla come completamente attendibile. Inserire invece il codice in un ambiente sandbox che limita le autorizzazioni a quelle che si prevede siano necessarie (ad esempio, l'autorizzazione <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>).  
@@ -83,8 +83,8 @@ AppDomain.CreateDomain( string friendlyName,
      La firma per il metodo è la seguente:  
   
     ```csharp
-    public static AppDomain CreateDomain(string friendlyName,   
-        Evidence securityInfo, AppDomainSetup info, PermissionSet grantSet,   
+    public static AppDomain CreateDomain(string friendlyName,
+        Evidence securityInfo, AppDomainSetup info, PermissionSet grantSet,
         params StrongName[] fullTrustAssemblies)  
     ```  
   
@@ -114,7 +114,7 @@ AppDomain.CreateDomain( string friendlyName,
   
     - È possibile usare una codebase che punta a una posizione che non contiene l'assembly.  
   
-    - È possibile eseguire la creazione in un oggetto <xref:System.Security.CodeAccessPermission.Assert%2A> per l'attendibilità totale (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>), per poter creare un'istanza di una classe critica. Questa situazione si verifica ogni volta che l'assembly non presenta contrassegni di trasparenza e viene caricato come completamente attendibile. Pertanto, è necessario prestare attenzione a creare solo codice attendibile per questa funzione ed è consigliabile creare solo istanze di classi completamente attendibili nel nuovo dominio applicazione.  
+    - È possibile eseguire la creazione in un oggetto <xref:System.Security.CodeAccessPermission.Assert%2A> per l'attendibilità totale (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>), per poter creare un'istanza di una classe critica. (Questo accade ogni volta che l'assieme non ha segni di trasparenza e viene caricato come completamente attendibile.) Pertanto, è necessario prestare attenzione a creare solo codice attendibile con questa funzione ed è consigliabile creare solo istanze di classi completamente attendibili nel nuovo dominio applicazione.  
   
     ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  
@@ -145,7 +145,7 @@ AppDomain.CreateDomain( string friendlyName,
     ```csharp
     public void ExecuteUntrustedCode(string assemblyName, string typeName, string entryPoint, Object[] parameters)  
     {  
-        //Load the MethodInfo for a method in the new assembly. This might be a method you know, or   
+        //Load the MethodInfo for a method in the new assembly. This might be a method you know, or
         //you can use Assembly.EntryPoint to get to the entry point in an executable.  
         MethodInfo target = Assembly.Load(assemblyName).GetType(typeName).GetMethod(entryPoint);  
         try  
@@ -155,7 +155,7 @@ AppDomain.CreateDomain( string friendlyName,
         }  
         catch (Exception ex)  
         {  
-        //When information is obtained from a SecurityException extra information is provided if it is   
+        //When information is obtained from a SecurityException extra information is provided if it is
         //accessed in full-trust.  
             new PermissionSet(PermissionState.Unrestricted).Assert();  
             Console.WriteLine("SecurityException caught:\n{0}", ex.ToString());  
@@ -210,7 +210,7 @@ using System.Security.Permissions;
 using System.Reflection;  
 using System.Runtime.Remoting;  
   
-//The Sandboxer class needs to derive from MarshalByRefObject so that we can create it in another   
+//The Sandboxer class needs to derive from MarshalByRefObject so that we can create it in another
 // AppDomain and refer to it from the default AppDomain.  
 class Sandboxer : MarshalByRefObject  
 {  
@@ -221,12 +221,12 @@ class Sandboxer : MarshalByRefObject
     private static Object[] parameters = { 45 };  
     static void Main()  
     {  
-        //Setting the AppDomainSetup. It is very important to set the ApplicationBase to a folder   
+        //Setting the AppDomainSetup. It is very important to set the ApplicationBase to a folder
         //other than the one in which the sandboxer resides.  
         AppDomainSetup adSetup = new AppDomainSetup();  
         adSetup.ApplicationBase = Path.GetFullPath(pathToUntrusted);  
   
-        //Setting the permissions for the AppDomain. We give the permission to execute and to   
+        //Setting the permissions for the AppDomain. We give the permission to execute and to
         //read/discover the location where the untrusted code is loaded.  
         PermissionSet permSet = new PermissionSet(PermissionState.None);  
         permSet.AddPermission(new SecurityPermission(SecurityPermissionFlag.Execution));  
@@ -238,19 +238,19 @@ class Sandboxer : MarshalByRefObject
         AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
   
         //Use CreateInstanceFrom to load an instance of the Sandboxer class into the  
-        //new AppDomain.   
+        //new AppDomain.
         ObjectHandle handle = Activator.CreateInstanceFrom(  
             newDomain, typeof(Sandboxer).Assembly.ManifestModule.FullyQualifiedName,  
             typeof(Sandboxer).FullName  
             );  
-        //Unwrap the new domain instance into a reference in this domain and use it to execute the   
+        //Unwrap the new domain instance into a reference in this domain and use it to execute the
         //untrusted code.  
         Sandboxer newDomainInstance = (Sandboxer) handle.Unwrap();  
         newDomainInstance.ExecuteUntrustedCode(untrustedAssembly, untrustedClass, entryPoint, parameters);  
     }  
     public void ExecuteUntrustedCode(string assemblyName, string typeName, string entryPoint, Object[] parameters)  
     {  
-        //Load the MethodInfo for a method in the new Assembly. This might be a method you know, or   
+        //Load the MethodInfo for a method in the new Assembly. This might be a method you know, or
         //you can use Assembly.EntryPoint to get to the main function in an executable.  
         MethodInfo target = Assembly.Load(assemblyName).GetType(typeName).GetMethod(entryPoint);  
         try  
@@ -260,7 +260,7 @@ class Sandboxer : MarshalByRefObject
         }  
         catch (Exception ex)  
         {  
-            // When we print informations from a SecurityException extra information can be printed if we are   
+            // When we print informations from a SecurityException extra information can be printed if we are
             //calling it with a full-trust stack.  
             new PermissionSet(PermissionState.Unrestricted).Assert();  
             Console.WriteLine("SecurityException caught:\n{0}", ex.ToString());  

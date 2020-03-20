@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, obtaining elements
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
-ms.openlocfilehash: 0ae4694e2efb6f6c51b279adf2851baf38785c8b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: eab4e59ee219808a4c0ae9ca5331a14928b66b5c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446895"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179994"
 ---
 # <a name="obtaining-ui-automation-elements"></a>Ottenere elementi di automazione interfaccia utente
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74446895"
 > [!CAUTION]
 > Se c'è la possibilità che l'applicazione client cerchi di trovare elementi nell'interfaccia utente, è necessario effettuare tutte le chiamate a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] in un thread separato. Per altre informazioni, vedere [UI Automation Threading Issues](ui-automation-threading-issues.md).  
   
-<a name="The_Root_Element"></a>   
+<a name="The_Root_Element"></a>
 ## <a name="root-element"></a>Elemento radice  
  Tutte le ricerche di oggetti <xref:System.Windows.Automation.AutomationElement> devono avere un punto di partenza, che può essere un elemento qualsiasi, incluso il desktop, una finestra dell'applicazione o un controllo.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "74446895"
 > [!CAUTION]
 > In generale, è consigliabile cercare di ottenere solo elementi figlio diretti di <xref:System.Windows.Automation.AutomationElement.RootElement%2A>. Una ricerca dei discendenti può scorrere centinaia o anche migliaia di elementi, con la possibilità che venga generato un overflow dello stack. Per ottenere un elemento specifico a un livello inferiore, è consigliabile avviare la ricerca dalla finestra dell'applicazione o da un contenitore a un livello inferiore.  
   
-<a name="Using_Conditions"></a>   
+<a name="Using_Conditions"></a>
 ## <a name="conditions"></a>Condizioni  
  Per la maggior parte delle tecniche che è possibile usare per recuperare elementi di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , è necessario specificare un oggetto <xref:System.Windows.Automation.Condition>, ovvero un set di criteri che definiscono gli elementi da recuperare.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "74446895"
   
  Le condizioni possono essere combinate con la logica booleana costruendo oggetti di tipo <xref:System.Windows.Automation.AndCondition>, <xref:System.Windows.Automation.OrCondition>e <xref:System.Windows.Automation.NotCondition>.  
   
-<a name="Search_Scope"></a>   
+<a name="Search_Scope"></a>
 ## <a name="search-scope"></a>Ambito di ricerca  
  Le ricerche eseguite usando <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> o <xref:System.Windows.Automation.AutomationElement.FindAll%2A> devono avere un ambito, oltre che un punto di partenza.  
   
@@ -50,17 +50,17 @@ ms.locfileid: "74446895"
   
  L'ambito di una ricerca viene definito da una combinazione bit per bit di valori dall'enumerazione <xref:System.Windows.Automation.TreeScope> .  
   
-<a name="Finding_a_Known_Element"></a>   
+<a name="Finding_a_Known_Element"></a>
 ## <a name="finding-a-known-element"></a>Ricerca di un elemento noto  
  Per trovare un elemento noto, identificato da <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>, <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AutomationId%2A>o da altre proprietà o combinazioni di proprietà, il modo più semplice è usare il metodo <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> . Se l'elemento cercato è una finestra dell'applicazione, il punto di partenza della ricerca può essere l'oggetto <xref:System.Windows.Automation.AutomationElement.RootElement%2A>.  
   
  Questo tipo di ricerca degli elementi di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] è molto utile negli scenari di test automatizzato.  
   
-<a name="Finding_Elements_in_a_Subtree"></a>   
+<a name="Finding_Elements_in_a_Subtree"></a>
 ## <a name="finding-elements-in-a-subtree"></a>Ricerca di elementi in un sottoalbero  
  Per trovare tutti gli elementi che soddisfano criteri specifici correlati a un elemento noto, è possibile usare <xref:System.Windows.Automation.AutomationElement.FindAll%2A>. È possibile, ad esempio, usare questo metodo per recuperare elementi elenco o voci di menu da un elenco o da un menu o per identificare tutti i controlli in una finestra di dialogo.  
   
-<a name="Walking_a_Subtree"></a>   
+<a name="Walking_a_Subtree"></a>
 ## <a name="walking-a-subtree"></a>Esplorazione di un sottoalbero  
  Se non si conoscono le applicazioni con cui il client potrebbe essere usato, è possibile costruire un sottoalbero di tutti gli elementi a cui si è interessati usando la classe <xref:System.Windows.Automation.TreeWalker> . L'applicazione potrebbe eseguire questa operazione in risposta a un evento di modifica dello stato attivo, ovvero, quando un'applicazione o un controllo riceve lo stato attivo per l'input, il client di automazione interfaccia utente esamina gli elementi figlio ed eventualmente i discendenti dell'elemento con lo stato attivo.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "74446895"
   
  Il metodo <xref:System.Windows.Automation.TreeWalker.Normalize%2A> può essere usato per passare a un elemento nel sottoalbero da un altro elemento che non fa parte della visualizzazione. Si supponga, ad esempio, di avere creato una visualizzazione di un sottoalbero usando <xref:System.Windows.Automation.TreeWalker.ContentViewWalker>. L'applicazione riceve quindi la notifica che una barra di scorrimento ha ricevuto lo stato attivo per l'input. Poiché una barra di scorrimento non è un elemento con contenuto, non è presente nella visualizzazione del sottoalbero. È possibile, tuttavia, passare l'oggetto <xref:System.Windows.Automation.AutomationElement> che rappresenta la barra di scorrimento a <xref:System.Windows.Automation.TreeWalker.Normalize%2A> e recuperare il predecessore più vicino nella visualizzazione contenuto.  
   
-<a name="Other_Ways_to_Retrieve_an_Element"></a>   
+<a name="Other_Ways_to_Retrieve_an_Element"></a>
 ## <a name="other-ways-to-retrieve-an-element"></a>Altri modi per recuperare un elemento  
  Oltre alle ricerche e alla navigazione, è possibile recuperare un oggetto <xref:System.Windows.Automation.AutomationElement> nei seguenti modi.  
   
@@ -98,6 +98,6 @@ ms.locfileid: "74446895"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Trovare un elemento di automazione interfaccia utente in base a una condizione proprietà](find-a-ui-automation-element-based-on-a-property-condition.md)
-- [Navigare tra gli elementi di automazione interfaccia utente con TreeWalker](navigate-among-ui-automation-elements-with-treewalker.md)
-- [Panoramica dell'albero di automazione interfaccia utente](ui-automation-tree-overview.md)
+- [Trovare un elemento di automazione interfaccia utente in base a una proprietà](find-a-ui-automation-element-based-on-a-property-condition.md)
+- [Navigare tra gli elementi di automazione interfaccia utente utilizzando TreeWalker](navigate-among-ui-automation-elements-with-treewalker.md)
+- [UI Automation Tree Overview](ui-automation-tree-overview.md)

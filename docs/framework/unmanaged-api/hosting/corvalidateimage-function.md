@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 0117e080-05f9-4772-885d-e1847230947c
 topic_type:
 - apiref
-ms.openlocfilehash: 42da5bb761ba8ce388bd41d46e8fdc4561ad0290
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3a6da0e845fa50d090cdf0808b211a5806c40961
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136880"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178222"
 ---
 # <a name="_corvalidateimage-function"></a>Funzione _CorValidateImage
-Convalida le immagini del modulo gestito e invia una notifica al caricatore del sistema operativo dopo che sono state caricate.  
+Convalida le immagini dei moduli gestiti e notifica al caricatore del sistema operativo dopo che sono state caricate.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
-STDAPI _CorValidateImage (   
+STDAPI _CorValidateImage (
    [in] PVOID* ImageBase,  
    [in] LPCWSTR FileName  
 );  
@@ -35,33 +35,33 @@ STDAPI _CorValidateImage (
   
 ## <a name="parameters"></a>Parametri  
  `ImageBase`  
- in Puntatore alla posizione iniziale dell'immagine da convalidare come codice gestito. L'immagine deve essere già caricata in memoria.  
+ [in] Puntatore alla posizione iniziale dell'immagine da convalidare come codice gestito. L'immagine deve essere già caricata in memoria.  
   
  `FileName`  
- in Nome file dell'immagine.  
+ [in] Nome file dell'immagine.  
   
 ## <a name="return-value"></a>Valore restituito  
- Questa funzione restituisce i valori standard `E_INVALIDARG`, `E_OUTOFMEMORY`, `E_UNEXPECTED`e `E_FAIL`, nonché i valori seguenti.  
+ Questa funzione restituisce `E_INVALIDARG` `E_OUTOFMEMORY`i `E_UNEXPECTED`valori `E_FAIL`standard , , e , nonché i valori seguenti.  
   
 |Valore restituito|Descrizione|  
 |------------------|-----------------|  
-|`STATUS_INVALID_IMAGE_FORMAT`|L'immagine non è valida. Questo valore dispone del valore HRESULT 0xC000007BL.|  
-|`STATUS_SUCCESS`|L'immagine è valida. Questo valore dispone del valore HRESULT 0x00000000L.|  
+|`STATUS_INVALID_IMAGE_FORMAT`|L'immagine non è valida. Questo valore ha HRESULT 0xC000007BL.|  
+|`STATUS_SUCCESS`|L'immagine è valida. Questo valore ha HRESULT 0x00000000L.|  
   
-## <a name="remarks"></a>Note  
- In Windows XP e versioni successive, il caricatore del sistema operativo controlla la presenza di moduli gestiti esaminando il bit di directory del descrittore COM nell'intestazione Common Object File Format (COFF). Un bit set indica un modulo gestito. Se il caricatore rileva un modulo gestito, carica MsCorEE. dll e chiama `_CorValidateImage`, che esegue le azioni seguenti:  
+## <a name="remarks"></a>Osservazioni  
+ In Windows XP e versioni successive, il caricatore del sistema operativo verifica la presenza di moduli gestiti esaminando il bit directory dei descrittori COM nell'intestazione COFF (Common Object File Format). Un bit set indica un modulo gestito. Se il caricatore rileva un modulo gestito, carica MsCorEE.dll e chiama `_CorValidateImage`, che esegue le seguenti azioni:  
   
 - Conferma che l'immagine è un modulo gestito valido.  
   
-- Modifica il punto di ingresso nell'immagine in un punto di ingresso nel Common Language Runtime (CLR).  
+- Modifica il punto di ingresso nell'immagine in un punto di ingresso in Common Language Runtime (CLR).  
   
-- Per le versioni a 64 bit di Windows, modifica l'immagine in memoria mediante la trasformazione da PE32 a PE32 + format.  
+- Per le versioni a 64 bit di Windows, modifica l'immagine presente in memoria trasformandola dal formato PE32 al formato PE32.  
   
-- Torna al caricatore quando vengono caricate le immagini del modulo gestito.  
+- Torna al caricatore quando vengono caricate le immagini dei moduli gestiti.  
   
- Per le immagini eseguibili, il caricatore del sistema operativo chiama la funzione [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) , indipendentemente dal punto di ingresso specificato nell'eseguibile. Per le immagini di assembly DLL, il caricatore chiama la funzione [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) .  
+ Per le immagini eseguibili, il caricatore del sistema operativo chiama quindi la funzione [_CorExeMain,](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) indipendentemente dal punto di ingresso specificato nell'eseguibile. Per le immagini di assembly DLL, il caricatore chiama la funzione [_CorDllMain.](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md)  
   
- `_CorExeMain` o `_CorDllMain` esegue le azioni seguenti:  
+ `_CorExeMain`o `_CorDllMain` esegue le seguenti azioni:  
   
 - Inizializza CLR.  
   
@@ -69,14 +69,14 @@ STDAPI _CorValidateImage (
   
 - Inizia l'esecuzione.  
   
- Il caricatore chiama la funzione [_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md) quando vengono scaricate le immagini del modulo gestito. Questa funzione, tuttavia, non esegue alcuna azione. restituisce semplicemente.  
+ Il caricatore chiama la funzione [_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md) quando le immagini dei moduli gestiti vengono scaricate. Tuttavia, questa funzione non esegue alcuna azione; ritorna e basta.  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Incluso come risorsa in MsCorEE. dll  
+ **Biblioteca:** Incluso come risorsa in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

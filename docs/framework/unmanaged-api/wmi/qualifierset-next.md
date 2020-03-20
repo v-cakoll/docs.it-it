@@ -1,6 +1,6 @@
 ---
-title: Funzione QualifierSet_Next (riferimenti alle API non gestite)
-description: La funzione QualifierSet_Next Recupera il qualificatore successivo in un'enumerazione.
+title: QualifierSet_Next function (Unmanaged API Reference)
+description: La funzione QualifierSet_Next recupera il qualificatore successivo in un'enumerazione.
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_Next
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - QualifierSet_Next function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: c9c824b0158618848c13183d92f88604460d5099
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d3702426bc409d601ccfc6b7a8e93e8d9729c64e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141719"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174875"
 ---
-# <a name="qualifierset_next-function"></a>QualifierSet_Next (funzione)
-Recupera il qualificatore successivo in un'enumerazione avviata con una chiamata alla funzione [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md).   
+# <a name="qualifierset_next-function"></a>Funzione QualifierSet_Next
+Recupera il qualificatore successivo in un'enumerazione avviata con una chiamata alla funzione [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md).
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -30,59 +30,53 @@ Recupera il qualificatore successivo in un'enumerazione avviata con una chiamata
   
 ```cpp  
 HRESULT QualifierSet_Next (
-   [in] int                  vFunc, 
-   [in] IWbemQualifierSet*   ptr, 
+   [in] int                  vFunc,
+   [in] IWbemQualifierSet*   ptr,
    [in] LONG                 lFlags,
-   [out] BSTR*               pstrName,        
+   [out] BSTR*               pstrName,
    [out] VARIANT*            pVal,
-   [out] LONG*               plFlavor                 
-); 
+   [out] LONG*               plFlavor
+);
 ```  
 
 ## <a name="parameters"></a>Parametri
 
-`vFunc`   
-in Questo parametro è inutilizzato.
+`vFunc`[in] Questo parametro non viene utilizzato.
 
-`ptr`   
-in Puntatore a un'istanza di [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) .
+`ptr`[in] Puntatore a [un'istanza di IWbemQualifierSet.](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)
 
-`lFlags`   
-[in] Riservato. Questo parametro deve essere 0.
+`lFlags`[in] Riservati. Questo parametro deve essere 0.
 
-`pstrName`   
-out Nome del qualificatore. Se `null`, questo parametro viene ignorato; in caso contrario, `pstrName` non deve puntare a una `BSTR` valida o si verifica una perdita di memoria. Se non è null, la funzione alloca sempre un nuovo `BSTR` quando restituisce `WBEM_S_NO_ERROR`.
+`pstrName`[fuori] Nome del qualificatore. Se `null`, questo parametro viene ignorato; in `pstrName` caso contrario, `BSTR` non deve puntare a un valore valido o si verifica una perdita di memoria. Se non è null, la `BSTR` funzione alloca sempre un nuovo quando restituisce `WBEM_S_NO_ERROR`.
 
-`pVal`   
-out In caso di esito positivo, il valore per il qualificatore. Se la funzione ha esito negativo, il `VARIANT` a cui punta `pVal` non viene modificato. Se questo parametro è `null`, il parametro viene ignorato.
+`pVal`[fuori] In caso di esito positivo, valore per il qualificatore. Se la funzione `VARIANT` ha esito negativo, l'oggetto indicato da `pVal` non viene modificato. Se questo `null`parametro è , il parametro viene ignorato.
 
-`plFlavor`   
-out Puntatore a un oggetto LONG che riceve la versione del qualificatore. Se non si desidera ottenere informazioni sul sapore, questo parametro può essere `null`. 
+`plFlavor`[fuori] Puntatore a un long che riceve il sapore del qualificatore. Se le informazioni sul sapore non `null`sono desiderate, questo parametro può essere .
 
 ## <a name="return-value"></a>Valore restituito
 
-I valori seguenti restituiti da questa funzione sono definiti nel file di intestazione *WbemCli. h* oppure è possibile definirli come costanti nel codice:
+I seguenti valori restituiti da questa funzione sono definiti nel file di intestazione WbemCli.h oppure è possibile definirli come costanti nel codice:The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:
 
-|Costante  |Value  |Descrizione  |
+|Costante  |valore  |Descrizione  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametro non valido. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parametro non è valido. |
 |`WBEM_E_UNEXPECTED` | 0x8004101d | Il chiamante non ha chiamato [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md). |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | La memoria disponibile non è sufficiente per iniziare una nuova enumerazione. |
-| `WBEM_S_NO_MORE_DATA` | 0x40005 | Nessun qualificatore rimanente nell'enumerazione. |
-|`WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è stata completata.  |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Memoria insufficiente per iniziare una nuova enumerazione. |
+| `WBEM_S_NO_MORE_DATA` | 0x40005 | Non sono rimasti altri qualificatori nell'enumerazione. |
+|`WBEM_S_NO_ERROR` | 0 | La chiamata di funzione ha avuto esito positivo.  |
   
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Questa funzione esegue il wrapping di una chiamata al metodo [IWbemQualifierSet:: Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-next) .
+Questa funzione esegue il wrapping di una chiamata al [metodo IWbemQualifierSet::Next.](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-next)
 
-Chiamare ripetutamente la funzione `QualifierSet_Next` per enumerare tutti i qualificatori fino a quando la funzione non restituisce `WBEM_S_NO_MORE_DATA`. Per terminare l'enumerazione in anticipo, chiamare la funzione [QualifierSet_EndEnumeration](qualifierset-endenumeration.md) .
+Chiamare la `QualifierSet_Next` funzione ripetutamente per enumerare tutti `WBEM_S_NO_MORE_DATA`i qualificatori fino a quando la funzione restituisce . Per terminare l'enumerazione in anticipo, chiamare la funzione [QualifierSet_EndEnumeration.](qualifierset-endenumeration.md)
 
 L'ordine dei qualificatori restituiti durante l'enumerazione non è definito.
 
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** WMINet_Utils. idl  
+ **Intestazione:** WMINet_Utils.idl  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

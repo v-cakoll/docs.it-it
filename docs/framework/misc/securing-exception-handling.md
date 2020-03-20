@@ -9,24 +9,24 @@ helpviewer_keywords:
 - secure coding, exception handling
 - exception handling, security
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
-ms.openlocfilehash: e0465f2eb6be61e161f5e6b8cadf629a53f11906
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: ad27e62197f6fdaa6b5e706f4ae02c03fecae9f1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215793"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181145"
 ---
 # <a name="securing-exception-handling"></a>Protezione della gestione delle eccezioni
-In Visual C++ e Visual Basic, un'espressione di filtro più avanti lo stack viene eseguita prima di qualsiasi istruzione **finally** . Il blocco **catch** associato a tale filtro viene eseguito dopo l'istruzione **finally** . Per ulteriori informazioni, vedere [utilizzo di eccezioni filtrate dall'utente](../../standard/exceptions/using-user-filtered-exception-handlers.md). In questa sezione vengono esaminate le implicazioni di sicurezza di questo ordine. Si consideri l'esempio di pseudocodice seguente che illustra l'ordine in cui vengono eseguite le istruzioni di filtro e le istruzioni **finally** .  
+In Visual C e Visual Basic, un'espressione di filtro più in alto nello stack viene eseguita prima di qualsiasi istruzione **finally.** Il blocco **catch** associato a tale filtro viene eseguito dopo l'istruzione **finally.** Per ulteriori informazioni, vedere [Utilizzo di eccezioni filtrate dall'utente](../../standard/exceptions/using-user-filtered-exception-handlers.md). In questa sezione vengono esaminate le implicazioni di sicurezza di questo ordine. Si consideri l'esempio di pseudocodice seguente che illustra l'ordine in cui vengono eseguite le istruzioni filter e **finally.**  
   
 ```cpp  
-void Main()   
+void Main()
 {  
-    try   
+    try
     {  
         Sub();  
-    }   
-    except (Filter())   
+    }
+    except (Filter())
     {  
         Console.WriteLine("catch");  
     }  
@@ -35,21 +35,21 @@ bool Filter () {
     Console.WriteLine("filter");  
     return true;  
 }  
-void Sub()   
+void Sub()
 {  
-    try   
+    try
     {  
         Console.WriteLine("throw");  
         throw new Exception();  
-    }   
-    finally   
+    }
+    finally
     {  
         Console.WriteLine("finally");  
     }  
-}                        
+}
 ```  
   
- Questo codice stampa quanto segue.  
+ Questo codice consente di stampare quanto segue.  
   
 ```output
 Throw  
@@ -58,26 +58,26 @@ Finally
 Catch  
 ```  
   
- Il filtro viene eseguito prima dell'istruzione **finally** , quindi i problemi di sicurezza possono essere introdotti da qualsiasi elemento che apporta una modifica dello stato in cui l'esecuzione di altro codice potrebbe trarre vantaggio. Ad esempio:  
+ Il filtro viene eseguito prima dell'istruzione **finally,** pertanto i problemi di sicurezza possono essere introdotti da qualsiasi elemento che apporta una modifica dello stato in cui l'esecuzione di altro codice potrebbe trarre vantaggio. Ad esempio:  
   
 ```cpp  
-try   
+try
 {  
     Alter_Security_State();  
     // This means changing anything (state variables,  
-    // switching unmanaged context, impersonation, and   
-    // so on) that could be exploited if malicious   
+    // switching unmanaged context, impersonation, and
+    // so on) that could be exploited if malicious
     // code ran before state is restored.  
     Do_some_work();  
-}   
-finally   
+}
+finally
 {  
     Restore_Security_State();  
     // This simply restores the state change above.  
 }  
 ```  
   
- Questo pseudocodice consente a un filtro di ottenere un livello superiore dello stack per eseguire codice arbitrario. Altri esempi di operazioni che hanno un effetto simile sono la rappresentazione temporanea di un'altra identità, l'impostazione di un flag interno che ignora un controllo di sicurezza o la modifica delle impostazioni cultura associate al thread. La soluzione consigliata consiste nell'introdurre un gestore di eccezioni per isolare le modifiche del codice nello stato del thread dai blocchi di filtro dei chiamanti. Tuttavia, è importante che il gestore di eccezioni venga introdotto correttamente o che il problema non venga risolto. Nell'esempio seguente vengono modificate le impostazioni cultura dell'interfaccia utente, ma qualsiasi tipo di modifica dello stato del thread potrebbe essere esposto in modo analogo.  
+ Questo pseudocodice consente a un filtro più in alto nello stack per eseguire codice arbitrario. Altri esempi di operazioni che avrebbero un effetto simile sono la rappresentazione temporanea di un'altra identità, l'impostazione di un flag interno che ignora alcuni controlli di sicurezza o la modifica delle impostazioni cultura associate al thread. La soluzione consigliata consiste nell'introdurre un gestore di eccezioni per isolare le modifiche del codice allo stato del thread dai blocchi di filtro dei chiamanti. Tuttavia, è importante che il gestore di eccezioni venga introdotto correttamente o che il problema non venga risolto. Nell'esempio seguente vengono modificate le impostazioni cultura dell'interfaccia utente, ma qualsiasi tipo di modifica dello stato del thread potrebbe essere esposto in modo analogo.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -101,7 +101,7 @@ Public Class UserCode
          obj.YourMethod()  
       Catch e As Exception When FilterFunc  
          Console.WriteLine("An error occurred: '{0}'", e)  
-         Console.WriteLine("Current Culture: {0}",   
+         Console.WriteLine("Current Culture: {0}",
 Thread.CurrentThread.CurrentUICulture)  
       End Try  
    End Sub  
@@ -114,42 +114,42 @@ Thread.CurrentThread.CurrentUICulture)
 End Class  
 ```  
   
- La correzione corretta in questo caso consiste nel eseguire il wrapping del blocco **try**/**finally** esistente in un blocco **try**/**catch** . La semplice introduzione di una clausola **catch-throw** nel blocco **try**/**finally** non risolve il problema, come illustrato nell'esempio seguente.  
+ La correzione corretta in questo caso consiste nell'eseguire il wrapping del blocco**finally** **try**/esistente in un blocco **try**/**catch.** La semplice introduzione di una clausola **catch-throw** nel blocco **try**/**finally** esistente non risolve il problema, come illustrato nell'esempio seguente.  
   
 ```cpp  
 YourObject.YourMethod()  
 {  
     CultureInfo saveCulture = Thread.CurrentThread.CurrentUICulture;  
   
-    try   
+    try
     {  
         Thread.CurrentThread.CurrentUICulture = new CultureInfo("de-DE");  
         // Do something that throws an exception.  
     }  
     catch { throw; }  
-    finally   
+    finally
     {  
         Thread.CurrentThread.CurrentUICulture = saveCulture;  
     }  
 }  
 ```  
   
- Questo non risolve il problema perché l'istruzione **finally** non è stata eseguita prima che l'`FilterFunc` ottenga il controllo.  
+ Questo non risolve il **finally** problema perché l'istruzione `FilterFunc` finally non è stata eseguita prima del controllo get.  
   
- Nell'esempio seguente viene risolto il problema garantendo che la clausola **finally** sia stata eseguita prima di offrire un'eccezione per i blocchi di filtro eccezioni dei chiamanti.  
+ Nell'esempio seguente viene risolto il problema assicurandosi che la clausola **finally** sia stata eseguita prima di offrire un'eccezione ai blocchi del filtro eccezioni dei chiamanti.  
   
 ```cpp  
 YourObject.YourMethod()  
 {  
     CultureInfo saveCulture = Thread.CurrentThread.CurrentUICulture;  
-    try    
+    try
     {  
-        try   
+        try
         {  
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("de-DE");  
             // Do something that throws an exception.  
         }  
-        finally   
+        finally
         {  
             Thread.CurrentThread.CurrentUICulture = saveCulture;  
         }  

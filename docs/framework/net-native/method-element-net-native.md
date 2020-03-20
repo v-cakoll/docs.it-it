@@ -1,15 +1,15 @@
 ---
-title: Elemento <Method> (.NET Native)
+title: <Method>Elemento (.NET native)
 ms.date: 03/30/2017
 ms.assetid: 348b49e5-589d-4eb2-a597-d6ff60ab52d1
-ms.openlocfilehash: 7b0e77e6dea29cbd5218ab3f6f992002efd51656
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8db32c660846b4f4071fff2a40c760a3d1ef2489
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128345"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180979"
 ---
-# <a name="method-element-net-native"></a>Elemento \<> Method (.NET Native)
+# <a name="method-element-net-native"></a>\<Elemento> metodo (.NET native)Method> Element (.NET Native)
 Applica i criteri di reflection di runtime a un costruttore o a un metodo.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -24,7 +24,7 @@ Applica i criteri di reflection di runtime a un costruttore o a un metodo.
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### <a name="attributes"></a>Attributi  
+### <a name="attributes"></a>Attributes  
   
 |Attributo|Tipo di attributo|Descrizione|  
 |---------------|--------------------|-----------------|  
@@ -35,19 +35,19 @@ Applica i criteri di reflection di runtime a un costruttore o a un metodo.
   
 ## <a name="name-attribute"></a>Name (attributo)  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|*method_name*|Nome del metodo. Il tipo di metodo viene definito dall'elemento padre [\<Type>](type-element-net-native.md) o [\<TypeInstantiation>](typeinstantiation-element-net-native.md).|  
+|*method_name*|Nome del metodo. Il tipo del metodo è definito dall'elemento [ \<di>](type-element-net-native.md) [ \<Type](typeinstantiation-element-net-native.md)>o TypeInstantiation padre.|  
   
 ## <a name="signature-attribute"></a>Attributo Signature  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |*method_signature*|Tipi di parametri che costituiscono la firma del metodo. Più parametri sono separati da virgole, ad esempio `"System.String,System.Int32,System.Int32)"`. I nomi del tipo di parametro devono essere completi.|  
   
 ## <a name="all-other-attributes"></a>Tutti gli altri attributi  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |*policy_setting*|L'impostazione da applicare a questo tipo di criteri. I valori consentiti sono `Auto`, `Excluded`, `Included` e `Required`. Per altre informazioni, vedere [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
   
@@ -55,24 +55,24 @@ Applica i criteri di reflection di runtime a un costruttore o a un metodo.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<Parameter>](parameter-element-net-native.md)|Applica i criteri al tipo di argomento passato a un metodo.|  
+|[\<>dei parametri](parameter-element-net-native.md)|Applica i criteri al tipo di argomento passato a un metodo.|  
 |[\<GenericParameter>](genericparameter-element-net-native.md)|Applica i criteri al tipo di parametro di un tipo o di un metodo generico.|  
-|[\<ImpliesType>](impliestype-element-net-native.md)|Applica criteri a un tipo, se tale criterio è stato applicato al metodo rappresentato dall'oggetto contenente l'elemento `<Method>`.|  
-|[\<TypeParameter>](typeparameter-element-net-native.md)|Applica i criteri al tipo rappresentato da un argomento <xref:System.Type> passato a un metodo.|  
+|[\<>ImpliesType](impliestype-element-net-native.md)|Applica criteri a un tipo, se tale criterio è stato applicato al metodo rappresentato dall'oggetto contenente l'elemento `<Method>`.|  
+|[\<>TypeParameter](typeparameter-element-net-native.md)|Applica i criteri al tipo rappresentato da un argomento <xref:System.Type> passato a un metodo.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<Type>](type-element-net-native.md)|Applica i criteri di reflection a un tipo e a tutti i membri.|  
-|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Applica i criteri di reflection a un tipo generico costruito e a tutti i membri.|  
+|[\<Tipo>](type-element-net-native.md)|Applica i criteri di reflection a un tipo e a tutti i membri.|  
+|[\<>TypeInstantiation](typeinstantiation-element-net-native.md)|Applica i criteri di reflection a un tipo generico costruito e a tutti i membri.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Un elemento `<Method>` di un metodo generico applica i relativi criteri a tutte le istanze che non dispongono di propri criteri.  
   
  È possibile usare l'attributo `Signature` per specificare criteri per un overload del metodo specifico. In caso contrario, se l'attributo `Signature` è assente, la direttiva di runtime si applica a tutti gli overload del metodo.  
   
- Non è possibile definire i criteri di reflection di runtime per un costruttore con l'elemento `<Method>`. Usare invece l'attributo `Activate` dell'elemento [\<Assembly>](assembly-element-net-native.md), [\<Namespace>](namespace-element-net-native.md), [\<Type>](type-element-net-native.md) o [\<TypeInstantiation>](typeinstantiation-element-net-native.md).  
+ Non è possibile definire i criteri di reflection di runtime per un costruttore con l'elemento `<Method>`. Utilizzare invece `Activate` l'attributo dell'elemento [ \<>Assembly ](assembly-element-net-native.md), [ \<Namespace>](namespace-element-net-native.md), [ \<Type>](type-element-net-native.md)o [ \<TypeInstantiation>.](typeinstantiation-element-net-native.md)  
   
 ## <a name="example"></a>Esempio  
  Il metodo `Stringify` nell'esempio seguente è un metodo di formattazione generico che usa la reflection per convertire un oggetto nella relativa rappresentazione di stringa. Oltre a chiamare il metodo `ToString` predefinito dell'oggetto, il metodo può produrre una stringa di risultato formattata passando il metodo `ToString` di un oggetto a una stringa di formato, un'implementazione di <xref:System.IFormatProvider> o entrambi. Il metodo può anche chiamare uno degli overload <xref:System.Convert.ToString%2A?displayProperty=nameWithType> che converte un numero nella relativa rappresentazione binaria, ottale o esadecimale.  
@@ -85,7 +85,7 @@ Applica i criteri di reflection di runtime a un costruttore o a un metodo.
   
  Tuttavia, quando viene compilato con .NET Native, l'esempio può generare una serie di eccezioni in fase di esecuzione, incluse le eccezioni <xref:System.NullReferenceException> e [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md). Ciò si verifica perché il metodo `Stringify` è destinato principalmente a supportare la formattazione dinamica dei tipi primitivi nella libreria di classi .NET Framework. Tuttavia, i metadati non vengono resi disponibili dal file di direttive predefinito. Anche quando i metadati vengono resi disponibili, tuttavia, l'esempio genererà le eccezioni [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) perché le implementazioni `ToString` appropriate non sono state incluse nel codice nativo.  
   
- Queste eccezioni possono essere eliminate usando l'elemento [\<Type>](type-element-net-native.md) per definire i tipi i cui metadati devono essere presenti e con l'aggiunta di elementi `<Method>` per garantire anche la presenza dell'implementazione degli overload di metodi che possono essere richiamati in modo dinamico. Di seguito è riportato il file default.rd.xml che elimina queste eccezioni e consente l'esecuzione dell'esempio senza errori.  
+ Queste eccezioni possono essere eliminate [ \<](type-element-net-native.md) utilizzando il Type>elemento per definire i `<Method>` tipi i cui metadati devono essere presenti e aggiungendo elementi per garantire che sia presente anche l'implementazione di overload del metodo che possono essere chiamati in modo dinamico. Di seguito è riportato il file default.rd.xml che elimina queste eccezioni e consente l'esecuzione dell'esempio senza errori.  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -124,10 +124,10 @@ Applica i criteri di reflection di runtime a un costruttore o a un metodo.
            <Method Name="ToString" Dynamic="Required" />  
         </Type>  
         <Type Name="Single" Browse="Required Public" >  
-          <Method Name="ToString" Dynamic="Required" />           
+          <Method Name="ToString" Dynamic="Required" />
         </Type>  
         <Type Name="TimeSpan" Browse="Required Public" >  
-          <Method Name="ToString" Dynamic="Required" />           
+          <Method Name="ToString" Dynamic="Required" />
         </Type>  
         <Type Name="UInt16" Browse="Required Public" >  
            <Method Name="ToString" Dynamic="Required" />  
@@ -145,7 +145,7 @@ Applica i criteri di reflection di runtime a un costruttore o a un metodo.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Riferimento a file di configurazione di direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementi direttiva di runtime](runtime-directive-elements.md)
-- [Impostazioni dei criteri delle direttive di runtime](runtime-directive-policy-settings.md)
-- [Elemento \<MethodInstantiation>](methodinstantiation-element-net-native.md)
+- [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime)
+- [\<Elemento> MethodInstantiation](methodinstantiation-element-net-native.md)

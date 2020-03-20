@@ -11,12 +11,12 @@ helpviewer_keywords:
 - COM interop, HRESULTs
 - COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
-ms.openlocfilehash: 13dcca5f35750ad3e8bd6ea4f6dd443fe9a8ee94
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e186228d1dc9a42ddfe92428f7dfad29a5789095
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123873"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181401"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>Procedura: eseguire il mapping di HRESULT ed eccezioni
 I metodi COM segnalano gli errori restituendo HRESULT, mentre i metodi .NET li segnalano generando eccezioni. Il runtime gestisce la transizione tra questi due approcci. Ogni classe di eccezione in .NET Framework viene mappata a un HRESULT.  
@@ -35,7 +35,7 @@ I metodi COM segnalano gli errori restituendo HRESULT, mentre i metodi .NET li s
     Class NoAccessException : public ApplicationException  
     {  
         NoAccessException () {  
-        HResult = E_ACCESSDENIED;   
+        HResult = E_ACCESSDENIED;
     }  
     }  
     CMyClass::MethodThatThrows  
@@ -66,14 +66,14 @@ CMyClass::MethodThatThrows
 |**COR_E_BADIMAGEFORMAT o ERROR_BAD_FORMAT**|**BadImageFormatException**|  
 |**COR_E_COMEMULATE_ERROR**|**COMEmulateException**|  
 |**COR_E_CONTEXTMARSHAL**|**ContextMarshalException**|  
-|**COR_E_CORE**|**CoreException**|  
+|**COR_E_CORE**|**Eccezione CoreException**|  
 |**NTE_FAIL**|**CryptographicException**|  
 |**COR_E_DIRECTORYNOTFOUND o ERROR_PATH_NOT_FOUND**|**DirectoryNotFoundException**|  
 |**COR_E_DIVIDEBYZERO**|**DivideByZeroException**|  
 |**COR_E_DUPLICATEWAITOBJECT**|**DuplicateWaitObjectException**|  
 |**COR_E_ENDOFSTREAM**|**EndOfStreamException**|  
 |**COR_E_TYPELOAD**|**EntryPointNotFoundException**|  
-|**COR_E_EXCEPTION**|**Exception**|  
+|**COR_E_EXCEPTION**|**Eccezione**|  
 |**COR_E_EXECUTIONENGINE**|**ExecutionEngineException**|  
 |**COR_E_FIELDACCESS**|**FieldAccessException**|  
 |**COR_E_FILENOTFOUND o ERROR_FILE_NOT_FOUND**|**FileNotFoundException**|  
@@ -93,7 +93,7 @@ CMyClass::MethodThatThrows
 |**COR_E_MISSINGMETHOD**|**MissingMethodException**|  
 |**COR_E_MULTICASTNOTSUPPORTED**|**MulticastNotSupportedException**|  
 |**COR_E_NOTFINITENUMBER**|**NotFiniteNumberException**|  
-|**E_NOTIMPL**|**NotImplementedException**|  
+|**E_notimpl**|**NotImplementedException**|  
 |**COR_E_NOTSUPPORTED**|**NotSupportedException**|  
 |**COR_E_NULLREFERENCE o E_POINTER**|**NullReferenceException**|  
 |**COR_E_OUTOFMEMORY o**<br /><br /> **E_OUTOFMEMORY**|**OutOfMemoryException**|  
@@ -107,7 +107,7 @@ CMyClass::MethodThatThrows
 |**COR_E_SERIALIZATION**|**SerializationException**|  
 |**COR_E_STACKOVERFLOW o ERROR_STACK_OVERFLOW**|**StackOverflowException**|  
 |**COR_E_SYNCHRONIZATIONLOCK**|**SynchronizationLockException**|  
-|**COR_E_SYSTEM**|**SystemException**|  
+|**COR_E_SYSTEM**|**Systemexception**|  
 |**COR_E_TARGET**|**TargetException**|  
 |**COR_E_TARGETINVOCATION**|**TargetInvocationException**|  
 |**COR_E_TARGETPARAMCOUNT**|**TargetParameterCountException**|  
@@ -130,12 +130,12 @@ CMyClass::MethodThatThrows
   
 |Campo eccezione|Fonte di informazioni da COM|  
 |---------------------|------------------------------------|  
-|**ErrorCode**|HRESULT restituito dalla chiamata.|  
+|**Errorcode**|HRESULT restituito dalla chiamata.|  
 |**HelpLink**|Se **IErrorInfo-> HelpContext** è diverso da zero, la stringa viene formata concatenando **IErrorInfo ->GetHelpFile** e "#" e **IErrorInfo ->GetHelpContext**. In caso contrario, la stringa viene restituita da **IErrorInfo ->GetHelpFile**.|  
 |**InnerException**|Sempre un riferimento null (**Nothing** in Visual Basic).|  
 |**Messaggio**|Stringa restituita da **IErrorInfo->GetDescription**.|  
-|**Source**|Stringa restituita da **IErrorInfo->GetSource**.|  
-|**StackTrace**|Analisi dello stack.|  
+|**origine**|Stringa restituita da **IErrorInfo->GetSource**.|  
+|**Stacktrace**|Analisi dello stack.|  
 |**TargetSite**|Nome del metodo che ha restituito il valore HRESULT in errore.|  
   
  I campi di eccezione, ad esempio **Message**, **Source** e **StackTrace** non sono disponibili per **StackOverflowException**.  

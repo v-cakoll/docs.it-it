@@ -2,12 +2,12 @@
 title: Distribuzione in base all'elemento corpo
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-ms.openlocfilehash: 307d6bbbab118392ef079942eae367a4c6792c22
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 754151f856dfe09b8fd12912ab06d1d8720be016
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74712025"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183715"
 ---
 # <a name="dispatch-by-body-element"></a>Distribuzione in base all'elemento corpo
 Questo esempio dimostra come implementare un algoritmo alternativo per l'assegnazione di messaggi in arrivo alle operazioni.  
@@ -59,7 +59,7 @@ public string SelectOperation(ref System.ServiceModel.Channels.Message message)
  L'accesso al corpo del messaggio tramite <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> o qualsiasi altro metodo che fornisce l'accesso al contenuto del corpo del messaggio determina il contrassegno del messaggio come "letto", che quindi non è valido per altre elaborazioni. Di conseguenza, il selettore dell'operazione crea una copia del messaggio in arrivo tramite il metodo illustrato nel codice seguente. Poiché la posizione del lettore non è stata modificata durante l'ispezione, è possibile farvi riferimento dal messaggio appena creato nel quale sono state copiate anche le proprietà del messaggio e le intestazioni del messaggio, operazione che si traduce in un clone esatto del messaggio originale:  
   
 ```csharp
-private Message CreateMessageCopy(Message message,   
+private Message CreateMessageCopy(Message message,
                                      XmlDictionaryReader body)  
 {  
     Message copy = Message.CreateMessage(message.Version,message.Headers.Action,body);  
@@ -70,9 +70,9 @@ private Message CreateMessageCopy(Message message,
 ```  
   
 ## <a name="adding-an-operation-selector-to-a-service"></a>Aggiunta di un selettore dell'operazione a un servizio  
- I selettori dell'operazione di distribuzione del servizio sono estensioni per il dispatcher di Windows Communication Foundation (WCF). Per la selezione dei metodi nel canale di callback dei contratti duplex, sono disponibili anche selettori dell'operazione client che funzionano in modo simile ai selettori dell'operazione di distribuzione descritti qui, ma che non sono trattati in modo esplicito in questo esempio.  
+ I selettori delle operazioni di invio del servizio sono estensioni del dispatcher di Windows Communication Foundation (WCF). Per la selezione dei metodi nel canale di callback dei contratti duplex, sono disponibili anche selettori dell'operazione client che funzionano in modo simile ai selettori dell'operazione di distribuzione descritti qui, ma che non sono trattati in modo esplicito in questo esempio.  
   
- Analogamente alla maggior parte delle estensioni del modello di servizi, i selettori dell'operazione di distribuzione vengono aggiunti al dispatcher usando i comportamenti. Un *comportamento* è un oggetto di configurazione che aggiunge una o più estensioni al runtime di invio (o al runtime client) o modifica le impostazioni.  
+ Analogamente alla maggior parte delle estensioni del modello di servizi, i selettori dell'operazione di distribuzione vengono aggiunti al dispatcher usando i comportamenti. Un *comportamento* è un oggetto di configurazione, che aggiunge una o più estensioni al runtime di invio (o al runtime client) o ne modifica in altro modo le impostazioni.  
   
  Poiché i selettori dell'operazione hanno l'ambito del contratto, il comportamento appropriato da implementare qui è <xref:System.ServiceModel.Description.IContractBehavior>. Poiché l'interfaccia è implementata in una classe derivata <xref:System.Attribute> come illustrato nel codice seguente, il comportamento può essere aggiunto in modo dichiarativo a qualsiasi contratto di servizio. Ogni volta che viene aperto un <xref:System.ServiceModel.ServiceHost> e il runtime della distribuzione viene compilato, tutti i comportamenti trovati come attributi in contratti, operazioni e implementazioni del servizio o come elemento nella configurazione del servizio vengono aggiunti e successivamente richiesti per contribuire alle estensioni o modificare la configurazione predefinita.  
   
@@ -82,7 +82,7 @@ private Message CreateMessageCopy(Message message,
 [AttributeUsage(AttributeTargets.Class|AttributeTargets.Interface)]  
 class DispatchByBodyElementBehaviorAttribute : Attribute, IContractBehavior  
 {  
-    // public void AddBindingParameters(...)   
+    // public void AddBindingParameters(...)
     // public void ApplyClientBehavior(...)  
     // public void Validate(...)  
 ```  
@@ -96,22 +96,22 @@ class DispatchByBodyElementBehaviorAttribute : Attribute, IContractBehavior
 ```csharp
 public void ApplyDispatchBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.DispatchRuntime dispatchRuntime)  
 {  
-    Dictionary<XmlQualifiedName,string> dispatchDictionary =   
+    Dictionary<XmlQualifiedName,string> dispatchDictionary =
                      new Dictionary<XmlQualifiedName,string>();  
-    foreach( OperationDescription operationDescription in   
+    foreach( OperationDescription operationDescription in
                               contractDescription.Operations )  
     {  
-        DispatchBodyElementAttribute dispatchBodyElement =   
+        DispatchBodyElementAttribute dispatchBodyElement =
    operationDescription.Behaviors.Find<DispatchBodyElementAttribute>();  
         if ( dispatchBodyElement != null )  
         {  
-             dispatchDictionary.Add(dispatchBodyElement.QName,   
+             dispatchDictionary.Add(dispatchBodyElement.QName,
                               operationDescription.Name);  
         }  
     }  
-    dispatchRuntime.OperationSelector =   
+    dispatchRuntime.OperationSelector =
             new DispatchByBodyElementOperationSelector(  
-               dispatchDictionary,   
+               dispatchDictionary,
                dispatchRuntime.UnhandledDispatchOperation.Name);  
     }  
 }  
@@ -120,19 +120,19 @@ public void ApplyDispatchBehavior(ContractDescription contractDescription, Servi
 ## <a name="implementing-the-service"></a>Implementazione del servizio  
  Il comportamento implementato in questo esempio influisce direttamente sul modo in cui i messaggi dal collegamento vengono interpretati e distribuiti, che è una funzione del contratto di servizio. Di conseguenza, il comportamento deve essere dichiarato nel livello del contratto di servizio in qualsiasi implementazione del servizio che sceglie di usarlo.  
   
- Il servizio di progetto di esempio applica il comportamento del contratto `DispatchByBodyElementBehaviorAttribute` al contratto di servizio `IDispatchedByBody` ed etichetta ognuna delle due operazioni `OperationForBodyA()` e `OperationForBodyB()` con un comportamento di `DispatchBodyElementAttribute` operazione. Quando un host del servizio per un servizio che implementa questo contratto viene aperto, questi metadati vengono prelevati dal generatore del dispatcher come descritto in precedenza.  
+ Il servizio di `DispatchByBodyElementBehaviorAttribute` progetto di `IDispatchedByBody` esempio applica il comportamento del `OperationForBodyA()` `OperationForBodyB()` contratto `DispatchBodyElementAttribute` al contratto di servizio ed etichetta ognuna delle due operazioni e con un comportamento di operazione. Quando un host del servizio per un servizio che implementa questo contratto viene aperto, questi metadati vengono prelevati dal generatore del dispatcher come descritto in precedenza.  
   
- Poiché il selettore dell'operazione esegue la distribuzione solo in base all'elemento del corpo di messaggio e ignora "Action", è necessario indicare al runtime di non controllare l'intestazione "Action" nelle risposte restituite assegnando il carattere jolly "*" alla proprietà `ReplyAction` di <xref:System.ServiceModel.OperationContractAttribute>. Inoltre, è necessario disporre di un'operazione predefinita con la proprietà "Action" impostata sul carattere jolly "\*". L'operazione predefinita riceve tutti i messaggi che non possono essere distribuiti e sono privi di `DispatchBodyElementAttribute`:  
+ Poiché il selettore dell'operazione esegue la distribuzione solo in base all'elemento del corpo di messaggio e ignora "Action", è necessario indicare al runtime di non controllare l'intestazione "Action" nelle risposte restituite assegnando il carattere jolly "*" alla proprietà `ReplyAction` di <xref:System.ServiceModel.OperationContractAttribute>. Inoltre, è necessario disporre di un'operazione predefinita con la proprietà\*"Action" impostata sul carattere jolly " ". L'operazione predefinita riceve tutti i messaggi che non possono essere distribuiti e sono privi di `DispatchBodyElementAttribute`:  
   
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"),  
                             DispatchByBodyElementBehavior]  
 public interface IDispatchedByBody  
 {  
-    [OperationContract(ReplyAction="*"),   
+    [OperationContract(ReplyAction="*"),
      DispatchBodyElement("bodyA","http://tempuri.org")]  
     Message OperationForBodyA(Message msg);  
-    [OperationContract(ReplyAction = "*"),   
+    [OperationContract(ReplyAction = "*"),
      DispatchBodyElement("bodyB", "http://tempuri.org")]  
     Message OperationForBodyB(Message msg);  
     [OperationContract(Action="*", ReplyAction="*")]  
@@ -164,17 +164,17 @@ public interface IDispatchedByBody
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1. Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Assicurarsi di aver eseguito la procedura di [installazione una tantera per Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Per compilare la soluzione, seguire le istruzioni riportate in [compilazione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Per compilare la soluzione, seguire le istruzioni in [Compilazione di Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Per eseguire l'esempio in una configurazione su un singolo o più computer, seguire le istruzioni in Esecuzione di [Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 > È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
->   
+>
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) Esempi per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti gli esempi e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (WCF). Questo esempio si trova nella directory seguente.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\AdvancedDispatchByBody`  

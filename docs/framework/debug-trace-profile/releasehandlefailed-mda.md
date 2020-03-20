@@ -10,12 +10,12 @@ helpviewer_keywords:
 - SafeHandle class, run-time errors
 - MDAs (managed debugging assistants), handles
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
-ms.openlocfilehash: 265344cb100a41cde5443cd0914dc66271aabf93
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 268acb01a6777315829378e6fd8c06c46d3136d2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216120"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181755"
 ---
 # <a name="releasehandlefailed-mda"></a>releaseHandleFailed (MDA)
 L'assistente al debug gestito `releaseHandleFailed` viene attivato per notificare agli sviluppatori quando il metodo <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> di una classe derivata da <xref:System.Runtime.InteropServices.SafeHandle> o <xref:System.Runtime.InteropServices.CriticalHandle> restituisce `false`.  
@@ -24,7 +24,7 @@ L'assistente al debug gestito `releaseHandleFailed` viene attivato per notificar
  Perdita di risorse o di memoria  Se si verifica un errore nel metodo <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> della classe che deriva da <xref:System.Runtime.InteropServices.SafeHandle> o <xref:System.Runtime.InteropServices.CriticalHandle>, è possibile che la risorsa incapsulata dalla classe non sia stata rilasciata o eliminata.  
   
 ## <a name="cause"></a>Causa  
- Se si creano classi che derivano da  <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> o <xref:System.Runtime.InteropServices.SafeHandle>, è necessario fornire l'implementazione del metodo <xref:System.Runtime.InteropServices.CriticalHandle>. Di conseguenza, le problematiche sono specifiche della singola risorsa. È necessario, tuttavia, che siano rispettati i seguenti requisiti:  
+ Se si creano classi che derivano da  <xref:System.Runtime.InteropServices.SafeHandle> o <xref:System.Runtime.InteropServices.CriticalHandle>, è necessario fornire l'implementazione del metodo <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>. Di conseguenza, le problematiche sono specifiche della singola risorsa. È necessario, tuttavia, che siano rispettati i seguenti requisiti:  
   
 - I tipi <xref:System.Runtime.InteropServices.SafeHandle> e <xref:System.Runtime.InteropServices.CriticalHandle> rappresentano wrapper per risorse vitali di un processo. Una perdita di memoria può rendere il processo inusabile.  
   
@@ -43,7 +43,7 @@ L'assistente al debug gestito `releaseHandleFailed` viene attivato per notificar
   
 - Quando viene effettuato il marshalling di <xref:System.Runtime.InteropServices.SafeHandle> tra domini applicazione, verificare che la derivazione di <xref:System.Runtime.InteropServices.SafeHandle> usata sia stata contrassegnata come serializzabile. Nei rari casi in cui una classe derivata da <xref:System.Runtime.InteropServices.SafeHandle> sia stata resa serializzabile, tale classe deve implementare l'interfaccia <xref:System.Runtime.Serialization.ISerializable> o usare una delle altre tecniche che consentono di controllare manualmente il processo di serializzazione e deserializzazione. Questa operazione è necessaria poiché l'azione di serializzazione predefinita consiste nel creare un clone bit per bit del valore dell'handle non elaborato incluso e questo fa sì che due istanze di <xref:System.Runtime.InteropServices.SafeHandle> ritengano di essere proprietarie dello stesso handle. A un certo punto entrambe tenteranno di chiamare <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> sullo stesso handle, ma ovviamente la seconda istanza di <xref:System.Runtime.InteropServices.SafeHandle> non riuscirà ad eseguire questa operazione. La procedura corretta da seguire quando si serializza un oggetto <xref:System.Runtime.InteropServices.SafeHandle> consiste nel chiamare la funzione `DuplicateHandle` o una funzione simile per il tipo di handle nativo in modo da creare una copia valida distinta dell'handle. Se il tipo di handle non supporta questa funzione, il tipo <xref:System.Runtime.InteropServices.SafeHandle> che lo include non può essere reso serializzabile.  
   
-- È possibile individuare il punto in cui un handle viene chiuso anticipatamente, causando un errore al momento della chiamata finale al metodo <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>, inserendo un punto di interruzione sulla routine nativa usata per rilasciare l'handle, ad esempio la funzione `CloseHandle`. Questo potrebbe non essere possibile in situazioni di sovraccarico o anche nel caso di test funzionali di medie dimensioni a causa del volume elevato di traffico spesso associato a tali routine. In questo caso può essere utile instrumentare il codice che chiama il metodo di rilascio nativo, allo scopo di catturare l'identità del chiamante, o eventualmente eseguire una traccia dello stack completa, in modo da ottenere il valore dell'handle rilasciato,  che può essere quindi confrontato con il valore indicato da questo assistente al debug gestito.  
+- È possibile individuare il punto in cui un handle viene chiuso anticipatamente, causando un errore al momento della chiamata finale al metodo <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>, inserendo un punto di interruzione sulla routine nativa usata per rilasciare l'handle, ad esempio la funzione `CloseHandle`. Questo potrebbe non essere possibile in situazioni di sovraccarico o anche nel caso di test funzionali di medie dimensioni a causa del volume elevato di traffico spesso associato a tali routine.  In questo caso può essere utile instrumentare il codice che chiama il metodo di rilascio nativo, allo scopo di catturare l'identità del chiamante, o eventualmente eseguire una traccia dello stack completa, in modo da ottenere il valore dell'handle rilasciato,  che può essere quindi confrontato con il valore indicato da questo assistente al debug gestito.  
   
 - Alcuni tipi di handle nativi, ad esempio tutti gli handle Win32 che possono essere rilasciati mediante la funzione `CloseHandle`, condividono lo stesso spazio dei nomi dell'handle. Il rilascio errato di un tipo di handle può causare problemi con un altro handle. Se ad esempio si chiude involontariamente due volte un handle di evento Win32, è possibile che venga chiuso prematuramente un handle di file apparentemente non correlato. Questo problema si verifica quando l'handle viene rilasciato e il valore dell'handle può essere usato per controllare un'altra risorsa, eventualmente di un altro tipo. Se in questa situazione viene eseguito per errore un secondo rilascio, è possibile che venga invalidato l'handle di un thread non correlato.  
   
@@ -54,10 +54,10 @@ L'assistente al debug gestito `releaseHandleFailed` viene attivato per notificar
  Un messaggio indicante che un oggetto <xref:System.Runtime.InteropServices.SafeHandle> o <xref:System.Runtime.InteropServices.CriticalHandle> non è riuscito a rilasciare correttamente l'handle. Ad esempio:  
   
 ```output
-"A SafeHandle or CriticalHandle of type 'MyBrokenSafeHandle'   
-failed to properly release the handle with value 0x0000BEEF. This   
-usually indicates that the handle was released incorrectly via   
-another means (such as extracting the handle using DangerousGetHandle   
+"A SafeHandle or CriticalHandle of type 'MyBrokenSafeHandle'
+failed to properly release the handle with value 0x0000BEEF. This
+usually indicates that the handle was released incorrectly via
+another means (such as extracting the handle using DangerousGetHandle
 and closing it directly or building another SafeHandle around it."  
 ```  
   
@@ -77,12 +77,12 @@ and closing it directly or building another SafeHandle around it."
 ```csharp
 bool ReleaseHandle()  
 {  
-    // Calling the Win32 CloseHandle function to release the   
-    // native handle wrapped by this SafeHandle. This method returns   
-    // false on failure, but should only fail if the input is invalid   
-    // (which should not happen here). The method specifically must not   
-    // fail simply because of lack of resources or other transient   
-    // failures beyond the user’s control. That would make it unacceptable   
+    // Calling the Win32 CloseHandle function to release the
+    // native handle wrapped by this SafeHandle. This method returns
+    // false on failure, but should only fail if the input is invalid
+    // (which should not happen here). The method specifically must not
+    // fail simply because of lack of resources or other transient
+    // failures beyond the user’s control. That would make it unacceptable
     // to call CloseHandle as part of the implementation of this method.  
     return CloseHandle(handle);  
 }  

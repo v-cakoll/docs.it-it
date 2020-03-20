@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 103c8502-81fe-40d7-9c1e-9008d8fb19e1
 topic_type:
 - apiref
-ms.openlocfilehash: cdf5776e1ac9907e63aba0e0d400e48aff683d51
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d76a907434b12b85aaedeef169390ec6f0df724a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76785291"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179121"
 ---
 # <a name="iclrdatatargetsetthreadcontext-method"></a>Metodo ICLRDataTarget::SetThreadContext
 Imposta il contesto corrente del thread specificato nel processo di destinazione. Questo metodo viene chiamato dai servizi di accesso ai dati di Common Language Runtime (CLR).  
@@ -31,34 +31,34 @@ Imposta il contesto corrente del thread specificato nel processo di destinazione
 HRESULT SetThreadContext (  
     [in] ULONG32            threadID,  
     [in] ULONG32            contextSize,  
-    [in, size_is(contextSize)]   
+    [in, size_is(contextSize)]
          BYTE               *context  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `threadID`  
- in Identificatore del sistema operativo di un thread nel processo di destinazione.  
+ [in] Identificatore del sistema operativo di un thread nel processo di destinazione.  
   
  `contextSize`  
- in Dimensioni del contesto.  
+ [in] Dimensione del contesto.  
   
  `context`  
- in Puntatore a un buffer contenente il contesto.  
+ [in] Puntatore a un buffer contenente il contesto.  
   
- I dati nel buffer di `context` saranno nel formato della struttura di `CONTEXT` Win32. Il contesto specifica i dati del registro specifici del processore, pertanto la definizione della struttura Win32 `CONTEXT` dipende dall'architettura del processore. Fare riferimento al file di intestazione WinNT. h per la definizione della struttura `CONTEXT` di Win32.  
+ I dati `context` nel buffer saranno nel formato della `CONTEXT` struttura Win32. Il contesto specifica i dati del registro specifici `CONTEXT` del processore, pertanto la definizione della struttura Win32 dipende dall'architettura del processore. Fare riferimento al file di intestazione WinNT.h `CONTEXT` per la definizione della struttura Win32.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo è implementato dal writer dell'applicazione di debug.  
   
-## <a name="requirements"></a>Requisiti di  
+## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** ClrData. idl, ClrData. h  
+ **Intestazione:** ClrData.idl, ClrData.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

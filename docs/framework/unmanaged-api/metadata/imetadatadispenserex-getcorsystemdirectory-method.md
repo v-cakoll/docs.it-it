@@ -15,42 +15,42 @@ helpviewer_keywords:
 ms.assetid: d9e0f3b6-e106-4820-bada-5bfba34ce360
 topic_type:
 - apiref
-ms.openlocfilehash: da9a13a3dea34f6681f47e95c5b352a710d7458b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fb673666543bea3df44005ee3b20d311524f51d0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431209"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175915"
 ---
 # <a name="imetadatadispenserexgetcorsystemdirectory-method"></a>Metodo IMetaDataDispenserEx::GetCORSystemDirectory
-Ottiene la directory che include la Common Language Runtime corrente (CLR). Questo metodo è supportato solo per l'utilizzo da debugger out-of-process. Se viene chiamato da un altro componente, restituirà E_NOTIMPL.  
+Ottiene la directory che contiene il Common Language Runtime (CLR) corrente. Questo metodo è supportato solo per l'utilizzo da parte di debugger out-of-process. Se chiamato da un altro componente, restituirà E_NOTIMPL.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT GetCORSystemDirectory (  
-    [out] LPWSTR      szBuffer,   
-    [in]  DWORD       cchBuffer,   
+    [out] LPWSTR      szBuffer,
+    [in]  DWORD       cchBuffer,
     [out] DWORD*      pchBuffer  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `szBuffer`  
- out Buffer per la ricezione del nome della directory.  
+ [fuori] Buffer per ricevere il nome della directory.  
   
  `cchBuffer`  
- in Dimensione, in byte, del `szBuffer`.  
+ [in] Dimensione, in byte, `szBuffer`di .  
   
  `pchBuffer`  
- out Numero di byte effettivamente restituiti in `szBuffer`.  
+ [fuori] Numero di byte effettivamente `szBuffer`restituiti in .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforma:** Vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforma:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Usato come risorsa in MsCorEE. dll  
+ **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

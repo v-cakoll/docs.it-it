@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1a67fa1b-2419-4cd0-aad4-6f46a0719b4b
 topic_type:
 - apiref
-ms.openlocfilehash: 07331a512dd513a94a7d8c3a8d8b0754d998b94b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c071a7ddb7d8d3f0e6487ab85284c45f9a7f0372
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131007"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178836"
 ---
 # <a name="icordebugilframeenumeratelocalvariables-method"></a>Metodo ICorDebugILFrame::EnumerateLocalVariables
 Ottiene un enumeratore per le variabili locali in questo frame.  
@@ -28,17 +28,17 @@ Ottiene un enumeratore per le variabili locali in questo frame.
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
-HRESULT EnumerateLocalVariables(   
+HRESULT EnumerateLocalVariables(
     [out] ICorDebugValueEnum    **ppValueEnum  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `ppValueEnum`  
- out Puntatore all'indirizzo di un oggetto ICorDebugValueEnum che rappresenta l'enumeratore per le variabili locali in questo frame.  
+ [out] Puntatore all'indirizzo di un oggetto ICorDebugValueEnum che è l'enumeratore per le variabili locali nel frame.  
   
-## <a name="remarks"></a>Note  
- `EnumerateLocalVariables` ottiene un enumeratore in grado di elencare le variabili locali disponibili nel frame di chiamata rappresentato da questo oggetto ICorDebugILFrame. L'elenco potrebbe non includere tutte le variabili locali nella funzione in esecuzione, perché alcune potrebbero non essere attive.  
+## <a name="remarks"></a>Osservazioni  
+ `EnumerateLocalVariables`ottiene un enumeratore che può elencare le variabili locali disponibili nel frame di chiamata rappresentato da questo ICorDebugILFrame oggetto. L'elenco potrebbe non includere tutte le variabili locali nella funzione in esecuzione, perché alcune di esse potrebbero non essere attive.  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  

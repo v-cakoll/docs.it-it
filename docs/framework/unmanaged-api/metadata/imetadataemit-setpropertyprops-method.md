@@ -15,62 +15,62 @@ helpviewer_keywords:
 ms.assetid: e2501fc8-b2bc-4dcc-9205-e3acd5a53ffe
 topic_type:
 - apiref
-ms.openlocfilehash: 0fdec87324d6efa0f911e37573093c19b93c0349
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dc6375f3e2cff1a744a8ff2e6a6adab27bbf8af3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440545"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177469"
 ---
 # <a name="imetadataemitsetpropertyprops-method"></a>Metodo IMetaDataEmit::SetPropertyProps
-Imposta le funzionalità archiviate nei metadati per una proprietà definita da una chiamata precedente al [Metodo DefineProperty](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).  
+Imposta le funzionalità archiviate nei metadati per una proprietà definita da una precedente chiamata a [DefineProperty Method](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
-HRESULT SetPropertyProps (   
-    [in]  mdProperty      pr,   
-    [in]  DWORD           dwPropFlags,   
-    [in]  DWORD           dwCPlusTypeFlag,   
-    [in]  void const      *pValue,   
-    [in]  ULONG           cchValue,   
-    [in]  mdMethodDef     mdSetter,   
-    [in]  mdMethodDef     mdGetter,   
-    [in]  mdMethodDef     rmdOtherMethods[]   
+HRESULT SetPropertyProps (
+    [in]  mdProperty      pr,
+    [in]  DWORD           dwPropFlags,
+    [in]  DWORD           dwCPlusTypeFlag,
+    [in]  void const      *pValue,
+    [in]  ULONG           cchValue,
+    [in]  mdMethodDef     mdSetter,
+    [in]  mdMethodDef     mdGetter,
+    [in]  mdMethodDef     rmdOtherMethods[]
 );  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `pr`  
- in Token per la proprietà da modificare  
+ [in] Token per la proprietà da modificare  
   
  `dwPropFlags`  
- in Flag della proprietà.  
+ [in] Flag di proprietà.  
   
  `dwCPlusTypeFlag`  
- in Tipo del valore predefinito della proprietà.  
+ [in] Tipo del valore predefinito della proprietà.  
   
  `pValue`  
- in Valore predefinito per la proprietà.  
+ [in] Valore predefinito per la proprietà.  
   
  `cchValue`  
- in Numero di caratteri (Unicode) in `pValue`.  
+ [in] Numero di caratteri (Unicode) in `pValue`.  
   
  `mdSetter`  
- in Metodo che imposta il valore della proprietà.  
+ [in] Metodo che imposta il valore della proprietà.  
   
  `mdGetter`  
- in Metodo che ottiene il valore della proprietà.  
+ [in] Metodo che ottiene il valore della proprietà.  
   
  `rmdOtherMethods[]`  
- in Matrice di altri metodi associati alla proprietà. Termina la matrice con un token di `mdTokenNil`.  
+ [in] Matrice di altri metodi associati alla proprietà. Terminare questa matrice `mdTokenNil` con un token.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Usato come risorsa in MSCorEE. dll  
+ **Biblioteca:** Utilizzato come risorsa in MSCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

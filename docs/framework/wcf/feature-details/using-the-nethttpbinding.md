@@ -2,21 +2,21 @@
 title: Uso di NetHttpBinding
 ms.date: 03/30/2017
 ms.assetid: fe134acf-ceca-49de-84a9-05a37e3841f1
-ms.openlocfilehash: 0f908361c5f9152d333daaf5e3ee90de3b1b89e9
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 82222dbfa3f35ed00d0173f2bc927c32e9e98470
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988629"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184240"
 ---
 # <a name="using-the-nethttpbinding"></a>Uso di NetHttpBinding
 <xref:System.ServiceModel.NetHttpBinding> è un'associazione progettata per usare i servizi HTTP o WebSocket e usa la codifica binaria per impostazione predefinita. L'oggetto <xref:System.ServiceModel.NetHttpBinding> rileverà se viene usato con un contratto request/reply o un contratto duplex e modificherà il comportamento di conseguenza. Utilizzerà HTTP per i contratti request/reply e WebSockets per i contratti duplex. È possibile eseguire l'override di questo comportamento usando l'impostazione <xref:System.ServiceModel.Channels.WebSocketTransportUsage>:  
   
-1. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Always>-Impone l'uso di WebSocket anche per i contratti request/reply.  
+1. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Always>- Questo impone WebSockets da utilizzare anche per i contratti di richiesta-risposta.- This forces WebSockets to be used even for request-reply contracts.  
   
-2. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Never>-Ciò impedisce l'uso di WebSocket. Il tentativo di utilizzo di un contratto duplex con questa impostazione genererà un'eccezione.  
+2. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Never>- Ciò impedisce l'utilizzo di WebSockets.- Prevents WebSockets from being used. Il tentativo di utilizzo di un contratto duplex con questa impostazione genererà un'eccezione.  
   
-3. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.WhenDuplex>-Si tratta del valore predefinito e si comporta come descritto in precedenza.  
+3. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.WhenDuplex>- Questo è il valore predefinito e si comporta come descritto in precedenza.  
   
  <xref:System.ServiceModel.NetHttpBinding> supporta sessioni affidabili sia in modalità HTTP sia in modalità WebSocket. Nella modalità WebSocket, le sessioni vengono fornite dal trasporto.  
   
@@ -54,13 +54,13 @@ ms.locfileid: "69988629"
 ```csharp  
 ServiceHost svchost = new ServiceHost(typeof(Service1), baseAddress);  
             NetHttpBinding binding = new NetHttpBinding();  
-            svchost.AddServiceEndpoint(typeof(IService1), binding, address);   
+            svchost.AddServiceEndpoint(typeof(IService1), binding, address);
         }  
 ```  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Configurazione delle associazioni per i servizi](../../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)
+- [Configurazione di associazioni per servizi](../../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)
 - [Associazioni](../../../../docs/framework/wcf/feature-details/bindings.md)
 - [Associazioni fornite dal sistema](../../../../docs/framework/wcf/system-provided-bindings.md)
 - [Servizi duplex](../../../../docs/framework/wcf/feature-details/duplex-services.md)

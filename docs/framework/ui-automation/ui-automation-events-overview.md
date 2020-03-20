@@ -9,12 +9,12 @@ helpviewer_keywords:
 - providers, UI Automation
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
-ms.openlocfilehash: 5f9362814eb671a6d7a111cadb96be6d06f5cb3d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 495e7d29c814164f4235d18569477b856cb09045
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441497"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179890"
 ---
 # <a name="ui-automation-events-overview"></a>Cenni preliminari sugli eventi di automazione interfaccia utente
 > [!NOTE]
@@ -24,11 +24,11 @@ ms.locfileid: "74441497"
   
  Una maggiore efficienza è ottenuta consentendo alle applicazioni provider di generare eventi in modo selettivo, se per tali eventi esistono sottoscrizioni di client, o di non generarne affatto, se nessun client è in attesa di eventi.  
   
-<a name="Types_of_Events"></a>   
+<a name="Types_of_Events"></a>
 ## <a name="types-of-events"></a>Tipi di eventi  
  Gli eventi di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sono suddivisi nelle categorie seguenti.  
   
-|event|description|  
+|Event|Descrizione|  
 |-----------|-----------------|  
 |Modifica proprietà|Generato quando una proprietà di un elemento o di un pattern di controllo di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] viene modificata. Ad esempio, se un client deve monitorare una casella di controllo di un'applicazione, può registrarsi per l'attesa di un evento di modifica per la proprietà <xref:System.Windows.Automation.TogglePattern.TogglePatternInformation.ToggleState%2A> . Quando il controllo casella di controllo viene selezionato o deselezionato, il provider genera l'evento e il client può agire secondo necessità.|  
 |Azione elemento|Generato quando l' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] viene modificata dall'utente finale o da attività a livello di codice, ad esempio quando si fa clic su un pulsante o quest'ultimo viene richiamato tramite <xref:System.Windows.Automation.InvokePattern>.|  
@@ -47,7 +47,7 @@ ms.locfileid: "74441497"
   
 - `TextChangedEvent`  
   
-<a name="UI_Automation_Event_Identifiers"></a>   
+<a name="UI_Automation_Event_Identifiers"></a>
 ## <a name="ui-automation-event-identifiers"></a>Identificatori di eventi di automazione interfaccia utente  
  Gli eventi di[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] sono identificati da oggetti <xref:System.Windows.Automation.AutomationEvent> . La proprietà <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> contiene un valore che identifica in modo univoco il tipo di evento.  
   
@@ -62,11 +62,11 @@ ms.locfileid: "74441497"
 |<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent?displayProperty=nameWithType>|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent?displayProperty=nameWithType>|<xref:System.Windows.Automation.StructureChangedEventArgs>|  
 |<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent?displayProperty=nameWithType>|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowClosedEvent?displayProperty=nameWithType>|<xref:System.Windows.Automation.WindowClosedEventArgs>|  
   
-<a name="UI_Automation_Event_Arguments"></a>   
+<a name="UI_Automation_Event_Arguments"></a>
 ## <a name="ui-automation-event-arguments"></a>Argomenti di eventi di automazione interfaccia utente  
  Le classi seguenti incapsulano argomenti di eventi.  
   
-|Classe|description|  
+|Classe|Descrizione|  
 |-----------|-----------------|  
 |<xref:System.Windows.Automation.AsyncContentLoadedEventArgs>|Contiene informazioni sul caricamento asincrono del contenuto, compresa la percentuale di completamento del caricamento.|  
 |<xref:System.Windows.Automation.AutomationEventArgs>|Contiene informazioni su un evento semplice che non richiede dati aggiuntivi.|  

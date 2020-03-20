@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: 6392ea0f17596406a8671a039bd78777d9e11e42
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: d335cd47de68dccdbb6af7f402d1182fcd811a7d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742652"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184310"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Protezione del trasporto con l'autenticazione di Windows
-Nello scenario seguente vengono illustrati un client e un servizio Windows Communication Foundation (WCF) protetti dalla sicurezza di Windows. Per altre informazioni sulla programmazione, vedere [procedura: proteggere un servizio con credenziali di Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
+Nello scenario seguente vengono illustrati un client E un servizio Windows Communication Foundation (WCF) protetto dalla sicurezza di Windows.The following scenario shows a Windows Communication Foundation (WCF) client and service secured by Windows security. Per ulteriori informazioni sulla programmazione, vedere [procedura: proteggere un servizio con credenziali](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)di Windows .  
   
  Un servizio Web intranet consente di visualizzare informazioni sulle risorse umane. Il client è un'applicazione Windows Form. L'applicazione è distribuita in un dominio in cui la protezione è affidata a un controller Kerberos.  
   
@@ -30,7 +30,7 @@ Nello scenario seguente vengono illustrati un client e un servizio Windows Commu
 |Associazione|<xref:System.ServiceModel.NetTcpBinding>|  
   
 ## <a name="service"></a>Service  
- Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Esegui una delle operazioni seguenti:  
+ Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:  
   
 - Creare un servizio autonomo usando il codice senza alcuna configurazione.  
   
@@ -52,9 +52,9 @@ Nello scenario seguente vengono illustrati un client e un servizio Windows Commu
     <behaviors />  
     <services>  
       <service behaviorConfiguration="" name="ServiceModel.Calculator">  
-        <endpoint address="net.tcp://localhost:8008/Calculator"   
+        <endpoint address="net.tcp://localhost:8008/Calculator"
                   binding="netTcpBinding"  
-          bindingConfiguration="WindowsClientOverTcp"   
+          bindingConfiguration="WindowsClientOverTcp"
                   name="WindowsClientOverTcp"  
                   contract="ServiceModel.ICalculator" />  
       </service>  
@@ -74,11 +74,11 @@ Nello scenario seguente vengono illustrati un client e un servizio Windows Commu
 ```  
   
 ## <a name="client"></a>Client  
- Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Esegui una delle operazioni seguenti:  
+ Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:  
   
 - Creare un client autonomo usando il codice (e il codice client).  
   
-- Creare un client che non definisce alcun indirizzo di endpoint. Usare invece il costruttore client che accetta il nome della configurazione come argomento. Ad esempio,  
+- Creare un client che non definisce alcun indirizzo di endpoint. Usare invece il costruttore client che accetta il nome della configurazione come argomento. Ad esempio:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -106,9 +106,9 @@ Nello scenario seguente vengono illustrati un client e un servizio Windows Commu
       </netTcpBinding>  
     </bindings>  
     <client>  
-      <endpoint address="net.tcp://localhost:8008/Calculator"   
-                binding="netTcpBinding"            
-                bindingConfiguration="NetTcpBinding_ICalculator"   
+      <endpoint address="net.tcp://localhost:8008/Calculator"
+                binding="netTcpBinding"
+                bindingConfiguration="NetTcpBinding_ICalculator"
                 contract="ICalculator"  
                 name="NetTcpBinding_ICalculator">  
       </endpoint>  
@@ -121,4 +121,4 @@ Nello scenario seguente vengono illustrati un client e un servizio Windows Commu
 
 - [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Procedura: Proteggere un servizio con credenziali di Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
-- [Modello di sicurezza per Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Sicurezza e protezione](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

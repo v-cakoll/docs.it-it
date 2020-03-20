@@ -2,23 +2,23 @@
 title: <msmqTransportSecurity>
 ms.date: 03/30/2017
 ms.assetid: 092e911b-ab1b-4069-a26e-6134c3299e06
-ms.openlocfilehash: dc7371d694925d3ac5aa49d7d1269df323358f90
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 5899c609b3cf52c4a275ba6fb10c5826fcf37f1e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70397805"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153009"
 ---
-# <a name="msmqtransportsecurity"></a>\<msmqTransportSecurity>
+# <a name="msmqtransportsecurity"></a>\<> msmqTransportSecurity
 Specifica le impostazioni di sicurezza del trasporto MSMQ di un'associazione personalizzata.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Binding >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<CustomBinding >** ](custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> msmqIntegration**](msmqintegration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> msmqTransportSecurity**  
+[**\<>di configurazione**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<>system.serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<associazioni>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>customBinding**](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>di associazione**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<msmqIntegration>**](msmqintegration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<msmqTransportSecurity (>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -33,27 +33,27 @@ Specifica le impostazioni di sicurezza del trasporto MSMQ di un'associazione per
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### <a name="attributes"></a>Attributi  
+### <a name="attributes"></a>Attributes  
   
-|Attributo|DESCRIZIONE|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
-|`msmqAuthenticationMode`|Specifica come deve essere autenticato il messaggio dal trasporto MSMQ. Se viene impostato su `None`, anche il valore dell'attributo `msmqProtectionLevel` deve essere impostato su `None`.<br /><br /> Di seguito vengono elencati i valori validi:<br /><br /> Nessuno Nessuna autenticazione.<br />Windows Il meccanismo di autenticazione usa Active Directory per ottenere il certificato X. 509 per il SID associato al messaggio. Questo viene quindi usato per controllare l'ACL della coda in modo da garantire che l'utente disponga dell'autorizzazione per scrivere nella coda.<br />Certificato Il canale ottiene il certificato dall'archivio certificati.<br /><br /> L'impostazione predefinita è Windows. L'attributo è di tipo <xref:System.ServiceModel.MsmqAuthenticationMode>.|  
-|`msmqEncryptionAlgorithm`|Specifica l'algoritmo da usare per la crittografia del messaggio in transito durante il trasferimento dei messaggi tra i gestori della coda dei messaggi. Di seguito vengono elencati i valori validi:<br /><br /> -RC4Stream<br />-   AES<br /><br /> Il valore predefinito è RC4Stream. L'attributo è di tipo <xref:System.ServiceModel.MsmqEncryptionAlgorithm>.|  
-|`msmqProtectionLevel`|Specifica come viene protetto il messaggio a livello del trasporto MSMQ. La crittografia assicura l'integrità del messaggio mentre EncryptAndSign assicura sia l'integrità che il non ripudio del messaggio; ovvero, il messaggio proviene effettivamente dal mittente e il mittente è quello che dichiara di essere. Di seguito vengono elencati i valori validi:<br /><br /> Nessuno Nessuna protezione.<br />Sign I messaggi vengono firmati.<br />EncryptAndSign I messaggi vengono crittografati e firmati.<br /><br /> Il valore predefinito è Sign. L'attributo è di tipo <xref:System.Net.Security.ProtectionLevel>.|  
-|`msmqSecureHashAlgorithm`|Specifica l'algoritmo da usare nel calcolo del digest come parte delle firme. Di seguito vengono elencati i valori validi:<br /><br /> -   MD5<br />-   SHA1<br />-   SHA256<br />-   SHA512<br /><br /> Il valore predefinito è SHA1. L'attributo è di tipo <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.<br>A causa di problemi di collisione con MD5 e SHA1, Microsoft consiglia di SHA256 o meglio.|  
+|`msmqAuthenticationMode`|Specifica come deve essere autenticato il messaggio dal trasporto MSMQ. Se viene impostato su `None`, anche il valore dell'attributo `msmqProtectionLevel` deve essere impostato su `None`.<br /><br /> I valori validi sono i seguenti:<br /><br /> - Nessuno: nessuna autenticazione.- None: No authentication.<br />- Windows: il meccanismo di autenticazione utilizza Active Directory per ottenere il certificato X.509 per il SID associato al messaggio.- Windows: The authentication mechanism uses Active Directory to get the X.509 certificate for the SID associated with the message. Questo viene quindi usato per controllare l'ACL della coda in modo da garantire che l'utente disponga dell'autorizzazione per scrivere nella coda.<br />- Certificato: il canale ottiene il certificato dall'archivio certificati.- Certificate: The channel gets the certificate from the certificate store.<br /><br /> L'impostazione predefinita è Windows. L'attributo è di tipo <xref:System.ServiceModel.MsmqAuthenticationMode>.|  
+|`msmqEncryptionAlgorithm`|Specifica l'algoritmo da usare per la crittografia del messaggio in transito durante il trasferimento dei messaggi tra i gestori della coda dei messaggi. I valori validi sono i seguenti:<br /><br /> - RC4Stream<br />- AES<br /><br /> Il valore predefinito è RC4Stream. L'attributo è di tipo <xref:System.ServiceModel.MsmqEncryptionAlgorithm>.|  
+|`msmqProtectionLevel`|Specifica come viene protetto il messaggio a livello del trasporto MSMQ. La crittografia garantisce l'integrità dei messaggi mentre EncryptAndSign garantisce l'integrità dei messaggi e il non ripudio; cioè, il messaggio proviene effettivamente dal mittente e il mittente è chi dicono di essere. I valori validi sono i seguenti:<br /><br /> - Nessuno: nessuna protezione.<br />- Segno: i messaggi sono firmati.<br />- EncryptAndSign: i messaggi vengono crittografati e firmati.- EncryptAndSign: Messages are encrypted and signed.<br /><br /> Il valore predefinito è Sign. L'attributo è di tipo <xref:System.Net.Security.ProtectionLevel>.|  
+|`msmqSecureHashAlgorithm`|Specifica l'algoritmo da usare nel calcolo del digest come parte delle firme. I valori validi sono i seguenti:<br /><br /> - MD5 (in quadra sto )<br />- SHA1<br />- SHA256<br />- SHA512<br /><br /> Il valore predefinito è SHA1. L'attributo è di tipo <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.<br>A causa di problemi di collisione con MD5 e SHA1, Microsoft consiglia SHA256 o versione migliore.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno.  
+ No.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<msmqIntegration>](msmqintegration.md)|Specifica le impostazioni necessarie per l'interazione con un mittente o un destinatario del sistema di accodamento messaggi (MSMQ).|  
-|[\<msmqTransport>](msmqtransport.md)|Specifica le proprietà di comunicazione dell'accodamento per un servizio Windows Communication Foundation (WCF) che usa il protocollo MSMQ nativo.|  
+|[\<>mqTransport](msmqtransport.md)|Specifica le proprietà di comunicazione dell'accodamento per un servizio Windows Communication Foundation (WCF) che usa il protocollo MSMQ nativo.|  
   
-## <a name="remarks"></a>Note  
- Per ulteriori informazioni sulla sicurezza del trasporto, vedere [sicurezza del trasporto](../../../wcf/feature-details/transport-security.md).  
+## <a name="remarks"></a>Osservazioni  
+ Per ulteriori informazioni sulla sicurezza del trasporto, vedere [Protezione del trasporto](../../../wcf/feature-details/transport-security.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -66,5 +66,5 @@ Specifica le impostazioni di sicurezza del trasporto MSMQ di un'associazione per
 - [Associazioni](../../../wcf/bindings.md)
 - [Estensione delle associazioni](../../../wcf/extending/extending-bindings.md)
 - [Associazioni personalizzate](../../../wcf/extending/custom-bindings.md)
-- [\<customBinding>](custombinding.md)
-- [Sicurezza del trasporto](../../../wcf/feature-details/transport-security.md)
+- [\<>customBinding](custombinding.md)
+- [Sicurezza dei trasporti](../../../wcf/feature-details/transport-security.md)

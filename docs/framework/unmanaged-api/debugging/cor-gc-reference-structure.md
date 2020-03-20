@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 162e8179-0cd4-4110-8f06-5f387698bd62
 topic_type:
 - apiref
-ms.openlocfilehash: 635cb0c003889beb2f78e8413189cbfc4b064175
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e22269b76c230f702f4712298fddcd0df1fde50d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73099147"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179322"
 ---
 # <a name="cor_gc_reference-structure"></a>Struttura COR_GC_REFERENCE
 Contiene informazioni su on oggetto da sottoporre a Garbage Collection.  
@@ -28,7 +28,7 @@ Contiene informazioni su on oggetto da sottoporre a Garbage Collection.
   
 ```cpp  
 typedef struct _COR_GC_REFERENCE {  
-    ICorDebugAppDomain *domain;   
+    ICorDebugAppDomain *domain;
     ICorDebugValue *location;  
     CorGCReferenceType type;  
     UINT64 extraData;  
@@ -37,29 +37,29 @@ typedef struct _COR_GC_REFERENCE {
   
 ## <a name="members"></a>Members  
   
-|Member|Descrizione|  
+|Membro|Descrizione|  
 |------------|-----------------|  
-|`domain`|Puntatore al dominio applicazione a cui appartiene l'handle o l'oggetto. Il valore può essere `null`.|  
-|`location`|Interfaccia ICorDebugValue o ICorDebugReferenceValue che corrisponde all'oggetto di cui eseguire l'operazione di Garbage Collection.|  
+|`domain`|Puntatore al dominio applicazione a cui appartiene l'handle o l'oggetto. Il suo `null`valore può essere .|  
+|`location`|Un ICorDebugValue o un ICorDebugReferenceValue interfaccia che corrisponde all'oggetto da garbage collection.|  
 |`type`|Valore di enumerazione [CorGCReferenceType](corgcreferencetype-enumeration.md) che indica la provenienza della radice. Per altre informazioni, vedere la sezione Osservazioni.|  
-|`extraData`|Dati aggiuntivi relativi all'oggetto da sottoposta a Garbage Collection. Queste informazioni dipendono dall'origine dell'oggetto, come indicato dal campo `type`. Per altre informazioni, vedere la sezione Osservazioni.|  
+|`extraData`|Dati aggiuntivi sull'oggetto da raccogliere tenne come garbage collection. Queste informazioni dipendono dall'origine dell'oggetto, `type` come indicato dal campo. Per altre informazioni, vedere la sezione Osservazioni.|  
   
-## <a name="remarks"></a>Note  
- Il campo `type` è un valore di enumerazione [CorGCReferenceType](corgcreferencetype-enumeration.md) che indica da dove proviene il riferimento. Un particolare valore di `COR_GC_REFERENCE` può riflettere uno dei seguenti tipi di oggetti gestiti:  
+## <a name="remarks"></a>Osservazioni  
+ Il `type` campo è un valore di enumerazione [CorGCReferenceType](corgcreferencetype-enumeration.md) che indica la provenienza del riferimento. Un `COR_GC_REFERENCE` particolare valore può riflettere uno dei seguenti tipi di oggetti gestiti:  
   
-- Oggetti da tutti gli stack gestiti (`CorGCReferenceType.CorReferenceStack`). Sono inclusi i riferimenti dinamici nel codice gestito, nonché gli oggetti creati dal Common Language Runtime.  
+- Oggetti da tutti gli`CorGCReferenceType.CorReferenceStack`stack gestiti ( ). Sono inclusi i riferimenti attivi nel codice gestito, nonché gli oggetti creati da Common Language Runtime.  
   
-- Oggetti dalla tabella di handle (`CorGCReferenceType.CorHandle*`). Sono inclusi i riferimenti sicuri (`HNDTYPE_STRONG` e `HNDTYPE_REFCOUNT`) e le variabili statiche in un modulo.  
+- Oggetti dalla tabella`CorGCReferenceType.CorHandle*`dei gesti ( ). Sono inclusi riferimenti`HNDTYPE_STRONG` `HNDTYPE_REFCOUNT`sicuri ( e ) e variabili statiche in un modulo.  
   
-- Oggetti dalla coda del finalizzatore (`CorGCReferenceType.CorReferenceFinalizer`). Il finalizzatore Accoda oggetti radice fino all'esecuzione del finalizzatore.  
+- Oggetti dalla coda del`CorGCReferenceType.CorReferenceFinalizer`finalizzatore ( ). Le radici della coda del finalizzatore vengono radici degli oggetti finché non è stato eseguito il finalizzatore.  
   
- Il campo `extraData` contiene dati aggiuntivi a seconda dell'origine (o del tipo) del riferimento. I possibili valori sono:  
+ Il `extraData` campo contiene dati aggiuntivi a seconda dell'origine (o del tipo) del riferimento. I valori possibili sono:  
   
-- `DependentSource` Se la `type` è `CorGCREferenceType.CorHandleStrongDependent`, questo campo è l'oggetto che, se attivo, viene radicato nell'oggetto da sottoposta a Garbage Collection in `COR_GC_REFERENCE.Location`.  
+- `DependentSource`. Se `type` è `CorGCREferenceType.CorHandleStrongDependent`, questo campo è l'oggetto che, se attivo, `COR_GC_REFERENCE.Location`radica l'oggetto da raccogliere tapechino in .  
   
-- `RefCount` Se la `type` è `CorGCREferenceType.CorHandleStrongRefCount`, questo campo corrisponde al conteggio dei riferimenti dell'handle.  
+- `RefCount`. Se `type` il `CorGCREferenceType.CorHandleStrongRefCount`è , questo campo è il conteggio dei riferimenti dell'handle.  
   
-- `Size` Se la `type` è `CorGCREferenceType.CorHandleStrongSizedByref`, questo campo corrisponde all'ultima dimensione della struttura ad albero di oggetti per la quale il Garbage Collector ha calcolato le radici dell'oggetto. Si noti che questo calcolo non è necessariamente aggiornato.  
+- `Size`. Se `type` `CorGCREferenceType.CorHandleStrongSizedByref`è , questo campo è l'ultima dimensione della struttura ad albero di oggetti per cui il Garbage Collector ha calcolato le radici dell'oggetto. Si noti che questo calcolo non è necessariamente aggiornato.  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  

@@ -2,12 +2,12 @@
 title: Metodo ICorDebugSymbolProvider::GetAssemblyImageBytes
 ms.date: 03/30/2017
 ms.assetid: 3db215aa-e180-4f70-8d23-6d5a0ffbc8e5
-ms.openlocfilehash: b7a8f942d493b7b775a31dce5ab4d351a77cfe5f
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 6361b12802876ef480acbe1cc13f32b77ba0be49
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791671"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178485"
 ---
 # <a name="icordebugsymbolprovidergetassemblyimagebytes-method"></a>Metodo ICorDebugSymbolProvider::GetAssemblyImageBytes
 Legge i dati da un assembly sottoposto a merge tramite un indirizzo RVA (Relative Virtual Address) specificato nell'assembly sottoposto a merge.  
@@ -16,8 +16,8 @@ Legge i dati da un assembly sottoposto a merge tramite un indirizzo RVA (Relativ
   
 ```cpp  
 HRESULT GetAssemblyImageBytes(  
-   [in] CORDB_ADDRESS rva,   
-   [in] ULONG32 length,   
+   [in] CORDB_ADDRESS rva,
+   [in] ULONG32 length,
    [out] ICorDebugMemoryBuffer** ppMemoryBuffer  
 );  
 ```  
@@ -30,21 +30,21 @@ HRESULT GetAssemblyImageBytes(
  Numero di byte da leggere dall'assembly sottoposto a merge.  
   
  `ppMemoryBuffer`  
- Puntatore all'indirizzo di un oggetto [ICorDebugMemoryBuffer](icordebugmemorybuffer-interface.md) che contiene informazioni sul buffer di memoria con i metadati dell'assembly Uniti.  
+ Puntatore all'indirizzo di un oggetto [ICorDebugMemoryBuffer](icordebugmemorybuffer-interface.md) che contiene informazioni sul buffer di memoria con i metadati dell'assembly uniti.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 > [!NOTE]
 > Questo metodo è disponibile solo con .NET Native.  
   
-## <a name="requirements"></a>Requisiti di  
+## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

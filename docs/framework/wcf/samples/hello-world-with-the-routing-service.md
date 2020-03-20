@@ -2,19 +2,19 @@
 title: Hello World con il servizio di routing
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: ae0615c8cf2fa33f3bb363f77c0d06440b6afc13
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 86a2981e8b861da9d5ccf0a34fe037f3ef419aab
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743716"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183643"
 ---
 # <a name="hello-world-with-the-routing-service"></a>Hello World con il servizio di routing
-In questo esempio viene illustrato il servizio di routing Windows Communication Foundation (WCF). Il servizio di routing è un componente WCF che consente di includere facilmente un router basato sul contenuto nell'applicazione. Questo esempio adatta l'esempio di calcolatrice WCF standard per comunicare usando il servizio di routing. In questo esempio, il client calcolatrice è configurato per inviare messaggi a un endpoint esposto dal router. Il servizio di routing è configurato per accettare tutti i messaggi ad esso inviati e per inoltrarli a un endpoint che corrisponde al servizio di calcolatrice. I messaggi inviati dal client vengono pertanto ricevuti dal router e reindirizzati al servizio di calcolatrice effettivo. I messaggi provenienti dal servizio di calcolatrice di backup vengono inviati nuovamente al router del servizio, che a sua volta li inoltra al client calcolatrice.
+In questo esempio viene illustrato il servizio di routing di Windows Communication Foundation (WCF). Il servizio di routing è un componente WCF che semplifica l'inclusione di un router basato sul contenuto nell'applicazione. In questo esempio adatta l'esempio di calcolatrice WCF standard per comunicare utilizzando il servizio di routing. In questo esempio, il client calcolatrice è configurato per inviare messaggi a un endpoint esposto dal router. Il servizio di routing è configurato per accettare tutti i messaggi ad esso inviati e per inoltrarli a un endpoint che corrisponde al servizio di calcolatrice. I messaggi inviati dal client vengono pertanto ricevuti dal router e reindirizzati al servizio di calcolatrice effettivo. I messaggi provenienti dal servizio di calcolatrice di backup vengono inviati nuovamente al router del servizio, che a sua volta li inoltra al client calcolatrice.
 
 ### <a name="to-use-this-sample"></a>Per usare questo esempio
 
-1. Utilizzando Visual Studio 2012, aprire HelloRoutingService. sln.
+1. Utilizzando Visual Studio 2012, aprire HelloRoutingService.sln.
 
 2. Premere F5 o CTRL+MAIUSC+B.
 
@@ -27,7 +27,7 @@ In questo esempio viene illustrato il servizio di routing Windows Communication 
 
 3. Premere INVIO per avviare il client.
 
-     È necessario visualizzare il seguente output:
+     Dovrebbe venire visualizzato l'output seguente.
 
     ```console
      Add(100,15.99) = 115.99
@@ -50,13 +50,13 @@ In questo esempio viene illustrato il servizio di routing Windows Communication 
 
 > [!IMPORTANT]
 > È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
->   
+>
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) Esempi per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti gli esempi e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (WCF). Questo esempio si trova nella directory seguente.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\HelloRoutingService`  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Esempi di persistenza e hosting di AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))
+- [Hosting e salvataggio permanente](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

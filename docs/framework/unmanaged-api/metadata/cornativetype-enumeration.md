@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e47a72f1-9609-48ed-bb34-97170d7f6890
 topic_type:
 - apiref
-ms.openlocfilehash: ef4788891e91608a394482319a89b8b0d258449f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 09a351db65c7ed310d3eb68c71a5207ed6040dd4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436519"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177966"
 ---
 # <a name="cornativetype-enumeration"></a>Enumerazione CorNativeType
 Contiene valori che descrivono tipi non gestiti nativi.  
@@ -78,7 +78,7 @@ typedef enum CorNativeType {
     NATIVE_TYPE_IINSPECTABLE         = 0x2e,  
     NATIVE_TYPE_HSTRING              = 0x2f,  
   
-    NATIVE_TYPE_ERROR                = 0x2d,   
+    NATIVE_TYPE_ERROR                = 0x2d,
   
     NATIVE_TYPE_MAX                  = 0x50  
   
@@ -91,20 +91,20 @@ typedef enum CorNativeType {
 |------------|-----------------|  
 |`NATIVE_TYPE_END`|Obsoleto.|  
 |`NATIVE_TYPE_VOID`|Obsoleto.|  
-|`NATIVE_TYPE_BOOLEAN`|Valore booleano a 4 byte, dove TRUE è diverso da zero e FALSE è zero.|  
-|`NATIVE_TYPE_I1`|Valore intero con segno a 8 bit.|  
-|`NATIVE_TYPE_U1`|Valore intero senza segno a 8 bit.|  
-|`NATIVE_TYPE_I2`|Valore intero con segno a 16 bit.|  
-|`NATIVE_TYPE_U2`|Valore intero senza segno a 16 bit.|  
+|`NATIVE_TYPE_BOOLEAN`|Valore booleano a 4 byte, dove TRUE è diverso da zero e FALSO è zero.|  
+|`NATIVE_TYPE_I1`|Valore integer a 8 bit con segno.|  
+|`NATIVE_TYPE_U1`|Valore integer senza segno a 8 bit.|  
+|`NATIVE_TYPE_I2`|Valore integer a 16 bit con segno.|  
+|`NATIVE_TYPE_U2`|Un valore integer senza segno a 16 bit.|  
 |`NATIVE_TYPE_I4`|Valore intero a 32 bit con segno.|  
 |`NATIVE_TYPE_U4`|Valore intero senza segno a 32 bit.|  
-|`NATIVE_TYPE_I8`|Valore intero con segno a 64 bit.|  
-|`NATIVE_TYPE_U8`|Valore intero senza segno a 64 bit.|  
+|`NATIVE_TYPE_I8`|Valore integer a 64 bit con segno.|  
+|`NATIVE_TYPE_U8`|Un valore integer senza segno a 64 bit.|  
 |`NATIVE_TYPE_R4`|Valore numerico a virgola mobile a 4 byte.|  
 |`NATIVE_TYPE_R8`|Valore numerico a virgola mobile a 8 byte.|  
 |`NATIVE_TYPE_SYSCHAR`|Obsoleto.|  
 |`NATIVE_TYPE_VARIANT`|Obsoleto.|  
-|`NATIVE_TYPE_CURRENCY`|Tipo COM numerico che corrisponde al tipo di <xref:System.Decimal> gestito.|  
+|`NATIVE_TYPE_CURRENCY`|Tipo COM numerico che <xref:System.Decimal> corrisponde al tipo gestito.|  
 |`NATIVE_TYPE_PTR`|Obsoleto.|  
 |`NATIVE_TYPE_DECIMAL`|Obsoleto.|  
 |`NATIVE_TYPE_DATE`|Obsoleto.|  
@@ -116,31 +116,31 @@ typedef enum CorNativeType {
 |`NATIVE_TYPE_OBJECTREF`|Obsoleto.|  
 |`NATIVE_TYPE_IUNKNOWN`|Interoperabilità COM.|  
 |`NATIVE_TYPE_IDISPATCH`|Interoperabilità COM.|  
-|`NATIVE_TYPE_STRUCT`|Valore della struttura nativa.|  
+|`NATIVE_TYPE_STRUCT`|Valore della struttura nativo.|  
 |`NATIVE_TYPE_INTF`|Interoperabilità COM.|  
 |`NATIVE_TYPE_SAFEARRAY`|Interoperabilità COM.|  
 |`NATIVE_TYPE_FIXEDARRAY`|Valore di matrice a lunghezza fissa.|  
-|`NATIVE_TYPE_INT`|Valore intero con segno a 16 bit nativo.|  
-|`NATIVE_TYPE_UINT`|Valore di Unsigned Integer a 16 bit nativo.|  
-|`NATIVE_TYPE_NESTEDSTRUCT`|Obsoleto.<br /><br /> Usare NATIVE_TYPE_STRUCT.|  
+|`NATIVE_TYPE_INT`|Valore integer con segno a 16 bit nativo.|  
+|`NATIVE_TYPE_UINT`|Valore unsigned integer a 16 bit nativo.|  
+|`NATIVE_TYPE_NESTEDSTRUCT`|Obsoleto.<br /><br /> Utilizzare NATIVE_TYPE_STRUCT.|  
 |`NATIVE_TYPE_BYVALSTR`|Interoperabilità COM.|  
 |`NATIVE_TYPE_ANSIBSTR`|Interoperabilità COM.|  
 |`NATIVE_TYPE_TBSTR`|Interoperabilità COM.<br /><br /> Selezionare BSTR o ANSIBSTR a seconda della piattaforma.|  
-|`NATIVE_TYPE_VARIANTBOOL`|Valore booleano a 2 byte, dove TRUE è-1 e FALSE è zero.|  
+|`NATIVE_TYPE_VARIANTBOOL`|Valore booleano a 2 byte, dove TRUE è -1 e FALSE è zero.|  
 |`NATIVE_TYPE_FUNC`|Un puntatore di funzione.|  
-|`NATIVE_TYPE_ASANY`|Riferimento a qualsiasi tipo nativo.|  
+|`NATIVE_TYPE_ASANY`|Un riferimento a qualsiasi tipo nativo.|  
 |`NATIVE_TYPE_ARRAY`|Riferimento a una matrice con membri di un tipo non specificato.|  
-|`NATIVE_TYPE_LPSTRUCT`|Puntatore di tipo Integer a 32 bit a una struttura.|  
-|`NATIVE_TYPE_CUSTOMMARSHALER`|Tipo nativo del gestore di marshalling personalizzato.<br /><br /> Questo deve essere seguito da una stringa con il formato seguente: "nome del tipo nativo/nome del tipo del gestore di marshalling 0Custom/cookie 0Optional/0" o "{GUID di tipo nativo}/0Custom nome tipo del gestore di marshalling/0Optional cookie/0"|  
-|`NATIVE_TYPE_ERROR`|Interoperabilità COM.<br /><br /> Con ELEMENT_TYPE_I4 questo tipo viene mappato a VT_HRESULT.|  
-|`NATIVE_TYPE_IINSPECTABLE`|Tipo di `IInspectable` nativo.|  
-|`NATIVE_TYPE_HSTRING`|`HString`nativo.|  
+|`NATIVE_TYPE_LPSTRUCT`|Puntatore integer a 32 bit a una struttura.|  
+|`NATIVE_TYPE_CUSTOMMARSHALER`|Tipo nativo del gestore di marshalling personalizzato.<br /><br /> Deve essere seguito da una stringa nel seguente formato: "Nome tipo nativo/nome del gestore di marshalling 0Custom nome di tipo/0Cookie facoltativo/0" o "'GUID di tipo nativo'/0Nome del gestore di marshalling personalizzato/0Cookie facoltativo/0"|  
+|`NATIVE_TYPE_ERROR`|Interoperabilità COM.<br /><br /> Con ELEMENT_TYPE_I4 questo tipo esegue il mapping a VT_HRESULT.|  
+|`NATIVE_TYPE_IINSPECTABLE`|Tipo `IInspectable` nativo.|  
+|`NATIVE_TYPE_HSTRING`|Un `HString`nativo .|  
 |`NATIVE_TYPE_MAX`|Valore non valido.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorHdr. h  
+ **Intestazione:** CorHdr.h  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

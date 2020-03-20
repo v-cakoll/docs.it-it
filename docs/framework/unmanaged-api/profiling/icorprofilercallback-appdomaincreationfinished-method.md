@@ -15,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: dbab7d90-d515-4dc9-8195-294d5d04bab6
 topic_type:
 - apiref
-ms.openlocfilehash: 1cf3f2b62b388b6c2d6fcd75b1b07a67d5b2e49f
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 8b3f7712436c001e5cd44f214f6edb06390abd41
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866702"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177072"
 ---
 # <a name="icorprofilercallbackappdomaincreationfinished-method"></a>Metodo ICorProfilerCallback::AppDomainCreationFinished
-Notifica al profiler che è stato creato un dominio dell'applicazione.  
+Notifica al profiler che è stato creato un dominio applicazione.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT AppDomainCreationFinished(  
     [in] AppDomainID appDomainId,  
-    [in] HRESULT     hrStatus);   
+    [in] HRESULT     hrStatus);
 ```  
   
 ## <a name="parameters"></a>Parametri
@@ -41,21 +41,21 @@ HRESULT AppDomainCreationFinished(
 
 - `hrStatus`
 
-  \[in] valore HRESULT che indica se la creazione del dominio dell'applicazione è stata completata correttamente.
+  \[in] Un HRESULT che indica se la creazione del dominio applicazione è stata completata correttamente.
 
-## <a name="remarks"></a>Note  
- L'ID applicazione non è valido per tutte le richieste di informazioni fino a quando non viene chiamato il metodo `AppDomainCreationFinished`.  
+## <a name="remarks"></a>Osservazioni  
+ L'ID applicazione non è valido `AppDomainCreationFinished` per qualsiasi richiesta di informazioni fino a quando non viene chiamato il metodo.  
   
- Alcune parti del caricamento del dominio dell'applicazione possono continuare dopo il callback `AppDomainCreationFinished`. Un HRESULT di errore in `hrStatus` indica un errore. Tuttavia, un HRESULT di esito positivo in `hrStatus` indica solo che la prima parte della creazione del dominio dell'applicazione è riuscita.  
+ Alcune parti del caricamento del dominio `AppDomainCreationFinished` applicazione potrebbero continuare dopo il callback. Un HRESULT `hrStatus` di errore in indica un errore. Tuttavia, un HRESULT di esito positivo indica `hrStatus` solo che la prima parte della creazione del dominio applicazione è riuscita.  
   
-## <a name="requirements"></a>Requisiti di  
+## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

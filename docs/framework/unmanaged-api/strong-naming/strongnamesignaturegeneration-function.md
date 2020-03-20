@@ -13,22 +13,22 @@ f1_keywords:
 helpviewer_keywords:
 - StrongNameSignatureGeneration function [.NET Framework strong naming]
 ms.assetid: 839b765c-3e41-44ce-bf1b-dc10453db18e
-ms.openlocfilehash: 9ab6fcb64e4654302e411d4dcc587df2e0bf1dc1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d7f481e5c61ec65d2e7414bd47227866f3435028
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125185"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176903"
 ---
 # <a name="strongnamesignaturegeneration-function"></a>Funzione StrongNameSignatureGeneration
 Genera una firma con nome sicuro per l'assembly specificato.  
   
- Questa funzione è stata deprecata. Usare invece il metodo [ICLRStrongName:: StrongNameSignatureGeneration](../hosting/iclrstrongname-strongnamesignaturegeneration-method.md) .  
+ Questa funzione è deprecata. Utilizzare invece il metodo [ICLRStrongName::StrongNameSignatureGeneration](../hosting/iclrstrongname-strongnamesignaturegeneration-method.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
-BOOLEAN StrongNameSignatureGeneration (   
+BOOLEAN StrongNameSignatureGeneration (
     [in]  LPCWSTR   wszFilePath,  
     [in]  LPCWSTR   wszKeyContainer,  
     [in]  BYTE      *pbKeyBlob,  
@@ -40,47 +40,47 @@ BOOLEAN StrongNameSignatureGeneration (
   
 ## <a name="parameters"></a>Parametri  
  `wszFilePath`  
- in Percorso del file contenente il manifesto dell'assembly per il quale verrà generata la firma con nome sicuro.  
+ [in] Percorso del file che contiene il manifesto dell'assembly per il quale verrà generata la firma con nome sicuro.  
   
  `wszKeyContainer`  
- in Nome del contenitore di chiavi che contiene la coppia di chiavi pubblica/privata.  
+ [in] Nome del contenitore di chiavi che contiene la coppia di chiavi pubblica/privata.  
   
- Se `pbKeyBlob` è null, `wszKeyContainer` necessario specificare un contenitore valido all'interno del provider del servizio di crittografia (CSP). In questo caso, la coppia di chiavi archiviata nel contenitore viene usata per firmare il file.  
+ Se `pbKeyBlob` è `wszKeyContainer` null, è necessario specificare un contenitore valido all'interno del provider del servizio di crittografia (CSP). In questo caso, la coppia di chiavi archiviata nel contenitore viene utilizzata per firmare il file.  
   
- Se `pbKeyBlob` non è null, si presuppone che la coppia di chiavi sia contenuta nel BLOB (Binary Large Object) della chiave.  
+ Se `pbKeyBlob` non è null, si presuppone che la coppia di chiavi sia contenuta nell'oggetto binario di grandi dimensioni chiave (BLOB).  
   
- Le chiavi devono essere chiavi di firma Rivest-Shamir-Adleman (RSA) a 1024 bit. Al momento non sono supportati altri tipi di chiavi.  
+ Le chiavi devono essere chiavi di firma RSA (Rivest-Shamir-Adleman) a 1024 bit. Al momento non sono supportati altri tipi di chiavi.  
   
  `pbKeyBlob`  
- in Puntatore alla coppia di chiavi pubblica/privata. Questa coppia è nel formato creato dalla funzione Win32 `CryptExportKey`. Se `pbKeyBlob` è null, si presuppone che il contenitore di chiavi specificato da `wszKeyContainer` contenga la coppia di chiavi.  
+ [in] Puntatore alla coppia di chiavi pubblica/privata. Questa coppia è nel formato creato `CryptExportKey` dalla funzione Win32. Se `pbKeyBlob` è null, si `wszKeyContainer` presuppone che il contenitore di chiavi specificato da contenga la coppia di chiavi.  
   
  `cbKeyBlob`  
- in Dimensione, in byte, del `pbKeyBlob`.  
+ [in] Dimensione, in byte, `pbKeyBlob`di .  
   
  `ppbSignatureBlob`  
- out Puntatore alla posizione in cui il Common Language Runtime restituisce la firma. Se `ppbSignatureBlob` è null, il runtime archivia la firma nel file specificato da `wszFilePath`.  
+ [fuori] Puntatore al percorso in cui Common Language Runtime restituisce la firma. Se `ppbSignatureBlob` è null, il runtime archivia `wszFilePath`la firma nel file specificato da .  
   
- Se `ppbSignatureBlob` non è null, il Common Language Runtime alloca spazio per la restituzione della firma. Il chiamante deve liberare questo spazio usando la funzione [StrongNameFreeBuffer](strongnamefreebuffer-function.md) .  
+ Se `ppbSignatureBlob` non è null, Common Language Runtime alloca lo spazio in cui restituire la firma. Il chiamante deve liberare questo spazio utilizzando la funzione [StrongNameFreeBuffer.](strongnamefreebuffer-function.md)  
   
  `pcbSignatureBlob`  
- out Dimensione, in byte, della firma restituita.  
+ [fuori] Dimensione, in byte, della firma restituita.  
   
 ## <a name="return-value"></a>Valore restituito  
- `true` al completamento; in caso contrario, `false`.  
+ `true`al termine del successo; in `false`caso contrario, .  
   
-## <a name="remarks"></a>Note  
- Specificare null per `wszFilePath` per calcolare le dimensioni della firma senza creare la firma.  
+## <a name="remarks"></a>Osservazioni  
+ Specificare `wszFilePath` null per calcolare la dimensione della firma senza creare la firma.  
   
  La firma può essere archiviata direttamente nel file o restituita al chiamante.  
   
- Se la funzione `StrongNameSignatureGeneration` non viene completata correttamente, chiamare la funzione [StrongNameErrorInfo](strongnameerrorinfo-function.md) per recuperare l'ultimo errore generato.  
+ Se `StrongNameSignatureGeneration` la funzione non viene completata correttamente, chiamare la funzione [StrongNameErrorInfo](strongnameerrorinfo-function.md) per recuperare l'ultimo errore generato.  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** StrongName. h  
+ **Intestazione:** NomeForte.h  
   
- **Libreria:** Incluso come risorsa in MsCorEE. dll  
+ **Biblioteca:** Incluso come risorsa in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

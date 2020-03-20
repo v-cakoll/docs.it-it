@@ -15,29 +15,29 @@ helpviewer_keywords:
 ms.assetid: c30a4ce3-2d3e-411a-98df-e62ac4a5dd50
 topic_type:
 - apiref
-ms.openlocfilehash: 3dfdd473b01bfe83def52f957c52e0f4d11375ad
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 23a6931b31ea2d7e4e8d1cb3dc8adf3a51216315
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434378"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175746"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a>Metodo IMetaDataEmit::DefineTypeRefByName
-Ottiene un token di metadati per un tipo definito nell'ambito specificato, che non è compreso nell'ambito corrente.  
+Ottiene un token di metadati per un tipo definito nell'ambito specificato, che non rientra nell'ambito corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
-HRESULT DefineTypeRefByName (   
-    [in]  mdToken     tkResolutionScope,   
-    [in]  LPCWSTR     szName,   
-    [out] mdTypeRef   *ptr   
+HRESULT DefineTypeRefByName (
+    [in]  mdToken     tkResolutionScope,
+    [in]  LPCWSTR     szName,
+    [out] mdTypeRef   *ptr
 );  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `tkResolutionScope`  
- in Token che specifica l'ambito di risoluzione. I tipi di token seguenti sono validi:  
+ [in] Token che specifica l'ambito di risoluzione. I seguenti tipi di token sono validi:  
   
 - `mdModuleRef`, se il tipo è definito nello stesso assembly in cui è definito il chiamante.  
   
@@ -50,17 +50,17 @@ HRESULT DefineTypeRefByName (
 - Null, se il tipo è definito globalmente.  
   
  `szName`  
- in Nome del tipo di destinazione in Unicode.  
+ [in] Nome del tipo di destinazione in Unicode.  
   
  `ptr`  
- out Puntatore al token `mdTypeRef` assegnato al tipo.  
+ [fuori] Puntatore al `mdTypeRef` token assegnato al tipo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Usato come risorsa in MSCorEE. dll  
+ **Biblioteca:** Utilizzato come risorsa in MSCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

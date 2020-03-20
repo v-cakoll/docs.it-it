@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Type Library Exporter
 - type libraries [.NET Framework], exporting
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
-ms.openlocfilehash: f421a9865e457a4e8e08644671efb55c731db28b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1d2380ff607836b5dc15e7194b90dd3a53d1d2c0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104336"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180266"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (utilità di esportazione della libreria dei tipi)
 L'utilità di esportazione della libreria dei tipi genera una libreria di tipi che descrive i tipi definiti in un assembly di Common Language Runtime.  
@@ -32,7 +32,7 @@ tlbexp assemblyName [options]
   
 |Argomento|Descrizione|  
 |--------------|-----------------|  
-|*assemblyName*|Assembly per il quale esportare una libreria dei tipi.|  
+|*Assemblyname*|Assembly per il quale esportare una libreria dei tipi.|  
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
@@ -46,15 +46,15 @@ tlbexp assemblyName [options]
 |**/silent**|Evita la visualizzazione dei messaggi di operazione riuscita. Questa opzione non può essere usata con **/silence**.|  
 |**/tlbreference:** *typelibraryname*|Forza Tlbexp.exe a risolvere in modo esplicito i riferimenti alla libreria dei tipi senza consultare il Registro di sistema. Se ad esempio l'assembly B fa riferimento all'assembly A, è possibile utilizzare questa opzione per fornire un riferimento esplicito alla libreria dei tipi anziché basarsi sulla libreria dei tipi specificata nel Registro di sistema. Viene eseguito un controllo della versione per assicurare che la versione della libreria dei tipi corrisponda alla versione dell'assembly. In caso contrario, viene generato un errore.<br /><br /> L'opzione **tlbreference** consulta comunque il Registro di sistema se l'attributo <xref:System.Runtime.InteropServices.ComImportAttribute> viene applicato a un'interfaccia che viene successivamente implementata da un altro tipo.|  
 |**/tlbrefpath:** *path*|Percorso completo di una libreria dei tipi a cui è stato fatto riferimento.|  
-|**/win32**|Nella compilazione a 64 bit questa opzione specifica che Tlbexp.exe genera una libreria dei tipi a 32 bit.|  
+|**/win32 (informazioni in inglese)**|Nella compilazione a 64 bit questa opzione specifica che Tlbexp.exe genera una libreria dei tipi a 32 bit.|  
 |**/win64**|Nella compilazione a 32 bit questa opzione specifica che Tlbexp.exe genera una libreria dei tipi a 64 bit.|  
-|**/verbose**|Specifica la modalità dettagliata. Visualizza l'elenco di tutti gli assembly a cui si fa riferimento per i quali è necessario generare una libreria dei tipi.|  
+|**/verbose (in inglese)**|Specifica la modalità dettagliata. Visualizza l'elenco di tutti gli assembly a cui si fa riferimento per i quali è necessario generare una libreria dei tipi.|  
 |**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
   
 > [!NOTE]
 > Le opzioni della riga di comando di Tlbexp.exe non sono soggette alla distinzione tra maiuscole e minuscole e per specificarle non è necessario seguire un ordine particolare. Per identificarle in modo univoco, è sufficiente digitare solo una parte dell'opzione. Ad esempio, **/n** equivale a **/nologo** e **/o:** *outfile.tlb* equivale a **/out:** *outfile.tlb*.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Tlbexp.exe consente di generare una libreria dei tipi che contiene le definizioni dei tipi definiti nell'assembly. Le applicazioni come Visual Basic 6.0 possono utilizzare la libreria dei tipi generata per operare un'associazione ai tipi .NET definiti nell'assembly.  
   
 > [!IMPORTANT]
@@ -79,7 +79,7 @@ tlbexp assemblyName [options]
   
  verrà generata la seguente libreria dei tipi:  
   
-```cpp 
+```cpp
 [id(0x60020004)]  
 HRESULT StructUnkSafe([out, retval] SAFEARRAY(IUnknown*)* pRetVal);  
 [id(0x60020005)]  

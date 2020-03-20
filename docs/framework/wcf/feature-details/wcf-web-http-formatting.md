@@ -1,15 +1,15 @@
 ---
-title: Formattazione HTTP Web WCF
+title: Formattazione HTTP Web WCFWCF Web HTTP formatting
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-ms.openlocfilehash: 884193dc26794be5e8a3c95e05be2ca43a90f6e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b6c9728fe40e26977366b73337e72b1514a12a19
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643485"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184202"
 ---
-# <a name="wcf-web-http-formatting"></a>Formattazione HTTP Web WCF
+# <a name="wcf-web-http-formatting"></a>Formattazione HTTP Web WCFWCF Web HTTP formatting
 Il modello di programmazione HTTP Web WCF consente di determinare in modo dinamico il formato migliore in cui un'operazione di servizio debba restituire la risposta. Vengono supportati due metodi per determinare un formato appropriato: automatico ed esplicito.  
   
 ## <a name="automatic-formatting"></a>Formattazione automatica  
@@ -23,10 +23,10 @@ Il modello di programmazione HTTP Web WCF consente di determinare in modo dinami
   
 4. l'impostazione del formato predefinita in WebHttpBehavior.  
   
- Se il messaggio di richiesta contiene un'intestazione Accept per un tipo che supporta Cerca l'infrastruttura di Windows Communication Foundation (WCF). Se l'intestazione `Accept` specifica le priorità per i propri tipi di supporto, queste vengono rispettate. Se non viene individuato alcun formato adatto nell'intestazione `Accept`, viene usato il valore content-type del messaggio di richiesta. Se non viene specificato alcun valore content-type adatto, viene usata l'impostazione del formato predefinita per l'operazione. Il formato predefinito viene impostato con il parametro `ResponseFormat` degli attributi <xref:System.ServiceModel.Web.WebGetAttribute> e <xref:System.ServiceModel.Web.WebInvokeAttribute>. Se non viene specificato alcun formato predefinito nell'operazione, viene usato il valore della proprietà <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A>. La formattazione automatica si basa sulla proprietà <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>. Quando questa proprietà è impostata su `true`, l'infrastruttura di WCF determina il formato migliore da usare. La selezione automatica del formato è disabilitata per impostazione predefinita per la compatibilità con le versioni precedenti. La selezione automatica del formato automatica può essere abilitata a livello di codice o tramite la configurazione. Nell'esempio seguente viene mostrato come abilitare la selezione automatica del formato nel codice.  
+ Se il messaggio di richiesta contiene un'intestazione Accept, l'infrastruttura Windows Communication Foundation (WCF) cerca un tipo supportato. Se l'intestazione `Accept` specifica le priorità per i propri tipi di supporto, queste vengono rispettate. Se non viene individuato alcun formato adatto nell'intestazione `Accept`, viene usato il valore content-type del messaggio di richiesta. Se non viene specificato alcun valore content-type adatto, viene usata l'impostazione del formato predefinita per l'operazione. Il formato predefinito viene impostato con il parametro `ResponseFormat` degli attributi <xref:System.ServiceModel.Web.WebGetAttribute> e <xref:System.ServiceModel.Web.WebInvokeAttribute>. Se non viene specificato alcun formato predefinito nell'operazione, viene usato il valore della proprietà <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A>. La formattazione automatica si basa sulla proprietà <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>. Quando questa proprietà è impostata su `true`, l'infrastruttura di WCF determina il formato migliore da usare. La selezione automatica del formato è disabilitata per impostazione predefinita per la compatibilità con le versioni precedenti. La selezione automatica del formato automatica può essere abilitata a livello di codice o tramite la configurazione. Nell'esempio seguente viene mostrato come abilitare la selezione automatica del formato nel codice.  
   
 ```csharp
-// This code assumes the service name is MyService and the service contract is IMyContract     
+// This code assumes the service name is MyService and the service contract is IMyContract
 Uri baseAddress = new Uri("http://localhost:8000");  
   
 WebServiceHost host = new WebServiceHost(typeof(MyService), baseAddress)  
@@ -47,7 +47,7 @@ try
       sep.Behaviors.Add(webBehavior);  
    }  
          // Open host to start listening for messages  
-   host.Open();        
+   host.Open();
   
   // ...  
 }  
@@ -167,7 +167,7 @@ public class Service : IService
 
 - <xref:System.UriTemplate>
 - <xref:System.UriTemplateMatch>
-- [Modello di programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Modello di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
 - [UriTemplate e UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)
-- [Panoramica del modello di programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+- [Panoramica sul modello di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
 - [Modello a oggetti per la programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

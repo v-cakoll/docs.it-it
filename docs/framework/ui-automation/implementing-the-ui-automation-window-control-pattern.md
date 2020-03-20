@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-ms.openlocfilehash: d8afaa13bd4eca9f9fcd4c8ed26c09c62ad74931
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dd677ca9f610d463acc7c69f99767bd7b8781589
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447028"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180038"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>Implementazione del pattern di controllo Window di automazione interfaccia utente
 > [!NOTE]
@@ -19,9 +19,9 @@ ms.locfileid: "74447028"
   
  In questo argomento vengono presentate le linee guida e le convenzioni per l'implementazione di <xref:System.Windows.Automation.Provider.IWindowProvider>, incluse le informazioni relative a proprietà, metodi ed eventi di <xref:System.Windows.Automation.WindowPattern> . Alla fine della panoramica sono elencati collegamenti ad altro materiale di riferimento.  
   
- Il pattern di controllo <xref:System.Windows.Automation.WindowPattern> viene usato per supportare i controlli che forniscono funzionalità fondamentali basate su finestra all'interno di un'interfaccia utente grafica (GUI) tradizionale. Esempi di controlli che devono implementare questo pattern di controllo sono le finestre dell'applicazione di primo livello, le finestre figlio dell'interfaccia a documenti multipli (MDI), i controlli del riquadro suddiviso ridimensionabili, le finestre di dialogo modali e le finestre della guida del fumetto.  
+ Il <xref:System.Windows.Automation.WindowPattern> pattern di controllo viene utilizzato per supportare i controlli che forniscono funzionalità fondamentali basate su finestre all'interno di un'interfaccia utente grafica (GUI) tradizionale. Esempi di controlli che devono implementare questo pattern di controllo includono finestre dell'applicazione di primo livello, finestre figlio mDI (Multiple Document Interface), controlli riquadro diviso ridimensionabili, finestre di dialogo modali e finestre della Guida a fumetto.  
   
-<a name="Implementation_Guidelines_and_Conventions"></a>   
+<a name="Implementation_Guidelines_and_Conventions"></a>
 ## <a name="implementation-guidelines-and-conventions"></a>Linee guida e convenzioni di implementazione  
  Quando si implementa il pattern di controllo Window, tenere presenti le linee guida e le convenzioni seguenti:  
   
@@ -35,7 +35,7 @@ ms.locfileid: "74447028"
   
 - La modalità schermo intero non è supportata da IWindowProvider perché è una funzionalità specifica delle applicazioni e non è un comportamento tipico delle finestre.  
   
-<a name="Required_Members_for_IWindowProvider"></a>   
+<a name="Required_Members_for_IWindowProvider"></a>
 ## <a name="required-members-for-iwindowprovider"></a>Membri obbligatori per IWindowProvider  
  Le proprietà, i metodi e gli eventi seguenti sono obbligatori per l'implementazione dell'interfaccia IWindowProvider.  
   
@@ -50,23 +50,23 @@ ms.locfileid: "74447028"
 |<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Metodo|nessuno|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Metodo|nessuno|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Metodo|nessuno|  
-|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|Evento|nessuno|  
-|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|Evento|nessuno|  
-|<xref:System.Windows.Automation.WindowInteractionState>|Evento|Non è garantito che sia <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
+|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|Event|nessuno|  
+|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|Event|nessuno|  
+|<xref:System.Windows.Automation.WindowInteractionState>|Event|Non è garantito che sia <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
   
-<a name="Exceptions"></a>   
+<a name="Exceptions"></a>
 ## <a name="exceptions"></a>Eccezioni  
  I provider devono generare le eccezioni seguenti.  
   
 |Tipo di eccezione|Condizione|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> -Quando un controllo non supporta un comportamento richiesto.|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> -Quando il parametro non è un numero valido.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> - Quando un controllo non supporta un comportamento richiesto.- When a control does not support a requested behavior.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> - Quando il parametro non è un numero valido.|  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica dei pattern di controllo per l'automazione interfaccia utente](ui-automation-control-patterns-overview.md)
+- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
 - [Supportare pattern di controllo in un provider di automazione interfaccia utente](support-control-patterns-in-a-ui-automation-provider.md)
-- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
-- [Panoramica dell'albero di automazione interfaccia utente](ui-automation-tree-overview.md)
-- [Usare la memorizzazione nella cache in automazione interfaccia utente](use-caching-in-ui-automation.md)
+- [Pattern di controllo di automazione interfaccia utente per i client](ui-automation-control-patterns-for-clients.md)
+- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [Utilizzare la memorizzazione nella cache per l'automazione interfaccia utente](use-caching-in-ui-automation.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7de6447a-a751-49d8-87e2-951cee77b536
 topic_type:
 - apiref
-ms.openlocfilehash: 6e73160fb1927560ad381dbb85d03796296ba9a4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8c609d730297881c0ac20dca8569f0e9492638e9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434294"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175720"
 ---
 # <a name="imetadataemitgettokenfromtypespec-method"></a>Metodo IMetaDataEmit::GetTokenFromTypeSpec
 Ottiene un token di metadati per il tipo con la firma dei metadati specificata.  
@@ -28,29 +28,29 @@ Ottiene un token di metadati per il tipo con la firma dei metadati specificata.
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
-HRESULT GetTokenFromTypeSpec (   
-    [in]  PCCOR_SIGNATURE       pvSig,   
-    [in]  ULONG                 cbSig,   
-    [out] mdTypeSpec            *ptypespec   
+HRESULT GetTokenFromTypeSpec (
+    [in]  PCCOR_SIGNATURE       pvSig,
+    [in]  ULONG                 cbSig,
+    [out] mdTypeSpec            *ptypespec
 );  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `pvSig`  
- in Firma da definire.  
+ [in] Firma da definire.  
   
  `cbSig`  
- in Conteggio dei byte in `pvSig`.  
+ [in] Numero di byte `pvSig`in .  
   
  `ptypespec`  
- out Token `mdTypeSpec` assegnato.  
+ [fuori] Token `mdTypeSpec` assegnato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Usato come risorsa in MSCorEE. dll  
+ **Biblioteca:** Utilizzato come risorsa in MSCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

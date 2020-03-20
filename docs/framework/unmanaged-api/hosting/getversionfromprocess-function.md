@@ -15,58 +15,58 @@ helpviewer_keywords:
 ms.assetid: a9f7f824-64a1-408d-8607-91c7f19d21fe
 topic_type:
 - apiref
-ms.openlocfilehash: 76c033b11f3212241827d74f4fe18ee881f20b64
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a04a0c5e6865c3664d2cb5fb341c3625e35d4d7c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127041"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178124"
 ---
 # <a name="getversionfromprocess-function"></a>Funzione GetVersionFromProcess
-Ottiene il numero di versione del Common Language Runtime (CLR) associato all'handle di processo specificato.  
+Ottiene il numero di versione di Common Language Runtime (CLR) associato all'handle di processo specificato.  
   
- Questa funzione è stata deprecata nel .NET Framework 4.  
+ Questa funzione è stata deprecata in .NET Framework 4.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT GetVersionFromProcess (  
-    [in]  HANDLE  hProcess,   
-    [out] LPWSTR  pVersion,   
-    [in]  DWORD   cchBuffer,   
+    [in]  HANDLE  hProcess,
+    [out] LPWSTR  pVersion,
+    [in]  DWORD   cchBuffer,
     [out] DWORD  *dwLength  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `hProcess`  
- in Handle per un processo.  
+ [in] Handle per un processo.  
   
  `pVersion`  
- out Buffer contenente la stringa del numero di versione al completamento del metodo.  
+ [fuori] Buffer che contiene la stringa del numero di versione al completamento del metodo.  
   
  `cchBuffer`  
- in Lunghezza del buffer della versione.  
+ [in] Lunghezza del buffer di versione.  
   
  `pdwLength`  
- out Puntatore alla lunghezza della stringa del numero di versione.  
+ [fuori] Puntatore alla lunghezza della stringa del numero di versione.  
   
 ## <a name="return-value"></a>Valore restituito  
- Questo metodo restituisce i codici di errore standard Component Object Model (COM), come definito in WinError. h, oltre ai valori seguenti.  
+ Questo metodo restituisce i codici di errore COM (Component Object Model) standard, come definito in WinError.h, oltre ai valori seguenti.  
   
 |Codice restituito|Descrizione|  
 |-----------------|-----------------|  
 |S_OK|Metodo completato correttamente.|  
-|E_INVALIDARG|`pVersion` è null e `cchBuffer` non è null o viceversa.<br /><br /> oppure<br /><br /> `hProcess` non è un handle valido per un processo.<br /><br /> oppure<br /><br /> CLR non caricato.|  
-|ERROR_INSUFFICIENT_BUFFER|`cchBuffer` è null o minore della lunghezza della stringa di versione.|  
+|E_INVALIDARG|`pVersion`è null `cchBuffer` e non è null o viceversa.<br /><br /> -oppure-<br /><br /> `hProcess`non è un handle valido per un processo.<br /><br /> -oppure-<br /><br /> CLR non è caricato.|  
+|ERROR_INSUFFICIENT_BUFFER|`cchBuffer`è null o minore della lunghezza della stringa di versione.|  
 |E_NOTIMPL|Questo metodo non è disponibile nel sistema operativo Microsoft Windows 95, Microsoft Windows 98 o Microsoft Windows Millennium Edition.|  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE. h  
+ **Intestazione:** MSCorEE.h  
   
- **Libreria:** MSCorEE. dll  
+ **Biblioteca:** Mscoree  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

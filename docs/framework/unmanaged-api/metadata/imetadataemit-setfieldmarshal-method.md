@@ -15,42 +15,42 @@ helpviewer_keywords:
 ms.assetid: be232314-7f69-4855-bfab-63361bd22307
 topic_type:
 - apiref
-ms.openlocfilehash: cdbcdb9359d295ad9bed2050ed36499feba74d9e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 1037cd4210605192870d43d88979b89af6536380
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442268"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175655"
 ---
 # <a name="imetadataemitsetfieldmarshal-method"></a>Metodo IMetaDataEmit::SetFieldMarshal
-Imposta le informazioni di marshalling PInvoke per il campo, il ritorno del metodo o il parametro del metodo a cui fa riferimento il token specificato.  
+Imposta le informazioni di marshalling PInvoke per il campo, il metodo restituito o il parametro del metodo a cui fa riferimento il token specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT SetFieldMarshal (  
-    [in]  mdToken          tk,   
-    [in]  PCCOR_SIGNATURE  pvNativeType,   
-    [in]  ULONG            cbNativeType   
+    [in]  mdToken          tk,
+    [in]  PCCOR_SIGNATURE  pvNativeType,
+    [in]  ULONG            cbNativeType
 );  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `tk`  
- in Token per l'elemento di dati di destinazione. Si tratta di un token `mdFieldDef` o `mdParamDef`.  
+ [in] Token per l'elemento di dati di destinazione. Si tratta `mdFieldDef` di `mdParamDef` un o un token.  
   
  `pvNativeType`  
- in Firma per il tipo non gestito.  
+ [in] Firma per il tipo non gestito.  
   
  `cbNativeType`  
- in Conteggio dei byte in `pvNativeType`.  
+ [in] Numero di byte `pvNativeType`in .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Usato come risorsa in MSCorEE. dll  
+ **Biblioteca:** Utilizzato come risorsa in MSCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

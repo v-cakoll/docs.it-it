@@ -9,19 +9,19 @@ helpviewer_keywords:
 - glyphs [WPF]
 - typography [WPF], GlyphRun object
 ms.assetid: 746ca769-a331-4435-9b95-f72a883b67c1
-ms.openlocfilehash: 9af07d48877fee0e94f8e5fa2556c4361795df6a
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 32e8ab7104b8ea2f985395065868ed154ca1e378
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740365"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181957"
 ---
 # <a name="introduction-to-the-glyphrun-object-and-glyphs-element"></a>Introduzione all'oggetto GlyphRun e all'elemento Glyphs
-In questo argomento vengono descritti l'oggetto <xref:System.Windows.Media.GlyphRun> e l'elemento <xref:System.Windows.Documents.Glyphs>.  
+In questo argomento <xref:System.Windows.Media.GlyphRun> vengono <xref:System.Windows.Documents.Glyphs> descritti l'oggetto e l'elemento.  
 
-<a name="text_glyphrunovw_intro"></a>   
+<a name="text_glyphrunovw_intro"></a>
 ## <a name="introduction-to-glyphrun"></a>Introduzione a GlyphRun  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] offre supporto avanzato per il testo, incluso il markup a livello di glifo, con accesso diretto ai <xref:System.Windows.Documents.Glyphs> per i clienti che desiderano intercettare e mantenere il testo dopo la formattazione. Queste funzionalità forniscono il supporto fondamentale per i diversi requisiti di rendering del testo in ognuno degli scenari seguenti.  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]fornisce supporto avanzato per il testo, <xref:System.Windows.Documents.Glyphs> incluso il markup a livello di glifo con accesso diretto a i clienti che desiderano intercettare e rendere persistente il testo dopo la formattazione. Queste funzionalità forniscono il supporto fondamentale per i diversi requisiti di rendering del testo in ognuno degli scenari seguenti.  
   
 1. Visualizzazione di documenti a formato fisso.  
   
@@ -35,37 +35,37 @@ In questo argomento vengono descritti l'oggetto <xref:System.Windows.Media.Glyph
   
     - Formato dello spooling di stampa.  
   
-3. Rappresentazione di documenti a formato fisso, inclusi i client per le versioni precedenti di Windows e altri dispositivi di elaborazione.  
+3. Rappresentazione dei documenti in formato fisso, inclusi i client per le versioni precedenti di Windows e altri dispositivi di elaborazione.  
   
 > [!NOTE]
-> <xref:System.Windows.Documents.Glyphs> e <xref:System.Windows.Media.GlyphRun> sono progettati per scenari di presentazione e stampa di documenti a formato fisso. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce diversi elementi per il layout generale e scenari di [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], ad esempio <xref:System.Windows.Controls.Label> e <xref:System.Windows.Controls.TextBlock>. Per altre informazioni sugli scenari di layout e dell'[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], vedere [Funzionalità tipografiche di WPF](typography-in-wpf.md).  
+> <xref:System.Windows.Documents.Glyphs>e <xref:System.Windows.Media.GlyphRun> sono progettati per la presentazione di documenti in formato fisso e scenari di stampa. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]fornisce diversi elementi per [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] il <xref:System.Windows.Controls.Label> layout <xref:System.Windows.Controls.TextBlock>generale e scenari quali e . Per ulteriori informazioni [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] sul layout e sugli scenari, vedere [la tipografia in WPF.](typography-in-wpf.md)  
   
-<a name="text_glyphrunovw_glyphrunobject"></a>   
+<a name="text_glyphrunovw_glyphrunobject"></a>
 ## <a name="the-glyphrun-object"></a>Oggetto GlyphRun  
- L'oggetto <xref:System.Windows.Media.GlyphRun> rappresenta una sequenza di glifi da una singola faccia di un singolo tipo di carattere a una singola dimensione e con un unico stile di rendering.  
+ L'oggetto <xref:System.Windows.Media.GlyphRun> rappresenta una sequenza di glifi da una singola faccia di un singolo tipo di carattere con una singola dimensione e con un singolo stile di rendering.  
   
- <xref:System.Windows.Media.GlyphRun> include sia i dettagli del tipo di carattere, ad esempio le posizioni del glifo <xref:System.Windows.Documents.Glyphs.Indices%2A> che le singole icone. Include anche i punti di codice Unicode originali da cui è stata generata l'esecuzione, le informazioni sul mapping dell'offset del buffer da carattere a glifo e i flag per carattere e per glifo.  
+ <xref:System.Windows.Media.GlyphRun>include entrambi i dettagli <xref:System.Windows.Documents.Glyphs.Indices%2A> del tipo di carattere, ad esempio le posizioni dei glifi e dei singoli glifi. Include inoltre i punti di codice Unicode originali da cui è stata generata l'esecuzione, le informazioni di mapping dell'offset del buffer da carattere a glifo e i flag per carattere e per glifo.  
   
- <xref:System.Windows.Media.GlyphRun> dispone di un <xref:System.Windows.FrameworkElement>di alto livello corrispondente, <xref:System.Windows.Documents.Glyphs>. <xref:System.Windows.Documents.Glyphs> possibile utilizzare nell'albero degli elementi e in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] markup per rappresentare <xref:System.Windows.Media.GlyphRun> output.  
+ <xref:System.Windows.Media.GlyphRun>dispone di un <xref:System.Windows.FrameworkElement>livello <xref:System.Windows.Documents.Glyphs>di alto livello corrispondente, . <xref:System.Windows.Documents.Glyphs>può essere utilizzato nella struttura [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ad <xref:System.Windows.Media.GlyphRun> albero dell'elemento e nel markup per rappresentare l'output.  
   
-<a name="text_glyphrunovw_glyphselement"></a>   
+<a name="text_glyphrunovw_glyphselement"></a>
 ## <a name="the-glyphs-element"></a>Elemento Glyphs  
- L'elemento <xref:System.Windows.Documents.Glyphs> rappresenta l'output di un <xref:System.Windows.Media.GlyphRun> in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Per descrivere l'elemento <xref:System.Windows.Documents.Glyphs>, viene utilizzata la sintassi di markup seguente.  
+ L'elemento <xref:System.Windows.Documents.Glyphs> rappresenta l'output di un <xref:System.Windows.Media.GlyphRun> oggetto in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. La sintassi del markup <xref:System.Windows.Documents.Glyphs> seguente viene utilizzata per descrivere l'elemento.  
   
  [!code-xaml[GlyphsOvwSample1#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSample1/CS/default.xaml#1)]  
   
  Le definizioni di proprietà seguenti corrispondono ai primi quattro attributi del markup di esempio.  
   
-|Gli|Descrizione|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
-|<xref:System.Windows.Documents.Glyphs.FontUri%2A>|Specifica un identificatore di risorsa: il nome file, l'URI (Uniform Resource Identifier) Web o il riferimento a una risorsa nell'applicazione. exe o nel contenitore.|  
+|<xref:System.Windows.Documents.Glyphs.FontUri%2A>|Specifica un identificatore di risorsa: nome file, URI (Uniform Resource Identifier) Web o riferimento a risorse nel file exe o nel contenitore dell'applicazione.|  
 |<xref:System.Windows.Documents.Glyphs.FontRenderingEmSize%2A>|Specifica le dimensioni del carattere nelle unità della superficie di disegno (l'impostazione predefinita è 0,96 pollici).|  
 |<xref:System.Windows.Documents.Glyphs.StyleSimulations%2A>|Specifica i flag per gli stili grassetto e corsivo.|  
 |<xref:System.Windows.Documents.Glyphs.BidiLevel%2A>|Specifica il livello di layout bidirezionale. I valori pari e lo zero implicano un layout da sinistra a destra, mentre i valori dispari implicano un layout da destra a sinistra.|  
   
-<a name="text_glyphrunovw_indicesproperty"></a>   
+<a name="text_glyphrunovw_indicesproperty"></a>
 ### <a name="indices-property"></a>Proprietà Indices  
- La proprietà <xref:System.Windows.Documents.Glyphs.Indices%2A> è una stringa di specifiche di glifi. Quando una sequenza di glifi forma un cluster singolo, la specifica del primo glifo nel cluster viene preceduta da una specifica del numero di glifi e di punti di codice combinati per formare il cluster. La proprietà <xref:System.Windows.Documents.Glyphs.Indices%2A> raccoglie in una stringa le proprietà seguenti.  
+ La <xref:System.Windows.Documents.Glyphs.Indices%2A> proprietà è una stringa di specifiche del glifo. Quando una sequenza di glifi forma un cluster singolo, la specifica del primo glifo nel cluster viene preceduta da una specifica del numero di glifi e di punti di codice combinati per formare il cluster. La <xref:System.Windows.Documents.Glyphs.Indices%2A> proprietà raccoglie in una stringa le proprietà seguenti.  
   
 - Indici del glifo  
   
@@ -81,15 +81,15 @@ In questo argomento vengono descritti l'oggetto <xref:System.Windows.Media.Glyph
   
  `[GlyphIndex][,[Advance][,[uOffset][,[vOffset][,[Flags]]]]]`  
   
-<a name="text_glyphrunovw_glyphmetrics"></a>   
+<a name="text_glyphrunovw_glyphmetrics"></a>
 ## <a name="glyph-metrics"></a>Metrica del glifo  
- Ogni glifo definisce le metriche che specificano la modalità di allineamento con altre <xref:System.Windows.Documents.Glyphs>. Nell'immagine seguente vengono definite le varie qualità tipografiche di due diversi caratteri glifi.  
+ Ogni glifo definisce le metriche <xref:System.Windows.Documents.Glyphs>che specificano la modalità di allineamento con altri file . Nell'immagine seguente vengono definite le varie qualità tipografiche di due diversi caratteri glifi.  
   
- ![Diagramma delle misurazioni del glifo](./media/glyph-example.png "glyph_example")  
+ ![Diagramma delle misure dei glifi](./media/glyph-example.png "glyph_example")  
   
-<a name="text_glyphrunovw_glyphsmarkup"></a>   
+<a name="text_glyphrunovw_glyphsmarkup"></a>
 ## <a name="glyphs-markup"></a>Markup dei glifi  
- Nell'esempio di codice seguente viene illustrato come utilizzare varie proprietà dell'elemento <xref:System.Windows.Documents.Glyphs> in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
+ Nell'esempio di codice riportato di <xref:System.Windows.Documents.Glyphs> seguito [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]viene illustrato come utilizzare varie proprietà dell'elemento in .  
   
  [!code-xaml[GlyphsOvwSamp2#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSamp2/CS/default.xaml#1)]  
   

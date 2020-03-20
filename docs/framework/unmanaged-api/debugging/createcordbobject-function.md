@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: b259821d-4fa7-464d-85cf-304dfffc8089
 topic_type:
 - apiref
-ms.openlocfilehash: 1d190c5b558c7c523be09267e59eab7c5611563a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 2716adcc8c79c8003202561ea2011c2469a6bc5c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793862"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179226"
 ---
 # <a name="createcordbobject-function"></a>Funzione CreateCordbObject
-Crea un'interfaccia del debugger ([ICorDebug](icordebug-interface.md)) che fornisce la funzionalità per creare un'istanza di una sessione di debug gestita in un processo remoto.  
+Crea un'interfaccia del debugger ([ICorDebug](icordebug-interface.md)) che fornisce la funzionalità per la creazione di un'istanza di una sessione di debug gestito in un processo remoto.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT CordbCreateObject (  
-       [in]  int         iDebuggerVersion,   
+       [in]  int         iDebuggerVersion,
        [out] IUnknown**  ppCordb  
 );  
 ```  
@@ -40,7 +40,7 @@ HRESULT CordbCreateObject (
  [in] Versione del debugger del processo di destinazione. Questo parametro deve essere CorDebugVersion_2_0 per il debug remoto.  
   
  `ppCordb`  
- out Puntatore a un puntatore a un oggetto di cui verrà eseguito il cast a un'interfaccia [ICorDebug](icordebug-interface.md) e restituito.  
+ [fuori] Puntatore a un puntatore a un oggetto di cui verrà eseguito il cast a un [ICorDebug](icordebug-interface.md) interfaccia e restituito.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK  
@@ -55,14 +55,14 @@ HRESULT CordbCreateObject (
  E_FAIL (o altri codici E_ restituiti)  
  Altri errori.  
   
-## <a name="remarks"></a>Note  
- L'interfaccia [ICorDebug](icordebug-interface.md) restituita in `ppCordb` è l'interfaccia di debug di primo livello per tutti i servizi di debug gestito.  
+## <a name="remarks"></a>Osservazioni  
+ Il [ICorDebug](icordebug-interface.md) interfaccia che `ppCordb` viene restituita in è l'interfaccia di debug di primo livello per tutti i servizi di debug gestito.  
   
-## <a name="requirements"></a>Requisiti di  
+## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CoreClrRemoteDebuggingInterfaces. h  
+ **Intestazione:** CoreClrRemoteDebuggingInterfaces.h  
   
- **Libreria:** mscordbi_macx86. dll  
+ **Libreria:** mscordbi_macx86.dll  
   
- **Versioni .NET Framework:** 3,5 SP1
+ Versioni di **.NET Framework:** 3.5 SP1

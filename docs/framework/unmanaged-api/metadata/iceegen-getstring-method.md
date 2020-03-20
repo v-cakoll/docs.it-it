@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7cc22562-128c-440a-9147-55ff20f173d7
 topic_type:
 - apiref
-ms.openlocfilehash: e81ef33f4fb684cce29aa9afb756451b1e5db896
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ada126b41f1c634f7d8daa58480406ac26f92377
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426166"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177901"
 ---
 # <a name="iceegengetstring-method"></a>Metodo ICeeGen::GetString
-Ottiene la stringa archiviata nell'indirizzo virtuale relativo specificato.  
+Ottiene la stringa archiviata in corrispondenza dell'indirizzo virtuale relativo specificato.  
   
  Questo metodo è obsoleto e non deve essere utilizzato.  
   
@@ -31,24 +31,24 @@ Ottiene la stringa archiviata nell'indirizzo virtuale relativo specificato.
   
 ```cpp  
 HRESULT GetString (  
-    [in]  ULONG      RVA,   
+    [in]  ULONG      RVA,
     [out] LPWSTR     *lpString  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `RVA`  
- in Indirizzo virtuale relativo della stringa da restituire.  
+ [in] Indirizzo virtuale relativo della stringa da restituire.  
   
  `lpString`  
- out Stringa restituita.  
+ [fuori] Stringa restituita.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Usato come risorsa in MsCorEE. dll  
+ **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Aximp.exe
 - Windows Forms ActiveX Control Importer
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
-ms.openlocfilehash: a1b061b480b3e22b136a6373ddb87cf9d2233457
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 6d58d1df81780c3033eab7c1ac3e860adeb374b1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715778"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180421"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (utilità di importazione di controlli ActiveX di Windows Form)
 L'utilità di importazione di controlli ActiveX converte in un controllo Windows Form le definizioni dei tipi in una libreria di tipi COM per un controllo ActiveX.  
@@ -32,22 +32,22 @@ L'utilità di importazione di controlli ActiveX converte in un controllo Windows
 aximp [options]{file.dll | file.ocx}  
 ```  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 |Argomento|Descrizione|  
 |--------------|-----------------|  
-|*file*|Nome del file di origine contenente il controllo ActiveX da convertire. L'argomento del file deve avere l'estensione .dll oppure .ocx.|  
+|*ﬁle*|Nome del file di origine contenente il controllo ActiveX da convertire. L'argomento del file deve avere l'estensione .dll oppure .ocx.|  
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
 |`/delaysign`|Specifica ad Aximp.exe di firmare il controllo risultante utilizzando la firma ritardata. È necessario specificare questa opzione con l'opzione `/keycontainer:`, `/keyfile:` o `/publickey:`. Per altre informazioni sulla firma ritardata, vedere [Ritardo della firma di un assembly](../../standard/assembly/delay-sign.md).|  
 |`/help`|Visualizza la sintassi e le opzioni di comando dello strumento.|  
-|`/keycontainer:` *containerName*|Firma il controllo risultante con un nome sicuro usando la coppia di chiavi pubblica/privata presente nel contenitore di chiavi specificato da *containerName*.|  
-|*nome file* `/keyfile:`|Firma il controllo risultante con un nome sicuro usando la coppia di chiavi pubblica/privata ufficiale del server di pubblicazione trovata in *filename*.|  
+|`/keycontainer:`*containerName (nomecontenitore)*|Firma il controllo risultante con un nome sicuro usando la coppia di chiavi pubblica/privata presente nel contenitore di chiavi specificato da *containerName*.|  
+|`/keyfile:`*nome file*|Firma il controllo risultante con un nome sicuro usando la coppia di chiavi pubblica/privata ufficiale del server di pubblicazione trovata in *filename*.|  
 |`/nologo`|Evita la visualizzazione del messaggio di avvio Microsoft.|  
-|*nome file* `/out:`|Specifica il nome dell'assembly da creare.|  
-|*nome file* `/publickey:`|Firma il controllo risultante con un nome sicuro usando la chiave pubblica presente nel file specificato da *filename*.|  
-|*nome file* `/rcw:`|Utilizza il Runtime Callable Wrapper specificato invece di generarne uno nuovo. È possibile specificare più istanze. La directory corrente viene usata per i percorsi relativi. Per altre informazioni, vedere la sezione [Runtime Callable Wrapper](../../standard/native-interop/runtime-callable-wrapper.md) .|  
+|`/out:`*nome file*|Specifica il nome dell'assembly da creare.|  
+|`/publickey:`*nome file*|Firma il controllo risultante con un nome sicuro usando la chiave pubblica presente nel file specificato da *filename*.|  
+|`/rcw:`*nome file*|Utilizza il Runtime Callable Wrapper specificato invece di generarne uno nuovo. È possibile specificare più istanze. La directory corrente viene usata per i percorsi relativi. Per altre informazioni, vedere la sezione [Runtime Callable Wrapper](../../standard/native-interop/runtime-callable-wrapper.md) .|  
 |`/silent`|Evita la visualizzazione dei messaggi di operazione riuscita.|  
 |`/source`|Genera codice sorgente C# per il wrapper di Windows Form.|  
 |`/verbose`|Specifica la modalità dettagliata. Visualizza ulteriori informazioni sullo stato.|  
@@ -73,11 +73,11 @@ aximp [options]{file.dll | file.ocx}
 ## <a name="example"></a>Esempio  
  Il comando che segue genera MediaPlayer.dll e AxMediaPlayer.dll per il controllo `msdxm.ocx` di Media Player.  
   
-```console 
+```console
 aximp c:\systemroot\system32\msdxm.ocx  
 ```  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Strumenti](index.md)
-- [Ildasm.exe (Disassembler IL)](ildasm-exe-il-disassembler.md)
+- [Ildasm.exe (disassembler IL)](ildasm-exe-il-disassembler.md)

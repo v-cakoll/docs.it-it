@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a7408d51-0bce-45a2-b58f-da4660bbc039
 topic_type:
 - apiref
-ms.openlocfilehash: 9ac6eba18ae23dc80a8dc90383aa67cfe41b39ff
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 71f6c496816fec1a7537f5ccdfdc1b47d17da871
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937410"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177112"
 ---
 # <a name="imetadatatablesgetrow-method"></a>Metodo IMetaDataTables::GetRow
 Ottiene la riga in corrispondenza dell'indice di riga specificato, nella tabella in corrispondenza dell'indice di tabella specificato.  
@@ -28,7 +28,7 @@ Ottiene la riga in corrispondenza dell'indice di riga specificato, nella tabella
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
-HRESULT GetRow (   
+HRESULT GetRow (
     [in]  ULONG   ixTbl,  
     [in]  ULONG   rid,  
     [out] void    **ppRow  
@@ -37,26 +37,26 @@ HRESULT GetRow (
   
 ## <a name="parameters"></a>Parametri  
  `ixTbl`  
- in Indice della tabella da cui verrà recuperata la riga.  
+ [in] Indice della tabella da cui verrà recuperata la riga.  
   
  `rid`  
- in Indice della riga da ottenere.  
+ [in] Indice della riga da ottenere.  
   
  `ppRow`  
- out Puntatore a un puntatore alla riga.  
+ [fuori] Puntatore a un puntatore alla riga.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
 
-  Non è consigliabile usare questo metodo, perché non restituisce risultati coerenti. Per informazioni sulla tabella GUID, vedere la documentazione Common Language Infrastructure (CLI), in particolare "Partition II: Metadata Definition and Semantics". La documentazione è disponibile online; vedere [ECMA C# and Common Language Infrastructure Standards](../../../standard/components.md#applicable-standards) e [standard ECMA-335-Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).  
+  Non è consigliabile utilizzare questo metodo, perché non restituisce risultati coerenti. Per informazioni sulla tabella GUID, vedere la documentazione di Common Language Infrastructure (CLI), in particolare "Partition II: Metadata Definition and Semantics". La documentazione è disponibile online; vedere [ECMA c'è e Common Language Infrastructure Standards](../../../standard/components.md#applicable-standards) e Standard [ECMA-335 - Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
-## <a name="requirements"></a>Requisiti di  
+## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Usato come risorsa in MsCorEE. dll  
+ **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
   
- **.NET Framework versioni**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

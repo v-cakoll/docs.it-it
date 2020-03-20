@@ -2,17 +2,17 @@
 title: Variabili e argomenti
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-ms.openlocfilehash: 251641c924bbf33c176f519f8fc4f9dec59e2eb8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f975f46a1858d204d12588f7570b7ea5a365e650
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962202"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182687"
 ---
 # <a name="variables-and-arguments"></a>Variabili e argomenti
-In Windows Workflow Foundation (WF) le variabili rappresentano l'archiviazione di dati e gli argomenti rappresentano il flusso di dati all'interno e all'esterno di un'attività. Un'attività dispone di un set di argomenti che costituiscono la firma dell'attività. Inoltre, un'attività può gestire un elenco di variabili a cui uno sviluppatore può aggiungere o rimuovere variabili durante la progettazione di un flusso di lavoro. Un argomento viene associato usando un'espressione che restituisce un valore.  
+In Windows Workflow Foundation (WF), le variabili rappresentano l'archiviazione di dati e argomenti rappresentano il flusso di dati all'esterno e all'esterno di un'attività. Un'attività dispone di un set di argomenti che costituiscono la firma dell'attività. Inoltre, un'attività può gestire un elenco di variabili a cui uno sviluppatore può aggiungere o rimuovere variabili durante la progettazione di un flusso di lavoro. Un argomento viene associato usando un'espressione che restituisce un valore.  
   
-## <a name="variables"></a>Variabili  
+## <a name="variables"></a>variables  
  Le variabili sono percorsi di archiviazione per i dati e vengono dichiarate come parte della definizione di un flusso di lavoro. Le variabili accettano valori in fase di esecuzione che vengono poi archiviati come parte dello stato di un'istanza del flusso di lavoro. Una definizione di variabile specifica il tipo di variabile e, facoltativamente, il nome. Nel codice seguente viene mostrato come dichiarare una variabile, assegnarvi un valore usando un'attività <xref:System.Activities.Statements.Assign%601>, quindi come visualizzare il relativo valore nella console usando un'attività <xref:System.Activities.Statements.WriteLine>.  
   
 ```csharp  
@@ -102,7 +102,7 @@ Variable<string> var3 = new Variable<string>();
 Activity wf = new Sequence  
 {  
     Variables = { var1, var2, var3 },  
-    Activities =   
+    Activities =
     {  
         new Assign<string>()  
         {  
@@ -141,4 +141,4 @@ public sealed class Add : CodeActivity<int>
 }  
 ```  
   
- Per ulteriori informazioni sull'utilizzo di argomenti, variabili ed espressioni nel codice, vedere [creazione di flussi di lavoro, attività ed espressioni tramite codice](authoring-workflows-activities-and-expressions-using-imperative-code.md) imperativo e [argomenti obbligatori e gruppi di overload](required-arguments-and-overload-groups.md).
+ Per ulteriori informazioni sull'utilizzo di argomenti, variabili ed espressioni nel codice, vedere Creazione di flussi di [lavoro, attività ed espressioni mediante codice imperativo](authoring-workflows-activities-and-expressions-using-imperative-code.md) [e argomenti obbligatori e gruppi](required-arguments-and-overload-groups.md)di overload .

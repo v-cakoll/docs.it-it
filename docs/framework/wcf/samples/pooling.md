@@ -2,12 +2,12 @@
 title: Pooling
 ms.date: 03/30/2017
 ms.assetid: 688dfb30-b79a-4cad-a687-8302f8a9ad6a
-ms.openlocfilehash: d2962004376cf6f0752067d4e03828cd894efd01
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 46abc2c9c667ea7614581d7fafaa8e174db7f14f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716507"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183400"
 ---
 # <a name="pooling"></a>Pooling
 In questo esempio viene illustrato come estendere Windows Communication Foundation (WCF) per supportare il pool di oggetti. L'esempio illustra come creare un attributo sintatticamente e semanticamente simile alla funzionalità dell'attributo `ObjectPoolingAttribute` di Enterprise Services. Il pool degli oggetti può fornire una spinta notevole alle prestazioni di un'applicazione. Tuttavia, può avere l'effetto contrario se non utilizzato correttamente. Il pool degli oggetti consente di ridurre il sovraccarico dovuto alla creazione continua di oggetti frequentemente utilizzati che richiedono un'inizializzazione estesa. Tuttavia, se una chiamata a un metodo su un oggetto del pool richiede una quantità considerevole di tempo, il pool degli oggetti mette in coda richieste aggiuntive appena viene raggiunta la dimensione del pool massima. Pertanto può non riuscire a soddisfare richieste di creazione di oggetti generando un'eccezione di timeout.  
@@ -15,14 +15,14 @@ In questo esempio viene illustrato come estendere Windows Communication Foundati
 > [!NOTE]
 > La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
   
- Il primo passaggio nella creazione di un'estensione WCF consiste nel decidere il punto di estensibilità da usare.  
+ Il primo passaggio nella creazione di un'estensione WCF consiste nel decidere il punto di estendibilità da utilizzare.  
   
- In WCF il termine *Dispatcher* fa riferimento a un componente runtime responsabile della conversione dei messaggi in arrivo in chiamate al metodo sul servizio dell'utente e della conversione di valori restituiti da tale metodo in un messaggio in uscita. Un servizio WCF crea un dispatcher per ogni endpoint. Un client WCF deve usare un dispatcher se il contratto associato a tale client è un contratto duplex.  
+ In WCF il termine *dispatcher* fa riferimento a un componente di runtime responsabile della conversione dei messaggi in arrivo in chiamate al metodo nel servizio dell'utente e della conversione dei valori restituiti da tale metodo a un messaggio in uscita. Un servizio WCF crea un dispatcher per ogni endpoint. Un client WCF deve utilizzare un dispatcher se il contratto associato a tale client è un contratto duplex.  
   
  I dispatcher del canale e dell'endpoint offrono estensibilità sul canale e sul contratto esponendo le varie proprietà che controllano il comportamento del dispatcher. La proprietà <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.DispatchRuntime%2A> consente inoltre di ispezionare, modificare e personalizzare la modalità di autenticazione dei certificati. Questo esempio si concentra sulla proprietà <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> che punta all'oggetto che fornisce le istanze della classe del servizio.  
   
 ## <a name="the-iinstanceprovider"></a>Provider di istanze  
- In WCF, il dispatcher crea istanze della classe del servizio usando un <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>, che implementa l'interfaccia <xref:System.ServiceModel.Dispatcher.IInstanceProvider>. Questa interfaccia ha tre metodi:  
+ In WCF, il dispatcher crea istanze <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>della classe <xref:System.ServiceModel.Dispatcher.IInstanceProvider> del servizio utilizzando un oggetto , che implementa l'interfaccia . Questa interfaccia ha tre metodi:  
   
 - <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>: quando un messaggio arriva il dispatcher chiama il metodo <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> per creare un'istanza della classe del servizio al fine di elaborare il messaggio. La frequenza delle chiamate a questo metodo è determinata dalla proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>. Ad esempio, se la proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> è impostata su <xref:System.ServiceModel.InstanceContextMode.PerCall> viene creata una nuova istanza della classe del servizio per elaborare ogni messaggio che arriva, pertanto il metodo <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> viene chiamato ogni qualvolta arriva un messaggio.  
   
@@ -55,7 +55,7 @@ object IInstanceProvider.GetInstance(InstanceContext instanceContext, Message me
   
     idleTimer.Stop();  
   
-    return obj;            
+    return obj;
 }  
 ```  
   
@@ -72,15 +72,15 @@ void IInstanceProvider.ReleaseInstance(InstanceContext instanceContext, object i
         WritePoolMessage(  
         ResourceHelper.GetString("MsgObjectPooled"));  
   
-        // When the service goes completely idle (no requests   
+        // When the service goes completely idle (no requests
         // are being processed), the idle timer is started  
         if (activeObjectsCount == 0)  
-            idleTimer.Start();                       
+            idleTimer.Start();
     }  
 }  
 ```  
   
- Il metodo `ReleaseInstance` fornisce una funzionalità di pulizia dell'inizializzazione. Normalmente il pool gestisce un numero minimo di oggetti per la durata del pool. Ci possono essere, tuttavia, periodi di utilizzo eccessivo che richiedono la creazione di oggetti aggiuntivi nel pool per raggiungere il limite massimo specificato nella configurazione. Successivamente, quando il pool diviene meno attivo, quegli oggetti in surplus possono divenire un sovraccarico aggiuntivo. Pertanto, quando il conteggio `activeObjectsCount` si azzera, viene avviato un timer, precedentemente inattivo, che inizia ed esegue un ciclo di pulizia.  
+ Il `ReleaseInstance` metodo fornisce una funzionalità di "inizializzazione di pulizia". Normalmente il pool gestisce un numero minimo di oggetti per la durata del pool. Ci possono essere, tuttavia, periodi di utilizzo eccessivo che richiedono la creazione di oggetti aggiuntivi nel pool per raggiungere il limite massimo specificato nella configurazione. Successivamente, quando il pool diviene meno attivo, quegli oggetti in surplus possono divenire un sovraccarico aggiuntivo. Pertanto, quando il conteggio `activeObjectsCount` si azzera, viene avviato un timer, precedentemente inattivo, che inizia ed esegue un ciclo di pulizia.  
   
 ## <a name="adding-the-behavior"></a>Aggiunta del comportamento.  
  Le estensioni del livello del dispatcher vengono collegate utilizzando i comportamenti seguenti:  
@@ -101,7 +101,7 @@ void IInstanceProvider.ReleaseInstance(InstanceContext instanceContext, object i
   
  Questo esempio utilizza un attributo personalizzato. Quando la classe <xref:System.ServiceModel.ServiceHost> viene costruita esamina gli attributi utilizzati nella definizione del tipo del servizio e aggiunge i comportamenti disponibili alla raccolta di comportamenti della descrizione del servizio.  
   
- L'interfaccia <xref:System.ServiceModel.Description.IServiceBehavior> contiene tre metodi: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>, <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> e <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Il metodo <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> viene utilizzato per assicurare che il comportamento possa essere applicato al servizio. In questo esempio, l'implementazione assicura che il servizio non sia configurato con <xref:System.ServiceModel.InstanceContextMode.Single>. Il metodo <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> viene utilizzato per configurare le associazioni del servizio. Non è obbligatorio in questo scenario. Il metodo <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> viene utilizzato per configurare i dispatcher del servizio. Questo metodo viene chiamato da WCF quando è in corso l'inizializzazione del <xref:System.ServiceModel.ServiceHost>. I parametri seguenti vengono passati in questo metodo:  
+ L'interfaccia <xref:System.ServiceModel.Description.IServiceBehavior> contiene tre metodi: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>, <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> e <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Il metodo <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> viene utilizzato per assicurare che il comportamento possa essere applicato al servizio. In questo esempio, l'implementazione assicura che il servizio non sia configurato con <xref:System.ServiceModel.InstanceContextMode.Single>. Il metodo <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> viene utilizzato per configurare le associazioni del servizio. Non è obbligatorio in questo scenario. Il metodo <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> viene utilizzato per configurare i dispatcher del servizio. Questo metodo viene chiamato <xref:System.ServiceModel.ServiceHost> da WCF quando il viene inizializzato. I parametri seguenti vengono passati in questo metodo:  
   
 - `Description`: questo argomento fornisce la descrizione del servizio per l'intero servizio. Può essere utilizzato per controllare dati della descrizione sugli endpoint del servizio, contratti, associazioni e altri dati.  
   
@@ -114,7 +114,7 @@ void IServiceBehavior.ApplyDispatchBehavior(ServiceDescription description, Serv
 {  
     // Create an instance of the ObjectPoolInstanceProvider.  
     ObjectPoolingInstanceProvider instanceProvider = new  
-           ObjectPoolingInstanceProvider(description.ServiceType,   
+           ObjectPoolingInstanceProvider(description.ServiceType,
                                                     minPoolSize);  
   
     // Forward the call if we created a ServiceThrottlingBehavior.  
@@ -123,29 +123,29 @@ void IServiceBehavior.ApplyDispatchBehavior(ServiceDescription description, Serv
         ((IServiceBehavior)this.throttlingBehavior).ApplyDispatchBehavior(description, serviceHostBase);  
     }  
   
-    // In case there was already a ServiceThrottlingBehavior   
-    // (this.throttlingBehavior==null), it should have initialized   
-    // a single ServiceThrottle on all ChannelDispatchers.    
-    // As we loop through the ChannelDispatchers, we verify that   
+    // In case there was already a ServiceThrottlingBehavior
+    // (this.throttlingBehavior==null), it should have initialized
+    // a single ServiceThrottle on all ChannelDispatchers.
+    // As we loop through the ChannelDispatchers, we verify that
     // and modify the ServiceThrottle to guard MaxPoolSize.  
     ServiceThrottle throttle = null;  
   
-    foreach (ChannelDispatcherBase cdb in   
+    foreach (ChannelDispatcherBase cdb in
             serviceHostBase.ChannelDispatchers)  
     {  
         ChannelDispatcher cd = cdb as ChannelDispatcher;  
         if (cd != null)  
         {  
-            // Make sure there is exactly one throttle used by all   
-            // endpoints. If there were others, we could not enforce   
+            // Make sure there is exactly one throttle used by all
+            // endpoints. If there were others, we could not enforce
             // MaxPoolSize.  
-            if ((this.throttlingBehavior == null) &&   
+            if ((this.throttlingBehavior == null) &&
                         (this.maxPoolSize != Int32.MaxValue))  
             {  
                 throttle ??= cd.ServiceThrottle;
                 if (cd.ServiceThrottle == null)  
                 {  
-                    throw new   
+                    throw new
 InvalidOperationException(ResourceHelper.GetString("ExNullThrottle"));  
                 }  
                 if (throttle != cd.ServiceThrottle)  
@@ -157,15 +157,15 @@ InvalidOperationException(ResourceHelper.GetString("ExNullThrottle"));
              foreach (EndpointDispatcher ed in cd.Endpoints)  
              {  
                  // Assign it to DispatchBehavior in each endpoint.  
-                 ed.DispatchRuntime.InstanceProvider =   
+                 ed.DispatchRuntime.InstanceProvider =
                                       instanceProvider;  
              }  
          }  
      }  
   
-     // Set the MaxConcurrentInstances to limit the number of items   
+     // Set the MaxConcurrentInstances to limit the number of items
      // that will ever be requested from the pool.  
-     if ((throttle != null) && (throttle.MaxConcurrentInstances >   
+     if ((throttle != null) && (throttle.MaxConcurrentInstances >
                                       this.maxPoolSize))  
      {  
          throttle.MaxConcurrentInstances = this.maxPoolSize;  
@@ -175,10 +175,10 @@ InvalidOperationException(ResourceHelper.GetString("ExNullThrottle"));
   
  Oltre a un'implementazione della classe <xref:System.ServiceModel.Description.IServiceBehavior>, la classe <xref:System.EnterpriseServices.ObjectPoolingAttribute> ha molti membri per personalizzare il pool di oggetti utilizzando gli argomenti dell'attributo. Questi membri includono <xref:System.EnterpriseServices.ObjectPoolingAttribute.MaxPoolSize%2A>, <xref:System.EnterpriseServices.ObjectPoolingAttribute.MinPoolSize%2A> e <xref:System.EnterpriseServices.ObjectPoolingAttribute.CreationTimeout%2A>, per corrispondere al set di funzionalità del pool di oggetti fornito da Enterprise Services .NET.  
   
- Il comportamento del pool di oggetti può ora essere aggiunto a un servizio WCF annotando l'implementazione del servizio con l'attributo `ObjectPooling` personalizzato appena creato.  
+ Il comportamento di pooling di oggetti può ora essere aggiunto a un servizio `ObjectPooling` WCF annotando l'implementazione del servizio con l'attributo personalizzato appena creato.  
   
 ```csharp  
-[ObjectPooling(MaxPoolSize=1024, MinPoolSize=10, CreationTimeout=30000)]      
+[ObjectPooling(MaxPoolSize=1024, MinPoolSize=10, CreationTimeout=30000)]
 public class PoolService : IPoolService  
 {  
   // …  
@@ -203,7 +203,7 @@ public class ObjectPooledWorkService : IDoWork
     public void DoWork()  
     {  
         ColorConsole.WriteLine(ConsoleColor.Blue, "ObjectPooledWorkService.GetData() completed.");  
-    }          
+    }
 }  
 ```  
   
@@ -234,20 +234,20 @@ Press <ENTER> to exit.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1. Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Assicurarsi di aver eseguito la procedura di [installazione una tantera per Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Per compilare la soluzione, seguire le istruzioni riportate in [compilazione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Per compilare la soluzione, seguire le istruzioni in [Compilazione di Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Per eseguire l'esempio in una configurazione su un singolo o più computer, seguire le istruzioni in Esecuzione di [Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!NOTE]
 > Se si usa Svcutil.exe per rigenerare la configurazione di questo esempio, assicurarsi di modificare il nome dell'endpoint nella configurazione client in modo che corrisponda al codice client.  
   
 > [!IMPORTANT]
 > È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
->   
+>
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) Esempi per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti gli esempi e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (WCF). Questo esempio si trova nella directory seguente.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Pooling`  

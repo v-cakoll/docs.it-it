@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 88fb7ef3-bbdf-429c-b678-c9c153456461
 topic_type:
 - apiref
-ms.openlocfilehash: aa5d66d2408010d7a7b52ec68a18f667097795ae
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a71d8694ec8c5bd35ecd3e98ed32e05bc7b382fc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450183"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177623"
 ---
 # <a name="imetadataemitdefineuserstring-method"></a>Metodo IMetaDataEmit::DefineUserString
 Ottiene un token di metadati per la stringa letterale specificata.  
@@ -28,29 +28,29 @@ Ottiene un token di metadati per la stringa letterale specificata.
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
-HRESULT DefineUserString (   
-    [in]  LPCWSTR     szString,   
-    [in]  ULONG       cchString,   
-    [out] mdString    *pstk   
+HRESULT DefineUserString (
+    [in]  LPCWSTR     szString,
+    [in]  ULONG       cchString,
+    [out] mdString    *pstk
 );  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `szString`  
- in Stringa utente da archiviare.  
+ [in] Stringa utente da archiviare.  
   
  `cchString`  
- in Numero di caratteri wide in `szString`.  
+ [in] Numero di caratteri `szString`di tipo "wide" in .  
   
  `pstk`  
- out Token di stringa assegnato.  
+ [fuori] Token di stringa assegnato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Usato come risorsa in MSCorEE. dll  
+ **Biblioteca:** Utilizzato come risorsa in MSCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 31214d3a-715e-49af-92b3-0fd11e4f218a
 topic_type:
 - apiref
-ms.openlocfilehash: 577a4f6bb8315cfb1cb462703dd0cb9b23b60704
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 64c70fe0b657047ae35dccb763fa57120403deef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434064"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177147"
 ---
 # <a name="imetadatatablesgetcodedtokeninfo-method"></a>Metodo IMetaDataTables::GetCodedTokenInfo
 Ottiene un puntatore a una matrice di token associati all'indice di riga specificato.  
@@ -28,7 +28,7 @@ Ottiene un puntatore a una matrice di token associati all'indice di riga specifi
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
-HRESULT GetCodedTokenInfo (   
+HRESULT GetCodedTokenInfo (
     [in]  ULONG       ixCdTkn,  
     [out] ULONG       *pcTokens,  
     [out] ULONG       **ppTokens,  
@@ -38,23 +38,23 @@ HRESULT GetCodedTokenInfo (
   
 ## <a name="parameters"></a>Parametri  
  `ixCdTkn`  
- in Tipo di token codificato da restituire.  
+ [in] Tipo di token codificato da restituire.  
   
  `pcTokens`  
- out Puntatore alla lunghezza del `ppTokens`.  
+ [fuori] Puntatore alla lunghezza `ppTokens`di .  
   
  `ppTokens`  
- out Puntatore a un puntatore a una matrice che contiene l'elenco dei token restituiti.  
+ [fuori] Puntatore a un puntatore a una matrice che contiene l'elenco di token restituiti.  
   
  `ppName`  
- out Puntatore a un puntatore al nome del token in `ixCdTkn`.  
+ [fuori] Puntatore a un puntatore al `ixCdTkn`nome del token in .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Usato come risorsa in MsCorEE. dll  
+ **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

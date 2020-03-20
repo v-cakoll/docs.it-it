@@ -6,18 +6,18 @@ helpviewer_keywords:
 - platform invoke, attribute fields
 - attribute fields in platform invoke, EntryPoint
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
-ms.openlocfilehash: a55e460f565c33731c5b0b29ab42b8263d3690e2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c5f8f735dd3e8c359f88044a532c29303237acc8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125161"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181305"
 ---
 # <a name="specifying-an-entry-point"></a>Specifica di un punto di ingresso
 
 Un punto di ingresso identifica la posizione di una funzione in una DLL. All'interno di un progetto gestito, il nome originale o il punto di ingresso ordinale di una funzione di destinazione identifica tale funzione attraverso il limite di interoperabilità. È anche possibile mappare il punto di ingresso a un nome diverso, rinominando in effetti la funzione.  
   
- Di seguito è riportato un elenco di possibili motivi per rinominare una funzione di DLL:  
+ Di seguito è riportato un elenco dei possibili motivi per rinominare una funzione DLL:  
   
 - Evitare l'uso di nomi delle funzioni API con distinzione tra maiuscole e minuscole  
   
@@ -30,7 +30,7 @@ Un punto di ingresso identifica la posizione di una funzione in una DLL. All'int
  Questo argomento illustra come rinominare una funzione di DLL nel codice gestito.  
   
 ## <a name="renaming-a-function-in-visual-basic"></a>Ridenominazione di una funzione in Visual Basic  
- 
+
 Visual Basic usa la parola chiave **Function** nell'istruzione **Declare** per impostare il campo <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType>. L'esempio seguente mostra una dichiarazione di base.  
   
 ```vb

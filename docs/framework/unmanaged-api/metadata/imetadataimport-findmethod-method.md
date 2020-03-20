@@ -15,57 +15,57 @@ helpviewer_keywords:
 ms.assetid: 0f9bde1d-e306-438d-941b-d0925b322304
 topic_type:
 - apiref
-ms.openlocfilehash: 470b6511366cef1680eaf97f9ab376736add55c4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 53b3d94e8b1e273fcbc041d25a5bf586a12735c0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437891"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177257"
 ---
 # <a name="imetadataimportfindmethod-method"></a>Metodo IMetaDataImport::FindMethod
-Ottiene un puntatore al token MethodDef per il metodo racchiuso dall'<xref:System.Type> specificato e con il nome e la firma dei metadati specificati.  
+Ottiene un puntatore al token MethodDef per il <xref:System.Type> metodo racchiuso tra il nome e la firma dei metadati specificati.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT FindMethod (  
    [in]  mdTypeDef          td,  
-   [in]  LPCWSTR            szName,   
-   [in]  PCCOR_SIGNATURE    pvSigBlob,   
-   [in]  ULONG              cbSigBlob,   
+   [in]  LPCWSTR            szName,
+   [in]  PCCOR_SIGNATURE    pvSigBlob,
+   [in]  ULONG              cbSigBlob,
    [out] mdMethodDef        *pmb  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `td`  
- in Token `mdTypeDef` per il tipo (una classe o interfaccia) che racchiude il membro da cercare. Se questo valore è `mdTokenNil`, la ricerca viene eseguita per una funzione globale.  
+ [in] Token `mdTypeDef` per il tipo (una classe o un'interfaccia) che racchiude il membro da cercare. Se questo `mdTokenNil`valore è , la ricerca viene eseguita per una funzione globale.  
   
  `szName`  
- in Nome del metodo da cercare.  
+ [in] Nome del metodo da cercare.  
   
  `pvSigBlob`  
- in Puntatore alla firma dei metadati binari del metodo.  
+ [in] Puntatore alla firma dei metadati binari del metodo.  
   
  `cbSigBlob`  
- in Dimensioni in byte del `pvSigBlob`.  
+ [in] Dimensione in byte `pvSigBlob`di .  
   
  `pmb`  
- out Puntatore al token MethodDef corrispondente.  
+ [fuori] Puntatore al token MethodDef corrispondente.  
   
 ## <a name="remarks"></a>Osservazioni  
- Il metodo viene specificato utilizzando la classe o l'interfaccia di inclusione (`td`), il nome (`szName`) e, facoltativamente, la relativa firma (`pvSigBlob`). Potrebbero essere presenti più metodi con lo stesso nome in una classe o in un'interfaccia. In tal caso, passare la firma del metodo per trovare la corrispondenza univoca.  
+ Il metodo viene specificato utilizzando la`td`relativa classe`szName`o interfaccia di inclusione ( ), il nome ( ) e, facoltativamente, la firma (`pvSigBlob`). Potrebbero essere presenti più metodi con lo stesso nome in una classe o interfaccia. In tal caso, passare la firma del metodo per trovare la corrispondenza univoca.  
   
- La firma passata a `FindMethod` deve essere stata generata nell'ambito corrente, perché le firme sono associate a un ambito specifico. Una firma può incorporare un token che identifica la classe o il tipo di valore contenitore. Il token è un indice nella tabella TypeDef locale. Non è possibile compilare una firma in fase di esecuzione all'esterno del contesto dell'ambito corrente e utilizzare tale firma come input per l'input per `FindMethod`.  
+ La firma `FindMethod` passata deve essere stata generata nell'ambito corrente, perché le firme sono associate a un ambito specifico. Una firma può incorporare un token che identifica la classe o il tipo di valore che lo contiene. Il token è un indice nella tabella TypeDef locale. Non è possibile compilare un'firma in fase di esecuzione all'esterno `FindMethod`del contesto dell'ambito corrente e utilizzare tale firma come input per l'input in .  
   
- `FindMethod` trova solo i metodi definiti direttamente nella classe o nell'interfaccia; non trova metodi ereditati.  
+ `FindMethod`trova solo i metodi che sono stati definiti direttamente nella classe o nell'interfaccia; non trova i metodi ereditati.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Incluso come risorsa in MsCorEE. dll  
+ **Biblioteca:** Incluso come risorsa in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

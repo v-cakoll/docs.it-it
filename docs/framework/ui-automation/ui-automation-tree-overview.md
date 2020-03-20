@@ -5,12 +5,12 @@ helpviewer_keywords:
 - automation tree
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
-ms.openlocfilehash: f541aab7ed5aae48b943ba5699366fe6a3f21a4c
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: a0b888e8ecc80e3739c583931a86da3cdb7242d1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741387"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179457"
 ---
 # <a name="ui-automation-tree-overview"></a>Panoramica dell'albero di automazione dell'interfaccia utente
 > [!NOTE]
@@ -18,13 +18,13 @@ ms.locfileid: "75741387"
   
  Prodotti e script di test di assistive technology esplorano l'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] per raccogliere informazioni sull'[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] e i relativi elementi.  
   
- All'interno dell'albero [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] è presente un elemento radice (<xref:System.Windows.Automation.AutomationElement.RootElement%2A>) che rappresenta il desktop corrente e i cui elementi figlio rappresentano le finestre dell'applicazione. Ognuno di questi elemento figlio può contenere elementi che rappresentano parti dell'[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], ad esempio menu, pulsanti, barre degli strumenti e caselle di riepilogo. Tali elementi, a loro volta, possono contenere altri elementi, ad esempio voci di elenco.  
+ All'interno della [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] struttura ad<xref:System.Windows.Automation.AutomationElement.RootElement%2A>albero è presente un elemento radice ( ) che rappresenta il desktop corrente e i cui elementi figlio rappresentano le finestre dell'applicazione. Ognuno di questi elemento figlio può contenere elementi che rappresentano parti dell'[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], ad esempio menu, pulsanti, barre degli strumenti e caselle di riepilogo. Tali elementi, a loro volta, possono contenere altri elementi, ad esempio voci di elenco.  
   
  L'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] non è una struttura fissa e viene visualizzata raramente in modo completo perché potrebbe contenere migliaia di elementi. Parti dell'albero vengono compilate in base alle esigenze e la struttura può subire modifiche man mano che vengono aggiunti, spostati o rimossi elementi.  
   
  I provider di automazione interfaccia utente supportano l'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] mediante l'implementazione dello spostamento tra gli elementi all'interno di un frammento, costituito da una radice (generalmente ospitata in una finestra) e un sottoalbero. I provider, tuttavia, non sono interessati dallo spostamento da un controllo a un altro. Questa operazione è gestita dagli elementi di base di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], mediante informazioni fornite dai provider di finestra predefiniti.  
   
-<a name="uiautomation_tree_view"></a>   
+<a name="uiautomation_tree_view"></a>
 ## <a name="views-of-the-automation-tree"></a>Visualizzazioni dell'albero di automazione  
  L'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] può essere filtrato per creare visualizzazioni che contengono solo gli oggetti <xref:System.Windows.Automation.AutomationElement> rilevanti per un determinato client. Questo approccio consente ai client di personalizzare la struttura presentata tramite [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] in base a esigenze specifiche.  
   
@@ -34,13 +34,13 @@ ms.locfileid: "75741387"
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] offre tre visualizzazioni predefinite, che sono definite dal tipo di filtro eseguito. L'ambito di qualsiasi visualizzazione è definito dall'applicazione. L'applicazione può inoltre applicare altri filtri sulle proprietà, ad esempio per includere solo i controlli abilitati in una visualizzazione controlli.  
   
-<a name="uiautomation_raw_view"></a>   
+<a name="uiautomation_raw_view"></a>
 ### <a name="raw-view"></a>Visualizzazione non elaborata  
- La visualizzazione non elaborata dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] è l'albero completo degli oggetti <xref:System.Windows.Automation.AutomationElement> di cui il desktop è la radice. La visualizzazione non elaborata riproduce la struttura a livello di codice nativa di un'applicazione ed è pertanto la visualizzazione più dettagliata disponibile. Costituisce inoltre la base sulla quale vengono compilate le altre visualizzazioni dell'albero. Poiché questa vista dipende dal Framework [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] sottostante, la visualizzazione non elaborata di un pulsante [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] avrà una visualizzazione non elaborata diversa da quella di un pulsante Win32.  
+ La visualizzazione non elaborata dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] è l'albero completo degli oggetti <xref:System.Windows.Automation.AutomationElement> di cui il desktop è la radice. La visualizzazione non elaborata riproduce la struttura a livello di codice nativa di un'applicazione ed è pertanto la visualizzazione più dettagliata disponibile. Costituisce inoltre la base sulla quale vengono compilate le altre visualizzazioni dell'albero. Poiché questa visualizzazione [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] dipende dal framework sottostante, la visualizzazione non elaborata di un [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] pulsante avrà una visualizzazione non elaborata diversa rispetto a un pulsante Win32.  
   
  La visualizzazione non elaborata si ottiene cercando elementi senza specificare proprietà o usando <xref:System.Windows.Automation.TreeWalker.RawViewWalker> per esplorare l'albero.  
   
-<a name="uiautomation_control_view"></a>   
+<a name="uiautomation_control_view"></a>
 ### <a name="control-view"></a>Visualizzazione controlli  
  Le attività di descrizione dell'[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] e di assistenza all'utente finale nell'interazione con l'applicazione eseguite dal prodotto di assistive technology vengono semplificate dalla visualizzazione controlli dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], che mappa la struttura dell'[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] percepita da un utente finale.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "75741387"
   
  La visualizzazione controlli si ottiene cercando elementi con la proprietà <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> impostata su `true` o usando <xref:System.Windows.Automation.TreeWalker.ControlViewWalker> per esplorare l'albero.  
   
-<a name="uiautomation_content_view"></a>   
+<a name="uiautomation_content_view"></a>
 ### <a name="content-view"></a>Visualizzazione contenuto  
  La visualizzazione contenuto dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] è un sottoinsieme della visualizzazione controlli. Contiene gli elementi dell'[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] che contengono le informazioni effettive in un'interfaccia utente, inclusi gli elementi dell'[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] che possono ricevere lo stato attivo della tastiera e il testo che non è un'etichetta in un elemento dell'[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Ad esempio, i valori in una casella combinata a discesa saranno presenti nella visualizzazione contenuto poiché rappresentano le informazioni usate da un utente finale. Nella visualizzazione contenuto, una casella combinata e una casella di riepilogo sono entrambe rappresentate come un insieme di elementi dell'[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] in cui è possibile selezionare uno o più elementi. Il fatto che un elemento sia sempre aperto e un altro possa essere espanso o compresso è irrilevante nella visualizzazione contenuto, che è progettata per mostrare i dati, o il contenuto, presentato all'utente.  
   
@@ -57,4 +57,4 @@ ms.locfileid: "75741387"
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Automation.AutomationElement>
-- [Panoramica di automazione interfaccia utente](ui-automation-overview.md)
+- [Cenni preliminari su automazione interfaccia utente](ui-automation-overview.md)

@@ -15,46 +15,46 @@ helpviewer_keywords:
 ms.assetid: 480d596a-759f-4d29-ac1a-3dbff8f3544d
 topic_type:
 - apiref
-ms.openlocfilehash: 3ab29fc8c983b354ad5088d26c547868940ec70a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e59e7695246b2c83171e77352e16464258516f8d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447725"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177457"
 ---
 # <a name="imetadataemitsettypedefprops-method"></a>Metodo IMetaDataEmit::SetTypeDefProps
-Imposta le funzionalità di un tipo definito da una chiamata precedente a [IMetaDataEmit::D efinetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
+Imposta le funzionalità di un tipo definito da una precedente chiamata a [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT SetTypeDefProps (  
-    [in]  mdTypeDef   td,   
-    [in]  DWORD       dwTypeDefFlags,   
-    [in]  mdToken     tkExtends,   
-    [in]  mdToken     rtkImplements[]   
+    [in]  mdTypeDef   td,
+    [in]  DWORD       dwTypeDefFlags,
+    [in]  mdToken     tkExtends,
+    [in]  mdToken     rtkImplements[]
 );  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `td`  
- in Token `mdTypeDef` ottenuto dalla chiamata originale a [IMetaDataEmit::D efinetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
+ [in] Token `mdTypeDef` ottenuto dalla chiamata originale a [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
   
  `dwTypeDefFlags`  
- [in] attributi `TypeDef`. Si tratta di una maschera di maschera dei valori `CorTypeAttr`.  
+ [in] `TypeDef` attributi. Si tratta di `CorTypeAttr` una maschera di bit di valori.  
   
  `tkExtends`  
- in `mdToken` della classe di base. Ottenuta da una chiamata precedente a [IMetaDataEmit::D efineimporttype](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md)o `null`.  
+ [in] Oggetto `mdToken` della classe base. Ottenuto da una precedente chiamata a [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md), o `null`.  
   
  `rtkImplements[]`  
- in Matrice di token per le interfacce implementate da questo tipo. Questi token di `mdTypeRef` vengono ottenuti utilizzando [IMetaDataEmit::D efineimporttype](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md). L'ultimo elemento della matrice deve essere `mdTokenNil`.  
+ [in] Matrice di token per le interfacce implementate da questo tipo. Questi `mdTypeRef` token vengono ottenuti utilizzando [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md). L'ultimo elemento della matrice `mdTokenNil`deve essere .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Intestazione:** Cor.h  
   
- **Libreria:** Usato come risorsa in MSCorEE. dll  
+ **Biblioteca:** Utilizzato come risorsa in MSCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

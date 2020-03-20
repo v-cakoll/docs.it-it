@@ -2,12 +2,12 @@
 title: Classe MissingRuntimeArtifactException (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: d5b3d13e-689f-4584-8ba6-44f5167a8590
-ms.openlocfilehash: 58c18fa2d83422e757511d9d2a93606b0a360086
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7a69add45202b3ad838de592fadc82a84fa0ba5d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128296"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180977"
 ---
 # <a name="missingruntimeartifactexception-class-net-native"></a>Classe MissingRuntimeArtifactException (.NET Native)
 **.NET per app di Windows per Windows 10, solo .NET Native**  
@@ -17,7 +17,7 @@ ms.locfileid: "73128296"
  **Spazio dei nomi:** System.Reflection  
   
 > [!IMPORTANT]
-> La classe `MissingRuntimeArtifactException` è destinata esclusivamente all'uso interno da parte della catena di strumenti .NET Native. La classe non può essere usata in codice di terze parti ed è preferibile evitare di gestire l'eccezione nel codice dell'applicazione. Al contrario, eliminare l'eccezione aggiungendo le voci al [file delle direttive di runtime](runtime-directives-rd-xml-configuration-file-reference.md). Per altre informazioni, vedere la sezione Osservazioni.  
+> La `MissingRuntimeArtifactException` classe è destinata esclusivamente all'utilizzo interno da parte della catena di strumenti .NET Native. La classe non può essere usata in codice di terze parti ed è preferibile evitare di gestire l'eccezione nel codice dell'applicazione. Al contrario, eliminare l'eccezione aggiungendo le voci al [file delle direttive di runtime](runtime-directives-rd-xml-configuration-file-reference.md). Per altre informazioni, vedere la sezione Osservazioni.  
   
 ## <a name="syntax"></a>Sintassi  
  [!code-csharp[ProjectN#22](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missingruntimeartifactexception_syntax1.cs#22)]  
@@ -30,14 +30,14 @@ ms.locfileid: "73128296"
   
 |Costruttore|Descrizione|  
 |-----------------|-----------------|  
-|`public MissingRuntimeArtifactException()`|Inizializza una nuova istanza della classe `MissingRuntimeArtifactException` usando un messaggio fornito dal sistema che descrive l'errore.<br /><br /> Questo costruttore è solo per uso interno da parte della catena di strumenti .NET Native.|  
-|`public MissingRuntimeArtifactException(String message)`|Inizializza una nuova istanza della classe `MissingRuntimeArtifactException` con un messaggio di errore specificato.<br /><br /> Questo costruttore è solo per uso interno da parte della catena di strumenti .NET Native.|  
+|`public MissingRuntimeArtifactException()`|Inizializza una nuova istanza della classe `MissingRuntimeArtifactException` usando un messaggio fornito dal sistema che descrive l'errore.<br /><br /> Questo costruttore è solo per uso interno da parte della catena di strumenti .NET Native.This constructor is for internal use by the .NET Native tool chain only.|  
+|`public MissingRuntimeArtifactException(String message)`|Inizializza una nuova istanza della classe `MissingRuntimeArtifactException` con un messaggio di errore specificato.<br /><br /> Questo costruttore è solo per uso interno da parte della catena di strumenti .NET Native.This constructor is for internal use by the .NET Native tool chain only.|  
   
 ## <a name="properties"></a>Proprietà  
   
-|proprietà|Descrizione|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
-|`public IDictionary Data { get; }`|Ottiene una raccolta di coppie chiave-valore che fornisce informazioni aggiuntive definite dall'utente relative all'eccezione. Ereditato da <xref:System.Exception?displayProperty=nameWithType>.|  
+|`public IDictionary Data { get; }`|Ottiene una raccolta di coppie chiave/valore che forniscono informazioni definite dall'utente aggiuntive sull'eccezione. Ereditato da <xref:System.Exception?displayProperty=nameWithType>.|  
 |`public string HelpLink { get; set; }`|Ottiene o imposta un collegamento al file della Guida associato all'eccezione. Ereditato da <xref:System.Exception?displayProperty=nameWithType>.|  
 |`public int HResult { get; protected set; }`|Ottiene o imposta `HRESULT`, un valore numerico codificato assegnato a una specifica eccezione. Ereditato da <xref:System.Exception?displayProperty=nameWithType>.|  
 |`public Exception InnerException { get; }`|Ottiene l'eccezione che ha causato l'eccezione corrente. Ereditato da <xref:System.Exception?displayProperty=nameWithType>.|  
@@ -59,20 +59,20 @@ ms.locfileid: "73128296"
 |`protected Object MemberwiseClone()`|Crea una copia superficiale dell'oggetto corrente. Ereditato da <xref:System.Object>.|  
 |`public string ToString()`|Restituisce la rappresentazione di stringa dell'eccezione corrente. Ereditato da <xref:System.Exception?displayProperty=nameWithType>.|  
   
-## <a name="events"></a>eventi  
+## <a name="events"></a>Eventi  
   
-|event|Descrizione|  
+|Event|Descrizione|  
 |-----------|-----------------|  
 |`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|Si verifica quando un'eccezione viene serializzata per creare un oggetto di stato eccezione contenente i dati serializzati relativi all'eccezione. Ereditato da <xref:System.Exception?displayProperty=nameWithType>.|  
   
-## <a name="usage-details"></a>Dettagli sull'uso  
+## <a name="usage-details"></a>Dettagli sull'utilizzo  
  L'eccezione `MissingRuntimeArtifactException` viene generata quando si tenta di creare un'istanza di un tipo o di richiamare un membro del tipo la cui implementazione sia stata rimossa, sebbene i metadati del tipo o del membro siano presenti.  
   
- Il fatto che i metadati e il codice di implementazione per l'esecuzione dinamica di un metodo siano disponibili per un'app in fase di esecuzione è definito dal file di direttive di runtime (configurazione XML), \*. Rd. XML. Per evitare che l'app generi questa eccezione, è necessario modificare il file \*.rd.xml per assicurarsi che i metadati necessari a un tipo o a un membro del tipo siano presenti in fase di esecuzione. Per informazioni sul formato del file \*.rd.xml, vedere [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md).  
+ Se i metadati e il codice di implementazione per eseguire dinamicamente un metodo sono disponibili \*per un'app in fase di esecuzione è definito dal file delle direttive di runtime (configurazione XML), con estensione rd.xml. Per evitare che l'app generi questa eccezione, è necessario modificare il file \*.rd.xml per assicurarsi che i metadati necessari a un tipo o a un membro del tipo siano presenti in fase di esecuzione. Per informazioni sul formato del file \*.rd.xml, vedere [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md).  
   
 > [!IMPORTANT]
-> L'eccezione indica che il codice di implementazione richiesto dall'applicazione non è disponibile in fase di esecuzione. Per questo motivo, l'eccezione non va gestita in un blocco `try`/`catch`. È invece necessario diagnosticare la causa dell'eccezione ed eliminarla usando un file di direttive di runtime. Questa eccezione viene in genere eliminata specificando i criteri di `Activate` o `Dynamic` appropriati per un elemento di programma nel file di direttive di runtime (\*file. Rd. Xml). Per ottenere la voce che è possibile aggiungere al file di direttive di runtime che elimina l'eccezione, è possibile usare uno dei due strumenti di risoluzione dei problemi:  
->   
+> L'eccezione indica che il codice di implementazione richiesto dall'applicazione non è disponibile in fase di esecuzione. Per questo motivo, l'eccezione non va gestita in un blocco `try`/`catch`. È invece necessario diagnosticare la causa dell'eccezione ed eliminarla usando un file di direttive di runtime. In genere, questa eccezione viene `Activate` `Dynamic` esclusa specificando l'oggetto o i\*criteri appropriati per un elemento di programma nel file delle direttive di runtime (file con estensione rd.xml). Per ottenere la voce che è possibile aggiungere al file di direttive di runtime che elimina l'eccezione, è possibile usare uno dei due strumenti di risoluzione dei problemi:  
+>
 > - Lo [strumento di risoluzione dei problemi MissingMetadataException](https://dotnet.github.io/native/troubleshooter/type.html) per i tipi.  
 > - Lo [strumento di risoluzione dei problemi MissingMetadataException](https://dotnet.github.io/native/troubleshooter/method.html) per i metodi.  
   
@@ -80,5 +80,5 @@ ms.locfileid: "73128296"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
-- [Impostazioni dei criteri delle direttive di runtime](runtime-directive-policy-settings.md)
+- [Riferimento a file di configurazione di direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime)

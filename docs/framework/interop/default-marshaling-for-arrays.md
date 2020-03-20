@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interop marshaling, arrays
 - arrays, interop marshaling
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
-ms.openlocfilehash: 8505f4c742fb002be249ab069708f7f768c672df
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f0094ac572834b2cf0d74fb53c94877da55669e2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123572"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181454"
 ---
 # <a name="default-marshaling-for-arrays"></a>Marshalling predefinito per le matrici
 In un'applicazione costituita interamente da codice gestito Common Language Runtime passa i tipi di matrice come parametri In/Out. Il gestore di marshalling di interoperabilità invece passa una matrice come parametro In per impostazione predefinita.  
@@ -29,11 +29,11 @@ In un'applicazione costituita interamente da codice gestito Common Language Runt
   
  Come illustra la tabella seguente, tutte le istanze di una matrice gestita devono essere di uno specifico tipo di elemento, priorità e limite inferiore.  
   
-|Tipo di matrice gestita|Tipo di elemento|Classifica|Limite inferiore|Notazione della firma|  
+|Tipo di matrice gestita|Tipo di elemento|Rank|Limite inferiore|Notazione della firma|  
 |------------------------|------------------|----------|-----------------|------------------------|  
-|**ELEMENT_TYPE_ARRAY**|Specificato dal tipo.|Specificata dalla priorità.|Specificato facoltativamente dai limiti.|*type* **[** *n*,*m* **]**|  
-|**ELEMENT_TYPE_CLASS**|Sconosciuto|Sconosciuto|Sconosciuto|**System.Array**|  
-|**ELEMENT_TYPE_SZARRAY**|Specificato dal tipo.|1|0|*type* **[** *n* **]**|  
+|**ELEMENT_TYPE_ARRAY**|Specificato dal tipo.|Specificata dalla priorità.|Specificato facoltativamente dai limiti.|*tipo* **[** *n*,*m* **]**|  
+|**ELEMENT_TYPE_CLASS**|Unknown|Unknown|Unknown|**System.Array**|  
+|**ELEMENT_TYPE_SZARRAY**|Specificato dal tipo.|1|0|*tipo* **[** *n* **]**|  
   
 ## <a name="unmanaged-arrays"></a>Matrici non gestite  
  Le matrici non gestite sono matrici protette di tipo COM o matrici di tipo C con lunghezza fissa o variabile. Le matrici protette sono matrici autodescrittive che contengono il tipo, la priorità e i limiti dei dati della matrice associati. Le matrici di tipo C sono matrici tipizzate unidimensionali con un limite inferiore fisso pari a 0. Il servizio di marshalling ha un supporto limitato per entrambi i tipi di matrici.  
@@ -43,8 +43,8 @@ In un'applicazione costituita interamente da codice gestito Common Language Runt
   
 |Tipo non gestito|Tipo importato|  
 |--------------------|-------------------|  
-|**SafeArray(** *Type* **)**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**<br /><br /> Priorità = 1, limite inferiore = 0. La dimensione è nota solo se specificata nella firma gestita. Non è possibile effettuare il marshalling delle matrici protette che non hanno priorità = 1 o limite inferiore = 0 come **SZARRAY**.|  
-|*Type*  **[]**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**<br /><br /> Priorità = 1, limite inferiore = 0. La dimensione è nota solo se specificata nella firma gestita.|  
+|**SafeArray(** *Tipo* **)**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertitoTipo***>**<br /><br /> Priorità = 1, limite inferiore = 0. La dimensione è nota solo se specificata nella firma gestita. Non è possibile effettuare il marshalling delle matrici protette che non hanno priorità = 1 o limite inferiore = 0 come **SZARRAY**.|  
+|*Tipo*  **[]**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertitoTipo***>**<br /><br /> Priorità = 1, limite inferiore = 0. La dimensione è nota solo se specificata nella firma gestita.|  
   
 ### <a name="safe-arrays"></a>Matrici protette  
  Quando una matrice protetta viene importata da una libreria dei tipi in un assembly .NET, la matrice viene convertita in una matrice unidimensionale di tipo noto (ad esempio, **int**). Le stesse regole di conversione del tipo applicate ai parametri si applicano anche agli elementi della matrice. Una matrice protetta di tipi **BSTR**, ad esempio, diventa una matrice gestita di stringhe e una matrice protetta di varianti diventa una matrice gestita di oggetti. Il tipo di elemento **SAFEARRAY** viene acquisito dalla libreria dei tipi e salvato nel valore **SAFEARRAY** dell'enumerazione <xref:System.Runtime.InteropServices.UnmanagedType>.  
@@ -64,17 +64,17 @@ HRESULT New3([in, out] SAFEARRAY( BSTR ) *ar);
 ```vb  
 Sub New1(<MarshalAs(UnmanagedType.SafeArray, SafeArraySubType:=VT_I4)> _  
    ar() As Integer)  
-Sub New2(<MarshalAs(UnmanagedType.SafeArray, SafeArraySubType:=VT_DATE)> _   
+Sub New2(<MarshalAs(UnmanagedType.SafeArray, SafeArraySubType:=VT_DATE)> _
    ar() As DateTime)  
-Sub New3(ByRef <MarshalAs(UnmanagedType.SafeArray, SafeArraySubType:=VT_BSTR)> _   
+Sub New3(ByRef <MarshalAs(UnmanagedType.SafeArray, SafeArraySubType:=VT_BSTR)> _
    ar() As String)  
 ```  
   
 ```csharp  
 void New1([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_I4)] int[] ar) ;  
-void New2([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_DATE)]   
+void New2([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_DATE)]
    DateTime[] ar);  
-void New3([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_BSTR)]   
+void New3([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_BSTR)]
    ref String[] ar);  
 ```  
   
@@ -114,11 +114,11 @@ Sub New2(<MarshalAs(UnmanagedType.LPArray, _
 ```csharp  
 void New1([MarshalAs(UnmanagedType.LPArray, SizeConst=10)] int[] ar);  
 void New2([MarshalAs(UnmanagedType.LPArray, SizeConst=200)] double[] ar);  
-void New2([MarshalAs(UnmanagedType.LPArray,   
+void New2([MarshalAs(UnmanagedType.LPArray,
    ArraySubType=UnmanagedType.LPWStr, SizeConst=10)] String[] ar);  
 ```  
   
- Anche se è possibile applicare gli attributi **size_is** o **length_is** a una matrice nell'origine Interface Definition Language (IDL) per comunicare la dimensione a un client, il compilatore Microsoft Interface Definition Language (MIDL) non propaga tali informazioni alla libreria dei tipi. Senza conoscere la dimensione, il servizio di marshalling di interoperabilità non può effettuare il marshalling degli elementi della matrice. Di conseguenza, le matrici a lunghezza variabile vengono importate come argomenti di riferimento. Esempio:  
+ Anche se è possibile applicare gli attributi **size_is** o **length_is** a una matrice nell'origine Interface Definition Language (IDL) per comunicare la dimensione a un client, il compilatore Microsoft Interface Definition Language (MIDL) non propaga tali informazioni alla libreria dei tipi. Senza conoscere la dimensione, il servizio di marshalling di interoperabilità non può effettuare il marshalling degli elementi della matrice. Di conseguenza, le matrici a lunghezza variabile vengono importate come argomenti di riferimento. Ad esempio:  
   
  **Firma non gestita**  
   
@@ -137,14 +137,14 @@ Sub New3(ByRef ar As String)
 ```  
   
 ```csharp  
-void New1(ref int ar);    
-void New2(ref double ar);    
-void New3(ref String ar);   
+void New1(ref int ar);
+void New2(ref double ar);
+void New3(ref String ar);
 ```  
   
  Per fornire al gestore di marshalling la dimensione della matrice, è possibile modificare il codice Microsoft Intermediate Language (MSIL) prodotto da Tlbimp.exe e quindi ricompilarlo. Per informazioni dettagliate su come modificare il codice MSIL, vedere [Personalizzazione dei Runtime Callable Wrapper](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100)). Per indicare il numero di elementi della matrice, applicare il tipo <xref:System.Runtime.InteropServices.MarshalAsAttribute> al parametro matrice della definizione di metodo gestito in uno dei modi seguenti:  
   
-- Identificare un altro parametro che contiene il numero di elementi nella matrice. I parametri vengono identificati in base alla posizione, considerando il primo parametro come numero 0.     
+- Identificare un altro parametro che contiene il numero di elementi nella matrice. I parametri vengono identificati in base alla posizione, considerando il primo parametro come numero 0.
   
     ```vb  
     Sub [New](ElemCnt As Integer, _  
@@ -154,11 +154,11 @@ void New3(ref String ar);
   
     ```csharp  
     void New(  
-       int ElemCnt,   
+       int ElemCnt,
        [MarshalAs(UnmanagedType.LPArray, SizeParamIndex=0)] int[] ar );  
     ```  
   
-- Definire la dimensione della matrice come costante. Esempio:  
+- Definire la dimensione della matrice come costante. Ad esempio:  
   
     ```vb  
     Sub [New](\<MarshalAs(UnmanagedType.LPArray, SizeConst:=128)> _  
@@ -182,14 +182,14 @@ void New3(ref String ar);
   
 |Tipo di matrice gestita|Esportato come|  
 |------------------------|-----------------|  
-|**ELEMENT_TYPE_SZARRAY** **\<** *type* **>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Il tipo viene specificato nella firma. La priorità è sempre 1, il limite inferiore è sempre 0. La dimensione è sempre nota in fase di esecuzione.|  
-|**ELEMENT_TYPE_ARRAY** **\<** *type* **>** **\<** *rank* **>** [ **\<** *bounds* **>** ]|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Tipo, priorità e limiti vengono specificati nella firma. La dimensione è sempre nota in fase di esecuzione.|  
-|**ELEMENT_TYPE_CLASS** **\<** <xref:System.Array?displayProperty=nameWithType> **>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> Tipo, priorità, limite e dimensione sono sempre noti in fase di esecuzione.|  
+|**tipo di ELEMENT_TYPE_SZARRAY** **\<** *type***>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Il tipo viene specificato nella firma. La priorità è sempre 1, il limite inferiore è sempre 0. La dimensione è sempre nota in fase di esecuzione.|  
+|**ELEMENT_TYPE_ARRAY** **\<** *tipo* **>** **\<** **\<** di *rango* **>**[ *limiti* **>**]|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Tipo, priorità e limiti vengono specificati nella firma. La dimensione è sempre nota in fase di esecuzione.|  
+|**ELEMENT_TYPE_CLASS****\<**<xref:System.Array?displayProperty=nameWithType>**>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> Tipo, priorità, limite e dimensione sono sempre noti in fase di esecuzione.|  
   
  Nell'automazione OLE esiste una limitazione relativa alle matrici di strutture contenenti LPSTR o LPWSTR.  È quindi necessario effettuare il marshalling dei campi **String** come **UnmanagedType.BSTR**. In caso contrario, verrà generata un'eccezione.  
   
 ### <a name="element_type_szarray"></a>ELEMENT_TYPE_SZARRAY  
- Quando un metodo contenente un parametro **ELEMENT_TYPE_SZARRAY** (matrice unidimensionale) viene esportato da un assembly .NET a una libreria dei tipi, il parametro matrice viene convertito in un elemento **SAFEARRAY** di un determinato tipo. Le stesse regole di conversione si applicano ai tipi di elementi della matrice. I contenuti della matrice gestita vengono automaticamente copiati dalla memoria gestita in **SAFEARRAY**. Esempio:  
+ Quando un metodo contenente un parametro **ELEMENT_TYPE_SZARRAY** (matrice unidimensionale) viene esportato da un assembly .NET a una libreria dei tipi, il parametro matrice viene convertito in un elemento **SAFEARRAY** di un determinato tipo. Le stesse regole di conversione si applicano ai tipi di elementi della matrice. I contenuti della matrice gestita vengono automaticamente copiati dalla memoria gestita in **SAFEARRAY**. Ad esempio:  
   
 #### <a name="managed-signature"></a>Firma gestita  
   
@@ -212,7 +212,7 @@ HRESULT New([in] SAFEARRAY( BSTR ) ar);
   
  La priorità delle matrici protette è sempre 1 e il limite inferiore è sempre 0. La dimensione viene determinata in fase di esecuzione dalla dimensione della matrice gestita che viene passata.  
   
- È anche possibile effettuare il marshalling della matrice come matrice di tipo C usando l'attributo <xref:System.Runtime.InteropServices.MarshalAsAttribute>. Esempio:  
+ È anche possibile effettuare il marshalling della matrice come matrice di tipo C usando l'attributo <xref:System.Runtime.InteropServices.MarshalAsAttribute>. Ad esempio:  
   
 #### <a name="managed-signature"></a>Firma gestita  
   
@@ -227,12 +227,12 @@ Sub [New](<MarshalAs(UnmanagedType.LPArray, _
 ```  
   
 ```csharp  
-void New([MarshalAs(UnmanagedType.LPArray, SizeParamIndex=1)]   
+void New([MarshalAs(UnmanagedType.LPArray, SizeParamIndex=1)]
    long [] ar, int size );  
-void New([MarshalAs(UnmanagedType.LPArray, SizeParamIndex=1)]   
+void New([MarshalAs(UnmanagedType.LPArray, SizeParamIndex=1)]
    String [] ar, int size );  
-void New([MarshalAs(UnmanagedType.LPArray, ArraySubType=   
-   UnmanagedType.LPStr, SizeParamIndex=1)]   
+void New([MarshalAs(UnmanagedType.LPArray, ArraySubType=
+   UnmanagedType.LPStr, SizeParamIndex=1)]
    String [] ar, int size );  
 ```  
   
@@ -247,7 +247,7 @@ HRESULT New(LPStr ar[]);
  Anche se gestore di marshalling ha le informazioni sulla lunghezza necessarie per effettuare il marshalling della matrice, la lunghezza della matrice viene in genere passata come argomento separato per comunicare la lunghezza al computer chiamato.  
   
 ### <a name="element_type_array"></a>ELEMENT_TYPE_ARRAY  
- Quando un metodo contenente un parametro **ELEMENT_TYPE_ARRAY** viene esportato da un assembly .NET a una libreria dei tipi, il parametro matrice viene convertito in un elemento **SAFEARRAY** di un determinato tipo. I contenuti della matrice gestita vengono automaticamente copiati dalla memoria gestita in **SAFEARRAY**. Esempio:  
+ Quando un metodo contenente un parametro **ELEMENT_TYPE_ARRAY** viene esportato da un assembly .NET a una libreria dei tipi, il parametro matrice viene convertito in un elemento **SAFEARRAY** di un determinato tipo. I contenuti della matrice gestita vengono automaticamente copiati dalla memoria gestita in **SAFEARRAY**. Ad esempio:  
   
 #### <a name="managed-signature"></a>Firma gestita  
   
@@ -270,7 +270,7 @@ HRESULT New([in] SAFEARRAY( BSTR ) ar);
   
  Priorità, dimensione e limiti delle matrici protette vengono determinati in fase di esecuzione dalle caratteristiche della matrice gestita.  
   
- È anche possibile effettuare il marshalling della matrice come matrice di tipo C applicando l'attributo <xref:System.Runtime.InteropServices.MarshalAsAttribute>. Esempio:  
+ È anche possibile effettuare il marshalling della matrice come matrice di tipo C applicando l'attributo <xref:System.Runtime.InteropServices.MarshalAsAttribute>. Ad esempio:  
   
 #### <a name="managed-signature"></a>Firma gestita  
   
@@ -283,10 +283,10 @@ Sub [New](<MarshalAs(UnmanagedType.LPARRAY, _
 ```  
   
 ```csharp  
-void New([MarshalAs(UnmanagedType.LPARRAY, SizeParamIndex=1)]   
+void New([MarshalAs(UnmanagedType.LPARRAY, SizeParamIndex=1)]
    long [,] ar, int size );  
-void New([MarshalAs(UnmanagedType.LPARRAY,   
-   ArraySubType= UnmanagedType.LPStr, SizeParamIndex=1)]   
+void New([MarshalAs(UnmanagedType.LPARRAY,
+   ArraySubType= UnmanagedType.LPStr, SizeParamIndex=1)]
    String [,] ar, int size );  
 ```  
   
@@ -310,7 +310,7 @@ void New(long [][][] ar );
 ```  
   
 ### <a name="element_type_class-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array>  
- Quando un metodo contenente un parametro <xref:System.Array?displayProperty=nameWithType> viene esportato da un assembly .NET a una libreria dei tipi, il parametro matrice viene convertito in un'interfaccia **_Array**. I contenuti della matrice gestita sono accessibili solo tramite i metodi e le proprietà dell'interfaccia **_Array**. È anche possibile effettuare il marshalling di **System.Array** come **SAFEARRAY** usando l'attributo <xref:System.Runtime.InteropServices.MarshalAsAttribute>. Se sottoposti a marshalling come matrice protetta, gli elementi della matrice vengono sottoposti a marshalling come varianti. Esempio:  
+ Quando un metodo contenente un parametro <xref:System.Array?displayProperty=nameWithType> viene esportato da un assembly .NET a una libreria dei tipi, il parametro matrice viene convertito in un'interfaccia **_Array**. I contenuti della matrice gestita sono accessibili solo tramite i metodi e le proprietà dell'interfaccia **_Array**. È anche possibile effettuare il marshalling di **System.Array** come **SAFEARRAY** usando l'attributo <xref:System.Runtime.InteropServices.MarshalAsAttribute>. Se sottoposti a marshalling come matrice protetta, gli elementi della matrice vengono sottoposti a marshalling come varianti. Ad esempio:  
   
 #### <a name="managed-signature"></a>Firma gestita  
   
@@ -360,7 +360,7 @@ public struct MyStruct {
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Comportamento predefinito del marshalling](default-marshaling-behavior.md)
+- [Comportamento di marshalling predefinito](default-marshaling-behavior.md)
 - [Tipi copiabili e non copiabili](blittable-and-non-blittable-types.md)
 - [Attributi direzionali](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
-- [Copia e blocco](copying-and-pinning.md)
+- [copia e blocco](copying-and-pinning.md)

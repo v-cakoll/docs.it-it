@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns, for UI Automation clients
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
-ms.openlocfilehash: 48298cb8d89958c701d7150aeb497e82d565bde1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 689e649343c93d0670c6870098a09f61097f4fb4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433866"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180236"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>Mapping dei pattern di controllo per i client di automazione interfaccia utente
 > [!NOTE]
@@ -29,53 +29,53 @@ ms.locfileid: "74433866"
 > [!NOTE]
 > Alcuni controlli sono caratterizzati dal supporto condizionale per diversi pattern di controllo a seconda della funzionalità del controllo. Ad esempio, il controllo voce di menu prevede il supporto condizionale per il pattern di controllo <xref:System.Windows.Automation.InvokePattern>, <xref:System.Windows.Automation.ExpandCollapsePattern>, <xref:System.Windows.Automation.TogglePattern>o <xref:System.Windows.Automation.SelectionItemPattern> a seconda della relativa funzione nel controllo menu.  
   
-<a name="control_mapping_clients"></a>   
+<a name="control_mapping_clients"></a>
 ## <a name="ui-automation-control-patterns-for-clients"></a>Pattern di controllo di automazione interfaccia utente per i client  
   
 |Tipo di controllo|Supportato|Supporto condizionale|Non supportato|  
 |------------------|---------------|-------------------------|-------------------|  
-|Pulsante|Nessuna|Invoke, Toggle, ExpandCollapse|Nessuna|  
-|Calendar|Grid, Table|Selection, Scroll|Valore|  
-|Casella di controllo|Toggle|Nessuna|Nessuna|  
+|Pulsante|nessuno|Invoke, Toggle, ExpandCollapse|nessuno|  
+|Calendario|Grid, Table|Selection, Scroll|valore|  
+|CheckBox|Toggle|nessuno|nessuno|  
 |ComboBox|ExpandCollapse|Selection, Value|Scroll|  
-|DataGrid|Grid|Scroll, Selection, Table|Nessuna|  
-|DataItem|SelectionItem|ExpandCollapse, GridItem, ScrollItem, Table, Toggle, Value|Nessuna|  
-|Documento|Testo|Scroll, Value|Nessuna|  
-|Edit|Nessuna|Text, RangeValue, Value|Nessuna|  
-|Gruppo|Nessuna|ExpandCollapse|Nessuna|  
-|Intestazione|Nessuna|Trasforma|Nessuna|  
-|HeaderItem|Nessuna|Transform, Invoke|Nessuna|  
-|Hyperlink|Richiamare|Valore|Nessuna|  
-|Immagine|Nessuna|GridItem, TableItem|Invoke, SelectionItem|  
-|Elenco|Nessuna|Grid, MultipleView, Scroll, Selection|Tabella|  
-|ListItem|SelectionItem|ExpandCollapse, GridItem, Invoke, ScrollItem, Toggle, Value|Nessuna|  
-|Menu|Nessuna|Nessuna|Nessuna|  
-|Barra dei menu|Nessuna|ExpandCollapse, Dock, Transform|Nessuna|  
-|Voce di menu|Nessuna|ExpandCollapse, Invoke, SelectionItem, Toggle|Nessuna|  
-|Riquadro|Nessuna|Dock Scroll, Transform|Finestra|  
-|ProgressBar|Nessuna|RangeValue, Value|Nessuna|  
-|Pulsante di opzione|SelectionItem|Nessuna|Toggle|  
-|ScrollBar|Nessuna|RangeValue|Scroll|  
-|Separatore|Nessuna|Nessuna|Nessuna|  
-|Dispositivo di scorrimento|Nessuna|RangeValue, Selection, Value|Nessuna|  
-|Spinner|Nessuna|RangeValue, Selection, Value|Nessuna|  
-|Pulsante di menu combinato|Invoke, ExpandCollapse|Nessuna|Nessuna|  
-|Barra di stato|Nessuna|Grid|Nessuna|  
-|Tab|Selezione|Scroll|Nessuna|  
-|TabItem|SelectionItem|Nessuna|Richiamare|  
-|Tabella|Grid, GridItem, Table, TableItem|Nessuna|Nessuna|  
-|Testo|Nessuna|GridItem, TableItem, Text|Valore|  
-|Visualizzazione di anteprima|Trasforma|Nessuna|Nessuna|  
-|Barra del titolo|Nessuna|Nessuna|Nessuna|  
-|ToolBar|Nessuna|Dock, ExpandCollapse, Transform|Nessuna|  
-|ToolTip|Nessuna|Text, Window|Nessuna|  
-|Struttura ad albero|Nessuna|Scroll, Selection|Nessuna|  
-|TreeItem|ExpandCollapse|Invoke, ScrollItem, SelectionItem, Toggle|Nessuna|  
-|Finestra|Transform, Window|Dock|Nessuna|  
+|Griglia dati|Griglia|Scroll, Selection, Table|nessuno|  
+|DataItem|SelectionItem|ExpandCollapse, GridItem, ScrollItem, Table, Toggle, Value|nessuno|  
+|Document|Text|Scroll, Value|nessuno|  
+|Modifica|nessuno|Text, RangeValue, Value|nessuno|  
+|Gruppo|nessuno|ExpandCollapse|nessuno|  
+|Intestazione|nessuno|Trasformare|nessuno|  
+|HeaderItem|nessuno|Transform, Invoke|nessuno|  
+|Hyperlink|Invoke|valore|nessuno|  
+|Immagine|nessuno|GridItem, TableItem|Invoke, SelectionItem|  
+|Elenco|nessuno|Grid, MultipleView, Scroll, Selection|Tabella|  
+|ListItem|SelectionItem|ExpandCollapse, GridItem, Invoke, ScrollItem, Toggle, Value|nessuno|  
+|Menu|nessuno|nessuno|nessuno|  
+|Barra dei menu|nessuno|ExpandCollapse, Dock, Transform|nessuno|  
+|MenuItem|nessuno|ExpandCollapse, Invoke, SelectionItem, Toggle|nessuno|  
+|Riquadro|nessuno|Dock Scroll, Transform|Finestra|  
+|ProgressBar|nessuno|RangeValue, Value|nessuno|  
+|RadioButton|SelectionItem|nessuno|Toggle|  
+|ScrollBar|nessuno|RangeValue|Scroll|  
+|Separatore|nessuno|nessuno|nessuno|  
+|Dispositivo di scorrimento|nessuno|RangeValue, Selection, Value|nessuno|  
+|Spinner|nessuno|RangeValue, Selection, Value|nessuno|  
+|Pulsante di menu combinato|Invoke, ExpandCollapse|nessuno|nessuno|  
+|Barra di stato|nessuno|Griglia|nessuno|  
+|Scheda|Selezione|Scroll|nessuno|  
+|TabItem|SelectionItem|nessuno|Invoke|  
+|Tabella|Grid, GridItem, Table, TableItem|nessuno|nessuno|  
+|Text|nessuno|GridItem, TableItem, Text|valore|  
+|Thumb|Trasformare|nessuno|nessuno|  
+|TitleBar|nessuno|nessuno|nessuno|  
+|ToolBar|nessuno|Dock, ExpandCollapse, Transform|nessuno|  
+|ToolTip|nessuno|Text, Window|nessuno|  
+|Albero|nessuno|Scroll, Selection|nessuno|  
+|TreeItem|ExpandCollapse|Invoke, ScrollItem, SelectionItem, Toggle|nessuno|  
+|Finestra|Transform, Window|Ancora|nessuno|  
   
 > [!NOTE]
 > Se un tipo di controllo non dispone di pattern di controllo supportati ma ha uno o più pattern di controllo supportati in modo condizionale, uno dei pattern di controllo condizionali risulterà sempre supportato.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica di automazione interfaccia utente](ui-automation-overview.md)
+- [Cenni preliminari su automazione interfaccia utente](ui-automation-overview.md)
