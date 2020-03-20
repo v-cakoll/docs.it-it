@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Controllo delle versioni dei servizi'
+title: 'Procedura: controllo delle versioni dei servizi'
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: 5ce9e7fc896f1ebc46dd25777fc629532339cbe2
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 3cd52e1f52a93e408ebed846894cc5686652cc91
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988701"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184852"
 ---
-# <a name="how-to-service-versioning"></a>Procedura: Controllo delle versioni dei servizi
+# <a name="how-to-service-versioning"></a>Procedura: controllo delle versioni dei servizi
 In questo argomento vengono descritti i passaggi di base necessari per creare una configurazione del routing che indirizza messaggi a versioni diverse dello stesso servizio. In questo esempio i messaggi vengono indirizzati a due versioni diverse di un servizio di calcolo, `roundingCalc` (v1) e `regularCalc` (v2). Entrambe le implementazioni supportano le stesse operazioni; tuttavia il primo servizio, `roundingCalc`, arrotonda tutti i calcoli al valore intero più vicino prima della restituzione. Un'applicazione client deve essere in grado di indicare se utilizzare il secondo servizio, `regularCalc`.  
   
 > [!WARNING]
@@ -17,13 +17,13 @@ In questo argomento vengono descritti i passaggi di base necessari per creare un
   
  Le operazioni esposte da entrambi servizi sono:  
   
-- Aggiunta  
+- Add  
   
-- Sottrai  
+- Sottrazione  
   
-- Multiply  
+- Moltiplicazione  
   
-- Dividi  
+- Divisione  
   
  Poiché entrambe le implementazioni del servizio gestiscono le stesse operazioni e sono essenzialmente identiche tranne che per i dati che restituiscono, i dati di base contenuti nei messaggi inviati dalle applicazioni client non sono sufficientemente univoci per consentire di determinare la modalità di routing della richiesta. Non è ad esempio possibile utilizzare i filtri Action, poiché le azioni predefinite per entrambi i servizi sono identiche.  
   
@@ -69,7 +69,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
         </client>  
     ```  
   
-2. Definire i filtri usati per indirizzare messaggi agli endpoint di destinazione.  Per questo esempio, il filtro XPath viene usato per rilevare il valore dell'intestazione personalizzata "CalcVer" per determinare la versione a cui deve essere indirizzato il messaggio. Viene inoltre utilizzato un filtro XPath per rilevare i messaggi che non contengono l'intestazione "CalcVer". Nell'esempio seguente vengono definiti la tabella dello spazio dei nomi e dei filtri necessari.  
+2. Definire i filtri usati per indirizzare messaggi agli endpoint di destinazione.  Per questo esempio, il filtro XPath viene utilizzato per rilevare il valore dell'intestazione personalizzata "CalcVer" per determinare a quale versione deve essere instradato il messaggio. Un filtro XPath viene utilizzato anche per rilevare i messaggi che non contengono l'intestazione "CalcVer". Nell'esempio seguente vengono definiti la tabella dello spazio dei nomi e dei filtri necessari.  
   
     ```xml  
     <!-- use the namespace table element to define a prefix for our custom namespace-->  
@@ -94,9 +94,9 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
     > [!NOTE]
-    > Il prefisso dello spazio dei nomi S12 è definito per impostazione predefinita nella tabella dello spazio dei `http://www.w3.org/2003/05/soap-envelope`nomi e rappresenta lo spazio dei nomi.
+    > Il prefisso dello spazio dei nomi s12 è `http://www.w3.org/2003/05/soap-envelope`definito per impostazione predefinita nella tabella dello spazio dei nomi e rappresenta lo spazio dei nomi .
   
-3. Definire la tabella dei filtri, che associa ogni filtro a un endpoint client. Se il messaggio contiene l'intestazione "CalcVer" con il valore 1, verrà inviato al servizio regularCalc. Se l'intestazione contiene il valore 2, verrà inviato al servizio roundingCalc. Se non è presente alcuna intestazione, il messaggio verrà indirizzato a regularCalc.  
+3. Definire la tabella dei filtri, che associa ogni filtro a un endpoint client. Se il messaggio contiene l'intestazione "CalcVer" con un valore pari a 1, verrà inviato al servizio regularCalc. Se l'intestazione contiene il valore 2, verrà inviato al servizio roundingCalc. Se non è presente alcuna intestazione, il messaggio verrà indirizzato a regularCalc.  
   
      Di seguito viene definita la tabella dei filtri e vengono aggiunti i filtri definiti in precedenza.  
   
@@ -117,7 +117,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </filterTables>  
     ```  
   
-4. Per valutare i messaggi in ingresso rispetto ai filtri contenuti nella rispettiva tabella, è necessario associare la tabella dei filtri agli endpoint servizio tramite il comportamento di routing. Nell'esempio seguente viene illustrata `filterTable1` l'associazione con gli endpoint del servizio:  
+4. Per valutare i messaggi in ingresso rispetto ai filtri contenuti nella rispettiva tabella, è necessario associare la tabella dei filtri agli endpoint servizio tramite il comportamento di routing. Nell'esempio seguente `filterTable1` viene illustrata l'associazione agli endpoint del servizio:The following example demonstrates associating with the service endpoints:  
   
     ```xml  
     <behaviors>  
@@ -269,7 +269,7 @@ namespace Microsoft.Samples.AdvancedFilters
                     //if they wanted to create the header, go ahead and add it to the outgoing message  
                     if (header != null && (header=="1" || header=="2"))  
                     {  
-                        //create a new header "RoundingCalculator", no specific namespace, and set the value to   
+                        //create a new header "RoundingCalculator", no specific namespace, and set the value to
                         //the value of header.  
                         //the Routing Service will look for this header in order to determine if the message  
                         //should be routed to the RoundingCalculator  

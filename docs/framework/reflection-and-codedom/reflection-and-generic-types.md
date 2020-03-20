@@ -16,12 +16,12 @@ helpviewer_keywords:
 - types, generic
 - type parameters
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
-ms.openlocfilehash: 0a7d38c8177aa8f2c5f45dcc62a0ae6e5aaca2a7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4894b5cc64dca431c8d05b638847dd6cb7017bde
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975443"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180486"
 ---
 # <a name="reflection-and-generic-types"></a>Reflection e tipi generici
 Dal punto di vista della reflection, un tipo ordinario si differenzia da un tipo generico perché quest'ultimo è associato a un insieme di parametri di tipo, se è una definizione di tipo generico, o a un insieme di argomenti di tipo, se è un tipo costruito. Un metodo generico si differenzia da un metodo ordinario esattamente nello stesso modo.  
@@ -50,7 +50,7 @@ Dal punto di vista della reflection, un tipo ordinario si differenzia da un tipo
  Le definizioni di metodo e di tipo generico costituiscono i modelli a partire dai quali vengono creati i tipi istanziabili. I tipi generici nella libreria di classi .NET Framework, ad esempio <xref:System.Collections.Generic.Dictionary%602>, sono definizioni di tipo generico.  
   
 ### <a name="is-the-type-or-method-open-or-closed"></a>Come stabilire se un tipo o un metodo è aperto o chiuso  
- Un tipo o un metodo generico è chiuso se tutti i relativi parametri di tipo, inclusi tutti i parametri di tipo di tutti i tipi di inclusione, sono stati sostituiti da tipi istanziabili. È possibile creare un'istanza di un tipo generico solo se è chiuso. Se un tipo è aperto, la proprietà <xref:System.Type.ContainsGenericParameters%2A?displayProperty=nameWithType> restituisce `true` . Per i metodi, la stessa funzione viene eseguita dal metodo <xref:System.Reflection.MethodBase.ContainsGenericParameters%2A?displayProperty=nameWithType> .   
+ Un tipo o un metodo generico è chiuso se tutti i relativi parametri di tipo, inclusi tutti i parametri di tipo di tutti i tipi di inclusione, sono stati sostituiti da tipi istanziabili. È possibile creare un'istanza di un tipo generico solo se è chiuso. Se un tipo è aperto, la proprietà <xref:System.Type.ContainsGenericParameters%2A?displayProperty=nameWithType> restituisce `true` . Per i metodi, la stessa funzione viene eseguita dal metodo <xref:System.Reflection.MethodBase.ContainsGenericParameters%2A?displayProperty=nameWithType> .
 
 ## <a name="generating-closed-generic-types"></a>Generazione di tipi generici chiusi  
  Dopo avere ottenuto una definizione di metodo o di tipo generico, usare il metodo <xref:System.Type.MakeGenericType%2A> per creare un tipo generico chiuso oppure il metodo <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A> per creare un oggetto <xref:System.Reflection.MethodInfo> relativo a un metodo generico chiuso.  
@@ -60,7 +60,7 @@ Dal punto di vista della reflection, un tipo ordinario si differenzia da un tipo
   
  Ad esempio, se si ha un oggetto <xref:System.Type> che rappresenta `Dictionary<int, string>` (`Dictionary(Of Integer, String)` in Visual Basic) e si vuole creare il tipo `Dictionary<string, MyClass>`, è possibile usare il metodo <xref:System.Type.GetGenericTypeDefinition%2A> per ottenere un oggetto <xref:System.Type> che rappresenta `Dictionary<TKey, TValue>` e quindi il metodo <xref:System.Type.MakeGenericType%2A> per generare un oggetto <xref:System.Type> che rappresenta `Dictionary<int, MyClass>`.  
   
- Per un esempio di tipo generico aperto che non è un tipo generico, vedere la sezione "Parametro di tipo o argomento di tipo" più avanti in questo argomento.   
+ Per un esempio di tipo generico aperto che non è un tipo generico, vedere la sezione "Parametro di tipo o argomento di tipo" più avanti in questo argomento.
 
 ## <a name="examining-type-arguments-and-type-parameters"></a>Analisi degli argomenti e dei parametri di tipo  
  Usare il metodo <xref:System.Type.GetGenericArguments%2A?displayProperty=nameWithType> per ottenere una matrice di oggetti <xref:System.Type> che rappresentano i parametri o gli argomenti di tipo di un tipo generico e il metodo <xref:System.Reflection.MethodInfo.GetGenericArguments%2A?displayProperty=nameWithType> per eseguire la stessa operazione per un metodo generico.  
@@ -114,7 +114,7 @@ generic<typename V, typename W> ref class D : B<int, V> {};
  Per determinare se un parametro di tipo sia covariante o controvariante, applicare la maschera <xref:System.Reflection.GenericParameterAttributes.VarianceMask?displayProperty=nameWithType> al valore <xref:System.Reflection.GenericParameterAttributes> restituito dalla proprietà <xref:System.Type.GenericParameterAttributes%2A> . Se il risultato è <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>, il parametro di tipo è invariante. Vedere [Covarianza e controvarianza](../../standard/generics/covariance-and-contravariance.md).  
   
 #### <a name="special-constraints"></a>Vincoli speciali  
- Per stabilire i vincoli speciali di un parametro di tipo, applicare la maschera <xref:System.Reflection.GenericParameterAttributes.SpecialConstraintMask?displayProperty=nameWithType> al valore <xref:System.Reflection.GenericParameterAttributes> restituito dalla proprietà <xref:System.Type.GenericParameterAttributes%2A> . Se il risultato è <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>, non sono presenti vincoli speciali. Un parametro di tipo può essere vincolato per essere un tipo riferimento, un tipo valore non nullable e per avere un costruttore senza parametri.    
+ Per stabilire i vincoli speciali di un parametro di tipo, applicare la maschera <xref:System.Reflection.GenericParameterAttributes.SpecialConstraintMask?displayProperty=nameWithType> al valore <xref:System.Reflection.GenericParameterAttributes> restituito dalla proprietà <xref:System.Type.GenericParameterAttributes%2A> . Se il risultato è <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>, non sono presenti vincoli speciali. Un parametro di tipo può essere vincolato per essere un tipo riferimento, un tipo valore non nullable e per avere un costruttore senza parametri.
 
 ## <a name="invariants"></a>Invarianti  
  Per una tabella di condizioni non variabili associate a termini comuni nella reflection per tipi generici, vedere <xref:System.Type.IsGenericType%2A?displayProperty=nameWithType>. Per altri termini correlati ai metodi generici, vedere <xref:System.Reflection.MethodBase.IsGenericMethod%2A?displayProperty=nameWithType>.  
@@ -123,7 +123,7 @@ generic<typename V, typename W> ref class D : B<int, V> {};
   
 |Titolo|Descrizione|  
 |-----------|-----------------|  
-|[Procedura: Esaminare e creare istanze di tipi generici con reflection](how-to-examine-and-instantiate-generic-types-with-reflection.md)|Mostra come usare le proprietà e i metodi di <xref:System.Type> e <xref:System.Reflection.MethodInfo> per esaminare i tipi generici.|  
+|[Procedura: esaminare e creare istanze di tipi generici tramite reflection](how-to-examine-and-instantiate-generic-types-with-reflection.md)|Mostra come usare le proprietà e i metodi di <xref:System.Type> e <xref:System.Reflection.MethodInfo> per esaminare i tipi generici.|  
 |[Generics](../../standard/generics/index.md)|Descrive la funzionalità generics con la relativa modalità di supporto in .NET Framework.|  
 |[Procedura: Definire un tipo generico tramite reflection emit](how-to-define-a-generic-type-with-reflection-emit.md)|Mostra come usare la reflection emit per generate tipi generici in assembly dinamici.|  
 |[Visualizzazione delle informazioni sul tipo](viewing-type-information.md)|Descrive la classe <xref:System.Type> e vengono forniti esempi di codice in cui viene descritto l'uso di <xref:System.Type> con diverse classi di reflection per ottenere informazioni su costruttori, metodi, campi, proprietà ed eventi.|

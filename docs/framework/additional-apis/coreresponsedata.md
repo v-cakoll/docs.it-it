@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: fd0ffb982c22b0a8b6cb5dd677faafb9921bf5d9
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 39a14a3df5059cc47cd4879e4d4ba351cc7b655b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741024"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79156116"
 ---
 # <a name="coreresponsedata-class"></a>Classe CoreResponseData
 
-La classe `CoreResponseData` rappresenta l'analisi delle intestazioni HTTP e del corpo della risposta.
+La `CoreResponseData` classe rappresenta l'analisi delle intestazioni HTTP e del corpo della risposta.
 
 ## <a name="syntax"></a>Sintassi
   
@@ -28,14 +28,14 @@ internal class CoreResponseData
 ```
 
 > [!WARNING]
-> Questa API è interna e non è destinata all'uso diretto nel codice. È invece consigliabile usare un <xref:System.Diagnostics.DiagnosticSource> per collegare il codice di rete. Vedere [il manuale dell'utente di DiagnosticSource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
-> 
-> Microsoft non supporta l'utilizzo di questa classe in un'applicazione di produzione in qualsiasi circostanza.
+> Questa API è interna e non deve essere usata direttamente nel codice. Al contrario, <xref:System.Diagnostics.DiagnosticSource> è necessario utilizzare un per eseguire l'hook del codice di rete. Vedere [Manuale dell'utente](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)di DiagnosticSource .
+>
+> Microsoft non supporta in nessun caso l'utilizzo di questa classe in un'applicazione di produzione.
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
-**Spazio dei nomi:** <xref:System.Net>
+**Spazio dei nomi:**<xref:System.Net>
 
-**Assembly:** System (in System. dll)
+**Assemblaggio:** Sistema (in System.dll)
 
-**Versioni .NET Framework:** Disponibile a partire da 2,0.
+Versioni di **.NET Framework:** Disponibile dalla 2.0.

@@ -2,12 +2,12 @@
 title: Problemi di sicurezza e suggerimenti utili per la traccia
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
-ms.openlocfilehash: d1b2c13cacc792ecedacfc3ede7c38e072841263
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5ced4f3a3a5e83564703db88b28ee2b3c6eeb1a0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600047"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185713"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>Problemi di sicurezza e suggerimenti utili per la traccia
 In questo argomento viene descritto come proteggere informazioni riservate e vengono elencati suggerimenti utili durante l'utilizzo di WebHost.  
@@ -35,7 +35,7 @@ In questo argomento viene descritto come proteggere informazioni riservate e ven
    <system.ServiceModel>  
       <machineSettings enableLoggingKnownPii="Boolean"/>  
    </system.ServiceModel>  
-</configuration>   
+</configuration>
 ```  
   
  I distributori di applicazioni possono quindi utilizzare l'attributo `logKnownPii` nel file App.config o Web.config per abilitare la registrazione di informazioni personali come segue:  
@@ -70,7 +70,7 @@ In questo argomento viene descritto come proteggere informazioni riservate e ven
                 initializeData="c:\logs\messages.svclog" />  
           </listeners>  
       </source>  
-      <source name="System.ServiceModel"   
+      <source name="System.ServiceModel"
          logKnownPii="true">  
          <listeners>  
             <add name="xml" />  
@@ -84,9 +84,9 @@ In questo argomento viene descritto come proteggere informazioni riservate e ven
   
  Le modifiche diventano effettive solo dopo l'avvio o il riavvio dell'applicazione. Un evento viene registrato all'avvio quando entrambi gli attributi sono impostati su `true`. Un evento viene inoltre registrato se `logKnownPii` è impostato su `true` ma `enableLoggingKnownPii` è `false`.  
   
- Per altre informazioni sulla registrazione di informazioni personali, vedere [blocco di sicurezza delle informazioni personali](../../../../../docs/framework/wcf/samples/pii-security-lockdown.md) esempio.  
+ Per altre informazioni sulla registrazione delle informazioni personali, vedere Esempio di [blocco di sicurezza delle informazioni personali.](../../../../../docs/framework/wcf/samples/pii-security-lockdown.md)  
   
- L'amministratore del computer e il distributore di applicazioni devono prestare molta attenzione durante l'utilizzo di queste due opzioni. Se la registrazione di informazioni personali è abilitata, vengono registrate chiavi di sicurezza e informazioni personali. Se è disabilitata, i dati riservati e le informazioni specifiche dell'applicazione vengono comunque registrati nell'intestazione e nel corpo dei messaggi. Per una discussione più approfondita sulla privacy e protezione delle informazioni personali vengano esposte, vedere [Privacy dell'utente](https://go.microsoft.com/fwlink/?LinkID=94647).  
+ L'amministratore del computer e il distributore di applicazioni devono prestare molta attenzione durante l'utilizzo di queste due opzioni. Se la registrazione di informazioni personali è abilitata, vengono registrate chiavi di sicurezza e informazioni personali. Se è disabilitata, i dati riservati e le informazioni specifiche dell'applicazione vengono comunque registrati nell'intestazione e nel corpo dei messaggi. Per una discussione più approfondita sulla privacy e sulla protezione delle informazioni personali dall'esposizione, vedere [Privacy degli](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480490(v=msdn.10))utenti .  
   
  L'indirizzo IP del mittente del messaggio, inoltre, viene registrato una volta per ogni connessione per trasporti orientati alla connessione e una volta per ogni messaggio inviato diversamente. Ciò avviene senza il consenso del mittente. Questa registrazione, tuttavia, avviene solo ai livelli di traccia Informazioni o Dettagliato, ovvero i livelli non predefiniti né consigliati in produzione, tranne che per il debug attivo.  
   

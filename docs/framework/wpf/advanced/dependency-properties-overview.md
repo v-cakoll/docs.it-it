@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 5803d656d765f3f4fe3039e28b9c06202218fcfc
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 9bf0b168633bbf9f56694e79cf81f8051f9b8ac0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973982"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186374"
 ---
 # <a name="dependency-properties-overview"></a>Panoramica sulle proprietà di dipendenza
 
@@ -56,7 +56,7 @@ La convenzione di denominazione della proprietà e del relativo campo <xref:Syst
 ## <a name="setting-property-values"></a>Impostazione dei valori delle proprietà
 È possibile impostare le proprietà nel codice o in XAML.
 
-### <a name="setting-property-values-in-xaml"></a>Impostazione dei valori delle proprietà in XAML 
+### <a name="setting-property-values-in-xaml"></a>Impostazione dei valori delle proprietà in XAML
 L'esempio di XAML seguente specifica il colore di sfondo rosso per un pulsante. Questo esempio illustra un caso in cui il valore di stringa semplice per un attributo XAML viene convertito dal parser XAML WPF in un tipo WPF (<xref:System.Windows.Media.Color> tramite <xref:System.Windows.Media.SolidColorBrush>) nel codice generato.
 
 [!code-xaml[PropertiesOvwSupport#MostBasicProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml#mostbasicproperty)]
@@ -68,7 +68,7 @@ Come esempio di sintassi senza attributi, nell'esempio di XAML seguente viene il
 [!code-xaml[PropertiesOvwSupport#PESyntaxProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml#pesyntaxproperty)]
 
 ### <a name="setting-properties-in-code"></a>Impostazione delle proprietà nel codice
- L'impostazione dei valori delle proprietà di dipendenza nel codice è in genere semplicemente una chiamata all'implementazione del set esposta dal "wrapper" CLR.
+ L'impostazione dei valori delle proprietà di dipendenza nel codice è in genere solo una chiamata all'implementazione dell'insieme esposta dal "wrapper" CLR.
 
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertySet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyset)]
 [!code-vb[PropertiesOvwSupport#ProceduralPropertySet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyset)]
@@ -78,7 +78,7 @@ Anche il recupero di un valore della proprietà prevede sostanzialmente una chia
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyget)]
  [!code-vb[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyget)]
 
-È anche possibile chiamare le API del sistema di proprietà <xref:System.Windows.DependencyObject.GetValue%2A> e <xref:System.Windows.DependencyObject.SetValue%2A> direttamente. Questa operazione non è in genere necessaria se si usano proprietà esistenti (i wrapper sono più pratici e offrono una migliore esposizione della proprietà per gli strumenti di sviluppo), ma la chiamata diretta delle API è appropriata per determinati scenari.
+È anche possibile chiamare direttamente <xref:System.Windows.DependencyObject.GetValue%2A> le <xref:System.Windows.DependencyObject.SetValue%2A> API del sistema di proprietà. Ciò non è in genere necessario se si utilizzano proprietà esistenti (i wrapper sono più convenienti e forniscono una migliore esposizione della proprietà per gli strumenti di sviluppo), ma la chiamata diretta delle API è appropriata per determinati scenari.
 
 È anche possibile impostare le proprietà in XAML e successivamente accedervi nel codice tramite code-behind. Per informazioni dettagliate, vedere [Code-behind e XAML in WPF](code-behind-and-xaml-in-wpf.md).
 
@@ -87,17 +87,17 @@ Una proprietà di dipendenza fornisce funzionalità che consentono di estendere 
 
 - [Risorse](#resources)
 
-- [Data binding](#data-binding)
+- [Associazione dati](#data-binding)
 
 - [Stili](#styles)
 
-- [Animazioni](#animations)
+- [Animations](#animations)
 
 - [Override dei metadati](#metadata-overrides)
 
 - [Ereditarietà del valore della proprietà](#property-value-inheritance)
 
-- [Integrazione di WPF Designer](#wpf-designer-integration)
+- [Integrazione di WPF DesignerWPF Designer integration](#wpf-designer-integration)
 
 ### <a name="resources"></a>Risorse
 Un valore della proprietà di dipendenza può essere impostato facendo riferimento a una risorsa. Le risorse vengono in genere specificate come valore della proprietà `Resources` di un elemento radice della pagina o dell'applicazione (questi percorsi consentono un accesso più semplice alla risorsa). L'esempio seguente illustra come definire una risorsa <xref:System.Windows.Media.SolidColorBrush>.
@@ -168,12 +168,12 @@ L'esempio seguente descrive un'associazione e imposta la proprietà <xref:System
 Per altre informazioni, vedere [Ereditarietà del valore della proprietà](property-value-inheritance.md).
 
 ### <a name="wpf-designer-integration"></a>Integrazione di WPF Designer
-Un controllo personalizzato con proprietà implementate come proprietà di dipendenza riceverà la finestra di progettazione WPF appropriata per il supporto di Visual Studio. Un esempio è rappresentato dalla capacità di modificare proprietà di dipendenza dirette e associate tramite la finestra **Proprietà**. Per altre informazioni, vedere [Cenni preliminari sulla modifica di controlli](../controls/control-authoring-overview.md).
+Un controllo personalizzato con proprietà implementate come proprietà di dipendenza riceverà WPF Designer appropriato per il supporto di Visual Studio.A custom control with properties that are implemented as dependency properties will receive appropriate WPF Designer for Visual Studio support. Un esempio è rappresentato dalla capacità di modificare proprietà di dipendenza dirette e associate tramite la finestra **Proprietà**. Per altre informazioni, vedere [Cenni preliminari sulla modifica di controlli](../controls/control-authoring-overview.md).
 
 ## <a name="dependency-property-value-precedence"></a>Precedenza del valore della proprietà di dipendenza
 Quando si ottiene il valore di una proprietà di dipendenza, si ottiene potenzialmente un valore impostato per tale proprietà tramite uno qualsiasi degli altri input basati su proprietà che fanno parte del sistema di proprietà WPF. La precedenza del valore della proprietà di dipendenza consente interazioni prevedibili per un'ampia gamma di scenari relativi al modo in cui le proprietà ottengono i rispettivi valori.
 
-Si osservi l'esempio riportato di seguito. L'esempio include uno stile che si applica a tutti i pulsanti e alle loro proprietà <xref:System.Windows.Controls.Control.Background%2A>, ma specifica anche un pulsante con un valore <xref:System.Windows.Controls.Control.Background%2A> impostato localmente.
+Si consideri l'esempio seguente. L'esempio include uno stile che si applica a tutti i pulsanti e alle loro proprietà <xref:System.Windows.Controls.Control.Background%2A>, ma specifica anche un pulsante con un valore <xref:System.Windows.Controls.Control.Background%2A> impostato localmente.
 
 > [!NOTE]
 > Nella documentazione SDK i termini "valore locale" o "valore impostato localmente" vengono usati talvolta per la descrizione delle proprietà di dipendenza. Un valore impostato localmente è un valore di proprietà che viene impostato direttamente in un'istanza di oggetto nel codice o come attributo di un elemento in XAML.  
@@ -190,7 +190,7 @@ In genere, non si vuole che gli stili vengano sempre applicati e che nascondano 
 
 ## <a name="learning-more-about-dependency-properties"></a>Altre informazioni sulle proprietà di dipendenza  
 
-- Una proprietà associata è un tipo di proprietà che supporta una sintassi specializzata in XAML. Una proprietà associata spesso non ha una corrispondenza 1:1 con una proprietà Common Language Runtime (CLR) e non è necessariamente una proprietà di dipendenza. Lo scopo tipico di una proprietà associata consiste nel consentire agli elementi figlio di segnalare i valori della proprietà a un elemento padre, anche se quest'ultimo e l'elemento figlio non possiedono tale proprietà, come parte degli elenchi dei membri della classe. Uno scenario principale è l'abilitazione di elementi figlio per informare l'elemento padre di come devono essere presentati in [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Per un esempio, vedere <xref:System.Windows.Controls.DockPanel.Dock%2A> o <xref:System.Windows.Controls.Canvas.Left%2A>. Per informazioni dettagliate, vedere [Cenni preliminari sulle proprietà associate](attached-properties-overview.md).
+- Una proprietà associata è un tipo di proprietà che supporta una sintassi specializzata in XAML. Una proprietà associata spesso non ha una corrispondenza 1:1 con una proprietà CLR (Common Language Runtime) e non è necessariamente una proprietà di dipendenza. Lo scopo tipico di una proprietà associata consiste nel consentire agli elementi figlio di segnalare i valori della proprietà a un elemento padre, anche se quest'ultimo e l'elemento figlio non possiedono tale proprietà, come parte degli elenchi dei membri della classe. Uno scenario principale è l'abilitazione di elementi figlio per informare l'elemento padre di come devono essere presentati in [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Per un esempio, vedere <xref:System.Windows.Controls.DockPanel.Dock%2A> o <xref:System.Windows.Controls.Canvas.Left%2A>. Per informazioni dettagliate, vedere [Cenni preliminari sulle proprietà associate](attached-properties-overview.md).
 
 - Gli sviluppatori di componenti o di applicazioni possono decidere di creare una proprietà di dipendenza personalizzata al fine di abilitare funzionalità quali il data binding o il supporto degli stili oppure per il supporto dell'invalidamento e della coercizione del valore. Per informazioni dettagliate, vedere [Proprietà di dipendenza personalizzate](custom-dependency-properties.md).
 
@@ -200,5 +200,5 @@ In genere, non si vuole che gli stili vengano sempre applicati e che nascondano 
 
 - [Proprietà di dipendenza personalizzate](custom-dependency-properties.md)
 - [Proprietà di dipendenza di sola lettura](read-only-dependency-properties.md)
-- [Cenni preliminari su XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
+- [Panoramica di XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Architettura WPF](wpf-architecture.md)

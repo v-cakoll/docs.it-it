@@ -1,5 +1,5 @@
 ---
-title: Classe Connection (System.Net)
+title: Classe di connessione (System.Net)
 ms.date: 05/01/2017
 ms.technology: dotnet-networking
 topic_type:
@@ -11,16 +11,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 6f0b8902-f31c-4ab9-a8c9-de43228995ec
-ms.openlocfilehash: e9e0f4eed5eb4a7efd27177ab65551afa87fb7f6
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: dc0a594f7ae2bb9fc1883ec7ef672805bbc08778
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215084"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79156181"
 ---
 # <a name="connection-class"></a>Classe Connection
 
-La classe `Connection` analizza le risposte del server, le richieste di Accodamento e le richieste della pipeline.
+La `Connection` classe analizza le risposte del server, le richieste di coda e le richieste della pipeline.
 
 ## <a name="syntax"></a>Sintassi
   
@@ -29,14 +29,14 @@ internal class Connection : PooledStream
 ```
 
 > [!WARNING]
-> Il `Connection` classe è interno e non deve essere usato direttamente nel codice.
-> 
-> Microsoft non supporta l'utilizzo di questa classe in un'applicazione di produzione in qualsiasi circostanza.
+> La `Connection` classe è interna e non deve essere utilizzata direttamente nel codice.
+>
+> Microsoft non supporta in nessun caso l'utilizzo di questa classe in un'applicazione di produzione.
 
 ## <a name="requirements"></a>Requisiti
 
-**Spazio dei nomi:** <xref:System.Net>
+**Spazio dei nomi:**<xref:System.Net>
 
-**Assembly:** System (in System. dll)
+**Assemblaggio:** Sistema (in System.dll)
 
-**Versioni .NET Framework:** Disponibile a partire da 2,0.
+Versioni di **.NET Framework:** Disponibile dalla 2.0.

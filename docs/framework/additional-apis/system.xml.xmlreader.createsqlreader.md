@@ -1,5 +1,5 @@
 ---
-title: Metodo XmlReader. CreateSqlReader (System. Xml)
+title: Metodo XmlReader.CreateSqlReader (System.Xml)
 ms.date: 10/17/2019
 topic_type:
 - apiref
@@ -9,19 +9,19 @@ api_location:
 - system.xml.dll
 api_type:
 - Assembly
-ms.openlocfilehash: c65ef7c073175488c11c5e912a44d46fd4319209
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 7bd2ef5158516acede47f73f9937d06159bc16c9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215454"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155739"
 ---
 # <a name="xmlreadercreatesqlreader-method"></a>Metodo XmlReader.CreateSqlReader
 
 Crea una nuova istanza di <xref:System.Xml.XmlReader> con il flusso, le impostazioni e le informazioni di contesto specificati per l'analisi.
 
 ```csharp
-internal static XmlReader CreateSqlReader(Stream input, 
+internal static XmlReader CreateSqlReader(Stream input,
   XmlReaderSettings settings, XmlParserContext inputContext)
 ```
 
@@ -44,14 +44,14 @@ Oggetto usato per leggere i dati XML nel flusso.
 ## <a name="remarks"></a>Osservazioni
 
 > [!WARNING]
-> Il `XmlReader.CreateSqlReader` metodo è interno e non deve essere usato direttamente nel codice.
+> Il `XmlReader.CreateSqlReader` metodo è interno e non deve essere utilizzato direttamente nel codice.
 >
-> Microsoft non supporta l'utilizzo di questo metodo in un'applicazione di produzione in qualsiasi circostanza.
+> Microsoft non supporta in nessun caso l'utilizzo di questo metodo in un'applicazione di produzione.
 
 ## <a name="requirements"></a>Requisiti
 
-**Spazio dei nomi:** <xref:System.Xml>
+**Spazio dei nomi:**<xref:System.Xml>
 
-**Assembly:** System. XML. dll
+**Assemblaggio:** System.xml.dll
 
-**Versioni .NET Framework:** Disponibile a partire da 2,0.
+Versioni di **.NET Framework:** Disponibile dalla 2.0.

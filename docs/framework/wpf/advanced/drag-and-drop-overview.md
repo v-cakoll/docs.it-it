@@ -12,32 +12,32 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: 72dc443e5653b9871c3f67b003bd1af0536d5993
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: dd42af77300a7a93bbcbfa4c8f1fc365fc3f5da1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291482"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185973"
 ---
 # <a name="drag-and-drop-overview"></a>Cenni preliminari sul trascinamento della selezione
 Questo argomento fornisce una panoramica del supporto per il trascinamento della selezione nelle applicazioni [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Per trascinamento della selezione si intende di solito un metodo di trasferimento dei dati, in cui si usa un mouse (o un altro dispositivo di puntamento) per selezionare uno o più oggetti, si trascinano questi oggetti su un obiettivo di rilascio desiderato nell'[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] e li si rilascia.  
 
-<a name="Drag_and_Drop_Support"></a>   
+<a name="Drag_and_Drop_Support"></a>
 ## <a name="drag-and-drop-support-in-wpf"></a>Supporto del trascinamento della selezione in WPF  
  Nelle operazioni di trascinamento della selezione in genere sono coinvolte due parti: un'origine di trascinamento da cui ha origine l'oggetto trascinato e un obiettivo di rilascio che riceve l'oggetto rilasciato.  L'origine di trascinamento e l'obiettivo di rilascio possono essere elementi dell'interfaccia utente della stessa applicazione o di un'applicazione diversa.  
   
  Il tipo e il numero di oggetti che possono essere manipolati con un trascinamento della selezione sono del tutto arbitrari. Ad esempio file, cartelle e selezioni di contenuto sono alcuni degli oggetti più comuni manipolati con operazioni di trascinamento della selezione.  
   
- Le particolari azioni eseguite durante un'operazione di trascinamento della selezione sono specifiche dell'applicazione e spesso dipendono dal contesto.  Ad esempio, il trascinamento di una selezione di file da una cartella a un'altra nello stesso dispositivo di archiviazione consente di spostare i file per impostazione predefinita, mentre il trascinamento dei file da una condivisione Universal Naming Convention (UNC) a una cartella locale copia i file per impostazione predefinita.  
+ Le particolari azioni eseguite durante un'operazione di trascinamento della selezione sono specifiche dell'applicazione e spesso dipendono dal contesto.  Ad esempio, se si trascina una selezione di file da una cartella a un'altra sullo stesso dispositivo di archiviazione, i file vengono spostati per impostazione predefinita, mentre il trascinamento di file da una condivisione UNC (Universal Naming Convention) viene copiato per impostazione predefinita.  
   
- Le funzionalità di trascinamento della selezione fornite da [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sono estremamente flessibili e personalizzabili, per poter supportare svariati scenari di trascinamento.  Il trascinamento della selezione supporta la manipolazione di oggetti in una sola applicazione o tra applicazioni diverse. Anche il trascinamento e la rimozione tra [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazioni e altre applicazioni Windows sono completamente supportati.  
+ Le funzionalità di trascinamento della selezione fornite da [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sono estremamente flessibili e personalizzabili, per poter supportare svariati scenari di trascinamento.  Il trascinamento della selezione supporta la manipolazione di oggetti in una sola applicazione o tra applicazioni diverse. Anche il trascinamento [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] della selezione tra le applicazioni e altre applicazioni Windows è completamente supportato.  
   
  In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], qualsiasi <xref:System.Windows.UIElement> o <xref:System.Windows.ContentElement> può partecipare al trascinamento della selezione. Gli eventi e i metodi necessari per le operazioni di trascinamento della selezione vengono definiti nella classe <xref:System.Windows.DragDrop>. Le classi <xref:System.Windows.UIElement> e <xref:System.Windows.ContentElement> contengono alias per gli eventi associati <xref:System.Windows.DragDrop> in modo che gli eventi appaiano nell'elenco dei membri della classe quando un oggetto <xref:System.Windows.UIElement> o <xref:System.Windows.ContentElement> viene ereditato come elemento di base. I gestori eventi associati a questi eventi vengono associati all'evento associato <xref:System.Windows.DragDrop> sottostante e ricevono la stessa istanza di dati dell'evento. Per altre informazioni, vedere l'evento <xref:System.Windows.UIElement.Drop?displayProperty=nameWithType>.  
   
 > [!IMPORTANT]
 > Il trascinamento della selezione OLE non funziona nell'area Internet.  
   
-<a name="Data_Transfer"></a>   
+<a name="Data_Transfer"></a>
 ## <a name="data-transfer"></a>Trasferimento dati  
  Il trascinamento della selezione rientra nell'ambito del trasferimento dei dati. Il trasferimento dei dati include operazioni di trascinamento della selezione e di copia e incolla. Un'operazione di trascinamento della selezione è analoga a un'operazione di copia e incolla o taglia e incolla usata per trasferire dati da un oggetto o un'applicazione a un'altra usando gli Appunti di sistema. Entrambi i tipi di operazioni richiedono:  
   
@@ -60,13 +60,13 @@ Questo argomento fornisce una panoramica del supporto per il trascinamento della
   
  L'obiettivo di rilascio, ad esempio, potrebbe specificare che l'effetto di rilascio dei dati è lo spostamento dei dati. Tuttavia, per spostare i dati, è necessario sia aggiungerli all'elemento di destinazione che rimuoverli dall'elemento di origine. L'elemento di origine potrebbe indicare che consente lo spostamento dei dati, ma, se non si specifica il codice per rimuovere i dati dall'elemento di origine, come risultato finale i dati verranno copiati e non spostati.  
   
-<a name="Drag_and_Drop_Events"></a>   
+<a name="Drag_and_Drop_Events"></a>
 ## <a name="drag-and-drop-events"></a>Eventi del trascinamento della selezione  
  Le operazioni di trascinamento della selezione supportano un modello basato sugli eventi.  Sia l'origine di trascinamento che l'obiettivo di rilascio usano un set standard di eventi per gestire le operazioni di trascinamento della selezione.  Le tabelle seguenti riepilogano gli eventi di trascinamento della selezione standard. Sono eventi associati nella <xref:System.Windows.DragDrop> classe. Per altre informazioni sugli eventi associati, vedere [Cenni preliminari sugli eventi associati](attached-events-overview.md).  
   
 ### <a name="drag-source-events"></a>Eventi di origine di trascinamento  
   
-|event|Riepilogo|  
+|Event|Summary|  
 |-----------|-------------|  
 |<xref:System.Windows.DragDrop.GiveFeedback>|Questo evento si verifica continuamente durante un'operazione di trascinamento della selezione e consente all'origine di trascinamento di fornire informazioni all'utente. Per fornire questo feedback, in genere viene modificato l'aspetto del puntatore del mouse per indicare gli effetti consentiti dall'obiettivo di rilascio.  Si tratta di un evento di bubbling.|  
 |<xref:System.Windows.DragDrop.QueryContinueDrag>|Questo evento si verifica quando gli stati della tastiera o dei pulsanti del mouse cambiano durante un'operazione di trascinamento della selezione e consente all'origine di rilascio di annullare l'operazione di trascinamento a seconda degli stati di tastiera/pulsanti. Si tratta di un evento di bubbling.|  
@@ -75,7 +75,7 @@ Questo argomento fornisce una panoramica del supporto per il trascinamento della
   
 ### <a name="drop-target-events"></a>Eventi dell'obiettivo di rilascio  
   
-|event|Riepilogo|  
+|Event|Summary|  
 |-----------|-------------|  
 |<xref:System.Windows.DragDrop.DragEnter>|Questo evento si verifica quando un oggetto viene trascinato entro il limite dell'obiettivo di rilascio. Si tratta di un evento di bubbling.|  
 |<xref:System.Windows.DragDrop.DragLeave>|Questo evento si verifica quando un oggetto viene trascinato al di fuori del limite dell'obiettivo di rilascio.  Si tratta di un evento di bubbling.|  
@@ -88,7 +88,7 @@ Questo argomento fornisce una panoramica del supporto per il trascinamento della
   
  Per gestire gli eventi di trascinamento della selezione per le istanze di un oggetto, aggiungere i gestori per gli eventi elencati nelle tabelle precedenti. Per gestire gli eventi di trascinamento della selezione a livello di classe, eseguire l'override dei corrispondenti metodi On*Event e On\*PreviewEvent virtuali. Per altre informazioni, vedere [Gestione delle classi degli eventi indirizzati tramite classi di base dei controlli](marking-routed-events-as-handled-and-class-handling.md#Class_Handling_of_Routed_Events).  
   
-<a name="Implementing_Drag_And_Drop"></a>   
+<a name="Implementing_Drag_And_Drop"></a>
 ## <a name="implementing-drag-and-drop"></a>Implementazione del trascinamento della selezione  
  Un elemento dell'interfaccia utente può essere un'origine di trascinamento, un obiettivo di rilascio o entrambi. Per implementare il trascinamento della selezione di base, è necessario scrivere il codice per avviare l'operazione di trascinamento e per elaborare i dati rilasciati. È possibile migliorare l'esperienza di trascinamento della selezione gestendo gli eventi di trascinamento facoltativi.  
   
@@ -120,7 +120,7 @@ Questo argomento fornisce una panoramica del supporto per il trascinamento della
   
 - Per modificare la modalità con cui annullare l'operazione di trascinamento della selezione, gestire l'evento <xref:System.Windows.DragDrop.QueryContinueDrag> nell'origine di trascinamento.  
   
-<a name="Drag_And_Drop_Example"></a>   
+<a name="Drag_And_Drop_Example"></a>
 ## <a name="drag-and-drop-example"></a>Esempi di trascinamento della selezione  
  Questa sezione descrive come implementare il trascinamento della selezione per un elemento <xref:System.Windows.Shapes.Ellipse>. <xref:System.Windows.Shapes.Ellipse> è sia un'origine di trascinamento che un obiettivo di rilascio. I dati trasferiti sono la rappresentazione di stringa della proprietà <xref:System.Windows.Shapes.Shape.Fill%2A> dell'ellisse. Il codice XAML seguente mostra l'elemento <xref:System.Windows.Shapes.Ellipse> e gli eventi relativi al trascinamento della selezione gestiti. Per i passaggi completi per implementare il trascinamento della selezione, vedere [Procedura dettagliata: abilitare il trascinamento della selezione in un controllo utente](walkthrough-enabling-drag-and-drop-on-a-user-control.md).  
   
@@ -146,11 +146,11 @@ Questo argomento fornisce una panoramica del supporto per il trascinamento della
   
  Nel gestore dell'evento <xref:System.Windows.UIElement.MouseMove> chiamare il metodo <xref:System.Windows.DragDrop.DoDragDrop%2A> per avviare l'operazione di trascinamento della selezione. Il metodo <xref:System.Windows.DragDrop.DoDragDrop%2A> accetta tre parametri:  
   
-- `dragSource`: riferimento all'oggetto dipendenza che rappresenta l'origine dei dati trasferiti. si tratta in genere dell'origine dell'evento <xref:System.Windows.UIElement.MouseMove>.  
+- `dragSource`: riferimento all'oggetto dipendenza che è l'origine dei dati trasferiti. Di solito è l'origine dell'evento <xref:System.Windows.UIElement.MouseMove>.  
   
-- `data`: oggetto contenente i dati trasferiti, di cui è stato eseguito il wrapper in un <xref:System.Windows.DataObject>.  
+- `data`: oggetto contenente i dati trasferiti, di cui è stato eseguito il wrapping in un <xref:System.Windows.DataObject>.  
   
-- `allowedEffects`: uno dei <xref:System.Windows.DragDropEffects> valori di enumerazione che specifica gli effetti consentiti dell'operazione di trascinamento della selezione.  
+- `allowedEffects`: uno dei valori dell'enumerazione <xref:System.Windows.DragDropEffects>, che specifica gli effetti consentiti dell'operazione di trascinamento della selezione.  
   
  Qualsiasi oggetto serializzabile può essere passato nel parametro `data`. Se il wrapping dei dati non è già stato eseguito in un <xref:System.Windows.DataObject>, verrà eseguito automaticamente in un nuovo <xref:System.Windows.DataObject>. Per passare più elementi di dati, è necessario creare il <xref:System.Windows.DataObject> manualmente e passarlo al metodo <xref:System.Windows.DragDrop.DoDragDrop%2A>. Per altre informazioni, vedere [Dati e oggetti dati](data-and-data-objects.md).  
   
@@ -218,6 +218,6 @@ Questo argomento fornisce una panoramica del supporto per il trascinamento della
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Clipboard>
-- [Procedura dettagliata: Abilitare il trascinamento della selezione in un controllo utente](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
-- [Procedure relative](drag-and-drop-how-to-topics.md)
+- [Procedura dettagliata: abilitare il trascinamento della selezione in un controllo utente](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
+- [Argomenti relativi alle procedure](drag-and-drop-how-to-topics.md)
 - [Trascinamento della selezione](drag-and-drop.md)

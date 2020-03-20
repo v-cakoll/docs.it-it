@@ -9,22 +9,22 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 - windows installer, global assembly cache
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
-ms.openlocfilehash: e670f5dba47393b7df047fb4e6f7d92df8cb187c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 64878a795a7c5b790c8991064e32b82505685c0c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119799"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155563"
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>Procedura: Installare un assembly nella Global Assembly Cache
 
-Gli assembly condivisi da più applicazioni vengono archiviati nella Global Assembly Cache (GAC). Installare un assembly nella [Global Assembly Cache](gac.md) con uno dei componenti seguenti: 
+Gli assembly condivisi da più applicazioni vengono archiviati nella Global Assembly Cache (GAC). Installare un assembly nella [Global Assembly Cache](gac.md) con uno dei componenti seguenti:
 
-- [Windows Installer](#windows-installer)
-- [Strumento Global assembly cache](#global-assembly-cache-tool)
+- [Programma di installazione di Windows](#windows-installer)
+- [Strumento Global Assembly Cache](#global-assembly-cache-tool)
 
 > [!IMPORTANT]
-> È possibile installare solo assembly con nome sicuro in Global Assembly Cache. Per informazioni su come creare un assembly con nome sicuro, vedere [procedura: firmare un assembly con un nome sicuro](../../standard/assembly/sign-strong-name.md).
+> È possibile installare solo assembly con nome sicuro nella Global Assembly Cache. Per informazioni su come creare un assembly con nome sicuro, vedere [Procedura: firmare un assembly con un nome sicuro.](../../standard/assembly/sign-strong-name.md)
 
 ## <a name="windows-installer"></a>Windows Installer
 
@@ -32,7 +32,7 @@ Gli assembly condivisi da più applicazioni vengono archiviati nella Global Asse
 
 ## <a name="global-assembly-cache-tool"></a>Global Assembly Cache (strumento)
 
-È possibile utilizzare l' [utilità Global Assembly Cache (Gacutil. exe)](../tools/gacutil-exe-gac-tool.md) per aggiungere assembly al Global assembly cache e visualizzare il contenuto del Global assembly cache.
+È possibile utilizzare [l'utilità .NET Global Assembly Cache (gacutil.exe)](../tools/gacutil-exe-gac-tool.md) per aggiungere assembly alla Global Assembly Cache e visualizzare il contenuto della Global Assembly Cache.
 
    > [!NOTE]
    > *Gacutil.exe* è progettato esclusivamente per lo sviluppo. Non usarlo per installare assembly di produzione nella Global Assembly Cache.
@@ -43,9 +43,9 @@ La sintassi per usare *gacutil.exe* per installare un assembly nella Global Asse
 gacutil -i <assembly name>
 ```
 
-In questo comando *\<nome assembly>* è il nome dell'assembly da installare nella Global Assembly Cache.
+In questo comando, * \<nome dell'assembly>* è il nome dell'assembly da installare nella Global Assembly Cache.
 
-Se *gacutil. exe* non è presente nel percorso di sistema, usare il [prompt dei comandi per gli sviluppatori per Visual studio *\<versione >* ](../tools/developer-command-prompt-for-vs.md).
+Se *gacutil.exe* non è presente nel percorso di sistema, utilizzare il [prompt dei comandi Developer per la versione VS * \<>* ](../tools/developer-command-prompt-for-vs.md).
 
 L'esempio seguente consente di installare un assembly con nome file *hello.dll* nella Global Assembly Cache.
 
@@ -58,7 +58,7 @@ gacutil -i hello.dll
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Usare gli assembly e i Global Assembly Cache](working-with-assemblies-and-the-gac.md)
+- [Utilizzare gli assembly e la Global Assembly Cache](working-with-assemblies-and-the-gac.md)
 - [Procedura: rimuovere un assembly dalla Global Assembly Cache](how-to-remove-an-assembly-from-the-gac.md)
-- [Gacutil. exe (strumento Global assembly cache)](../tools/gacutil-exe-gac-tool.md)
-- [Procedura: firmare un assembly con un nome sicuro](../../standard/assembly/sign-strong-name.md)
+- [Gacutil.exe (strumento Global Assembly Cache)](../tools/gacutil-exe-gac-tool.md)
+- [Procedura: firmare un assembly con un nome sicuroHow to: Sign an assembly with a strong name](../../standard/assembly/sign-strong-name.md)

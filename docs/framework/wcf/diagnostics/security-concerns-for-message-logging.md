@@ -2,12 +2,12 @@
 title: Problemi di sicurezza per la registrazione dei messaggi
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: 679975be44244f10232b805a6cc2776b48ed6058
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: bb1a6ab84ceba27b398d397b4407a55aa02c4cae
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75935762"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185767"
 ---
 # <a name="security-concerns-for-message-logging"></a>Problemi di sicurezza per la registrazione dei messaggi
 In questo argomento viene illustrato come evitare che i dati riservati vengano esposti nei log dei messaggi e come proteggere gli eventi generati dalla registrazione dei messaggi.  
@@ -15,7 +15,7 @@ In questo argomento viene illustrato come evitare che i dati riservati vengano e
 ## <a name="security-concerns"></a>Problemi di sicurezza  
   
 ### <a name="logging-sensitive-information"></a>Registrazione di informazioni riservate  
- Windows Communication Foundation (WCF) non modifica i dati nelle intestazioni e nel corpo specifici dell'applicazione. Inoltre, WCF non tiene traccia delle informazioni personali nelle intestazioni specifiche dell'applicazione o nei dati del corpo.  
+ Windows Communication Foundation (WCF) non modifica i dati nelle intestazioni e nel corpo specifici dell'applicazione. WCF inoltre non tiene traccia delle informazioni personali nelle intestazioni specifiche dell'applicazione o nei dati del corpo.  
   
  Quando la registrazione dei messaggi è abilitata, le informazioni personali contenute nelle intestazioni specifiche dell'applicazione, ad esempio una stringa di query, e le informazioni contenute nel corpo, ad esempio un numero di carta di credito, possono divenire visibili nei log. Il distributore dell'applicazione è responsabile dell'applicazione del controllo di accesso sui file di log e di configurazione. Se non si desidera che questo tipo di informazioni sia visibile, è necessario disabilitare la registrazione oppure filtrare parte dei dati se si intende condividere i file registro.  
   
@@ -34,7 +34,7 @@ In questo argomento viene illustrato come evitare che i dati riservati vengano e
    <system.serviceModel>  
       <machineSettings enableLoggingKnownPii="true"/>  
    </system.serviceModel>  
-</configuration>   
+</configuration>
 ```  
   
  I distributori di applicazioni possono quindi utilizzare l'attributo `logKnownPii` nel file App.config o Web.config per abilitare la registrazione di informazioni personali come segue:  
@@ -72,7 +72,7 @@ In questo argomento viene illustrato come evitare che i dati riservati vengano e
                       initializeData="c:\logs\messages.svclog" />  
               </listeners>  
             </source>  
-      <source name="System.ServiceModel"   
+      <source name="System.ServiceModel"
               logKnownPii="true">  
               <listeners>  
                  <add name="traces"  
@@ -88,7 +88,7 @@ In questo argomento viene illustrato come evitare che i dati riservati vengano e
   
  Le modifiche diventano effettive solo dopo l'avvio o il riavvio dell'applicazione. Un evento viene registrato all'avvio quando entrambi gli attributi sono impostati su `true`. Un evento viene inoltre registrato se `logKnownPii` è impostato su `true` ma `enableLoggingKnownPii` è `false`.  
   
- L'amministratore del computer e il distributore di applicazioni devono prestare molta attenzione durante l'utilizzo di queste due opzioni. Se la registrazione di informazioni personali è abilitata, vengono registrate chiavi di sicurezza e informazioni personali. Se è disabilitata, i dati riservati e le informazioni specifiche dell'applicazione vengono comunque registrati nell'intestazione e nel corpo dei messaggi. Per una discussione più approfondita sulla privacy e sulla protezione delle informazioni personali da esporre, vedere [privacy degli utenti](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480490(v=msdn.10)).  
+ L'amministratore del computer e il distributore di applicazioni devono prestare molta attenzione durante l'utilizzo di queste due opzioni. Se la registrazione di informazioni personali è abilitata, vengono registrate chiavi di sicurezza e informazioni personali. Se è disabilitata, i dati riservati e le informazioni specifiche dell'applicazione vengono comunque registrati nell'intestazione e nel corpo dei messaggi. Per una discussione più approfondita sulla privacy e sulla protezione delle informazioni personali dall'esposizione, vedere [Privacy degli](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480490(v=msdn.10))utenti .  
   
 > [!CAUTION]
 > Le PII non sono nascoste nei messaggi in formato non valido. Tali messaggi vengono registrati così come sono, senza alcuna modifica. Gli attributi menzionati prima non hanno alcun effetto su questa situazione.  
@@ -103,11 +103,11 @@ In questo argomento viene illustrato come evitare che i dati riservati vengano e
   
 - Registrazioni messaggi disattivata: questo evento viene emesso quando la registrazione messaggi è disabilitata tramite WMI. Il contenuto dell'evento è "Registrazione messaggi disattivata".  
   
-- Registrazione informazioni personali note attiva: questo evento viene generato quando la registrazione di informazioni personali note è abilitata. Questo errore si verifica quando l'attributo `enableLoggingKnownPii` nell'elemento `machineSettings` del file Machine. config è impostato su `true`e l'attributo `logKnownPii` dell'elemento `source` nel file app. config o Web. config è impostato su `true`.  
+- Registrazione informazioni personali note attiva: questo evento viene generato quando la registrazione di informazioni personali note è abilitata. Ciò si `enableLoggingKnownPii` verifica `machineSettings` quando l'attributo nell'elemento `true`del `logKnownPii` file Machine.config è impostato su e l'attributo dell'elemento `source` nel file App.config o Web.config è impostato su `true`.  
   
-- Registrazione informazioni personali note non consentita: questo evento viene emesso quando la registrazione delle informazioni personali note non è consentita. Questo errore si verifica quando l'attributo `logKnownPii` dell'elemento `source` nel file app. config o Web. config è impostato su `true`, ma l'attributo `enableLoggingKnownPii` nell'elemento `machineSettings` del file Machine. config è impostato su `false`. Non viene generata alcuna eccezione.  
+- Registrazione informazioni personali note non consentita: questo evento viene emesso quando la registrazione delle informazioni personali note non è consentita. Ciò si `logKnownPii` verifica `source` quando l'attributo dell'elemento nel file `true`App.config `enableLoggingKnownPii` o `machineSettings` Web.config è impostato su `false`, ma l'attributo nell'elemento del file Machine.config è impostato su . Non viene generata alcuna eccezione.  
   
- Questi eventi possono essere visualizzati nello strumento Visualizzatore eventi in dotazione con Windows. Per ulteriori informazioni, vedere registrazione degli [eventi](./event-logging/index.md).  
+ Questi eventi possono essere visualizzati nello strumento Visualizzatore eventi in dotazione con Windows. Per ulteriori informazioni, vedere [Registrazione eventi](./event-logging/index.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

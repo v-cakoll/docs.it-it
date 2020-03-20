@@ -8,26 +8,26 @@ helpviewer_keywords:
 - <proxy> element
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-ms.openlocfilehash: 5f327a2bb4fe316497614f14669907d514c20654
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 590ea747c2fa9e5e85e5e9d05f6fb80fe60251d3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089187"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154790"
 ---
-# <a name="proxy-element-network-settings"></a>\<elemento > proxy (impostazioni di rete)
+# <a name="proxy-element-network-settings"></a>\<Elemento> proxy (impostazioni di rete)
 Definisce un server proxy.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultProxy**](defaultproxy-element-network-settings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**proxy** >
+[**\<>di configurazione**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<>system.net**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<>defaultProxy**](defaultproxy-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>proxy**
 
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
 <proxy
-  autoDetect="true|false|unspecified" 
+  autoDetect="true|false|unspecified"
   bypassonlocal="true|false|unspecified"
   proxyaddress="uriString"
   scriptLocation="uriString"
@@ -38,18 +38,18 @@ Definisce un server proxy.
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### <a name="attributes"></a>Attributi  
+### <a name="attributes"></a>Attributes  
   
 |**Attributo**|**Descrizione**|  
 |-------------------|---------------------|  
 |`autoDetect`|Specifica se il proxy viene rilevato automaticamente. Il valore predefinito è `unspecified`.|  
-|`bypassonlocal`|Specifica se il proxy viene ignorato per le risorse locali. Le risorse locali includono il server locale (`http://localhost`, `http://loopback`o `http://127.0.0.1`) e un URI senza un punto (`http://webserver`). Il valore predefinito è `unspecified`.|  
+|`bypassonlocal`|Specifica se il proxy viene ignorato per le risorse locali. Le risorse locali includono`http://localhost` `http://loopback`il `http://127.0.0.1`server locale ( ,`http://webserver`, o ) e un URI senza punto ( ). Il valore predefinito è `unspecified`.|  
 |`proxyaddress`|Specifica l'URI del proxy da utilizzare.|  
-|`scriptLocation`|Specifica il percorso dello script di configurazione. Non usare l'attributo `bypassonlocal` con questo attributo. |  
-|`usesystemdefault`|Specifica se utilizzare le impostazioni proxy di Internet Explorer. Se impostato su `true`, gli attributi successivi sostituiranno le impostazioni proxy di Internet Explorer. Il valore predefinito è `unspecified`.|  
+|`scriptLocation`|Specifica il percorso dello script di configurazione. Non utilizzare `bypassonlocal` l'attributo con questo attributo. |  
+|`usesystemdefault`|Specifica se utilizzare le impostazioni proxy di Internet Explorer. Se impostato `true`su , gli attributi successivi sostituiranno le impostazioni proxy di Internet Explorer. Il valore predefinito è `unspecified`.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuna.  
+ No.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -59,22 +59,22 @@ Definisce un server proxy.
   
 ## <a name="text-value"></a>Valore di testo  
   
-## <a name="remarks"></a>Note  
- L'elemento `proxy` definisce un server proxy per un'applicazione. Se questo elemento non è presente nel file di configurazione, il .NET Framework utilizzerà le impostazioni del proxy in Internet Explorer.  
+## <a name="remarks"></a>Osservazioni  
+ L'elemento `proxy` definisce un server proxy per un'applicazione. Se questo elemento non è presente nel file di configurazione, .NET Framework utilizzerà le impostazioni proxy in Internet Explorer.  
   
- Il valore per l'attributo `proxyaddress` deve essere un URI (Uniform Resource Indicator) ben formato.  
+ Il valore `proxyaddress` per l'attributo deve essere un URI (Uniform Resource Indicator) ben formato.  
   
- L'attributo `scriptLocation` si riferisce al rilevamento automatico degli script di configurazione del proxy. La classe <xref:System.Net.WebProxy> tenterà di individuare uno script di configurazione, in genere denominato wpad. dat, quando si seleziona l'opzione **Usa script di configurazione automatica** in Internet Explorer. Se `bypassonlocal` è impostato su un valore qualsiasi, `scriptLocation` viene ignorato.
+ L'attributo `scriptLocation` si riferisce al rilevamento automatico degli script di configurazione proxy. La <xref:System.Net.WebProxy> classe tenterà di individuare uno script di configurazione (in genere denominato Wpad.dat) quando è selezionata l'opzione Usa script di **configurazione automatica** in Internet Explorer. Se `bypassonlocal` è impostato su `scriptLocation` un valore, viene ignorato.
   
- Usare l'attributo `usesystemdefault` per le applicazioni .NET Framework versione 1,1 che eseguono la migrazione alla versione 2,0.  
+ Utilizzare `usesystemdefault` l'attributo per le applicazioni .NET Framework versione 1.1 che eseguono la migrazione alla versione 2.0.  
   
- Viene generata un'eccezione se l'attributo `proxyaddress` specifica un proxy predefinito non valido. La proprietà <xref:System.Exception.InnerException%2A> nell'eccezione dovrebbe contenere altre informazioni sulla causa radice dell'errore.  
+ Se l'attributo `proxyaddress` specifica un proxy predefinito non valido, viene generata un'eccezione. La proprietà <xref:System.Exception.InnerException%2A> nell'eccezione dovrebbe contenere altre informazioni sulla causa radice dell'errore.  
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente vengono utilizzate le impostazioni predefinite del proxy di Internet Explorer, viene specificato l'indirizzo proxy e viene ignorato il proxy per l'accesso locale.  
+ Nell'esempio seguente vengono utilizzate le impostazioni predefinite del proxy di Internet Explorer, viene specificato l'indirizzo del proxy e viene ignorato il proxy per l'accesso locale.  
   
 ```xml  
 <configuration>  

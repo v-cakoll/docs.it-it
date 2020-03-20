@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
 ms.openlocfilehash: 367db4fa4e585d6066009dbd1afacb154829319a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047872"
 ---
 # <a name="internet-protocol-version-6"></a>protocollo IPv6
@@ -59,6 +59,6 @@ IPv6 (Internet Protocol version 6) è una nuova famiglia di protocolli standard 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [IPv6 Sockets Sample](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms180981%28v=vs.85%29) (Esempio di socket IPv6)
+- [Esempio di socket IPv6](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms180981%28v=vs.85%29)
 - [Esempi di programmazione di rete](network-programming-samples.md)
-- [Socket](sockets.md)
+- [socket](sockets.md)

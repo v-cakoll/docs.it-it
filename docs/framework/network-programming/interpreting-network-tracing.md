@@ -10,10 +10,10 @@ helpviewer_keywords:
 - includehex
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
 ms.openlocfilehash: fd617e152b1e86cc71dd8e3cc8a01f1d2f52c30a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047895"
 ---
 # <a name="interpreting-network-tracing"></a>Interpretazione della traccia di rete
@@ -26,7 +26,7 @@ Quando la traccia di rete è abilitata, può essere usata per acquisire le chiam
   
  Nell'esempio precedente [588] è l'identificatore univoco del thread corrente. (4357) e (4387) sono timestamp che indicano il numero di millisecondi trascorsi dall'avvio dell'applicazione. I dati che seguono il timestamp mostrano l'applicazione in ingresso e in uscita verso e dal metodo **Socket.Send**. L'identificatore univoco dell'oggetto che esegue il metodo **Send** è 33574638. La traccia di uscita dal metodo include il valore restituito (61 nell'esempio precedente).  
   
- Le tracce di rete possono acquisire il traffico di rete inviato o ricevuto dall'applicazione usando protocolli a livello di applicazione come HTTP (Hypertext Transfer Protocol). Questi dati possono essere acquisiti come testo e, facoltativamente, come dati esadecimali. I dati esadecimali sono disponibili quando si specifica **includehex** come valore dell'attributo **tracemode**. Per informazioni dettagliate su questo attributo, vedere [Procedura: Configurare la traccia di rete](how-to-configure-network-tracing.md). La traccia dell'esempio seguente è stata generata con **includehex**.  
+ Le tracce di rete possono acquisire il traffico di rete inviato o ricevuto dall'applicazione usando protocolli a livello di applicazione come HTTP (Hypertext Transfer Protocol). Questi dati possono essere acquisiti come testo e, facoltativamente, come dati esadecimali. I dati esadecimali sono disponibili quando si specifica **includehex** come valore dell'attributo **tracemode**. Per informazioni dettagliate su questo attributo, vedere [Procedura: configurare la traccia](how-to-configure-network-tracing.md)di rete. La traccia di esempio seguente è stata generata utilizzando **includehex**.  
   
  `[1692]   (1142)   00000000 : 47 45 54 20 2F 77 70 61-64 2E 64 61 74 20 48 54 : GET /wpad.dat HT`  
   
