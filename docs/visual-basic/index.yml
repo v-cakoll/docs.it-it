@@ -1,41 +1,41 @@
 ### YamlMime:Landing
 title: Documentazione di Visual Basic
-summary: Visual Basic è progettato per semplificare la creazione di app indipendenti dai tipi e orientate a oggetti. Visual Basic è un modo rapido e semplice per creare app .NET.
+summary: Visual Basic è progettato per aiutarti a creare in modo produttivo app indipendenti dai tipi e orientate agli oggetti. Visual Basic è un modo semplice e veloce per creare app .NET.
 metadata:
-  title: 'Visual Basic docs: introduzione, esercitazioni e informazioni di riferimento.'
-  description: Informazioni sulla programmazione Visual Basic in .NET per iniziare gli sviluppatori, gli sviluppatori che hanno familiarità con Visual Basic e con esperienza Visual Basic sviluppatori
+  title: 'Documenti di Visual Basic: introduzione, esercitazioni, informazioni di riferimento.'
+  description: Imparare la programmazione Visual Basic in .NET - per iniziare sviluppatori, sviluppatori nuovi di Visual Basic e sviluppatori Visual Basic esperti
   ms.topic: landing-page
   ms.date: 11/27/2019
   ms.openlocfilehash: 9019ed13a6e9a02710ec063a6538a406f4940e21
-  ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
   ms.translationtype: MT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 12/05/2019
+  ms.lasthandoff: 03/15/2020
   ms.locfileid: "74838337"
 landingContent:
-- title: Attività iniziali
+- title: Introduzione
   linkLists:
   - linkListType: get-started
     links:
-    - text: Creare un'app "Hello World" con .NET Core
+    - text: Creare un'app "Hello World" con .NET CoreBuild a "Hello World" app with .NET Core
       url: ../core/tutorials/vb-with-visual-studio.md
-    - text: Compilazione di una libreria di classi con .NET Standard
+    - text: Creare una libreria di classi con .NET StandardBuild a class library with .NET Standard
       url: ../core/tutorials/vb-library-with-visual-studio.md
     - text: Risorse aggiuntive
       url: getting-started/additional-resources.md
     - text: Procedure dettagliate
       url: walkthroughs.md
-- title: Nozioni di base su Visual Basic
+- title: Nozioni fondamentali di Visual Basic
   linkLists:
   - linkListType: overview
     links:
-    - text: Concetti di programmazione
+    - text: Concetti relativi alla programmazione
       url: programming-guide/concepts/index.md
   - linkListType: concept
     links:
     - text: Struttura del programma e convenzioni di scrittura del codice
       url: programming-guide/program-structure/program-structure-and-code-conventions.md
-    - text: Sviluppare app con Visual Basic
+    - text: Sviluppare app con Visual BasicDevelop apps with Visual Basic
       url: developing-apps/index.md
     - text: Struttura del programma e convenzioni di scrittura del codice
       url: programming-guide/program-structure/program-structure-and-code-conventions.md
@@ -47,23 +47,23 @@ landingContent:
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Windows Forms delegati ed eventi personalizzati
+    - text: Delegati ed eventi personalizzati di Windows FormWindows Forms custom delegates and events
       url: https://social.technet.microsoft.com/wiki/contents/articles/53470.vb-net-windows-forms-custom-delegates-and-events.aspx
-    - text: Modificare i valori della tabella di database tramite DataGrid di WPF
+    - text: Modificare i valori delle tabelle di database tramite WPF DataGrid
       url: https://social.msdn.microsoft.com/Forums/vstudio/10a3dd61-7dcc-48f3-a6e0-f7386d06f9f1/edit-database-table-values-via-wpf-datagrid-visual-basic?forum=wpf
-    - text: 'Windows Forms ListView: analisi della visualizzazione dettagli con SQL Server'
+    - text: 'Windows Forms ListView: Examining detail view with SQL Server'
       url: https://social.technet.microsoft.com/wiki/contents/articles/53356.windows-forms-listview-examining-detail-view-with-sql-server.aspx
     - text: Come aprire la cartella di lavoro di Excel 2016 tramite OleDbConnection
       url: https://social.msdn.microsoft.com/Forums/vstudio/70a45808-9aaf-4320-a5fc-04cbbabf6e4d/how-to-open-excel-2016-workbook-through-oledbconnection?forum=vbgeneral
-- title: riferimenti al linguaggio Visual Basic
+- title: Informazioni di riferimento per il linguaggio Visual Basic
   linkLists:
   - linkListType: reference
     links:
-    - text: Riferimenti per il linguaggio
+    - text: Informazioni di riferimento sul linguaggio
       url: language-reference/index.md
     - text: Parole chiave
       url: language-reference/keywords/index.md
     - text: Operatori
       url: language-reference/operators/index.md
-    - text: Specifica del linguaggio
+    - text: Specifiche del linguaggio
       url: reference/language-specification/index.md

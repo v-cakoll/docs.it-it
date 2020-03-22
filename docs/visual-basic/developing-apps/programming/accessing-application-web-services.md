@@ -7,10 +7,10 @@ helpviewer_keywords:
 - applications [Visual Basic], Web services
 ms.assetid: 8ad5405b-e771-42b1-82d3-ce97af2cea9e
 ms.openlocfilehash: ad616bd46f92261ec5ad6ae81d0db48138631ed1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74349222"
 ---
 # <a name="accessing-application-web-services-visual-basic"></a>Accesso ai servizi Web dell'applicazione (Visual Basic)
@@ -21,10 +21,10 @@ L'oggetto `My.WebServices` fornisce un'istanza di ogni servizio Web a cui si fa 
 
 La tabella seguente presenta i modi possibili per accedere ai servizi Web a cui fa riferimento un'applicazione.
 
-|Per|Vedere|
+|A|Vedere|
 |---|---|
 |Chiamare un servizio Web|[Oggetto My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)|
-|Chiamare un servizio Web in modo asincrono e gestire un evento quando quest'ultimo viene completato|[Procedura: Chiamare un servizio Web in modo asincrono](../../../visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)|
+|Chiamare un servizio Web in modo asincrono e gestire un evento quando quest'ultimo viene completato|[Procedura: chiamare un servizio Web in modo asincrono](../../../visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)|
 
 ## <a name="see-also"></a>Vedere anche
 

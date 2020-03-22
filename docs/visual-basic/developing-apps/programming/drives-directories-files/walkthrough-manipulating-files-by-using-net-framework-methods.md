@@ -16,10 +16,10 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
 ms.openlocfilehash: 02cdbcc59e8817ff4ec06c2f78f835cad77b10f2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74333775"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Procedura dettagliata: modifica di file mediante i metodi .NET Framework (Visual Basic)
@@ -34,21 +34,21 @@ Avviare Visual Studio e iniziare il progetto creando un modulo che l'utente può
 
 ### <a name="to-create-the-project"></a>Per creare il progetto
 
-1. Nel menu **File** selezionare **Nuovo progetto**.
+1. Scegliere **Nuovo progetto** dal menu **File**.
 
 2. Nel riquadro **Nuovo progetto** fare clic su **Applicazione Windows**.
 
-3. Nella casella **Nome** digitare `MyDiary` e fare clic su **OK**.
+3. Nella **Name** casella Nome `MyDiary` digitare e fare clic su **OK**.
 
-     Visual Studio aggiunge il progetto a **Esplora soluzioni** e viene aperto **Progettazione Windows Form**.
+     Visual Studio aggiunge il progetto a **Esplora soluzioni**e viene aperto **Progettazione Windows Form** .
 
 4. Aggiungere i controlli della tabella seguente al form e impostare i valori corrispondenti per le relative proprietà.
 
 |**Oggetto**|**Proprietà**|**Valore**|
 |---|---|---|
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **per**|`Submit`<br /><br /> **Invia voce**|
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **per**|`Clear`<br /><br /> **Cancella voce**|
-|<xref:System.Windows.Forms.TextBox>|**Nome**<br /><br /> **per**<br /><br /> **Multiline**|`Entry`<br /><br /> **Immettere un valore.**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**|`Submit`<br /><br /> **Invia voce**|
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**|`Clear`<br /><br /> **Cancella voce**|
+|<xref:System.Windows.Forms.TextBox>|**Nome**<br /><br /> **Testo**<br /><br /> **Multiline**|`Entry`<br /><br /> **Immettere un valore.**<br /><br /> `False`|
 
 ## <a name="writing-to-the-file"></a>Scrivere nel file
 
@@ -83,7 +83,7 @@ Per aggiungere la possibilità di scrivere in un file tramite l'applicazione, us
 
      [!code-vb[VbVbcnMyFileSystem#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#39)]
 
-4. Aggiungere infine il codice per cancellare <xref:System.Windows.Forms.TextBox>. Aggiungere il codice seguente all'evento `Clear` del pulsante <xref:System.Windows.Forms.Control.Click>.
+4. Aggiungere infine il codice per cancellare <xref:System.Windows.Forms.TextBox>. Aggiungere il codice seguente all'evento <xref:System.Windows.Forms.Control.Click> del pulsante `Clear`.
 
      [!code-vb[VbVbcnMyFileSystem#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#40)]
 
@@ -93,12 +93,12 @@ In questa sezione, si aggiunge una funzionalità che consente di visualizzare l'
 
 Per questa sezione della procedura, aggiungere i controlli della tabella seguente al form e impostare i valori corrispondenti per le relative proprietà.
 
-|Control|Proprietà|Valori|
+|Controllo|Proprietà|Valori|
 |-------------|----------------|------------|
-|<xref:System.Windows.Forms.TextBox>|**Nome**<br /><br /> **Visible**<br /><br /> **Dimensione**<br /><br /> **Multiline**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **per**|`Display`<br /><br /> **Visualizza**|
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **per**|`GetEntries`<br /><br /> **Ottieni voci**|
-|<xref:System.Windows.Forms.ComboBox>|**Nome**<br /><br /> **per**<br /><br /> **Enabled**|`PickEntries`<br /><br /> **Seleziona una voce**<br /><br /> `False`|
+|<xref:System.Windows.Forms.TextBox>|**Nome**<br /><br /> **Visibile**<br /><br /> **Dimensione**<br /><br /> **Multiline**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**|`Display`<br /><br /> **Schermo**|
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**|`GetEntries`<br /><br /> **Ottieni voci**|
+|<xref:System.Windows.Forms.ComboBox>|**Nome**<br /><br /> **Testo**<br /><br /> **Abilitato**|`PickEntries`<br /><br /> **Seleziona una voce**<br /><br /> `False`|
 
 ### <a name="to-populate-the-combo-box"></a>Per popolare la casella combinata
 
@@ -122,15 +122,15 @@ Infine, è possibile includere funzionalità aggiuntive che consentono agli uten
 
 Aggiungere i controlli della tabella seguente al form e impostare i valori corrispondenti per le relative proprietà.
 
-|Control|Proprietà|Valori|
+|Controllo|Proprietà|Valori|
 |-------------|----------------|------------|
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **per**<br /><br /> **Enabled**|`DeleteEntry`<br /><br /> **Elimina voce**<br /><br /> `False`|
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **per**<br /><br /> **Enabled**|`EditEntry`<br /><br /> **Modifica voce**<br /><br /> `False`|
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **per**<br /><br /> **Enabled**|`SubmitEdit`<br /><br /> **Invia modifica**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**<br /><br /> **Abilitato**|`DeleteEntry`<br /><br /> **Elimina voce**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**<br /><br /> **Abilitato**|`EditEntry`<br /><br /> **Modifica voce**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**<br /><br /> **Abilitato**|`SubmitEdit`<br /><br /> **Invia modifica**<br /><br /> `False`|
 
 ### <a name="to-enable-deletion-and-modification-of-entries"></a>Per abilitare l'eliminazione e la modifica delle voci
 
-1. Aggiungere il codice seguente all'evento `Display` del pulsante <xref:System.Windows.Forms.Control.Click>, dopo `DisplayEntry.Text = ReadString`.
+1. Aggiungere il codice seguente all'evento <xref:System.Windows.Forms.Control.Click> del pulsante `Display`, dopo `DisplayEntry.Text = ReadString`.
 
      [!code-vb[VbVbcnMyFileSystem#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#43)]
 
@@ -150,7 +150,7 @@ Aggiungere i controlli della tabella seguente al form e impostare i valori corri
 
      [!code-vb[VbVbcnMyFileSystem#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#47)]
 
-Per testare il codice, premere F5 per compilare l'applicazione. Fare clic su **Ottieni voci**, selezionare una voce e quindi fare clic su **Visualizza**. La voce viene visualizzata nell'oggetto `DisplayEntry`<xref:System.Windows.Forms.TextBox>. Fare clic su **Modifica voce**. La voce viene visualizzata nell'oggetto `Entry`<xref:System.Windows.Forms.TextBox>. Modificare la voce nell'oggetto `Entry`<xref:System.Windows.Forms.TextBox> e fare clic su **Invia modifica**. Aprire il file `MyDiary.txt` per confermare la correzione. Ora selezionare una voce e fare clic su **Elimina voce**. Quando l'oggetto <xref:System.Windows.Forms.MessageBox> chiede una conferma, fare clic su **OK**. Chiudere l'applicazione e aprire `MyDiary.txt` per confermare l'eliminazione.
+Per testare il codice, premere F5 per compilare l'applicazione. Fare clic su **Ottieni voci**, selezionare una voce e quindi fare clic su **Visualizza**. La voce viene visualizzata nell'oggetto `DisplayEntry`<xref:System.Windows.Forms.TextBox>. Fare clic su **Modifica voce**. La voce viene visualizzata nell'oggetto `Entry`<xref:System.Windows.Forms.TextBox>. Modificare la voce `Entry` <xref:System.Windows.Forms.TextBox> nel campo e fare clic su **Invia modifica**. Aprire il file `MyDiary.txt` per confermare la correzione. Ora selezionare una voce e fare clic su **Elimina voce**. Quando l'oggetto <xref:System.Windows.Forms.MessageBox> chiede una conferma, fare clic su **OK**. Chiudere l'applicazione e aprire `MyDiary.txt` per confermare l'eliminazione.
 
 ## <a name="see-also"></a>Vedere anche
 

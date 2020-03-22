@@ -6,10 +6,10 @@ helpviewer_keywords:
 - folders [Visual Basic], creating
 ms.assetid: 0351a2ca-24d8-43b5-bb39-9b99e6401cff
 ms.openlocfilehash: 3d838352a0a3dd69a1555dc34b8acba3afba278b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348804"
 ---
 # <a name="how-to-create-a-directory-in-visual-basic"></a>Procedura: creare una directory in Visual Basic

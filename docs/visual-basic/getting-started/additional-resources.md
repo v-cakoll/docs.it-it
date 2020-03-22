@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
 ms.openlocfilehash: 9e55910573b3aa3aecf9082f1b77659a45f883a1
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73196990"
 ---
 # <a name="additional-resources"></a>Risorse aggiuntive
@@ -50,8 +50,8 @@ Nei siti Web seguenti è disponibile materiale sussidiario per trovare la soluzi
 
 |URL|Descrizione|
 |----------|----------------|
-|[Support Microsoft](https://support.microsoft.com)|È possibile accedere agli articoli di Microsoft Knowledge Base (KB), a download e ad aggiornamenti, a servizi di supporto su Web e ad altri servizi.|
-|[Domande su Visual Studio](https://developercommunity.visualstudio.com)|Consente di segnalare bug o inoltrare suggerimenti a Microsoft su .NET e Visual Studio. È anche possibile segnalare un bug selezionando **?**  > **Commenti e suggerimenti** > **Segnala un problema** in Visual Studio.|
+|[Supporto tecnico Microsoft](https://support.microsoft.com)|È possibile accedere agli articoli di Microsoft Knowledge Base (KB), a download e ad aggiornamenti, a servizi di supporto su Web e ad altri servizi.|
+|[Domande su Visual Studio](https://developercommunity.visualstudio.com)|Consente di segnalare bug o inoltrare suggerimenti a Microsoft su .NET e Visual Studio. È inoltre possibile segnalare un bug selezionando Guida**Invia commenti** > e suggerimenti Segnala un problema in Visual Studio.You can also report a bug by selecting **Help** > Send Feedback**Report a Problem** in Visual Studio.|
 
 ## <a name="third-party-resources"></a>Risorse di terze parti
 
@@ -59,9 +59,9 @@ Nei siti Web seguenti è disponibile materiale sussidiario per trovare la soluzi
 |----------|----------------|
 |[VBForums](http://www.vbforums.com/)|Forum di discussione su Visual Basic, .NET e altro ancora.|
 |[vbCity](http://vbcity.com/)|Sito della community per utenti che vogliono conoscere Visual Basic e .NET e rivolgere delle domande.|
-|[Overflow dello stack](https://stackoverflow.com/questions/tagged/vb.net)|Overflow dello stack è un sito che contiene domande e risposte dedicato agli sviluppatori.|
+|[Stack Overflow](https://stackoverflow.com/questions/tagged/vb.net)|Overflow dello stack è un sito che contiene domande e risposte dedicato agli sviluppatori.|
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Introduzione a Visual Basic](../../visual-basic/getting-started/index.md)
-- [Talk to Us](/visualstudio/ide/feedback-options) (Comunicazioni con Microsoft)
+- [Parla con noi](/visualstudio/ide/feedback-options)

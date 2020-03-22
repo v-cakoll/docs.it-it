@@ -6,17 +6,17 @@ helpviewer_keywords:
 - programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
 ms.openlocfilehash: 048bc70c2b5416d4377c5abcfdaf18a9312068db
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74352113"
 ---
 # <a name="programming-in-visual-basic"></a>Programmazione in Visual Basic
 
 Questa sezione discute le attività di programmazione da approfondire per la creazione di un'applicazione Visual Basic.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
 
  [Accesso alle risorse del computer](../../../visual-basic/developing-apps/programming/computer-resources/index.md)  
  Include documentazione sull'uso dell'oggetto `My.Computer` per accedere a informazioni riguardanti il computer in cui è in esecuzione un'applicazione. Viene inoltre descritto in che modo è possibile controllare tale computer.  
@@ -33,7 +33,7 @@ Questa sezione discute le attività di programmazione da approfondire per la cre
  [Accesso ai servizi Web dell'applicazione](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
  Include documentazione sulla modalità di accesso ai servizi Web a cui fa riferimento l'applicazione mediante l'oggetto `My.WebServices`.  
   
- [Accessing Application Settings](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
+ [Accesso alle impostazioni dell'applicazione](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
  Include documentazione sull'accesso alle impostazioni di un'applicazione mediante l'oggetto `My.Settings`.  
   
  [Elaborazione di unità, directory e file](drives-directories-files/index.md)  
@@ -42,6 +42,6 @@ Questa sezione discute le attività di programmazione da approfondire per la cre
 ## <a name="see-also"></a>Vedere anche
 
 - [Funzionalità del linguaggio Visual Basic](../../../visual-basic/programming-guide/language-features/index.md)
-- [Nozioni di base sulla programmazione](../../../visual-basic/programming-guide/concepts/index.md)
+- [Concetti di programmazione](../../../visual-basic/programming-guide/concepts/index.md)
 - [Raccolte](../../../visual-basic/programming-guide/concepts/collections.md)
 - [Sviluppo di applicazioni con Visual Basic](../../../visual-basic/developing-apps/index.md)

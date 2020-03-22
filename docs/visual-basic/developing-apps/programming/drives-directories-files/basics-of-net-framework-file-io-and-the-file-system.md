@@ -10,10 +10,10 @@ helpviewer_keywords:
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
 ms.openlocfilehash: 5d60d0089d042c0be343c741c26de0b4b7778d6d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348938"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Nozioni fondamentali sul file system e sulla funzionalità di I/O di file di .NET Framework (Visual Basic)
@@ -55,18 +55,18 @@ Esistono molti tipi di flussi, ma per lavorare con l'input/output (I/O) su file,
 
 - <xref:System.IO.MemoryStream>
 
-- <xref:System.Net.Sockets.NetworkStream>
+- <xref:System.Net.Sockets.NetworkStream>.
 
 La tabella seguente elenca le attività comunemente eseguite con un flusso:
 
-|Per|Vedere|
+|A|Vedere|
 |---|---|
-|Leggere e scrivere in un file di dati|[Procedura: Leggere e scrivere su un file di dati appena creato](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|
-|Leggere testo da un file|[Procedura: Leggere testo da un file](../../../../standard/io/how-to-read-text-from-a-file.md)|
+|Leggere e scrivere in un file di dati|[Procedura: leggere e scrivere su un file di dati appena creato](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|
+|Leggere testo da un file|[Procedura: leggere testo da un file](../../../../standard/io/how-to-read-text-from-a-file.md)|
 |Scrivere testo in un file|[Procedura: Scrivere un testo in un file](../../../../standard/io/how-to-write-text-to-a-file.md)|
 |Leggere caratteri da una stringa|[Procedura: Leggere caratteri da una stringa](../../../../standard/io/how-to-read-characters-from-a-string.md)|
 |Scrivere caratteri in una stringa|[Procedura: Scrivere caratteri in una stringa](../../../../standard/io/how-to-write-characters-to-a-string.md)|
-|Crittografa dati|[Crittografia di dati](../../../../standard/security/encrypting-data.md)|
+|Crittografare i dati|[Encrypting Data](../../../../standard/security/encrypting-data.md)|
 |Decrittografare i dati|[Decrittografia di dati](../../../../standard/security/decrypting-data.md)|
 
 ## <a name="file-access-and-attributes"></a>Accesso ai file e attributi
@@ -77,7 +77,7 @@ L'enumerazione <xref:System.IO.FileAttributes> consente la raccolta di informazi
 
 La tabella seguente elenca le attività che coinvolgono l'accesso ai file e gli attributi di file:
 
-|Per|Vedere|
+|A|Vedere|
 |---|---|
 |Aprire e accodare testo in un file di log|[Procedura: Aprire e accodare un file di log](../../../../standard/io/how-to-open-and-append-to-a-log-file.md)|
 |Determinare gli attributi di un file|<xref:System.IO.FileAttributes>|
@@ -92,14 +92,14 @@ Lo spazio di archiviazione isolato è un tentativo di risolvere i problemi creat
 
 La tabella seguente elenca le attività comunemente associate all'archiviazione di file isolati.
 
-|Per|Vedere|
+|A|Vedere|
 |---|---|
 |Creare un spazio di memorizzazione isolato|[Procedura: Recuperare archivi per lo spazio di memorizzazione isolato](../../../../standard/io/how-to-obtain-stores-for-isolated-storage.md)|
 |Enumerare gli spazi di memorizzazione isolati|[Procedura: Enumerare gli archivi per lo spazio di memorizzazione isolato](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|
 |Eliminare un spazio di memorizzazione isolato|[Procedura: Eliminare gli archivi nello spazio di memorizzazione isolato](../../../../standard/io/how-to-delete-stores-in-isolated-storage.md)|
 |Creare un file o una directory in un spazio di memorizzazione isolato|[Procedura: Creare file e directory nello spazio di memorizzazione isolato](../../../../standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|
 |Trovare un file in un spazio di memorizzazione isolato|[Procedura: Trovare file e directory esistenti nello spazio di memorizzazione isolato](../../../../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|
-|Leggere o scrivere in un file in un spazio di memorizzazione isolato|[Procedura: Leggere e scrivere sui file nello spazio di memorizzazione isolato](../../../../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|
+|Leggere o scrivere in un file in un spazio di memorizzazione isolato|[Procedura: leggere e scrivere sui file nello spazio di memorizzazione isolato](../../../../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|
 |Eliminare un file o una directory in un spazio di memorizzazione isolato|[Procedura: Eliminare file e directory nello spazio di memorizzazione isolato](../../../../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|
 
 ## <a name="file-events"></a>Eventi di file
@@ -108,7 +108,7 @@ Il componente <xref:System.IO.FileSystemWatcher> consente di controllare le modi
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Composizione dei flussi](../../../../standard/io/composing-streams.md)
-- [I/O di file e di flussi](../../../../standard/io/index.md)
+- [Composing Streams](../../../../standard/io/composing-streams.md)
+- [I/O su file e flusso](../../../../standard/io/index.md)
 - [I/O di file asincrono](../../../../standard/io/asynchronous-file-i-o.md)
-- [Classes Used in .NET Framework File I/O and the File System (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md) (Classi usate nel file system e nella funzionalità di I/O di file di .NET Framework (Visual Basic))
+- [Classi utilizzate nel file system e nella funzionalità di I/O di file di .Net Framework (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

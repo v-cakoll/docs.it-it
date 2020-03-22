@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Web services [Visual Basic], accessing
 ms.assetid: ff8046f4-f1f2-4d8b-90b7-95e3f7415418
 ms.openlocfilehash: d288cc1f2991a8f504dc9f1b206bba76fa378b75
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76794557"
 ---
 # <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>Procedura: chiamare un servizio Web in modo asincrono (Visual Basic)
@@ -23,7 +23,7 @@ La classe proxy consente di chiamare i metodi del servizio Web in modo sincrono;
 > [!NOTE]
 > Tale codice non funziona nelle applicazioni Web perché ASP.NET non supporta l'oggetto `My.WebServices`.
 
-## <a name="call-a-web-service-asynchronously"></a>Chiamare un servizio Web in modo asincrono
+## <a name="call-a-web-service-asynchronously"></a>Chiamare un servizio Web in modo asincronoCall a Web service asynchronously
 
 1. Fare riferimento al servizio Web DemoTemperatureService Web in `http://www.xmethods.net`. L'indirizzo è
 

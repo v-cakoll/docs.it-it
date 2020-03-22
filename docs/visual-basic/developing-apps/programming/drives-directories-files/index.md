@@ -10,10 +10,10 @@ helpviewer_keywords:
 - directories [Visual Studio], processing
 ms.assetid: f1db14c8-a4fd-4d0b-8323-c7cb29d688c2
 ms.openlocfilehash: 790cf5aa2d3fde779fcc24c0c9f1fc9c4c42331b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74333954"
 ---
 # <a name="processing-drives-directories-and-files-visual-basic"></a>Elaborazione di unità, directory e file (Visual Basic)
@@ -28,10 +28,10 @@ ms.locfileid: "74333954"
  [Nozioni fondamentali sul file system e sulla funzionalità di I/O di file di .NET Framework (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)  
  Offre una panoramica dei concetti relativi alla funzionalità di I/O di file in .NET Framework, inclusi flussi, spazio di memorizzazione isolato, eventi di file, attributi di file e accesso ai file.  
   
- [Procedura dettagliata: Modifica di file mediante i metodi .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
+ [Procedura dettagliata: modifica di file mediante i metodi .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
  Descrive come usare .NET Framework per modificare file e cartelle.  
   
- [Procedura dettagliata: modifica di file e directory in Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
+ [Procedura dettagliata: Modifica di file e directory in Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
  Descrive come usare l'oggetto `My.Computer.FileSystem` per modificare file e cartelle.  
   
 ## <a name="related-sections"></a>Sezioni correlate  

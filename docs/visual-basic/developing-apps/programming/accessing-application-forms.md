@@ -1,5 +1,5 @@
 ---
-title: Accesso ai moduli dell'applicazione
+title: Accesso ai form di un'applicazione
 ms.date: 07/20/2015
 helpviewer_keywords:
 - forms [Visual Basic], communicating between
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - forms [Visual Basic], accessing all open
 ms.assetid: 9aaf5aaf-2012-4f97-89c7-6e62b9d17863
 ms.openlocfilehash: 332b6a7563160528b6c17210170af0db6e9bc0e7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74349232"
 ---
 # <a name="accessing-application-forms-visual-basic"></a>Accesso ai form di un'applicazione (Visual Basic)

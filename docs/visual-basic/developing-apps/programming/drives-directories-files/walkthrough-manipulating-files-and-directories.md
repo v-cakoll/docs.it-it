@@ -16,10 +16,10 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
 ms.openlocfilehash: 83dc6ce0d29c1c368c36b51fc84ecad34d72e01f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74333813"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Procedura dettagliata: modifica di file e directory in Visual Basic
@@ -34,7 +34,7 @@ Questa procedura dettagliata offre un'introduzione ai principi di base degli ele
   
 1. Scegliere **Nuovo progetto** dal menu **File**.  
   
-     Verrà visualizzata la finestra di dialogo **Nuovo progetto** .  
+     Viene visualizzata la finestra di dialogo **Nuovo progetto**.  
   
 2. Nel riquadro **Modelli installati** espandere **Visual Basic**, quindi fare clic su **Windows**. Nel riquadro **Modelli** al centro scegliere **Windows Forms Application**.  
   
@@ -44,12 +44,12 @@ Questa procedura dettagliata offre un'introduzione ai principi di base degli ele
   
 4. Aggiungere i controlli della tabella seguente al form e impostare i valori corrispondenti per le relative proprietà.  
   
-    |Controllo|Proprietà|Value|  
+    |Controllo|Proprietà|valore|  
     |-------------|--------------|-----------|  
     |**ListBox**|**Nome**|`filesListBox`|  
-    |**Pulsante**|**Nome**<br /><br /> **per**|`browseButton`<br /><br /> **Sfoglia**|  
-    |**Pulsante**|**Nome**<br /><br /> **per**|`examineButton`<br /><br /> **Esaminare**|  
-    |**CheckBox**|**Nome**<br /><br /> **per**|`saveCheckBox`<br /><br /> **Salva risultati**|  
+    |**Pulsante**|**Nome**<br /><br /> **Testo**|`browseButton`<br /><br /> **Sfoglia**|  
+    |**Pulsante**|**Nome**<br /><br /> **Testo**|`examineButton`<br /><br /> **Esamina**|  
+    |**Casella**|**Nome**<br /><br /> **Testo**|`saveCheckBox`<br /><br /> **Salva risultati**|  
     |**FolderBrowserDialog**|**Nome**|`FolderBrowserDialog1`|  
   
 ### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>Per selezionare una cartella ed elencare file di una cartella  
@@ -72,7 +72,7 @@ Questa procedura dettagliata offre un'introduzione ai principi di base degli ele
   
      Le stringhe restituite dal metodo `GetFiles` vengono quindi aggiunte all'oggetto **ListBox**.  
   
-4. Eseguire l'applicazione. Fare clic sul pulsante **Sfoglia**. Nella finestra di dialogo **Sfoglia per cartelle** passare a una cartella che contiene file TXT, quindi selezionare la cartella e fare clic su **OK**.  
+4. Eseguire l'applicazione. Fare clic sul pulsante **Sfoglia** . Nella finestra di dialogo **Sfoglia per cartelle** passare a una cartella che contiene file TXT, quindi selezionare la cartella e fare clic su **OK**.  
   
      L'oggetto `ListBox` contiene un elenco di file TXT presenti nella cartella selezionata.  
   
@@ -167,4 +167,4 @@ Questa procedura dettagliata offre un'introduzione ai principi di base degli ele
 - <xref:System.IO>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>
-- [Procedura dettagliata: Modifica di file mediante i metodi .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)
+- [Procedura dettagliata: modifica di file mediante i metodi .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)

@@ -1,14 +1,14 @@
 ---
-title: Classi utilizzate nel file system e nella funzionalità di I/O di file di .Net Framework (Visual Basic)
+title: Classi usate nel file system e nella funzionalità di I/O di file di .NET Framework
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
 ms.openlocfilehash: fe70f8fb655579049bb36fc324d04530259d25f2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348922"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Classi utilizzate nel file system e nella funzionalità di I/O di file di .Net Framework (Visual Basic)
@@ -51,7 +51,7 @@ Per un elenco più completo, vedere [Panoramica della libreria di classi](../../
 
  La tabella seguente illustra le classi specifiche usate per leggere e scrivere in file con flussi.  
   
-|**Classe**|**Descrizione**|  
+|**Class**|**Descrizione**|  
 |---------------|---------------------|  
 |<xref:System.IO.BinaryReader?displayProperty=nameWithType>|Legge stringhe codificate e tipi di dati primitivi da <xref:System.IO.FileStream>.|  
 |<xref:System.IO.BinaryWriter?displayProperty=nameWithType>|Scrive stringhe codificate e tipi di dati primitivi in <xref:System.IO.FileStream>.|  
@@ -62,7 +62,7 @@ Per un elenco più completo, vedere [Panoramica della libreria di classi](../../
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Composizione dei flussi](../../../../standard/io/composing-streams.md)
-- [I/O di file e di flussi](../../../../standard/io/index.md)
+- [Composing Streams](../../../../standard/io/composing-streams.md)
+- [I/O su file e flusso](../../../../standard/io/index.md)
 - [I/O di file asincrono](../../../../standard/io/asynchronous-file-i-o.md)
 - [Nozioni fondamentali sul file system e sulla funzionalità di I/O di file di .NET Framework (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)

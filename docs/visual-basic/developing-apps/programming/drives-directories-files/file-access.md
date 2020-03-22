@@ -15,10 +15,10 @@ helpviewer_keywords:
 - sequential access
 ms.assetid: 231533bf-d049-4345-befa-3fb78fe6517d
 ms.openlocfilehash: 22bcd0f1f3acb0c0ad899b83ad2d879ead948f12
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348903"
 ---
 # <a name="file-access-with-visual-basic"></a>Accesso ai file con Visual Basic
@@ -30,7 +30,7 @@ L'oggetto `My.Computer.FileSystem` offre gli strumenti per l'uso di file e carte
  [Lettura da file](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  Vengono elencati gli argomenti relativi all'uso dell'oggetto `My.Computer.FileSystem` per la lettura da file  
   
- [Scrittura su file](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
+ [Scrittura nei file](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
  Vengono elencati gli argomenti relativi all'uso dell'oggetto `My.Computer.FileSystem` per la scrittura su file  
   
  [Creazione, eliminazione e spostamento di file e directory](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)  
@@ -42,7 +42,7 @@ L'oggetto `My.Computer.FileSystem` offre gli strumenti per l'uso di file e carte
  [Codifiche dei file](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)  
  Vengono descritte le codifiche dei file e il relativo uso.  
   
- [Procedura dettagliata: modifica di file e directory in Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
+ [Procedura dettagliata: Modifica di file e directory in Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
  Viene illustrato come creare un'utilità che specifica informazioni su file e cartelle.  
   
  [Risoluzione dei problemi: lettura e scrittura nei file di testo](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)  

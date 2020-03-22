@@ -2,14 +2,14 @@
 title: 'Procedura: raggruppare i file per estensione (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 904dc6d7-7162-4655-a7f4-5785d669bc5a
-ms.openlocfilehash: 67beec0d3681bf7f0b04d9a402566076fd27ceba
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 4d2c51fa62b3ec144bc5ad51b4a9f8305476645e
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347488"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78267028"
 ---
-# <a name="how-to-group-files-by-extension-linq-visual-basic"></a>Procedura: raggruppare file per estensione (LINQ) (Visual Basic)
+# <a name="how-to-group-files-by-extension-linq-visual-basic"></a>Procedura: raggruppare file per estensione (LINQ) (Visual Basic)How to: Group Files by Extension (LINQ) (Visual Basic)
 Questo esempio illustra come usare LINQ per eseguire operazioni avanzate di raggruppamento e ordinamento su elenchi di file o cartelle. Illustra anche come disporre l'output nella finestra della console usando i metodi <xref:System.Linq.Enumerable.Skip%2A> e <xref:System.Linq.Enumerable.Take%2A>.  
   
 ## <a name="example"></a>Esempio  
@@ -39,7 +39,7 @@ Module GroupByExtension
         ' page the display with good performance.  
         Dim groupByExtList = queryGroupByExt.ToList()  
   
-        ' Display one group at a time. If the number of   
+        ' Display one group at a time. If the number of
         ' entries is greater than the number of lines  
         ' in the console window, then page the output.  
         Dim trimLength = startFolder.Length  
@@ -94,7 +94,7 @@ End Module
  L'output di questo programma può essere lungo, a seconda dei dettagli del file system locale e dell'impostazione di `startFolder`. Per abilitare la visualizzazione di tutti i risultati, in questo esempio viene illustrato come scorrere i risultati. È possibile applicare le stesse tecniche ad applicazioni Windows e Web. Si noti che, poiché il codice dispone gli elementi in un gruppo, è necessario un ciclo `For Each` annidato. È disponibile anche una logica aggiuntiva per calcolare la posizione corrente nell'elenco e per consentire all'utente di interrompere lo scorrimento e uscire dal programma. In questo caso particolare la query di scorrimento viene eseguita sui risultati memorizzati nella cache della query originale. In altri contesti, come ad esempio LINQ to SQL, la memorizzazione nella cache non è necessaria.  
   
 ## <a name="compile-the-code"></a>Compilare il codice  
-Creare un progetto di applicazione console Visual Basic con un'istruzione `Imports` per lo spazio dei nomi System. Linq.
+Creare un progetto di applicazione `Imports` console di Visual Basic, con un'istruzione per lo spazio dei nomi System.Linq.
   
 ## <a name="see-also"></a>Vedere anche
 

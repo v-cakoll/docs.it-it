@@ -2,12 +2,12 @@
 title: Expression Trees
 ms.date: 07/20/2015
 ms.assetid: 8bbbb02d-7ffc-476b-8c25-118d82bf5d46
-ms.openlocfilehash: 4ca3b56f48368e465560fc5edd60c0df8dd4e1c0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b2266cbae0a9a8a07c2a3569efa33d162ffedd1d
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344697"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78266417"
 ---
 # <a name="expression-trees-visual-basic"></a>Alberi delle espressioni (Visual Basic)
 Gli alberi delle espressioni rappresentano codice in una struttura dei dati simile a un albero, dove ogni nodo è un'espressione, ad esempio una chiamata al metodo o un'operazione binaria come `x < y`.  
@@ -18,7 +18,7 @@ Gli alberi delle espressioni rappresentano codice in una struttura dei dati simi
   
  È possibile creare un albero delle espressioni tramite il compilatore di C# o di Visual Basic in base a un'espressione lambda anonima o creare tali alberi di espressioni manualmente tramite il nome spazio <xref:System.Linq.Expressions>.  
   
-## <a name="creating-expression-trees-from-lambda-expressions"></a>Creazione di alberi di espressioni da espressioni lambda  
+## <a name="creating-expression-trees-from-lambda-expressions"></a>Creazione di alberi delle espressioni da espressioni lambda  
  Quando un'espressione lambda viene assegnata a una variabile di tipo <xref:System.Linq.Expressions.Expression%601>, il compilatore genera codice per compilare un albero delle espressioni che rappresenta l'espressione lambda.  
   
  Il compilatore di Visual Basic può generare alberi delle espressioni solo da espressioni lambda, o lambda su una sola riga. Non possono analizzare espressioni lambda dell'istruzione (o le espressioni lambda a più righe). Per altre informazioni sulle espressioni lambda in Visual Basic, vedere [Espressioni lambda](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
@@ -55,7 +55,7 @@ Dim lambda1 As Expression(Of Func(Of Integer, Boolean)) =
 Dim value As ParameterExpression =  
     Expression.Parameter(GetType(Integer), "value")  
   
-' Creating an expression to hold a local variable.   
+' Creating an expression to hold a local variable.
 Dim result As ParameterExpression =  
     Expression.Parameter(GetType(Integer), "result")  
   
@@ -144,8 +144,8 @@ Console.WriteLine(expr.Compile()(4))
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Linq.Expressions>
-- [Procedura: eseguire alberi delle espressioni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
-- [Procedura: modificare alberi delle espressioni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
-- [Espressioni lambda](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
-- [Dynamic Language Runtime Overview](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md) (Panoramica su Dynamic Language Runtime)
-- [Programming Concepts (Visual Basic)](../../../../visual-basic/programming-guide/concepts/index.md) (Concetti di programmazione (Visual Basic))
+- [How to: Execute Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md) (Procedura: Eseguire alberi delle espressioni (Visual Basic))
+- [How to: Modify Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md) (Procedura: Modificare alberi delle espressioni (Visual Basic)).
+- [Espressioni lambdaLambda Expressions](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [Panoramica di Dynamic Language Runtime](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
+- [Concetti di programmazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/index.md)

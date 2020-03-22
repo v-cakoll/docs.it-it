@@ -1,5 +1,5 @@
 ---
-title: Scrittura su file
+title: Scrittura in file
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], writing to files
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Visual Basic, writing to files
 ms.assetid: ac6fb453-0d6c-4ce4-93b4-1bbcd06de83e
 ms.openlocfilehash: 8511a96c7abcc28997c293a09ef10bad543dc261
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74352134"
 ---
 # <a name="writing-to-files-in-visual-basic"></a>Scrittura su file in Visual Basic
@@ -36,7 +36,7 @@ Questa sezione spiega come eseguire attività che riguardano la scrittura su fil
  [Procedura: scrivere testo in file con un oggetto StreamWriter](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-with-a-streamwriter.md)  
  Illustra come scrivere in un file con un oggetto <xref:System.IO.StreamWriter?displayProperty=nameWithType>.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Informazioni di riferimento  
 
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  Descrive l'oggetto `My.Computer.FileSystem`, i relativi metodi e proprietà.  

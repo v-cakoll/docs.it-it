@@ -2,12 +2,12 @@
 title: 'Procedura: trovare elementi con un attributo specifico (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 4bb38d2c-bc7c-4196-8909-aaf41fb86b28
-ms.openlocfilehash: ef8dd26d40f15d3d5a27f0ca5d62f7337f2054ca
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 36f725a7684dc009dbfb956a1584fd6ca5e487b0
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343693"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78267041"
 ---
 # <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a>Procedura: trovare elementi con un attributo specifico (XPath-LINQ to XML) (Visual Basic)
 Talvolta si desidera individuare tutti gli elementi con un attributo specifico. Il contenuto dell'attributo non è rilevante perché si desidera solo individuare gli elementi in cui tale attributo è presente.  
@@ -20,7 +20,7 @@ Talvolta si desidera individuare tutti gli elementi con un attributo specifico. 
  Nel codice seguente vengono selezionati solo gli elementi con attributo `Select`.  
   
 ```vb  
-Dim doc As XElement = _   
+Dim doc As XElement = _
     <Root>  
         <Child1>1</Child1>  
         <Child2 Select='true'>2</Child2>  
@@ -51,7 +51,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```console
 Results are identical  
@@ -61,4 +61,4 @@ Results are identical
   
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ to XML per gli utenti di XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML per utenti XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

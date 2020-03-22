@@ -6,10 +6,10 @@ helpviewer_keywords:
 - examples [Visual Basic], application settings
 ms.assetid: e38d0cc7-247a-46ca-ba04-f2913f0adb2e
 ms.openlocfilehash: 49f65e9c39a29056cb1c552f0d577fcf0d75d658
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74353237"
 ---
 # <a name="accessing-application-settings-visual-basic"></a>Accesso alle impostazioni dell'applicazione (Visual Basic)
@@ -26,11 +26,11 @@ Questa sezione include argomenti che descrivono l'oggetto `My.Settings` e le att
 
  La tabella seguente elenca esempi che illustrano come accedere ai moduli di un'applicazione.  
   
-|Per|Vedere|  
+|A|Vedere|  
 |--------|---------|  
-|Aggiornare il valore di un'impostazione utente|[Procedura: Modificare le impostazioni utente in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
+|Aggiornare il valore di un'impostazione utente|[Procedura: modificare le impostazioni dell'utente in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
 |Visualizzare le impostazioni utente e dell'applicazione in una griglia delle proprietà|[Procedura: Creare griglie di proprietà per impostazioni utente in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
-|Salvare i valori delle impostazioni utente aggiornate|[Procedura: Mantenere le impostazioni utente in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
+|Salvare i valori delle impostazioni utente aggiornate|[Procedura: Mantenere le impostazioni dell'utente in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
 |Determinare i valori delle impostazioni utente|[Procedura: Leggere le impostazioni dell'applicazione in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
   
 ## <a name="see-also"></a>Vedere anche

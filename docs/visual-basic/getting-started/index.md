@@ -1,15 +1,15 @@
 ---
-title: Attività iniziali
+title: Introduzione
 ms.date: 09/10/2018
 helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
 ms.openlocfilehash: 0221889f6d736b41546b564273ebb41d49dfb039
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75559885"
 ---
 # <a name="get-started-with-visual-basic"></a>Introduzione a Visual Basic
@@ -18,15 +18,15 @@ Questa sezione della documentazione fornisce informazioni introduttive per lo sv
 
 ## <a name="get-started-with-visual-basic-and-net-core"></a>Introduzione a Visual Basic e .NET Core
 
-[Creare un'applicazione Hello World con .NET Core in Visual Studio](../../core/tutorials/with-visual-studio.md)
+[Creare un'applicazione Hello World con .NET Core in Visual StudioBuild a Hello World application with .NET Core in Visual Studio](../../core/tutorials/with-visual-studio.md)
 
-[Creare una libreria di classi con .NET Standard in Visual Studio](../../core/tutorials/library-with-visual-studio.md)
+[Creare una libreria di classi con .NET Standard in Visual StudioBuild a class library with .NET Standard in Visual Studio](../../core/tutorials/library-with-visual-studio.md)
 
 ## <a name="additional-information"></a>Informazioni aggiuntive
 
-- [Novità di Visual Basic](whats-new.md) Elenca le nuove funzionalità in ognuna delle versioni di Visual Basic .NET.
+- [Novità di Visual Basic](whats-new.md) Vengono elencate le nuove funzionalità in ognuna delle versioni di Visual Basic .NET.
 
-- [Risorse aggiuntive per i programmatori di Visual Basic](additional-resources.md) Viene fornito un elenco di siti Web e newsgroup che consentono di trovare le risposte ai problemi più comuni.
+- [Risorse aggiuntive per i programmatori Visual BasicAdditional Resources for Visual Basic Programmers](additional-resources.md) Viene fornito un elenco di siti Web e newsgroup che consentono di trovare risposte ai problemi comuni.
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -38,7 +38,7 @@ Questa sezione della documentazione fornisce informazioni introduttive per lo sv
 
 - [Procedure dettagliate](../walkthroughs.md) Include un elenco delle pagine della Guida con dimostrazioni dei vari aspetti del linguaggio Visual Basic.
 
-- [Opzioni di feedback per Visual Studio](/visualstudio/ide/feedback-options) Viene illustrato come ricevere supporto e inviare commenti e suggerimenti.
+- [Opzioni di feedback per Visual Studio](/visualstudio/ide/feedback-options) Viene illustrato come ricevere supporto e fornire commenti e suggerimenti.
 
 - [Visual Studio](/visualstudio/) Include collegamenti alla documentazione di Visual Studio.
 

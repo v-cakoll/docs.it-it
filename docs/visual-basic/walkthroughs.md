@@ -1,6 +1,6 @@
 ---
-title: Procedure dettagliate relative alla lingua
-description: Istruzioni dettagliate per gli scenari comuni di sviluppo Visual Basic
+title: Procedure dettagliate del linguaggioLanguage Walkthroughs
+description: Istruzioni dettagliate per scenari comuni nello sviluppo di Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic, walkthroughs
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
 ms.openlocfilehash: 76f9b428bc5f613296e24d893f49f124bb13c089
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75636042"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Procedure dettagliate relative al linguaggio Visual Basic
@@ -20,12 +20,12 @@ ms.locfileid: "75636042"
 Le procedure dettagliate forniscono istruzioni specifiche per scenari comuni, che li rende un ottimo strumento per apprendere l'utilizzo del prodotto o di una determinata area funzionale.
 
 - [Scrittura di un programma asincrono](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- Viene illustrato come creare una soluzione asincrona usando [Async](language-reference/modifiers/async.md) e [Await](language-reference/operators/await-operator.md).
+ Viene illustrato come creare una soluzione asincrona utilizzando [Async](language-reference/modifiers/async.md) e [Await](language-reference/operators/await-operator.md).
 
 - [Dichiarazione e generazione di eventi](programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  
  Illustra come dichiarare e generare eventi in Visual Basic.
 
-- [Gestione degli eventi](programming-guide/language-features/events/walkthrough-handling-events.md)  
+- [Gestione degli eventiHandling Events](programming-guide/language-features/events/walkthrough-handling-events.md)  
  Spiega come gestire gli eventi usando la parola chiave standard `WithEvents` o le nuove parole chiave `AddHandler`/`RemoveHandler`.
 
 - [Creazione e implementazione di interfacce](programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)  
@@ -49,16 +49,16 @@ Le procedure dettagliate forniscono istruzioni specifiche per scenari comuni, ch
 - [Implementazione dell'ereditarietà con gli oggetti COM](programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
  Spiega come usare Visual Basic 6.0 per creare un oggetto COM contenente una classe che verrà poi usata come classe di base in Visual Basic.
 
-- [Individuazione della posizione di inserimento delle informazioni con My.Application.Log](developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
+- [Determinazione della posizione in cui My.Application.Log scrive informazioniDetermining Where My.Application.Log Writes Information](developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
  Descrive le impostazioni predefinite di `My.Application.Log` e spiega come determinare le impostazioni dell'applicazione.
 
-- [Modifica della posizione di inserimento delle informazioni con My.Application.Log](developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)  
+- [Modifica della posizione in cui my.Application.Log scrive informazioni](developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)  
  Spiega come eseguire l'override delle impostazioni predefinite di `My.Application.Log` e `My.Log` per registrare le informazioni sull'evento e fare in modo che l'oggetto `Log` scriva in altri listener di log.
 
-- [Filtro dell'output di My.Application.Log](developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)  
+- [Filtraggio dell'output di My.Application.LogFiltering My.Application.Log Output](developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)  
  Viene illustrato come modificare il filtro di log predefinito per l'oggetto `My.Application.Log`.
 
-- [Creazione di listener di log personalizzati](developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
+- [Creazione di listener di log personalizzatiCreating Custom Log Listeners](developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
  Spiega come creare un listener di log personalizzato e configurarlo in modo che resti in ascolto dell'output dell'oggetto `My.Application.Log`.
 
 - [Incorporamento dei tipi da assembly gestiti](../standard/assembly/embed-types-visual-studio.md)  

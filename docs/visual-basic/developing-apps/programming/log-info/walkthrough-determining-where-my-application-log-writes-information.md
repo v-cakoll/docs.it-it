@@ -10,10 +10,10 @@ helpviewer_keywords:
 - applications [Visual Basic], output location
 ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
 ms.openlocfilehash: f3fd0ed0388276f1400bf77d0abfb488634a45a5
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74353611"
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>Procedura dettagliata: individuazione della posizione di inserimento delle informazioni con My.Application.Log (Visual Basic)
@@ -55,9 +55,9 @@ Per altre informazioni sui percorsi di output predefiniti, vedere [Utilizzo dei 
 
     - Il listener <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> scrive le informazioni in un log file, come descritto nell'introduzione.
 
-    - Il listener <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> scrive le informazioni nel log eventi del computer specificato dal parametro `initializeData`. Per visualizzare un log eventi, è possibile usare **Esplora server** o **Visualizzatore eventi di Windows**. Per altre informazioni, vedere [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md).
+    - Il listener <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> scrive le informazioni nel log eventi del computer specificato dal parametro `initializeData` . Per visualizzare un log eventi, è possibile usare **Esplora server** o **Visualizzatore eventi di Windows**. Per altre informazioni, vedere l'articolo relativo agli [eventi ETW in .NET Framework](../../../../framework/performance/etw-events.md).
 
-    - I listener <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> e <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> scrivono le informazioni nel file specificato nel parametro `initializeData`.
+    - I listener <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> e <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> scrivono le informazioni nel file specificato nel parametro `initializeData` .
 
     - Il listener <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> scrive le informazioni nella console della riga di comando.
 
@@ -73,8 +73,8 @@ Per altre informazioni sui percorsi di output predefiniti, vedere [Utilizzo dei 
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics>
 - [Utilizzo dei log applicazione](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Procedura: Registrare eccezioni](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [Procedura: registrare eccezioni](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
 - [Procedura: Scrivere messaggi di log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
-- [Procedura dettagliata: Modifica della posizione di inserimento delle informazioni con My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
-- [Eventi ETW in .NET Framework](../../../../framework/performance/etw-events.md)
-- [Risoluzione dei problemi: Listener di log](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)
+- [Procedura dettagliata: modifica della posizione di inserimento delle informazioni con My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md)
+- [Risoluzione dei problemi: listener di log](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)

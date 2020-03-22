@@ -2,21 +2,21 @@
 title: Procedura. filtrare in base a un elemento facoltativo
 ms.date: 07/20/2015
 ms.assetid: a74b76ad-6889-4185-a189-d6ef2c63841e
-ms.openlocfilehash: e67cb58710d49a19f322b3555efa96ac69b9f654
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6db377ae30582ef010d5af467e88c52b008483ed
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353048"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78267054"
 ---
-# <a name="how-to-filter-on-an-optional-element-visual-basic"></a>Procedura: filtrare in un elemento facoltativo (Visual Basic)
+# <a name="how-to-filter-on-an-optional-element-visual-basic"></a>Procedura: filtrare in base a un elemento facoltativo (Visual Basic)How to: Filter on an Optional Element (Visual Basic)
 Talvolta si desidera filtrare in base a un elemento anche se non si è certi che esista nel documento XML. La ricerca deve essere eseguita in modo che se l'elemento specifico non include l'elemento figlio, non viene generata un'eccezione di riferimento null quando si applica un filtro sull'elemento. Nell'esempio seguente l'elemento `Child5` non contiene un elemento figlio `Type`, tuttavia la query viene comunque eseguita correttamente.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene usato il metodo di estensione <xref:System.Xml.Linq.Extensions.Elements%2A>.  
   
 ```vb  
-Dim root As XElement = _   
+Dim root As XElement = _
     <Root>  
         <Child1>  
             <Text>Child One Text</Text>  
@@ -112,8 +112,8 @@ Child Four Text
 - <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>
 - [Query di base (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
-- [Proprietà Child Axis XML](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
-- [Proprietà axis dell'attributo XML](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
+- [XML Child Axis Property](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
+- [XML Attribute Axis Property](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
 - [Proprietà Value XML](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
 - [Panoramica degli operatori query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Operazioni di proiezione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+- [Operazioni di proiezione (Visual Basic)Projection Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - applications [Visual Basic]
 ms.assetid: 1e1c0c81-6d95-4167-a98b-44b1efb6d25f
 ms.openlocfilehash: f8eed001ed1daccdfb861b1bcc13337122133ab0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74349257"
 ---
 # <a name="developing-applications-with-visual-basic"></a>Sviluppo di applicazioni con Visual Basic
@@ -27,10 +27,10 @@ In questa sezione viene illustrata la documentazione su concetti che riguardano 
  [Accesso ai dati nelle applicazioni Visual Basic](../../visual-basic/developing-apps/accessing-data.md)  
  Contiene la Guida con le informazioni per accedere ai dati in Visual Basic.  
   
- [Creazione e uso di componenti in Visual Basic](../../visual-basic/developing-apps/creating-and-using-components.md)  
+ [Creazione e utilizzo di componenti in Visual Basic](../../visual-basic/developing-apps/creating-and-using-components.md)  
  Definisce il termine *componente* e illustra come e quando creare i componenti.  
   
- [Nozioni di base sulle applicazioni Windows Forms](../../visual-basic/developing-apps/windows-forms/index.md)  
+ [Nozioni fondamentali relative alle applicazioni Windows Form](../../visual-basic/developing-apps/windows-forms/index.md)  
  Contiene informazioni sulla creazione di applicazioni Windows Form con Visual Studio.  
   
  [Personalizzazione di progetti ed estensione di oggetti My](../../visual-basic/developing-apps/customizing-extending-my/index.md)  
@@ -41,5 +41,5 @@ In questa sezione viene illustrata la documentazione su concetti che riguardano 
  [Guida per programmatori Visual Basic](../../visual-basic/programming-guide/index.md)  
  Illustra gli elementi fondamentali di programmazione con Visual Basic.  
   
- [Riferimenti per il linguaggio Visual Basic](../../visual-basic/language-reference/index.md)  
+ [Visual Basic Language Reference](../../visual-basic/language-reference/index.md)  
  Contiene la documentazione di riferimento per il linguaggio Visual Basic.

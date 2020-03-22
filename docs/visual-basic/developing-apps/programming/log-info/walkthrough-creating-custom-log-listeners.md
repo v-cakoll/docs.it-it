@@ -6,17 +6,17 @@ helpviewer_keywords:
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
 ms.openlocfilehash: 7b611e93119dc66a9404cf271ea201676d7b5318
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74353620"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Procedura dettagliata: creazione di listener di log personalizzati (Visual Basic)
 
 Questa procedura spiega come creare un listener di log personalizzato e configurarlo in modo che resti in ascolto dell'output dell'oggetto `My.Application.Log`.
 
-## <a name="getting-started"></a>Guida introduttiva
+## <a name="getting-started"></a>Introduzione
 
 I listener di log devono ereditare dalla <xref:System.Diagnostics.TraceListener> classe.
 
@@ -39,13 +39,13 @@ La procedura seguente prevede alcuni semplici passaggi per la creazione di un as
 
 #### <a name="to-strongly-name-the-log-listener-assembly"></a>Per assegnare un nome sicuro all'assembly di listener di log
 
-1. Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**.
+1. Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà**dal menu **Progetto** .
 
-2. Fare clic sulla scheda **Firma**.
+2. Fare clic sulla scheda **Firma** .
 
-3. Selezionare la casella **Firma assembly**.
+3. Selezionare la casella **Firma assembly** .
 
-4. Selezionare **\<Nuovo>** dall'elenco a discesa **Scegli un file chiave con nome sicuro**.
+4. Selezionare ** \<Nuovo>** dall'elenco a discesa Scegli un file di chiave con **nome sicuro.**
 
      Si aprirà la finestra di dialogo **Crea chiave con nome sicuro** .
 
@@ -53,7 +53,7 @@ La procedura seguente prevede alcuni semplici passaggi per la creazione di un as
 
 6. Digitare una password nelle caselle **Immettere la password** e **Conferma password**.
 
-7. fare clic su **OK**.
+7. Fare clic su **OK**.
 
 8. Ricompilare l'applicazione.
 
@@ -87,7 +87,7 @@ Con il nome sicuro è possibile aggiungere il listener alla raccolta di listener
 
     2. Nella finestra di dialogo **Aggiungi nuovo elemento** scegliere **File di configurazione dell'applicazione**.
 
-    3. Fare clic su **Add**.
+    3. Fare clic su **Aggiungi**.
 
 2. Individuare la sezione `<listeners>` all'interno della sezione `<source>` con l'attributo `name` "DefaultSource" che si trova nella sezione `<sources>` . La sezione `<sources>` si trova nella sezione `<system.diagnostics>` all'interno della sezione di primo livello `<configuration>` .
 
@@ -111,6 +111,6 @@ Con il nome sicuro è possibile aggiungere il listener alla raccolta di listener
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - [Utilizzo dei log applicazione](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Procedura: Registrare eccezioni](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [Procedura: registrare eccezioni](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
 - [Procedura: Scrivere messaggi di log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
-- [Procedura dettagliata: Modifica della posizione di inserimento delle informazioni con My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [Procedura dettagliata: modifica della posizione di inserimento delle informazioni con My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 45763504c2d25596b0adfb4b8a0236b332d89e8c
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 3ab468f6c68429a3a5cb8706152288afae520df3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802056"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187135"
 ---
 # <a name="whats-new-for-visual-basic"></a>Novità in Visual Basic
 
@@ -21,54 +21,54 @@ Questo argomento elenca i nomi delle funzionalità principali per ogni versione 
 
 ## <a name="current-version"></a>Versione corrente
 
-Visual Basic 16,0/Visual Studio 2019 versione 16,0 \
-Per le nuove funzionalità, vedere [Visual Basic 16,0](#visual-basic-160).
+Visual Basic 16.0 / Visual Studio 2019 versione 16.0
+Per le nuove funzionalità, vedere [Visual Basic 16.0](#visual-basic-160).
 
 ## <a name="previous-versions"></a>Versioni precedenti
 
-Visual Basic 15,8/Visual Studio 2017 versione 15,8 \
-Per le nuove funzionalità, vedere [Visual Basic 15,8](#visual-basic-158).
+Visual Basic 15.8 / Visual Studio 2017 versione 15.8
+Per le nuove funzionalità, vedere [Visual Basic 15.8](#visual-basic-158).
 
-Visual Basic 15,5/Visual Studio 2017 versione 15,5 \
-Per le nuove funzionalità, vedere [Visual Basic 15,5](#visual-basic-155).
+Visual Basic 15.5 / Visual Studio 2017 versione 15.5
+Per le nuove funzionalità, vedere [Visual Basic 15.5](#visual-basic-155).
 
-Visual Basic 15,3/Visual Studio 2017 versione 15,3 \
-Per le nuove funzionalità, vedere [Visual Basic 15,3](#visual-basic-153).
+Visual Basic 15.3 / Visual Studio 2017 versione 15.3
+Per le nuove funzionalità, vedere [Visual Basic 15.3](#visual-basic-153).
 
-Visual Basic 2017/Visual Studio 2017 \
+Visual Basic 2017 / Visual Studio 2017
 Per le nuove funzionalità, vedere [Visual Basic 2017](#visual-basic-2017).
 
-Visual Basic/Visual Studio 2015 \
+Visual Basic / Visual Studio 2015
 Per le nuove funzionalità, vedere [Visual Basic 14](#visual-basic-14).
 
-Visual Basic/Visual Studio 2013 \
-Technology Preview della piattaforma del compilatore .NET ("Roslyn")
+Visual Basic / Visual Studio 2013
+Anteprime tecnologiche della piattaforma del compilatore .NET ("Roslyn")
 
-Visual Basic/Visual Studio 2012 \
+Visual Basic / Visual Studio 2012
 Parole chiave `Async` e `await`, iteratori, attributi relativi alle informazioni sul chiamante
 
-Visual Basic, Visual Studio 2010 \
+Visual Basic, Visual Studio 2010
 Proprietà implementate automaticamente, inizializzatori di insieme, continuazione di riga implicita, elementi dinamici, covarianza/controvarianza generica, accesso agli spazi dei nomi globali
 
-Visual Basic/Visual Studio 2008 \
+Visual Basic / Visual Studio 2008
 Language Integrated Query (LINQ), valori letterali XML, inferenza del tipo di variabile locale, inizializzatori di oggetto, tipi anonimi, metodi di estensione, inferenza del tipo `var` locale, espressioni lambda, operatore `if`, metodi parziali, tipi di valore nullable
 
-Visual Basic/Visual Studio 2005 \
+Visual Basic / Visual Studio 2005
 Tipo `My` e tipi di helper (accesso all'app, al computer, al file system, alla rete)
 
-Visual Basic/Visual Studio .NET 2003 \
+Visual Basic / Visual Studio .NET 2003
 Operatori di scorrimento bit, dichiarazione di variabile del ciclo
 
-Visual Basic/Visual Studio .NET 2002 \
+Visual Basic / Visual Studio .NET 2002
 Prima versione di Visual Basic .NET
 
-## <a name="visual-basic-160"></a>Visual Basic 16,0
+## <a name="visual-basic-160"></a>Visual Basic 16.0
 
-Visual Basic 16,0 è incentrato sulla fornitura di più funzionalità del runtime di Visual Basic (Microsoft. VisualBasic. dll) a .NET Core ed è la prima versione di Visual Basic incentrata su .NET Core. Molte parti del runtime di Visual Basic dipendono da WinForms e verranno aggiunte in una versione successiva di Visual Basic.
+Visual Basic 16.0 è incentrato sulla fornitura di ulteriori funzionalità del runtime di Visual Basic (microsoft.visualbasic.dll) a .NET Core ed è la prima versione di Visual Basic incentrata su .NET Core. Molte parti del runtime di Visual Basic dipendono da WinForms e verranno aggiunte in una versione successiva di Visual Basic.
 
-**Commenti consentiti in più posizioni all'interno delle istruzioni**
+**Commenti consentiti in più posizioni all'interno delle dichiarazioni**
 
-In Visual Basic 15,8 e versioni precedenti, i commenti sono consentiti solo su righe vuote, alla fine di un'istruzione o in punti specifici all'interno di un'istruzione in cui è consentita una continuazione di riga implicita. A partire da Visual Basic 16,0, i commenti sono consentiti anche dopo le continuazioni di riga esplicite e all'interno di un'istruzione su una riga che inizia con uno spazio seguito da un carattere di sottolineatura.
+In Visual Basic 15.8 e versioni precedenti, i commenti sono consentiti solo su righe vuote, alla fine di un'istruzione o in posizioni specifiche all'interno di un'istruzione in cui è consentita una continuazione di riga implicita. A partire da Visual Basic 16.0, i commenti sono consentiti anche dopo le continuazioni di riga esplicite e all'interno di un'istruzione in una riga che inizia con uno spazio seguito da un segno di sottolineatura.
 
 ```vb
 Public Sub Main()
@@ -124,7 +124,7 @@ Ad esempio, la seguente chiamata al metodo ha due argomenti posizionali tra un a
 StudentInfo.Display("Mary", age:=19, #9/21/1998#)
 ```
 
-[Modificatore di accesso ai membri `Private Protected`](../language-reference/modifiers/private-protected.md)
+[`Private Protected`modificatore di accesso membro](../language-reference/modifiers/private-protected.md)
 
 Questa nuova combinazione di parole chiave definisce un membro accessibile da tutti i membri nella classe che lo contiene, oltre che dai tipi derivati dalla classe che lo contiene, ma solo se si trovano anche nell'assembly che lo contiene. Poiché le strutture non possono essere ereditate, è possibile applicare `Private Protected` solo ai membri di una classe.
 
@@ -154,7 +154,7 @@ Quando si assegna il valore di elementi di tupla provenienti da variabili, Visua
 
 **Nuove opzioni del compilatore**
 
-Il compilatore della riga di comando di Visual Basic ora supporta le opzioni [ **-refout**](../reference/command-line-compiler/refout-compiler-option.md) e [ **-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) per il controllo dell'output degli assembly di riferimento. **-refout** definisce la directory di output dell'assembly di riferimento, mentre **-refonly** specifica che il risultato della compilazione può essere solo un assembly di riferimento.
+Il compilatore della riga di comando di Visual Basic ora supporta le opzioni [**-refout**](../reference/command-line-compiler/refout-compiler-option.md) e [**-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) per il controllo dell'output degli assembly di riferimento. **-refout** definisce la directory di output dell'assembly di riferimento, mentre **-refonly** specifica che il risultato della compilazione può essere solo un assembly di riferimento.
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
@@ -182,11 +182,11 @@ A questo punto è possibile chiamare il metodo e gestire la tupla restituita con
 
 Per altre informazioni, vedere la sezione dedicata alle assegnazioni di valori letterali dei tipi di dati [Byte](../language-reference/data-types/byte-data-type.md#literal-assignments), [Integer](../language-reference/data-types/integer-data-type.md#literal-assignments), [Long](../language-reference/data-types/long-data-type.md#literal-assignments), [Short](../language-reference/data-types/short-data-type.md#literal-assignments), [SByte](../language-reference/data-types/sbyte-data-type.md#literal-assignments), [UInteger](../language-reference/data-types/uinteger-data-type.md#literal-assignments), [ULong](../language-reference/data-types/ulong-data-type.md#literal-assignments) e [UShort](../language-reference/data-types/ushort-data-type.md#literal-assignments).
 
-[**Supporto per valori di riferimento restituiti C#** ](../programming-guide/language-features/procedures/ref-return-values.md)
+[**Supporto per i valori restituiti di riferimento in C**](../programming-guide/language-features/procedures/ref-return-values.md)
 
 A partire dalla versione 7.0, C# supporta i valori di riferimento restituiti. Pertanto, quando la chiamata al metodo riceve un valore di riferimento restituito, lo può modificare. Visual Basic non consente di creare metodi con valori di riferimento restituiti, ma consente di usare e modificare tali valori.
 
-Ad esempio, la classe `Sentence` seguente scritta in C# include un metodo `FindNext` che rileva la parola successiva in una frase che inizia con una sottostringa specificata. La stringa viene restituita come valore di riferimento restituito. Una variabile `Boolean` passata dal riferimento al metodo indica se la ricerca ha avuto esito positivo. A questo punto il chiamante non solo può leggere il valore restituito, ma lo può anche modificare. Tale modifica si riflette sulla classe `Sentence`.
+Ad esempio, la classe `Sentence` seguente scritta in C# include un metodo `FindNext` che rileva la parola successiva in una frase che inizia con una sottostringa specificata. La stringa viene restituita come valore di riferimento restituito. Una variabile `Boolean` passata dal riferimento al metodo indica se la ricerca ha avuto esito positivo. Ciò significa che oltre a leggere il valore restituito, il chiamante può `Sentence` anche modificarlo e che la modifica si riflette nella classe.
 
 [!code-csharp[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-returns.cs)]
 
@@ -202,11 +202,11 @@ Una soluzione migliore consiste nell'usare un metodo helper al quale il riferime
 
 [!code-vb[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-return-helper.vb#1)]
 
-Per altre informazioni, vedere [Reference Return Values](../programming-guide/language-features/procedures/ref-return-values.md) (Valori di riferimento restituiti).
+Per ulteriori informazioni, vedere [Valori restituiti](../programming-guide/language-features/procedures/ref-return-values.md)di riferimento .
 
 ## <a name="visual-basic-14"></a>Visual Basic 14
 
-[NameOf](../language-reference/operators/nameof.md)
+[NomeDi](../language-reference/operators/nameof.md)
 
 È possibile ottenere il nome di stringa non qualificato di un tipo o di un membro, da usare in un messaggio di errore senza definire una stringa a livello di codice.  In questo modo il codice sarà corretto anche durante il refactoring.  Questa funzionalità è utile anche per l'associazione di collegamenti MVC (Modello-Vista-Controller) e la generazione di eventi di modifica di proprietà.
 
@@ -214,11 +214,11 @@ Per altre informazioni, vedere [Reference Return Values](../programming-guide/la
 
 È possibile usare espressioni di interpolazione di stringhe per costruire stringhe.  Un'espressione di stringa interpolata è simile a una stringa di modello che contiene espressioni.  In relazione agli argomenti, è più facile comprendere una stringa interpolata che la [formattazione composita](../../standard/base-types/composite-formatting.md).
 
-[Indicizzazione e accesso ai membri condizionali null](../language-reference/operators/null-conditional-operators.md)
+[Accesso e indicizzazione dei membri condizionali NullNull-conditional member access and indexing](../language-reference/operators/null-conditional-operators.md)
 
 È possibile verificare la presenza di valori null con una sintassi molto leggera prima di eseguire un'operazione di accesso ai membri (`?.`) o di indice (`?[]`).  Questi operatori consentono di scrivere meno codice per gestire i controlli null, soprattutto per l'ordinamento decrescente delle strutture di dati.  Se l'operando di sinistra o il riferimento a un oggetto è null, le operazioni restituiscono null.
 
-[Valori letterali multilinea](../../visual-basic/programming-guide/language-features/strings/string-basics.md)
+[Valori letterali stringa multirigaMulti-line string literals](../../visual-basic/programming-guide/language-features/strings/string-basics.md)
 
 I valori letterali stringa possono contenere sequenze di nuove righe.  Non è più necessario usare `<xml><![CDATA[...text with newlines...]]></xml>.Value` come soluzione alternativa.
 
@@ -230,11 +230,11 @@ I valori letterali stringa possono contenere sequenze di nuove righe.  Non è pi
 
 In precedenza, con un codice come `Threading.Thread.Sleep(1000)`, Visual Basic cercava lo spazio dei nomi "Threading", individuava un'ambiguità tra System.Threading e System.Windows.Threading e quindi segnalava un errore.  Visual Basic ora prende in considerazione entrambi gli spazi dei nomi possibili.  Se si visualizza l'elenco di completamento, l'editor di Visual Studio elenca i membri di entrambi i tipi in questo elenco.
 
-**Valori letterali data con anno all'inizio**
+**Valori letterali data-primo anno**
 
 I valori letterali data possono avere il formato aaaa-mm-gg, `#2015-03-17 16:10 PM#`.
 
-**Proprietà dell'interfaccia readonly**
+**Proprietà dell'interfaccia di sola letturaReadonly interface properties**
 
 È possibile implementare proprietà dell'interfaccia readonly usando una proprietà readonly. L'interfaccia garantisce la funzionalità minima e le classi di implementazione non smettono di consentire l'impostazione della proprietà.
 
@@ -250,23 +250,23 @@ Per una maggiore leggibilità del codice, ora è possibile usare `TypeOf` con `I
 
 Quando si scrivono commenti ai documenti, si accede a Smart Editor e al supporto per la compilazione per la convalida di nomi di parametro, la corretta gestione di `crefs` (generics, operatori e così via), la colorazione e il refactoring.
 
-[Definizioni di interfacce e moduli parziali](../../visual-basic/language-reference/modifiers/partial.md)
+[Definizioni parziali di moduli e interfacce](../../visual-basic/language-reference/modifiers/partial.md)
 
 Oltre a classi e struct, è possibile dichiarare interfacce e moduli parziali.
 
-[Direttive #Region in corpi di metodo](../../visual-basic/language-reference/directives/region-directive.md)
+[#Region direttive all'interno dei corpi dei metodi](../../visual-basic/language-reference/directives/region-directive.md)
 
 È possibile inserire delimitatori #Region...#End Region in qualsiasi punto di un file, nelle funzioni o nei corpi delle funzioni.
 
-[Le definizioni Overrides sono overload impliciti](../../visual-basic/language-reference/modifiers/overrides.md)
+[Le definizioni delle sostituzioni sono overload impliciti](../../visual-basic/language-reference/modifiers/overrides.md)
 
 Se si aggiunge il modificatore `Overrides` a una definizione, il compilatore aggiunge in modo implicito `Overloads`. In questo modo è possibile digitare meno codice nella maggior parte dei casi.
 
-**CObj consentito negli argomenti degli attributi**
+**Argomenti relativi agli attributi di CObj**
 
 Il compilatore generava un errore indicante che CObj(...), se usato nelle costruzioni degli attributi, non era una costante.
 
-**Dichiarazione e utilizzo di metodi ambigui da interfacce diverse**
+**Dichiarazione e utilizzo di metodi ambigui da interfacce diverseDeclaring and consuming ambiguous methods from different interfaces**
 
 In precedenza il codice seguente restituiva errori che impedivano di dichiarare `IMock` o di chiamare `GetDetails` (se questi erano stati dichiarati in c#):
 

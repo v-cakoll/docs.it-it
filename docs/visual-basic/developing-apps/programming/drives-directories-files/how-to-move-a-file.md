@@ -5,10 +5,10 @@ helpviewer_keywords:
 - files [Visual Basic], moving
 ms.assetid: 53a7457b-5815-41ad-b37d-28537c1fb77a
 ms.openlocfilehash: 29c64a7a81028d47bf489212e6d8faec5e8dda75
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74335363"
 ---
 # <a name="how-to-move-a-file-in-visual-basic"></a>Procedura: spostare un file in Visual Basic
@@ -49,7 +49,7 @@ Il metodo `My.Computer.FileSystem.MoveFile` consente di spostare un file in una 
   
 - L'utente non dispone delle autorizzazioni necessarie per visualizzare il percorso (<xref:System.Security.SecurityException>).  
   
-- L'utente non dispone delle autorizzazioni necessarie (<xref:System.UnauthorizedAccessException>).  
+- L'utente non ha le autorizzazioni necessarie (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Vedere anche
 

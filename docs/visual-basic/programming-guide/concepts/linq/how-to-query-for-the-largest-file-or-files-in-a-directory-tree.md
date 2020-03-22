@@ -1,13 +1,13 @@
 ---
-title: 'Procedura: eseguire una query per trovare il file o i file più grandi in un albero di directory (LINQ)'
+title: 'Procedura: eseguire una query per trovare il file o i file più grandi in una struttura ad albero di directory (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 8c1c9f0c-95dd-4222-9be2-9ec026a13e81
-ms.openlocfilehash: 34f2cd97cafbe142c9462e8d0cf7c17f9f0d16f9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 723a42e79f1def171a08b28986049ffa04945fc4
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346063"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78266989"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>Procedura: eseguire una query per trovare il file o i file più grandi in un albero di directory (LINQ) (Visual Basic)
 Questo esempio illustra cinque query relative alla dimensione dei file in byte:  
@@ -104,7 +104,7 @@ Module QueryBySize
             retval = fi.Length  
         Catch ex As FileNotFoundException  
             ' If a file is no longer present,  
-            ' just return zero bytes.   
+            ' just return zero bytes.
             retval = 0  
         End Try  
   
@@ -118,7 +118,7 @@ End Module
  La query effettua una chiamata a un metodo separato per ottenere le dimensioni dei file in byte per gestire la possibile eccezione che viene generata nel caso in cui un file sia stato eliminato in un altro thread nel periodo trascorso dalla creazione dell'oggetto <xref:System.IO.FileInfo> nella chiamata a `GetFiles`. Anche se l'oggetto <xref:System.IO.FileInfo> è già stato creato, è possibile che si verifichi un'eccezione perché un oggetto <xref:System.IO.FileInfo> tenterà di aggiornare la relativa proprietà <xref:System.IO.FileInfo.Length%2A> usando le dimensioni in byte più recenti quando viene eseguito per la prima volta l'accesso alla proprietà. Inserendo questa operazione in un blocco try/catch all'esterno della query, si segue la regola di evitare le operazioni nelle query che possono causare effetti collaterali. In generale, è necessario prestare particolare attenzione durante la gestione delle eccezioni per assicurarsi che un'applicazione non venga lasciata in uno stato sconosciuto.  
   
 ## <a name="compile-the-code"></a>Compilare il codice  
-Creare un progetto di applicazione console Visual Basic con un'istruzione `Imports` per lo spazio dei nomi System. Linq.
+Creare un progetto di applicazione `Imports` console di Visual Basic, con un'istruzione per lo spazio dei nomi System.Linq.
   
 ## <a name="see-also"></a>Vedere anche
 

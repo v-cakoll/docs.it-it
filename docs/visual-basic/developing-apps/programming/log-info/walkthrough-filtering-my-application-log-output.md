@@ -7,17 +7,17 @@ helpviewer_keywords:
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
 ms.openlocfilehash: f18556bbe1ca2d77925482319246d403892d31ef
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74353597"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Procedura dettagliata: filtro dell'output di My.Application.Log
 
 Questa procedura dettagliata illustra come modificare il filtro di log predefinito per l'oggetto `My.Application.Log` per stabilire quali informazioni vengono passate dall'oggetto `Log` ai listener e quali informazioni vengono scritte dai listener. È possibile modificare il comportamento di registrazione anche dopo la compilazione dell'applicazione, poiché le informazioni di configurazione vengono archiviate nel file di configurazione dell'applicazione.
 
-## <a name="getting-started"></a>Guida introduttiva
+## <a name="getting-started"></a>Introduzione
 
 A ogni messaggio scritto da `My.Application.Log` è associato un livello di gravità, che i meccanismi di filtro usano per controllare l'output del log. Questa applicazione di esempio usa i metodi `My.Application.Log` per scrivere alcuni messaggi di log con diversi livelli di gravità.
 
@@ -60,8 +60,8 @@ Questa tabella illustra il livello di gravità richiesto al log per la scrittura
 |---|---|
 |`Critical`|`Critical`|
 |`Error`|`Critical` o `Error`|
-|`Warning`|`Critical`, `Error`o `Warning`|
-|`Information`|`Critical`, `Error`, `Warning`o `Information`|
+|`Warning`|`Critical`, `Error` o `Warning`|
+|`Information`|`Critical`, `Error`, `Warning` o `Information`|
 |`Verbose`|`Critical`, `Error`, `Warning`, `Information` o `Verbose`|
 |`ActivityTracing`|`Start`, `Stop`, `Suspend`, `Resume` o `Transfer`|
 |`All`|Sono consentiti tutti i messaggi.|
@@ -84,7 +84,7 @@ In questa tabella viene illustrato l'output di log dell'esempio precedente: con 
 
     2. Nella finestra di dialogo **Aggiungi nuovo elemento** scegliere **File di configurazione dell'applicazione**.
 
-    3. Fare clic su **Add**.
+    3. Fare clic su **Aggiungi**.
 
 2. Individuare la sezione `<switches>` nella sezione `<system.diagnostics>` all'interno della sezione di primo livello `<configuration>` .
 
@@ -160,7 +160,7 @@ In questo esempio viene illustrato come configurare il filtro per un nuovo liste
 
     2. Nella finestra di dialogo **Aggiungi nuovo elemento** scegliere **File di configurazione dell'applicazione**.
 
-    3. Fare clic su **Add**.
+    3. Fare clic su **Aggiungi**.
 
 2. Fare clic con il pulsante destro del mouse su app.config in **Esplora soluzioni**. Scegliere **Apri**.
 
@@ -253,9 +253,9 @@ Per altre informazioni sulla modifica delle impostazioni del log dopo la distrib
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura dettagliata: Individuazione della posizione di inserimento delle informazioni con My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
-- [Procedura dettagliata: Modifica della posizione di inserimento delle informazioni con My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
-- [Procedura dettagliata: Creazione di listener di log personalizzati](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)
+- [Procedura dettagliata: individuazione della posizione di inserimento delle informazioni con My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
+- [Procedura dettagliata: modifica della posizione di inserimento delle informazioni con My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [Procedura dettagliata: creazione di listener di log personalizzati](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)
 - [Procedura: Scrivere messaggi di log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
 - [Opzioni di traccia](../../../../framework/debug-trace-profile/trace-switches.md)
 - [Registrazione di informazioni relative all'applicazione](../../../../visual-basic/developing-apps/programming/log-info/index.md)

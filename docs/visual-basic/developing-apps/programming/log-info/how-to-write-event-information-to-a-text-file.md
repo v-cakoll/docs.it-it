@@ -7,10 +7,10 @@ helpviewer_keywords:
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
 ms.openlocfilehash: c3c81e331eb3d8ee450ba0cac38e57976846ee63
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74352078"
 ---
 # <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>Procedura: scrivere informazioni sugli eventi in un file di testo (Visual Basic)
@@ -21,7 +21,7 @@ ms.locfileid: "74352078"
 
 1. Fare clic con il pulsante destro del mouse sul file app.config in **Esplora soluzioni** , quindi scegliere **Apri**.
 
-     \- oppure -
+     \- - oppure -
 
      Se non è presente alcun file app.config:
 
@@ -29,7 +29,7 @@ ms.locfileid: "74352078"
 
     2. Nella finestra di dialogo **Aggiungi nuovo elemento** scegliere **File di configurazione dell'applicazione**.
 
-    3. Fare clic su **Add**.
+    3. Fare clic su **Aggiungi**.
 
 2. Individuare la sezione `<listeners>` nel file di configurazione dell'applicazione.
 
@@ -72,4 +72,4 @@ Dopo aver configurato il listener del log del file per un assembly, vengono rice
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
 - [Utilizzo dei log applicazione](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Procedura: Registrare eccezioni](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [Procedura: registrare eccezioni](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)

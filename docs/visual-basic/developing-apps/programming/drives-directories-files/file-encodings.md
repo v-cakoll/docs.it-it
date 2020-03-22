@@ -8,10 +8,10 @@ helpviewer_keywords:
 - file encoding
 ms.assetid: ea2c5f5f-bbb1-4150-9928-b9951fa6bc57
 ms.openlocfilehash: 52770187568d0ba0f54ec36ee2c3d754a9b4d9a8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348885"
 ---
 # <a name="file-encodings-visual-basic"></a>Codifiche dei file (Visual Basic)
@@ -30,7 +30,7 @@ Gli standard di codifica dei caratteri precedenti erano costituiti da set di car
 
 La classe <xref:System.Text.Encoding> rappresenta una codifica dei caratteri. In questa tabella sono elencati i tipi di codifica disponibili con una descrizione di ogni tipo.
 
-|nome|description|
+|Nome|Descrizione|
 |---|---|
 |<xref:System.Text.ASCIIEncoding>|Rappresenta una codifica dei caratteri ASCII di caratteri Unicode.|
 |<xref:System.Text.UnicodeEncoding>|Rappresenta una codifica UTF-16 dei caratteri Unicode.|
@@ -41,4 +41,4 @@ La classe <xref:System.Text.Encoding> rappresenta una codifica dei caratteri. In
 ## <a name="see-also"></a>Vedere anche
 
 - [Lettura da file](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
-- [Scrittura su file](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
+- [Scrittura nei file](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

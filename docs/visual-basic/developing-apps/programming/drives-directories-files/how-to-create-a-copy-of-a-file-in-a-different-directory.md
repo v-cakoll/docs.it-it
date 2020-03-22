@@ -8,10 +8,10 @@ helpviewer_keywords:
 - I/O [Visual Basic], copying files
 ms.assetid: 88e2145c-d414-45a5-ad03-6f5d58ecca26
 ms.openlocfilehash: e9a14e1f3743979548b92a3db653d09a470a1875
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348835"
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-a-different-directory-in-visual-basic"></a>Procedura: creare una copia di un file in una directory diversa in Visual Basic
@@ -52,7 +52,7 @@ Il metodo `My.Computer.FileSystem.CopyFile` consente di copiare i file. I sui pa
   
 - La lunghezza del percorso supera la lunghezza massima definita dal sistema (<xref:System.IO.PathTooLongException>).  
   
-- L'utente non dispone delle autorizzazioni necessarie (<xref:System.UnauthorizedAccessException>).  
+- L'utente non ha le autorizzazioni necessarie (<xref:System.UnauthorizedAccessException>).  
   
 - L'utente non dispone delle autorizzazioni necessarie per visualizzare il percorso (<xref:System.Security.SecurityException>).  
   

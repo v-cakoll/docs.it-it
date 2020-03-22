@@ -23,10 +23,10 @@ helpviewer_keywords:
 - I/O [Visual Basic], moving files
 ms.assetid: 8f814fcc-4c42-4dbb-a131-005ec445ac9e
 ms.openlocfilehash: 8e0b291c0bb526c21654a1e8c08bd168d95ac53a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348916"
 ---
 # <a name="creating-deleting-and-moving-files-and-directories-in-visual-basic"></a>Creazione, eliminazione e spostamento di file e directory in Visual Basic
@@ -47,10 +47,10 @@ Questa sezione elenca attività associate a creazione, eliminazione, spostamento
  [Procedura: creare un file](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-file.md)  
  Illustra come creare un file.  
   
- [Procedura: eliminare un file](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-delete-a-file.md)  
+ [Procedura: eliminare un fileHow to: Delete a File](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-delete-a-file.md)  
  Illustra come eliminare un file.  
   
- [Procedura: trovare file con un modello specifico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)  
+ [How to: Find Files with a Specific Pattern](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md) (Procedura: Trovare file con un modello specifico)  
  Illustra come elencare solo file di un modello di nome file specifico in una directory.  
   
  [Procedura: spostare un file](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)  
@@ -77,7 +77,7 @@ Questa sezione elenca attività associate a creazione, eliminazione, spostamento
  [Procedura: analizzare percorsi di file](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
  Illustra come usare i metodi `My` per combinare percorsi di file.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Informazioni di riferimento  
 
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  Illustra l'oggetto `My.Computer.FileSystem` e i suoi membri.  
@@ -123,5 +123,5 @@ Questa sezione elenca attività associate a creazione, eliminazione, spostamento
  [Lettura da file](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  Elenca le attività associate alla lettura da file.  
   
- [Scrittura su file](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
+ [Scrittura nei file](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
  Elenca le attività associate alla scrittura di file.
