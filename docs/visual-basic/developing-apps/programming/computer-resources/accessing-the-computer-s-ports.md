@@ -6,45 +6,45 @@ helpviewer_keywords:
 - My.Computer.Ports object [Visual Basic], tasks
 ms.assetid: b04a2f76-992a-4585-ab41-8bbbdbd554a1
 ms.openlocfilehash: e790a41fc945a395feebc63f8d26efdc51dc4fa9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74329589"
 ---
-# <a name="accessing-the-computers-ports-visual-basic"></a><span data-ttu-id="3fb4a-102">Accesso alle porte del computer (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3fb4a-102">Accessing the Computer's Ports (Visual Basic)</span></span>
+# <a name="accessing-the-computers-ports-visual-basic"></a><span data-ttu-id="06159-102">Accesso alle porte del computer (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="06159-102">Accessing the Computer's Ports (Visual Basic)</span></span>
 
-<span data-ttu-id="3fb4a-103">L'oggetto `My.Computer.Ports` offre una proprietà e un metodo per l'accesso a porte seriali del computer.</span><span class="sxs-lookup"><span data-stu-id="3fb4a-103">The `My.Computer.Ports` object provides a property and a method for accessing the computer's serial ports.</span></span>  
+<span data-ttu-id="06159-103">L'oggetto `My.Computer.Ports` offre una proprietà e un metodo per l'accesso a porte seriali del computer.</span><span class="sxs-lookup"><span data-stu-id="06159-103">The `My.Computer.Ports` object provides a property and a method for accessing the computer's serial ports.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="3fb4a-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="3fb4a-104">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="06159-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="06159-104">In This Section</span></span>  
 
- [<span data-ttu-id="3fb4a-105">Procedura: Mostrare le porte seriali disponibili</span><span class="sxs-lookup"><span data-stu-id="3fb4a-105">How to: Show Available Serial Ports</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)  
- <span data-ttu-id="3fb4a-106">Illustra come visualizzare le porte seriali disponibili.</span><span class="sxs-lookup"><span data-stu-id="3fb4a-106">Demonstrates how to show available serial ports.</span></span>  
+ [<span data-ttu-id="06159-105">Procedura: mostrare le porte seriali disponibili</span><span class="sxs-lookup"><span data-stu-id="06159-105">How to: Show Available Serial Ports</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)  
+ <span data-ttu-id="06159-106">Illustra come visualizzare le porte seriali disponibili.</span><span class="sxs-lookup"><span data-stu-id="06159-106">Demonstrates how to show available serial ports.</span></span>  
   
- [<span data-ttu-id="3fb4a-107">Procedura: Comporre numeri con modem collegati a porte seriali</span><span class="sxs-lookup"><span data-stu-id="3fb4a-107">How to: Dial Modems Attached to Serial Ports</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)  
- <span data-ttu-id="3fb4a-108">Illustra come connettersi a un modem collegato a una porta seriale di un computer.</span><span class="sxs-lookup"><span data-stu-id="3fb4a-108">Demonstrates how to dial a modem attached to the serial port of a computer.</span></span>  
+ [<span data-ttu-id="06159-107">Procedura: comporre numeri con modem collegati a porte seriali</span><span class="sxs-lookup"><span data-stu-id="06159-107">How to: Dial Modems Attached to Serial Ports</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)  
+ <span data-ttu-id="06159-108">Illustra come connettersi a un modem collegato a una porta seriale di un computer.</span><span class="sxs-lookup"><span data-stu-id="06159-108">Demonstrates how to dial a modem attached to the serial port of a computer.</span></span>  
   
- [<span data-ttu-id="3fb4a-109">Procedura: Inviare stringhe a porte seriali</span><span class="sxs-lookup"><span data-stu-id="3fb4a-109">How to: Send Strings to Serial Ports</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)  
- <span data-ttu-id="3fb4a-110">Illustra come inviare una stringa a una porta seriale del computer.</span><span class="sxs-lookup"><span data-stu-id="3fb4a-110">Demonstrates how to send a string to a computer's serial port.</span></span>  
+ [<span data-ttu-id="06159-109">Procedura: inviare stringhe a porte seriali</span><span class="sxs-lookup"><span data-stu-id="06159-109">How to: Send Strings to Serial Ports</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)  
+ <span data-ttu-id="06159-110">Illustra come inviare una stringa a una porta seriale del computer.</span><span class="sxs-lookup"><span data-stu-id="06159-110">Demonstrates how to send a string to a computer's serial port.</span></span>  
   
- [<span data-ttu-id="3fb4a-111">Procedura: Ricevere stringhe da porte seriali</span><span class="sxs-lookup"><span data-stu-id="3fb4a-111">How to: Receive Strings From Serial Ports</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)  
- <span data-ttu-id="3fb4a-112">Illustra come ricevere una stringa da una porta seriale del computer.</span><span class="sxs-lookup"><span data-stu-id="3fb4a-112">Demonstrates how to receive a string from a computer's serial port.</span></span>  
+ [<span data-ttu-id="06159-111">Procedura: ricevere stringhe da porte seriali</span><span class="sxs-lookup"><span data-stu-id="06159-111">How to: Receive Strings From Serial Ports</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)  
+ <span data-ttu-id="06159-112">Illustra come ricevere una stringa da una porta seriale del computer.</span><span class="sxs-lookup"><span data-stu-id="06159-112">Demonstrates how to receive a string from a computer's serial port.</span></span>  
   
- [<span data-ttu-id="3fb4a-113">Operazioni sulle porte in .NET Framework</span><span class="sxs-lookup"><span data-stu-id="3fb4a-113">Port Operations in the .NET Framework</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/port-operations-in-the-net-framework.md)  
- <span data-ttu-id="3fb4a-114">Illustra come usare .NET Framework durante l'esecuzione di operazioni sulle porte.</span><span class="sxs-lookup"><span data-stu-id="3fb4a-114">Describes how to use the .NET Framework when performing port operations.</span></span>  
+ [<span data-ttu-id="06159-113">Operazioni sulle porte in .NET Framework</span><span class="sxs-lookup"><span data-stu-id="06159-113">Port Operations in the .NET Framework</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/port-operations-in-the-net-framework.md)  
+ <span data-ttu-id="06159-114">Illustra come usare .NET Framework durante l'esecuzione di operazioni sulle porte.</span><span class="sxs-lookup"><span data-stu-id="06159-114">Describes how to use the .NET Framework when performing port operations.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="3fb4a-115">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="3fb4a-115">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="06159-115">Informazioni di riferimento</span><span class="sxs-lookup"><span data-stu-id="06159-115">Reference</span></span>  
 
  <xref:Microsoft.VisualBasic.Devices.Ports>  
- <span data-ttu-id="3fb4a-116">Illustra l'oggetto `My.Computer.Ports` e i suoi membri.</span><span class="sxs-lookup"><span data-stu-id="3fb4a-116">Describes the `My.Computer.Ports` object and its members.</span></span>  
+ <span data-ttu-id="06159-116">Illustra l'oggetto `My.Computer.Ports` e i suoi membri.</span><span class="sxs-lookup"><span data-stu-id="06159-116">Describes the `My.Computer.Ports` object and its members.</span></span>  
   
  <xref:Microsoft.VisualBasic.Devices.Ports.SerialPortNames>  
- <span data-ttu-id="3fb4a-117">Illustra la proprietà `SerialPortNames` che ottiene una raccolta di nomi delle porte seriali nel computer.</span><span class="sxs-lookup"><span data-stu-id="3fb4a-117">Describes the `SerialPortNames` property, which gets a collection of the names of the serial ports on the computer.</span></span>  
+ <span data-ttu-id="06159-117">Illustra la proprietà `SerialPortNames` che ottiene una raccolta di nomi delle porte seriali nel computer.</span><span class="sxs-lookup"><span data-stu-id="06159-117">Describes the `SerialPortNames` property, which gets a collection of the names of the serial ports on the computer.</span></span>  
   
  <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>  
- <span data-ttu-id="3fb4a-118">Illustra il metodo `OpenSerialPort` che crea e apre un oggetto <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="3fb4a-118">Describes the `OpenSerialPort` method, which creates and opens a <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> object.</span></span>  
+ <span data-ttu-id="06159-118">Illustra il metodo `OpenSerialPort` che crea e apre un oggetto <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="06159-118">Describes the `OpenSerialPort` method, which creates and opens a <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> object.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="3fb4a-119">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="3fb4a-119">Related Sections</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="06159-119">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="06159-119">Related Sections</span></span>  
 
  <xref:System.IO.Ports.SerialPort>  
- <span data-ttu-id="3fb4a-120">Descrive la classe <xref:System.IO.Ports.SerialPort> di .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="3fb4a-120">Describes the .NET Framework <xref:System.IO.Ports.SerialPort> class.</span></span>
+ <span data-ttu-id="06159-120">Descrive la classe <xref:System.IO.Ports.SerialPort> di .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="06159-120">Describes the .NET Framework <xref:System.IO.Ports.SerialPort> class.</span></span>
