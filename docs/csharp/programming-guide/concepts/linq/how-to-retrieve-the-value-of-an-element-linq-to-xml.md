@@ -2,17 +2,17 @@
 title: Come recuperare il valore di un elemento (LINQ to XML) (C
 ms.date: 07/20/2015
 ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
-ms.openlocfilehash: 6f2d355eac9914cd4c03d3a4521992b346b92f0b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17a7dac464e1ec40db357194000f5745cdf2f3a8
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168687"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249207"
 ---
 # <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>Come recuperare il valore di un elemento (LINQ to XML) (C
 In questo argomento viene illustrato come ottenere il valore degli elementi. Questa operazione può essere eseguita in due modi. È possibile eseguire il cast di un oggetto <xref:System.Xml.Linq.XElement> o  <xref:System.Xml.Linq.XAttribute> nel tipo desiderato. L'operatore di conversione esplicito converte quindi il contenuto dell'elemento o dell'attributo nel tipo specificato e lo assegna alla variabile. In alternativa, è possibile usare la proprietà <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> o <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType>.  
   
- Con C#, tuttavia, l'esecuzione del cast è in genere l'approccio migliore. Se si esegue il cast dell'elemento o dell'attributo in un tipo nullable, sarà più semplice scrivere il codice quando si recupera il valore di un elemento (o attributo) che potrebbe o meno esistere. Tale comportamento è illustrato nell'ultimo esempio di questo argomento. Tuttavia, non è possibile impostare il contenuto di un elemento tramite cast, operazione che è invece eseguibile tramite la proprietà <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType>.  
+ Con C#, tuttavia, l'esecuzione del cast è in genere l'approccio migliore. Se si esegue il cast dell'elemento o dell'attributo su un tipo di valore nullable, il codice è più semplice da scrivere quando si recupera il valore di un elemento (o attributo) che potrebbe o meno esistere. Tale comportamento è illustrato nell'ultimo esempio di questo argomento. Tuttavia, non è possibile impostare il contenuto di un elemento tramite cast, operazione che è invece eseguibile tramite la proprietà <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Esempio  
  Per recuperare il valore di un elemento, è sufficiente eseguire il cast dell'oggetto <xref:System.Xml.Linq.XElement> nel tipo desiderato. È sempre possibile eseguire il cast di un elemento in una stringa, come segue:  
@@ -67,7 +67,7 @@ Value of e:abcde
 ```  
   
 ## <a name="example"></a>Esempio  
- A volte, si tenta di recuperare il valore di un elemento anche se non si è certi che esista. In questo caso, quando si assegna l'elemento sottoposto a cast a un tipo nullable (`string` o uno dei tipi nullable di .NET Framework), se l'elemento non esiste la variabile assegnata viene semplicemente impostata su `null`. Nel codice seguente viene dimostrato che quando non si è certi che l'elemento esista, è preferibile eseguire il cast anziché usare la proprietà <xref:System.Xml.Linq.XElement.Value%2A>.  
+ A volte, si tenta di recuperare il valore di un elemento anche se non si è certi che esista. In questo caso, quando si assegna l'elemento di cui è stato eseguito il cast a un tipo `null`di riferimento nullable o a un tipo di valore nullable, se l'elemento non esiste, la variabile assegnata è semplicemente impostata su . Nel codice seguente viene dimostrato che quando non si è certi che l'elemento esista, è preferibile eseguire il cast anziché usare la proprietà <xref:System.Xml.Linq.XElement.Value%2A>.  
   
 ```csharp  
 XElement root = new XElement("Root",  

@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Test
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 2b347442c4a9b7b6cf912ec461248f901dc45417
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fa87fdba830398786cce8951d353e86bc4ff7491
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79147491"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111049"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testare app ASP.NET Core MVC
 
@@ -145,7 +145,7 @@ public IActionResult GetImage(int id)
 
 `_logger`e `_imageService` sono entrambi iniettati come dipendenze. A questo punto è possibile verificare che lo stesso `_imageService`ID passato al metodo di azione venga passato a e che i byte risultanti vengano restituiti come parte di FileResult. È anche possibile verificare che la registrazione `NotFound` degli errori si verifichi come previsto e che venga restituito un risultato se l'immagine non è presente, presupponendo che si tratti di un comportamento importante dell'applicazione, ovvero non solo del codice temporaneo aggiunto dallo sviluppatore per diagnosticare un problema. La logica effettiva del file è stata spostata in un servizio di implementazione separato ed è stata migliorata perché venga restituita un'eccezione specifica dell'applicazione in caso di mancanza di un file. È possibile testare questa implementazione in modo indipendente, usando un test di integrazione.
 
-Nella maggior parte dei casi è opportuno usare i gestori di eccezioni globali nei controller, per ridurre al minimo la quantità di codice e di conseguenza la necessità di esecuzione di unit test. È consigliabile eseguire la maggior parte dei test di azioni dei controller mediante i test funzionali e la classe `TestServer` descritta di seguito.
+Nella maggior parte dei casi, è consigliabile usare gestori di eccezioni globali nei controller, pertanto la quantità di logica in essi in essi deve essere minima e probabilmente non vale la pena unit test. Eseguire la maggior parte dei test delle `TestServer` azioni del controller utilizzando i test funzionali e la classe descritta di seguito.
 
 ## <a name="integration-testing-aspnet-core-apps"></a>Test di integrazione di app ASP.NET Core
 
@@ -153,7 +153,7 @@ La maggior parte dei test di integrazione nelle app ASP.NET Core dovrebbe riguar
 
 ## <a name="functional-testing-aspnet-core-apps"></a>Test funzionale di app ASP.NET Core
 
-Per le applicazioni ASP.NET Core, la classe `TestServer` semplifica notevolmente la scrittura di test funzionali. È possibile `TestServer` configurare un utilizzando un `WebHostBuilder` (o `HostBuilder`) direttamente (come si fa normalmente per l'applicazione) o con il `WebApplicationFactory` tipo (disponibile dalla versione 2.1). È consigliabile cercare la corrispondenza più esatta possibile tra l'host di test e l'host di produzione, in modo che i test abbiano un comportamento simile a quello dell'app in produzione. La classe `WebApplicationFactory` è utile per configurare ContentRoot di TestServer, che viene usata da ASP.NET Core per trovare una risorsa statica come Views.
+Per le applicazioni ASP.NET Core, la classe `TestServer` semplifica notevolmente la scrittura di test funzionali. È possibile `TestServer` configurare un utilizzando un `WebHostBuilder` (o `HostBuilder`) direttamente (come si fa normalmente per l'applicazione) o con il `WebApplicationFactory` tipo (disponibile dalla versione 2.1). Cerca di abbinare l'host di test all'host di produzione il più fedelmente possibile, in modo che i test esercitino un comportamento simile a quello dell'app nell'ambiente di produzione. La classe `WebApplicationFactory` è utile per configurare ContentRoot di TestServer, che viene usata da ASP.NET Core per trovare una risorsa statica come Views.
 
 È possibile generare test funzionali semplici creando una classe di test che implementa IClassFixture \<WebApplicationFactoryTEntry\<>>, dove TEntry è la classe Startup dell'applicazione Web. In questo modo, la fixture di test può creare un client usando il metodo CreateClient della factory:
 
@@ -290,7 +290,7 @@ namespace Microsoft.eShopWeb.FunctionalTests.WebRazorPages
 }
 ```
 
-Questo test funzionale interessa tutto lo stack dell'applicazione ASP.NET Core MVC / Razor Pages, inclusi tutti i middleware, i filtri, i binder e così via eventualmente presenti. Verifica che una determinata route ("/") restituisca il codice di stato riuscito e l'output HTML previsti. Questa verifica viene eseguita senza la configurazione di un server Web reale ed è quindi possibile evitare gran parte degli inconvenienti che l'uso di un server Web reale può comportare (ad esempio, problemi con le impostazioni del firewall). I test funzionali eseguiti su TestServer sono in genere più lenti rispetto ai test di integrazione e agli unit test, ma sono molto più veloci rispetto a test eseguiti attraverso la rete per un server Web. È consigliabile usare test funzionali per garantire che lo stack front-end dell'applicazione funzioni come previsto. Questi test sono particolarmente utili quando si trova la duplicazione nei controller o nelle pagine e la si risolve aggiungendo filtri. In teoria questo refactoring non modifica il comportamento dell'applicazione e ciò sarà verificabile tramite un gruppo di test funzionali.
+Questo test funzionale interessa tutto lo stack dell'applicazione ASP.NET Core MVC / Razor Pages, inclusi tutti i middleware, i filtri, i binder e così via eventualmente presenti. Verifica che una determinata route ("/") restituisca il codice di stato riuscito e l'output HTML previsti. Questa verifica viene eseguita senza la configurazione di un server Web reale ed è quindi possibile evitare gran parte degli inconvenienti che l'uso di un server Web reale può comportare (ad esempio, problemi con le impostazioni del firewall). I test funzionali eseguiti su TestServer sono in genere più lenti rispetto ai test di integrazione e agli unit test, ma sono molto più veloci rispetto a test eseguiti attraverso la rete per un server Web. Utilizzare test funzionali per verificare che lo stack front-end dell'applicazione funzioni come previsto. Questi test sono particolarmente utili quando si trova la duplicazione nei controller o nelle pagine e la si risolve aggiungendo filtri. In teoria questo refactoring non modifica il comportamento dell'applicazione e ciò sarà verificabile tramite un gruppo di test funzionali.
 
 > ### <a name="references--test-aspnet-core-mvc-apps"></a>Riferimenti: testare app ASP.NET Core MVC
 >

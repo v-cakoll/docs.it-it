@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: 3c21ae3d00aa9f1b48a89650430b89ceccb2a1b7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 05847271cf82739a6a0b609771043c02a7ffc0e9
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186019"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291585"
 ---
 # <a name="graphics-rendering-tiers"></a>Livelli di rendering della grafica
 Un livello di rendering definisce un livello di prestazioni e funzionalità hardware grafiche per un dispositivo che esegue un'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -45,7 +45,7 @@ Un livello di rendering definisce un livello di prestazioni e funzionalità hard
 ### <a name="rendering-tier-0"></a>Livello di rendering 0  
  Il valore 0 del livello di rendering indica che l'accelerazione hardware grafico non è disponibile per l'applicazione sul dispositivo. A questo livello, si deve presupporre che il rendering tutta la grafica verrà eseguito dal software senza accelerazione hardware. La funzionalità di questo livello corrisponde a una versione di DirectX inferiore alla 9.0.This tier's functionality corresponds to a DirectX version that is less than 9.0.  
   
-### <a name="rendering-tier-1-and-rendering-tier-2"></a>Livello di rendering 1 e livello di rendering 2  
+### <a name="rendering-tier-1-and-rendering-tier-2"></a>Livello di rendering 1 e livello di rendering 2
   
 > [!NOTE]
 > A partire da .NET Framework 4.NET Framework 4, il rendering di livello 1 è stato ridefinito per includere solo l'hardware grafico che supporta DirectX 9.0 o versione successiva. L'hardware grafico che supporta DirectX 7 o 8 è ora definito come livello di rendering 0.  
@@ -57,7 +57,7 @@ Un livello di rendering definisce un livello di prestazioni e funzionalità hard
 |Funzionalità|Livello 1|Livello 2|  
 |-------------|------------|------------|  
 |Versione DirectX|Deve essere superiore o uguale alla 9.0.|Deve essere superiore o uguale alla 9.0.|  
-|RAM video|Deve essere superiore o uguale a 60 MB.|Deve essere superiore o uguale a 120 MB.|  
+|RAM video|Deve essere maggiore o uguale a 60 MB.|Deve essere maggiore o uguale a 120 MB.|  
 |Pixel shader|Il livello della versione deve essere superiore o uguale alla 2.0.|Il livello della versione deve essere superiore o uguale alla 2.0.|  
 |Vertex shader|Nessun requisito.|Il livello della versione deve essere superiore o uguale alla 2.0.|  
 |Unità a più trame|Nessun requisito.|Il numero di unità deve essere superiore o uguale a 4.|  
@@ -72,7 +72,7 @@ Un livello di rendering definisce un livello di prestazioni e funzionalità hard
 |Mapping MIP 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prova a usare il mapping MIP quando viene eseguito il rendering del contenuto 3D. Il mapping MIP migliora la qualità del rendering delle trame <xref:System.Windows.Controls.Viewport3D>quando una trama occupa un campo visivo più piccolo in un oggetto .|  
 |Sfumature radiali|Sebbene sia supportato, evitare l'utilizzo di su oggetti di <xref:System.Windows.Media.RadialGradientBrush> grandi dimensioni.|  
 |Calcoli per l'illuminazione 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] esegue l'illuminazione per vertice, in cui l'intensità della luce deve essere calcolata in ogni vertice per ogni materiale applicato a un mesh.|  
-|Rendering del testo|Il rendering dei tipi di carattere a livello di sub-pixel usa i pixel shader disponibili nell'hardware grafico.|  
+|Rendering del testo|Il rendering dei font subpixel utilizza pixel shader disponibili sull'hardware grafico.|  
   
  Le funzionalità e capacità seguenti sono con accelerazione hardware solo per il livello di rendering 2:  
   
@@ -124,7 +124,7 @@ Un livello di rendering definisce un livello di prestazioni e funzionalità hard
   
  Quando si esegue lo Strumento di diagnostica DirectX, la finestra principale contiene un set di schede che consentono di visualizzare e diagnosticare le informazioni relative a DirectX. Ad esempio, la scheda **Sistema** fornisce informazioni di sistema sul computer e specifica la versione di DirectX installata nel computer.  
   
- ![Screenshot: Strumento di diagnostica DirectX](./media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
+ ![Schermata: Strumento di diagnostica DirectX](./media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
 Finestra principale dello strumento di diagnostica DirectX  
   
 ## <a name="see-also"></a>Vedere anche

@@ -12,14 +12,16 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: e5580e81b9175cd95491fdba724bacbffa692a5e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 49b3836f17e91ae8de10d68e97fd662aae80d1ff
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345398"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249318"
 ---
 # <a name="switch-c-reference"></a>switch (Riferimenti per C#)
+
+In questo `switch` articolo viene illustrata la dichiarazione. Per informazioni `switch` sull'espressione (introdotta nella versione 8.0 di C,0), vedere l'articolo sulle [ `switch` espressioni](../operators/switch-expression.md) nella sezione [espressioni e operatori.](../operators/index.md)
 
 `switch`è un'istruzione di selezione che sceglie una singola *sezione switch* da eseguire da un elenco di candidati in base a una corrispondenza di criteri con *l'espressione di corrispondenza.*
 
@@ -106,7 +108,7 @@ Il case `default` specifica la sezione opzioni da eseguire se l'espressione di r
 
 Il case `default` può essere visualizzato in qualsiasi ordine nell'istruzione `switch`. Indipendentemente dall'ordine nel codice sorgente, viene sempre valutato per ultimo, dopo la valutazione di tutte le etichette `case`.
 
-## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a><a name="pattern" /> Criteri di ricerca con istruzione `switch`
+## <a name="pattern-matching-with-the-switch-statement"></a><a name="pattern" /> Criteri di ricerca con istruzione `switch`
 
 Ogni istruzione `case` definisce un criterio che, in caso di corrispondenza con l'espressione di ricerca, provoca l'esecuzione della sezione opzioni che la contiene. Tutte le versioni di C# supportano il criterio costante. I criteri rimanenti sono supportati a partire da C# 7.0.
 
@@ -183,7 +185,7 @@ Senza criteri di ricerca, questo codice potrebbe essere scritto come segue. L'us
 
 [!code-csharp[type-pattern2#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
-## <a name="a-namewhen--the-case-statement-and-the-when-clause"></a><a name="when" /> Istruzione `case` e clausola `when`
+## <a name="the-case-statement-and-the-when-clause"></a><a name="when" /> Istruzione `case` e clausola `when`
 
 A partire da C# 7.0, poiché le istruzioni case non devono escludersi a vicenda, è possibile aggiungere una clausola `when` per specificare una condizione aggiuntiva che deve essere soddisfatta perché l'istruzione case restituisca true. La clausola `when` può essere qualsiasi espressione che restituisce un valore booleano.
 
@@ -200,7 +202,7 @@ Per altre informazioni, vedere la sezione relativa all'[istruzione switch](~/_cs
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida di riferimento a C](../index.md)
-- [Guida per programmatori C#](../../programming-guide/index.md)
-- [Parole chiave di C#](index.md)
+- [Guida alla programmazione in C](../../programming-guide/index.md)
+- [Parole chiave di C](index.md)
 - [if-else](if-else.md)
-- [Criteri](../../pattern-matching.md)
+- [Criteri di ricerca](../../pattern-matching.md)

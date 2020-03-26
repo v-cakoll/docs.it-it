@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: fa7138127379b069b646c4b2488d1973a3ddd628
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d5657f4081577b2a27bc3c2f6880784015c56060
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79143317"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249695"
 ---
 # <a name="whats-new-in-net-framework"></a>Novità di .NET Framework
 
@@ -427,7 +427,7 @@ c.SameSite = SameSiteMode.Lax
       <forms cookieSameSite="Lax">
          <!-- ...   -->
       </forms>
-   <authentication />
+   </authentication>
    <sessionState cookieSameSite="Lax"></sessionState>
 </system.web>
 ```
@@ -500,7 +500,7 @@ Il flusso base di Always Encrypted basato su enclave è il seguente:
 A partire da .NET Framework 4.7.2, un assistente di diagnostica può trovare gli oggetti  <xref:System.Windows.Xps.Packaging.IXpsFixedPageReader.ResourceDictionaries> creati da un URI di origine specificato.Questa funzionalità può essere utilizzata dagli assistenti diagnostici, non dalle applicazioni di produzione. Un assistente diagnostico, ad esempio la funzionalità "Modifica e continuazione" di Visual Studio, consente all'utente di modificare un ResourceDictionary con l'intento che le modifiche vengano applicate all'applicazione in esecuzione. Un passaggio per raggiungere questo obiettivo è il rilevamento di tutti i ResourceDictionary creati dall'applicazione a partire dal dizionario che viene modificato. Ad esempio un'applicazione può dichiarare un ResourceDictionary il cui contenuto viene copiato da un determinato URI di origine:
 
 ```xml
-<ResourceDictionary Source="MyRD.xaml">
+<ResourceDictionary Source="MyRD.xaml" />
 ```
 
 Un assistente diagnostico che modifica il markup originale in *MyRD.xaml* può usare la nuova funzionalità per individuare il dizionario.La funzionalità è implementata dal nuovo metodo statico <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetResourceDictionariesForSource%2A?displayProperty=nameWithType>. L'assistente di diagnostica chiama il nuovo metodo usando un URI assoluto che identifica il codice originale, come illustrato nel codice seguente:

@@ -1,5 +1,5 @@
 ---
-title: Operatori di accesso ai membri - Riferimenti per C#
+title: Operatori ed espressioni di accesso ai membri - Informazioni di riferimento su C
 description: Informazioni sugli operatori C# che è possibile usare per accedere ai membri di tipo.
 ms.date: 09/18/2019
 author: pkulikov
@@ -32,25 +32,25 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 4d4bc0c192912b5fa87a8e91bc5ba0e1d4ce3598
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: da2ca4517bd007678d74ae9b76e10cad4c2696b4
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399511"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546640"
 ---
-# <a name="member-access-operators-c-reference"></a>Operatori di accesso ai membri (Riferimenti per C#)
+# <a name="member-access-operators-and-expressions-c-reference"></a>Operatori ed espressioni di accesso ai membri (riferimenti per C
 
-Quando si accede a un membro del tipo, è possibile utilizzare gli operatori seguenti:You can use the following operators when you access a type member:
+Quando si accede a un membro di tipo, è possibile utilizzare gli operatori e le espressioni seguenti:You can use the following operators and expressions when you access a type member:
 
-- (accesso ai membri): per accedere a un membro di uno spazio dei nomi o di un tipo [ `.` ](#member-access-operator-)
+- (accesso ai membri): per accedere a un membro di uno spazio dei nomi o di un tipo [ `.` ](#member-access-expression-)
 - [(elemento matrice o accesso all'indicizzatore): per accedere a un elemento di matrice o a un indicizzatore di tipo `[]` ](#indexer-operator-)
 - e (operatori null-conditional) : per eseguire un'operazione di accesso a un membro o a un elemento solo se un operando non è null [ `?.` `?[]` ](#null-conditional-operators--and-)
-- (chiamata) : per chiamare un metodo a cui si accede o richiamare un delegato [ `()` ](#invocation-operator-)
+- (chiamata) : per chiamare un metodo a cui si accede o richiamare un delegato [ `()` ](#invocation-expression-)
 - (indice dalla fine) : per indicare che la posizione dell'elemento è dalla fine di una sequenza [ `^` ](#index-from-end-operator-)
 - (intervallo) : per specificare un intervallo di indici che è possibile utilizzare per ottenere un intervallo di elementi di sequenza [ `..` ](#range-operator-)
 
-## <a name="member-access-operator-"></a>Operatore di accesso ai membri .
+## <a name="member-access-expression-"></a>Espressione di accesso ai membri .
 
 Si usa il token `.` per accedere a un membro di uno spazio dei nomi o di un tipo, come illustrano gli esempi seguenti:
 
@@ -109,7 +109,7 @@ void TraceMethod() {}
 
 ## <a name="null-conditional-operators--and-"></a>Operatori condizionali Null ?. e ?[]
 
-Disponibile in C, 6 e versioni successive, un `?.`operatore null-condizionale applica un [accesso ai membri](#member-access-operator-), , o accesso [all'elemento](#indexer-operator-), `?[]`operazione all'operando solo se tale operando restituisce non null; in caso `null`contrario, restituisce . Cioè
+Disponibile in C, 6 e versioni successive, un `?.`operatore null-condizionale applica un [accesso ai membri](#member-access-expression-), , o accesso [all'elemento](#indexer-operator-), `?[]`operazione all'operando solo se tale operando restituisce non null; in caso `null`contrario, restituisce . Cioè
 
 - Se `a` restituisce `null`, il `a?.x` `a?[x]` risultato di o è `null`.
 - Se `a` restituisce non null, il `a?.x` `a?[x]` risultato di o `a.x` è `a[x]`uguale al risultato di o , rispettivamente.
@@ -150,7 +150,7 @@ if (handler != null)
 }
 ```
 
-## <a name="invocation-operator-"></a>Operatore di chiamata ()
+## <a name="invocation-expression-"></a>Espressione di chiamata ()
 
 Usare le parentesi, `()`, per chiamare un [metodo](../../programming-guide/classes-and-structs/methods.md) oppure richiamare un [delegato](../../programming-guide/delegates/index.md).
 
@@ -214,4 +214,4 @@ Per ulteriori informazioni su indici e intervalli, vedere la nota della [propost
 - [Informazioni di riferimento su C#](../index.md)
 - [Operatori C#](index.md)
 - [?? (null-coalescing operator)](null-coalescing-operator.md) ?? (operatore null-coalescing)
-- [:: operatore](namespace-alias-qualifier.md)
+- [:: (operatore)](namespace-alias-qualifier.md)

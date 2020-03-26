@@ -6,15 +6,15 @@ helpviewer_keywords:
 - graphics [WPF], skewing elements
 - classes [WPF], SkewTransform
 ms.assetid: 56b65f2f-dc6e-4238-923f-ca44ec53c52f
-ms.openlocfilehash: 370ac28b07427345b52822133b5414b45d4462eb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 10b00044c1c518641281e2e72cdb5a68474b5170
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187657"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112024"
 ---
 # <a name="how-to-skew-an-element"></a>Procedura: inclinare un elemento
-In questo esempio viene <xref:System.Windows.Media.SkewTransform> illustrato come utilizzare un per inclinare un elemento. L'inclinazione, nota anche come distorsione, è una trasformazione che adatta lo spazio delle coordinate in modo non uniforme. Un uso tipico <xref:System.Windows.Media.SkewTransform> di un è per simulare la profondità 3D in oggetti 2D.  
+In questo esempio viene <xref:System.Windows.Media.SkewTransform> illustrato come utilizzare un per inclinare un elemento. L'inclinazione, nota anche come distorsione, è una trasformazione che adatta lo spazio delle coordinate in modo non uniforme. Un uso tipico <xref:System.Windows.Media.SkewTransform> di a è per simulare la profondità 3D in oggetti 2D.  
   
  Utilizzare <xref:System.Windows.Media.SkewTransform.CenterX%2A> le <xref:System.Windows.Media.SkewTransform.CenterY%2A> proprietà e per specificare il punto centrale del <xref:System.Windows.Media.SkewTransform>file .  
   
@@ -40,11 +40,11 @@ In questo esempio viene <xref:System.Windows.Media.SkewTransform> illustrato com
  ![SkewTransform examples](./media/img-wcpsdk-graphicsmm-skewtransformexample.gif "img_wcpsdk_graphicsmm_skewtransformexample")  
 I tre esempi SkewTransform illustrati  
   
- Per l'esempio completo, vedere [2-D Transforms Sample (Esempio di trasformazioni 2D)](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms).  
+ Per l'esempio completo, vedere Esempio di [trasformazioni 2D](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms).  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.SkewTransform>
 - [Cenni preliminari sulle trasformazioni](transforms-overview.md)
-- [Argomenti relativi alle procedure](transformations-how-to-topics.md)
+- [Procedure relative](transformations-how-to-topics.md)

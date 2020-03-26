@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-ms.openlocfilehash: 7bb8d8e19ac9cf36eabc061ceba9c649b8a4cc00
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89c90fd217285fac449aba40682aa947fcfb3a07
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148972"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249090"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>Query su singola tabella (LINQ to DataSet)
 Le query LINQ (Language-Integrated Query) funzionano su origini dati che implementano l'interfaccia <xref:System.Collections.Generic.IEnumerable%601> o l'interfaccia. <xref:System.Linq.IQueryable%601> La <xref:System.Data.DataTable> classe non implementa nessuna delle <xref:System.Data.DataTableExtensions.AsEnumerable%2A> due interfacce, pertanto è necessario chiamare il metodo se si desidera utilizzare l'oggetto <xref:System.Data.DataTable> come origine nella `From` clausola di una query LINQ.  
@@ -26,7 +26,7 @@ Le query LINQ (Language-Integrated Query) funzionano su origini dati che impleme
   
  Il ciclo `foreach` enumera quindi gli oggetti enumerabili restituiti da `Select` e produce i risultati della query. Poiché la query è un tipo <xref:System.Linq.Enumerable>, che implementa <xref:System.Collections.Generic.IEnumerable%601>, la valutazione della query viene posticipata finché non viene eseguita un'iterazione della variabile di query in un ciclo `foreach`. La valutazione posticipata della query consente di mantenere le query come valori che è possibile valutare più volte, ogni volta con un risultato potenzialmente diverso.  
   
- Il metodo <xref:System.Data.DataRowExtensions.Field%2A> fornisce l'accesso ai valori di colonna di un oggetto <xref:System.Data.DataRow> e <xref:System.Data.DataRowExtensions.SetField%2A> (non illustrato nell'esempio precedente) imposta i valori di colonna in <xref:System.Data.DataRow>. Poiché i metodi <xref:System.Data.DataRowExtensions.Field%2A> e <xref:System.Data.DataRowExtensions.SetField%2A> gestiscono tipi nullable, non è necessario verificare in modo esplicito la presenza di valori Null. Entrambi metodi sono inoltre generici, quindi non è necessario eseguire i cast del tipo restituito. È possibile usare la funzione di accesso della colonna preesistente in <xref:System.Data.DataRow> (ad esempio, `o["OrderDate"]`), ma in questo caso è necessario eseguire il cast dell'oggetto restituito nel tipo appropriato.  Se la colonna è nullable, è necessario verificare se il valore è Null usando il metodo <xref:System.Data.DataRow.IsNull%2A>. Per ulteriori informazioni, vedere [Metodi Generic Field e SetField](generic-field-and-setfield-methods-linq-to-dataset.md).  
+ Il metodo <xref:System.Data.DataRowExtensions.Field%2A> fornisce l'accesso ai valori di colonna di un oggetto <xref:System.Data.DataRow> e <xref:System.Data.DataRowExtensions.SetField%2A> (non illustrato nell'esempio precedente) imposta i valori di colonna in <xref:System.Data.DataRow>. Sia <xref:System.Data.DataRowExtensions.Field%2A> il <xref:System.Data.DataRowExtensions.SetField%2A> metodo che il metodo gestiscono i tipi di valore nullable, pertanto non è necessario verificare in modo esplicito la presenza di valori null. Entrambi metodi sono inoltre generici, quindi non è necessario eseguire i cast del tipo restituito. È possibile usare la funzione di accesso della colonna preesistente in <xref:System.Data.DataRow> (ad esempio, `o["OrderDate"]`), ma in questo caso è necessario eseguire il cast dell'oggetto restituito nel tipo appropriato.  Se la colonna è un tipo di valore nullable è <xref:System.Data.DataRow.IsNull%2A> necessario verificare se il valore è null utilizzando il metodo . Per ulteriori informazioni, vedere [Metodi Generic Field e SetField](generic-field-and-setfield-methods-linq-to-dataset.md).  
   
  Si noti che il tipo di dati specificato nel parametro `T` generico del metodo <xref:System.Data.DataRowExtensions.Field%2A> e del metodo <xref:System.Data.DataRowExtensions.SetField%2A> deve corrispondere al tipo del valore sottostante; in caso contrario, verrà generata un'eccezione <xref:System.InvalidCastException>. Il nome di colonna specificato deve inoltre corrispondere al nome di una colonna presente in <xref:System.Data.DataSet>; in caso contrario, verrà generata un'eccezione <xref:System.ArgumentException>. In entrambi casi, l'eccezione viene generata in fase di esecuzione durante l'enumerazione dei dati quando viene eseguita la query.  
   

@@ -2,15 +2,15 @@
 title: modifiche di interruzione di ASP.NET Core
 titleSuffix: ''
 description: Elenca le modifiche di rilievo in ASP.NET Core.
-ms.date: 01/10/2020
+ms.date: 03/25/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: c54735cd53fb9cb48eb84045791ccc559fe683cd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eb80be54da8ac0b15d854304e53a7ade7f42da1b
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093175"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291712"
 ---
 # <a name="aspnet-core-breaking-changes"></a>modifiche di interruzione di ASP.NET Core
 
@@ -18,7 +18,6 @@ ASP.NET Core provides the web app development features used by .NET Core.
 
 In questa pagina sono documentate le seguenti modifiche di rilievo:
 
-- [HTTP: Le modifiche del browser SameSite influiscono sull'autenticazione](#http-browser-samesite-changes-impact-authentication)
 - [Rimosse le API obsolete antiforscigiano, CORS, diagnostica, MVC e routing](#obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed)
 - [Autenticazione: deprecazione di Google](#authentication-google-deprecated-and-replaced)
 - [Autenticazione: proprietà HttpContext.Authentication rimossa](#authentication-httpcontextauthentication-property-removed)
@@ -27,6 +26,7 @@ In questa pagina sono documentate le seguenti modifiche di rilievo:
 - [Autorizzazione: sovraccarico AddAuthorization spostato in un assembly diversoAuthorization: AddAuthorization overload moved to different assembly](#authorization-addauthorization-overload-moved-to-different-assembly)
 - [Autorizzazione: IAllowAnonymous rimosso da AuthorizationFilterContext.Filters](#authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters)
 - [Autorizzazione: le implementazioni di IAuthorizationPolicyProvider richiedono un nuovo metodoAuthorization: IAuthorizationPolicyProvider implementations require new method](#authorization-iauthorizationpolicyprovider-implementations-require-new-method)
+- [Azure: rimossi i pacchetti di integrazione di Azure con prefisso MicrosoftAzure: Microsoft-prefixed Azure integration packages removed](#azure-microsoft-prefixed-azure-integration-packages-removed)
 - [Memorizzazione nella cache: proprietà CompactOnMemoryPressure rimossaCaching: CompactOnMemoryPressure property removed](#caching-compactonmemorypressure-property-removed)
 - [Memorizzazione nella cache: Microsoft.Extensions.Caching.SqlServer utilizza il nuovo pacchetto SqlClient](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
 - [Memorizzazione nella cache: i tipi "pubternal" ResponseCaching sono stati modificati in interniCaching: ResponseCaching "pubternal" types changed to internal](#caching-responsecaching-pubternal-types-changed-to-internal)
@@ -36,6 +36,7 @@ In questa pagina sono documentate le seguenti modifiche di rilievo:
 - [Hosting: reindirizzamento HTTPS abilitato per le app out-of-process di IISHosting: HTTPS redirection enabled for IIS out-of-process apps](#hosting-https-redirection-enabled-for-iis-out-of-process-apps)
 - [Hosting: tipi IHostingEnvironment e IApplicationLifetime sostituiti](#hosting-ihostingenvironment-and-iapplicationlifetime-types-marked-obsolete-and-replaced)
 - [Hosting: ObjectPoolProvider rimosso dalle dipendenze WebHostBuilderHosting: ObjectPoolProvider removed from WebHostBuilder dependencies](#hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies)
+- [HTTP: Le modifiche del browser SameSite influiscono sull'autenticazione](#http-browser-samesite-changes-impact-authentication)
 - [HTTP: estensibilità DefaultHttpContext rimossa](#http-defaulthttpcontext-extensibility-removed)
 - [HTTP: HeaderNames campi modificati in static readonly](#http-headernames-constants-changed-to-static-readonly)
 - [HTTP: Modifiche all'infrastruttura del corpo della risposta](#http-response-body-infrastructure-changes)
@@ -66,9 +67,20 @@ In questa pagina sono documentate le seguenti modifiche di rilievo:
 - [SignalR: costruttori HubConnectionContext modificati](#signalr-hubconnectioncontext-constructors-changed)
 - [SignalR: modifica del nome del pacchetto client JavaScript](#signalr-javascript-client-package-name-changed)
 - [SignalR: API obsolete](#signalr-usesignalr-and-useconnections-methods-marked-obsolete)
+- [SignalR: metodi UseSignalR e UseConnections rimossi](#signalr-usesignalr-and-useconnections-methods-removed)
 - [SPAA: SpaServices e NodeServices contrassegnati come obsoleti](#spas-spaservices-and-nodeservices-marked-obsolete)
 - [SPAAs: modifica predefinita del fallback del logger della console SpaServices e NodeServices](#spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger)
 - [Framework di destinazione: .NET Framework non supportatoTarget framework: .NET Framework not supported](#target-framework-net-framework-support-dropped)
+
+## <a name="aspnet-core-50"></a>ASP.NET Core 5.0
+
+[!INCLUDE[Azure: Microsoft-prefixed Azure integration packages removed](~/includes/core-changes/aspnetcore/5.0/azure-integration-packages-removed.md)]
+
+***
+
+[!INCLUDE[SignalR: UseSignalR and UseConnections methods removed](~/includes/core-changes/aspnetcore/5.0/signalr-usesignalr-useconnections-removed.md)]
+
+***
 
 ## <a name="aspnet-core-31"></a>ASP.NET Core 3.1
 

@@ -1,27 +1,27 @@
 ---
-title: "Procedura: Aggiungere un'animazione a una rotazione tridimensionale usando gli storyboard"
+title: 'Procedura: animare una rotazione 3D tramite storyboardHow to: Animate a 3D Rotation Using Storyboards'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Storyboards [WPF]
-- 3-D translations [WPF], animating [WPF], with Storyboards
-- animation [WPF], 3-D translations [WPF], with Storyboards
+- 3D translations [WPF], animating [WPF], with Storyboards
+- animation [WPF], 3D translations [WPF], with Storyboards
 ms.assetid: 1020e44e-e21e-49a8-be53-53cbc1910e83
-ms.openlocfilehash: 03b01205f1a31426a01b09533b350682c384df4b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 088f1a33cfc73a706ffed55ffff6494adaf8fca4
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024755"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112214"
 ---
-# <a name="how-to-animate-a-3-d-rotation-using-storyboards"></a>Procedura: Aggiungere un'animazione a una rotazione tridimensionale usando gli storyboard
-Nell'esempio seguente viene illustrato come far ruotare un oggetto 3D mentre "asse" animando la <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Angle%2A> e <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Axis%2A> delle proprietà di un <xref:System.Windows.Media.Media3D.AxisAngleRotation3D> oggetto. Ciò <xref:System.Windows.Media.Media3D.AxisAngleRotation3D> oggetto specifica la trasformazione di rotazione dell'oggetto 3D e l'animazione delle proprietà consente l'effetto di rotazione desiderato. All'interno dello Storyboard, <xref:System.Windows.Media.Animation.DoubleAnimation> viene usato per animare la <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Angle%2A> proprietà durante <xref:System.Windows.Media.Animation.Vector3DAnimation> viene usato per animare il <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Axis%2A> proprietà.  
+# <a name="how-to-animate-a-3d-rotation-using-storyboards"></a>Procedura: animare una rotazione 3D tramite storyboardHow to: Animate a 3D Rotation Using Storyboards
+L'esempio seguente mostra come far ruotare un oggetto 3D mentre <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Angle%2A> "oscilla" animando le proprietà e <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Axis%2A> di un <xref:System.Windows.Media.Media3D.AxisAngleRotation3D> oggetto. Questo <xref:System.Windows.Media.Media3D.AxisAngleRotation3D> oggetto specifica la trasformazione di rotazione dell'oggetto 3D e pertanto l'animazione delle relative proprietà crea l'effetto di rotazione desiderato. All'interno <xref:System.Windows.Media.Animation.DoubleAnimation> di Storyboard, <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Angle%2A> viene <xref:System.Windows.Media.Animation.Vector3DAnimation> utilizzato per animare la proprietà while viene utilizzato per animare la <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Axis%2A> proprietà.  
   
 ## <a name="example"></a>Esempio  
  [!code-xaml[Animation3DGallery_snip#Rotate3DUsingAxisAngleRotation3DExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Rotat3DUsingAxisAngleRotation3DExample.xaml#rotate3dusingaxisanglerotation3dexamplewholepage)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Aggiungere un'animazione a una rotazione tridimensionale usando Rotation3DAnimation](how-to-animate-a-3-d-rotation-using-rotation3danimation.md)
-- [Animare a una rotazione tridimensionale usando i fotogrammi chiave (Rotation3DAnimationUsingKeyFrames)](how-to-animate-a-3-d-rotation-using-key-frames.md)
-- [Panoramica sulla grafica tridimensionale](3-d-graphics-overview.md)
+- [Animare una rotazione 3D usando Rotation3DAnimation](how-to-animate-a-3-d-rotation-using-rotation3danimation.md)
+- [Animare una rotazione 3D usando i fotogrammi chiave (Rotation3DAnimationUsingKeyFrames)](how-to-animate-a-3-d-rotation-using-key-frames.md)
+- [Panoramica della grafica 3D](3-d-graphics-overview.md)
 - [Cenni preliminari sugli storyboard](storyboards-overview.md)

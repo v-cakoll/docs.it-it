@@ -12,12 +12,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: f85fef37ac952c91ac73570f26d80d8a46f4eedf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b61d079a86bdd4a809d44ad128f19a7b358c8384
+ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78156505"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80228669"
 ---
 # <a name="assemblies-in-net"></a>Assembly in .NET
 
@@ -96,7 +96,7 @@ Nel linguaggio c'è, è possibile utilizzare due versioni dello stesso assembly 
 |[Contenuto degli assembly](contents.md)|Elementi che costituiscono un assieme.|
 |[Manifesto dell'assembly](manifest.md)|Dati nel manifesto dell'assembly e modalità di archiviazione negli assembly.|
 |[Global Assembly Cache](../../framework/app-domains/gac.md)|Modalità di memorizzazione e utilizzo degli assembly da parte della Global Assembly Cache.|
-|[Assembly con nome sicuro](strong-named.md)|Caratteristiche degli assembly con nome sicuro.|
+|[Assembly con nomi sicuri](strong-named.md)|Caratteristiche degli assembly con nome sicuro.|
 |[Considerazioni sulla sicurezza degli assembly](security-considerations.md)|Funzionamento della sicurezza con gli assembly.|
 |[Controllo delle versioni degli assembly](versioning.md)|Panoramica dei criteri di controllo delle versioni di .NET Framework.|
 |[Posizionamento dell'assieme](../../framework/app-domains/assembly-placement.md)|Dove individuare gli assiemi.|
@@ -104,7 +104,7 @@ Nel linguaggio c'è, è possibile utilizzare due versioni dello stesso assembly 
 |[Creare metodi e assembly dinamici](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Come creare assembly dinamici.|
 |[Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|Modalità di risoluzione dei riferimenti agli assembly in fase di esecuzione.|
 
-## <a name="reference"></a>Informazioni di riferimento
+## <a name="reference"></a>Riferimento
 
 <xref:System.Reflection.Assembly?displayProperty=nameWithType>
 
@@ -116,3 +116,4 @@ Nel linguaggio c'è, è possibile utilizzare due versioni dello stesso assembly 
 - [Procedura: caricare e scaricare assemblyHow to: Load and unload assemblies](load-unload.md)
 - [Procedura: utilizzare ed eseguire il debug di un'assembly di scaricamento in .NET CoreHow to: Use and debug assembly unloadability in .NET Core](unloadability.md)
 - [Procedura: determinare se un file è un assemblyHow to: Determine if a file is an assembly](identify.md)
+- [Procedura: controllare il contenuto dell'assembly tramite MetadataLoadContextHow to: Inspect assembly contents using MetadataLoadContext](inspect-contents-using-metadataloadcontext.md)

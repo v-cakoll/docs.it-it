@@ -6,12 +6,12 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: e527e8a54a739391d18b180532372b5b70f34d37
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 53bee82bf24a847b0b21ed2375d09a6303d4fe48
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713527"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507191"
 ---
 # <a name="fixed-statement-c-reference"></a>Istruzione fixed (Riferimenti per C#)
 
@@ -62,7 +62,7 @@ fixed (byte* ps = srcarray, pd = dstarray)
 }
 ```
 
-È possibile allocare memoria nello stack, dove non è soggetta a Garbage Collection e pertanto non deve essere bloccata. A tale scopo, utilizzare [ `stackalloc` l'operatore](../operators/stackalloc.md).
+È possibile allocare memoria nello stack, dove non è soggetta a Garbage Collection e pertanto non deve essere bloccata. A tale scopo, utilizzare [ `stackalloc` un'espressione](../operators/stackalloc.md).
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
@@ -71,8 +71,8 @@ Per altre informazioni, vedere la sezione [Istruzione fixed](~/_csharplang/spec/
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida di riferimento a C](../index.md)
-- [Guida per programmatori C#](../../programming-guide/index.md)
-- [Parole chiave di C#](index.md)
+- [Guida alla programmazione in C](../../programming-guide/index.md)
+- [Parole chiave di C](index.md)
 - [Pericoloso](unsafe.md)
-- [Tipi di puntatore](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [Tipi puntatore](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Buffer a dimensione fissa](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)

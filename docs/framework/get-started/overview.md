@@ -7,12 +7,12 @@ helpviewer_keywords:
 - common language runtime, about
 - common language runtime, overview
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
-ms.openlocfilehash: de9cbdab5d5786b9d59d23ba675fa3f78f807716
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ace42738118cde4bcda4b78607d7bdb045d3501e
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181601"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248921"
 ---
 # <a name="overview-of-net-framework"></a>Panoramica di .NET Framework
 
@@ -31,7 +31,7 @@ ms.locfileid: "79181601"
 - Per compilare tutte le comunicazioni sugli standard del settore per garantire che il codice basato su .NET Framework si integri con qualsiasi altro codice.
 
 > [!NOTE]
-> Per un'introduzione generale a .NET Framework sia per gli utenti che per gli sviluppatori, vedere [Guida introduttiva.](index.md)
+> Per un'introduzione generale a .NET Framework sia per gli utenti che per gli sviluppatori, vedere [Introduzione.](index.md)
 
 .NET Framework è costituito da Common Language Runtime (CLR) e dalla libreria di classi .NET Framework. Common Language Runtime è alla base di .NET Framework. e può essere considerato come un agente che gestisce il codice in fase di esecuzione, fornendo servizi di base quali gestione della memoria, gestione di thread e servizi remoti e attivando nel contempo una rigida indipendenza dai tipi e altre forme di accuratezza del codice che garantiscono sicurezza ed efficienza. Il concetto di gestione del codice è infatti un principio fondamentale di runtime. Il codice destinato al runtime è definito codice gestito, mentre quello non destinato al runtime è definito codice non gestito. La libreria di classi è una raccolta completa e orientata agli oggetti di tipi riutilizzabili che consentono di sviluppare app che vanno dalle tradizionali app della riga di comando o dell'interfaccia utente grafica (GUI) alle app basate sulle ultime innovazioni fornite da ASP.NET, ad esempio Web Moduli e servizi Web XML.
 
@@ -71,7 +71,7 @@ La libreria di classi .NET Framework è una raccolta di tipi riutilizzabili che 
 
 Ad esempio le classi di raccolte .NET Framework implementano un set di interfacce per lo sviluppo di classi di raccolte personalizzate. Le classi di raccolte personalizzate si integrano perfettamente con le classi in .NET Framework.
 
-Come ci si aspetta da una libreria di classi orientata agli oggetti, i tipi .NET Framework consentono di effettuare una gamma di attività comuni di programmazione, incluse operazioni quali la gestione di stringhe, la raccolta di dati, la connettività al database e l'accesso a file. Oltre a queste attività comuni, la libreria di classi include tipi che supportano vari scenari di sviluppo specializzati. Usare .NET Framework per sviluppare i seguenti tipi di app e servizi:
+Come ci si aspetterebbe da una libreria di classi orientata agli oggetti, i tipi .NET Framework consentono di eseguire una serie di attività di programmazione comuni, tra cui la gestione delle stringhe, la raccolta dei dati, la connettività del database e l'accesso ai file. Oltre a queste attività comuni, la libreria di classi include tipi che supportano vari scenari di sviluppo specializzati. È possibile usare .NET Framework per sviluppare i tipi di app e servizi seguenti:
 
 - App console. Vedere [Compilazione di applicazioni console](../../standard/building-console-apps.md).
 
@@ -93,7 +93,7 @@ Le classi Windows Form sono un insieme completo di tipi riusabili che semplifica
 
 - [Requisiti di sistema](system-requirements.md)
 - [Guida all'installazione](../install/index.md)
-- [Guida di sviluppo](../development-guide.md)
+- [Guida allo sviluppo](../development-guide.md)
 - [Strumenti](../tools/index.md)
 - [Esempi ed esercitazioni per .NET](../../samples-and-tutorials/index.md)
 - [Browser API .NET](../../../api/index.md)

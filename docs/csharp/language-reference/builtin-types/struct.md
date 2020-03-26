@@ -8,12 +8,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: b85d0df086f3ca65ed995594dd374286e1c3ba5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b126706ff9c881e5c2d5cc7ee4833ac8896e3fcc
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847729"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507243"
 ---
 # <a name="structure-types-c-reference"></a>Tipi di struttura (riferimenti c
 
@@ -43,7 +43,7 @@ Quando si progetta un tipo di struttura, si hanno le stesse funzionalità di un 
 
 È necessario inizializzare una variabile dichiarata prima di poterla utilizzare. Poiché una variabile di `null` tipo struttura non può essere (a meno che non si tratti di una variabile di un tipo di [valore nullable](nullable-value-types.md)), è necessario creare un'istanza del tipo corrispondente. Ci sono diversi modi per farlo.
 
-In genere, si crea un'istanza di [`new`](../operators/new-operator.md) un tipo di struttura chiamando un costruttore appropriato con l'operatore . Ogni tipo di struttura ha almeno un costruttore. Si tratta di un costruttore senza parametri implicito, che produce il [valore predefinito](default-values.md) del tipo. È inoltre possibile utilizzare l'operatore [predefinito](../operators/default.md) o valore letterale per produrre il valore predefinito di un tipo.
+In genere, si crea un'istanza di [`new`](../operators/new-operator.md) un tipo di struttura chiamando un costruttore appropriato con l'operatore . Ogni tipo di struttura ha almeno un costruttore. Si tratta di un costruttore senza parametri implicito, che produce il [valore predefinito](default-values.md) del tipo. È inoltre possibile utilizzare [un'espressione](../operators/default.md) di valore predefinito per produrre il valore predefinito di un tipo.
 
 Se tutti i campi di istanza di un tipo `new` di struttura sono accessibili, è anche possibile crearne un'istanza senza l'operatore. In tal caso è necessario inizializzare tutti i campi di istanza prima del primo utilizzo dell'istanza. L'esempio seguente illustra come eseguire questa operazione:
 

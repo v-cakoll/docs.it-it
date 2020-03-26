@@ -2,12 +2,12 @@
 title: 'Procedura: recuperare il valore di un elemento (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 76b9b2a5-b3ba-49da-ba74-82100e1bd21c
-ms.openlocfilehash: cc0ddb9c4fc6364d4b10ebac378ab47cc38e508f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b1a61091dc59b403c5d967609e8870492c24347f
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352418"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248934"
 ---
 # <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a>Procedura: recuperare il valore di un elemento (LINQ to XML) (Visual Basic)
 In questo argomento viene illustrato come ottenere il valore degli elementi. Questa operazione può essere eseguita in due modi. È possibile eseguire il cast di un oggetto <xref:System.Xml.Linq.XElement> o  <xref:System.Xml.Linq.XAttribute> nel tipo desiderato. L'operatore di conversione esplicito converte quindi il contenuto dell'elemento o dell'attributo nel tipo specificato e lo assegna alla variabile. In alternativa, è possibile usare la proprietà <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> o <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType>.  
@@ -23,7 +23,7 @@ Console.WriteLine(e)
 Console.WriteLine("Value of e:" & e.Value)  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```xml  
 <StringElement>abcde</StringElement>  
@@ -39,7 +39,7 @@ Console.WriteLine(e)
 Console.WriteLine("Value of e:" & CInt(e))  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```xml  
 <Age>44</Age>  
@@ -59,7 +59,7 @@ Console.WriteLine(e)
 Console.WriteLine("Value of e:" & e.Value)  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```xml  
 <StringElement>abcde</StringElement>  
@@ -67,7 +67,7 @@ Value of e:abcde
 ```  
   
 ## <a name="example"></a>Esempio  
- A volte, si tenta di recuperare il valore di un elemento anche se non si è certi che esista. In questo caso, quando si assegna l'elemento sottoposto a cast a un tipo nullable (`string` o uno dei tipi nullable di .NET Framework), se l'elemento non esiste la variabile assegnata viene semplicemente impostata su `Nothing`. Nel codice seguente viene dimostrato che quando non si è certi che l'elemento esista, è preferibile eseguire il cast anziché usare la proprietà <xref:System.Xml.Linq.XElement.Value%2A>.  
+ A volte, si tenta di recuperare il valore di un elemento anche se non si è certi che esista. In questo caso, quando si assegna l'elemento di `string` cui è stato eseguito il cast a un tipo nullable (uno o `Nothing`uno dei tipi di valore nullable in .NET Framework), se l'elemento non esiste, la variabile assegnata viene semplicemente impostata su . Nel codice seguente viene dimostrato che quando non si è certi che l'elemento esista, è preferibile eseguire il cast anziché usare la proprietà <xref:System.Xml.Linq.XElement.Value%2A>.  
   
 ```vb  
 Dim root As XElement = <Root>  

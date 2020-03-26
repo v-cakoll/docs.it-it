@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: 8a0a7c6166bb4cfc8064faa20056fda16b593e81
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6e0c34e1db50030c78db295f26fcc25b431d3dde
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151767"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111803"
 ---
 # <a name="adonet-code-examples"></a>esempi di codice di ADO.NET
-Gli elenchi di codice inclusi in questo argomento illustrano come recuperare dati da un database usando le tecnologie ADO.NET seguenti:
+
+Gli elenchi di codice in questa pagina illustrano come recuperare dati da un database utilizzando le tecnologie di ADO.NET seguenti:The code listings on this page demonstrate how to retrieve data from a database by using the following ADO.NET technologies:
 
 - Provider di dati ADO.NET:
 

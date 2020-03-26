@@ -4,12 +4,12 @@ description: Descrive i componenti dell'architettura .NET, ad esempio .NET Stand
 author: cartermp
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: eadcf05069edfa32a52c5e73045b4cebd1a9a6ac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4329830d6cec5032517ea3fa02cb24dd7322e23f
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79400477"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291776"
 ---
 # <a name="net-architectural-components"></a>Componenti dell'architettura .NET
 
@@ -17,11 +17,11 @@ Un'app .NET viene sviluppata per e viene eseguita in una o più *implementazioni
 
 ## <a name="net-standard"></a>.NET Standard
 
-.NET Standard è un set di API implementate dalla libreria di classi base di un'implementazione di .NET. In termini più formali, si tratta di una specifica di API .NET che costituiscono un set di contratti in base a cui viene compilato il codice. Questi contratti vengono implementati in ogni implementazione di .NET. Questo consente la portabilità tra diverse implementazioni di .NET, consentendo di eseguire il codice su qualsiasi piattaforma.
+.NET Standard è un set di API implementate dalla libreria di classi base di un'implementazione .NET. In termini più formali, si tratta di una specifica di API .NET che costituiscono un set di contratti in base a cui viene compilato il codice. Questi contratti vengono implementati in ogni implementazione di .NET. Questo consente la portabilità tra diverse implementazioni di .NET, consentendo di eseguire il codice su qualsiasi piattaforma.
 
-.NET Standard è anche un [framework di destinazione](glossary.md#target-framework). Se il codice ha come destinazione una versione di .NET Standard, può essere eseguito in qualsiasi implementazione di .NET che supporta tale versione di .NET Standard.
+.NET Standard è anche un [framework di destinazione.](glossary.md#target-framework) Se il codice è destinato a una versione di .NET Standard, può essere eseguito su qualsiasi implementazione di .NET che supporta tale versione di .NET Standard.If your code targets a version of .NET Standard, it can run on any .NET implementation that supports that version of .NET Standard.
 
-Per altre informazioni su .NET Standard e su come specificarla come destinazione, vedere l'argomento [.NET Standard](net-standard.md).
+Per ulteriori informazioni su .NET Standard e su come impostarlo come destinazione, vedere [.NET Standard](net-standard.md).
 
 ## <a name="net-implementations"></a>Implementazioni di .NET
 
@@ -42,9 +42,9 @@ Per altre informazioni su .NET Core, vedere la [Guida a .NET Core](../core/index
 
 ### <a name="net-framework"></a>.NET Framework
 
-.NET Framework è l'implementazione originale di .NET, introdotta nel 2002. È lo stesso .NET Framework che gli sviluppatori .NET hanno sempre usato. Le versioni 4.5 e successive implementano .NET Standard, quindi il codice che ha come destinazione .NET Standard può essere eseguito in tali versioni di .NET Framework. Contiene API aggiuntive specifiche di Windows, ad esempio API per lo sviluppo di applicazioni desktop di Windows con Windows Forms e WPF. .NET Framework è ottimizzato per la compilazione di applicazioni desktop di Windows.
+.NET Framework è l'implementazione .NET originale esistente dal 2002. Le versioni 4.5 e successive implementano .NET Standard, pertanto il codice destinato a .NET Standard può essere eseguito in tali versioni di .NET Framework. Contiene API aggiuntive specifiche di Windows, ad esempio API per lo sviluppo di applicazioni desktop di Windows con Windows Forms e WPF. .NET Framework è ottimizzato per la compilazione di applicazioni desktop di Windows.
 
-Per altre informazioni su .NET Framework, vedere [Guida a .NET Framework](../framework/index.md).
+Per ulteriori informazioni su .NET Framework, vedere la Guida di [.NET Framework](../framework/index.yml).
 
 ### <a name="mono"></a>Mono
 
@@ -60,7 +60,7 @@ Per altre informazioni su Mono, vedere la [documentazione Mono](https://www.mono
 
 ### <a name="universal-windows-platform-uwp"></a>Piattaforma UWP (Universal Windows Platform)
 
-La piattaforma UWP è un'implementazione di .NET usata per la creazione di applicazioni Windows moderne e abilitate per il tocco e di software per Internet delle cose. È stata progettata per unificare i diversi tipi di dispositivi da specificare come destinazione, ad esempio computer, tablet, phablet, telefoni e anche Xbox. La piattaforma UWP offre molti servizi, ad esempio un App Store centralizzato, un ambiente di esecuzione (AppContainer) e un set di API di Windows da usare invece di Win32 (WinRT). Le app possono essere scritte in C, C, Visual Basic e JavaScript. Quando si utilizza C ,NET e Visual Basic, le API .NET vengono fornite da .NET Core.
+La piattaforma UWP è un'implementazione di .NET usata per la creazione di applicazioni Windows moderne e abilitate per il tocco e di software per Internet delle cose. È progettato per unificare i diversi tipi di dispositivi di destinazione, inclusi PC, tablet, telefoni e persino Xbox. La piattaforma UWP offre molti servizi, ad esempio un App Store centralizzato, un ambiente di esecuzione (AppContainer) e un set di API di Windows da usare invece di Win32 (WinRT). Le app possono essere scritte in C, C, Visual Basic e JavaScript. Quando si utilizza C ,NET e Visual Basic, le API .NET vengono fornite da .NET Core.
 
 Per altre informazioni sulla piattaforma UWP, vedere [Introduzione alla piattaforma UWP (Universal Windows Platform)](/windows/uwp/get-started/universal-application-platform-guide).
 
@@ -75,7 +75,7 @@ Un runtime è l'ambiente di esecuzione per un programma gestito. Il sistema oper
 
 ## <a name="net-tooling-and-common-infrastructure"></a>Strumenti .NET e infrastruttura comune
 
-È possibile accedere a un ampio set di strumenti e di componenti di infrastruttura che possono essere usati con qualsiasi implementazione di .NET, ad esempio:
+È possibile accedere a un ampio set di strumenti e di componenti di infrastruttura che possono essere usati con qualsiasi implementazione di .NET, Questi strumenti e componenti includono:
 
 - Linguaggi .NET e relativi compilatori
 - Sistema del progetto .NET (basato su file con estensione *csproj*, *vbproj* e *fsproj*)
@@ -85,7 +85,7 @@ Un runtime è l'ambiente di esecuzione per un programma gestito. Il sistema oper
 
 ## <a name="applicable-standards"></a>Norme applicabili
 
-Il linguaggio C e le specifiche cli (Common Language Infrastructure) sono standardizzate tramite [Ecma International®](https://www.ecma-international.org/). Le prime edizioni di questi standard sono state pubblicate da Ecma nel dicembre 2001.
+Il linguaggio C e le specifiche cli (Common Language Infrastructure) sono standardizzate tramite [Ecma&reg;International](https://www.ecma-international.org/). Le prime edizioni di questi standard sono state pubblicate da Ecma nel dicembre 2001.
 
 Successive revisioni agli standard sono state sviluppate dai gruppi di attività TC49-TG2 (C) e TC49-TG3 (CLI) all'interno del Comitato Tecnico dei linguaggi di programmazione[(TC49)](https://www.ecma-international.org/memento/tc49.htm)e adottati dall'Assemblea Generale Ecma e successivamente da ISO/IEC JTC 1 tramite il processo ISO Fast-Track.
 
@@ -94,8 +94,8 @@ Successive revisioni agli standard sono state sviluppate dai gruppi di attività
 I seguenti documenti ufficiali di Ecma sono disponibili per [il linguaggio C](http://www.ecma-international.org/publications/standards/Ecma-334.htm) e l'interfaccia [della riga di comando](http://www.ecma-international.org/publications/standards/Ecma-335.htm) ([TR-84](http://www.ecma-international.org/publications/techreports/E-TR-084.htm)):
 
 - Standard del **linguaggio C , versione 5.0**: [ECMA-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
-- **La Common Language Infrastructure**: Questo è disponibile in formato [pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf) e [zip.](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip)
-- **Informazioni derivate dal file XML Partition IV**: Sono disponibili nei formati [pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) e [zip.](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip)
+- **L'infrastruttura common Language**: Disponibile in formato [pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf) e [zip.](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip)
+- **Informazioni derivate dal file XML Partition IV**: Disponibili in formato [pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) e [zip.](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip)
 
 I documenti ufficiali ISO/IEC sono disponibili nella pagina [Standard disponibili pubblicamente](https://standards.iso.org/ittf/PubliclyAvailableStandards/) ISO/IEC. Questi link sono diretti da quella pagina:
 
@@ -108,7 +108,7 @@ I documenti ufficiali ISO/IEC sono disponibili nella pagina [Standard disponibil
 - [Scelta di .NET Core o .NET Framework per le app server](choosing-core-framework-server.md)
 - [.NET Standard](net-standard.md)
 - [Guida di .NET Core](../core/index.md)
-- [Guida di .NET Framework](../framework/index.md)
+- [Guida di .NET Framework](../framework/index.yml)
 - [Guida di C](../csharp/index.yml)
-- [F# Guide](../fsharp/index.yml) (Guida di F#)
-- [Guida a Visual Basic](../visual-basic/index.yml)
+- [Guida di F](../fsharp/index.yml)
+- [Guida di Visual Basic](../visual-basic/index.yml)

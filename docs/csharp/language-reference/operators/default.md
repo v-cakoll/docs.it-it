@@ -1,25 +1,30 @@
 ---
-title: Operatore default - Riferimenti per C#
-description: Utilizzare l'operatore predefinito per produrre il valore predefinito di un tipo
-ms.date: 08/01/2019
+title: Espressioni di valore predefinito - Riferimento in C
+description: Utilizzare le espressioni di valore predefinito per ottenere il valore predefinito di un tipo
+ms.date: 03/13/2020
+f1_keywords:
+- default_CSharpKeyword
+- default
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 0d37fe952e71e74f014872231a2e58663dea9d18
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2adfd8d24066e9dad50c3c18407d3ade71b4b68e
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399483"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507178"
 ---
-# <a name="default-operator-c-reference"></a>Operatore default (Riferimenti per C#)
+# <a name="default-value-expressions-c-reference"></a>Espressioni di valore predefinito (riferimenti in C
 
-L'operatore `default` produce il [valore predefinito](../builtin-types/default-values.md) di un tipo. L'argomento dell'operatore `default` deve essere il nome di un tipo o di un parametro di tipo.
-
-L'esempio seguente illustra l'utilizzo dell'operatore `default`:
-
-[!code-csharp-interactive[default of T](snippets/DefaultOperator.cs#WithOperand)]
+Un'espressione di valore predefinito produce il [valore predefinito](../builtin-types/default-values.md) di un tipo. Esistono due tipi di espressioni di valore predefinito: la chiamata [all'operatore predefinito](#default-operator) e un [valore letterale predefinito](#default-literal).
 
 È inoltre `default` possibile utilizzare la parola chiave come etichetta case predefinita all'interno di un'istruzione [ `switch` ](../keywords/switch.md).
+
+## <a name="default-operator"></a>operatore default
+
+L'argomento dell'operatore `default` deve essere il nome o il parametro di un tipo, come illustrato nell'esempio seguente:
+
+[!code-csharp-interactive[default of T](snippets/DefaultOperator.cs#WithOperand)]
 
 ## <a name="default-literal"></a>valore letterale predefinito
 

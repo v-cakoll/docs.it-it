@@ -5,12 +5,12 @@ ms.date: 12/18/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: 93b6079b9a3bbf6d537094cab9dfb305ace7f6bf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5e34d291ec15c738f3bc9409df321ede454b6710
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77625865"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507256"
 ---
 # <a name="default-values-of-c-types-c-reference"></a>Valori predefiniti dei tipi C .
 
@@ -21,13 +21,13 @@ La tabella seguente mostra i valori predefiniti dei tipi C#:
 |Qualsiasi tipo riferimento|`null`|
 |Qualsiasi [tipo numerico integrale incorporato](integral-numeric-types.md)|0 (zero)|
 |Qualsiasi [tipo numerico a virgola mobile incorporato](floating-point-numeric-types.md)|0 (zero)|
-|[Bool](bool.md)|`false`|
-|[Char](char.md)|`'\0'` (U+0000)|
+|[bool](bool.md)|`false`|
+|[char](char.md)|`'\0'` (U+0000)|
 |[Enum](enum.md)|Valore prodotto dall'espressione `(E)0`, dove `E` è l'identificatore di enumerazione.|
 |[struct](struct.md)|Valore prodotto impostando tutti i campi dei tipi valore sui rispettivi valori predefiniti e tutti i campi dei tipi riferimento su `null`.|
 |Qualsiasi [tipo valore nullable](nullable-value-types.md)|Un'istanza per la quale la proprietà <xref:System.Nullable%601.HasValue%2A> è `false` e la proprietà <xref:System.Nullable%601.Value%2A> non è definita. Tale valore predefinito è noto anche come valore *null* di un tipo di valore nullable.|
 
-Usare l'[operatore predefinito](../operators/default.md) per produrre il valore predefinito di un tipo, come illustrato nell'esempio seguente:
+Utilizzare [ `default` l'operatore](../operators/default.md#default-operator) per produrre il valore predefinito di un tipo, come illustrato nell'esempio seguente:
 
 ```csharp
 int a = default(int);

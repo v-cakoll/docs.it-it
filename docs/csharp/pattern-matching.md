@@ -4,12 +4,12 @@ description: Informazioni sulle espressioni di criteri di ricerca in C#
 ms.date: 04/10/2019
 ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 0c302499543c90bd01427e2791435968d580f644
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb6baf3771024d02b2027f81fd35b8be4872cf6e
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170384"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249233"
 ---
 # <a name="pattern-matching"></a>Criteri di ricerca
 
@@ -106,7 +106,7 @@ Dopo aver aggiunto le forme con area 0, si aggiungono due tipi di forme aggiunti
 
 [!code-csharp[NullCase](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "Add null case")]
 
-Lo speciale comportamento del criterio `null` è interessante perché la costante `null` nel criterio non ha un tipo, ma può essere convertita in qualsiasi tipo di riferimento o nullable. Anziché convertire una costante `null` in un tipo, il linguaggio definisce che un valore `null` non corrisponderà ad alcun criterio del tipo, indipendentemente dal tipo in fase di compilazione della variabile. Questo comportamento rende il nuovo criterio del tipo basato su `switch` coerente con l'istruzione `is`: le istruzioni `is` restituiscono sempre `false` quando il valore controllato è `null`. È anche più semplice: dopo aver controllato il tipo, non è necessario un controllo null aggiuntivo. Questo è dimostrato dal fatto che non è presente alcun controllo null in nessuno dei blocchi di case degli esempi precedenti: i controlli non sono necessari poiché la corrispondenza del criterio del tipo garantisce già un valore non null.
+Il comportamento speciale `null` per il modello `null` è interessante perché la costante nel modello non dispone di un tipo, ma può essere convertita in qualsiasi tipo di riferimento o tipo di valore nullable. Anziché convertire una costante `null` in un tipo, il linguaggio definisce che un valore `null` non corrisponderà ad alcun criterio del tipo, indipendentemente dal tipo in fase di compilazione della variabile. Questo comportamento rende il nuovo criterio del tipo basato su `switch` coerente con l'istruzione `is`: le istruzioni `is` restituiscono sempre `false` quando il valore controllato è `null`. È anche più semplice: dopo aver controllato il tipo, non è necessario un controllo null aggiuntivo. Questo è dimostrato dal fatto che non è presente alcun controllo null in nessuno dei blocchi di case degli esempi precedenti: i controlli non sono necessari poiché la corrispondenza del criterio del tipo garantisce già un valore non null.
 
 ## <a name="var-declarations-in-case-expressions"></a>Dichiarazioni `var` nelle espressioni `case`
 

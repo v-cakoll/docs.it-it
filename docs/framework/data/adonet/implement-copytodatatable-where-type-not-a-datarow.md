@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Implementare CopyToDataTable<T> in cui il tipo generico T non è un oggetto DataRow'
+title: 'Procedura: implementare CopyToDataTable<T> in cui il tipo generico T non un oggetto DataRow'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b27b52cf-6172-485f-a75c-70ff9c5a2bd4
-ms.openlocfilehash: 27df5e88b93914d317f0f59c704382bde67534d2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6c14e87c5caede4fea52867d9f184f3f64a5ed3b
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794991"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249643"
 ---
-# <a name="how-to-implement-copytodatatablet-where-the-generic-type-t-is-not-a-datarow"></a>Procedura: Implementare CopyToDataTable\<t > in cui il tipo generico t non è un DataRow
+# <a name="how-to-implement-copytodatatablet-where-the-generic-type-t-is-not-a-datarow"></a>Procedura: implementare CopyToDataTable T> in cui il tipo generico T non è un DataRowHow to: Implement CopyToDataTable\<T> Where the Generic Type T Is Not a DataRow
 L'oggetto <xref:System.Data.DataTable> viene spesso usato per l'associazione dati. Il metodo <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> copia i dati dei risultati di una query in un oggetto <xref:System.Data.DataTable> che può essere quindi usato per il data binding. I metodi <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>, tuttavia, funzionano solo su un'origine <xref:System.Collections.Generic.IEnumerable%601> in cui il parametro generico `T` è di tipo <xref:System.Data.DataRow>. Sebbene sia utile, questa funzionalità non consente di creare tabelle da una sequenza di tipi scalari, da query che proiettano tipo anonimi o da query che eseguono join di tabelle.  
   
  In questo argomento viene descritto come implementare due metodi di estensione `CopyToDataTable<T>` personalizzati che accettano un parametro generico `T` di un tipo diverso da <xref:System.Data.DataRow>. La logica per creare un oggetto <xref:System.Data.DataTable> da un'origine <xref:System.Collections.Generic.IEnumerable%601> è contenuto nella classe `ObjectShredder<T>`, di cui viene eseguito il wrapping in due metodi di estensione `CopyToDataTable<T>` di overload. Il metodo `Shred` della classe `ObjectShredder<T>` restituisce l'oggetto <xref:System.Data.DataTable> compilato e accetta tre parametri di input: un'origine <xref:System.Collections.Generic.IEnumerable%601>, un oggetto <xref:System.Data.DataTable> e un'enumerazione <xref:System.Data.LoadOption>. Lo schema iniziale dell'oggetto <xref:System.Data.DataTable> restituito è basato sullo schema del tipo `T`. Se viene fornita una tabella esistente come input, lo schema deve essere coerente con lo schema del tipo `T`. Tutte le proprietà e i campi pubblici del tipo `T` vengono convertiti in <xref:System.Data.DataColumn> nella tabella restituita. Se la sequenza di origine contiene un tipo derivato da `T`, lo schema della tabella restituita viene espanso per includere eventuali proprietà o campi pubblici aggiuntivi.  
@@ -26,7 +26,7 @@ L'oggetto <xref:System.Data.DataTable> viene spesso usato per l'associazione dat
      [!code-csharp[DP Custom CopyToDataTable Examples#ObjectShredderClass](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#objectshredderclass)]
      [!code-vb[DP Custom CopyToDataTable Examples#ObjectShredderClass](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#objectshredderclass)]  
 
-    L'esempio precedente presuppone che le proprietà di `DataColumn` non abbiano tipi nullable. Per gestire le proprietà con tipi nullable, usare il codice seguente:
+    Nell'esempio precedente si presuppone che `DataColumn` le proprietà dell'oggetto non siano tipi di valore nullable. Per gestire le proprietà con tipi di valore nullable, utilizzare il codice seguente:To handle properties with nullable value types, use the following code:
 
     ```csharp
     DataColumn dc = table.Columns.Contains(p.Name) ? table.Columns[p.Name] : table.Columns.Add(p.Name, Nullable.GetUnderlyingType(p.PropertyType) ?? p.PropertyType);
@@ -76,4 +76,4 @@ public class ObjectShredder<T>
 ## <a name="see-also"></a>Vedere anche
 
 - [Creazione di un oggetto DataTable da una query](creating-a-datatable-from-a-query-linq-to-dataset.md)
-- [Guida per programmatori](programming-guide-linq-to-dataset.md)
+- [Guida alla programmazione](programming-guide-linq-to-dataset.md)

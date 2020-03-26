@@ -2,12 +2,12 @@
 title: Archivio pacchetti di runtime
 description: Informazioni su come usare l'archivio pacchetti di runtime per specificare come destinazione i manifesti usati da .NET Core.
 ms.date: 08/12/2017
-ms.openlocfilehash: 7a833ed95147608c6fb403f8f0dec179d2a73833
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ba3182b682e8a47397ac09ed46afe25190d34e5f
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77448958"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134267"
 ---
 # <a name="runtime-package-store"></a>Archivio pacchetti di runtime
 
@@ -41,7 +41,7 @@ Il primo passaggio consiste nel creare un *manifesto dell'archivio pacchetti* ch
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
-    <PackageReference Include="<NUGET_PACKAGE>" Version="<VERSION>" />
+    <PackageReference Include="NUGET_PACKAGE" Version="VERSION" />
     <!-- Include additional packages here -->
   </ItemGroup>
 </Project>

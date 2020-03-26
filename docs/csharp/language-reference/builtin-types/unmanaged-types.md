@@ -3,12 +3,12 @@ title: Tipi non gestiti - Riferimenti per C#
 ms.date: 09/06/2019
 helpviewer_keywords:
 - unmanaged type [C#]
-ms.openlocfilehash: 8a4599514115aa21f17c32848ce203fea704072e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9dd2ab4e044b8a86bfe72a6fcf2481b8e1e80bf4
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846464"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507230"
 ---
 # <a name="unmanaged-types-c-reference"></a>Tipi non gestiti (Riferimenti per C#)
 
@@ -36,7 +36,7 @@ Per altre informazioni, vedere la sezione [Tipi puntatore](~/_csharplang/spec/un
 ## <a name="see-also"></a>Vedere anche
 
 - [Informazioni di riferimento su C#](../index.md)
-- [Tipi di puntatore](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [Tipi puntatore](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Tipi correlati alla memoria e agli intervalli](../../../standard/memory-and-spans/index.md)
-- [operatore sizeof](../operators/sizeof.md)
-- [Operatore stackalloc](../operators/stackalloc.md)
+- [Operatore sizeof](../operators/sizeof.md)
+- [stackalloc](../operators/stackalloc.md)

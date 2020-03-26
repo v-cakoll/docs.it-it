@@ -4,12 +4,12 @@ description: Questa esercitazione avanzata fornisce un'introduzione ai tipi rife
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: b00050c1d151b95e330f94eb9393a4031e47d5a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 54cf9d812999cae837483b48cdedd89d9dc40fc9
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240067"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249129"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Esercitazione: Esprimere più chiaramente le finalità di progettazione con tipi riferimento nullable e non nullable
 
@@ -24,7 +24,7 @@ In questa esercitazione si apprenderà come:
 > - Scrivere codice in cui il compilatore impone tali decisioni di progettazione.
 > - Usare la funzionalità dei riferimenti nullable nelle proprie progettazioni.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 È necessario configurare il computer per l'esecuzione di .NET Core, incluso il compilatore c'è 8.0. Il compilatore di Cè 8.0 è disponibile con [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)o [.NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0).
 
@@ -72,7 +72,7 @@ L'app che verrà compilata esegue i passaggi seguenti:The app you'll build does 
 1. Contatta i rispondenti fino a quando la dimensione dell'indagine completata non raggiunge il numero di obiettivo.
 1. Scrive statistiche importanti sulle risposte al sondaggio.
 
-## <a name="build-the-survey-with-nullable-and-non-nullable-types"></a>Compilare il sondaggio con tipi nullable e non nullable
+## <a name="build-the-survey-with-nullable-and-non-nullable-reference-types"></a>Compilare il sondaggio con tipi di riferimento nullable e non nullable
 
 Il primo codice scritto crea il sondaggio. Occorre scrivere le classi necessarie per modellare una domanda del sondaggio e l'esecuzione del sondaggio. Il sondaggio ha tre tipi di domande, distinte dal formato della risposta: risposte Sì/No, risposte in forma di numero e risposte testuali. Creare `public SurveyQuestion` una classe:Create a class:
 

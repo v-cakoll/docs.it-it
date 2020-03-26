@@ -2,12 +2,12 @@
 title: Processo di assunzione
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: c7e99d41d009ee9ab9ccf322f082d3e253ca03ce
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ade72422d29d170e9c80f602f151ce765a1a00f7
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182831"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291691"
 ---
 # <a name="hiring-process"></a>Processo di assunzione
 In questo esempio viene illustrato come implementare un processo aziendale tramite attività di messaggistica e due flussi di lavoro ospitati come servizi flusso di lavoro e appartenenti all'infrastruttura IT di una società fittizia denominata Contoso, Inc.  
@@ -72,7 +72,7 @@ In questo esempio viene illustrato come implementare un processo aziendale trami
   
     3. Il responsabile può approvare la richiesta.  
   
-3. Dopo che il responsabile del richiedente ha concesso l'approvazione, la richiesta deve essere approvata dal responsabile del reparto:  
+3. Dopo l'approvazione del responsabile del richiedente, il proprietario del reparto deve approvare la richiesta:  
   
     1. Il responsabile del reparto può rifiutare la richiesta.  
   
@@ -97,7 +97,7 @@ In questo esempio viene illustrato come implementare un processo aziendale trami
   
 |Project|Descrizione|  
 |-------------|-----------------|  
-|ContosoHR|Contiene contratti dati, oggetti business e classi del repository.|  
+|ContosoHR|Contiene contratti dati, oggetti business e classi di repository.|  
 |HiringRequestService|Contiene la definizione del flusso di lavoro relativo al processo di richiesta di assunzione.<br /><br /> Il progetto viene implementato come un'applicazione console che ospita in modalità self-hosting il flusso di lavoro (file con estensione xaml) come un servizio.|  
 |ResumeRequestService|Servizio flusso di lavoro che raccoglie i curriculum dei candidati fino alla scadenza di un timeout o fino a quando qualcuno non decide che il processo deve essere arrestato.<br /><br /> Il progetto viene implementato come un servizio flusso di lavoro dichiarativo (file con estensione xamlx).|  
 |OrgService|Servizio che espone informazioni organizzative (dipendenti, posizioni, tipi di posizioni e reparti). Questo servizio può essere paragonato al modulo di organizzazione dell'azienda di una pianificazione ERP (Enterprise Resource Plan).<br /><br /> Questo progetto viene implementato come un'applicazione console che espone un servizio Windows Communication Foundation (WCF).|  
@@ -122,7 +122,7 @@ In questo esempio viene illustrato come implementare un processo aziendale trami
 |Attività parallele|-   <xref:System.Activities.Statements.ParallelForEach%601>viene utilizzato per registrarsi nella Posta in arrivo del CEO e dei responsabili delle risorse umane in parallelo (in attesa del passaggio di approvazione di due responsabili delle risorse umane).<br />-   <xref:System.Activities.Statements.Parallel>viene utilizzato per eseguire alcune attività di pulizia nei passaggi Completato e Rifiutato|HiringRequestService|  
 |Annullamento del modello|Nel diagramma di flusso viene usato <xref:System.Activities.Statements.CancellationScope> per applicare l'annullamento (in questo caso eseguendo attività di pulizia).|HiringRequestService|  
 |Partecipante di persistenza personalizzato|`HiringRequestPersistenceParticipant` salva i dati da una variabile del flusso di lavoro in una tabella archiviata nel database delle risorse umane di Contoso.|HiringRequestService|  
-|Servizi flusso di lavoro|`ResumeRequestService` viene implementato usando servizi flusso di lavoro. La definizione del flusso di lavoro e le informazioni sul servizio sono contenute nel file ResumeRequestService.xamlx. Il servizio è configurato per usare la persistenza e il rilevamento.|ResumeRequestService|  
+|Servizi flusso di lavoro|`ResumeRequestService` viene implementato usando servizi flusso di lavoro. La definizione del flusso di lavoro e le informazioni sul servizio sono contenute in ResumeRequestService.xamlx.Workflow definition and service information are contained in ResumeRequestService.xamlx. Il servizio è configurato per usare la persistenza e il rilevamento.|ResumeRequestService|  
 |Timer durevoli|In `ResumeRequestService` vengono usati timer durevoli per definire la durata di un elenco di offerte di lavoro (quando un timeout scade, le offerte vengono chiuse).|ResumeRequestService|  
 |Transazioni|<xref:System.Activities.Statements.TransactionScope> viene usato per garantire la coerenza dei dati durante l'esecuzione di diverse attività (quando viene ricevuto un nuovo curriculum).|ResumeRequestService|  
 |Transazioni|Il partecipante di persistenza (`HiringRequestPersistenceParticipant`) e il partecipante del rilevamento personalizzati (`HistoryFileTrackingParticipant`) usano la stessa transazione.|HiringRequestService|  
@@ -159,7 +159,7 @@ In questo esempio viene illustrato come implementare un processo aziendale trami
   
 1. Dopo che la soluzione è stata compilata, premere CTRL+F5 per eseguirla senza debug. Verificare che tutti i servizi siano stati avviati.  
   
-2. Fare clic con il pulsante destro del mouse su **InternalClient** nella soluzione, quindi scegliere **Visualizza nel browser**. Verrà visualizzata la pagina predefinita per `InternalClient`. Verificare che i servizi siano in esecuzione, quindi fare clic sul collegamento.  
+2. Fare clic con il pulsante destro del mouse su **InternalClient** nella soluzione, quindi **scegliere Visualizza nel browser**. Verrà visualizzata la pagina predefinita per `InternalClient`. Verificare che i servizi siano in esecuzione, quindi fare clic sul collegamento.  
   
 3. Viene visualizzato il modulo **HiringRequest.** È possibile seguire lo scenario descritto in questo punto.  
   
@@ -181,17 +181,17 @@ In questo esempio viene illustrato come implementare un processo aziendale trami
   
 2. Dopo la creazione, la richiesta viene visualizzata nella posta in arrivo di Michael (fare clic su **Aggiorna** se non viene visualizzata la richiesta) in attesa dell'approvazione di Peter Brehm, che è il manager di Michael.  
   
-3. Peter desidera intervenire sulla richiesta di Michael poiché ritiene che la posizione richieda 5 anni di esperienza nel linguaggio C# anziché 3 e pertanto invia i propri commenti per la revisione.  
+3. Peter vuole agire su richiesta di Michael. poiché ritiene che la posizione richieda 5 anni di esperienza nel linguaggio C# anziché 3 e pertanto invia i propri commenti per la revisione.  
   
 4. Michael vede un messaggio nella sua casella di posta dal suo manager e vuole agire. Michael vede la storia della richiesta di posizione e concorda con Peter. Michael modifica pertanto la descrizione per richiedere 5 anni di esperienza nel linguaggio C# e accetta la modifica.  
   
-5. Peter interviene sulla richiesta modificata di Michael e l'accetta. A questo punto la richiesta deve essere approvata dal direttore del reparto tecnico, Tsvi Reiter.  
+5. Peter agisce su richiesta modificata di Michael e la accetta. A questo punto la richiesta deve essere approvata dal direttore del reparto tecnico, Tsvi Reiter.  
   
 6. Tsvi Reiter desidera accelerare la richiesta, pertanto inserisce un commento per indicare che la richiesta è urgente e l'accetta.  
   
 7. La richiesta deve ora essere approvata da due responsabili delle risorse umane o dal CEO. Quest'ultimo, Brian Richard Goldstein, vede la richiesta urgente di Tsvi e interviene accettandola, precedendo l'approvazione dei due responsabili delle risorse umane.  
   
-8. La richiesta viene rimossa dalla casella di posta in arrivo di Michael e il processo di assunzione di un esperto SDET è stato avviato.  
+8. La richiesta viene rimossa dalla posta in arrivo di Michael e il processo di assunzione di un SDET è ora iniziato.  
   
 ### <a name="start-resume-request"></a>Avviare la richiesta di curriculum  
   

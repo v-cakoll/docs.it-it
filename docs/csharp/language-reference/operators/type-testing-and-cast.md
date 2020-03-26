@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 037ddc8eeda418b2e4858ab98be6cd362ca0e1e2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2dc215a91c55be15e8eee488f0030f41e3492af5
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399469"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507087"
 ---
 # <a name="type-testing-and-cast-operators-c-reference"></a>Operatori di cast e di test del tipo (Riferimenti per C#)
 
@@ -113,7 +113,7 @@ Per informazioni sulle conversioni esplicite supportate, vedere la sezione [Conv
 
 ### <a name="other-usages-of-"></a>Altri utilizzi di ()
 
-È possibile usare le parentesi anche per [chiamare un metodo oppure richiamare un delegato](member-access-operators.md#invocation-operator-).
+È possibile usare le parentesi anche per [chiamare un metodo oppure richiamare un delegato](member-access-operators.md#invocation-expression-).
 
 Le parentesi possono essere usate anche per specificare l'ordine in cui valutare le operazioni in un'espressione. Per altre informazioni, vedere [Operatori C#](index.md).
 

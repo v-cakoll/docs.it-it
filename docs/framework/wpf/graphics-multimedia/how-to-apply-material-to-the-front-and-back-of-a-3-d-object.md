@@ -1,31 +1,31 @@
 ---
-title: 'Procedura: Applicare un oggetto Material alle parti anteriore e posteriore di un oggetto tridimensionale'
+title: 'Procedura: applicare materiale alla parte anteriore e posteriore di un oggetto 3D'
 ms.date: 03/30/2017
 helpviewer_keywords:
-- 3-D objects [WPF], applying Material class
-- Material class [WPF], applying to both sides of 3-D object
+- 3D objects [WPF], applying Material class
+- Material class [WPF], applying to both sides of 3D object
 - classes [WPF], Material
 ms.assetid: d93c8ad6-4939-4d29-9544-4d16d98093c1
-ms.openlocfilehash: 1d3f6a0622b5e0ccccf14af99782bb78dfe87ccb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c24879d97e7857fb07fcef4a9ba8efa901e4a39
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698965"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112141"
 ---
-# <a name="how-to-apply-material-to-the-front-and-back-of-a-3-d-object"></a>Procedura: Applicare un oggetto Material alle parti anteriore e posteriore di un oggetto tridimensionale
-Nell'esempio seguente viene illustrato come applicare un <xref:System.Windows.Media.Media3D.Material> nella parte anteriore e posteriore di un oggetto 3D dell'oggetto e animare l'oggetto in modo da visualizzare entrambi i lati dell'oggetto. Il <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A> proprietà di un <xref:System.Windows.Media.Media3D.GeometryModel3D> viene usato per applicare una linea rossa <xref:System.Windows.Media.Brush> per il lato anteriore di oggetto e il <xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A> proprietà del <xref:System.Windows.Media.Media3D.GeometryModel3D> viene usato per applicare un blu <xref:System.Windows.Media.Brush> per il lato posteriore dell'oggetto. Il codice seguente viene illustrata l'applicazione dei materiali all'oggetto:  
+# <a name="how-to-apply-material-to-the-front-and-back-of-a-3d-object"></a>Procedura: applicare materiale alla parte anteriore e posteriore di un oggetto 3D
+Nell'esempio seguente viene <xref:System.Windows.Media.Media3D.Material> illustrato come applicare a alla parte anteriore e posteriore di un oggetto 3D e animare l'oggetto per visualizzare entrambi i lati dell'oggetto. La <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A> proprietà <xref:System.Windows.Media.Media3D.GeometryModel3D> di un oggetto <xref:System.Windows.Media.Brush> viene utilizzata per applicare un <xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A> rosso <xref:System.Windows.Media.Media3D.GeometryModel3D> sul lato anteriore dell'oggetto e la proprietà dell'oggetto viene utilizzata per applicare un blu <xref:System.Windows.Media.Brush> sul lato posteriore dell'oggetto. Il codice seguente mostra l'applicazione dei materiali all'oggetto:  
   
  [!code-xaml[Animation3DGallery_snip#BackMaterialAnimationExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/BackMaterialAnimationExample.xaml#backmaterialanimationexampleinline1)]  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente illustra l'intero esempio.  
+ Il codice seguente mostra l'intero esempio.  
   
  [!code-xaml[Animation3DGallery_snip#BackMaterialAnimationExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/BackMaterialAnimationExample.xaml#backmaterialanimationexamplewholepage)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Creare una scena tridimensionale](how-to-create-a-3-d-scene.md)
-- [Panoramica sulla grafica tridimensionale](3-d-graphics-overview.md)
-- [Animare le proprietà Material in una scena tridimensionale](how-to-animate-material-properties-in-a-3-d-scene.md)
-- [Applicare materiale con componente emissiva a un oggetto tridimensionale](how-to-apply-emissive-material-to-a-3-d-object.md)
+- [Creare una scena 3D](how-to-create-a-3-d-scene.md)
+- [Panoramica della grafica 3D](3-d-graphics-overview.md)
+- [Animare le proprietà Material in una scena 3D](how-to-animate-material-properties-in-a-3-d-scene.md)
+- [Applicare EmissiveMaterial a un oggetto 3D](how-to-apply-emissive-material-to-a-3-d-object.md)

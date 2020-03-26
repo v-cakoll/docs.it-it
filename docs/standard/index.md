@@ -5,16 +5,16 @@ author: cartermp
 ms.date: 12/27/2019
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: ce76448b69a002216125192f75d24b38e7582260
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b7856cbb12ac78830ceace6ad44214ca32444a82
+ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76730783"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80228806"
 ---
 # <a name="net-guide"></a>Guida di .NET
 
-La guida di .NET fornisce informazioni su .NET. A seconda della familiarità con .NET, è possibile esplorare diverse sezioni di questa guida e altre guide, ad esempio [.NET Core](../core/index.md) o [.NET Framework](../framework/index.md).
+La guida di .NET fornisce informazioni su .NET. A seconda della familiarità con .NET, è possibile esplorare diverse sezioni di questa guida e altre guide, ad esempio [.NET Core](../core/index.md) o [.NET Framework](../framework/index.yml).
 
 ## <a name="new-to-net"></a>Nuovi utenti di .NET
 
@@ -48,15 +48,15 @@ Per altre informazioni sui concetti principali di .NET, vedere:For more informat
 * [Garbage Collection](garbage-collection/index.md)
 * [Tipi di base in .NET](base-types/index.md)
 * [Raccolte](collections/index.md)
-* [Date, orari e fusi orari](datetime/index.md)
+* [Date, ore e fusi orari](datetime/index.md)
 * [Programmazione asincrona](async.md)
 
 Per informazioni sui tre principali linguaggi .NET, vedere:
 
-* [Guida per C#](../csharp/index.yml)
-* [Guida di F](../fsharp/index.yml)
-* [Guida di Visual Basic](../visual-basic/index.yml)
+* [Guida a C#](../csharp/index.yml)
+* [Guida a F#](../fsharp/index.yml)
+* [Guida a Visual Basic](../visual-basic/index.yml)
 
-## <a name="api-reference"></a>Informazioni di riferimento sulle API
+## <a name="api-reference"></a>API (riferimento)
 
 Per informazioni dettagliate su tutte le API disponibili in .NET, vedere Informazioni di riferimento sulle [API .NET.](../../api/index.md)

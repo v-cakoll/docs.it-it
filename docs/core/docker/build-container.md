@@ -4,12 +4,12 @@ description: In this tutorial, you'll learn how to containerize a .NET Core appl
 ms.date: 01/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e1904430a591b0e74a69d50a53869a130fc0a248
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8be12792e4a9e8511dba87e657f700cc4ec97a16
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78157830"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546575"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Esercitazione: Contenitore di un'app .NET CoreTutorial: Containerize a .NET Core app
 
@@ -26,10 +26,10 @@ Si imparerà a:
 
 L'esercitazione illustra le attività di compilazione e distribuzione di un contenitore Docker per un'applicazione .NET Core. La *piattaforma Docker* utilizza il *motore Docker* per compilare e creare rapidamente pacchetti di app come *immagini Docker*. Queste immagini vengono scritte nel formato *Dockerfile* per la distribuzione e l'esecuzione in un contenitore su più livelli.
 
-> [!TIP]
-> Se si lavora con un'applicazione ASP.NET Core esistente, vedere l'esercitazione Informazioni su come eseguire il contenitore di [un'applicazione ASP.NET Core.If](/aspnet/core/host-and-deploy/docker/building-net-docker-images) you're working with an existing ASP.NET Core application, see the Learn how to containerize an ASP.NET Core application tutorial.
+> [!WARNING]
+> **Questa esercitazione non è per le app ASP.NET Core.This tutorial isn't for ASP.NET Core apps.** Se si usa ASP.NET Core, leggere l'esercitazione Informazioni su come eseguire il contenitore di [un'applicazione ASP.NET Core.If](/aspnet/core/host-and-deploy/docker/building-net-docker-images) you're using ASP.NET Core, read the Learn how to containerize an ASP.NET Core application tutorial.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Installare i prerequisiti seguenti:
 
@@ -370,7 +370,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 Il comando `docker run` consente anche di modificare il comando `ENTRYPOINT` dal *Dockerfile* e di eseguire qualcosa di diverso, ma solo per il contenitore in questione. Ad esempio, usare il comando seguente per eseguire `bash` o `cmd.exe`. Modificare il comando in base alle esigenze.
 
-#### <a name="windows"></a>Windows
+#### <a name="windows"></a>WINDOWS
 
 In questo esempio `ENTRYPOINT` viene sostituito con `cmd.exe`. <kbd>CTRL</kbd>+<kbd>C</kbd> viene premuto per terminare il processo e arrestare il contenitore.
 

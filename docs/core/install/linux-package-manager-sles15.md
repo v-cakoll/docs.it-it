@@ -3,19 +3,21 @@ title: Installare .NET Core in SLES 15 - gestione pacchetti - .NET CoreInstall .
 description: Utilizzare un gestore di pacchetti per installare .NET Core SDK e runtime in SLES 15.
 author: thraka
 ms.author: adegeo
-ms.date: 12/04/2019
-ms.openlocfilehash: f48c131b4250bd04fffc0d815a3500732caacb7c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 03/17/2020
+ms.openlocfilehash: b86b97bf17165f2f7a70e80ff581750ba39be375
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76921039"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134185"
 ---
 # <a name="sles-15-package-manager---install-net-core"></a>Gestione pacchetti SLES 15 - Installare .NET Core
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-In questo articolo viene descritto come utilizzare un gestore di pacchetti per installare .NET Core in SLES 15. Se si sta installando il runtime, si consiglia di installare il [runtime di ASP.NET Core](#install-the-aspnet-core-runtime), in quanto include runtime .NET Core e ASP.NET Core.
+In questo articolo viene descritto come utilizzare un gestore di pacchetti per installare .NET Core in SLES 15.
+
+[!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
 ## <a name="register-microsoft-key-and-feed"></a>Registrare la chiave Microsoft e il feed
 

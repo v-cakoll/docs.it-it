@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rotating objects [WPF]
 - rotating objects [WPF]
 ms.assetid: ee3466cd-e66f-4e8f-8a5a-71d77bc1e390
-ms.openlocfilehash: 02d8144c28b7a4e54fb86fea5abb694cf7af34af
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e17d3b7b9986b477df198480129edaf4c139c6bc
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185959"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112063"
 ---
 # <a name="how-to-rotate-an-object"></a>Procedura: ruotare un oggetto
 Questo esempio spiega come ruotare un oggetto. L'esempio crea <xref:System.Windows.Media.RotateTransform> innanzitutto un <xref:System.Windows.Media.RotateTransform.Angle%2A> oggetto e ne specifica i in gradi.  
@@ -42,10 +42,10 @@ Due oggetti che ruotano di 45 gradi da centri di rotazione diversi
   
  Negli <xref:System.Windows.Shapes.Polyline> esempi precedenti è <xref:System.Windows.UIElement>un oggetto . Quando si <xref:System.Windows.Media.Transform> applica <xref:System.Windows.UIElement.RenderTransform%2A> un alla <xref:System.Windows.UIElement>proprietà di <xref:System.Windows.UIElement.RenderTransformOrigin%2A> un oggetto , è <xref:System.Windows.Media.Transform> possibile utilizzare la proprietà per specificare un'origine per ogni applicazione all'elemento. Poiché <xref:System.Windows.UIElement.RenderTransformOrigin%2A> la proprietà utilizza coordinate relative, è possibile applicare una trasformazione al centro dell'elemento anche se non si conoscono le dimensioni. Per ulteriori informazioni e per un esempio, vedere [Specificare l'origine di una trasformazione tramite valori relativi](how-to-specify-the-origin-of-a-transform-by-using-relative-values.md).  
   
- Per l'esempio completo, vedere [2-D Transforms Sample (Esempio di trasformazioni 2D)](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms).  
+ Per l'esempio completo, vedere Esempio di [trasformazioni 2D](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms).  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Media.Transform>
 - [Cenni preliminari sulle trasformazioni](transforms-overview.md)
-- [Argomenti relativi alle procedure](transformations-how-to-topics.md)
+- [Procedure relative](transformations-how-to-topics.md)

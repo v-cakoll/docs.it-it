@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML Schema Definition tool, using to generate classes that conform to specific schema
 - XML Schema Definition tool, using to generate XML Schema Document
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
-ms.openlocfilehash: 9b2cd67a1c4f30e6fe246124be5b8f7081c539a6
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 4c6996e2279693cf96c826741869d72007cf81cf
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392857"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249552"
 ---
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>Procedura: utilizzare lo strumento XML Schema Definition per generare classi e documenti di XML Schema.
 Lo strumento XML Schema Definition (Xsd.exe) consente di generare un XML Schema che descrive una classe o di generare la classe definita da un XML Schema. Le procedure descritte di seguito mostrano come eseguire queste operazioni.  
@@ -27,11 +27,11 @@ Lo strumento XML Schema Definition (Xsd.exe) consente di generare un XML Schema 
     xsd mySchema.xsd  
     ```  
   
-     Lo strumento è in grado di elaborare solo schemi che fanno riferimento alla specifica XML del World Wide Web Consortium del 16 marzo 2001. In altre parole, lo spazio dei nomi XML schema deve essere "http://www.w3.org/2001/XMLSchema", come illustrato nell'esempio seguente.  
+     Lo strumento è in grado di elaborare solo schemi che fanno riferimento alla specifica XML del World Wide Web Consortium del 16 marzo 2001. In altre parole, lo spaziohttp://www.w3.org/2001/XMLSchemadei nomi XML Schema deve essere " " come illustrato nell'esempio seguente.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
-    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="" xmlns:xs="http://www.w3.org/2001/XMLSchema">  
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="" xmlns:xs="http://www.w3.org/2001/XMLSchema" />  
     ```  
   
 3. Modificare le classi con metodi, proprietà o campi, in base alle necessità. Per altre informazioni sulla modifica di una classe con attributi, vedere [Controllo della serializzazione XML mediante attributi](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md) e [Attributi per il controllo della serializzazione SOAP codificata](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).  
@@ -60,4 +60,4 @@ Lo strumento XML Schema Definition (Xsd.exe) consente di generare un XML Schema 
 - [XML Schema Definition Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [Procedura: serializzare un oggetto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Procedura: deserializzare un oggetto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Procedura: Deserializzare un oggetto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

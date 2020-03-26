@@ -2,12 +2,12 @@
 title: Implementazione di oggetti valore
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Informazioni su dettagli e opzioni per implementare oggetti valore con le nuove funzionalità di Entity Framework.
 ms.date: 01/30/2020
-ms.openlocfilehash: 4ace5c141b1cbd2dcfefb7ea7165a4006b130479
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 919b23f7c1a0cd0aec8c4417f3af98469a0743dd
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77502504"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249422"
 ---
 # <a name="implement-value-objects"></a>Implementare oggetti valore
 
@@ -31,7 +31,7 @@ Esistono due caratteristiche principali proprie degli oggetti valore:
 
 - Non sono modificabili.
 
-La prima caratteristica è già stata descritta. L'immutabilità è un requisito importante. Dopo aver creato l'oggetto, i valori di un oggetto valore non devono essere modificabili. Quindi, quando l'oggetto viene costruito, è necessario fornire i valori richiesti, ma non se ne deve consentire la modifica per l'intera durata dell'oggetto.
+La prima caratteristica è già stata descritta. L'immutabilità è un requisito importante. Dopo aver creato l'oggetto, i valori di un oggetto valore non devono essere modificabili. Pertanto, quando l'oggetto viene costruito, è necessario fornire i valori necessari, ma non è necessario consentire loro di modificare durante la durata dell'oggetto.
 
 Gli oggetti valore consentono di eseguire alcune operazioni per migliorare le prestazioni, grazie alla loro natura non modificabile. Ciò vale soprattutto nei sistemi in cui possono essere presenti migliaia di istanze di un oggetto valore, molte delle quali contengono gli stessi valori. La natura non modificabile di questi oggetti ne consente il riutilizzo. Sono anche intercambiabili perché i loro valori sono uguali e non hanno alcuna identità. A volte, questo tipo di ottimizzazione può fare la differenza tra un software eseguito lentamente e uno con prestazioni ottimali. Naturalmente, tutti questi casi dipendono l'ambiente dell'applicazione e dal contesto di distribuzione.
 
@@ -168,9 +168,9 @@ Anche con alcuni spazi tra il modello di oggetto valore canonico in DDD e il tip
 
 La funzionalità dei tipi di entità di proprietà è stata aggiunta a EF Core a partire dalla versione 2.0.
 
-Un tipo di entità di proprietà consente di eseguire il mapping dei tipi che non hanno un'identità definita in modo esplicito nel modello di dominio e che vengono usati come proprietà, ad esempio un oggetto valore, all'interno di qualsiasi entità. Un tipo di entità di proprietà condivide lo stesso tipo CLR con un altro tipo di entità, ovvero si tratta di una classe normale. L'entità contenente la navigazione che lo definisce è l'entità del proprietario. Quando si esegue una query sul proprietario, i tipi di proprietà vengono inclusi per impostazione predefinita.
+Un tipo di entità di proprietà consente di eseguire il mapping dei tipi che non hanno un'identità definita in modo esplicito nel modello di dominio e che vengono usati come proprietà, ad esempio un oggetto valore, all'interno di qualsiasi entità. Un tipo di entità di proprietà condivide lo stesso tipo CLR con un altro tipo di entità, ovvero è solo una classe normale. L'entità contenente la navigazione che lo definisce è l'entità del proprietario. Quando si esegue una query sul proprietario, i tipi di proprietà vengono inclusi per impostazione predefinita.
 
-Osservando semplicemente il modello di dominio, un tipo di proprietà sembra non avere alcuna identità, invece la ha, ma la proprietà di navigazione del proprietario fa parte di questa identità.
+Basta guardare il modello di dominio, un tipo di proprietà sembra che non ha alcuna identità. invece la ha, ma la proprietà di navigazione del proprietario fa parte di questa identità.
 
 L'identità delle istanze dei tipi di proprietà non è del tutto esclusiva, ma è costituita da tre componenti:
 
@@ -295,7 +295,7 @@ public class Address
 
 - Non è possibile `ModelBuilder.Entity<T>()` chiamare i tipi di proprietà (attualmente in base alla progettazione).
 
-- Nessun supporto per i tipi di proprietà facoltativi ( ovvero nullable) mappati con il proprietario nella stessa tabella, ovvero utilizzando la suddivisione della tabella. Ciò è dovuto al fatto che il mapping viene eseguito per ogni proprietà e non è disponibile un valore sentinel separato per l'intero valore complesso Null.
+- Nessun supporto per i tipi di proprietà facoltativi ( ovvero nullable) mappati con il proprietario nella stessa tabella, ovvero utilizzando la suddivisione della tabella. Questo avviene perché il mapping viene eseguito per ogni proprietà, non abbiamo una sentinel separata per il valore complesso null nel suo complesso.
 
 - Nessun supporto del mapping di ereditarietà per i tipi di proprietà, ma è possibile eseguire il mapping di due tipi di foglia delle stesse gerarchie di ereditarietà come tipi di proprietà diversi. EF Core non considera il fatto che fanno parte della stessa gerarchia.
 

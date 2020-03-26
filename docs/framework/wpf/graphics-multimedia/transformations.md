@@ -8,27 +8,27 @@ helpviewer_keywords:
 - transformations [WPF], about transformations
 - transformations [WPF]
 - graphics [WPF], transformations
-- transform classes [WPF], 2-D
+- transform classes [WPF], 2D
 - scaling objects [WPF]
 - translating objects [WPF]
-- 2-D transform classes
+- 2D transform classes
 - rotating objects [WPF]
 - Transforms [WPF]
 - Transforms [WPF], about Transforms
 ms.assetid: 712b543f-d8b2-4dcf-ba2c-f7921c61c6fd
-ms.openlocfilehash: a0b5268d1c7e319a6144a7d551dca45bdc3e64aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 26956b8ae692d6092a1c81643b94d05e297ef130
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925996"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111907"
 ---
 # <a name="transformations"></a>Trasformazioni
-Le trasformazioni vengono utilizzate per ruotare, ridimensionare, convertire o inclinare <xref:System.Windows.FrameworkElement> oggetti.  
+Le trasformazioni vengono utilizzate per ruotare, ridimensionare, traslare o inclinare <xref:System.Windows.FrameworkElement> gli oggetti.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Cenni preliminari sulle trasformazioni](transforms-overview.md)  
- [Procedure relative alle proprietà](transformations-how-to-topics.md)  
+ [Procedure relative](transformations-how-to-topics.md)  
   
 ## <a name="see-also"></a>Vedere anche
 

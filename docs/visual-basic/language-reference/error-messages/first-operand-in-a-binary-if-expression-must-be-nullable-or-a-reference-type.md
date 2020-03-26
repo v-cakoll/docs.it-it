@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
-ms.openlocfilehash: a73a66313e7ca540711838c4d147d6bd163ec8d6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4b520949cb59b63ea39441632dc5e2c6d000d711
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625560"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249526"
 ---
 # <a name="first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type"></a>Il primo operando in un'espressione 'If' binaria deve essere nullable o un tipo riferimento
-Un `If` espressione può avere due o tre argomenti. Quando si inviano solo due argomenti, il primo argomento deve essere un tipo riferimento o un tipo nullable. Se il primo argomento restituisce un valore diverso da `Nothing`, viene restituito il relativo valore. Se il primo argomento restituisce `Nothing`, il secondo argomento viene valutato e restituito.  
+Un'espressione `If` può accettare due o tre argomenti. Quando si inviano solo due argomenti, il primo argomento deve essere un tipo di riferimento o un tipo di valore nullable. Se il primo argomento restituisce `Nothing`un valore diverso da , viene restituito il relativo valore. Se il primo argomento `Nothing`restituisce , il secondo argomento viene valutato e restituito.  
   
- Ad esempio, il codice seguente contiene due `If` espressioni, uno con tre argomenti e uno con due argomenti. Le espressioni di calcolare e restituiscono lo stesso valore.  
+ Ad esempio, il codice `If` seguente contiene due espressioni, una con tre argomenti e una con due argomenti. Le espressioni calcolano e restituiscono lo stesso valore.  
   
 ```vb  
 ' firstChoice is a nullable value type.  
@@ -29,7 +29,7 @@ Console.WriteLine(If(firstChoice IsNot Nothing, firstChoice, secondChoice))
 Console.WriteLine(If(firstChoice, secondChoice))  
 ```  
   
- Questo errore è causato da espressioni seguenti:  
+ Le seguenti espressioni causano questo errore:  
   
 ```vb  
 Dim choice1 = 4  
@@ -46,7 +46,7 @@ Dim booleanVar = True
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-- Se è possibile modificare il codice in modo che il primo argomento è un tipo che ammette valori null o un tipo riferimento, eseguire la conversione a un argomento di tre `If` expression, o a un `If...Then...Else` istruzione.  
+- Se non è possibile modificare il codice in modo che il primo argomento sia un `If` tipo di `If...Then...Else` valore nullable o un tipo di riferimento, prendere in considerazione la conversione in un'espressione a tre argomenti o in un'istruzione.  
   
 ```vb  
 Console.WriteLine(If(choice1 < choice2, 1, 2))  
@@ -57,4 +57,4 @@ Console.WriteLine(If(booleanVar, "Test returns True.", "Test returns False."))
 
 - [Operatore If](../../../visual-basic/language-reference/operators/if-operator.md)
 - [Istruzione If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
-- [Tipi di valori nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [Tipi di valore nullableNullable Value Types](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

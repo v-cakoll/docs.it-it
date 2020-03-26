@@ -10,18 +10,18 @@ helpviewer_keywords:
 - graphics [WPF], grouping Transform objects
 - TransformGroup [WPF]
 ms.assetid: 98cd1921-12bc-4bf5-8193-529228fb7402
-ms.openlocfilehash: 544d0a26f24e5ad4ed7e2e3cfa25f8e15d1be446
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 3ef11104b2a4fc775d29d2a388c9a70a69a3f10f
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452831"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112115"
 ---
 # <a name="how-to-apply-multiple-transforms-to-an-object"></a>Procedura: applicare più trasformazioni a un oggetto
-Questo esempio illustra come usare un <xref:System.Windows.Media.TransformGroup> per raggruppare due o più oggetti <xref:System.Windows.Media.Transform> in un singolo <xref:System.Windows.Media.Transform>composito.  
+In questo esempio viene <xref:System.Windows.Media.TransformGroup> illustrato come <xref:System.Windows.Media.Transform> utilizzare un oggetto <xref:System.Windows.Media.Transform>per raggruppare due o più oggetti in un singolo composito .  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene usato un <xref:System.Windows.Media.TransformGroup> per applicare una <xref:System.Windows.Media.ScaleTransform> e un <xref:System.Windows.Media.RotateTransform> a una <xref:System.Windows.Controls.Button>.  
+ Nell'esempio riportato di <xref:System.Windows.Media.ScaleTransform> seguito <xref:System.Windows.Media.RotateTransform> viene <xref:System.Windows.Controls.Button>utilizzato un <xref:System.Windows.Media.TransformGroup> oggetto per applicare a e a a un oggetto .  
   
  [!code-xaml[Transforms_snip#MultipleTransformExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/MultipleTransformExample.xaml#multipletransformexamplewholepage)]  
   
@@ -33,4 +33,4 @@ Questo esempio illustra come usare un <xref:System.Windows.Media.TransformGroup>
 - <xref:System.Windows.UIElement.RenderTransform%2A>
 - <xref:System.Windows.Media.TransformGroup>
 - [Cenni preliminari sulle trasformazioni](transforms-overview.md)
-- [2-D Transforms Sample (Esempio di trasformazioni 2D)](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)
+- [Esempio di trasformazioni 2D](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)

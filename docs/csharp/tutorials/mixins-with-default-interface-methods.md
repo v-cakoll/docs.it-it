@@ -3,12 +3,12 @@ title: Creare tipi mixin utilizzando i metodi di interfaccia predefiniti
 description: Utilizzando i membri di interfaccia predefiniti è possibile estendere le interfacce con implementazioni predefinite facoltative per gli implementatori.
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: aaf8d34e27c9c56d95560656eb7a7b24b152c053
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ee0536ef51f9bea3e6851be23cc19fa28cc6916b
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240106"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134370"
 ---
 # <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>Esercitazione: Combinare funzionalità quando si creano classi utilizzando interfacce con metodi di interfaccia predefinitiTutorial: Mix functionality in when creating classes using interfaces with default interface methods
 
@@ -22,7 +22,7 @@ In questa esercitazione si apprenderà come:
 > * Creare classi che utilizzano le implementazioni predefinite.
 > * Creare classi che eseguono l'override di alcune o tutte le implementazioni predefinite.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 È necessario configurare il computer per l'esecuzione di .NET Core, incluso il compilatore c'è 8.0. È disponibile il compilatore di C'è 8.0 a partire da [Visual Studio 2019 versione 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)o [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) o versione successiva.
 
@@ -117,7 +117,7 @@ Questo scenario mostra un'interfaccia di base senza implementazioni. L'aggiunta 
 
 [!code-csharp[Enumeration for power status](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetPowerStatus)]
 
-L'implementazione predefinita presuppone l'alimentazione CA:The default implementation assumes AC power:
+L'implementazione predefinita non presuppone alimentazione:The default implementation assumes no power:
 
 [!code-csharp[Report a default power status](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetILightInterface)]
 

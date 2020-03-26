@@ -4,12 +4,12 @@ description: I recenti miglioramenti apportati al linguaggio C# consentono di sc
 ms.date: 10/23/2018
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: d4a7916b80e15c7f00fa0a7da213ed0593e0959d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb53264f61192c042da469ba687da6c472e8c6d4
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78239976"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79506983"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Scrivere codice C# sicuro ed efficiente
 
@@ -72,7 +72,7 @@ Seguire questa raccomandazione quando la finalità della progettazione è la cre
 
 ## <a name="declare-readonly-members-when-a-struct-cant-be-immutable"></a>Dichiarare membri readonly quando uno struct non può essere immutabileDeclare readonly members when a struct can't be immutable
 
-Quando un tipo struct è modificabile, in Cè 8.0 e versioni successive, `readonly`è necessario dichiarare i membri che non causano la mutazione. Ad esempio, di seguito è riportata una variazione modificabile della struttura dei punti 3D:
+Quando un tipo struct è modificabile, in Cè 8.0 e versioni successive, `readonly`è necessario dichiarare i membri che non causano la mutazione. Si consideri un'applicazione diversa che richiede una struttura di punti 3D, ma deve supportare la mutabilità. La versione seguente della struttura dei `readonly` punti 3D aggiunge il modificatore solo ai membri che non modificano la struttura. Seguire questo esempio quando la progettazione deve supportare le modifiche apportate allo struct da parte di alcuni membri, ma si desidera comunque i vantaggi derivanti dall'applicazione di readonly su alcuni membri:
 
 ```csharp
 public struct Point3D
@@ -214,13 +214,13 @@ Questo comportamento semplifica nel tempo l'adozione di parametri `in` in codeba
 
 La designazione del parametro `in` può anche essere usata con tipi riferimento o valori numerici. Gli eventuali vantaggi in entrambi i casi sono tuttavia minimi.
 
-## <a name="never-use-mutable-structs-as-in-in-argument"></a>Non usare mai struct modificabili come nell'argomento `in`
+## <a name="avoid-mutable-structs-as-an-in-argument"></a>Evitare struct modificabili `in` come argomentoAvoid mutable structs as an argument
 
 Le tecniche descritte in precedenza illustrano come evitare le copie restituendo i riferimenti e passando i valori per riferimento. Queste tecniche garantiscono prestazioni ottimali quando i tipi di argomenti vengono dichiarati come tipi `readonly struct`. In caso contrario, il compilatore deve creare **copie difensive** in molte situazioni per applicare la natura di sola lettura degli argomenti. Considerare l'esempio seguente che calcola la distanza di un punto 3D dall'origine:
 
 [!code-csharp[InArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
 
-La struttura `Point3D`*non* è uno struct readonly. Sono presenti sei diverse chiamate di accesso a proprietà nel corpo di questo metodo. A un primo esame, si potrebbe pensare che questi accessi siano sicuri. Una funzione di accesso `get` infatti non dovrebbe modificare lo stato dell'oggetto, ma nessuna regola del linguaggio lo impone. È solo una convenzione comune. Qualsiasi tipo può implementare una funzione di accesso `get` che modifica lo stato interno. Senza una garanzia da parte del linguaggio, il compilatore deve creare una copia temporanea dell'argomento prima di chiamare qualsiasi membro. La risorsa di archiviazione temporanea viene creata nello stack, i valori dell'argomento vengono copiati nella risorsa di archiviazione temporanea e il valore viene copiato nello stack per ogni accesso ai membri come argomento `this`. In molte situazioni, queste copie danneggiano le prestazioni tanto che il passaggio per valore è più veloce del passaggio per riferimento di sola lettura quando il tipo di argomento non è `readonly struct`.
+La struttura `Point3D`*non* è uno struct readonly. Sono presenti sei diverse chiamate di accesso a proprietà nel corpo di questo metodo. A un primo esame, si potrebbe pensare che questi accessi siano sicuri. Una funzione di accesso `get` infatti non dovrebbe modificare lo stato dell'oggetto, ma nessuna regola del linguaggio lo impone. È solo una convenzione comune. Qualsiasi tipo può implementare una funzione di accesso `get` che modifica lo stato interno. Senza una certa garanzia del linguaggio, il compilatore deve creare `readonly` una copia temporanea dell'argomento prima di chiamare qualsiasi membro non contrassegnato con il modificatore. La risorsa di archiviazione temporanea viene creata nello stack, i valori dell'argomento vengono copiati nella risorsa di archiviazione temporanea e il valore viene copiato nello stack per ogni accesso ai membri come argomento `this`. In molte situazioni, queste copie danneggiano le prestazioni in modo sufficiente che il pass-by-value è `readonly struct` più veloce del riferimento pass-by-readonly quando il tipo di argomento non è un e il metodo chiama membri non contrassegnati `readonly`con . Se si contrassegnano tutti i metodi `readonly`che non modificano lo stato struct come , il compilatore può determinare in modo sicuro che lo stato struct non viene modificato e non è necessaria una copia difensiva.
 
 Al contrario, se il calcolo della `ReadonlyPoint3D`distanza utilizza lo struct non modificabile, non sono necessari oggetti temporanei:
 

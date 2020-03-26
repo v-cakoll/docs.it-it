@@ -1,41 +1,41 @@
 ---
-title: Collation
+title: Regole di confronto
 ms.date: 12/13/2019
-description: Informazioni su come creare una sequenza di ordinamento personalizzata.
-ms.openlocfilehash: 9cc574a75c8f5347dd9bb44e36af72e50afa57b4
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+description: Scopri come creare una sequenza di confronto personalizzata.
+ms.openlocfilehash: b93c82a4ace154b8293b05effa8f9e9294fa7708
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75777381"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79506541"
 ---
-# <a name="collation"></a>Collation
+# <a name="collation"></a>Regole di confronto
 
-Le sequenze di confronto vengono usate da SQLite quando si confrontano i valori di testo per determinare l'ordine e l'uguaglianza. È possibile specificare le regole di confronto da utilizzare per la creazione di colonne o per operazione nelle query SQL. SQLite include tre sequenze di confronto per impostazione predefinita.
+Le sequenze di confronto vengono utilizzate da SQLite quando si confrontano i valori TEXT per determinare l'ordine e l'uguaglianza. È possibile specificare le regole di confronto da utilizzare quando si creano colonne o per ogni operazione nelle query SQL. SQLite include tre sequenze di confronto per impostazione predefinita.
 
-| Collation | Descrizione                               |
+| Regole di confronto | Descrizione                               |
 | --------- | ----------------------------------------- |
-| RTRIM     | Ignora lo spazio vuoto finale               |
-| NOCASE    | Senza distinzione tra maiuscole e minuscole per i caratteri ASCII A-Z |
-| BINARY    | Distinzione tra maiuscole e minuscole. Confronta i byte direttamente   |
+| RTRIM     | Ignora gli spazi vuoti finali               |
+| NESSUN CASO    | Senza distinzione tra maiuscole e minuscole per i caratteri ASCII dalla A alla z |
+| BINARY    | Sensitive. Confronta direttamente i byte   |
 
 ## <a name="custom-collation"></a>Regole di confronto personalizzate
 
-È anche possibile definire sequenze di fascicolazione personalizzate oppure eseguire l'override di quelle predefinite usando <xref:Microsoft.Data.Sqlite.SqliteConnection.CreateCollation%2A>. Nell'esempio seguente viene illustrato come eseguire l'override delle regole di confronto nocase per supportare i caratteri Unicode. Il [codice di esempio completo](https://github.com/dotnet/samples/blob/master/snippets/standard/data/sqlite/CollationSample/Program.cs) è disponibile in GitHub.
+È inoltre possibile definire sequenze di confronto personalizzate o <xref:Microsoft.Data.Sqlite.SqliteConnection.CreateCollation%2A>eseguire l'override di quelle incorporate utilizzando . Nell'esempio seguente viene illustrato l'override delle regole di confronto NOCASE per supportare i caratteri Unicode. Il [codice di esempio completo](https://github.com/dotnet/samples/blob/master/snippets/standard/data/sqlite/CollationSample/Program.cs) è disponibile su GitHub.The full sample code is available on GitHub.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/CollationSample/Program.cs?name=snippet_Collation)]
 
 ## <a name="like-operator"></a>Like (operatore)
 
-L'operatore LIKE in SQLite non rispetta le regole di confronto. L'implementazione predefinita ha la stessa semantica delle regole di confronto nocase. Non fa distinzione tra maiuscole e minuscole per i caratteri ASCII da A A Z.
+L'operatore LIKE in SQLite non rispetta le regole di confronto. L'implementazione predefinita ha la stessa semantica delle regole di confronto NOCASE. È solo senza distinzione tra maiuscole e minuscole per i caratteri ASCII dalla A alla z.
 
-È possibile rendere facilmente l'operatore LIKE con distinzione tra maiuscole e minuscole usando l'istruzione pragma seguente:
+È possibile rendere facilmente l'operatore LIKE tra maiuscole e minuscole utilizzando la seguente istruzione pragma:
 
 ```sql
-PRAGMA case_sensitive_like = 0
+PRAGMA case_sensitive_like = 1
 ```
 
-Per informazioni dettagliate sull'override dell'implementazione dell'operatore LIKE, vedere [funzioni definite dall'utente](user-defined-functions.md) .
+Vedere [Funzioni definite dall'utente](user-defined-functions.md) per informazioni dettagliate sull'override dell'implementazione dell'operatore LIKE.
 
 ## <a name="see-also"></a>Vedere anche
 

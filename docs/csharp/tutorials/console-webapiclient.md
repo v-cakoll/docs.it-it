@@ -3,12 +3,12 @@ title: Creare un client REST usando .NET Core
 description: Questa esercitazione illustra alcune funzionalità disponibili in .NET Core e nel linguaggio C#.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 5796df2d2fd8c4d9aaca783d720448c90858c067
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0105db519f7accec6bf8bfbafdc6a67a444b1074
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156857"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249168"
 ---
 # <a name="rest-client"></a>Client REST
 
@@ -27,7 +27,7 @@ Ci sono molte caratteristiche in questo tutorial. numerose funzionalità.
 
 Se si vuole proseguire, è possibile scaricare l'[esempio finale](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient) di questo argomento. Per istruzioni sul download, vedere [Esempi ed esercitazioni](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 È necessario configurare il computer per l'esecuzione di .NET core. Le istruzioni di installazione sono disponibili nella pagina Download di .NET Core.You can find the installation instructions on the [.NET Core Downloads page.](https://dotnet.microsoft.com/download) Questa applicazione può essere eseguita in Windows, Linux, macOS o in un contenitore Docker.
 È necessario installare l'editor di codice preferito. Nelle descrizioni seguenti viene usato [Visual Studio Code](https://code.visualstudio.com/), un editor open source multipiattaforma, ma è possibile usare gli strumenti con cui si ha maggiore familiarità.
@@ -163,7 +163,7 @@ In questo modo sarà più semplice creare tipi compatibili con un solo subset de
 
 Dopo aver creato il tipo, è possibile deserializzarlo.
 
-Si userà infine il serializzatore per convertire i dati JSON in oggetti C#. Sostituire la <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)> chiamata `ProcessRepositories` a nel metodo con le tre righe seguenti:
+Si userà infine il serializzatore per convertire i dati JSON in oggetti C#. Sostituire la <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)> chiamata `ProcessRepositories` a nel metodo con le righe seguenti:
 
 ```csharp
 var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos");
@@ -288,23 +288,16 @@ Come passaggio conclusivo si aggiungeranno le informazioni necessarie per l'ulti
 2016-02-08T21:27:00Z
 ```
 
-Questo formato non segue nessuno dei formati .NET <xref:System.DateTime> standard e, pertanto, sarà necessario scrivere un metodo di conversione personalizzato. Probabilmente si vorrà evitare anche che la stringa non elaborata sia esposta agli utenti della classe `Repository`. Gli attributi possono essere utili per controllare anche questo aspetto. Definire innanzitutto `public` una proprietà che conterrà la rappresentazione `Repository` di `LastPush` `readonly` stringa della data e dell'ora nella classe e una proprietà che restituisce una stringa formattata che rappresenta la data restituita:
+Tale formato è in formato UTC (Coordinated Universal <xref:System.DateTime> Time), pertanto si otterrà un valore la cui <xref:System.DateTime.Kind%2A> proprietà è <xref:System.DateTimeKind.Utc>. Se preferisci una data rappresentata nel tuo fuso orario, dovrai scrivere un metodo di conversione personalizzato. Definire innanzitutto `public` una proprietà che conterrà la rappresentazione `Repository` UTC `LastPush` `readonly` della data e dell'ora nella classe e una proprietà che restituisce la data convertita nell'ora locale:
 
 ```csharp
 [JsonPropertyName("pushed_at")]
-public string JsonDate { get; set; }
+public DateTime LastPushUtc { get; set; }
 
-public DateTime LastPush =>
-    DateTime.ParseExact(JsonDate, "yyyy-MM-ddTHH:mm:ssZ", CultureInfo.InvariantCulture);
+public DateTime LastPush => LastPushUtc.ToLocalTime();
 ```
 
-Esaminiamo i nuovi costrutti che abbiamo appena definito. La `LastPush` proprietà viene definita utilizzando un membro `get` con corpo di *espressione* per la funzione di accesso. Non è presente alcuna funzione di accesso `set`. Omettendo `set` la funzione di accesso è come si definisce una proprietà di *sola lettura* in C . (Sì, è possibile creare proprietà di *sola scrittura* in C , ma il loro valore è limitato.) Il <xref:System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider)> metodo analizza una stringa <xref:System.DateTime> e crea un oggetto utilizzando un `DateTime` formato `CultureInfo` di data fornito e aggiunge metadati aggiuntivi all'oggetto using. Se l'operazione di analisi ha esito negativo, la funzione di accesso della proprietà genera un'eccezione.
-
-Per <xref:System.Globalization.CultureInfo.InvariantCulture>utilizzare , è necessario <xref:System.Globalization> aggiungere `using` lo spazio `repo.cs`dei nomi alle direttive in :
-
-```csharp
-using System.Globalization;
-```
+Esaminiamo i nuovi costrutti che abbiamo appena definito. La `LastPush` proprietà viene definita utilizzando un membro `get` con corpo di *espressione* per la funzione di accesso. Non è presente alcuna funzione di accesso `set`. Omettendo `set` la funzione di accesso è come si definisce una proprietà di *sola lettura* in C . È possibile creare anche proprietà di *sola scrittura* in C#, ma con un valore limitato.
 
 Dopo aver aggiunto un'altra istruzione di output alla console, sarà possibile compilare ed eseguire nuovamente l'app:
 

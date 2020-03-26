@@ -3,19 +3,21 @@ title: Installare .NET Core in Linux RHEL 7 gestore di pacchetti - .NET CoreInst
 description: Usare un gestore di pacchetti per installare .NET Core SDK e runtime in RHEL 7.Use a package manager to install .NET Core SDK and runtime on RHEL 7.
 author: thraka
 ms.author: adegeo
-ms.date: 12/03/2019
-ms.openlocfilehash: 4f85ed3da8a434fcd5b6ee88491daf623c3c8b31
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 03/17/2020
+ms.openlocfilehash: d1f1372b32c7b2471a96492d48aab5533dadb64a
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76980184"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134209"
 ---
 # <a name="rhel-7-package-manager---install-net-core"></a>RHEL 7 Gestione pacchetti - Installare .NET Core
 
 [!INCLUDE [package-manager-switcher](includes/package-manager-switcher.md)]
 
 In questo articolo viene descritto come utilizzare un gestore di pacchetti per installare .NET Core in RHEL 7.This article describes how to use a package manager to install .NET Core on RHEL 7.
+
+[!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
 ## <a name="register-your-red-hat-subscription"></a>Registra il tuo abbonamento Red Hat
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - graphics features [WPF]
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-ms.openlocfilehash: 56a69c10a420e399478a0d617d30380ff5217e9c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8636afcc5b63b71dc729812a7f3eb4945ba49494
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186737"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112037"
 ---
 # <a name="graphics-and-multimedia"></a>Grafica e funzionalità multimediali
 
@@ -55,11 +55,11 @@ Sono state apportate diverse modifiche correlate agli elementi grafici e alle an
 
 ## <a name="graphics-and-rendering"></a>Grafica e rendering
 
-WPF include il supporto per gli elementi grafici 2D di qualità elevata. La funzionalità include pennelli, geometrie, immagini, forme e trasformazioni. Per altre informazioni, vedere [Grafica](graphics.md). Il rendering degli elementi grafici è basato sulla <xref:System.Windows.Media.Visual> classe. La struttura degli oggetti visivi sullo schermo è descritta dalla struttura ad albero visuale. Per altre informazioni, vedere [Cenni preliminari sul rendering della grafica WPF](wpf-graphics-rendering-overview.md).
+WPFWPF include il supporto per grafica 2D di alta qualità. La funzionalità include pennelli, geometrie, immagini, forme e trasformazioni. Per altre informazioni, vedere [Grafica](graphics.md). Il rendering degli elementi grafici è basato sulla <xref:System.Windows.Media.Visual> classe. La struttura degli oggetti visivi sullo schermo è descritta dalla struttura ad albero visuale. Per altre informazioni, vedere [Cenni preliminari sul rendering della grafica WPF](wpf-graphics-rendering-overview.md).
 
-### <a name="2-d-shapes"></a>Forme 2D
+### <a name="2d-shapes"></a>Forme 2D
 
-WPFWPF fornisce una libreria di forme 2D di uso comune, disegnate da vettori, ad esempio rettangoli ed ellissi, illustrato nella figura seguente.
+WPFWPF fornisce una libreria di forme 2D di uso comune, disegnate su vettori, ad esempio rettangoli ed ellissi, che viene illustrato nella figura seguente.
 
 ![Diagramma che mostra ellissi e rettangoli.](./media/index/two-deminsional-shapes-ellipses-rectangles.png)
 
@@ -99,17 +99,17 @@ Nella figura seguente viene illustrato l'output del markup e code-behind [!INCLU
 
 Per altre informazioni, vedere [Panoramica degli oggetti Shape e sulle funzionalità di disegno di base di WPF](shapes-and-basic-drawing-in-wpf-overview.md). Per un esempio introduttivo, vedere [Esempio di elementi forma](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/ShapeElements).
 
-### <a name="2-d-geometries"></a>Geometrie 2D
+### <a name="2d-geometries"></a>Geometrie 2D
 
-Quando le forme 2D fornite da WPFWPF non sono sufficienti, è possibile usare il supporto WPFWPF per geometrie e percorsi per crearne di personalizzati. Nella figura seguente viene illustrato come è possibile utilizzare le geometrie per creare forme, come pennello da disegno e per ritagliare altri elementi WPFWPF.
+Quando le forme 2D fornite da WPFWPF non sono sufficienti, è possibile usare il supporto WPFWPF per geometrie e percorsi per creare il proprio. Nella figura seguente viene illustrato come è possibile utilizzare le geometrie per creare forme, come pennello da disegno e per ritagliare altri elementi WPFWPF.
 
 ![Screenshot che mostra come utilizzare le geometrie per creare forme.](./media/index/use-geometries-create-shapes.png)
 
 Per ulteriori informazioni, vedere [Cenni preliminari sulla geometria](geometry-overview.md). Per un esempio introduttivo, vedere [Esempio di geometrie](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/Geometry).
 
-### <a name="2-d-effects"></a>Effetti 2D
+### <a name="2d-effects"></a>Effetti 2D
 
-WPFWPF fornisce una libreria di classi 2D che è possibile usare per creare una varietà di effetti. La funzionalità di rendering 2D di WPFWPF offre la possibilità di disegnare [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementi con sfumature, bitmap, disegni e video; e manipolarli usando la rotazione, il ridimensionamento e l'inclinazione. Nella figura seguente viene fornito un esempio dei numerosi effetti che è possibile ottenere usando i pennelli WPFWPF.
+WPFWPF fornisce una libreria di classi 2D che è possibile usare per creare una varietà di effetti. La funzionalità di rendering 2D di [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] WPFWPF offre la possibilità di disegnare elementi con sfumature, bitmap, disegni e video; e manipolarli usando la rotazione, il ridimensionamento e l'inclinazione. Nella figura seguente viene fornito un esempio dei numerosi effetti che è possibile ottenere usando i pennelli WPFWPF.
 
 ![Illustrazione che mostra i diversi pennelli WPF WPF e gli elementi paint.](./media/index/brushes-paint-elements.png)
 
@@ -117,13 +117,13 @@ Per altre informazioni, vedere [Cenni preliminari sui pennelli WPF.](wpf-brushes
 
 <a name="rendering"></a>
 
-## <a name="3-d-rendering"></a>Rendering 3D
+## <a name="3d-rendering"></a>Rendering 3D
 
-WPFWPF fornisce un set di funzionalità di rendering 3D che si integrano con [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]il supporto grafico 2D in WPFWPF per creare un layout più interessante e la visualizzazione dei dati. A un'estremità dello spettro, WPFWPF consente di eseguire il rendering di immagini 2D sulle superfici di forme 3D, come illustrato nella figura seguente.
+WPFWPF fornisce un set di funzionalità di rendering 3D che si integrano [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]con il supporto grafico 2D in WPFWPF per creare un layout più interessante e la visualizzazione dei dati. A un'estremità dello spettro, WPFWPF consente di eseguire il rendering di immagini 2D sulle superfici delle forme 3D, come illustrato nella figura seguente.
 
 ![Screenshot di un esempio che mostra forme 3D con trame diverse.](./media/index/visual-three-dimensional-shape.png)
 
-Per ulteriori informazioni, vedere Cenni preliminari [sulla grafica 3D](3-d-graphics-overview.md). Per un esempio introduttivo, vedere [Esempio di solidi 3D](https://go.microsoft.com/fwlink/?LinkID=159964).
+Per ulteriori informazioni, vedere [Cenni preliminari sulla grafica 3D](3-d-graphics-overview.md). Per un esempio introduttivo, vedere Esempio di [solidi 3D](https://go.microsoft.com/fwlink/?LinkID=159964).
 
 <a name="animation"></a>
 
@@ -171,5 +171,5 @@ Per altre informazioni, vedere [Panoramica delle funzionalità multimediali](mul
 - [Cenni sul disegno con colori a tinta unita e sfumature](painting-with-solid-colors-and-gradients-overview.md)
 - [Disegnare con oggetti Image, Drawing e Visual](painting-with-images-drawings-and-visuals.md)
 - [Procedure relative all'animazione e al sistema di temporizzazione](animation-and-timing-how-to-topics.md)
-- [Panoramica sulla grafica tridimensionale](3-d-graphics-overview.md)
+- [Panoramica della grafica 3D](3-d-graphics-overview.md)
 - [Panoramica delle funzionalità multimediali](multimedia-overview.md)

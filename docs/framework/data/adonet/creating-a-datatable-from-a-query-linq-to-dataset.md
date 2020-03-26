@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
-ms.openlocfilehash: 4b95ec5a3e83fa5553a154ed64704312726153cf
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 46e977088cd6eca7842565ae6b258f70ca5920a9
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785639"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111816"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>Creazione di un oggetto DataTable da una query (LINQ to DataSet)
 L'associazione dati è un utilizzo comune dell'oggetto <xref:System.Data.DataTable>. Il metodo <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> copia i dati dei risultati di una query in un oggetto <xref:System.Data.DataTable> che può essere quindi usato per il data binding. Dopo l'esecuzione delle operazioni sui dati, il nuovo oggetto <xref:System.Data.DataTable> viene nuovamente unito nell'oggetto <xref:System.Data.DataTable> di origine.  
   
  Il metodo <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> usa il processo seguente per creare <xref:System.Data.DataTable> da una query.  
   
-1. Il metodo <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> duplica un oggetto <xref:System.Data.DataTable> della tabella di origine, ovvero un oggetto <xref:System.Data.DataTable> che implementa l'interfaccia <xref:System.Linq.IQueryable%601>. L' <xref:System.Collections.IEnumerable> origine è in genere originata da un'espressione LINQ to DataSet o da una query di metodo.  
+1. Il metodo <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> duplica un oggetto <xref:System.Data.DataTable> della tabella di origine, ovvero un oggetto <xref:System.Data.DataTable> che implementa l'interfaccia <xref:System.Linq.IQueryable%601>. L'origine <xref:System.Collections.IEnumerable> ha in genere avuto origine da un'espressione LINQ to DataSet o da una query di metodo.  
   
 2. Lo schema dell'oggetto <xref:System.Data.DataTable> duplicato viene compilato dalle colonne del primo oggetto <xref:System.Data.DataRow> enumerato nella tabella di origine, mentre il nome della tabella duplicata corrisponde al nome della tabella di origine con l'aggiunta del termine "query" alla fine.  
   
@@ -25,19 +25,19 @@ L'associazione dati è un utilizzo comune dell'oggetto <xref:System.Data.DataTab
   
 4. L'oggetto <xref:System.Data.DataTable> duplicato viene restituito dopo che sono stati copiati tutti gli oggetti <xref:System.Data.DataRow> presenti nella tabella di input sottoposta a query. Se la sequenza di origine non contiene oggetti <xref:System.Data.DataRow>, il metodo restituisce un oggetto <xref:System.Data.DataTable> vuoto.  
   
- Si noti che la chiamata al metodo <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> genererà l'esecuzione della query associata alla tabella di origine.  
+La <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> chiamata al metodo determina l'esecuzione della query associata alla tabella di origine.  
   
  Quando il metodo <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> rileva un riferimento Null o un tipo di valore nullable in una riga della tabella di origine, sostituisce il valore con <xref:System.DBNull.Value>. I valori Null vengono gestiti correttamente nell'oggetto <xref:System.Data.DataTable> restituito.  
   
- Nota: Il <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> metodo accetta come input una query che può restituire righe da più <xref:System.Data.DataTable> oggetti <xref:System.Data.DataSet> o. Il metodo <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> consente di copiare i dati ma non le proprietà dagli oggetti <xref:System.Data.DataTable> o <xref:System.Data.DataSet> di origine nell'oggetto <xref:System.Data.DataTable> restituito. È necessario impostare in modo esplicito le proprietà nell'oggetto <xref:System.Data.DataTable> restituito, ad esempio <xref:System.Data.DataTable.Locale%2A> e <xref:System.Data.DataTable.TableName%2A>.  
+ Nota: il metodo <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> accetta come input una query che può restituire righe da più oggetti <xref:System.Data.DataTable> o <xref:System.Data.DataSet>. Il metodo <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> consente di copiare i dati ma non le proprietà dagli oggetti <xref:System.Data.DataTable> o <xref:System.Data.DataSet> di origine nell'oggetto <xref:System.Data.DataTable> restituito. È necessario impostare in modo esplicito le proprietà nell'oggetto <xref:System.Data.DataTable> restituito, ad esempio <xref:System.Data.DataTable.Locale%2A> e <xref:System.Data.DataTable.TableName%2A>.  
   
  Nell'esempio seguente viene eseguita una query sulla tabella SalesOrderHeader per individuare gli ordini effettuati dopo l'8 agosto 2001 e viene usato il metodo <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> per creare un oggetto <xref:System.Data.DataTable> dalla query. <xref:System.Data.DataTable> viene quindi associato a <xref:System.Windows.Forms.BindingSource>, che funge da proxy per <xref:System.Windows.Forms.DataGridView>.  
   
  [!code-csharp[DP LINQ to DataSet Examples#CopyToDataTable1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#copytodatatable1)]
  [!code-vb[DP LINQ to DataSet Examples#CopyToDataTable1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#copytodatatable1)]  
   
-## <a name="creating-a-custom-copytodatatablet-method"></a>Creazione di un metodo\<CopyToDataTable T > personalizzato  
- I metodi <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> esistenti funzionano solo su un'origine <xref:System.Collections.Generic.IEnumerable%601> in cui il parametro generico `T` è di tipo <xref:System.Data.DataRow>. Sebbene sia utile, questa funzionalità non consente di creare tabelle da una sequenza di tipi scalari, da query che restituiscono tipi anonimi o da query che eseguono join di tabelle. Per un esempio di come implementare due metodi personalizzati `CopyToDataTable` che caricano una tabella da una sequenza di tipi scalari o anonimi [, vedere Procedura: Implementare CopyToDataTable\<t > dove il tipo generico t non è un DataRow](implement-copytodatatable-where-type-not-a-datarow.md)s.  
+## <a name="creating-a-custom-copytodatatablet-method"></a>Creazione di un metodo\<T> CopyToDataTable personalizzatoCreating a Custom CopyToDataTable T> Method  
+ I metodi <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> esistenti funzionano solo su un'origine <xref:System.Collections.Generic.IEnumerable%601> in cui il parametro generico `T` è di tipo <xref:System.Data.DataRow>. Sebbene sia utile, questa funzionalità non consente di creare tabelle da una sequenza di tipi scalari, da query che restituiscono tipi anonimi o da query che eseguono join di tabelle. Per un esempio di come `CopyToDataTable` implementare due metodi personalizzati che caricano una tabella da una sequenza di tipi scalari o anonimi, vedere [Procedura: implementare\<CopyToDataTable T> in cui il tipo generico T non è un DataRow](implement-copytodatatable-where-type-not-a-datarow.md)s.  
   
  Per gli esempi di questa sezione vengono usati i tipi personalizzati seguenti:  
   
@@ -76,6 +76,6 @@ L'associazione dati è un utilizzo comune dell'oggetto <xref:System.Data.DataTab
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori](programming-guide-linq-to-dataset.md)
+- [Guida alla programmazione](programming-guide-linq-to-dataset.md)
 - [Metodi generici Field e SetField](generic-field-and-setfield-methods-linq-to-dataset.md)
 - [Esempi di LINQ to DataSet](linq-to-dataset-examples.md)

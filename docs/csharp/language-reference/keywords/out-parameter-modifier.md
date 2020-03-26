@@ -1,15 +1,15 @@
 ---
 title: Modificatore del parametro out - Riferimenti per C#
-ms.date: 03/26/2019
+ms.date: 03/19/2020
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.openlocfilehash: f963188d77685bb81f7dc9fb3794e343114fe3c0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c713aa929673e51e8e9986c536bae782121c7756
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173562"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249344"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>Modificatore del parametro out (Riferimenti per C#)
 La parola chiave `out` fa sì che gli argomenti vengono passati per riferimento. Imposta il parametro formale come alias dell'argomento, che deve essere una variabile. In altre parole, qualsiasi operazione sul parametro viene eseguita sull'argomento. È come la parola chiave [ref](ref.md), con la differenza che `ref` richiede l'inizializzazione della variabile prima di essere passato. È anche come la parola chiave [in](in-parameter-modifier.md), con la differenza che `in` non consente al metodo chiamato di modificare il valore dell'argomento. Per usare un parametro `out`, la definizione del metodo e il metodo chiamante devono usare in modo esplicito la parola chiave `out`. Ad esempio:  
@@ -47,6 +47,12 @@ Non è possibile usare le parole chiave `in`, `ref` e `out` per i seguenti tipi 
   
 - Metodi iteratori che includono un'istruzione [yield return](./yield.md) o `yield break`.  
 
+Inoltre, i metodi di [estensione](../../programming-guide/classes-and-structs/extension-methods.md) hanno le seguenti restrizioni:
+
+- Il `out` keywoard non può essere utilizzato sul primo argomento di un metodo di estensione.
+- La `ref` parola chiave non può essere utilizzata sul primo argomento di un metodo di estensione quando l'argomento non è uno struct o un tipo generico non vincolato a essere uno struct.
+- La `in` parola chiave non può essere utilizzata a meno che il primo argomento non sia uno struct. La `in` parola chiave non può essere utilizzata su qualsiasi tipo generico, anche quando vincolata a essere uno struct.
+
 ## <a name="declaring-out-parameters"></a>Dichiarazione di parametri `out`
 
 La dichiarazione di un metodo con argomenti `out` è un classico espediente per restituire più valori. A partire da C# 7.0 è possibile usare le [tuple](../../tuples.md) per scenari analoghi. Nell'esempio seguente viene usato `out` per restituire tre variabili con una sola chiamata al metodo. Notare che il terzo argomento è assegnato a null. In questo modo i metodi restituiscono i valori facoltativamente.  
@@ -73,6 +79,6 @@ Nell'esempio precedente la variabile `number` è fortemente tipizzata come `int`
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida di riferimento a C](../index.md)
-- [Guida per programmatori C#](../../programming-guide/index.md)
-- [Parole chiave di C#](./index.md)
+- [Guida alla programmazione in C](../../programming-guide/index.md)
+- [Parole chiave di C](./index.md)
 - [Parametri di metodo](./method-parameters.md)

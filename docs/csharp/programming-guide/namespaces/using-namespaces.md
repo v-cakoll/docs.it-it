@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 5193fc7aaae83cbc0c75e81835244eaaaece69a5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0947e597da93d6db1c5965b3685a509961778586
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75700198"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507048"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Uso degli spazi dei nomi (Guida per programmatori C#)
 
@@ -42,7 +42,7 @@ Gli spazi dei nomi vengono usati frequentemente nei programmi C# in due modi. In
   
 ## <a name="using-namespaces-to-control-scope"></a>Uso degli spazi dei nomi per controllare l'ambito
 
- La parola chiave `namespace` viene usata per dichiarare un ambito. La possibilità di creare ambiti all'interno del progetto consente di organizzare il codice e di creare tipi univoci globali. Nell'esempio seguente, una classe denominata `SampleClass` è definita in due spazi dei nomi, uno annidato all'interno dell'altro. L'[operatore di accesso ai membri `.`](../../language-reference/operators/member-access-operators.md#member-access-operator-) viene usato per identificare il metodo da chiamare.  
+ La parola chiave `namespace` viene usata per dichiarare un ambito. La possibilità di creare ambiti all'interno del progetto consente di organizzare il codice e di creare tipi univoci globali. Nell'esempio seguente, una classe denominata `SampleClass` è definita in due spazi dei nomi, uno annidato all'interno dell'altro. Il [ `.` token](../../language-reference/operators/member-access-operators.md#member-access-expression-) viene utilizzato per distinguere il metodo chiamato.  
   
  [!code-csharp[csProgGuideNamespaces#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#8)]  
   
@@ -92,8 +92,8 @@ Gli spazi dei nomi vengono usati frequentemente nei programmi C# in due modi. In
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../index.md)
+- [Guida alla programmazione in C](../index.md)
 - [Spazi dei nomi](./index.md)
-- [. Operatore](../../language-reference/operators/member-access-operators.md#member-access-operator-)
-- [:: operatore](../../language-reference/operators/namespace-alias-qualifier.md)
-- [Alias extern](../../language-reference/keywords/extern-alias.md)
+- [Espressione di accesso ai membri](../../language-reference/operators/member-access-operators.md#member-access-expression-)
+- [:: (operatore)](../../language-reference/operators/namespace-alias-qualifier.md)
+- [extern alias](../../language-reference/keywords/extern-alias.md)

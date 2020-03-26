@@ -5,12 +5,12 @@ helpviewer_keywords:
 - scaling [WPF], elements
 - graphics [WPF], scaling elements
 ms.assetid: 18158d94-bbe7-4f6a-814e-84d27fa748bf
-ms.openlocfilehash: a383ad84f1db4d937469943092a03517f68777ec
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 34d954f68747be9eedc0ef71634e0c18b411d260
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187441"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112050"
 ---
 # <a name="how-to-scale-an-element"></a>Procedura: ridimensionare un elemento
 In questo esempio viene <xref:System.Windows.Media.ScaleTransform> illustrato come utilizzare un oggetto per ridimensionare un elemento.  
@@ -35,11 +35,11 @@ In questo esempio viene <xref:System.Windows.Media.ScaleTransform> illustrato co
  ![Ridimensionamenti con raddoppiamento di valore con punti centrali diversi](./media/wcpsdk-graphicsmm-scalecenter.gif "wcpsdk_graphicsmm_scalecenter")  
 Due operazioni ScaleTransform con valori di ScaleX e ScaleY identici, ma con centri diversi  
   
- Per l'esempio completo, vedere [2-D Transforms Sample (Esempio di trasformazioni 2D)](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms).  
+ Per l'esempio completo, vedere Esempio di [trasformazioni 2D](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms).  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.ScaleTransform>
 - [Cenni preliminari sulle trasformazioni](transforms-overview.md)
-- [Argomenti relativi alle procedure](transformations-how-to-topics.md)
+- [Procedure relative](transformations-how-to-topics.md)

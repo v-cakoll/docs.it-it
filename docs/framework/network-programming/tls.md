@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: 81ac469f75f925ea00c02ff94ade0e8793e7efff
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: d1218e5db2ee4fc0ec044c6e0aa16187390708b0
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546711"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134393"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Procedure consigliate per Transport Layer Security (TLS) con .NET Framework
 
@@ -121,7 +121,7 @@ Il framework WCF sceglie automaticamente il protocollo più alto disponibile fin
 
 ### <a name="for-net-framework-35---452-and-not-wcf"></a>Per .NET Framework 3.5 - 4.5.2 e non WCF
 
-È consigliabile aggiornare l'app a .NET Framework 4.7 o versioni successive. Se non è possibile eseguire l'aggiornamento, procedere come segue. A un certo punto in futuro, l'applicazione potrebbe non funzionare più fino a quando non viene aggiornata a .NET Framework 4.7 o versioni successive.
+È consigliabile aggiornare l'app a .NET Framework 4.7 o versioni successive. Se non è possibile eseguire l'aggiornamento, procedere come segue.
 
 Impostare le chiavi del Registro di sistema [SchUseStrongCrypto](#schusestrongcrypto) e [SystemDefaultTlsVersions](#systemdefaulttlsversions) su 1. Vedere [Configurazione della sicurezza tramite il Registro di sistema di Windows](#configuring-security-via-the-windows-registry). .NET Framework versione 3.5 supporta il flag `SchUseStrongCrypto` solo quando viene passato un valore esplicito di TLS.
 

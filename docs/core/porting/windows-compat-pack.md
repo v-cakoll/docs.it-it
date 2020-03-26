@@ -3,12 +3,12 @@ title: Usare Windows Compatibility Pack per convertire il codice per .NET Core
 description: Informazioni sul pacchetto di compatibilità di Windows e su come utilizzarlo per trasferire il codice .NET Framework esistente in .NET Core.
 author: terrajobst
 ms.date: 12/07/2018
-ms.openlocfilehash: 91a653b2345d414c18ebdb6e8b7d6d49bbdbb83e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 166259ca37a2005d67f6c545e4843a940f05fb71
+ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76733614"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80228641"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>Usare Windows Compatibility Pack per convertire il codice per .NET Core
 
@@ -40,7 +40,7 @@ Include circa 20.000 API, incluse API solo per Windows e API multipiattaforma pe
 - Memorizzazione nella cache di Windows Runtime
 - servizi Windows
 
-Per altre informazioni, vedere la [specifica del pacchetto di compatibilità](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md).
+Per altre informazioni, vedere la [specifica del pacchetto di compatibilità](https://github.com/dotnet/designs/blob/master/accepted/2018/compat-pack/compat-pack.md).
 
 ## <a name="get-started"></a>Introduzione
 

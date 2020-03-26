@@ -3,19 +3,21 @@ title: Installare .NET Core in openSUSE 15 - gestione pacchetti - .NET CoreInsta
 description: Usare un gestore di pacchetti per installare .NET Core SDK e runtime in openSUSE 15.
 author: thraka
 ms.author: adegeo
-ms.date: 12/26/2019
-ms.openlocfilehash: aaece5e3554ab567cf82c23265c8fba1656298d8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 03/17/2020
+ms.openlocfilehash: 3b5f51161dad4b0d7851421810506d6ed9f676f9
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76920764"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134237"
 ---
 # <a name="opensuse-15-package-manager---install-net-core"></a>openSUSE 15 Gestione pacchetti - Installare .NET Core
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-In questo articolo viene descritto come utilizzare un gestore di pacchetti per installare .NET Core in openSUSE 15. Se si sta installando il runtime, si consiglia di installare il [runtime di ASP.NET Core](#install-the-aspnet-core-runtime), in quanto include runtime .NET Core e ASP.NET Core.
+In questo articolo viene descritto come utilizzare un gestore di pacchetti per installare .NET Core in openSUSE 15.
+
+[!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
 ## <a name="register-microsoft-key-and-feed"></a>Registrare la chiave Microsoft e il feed
 
@@ -32,7 +34,7 @@ Aprire un terminale ed eseguire i seguenti comandi.
 ```bash
 sudo zypper install libicu
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-wget -q https://packages.microsoft.com/config/opensuse/15/prod.repo
+wget https://packages.microsoft.com/config/opensuse/15/prod.repo
 sudo mv prod.repo /etc/zypp/repos.d/microsoft-prod.repo
 sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
 ```

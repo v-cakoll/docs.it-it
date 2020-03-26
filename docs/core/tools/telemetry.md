@@ -3,12 +3,12 @@ title: Telemetria di .NET Core SDK
 description: Informazioni sulle funzionalità di telemetria degli strumenti di .NET Core SDK che raccolgono informazioni sull'utilizzo per l'analisi, i dati raccolti e il modo in cui disabilitarli.
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: 9d5d7ff09ade89712f2fbbe35224851bb1c28b4c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a79b791abc99331ff39f5e281ee0fdc62b258989
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156686"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507282"
 ---
 # <a name="net-core-sdk-telemetry"></a>Telemetria di .NET Core SDK
 
@@ -46,6 +46,8 @@ The .NET Core tools collect usage data in order to help us improve your experien
 Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
 ```
 
+Per disabilitare questo messaggio e il messaggio `DOTNET_NOLOGO` di `true`benvenuto di .NET Core, impostare la variabile di ambiente su . Si noti che questa variabile non ha alcun effetto sulla telemetria opt-out.
+
 ## <a name="data-points"></a>Punti dati
 
 La funzionalità di telemetria non raccoglie i dati personali, ad esempio nomi utente o indirizzi di posta elettronica. Non esegue l'analisi del codice e non estrae dati a livello di progetto, ad esempio nome, repository o autore. I dati vengono inviati ai server Microsoft in modo sicuro tramite la tecnologia [Monitoraggio di Azure](https://azure.microsoft.com/services/monitor/), conservati con accesso limitato e pubblicati in base a severi controlli di sicurezza da sistemi di [archiviazione di Azure](https://azure.microsoft.com/services/storage/) sicuri.
@@ -54,7 +56,7 @@ La tutela della privacy è importante per Microsoft. Se si ritiene che la teleme
 
 La funzionalità di telemetria raccoglie i dati seguenti:
 
-| Versioni dell'SDK | Data |
+| Versioni dell'SDK | Dati |
 |--------------|------|
 | Tutti          | Timestamp della chiamata. |
 | Tutti          | Comando richiamato (ad esempio, "build"), con hash a partire dalla versione 2.1. |

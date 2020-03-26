@@ -2,12 +2,12 @@
 title: Serializzazione JSON autonoma tramite DataContractJsonSerializerStand-Alone JSON Serialization using DataContractJsonSerializer
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: 36945f2d42f22ef3aa4f27bcbe403466f124a279
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 614776a905ec319624f76876762c25bfca15a357
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184419"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249448"
 ---
 # <a name="stand-alone-json-serialization-using-datacontractjsonserializer"></a>Serializzazione JSON autonoma tramite DataContractJsonSerializerStand-Alone JSON Serialization using DataContractJsonSerializer
 
@@ -42,7 +42,7 @@ Nella tabella seguente viene illustrata la corrispondenza tra i tipi .NET e i ti
 |Raccolte, dizionari e matrici|Array|Vedere la sezione relativa alle raccolte, ai dizionari e alle matrici in questo argomento.|
 |Tipi complessi (con applicazione dell'attributo <xref:System.Runtime.Serialization.DataContractAttribute> o <xref:System.SerializableAttribute>)|Tipo complesso|I membri dati diventano membri del tipo complesso JavaScript.|
 |Tipi complessi che implementano l'interfaccia <xref:System.Runtime.Serialization.ISerializable>|Tipo complesso|Come altri tipi complessi ma alcuni tipi <xref:System.Runtime.Serialization.ISerializable> non sono supportati. Vedere la parte relativa al supporto per ISerializable nella sezione Informazioni avanzate di questo argomento.|
-|Valore `Null` per qualsiasi tipo.|Null|Anche i tipi nullable sono supportati e mappati a JSON, così come i tipi non-nullable.|
+|Valore `Null` per qualsiasi tipo.|Null|I tipi di valore nullable sono inoltre supportati ed eseguono il mapping a JSON allo stesso modo dei tipi di valore non nullable.|
 
 ### <a name="enumerations-and-json"></a>Enumerazioni e JSON
 

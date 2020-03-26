@@ -9,31 +9,33 @@ helpviewer_keywords:
 - WPF programming model [WPF]
 - XAML [WPF], content models
 ms.assetid: 58843391-b28c-4d32-adf5-87acaf6578a1
-ms.openlocfilehash: 800711df51326e09546f559a9d4d1d84af173d4c
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: f2ed51a2ad757fe29e70c0930e962d22add8de75
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710207"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248186"
 ---
 # <a name="advanced-windows-presentation-foundation"></a>Aree avanzate (Windows Presentation Foundation)
-Questa sezione descrive alcune delle aree avanzate in WPF.  
-  
-## <a name="in-this-section"></a>In questa sezione
 
-[Architettura WPF](wpf-architecture.md)  
-[XAML in WPF](xaml-in-wpf.md)  
-[Classi degli elementi di base](base-elements.md)  
-[Albero degli elementi e serializzazione](element-tree-and-serialization.md)  
-[Sistema di proprietà WPF](properties-wpf.md)  
-[Eventi in WPF](events-wpf.md)  
-[Input](input-wpf.md)  
-[Trascinamento della selezione](drag-and-drop.md)  
-[Risorse](resources-wpf.md)  
-[Documenti](documents.md)  
-[Globalizzazione e localizzazione](globalization-and-localization.md)  
-[Layout](layout.md)  
-[Migrazione e interoperabilità](migration-and-interoperability.md)  
-[Prestazioni](performance.md)  
-[Modello di threading](threading-model.md)  
-[Informazioni di riferimento sulle API WPF non gestite](wpf-unmanaged-api-reference.md)  
+Questa sezione descrive alcune delle aree avanzate in WPF.
+
+## <a name="in-this-section"></a>Contenuto della sezione
+
+[Architettura WPF](wpf-architecture.md)\
+[XAML in WPF](xaml-in-wpf.md)\
+[Classi di elementi di baseBase Element Classes](base-elements.md)\
+[Struttura ad albero e serializzazione degli elementiElement Tree and Serialization](element-tree-and-serialization.md)\
+[Sistema di proprietà WPFWPF Property System](properties-wpf.md)\
+[Eventi in WPF](events-wpf.md)\
+[Input](input-wpf.md)\
+[Trascinamento della selezione](drag-and-drop.md)\
+[Risorse](resources-wpf.md)\
+[Documenti](documents.md)\
+[Globalizzazione e localizzazione](globalization-and-localization.md)\
+[Layout](layout.md)\
+[Tipi migrati da WPF a System.XamlTypes migrated from WPF to System.Xaml](types-migrated-from-wpf-to-system.md)\
+[Migrazione e interoperabilità](migration-and-interoperability.md)\
+[Prestazione](performance.md)\
+[Modello di filettatura](threading-model.md)\
+[Informazioni di riferimento sulle API WPF non gestiteUnmanaged WPF API Reference](wpf-unmanaged-api-reference.md)\

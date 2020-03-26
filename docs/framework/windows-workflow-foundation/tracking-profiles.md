@@ -2,12 +2,12 @@
 title: Profili di rilevamento
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: 9723b8fbb0bb8f24e8c9544d8bac8252b2fc763a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 609c3f0c728e71d1bbf5335aae0b18d6f99a7181
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182733"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249038"
 ---
 # <a name="tracking-profiles"></a>Profili di rilevamento
 
@@ -23,6 +23,7 @@ I profili di rilevamento si manifestano come elementi XML all'interno di un file
 <system.serviceModel>
     ...
     <tracking>
+     <profiles>
       <trackingProfile name="Sample Tracking Profile">
         <workflow activityDefinitionId="*">
           <workflowInstanceQueries>
@@ -306,7 +307,7 @@ I profili di rilevamento vengono strutturati sotto forma di sottoscrizioni dichi
   };
   ```
 
-### <a name="annotations"></a>annotazioni
+### <a name="annotations"></a>Annotazioni
 
 Le annotazioni consentono di contrassegnare in modo arbitrario mediante tag i record di rilevamento con un valore che può essere configurato dopo la compilazione. Ad esempio, è possibile che si desideri che diversi record di rilevamento in più flussi di lavoro vengano contrassegnati con "Server di posta elettronica" . Questo consente di individuare facilmente tutti i record con tale tag quando si esegue una query sui record di rilevamento in un secondo momento.
 

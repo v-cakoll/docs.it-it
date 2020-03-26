@@ -1,15 +1,15 @@
 ---
 title: Modificatore del parametro in - Riferimenti per C#
-ms.date: 03/26/2019
+ms.date: 03/19/2020
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: cbde7a571fb71ed7577077c77a5c61db553ec859
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 20956f9e25b6830a8876824a4c9dad1dbc4c4f3e
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173614"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249370"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>Modificatore del parametro in (Riferimenti per C#)
 
@@ -115,7 +115,9 @@ L'unica chiamata a un metodo in cui l'argomento viene passato per riferimento è
 Non è possibile usare le parole chiave `in`, `ref` e `out` per i seguenti tipi di metodi:  
   
 - Metodi asincroni definiti usando il modificatore [async](async.md).  
-- Metodi iteratori che includono un'istruzione [yield return](yield.md) o `yield break`.  
+- Metodi iteratori che includono un'istruzione [yield return](yield.md) o `yield break`.
+- Il primo argomento di un `in` metodo di estensione non può avere il modificatore a meno che tale argomento non sia uno struct.
+- Il primo argomento di un metodo di estensione in cui tale argomento è un tipo generico (anche quando tale tipo è vincolato a essere uno struct).The first argument of an extension method where that argument is a generic type (even when that type is constrained to be a struct.)
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
@@ -123,7 +125,7 @@ Non è possibile usare le parole chiave `in`, `ref` e `out` per i seguenti tipi 
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida di riferimento a C](../index.md)
-- [Guida per programmatori C#](../../programming-guide/index.md)
-- [Parole chiave di C#](index.md)
+- [Guida alla programmazione in C](../../programming-guide/index.md)
+- [Parole chiave di C](index.md)
 - [Parametri di metodo](method-parameters.md)
-- [Scrivere codice efficiente e sicuro](../../write-safe-efficient-code.md)
+- [Scrivere codice efficiente sicuro](../../write-safe-efficient-code.md)

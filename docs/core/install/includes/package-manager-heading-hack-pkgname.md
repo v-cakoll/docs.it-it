@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 51b3c1b3e3d61b23a0511ca807afef0269ac9ee4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4340ed7444681b4601dea50c93926b0ee0c07eec
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77465956"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134128"
 ---
 
 I pacchetti aggiunti ai feed del gestore di `{product}-{type}-{version}`pacchetti sono denominati in un formato comcatenabile: .
@@ -34,7 +34,7 @@ Versione dell'SDK o del runtime da installare. Questo articolo fornirà sempre l
 
 - Installare il runtime di ASP.NET Core 3.1:Install the ASP.NET Core 3.1 runtime:`aspnetcore-runtime-3.1`
 - Installare il runtime di .NET Core 2.1:`dotnet-runtime-2.1`
-- Installare .NET Core 3.0 SDK:`dotnet-sdk-3.0`
+- Installare .NET Core 3.1 SDK:`dotnet-sdk-3.1`
 
 ### <a name="package-missing"></a>Pacchetto mancante
 

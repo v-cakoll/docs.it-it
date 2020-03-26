@@ -2,12 +2,12 @@
 title: Flussi di lavoro del diagramma di flusso
 ms.date: 03/30/2017
 ms.assetid: b0a3475c-d22f-49eb-8912-973c960aebf5
-ms.openlocfilehash: 1840f677929509e4902498c5aa8920f49cb13496
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b84b0de34f8869d9775fe0694e74c340cc16a6b3
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773594"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249064"
 ---
 # <a name="flowchart-workflows"></a>Flussi di lavoro del diagramma di flusso
 
@@ -17,7 +17,7 @@ Un diagramma di flusso è un paradigma noto per la progettazione di programmi. L
 
  Un'attività diagramma di flusso contiene una raccolta di attività da eseguire.  I diagrammi di flusso contengono gli elementi di controllo del flusso, come <xref:System.Activities.Statements.FlowDecision> e <xref:System.Activities.Statements.FlowSwitch%601>, che dirigono l'esecuzione tra le attività contenute in base ai valori delle variabili.
 
-## <a name="types-of-flow-nodes"></a>Tipi di nodi del flusso
+## <a name="types-of-flow-nodes"></a>Tipi di nodi di flusso
 
  Vengono usati tipi diversi di elementi a seconda del tipo di controllo del flusso richiesto quando l'elemento viene eseguito. I tipi di elementi del diagramma di flusso includono:
 
@@ -29,7 +29,7 @@ Un diagramma di flusso è un paradigma noto per la progettazione di programmi. L
 
 Ogni collegamento dispone di una proprietà `Action` che definisce un oggetto <xref:System.Activities.ActivityAction> che può essere usato per eseguire le attività figlio e una o più proprietà `Next` che definiscono quali elementi eseguire al termine dell'esecuzione dell'elemento corrente.
 
-### <a name="creating-a-basic-activity-sequence-with-a-flowstep-node"></a>Creazione di una sequenza di attività di base con un nodo FlowStep
+### <a name="creating-a-basic-activity-sequence-with-a-flowstep-node"></a>Creazione di una sequenza di attività di base con un nodo FlowStepCreating a basic activity sequence with a FlowStep node
 
 Per modellare una sequenza di base in cui vengono eseguite a loro volta due attività, viene usato l'elemento `FlowStep`. Nell'esempio seguente vengono usati due elementi `FlowStep` per eseguire due attività in sequenza.
 
@@ -46,14 +46,14 @@ Per modellare una sequenza di base in cui vengono eseguite a loro volta due atti
     </Assign>
     <FlowStep.Next>
       <FlowStep>
-        <WriteLine Text="["Hello, " & result]"/>
+        <WriteLine Text="Hello, " & [result]/>
       </FlowStep>
     </FlowStep.Next>
   </FlowStep>
 </Flowchart>
 ```
 
-### <a name="creating-a-conditional-flowchart-with-a-flowdecision-node"></a>Creazione di un diagramma di flusso condizionale con un nodo FlowDecision
+### <a name="creating-a-conditional-flowchart-with-a-flowdecision-node"></a>Creazione di un diagramma di flusso condizionale con un nodo FlowDecisionCreating a conditional flowchart with a FlowDecision node
 
 Per modellare un nodo del flusso condizionale in un flusso di lavoro del diagramma di flusso (ovvero per creare un collegamento che funziona come simbolo di decisione di un diagramma di flusso tradizionale), viene usato un nodo <xref:System.Activities.Statements.FlowDecision>. La proprietà <xref:System.Activities.Statements.FlowDecision.Condition%2A> del nodo è impostata su un'espressione che definisce la condizione e le proprietà <xref:System.Activities.Statements.FlowDecision.True%2A> e <xref:System.Activities.Statements.FlowDecision.False%2A> sono impostate sulle istanze di <xref:System.Activities.Statements.FlowNode> da eseguire se l'espressione restituisce `true` o `false`. Nell'esempio seguente viene illustrato come definire un flusso di lavoro che usa un nodo <xref:System.Activities.Statements.FlowDecision>.
 

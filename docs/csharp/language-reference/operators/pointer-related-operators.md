@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 7c95fe07220a78b388a5c6850e4123feb029d951
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fd25cd419f8c3bfe905850e6a252f4a8cf65478c
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399546"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507100"
 ---
 # <a name="pointer-related-operators-c-reference"></a>Operatori correlati ai puntatori (Riferimento C#)
 
@@ -42,7 +42,7 @@ Per informazioni sui tipi di puntatori, vedere [Tipi di puntatori](../../program
 > [!NOTE]
 > Qualsiasi operazione con i puntatori richiede un contesto [unsafe](../keywords/unsafe.md). Il codice che contiene blocchi unsafe [`-unsafe`](../compiler-options/unsafe-compiler-option.md) deve essere compilato con l'opzione del compilatore.
 
-## <a name="address-of-operator-"></a>Indirizzo dell'operatore&amp;
+## <a name="address-of-operator-amp"></a><a name="address-of-operator-"></a>Indirizzo dell'operatore&amp;
 
 L'operatore `&` unario restituisce l'indirizzo del relativo operando:
 
@@ -70,7 +70,7 @@ L'operatore `*` binario calcola il [prodotto](arithmetic-operators.md#multiplica
 
 ## <a name="pointer-member-access-operator--"></a>Operatore -> (accesso ai membri del puntatore)
 
-L'operatore `->` unisce il [riferimento indiretto al puntatore](#pointer-indirection-operator-) e l'[accesso ai membri](member-access-operators.md#member-access-operator-). Ovvero, se `x` è un `T*` puntatore di tipo `y` `T`ed è un membro accessibile di tipo , un'espressione nel formato
+L'operatore `->` unisce il [riferimento indiretto al puntatore](#pointer-indirection-operator-) e l'[accesso ai membri](member-access-operators.md#member-access-expression-). Ovvero, se `x` è un `T*` puntatore di tipo `y` `T`ed è un membro accessibile di tipo , un'espressione nel formato
 
 ```csharp
 x->y
@@ -96,7 +96,7 @@ L'esempio seguente illustra come accedere agli elementi della matrice con un pun
 
 [!code-csharp[pointer element access](snippets/PointerOperators.cs#ElementAccess)]
 
-Nell'esempio viene utilizzato [ `stackalloc` l'operatore](stackalloc.md) per allocare un blocco di memoria nello stack.
+Nell'esempio precedente, [ `stackalloc` un'espressione](stackalloc.md) alloca un blocco di memoria nello stack.
 
 > [!NOTE]
 > L'operatore di accesso agli elementi del puntatore non ricerca gli errori relativi a valori non compresi nell'intervallo.
@@ -189,8 +189,8 @@ Per altre informazioni, vedere le sezioni seguenti delle [specifiche del linguag
 
 - [Informazioni di riferimento su C#](../index.md)
 - [Operatori C#](index.md)
-- [Tipi di puntatore](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [Tipi puntatore](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Parola chiave unsafe](../keywords/unsafe.md)
 - [parola chiave fissa](../keywords/fixed-statement.md)
-- [Operatore stackalloc](stackalloc.md)
-- [operatore sizeof](sizeof.md)
+- [stackalloc](stackalloc.md)
+- [Operatore sizeof](sizeof.md)

@@ -2,18 +2,18 @@
 title: Configurazione del rilevamento per un flusso di lavoro
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: 97b25873e9f20d5d390b7a59531b3a5af32296df
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 5ec94d6b8e58012d0c5c8ca8593c3cef81cd9ec3
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802674"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248212"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Configurazione del rilevamento per un flusso di lavoro
 
 Un flusso di lavoro può essere eseguito in tre modi:
 
-- Ospitato nell'oggetto <xref:System.ServiceModel.Activities.WorkflowServiceHost>
+- Ospitato in <xref:System.ServiceModel.Activities.WorkflowServiceHost>
 
 - Eseguito come un oggetto <xref:System.Activities.WorkflowApplication>
 
@@ -50,9 +50,9 @@ instance.Extensions.Add(trackingParticipant);
 
 ### <a name="configuring-workflow-service-tracking"></a>Configurazione del rilevamento del servizio del flusso di lavoro
 
-Un flusso di lavoro può essere esposto come servizio WCF quando è ospitato nell'host del servizio <xref:System.ServiceModel.Activities.WorkflowServiceHost>. <xref:System.ServiceModel.Activities.WorkflowServiceHost> è un'implementazione specifica di .NET ServiceHost per un servizio basato sul flusso di lavoro. Contenuto della sezione viene illustrato come configurare il rilevamento per un servizio flusso di lavoro di [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] in esecuzione nell'oggetto <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Viene configurato tramite un file Web.config (per un servizio ospitato sul Web) o un file App.config (per un servizio ospitato in un'applicazione autonoma, ad esempio un'applicazione console) specificando un comportamento del servizio oppure, tramite codice, aggiungendo un comportamento specifico del rilevamento alla raccolta <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> per l'host del servizio.
+Un flusso di lavoro può essere esposto <xref:System.ServiceModel.Activities.WorkflowServiceHost> come servizio WCF quando è ospitato nell'host del servizio. <xref:System.ServiceModel.Activities.WorkflowServiceHost> è un'implementazione specifica di .NET ServiceHost per un servizio basato sul flusso di lavoro. Contenuto della sezione viene illustrato come configurare il rilevamento per un servizio flusso di lavoro di [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] in esecuzione nell'oggetto <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Viene configurato tramite un file Web.config (per un servizio ospitato sul Web) o un file App.config (per un servizio ospitato in un'applicazione autonoma, ad esempio un'applicazione console) specificando un comportamento del servizio oppure, tramite codice, aggiungendo un comportamento specifico del rilevamento alla raccolta <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> per l'host del servizio.
 
-Per un servizio del flusso di lavoro ospitato in <xref:System.ServiceModel.WorkflowServiceHost>, è possibile aggiungere l'<xref:System.Activities.Tracking.EtwTrackingParticipant> utilizzando l'elemento <`behavior`> in un file di configurazione, come illustrato nell'esempio seguente.
+Per un servizio flusso <xref:System.ServiceModel.WorkflowServiceHost>di lavoro <xref:System.Activities.Tracking.EtwTrackingParticipant> ospitato `behavior` in , è possibile aggiungere l'elemento using <> in un file di configurazione, come illustrato nell'esempio seguente.
 
 ```xml
 <behaviors>
@@ -67,7 +67,7 @@ Per un servizio del flusso di lavoro ospitato in <xref:System.ServiceModel.Workf
 In alternativa, per un servizio del flusso di lavoro ospitato nell'oggetto <xref:System.ServiceModel.WorkflowServiceHost>, è possibile aggiungere l'estensione di comportamento <xref:System.Activities.Tracking.EtwTrackingParticipant> tramite il codice. Per aggiungere un partecipante del rilevamento personalizzato, creare una nuova estensione di comportamento e aggiungerla all'oggetto <xref:System.ServiceModel.ServiceHost> come mostrato nel codice di esempio seguente.
 
 > [!NOTE]
-> Se si desidera visualizzare il codice di esempio che illustra come creare un elemento di comportamento personalizzato che aggiunge un partecipante del rilevamento personalizzato, fare riferimento agli esempi di [rilevamento](./samples/tracking.md) .
+> Se si desidera visualizzare codice di esempio che illustra come creare un elemento di comportamento personalizzato che aggiunge un partecipante di rilevamento personalizzato, fare riferimento agli esempi [di rilevamento.](./samples/tracking.md)
 
 ```csharp
 ServiceHost svcHost = new ServiceHost(typeof(WorkflowService), new
@@ -134,11 +134,11 @@ if (null != workflowServiceHost)
 ```
 
 > [!NOTE]
-> Per ulteriori informazioni sui profili di rilevamento, vedere [profili di rilevamento](tracking-profiles.md).
+> Per ulteriori informazioni sui profili di [rilevamento,](tracking-profiles.md)fare riferimento a Profili di rilevamento .
 
 ### <a name="configuring-tracking-using-workflowinvoker"></a>Configurazione del rilevamento tramite WorkflowInvoker
 
-Per configurare il rilevamento per un flusso di lavoro eseguito usando l'oggetto <xref:System.Activities.WorkflowInvoker>, aggiungere il provider del rilevamento come estensione a un'istanza <xref:System.Activities.WorkflowInvoker>. L'esempio di codice seguente è riportato nell'esempio di [rilevamento personalizzato](./samples/custom-tracking.md) .
+Per configurare il rilevamento per un flusso di lavoro eseguito usando l'oggetto <xref:System.Activities.WorkflowInvoker>, aggiungere il provider del rilevamento come estensione a un'istanza <xref:System.Activities.WorkflowInvoker>. L'esempio di codice seguente è tratto dall'esempio [Custom Tracking.The](./samples/custom-tracking.md) following code example is from the Custom Tracking sample.
 
 ```csharp
 WorkflowInvoker invoker = new WorkflowInvoker(BuildSampleWorkflow());
@@ -148,41 +148,41 @@ invoker.Invoke();
 
 ### <a name="viewing-tracking-records-in-event-viewer"></a>Visualizzazione dei record di rilevamento in Visualizzatore eventi
 
-Esistono due log del Visualizzatore eventi di particolare interesse per il rilevamento dell'esecuzione di WF: il log analitico e il log debug. Entrambi i componenti si trovano nel&#124;nodo&#124;server applicazioni-applicazioni di Microsoft Windows. I log presenti in questa sezione contengono gli eventi relativi una singola applicazione piuttosto che gli eventi che interessano l'intero sistema.
+Esistono due log del Visualizzatore eventi di particolare interesse per il rilevamento dell'esecuzione di WF: il log analitico e il log debug. Entrambi risiedono nel nodo Microsoft&#124;Windows&#124;Application Server-Applications. I log presenti in questa sezione contengono gli eventi relativi una singola applicazione piuttosto che gli eventi che interessano l'intero sistema.
 
 Gli eventi di traccia di debug vengono scritti nel log di debug. Per raccogliere gli eventi di traccia di debug di WF nel Visualizzatore eventi, abilitare il log di debug.
 
-1. Per aprire Visualizzatore eventi, fare clic sul pulsante **Start**, quindi scegliere **Esegui.** Nella finestra di dialogo Esegui digitare `eventvwr`.
+1. Per aprire il Visualizzatore eventi, fare clic sul **pulsante Start**e quindi **scegliere Esegui.** Nella finestra di `eventvwr`dialogo Esegui digitare .
 
-2. Nella finestra di dialogo Visualizzatore eventi espandere il nodo **registri applicazioni e servizi** .
+2. Nella finestra di dialogo Visualizzatore eventi espandere il nodo **Registri applicazioni e servizi.**
 
-3. Espandere i nodi **Microsoft**, **Windows**e **server applicazioni-applicazioni** .
+3. Espandere i nodi **Microsoft**, **Windows**e **Applicazioni server applicazioni.**
 
-4. Fare clic con il pulsante destro del mouse sul nodo **debug** nel nodo **server applicazioni-applicazioni** e selezionare **Attiva log**.
+4. Fare clic con il pulsante destro del mouse sul nodo **Debug** nel nodo **Applicazioni server applicazioni** e scegliere Abilita **registro**.
 
 5. Eseguire l'applicazione abilitata per il rilevamento per generare gli eventi di rilevamento.
 
-6. Fare clic con il pulsante destro del mouse sul nodo **debug** e selezionare **Aggiorna.** Gli eventi di traccia verranno visualizzati nel riquadro centrale.
+6. Fare clic con il pulsante destro del mouse sul nodo Debug e selezionare Aggiorna.Right-click the **Debug** node and select **Refresh.** Gli eventi di traccia verranno visualizzati nel riquadro centrale.
 
 In WF 4 è presente un partecipante del rilevamento mediante il quale vengono scritti i record di rilevamento in una sessione ETW (Event Tracing for Windows). Il partecipante del rilevamento ETW viene configurato con un profilo di rilevamento per sottoscrivere i record di rilevamento. Quando il rilevamento è abilitato, vengono generati record di rilevamento di errori su ETW. Gli eventi di rilevamento ETW (in un intervallo da 100 a 113) corrispondenti agli eventi di rilevamento generati dal partecipante del rilevamento ETW vengono scritti nel log analitico.
 
 Per visualizzare i record di rilevamento, attenersi alla seguente procedura.
 
-1. Per aprire Visualizzatore eventi, fare clic sul pulsante **Start**, quindi scegliere **Esegui.** Nella finestra di dialogo Esegui digitare `eventvwr`.
+1. Per aprire il Visualizzatore eventi, fare clic sul **pulsante Start**e quindi **scegliere Esegui.** Nella finestra di `eventvwr`dialogo Esegui digitare .
 
-2. Nella finestra di dialogo Visualizzatore eventi espandere il nodo **registri applicazioni e servizi** .
+2. Nella finestra di dialogo Visualizzatore eventi espandere il nodo **Registri applicazioni e servizi.**
 
-3. Espandere i nodi **Microsoft**, **Windows**e **server applicazioni-applicazioni** .
+3. Espandere i nodi **Microsoft**, **Windows**e **Applicazioni server applicazioni.**
 
-4. Fare clic con il pulsante destro del mouse sul nodo **analitico** nel nodo **server applicazioni-applicazioni** e selezionare **Abilita log**.
+4. Fare clic con il pulsante destro del mouse sul nodo **Analitico** nel nodo **Applicazioni server applicazioni** e scegliere Abilita **registro**.
 
 5. Eseguire l'applicazione abilitata per il rilevamento per generare record di rilevamento.
 
-6. Fare clic con il pulsante destro del mouse sul nodo **analitico** e selezionare **Aggiorna.** I record di rilevamento dovrebbero essere visibili nel riquadro centrale.
+6. Fare clic con il pulsante destro del mouse sul nodo Analitico e selezionare **Aggiorna.Right-click the Analytic** node and select **Refresh.** I record di rilevamento dovrebbero essere visibili nel riquadro centrale.
 
-Nella figura seguente vengono mostrati gli eventi di rilevamento nel Visualizzatore eventi:
+L'immagine seguente mostra gli eventi di rilevamento nel Visualizzatore eventi:The following image shows tracking events in the event viewer:
 
-![Screenshot della Visualizzatore eventi che mostra i record di rilevamento.](./media/configuring-tracking-for-a-workflow/tracking-event-viewer.png)
+![Screenshot del Visualizzatore eventi che mostra i record di rilevamento.](./media/configuring-tracking-for-a-workflow/tracking-event-viewer.png)
 
 ### <a name="registering-an-application-specific-provider-id"></a>Registrazione di un ID provider specifico dell'applicazione
 
@@ -196,18 +196,18 @@ Se gli eventi devono essere scritti in un registro applicazioni specifico, atten
     </system.serviceModel>
     ```
 
-2. Copiare il file manifesto da%windir%\Microsoft.NET\Framework\\\<versione più recente di [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man in un percorso temporaneo e rinominarlo in Microsoft. Windows. ApplicationServer. Applications_Provider1. Man
+2. Copiare il file manifesto da %windir%, Microsoft.NET, Framework\\\<ultima versione di [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]>,Microsoft.Windows.ApplicationServer.Applications.man in un percorso temporaneo e rinominarlo in Microsoft.Windows.ApplicationServer.Applications_Provider1.man
 
 3. Modificare il GUID del file manifesto con il nuovo GUID.
 
     ```xml
-    <provider name="Microsoft-Windows-Application Server-Applications" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}"
+    <provider name="Microsoft-Windows-Application Server-Applications" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}" />
     ```
 
 4. Modificare il nome del provider se non si desidera disinstallare il provider predefinito.
 
     ```xml
-    <provider name="Microsoft-Windows-Application Server-Applications" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}"
+    <provider name="Microsoft-Windows-Application Server-Applications" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}" />
     ```
 
 5. Se è stato modificato il nome del provider nel passaggio precedente, modificare i nomi dei canali nel file manifesto in base al nuovo nome del provider.
@@ -222,7 +222,7 @@ Se gli eventi devono essere scritti in un registro applicazioni specifico, atten
 
 6. Generare la DLL di risorse attenendosi ai passaggi seguenti.
 
-    1. Installare Windows SDK. Il Windows SDK include il compilatore di messaggi ([MC. exe](/windows/win32/wes/message-compiler--mc-exe-)) e il compilatore di risorse ([RC. exe](/windows/win32/menurc/using-rc-the-rc-command-line-)).
+    1. Installare Windows SDK. Windows SDK include il compilatore di messaggi ([mc.exe](/windows/win32/wes/message-compiler--mc-exe-)) e il compilatore di risorse ([rc.exe](/windows/win32/menurc/using-rc-the-rc-command-line-)).
 
     2. In un prompt dei comandi di Windows SDK, eseguire mc.exe nel nuovo file manifesto.
 
@@ -244,13 +244,13 @@ Se gli eventi devono essere scritti in un registro applicazioni specifico, atten
         csc /target:library /win32res:Microsoft.Windows.ApplicationServer.Applications_Provider1.res NewProviderReg.cs /out:Microsoft.Windows.ApplicationServer.Applications_Provider1.dll
         ```
 
-    6. Modificare il nome della risorsa e della dll del messaggio nel file manifesto da `Microsoft.Windows.ApplicationServer.Applications.Provider1.man` al nuovo nome della dll.
+    6. Modificare il nome della dll di `Microsoft.Windows.ApplicationServer.Applications.Provider1.man` risorse e messaggi nel file manifesto da al nuovo nome dll.
 
         ```xml
-        <provider name="Microsoft-Windows-Application Server-Applications_Provider1" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}" symbol="Microsoft_Windows_ApplicationServer_ApplicationEvents" resourceFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll" messageFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll">
+        <provider name="Microsoft-Windows-Application Server-Applications_Provider1" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}" symbol="Microsoft_Windows_ApplicationServer_ApplicationEvents" resourceFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll" messageFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll" />
         ```
 
-    7. Usare [wevtutil](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732848(v=ws.10)) per registrare il manifesto.
+    7. Utilizzare [wevtutil](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732848(v=ws.10)) per registrare il manifesto.
 
         ```console
         wevtutil im Microsoft.Windows.ApplicationServer.Applications_Provider1.man
@@ -258,5 +258,5 @@ Se gli eventi devono essere scritti in un registro applicazioni specifico, atten
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Monitoraggio di Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))
-- [Monitoraggio delle applicazioni con l'infrastruttura di app](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))
+- [Windows Server App Fabric Monitoring](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))
+- [Monitoraggio delle applicazioni con App FabricMonitoring Applications with App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))

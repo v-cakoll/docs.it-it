@@ -7,12 +7,12 @@ ms.assetid: b8d7cf43-d1f2-4f3d-adb0-4f3a6428edc0
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 511ea04a522804b4b2ea2ff173d6cdd738e5c7bc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 759c1ca20ac139ef856df08ec42fb259fc3920d1
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186226"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112011"
 ---
 # <a name="wpf-overview"></a>Panoramica di WPF
 
@@ -309,7 +309,7 @@ Per altre informazioni, vedere [Cenni preliminari sui pennelli di WPF](graphics-
 
 ### <a name="3d-rendering"></a>Rendering 3D
 
-WPF include anche funzionalità di rendering 3D che si integrano con la grafica 2D per consentire la creazione di interfacce utente più accattivanti ed efficaci. Ad esempio, la figura seguente mostra le immagini 2D sottoposte a rendering su forme 3D:
+WPFWPF include anche funzionalità di rendering 3D che si integrano con la grafica 2D per consentire la creazione di interfacce utente più interessanti e interessanti. Ad esempio, la figura seguente mostra le immagini 2D sottoposte a rendering su forme 3D:
 
 ![Schermata dell'esempio Visual3D](media/introduction-to-wpf/wpfintrofigure13.png)
 

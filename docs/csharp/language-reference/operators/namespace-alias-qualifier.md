@@ -10,12 +10,12 @@ helpviewer_keywords:
 - namespace [C#]
 - global keyword [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: a18e52ea05d49bf2b3a468923f1433f09fff9a8b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 84c418627462f83630fe5072a0b0e2089f6588f6
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712676"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507126"
 ---
 # <a name="-operator-c-reference"></a>Operatore :: (Riferimenti per C#)
 
@@ -56,7 +56,7 @@ Utilizzare il qualificatore `::` di alias dello spazio dei nomi per accedere a u
   > [!NOTE]
   > La parola chiave `global` è l'alias dello spazio dei nomi globale solo quando è l'identificatore di sinistra del qualificatore `::`.
 
-È inoltre possibile utilizzare [l'operatore `.` ](member-access-operators.md#member-access-operator-) di accesso ai membri per accedere a un membro di uno spazio dei nomi con alias. Tuttavia, `.` l'operatore viene utilizzato anche per accedere a un membro del tipo. Il qualificatore `::` garantisce che il relativo identificatore di sinistra faccia sempre riferimento a un alias dello spazio dei nomi, anche se esiste un tipo o uno spazio dei nomi con lo stesso nome.
+È inoltre possibile [ `.` ](member-access-operators.md#member-access-expression-) utilizzare il token per accedere a un membro di uno spazio dei nomi con alias. Tuttavia, `.` il token viene utilizzato anche per accedere a un membro di tipo. Il qualificatore `::` garantisce che il relativo identificatore di sinistra faccia sempre riferimento a un alias dello spazio dei nomi, anche se esiste un tipo o uno spazio dei nomi con lo stesso nome.
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
@@ -66,4 +66,4 @@ Per altre informazioni, vedere la sezione [Qualificatori di alias dello spazio d
 
 - [Informazioni di riferimento su C#](../index.md)
 - [Operatori C#](index.md)
-- [Utilizzo degli spazi dei nomiUsing namespaces](../../programming-guide/namespaces/using-namespaces.md)
+- [Using Namespaces](../../programming-guide/namespaces/using-namespaces.md)

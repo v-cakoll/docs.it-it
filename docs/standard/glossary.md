@@ -3,12 +3,12 @@ title: Glossario .NET
 description: Significato di termini selezionati usati nella documentazione di .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 8da1d858835210590a80a624fb8989fbfe8e0a91
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 590d44ac64bc2b86ed0a082ae5185cf60b28c36c
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79400435"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291557"
 ---
 # <a name="net-glossary"></a>Glossario .NET
 
@@ -26,13 +26,13 @@ Vedere [CoreRT](#corert) e [.NET Native](#net-native).
 
 Implementazione originale di ASP.NET inclusa con .NET Framework.
 
-In alcuni casi ASP.NET è un termine generico che fa riferimento a entrambe le implementazioni di ASP.NET, inclusa ASP.NET Core. Il significato assunto dal termine in una specifica istanza è determinato dal contesto. Fare riferimento ad ASP.NET 4.x per definire che non si sta usando ASP.NET per indicare entrambe le implementazioni.
+In alcuni casi ASP.NET è un termine generico che fa riferimento a entrambe le implementazioni di ASP.NET, inclusa ASP.NET Core. Il significato assunto dal termine in una specifica istanza è determinato dal contesto. Fare riferimento a ASP.NET 4.x quando si desidera chiarire che non si utilizza ASP.NET indicare entrambe le implementazioni.
 
 Vedere [Documentazione di ASP.NET](/aspnet/#pivot=aspnet).
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 
-Implementazione open source, ad alte prestazioni e multi-piattaforma di ASP.NET basata su .NET Core.
+Un'implementazione open source multipiattaforma, ad alte prestazioni e open source di ASP.NET basata su .NET Core.
 
 Vedere [Documentazione di ASP.NET Core](/aspnet/#pivot=core).
 
@@ -46,7 +46,7 @@ Un assembly può includere tipi, ad esempio interfacce, classi, strutture, enume
 
 Common Language Runtime.
 
-Il significato esatto dipende dal contesto, ma questo in genere si riferisce al runtime di .NET Framework. CLR gestisce allocazione e gestione della memoria. CLR è anche una macchina virtuale che non solo esegue le app, ma genera e compila anche il codice in tempo reale utilizzando un compilatore [JIT.](#jit) L'implementazione corrente di Microsoft CLR è solo Windows.
+Il significato esatto dipende dal contesto, ma Common Language Runtime in genere fa riferimento al runtime di .NET Framework. CLR gestisce allocazione e gestione della memoria. CLR è anche una macchina virtuale che non solo esegue le app, ma genera e compila anche il codice in tempo reale utilizzando un compilatore [JIT.](#jit) L'implementazione corrente di Microsoft CLR è solo Windows.
 
 ## <a name="coreclr"></a>CoreCLR
 
@@ -64,13 +64,13 @@ Un insieme di librerie che costituiscono il sistema. \* (e in misura limitata\*M
 
 Runtime di .NET Core.
 
-A differenza di CLR/CoreCLR, CoreRT non è una macchina virtuale, ovvero non include le funzionalità per generare ed eseguire codice al volo perché non include un [JIT](#jit). Include invece la [Garbage Collection](#gc) e la funzionalità per l'identificazione del tipo di runtime (RTTI) e la reflection. Tuttavia, il sistema di tipi di questo runtime è progettato in modo tale da rendere superflui i metadati per la reflection. Si ottiene pertanto una toolchain [AOT](#aot) in grado di scollegare i metadati superflui e, più importante, identificare il codice non usato dall'app. CoreRT è in fase di sviluppo.
+A differenza di CLR/CoreCLR, CoreRT non è una macchina virtuale, ovvero non include le funzionalità per generare ed eseguire codice al volo perché non include un [JIT](#jit). Include, tuttavia, il [GC](#gc) e la capacità per l'identificazione del tipo in fase di esecuzione (RTTI) e la reflection. Tuttavia, il sistema di tipi di questo runtime è progettato in modo tale da rendere superflui i metadati per la reflection. Non richiedere metadati consente di avere una catena di strumenti [AOT](#aot) che può collegare i metadati superflui e (ancora più importante) identificare il codice che l'app non utilizza. CoreRT è in fase di sviluppo.
 
 Vedere [Intro to .NET Native e CoreRT](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md).
 
 ## <a name="cross-platform"></a>multipiattaforma
 
-La possibilità di sviluppare ed eseguire un'applicazione che può essere usata in più sistemi operativi diversi, come Linux, Windows e iOS, senza dover riscrivere in modo specifico il codice per ciascuno. Questo permette di riutilizzare il codice e la coerenza tra le applicazioni in piattaforme diverse.
+La capacità di sviluppare ed eseguire un'applicazione che può essere utilizzata su più sistemi operativi diversi, ad esempio Linux, Windows e iOS, senza dover riscrivere in modo specifico per ognuno di essi. Ciò consente il riutilizzo del codice e la coerenza tra le applicazioni su piattaforme diverse.
 
 ## <a name="ecosystem"></a>ecosistema
 
@@ -114,7 +114,7 @@ Simile a [AOT](#aot), questo compilatore esegue la conversione del linguaggio [I
 
 ## <a name="implementation-of-net"></a>implementazione di .NET
 
-Un'implementazione di .NET include i componenti seguenti:
+Un'implementazione di .NET include:
 
 - Uno o più runtime. Esempi: CLR, CoreCLR, CoreRT.
 - Una libreria di classi che implementa una versione di .NET Standard e può includere API aggiuntive. Esempi: libreria di classi base .NET Framework, libreria di classi base .NET Core.
@@ -137,11 +137,11 @@ Le parole libreria e [framework](#framework) vengono spesso usate come sinonimi.
 
 Pacchetto NuGet che non contiene una propria libreria, ma è costituito da un elenco di dipendenze. Facoltativamente, i pacchetti inclusi possono stabilire l'API per un framework di destinazione.
 
-Vedere [Pacchetti, metapacchetti e framework](../core/packages.md)
+Vedere [Pacchetti, Metapackage e Framework](../core/packages.md)
 
 ## <a name="mono"></a>Mono
 
-Mono è un'implementazione .NET [multipiattaforma](#cross-platform) open source che viene usata prevalentemente quando è necessario un runtime di dimensioni ridotte. Si tratta del runtime su cui si basano le applicazioni Xamarin in Android, Mac, iOS, tvOS e watchOS ed è incentrato principalmente su app che richiedono un footprint ridotto.
+Mono è un'implementazione .NET [multipiattaforma](#cross-platform) open source che viene usata prevalentemente quando è necessario un runtime di dimensioni ridotte. È il runtime che alimenta le applicazioni Xamarin su Android, Mac, iOS, tvOS e watchOS e si concentra principalmente sulle app che richiedono un ingombro ridotto.
 
 Supporta tutte le versioni attualmente pubblicate di .NET Standard.
 
@@ -153,13 +153,13 @@ Per altre informazioni su Mono, vedere la [documentazione Mono](https://www.mono
 
 ## <a name="net"></a>.NET
 
-Termine generico per riferirsi a [.NET Standard](#net-standard) e a tutti i carichi di lavoro e le [implementazioni di .NET](#implementation-of-net). Questo termine è sempre scritto in lettere maiuscole, pertanto la grafia ".Net" è errata.
+Termine generico per riferirsi a [.NET Standard](#net-standard) e a tutti i carichi di lavoro e le [implementazioni di .NET](#implementation-of-net). Sempre in maiuscolo, mai ".Net".
 
 Vedere [Guida alla piattaforma .NET](index.md).
 
 ## <a name="net-core"></a>.NET Core
 
-Implementazione open source, ad alte prestazioni e multi-piattaforma di .NET. Include Core Common Language Runtime (CoreCLR), il runtime Core AOT (CoreRT, in fase di sviluppo), la libreria di classi base Core e Core SDK.
+Un'implementazione open source multipiattaforma, ad alte prestazioni e open source di .NET. Include Core Common Language Runtime (CoreCLR), il runtime Core AOT (CoreRT, in fase di sviluppo), la libreria di classi base Core e Core SDK.
 
 Vedere [.NET Core](../core/index.md).
 
@@ -179,7 +179,7 @@ Vedere [Panoramica di .NET Core SDK](../core/sdk.md).
 
 Implementazione di .NET che viene eseguita solo in Windows. Include Common Language Runtime (CLR), la libreria di classi base e le librerie del framework applicazione, quali ASP.NET, Windows Form e WPF.
 
-Vedere [Guida a .NET Framework](../framework/index.md).
+Vedere [Guida a .NET Framework](../framework/index.yml).
 
 ## <a name="net-native"></a>.NET Native
 
@@ -269,12 +269,12 @@ Vedere [Framework di destinazione](frameworks.md).
 
 Piattaforma UWP (Universal Windows Platform).
 
-Implementazione di .NET usata per la creazione di applicazioni Windows moderne e abilitate per il tocco e di software per Internet delle cose. È stata progettata per unificare i diversi tipi di dispositivi da specificare come destinazione, ad esempio computer, tablet, phablet, telefoni e anche Xbox. La piattaforma UWP offre molti servizi, ad esempio un App Store centralizzato, un ambiente di esecuzione (AppContainer) e un set di API di Windows da usare invece di Win32 (WinRT). Le app possono essere scritte in C, C, Visual Basic e JavaScript. Quando si utilizza C ,NET e Visual Basic, le API .NET vengono fornite da .NET Core.
+Implementazione di .NET usata per la creazione di applicazioni Windows moderne e abilitate per il tocco e di software per Internet delle cose. È progettato per unificare i diversi tipi di dispositivi di destinazione, inclusi PC, tablet, telefoni e persino Xbox. La piattaforma UWP offre molti servizi, ad esempio un App Store centralizzato, un ambiente di esecuzione (AppContainer) e un set di API di Windows da usare invece di Win32 (WinRT). Le app possono essere scritte in C, C, Visual Basic e JavaScript. Quando si utilizza C ,NET e Visual Basic, le API .NET vengono fornite da .NET Core.
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida di .NET](index.md)
-- [Guida di .NET Framework](../framework/index.md)
+- [Guida di .NET Framework](../framework/index.yml)
 - [.NET Core](../core/index.md)
 - [Cenni preliminari sulla ASP.NET](/aspnet/index#pivot=aspnet)
 - [Panoramica di ASP.NET Core](/aspnet/index#pivot=core)

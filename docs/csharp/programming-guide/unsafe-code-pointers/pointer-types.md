@@ -4,12 +4,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: dc03744559a87a2548c5bee9452c22cd20f337b8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7bbfa6b2238458d3248da830cf9d6ac36551b431
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77627710"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507035"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Tipi di puntatori (Guida per programmatori C#)
 
@@ -72,7 +72,7 @@ Nella tabella riportata di seguito sono elencati gli operatori e le istruzioni c
 |`++` e `--`|Incrementa e decrementa puntatori.|
 |`+` e `-`|Utilizza l'aritmetica dei puntatori.|
 |`==`, `!=`, `<`, `>`, `<=` e `>=`|Confronta puntatori.|
-|[`stackalloc`Operatore](../../language-reference/operators/stackalloc.md)|Alloca memoria nello stack.|
+|[`stackalloc`](../../language-reference/operators/stackalloc.md)|Alloca memoria nello stack.|
 |[`fixed`affermazione](../../language-reference/keywords/fixed-statement.md)|Corregge temporaneamente una variabile per consentire di trovarne l'indirizzo.|
 
 Per altre informazioni sugli operatori correlati ai puntatori, vedere [Operatori correlati ai puntatori](../../language-reference/operators/pointer-related-operators.md).
@@ -83,7 +83,7 @@ Per altre informazioni, vedere la sezione [Tipi puntatore](~/_csharplang/spec/un
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../index.md)
+- [Guida alla programmazione in C](../index.md)
 - [Codice unsafe e puntatori](index.md)
 - [Conversioni di puntatori](pointer-conversions.md)
 - [Tipi riferimento](../../language-reference/keywords/reference-types.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-ms.openlocfilehash: dedf5ab51ab5cf9befb5bd183968388406df4e5b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9e273bd3e4bf2bb6945fe48c850783a54fa9a869
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181471"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291761"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Procedura: configurare i componenti COM basati su .NET Framework per l'attivazione senza registrazione
 L'attivazione senza registrazione per i componenti basati su .NET Framework risulta solo leggermente più complessa rispetto a quella per i componenti COM. La configurazione richiede due manifesti:  
@@ -24,7 +24,7 @@ L'attivazione senza registrazione per i componenti basati su .NET Framework risu
   
  Questo argomento descrive come associare un manifesto dell'applicazione a un'applicazione, come associare un manifesto del componente a un componente e come incorporare un manifesto del componente in un assembly.  
   
-### <a name="to-create-an-application-manifest"></a>Per creare un manifesto dell'applicazione  
+## <a name="create-an-application-manifest"></a>Creare un manifesto dell'applicazioneCreate an application manifest  
   
 1. Usando un editor XML, creare o modificare il manifesto dell'applicazione di proprietà dell'applicazione COM che interagisce con uno o più componenti gestiti.  
   
@@ -32,7 +32,8 @@ L'attivazione senza registrazione per i componenti basati su .NET Framework risu
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
-    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
+    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+    </assembly>
     ```  
   
      Per informazioni sugli elementi del manifesto e sui relativi attributi, vedere [Application Manifests](/windows/desktop/SbsCs/application-manifests) (Manifesti delle applicazioni).  
@@ -46,7 +47,8 @@ L'attivazione senza registrazione per i componenti basati su .NET Framework risu
                         name="myOrganization.myDivision.myComApp"
                         version="1.0.0.0"
                         processorArchitecture="msil"
-      />  
+      />
+    </assembly>  
     ```  
   
 4. Identificare gli assembly dipendenti. Nell'esempio seguente, `myComApp` dipende da `myManagedComp`.  
@@ -75,9 +77,9 @@ L'attivazione senza registrazione per i componenti basati su .NET Framework risu
   
 5. Salvare il file manifesto assegnando un nome a questo. Il nome di un manifesto dell'applicazione è costituito dal nome dell'eseguibile dell'assembly seguito dall'estensione manifest. Il nome file del manifesto dell'applicazione per myComApp.exe, ad esempio, è myComApp.exe.manifest.  
   
- Un manifesto dell'applicazione può essere installato nella stessa directory dell'applicazione COM. In alternativa, può essere aggiunto come risorsa al file EXE dell'applicazione. Per altre informazioni, vedere [About Side-by-Side Assemblies](/windows/desktop/SbsCs/about-side-by-side-assemblies-) (Informazioni sugli assembly side-by-side).  
+Un manifesto dell'applicazione può essere installato nella stessa directory dell'applicazione COM. In alternativa, può essere aggiunto come risorsa al file EXE dell'applicazione. Per ulteriori informazioni, vedere [Informazioni sugli assembly affiancati](/windows/desktop/SbsCs/about-side-by-side-assemblies-).  
   
-#### <a name="to-create-a-component-manifest"></a>Per creare un manifesto del componente  
+## <a name="create-a-component-manifest"></a>Creare un manifesto del componenteCreate a component manifest  
   
 1. Tramite un editor XML, creare un manifesto del componente per descrivere l'assembly gestito.  
   
@@ -85,7 +87,8 @@ L'attivazione senza registrazione per i componenti basati su .NET Framework risu
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
-    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
+    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+    </assembly>
     ```  
   
 3. Identificare il proprietario del file. L'elemento `<assemblyIdentity>` dell'elemento `<dependentAssembly>` nel file manifesto dell'applicazione deve corrispondere a quello contenuto nel manifesto del componente. Nell'esempio seguente il proprietario del file manifesto è `myManagedComp` versione 1.2.3.4.  
@@ -98,7 +101,8 @@ L'attivazione senza registrazione per i componenti basati su .NET Framework risu
                         version="1.2.3.4"  
                         publicKeyToken="8275b28176rcbbef"  
                         processorArchitecture="msil"  
-           />  
+           />
+    </assembly>
     ```  
   
 4. Identificare ogni classe nell'assembly. Usare l'elemento `<clrClass>` per identificare in modo univoco ogni classe nell'assembly gestito. L'elemento, che costituisce un sottoelemento di `<assembly>` dispone degli attributi descritti nella tabella seguente.  

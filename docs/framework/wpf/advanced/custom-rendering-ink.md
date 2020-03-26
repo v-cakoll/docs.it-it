@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ink [WPF], custom-rendering
 - classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
-ms.openlocfilehash: 3cf0d98c40e71a380b218c76d6e52d00cdd05342
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0ceb831057a9a92aa7319d2004f04d7cf5ac820e
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186358"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111829"
 ---
 # <a name="custom-rendering-ink"></a>Personalizzare il rendering dell'input penna
 La <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> proprietà di un tratto consente di specificare l'aspetto di un tratto, ad esempio le dimensioni, il <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> colore e la forma, ma in alcuni casi può essere necessario personalizzare l'aspetto oltre a quanto consentito. È possibile personalizzare l'aspetto dell'input penna eseguendo il rendering con l'aspetto di un aerografo, di una pittura a olio e di molti altri effetti. Windows Presentation Foundation (WPF)Windows Presentation Foundation (WPF) consente di personalizzare l'input penna di rendering implementando un oggetto personalizzato <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> e. <xref:System.Windows.Ink.Stroke>  
@@ -62,7 +62,7 @@ La <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> proprietà di un tratto
   
  La <xref:System.Windows.Ink.Stroke> classe può anche eseguire l'hit testing. È anche possibile implementare il proprio <xref:System.Windows.Ink.Stroke.HitTest%2A> algoritmo di hit testing eseguendo l'override del metodo nella classe corrente.  
   
- Il seguente codice in <xref:System.Windows.Ink.Stroke> Cè <xref:System.Windows.Input.StylusPoint> viene illustrato una classe personalizzata che esegue il rendering dei dati come un tratto 3D.  
+ Il seguente codice in <xref:System.Windows.Ink.Stroke> C, <xref:System.Windows.Input.StylusPoint> viene illustrato una classe personalizzata che esegue il rendering dei dati come tratto 3D.  
   
  [!code-csharp[AdvancedInkTopicsSamples#19](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
  [!code-vb[AdvancedInkTopicsSamples#19](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  

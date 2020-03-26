@@ -6,19 +6,19 @@ helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-ms.openlocfilehash: 0fffbb2f1b58d8ba65d9c5ca8b7c8edc583af2da
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cd27f2fb893def9e186504cc9973bae71473f005
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79400015"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248908"
 ---
 # <a name="get-started-with-net-framework"></a>Introduzione a .NET Framework
 
 .NET Framework è un ambiente di esecuzione in fase di esecuzione che gestisce le app destinate a .NET Framework. È costituito da Common Language Runtime, che fornisce la gestione della memoria e altri servizi di sistema, e da un'ampia libreria di classi, che consente ai programmatori di sfruttare codice affidabile per tutte le aree principali dello sviluppo di app.
 
 > [!NOTE]
-> .NET Framework è disponibile solo su sistemi Windows. È possibile usare [.NET Core](../../core/index.md) per eseguire app in Windows, MacOS e Linux.
+> .NET Framework è disponibile solo su sistemi Windows. Puoi usare [.NET Core](../../core/index.md) per sviluppare ed eseguire app su Windows, MacOS e Linux.
 
 ## <a name="what-is-net-framework"></a>Che cos'è .NET Framework?
 
@@ -85,7 +85,7 @@ Per ulteriori informazioni sullo sviluppo di app destinate a .NET Framework, ved
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida di .NET Framework](../index.md)
+- [Guida a .NET Framework](../index.yml)
 - [Novità](../whats-new/index.md)
-- [Browser per le API .NET](../../../api/index.md)
-- [Guida di sviluppo](../development-guide.md)
+- [Browser API .NET](../../../api/index.md)
+- [Guida allo sviluppo](../development-guide.md)

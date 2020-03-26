@@ -2,12 +2,12 @@
 title: Comando dotnet test
 description: Il comando dotnet test viene usato per eseguire unit test in un determinato progetto.
 ms.date: 02/27/2020
-ms.openlocfilehash: bac2f0e613c34bc9f657551a5eac4038207a93ed
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a11814f9fdc6326e681a09d7d2654b968014f318
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847898"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507308"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -51,7 +51,7 @@ I progetti di test specificano l'applicazione di esecuzione dei test usando un n
 
   Usa gli adattatori di test personalizzati dal percorso specificato nell'esecuzione del test.
 
-- **`-blame`**
+- **`--blame`**
 
   Esegue i test in modalità di segnalazione degli errori. Questa opzione è utile per isolare i test problematici che causano l'arresto anomalo dell'host di test. Crea un file di output nella directory corrente denominato *Sequence.xml* che acquisisce l'ordine di esecuzione dei test prima dell'arresto anomalo.
 

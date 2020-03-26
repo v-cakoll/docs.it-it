@@ -2,12 +2,12 @@
 title: Comando dotnet
 description: Informazioni sul comando dotnet (il driver generico per l'interfaccia della riga di comando di .NET Core) e sul relativo utilizzo.
 ms.date: 02/13/2020
-ms.openlocfilehash: da37c5cc3b019851e245fa3f65ae9dfb8a3fef54
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8692d419afd528bf49e1dc7dc1a7a5fd698b363b
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398895"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134080"
 ---
 # <a name="dotnet-command"></a>Comando dotnet
 
@@ -171,7 +171,7 @@ Il comportamento di rollforward può essere configurato anche in una proprietà 
 | [dotnet run](dotnet-run.md)                   | Esegue l'applicazione dall'origine.                                   |
 | [dotnet sln](dotnet-sln.md)                   | Opzioni per aggiungere, rimuovere ed elencare i progetti in un file di soluzione.       |
 | [dotnet store](dotnet-store.md)               | Archivia gli assembly nell'archivio pacchetti di runtime.                     |
-| [test dotnet](dotnet-test.md)                 | Esegue test usando un Test Runner.                                     |
+| [dotnet test](dotnet-test.md)                 | Esegue test usando un Test Runner.                                     |
 
 ### <a name="project-references"></a>Riferimenti al progetto
 
@@ -193,8 +193,14 @@ Comando | Funzione
 Comando | Funzione
 --- | ---
 [dotnet nuget delete](dotnet-nuget-delete.md) | Rimuove dall'elenco o elimina un pacchetto dal server.
-[dotnet nuget locals](dotnet-nuget-locals.md) | Cancella o elenca risorse NuGet locali come cache delle richieste HTTP, cache temporanea o cartella globale dei pacchetti a livello di computer.
 [dotnet nuget push](dotnet-nuget-push.md) | Effettua il push di un pacchetto nel server e lo pubblica.
+[dotnet nuget locals](dotnet-nuget-locals.md) | Cancella o elenca risorse NuGet locali come cache delle richieste HTTP, cache temporanea o cartella globale dei pacchetti a livello di computer.
+[dotnet nuget add source](dotnet-nuget-add-source.md) | Aggiunge un'origine NuGet.
+[dotnet nuget disable source](dotnet-nuget-disable-source.md) | Disabilita un'origine NuGet.
+[dotnet nuget enable source](dotnet-nuget-enable-source.md) | Abilita un'origine NuGet.
+[dotnet nuget list source](dotnet-nuget-list-source.md) | Elenca tutte le origini NuGet configurate.
+[dotnet nuget remove source](dotnet-nuget-remove-source.md) | Rimuove un'origine NuGet.
+[dotnet nuget update source](dotnet-nuget-update-source.md) | Aggiorna un'origine NuGet.
 
 ### <a name="global-tool-path-and-local-tools-commands"></a>Comandi globali, del percorso degli strumenti e degli strumenti locali
 
@@ -255,6 +261,10 @@ dotnet myapp.dll
 
   Specifica il percorso dell'indice di manutenzione che l'host condiviso deve usare durante il caricamento del runtime.
 
+- `DOTNET_NOLOGO`
+
+  Specifica se i messaggi di benvenuto e di telemetria di .NET Core vengono visualizzati alla prima esecuzione. Impostare `true` su per disattivare `true` `1`l'audio di questi messaggi (valori `yes` o accettati) o su `false` consentito (valori `false`, `0`o `no` accettati ). Se non è impostato, il valore predefinito è `false` e i messaggi verranno visualizzati alla prima esecuzione. Si noti che questo flag `DOTNET_CLI_TELEMETRY_OPTOUT` non ha alcun effetto sui dati di telemetria (vedere per la disattivazione dell'invio di dati di telemetria).
+
 - `DOTNET_CLI_TELEMETRY_OPTOUT`
 
   Specifica se i dati relativi all'utilizzo degli strumenti .NET Core vengono raccolti e inviati a Microsoft. Impostare su `true` per rifiutare esplicitamente la funzionalità di telemetria (i valori accettati sono `true`, `1` o `yes`). In caso contrario, impostare su `false` per acconsentire esplicitamente alle funzionalità di telemetria (i valori accettati sono `false`, `0` o `no`). Se non è impostata, il valore predefinito è `false` e quindi la funzionalità di telemetria è attiva.
@@ -277,7 +287,7 @@ dotnet myapp.dll
 
 - `DOTNET_DISABLE_GUI_ERRORS`
 
-  Per gli eseguibili generati abilitati per GUI - disabilita la finestra popup della finestra di dialogo che normalmente mostra per alcune classi di errori. Scrive `stderr` e esce solo in questi casi.
+  Per gli eseguibili generati abilitati per GUI - disabilita la finestra popup della finestra di dialogo, che normalmente mostra per alcune classi di errori. Scrive `stderr` e esce solo in questi casi.
   
 - `DOTNET_ADDITIONAL_DEPS`
 

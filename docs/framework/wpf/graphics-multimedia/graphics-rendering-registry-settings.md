@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: 85e32c99674cc95f670a4cb483b55865b996cb31
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 642dfdd784af4b85672cf5b0c8e60079763f4c47
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186420"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112284"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Impostazioni del Registro di sistema per il rendering della grafica
 Questo argomento fornisce una panoramica delle impostazioni del Registro di sistema per il rendering della grafica di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] che influiscono sulle applicazioni di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -59,7 +59,7 @@ Questo argomento fornisce una panoramica delle impostazioni del Registro di sist
   
  Il **valore multicampione massimo** consente di regolare la quantità massima di antialiasing del contenuto 3D. Utilizzare questo livello per disabilitare l'antialiasing 3D in Windows Vista.  
   
- Il **valore massimo di multicampionamento** è un valore DWORD che va da 0 a 16. Il valore 0 specifica che deve essere disabilitato l'anti-aliasing di multicampionamento del contenuto 3D, e un valore pari a 16 tenterà di usare fino a 16x dell'anti-aliasing di multicampionamento, se supportato dalla scheda video. Tenere presente che l'impostazione di questo valore della chiave del Registro di sistema nei computer che utilizzano driver XPDM causerà l'utilizzo di una grande quantità di memoria video aggiuntiva da parte delle applicazioni, la riduzione delle prestazioni del rendering 3D e l'utilizzo di errori di rendering e stabilità Problemi.  
+ Il **valore massimo di multicampionamento** è un valore DWORD che va da 0 a 16. Un valore pari a 0 specifica che l'antialiasing multicampione del contenuto 3D deve essere disabilitato e un valore pari a 16 tenterà di utilizzare fino a 16 volte l'antialiasing multicampione, se supportato dalla scheda video. Tenere presente che l'impostazione di questo valore della chiave del Registro di sistema nei computer che utilizzano driver XPDM causerà l'utilizzo di una grande quantità di memoria video aggiuntiva da parte delle applicazioni, la riduzione delle prestazioni del rendering 3D e l'utilizzo di errori di rendering e stabilità Problemi.  
   
  Quando questa chiave del Registro di sistema non è impostata, il valore predefinito di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] è 0 per i driver XPDM e 4 per i driver WDDM.  
   

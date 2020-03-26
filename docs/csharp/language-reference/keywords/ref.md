@@ -1,18 +1,18 @@
 ---
 title: Parola chiave ref - Riferimenti per C#
-ms.date: 03/26/2019
+ms.date: 03/19/2020
 f1_keywords:
 - ref_CSharpKeyword
 - ref
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 05f0bd8566851678203a3f064b96bfff7dee18b6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 61ee0e320f85925e4d804a6032e01c0485a31451
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399364"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249331"
 ---
 # <a name="ref-c-reference"></a>ref (Riferimenti per C#)
 
@@ -25,7 +25,7 @@ La parola chiave `ref` indica un valore che viene passato per riferimento. Viene
 
 ## <a name="passing-an-argument-by-reference"></a>Passaggio di un argomento per riferimento
 
-Quando viene usata nell'elenco di parametri di un metodo, la parola chiave `ref` indica che un argomento viene passato per riferimento, non per valore. La parola chiave `ref` imposta il parametro formale come alias dell'argomento, che deve essere una variabile. In altre parole, qualsiasi operazione sul parametro viene eseguita sull'argomento. Ad esempio, se il chiamante passa un'espressione variabile locale o un'espressione di accesso dell'elemento della matrice e il metodo chiamato sostituisce l'oggetto a cui fa riferimento il parametro ref, l'elemento della matrice o la variabile locale del chiamante fa riferimento al nuovo oggetto quando viene restituito il risultato del metodo.
+Quando viene usata nell'elenco di parametri di un metodo, la parola chiave `ref` indica che un argomento viene passato per riferimento, non per valore. La parola chiave `ref` imposta il parametro formale come alias dell'argomento, che deve essere una variabile. In altre parole, qualsiasi operazione sul parametro viene eseguita sull'argomento. Ad esempio, se il chiamante passa un'espressione di variabile locale o un'espressione di accesso all'elemento di matrice e il metodo chiamato sostituisce l'oggetto a cui fa riferimento il parametro ref, la variabile locale del chiamante o l'elemento della matrice fa ora riferimento al nuovo oggetto quando il metodo metodo returns.
 
 > [!NOTE]
 > Non confondere il concetto di passaggio per riferimento con il concetto di tipi di riferimento. I due concetti non sono uguali. Un parametro di metodo può essere modificato da `ref` che si tratti di un tipo di valore o di un tipo di riferimento. Non viene eseguito il boxing di un tipo di valore quando viene passato per riferimento.  
@@ -59,7 +59,13 @@ class CS0663_Example
  Non è possibile usare le parole chiave `ref`, `in` e `out` per i seguenti tipi di metodi:  
   
 - Metodi asincroni definiti usando il modificatore [async](async.md).  
-- Metodi iteratori che includono un'istruzione [yield return](yield.md) o `yield break`.  
+- Metodi iteratori che includono un'istruzione [yield return](yield.md) o `yield break`.
+
+Inoltre, i metodi di [estensione](../../programming-guide/classes-and-structs/extension-methods.md) hanno le seguenti restrizioni:
+
+- Il `out` keywoard non può essere utilizzato sul primo argomento di un metodo di estensione.
+- La `ref` parola chiave non può essere utilizzata sul primo argomento di un metodo di estensione quando l'argomento non è uno struct o un tipo generico non vincolato a essere uno struct.
+- La `in` parola chiave non può essere utilizzata a meno che il primo argomento non sia uno struct. La `in` parola chiave non può essere utilizzata su qualsiasi tipo generico, anche quando vincolata a essere uno struct.
 
 ## <a name="passing-an-argument-by-reference-an-example"></a>Passaggio di un argomento per riferimento: un esempio
 
@@ -154,11 +160,11 @@ Queste restrizioni evitano l'uso accidentale di un tipo `ref struct` in modo che
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Scrivere codice efficiente e sicuro](../../write-safe-efficient-code.md)
+- [Scrivere codice efficiente sicuro](../../write-safe-efficient-code.md)
 - [Valori restituiti e variabili locali ref](../../programming-guide/classes-and-structs/ref-returns.md)
 - [Espressione condizionale ref](../operators/conditional-operator.md#conditional-ref-expression)
-- [Passaggio di parametri](../../programming-guide/classes-and-structs/passing-parameters.md)
+- [Passaggio di parametriPassing Parameters](../../programming-guide/classes-and-structs/passing-parameters.md)
 - [Parametri di metodo](method-parameters.md)
 - [Guida di riferimento a C](../index.md)
-- [Guida per programmatori C#](../../programming-guide/index.md)
-- [Parole chiave di C#](index.md)
+- [Guida alla programmazione in C](../../programming-guide/index.md)
+- [Parole chiave di C](index.md)

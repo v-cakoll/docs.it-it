@@ -8,12 +8,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 92e94d6fe1c07ab5cd8f29d040401a737a1db78e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89133339a75c70e3ac86d627065e78d555bff71d
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173653"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507204"
 ---
 # <a name="async-c-reference"></a>async (Riferimenti per C#)
 
@@ -89,4 +89,4 @@ Per altre informazioni ed esempi, vedere [Tipi restituiti asincroni](../../progr
 - <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>
 - [Attendono](../operators/await.md)
 - [Procedura dettagliata: accesso al Web tramite Async e AwaitWalkthrough: Accessing the Web by Using Async and Await](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Programmazione asincrona con async e await](../../programming-guide/concepts/async/index.md)
+- [Programmazione asincrona con async e awaitAsynchronous Programming with async and await](../../programming-guide/concepts/async/index.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - geometry classes [WPF]
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
-ms.openlocfilehash: 1329f26e588b90fcd25052fb805058915b8825e3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ff42e59edd9d98b0b52dc3bdd3ace0c35df60878
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186465"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112375"
 ---
 # <a name="geometry-overview"></a>Cenni preliminari sulle classi Geometry
 In questa panoramica viene [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> descritto come utilizzare le classi per descrivere le forme. In questo argomento vengono <xref:System.Windows.Media.Geometry> inoltre <xref:System.Windows.Shapes.Shape> confrontate le differenze tra oggetti ed elementi.  
@@ -28,11 +28,11 @@ In questa panoramica viene [!INCLUDE[TLA#tla_winclient](../../../../includes/tla
   
 <a name="wcpsdk_graphics_geometry_geometryandshapes"></a>
 ## <a name="geometries-vs-shapes"></a>Geometrie e forme  
- Le <xref:System.Windows.Media.Geometry> <xref:System.Windows.Shapes.Shape> classi e sembrano simili in quanto descrivono <xref:System.Windows.Media.EllipseGeometry> <xref:System.Windows.Shapes.Ellipse> entrambe forme 2D (confronto e per esempio), ma ci sono differenze importanti.  
+ Le <xref:System.Windows.Media.Geometry> <xref:System.Windows.Shapes.Shape> classi e sembrano simili in quanto descrivono entrambe le forme 2D (confronto <xref:System.Windows.Media.EllipseGeometry> e <xref:System.Windows.Shapes.Ellipse> per esempio), ma ci sono differenze importanti.  
   
  Per uno, <xref:System.Windows.Media.Geometry> la classe <xref:System.Windows.Freezable> eredita dalla <xref:System.Windows.Shapes.Shape> classe mentre <xref:System.Windows.FrameworkElement>la classe eredita da . Poiché sono <xref:System.Windows.Shapes.Shape> elementi, gli oggetti possono eseguire il <xref:System.Windows.Media.Geometry> rendering di se stessi e partecipare al sistema di layout, mentre gli oggetti non possono.  
   
- Sebbene <xref:System.Windows.Shapes.Shape> gli oggetti <xref:System.Windows.Media.Geometry> siano <xref:System.Windows.Media.Geometry> più facilmente utilizzabili degli oggetti, gli oggetti sono più versatili. Mentre <xref:System.Windows.Shapes.Shape> un oggetto viene utilizzato per eseguire <xref:System.Windows.Media.Geometry> il rendering di elementi grafici 2D, un oggetto può essere utilizzato per definire l'area geometrica per la grafica 2D, definire un'area per il ritaglio o definire un'area per l'hit testing, ad esempio.  
+ Sebbene <xref:System.Windows.Shapes.Shape> gli oggetti <xref:System.Windows.Media.Geometry> siano <xref:System.Windows.Media.Geometry> più facilmente utilizzabili degli oggetti, gli oggetti sono più versatili. Mentre <xref:System.Windows.Shapes.Shape> un oggetto viene utilizzato per <xref:System.Windows.Media.Geometry> eseguire il rendering di elementi grafici 2D, un oggetto può essere utilizzato per definire l'area geometrica per la grafica 2D, definire un'area per il ritaglio o definire un'area per l'hit testing, ad esempio.  
   
 ### <a name="the-path-shape"></a>Classe Path di Shape  
  Uno <xref:System.Windows.Shapes.Shape>, <xref:System.Windows.Shapes.Path> la classe <xref:System.Windows.Media.Geometry> , utilizza in realtà un per descriverne il contenuto. Impostando la <xref:System.Windows.Shapes.Path.Data%2A> proprietà <xref:System.Windows.Shapes.Path> di <xref:System.Windows.Media.Geometry> con a <xref:System.Windows.Shapes.Shape.Fill%2A> <xref:System.Windows.Shapes.Shape.Stroke%2A> e impostandone le <xref:System.Windows.Media.Geometry>proprietà , è possibile eseguire il rendering di un oggetto .  
@@ -223,7 +223,7 @@ Un oggetto PathGeometry con più figure
 - <xref:System.Windows.Media.GeometryDrawing>
 - [Grafica 2D e creazione di immagini](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Sintassi di markup del percorso](path-markup-syntax.md)
-- [Argomenti relativi alle procedure](geometries-how-to-topics.md)
+- [Procedure relative](geometries-how-to-topics.md)
 - [Cenni preliminari sull'animazione](animation-overview.md)
 - [Cenni preliminari sugli oggetti Shape e sulle funzionalità di disegno di base di WPF](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Cenni preliminari sugli oggetti Drawing](drawing-objects-overview.md)

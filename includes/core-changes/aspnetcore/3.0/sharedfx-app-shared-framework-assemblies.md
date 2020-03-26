@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a8146db1fb54d63d4716b879ce793f7d817cef59
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64e854b06895ca54a9ab9870b85868788a731c00
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937270"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79549589"
 ---
 ### <a name="shared-framework-assemblies-removed-from-microsoftaspnetcoreapp"></a>Framework condiviso: assembly rimossi da Microsoft.AspNetCore.App
 
@@ -36,7 +36,7 @@ Un riferimento `Microsoft.AspNetCore.App` a non `<PackageReference>` richiede pi
 
 Per ulteriori informazioni, vedere [dotnet/aspnetcore-3612](https://github.com/dotnet/aspnetcore/issues/3612).
 
-Entity Framework Core viene fornito come pacchetti NuGet. Questa modifica allinea il modello di spedizione con tutte le altre librerie di accesso ai dati in .NET. Fornisce Entity Framework Core il percorso più semplice per continuare a innovare supportando le varie piattaforme .NET. Lo spostamento di Entity Framework Core dal framework condiviso non ha alcun impatto sul relativo stato di libreria sviluppata, supportata e utilizzabile da Microsoft. I criteri di [supporto di .NET Core](https://www.microsoft.com/net/platform/support-policy) continuano a coprirlo.
+Entity Framework Core viene fornito come pacchetti NuGet. Questa modifica allinea il modello di spedizione con tutte le altre librerie di accesso ai dati in .NET. Fornisce Entity Framework Core il percorso più semplice per continuare a innovare supportando le varie piattaforme .NET. Lo spostamento di Entity Framework Core dal framework condiviso non ha alcun impatto sul relativo stato di libreria sviluppata, supportata e utilizzabile da Microsoft. I criteri di [supporto di .NET Core](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) continuano a coprirlo.
 
 Json.NET ed Entity Framework Core continuano a funzionare con ASP.NET Core. Non saranno, tuttavia, inclusi nel framework condiviso.
 

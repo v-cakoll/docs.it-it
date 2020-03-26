@@ -3,18 +3,18 @@ title: Introduzione a C# e Visual Studio Code
 description: Informazioni su come creare la prima applicazione .NET Core in C# ed eseguirne il debug tramite Visual Studio Code.
 author: kendrahavens
 ms.date: 12/05/2018
-ms.openlocfilehash: 8eaf1ba2314dcab96db615a8691afed82c5011a7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 49a1271f2bf74224e189e70bebf0d22c49408e5d
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398881"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111062"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introduzione a C# e Visual Studio Code
 
 .NET Core offre una piattaforma veloce e modulare per la creazione di applicazioni eseguibili in Windows, Linux e macOS. Usare Visual Studio Code con l'estensione C# per ottenere un'efficace esperienza di programmazione con il supporto completo per IntelliSense C# (completamento intelligente del codice) e debug.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 1. Installare [Visual Studio Code](https://code.visualstudio.com/).
 2. Installare [.NET Core SDK](https://dotnet.microsoft.com/download).
@@ -79,7 +79,7 @@ Per altre informazioni sull'installazione in [Windows](https://channel9.msdn.com
     ![Impostazione di un punto di interruzione](media/with-visual-studio-code/set-breakpoint-vs-code.png)
 
 6. Per avviare il debug, premere <kbd>F5</kbd> o selezionare la freccia verde. Il debugger interrompe l'esecuzione del programma quando raggiunge il punto di interruzione impostato nel passaggio precedente.
-    - Durante il debug è possibile visualizzare le variabili locali nel riquadro superiore sinistro. In alternativa, usare la console di debug.
+    - Durante il debug, è possibile visualizzare le variabili locali nel riquadro in alto a sinistra o utilizzare la console di debug.
 
 7. Selezionare la freccia blu in alto per continuare il debug oppure fare clic sul quadrato rosso per arrestarlo.
 

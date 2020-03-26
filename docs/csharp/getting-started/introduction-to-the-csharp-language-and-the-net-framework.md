@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: d2fd879203932ea3f2211e38a2efdd626928962b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 828543b95ed82f465c92212748c6250b7fc84051
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713917"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249383"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Introduzione al linguaggio C e .NET Framework
 
@@ -22,7 +22,7 @@ C# è un linguaggio elegante, orientato a oggetti e indipendente dai tipi che co
   
 ## <a name="c-language"></a>Linguaggio C#
 
-La sintassi di C# è altamente espressiva, ma è anche semplice e facile da imparare. La sintassi delle parentesi graffe di C, sarà immediatamente riconoscibile per chiunque abbia familiarità con C, C , o Java. Gli sviluppatori che conoscono uno di questi linguaggi di solito sono in grado di iniziare a lavorare in modo produttivo in C# dopo un breve periodo di tempo. La sintassi di C, semplifica molte delle complessità del linguaggio C, e fornisce potenti funzionalità, ad esempio tipi di valori nullable, enumerazioni, delegati, espressioni lambda e accesso diretto alla memoria. C# supporta metodi e tipi generici, che garantiscono migliori prestazioni e maggior indipendenza dai tipi, nonché iteratori, che consentono ai responsabili dell'implementazione di classi Collection di definire comportamenti di iterazione personalizzati facili da usare con il codice client. Le espressioni LINQ (Language-Integrated Query) rendono la query fortemente tipizzata un costrutto di linguaggio di prima classe.  
+La sintassi di C# è altamente espressiva, ma è anche semplice e facile da imparare. La sintassi delle parentesi graffe di C, sarà immediatamente riconoscibile per chiunque abbia familiarità con C, C , o Java. Gli sviluppatori che conoscono uno di questi linguaggi di solito sono in grado di iniziare a lavorare in modo produttivo in C# dopo un breve periodo di tempo. La sintassi di C, semplifica molte delle complessità del linguaggio C, e fornisce potenti funzionalità, ad esempio tipi nullable, enumerazioni, delegati, espressioni lambda e accesso diretto alla memoria. C# supporta metodi e tipi generici, che garantiscono migliori prestazioni e maggior indipendenza dai tipi, nonché iteratori, che consentono ai responsabili dell'implementazione di classi Collection di definire comportamenti di iterazione personalizzati facili da usare con il codice client. Le espressioni LINQ (Language-Integrated Query) rendono la query fortemente tipizzata un costrutto di linguaggio di prima classe.  
   
  Essendo un linguaggio orientato a oggetti, C# supporta i concetti di incapsulamento, ereditarietà e polimorfismo. Tutti i metodi e le variabili, incluso il metodo `Main`, ovvero il punto di ingresso dell'applicazione, vengono incapsulati all'interno delle definizioni di classe. Una classe può ereditare direttamente da un'unica classe padre, ma può implementare un numero qualsiasi di interfacce. Per evitare una ridefinizione accidentale, i metodi che eseguono l'override di metodi virtuali in una classe padre richiedono la parola chiave `override`. In C# un tipo struct è simile a una classe leggera. Si tratta di un tipo allocato nello stack che può implementare interfacce, ma non supporta l'ereditarietà.  
   

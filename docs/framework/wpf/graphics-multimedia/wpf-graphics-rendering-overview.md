@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: c82b2c4599f14f55b51587407a7d96b3e2be9d5f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9d58aa973f7de6c073611e13f2889913ff26dd55
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186602"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111920"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>Cenni preliminari sul rendering della grafica WPF
 Questo argomento offre una panoramica del livello visivo di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Si concentra sul ruolo della <xref:System.Windows.Media.Visual> classe per il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] rendering del supporto nel modello.  
@@ -54,7 +54,7 @@ Questo argomento offre una panoramica del livello visivo di [!INCLUDE[TLA2#tla_w
  Si <xref:System.Windows.Media.DrawingVisual> tratta di una classe di disegno leggera utilizzata per eseguire il rendering di forme, immagini o testo. Questa classe è considerata semplice perché non offre la gestione di layout o eventi, che migliora le prestazioni di runtime. Per questo motivo, i disegni sono ideali per sfondi e ClipArt. L'oggetto <xref:System.Windows.Media.DrawingVisual> può essere utilizzato per creare un oggetto visivo personalizzato. Per altre informazioni, vedere [Uso degli oggetti DrawingVisual](using-drawingvisual-objects.md).  
   
 ### <a name="viewport3dvisual-class"></a>Classe Viewport3DVisual  
- L'oggetto <xref:System.Windows.Media.Media3D.Viewport3DVisual> fornisce un <xref:System.Windows.Media.Visual> <xref:System.Windows.Media.Media3D.Visual3D> ponte tra 2D e oggetti. La <xref:System.Windows.Media.Media3D.Visual3D> classe è la classe base per tutti gli elementi visivi 3D. Il <xref:System.Windows.Media.Media3D.Viewport3DVisual> richiede di <xref:System.Windows.Media.Media3D.Viewport3DVisual.Camera%2A> definire un <xref:System.Windows.Media.Media3D.Viewport3DVisual.Viewport%2A> valore e un valore. La camera consente di visualizzare la scena. Il viewport stabilisce dove viene eseguito il mapping della proiezione sulla superficie 2D. Per altre informazioni sul 3D in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], vedere [Cenni preliminari sulla grafica tridimensionale](3-d-graphics-overview.md).  
+ L'oggetto <xref:System.Windows.Media.Media3D.Viewport3DVisual> fornisce un <xref:System.Windows.Media.Visual> <xref:System.Windows.Media.Media3D.Visual3D> ponte tra 2D e oggetti. La <xref:System.Windows.Media.Media3D.Visual3D> classe è la classe base per tutti gli elementi visivi 3D. Il <xref:System.Windows.Media.Media3D.Viewport3DVisual> richiede di <xref:System.Windows.Media.Media3D.Viewport3DVisual.Camera%2A> definire un <xref:System.Windows.Media.Media3D.Viewport3DVisual.Viewport%2A> valore e un valore. La camera consente di visualizzare la scena. Il viewport stabilisce dove viene eseguito il mapping della proiezione sulla superficie 2D. Per ulteriori informazioni sul [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]3D in , vedere [Cenni preliminari sulla grafica 3D](3-d-graphics-overview.md).  
   
 ### <a name="containervisual-class"></a>Classe ContainerVisual  
  La <xref:System.Windows.Media.ContainerVisual> classe viene utilizzata come contenitore per una raccolta di <xref:System.Windows.Media.Visual> oggetti. La <xref:System.Windows.Media.DrawingVisual> classe deriva <xref:System.Windows.Media.ContainerVisual> dalla classe , consentendo di contenere una raccolta di oggetti visivi.  
@@ -254,6 +254,6 @@ Grafica e testo con impostazioni DPI diverse
 - <xref:System.Windows.Media.DrawingVisual>
 - [Grafica 2D e creazione di immagini](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Hit testing a livello visivo](hit-testing-in-the-visual-layer.md)
-- [Uso degli oggetti DrawingVisual](using-drawingvisual-objects.md)
-- [Esercitazione: hosting di oggetti visivi in un'applicazione Win32](tutorial-hosting-visual-objects-in-a-win32-application.md)
+- [Utilizzo degli oggetti DrawingVisual](using-drawingvisual-objects.md)
+- [Esercitazione: Hosting di oggetti visivi in un'applicazione Win32](tutorial-hosting-visual-objects-in-a-win32-application.md)
 - [Ottimizzazione delle prestazioni di applicazioni WPF](../advanced/optimizing-wpf-application-performance.md)

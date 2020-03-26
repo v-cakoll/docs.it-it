@@ -3,12 +3,12 @@ title: Interfaccia della riga di comando di .NET Core
 titleSuffix: ''
 description: Panoramica dell'interfaccia della riga di comando di .NET Core e delle relative funzionalità.
 ms.date: 02/13/2020
-ms.openlocfilehash: 45a40063f70a621e807abf5e01ceecb125aecd7c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ac5988bacbef41326f2501a2cff6c3f5aa0be798
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79399119"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80110841"
 ---
 # <a name="net-core-cli-overview"></a>Panoramica dell'interfaccia della riga di comando di .NET Core
 
@@ -95,11 +95,11 @@ Il comando esegue un'azione. Ad esempio, `dotnet build` compila il codice. `dotn
 
 ### <a name="arguments"></a>Argomenti
 
-Gli argomenti passati alla riga di comando sono gli argomenti per il comando richiamato. Quando si esegue `dotnet publish my_app.csproj`, ad esempio, l'argomento `my_app.csproj` indica il progetto da pubblicare e viene passato al comando `publish`.
+Gli argomenti passati alla riga di comando sono gli argomenti per il comando richiamato. Ad esempio, quando `dotnet publish my_app.csproj`si `my_app.csproj` esegue , l'argomento indica il `publish` progetto da pubblicare e viene passato al comando.
 
 ### <a name="options"></a>Opzioni
 
-Le opzioni passate alla riga di comando sono le opzioni per il comando richiamato. Quando si esegue `dotnet publish --output /build_output`, ad esempio, l'opzione `--output` e il relativo valore vengono passati al comando `publish`.
+Le opzioni passate alla riga di comando sono le opzioni per il comando richiamato. Ad esempio, quando `dotnet publish --output /build_output`si `--output` esegue , l'opzione `publish` e il relativo valore vengono passati al comando.
 
 ## <a name="see-also"></a>Vedere anche
 

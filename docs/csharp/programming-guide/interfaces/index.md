@@ -5,16 +5,16 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: f4ee269f41e79562c113a7627816f797b083095e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb1b812fdbf1d521ed3fd86e23f430bcd04d00f6
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79157078"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249181"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfacce (Guida per programmatori C#)
 
-Un'interfaccia contiene le definizioni per un gruppo di funzionalità correlate che una [classe](../../language-reference/keywords/class.md) non astratta o uno [struct](../../language-reference/builtin-types/struct.md) deve implementare. Un'interfaccia `static` può definire metodi che devono avere un'implementazione. Un'interfaccia può fornire un'implementazione predefinita per uno o tutti i relativi membri di istanza dichiarati. Un'interfaccia non può dichiarare dati di istanza, ad esempio campi, proprietà implementate automaticamente o eventi di tipo proprietà.
+Un'interfaccia contiene le definizioni per un gruppo di funzionalità correlate che una [classe](../../language-reference/keywords/class.md) non astratta o uno [struct](../../language-reference/builtin-types/struct.md) deve implementare. Un'interfaccia `static` può definire metodi che devono avere un'implementazione. A partire dalla versione 8.0 di C, un'interfaccia può definire un'implementazione predefinita per i membri. Un'interfaccia non può dichiarare dati di istanza, ad esempio campi, proprietà implementate automaticamente o eventi di tipo proprietà.
 
 Usando le interfacce, è possibile, ad esempio, includere il comportamento di più origini in una classe. Tale funzionalità è importante in C# perché il linguaggio non supporta l'ereditarietà multipla delle classi. Inoltre è necessario usare un'interfaccia se si vuole simulare l'ereditarietà per le struct, perché non possono effettivamente ereditare da un'altra struct o classe.
 
@@ -54,7 +54,7 @@ Un'interfaccia presenta le proprietà seguenti:
 - Non è possibile creare direttamente un'istanza di un'interfaccia. I membri vengono implementati da qualsiasi classe o struct che implementa l'interfaccia.
 - Una classe o struct può implementare più interfacce. Una classe può ereditare una classe base e anche implementare una o più interfacce.
 
-## <a name="BKMK_RelatedSections"></a>Sezioni correlate
+## <a name="related-sections"></a><a name="BKMK_RelatedSections"></a>Sezioni correlate
 
 - [Proprietà dell'interfaccia](../classes-and-structs/interface-properties.md)  
 - [Indicizzatori nelle interfacce](../indexers/indexers-in-interfaces.md)  
@@ -70,6 +70,6 @@ Un'interfaccia presenta le proprietà seguenti:
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../index.md)
+- [Guida alla programmazione in C](../index.md)
 - [Ereditarietà](../classes-and-structs/inheritance.md)
 - [Nomi di identificatore](../inside-a-program/identifier-names.md)

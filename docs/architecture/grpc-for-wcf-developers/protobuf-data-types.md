@@ -2,12 +2,12 @@
 title: Tipi di dati scalari Protobuf - gRPC per gli sviluppatori WCFProtobuf scalar data types - gRPC for WCF developers
 description: Informazioni sui tipi di dati di base e noti supportati da Protobuf e gRPC in .NET Core.
 ms.date: 09/09/2019
-ms.openlocfilehash: a40f51fa32ddb97ba417ec01f31e1f0187f0d544
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea3b53426ecf6f50f3bae22a537e227b07248508
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148127"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249435"
 ---
 # <a name="protobuf-scalar-data-types"></a>Tipi di dati scalari protobuf
 
@@ -125,7 +125,7 @@ Nella tabella seguente viene illustrato l'elenco completo dei tipi di wrapper co
 | `uint?`   | `google.protobuf.UInt32Value` |
 | `ulong?`  | `google.protobuf.UInt64Value` |
 
-I tipi `Timestamp` noti `Duration` e sono rappresentati in .NET come classi, pertanto non è necessario una versione nullable. Ma è importante verificare la presenza di valori null sulle `DateTimeOffset` proprietà `TimeSpan`di tali tipi durante la conversione in o .
+I tipi `Timestamp` noti `Duration` e sono rappresentati in .NET come classi. In C '8 e oltre, è possibile usare i tipi di riferimento nullable. Ma è importante verificare la presenza di valori null sulle `DateTimeOffset` proprietà `TimeSpan`di tali tipi durante la conversione in o .
 
 ## <a name="decimals"></a>Decimali
 

@@ -2,12 +2,12 @@
 title: private protected (informazioni di riferimento su C#)
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: a73d61712075cf24d2b94c505104df1fade629e9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 01a8b716ce87a63a50a92a25b2842f7bb12d4c9f
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713209"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134356"
 ---
 # <a name="private-protected-c-reference"></a>private protected (informazioni di riferimento su C#)
 
@@ -21,8 +21,6 @@ La combinazione delle parole chiave `private protected` è un modificatore di ac
 Un membro protetto privato di una classe base è accessibile dai tipi derivati nell'assembly che lo contiene solo se il tipo statico della variabile è il tipo della classe derivata. Si consideri il segmento di codice di esempio seguente:  
 
 ```csharp
-// Assembly1.cs  
-// Compile with: /target:library  
 public class BaseClass
 {
     private protected int myValue = 0;
@@ -71,12 +69,12 @@ I membri struct non possono essere `private protected` perché struct non può e
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida di riferimento a C](../index.md)
-- [Guida per programmatori C#](../../programming-guide/index.md)
-- [Parole chiave di C#](index.md)
+- [Guida alla programmazione in C](../../programming-guide/index.md)
+- [Parole chiave di C](index.md)
 - [Modificatori di accesso](access-modifiers.md)
 - [Livelli di accessibilità](accessibility-levels.md)
 - [Modificatori](index.md)
-- [pubblico](public.md)
-- [Privato](private.md)
-- [Interno](internal.md)
+- [public](public.md)
+- [private](private.md)
+- [internal](internal.md)
 - [Problemi di sicurezza per le parole chiave virtuali interne](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))

@@ -2,12 +2,12 @@
 title: Applicazioni gRPC self-hosted - gRPC per gli sviluppatori WCFSelf-hosted gRPC applications - gRPC for WCF developers
 description: Distribuzione di applicazioni gRPC ASP.NET Core come servizi self-hosted.
 ms.date: 09/02/2019
-ms.openlocfilehash: 00fb1453e19a02469f80af79672e0c1f72c7280f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 69f70e4077247fd07eba7abeee82f257dd1f4f90
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79147802"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80110906"
 ---
 # <a name="self-hosted-grpc-applications"></a>Applicazioni gRPC auto-ospitate
 
@@ -107,7 +107,7 @@ ExecStart=/usr/sbin/myapp
 WantedBy=multi-user.target
 ```
 
-La `Type=notify` proprietà `systemd` indica che l'applicazione invierà una notifica all'avvio e all'arresto. L'impostazione `WantedBy=multi-user.target` causerà l'avvio del servizio quando il sistema Linux raggiunge il "runlevel 2", il che significa che è attiva una shell multiutente non grafica.
+La `Type=notify` proprietà `systemd` indica che l'applicazione invierà una notifica all'avvio e all'arresto. L'impostazione `WantedBy=multi-user.target` causerà l'avvio del servizio quando il sistema Linux raggiunge il "runlevel 2", il che significa che è attiva una shell non grafica e multiutente.
 
 Prima `systemd` di riconoscere il servizio, è necessario ricaricare la configurazione. È `systemd` possibile controllare `systemctl` utilizzando il comando . Dopo il ricaricamento, utilizzare il `status` sottocomando per verificare che l'applicazione sia stata registrata correttamente.
 
@@ -152,7 +152,7 @@ sudo journalctl -u myapp
 > [!TIP]
 > Se nell'host è disponibile un ambiente GUI, sono disponibili alcuni visualizzatori di log grafici per Linux, ad esempio *QJournalctl* e *gnome-logs*.
 
-Per ulteriori informazioni sull'esecuzione di query `systemd` `journalctl`sul journal dalla riga di comando utilizzando , vedere [le pagine man](https://manpages.debian.org/buster/systemd/journalctl.1).
+Per ulteriori informazioni sull'esecuzione di query `systemd` `journalctl`sul journal dalla riga di comando utilizzando , vedere [manpages](https://manpages.debian.org/buster/systemd/journalctl.1).
 
 ## <a name="https-certificates-for-self-hosted-applications"></a>Certificati HTTPS per applicazioni self-hosted
 

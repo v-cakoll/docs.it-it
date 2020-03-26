@@ -1,22 +1,22 @@
 ---
-title: Operatore stackalloc - Riferimenti per C#
-ms.date: 09/20/2019
+title: Stackalloc espressione - Riferimento c'è
+ms.date: 03/13/2020
 f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
-- stackalloc operator [C#]
-ms.openlocfilehash: 9c9767e0c9945a9589d049fa7abba192cb928ad5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+- stackalloc expression [C#]
+ms.openlocfilehash: 2e99ce8b1e44dfa040c1acac799a3a55b375bd91
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846252"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546601"
 ---
-# <a name="stackalloc-operator-c-reference"></a>Operatore stackalloc (Riferimenti per C#)
+# <a name="stackalloc-expression-c-reference"></a>stackalloc (riferimenti per C
 
-L'operatore `stackalloc` alloca un blocco di memoria nello stack. Un blocco di memoria allocato nello stack, creato durante l'esecuzione del metodo, viene automaticamente eliminato alla restituzione del metodo. Non è possibile eliminare esplicitamente memoria allocata con l'operatore `stackalloc`. Un blocco di memoria allocato dello stack non è soggetto a [Garbage Collection](../../../standard/garbage-collection/index.md) e non deve essere bloccato con [ `fixed` un'istruzione](../keywords/fixed-statement.md).
+Un'espressione `stackalloc` alloca un blocco di memoria nello stack. Un blocco di memoria allocato nello stack, creato durante l'esecuzione del metodo, viene automaticamente eliminato alla restituzione del metodo. Non è possibile liberare `stackalloc`in modo esplicito la memoria allocata con . Un blocco di memoria allocato dello stack non è soggetto a [Garbage Collection](../../../standard/garbage-collection/index.md) e non deve essere bloccato con [ `fixed` un'istruzione](../keywords/fixed-statement.md).
 
-È possibile assegnare il risultato dell'operatore `stackalloc` a una variabile di uno dei tipi seguenti:
+È possibile assegnare `stackalloc` il risultato di un'espressione a una variabile di uno dei seguenti tipi:
 
 - A partire da C <xref:System.Span%601?displayProperty=nameWithType> , <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>7.2, o , come illustrato nell'esempio seguente:
 
@@ -43,11 +43,23 @@ L'operatore `stackalloc` alloca un blocco di memoria nello stack. Un blocco di m
 
   Nel caso dei tipi puntatore, `stackalloc` è possibile utilizzare un'espressione solo in una dichiarazione di variabile locale per inizializzare la variabile.
 
-Il contenuto della memoria appena allocata non è definito. A partire dalla versione 7.3 di C, è possibile usare la sintassi dell'inizializzatore di matrice per definire il contenuto della memoria appena allocata. Nell'esempio seguente vengono illustrati vari modi per eseguire questa operazione.
+La quantità di memoria disponibile nello stack è limitata. Se si alloca troppa memoria <xref:System.StackOverflowException> nello stack, viene generata un'eccezione . Per evitare che, seguire le regole riportate di seguito:
+
+- Limitare la quantità di `stackalloc`memoria allocata con:
+
+  [!code-csharp[limit stackalloc](snippets/StackallocOperator.cs#LimitStackalloc)]
+
+  Poiché la quantità di memoria disponibile nello stack dipende dall'ambiente in cui viene eseguito il codice, essere conservativi quando si definisce il valore limite effettivo.
+
+- Evitare `stackalloc` di utilizzare loop interni. Allocare il blocco di memoria all'esterno di un ciclo e riutilizzarlo all'interno del ciclo.
+
+Il contenuto della memoria appena allocata non è definito. È necessario inizializzarlo prima dell'uso. Ad esempio, è <xref:System.Span%601.Clear%2A?displayProperty=nameWithType> possibile utilizzare il metodo che imposta `T`tutti gli elementi sul valore predefinito di tipo .
+
+A partire dalla versione 7.3 di C, è possibile usare la sintassi dell'inizializzatore di matrice per definire il contenuto della memoria appena allocata. Nell'esempio seguente vengono illustrati vari modi per eseguire questa operazione.
 
 [!code-csharp[stackalloc initialization](snippets/StackallocOperator.cs#StackallocInit)]
 
-In `stackalloc T[E]`expression `T` , deve essere `E` un tipo non [gestito](../builtin-types/unmanaged-types.md) e deve essere un'espressione di tipo [int](../builtin-types/integral-numeric-types.md).
+In `stackalloc T[E]`expression `T` , deve essere `E` un tipo non [gestito](../builtin-types/unmanaged-types.md) e deve restituire un valore [int](../builtin-types/integral-numeric-types.md) non negativo.
 
 ## <a name="security"></a>Security
 
@@ -62,5 +74,6 @@ Per altre informazioni, vedere la sezione [Relativa all'allocazione dello stack]
 - [Informazioni di riferimento su C#](../index.md)
 - [Operatori C#](index.md)
 - [Operatori relativi al puntatore](pointer-related-operators.md)
-- [Tipi di puntatore](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [Tipi puntatore](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Tipi correlati alla memoria e agli intervalli](../../../standard/memory-and-spans/index.md)
+- [Cosa fare e cosa non fare di stackalloc](https://vcsjones.dev/2020/02/24/stackalloc/)
