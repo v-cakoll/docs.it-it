@@ -1,4 +1,4 @@
-- name: Tipi base
+- name: Tipi di base
   href: index.md
   items:
     - name: Common Type System
@@ -30,22 +30,22 @@
         - name: Esecuzione di operazioni di formattazione
           href: performing-formatting-operations.md
           items:
-            - name: 'Procedura: aggiungere zeri iniziali a un numero'
+            - name: 'Procedura: Aggiungere zeri iniziali a un numero'
               href: how-to-pad-a-number-with-leading-zeros.md
-            - name: 'Procedura: estrarre il giorno della settimana da una data specifica'
+            - name: 'Procedura: Estrarre il giorno della settimana da una data specifica'
               href: how-to-extract-the-day-of-the-week-from-a-specific-date.md
-            - name: 'Procedura: definire e utilizzare provider di formati numerici personalizzati'
+            - name: 'Procedura: Definire e usare provider di formati numerici personalizzati'
               href: how-to-define-and-use-custom-numeric-format-providers.md
-            - name: 'Procedura: Eseguire il round trip dei valori di data e ora'
+            - name: 'Procedura: Valori di data e ora round trip'
               href: how-to-round-trip-date-and-time-values.md
-            - name: 'Procedura: visualizzare i millisecondi nei valori data e ora'
+            - name: 'Procedura: Visualizzare i millisecondi nei valori di data e ora'
               href: how-to-display-milliseconds-in-date-and-time-values.md
             - name: 'Procedura: Visualizzare le date in calendari non gregoriani'
               href: how-to-display-dates-in-non-gregorian-calendars.md
     - name: Modifica di stringhe
       href: manipulating-strings.md
       items:
-        - name: Procedure consigliate per l'utilizzo di stringhe
+        - name: Procedure consigliate per l'uso delle stringhe
           href: best-practices-strings.md
         - name: Operazioni di base su stringhe
           href: basic-string-operations.md
@@ -74,7 +74,7 @@
                   href: character-escapes-in-regular-expressions.md
                 - name: Classi di caratteri
                   href: character-classes-in-regular-expressions.md
-                - name: Punti di ancoraggio
+                - name: Ancoraggi
                   href: anchors-in-regular-expressions.md
                 - name: Costrutti di raggruppamento
                   href: grouping-constructs-in-regular-expressions.md
@@ -108,7 +108,7 @@
               items:
                 - name: 'Esempio: ricerca di HREF'
                   href: regular-expression-example-scanning-for-hrefs.md
-                - name: 'Esempio: modifica dei formati di data'
+                - name: 'Esempio: Modifica dei formati di data'
                   href: regular-expression-example-changing-date-formats.md
                 - name: 'Procedura: Estrarre un protocollo e un numero di porta da un URL'
                   href: how-to-extract-a-protocol-and-port-number-from-a-url.md
@@ -116,8 +116,10 @@
                   href: how-to-strip-invalid-characters-from-a-string.md
                 - name: Come verificare che le stringhe siano in formato di posta elettronica valido
                   href: how-to-verify-that-strings-are-in-valid-email-format.md
-        - name: Codifica dei caratteri in .NET
-          href: character-encoding.md
+    - name: Codifica dei caratteri in .NET
+      href: character-encoding-introduction.md
+    - name: Come usare le classi di codifica caratteri
+      href: character-encoding.md
     - name: Analisi di stringhe
       href: parsing-strings.md
       items:
