@@ -1,33 +1,33 @@
 ---
-title: "Procedura: Aggiungere un'animazione allo spessore di un bordo usando i fotogrammi chiave"
+title: 'Procedura: animare lo spessore di un bordo utilizzando frame chiave'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], border thickness with key frames
 - key frames [WPF], animating border thickness with
 - border thickness [WPF], animating with key frames
 ms.assetid: 3a9cb463-0a63-407d-aae7-3fbb1a559947
-ms.openlocfilehash: 101fd077bf125faadbd9a0186c2282e4b20ee78f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 884b62e88c347449ae39caa9c028d09db39b9f4b
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699032"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344697"
 ---
-# <a name="how-to-animate-the-thickness-of-a-border-by-using-key-frames"></a>Procedura: Aggiungere un'animazione allo spessore di un bordo usando i fotogrammi chiave
-In questo esempio illustra come animare la <xref:System.Windows.Controls.Control.BorderThickness%2A> proprietà di un <xref:System.Windows.Controls.Border>.  
+# <a name="how-to-animate-the-thickness-of-a-border-by-using-key-frames"></a>Procedura: animare lo spessore di un bordo utilizzando frame chiave
+In questo esempio viene <xref:System.Windows.Controls.Control.BorderThickness%2A> illustrato <xref:System.Windows.Controls.Border>come animare la proprietà di un oggetto .  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente usa il <xref:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames> classe per animare la <xref:System.Windows.Controls.Control.BorderThickness%2A> proprietà di un <xref:System.Windows.Controls.Border>. Questa animazione usa tre fotogrammi chiave nel modo seguente:  
+ Nell'esempio riportato di seguito viene utilizzata la <xref:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames> classe per animare la <xref:System.Windows.Controls.Control.BorderThickness%2A> proprietà di un <xref:System.Windows.Controls.Border>oggetto . Questa animazione usa tre fotogrammi chiave nel modo seguente:  
   
-1. Il primo mezzo secondo viene usata un'istanza del <xref:System.Windows.Media.Animation.LinearThicknessKeyFrame> classe per aumentare gradualmente lo spessore del bordo. L'esempio Usa <xref:System.Windows.Media.Animation.LinearThicknessKeyFrame> per creare un aumento lineare uniforme tra i valori.  
+1. Durante il primo mezzo secondo, <xref:System.Windows.Media.Animation.LinearThicknessKeyFrame> utilizza un'istanza della classe per aumentare gradualmente lo spessore del bordo. Nell'esempio <xref:System.Windows.Media.Animation.LinearThicknessKeyFrame> viene utilizzato per creare un aumento lineare uniforme tra i valori.  
   
-2. Alla fine del successivo mezzo secondo viene usata un'istanza del <xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame> classe per aumentare rapidamente lo spessore del bordo. Fotogrammi chiave discreti come quelli derivati da <xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame> creano salti improvvisi tra valori, vale a dire, lo spostamento dell'animazione è a scatti.  
+2. Alla fine del mezzo secondo successivo, utilizza <xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame> un'istanza della classe per aumentare improvvisamente lo spessore del bordo. I fotogrammi chiave discreti come quelli derivati da <xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame> creano salti improvvisi tra i valori, ovvero il movimento dell'animazione è a scatti.  
   
-3. I due secondi finali viene usata un'istanza del <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame> classe per diminuire gradualmente lo spessore del bordo. I fotogrammi chiave spline come quelli derivati da <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame> creano una transizione variabile tra i valori a seconda dei valori del <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame.KeySpline%2A> proprietà. In questo fotogramma chiave l'animazione inizia a spostarsi lentamente, quindi accelera in modo esponenziale verso la fine del segmento temporale.  
+3. Durante gli ultimi due secondi, <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame> utilizza un'istanza della classe per ridurre lo spessore del bordo. I fotogrammi chiave spline come quelli derivati da <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame> creano <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame.KeySpline%2A> una transizione variabile tra valori in base ai valori della proprietà. In questo fotogramma chiave l'animazione inizia a spostarsi lentamente, quindi accelera in modo esponenziale verso la fine del segmento temporale.  
   
  [!code-xaml[keyframes_snip#ThicknessAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/ThicknessAnimationUsingKeyFramesExample.xaml#thicknessanimationusingkeyframeswholepage)]  
   
- Per l'esempio completo, vedere [Esempio di animazione con fotogrammi chiave](https://go.microsoft.com/fwlink/?LinkID=160012).  
+ Per l'esempio completo, vedere [Esempio di animazione con fotogrammi chiave](https://github.com/microsoft/WPF-Samples/tree/master/Animation/KeyFrameAnimation).  
   
 ## <a name="see-also"></a>Vedere anche
 

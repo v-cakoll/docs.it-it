@@ -4,12 +4,12 @@ description: I recenti miglioramenti apportati al linguaggio C# consentono di sc
 ms.date: 10/23/2018
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: bb53264f61192c042da469ba687da6c472e8c6d4
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 365320fef5a2f9cd123086c1baed9a786ede9f05
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79506983"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345086"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Scrivere codice C# sicuro ed efficiente
 
@@ -17,11 +17,11 @@ Le nuove funzionalità di C# consentono di scrivere codice sicuro verificabile c
 
 Gran parte del codice di esempio in questo articolo usa le funzionalità aggiunte in C# 7.2. Per usare tali funzionalità, è necessario configurare il progetto per l'uso di C# 7.2 o versione successiva. Per ulteriori informazioni sull'impostazione della versione della lingua, vedere [configurare la versione della lingua](language-reference/configure-language-version.md).
 
-Questo articolo è incentrato sulle tecniche per la gestione efficiente delle risorse. Un vantaggio dell'uso dei tipi valore è che spesso evitano le allocazioni di heap. Lo svantaggio è invece che vengono copiati in base al valore. Risulta quindi più difficile ottimizzare gli algoritmi che operano su grandi quantità di dati. Le nuove funzionalità del linguaggio C# 7.2 forniscono meccanismi che abilitano il codice sicuro efficiente tramite i riferimenti ai tipi valore. Usare queste funzionalità con criterio, per ridurre al minimo sia le allocazioni che le operazioni di copia. Questo articolo esamina le nuove funzionalità.
+Questo articolo è incentrato sulle tecniche per la gestione efficiente delle risorse. Un vantaggio dell'uso dei tipi valore è che spesso evitano le allocazioni di heap. Lo svantaggio è invece che vengono copiati in base al valore. Questo compromesso rende più difficile ottimizzare gli algoritmi che operano su grandi quantità di dati. Le nuove funzionalità del linguaggio C# 7.2 forniscono meccanismi che abilitano il codice sicuro efficiente tramite i riferimenti ai tipi valore. Usare queste funzionalità con criterio, per ridurre al minimo sia le allocazioni che le operazioni di copia. Questo articolo esamina le nuove funzionalità.
 
 Questo articolo è incentrato sulle tecniche per la gestione delle risorse seguenti:
 
-- Dichiarare [`readonly struct`](language-reference/keywords/readonly.md#readonly-struct-example) un per esprimere che un tipo non è **modificabile** e [`in`](language-reference/keywords/in-parameter-modifier.md) consente al compilatore di salvare le copie quando si utilizzano parametri.
+- Dichiarare [`readonly struct`](language-reference/builtin-types/struct.md#readonly-struct) un per esprimere che un tipo non è **modificabile.** Ciò consente al compilatore di [`in`](language-reference/keywords/in-parameter-modifier.md) salvare copie difensive quando si utilizzano parametri.
 - Se un tipo non può essere immutabile, dichiarare `struct` i membri `readonly` per indicare che il membro non modifica lo stato.
 - Utilizzare [`ref readonly`](language-reference/keywords/ref.md#reference-return-values) un valore restituito quando `struct` il <xref:System.IntPtr.Size?displayProperty=nameWithType> valore restituito è maggiore di e la durata di archiviazione è maggiore del metodo che restituisce il valore.
 - Quando le dimensioni di `readonly struct` sono maggiori di <xref:System.IntPtr.Size?displayProperty=nameWithType>, è consigliabile passarle come parametro `in` per motivi di prestazioni.

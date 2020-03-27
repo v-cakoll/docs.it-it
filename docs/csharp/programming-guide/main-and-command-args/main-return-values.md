@@ -4,12 +4,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: eaa78c33613093bb0e108870669392d07d346a95
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3d97ab2b3f53179cb184f2ad3944ea29ff5566a2
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77504004"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345120"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Valori restituiti da Main() (Guida per programmatori C#)
 
@@ -25,7 +25,7 @@ Se il valore restituito da `Main` non viene usato, la restituzione di `void` con
 
 ## <a name="example"></a>Esempio
 
-Questo esempio usa gli strumenti della riga di comando [.NET Core](../../../core/index.md). Per acquisire familiarità con gli strumenti della riga di comando .NET Core, vedere questo [argomento introduttivo](../../../core/tutorials/cli-create-console-app.md).
+Questo esempio usa gli strumenti della riga di comando [.NET Core](../../../core/index.yml). Per acquisire familiarità con gli strumenti della riga di comando .NET Core, vedere questo [argomento introduttivo](../../../core/tutorials/cli-create-console-app.md).
 
 Convertire il metodo `Main` in *program.cs* come indicato di seguito:
 
@@ -97,7 +97,7 @@ Quando il punto di ingresso dell'applicazione restituisce `Task` o `Task<int>` i
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../index.md)
+- [Guida alla programmazione in C](../index.md)
 - [Guida di riferimento a C](../index.md)
-- [Main() e argomenti della riga di comando](index.md)
+- [Argomenti della riga di comando e Main()](index.md)
 - [Come visualizzare gli argomenti della riga di comando](./how-to-display-command-line-arguments.md)

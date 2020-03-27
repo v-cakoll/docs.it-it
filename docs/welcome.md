@@ -3,12 +3,12 @@ title: Introduzione a .NET
 description: Introduzione alla famiglia di tecnologie .NET.
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: bfc9b55f06a5830c13df52f992d2630f1f45d8be
-ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+ms.openlocfilehash: f5673f91545b98fb706d8f1cc03ef7746f1b19b8
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80228790"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345300"
 ---
 # <a name="welcome-to-net"></a>Introduzione a .NET
 
@@ -43,7 +43,7 @@ Per informazioni sulle funzionalità più recenti aggiunte alle implementazioni 
 Questa documentazione illustra tutte le funzionalità di .NET attraverso piattaforme e linguaggi. È possibile iniziare a conoscere .NET e i suoi linguaggi nelle sezioni seguenti:
 
 - [Guida di .NET](standard/index.md)
-- [Guida di .NET Core](core/index.md)
+- [Guida di .NET Core](core/index.yml)
 - [Guida di .NET Framework](framework/index.yml)
 - [Guida di C](csharp/index.yml)
 - [Guida di F](fsharp/index.yml)

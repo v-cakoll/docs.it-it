@@ -1,38 +1,38 @@
 ---
-title: "Procedura: Aggiungere un'animazione a una matrice usando fotogrammi chiave"
+title: 'Procedura: animare una matrice utilizzando fotogrammi chiave'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], Matrix properties with key frames
 - Matrix properties [WPF], animating with key frames
 - key frames [WPF], animating Matrix properties with
 ms.assetid: b851a4c7-ecb1-420e-9203-83e7afd037fd
-ms.openlocfilehash: 6aa3e27cdfda7597c9b6acbf2980a2774f2b667b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: eb596cf728f8a7cc1964963b8509f42bdd7a392a
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963031"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344910"
 ---
-# <a name="how-to-animate-a-matrix-by-using-key-frames"></a>Procedura: Aggiungere un'animazione a una matrice usando fotogrammi chiave
-In questo esempio viene illustrato come animare <xref:System.Windows.Media.MatrixTransform.Matrix%2A> la proprietà di <xref:System.Windows.Media.MatrixTransform> un oggetto utilizzando fotogrammi chiave.  
+# <a name="how-to-animate-a-matrix-by-using-key-frames"></a>Procedura: animare una matrice utilizzando fotogrammi chiave
+In questo esempio viene <xref:System.Windows.Media.MatrixTransform.Matrix%2A> illustrato <xref:System.Windows.Media.MatrixTransform> come animare la proprietà di un utilizzando fotogrammi chiave.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene usata <xref:System.Windows.Media.Animation.MatrixAnimationUsingKeyFrames> la classe per aggiungere un' <xref:System.Windows.Media.MatrixTransform.Matrix%2A> animazione alla proprietà <xref:System.Windows.Media.MatrixTransform>di un oggetto. Nell'esempio viene utilizzato <xref:System.Windows.Media.MatrixTransform> l'oggetto per trasformare l'aspetto e la posizione <xref:System.Windows.Controls.Button>di un oggetto.  
+ Nell'esempio riportato di seguito viene utilizzata la <xref:System.Windows.Media.Animation.MatrixAnimationUsingKeyFrames> classe per animare la <xref:System.Windows.Media.MatrixTransform.Matrix%2A> proprietà di un <xref:System.Windows.Media.MatrixTransform>oggetto . Nell'esempio <xref:System.Windows.Media.MatrixTransform> viene utilizzato l'oggetto per <xref:System.Windows.Controls.Button>trasformare l'aspetto e la posizione di un oggetto .  
   
- Questa animazione usa la <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> classe per creare due fotogrammi chiave ed esegue le operazioni seguenti:  
+ Questa animazione <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> usa la classe per creare due fotogrammi chiave ed esegue le operazioni seguenti:This animation uses the class to create two key frames and does the following with them:  
   
-1. Anima il primo <xref:System.Windows.Media.Matrix> durante i primi 0,2 secondi. Nell'esempio vengono modificate <xref:System.Windows.Media.Matrix.M11%2A> le <xref:System.Windows.Media.Matrix.M12%2A> proprietà e di <xref:System.Windows.Media.Matrix>. Questa modifica determina l'estensione del pulsante e la distorsione. Nell'esempio vengono anche modificate <xref:System.Windows.Media.Matrix.OffsetX%2A> le <xref:System.Windows.Media.Matrix.OffsetY%2A> proprietà e in modo che il pulsante cambi la posizione.  
+1. Aggiunge un'animazione al primo <xref:System.Windows.Media.Matrix> durante i primi 0,2 secondi. Nell'esempio <xref:System.Windows.Media.Matrix.M11%2A> vengono <xref:System.Windows.Media.Matrix.M12%2A> modificate <xref:System.Windows.Media.Matrix>le proprietà e dell'oggetto . Questa modifica fa sì che il pulsante si allunghi e diventi inclinato. Nell'esempio vengono <xref:System.Windows.Media.Matrix.OffsetX%2A> <xref:System.Windows.Media.Matrix.OffsetY%2A> modificate anche le proprietà e in modo che il pulsante cambi posizione.  
   
-2. Aggiunge un'animazione alla <xref:System.Windows.Media.Matrix> seconda a 1,0 secondi. Il pulsante si sposta in un'altra posizione mentre il pulsante non è più inclinato o allungato.  
+2. Aggiunge un'animazione al secondo <xref:System.Windows.Media.Matrix> a 1,0 secondi. Il pulsante si sposta in un'altra posizione mentre il pulsante non è più inclinato o allungato.  
   
-3. Ripete l'animazione per un periodo illimitato.  
+3. Ripete l'animazione all'infinito.  
   
 > [!NOTE]
-> I fotogrammi chiave che derivano dall' <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> oggetto creano salti improvvisi tra i valori, ovvero lo spostamento dell'animazione è Jerky.  
+> I fotogrammi chiave <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> che derivano dall'oggetto creano salti improvvisi tra i valori, ovvero il movimento dell'animazione è a scatti.  
   
  [!code-xaml[keyframes_snip#MatrixAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/MatrixAnimationUsingKeyFramesExample.xaml#matrixanimationusingkeyframeswholepage)]  
   
- Per l'esempio completo, vedere [Esempio di animazione con fotogrammi chiave](https://go.microsoft.com/fwlink/?LinkID=160012).  
+ Per l'esempio completo, vedere [Esempio di animazione con fotogrammi chiave](https://github.com/microsoft/WPF-Samples/tree/master/Animation/KeyFrameAnimation).  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -2,12 +2,12 @@
 title: Esercitazioni su C#
 description: Esplorare queste esercitazioni di C# per apprendere come si compilano i programmi in C# e conoscere le funzionalità del linguaggio C#.
 ms.date: 10/25/2018
-ms.openlocfilehash: 8adbec3311c7a0e88475734312ecc3621042c3f3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 57d2471ef8ad06eb821a1d1d88210dfbb8dc732e
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75346791"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345102"
 ---
 # <a name="c-tutorials"></a>Esercitazioni su C#
 
@@ -19,7 +19,7 @@ Se si desidera iniziare l'esplorazione in formato video, la serie di [video di C
 
 Nella prima lezione vengono spiegati i concetti di C# usando piccoli frammenti di codice. Si apprenderanno le nozioni di base della sintassi di C# e si scoprirà come usare i tipi di dati come stringhe, numeri e valori booleani. Tutte le istruzioni sono interattive e si imparerà a scrivere e a eseguire codice in pochi minuti. Per queste prime lezioni non è richiesta alcuna conoscenza pregressa di programmazione o del linguaggio C#.
 
-## <a name="hello-world"></a>[Salve, mondo](intro-to-csharp/hello-world.yml)
+## <a name="hello-world"></a>[Hello world](intro-to-csharp/hello-world.yml)
 
 Nell'esercitazione [Hello World](intro-to-csharp/hello-world.yml) verrà creato il programma C# più semplice. Si esaminerà il tipo `string` e verranno illustrate le procedure per lavorare con il testo.
 
@@ -56,7 +56,7 @@ Tutte le esercitazioni introduttive successive alla lezione relativa a Hello Wor
 
 ## <a name="general-tutorials"></a>Esercitazioni generali
 
-Le esercitazioni seguenti consentono di creare programmi C# usando [.NET Core](../../core/index.md):
+Le esercitazioni seguenti consentono di creare programmi C# usando [.NET Core](../../core/index.yml):
 
 * [Applicazione console](console-teleprompter.md): illustra l'I/O della console, la struttura di un'applicazione console e le nozioni di base del modello di programmazione asincrono basato su attività.
 * [Client REST](console-webapiclient.md): questa esercitazione illustra le comunicazioni Web, la serializzazione JSON e le funzionalità orientate agli oggetti nel linguaggio C#.

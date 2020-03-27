@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Aggiungere un'animazione a un valore booleano usando fotogrammi chiave"
+title: 'Procedura: animare un valore Boolean utilizzando fotogrammi chiave'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,24 +9,24 @@ helpviewer_keywords:
 - animation [WPF], Booleans with key frames
 - key frames [WPF], animating Booleans with
 ms.assetid: 4b0fac96-6231-4fcf-9775-4dd673ddc785
-ms.openlocfilehash: 59a72916721cccbe66f704253f148828fa8cd418
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 35704996dcf21fe463169dc13572941bcd8fbad1
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020205"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344926"
 ---
-# <a name="how-to-animate-a-boolean-by-using-key-frames"></a>Procedura: Aggiungere un'animazione a un valore booleano usando fotogrammi chiave
-In questo esempio illustra come animare il valore booleano della proprietà di un <xref:System.Windows.Controls.Button> controllo usando fotogrammi chiave.  
+# <a name="how-to-animate-a-boolean-by-using-key-frames"></a>Procedura: animare un valore Boolean utilizzando fotogrammi chiave
+In questo esempio viene illustrato come <xref:System.Windows.Controls.Button> animare il valore della proprietà Boolean di un controllo utilizzando fotogrammi chiave.  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente usa il <xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames> classe per animare la <xref:System.Windows.UIElement.IsEnabled%2A> proprietà di un <xref:System.Windows.Controls.Button> controllo. Tutti i fotogrammi chiave in questo esempio usano un'istanza di <xref:System.Windows.Media.Animation.DiscreteBooleanKeyFrame> classe. Fotogrammi chiave discreti come <xref:System.Windows.Media.Animation.DiscreteBooleanKeyFrame> creano salti improvvisi tra valori, vale a dire, lo spostamento dell'animazione è a scatti.  
+ Nell'esempio seguente <xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames> viene utilizzata <xref:System.Windows.UIElement.IsEnabled%2A> la <xref:System.Windows.Controls.Button> classe per animare la proprietà di un controllo. Tutti i fotogrammi chiave in questo <xref:System.Windows.Media.Animation.DiscreteBooleanKeyFrame> esempio usano un'istanza della classe. I fotogrammi <xref:System.Windows.Media.Animation.DiscreteBooleanKeyFrame> chiave discreti come creano salti improvvisi tra i valori, ovvero il movimento dell'animazione è a scatti.  
   
  [!code-csharp[keyframes_snip#BooleanAnimationUsingKeyFramesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/BooleanAnimationUsingKeyFramesExample.cs#booleananimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#BooleanAnimationUsingKeyFramesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/booleananimationusingkeyframesexample.vb#booleananimationusingkeyframeswholepage)]
  [!code-xaml[keyframes_snip#BooleanAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/BooleanAnimationUsingKeyFramesExample.xaml#booleananimationusingkeyframeswholepage)]  
   
- Per l'esempio completo, vedere [Esempio di animazione con fotogrammi chiave](https://go.microsoft.com/fwlink/?LinkID=160012).  
+ Per l'esempio completo, vedere [Esempio di animazione con fotogrammi chiave](https://github.com/microsoft/WPF-Samples/tree/master/Animation/KeyFrameAnimation).  
   
 ## <a name="see-also"></a>Vedere anche
 

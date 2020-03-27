@@ -4,12 +4,12 @@ description: Informazioni su come usare lo strumento .NET Portability Analyzer p
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: e0a5c791926b36fe5a35c5446471c3dcdb75cd7b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 397d9f08a0dd28f80d653ac5044d6acfa2418727
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "72774383"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344305"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -19,7 +19,7 @@ Dopo aver convertito il progetto per la nuova piattaforma, ad esempio .NET Core,
 
 ## <a name="common-targets"></a>Destinazioni comuni
 
-- [.NET Core](../../core/index.md): ha una struttura modulare, con assembly affiancato ed è destinato a scenari multi-piattaforma. La modalità affiancata consente di adottare le nuove versioni di .NET Core senza interrompere le altre applicazioni. Se l'obiettivo è di convertire l'app in una versione di .NET Core che supporta architetture multipiattaforma, questa è la destinazione consigliata.
+- [.NET Core](../../core/index.yml): ha una struttura modulare, con assembly affiancato ed è destinato a scenari multi-piattaforma. La modalità affiancata consente di adottare le nuove versioni di .NET Core senza interrompere le altre applicazioni. Se l'obiettivo è di convertire l'app in una versione di .NET Core che supporta architetture multipiattaforma, questa è la destinazione consigliata.
 - . [NET Standard](../../standard/net-standard.md): Include le API .NET Standard disponibili in tutte le implementazioni di .NET. Se l'obiettivo è poter eseguire la libreria in tutte le piattaforme supportate da .NET, questa è la destinazione consigliata.
 - [ASP.NET Core](/aspnet/core): un moderno framework Web basato su .NET Core. Se l'obiettivo è di convertire l'app Web in .NET Core per supportare più piattaforme, questa è la destinazione consigliata.
 - Estensioni di [piattaforma](../../core/porting/windows-compat-pack.md).NET Core : include le API di .NET Core oltre a Windows Compatibility Pack, che fornisce molte delle tecnologie disponibili per .NET Framework. Questa è una destinazione consigliata per la conversione dell'app da .NET Framework a .NET Core in Windows.

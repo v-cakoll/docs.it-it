@@ -2,16 +2,16 @@
 title: Componenti di base e open-source di .NET
 ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
-ms.openlocfilehash: b5aa42d0460d743bffe8f17a2603773c03c09ce0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a8f44eedddc4424b39f7aedceb4bb8f02c6feb42
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181605"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345037"
 ---
 # <a name="net-core-and-open-source"></a>.NET Core e open source
 
-Questo articolo fornisce una breve panoramica di .NET Core e viene illustrato come trovare ulteriori informazioni. Per trovare l'elenco completo della documentazione relativa a .NET Core, visitare la [guida .NET Core](../../core/index.md).
+Questo articolo fornisce una breve panoramica di .NET Core e viene illustrato come trovare ulteriori informazioni. Per trovare l'elenco completo della documentazione relativa a .NET Core, visitare la [guida .NET Core](../../core/index.yml).
 
 ## <a name="what-is-net-core"></a>Informazioni su .NET Core  
 
@@ -46,5 +46,5 @@ The .NET Core platform is made up of several components, including the managed c
 ## <a name="see-also"></a>Vedere anche
 
 - [Esercitazione su .NET - Hello World in 10 minuti](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)
-- [Guida a .NET Core](../../core/index.md)
+- [Guida a .NET Core](../../core/index.yml)
 - [Documenti di ASP.NET Core](/aspnet/core/)

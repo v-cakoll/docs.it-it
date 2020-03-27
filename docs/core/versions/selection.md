@@ -3,13 +3,13 @@ title: Selezionare la versione di .NET Core da usare
 description: Informazioni su come .NET Core ricerca e sceglie automaticamente le versioni runtime per un programma. Questo articolo illustra anche come forzare una versione specifica.
 author: thraka
 ms.author: adegeo
-ms.date: 06/26/2019
-ms.openlocfilehash: 55f04ce81f63753831fca8fa2e44811c44049733
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 03/24/2020
+ms.openlocfilehash: 26aecdf2bf3ebd033e80eec26159eb9fa3cd54dd
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398825"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345165"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Selezionare la versione di .NET Core da usare
 
@@ -45,7 +45,7 @@ L'esempio seguente mostra la sintassi del file *global.json*:
 ``` json
 {
   "sdk": {
-    "version": "2.0.0"
+    "version": "3.0.0"
   }
 }
 ```
@@ -63,54 +63,59 @@ Altre informazioni sulla selezione di una versione dell'SDK sono disponibili nel
 Il progetto viene compilato con le API definite in un **moniker del framework di destinazione** (TFM). Il [framework di destinazione](../../standard/frameworks.md) deve essere specificato nel file di progetto. Impostare l'elemento `TargetFramework` nel file di progetto come illustrato nell'esempio seguente:
 
 ``` xml
-<TargetFramework>netcoreapp2.0</TargetFramework>
+<TargetFramework>netcoreapp3.0</TargetFramework>
 ```
 
 È possibile compilare il progetto usando più TFM. L'impostazione di più framework di destinazione è una pratica più comune per le librerie, ma può essere usata anche con le applicazioni. Occorre specificare una proprietà `TargetFrameworks` (plurale di `TargetFramework`). I framework di destinazione sono delimitati da punto e virgola come illustrato nell'esempio seguente:
 
 ``` xml
-<TargetFrameworks>netcoreapp2.0;net47</TargetFrameworks>
+<TargetFrameworks>netcoreapp3.0;net47</TargetFrameworks>
 ```
 
-Una determinata versione di SDK supporta un set fisso di framework, inclusivo del framework di destinazione del runtime con cui viene offerto. .NET Core 2.0 SDK, ad esempio, include il runtime .NET Core 2.0, che è un'implementazione del framework di destinazione `netcoreapp2.0`. .NET Core 2.0 SDK supporta `netcoreapp1.0`, `netcoreapp1.1` e `netcoreapp2.0` ma non `netcoreapp2.1` (o versione superiore). Occorre installare .NET Core 2.1 SDK per compilare `netcoreapp2.1`.
+Una determinata versione di SDK supporta un set fisso di framework, inclusivo del framework di destinazione del runtime con cui viene offerto. Ad esempio, .NET Core 3.0 SDK include il runtime di .NET `netcoreapp3.0` Core 3.0, che è un'implementazione del framework di destinazione. .NET Core 3.0 SDK `netcoreapp2.1` `netcoreapp2.2`supporta `netcoreapp3.0`, `netcoreapp3.1` , , ma non (o versione successiva). Installare .NET Core 3.1 SDK `netcoreapp3.1`per compilare per .
 
-I framework di destinazione .NET Standard sono anche limitati al framework di destinazione del runtime fornito con SDK. .NET Core 2.0 SDK è limitato a `netstandard2.0`.
+I framework di destinazione .NET Standard sono anche limitati al framework di destinazione del runtime fornito con SDK. Il limite di .NET Core 3.1 SDK è limitato a `netstandard2.1`. Per altre informazioni, vedere [.NET Standard](../../standard/net-standard.md).
 
 ## <a name="framework-dependent-apps-roll-forward"></a>Roll forward delle app dipendenti dal framework
 
 Quando si esegue un'applicazione dall'origine [`dotnet run`](../tools/dotnet-run.md)con , da una distribuzione dipendente dal [**framework**](../deploying/index.md#publish-runtime-dependent) con [`dotnet myapp.dll`](../tools/dotnet.md#description), o da un [**eseguibile dipendente dal framework**](../deploying/index.md#publish-runtime-dependent) con `myapp.exe`, l'eseguibile `dotnet` è l'host dell'applicazione. **host**
 
-L'host sceglie la versione di patch più recente installata nel computer. Se ad esempio è stato specificato `netcoreapp2.0` nel file di progetto e `2.0.4` è il runtime .NET più recente installato, viene usato il runtime `2.0.4`.
+L'host sceglie la versione di patch più recente installata nel computer. Se ad esempio è stato specificato `netcoreapp3.0` nel file di progetto e `3.0.4` è il runtime .NET più recente installato, viene usato il runtime `3.0.4`.
 
-Se non viene trovata alcuna versione `2.0.*` accettabile, viene usata una nuova versione `2.*`. Se ad esempio è stato specificato `netcoreapp2.0` ed è installata solo la versione `2.1.0`, l'applicazione viene eseguita usando il runtime `2.1.0`. Questo comportamento è detto "roll forward della versione secondaria". Le versioni minori non verranno prese in considerazione. Se non è installato alcun runtime accettabile, l'applicazione non viene eseguita.
+Se non viene trovata alcuna versione `3.0.*` accettabile, viene usata una nuova versione `3.*`. Se ad esempio è stato specificato `netcoreapp3.0` ed è installata solo la versione `3.1.0`, l'applicazione viene eseguita usando il runtime `3.1.0`. Questo comportamento è detto "roll forward della versione secondaria". Le versioni minori non verranno prese in considerazione. Se non è installato alcun runtime accettabile, l'applicazione non viene eseguita.
 
-Alcuni esempi d'uso dimostrano il comportamento quando la destinazione è 2.0:
+Alcuni esempi di utilizzo illustrano il comportamento, se si mira 3.0:A few usage examples demonstrate the behavior, if you target 3.0:
 
-- È specificata la versione 2.0. 2.0.5 è la versione di patch più recente installata. Viene usata la versione 2.0.5.
-- È specificata la versione 2.0. Non è installata alcuna versione 2.0.*. 1.1.1 è il runtime più recente installato. Viene visualizzato un messaggio di errore.
-- È specificata la versione 2.0. Non è installata alcuna versione 2.0.*. 2.2.2 è la versione di runtime 2.x più recente installata. Viene usata la versione 2.2.2.
-- È specificata la versione 2.0. Non è installata alcuna versione 2.x. È installata la versione 3.0.0. Viene visualizzato un messaggio di errore.
+- ✔️ 3.0 è specificato. 3.0.5 è la versione di patch più alta installata. 3.0.5 viene utilizzato.
+- ❌3.0 è specificato. Non sono installate versioni 3.0. 2.1.1 è il runtime più alto installato. Viene visualizzato un messaggio di errore.
+- ✔️ 3.0 è specificato. Non sono installate versioni 3.0. 3.1.0 è la versione di runtime più recente installata. 3.1.0.
+- ❌2.0 è specificato. Non è installata alcuna versione 2.x. 3.0.0 è il runtime più alto installato. Viene visualizzato un messaggio di errore.
 
 Il roll forward della versione secondaria presenta un effetto collaterale che può interessare gli utenti finali. Si consideri lo scenario seguente:
 
-1. L'applicazione specifica che è necessaria la versione 2.0.
-2. Al momento dell'esecuzione non è installata la versione 2.0.* ma la versione 2.2.2. Verrà usata la versione 2.2.2.
-3. In un secondo momento, l'utente installerà la versione 2.0.5 ed eseguirà nuovamente l'applicazione, dopodiché verrà usata la versione 2.0.5.
+1. L'applicazione specifica che è necessario 3.0.
+2. Quando viene eseguita, non è installata la versione 3.0. Verrà utilizzata la versione 3.1.0.
+3. Successivamente, l'utente installa 3.0.5 ed esegue nuovamente l'applicazione, 3.0.5 verrà ora utilizzato.
 
-È possibile che le versioni 2.0.5 e 2.2.2 si comportino diversamente, in particolare per gli scenari come la serializzazione dei dati binari.
+È possibile che 3.0.5 e 3.1.0 si comportino in modo diverso, in particolare per scenari come la serializzazione di dati binari.
 
 ## <a name="self-contained-deployments-include-the-selected-runtime"></a>Distribuzioni autonome con runtime selezionato
 
 È possibile pubblicare un'applicazione come [**distribuzione autonoma**](../deploying/index.md#publish-self-contained). Questo approccio raggruppa il runtime e le librerie di .NET Core con l'applicazione. Le distribuzioni autonome non hanno dipendenze dagli ambienti di runtime. La scelta della versione di runtime avviene al momento della pubblicazione non in base di esecuzione.
 
-Il processo di pubblicazione seleziona la versione di patch più recente della famiglia di runtime specificata. Il comando `dotnet publish` ad esempio selezionerà .NET Core 2.0.4 se è la versione di patch più recente nella famiglia di runtime .NET Core 2.0. Il framework di destinazione (incluse le patch di sicurezza più recenti) viene fornito con l'applicazione.
+Il processo di pubblicazione seleziona la versione di patch più recente della famiglia di runtime specificata. Ad esempio, selezionerà .NET Core 3.0.4 se si tratta della versione della patch più recente nella famiglia di runtime di .NET Core 3.0.For example, `dotnet publish` will select .NET Core 3.0.4 if it is the latest patch version in the .NET Core 3.0 runtime family. Il framework di destinazione (incluse le patch di sicurezza più recenti) viene fornito con l'applicazione.
 
 Se la versione minima specificata per un'applicazione non viene soddisfatta, si verifica un errore. `dotnet publish` esegue l'associazione alla versione di patch di runtime più recente (nella famiglia di versioni principale.secondaria specificata). `dotnet publish` non supporta la semantica del roll forward di `dotnet run`. Per altre informazioni su patch e distribuzioni autonome, vedere l'articolo sulla [selezione della patch di runtime](../deploying/runtime-patch-selection.md) nella distribuzione di applicazioni .NET Core.
 
 Le distribuzioni autonome potrebbero richiedere una versione di patch specifica. È possibile sostituire la versione di patch di runtime minima (per versioni superiori o inferiori) nel file di progetto, come illustrato nell'esempio seguente:
 
 ``` xml
-<RuntimeFrameworkVersion>2.0.4</RuntimeFrameworkVersion>
+<RuntimeFrameworkVersion>3.0.4</RuntimeFrameworkVersion>
 ```
 
 L'elemento `RuntimeFrameworkVersion` sostituisce i criteri di versione predefiniti. Per le distribuzioni autonome, l'elemento `RuntimeFrameworkVersion` specifica l'*esatta* versione del framework di runtime. Per le applicazioni dipendenti dal framework, l'elemento `RuntimeFrameworkVersion` specifica la versione di framework di runtime *minima* richiesta.
+
+## <a name="see-also"></a>Vedere anche
+
+- [Scaricare e installare .NET Core](../install/index.md).
+- [Come rimuovere .NET Core Runtime e SDK.](remove-runtime-sdk-versions.md)

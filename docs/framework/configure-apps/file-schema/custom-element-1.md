@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
-ms.openlocfilehash: 04360a796b18cf1e414f1f84bff247a1e9d8ef9c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0d765a9789ad566428b1fbda6c0863b10b98c363
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155154"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345068"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>Elemento personalizzato per SingleTagSectionHandler
 
@@ -22,10 +22,10 @@ sezione &nbsp; &nbsp;>[** \<**](configuration-element.md) * \<configurazioneNome
 ## <a name="syntax"></a>Sintassi
 
 ```xml
-<sectionName key="value" key2="value2" ... />
+<sectionName key="value" key2="value2" />
 ```
 
-## <a name="attributes"></a>Attributes
+## <a name="attributes"></a>Attributi
 
 Gli attributi e i valori degli attributi sono definiti dall'utente.
 

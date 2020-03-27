@@ -2,15 +2,15 @@
 title: 'Procedura: aggiungere capacità di individuazione a un client e un servizio WCF a livello di codice'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: dd96bc168413eef99260a5251e74971aa1309ff4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf89c793cbd72a0a3980e6ec8e42c688dcedec26
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184890"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344970"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Procedura: aggiungere capacità di individuazione a un client e un servizio WCF a livello di codice
-In questo argomento viene illustrato come rendere individuabile un servizio Windows Communication Foundation (WCF). Si basa sull'esempio [Self-Host.](https://go.microsoft.com/fwlink/?LinkId=145523)  
+In questo argomento viene illustrato come rendere individuabile un servizio Windows Communication Foundation (WCF). Si basa sull'esempio [Self-Host.](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host)  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Per configurare l'esempio di servizio indipendente esistente per l'individuazione  
   
@@ -124,7 +124,7 @@ In questo argomento viene illustrato come rendere individuabile un servizio Wind
   
      Questo metodo utilizza l'indirizzo endpoint restituito da `FindCalculatorServiceAddress` per chiamare il servizio di calcolo.  
   
-11. Creare all'interno del metodo `InvokeCalculatorService` un'istanza della classe `CalculatorServiceClient`. Questa classe è definita dall'esempio [Self-Host.This](https://go.microsoft.com/fwlink/?LinkId=145523) class is defined by the Self-Host sample. È stata generata utilizzando Svcutil.exe.  
+11. Creare all'interno del metodo `InvokeCalculatorService` un'istanza della classe `CalculatorServiceClient`. Questa classe è definita dall'esempio [Self-Host.This](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) class is defined by the Self-Host sample. È stata generata utilizzando Svcutil.exe.  
   
     ```csharp  
     // Create a client  
@@ -220,7 +220,7 @@ In questo argomento viene illustrato come rendere individuabile un servizio Wind
     ```  
   
 ## <a name="example"></a>Esempio  
- Di seguito è riportato un elenco del codice per questo esempio. Poiché questo codice è basato sull'esempio [Self-Host,](https://go.microsoft.com/fwlink/?LinkId=145523) vengono elencati solo i file modificati. Per ulteriori informazioni sull'esempio Self-Host, vedere [Istruzioni di installazione](https://go.microsoft.com/fwlink/?LinkId=145522).  
+ Di seguito è riportato un elenco del codice per questo esempio. Poiché questo codice è basato sull'esempio [Self-Host,](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) vengono elencati solo i file modificati. Per ulteriori informazioni sull'esempio Self-Host, vedere [Istruzioni di installazione](https://docs.microsoft.com/dotnet/framework/wcf/samples/set-up-instructions).  
   
 ```csharp  
 // Service.cs  

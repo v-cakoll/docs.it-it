@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Aggiungere un'animazione a un punto usando fotogrammi chiave"
+title: 'Procedura: animare un punto utilizzando fotogrammi chiave'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,32 +9,32 @@ helpviewer_keywords:
 - Points [WPF], animating with key frames
 - animation [WPF], Points with key frames
 ms.assetid: d2e2ef10-0773-4133-856e-d41c09f60ded
-ms.openlocfilehash: b706568a0e8221aac737780592882f728f0f9e9c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: edcba36644cf78d6e98f934d9bd8b593af38b328
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010163"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344872"
 ---
-# <a name="how-to-animate-a-point-by-using-key-frames"></a>Procedura: Aggiungere un'animazione a un punto usando fotogrammi chiave
-Questo esempio illustra come usare il <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames> classe per animare un <xref:System.Windows.Point>.  
+# <a name="how-to-animate-a-point-by-using-key-frames"></a>Procedura: animare un punto utilizzando fotogrammi chiave
+In questo esempio viene <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames> illustrato come <xref:System.Windows.Point>utilizzare la classe per animare un oggetto .  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente sposta un'ellisse lungo un tracciato triangolare. L'esempio Usa la <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames> classe per animare la <xref:System.Windows.Media.EllipseGeometry.Center%2A> proprietà di un <xref:System.Windows.Media.EllipseGeometry>. Questa animazione usa tre fotogrammi chiave nel modo seguente:  
+ L'esempio seguente sposta un'ellisse lungo un tracciato triangolare. Nell'esempio <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames> viene utilizzata <xref:System.Windows.Media.EllipseGeometry.Center%2A> la classe <xref:System.Windows.Media.EllipseGeometry>per animare la proprietà di un oggetto . Questa animazione usa tre fotogrammi chiave nel modo seguente:  
   
-1. Il primo mezzo secondo viene usata un'istanza del <xref:System.Windows.Media.Animation.LinearPointKeyFrame> classe per spostare l'ellisse lungo un tracciato a una velocità costante dalla posizione iniziale. Fotogrammi chiave lineari come <xref:System.Windows.Media.Animation.LinearPointKeyFrame> creano un'interpolazione lineare uniforme tra i valori.  
+1. Durante il primo mezzo secondo, <xref:System.Windows.Media.Animation.LinearPointKeyFrame> utilizza un'istanza della classe per spostare l'ellisse lungo un percorso a una velocità costante dalla posizione iniziale. I fotogrammi <xref:System.Windows.Media.Animation.LinearPointKeyFrame> chiave lineari, come quello di creare un'interpolazione lineare uniforme tra valori.  
   
-2. Alla fine del successivo mezzo secondo viene usata un'istanza del <xref:System.Windows.Media.Animation.DiscretePointKeyFrame> classe per spostare rapidamente l'ellisse alla lungo il percorso alla posizione successiva. Fotogrammi chiave discreti come <xref:System.Windows.Media.Animation.DiscretePointKeyFrame> creano salti improvvisi tra valori.  
+2. Durante la fine del mezzo secondo successivo, <xref:System.Windows.Media.Animation.DiscretePointKeyFrame> utilizza un'istanza della classe per spostare improvvisamente l'ellisse lungo il percorso alla posizione successiva. I fotogrammi <xref:System.Windows.Media.Animation.DiscretePointKeyFrame> chiave discreti, come ad esempio, creano salti improvvisi tra valori.  
   
-3. I due secondi finali viene usata un'istanza del <xref:System.Windows.Media.Animation.SplinePointKeyFrame> classe per riportare l'ellisse alla posizione iniziale. Ad esempio i fotogrammi chiave spline <xref:System.Windows.Media.Animation.SplinePointKeyFrame> creano una transizione variabile tra i valori a seconda dei valori del <xref:System.Windows.Media.Animation.SplinePointKeyFrame.KeySpline%2A> proprietà. In questo esempio, l'animazione inizia a spostarsi lentamente, quindi accelera in modo esponenziale verso la fine del segmento temporale.  
+3. Durante gli ultimi due secondi, <xref:System.Windows.Media.Animation.SplinePointKeyFrame> utilizza un'istanza della classe per spostare l'ellisse nella posizione iniziale. I fotogrammi <xref:System.Windows.Media.Animation.SplinePointKeyFrame> chiave della spline, ad esempio, <xref:System.Windows.Media.Animation.SplinePointKeyFrame.KeySpline%2A> creano una transizione variabile tra i valori in base ai valori della proprietà. In questo esempio, l'animazione inizia a spostarsi lentamente, quindi accelera in modo esponenziale verso la fine del segmento temporale.  
   
  [!code-csharp[keyframes_snip#PointAnimationUsingKeyFramesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/PointAnimationUsingKeyFramesExample.cs#pointanimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#PointAnimationUsingKeyFramesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/pointanimationusingkeyframesexample.vb#pointanimationusingkeyframeswholepage)]
  [!code-xaml[keyframes_snip#PointAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/PointAnimationUsingKeyFramesExample.xaml#pointanimationusingkeyframeswholepage)]  
   
- Per l'esempio completo, vedere [Esempio di animazione con fotogrammi chiave](https://go.microsoft.com/fwlink/?LinkID=160012).  
+ Per l'esempio completo, vedere [Esempio di animazione con fotogrammi chiave](https://github.com/microsoft/WPF-Samples/tree/master/Animation/KeyFrameAnimation).  
   
- Per coerenza con altri esempi di animazione, nelle versioni del codice di questo esempio usano un' <xref:System.Windows.Media.Animation.Storyboard> oggetto a cui applicare il <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>. Tuttavia, quando si applica una sola animazione al codice, è più semplice usare il <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> metodo invece di usare un <xref:System.Windows.Media.Animation.Storyboard>. Per un esempio, vedere [Animare una proprietà senza utilizzare uno storyboard](how-to-animate-a-property-without-using-a-storyboard.md).  
+ Per coerenza con altri esempi di animazione, <xref:System.Windows.Media.Animation.Storyboard> nelle versioni <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>di codice di questo esempio viene utilizzato un oggetto per applicare l'oggetto . Tuttavia, quando si applica una singola animazione nel <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> codice, è <xref:System.Windows.Media.Animation.Storyboard>più semplice utilizzare il metodo anziché un oggetto . Per un esempio, consultate [Animare una proprietà senza usare uno Storyboard](how-to-animate-a-property-without-using-a-storyboard.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -1,18 +1,18 @@
 ---
 title: Parola chiave readonly - Riferimenti per C#
-ms.date: 06/21/2018
+ms.date: 03/26/2020
 f1_keywords:
 - readonly_CSharpKeyword
 - readonly
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 165b6287e1610e013b289601e1535a08fdd3b5c9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 344d5e54fcd500e283c52fa7953c6366823f13f0
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399357"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345144"
 ---
 # <a name="readonly-c-reference"></a>readonly (Riferimenti per C#)
 
@@ -28,7 +28,7 @@ La `readonly` parola chiave è un modificatore che può essere utilizzato in qua
   > [!WARNING]
   > Un tipo visibile esternamente che contiene un campo di sola lettura visibile esternamente che è un tipo di riferimento modificabile può essere una vulnerabilità di sicurezza e può attivare l'avviso [CA2104:](/visualstudio/code-quality/ca2104) "Non dichiarare tipi di riferimento modificabili di sola lettura".
 
-- In una `readonly` `struct` [ `readonly struct` definizione](#readonly-struct-example), indica che l'oggetto è immutabile.
+- In `readonly struct` una definizione di tipo indica `readonly` che il tipo di struttura non è modificabile. Per altre informazioni, [ `readonly` ](../builtin-types/struct.md#readonly-struct) vedere la sezione struct dell'articolo [Tipi di struttura.](../builtin-types/struct.md)
 - In una `readonly` `struct` [ `readonly` definizione](#readonly-member-examples)di membro , indica che un membro di un oggetto non modifica lo stato interno dello struct.
 - In [ `ref readonly` ](#ref-readonly-return-example)un metodo `readonly` restituito , il modificatore indica che il metodo restituisce un riferimento e le scritture non sono consentite a tale riferimento.
 
@@ -71,28 +71,6 @@ p2.y = 66;        // Error
 verrà visualizzato il messaggio di errore del compilatore:
 
 **Un campo readonly non può essere assegnato a (tranne in un costruttore o un inizializzatore di variabile)**
-
-## <a name="readonly-struct-example"></a>Esempio di struct di sola lettura
-
-Il modificatore `readonly` in una definizione `struct` dichiara che struct **non è modificabile**. Tutti i campi di istanza di `struct` devono essere contrassegnati `readonly`, come illustrato nell'esempio seguente:
-
-[!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyStruct)]
-
-Nell'esempio precedente vengono usate le [proprietà automatiche di sola lettura](../../properties.md#read-only) per dichiarare la risorsa di archiviazione. Ciò indica al compilatore di creare campi sottostanti `readonly` per le proprietà. È inoltre possibile dichiarare i campi `readonly` direttamente:
-
-```csharp
-public readonly struct Point
-{
-    public readonly double X;
-    public readonly double Y;
-
-    public Point(double x, double y) => (X, Y) = (x, y);
-
-    public override string ToString() => $"({X}, {Y})";
-}
-```
-
-L'aggiunta di un campo non contrassegnato `readonly` genera l'errore del compilatore `CS8340`: "Instance fields of readonly structs must be readonly" (I campi dell'istanza delle strutture di sola lettura devono essere di sola lettura).
 
 ## <a name="readonly-member-examples"></a>Esempi di membri di sola letturaReadonly member examples
 
@@ -144,6 +122,7 @@ public string Message { readonly get; set; }
 Il `readonly` modificatore `ref return` in un indica che il riferimento restituito non può essere modificato. L'esempio seguente restituisce un riferimento all'origine. Utilizza il `readonly` modificatore per indicare che i chiamanti non possono modificare l'origine:
 
 [!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyReturn)]
+
 Il tipo restituito può non essere `readonly struct`. Qualsiasi tipo che può essere restituito da `ref` può essere restituito anche da `ref readonly`.
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
@@ -158,8 +137,8 @@ Puoi anche vedere le proposte di specifica del linguaggio:
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida di riferimento a C](../index.md)
-- [Guida per programmatori C#](../../programming-guide/index.md)
-- [Parole chiave di C#](index.md)
+- [Guida alla programmazione in C](../../programming-guide/index.md)
+- [Parole chiave di C](index.md)
 - [Modificatori](index.md)
 - [const](const.md)
 - [Campi](../../programming-guide/classes-and-structs/fields.md)

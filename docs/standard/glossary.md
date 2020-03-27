@@ -3,12 +3,12 @@ title: Glossario .NET
 description: Significato di termini selezionati usati nella documentazione di .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 590d44ac64bc2b86ed0a082ae5185cf60b28c36c
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
+ms.openlocfilehash: ed4dceed1a3f39c5c4ce7a278efc37bb38ed0d94
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80291557"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344197"
 ---
 # <a name="net-glossary"></a>Glossario .NET
 
@@ -161,7 +161,7 @@ Vedere [Guida alla piattaforma .NET](index.md).
 
 Un'implementazione open source multipiattaforma, ad alte prestazioni e open source di .NET. Include Core Common Language Runtime (CoreCLR), il runtime Core AOT (CoreRT, in fase di sviluppo), la libreria di classi base Core e Core SDK.
 
-Vedere [.NET Core](../core/index.md).
+Vedere [.NET Core](../core/index.yml).
 
 ## <a name="net-core-cli"></a>Interfaccia della riga di comando di .NET Core
 
@@ -275,6 +275,6 @@ Implementazione di .NET usata per la creazione di applicazioni Windows moderne e
 
 - [Guida di .NET](index.md)
 - [Guida di .NET Framework](../framework/index.yml)
-- [.NET Core](../core/index.md)
+- [.NET Core](../core/index.yml)
 - [Cenni preliminari sulla ASP.NET](/aspnet/index#pivot=aspnet)
 - [Panoramica di ASP.NET Core](/aspnet/index#pivot=core)

@@ -4,12 +4,12 @@ description: Descrive i componenti dell'architettura .NET, ad esempio .NET Stand
 author: cartermp
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 4329830d6cec5032517ea3fa02cb24dd7322e23f
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
+ms.openlocfilehash: 027fdb4cec47550f88f6930a4bbdff4ab5cdfb36
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80291776"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344157"
 ---
 # <a name="net-architectural-components"></a>Componenti dell'architettura .NET
 
@@ -38,7 +38,7 @@ Microsoft sviluppa e gestisce attivamente quattro implementazioni di .NET princi
 
 .NET core è un'implementazione multipiattaforma di .NET ed è progettato per gestire i carichi di lavoro di server e cloud su larga scala. Funziona su Windows, macOS e Linux. Implementa .NET Standard, pertanto qualsiasi codice che ha come destinazione .NET Standard può essere eseguito su .NET Core. [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core), [Windows Forms](../framework/winforms/windows-forms-overview.md) e [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) sono tutti supportati in .NET Core.
 
-Per altre informazioni su .NET Core, vedere la [Guida a .NET Core](../core/index.md) e [Scelta di .NET Core o .NET Framework per le app server](choosing-core-framework-server.md).
+Per altre informazioni su .NET Core, vedere la [Guida a .NET Core](../core/index.yml) e [Scelta di .NET Core o .NET Framework per le app server](choosing-core-framework-server.md).
 
 ### <a name="net-framework"></a>.NET Framework
 
@@ -107,7 +107,7 @@ I documenti ufficiali ISO/IEC sono disponibili nella pagina [Standard disponibil
 
 - [Scelta di .NET Core o .NET Framework per le app server](choosing-core-framework-server.md)
 - [.NET Standard](net-standard.md)
-- [Guida di .NET Core](../core/index.md)
+- [Guida di .NET Core](../core/index.yml)
 - [Guida di .NET Framework](../framework/index.yml)
 - [Guida di C](../csharp/index.yml)
 - [Guida di F](../fsharp/index.yml)

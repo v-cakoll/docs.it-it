@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Regasm.exe
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
-ms.openlocfilehash: 45b4c6c08d3afb948444a8c97dc32bd41f2615ce
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0a1658e57f4a236e4bdd29c3ca224275c25ea727
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73104956"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345003"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (strumento di registrazione di assembly)
 
@@ -54,7 +54,7 @@ regasm assemblyFile [options]
 
 È possibile usare l'opzione **/regfile** per generare un file REG contenente le voci del Registro di sistema, anziché apportare le modifiche direttamente in tale Registro. Per aggiornare il Registro di sistema su un computer è necessario importare il file .reg con lo strumento Editor del Registro di sistema (Regedit.exe). Si noti che il file .reg non contiene alcun aggiornamento del Registro di sistema che può essere effettuato mediante funzioni del Registro di sistema definite dall'utente.  Si noti che l'opzione **/regfile** crea solo voci del Registro di sistema per le classi gestite.  Non vengono create voci per `TypeLibID` o `InterfaceID`.
 
-Quando si specifica l'opzione **/tlb**, Regasm.exe genera e registra una libreria dei tipi che descrive i tipi trovati nell'assembly. Le librerie dei tipi generate vengono inserite nella directory di lavoro corrente o nella directory specificata per il file di output. Se viene generata una libreria dei tipi per un assembly che fa riferimento ad altri assembly, è possibile che vengano generate più librerie dei tipi contemporaneamente. La libreria dei tipi può essere usata per fornire informazioni sui tipi a strumenti di sviluppo come Visual Studio. L'opzione **/tlb** non deve essere usata se l'assembly che si sta registrando è stato prodotto dall'utilità di importazione della libreria dei tipi, [Tlbimp.exe](tlbimp-exe-type-library-importer.md). Non è possibile esportare una libreria dei tipi da un assembly importato da una libreria dei tipi. L'uso dell'opzione **/tlb** equivale all'uso dell'utilità di esportazione della libreria dei tipi ([Tlbexp.exe](tlbexp-exe-type-library-exporter.md)) e di Regasm.exe, con l'eccezione che Tlbexp.exe non registra la libreria dei tipi che produce.  Se si usa **/tlb** per registrare una libreria dei tipi, è possibile usare **/tlb** con l'opzione **/unregister** per annullare la registrazione. L'utilizzo congiunto di queste due opzioni determina l'annullamento della registrazione delle voci di interfaccia e di libreria dei tipi, con conseguente pulitura del Registro di sistema.
+Quando si specifica l'opzione **/tlb**, Regasm.exe genera e registra una libreria dei tipi che descrive i tipi trovati nell'assembly. Le librerie dei tipi generate vengono inserite nella directory di lavoro corrente o nella directory specificata per il file di output. Se viene generata una libreria dei tipi per un assembly che fa riferimento ad altri assembly, è possibile che vengano generate più librerie dei tipi contemporaneamente. La libreria dei tipi può essere usata per fornire informazioni sui tipi a strumenti di sviluppo come Visual Studio. L'opzione **/tlb** non deve essere usata se l'assembly che si sta registrando è stato prodotto dall'utilità di importazione della libreria dei tipi, [Tlbimp.exe](tlbimp-exe-type-library-importer.md). Non è possibile esportare una libreria dei tipi da un assembly importato da una libreria dei tipi. L'uso dell'opzione **/tlb** equivale all'uso dell'utilità di esportazione della libreria dei tipi ([Tlbexp.exe](tlbexp-exe-type-library-exporter.md)) e di Regasm.exe, con l'eccezione che Tlbexp.exe non registra la libreria dei tipi che produce.  Se si utilizza l'opzione **/tlb** per registrare una libreria dei tipi, è possibile utilizzare l'opzione **/tlb** con l'opzione **/unregister** per annullare la registrazione della libreria dei tipi. L'utilizzo congiunto di queste due opzioni determina l'annullamento della registrazione delle voci di interfaccia e di libreria dei tipi, con conseguente pulitura del Registro di sistema.
 
 Quando si registra un assembly per consentirne l'utilizzo da parte di COM, sul computer locale vengono aggiunte delle voci al Registro di sistema. In particolare, vengono create chiavi del Registro di sistema dipendenti dalla versione che consentono l'esecuzione side-by-side di più versioni dello stesso assembly su un computer. Alla prima registrazione di un assembly, viene creata una chiave di primo livello per l'assembly e una sottochiave univoca per la versione specifica. Ogni volta che si registra una nuova versione dell'assembly, viene creata una sottochiave per la nuova versione.
 
