@@ -3,18 +3,28 @@
 - name: Panoramica
   expanded: true
   items:
-    - name: API
-      items:
-        - name: API ML.NET
-          href: how-does-mldotnet-work.md
     - name: Model Builder e interfaccia della riga di comando
       items:
         - name: Strumento Model Builder ML.NET
           href: automate-training-with-model-builder.md
         - name: Interfaccia della riga di comando ML.NET
           href: automate-training-with-cli.md
+    - name: API
+      items:
+        - name: API ML.NET
+          href: how-does-mldotnet-work.md
 - name: Esercitazioni
   items:
+    - name: Model Builder e interfaccia della riga di comando
+      items:
+        - name: Stimare i prezzi (Model Builder e regressione)
+          href: tutorials/predict-prices-with-model-builder.md
+        - name: Analizzare il sentiment usando l'interfaccia della riga di comando di ML.NET
+          href: tutorials/sentiment-analysis-cli.md
+        - name: Analizzare il sentiment in Razor Pages (Model Builder e classificazione binaria)
+          href: tutorials/sentiment-analysis-model-builder.md
+        - name: Categorizzare le violazioni dell'integrità (Model Builder e classificazione multiclasse)
+          href: tutorials/health-violation-classification-model-builder.md
     - name: API
       items:
         - name: Panoramica
@@ -41,16 +51,6 @@
           href: tutorials/object-detection-onnx.md
         - name: Classificazione del sentiment tramite TensorFlow (classificazione del testo)
           href: tutorials/text-classification-tf.md
-    - name: Model Builder e interfaccia della riga di comando
-      items:
-        - name: Stimare i prezzi (Model Builder e regressione)
-          href: tutorials/predict-prices-with-model-builder.md
-        - name: Analizzare il sentiment usando l'interfaccia della riga di comando di ML.NET
-          href: tutorials/sentiment-analysis-cli.md
-        - name: Analizzare il sentiment in Razor Pages (Model Builder e classificazione binaria)
-          href: tutorials/sentiment-analysis-model-builder.md
-        - name: Categorizzare le violazioni dell'integrità (Model Builder e classificazione multiclasse)
-          href: tutorials/health-violation-classification-model-builder.md
     - name: Infer.NET
       items:
         - name: Programmazione probabilistica con Infer.NET
@@ -69,6 +69,16 @@
       href: resources/improve-machine-learning-model-ml-net.md
 - name: Guide pratiche
   items:
+    - name: Model Builder e interfaccia della riga di comando
+      items:
+        - name: Caricare i dati in Model Builder
+          href: how-to-guides/load-data-model-builder.md
+        - name: Installare Model Builder
+          href: how-to-guides/install-model-builder.md
+        - name: Installare l'interfaccia della riga di comando
+          href: how-to-guides/install-ml-net-cli.md
+        - name: Usare l'API ML automatizzata
+          href: how-to-guides/how-to-use-the-automl-api.md
     - name: API
       items:
         - name: Caricare i dati
@@ -97,16 +107,6 @@
               href: how-to-guides/serve-model-serverless-azure-functions-ml-net.md
             - name: Distribuire un modello a un'API Web
               href: how-to-guides/serve-model-web-api-ml-net.md
-    - name: Model Builder e interfaccia della riga di comando
-      items:
-        - name: Caricare i dati in Model Builder
-          href: how-to-guides/load-data-model-builder.md
-        - name: Installare Model Builder
-          href: how-to-guides/install-model-builder.md
-        - name: Installare l'interfaccia della riga di comando
-          href: how-to-guides/install-ml-net-cli.md
-        - name: Usare l'API ML automatizzata
-          href: how-to-guides/how-to-use-the-automl-api.md
 - name: Riferimento
   items:
     - name: Informazioni di riferimento sulle API ML.NET
