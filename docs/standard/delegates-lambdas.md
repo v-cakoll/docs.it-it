@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: 0abcc73e31eab89c422513acf778bc8bd092e788
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 34bfa4c6007ec771f784e927675f4e24d52e194f
+ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75345548"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80391234"
 ---
 # <a name="delegates-and-lambdas"></a>Delegati e lambda
 
@@ -46,9 +46,9 @@ public class Program
 
 Per semplificare il processo di sviluppo, .NET include un set di tipi di delegato che i programmatori possono riutilizzare senza dover creare nuovi tipi. I tipi sono `Func<>`, `Action<>` e `Predicate<>` e possono essere usati in posizioni diverse all'interno delle API .NET senza dover definire nuovi tipi di delegato. Le differenze tra i tre tipi sono evidenti nelle firme e riguardano principalmente la modalità di utilizzo prevista:
 
-* `Action<>` viene usato quando è necessario eseguire un'azione usando gli argomenti del delegato.
-* `Func<>` viene in genere usato in presenza di una trasformazione, ovvero quando è necessario trasformare gli argomenti del delegato in un risultato diverso. Le proiezioni sono un esempio tipico.
-* `Predicate<>` viene usato quando è necessario determinare se l'argomento soddisfa la condizione del delegato. Può essere scritto anche come `Func<T, bool>`.
+* `Action<>` viene usato quando è necessario eseguire un'azione usando gli argomenti del delegato. Il metodo che incapsula non restituisce un valore.
+* `Func<>` viene in genere usato in presenza di una trasformazione, ovvero quando è necessario trasformare gli argomenti del delegato in un risultato diverso. Le proiezioni sono un esempio tipico. Il metodo che incapsula restituisce un valore specificato.
+* `Predicate<>` viene usato quando è necessario determinare se l'argomento soddisfa la condizione del delegato. Può anche essere scritto `Func<T, bool>`come un oggetto , ovvero il metodo restituisce un valore booleano.
 
 L'esempio precedente può essere ora riscritto usando il delegato `Func<>` anziché un tipo personalizzato. Il programma continuerà a essere eseguito nello stesso modo.
 
@@ -110,7 +110,7 @@ public class Program
 
 Anche con questo approccio, tuttavia, rimane una parte considerevole di codice che è possibile eliminare. A tale scopo, vengono usate le **espressioni lambda**.
 
-Le espressioni lambda, chiamate anche "lambda", sono state usate per la prima volta in C# 3.0 come uno dei componenti fondamentali di Language Integrated Query (LINQ). Si tratta semplicemente una sintassi più pratica per l'uso dei delegati. Dichiarano una firma e il corpo di un metodo senza avere una propria identità formale, a meno che non vengano assegnate a un delegato. A differenza dei delegati, possono essere assegnate direttamente come parte sinistra della registrazione eventi o in diverse clausole e metodi LINQ.
+Le espressioni lambda, chiamate anche "lambda", sono state usate per la prima volta in C# 3.0 come uno dei componenti fondamentali di Language Integrated Query (LINQ). Si tratta semplicemente una sintassi più pratica per l'uso dei delegati. Dichiarano una firma e un corpo del metodo, ma non hanno un'identità formale propria, a meno che non siano assegnati a un delegato. A differenza dei delegati, possono essere assegnate direttamente come parte sinistra della registrazione eventi o in diverse clausole e metodi LINQ.
 
 Poiché un'espressione lambda è soltanto un modo diverso di specificare un delegato, è possibile riscrivere l'esempio precedente per usare un'espressione lambda anziché un delegato anonimo.
 
@@ -161,4 +161,4 @@ L'operatore `+=` in questo contesto viene usato per eseguire la sottoscrizione a
 
 * [Delegati](../../docs/csharp/programming-guide/delegates/index.md)
 * [Funzioni anonime](../../docs/csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
-* [Espressioni lambdaLambda expressions](../../docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+* [Espressioni lambda](../../docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)

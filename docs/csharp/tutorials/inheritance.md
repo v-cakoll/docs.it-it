@@ -4,18 +4,18 @@ description: Informazioni su come usare l'ereditarietà nelle applicazioni e nel
 ms.date: 07/05/2018
 ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: b72badb7833e018dfcbf5d2583b17f17c800c382
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78833110db0e4f0382e5c0c6de7c6c8be9a16c8d
+ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156753"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80391149"
 ---
 # <a name="inheritance-in-c-and-net"></a>Ereditarietà in C# e .NET
 
 Questa esercitazione presenta l'ereditarietà in C#. L'ereditarietà è una caratteristica dei linguaggi di programmazione orientati a oggetti che consente di definire una classe di base con funzionalità specifiche (relative a dati e comportamento) e classi derivate che ereditano o eseguono l'override di tali funzionalità.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 In questa esercitazione si presuppone che sia stato installato .NET Core SDK. Visita la pagina dei download di [.NET Core](https://dotnet.microsoft.com/download) per scaricarlo. È necessario anche un editor di codice. In questa esercitazione viene usato [Visual Studio Code](https://code.visualstudio.com), ma è possibile usare qualsiasi editor di codice desiderato.
 
@@ -28,7 +28,7 @@ Per creare ed eseguire gli esempi in questa esercitazione, viene usata l'utilit�
 1. Copiare e incollare il codice dell'esempio nell'editor di codice.
 1. Per caricare o ripristinare le dipendenze del progetto, eseguire il comando [dotnet restore](../../core/tools/dotnet-restore.md) dalla riga di comando.
 
-  [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+   [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 1. Per compilare ed eseguire l'esempio, immettere il comando [dotnet run](../../core/tools/dotnet-run.md).
 
@@ -141,7 +141,7 @@ Nella tabella seguente sono elencate le categorie di tipi che è possibile crear
 
 | Categoria di tipi | Eredita in modo implicito da                                                      |
 | ------------- | ----------------------------------------------------------------------------- |
-| class         | <xref:System.Object>                                                          |
+| classe         | <xref:System.Object>                                                          |
 | struct        | <xref:System.ValueType>, <xref:System.Object>                                 |
 | enum          | <xref:System.Enum>, <xref:System.ValueType>, <xref:System.Object>             |
 | delegato      | <xref:System.MulticastDelegate>, <xref:System.Delegate>, <xref:System.Object> |

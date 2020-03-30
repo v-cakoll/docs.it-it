@@ -2,12 +2,12 @@
 title: Procedure consigliate di interoperabilità nativa - .NET
 description: Informazioni sulle procedure consigliate per interfacciarsi con i componenti nativi in .NET.
 ms.date: 01/18/2019
-ms.openlocfilehash: 9486256b815856c0c283f5fe231be3d35d6e8f00
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: e5d96471e796dca712d25d2d9e2609508180d83f
+ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742757"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80391221"
 ---
 # <a name="native-interoperability-best-practices"></a>Procedure consigliate di interoperabilità nativa
 
@@ -17,17 +17,17 @@ ms.locfileid: "76742757"
 
 Le linee guida in questa sezione si applicano a tutti gli scenari di interoperabilità.
 
-- ✔️ usare la stessa denominazione e la stessa maiuscola per i metodi e i parametri del metodo nativo che si vuole chiamare.
-- ✔️ considerare la possibilità di usare lo stesso nome e la stessa maiuscola per i valori costanti.
-- ✔️ usano tipi .NET che eseguono il mapping più vicino al tipo nativo. Ad esempio, in C# usare `uint` quando il tipo nativo è `unsigned int`.
-- ✔️ VENGONO utilizzati solo gli attributi `[In]` e `[Out]` quando il comportamento desiderato differisce dal comportamento predefinito.
-- ✔️ CONSIGLIABILE usare <xref:System.Buffers.ArrayPool%601?displayProperty=nameWithType> per eseguire il pooling dei buffer di matrice nativi.
-- ✔️ CONSIGLIABILE eseguire il wrapping delle dichiarazioni P/Invoke in una classe con lo stesso nome e le stesse maiuscole della libreria nativa.
+- ✔️ USARE le stesse convenzioni di denominazione e la stessa combinazione di maiuscole/minuscole per i metodi e i parametri del metodo nativo che si vuole chiamare.
+- ✔️ PRENDERE IN CONSIDERAZIONE l'uso delle stesse convenzioni di denominazione e della stessa combinazione di maiuscole/minuscole per i valori costanti.
+- ✔️ USARE i tipi .NET più simili al tipo nativo. Ad esempio, in C# usare `uint` quando il tipo nativo è `unsigned int`.
+- ✔️ USARE solo attributi `[In]` e `[Out]` quando il comportamento desiderato è diverso da quello predefinito.
+- ✔️ PRENDERE IN CONSIDERAZIONE l'uso di <xref:System.Buffers.ArrayPool%601?displayProperty=nameWithType> per i pool di buffer di matrici nativi.
+- ✔️ PRENDERE IN CONSIDERAZIONE il wrapping delle dichiarazioni P/Invoke in una classe con lo stesso nome e combinazione di maiuscole/minuscole della libreria nativa.
   - In questo modo gli attributi `[DllImport]` possono usare la funzionalità del linguaggio `nameof` C# per passare il nome della libreria nativa e assicurarsi che il nome della libreria nativa non sia stato digitato in modo errato.
 
 ## <a name="dllimport-attribute-settings"></a>Impostazioni degli attributi DllImport
 
-| Impostazione | Default | Indicazione | Dettagli |
+| Impostazione | Predefinito | Recommendation | Dettagli |
 |---------|---------|----------------|---------|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  Mantenere l'impostazione predefinita  | Con l'impostazione esplicita su false, i valori restituiti HRESULT di errore verranno convertiti in eccezioni e il valore restituito nella definizione diventa Null di conseguenza.|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | Dipende dall'API  | Impostare su true se l'API usa GetLastError e usare Marshal.GetLastWin32Error per ottenere il valore. Se l'API imposta una condizione che indica la presenza di un errore, recuperare l'errore prima di effettuare altre chiamate in modo da evitare di sovrascriverlo inavvertitamente.|
@@ -36,36 +36,36 @@ Le linee guida in questa sezione si applicano a tutti gli scenari di interoperab
 
 ## <a name="string-parameters"></a>Parametri stringa
 
-Quando il set di caratteri è Unicode o l'argomento viene contrassegnato in modo esplicito come `[MarshalAs(UnmanagedType.LPWSTR)]` _e_ la stringa viene passata per valore (non `ref` o `out`), la stringa verrà bloccata e utilizzata direttamente dal codice nativo (anziché copiata).
+Quando il set di caratteri è Unicode o l'argomento è contrassegnato in modo esplicito come `[MarshalAs(UnmanagedType.LPWSTR)]` _e_ la stringa viene passata per valore (non `ref` o `out`), la stringa verrà bloccata e usata direttamente dal codice nativo (anziché copiata).
 
 Ricordarsi di contrassegnare `[DllImport]` come `Charset.Unicode` a meno che non si voglia usare in modo esplicito il trattamento ANSI per le stringhe.
 
-❌ non utilizzano parametri di `[Out] string`. I parametri stringa passati per valore con l'attributo `[Out]` possono destabilizzare il runtime se la stringa è una stringa centralizzata. Altre informazioni sulla centralizzazione delle stringhe sono disponibili nella documentazione relativa a <xref:System.String.Intern%2A?displayProperty=nameWithType>.
+❌NON utilizzare `[Out] string` parametri. I parametri stringa passati per valore con l'attributo `[Out]` possono destabilizzare il runtime se la stringa è una stringa centralizzata. Altre informazioni sulla centralizzazione delle stringhe sono disponibili nella documentazione relativa a <xref:System.String.Intern%2A?displayProperty=nameWithType>.
 
-❌ evitare `StringBuilder` parametri. Il marshalling di `StringBuilder` crea *sempre* una copia del buffer nativo. Di conseguenza, può risultare estremamente inefficiente. Si consideri lo scenario tipico di chiamata di un'API di Windows che accetta una stringa:
+❌Parametri `StringBuilder` AVOID. Il marshalling di `StringBuilder` crea *sempre* una copia del buffer nativo. Di conseguenza, può risultare estremamente inefficiente. Si consideri lo scenario tipico di chiamata di un'API di Windows che accetta una stringa:
 
-1. Creare un SB con la capacità desiderata (alloca capacità gestita) **{1}**
-2. Richiamare
-   1. Alloca un buffer nativo **{2}**
-   2. Copia il contenuto se `[In]` _(impostazione predefinita per un parametro `StringBuilder`)_
-   3. Copia il buffer nativo in una matrice gestita appena allocata se `[Out]` **{3}** _(impostazione predefinita anche per `StringBuilder`)_
-3. `ToString()` alloca ancora un'altra matrice gestita **** **
+1. Creare un SB della capacità desiderata (alloca la capacità gestita)**{1}**
+2. Invoke
+   1. Alloca un buffer nativo**{2}**
+   2. Copia il contenuto, se `[In]` _ (valore predefinito per un parametro `StringBuilder`)_
+   3. Copia il buffer nativo in una nuova matrice gestita allocata se `[Out]` **{3}** _ (valore predefinito anche per `StringBuilder`)_
+3. `ToString()`alloca ancora un altro array gestito**{4}**
 
-Vale a dire *{4}* allocazioni per ottenere una stringa dal codice nativo. Il meglio che è possibile fare per limitare le allocazioni è riutilizzare `StringBuilder` in un'altra chiamata, ma in questo modo si risparmia solo *1* allocazione. È molto meglio usare e memorizzare nella cache un buffer di caratteri da `ArrayPool`. In questo modo si può arrivare alla sola allocazione per `ToString()` nelle chiamate successive.
+Ovvero *{4}* le allocazioni per ottenere una stringa dal codice nativo. Il meglio che è possibile fare per limitare le allocazioni è riutilizzare `StringBuilder` in un'altra chiamata, ma in questo modo si risparmia solo *1* allocazione. È molto meglio usare e memorizzare nella cache un buffer di caratteri da `ArrayPool`. In questo modo si può arrivare alla sola allocazione per `ToString()` nelle chiamate successive.
 
 L'altro problema con `StringBuilder` è che copia sempre il buffer restituito fino primo valore Null. Se la stringa passata non è terminata o è una stringa con terminazione Null doppia, nel migliore dei casi P/Invoke non è corretto.
 
 Se si *usa*`StringBuilder`, un altro aspetto da tenere presente è che la capacità **non** include un valore Null nascosto, sempre considerato per l'interoperabilità. È comune sbagliarsi, perché la maggior parte delle API vuole le dimensioni del buffer *comprensive* del valore Null. Ciò può comportare allocazioni sprecate/superflue. Questo problema impedisce inoltre al runtime di ottimizzare il marshalling di `StringBuilder` per ridurre al minimo le copie.
 
-✔️ CONSIGLIABILE utilizzare `char[]`da un `ArrayPool`.
+✔️ PRENDERE IN CONSIDERAZIONE l'uso di `char[]` da un `ArrayPool`.
 
 Per altre informazioni sul marshalling delle stringhe, vedere [Marshalling predefinito per le stringhe](../../framework/interop/default-marshaling-for-strings.md) e [Personalizzazione dei parametri stringa](customize-parameter-marshaling.md#customizing-string-parameters).
 
-> __Specifiche di Windows__ Per le stringhe di `[Out]` CLR utilizzerà `CoTaskMemFree` per impostazione predefinita per liberare stringhe o `SysStringFree` per le stringhe contrassegnate come `UnmanagedType.BSTR`.
-> **Per la maggior parte delle API con un buffer di stringa di output:** Il numero di caratteri passati deve includere il valore null. Se il valore restituito è minore del numero di caratteri passato, la chiamata ha avuto esito positivo e il valore è il numero di caratteri *senza* il carattere Null finale. In caso contrario, il numero corrisponde alle dimensioni richieste del buffer *incluso* il carattere Null.
+> __Specifico di Windows__ Per `[Out]` le stringhe `CoTaskMemFree` che CLR utilizzerà `SysStringFree` per impostazione `UnmanagedType.BSTR`predefinita per liberare stringhe o per le stringhe contrassegnate come .
+> Per la maggior parte delle API con un buffer di stringa di **output:For most APIs with an output string buffer:** Il conteggio dei caratteri passato deve includere il valore null. Se il valore restituito è minore del numero di caratteri passato, la chiamata ha avuto esito positivo e il valore è il numero di caratteri *senza* il carattere Null finale. In caso contrario, il numero corrisponde alle dimensioni richieste del buffer *incluso* il carattere Null.
 >
-> - Passare 5, Get 4: la stringa ha una lunghezza di 4 caratteri con un valore null finale.
-> - Passare 5, Get 6: la lunghezza della stringa è di 5 caratteri, è necessario un buffer di 6 caratteri per mantenere il valore null.
+> - Passare 5, ottenere 4: La stringa è lunga 4 caratteri con un valore null finale.
+> - Passare in 5, ottenere 6: La stringa è lunga 5 caratteri, è necessario un buffer di 6 caratteri per contenere il valore null.
 > [Tipi di dati di Windows per le stringhe](/windows/desktop/Intl/windows-data-types-for-strings)
 
 ## <a name="boolean-parameters-and-fields"></a>Parametri e campi booleani
@@ -80,7 +80,7 @@ I GUID possono essere usati direttamente nelle firme. Molte API di Windows accet
 |------|-------------|
 | `KNOWNFOLDERID` | `REFKNOWNFOLDERID` |
 
-❌ non usare `[MarshalAs(UnmanagedType.LPStruct)]` per un valore diverso da `ref` parametri GUID.
+❌DO NOT `[MarshalAs(UnmanagedType.LPStruct)]` Utilizzare per `ref` altri valori diversi dai parametri GUID.
 
 ## <a name="blittable-types"></a>Tipi copiabili da BLT
 
@@ -104,7 +104,7 @@ I tipi copiabili da BLT sono tipi che hanno la stessa rappresentazione a livello
 
 Quando i tipi copiabili da BLT vengono passati per riferimento, vengono semplicemente bloccati dal gestore del marshalling invece di essere copiati in un buffer intermedio. (Le classi vengono passare in modo intrinseco per riferimento, mentre gli struct vengono passati per riferimento quando vengono usati con `ref` o `out`.)
 
-`char` è copiabile da BLT in una matrice unidimensionale **oppure** se fa parte di un tipo che lo contiene viene contrassegnato in modo esplicito con `[StructLayout]` con `CharSet = CharSet.Unicode`.
+`char`è cancellabile in una matrice unidimensionale **o** se fa parte di un `[StructLayout]` `CharSet = CharSet.Unicode`tipo che lo contiene è contrassegnato in modo esplicito con .
 
 ```csharp
 [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
@@ -118,7 +118,7 @@ public struct UnicodeCharStruct
 
 È possibile verificare se un tipo è copiabile da BLT tentando di creare un `GCHandle` bloccato. Se il tipo non è una stringa o non è considerato copiabile da BLT, `GCHandle.Alloc` genererà una `ArgumentException`.
 
-✔️ rendere le strutture copiabili quando possibile.
+✔️ RENDERE le strutture copiabili da BLT quando possibile.
 
 Per altre informazioni, vedere:
 
@@ -129,9 +129,9 @@ Per altre informazioni, vedere:
 
 `GC.KeepAlive()` garantisce che un oggetto rimanga nell'ambito fino a quando non viene raggiunto il metodo KeepAlive.
 
-[`HandleRef`](xref:System.Runtime.InteropServices.HandleRef) consente al gestore di marshalling mantenere attivo un oggetto per la durata di P/Invoke. Può essere usato al posto di `IntPtr` nelle firme dei metodi. `SafeHandle` sostituisce questa classe in modo efficace ed è consigliabile usarlo in alternativa.
+[`HandleRef`](xref:System.Runtime.InteropServices.HandleRef)consente al gestore di marshalling di mantenere attivo un oggetto per tutta la durata di un P/Invoke. Può essere usato al posto di `IntPtr` nelle firme dei metodi. `SafeHandle` sostituisce questa classe in modo efficace ed è consigliabile usarlo in alternativa.
 
-[`GCHandle`](xref:System.Runtime.InteropServices.GCHandle) consente di bloccare un oggetto gestito e di ottenere il puntatore nativo a tale oggetto. Il modello di base è:
+[`GCHandle`](xref:System.Runtime.InteropServices.GCHandle)consente di bloccare un oggetto gestito e ottenere il puntatore nativo ad esso. Il modello di base è:
 
 ```csharp
 GCHandle handle = GCHandle.Alloc(obj, GCHandleType.Pinned);
@@ -199,7 +199,7 @@ I tipi seguenti, essendo puntatori, seguono la larghezza della piattaforma. Usar
 
 Per un tipo `PVOID` Windows corrispondente al tipo `void*` C è possibile effettuare il marshalling come `IntPtr` oppure `UIntPtr`, ma preferire `void*` quando possibile.
 
-[Tipi di dati di Windows](/windows/desktop/WinProg/windows-data-types)
+[Tipi di dati di WindowsWindows Data Types](/windows/desktop/WinProg/windows-data-types)
 
 [Intervalli dei tipi di dati](/cpp/cpp/data-type-ranges)
 
@@ -213,9 +213,15 @@ Gli struct copiabili da BLT offrono prestazioni decisamente migliori perché pos
 
 I puntatori agli struct nelle definizioni devono essere passati per `ref` oppure usare `unsafe` e `*`.
 
-✔️ corrispondono allo struct gestito il più vicino possibile alla forma e ai nomi usati nella documentazione o nell'intestazione della piattaforma ufficiale.
+✔️ DEFINIRE lo struct gestito nel modo più possibile corrispondente alla forma e ai nomi usati nella documentazione o nell'intestazione ufficiale della piattaforma.
 
-per migliorare le prestazioni C# , ✔️ utilizzare la `sizeof()` invece di `Marshal.SizeOf<MyStruct>()` per le strutture copiabili.
+✔️ USARE`sizeof()` di C# invece di `Marshal.SizeOf<MyStruct>()` per le strutture copiabili da BLT per migliorare le prestazioni.
+
+❌AVOID `System.Delegate` utilizzando `System.MulticastDelegate` o campi per rappresentare i campi del puntatore a funzione nelle strutture.
+
+<xref:System.Delegate?displayProperty=fullName> Poiché <xref:System.MulticastDelegate?displayProperty=fullName> e non hanno una firma obbligatoria, non garantiscono che il delegato passato corrisponda alla firma prevista dal codice nativo. Inoltre, in .NET Framework e .NET Core, `System.Delegate` il `System.MulticastDelegate` marshalling di uno struct contenente o dalla relativa rappresentazione nativa a un oggetto gestito può destabilizzare il runtime se il valore del campo nella rappresentazione nativa non è un puntatore a funzione che esegue il wrapping di un delegato gestito. In .NET 5 e versioni `System.Delegate` successive, il marshalling di un campo o `System.MulticastDelegate` da una rappresentazione nativa a un oggetto gestito non è supportato. Utilizzare un tipo delegato `System.Delegate` `System.MulticastDelegate`specifico anziché o .
+
+### <a name="fixed-buffers"></a>Buffer fissi
 
 Ad esempio, è necessario effettuare il marshalling di una matrice come `INT_PTR Reserved1[2]` in due campi `IntPtr`, `Reserved1a` e `Reserved1b`. Quando la matrice nativa è un tipo primitivo, è possibile usare la parola chiave `fixed` per scriverla in modo un po' più pulito. Ad esempio, `SYSTEM_PROCESS_INFORMATION` ha un aspetto simile al seguente nell'intestazione nativa:
 

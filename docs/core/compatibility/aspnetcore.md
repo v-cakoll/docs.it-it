@@ -2,15 +2,15 @@
 title: modifiche di interruzione di ASP.NET Core
 titleSuffix: ''
 description: Elenca le modifiche di rilievo in ASP.NET Core.
-ms.date: 03/26/2020
+ms.date: 03/27/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 05272032f2b93c8ae89377a20e6fdafc2ff0eb7b
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 95057425614d7c717154ecfb687db2b9a6ca4a18
+ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345335"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80391247"
 ---
 # <a name="aspnet-core-breaking-changes"></a>modifiche di interruzione di ASP.NET Core
 
@@ -71,6 +71,7 @@ In questa pagina sono documentate le seguenti modifiche di rilievo:
 - [SignalR: metodi UseSignalR e UseConnections rimossi](#signalr-usesignalr-and-useconnections-methods-removed)
 - [SPAAs: modifica predefinita del fallback del logger della console SpaServices e NodeServices](#spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger)
 - [SPAA: SpaServices e NodeServices contrassegnati come obsoleti](#spas-spaservices-and-nodeservices-marked-obsolete)
+- [File statici: il tipo di contenuto CSV modificato in standard-compliant](#static-files-csv-content-type-changed-to-standards-compliant)
 - [Framework di destinazione: .NET Framework non supportatoTarget framework: .NET Framework not supported](#target-framework-net-framework-support-dropped)
 
 ## <a name="aspnet-core-50"></a>ASP.NET Core 5.0
@@ -84,6 +85,10 @@ In questa pagina sono documentate le seguenti modifiche di rilievo:
 ***
 
 [!INCLUDE[SignalR: UseSignalR and UseConnections methods removed](~/includes/core-changes/aspnetcore/5.0/signalr-usesignalr-useconnections-removed.md)]
+
+***
+
+[!INCLUDE[Static files: CSV content type changed to standards-compliant](~/includes/core-changes/aspnetcore/5.0/static-files-csv-content-type-changed.md)]
 
 ***
 
