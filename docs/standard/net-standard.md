@@ -1,16 +1,16 @@
 ---
 title: .NET Standard
-description: Informazioni su .NET Standard, sulle relative versioni e sulle implementazioni di .NET che le supportano.
+description: Informazioni su .NET Standard, le relative versioni e le implementazioni di .NET che lo supportano.
 ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 00b40b771a8608bad7e3f992e3c99367ff6bb131
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e6e573056132c25b912ff1eb76b9b055f6e47cfe
+ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77452591"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438210"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -100,9 +100,9 @@ Il controllo delle versioni di .NET Standard è importante per l'uso. Data una v
 - Usare librerie che dipendono dalla stessa versione di .NET Standard o da versioni precedenti.
 - Se viene individuata una libreria che dipende da una versione successiva di .NET Standard, è necessario adottare la stessa versione oppure decidere di non usare tale libreria.
 
-## <a name="targeting-net-standard"></a>Definizione di .NET Standard come destinazione
+## <a name="target-net-standard"></a>Standard .NET di destinazione
 
-È possibile [creare librerie .NET Standard](../core/tutorials/libraries.md) usando una combinazione del framework `netstandard` e del metapacchetto NETStandard.Library. Sono disponibili esempi della [definizione di .NET Standard come destinazione con strumenti .NET Core](../core/packages.md).
+È possibile [creare librerie .NET Standard](../core/tutorials/libraries.md) usando una combinazione del framework `netstandard` e del metapacchetto NETStandard.Library. È possibile visualizzare esempi di destinazione di [.NET Standard con strumenti .NET Core](../core/packages.md).
 
 ## <a name="net-framework-compatibility-mode"></a>Modalità di compatibilità di .NET Framework
 
@@ -118,7 +118,7 @@ Se si devono usare le librerie .NET Standard 2.0 solo nei propri progetti, è an
 
 ## <a name="comparison-to-portable-class-libraries"></a>Confronto con le librerie di classi portabili
 
-.NET Standard sostituisce le [librerie di classi portabili](./cross-platform/cross-platform-development-with-the-portable-class-library.md). .NET Standard migliora l'esperienza di creazione delle librerie portabili curando una BCL standard e assicurando di conseguenza una maggiore uniformità tra le implementazioni di .NET. Una libreria che ha come destinazione .NET Standard è una libreria di classi portabile o una "libreria di classi portabile basata su .NET Standard". Le librerie di classi portabili esistenti sono "librerie di classi portabili basate sul profilo".
+.NET Standard sostituisce le [librerie di classi portabili](./cross-platform/cross-platform-development-with-the-portable-class-library.md). .NET Standard migliora l'esperienza di creazione di librerie portabili curando una BCL standard e stabilendo una maggiore uniformità tra le implementazioni di .NET di conseguenza. Una libreria che ha come destinazione .NET Standard è una libreria di classi portabile o una "libreria di classi portabile basata su .NET Standard". Le librerie di classi portabili esistenti sono "librerie di classi portabili basate sul profilo".
 
 .NET Standard e i profili delle librerie di classi portabili sono stati creati per scopi simili, ma presentano differenze significative.
 
@@ -130,7 +130,7 @@ Differenze:
 
 - .NET Standard è un set curato di API, mentre i profili delle librerie di classi portabili sono definiti da intersezioni delle piattaforme esistenti.
 - La definizione delle versioni di .NET Standard è lineare, mentre quella dei profili delle librerie di classi portabili non lo è.
-- I profili delle librerie di classi portabili rappresentano piattaforme Microsoft, mentre .NET Standard è indipendente dalla piattaforma.
+- I profili PCL rappresentano le piattaforme Microsoft mentre .NET Standard è indipendente dalla piattaforma.
 
 ### <a name="pcl-compatibility"></a>Compatibilità della libreria di classi portabile
 
@@ -143,7 +143,7 @@ La compatibilità delle librerie di classi portabili basate sul profilo è forni
 
 Le librerie di classi portabili basate sul profilo inserite in un pacchetto come `netstandard` sono più semplici da usare rispetto alle librerie di classi portabili basate sul profilo in pacchetti generici. `netstandard` è un pacchetto compatibile con gli utenti esistenti.
 
-Di seguito è riportato il set di profili delle librerie di classi portabili compatibili con .NET Standard:
+È possibile visualizzare il set di profili PCL compatibili con .NET Standard:
 
 | Profilo PCL | .NET Standard | Piattaforme PCL
 |:-----------:|:-------------:|------------------------------------------------------------------------------

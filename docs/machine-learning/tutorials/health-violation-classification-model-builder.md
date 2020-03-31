@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 11/21/2019
 ms.topic: tutorial
 ms.custom: mvc,mlnet-tooling
-ms.openlocfilehash: e94313277a025d482105a6d78b6608d4df442c43
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6a36989f9453208e436ef8a4db2d4440aa0a1382
+ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79185853"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438195"
 ---
 # <a name="tutorial-classify-the-severity-of-restaurant-health-violations-with-model-builder"></a>Esercitazione: Classificare la gravità delle violazioni di integrità del ristorante con Model BuilderTutorial: Classify the severity of restaurant health violations with Model Builder
 
@@ -31,7 +31,7 @@ In questa esercitazione verranno illustrate le procedure per:
 > [!NOTE]
 > Il generatore di modelli è attualmente in anteprima.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per un elenco dei prerequisiti e delle istruzioni di installazione, visitare la [guida all'installazione](../how-to-guides/install-model-builder.md)di Model Builder .
 
@@ -150,6 +150,6 @@ Congratulazioni! È stato creato correttamente un modello di apprendimento autom
 
 Per altre informazioni sugli argomenti presentati in questa esercitazione, vedere le risorse seguenti:
 
-- [Scenari del generatore di modelli](../automate-training-with-model-builder.md#scenarios)
+- [Scenari del generatore di modelli](../automate-training-with-model-builder.md#scenario)
 - [Classificazione multiclasse](../resources/glossary.md#multiclass-classification)
 - [Metriche del modello di classificazione multiclasseMulticlass Classification Model Metrics](../resources/metrics.md#evaluation-metrics-for-multi-class-classification)
