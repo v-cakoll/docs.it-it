@@ -9,12 +9,12 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-ms.openlocfilehash: 504e315dda4e76f56a88d97149b1515b6743668b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 288bf4256670d34c600e23618b62ad81866daadf
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77124351"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523846"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Dettagli sul comportamento delle espressioni regolari
 
@@ -87,7 +87,7 @@ Il motore delle espressioni regolari di .NET Framework è un selettore di espres
 
      Per altre informazioni sulle asserzioni per il lookahead negativo, vedere [Costrutti di raggruppamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
-- Valutazione `(?(`condizionale: espressione `(?(`*sì*`|`*no* `)` e *nome*`)`*sì*`|`*no*`)`, dove *espressione* è una sottoespressione da confrontare, *nome* è il nome di un gruppo di acquisizione, *yes* è la stringa a cui trovare la corrispondenza se *l'espressione*`)`corrisponde o *il nome* è un gruppo acquisito valido e non vuoto e *no* è la sottoespressione in cui trovare la corrispondenza se *expression* *expression *non corrisponde o *name* non è un gruppo acquisito valido e non vuoto. Questa funzionalità consente al motore di eseguire la ricerca usando più di un criterio alternativo, in base al risultato della corrispondenza di una sottoespressione precedente o al risultato di un'asserzione di larghezza zero. Ciò offre una forma più efficace di backreference che consente, ad esempio, di trovare la corrispondenza con una sottoespressione in base al fatto che sia stata trovata o meno la corrispondenza con una sottoespressione precedente. L'espressione regolare nell'esempio seguente trova la corrispondenza con paragrafi destinati all'uso sia pubblico che interno. I paragrafi destinati solo all'uso interno iniziano con un tag `<PRIVATE>`. Il criterio di espressione regolare `^(?<Pvt>\<PRIVATE\>\s)?(?(Pvt)((\w+\p{P}?\s)+)|((\w+\p{P}?\s)+))\r?$` usa la valutazione condizionale per assegnare il contenuto dei paragrafi destinati all'uso pubblico e all'uso interno a gruppi di acquisizione separati. I paragrafi possono quindi essere gestiti in modo diverso.
+- Valutazione `(?(`condizionale: *espressione*`)` `(?(`*sì*`|`*no* `)` e *nome*`)`*sì*`|`*no*`)`, dove *expression* è una sottoespressione per la corrispondenza, *name* è il nome di un gruppo di acquisizione, *yes* è la stringa a cui trovare una corrispondenza se *expression* viene confrontato o *name* è un gruppo acquisito valido e non vuoto e *no* è la sottoespressione a cui trovare la corrispondenza se *expression* non viene trovato o *name* non è un gruppo acquisito valido e non vuoto. Questa funzionalità consente al motore di eseguire la ricerca usando più di un criterio alternativo, in base al risultato della corrispondenza di una sottoespressione precedente o al risultato di un'asserzione di larghezza zero. Ciò offre una forma più efficace di backreference che consente, ad esempio, di trovare la corrispondenza con una sottoespressione in base al fatto che sia stata trovata o meno la corrispondenza con una sottoespressione precedente. L'espressione regolare nell'esempio seguente trova la corrispondenza con paragrafi destinati all'uso sia pubblico che interno. I paragrafi destinati solo all'uso interno iniziano con un tag `<PRIVATE>`. Il criterio di espressione regolare `^(?<Pvt>\<PRIVATE\>\s)?(?(Pvt)((\w+\p{P}?\s)+)|((\w+\p{P}?\s)+))\r?$` usa la valutazione condizionale per assegnare il contenuto dei paragrafi destinati all'uso pubblico e all'uso interno a gruppi di acquisizione separati. I paragrafi possono quindi essere gestiti in modo diverso.
 
      [!code-csharp[Conceptual.RegularExpressions.Design#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/conditional1.cs#4)]
      [!code-vb[Conceptual.RegularExpressions.Design#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/conditional1.vb#4)]
@@ -148,11 +148,10 @@ Il motore delle espressioni regolari di .NET Framework è un selettore di espres
 |-----------|-----------------|
 |[Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|Informazioni su come il backtracking delle espressioni regolari si dirama per trovare corrispondenze alternative.|
 |[Compilazione e riutilizzo](../../../docs/standard/base-types/compilation-and-reuse-in-regular-expressions.md)|Informazioni sulla compilazione e sul riutilizzo di espressioni regolari per ottimizzare le prestazioni.|
-|[Sicurezza dei thread](../../../docs/standard/base-types/thread-safety-in-regular-expressions.md)|Informazioni sulla modalità di thread safety delle espressioni regolari in cui viene spiegato quando è necessario sincronizzare l'accesso a oggetti di espressione regolare.|
+|[Thread safety](../../../docs/standard/base-types/thread-safety-in-regular-expressions.md)|Informazioni sulla modalità di thread safety delle espressioni regolari in cui viene spiegato quando è necessario sincronizzare l'accesso a oggetti di espressione regolare.|
 |[Espressioni regolari di .NET Framework](../../../docs/standard/base-types/regular-expressions.md)|Panoramica dell'aspetto del linguaggio di programmazione delle espressioni regolari.|
-|[Modello a oggetti delle espressioni regolariThe Regular Expression Object Model](../../../docs/standard/base-types/the-regular-expression-object-model.md)|Esempi di codice e informazioni che illustrano l'uso delle classi di espressioni regolari.|
-|[Esempi di espressioni regolari](../../../docs/standard/base-types/regular-expression-examples.md)|Esempi di codice che illustrano l'uso delle espressioni regolari nelle applicazioni comuni.|
-|[Linguaggio delle espressioni regolari - Guida di riferimento rapidoRegular Expression Language - Quick Reference](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|Informazioni su set di caratteri, operatori e costrutti che è possibile usare per definire le espressioni regolari.|
+|[Modello a oggetti delle espressioni regolari](../../../docs/standard/base-types/the-regular-expression-object-model.md)|Esempi di codice e informazioni che illustrano l'uso delle classi di espressioni regolari.|
+|[Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|Informazioni su set di caratteri, operatori e costrutti che è possibile usare per definire le espressioni regolari.|
 
 ## <a name="reference"></a>Informazioni di riferimento
 

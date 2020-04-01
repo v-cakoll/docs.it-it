@@ -2,12 +2,12 @@
 title: Terminologia di Docker
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Terminologia di Docker
 ms.date: 01/30/2020
-ms.openlocfilehash: 5ffc7e791df8cbc999c6ababf62670bae46e1d5e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fdcc5ec3603579c36d7339bd3ff651713b8eba88
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77502829"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523342"
 ---
 # <a name="docker-terminology"></a>Terminologia di Docker
 
@@ -17,7 +17,9 @@ Questa sezione elenca i termini e le definizioni che è necessario conoscere pri
 
 **Dockerfile**: file di testo contenente le istruzioni per compilare un'immagine Docker. È come uno script batch, dove la prima riga indica l'immagine di base con cui iniziare e quindi si seguono le istruzioni per installare i programmi necessari, copiare i file e così via, finché non si ottiene l'ambiente di lavoro necessario.
 
-**Compilazione**: azione di compilazione di un'immagine del contenitore in base alle informazioni e al contesto forniti dal Dockerfile corrispondente e ad altri file aggiuntivi nella cartella in cui viene creata l'immagine. È possibile compilare immagini con il comando Docker **docker build**.
+**Compilazione**: azione di compilazione di un'immagine del contenitore in base alle informazioni e al contesto forniti dal Dockerfile corrispondente e ad altri file aggiuntivi nella cartella in cui viene creata l'immagine. È possibile creare immagini con il comando Docker:You can build images with the Docker command:
+
+> `docker build`
 
 **Contenitore**: istanza di un'immagine Docker. Un contenitore rappresenta l'esecuzione di una singola applicazione o di un singolo processo o servizio. È costituito dal contenuto di un'immagine Docker, da un ambiente di esecuzione e da un set di istruzioni standard. Quando si ridimensiona un servizio, si creano più istanze di un contenitore dalla stessa immagine oppure in un processo batch può creare più contenitori dalla stessa immagine, passando parametri diversi a ogni istanza.
 
@@ -25,7 +27,7 @@ Questa sezione elenca i termini e le definizioni che è necessario conoscere pri
 
 **Tag**: contrassegno o etichetta che si può applicare alle immagini per poter identificare immagini o versioni diverse della stessa immagine, a seconda del numero di versione o dell'ambiente di destinazione.
 
-**Compilazione in più fasi**: funzionalità disponibile in Docker 17.05 o versioni successive, che consente di ridurre le dimensioni delle immagini finali. In breve, con la compilazione in più fasi è possibile usare, ad esempio, un'immagine di base di grandi dimensioni, contenente l'SDK, per la compilazione e la pubblicazione dell'applicazione e quindi usare la cartella di pubblicazione con un'immagine di base solo runtime di piccole dimensioni, per produrre un'immagine finale molto più piccola
+**Compilazione in più fasi**: funzionalità disponibile in Docker 17.05 o versioni successive, che consente di ridurre le dimensioni delle immagini finali. In poche frasi, con la compilazione in più fasi è possibile utilizzare, ad esempio, un'immagine di base di grandi dimensioni, contenente l'SDK, per la compilazione e la pubblicazione dell'applicazione e quindi utilizzando la cartella di pubblicazione con un'immagine di base di solo runtime di piccole dimensioni, per produrre un'immagine finale molto più piccola.
 
 **Repository**: raccolta di immagini Docker correlate, etichettate con un tag che indica la versione dell'immagine. Alcuni repository contengono più varianti di un'immagine specifica, ad esempio un'immagine contenente SDK (più pesante), un'immagine contenente solo runtime (più chiaro) e così via. Tali varianti possono essere contrassegnate con tag. Un singolo repository può contenere varianti di piattaforme, ad esempio un'immagine Linux e un'immagine Windows.
 

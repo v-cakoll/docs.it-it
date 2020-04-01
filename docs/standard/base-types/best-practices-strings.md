@@ -18,12 +18,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: c88776ea9d8ba17d86767b704e8b0eaff5b6cb89
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e633b6c1d03a3d1cd70e277395da10f70f315f16
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711480"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523980"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Procedure consigliate per l'uso delle stringhe in .NET
 
@@ -199,7 +199,7 @@ In realtà la lingua inglese ha poche proprietà che la rendono utile per il con
 
 Nella tabella seguente viene descritto il mapping <xref:System.StringComparison> dal contesto di stringa semantica a un membro di enumerazione:The following table outlines the mapping from semantic string context to a enumeration member:
 
-|Data|Comportamento|System.StringComparison corrispondente<br /><br /> Valore|
+|Data|Comportamento|System.StringComparison corrispondente<br /><br /> value|
 |----------|--------------|-----------------------------------------------------|
 |Identificatori interni con distinzione tra maiuscole e minuscole.<br /><br /> Identificatori con distinzione tra maiuscole e minuscole in standard come XML e HTTP.<br /><br /> Impostazioni relative alla sicurezza con distinzione tra maiuscole e minuscole.|Identificatore non linguistico, con una corrispondenza esatta dei byte.|<xref:System.StringComparison.Ordinal>|
 |Identificatori interni senza distinzione tra maiuscole e minuscole.<br /><br /> Identificatori senza distinzione tra maiuscole e minuscole in standard come XML e HTTP.<br /><br /> Percorsi di file.<br /><br /> Chiavi e valori del Registro di sistema.<br /><br /> Variabili di ambiente.<br /><br /> Identificatori di risorse (ad esempio, nomi di handle).<br /><br /> Impostazioni relative alla sicurezza senza distinzione tra maiuscole e minuscole.|Identificatore non linguistico, in cui la distinzione tra maiuscole e minuscole non è rilevante. In particolare, dati archiviati nella maggior parte dei servizi di sistema Windows.|<xref:System.StringComparison.OrdinalIgnoreCase>|
@@ -350,7 +350,3 @@ Tuttavia, se <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayPro
 08.09.1890 06:47
 18.02.1905 15:12
 ```
-
-## <a name="see-also"></a>Vedere anche
-
-- [Modifica di stringhe](manipulating-strings.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 61ee0e320f85925e4d804a6032e01c0485a31451
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 8d04f888befae2cad815c88a0d27bd836f458c63
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249331"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523784"
 ---
 # <a name="ref-c-reference"></a>ref (Riferimenti per C#)
 
@@ -25,7 +25,7 @@ La parola chiave `ref` indica un valore che viene passato per riferimento. Viene
 
 ## <a name="passing-an-argument-by-reference"></a>Passaggio di un argomento per riferimento
 
-Quando viene usata nell'elenco di parametri di un metodo, la parola chiave `ref` indica che un argomento viene passato per riferimento, non per valore. La parola chiave `ref` imposta il parametro formale come alias dell'argomento, che deve essere una variabile. In altre parole, qualsiasi operazione sul parametro viene eseguita sull'argomento. Ad esempio, se il chiamante passa un'espressione di variabile locale o un'espressione di accesso all'elemento di matrice e il metodo chiamato sostituisce l'oggetto a cui fa riferimento il parametro ref, la variabile locale del chiamante o l'elemento della matrice fa ora riferimento al nuovo oggetto quando il metodo metodo returns.
+Quando viene usata nell'elenco di parametri di un metodo, la parola chiave `ref` indica che un argomento viene passato per riferimento, non per valore. La parola chiave `ref` imposta il parametro formale come alias dell'argomento, che deve essere una variabile. In altre parole, qualsiasi operazione sul parametro viene eseguita sull'argomento. Ad esempio, se il chiamante passa un'espressione di accesso a una variabile locale o un'espressione di accesso all'elemento di matrice e il metodo chiamato sostituisce l'oggetto a cui fa riferimento il parametro ref, la variabile locale del chiamante o l'elemento della matrice fa ora riferimento al nuovo oggetto quando il metodo restituisce .
 
 > [!NOTE]
 > Non confondere il concetto di passaggio per riferimento con il concetto di tipi di riferimento. I due concetti non sono uguali. Un parametro di metodo può essere modificato da `ref` che si tratti di un tipo di valore o di un tipo di riferimento. Non viene eseguito il boxing di un tipo di valore quando viene passato per riferimento.  
@@ -63,7 +63,7 @@ class CS0663_Example
 
 Inoltre, i metodi di [estensione](../../programming-guide/classes-and-structs/extension-methods.md) hanno le seguenti restrizioni:
 
-- Il `out` keywoard non può essere utilizzato sul primo argomento di un metodo di estensione.
+- La `out` parola chiave non può essere utilizzata sul primo argomento di un metodo di estensione.
 - La `ref` parola chiave non può essere utilizzata sul primo argomento di un metodo di estensione quando l'argomento non è uno struct o un tipo generico non vincolato a essere uno struct.
 - La `in` parola chiave non può essere utilizzata a meno che il primo argomento non sia uno struct. La `in` parola chiave non può essere utilizzata su qualsiasi tipo generico, anche quando vincolata a essere uno struct.
 

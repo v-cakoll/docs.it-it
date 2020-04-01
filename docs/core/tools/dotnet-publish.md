@@ -2,12 +2,12 @@
 title: Comando dotnet publish
 description: Il comando dotnet publish pubblica un progetto o una soluzione .NET Core in una directory.
 ms.date: 02/24/2020
-ms.openlocfilehash: ed5b87b3343210ca81486ef4b9a9d70d1b534464
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: 7e57a7b3cfe72653cc64c90055735795e4616260
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80110971"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523760"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -94,9 +94,21 @@ L'output del comando `dotnet publish` è pronto per la distribuzione in un siste
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Specifica il percorso della directory di output. Se non specificato, il valore predefinito è *./bin/[configuration]/[framework]/publish/* per un file eseguibile dipendente dal runtime e file binari tra piattaforme. Il valore predefinito è *./bin/[configuration]/[framework]/[runtime]/publish/* per un eseguibile indipendente.
+  Specifica il percorso della directory di output.
+  
+  Se non specificato, il valore predefinito è *[project_file_folder]./bin/[configuration]/[framework]/publish/* per un eseguibile dipendente dal runtime e file binari multipiattaforma. Il valore predefinito è *[project_file_folder]/bin/[configuration]/[framework]/[runtime]/publish/* per un eseguibile autonomo.
 
-  Se il percorso è relativo, la directory di output generata è relativa al percorso del file di progetto e non alla directory di lavoro corrente.
+  - .NET Core 3.x SDK e versioni successive
+  
+    Se viene specificato un percorso relativo durante la pubblicazione di un progetto, la directory di output generata è relativa alla directory di lavoro corrente, non al percorso del file di progetto.
+
+    Se viene specificato un percorso relativo durante la pubblicazione di una soluzione, tutto l'output per tutti i progetti viene inserito nella cartella specificata rispetto alla directory di lavoro corrente. Per fare in modo che l'output di pubblicazione vada a `PublishDir` cartelle separate `--output` per ogni progetto, specificare un percorso relativo utilizzando la proprietà msbuild anziché l'opzione . Ad esempio, `dotnet publish -p:PublishDir=.\publish` invia l'output `publish` di pubblicazione per ogni progetto in una cartella all'altra della cartella che contiene il file di progetto.
+
+  - .NET Core 2.x SDK
+  
+    Se durante la pubblicazione di un progetto viene specificato un percorso relativo, la directory di output generata è relativa al percorso del file di progetto, non alla directory di lavoro corrente.
+
+    Se viene specificato un percorso relativo durante la pubblicazione di una soluzione, l'output di ogni progetto viene inserito in una cartella separata rispetto al percorso del file di progetto. Se viene specificato un percorso assoluto durante la pubblicazione di una soluzione, tutto l'output di pubblicazione per tutti i progetti viene inserito nella cartella specificata.
 
 - **`--self-contained [true|false]`**
 

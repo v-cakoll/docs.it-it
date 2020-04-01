@@ -16,14 +16,15 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: c574719da9b89b468b92b042e1f2b5b10fbe3c0d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ec078ea89befedd26ce205c724193935dd08b82a
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79400491"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523964"
 ---
 # <a name="common-type-system"></a>Common Type System
+
 Common Type System definisce le modalità di dichiarazione, utilizzo e gestione dei tipi in Common Language Runtime e rappresenta una parte importante del supporto runtime per l'integrazione di più linguaggi. Le funzioni assolte dal sistema di tipi comuni sono le seguenti:  
   
 - Definire un framework che consenta l'integrazione di più linguaggi, l'indipendenza dai tipi e l'esecuzione di codice con prestazioni elevate.  
@@ -32,20 +33,10 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
   
 - Definire le regole che i linguaggi devono seguire, garantendo l'interazione tra oggetti scritti in linguaggi diversi.  
   
-- Fornire una libreria che contiene i tipi di dati primitivi, ad esempio <xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.Int32> e <xref:System.UInt64>, utilizzati nello sviluppo delle applicazioni.  
+- Fornire una libreria che contiene i tipi di dati primitivi, ad esempio <xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.Int32> e <xref:System.UInt64>, utilizzati nello sviluppo delle applicazioni.
   
- In questo argomento sono incluse le sezioni seguenti:  
-  
-- [Tipi in .NET](#types_in_the_net_framework)  
-  
-- [Definizioni dei tipi](#type_definitions)  
-  
-- [Membri Type](#type_members)  
-  
-- [Caratteristiche dei membri di tipo](#characteristics_of_type_members)  
-  
-<a name="types_in_the_net_framework"></a>
-## <a name="types-in-net"></a>Tipi in .NET  
+## <a name="types-in-net"></a>Tipi in .NET
+
  Tutti i tipi in .NET sono tipi valore o tipi riferimento.  
   
  I tipi di valore sono tipi di dati i cui oggetti sono rappresentati dal valore effettivo dell'oggetto. Se un'istanza di un tipo di valore viene assegnata a una variabile, a tale variabile viene fornita una copia aggiornata del valore.  
@@ -54,18 +45,18 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
   
  Common Type System in .NET supporta le cinque categorie di tipi seguenti:  
   
-- [Classi](#Classes)  
+- [Classi](#classes)  
   
-- [Strutture](#Structures)  
+- [Strutture](#structures)  
   
-- [Enumerazioni](#Enumerations)  
+- [Enumerazioni](#enumerations)  
   
-- [Interfacce](#Interfaces)  
+- [Interfacce](#interfaces)  
   
-- [Delegati](#Delegates)  
+- [Delegati](#delegates)  
   
-<a name="Classes"></a>
-### <a name="classes"></a>Classi  
+### <a name="classes"></a>Classi
+
  Una classe è un tipo di riferimento che è possibile derivare direttamente da un'altra classe e che viene derivato in modo implicito da <xref:System.Object?displayProperty=nameWithType>. La classe definisce le operazioni che un oggetto (un'istanza della classe) può eseguire (metodi, eventi o proprietà) e i dati che l'oggetto contiene (campi). Sebbene una classe includa in genere sia la definizione che l'implementazione, a differenza delle interfacce che contengono, ad esempio, solo la definizione senza l'implementazione, può contenere uno o più membri privi di implementazione.  
   
  Nella tabella seguente vengono descritte alcune delle caratteristiche che una classe può avere. Ogni linguaggio che supporta il runtime fornisce un modo per indicare che una classe o membro di classe dispone di una o più di queste caratteristiche. È tuttavia possibile che i singoli linguaggi di programmazione destinati a .NET non rendano disponibili tutte queste caratteristiche.  
@@ -79,14 +70,14 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
 |exported o not exported|Indica se una classe è visibile all'esterno dell'assembly in cui è definita. Questa caratteristica è applicabile unicamente alle classi di primo livello e non alle classi annidate.|  
   
 > [!NOTE]
-> Una classe può anche essere annidata in una struttura o una classe padre. Anche le classi annidate possiedono le caratteristiche dei membri. Per ulteriori informazioni, vedere [Tipi annidati](#NestedTypes).  
+> Una classe può anche essere annidata in una struttura o una classe padre. Anche le classi annidate possiedono le caratteristiche dei membri. Per ulteriori informazioni, vedere [Tipi annidati](#nested-types).  
   
  I membri di classe privi di implementazione sono membri astratti. Una classe con uno o più membri astratti è essa stessa astratta e non è possibile crearne nuove istanze. Con alcuni linguaggi destinati al runtime è possibile contrassegnare una classe come astratta anche se nessuno dei relativi membri è astratto. È possibile utilizzare una classe astratta quando si desidera incapsulare un set di base di funzionalità che le classi derivate possono ereditare oppure sottoporre a override nelle circostanze appropriate. Alle classi che non sono astratte viene fatto riferimento come a classi concrete.  
   
  Una classe può implementare un numero qualsiasi di interfacce, ma può ereditare solo da una classe di base, oltre che da <xref:System.Object?displayProperty=nameWithType>, da cui tutte le classi ereditano in modo implicito. Tutte le classi devono avere almeno un costruttore, per l'inizializzazione di nuove istanze della classe. Se non si definisce in modo esplicito un costruttore, la maggior parte dei compilatori specifica automaticamente un costruttore senza parametri.  
   
-<a name="Structures"></a>
-### <a name="structures"></a>Strutture  
+### <a name="structures"></a>Strutture
+
  Una struttura è un tipo di valore che deriva in modo implicito da <xref:System.ValueType?displayProperty=nameWithType>, che a sua volta deriva da <xref:System.Object?displayProperty=nameWithType>. Una struttura è molto utile per la rappresentazione di valori con requisiti di memoria piccoli e per passare valori come parametri per valori a metodi che dispongono di parametri fortemente tipizzati. In .NET Framework tutti i tipi di dati primitivi (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32> e <xref:System.UInt64>) sono definiti come strutture.  
   
  Analogamente alle classi, le strutture definiscono sia i dati (i campi della struttura) che le operazioni che è possibile eseguire s tali dati (i metodi della struttura). Ciò significa che è possibile chiamare metodi nelle strutture, inclusi i metodi virtuali definiti nelle classi <xref:System.Object?displayProperty=nameWithType> e <xref:System.ValueType?displayProperty=nameWithType> e qualsiasi metodo definito nel tipo di valore stesso. In altre parole, le strutture possono disporre di campi, proprietà ed eventi, nonché di metodi statici e non statici. È possibile creare istanze di strutture, passarle come parametri, archiviarle come variabili locali oppure in un campo di un altro tipo di valore o tipo di riferimento. Le strutture possono inoltre implementare interfacce.  
@@ -95,9 +86,9 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
   
  Per ogni tipo di valore, Common Language Runtime fornisce un tipo sottoposto a boxing corrispondente, ovvero una classe avente lo stesso stato e lo stesso comportamento del tipo di valore. Per un'istanza di un tipo di valore viene eseguita la conversione boxing quando viene passata a un metodo che accetta un parametro di tipo <xref:System.Object?displayProperty=nameWithType>. La conversione unboxing, ovvero la conversione da un'istanza di una classe di nuovo in un'istanza di un tipo di valore, viene eseguita quando il controllo viene restituito da una chiamata al metodo che accetta un tipo di valore come parametro per riferimento. In alcuni linguaggi è richiesto l'utilizzo di una sintassi speciale quando il tipo sottoposto a boxing è obbligatorio, mentre in altri il tipo sottoposto a boxing viene utilizzato automaticamente quando è necessario. Quando si definisce un tipo di valore si sta definendo sia il tipo boxed che il tipo unboxed.  
   
-<a name="Enumerations"></a>
-### <a name="enumerations"></a>Enumerazioni  
- Un'enumerazione (enum) è un tipo di valore che eredita direttamente da <xref:System.Enum?displayProperty=nameWithType> e che fornisce nomi alternativi per i valori di un tipo primitivo sottostante. Un tipo di enumerazione dispone di un nome, un tipo sottostante che deve essere uno dei tipi Signed Integer o Unsigned Integer predefiniti, ad esempio <xref:System.Byte>, <xref:System.Int32> o <xref:System.UInt64>, e di un set di campi. I campi sono campi letterali statici, ognuno dei quali rappresenta una costante. Lo stesso valore può essere assegnato a più campi. In questo caso, è necessario contrassegnare uno dei valori come valore di enumerazione primario a scopo di reflection e conversione di stringhe.  
+### <a name="enumerations"></a>Enumerazioni
+
+ Un'enumerazione è un tipo <xref:System.Enum?displayProperty=nameWithType> di valore che eredita direttamente da e che fornisce nomi alternativi per i valori di un tipo primitivo sottostante. Un tipo di enumerazione dispone di un nome, un tipo sottostante che deve essere uno dei tipi Signed Integer o Unsigned Integer predefiniti, ad esempio <xref:System.Byte>, <xref:System.Int32> o <xref:System.UInt64>, e di un set di campi. I campi sono campi letterali statici, ognuno dei quali rappresenta una costante. Lo stesso valore può essere assegnato a più campi. In questo caso, è necessario contrassegnare uno dei valori come valore di enumerazione primario a scopo di reflection e conversione di stringhe.  
   
  È possibile assegnare a un'enumerazione un valore del tipo sottostante e viceversa. Nel runtime non è richiesto alcun cast. È possibile creare un'istanza di un'enumerazione e chiamare i metodi di <xref:System.Enum?displayProperty=nameWithType>, nonché qualsiasi metodo definito nel tipo sottostante dell'enumerazione. In alcuni linguaggi, tuttavia, potrebbe non essere possibile passare un'enumerazione come parametro quando un'istanza del tipo sottostante è obbligatoria (o viceversa).  
   
@@ -120,9 +111,9 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
   
  [!code-csharp[Conceptual.Types.Enum#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.enum/cs/example.cs#1)]
  [!code-vb[Conceptual.Types.Enum#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.enum/vb/example.vb#1)]  
-  
-<a name="Interfaces"></a>
-### <a name="interfaces"></a>Interfacce  
+
+### <a name="interfaces"></a>Interfacce
+
  Un'interfaccia definisce un contratto che specifica una relazione di tipo "può" o una relazione di tipo "ha". Le interfacce vengono in genere utilizzate per implementare funzionalità, ad esempio il confronto e l'ordinamento (interfacce <xref:System.IComparable> e <xref:System.IComparable%601>), il test di uguaglianza (interfaccia <xref:System.IEquatable%601>) o l'enumerazione di elementi in una raccolta (interfacce <xref:System.Collections.IEnumerable> e <xref:System.Collections.Generic.IEnumerable%601>). Le interfacce possono disporre di proprietà, metodi ed eventi, ovvero tutti membri astratti. Per questo motivo, anche se l'interfaccia definisce i membri e le relative firme, il compito di definire le funzionalità di ogni membro dell'interfaccia viene lasciato al tipo che la implementa. Ciò significa che qualsiasi classe o struttura che implementa un'interfaccia deve fornire le definizioni per i membri astratti dichiarati nell'interfaccia. Un'interfaccia può richiedere che qualsiasi classe o struttura che la implementa implementi anche una o più altre interfacce.  
   
  Alle interfacce si applicano le seguenti restrizioni:  
@@ -136,9 +127,9 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
 - Le interfacce possono definire solo membri di istanza. Non possono definire membri statici.  
   
  Ogni linguaggio deve fornire regole per il mapping di un'implementazione all'interfaccia che richiede il membro, in quanto più interfacce possono dichiarare un membro con la stessa firma e i membri possono disporre di implementazioni separate.  
-  
-<a name="Delegates"></a>
-### <a name="delegates"></a>Delegati  
+
+### <a name="delegates"></a>Delegati
+
  I delegati sono tipi di riferimento che assolvono a una funzione simile a quella dei puntatori a funzione in C++. Vengono usati per i gestori di eventi e le funzioni di callback in .NET. Diversamente dai puntatori a funzione, i delegati sono sicuri, verificabili e indipendenti dai tipi. Un tipo delegato può rappresentare qualsiasi metodo di istanza o metodo statico con una firma compatibile.  
   
  Un parametro di un delegato è compatibile con il parametro di un metodo corrispondente se il tipo del parametro del delegato è più restrittivo rispetto al tipo del parametro del metodo. In questo modo si garantisce che un argomento passato al delegato possa essere passato in modo sicuro al metodo.  
@@ -163,8 +154,8 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
 > [!NOTE]
 > Non è necessario utilizzare questi metodi per i delegati dei gestori di eventi nei linguaggi C#, C++ e Visual Basic perché questi linguaggi forniscono la sintassi per l'aggiunta e la rimozione dei gestori di eventi.  
 
-<a name="type_definitions"></a>
-## <a name="type-definitions"></a>Definizioni dei tipi  
+## <a name="type-definitions"></a>Definizioni di tipo
+
  Una definizione di tipo include gli elementi seguenti:  
   
 - Gli eventuali attributi definiti per il tipo.  
@@ -179,7 +170,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
   
 - Le definizioni per ciascuno dei membri del tipo.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attributi  
  Gli attributi forniscono metadati aggiuntivi definiti dall'utente. Comunemente vengono utilizzati per archiviare informazioni aggiuntive su un tipo nell'assembly o per modificare il comportamento di un membro del tipo nella fase di progettazione o nell'ambiente di runtime.  
   
  Gli attributi stessi sono classi che ereditano da <xref:System.Attribute?displayProperty=nameWithType>. I linguaggi che supportano l'utilizzo di attributi forniscono ognuno la sintassi necessaria per l'applicazione degli attributi a un elemento del linguaggio. Gli attributi possono essere applicati a quasi tutti gli elementi del linguaggio. Gli elementi specifici a cui è possibile applicare un attributo sono definiti dall'oggetto <xref:System.AttributeUsageAttribute> applicato a tale classe di attributi.  
@@ -217,29 +208,29 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
   
  Sebbene un tipo possa fare riferimento a tipi di altri moduli e assembly, deve essere definito completamente all'interno di un modulo .NET. A seconda del supporto del compilatore, tuttavia, può essere suddiviso in più file di codice sorgente. I nomi dei tipi devono essere univoci solo all'interno di uno spazio dei nomi. Per identificare completamente un tipo, il relativo nome deve essere qualificato dallo spazio dei nomi che contiene l'implementazione del tipo.  
   
-### <a name="base-types-and-interfaces"></a>Tipi base e interfacce  
+### <a name="base-types-and-interfaces"></a>Tipi di base e interfacce  
  Un tipo può ereditare valori e comportamenti da un altro tipo. Common Type System non consente ai tipi di ereditare da più di un tipo base.  
   
  Un tipo può implementare un numero indefinito di interfacce. Per implementare un'interfaccia un tipo deve implementare tutti i membri virtuali di tale interfaccia. Un metodo virtuale può essere implementato da un tipo derivato e può essere richiamato in modo statico o dinamico.  
 
-<a name="type_members"></a>
-## <a name="type-members"></a>Membri dei tipi  
+## <a name="type-members"></a>Membri dei tipi
+
  Il runtime consente di definire membri del tipo per specificare il comportamento e lo stato di un tipo. I membri dei tipi includono gli elementi seguenti:  
   
-- [Campi](#Fields)  
+- [Fields](#fields)  
   
-- [Proprietà](#Properties)  
+- [Proprietà](#properties)  
   
-- [Metodi](#Methods)  
+- [Metodi](#methods)  
   
-- [Costruttori](#Constructors)  
+- [Costruttori](#constructors)  
   
-- [Events](#Events)  
+- [Events](#events)  
   
-- [Tipi annidati](#NestedTypes)  
-  
-<a name="Fields"></a>
-### <a name="fields"></a>Campi  
+- [Tipi nidificati](#nested-types)  
+
+### <a name="fields"></a>Campi
+
  Un campo descrive e contiene parte dello stato del tipo. I campi possono essere di qualsiasi tipo supportato dal runtime. Nella maggior parte dei casi, i campi sono `private` o `protected`, in modo che siano accessibili solo dall'interno della classe o da una classe derivata. Se il valore di un campo può essere modificato dall'esterno del relativo tipo, viene in genere utilizzata una funzione di accesso set della proprietà. I campi esposti pubblicamente sono in genere di sola lettura e possono essere di due tipi:  
   
 - Costanti, il cui valore viene assegnato durante la fase di progettazione. Si tratta di membri statici di una classe, sebbene non vengano definiti utilizzando la parola chiave `static` (`Shared` in Visual Basic).  
@@ -250,54 +241,54 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
   
  [!code-csharp[Conceptual.Types.Members.Fields#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.members.fields/cs/example.cs#1)]
  [!code-vb[Conceptual.Types.Members.Fields#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.members.fields/vb/example.vb#1)]  
-  
-<a name="Properties"></a>
-### <a name="properties"></a>Proprietà  
+
+### <a name="properties"></a>Proprietà
+
  Una proprietà consente di denominare un valore o uno stato del tipo e di definire i metodi per ottenere o impostare il valore della proprietà. Le proprietà possono essere tipi primitivi, raccolte di tipi primitivi, tipi definiti dall'utente, oppure raccolte di tipi definiti dall'utente. Sono spesso utilizzate per mantenere l'interfaccia pubblica di un tipo indipendente dalla sua effettiva rappresentazione. In questo modo le proprietà riflettono valori che non sono archiviati direttamente nella classe, ad esempio quando una proprietà restituisce un valore calcolato, oppure eseguono la convalida prima che i valori vengano assegnati a campi privati. Nell'esempio seguente viene illustrato quest'ultimo caso.  
   
  [!code-csharp[Conceptual.Types.Members.Properties#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.members.properties/cs/example.cs#1)]
  [!code-vb[Conceptual.Types.Members.Properties#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.members.properties/vb/example.vb#1)]  
   
  Oltre a includere la proprietà stessa, Microsoft Intermediate Language (MSIL) per un tipo contenente una proprietà leggibile include un metodo `get_`*nomeproprietà*, mentre per un tipo contenente una proprietà scrivibile include un metodo `set_`*nomeproprietà*.  
-  
-<a name="Methods"></a>
-### <a name="methods"></a>Metodi  
+
+### <a name="methods"></a>Metodi
+
  Un metodo descrive le operazioni disponibili sul tipo. Nella firma di un metodo sono specificati i tipi consentiti di tutti i relativi parametri e del relativo valore restituito.  
   
  Sebbene molti metodi definiscono il numero preciso di parametri necessari per le chiamate al metodo, alcuni metodi supportano un numero di parametri variabile. Il parametro finale dichiarato di questi metodi è contrassegnato con l'attributo <xref:System.ParamArrayAttribute>. I compilatori di linguaggio forniscono in genere una parola chiave, ad esempio `params` in C# e `ParamArray` in Visual Basic, che utilizza esplicitamente l'attributo <xref:System.ParamArrayAttribute> non necessario.  
-  
-<a name="Constructors"></a>
-### <a name="constructors"></a>Costruttori  
+
+### <a name="constructors"></a>Costruttori
+
  Un costruttore è un tipo speciale di metodo che consente di creare nuove istanze di una classe o di una struttura. Analogamente a ogni altro metodo, un costruttore può includere parametri. I costruttori, tuttavia, non restituiscono alcun valore, ovvero restituiscono `void`.  
   
  Se il codice sorgente per una classe non definisce in modo esplicito un costruttore, il compilatore include un costruttore senza parametri. Se tuttavia il codice sorgente per una classe definisce solo costruttori con parametri, i compilatori Visual Basic e C# non generano un costruttore senza parametri.  
   
  Se il codice sorgente per una struttura definisce i costruttori, essi devono essere con parametri. Una struttura non può definire un costruttore senza parametri e i compilatori non generano costruttori senza parametri per strutture o altri tipi di valori. Tutti i tipi di valori hanno un costruttore senza parametri. Questo costruttore viene implementato da Common Language Runtime e inizializza tutti i campi della struttura sui valori predefiniti.  
-  
-<a name="Events"></a>
-### <a name="events"></a>Eventi  
+
+### <a name="events"></a>Eventi
+
  Un evento definisce una situazione a cui è possibile fornire risposta e metodi per la sottoscrizione, l'annullamento della sottoscrizione e la generazione dell'evento. Gli eventi sono spesso utilizzati per indicare modifiche di stato a tipi diversi. Per altre informazioni, vedere [Eventi](../../../docs/standard/events/index.md).  
-  
-<a name="NestedTypes"></a>
-### <a name="nested-types"></a>Tipi annidati  
+
+### <a name="nested-types"></a>Tipi annidati
+
  I tipi annidati sono tipi membri di altri tipi. I tipi annidati devono essere strettamente collegati ai rispettivi tipi contenitori e non devono essere utilizzati come tipi generici. I tipi annidati risultano utili quando il tipo dichiarante utilizza e crea istanze del tipo annidato e quando il loro utilizzo non viene esposto in membri pubblici.  
   
  Per alcuni sviluppatori i tipi annidati possono generare confusione e dovrebbero essere visibili pubblicamente solo in casi di assoluta necessità. In una libreria progettata correttamente è improbabile che gli sviluppatori debbano utilizzare tipi annidati per creare istanze di oggetti o dichiarare variabili.  
 
-<a name="characteristics_of_type_members"></a>
-## <a name="characteristics-of-type-members"></a>Caratteristiche dei membri dei tipi  
+## <a name="characteristics-of-type-members"></a>Caratteristiche dei membri dei tipi
+
  In Common Type System i membri dei tipi possono disporre di caratteristiche diverse, anche se non è necessario che i linguaggi le supportino tutte. Nella tabella riportata di seguito vengono descritte le caratteristiche dei membri.  
   
 |Caratteristica|Si applica a|Descrizione|  
 |--------------------|------------------|-----------------|  
 |abstract|Metodi, proprietà ed eventi|Il tipo non fornisce l'implementazione del metodo. I tipi che ereditano o implementano metodi astratti devono fornire un'implementazione per il metodo. L'unica eccezione si verifica nel caso in cui il tipo derivato sia esso stesso un tipo astratto. Tutti i metodi astratti sono virtuali.|  
-|private, gruppo, assembly, gruppo e assembly, gruppo o assembly o public|Tutti|Consente di definire l'accessibilità del membro.<br /><br /> Privato<br /> Accessibile solo dall'interno dello stesso tipo del membro o di un tipo annidato.<br /><br /> famiglia<br /> Accessibile dall'interno dello stesso tipo del membro e dai tipi derivati che ereditano da esso.<br /><br /> assembly<br /> Accessibile solo nell'assembly nel quale il tipo viene definito.<br /><br /> family e assembly<br /> Accessibile solo dai tipi che sono qualificati sia per l'accesso di gruppo che di assembly.<br /><br /> family o assembly<br /> Accessibile solo dai tipi che sono qualificati per l'accesso di gruppo o per quello di assembly.<br /><br /> public<br /> Accessibile da qualsiasi tipo.|  
+|private, gruppo, assembly, gruppo e assembly, gruppo o assembly o public|Tutti|Consente di definire l'accessibilità del membro.<br /><br /> private<br /> Accessibile solo dall'interno dello stesso tipo del membro o di un tipo annidato.<br /><br /> famiglia<br /> Accessibile dall'interno dello stesso tipo del membro e dai tipi derivati che ereditano da esso.<br /><br /> assembly<br /> Accessibile solo nell'assembly nel quale il tipo viene definito.<br /><br /> family e assembly<br /> Accessibile solo dai tipi che sono qualificati sia per l'accesso di gruppo che di assembly.<br /><br /> family o assembly<br /> Accessibile solo dai tipi che sono qualificati per l'accesso di gruppo o per quello di assembly.<br /><br /> public<br /> Accessibile da qualsiasi tipo.|  
 |final|Metodi, proprietà ed eventi|Il metodo virtuale non può essere sottoposto a override in un tipo derivato.|  
 |initialize-only|Campi|Il valore può essere solo inizializzato e non può essere scritto dopo l'inizializzazione.|  
 |instance|Campi, metodi, proprietà ed eventi|Se un membro non è contrassegnato come `static` (C# e C++), `Shared` (Visual Basic), `virtual` (C# e C++) o `Overridable` (Visual Basic), è un membro di istanza (nessuna parola chiave di istanza). Ci saranno tante copie di tali membri in memoria quanti sono gli oggetti che li utilizzano.|  
 |valore letterale|Campi|Il valore assegnato al campo è un valore fisso, noto in fase di compilazione, di un tipo di valore incorporato. Ai campi literal viene a volte fatto riferimento come a costanti.|  
 |newslot o override|Tutti|Definisce il modo in cui il membro interagisce con membri ereditati aventi la stessa firma:<br /><br /> newslot<br /> Nasconde i membri ereditati aventi la stessa firma.<br /><br /> override<br /> Sostituisce la definizione di un metodo virtuale ereditato.<br /><br /> Il valore predefinito è newslot.|  
-|Statica|Campi, metodi, proprietà ed eventi|Il membro appartiene al tipo sul quale viene definito, non a un'istanza specifica del tipo. Il membro esiste anche se non viene creata un'istanza del tipo ed è condiviso tra tutte le istanze del tipo.|  
+|static|Campi, metodi, proprietà ed eventi|Il membro appartiene al tipo sul quale viene definito, non a un'istanza specifica del tipo. Il membro esiste anche se non viene creata un'istanza del tipo ed è condiviso tra tutte le istanze del tipo.|  
 |virtuale|Metodi, proprietà ed eventi|Il metodo può essere implementato da un tipo derivato e può essere richiamato in modo statico o dinamico. Se viene utilizzata la chiamata dinamica, il tipo dell'istanza che effettua la chiamata in fase di esecuzione, e non il tipo noto in fase di compilazione, determina l'implementazione del metodo chiamata. Per richiamare un metodo virtuale in modo statico, potrebbe essere necessario eseguire il cast della variabile in un tipo che utilizza la versione desiderata del metodo.|  
   
 ### <a name="overloading"></a>Overload  
@@ -306,7 +297,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
 > [!NOTE]
 > Il tipo restituito non viene considerato parte della firma del metodo. Ciò significa che i metodi non possono essere sottoposti a overload se differiscono unicamente per il tipo restituito.  
   
-### <a name="inheriting-overriding-and-hiding-members"></a>Eredità, override e membri nascosti  
+### <a name="inherit-override-and-hide-members"></a>Ereditare, eseguire l'override e nascondere i membri  
  Un tipo derivato eredita tutti i membri del relativo tipo di base, ovvero tali membri vengono definiti e resi disponibili nel tipo derivato. Il comportamento o le qualità dei membri ereditati possono essere modificati in due modi:  
   
 - È possibile nascondere un membro ereditato con un tipo derivato definendo un nuovo membro con la stessa firma. Questa operazione può essere eseguita per rendere privato un membro precedentemente pubblico oppure per definire un nuovo comportamento per un metodo ereditato contrassegnato come `final`.  
@@ -315,6 +306,6 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Browser per le API .NET](/dotnet/api)
+- [Browser API .NET](/dotnet/api)
 - [Common Language Runtime](../../../docs/standard/clr.md)
 - [Conversione di tipi in .NET](../../../docs/standard/base-types/type-conversion.md)
