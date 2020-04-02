@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel queries, combine parallel and sequential
 ms.assetid: 1167cfe6-c8aa-4096-94ba-c66c3a4edf4c
-ms.openlocfilehash: 4c04afb23a168a9cff60962bd5a75a65e3ebca4d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 99c86e17c57a90d2268acb2a32c69bc4a693338a
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73134190"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80587993"
 ---
 # <a name="how-to-combine-parallel-and-sequential-linq-queries"></a>Procedura: combinare query LINQ parallele e sequenziali
 Questo esempio mostra come usare il metodo <xref:System.Linq.ParallelEnumerable.AsSequential%2A> per indicare a PLINQ di elaborare tutti gli operatori successivi nella query in modo sequenziale. Anche se l'elaborazione sequenziale è generalmente più lenta di quella parallela, a volte è necessaria per produrre risultati corretti.  
@@ -32,4 +32,4 @@ Questo esempio mostra come usare il metodo <xref:System.Linq.ParallelEnumerable.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)

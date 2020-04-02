@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
-ms.openlocfilehash: 18f233ac4c5afa63ec31e83d5fff8f0a57f9146f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 623466e0e960ea991ae92e5de432171b70bad1d2
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74203991"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588624"
 ---
 # <a name="merge-options-in-plinq"></a>Opzioni di merge in PLINQ
 Quando una query è in esecuzione come parallela, PLINQ partiziona la sequenza di origine in modo che più thread possano operare simultaneamente su parti diverse, in genere su thread separati. Se i risultati devono essere utilizzati in un unico thread, ad esempio in un ciclo `foreach` (`For Each` in Visual Basic), i risultati di ogni thread devono essere nuovamente uniti in un'unica sequenza. Il tipo di merge che PLINQ esegue dipende dagli operatori presenti nella query. Ad esempio, gli operatori che impongono un nuovo ordine nei risultati devono memorizzare nel buffer tutti gli elementi da tutti i thread. Dal punto di vista del thread consumer (che è anche quello dell'utente dell'applicazione), una query completamente memorizzata nel buffer potrebbe essere eseguita per un periodo considerevole di tempo prima che produca il primo risultato. Gli altri operatori, per impostazione predefinita, sono parzialmente memorizzati nel buffer e generano i risultati in batch. Un operatore, <xref:System.Linq.ParallelEnumerable.ForAll%2A>, non è memorizzato nel buffer per impostazione predefinita. Genera immediatamente tutti gli elementi di tutti i thread.  
@@ -65,5 +65,5 @@ Quando una query è in esecuzione come parallela, PLINQ partiziona la sequenza d
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
 - [Procedura: specificare le opzioni di merge in PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)

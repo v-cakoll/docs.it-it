@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, creating dataflow pipeline
 ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
-ms.openlocfilehash: 284be7789b6411055a6421fd07cc1b0605f6ea0c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 339365381b1fa2c777cead3c75bfe783f7af800e
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139866"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588279"
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>Procedura dettagliata: creazione di una pipeline del flusso di dati
 Sebbene sia possibile usare i metodi <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> per ricevere messaggi da blocchi di origine, è anche possibile connettere blocchi di messaggi per formare una *pipeline del flusso di dati*. Una pipeline del flusso di dati è costituita da una serie di componenti o *blocchi di flussi di dati*, ognuno dei quali esegue un'attività specifica che contribuisce a un obiettivo più grande. In ogni blocco di flussi di dati di una pipeline del flusso di dati viene eseguito un lavoro quando si riceve un messaggio da un altro blocco di flussi di dati. Un'analogia a questo è data da una catena di montaggio per la produzione di automobili. Man mano che ciascun veicolo passa attraverso la catena di montaggio, in una postazione viene assemblato il telaio, nella successiva viene installato il motore e così via. Grazie alla catena di montaggio in cui è possibile eseguire il montaggio di più veicoli contemporaneamente, si ottiene una maggiore produzione rispetto al montaggio completo dei veicoli uno alla volta.
@@ -34,7 +34,7 @@ Sebbene sia possibile usare i metodi <xref:System.Threading.Tasks.Dataflow.Dataf
   
 6. Attendere il completamento di tutto il lavoro da parte della pipeline.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Prima di iniziare questa procedura dettagliata, leggere [Flusso di dati](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md).  
   
 ## <a name="creating-a-console-application"></a>Creazione di un'applicazione console  
@@ -104,7 +104,7 @@ Sebbene sia possibile usare i metodi <xref:System.Threading.Tasks.Dataflow.Dataf
 ## <a name="next-steps"></a>Passaggi successivi  
  In questo esempio viene inviato un URL da elaborare tramite la pipeline del flusso di dati. Se si invia più di un valore di input tramite una pipeline, è possibile introdurre un form di parallelismo nell'applicazione che rappresenta il numero di parti che possono essere spostate in una fabbrica di automobili. Quando tramite il primo membro della pipeline viene inviato il risultato al secondo membro, è possibile elaborare un altro elemento in parallelo mentre tramite il secondo membro viene elaborato il primo risultato.  
   
- Il parallelismo raggiunto attraverso l'uso di pipeline di flussi di dati è noto come *parallelismo con granularità grossolana* poiché consiste in genere in attività più o meno grandi. È anche possibile usare un *parallelismo con granularità più fine* di attività più piccole a esecuzione breve in una pipeline del flusso di dati. In questo esempio, nel membro `findReversedWords` della pipeline viene usato [PLINQ](parallel-linq-plinq.md) per elaborare in parallelo più elementi nell'elenco di lavoro. L'utilizzo di parallelismo con granularità fine in una pipeline con granularità grossolana può migliorare la velocità effettiva globale.  
+ Il parallelismo raggiunto attraverso l'uso di pipeline di flussi di dati è noto come *parallelismo con granularità grossolana* poiché consiste in genere in attività più o meno grandi. È anche possibile usare un *parallelismo con granularità più fine* di attività più piccole a esecuzione breve in una pipeline del flusso di dati. In questo esempio, nel membro `findReversedWords` della pipeline viene usato [PLINQ](introduction-to-plinq.md) per elaborare in parallelo più elementi nell'elenco di lavoro. L'utilizzo di parallelismo con granularità fine in una pipeline con granularità grossolana può migliorare la velocità effettiva globale.  
   
  È anche possibile connettere un blocco di origine del flusso di dati a più blocchi di destinazione per creare una *rete del flusso di dati*. La versione sottoposta a overload del metodo <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> accetta un oggetto <xref:System.Predicate%601> mediante il quale viene definito se il blocco di destinazione accetta ogni messaggio in base al relativo valore. La maggior parte dei tipi di blocchi di flussi di dati utilizzati come origini offrono messaggi a tutti i blocchi di destinazione connessi, nell'ordine in cui sono stati collegati, finché uno dei blocchi non accetta il messaggio. Tramite questo meccanismo di filtro, è possibile creare sistemi di blocchi di flussi di dati connessi in cui determinati dati vengono indirizzati tramite un percorso mentre altri tramite un altro percorso. Per un esempio che usa il filtro per creare una rete del flusso di dati, vedere [Procedura dettagliata: Uso del flusso di dati in un'applicazione Windows Forms](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
   

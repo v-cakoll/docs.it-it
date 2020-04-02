@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET, parallel programming in
 - Parallel Programming
 ms.assetid: b8f99f43-9104-45fd-9bff-385a20488a23
-ms.openlocfilehash: 487fe48462803ac19318f450f2576989f196a9be
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6785041730a048fb08677dbd054f727e351185d4
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139964"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588583"
 ---
 # <a name="task-parallel-library-tpl"></a>Task Parallel Library (TPL)
 La libreria Task Parallel Library (TPL) è un set di tipi e API pubblici negli spazi dei nomi <xref:System.Threading?displayProperty=nameWithType> e <xref:System.Threading.Tasks?displayProperty=nameWithType>. Lo scopo di TPL è di rendere gli sviluppatori più produttivi mediante la semplificazione del processo di aggiunta di parallelismo e concorrenza alle applicazioni. La libreria TPL ridimensiona il grado di concorrenza dinamicamente per utilizzare in modo efficace tutti i processori disponibili. La libreria TPL gestisce inoltre il partizionamento del lavoro, la pianificazione dei thread in <xref:System.Threading.ThreadPool>, il supporto per l'annullamento, la gestione dello stato e altri dettagli di basso livello. Quando si utilizza TPL, è possibile ottimizzare le prestazioni del codice concentrandosi sulle operazioni per cui il programma è stato progettato.  
@@ -28,7 +28,7 @@ La libreria Task Parallel Library (TPL) è un set di tipi e API pubblici negli s
 |[Flusso di dati](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)|Viene descritto come utilizzare i componenti del flusso di dati nella libreria del flusso di dati TPL per gestire più operazioni che devono comunicare tra loro o elaborare dati man mano che diventano disponibili.|  
 |[Uso di TPL con altri modelli asincroni](../../../docs/standard/parallel-programming/using-tpl-with-other-asynchronous-patterns.md)|Viene descritto come usare TPL con altri modelli asincroni in .NET|  
 |[Problemi potenziali nel parallelismo di dati e attività](../../../docs/standard/parallel-programming/potential-pitfalls-in-data-and-task-parallelism.md)|Vengono descritti alcuni problemi comuni e il modo per evitarli.|  
-|[Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)|Viene descritto come realizzare il parallelismo dei dati con le query LINQ.|  
+|[Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)|Viene descritto come realizzare il parallelismo dei dati con le query LINQ.|  
 |[Programmazione parallela](../../../docs/standard/parallel-programming/index.md)|Nodo di livello superiore per la programmazione parallela di .NET.|  
   
 ## <a name="see-also"></a>Vedere anche

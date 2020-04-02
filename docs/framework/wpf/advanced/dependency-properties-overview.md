@@ -14,22 +14,22 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 9bf0b168633bbf9f56694e79cf81f8051f9b8ac0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1df75814c45a6f1c245d43e2390b8a6ce692a779
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186374"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80587802"
 ---
 # <a name="dependency-properties-overview"></a>Panoramica sulle proprietà di dipendenza
 
-Windows Presentation Foundation (WPF) include un set di servizi che è possibile usare per estendere la funzionalità di una [proprietà](../../../standard/base-types/common-type-system.md#Properties) di un tipo. In genere, questi servizi vengono definiti collettivamente come sistema di proprietà WPF. Una proprietà supportata dal sistema di proprietà WPF è nota come proprietà di dipendenza. Questa panoramica descrive il sistema di proprietà WPF e le funzionalità di una proprietà di dipendenza. Viene anche spiegato come usare le proprietà di dipendenza esistenti in XAML e nel codice. In questa panoramica vengono anche illustrati aspetti specifici delle proprietà di dipendenza, ad esempio i metadati delle proprietà di dipendenza e la creazione di una proprietà di dipendenza in una classe personalizzata.
+Windows Presentation Foundation (WPF) include un set di servizi che è possibile usare per estendere la funzionalità di una [proprietà](../../../standard/base-types/common-type-system.md#properties) di un tipo. In genere, questi servizi vengono definiti collettivamente come sistema di proprietà WPF. Una proprietà supportata dal sistema di proprietà WPF è nota come proprietà di dipendenza. Questa panoramica descrive il sistema di proprietà WPF e le funzionalità di una proprietà di dipendenza. Viene anche spiegato come usare le proprietà di dipendenza esistenti in XAML e nel codice. In questa panoramica vengono anche illustrati aspetti specifici delle proprietà di dipendenza, ad esempio i metadati delle proprietà di dipendenza e la creazione di una proprietà di dipendenza in una classe personalizzata.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 In questo argomento si presuppone che l'utente disponga di una conoscenza di base del sistema di tipi .NET e della programmazione orientata a oggetti. Per seguire gli esempi illustrati in questo argomento, è anche necessario conoscere XAML e saper scrivere applicazioni WPF. Per altre informazioni, vedere [Procedura dettagliata: La prima applicazione desktop WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
 ## <a name="dependency-properties-and-clr-properties"></a>Proprietà di dipendenza e proprietà CLR
- In WPF le proprietà vengono generalmente esposte come [proprietà](../../../standard/base-types/common-type-system.md#Properties) .NET standard. A un livello di base, si potrebbe interagire direttamente con queste proprietà senza sapere che vengono implementate come una proprietà di dipendenza. Tuttavia, è necessario acquisire familiarità con alcune o tutte le funzionalità del sistema di proprietà WPF, in modo da poterle sfruttare.
+ In WPF le proprietà vengono generalmente esposte come [proprietà](../../../standard/base-types/common-type-system.md#properties) .NET standard. A un livello di base, si potrebbe interagire direttamente con queste proprietà senza sapere che vengono implementate come una proprietà di dipendenza. Tuttavia, è necessario acquisire familiarità con alcune o tutte le funzionalità del sistema di proprietà WPF, in modo da poterle sfruttare.
 
 Lo scopo delle proprietà di dipendenza consiste nel fornire un modo per calcolare il valore di una proprietà in base al valore di altri input. Questi potrebbero includere proprietà del sistema, quali temi e preferenze dell'utente, meccanismi di determinazione della proprietà JIT, ad esempio data binding dati e animazioni o storyboard, modelli multiuso, quali risorse e stili oppure valori noti tramite relazioni padre-figlio con altri elementi dell'albero degli elementi. Inoltre, una proprietà di dipendenza può essere implementata per fornire una convalida autonoma, valori predefiniti, callback per il monitoraggio delle modifiche di altre proprietà, nonché un sistema che può assegnare forzatamente valori della proprietà in base a potenziali informazioni di runtime. Le classi derivate possono anche modificare alcune caratteristiche specifiche di una proprietà esistente, eseguendo l'override dei metadati della proprietà di dipendenza invece dell'override dell'implementazione effettiva delle proprietà esistenti oppure della creazione di nuove proprietà.
 

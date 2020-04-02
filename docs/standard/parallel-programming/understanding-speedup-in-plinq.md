@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, performance tuning
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
-ms.openlocfilehash: 07b5027d560a4caccc6c0a516c3f70c11df6be83
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 60df814e18f473d84c260511292666c524fda7b7
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139913"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588071"
 ---
 # <a name="understanding-speedup-in-plinq"></a>Informazioni sull'aumento di velocità in PLINQ
 L'obiettivo principale di PLINQ consiste nel velocizzare l'esecuzione di query LINQ to Objects mediante l'esecuzione di delegati di query in parallelo in computer multicore. PLINQ assicura le prestazioni migliori quando l'elaborazione di ogni elemento in una raccolta di origine è indipendente, senza stati condivisi tra i singoli delegati. Tali operazioni sono comuni in LINQ to Objects e PLINQ e spesso vengono definite "*squisitamente parallele*" perché si prestano facilmente alla pianificazione su più thread. Tuttavia, non tutte le query sono costituite interamente da operazioni squisitamente parallele. Nella maggior parte dei casi una query implica alcuni operatori che non possono essere parallelizzati o che rallentano l'esecuzione parallela. Anche in caso di query che sono tutte squisitamente parallele, PLINQ deve comunque partizionare l'origine dati e pianificare il lavoro sui thread, unendo in genere i risultati al termine della query. Tutte queste operazioni incrementano i costi di calcolo della parallelizzazione, che vengono definiti *sovraccarico*. Per ottenere prestazioni ottimali in una query PLINQ, l'obiettivo è ottimizzare le parti squisitamente parallele e ridurre al minimo quelle che comportano un sovraccarico. Questo articolo fornisce informazioni che consentono di scrivere query PLINQ che siano il più efficaci possibile producendo comunque risultati corretti.  
@@ -84,4 +84,4 @@ L'obiettivo principale di PLINQ consiste nel velocizzare l'esecuzione di query L
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)

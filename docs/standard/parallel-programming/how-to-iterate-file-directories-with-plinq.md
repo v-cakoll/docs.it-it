@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - PLINQ queries, how to iterate directories
 ms.assetid: 354e8ce3-35c4-431c-99ca-7661d1f3901b
-ms.openlocfilehash: 90afc767e422515c6122b8a6ef0e63ffc07caf3a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: de33561e2ef8e8fe62e8179272abe8adfffecd6f
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73091373"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80587765"
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>Procedura: scorrere le directory dei file con PLINQ
 Questo esempio mostra due semplici modi per parallelizzare le operazioni su directory di file. La prima query usa il metodo <xref:System.IO.Directory.GetFiles%2A> per popolare una matrice di nomi di file in una directory e in tutte le sottodirectory. Questo metodo non restituisce alcun risultato finché non viene popolata l'intera matrice e di conseguenza può introdurre latenza all'inizio dell'operazione. Tuttavia, dopo che la matrice viene popolata, PLINQ può elaborarla in parallelo molto rapidamente.  
@@ -36,4 +36,4 @@ Questo esempio mostra due semplici modi per parallelizzare le operazioni su dire
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)

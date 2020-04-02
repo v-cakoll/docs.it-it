@@ -8,27 +8,30 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, introduction to
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
-ms.openlocfilehash: ed1b2df57c118a0ebb6b5ffa4326b3e2eac81dec
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e9ef72c2691a4dbb9c68202b29e0f5c77dcdaa74
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75632363"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588176"
 ---
 # <a name="introduction-to-plinq"></a>Introduzione a PLINQ
 
+Parallel LINQ (PLINQ) è un'implementazione parallela del modello [Language-Integrated Query (LINQ).](../../csharp/programming-guide/concepts/linq/index.md) PLINQ implementa il set completo di operatori di query standard LINQ come metodi di estensione per lo spazio dei nomi <xref:System.Linq> e dispone di operatori aggiuntivi per le operazioni parallele. PLINQ combina la semplicità e la leggibilità della sintassi di LINQ con la potenza di programmazione in parallelo.
+
+> [!TIP]
+> Se non si ha familiarità con LINQ, è dotato di un modello unificato per l'esecuzione di query su qualsiasi origine dati enumerabile in modo indipendente dai tipi. LINQ to Objects è il nome delle query LINQ eseguite su raccolte in memoria, ad esempio oggetti <xref:System.Collections.Generic.List%601> e matrici. Questo articolo presuppone che si abbia già una conoscenza delle nozioni di base di LINQ. Per ulteriori informazioni, vedere [Language-Integrated Query (LINQ)](../../csharp/programming-guide/concepts/linq/index.md).
+
 ## <a name="what-is-a-parallel-query"></a>Che cos'è una query parallela?
 
-LINQ (Language-Integrated Query), introdotto in .NET Framework 3.5, offre un modello unificato per l'esecuzione di query su qualsiasi origine dati <xref:System.Collections.IEnumerable?displayProperty=nameWithType> o <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> in modo indipendente dai tipi. LINQ to Objects è il nome delle query LINQ eseguite su raccolte in memoria, ad esempio oggetti <xref:System.Collections.Generic.List%601> e matrici. Questo articolo presuppone che si abbia già una conoscenza delle nozioni di base di LINQ. Per altre informazioni, vedere [LINQ (Language-Integrated Query)- C# ](../../csharp/programming-guide/concepts/linq/index.md) oppure [LINQ (Language-Integrated Query) - Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md).
-
-Parallel LINQ (PLINQ) è un'implementazione in parallelo del modello LINQ. Una query PLINQ è molto simile a una query LINQ to Objects non parallela. Le query PLINQ, proprio come le query <xref:System.Collections.IEnumerable> LINQ <xref:System.Collections.Generic.IEnumerable%601> sequenziali, operano su qualsiasi in memoria o origine dati e hanno l'esecuzione posticipata, il che significa che non iniziano l'esecuzione fino a quando la query non viene enumerata. La differenza principale consiste nel fatto che PLINQ tenta di sfruttare al massimo tutti i processori del sistema. A tale scopo esegue il partizionamento dell'origine dati in segmenti e quindi esegue la query su ogni segmento in thread di lavoro distinti e in parallelo su più processori. In molti casi, l'esecuzione parallela rende notevolmente più rapida l'esecuzione della query.
+Una query PLINQ è molto simile a una query LINQ to Objects non parallela. Le query PLINQ, proprio come le query <xref:System.Collections.IEnumerable> LINQ <xref:System.Collections.Generic.IEnumerable%601> sequenziali, operano su qualsiasi in memoria o origine dati e hanno l'esecuzione posticipata, il che significa che non iniziano l'esecuzione fino a quando la query non viene enumerata. La differenza principale consiste nel fatto che PLINQ tenta di sfruttare al massimo tutti i processori del sistema. A tale scopo esegue il partizionamento dell'origine dati in segmenti e quindi esegue la query su ogni segmento in thread di lavoro distinti e in parallelo su più processori. In molti casi, l'esecuzione parallela rende notevolmente più rapida l'esecuzione della query.
 
 Tramite l'esecuzione parallela, PLINQ può garantire per determinati tipi di query prestazioni significativamente migliori rispetto al codice legacy, spesso con la sola aggiunta dell'operazione di query <xref:System.Linq.ParallelEnumerable.AsParallel%2A> all'origine dati. Tuttavia, il parallelismo può introdurre complessità intrinseche e non tutte le operazioni di query presentano un'esecuzione più veloce in PLINQ. Di fatto, per determinate query la parallelizzazione comporta un'esecuzione più lenta. È pertanto necessario comprendere il modo in cui alcuni aspetti, ad esempio l'ordinamento, influiscono sulle query parallele. Per altre informazioni, vedere [Informazioni sull'aumento di velocità in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).
 
 > [!NOTE]
 > Le espressioni lambda sono usate nella documentazione per definire i delegati in PLINQ. Se non si ha familiarità con le espressioni lambda in Visual Basic o in Visual Basic, vedere [Espressioni lambda in PLINQ e TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).
 
-La parte rimanente di questo articolo offre una panoramica delle classi PLINQ principali e descrive come creare query PLINQ. Ogni sezione contiene collegamenti a informazioni dettagliate ed esempi di codice.
+Nella parte restante di questo articolo viene fornita una panoramica delle principali classi PLINQ e viene illustrato come creare query PLINQ. Ogni sezione contiene collegamenti a informazioni dettagliate ed esempi di codice.
 
 ## <a name="the-parallelenumerable-class"></a>Classe ParallelEnumerable
 
@@ -134,5 +137,5 @@ In molti casi una query può essere parallelizzata, ma le risorse necessarie per
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
 - [Informazioni sull'aumento di velocità in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)

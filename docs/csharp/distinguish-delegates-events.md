@@ -4,12 +4,12 @@ description: Informazioni sulla differenza tra i delegati e gli eventi e su quan
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0fdc8629-2fdb-4a7c-a433-5b9d04eaf911
-ms.openlocfilehash: 04738ac2dd82da9c577e88598d0bb737a93333c1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4179330fe5e88da5d5034a150a057f63e31b178b
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146178"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588252"
 ---
 # <a name="distinguishing-delegates-and-events"></a>Distinzione di delegati ed eventi
 
@@ -37,6 +37,11 @@ I controlli UX continuano a funzionare correttamente, anche se non sono presenti
 Un'altra considerazione riguarda il prototipo che si vuole usare per il metodo del delegato. Come si è visto, per i delegati usati per gli eventi il tipo restituito è void. Si è visto anche che alcuni termini per la creazione di gestori eventi, invece, restituiscono informazioni alle origini eventi tramite la modifica di proprietà dell'oggetto argomento dell'evento. Questi termini sono efficaci, ma non sono altrettanto naturali della restituzione di un valore da parte di un metodo.
 
 Si tenga presente che spesso questi due tipi di euristica sono presenti entrambi: se il metodo del delegato restituisce un valore, è probabile che in qualche modo influisca sull'algoritmo.
+
+## <a name="events-have-private-invocation"></a>Gli eventi hanno un'invocazione privata
+
+Le classi diverse da quella in cui è contenuto un evento possono solo aggiungere e rimuovere listener di eventi; solo la classe contenente l'evento può richiamare l'evento. Gli eventi sono in genere membri di una classe pubblica.
+In confronto, i delegati vengono spesso passati come parametri e archiviati come membri di classe privata, se vengono archiviati affatto.
 
 ## <a name="event-listeners-often-have-longer-lifetimes"></a>I listener di eventi hanno spesso una durata maggiore
 
