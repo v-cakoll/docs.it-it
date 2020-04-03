@@ -3,13 +3,13 @@ title: Convertire un'app Windows Form in .NET Core
 description: Viene illustrato come eseguire il porting di un'applicazione Windows Form di .NET Framework in .NET Core per Windows.
 author: Thraka
 ms.author: adegeo
-ms.date: 03/01/2019
-ms.openlocfilehash: dbd522851faa0a4fe435199914a034ee230d3455
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 01/24/2020
+ms.openlocfilehash: 80b4bb225d6a6748743d91a4c70e8b09c10cc94b
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76116020"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635520"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Come eseguire il porting di un'app desktop Windows Form in .NET Core
 
@@ -24,9 +24,9 @@ In questo articolo vengono usati vari nomi per identificare i tipi di file usati
 | **MyFormsCore.csproj** | Nome del nuovo progetto .NET Core creato. |
 | **MyAppCore.exe** | Eseguibile dell'app Windows Forms .NET Core. |
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
-- [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) per tutte le operazioni di progettazione che si vogliono eseguire.
+- [Visual Studio 2019 16.5 Preview 1](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&ch=pre&rel=16) o versione successiva per qualsiasi operazione di progettazione che si desidera eseguire. Si consiglia di eseguire l'aggiornamento alla versione di anteprima più recente [di Visual Studio](https://visualstudio.microsoft.com/vs/preview/)
 
   Installare i carichi di lavoro di Visual Studio seguenti:
   - Sviluppo per desktop .NET
@@ -34,10 +34,11 @@ In questo articolo vengono usati vari nomi per identificare i tipi di file usati
 
 - Un progetto Windows Forms funzionante in una soluzione che viene compilata ed eseguita senza problemi.
 - Un progetto codificato in C .
-- [.NET Core](https://dotnet.microsoft.com/download/dotnet-core) 3.0 o versione successiva.
 
 > [!NOTE]
-> **Visual Studio 2017** non supporta progetti .NET Core 3.0. **Visual Studio 2019** supporta i progetti .NET Core 3.0, ma non supporta ancora la finestra di progettazione grafica per i progetti Windows Forms .NET Core 3.0. Per utilizzare la finestra di progettazione visiva, è necessario disporre di un progetto Windows Form .NET in una soluzione che condivide i file di form con il progetto .NET Core.
+> I progetti .NET Core 3.0 sono supportati solo in **Visual Studio 2019** o versione successiva. A partire da **Visual Studio 2019 versione 16.5 Preview 1**, è supportata anche la finestra di progettazione Windows Form .NET Core.
+>
+> Per abilitare la finestra di progettazione, passare a Strumenti**Opzioni Opzioni dell'ambiente** > Anteprima funzionalità e selezionare l'opzione Usa la finestra **di progettazione windows Form di anteprima per le app .NET Core.To** enable the designer, go to **Tools** > **Options** > Environment Preview**Features** and select the Use the preview Windows Forms designer for .NET Core apps option.
 
 ### <a name="consider"></a>Consider
 
@@ -58,10 +59,6 @@ Per la conversione di un'applicazione Windows Forms di .NET Framework, esistono 
 01. Aggiornare i pacchetti NuGet usati dal progetto.
 
     È sempre consigliabile usare le versioni più recenti dei pacchetti NuGet prima di qualsiasi migrazione. Se l'applicazione fa riferimento a pacchetti NuGet, aggiornarli alla versione più recente. Verificare che l'applicazione venga compilata correttamente. Dopo l'aggiornamento, se sono presenti errori di pacchetto, effettuare il downgrade del pacchetto alla versione più recente che non causa problemi al codice.
-
-01. Visual Studio 2019 non supporta ancora Progettazione Windows Forms per .NET Core 3.0
-
-    Attualmente, è necessario mantenere il file di progetto .NET Framework Windows Forms esistente se si vuole usare la finestra di progettazione dei moduli da Visual Studio.
 
 ## <a name="create-a-new-sdk-project"></a>Creare un nuovo progetto SDK
 

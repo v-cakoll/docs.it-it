@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 1df75814c45a6f1c245d43e2390b8a6ce692a779
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 542e0a84e4c5cfc3750c33fe29cb40d3643e91e3
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80587802"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80636019"
 ---
 # <a name="dependency-properties-overview"></a>Panoramica sulle proprietà di dipendenza
 
@@ -128,7 +128,7 @@ Le proprietà di dipendenza, o la classe <xref:System.Windows.DependencyObject>,
 ### <a name="styles"></a>Stili
 Stili e modelli sono due degli scenari principali che giustificano l'uso delle proprietà di dipendenza. Gli stili sono particolarmente utili per l'impostazione di proprietà che definiscono l'[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] dell'applicazione. In genere gli stili vengono definiti come risorse in XAML e interagiscono con il sistema di proprietà in quanto di solito contengono "setter" per proprietà particolari, nonché "trigger" che modificano un valore della proprietà in base al valore in tempo reale per un'altra proprietà.
 
-L'esempio seguente crea uno stile molto semplice (definito all'interno di un dizionario <xref:System.Windows.FrameworkElement.Resources%2A>, non illustrato), e quindi lo applica direttamente alla proprietà <xref:System.Windows.FrameworkElement.Style%2A> di un oggetto <xref:System.Windows.Controls.Button>. Il setter all'interno dello stile imposta la proprietà <xref:System.Windows.Controls.Control.Background%2A> di un oggetto <xref:System.Windows.Controls.Button> con stile su verde.
+Nell'esempio seguente viene creato uno stile <xref:System.Windows.FrameworkElement.Resources%2A> semplice (che verrebbe definito all'interno di un dizionario, non illustrato), quindi tale stile viene applicato direttamente alla <xref:System.Windows.FrameworkElement.Style%2A> proprietà per un <xref:System.Windows.Controls.Button>oggetto . Il setter all'interno dello stile imposta la proprietà <xref:System.Windows.Controls.Control.Background%2A> di un oggetto <xref:System.Windows.Controls.Button> con stile su verde.
 
 [!code-xaml[PropertiesOvwSupport#SimpleStyleDef](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#simplestyledef)]
 
@@ -146,7 +146,7 @@ L'esempio seguente aggiunge un'animazione alla proprietà <xref:System.Windows.C
 Per altre informazioni sull'animazione di proprietà, vedere [Cenni preliminari sull'animazione](../graphics-multimedia/animation-overview.md) e [Cenni preliminari sugli storyboard](../graphics-multimedia/storyboards-overview.md).
 
 ### <a name="metadata-overrides"></a>Override dei metadati
-È possibile modificare determinati comportamenti di una proprietà di dipendenza eseguendo l'override dei metadati per quella proprietà, quando si deriva dalla classe che registra originariamente la proprietà di dipendenza. L'override dei metadati si basa sull'identificatore <xref:System.Windows.DependencyProperty>. L'override dei metadati non richiede una nuova implementazione della proprietà. La modifica dei metadati viene gestita in modo nativo dal sistema di proprietà. Ogni classe contiene, potenzialmente, i metadati specifici per tutte le proprietà ereditate dalle classi di base, in base al tipo.
+È possibile modificare determinati comportamenti di una proprietà di dipendenza eseguendo l'override dei metadati per quella proprietà, quando si deriva dalla classe che registra originariamente la proprietà di dipendenza. L'override dei metadati si basa sull'identificatore <xref:System.Windows.DependencyProperty>. L'override dei metadati non richiede la reimplementazione della proprietà. La modifica dei metadati viene gestita in modo nativo dal sistema di proprietà. Ogni classe contiene, potenzialmente, i metadati specifici per tutte le proprietà ereditate dalle classi di base, in base al tipo.
 
 L'esempio seguente esegue l'override dei metadati per una proprietà di dipendenza <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>. L'override dei metadati di questa particolare proprietà di dipendenza fa parte di un modello di implementazione che consente di creare controlli che possono usare stili predefiniti dai temi.
 
@@ -183,18 +183,18 @@ In teoria, per il primo pulsante la proprietà viene impostata due volte, ma vie
 [!code-xaml[PropertiesOvwSupport#MiniPrecedence](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#miniprecedence)]  
 
 ### <a name="why-does-dependency-property-precedence-exist"></a>Motivi dell'esistenza della precedenza delle proprietà di dipendenza
-In genere, non si vuole che gli stili vengano sempre applicati e che nascondano persino un valore impostato localmente di un singolo elemento, altrimenti sarebbe molto difficile usare gli stili o gli elementi in generale. Per questo motivo, i valori che provengono dagli stili operano a un livello di precedenza inferiore rispetto a un valore impostato localmente. Per un elenco più completo delle proprietà di dipendenza e informazioni sulla possibile provenienza di un valore effettivo di una proprietà di dipendenza, vedere [Precedenza del valore della proprietà di dipendenza](dependency-property-value-precedence.md).
+In genere, non si desidera che gli stili vengano sempre applicati e che si oscuri anche un valore impostato localmente di un singolo elemento (altrimenti sarebbe difficile usare stili o elementi in generale). Per questo motivo, i valori che provengono dagli stili operano a un livello di precedenza inferiore rispetto a un valore impostato localmente. Per un elenco più completo delle proprietà di dipendenza e informazioni sulla possibile provenienza di un valore effettivo di una proprietà di dipendenza, vedere [Precedenza del valore della proprietà di dipendenza](dependency-property-value-precedence.md).
 
 > [!NOTE]
 > Molte proprietà definite negli elementi WPF non sono proprietà di dipendenza. In generale, le proprietà vengono implementate come proprietà di dipendenza solo quando è necessario supportare almeno uno degli scenari abilitati dal sistema di proprietà: data binding, applicazione degli stili, animazione, supporto del valore predefinito, ereditarietà, proprietà associate o invalidamento.
 
 ## <a name="learning-more-about-dependency-properties"></a>Altre informazioni sulle proprietà di dipendenza  
 
-- Una proprietà associata è un tipo di proprietà che supporta una sintassi specializzata in XAML. Una proprietà associata spesso non ha una corrispondenza 1:1 con una proprietà CLR (Common Language Runtime) e non è necessariamente una proprietà di dipendenza. Lo scopo tipico di una proprietà associata consiste nel consentire agli elementi figlio di segnalare i valori della proprietà a un elemento padre, anche se quest'ultimo e l'elemento figlio non possiedono tale proprietà, come parte degli elenchi dei membri della classe. Uno scenario principale è l'abilitazione di elementi figlio per informare l'elemento padre di come devono essere presentati in [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Per un esempio, vedere <xref:System.Windows.Controls.DockPanel.Dock%2A> o <xref:System.Windows.Controls.Canvas.Left%2A>. Per informazioni dettagliate, vedere [Cenni preliminari sulle proprietà associate](attached-properties-overview.md).
+- Una proprietà associata è un tipo di proprietà che supporta una sintassi specializzata in XAML. Una proprietà associata spesso non ha una corrispondenza 1:1 con una proprietà CLR (Common Language Runtime) e non è necessariamente una proprietà di dipendenza. Lo scopo tipico di una proprietà associata è consentire agli elementi figlio di segnalare i valori delle proprietà a un elemento padre, anche se l'elemento padre e l'elemento figlio non possiedono entrambi tale proprietà come parte degli elenchi dei membri della classe. Uno scenario principale è l'abilitazione di elementi figlio per informare l'elemento padre di come devono essere presentati in [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Per un esempio, vedere <xref:System.Windows.Controls.DockPanel.Dock%2A> o <xref:System.Windows.Controls.Canvas.Left%2A>. Per informazioni dettagliate, vedere [Cenni preliminari sulle proprietà associate](attached-properties-overview.md).
 
 - Gli sviluppatori di componenti o di applicazioni possono decidere di creare una proprietà di dipendenza personalizzata al fine di abilitare funzionalità quali il data binding o il supporto degli stili oppure per il supporto dell'invalidamento e della coercizione del valore. Per informazioni dettagliate, vedere [Proprietà di dipendenza personalizzate](custom-dependency-properties.md).
 
-- Generalmente, le proprietà di dipendenza devono essere considerate come proprietà pubbliche, accessibili o almeno individuabili da parte di qualsiasi chiamante con accesso a un'istanza. Per altre informazioni, vedere [Sicurezza delle proprietà di dipendenza](dependency-property-security.md).
+- Considerare le proprietà di dipendenza come proprietà pubbliche, accessibili o almeno individuabili da qualsiasi chiamante che ha accesso a un'istanza. Per altre informazioni, vedere [Sicurezza delle proprietà di dipendenza](dependency-property-security.md).
 
 ## <a name="see-also"></a>Vedere anche
 

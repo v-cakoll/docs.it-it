@@ -1,7 +1,7 @@
 ---
 title: Operatori ed espressioni di accesso ai membri - Informazioni di riferimento su C
 description: Informazioni sugli operatori C# che è possibile usare per accedere ai membri di tipo.
-ms.date: 09/18/2019
+ms.date: 03/31/2020
 author: pkulikov
 f1_keywords:
 - ._CSharpKeyword
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: da2ca4517bd007678d74ae9b76e10cad4c2696b4
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: a132e527deadcffb4826c1965987fc09da470a09
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546640"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635306"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>Operatori ed espressioni di accesso ai membri (riferimenti per C
 
@@ -129,6 +129,12 @@ Nell'esempio seguente viene illustrato l'uso degli operatori `?.` e `?[]`:
 [!code-csharp-interactive[null-conditional operators](snippets/MemberAccessOperators.cs#NullConditional)]
 
 Nell'esempio precedente viene inoltre utilizzato `null`l'operatore [ `??` null-coalescing](null-coalescing-operator.md) per specificare un'espressione alternativa da valutare nel caso in cui il risultato di un'operazione null-conditional sia .
+
+Se `a.x` `a[x]` o è di un tipo `T` `a?.x` di `a?[x]` valore non nullable o è del tipo `T?`di [valore nullable](../builtin-types/nullable-value-types.md) corrispondente. Se è necessaria un'espressione di tipo `T`, applicare `??` l'operatore null-coalescing a un'espressione null-condizionale, come illustrato nell'esempio seguente:
+
+[!code-csharp-interactive[null-conditional with null-coalescing](snippets/MemberAccessOperators.cs#NullConditionalWithNullCoalescing)]
+
+Nell'esempio precedente, se non si `??` utilizza `numbers?.Length < 2` l'operatore `numbers` `null`, restituisce `false` quando è .
 
 L'operatore di accesso ai membri condizionale Null `?.` è anche noto come operatore Elvis.
 

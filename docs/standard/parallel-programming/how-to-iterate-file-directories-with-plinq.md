@@ -5,28 +5,31 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - PLINQ queries, how to iterate directories
 ms.assetid: 354e8ce3-35c4-431c-99ca-7661d1f3901b
-ms.openlocfilehash: de33561e2ef8e8fe62e8179272abe8adfffecd6f
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 208076cb9b7b56ab13458fa0dd4d92f2023106b9
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80587765"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635840"
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>Procedura: scorrere le directory dei file con PLINQ
-Questo esempio mostra due semplici modi per parallelizzare le operazioni su directory di file. La prima query usa il metodo <xref:System.IO.Directory.GetFiles%2A> per popolare una matrice di nomi di file in una directory e in tutte le sottodirectory. Questo metodo non restituisce alcun risultato finché non viene popolata l'intera matrice e di conseguenza può introdurre latenza all'inizio dell'operazione. Tuttavia, dopo che la matrice viene popolata, PLINQ può elaborarla in parallelo molto rapidamente.  
+
+In questo articolo vengono illustrati due modi per parallelizzare le operazioni nelle directory di file. La prima query usa il metodo <xref:System.IO.Directory.GetFiles%2A> per popolare una matrice di nomi di file in una directory e in tutte le sottodirectory. Questo metodo può introdurre latenza all'inizio dell'operazione, perché non restituisce fino a quando non viene popolata l'intera matrice. Tuttavia, dopo che la matrice è popolata, PLINQ può elaborarlo in parallelo rapidamente.  
   
- La seconda query usa i metodi statici <xref:System.IO.Directory.EnumerateDirectories%2A> e <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>, che iniziano a restituire risultati immediatamente. Questo approccio può rivelarsi più veloce quando si esegue l'iterazione di alberi di directory di grandi dimensioni, anche se i tempi di elaborazione rispetto al primo esempio possono dipendere da molti fattori.  
+La seconda query <xref:System.IO.Directory.EnumerateDirectories%2A> utilizza <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> i metodi statici e , che iniziano a restituire immediatamente i risultati. Questo approccio può essere più veloce quando si esegue l'iterazione su alberi di directory di grandi dimensioni, ma il tempo di elaborazione rispetto al primo esempio dipende da molti fattori.  
   
-> [!WARNING]
-> Lo scopo di questi esempi è mostrare l'utilizzo e la loro esecuzione potrebbe non essere più rapida della query LINQ to Objects sequenziale equivalente. Per altre informazioni sull'aumento di velocità, vedere [Informazioni sull'aumento di velocità in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
+> [!NOTE]
+> Questi esempi hanno lo scopo di illustrare l'utilizzo e potrebbero non essere eseguiti più velocemente della query LINQ to Objects sequenziale equivalente. Per altre informazioni sull'aumento di velocità, vedere [Informazioni sull'aumento di velocità in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
   
-## <a name="example"></a>Esempio  
- L'esempio seguente mostra come eseguire l'iterazione di directory di file in semplici scenari quando si ha accesso a tutte le directory nell'albero, le dimensioni dei file non sono molto grandi e i tempi di accesso non sono significativi. Questo approccio comporta un periodo di latenza all'inizio, durante la creazione della matrice di nomi di file.  
+## <a name="getfiles-example"></a>Esempio GetFiles
+
+ In questo esempio viene illustrato come scorrere le directory di file in scenari semplici quando si ha accesso a tutte le directory nell'albero, le dimensioni dei file non sono di grandi dimensioni e i tempi di accesso non sono significativi. Questo approccio comporta un periodo di latenza all'inizio, durante la creazione della matrice di nomi di file.  
   
  [!code-csharp[PLINQ#33](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqfileiteration.cs#33)]  
   
-## <a name="example"></a>Esempio  
- L'esempio seguente mostra come eseguire l'iterazione di directory di file in semplici scenari quando si ha accesso a tutte le directory nell'albero, le dimensioni dei file non sono molto grandi e i tempi di accesso non sono significativi. Questo approccio inizia a restituire risultati più rapidamente rispetto all'esempio precedente.  
+## <a name="enumeratefiles-example"></a>Esempio EnumerateFiles
+
+ In questo esempio viene illustrato come scorrere le directory di file in scenari semplici quando si ha accesso a tutte le directory nell'albero, le dimensioni dei file non sono di grandi dimensioni e i tempi di accesso non sono significativi. Questo approccio inizia a restituire risultati più rapidamente rispetto all'esempio precedente.  
   
  [!code-csharp[PLINQ#34](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqfileiteration.cs#34)]  
   

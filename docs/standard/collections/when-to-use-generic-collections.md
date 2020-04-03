@@ -6,15 +6,16 @@ helpviewer_keywords:
 - collections [.NET Framework], generic
 - generic collections [.NET Framework]
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
-ms.openlocfilehash: 131787c30e5249111f86f2793981e2b75e8f3862
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: bbf8ec7f61981332b6984488b369fee62959b92a
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588537"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635891"
 ---
 # <a name="when-to-use-generic-collections"></a>Quando utilizzare raccolte generiche
-L'uso di raccolte generiche è in genere consigliato perché offre l'immediato vantaggio dell'indipendenza dai tipi senza la necessità di derivare da un tipo di raccolta di base e implementare membri specifici di tipo. I tipi di raccolte generiche offrono anche prestazioni migliori rispetto ai tipi di raccolte non generiche corrispondenti (e tipi derivati dai tipi di raccolte base non generiche) quando gli elementi della raccolta sono tipi di valore, perché con i generics non è necessario il boxing degli elementi.  
+
+L'utilizzo di raccolte generiche offre i vantaggi automatici dell'indipendenza dai tipi senza dover derivare da un tipo di raccolta di base e implementare membri specifici del tipo. I tipi di raccolta generici in genere offrono anche prestazioni migliori rispetto ai tipi di raccolta non generici corrispondenti (e migliori dei tipi derivati da tipi di raccolta di base non generici) quando gli elementi della raccolta sono tipi di valore, perché con i generics non è necessario eseguire il boxe degli elementi.  
   
  Per programmi destinati a .NET Framework 4 o versione successiva, è necessario usare le classi di raccolte generiche nello spazio dei nomi <xref:System.Collections.Concurrent> quando più thread potrebbero aggiungere o rimuovere elementi dalla raccolta contemporaneamente.  
   
@@ -24,7 +25,7 @@ L'uso di raccolte generiche è in genere consigliato perché offre l'immediato v
   
 - <xref:System.Collections.Generic.Dictionary%602> e <xref:System.Collections.Concurrent.ConcurrentDictionary%602> sono le classi generiche che corrispondono a <xref:System.Collections.Hashtable>.  
   
-- <xref:System.Collections.ObjectModel.Collection%601> è la classe generica che corrisponde a <xref:System.Collections.CollectionBase>. <xref:System.Collections.ObjectModel.Collection%601> può essere usata come classe di base, ma a differenza di <xref:System.Collections.CollectionBase>, non è astratta. Questo la rende più facile da usare.  
+- <xref:System.Collections.ObjectModel.Collection%601> è la classe generica che corrisponde a <xref:System.Collections.CollectionBase>. <xref:System.Collections.ObjectModel.Collection%601>può essere utilizzato come classe <xref:System.Collections.CollectionBase>base, ma a differenza di , non è astratto, il che lo rende molto più facile da usare.  
   
 - <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> è la classe generica che corrisponde a <xref:System.Collections.ReadOnlyCollectionBase>. <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> non è astratta, e ha un costruttore che semplifica l'esposizione di una <xref:System.Collections.Generic.List%601> esistente come raccolta di sola lettura.  
   
@@ -44,7 +45,7 @@ L'uso di raccolte generiche è in genere consigliato perché offre l'immediato v
 - <xref:System.Collections.Concurrent.ConcurrentBag%601> permette di eseguire rapidamente le operazioni di inserimento e rimozione di elementi non ordinati.  
   
 ## <a name="linq-to-objects"></a>LINQ to Objects  
- La funzionalità LINQ to Objects consente di usare le query LINQ per accedere agli oggetti in memoria purché il tipo dell'oggetto implementi l'interfaccia <xref:System.Collections.IEnumerable?displayProperty=nameWithType> o <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> . Le query LINQ forniscono un modello comune per l'accesso ai dati, sono in genere più concise e leggibili dei cicli standard `foreach` e forniscono funzioni di filtro, ordinamento e raggruppamento. Le query LINQ possono inoltre migliorare le prestazioni. Per altre informazioni, vedere [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) e [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md).  
+ La funzionalità LINQ to Objects consente di usare le query LINQ per accedere agli oggetti in memoria purché il tipo dell'oggetto implementi l'interfaccia <xref:System.Collections.IEnumerable?displayProperty=nameWithType> o <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> . Le query LINQ forniscono un modello comune per l'accesso ai dati. sono in genere più concisi `foreach` e leggibili rispetto ai loop standard; e forniscono funzionalità di filtraggio, ordinamento e raggruppamento. Le query LINQ possono inoltre migliorare le prestazioni. Per altre informazioni, vedere [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) e [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md).  
   
 ## <a name="additional-functionality"></a>Funzionalità aggiuntive  
  Alcuni tipi generici hanno funzionalità che non si trovano nei tipi di raccolte non generiche. Ad esempio, la classe <xref:System.Collections.Generic.List%601> , che corrisponde alla classe <xref:System.Collections.ArrayList> non generica, ha una serie di metodi che accettano i delegati generici, come ad esempio il delegato <xref:System.Predicate%601> che consente di specificare metodi per la ricerca nell'elenco, il delegato <xref:System.Action%601> che rappresenta metodi che agiscono su ciascun elemento dell'elenco e il delegato <xref:System.Converter%602> che consente di definire le conversioni tra tipi.  

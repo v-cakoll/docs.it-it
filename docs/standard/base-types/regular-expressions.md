@@ -20,12 +20,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-ms.openlocfilehash: 99a70fa1b56a45087ee380d063c66326976f5b41
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 819310891192833f0c71d0104fceec11b1b25375
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523792"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635719"
 ---
 # <a name="net-regular-expressions"></a>Espressioni regolari di .NET
 
@@ -99,7 +99,7 @@ La classe <xref:System.String> include numerosi metodi di ricerca e sostituzione
   
  Il metodo <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> viene chiamato con le opzioni relative alle espressioni regolari impostate su <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>. Per l'operazione di corrispondenza non viene quindi fatta distinzione tra maiuscole e minuscole e nell'esempio la sottostringa "This this" viene identificata come duplicato.  
   
- Si noti che la stringa di input include la sottostringa "this? This". Dato che tuttavia tra le due parole è presente un segno di punteggiatura, le parole non vengono identificate come duplicati.  
+ La stringa di input include la sottostringa "this? This". Dato che tuttavia tra le due parole è presente un segno di punteggiatura, le parole non vengono identificate come duplicati.  
   
 ### <a name="example-3-dynamically-build-a-culture-sensitive-regular-expression"></a>Esempio 3: Creare dinamicamente un'espressione regolare dipendente dalle impostazioni culturaExample 3: Dynamically build a culture-sensitive regular expression  
 

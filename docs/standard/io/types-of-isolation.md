@@ -18,12 +18,12 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-ms.openlocfilehash: d85625b99603c0bd81346cf2076b8efe0e1bba42
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 9bbd2c3cdca9b2eaee268738bf99189b0be78eba
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523879"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635737"
 ---
 # <a name="types-of-isolation"></a>Tipi di isolamento
 L'accesso allo spazio di memorizzazione isolato è sempre limitato all'utente che l'ha creata. Per implementare questo tipo di isolamento, Common Language Runtime usa la stessa nozione di identità utente riconosciuta dal sistema operativo, ovvero l'identità associata al processo in cui è in esecuzione il codice quando viene aperto lo spazio di memorizzazione. Sebbene sia un'identità utente autenticata, è possibile che con la rappresentazione l'identità dell'utente corrente venga modificata dinamicamente.  
@@ -48,7 +48,7 @@ L'accesso allo spazio di memorizzazione isolato è sempre limitato all'utente ch
   
  ![Diagramma che illustra l'isolamento in base a utente e assembly.](./media/types-of-isolation/isolated-storage-types.gif)  
   
- Si osservi che, fatta eccezione per gli spazi di memorizzazione roaming, lo spazio di memorizzazione isolato viene sempre isolato implicitamente in base al computer, poiché usa le funzioni di memorizzazione locali del computer in uso.  
+ Ad eccezione degli archivi mobili, l'archiviazione isolata viene sempre isolata in modo implicito dal computer perché utilizza le funzionalità di archiviazione locali a un determinato computer.  
   
 > [!IMPORTANT]
 > L'archiviazione isolata non è disponibile per le app di Windows 8.x Store. Al contrario, usare le classi di dati dell'applicazione negli spazi dei nomi `Windows.Storage` inclusi nell'API di Windows Runtime per archiviare dati e file locali. Per altre informazioni, vedere [Dati dell'applicazione](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) nel Centro per sviluppatori Windows.  

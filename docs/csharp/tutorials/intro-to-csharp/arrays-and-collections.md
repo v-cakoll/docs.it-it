@@ -3,12 +3,12 @@ title: Usare raccolte - Esercitazione introduttiva su C#
 description: Imparare a usare C# esplorando la raccolta List in questa esercitazione.
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: 25d20de2eae8ad1f544fa17553c173a6141ae464
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 554a4601157a7d4b873c22a46ee72b6601fc36d7
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156689"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635660"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>Informazioni su come gestire le raccolte dati tramite il tipo di elenco generico
 
@@ -230,4 +230,4 @@ A ogni iterazione del ciclo, gli ultimi due interi nell'elenco vengono sommati e
 
 Complimenti, è stata completata questa esercitazione dedicata agli elenchi. È possibile continuare con l'esercitazione [Introduzione alle classi](introduction-to-classes.md) nell'ambiente di sviluppo.
 
-Altre informazioni sull'uso del tipo `List` sono disponibili nell'argomento della [Guida di .NET](../../../standard/index.md) dedicato alle [raccolte](../../../standard/collections/index.md). Questo argomento include anche informazioni su molti altri tipi di raccolta.
+Per ulteriori informazioni sull'utilizzo del `List` tipo, vedere l'articolo della guida di [.NET](../../../standard/index.yml) sulle [raccolte](../../../standard/collections/index.md). Questo argomento include anche informazioni su molti altri tipi di raccolta.

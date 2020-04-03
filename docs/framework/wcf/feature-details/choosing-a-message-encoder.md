@@ -2,15 +2,16 @@
 title: Scelta di un codificatore di messaggi
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: a306896af7a73d43956638981908c12d86126a9f
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: d93d7039d034262cd47edd437d5d7d8d63890f02
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345248"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635770"
 ---
-# <a name="choosing-a-message-encoder"></a>Scelta di un codificatore di messaggi
-In questo argomento vengono illustrati i criteri per la scelta tra i codificatori di messaggi inclusi in Windows Communication Foundation (WCF): binario, testo e MTOM (Message Transmission Optimization Mechanism).  
+# <a name="choose-a-message-encoder"></a>Scegliere un codificatore di messaggiChoose a Message Encoder
+
+In questo articolo vengono illustrati i criteri per la scelta tra i codificatori di messaggi inclusi in Windows Communication Foundation (WCF): binario, testo e mTOM (Message Transmission Optimization Mechanism).  
   
  In WCF si specifica come trasferire i dati attraverso una rete tra endpoint tramite *un'associazione*, costituita da una sequenza di elementi di *associazione.* Un codificatore di messaggi è rappresentato da un elemento di associazione di codifica dei messaggi nello stack dell'associazione. Un'associazione include elementi facoltativi di associazione del protocollo, ad esempio un elemento di associazione di sicurezza o un elemento di associazione di messaggistica affidabile, un elemento di associazione di codifica dei messaggi obbligatorio e un elemento di associazione di trasporto obbligatorio.  
   
@@ -33,7 +34,7 @@ In questo argomento vengono illustrati i criteri per la scelta tra i codificator
 |Fattore|Descrizione|Codificatori che supportano questo fattore|  
 |------------|-----------------|---------------------------------------|  
 |Set di caratteri supportati|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>e <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> supporta solo le codifiche UTF8 e UTF16 Unicode (*big-endian* e *little-endian*). Se sono richieste altre codifiche, ad esempio UTF7 o ASCII, deve essere utilizzato un codificatore personalizzato. Per un codificatore personalizzato di esempio, vedere [Custom Message Encoder](https://docs.microsoft.com/dotnet/framework/wcf/samples/custom-message-encoder-custom-text-encoder).|Testo|  
-|Ispezione|L'ispezione è la capacità di esaminare i messaggi durante la trasmissione. Le codifiche di testo, con o senza l'utilizzo di SOAP, consentono a numerose applicazioni di ispezionare e analizzare i messaggi senza utilizzare strumenti specializzati. Si noti che l'utilizzo della sicurezza del trasferimento, a livello di messaggio o di trasporto, influisce sulla capacità di ispezionare i messaggi. La riservatezza evita che un messaggio venga esaminato, mentre l'integrità lo protegge dalle modifiche.|Testo|  
+|Ispezione|L'ispezione è la capacità di esaminare i messaggi durante la trasmissione. Le codifiche di testo, con o senza l'utilizzo di SOAP, consentono a numerose applicazioni di ispezionare e analizzare i messaggi senza utilizzare strumenti specializzati. L'uso della sicurezza di trasferimento, a livello di messaggio o di trasporto, influisce sulla capacità di controllare i messaggi. La riservatezza evita che un messaggio venga esaminato, mentre l'integrità lo protegge dalle modifiche.|Testo|  
 |Affidabilità|L'affidabilità è la flessibilità di un codificatore nei confronti degli errori di trasmissione. L'affidabilità può essere fornita anche a livello di messaggio, trasporto o applicazione. Tutti i codificatori WCF standard presuppongono che un altro livello fornisca affidabilità. Il codificatore non ha grandi capacità di recupero da un errore di trasmissione.|nessuno|  
 |Semplicità|La semplicità rappresenta la facilità con cui è possibile creare codificatori e decodificatori per una specifica di codifica. Le codifiche di testo sono particolarmente vantaggiose per la semplicità. La codifica di testo POX, inoltre, ha anche il vantaggio che non richiede supporto per l'elaborazione di SOAP.|Testo (POX)|  
 |Dimensione|La codifica determina la quantità di sovraccarico imposto sul contenuto. La dimensione dei messaggi codificati è direttamente correlata alla velocità effettiva massima delle operazioni del servizio. Le codifiche binarie in genere sono più compatte di quelle di testo. Quando la dimensione del messaggio è importante, prendere in considerazione anche la compressione del contenuto del messaggio durante la codifica. La compressione aumenta tuttavia gli oneri di elaborazione sia per il mittente che per il destinatario del messaggio.|Binary|  
@@ -80,7 +81,7 @@ Poiché questa proprietà è esposta solo su binaryMessageEncodingBindingElement
 </customBinding>
  ```
 
-Sia il client che il servizio devono accettare di inviare e ricevere messaggi compressi e pertanto la proprietà compressionFormat deve essere configurata sull'elemento binaryMessageEncoding sia nel client che nel servizio. Viene generata un'eccezione ProtocolException se per la compressione è configurato un solo lato, vale a dire o il servizio o il client. Pertanto, è necessario considerare con attenzione l'abilitazione della compressione. La compressione è particolarmente utile se la larghezza di banda della rete costituisce un collo di bottiglia. Nel caso in cui la CPU sia un collo di bottiglia, la compressione diminuirà la velocità effettiva. È necessario effettuare prove appropriate in un ambiente simulato per verificare eventuali vantaggi per l'applicazione  
+Sia il client che il servizio devono accettare di inviare e ricevere messaggi compressi e pertanto la proprietà compressionFormat deve essere configurata sull'elemento binaryMessageEncoding sia nel client che nel servizio. Se il servizio o il client non è configurato per la compressione, viene generata un'eccezione ProtocolException se il servizio o il client non è configurato, ma l'altro lato lo è. L'abilitazione della compressione deve essere attentamente considerata. La compressione è particolarmente utile se la larghezza di banda della rete costituisce un collo di bottiglia. Nel caso in cui la CPU sia un collo di bottiglia, la compressione diminuirà la velocità effettiva. È necessario effettuare prove appropriate in un ambiente simulato per verificare eventuali vantaggi per l'applicazione  
   
 ## <a name="see-also"></a>Vedere anche
 

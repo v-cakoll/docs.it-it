@@ -11,12 +11,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-ms.openlocfilehash: 89d3eb709bb22913b9539d6ad384384ee701385f
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 3e9c817006930a36ebdce5c5965d78f1721c7056
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523281"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635148"
 ---
 # <a name="numerics-in-net"></a>Valori numerici in .NET
 
@@ -60,11 +60,11 @@ La struttura <xref:System.Numerics.BigInteger?displayProperty=nameWithType> è u
   
 I tipi <xref:System.Single> e <xref:System.Double> supportano entrambi valori speciali che rappresentano un valore non numerico e infinito. Ad esempio, il tipo <xref:System.Double> fornisce questi valori: <xref:System.Double.NaN?displayProperty=nameWithType>, <xref:System.Double.NegativeInfinity?displayProperty=nameWithType> e <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>. Per testare questi valori speciali, è necessario usare i metodi <xref:System.Double.IsNaN%2A?displayProperty=nameWithType>, <xref:System.Double.IsInfinity%2A?displayProperty=nameWithType>, <xref:System.Double.IsPositiveInfinity%2A?displayProperty=nameWithType> e <xref:System.Double.IsNegativeInfinity%2A?displayProperty=nameWithType>.
 
-Ogni tipo a virgola mobile supporta un set di operatori aritmetici standard. La classe <xref:System.Math?displayProperty=nameWithType> fornisce metodi per un set più ampio di funzioni matematiche. .NET core 2.0 e versioni successive include la classe <xref:System.MathF?displayProperty=nameWithType>, che fornisce metodi che accettano argomenti del tipo <xref:System.Single>.
+Ogni tipo a virgola mobile supporta un set di operatori aritmetici standard. La classe <xref:System.Math?displayProperty=nameWithType> fornisce metodi per un set più ampio di funzioni matematiche. .NET Core 2.0 e <xref:System.MathF?displayProperty=nameWithType> versioni successive include la classe <xref:System.Single> , che fornisce metodi che accettano argomenti del tipo.
 
 È anche possibile operare sui singoli bit dei valori <xref:System.Double> e <xref:System.Single> usando la classe <xref:System.BitConverter?displayProperty=nameWithType>. La struttura <xref:System.Decimal?displayProperty=nameWithType> dispone di metodi specifici, <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> e <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=nameWithType>, che consentono di operare sui singoli bit di un valore decimale, nonché di un set di metodi specifici per l'esecuzione di altre operazioni matematiche.
   
-I tipi <xref:System.Double> e <xref:System.Single> sono destinati a essere usati per valori imprecisi per natura, ad esempio la distanza tra due stelle, e per applicazioni in cui non è necessario un livello elevato di precisione e gli errori di arrotondamento non devono essere minimi. Per i casi in cui è necessaria una maggiore precisione e gli errori di arrotondamento devono essere minimi, è consigliabile usare il tipo <xref:System.Decimal?displayProperty=nameWithType>.
+I <xref:System.Double> <xref:System.Single> tipi e sono destinati ad essere utilizzati per valori che, per loro natura, sono imprecisi (ad esempio, la distanza tra due stelle) e per applicazioni in cui non è richiesto un alto grado di precisione e un piccolo errore di arrotondamento. Utilizzare <xref:System.Decimal?displayProperty=nameWithType> il tipo per i casi in cui è richiesta una maggiore precisione e gli errori di arrotondamento devono essere ridotti al minimo.
 
 > [!NOTE]
 > Il tipo <xref:System.Decimal> non elimina la necessità di arrotondamento. Piuttosto, riduce al minimo gli errori dovuti all'arrotondamento.

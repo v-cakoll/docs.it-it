@@ -3,12 +3,12 @@ title: Glossario .NET
 description: Significato di termini selezionati usati nella documentazione di .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: ed4dceed1a3f39c5c4ce7a278efc37bb38ed0d94
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: d8f16579ea4dcbc9260aac83e16d3fbd30db519c
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344197"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635575"
 ---
 # <a name="net-glossary"></a>Glossario .NET
 
@@ -155,7 +155,7 @@ Per altre informazioni su Mono, vedere la [documentazione Mono](https://www.mono
 
 Termine generico per riferirsi a [.NET Standard](#net-standard) e a tutti i carichi di lavoro e le [implementazioni di .NET](#implementation-of-net). Sempre in maiuscolo, mai ".Net".
 
-Vedere [Guida alla piattaforma .NET](index.md).
+Vedere la [guida di .NET](index.yml)
 
 ## <a name="net-core"></a>.NET Core
 
@@ -273,7 +273,7 @@ Implementazione di .NET usata per la creazione di applicazioni Windows moderne e
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida di .NET](index.md)
+- [Guida di .NET](index.yml)
 - [Guida di .NET Framework](../framework/index.yml)
 - [.NET Core](../core/index.yml)
 - [Cenni preliminari sulla ASP.NET](/aspnet/index#pivot=aspnet)

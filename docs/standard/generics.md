@@ -4,12 +4,12 @@ description: Informazioni sul modo in cui i tipi generici (generics) vengono usa
 author: kuhlenh
 ms.author: wiwagn
 ms.date: 10/09/2018
-ms.openlocfilehash: 0188e620a45462e7cc31391406ade9d57b1b0220
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: f51d69088b0d5c798f3aa3a6c1f5b62b3ea81d39
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588473"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635275"
 ---
 # <a name="generic-types-overview"></a>Panoramica dei tipi generici
 
@@ -17,9 +17,9 @@ Gli sviluppatori usano sempre generics in .NET, in modo implicito o esplicito. Q
 
 Introdotti per la prima volta in .NET Framework 2.0, i generics sono essenzialmente un "modello di codice" che permette agli sviluppatori di definire strutture dei dati [indipendenti dai tipi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hbzz1a9a(v=vs.100)) senza il commit in un tipo di dati effettivo. Ad <xref:System.Collections.Generic.List%601> esempio, è un [insieme generico](xref:System.Collections.Generic) che può essere `List<int>` `List<string>`dichiarato `List<Person>`e utilizzato con qualsiasi tipo, ad esempio , , o .
 
-Per dimostrare l'utilità dei generics, verrà esaminata una classe specifica prima e dopo l'aggiunta di generics: <xref:System.Collections.ArrayList>. In .NET Framework 1.0 gli elementi `ArrayList` sono di tipo <xref:System.Object>. Questo significa che qualsiasi elemento aggiunto viene convertito automaticamente in `Object`. Lo stesso avviene quando gli elementi vengono letti dall'elenco. Questo processo è noto come [conversioni boxing e unboxing](../csharp/programming-guide/types/boxing-and-unboxing.md) e influisce sulle prestazioni. Soprattutto, tuttavia, non è possibile determinare in alcun modo il tipo di dati nell'elenco in fase di compilazione. E ciò crea un codice fragile. I generics risolvono il problema definendo il tipo di dati contenuto da ogni istanza dell'elenco. Ad esempio, è possibile aggiungere numeri interi solo a `List<int>` e persone solo a `List<Person>`.
+Per dimostrare l'utilità dei generics, verrà esaminata una classe specifica prima e dopo l'aggiunta di generics: <xref:System.Collections.ArrayList>. In .NET Framework 1.0 gli elementi `ArrayList` sono di tipo <xref:System.Object>. Qualsiasi elemento aggiunto all'insieme è `Object`stato convertito automaticamente in un oggetto . Lo stesso accadrebbe durante la lettura di elementi dall'elenco. Questo processo è noto come [conversioni boxing e unboxing](../csharp/programming-guide/types/boxing-and-unboxing.md) e influisce sulle prestazioni. A parte le prestazioni, tuttavia, non c'è modo di determinare il tipo di dati nell'elenco in fase di compilazione, il che rende per qualche codice fragile. I generics risolvono il problema definendo il tipo di dati contenuto da ogni istanza dell'elenco. Ad esempio, è possibile aggiungere numeri interi solo a `List<int>` e persone solo a `List<Person>`.
 
-I generics sono disponibili anche in fase di esecuzione. Questo significa che il runtime riconosce il tipo di struttura dei dati usato e può archiviarlo in memoria in modo più efficiente.
+I generics sono disponibili anche in fase di esecuzione. Il runtime conosce il tipo di struttura di dati in uso e può archiviarla in memoria in modo più efficiente.
 
 L'esempio seguente è un piccolo programma che illustra l'efficienza di conoscere il tipo di struttura di dati in fase di esecuzione:The following example is a small program that illustrates the efficiency of knowing the data structure type at run time:
 

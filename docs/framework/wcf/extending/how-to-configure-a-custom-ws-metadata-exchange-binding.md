@@ -5,15 +5,16 @@ helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: 9676ae4053553b84488602627b28790aae22eff6
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 6459e3f0cf0ab72af8027bd6802a0e7aa574aece
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345277"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635790"
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Procedura: configurare un'associazione WS-Metadata Exchange personalizzata
-In questo argomento viene illustrato come configurare un'associazione WS-Metadata Exchange personalizzata. Windows Communication Foundation (WCF) include quattro associazioni di metadati definite dal sistema, ma è possibile pubblicare i metadati usando qualsiasi associazione desiderata. In questo argomento viene illustrato come pubblicare metadati usando `wsHttpBinding`. Questa associazione offre la possibilità di esporre i metadati in modo sicuro. Il codice in questo articolo è basato sulla [Guida introduttiva](../samples/getting-started-sample.md).  
+
+In questo articolo viene illustrato come configurare un'associazione di scambio WS-Metadata personalizzata. Windows Communication Foundation (WCF) include quattro associazioni di metadati definite dal sistema, ma è possibile pubblicare i metadati usando qualsiasi associazione desiderata. In questo articolo viene illustrato `wsHttpBinding`come pubblicare metadati utilizzando il file . Questa associazione offre la possibilità di esporre i metadati in modo sicuro. Il codice in questo articolo è basato sulla [Guida introduttiva](../samples/getting-started-sample.md).  
   
 ### <a name="using-a-configuration-file"></a>Uso di un file di configurazione  
   
@@ -44,7 +45,7 @@ In questo argomento viene illustrato come configurare un'associazione WS-Metadat
               contract="IMetadataExchange" />  
     ```  
   
-4. Per verificare che l'endpoint dello scambio di metadati stia funzionando correttamente, aggiungere un tag dell'endpoint nel file di configurazione client:  
+4. Per verificare che l'endpoint di scambio dei metadati funzioni correttamente, aggiungere un tag endpoint nel file di configurazione client:To verify the metadata exchange endpoint is working correctly, add an endpoint tag in the client configuration file:  
   
     ```xml  
     <endpoint name="MyMexEndpoint"               address="http://localhost:8000/servicemodelsamples/service/mex"  

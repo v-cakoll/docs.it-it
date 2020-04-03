@@ -9,12 +9,12 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-ms.openlocfilehash: 288bf4256670d34c600e23618b62ad81866daadf
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 0273d16028315452e35f83086dbc134d6fcb66c6
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523846"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635982"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Dettagli sul comportamento delle espressioni regolari
 
@@ -71,7 +71,7 @@ Il motore delle espressioni regolari di .NET Framework è un selettore di espres
 
      Per altre informazioni sulle asserzioni per il lookahead positivo, vedere [Costrutti di raggruppamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
-- Sguardo negativo: `(?!` *sottoespressione*`)`. Questa funzionalità aggiunge la capacità di considerare soddisfatta la corrispondenza con un'espressione solo se non trova la corrispondenza con una sottoespressione. Ciò risulta particolarmente utile per abbreviare una ricerca, poiché spesso è più semplice formulare un'espressione per un caso da eliminare che un'espressione che individua i casi da includere. Ad esempio, è difficile scrivere un'espressione per le parole che non iniziano con "non". Nell'esempio seguente viene usato il lookahead negativo per escluderle.
+- Sguardo negativo: `(?!` *sottoespressione*`)`. Questa funzionalità aggiunge la capacità di considerare soddisfatta la corrispondenza con un'espressione solo se non trova la corrispondenza con una sottoespressione. Questo è potente per l'eliminazione di una ricerca, perché è spesso più semplice fornire un'espressione per un case che deve essere eliminato rispetto a un'espressione per i casi che devono essere inclusi. Ad esempio, è difficile scrivere un'espressione per le parole che non iniziano con "non". Nell'esempio seguente viene usato il lookahead negativo per escluderle.
 
      [!code-csharp[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookahead2.cs#3)]
      [!code-vb[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookahead2.vb#3)]
@@ -148,7 +148,7 @@ Il motore delle espressioni regolari di .NET Framework è un selettore di espres
 |-----------|-----------------|
 |[Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|Informazioni su come il backtracking delle espressioni regolari si dirama per trovare corrispondenze alternative.|
 |[Compilazione e riutilizzo](../../../docs/standard/base-types/compilation-and-reuse-in-regular-expressions.md)|Informazioni sulla compilazione e sul riutilizzo di espressioni regolari per ottimizzare le prestazioni.|
-|[Thread safety](../../../docs/standard/base-types/thread-safety-in-regular-expressions.md)|Informazioni sulla modalità di thread safety delle espressioni regolari in cui viene spiegato quando è necessario sincronizzare l'accesso a oggetti di espressione regolare.|
+|[Sicurezza dei filetti](../../../docs/standard/base-types/thread-safety-in-regular-expressions.md)|Informazioni sulla modalità di thread safety delle espressioni regolari in cui viene spiegato quando è necessario sincronizzare l'accesso a oggetti di espressione regolare.|
 |[Espressioni regolari di .NET Framework](../../../docs/standard/base-types/regular-expressions.md)|Panoramica dell'aspetto del linguaggio di programmazione delle espressioni regolari.|
 |[Modello a oggetti delle espressioni regolari](../../../docs/standard/base-types/the-regular-expression-object-model.md)|Esempi di codice e informazioni che illustrano l'uso delle classi di espressioni regolari.|
 |[Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|Informazioni su set di caratteri, operatori e costrutti che è possibile usare per definire le espressioni regolari.|

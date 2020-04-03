@@ -12,16 +12,16 @@ helpviewer_keywords:
 - time [.NET Framework], round-trip values
 - formatting strings [.NET Framework], round-trip values
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
-ms.openlocfilehash: 4fc38b6b852f8a7b8f268fd9e8624bdf350744c8
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 3aa615dc7d7d1d49dce4897f8508b5210b364fc0
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523812"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635143"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>Procedura: Valori di data e ora round trip
 
-In molte applicazioni un valore di data e ora deve identificare una data e un'ora singole in modo non ambiguo. Questo argomento illustra come salvare e ripristinare un valore <xref:System.DateTime>, un valore <xref:System.DateTimeOffset> e un valore di data e ora con informazioni sul fuso orario, in modo che il valore ripristinato identifichi la stessa ora del valore salvato.
+In molte applicazioni un valore di data e ora deve identificare una data e un'ora singole in modo non ambiguo. In questo articolo viene illustrato <xref:System.DateTime> come <xref:System.DateTimeOffset> salvare e ripristinare un valore, un valore e un valore di data e ora con informazioni sul fuso orario in modo che il valore ripristinato identifichi la stessa ora del valore salvato.
 
 ## <a name="round-trip-a-datetime-value"></a>Andata e ritorno un valore DateTime
 
@@ -38,7 +38,7 @@ L'esempio seguente illustra come eseguire il round trip di un valore <xref:Syste
 [!code-csharp[Formatting.HowTo.RoundTrip#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/cs/RoundTrip.cs#1)]
 [!code-vb[Formatting.HowTo.RoundTrip#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/vb/RoundTrip.vb#1)]
 
-Quando si esegue il round trip di un valore <xref:System.DateTime>, questa tecnica consente di mantenere correttamente l'ora per tutte le ore locali e UTC. Ad esempio, se un valore locale <xref:System.DateTime> viene salvato in un sistema nel fuso orario standard del Pacifico (Stati Uniti) e viene ripristinato in un sistema nel fuso orario standard degli Stati Uniti Centrali, la data e l'ora ripristinate saranno due ore avanti rispetto all'ora originale, la quale riflette la differenza di tempo tra i due fusi orari. Tuttavia, questa tecnica non è sempre accurata per le ore non specificate. Tutti i valori <xref:System.DateTime> la cui proprietà <xref:System.DateTime.Kind%2A> è <xref:System.DateTimeKind.Unspecified> vengono trattati come valori di ora locale. Se ciò non avvenisse, <xref:System.DateTime> non potrebbe identificare il punto nel tempo corretto. La soluzione alternativa per questa limitazione consiste nell'associare un valore di data e ora al proprio fuso orario per l'operazione di salvataggio e ripristino.
+Quando si esegue il round trip di un valore <xref:System.DateTime>, questa tecnica consente di mantenere correttamente l'ora per tutte le ore locali e UTC. Ad esempio, se un valore locale <xref:System.DateTime> viene salvato in un sistema nel fuso orario standard del Pacifico (Stati Uniti) e viene ripristinato in un sistema nel fuso orario standard degli Stati Uniti Centrali, la data e l'ora ripristinate saranno due ore avanti rispetto all'ora originale, la quale riflette la differenza di tempo tra i due fusi orari. Tuttavia, questa tecnica non è sempre accurata per le ore non specificate. Tutti i valori <xref:System.DateTime> la cui proprietà <xref:System.DateTime.Kind%2A> è <xref:System.DateTimeKind.Unspecified> vengono trattati come valori di ora locale. Se non si tratta di <xref:System.DateTime> un'ora locale, il non identifica correttamente il punto corretto nel tempo. La soluzione alternativa per questa limitazione consiste nell'associare un valore di data e ora al proprio fuso orario per l'operazione di salvataggio e ripristino.
 
 ## <a name="round-trip-a-datetimeoffset-value"></a>Round-trip un valore DateTimeOffset
 
@@ -72,7 +72,7 @@ Questa tecnica consente sempre di identificare in modo non ambiguo il valore <xr
 
 5. Eseguire il cast (in C#) o la conversione (in Visual Basic) dell'oggetto deserializzato in un oggetto del tipo appropriato.
 
-L'esempio seguente illustra come eseguire un round trip di un oggetto che archivia informazioni relative sia a data e ora che al fuso orario.
+Nell'esempio seguente viene illustrato come eseguire il round trip di un oggetto che archivia sia informazioni sul fuso orario che su data e ora.
 
 [!code-csharp[Formatting.HowTo.RoundTrip#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/cs/RoundTrip.cs#4)]
 [!code-vb[Formatting.HowTo.RoundTrip#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/vb/RoundTrip.vb#4)]
@@ -100,4 +100,4 @@ Questi esempi richiedono che:
 ## <a name="see-also"></a>Vedere anche
 
 - [Scelta tra DateTime, DateTimeOffset, TimeSpan e TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)
-- [Stringhe di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Stringhe di formato di data e ora standardStandard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
-ms.openlocfilehash: 0d765a9789ad566428b1fbda6c0863b10b98c363
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: a40f35838655f6021af0b2e966335803ec8c16b4
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345068"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635391"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>Elemento personalizzato per SingleTagSectionHandler
 
@@ -61,7 +61,7 @@ L'esempio seguente dichiara un elemento personalizzato denominato ** \<sampleSec
 
 ## <a name="configuration-file"></a>File di configurazione
 
-Questo elemento può essere utilizzato nei file di configurazione dell'applicazione, nel file di configurazione del computer (*Machine.config*) e nei file *Web.config* che non si trovano a livello di directory dell'applicazione.
+Questo elemento può essere utilizzato nel file di configurazione dell'applicazione, nel file di configurazione del computer (*Machine.config*) e nei file *Web.config* che non si trovano a livello di directory dell'applicazione.
 
 ## <a name="see-also"></a>Vedere anche
 
