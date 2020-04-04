@@ -7,12 +7,12 @@ helpviewer_keywords:
 - members, obsolete in .NET Framework
 - obsolete members [.NET Framework]
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
-ms.openlocfilehash: 4a4da6bb36371fe5e2b14084d40df88e44dd17fa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2e77f871f41dda2f7dd1a080ca6f3b696852b5ad
+ms.sourcegitcommit: 45cced471d59d5dac3f0c92abc9d4849716098a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75901325"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665577"
 ---
 # <a name="obsolete-members-in-net-framework"></a>Membri obsoleti in .NET Framework
 
@@ -491,7 +491,7 @@ In questo articolo non sono elencati i membri dei tipi obsoleti. Per un elenco d
 > |<xref:System.Net.ServicePointManager?displayProperty=nameWithType>|<xref:System.Net.ServicePointManager.CertificatePolicy%2A>|<xref:System.Net.ServicePointManager.CertificatePolicy%2A> è obsoleto per questo tipo. Usare invece <xref:System.Net.ServicePointManager.ServerCertificateValidationCallback%2A?displayProperty=nameWithType>.|
 > |<xref:System.Net.WebClient?displayProperty=nameWithType>|<xref:System.Net.WebClient.AllowReadStreamBuffering%2A>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> L'utilizzo di questo membro genera un errore del compilatore.<br /><br /> Questa API supporta l'infrastruttura .NET Framework e non deve essere usata direttamente dal codice.|
 > |<xref:System.Net.WebClient?displayProperty=nameWithType>|<xref:System.Net.WebClient.AllowWriteStreamBuffering%2A>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> L'utilizzo di questo membro genera un errore del compilatore.<br /><br /> Questa API supporta l'infrastruttura .NET Framework e non deve essere usata direttamente dal codice.|
-> |<xref:System.Net.WebClient?displayProperty=nameWithType>|<xref:System.Net.WebClient.OnWriteStreamClosed%2A>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> L'utilizzo di questo membro genera un errore del compilatore.<br /><br /> Questa API supporta l'infrastruttura .NET Framework e non deve essere usata direttamente dal codice.|
+> |<xref:System.Net.WebClient?displayProperty=nameWithType>|`System.Net.WebClient.OnWriteStreamClosed`|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> L'utilizzo di questo membro genera un errore del compilatore.<br /><br /> Questa API supporta l'infrastruttura .NET Framework e non deve essere usata direttamente dal codice.|
 > |<xref:System.Net.WebClient?displayProperty=nameWithType>|<xref:System.Net.WebClient.WriteStreamClosed>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> L'utilizzo di questo membro genera un errore del compilatore.<br /><br /> Questa API supporta l'infrastruttura .NET Framework e non deve essere usata direttamente dal codice.|
 > |<xref:System.Net.WebProxy?displayProperty=nameWithType>|<xref:System.Net.WebProxy.GetDefaultProxy%2A>|Questo metodo è stato deprecato. Usare il proxy selezionato per impostazione predefinita.|
 > |<xref:System.Net.WebRequest?displayProperty=nameWithType>|<xref:System.Net.WebRequest.CreatorInstance%2A>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> L'utilizzo di questo membro genera un errore del compilatore.<br /><br /> Questa API supporta l'infrastruttura .NET Framework e non deve essere usata direttamente dal codice.|

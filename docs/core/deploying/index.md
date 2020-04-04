@@ -1,13 +1,13 @@
 ---
 title: Pubblicazione di applicazioni
 description: Informazioni sui modi per pubblicare un'applicazione .NET Core.Learn about the ways to publish a .NET Core application. .NET Core può pubblicare app specifiche della piattaforma o multipiattaforma. Puoi pubblicare un'app come autonoma o come dipendente dal runtime. Ogni modalità influisce sulla modalità di esecuzione dell'app da parte di un utente.
-ms.date: 01/31/2020
-ms.openlocfilehash: 3b9c3b7f29af12477874b7a31ef0de4750719de0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/01/2020
+ms.openlocfilehash: a4e5f9fe048d40c751f582bd49732cb903202db4
+ms.sourcegitcommit: 45cced471d59d5dac3f0c92abc9d4849716098a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79399063"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665533"
 ---
 # <a name="net-core-application-publishing-overview"></a>Panoramica della pubblicazione delle applicazioni .NET Core
 
@@ -15,7 +15,7 @@ Le applicazioni create con .NET Core possono essere pubblicate in due diverse mo
 
 La pubblicazione dell'app come *autonoma* produce un'applicazione che include il runtime e le librerie .NET Core, l'applicazione e le relative dipendenze. Gli utenti dell'applicazione possono eseguirlo in un computer in cui non è installato il runtime di .NET Core.
 
-La pubblicazione dell'app come *dipendente dal runtime* produce un'applicazione che include solo l'applicazione stessa e le relative dipendenze. Gli utenti dell'applicazione devono installare separatamente il runtime di .NET Core.
+La pubblicazione dell'app come *dipendente dal runtime* (precedentemente nota come dipendente dal *framework*) produce un'applicazione che include solo l'applicazione stessa e le relative dipendenze. Gli utenti dell'applicazione devono installare separatamente il runtime di .NET Core.
 
 Entrambi i modi di pubblicazione producono un eseguibile specifico della piattaforma per impostazione predefinita. Le applicazioni dipendenti dal runtime possono essere create senza un eseguibile e sono multipiattaforma.
 
