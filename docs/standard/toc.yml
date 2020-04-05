@@ -1,5 +1,5 @@
 - name: Documentazione di .NET
-  href: index.md
+  href: index.yml
 - name: Introduzione a .NET
   href: get-started.md
 - name: Panoramica di .NET
@@ -186,13 +186,82 @@
     - name: Framework Analyzer
       href: analyzers/framework-analyzer.md
 - name: Gestione delle eccezioni
-  href: exceptions/
+  items:
+    - name: Panoramica
+      href: exceptions/index.md
+      displayName: exceptions
+    - name: Classe e proprietà dell'eccezione
+      href: exceptions/exception-class-and-properties.md
+    - name: Procedure
+      items:
+        - name: Usare il blocco try/catch per intercettare le eccezioni
+          href: exceptions/how-to-use-the-try-catch-block-to-catch-exceptions.md
+        - name: Usare eccezioni specifiche in un blocco catch
+          href: exceptions/how-to-use-specific-exceptions-in-a-catch-block.md
+        - name: Generare eccezioni in modo esplicito
+          href: exceptions/how-to-explicitly-throw-exceptions.md
+        - name: Creare eccezioni definite dall'utente
+          href: exceptions/how-to-create-user-defined-exceptions.md
+        - name: Creare eccezioni definite dall'utente con messaggi di eccezione localizzati
+          href: exceptions/how-to-create-localized-exception-messages.md
+        - name: Usare blocchi finally
+          href: exceptions/how-to-use-finally-blocks.md
+    - name: Usare gestori di eccezioni filtrati dall'utente
+      href: exceptions/using-user-filtered-exception-handlers.md
+    - name: Gestire eccezioni per interoperabilità COM
+      href: exceptions/handling-com-interop-exceptions.md
+    - name: Procedure consigliate
+      href: exceptions/best-practices-for-exceptions.md
 - name: Assembly in .NET
   href: assembly/
-- name: Garbage Collection
-  href: garbage-collection/
+- name: Gestione della memoria
+  items:
+    - name: Pulizia delle risorse non gestite
+      items:
+        - name: Panoramica
+          href: garbage-collection/unmanaged.md
+          displayName: 'unmanaged resources, memory management'
+        - name: Implementare un metodo Dispose
+          href: garbage-collection/implementing-dispose.md
+        - name: Usare oggetti che implementano IDisposable
+          href: garbage-collection/using-objects.md
+    - name: Garbage Collection
+      items:
+        - name: Panoramica
+          href: garbage-collection/index.md
+          displayName: garbage collection
+        - name: Concetti fondamentali
+          href: garbage-collection/fundamentals.md
+        - name: Heap Large Object
+          href: garbage-collection/large-object-heap.md
+        - name: Garbage Collection e prestazioni
+          href: garbage-collection/performance.md
+        - name: Raccolte indotte
+          href: garbage-collection/induced.md
+        - name: Modalità di latenza
+          href: garbage-collection/latency.md
+        - name: Ottimizzazione per l'hosting Web condiviso
+          href: garbage-collection/optimization-for-shared-web-hosting.md
+        - name: Notifiche di Garbage Collection
+          href: garbage-collection/notifications.md
+        - name: Monitoraggio delle risorse del dominio applicazione
+          href: garbage-collection/app-domain-resource-monitoring.md
+        - name: Riferimenti deboli
+          href: garbage-collection/weak-references.md
 - name: Tipi generici
-  href: generics.md
+  items:
+    - name: Panoramica
+      href: generics/index.md
+    - name: Introduzione ai tipi generici
+      href: generics.md
+    - name: Raccolte generiche in .NET
+      href: generics/collections.md
+    - name: Delegati generici per la modifica di matrici ed elenchi
+      href: generics/delegates-for-manipulating-arrays-and-lists.md
+    - name: Interfacce generiche
+      href: generics/interfaces.md
+    - name: Covarianza e controvarianza
+      href: generics/covariance-and-contravariance.md
 - name: Delegati e lambda
   href: delegates-lambdas.md
 - name: LINQ
@@ -213,7 +282,143 @@
         - name: Modelli di programmazione asincrona
           href: asynchronous-programming-patterns/
     - name: Programmazione parallela
-      href: parallel-programming/
+      items:
+        - name: Panoramica
+          href: parallel-programming/index.md
+        - name: Task Parallel Library (TPL)
+          href: parallel-programming/task-parallel-library-tpl.md
+          items:
+            - name: Parallelismo dei dati
+              href: parallel-programming/data-parallelism-task-parallel-library.md
+              items:
+                - name: 'Procedura: Scrivere un ciclo Parallel.For semplice'
+                  href: parallel-programming/how-to-write-a-simple-parallel-for-loop.md
+                - name: 'Procedura: Scrivere un ciclo Parallel.ForEach semplice'
+                  href: parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md
+                - name: 'Procedura: Scrivere un ciclo Parallel.For con variabili di thread locali'
+                  href: parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md
+                - name: 'Procedura: Scrivere un ciclo Parallel.ForEach con variabili partition-local'
+                  href: parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md
+                - name: 'Procedura: Annullare un ciclo Parallel.For o ForEach'
+                  href: parallel-programming/how-to-cancel-a-parallel-for-or-foreach-loop.md
+                - name: 'Procedura: Gestire le eccezioni nei cicli paralleli'
+                  href: parallel-programming/how-to-handle-exceptions-in-parallel-loops.md
+                - name: 'Procedura: Aumentare la velocità di corpi di ciclo di dimensioni ridotte'
+                  href: parallel-programming/how-to-speed-up-small-loop-bodies.md
+                - name: 'Procedura: Scorrere le directory dei file con la classe Parallel'
+                  href: parallel-programming/how-to-iterate-file-directories-with-the-parallel-class.md
+            - name: Programmazione asincrona basata su attività
+              href: parallel-programming/task-based-asynchronous-programming.md
+              items:
+                - name: Concatenamento di attività tramite attività di continuazione
+                  href: parallel-programming/chaining-tasks-by-using-continuation-tasks.md
+                - name: Attività figlio connesse e disconnesse
+                  href: parallel-programming/attached-and-detached-child-tasks.md
+                - name: Annullamento delle attività
+                  href: parallel-programming/task-cancellation.md
+                - name: Gestione delle eccezioni
+                  href: parallel-programming/exception-handling-task-parallel-library.md
+                - name: 'Procedura: Usare Parallel.Invoke per eseguire operazioni parallele'
+                  href: parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md
+                - name: 'Procedura: Restituire un valore da un''attività'
+                  href: parallel-programming/how-to-return-a-value-from-a-task.md
+                - name: 'Procedura: Annullare un''attività e i relativi figli'
+                  href: parallel-programming/how-to-cancel-a-task-and-its-children.md
+                - name: 'Procedura: creare attività precalcolate'
+                  href: parallel-programming/how-to-create-pre-computed-tasks.md
+                - name: 'Procedura: Attraversare un albero binario con attività parallele'
+                  href: parallel-programming/how-to-traverse-a-binary-tree-with-parallel-tasks.md
+                - name: 'Procedura: Annullare il wrapping di un''attività annidata'
+                  href: parallel-programming/how-to-unwrap-a-nested-task.md
+                - name: 'Procedura: evitare l''associazione di un''attività figlio alla relativa attività padre'
+                  href: parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md
+            - name: Flusso di dati
+              href: parallel-programming/dataflow-task-parallel-library.md
+              items:
+                - name: 'Procedura: scrivere messaggi in un blocco di flussi di dati e leggere messaggi da un blocco di flussi di dati'
+                  href: parallel-programming/how-to-write-messages-to-and-read-messages-from-a-dataflow-block.md
+                - name: 'Procedura: implementare un modello di flusso di dati producer-consumer'
+                  href: parallel-programming/how-to-implement-a-producer-consumer-dataflow-pattern.md
+                - name: 'Procedura: eseguire un''azione alla ricezione di dati in un blocco di flussi di dati'
+                  href: parallel-programming/how-to-perform-action-when-a-dataflow-block-receives-data.md
+                - name: 'Procedura dettagliata: Creazione di una pipeline del flusso di dati'
+                  href: parallel-programming/walkthrough-creating-a-dataflow-pipeline.md
+                - name: 'Procedura: scollegare i blocchi di flussi di dati'
+                  href: parallel-programming/how-to-unlink-dataflow-blocks.md
+                - name: 'Procedura dettagliata: Uso del flusso di dati in un''applicazione Windows Forms'
+                  href: parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md
+                - name: 'Procedura: Annullare un blocco di flussi di dati'
+                  href: parallel-programming/how-to-cancel-a-dataflow-block.md
+                - name: 'Procedura dettagliata: creazione di un tipo di blocco di flussi di dati personalizzato'
+                  href: parallel-programming/walkthrough-creating-a-custom-dataflow-block-type.md
+                - name: 'Procedura: usare JoinBlock per leggere dati da più origini'
+                  href: parallel-programming/how-to-use-joinblock-to-read-data-from-multiple-sources.md
+                - name: 'Procedura: specificare il grado di parallelismo in un blocco di flussi di dati'
+                  href: parallel-programming/how-to-specify-the-degree-of-parallelism-in-a-dataflow-block.md
+                - name: 'Procedura: Specificare un''utilità di pianificazione in un blocco di flussi di dati'
+                  href: parallel-programming/how-to-specify-a-task-scheduler-in-a-dataflow-block.md
+                - name: 'Procedura dettagliata: uso di BatchBlock e BatchedJoinBlock per migliorare l''efficienza'
+                  href: parallel-programming/walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md
+            - name: Uso di TPL con altri modelli asincroni
+              href: parallel-programming/using-tpl-with-other-asynchronous-patterns.md
+              items:
+                - name: Task Parallel Library e programmazione asincrona .NET Framework tradizionale
+                  href: parallel-programming/tpl-and-traditional-async-programming.md
+                - name: 'Procedura: Eseguire il wrapping di modelli EAP in un''attività'
+                  href: parallel-programming/how-to-wrap-eap-patterns-in-a-task.md
+            - name: Problemi potenziali nel parallelismo di dati e attività
+              href: parallel-programming/potential-pitfalls-in-data-and-task-parallelism.md
+        - name: Parallel LINQ (PLINQ)
+          items:
+            - name: Introduzione a PLINQ
+              href: parallel-programming/introduction-to-plinq.md
+            - name: Informazioni sull'aumento di velocità in PLINQ
+              href: parallel-programming/understanding-speedup-in-plinq.md
+            - name: Conservazione dell'ordine in PLINQ
+              href: parallel-programming/order-preservation-in-plinq.md
+            - name: Opzioni di merge in PLINQ
+              href: parallel-programming/merge-options-in-plinq.md
+            - name: Problemi potenziali dell'utilizzo di PLINQ
+              href: parallel-programming/potential-pitfalls-with-plinq.md
+            - name: 'Procedura: Creare ed eseguire una query PLINQ semplice'
+              href: parallel-programming/how-to-create-and-execute-a-simple-plinq-query.md
+            - name: 'Procedura: Controllare l''ordine in una query PLINQ'
+              href: parallel-programming/how-to-control-ordering-in-a-plinq-query.md
+            - name: 'Procedura: Combinare query LINQ parallele e sequenziali'
+              href: parallel-programming/how-to-combine-parallel-and-sequential-linq-queries.md
+            - name: 'Procedura: Gestire le eccezioni in una query PLINQ'
+              href: parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md
+            - name: 'Procedura: Annullare una query PLINQ'
+              href: parallel-programming/how-to-cancel-a-plinq-query.md
+            - name: 'Procedura: Scrivere una funzione di aggregazione PLINQ personalizzata'
+              href: parallel-programming/how-to-write-a-custom-plinq-aggregate-function.md
+            - name: 'Procedura: Specificare la modalità di esecuzione in PLINQ'
+              href: parallel-programming/how-to-specify-the-execution-mode-in-plinq.md
+            - name: 'Procedura: Specificare le opzioni di merge in PLINQ'
+              href: parallel-programming/how-to-specify-merge-options-in-plinq.md
+            - name: 'Procedura: Scorrere le directory dei file con PLINQ'
+              href: parallel-programming/how-to-iterate-file-directories-with-plinq.md
+            - name: 'Procedura: Misurare le prestazioni delle query PLINQ'
+              href: parallel-programming/how-to-measure-plinq-query-performance.md
+            - name: PLINQ Data Sample
+              href: parallel-programming/plinq-data-sample.md
+        - name: Strutture di dati per la programmazione in parallelo
+          href: parallel-programming/data-structures-for-parallel-programming.md
+        - name: Strumenti di diagnostica in parallelo
+          href: parallel-programming/parallel-diagnostic-tools.md
+        - name: Partitioner personalizzati per PLINQ e TPL
+          items:
+            - name: Panoramica
+              href: parallel-programming/custom-partitioners-for-plinq-and-tpl.md
+              displayName: custom partitioners
+            - name: 'Procedura: Implementare partizioni dinamiche'
+              href: parallel-programming/how-to-implement-dynamic-partitions.md
+            - name: 'Procedura: Implementare un partitioner per il partizionamento statico'
+              href: parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md
+        - name: Espressioni lambda in PLINQ e TPL
+          href: parallel-programming/lambda-expressions-in-plinq-and-tpl.md
+        - name: Ulteriori informazioni
+          href: parallel-programming/for-further-reading-parallel-programming.md
     - name: Threading
       href: threading/
 - name: Tipi correlati alla memoria e agli intervalli
@@ -260,13 +465,50 @@
     - name: Eccezioni
       href: native-interop/exceptions-interoperability.md
 - name: Raccolte e strutture di dati
-  href: collections/
+  items:
+    - name: Panoramica
+      href: collections/index.md
+      displayName: 'collections, data structures'
+    - name: Selezionare una classe Collection
+      href: collections/selecting-a-collection-class.md
+    - name: Tipi di raccolte comunemente usate
+      href: collections/commonly-used-collection-types.md
+    - name: Quando usare raccolte generiche
+      href: collections/when-to-use-generic-collections.md
+    - name: Confronti e ordinamenti all'interno delle raccolte
+      href: collections/comparisons-and-sorts-within-collections.md
+    - name: Tipi di raccolta ordinati
+      href: collections/sorted-collection-types.md
+    - name: Tipi Hashtable e Dictionary
+      href: collections/hashtable-and-dictionary-collection-types.md
+    - name: Raccolte thread-safe
+      href: collections/thread-safe/
 - name: Valori numerici in .NET
   href: numerics.md
 - name: 'Date, ore e fusi orari'
   href: datetime/
 - name: Events
-  href: events/
+  items:
+    - name: Panoramica
+      href: events/index.md
+      displayName: events
+    - name: Generare e utilizzare eventi
+      href: events/how-to-raise-and-consume-events.md
+    - name: Gestire più eventi mediante le relative proprietà
+      href: events/how-to-handle-multiple-events-using-event-properties.md
+    - name: Utilizzare eventi in un'app Web Forms
+      href: events/how-to-consume-events-in-a-web-forms-application.md
+    - name: Modello di progettazione observer
+      items:
+        - name: Panoramica
+          href: events/observer-design-pattern.md
+          displayName: Observer design pattern
+        - name: Procedure consigliate
+          href: events/observer-design-pattern-best-practices.md
+        - name: 'Procedura: Implementare un provider'
+          href: events/how-to-implement-a-provider.md
+        - name: 'Procedura: Implementare un elemento Observer'
+          href: events/how-to-implement-an-observer.md
 - name: Processo di esecuzione gestita
   href: managed-execution-process.md
 - name: Metadati e componenti auto-descrittivi
@@ -274,13 +516,194 @@
 - name: Creare app console
   href: building-console-apps.md
 - name: I/O di file e di flussi
-  href: io/index.md
+  items:
+    - name: Panoramica
+      href: io/index.md
+    - name: Formati dei percorsi di file nei sistemi Windows
+      href: io/file-path-formats.md
+    - name: Attività di I/O comuni
+      href: io/common-i-o-tasks.md
+      items:
+        - name: 'Procedura: Copiare le directory'
+          href: io/how-to-copy-directories.md
+        - name: 'Procedura: Enumerare directory e file'
+          href: io/how-to-enumerate-directories-and-files.md
+        - name: 'Procedura: Leggere e scrivere in un file di dati appena creato'
+          href: io/how-to-read-and-write-to-a-newly-created-data-file.md
+        - name: 'Procedura: Aprire e accodare un file di log'
+          href: io/how-to-open-and-append-to-a-log-file.md
+        - name: 'Procedura: Scrivere testo in un file'
+          href: io/how-to-write-text-to-a-file.md
+        - name: 'Procedura: Leggere testo da un file'
+          href: io/how-to-read-text-from-a-file.md
+        - name: 'Procedura: Leggere caratteri da una stringa'
+          href: io/how-to-read-characters-from-a-string.md
+        - name: 'Procedura: Scrivere caratteri in una stringa'
+          href: io/how-to-write-characters-to-a-string.md
+        - name: 'Procedura: Aggiungere o rimuovere voci dell''elenco di controllo di accesso'
+          href: io/how-to-add-or-remove-access-control-list-entries.md
+        - name: 'Procedura: Comprimere ed estrarre file'
+          href: io/how-to-compress-and-extract-files.md
+        - name: Composizione dei flussi
+          href: io/composing-streams.md
+        - name: 'Procedura: Eseguire la conversione tra flussi di .NET Framework e flussi di Windows Runtime'
+          href: io/how-to-convert-between-dotnet-streams-and-winrt-streams.md
+    - name: I/O di file asincrono
+      href: io/asynchronous-file-i-o.md
+    - name: Gestire gli errori di I/O
+      href: io/handling-io-errors.md
+    - name: Spazio di memorizzazione isolato
+      href: io/isolated-storage.md
+      items:
+        - name: Tipi di isolamento
+          href: io/types-of-isolation.md
+        - name: 'Procedura: Recuperare archivi per lo spazio di memorizzazione isolato'
+          href: io/how-to-obtain-stores-for-isolated-storage.md
+        - name: 'Procedura: Enumerare gli archivi per lo spazio di memorizzazione isolato'
+          href: io/how-to-enumerate-stores-for-isolated-storage.md
+        - name: 'Procedura: Eliminare gli archivi nello spazio di memorizzazione isolato'
+          href: io/how-to-delete-stores-in-isolated-storage.md
+        - name: 'Procedura: Anticipare le condizioni di spazio insufficiente con lo spazio di memorizzazione isolato'
+          href: io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md
+        - name: 'Procedura: Creare file e directory nello spazio di memorizzazione isolato'
+          href: io/how-to-create-files-and-directories-in-isolated-storage.md
+        - name: 'Procedura: Trovare file e directory esistenti nello spazio di memorizzazione isolato'
+          href: io/how-to-find-existing-files-and-directories-in-isolated-storage.md
+        - name: 'Procedura: Leggere e scrivere sui file nello spazio di memorizzazione isolato'
+          href: io/how-to-read-and-write-to-files-in-isolated-storage.md
+        - name: 'Procedura: Eliminare file e directory nello spazio di memorizzazione isolato'
+          href: io/how-to-delete-files-and-directories-in-isolated-storage.md
+    - name: Pipe
+      href: io/pipe-operations.md
+      items:
+        - name: 'Procedura: Usare le unnamed pipe per la comunicazione interprocesso locale'
+          href: io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md
+        - name: 'Procedura: Usare le named pipe per la comunicazione interprocesso in rete'
+          href: io/how-to-use-named-pipes-for-network-interprocess-communication.md
+    - name: Pipeline
+      href: io/pipelines.md
+    - name: Utilizzare i buffer
+      href: io/buffers.md
+    - name: File mappati alla memoria
+      href: io/memory-mapped-files.md
 - name: Globalizzazione e localizzazione
   href: globalization-localization/
 - name: Attributi
-  href: attributes/
+  items:
+    - name: Panoramica
+      href: attributes/index.md
+      displayName: attributes
+    - name: Applicare attributi
+      href: attributes/applying-attributes.md
+    - name: Scrivere attributi personalizzati
+      href: attributes/writing-custom-attributes.md
+    - name: Recuperare informazioni archiviate negli attributi
+      href: attributes/retrieving-information-stored-in-attributes.md
 - name: Linee guida per la progettazione di framework
-  href: design-guidelines/
+  items:
+    - name: Panoramica
+      href: design-guidelines/index.md
+    - name: Convenzioni di denominazione
+      href: design-guidelines/naming-guidelines.md
+      items:
+        - name: Convenzioni per l'uso di maiuscole e minuscole
+          href: design-guidelines/capitalization-conventions.md
+        - name: Convenzioni di denominazione generali
+          href: design-guidelines/general-naming-conventions.md
+        - name: Nomi di assembly e DLL
+          href: design-guidelines/names-of-assemblies-and-dlls.md
+        - name: Nomi di spazi dei nomi
+          href: design-guidelines/names-of-namespaces.md
+        - name: 'Nomi di classi, struct e interfacce'
+          href: design-guidelines/names-of-classes-structs-and-interfaces.md
+        - name: Nomi di membri dei tipi
+          href: design-guidelines/names-of-type-members.md
+        - name: Denominazione di parametri
+          href: design-guidelines/naming-parameters.md
+        - name: Nomi delle risorse
+          href: design-guidelines/naming-resources.md
+    - name: Linee guida per la progettazione di tipi
+      href: design-guidelines/type.md
+      items:
+        - name: Scegliere tra classi e struct
+          href: design-guidelines/choosing-between-class-and-struct.md
+        - name: Progettazione di classi astratte
+          href: design-guidelines/abstract-class.md
+        - name: Progettazione di classi statiche
+          href: design-guidelines/static-class.md
+        - name: Progettazione di interfacce
+          href: design-guidelines/interface.md
+        - name: Progettazione di struct
+          href: design-guidelines/struct.md
+        - name: Progettazione di enumerazioni
+          href: design-guidelines/enum.md
+        - name: Tipi annidati
+          href: design-guidelines/nested-types.md
+    - name: Linee guida per la progettazione dei membri
+      href: design-guidelines/member.md
+      items:
+        - name: Overload dei membri
+          href: design-guidelines/member-overloading.md
+        - name: Progettazione di proprietà
+          href: design-guidelines/property.md
+        - name: Progettazione di costruttori
+          href: design-guidelines/constructor.md
+        - name: Progettazione di eventi
+          href: design-guidelines/event.md
+        - name: Progettazione di campi
+          href: design-guidelines/field.md
+        - name: Metodi di estensione
+          href: design-guidelines/extension-methods.md
+        - name: Overload degli operatori
+          href: design-guidelines/operator-overloads.md
+        - name: Progettazione di parametri
+          href: design-guidelines/parameter-design.md
+    - name: Progettare per l'estendibilità
+      href: design-guidelines/designing-for-extensibility.md
+      items:
+        - name: Classi unsealed
+          href: design-guidelines/unsealed-classes.md
+        - name: Membri protetti
+          href: design-guidelines/protected-members.md
+        - name: Eventi e callback
+          href: design-guidelines/events-and-callbacks.md
+        - name: Membri virtuali
+          href: design-guidelines/virtual-members.md
+        - name: Astrazioni (tipi astratti e interfacce)
+          href: design-guidelines/abstractions-abstract-types-and-interfaces.md
+        - name: Classi di base per l'implementazione di astrazioni
+          href: design-guidelines/base-classes-for-implementing-abstractions.md
+        - name: sealed
+          href: design-guidelines/sealing.md
+    - name: Linee guida per la progettazione delle eccezioni
+      href: design-guidelines/exceptions.md
+      items:
+        - name: Generazione di eccezioni
+          href: design-guidelines/exception-throwing.md
+        - name: Usare tipi di eccezioni standard
+          href: design-guidelines/using-standard-exception-types.md
+        - name: Eccezioni e prestazioni
+          href: design-guidelines/exceptions-and-performance.md
+    - name: Linee guida per l'utilizzo
+      href: design-guidelines/usage-guidelines.md
+      items:
+        - name: Matrici
+          href: design-guidelines/arrays.md
+        - name: Attributi
+          href: design-guidelines/attributes.md
+        - name: Raccolte
+          href: design-guidelines/guidelines-for-collections.md
+        - name: Serializzazione
+          href: design-guidelines/serialization.md
+        - name: Utilizzo di System.Xml
+          href: design-guidelines/system-xml-usage.md
+        - name: Operatori di uguaglianza
+          href: design-guidelines/equality-operators.md
+    - name: Modelli di progettazione comuni
+      href: design-guidelines/common-design-patterns.md
+      items:
+        - name: Proprietà di dipendenza
+          href: design-guidelines/dependency-properties.md
 - name: Microsoft.Data.Sqlite
   href: data/sqlite/
 - name: Documenti e dati XML
@@ -288,6 +711,113 @@
 - name: Security
   href: security/
 - name: Serializzazione
-  href: serialization/
+  items:
+    - name: Panoramica
+      href: serialization/index.md
+    - name: Serializzazione JSON
+      items:
+        - name: Panoramica
+          href: serialization/system-text-json-overview.md
+          displayName: json serialization
+        - name: Come serializzare e deserializzare dati JSON
+          href: serialization/system-text-json-how-to.md
+        - name: Come scrivere convertitori personalizzati
+          href: serialization/system-text-json-converters-how-to.md
+        - name: Come eseguire la migrazione da Newtonsoft.Json
+          href: serialization/system-text-json-migrate-from-newtonsoft-how-to.md
+    - name: Serializzazione binaria
+      items:
+        - name: Panoramica
+          href: serialization/binary-serialization.md
+          displayName: binary serialization
+        - name: Concetti relativi alla serializzazione
+          href: serialization/serialization-concepts.md
+        - name: Serializzazione di base
+          href: serialization/basic-serialization.md
+        - name: Serializzazione selettiva
+          href: serialization/selective-serialization.md
+        - name: Serializzazione personalizzata
+          href: serialization/custom-serialization.md
+        - name: Passaggi del processo di serializzazione
+          href: serialization/steps-in-the-serialization-process.md
+        - name: Serializzazione a tolleranza di versione
+          href: serialization/version-tolerant-serialization.md
+        - name: Linee guida relative alla serializzazione
+          href: serialization/serialization-guidelines.md
+        - name: 'Procedura: Suddividere in blocchi i dati serializzati'
+          href: serialization/how-to-chunk-serialized-data.md
+        - name: 'Procedura: Determinare se un oggetto .NET Standard è serializzabile'
+          href: serialization/how-to-determine-if-netstandard-object-is-serializable.md
+        - name: Esempi
+          href: serialization/samples-binary.md
+    - name: Serializzazione SOAP e XML
+      items:
+        - name: Panoramica
+          href: serialization/xml-and-soap-serialization.md
+        - name: Serializzazione XML in dettaglio
+          href: serialization/introducing-xml-serialization.md
+        - name: Esempi
+          href: serialization/examples-of-xml-serialization.md
+        - name: Strumento XML Schema Definition
+          href: serialization/the-xml-schema-definition-tool-and-xml-serialization.md
+        - name: Controllare la serializzazione XML mediante attributi
+          href: serialization/controlling-xml-serialization-using-attributes.md
+        - name: Attributi per il controllo della serializzazione XML
+          href: serialization/attributes-that-control-xml-serialization.md
+        - name: Serializzazione XML con Servizi Web XML
+          href: serialization/xml-serialization-with-xml-web-services.md
+        - name: Attributi per il controllo della serializzazione SOAP codificata
+          href: serialization/attributes-that-control-encoded-soap-serialization.md
+        - name: Procedure
+          items:
+            - name: Serializzare un oggetto
+              href: serialization/how-to-serialize-an-object.md
+            - name: Deserializzare un oggetto
+              href: serialization/how-to-deserialize-an-object.md
+            - name: Usare lo strumento XML Schema Definition per generare classi e documenti XML Schema Document
+              href: serialization/xml-schema-def-tool-gen.md
+            - name: Controllare la serializzazione delle classi derivate
+              href: serialization/how-to-control-serialization-of-derived-classes.md
+            - name: Specificare un nome di elemento alternativo per un flusso XML
+              href: serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md
+            - name: Qualificare nomi di attributi ed elementi XML
+              href: serialization/how-to-qualify-xml-element-and-xml-attribute-names.md
+            - name: Serializzare un oggetto come flusso XML con codifica SOAP
+              href: serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md
+            - name: Eseguire l'override della serializzazione XML con codifica SOAP
+              href: serialization/how-to-override-encoded-soap-xml-serialization.md
+        - name: Elementi di serializzazione XML
+          items:
+            - name: system.xml.serialization
+              href: serialization/system-xml-serialization-element.md
+            - name: dateTimeSerialization
+              href: serialization/datetimeserialization-element.md
+            - name: schemaImporterExtensions
+              href: serialization/schemaimporterextensions-element.md
+            - name: Elemento add per schemaImporterExtensions
+              href: serialization/add-element-for-schemaimporterextensions.md
+            - name: xmlSerializer
+              href: serialization/xmlserializer-element.md
+        - name: Strumenti
+          items:
+            - name: Strumento XML Serializer Generator (Sgen.exe)
+              href: serialization/xml-serializer-generator-tool-sgen-exe.md
+            - name: Strumento XML Schema Definition (Xsd.exe)
+              href: serialization/xml-schema-definition-tool-xsd-exe.md
+        - name: Esempi
+          href: serialization/samples-xml.md
 - name: Sviluppare per piattaforme multiple
-  href: cross-platform/
+  items:
+    - name: Panoramica
+      href: cross-platform/index.md
+      displayName: cross platform
+    - name: Libreria di classi portabile
+      href: cross-platform/cross-platform-development-with-the-portable-class-library.md
+    - name: Usare la libreria di classi portabile con MVVM
+      href: cross-platform/using-portable-class-library-with-model-view-view-model.md
+    - name: Risorse app per librerie destinate a più piattaforme
+      href: cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md
+    - name: Supporto di .NET Framework per app Microsoft Store e Windows Runtime
+      href: cross-platform/support-for-windows-store-apps-and-windows-runtime.md
+    - name: Passare un URI a Windows Runtime
+      href: cross-platform/passing-a-uri-to-the-windows-runtime.md
