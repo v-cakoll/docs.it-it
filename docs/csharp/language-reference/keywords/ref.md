@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 8d04f888befae2cad815c88a0d27bd836f458c63
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: d54d932ca96f1966ecc05a532a2468b7e16fac46
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523784"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805854"
 ---
 # <a name="ref-c-reference"></a>ref (Riferimenti per C#)
 
@@ -117,7 +117,7 @@ ref decimal estValue = ref Building.GetEstimatedValue();
 ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ```
 
-Si noti che nei due esempi la parola chiave `ref` deve essere usata in entrambe le posizioni. In caso contrario, il compilatore genera l'errore CS8172, "Non è possibile inizializzare una variabile per riferimento con un valore".
+In entrambi `ref` gli esempi la parola chiave deve essere utilizzata in entrambe le posizioni oppure il compilatore genera l'errore CS8172, "Impossibile inizializzare una variabile per riferimento con un valore".
 
 A partire da C# 7.3, la variabile di iterazione dell'istruzione `foreach` può essere una variabile locale ref o locale ref readonly. Per altre informazioni, vedere l'articolo sull'[istruzione foreach](foreach-in.md).
 
@@ -145,8 +145,8 @@ L'obiettivo di mantenere un tipo `ref struct` come variabile allocata nello stac
 
 - Non è possibile eseguire il boxing di `ref struct`. Non è possibile assegnare un tipo `ref struct` a una variabile di tipo `object`, `dynamic` o qualsiasi tipo di interfaccia.
 - I tipi `ref struct` non possono implementare interfacce.
-- Non è possibile dichiarare `ref struct` come campo membro di una classe o di un normale struct. Questo include la dichiarazione di una proprietà implementata automaticamente, che crea un campo sottostante generato dal compilatore.
-- Non è possibile dichiarare variabili locali che sono tipi `ref struct` nei metodi asincroni. È possibile dichiararle nei metodi sincroni che restituiscono tipi simili a <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> o `Task`.
+- Non è possibile dichiarare `ref struct` come campo membro di una classe o di un normale struct. Ciò include la dichiarazione di una proprietà implementata automaticamente, che crea un campo di supporto generato dal compilatore.
+- Non è possibile dichiarare variabili locali che sono tipi `ref struct` nei metodi asincroni. È possibile dichiararli in <xref:System.Threading.Tasks.Task>metodi <xref:System.Threading.Tasks.Task%601>sincroni che restituiscono tipi , , o `Task`simili.
 - Non è possibile dichiarare variabili locali `ref struct` negli iteratori.
 - Non è possibile acquisire variabili `ref struct` in espressioni lambda o funzioni locali.
 

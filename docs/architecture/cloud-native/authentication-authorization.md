@@ -1,32 +1,32 @@
 ---
-title: Autenticazione e autorizzazione in app native del cloud
-description: Architettura di app .NET cloud native per Azure | Autenticazione e autorizzazione nelle app cloud native
-ms.date: 06/30/2019
-ms.openlocfilehash: a397175e98c2e8103d2a8c372c81fcca65f19b11
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+title: Autenticazione e autorizzazione nelle app native cloud
+description: Architettura delle app .NET native per Azure nel cloud Autenticazione e autorizzazione nelle app native cloud
+ms.date: 03/02/2020
+ms.openlocfilehash: 6261a0a72405bc1c984a04a7851aea4dd6664ddf
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183728"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805551"
 ---
 # <a name="authentication-and-authorization-in-cloud-native-apps"></a>Autenticazione e autorizzazione nelle app cloud native
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-L' *autenticazione* è il processo di determinazione dell'identità di un'entità di sicurezza. L' *autorizzazione* è l'atto di concedere a un'entità autenticata un'autorizzazione per eseguire un'azione o accedere a una risorsa. A volte l'autenticazione viene abbreviata `AuthN` e l'autorizzazione viene abbreviata per `AuthZ`. Le applicazioni native del cloud devono basarsi su protocolli basati su HTTP aperti per autenticare le entità di sicurezza, poiché sia i client che le applicazioni possono essere eseguiti ovunque nel mondo su qualsiasi piattaforma o dispositivo. L'unico fattore comune è HTTP.
+*L'autenticazione* è il processo di determinazione dell'identità di un'entità di sicurezza. *L'autorizzazione* è l'atto di concedere a un'entità autenticata l'autorizzazione per eseguire un'azione o accedere a una risorsa. A volte l'autenticazione viene abbreviata e l'autorizzazione `AuthN` viene abbreviata in `AuthZ`. Le applicazioni native nel cloud devono fare affidamento su protocolli aperti basati su HTTP per autenticare le entità di sicurezza poiché sia i client che le applicazioni potrebbero essere in esecuzione in qualsiasi parte del mondo su qualsiasi piattaforma o dispositivo. L'unico fattore comune è HTTP.
 
-Molte organizzazioni si basano ancora sui servizi di autenticazione locali come Active Directory Federation Services (ADFS). Sebbene questo approccio abbia tradizionalmente servito le organizzazioni per le esigenze di autenticazione locali, le applicazioni native del cloud traggono vantaggio dai sistemi progettati specificamente per il cloud. Una recente consulenza NCSC (National Cyber Security Centre) 2019 del Regno Unito afferma che "le organizzazioni che utilizzano Azure AD come origine di autenticazione primaria diminuiranno effettivamente i rischi rispetto ad ADFS". Di seguito sono riportati alcuni dei motivi descritti in [questa analisi](https://oxfordcomputergroup.com/resources/o365-security-native-cloud-authentication/) :
+Molte organizzazioni si basano ancora su servizi di autenticazione locale come Active Directory Federation Services (ADFS). Sebbene questo approccio abbia tradizionalmente servito bene le organizzazioni per le esigenze di autenticazione locali, le applicazioni native nel cloud traggono vantaggio dai sistemi progettati specificamente per il cloud. Un recente advisory del National Cyber Security Centre (NCSC) del Regno Unito nel Regno Unito afferma che "le organizzazioni che usano Azure AD come origine di autenticazione primaria abbasseranno effettivamente il rischio rispetto ad ADFS". Alcuni motivi descritti in [questa analisi](https://oxfordcomputergroup.com/resources/o365-security-native-cloud-authentication/) includono:
 
-- Accesso al set completo di tecnologie di protezione delle credenziali di Microsoft.
-- La maggior parte delle organizzazioni si trova già in una certa misura Azure AD.
-- Il doppio hash degli hash NTLM garantisce che il compromesso non consenta le credenziali che funzionano in Active Directory locali.
+- Accesso al set completo di tecnologie microsoft per la protezione delle credenziali.
+- La maggior parte delle organizzazioni si basa già su Azure AD in una certa misura.
+- Il doppio hash degli hash NTLM garantisce che la compromissione non consenta le credenziali che funzionano in Active Directory locale.
 
 ## <a name="references"></a>Riferimenti
 
 - [Nozioni di base sull'autenticazione](https://docs.microsoft.com/azure/active-directory/develop/authentication-scenarios)
-- [Attestazioni e token di accesso](https://docs.microsoft.com/azure/active-directory/develop/access-tokens)
+- [Token di accesso e attestazioniAccess tokens and claims](https://docs.microsoft.com/azure/active-directory/develop/access-tokens)
 - [Potrebbe essere il momento di abbandonare i servizi di autenticazione locali](https://oxfordcomputergroup.com/resources/o365-security-native-cloud-authentication/)
 
 >[!div class="step-by-step"]
->[Precedente](identity.md)
->[Successivo](azure-active-directory.md)
+>[Successivo](identity.md)
+>[precedente](azure-active-directory.md)

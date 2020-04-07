@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: 828543b95ed82f465c92212748c6250b7fc84051
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 9feca97b141b08d418f6833374cbe3c7a0c26d66
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249383"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805783"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Introduzione al linguaggio C e .NET Framework
 
@@ -22,7 +22,7 @@ C# è un linguaggio elegante, orientato a oggetti e indipendente dai tipi che co
   
 ## <a name="c-language"></a>Linguaggio C#
 
-La sintassi di C# è altamente espressiva, ma è anche semplice e facile da imparare. La sintassi delle parentesi graffe di C, sarà immediatamente riconoscibile per chiunque abbia familiarità con C, C , o Java. Gli sviluppatori che conoscono uno di questi linguaggi di solito sono in grado di iniziare a lavorare in modo produttivo in C# dopo un breve periodo di tempo. La sintassi di C, semplifica molte delle complessità del linguaggio C, e fornisce potenti funzionalità, ad esempio tipi nullable, enumerazioni, delegati, espressioni lambda e accesso diretto alla memoria. C# supporta metodi e tipi generici, che garantiscono migliori prestazioni e maggior indipendenza dai tipi, nonché iteratori, che consentono ai responsabili dell'implementazione di classi Collection di definire comportamenti di iterazione personalizzati facili da usare con il codice client. Le espressioni LINQ (Language-Integrated Query) rendono la query fortemente tipizzata un costrutto di linguaggio di prima classe.  
+La sintassi di C# è altamente espressiva, ma è anche semplice e facile da imparare. La sintassi delle parentesi graffe di C, sarà immediatamente riconoscibile per chiunque abbia familiarità con C, C , o Java. Gli sviluppatori che conoscono uno qualsiasi di questi linguaggi sono in genere in grado di iniziare a lavorare in modo produttivo in C , in breve tempo. La sintassi di C, semplifica molte delle complessità del linguaggio C, e fornisce potenti funzionalità, ad esempio tipi nullable, enumerazioni, delegati, espressioni lambda e accesso diretto alla memoria. C# supporta metodi e tipi generici, che garantiscono migliori prestazioni e maggior indipendenza dai tipi, nonché iteratori, che consentono ai responsabili dell'implementazione di classi Collection di definire comportamenti di iterazione personalizzati facili da usare con il codice client. Le espressioni LINQ (Language-Integrated Query) rendono la query fortemente tipizzata un costrutto di linguaggio di prima classe.  
   
  Essendo un linguaggio orientato a oggetti, C# supporta i concetti di incapsulamento, ereditarietà e polimorfismo. Tutti i metodi e le variabili, incluso il metodo `Main`, ovvero il punto di ingresso dell'applicazione, vengono incapsulati all'interno delle definizioni di classe. Una classe può ereditare direttamente da un'unica classe padre, ma può implementare un numero qualsiasi di interfacce. Per evitare una ridefinizione accidentale, i metodi che eseguono l'override di metodi virtuali in una classe padre richiedono la parola chiave `override`. In C# un tipo struct è simile a una classe leggera. Si tratta di un tipo allocato nello stack che può implementare interfacce, ma non supporta l'ereditarietà.  
   
@@ -60,7 +60,7 @@ La sintassi di C# è altamente espressiva, ma è anche semplice e facile da impa
   
  ![Dal codice C# all'esecuzione nel computer](./media/introduction-to-the-csharp-language-and-the-net-framework/net-architecture-relationships.png)  
   
- Una delle funzionalità chiave di .NET Framework è l'interoperabilità del linguaggio. Poiché il codice IL generato dal compilatore C# è conforme alle specifiche del Common Type System (CTS), può interagire con il codice generato dalle versioni .NET di Visual Basic, Visual C++ o di uno qualsiasi degli oltre 20 linguaggi conformi alle specifiche del CTS. Un singolo assembly può contenere più moduli scritti in linguaggi .NET differenti e i tipi possono fare riferimento l'uno all'altro come se fossero scritti nello stesso linguaggio.  
+ Una delle funzionalità chiave di .NET Framework è l'interoperabilità del linguaggio. Poiché il codice IL generato dal compilatore C# è conforme alle specifiche del Common Type System (CTS), può interagire con il codice generato dalle versioni .NET di Visual Basic, Visual C++ o di uno qualsiasi degli oltre 20 linguaggi conformi alle specifiche del CTS. Un singolo assembly può contenere più moduli scritti in linguaggi .NET diversi e i tipi possono fare riferimento l'uno all'altro come se fossero scritti nello stesso linguaggio.  
   
  Oltre ai servizi di runtime, .NET Framework include una libreria estesa contenente oltre 4000 classi, organizzate in spazi dei nomi, che offrono un'ampia gamma di utili funzionalità, dalla gestione dell'input e dell'output dei file, alla modifica delle stringhe, all'analisi XML e ai controlli Windows Form. Una tipica applicazione C# usa ampiamente la libreria di classi di .NET Framework per gestire le principali attività di plumbing.  
   

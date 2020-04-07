@@ -2,12 +2,12 @@
 title: Sottoscrizione di eventi
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Informazioni sui dettagli di pubblicazione e sottoscrizione di eventi di integrazione.
 ms.date: 01/30/2020
-ms.openlocfilehash: 3bfcdb1766a15b1a8e8deab46055f14e1791c2cc
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 7e78970933fdad27d2be74e7d498b0797fc09bc0
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523601"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805503"
 ---
 # <a name="subscribing-to-events"></a>Sottoscrizione di eventi
 
@@ -15,7 +15,7 @@ Il primo passaggio per poter usare il bus eventi consiste nel sottoscrivere i mi
 
 Il semplice codice seguente mostra che cosa ogni microservizio di tipo ricevitore deve implementare all'avvio del servizio, ovvero nella classe `Startup`, per poter sottoscrivere gli eventi necessari. In questo caso il microservizio `basket-api` deve sottoscrivere i messaggi `ProductPriceChangedIntegrationEvent` e `OrderStartedIntegrationEvent`.
 
-Con la sottoscrizione dell'evento `ProductPriceChangedIntegrationEvent`, ad esempio, il microservizio basket è in grado di riconoscere eventuali modifiche apportate al prezzo di un prodotto e di avvertire l'utente della modifica se tale prodotto è presente nel carrello dell'utente.
+Ad esempio, quando si sottoscrive l'evento, `ProductPriceChangedIntegrationEvent` che rende il microservizio del carrello a conoscenza di eventuali modifiche al prezzo del prodotto e consente di avvisare l'utente della modifica se il prodotto è nel carrello dell'utente.
 
 ```csharp
 var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
@@ -56,7 +56,7 @@ public class CatalogController : ControllerBase
 }
 ```
 
-L'oggetto può quindi essere usato dai metodi del controller, come nel metodo UpdateProduct:
+Quindi si utilizza dai metodi del controller, come nel UpdateProduct metodo:Then you use it from your controller's methods, like in the UpdateProduct method:
 
 ```csharp
 [Route("items")]
@@ -95,9 +95,9 @@ Quando si pubblicano eventi di integrazione tramite un sistema di messaggistica 
 
 In pratica, si usano i microservizi per creare sistemi scalabili e a disponibilità elevata. Per semplificare, il teorema CAP afferma che non è possibile creare un database (distribuito), o un microservizio proprietario del proprio modello, che sia continuamente disponibile, assolutamente coerente *e* tollerante di qualsiasi partizione. È necessario scegliere due di queste tre proprietà.
 
-Nelle architetture basate su microservizi è consigliabile scegliere disponibilità e tolleranza, dando minore importanza alla coerenza assoluta. Di conseguenza, nella maggior parte delle moderne applicazioni basate su microservizi si preferisce in genere non usare transazioni distribuite nella messaggistica, come si fa quando si implementano le [transazioni distribuite](https://docs.microsoft.com/previous-versions/windows/desktop/ms681205(v=vs.85)) basate su Windows Distributed Transaction Coordinator (DTC) con [MSMQ](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx).
+Nelle architetture basate su microservizi, è consigliabile scegliere la disponibilità e la tolleranza e de-enfatizzare la coerenza forte. Di conseguenza, nella maggior parte delle moderne applicazioni basate su microservizi si preferisce in genere non usare transazioni distribuite nella messaggistica, come si fa quando si implementano le [transazioni distribuite](https://docs.microsoft.com/previous-versions/windows/desktop/ms681205(v=vs.85)) basate su Windows Distributed Transaction Coordinator (DTC) con [MSMQ](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx).
 
-Torniamo indietro al problema iniziale e al relativo esempio. Se si verifica un arresto anomalo del servizio dopo l'aggiornamento del database (in questo caso, subito dopo la riga di codice con \_context.SaveChangesAsync()), ma prima della pubblicazione dell'evento di integrazione, l'intero sistema potrebbe risultare incoerente. Potrebbe trattarsi di un problema business critical, a seconda della specifica operazione di business gestita.
+Torniamo al problema iniziale e al suo esempio. Se il servizio si blocca dopo l'aggiornamento del database (in questo caso, subito dopo la riga di codice con `_context.SaveChangesAsync()`), ma prima della pubblicazione dell'evento di integrazione, l'intero sistema potrebbe diventare incoerente. Potrebbe trattarsi di un problema business critical, a seconda della specifica operazione di business gestita.
 
 Come accennato in precedenza nella sezione relativa all'architettura, è possibile adottare diversi approcci per gestire questo problema:
 
@@ -109,15 +109,15 @@ Come accennato in precedenza nella sezione relativa all'architettura, è possibi
 
 Per questo scenario uno degli approcci migliori, se non *il* migliore, consiste nell'usare lo schema Event Sourcing completo. In molti scenari di applicazione, tuttavia, potrebbe non essere possibile implementare un sistema Event Sourcing completo. Lo schema Event Sourcing implica l'archiviazione dei soli eventi di dominio nel database transazionale, anziché dei dati relativi allo stato corrente. L'archiviazione dei soli eventi di dominio può presentare notevoli vantaggi, consentendo ad esempio di poter disporre della cronologia di sistema e poter determinare lo stato del sistema in qualsiasi momento nel passato. L'implementazione di un sistema Event Sourcing completo richiede però la ridefinizione dell'architettura della maggior parte del sistema e implica molti altri requisiti e complessità. Si supponga, ad esempio, di voler usare un database appositamente pensato per lo schema Event Sourcing, come [Event Store](https://eventstore.org/), oppure un database orientato ai documenti, come Azure Cosmos DB, MongoDB, Cassandra, CouchDB o RavenDB. Lo schema Event Sourcing costituisce un valido approccio a questo problema, ma non è la soluzione più semplice a meno che non si abbia già familiarità con Event Sourcing.
 
-L'approccio basato sull'estrazione del log delle transazioni sembra inizialmente molto agevole. Per usare questo approccio, però, è necessario accoppiare il microservizio al log delle transazioni RDBMS, ad esempio il log delle transazioni di SQL Server e questo non è auspicabile. Un altro svantaggio è che gli aggiornamenti di basso livello registrati nel log delle transazioni potrebbero non essere allo stesso livello degli eventi di integrazione di alto livello. In questo caso il processo di decompilazione di tali operazioni del log delle transazioni può risultare complesso.
+L'opzione per utilizzare il data mining del log delle transazioni inizialmente sembra trasparente. Per usare questo approccio, però, è necessario accoppiare il microservizio al log delle transazioni RDBMS, ad esempio il log delle transazioni di SQL Server e questo non è auspicabile. Un altro svantaggio è che gli aggiornamenti di basso livello registrati nel log delle transazioni potrebbero non essere allo stesso livello degli eventi di integrazione di alto livello. In questo caso il processo di decompilazione di tali operazioni del log delle transazioni può risultare complesso.
 
-Per un approccio bilanciato è possibile combinare una tabella di database transazionale e un schema Event Sourcing semplificato. È possibile usare uno stato quale "pronto per la pubblicazione dell'evento", che viene impostato nell'evento originale quando se ne esegue il commit nella tabella eventi di integrazione. Si prova quindi a pubblicare l'evento nel bus di eventi. Se l'azione dell'evento di pubblicazione riesce, si può avviare un'altra transazione nel servizio di origine e cambiare lo stato da "pronto per la pubblicazione dell'evento" in "evento già pubblicato".
+Per un approccio bilanciato è possibile combinare una tabella di database transazionale e un schema Event Sourcing semplificato. È possibile usare uno stato, ad esempio "pronto per pubblicare l'evento", impostato nell'evento originale quando si esegue il commit nella tabella degli eventi di integrazione. Si prova quindi a pubblicare l'evento nel bus di eventi. Se l'azione publish-event ha esito positivo, si avvia un'altra transazione nel servizio di origine e si sposta lo stato da "pronto per la pubblicazione dell'evento" a "evento già pubblicato".
 
-Se l'azione dell'evento di pubblicazione nel bus di eventi non riesce, i dati non saranno ancora incoerenti all'interno di microservizio di origine (perché sono ancora contrassegnati come "pronto per la pubblicazione dell'evento") e alla fine saranno coerenti rispetto al resto dei servizi. È sempre possibile usare processi in background per controllare lo stato delle transazioni o degli eventi di integrazione. Se il processo trova un evento nello stato "pronto per la pubblicazione dell'evento", può provare a ripubblicarlo nel il bus di eventi.
+Se l'azione di pubblicazione dell'evento nel bus di eventi ha esito negativo, i dati non saranno comunque incoerenti all'interno del microservizio di origine, ma verranno comunque contrassegnati come "pronti per la pubblicazione dell'evento" e, rispetto al resto dei servizi, alla fine saranno coerenti. È sempre possibile usare processi in background per controllare lo stato delle transazioni o degli eventi di integrazione. Se il processo trova un evento nello stato "pronto per la pubblicazione dell'evento", può provare a ripubblicare l'evento nel bus di eventi.
 
 Si noti che con questo approccio, si rendono persistenti solo gli eventi di integrazione per ogni microservizio di origine e solo gli eventi che si vogliono comunicare ad altri microservizi o sistemi esterni. Al contrario, in un sistema Event Sourcing, vengono archiviati anche tutti gli eventi di dominio.
 
-Questo approccio bilanciato è quindi un sistema Event Sourcing semplificato. È necessario un elenco di eventi di integrazione con lo stato corrente ("pronto per la pubblicazione" e "pubblicato"), ma è necessario implementare questi stati solo per gli eventi di integrazione. In questo approccio, inoltre, non è necessario archiviare tutti i dati di dominio come eventi nel database transazionale, come si farebbe in un sistema Event Sourcing completo.
+Questo approccio bilanciato è quindi un sistema Event Sourcing semplificato. È necessario un elenco di eventi di integrazione con lo stato corrente ("pronto per la pubblicazione" e "pubblicato"). ma è necessario implementare questi stati solo per gli eventi di integrazione. In questo approccio, inoltre, non è necessario archiviare tutti i dati di dominio come eventi nel database transazionale, come si farebbe in un sistema Event Sourcing completo.
 
 Se si usa già un database relazionale, è possibile usare una tabella transazionale peer archiviare gli eventi di integrazione. Per ottenere l'atomicità nell'applicazione, si usa un processo in due passaggi basato su transazioni locali. In pratica, nello stesso database che contiene le entità di dominio è presente una tabella IntegrationEvent. Tale tabella funge da assicurazione per garantire l'atomicità in modo che gli eventi di integrazione persistenti vengano inclusi nelle stesse transazioni che stanno eseguendo il commit dei dati di dominio.
 
@@ -157,9 +157,9 @@ Per semplicità, nell'esempio eShopOnContainers viene usato il primo approccio (
 
 Il codice seguente mostra come creare una singola transazione che interessa più oggetti DbContext, ovvero un contesto correlato ai dati originali da aggiornare e un secondo contesto correlato alla tabella IntegrationEventLog.
 
-Si noti che la transazione nell'esempio di codice seguente non sarà resiliente se le connessioni al database presentano problemi nel momento in cui viene eseguito il codice. Questa situazione può verificarsi in sistemi basati sul cloud come Azure SQL DB, che potrebbe spostare database tra server. Per l'implementazione di transazioni resilienti in più contesti, vedere la sezione [Implementazione di connessioni SQL resilienti di Entity Framework Core](../implement-resilient-applications/implement-resilient-entity-framework-core-sql-connections.md) più avanti in questa guida.
+La transazione nel codice di esempio seguente non sarà resiliente se le connessioni al database presentano problemi nel momento in cui il codice è in esecuzione. Questa situazione può verificarsi in sistemi basati sul cloud come Azure SQL DB, che potrebbe spostare database tra server. Per l'implementazione di transazioni resilienti in più contesti, vedere la sezione [Implementazione di connessioni SQL resilienti di Entity Framework Core](../implement-resilient-applications/implement-resilient-entity-framework-core-sql-connections.md) più avanti in questa guida.
 
-Per chiarezza l'esempio seguente mostra l'intero processo in un unico frammento di codice. L'implementazione di eShopOnContainers viene in realtà sottoposta a refactoring e questa logica viene suddivisa in più classi in modo che sia più facilmente gestibile.
+Per chiarezza l'esempio seguente mostra l'intero processo in un unico frammento di codice. Tuttavia, l'implementazione di eShopOnContainers viene sottoposta a refactoring e suddivide questa logica in più classi in modo che sia più facile da gestire.
 
 ```csharp
 // Update Product from the Catalog microservice
@@ -285,7 +285,7 @@ Il gestore dell'evento deve verificare se il prodotto è presente in una delle i
 
 ## <a name="idempotency-in-update-message-events"></a>Idempotenza negli eventi dei messaggi di aggiornamento
 
-Un aspetto importante degli eventi dei messaggi di aggiornamento è che il messaggio deve essere nuovamente inviato in seguito a un errore che si verifica in un qualsiasi punto nelle comunicazioni. In caso contrario, un'attività in background potrebbe provare a pubblicare un evento che è già stato pubblicato, creando una condizione di race condition. È necessario assicurarsi che gli aggiornamenti siano idempotenti o che forniscano informazioni sufficienti a garantire il rilevamento di un duplicato, la sua rimozione e il reinvio di una sola risposta.
+Un aspetto importante degli eventi dei messaggi di aggiornamento è che il messaggio deve essere nuovamente inviato in seguito a un errore che si verifica in un qualsiasi punto nelle comunicazioni. In caso contrario, un'attività in background potrebbe provare a pubblicare un evento che è già stato pubblicato, creando una condizione di race condition. Assicurarsi che gli aggiornamenti siano idempotenti o che forniscano informazioni sufficienti per garantire che sia possibile rilevare un duplicato, eliminarlo e restituire una sola risposta.
 
 Come notato in precedenza, con il termine idempotenza si indica un'operazione che può essere eseguita più volte senza modificare il risultato. In un ambiente di messaggistica, come durante la comunicazione di eventi, un evento è idempotente se può essere recapitato più volte senza modificare il risultato per il microservizio di tipo ricevitore. Tale condizione potrebbe essere necessaria in virtù della natura dell'evento stesso o del modo in cui il sistema gestisce l'evento. L'idempotenza dei messaggi è importante in qualsiasi applicazione che usa la messaggistica, non solo nelle applicazioni che implementano lo schema del bus di eventi.
 
@@ -293,7 +293,7 @@ Un esempio di un'operazione idempotente è dato da un'istruzione SQL che inseris
 
 È possibile progettare messaggi idempotenti. Ad esempio, è possibile creare un evento che indica "imposta il prezzo del prodotto su 25 USD" invece di "aggiungi 5 USD al prezzo del prodotto". Mentre è possibile elaborare senza problemi il primo messaggio un qualsiasi numero di volte, ottenendo sempre lo stesso risultato, non si può dire altrettanto per il secondo messaggio. Ma anche nel primo caso è possibile che non si voglia elaborare il primo evento perché il sistema potrebbe aver inviato un evento di variazione del prezzo più recente e l'elaborazione del primo evento causerebbe la sovrascrittura del nuovo prezzo.
 
-Un altro esempio è dato da un evento di completamento dell'ordine che viene propagato a più sottoscrittori. È importante che le informazioni sugli ordini vengano aggiornate in altri sistemi una sola volta, anche se sono presenti eventi di messaggio duplicati per lo stesso evento di completamento dell'ordine.
+Un altro esempio è dato da un evento di completamento dell'ordine che viene propagato a più sottoscrittori. È importante che le informazioni sull'ordine vengano aggiornate in altri sistemi una sola volta, anche se sono presenti eventi di messaggio duplicati per lo stesso evento di completamento dell'ordine.
 
 È consigliabile definire un certo tipo di identità per ogni evento in modo che sia possibile creare la logica in base alla quale ogni evento deve essere elaborato una sola volta per ogni ricevitore.
 
@@ -306,19 +306,19 @@ Alcune operazioni di elaborazione dei messaggi sono intrinsecamente idempotenti.
 
 ## <a name="deduplicating-integration-event-messages"></a>Deduplicazione dei messaggi degli eventi di integrazione
 
-È possibile assicurarsi che gli eventi dei messaggi vengano inviati ed elaborati una sola volta per ogni sottoscrittore a livelli diversi. Un modo consiste nell'usare una funzionalità di deduplicazione offerta dall'infrastruttura di messaggistica in uso. Un altro consiste nell'implementare logica personalizzata nel microservizio di destinazione. La scelta migliore consiste nell'eseguire convalide sia a livello di trasporto che a livello di applicazione.
+È possibile assicurarsi che gli eventi del messaggio vengano inviati ed elaborati una sola volta per sottoscrittore a livelli diversi. Un modo consiste nell'usare una funzionalità di deduplicazione offerta dall'infrastruttura di messaggistica in uso. Un altro consiste nell'implementare logica personalizzata nel microservizio di destinazione. La scelta migliore consiste nell'eseguire convalide sia a livello di trasporto che a livello di applicazione.
 
 ### <a name="deduplicating-message-events-at-the-eventhandler-level"></a>Deduplicazione degli eventi di messaggio a livello di gestore dell'evento
 
-Un modo per assicurarsi che un evento venga elaborato una sola volta da qualsiasi ricevitore consiste nell'implementare una determinata logica durante l'elaborazione degli eventi dei messaggi nei gestori degli eventi. Questo è ad esempio l'approccio usato nell'applicazione eShopOnContainers, come si può vedere nel [codice sorgente della classe UserCheckoutAcceptedIntegrationEventHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) quando riceve un evento di integrazione UserCheckoutAcceptedIntegrationEvent. In questo caso viene eseguire il wrapping di CreateOrderCommand con un elemento IdentifiedCommand, usando eventMsg.RequestId come identificatore, prima di inviarlo al gestore comandi.
+Un modo per assicurarsi che un evento venga elaborato una sola volta da qualsiasi ricevitore consiste nell'implementare una determinata logica durante l'elaborazione degli eventi del messaggio nei gestori eventi. Questo è ad esempio l'approccio usato nell'applicazione eShopOnContainers, come si può vedere nel [codice sorgente della classe UserCheckoutAcceptedIntegrationEventHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) quando riceve un evento di integrazione UserCheckoutAcceptedIntegrationEvent. In questo caso viene eseguire il wrapping di CreateOrderCommand con un elemento IdentifiedCommand, usando eventMsg.RequestId come identificatore, prima di inviarlo al gestore comandi.
 
 ### <a name="deduplicating-messages-when-using-rabbitmq"></a>Deduplicazione dei messaggi quando si usa RabbitMQ
 
 Quando si verificano errori di rete intermittenti, è possono duplicare i messaggi, ma il ricevitore dei messaggi deve essere pronto per gestire questi messaggi duplicati. Se possibile, i ricevitori devono gestire i messaggi in modo idempotente. Questo approccio è preferibile rispetto a quando vengono gestiti in modo esplicito con la deduplicazione.
 
-Secondo quando indicato nella [documentazione di RabbitMQ](https://www.rabbitmq.com/reliability.html#consumer), "se un messaggio viene recapitato a un consumer e quindi reinserito nella coda, perché ad esempio non è stato confermato prima dell'eliminazione della connessione al consumer, RabbitMQ imposterà il flag di nuovo recapito dopo il successivo recapito allo stesso o a un altro consumer.
+Secondo la documentazione di [RabbitMQ](https://www.rabbitmq.com/reliability.html#consumer), "Se un messaggio viene recapitato a un consumer e quindi riaccodato (perché non è stato riconosciuto prima che la connessione del consumer venisse interrotta, ad esempio) allora RabbitMQ imposterà il flag recapitato su di esso quando viene recapitato nuovamente (se allo stesso consumer o a uno diverso).
 
-Se il flag di nuovo recapito è impostato, il ricevitore deve tenerlo in considerazione perché il messaggio potrebbe essere già stato elaborato. Questo non è però garantito. Il messaggio potrebbe non aver mai raggiunto il ricevitore dopo che ha lasciato il broker di messaggi, probabilmente a causa di problemi di rete. D'altra parte, se il flag di nuovo recapito non è impostato, si può essere certi che il messaggio non è stato inviato più volte. Il ricevitore deve quindi deduplicare i messaggi o elaborarli in modo idempotente solo se nel messaggio è impostato il flag di nuovo recapito.
+Se è impostato il flag "redelivered", il destinatario deve tenerne conto, perché il messaggio potrebbe essere già stato elaborato. Questo non è però garantito. Il messaggio potrebbe non aver mai raggiunto il ricevitore dopo che ha lasciato il broker di messaggi, probabilmente a causa di problemi di rete. D'altra parte, se il flag "recapitato" non è impostato, è garantito che il messaggio non sia stato inviato più di una volta. Pertanto, il destinatario deve deduplicare i messaggi o elaborare i messaggi in modo idempotente solo se il flag "redelivered" è impostato nel messaggio.
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 

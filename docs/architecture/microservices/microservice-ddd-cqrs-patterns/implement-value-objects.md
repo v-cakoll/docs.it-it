@@ -2,12 +2,12 @@
 title: Implementazione di oggetti valore
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Informazioni su dettagli e opzioni per implementare oggetti valore con le nuove funzionalità di Entity Framework.
 ms.date: 01/30/2020
-ms.openlocfilehash: 919b23f7c1a0cd0aec8c4417f3af98469a0743dd
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 4a8a92a8dabcf09654ecd0e5dea2a7df25d7abf7
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249422"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805744"
 ---
 # <a name="implement-value-objects"></a>Implementare oggetti valore
 
@@ -133,7 +133,7 @@ Si può vedere come questa implementazione dell'oggetto valore di Address non ab
 
 Non avendo alcun campo ID in una classe da utilizzare da Entity Framework (EF) non era possibile fino a Entity Framework Core 2.0, che consente notevolmente di implementare oggetti di valore migliore senza ID. Tutto ciò viene illustrato nella prossima sezione.
 
-Si potrebbe sostenere che gli oggetti di valore, essendo immutabili, devono essere di sola lettura (vale a dire, hanno proprietà get-only), e questo è davvero. Tuttavia, gli oggetti valore vengono in genere serializzati e deserializzati per passare attraverso le code di messaggi e il fatto che siano di sola lettura impedisce al deserializzatore di assegnare valori. Vengono pertanto lasciati come "set privato", con proprietà di sola lettura sufficienti a garantirne la praticità.
+Si potrebbe sostenere che gli oggetti di valore, essendo immutabili, devono essere di sola lettura (vale a dire, hanno proprietà get-only), e questo è davvero. Tuttavia, gli oggetti valore vengono in genere serializzati e deserializzati per passare attraverso le code di messaggi `private set`e l'essere di sola lettura impedisce al deserializzatore di assegnare valori, pertanto è sufficiente lasciarli come , che è sufficientemente di sola lettura per essere pratico.
 
 ## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20-and-later"></a>Come rendere persistenti gli oggetti valore nel database con EF Core 2.0 e versioni successiveHow to persist value objects in the database with EF Core 2.0 and later
 
@@ -186,7 +186,7 @@ Per convenzione viene creata una chiave primaria shadow per il tipo di propriet�
 
 È importante notare che, per convenzione, i tipi di proprietà non vengono mai individuati in EF Core, quindi è necessario dichiararli in modo esplicito.
 
-Nel metodo OnModelCreating() di OrderingContext.cs in eShopOnContainers vengono applicate più configurazioni dell'infrastruttura. Una di esse è correlata all'entità Order.
+In eShopOnContainers, nel file OrderingContext.cs, all'interno del `OnModelCreating()` metodo, vengono applicate più configurazioni dell'infrastruttura. Una di esse è correlata all'entità Order.
 
 ```csharp
 // Part of the OrderingContext.cs class at the Ordering.Infrastructure project
@@ -226,7 +226,7 @@ public void Configure(EntityTypeBuilder<Order> orderConfiguration)
 
 Nel codice precedente il metodo `orderConfiguration.OwnsOne(o => o.Address)` specifica che la proprietà `Address` è un'entità di proprietà del tipo `Order`.
 
-Per impostazione predefinita, le convenzioni di EF Core nome le colonne del database per le proprietà del tipo di entità di proprietà come `EntityProperty_OwnedEntityProperty`. Quindi, le proprietà interne di `Address` verranno visualizzate nella tabella `Orders` con i nomi `Address_Street`, `Address_City` (e così via per `State`, `Country` e `ZipCode`).
+Per impostazione predefinita, le convenzioni di EF Core nome le colonne del database per le proprietà del tipo di entità di proprietà come `EntityProperty_OwnedEntityProperty`. Di conseguenza, `Address` le proprietà `Orders` interne di `Address_Street`verranno visualizzate nella tabella con i nomi `Address_City` , (e così via per `State`, `Country`, e `ZipCode`).
 
 È possibile aggiungere il metodo Fluent `Property().HasColumnName()` per rinominare le colonne. Se `Address` è una proprietà pubblica, i mapping sono simili ai seguenti:
 
@@ -281,7 +281,7 @@ public class Address
 
 - È possibile eseguire il mapping dello stesso tipo CLR come tipi di proprietà diversi nella stessa entità del proprietario usando proprietà di navigazione distinte.
 
-- La suddivisione di tabelle è configurata per convenzione, ma è possibile rifiutare esplicitamente eseguendo il mapping del tipo di proprietà in una tabella diversa usando ToTable.
+- Table splitting is set up by convention, but you can opt out by mapping the owned type to a different table using ToTable.
 
 - Il caricamento rapido viene eseguito automaticamente sui tipi di `.Include()` proprietà, ovvero non è necessario chiamare la query.
 
@@ -297,7 +297,7 @@ public class Address
 
 - Nessun supporto per i tipi di proprietà facoltativi ( ovvero nullable) mappati con il proprietario nella stessa tabella, ovvero utilizzando la suddivisione della tabella. Questo avviene perché il mapping viene eseguito per ogni proprietà, non abbiamo una sentinel separata per il valore complesso null nel suo complesso.
 
-- Nessun supporto del mapping di ereditarietà per i tipi di proprietà, ma è possibile eseguire il mapping di due tipi di foglia delle stesse gerarchie di ereditarietà come tipi di proprietà diversi. EF Core non considera il fatto che fanno parte della stessa gerarchia.
+- Nessun supporto per il mapping di ereditarietà per i tipi di proprietà, ma dovrebbe essere possibile eseguire il mapping di due tipi foglia delle stesse gerarchie di ereditarietà dei diversi tipi di proprietà. EF Core non considera il fatto che fanno parte della stessa gerarchia.
 
 #### <a name="main-differences-with-ef6s-complex-types"></a>Principali differenze rispetto ai i tipi complessi di EF6
 

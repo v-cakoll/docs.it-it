@@ -2,18 +2,18 @@
 title: Implementazione del livello di persistenza dell'infrastruttura con Entity Framework Core
 description: Architettura dei microservizi .NET per le applicazioni .NET con contenitori Esplorare i dettagli di implementazione per il livello di persistenza dell'infrastruttura, usando Entity Framework Core.Explore the implementation details for the infrastructure persistence layer, using Entity Framework Core.
 ms.date: 01/30/2020
-ms.openlocfilehash: 2d28d9246be3e102625ed5bb67ee1ccede03c942
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 7ab3be0d6a5affda478f7ec8f6c356571e304759
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523330"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805486"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementare il livello di persistenza dell'infrastruttura con Entity Framework Core
 
 Quando si usano database relazionali come SQL Server, Oracle o PostgreSQL, uno degli approcci consigliati consiste nell'implementare il livello di persistenza basato su Entity Framework. Entity Framework supporta LINQ e fornisce oggetti fortemente tipizzati per il modello, oltre alla persistenza semplificata nel database.
 
-Entity Framework è da tempo incluso in .NET Framework. Quando si usa .NET Core, è necessario usare anche Entity Framework Core, che viene eseguito in Windows o Linux in modo analogo a .NET Core. Entity Framework Core è una versione completamente rinnovata di Entity Framework, caratterizzata da un footprint ridotto e in cui sono state implementati importanti miglioramenti nelle prestazioni.
+Entity Framework è da tempo incluso in .NET Framework. Quando si usa .NET Core, è necessario usare anche Entity Framework Core, che viene eseguito in Windows o Linux in modo analogo a .NET Core. EF Core è una riscrittura completa di Entity Framework che viene implementata con un footprint molto più piccolo e importanti miglioramenti nelle prestazioni.
 
 ## <a name="introduction-to-entity-framework-core"></a>Introduzione a Entity Framework Core
 
@@ -78,7 +78,7 @@ public class Order : Entity
 }
 ```
 
-Si noti che è possibile solo accedere alla proprietà `OrderItems` in modalità di sola lettura usando `IReadOnlyCollection<OrderItem>`. Questo tipo è di sola lettura ed è quindi protetto dai normali aggiornamenti esterni.
+È `OrderItems` possibile accedere alla proprietà solo `IReadOnlyCollection<OrderItem>`in sola lettura utilizzando . Questo tipo è di sola lettura ed è quindi protetto dai normali aggiornamenti esterni.
 
 Entity Framework Core offre un modo per eseguire il mapping del modello di dominio al database fisico senza "contaminare" il modello di dominio. Si tratta di codice .NET POCO puro, dal momento che l'azione di mapping viene implementata nel livello di persistenza. In tale azione di mapping è necessario configurare il mapping tra campi e database. Nell'esempio seguente del metodo `OnModelCreating` della classe `OrderingContext` e `OrderEntityTypeConfiguration`, la chiamata a `SetPropertyAccessMode` indica a Entity Framework Core di accedere alla proprietà `OrderItems` tramite il relativo campo.
 
@@ -88,7 +88,7 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
    // ...
    modelBuilder.ApplyConfiguration(new OrderEntityTypeConfiguration());
-   // Other entities’ configuration ...
+   // Other entities' configuration ...
 }
 
 // At OrderEntityTypeConfiguration.cs from eShopOnContainers
@@ -110,7 +110,7 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 }
 ```
 
-Quando i campi vengono usati al posto delle proprietà, l'entità `OrderItem` viene salvata in modo permanente come se includesse una proprietà `List<OrderItem>`. Tale entità espone comunque una singola funzione di accesso, ovvero il metodo `AddOrderItem` per aggiungere nuovi elementi all'ordine. Di conseguenza, il comportamento e i dati sono strettamente legati tra loro e saranno coerenti in tutto il codice dell'applicazione che usa il modello di dominio.
+Quando si utilizzano campi `OrderItem` anziché proprietà, l'entità `List<OrderItem>` viene mantenuta come se avesse una proprietà. Tale entità espone comunque una singola funzione di accesso, ovvero il metodo `AddOrderItem` per aggiungere nuovi elementi all'ordine. Di conseguenza, il comportamento e i dati sono strettamente legati tra loro e saranno coerenti in tutto il codice dell'applicazione che usa il modello di dominio.
 
 ## <a name="implement-custom-repositories-with-entity-framework-core"></a>Implementare repository personalizzati con Entity Framework Core
 
@@ -154,7 +154,7 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
 }
 ```
 
-Si noti che l'interfaccia IBuyerRepository proviene dal livello del modello di dominio sotto forma di contratto. L'implementazione del repository viene però effettuata a livello di persistenza e infrastruttura.
+L'interfaccia `IBuyerRepository` proviene dal livello del modello di dominio come contratto. L'implementazione del repository viene però effettuata a livello di persistenza e infrastruttura.
 
 L'elemento DbContext di Entity Framework attraversa il costruttore tramite il modello di inserimento delle dipendenze. È condiviso tra più repository nello stesso ambito della richiesta HTTP, grazie alla relativa durata predefinita (`ServiceLifetime.Scoped`) nel contenitore IoC (che può essere anche impostato in modo esplicito con `services.AddDbContext<>`).
 
@@ -168,11 +168,11 @@ I metodi di query effettivi per ottenere i dati da inviare al livello di present
 
 ### <a name="using-a-custom-repository-versus-using-ef-dbcontext-directly"></a>Uso di un repository personalizzato invece di usare direttamente DbContext di Entity Framework
 
-La classe DbContext di Entity Framework si basa sugli schemi Unit of Work e Repository e può essere usata direttamente dal codice utente, ad esempio da un controller MVC ASP.NET Core. In questo modo è possibile creare il codice più semplice, come nel microservizio Catalog CRUD di eShopOnContainers. Nei casi in cui si vuole che il codice sia il più semplice possibile è consigliabile usare direttamente la classe DbContext, come fanno molti sviluppatori.
+La classe DbContext di Entity Framework è basata sui modelli di unità di lavoro e repository e può essere utilizzata direttamente dal codice, ad esempio da un controller MVC ASP.NET Core. I modelli Unit of Work e Repository generano il codice più semplice, come nel microservizio del catalogo CRUD in eShopOnContainers. Nei casi in cui si vuole che il codice sia il più semplice possibile è consigliabile usare direttamente la classe DbContext, come fanno molti sviluppatori.
 
-L'implementazione di repository personalizzati offre però diversi vantaggi quando si implementano microservizi o applicazioni più complesse. Gli schemi Unit of Work and Repository vengono usati per incapsulare il livello di persistenza dell'infrastruttura in modo che sia scollegato dai livelli di applicazione e modello di dominio. L'implementazione di questi schemi può facilitare l'uso di repository fittizi che simulano l'accesso al database.
+L'implementazione di repository personalizzati offre però diversi vantaggi quando si implementano microservizi o applicazioni più complesse. I modelli Unit of Work e Repository hanno lo scopo di incapsulare il livello di persistenza dell'infrastruttura in modo che venga disaccoppiato dai livelli dell'applicazione e del modello di dominio. L'implementazione di questi schemi può facilitare l'uso di repository fittizi che simulano l'accesso al database.
 
-Nella Figura 7-18 è possibile osservare le differenze tra il mancato uso di repository (e l'uso diretto della classe DbContext di Entity Framework) e l'uso di repository per agevolare il comportamento fittizio di tali repository.
+Nella figura 7-18, è possibile vedere le differenze tra non utilizzare repository (utilizzando direttamente eF DbContext) rispetto all'utilizzo di repository, che rende più semplice simulare tali repository.
 
 ![Diagramma che mostra i componenti e il flusso di dati nei due repository.](./media/infrastructure-persistence-layer-implemenation-entity-framework-core/custom-repo-versus-db-context.png)
 
@@ -219,7 +219,7 @@ La modalità di creazione di un'istanza di DbContext non deve essere configurata
 
 ## <a name="the-repository-instance-lifetime-in-your-ioc-container"></a>Durata dell'istanza del repository nel contenitore IoC
 
-In modo analogo, la durata del repository deve essere in genere impostata come inclusa nell'ambito (InstancePerLifetimeScope in Autofac). Può anche essere temporanea (InstancePerDependency in Autofac), ma se si usa la durata inclusa nell'ambito il servizio risulterà più efficiente in termini di memoria.
+In modo analogo, la durata del repository deve in genere essere impostata come ambito (InstancePerLifetimeScope in Autofac). Può anche essere temporanea (InstancePerDependency in Autofac), ma se si usa la durata inclusa nell'ambito il servizio risulterà più efficiente in termini di memoria.
 
 ```csharp
 // Registering a Repository in Autofac IoC container
@@ -228,7 +228,7 @@ builder.RegisterType<OrderRepository>()
     .InstancePerLifetimeScope();
 ```
 
-Si noti che l'uso della durata del singleton per il repository potrebbe causare gravi problemi di concorrenza quando l'oggetto DbContext è impostato sulla durata con ambito (InstancePerLifetimeScope), ovvero la durata predefinita per un oggetto DBContext.
+L'utilizzo della durata singleton per il repository potrebbe causare gravi problemi di concorrenza quando il DbContext è impostato sulla durata con ambito (InstancePerLifetimeScope) (durata predefinita per un DBContext).
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
@@ -243,7 +243,7 @@ Si noti che l'uso della durata del singleton per il repository potrebbe causare 
 
 ## <a name="table-mapping"></a>Mapping tabella
 
-Il mapping di tabella consente di identificare i dati di tabella per i quali eseguire query dal database e che devono essere salvati nel database. In precedenza, è stato spiegato come usare entità di dominio, ad esempio un dominio order o product, per generare uno schema di database correlato. Entity Framework si basa principalmente sul concetto di *convenzioni*. Le convenzioni consentono di rispondere a domande relative a quale sarà il nome della tabella o quale proprietà è la chiave primaria. Le convenzioni sono in genere basate su nomi convenzionali: ad esempio la chiave primaria è in genere una proprietà che termina con Id.
+Il mapping di tabella consente di identificare i dati di tabella per i quali eseguire query dal database e che devono essere salvati nel database. In precedenza, è stato spiegato come usare entità di dominio, ad esempio un dominio order o product, per generare uno schema di database correlato. Entity Framework si basa principalmente sul concetto di *convenzioni*. I convegni riguardano domande come "Quale sarà il nome di una tabella?" o "Qual è la proprietà della chiave primaria?" Le convenzioni sono in genere basate su nomi convenzionali. Ad esempio, è tipico che la chiave primaria `Id`sia una proprietà che termina con .
 
 Per convenzione, ogni entità viene configurata in modo da eseguire il mapping a una tabella con lo stesso nome della proprietà `DbSet<TEntity>` che espone l'entità nel contesto derivato. Se per l'entità specificata non viene definito un valore `DbSet<TEntity>`, viene usato il nome di classe.
 
@@ -265,7 +265,7 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
    // ...
    modelBuilder.ApplyConfiguration(new OrderEntityTypeConfiguration());
-   // Other entities’ configuration ...
+   // Other entities' configuration ...
 }
 
 // At OrderEntityTypeConfiguration.cs from eShopOnContainers
@@ -422,7 +422,7 @@ public abstract class BaseSpecification<T> : ISpecification<T>
 }
 ```
 
-La specifica seguente carica una singola entità carrello (basket) dato l'ID carrello (basketId) o l'ID acquirente (buyerId) a cui appartiene il carrello. Esegue il [caricamento eager](https://docs.microsoft.com/ef/core/querying/related-data) della raccolta Items del carrello.
+La specifica seguente carica una singola entità carrello dato l'ID del carrello o l'ID dell'acquirente a cui appartiene il carrello. Si [caricherà con](/ef/core/querying/related-data) entusiasmo `Items` la collezione del cesto.
 
 ```csharp
 // SAMPLE QUERY SPECIFICATION IMPLEMENTATION
@@ -470,7 +470,7 @@ public IEnumerable<T> List(ISpecification<T> spec)
 
 Oltre a incapsulare la logica di filtro, la specifica è in grado di indicare la forma dei dati da restituire, incluse le proprietà da popolare.
 
-Anche se non è `IQueryable` consigliabile tornare da un repository, è perfettamente consigliabile usarli all'interno del repository per creare un set di risultati. È possibile vedere questo approccio utilizzato nel `IQueryable` metodo List precedente, che usa espressioni intermedie per creare l'elenco di inclusioni della query prima di eseguire la query con i criteri della specifica nell'ultima riga.
+Anche se non è `IQueryable` consigliabile tornare da un repository, è perfettamente bene usarli all'interno del repository per creare un set di risultati. È possibile vedere questo approccio utilizzato nel `IQueryable` metodo List precedente, che usa espressioni intermedie per creare l'elenco di inclusioni della query prima di eseguire la query con i criteri della specifica nell'ultima riga.
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 

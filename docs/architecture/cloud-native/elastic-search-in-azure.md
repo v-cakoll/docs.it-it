@@ -2,13 +2,13 @@
 title: Elasticsearch nelle applicazioni native cloud
 description: Informazioni sull'aggiunta di funzionalità di ricerca elastica alle applicazioni native del cloud.
 author: robvet
-ms.date: 01/22/2020
-ms.openlocfilehash: 1bce255b6315006b11e0b6ac77040300f67ed984
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 03/02/2020
+ms.openlocfilehash: da6b9402cf266f5a298b05cf837805b2377bc75a
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79141289"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805568"
 ---
 # <a name="elasticsearch-in-a-cloud-native-app"></a>Elasticsearch in un'app nativa del cloud
 
@@ -43,8 +43,6 @@ Questo capitolo ha presentato un'analisi dettagliata dei dati nei sistemi nativi
 - [Modello di separazione di responsabilità per query e comandi (CQRS, Command and Query Responsibility Segregation)](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
 
 - [Modello di approvvigionamento di eventi](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
-
-- [Database RDBMSs e NoSQL: panoramica](https://maxivak.com/rdbms-vs-nosql-databases/)
 
 - [Perché RDBMS Partition Tolerant non è tollerante nel teorema CAP e perché è disponibile?](https://stackoverflow.com/questions/36404765/why-isnt-rdbms-partition-tolerant-in-cap-theorem-and-why-is-it-available)
 

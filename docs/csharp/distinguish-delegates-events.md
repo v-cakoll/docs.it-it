@@ -1,21 +1,21 @@
 ---
-title: Distinzione di delegati ed eventi
+title: Confronto tra delegati e eventi
 description: Informazioni sulla differenza tra i delegati e gli eventi e su quando usare ognuna di queste funzionalità di .NET Core.
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0fdc8629-2fdb-4a7c-a433-5b9d04eaf911
-ms.openlocfilehash: 4179330fe5e88da5d5034a150a057f63e31b178b
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 51d982c9b5b16a5fc28ede5f0318bc100bb33b68
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588252"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805762"
 ---
 # <a name="distinguishing-delegates-and-events"></a>Distinzione di delegati ed eventi
 
 [Indietro](modern-events.md)
 
-Gli sviluppatori che non hanno familiarità con la piattaforma .NET Core spesso sono in difficoltà quando devono scegliere tra due tipi di progettazione, uno basato su `delegates` e l'altro su `events`. Questo è un concetto difficile, poiché le due funzionalità del linguaggio sono molto simili. È persino possibile creare eventi usando il supporto del linguaggio per i delegati.
+Gli sviluppatori che non hanno familiarità con la piattaforma .NET Core spesso sono in difficoltà quando devono scegliere tra due tipi di progettazione, uno basato su `delegates` e l'altro su `events`. La scelta dei delegati o degli eventi è spesso difficile, perché le due funzionalità del linguaggio sono simili. È persino possibile creare eventi usando il supporto del linguaggio per i delegati.
 
 Entrambi i tipi di progettazione consentono di usare scenari di associazione tardiva, in altre parole scenari in cui un componente comunica chiamando un metodo noto solo in runtime. Entrambi supportano metodi per sottoscrittori singoli e multipli. Questa funzionalità è nota anche come supporto singlecast e multicast. Entrambi i tipi di progettazione usano una sintassi simile per l'aggiunta e la rimozione di gestori. Per la chiamata dei metodi di generazione di eventi e di chiamata di delegati, infine, entrambi i tipi di progettazione usano esattamente la stessa sintassi. Supportano persino la stessa sintassi del metodo `Invoke()` con l'operatore `?.`.
 
@@ -45,7 +45,7 @@ In confronto, i delegati vengono spesso passati come parametri e archiviati come
 
 ## <a name="event-listeners-often-have-longer-lifetimes"></a>I listener di eventi hanno spesso una durata maggiore
 
-Questa è una giustificazione leggermente più debole. È tuttavia possibile che le progettazioni basate su eventi siano più naturali se l'origine degli eventi genera eventi per un periodo di tempo duraturo. Esempi di ciò sono riscontrabili per controlli UX presenti in molti sistemi. Dopo la sottoscrizione di un evento, l'origine di questo può generare eventi per tutta la durata del programma.
+Il fatto che i listener di eventi abbiano durate più lunghe è una giustificazione leggermente più debole. È tuttavia possibile che le progettazioni basate su eventi siano più naturali se l'origine degli eventi genera eventi per un periodo di tempo duraturo. È possibile visualizzare esempi di progettazione basata su eventi per i controlli dell'esperienza utente in molti sistemi. Dopo la sottoscrizione di un evento, l'origine di questo può generare eventi per tutta la durata del programma.
 È possibile annullare la sottoscrizione di eventi quando questi non sono più necessari.
 
 Ciò contrasta con molte progettazioni basate su delegati, in cui un delegato viene usato come argomento per un metodo e non viene più usato dopo che il metodo ritorna.

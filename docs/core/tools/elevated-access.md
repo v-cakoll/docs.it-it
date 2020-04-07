@@ -3,12 +3,12 @@ title: Accesso con privilegi elevati per comandi dotnet
 description: Informazioni sulle procedure consigliate per comandi dotnet che richiedono l'accesso con privilegi elevati.
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: 4aff9badfa8ad9b83adc4496d4ebd6df29252e36
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f99e0b257772e0a73d4945f1129997d1d3308ed2
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156764"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805785"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>Accesso con privilegi elevati per comandi dotnet
 
@@ -18,6 +18,7 @@ I comandi seguenti possono essere eseguiti con privilegi elevati:
 
 - Comandi `dotnet tool`, ad esempio [dotnet tool install](dotnet-tool-install.md).
 - `dotnet run --no-build`
+- `dotnet-core-uninstall`
 
 Non è consigliabile eseguire altri comandi con privilegi elevati. In particolare, non è consigliabile elevare i privilegi con comandi che usano MSBuild, ad esempio [dotnet restore](dotnet-restore.md), [dotnet build](dotnet-build.md) e [dotnet run](dotnet-run.md). Il problema principale è la gestione delle autorizzazioni, quando un utente passa da account radice ad account con restrizioni dopo l'invio di comandi dotnet. Può succedere che un utente con restrizioni non acceda al file creato da un utente ROOT. Questa situazione può essere risolta in diversi modi che non è necessario analizzare per primi.
 
@@ -77,7 +78,7 @@ dotnet tool uninstall PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools"
 
 [!INCLUDE [elevated-access-unix](../../../includes/elevated-access-unix.md)]
 
-# <a name="macos"></a>[Macos](#tab/macos)
+# <a name="macos"></a>[macOS](#tab/macos)
 
 [!INCLUDE [elevated-access-unix](../../../includes/elevated-access-unix.md)]
 

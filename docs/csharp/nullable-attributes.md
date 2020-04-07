@@ -3,16 +3,16 @@ title: API di aggiornamento per i tipi di riferimento nullable con attributi che
 description: Informazioni su come usare gli attributi descrittivi AllowNull, DisallowNull, MaybeNull, NotNull e altro ancora per descrivere completamente lo stato null delle API.
 ms.technology: csharp-null-safety
 ms.date: 07/31/2019
-ms.openlocfilehash: ca04db800271b9b01b5b9f1482dd5a0db2cc1c35
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 5d7a864ba1b66ad6b4ae7b0391d170a29147c537
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249244"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805837"
 ---
 # <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Aggiornare le librerie per utilizzare tipi di riferimento nullable e comunicare regole nullable ai chiamantiUpdate libraries to use nullable reference types and communicate nullable rules to callers
 
-L'aggiunta di tipi di [riferimento nullable](nullable-references.md) `null` significa che è possibile dichiarare se un valore è consentito o previsto per ogni variabile. Inoltre, è possibile applicare una `AllowNull`serie `DisallowNull` `MaybeNull`di `NotNull` `NotNullWhen`attributi: , , , , `MaybeNullWhen`, e `NotNullWhenNotNull` per descrivere completamente gli stati null dei valori argument e return . Ciò offre un'esperienza eccezionale durante la scrittura del codice. Si ricevono avvisi se una variabile non `null`nullable può essere impostata su . Si ricevono avvisi se una variabile nullable non è sottoposta a controllo null prima di dereferenziarla. L'aggiornamento delle librerie può richiedere tempo, ma i payoff ne valgono la pena. Maggiore è il numero di informazioni `null` fornite al compilatore su *quando* un valore è consentito o non consentito, migliore sarà il otter degli utenti dell'API. Iniziamo con un esempio familiare. Si supponga che la libreria disponga dell'API seguente per recuperare una stringa di risorsa:Imagine your library has the following API to retrieve a resource string:
+L'aggiunta di tipi di [riferimento nullable](nullable-references.md) `null` significa che è possibile dichiarare se un valore è consentito o previsto per ogni variabile. Inoltre, è possibile applicare una `AllowNull`serie `DisallowNull` `MaybeNull`di `NotNull` `NotNullWhen`attributi: , , , , `MaybeNullWhen`, e `NotNullIfNotNull` per descrivere completamente gli stati null dei valori argument e return . Ciò offre un'esperienza eccezionale durante la scrittura del codice. Si ricevono avvisi se una variabile non `null`nullable può essere impostata su . Si ricevono avvisi se una variabile nullable non è sottoposta a controllo null prima di dereferenziarla. L'aggiornamento delle librerie può richiedere tempo, ma i payoff ne valgono la pena. Maggiore è il numero di informazioni `null` fornite al compilatore su *quando* un valore è consentito o non consentito, migliore sarà il otter degli utenti dell'API. Iniziamo con un esempio familiare. Si supponga che la libreria disponga dell'API seguente per recuperare una stringa di risorsa:Imagine your library has the following API to retrieve a resource string:
 
 ```csharp
 bool TryGetMessage(string key, out string message)
