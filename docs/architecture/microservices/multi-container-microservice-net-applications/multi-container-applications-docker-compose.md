@@ -2,12 +2,12 @@
 title: Definizione dell'applicazione a più contenitori con docker-compose.yml
 description: Come specificare la composizione di microservizi per un'applicazione a più contenitori con docker-compose.yml.
 ms.date: 01/30/2020
-ms.openlocfilehash: 66775b573c46041475e9cddc622bbde78ae44bc4
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: 029fad8bb912457872dd5817a2f76aed57dc53c6
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805599"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888228"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definizione dell'applicazione a più contenitori con docker-compose.yml
 
@@ -201,7 +201,7 @@ Un tipico caso d'uso è quello in cui si definiscono più file compose in modo d
 
 **Figura 6-12**. Più file docker-compose che eseguono l'override di valori del file docker-compose.yml base
 
-È possibile combinare più file docker-compose-.yml per gestire ambienti diversi. Iniziare con il file docker-compose.yml base. Questo file base deve contenere le impostazioni di configurazione base o statiche, ossia che non cambiano in base all'ambiente. Ad esempio, eShopOnContainers ha il seguente file docker-compose.yml (semplificato con meno servizi) come file di base.
+È possibile combinare più file docker-compose-.yml per gestire ambienti diversi. Iniziare con il file docker-compose.yml base. Questo file di base contiene le impostazioni di configurazione di base o statiche che non cambiano a seconda dell'ambiente. Ad esempio, l'app eShopOnContainers ha il seguente file docker-compose.yml (semplificato con meno servizi) come file di base.
 
 ```yml
 #docker-compose.yml (Base)

@@ -2,12 +2,12 @@
 title: Sottoscrizione di eventi
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Informazioni sui dettagli di pubblicazione e sottoscrizione di eventi di integrazione.
 ms.date: 01/30/2020
-ms.openlocfilehash: 7e78970933fdad27d2be74e7d498b0797fc09bc0
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: 426dcebe175e9db9a02bcdb2f21ad039154a7bda
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805503"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888215"
 ---
 # <a name="subscribing-to-events"></a>Sottoscrizione di eventi
 
@@ -93,7 +93,7 @@ In microservizi più avanzati, ad esempio quando si usano approcci basati su CQR
 
 Quando si pubblicano eventi di integrazione tramite un sistema di messaggistica distribuito, quale il bus di eventi, si presenta il problema dell'aggiornamento del database originale e della pubblicazione di un evento in modo atomico (ovvero, il completamento di entrambe le operazioni o di nessuna delle due). Nell'esempio semplificato illustrato in precedenza il codice esegue, ad esempio, il commit dei dati nel database in caso di modifica del prezzo del prodotto e quindi pubblica un messaggio ProductPriceChangedIntegrationEvent. Inizialmente, potrebbe risultare fondamentale che queste due operazioni vengano eseguite in modo atomico. Se però si usa una transazione distribuita che interessa il database e il broker messaggi, come in sistemi meno recenti quali [Microsoft Message Queuing (MSMQ)](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx), questo approccio non è consigliabile per i motivi descritti dal [teorema CAP](https://www.quora.com/What-Is-CAP-Theorem-1).
 
-In pratica, si usano i microservizi per creare sistemi scalabili e a disponibilità elevata. Per semplificare, il teorema CAP afferma che non è possibile creare un database (distribuito), o un microservizio proprietario del proprio modello, che sia continuamente disponibile, assolutamente coerente *e* tollerante di qualsiasi partizione. È necessario scegliere due di queste tre proprietà.
+In pratica, si usano i microservizi per creare sistemi scalabili e a disponibilità elevata. Semplificando un po', il teorema CAP dice che non è possibile creare un database (distribuito) (o un microservizio che possiede il proprio modello) che è continuamente disponibile, fortemente coerente *e* tollerante a qualsiasi partizione. È necessario scegliere due di queste tre proprietà.
 
 Nelle architetture basate su microservizi, è consigliabile scegliere la disponibilità e la tolleranza e de-enfatizzare la coerenza forte. Di conseguenza, nella maggior parte delle moderne applicazioni basate su microservizi si preferisce in genere non usare transazioni distribuite nella messaggistica, come si fa quando si implementano le [transazioni distribuite](https://docs.microsoft.com/previous-versions/windows/desktop/ms681205(v=vs.85)) basate su Windows Distributed Transaction Coordinator (DTC) con [MSMQ](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx).
 
@@ -151,7 +151,7 @@ Nel secondo approccio si usa invece la tabella EventLog come coda e si usa sempr
 
 **Figura 6-23**. Atomicità durante la pubblicazione di eventi nel bus di eventi con un microservizio worker
 
-Per semplicità, nell'esempio eShopOnContainers viene usato il primo approccio (senza processi o microservizi di controllo aggiuntivi) oltre al bus di eventi. eShopOnContainers non gestisce però tutti i possibili casi di errore. In un'applicazione reale distribuita nel cloud è necessario accettare il fatto che i problemi sono inevitabili e che è necessario implementare la logica di verifica e reinvio. L'uso della tabella come coda può essere più efficace rispetto al primo approccio se la tabella costituisce l'unica origine degli eventi durante la pubblicazione (con il worker) tramite il bus di eventi.
+Per semplicità, nell'esempio eShopOnContainers viene usato il primo approccio (senza processi o microservizi di controllo aggiuntivi) oltre al bus di eventi. Tuttavia, l'esempio eShopOnContainers non gestisce tutti i possibili casi di errore. In un'applicazione reale distribuita nel cloud è necessario accettare il fatto che i problemi sono inevitabili e che è necessario implementare la logica di verifica e reinvio. L'uso della tabella come coda può essere più efficace rispetto al primo approccio se la tabella costituisce l'unica origine degli eventi durante la pubblicazione (con il worker) tramite il bus di eventi.
 
 ### <a name="implementing-atomicity-when-publishing-integration-events-through-the-event-bus"></a>Implementazione dell'atomicità durante la pubblicazione di eventi di integrazione tramite il bus di eventi
 
@@ -293,7 +293,7 @@ Un esempio di un'operazione idempotente è dato da un'istruzione SQL che inseris
 
 È possibile progettare messaggi idempotenti. Ad esempio, è possibile creare un evento che indica "imposta il prezzo del prodotto su 25 USD" invece di "aggiungi 5 USD al prezzo del prodotto". Mentre è possibile elaborare senza problemi il primo messaggio un qualsiasi numero di volte, ottenendo sempre lo stesso risultato, non si può dire altrettanto per il secondo messaggio. Ma anche nel primo caso è possibile che non si voglia elaborare il primo evento perché il sistema potrebbe aver inviato un evento di variazione del prezzo più recente e l'elaborazione del primo evento causerebbe la sovrascrittura del nuovo prezzo.
 
-Un altro esempio è dato da un evento di completamento dell'ordine che viene propagato a più sottoscrittori. È importante che le informazioni sull'ordine vengano aggiornate in altri sistemi una sola volta, anche se sono presenti eventi di messaggio duplicati per lo stesso evento di completamento dell'ordine.
+Un altro esempio potrebbe essere un evento di completamento dell'ordine che viene propagato a più sottoscrittori. L'app deve assicurarsi che le informazioni sull'ordine vengano aggiornate in altri sistemi una sola volta, anche se sono presenti eventi di messaggio duplicati per lo stesso evento di completamento dell'ordine.
 
 È consigliabile definire un certo tipo di identità per ogni evento in modo che sia possibile creare la logica in base alla quale ogni evento deve essere elaborato una sola volta per ogni ricevitore.
 
@@ -310,7 +310,7 @@ Alcune operazioni di elaborazione dei messaggi sono intrinsecamente idempotenti.
 
 ### <a name="deduplicating-message-events-at-the-eventhandler-level"></a>Deduplicazione degli eventi di messaggio a livello di gestore dell'evento
 
-Un modo per assicurarsi che un evento venga elaborato una sola volta da qualsiasi ricevitore consiste nell'implementare una determinata logica durante l'elaborazione degli eventi del messaggio nei gestori eventi. Questo è ad esempio l'approccio usato nell'applicazione eShopOnContainers, come si può vedere nel [codice sorgente della classe UserCheckoutAcceptedIntegrationEventHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) quando riceve un evento di integrazione UserCheckoutAcceptedIntegrationEvent. In questo caso viene eseguire il wrapping di CreateOrderCommand con un elemento IdentifiedCommand, usando eventMsg.RequestId come identificatore, prima di inviarlo al gestore comandi.
+Un modo per assicurarsi che un evento venga elaborato una sola volta da qualsiasi ricevitore consiste nell'implementare una determinata logica durante l'elaborazione degli eventi del messaggio nei gestori eventi. Ad esempio, questo è l'approccio utilizzato nell'applicazione eShopOnContainers, come si può vedere nel codice `UserCheckoutAcceptedIntegrationEvent` sorgente della classe [UserCheckoutAcceptedIntegrationEventHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) quando riceve un evento di integrazione. In questo caso, `CreateOrderCommand` viene eseguito il wrapping di , `IdentifiedCommand`utilizzando l'oggetto `eventMsg.RequestId` come identificatore, prima di inviarlo al gestore del comando.
 
 ### <a name="deduplicating-messages-when-using-rabbitmq"></a>Deduplicazione dei messaggi quando si usa RabbitMQ
 

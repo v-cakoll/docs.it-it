@@ -4,19 +4,19 @@ description: Informazioni sui tipi di valore nullable di C'è e su come usarli
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: a84b3d60269491846b783e5046a84a1d14e258a1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c13ef6a091ec6aebd4608c5ed8d2c03b067c7312
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399588"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888072"
 ---
 # <a name="nullable-value-types-c-reference"></a>Tipi di valore nullable (riferimenti per C
 
 Un tipo `T?` di *valore nullable* rappresenta tutti i valori del [tipo](value-types.md) `T` di valore sottostante e un valore [null](../keywords/null.md) aggiuntivo. Ad esempio, è possibile assegnare uno `bool?` dei `true`tre `false`valori `null`seguenti a una variabile: , , o . Un tipo `T` di valore sottostante non può essere un tipo di valore nullable.
 
 > [!NOTE]
-> La funzionalità dei tipi di riferimento nullable viene introdotta in C . Per ulteriori informazioni, vedere [Tipi di riferimento nullable](../../nullable-references.md). I tipi di valore nullable sono disponibili a partire da C .
+> La funzionalità dei tipi di riferimento nullable viene introdotta in C . Per ulteriori informazioni, vedere [Tipi di riferimento nullable](nullable-reference-types.md). I tipi di valore nullable sono disponibili a partire da C .
 
 Qualsiasi tipo di valore nullable <xref:System.Nullable%601?displayProperty=nameWithType> è un'istanza della struttura generica. È possibile fare riferimento a un tipo `T` di valore nullable con `Nullable<T>` un `T?`tipo sottostante in uno dei seguenti formati intercambiabili: o .
 
@@ -120,7 +120,7 @@ Inoltre, non utilizzare l'operatore [is](../operators/type-testing-and-cast.md#i
 [!code-csharp-interactive[whether an instance is of a nullable type](snippets/NullableValueTypes.cs#IsInstanceNullable)]
 
 > [!NOTE]
-> I metodi descritti in questa sezione non sono applicabili nel caso di tipi di [riferimento nullable.](../../nullable-references.md)
+> I metodi descritti in questa sezione non sono applicabili nel caso di tipi di [riferimento nullable.](nullable-reference-types.md)
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
@@ -139,4 +139,4 @@ Per altre informazioni, vedere le sezioni seguenti delle [specifiche del linguag
 - <xref:System.Nullable%601?displayProperty=nameWithType>
 - <xref:System.Nullable?displayProperty=nameWithType>
 - <xref:System.Nullable.GetUnderlyingType%2A?displayProperty=nameWithType>
-- [Tipi riferimento nullable](../../nullable-references.md)
+- [Tipi riferimento nullable](nullable-reference-types.md)
