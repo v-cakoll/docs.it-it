@@ -2,12 +2,12 @@
 title: Considerazioni principali
 description: Considerazioni principali nella guida/ebook Architettura di microservizi .NET per applicazioni .NET in contenitori, che consentono un esame rapido degli aspetti principali dell'uso di un'architettura di microservizi, quali vantaggi e svantaggi, modelli DDD per la progettazione e lo sviluppo, nonché resilienza, sicurezza e uso di agenti di orchestrazione.
 ms.date: 10/19/2018
-ms.openlocfilehash: 3b8b7be9b3903c64221cba7c6abdb1e38f5d944f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0e793a76fa59d6c131422480071d85ab3f18102c
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68674458"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988778"
 ---
 # <a name="key-takeaways"></a>Risultati principali
 
@@ -29,7 +29,7 @@ Di seguito sono riportate le considerazioni principali e le conclusioni più imp
 
 **Interfaccia della riga di comando e ambiente di sviluppo integrato (IDE).** Con gli strumenti Microsoft è possibile sviluppare applicazioni .NET in contenitori usando l'approccio preferito. È possibile usare l'interfaccia della riga di comando e un ambiente basato su editor con l'interfaccia della riga di comando di Docker e Visual Studio Code. In alternativa è possibile scegliere un approccio incentrato sull'ambiente di sviluppo integrato con Visual Studio e le esclusive funzionalità per Docker disponibili, ad esempio il debug di applicazioni multicontenitore.
 
-**Applicazioni cloud resilienti.** Nei sistemi basati sul cloud e nei sistemi distribuiti in generale, esiste sempre il rischio di errori parziali. Poiché i client e i servizi sono processi separati (contenitori), un servizio potrebbe non riuscire a rispondere tempestivamente a una richiesta del client. Ad esempio un servizio potrebbe essere inattivo a causa di un errore parziale o per attività di manutenzione, oppure potrebbe essere sovraccarico e rispondere lentamente alle richieste o non essere accessibile per un breve periodo di tempo a causa di problemi di rete. Di conseguenza, un'applicazione basata sul cloud deve tenere conto di questi errori e prevedere una strategia per rispondervi tempestivamente. Queste strategie possono includere criteri per i tentativi (inviare di nuovo i messaggi o ripetere le richieste) e l'implementazione di schemi di interruzione di circuito per evitare il carico esponenziale di richieste ripetute. In pratica, le applicazioni basate sul cloud devono prevedere meccanismi resilienti (basati sull'infrastruttura cloud o personalizzati), come quelli di alto livello forniti da agenti di orchestrazione o bus di servizio.
+**Applicazioni cloud resilienti.** Nei sistemi basati sul cloud e nei sistemi distribuiti in generale, esiste sempre il rischio di errori parziali. Poiché i client e i servizi sono processi separati (contenitori), un servizio potrebbe non essere in grado di rispondere in modo tempestivo alla richiesta di un client. Ad esempio un servizio potrebbe essere inattivo a causa di un errore parziale o per attività di manutenzione, oppure potrebbe essere sovraccarico e rispondere lentamente alle richieste o non essere accessibile per un breve periodo di tempo a causa di problemi di rete. Di conseguenza, un'applicazione basata sul cloud deve tenere conto di questi errori e prevedere una strategia per rispondervi tempestivamente. Queste strategie possono includere criteri per i tentativi (inviare di nuovo i messaggi o ripetere le richieste) e l'implementazione di schemi di interruzione di circuito per evitare il carico esponenziale di richieste ripetute. In pratica, le applicazioni basate sul cloud devono prevedere meccanismi resilienti (basati sull'infrastruttura cloud o personalizzati), come quelli di alto livello forniti da agenti di orchestrazione o bus di servizio.
 
 **Sicurezza.** Questo mondo moderno con contenitori e microservizi può esporre nuove vulnerabilità. Esistono varie modalità per l'implementazione della sicurezza delle applicazioni di base, tramite l'autenticazione e l'autorizzazione. La sicurezza dei contenitori deve tuttavia tenere conto di altri componenti principali che generano applicazioni intrinsecamente più sicure. Un elemento strategico della creazione di app più sicure è la previsione di un modo sicuro per comunicare con altre app e sistemi, e questo spesso richiede credenziali, token, password ed elementi simili, noti come segreti dell'applicazione. Qualsiasi soluzione sicura deve osservare le procedure consigliate per la sicurezza, ad esempio la crittografia dei segreti in transito e a riposo e il blocco della perdita accidentale dei segreti quando sono usati dall'applicazione finale. Questi segreti dover essere archiviati e mantenuti in modo sicuro, ad esempio con l'uso di Azure Key Vault.
 

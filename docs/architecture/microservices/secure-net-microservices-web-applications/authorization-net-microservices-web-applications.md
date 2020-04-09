@@ -3,18 +3,18 @@ title: Informazioni sull'autorizzazione in microservizi .NET e applicazioni Web
 description: Sicurezza nei microservizi .NET e nelle applicazioni Web - Panoramica delle principali opzioni di autorizzazione nelle applicazioni ASP.NET Core, sia basate sui ruoli che basate sui criteri.
 author: mjrousos
 ms.date: 01/30/2020
-ms.openlocfilehash: f6b69faceac9a9b4819212cc04f89080f3ddad56
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 27936a33ea2bb46cedb9d10ee47a2117e1843e14
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77501773"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988206"
 ---
 # <a name="about-authorization-in-net-microservices-and-web-applications"></a>Informazioni sull'autorizzazione in microservizi .NET e applicazioni Web
 
-Dopo l'autenticazione, le API Web di ASP.NET Core devono autorizzare l'accesso. Questo processo, ad esempio, consente a un servizio di rendere le API disponibili per alcuni utenti autenticati, ma non per tutti. L'[autorizzazione](/aspnet/core/security/authorization/introduction) può essere eseguita in base ai ruoli degli utenti o in base a criteri personalizzati, che possono includere l'analisi delle attestazioni o altre regole euristiche.
+Dopo l'autenticazione, le API Web di ASP.NET Core devono autorizzare l'accesso. Questo processo, ad esempio, consente a un servizio di rendere le API disponibili per alcuni utenti autenticati, ma non per tutti. [L'autorizzazione](/aspnet/core/security/authorization/introduction) può essere eseguita in base ai ruoli degli utenti o in base a criteri personalizzati, che possono includere l'ispezione di attestazioni o altre euristiche.
 
-Per limitare l'accesso a una route ASP.NET Core MVC è sufficiente applicare un attributo Authorize al metodo di azione (o alla classe del controller, se tutte le azioni del controller richiedono l'autorizzazione), come illustrato nell'esempio seguente:
+Limitare l'accesso a una route MVC di ASP.NET Core è semplice come applicare un attributo Authorize al metodo di azione (o alla classe del controller se tutte le azioni del controller richiedono l'autorizzazione), come illustrato nell'esempio seguente:Restricting access to an ASP.NET Core MVC route is easy as applying an Authorize attribute to the action method (or to the controller's class if all the controller's actions require authorization), as shown in following example:
 
 ```csharp
 public class AccountController : Controller
@@ -36,7 +36,7 @@ Per impostazione predefinita, l'aggiunta di un attributo Authorize senza paramet
 
 ASP.NET Core Identity offre funzionalità integrate per i ruoli. Oltre agli utenti, ASP.NET Core Identity archivia informazioni sui diversi ruoli usati dall'applicazione e tiene traccia degli utenti a cui sono assegnati i vari ruoli. Queste assegnazioni possono essere modificate a livello di codice con il tipo `RoleManager`, che aggiorna i ruoli nell'archiviazione persistente e con il tipo `UserManager`, che può concedere o revocare i ruoli degli utenti.
 
-Se si esegue l'autenticazione con token di connessione JWT, il middleware di autenticazione del bearer token JWT di ASP.NET Core popolerà i ruoli di un utente in base alle attestazioni di ruolo trovate nel token. Per limitare l'accesso a un'azione o un controller MVC a utenti con ruoli specifici, è possibile includere un parametro Roles nell'annotazione (attributo) Authorize, come illustrato nel frammento di codice seguente:
+Se si esegue l'autenticazione con i token di portatore JWT, il middleware di autenticazione del portatore JWT di ASP.NET base popolerà i ruoli di un utente in base alle attestazioni di ruolo presenti nel token. Per limitare l'accesso a un'azione o un controller MVC a utenti con ruoli specifici, è possibile includere un parametro Roles nell'annotazione (attributo) Authorize, come illustrato nel frammento di codice seguente:
 
 ```csharp
 [Authorize(Roles = "Administrator, PowerUser")]
@@ -95,7 +95,7 @@ services.AddAuthorization(options =>
 });
 ```
 
-Come illustrato nell'esempio, i criteri possono essere associati a diversi tipi di requisiti. Dopo la registrazione, i criteri possono essere applicati a un'azione o un controller passando il nome del criterio come argomento Policy dell'attributo Authorize (ad esempio `[Authorize(Policy="EmployeesOnly")]`). I criteri possono avere più requisiti, non solo uno (come illustrato in questi esempi).
+Come illustrato nell'esempio, i criteri possono essere associati a diversi tipi di requisiti. Dopo la registrazione, i criteri possono essere applicati a un'azione o a un controller passando il `[Authorize(Policy="EmployeesOnly")]`nome del criterio come argomento Policy dell'attributo Authorize (ad esempio, ) I criteri possono avere più requisiti, non solo uno (come illustrato in questi esempi).
 
 Nell'esempio precedente, la prima chiamata AddPolicy è un metodo alternativo per eseguire l'autorizzazione in base al ruolo. Se `[Authorize(Policy="AdministratorsOnly")]` viene applicato a un'API, solo gli utenti con il ruolo Administrator saranno in grado di accedervi.
 
@@ -111,7 +111,7 @@ Se l'utente soddisfa il requisito, una chiamata a `context.Succeed` indicherà c
 
 Oltre a registrare i requisiti dei criteri personalizzati con le chiamate `AddPolicy`, è necessario registrare i gestori dei requisiti personalizzati tramite l'inserimento di dipendenze (`services.AddTransient<IAuthorizationHandler, MinimumAgeHandler>()`).
 
-Un esempio di requisito di autorizzazione personalizzato e un gestore per la verifica dell'età di un utente (in base a un'attestazione `DateOfBirth`) sono disponibile nella [documentazione sull'autorizzazione](https://docs.asp.net/en/latest/security/authorization/policies.html) di ASP.NET Core.
+Un esempio di un requisito di autorizzazione personalizzato e un `DateOfBirth` gestore per controllare l'età di un utente (in base a un'attestazione) è disponibile nella [documentazione](https://docs.asp.net/en/latest/security/authorization/policies.html)di autorizzazione ASP.NET Core .
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 

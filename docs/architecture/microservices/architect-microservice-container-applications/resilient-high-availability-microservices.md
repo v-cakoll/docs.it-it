@@ -2,12 +2,12 @@
 title: Resilienza e disponibilità elevata nei microservizi
 description: I microservizi sono progettati per resistere a errori temporanei di rete e dipendenze che per raggiungere una disponibilità elevata devono essere resilienti.
 ms.date: 09/20/2018
-ms.openlocfilehash: 1c0f75a8c68d1f84ba24c550e854edc5372cf7f6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 28f8b124cd59b2c3d621267cb437872af42c9ea8
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73094219"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988921"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Resilienza e disponibilità elevata nei microservizi
 
@@ -31,8 +31,8 @@ La sezione [Implementazione dei controlli di integrità nei servizi ASP.NET Core
 
 È anche possibile usare Beat Pulse, un'utilissima libreria open-source disponibile su [GitHub](https://github.com/Xabaril/BeatPulse) e come [pacchetto NuGet](https://www.nuget.org/packages/BeatPulse/). Questa libreria esegue anche i controlli di integrità e gestisce due tipi di controlli:
 
-- **Attività**: controlla se il microservizio è attivo, vale a dire, se può accettare le richieste e rispondere.
-- **Idoneità **: controlla se anche le dipendenze del microservizio (database, servizi coda e così via) sono idonee, in modo che il microservizio possa eseguire le operazioni previste.
+- **Liveness**: Controlla se il microservizio è attivo, ovvero se è in grado di accettare richieste e rispondere.
+- **Readiness**: Controlla se le dipendenze del microservizio (Database, servizi di coda e così via) sono a loro volta pronte, in modo che il microservizio possa fare ciò che dovrebbe fare.
 
 ### <a name="using-diagnostics-and-logs-event-streams"></a>Uso della diagnostica e log dei flussi di eventi
 

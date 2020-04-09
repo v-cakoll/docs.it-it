@@ -2,12 +2,12 @@
 title: Progettazione di un modello di dominio del microservizio
 description: Architettura di microservizi .NET per applicazioni .NET incluse in contenitori | Comprendere i concetti principali quando si progetta un modello di dominio orientato a DDD.
 ms.date: 01/30/2020
-ms.openlocfilehash: 628fb5c76362ec8f48367b3d69d16ea6ebd24f09
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64860d75dca645904e973a4b8927a716a1603394
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77502330"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988414"
 ---
 # <a name="design-a-microservice-domain-model"></a>Progettare un modello di dominio del microservizio
 
@@ -17,17 +17,17 @@ L'obiettivo consiste nel creare un modello di dominio coerente per ogni microser
 
 ## <a name="the-domain-entity-pattern"></a>Schema Domain Entity
 
-Le entità rappresentano oggetti di dominio e vengono definite principalmente in base alla loro identità, continuità e persistenza nel tempo, e non solo in base agli attributi che le caratterizzano. Come sostiene Eric Evans, "un oggetto definito principalmente dalla propria identità prende il nome di entità". Le entità sono molto importanti nel modello di dominio, poiché costituiscono la base per il modello. È quindi necessario identificarle e progettarle attentamente.
+Le entità rappresentano oggetti di dominio e vengono definite principalmente in base alla loro identità, continuità e persistenza nel tempo, e non solo in base agli attributi che le caratterizzano. Come dice Eric Evans, "un oggetto definito principalmente dalla sua identità è chiamato un'entità". Le entità sono molto importanti nel modello di dominio, poiché costituiscono la base per il modello. È quindi necessario identificarle e progettarle attentamente.
 
-*L'identità di un'entità può coinvolgere più microservizi o contesti limitati.*
+*L'identità di un'entità può attraversare più microservizi o contesti delimitati.*
 
-La stessa identità, ovvero lo stesso valore `Id` ma forse non la stessa entità di dominio, può essere modellata in più microservizi o contesti limitati. Questo non significa tuttavia che la stessa entità, con gli stessi attributi e la stessa logica, venga implementata in più contesti delimitati. Al contrario, le entità presenti in ogni contesto delimitato limitano i relativi attributi e comportamenti a quelli strettamente necessari nel dominio del contesto delimitato.
+La stessa identità, ovvero lo stesso valore `Id` ma forse non la stessa entità di dominio, può essere modellata in più microservizi o contesti limitati. Questo non significa tuttavia che la stessa entità, con gli stessi attributi e la stessa logica, venga implementata in più contesti delimitati. Al contrario, le entità in ogni contesto delimitato limitano i relativi attributi e comportamenti a quelli richiesti nel dominio di tale contesto delimitato.
 
-È possibile, ad esempio, che all'entità "acquirente" sia associata la maggior parte degli attributi di persona definiti nell'entità utente del microservizio dell'identità o del profilo, inclusa l'identità. Nel microservizio degli ordini, tuttavia, è possibile che all'entità acquirente sia associato un minor numero di attributi, poiché solo alcuni dati dell'acquirente sono effettivamente correlati al processo di ordine. Il contesto di ogni microservizio o contesto delimitato influisce sul relativo modello di dominio.
+Ad esempio, l'entità acquirente potrebbe avere la maggior parte degli attributi di una persona definiti nell'entità utente nel microservizio di profilo o identità, inclusa l'identità. Nel microservizio degli ordini, tuttavia, è possibile che all'entità acquirente sia associato un minor numero di attributi, poiché solo alcuni dati dell'acquirente sono effettivamente correlati al processo di ordine. Il contesto di ogni microservizio o contesto delimitato influisce sul relativo modello di dominio.
 
 *Le entità di dominio devono implementare il comportamento oltre agli attributi dei dati.*
 
-In una progettazione basata su domini, un'entità di dominio deve implementare la logica di dominio o il comportamento correlato ai dati dell'entità (l'oggetto a cui si accede in memoria). Nell'ambito della classe di un'entità ordine, ad esempio, è necessario che le operazioni e la logica aziendale siano implementate come i metodi per attività quali l'aggiunta di un elemento ordine, la convalida dei dati e il calcolo totale. I metodi di un'entità si occupano delle invarianti e delle regole dell'entità per evitare che le regole vengano disseminate nel livello dell'applicazione.
+In una progettazione basata su domini, un'entità di dominio deve implementare la logica di dominio o il comportamento correlato ai dati dell'entità (l'oggetto a cui si accede in memoria). Nell'ambito della classe di un'entità ordine, ad esempio, è necessario che le operazioni e la logica aziendale siano implementate come i metodi per attività quali l'aggiunta di un elemento ordine, la convalida dei dati e il calcolo totale. I metodi dell'entità si occupano delle invarianti e delle regole dell'entità anziché distribuire tali regole nel livello dell'applicazione.
 
 La figura 7-8 illustra un'entità di dominio che implementa non solo gli attributi dei dati, ma anche le operazioni o i metodi con la logica di dominio correlata.
 
@@ -51,7 +51,7 @@ Indipendentemente dal fatto che il microservizio o il contesto limitato sia molt
 
 Ecco perché le architetture di microservizi sono ideali per un approccio a più architetture basato sul contesto delimitato. In eShopOnContainers, ad esempio, il microservizio degli ordini implementa schemi di progettazione basata su domini, ma non il microservizio catalogo, che è un semplice servizio CRUD.
 
-Alcune persone sostengono che il modello di dominio anemico sia un antipattern: dipende essenzialmente da cosa si sta implementando. Se il microservizio che si sta creando è abbastanza semplice (ad esempio, un servizio CRUD), il modello di dominio anemico che ne consegue non è un antipattern. Se invece è necessario affrontare la complessità di un dominio di microservizio con molte regole in continua evoluzione, è possibile che il modello di dominio anemico sia davvero un antipattern per il microservizio o il contesto limitato in questione. In questo caso, progettandolo come un modello avanzato con entità contenenti dati e comportamento, nonché implementando altri schemi di progettazione basata su domini (aggregazioni, oggetti valore e così via), è possibile ottenere vantaggi significativi per il successo a lungo termine di questo microservizio.
+Alcune persone sostengono che il modello di dominio anemico sia un antipattern: dipende essenzialmente da cosa si sta implementando. Se il microservizio che si sta creando è abbastanza semplice (ad esempio, un servizio CRUD), il modello di dominio anemico che ne consegue non è un antipattern. Tuttavia, se è necessario affrontare la complessità del dominio di un microservizio che dispone di molte regole di business in continua evoluzione, il modello di dominio anemico potrebbe essere un anti-modello per tale microservizio o contesto delimitato. In questo caso, progettandolo come un modello avanzato con entità contenenti dati e comportamento, nonché implementando altri schemi di progettazione basata su domini (aggregazioni, oggetti valore e così via), è possibile ottenere vantaggi significativi per il successo a lungo termine di questo microservizio.
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
@@ -66,11 +66,11 @@ Alcune persone sostengono che il modello di dominio anemico sia un antipattern: 
 
 ### <a name="the-value-object-pattern"></a>Schema Value Object
 
-Come ha osservato Eric Evans: "Molti oggetti non hanno un'identità concettuale, ma descrivono alcune caratteristiche di un elemento".
+Come ha osservato Eric Evans, "Molti oggetti non hanno identità concettuale. Questi oggetti descrivono alcune caratteristiche di una cosa."
 
 Un'entità richiede un'identità, che non è necessaria invece in molti oggetti presenti in un sistema, come lo schema Value Object. Un oggetto valore è un oggetto senza identità concettuale che descrive un aspetto di un dominio. Si tratta di oggetti per i quali è necessario creare un'istanza che rappresenti gli elementi di progettazione temporaneamente richiesti. L'importante è *cosa* sono, non *chi* sono. Alcuni esempi possono essere numeri e stringhe, ma anche concetti di livello superiore come gruppi di attributi.
 
-È possibile che un elemento che rappresenta un'entità in un microservizio non svolga la stessa funzione in un altro microservizio poiché, in questo secondo caso, il contesto limitato ha un significato diverso. È possibile, ad esempio, che un indirizzo in un'applicazione di e-commerce non abbia alcuna identità, poiché rappresenta solo un gruppo di attributi del profilo cliente relativo a una persona o una società. In questo caso, l'indirizzo deve essere classificato come un oggetto valore. In un'applicazione per una società di energia elettrica, invece, l'indirizzo del cliente può essere importante per il dominio aziendale. L'indirizzo, quindi, deve avere un'identità in modo che il sistema di fatturazione sia direttamente collegato all'indirizzo. In questo caso, l'indirizzo deve essere classificato come un'entità di dominio.
+È possibile che un elemento che rappresenta un'entità in un microservizio non svolga la stessa funzione in un altro microservizio poiché, in questo secondo caso, il contesto limitato ha un significato diverso. Ad esempio, un indirizzo in un'applicazione di e-commerce potrebbe non avere affatto un'identità, poiché potrebbe rappresentare solo un gruppo di attributi del profilo del cliente per una persona o una società. In questo caso, l'indirizzo deve essere classificato come un oggetto valore. In un'applicazione per una società di energia elettrica, invece, l'indirizzo del cliente può essere importante per il dominio aziendale. L'indirizzo, quindi, deve avere un'identità in modo che il sistema di fatturazione sia direttamente collegato all'indirizzo. In questo caso, l'indirizzo deve essere classificato come un'entità di dominio.
 
 Una persona con un nome e un cognome, in genere, costituisce un'entità perché ogni persona ha un'identità, anche se il nome e il cognome coincidono con un altro set di valori, come nel caso in cui i nomi facciano riferimento anche a una persona diversa.
 
@@ -104,7 +104,7 @@ Identificare le aggregazioni può essere difficile. Un'aggregazione è un gruppo
 
 Un'aggregazione è composta da almeno un'entità: la radice di aggregazione, definita anche entità radice o entità principale. Può avere più entità figlio e oggetti valore, che interagiscono per implementare le transazioni e il comportamento richiesti.
 
-Lo scopo di una radice di aggregazione è garantire la coerenza dell'aggregazione: deve essere il solo punto di ingresso per gli aggiornamenti dell'aggregazione eseguiti tramite operazioni o metodi nella classe della radice di aggregazione. Ma non solo: eventuali modifiche alle entità all'interno dell'aggregazione devono essere apportate solo tramite la radice di aggregazione, che deve controllare la coerenza dell'aggregazione considerando tutte le invarianti e le regole di coerenza che devono essere rispettate nell'aggregazione. Se si modifica un entità figlio o un oggetto valore in modo indipendente, la radice di aggregazione non può garantire che l'aggregazione sia in uno stato valido. Sarebbe come un tavolo con una gamba fissata male. Mantenere la coerenza, quindi, è lo scopo principale della radice di aggregazione.
+Lo scopo di una radice di aggregazione è garantire la coerenza dell'aggregazione: deve essere il solo punto di ingresso per gli aggiornamenti dell'aggregazione eseguiti tramite operazioni o metodi nella classe della radice di aggregazione. Ma non solo: eventuali modifiche alle entità all'interno dell'aggregazione devono essere apportate solo tramite la radice di aggregazione, È il tutore della coerenza dell'aggregazione, considerando tutte le invarianti e le regole di coerenza che potrebbe essere necessario rispettare nell'aggregazione. Se si modifica un entità figlio o un oggetto valore in modo indipendente, la radice di aggregazione non può garantire che l'aggregazione sia in uno stato valido. Sarebbe come un tavolo con una gamba fissata male. Mantenere la coerenza, quindi, è lo scopo principale della radice di aggregazione.
 
 Nella figura 7-9 è possibile osservare aggregazioni di esempio come l'aggregazione Buyer (acquirente), che contiene un'unica entità (la radice di aggregazione Buyer). L'aggregazione Order contiene invece più entità e un oggetto valore.
 

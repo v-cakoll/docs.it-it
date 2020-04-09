@@ -3,12 +3,12 @@ title: Architettura delle applicazioni .NET native cloud per AzureArchitecting C
 description: Guida per la creazione di applicazioni native nel cloud sfruttando contenitori, microservizi e funzionalità senza server di Azure.A guide for building cloud-native applications leveraging containers, microservices, and serverless features of Azure.
 author: ardalis
 ms.date: 03/07/2019
-ms.openlocfilehash: 7f14a690d0153edc43f0ce7f4e91c9e9cd2c6858
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cf3be07f0d37aacf4f0252ef2f4d922b7be93eee
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71696783"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989064"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Architettura delle applicazioni .NET native cloud per AzureArchitecting Cloud Native .NET Applications for Azure
 
@@ -26,7 +26,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2019 Microsoft Corporation
+Copyright &copy; 2019 di Microsoft Corporation
 
 Tutti i diritti sono riservati. Nessuna parte del contenuto di questo libro può essere riprodotta o trasmessa in qualsiasi forma o con qualsiasi mezzo, senza il permesso scritto dell'editore.
 
@@ -46,7 +46,7 @@ Autori:
 
 > **Steve "ardalis" Smith** - Software Architect e Trainer - [Ardalis.com](https://ardalis.com)
 >
-> **Rob Vettor** - Microsoft - Principal Cloud System Architect/IP Architect - [RobVettor.com](https://robvettor.com)
+> **Rob Vettor** - Microsoft - Principal Cloud System Architect/IP Architect - [thinkingincloudnative.com](http://thinkingincloudnative.com/about/)
 
 Partecipanti e revisori:
 

@@ -2,12 +2,12 @@
 title: Uso di database NoSQL come infrastruttura di persistenza
 description: Comprendere l'uso dei database NoSql in generale e di Azure Cosmos DB in particolare, come opzione per implementare la persistenza.
 ms.date: 01/30/2020
-ms.openlocfilehash: 7da4141d9aadc4aaa265ac97d328bc4b7569a0cb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9c51e48d82aa0cf0234275f09df43f7a654f0ca8
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77502380"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988440"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>Usare i database NoSQL come infrastruttura di persistenza
 
@@ -23,7 +23,7 @@ Ad esempio, in un database orientato ai documenti, una radice di aggregazione pu
 
 Un vantaggio quando si usano i database NoSQL è che le entità sono più denormalizzate, in modo da non dover impostare un mapping di tabelle. Un modello di dominio può essere più flessibile rispetto all'uso di un database relazionale.
 
-Quando si progetta un modello di dominio basato sulle aggregazioni, il passaggio ai database NoSQL e orientati ai documenti potrebbe essere ancora più semplice rispetto all'uso di un database relazionale, perché le aggregazioni che si progettano sono simili ai documenti serializzati in un database orientato ai documenti. È quindi possibile includere in tali "contenitori" tutte le informazioni che potrebbero essere necessarie per tale aggregazione.
+Quando si progetta un modello di dominio basato sulle aggregazioni, il passaggio ai database NoSQL e orientati ai documenti potrebbe essere ancora più semplice rispetto all'uso di un database relazionale, perché le aggregazioni che si progettano sono simili ai documenti serializzati in un database orientato ai documenti. Quindi è possibile includere in quelle "borse" tutte le informazioni che potrebbero essere necessarie per tale aggregato.
 
 Ad esempio, il codice JSON seguente è un'implementazione di esempio di un'aggregazione di un ordine quando si usa un database orientato ai documenti. È simile all'aggregazione di un ordine implementata nell'esempio eShopOnContainers, ma senza l'uso congiunto di EF Core.
 
@@ -64,7 +64,7 @@ Quando si usa un modello C\# per implementare l'aggregazione da usare con l'API 
 // C# EXAMPLE OF AN ORDER AGGREGATE BEING PERSISTED WITH AZURE COSMOS DB API
 // *** Domain Model Code ***
 // Aggregate: Create an Order object with its child entities and/or value objects.
-// Then, use AggregateRoot’s methods to add the nested objects so invariants and
+// Then, use AggregateRoot's methods to add the nested objects so invariants and
 // logic is consistent across the nested properties (value objects and entities).
 
 Order orderAggregate = new Order
@@ -144,9 +144,9 @@ Come illustrato nell'immagine seguente, con l'API MongoDB eShopOnContainers supp
 
 **Figura 7-21**. eShopOnContainers con contenitori MongoDB per un ambiente di sviluppo o Azure Cosmos DB di produzione
 
-Azure Cosmos DB di produzione viene eseguito nel cloud di Azure come servizio PaaS e scalabile.
+Il database Cosmos di Azure di produzione verrebbe eseguito nel cloud di Azure come servizio Basabile e PaaS.The production Azure Cosmos DB would be running in Azure's cloud as a PaaS and scalable service.
 
-I contenitori .NET Core personalizzati possono essere eseguiti in un host Docker di sviluppo locale (con Docker per Windows in un computer Windows 10) o essere distribuiti in un ambiente di produzione, ad esempio Kubernetes nel servizio Azure Kubernetes o Azure Service Fabric. In questo secondo ambiente è possibile distribuire solo i contenitori .NET Core personalizzati ma non il contenitore MongoDB perché viene usato Azure Cosmos DB nel cloud per la gestione dei dati nell'ambiente di produzione.
+I contenitori .NET Core personalizzati possono essere eseguiti in un host Docker di sviluppo locale (con Docker per Windows in un computer Windows 10) o essere distribuiti in un ambiente di produzione, ad esempio Kubernetes nel servizio Azure Kubernetes o Azure Service Fabric. In questo secondo ambiente, è necessario distribuire solo i contenitori personalizzati .NET Core ma non il contenitore MongoDB poiché si usa Azure Cosmos DB nel cloud per la gestione dei dati nell'ambiente di produzione.
 
 Un evidente vantaggio dell'uso dell'API MongoDB è che la soluzione può essere eseguita in entrambi i motori di database, MongoDB o Azure Cosmos DB, pertanto le migrazioni in ambienti diversi dovrebbero risultare semplici. Tuttavia, talvolta è utile usare un'API nativa, ovvero l'API Cosmos DB nativa, per sfruttare al meglio le funzionalità di un motore di database specifico.
 
@@ -154,13 +154,13 @@ Per un ulteriore confronto tra l'uso di MongoDB rispetto a Cosmos DB nel cloud, 
 
 ### <a name="analyze-your-approach-for-production-applications-mongodb-api-vs-cosmos-db-api"></a>Analizzare l'approccio per le applicazioni di produzione: API MongoDB e COSMOS DB APIAnalyze your approach for production applications: MongoDB API vs.
 
-In eShopOnContainers viene usata l'API MongoDB perché fondamentalmente la priorità è quella di avere un ambiente di sviluppo/test coerente con un database NoSQL che potrebbe essere usato anche con Azure Cosmos DB.
+In eShopOnContainers, stiamo usando l'API MongoDB perché la nostra priorità era fondamentalmente avere un ambiente di sviluppo/test coerente usando un database NoSQL che potrebbe funzionare anche con Azure Cosmos DB.
 
 Tuttavia, se si prevede di usare l'API MongoDB per accedere ad Azure Cosmos DB in Azure per le applicazioni di produzione, è necessario analizzare le differenze di funzionalità e prestazioni quando si usa l'API MongoDB per accedere ai database Azure Cosmos DB rispetto all'uso dell'API Azure Cosmos DB nativa. Se non ci sono differenze, è possibile usare l'API MongoDB e sfruttare il vantaggio di supportare contemporaneamente due motori di database NoSQL.
 
-È anche possibile usare i cluster MongoDB come database di produzione nel cloud di Azure con il [servizio Azure MongoDB](https://www.mongodb.com/scale/mongodb-azure-service). Ma non si tratta di un servizio PaaS fornito da Microsoft. In questo caso, Azure ospita solo tale soluzione proveniente da MongoDB.
+È anche possibile usare cluster MongoDB come database di produzione nel cloud di Azure, anche con [MongoDB Azure Service](https://www.mongodb.com/scale/mongodb-azure-service). Ma non si tratta di un servizio PaaS fornito da Microsoft. In questo caso, Azure ospita solo tale soluzione proveniente da MongoDB.
 
-In pratica, è solo una dichiarazione per indicare che non è necessario usare sempre l'API MongoDB rispetto ad Azure Cosmos DB, come è stato fatto in eShopOnContainers perché rappresentava una scelta adatta per i contenitori Linux. La decisione deve basarsi sulle esigenze specifiche e sui test che è necessario eseguire per l'applicazione di produzione.
+Fondamentalmente, questo è solo un disclaimer che afferma che non si dovrebbe sempre usare mongoDB API contro Azure Cosmos DB, come abbiamo fatto in eShopOnContainers perché era una scelta conveniente per i contenitori Linux. La decisione deve basarsi sulle esigenze specifiche e sui test che è necessario eseguire per l'applicazione di produzione.
 
 ### <a name="the-code-use-mongodb-api-in-net-core-applications"></a>Il codice: usare l'API MongoDB nelle applicazioni .NET Core
 
@@ -174,7 +174,7 @@ Il codice verrà esaminato nelle sezioni seguenti.
 
 #### <a name="a-model-used-by-mongodb-api"></a>Modello usato dall'API MongoDB
 
-In primo luogo, è necessario definire un modello che conterrà i dati provenienti dal database nello spazio di memoria dell'applicazione. Di seguito è riportato un esempio del modello usato per Locations in eShopOnContainers.
+In primo luogo, è necessario definire un modello che conterrà i dati provenienti dal database nello spazio di memoria dell'applicazione. Ecco un esempio del modello usato per Locations at eShopOnContainers.Here's an example of the model used for Locations at eShopOnContainers.
 
 ```csharp
 using MongoDB.Bson;
@@ -266,7 +266,7 @@ public async Task<Locations> GetAsync(int locationId)
 
 #### <a name="use-an-env-var-in-the-docker-composeoverrideyml-file-for-the-mongodb-connection-string"></a>Usare una variabile di ambiente nel file docker-compose.override.yml per la stringa di connessione di MongoDB
 
-Quando si crea un oggetto MongoClient, è necessario un parametro fondamentale che è esattamente il parametro `ConnectionString` che punta al database corretto. Nel caso di eShopOnContainers, la stringa di connessione può puntare a un contenitore Docker MongoDB locale o a un database Azure Cosmos DB di "produzione".  La stringa di connessione proviene dalle variabili di ambiente definite nei file `docker-compose.override.yml` usati quando per eseguire la distribuzione con docker-compose o Visual Studio, come illustrato nel codice yml seguente.
+Quando si crea un oggetto MongoClient, è necessario un parametro fondamentale che è esattamente il parametro `ConnectionString` che punta al database corretto. Nel caso di eShopOnContainers, la stringa di connessione può puntare a un contenitore MongoDB Docker locale o a un database Cosmos DB di Azure di "produzione".  La stringa di connessione proviene dalle variabili di ambiente definite nei file `docker-compose.override.yml` usati quando per eseguire la distribuzione con docker-compose o Visual Studio, come illustrato nel codice yml seguente.
 
 ```yml
 # docker-compose.override.yml

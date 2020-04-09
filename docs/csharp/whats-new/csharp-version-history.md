@@ -2,13 +2,13 @@
 title: Cronologia di C# - Guida a C#
 description: Caratteristiche del linguaggio nelle prime versioni ed evoluzione successiva.
 author: erikdietrich
-ms.date: 09/20/2017
-ms.openlocfilehash: 9114395a5c6cfd8df5da18024921c35828947e0b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/08/2020
+ms.openlocfilehash: d9f50a7df7966f81366acb706d719cbdd40a45fa
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399686"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989194"
 ---
 # <a name="the-history-of-c"></a>Cronologia di C\#
 
@@ -21,7 +21,7 @@ Gli strumenti di compilazione per C# considerano la versione del linguaggio prin
 
 - [7.3](csharp-7-3.md):
   - C# 7.3 è disponibile a partire da [Visual Studio 2017 versione 15.7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) e [.NET Core 2.1 SDK](../../core/whats-new/dotnet-core-2-1.md).
-- [C# 7.2](csharp-7-2.md):
+- [Versione 7.2](csharp-7-2.md):
   - È disponibile la versione 7.2 a partire da [Visual Studio 2017 versione 15.5](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) e [.NET Core 2.0 SDK.](../../core/whats-new/dotnet-core-2-0.md)
 - [7.1](csharp-7-1.md):
   - C# 7.1 è disponibile a partire da [Visual Studio 2017 versione 15.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) e [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md).
@@ -57,8 +57,8 @@ Qui le cose iniziano a farsi interessanti. Ecco alcune delle funzionalità princ
 - [Generics](../programming-guide/generics/index.md)
 - [Tipi parziali](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
 - [Metodi anonimi](../language-reference/operators/delegate-operator.md)
-- [tipi di valore nullable](../language-reference/builtin-types/nullable-value-types.md)
-- [Iteratori](../programming-guide/concepts/iterators.md)
+- [Tipi valore nullable](../language-reference/builtin-types/nullable-value-types.md)
+- [Iterators](../programming-guide/concepts/iterators.md)
 - [Covarianza e controvarianza](../programming-guide/concepts/covariance-contravariance/index.md)
 
 Altre funzionalità di C# 2.0 aggiungevano capacità alle funzionalità esistenti:
@@ -83,12 +83,12 @@ C# versione 3.0 è stato rilasciato alla fine del 2007, insieme a Visual Studio 
 - [Proprietà implementate automaticamente](../programming-guide/classes-and-structs/auto-implemented-properties.md)
 - [Tipi anonimi](../programming-guide/classes-and-structs/anonymous-types.md)
 - [Espressioni di query](../linq/query-expression-basics.md)
-- [Espressioni lambdaLambda expressions](../programming-guide/statements-expressions-operators/lambda-expressions.md)
+- [Espressioni lambda](../programming-guide/statements-expressions-operators/lambda-expressions.md)
 - [Alberi delle espressioni](../expression-trees.md)
 - [Metodi di estensione](../programming-guide/classes-and-structs/extension-methods.md)
 - [Variabili locali tipizzate in modo implicito](../language-reference/keywords/var.md)
 - [Metodi parziali](../language-reference/keywords/partial-method.md)
-- [Inizializzatori di oggetto e di insieme](../programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [Inizializzatori di oggetto e raccoltaObject and collection initializers](../programming-guide/classes-and-structs/object-and-collection-initializers.md)
 
 A posteriori, molte di queste funzionalità sembrano inevitabili e inseparabili, perché si fondono l'una con l'altra in modo strategico. Si pensa in genere che la funzionalità killer di questa versione di C# sia l'espressione di query, nota anche come Language-Integrated Query (LINQ),
 
@@ -154,11 +154,11 @@ Con questa versione è stata introdotta un'altra caratteristica, che di per sé 
 
 ## <a name="c-version-70"></a>C# versione 7.0
 
-La versione principale più recente è la versione 7.0 di C, rilasciata con Visual Studio 2017. Questa versione presenta alcune delle caratteristiche evolutive e innovative di C# 6.0, ma senza il compilatore come servizio. Ecco alcune delle nuove funzionalità:
+La versione 7.0 è stata rilasciata con Visual Studio 2017. Questa versione presenta alcune delle caratteristiche evolutive e innovative di C# 6.0, ma senza il compilatore come servizio. Ecco alcune delle nuove funzionalità:
 
 - [Variabili out](./csharp-7.md#out-variables)
 - [Tuple e decostruzione](./csharp-7.md#tuples)
-- [Corrispondenza dei criteri](./csharp-7.md#pattern-matching)
+- [Criteri](./csharp-7.md#pattern-matching)
 - [Funzioni locali](./csharp-7.md#local-functions)
 - [Membri di espressioni corpo espansi](./csharp-7.md#more-expression-bodied-members)
 - [Variabili locali e valori restituiti per riferimento](./csharp-7.md#ref-locals-and-returns)
@@ -172,5 +172,86 @@ Altre funzionalità:
 Tutte queste caratteristiche offrono nuove utili funzionalità agli sviluppatori, oltre alla possibilità di scrivere codice più pulito che mai. Una funzionalità di particolare rilievo è la possibilità di condensare la dichiarazione di variabili da usare con la parola chiave `out`, consentendo più valori restituiti tramite tupla.
 
 Ma C# è ora destinato a un uso ancora più ampio. .NET Core ora supporta qualsiasi sistema operativo ed è decisamente orientato al cloud e alla portabilità.  Queste nuove capacità, insieme alla realizzazione di nuove funzionalità, tengono sicuramente impegnati i progettisti del linguaggio.
+
+## <a name="c-version-71"></a>Versione 7.1 di C
+
+Il rilascio delle *versioni* dei punti in Cè è stato avviato con c'è 7.1. Questa versione ha aggiunto l'elemento di configurazione della selezione della versione del [linguaggio,](../language-reference/configure-language-version.md) tre nuove funzionalità del linguaggio e un nuovo comportamento del compilatore.
+
+Le nuove funzionalità relative al linguaggio in questa versione sono:
+
+- [`async``Main` metodo](./csharp-7-1.md#async-main)
+  - Il punto di ingresso per un'applicazione può avere il modificatore `async`.
+- [`default`espressioni letterali](./csharp-7-1.md#default-literal-expressions)
+  - Quando è possibile dedurre il tipo di destinazione, si possono usare espressioni letterali predefinite nelle espressioni con valore predefinito.
+- [Nomi di elemento di tupla dedotti](./csharp-7-1.md#inferred-tuple-element-names)
+  - In molti casi i nomi degli elementi della tupla possono essere dedotti dall'inizializzazione tupla.
+- [Criteri di ricerca su parametri di tipo generico](./csharp-7-1.md#pattern-matching-on-generic-type-parameters)
+  - È possibile usare espressioni di criteri di ricerca sulle variabili in cui il tipo è un parametro di tipo generico.
+
+Infine, il compilatore offre due opzioni `-refout` e `-refonly` che controllano la [generazione dell'assembly di riferimento](./csharp-7-1.md#reference-assembly-generation).
+
+## <a name="c-version-72"></a>Versione 7.2 di C
+
+Il linguaggio 7.2 di C.2 ha aggiunto diverse funzionalità del linguaggio di piccole dimensioni:C's 7.2 added several small language features:
+
+- [Tecniche per la scrittura di codice efficiente e sicuro](./csharp-7-2.md#safe-efficient-code-enhancements)
+  - Una combinazione di miglioramenti della sintassi che consentono l'utilizzo dei tipi valore tramite la semantica di riferimento.
+- [Argomenti denominati non finali](./csharp-7-2.md#non-trailing-named-arguments)
+  - Gli argomenti denominati possono essere seguiti da argomenti posizionali.
+- [Caratteri di sottolineatura iniziali nei valori letterali numerici](./csharp-7-2.md#leading-underscores-in-numeric-literals)
+  - I valori letterali numerici possono ora includere caratteri di sottolineatura iniziali prima di qualsiasi cifra stampata.
+- [`private protected`modificatore di accesso](./csharp-7-2.md#private-protected-access-modifier)
+  - Il modificatore di accesso `private protected` consente l'accesso per le classi derivate nello stesso assembly.
+- [Espressioni `ref` condizionali](./csharp-7-2.md#conditional-ref-expressions)
+  - Il risultato di un'espressione condizionale (`?:`) può ora essere un riferimento.
+
+## <a name="c-version-73"></a>Versione 7.3 di C
+
+Esistono due temi principali per C# versione 7.3. Un tema comprende funzionalità che consentono al codice gestito di offrire prestazioni altrettanto elevate di quelle del codice non gestito. Il secondo tema comprende miglioramenti incrementali delle funzionalità esistenti. Inoltre, in questa versione sono state aggiunte nuove opzioni del compilatore.
+
+Le nuove funzionalità seguenti supportano il tema del miglioramento delle prestazioni per il codice gestito:
+
+- [È possibile accedere a campi fissi senza blocco.](csharp-7-3.md#indexing-fixed-fields-does-not-require-pinning)
+- [È possibile `ref` riassegnare le variabili locali.](csharp-7-3.md#ref-local-variables-may-be-reassigned)
+- [È possibile utilizzare `stackalloc` gli inizializzatori nelle matrici.](csharp-7-3.md#stackalloc-arrays-support-initializers)
+- [È possibile `fixed` utilizzare istruzioni con qualsiasi tipo che supporta un modello.](csharp-7-3.md#more-types-support-the-fixed-statement)
+- [È possibile usare vincoli generici aggiuntivi.](csharp-7-3.md#enhanced-generic-constraints)
+
+Sono stati apportati i miglioramenti seguenti alle funzionalità esistenti:
+
+- [È possibile `==` `!=` testare e con i tipi di tupla.](csharp-7-3.md#tuples-support--and-)
+- [È possibile usare le variabili di espressione in più posizioni.](csharp-7-3.md#extend-expression-variables-in-initializers)
+- [È possibile associare gli attributi al campo sottostante delle proprietà implementate automaticamente.](csharp-7-3.md#attach-attributes-to-the-backing-fields-for-auto-implemented-properties)
+- [La risoluzione del `in` metodo quando gli argomenti sono diversi.](csharp-7-3.md#in-method-overload-resolution-tiebreaker)
+- [La risoluzione dell'overload ora presenta un minor numero di casi ambigui.](csharp-7-3.md#improved-overload-candidates)
+
+Le nuove opzioni del compilatore sono le seguenti:
+
+- [`-publicsign`per abilitare la firma degli assembly (Open Source Software) degli assembly.](csharp-7-3.md#public-or-open-source-signing)
+- [`-pathmap`per fornire un mapping per le directory di origine.](csharp-7-3.md#pathmap)
+
+## <a name="c-version-80"></a>Versione 8.0 di C
+
+La versione 8.0 di Cè è la prima versione principale di C, destinata in modo specifico a .NET Core. Alcune funzionalità si basano sulle nuove funzionalità CLR, altre sui tipi di libreria aggiunti solo in .NET Core.Some features rely on new CLR capabilities, more more on library types added only in .NET Core. La versione 8.0 include le funzionalità e i miglioramenti seguenti al linguaggio C:
+
+- [Membri di sola lettura](./csharp-8.md#readonly-members)
+- [Metodi di interfaccia predefiniti](./csharp-8.md#default-interface-methods)
+- [Miglioramenti dei criteri di ricerca](./csharp-8.md#more-patterns-in-more-places):
+  - [Passare da un'espressione all'altra](./csharp-8.md#switch-expressions)
+  - [Criteri per le proprietà](./csharp-8.md#property-patterns)
+  - [Criteri per le tuple](./csharp-8.md#tuple-patterns)
+  - [Criteri per la posizione](./csharp-8.md#positional-patterns)
+- [Utilizzo delle dichiarazioni](./csharp-8.md#using-declarations)
+- [Funzioni locali statiche](./csharp-8.md#static-local-functions)
+- [Struct ref Disposable](./csharp-8.md#disposable-ref-structs)
+- [Tipi riferimento nullable](../language-reference/builtin-types/nullable-reference-types.md)
+- [Flussi asincroni](./csharp-8.md#asynchronous-streams)
+- [Indici e intervalli](./csharp-8.md#indices-and-ranges)
+- [Assegnazione di valori Null](./csharp-8.md#null-coalescing-assignment)
+- [Tipi costruiti non gestitiUnmanaged constructed types](./csharp-8.md#unmanaged-constructed-types)
+- [Stackalloc nelle espressioni annidate](./csharp-8.md#stackalloc-in-nested-expressions)
+- [Miglioramento delle stringhe verbatim interpolate](./csharp-8.md#enhancement-of-interpolated-verbatim-strings)
+
+I membri di interfaccia predefiniti richiedono miglioramenti in CLR. Tali funzionalità sono state aggiunte in CLR per .NET Core 3.0. Gli intervalli e gli indici e i flussi asincroni richiedono nuovi tipi nelle librerie di .NET Core 3.0. I tipi di riferimento nullable, sebbene implementati nel compilatore, sono molto più utili quando le librerie vengono annotate per fornire informazioni semantiche relative allo stato null degli argomenti e dei valori restituiti. Tali annotazioni vengono aggiunte nelle librerie .NET Core.Those annotations are being added in the .NET Core libraries.
 
 _Articolo_ [_originariamente pubblicato nel blog NDepend_](https://blog.ndepend.com/c-versions-look-language-history/)_, gentilmente concesso da Erik Dietrich e Patrick Smacchia._

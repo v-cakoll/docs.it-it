@@ -1,13 +1,13 @@
 ---
 title: Novità di C' 8.0 - Guida di C
 description: Panoramica delle nuove funzionalità disponibili in C# 8.0.
-ms.date: 09/20/2019
-ms.openlocfilehash: 0013f621268e2a4f1b916b226d83d18c68445ed1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/07/2020
+ms.openlocfilehash: 1a005750751129969f2d1e9caf156330dbe61cb2
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399679"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989207"
 ---
 # <a name="whats-new-in-c-80"></a>Novità di C# 8.0
 
@@ -25,6 +25,7 @@ La versione 8.0 include le funzionalità e i miglioramenti seguenti al linguaggi
 - [Struct ref Disposable](#disposable-ref-structs)
 - [Tipi riferimento nullable](#nullable-reference-types)
 - [Flussi asincroni](#asynchronous-streams)
+- [Eliminabile asincrono](#asynchronous-disposable)
 - [Indici e intervalli](#indices-and-ranges)
 - [Assegnazione di valori Null](#null-coalescing-assignment)
 - [Tipi costruiti non gestitiUnmanaged constructed types](#unmanaged-constructed-types)
@@ -392,6 +393,10 @@ await foreach (var number in GenerateSequence())
 ```
 
 È possibile provare i flussi asincroni in autonomia nell'esercitazione dedicata alla [creazione e all'utilizzo di flussi asincroni](../tutorials/generate-consume-asynchronous-stream.md). Per impostazione predefinita, gli elementi di flusso vengono elaborati nel contesto acquisito. Se si desidera disabilitare l'acquisizione del contesto, utilizzare il <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType> metodo di estensione. Per ulteriori informazioni sui contesti di sincronizzazione e sull'acquisizione del contesto corrente, vedere l'articolo [sull'utilizzo del modello asincrono basato su attività](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).
+
+## <a name="asynchronous-disposable"></a>Eliminabile asincrono
+
+A partire dalla versione 8.0 di C, il <xref:System.IAsyncDisposable?displayProperty=nameWithType> linguaggio supporta i tipi eliminabili asincroni che implementano l'interfaccia. L'operando di `using` un'espressione <xref:System.IDisposable> <xref:System.IAsyncDisposable>può implementare o . Nel caso `IAsyncDisposable`di , il `await` compilatore genera codice per il <xref:System.Threading.Tasks.Task> restituito da <xref:System.IAsyncDisposable.DisposeAsync%2A?displayProperty=nameWithType>. Per ulteriori informazioni, vedere [ `using` l'istruzione](../language-reference/keywords/using-statement.md).
 
 ## <a name="indices-and-ranges"></a>Indici e intervalli
 

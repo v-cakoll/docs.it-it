@@ -2,18 +2,18 @@
 title: Implementazione di un bus di eventi con RabbitMQ per l'ambiente di sviluppo o test
 description: Architettura di microservizi .NET per applicazioni .NET nei contenitori | Implementazione della messaggistica di un bus di eventi con RabbitMQ per l'integrazione di eventi per gli ambienti di sviluppo o test.
 ms.date: 10/02/2018
-ms.openlocfilehash: ba1cea9384893955ae0743ac8d6a34c350224cd5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 12e37fabfe915b4d2089d27f7852528a9a037d3c
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74711190"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988297"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Implementazione di un bus di eventi con RabbitMQ per l'ambiente di sviluppo o test
 
 È necessario premettere che se si crea un bus di eventi basato su RabbitMQ personalizzato in esecuzione in un contenitore, come l'applicazione eShopOnContainers, tale bus deve essere usato solo per gli ambienti di sviluppo e test. È consigliabile evitare di usarlo per l'ambiente di produzione, a meno che non venga creato nell'ambito di un bus di servizio per la produzione. In un bus di eventi personalizzato semplice potrebbero mancare molte funzionalità critiche per la produzione, disponibili invece in un bus di servizio disponibile in commercio.
 
-Una delle implementazioni personalizzate di bus di servizio in eShopOnContainers è in pratica una libreria che usa l'API RabbitMQ. È presente un'altra implementazione basata sul bus di servizio di Azure.
+Una delle implementazioni personalizzate del bus di eventi in eShopOnContainers è fondamentalmente una libreria che usa l'API RabbitMQ. È disponibile un'altra implementazione basata sul bus di servizio di Azure.
 
 L'implementazione del bus di eventi con RabbitMQ consente la pubblicazione e la ricezione di eventi e la sottoscrizione a questi da parte dei microservizi, come illustrato nella figura 6-21.
 
@@ -122,6 +122,6 @@ Una soluzione pronta per la produzione con supporto per RabbitMQ.
 - **Transito di Massa** \
   <https://masstransit-project.com/>
   
->[!div class="step-by-step"]
->[Successivo](integration-event-based-microservice-communications.md)
->[precedente](subscribe-events.md)
+> [!div class="step-by-step"]
+> [Successivo](integration-event-based-microservice-communications.md)
+> [precedente](subscribe-events.md)

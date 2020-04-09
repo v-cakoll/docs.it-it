@@ -2,12 +2,12 @@
 title: Implementazione del livello dell'applicazione di microservizi tramite l'API Web
 description: Comprendere i modelli Dependency Injection e Mediator e i relativi dettagli di implementazione nel livello dell'applicazione Web API.
 ms.date: 01/30/2020
-ms.openlocfilehash: a88f3bfd11ea06df085ca82ed7265cb37006fc31
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 76562d87b09a18e4a4ecb7625a2e823bc1ccff78
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77502442"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988466"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementare il livello dell'applicazione del microservizio usando l'API Web
 
@@ -175,7 +175,7 @@ Il tipo di ambito di un'istanza determina come un'istanza viene condivisa tra le
 
 ## <a name="implement-the-command-and-command-handler-patterns"></a>Implementare gli schemi Command e Command Handler
 
-Nell'esempio di inserimento delle dipendenze tramite costruttore illustrato nella sezione precedente il contenitore IoC ha inserito i repository tramite un costruttore in una classe. Ma esattamente dove sono stati inseriti? In un'API Web semplice, ad esempio il microservizio catalogo in eShopOnContainers, vengono inseriti nel livello dei controller MVC, in un costruttore del controller, come parte della pipeline di richiesta di ASP.NET Core. Nel codice iniziale di questa sezione (la classe [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs) del servizio Ordering.API in eShopOnContainers), tuttavia, l'inserimento delle dipendenze viene eseguito tramite il costruttore di un particolare gestore comando. Verrà ora illustrato che cos'è un gestore comando e perché usarlo.
+Nell'esempio di inserimento delle dipendenze tramite costruttore illustrato nella sezione precedente il contenitore IoC ha inserito i repository tramite un costruttore in una classe. Ma esattamente dove sono stati inseriti? In una semplice API Web (ad esempio, il microservizio del catalogo in eShopOnContainers), li si inserisce a livello di controller MVC, in un costruttore del controller, come parte della pipeline di richiesta di ASP.NET Core. Nel codice iniziale di questa sezione (la classe [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs) del servizio Ordering.API in eShopOnContainers), tuttavia, l'inserimento delle dipendenze viene eseguito tramite il costruttore di un particolare gestore comando. Verrà ora illustrato che cos'è un gestore comando e perché usarlo.
 
 Lo schema Command è intrinsecamente correlato allo schema CQRS illustrato prima in questa guida. CQRS presenta due aree. La prima è quella delle query, in cui si usano query semplificate con il micro ORM [Dapper](https://github.com/StackExchange/dapper-dot-net), illustrato in precedenza. La seconda area è quella dei comandi, ovvero il punto iniziale delle transazioni e il canale di input dall'esterno del servizio.
 
@@ -183,7 +183,7 @@ Come illustrato nella figura 7-24, lo schema si basa sull'accettazione dei coman
 
 ![Diagramma che mostra il flusso di dati di alto livello dal client al database.](./media/microservice-application-layer-implementation-web-api/high-level-writes-side.png)
 
-**Figura 7-24**. Panoramica generale dei comandi o "lato transazionale" nello schema CQRS
+**Figura 7-24**. Visualizzazione di alto livello dei comandi o "lato transazionale" in un modello CQRS
 
 Figura 7-24 mostra che l'applicazione dell'interfaccia utente `CommandHandler`invia un comando tramite l'API che arriva a un , che dipende dal modello di dominio e l'infrastruttura, per aggiornare il database.
 
@@ -199,7 +199,7 @@ Una caratteristica importante di un comando è che deve essere elaborato una sol
 
 È anche importante che un comando venga elaborato una sola volta qualora non sia idempotente. Un comando è idempotente se può essere eseguito più volte senza modificare il risultato, a causa della natura del comando o del modo in cui il sistema gestisce il comando.
 
-È consigliabile rendere idempotenti i comandi e gli aggiornamenti quando è opportuno per le regole business e gli invarianti del dominio. Per usare lo stesso esempio, se per qualsiasi motivo (logica di ripetizione dei tentativi, intrusioni e così via) lo stesso comando CreateOrder raggiunge più volte il sistema, è consigliabile identificarlo e assicurarsi di non creare più ordini. A questo scopo, è necessario associare alle operazioni qualche forma di identità e stabilire se il comando è già stato elaborato.
+È consigliabile rendere i comandi e gli aggiornamenti idempotenti quando ha senso nelle regole di business e nelle invarianti del dominio. Per usare lo stesso esempio, se per qualsiasi motivo (logica di ripetizione dei tentativi, intrusioni e così via) lo stesso comando CreateOrder raggiunge più volte il sistema, è consigliabile identificarlo e assicurarsi di non creare più ordini. A questo scopo, è necessario associare alle operazioni qualche forma di identità e stabilire se il comando è già stato elaborato.
 
 Un comando viene inviato a un singolo ricevitore e non viene pubblicato. La pubblicazione è riservata agli eventi che determinano un fatto, ovvero qualcosa che è accaduto e potrebbe essere interessante per i ricevitori dell'evento. Nel caso degli eventi, per l'entità di pubblicazione non è importante chi riceve l'evento o come lo gestisce, ma gli eventi di dominio o integrazione, di cui si è già parlato nelle sezioni precedenti, sono diversi.
 
@@ -291,7 +291,7 @@ Tenere presente che se si intende o si prevede che i comandi vengano sottoposti 
 
 Ad esempio, la classe del comando per la creazione di un ordine è probabilmente simile, in termini di dati, all'ordine che si vuole creare, ma è altrettanto probabile che non siano necessari gli stessi attributi. Ad esempio, `CreateOrderCommand` non ha un ID ordine, perché l'ordine non è ancora stato creato.
 
-Molte classi di comandi possono essere semplici e richiedere solo alcuni campi per gli stati che devono essere modificati, ad esempio quando si deve solo modificare lo stato di un ordine da "in corso" a "pagato" o "spedito" usando un comando simile al seguente:
+Molte classi di comandi possono essere semplici e richiedere solo alcuni campi per gli stati che devono essere modificati, Questo sarebbe il caso se si sta solo cambiando lo stato di un ordine da "in corso" a "pagato" o "spedito" utilizzando un comando simile al seguente:
 
 ```csharp
 [DataContract]
@@ -388,11 +388,11 @@ public class CreateOrderCommandHandler
 
 I seguenti sono passaggi aggiuntivi che devono essere eseguiti da un gestore comando:
 
-- Usare i dati del comando per operare con i metodi e il comportamento della radice di aggregazione.
+- Utilizzare i dati del comando per operare con i metodi e il comportamento della radice di aggregazione.
 
 - All'interno degli oggetti dominio, generare eventi di dominio mentre la transazione è in esecuzione, ma trasparente dal punto di vista del gestore comando.
 
-- Se il risultato dell'operazione di aggregazione è positivo e dopo che la transazione è stata completata, generare gli eventi di integrazione. che potrebbe anche essere generato dalle classi dell'infrastruttura, ad esempio i repository.
+- Se il risultato dell'operazione dell'aggregazione ha esito positivo e al termine della transazione, generare eventi di integrazione. che potrebbe anche essere generato dalle classi dell'infrastruttura, ad esempio i repository.
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
@@ -433,13 +433,13 @@ Il diagramma precedente mostra uno zoom avanti dall'immagine 7-24: il ASP.NET co
 
 L'uso dello schema Mediator è sensato perché nelle applicazioni aziendali l'elaborazione delle richieste può essere complessa. Potrebbe essere necessario aggiungere un numero indeterminato di problematiche trasversali, ad esempio registrazione, convalide, controllo e sicurezza. In questi casi, è possibile affidarsi a una pipeline di Mediator (vedere [Mediator pattern](https://en.wikipedia.org/wiki/Mediator_pattern)) per fornire un mezzo per gestire questi comportamenti o problematiche trasversali aggiuntive.
 
-Un Mediator è un oggetto che incapsula la modalità di questo processo: coordina l'esecuzione in base a uno stato, il modo in cui un gestore comando viene richiamato o il payload fornito al gestore. Con un componente Mediator è possibile applicare le problematiche trasversali in modo centralizzato e trasparente applicando gli elementi Decorator (o [comportamenti della pipeline](https://github.com/jbogard/MediatR/wiki/Behaviors) da [MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0)). Per altre informazioni, vedere lo [schema Decorator](https://en.wikipedia.org/wiki/Decorator_pattern).
+Un mediatore è un oggetto che incapsula il "come" di questo processo: coordina l'esecuzione in base allo stato, al modo in cui viene richiamato un gestore di comandi o al payload fornito al gestore. Con un componente Mediator è possibile applicare le problematiche trasversali in modo centralizzato e trasparente applicando gli elementi Decorator (o [comportamenti della pipeline](https://github.com/jbogard/MediatR/wiki/Behaviors) da [MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0)). Per altre informazioni, vedere lo [schema Decorator](https://en.wikipedia.org/wiki/Decorator_pattern).
 
 Gli elementi Decorator e i comportamenti sono simili alla [programmazione orientata agli aspetti](https://en.wikipedia.org/wiki/Aspect-oriented_programming), che viene applicata solo a una pipeline di processi specifica gestita dal componente Mediator. Gli aspetti nella programmazione orientata agli aspetti, che implementano i problemi trasversali, vengono applicati in base ai *weaver degli aspetti* inseriti in fase di compilazione o in base all'intercettazione della chiamata all'oggetto. Si dice a volte che entrambi i tipici approcci alla programmazione orientata agli aspetti "fanno magie", perché non è facile vedere come funziona la programmazione orientata agli aspetti. Quando si affrontano problemi o bug gravi, può essere difficile eseguire il debug della programmazione orientata agli aspetti. D'altra parte, questi elementi Decorator/comportamenti sono espliciti e vengono applicati solo nel contesto del Mediator, quindi il debug è molto più prevedibile e semplice.
 
 Nel microservizio degli ordini di eShopOnContainers vengono implementati due comportamenti di esempio, una classe [LogBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/LoggingBehavior.cs) e una classe [ValidatorBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/ValidatorBehavior.cs). L'implementazione dei comportamenti viene illustrata nella sezione successiva mostrando come eShopOnContainers utilizza [i comportamenti](https://github.com/jbogard/MediatR/wiki/Behaviors) [MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0) .
 
-### <a name="use-message-queues-out-of-proc-in-the-commands-pipeline"></a>Usare le code di messaggi (out-of-process) nella pipeline del comando
+### <a name="use-message-queues-out-of-proc-in-the-commands-pipeline"></a>Utilizzare le code di messaggi (out-of-process) nella pipeline del comandoUse message queues (out-of-process) in the command's pipeline
 
 È anche possibile usare i messaggi asincroni basati su broker o code di messaggi, come illustrato nella figura 7-26. Questa opzione può anche essere combinata con il componente Mediator subito prima del gestore comando.
 
@@ -447,23 +447,23 @@ Nel microservizio degli ordini di eShopOnContainers vengono implementati due com
 
 **Figura 7-26**. Uso delle code di messaggi (comunicazione out-of-process e interprocesso) con i comandi CQRS
 
-La pipeline del comando può essere gestita anche da una coda di messaggi a disponibilità elevata per recapitare i comandi al gestore appropriato. L'uso di code di messaggi per accettare i comandi può rendere ancora più complessa la pipeline del comando, perché probabilmente sarà necessario dividere la pipeline in due processi connessi tramite la coda di messaggi esterna. È consigliabile servirsene se è necessario migliorare la scalabilità e le prestazioni in base alla messaggistica asincrona. Si consideri che, nel caso della figura 7-26, il controller inserisce solo il messaggio di comando nella coda e torna indietro. I gestori comando elaborano quindi i messaggi alla velocità stabilita. Ecco un vantaggio considerevole delle code: la coda di messaggi può fungere da buffer nei casi in cui è necessaria l'iperscalabilità, ad esempio per le quotazioni di borsa o altri scenari con un volume elevato di dati in ingresso.
+La pipeline del comando può essere gestita anche da una coda di messaggi a disponibilità elevata per recapitare i comandi al gestore appropriato. L'utilizzo di code di messaggi per accettare i comandi può complicare ulteriormente la pipeline del comando, poiché sarà probabilmente necessario suddividere la pipeline in due processi connessi tramite la coda di messaggi esterna. È consigliabile servirsene se è necessario migliorare la scalabilità e le prestazioni in base alla messaggistica asincrona. Si consideri che, nel caso della figura 7-26, il controller inserisce solo il messaggio di comando nella coda e torna indietro. I gestori comando elaborano quindi i messaggi alla velocità stabilita. Ecco un vantaggio considerevole delle code: la coda di messaggi può fungere da buffer nei casi in cui è necessaria l'iperscalabilità, ad esempio per le quotazioni di borsa o altri scenari con un volume elevato di dati in ingresso.
 
-A causa della natura asincrona delle code di messaggi, è tuttavia necessario capire come comunicare all'applicazione client l'esito positivo o negativo dell'elaborazione del comando. Di norma, è preferibile non usare mai i comandi di tipo "fire and forget". Ogni applicazione aziendale deve sapere se un comando è stato elaborato correttamente o quanto meno convalidato e accettato.
+Tuttavia, a causa della natura asincrona delle code di messaggi, è necessario capire come comunicare con l'applicazione client sull'esito positivo o negativo del processo del comando. Come regola generale, non dovresti mai usare i comandi "fuoco e dimentica". Ogni applicazione aziendale deve sapere se un comando è stato elaborato correttamente o quanto meno convalidato e accettato.
 
-Poter rispondere al client dopo la convalida di un messaggio di comando inviato a una coda asincrona accresce quindi la complessità del sistema, rispetto a un'elaborazione di comando in-process che restituisce il risultato dell'operazione dopo l'esecuzione della transazione. Usando le code, potrebbe essere necessario restituire il risultato dell'elaborazione del comando tramite altri messaggi sul risultato dell'operazione, per cui saranno richiesti componenti aggiuntivi e una comunicazione personalizzata nel sistema.
+Pertanto, la possibilità di rispondere al client dopo la convalida di un messaggio di comando inviato a una coda asincrona aggiunge complessità al sistema, rispetto a un processo di comando in-process che restituisce il risultato dell'operazione dopo l'esecuzione della transazione. Usando le code, potrebbe essere necessario restituire il risultato dell'elaborazione del comando tramite altri messaggi sul risultato dell'operazione, per cui saranno richiesti componenti aggiuntivi e una comunicazione personalizzata nel sistema.
 
 Inoltre, i comandi asincroni sono comandi unidirezionali, che in molti casi potrebbero non essere necessari, come illustrato dall'interessante scambio seguente tra Burtsev Alexey e Greg Young nell'ambito di una [conversazione online](https://groups.google.com/forum/#!msg/dddcqrs/xhJHVxDx2pM/WP9qP8ifYCwJ):
 
 > \[Burtsev Alexey\] Trovo una gran quantità di codice dove le persone usano la gestione dei comandi asincroni o la messaggistica basata su comandi unidirezionali senza alcun motivo per farlo (non devono eseguire operazioni lunghe, non devono eseguire codice asincrono esterno, non devono neppure attraversare il limite dell'applicazione per usare il bus di messaggi). Perché rendono tutto così complesso senza motivo? E finora non ho visto un solo esempio di codice CQRS con il blocco dei gestori comando, anche se funzionerebbe davvero bene nella maggior parte dei casi.
 >
-> \[Greg\] \[Young ... \] non esiste un comando asincrono; è in realtà un altro evento. Se devo accettare quello che tu mi invii e generare un evento se non sono d'accordo, non mi stai più dicendo di fare qualcosa \[quindi, non è un comando\]. Mi stai dicendo che qualcosa è stato fatto. A prima vista, sembra una piccola differenza, ma le implicazioni sono molte.
+> \[Greg\] \[Young ... \] non esiste un comando asincrono; è in realtà un altro evento. Se devo accettare quello che mi mandi e sollevare un evento se non \[sono d'accordo, non\]è più tu che mi dici di fare qualcosa che è, non è un comando . Mi stai dicendo che qualcosa è stato fatto. A prima vista, sembra una piccola differenza, ma le implicazioni sono molte.
 
 I comandi asincroni accrescono considerevolmente la complessità di un sistema, perché non esiste un modo semplice per indicare gli errori. I comandi asincroni non sono quindi consigliati se non quando sono necessari requisiti di ridimensionamento o in casi particolari quando si comunicano i microservizi interni tramite la messaggistica. In tali casi, è necessario progettare un sistema di segnalazione e ripristino separato per gli errori.
 
 Nella versione iniziale di eShopOnContainers è stato deciso di usare l'elaborazione dei comandi sincroni, avviata dalle richieste HTTP e gestita dallo schema Mediator. In questo modo è possibile restituire facilmente l'esito positivo o negativo del processo, come nell'implementazione [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs).
 
-In ogni caso, la decisione deve essere presa in base ai requisiti aziendali dell'applicazione o del microservizio.
+In ogni caso, questa dovrebbe essere una decisione basata sui requisiti aziendali dell'applicazione o del microservizio.
 
 ## <a name="implement-the-command-process-pipeline-with-a-mediator-pattern-mediatr"></a>Implementare la pipeline di elaborazione del comando con uno schema Mediator (MediatR)
 
@@ -477,7 +477,7 @@ Un altro valido motivo per usare lo schema Mediator è stato illustrato da Jimmy
 
 > Penso che qui valga la pena parlare dei test, che offrono un quadro coerente del comportamento del sistema. Richiesta-in, risposta-out. Abbiamo trovato questo aspetto molto utile per costruire test di comportarsi in modo coerente.
 
-Verrà prima di tutto esaminato un controller API Web di esempio, in cui è effettivamente possibile usare l'oggetto Mediator. Se non si utilizza l'oggetto mediatore, è necessario inserire tutte le dipendenze per tale controller, cose come un oggetto logger e altri. Il costruttore sarebbe quindi piuttosto complesso. D'altra parte, se si usa l'oggetto Mediator, il costruttore del controller può essere molto più semplice, con solo alcune dipendenze invece di molte se ne fosse presente una per ogni operazione trasversale, come nell'esempio seguente:
+In primo luogo, diamo un'occhiata a un controller WebAPI di esempio in cui si utilizzerebbe effettivamente l'oggetto mediatore. Se non si utilizza l'oggetto mediatore, è necessario inserire tutte le dipendenze per tale controller, cose come un oggetto logger e altri. Il costruttore sarebbe quindi piuttosto complesso. D'altra parte, se si usa l'oggetto Mediator, il costruttore del controller può essere molto più semplice, con solo alcune dipendenze invece di molte se ne fosse presente una per ogni operazione trasversale, come nell'esempio seguente:
 
 ```csharp
 public class MyMicroserviceController : Controller
@@ -526,7 +526,7 @@ var requestCreateOrder = new IdentifiedCommand<CreateOrderCommand,bool>(createOr
 result = await _mediator.Send(requestCreateOrder);
 ```
 
-Questo caso è tuttavia anche un po' più avanzato perché vengono anche implementati comandi idempotenti. Il processo CreateOrderCommand dovrebbe essere idempotente, quindi, se per qualsiasi motivo lo stesso messaggio viene duplicato in rete, ad esempio a causa di più tentativi, lo stesso ordine aziendale verrà elaborato più di una volta.
+Tuttavia, questo caso è anche un po 'più avanzato perché stiamo anche implementando comandi idempotenti. Il processo CreateOrderCommand dovrebbe essere idempotente, quindi, se per qualsiasi motivo lo stesso messaggio viene duplicato in rete, ad esempio a causa di più tentativi, lo stesso ordine aziendale verrà elaborato più di una volta.
 
 Per l'implementazione viene eseguito il wrapping del comando aziendale (in questo caso CreateOrderCommand), che viene quindi incorporato in un generico IdentifiedCommand di cui viene tenuta traccia usando un ID di ogni messaggio in arrivo dalla rete che deve essere idempotente.
 
@@ -546,7 +546,7 @@ public class IdentifiedCommand<T, R> : IRequest<R>
 }
 ```
 
-Quindi l'elemento CommandHandler per l'elemento IdentifiedCommand denominato [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs) fondamentalmente controllerà se l'ID immesso come parte del messaggio esiste già in una tabella. Se esiste già, tale comando non verrà elaborato di nuovo, quindi si comporta come un comando idempotente. Tale codice dell'infrastruttura viene eseguito dalla chiamata al metodo `_requestManager.ExistAsync` seguente.
+Quindi l'elemento CommandHandler per l'elemento IdentifiedCommand denominato [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs) fondamentalmente controllerà se l'ID immesso come parte del messaggio esiste già in una tabella. Se esiste già, tale comando non verrà elaborato di nuovo, pertanto si comporta come un comando idempotente. Tale codice dell'infrastruttura viene eseguito dalla chiamata al metodo `_requestManager.ExistAsync` seguente.
 
 ```csharp
 // IdentifiedCommandHandler.cs
@@ -590,7 +590,7 @@ public class IdentifiedCommandHandler<T, R> :
 }
 ```
 
-Poiché IdentifiedCommand funge da busta del comando aziendale, quando il comando aziendale deve essere elaborato perché non è un ID ripetuto, prende tale comando aziendale interno e lo invia di nuovo al Mediator, come nell'ultima parte del codice illustrato sopra quando si esegue `_mediator.Send(message.Command)`, da [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs).
+Poiché IdentifiedCommand agisce come una busta di un comando aziendale, quando il comando aziendale deve essere elaborato perché non è un ID ripetuto, prende il comando `_mediator.Send(message.Command)`aziendale interno e lo invia nuovamente a Mediator, come nell'ultima parte del codice mostrato in precedenza durante l'esecuzione , dalla [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs).
 
 Durante tale operazione, collegherà ed eseguirà il gestore comando aziendale, in questo caso [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs), che sta eseguendo le transazioni nel database degli ordini, come illustrato nel codice seguente.
 
@@ -643,7 +643,7 @@ public class CreateOrderCommandHandler
 
 Per consentire a MediatR di conoscere le classi di gestori comando, è necessario registrare le classi Mediator e le classi di gestori comando nel contenitore IoC. Per impostazione predefinita, MediatR usa Autofac come contenitore IoC, ma è anche possibile usare il contenitore IoC ASP.NET Core predefinito o qualsiasi altro contenitore supportato da MediatR.
 
-Il codice seguente illustra come registrare i tipi e i comandi di Mediator quando si usano i moduli di Autofac.
+Il codice seguente mostra come registrare i tipi e i comandi di Mediator quando si utilizzano i moduli Autofac.
 
 ```csharp
 public class MediatorModule : Autofac.Module
@@ -664,7 +664,7 @@ public class MediatorModule : Autofac.Module
 }
 ```
 
-È qui che "avviene la vera e propria magia" con MediatR.
+È qui che avviene "la magia" con MediatR.
 
 Poiché ogni gestore comandi implementa l'interfaccia `IAsyncRequestHandler<T>` generica, quando si registrano gli assembly, il codice registra con `RegisteredAssemblyTypes` tutti i tipi contrassegnati come `IAsyncRequestHandler` mentre correla gli elementi `CommandHandlers` con i rispettivi `Commands`, grazie alla relazione stabilita nella classe `CommandHandler`, come nell'esempio seguente:
 
@@ -758,7 +758,7 @@ public class ValidatorBehavior<TRequest, TResponse>
 }
 ```
 
-In questo caso il comportamento genera un'eccezione se la convalida non riesce, ma è anche possibile restituire un oggetto risultato che contiene il risultato del comando se ha avuto esito positivo o i messaggi di convalida nel caso contrario. Questo probabilmente semplificherebbe la visualizzazione dei risultati della convalida per l'utente.
+Il comportamento in questo caso è la generazione di un'eccezione se la convalida non riesce, ma è anche possibile restituire un oggetto risultato, contenente il risultato del comando se ha avuto esito positivo o i messaggi di convalida nel caso in cui non lo facesse. Questo probabilmente semplificherebbe la visualizzazione dei risultati della convalida per l'utente.
 
 Quindi in base alla libreria [FluentValidation](https://github.com/JeremySkinner/FluentValidation), è stata creata una convalida per i dati passati con CreateOrderCommand, come nel codice seguente:
 

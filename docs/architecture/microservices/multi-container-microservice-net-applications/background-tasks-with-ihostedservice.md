@@ -2,12 +2,12 @@
 title: Implementare attività in background in microservizi con IHostedService e la classe BackgroundService
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Informazioni sulle nuove opzioni per usare IHostedService e BackgroundService per implementare attività in background nei microservizi .NET Core.
 ms.date: 01/30/2020
-ms.openlocfilehash: fab67c816e90c69a4d593422b4974cb9b8819807
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fd26d0444312d3525ad95b2273f28a6ceaa27911
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77502297"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988336"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Implementare attività in background in microservizi con IHostedService e la classe BackgroundService
 
@@ -33,7 +33,7 @@ Ogni approccio presenta vantaggi e svantaggi in base alle esigenze aziendali e d
 
 ## <a name="registering-hosted-services-in-your-webhost-or-host"></a>Registrazione di servizi ospitati in un Host o WebHost
 
-Approfondiamo ulteriormente l'interfaccia di `IHostedService` perché il suo utilizzo è abbastanza simile in un `WebHost` o un `Host`.
+Esaminiamo ulteriormente l'interfaccia poiché il `IHostedService` suo `WebHost` utilizzo è `Host`piuttosto simile in un oggetto o in un file .
 
 SignalR è un esempio di un elemento che usa i servizi ospitati, ma è possibile usarlo anche per operazioni molto più semplici, quali:
 
@@ -64,7 +64,7 @@ In questo codice, il servizio ospitato `GracePeriodManagerService` è il codice 
 
 L'esecuzione dell'attività in background `IHostedService` è coordinata con la durata dell'applicazione (a tal fine, host o microservizio). Si registrano le attività quando viene avviata l'applicazione e si ha la possibilità di eseguire un'azione automatica o di pulizia quando è in corso l'arresto dell'applicazione.
 
-Senza usare `IHostedService`, è sempre possibile avviare un thread in background per eseguire qualsiasi attività. La differenza è precisamente nel tempo di arresto dell'app, quando il thread potrebbe essere semplicemente terminato senza la possibilità di eseguire operazioni di pulizia automatica.
+Senza usare `IHostedService`, è sempre possibile avviare un thread in background per eseguire qualsiasi attività. La differenza è precisamente al momento dell'arresto dell'app quando il thread verrebbe semplicemente ucciso senza avere la possibilità di eseguire azioni di pulizia normali.
 
 ## <a name="the-ihostedservice-interface"></a>Interfaccia IHostedService
 
@@ -178,7 +178,7 @@ public class GracePeriodManagerService : BackgroundService
                                      IEventBus eventBus,
                                      ILogger<GracePeriodManagerService> logger)
     {
-        //Constructor’s parameters validations...
+        // Constructor's parameters validations...
     }
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -249,6 +249,6 @@ L'interfaccia `IHostedService` fornisce un modo pratico per avviare attività in
 - **Esempio GenericHost che usa ASP.NET Core 2.1** \
   <https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
 
->[!div class="step-by-step"]
->[Successivo](test-aspnet-core-services-web-apps.md)
->[precedente](implement-api-gateways-with-ocelot.md)
+> [!div class="step-by-step"]
+> [Successivo](test-aspnet-core-services-web-apps.md)
+> [precedente](implement-api-gateways-with-ocelot.md)

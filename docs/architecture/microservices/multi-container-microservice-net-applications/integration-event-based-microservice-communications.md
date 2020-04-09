@@ -2,12 +2,12 @@
 title: Implementazione della comunicazione basata su eventi tra microservizi (eventi di integrazione)
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Riconoscere gli eventi di integrazione per implementare la comunicazione basata su eventi tra microservizi.
 ms.date: 10/02/2018
-ms.openlocfilehash: 6d4e324a05def91935a82df41c971a75cb75c3f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8a1d4950247d63e5684c85c029efccf8269e7435
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712403"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988323"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implementazione della comunicazione basata su eventi tra microservizi (eventi di integrazione)
 
@@ -29,7 +29,7 @@ Per implementare solo un modello di prova del bus di eventi per l'ambiente di sv
 
 Se sono necessarie astrazioni di alto livello e funzionalità più avanzate come [Sagas](https://docs.particular.net/nservicebus/sagas/) per i processi a esecuzione prolungata che facilitano lo sviluppo distribuito, vale la pena prendere in considerazione altri bus di servizio commerciali e open source come NServiceBus, MassTransit e Brighter. In questo caso, le astrazioni e l'API da usare sarebbero direttamente quelle fornite dai bus di servizio di alto livello invece che dalle proprie astrazioni (come le [semplici astrazioni del bus di eventi fornite da eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/BuildingBlocks/EventBus/EventBus/Abstractions/IEventBus.cs)). Del resto, è possibile ricercare il [forked eShopOnContainers utilizzando NServiceBus](https://go.particular.net/eShopOnContainers) (esempio derivato aggiuntivo implementato da particular Software).
 
-Naturalmente, è sempre possibile creare funzionalità personalizzate del bus di servizio sopra tecnologie di livello inferiore, come RabbitMQ e Docker, ma il lavoro necessario per partire da zero potrebbe essere troppo costoso per un'applicazione aziendale personalizzata.
+Naturalmente, è sempre possibile creare le proprie funzionalità del bus di servizio in cima a tecnologie di livello inferiore come RabbitMQ e Docker, ma il lavoro necessario per "reinventare la ruota" potrebbe essere troppo costoso per un'applicazione aziendale personalizzata.
 
 Per reiterare: le astrazioni del bus di eventi di esempio e l'implementazione presentata nell'esempio eShopOnContainers sono destinate a essere utilizzate solo come modello di verifica. Se si decide che si desidera avere la comunicazione asincrona e basata su eventi, come illustrato nella sezione corrente, è consigliabile scegliere il prodotto del bus di servizio più adatto alle proprie esigenze per la produzione.
 
@@ -76,7 +76,7 @@ Nello [schema Observer](https://en.wikipedia.org/wiki/Observer_pattern) l'oggett
 
 ### <a name="publishsubscribe-pubsub-pattern"></a>Schema di pubblicazione/sottoscrizione (Pub/Sub)
 
-Lo scopo dello [schema di pubblicazione/sottoscrizione](https://docs.microsoft.com/previous-versions/msp-n-p/ff649664(v=pandp.10)) corrisponde a quello dello schema Observer, e cioè notificare agli altri servizi quando si verificano determinati eventi. Ma esiste una differenza importante tra gli schemi Observer e Pub/Sub. Nello schema Observer, la trasmissione viene eseguita direttamente dall'oggetto Observable agli oggetti Observer, in modo che "si riconoscano" tra loro. Ma quando si usa uno schema Pub/Sub, esiste un terzo componente, denominato broker o broker dei messaggi o bus di eventi, noto sia a chi pubblica sia a chi sottoscrive. Di conseguenza, quando si usa lo schema di pubblicazione/sottoscrizione, chi pubblica viene disaccoppiato con precisione dai sottoscrittori, grazie al già citato bus di eventi o broker di messaggi.
+Lo scopo dello [schema di pubblicazione/sottoscrizione](https://docs.microsoft.com/previous-versions/msp-n-p/ff649664(v=pandp.10)) corrisponde a quello dello schema Observer, e cioè notificare agli altri servizi quando si verificano determinati eventi. Ma esiste una differenza importante tra gli schemi Observer e Pub/Sub. Nel modello osservatore, la trasmissione viene eseguita direttamente dall'osservabile agli osservatori, in modo che si "conoscano" a vicenda. Ma quando si usa uno schema Pub/Sub, esiste un terzo componente, denominato broker o broker dei messaggi o bus di eventi, noto sia a chi pubblica sia a chi sottoscrive. Di conseguenza, quando si usa lo schema di pubblicazione/sottoscrizione, chi pubblica viene disaccoppiato con precisione dai sottoscrittori, grazie al già citato bus di eventi o broker di messaggi.
 
 ### <a name="the-middleman-or-event-bus"></a>L'intermediario, o bus di eventi
 
@@ -100,7 +100,7 @@ Nella figura 6-20 è possibile visualizzare un'astrazione di un bus di eventi co
 
 ### <a name="defining-an-event-bus-interface"></a>Definizione dell'interfaccia di un bus di eventi
 
-Iniziamo con un codice di implementazione per l'interfaccia del bus di eventi e le possibili implementazioni per scopi di esplorazione. L'interfaccia deve essere generica e semplice, come quella seguente.
+Iniziamo con un codice di implementazione per l'interfaccia del bus di eventi e le possibili implementazioni a scopo di esplorazione. L'interfaccia deve essere generica e semplice, come quella seguente.
 
 ```csharp
 public interface IEventBus

@@ -2,16 +2,16 @@
 title: Progettazione del livello di persistenza dell'infrastruttura
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Esplorare lo schema repository nella progettazione del livello di persistenza dell'infrastruttura.
 ms.date: 10/08/2018
-ms.openlocfilehash: e10c8c1569089d5c8274df655ad7a12f2ebb7c22
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1b2665e81ade60affa84563121c04bca08537f07
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846809"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988479"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>Progettare il livello di persistenza dell'infrastruttura
 
-I componenti di persistenza dei dati forniscono l'accesso ai dati ospitati entro i limiti di un microservizio (vale a dire, il database di un microservizio). Contengono l'implementazione effettiva di componenti come repository e classi di [unità di lavoro](https://martinfowler.com/eaaCatalog/unitOfWork.html), ad esempio gli oggetti Entity Framework (EF) <xref:Microsoft.EntityFrameworkCore.DbContext> personalizzati. DbContext di Entity Framework implementa sia lo schema Repository che lo schema Unit of Work.
+I componenti di persistenza dei dati forniscono l'accesso ai dati ospitati entro i limiti di un microservizio, ovvero il database di un microservizio. Contengono l'implementazione effettiva di componenti come repository e classi di [unità di lavoro](https://martinfowler.com/eaaCatalog/unitOfWork.html), ad esempio gli oggetti Entity Framework (EF) <xref:Microsoft.EntityFrameworkCore.DbContext> personalizzati. DbContext di Entity Framework implementa sia lo schema Repository che lo schema Unit of Work.
 
 ## <a name="the-repository-pattern"></a>Schema repository
 
@@ -23,7 +23,7 @@ Lo schema Repository è una modalità di utilizzo di un'origine dati ben documen
 
 ### <a name="define-one-repository-per-aggregate"></a>Definire un repository per ogni aggregazione
 
-Per ogni aggregazione o radice di aggregazione è necessario creare una classe di repository. In un microservizio che si basa su schemi progettuali basati su dominio (DDD, Domain-Driven Design), l'unico canale che è necessario usare per aggiornare il database deve essere il repository, perché ha una relazione uno-a-uno con la radice di aggregazione, che controlla le invarianti di aggregazione e la coerenza delle transazioni. È possibile eseguire query sul database tramite altri canali (seguendo un approccio CQRS), perché le query non modificano lo stato del database. Tuttavia, l'area transazionale, ovvero gli aggiornamenti, deve sempre essere controllata dai repository e dalle radici di aggregazione.
+Per ogni aggregazione o radice di aggregazione è necessario creare una classe di repository. In un microservizio che si basa su schemi progettuali basati su dominio (DDD, Domain-Driven Design), l'unico canale che è necessario usare per aggiornare il database deve essere il repository, Ciò è dovuto al fatto che hanno una relazione uno-a-uno con la radice di aggregazione, che controlla le invarianti dell'aggregazione e la coerenza transazionale. È possibile eseguire query sul database tramite altri canali (seguendo un approccio CQRS), perché le query non modificano lo stato del database. Tuttavia, l'area transazionale, ovvero gli aggiornamenti, deve sempre essere controllata dai repository e dalle radici di aggregazione.
 
 In pratica, un repository consente di popolare i dati in memoria che provengono dal database sotto forma di entità di dominio. Quando le entità sono in memoria, è possibile modificarle e quindi salvarle in modo permanente nel database tramite le transazioni.
 
@@ -37,7 +37,7 @@ Se l'utente apporta modifiche, i dati da aggiornare proverranno dal livello di p
 
 **Figura 7-17**. Relazione tra repository, aggregazioni e tabelle del database
 
-Il diagramma precedente mostra le relazioni tra i livelli di dominio e infrastruttura: Buyer Aggregate dipende da IBuyerRepository e Order Aggregate dipende dalle interfacce IOrderRepository, queste interfacce vengono implementate nel livello Infrastructure dai repository corrispondenti che dipendono da UnitOfWork, anch'esso implementato in tale posizione, che accede alle tabelle nel livello Dati.
+Il diagramma precedente mostra le relazioni tra i livelli di dominio e infrastruttura: Buyer Aggregate dipende da IBuyerRepository e Order Aggregate dipende dalle interfacce IOrderRepository, queste interfacce vengono implementate nel livello Infrastructure dai repository corrispondenti che dipendono da UnitOfWork, anch'essi implementati in tale paese, che accedono alle tabelle nel livello Dati.
 
 ### <a name="enforce-one-aggregate-root-per-repository"></a>Applicare una radice di aggregazione per ogni repository
 
@@ -84,7 +84,7 @@ Le connessioni ai database possono non riuscire e, cosa ancora più importante, 
 
 In termini di separazione delle problematiche per gli unit test, la logica opera sulle entità di dominio in memoria. Si presuppone che la classe di repository abbia usato queste ultime. Una volta che la logica modifica le entità di dominio, si presuppone che la classe di repository le archivi in modo corretto. Il punto importante consiste nel creare unit test su un modello di dominio e la relativa logica di dominio. Le radici di aggregazione sono i limiti principali della coerenza in DDD.
 
-I repository implementati in eShopOnContainers si basano sull'implementazione di DbContext di Entity Framework Core degli schemi Repository e Unit of Work che usano il rilevamento delle modifiche, in modo che questa funzionalità non venga duplicata.
+I repository implementati in eShopOnContainers si basano sull'implementazione DbContext di EF Core dei modelli di repository e unità di lavoro usando il rilevamento delle modifiche, in modo che non duplicano questa funzionalità.
 
 ### <a name="the-difference-between-the-repository-pattern-and-the-legacy-data-access-class-dal-class-pattern"></a>Differenza tra lo schema Repository e lo schema legacy Data Access class (DAL class)
 
@@ -102,9 +102,9 @@ I repository personalizzati sono utili per i motivi citati in precedenza e rappr
 
 Ad esempio, Jimmy Bogard, quando ha fornito un feedback diretto per questa guida, ha affermato quanto segue:
 
-> Questo probabilmente sarà il feedback più importante. Non sono proprio un fan dei repository, soprattutto perché nascondono i dettagli importanti del meccanismo di persistenza sottostante. Questo è anche il motivo per cui usare MediatR per i comandi. È possibile sfruttare tutte le potenzialità del livello di persistenza e spostare tutto il comportamento del dominio nelle radici di aggregazione. In genere non si vogliono simulare i repository ma avere un test di integrazione con il componente reale. Usare CQRS significa che i repository non sono più necessari.
+> Questo sarà probabilmente il mio più grande feedback. Io non sono davvero un fan di repository, soprattutto perché nascondono i dettagli importanti del meccanismo di persistenza sottostante. È per questo che vado per MediatR per i comandi, troppo. È possibile sfruttare tutte le potenzialità del livello di persistenza e spostare tutto il comportamento del dominio nelle radici di aggregazione. Di solito non voglio prendere in giro i miei repository - ho ancora bisogno di avere quel test di integrazione con la cosa reale. Andare cQRS significava che non avevamo più bisogno di repository.
 
-I repository possono essere utili ma non sono fondamentali per la progettazione DDD come lo sono lo schema Aggregate e il modello di dominio avanzato. Pertanto, usare lo schema Repository se si ritiene opportuno. Con Entity Framework Core si userà comunque lo schema Repository, anche se, in questo caso, il repository include interamente il microservizio o il contesto ristretto.
+I repository possono essere utili ma non sono fondamentali per la progettazione DDD come lo sono lo schema Aggregate e il modello di dominio avanzato. Pertanto, usare lo schema Repository se si ritiene opportuno. In ogni caso, si userà il modello di repository ogni volta che si utilizza EF Core anche se, in questo caso, il repository copre l'intero microservizio o contesto delimitato.
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 

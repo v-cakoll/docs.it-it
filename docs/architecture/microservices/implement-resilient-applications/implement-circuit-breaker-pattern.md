@@ -2,12 +2,12 @@
 title: Implementazione dello schema Circuit Breaker
 description: Informazioni su come implementare lo schema Circuit Breaker come sistema complementare per i tentativi HTTP.
 ms.date: 03/03/2020
-ms.openlocfilehash: a79c6fcca1e29f3c30d697cb369060d59a72c121
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bebe0b4a622db928175f78f8d3e303d3d7adf170
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847245"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988885"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Implementazione dello schema Circuit Breaker
 
@@ -65,9 +65,9 @@ Dal punto di vista dell'utilizzo, quando si utilizza HttpClient, non è necessar
 
 ## <a name="test-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>Eseguire test per i tentativi HTTP e gli interruttori di circuito in eShopOnContainers
 
-Ogni volta che si avvia la soluzione eShopOnContainers in un host Docker, è necessario avviare più contenitori. Alcuni dei contenitori vengono avviati e inizializzati più lentamente, ad esempio il contenitore di SQL Server. Questo vale in particolare la prima volta che si distribuisce l'applicazione eShopOnContainers in Docker, perché è necessario configurare le immagini e il database. Il fatto che alcuni contenitori vengano avviati più lentamente rispetto ad altri può causare la generazione iniziale di eccezioni HTTP negli altri servizi, anche se si impostano dipendenze tra i contenitori al livello Docker Compose, come illustrato nelle sezioni precedenti. Le dipendenze Docker Compose tra i contenitori si trovano solo sul livello processo. Il processo del punto di ingresso del contenitore può essere avviato, ma SQL Server potrebbe non essere pronto per le query. Di conseguenza, possono essere visualizzati numerosi errori e può essere restituita un'eccezione all'applicazione quando prova a usare il contenitore specificato.
+Ogni volta che si avvia la soluzione eShopOnContainers in un host Docker, è necessario avviare più contenitori. Alcuni dei contenitori vengono avviati e inizializzati più lentamente, ad esempio il contenitore di SQL Server. Questo vale in particolare la prima volta che si distribuisce l'applicazione eShopOnContainers in Docker, perché è necessario configurare le immagini e il database. Il fatto che alcuni contenitori vengano avviati più lentamente rispetto ad altri può causare la generazione iniziale di eccezioni HTTP negli altri servizi, anche se si impostano dipendenze tra i contenitori al livello Docker Compose, come illustrato nelle sezioni precedenti. Le dipendenze Docker Compose tra i contenitori si trovano solo sul livello processo. Il processo del punto di ingresso del contenitore potrebbe essere avviato, ma SQL Server potrebbe non essere pronto per le query. Di conseguenza, possono essere visualizzati numerosi errori e può essere restituita un'eccezione all'applicazione quando prova a usare il contenitore specificato.
 
-Questo tipo di errore può essere visualizzato anche all'avvio quando l'applicazione viene distribuita nel cloud. In questo caso, è possibile che gli agenti di orchestrazione stiano spostando i contenitori da un nodo o da una macchina virtuale a un'altra (ovvero, stanno avviando nuove istanze) durante il bilanciamento del numero di contenitori tra i nodi del cluster.
+Questo tipo di errore può essere visualizzato anche all'avvio quando l'applicazione viene distribuita nel cloud. In tal caso, gli agenti di orchestrazione potrebbero spostare i contenitori da un nodo o una macchina virtuale a un altro (ovvero l'avvio di nuove istanze) durante il bilanciamento del numero di contenitori tra i nodi del cluster.
 
 Quando si avviano tutti i contenitori, "eShopOnContainers" risolve questi problemi usando lo schema Retry illustrato in precedenza.
 
@@ -96,7 +96,7 @@ Ad esempio, quando l'applicazione è in esecuzione, è possibile abilitare il mi
 
 ![Screenshot del controllo dello stato della simulazione middleware non riuscita.](./media/implement-circuit-breaker-pattern/failing-middleware-simulation.png)
 
-**Figura 8-5**. Verifica dello stato di errore del middleware ASP.NET. In questo caso, è disabilitato.
+**Figura 8-5**. Controllo dello stato del middleware ASP.NET "In errore" – In questo caso, disabilitato.
 
 A questo punto, il microservizio Basket risponde con il codice di stato 500 ogni volta che viene chiamato.
 
@@ -132,7 +132,7 @@ public class CartController : Controller
 }
 ```
 
-Ecco un riepilogo. I criteri di ripetizione provano più volte a eseguire la richiesta HTTP e ottengono errori HTTP. Quando il numero di tentativi raggiunge il valore massimo impostato per i criteri dell'interruttore di circuito (in questo caso, 5), l'applicazione genera un'eccezione BrokenCircuitException. Il risultato è un messaggio descrittivo, come illustrato nella figura 8-6.
+Ecco un riassunto. I criteri di ripetizione provano più volte a eseguire la richiesta HTTP e ottengono errori HTTP. Quando il numero di tentativi raggiunge il valore massimo impostato per i criteri dell'interruttore di circuito (in questo caso, 5), l'applicazione genera un'eccezione BrokenCircuitException. Il risultato è un messaggio descrittivo, come illustrato nella figura 8-6.
 
 ![Screenshot dell'app Web MVC con errore di inoperativi del servizio di basket.](./media/implement-circuit-breaker-pattern/basket-service-inoperative.png)
 

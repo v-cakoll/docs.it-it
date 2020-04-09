@@ -2,12 +2,12 @@
 title: Progettazione di convalide nel livello del modello di dominio
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Informazioni sui concetti chiave delle convalide del modello di dominio.
 ms.date: 10/08/2018
-ms.openlocfilehash: 98ccc5df84c9f6f402ecbee83b077c806d6a76fc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d2efc5f3b3267c4573409952791c6e883a01aae2
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75899673"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988505"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>Progettare convalide nel livello del modello di dominio
 
@@ -49,21 +49,21 @@ public void SetAddress(string line1, string line2,
 
 Se il valore dello stato non è valido, la prima riga dell'indirizzo e la città sono già state modificate. È quindi possibile che l'indirizzo non sia valido.
 
-Un approccio simile può essere usato nel costruttore dell'entità, generando un'eccezione per assicurarsi che l'entità sia valida dopo la creazione.
+Un approccio simile può essere usato nel costruttore dell'entità, generando un'eccezione per assicurarsi che l'entità sia valida una volta creata.
 
 ### <a name="use-validation-attributes-in-the-model-based-on-data-annotations"></a>Usare gli attributi di convalida nel modello in base alle annotazioni dei dati
 
 Le annotazioni dei dati, come gli attributi Required o MaxLength, possono essere usate per configurare le proprietà dei campi di database EF Core, come illustrato in dettaglio nella sezione [Mapping di tabella](infrastructure-persistence-layer-implemenation-entity-framework-core.md#table-mapping) ma [non funzionano più per la convalida di entità in EF Core](https://github.com/dotnet/efcore/issues/3680) (e nemmeno il metodo <xref:System.ComponentModel.DataAnnotations.IValidatableObject.Validate%2A?displayProperty=nameWithType>), come invece era il caso fino a EF 4.x in .NET Framework.
 
-Le annotazioni dei dati e l'interfaccia <xref:System.ComponentModel.DataAnnotations.IValidatableObject> possono essere ancora usati per la convalida del modello durante l'associazione di modelli, prima che vengano richiamate le azioni del controller, ma il modello deve essere un modello ViewModel o DTO e l'operazione è comunque legata a MVC o all'API, non al modello di dominio.
+Le annotazioni <xref:System.ComponentModel.DataAnnotations.IValidatableObject> dei dati e l'interfaccia possono comunque essere utilizzate per la convalida del modello durante l'associazione del modello, prima della chiamata alle azioni del controller come di consueto, ma tale modello deve essere un ViewModel o DTO e si tratta di un problema MVC o API e non di un problema di modello di dominio.
 
-Una volta chiarita la differenza concettuale, è possibile comunque usare le annotazioni dei dati e `IValidatableObject` nella classe dell'entità per la convalida, se le azioni ricevono un parametro di oggetto classe di entità, eventualità non consigliata. In tal caso, la convalida avviene prima dell'associazione di modelli, appena prima di richiamare l'azione ed è possibile controllare la proprietà ModelState.IsValid del controller per verificare il risultato, ma anche in questo caso, ciò avviene nel controller, non prima di aver reso persistente l'oggetto entità in DbContext, come avveniva fino alla versione di EF 4.x.
+Una volta chiarita la differenza concettuale, è possibile comunque usare le annotazioni dei dati e `IValidatableObject` nella classe dell'entità per la convalida, se le azioni ricevono un parametro di oggetto classe di entità, eventualità non consigliata. In tal caso, la convalida verrà eseguita durante l'associazione del modello, appena prima di richiamare l'azione ed è possibile controllare il controller ModelState.IsValid proprietà per controllare il risultato, ma poi nuovamente, si verifica nel controller, non prima di rendere persistente l'oggetto entità nel DbContext, come aveva fatto da EF 4.x.
 
-È ancora possibile implementare la convalida personalizzata nella classe entità con le annotazioni dei dati e il metodo `IValidatableObject.Validate`, eseguendo l'override del metodo SaveChanges di DbContext.
+È comunque possibile implementare la convalida personalizzata `IValidatableObject.Validate` nella classe di entità usando le annotazioni dei dati e il metodo, eseguendo l'override del metodo SaveChanges di DbContext.You can still implement custom validation in the entity class using data annotations and the method, by overriding the DbContext's SaveChanges method.
 
 È possibile visualizzare un esempio di implementazione della convalida delle entità `IValidatableObject` in [questo commento in GitHub](https://github.com/dotnet/efcore/issues/3680#issuecomment-155502539). Questo esempio non esegue convalide basate su attributi, ma devono essere facili da implementare usando la reflection nello stesso override.
 
-Dal punto di vista di DDD, tuttavia, è consigliabile mantenere un modello di dominio molto semplice tramite l'uso di eccezioni nei metodi di comportamento dell'entità o tramite l'implementazione degli schemi Specification e Notification per applicare le regole di convalida.
+Tuttavia, da un punto di vista DDD, il modello di dominio è meglio mantenere snello con l'uso di eccezioni nei metodi di comportamento dell'entità o implementando i modelli di specifica e notifica per applicare le regole di convalida.
 
 L'uso delle annotazioni dei dati a livello di applicazione nelle classi ViewModel, invece delle entità di dominio, che accetteranno l'input può risultare vantaggioso per consentire la convalida dei modelli entro il livello dell'interfaccia utente. Questo approccio tuttavia non deve escludere la convalida entro il modello di dominio.
 

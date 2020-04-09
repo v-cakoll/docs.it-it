@@ -2,18 +2,18 @@
 title: Monitoraggio dell’integrità
 description: Esplorare un approccio per implementare il monitoraggio dell'integrità.
 ms.date: 03/02/2020
-ms.openlocfilehash: d3d2bc72cf29b3d1ac93191e7ff2bd827c9ee68d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 88354ae0ae59dbfbe40dbe1b25320f8f93d042ce
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401711"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988856"
 ---
 # <a name="health-monitoring"></a>Monitoraggio dell’integrità
 
 Il monitoraggio dell'integrità consente di ottenere quasi in tempo reale informazioni sullo stato di contenitori e microservizi. Il monitoraggio dell'integrità è fondamentale per vari aspetti dei microservizi operativi ed è particolarmente importante quando gli agenti di orchestrazione eseguono aggiornamenti parziali dell'applicazione in fasi, come illustrato più avanti.
 
-Le applicazioni basate su microservizi usano spesso heartbeat o controlli di integrità per consentire ai monitor di prestazioni, alle utilità di pianificazione e agli agenti di orchestrazione di tenere traccia dei numerosi servizi. Se i servizi non sono in grado di inviare, su richiesta o in base a una pianificazione, un segnale del tipo "Sono attivo", l'applicazione potrebbe essere esposta a rischi in fase di distribuzione degli aggiornamenti oppure potrebbe rilevare gli errori troppo tardi e non essere in grado di arrestare una catena di errori che può causare interruzioni significative.
+Le applicazioni basate su microservizi usano spesso heartbeat o controlli di integrità per consentire ai monitor di prestazioni, alle utilità di pianificazione e agli agenti di orchestrazione di tenere traccia dei numerosi servizi. Se i servizi non possono inviare una sorta di segnale "Sono attivo", su richiesta o in base a una pianificazione, l'applicazione potrebbe essere in grado di affrontare rischi quando si distribuiscono gli aggiornamenti oppure potrebbe semplicemente rilevare gli errori troppo tardi e non essere in grado di arrestare gli errori a catena che possono verificarsi gravi interruzioni.
 
 Nel modello tipico, i servizi inviano report sul proprio stato e queste informazioni vengono aggregate per fornire una visualizzazione complessiva dello stato di integrità dell'applicazione. Se si usa un agente di orchestrazione, è possibile fornire informazioni sull'integrità al cluster dell'agente di orchestrazione, in modo che il cluster possa agire di conseguenza. Investendo sulla creazione di report sull'integrità di alta qualità personalizzati per l'applicazione, è possibile rilevare e risolvere molto più facilmente i problemi dell'applicazione in esecuzione.
 
@@ -50,9 +50,9 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-Nel codice precedente il metodo `services.AddHealthChecks()` configura un controllo HTTP di base che restituisce un codice di stato **200** per lo stato integro.  Inoltre, il metodo di estensione `AddCheck()` configura un `SqlConnectionHealthCheck` personalizzato che controlla l'integrità del database SQL correlato.
+Nel codice precedente, `services.AddHealthChecks()` il metodo configura un controllo HTTP di base che restituisce un codice di stato **200** con "Integro".  Inoltre, `AddCheck()` il metodo di `SqlConnectionHealthCheck` estensione configura un personalizzato che controlla l'integrità del database SQL correlato.
 
-Il metodo `AddCheck()` aggiunge un nuovo controllo di integrità con un nome specificato e l'implementazione del tipo `IHealthCheck`. È possibile aggiungere più controlli di integrità usando il metodo AddCheck, in modo che un microservizio non restituisca lo stato di integro fino a quando tutti i controlli non risultano integri.
+Il metodo `AddCheck()` aggiunge un nuovo controllo di integrità con un nome specificato e l'implementazione del tipo `IHealthCheck`. È possibile aggiungere più controlli di integrità usando il metodo AddCheck, in modo che un microservizio non fornisca uno stato "integro" fino a quando tutti i controlli non sono integri.
 
 `SqlConnectionHealthCheck` è una classe personalizzata che implementa `IHealthCheck`, che accetta una stringa di connessione come parametro di costruttore ed esegue una query semplice per verificare se la connessione al database SQL ha esito positivo. Restituisce `HealthCheckResult.Healthy()` se la query è stata eseguita correttamente e `FailureStatus` con l'eccezione effettiva in caso di errore.
 
@@ -220,7 +220,7 @@ Per fortuna [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/Asp
 
 **Figura 8-9**. Report di controllo di integrità di esempio in eShopOnContainers
 
-In breve, questo servizio watchdog esegue una query sull'endpoint "/hc" di ogni microservizio. In tal modo verranno eseguiti tutti i controlli di integrità definiti al suo interno e verrà restituito uno stato di integrità globale in base a tutti i controlli. L'utilizzo di HealthChecksUI è facile con poche voci di configurazione e due righe di codice che devono essere aggiunte nel file Startup.cs del servizio watchdog.
+In sintesi, questo servizio watchdog esegue una query sull'endpoint "/hc" di ogni microservizio. In tal modo verranno eseguiti tutti i controlli di integrità definiti al suo interno e verrà restituito uno stato di integrità globale in base a tutti i controlli. L'utilizzo di HealthChecksUI è facile con poche voci di configurazione e due righe di codice che devono essere aggiunte nel file Startup.cs del servizio watchdog.
 
 File di configurazione di esempio per l'interfaccia utente dei controlli di integrità:
 
@@ -257,7 +257,7 @@ public void ConfigureServices(IServiceCollection services)
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 {
     //…
-    app.UseHealthChecksUI(config=> config.UIPath = “/hc-ui”);
+    app.UseHealthChecksUI(config=> config.UIPath = "/hc-ui");
     //…
 }
 ```

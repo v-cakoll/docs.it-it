@@ -2,12 +2,12 @@
 title: Test delle app Web e dei servizi ASP.NET di base
 description: Architettura di microservizi .NET per le applicazioni .NET incluse in contenitori | Esplorare un'architettura per il test delle app Web e dei servizi ASP.NET di base all'interno di contenitori.
 ms.date: 01/30/2020
-ms.openlocfilehash: ab3ae6276ea4e4c741731f050913d956046271ca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f66d6184d913405c9372904f8072dda1dbfbe6ac
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77501974"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988232"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Test delle app Web e dei servizi ASP.NET di base
 
@@ -19,7 +19,7 @@ I controller sono un componente essenziale di qualsiasi servizio API ASP.NET Cor
 
 - Test di integrazione. Garantiscono il funzionamento previsto delle interazioni tra componenti rispetto a elementi esterni, come i database. Le asserzioni possono testare l'API componente, l'interfaccia utente o gli effetti collaterali di azioni come input/output nei database, registrazione e così via.
 
-- Test funzionali per ogni microservizio. Garantiscono il funzionamento previsto dell'applicazione dal punto di vista dell'utente.
+- Test funzionali per ogni microservizio. Questi assicurano che l'applicazione funzioni come previsto dal punto di vista dell'utente.
 
 - Test di servizio. Garantiscono l'esecuzione del test dei casi d'uso dei servizi end-to-end, tra cui il test simultaneo di più servizi. Per questo tipo di test, è necessario preparare prima l'ambiente. In questo caso, ciò significa avviare i servizi, ad esempio usando il comando docker-compose up.
 
@@ -113,7 +113,7 @@ public class PrimeWebDefaultRequestShould
 - **xUnit.net**. Sito ufficiale. \
     <https://xunit.github.io/>
 
-- **Nozioni di base sugli unit test** \
+- **Nozioni di base sui unit test.** \
     [https://docs.microsoft.com/visualstudio/test/unit-test-basics](/visualstudio/test/unit-test-basics)
 
 - **Moq**. Repository GitHub. \

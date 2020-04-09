@@ -12,12 +12,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 ms.assetid: afb07899-2707-49ab-a57f-e0caf20d0171
-ms.openlocfilehash: 29c649abb7ff5db74cadfdbe5b7c11f9322f75f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bbe30292e474c9cb5956d96fbbae4d78d464d603
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180687"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989233"
 ---
 # <a name="security-in-network-programming"></a>Sicurezza nella programmazione di rete
 
@@ -26,7 +26,7 @@ Le classi dello spazio dei nomi <xref:System.Net> di .NET Framework offrono il s
 ## <a name="in-this-section"></a>Contenuto della sezione
 
 [Procedure consigliate per Transport Layer Security (TLS) con .NET Framework](tls.md)  
-Descrizione delle procedure consigliate per TLS con .NET Framework.
+Vengono descritte le procedure consigliate TLS con .NET Framework.
 
 [Uso di Secure Sockets Layer](using-secure-sockets-layer.md)  
 Descrizione di come usare connessioni Secure Sockets Layer (SSL).  

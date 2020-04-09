@@ -2,14 +2,14 @@
 title: Microservizi .NET. Architettura per le applicazioni .NET incluse in contenitori
 description: Architettura dei microservizi .NET per le applicazioni .NET in contenitori | I microservizi sono servizi modulari e distribuibili in modo indipendente. I contenitori Docker (per Linux e Windows) semplificano le attività di distribuzione e test riunendo un servizio e le relative dipendenze in una singola unità che viene quindi eseguita in un ambiente isolato.
 ms.date: 01/30/2020
-ms.openlocfilehash: 1337fe56e78e03a85627737bd52a089fd946b842
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9cdd5556f92e1acde540b647e7b68628a3ecf67f
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77543534"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988791"
 ---
-# <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microservizi .NET: architettura per le applicazioni .NET incluse in contenitori
+# <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microservizi .NET: Architettura per le applicazioni .NET incluse in contenitori
 
 ![Copertina](./media/cover-small.png)
 
@@ -74,7 +74,7 @@ La seconda parte della guida inizia con la sezione [Processo di sviluppo per le 
 
 L'applicazione eShopOnContainers è un'applicazione open-source di riferimento per .NET Core e i microservizi, progettata per la distribuzione mediante i contenitori Docker. L'applicazione è costituita da più sottosistemi, inclusi diversi front-end con interfaccia utente per negozi online (un'app Web MVC, un'applicazione Web a pagina singola e un'app per dispositivi mobili nativa). Include inoltre i microservizi e i contenitori back-end per tutte le operazioni lato server necessarie.
 
-Lo scopo dell'applicazione consiste nel presentare i modelli di architettura. **NON È UN MODELLO DA USARE IN PRODUZIONE** per avviare applicazioni reali. Di fatto, l'applicazione è in uno stato beta permanente, perché viene usata anche per testare le nuove tecnologie potenzialmente interessanti quando diventano disponibili.
+Lo scopo dell'applicazione consiste nel presentare i modelli di architettura. **NON È UN MODELLO DA USARE IN PRODUZIONE** per avviare applicazioni reali. Infatti, l'applicazione è in uno stato beta permanente, come viene utilizzato anche per testare nuove tecnologie potenzialmente interessanti come vengono visualizzati.
 
 ## <a name="send-us-your-feedback"></a>Inviateci i vostri commenti!
 

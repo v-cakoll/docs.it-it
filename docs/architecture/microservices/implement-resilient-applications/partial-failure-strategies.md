@@ -2,12 +2,12 @@
 title: Strategie di gestione degli errori parziali
 description: Informazioni su diverse strategie per la gestione normale degli errori parziali.
 ms.date: 10/16/2018
-ms.openlocfilehash: e96fe99ab44b924460e01abaad30aa3e2432117a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: abf87df5afed02b4d794a1307a0ed943cafb4db3
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68674508"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988804"
 ---
 # <a name="strategies-to-handle-partial-failure"></a>Strategie di gestione degli errori parziali
 
@@ -19,7 +19,7 @@ Le strategie di gestione degli errori parziali sono le seguenti.
 
 **Usare i timeout di rete**. In generale, i client devono essere progettati in modo da non bloccarsi a tempo indefinito e per usare sempre i timeout durante l'attesa per una risposta. L'uso dei timeout garantisce che le risorse non rimangano bloccate per un periodo di tempo indefinito.
 
-**Usare lo schema Circuit Breaker**. Con questo approccio, il processo client tiene traccia del numero di richieste non riuscite. Se la frequenza di errori supera un limite configurato, si attiva un "interruttore di circuito" affinché i tentativi successivi abbiano immediatamente esito negativo. Se un numero elevato di richieste non riesce, significa che il servizio non è disponibile e che l'invio di richieste è inutile. Dopo un periodo di timeout, il client deve riprovare e, se le nuove richieste hanno esito positivo, chiudere l'interruttore.
+**Usare lo schema Circuit Breaker**. Con questo approccio, il processo client tiene traccia del numero di richieste non riuscite. Se la percentuale di errore supera un limite configurato, viene percorso un "interruttore di circuito" in modo che ulteriori tentativi non riescano immediatamente. Se un numero elevato di richieste non riesce, significa che il servizio non è disponibile e che l'invio di richieste è inutile. Dopo un periodo di timeout, il client deve riprovare e, se le nuove richieste hanno esito positivo, chiudere l'interruttore.
 
 **Fornire fallback**. Con questo approccio, il processo client esegue la logica di fallback in caso di esito negativo di una richiesta, ad esempio restituendo i dati memorizzati nella cache o un valore predefinito. Questo approccio è adatto alle query, ma risulta più complesso per gli aggiornamenti o i comandi.
 

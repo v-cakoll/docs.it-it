@@ -2,12 +2,12 @@
 title: Seedwork (classi di base riutilizzabili e interfacce per il modello di dominio)
 description: Architettura dei microservizi .NET per applicazioni .NET in contenitori | Usare il concetto di cartella SeedWork come punto di partenza per avviare l'implementazione di un modello di dominio orientato a DDD.
 ms.date: 10/08/2018
-ms.openlocfilehash: ab0aadc28dbd1175c75b04dadca29b7b0947f29b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 545be2723ba468a5fd65f81978799328234ca113
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76116573"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988310"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (classi di base riutilizzabili e interfacce per il modello di dominio)
 
@@ -19,7 +19,7 @@ La figura 7-12 illustra le classi che costituiscono la cartella SeedWork del mod
 Contenuto dettagliato della cartella SeedWork, contenente classi base e interfacce: Entity.cs, Enumeration.cs, IAggregateRoot.cs, IRepository.cs, IUnitOfWork.cs e ValueObject.cs.
 :::image-end:::
 
-**Figura 7-12**. Set di esempio di classi di base e interfacce nella cartella"Seedwork" per il modello di dominio
+**Figura 7-12**. Set di esempio di interfacce e classi di base "seedwork" del modello di dominio
 
 Si tratta di un tipo di riutilizzo che può essere copiato e incollato e che molti sviluppatori condividono nei progetti. Non è un framework formale. È possibile avere cartelle Seedwork in qualsiasi livello o libreria. Tuttavia, se il set di classi e interfacce diventa sufficientemente grande, è possibile creare una singola libreria di classi.
 
@@ -113,7 +113,7 @@ I contratti di repository sono semplicemente interfacce .NET che esprimono i req
 
 I repository con codice di Entity Framework Core o qualsiasi altra dipendenza da infrastruttura e codice (Linq, SQL e così via), non devono essere implementati all'interno del modello di dominio, ma devono soltanto implementare le interfacce definite nel modello di dominio.
 
-Un modello che spiega questa pratica, vale a dire l'inserimento delle interfacce di repository nel livello del modello di dominio, è il modello noto come "Interfaccia separata". Secondo quanto [spiega](https://www.martinfowler.com/eaaCatalog/separatedInterface.html) Martin Fowler è importante "usare il modello Interfaccia separata per definire un'interfaccia in un pacchetto, ma implementarla in un altro pacchetto. In questo modo il client che richiede la dipendenza all'interfaccia può essere totalmente ignaro dell'implementazione."
+Un modello che spiega questa pratica, vale a dire l'inserimento delle interfacce di repository nel livello del modello di dominio, è il modello noto come "Interfaccia separata". Come [spiegato](https://www.martinfowler.com/eaaCatalog/separatedInterface.html) da Martin Fowler, "Utilizzare separate interfaccia per definire un'interfaccia in un pacchetto, ma implementarlo in un altro. In questo modo un client che richiede la dipendenza dall'interfaccia può essere completamente inconsapevole dell'implementazione."
 
 Il modello "Interfaccia separata" consente al livello dell'applicazione (in questo caso il progetto API Web per il microservizio) di dipendere dai requisiti definiti nel modello di dominio, ma di non avere una dipendenza diretta al livello infrastruttura/persistenza. È anche possibile usare l'inserimento delle dipendenze per isolare l'implementazione, che viene definita nel livello infrastruttura/persistenza tramite i repository.
 

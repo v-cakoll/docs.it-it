@@ -2,12 +2,12 @@
 title: Procedure dettagliate e panoramica introduttiva tecnica
 description: Modernizza le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows Panoramica delle procedure dettagliate e delle informazioni tecniche
 ms.date: 04/28/2018
-ms.openlocfilehash: 190b33c4307b09bab0543d481e66ac9328074a0d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cff418d9b6e931a3082d8a2f8b818e7275139578
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69660889"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80987869"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Procedure dettagliate e panoramica introduttiva tecnica
 
@@ -204,11 +204,11 @@ Possono esserci variazioni sulla distribuzione delle app eShopModernizing in ACI
 
 ### <a name="benefits"></a>Vantaggi
 
-Istanze di Azure Container semplifica la creazione e gestione di contenitori Docker in Azure, senza dover eseguire il provisioning di macchine virtuali o di adottare un servizio di livello superiore. Con ACI, è possibile distribuire direttamente un contenitore Windows in Azure ed esporlo a Internet con un nome di dominio completo (FQDN) in pochi secondi (a condizione che l'immagine del contenitore di Windows sia pronta in un Registro di sistema Docker come Docker Hub o Azure Container registro).
+Istanze di Azure Container semplifica la creazione e gestione di contenitori Docker in Azure, senza dover eseguire il provisioning di macchine virtuali o di adottare un servizio di livello superiore. Con ACI, è possibile distribuire direttamente un contenitore Windows in Azure ed esporlo a Internet con un nome di dominio completo (FQDN) in pochi secondi (a condizione che l'immagine del contenitore Di Windows sia pronta in un Registro di sistema Docker come Docker Hub o Registro di sistema del contenitore di Azure).
 
 ### <a name="considerations"></a>Considerazioni
 
-La distribuzione di contenitori di Windows con .NET Framework / ASP.NET completo o SQL Server in istanze di contenitori di Azure (ACI) non è così veloce come la distribuzione a un normale host Docker (come Windows Server 2016 con contenitori di Windows) perché l'immagine Docker deve essere scaricata (estratta dal Registro di sistema Docker) ogni volta e le dimensioni dell'immagine del contenitore SQL (15,1 GB) e l'immagine del contenitore ASP.NET (13,9 GB) sono significativamente in grandi dimensioni, e le dimensioni dell'immagine del contenitore SQL (15,1 GB) e l'immagine del contenitore ASP.NET (13,9 GB) sono in genere elevato, e le dimensioni dell'immagine del contenitore SQL (15,1 GB) e dell'immagine del contenitore di ASP.NET (13,9 GB) sono in genere elevato, tuttavia è molto più economico che mantenere il proprio host docker (permanentemente on-line Windows Server 2016 con VM contenitori Windows in Azure) per non parlare di un intero orchestratore come Kubernetes in Azure (AKS) che è, d'altra parte, un'ottima scelta per le distribuzioni di produzione.
+La distribuzione di contenitori di Windows con .NET Framework / ASP.NET completi o SQL Server in istanze di contenitori di Azure (ACI) non è così veloce quanto la distribuzione in un normale host Docker (ad esempio Windows Server 2016 con contenitori di Windows) perché l'immagine Docker deve essere scaricata (estratta dal Registro di sistema Docker) ogni volta e le dimensioni dell'immagine del contenitore SQL (15,1 GB) e l'immagine del contenitore di ASP.NET (13,9 GB) sono significativamente in grandi dimensioni, e le dimensioni dell'immagine del contenitore SQL (15,1 GB) e l'immagine del contenitore di ASP.NET (13,9 GB) sono in genere, ovvero le dimensioni dell'immagine del contenitore SQL (15,1 GB) e l'immagine del contenitore di ASP.NET (13,9 GB) tuttavia è molto più economico che mantenere il proprio host docker (in modo permanente on-line Windows Server 2016 con Windows Containers VM in Azure) per non parlare di un intero orchestrator come Kubernetes in Azure (AKS) che è, d'altra parte, un'ottima scelta per le distribuzioni di produzione.
 
 Come conclusione principale, l'uso delle istanze di Azure Container è un'opzione molto interessante per gli scenari di sviluppo/test e per le pipeline CI/CD.
 
@@ -254,7 +254,7 @@ L'obiettivo di questa procedura dettagliata è imparare a distribuire un'applica
 
 ### <a name="benefits"></a>Vantaggi
 
-La distribuzione in un cluster in Kubernetes offre numerosi vantaggi. Il vantaggio principale è che si ottiene un ambiente pronto per la produzione in cui è possibile scalare orizzontalmente l'applicazione in base al numero di istanze del contenitore che si desidera utilizzare (scalabilità interna nei nodi esistenti) e in base al numero di nodi o macchine virtuali nel cluster ( scalabilità globale del cluster).
+La distribuzione in un cluster in Kubernetes offre numerosi vantaggi. Il vantaggio principale è che si ottiene un ambiente pronto per la produzione in cui è possibile scalare orizzontalmente l'applicazione in base al numero di istanze del contenitore che si desidera utilizzare (scalabilità interna nei nodi esistenti) e in base al numero di nodi o macchine virtuali nel cluster (scalabilità globale del cluster).
 
 Il servizio contenitore di Azure ottimizza gli strumenti e le tecnologie open source più diffusi in modo specifico per Azure.Azure Container Service optimizes popular open source tools and technologies specifically for Azure. Si ottiene una soluzione aperta che offre portabilità, sia per i contenitori che per la configurazione dell'applicazione. Selezionare la dimensione, il numero di host e gli strumenti dell'agente di orchestrazione-servizio contenitore gestisce tutto il resto.
 

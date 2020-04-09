@@ -2,12 +2,12 @@
 title: Modernizzare le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows (seconda edizione)
 description: Questo e-book contiene informazioni su come trasferire in modalità lift-and-shift e modernizzare le applicazioni esistenti nei contenitori e nel cloud di Azure.
 ms.date: 04/28/2018
-ms.openlocfilehash: 9439de84dd46ac3153d951378764d10184c33a52
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 95a5870254481a4c6c9eed82b5be5e1eb10be346
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77628401"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80987946"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernizzare le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows (seconda edizione)
 
@@ -81,7 +81,7 @@ La definizione e la breve spiegazione per ogni livello di maturità dell'applica
 **Livello 1: applicazioni Cloud Infrastructure-Ready:** in questo approccio alla migrazione, è sufficiente eseguire la migrazione o ospitare nuovamente le applicazioni locali correnti in una piattaforma di infrastruttura come servizio ([IaaS](https://azure.microsoft.com/overview/what-is-iaas/)). Le app hanno quasi la stessa composizione di prima, ma vengono ora distribuite in macchine virtuali nel cloud.
 Questo semplice tipo di migrazione è in genere noto nel settore come "lift-and-shift".
 
-**Livello 2:** applicazioni ottimizzate per il cloud: a questo livello e ancora senza riprogettare o modificare codice significativo, è possibile ottenere ulteriori vantaggi dall'esecuzione dell'app nel cloud con tecnologie moderne come contenitori e servizi aggiuntivi gestiti nel cloud. È possibile migliorare la flessibilità delle applicazioni per distribuirle più velocemente ridefinendo i processi delle operazioni di sviluppo aziendale (DevOps). A tale scopo, è possibile usare tecnologie come i contenitori di Windows, basati sul motore Docker. I contenitori rimuovono le complicazioni causate dalle dipendenze dell'applicazione quando si esegue la distribuzione in più fasi. In questo modello di maturità è possibile distribuire contenitori in infrastrutture IaaS o PaaS usando allo stesso tempo servizi aggiuntivi gestiti dal cloud correlati a database, cache come servizio, monitoraggio e pipeline di integrazione continua/distribuzione continua (CI/CD).
+**Livello 2:** applicazioni ottimizzate per il cloud: a questo livello e ancora senza riprogettare o modificare codice significativo, è possibile ottenere ulteriori vantaggi dall'esecuzione dell'app nel cloud con tecnologie moderne come contenitori e servizi aggiuntivi gestiti nel cloud. È possibile migliorare la flessibilità delle applicazioni per distribuirle più velocemente ridefinendo i processi delle operazioni di sviluppo aziendale (DevOps). A tale scopo, è possibile usare tecnologie come i contenitori di Windows, basati sul motore Docker. I contenitori rimuovono i conflitti causati dalle dipendenze dell'applicazione quando si esegue la distribuzione in più fasi. In questo modello di maturità è possibile distribuire contenitori in infrastrutture IaaS o PaaS usando allo stesso tempo servizi aggiuntivi gestiti dal cloud correlati a database, cache come servizio, monitoraggio e pipeline di integrazione continua/distribuzione continua (CI/CD).
 
 Il terzo livello di maturità rappresenta l'obiettivo finale nel cloud, ma è facoltativo per numerose app ed esula dall'ambito di questa guida:
 
@@ -98,7 +98,7 @@ La tabella 1-1 descrive i vantaggi principali di ogni approccio alla migrazione 
 | **Vantaggi**|
 | <li>Nessuna necessità di riprogettazione o nuovo codice <li> Lavoro minimo per una migrazione rapida <li> Minimo comune denominatore supportato in Azure <li> Garanzie di disponibilità di base <li> Dopo lo spostamento nel cloud, è più semplice aumentare ancora di più il livello di modernizzazione | <li> Nessuna necessità di riprogettazione <li> Modifiche minime a codice/configurazione <li> Distribuzione migliorata e flessibilità DevOps per il rilascio grazie ai contenitori <li> Densità maggiore e costi di distribuzione minori <li> Portabilità di app e dipendenze <li> Flessibilità degli obiettivi host: approcci PaaS o IaaS | <li> Progettazione per il cloud, si ottengono i migliori vantaggi dal cloud, ma è necessario nuovo codice <li> Approcci nativi del cloud basati su microservizi <li> Applicazioni cruciali moderne, iperscalabile con resilienza del cloud <li> Servizi completamente gestiti <li> Ottimizzazione per la scalabilità <li> Ottimizzazione per la flessibilità autonoma in base al sottosistema <li> Approccio basato su distribuzione e DevOps |
 | **Problematiche** |
-| <li> Valore cloud inferiore, all'infuori del cambiamento nelle spese operative e della chiusura di data center <li> Poco è gestito: Nessun sistema operativo o middleware patch; potrebbero utilizzare soluzioni infrastrutturali, come Terraform, Spinnaker o Puppet | <li> L'uso di contenitori è un passaggio aggiuntivo della curva di apprendimento per gli sviluppatori e le operazioni IT <li> Le pipeline DevOps e CI/CD sono in genere obbligatorie per questo approccio. Se non sono già presenti nella cultura dell'organizzazione, potrebbe trattarsi di una sfida aggiuntiva| <li> Richiede la riprogettazione per le app cloud native e le architetture di microservizi e in genere richiede interventi notevoli di refactoring o riscrittura del codice durante la modernizzazione (aumento di tempi e budget)|
+| <li> Valore cloud inferiore, all'infuori del cambiamento nelle spese operative e della chiusura di data center <li> Poco è gestito: Nessun sistema operativo o middleware patch; potrebbero utilizzare soluzioni infrastrutturali, come Terraform, Spinnaker o Puppet | <li> L'uso di contenitori è un passaggio aggiuntivo della curva di apprendimento per gli sviluppatori e le operazioni IT <li> Le pipeline DevOps e CI/CD sono in genere "un must" per questo approccio. Se non sono già presenti nella cultura dell'organizzazione, potrebbe trattarsi di una sfida aggiuntiva| <li> Richiede la riprogettazione per le app cloud native e le architetture di microservizi e in genere richiede interventi notevoli di refactoring o riscrittura del codice durante la modernizzazione (aumento di tempi e budget)|
 > **Tabella 1-1.** Vantaggi e sfide dei percorsi di modernizzazione per servizi e applicazioni .NET esistenti
 
 ### <a name="key-technologies-and-architectures-by-maturity-level"></a>Principali tecnologie e architetture in base al livello di maturità

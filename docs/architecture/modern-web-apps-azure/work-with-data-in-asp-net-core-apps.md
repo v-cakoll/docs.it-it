@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Usar
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 5a38ca94b6df676858e7cb058272e450aaf1572e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b706332b28aec669a841f510046aa7b185be1373
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78241039"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80987842"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Uso dei dati nelle app ASP.NET Core
 
@@ -130,7 +130,7 @@ var brandsWithItems = await _context.CatalogBrands
 You can include multiple relationships, and you can also include subrelationships using ThenInclude. EF Core eseguirà una singola query per recuperare il set di entità ottenuto. In alternativa è possibile includere proprietà di navigazione di proprietà di navigazione passando una stringa separata da "." al metodo di estensione `.Include()`, come illustrato di seguito:
 
 ```csharp
-    .Include(“Items.Products”)
+    .Include("Items.Products")
 ```
 
 Oltre a incapsulare la logica di filtro, una specifica può indicare la forma dei dati da restituire, incluse le proprietà da popolare. L'esempio eShopOnWeb include diverse specifiche che illustrano l'incapsulamento di informazioni di caricamento eager nella specifica. Di seguito è visualizzato un esempio d'uso della specifica come parte di una query:
@@ -506,7 +506,7 @@ new CancellationChangeToken(cts.Token));
 _cache.Get<CancellationTokenSource>("cts").Cancel();
 ```
 
-La memorizzazione nella cache può migliorare notevolmente le prestazioni delle pagine Web che richiedono più volte gli stessi valori dal database. Assicurarsi di misurare le prestazioni di accesso ai dati e delle pagine prima di applicare la memorizzazione nella cache e applicarla solo dove si ritiene sia necessario un miglioramento. La memorizzazione nella cache consuma le risorse di memoria del server Web e aumenta la complessità dell'applicazione, pertanto è importante non eseguire anzitempo l'ottimizzazione con questa tecnica.
+La memorizzazione nella cache può migliorare notevolmente le prestazioni delle pagine Web che richiedono più volte gli stessi valori dal database. Assicurarsi di misurare le prestazioni di accesso ai dati e delle pagine prima di applicare la memorizzazione nella cache e applicarla solo dove si ritiene sia necessario un miglioramento. La memorizzazione nella cache consuma risorse di memoria del server Web e aumenta la complessità dell'applicazione, pertanto è importante non ottimizzare prematuramente utilizzando questa tecnica.
 
 >[!div class="step-by-step"]
 >[Successivo](develop-asp-net-core-mvc-apps.md)

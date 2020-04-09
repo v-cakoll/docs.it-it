@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 7e879a44bd8056ac8753c1e86464fe14fd6b9e50
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: be5c26c81480dc2854b849dd7f2b1c46ee3e526a
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523586"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989168"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novità di .NET Core 3.0
 
@@ -140,7 +140,7 @@ Per altre informazioni sullo strumento IL Linker, vedere la [documentazione](htt
 
 ### <a name="tiered-compilation"></a>Compilazione a livelli
 
-Per impostazione predefinita, con .NET Core 3.0 la [compilazione a livelli](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation-guide.md) è attiva. Questa funzionalità consente al runtime di utilizzare in modo più adattivo il compilatore JIT (Just-In-Time) per ottenere prestazioni migliori.
+Per impostazione predefinita, con .NET Core 3.0 la [compilazione a livelli](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation.md) è attiva. Questa funzionalità consente al runtime di utilizzare in modo più adattivo il compilatore JIT (Just-In-Time) per ottenere prestazioni migliori.
 
 Il vantaggio principale della compilazione a più livelli è quello di fornire due modi di metodi jitting: in un livello di qualità inferiore, ma più veloce o un livello di qualità superiore, ma più lento. La qualità si riferisce a quanto bene il metodo è ottimizzato. TC aiuta a migliorare le prestazioni di un'applicazione durante le varie fasi di esecuzione, dall'avvio allo stato stabile. Quando la compilazione a livelli è disabilitata, ogni metodo viene compilato in un unico modo che è di parte delle prestazioni di stato costante rispetto alle prestazioni di avvio.
 
@@ -373,7 +373,7 @@ Sono disponibili [immagini Docker per .NET Core in ARM64](https://hub.docker.com
 > [!NOTE]
 > Il supporto **ARM64** per Windows non è ancora disponibile.
 
-## <a name="security"></a>Security
+## <a name="security"></a>Sicurezza
 
 ### <a name="tls-13--openssl-111-on-linux"></a>TLS 1.3 e OpenSSL 1.1.1 in Linux
 
@@ -506,7 +506,7 @@ Sono state aggiunte API che consentono l'accesso a determinate istruzioni CPU or
 
 Ove appropriato, le librerie .NET hanno iniziato a usare queste istruzioni per migliorare le prestazioni.
 
-Per altre informazioni, vedere [.NET Platform Dependent Intrinsics](https://github.com/dotnet/designs/blob/master/accepted/platform-intrinsics.md) (Intrinseci dipendenti dalla piattaforma .NET).
+Per ulteriori informazioni, vedere [Intrinseci dipendenti dalla piattaforma .NET](https://github.com/dotnet/designs/blob/master/accepted/2018/platform-intrinsics.md).
 
 ### <a name="improved-net-core-version-apis"></a>Miglioramento delle API della versione .NET Core
 

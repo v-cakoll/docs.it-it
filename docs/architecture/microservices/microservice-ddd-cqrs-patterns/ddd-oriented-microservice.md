@@ -2,12 +2,12 @@
 title: Progettazione di un microservizio orientato a DDD
 description: Architettura di microservizi .NET per applicazioni .NET incluse in contenitori | Progettazione del microservizio degli ordini orientato a DDD e dei relativi livelli dell'applicazione.
 ms.date: 10/08/2018
-ms.openlocfilehash: c5ac55978ca979a3ae055d9b0cd2d3c6b3187b4e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 583e103c8bd9d828731a658ea2fd2aa0758e7a12
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401697"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988739"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>Progettare un microservizio orientato a DDD
 
@@ -71,7 +71,7 @@ Passando al livello dell'applicazione, è possibile citare nuovamente il libro d
 
 **Livello dell'applicazione:** definisce i processi che il software dovrà eseguire e indica agli oggetti di dominio espressivi per risolvere i problemi. Le attività di cui è responsabile questo livello sono significative per il business o necessarie per l'interazione con i livelli dell'applicazione di altri sistemi. Questo livello deve essere di ampiezza limitata. Non contiene regole business o informazioni, ma si limita a coordinare le attività e a delegare il lavoro a collaborazioni di oggetti di dominio nel livello immediatamente successivo. Non presenta uno stato che riflette la situazione di business, ma può avere uno stato che riflette l'avanzamento di un'attività per l'utente o il programma.
 
-Il livello dell'applicazione di un microservizio in .NET in genere viene codificato come progetto API Web ASP.NET Core. Il progetto implementa l'interazione del microservizio, l'accesso remoto alla rete e le API Web esterne usate dalle app client o dell'interfaccia utente. Include le query se si usa un approccio CQRS, i comandi accettati dal microservizio e la comunicazione basata su eventi tra microservizi (eventi di integrazione). L'API Web di ASP.NET Core che rappresenta il livello dell'applicazione non può contenere regole business o informazioni di dominio (in particolare regole di dominio per le transazioni o gli aggiornamenti); tali elementi devono appartenere alla libreria di classi del modello di dominio. Il livello dell'applicazione deve solo coordinare le attività e non deve contenere o definire uno stato di dominio (modello di dominio). Delega l'esecuzione delle regole di business alle classi di modello di dominio stesse (radici di aggregazione ed entità di dominio), che infine aggiorneranno i dati all'interno di tali entità di dominio.
+Il livello dell'applicazione di un microservizio in .NET è comunemente codificato come progetto API Web di ASP.NET Core. Il progetto implementa l'interazione del microservizio, l'accesso remoto alla rete e le API Web esterne usate dall'interfaccia utente o dalle app client. Include le query se si usa un approccio CQRS, i comandi accettati dal microservizio e la comunicazione basata su eventi tra microservizi (eventi di integrazione). L'API Web di ASP.NET Core che rappresenta il livello dell'applicazione non può contenere regole business o informazioni di dominio (in particolare regole di dominio per le transazioni o gli aggiornamenti); tali elementi devono appartenere alla libreria di classi del modello di dominio. Il livello dell'applicazione deve solo coordinare le attività e non deve contenere o definire uno stato di dominio (modello di dominio). Delega l'esecuzione delle regole di business alle classi di modello di dominio stesse (radici di aggregazione ed entità di dominio), che infine aggiorneranno i dati all'interno di tali entità di dominio.
 
 In pratica, la logica dell'applicazione è il punto in cui si implementano tutti i casi d'uso che dipendono da un front-end specificato. Ad esempio, l'implementazione relativa a un servizio Web API.
 
@@ -81,7 +81,7 @@ Lo scopo è far sì che la logica di dominio nel livello del modello di dominio,
 
 Il livello infrastruttura è responsabile della persistenza dei dati inizialmente contenuti nelle entità di dominio (in memoria) nei database o altri archivi persistenti. Un esempio è costituito dall'uso del codice di Entity Framework Core per implementare le classi di schemi Repository che usano un elemento DBContext per rendere persistenti i dati in un database relazionale.
 
-In base ai principi di [Persistence Ignorance](https://deviq.com/persistence-ignorance/) e [Infrastructure Ignorance](https://ayende.com/blog/3137/infrastructure-ignorance) precedentemente citati, il livello infrastruttura non deve "contaminare" il livello del modello di dominio. È necessario mantenere le classi di entità di modello indipendenti dall'infrastruttura usata per rendere persistenti i dati (Entity Framework o qualsiasi altro framework) non accettando dipendenze rigide dai framework. La libreria di classi del livello del modello di dominio deve contenere solo il codice di dominio, semplicemente classi di entità [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) che implementano il cuore del software e completamente scollegate delle tecnologie di infrastruttura.
+In conformità con i principi di [Persistence Ignorance](https://deviq.com/persistence-ignorance/) e [Infrastructure Ignorance](https://ayende.com/blog/3137/infrastructure-ignorance) menzionati in precedenza, il livello dell'infrastruttura non deve "contaminare" il livello del modello di dominio. È necessario mantenere le classi di entità di modello indipendenti dall'infrastruttura usata per rendere persistenti i dati (Entity Framework o qualsiasi altro framework) non accettando dipendenze rigide dai framework. La libreria di classi del livello del modello di dominio deve contenere solo il codice di dominio, semplicemente classi di entità [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) che implementano il cuore del software e completamente scollegate delle tecnologie di infrastruttura.
 
 I livelli o le librerie di classi e i progetti dipenderanno quindi dal livello del modello di dominio (libreria), non viceversa, come illustrato nella figura 7-7.
 

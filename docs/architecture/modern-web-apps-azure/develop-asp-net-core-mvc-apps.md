@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Svil
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: a18b4dfc60c7d3971136f73f333b7225735710b3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3de70af23206b0ae0525541b3d2cb480dc5bb882
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503954"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80987907"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Sviluppare app ASP.NET Core MVC
 
@@ -22,17 +22,17 @@ ASP.NET Core è un framework multipiattaforma open source per la compilazione di
 
 ASP.NET Core MVC offre molte funzionalità utili per la compilazione di API e app basate sul Web. Il termine MVC è l'acronimo di "Model-View-Controller", un modello UI che suddivide le responsabilità della risposta alle richieste degli utenti in più sezioni. Oltre a seguire questo modello è possibile implementare funzionalità nelle app ASP.NET Core come Razor Pages. Le pagine Razor sono incorporate in ASP.NET Core MVC e usano le stesse funzionalità per il routing, l'associazione di modelli e così via. Tuttavia, anziché disporre di cartelle e file separati per controller, visualizzazioni e così via e utilizzando il routing basato su attributi, le pagine Razor vengono inserite in un'unica cartella ("/Pages"), instradare in base alla posizione relativa in questa cartella e gestire le richieste con i gestori anziché le azioni del controller.
 
-Quando si crea una nuova app ASP.NET Core è importante avere determinato il tipo di app che si vuole creare. In Visual Studio è possibile scegliere tra diversi modelli. I tre modelli di progetto più comuni sono API Web, Applicazione Web e Applicazione Web (MVC). Questa scelta può essere effettuata solo quando si crea un progetto, ma non è una decisione irrevocabile. Il progetto API Web usa controller MVC standard, ma per impostazione predefinita non dispone di una cartella Views. Allo stesso modo il modello Applicazione Web predefinito usa Razor Pages e pertanto non dispone di una cartella Views. È possibile aggiungere una cartella Views a questi progetti in un secondo momento per supportare il comportamento basato sulle visualizzazioni. I progetti API Web e MVC non includono una cartella Pages per impostazione predefinita, ma è possibile aggiungerne una in un secondo momento per supportare i comportamenti basati su Razor Pages. Considerare questi tre modelli come origini del supporto per tre tipi diversi di interazione dell'utente predefinita: dati (API Web), basata sulle pagine e basata sulle visualizzazioni. Se si vuole è tuttavia possibile combinare e associare alcuni o tutti questi modelli in un singolo progetto.
+Quando si crea una nuova app ASP.NET Core è importante avere determinato il tipo di app che si vuole creare. In Visual Studio è possibile scegliere tra diversi modelli. I tre modelli di progetto più comuni sono API Web, Applicazione Web e Applicazione Web (MVC). Anche se è possibile prendere questa decisione solo quando si crea un progetto per la prima volta, non è una decisione irrevocabile. Il progetto API Web usa controller MVC standard, ma per impostazione predefinita non dispone di una cartella Views. Allo stesso modo il modello Applicazione Web predefinito usa Razor Pages e pertanto non dispone di una cartella Views. È possibile aggiungere una cartella Views a questi progetti in un secondo momento per supportare il comportamento basato sulle visualizzazioni. I progetti API Web e MVC non includono una cartella Pages per impostazione predefinita, ma è possibile aggiungerne una in un secondo momento per supportare i comportamenti basati su Razor Pages. Considerare questi tre modelli come origini del supporto per tre tipi diversi di interazione dell'utente predefinita: dati (API Web), basata sulle pagine e basata sulle visualizzazioni. Se si vuole è tuttavia possibile combinare e associare alcuni o tutti questi modelli in un singolo progetto.
 
 ### <a name="why-razor-pages"></a>Perché Razor Pages?
 
 Razor Pages è l'approccio predefinito per le nuove applicazioni Web in Visual Studio. Razor Pages offre una modalità più semplice per la creazione di funzionalità dell'applicazione basate sulle pagine, ad esempio moduli non SPA. Con i controller e le visualizzazioni capitava spesso di avere applicazioni con controller molto grandi, che funzionavano con molte dipendenze e modelli di visualizzazione diversi e restituivano molte visualizzazioni diverse. Ciò ha comportato una maggiore complessità e spesso ha portato a controller che non hanno seguito il principio di responsabilità singola o principi aperti/chiusi in modo efficace. Razor Pages risolve questo problema incapsulando la logica lato server di una determinata "pagina" logica in un'applicazione Web con markup Razor. Una pagina Razor che non include logica lato server può essere costituita semplicemente da un file Razor (ad esempio "Index.cshtml"). Tuttavia la maggior parte delle pagine Razor non elementari include una classe modello pagina associata, che per convenzione ha lo stesso nome del file Razor seguito dall'estensione "cs", ad esempio "Index.cshtml.cs".
 
-Un modello di pagina Razor Pages combina le responsabilità di un controller MVC e di un elemento viewmodel. Anziché gestire le richieste con metodi di azione del controller, vengono eseguiti gestori modello di pagina come "OnGet()" che eseguono il rendering della pagina associata per impostazione predefinita. Razor Pages semplifica il processo di creazione di pagine singole in un'app ASP.NET Core, pur garantendo tutte le funzionalità architettoniche di ASP.NET Core MVC. Si tratta di una scelta predefinita ottimale per nuove funzionalità basate sulle pagine.
+Modello di pagina di una pagina Razor combina le responsabilità di un controller MVC e un modello di visualizzazione. Anziché gestire le richieste con metodi di azione del controller, vengono eseguiti gestori modello di pagina come "OnGet()" che eseguono il rendering della pagina associata per impostazione predefinita. Razor Pages semplifica il processo di creazione di pagine singole in un'app ASP.NET Core, pur garantendo tutte le funzionalità architettoniche di ASP.NET Core MVC. Si tratta di una scelta predefinita ottimale per nuove funzionalità basate sulle pagine.
 
 ### <a name="when-to-use-mvc"></a>Quando usare MVC
 
-Se si stanno creando API Web, il modello MVC è preferibile all'uso di Razor Pages. Se il progetto esporrà solo gli endpoint API Web, è consigliabile iniziare dal modello di progetto API Web. In caso contrario, è facile aggiungere controller ed endpoint API associati a qualsiasi app ASP.NET Core.Otherwise, it's easy to add controllers and associated API endpoints to any ASP.NET Core app. Utilizzare l'approccio MVC basato sulla visualizzazione se si esegue la migrazione di un'applicazione esistente da ASP.NET MVC 5 o versioni precedenti per ASP.NET MVC di base e si desidera eseguire questa operazione con il minimo sforzo. Dopo aver eseguito la migrazione iniziale è possibile valutare se è opportuno adottare Razor Pages per le nuove funzionalità o per la migrazione integrale.
+Se si creano API Web, il modello MVC ha più senso che provare a usare pagine Razor.If you're building web APIs, the MVC pattern makes more sense than trying to use Razor Pages. Se il progetto esporrà solo gli endpoint API Web, è consigliabile iniziare dal modello di progetto API Web. In caso contrario, è facile aggiungere controller ed endpoint API associati a qualsiasi app ASP.NET Core.Otherwise, it's easy to add controllers and associated API endpoints to any ASP.NET Core app. Utilizzare l'approccio MVC basato sulla visualizzazione se si esegue la migrazione di un'applicazione esistente da ASP.NET MVC 5 o versioni precedenti per ASP.NET MVC di base e si desidera eseguire questa operazione con il minimo sforzo. Dopo aver effettuato la migrazione iniziale, è possibile valutare se ha senso adottare pagine Razor per nuove funzionalità o anche come migrazione all'ingrosso.
 
 Se scegli di compilare l'app Web usando le pagine Razor o le visualizzazioni MVC, l'app avrà prestazioni simili e includerà il supporto per l'inserimento di dipendenze, i filtri, l'associazione di modelli, la convalida e così via.
 
@@ -76,7 +76,7 @@ public class ProductsController : Controller
 }
 ```
 
-Razor Pages non usa il routing degli attributi. È possibile specificare informazioni aggiuntive sul modello di route per una pagina Razor nel contesto della direttiva `@page` corrispondente:
+Le pagine Razor non utilizzano il routing degli attributi. È possibile specificare informazioni aggiuntive sul modello di route per una pagina Razor nel contesto della direttiva `@page` corrispondente:
 
 ```csharp
 @page "{id:int}"
@@ -319,7 +319,7 @@ Per ulteriori informazioni sull'implementazione dei filtri e sul download di un 
 > - **MSDN Magazine – Filtri MVC di base ASP.NET del mondo reale**  
 >   <https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters>
 
-## <a name="security"></a>Security
+## <a name="security"></a>Sicurezza
 
 La protezione delle applicazioni Web è un argomento molto ampio con numerose considerazioni. A un livello di base, per garantire la sicurezza è necessario conoscere l'identità dell'utente da cui proviene una determinata richiesta e assicurarsi che la richiesta abbia accesso solo alle risorse necessarie. L'autenticazione è il processo di confronto delle credenziali specificate con una richiesta con quelle di un archivio di dati attendibili per verificare se la richiesta deve essere trattata come proveniente da un'entità nota. L'autorizzazione è il processo di limitazione dell'accesso a determinate risorse in base all'identità utente. Un terzo aspetto relativo alla sicurezza è la protezione delle richieste dall'intercettazione da terze parti per cui è necessario [assicurarsi che l'applicazione usi SSL](/aspnet/core/security/enforcing-ssl).
 

@@ -2,12 +2,12 @@
 title: Passaggi nel flusso di lavoro DevOps del ciclo esterno per un'applicazione Docker
 description: Informazioni sui passaggi del "ciclo esterno" del flusso di lavoro DevOps
 ms.date: 02/15/2019
-ms.openlocfilehash: 735f92c00cd6279649ec3b0c35cfb00543f21a8c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fdda1b6a2deb08ed97867583fcc8048d4dba880c
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75936787"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988973"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Passaggi nel flusso di lavoro DevOps del ciclo esterno per un'applicazione Docker
 
@@ -184,7 +184,7 @@ Dal punto di vista della distribuzione continua, in particolare di Azure DevOps 
 
 **Figura 5-9**. Distribuzione di applicazioni distribuite nel servizio contenitore
 
-Inizialmente, durante la distribuzione in determinati cluster o agenti di orchestrazione, venivano in genere usati script e meccanismi di distribuzione specifici per ogni agente di orchestrazione (Kubernetes e Service Fabric hanno meccanismi di distribuzione diversi) anziché lo strumento `docker-compose` più semplice e facile da usare basato sul file di definizione `docker-compose.yml`. Tuttavia, grazie all'attività Distribuzione di Docker di Azure DevOps Services, illustrata nella figura 5-10, è ora possibile anche distribuire negli agenti di orchestrazione supportati semplicemente usando il file `docker-compose.yml` poiché lo strumento esegue la "conversione" automaticamente (dal file `docker-compose.yml` nel formato richiesto dall'agente di orchestrazione).
+Inizialmente, durante la distribuzione in determinati cluster o agenti di orchestrazione, venivano in genere usati script e meccanismi di distribuzione specifici per ogni agente di orchestrazione (Kubernetes e Service Fabric hanno meccanismi di distribuzione diversi) anziché lo strumento `docker-compose` più semplice e facile da usare basato sul file di definizione `docker-compose.yml`. Tuttavia, grazie all'attività Distribuisci Docker servizi DevOps di Azure, illustrata nella Figura 5-10, `docker-compose.yml` è ora anche possibile distribuire agli agenti `docker-compose.yml` di orchestrazione supportati usando semplicemente il file familiare perché lo strumento esegue automaticamente tale "traduzione" (dal file al formato richiesto dall'agente di orchestrazione).
 
 ![Screenshot che mostra l'attività Distribuisci a Kubernetes.](./media/docker-application-outer-loop-devops-workflow/add-deploy-to-kubernetes-task.png)
 

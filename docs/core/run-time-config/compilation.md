@@ -3,12 +3,12 @@ title: Impostazioni di configurazione compilazione
 description: Informazioni sulle impostazioni di runtime che configurano il funzionamento del compilatore JIT per le app .NET Core.Learn about run-time settings that configure how the JIT compiler works for .NET Core apps.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: adf1f01dba7387b89ee56784e33653d6a132c0e3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ac51aa13254b2f2b1fdd8d1dd9c52559831a1659
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77092889"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989116"
 ---
 # <a name="run-time-configuration-options-for-compilation"></a>Opzioni di configurazione in fase di esecuzione per la compilazioneRun-time configuration options for compilation
 
@@ -19,7 +19,7 @@ ms.locfileid: "77092889"
   - Il secondo livello genera codice ottimizzato in background ("ottimizzazione di JIT").
 - In .NET Core 3.0 e versioni successive, la compilazione a livelli è abilitata per impostazione predefinita.
 - In .NET Core 2.1 e 2.2 la compilazione a livelli è disabilitata per impostazione predefinita.
-- Per ulteriori informazioni, vedere la guida alla [compilazione a livelli](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation-guide.md).
+- Per ulteriori informazioni, vedere la guida alla [compilazione a livelli](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation.md).
 
 | | Nome impostazione | Valori |
 | - | - | - |

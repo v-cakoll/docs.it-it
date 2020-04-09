@@ -2,12 +2,12 @@
 title: Applicazione degli approcci CQRS e CQS in un microservizio DDD in eShopOnContainers
 description: Architettura di microservizi .NET per applicazioni .NET incluse in contenitori | Modalità di implementazione di CQRS nel microservizio degli ordini in eShopOnContainers.
 ms.date: 03/03/2020
-ms.openlocfilehash: 16fe46189a5b43591adebbb764d4acef2f7efbfb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eda0ee374b41a81811e92e2829b10dc8515e0ccd
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847154"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988492"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Applicare gli approcci CQRS e CQS in un microservizio DDD in eShopOnContainers
 
@@ -15,7 +15,7 @@ La progettazione del microservizio per gli ordini nell'applicazione di riferimen
 
 L'aspetto essenziale di tali modelli e, in questo caso, il punto importante è che le query sono idempotenti: indipendentemente da quante volte si esegue una query in un sistema, lo stato del sistema non viene modificato. In altre parole, le query non hanno effetti collaterali.
 
-Pertanto è possibile usare un modello di dati di "lettura" diverso dal modello di dominio "di scrittura" della logica transazionale, anche se i microservizi di ordinamento usano lo stesso database. Ecco perché questo è un approccio CQRS semplificato.
+Pertanto, è possibile usare un modello di dati "letture" diverso rispetto al modello di dominio "scritture" della logica transazionale, anche se i microservizi di ordinamento utilizzano lo stesso database. Ecco perché questo è un approccio CQRS semplificato.
 
 D'altra parte, lo stato dei comandi che attivano le transazioni e gli aggiornamenti dei dati cambia nel sistema. Con i comandi, occorre prestare attenzione quando si affrontano scenari complessi e regole aziendali in continua evoluzione. Ecco perché le tecniche di progettazione DDD consentono di ottenere un sistema con una modellazione ottimale.
 
@@ -25,7 +25,7 @@ Uno di questi schemi è lo schema Aggregate che verrà esaminato più in dettagl
 
 Come illustrato nella Figura 7-2 della sezione precedente, questa guida suggerisce l'utilizzo di modelli DDD solo nell'area transazionale/aggiornamenti del microservizio, ovvero come attivato dai comandi. Le query possono seguire un approccio più semplice e devono essere separate dai comandi, secondo quanto previsto dall'approccio CQRS.
 
-Per implementare il "lato query" è possibile scegliere tra numerosi approcci, ad esempio uno basato su ORM (Object-Relational Mapping), come EF Core, proiezioni di AutoMapper, stored procedure, viste, viste materializzate o micro ORM.
+Per l'implementazione del lato "query", è possibile scegliere tra molti approcci, da ORM completo come Entity Framework Core, proiezioni AutoMapper, stored procedure, viste, viste materializzate o un micro ORM.
 
 In questa guida e in eShopOnContainers, in particolare nel microservizio degli ordini, è stato scelto di implementare query lineari tramite un micro ORM come [Dapper](https://github.com/StackExchange/dapper-dot-net). In questo modo è possibile implementare qualsiasi query basata su istruzioni SQL per ottenere le prestazioni migliori, grazie a un framework leggero con un sovraccarico ridotto.
 

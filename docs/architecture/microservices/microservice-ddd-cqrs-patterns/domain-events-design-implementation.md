@@ -2,12 +2,12 @@
 title: 'Eventi del dominio: progettazione e implementazione'
 description: Architettura di Microservizi .NET per applicazioni .NET in contenitori | Ottenere un quadro dettagliato degli eventi di dominio, un concetto chiave per stabilire la comunicazione tra le aggregazioni.
 ms.date: 10/08/2018
-ms.openlocfilehash: 3bba18d4a77b47abee55c16bae8a64ed27ac9aba
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e03abba66945a6434f6a81eaa9f50d53998f346c
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74884228"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988716"
 ---
 # <a name="domain-events-design-and-implementation"></a>Eventi del dominio: progettazione e implementazione
 
@@ -61,7 +61,7 @@ La gestione degli eventi del dominio avviene a livello di applicazione. Il livel
 
 Gli eventi del dominio possono essere usati anche per attivare un numero qualsiasi di azioni di applicazioni e, ancor più importante, devono essere aperti ad aumentarle in futuro in modo disgiunto. Ad esempio, quando l'ordine viene avviato è possibile pubblicare un evento del dominio per propagare queste informazioni ad altre aggregazioni o per generare azioni di applicazioni, come le notifiche.
 
-Il punto chiave è il numero aperto di azioni da eseguire al verificarsi di un evento del dominio. Con il tempo le azioni e le regole nel dominio e nell'applicazione aumenteranno. Aumenteranno la complessità o il numero di azioni di effetti collaterali al verificarsi di un evento, ma se il codice è stato accoppiato "con la colla", ossia creando oggetti specifici con `new`, ogni volta che è necessario aggiungere una nuova azione occorrerà modificare anche il codice in uso e testato.
+Il punto chiave è il numero aperto di azioni da eseguire al verificarsi di un evento del dominio. Con il tempo le azioni e le regole nel dominio e nell'applicazione aumenteranno. La complessità o il numero di azioni di effetto collaterale quando accade qualcosa aumenterà, ma se `new`il codice è stato accoppiato con "colla" (vale a dire, la creazione di oggetti specifici con ), quindi ogni volta che è necessario aggiungere una nuova azione sarebbe anche necessario modificare il codice di lavoro e testato.
 
 Questa modifica può generare nuovi bug e tale approccio non è conforme al [principio aperto/chiuso](https://en.wikipedia.org/wiki/Open/closed_principle) di [SOLID](https://en.wikipedia.org/wiki/SOLID). Come se non bastasse, la classe originale che orchestra le operazioni aumenterebbe sempre di più, contrariamente al [principio di singola responsabilità (Single Responsibility Principle, SRP)](https://en.wikipedia.org/wiki/Single_responsibility_principle).
 
@@ -69,7 +69,7 @@ Se invece si usano gli eventi del dominio, è possibile creare un'implementazion
 
 1. Inviare un comando, ad esempio CreateOrder.
 2. Ricevere il comando in un gestore di comandi.
-   - Eseguire una transazione della singola aggregazione.
+   - Eseguire una singola transazione di aggregazione.
    - (Facoltativo) Generare eventi del dominio per gli effetti collaterali, ad esempio OrderStartedDomainEvent.
 3. Gestire gli eventi del dominio (all'interno del processo corrente) che eseguiranno un numero aperto di effetti collaterali in più aggregazioni o azioni di applicazioni. Ad esempio:
    - Verificare o creare l'acquirente e la modalità di pagamento.
@@ -82,7 +82,7 @@ Come illustrato nella figura 7-15, a partire dallo stesso evento di dominio è p
 
 **Figura 7-15**. Gestione di più azioni per ogni dominio
 
-Per lo stesso evento possono essere presenti diversi gestori nel livello dell'applicazione, un gestore può risolvere la coerenza tra aggregazioni, un altro può pubblicare un evento di integrazione in modo che possa essere usato da altri microservizi. In genere i gestori di eventi si trovano a livello dell'applicazione perché si usano oggetti di infrastruttura, come i repository o un'API di applicazione, per il comportamento del microservizio. In questo senso, i gestori di eventi sono simili ai gestori di comandi poiché entrambi fanno parte del livello dell'applicazione. La differenza importante è che un comando deve essere elaborato una sola volta. Un evento del dominio può essere elaborato zero o *n* volte perché può essere ricevuto da più ricevitori o gestori dell'evento con uno scopo diverso per ogni gestore.
+Per lo stesso evento possono essere presenti diversi gestori nel livello dell'applicazione, un gestore può risolvere la coerenza tra aggregazioni, un altro può pubblicare un evento di integrazione in modo che possa essere usato da altri microservizi. I gestori eventi sono in genere nel livello dell'applicazione, perché si useranno oggetti dell'infrastruttura come repository o un'API dell'applicazione per il comportamento del microservizio. In questo senso, i gestori di eventi sono simili ai gestori di comandi poiché entrambi fanno parte del livello dell'applicazione. La differenza importante è che un comando deve essere elaborato una sola volta. Un evento del dominio può essere elaborato zero o *n* volte perché può essere ricevuto da più ricevitori o gestori dell'evento con uno scopo diverso per ogni gestore.
 
 La presenza di un numero aperto di gestori per evento di dominio consente di aggiungere tutte le regole di dominio necessarie, senza influire sul codice corrente. Ad esempio, implementare la regola di business seguente può essere facile come aggiungere alcuni gestori di eventi o anche uno solo:
 
@@ -124,7 +124,7 @@ Nel linguaggio comune del dominio, poiché un evento è qualcosa che si è verif
 
 Come notato in precedenza, una caratteristica importante degli eventi è che, poiché un evento è qualcosa che si è verificato in passato, non deve variare. Di conseguenza la classe deve essere non modificabile. Nel codice precedente le proprietà sono di sola lettura. Non c'è alcun modo di aggiornare l'oggetto, è possibile solo impostarne i valori durante la creazione.
 
-È importante evidenziare che se gli eventi del dominio venissero gestiti in modo asincrono, tramite una coda in cui è necessario serializzare e deserializzare gli oggetti dell'evento, le proprietà dovrebbero essere "private set" (private) invece che di sola lettura, in modo che il deserializzatore possa assegnare i valori al momento della rimozione dalla coda. Ciò non è un problema nel microservizio degli ordini, dal momento che la pubblicazione/sottoscrizione dell'evento di dominio viene implementata in modo sincrono tramite MediatR.
+È importante sottolineare qui che se gli eventi di dominio dovessero essere gestiti in modo asincrono, utilizzando una coda che richiedeva la serializzazione e la deserializzazione degli oggetti evento, le proprietà dovrebbero essere "private set" anziché di sola lettura, in modo che il deserializzatore sarebbe in grado di assegnare i valori al momento della dequequequesing. Ciò non è un problema nel microservizio degli ordini, dal momento che la pubblicazione/sottoscrizione dell'evento di dominio viene implementata in modo sincrono tramite MediatR.
 
 ### <a name="raise-domain-events"></a>Generare eventi di dominio
 
@@ -248,7 +248,7 @@ Un altro modo per eseguire il mapping degli eventi a più gestori di eventi cons
 
 **Figura 7-16**. Dispatcher di eventi del dominio usando IoC
 
-È possibile compilare autonomamente tutto il codice complesso e gli elementi per implementare questo approccio. Tuttavia è possibile anche usare le librerie disponibili come [MediatR](https://github.com/jbogard/MediatR), che usa il contenitore IoC in background. È possibile pertanto usare direttamente le interfacce predefinite e i metodi di pubblicazione/invio dell'oggetto mediator.
+È possibile compilare autonomamente tutto il codice complesso e gli elementi per implementare questo approccio. Tuttavia è possibile anche usare le librerie disponibili come [MediatR](https://github.com/jbogard/MediatR), che usa il contenitore IoC in background. È quindi possibile utilizzare direttamente le interfacce predefinite e i metodi di pubblicazione/spedizione dell'oggetto mediatore.
 
 Nel codice è necessario prima registrare i tipi di gestori di eventi nel contenitore IoC, come illustrato nell'esempio seguente nel [microservizio per gli ordini eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Infrastructure/AutofacModules/MediatorModule.cs):
 
