@@ -9,12 +9,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 252d509617ab5dbc53b282bac52e356396d82fab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ae8f18deff5e96d7e475df8814ad64b38d14d585
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75711896"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121384"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Cast e conversioni di tipi (Guida per programmatori C#)
 
@@ -29,7 +29,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 - **Conversioni implicite**: non è necessaria alcuna sintassi speciale perché la conversione è indipendente dai tipi e i dati non andranno persi. Gli esempi includono conversioni dai tipi integrali più piccoli ai più grandi e conversioni dalle classi derivate alle classi di base.  
   
-- **Le conversioni esplicite (cast):** le conversioni esplicite richiedono [ `()`l'operatore cast ](../../language-reference/operators/type-testing-and-cast.md#cast-operator-). L'esecuzione di cast è obbligatoria se si prevede una possibile perdita di informazioni durante la conversione oppure se la conversione non riesce per altri motivi. Alcuni esempi tipici includono la conversione numerica in un tipo con precisione inferiore o con un intervallo più piccolo e la conversione di un'istanza della classe di base in una classe derivata.  
+- **Conversioni esplicite (cast):** le conversioni esplicite richiedono [un'espressione cast](../../language-reference/operators/type-testing-and-cast.md#cast-expression). L'esecuzione di cast è obbligatoria se si prevede una possibile perdita di informazioni durante la conversione oppure se la conversione non riesce per altri motivi. Alcuni esempi tipici includono la conversione numerica in un tipo con precisione inferiore o con un intervallo più piccolo e la conversione di un'istanza della classe di base in una classe derivata.  
   
 - **Conversioni definite dall'utente**: le conversioni definite dall'utente vengono eseguite da metodi speciali che possono essere definiti per abilitare conversioni esplicite e implicite tra tipi personalizzati che non hanno una relazione di classe basata su una classe di base. Per altre informazioni, vedere [Operatori di conversione definiti dall'utente](../../language-reference/operators/user-defined-conversion-operators.md).  
   
@@ -90,9 +90,9 @@ Per altre informazioni, vedere la sezione [Conversioni](~/_csharplang/spec/conve
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../index.md)
+- [Guida alla programmazione in C](../index.md)
 - [Tipi](./index.md)
-- [Operatore cast ()](../../language-reference/operators/type-testing-and-cast.md#cast-operator-)
+- [Espressione cast](../../language-reference/operators/type-testing-and-cast.md#cast-expression)
 - [Operatori di conversione definiti dall'utente](../../language-reference/operators/user-defined-conversion-operators.md)
 - [Conversione di tipi generalizzata](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/yy580hbd(v=vs.120))
 - [Come convertire una stringa in un numero](./how-to-convert-a-string-to-a-number.md)

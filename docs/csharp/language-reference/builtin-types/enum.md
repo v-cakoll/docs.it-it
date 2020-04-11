@@ -11,12 +11,12 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: ab5eb1679f846bf0e25d90a4d0e0a71f0bdb0096
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 15f5e9ccb1396277229ba935381812700f63ece8
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847709"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121153"
 ---
 # <a name="enumeration-types-c-reference"></a>Tipi di enumerazione (riferimenti per C
 
@@ -66,7 +66,7 @@ A partire dalla versione 7.3 `System.Enum` di C, è possibile utilizzare in un v
 
 ## <a name="conversions"></a>Conversioni
 
-Per qualsiasi tipo di enumerazione, esistono conversioni esplicite tra il tipo di enumerazione e il tipo integrale sottostante. Se si [esegue il cast](../operators/type-testing-and-cast.md#cast-operator-) di un valore enum al relativo tipo sottostante, il risultato è il valore integrale associato di un membro enum.
+Per qualsiasi tipo di enumerazione, esistono conversioni esplicite tra il tipo di enumerazione e il tipo integrale sottostante. Se si [esegue il cast](../operators/type-testing-and-cast.md#cast-expression) di un valore enum al relativo tipo sottostante, il risultato è il valore integrale associato di un membro enum.
 
 [!code-csharp[enum conversions](snippets/EnumType.cs#Conversions)]
 

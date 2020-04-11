@@ -1,5 +1,5 @@
 ---
-title: Operatori di cast e di test del tipo - Riferimenti per C#
+title: Operatori di test dei tipi ed espressione di cast - Riferimento in C
 description: Informazioni sugli operatori C# che è possibile usare per controllare il tipo del risultato di un'espressione e, se necessario, convertirlo in un altro tipo.
 ms.date: 06/21/2019
 author: pkulikov
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 2dc215a91c55be15e8eee488f0030f41e3492af5
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 5a4f1d4c0c2ddd0d3967e15090d8f8c1ac42f83e
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507087"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121410"
 ---
-# <a name="type-testing-and-cast-operators-c-reference"></a>Operatori di cast e di test del tipo (Riferimenti per C#)
+# <a name="type-testing-operators-and-cast-expression-c-reference"></a>Operatori di test dei tipi ed espressione cast (riferimenti per C
 
-È possibile usare gli operatori seguenti per eseguire il controllo o la conversione di tipi:
+È possibile utilizzare gli operatori e le espressioni seguenti per eseguire il controllo dei tipi o la conversione del tipo:
 
 - [operatore is](#is-operator): per controllare se il tipo di runtime di un'espressione è compatibile con un determinato tipo
 - [operatore as](#as-operator): per convertire in modo esplicito un'espressione in un tipo specificato se il tipo di runtime è compatibile con esso
-- [operatore cast ()](#cast-operator-): per eseguire una conversione esplicita
+- [espressione cast](#cast-expression): per eseguire una conversione esplicita
 - [operatore typeof](#typeof-operator): per ottenere l'istanza <xref:System.Type?displayProperty=nameWithType> per un tipo
 
 ## <a name="is-operator"></a>Operatore is
@@ -76,7 +76,7 @@ Per altre informazioni sul criterio del tipo e sugli altri criteri supportati, v
 
 ## <a name="as-operator"></a>operatore as
 
-L'operatore `as` converte in modo esplicito il risultato di un'espressione in un tipo di valore nullable o di riferimento specificato. Se la conversione non è possibile, l'operatore `as` restituisce `null`. A differenza dell'[operatore cast ()](#cast-operator-), l'operatore `as` non genera mai un'eccezione.
+L'operatore `as` converte in modo esplicito il risultato di un'espressione in un tipo di valore nullable o di riferimento specificato. Se la conversione non è possibile, l'operatore `as` restituisce `null`. A differenza di `as` [un'espressione cast](#cast-expression), l'operatore non genera mai un'eccezione.
 
 Un'espressione nel formato
 
@@ -92,7 +92,7 @@ E is T ? (T)(E) : (T)null
 
 con la differenza che `E` viene valutato una sola volta.
 
-L'operatore `as` considera solo conversioni di riferimenti, nullable, boxing e unboxing. Non è possibile usare l'operatore `as` per eseguire una conversione definita dall'utente. A questo scopo, usare l'[operatore cast()](#cast-operator-).
+L'operatore `as` considera solo conversioni di riferimenti, nullable, boxing e unboxing. Non è possibile usare l'operatore `as` per eseguire una conversione definita dall'utente. A tale scopo, utilizzare [un'espressione cast](#cast-expression).
 
 Nell'esempio seguente viene illustrato l'uso dell'operatore `as`:
 
@@ -101,7 +101,7 @@ Nell'esempio seguente viene illustrato l'uso dell'operatore `as`:
 > [!NOTE]
 > Come mostrato nell'esempio precedente, è necessario confrontare il risultato dell'espressione `as` con `null` per verificare se la conversione riesce. A partire dalla versione 7.0 di C, è possibile usare [l'operatore is](#type-testing-with-pattern-matching) sia per verificare se la conversione ha esito positivo e, in caso di esito positivo, assegnare il risultato a una nuova variabile.
 
-## <a name="cast-operator-"></a>Operatore cast ()
+## <a name="cast-expression"></a>Espressione cast
 
 Un'espressione cast nel formato `(T)E` esegue una conversione esplicita del risultato dell'espressione `E` nel tipo `T`. Se non esiste alcuna conversione esplicita dal tipo `E` al tipo `T`, si verifica un errore in fase di compilazione. In fase di esecuzione, è possibile che una conversione esplicita non riesca e che un'espressione cast generi un'eccezione.
 

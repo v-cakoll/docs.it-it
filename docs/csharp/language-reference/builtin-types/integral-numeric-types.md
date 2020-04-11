@@ -32,12 +32,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 394a809a9a2f45f4aee652d0eca892f62f0f2e54
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4b2506f48c3e72ff838a07087c8c5d9ea63bb46c
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093201"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121464"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Tipi numerici integrali (Riferimenti per C#)
 
@@ -118,7 +118,7 @@ var longVariable = (long)42;
 
 ## <a name="conversions"></a>Conversioni
 
-È possibile convertire qualsiasi tipo numerico integrale in qualsiasi altro tipo numerico integrale. Se il tipo di destinazione può archiviare tutti i valori del tipo di origine, la conversione è implicita. In caso contrario, è necessario utilizzare [l'operatore `()` cast](../operators/type-testing-and-cast.md#cast-operator-) per richiamare una conversione esplicita. Per ulteriori informazioni, consultate [Conversioni numeriche predefinite.](numeric-conversions.md)
+È possibile convertire qualsiasi tipo numerico integrale in qualsiasi altro tipo numerico integrale. Se il tipo di destinazione può archiviare tutti i valori del tipo di origine, la conversione è implicita. In caso contrario, è necessario utilizzare [un'espressione cast](../operators/type-testing-and-cast.md#cast-expression) per eseguire una conversione esplicita. Per ulteriori informazioni, consultate [Conversioni numeriche predefinite.](numeric-conversions.md)
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
@@ -133,4 +133,4 @@ Per altre informazioni, vedere le sezioni seguenti delle [specifiche del linguag
 - [Tipi valore](value-types.md)
 - [Tipi a virgola mobile](floating-point-numeric-types.md)
 - [Stringhe di formato numerico standard](../../../standard/base-types/standard-numeric-format-strings.md)
-- [Dati numerici in .NET](../../../standard/numerics.md)
+- [Valori numerici in .NET](../../../standard/numerics.md)

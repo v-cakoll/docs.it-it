@@ -3,12 +3,12 @@ title: Come modificare il contenuto della stringa - Guida di C
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: ecedd9a9027aa925c753f8e187d611b19d3db991
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 260e4022c514db0cee3c1459b9d746a1c8e2addd
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77543261"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121129"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Come modificare il contenuto della stringa in CHow to modify string contents in C\#
 
@@ -70,9 +70,9 @@ Poiché le stringhe non sono modificabili, negli esempi precedenti vengono tutti
 
 È possibile modificare una stringa in un blocco fisso con codice unsafe, ma è **consigliabile** modificare il contenuto della stringa dopo la creazione di una stringa. In questo modo si romperanno le cose in modi imprevedibili. Ad esempio, se qualcuno stagna una stringa che ha lo stesso contenuto del tuo, otterrà la tua copia e non si aspetta che tu stia modificando la sua stringa.
 
-È possibile provare questi esempi esaminando il codice nel repository [GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Oppure è possibile scaricare gli esempi [come file ZIP](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
+È possibile provare questi esempi esaminando il codice nel repository [GitHub](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings). Oppure è possibile scaricare gli esempi [come file ZIP](../../../samples/snippets/csharp/how-to/strings.zip).
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Espressioni regolari di .NET Framework](../../standard/base-types/regular-expressions.md)
-- [Linguaggio delle espressioni regolari - Guida di riferimento rapidoRegular Expression Language - Quick Reference](../../standard/base-types/regular-expression-language-quick-reference.md)
+- [Linguaggio di espressioni regolari - Riferimento rapido](../../standard/base-types/regular-expression-language-quick-reference.md)

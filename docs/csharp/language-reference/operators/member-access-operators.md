@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: a132e527deadcffb4826c1965987fc09da470a09
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 90066b1e9c219f66fc0c76423679e81aa3fa6770
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635306"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81120988"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>Operatori ed espressioni di accesso ai membri (riferimenti per C
 
@@ -170,7 +170,7 @@ Le parentesi si usano anche per richiamare un [costruttore](../../programming-gu
 
 È anche possibile usare le parentesi per specificare l'ordine in cui valutare le operazioni in un'espressione. Per altre informazioni, vedere [Operatori C#](index.md).
 
-Anche le [espressioni cast](type-testing-and-cast.md#cast-operator-), che eseguono conversioni dei tipi esplicite, usano le parentesi.
+Anche le [espressioni cast](type-testing-and-cast.md#cast-expression), che eseguono conversioni dei tipi esplicite, usano le parentesi.
 
 ## <a name="index-from-end-operator-"></a>Indice dall'operatore finale
 

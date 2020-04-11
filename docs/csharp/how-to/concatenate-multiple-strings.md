@@ -7,12 +7,12 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-ms.openlocfilehash: 9a0640a7ce73fa8454442cd301157bf5c265f9de
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 87ec5104f36d0c6cce12037e70dacf2752ef5e62
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713892"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121048"
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>Come concatenare più stringhe (Guida di C
 
@@ -51,11 +51,11 @@ Infine, è possibile usare [LINQ](../programming-guide/concepts/linq/index.md) e
 
 [!code-csharp-interactive[string concatenation using LINQ expressions](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#6)]  
 
-È possibile provare questi esempi esaminando il codice nel repository [GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Oppure è possibile scaricare gli esempi [come file ZIP](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
+È possibile provare questi esempi esaminando il [codice di esempio](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings). In alternativa, è possibile scaricare gli esempi [come file zip](../../../samples/snippets/csharp/how-to/strings.zip).
 
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.String>
 - <xref:System.Text.StringBuilder>
-- [Guida per programmatori C#](../programming-guide/index.md)
+- [Guida alla programmazione in C](../programming-guide/index.md)
 - [Stringhe](../programming-guide/strings/index.md)

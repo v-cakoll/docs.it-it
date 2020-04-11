@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 34c34865a2feece5fe037daeb035292aafd015b9
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 60e69a8ef55484e3b04f1674c35a1c5dadfa3b7c
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249357"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121001"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Come eseguire il cast in modo sicuro utilizzando criteri di ricerca e gli operatori is e as
 
@@ -37,4 +37,4 @@ Se si desidera verificare se una variabile è un determinato tipo, ma `is` non `
 
 Come si può vedere dal confronto tra questo codice e il codice dei criteri di ricerca, la sintassi dei criteri di ricerca offre funzionalità più affidabili tramite la combinazione del test e l'assegnazione in un'unica istruzione. Usare la sintassi dei criteri di ricerca qualora possibile.
 
-È possibile provare questi esempi esaminando il codice nel repository [GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/safelycast). Oppure è possibile scaricare gli esempi [come file ZIP](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/safelycast.zip).
+È possibile provare questi esempi esaminando il codice nel repository [GitHub](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/safelycast). Oppure è possibile scaricare gli esempi [come file ZIP](../../../samples/snippets/csharp/how-to/safelycast.zip).

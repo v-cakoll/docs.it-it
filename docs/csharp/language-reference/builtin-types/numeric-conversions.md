@@ -8,16 +8,16 @@ helpviewer_keywords:
 - numeric conversions [C#], explicit
 - conversions [C#], implicit numeric
 - conversions [C#], explicit numeric
-ms.openlocfilehash: 5380e8480c39d1940df13b2ecb50a0f394367388
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b7d53e508e4d585c746a3cc61824cdace7707deb
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399602"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121455"
 ---
 # <a name="built-in-numeric-conversions-c-reference"></a>Conversioni numeriche predefinite (Riferimenti per C
 
-Il linguaggio Cè fornisce un set di tipi [numerici integrali](integral-numeric-types.md) e [a virgola mobile.](floating-point-numeric-types.md) Esiste una conversione tra due tipi numerici qualsiasi, impliciti o espliciti. È necessario utilizzare [l'operatore `()` cast](../operators/type-testing-and-cast.md#cast-operator-) per richiamare una conversione esplicita.
+Il linguaggio Cè fornisce un set di tipi [numerici integrali](integral-numeric-types.md) e [a virgola mobile.](floating-point-numeric-types.md) Esiste una conversione tra due tipi numerici qualsiasi, impliciti o espliciti. È necessario utilizzare [un'espressione cast](../operators/type-testing-and-cast.md#cast-expression) per eseguire una conversione esplicita.
 
 ## <a name="implicit-numeric-conversions"></a>Conversioni numeriche implicite
 
@@ -70,8 +70,8 @@ Nella tabella seguente vengono illustrate le conversioni esplicite predefinite t
 |[Lungo](integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint` o `ulong`|
 |[Ulong](integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint` o `long`|
 |[Galleggiante](floating-point-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong` o `decimal`|
-|[Doppia](floating-point-numeric-types.md)|`sbyte`, `byte` `short`, `ushort` `int`, `uint` `long`, `ulong` `float`, , , , , o`decimal`|
-|[Decimale](floating-point-numeric-types.md)|`sbyte`, `byte` `short`, `ushort` `int`, `uint` `long`, `ulong` `float`, , , , , o`double`|
+|[double](floating-point-numeric-types.md)|`sbyte`, `byte` `short`, `ushort` `int`, `uint` `long`, `ulong` `float`, , , , , o`decimal`|
+|[decimal](floating-point-numeric-types.md)|`sbyte`, `byte` `short`, `ushort` `int`, `uint` `long`, `ulong` `float`, , , , , o`double`|
 
 > [!NOTE]
 > Una conversione numerica esplicita potrebbe causare la <xref:System.OverflowException>perdita di dati o generare un'eccezione, in genere un oggetto .
@@ -110,4 +110,4 @@ Per altre informazioni, vedere le sezioni seguenti delle [specifiche del linguag
 ## <a name="see-also"></a>Vedere anche
 
 - [Informazioni di riferimento su C#](../index.md)
-- [Cast e conversioni di tipi](../../programming-guide/types/casting-and-type-conversions.md)
+- [Casting e conversioni di tipi](../../programming-guide/types/casting-and-type-conversions.md)

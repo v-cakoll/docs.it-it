@@ -9,45 +9,45 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: 5c75425783d3468ac42ef7cb32cd9c93e812192a
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 8a1a0c2c55267940463e2c9ab82bb52345269260
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338342"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121606"
 ---
-# <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Procedura: sviluppare un servizio dati WCF in esecuzione in IIS
+# <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Procedura: sviluppare un servizio dati WCF in esecuzione in IISHow to: Develop a WCF data service running on IIS
 
-In questo argomento viene illustrato come utilizzare WCF Data Services per creare un servizio dati basato sul database di esempio Northwind ospitato da un'applicazione Web ASP.NET in esecuzione in Internet Information Services (IIS). Per un esempio di come creare lo stesso servizio dati Northwind di un'applicazione Web ASP.NET che viene eseguita nel Server di sviluppo ASP.NET, vedere la [Guida introduttiva di WCF Data Services](quickstart-wcf-data-services.md).
+In questo articolo viene illustrato come utilizzare WCF Data ServicesWCF Data Services per creare un servizio dati basato sul database di esempio Northwind ospitato da un'applicazione Web ASP.NET in esecuzione su Internet Information Services (IIS). Per un esempio di creazione dello stesso servizio dati Northwind di un'app Web ASP.NET eseguita nel server di sviluppo ASP.NET, vedere la [guida introduttiva](quickstart-wcf-data-services.md)di WCF Data Services .
 
 > [!NOTE]
-> Per creare il servizio dati Northwind, è necessario installare il database di esempio Northwind nel computer locale. Per scaricare questo database di esempio, vedere la pagina di download dei [database di esempio per SQL Server](https://go.microsoft.com/fwlink/?linkid=24758).
+> Per creare il servizio dati Northwind, installare innanzitutto il database di esempio Northwind nel computer locale. Per installare il database, eseguire lo script Transact-SQL da [Northwind e pubs database di esempio per Microsoft SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs).
 
-In questo argomento viene illustrato come creare un servizio dati tramite il provider di Entity Framework. Sono disponibili altri provider di servizi dati. Per ulteriori informazioni, vedere [provider di servizi dati](data-services-providers-wcf-data-services.md).
+In questo articolo viene illustrato come creare un servizio dati utilizzando il provider Entity Framework. Sono disponibili altri provider di servizi dati. Per ulteriori informazioni, vedere [Provider di servizi dati](data-services-providers-wcf-data-services.md).
 
-Dopo aver creato il servizio, è necessario fornire in modo esplicito l'accesso alle risorse del servizio dati. Per altre informazioni, vedere [procedura: abilitare l'accesso al servizio dati](how-to-enable-access-to-the-data-service-wcf-data-services.md).
+Dopo aver creato il servizio, è necessario fornire in modo esplicito l'accesso alle risorse del servizio dati. Per ulteriori informazioni, vedere [Procedura: abilitare l'accesso al servizio dati](how-to-enable-access-to-the-data-service-wcf-data-services.md).
 
-## <a name="create-the-aspnet-web-application-that-runs-on-iis"></a>Creare l'applicazione Web ASP.NET che viene eseguita in IIS
+## <a name="create-the-aspnet-web-application-that-runs-on-iis"></a>Creare l'applicazione Web ASP.NET in esecuzione in IIS
 
 1. Nel menu **File** in Visual Studio selezionare **Nuovo** > **Progetto**.
 
-2. Nella finestra di dialogo **nuovo progetto** selezionare la categoria > **installato** [**Visual C#**  o **Visual Basic**] > **Web** .
+2. Nella finestra di dialogo **Nuovo progetto** , selezionare la categoria di > **Web** **> installata** [**Visual Cè** o **Visual Basic**] > .
 
 3. Selezionare il modello **Applicazione Web ASP.NET** .
 
-4. Immettere `NorthwindService` come nome del progetto.
+4. Immettere `NorthwindService` il nome del progetto.
 
 5. Fare clic su **OK**.
 
-6. Scegliere **Proprietà NorthwindService**dal menu **progetto** .
+6. Scegliere **Proprietà NorthwindService**dal menu **Progetto** .
 
-7. Selezionare la scheda **Web** , quindi selezionare **Usa server Web IIS locale**.
+7. Selezionare la scheda **Web** e quindi **selezionare Usa server Web IIS locale**.
 
 8. Fare clic su **Crea directory virtuale** e quindi su **OK**.
 
 9. Dal prompt dei comandi aperto con privilegi di amministratore, eseguire uno dei comandi seguenti (a seconda del sistema operativo):
 
-    - Sistemi a 32 bit:
+    - sistemi a 32 bit:
 
         ```console
         "%windir%\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModelReg.exe" -i
@@ -63,7 +63,7 @@ Dopo aver creato il servizio, è necessario fornire in modo esplicito l'accesso 
 
 10. Dal prompt dei comandi aperto con privilegi di amministratore, eseguire uno dei comandi seguenti (a seconda del sistema operativo):
 
-    - Sistemi a 32 bit:
+    - sistemi a 32 bit:
 
         ```console
         "%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_regiis.exe" -i -enable
@@ -79,15 +79,15 @@ Dopo aver creato il servizio, è necessario fornire in modo esplicito l'accesso 
 
 11. Quando l'applicazione ASP.NET è in esecuzione in IIS7, è necessario eseguire inoltre i passaggi seguenti:
 
-    1. Aprire Gestione IIS e passare all'applicazione Fotoservizio in **sito Web predefinito**.
+    1. Aprire Gestione IIS e passare all'applicazione PhotoService in **Sito Web predefinito**.
 
     2. In **Visualizzazione funzionalità** fare doppio clic su **Autenticazione**.
 
     3. Nella pagina **Autenticazione** selezionare **Autenticazione anonima**.
 
-    4. Nel riquadro **azioni** fare clic su **modifica** per impostare l'entità di sicurezza con cui gli utenti anonimi si connetteranno al sito.
+    4. Nel riquadro **Azioni** fare clic su **Modifica** per impostare l'entità di sicurezza con cui gli utenti anonimi si connetteranno al sito.
 
-    5. Nella finestra di dialogo **Modifica credenziali di autenticazione anonima** selezionare **identità del pool di applicazioni**.
+    5. Nella finestra di dialogo **Modifica credenziali di autenticazione anonima** selezionare **Identità pool**di applicazioni .
 
     > [!IMPORTANT]
     > Quando si usa l'account Servizio di rete, agli utenti anonimi viene concesso l'accesso completo alla rete interna associato a tale account.
@@ -122,19 +122,19 @@ Dopo aver creato il servizio, è necessario fornire in modo esplicito l'accesso 
 
 ## <a name="define-the-data-model"></a>Definizione del modello di dati
 
-1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nome del progetto ASP.NET, quindi scegliere **Aggiungi** > **nuovo elemento**.
+1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nome del progetto ASP.NET , quindi **scegliere Aggiungi** > **nuovo elemento**.
 
-2. Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare **ADO.NET Entity Data Model**.
+2. Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare ADO.NET Entity Data **Model**.
 
-3. Per il nome del modello di dati, digitare `Northwind.edmx`.
+3. Per il nome del modello `Northwind.edmx`di dati, digitare .
 
-4. Nella procedura guidata Entity Data Model selezionare **genera da database**, quindi fare clic su **Avanti**.
+4. Nella procedura guidata Entity Data Model selezionare **Genera da database**e quindi fare clic su **Avanti**.
 
-5. Connettere il modello di dati al database effettuando una delle operazioni seguenti, quindi fare clic su **Avanti**:
+5. Connettere il modello di dati al database eseguendo una delle operazioni seguenti e quindi fare clic su **Avanti:**
 
-    - Se non è già stata configurata una connessione di database, fare clic su **nuova connessione** e creare una nuova connessione. Per altre informazioni, vedere [How to: Create Connections to SQL Server Databases](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90)). A questa istanza di SQL Server deve essere collegato il database Northwind di esempio.
+    - Se non si dispone di una connessione al database già configurata, fare clic su **Nuova connessione** e creare una nuova connessione. Per altre informazioni, vedere [How to: Create Connections to SQL Server Databases](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90)). A questa istanza di SQL Server deve essere collegato il database Northwind di esempio.
 
-         \- oppure -
+         \- - oppure -
 
     - Se si dispone di una connessione al database già configurata per connettersi al database Northwind, selezionarla dall'elenco delle connessioni.
 
@@ -144,18 +144,18 @@ Dopo aver creato il servizio, è necessario fornire in modo esplicito l'accesso 
 
 ## <a name="create-the-data-service"></a>Creazione del servizio dati
 
-1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nome del progetto ASP.NET, quindi scegliere **Aggiungi** > **nuovo elemento**.
+1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nome del progetto ASP.NET, quindi **scegliere Aggiungi** > **nuovo elemento**.
 
-2. Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare **WCF Data Service**.
+2. Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare Servizio dati **WCF**.
 
-   ![Modello di elemento del servizio dati WCF in Visual Studio 2015](./media/wcf-data-service-item-template.png)
+   ![Modello di elemento servizio dati WCF in Visual Studio 2015WCF Data Service item template in Visual Studio 2015](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
-   > Il modello di **servizio dati WCF** è disponibile in visual studio 2015, ma non in visual studio 2017 o versioni successive.
+   > Il modello **WCF Data Service** è disponibile in Visual Studio 2015, ma non in Visual Studio 2017 o versione successiva.
 
-3. Per il nome del servizio, immettere `Northwind`.
+3. Per il nome del `Northwind`servizio, immettere .
 
-     In Visual Studio verranno creati i file del markup XML e del codice per il nuovo servizio. Per impostazione predefinita, verrà visualizzata la finestra dell'editor del codice. In **Esplora soluzioni**, il servizio ha il nome Northwind e l'estensione svc.cs o SVC. vb.
+     In Visual Studio verranno creati i file del markup XML e del codice per il nuovo servizio. Per impostazione predefinita, verrà visualizzata la finestra dell'editor del codice. In **Esplora soluzioni**il servizio contiene il nome Northwind e l'estensione svc.cs o svc.vb.
 
 4. Nel codice per il servizio dati sostituire il commento `/* TODO: put your data source class name here */` nella definizione della classe che definisce il servizio dati con il tipo del contenitore di entità del modello di dati, che in questo caso corrisponde a `NorthwindEntities`. La definizione di classe dovrà essere analoga alla seguente:
 
@@ -164,4 +164,4 @@ Dopo aver creato il servizio, è necessario fornire in modo esplicito l'accesso 
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Esposizione dei dati come un servizio](exposing-your-data-as-a-service-wcf-data-services.md)
+- [Esposizione di dati come servizio](exposing-your-data-as-a-service-wcf-data-services.md)

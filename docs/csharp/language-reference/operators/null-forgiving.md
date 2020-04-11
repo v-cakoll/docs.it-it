@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: 36bfa46cebd2b35c4985dfc23dbe84f8f5dc9201
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 658043f8d5e149064f6da328657b2ccef9b5da94
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846309"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121439"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! (null-forgiving) (riferimento c'è)
 
@@ -19,7 +19,7 @@ Disponibile in C , 8.0 e versioni `!` successive, l'operatore suffisso unario è
 
 L'operatore che perdona i valori Null non ha alcun effetto in fase di esecuzione. Influisce solo sull'analisi statica del flusso del compilatore modificando lo stato null dell'espressione. In fase di `x!` esecuzione, expression restituisce `x`il risultato dell'espressione sottostante.
 
-Per ulteriori informazioni sulla funzionalità dei tipi di riferimento nullable, vedere [Tipi di riferimento nullable](../../nullable-references.md).
+Per ulteriori informazioni sulla funzionalità dei tipi di riferimento nullable, vedere [Tipi di riferimento nullable](../builtin-types/nullable-reference-types.md).
 
 ## <a name="examples"></a>Esempi
 

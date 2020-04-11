@@ -2,12 +2,12 @@
 title: Comando dotnet test
 description: Il comando dotnet test viene usato per eseguire unit test in un determinato progetto.
 ms.date: 02/27/2020
-ms.openlocfilehash: a11814f9fdc6326e681a09d7d2654b968014f318
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 359e4522b26e2b59092d55eea3fca575d2afaf1f
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507308"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121032"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -85,7 +85,7 @@ I progetti di test specificano l'applicazione di esecuzione dei test usando un n
 
 - **`l|--logger <LoggerUri/FriendlyName>`**
 
-  Specifica un logger per i risultati di test.
+  Specifica un logger per i risultati di test. A differenza di `-l "console;v=d"` MSBuild, dotnet test non accetta `-l "console;verbosity=detailed"`abbreviazioni: anziché utilizzare .
 
 - **`--no-build`**
 
@@ -121,7 +121,7 @@ I progetti di test specificano l'applicazione di esecuzione dei test usando un n
 
 - **`-v|--verbosity <LEVEL>`**
 
-  Imposta il livello di dettaglio del comando. I valori consentiti sono `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.
+  Imposta il livello di dettaglio del comando. I valori consentiti sono `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`. Il valore predefinito è `minimal`. Per altre informazioni, vedere <xref:Microsoft.Build.Framework.LoggerVerbosity>.
 
 - `RunSettings`Argomenti
 
@@ -145,10 +145,16 @@ I progetti di test specificano l'applicazione di esecuzione dei test usando un n
   dotnet test ~/projects/test1/test1.csproj
   ```
 
-- Eseguire i test nel progetto nella directory corrente e generare un file dei risultati di test in formato trx:
+- Eseguire i test nel progetto nella directory corrente e generare un file dei risultati del test nel formato trx:
 
   ```dotnetcli
   dotnet test --logger trx
+  ```
+
+- Eseguire i test nel progetto nella directory corrente e registrare con livello di dettaglio dettagliato nella console:
+
+  ```dotnetcli
+  dotnet test --logger "console;verbosity=detailed"
   ```
 
 ## <a name="filter-option-details"></a>Dettagli dell'opzione filter
@@ -181,7 +187,7 @@ Le espressioni possono essere unite con operatori condizionali:
 
 | Operatore            | Funzione |
 | ------------------- | -------- |
-| <code>&#124;</code> | o       |
+| <code>&#124;</code> | OR       |
 | `&`                 | AND      |
 
 È possibile racchiudere le espressioni tra parentesi quando si usano gli operatori condizionali (ad esempio, `(Name~TestMethod1) | (Name~TestMethod2)`).
@@ -192,3 +198,4 @@ Per altre informazioni ed esempi sull'uso del filtro degli unit test selettivi, 
 
 - [Quadri e obiettivi](../../standard/frameworks.md)
 - [Catalogo dei RID (Runtime IDentifier) di .NET Core](../rid-catalog.md)
+- [Passaggio di argomenti runsettings tramite riga di comandoPassing runsettings arguments through commandline](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)

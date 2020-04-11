@@ -2,12 +2,12 @@
 title: Uso di Strumentazione gestione Windows (WMI) per la diagnostica
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: 0c803e3988f7a63980d991190db87c263c992b80
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b14f9401266bdf7edccd7dca12cb818cdd2cb348
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185680"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121539"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Uso di Strumentazione gestione Windows (WMI) per la diagnostica
 Windows Communication Foundation (WCF) espone i dati di ispezione di un servizio in fase di esecuzione tramite un provider di Strumentazione gestione Windows (WMI) WCF.  
@@ -45,7 +45,7 @@ Windows Communication Foundation (WCF) espone i dati di ispezione di un servizio
   
  **Attenzione** WMI supporta solo <xref:System.TimeSpan> un valore fino a 3 decimali. Ad esempio, se il servizio imposta una delle proprietà su <xref:System.TimeSpan.MaxValue>, quando viene visualizzato in WMI il valore viene troncato dopo 3 cifre decimali.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
  Poiché il provider WMI WCF consente l'individuazione dei servizi in un ambiente, è necessario prestare estrema attenzione per concedere l'accesso a esso. Se si consentono deroghe all'accesso al solo amministratore (impostazione predefinita), è possibile che l'accesso a dati sensibili presenti nell'ambiente sia consentito anche a utenti meno attendibili. In particolare, se le autorizzazioni all'accesso WMI remoto vengono concesse indistintamente, possono verificarsi attacchi flood. Se un processo viene sovraccaricato da un numero eccessivo di richieste WMI, è possibile che si verifichi una riduzione delle prestazioni.  
   
  Inoltre, se si concedono liberamente autorizzazioni di accesso al file MOF, utenti meno attendibili potrebbero modificare il comportamento di WMI e alterare gli oggetti caricati nello schema WMI. È possibile ad esempio rimuovere campi in modo che i dati critici vengano nascosti dall'amministratore o che i campi che non contengono o generano eccezioni vengano aggiunti al file.  
@@ -141,7 +141,7 @@ Windows Communication Foundation (WCF) espone i dati di ispezione di un servizio
     ```  
   
 ### <a name="granting-access-to-arbitrary-users-or-groups"></a>Concessione dell'accesso a utenti o gruppi arbitrari  
- Nell'esempio contenuto in questa sezione vengono concessi privilegi di registrazione del provider WMI a tutti gli utenti locali. Se si desidera concedere l'accesso a un utente o un gruppo non predefinito, è necessario ottenere l'ID di sicurezza (SID) dell'utente o del gruppo. Non è possibile ottenere il SID di un utente arbitrario in modo semplice. Un metodo consiste nell'accedere come utente desiderato e quindi eseguire il comando shell seguente.  
+ Nell'esempio contenuto in questa sezione vengono concessi privilegi di registrazione del provider WMI a tutti gli utenti locali. Se si desidera concedere l'accesso a un utente o un gruppo non incorporato, è necessario ottenere l'identificatore di protezione (SID) di tale utente o gruppo. Non è possibile ottenere il SID di un utente arbitrario in modo semplice. Un metodo consiste nell'accedere come utente desiderato e quindi eseguire il comando shell seguente.  
   
 ```console
 Whoami /user  
@@ -152,10 +152,11 @@ Whoami /user
 ## <a name="accessing-remote-wmi-object-instances"></a>Accesso a istanze di oggetti WMI remote  
  Se è necessario accedere alle istanze WMI WCF in un computer remoto, è necessario abilitare la privacy dei pacchetti negli strumenti utilizzati per l'accesso. Nella sezione seguente viene descritta la procedura per accedere a istanze WMI usando WMI CIM Studio, Tester di Strumentazione gestione Windows e .NET SDK 2.0.  
   
-### <a name="wmi-cim-studio"></a>WMI CIM Studio  
- Se sono stati installati Strumenti di [amministrazione WMI](https://go.microsoft.com/fwlink/?LinkId=95185), è possibile utilizzare WMI CIM Studio per accedere alle istanze WMI. Gli strumenti si trovano nella cartella seguente:  
+### <a name="wmi-cim-studio"></a>WMI CIM Studio
+
+Se sono stati installati Strumenti di amministrazione WMI, è possibile utilizzare WMI CIM Studio per accedere alle istanze WMI. Gli strumenti si trovano nella seguente cartella:
   
- **%windir%%%Programmi/Strumenti WMI\\**  
+*%windir%%%Programmi/Strumenti WMI\\*
   
 1. Nella finestra **Connetti a spazio dei nomi:,** digitare **root-ServiceModel** e fare clic **su OK.**  
   

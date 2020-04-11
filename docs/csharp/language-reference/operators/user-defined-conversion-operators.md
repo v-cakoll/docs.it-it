@@ -10,12 +10,12 @@ helpviewer_keywords:
 - implicit keyword [C#]
 - conversion operator [C#]
 - user-defined conversion [C#]
-ms.openlocfilehash: b6061492cc1a4f756196fb8a9050b68651431e38
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b59fc27be31f1a38e2a6c3cabd82598933b5ed53
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847267"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121396"
 ---
 # <a name="user-defined-conversion-operators-c-reference"></a>Operatori di conversione definiti dall'utente (riferimenti per C#)
 
@@ -23,7 +23,7 @@ Un tipo definito dall'utente può definire una conversione implicita o esplicita
 
 Le conversioni implicite non richiedono una sintassi specifica per essere richiamate e possono essere usate in diverse situazioni, ad esempio durante le chiamate di metodi e assegnazioni. Le conversioni implicite predefinite di C' hanno sempre esito positivo e non generano mai un'eccezione. Anche le conversioni implicite definite dall'utente si devono comportare nello stesso modo. Se una conversione personalizzata può generare un'eccezione o una perdita di informazioni, è necessario definirla come conversione esplicita.
 
-Le conversioni definite dall'utente non vengono considerate dagli operatori [is](type-testing-and-cast.md#is-operator) e [as](type-testing-and-cast.md#as-operator). Usare l'[operatore cast ()](type-testing-and-cast.md#cast-operator-) per richiamare una conversione esplicita definita dall'utente.
+Le conversioni definite dall'utente non vengono considerate dagli operatori [is](type-testing-and-cast.md#is-operator) e [as](type-testing-and-cast.md#as-operator). Usare [un'espressione cast](type-testing-and-cast.md#cast-expression) per richiamare una conversione esplicita definita dall'utente.
 
 Usare `operator` e `implicit` o le parole chiave `explicit` per definire rispettivamente una conversione implicita o esplicita. Il tipo che definisce una conversione deve essere un tipo di origine o un tipo di destinazione della conversione. È possibile definire una conversione tra due tipi definiti dall'utente in uno dei due tipi.
 
@@ -46,7 +46,7 @@ Per altre informazioni, vedere le sezioni seguenti delle [specifiche del linguag
 
 - [Informazioni di riferimento su C#](../index.md)
 - [Operatori C#](index.md)
-- [Sovraccarico dell'operatore](operator-overloading.md)
+- [Overload degli operatori](operator-overloading.md)
 - [Operatori di cast e di test del tipo](type-testing-and-cast.md)
 - [Esecuzione del cast e conversioni di tipi](../../programming-guide/types/casting-and-type-conversions.md)
 - [Linee guida di progettazione - Operatori di conversione](../../../standard/design-guidelines/operator-overloads.md#conversion-operators)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 95b7f266654bbbcdcd0f81e3aa11cfc94af9f0e5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a277215d438b5f6b0bbbef72e5e0121b6ce41990
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77215246"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121475"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Tipi numerici a virgola mobile (riferimenti per C#)
 
@@ -107,7 +107,7 @@ Console.WriteLine(m);  // output: 1500000
 
 ## <a name="conversions"></a>Conversioni
 
-Esiste una sola conversione implicita tra `float` tipi `double`numerici a virgola mobile: da a . Tuttavia, è possibile convertire qualsiasi tipo a virgola mobile in qualsiasi altro tipo a virgola mobile con il [cast esplicito](../operators/type-testing-and-cast.md#cast-operator-). Per ulteriori informazioni, consultate [Conversioni numeriche predefinite.](numeric-conversions.md)
+Esiste una sola conversione implicita tra `float` tipi `double`numerici a virgola mobile: da a . Tuttavia, è possibile convertire qualsiasi tipo a virgola mobile in qualsiasi altro tipo a virgola mobile con il [cast esplicito](../operators/type-testing-and-cast.md#cast-expression). Per ulteriori informazioni, consultate [Conversioni numeriche predefinite.](numeric-conversions.md)
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
@@ -123,5 +123,5 @@ Per altre informazioni, vedere le sezioni seguenti delle [specifiche del linguag
 - [Tipi valore](value-types.md)
 - [Tipi integrali](integral-numeric-types.md)
 - [Stringhe di formato numerico standard](../../../standard/base-types/standard-numeric-format-strings.md)
-- [Dati numerici in .NET](../../../standard/numerics.md)
+- [Valori numerici in .NET](../../../standard/numerics.md)
 - <xref:System.Numerics.Complex?displayProperty=nameWithType>
