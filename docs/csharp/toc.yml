@@ -1595,7 +1595,7 @@
         - name: Espressioni e operatori di accesso ai membri
           href: language-reference/operators/member-access-operators.md
           displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation, ^, index from end, hat, .., range'
-        - name: Operatori di cast e di test del tipo
+        - name: Operatori per i test dei tipi ed espressione cast
           href: language-reference/operators/type-testing-and-cast.md
           displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), explicit, conversion'
         - name: Operatori di conversione definiti dall'utente
