@@ -3,12 +3,12 @@ title: Come modificare il contenuto della stringa - Guida di C
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 260e4022c514db0cee3c1459b9d746a1c8e2addd
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: f31fa94501ac2120e22e229dfc11babb8b8cc0f3
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121129"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242855"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Come modificare il contenuto della stringa in CHow to modify string contents in C\#
 
@@ -58,7 +58,7 @@ Il metodo <xref:System.Text.StringBuilder.ToString%2A?displayProperty=nameWithTy
 
 È possibile produrre una matrice di caratteri da una stringa, modificare il contenuto della matrice e quindi creare una nuova stringa dal contenuto modificato della matrice.
 
-Nell'esempio seguente viene illustrato come sostituire un gruppo di caratteri in una stringa. In primo luogo si usa il metodo <xref:System.String.ToCharArray?displayProperty=nameWithName> per creare una matrice di caratteri. Il metodo <xref:System.String.IndexOf%2A> viene usato per trovare l'indice iniziale della parola "fox". I tre caratteri successivi vengono sostituiti con una parola diversa. Infine viene creata una nuova stringa dalla matrice di caratteri aggiornata.
+Nell'esempio seguente viene illustrato come sostituire un gruppo di caratteri in una stringa. In primo luogo si usa il metodo <xref:System.String.ToCharArray?displayProperty=nameWithType> per creare una matrice di caratteri. Il metodo <xref:System.String.IndexOf%2A> viene usato per trovare l'indice iniziale della parola "fox". I tre caratteri successivi vengono sostituiti con una parola diversa. Infine viene creata una nuova stringa dalla matrice di caratteri aggiornata.
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#6)]
 

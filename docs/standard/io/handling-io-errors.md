@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 51eb0e758f1ae8fb41c842ef9b32a9f8928af9ac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c592039b3b12eedcfceda45c2f54403a8e04b5d5
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73120737"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242673"
 ---
 # <a name="handling-io-errors-in-net"></a>Gestione degli errori di I/O in .NET
 
@@ -39,7 +39,7 @@ Poiché il file system è una risorsa del sistema operativo, i metodi di I/O sia
 
 Nel sistema operativo Windows, ad esempio, una chiamata a un metodo che restituisce un codice di errore `ERROR_FILE_NOT_FOUND` (o 0x02) esegue il mapping a <xref:System.IO.FileNotFoundException> e un codice di errore `ERROR_PATH_NOT_FOUND` (o 0x03) esegue il mapping a <xref:System.IO.DirectoryNotFoundException>.
 
-Tuttavia, le condizioni esatte in cui il sistema operativo restituisce determinati codici di errore spesso sono poco o per nulla documentate. Possono quindi verificarsi eccezioni impreviste. Poiché ad esempio si usa una directory invece di un file, se si fornisse un percorso di directory non valido al costruttore <xref:System.IO.DirectoryInfo.%23ctor%2A?displayProperty=nameWithType>, dovrebbe essere generata un'eccezione <xref:System.IO.DirectoryNotFoundException>, ma potrebbe anche venire generata un'eccezione <xref:System.IO.FileNotFoundException>.
+Tuttavia, le condizioni esatte in cui il sistema operativo restituisce determinati codici di errore spesso sono poco o per nulla documentate. Possono quindi verificarsi eccezioni impreviste. Poiché ad esempio si usa una directory invece di un file, se si fornisse un percorso di directory non valido al costruttore <xref:System.IO.DirectoryInfo.%23ctor%2A>, dovrebbe essere generata un'eccezione <xref:System.IO.DirectoryNotFoundException>, ma potrebbe anche venire generata un'eccezione <xref:System.IO.FileNotFoundException>.
 
 ## <a name="exception-handling-in-io-operations"></a>Gestione delle eccezioni nelle operazioni di I/O
 

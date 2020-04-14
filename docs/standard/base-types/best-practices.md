@@ -10,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: 9b09f5a2505888c6154a58a3512c94c51f89295b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ff04b4950f48f2ba06f60b65cc3a46f1295711f3
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77124422"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243154"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Procedure consigliate per le espressioni regolari in .NETBest practices for regular expressions in .NET
 
@@ -219,7 +219,7 @@ Se le espressioni regolari elaborano l'input che corrisponde quasi al modello de
 
 L'intervallo di timeout dell'espressione regolare definisce il periodo di tempo in cui il motore delle espressioni regolari cercherà una singola corrispondenza prima del timeout. L'intervallo di <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType>timeout predefinito è , il che significa che l'espressione regolare non sviene. È possibile sostituire questo valore e definire un intervallo di timeout come segue:You can override this value and define a time-out interval as follows:
 
-- Specificando un valore di timeout quando si crea un'istanza di un oggetto <xref:System.Text.RegularExpressions.Regex> chiamando il costruttore <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType>.
+- Specificando un valore di timeout quando si crea un'istanza di un oggetto <xref:System.Text.RegularExpressions.Regex> chiamando il costruttore <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29>.
 
 - Chiamando un metodo statico di corrispondenza dei modelli, come <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> o <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType>, che include un parametro `matchTimeout`.
 
@@ -275,4 +275,4 @@ Quando le sottoespressioni vengono utilizzate solo per applicarvi i quantificato
 |-----------|-----------------|
 |[Dettagli sul comportamento delle espressioni regolari](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|Viene esaminata l'implementazione del motore delle espressioni regolari in .NET. L'argomento è incentrato sulla flessibilità delle espressioni regolari e sulla responsabilità dello sviluppatore al fine di garantire un funzionamento efficace e affidabile del motore delle espressioni regolari.|
 |[Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|Viene illustrato il backtracking e il modo in cui influisce sulle prestazioni delle espressioni regolari e vengono esaminati gli elementi del linguaggio che forniscono le alternative al backtracking.|
-|[Linguaggio delle espressioni regolari - Guida di riferimento rapidoRegular Expression Language - Quick Reference](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|Vengono illustrati gli elementi del linguaggio delle espressioni regolari in .NET e vengono forniti i collegamenti alla documentazione dettagliata per ogni elemento del linguaggio.|
+|[Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|Vengono illustrati gli elementi del linguaggio delle espressioni regolari in .NET e vengono forniti i collegamenti alla documentazione dettagliata per ogni elemento del linguaggio.|

@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 12/23/2019
 ms.custom: mvc,mlnet-tooling
 ms.topic: tutorial
-ms.openlocfilehash: 2243aad0e787a3a594bde3dfa9884f104eab74e8
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: 832124e6d027b240c4d06692ee87c84f57b982d3
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546692"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243336"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>Analizzare il sentiment usando l'interfaccia della riga di comando di ML.NET
 
@@ -45,7 +45,7 @@ L'interfaccia della riga di comando ML.NET fa parte di ML.NET e l'obiettivo prin
 
 Verrà usato un set di dati esistente per uno scenario di 'analisi del sentiment', che è un'attività di Machine Learning con classificazione binaria. È possibile usare in modo simile un set di dati personalizzato, con il modello e il codice che verranno generati automaticamente.
 
-1. Scaricare il [file ZIP del set di dati Sentiment Labeled Sentences UCI (vedere le citazioni nella nota seguente)](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) e decomprimerlo in una cartella a scelta.
+1. Scaricare il [file ZIP del set di dati Sentiment Labeled Sentences UCI (vedere le citazioni nella nota seguente)](http://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) e decomprimerlo in una cartella a scelta.
 
     > [!NOTE]
     > I set di dati usati in questa esercitazione provengono da 'From Group to Individual Labels using Deep Features', Kotzias et al, KDD 2015, e ha ospitato presso l'UCI Machine Learning Repository - Dua, D. e Karra Taniskidou, E. (2017). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml]. Irvine, CA: University of California, School of Information and Computer Science.

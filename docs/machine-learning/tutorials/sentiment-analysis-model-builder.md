@@ -6,18 +6,18 @@ author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc,mlnet-tooling
-ms.openlocfilehash: 98c9f28ca4ce6365ed4cf4ff1566a33dbe8f35ca
-ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
+ms.openlocfilehash: 7761240055c90ae9c713b1c460e9e83316d256f9
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438225"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278951"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Esercitazione: Analizzare il sentiment dei commenti del sito Web in un'applicazione Web utilizzando ML.NET Model Builder
 
 Scopri come analizzare il sentiment dei commenti in tempo reale all'interno di un'applicazione Web.
 
-Questa esercitazione illustra come creare un'applicazione di ASP.NET Core Razor Pages che classifica il sentiment dei commenti del sito Web in tempo reale.
+Questa esercitazione illustra come creare un'applicazione ASP.NET Core Razor Pages che classifica il sentiment dei commenti del sito Web in tempo reale.
 
 In questa esercitazione verranno illustrate le procedure per:
 
@@ -103,9 +103,9 @@ Il tempo necessario per l'esecuzione del training di ogni modello è proporziona
 
 ## <a name="evaluate-the-model"></a>Valutare il modello
 
-Il risultato del passaggio relativo al training è rappresentato dal modello con le prestazioni migliori. Nel passaggio di valutazione dello strumento Generatore di modelli, la sezione di output conterrà l'algoritmo utilizzato dal modello con le migliori prestazioni nella voce **Best Model** insieme alle metriche in Best **Model Accuracy**. Viene visualizzata anche una tabella di riepilogo con i cinque modelli migliori e le metriche relative.
+Il risultato del passaggio di training sarà un modello con le migliori prestazioni. Nel passaggio di valutazione dello strumento Generatore di modelli, la sezione di output conterrà l'algoritmo utilizzato dal modello con le migliori prestazioni nella voce **Best Model** insieme alle metriche in Best **Model Accuracy**. Inoltre, viene visualizzata una tabella di riepilogo contenente i primi cinque modelli e le relative metriche.
 
-Se non si è soddisfatti della precisione delle metriche,un modo semplice per migliorarla consiste nell'aumentare la durata del training del modello o nell'usare più dati. In caso contrario, selezionare il collegamento al **codice** per passare al passaggio finale nello strumento Generatore di modelli.
+Se non si è soddisfatti delle metriche di accuratezza, alcuni modi semplici per cercare di migliorare l'accuratezza del modello sono per aumentare la quantità di tempo per eseguire il training del modello o usare più dati. In caso contrario, selezionare il collegamento al **codice** per passare al passaggio finale nello strumento Generatore di modelli.
 
 ## <a name="add-the-code-to-make-predictions"></a>Aggiungere il codice per eseguire stime
 
@@ -124,7 +124,7 @@ Il risultato del processo di training sarà la creazione di due progetti.
 
 ### <a name="configure-the-predictionengine-pool"></a>Configurare il pool PredictionEngine
 
-Per eseguire una singola stima, [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)è necessario creare un file . [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)non è thread-safe. Inoltre, è necessario creare un'istanza di esso ovunque sia necessario all'interno dell'applicazione. Man mano che l'applicazione cresce, questo processo può diventare ingestibile. Per migliorare le prestazioni e la thread safety, `PredictionEnginePool` usare una [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) combinazione [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) di inserimento delle dipendenze e il servizio, che crea un oggetto da utilizzare in tutta l'applicazione.
+Per eseguire una singola stima, <xref:Microsoft.ML.PredictionEngine%602>è necessario creare un file . <xref:Microsoft.ML.PredictionEngine%602> non è thread-safe. Inoltre, è necessario creare un'istanza di esso ovunque sia necessario all'interno dell'applicazione. Man mano che l'applicazione cresce, questo processo può diventare ingestibile. Per migliorare le prestazioni e la thread safety, `PredictionEnginePool` usare una <xref:Microsoft.Extensions.ObjectPool.ObjectPool%601> combinazione <xref:Microsoft.ML.PredictionEngine%602> di inserimento delle dipendenze e il servizio, che crea un oggetto da utilizzare in tutta l'applicazione.
 
 1. Installare il *pacchetto NuGet Microsoft.Extensions.ML:*
 
@@ -277,7 +277,7 @@ I risultati restituiti `OnGetAnalyzeSentiment` da `Index` verranno visualizzati 
 
 ## <a name="run-the-application"></a>Eseguire l'applicazione
 
-Ora che l'applicazione è configurata, eseguire l'applicazione che dovrebbe essere avviata nel browser.
+Ora che l'applicazione è configurata, eseguire l'applicazione, che dovrebbe essere avviata nel browser.
 
 Quando l'applicazione viene avviata, immettere *Model Builder è cool!* nell'area di testo. Il sentiment previsto visualizzato deve essere *Non tossico*.
 

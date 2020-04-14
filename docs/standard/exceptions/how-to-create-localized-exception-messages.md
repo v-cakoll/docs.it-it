@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 09/13/2019
-ms.openlocfilehash: 5a02c71b16e2c8e5ade5128866af7dc46a03ba4a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fa0bbfdbfc9408302eec2edd4e4ee4503d2612c7
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160183"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243349"
 ---
 # <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>Come creare eccezioni definite dall'utente con messaggi di eccezione localizzatiHow to create user-defined exceptions with localized exception messages
 
@@ -153,12 +153,12 @@ Per creare i messaggi di eccezione localizzati:
 1. Generare l'eccezione con codice simile al seguente:
 
     ```csharp
-    var resourceManager = new ResourceManager("FULLY_QIALIFIED_NAME_OF_RESOURCE_FILE", Assembly.GetExecutingAssembly());
+    var resourceManager = new ResourceManager("FULLY_QUALIFIED_NAME_OF_RESOURCE_FILE", Assembly.GetExecutingAssembly());
     throw new StudentNotFoundException(resourceManager.GetString("StudentNotFound"), "John");
     ```
 
     ```vb
-    Dim resourceManager As New ResourceManager("FULLY_QIALIFIED_NAME_OF_RESOURCE_FILE", Assembly.GetExecutingAssembly())
+    Dim resourceManager As New ResourceManager("FULLY_QUALIFIED_NAME_OF_RESOURCE_FILE", Assembly.GetExecutingAssembly())
     Throw New StudentNotFoundException(resourceManager.GetString("StudentNotFound"), "John")
     ```
 

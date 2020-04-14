@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 98d303c99693a8aadb23da509a700772db69c0e0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17d85b9e9734fae0bb69f94da8c08669216ab0ae
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146658"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242868"
 ---
 # <a name="exposing-net-core-components-to-com"></a>Esposizione di componenti .NET Core a COM
 
@@ -24,7 +24,7 @@ In .NET Core, il processo di esposizione degli oggetti .NET a COM è stato signi
 - Generare un server COM nell'ambito della creazione della libreria .NET Core.
 - Generare automaticamente un manifesto del server affiancato per COM senza Registro di sistema.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 - Installare [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download) o una versione più recente.
 
@@ -92,5 +92,7 @@ L'output risultante includerà ora anche un file `ProjectName.X.manifest`. Quest
 ## <a name="additional-notes"></a>Note aggiuntive
 
 Diversamente da .NET Framework, in .NET Core non è disponibile alcun supporto per la generazione di una libreria dei tipi COM (TLB) da un assembly .NET Core. La guida consiste nel scrivere manualmente un file IDL o un'intestazione C/C, per le dichiarazioni native delle interfacce COM.
+
+[Le distribuzioni autonome](../deploying/index.md#publish-self-contained) dei componenti COM non sono supportate. Sono supportate solo [le distribuzioni dipendenti dal runtime](../deploying/index.md#publish-runtime-dependent) dei componenti COM.
 
 Inoltre, il caricamento di .NET Framework e .NET Core nello stesso processo ha limitazioni diagnostiche. La limitazione principale è il debug dei componenti gestiti in quanto non è possibile eseguire il debug contemporaneamente di .NET Framework e .NET Core. Inoltre, le due istanze di runtime non condividono assembly gestiti. Ciò significa che non è possibile condividere i tipi .NET effettivi tra i due runtime e invece tutte le interazioni devono essere limitate ai contratti di interfaccia COM esposti.

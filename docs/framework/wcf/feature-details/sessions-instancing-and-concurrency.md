@@ -2,12 +2,12 @@
 title: Sessioni, istanze e concorrenza
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-ms.openlocfilehash: a7466d819e15f3bfe8def2d9407dcf2c6e0c7346
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 19dedddadad2f27acdeeaceb2c186a731fa79c32
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184440"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243115"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sessioni, istanze e concorrenza
 Una *sessione* è una correlazione di tutti i messaggi inviati tra due endpoint. La*creazione di istanze* fa riferimento al controllo della durata di oggetti servizio definiti dall'utente e di oggetti <xref:System.ServiceModel.InstanceContext> correlati. La*concorrenza* è il termine dato al controllo del numero di thread in esecuzione contemporaneamente in un <xref:System.ServiceModel.InstanceContext> .  
@@ -63,7 +63,7 @@ public class CalculatorService : ICalculatorInstance
 ### <a name="well-known-singleton-services"></a>Servizi Singleton noti  
  Una variazione su oggetti servizio di una singola istanza può a volte essere utile. È infatti possibile creare un oggetto servizio e quindi creare l'host del servizio tramite quell'oggetto. A tale scopo, è necessario impostare la proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> su <xref:System.ServiceModel.InstanceContextMode.Single> , in caso contrario verrà generata un'eccezione quando l'host del servizio viene aperto.  
   
- Utilizzare il costruttore <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> per creare tale servizio. Fornisce un'alternativa all'implementazione di un'interfaccia <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> personalizzata quando si desidera fornire un'istanza specifica dell'oggetto utilizzabile da un servizio singleton. È possibile utilizzare questo overload quando il tipo di implementazione del servizio è difficile da costruire (ad esempio, se non implementa un costruttore pubblico senza parametri).  
+ Utilizzare il costruttore <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29> per creare tale servizio. Fornisce un'alternativa all'implementazione di un'interfaccia <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> personalizzata quando si desidera fornire un'istanza specifica dell'oggetto utilizzabile da un servizio singleton. È possibile utilizzare questo overload quando il tipo di implementazione del servizio è difficile da costruire (ad esempio, se non implementa un costruttore pubblico senza parametri).  
   
  Si noti che quando un oggetto viene fornito a questo costruttore, alcune funzionalità correlate al comportamento di creazione di istanze di Windows Communication Foundation (WCF) funzionano in modo diverso. La chiamata, ad esempio, di <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> non ha effetto quando viene fornita l'istanza di un oggetto Singleton. Analogamente, qualsiasi altro meccanismo di rilascio delle istanze viene ignorato. L'host <xref:System.ServiceModel.ServiceHost> si comporta sempre come se la proprietà <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> fosse impostata su <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> per tutte le operazioni.  
   
@@ -114,4 +114,4 @@ public class CalculatorService : ICalculatorConcurrency
 - [Procedura: Controllare le istanze del servizio](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
 - [Concorrenza](../../../../docs/framework/wcf/samples/concurrency.md)
 - [Creazione di istanze](../../../../docs/framework/wcf/samples/instancing.md)
-- [Sessione](../../../../docs/framework/wcf/samples/session.md)
+- [sessione](../../../../docs/framework/wcf/samples/session.md)

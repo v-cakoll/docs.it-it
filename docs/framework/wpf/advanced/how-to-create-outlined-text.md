@@ -11,15 +11,16 @@ helpviewer_keywords:
 - linear gradient brush [WPF]
 - typography [WPF], outline effects
 ms.assetid: 4aa3cf6e-1953-4f26-8230-7c1409e5f28d
-ms.openlocfilehash: d0ce46b9895589fd4635b567136204368a6431ad
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 86bfa396a2aa44eb511c014687501d60e170a396
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186863"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278925"
 ---
-# <a name="how-to-create-outlined-text"></a>Procedura: creare testo con contorni
-Nella maggior parte dei casi, quando si [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aggiungono ornamenti alle stringhe di testo nell'applicazione, si utilizza il testo in termini di una raccolta di caratteri discreti o glifi. Ad esempio, è possibile creare un pennello <xref:System.Windows.Controls.Control.Foreground%2A> sfumato lineare e applicarlo alla proprietà di un <xref:System.Windows.Controls.TextBox> oggetto. Quando si visualizza o si modifica la casella di testo, il pennello sfumato lineare viene applicato automaticamente al set di caratteri corrente nella stringa di testo.  
+# <a name="how-to-create-outlined-text"></a>Procedura: Creare testo strutturatoHow to: Create outlined text
+
+Nella maggior parte dei casi, quando si aggiunge [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ornamenti alle stringhe di testo nell'applicazione, si utilizza il testo in termini di una raccolta di caratteri discreti o glifi. Ad esempio, è possibile creare un pennello <xref:System.Windows.Controls.Control.Foreground%2A> sfumato lineare e applicarlo alla proprietà di un <xref:System.Windows.Controls.TextBox> oggetto. Quando si visualizza o si modifica la casella di testo, il pennello sfumato lineare viene applicato automaticamente al set di caratteri corrente nella stringa di testo.  
   
  ![Testo visualizzato con pennello sfumato lineare](./media/how-to-create-outlined-text/text-linear-gradient.jpg)
   
@@ -45,14 +46,14 @@ Nella maggior parte dei casi, quando si [!INCLUDE[TLA#tla_winclient](../../../..
  [!code-csharp[OutlineTextControlViewer#CreateText](~/samples/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs#createtext)]
  [!code-vb[OutlineTextControlViewer#CreateText](~/samples/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb#createtext)]  
   
- Per visualizzare gli <xref:System.Windows.Media.Geometry> oggetti recuperati, è necessario <xref:System.Windows.Media.DrawingContext> accedere all'oggetto che visualizza il testo convertito. In questi esempi di codice, questa operazione viene eseguita creando un oggetto controllo personalizzato derivato da una classe che supporta il rendering definito dall'utente.  
+ Per visualizzare gli <xref:System.Windows.Media.Geometry> oggetti recuperati, è necessario <xref:System.Windows.Media.DrawingContext> accedere all'oggetto che visualizza il testo convertito. In questi esempi di codice, questo accesso viene ottenuto creando un oggetto controllo personalizzato derivato da una classe che supporta il rendering definito dall'utente.  
   
  Per <xref:System.Windows.Media.Geometry> visualizzare gli oggetti nel controllo personalizzato, fornire un override per il <xref:System.Windows.UIElement.OnRender%2A> metodo. Il metodo sottoposto <xref:System.Windows.Media.DrawingContext.DrawGeometry%2A> a override <xref:System.Windows.Media.Geometry> deve utilizzare il metodo per disegnare gli oggetti.  
   
  [!code-csharp[OutlineTextControlViewer#OnRender](~/samples/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs#onrender)]
  [!code-vb[OutlineTextControlViewer#OnRender](~/samples/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb#onrender)]  
   
-  Per l'origine dell'oggetto controllo utente personalizzato di esempio, vedere [OutlineTextControl.cs per C'](https://github.com/dotnet/samples/blob/master/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs) e [OutlineTextControl.vb per Visual Basic](https://github.com/dotnet/samples/blob/master/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb).
+  Per l'origine dell'oggetto controllo utente personalizzato di esempio, vedere [OutlineTextControl.cs per C'](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs) e [OutlineTextControl.vb per Visual Basic](https://github.com/dotnet/docs/blob/master/samples/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb).
   
 ## <a name="see-also"></a>Vedere anche
 

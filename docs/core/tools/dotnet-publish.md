@@ -2,12 +2,12 @@
 title: Comando dotnet publish
 description: Il comando dotnet publish pubblica un progetto o una soluzione .NET Core in una directory.
 ms.date: 02/24/2020
-ms.openlocfilehash: 0e18220443f3713c86c257fcf401b98ddd716ebc
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 26dda33d04f3f7a23805627708b55233ef4e87ef
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588274"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242842"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -23,7 +23,8 @@ ms.locfileid: "80588274"
 dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration]
     [-f|--framework] [--force] [--interactive] [--manifest]
     [--no-build] [--no-dependencies] [--no-restore] [--nologo]
-    [-o|--output] [-r|--runtime] [--self-contained]
+    [-o|--output] [-p:PublishReadyToRun] [-p:PublishSingleFile]
+    [-p:PublishTrimmed] [-r|--runtime] [--self-contained]
     [--no-self-contained] [-v|--verbosity] [--version-suffix]
 
 dotnet publish [-h|--help]
@@ -114,6 +115,12 @@ Per altre informazioni, vedere le seguenti risorse:
   
   Se non specificato, il valore predefinito è *[project_file_folder]./bin/[configuration]/[framework]/publish/* per un eseguibile dipendente dal runtime e file binari multipiattaforma. Il valore predefinito è *[project_file_folder]/bin/[configuration]/[framework]/[runtime]/publish/* per un eseguibile autonomo.
 
+  In un progetto Web, se la cartella di `dotnet publish` output si trova nella cartella del progetto, i comandi successivi generano cartelle di output nidificate. Ad esempio, se la cartella del progetto è *myproject*e la cartella `dotnet publish` dell'output di pubblicazione è *myproject/publish*e viene eseguita due volte, la seconda esecuzione inserisce i file di contenuto, ad esempio i file *con estensione config* e *json,* nei file *myproject/publish/publish*. Per evitare di nidificare le cartelle di pubblicazione, specificare una cartella di pubblicazione che non si trova direttamente sotto la cartella del progetto o escludere la cartella di pubblicazione dal progetto. Per escludere una cartella di pubblicazione denominata `PropertyGroup` *publishoutput*, aggiungere il seguente elemento a un elemento nel file con estensione *csproj:*
+
+  ```xml
+  <DefaultItemExcludes>$(DefaultItemExcludes);publishoutput**</DefaultItemExcludes>
+  ```
+
   - .NET Core 3.x SDK e versioni successive
   
     Se viene specificato un percorso relativo durante la pubblicazione di un progetto, la directory di output generata è relativa alla directory di lavoro corrente, non al percorso del file di progetto.
@@ -125,6 +132,26 @@ Per altre informazioni, vedere le seguenti risorse:
     Se durante la pubblicazione di un progetto viene specificato un percorso relativo, la directory di output generata è relativa al percorso del file di progetto, non alla directory di lavoro corrente.
 
     Se viene specificato un percorso relativo durante la pubblicazione di una soluzione, l'output di ogni progetto viene inserito in una cartella separata rispetto al percorso del file di progetto. Se viene specificato un percorso assoluto durante la pubblicazione di una soluzione, tutto l'output di pubblicazione per tutti i progetti viene inserito nella cartella specificata.
+
+- **`-p:PublishReadyToRun`**
+
+  Compila gli assembly dell'applicazione in formato ReadyToRun (R2R). R2R è un formato di compilazione AOT (Ahead-of-time). Per ulteriori informazioni, vedere [Immagini ReadyToRun](../whats-new/dotnet-core-3-0.md#readytorun-images). Disponibile a partire da .NET Core 3.0 SDK.
+
+  È consigliabile specificare questa opzione in un profilo di pubblicazione anziché nella riga di comando. Per ulteriori informazioni, vedere [MSBuild](#msbuild).
+
+- **`-p:PublishSingleFile`**
+
+  Crea un pacchetto dell'app in un eseguibile a file singolo specifico della piattaforma. L'eseguibile è autoestraente e contiene tutte le dipendenze (incluso nativo) necessarie per eseguire l'app. Quando l'app viene eseguita per la prima volta, l'applicazione viene estratta in una directory in base al nome dell'app e all'identificatore di compilazione. L'avvio dell'applicazione sarà più veloce alla successiva esecuzione. L'applicazione non ha bisogno di estrarre se stessa una seconda volta a meno che non viene utilizzata una nuova versione. Disponibile a partire da .NET Core 3.0 SDK.
+
+  Per altre informazioni sulla pubblicazione di file singolo, vedere il [documento sulla progettazione di un bundler con file singolo](https://github.com/dotnet/designs/blob/master/accepted/2020/single-file/design.md).
+
+  È consigliabile specificare questa opzione in un profilo di pubblicazione anziché nella riga di comando. Per ulteriori informazioni, vedere [MSBuild](#msbuild).
+
+- **`-p:PublishTrimmed`**
+
+  Taglia le librerie inutilizzate per ridurre le dimensioni di distribuzione di un'app durante la pubblicazione di un eseguibile autonomo. Per ulteriori informazioni, consultate [Tagliare distribuzioni ed eseguibili indipendenti.](../deploying/trim-self-contained.md) Disponibile a partire da .NET Core 3.0 SDK.
+
+  È consigliabile specificare questa opzione in un profilo di pubblicazione anziché nella riga di comando. Per ulteriori informazioni, vedere [MSBuild](#msbuild).
 
 - **`--self-contained [true|false]`**
 
@@ -203,3 +230,4 @@ Per altre informazioni, vedere le seguenti risorse:
 - [Riferimenti alla riga di comando di MSBuild](/visualstudio/msbuild/msbuild-command-line-reference)
 - [Profili di pubblicazione di Visual Studio (pubxml) per la distribuzione di app ASP.NET Core](/aspnet/core/host-and-deploy/visual-studio-publish-profiles)
 - [dotnet msbuild](dotnet-msbuild.md)
+- [ILLInk.Tasks](https://aka.ms/dotnet-illink)

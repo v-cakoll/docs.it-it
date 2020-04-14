@@ -12,12 +12,12 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-ms.openlocfilehash: a53d7517485d2a0b02b6f11928f478a7da3f9503
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf352d6494a823d4f7b24eb2876d9bffa5877b2b
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73972107"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242777"
 ---
 # <a name="regular-expression-options"></a>Opzioni di espressioni regolari
 
@@ -40,7 +40,7 @@ Per impostazione predefinita, il confronto di una stringa di input con qualsiasi
 
 È possibile specificare le opzioni per le espressioni regolari in tre modi:
 
-- Nel parametro `options` di un costruttore della classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> o di un metodo statico (`Shared` in Visual Basic) dei criteri di ricerca, ad esempio <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> o <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>. Il parametro `options` è una combinazione OR bit per bit dei valori enumerati <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.
+- Nel parametro `options` di un costruttore della classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> o di un metodo statico (`Shared` in Visual Basic) dei criteri di ricerca, ad esempio <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29> o <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>. Il parametro `options` è una combinazione OR bit per bit dei valori enumerati <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.
 
   Quando vengono specificate le opzioni per un'istanza di <xref:System.Text.RegularExpressions.Regex> usando il parametro `options` di un costruttore di classe, le opzioni vengono assegnate alla proprietà <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>. Tuttavia, la proprietà <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> non rispecchia le opzioni inline nel criterio di ricerca di espressioni regolari stesso.
 
@@ -377,4 +377,4 @@ L'esempio che segue è identico al precedente, tranne il fatto che il metodo sta
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Linguaggio delle espressioni regolari - Guida di riferimento rapidoRegular Expression Language - Quick Reference](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

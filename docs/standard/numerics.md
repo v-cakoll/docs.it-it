@@ -11,12 +11,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-ms.openlocfilehash: 3e9c817006930a36ebdce5c5965d78f1721c7056
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: ec5d4c088d3a954a4670891e3bb115c73e6cfdcf
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635148"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242764"
 ---
 # <a name="numerics-in-net"></a>Valori numerici in .NET
 
@@ -62,7 +62,7 @@ I tipi <xref:System.Single> e <xref:System.Double> supportano entrambi valori sp
 
 Ogni tipo a virgola mobile supporta un set di operatori aritmetici standard. La classe <xref:System.Math?displayProperty=nameWithType> fornisce metodi per un set più ampio di funzioni matematiche. .NET Core 2.0 e <xref:System.MathF?displayProperty=nameWithType> versioni successive include la classe <xref:System.Single> , che fornisce metodi che accettano argomenti del tipo.
 
-È anche possibile operare sui singoli bit dei valori <xref:System.Double> e <xref:System.Single> usando la classe <xref:System.BitConverter?displayProperty=nameWithType>. La struttura <xref:System.Decimal?displayProperty=nameWithType> dispone di metodi specifici, <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> e <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=nameWithType>, che consentono di operare sui singoli bit di un valore decimale, nonché di un set di metodi specifici per l'esecuzione di altre operazioni matematiche.
+È anche possibile operare sui singoli bit dei valori <xref:System.Double> e <xref:System.Single> usando la classe <xref:System.BitConverter?displayProperty=nameWithType>. La struttura <xref:System.Decimal?displayProperty=nameWithType> dispone di metodi specifici, <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> e <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29>, che consentono di operare sui singoli bit di un valore decimale, nonché di un set di metodi specifici per l'esecuzione di altre operazioni matematiche.
   
 I <xref:System.Double> <xref:System.Single> tipi e sono destinati ad essere utilizzati per valori che, per loro natura, sono imprecisi (ad esempio, la distanza tra due stelle) e per applicazioni in cui non è richiesto un alto grado di precisione e un piccolo errore di arrotondamento. Utilizzare <xref:System.Decimal?displayProperty=nameWithType> il tipo per i casi in cui è richiesta una maggiore precisione e gli errori di arrotondamento devono essere ridotti al minimo.
 

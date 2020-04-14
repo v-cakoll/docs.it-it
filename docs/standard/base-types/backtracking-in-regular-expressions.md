@@ -17,12 +17,12 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-ms.openlocfilehash: 1b61cc88de4f73abfe6d8e77f8f32c2c71e70a9d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9c525229eb1ba5ca00ad1042864f92621bb366d2
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78158064"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243232"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Backtracking nelle espressioni regolari
 Il backtracking si verifica quando un modello di espressione regolare contiene [quantificatori](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) o [costrutti di alternanza](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md) facoltativi e il motore delle espressioni regolari torna a uno stato salvato in precedenza per continuare la ricerca di una corrispondenza. Il backtracking è fondamentale per la potenza delle espressioni regolari. Consente alle espressioni di essere potenti e flessibili e di cercare una corrispondenza di modelli molto complessi. Questa tecnica presenta tuttavia anche alcuni svantaggi. Il backtracking spesso è il fattore più importante che influisce sulle prestazioni del motore delle espressioni regolari. Fortunatamente, lo sviluppatore è in grado di controllare il comportamento del motore delle espressioni regolari e il modo in cui viene utilizzato il backtracking. In questo argomento viene illustrato il funzionamento del backtracking e il modo in cui può essere controllato.  
@@ -106,14 +106,14 @@ Il backtracking si verifica quando un modello di espressione regolare contiene [
  Il backtracking consente di creare espressioni regolari potenti e flessibili. Tuttavia, come illustrato nella sezione precedente, insieme a questi vantaggi si ottiene una notevole riduzione delle prestazioni. Per evitare un utilizzo eccessivo del backtracking, è necessario definire un intervallo di timeout quando si crea un'istanza di un oggetto <xref:System.Text.RegularExpressions.Regex> o si chiama un metodo di espressione regolare statica corrispondente. Questo è discusso nella sezione seguente. Inoltre, .NET supporta tre elementi del linguaggio delle espressioni regolari che limitano o eliminano il backtracking e che supportano espressioni regolari complesse con una riduzione delle prestazioni minime o nulla: [gruppi](#atomic-groups) [atomici, asserzioni lookbehind](#lookbehind-assertions)e [asserzioni lookahead](#lookahead-assertions). Per altre informazioni su ogni elemento del linguaggio, vedere [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
 
 ### <a name="defining-a-time-out-interval"></a>Definizione di un intervallo di timeout  
- A partire da .NET Framework 4.5, è possibile impostare un valore di timeout che rappresenta l'intervallo più lungo durante il quale il motore delle espressioni regolari cercherà una singola corrispondenza prima di abbandonare il tentativo e generare un'eccezione <xref:System.Text.RegularExpressions.RegexMatchTimeoutException>. Specificare l'intervallo di timeout fornendo un valore <xref:System.TimeSpan> al costruttore <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> per instanziare espressioni regolari. Inoltre, ogni metodo statico di criteri di ricerca ha un overload con un parametro <xref:System.TimeSpan> che consente di specificare un valore di timeout. Per impostazione predefinita, l'intervallo di timeout viene impostato su <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> e il motore delle espressioni regolari non ha timeout.  
+ A partire da .NET Framework 4.5, è possibile impostare un valore di timeout che rappresenta l'intervallo più lungo durante il quale il motore delle espressioni regolari cercherà una singola corrispondenza prima di abbandonare il tentativo e generare un'eccezione <xref:System.Text.RegularExpressions.RegexMatchTimeoutException>. Specificare l'intervallo di timeout fornendo un valore <xref:System.TimeSpan> al costruttore <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29> per instanziare espressioni regolari. Inoltre, ogni metodo statico di criteri di ricerca ha un overload con un parametro <xref:System.TimeSpan> che consente di specificare un valore di timeout. Per impostazione predefinita, l'intervallo di timeout viene impostato su <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> e il motore delle espressioni regolari non ha timeout.  
   
 > [!IMPORTANT]
 > È consigliabile impostare sempre un intervallo di timeout se l'espressione regolare si basa sul backtracking.  
   
  Un'eccezione <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> indica che il motore delle espressioni regolari non è in grado di trovare una corrispondenza nell'intervallo di timeout specificato, ma non indica perché è stata generata l'eccezione. Il motivo può essere l'utilizzo eccessivo del backtracking, ma è anche possibile che l'intervallo di timeout sia stato impostato troppo basso dato il carico di sistema al momento in cui l'eccezione è stata generata. Quando si gestisce l'eccezione, è possibile scegliere di ignorare ulteriori corrispondenze con la stringa di input o aumentare l'intervallo di timeout e ritentare l'operazione corrispondente.  
   
- Ad esempio, il codice seguente chiama il costruttore <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> per creare un'istanza di un oggetto <xref:System.Text.RegularExpressions.Regex> con un valore di timeout di un secondo. Il modello di espressione regolare `(a+)+$`, che corrisponde a uno o più sequenze di uno o più caratteri "a" alla fine di una riga, è soggetto all'utilizzo eccessivo del backtracking. Se <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> viene generato, l'esempio aumenta il valore di timeout fino a un intervallo massimo di tre secondi. Successivamente, ignora il tentativo di corrispondere al modello.  
+ Ad esempio, il codice seguente chiama il costruttore <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29> per creare un'istanza di un oggetto <xref:System.Text.RegularExpressions.Regex> con un valore di timeout di un secondo. Il modello di espressione regolare `(a+)+$`, che corrisponde a uno o più sequenze di uno o più caratteri "a" alla fine di una riga, è soggetto all'utilizzo eccessivo del backtracking. Se <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> viene generato, l'esempio aumenta il valore di timeout fino a un intervallo massimo di tre secondi. Successivamente, ignora il tentativo di corrispondere al modello.  
   
  [!code-csharp[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/cs/ctor1.cs#1)]
  [!code-vb[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/vb/ctor1.vb#1)]  
@@ -191,7 +191,7 @@ Il backtracking si verifica quando un modello di espressione regolare contiene [
 ## <a name="see-also"></a>Vedere anche
 
 - [Espressioni regolari .NET](../../../docs/standard/base-types/regular-expressions.md)
-- [Linguaggio delle espressioni regolari - Guida di riferimento rapidoRegular Expression Language - Quick Reference](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [Quantificatori](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)
 - [Costrutti di alternanza](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)
 - [Costrutti di raggruppamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)

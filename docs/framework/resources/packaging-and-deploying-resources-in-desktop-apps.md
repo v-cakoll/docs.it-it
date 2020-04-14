@@ -26,12 +26,12 @@ helpviewer_keywords:
 - localizing resources
 - neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
-ms.openlocfilehash: 9c8d459195693e8eb084f7e87427a3ea37dd63ba
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d64e3b5201e34541fdafa5724b0c7e8c3f6c0c0d
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129922"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243050"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Creazione di pacchetti e distribuzione delle risorse nelle app .NET
 
@@ -53,7 +53,7 @@ Questo modello presenta diversi vantaggi:
 Quando si includono nel pacchetto le risorse dell'applicazione è necessario denominarle in base alle convenzioni previste dal Common Language Runtime. Il runtime identifica una risorsa in base al nome delle impostazioni cultura. A ogni set di impostazioni cultura viene assegnato un nome univoco, in genere una combinazione di un nome impostazioni cultura di due lettere minuscole associato a una lingua e (se necessario) un nome impostazioni cultura secondarie di due lettere maiuscole associato a un paese o a una regione. Il nome delle impostazioni cultura secondarie segue il nome delle impostazioni cultura ed è separato da un trattino (-). Ad esempio ja-JP corrisponde al giapponese parlato in Giappone, en-US corrisponde all'inglese parlato negli Stati Uniti d'America, de-DE corrisponde al tedesco parlato in Germania, de-AT corrisponde al tedesco parlato in Austria. Vedere la colonna **Language tag** (Tag di lingua) nell'[elenco di nomi di lingua/area geografica supportati da Windows](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c). I nomi delle impostazioni cultura seguono lo standard definito da [BCP 47](https://tools.ietf.org/html/bcp47).
 
 > [!NOTE]
-> Esistono alcune eccezioni per i nomi delle impostazioni cultura di due lettere, ad esempio `zh-Hans` per il cinese (semplificato).
+> Esistono alcune eccezioni per i nomi delle `zh-Hans` impostazioni cultura di due lettere, ad esempio per il cinese (semplificato).
 
 > [!NOTE]
 > Per informazioni sulla creazione di file di risorse, vedere [Creazione di file di risorse](creating-resource-files-for-desktop-apps.md) e [Creazione di assembly satellite](creating-satellite-assemblies-for-desktop-apps.md).
@@ -71,7 +71,7 @@ Per migliorare le prestazioni di ricerca, applicare l'attributo <xref:System.Res
 Il processo di fallback per le risorse di .NET Framework include i passaggi seguenti:
 
 > [!TIP]
-> L'elemento di configurazione [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) può contribuire a ottimizzare il processo di fallback delle risorse e il processo di probe degli assembly di risorse nel runtime. Per altre informazioni vedere la sezione [Ottimizzazione del processo di fallback delle risorse](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing).
+> È possibile utilizzare l'elemento [ \<](../configure-apps/file-schema/runtime/relativebindforresources-element.md) di configurazione relativeBindForResources>per ottimizzare il processo di fallback delle risorse e il processo mediante il quale il runtime esegue il probe per gli assembly di risorse. Per altre informazioni vedere la sezione [Ottimizzazione del processo di fallback delle risorse](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing).
 
 1. Il runtime ricerca nella [Global Assembly Cache](../app-domains/gac.md) un assembly corrispondente alle impostazioni cultura richieste per l'applicazione.
 
@@ -116,7 +116,7 @@ Se si verificano le seguenti condizioni, è possibile ottimizzare il processo co
 
 - Il codice dell'applicazione non gestisce l'evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>.
 
-È possibile ottimizzare il probe per gli assembly satellite includendo l'elemento [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) e impostando il relativo attributo `enabled` su `true` nel file di configurazione dell'applicazione, come illustrato nell'esempio seguente.
+È possibile ottimizzare il probe per gli assembly satellite `enabled` includendo `true` l'elemento [ \<>relativeBindForResources](../configure-apps/file-schema/runtime/relativebindforresources-element.md) e impostandone l'attributo nel file di configurazione dell'applicazione, come illustrato nell'esempio seguente.
 
 ```xml
 <configuration>
@@ -170,7 +170,7 @@ Il processo di fallback per le risorse di .NET Core include i passaggi seguenti:
 
 ### <a name="ultimate-fallback-to-satellite-assembly"></a>Fallback finale a un assembly satellite
 
-Se si vuole è possibile rimuovere risorse dall'assembly principale e specificare che il runtime caricherà le risorse di fallback finale da un assembly satellite corrispondente a impostazioni cultura specifiche. Per controllare il processo di fallback si usa il costruttore <xref:System.Resources.NeutralResourcesLanguageAttribute.%23ctor%28System.String%2CSystem.Resources.UltimateResourceFallbackLocation%29?displayProperty=nameWithType> e si specifica un valore per il parametro <xref:System.Resources.UltimateResourceFallbackLocation> che indica se Resource Manager estrarrà le risorse di fallback dall'assembly principale o da un assembly satellite.
+Se si vuole è possibile rimuovere risorse dall'assembly principale e specificare che il runtime caricherà le risorse di fallback finale da un assembly satellite corrispondente a impostazioni cultura specifiche. Per controllare il processo di fallback si usa il costruttore <xref:System.Resources.NeutralResourcesLanguageAttribute.%23ctor%28System.String%2CSystem.Resources.UltimateResourceFallbackLocation%29> e si specifica un valore per il parametro <xref:System.Resources.UltimateResourceFallbackLocation> che indica se Resource Manager estrarrà le risorse di fallback dall'assembly principale o da un assembly satellite.
 
 Nell'esempio di .NET Framework seguente viene usato l'attributo <xref:System.Resources.NeutralResourcesLanguageAttribute> per archiviare le risorse di fallback di un'applicazione in un assembly satellite per la lingua francese (`fr`). L'esempio include due file di testo di risorse che definiscono un'unica risorsa stringa denominata `Greeting`. Il primo file, resources.fr.txt, contiene una risorsa per la lingua francese.
 
@@ -231,7 +231,7 @@ Vincoli di tempo o di budget potrebbero rendere difficile la creazione di un set
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Risorse nelle applicazioni desktop](index.md)
+- [Risorse nelle app desktop](index.md)
 - [Global Assembly Cache](../app-domains/gac.md)
 - [Creazione dei file di risorsa](creating-resource-files-for-desktop-apps.md)
 - [Creazione di assembly satellite](creating-satellite-assemblies-for-desktop-apps.md)

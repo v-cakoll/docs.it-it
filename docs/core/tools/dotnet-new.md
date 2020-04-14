@@ -1,13 +1,13 @@
 ---
 title: Comando dotnet new
 description: Il comando dotnet new consente di creare nuovi progetti .NET Core in base al modello specificato.
-ms.date: 02/13/2020
-ms.openlocfilehash: d3c609419596b123f5bfb3ca85cf292a61154a70
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/10/2020
+ms.openlocfilehash: 1b1a6efa7bf2753b6c23cc7af1e26867f8632b96
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399126"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242881"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -49,7 +49,7 @@ Questo comando chiama il [motore del modello](https://github.com/dotnet/templati
 
 | Modelli                                    | Nome breve                      | Linguaggio     | Tag                                  | Presentare |
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
-| Applicazione console                          | [console](#console)             | [C#], F#, VB | Comune/Console                        | 1.0        |
+| Applicazione console                          | [Console](#console)             | [C#], F#, VB | Comune/Console                        | 1.0        |
 | Libreria di classi                                | [classlib](#classlib)           | [C#], F#, VB | Comune/Library                        | 1.0        |
 | Applicazione WPF                              | [Wpf](#wpf)                     | [C#]         | Comune/WPF                            | 3.0        |
 | Libreria di classi WPFWPF Class library                            | [wpflib (libreria)](#wpf)                  | [C#]         | Comune/WPF                            | 3.0        |
@@ -198,7 +198,7 @@ Per ogni modello di progetto potrebbero essere disponibili opzioni aggiuntive. I
 
 ***
 
-### <a name="wpf"></a>wpf, wpflib, wpfcustomcontrollib, wpfusercontrollib
+### <a name="wpf-wpflib-wpfcustomcontrollib-wpfusercontrollib"></a><a name="wpf"></a>wpf, wpflib, wpfcustomcontrollib, wpfusercontrollib
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -216,7 +216,7 @@ Per ogni modello di progetto potrebbero essere disponibili opzioni aggiuntive. I
 
 ***
 
-### <a name="winforms"></a>winforms, winformslib
+### <a name="winforms-winformslib"></a><a name="winforms"></a>winforms, winformslib
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -230,7 +230,7 @@ Per ogni modello di progetto potrebbero essere disponibili opzioni aggiuntive. I
 
 ***
 
-### <a name="web-others"></a>lavoratore, grpc
+### <a name="worker-grpc"></a><a name="web-others"></a>lavoratore, grpc
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -246,7 +246,7 @@ Per ogni modello di progetto potrebbero essere disponibili opzioni aggiuntive. I
 
 ***
 
-### <a name="test"></a>mstest, xunit
+### <a name="mstest-xunit"></a><a name="test"></a>mstest, xunit
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -306,7 +306,7 @@ Per ogni modello di progetto potrebbero essere disponibili opzioni aggiuntive. I
 
 ***
 
-### <a name="namespace"></a>viewimports, proto
+### <a name="viewimports-proto"></a><a name="namespace"></a>viewimports, proto
 
 - **`-na|--namespace <NAMESPACE_NAME>`**
 
@@ -413,7 +413,7 @@ Per ogni modello di progetto potrebbero essere disponibili opzioni aggiuntive. I
 
 ***
 
-### <a name="web-options"></a>mvc, webapp
+### <a name="mvc-webapp"></a><a name="web-options"></a>mvc, webapp
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
@@ -497,9 +497,13 @@ Per ogni modello di progetto potrebbero essere disponibili opzioni aggiuntive. I
 
   Include BrowserLink nel progetto. Opzione non disponibile in .NET Core 2.2 e 3.1 SDK.
 
+- **`-rrc|--razor-runtime-compilation`**
+
+  Determina se il progetto è configurato per utilizzare la compilazione di [runtime Razor](/aspnet/core/mvc/views/view-compilation#runtime-compilation) nelle compilazioni di debug. Opzione disponibile da .NET Core 3.1 SDK.
+
 ***
 
-### <a name="spa"></a>angolare, reagire
+### <a name="angular-react"></a><a name="spa"></a>angolare, reagire
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 

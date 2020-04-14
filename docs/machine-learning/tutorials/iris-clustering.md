@@ -5,12 +5,12 @@ author: pkulikov
 ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 174907adac5741d5cc7d02cb134921debc586061
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 03ce1a5f3ef4d4da01f848cac0c520a5a6aaf4bf
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78241091"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242790"
 ---
 # <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>Esercitazione: Categorizza i fiori di iride usando il raggruppamento k-means con ML.NET
 
@@ -27,7 +27,7 @@ In questa esercitazione verranno illustrate le procedure per:
 > - Eseguire il training del modello
 > - Usare il modello per le stime
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 - [Visual Studio 2017 versione 15.6 o successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con il carico di lavoro ".NET Core cross-platform development" installato.
 
@@ -53,16 +53,16 @@ Poiché non si sa a quale gruppo appartenga ciascun fiore, scegliere l'attività
 
 ## <a name="prepare-the-data"></a>Preparare i dati
 
-1. Scaricare il set di dati [iris.data](https://github.com/dotnet/machinelearning/blob/master/test/data/iris.data) e salvarlo nella cartella *Dati* creata nel passaggio precedente. Per altre informazioni sui set di dati iris, vedere la pagina [Dataset Iris](https://en.wikipedia.org/wiki/Iris_flower_data_set) di Wikipedia e la pagina [Iris Data Set](https://archive.ics.uci.edu/ml/datasets/Iris), che rappresenta l'origine del set di dati.
+1. Scaricare il set di dati [iris.data](https://github.com/dotnet/machinelearning/blob/master/test/data/iris.data) e salvarlo nella cartella *Dati* creata nel passaggio precedente. Per altre informazioni sui set di dati iris, vedere la pagina [Dataset Iris](https://en.wikipedia.org/wiki/Iris_flower_data_set) di Wikipedia e la pagina [Iris Data Set](http://archive.ics.uci.edu/ml/datasets/Iris), che rappresenta l'origine del set di dati.
 
 1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul file *iris.data* e selezionare **Proprietà**. In **Avanzate**, modificare il valore di **Copia nella directory** di output in Copia se **più recente**.
 
 Il file *iris.data* contiene cinque colonne che rappresentano:
 
-- lunghezza del sepalo in centimetri
-- larghezza del sepalo in centimetri
+- lunghezza sepal in centimetri
+- larghezza sepal in centimetri
 - lunghezza del petalo in centimetri
-- larghezza del petalo in centimetri
+- larghezza petale in centimetri
 - tipo di fiore iris
 
 Per l'esempio del clustering, questa esercitazione ignora l'ultima colonna.

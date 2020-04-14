@@ -4,12 +4,12 @@ description: In questa esercitazione viene illustrato come creare un'applicazion
 ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 47b9a9fe37cbcacab3797ed7fb1398b0c524d746
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c6e13cfca93c54648b1a0423c5983013d3e2a1a0
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78241130"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243297"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Esercitazione: Analizzare il sentiment dei commenti del sito Web con la classificazione binaria in ML.NET
 
@@ -28,11 +28,11 @@ In questa esercitazione verranno illustrate le procedure per:
 
 È possibile trovare il codice sorgente per questa esercitazione nel repository [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 - [Visual Studio 2017 versione 15.6 o successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) con il carico di lavoro ".NET Core cross-platform development" installato
 
-- [Set di dati Sentiment Labeled Sentences di UCI](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) (file con estensione zip)
+- [Set di dati Sentiment Labeled Sentences di UCI](http://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) (file con estensione zip)
 
 ## <a name="create-a-console-application"></a>Creare un'applicazione console
 
@@ -49,7 +49,7 @@ In questa esercitazione verranno illustrate le procedure per:
 > [!NOTE]
 > I set di dati usati in questa esercitazione provengono da "From Group to Individual Labels using Deep Features", Kotzias et. al,. KDD 2015, e ha ospitato presso l'UCI Machine Learning Repository - Dua, D. e Karra Taniskidou, E. (2017). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml]. Irvine, CA: University of California, School of Information and Computer Science.
 
-1. Scaricare il [file con estensione zip del set di dati Sentiment Labeled Sentences di UCI](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) e decomprimerlo.
+1. Scaricare il [file con estensione zip del set di dati Sentiment Labeled Sentences di UCI](http://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) e decomprimerlo.
 
 2. Copiare il file `yelp_labelled.txt` nella directory *Data* creata.
 
@@ -131,7 +131,7 @@ Preparare l'app, quindi caricare i dati:
 
     [!code-csharp[LoadData](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#LoadData "loading dataset")]
 
-    [LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) definisce lo schema dei dati e legge il contenuto del file. Acquisisce le variabili di percorso dei dati e restituisce un oggetto `IDataView`.
+    Il metodo [LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) definisce lo schema dei dati e legge il file. Acquisisce le variabili di percorso dei dati e restituisce un oggetto `IDataView`.
 
 ### <a name="split-the-dataset-for-model-training-and-testing"></a>Dividere il set di dati per il training e il test del modello
 
@@ -141,7 +141,7 @@ Quando si prepara un modello, usare parte del set di dati per il training e part
 
     [!code-csharp[SplitData](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#SplitData "Split the Data")]
 
-    Il codice precedente usa il metodo [TrainTestSplit()](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit%2A) per suddividere il set di dati caricati in set di dati di training e di test e restituirli nella classe [TrainTestData](xref:Microsoft.ML.DataOperationsCatalog.TrainTestData). Specificare la percentuale di dati del set di test con il parametro `testFraction`. Il valore predefinito è 10%, in questo caso usare il 20% per valutare più dati.
+    Il codice precedente usa il metodo [TrainTestSplit()](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit%2A) per dividere il dataset caricato <xref:Microsoft.ML.DataOperationsCatalog.TrainTestData> in dataset di training e test e restituirli nella classe. Specificare la percentuale di dati del set di test con il parametro `testFraction`. Il valore predefinito è 10%, in questo caso usare il 20% per valutare più dati.
 
 2. Restituire `splitDataView` alla fine del metodo `LoadData()`:
 

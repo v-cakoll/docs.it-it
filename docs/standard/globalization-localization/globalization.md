@@ -13,12 +13,12 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-ms.openlocfilehash: fe03bbdd7d037a9f1fb4985b62b447c6ef9c6535
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c08f4309d7673d7e7fb1c6bd84307e4323411d9e
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79174784"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242686"
 ---
 # <a name="globalization"></a>Globalizzazione
 
@@ -336,9 +336,9 @@ In genere, non fare supposizioni sui valori della proprietà <xref:System.Global
 
 - .NET supporta impostazioni cultura sostitutive. Ciò consente di definire nuove impostazioni cultura personalizzate che completano le impostazioni cultura standard esistenti o li sostituiscono completamente.
 
-- Nei sistemi Windows l'utente può personalizzare aspetti specifici delle impostazioni cultura usando l'app **Paese e lingua** nel Pannello di controllo. Quando viene creata un'istanza di un oggetto <xref:System.Globalization.CultureInfo>, è possibile determinare se rifletta le personalizzazioni dell'utente chiamando il costruttore <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>. In genere, per le app per l'utente finale, è necessario rispettare le preferenze dell'utente in modo che all'utente vengano presentati i dati in un formato previsto.
+- Nei sistemi Windows l'utente può personalizzare aspetti specifici delle impostazioni cultura usando l'app **Paese e lingua** nel Pannello di controllo. Quando viene creata un'istanza di un oggetto <xref:System.Globalization.CultureInfo>, è possibile determinare se rifletta le personalizzazioni dell'utente chiamando il costruttore <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29>. In genere, per le app per l'utente finale, è necessario rispettare le preferenze dell'utente in modo che all'utente vengano presentati i dati in un formato previsto.
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Globalizzazione e localizzazione](../../../docs/standard/globalization-localization/index.md)
-- [Procedure consigliate per l'uso delle stringhe](../../../docs/standard/base-types/best-practices-strings.md)
+- [Procedure consigliate per l'utilizzo di stringheBest Practices for Using Strings](../../../docs/standard/base-types/best-practices-strings.md)

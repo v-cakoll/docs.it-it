@@ -2,12 +2,12 @@
 title: Regole di confronto
 ms.date: 12/13/2019
 description: Scopri come creare una sequenza di confronto personalizzata.
-ms.openlocfilehash: b93c82a4ace154b8293b05effa8f9e9294fa7708
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 9879846cc191a62c4cb47a0fbaa47c59153ba61c
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79506541"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242972"
 ---
 # <a name="collation"></a>Regole di confronto
 
@@ -21,7 +21,7 @@ Le sequenze di confronto vengono utilizzate da SQLite quando si confrontano i va
 
 ## <a name="custom-collation"></a>Regole di confronto personalizzate
 
-È inoltre possibile definire sequenze di confronto personalizzate o <xref:Microsoft.Data.Sqlite.SqliteConnection.CreateCollation%2A>eseguire l'override di quelle incorporate utilizzando . Nell'esempio seguente viene illustrato l'override delle regole di confronto NOCASE per supportare i caratteri Unicode. Il [codice di esempio completo](https://github.com/dotnet/samples/blob/master/snippets/standard/data/sqlite/CollationSample/Program.cs) è disponibile su GitHub.The full sample code is available on GitHub.
+È inoltre possibile definire sequenze di confronto personalizzate o <xref:Microsoft.Data.Sqlite.SqliteConnection.CreateCollation%2A>eseguire l'override di quelle incorporate utilizzando . Nell'esempio seguente viene illustrato l'override delle regole di confronto NOCASE per supportare i caratteri Unicode. Il [codice di esempio completo](https://github.com/dotnet/docs/blob/master/samples/snippets/standard/data/sqlite/CollationSample/Program.cs) è disponibile su GitHub.The full sample code is available on GitHub.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/CollationSample/Program.cs?name=snippet_Collation)]
 

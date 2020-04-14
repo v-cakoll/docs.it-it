@@ -11,12 +11,12 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-ms.openlocfilehash: 063cac1de6634125d7dabad9d627bceff877e567
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: 1a294a577d10b3e621871b168344f2b0610693dd
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546737"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242738"
 ---
 # <a name="how-to-use-character-encoding-classes-in-net"></a>Come usare le classi di codifica dei caratteri in .NETHow to use character encoding classes in .NET
 
@@ -37,7 +37,7 @@ Tutte le classi Encoding dei caratteri in .NET ereditano dalla classe <xref:Syst
 
 - Chiamare il costruttore di classe della codifica. In questo modo è possibile creare istanze di oggetti per le codifiche ASCII, UTF-7, UTF-8, UTF-16 e UTF-32. Per impostazione predefinita, ogni oggetto usa il fallback di sostituzione per gestire le stringhe che non può codificare e i byte che non può decodificare, ma è possibile specificare che invece deve essere generata un'eccezione. Per ulteriori informazioni, vedere [Fallback di sostituzione](../../../docs/standard/base-types/character-encoding.md#Replacement) ed Fallback di [eccezione](../../../docs/standard/base-types/character-encoding.md#Exception).
 
-- Chiamare il costruttore <xref:System.Text.Encoding.%23ctor%28System.Int32%29?displayProperty=nameWithType> e passargli un Integer che rappresenta la codifica. Gli oggetti di codifica standard usano il fallback di sostituzione e gli oggetti di codifica della tabella codici e Double Byte Character Set (DBCS) usano il fallback con mapping più appropriato per gestire le stringhe che non possono codificare e i byte che non possono decodificare. Per ulteriori informazioni, vedere [Best-fit fallback](../../../docs/standard/base-types/character-encoding.md#BestFit).
+- Chiamare il costruttore <xref:System.Text.Encoding.%23ctor%28System.Int32%29> e passargli un Integer che rappresenta la codifica. Gli oggetti di codifica standard usano il fallback di sostituzione e gli oggetti di codifica della tabella codici e Double Byte Character Set (DBCS) usano il fallback con mapping più appropriato per gestire le stringhe che non possono codificare e i byte che non possono decodificare. Per ulteriori informazioni, vedere [Best-fit fallback](../../../docs/standard/base-types/character-encoding.md#BestFit).
 
 - Chiamare il metodo <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType>, che restituisce qualsiasi codifica standard, della tabella codici o DBCS disponibile in .NET. Gli overload consentono di specificare un oggetto di fallback sia per il codificatore che per il decodificatore.
 
@@ -45,7 +45,7 @@ Tutte le classi Encoding dei caratteri in .NET ereditano dalla classe <xref:Syst
 
 |Classe di codificaEncoding class|Descrizione|
 |--------------|-----------|
-|[Ascii](xref:System.Text.ASCIIEncoding)|Codifica un intervallo limitato di caratteri usando i sette bit più bassi di un byte. Poiché questa codifica supporta solo i valori dei caratteri compresi tra U+0000 e U+007F, nella maggior parte dei casi non è adatta per le applicazioni internazionalizzate.|
+|[ASCII](xref:System.Text.ASCIIEncoding)|Codifica un intervallo limitato di caratteri usando i sette bit più bassi di un byte. Poiché questa codifica supporta solo i valori dei caratteri compresi tra U+0000 e U+007F, nella maggior parte dei casi non è adatta per le applicazioni internazionalizzate.|
 |[UTF-7](xref:System.Text.UTF7Encoding)|Rappresenta i caratteri come sequenze di caratteri ASCII a 7 bit. I caratteri Unicode non ASCII sono rappresentati da una sequenza di escape di caratteri ASCII. UTF-7 supporta protocolli quali e-mail e newsgroup. UTF-7 non è tuttavia particolarmente sicura o affidabile. In alcuni casi, la modifica di un bit può alterare radicalmente l'interpretazione di un'intera stringa UTF-7. In altri casi, stringhe UTF-7 diverse possono codificare lo stesso testo. Per le sequenze che includono caratteri non ASCII, UTF-7 richiede più spazio di UTF-8 e la codifica/decodifica è più lenta. Di conseguenza, è consigliabile usare UTF-8 anziché UTF-7, se possibile.|
 |[UTF-8](xref:System.Text.UTF8Encoding)|Rappresenta ogni punto di codice Unicode come sequenza che include da uno a quattro byte. UTF-8 supporta dimensioni dati a 8 bit e funziona bene con molti sistemi operativi esistenti. Per l'intervallo di caratteri ASCII, UTF-8 è identica alla codifica ASCII e consente un più ampio set di caratteri. Tuttavia, per gli script cinese-giapponese-coreano (CJK), UTF-8 può richiedere tre byte per ogni carattere e può causare dimensioni di dati maggiori rispetto a UTF-16. A volte la quantità di dati ASCII, ad esempio i tag HTML, giustifica l'aumento delle dimensioni per l'intervallo CJK.|
 |[UTF-16](xref:System.Text.UnicodeEncoding)|Rappresenta ogni punto di codice Unicode come sequenza di uno o due Integer a 16 bit. I caratteri Unicode più comuni richiedono un solo punto di codice UTF-16, anche se i caratteri supplementari Unicode (U+10000 e successivi) richiedono due punti di codice surrogati UTF-16. Sono supportati sia ordini dei byte little-endian che big-endian. La codifica UTF-16 viene usata da Common Language Runtime per rappresentare i valori <xref:System.Char> e <xref:System.String> e dal sistema operativo Windows per rappresentare i valori `WCHAR` .|

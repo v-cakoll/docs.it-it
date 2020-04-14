@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: e7273c1e140e52eb37a30b6cabeb9e9a83a6fa2d
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 5649ef4cc05c9c16b1f8f626ba5e2e584b0e52eb
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121563"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278912"
 ---
 # <a name="override-the-identity-of-a-service-for-authentication"></a>Eseguire l'override dell'identità di un servizio per l'autenticazioneOverride the identity of a service for authentication
 
 In genere non è necessario impostare l'identità in un servizio, perché la selezione del tipo di credenziale di un client impone il tipo di identità esposto nei metadati del servizio. Ad esempio, il codice di configurazione seguente usa l'elemento [ \<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md) e imposta l'attributo su Windows.For example, the following configuration code uses the wsHttpBinding>element and sets the `clientCredentialType` attribute to Windows.  
 
- Nel frammento WSDL (Web Services Description Language) viene mostrata l'identità dell'endpoint precedentemente definito. In questo esempio, il servizio viene eseguito come servizio self-hosted con un particolare account utente (username@contoso.com) e pertanto l'identità del nome dell'entità utente (UPN) contiene il nome dell'account. L'UPN è anche noto anche come nome di accesso dell'utente in un dominio Windows.  
+ Nel frammento WSDL (Web Services Description Language) viene mostrata l'identità dell'endpoint precedentemente definito. In questo esempio, il servizio viene eseguito come servizio self-hosted con un particolare account utente (username@contoso.com) e pertanto l'identità del nome dell'entità utente (UPN) contiene il nome dell'account. L'UPN è noto anche come nome di accesso utente in un dominio Windows.  
 
  Per un'applicazione di esempio che illustri l'impostazione dell'identità, vedere Esempio di [identità del servizio](../samples/service-identity-sample.md). Per ulteriori informazioni sull'identità del servizio, vedere [Autenticazione e identità del servizio](../feature-details/service-identity-and-authentication.md).  
   
@@ -41,18 +41,18 @@ In genere non è necessario impostare l'identità in un servizio, perché la sel
   
 - Se si sta usando la protezione dei messaggi, l'autenticazione potrebbe non riuscire, a seconda della modalità scelta:  
   
-- Se si sta usando la modalità `spnego` e l'attributo `AllowNtlm` è impostato su `false`, l'autenticazione avrà esito negativo.  
+- Se si `spnego` utilizza mode `AllowNtlm` e l'attributo è impostato su `false`, l'autenticazione non riesce.  
   
-- Se si sta usando la modalità `spnego` e l'attributo `AllowNtlm` è impostato su `true`, l'autenticazione avrà esito negativo se l'UPN è vuoto, ma avrà esito positivo se l'SPN è vuoto.  
+- Se si `spnego` utilizza mode `AllowNtlm` e l'attributo è impostato su `true`, l'autenticazione non riesce se l'UPN è vuoto ma ha esito positivo se l'SPN è vuoto.  
   
 - Se si sta usando la modalità Kerberos diretta, nota anche come "monofase", l'autenticazione avrà esito negativo.  
   
-### <a name="using-the-identity-element-in-configuration"></a>Utilizzo \<dell'elemento identity> nella configurazioneUsing the identity> Element in Configuration  
- Se si imposta su Certificate il tipo di credenziale client nell'associazione descritta in precedenza`,` il codice WSDL generato conterrà un certificato X.509 con serializzazione Base64 per il valore dell'identità, come illustrato nel codice seguente. Si tratta dell'impostazione predefinita per tutti i tipi di credenziale client diversi da Windows.  
+### <a name="use-the-identity-element-in-configuration"></a>Usare \<l'elemento identity> in Configuration  
+ Se si modifica il tipo di credenziale client nell'associazione mostrata in precedenza in `Certificate`, il file WSDL generato contiene un certificato X.509 serializzato Base64 per il valore Identity, come illustrato nel codice seguente. Si tratta dell'impostazione predefinita per tutti i tipi di credenziale client diversi da Windows.  
 
  È possibile modificare il valore dell'identità del servizio predefinito `identity` o modificare il tipo di identità utilizzando l'elemento> <nella configurazione o impostando l'identità nel codice. Nel codice di configurazione seguente viene impostata un'identità DNS (Domain Name System) con il valore `contoso.com`.  
 
-### <a name="setting-identity-programmatically"></a>Impostazione dell'identità a livello di programmazione  
+### <a name="set-identity-programmatically"></a>Impostare l'identità a livello di codiceSet Identity Programmatically  
  Il servizio non è necessario specificare in modo esplicito un'identità, perché WCF la determina automaticamente. Tuttavia, WCF consente di specificare un'identità in un endpoint, se necessario. Nel codice seguente viene aggiunto un nuovo endpoint di servizio con un'identità DNS specifica.  
   
  [!code-csharp[C_Identity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#5)]

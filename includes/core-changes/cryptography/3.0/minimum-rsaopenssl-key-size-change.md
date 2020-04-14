@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 2fb980c8b75e25ba347c56ccc1c90f2959e83e21
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b5b724afefcce69df706f2bea0b1612db653af03
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74568005"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81274736"
 ---
 ### <a name="minimum-size-for-rsaopenssl-key-generation-has-increased"></a>Le dimensioni minime per la generazione di chiavi RSAOpenSsl sono aumentate
 
@@ -12,7 +12,7 @@ La dimensione minima per la generazione di nuove chiavi RSA su Linux è aumentat
 
 #### <a name="change-description"></a>Descrizione modifica:
 
-A partire da .NET Core 3.0, la `LegalKeySizes` dimensione minima della <xref:System.Security.Cryptography.RSA.Create%2A?displayProperty=nameWithType> <xref:System.Security.Cryptography.RSAOpenSsl.%23ctor%2A?displayProperty=nameWithType>chiave <xref:System.Security.Cryptography.RSACryptoServiceProvider.%23ctor%2A?displayProperty=nameWithType> legale riportata dalla proprietà nelle istanze RSA da , e in Linux è aumentata da 384 a 512.
+A partire da .NET Core 3.0, la `LegalKeySizes` dimensione minima della <xref:System.Security.Cryptography.RSA.Create%2A?displayProperty=nameWithType> <xref:System.Security.Cryptography.RSAOpenSsl.%23ctor%2A>chiave <xref:System.Security.Cryptography.RSACryptoServiceProvider.%23ctor%2A> legale riportata dalla proprietà nelle istanze RSA da , e in Linux è aumentata da 384 a 512.
 
 Di conseguenza, in .NET Core 2.2 e versioni `RSA.Create(384)` precedenti, una chiamata al metodo, ad esempio, ha esito positivo. In .NET Core 3.0 e versioni `RSA.Create(384)` successive, la chiamata al metodo genera un'eccezione che indica che la dimensione è troppo piccola.
 
@@ -37,8 +37,8 @@ Crittografia
 
 - <xref:System.Security.Cryptography.AsymmetricAlgorithm.LegalKeySizes?displayProperty=nameWithType>
 - <xref:System.Security.Cryptography.RSA.Create%2A?displayProperty=nameWithType>
-- <xref:System.Security.Cryptography.RSAOpenSsl.%23ctor%2A?displayProperty=nameWithType>
-- <xref:System.Security.Cryptography.RSACryptoServiceProvider.%23ctor%2A?displayProperty=nameWithType>
+- <xref:System.Security.Cryptography.RSAOpenSsl.%23ctor%2A>
+- <xref:System.Security.Cryptography.RSACryptoServiceProvider.%23ctor%2A>
 
 <!--
 ### Affected APIs

@@ -4,12 +4,12 @@ description: Informazioni su come usare MetadataLoadContext, un'API che consente
 author: MSDN-WhiteKnight
 ms.date: 03/10/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: a782b2db4fb62cfaedaa6768e2131bda6bec864c
-ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+ms.openlocfilehash: d2589d51a6e0611504c0133d293d3fdfae32553c
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80229301"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242660"
 ---
 # <a name="how-to-inspect-assembly-contents-using-metadataloadcontext"></a>Procedura: controllare il contenuto dell'assembly tramite MetadataLoadContextHow to: Inspect assembly contents using MetadataLoadContext
 
@@ -41,4 +41,4 @@ Nell'esempio di <xref:System.Reflection.MetadataLoadContext>codice riportato di 
 
 ## <a name="example"></a>Esempio
 
-Per un esempio di codice completo, consultate [Esaminare il contenuto dell'assembly tramite MetadataLoadContext](https://docs.microsoft.com/samples/dotnet/samples/inspect-assembly-contents-using-metadataloadcontext/).
+Per un esempio di codice completo, vedere [l'esempio Inspect assembly content using MetadataLoadContext](https://github.com/dotnet/samples/tree/master/core/assembly/MetadataLoadContext).

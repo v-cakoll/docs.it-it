@@ -14,12 +14,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: b33366922677b26f8fe99454206cacd5bb124f32
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 32b3c9de708d22ba4150c5f01ef79d74d5824e27
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159273"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242998"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Stringhe di formato di data e ora personalizzato
 
@@ -97,7 +97,7 @@ Nella tabella seguente vengono descritti gli identificatori di formato data e or
 
 Nelle sezioni seguenti vengono fornite altre informazioni su ogni identificatore di formato data e ora personalizzato. Se non specificato diversamente, ogni identificatore genera una rappresentazione stringa identica, indipendentemente dal fatto che venga usato con un valore <xref:System.DateTime> o <xref:System.DateTimeOffset>.
 
-## <a name="dSpecifier"></a>L'identificatore di formato personalizzato "d"
+## <a name="the-d-custom-format-specifier"></a><a name="dSpecifier"></a>L'identificatore di formato personalizzato "d"
 
 L'identificatore di formato personalizzato "d" rappresenta il giorno del mese come numero compreso tra 1 e 31. Un giorno a una sola cifra viene formattato senza uno zero iniziale.
 
@@ -110,7 +110,7 @@ L'esempio seguente include l'identificatore di formato personalizzato "d" in div
 
 [Torna alla tabella](#table)
 
-## <a name="ddSpecifier"></a> Identificatore di formato personalizzato "dd"
+## <a name="the-dd-custom-format-specifier"></a><a name="ddSpecifier"></a> Identificatore di formato personalizzato "dd"
 
 La stringa di formato personalizzata "dd" rappresenta il giorno del mese come numero compreso tra 01 e 31. Un giorno a una sola cifra viene formattato con uno zero iniziale.
 
@@ -121,7 +121,7 @@ L'esempio seguente include l'identificatore di formato personalizzato "dd" in un
 
 [Torna alla tabella](#table)
 
-## <a name="dddSpecifier"></a>Identificatore di formato personalizzato "ddd"
+## <a name="the-ddd-custom-format-specifier"></a><a name="dddSpecifier"></a>Identificatore di formato personalizzato "ddd"
 
 L'identificatore di formato personalizzato "ddd" rappresenta il nome abbreviato del giorno della settimana. Il nome abbreviato localizzato del giorno della settimana viene recuperato dalla proprietà <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A?displayProperty=nameWithType> delle impostazioni cultura correnti o specificate.
 
@@ -132,7 +132,7 @@ L'esempio seguente include l'identificatore di formato personalizzato "ddd" in u
 
 [Torna alla tabella](#table)
 
-## <a name="ddddSpecifier"></a>Identificatore di formato personalizzato "dddd"
+## <a name="the-dddd-custom-format-specifier"></a><a name="ddddSpecifier"></a>Identificatore di formato personalizzato "dddd"
 
 L'identificatore di formato personalizzato "dddd" (più qualsiasi numero di identificatori "d" aggiuntivi) rappresenta il nome completo del giorno della settimana. Il nome localizzato del giorno della settimana viene recuperato dalla proprietà <xref:System.Globalization.DateTimeFormatInfo.DayNames%2A?displayProperty=nameWithType> delle impostazioni cultura correnti o specificate.
 
@@ -143,7 +143,7 @@ L'esempio seguente include l'identificatore di formato personalizzato "dddd" in 
 
 [Torna alla tabella](#table)
 
-## <a name="fSpecifier"></a>L'identificatore di formato personalizzato "f"
+## <a name="the-f-custom-format-specifier"></a><a name="fSpecifier"></a>L'identificatore di formato personalizzato "f"
 
 L'identificatore di formato personalizzato "f" rappresenta la cifra più significativa della frazione di secondi, ovvero i decimi di secondo in un valore di data e ora.
 
@@ -158,7 +158,7 @@ L'esempio seguente include l'identificatore di formato personalizzato "f" in una
 
 [Torna alla tabella](#table)
 
-## <a name="ffSpecifier"></a>L'identificatore di formato personalizzato "ff"
+## <a name="the-ff-custom-format-specifier"></a><a name="ffSpecifier"></a>L'identificatore di formato personalizzato "ff"
 
 L'identificatore di formato personalizzato "ff" rappresenta le due cifre più significative della frazione di secondi, ovvero i centesimi di secondo in un valore di data e ora.
 
@@ -169,7 +169,7 @@ L'esempio seguente include l'identificatore di formato personalizzato "ff" in un
 
 [Torna alla tabella](#table)
 
-## <a name="fffSpecifier"></a>L'identificatore di formato personalizzato "fff"
+## <a name="the-fff-custom-format-specifier"></a><a name="fffSpecifier"></a>L'identificatore di formato personalizzato "fff"
 
 L'identificatore di formato personalizzato "fff" rappresenta le tre cifre più significative della frazione di secondi, ovvero i millisecondi in un valore di data e ora.
 
@@ -180,7 +180,7 @@ L'esempio seguente include l'identificatore di formato personalizzato "fff" in u
 
 [Torna alla tabella](#table)
 
-## <a name="ffffSpecifier"></a>L'identificatore di formato personalizzato "ffff"
+## <a name="the-ffff-custom-format-specifier"></a><a name="ffffSpecifier"></a>L'identificatore di formato personalizzato "ffff"
 
 L'identificatore di formato personalizzato "ffff" rappresenta le quattro cifre più significative della frazione di secondi, ovvero i decimillesimi di secondo in un valore di data e ora.
 
@@ -188,7 +188,7 @@ Sebbene sia possibile visualizzare i decimillesimi di un componente relativo ai 
 
 [Torna alla tabella](#table)
 
-## <a name="fffffSpecifier"></a>L'identificatore di formato personalizzato "fffff"
+## <a name="the-fffff-custom-format-specifier"></a><a name="fffffSpecifier"></a>L'identificatore di formato personalizzato "fffff"
 
 L'identificatore di formato personalizzato "fffff" rappresenta le cinque cifre più significative della frazione di secondi, ovvero i centomillesimi di secondo in un valore di data e ora.
 
@@ -196,7 +196,7 @@ Sebbene sia possibile visualizzare i centomillesimi di un componente relativo ai
 
 [Torna alla tabella](#table)
 
-## <a name="ffffffSpecifier"></a>L'identificatore di formato personalizzato "ffffff"
+## <a name="the-ffffff-custom-format-specifier"></a><a name="ffffffSpecifier"></a>L'identificatore di formato personalizzato "ffffff"
 
 L'identificatore di formato personalizzato "ffffff" rappresenta le sei cifre più significative della frazione di secondi, ovvero i milionesimi di secondo in un valore di data e ora.
 
@@ -204,7 +204,7 @@ Sebbene sia possibile visualizzare i milionesimi di un componente relativo ai se
 
 [Torna alla tabella](#table)
 
-## <a name="fffffffSpecifier"></a>L'identificatore di formato personalizzato "fffffff"
+## <a name="the-fffffff-custom-format-specifier"></a><a name="fffffffSpecifier"></a>L'identificatore di formato personalizzato "fffffff"
 
 L'identificatore di formato personalizzato "fffffff" rappresenta le sette cifre più significative della frazione di secondi, ovvero i decimilionesimi di secondo in un valore di data e ora.
 
@@ -212,7 +212,7 @@ Sebbene sia possibile visualizzare i decimilionesimi di un componente relativo a
 
 [Torna alla tabella](#table)
 
-## <a name="F_Specifier"></a>L'identificatore di formato personalizzato "F"
+## <a name="the-f-custom-format-specifier"></a><a name="F_Specifier"></a>L'identificatore di formato personalizzato "F"
 
 L'identificatore di formato personalizzato "F" rappresenta la cifra più significativa della frazione di secondi, ovvero i decimi di secondo in un valore di data e ora. Se la cifra è zero, non viene prodotta alcuna visualizzazione.
 
@@ -227,7 +227,7 @@ L'esempio seguente include l'identificatore di formato personalizzato "F" in una
 
 [Torna alla tabella](#table)
 
-## <a name="FF_Specifier"></a>L'identificatore di formato personalizzato "FF"
+## <a name="the-ff-custom-format-specifier"></a><a name="FF_Specifier"></a>L'identificatore di formato personalizzato "FF"
 
 L'identificatore di formato personalizzato "FF" rappresenta le due cifre più significative della frazione di secondi, ovvero i centesimi di secondo in un valore di data e ora. Gli zeri finali o le cifre con due zeri non vengono tuttavia visualizzate.
 
@@ -238,7 +238,7 @@ L'esempio seguente include l'identificatore di formato personalizzato "FF" in un
 
 [Torna alla tabella](#table)
 
-## <a name="FFF_Specifier"></a>L'identificatore di formato personalizzato "FFF"
+## <a name="the-fff-custom-format-specifier"></a><a name="FFF_Specifier"></a>L'identificatore di formato personalizzato "FFF"
 
 L'identificatore di formato personalizzato "FFF" rappresenta le tre cifre più significative della frazione di secondi, ovvero i millisecondi in un valore di data e ora. Gli zeri finali o le cifre con tre zeri non vengono tuttavia visualizzate.
 
@@ -249,7 +249,7 @@ L'esempio seguente include l'identificatore di formato personalizzato "FFF" in u
 
 [Torna alla tabella](#table)
 
-## <a name="FFFF_Specifier"></a>L'identificatore di formato personalizzato "FFFF"
+## <a name="the-ffff-custom-format-specifier"></a><a name="FFFF_Specifier"></a>L'identificatore di formato personalizzato "FFFF"
 
 L'identificatore di formato personalizzato "FFFF" rappresenta le quattro cifre più significative della frazione di secondi, ovvero i decimillesimi di secondo in un valore di data e ora. Gli zeri finali o le cifre con quattro zeri non vengono tuttavia visualizzate.
 
@@ -257,7 +257,7 @@ Sebbene sia possibile visualizzare i decimillesimi di un componente relativo ai 
 
 [Torna alla tabella](#table)
 
-## <a name="FFFFF_Specifier"></a>L'identificatore di formato personalizzato "FFFFF"
+## <a name="the-fffff-custom-format-specifier"></a><a name="FFFFF_Specifier"></a>L'identificatore di formato personalizzato "FFFFF"
 
 L'identificatore di formato personalizzato "FFFFF" rappresenta le cinque cifre più significative della frazione di secondi, ovvero i centomillesimi di secondo in un valore di data e ora. Gli zeri finali o le cifre con cinque zeri non vengono tuttavia visualizzate.
 
@@ -265,7 +265,7 @@ Sebbene sia possibile visualizzare i centomillesimi di un componente relativo ai
 
 [Torna alla tabella](#table)
 
-## <a name="FFFFFF_Specifier"></a>L'identificatore di formato personalizzato "FFFFFF"
+## <a name="the-ffffff-custom-format-specifier"></a><a name="FFFFFF_Specifier"></a>L'identificatore di formato personalizzato "FFFFFF"
 
 L'identificatore di formato personalizzato "FFFFFF" rappresenta le sei cifre più significative della frazione di secondi, ovvero i milionesimi di secondo in un valore di data e ora. Gli zeri finali o le cifre con sei zeri non vengono visualizzate.
 
@@ -273,7 +273,7 @@ Sebbene sia possibile visualizzare i milionesimi di un componente relativo ai se
 
 [Torna alla tabella](#table)
 
-## <a name="FFFFFFF_Specifier"></a>Identificatore di formato personalizzato "FFFFFFF"
+## <a name="the-fffffff-custom-format-specifier"></a><a name="FFFFFFF_Specifier"></a>Identificatore di formato personalizzato "FFFFFFF"
 
 L'identificatore di formato personalizzato "FFFFFFF" rappresenta le sette cifre più significative della frazione di secondi, ovvero i decimilionesimi di secondo in un valore di data e ora. Gli zeri finali o le cifre con sette zeri non vengono tuttavia visualizzate.
 
@@ -281,7 +281,7 @@ Sebbene sia possibile visualizzare i decimilionesimi di un componente relativo a
 
 [Torna alla tabella](#table)
 
-## <a name="gSpecifier"></a>L'identificatore di formato personalizzato "g" o "gg"
+## <a name="the-g-or-gg-custom-format-specifier"></a><a name="gSpecifier"></a>L'identificatore di formato personalizzato "g" o "gg"
 
 Gli identificatori di formato personalizzati "g" o "gg" (più qualsiasi numero di identificatori "g" aggiuntivi) rappresentano il periodo o l'era, ad esempio D.C. Questo identificatore viene ignorato dall'operazione di formattazione se la data da formattare non è associata a una stringa di periodo o di era.
 
@@ -294,7 +294,7 @@ L'esempio seguente include l'identificatore di formato personalizzato "g" in una
 
 [Torna alla tabella](#table)
 
-## <a name="hSpecifier"></a>L'identificatore di formato personalizzato "h"
+## <a name="the-h-custom-format-specifier"></a><a name="hSpecifier"></a>L'identificatore di formato personalizzato "h"
 
 L'identificatore di formato personalizzato "h" rappresenta l'ora come numero compreso tra 1 e 12, ovvero l'ora rappresentata nell'orario in formato 12 ore in base al quale il conteggio riparte da mezzanotte o da mezzogiorno. Una particolare ora dopo mezzanotte non è distinguibile dalla stessa ora dopo mezzogiorno. L'ora non viene arrotondata e se è costituita da una singola cifra viene formattata senza zero iniziale. Se viene, ad esempio, specificata un'ora equivalente alle 5:43 della mattina o del pomeriggio, tramite questo identificatore di formato personalizzato viene visualizzato "5".
 
@@ -307,7 +307,7 @@ L'esempio seguente include l'identificatore di formato personalizzato "h" in una
 
 [Torna alla tabella](#table)
 
-## <a name="hhSpecifier"></a>L'identificatore di formato personalizzato "hh"
+## <a name="the-hh-custom-format-specifier"></a><a name="hhSpecifier"></a>L'identificatore di formato personalizzato "hh"
 
 L'identificatore di formato personalizzato "hh" (più qualsiasi numero di identificatori "h" aggiuntivi) rappresenta l'ora come numero compreso tra 01 e 12, ovvero l'ora rappresentata nell'orario in formato 12 ore in base al quale il conteggio riparte da mezzanotte o da mezzogiorno. Una particolare ora dopo mezzanotte non è distinguibile dalla stessa ora dopo mezzogiorno. L'ora non viene arrotondata e se è costituita da una singola cifra viene formattata con uno zero iniziale. Se viene, ad esempio, specificata un'ora equivalente alle 5:43 della mattina o del pomeriggio, tramite questo identificatore di formato viene visualizzato "05".
 
@@ -318,7 +318,7 @@ L'esempio seguente include l'identificatore di formato personalizzato "hh" in un
 
 [Torna alla tabella](#table)
 
-## <a name="H_Specifier"></a>L'identificatore di formato personalizzato "H"
+## <a name="the-h-custom-format-specifier"></a><a name="H_Specifier"></a>L'identificatore di formato personalizzato "H"
 
 L'identificatore di formato personalizzato "H" rappresenta l'ora come numero compreso tra 0 e 23, ovvero l'ora rappresentata nell'orario in formato 24 ore a base zero in base al quale il conteggio riparte da mezzanotte. Un'ora costituita da una singola cifra viene formattata senza zero iniziale.
 
@@ -331,7 +331,7 @@ L'esempio seguente include l'identificatore di formato personalizzato "H" in una
 
 [Torna alla tabella](#table)
 
-## <a name="HH_Specifier"></a>L'identificatore di formato personalizzato "HH"
+## <a name="the-hh-custom-format-specifier"></a><a name="HH_Specifier"></a>L'identificatore di formato personalizzato "HH"
 
 L'identificatore di formato personalizzato "HH" (più qualsiasi numero di identificatori "H" aggiuntivi) rappresenta l'ora come numero compreso tra 00 e 23, ovvero l'ora rappresentata nell'orario in formato 24 ore a base zero in base al quale il conteggio riparte da mezzanotte. Un'ora costituita da una singola cifra viene formattata con uno zero iniziale.
 
@@ -342,7 +342,7 @@ L'esempio seguente include l'identificatore di formato personalizzato "HH" in un
 
 [Torna alla tabella](#table)
 
-## <a name="KSpecifier"></a>L'identificatore di formato personalizzato "K"
+## <a name="the-k-custom-format-specifier"></a><a name="KSpecifier"></a>L'identificatore di formato personalizzato "K"
 
 L'identificatore di formato personalizzato "K" rappresenta le informazioni sul fuso orario di un valore di data e ora. Quando questo identificatore di formato viene usato con valori <xref:System.DateTime>, la stringa di risultato viene definita dal valore della proprietà <xref:System.DateTime.Kind%2A?displayProperty=nameWithType>:
 
@@ -363,7 +363,7 @@ Nell'esempio seguente viene visualizzata la stringa risultante dall'utilizzo del
 
 [Torna alla tabella](#table)
 
-## <a name="mSpecifier"></a>L'identificatore di formato personalizzato "m"
+## <a name="the-m-custom-format-specifier"></a><a name="mSpecifier"></a>L'identificatore di formato personalizzato "m"
 
 L'identificatore di formato personalizzato "m" rappresenta i minuti come numero compreso tra 0 e 59. Tali minuti rappresentano il numero intero di minuti passati dall'ultima ora. Un minuto costituito da una singola cifra viene formattato senza zero iniziale.
 
@@ -376,7 +376,7 @@ L'esempio seguente include l'identificatore di formato personalizzato "m" in una
 
 [Torna alla tabella](#table)
 
-## <a name="mmSpecifier"></a>L'identificatore di formato personalizzato "mm"
+## <a name="the-mm-custom-format-specifier"></a><a name="mmSpecifier"></a>L'identificatore di formato personalizzato "mm"
 
 L'identificatore di formato personalizzato "mm" (più qualsiasi numero di identificatori "m" aggiuntivi) rappresenta i minuti come numero compreso tra 00 e 59. Tali minuti rappresentano il numero intero di minuti passati dall'ultima ora. Un minuto costituito da una singola cifra viene formattato con uno zero iniziale.
 
@@ -387,7 +387,7 @@ L'esempio seguente include l'identificatore di formato personalizzato "mm" in un
 
 [Torna alla tabella](#table)
 
-## <a name="M_Specifier"></a>L'identificatore di formato personalizzato "M"
+## <a name="the-m-custom-format-specifier"></a><a name="M_Specifier"></a>L'identificatore di formato personalizzato "M"
 
 L'identificatore di formato personalizzato "M" rappresenta il mese come numero compreso tra 1 e 12 (o tra 1 e 13 per i calendari con 13 mesi). Un mese a una sola cifra viene formattato senza uno zero iniziale.
 
@@ -400,7 +400,7 @@ L'esempio seguente include l'identificatore di formato personalizzato "M" in una
 
 [Torna alla tabella](#table)
 
-## <a name="MM_Specifier"></a>L'identificatore di formato personalizzato "MM"
+## <a name="the-mm-custom-format-specifier"></a><a name="MM_Specifier"></a>L'identificatore di formato personalizzato "MM"
 
 L'identificatore di formato personalizzato "MM" rappresenta il mese come numero compreso tra 01 e 12 (o tra 1 e 13 per i calendari con 13 mesi). Un mese a una sola cifra viene formattato con uno zero iniziale.
 
@@ -411,7 +411,7 @@ L'esempio seguente include l'identificatore di formato personalizzato "MM" in un
 
 [Torna alla tabella](#table)
 
-## <a name="MMM_Specifier"></a>L'identificatore di formato personalizzato "MMM"
+## <a name="the-mmm-custom-format-specifier"></a><a name="MMM_Specifier"></a>L'identificatore di formato personalizzato "MMM"
 
 L'identificatore di formato personalizzato "MMM" rappresenta il nome abbreviato del mese. Il nome abbreviato localizzato del mese viene recuperato dalla proprietà <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedMonthNames%2A?displayProperty=nameWithType> delle impostazioni cultura correnti o specificate.
 
@@ -422,7 +422,7 @@ L'esempio seguente include l'identificatore di formato personalizzato "MMM" in u
 
 [Torna alla tabella](#table)
 
-## <a name="MMMM_Specifier"></a> Identificatore di formato personalizzato "MMMM"
+## <a name="the-mmmm-custom-format-specifier"></a><a name="MMMM_Specifier"></a> Identificatore di formato personalizzato "MMMM"
 
 L'identificatore di formato personalizzato "MMMM" rappresenta il nome completo del mese. Il nome localizzato del mese viene recuperato dalla proprietà <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=nameWithType> delle impostazioni cultura correnti o specificate.
 
@@ -433,7 +433,7 @@ L'esempio seguente include l'identificatore di formato personalizzato "MMMM" in 
 
 [Torna alla tabella](#table)
 
-## <a name="sSpecifier"></a>L'identificatore di formato personalizzato "s"
+## <a name="the-s-custom-format-specifier"></a><a name="sSpecifier"></a>L'identificatore di formato personalizzato "s"
 
 L'identificatore di formato personalizzato "s" rappresenta i secondi come numero compreso tra 0 e 59. Il risultato rappresenta il numero intero di secondi passati dall'ultimo minuto. Un secondo costituito da una singola cifra viene formattato senza zero iniziale.
 
@@ -446,7 +446,7 @@ L'esempio seguente include l'identificatore di formato personalizzato "s" in una
 
 [Torna alla tabella](#table)
 
-## <a name="ssSpecifier"></a>Identificatore di formato personalizzato "ss"
+## <a name="the-ss-custom-format-specifier"></a><a name="ssSpecifier"></a>Identificatore di formato personalizzato "ss"
 
 L'identificatore di formato personalizzato "ss" (più qualsiasi numero di identificatori "s" aggiuntivi) rappresenta i secondi come numero compreso tra 00 e 59. Il risultato rappresenta il numero intero di secondi passati dall'ultimo minuto. Un secondo costituito da una singola cifra viene formattato con uno zero iniziale.
 
@@ -457,7 +457,7 @@ L'esempio seguente include l'identificatore di formato personalizzato "ss" in un
 
 [Torna alla tabella](#table)
 
-## <a name="tSpecifier"></a> Identificatore di formato personalizzato "t"
+## <a name="the-t-custom-format-specifier"></a><a name="tSpecifier"></a> Identificatore di formato personalizzato "t"
 
 L'identificatore di formato personalizzato "t" rappresenta il primo carattere dell'indicatore AM/PM. L'indicatore localizzato appropriato viene recuperato dalla proprietà <xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A?displayProperty=nameWithType> o <xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A?displayProperty=nameWithType> delle impostazioni cultura correnti o specificate. L'indicatore AM viene usato per tutti gli orari da 0:00:00 (mezzanotte) a 11:59:59.999. L'indicatore PM viene usato per tutti gli orari da 12:00:00 (mezzogiorno) a 23:59:59.999.
 
@@ -470,7 +470,7 @@ L'esempio seguente include l'identificatore di formato personalizzato "t" in una
 
 [Torna alla tabella](#table)
 
-## <a name="ttSpecifier"></a>L'identificatore di formato personalizzato "tt"
+## <a name="the-tt-custom-format-specifier"></a><a name="ttSpecifier"></a>L'identificatore di formato personalizzato "tt"
 
 L'identificatore di formato personalizzato "tt" (più qualsiasi numero di identificatori "t" aggiuntivi) rappresenta l'indicatore AM/PM completo. L'indicatore localizzato appropriato viene recuperato dalla proprietà <xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A?displayProperty=nameWithType> o <xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A?displayProperty=nameWithType> delle impostazioni cultura correnti o specificate. L'indicatore AM viene usato per tutti gli orari da 0:00:00 (mezzanotte) a 11:59:59.999. L'indicatore PM viene usato per tutti gli orari da 12:00:00 (mezzogiorno) a 23:59:59.999.
 
@@ -483,7 +483,7 @@ L'esempio seguente include l'identificatore di formato personalizzato "tt" in un
 
 [Torna alla tabella](#table)
 
-## <a name="ySpecifier"></a>Identificatore di formato personalizzato "y"
+## <a name="the-y-custom-format-specifier"></a><a name="ySpecifier"></a>Identificatore di formato personalizzato "y"
 
 L'identificatore di formato personalizzato "y" rappresenta l'anno come numero a una cifra o a due cifre. Se l'anno ha più di due cifre, nel risultato vengono visualizzate solo le due cifre di ordine inferiore. Se la prima cifra di un anno a due cifre inizia con zero (ad esempio, 2008), il numero viene formattato senza zero iniziale.
 
@@ -496,7 +496,7 @@ L'esempio seguente include l'identificatore di formato personalizzato "y" in una
 
 [Torna alla tabella](#table)
 
-## <a name="yySpecifier"></a>Identificatore di formato personalizzato "yy"
+## <a name="the-yy-custom-format-specifier"></a><a name="yySpecifier"></a>Identificatore di formato personalizzato "yy"
 
 L'identificatore di formato personalizzato "yy" rappresenta l'anno come numero a due cifre. Se l'anno ha più di due cifre, nel risultato vengono visualizzate solo le due cifre di ordine inferiore. Se l'anno a due cifre ha meno di due cifre significative, al numero vengono anteposti tanti zeri quanti sono necessari per ottenere due cifre.
 
@@ -512,7 +512,7 @@ L'esempio seguente include l'identificatore di formato personalizzato "yy" in un
 
 [Torna alla tabella](#table)
 
-## <a name="yyySpecifier"></a> Identificatore di formato personalizzato "yyy"
+## <a name="the-yyy-custom-format-specifier"></a><a name="yyySpecifier"></a> Identificatore di formato personalizzato "yyy"
 
 L'identificatore di formato personalizzato "yyy" rappresenta l'anno con un minimo di tre cifre. Se l'anno ha più di tre cifre significative, queste vengono incluse nella stringa di risultato. Se l'anno ha meno di tre cifre, al numero vengono anteposti tanti zeri quanti sono necessari per ottenere tre cifre.
 
@@ -526,7 +526,7 @@ L'esempio seguente include l'identificatore di formato personalizzato "yyy" in u
 
 [Torna alla tabella](#table)
 
-## <a name="yyyySpecifier"></a>Identificatore di formato personalizzato "yyyy"
+## <a name="the-yyyy-custom-format-specifier"></a><a name="yyyySpecifier"></a>Identificatore di formato personalizzato "yyyy"
 
 L'identificatore di formato personalizzato "yyyy" rappresenta l'anno con un minimo di quattro cifre. Se l'anno ha più di quattro cifre significative, queste vengono incluse nella stringa di risultato. Se l'anno ha meno di quattro cifre, al numero vengono anteposti tanti zeri quanti sono necessari per ottenere quattro cifre.
 
@@ -540,7 +540,7 @@ L'esempio seguente include l'identificatore di formato personalizzato "yyyy" in 
 
 [Torna alla tabella](#table)
 
-## <a name="yyyyySpecifier"></a>Identificatore di formato personalizzato "yyyyy"
+## <a name="the-yyyyy-custom-format-specifier"></a><a name="yyyyySpecifier"></a>Identificatore di formato personalizzato "yyyyy"
 
 L'identificatore di formato personalizzato "yyyyy" (più qualsiasi numero di identificatori "y" aggiuntivi) rappresenta l'anno con un minimo di cinque cifre. Se l'anno ha più di cinque cifre significative, queste vengono incluse nella stringa di risultato. Se l'anno ha meno di cinque cifre, al numero vengono anteposti tanti zeri quanto sono necessari per ottenere cinque cifre.
 
@@ -553,7 +553,7 @@ L'esempio seguente include l'identificatore di formato personalizzato "yyyyy" in
 
 [Torna alla tabella](#table)
 
-## <a name="zSpecifier"></a>L'identificatore di formato personalizzato "z"
+## <a name="the-z-custom-format-specifier"></a><a name="zSpecifier"></a>L'identificatore di formato personalizzato "z"
 
 Con valori <xref:System.DateTime>, l'identificatore di formato personalizzato "z" rappresenta l'offset con segno del fuso orario del sistema operativo locale rispetto a UTC (Coordinated Universal Time), misurato in ore. Non riflette il valore della proprietà <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> di un'istanza. Per questo motivo non è consigliabile usare l'identificatore di formato "z" con valori <xref:System.DateTime>.
 
@@ -570,7 +570,7 @@ L'esempio seguente include l'identificatore di formato personalizzato "z" in una
 
 [Torna alla tabella](#table)
 
-## <a name="zzSpecifier"></a>L'identificatore di formato personalizzato "zz"
+## <a name="the-zz-custom-format-specifier"></a><a name="zzSpecifier"></a>L'identificatore di formato personalizzato "zz"
 
 Con valori <xref:System.DateTime>, l'identificatore di formato personalizzato "zz" rappresenta l'offset con segno del fuso orario del sistema operativo locale rispetto a UTC, misurato in ore. Non riflette il valore della proprietà <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> di un'istanza. Per questo motivo, non è consigliabile usare l'identificatore di formato "zz" con valori <xref:System.DateTime>.
 
@@ -585,7 +585,7 @@ L'esempio seguente include l'identificatore di formato personalizzato "zz" in un
 
 [Torna alla tabella](#table)
 
-## <a name="zzzSpecifier"></a>L'identificatore di formato personalizzato "zzz"
+## <a name="the-zzz-custom-format-specifier"></a><a name="zzzSpecifier"></a>L'identificatore di formato personalizzato "zzz"
 
 Con valori <xref:System.DateTime>, l'identificatore di formato personalizzato "zzz" rappresenta l'offset con segno del fuso orario del sistema operativo locale rispetto a UTC, misurato in ore e minuti. Non riflette il valore della proprietà <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> di un'istanza. Per questo motivo, non è consigliabile usare l'identificatore di formato "zzz" con valori <xref:System.DateTime>.
 
@@ -600,7 +600,7 @@ L'esempio seguente include l'identificatore di formato personalizzato "zzz" in u
 
 [Torna alla tabella](#table)
 
-## <a name="timeSeparator"></a>L'identificatore di formato personalizzato ":"
+## <a name="the--custom-format-specifier"></a><a name="timeSeparator"></a>L'identificatore di formato personalizzato ":"
 L'identificatore di formato personalizzato ":" rappresenta il separatore di ora che viene usato per distinguere ore, minuti e secondi. Il separatore di ora localizzato appropriato viene recuperato dalla proprietà <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> delle impostazioni cultura correnti o specificate.
 
 > [!NOTE]
@@ -610,7 +610,7 @@ Se l'identificatore di formato ":" viene usato senza altri identificatori di for
 
 [Torna alla tabella](#table)
 
-## <a name="dateSeparator"></a>L'identificatore di formato personalizzato "/"
+## <a name="the--custom-format-specifier"></a><a name="dateSeparator"></a>L'identificatore di formato personalizzato "/"
 
 L'identificatore di formato personalizzato "/" rappresenta il separatore di data usato per distinguere anni, mesi e giorni. Il separatore di data localizzato appropriato viene recuperato dalla proprietà <xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A?displayProperty=nameWithType> delle impostazioni cultura correnti o specificate.
 
@@ -621,7 +621,7 @@ Se l'identificatore di formato "/" viene usato senza altri identificatori di for
 
 [Torna alla tabella](#table)
 
-## <a name="Literals"></a>Valori letterali carattere
+## <a name="character-literals"></a><a name="Literals"></a>Valori letterali carattere
 
 I caratteri seguenti in una stringa di formato di data e ora sono riservati e vengono sempre interpretati come caratteri di formattazione o, nel caso di ", ', / e \\, come caratteri speciali.
 
@@ -655,7 +655,7 @@ Nell'esempio seguente i caratteri "pst" (abbreviazione di Pacific Standard Time,
 
 ## <a name="notes"></a>Note
 
-### <a name="UsingSingleSpecifiers"></a>Utilizzo di singoli identificatori di formato personalizzatiUsing single custom format specifiers
+### <a name="using-single-custom-format-specifiers"></a><a name="UsingSingleSpecifiers"></a>Utilizzo di singoli identificatori di formato personalizzatiUsing single custom format specifiers
 
 Una stringa di formato di data e ora personalizzata è costituita da due o più caratteri. I metodi di formattazione di data e ora interpretano qualsiasi stringa a carattere singolo come stringa di formato di data e ora standard. Se il carattere non viene riconosciuto come identificatore di formato valido, viene generato un evento <xref:System.FormatException>. Una stringa di formato costituita solo dall'identificatore "h" viene ad esempio interpretata come una stringa di formato di data e ora standard. In questo caso specifico, tuttavia, viene generata un'eccezione in quanto non vi è alcun identificatore di formato di data e ora standard "h".
 
@@ -666,7 +666,7 @@ La stringa `%h"` viene ad esempio interpretata come una stringa di formato di da
 [!code-csharp-interactive[Formatting.DateAndTime.Custom#16](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/literal1.cs#16)]
 [!code-vb[Formatting.DateAndTime.Custom#16](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/literal1.vb#16)]
 
-### <a name="escape"></a> Uso del carattere di escape
+### <a name="using-the-escape-character"></a><a name="escape"></a> Uso del carattere di escape
 
 I caratteri "d", "f", "F", "g", "h", "H", "K", "m", "M", "s", "t", "y", "z", ":" o "/" in una stringa di formato vengono interpretati come identificatori di formato personalizzati anziché come caratteri letterali. Per evitare che un carattere venga interpretato come identificatore di formato, è possibile anteporvi una barra rovesciata (\\), che rappresenta il carattere di escape. Il carattere di escape indica che il carattere seguente è un valore letterale carattere che deve essere incluso nella stringa di risultato senza modifiche.
 
@@ -684,7 +684,7 @@ Nell'esempio seguente viene usato il carattere di escape per impedire che durant
 
 L'impostazione **Opzioni internazionali e della lingua** nel Pannello di controllo influisce sulla stringa di risultato prodotta da un'operazione di formattazione che include molti degli identificatori di formato di data e ora personalizzati. Queste impostazioni vengono usate per inizializzare l'oggetto <xref:System.Globalization.DateTimeFormatInfo> associato alle impostazioni cultura del thread corrente, che fornisce i valori usati per definire la formattazione. Computer con impostazioni diverse generano stringhe di risultato diverse.
 
-Se inoltre viene usato il costruttore <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> per creare un'istanza di un nuovo oggetto <xref:System.Globalization.CultureInfo> che rappresenta le stesse impostazioni cultura delle impostazioni cultura del sistema correnti, le eventuali personalizzazioni definite tramite **Opzioni internazionali e della lingua** nel Pannello di controllo verranno applicate al nuovo oggetto <xref:System.Globalization.CultureInfo> . È possibile usare il costruttore <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> per creare un oggetto <xref:System.Globalization.CultureInfo> che non rifletta le personalizzazioni di un sistema.
+Se inoltre viene usato il costruttore <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29> per creare un'istanza di un nuovo oggetto <xref:System.Globalization.CultureInfo> che rappresenta le stesse impostazioni cultura delle impostazioni cultura del sistema correnti, le eventuali personalizzazioni definite tramite **Opzioni internazionali e della lingua** nel Pannello di controllo verranno applicate al nuovo oggetto <xref:System.Globalization.CultureInfo> . È possibile usare il costruttore <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29> per creare un oggetto <xref:System.Globalization.CultureInfo> che non rifletta le personalizzazioni di un sistema.
 
 ### <a name="datetimeformatinfo-properties"></a>Proprietà DateTimeFormatInfo
 
@@ -697,6 +697,6 @@ La stringa di risultato prodotta da molti degli identificatori di formato di dat
 - <xref:System.DateTime?displayProperty=nameWithType>
 - <xref:System.IFormatProvider?displayProperty=nameWithType>
 - [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)
-- [Stringhe di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Stringhe di formato di data e ora standardStandard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
 - [Esempio: Utilità di formattazione di .NET Core WinForms (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)
 - [Esempio: Utilità di formattazione di .NET Core WinForms (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb)

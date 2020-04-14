@@ -5,12 +5,12 @@ helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-ms.openlocfilehash: 0221889f6d736b41546b564273ebb41d49dfb039
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f52432bde84ab7c1ec30ff4033ce95c80606636e
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75559885"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243193"
 ---
 # <a name="get-started-with-visual-basic"></a>Introduzione a Visual Basic
 
@@ -30,11 +30,11 @@ Questa sezione della documentazione fornisce informazioni introduttive per lo sv
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Ottenere Visual Basic](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) Fornisce i collegamenti ai download per le versioni di Visual Studio che includono il supporto di Visual Basic, comprese le versioni gratuite.
+- [Ottenere Visual BasicGet Visual Basic](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) Fornisce collegamenti per il download per le versioni di Visual Studio fornite con il supporto di Visual Basic, incluse le versioni gratuite.
 
 - [Programmazione orientata ad oggetti](../programming-guide/concepts/object-oriented-programming.md) Include collegamenti a pagine introduttive sulla programmazione orientata a oggetti e che descrivono la creazione di oggetti personalizzati e l'uso degli oggetti per semplificare la scrittura del codice.
 
-- [Esempi](https://github.com/dotnet/samples/tree/master/snippets/visualbasic) Include collegamenti a codice di esempio in Visual Basic.
+- [Esempi](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic) Include collegamenti a codice di esempio in Visual Basic.
 
 - [Procedure dettagliate](../walkthroughs.md) Include un elenco delle pagine della Guida con dimostrazioni dei vari aspetti del linguaggio Visual Basic.
 

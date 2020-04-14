@@ -7,12 +7,12 @@ helpviewer_keywords:
 - placing popups [WPF]
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
-ms.openlocfilehash: 063b309ebaf0944787ce40725eed250e59f09dff
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1c377e62ffd334638031baee4d4831ac5a31acf3
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176760"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243258"
 ---
 # <a name="popup-placement-behavior"></a>Comportamento del controllo Popup in relazione al posizionamento
 Un <xref:System.Windows.Controls.Primitives.Popup> controllo visualizza il contenuto in una finestra separata che fluttua su un'applicazione. È possibile specificare <xref:System.Windows.Controls.Primitives.Popup> la posizione di un controllo relativo a <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>un <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>controllo, il mouse o lo schermo utilizzando le proprietà , , , e <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> .  Queste proprietà lavorano insieme per offrire flessibilità <xref:System.Windows.Controls.Primitives.Popup>nella specifica della posizione del file .  
@@ -205,4 +205,4 @@ Un <xref:System.Windows.Controls.Primitives.Popup> controllo visualizza il conte
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Popup Placement Sample](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS) (Esempio di posizionamento di un controllo Popup)
+- [Popup Placement Sample](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS) (Esempio di posizionamento di un controllo Popup)

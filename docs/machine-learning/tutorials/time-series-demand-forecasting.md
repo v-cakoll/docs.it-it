@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 026421d7b1b2a0e39118ae712780ca7fc8f6e444
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 962c40ea0536d6b6057d936cfc4b95a49ddadbf8
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76921248"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243284"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>Tutorial: Prevedere la domanda di servizio di noleggio biciclette con analisi di serie temporali e ML.NET
 
@@ -27,7 +27,7 @@ In questa esercitazione verranno illustrate le procedure per:
 > * Salvare un modello di previsione
 > * Utilizzare un modello di previsione
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 - [Visual Studio 2017 versione 15.6 o successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con il carico di lavoro ".NET Core cross-platform development" installato.
 
@@ -60,7 +60,7 @@ L'algoritmo utilizzato in questa esercitazione è [Single Spectrum Analysis(SSA)
 1. Scaricare il file di database [ *DailyDemand.mdf* ](https://github.com/dotnet/machinelearning-samples/raw/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Data/DailyDemand.mdf) e salvarlo nella directory *Data.*
 
 > [!NOTE]
-> I dati utilizzati in questa esercitazione provengono dal set di dati [UCI Bike Sharing](https://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset). Fanaee-T, Hadi e Gama, Joao, "Etichettatura degli eventi che combinano rilevatori di ensemble e conoscenze di base", Progress in Artificial Intelligence (2013): pp. 1-15, Springer Berlin Heidelberg, [Web Link](https://link.springer.com/article/10.1007%2Fs13748-013-0040-3).
+> I dati utilizzati in questa esercitazione provengono dal set di dati [UCI Bike Sharing](http://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset). Fanaee-T, Hadi e Gama, Joao, "Etichettatura degli eventi che combinano rilevatori di ensemble e conoscenze di base", Progress in Artificial Intelligence (2013): pp. 1-15, Springer Berlin Heidelberg, [Web Link](https://link.springer.com/article/10.1007%2Fs13748-013-0040-3).
 
 Il set di dati originale contiene diverse colonne corrispondenti alla stagionalità e al tempo. Per brevità e poiché l'algoritmo usato in questa esercitazione richiede solo i valori di una singola colonna numerica, il set di dati originale è stato condensato per includere solo le colonne seguenti:For brevity and because the algorithm used in this tutorial only requires the values from a single numerical column, the original dataset has been condensed to include only the following columns:
 

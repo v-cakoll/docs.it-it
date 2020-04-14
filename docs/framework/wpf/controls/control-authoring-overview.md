@@ -8,14 +8,14 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: d5dd2d962c554b860fb6f68110945d56c4ee03ab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2326520039085beb5f5294e23db67b67f9d7d7da
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400155"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243271"
 ---
-# <a name="control-authoring-overview"></a>Panoramica della creazione di controlli
+# <a name="control-authoring-overview"></a>Cenni preliminari sulla creazione di controlli
 
 L'estendibilità del modello di controlli di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] riduce notevolmente l'esigenza di creare un nuovo controllo. In alcuni casi può tuttavia essere ancora necessario creare un controllo personalizzato. Questo argomento illustra le funzionalità che riducono al minimo l'esigenza di creare un controllo personalizzato e i diversi modelli di creazione di controlli in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Viene anche illustrato come creare un nuovo controllo.
 
@@ -227,7 +227,7 @@ Quando il controllo si trova in un assembly separato dall'applicazione, è neces
 
 #### <a name="defining-resources-at-the-element-level"></a>Definizione delle risorse a livello di elemento
 
-È possibile definire le risorse condivise a livello di elemento creando un dizionario risorse personalizzato e unendolo al dizionario risorse del controllo.  Quando si usa questo metodo, è possibile assegnare un nome qualsiasi al file di risorse, che può trovarsi nella stessa cartella dei controlli. Le risorse a livello di elemento possono anche usare semplici stringhe come chiavi. Nell'esempio seguente <xref:System.Windows.Media.LinearGradientBrush> viene creato un file di risorse denominato Dictionary1.xaml.The following example creates a resource file named Dictionary1.xaml.
+È possibile definire risorse condivise a livello di elemento creando un dizionario risorse personalizzato e unendolo al dizionario risorse del controllo.  Quando si usa questo metodo, è possibile assegnare un nome qualsiasi al file di risorse, che può trovarsi nella stessa cartella dei controlli. Le risorse a livello di elemento possono anche usare semplici stringhe come chiavi. Nell'esempio seguente <xref:System.Windows.Media.LinearGradientBrush> viene creato un file di risorse denominato Dictionary1.xaml.The following example creates a resource file named Dictionary1.xaml.
 
 [!code-xaml[SharedResources#1](~/samples/snippets/csharp/VS_Snippets_Wpf/SharedResources/CS/Dictionary1.xaml#1)]
 
@@ -264,7 +264,7 @@ Le risorse specifiche di un tema vengono inserite in un dizionario risorse con u
 
 Non è necessario definire una risorsa per ogni tema. Se una risorsa non è definita per un tema specifico, il controllo la cerca in `Classic.xaml`. Se la risorsa non è definita nel file che corrisponde al tema corrente o in `Classic.xaml`, il controllo usa la risorsa generica, che si trova in un file del dizionario risorse denominato `generic.xaml`.  Il file `generic.xaml` si trova nella stessa cartella dei file del dizionario risorse specifico del tema. Anche se `generic.xaml` non corrisponde a un tema di Windows specifico, è comunque un dizionario a livello di tema.
 
-L'esempio di controllo personalizzato NumericUpDown di [C](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp) o [Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic) con `NumericUpDown` tema e supporto dell'automazione dell'interfaccia utente contiene due dizionari risorse per il controllo: uno in generic.xaml e l'altro in Luna.NormalColor.xaml.
+L'esempio di controllo personalizzato NumericUpDown di [C](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp) o [Visual Basic](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic) con `NumericUpDown` tema e supporto dell'automazione dell'interfaccia utente contiene due dizionari risorse per il controllo: uno in generic.xaml e l'altro in Luna.NormalColor.xaml.
 
 Quando si <xref:System.Windows.Controls.ControlTemplate> inserisce un oggetto in uno dei file del dizionario risorse specifico <xref:System.Windows.DependencyProperty.OverrideMetadata%28System.Type%2CSystem.Windows.PropertyMetadata%29> del tema, è necessario creare un costruttore statico per il controllo e chiamare il metodo su <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>, come illustrato nell'esempio seguente.
 
