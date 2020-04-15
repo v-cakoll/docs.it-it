@@ -74,6 +74,8 @@
           href: ../../../../_csharplang/proposals/csharp-8.0/ranges.md
         - name: Istruzione using basata su criteri e dichiarazioni using
           href: ../../../../_csharplang/proposals/csharp-8.0/using.md
+        - name: Funzioni locali statiche
+          href: ../../../../_csharplang/proposals/csharp-8.0/static-local-functions.md
         - name: Assegnazione null coalescing
           href: ../../../../_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md
         - name: Membri di istanza Readonly
