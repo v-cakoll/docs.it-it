@@ -1,12 +1,12 @@
 ---
 title: Attributi (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 2a07035ea97bb0ff1a8f4793fe8a30d3a42c34a7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 62424163303417746a67707d9ef34185954db316
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79399749"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389545"
 ---
 # <a name="attributes-c"></a>Attributi (C#)
 
@@ -95,7 +95,7 @@ Nell'esempio seguente viene illustrato come applicare gli attributi a metodi, pa
 [!code-csharp[Applying attributes to different code elements](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#6)]
 
 > [!NOTE]
-> Indipendentemente dalle destinazioni in cui l'oggetto `ValidatedContract` è definito come valido, è necessario specificare la destinazione `return`, anche se `ValidatedContract` viene definito in modo da essere valido solo per i valori restituiti. In altre parole, il compilatore non usa le informazioni `AttributeUsage` per risolvere le destinazioni degli attributi ambigue. Per altre informazioni, vedere [AttributeUsage (C#)](attributeusage.md).
+> Indipendentemente dalle destinazioni in cui l'oggetto `ValidatedContract` è definito come valido, è necessario specificare la destinazione `return`, anche se `ValidatedContract` viene definito in modo da essere valido solo per i valori restituiti. In altre parole, il compilatore non usa le informazioni `AttributeUsage` per risolvere le destinazioni degli attributi ambigue. Per altre informazioni, vedere [AttributeUsage (C#)](../../../language-reference/attributes/general.md).
 
 ## <a name="common-uses-for-attributes"></a>Usi comuni degli attributi
 
@@ -121,11 +121,11 @@ Per altre informazioni, vedere:
 - [Accessing Attributes by Using Reflection (C#)](accessing-attributes-by-using-reflection.md) (Accesso agli attributi con reflection (C#))  
 - [Come creare un'unione C/C](how-to-create-a-c-cpp-union-by-using-attributes.md)  
 - [Attributi comuni (C#)](common-attributes.md)  
-- [Informazioni sul chiamante (C#)](../caller-information.md)  
+- [Informazioni sul chiamante (C#)](../../../language-reference/attributes/caller-information.md)  
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../index.md)
+- [Guida alla programmazione in C](../../index.md)
 - [Reflection (C#)](../reflection.md)
 - [Attributi](../../../../standard/attributes/index.md)
 - [Uso degli attributi in C#](../../../tutorials/attributes.md)

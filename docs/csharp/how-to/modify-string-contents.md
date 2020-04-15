@@ -3,12 +3,12 @@ title: Come modificare il contenuto della stringa - Guida di C
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: f31fa94501ac2120e22e229dfc11babb8b8cc0f3
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 8e9bbe76c689d3c3f9f238ca9dd95cc7fcf98b18
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242855"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389519"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Come modificare il contenuto della stringa in CHow to modify string contents in C\#
 
@@ -16,7 +16,7 @@ Questo articolo illustra diverse tecniche per produrre un oggetto `string` modif
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-Questo articolo illustra diverse tecniche. È possibile sostituire il testo esistente. È possibile cercare criteri e sostituire il testo corrispondente ai criteri con altro testo. È possibile considerare una stringa come sequenza di caratteri. È anche possibile usare metodi pratici per la rimozione degli spazi. È consigliabile scegliere le tecniche più adatte allo scenario in cui si opera.
+Questo articolo illustra diverse tecniche. È possibile sostituire il testo esistente. È possibile cercare criteri e sostituire il testo corrispondente ai criteri con altro testo. È possibile considerare una stringa come sequenza di caratteri. È anche possibile usare metodi pratici per la rimozione degli spazi. Scegliere le tecniche più strettamente corrispondenti allo scenario.
 
 ## <a name="replace-text"></a>Sostituire il testo
 
@@ -48,7 +48,7 @@ La stringa di origine non viene modificata e viene restituita una nuova stringa 
 
 È possibile usare le [espressioni regolari](../../standard/base-types/regular-expressions.md) per sostituire il testo corrispondente a determinati criteri con nuovo testo, che a sua volta può essere definito da un criterio. Nell'esempio seguente viene usata la classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> per trovare un criterio in una stringa di origine e sostituirlo con la combinazione corretta di maiuscole e minuscole. Il metodo <xref:System.Text.RegularExpressions.Regex.Replace(System.String,System.String,System.Text.RegularExpressions.MatchEvaluator,System.Text.RegularExpressions.RegexOptions)?displayProperty=nameWithType> accetta una funzione che include tra i suoi argomenti la logica di sostituzione. In questo esempio la funzione (`LocalReplaceMatchCase`) è una **funzione locale** dichiarata all'interno del metodo di esempio. `LocalReplaceMatchCase` usa la classe <xref:System.Text.StringBuilder?displayProperty=nameWithType> per compilare la stringa di sostituzione con la combinazione corretta di maiuscole e minuscole.
 
-Le espressioni regolari sono utili soprattutto per la ricerca e sostituzione di testo corrispondente a un criterio, anziché di testo noto. Per ulteriori informazioni, vedere [Come cercare stringhe.](search-strings.md) Il criterio di ricerca "the\s" cerca la parola "the" seguita da uno spazio. Tale parte del criterio garantisce che nella stringa di origine non venga rilevata la corrispondenza con "there". Per altre informazioni sugli elementi del linguaggio delle espressioni regolari, vedere [Linguaggio di espressioni regolari - Riferimento rapido](../../standard/base-types/regular-expression-language-quick-reference.md).
+Le espressioni regolari sono utili soprattutto per la ricerca e sostituzione di testo corrispondente a un criterio, anziché di testo noto. Per ulteriori informazioni, vedere [Come cercare stringhe](search-strings.md). Il criterio di ricerca "the\s" cerca la parola "the" seguita da uno spazio. Tale parte del criterio garantisce che nella stringa di origine non venga rilevata la corrispondenza con "there". Per altre informazioni sugli elementi del linguaggio delle espressioni regolari, vedere [Linguaggio di espressioni regolari - Riferimento rapido](../../standard/base-types/regular-expression-language-quick-reference.md).
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#5)]
 

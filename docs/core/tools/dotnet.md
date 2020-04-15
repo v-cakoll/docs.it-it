@@ -2,12 +2,12 @@
 title: Comando dotnet
 description: Informazioni sul comando dotnet (il driver generico per l'interfaccia della riga di comando di .NET Core) e sul relativo utilizzo.
 ms.date: 02/13/2020
-ms.openlocfilehash: 8692d419afd528bf49e1dc7dc1a7a5fd698b363b
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 9446808d7f23d762c7a3c8a58252664fc5dade5b
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134080"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389603"
 ---
 # <a name="dotnet-command"></a>Comando dotnet
 
@@ -57,7 +57,7 @@ Il `dotnet` comando ha due funzioni:
 
 - Esegue applicazioni .NET Core.It runs .NET Core applications.
 
-  Specificare il percorso `.dll` di un file dell'applicazione per eseguire l'applicazione. Ad esempio, `dotnet myapp.dll` `myapp` esegue l'applicazione. Per informazioni sulle opzioni di distribuzione, [vedere Distribuzione di applicazioni .NET Core.See .NET Core application deployment](../deploying/index.md) to learn about deployment options.
+  Specificare il percorso `.dll` di un file dell'applicazione per eseguire l'applicazione.  Eseguire l'applicazione significa trovare ed eseguire il punto di ingresso, `Main` che nel caso delle applicazioni console è il metodo. Ad esempio, `dotnet myapp.dll` `myapp` esegue l'applicazione. Per informazioni sulle opzioni di distribuzione, [vedere Distribuzione di applicazioni .NET Core.See .NET Core application deployment](../deploying/index.md) to learn about deployment options.
 
 ## <a name="options"></a>Opzioni
 
@@ -77,7 +77,7 @@ Le seguenti opzioni `dotnet` sono per sé. Ad esempio: `dotnet --info`. Stampano
 
 - **`--list-runtimes`**
 
-  Stampa un elenco dei runtime .NET Core installati.
+  Stampa un elenco dei runtime .NET Core installati. Una versione x86 dell'SDK elenca solo i runtime x86 e una versione x64 del SDK elenca solo i runtime x64.
 
 - **`--list-sdks`**
 

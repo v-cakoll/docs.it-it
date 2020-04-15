@@ -2,12 +2,12 @@
 title: Comando dotnet sln
 description: Il comando dotnet-sln rappresenta un'opzione comoda per aggiungere, rimuovere ed elencare i progetti in un file di soluzione.
 ms.date: 02/14/2020
-ms.openlocfilehash: b2455c04a46b2a10b8142d8ddc2d8129f2154b27
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 615e25e30a63b6ca36d9898cfcde565053830572
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77543482"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389645"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -175,8 +175,20 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
   dotnet sln todo.sln add **/*.csproj
   ```
 
+- Aggiungere più progetti in linguaggio C, usando un modello di globbing (solo Windows PowerShell):Add multiple C' projects to a solution using a globbing pattern (Windows PowerShell only):
+
+  ```dotnetcli
+  dotnet sln todo.sln add (ls **/*.csproj)
+  ```
+
 - Rimuovere più progetti in c'è da una soluzione utilizzando un modello di globbing (solo Unix/Linux):Remove multiple C' projects from a solution using a globbing pattern (Unix/Linux only):
 
   ```dotnetcli
   dotnet sln todo.sln remove **/*.csproj
+  ```
+
+- Rimuovere più progetti in c'è da una soluzione utilizzando un modello globbing (solo Windows PowerShell):
+
+  ```dotnetcli
+  dotnet sln todo.sln remove (ls **/*.csproj)
   ```

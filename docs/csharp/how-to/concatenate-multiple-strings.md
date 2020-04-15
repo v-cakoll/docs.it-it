@@ -7,12 +7,12 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-ms.openlocfilehash: 87ec5104f36d0c6cce12037e70dacf2752ef5e62
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: bbdeba4ee3526140de29ac0d7c97e9a593729d47
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121048"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389528"
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>Come concatenare più stringhe (Guida di C
 
@@ -37,13 +37,13 @@ In alcune espressioni risulta più semplice concatenare le stringhe usando l'int
 
 Un altro metodo per concatenare le stringhe è <xref:System.String.Format%2A?displayProperty=nameWithType>. Questo metodo è utile quando si compila una stringa da un numero ridotto di stringhe dei componenti.
 
-In altri casi è possibile combinare le stringhe in un ciclo, se non si conosce il numero di stringhe di origine da combinare e il numero effettivo di stringhe di origine potrebbe essere elevato. La classe <xref:System.Text.StringBuilder> è stata progettata per questi scenari. Il codice seguente usa il metodo <xref:System.Text.StringBuilder.Append%2A> della classe <xref:System.Text.StringBuilder> per concatenare le stringhe.  
+In altri casi, è possibile combinare stringhe in un ciclo in cui non si conosce il numero di stringhe di origine che si sta combinando e il numero effettivo di stringhe di origine può essere elevato. La classe <xref:System.Text.StringBuilder> è stata progettata per questi scenari. Il codice seguente usa il metodo <xref:System.Text.StringBuilder.Append%2A> della classe <xref:System.Text.StringBuilder> per concatenare le stringhe.  
   
 [!code-csharp-interactive[string concatenation using string builder](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#4)]  
 
 Ulteriori informazioni sui motivi per scegliere la [concatenazione `StringBuilder` di stringhe o la classe](xref:System.Text.StringBuilder#StringAndSB).
 
-Un'altra opzione per unire le stringhe di una raccolta consiste nell'usare il metodo <xref:System.String.Concat%2A?displayProperty=nameWithType>. Usare il metodo <xref:System.String.Join%2A?displayProperty=nameWithType> se le stringhe di origine devono essere separate da un delimitatore. Il codice seguente combina una matrice di parole con entrambi i metodi:
+Un'altra opzione per unire le stringhe di una raccolta consiste nell'usare il metodo <xref:System.String.Concat%2A?displayProperty=nameWithType>. Utilizzare <xref:System.String.Join%2A?displayProperty=nameWithType> il metodo se le stringhe di origine devono essere separate da un delimitatore. Il codice seguente combina una matrice di parole con entrambi i metodi:
 
 [!code-csharp-interactive[concatenation of string collection](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#5)]
 

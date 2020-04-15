@@ -2,16 +2,19 @@
 title: XML Schema Definition Tool (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: cd017eb1866fff2ce8fd7a858b184351ef13e815
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 6ec99e77db4215184547ea2bbbe0d1ff8ad3c286
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588355"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389769"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 
 Lo strumento XML Schema Definition (Xsd.exe) consente di generare classi Common Language Runtime o XML Schema da file XDR, XML e XSD o da classi di un assembly di runtime.
+
+Lo strumento XML Schema Definition (Xsd.exe) in genere si trova nel percorso seguente:
+_C:\\Programmi (x86)\\Microsoft\\SDK\\Di\\Windows\\.netversion bin NETFX\\_
 
 ## <a name="syntax"></a>Sintassi
 

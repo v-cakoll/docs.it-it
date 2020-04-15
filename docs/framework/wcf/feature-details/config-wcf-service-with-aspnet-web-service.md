@@ -5,21 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-ms.openlocfilehash: 6a06e1983a54581cfb89f008e9f063a671e992c2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 22713aba4f86fe493ba3d16ef09c2a71b6d55fe0
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185358"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389789"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>Procedura: configurare un servizio WCF che interagisca con client di servizi Web ASP.NET
+
 Per configurare un endpoint del servizio Windows Communication Foundation (WCF) per <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> l'interoperabilità con i client del servizio Web ASP.NET, usare il tipo come tipo di associazione per l'endpoint del servizio.  
   
  È possibile, se lo si desidera, attivare nell'associazione il supporto per HTTPS e l'autenticazione del client a livello di trasporto. ASP.NET client del servizio Web non supportano <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> la codifica dei messaggi MTOM, pertanto la proprietà deve essere lasciata come valore predefinito, ovvero <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>. I client di servizi Web ASP.NET non supportano WS-Security, pertanto <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> deve essere impostato su <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.  
   
- Per rendere disponibili i metadati per un servizio WCF per ASP.NET strumenti di generazione di proxy del servizio Web, ovvero strumento del linguaggio di descrizione dei [servizi Web (Wsdl.exe),](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v%3dvs.100))strumento di [individuazione dei servizi Web (Disco.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cy2a3ybs(v=vs.100))e aggiunta di riferimenti Web in Visual Studio, è necessario esporre un endpoint dei metadati HTTP/GET.  
+ Per rendere disponibili i metadati per un servizio WCF per ASP.NET strumenti di generazione di proxy del servizio Web, ovvero strumento del linguaggio di descrizione dei [servizi Web (Wsdl.exe),](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v%3dvs.100))strumento di [individuazione dei servizi Web (Disco.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cy2a3ybs(v=vs.100))e aggiunta di **riferimenti Web** in Visual Studio, è necessario esporre un endpoint dei metadati HTTP/GET.  
   
-### <a name="to-add-a-wcf-endpoint-that-is-compatible-with-aspnet-web-service-clients-in-code"></a>Per aggiungere un endpoint WCF compatibile con client di servizi Web ASP.NET nel codice  
+## <a name="add-an-endpoint-in-code"></a>Aggiungere un endpoint nel codiceAdd an endpoint in code  
   
 1. Creare una nuova istanza <xref:System.ServiceModel.BasicHttpBinding>.  
   
@@ -29,7 +30,7 @@ Per configurare un endpoint del servizio Windows Communication Foundation (WCF) 
   
 4. Attivare un endpoint dei metadati HTTP/GET per il servizio. Per informazioni dettagliate, vedere [Procedura: pubblicare metadati per un servizio tramite codice](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
   
-### <a name="to-add-a-wcf-endpoint-that-is-compatible-with-aspnet-web-service-clients-in-a-configuration-file"></a>Per aggiungere un endpoint WCF compatibile con client di servizi Web ASP.NET in un file di configurazione  
+## <a name="add-an-endpoint-in-a-configuration-file"></a>Aggiungere un endpoint in un file di configurazioneAdd an endpoint in a configuration file  
   
 1. Creare una nuova configurazione dell'associazione <xref:System.ServiceModel.BasicHttpBinding>. Per informazioni dettagliate, vedere [procedura: specificare un'associazione](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)al servizio nella configurazione .  
   

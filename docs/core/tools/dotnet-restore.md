@@ -2,12 +2,12 @@
 title: Comando dotnet restore
 description: Informazioni sul ripristino delle dipendenze e degli strumenti specifici per il progetto tramite il comando dotnet-restore.
 ms.date: 02/27/2020
-ms.openlocfilehash: e74027ba70ddf6905a12f9691caeb0a406428ad6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b336e1aa097f83280de6faeef51793345520530
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78157024"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389653"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -21,9 +21,10 @@ ms.locfileid: "78157024"
 
 ```dotnetcli
 dotnet restore [<ROOT>] [--configfile] [--disable-parallel]
-    [--force] [--ignore-failed-sources] [--no-cache]
-    [--no-dependencies] [--packages] [-r|--runtime]
-    [-s|--source] [-v|--verbosity] [--interactive]
+    [-f|--force] [--force-evaluate] [--ignore-failed-sources]
+    [--interactive] [--lock-file-path] [--locked-mode]
+    [--no-cache] [--no-dependencies] [--packages] [-r|--runtime]
+    [-s|--source] [--use-lockfile] [-v|--verbosity]
 
 dotnet restore [-h|--help]
 ```
@@ -92,6 +93,10 @@ In alcuni casi, potrebbe non essere appropriato eseguire `dotnet restore` in mod
 
   Forza la risoluzione di tutte le dipendenze, anche se l'ultimo ripristino ha avuto esito positivo. La specifica di questo flag equivale all'eliminazione del file *project.assets.json*.
 
+- **`--force-evaluate`**
+
+  Forza il ripristino per rivalutare tutte le dipendenze anche se esiste già un file di blocco.
+
 - **`-h|--help`**
 
   Stampa una breve guida per il comando.
@@ -99,6 +104,18 @@ In alcuni casi, potrebbe non essere appropriato eseguire `dotnet restore` in mod
 - **`--ignore-failed-sources`**
 
   Segnala le origini con esito negativo solo se sono presenti pacchetti che soddisfano il requisito di versione.
+
+- **`--interactive`**
+
+  Consente al comando di arrestarsi e attendere l'input o l'azione dell'utente (ad esempio, il completamento dell'autenticazione). A partire da .NET Core 2.1.400
+
+- **`--lock-file-path <LOCK_FILE_PATH>`**
+
+  Percorso di output in cui viene scritto il file di blocco del progetto. Per impostazione predefinita, si tratta di *PROJECT_ROOT,packages.lock.json*.
+
+- **`--locked-mode`**
+
+  Non consentire l'aggiornamento del file di blocco del progetto.
 
 - **`--no-cache`**
 
@@ -120,13 +137,13 @@ In alcuni casi, potrebbe non essere appropriato eseguire `dotnet restore` in mod
 
   Specifica un'origine dei pacchetti NuGet da usare durante l'operazione di ripristino. Questa impostazione esegue l'override di tutte le origini specificate nei file *NuGet.config*. È possibile specificare più origini, selezionando questa opzione più volte.
 
-- **`--verbosity <LEVEL>`**
+- **`--use-lockfile`**
+
+  Consente di generare e utilizzare il file di blocco del progetto con il ripristino.
+
+- **`-v|--verbosity <LEVEL>`**
 
   Imposta il livello di dettaglio del comando. I valori consentiti sono `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`. Il valore predefinito è `minimal`.
-
-- **`--interactive`**
-
-  Consente al comando di arrestarsi e attendere l'input o l'azione dell'utente (ad esempio, il completamento dell'autenticazione). A partire da .NET Core 2.1.400
 
 ## <a name="examples"></a>Esempi
 

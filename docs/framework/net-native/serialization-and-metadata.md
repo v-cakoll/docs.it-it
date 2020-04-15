@@ -2,12 +2,12 @@
 title: Serializzazione e metadati
 ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
-ms.openlocfilehash: 7c6fe241fbf92f52abfa0eb66c37bff4d227b4e5
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: cc9adf0e6627ef3190e74fea5d4f0f3afd581811
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81241919"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389223"
 ---
 # <a name="serialization-and-metadata"></a>Serializzazione e metadati
 
@@ -15,7 +15,7 @@ Se l'applicazione serializza e deserializza oggetti, potrebbe essere necessario 
   
 - Serializzatori di terze parti basati su reflection. Richiedono modifiche al file di direttive di runtime e sono descritti nella sezione successiva.  
   
-- Serializzatori non basati su reflection, presenti nella libreria di classi di .NET Framework. Possono richiedere modifiche al file di direttive di runtime e sono descritti nella sezione [Serializzatori Microsoft](#Microsoft).  
+- Serializzatori non basati su reflection trovati nella libreria di classi .NET Framework. Possono richiedere modifiche al file di direttive di runtime e sono descritti nella sezione [Serializzatori Microsoft](#Microsoft).  
   
 <a name="ThirdParty"></a>
 ## <a name="third-party-serializers"></a>Serializzatori di terze parti
@@ -59,13 +59,13 @@ Se l'applicazione serializza e deserializza oggetti, potrebbe essere necessario 
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   
- È necessario aggiungere come quelle riportate di seguito per ogni tipo al file di direttive del runtime:  
+Aggiungere voci come le seguenti per ogni tipo al file delle direttive di runtime:  
   
 ```xml  
 <Type Name="t" Browse="Required Public" />  
 ```  
   
- Per informazioni sulla sintassi utilizzata [ \<](type-element-net-native.md)nell'esempio, vedere Elemento> Tipo .  
+Per informazioni sulla sintassi utilizzata [ \<](type-element-net-native.md)nell'esempio, vedere Elemento> Tipo .  
   
 ## <a name="see-also"></a>Vedere anche
 

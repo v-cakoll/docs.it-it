@@ -2,12 +2,12 @@
 title: Novità di C' 8.0 - Guida di C
 description: Panoramica delle nuove funzionalità disponibili in C# 8.0.
 ms.date: 04/07/2020
-ms.openlocfilehash: 1a005750751129969f2d1e9caf156330dbe61cb2
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 2998beb378c68bead7f34e2a0963c40cf610a442
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989207"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389098"
 ---
 # <a name="whats-new-in-c-80"></a>Novità di C# 8.0
 
@@ -76,7 +76,7 @@ Il compilatore genera un avviso quando deve creare una copia difensiva.  La `Dis
 public readonly double Distance => Math.Sqrt(X * X + Y * Y);
 ```
 
-Si noti che il `readonly` modificatore è necessario in una proprietà di sola lettura. Il compilatore non `get` presuppone che le funzioni di accesso non modifichino lo stato. è necessario `readonly` dichiarare in modo esplicito. Le proprietà implementate automaticamente sono un'eccezione; il compilatore considererà tutti i getter implementati automaticamente come readonly, `readonly` quindi `X` qui `Y` non è necessario aggiungere il modificatore alle proprietà e .
+Si noti che il `readonly` modificatore è necessario in una proprietà di sola lettura. Il compilatore non `get` presuppone che le funzioni di accesso non modifichino lo stato. è necessario `readonly` dichiarare in modo esplicito. Le proprietà implementate automaticamente sono un'eccezione; il compilatore considererà tutti i `readonly`getter implementati automaticamente come , `readonly` quindi `X` in `Y` questo caso non è necessario aggiungere il modificatore alle proprietà e .
 
 Il compilatore applica `readonly` la regola che i membri non modificano lo stato. Il metodo seguente non verrà compilato `readonly` a meno che non si rimuova il modificatore:
 
@@ -88,7 +88,9 @@ public readonly void Translate(int xOffset, int yOffset)
 }
 ```
 
-Questa funzionalità consente di specificare la finalità della progettazione in modo che il compilatore possa imporla e applicare le ottimizzazioni in base a tale finalità. Per ulteriori informazioni sui membri readonly, [`readonly`](../language-reference/keywords/readonly.md#readonly-member-examples)vedere l'articolo di riferimento sulla lingua su .
+Questa funzionalità consente di specificare la finalità della progettazione in modo che il compilatore possa imporla e applicare le ottimizzazioni in base a tale finalità.
+
+Per altre informazioni, [ `readonly` ](../language-reference/builtin-types/struct.md#readonly-instance-members) vedere la sezione dei membri di istanza dell'articolo [Tipi di struttura.](../language-reference/builtin-types/struct.md)
 
 ## <a name="default-interface-methods"></a>Metodi di interfaccia predefiniti
 

@@ -9,14 +9,14 @@ helpviewer_keywords:
 - parse strings
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
-ms.openlocfilehash: fb11ff59705188f9425beedfbbbf3c244d21f587
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: cf8307517213b54041b272843232eb595660b2e9
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121501"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389500"
 ---
-# <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>Come analizzare le stringhe utilizzando String.Split (Guida di C
+# <a name="how-to-parse-strings-using-stringsplit-in-c"></a>Come analizzare le stringhe utilizzando String.Split in CHow to parse strings using String.Split in C\#
 
 Il metodo <xref:System.String.Split%2A?displayProperty=nameWithType> crea una matrice di sottostringhe dividendo la stringa di input in base a uno o più delimitatori. È spesso il modo più semplice per separare una stringa in corrispondenza della fine delle parole. Questo metodo viene usato anche per dividere le stringhe in corrispondenza di altri caratteri o di altre stringhe specifiche.
 
@@ -26,11 +26,11 @@ Il codice seguente divide una frase comune in una matrice di stringhe per ogni p
 
 [!code-csharp-interactive[split strings on word boundaries](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#1)]
 
-Ogni istanza di un carattere separatore genera un valore nella matrice restituita. Caratteri separatori consecutivi generano una stringa vuota come valore nella matrice restituita.  Questo caso è illustrato nell'esempio seguente, che usa uno spazio come separatore:
+Ogni istanza di un carattere separatore genera un valore nella matrice restituita. Caratteri separatori consecutivi generano una stringa vuota come valore nella matrice restituita. È possibile vedere come viene creata una stringa vuota nell'esempio seguente, che usa il carattere spazio come separatore.
 
 [!code-csharp-interactive[split strings with repeated separators](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#2)]
 
-Questo comportamento semplifica l'uso di alcuni formati, ad esempio dei file con valori delimitati da virgole (CSV, Comma Separated Value) che rappresentano dati tabulari. Due virgole consecutive rappresentano una colonna vuota.
+Questo comportamento semplifica i formati, ad esempio i file con valori delimitati da virgole (CSV) che rappresentano dati tabulari. Due virgole consecutive rappresentano una colonna vuota.
 
 È possibile passare un parametro <xref:System.StringSplitOptions.RemoveEmptyEntries?displayProperty=nameWithType> facoltativo per escludere tutte le stringhe vuote nella matrice restituita. Per un'elaborazione più complessa della raccolta restituita, è possibile modificare la sequenza di risultati tramite [LINQ](../programming-guide/concepts/linq/index.md).
 

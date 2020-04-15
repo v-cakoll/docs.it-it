@@ -2,12 +2,12 @@
 title: Migrazione dell'app di Windows Store a .NET Native
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: 36f9ac4647b349ff379869f3415a5fb9e55228e3
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 987669fc51eeaf7e3bdef3e91a2f1ce23164a055
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81241945"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389709"
 ---
 # <a name="migrate-your-windows-store-app-to-net-native"></a>Eseguire la migrazione dell'app di Windows Store a .NET NativeMigrate Your Windows Store App to .NET Native
 
@@ -85,7 +85,7 @@ In .NET Native:
 
 - <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> e <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> includono membri nascosi in classi di base e perciò potrebbero essere sottoposti a override esplicito. Ciò vale anche per gli altri metodi [RuntimeReflectionExtensions.GetRuntime*](xref:System.Reflection.RuntimeReflectionExtensions) .
 
-- <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> e <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> non hanno esito negativo quando si prova a creare determinate combinazioni (ad esempio, una matrice di ByRef).
+- <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType>e <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> non falliscono quando si tenta di creare determinate combinazioni (ad esempio, una matrice di `byref` oggetti).
 
 - Non è possibile usare la reflection per richiamare i membri con parametri di puntatore.
 
@@ -117,7 +117,7 @@ Nelle sezioni seguenti vengono elencati gli scenari e le API non supportati per 
 
 - Se si esegue l'override dei metodi <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> e <xref:System.ValueType.GetHashCode%2A?displayProperty=nameWithType> per un tipo di valore, non chiamare le implementazioni della classe di base. In .NET per applicazioni Windows Store, questi metodi si basano sulla reflection. In fase di compilazione, .NET Native genera un'implementazione che non si basa sulla reflection di runtime. Ciò significa che se non si esegue l'override di questi due metodi, funzioneranno come previsto, perché .NET Native genera l'implementazione in fase di compilazione. Tuttavia, se si esegue l'override di questi metodi, ma si chiama l'implementazione della classe base verrà generata un'eccezione.
 
-- Non sono supportati i tipi di valore superiori a un megabyte.
+- I tipi di valore superiori a 1 megabyte non sono supportati.
 
 - I tipi di valore non possono avere un costruttore senza parametri in .NET Native.Value types can't have a parameterless constructor in .NET Native. (C'è e Visual Basic proibiscono i costruttori senza parametri sui tipi di valore. Tuttavia, è possibile crearli in IL).
 
@@ -225,7 +225,7 @@ In .NET Native:
 - <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>
 - <xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>
 
- <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> è supportata, ma genera un'eccezione in alcuni scenari, ad esempio quando viene usata con [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) o varianti di ByRef.
+ <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType>è supportato, ma genera un'eccezione in alcuni scenari, ad `byref` esempio quando viene usato con [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) o varianti.
 
  Le API deprecate per il supporto [di IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) includono:Deprecated APIs for IDispatch support include:
 
@@ -324,7 +324,7 @@ Tuttavia, .NET Native non supporta quanto segue:
 
 - Implementazione dell'interfaccia <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> su un tipo gestito
 
-- Implementazione dell'interfaccia [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) su un tipo gestito tramite l'attributo <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> . Notare tuttavia che non è possibile chiamare oggetti COM tramite `IDispatch`e l'oggetto gestito non può implementare `IDispatch`.
+- Implementazione dell'interfaccia [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) su un tipo gestito tramite l'attributo <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> . Tuttavia, non è possibile `IDispatch`chiamare oggetti COM tramite `IDispatch`e l'oggetto gestito non è in grado di implementare .
 
 L'uso della reflection per richiamare un metodo platform invoke non è supportato. È possibile aggirare questa limitazione eseguendo il wrapping della chiamata al metodo in un altro metodo e usando la reflection per chiamare invece il wrapper.
 
@@ -332,7 +332,7 @@ L'uso della reflection per richiamare un metodo platform invoke non è supportat
 
 ### <a name="other-differences-from-net-apis-for-windows-store-apps"></a>Altre differenze rispetto alle API .NET per app di Windows Store
 
-In questa sezione sono elencate le API rimanenti che non sono supportate in .NET Native.This section lists the remaining APIs that aren't supported in .NET Native. Il set più grande di API non supportate è rappresentato dalle API di Windows Communication Foundation (WCF).
+In questa sezione sono elencate le API rimanenti che non sono supportate in .NET Native.This section lists the remaining APIs that aren't supported in .NET Native. Il set più grande delle API non supportate è le API di Windows Communication Foundation (WCF).
 
 **DataAnnotations (System.ComponentModel.DataAnnotations)**
 
@@ -396,7 +396,7 @@ La `System.Net.Http.RtcRequestFactory` classe non è supportata in .NET Native.
 
 **Windows Communication Foundation (WCF) (System.ServiceModel.\*)**
 
-I tipi negli [spazi dei nomi System.ServiceModel.](xref:System.ServiceModel) Sono inclusi i tipi seguenti:
+I tipi negli [spazi dei nomi System.ServiceModel.](xref:System.ServiceModel) Questi includono i seguenti tipi:
 
 - <xref:System.ServiceModel.ActionNotSupportedException?displayProperty=nameWithType>
 - <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>

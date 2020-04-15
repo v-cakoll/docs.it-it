@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: 7fbdfa8656e3c4832226370dc6efe56964e14934
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5a9d97ff14f087ddfc55986bf77f18492cbf8a04
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168505"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389587"
 ---
 # <a name="introduction-to-linq-queries-c"></a>Introduzione alle query LINQ (C#)
 Una *query* è un'espressione che recupera dati da un'origine dati. Le query sono in genere espresse in un linguaggio di query specializzato. Nel tempo sono stati sviluppati diversi linguaggi per i vari tipi di origini dati, ad esempio SQL per database relazionali e XQuery per XML. Gli sviluppatori hanno dovuto pertanto imparare un nuovo linguaggio di query per ogni tipo di origine dati o formato dati supportato. LINQ semplifica questa situazione offrendo un modello coerente per l'utilizzo dei dati in vari tipi di origini dati e formati. In una query LINQ si lavora sempre con gli oggetti. Gli stessi modelli di codifica di base vengono utilizzati per eseguire query e trasformare i dati in documenti XML, database SQL, ADO.NET dataset, raccolte .NET e qualsiasi altro formato per il quale è disponibile un provider LINQ.  
@@ -41,7 +41,7 @@ Una *query* è un'espressione che recupera dati da un'origine dati. Le query son
   
  [!code-csharp[CsLINQGettingStarted#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#2)]  
   
- Con [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] è necessario creare prima un mapping relazionale a oggetti in fase di progettazione, manualmente o usando gli [Strumenti LINQ to SQL in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2). È possibile scrivere le query sugli oggetti e in fase di esecuzione [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] gestisce la comunicazione con il database. Nell'esempio seguente `Customers` rappresenta una tabella specifica nel database e il tipo del risultato della query, <xref:System.Linq.IQueryable%601>, deriva da <xref:System.Collections.Generic.IEnumerable%601>.  
+ Con [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], è innanzitutto necessario creare un mapping relazionale a oggetti in fase di progettazione manualmente o utilizzando [gli strumenti LINQ to SQL in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2). È possibile scrivere le query sugli oggetti e in fase di esecuzione [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] gestisce la comunicazione con il database. Nell'esempio seguente `Customers` rappresenta una tabella specifica nel database e il tipo del risultato della query, <xref:System.Linq.IQueryable%601>, deriva da <xref:System.Collections.Generic.IEnumerable%601>.  
   
 ```csharp  
 Northwnd db = new Northwnd(@"c:\northwnd.mdf");  
@@ -58,7 +58,7 @@ IQueryable<Customer> custQuery =
 > [!NOTE]
 > Tipi come <xref:System.Collections.ArrayList> che supportano <xref:System.Collections.IEnumerable> l'interfaccia non generica possono essere utilizzati anche come origine dati LINQ. Per ulteriori informazioni, vedere [Come eseguire una query su un ArrayList con LINQ (C)](./how-to-query-an-arraylist-with-linq.md).  
   
-## <a name="query"></a>La query  
+## <a name="the-query"></a><a name="query"></a>La query  
  La query specifica le informazioni da recuperare dall'origine o dalle origini dati. Una query può anche specificare il modo in cui ordinare, raggruppare e definire le informazioni prima che vengano restituite. Una query viene archiviata in una variabile di query e inizializzata con un'espressione di query. Per semplificare la scrittura delle query, in C# è stata introdotta una nuova sintassi della query.  
   
  La query nell'esempio precedente restituisce tutti i numeri pari dalla matrice di valori interi. L'espressione di query contiene tre clausole: `from`, `where` e `select`. Se si ha familiarità con SQL, si sarà notato che l'ordine delle clausole è invertito rispetto all'ordine in SQL. La `from` clausola specifica l'origine dati, la `where` `select` clausola applica il filtro e la clausola specifica il tipo degli elementi restituiti. Queste e le altre clausole di query vengono descritte in dettaglio nella sezione [Language Integrated Query (LINQ).](../../../linq/index.md) Per ora, il punto importante è che in LINQ, la variabile di query stessa non esegue alcuna azione e non restituisce dati. Archivia solo le informazioni richieste per generare i risultati quando successivamente viene eseguita la query. Per altre informazioni sul modo in cui le query vengono costruite automaticamente, vedere [Cenni preliminari sugli operatori di query standard (C#)](./standard-query-operators-overview.md).  
@@ -90,7 +90,7 @@ IQueryable<Customer> custQuery =
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Introduzione a LINQ in C #](index.md)
+- [Nozioni di base su LINQ in C#](index.md)
 - [Procedura dettagliata: scrittura di query in C#](./walkthrough-writing-queries-linq.md)
 - [Language Integrated Query (LINQ)](../../../linq/index.md)
 - [foreach, in](../../../language-reference/keywords/foreach-in.md)

@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: d835ffe7a10492ee731de8e5301e6d34545f9c32
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d7328949e3eb4822b1a645bb5f0c1866f01ecb0a
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151390"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389740"
 ---
-# <a name="consuming-a-dataset-from-an-xml-web-service"></a>Utilizzo di un dataset da un servizio Web XML
+# <a name="consume-a-dataset-from-an-xml-web-service"></a>Usare un DataSet da un servizio Web XMLConsume a DataSet from an XML web service
+
 Il <xref:System.Data.DataSet> è stato progettato con una struttura disconnessa, in parte per facilitare il trasporto di dati su Internet. Il **DataSet** è "serializzabile" in quanto può essere specificato come input o output da servizi Web XML senza alcuna codifica aggiuntiva necessaria per trasmettere il contenuto del **DataSet** da un servizio Web XML a un client e viceversa. Il **DataSet** viene convertito in modo implicito in un flusso XML utilizzando il formato DiffGram, inviato in rete e quindi ricostruito dal flusso XML come **DataSet** sul lato ricevente. Si tratta quindi di un metodo molto semplice e flessibile per la trasmissione e la restituzione di dati relazionali tramite i servizi Web XML. Per ulteriori informazioni sul formato DiffGram, vedere [DiffGrams](diffgrams.md).  
   
  Nell'esempio seguente viene illustrato come creare un client e un servizio Web XML che utilizzano il **DataSet** per trasportare dati relazionali (inclusi i dati modificati) e risolvere eventuali aggiornamenti nell'origine dati originale.  
@@ -20,7 +21,7 @@ Il <xref:System.Data.DataSet> è stato progettato con una struttura disconnessa,
 > [!NOTE]
 > Nella creazione di un servizio Web XML si consiglia di tenere sempre presenti le implicazioni inerenti la sicurezza. Per informazioni sulla protezione di un servizio Web XML, vedere [Protezione dei servizi Web XML creati utilizzando ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100)).  
   
-### <a name="to-create-an-xml-web-service-that-returns-and-consumes-a-dataset"></a>Per creare un servizio Web XML che restituisca e utilizzi un DataSet  
+## <a name="create-an-xml-web-service"></a>Creare un servizio Web XMLCreate an XML web service
   
 1. Creare il servizio Web XML.  
   
@@ -189,9 +190,11 @@ Il <xref:System.Data.DataSet> è stato progettato con una struttura disconnessa,
   
 3. Creare un client del servizio Web XML.  
   
-     Se si desidera che Visual Studio generi automaticamente la classe proxy del servizio Web, è sufficiente creare il progetto client e, nella finestra Esplora soluzioni, fare clic con il pulsante destro del mouse sul progetto, scegliere **Aggiungi riferimento Web**e selezionare il servizio Web dall'elenco dei servizi Web disponibili (potrebbe essere necessario fornire l'indirizzo dell'endpoint del servizio Web, se il servizio Web non è disponibile all'interno della soluzione corrente o nel computer corrente). Se si crea manualmente il proxy del servizio Web XML (come descritto nel passaggio precedente), è possibile importarlo nel codice client e utilizzare i metodi del servizio Web XML. Il codice di esempio seguente importa la libreria proxy, chiama **GetCustomers** per ottenere un elenco di clienti, aggiunge un nuovo cliente e quindi restituisce un **DataSet** con gli aggiornamenti a **UpdateCustomers**.  
+     Se si desidera che Visual Studio generi automaticamente la classe proxy del servizio Web, è sufficiente creare il progetto client e, nella finestra Esplora soluzioni, fare clic con il pulsante destro del mouse sul progetto e quindi **scegliere Aggiungi** > riferimento al**servizio**. Nella finestra di dialogo **Aggiungi riferimento** al servizio selezionare **Avanzate**, quindi Aggiungi **riferimento Web**. Selezionare il servizio Web dall'elenco dei servizi Web disponibili (potrebbe essere necessario fornire l'indirizzo dell'endpoint del servizio Web se il servizio Web non è disponibile all'interno della soluzione corrente o nel computer corrente). Se si crea autonomamente il proxy del servizio Web XML, come descritto nel passaggio precedente, è possibile importarlo nel codice del client e usare i metodi del servizio Web XML.
+
+     Il codice di esempio seguente importa la libreria proxy, chiama **GetCustomers** per ottenere un elenco di clienti, aggiunge un nuovo cliente e quindi restituisce un **DataSet** con gli aggiornamenti a **UpdateCustomers**.  
   
-     Si noti che nell'esempio viene passato il **DataSet** restituito da **DataSet.GetChanges** a **UpdateCustomers** perché solo le righe modificate devono essere passate a **UpdateCustomers**. **UpdateCustomers** restituisce il **DataSet**risolto , che è quindi possibile **unire** nel **DataSet** esistente per incorporare le modifiche risolte e le eventuali informazioni sugli errori di riga dall'aggiornamento. Nel codice riportato di seguito si presuppone che sia stato utilizzato Visual Studio per creare il riferimento Web e che il riferimento Web sia stato rinominato In DsSample nella finestra di dialogo **Aggiungi riferimento Web.**  
+     Nell'esempio viene passato il **DataSet** restituito da **DataSet.GetChanges** a **UpdateCustomers** perché solo le righe modificate devono essere passate a **UpdateCustomers**. **UpdateCustomers** restituisce il **DataSet**risolto , che è quindi possibile **unire** nel **DataSet** esistente per incorporare le modifiche risolte e le eventuali informazioni sugli errori di riga dall'aggiornamento. Nel codice riportato di seguito si presuppone che sia stato utilizzato Visual Studio per creare il riferimento Web e che il riferimento Web sia stato rinominato In DsSample nella finestra di dialogo **Aggiungi riferimento Web.**  
   
     ```vb  
     Imports System  

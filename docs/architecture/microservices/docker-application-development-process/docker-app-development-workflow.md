@@ -2,12 +2,12 @@
 title: Flusso di lavoro di sviluppo per app Docker
 description: Informazioni dettagliate sul flusso di lavoro richiesto per lo sviluppo delle applicazioni basate su Docker. Iniziare gradualmente e approfondire alcuni dettagli per ottimizzare i Dockerfile e terminare con il flusso di lavoro semplificato disponibile quando si usa Visual Studio.
 ms.date: 01/30/2020
-ms.openlocfilehash: c58ea2436027968143777a19286a1a0a72107717
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f380c840e186c345f9222aa6b0cf1097a74874e
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401641"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389194"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Flusso di lavoro di sviluppo per app Docker
 
@@ -286,7 +286,7 @@ Il file risultante quindi è:
  7  COPY . .
  8  RUN dotnet restore /ignoreprojectextensions:.dcproj
  9  WORKDIR /src/src/Services/Catalog/Catalog.API
-10  RUN dotnet publish Catalog.API.csproj -c Release -0 /app
+10  RUN dotnet publish Catalog.API.csproj -c Release -o /app
 11
 12  FROM base AS final
 13  WORKDIR /app
@@ -479,7 +479,7 @@ Dopo l'esecuzione del comando docker-compose up, l'applicazione e i contenitori 
 
 #### <a name="using-visual-studio"></a>Con Visual Studio
 
-L'esecuzione di un'applicazione multicontenitore con Visual Studio 2019 non è possibile ottenere alcun più semplice. Basta premere **CTRL+F5** per l'esecuzione o **F5** per il debug, come di consueto, impostando il progetto **docker-compose** come progetto di avvio.  Visual Studio gestisce tutte le impostazioni necessarie, in modo da poter creare punti di interruzione come di consueto ed eseguire il debug di quelli che diventano infine processi indipendenti in esecuzione in "server remoti", con il debugger già collegato. Proprio così.
+L'esecuzione di un'applicazione multicontenitore con Visual Studio 2019 non è possibile ottenere alcun più semplice. Basta premere **CTRL+F5** per l'esecuzione o **F5** per il debug, come di consueto, impostando il progetto **docker-compose** come progetto di avvio.  Visual Studio gestisce tutte le impostazioni necessarie, in modo da poter creare punti di interruzione come al solito ed eseguire il debug di quelli che diventano finalmente processi indipendenti in esecuzione in "server remoti", con il debugger già collegato, proprio così.
 
 Come accennato in precedenza, ogni volta che si aggiungere il supporto Docker a un progetto all'interno di una soluzione, il progetto è configurato nel file docker-compose.yml globale, a livello di soluzione, che consente di eseguire l'intera soluzione o di eseguirne il debug in una sola volta. Visual Studio avvia un solo contenitore per ogni progetto che ha il supporto Docker abilitato ed esegue automaticamente tutti i passaggi interni, ovvero pubblicazione dotnet, compilazione docker, ecc.
 

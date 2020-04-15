@@ -3,12 +3,12 @@ title: Cronologia di C# - Guida a C#
 description: Caratteristiche del linguaggio nelle prime versioni ed evoluzione successiva.
 author: erikdietrich
 ms.date: 04/08/2020
-ms.openlocfilehash: d9f50a7df7966f81366acb706d719cbdd40a45fa
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: f321b9c742fed6fb1efaf8fbb1914c203dd6391b
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989194"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389102"
 ---
 # <a name="the-history-of-c"></a>Cronologia di C\#
 
@@ -120,7 +120,7 @@ L'associazione dinamica è suscettibile di errori ma offre anche la possibilità
 La versione 5.0, rilasciata con Visual Studio 2012, era una versione mirata del linguaggio. Quasi tutto l'impegno per questa versione è stato indirizzato verso un altro concetto rivoluzionario: il modello `async` e `await` per la programmazione asincrona.  Ecco l'elenco delle funzionalità principali:
 
 - [Membri asincroni](../async.md)
-- [Attributi informativi sul chiamante](../programming-guide/concepts/caller-information.md)
+- [Attributi informativi sul chiamante](../language-reference/attributes/caller-information.md)
 
 ### <a name="see-also"></a>Vedere anche
 
@@ -158,7 +158,7 @@ La versione 7.0 è stata rilasciata con Visual Studio 2017. Questa versione pres
 
 - [Variabili out](./csharp-7.md#out-variables)
 - [Tuple e decostruzione](./csharp-7.md#tuples)
-- [Criteri](./csharp-7.md#pattern-matching)
+- [Criteri di ricerca](./csharp-7.md#pattern-matching)
 - [Funzioni locali](./csharp-7.md#local-functions)
 - [Membri di espressioni corpo espansi](./csharp-7.md#more-expression-bodied-members)
 - [Variabili locali e valori restituiti per riferimento](./csharp-7.md#ref-locals-and-returns)
