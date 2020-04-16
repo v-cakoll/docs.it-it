@@ -6,31 +6,34 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 76cd00b9c84f128d2a181115293df910d8deb6cb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2962de53eab132ad02aaf679fdd6037bd24fa714
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399798"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463889"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Vincoli sui parametri di tipo (Guida per programmatori C#)
 
-I vincoli indicano al compilatore quali funzionalità deve usare un argomento tipo. Senza i vincoli, l'argomento tipo può essere qualsiasi tipo. Il compilatore è in grado di dedurre solo i membri di <xref:System.Object?displayProperty=nameWithType>, che è la principale classe di base per qualsiasi tipo .NET. Per altre informazioni, vedere [Motivi per cui usare i vincoli](#why-use-constraints). Se il codice client tenta di creare un'istanza della classe con un tipo non consentito da un vincolo, viene restituito un errore in fase di compilazione. I vincoli vengono specificati usando la parola chiave contestuale `where`. Nella tabella seguente sono riportati i sette tipi di vincoli:
+I vincoli indicano al compilatore quali funzionalità deve usare un argomento tipo. Senza i vincoli, l'argomento tipo può essere qualsiasi tipo. Il compilatore è in grado di dedurre solo i membri di <xref:System.Object?displayProperty=nameWithType>, che è la principale classe di base per qualsiasi tipo .NET. Per altre informazioni, vedere [Motivi per cui usare i vincoli](#why-use-constraints). Se il codice client usa un tipo che non soddisfa un vincolo, il compilatore genera un errore. I vincoli vengono specificati usando la parola chiave contestuale `where`. Nella tabella seguente sono riportati i sette tipi di vincoli:
 
 |Vincolo|Descrizione|
 |----------------|-----------------|
-|`where T : struct`|L'argomento di tipo deve essere un tipo di valore non nullable. Per informazioni sui tipi di valore nullable, vedere [Tipi di valore nullable](../../language-reference/builtin-types/nullable-value-types.md). Poiché tutti i tipi di valore `struct` hanno `new()` un costruttore senza parametri `new()` accessibile, il vincolo implica il vincolo e non può essere combinato con il vincolo. Non è inoltre `struct` possibile `unmanaged` combinare il vincolo con il vincolo.|
-|`where T : class`|L'argomento tipo deve essere un tipo riferimento. Questo vincolo si applica anche a qualsiasi tipo di classe, interfaccia, delegato o matrice.|
-|`where T : notnull`|L'argomento di tipo deve essere un tipo non nullable. L'argomento può essere un tipo di riferimento non nullable in C , 8.0 o versioni successive, o un tipo di valore non nullable. Questo vincolo si applica anche a qualsiasi tipo di classe, interfaccia, delegato o matrice.|
+|`where T : struct`|L'argomento di tipo deve essere un tipo di valore non nullable. Per informazioni sui tipi di valore nullable, vedere [Tipi di valore nullable](../../language-reference/builtin-types/nullable-value-types.md). Poiché tutti i tipi di valore `struct` hanno `new()` un costruttore senza parametri `new()` accessibile, il vincolo implica il vincolo e non può essere combinato con il vincolo. Non è inoltre possibile `struct` combinare `unmanaged` il vincolo con il vincolo.|
+|`where T : class`|L'argomento tipo deve essere un tipo riferimento. Questo vincolo si applica anche a qualsiasi tipo di classe, interfaccia, delegato o matrice. In un contesto nullable in C `T` , 8.0 o versione successiva, deve essere un tipo di riferimento non nullable. |
+|`where T : class?`|L'argomento di tipo deve essere un tipo di riferimento, nullable o non nullable. Questo vincolo si applica anche a qualsiasi tipo di classe, interfaccia, delegato o matrice.|
+|`where T : notnull`|L'argomento di tipo deve essere un tipo non nullable. L'argomento può essere un tipo di riferimento non nullable in C , 8.0 o versioni successive, o un tipo di valore non nullable. |
 |`where T : unmanaged`|L'argomento di tipo deve essere un [tipo non nullable non gestito.](../../language-reference/builtin-types/unmanaged-types.md) Il `unmanaged` vincolo `struct` implica il vincolo e `struct` non `new()` può essere combinato con i vincoli o .|
 |`where T : new()`|L'argomento tipo deve avere un costruttore pubblico senza parametri. Quando il vincolo `new()` viene usato con altri vincoli, deve essere specificato per ultimo. Il `new()` vincolo non può `struct` essere `unmanaged` combinato con i vincoli e .|
-|`where T :` *\<nome della classe di base>*|L'argomento tipo deve corrispondere alla classe di base specificata o derivare da essa.|
-|`where T :`nome dell'interfaccia>* \<*|L'argomento tipo deve corrispondere all'interfaccia specificata o implementare tale interfaccia. È possibile specificare più vincoli di interfaccia. L'interfaccia vincolante può anche essere generica.|
-|`where T : U`|L'argomento tipo fornito per T deve corrispondere all'argomento fornito per U o derivare da esso.|
+|`where T :` *\<nome della classe di base>*|L'argomento tipo deve corrispondere alla classe di base specificata o derivare da essa. In un contesto nullable in C `T` , 8.0 e versioni successive, deve essere un tipo di riferimento non nullable derivato dalla classe di base specificata. |
+|`where T :`*nome della classe base>? \<*|L'argomento tipo deve corrispondere alla classe di base specificata o derivare da essa. In un contesto nullable in C `T` , 8.0 e versioni successive, può essere un tipo nullable o non nullable derivato dalla classe di base specificata. |
+|`where T :`nome dell'interfaccia>* \<*|L'argomento tipo deve corrispondere all'interfaccia specificata o implementare tale interfaccia. È possibile specificare più vincoli di interfaccia. L'interfaccia vincolante può anche essere generica. In un contesto nullable in C `T` , 8.0 e versioni successive, deve essere un tipo non nullable che implementa l'interfaccia specificata.|
+|`where T :`nome dell'interfaccia>? * \<*|L'argomento tipo deve corrispondere all'interfaccia specificata o implementare tale interfaccia. È possibile specificare più vincoli di interfaccia. L'interfaccia vincolante può anche essere generica. In un contesto nullable in `T` C , 8.0, può essere un tipo di riferimento nullable, un tipo di riferimento non nullable o un tipo di valore. `T`potrebbe non essere un tipo di valore nullable.|
+|`where T : U`|L'argomento di `T` tipo fornito per deve essere `U`o derivare dall'argomento fornito per . In un contesto `U` nullable, se è un `T` tipo di riferimento non nullable, deve essere un tipo di riferimento non nullable. Se `U` è un tipo `T` di riferimento nullable, può essere nullable o non nullable. |
 
 ## <a name="why-use-constraints"></a>Motivi per cui usare i vincoli
 
-Vincolando il parametro di tipo, il numero di operazioni e di chiamate ai metodi consentite viene ampliato includendo quelle supportate dal tipo vincolante e da tutti i tipi nella relativa gerarchia di ereditarietà. Quando si progettano classi o metodi generici, se si esegue un'operazione sui membri <xref:System.Object?displayProperty=nameWithType>generici oltre l'assegnazione semplice o la chiamata a metodi non supportati da , è necessario applicare vincoli al parametro di tipo. Specificando il vincolo della classe di base, ad esempio, si indica al compilatore che verranno usati come argomenti tipo solo gli oggetti del tipo specificato o derivati da esso. In presenza di questa garanzia, il compilatore può consentire le chiamate ai metodi del tipo all'interno della classe generica. L'esempio di codice seguente illustra la funzionalità che è possibile aggiungere alla classe `GenericList<T>` (in [Introduzione ai generics](../../../standard/generics/index.md)) applicando un vincolo della classe di base.
+I vincoli specificano le funzionalità e le aspettative di un parametro di tipo. La dichiarazione di tali vincoli significa che è possibile utilizzare le operazioni e le chiamate ai metodi del tipo vincolante. Se la classe o il metodo generico utilizza un'operazione sui <xref:System.Object?displayProperty=nameWithType>membri generici oltre la semplice assegnazione o la chiamata a metodi non supportati da , sarà necessario applicare vincoli al parametro di tipo. Specificando il vincolo della classe di base, ad esempio, si indica al compilatore che verranno usati come argomenti tipo solo gli oggetti del tipo specificato o derivati da esso. In presenza di questa garanzia, il compilatore può consentire le chiamate ai metodi del tipo all'interno della classe generica. L'esempio di codice seguente illustra la funzionalità che è possibile aggiungere alla classe `GenericList<T>` (in [Introduzione ai generics](../../../standard/generics/index.md)) applicando un vincolo della classe di base.
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#9)]
 
@@ -76,9 +79,11 @@ L'utilità dei parametri di tipo usati come vincoli in classi generiche è limit
 
 ## <a name="notnull-constraint"></a>Vincolo NotNull
 
-A partire dalla versione 8.0 `notnull` di C, è possibile usare il vincolo per specificare che l'argomento di tipo deve essere un tipo di valore non nullable o un tipo di riferimento non nullable. Il `notnull` vincolo può essere `nullable enable` utilizzato solo in un contesto. Il compilatore genera un `notnull` avviso se si aggiunge il vincolo in un contesto ignario nullable.
+A partire dalla versione 8.0 di C, `notnull` è possibile usare il vincolo per specificare che l'argomento di tipo deve essere un tipo di valore non nullable o un tipo di riferimento non nullable. Il `notnull` vincolo può essere `nullable enable` utilizzato solo in un contesto. Il compilatore genera un `notnull` avviso se si aggiunge il vincolo in un contesto ignario nullable.
 
 A differenza di altri vincoli, `notnull` quando un argomento di tipo viola il `nullable enable` vincolo, il compilatore genera un avviso quando tale codice viene compilato in un contesto. Se il codice viene compilato in un contesto ignari null, il compilatore non genera avvisi o errori.
+
+A partire dalla versione 8.0 di `class` C, il vincolo specifica che l'argomento di tipo deve essere un tipo di riferimento non nullable. In un contesto nullable, quando un parametro di tipo è un tipo di riferimento nullable, il compilatore genera un avviso.
 
 ## <a name="unmanaged-constraint"></a>Vincolo non gestito
 
@@ -119,7 +124,7 @@ Il metodo può essere usato come illustrato nell'esempio seguente per creare un'
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Collections.Generic>
-- [Guida per programmatori C#](../index.md)
+- [Guida alla programmazione in C](../index.md)
 - [Introduzione ai generics](./index.md)
-- [Classi genericheGeneric Classes](./generic-classes.md)
+- [Classi generiche](./generic-classes.md)
 - [nuovo vincolo](../../language-reference/keywords/new-constraint.md)

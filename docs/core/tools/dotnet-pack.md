@@ -2,12 +2,12 @@
 title: Comando dotnet pack
 description: Il comando dotnet pack consente di creare pacchetti NuGet per il progetto .NET Core.
 ms.date: 02/14/2020
-ms.openlocfilehash: 865262f1eb314f9b7e8ee713c573a965e89ded93
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b9c46ecd5d67519728896b0018e27fb41ebd861
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503652"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463504"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -20,10 +20,14 @@ ms.locfileid: "77503652"
 ## <a name="synopsis"></a>Riepilogo
 
 ```dotnetcli
-dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--interactive]
-    [--no-build] [--no-dependencies] [--no-restore] [--nologo] [-o|--output] [--runtime] [-s|--serviceable]
-    [-v|--verbosity] [--version-suffix]
-dotnet pack [-h|--help]
+dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
+    [--force] [--include-source] [--include-symbols] [--interactive]
+    [--no-build] [--no-dependencies] [--no-restore] [--nologo]
+    [-o|--output <OUTPUT_DIRECTORY>] [--runtime <RUNTIME_IDENTIFIER>]
+    [-s|--serviceable] [-v|--verbosity <LEVEL>]
+    [--version-suffix <VERSION_SUFFIX>]
+
+dotnet pack -h|--help
 ```
 
 ## <a name="description"></a>Descrizione
@@ -38,6 +42,9 @@ Se si desidera generare un pacchetto che contiene i simboli di debug, sono dispo
 Le dipendenze NuGet del progetto compresso vengono aggiunte al file con estensione *nuspec*, in modo da poter essere risolte durante l'installazione del pacchetto. I riferimenti da progetto a progetto non sono inseriti all'interno del progetto. Attualmente è necessario disporre di un pacchetto per ogni progetto se sono presenti dipendenze da progetto a progetto.
 
 Per impostazione predefinita, `dotnet pack` compila prima il progetto. Se si vuole evitare questo comportamento, passare l'opzione `--no-build`. Questa opzione è in genere utile negli scenari di compilazione di integrazione continua (CI, Continuous Integration) in cui si sa che il codice è stato compilato in precedenza.
+
+> [!NOTE]
+> In alcuni casi, la compilazione implicita non può essere eseguita. Ciò può `GeneratePackageOnBuild` verificarsi quando è impostato, per evitare una dipendenza ciclica tra le destinazioni di compilazione e di gruppo. La compilazione può anche avere esito negativo se è presente un file bloccato o un altro problema.
 
 È possibile aggiungere proprietà MSBuild al comando `dotnet pack` per il processo di compressione. Per altre informazioni, vedere [NuGet metadata properties](csproj.md#nuget-metadata-properties) (Proprietà dei metadati NuGet) e [MSBuild Command-Line Reference](/visualstudio/msbuild/msbuild-command-line-reference) (Informazioni di riferimento sulla riga di comando di MSBuild). La sezione [Esempi](#examples) illustra come usare l'opzione di MSBuild -p per due diversi scenari.
 

@@ -2,12 +2,12 @@
 title: Indirizzamento
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: 4403ac2bf8e0e5193006f6ec19b24a9bcb00bf35
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 55bb30ba3df80e41986b1337f8732dd8ad3231ff
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183970"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463762"
 ---
 # <a name="addressing"></a>Indirizzamento
 Nell'esempio relativo all'Indirizzamento vengono illustrati i vari aspetti e le funzionalità degli indirizzi endpoint. L'esempio è basato sulla [Guida introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md). In questo esempio, il servizio è indipendente. Sia il client che il servizio sono applicazioni console. Il servizio definisce più endpoint usando una combinazione di indirizzi endpoint relativi e assoluti.  
@@ -76,7 +76,6 @@ Nell'esempio relativo all'Indirizzamento vengono illustrati i vari aspetti e le 
           "net.tcp://localhost:9000/servicemodelsamples/service"  
           binding="netTcpBinding"  
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
-</service>  
 ```  
   
  Il client accede a uno dei quattro endpoint del servizio, ma tutti e quattro vengono definiti nel file di configurazione. Il client seleziona un endpoint quando crea l'oggetto `CalculatorProxy`. Modificando il nome della configurazione da `CalculatorEndpoint1` a `CalculatorEndpoint4`, è possibile verificare il funzionamento di ognuno degli endpoint.  

@@ -2,12 +2,12 @@
 title: Endpoint standard
 ms.date: 03/30/2017
 ms.assetid: 3fcb4225-addc-44f2-935d-30e4943a8812
-ms.openlocfilehash: 880601664d7602e279c5d022fa37c44914a58772
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 48924e06457cf9f91ce4f900bb38de4d22bfc550
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184409"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463782"
 ---
 # <a name="standard-endpoints"></a>Endpoint standard
 Gli endpoint vengono definiti specificando un indirizzo, un'associazione e un contratto. Altri parametri che è possibile impostare su un endpoint includono la configurazione di comportamento, le intestazioni e gli URI di ascolto.  Per determinati tipi di endpoint tali valori non cambiano. Gli endpoint di scambio dei metadati utilizzano ad esempio sempre il contratto <xref:System.ServiceModel.Description.IMetadataExchange>. Altri endpoint, quali <xref:System.ServiceModel.Description.WebHttpEndpoint>, richiedono sempre un comportamento di endpoint specificato. L'usabilità di un endpoint può essere migliorata grazie a endpoint con valori predefiniti per le proprietà di endpoint di uso comune. Gli endpoint standard consentono a uno sviluppatore di definire un endpoint che dispone di valori predefiniti o in cui una o più proprietà di endpoint non cambiano.  Questi endpoint consentono di utilizzare tale endpoint senza dovere specificare informazioni di natura statica. Gli endpoint standard possono essere utilizzati per endpoint infrastruttura ed endpoint applicazione.  
@@ -121,6 +121,8 @@ Nell'esempio seguente viene mostrato come registrare un endpoint standard nella 
           name="customStandardEndpoint"  
           type="CustomEndpointCollectionElement, Example.dll,  
                 Version=1.0.0.0, Culture=neutral, PublicKeyToken=ffffffffffffffff"/>  
+      </standardEndpointExtensions>
+</extensions>  
 ```  
   
 ## <a name="configuring-a-standard-endpoint"></a>Configurazione di un endpoint standard  

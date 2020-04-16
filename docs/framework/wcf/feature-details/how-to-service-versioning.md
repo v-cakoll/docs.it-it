@@ -2,12 +2,12 @@
 title: 'Procedura: controllo delle versioni dei servizi'
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: 3cd52e1f52a93e408ebed846894cc5686652cc91
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1178a0bedfe8665d7b3ec463e99183809538c28
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184852"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464119"
 ---
 # <a name="how-to-service-versioning"></a>Procedura: controllo delle versioni dei servizi
 In questo argomento vengono descritti i passaggi di base necessari per creare una configurazione del routing che indirizza messaggi a versioni diverse dello stesso servizio. In questo esempio i messaggi vengono indirizzati a due versioni diverse di un servizio di calcolo, `roundingCalc` (v1) e `regularCalc` (v2). Entrambe le implementazioni supportano le stesse operazioni; tuttavia il primo servizio, `roundingCalc`, arrotonda tutti i calcoli al valore intero più vicino prima della restituzione. Un'applicazione client deve essere in grado di indicare se utilizzare il secondo servizio, `regularCalc`.  
@@ -90,7 +90,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
            messages that do not contain the custom header-->  
        <filter name="XPathFilterNoHeader" filterType="XPath"  
                filterData="count(sm:header()/custom:CalcVer)=0"/>  
-    </filters  
+    </filters>
     ```  
   
     > [!NOTE]

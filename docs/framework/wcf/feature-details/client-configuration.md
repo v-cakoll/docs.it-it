@@ -2,12 +2,12 @@
 title: Configurazione del client
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-ms.openlocfilehash: ff82f56639ec451c04624d22fff0bcb03f46d946
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 141b7f7fc04f98f267ce520544fb89451beac7b6
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185367"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463874"
 ---
 # <a name="client-configuration"></a>Configurazione del client
 È possibile utilizzare la configurazione client di Windows Communication Foundation (WCF) per specificare l'indirizzo, l'associazione, il comportamento e il contratto, le proprietà "ABC" dell'endpoint client, usate dai client per connettersi agli endpoint del servizio. L'elemento [ \<>client](../../configure-apps/file-schema/wcf/client.md) dispone di un [ \<](../../configure-apps/file-schema/wcf/endpoint-of-client.md) elemento>endpoint i cui attributi vengono utilizzati per configurare gli ABC dell'endpoint. Questi attributi sono descritti nella sezione [Configurazione degli endpoint.](#configuring-endpoints)  
@@ -41,7 +41,7 @@ ms.locfileid: "79185367"
               <servicePrincipalName value="host/localhost" />  
             </identity>  
           </endpoint>  
-// Add another endpoint by adding another <endpoint> element.  
+            <!-- Add another endpoint by adding another <endpoint> element. -->
           <endpoint  
             name="endpoint2">  
            //Configure another endpoint here.  
@@ -62,10 +62,10 @@ ms.locfileid: "79185367"
           </security>  
         </binding>  
         <binding name="Another Binding"  
-        //Configure this binding here.  
+          <!-- Configure this binding here. -->  
         </binding>  
           </wsHttpBinding>  
-        </bindings>  
+     </bindings>  
   
 //The behavior section references by the behaviorConfiguration endpoint attribute.  
         <behaviors>  

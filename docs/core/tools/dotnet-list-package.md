@@ -2,12 +2,12 @@
 title: Comando dotnet list package
 description: Il comando "dotnet list package" offre un'opzione utile per visualizzare un elenco dei riferimenti al pacchetto per un progetto o una soluzione.
 ms.date: 02/14/2020
-ms.openlocfilehash: 1cb52b8de10b2eef2ef7465f04316e9446318763
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 12d64600d178ea8cf490a0d6917e67bd3d8c6d21
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78157232"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463668"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
@@ -20,9 +20,12 @@ ms.locfileid: "78157232"
 ## <a name="synopsis"></a>Riepilogo
 
 ```dotnetcli
-dotnet list [<PROJECT>|<SOLUTION>] package [--config] [--framework] [--highest-minor] [--highest-patch]
-   [--include-prerelease] [--include-transitive] [--interactive] [--outdated] [--source]
-dotnet list package [-h|--help]
+dotnet list [<PROJECT>|<SOLUTION>] package [--config <SOURCE>]
+    [--framework <FRAMEWORK>] [--highest-minor] [--highest-patch]
+    [--include-prerelease] [--include-transitive] [--interactive]
+    [--outdated] [--source <SOURCE>]
+
+dotnet list package -h|--help
 ```
 
 ## <a name="description"></a>Descrizione
@@ -77,7 +80,7 @@ File di progetto o di soluzione su cui eseguire le operazioni. Se non specificat
 
 - **`--framework <FRAMEWORK>`**
 
-  Visualizza solo i pacchetti validi per il [framework di destinazione](../../standard/frameworks.md) specificato. Per specificare più framework, ripetere l'opzione più volte. Ad esempio `--framework netcoreapp2.2 --framework netstandard2.0`.
+  Visualizza solo i pacchetti validi per il [framework di destinazione](../../standard/frameworks.md) specificato. Per specificare più framework, ripetere l'opzione più volte. Ad esempio: `--framework netcoreapp2.2 --framework netstandard2.0`.
 
 - **`-h|--help`**
 

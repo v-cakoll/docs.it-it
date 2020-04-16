@@ -1,21 +1,21 @@
 ---
 title: where (vincolo di tipo generico) - Riferimenti per C#
-ms.date: 04/12/2018
+ms.date: 04/15/2020
 f1_keywords:
 - whereconstraint
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: d236420c5019f7529b729155b13df50807dc1dab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5a56b8058735d3ca786520a82424c79d1975bfc4
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77626711"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463018"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (vincolo di tipo generico) (Riferimenti per C#)
 
-La clausola `where` in una definizione generica specifica i vincoli per i tipi che vengono usati come argomenti per i parametri di tipo in un tipo generico, metodo, delegato o funzione locale. I vincoli possono specificare interfacce, classi di base o richiedere che un tipo generico sia un riferimento, un valore o un tipo non gestito. Dichiarano le funzionalità che l'argomento tipo deve possedere.
+La clausola `where` in una definizione generica specifica i vincoli per i tipi che vengono usati come argomenti per i parametri di tipo in un tipo generico, metodo, delegato o funzione locale. I vincoli possono specificare interfacce, classi di base o richiedere che un tipo generico sia un riferimento, un valore o un tipo non gestito. Dichiarano le funzionalità che l'argomento di tipo deve avere.
 
 Ad esempio, una classe generica, `MyGenericClass`, può essere dichiarata in modo che tramite il parametro di tipo `T` venga implementata l'interfaccia <xref:System.IComparable%601>:
 
@@ -24,13 +24,17 @@ Ad esempio, una classe generica, `MyGenericClass`, può essere dichiarata in mod
 > [!NOTE]
 > Per altre informazioni sulla clausola where in un'espressione di query, vedere [Clausola where](where-clause.md).
 
-La clausola `where` può inoltre includere un vincolo di classe di base. Il vincolo di classe di base dichiara che un tipo da usare come argomento tipo per quel tipo generico usi la classe specificata come classe di base (o sia quella classe di base) come argomento tipo per quel tipo generico. Se viene usato il vincolo della classe di base, deve apparire prima di tutti gli altri vincoli per quel parametro di tipo. Alcuni tipi non sono consentiti come vincoli di classe di base: <xref:System.Object>, <xref:System.Array> e <xref:System.ValueType>. Prima di C# 7.3 anche <xref:System.Enum>, <xref:System.Delegate> e <xref:System.MulticastDelegate> non erano consentiti come vincoli di classe di base. L'esempio seguente illustra i tipi possono ora essere specificati come una classe di base:
+La clausola `where` può inoltre includere un vincolo di classe di base. Il vincolo della classe base indica che un tipo da utilizzare come argomento di tipo per tale tipo generico ha la classe specificata come classe base o è tale classe base. Se viene usato il vincolo della classe di base, deve apparire prima di tutti gli altri vincoli per quel parametro di tipo. Alcuni tipi non sono consentiti come vincoli di classe di base: <xref:System.Object>, <xref:System.Array> e <xref:System.ValueType>. Prima della versione 7.3, <xref:System.Enum>, <xref:System.Delegate>e <xref:System.MulticastDelegate> non erano consentiti anche come vincoli della classe base. L'esempio seguente illustra i tipi possono ora essere specificati come una classe di base:
 
 [!code-csharp[using an interface constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#2)]
+
+In un contesto nullable in C , 8.0 e versioni successive, viene applicato il supporto di valori Null del tipo di classe base. Se la classe base non può `Base`essere nullable (ad esempio ), l'argomento di tipo deve essere non nullable. Se la classe base è `Base?`nullable (ad esempio ), l'argomento di tipo può essere un tipo di riferimento nullable o non nullable. Il compilatore genera un avviso se l'argomento di tipo è un tipo di riferimento nullable quando la classe base non è nullable.
 
 La clausola `where` può specificare che il tipo è un oggetto `class` o `struct`. Il vincolo `struct` elimina la necessità di specificare un vincolo di classe di base di `System.ValueType`. Il tipo `System.ValueType` non può essere usato come vincolo di classe di base. Nell'esempio seguente vengono illustrati i vincoli `class` e `struct`:
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#3)]
+
+In un contesto nullable in C , `class` 8.0 e versioni successive, il vincolo richiede che un tipo sia un tipo di riferimento non nullable. Per consentire i tipi di `class?` riferimento nullable, utilizzare il vincolo , che consente i tipi di riferimento nullable e non nullable.
 
 La `where` clausola `notnull` può includere il vincolo. Il `notnull` vincolo limita il parametro di tipo a tipi non nullable. Tale tipo può essere un tipo di [valore](../builtin-types/value-types.md) o un tipo di riferimento non nullable. Il `notnull` vincolo è disponibile a partire da C , 8.0 per il codice compilato in un [ `nullable enable` contesto](../../nullable-references.md#nullable-contexts). A differenza di altri vincoli, `notnull` se un argomento di tipo viola il vincolo, il compilatore genera un avviso anziché un errore. Gli avvisi vengono `nullable enable` generati solo in un contesto.
 
@@ -72,7 +76,7 @@ Per informazioni dettagliate sulla sintassi e sull'uso dei vincoli, vedere [Vinc
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida di riferimento a C](../index.md)
-- [Guida per programmatori C#](../../programming-guide/index.md)
+- [Guida alla programmazione in C](../../programming-guide/index.md)
 - [Introduzione ai generics](../../programming-guide/generics/index.md)
 - [nuovo vincolo](./new-constraint.md)
 - [Vincoli sui parametri di tipo](../../programming-guide/generics/constraints-on-type-parameters.md)

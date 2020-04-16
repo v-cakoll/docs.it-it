@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
-ms.openlocfilehash: 02e0403f9ae5bb437145fa3a015edc69b884c4d0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4e91580035d4de23ae90cd0d59a08f321ae70a1c
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185009"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464145"
 ---
 # <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>Procedura: creare un token di contesto di sicurezza per una sessione sicura
 Per evitare la perdita di una determinata sessione protetta quando il servizio viene riciclato, è possibile utilizzare in tale sessione un token di contesto di sicurezza (SCT, Security Context Token) con stato. Ad esempio, quando in una sessione protetta si utilizza un token SCT senza stato e si reimposta Internet Information Services (IIS), i dati di sessione associati al servizio vengono persi. Questi dati di sessione comprendono una cache del token SCT. Pertanto, quando un client invia al servizio un token SCT senza stato, viene restituito un errore, in quanto risulta impossibile recuperare la chiave associata al token SCT. Se tuttavia si utilizza un token SCT con stato, la relativa chiave associata è contenuta nel token SCT e quindi nel messaggio. Ne consegue che in questo caso il riciclo del servizio non influisce sulla sessione protetta. Per impostazione predefinita, Windows Communication Foundation (WCF) utilizza SCT senza stato in una sessione protetta. In questo argomento viene descritto in modo dettagliato come utilizzare token SCT con stato in una sessione protetta.  
@@ -32,6 +32,7 @@ Per evitare la perdita di una determinata sessione protetta quando il servizio v
   
         ```xml  
         <customBinding>  
+        </customBinding>
         ```  
   
     2. Aggiungere [ \<](../../configure-apps/file-schema/wcf/bindings.md) un elemento figlio>di associazione all'>[ \<customBinding ](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
@@ -40,6 +41,7 @@ Per evitare la perdita di una determinata sessione protetta quando il servizio v
   
         ```xml  
         <binding name="StatefulSCTSecureSession">  
+        </binding>
         ```  
   
     3. Specificare la modalità di autenticazione per [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) i messaggi inviati da e verso questo servizio aggiungendo un elemento figlio di>di sicurezza all'>[ \<customBinding ](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
@@ -48,7 +50,8 @@ Per evitare la perdita di una determinata sessione protetta quando il servizio v
   
         ```xml  
         <security authenticationMode="SecureConversation"  
-                  requireSecurityContextCancellation="false">  
+                  requireSecurityContextCancellation="false">
+        </security>
         ```  
   
     4. Specificare la modalità di autenticazione del client mentre viene stabilita [ \< ](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)la sessione protetta aggiungendo un [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) elemento figlio secureConversationBootstrap>all'elemento figlio security>.  
@@ -103,7 +106,7 @@ Per evitare la perdita di una determinata sessione protetta quando il servizio v
         <security
             requireSecurityContextCancellation="false">  
               <secureConversationBootstrap />  
-      </security>  
+        </security>  
     <httpTransport />  
   </binding>  
 </customBinding>  

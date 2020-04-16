@@ -2,12 +2,12 @@
 title: Script dotnet-install
 description: Informazioni sugli script di installazione di dotnet per installare .NET Core SDK e il runtime condiviso.
 ms.date: 01/23/2020
-ms.openlocfilehash: bf28f872be3ac2b4115b1d5e5c06e32afec0b49e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 591413a17db577560bd0324995066c8ea7a35895
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77092863"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463670"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Riferimento agli script dotnet-install
 
@@ -20,17 +20,28 @@ ms.locfileid: "77092863"
 Windows:
 
 ```powershell
-dotnet-install.ps1 [-Channel] [-Version] [-JSonFile] [-InstallDir] [-Architecture]
-    [-Runtime] [-DryRun] [-NoPath] [-Verbose] [-AzureFeed] [-UncachedFeed] [-NoCdn] [-FeedCredential]
-    [-ProxyAddress] [-ProxyUseDefaultCredentials] [-SkipNonVersionedFiles] [-Help]
+dotnet-install.ps1 [-Architecture <ARCHITECTURE>] [-AzureFeed]
+    [-Channel <CHANNEL>] [-DryRun] [-FeedCredential]
+    [-InstallDir <DIRECTORY>] [-JSonFile <JSONFILE>]
+    [-NoCdn] [-NoPath] [-ProxyAddress]
+    [-ProxyUseDefaultCredentials] [-Runtime <RUNTIME>]
+    [-SkipNonVersionedFiles] [-UncachedFeed] [-Verbose]
+    [-Version <VERSION>]
+
+dotnet-install.ps1 -Help
 ```
 
 Linux/macOs:
 
 ```bash
-dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--architecture]
-    [--runtime] [--dry-run] [--no-path] [--verbose] [--azure-feed] [--uncached-feed] [--no-cdn] [--feed-credential]
-    [--runtime-id] [--skip-non-versioned-files] [--help]
+dotnet-install.sh  [--architecture <ARCHITECTURE>] [--azure-feed]
+    [--channel <CHANNEL>] [--dry-run] [--feed-credential]
+    [--install-dir <DIRECTORY>] [--jsonfile <JSONFILE>]
+    [--no-cdn] [--no-path] [--runtime <RUNTIME>] [--runtime-id <RID>]
+    [--skip-non-versioned-files] [--uncached-feed] [--verbose]
+    [--version <VERSION>]
+
+dotnet-install.sh --help
 ```
 
 ## <a name="description"></a>Descrizione
@@ -54,6 +65,14 @@ Prima di eseguire lo script, installare le [dipendenze](../install/dependencies.
 
 ## <a name="options"></a>Opzioni
 
+- **`-Architecture|--architecture <ARCHITECTURE>`**
+
+  Architettura dei file binari di .NET Core da installare. I valori consentiti sono `<auto>`, `amd64`, `x64`, `x86`, `arm64` e `arm`. Il valore predefinito è `<auto>`, che rappresenta l'architettura del sistema operativo attualmente in esecuzione.
+
+- **`-AzureFeed|--azure-feed`**
+
+  Specifica l'URL del feed di Azure per il programma di installazione. È consigliabile non modificare questo valore. Il valore predefinito è `https://dotnetcli.azureedge.net/dotnet`.
+
 - **`-Channel|--channel <CHANNEL>`**
 
   Specifica il canale di origine per l'installazione. I valori possibili sono:
@@ -65,34 +84,41 @@ Prima di eseguire lo script, installare le [dipendenze](../install/dependencies.
 
   Il valore predefinito è `LTS`. Per altre informazioni sui canali di supporto per .NET, vedere la pagina [.NET Support Policy](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) (Criteri di supporto per .NET).
 
-- **`-Version|--version <VERSION>`**
+- **`-DryRun|--dry-run`**
 
-  Rappresenta una versione di build specifica. I valori possibili sono:
+  Se impostata, lo script non eseguirà l'installazione. Visualizza invece la riga di comando da usare per installare in modo coerente la versione attualmente richiesta dell'interfaccia della riga di comando di .NET Core. Se ad esempio si specifica la versione `latest`, verrà visualizzato un collegamento con la versione specifica in modo che questo comando possa essere usato in modo deterministico in uno script di compilazione. Viene visualizzato anche il percorso del file binario se si preferisce installarlo o scaricarlo manualmente.
 
-  - `latest`: ultima build sul canale (valore usato con l'opzione `-Channel`).
-  - `coherent`: ultima build coerente sul canale. Usa la combinazione di pacchetti stabile più recente (valore usato con le opzioni `-Channel` del nome del ramo).
-  - Versione in tre parti nel formato X.Y.Z che rappresenta una versione di build specifica; sostituisce l'opzione `-Channel`. Ad esempio `2.0.0-preview2-006120`.
+- **`-FeedCredential|--feed-credential`**
 
-  Se non viene specificata, `-Version` viene impostata automaticamente su `latest`.
+  Usata come stringa di query da accodare al feed di Azure. Consente la modifica dell'URL per usare account di archiviazione BLOB pubblici.
 
-- **`-JSonFile|--jsonfile <JSONFILE>`**
+- **`-Help|--help`**
 
-  Specifica un percorso a un file [global.json](global-json.md) che verrà utilizzato per determinare la versione dell'SDK. Il file *global.json* deve `sdk:version`avere un valore per .
+  Stampa la Guida per lo script.
 
 - **`-InstallDir|--install-dir <DIRECTORY>`**
 
   Specifica il percorso di installazione. Se la directory non esiste, verrà creata. Il valore predefinito è *%LocalAppData%\Microsoft\dotnet*. I file binari vengono inseriti direttamente in questa directory.
 
-- **`-Architecture|--architecture <ARCHITECTURE>`**
+- **`-JSonFile|--jsonfile <JSONFILE>`**
 
-  Architettura dei file binari di .NET Core da installare. I valori consentiti sono `<auto>`, `amd64`, `x64`, `x86`, `arm64` e `arm`. Il valore predefinito è `<auto>`, che rappresenta l'architettura del sistema operativo attualmente in esecuzione.
+  Specifica un percorso a un file [global.json](global-json.md) che verrà utilizzato per determinare la versione dell'SDK. Il file *global.json* deve `sdk:version`avere un valore per .
 
-- **`-SharedRuntime|--shared-runtime`**
+- **`-NoCdn|--no-cdn`**
 
-  > [!NOTE]
-  > Questo parametro è obsoleto e potrebbe essere rimosso in una versione futura dello script. L'alternativa consigliata è l'opzione `-Runtime|--runtime`.
+  Disabilita il download dalla [Rete di distribuzione dei contenuti di Azure (rete CDN)](https://docs.microsoft.com/azure/cdn/cdn-overview) e usa direttamente il feed non memorizzato nella cache.
 
-  Installa solo i bit del runtime condiviso, non l'intero SDK. Questa opzione equivale a `-Runtime|--runtime dotnet`specificare .
+- **`-NoPath|--no-path`**
+
+  Se impostata, la cartella di installazione non viene esportata nel percorso per la sessione corrente. Per impostazione predefinita, lo script modifica il percorso, che rende l'interfaccia della riga di comando di .NET Core disponibile immediatamente dopo l'installazione.
+
+- **`-ProxyAddress`**
+
+  Se impostata, il programma di installazione usa il proxy durante le richieste Web. (Valido solo per Windows.)
+
+- **`ProxyUseDefaultCredentials`**
+
+  Se impostata, il programma di installazione usa le credenziali dell'utente corrente quando si usa l'indirizzo proxy. (Valido solo per Windows.)
 
 - **`-Runtime|--runtime <RUNTIME>`**
 
@@ -102,53 +128,38 @@ Prima di eseguire lo script, installare le [dipendenze](../install/dependencies.
   - `aspnetcore`: runtime condiviso `Microsoft.AspNetCore.App`.
   - `windowsdesktop`: runtime condiviso `Microsoft.WindowsDesktop.App`.
 
-- **`-DryRun|--dry-run`**
+- **`--runtime-id <RID>`**
 
-  Se impostata, lo script non eseguirà l'installazione. Visualizza invece la riga di comando da usare per installare in modo coerente la versione attualmente richiesta dell'interfaccia della riga di comando di .NET Core. Se ad esempio si specifica la versione `latest`, verrà visualizzato un collegamento con la versione specifica in modo che questo comando possa essere usato in modo deterministico in uno script di compilazione. Viene visualizzato anche il percorso del file binario se si preferisce installarlo o scaricarlo manualmente.
+  Specifica [l'identificatore](../rid-catalog.md) di runtime per il quale vengono installati gli strumenti. Utilizzare `linux-x64` per Linux portatile. (Valido solo per Linux/macOS.)
 
-- **`-NoPath|--no-path`**
+- **`-SharedRuntime|--shared-runtime`**
 
-  Se impostata, la cartella di installazione non viene esportata nel percorso per la sessione corrente. Per impostazione predefinita, lo script modifica il percorso, che rende l'interfaccia della riga di comando di .NET Core disponibile immediatamente dopo l'installazione.
+  > [!NOTE]
+  > Questo parametro è obsoleto e potrebbe essere rimosso in una versione futura dello script. L'alternativa consigliata è l'opzione `-Runtime|--runtime`.
 
-- **`-Verbose|--verbose`**
-
-  Visualizza le informazioni di diagnostica.
-
-- **`-AzureFeed|--azure-feed`**
-
-  Specifica l'URL del feed di Azure per il programma di installazione. È consigliabile non modificare questo valore. Il valore predefinito è `https://dotnetcli.azureedge.net/dotnet`.
-
-- **`-UncachedFeed|--uncached-feed`**
-
-  Consente di modificare l'URL per il feed non memorizzato nella cache usato da questo programma di installazione. È consigliabile non modificare questo valore.
-
-- **`-NoCdn|--no-cdn`**
-
-  Disabilita il download dalla [Rete di distribuzione dei contenuti di Azure (rete CDN)](https://docs.microsoft.com/azure/cdn/cdn-overview) e usa direttamente il feed non memorizzato nella cache.
-
-- **`-FeedCredential|--feed-credential`**
-
-  Usata come stringa di query da accodare al feed di Azure. Consente la modifica dell'URL per usare account di archiviazione BLOB pubblici.
-
-- **`--runtime-id`**
-
-  Specifica [l'identificatore](../rid-catalog.md) di runtime per il quale vengono installati gli strumenti. Utilizzare `linux-x64` per Linux portatile. (Valido solo per Linux/macOS)
-
-- **`-ProxyAddress`**
-
-  Se impostata, il programma di installazione usa il proxy durante le richieste Web. (Valido solo per Windows)
-
-- **`ProxyUseDefaultCredentials`**
-
-  Se impostata, il programma di installazione usa le credenziali dell'utente corrente quando si usa l'indirizzo proxy. (Valido solo per Windows)
+  Installa solo i bit del runtime condiviso, non l'intero SDK. Questa opzione equivale a `-Runtime|--runtime dotnet`specificare .
 
 - **`-SkipNonVersionedFiles|--skip-non-versioned-files`**
 
   Ignora l'installazione dei file senza versione, ad esempio *dotnet.exe*, se esistono già.
 
-- **`-Help|--help`**
+- **`-UncachedFeed|--uncached-feed`**
 
-  Stampa la Guida per lo script.
+  Consente di modificare l'URL per il feed non memorizzato nella cache usato da questo programma di installazione. È consigliabile non modificare questo valore.
+
+- **`-Verbose|--verbose`**
+
+  Visualizza le informazioni di diagnostica.
+
+- **`-Version|--version <VERSION>`**
+
+  Rappresenta una versione di build specifica. I valori possibili sono:
+
+  - `latest`: ultima build sul canale (valore usato con l'opzione `-Channel`).
+  - `coherent`: ultima build coerente sul canale. Usa la combinazione di pacchetti stabile più recente (valore usato con le opzioni `-Channel` del nome del ramo).
+  - Versione in tre parti nel formato X.Y.Z che rappresenta una versione di build specifica; sostituisce l'opzione `-Channel`. Ad esempio: `2.0.0-preview2-006120`.
+
+  Se non viene specificata, `-Version` viene impostata automaticamente su `latest`.
 
 ## <a name="examples"></a>Esempi
 

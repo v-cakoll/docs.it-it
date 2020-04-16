@@ -2,12 +2,12 @@
 title: 'Procedura: creare un endpoint di servizio nella configurazione'
 ms.date: 06/16/2016
 ms.assetid: f474e25d-2a27-4f31-84c5-395c442b8e70
-ms.openlocfilehash: 9687d9537d6f166a02b79261743050168f677261
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5935f798004de3ec049b9c9f0300675e1660f462
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185006"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464135"
 ---
 # <a name="how-to-create-a-service-endpoint-in-configuration"></a>Procedura: creare un endpoint di servizio nella configurazione
 Gli endpoint forniscono ai client l'accesso alle funzionalità offerte da un servizio Windows Communication Foundation (WCF). È possibile definire uno o più endpoint per un servizio usando una combinazione di indirizzi di endpoint assoluti e relativi. In alternativa, se non si definisce alcun endpoint per il servizio, il runtime ne fornirà automaticamente alcuni per impostazione predefinita. In questo argomento viene illustrato come aggiungere endpoint usando un file di configurazione che contiene indirizzi sia relativi che assoluti.  
@@ -25,10 +25,8 @@ Gli endpoint forniscono ai client l'accesso alle funzionalità offerte da un ser
   
   <system.serviceModel>  
     <services>  
-    <!-- This section is optional with the default configuration introduced  
-         in .NET Framework 4. -->  
-      <service  
-          name="Microsoft.ServiceModel.Samples.CalculatorService">  
+    <!-- This section is optional with the default configuration introduced in .NET Framework 4. -->  
+      <service name="Microsoft.ServiceModel.Samples.CalculatorService">  
         <host>  
           <baseAddresses>  
             <add baseAddress="http://localhost:8000/ServiceModelSamples/service"/>  

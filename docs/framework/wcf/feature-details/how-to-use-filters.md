@@ -2,12 +2,12 @@
 title: 'Procedura: usare i filtri'
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: f99c2af623dacac3ebe46422815a7f42e2a4df2c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 34ea961b0ef5db51efcae0b86f2c06171d6d756c
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184820"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464107"
 ---
 # <a name="how-to-use-filters"></a>Procedura: usare i filtri
 In questo argomento vengono descritti i passaggi di base necessari per creare una configurazione di routing che usa più filtri. In questo esempio, i messaggi vengono indirizzati a due implementazioni di un servizio di calcolo, regularCalc e roundingCalc. Entrambe le implementazioni supportano le stesse operazioni; tuttavia uno dei servizi arrotonda tutti i calcoli all'integer più vicino prima della restituzione. Un'applicazione client deve essere in grado di indicare se usare la versione del servizio che esegue l'arrotondamento. Se non viene espressa alcuna preferenza in merito al servizio da usare, il carico viene bilanciato tra i due servizi. Le operazioni esposte da entrambi servizi sono:  
@@ -180,7 +180,7 @@ In questo argomento vengono descritti i passaggi di base necessari per creare un
                 <add filterName="XPathFilter" endpointName="roundingCalcEndpoint" priority="2"/>  
               </entries>  
             </table>  
-          <filterTables>  
+          </filterTables>  
     </routing>  
     ```  
   

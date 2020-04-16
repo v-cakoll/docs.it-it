@@ -2,12 +2,12 @@
 title: Comando dotnet vstest
 description: Il comando dotnet vstest consente di compilare un progetto e tutte le relative dipendenze.
 ms.date: 02/27/2020
-ms.openlocfilehash: 4941a6d08d45953039eb406a30f0ff984128ba1c
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: e8fa94cf12ca2fe5fb99c6e3c1dcdb52185798c0
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389623"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463291"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
@@ -20,11 +20,15 @@ ms.locfileid: "81389623"
 ## <a name="synopsis"></a>Riepilogo
 
 ```dotnetcli
-dotnet vstest [<TEST_FILE_NAMES>] [--Blame] [--Diag]
-    [--Framework] [--InIsolation] [-lt|--ListTests] [--logger]
-    [--Parallel] [--ParentProcessId] [--Platform] [--Port]
-    [--ResultsDirectory] [--Settings] [--TestAdapterPath]
-    [--TestCaseFilter] [--Tests] [[--] <args>...]] [-?|--Help]
+dotnet vstest [<TEST_FILE_NAMES>] [--Blame] [--Diag <PATH_TO_LOG_FILE>]
+    [--Framework <FRAMEWORK>] [--InIsolation] [-lt|--ListTests <FILE_NAME>]
+    [--logger <LOGGER_URI/FRIENDLY_NAME>] [--Parallel]
+    [--ParentProcessId <PROCESS_ID>] [--Platform] <PLATFORM_TYPE>
+    [--Port <PORT>] [--ResultsDirectory<PATH>] [--Settings <SETTINGS_FILE>]
+    [--TestAdapterPath <PATH>] [--TestCaseFilter <EXPRESSION>]
+    [--Tests <TEST_NAMES>] [[--] <args>...]]
+
+dotnet vstest -?|--Help
 ```
 
 ## <a name="description"></a>Descrizione
@@ -43,11 +47,11 @@ Il comando `dotnet-vstest` esegue l'applicazione della riga di comando `VSTest.C
 
   Esegue i test in modalità di segnalazione degli errori. Questa opzione è utile per isolare i test problematici che causano un arresto anomalo dell'host dei test. Crea un file di output nella directory corrente denominato *Sequence.xml* che acquisisce l'ordine di esecuzione dei test prima dell'arresto anomalo.
 
-- **`--Diag <Path to log file>`**
+- **`--Diag <PATH_TO_LOG_FILE>`**
 
   Abilita i log dettagliati per la piattaforma di test. I log vengono scritti nel file specificato.
 
-- **`--Framework <Framework Version>`**
+- **`--Framework <FRAMEWORK>`**
 
   Versione di .NET Framework di destinazione usata per l'esecuzione dei test. Esempi di valori validi sono `.NETFramework,Version=v4.6` o `.NETCoreApp,Version=v1.0`. Altri valori supportati sono `Framework40`, `Framework45`, `FrameworkCore10` e `FrameworkUap10`.
 
@@ -55,11 +59,11 @@ Il comando `dotnet-vstest` esegue l'applicazione della riga di comando `VSTest.C
 
   Esegue i test in un processo isolato. In questo modo si riduce la probabilità di arresto del processo di *vstest.console.exe* a causa di un errore durante i test, sebbene questi ultimi potrebbero risultare più lenti.
 
-- **`-lt|--ListTests <File Name>`**
+- **`-lt|--ListTests <FILE_NAME>`**
 
   Elenca tutti i test individuati dal contenitore di test specificato.
 
-- **`--logger <Logger Uri/FriendlyName>`**
+- **`--logger <LOGGER_URI/FRIENDLY_NAME>`**
 
   Specifica un logger per i risultati di test.
 
@@ -85,35 +89,35 @@ Il comando `dotnet-vstest` esegue l'applicazione della riga di comando `VSTest.C
 
   Eseguire test in parallelo. Per impostazione predefinita, tutti i core presenti nel computer sono disponibili per l'uso. Specificare un numero esplicito `MaxCpuCount` di core `RunConfiguration` impostando la proprietà nel nodo nel file *runsettings.*
 
-- **`--ParentProcessId <ParentProcessId>`**
+- **`--ParentProcessId <PROCESS_ID>`**
 
   ID del processo padre responsabile dell'avvio del processo corrente.
 
-- **`--Platform <Platform type>`**
+- **`--Platform <PLATFORM_TYPE>`**
 
   Architettura della piattaforma di destinazione usata per l'esecuzione dei test. I valori validi sono `x86`, `x64` e `ARM`.
 
-- **`--Port <Port>`**
+- **`--Port <PORT>`**
 
   Specifica la porta per la connessione socket e la ricezione dei messaggi di evento.
 
-- **`--ResultsDirectory:<PathToResulsDirectory>`**
+- **`--ResultsDirectory:<PATH>`**
 
   Directory dei risultati dei test che verrà creata nel percorso specificato, se non esistente.
 
-- **`--Settings <Settings File>`**
+- **`--Settings <SETTINGS_FILE>`**
 
   Impostazioni da usare durante l'esecuzione di test.
 
-- **`--TestAdapterPath`**
+- **`--TestAdapterPath <PATH>`**
 
   Durante l'esecuzione dei test, vengono usati adattatori di test personalizzati da un percorso specificato (se presenti).
 
-- **`--TestCaseFilter <Expression>`**
+- **`--TestCaseFilter <EXPRESSION>`**
 
-  Esegue test corrispondenti all'espressione specificata. `<Expression>` è in formato `<property>Operator<value>[|&<Expression>]`, dove Operator è `=`, `!=` o `~`. L'operatore `~` usa la semantica 'contains' ed è applicabile per le proprietà stringa come `DisplayName`. Le parentesi `()` vengono utilizzate per raggruppare le sottoespressioni. Per ulteriori informazioni, vedere [Filtro TestCase](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md).
+  Esegue test corrispondenti all'espressione specificata. `<EXPRESSION>` è in formato `<property>Operator<value>[|&<EXPRESSION>]`, dove Operator è `=`, `!=` o `~`. L'operatore `~` usa la semantica 'contains' ed è applicabile per le proprietà stringa come `DisplayName`. Le parentesi `()` vengono utilizzate per raggruppare le sottoespressioni. Per ulteriori informazioni, vedere [Filtro TestCase](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md).
 
-- **`--Tests <Test Names>`**
+- **`--Tests <TEST_NAMES>`**
 
   Esegue test con nomi corrispondenti ai valori specificati. Se si specificano più valori, separarli con virgole.
 

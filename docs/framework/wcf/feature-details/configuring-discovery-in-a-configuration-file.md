@@ -2,12 +2,12 @@
 title: Configurazione dell'individuazione in un file di configurazione
 ms.date: 03/30/2017
 ms.assetid: b9884c11-8011-4763-bc2c-c526b80175d0
-ms.openlocfilehash: b2e604f6168e4adff36bfb0c22861124743b358d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 934b04b51b9954cf943f57f33250951048e5671b
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185321"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464211"
 ---
 # <a name="configuring-discovery-in-a-configuration-file"></a>Configurazione dell'individuazione in un file di configurazione
 Nell'individuazione vengono usati quattro gruppi principali di impostazioni di configurazione. In questo argomento viene illustrato brevemente ciascuno di questi gruppi e vengono mostrati esempi per poterli configurare. Al termine di ogni sezione sarà disponibile un collegamento a documenti più dettagliati su ogni area.  
@@ -26,6 +26,7 @@ Nell'individuazione vengono usati quattro gruppi principali di impostazioni di c
           </serviceDiscovery>  
         </behavior>  
       </serviceBehaviors>  
+</behaviors>  
 ```  
   
  Dopo aver specificato il comportamento, `service` fare riferimento a un elemento> <, come illustrato nell'esempio seguente.  
@@ -41,7 +42,8 @@ Nell'individuazione vengono usati quattro gruppi principali di impostazioni di c
          <!-- Discovery Endpoints -->  
          <endpoint kind="udpDiscoveryEndpoint" />  
         </service>  
-    </service>  
+    </services>  
+</system.serviceModel>  
 ```  
   
  Affinché un servizio sia individuabile, è necessario aggiungere anche un endpoint di individuazione. Nell'esempio precedente viene aggiunto un endpoint <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> standard.  
@@ -62,6 +64,7 @@ Nell'individuazione vengono usati quattro gruppi principali di impostazioni di c
    <service name="AnnouncementListener">  
       <endpoint kind="udpAnnouncementEndpoint" />  
    </service>  
+</services>
 ```  
   
  Il comportamento <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> viene usato per abilitare o disabilitare l'individuazione di un endpoint specifico.  Nell'esempio seguente viene configurato un servizio con due endpoint dell'applicazione, uno con l'individuazione abilitata e uno con l'individuazione disabilitata. Per ogni endpoint viene aggiunto un comportamento <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>.  
@@ -87,7 +90,7 @@ Nell'individuazione vengono usati quattro gruppi principali di impostazioni di c
         <endpoint kind="udpDiscoveryEndpoint" />  
       </service>  
    </services>  
-    <behaviors>  
+   <behaviors>  
       <serviceBehaviors>  
         <behavior name="helloWorldServiceBehavior">  
           <serviceDiscovery />  
@@ -102,6 +105,7 @@ Nell'individuazione vengono usati quattro gruppi principali di impostazioni di c
         </behavior>  
      </endpointBehaviors>  
    </behaviors>  
+</system.serviceModel>  
 ```  
   
  Il comportamento <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> può essere inoltre usato per aggiungere metadati personalizzati ai metadati dell'endpoint restituiti dal servizio. L'esempio seguente illustra come farlo.  
@@ -163,7 +167,9 @@ Nell'individuazione vengono usati quattro gruppi principali di impostazioni di c
           </discoveryClient>  
           <textMessageEncoding messageVersion="Soap11"/>  
           <httpTransport />  
-        </binding>  
+      </binding>
+   </customBinding>
+</bindings>  
 ```  
   
  È necessario che un endpoint client faccia riferimento a questa configurazione di associazione personalizzata.  
@@ -174,7 +180,7 @@ Nell'individuazione vengono usati quattro gruppi principali di impostazioni di c
                 binding="customBinding"  
                 bindingConfiguration="discoBindingConfiguration"  
                 contract="IHelloWorldService" />  
-    </client>  
+</client>  
 ```  
   
  Per ulteriori informazioni sui criteri di ricerca, vedere [Discovery Find e FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md). Per altre informazioni sugli elementi di individuazione e associazione, vedere Cenni preliminari [sull'individuazione WCFFor](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md) more information about discovery and binding elements see, WCF Discovery Overview  
@@ -223,7 +229,8 @@ Nell'individuazione vengono usati quattro gruppi principali di impostazioni di c
             maxReceivedMessageSize="8192"  
             maxBufferPoolSize="262144"/>  
         </standardEndpoint>  
-      </udpDiscoveryEndpoint>  
+      </udpDiscoveryEndpoint>
+</standardEndpoints>
 ```  
   
  Dopo aver aggiunto la configurazione dell'endpoint standard, `endpoint` fare riferimento alla configurazione nell'elemento> <per ogni endpoint, come illustrato nell'esempio seguente.  

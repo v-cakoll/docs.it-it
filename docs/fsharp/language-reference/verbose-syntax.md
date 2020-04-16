@@ -1,21 +1,21 @@
 ---
 title: Sintassi dettagliata
-description: Informazioni sulla differenza tra sintassi dettagliata e leggera nel linguaggio di F# programmazione.
+description: Informazioni sulla differenza tra sintassi dettagliata e leggera nel linguaggio di programmazione F.
 ms.date: 05/16/2016
-ms.openlocfilehash: 575585b201acc1366980cfc5cf523c4117259084
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 722807695c56beb0d681b95a78ed8cb8c1df3ddf
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421173"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463911"
 ---
 # <a name="verbose-syntax"></a>Sintassi dettagliata
 
-Esistono due forme di sintassi disponibili per molti costrutti nel F# linguaggio: *sintassi dettagliata* e *sintassi leggera*. La sintassi dettagliata non è comunemente utilizzata, ma presenta il vantaggio di essere meno sensibile ai rientri. La sintassi leggera è più breve e utilizza il rientro per segnalare l'inizio e la fine dei costrutti, anziché parole chiave aggiuntive come `begin`, `end`, `in`e così via. La sintassi predefinita è la sintassi semplificata. In questo argomento viene descritta la F# sintassi dei costrutti quando la sintassi Lightweight non è abilitata. La sintassi verbose è sempre abilitata, quindi anche se si Abilita la sintassi leggera, è comunque possibile usare la sintassi dettagliata per alcuni costrutti. È possibile disabilitare la sintassi Lightweight usando la direttiva `#light "off"`.
+Sono disponibili due forme di sintassi per molti costrutti nel linguaggio F: *sintassi dettagliata* e *sintassi leggera*. La sintassi dettagliata non è così comunemente usata, ma ha il vantaggio di essere meno sensibile al rientro. La sintassi leggera è più breve e utilizza il rientro per segnalare `begin` `end`l'inizio e la fine dei costrutti, anziché parole chiave aggiuntive come , , `in`e così via. La sintassi predefinita è la sintassi leggera. In questo argomento viene descritta la sintassi per i costrutti F , quando la sintassi leggera non è abilitata. La sintassi dettagliata è sempre abilitata, pertanto anche se si abilita la sintassi leggera, è comunque possibile usare la sintassi dettagliata per alcuni costrutti. È possibile disabilitare la `#light "off"` sintassi leggera utilizzando la direttiva .
 
 ## <a name="table-of-constructs"></a>Tabella dei costrutti
 
-La tabella seguente illustra la sintassi semplificata e dettagliata per F# i costrutti di linguaggio in contesti in cui esiste una differenza tra le due forme. In questa tabella, le parentesi angolari (&lt;&gt;) racchiudono gli elementi della sintassi specificati dall'utente. Per informazioni più dettagliate sulla sintassi usata all'interno di questi costrutti, vedere la documentazione relativa a ogni costrutto di linguaggio.
+Nella tabella seguente viene illustrata la sintassi leggera e dettagliata per i costrutti di linguaggio F , in contesti in cui esiste una differenza tra i due formati. In questa tabella, le&lt;&gt;parentesi angolari ( ) racchiudono gli elementi di sintassi forniti dall'utente. Fare riferimento alla documentazione per ogni costrutto di linguaggio per informazioni più dettagliate sulla sintassi utilizzata all'interno di questi costrutti.
 
 <table>
 <tr>
@@ -30,8 +30,8 @@ espressioni composte
 <td>
 
 ```xml
-<expression1>
-<expression2>
+<expression1 />
+<expression2 />
 ```
 
 </td><td>
@@ -44,7 +44,7 @@ espressioni composte
 </tr>
 <tr><td>
 
-associazioni di `let` annidate
+associazioni `let` annidate
 
 </td><td>
 
@@ -164,7 +164,7 @@ in
 
 </td>
 </tr>
-<tr><td>Record
+<tr><td>record
 </td><td>
 
 ```fsharp
@@ -208,7 +208,7 @@ type <class-name>(<params>) =
 
 </td>
 </tr>
-<tr><td>struttura</td><td>
+<tr><td>structure</td><td>
 
 ```fsharp
 [<StructAttribute>]
@@ -227,7 +227,7 @@ type <structure-name> =
 
 </td>
 </tr>
-<tr><td>unione discriminata</td><td>
+<tr><td>sindacato discriminato</td><td>
 
 ```fsharp
 type <union-name> =
@@ -311,7 +311,7 @@ interface <interface-name>
 
 </td>
 </tr>
-<tr><td>estensione del tipo</td><td>
+<tr><td>tipo estensione</td><td>
 
 ```fsharp
 type <type-name>
@@ -330,7 +330,7 @@ type <type-name>
 
 </td>
 </tr>
-<tr><td>module</td><td>
+<tr><td>modulo</td><td>
 
 ```fsharp
 module <module-name> =
@@ -352,6 +352,6 @@ module <module-name> =
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per il linguaggio F#](index.md)
+- [Guida di riferimento al linguaggio F](index.md)
 - [Direttive per il compilatore](compiler-directives.md)
 - [Linee guida per la formattazione del codice](../style-guide/formatting.md)

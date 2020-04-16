@@ -2,12 +2,12 @@
 title: Protocolli di sicurezza versione 1.0
 ms.date: 03/30/2017
 ms.assetid: ee3402d2-1076-410b-a3cb-fae0372bd7af
-ms.openlocfilehash: 2014e1f6f8fefa89ed44bd820c3712617ff51470
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0b86d870350d8728134cd2b42bbeb232183535bc
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184517"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463802"
 ---
 # <a name="security-protocols-version-10"></a>Protocolli di sicurezza versione 1.0
 I protocolli di sicurezza dei servizi Web forniscono meccanismi di sicurezza che soddisfano qualsiasi requisito di sicurezza aziendale esistente relativo alla messaggistica. In questa sezione vengono descritti i dettagli di Windows Communication <xref:System.ServiceModel.Channels.SecurityBindingElement>Foundation (WCF) versione 1.0 (implementati nel ) per i seguenti protocolli di sicurezza dei servizi Web.  
@@ -62,7 +62,7 @@ I protocolli di sicurezza dei servizi Web forniscono meccanismi di sicurezza che
   
  WCF sfrutta WS-SecureConversation per fornire il supporto di sessioni sicure per proteggere gli scambi di più messaggi tra le applicazioni.  Per i dettagli di implementazione, vedere la sezione di questo argomento relativa alle sessioni protette.  
   
- Oltre alle modalità di autenticazione, WCF fornisce le impostazioni per controllare i meccanismi di protezione comuni che si applicano alla maggior parte delle modalità di autenticazione basata sulla sicurezza dei messaggi, ad esempio: ordine delle operazioni di firma e crittografia, suite di algoritmi, derivazione della chiaveIn addition to authentication modes, WCF provides settings to control common protection mechanisms that apply to most message security-based authentication modes, for example: order of signature versus encryption operations, algorithm suites, key derivation e la conferma della firma.  
+ Oltre alle modalità di autenticazione, WCF fornisce le impostazioni per controllare i meccanismi di protezione comuni che si applicano alla maggior parte delle modalità di autenticazione basata sulla sicurezza dei messaggi, ad esempio: ordine delle operazioni di firma e crittografia, suite di algoritmi, derivazione della chiave e conferma della firma.  
   
  In questo documento vengono usati i prefissi e gli spazi dei nomi seguenti.  
   
@@ -250,7 +250,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
   <wsu:Timestamp u:Id="_0">  
   ...  
   </wsu:Timestamp>  
-  <wsse:UsernameToken ... >  
+  <wsse:UsernameToken>  
   ...  
   </wsse:UsernameToken>  
 </wsse:Security>  
@@ -437,7 +437,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
   <wsu:Timestamp>  
   ...  
   </wsu:Timestamp>  
-  <saml:Assertion ...>  
+  <saml:Assertion>  
   ...  
   </saml:Assertion>  
   <ds:Signature>  
@@ -1856,7 +1856,7 @@ Protezione del token: False
         <wsp:Policy>  
           <sp:ProtectionToken>  
             <wsp:Policy>  
-              <mssp:SslContextToken sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' />  
+              <mssp:SslContextToken sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient'>  
                 <wsp:Policy>  
                   <sp:RequireDerivedKeys />
                 </wsp:Policy>  

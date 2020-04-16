@@ -2,12 +2,12 @@
 title: private protected (informazioni di riferimento su C#)
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: 01a8b716ce87a63a50a92a25b2842f7bb12d4c9f
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 03fa90582d096919f2e6546fae2fde28e486fe41
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134356"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463046"
 ---
 # <a name="private-protected-c-reference"></a>private protected (informazioni di riferimento su C#)
 
@@ -18,7 +18,7 @@ La combinazione delle parole chiave `private protected` è un modificatore di ac
 
 ## <a name="example"></a>Esempio
 
-Un membro protetto privato di una classe base è accessibile dai tipi derivati nell'assembly che lo contiene solo se il tipo statico della variabile è il tipo della classe derivata. Si consideri il segmento di codice di esempio seguente:  
+Un membro protetto privato di una classe base è accessibile dai tipi derivati nell'assembly che lo contiene solo se il tipo statico della variabile è il tipo della classe derivata. Si consideri il segmento di codice di esempio seguente:
 
 ```csharp
 public class BaseClass
@@ -34,7 +34,7 @@ public class DerivedClass1 : BaseClass
 
         // Error CS1540, because myValue can only be accessed by
         // classes derived from BaseClass.
-        // baseObject.myValue = 5;  
+        // baseObject.myValue = 5;
 
         // OK, accessed through the current derived class instance
         myValue = 5;
@@ -43,8 +43,8 @@ public class DerivedClass1 : BaseClass
 ```
 
 ```csharp
-// Assembly2.cs  
-// Compile with: /reference:Assembly1.dll  
+// Assembly2.cs
+// Compile with: /reference:Assembly1.dll
 class DerivedClass2 : BaseClass
 {
     void Access()
@@ -58,13 +58,16 @@ class DerivedClass2 : BaseClass
 
 Questo esempio contiene due file, `Assembly1.cs` e `Assembly2.cs`.
 Il primo file contiene una classe base pubblica, `BaseClass`, e un tipo derivato, `DerivedClass1`. `BaseClass` è proprietaria di un membro protetto privato, `myValue`, a cui `DerivedClass1` prova ad accedere in due modi. Il primo tentativo di accedere a `myValue` tramite un'istanza di `BaseClass` genererà un errore. Il tentativo di usarlo come membro ereditato in `DerivedClass1` avrà, tuttavia, esito positivo.
+
 Nel secondo file un tentativo di accedere a `myValue` come membro ereditato di `DerivedClass2` genererà un errore, perché è accessibile solo per i tipi derivati in Assembly1.
 
-I membri struct non possono essere `private protected` perché struct non può essere ereditato.  
+Se `Assembly1.cs` contiene <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> un `Assembly2`nome that `DerivedClass1` , la `private protected` classe `BaseClass`derivata avrà accesso ai membri dichiarati in . `InternalsVisibleTo`rende `private protected` i membri visibili alle classi derivate in altri assembly.
+
+I membri struct non possono essere `private protected` perché struct non può essere ereditato.
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>Vedere anche
 

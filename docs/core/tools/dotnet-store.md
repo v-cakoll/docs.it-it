@@ -2,12 +2,12 @@
 title: comando dotnet store
 description: Il comando 'dotnet store' archivia gli assembly specificati nell'archivio pacchetti di runtime.
 ms.date: 02/14/2020
-ms.openlocfilehash: da1d132b2b873ff55ec104b5bb092d0194889bdc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f28a9bc287a87f600bda385c579e8070cbaa5ab
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503589"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463390"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
@@ -20,7 +20,13 @@ ms.locfileid: "77503589"
 ## <a name="synopsis"></a>Riepilogo
 
 ```dotnetcli
-dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-h|--help] [--output] [--skip-optimization] [--skip-symbols] [-v|--verbosity] [--working-dir]
+dotnet store -m|--manifest <PATH_TO_MANIFEST_FILE>
+    -f|--framework <FRAMEWORK_VERSION> -r|--runtime <RUNTIME_IDENTIFIER>
+    [--framework-version <FRAMEWORK_VERSION>] [--output <OUTPUT_DIRECTORY>]
+    [--skip-optimization] [--skip-symbols] [-v|--verbosity <LEVEL>]
+    [--working-dir <WORKING_DIRECTORY>]
+
+dotnet store -h|--help
 ```
 
 ## <a name="description"></a>Descrizione
@@ -35,7 +41,7 @@ dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-
 
 - **`-m|--manifest <PATH_TO_MANIFEST_FILE>`**
 
-  Il *file manifesto dell'archivio pacchetti* è un file XML che contiene l'elenco di pacchetti da archiviare. Il formato del file manifesto è compatibile con il formato di progetto SDK. È quindi possibile usare un file di progetto che fa riferimento ai pacchetti desiderati con l'opzione `-m|--manifest` per archiviare gli assembly nell'archivio pacchetti di runtime. Per specificare più file manifesto, ripetere l'opzione e il percorso per ogni file. Ad esempio `--manifest packages1.csproj --manifest packages2.csproj`.
+  Il *file manifesto dell'archivio pacchetti* è un file XML che contiene l'elenco di pacchetti da archiviare. Il formato del file manifesto è compatibile con il formato di progetto SDK. È quindi possibile usare un file di progetto che fa riferimento ai pacchetti desiderati con l'opzione `-m|--manifest` per archiviare gli assembly nell'archivio pacchetti di runtime. Per specificare più file manifesto, ripetere l'opzione e il percorso per ogni file. Ad esempio: `--manifest packages1.csproj --manifest packages2.csproj`.
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 

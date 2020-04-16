@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 ms.topic: tutorial
 ms.custom: mvc,vs-dotnet
-ms.openlocfilehash: 65b6fe31e86380162e90820c2cf118a9d1b96b4a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: facb9ebebd9ce1904886a946277185ac2c2e4bc4
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186590"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463916"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>Esercitazione: Creare la prima applicazione WPF in Visual Studio 2019Tutorial: Create your first WPF application in Visual Studio 2019
 
-In questo articolo viene illustrato come sviluppare un'applicazione desktop Windows Presentation Foundation (WPF) che include gli elementi comuni alla maggior parte delle applicazioni WPF: markup XAML (Extensible Application Markup Language), code-behind, definizioni di applicazioni, controlli, layout, associazione dati e stili. Per sviluppare l'applicazione, si userà Visual Studio.To develop the application, you'll use Visual Studio.
+In questo articolo viene illustrato come sviluppare un'applicazione desktop Windows Presentation Foundation (WPF) che include gli elementi comuni alla maggior parte delle applicazioni WPFWPF: markup XAML (Extensible Application Markup Language), code-behind, definizioni di applicazioni, controlli, layout, associazione dati e stili. Per sviluppare l'applicazione, si userà Visual Studio.To develop the application, you'll use Visual Studio.
 
 In questa esercitazione verranno illustrate le procedure per:
 > [!div class="checklist"]
@@ -40,7 +40,7 @@ Alla fine dell'esercitazione, avrai creato un'applicazione Windows autonoma che 
 >
 > È possibile attivare o disattivare il linguaggio di codice del codice di esempio tra C ' e Visual Basic utilizzando il selettore del linguaggio nella parte superiore di questa pagina.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 - [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) con il carico di lavoro di **sviluppo desktop .NET** installato.
 
@@ -293,11 +293,11 @@ In questa sezione aggiornerai l'interfaccia utente della home page con un'immagi
 
 1. In *`ExpenseItHome.xaml`*, aggiungere un'altra colonna al <xref:System.Windows.Controls.Grid.ColumnDefinitions%2A> con un fisso <xref:System.Windows.Controls.ColumnDefinition.Width%2A> di 230 pixel:
 
-    [!code-xaml[ExpenseIt#11](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=52-55)]
+    [!code-xaml[ExpenseIt#11](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=2#NewColumn)]
 
 2. Aggiungere un'altra <xref:System.Windows.Controls.Grid.RowDefinitions%2A>riga a , per un totale di quattro righe:
 
-    [!code-xaml[ExpenseIt#11b](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=57-62)]
+    [!code-xaml[ExpenseIt#11b](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=2#NewRows)]
 
 3. Spostare i controlli nella seconda <xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType> colonna impostando la proprietà su 1 in ognuno dei tre controlli (Border, ListBox e Button).
 
@@ -489,8 +489,8 @@ Per altre informazioni sulla creazione di applicazioni, vedere gli argomenti seg
 
 - [Sviluppo di applicazioni](../app-development/index.md)
 - [Controlli](../controls/index.md)
-- [Panoramica dell'associazione dati](../../../desktop-wpf/data/data-binding-overview.md)
-- [Elementi grafici e multimediali](../graphics-multimedia/index.md)
+- [Panoramica del data binding](../../../desktop-wpf/data/data-binding-overview.md)
+- [Grafica e multimedia](../graphics-multimedia/index.md)
 - [Documenti in WPF](../advanced/documents-in-wpf.md)
 
 ## <a name="see-also"></a>Vedere anche

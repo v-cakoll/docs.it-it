@@ -2,18 +2,18 @@
 title: Language-Integrated Query (LINQ) (C#)
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
-ms.openlocfilehash: 07a9d68c042d524ee9faba8122b406a81e816378
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a2e53d6c7f4d24fd57b1f91c1428b8341386b6f9
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73418233"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463894"
 ---
 # <a name="language-integrated-query-linq"></a>LINQ (Language-Integrated Query)
 
 LINQ (Language-Integrated Query) è il nome di un set di tecnologie basate sull'integrazione delle funzionalità di query direttamente nel linguaggio C#. In genere, le query sui dati vengono espresse come stringhe semplici senza il controllo dei tipi in fase di compilazione o il supporto IntelliSense. È anche necessario imparare un linguaggio di query diverso per ogni tipo di origine dati: database SQL, documenti XML, svariati servizi Web e così via. Con LINQ, una query è un costrutto del linguaggio di prima classe, come le classi, i metodi e gli eventi. È possibile scrivere query su insiemi di oggetti fortemente tipizzati usando le parole chiave del linguaggio e gli operatori comuni. La famiglia di tecnologie LINQ offre coerenza per l'esecuzione di query per oggetti (LINQ to Objects), database relazionali (LINQ to SQL) e XML (LINQ to XML).
 
-Per uno sviluppatore che scrive query, la parte integrata nel linguaggio più visibile di LINQ è l'espressione di query. Le espressioni di query vengono scritte con una *sintassi di query* dichiarativa. Tramite la sintassi di query è possibile eseguire operazioni di filtro, ordinamento e raggruppamento sulle origini dati usando una quantità minima di codice. Vengono usati gli stessi modelli di espressioni di query di base per eseguire una query e trasformare i dati in database SQL, set di dati ADO .NET, documenti e flussi XML e raccolte .NET.
+Per uno sviluppatore che scrive query, la parte integrata nel linguaggio più visibile di LINQ è l'espressione di query. Le espressioni di query vengono scritte con una *sintassi di query* dichiarativa. Tramite la sintassi di query è possibile eseguire operazioni di filtro, ordinamento e raggruppamento sulle origini dati usando una quantità minima di codice. Gli stessi modelli di espressione di query di base vengono utilizzati per eseguire query e trasformare i dati in database SQL, ADO.NET dataset, documenti e flussi XML e raccolte .NET.
 
 È possibile scrivere query LINQ in C# per database SQL Server, documenti XML, set di dati ADO.NET e qualsiasi raccolta di oggetti che supporta <xref:System.Collections.IEnumerable> o l'interfaccia <xref:System.Collections.Generic.IEnumerable%601> generica. Il supporto per LINQ viene anche offerto da terze parti per numerosi servizi Web e altre implementazioni di database.
 

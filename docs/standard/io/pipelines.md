@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: b18b2bf31787fa58e614cd4f057fba9037fe8ad8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8822e731ae805e83d4072c5bd78dff3fcf9a31a1
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77627552"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81462515"
 ---
 # <a name="systemiopipelines-in-net"></a>System.IO.Pipelines in .NET
 
@@ -172,7 +172,7 @@ Quando si esegue l'I/O, è importante disporre di un controllo granulare sulla p
 * Il primo argomento determina la quantità di memoria utilizzata.
 * Il secondo argomento determina la quantità di buffer osservata.
 
-Contrassegnare i dati come utilizzati significa che la pipe può restituire la memoria al pool di buffer sottostante. Il contrassegno dei dati come `PipeReader.ReadAsync` osservati controlla l'azione della chiamata successiva. Contrassegnare tutto come osservato significa `PipeReader.ReadAsync` che la chiamata successiva a non verrà restituita fino a quando non sono presenti più dati scritti nella pipe. Qualsiasi altro valore effettuerà `PipeReader.ReadAsync` la chiamata successiva per restituire immediatamente i dati osservati *e* non osservati, ma i dati che sono già stati utilizzati.
+Contrassegnare i dati come utilizzati significa che la pipe può restituire la memoria al pool di buffer sottostante. Il contrassegno dei dati come `PipeReader.ReadAsync` osservati controlla l'azione della chiamata successiva. Contrassegnare tutto come osservato significa `PipeReader.ReadAsync` che la chiamata successiva a non verrà restituita fino a quando non sono presenti più dati scritti nella pipe. Qualsiasi altro valore effettuerà `PipeReader.ReadAsync` la chiamata successiva per restituire immediatamente i dati osservati *e* non osservati, ma non i dati già utilizzati.
 
 ### <a name="read-streaming-data-scenarios"></a>Leggere gli scenari di streaming dei datiRead streaming data scenarios
 
