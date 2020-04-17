@@ -5,20 +5,20 @@ ms.date: 11/07/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: b6801b7de5a17257be706f77a7a67aa87df96524
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3f1ca48ab29b04931961b52743bb6c7fab70b06d
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398930"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81608075"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>Distribuire un modello in un'API Web ASP.NET Core
 
 Informazioni su come rendere disponibile un modello di Machine Learning ML.NET con training preliminare sul Web usando un'API Web ASP.NET Core. La disponibilità di un modello su un'API Web consente previsioni tramite metodi HTTP standard.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
-- [Visual Studio 2017 versione 15.6 o successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con il carico di lavoro ".NET Core cross-platform development" installato.
+- [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o versione successiva o Visual Studio 2017 versione 15.6 o successiva con il carico di lavoro "sviluppo multipiattaforma .NET Core" installato.
 - PowerShell.
 - Modello con training preliminare. Usare l'[esercitazione di analisi del sentiment in ML.NET](../tutorials/sentiment-analysis.md) per creare un modello personalizzato oppure scaricare questo [modello di Machine Learning di analisi del sentiment con training preliminare](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)
 
@@ -102,7 +102,7 @@ Informazioni su come rendere disponibile un modello di Machine Learning ML.NET c
 
 Per eseguire una singola stima, [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)è necessario creare un file . [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)non è thread-safe. Inoltre, è necessario creare un'istanza di esso ovunque sia necessario all'interno dell'applicazione. Man mano che l'applicazione cresce, questo processo può diventare ingestibile. Per migliorare le prestazioni e la thread safety, `PredictionEnginePool` usare una [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) combinazione [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) di inserimento delle dipendenze e il servizio, che crea un oggetto da utilizzare in tutta l'applicazione.
 
-Il collegamento seguente fornisce ulteriori informazioni se si desidera ottenere ulteriori informazioni sull'inserimento di [dipendenze in ASP.NET Core](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1).
+Il collegamento seguente fornisce ulteriori informazioni se si desidera ottenere ulteriori informazioni sull'inserimento di [dipendenze in ASP.NET Core](/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1).
 
 1. Aprire la classe *Startup.cs* e aggiungere l'istruzione using seguente all'inizio del file:
 
@@ -209,4 +209,4 @@ Congratulazioni! Il modello per effettuare previsioni in Internet usando un'API 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- [Distribuire in AzureDeploy to Azure](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs#deploy-the-app-to-azure)
+- [Distribuzione in Azure](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs#deploy-the-app-to-azure)

@@ -4,12 +4,12 @@ description: ML.NET offre la possibilità di aggiungere funzionalità di Machine
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: 169250adf81992ad0025e78eb9c8f151107bcf40
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0929005e02ad9b43636213735f8c7232aa6d4f42
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79185861"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607771"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>Che cos'è ML.NET e come funziona?
 
@@ -230,7 +230,7 @@ L'oggetto modello risultante implementa l'interfaccia <xref:Microsoft.ML.ITransf
     var price = predEngine.Predict(size);
 ```
 
-Il metodo `CreatePredictionEngine()` accetta una classe di input e una classe di output. I nomi di campo e/o gli attributi di codice determinano i nomi delle colonne di dati usate durante il training del modello e la stima. Per altre informazioni vedere [How to make a single prediction](./how-to-guides/single-predict-model-ml-net.md) (Come eseguire una stima singola) nella sezione Procedure.
+Il metodo `CreatePredictionEngine()` accetta una classe di input e una classe di output. I nomi di campo e/o gli attributi di codice determinano i nomi delle colonne di dati usate durante il training del modello e la stima. Per ulteriori informazioni, consultate [Creare stime con un modello sottoposto a training.](how-to-guides/machine-learning-model-predictions-ml-net.md)
 
 ### <a name="data-models-and-schema"></a>Modelli di dati e schema
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 4591175da5078a194bfe69884701e5432a0c38a3
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 5c473f818ea874392011065dc3d07101d2ef3bf5
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389738"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607958"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Sviluppare e distribuire WCF Data ServicesDevelop and Deploy WCF Data Services
 
@@ -42,7 +42,7 @@ Quando si sviluppa un servizio dati WCF come ASP.NET applicazione o ASP.NET sito
 
 1. **Server IIS locale**
 
-     Quando si crea un servizio dati che è un'applicazione ASP.NET o un sito Web ASP.NET in esecuzione su Internet Information Services (IIS), è consigliabile sviluppare e testare il servizio dati utilizzando IIS nel computer locale. L'esecuzione del servizio dati su IIS facilita l'esecuzione della traccia delle richieste HTTP durante l'esecuzione il debug. Consente inoltre di determinare in anticipo i diritti necessari richiesti da IIS per accedere a file, database e altre risorse richieste dal servizio dati. Per eseguire il servizio dati in IIS, assicurarsi che IIS e Windows Communication Foundation (WCF) siano installati e configurati correttamente e concedere l'accesso agli account IIS nel file system e nei database. Per altre informazioni, vedere [How to: Develop a WCF Data Service Running on IIS](how-to-develop-a-wcf-data-service-running-on-iis.md).
+     Quando si crea un servizio dati che è un'applicazione ASP.NET o un sito Web ASP.NET in esecuzione su Internet Information Services (IIS), è consigliabile sviluppare e testare il servizio dati utilizzando IIS nel computer locale. L'esecuzione del servizio dati su IIS facilita l'esecuzione della traccia delle richieste HTTP durante l'esecuzione il debug. Ciò consente inoltre di predeterminare i diritti necessari per accedere a file, database e altre risorse richiesti dal servizio dati. Per eseguire il servizio dati in IIS, assicurarsi che IIS e Windows Communication Foundation (WCF) siano installati e configurati correttamente e concedere l'accesso agli account IIS nel file system e nei database. Per altre informazioni, vedere [How to: Develop a WCF Data Service Running on IIS](how-to-develop-a-wcf-data-service-running-on-iis.md).
 
     > [!NOTE]
     > È necessario eseguire Visual Studio con diritti di amministratore per consentire all'ambiente di sviluppo di configurare il server IIS locale.
@@ -51,7 +51,7 @@ Quando si sviluppa un servizio dati WCF come ASP.NET applicazione o ASP.NET sito
 
      Visual Studio include un server Web incorporato, il server di sviluppo di Visual Studio, che è il server Web predefinito per i progetti ASP.NET. Questo server Web è progettato per eseguire ASP.NET progetti nel computer locale durante lo sviluppo. Guida introduttiva di [WCF Data ServicesWCF Data Services](quickstart-wcf-data-services.md) viene illustrato come creare un servizio dati che viene eseguito nel server di sviluppo di Visual Studio.The WCF Data Services quickstart shows how to create a data service that runs in the Visual Studio Development Server.
 
-     Quando si utilizza Visual Studio Development Server, è necessario tenere presenti le limitazioni seguenti:
+     Tenere presente le limitazioni seguenti quando si utilizza il server di sviluppo di Visual Studio per sviluppare il servizio dati:
 
     - L'accesso al server può essere eseguito solo sul computer locale.
 
@@ -68,9 +68,9 @@ Quando si sviluppa un servizio dati WCF come ASP.NET applicazione o ASP.NET sito
     > [!TIP]
     > Anche se è possibile utilizzare Visual Studio Development Server per testare i servizi dati durante lo sviluppo, è consigliabile testarli nuovamente dopo la distribuzione in un server Web che esegue IIS.
 
-3. **Ambiente di sviluppo Microsoft Azure**
+3. **Ambiente di sviluppo di AzureAzure Development Environment**
 
-     Windows Azure Tools for Visual Studio includes an integrated set of tools for developing Windows Azure services in Visual Studio. Con questi strumenti, è possibile sviluppare un servizio dati che può essere distribuito a Microsoft Azure ed è possibile testare il servizio dati sul computer locale prima della distribuzione. Usare questi strumenti quando si usa Visual Studio per sviluppare un servizio dati che viene eseguito sulla piattaforma Windows Azure.Use these tools when using Visual Studio to develop a data service that runs on the Windows Azure platform. Per informazioni sull'installazione degli strumenti, vedere Strumenti di Azure per Visual Studio 2015.For information about installing the tools, see [Azure tools for Visual Studio 2015](../../../azure/sdk/vs2015-install.md). Per altre informazioni sullo sviluppo di un servizio dati in esecuzione in Windows Azure, vedere post Distribuzione di un servizio OData in Windows Azure.For more information about developing a data service that runs on Windows Azure, see the post [Deploying an OData Service in Windows Azure.](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)
+     Windows Azure Tools for Visual Studio includes an integrated set of tools for developing Azure services in Visual Studio. Con questi strumenti è possibile sviluppare un servizio dati che può essere distribuito in Azure e testare il servizio dati nel computer locale prima della distribuzione. Usare questi strumenti quando si usa Visual Studio per sviluppare un servizio dati che viene eseguito nella piattaforma Azure.Use these tools when using Visual Studio to develop a data service that runs on the Azure platform. Per informazioni sull'installazione degli strumenti, vedere Strumenti di Azure per Visual Studio 2015.For information about installing the tools, see [Azure tools for Visual Studio 2015](../../../azure/sdk/vs2015-install.md). Per altre informazioni sullo sviluppo di un servizio dati in esecuzione in Azure, vedere il post Distribuzione di un servizio OData in Azure.For more information about developing a data service that runs on Azure, see the post [Deploying an OData Service in Azure.](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)
 
 ### <a name="development-tips"></a>Suggerimenti per lo sviluppo
 
@@ -92,7 +92,7 @@ WCF Data Services fornisce flessibilità di scelta per il processo che ospita il
 
 - **Server Web ospitato in IIS**
 
-    Quando un servizio dati viene sviluppato come progetto ASP.NET, può essere distribuito in un server Web IIS utilizzando i processi di distribuzione ASP.NET standard.  Visual Studio fornisce le tecnologie di distribuzione seguenti per ASP.NET, a seconda del tipo di progetto di ASP.NET che ospita il servizio dati che si sta distribuendo.
+    Quando un servizio dati viene sviluppato come progetto ASP.NET, può essere distribuito in un server Web IIS utilizzando i processi di distribuzione ASP.NET standard. Visual Studio fornisce le tecnologie di distribuzione seguenti per ASP.NET, a seconda del tipo di progetto di ASP.NET che ospita il servizio dati che si sta distribuendo.
 
   - **Tecnologie di distribuzione per applicazioni Web ASP.NET**
 
@@ -113,9 +113,9 @@ WCF Data Services fornisce flessibilità di scelta per il processo che ospita il
     > [!TIP]
     > Prima di tentare di distribuire il servizio dati a IIS, verificare che sia stata testata la distribuzione a un server Web che esegue IIS. Per altre informazioni, vedere [How to: Develop a WCF Data Service Running on IIS](how-to-develop-a-wcf-data-service-running-on-iis.md).
 
-- **Microsoft Azure**
+- **Azure**
 
-     È possibile distribuire un servizio dati in Windows Azure usando Strumenti di Windows Azure per Visual Studio.You can deploy a data service to Windows Azure by using Windows Azure Tools for Visual Studio. È possibile scaricare Windows Azure Tools for Visual Studio [dall'Area download Microsoft](https://go.microsoft.com/fwlink/?LinkID=201848). Per altre informazioni sulla distribuzione di un servizio dati in Windows Azure, vedere il post Distribuzione di un servizio OData in Windows Azure.For more information about deploying a data service to Windows Azure, see the post [Deploying an OData Service in Windows Azure.](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)
+     È possibile distribuire un servizio dati in Azure usando Strumenti di [Azure per Visual Studio.](../../../azure/sdk/vs2015-install.md) Per altre informazioni sulla distribuzione di un servizio dati in Azure, vedere Distribuzione di un servizio OData in Azure.For more information about deploying a data service to Azure, see [Deploying an OData Service in Azure.](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)
 
 ### <a name="deployment-considerations"></a>Considerazioni sulla distribuzione
 

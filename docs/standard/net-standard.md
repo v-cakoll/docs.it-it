@@ -5,12 +5,12 @@ ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: e6e573056132c25b912ff1eb76b9b055f6e47cfe
-ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
+ms.openlocfilehash: 34074b420547cff802f1835656540be7b8eb58b4
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438210"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607480"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -112,7 +112,7 @@ Per altre informazioni, vedere [Modalità di compatibilità di .NET Framework](.
 
 ## <a name="net-standard-libraries-and-visual-studio"></a>Librerie .NET Standard e Visual Studio
 
-Per compilare librerie .NET Standard in Visual Studio, verificare di avere [Visual Studio 2017 versione 15.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) o successiva installato in Windows oppure [Visual Studio per Mac versione 7.1](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) o successiva installato in macOS.
+Per compilare librerie .NET Standard in Visual Studio, assicurarsi di avere installato [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o Visual Studio 2017 versione 15.3 o successiva in Windows o [Visual Studio per Mac versione 7.1](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) o successiva in macOS.
 
 Se si devono usare le librerie .NET Standard 2.0 solo nei propri progetti, è anche possibile usare Visual Studio 2015. Tuttavia, deve essere installato il client NuGet versione 3.6 o successiva. È possibile scaricare il client NuGet per Visual Studio 2015 dalla pagina di [download di NuGet](https://www.nuget.org/downloads).
 

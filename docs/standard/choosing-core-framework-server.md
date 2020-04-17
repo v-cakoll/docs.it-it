@@ -3,14 +3,14 @@ title: Scegliere tra .NET Core e .NET Framework per le app server
 description: Guida alla scelta dell'implementazione di .NET da prendere in considerazione quando si intende creare un'app server in .NET.
 author: cartermp
 ms.date: 06/19/2018
-ms.openlocfilehash: 393d6d89fb299e87edf55cf50991537e8afe9753
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 885a7fb3419eafa5d88ef621cf6ad04a8d48bb59
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344144"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607493"
 ---
-# <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Scelta di .NET Core o .NET Framework per le app server
+# <a name="choose-between-net-core-and-net-framework-for-server-apps"></a>Scegliere tra .NET Core e .NET Framework per le app server
 
 Per la creazione di applicazioni lato server con .NET sono supportate due implementazioni: .NET Framework e .NET Core. Entrambe condividono gran parte degli stessi componenti e possono condividere codice. Esistono, però, differenze fondamentali tra le due opzioni e la scelta dipende dall'obiettivo che si vuole conseguire.  Questo articolo fornisce materiale sussidiario per identificare i casi in cui è opportuno usare ciascuna delle due opzioni.
 
@@ -103,8 +103,8 @@ Alcune piattaforme Microsoft o di terze parti non supportano .NET Core. Alcuni s
 ## <a name="see-also"></a>Vedere anche
 
 - [Choose between ASP.NET and ASP.NET Core (Scegliere tra ASP.NET e ASP.NET Core)](/aspnet/core/choose-aspnet-framework)
-- [ASP.NET Core per .NET Framework](/aspnet/core#aspnet-core-targeting-net-framework)
-- [Quadri di destinazione](frameworks.md)
+- [ASP.NET Core per .NET Framework](/aspnet/core/introduction-to-aspnet-core#aspnet-core-targeting-net-framework)
+- [Framework di destinazione](frameworks.md)
 - [Guida di .NET Core](../core/index.yml)
 - [Porting from .NET Framework to .NET Core](../core/porting/index.md) (Portabilità da .NET Framework a .NET Core)
 - [Introduzione a .NET e Docker](../core/docker/introduction.md)

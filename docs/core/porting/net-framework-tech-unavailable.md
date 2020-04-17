@@ -4,12 +4,12 @@ titleSuffix: ''
 description: Informazioni sulle tecnologie di .NET Framework che non sono disponibili in .NET Core
 author: cartermp
 ms.date: 04/30/2019
-ms.openlocfilehash: bd2488de653ecdfed261100b4c9019bea58fcab3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7dfec63870950f12ec933ebf09041b3c8ce2cbb5
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77092941"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607797"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>Tecnologie di .NET Framework non disponibili in .NET Core
 
@@ -29,7 +29,7 @@ L'architettura dei servizi remoti di .NET è stata identificata come problematic
 
 Per la comunicazione tra i processi, considerare i meccanismi di comunicazione tra processi <xref:System.IO.Pipes> (IPC) come alternativa ai servizi remoti, ad esempio la classe o la <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> classe.
 
-Per le comunicazioni tra computer, usare una soluzione basata su rete in alternativa. Preferibilmente, usare un protocollo di testo normale con basso overhead, come HTTP. Il [server Web Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), ovvero il server Web usato da ASP.NET Core, rappresenta un'opzione praticabile in questo caso. Considerare inoltre <xref:System.Net.Sockets> l'utilizzo per scenari tra computer basati sulla rete. Per informazioni su altre opzioni, vedere [.NET Open Source Developer Projects: Messaging](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging) (Progetti di sviluppo open source .NET: Messaggistica).
+Per le comunicazioni tra computer, usare una soluzione basata su rete in alternativa. Preferibilmente, usare un protocollo di testo normale con basso overhead, come HTTP. Il [server Web Kestrel](/aspnet/core/fundamentals/servers/kestrel), ovvero il server Web usato da ASP.NET Core, rappresenta un'opzione praticabile in questo caso. Considerare inoltre <xref:System.Net.Sockets> l'utilizzo per scenari tra computer basati sulla rete. Per informazioni su altre opzioni, vedere [.NET Open Source Developer Projects: Messaging](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging) (Progetti di sviluppo open source .NET: Messaggistica).
 
 ## <a name="code-access-security-cas"></a>Sicurezza dall'accesso di codice (CAS, Code Access Security)
 

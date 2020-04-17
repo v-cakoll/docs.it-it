@@ -2,12 +2,12 @@
 title: Aggiunte al formato csproj per .NET Core
 description: Informazioni sulle differenze tra i file csproj esistenti e .NET Core
 ms.date: 04/08/2019
-ms.openlocfilehash: 9d9e212c9531828a8c2dd51fdd7488c17be41ba2
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: fadc6de43f522129970e48bc72914cf187fe3f82
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134058"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607706"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Aggiunte al formato csproj per .NET Core
 
@@ -145,7 +145,7 @@ Un elemento `<PackageReference>` specifica una [dipendenza NuGet nel progetto](/
 
 #### <a name="version"></a>Versione
 
-L'attributo `Version` obbligatorio specifica la versione del pacchetto da ripristinare. L'attributo rispetta le regole dello schema di [numerazione delle versioni NuGet](/nuget/reference/package-versioning#version-ranges-and-wildcards). Il comportamento predefinito è una versione minima, una corrispondenza inclusiva. Ad esempio, `Version="1.2.3"` specificare è equivalente `[1.2.3, )` alla notazione NuGet e significa che il pacchetto risolto avrà la versione 1.2.3 se disponibile o superiore in caso contrario.
+L'attributo `Version` obbligatorio specifica la versione del pacchetto da ripristinare. L'attributo rispetta le regole dello schema dell'intervallo di [versioni NuGet.](/nuget/concepts/package-versioning#version-ranges) Il comportamento predefinito è una versione minima, una corrispondenza inclusiva. Ad esempio, `Version="1.2.3"` specificare è equivalente `[1.2.3, )` alla notazione NuGet e significa che il pacchetto risolto avrà la versione 1.2.3 se disponibile o superiore in caso contrario.
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets, ExcludeAssets e PrivateAssets
 

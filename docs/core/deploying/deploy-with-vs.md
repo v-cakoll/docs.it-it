@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 11a322278ce3ff38964fe2fa389e0b4a58897ec4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f2299ac807c845dab482306cc4c710560bb7f1e7
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77449023"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607862"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Distribuire app .NET Core con Visual Studio
 
@@ -75,9 +75,9 @@ In una distribuzione dipendente dal framework con una o più dipendenze di terze
 
 1. Se `Newtonsoft.Json` è già installato nel sistema aggiungerlo al progetto selezionando il progetto stesso nel riquadro destro della scheda **Gestisci i pacchetti per la soluzione**.
 
-Una distribuzione dipendente dal framework con dipendenze di terze parti è portabile solo come le dipendenze di terze parti. Se ad esempio una libreria di terze parti supporta solo macOS, l'app non è portabile in sistemi Windows. Questa situazione si verifica se la dipendenza di terze parti stessa dipende da codice nativo. Un buon esempio è il [server Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), che richiede una dipendenza nativa da [libuv](https://github.com/libuv/libuv). Quando viene creata una distribuzione dipendente dal framework per un'applicazione con questo tipo di dipendenze di terze parti, l'output pubblicato contiene una cartella per ogni [identificatore di runtime (RID)](../rid-catalog.md) supportato dalla dipendenza nativa (e presente nel relativo pacchetto NuGet).
+Una distribuzione dipendente dal framework con dipendenze di terze parti è portabile solo come le dipendenze di terze parti. Se ad esempio una libreria di terze parti supporta solo macOS, l'app non è portabile in sistemi Windows. Questa situazione si verifica se la dipendenza di terze parti stessa dipende da codice nativo. Un buon esempio è il [server Kestrel](/aspnet/core/fundamentals/servers/kestrel), che richiede una dipendenza nativa da [libuv](https://github.com/libuv/libuv). Quando viene creata una distribuzione dipendente dal framework per un'applicazione con questo tipo di dipendenze di terze parti, l'output pubblicato contiene una cartella per ogni [identificatore di runtime (RID)](../rid-catalog.md) supportato dalla dipendenza nativa (e presente nel relativo pacchetto NuGet).
 
-## <a name="simpleSelf"></a> Distribuzione autonoma senza dipendenze di terze parti
+## <a name="self-contained-deployment-without-third-party-dependencies"></a><a name="simpleSelf"></a> Distribuzione autonoma senza dipendenze di terze parti
 
 La pubblicazione di una distribuzione autonoma senza dipendenze di terze parti comporta la creazione del progetto, la modifica del file *csproj*, la compilazione, il test e la pubblicazione dell'app. Il processo viene illustrato da un semplice esempio scritto in C#. Creare, codificare e testare inizialmente il progetto come nel caso di una distribuzione dipendente dal framework:
 

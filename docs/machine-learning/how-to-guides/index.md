@@ -2,12 +2,12 @@
 title: Guide pratiche di ML.NET
 description: Informazioni su come eseguire attività specifiche per agevolare la creazione di soluzioni di intelligenza artificiale personalizzate e l'integrazione di Machine Learning nelle applicazioni .NET.
 ms.date: 03/01/2019
-ms.openlocfilehash: 4ce2de77c35062aa19449e3ba6bb3d5abd003d60
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 25c5cb6247c202e3ef51d0ed25b3b213fdca7a56
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715660"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607532"
 ---
 # <a name="net-machine-learning-how-to-guides"></a>Guide pratiche di Machine Learning in .NET
 
@@ -19,7 +19,7 @@ Nella sezione Guida pratica della guida di ML.NET sono disponibili le risposte a
 
 ### <a name="prepare-the-data"></a>Preparare i dati
 
-* [Pre-elaborare i dati di training con normalizzatori da usare nell'elaborazione dati.](normalizers-preprocess-data-ml-net.md)
+* [Pre-elaborare i dati di training con normalizzatori da usare nell'elaborazione dati.](prepare-data-ml-net.md)
 
 ## <a name="train-the-model"></a>Eseguire il training del modello
 

@@ -3,12 +3,12 @@ title: Ottenere i database di SQL Server di esempio per ADO.NET esempi di codice
 description: Scaricare i database di SQL Server di esempio usati negli esempi di codice nella documentazione di ADO.NET, nonché SQL Server e gli strumenti di gestioneDownload the sample SQL Server databases used in the code samples in the ADO.NET documentation, as well as SQL Server and management tools
 ms.date: 01/11/2019
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-ms.openlocfilehash: 19d659cbe8f39d27b71dc59c738355f12fce92a0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3449f502834f449f5023bd52457d45ffaf9b0fa1
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148387"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607984"
 ---
 # <a name="get-the-sample-databases-for-adonet-code-samples"></a>Ottenere i database di esempio per ADO.NET esempi di codiceGet the sample databases for ADO.NET code samples
 
@@ -37,7 +37,7 @@ Il database di esempio Northwind per Microsoft Access non è disponibile nell'Ar
 
 1. Nella nuova finestra, nella casella di testo **Nome file,** specificare un nome file per la copia del database Northwind.
 
-1. Selezionare **Crea**. Access scarica il database Northwind e prepara il file.
+1. Selezionare **Create** (Crea). Access scarica il database Northwind e prepara il file.
 
 1. Al termine di questo processo, il database viene aperto con una schermata iniziale.
 
@@ -52,9 +52,9 @@ Dopo aver scaricato uno dei\*file di backup del database (con estensione bak), r
 ## <a name="get-sql-server-management-studio"></a><a name="get_ssms"></a>Ottenere SQL Server Management StudioGet SQL Server Management Studio
 Se si desidera visualizzare o modificare un database scaricato, è possibile utilizzare SQL Server Management Studio (SSMS). Scaricare SSMS dalla pagina seguente:Download SSMS from the following page:
 
-[Scaricare SQL Server Management Studio (SSMS)Download SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms)
+[Scaricare SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms)
 
-È inoltre possibile visualizzare e gestire i database nell'ambiente di sviluppo integrato (IDE) di Visual Studio. In [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)connettersi al database da Esplora oggetti di SQL **Server**oppure creare una connessione dati al database in Esplora **server**. Aprire questi riquadri di esplorazione dal menu **Visualizza.**
+È inoltre possibile visualizzare e gestire i database nell'ambiente di sviluppo integrato (IDE) di Visual Studio. In [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)connettersi al database da Esplora oggetti di SQL **Server**oppure creare una connessione dati al database in Esplora **server**. Aprire questi riquadri di esplorazione dal menu **Visualizza.**
 
 ## <a name="get-sql-server-express"></a><a name="get_sql"></a>Ottenere SQL Server ExpressGet SQL Server Express
 
@@ -62,7 +62,7 @@ SQL Server Express è un'edizione gratuita entry-level di SQL Server che è poss
   
 [SQL Server Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express)
 
-Se si utilizza [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017), SQL Server Express LocalDB è incluso nell'edizione community gratuita di Visual Studio, nonché le edizioni Professional e versioni successive.  
+Se si utilizza [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019), SQL Server Express LocalDB è incluso nell'edizione community gratuita di Visual Studio, nonché le edizioni Professional e versioni successive.  
 
 ## <a name="see-also"></a>Vedere anche
 

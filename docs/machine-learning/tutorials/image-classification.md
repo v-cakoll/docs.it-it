@@ -4,12 +4,12 @@ description: Informazioni su come trasferire le conoscenze da un modello TensorF
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 1e5478f53c82f36ddafe19e3659e2234ff9687b4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: be21a94f571a1676d2a4bce2196dec34bf008121
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78241026"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607571"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>Esercitazione: Generare un modello di classificazione delle immagini ML.NET da un modello TensorFlow pre-addestratoTutorial: Generate an ML.NET image classification model from a pre-trained TensorFlow model
 
@@ -35,9 +35,9 @@ Trasferire l'apprendimento è il processo di utilizzo delle conoscenze acquisite
 
 Per questa esercitazione, si usa parte di un modello TensorFlow, addestrato per classificare le immagini in mille categorie, in un modello di ML.NET che classifica le immagini in 3 categorie.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
-* [Visual Studio 2017 versione 15.6 o successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con il carico di lavoro ".NET Core cross-platform development" installato.
+* [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o versione successiva o Visual Studio 2017 versione 15.6 o successiva con il carico di lavoro "sviluppo multipiattaforma .NET Core" installato.
 * [File ZIP della directory assets dell'esercitazione](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)
 * [Modello di Machine Learning InceptionV1](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
 

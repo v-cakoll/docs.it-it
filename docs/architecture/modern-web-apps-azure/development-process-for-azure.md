@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Proc
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 7a641c1b6665af6e9e78ef182174b360041d74aa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 640cfebea3c70314be4a597bc07b0dc6854f5848
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77450043"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607893"
 ---
 # <a name="development-process-for-azure"></a>Processo di sviluppo per Azure
 
@@ -58,13 +58,13 @@ Creare un servizio app di Azure in cui verrà distribuita l'applicazione. Creare
 
 Il processo di compilazione CI eseguirà una compilazione automatica ogni volta che viene eseguito il commit di nuovo codice nel repository di controllo del codice sorgente del progetto. Ciò consente di verificare immediatamente che il codice venga compilato (e passi i test automatizzati) e possa essere potenzialmente distribuito. Questa compilazione CI produrrà un artefatto del pacchetto di distribuzione Web e lo pubblicherà per l'utilizzo da parte del processo CD.
 
-[Definire il processo di compilazione CI](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core#ci)
+[Definire il processo di compilazione CI](https://docs.microsoft.com/azure/devops/pipelines/ecosystems/dotnet-core)
 
 Assicurarsi di abilitare l'integrazione continua in modo che il sistema accodi una compilazione ogni volta che un utente del team esegue il commit di nuovo codice. Testare la compilazione e verificare che produca un pacchetto di distribuzione Web come uno dei relativi artefatti.
 
 Dopo aver eseguito la compilazione, il processo CD distribuirà i risultati della compilazione CI nell'app Web di Azure. Per procedere alla configurazione, creare e configurare una *Versione* che verrà distribuita nel servizio app di Azure.
 
-[Definire il processo della versione CD](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core#cd)
+[Distribuire un'app Web di AzureDeploy an Azure web app](https://docs.microsoft.com/azure/devops/pipelines/targets/webapp)
 
 Dopo aver configurato la pipeline CI/CD, è possibile effettuare aggiornamenti nell'app Web ed eseguirne il commit nel controllo del codice sorgente per distribuirli.
 

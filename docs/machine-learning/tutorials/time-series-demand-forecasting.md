@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 962c40ea0536d6b6057d936cfc4b95a49ddadbf8
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: bceb32f4ea22ade6d3b49b3a99d7ec48a7ba168d
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243284"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607402"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>Tutorial: Prevedere la domanda di servizio di noleggio biciclette con analisi di serie temporali e ML.NET
 
@@ -29,7 +29,7 @@ In questa esercitazione verranno illustrate le procedure per:
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- [Visual Studio 2017 versione 15.6 o successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con il carico di lavoro ".NET Core cross-platform development" installato.
+- [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o versione successiva o Visual Studio 2017 versione 15.6 o successiva con il carico di lavoro "sviluppo multipiattaforma .NET Core" installato.
 
 ## <a name="time-series-forecasting-sample-overview"></a>Panoramica dell'esempio di previsione di serie temporali
 

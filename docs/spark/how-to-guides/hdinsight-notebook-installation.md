@@ -4,12 +4,12 @@ description: Informazioni su come installare .NET per Apache Spark nei blocchi a
 ms.date: 03/13/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 32047efcde093a3752bdd59baa88896d1547b93e
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: 953bffe5f6ec56cd0adf4224afd2eedfe0001aa9
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546750"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607415"
 ---
 # <a name="install-net-for-apache-spark-on-jupyter-notebooks-on-azure-hdinsight-spark-clusters"></a>Installare .NET per Apache Spark nei blocchi appunti Jupyter nei cluster Spark di Azure HDInsightInstall .NET for Apache Spark on Jupyter notebooks on Azure HDInsight Spark clusters
 
@@ -22,9 +22,9 @@ Per abilitare .NET per Apache Spark tramite l'esperienza Jupyter Notebooks, è n
 > [!NOTE]
 > Questa funzionalità è *sperimentale* e non è supportata dal team di HDInsight Spark.This feature is experimental and is not supported by the HDInsight Spark team.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
-Se non ne hai già uno, crea un cluster [Spark di Azure HDInsight.If](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-jupyter-spark-sql-use-portal#create-an-hdinsight-spark-cluster) you don't already have one, create an Azure HDInsight Spark cluster.
+Se non ne hai già uno, crea un cluster [Spark di Azure HDInsight.If](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-jupyter-spark-sql-use-portal#create-an-apache-spark-cluster-in-hdinsight) you don't already have one, create an Azure HDInsight Spark cluster.
 
 1. Visitare il [portale di Azure](https://portal.azure.com) e selezionare Crea una **risorsa**.
 
