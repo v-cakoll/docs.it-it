@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - do keyword [C#]
 ms.assetid: 50725f79-9ba6-4898-aa78-6e331568a1bb
-ms.openlocfilehash: 38224ce70c19ff67ad80b99d3da52155849f1341
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1d4323366e567dab4b27b07803d0c06e731611ce
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713594"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738900"
 ---
 # <a name="do-c-reference"></a>do (Riferimenti per C#)
 
@@ -22,7 +22,7 @@ In qualsiasi punto all'interno del blocco `do` è possibile uscire dal ciclo usa
 
 È possibile passare direttamente alla valutazione dell'espressione `while` tramite l'istruzione [continue](continue.md). Se l'espressione restituisce `true`, l'esecuzione continua con la prima istruzione nel ciclo. In caso contrario, l'esecuzione continua con la prima istruzione dopo il ciclo.
 
-Si può uscire da un ciclo `do-while` anche usando l'istruzione [goto](goto.md), [return](return.md) o [throw](throw.md).
+È inoltre possibile `do-while` uscire da un ciclo mediante le istruzioni [goto](goto.md), [return](return.md)o [throw](throw.md) .
 
 ## <a name="example"></a>Esempio
 
@@ -37,6 +37,6 @@ Per altre informazioni, vedere la sezione [Istruzione do](~/_csharplang/spec/sta
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida di riferimento a C](../index.md)
-- [Guida per programmatori C#](../../programming-guide/index.md)
-- [Parole chiave di C#](index.md)
+- [Guida alla programmazione in C](../../programming-guide/index.md)
+- [Parole chiave di C](index.md)
 - [while dichiarazione](while.md)

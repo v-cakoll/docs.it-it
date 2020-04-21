@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: f03084fa611c35c5504190b28fab79563d560d03
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea9bf9e065b2953fd20e0503a19d1dc143064c5d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399259"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738738"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Operatori aritmetici (Riferimenti per C#)
 
@@ -153,7 +153,7 @@ L'operatore di addizione `+` calcola la somma degli operandi:
 
 [!code-csharp-interactive[addition operator](snippets/ArithmeticOperators.cs#Addition)]
 
-È possibile usare l'operatore `+` anche per la concatenazione di stringhe e la combinazione di delegati. Per altre informazioni, vedere l'articolo [ `+` operatori and. `+=` ](addition-operator.md)
+È inoltre possibile `+` utilizzare l'operatore per la concatenazione di stringhe e la combinazione di delegati. Per altre informazioni, vedere l'articolo [ `+` operatori and. `+=` ](addition-operator.md)
 
 ## <a name="subtraction-operator--"></a>Operatore di sottrazione -
 
@@ -161,7 +161,7 @@ L'operatore di sottrazione `-` sottrae l'operando di destra dall'operando di sin
 
 [!code-csharp-interactive[subtraction operator](snippets/ArithmeticOperators.cs#Subtraction)]
 
-È possibile usare l'operatore `-` anche per la rimozione di delegati. Per altre informazioni, vedere l'articolo [ `-` operatori and. `-=` ](subtraction-operator.md)
+È inoltre possibile `-` utilizzare l'operatore per delegare la rimozione. Per altre informazioni, vedere l'articolo [ `-` operatori and. `-=` ](subtraction-operator.md)
 
 ## <a name="compound-assignment"></a>Assegnazione composta
 
@@ -268,4 +268,4 @@ Per altre informazioni, vedere le sezioni seguenti delle [specifiche del linguag
 - [Operatori C#](index.md)
 - <xref:System.Math?displayProperty=nameWithType>
 - <xref:System.MathF?displayProperty=nameWithType>
-- [Dati numerici in .NET](../../../standard/numerics.md)
+- [Valori numerici in .NET](../../../standard/numerics.md)

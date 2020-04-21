@@ -2,12 +2,12 @@
 title: Flusso di lavoro di sviluppo del ciclo interno per le app Docker
 description: Informazioni sul flusso di lavoro del ciclo interno per lo sviluppo di applicazioni Docker.
 ms.date: 02/15/2019
-ms.openlocfilehash: 615cfd08f46609c4e100ea3e72b541fe2c1ae62a
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: bce047bd5ba75f9ef652a294ff6a15656fc5ac34
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989012"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738412"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Flusso di lavoro di sviluppo del ciclo interno per le app Docker
 
@@ -54,7 +54,7 @@ Con le versioni più recenti di Docker per Mac e Windows, sviluppare applicazion
 
 Sarà anche necessario un editor di codice, con il quale sarà effettivamente possibile sviluppare l'applicazione usando al tempo stesso l'interfaccia della riga di comando di Docker.
 
-Microsoft fornisce Visual Studio Code, che è un editor di codice leggero che è supportato in Windows, Linux e macOS e fornisce IntelliSense con [il supporto per molti linguaggi](https://code.visualstudio.com/docs/languages/overview) (JavaScript, .NET, Go, Java, Ruby, Python e la maggior parte dei linguaggi moderni), [debug](https://code.visualstudio.com/Docs/editor/debugging), [integrazione con Git](https://code.visualstudio.com/Docs/editor/versioncontrol) e [le estensioni supportano](https://code.visualstudio.com/docs/extensions/overview). Questo editor è una grande misura per gli sviluppatori macOS e Linux. In Windows, you also can use Visual Studio.
+Microsoft fornisce Visual Studio Code, che è un editor di codice leggero che è supportato in Windows, Linux e macOS e fornisce IntelliSense con [il supporto per molti linguaggi](https://code.visualstudio.com/docs/languages/overview) (JavaScript, .NET, Go, Java, Ruby, Python e la maggior parte dei linguaggi moderni), [debug](https://code.visualstudio.com/Docs/editor/debugging), [integrazione con Git](https://code.visualstudio.com/Docs/editor/versioncontrol) e [le estensioni supportano](https://code.visualstudio.com/docs/extensions/overview). Questo editor è una grande misura per gli sviluppatori macOS e Linux. In Windows, you can also use Visual Studio.
 
 > [!TIP]
 > Per istruzioni sull'installazione di Visual Studio Code per Windows, <https://code.visualstudio.com/docs/setup/setup-overview/>Linux o macOS, visitare il percorso .
@@ -156,7 +156,7 @@ Per ogni servizio personalizzato comprensivo dell'app sarà necessario creare un
 >
 > Gli sviluppatori devono quindi prima di tutto eseguire l'intero processo del ciclo interno per testarlo in locale e continuare lo sviluppo finché vogliono eseguire il push di una funzionalità completa oppure passare al sistema di controllo del codice sorgente.
 
-Per creare un'immagine nell'ambiente locale e usare il Dockerfile, è possibile usare il comando docker build, come illustrato nella figura 4-25. È anche possibile eseguire `docker-compose up --build` per applicazioni composte da diversi contenitori/servizi.
+Per creare un'immagine nell'ambiente locale e utilizzando il DockerFile, è possibile utilizzare il comando docker `docker-compose up --build` build, come illustrato nella figura 4-25 (è anche possibile eseguire per le applicazioni composte da diversi contenitori/servizi).
 
 ![Screenshot che mostra l'output della console del comando docker build.](./media/docker-apps-inner-loop-workflow/run-docker-build-command.png)
 
@@ -263,7 +263,7 @@ Si noti che si sta usando la porta 80, ma internamente si viene reindirizzati al
 
 Visual Studio Code supporta il debug Docker se si usa Node.js e altre piattaforme, ad esempio contenitori di .NET Core.
 
-È anche possibile eseguire il debug di contenitori di .NET Framework o .NET Core in Docker quando si usa Visual Studio per Windows o Mac, come descritto nella sezione successiva.
+È anche possibile eseguire il debug di contenitori .NET Core o .NET Framework in Docker quando si usa Visual Studio per Windows o Mac, come descritto nella sezione successiva.
 
 > [!TIP]
 > Per ulteriori informazioni sul debug dei contenitori Docker Node.js, vedere <https://blog.docker.com/2016/07/live-debugging-docker/> e <https://docs.microsoft.com/archive/blogs/user_ed/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more>.

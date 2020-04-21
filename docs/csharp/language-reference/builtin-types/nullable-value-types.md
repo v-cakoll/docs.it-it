@@ -4,12 +4,12 @@ description: Informazioni sui tipi di valore nullable di C'è e su come usarli
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: c13ef6a091ec6aebd4608c5ed8d2c03b067c7312
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: fcd49d7d25b0ad23363db8cb61596004b2e87a8d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888072"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738991"
 ---
 # <a name="nullable-value-types-c-reference"></a>Tipi di valore nullable (riferimenti per C
 
@@ -24,7 +24,7 @@ In genere si utilizza un tipo di valore nullable quando è necessario rappresent
 
 ## <a name="declaration-and-assignment"></a>Dichiarazione e assegnazione
 
-Poiché un tipo di valore è convertibile in modo implicito nel tipo di valore nullable corrispondente, è possibile assegnare un valore a una variabile di un tipo di valore nullable come si farebbe per il tipo di valore sottostante. È anche possibile assegnare il valore `null`. Ad esempio:
+Poiché un tipo di valore è convertibile in modo implicito nel tipo di valore nullable corrispondente, è possibile assegnare un valore a una variabile di un tipo di valore nullable come si farebbe per il tipo di valore sottostante. È inoltre possibile `null` assegnare il valore. Ad esempio:
 
 [!code-csharp[declare and assign](snippets/NullableValueTypes.cs#Declaration)]
 
@@ -46,7 +46,7 @@ Nell'esempio seguente `HasValue` viene utilizzata la proprietà per verificare s
 
 [!code-csharp-interactive[use HasValue](snippets/NullableValueTypes.cs#HasValue)]
 
-È anche possibile confrontare una variabile `null` di un `HasValue` tipo di valore nullable con anziché utilizzare la proprietà, come illustrato nell'esempio seguente:You can also compare a variable of a nullable value type with instead of using the property, as the following example shows:
+È inoltre possibile confrontare una variabile `null` di un `HasValue` tipo di valore nullable con anziché utilizzare la proprietà , come illustrato nell'esempio seguente:You can also compare a variable of a nullable value type with instead of using the property, as the following example shows:
 
 [!code-csharp-interactive[use comparison with null](snippets/NullableValueTypes.cs#CompareWithNull)]
 
@@ -58,7 +58,7 @@ Se si desidera assegnare un valore di un tipo di valore nullable a una variabile
 
 Se si desidera utilizzare il valore [predefinito](default-values.md) del `null`tipo di <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> valore sottostante al posto di , utilizzare il metodo .
 
-È anche possibile eseguire in modo esplicito il cast di un tipo di valore nullable a un tipo non nullable, come illustrato nell'esempio seguente:You also can explicitly cast a nullable value type to a non-nullable type, as the following example shows:
+È anche possibile eseguire in modo esplicito il cast di un tipo di valore nullable a un tipo non nullable, come illustrato nell'esempio seguente:You can also explicitly cast a nullable value type to a non-nullable type, as the following example shows:
 
 [!code-csharp[explicit cast](snippets/NullableValueTypes.cs#Cast)]
 

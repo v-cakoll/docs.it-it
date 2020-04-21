@@ -13,15 +13,15 @@ helpviewer_keywords:
 - INotifyPropertyChanged interface [Windows Forms], using with BindingSource
 - BindingSource component [Windows Forms], examples
 ms.assetid: 7fa2cf51-c09f-4375-adf0-e36c5617f099
-ms.openlocfilehash: 07248ec0b8ac4f2356d9c9915b6a904dfad30cb2
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 2fe4458aa43144a9c29ed67fd7bee99a37fe1434
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81388973"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739687"
 ---
 # <a name="how-to-raise-change-notifications-using-a-bindingsource-and-the-inotifypropertychanged-interface"></a>Procedura: generare notifiche di modifica utilizzando un BindingSource e l'interfaccia INotifyPropertyChanged
-Il componente <xref:System.Windows.Forms.BindingSource> rileva automaticamente le modifiche in un'origine dati quando il tipo contenuto nell'origine dati implementa l'interfaccia <xref:System.ComponentModel.INotifyPropertyChanged> e genera eventi <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> nel momento in cui il valore di una proprietà viene modificato. Si tratta di una caratteristica utile perché i controlli associati al componente <xref:System.Windows.Forms.BindingSource> verranno aggiornati automaticamente al variare dei valori dell'origine dati.  
+Il <xref:System.Windows.Forms.BindingSource> componente rileva automaticamente le modifiche in un'origine dati <xref:System.ComponentModel.INotifyPropertyChanged> quando <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> il tipo contenuto nell'origine dati implementa e genera eventi quando viene modificato il valore di una proprietà. Questo rilevamento delle modifiche è <xref:System.Windows.Forms.BindingSource> utile perché i controlli associati all'aggiornamento automatico quando cambiano i valori dell'origine dati.  
   
 > [!NOTE]
 > Se l'origine dati implementa <xref:System.ComponentModel.INotifyPropertyChanged> e devono essere eseguite operazioni asincrone, non devono essere apportate modifiche all'origine dati in un thread in background. In alternativa, è possibile leggere i dati in un thread in background e quindi unire i dati in un elenco nel thread dell'interfaccia utente.  

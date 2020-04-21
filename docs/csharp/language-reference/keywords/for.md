@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: fc6a23cabd93323cacc33dfc4388116881c1fc84
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cb83fa015eea19b156faebb5bed18cc1f0970cc1
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74552260"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738803"
 ---
 # <a name="for-c-reference"></a>for (Riferimenti per C#)
 
 L'istruzione `for` esegue un'istruzione o un blocco di istruzioni mentre un'espressione booleana specificata restituisce `true`.
 
-In un punto qualsiasi all'interno del blocco dell'istruzione `for` è possibile uscire dal ciclo usando l'istruzione [break](break.md) o passare all'iterazione successiva nel ciclo con l'istruzione [continue](continue.md). Si può uscire da un ciclo `for` anche usando l'istruzione [goto](goto.md), [return](return.md) o [throw](throw.md).
+In un punto qualsiasi all'interno del blocco dell'istruzione `for` è possibile uscire dal ciclo usando l'istruzione [break](break.md) o passare all'iterazione successiva nel ciclo con l'istruzione [continue](continue.md). È inoltre possibile `for` uscire da un ciclo mediante le istruzioni [goto](goto.md), [return](return.md)o [throw](throw.md) .
 
 ## <a name="structure-of-the-for-statement"></a>Struttura dell'istruzione `for`
 
@@ -110,6 +110,6 @@ Per altre informazioni, vedere la sezione [L'istruzione for](~/_csharplang/spec/
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida di riferimento a C](../index.md)
-- [Guida per programmatori C#](../../programming-guide/index.md)
-- [Parole chiave di C#](index.md)
+- [Guida alla programmazione in C](../../programming-guide/index.md)
+- [Parole chiave di C](index.md)
 - [foreach, in](foreach-in.md)

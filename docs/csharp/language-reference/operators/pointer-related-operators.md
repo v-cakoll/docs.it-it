@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: fd25cd419f8c3bfe905850e6a252f4a8cf65478c
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 7eb6666d10c44c342f69c7cfc763feb1b7b98c9d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507100"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738608"
 ---
 # <a name="pointer-related-operators-c-reference"></a>Operatori correlati ai puntatori (Riferimento C#)
 
@@ -103,7 +103,7 @@ Nell'esempio precedente, [ `stackalloc` un'espressione](stackalloc.md) alloca un
 
 Non è possibile usare `[]` per l'accesso agli elementi del puntatore con un'espressione di tipo `void*`.
 
-È anche possibile usare l'operatore `[]` per l'[accesso agli elementi di una matrice o all'indicizzatore](member-access-operators.md#indexer-operator-).
+È inoltre possibile `[]` utilizzare l'operatore per [l'accesso all'elemento della matrice o all'indicizzatore](member-access-operators.md#indexer-operator-).
 
 ## <a name="pointer-arithmetic-operators"></a>Operatori aritmetici dei puntatori
 

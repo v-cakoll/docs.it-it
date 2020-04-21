@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 3df357cb15f7f77cefbf360dd9615ce246afe2ea
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0a9e2cc64da56c376445efce32e8da36ba9b6cdc
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705327"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738227"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Come sottoscrivere e annullare la sottoscrizione agli eventi (Guida per programmatori C
 Si sottoscrive un evento pubblicato da un'altra classe quando si vuole scrivere codice personalizzato che viene chiamato quando viene generato tale evento. È ad esempio possibile sottoscrivere l'evento `click` di un pulsante perché l'applicazione esegua un'operazione utile quando l'utente fa clic sul pulsante in questione.  
@@ -57,7 +57,7 @@ Si sottoscrive un evento pubblicato da un'altra classe quando si vuole scrivere 
     publisher.RaiseCustomEvent += new CustomEventHandler(HandleCustomEvent);  
     ```  
   
-     È anche possibile usare un'[espressione lambda](../statements-expressions-operators/lambda-expressions.md) per specificare un gestore eventi:
+     È anche possibile usare [un'espressione lambda](../statements-expressions-operators/lambda-expressions.md) per specificare un gestore eventi:You can also use a lambda expression to specify an event handler:
   
     ```csharp
     public Form1()  
@@ -100,7 +100,7 @@ Si sottoscrive un evento pubblicato da un'altra classe quando si vuole scrivere 
 ## <a name="see-also"></a>Vedere anche
 
 - [Events](./index.md)
-- [Evento](../../language-reference/keywords/event.md)
+- [event](../../language-reference/keywords/event.md)
 - [Come pubblicare eventi conformi alle linee guida di .NET Framework](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
 - [- e - - operatori](../../language-reference/operators/subtraction-operator.md)
 - [Operatori + e +=](../../language-reference/operators/addition-operator.md)

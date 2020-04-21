@@ -1,5 +1,5 @@
 ---
-title: Parola chiave params - Riferimenti per C#
+title: params (parola chiave) per le matrici di parametri - Riferimento in C
 ms.date: 07/20/2015
 f1_keywords:
 - params_CSharpKeyword
@@ -7,23 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], params
 - params keyword [C#]
+- parameter array
 ms.assetid: 1690815e-b52b-4967-8380-5780aff08012
-ms.openlocfilehash: f462ccc2421fef3ea111d263ec035a701cf04775
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 77d7fd19ff57f80f401191027e2fae95026e1966
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173549"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738833"
 ---
 # <a name="params-c-reference"></a>params (Riferimenti per C#)
 
-Usando la parola chiave `params`, è possibile specificare un [parametro di metodo](method-parameters.md) che usa un numero variabile di argomenti.
-
-È possibile inviare un elenco di argomenti separato da virgole del tipo specificato nella dichiarazione di parametri o una matrice di argomenti del tipo specificato. È anche possibile non inviare alcun argomento. Se non vengono inviati argomenti, la lunghezza dell'elenco `params` è zero.
+Usando la parola chiave `params`, è possibile specificare un [parametro di metodo](method-parameters.md) che usa un numero variabile di argomenti. Il tipo di parametro deve essere una matrice unidimensionale.
 
 In una dichiarazione di metodo non è possibile aggiungere altri parametri dopo la parola chiave `params` ed è consentito l'uso di una sola parola chiave `params`.
 
-Il tipo dichiarato del parametro `params` deve essere una matrice unidimensionale, come illustrato nell'esempio seguente. In caso contrario, si verifica l'errore del compilatore [CS0225](../../misc/cs0225.md).
+Se il tipo `params` dichiarato del parametro non è una matrice unidimensionale, si verifica l'errore del compilatore [CS0225.](../../misc/cs0225.md)
+
+Quando si chiama un `params` metodo con un parametro, è possibile passare:When you call a method with a parameter, you can pass in:
+
+- Elenco delimitato da virgole di argomenti del tipo degli elementi della matrice.
+- Matrice di argomenti del tipo specificato.
+- Nessun argomento. Se non vengono inviati argomenti, la lunghezza dell'elenco `params` è zero.
 
 ## <a name="example"></a>Esempio
 
@@ -38,6 +43,6 @@ Nell'esempio seguente vengono illustrati i vari modi in cui è possibile inviare
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida di riferimento a C](../index.md)
-- [Guida per programmatori C#](../../programming-guide/index.md)
-- [Parole chiave di C#](index.md)
+- [Guida alla programmazione in C](../../programming-guide/index.md)
+- [Parole chiave di C](index.md)
 - [Parametri di metodo](method-parameters.md)

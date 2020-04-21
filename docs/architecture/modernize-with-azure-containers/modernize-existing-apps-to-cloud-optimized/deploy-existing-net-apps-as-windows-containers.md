@@ -2,12 +2,12 @@
 title: Distribuire app .NET esistenti come contenitori Windows
 description: Modernizza le applicazioni .NET esistenti con i contenitori di Azure Cloud e Windows . Distribuire le app .NET esistenti come contenitori di WindowsDeploy existing .NET apps as Windows containers
 ms.date: 04/29/2018
-ms.openlocfilehash: c99c2e756320fc886203efcbf98a81e571d907e5
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 15e99e2ec0edd072a3d47d5c212ebbbf6705ecef
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80987972"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738419"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Distribuire app .NET esistenti come contenitori Windows
 
@@ -57,7 +57,7 @@ Miglioramenti significativi in termini di agilità, portabilità e controllo in 
 
 Per gli utenti che hanno familiarità con le macchine virtuali, i contenitori potrebbero sembrare notevolmente simili. Un contenitore esegue un sistema operativo, dispone di un file system ed è accessibile tramite una rete, proprio come un sistema di computer fisico o virtuale. Ciò premesso, la tecnologia e i concetti alla base dei contenitori sono molto diversi da quelli delle macchine virtuali. Dal punto di vista dello sviluppatore, un contenitore deve essere trattato più come un singolo processo. Infatti, un contenitore ha un singolo punto di ingresso per un processo.
 
-I contenitori Docker (per semplicità, contenitori ) possono essere eseguiti in modo nativo in Linux e Windows.Docker containers (for simplicity, *containers)* can run natively on Linux and Windows. Quando si eseguono contenitori normali, i contenitori di Windows possono essere eseguiti solo su host Windows (un server host o una macchina virtuale) e i contenitori Linux possono essere eseguiti solo su host Linux.When running regular containers, Windows containers can run only on Windows hosts (a host server or a VM), and Linux containers can run only on Linux hosts. Tuttavia, nelle versioni recenti di Windows Server e contenitori Hyper-V, un contenitore Linux può anche essere eseguito in modo nativo in Windows Server utilizzando la tecnologia di isolamento Hyper-V che attualmente è disponibile solo nei contenitori di Windows Server.
+I contenitori Docker (per semplicità, contenitori ) possono essere eseguiti in modo nativo in Linux e Windows.Docker containers (for simplicity, *containers)* can run natively on Linux and Windows. Quando si eseguono contenitori normali, i contenitori di Windows possono essere eseguiti solo su host Windows (un server host o una macchina virtuale) e i contenitori Linux possono essere eseguiti solo su host Linux.When running regular containers, Windows containers can run only on Windows hosts (a host server or a VM), and Linux containers can run only on Linux hosts. Tuttavia, nelle versioni recenti di Windows Server e contenitori Hyper-V, un contenitore Linux può essere eseguito in modo nativo in Windows Server utilizzando la tecnologia di isolamento Hyper-V attualmente disponibile solo nei contenitori di Windows Server.
 
 Nel prossimo futuro, gli ambienti misti che dispongono di contenitori Linux e Windows saranno possibili e persino comuni.
 

@@ -3,12 +3,12 @@ title: Cronologia di C# - Guida a C#
 description: Caratteristiche del linguaggio nelle prime versioni ed evoluzione successiva.
 author: erikdietrich
 ms.date: 04/08/2020
-ms.openlocfilehash: f321b9c742fed6fb1efaf8fbb1914c203dd6391b
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: ed9555bcef1c71964937c2bc18fedbc7da94f0db
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389102"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738146"
 ---
 # <a name="the-history-of-c"></a>Cronologia di C\#
 
@@ -17,7 +17,7 @@ Questo articolo include la cronologia di ogni versione principale del linguaggio
 > [!IMPORTANT]
 > Per alcune funzionalità, il linguaggio C# si basa sui tipi e metodi inclusi in quella che la specifica C# definisce la *libreria standard*. La piattaforma .NET rende disponibili questi tipi e metodi in numerosi pacchetti. Un esempio è l'elaborazione delle eccezioni. Ogni istruzione o espressione `throw` viene controllata per assicurarsi che l'oggetto generato derivi da <xref:System.Exception>. Analogamente, ogni istruzione `catch` viene controllata per verificare che il tipo intercettato derivi da <xref:System.Exception>. In ogni versione potrebbero essere aggiunti nuovi requisiti. Per usare le funzionalità del linguaggio più recenti in ambienti meno recenti, potrebbe essere necessario installare librerie specifiche. Queste dipendenze sono documentate nella pagina per ogni versione specifica. Le informazioni sulle [relazioni tra linguaggio e libreria](relationships-between-language-and-library.md) possono essere utili per comprendere meglio questa dipendenza.
 
-Gli strumenti di compilazione per C# considerano la versione del linguaggio principale più recente la versione del linguaggio predefinita. Potrebbero esistere versioni intermedie tra le versioni principali, descritte in dettaglio in altri articoli in questa sezione. Per usare le funzionalità più recenti in una versione a punti, è necessario [configurare la versione in lingua del compilatore](../language-reference/configure-language-version.md) e selezionare la versione. Sono state rilasciate tre versioni intermedie da C# 7.0:
+Gli strumenti di compilazione per C# considerano la versione del linguaggio principale più recente la versione del linguaggio predefinita. Potrebbero esistere versioni intermedie tra le versioni principali, descritte in dettaglio in altri articoli in questa sezione. Per usare le funzionalità più recenti in una versione a punti, è necessario [configurare la versione in lingua del compilatore](../language-reference/configure-language-version.md) e selezionare la versione. Ci sono state versioni in tre punti a partire da C .
 
 - [7.3](csharp-7-3.md):
   - C# 7.3 è disponibile a partire da [Visual Studio 2017 versione 15.7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) e [.NET Core 2.1 SDK](../../core/whats-new/dotnet-core-2-1.md).
@@ -158,7 +158,7 @@ La versione 7.0 è stata rilasciata con Visual Studio 2017. Questa versione pres
 
 - [Variabili out](./csharp-7.md#out-variables)
 - [Tuple e decostruzione](./csharp-7.md#tuples)
-- [Criteri di ricerca](./csharp-7.md#pattern-matching)
+- [Criteri](./csharp-7.md#pattern-matching)
 - [Funzioni locali](./csharp-7.md#local-functions)
 - [Membri di espressioni corpo espansi](./csharp-7.md#more-expression-bodied-members)
 - [Variabili locali e valori restituiti per riferimento](./csharp-7.md#ref-locals-and-returns)

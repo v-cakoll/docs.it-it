@@ -11,12 +11,12 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 15f5e9ccb1396277229ba935381812700f63ece8
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 617c5ec037ad7a47b43cca2c13da4a77aa682997
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121153"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739082"
 ---
 # <a name="enumeration-types-c-reference"></a>Tipi di enumerazione (riferimenti per C
 
@@ -32,7 +32,7 @@ enum Season
 }
 ```
 
-Per impostazione predefinita, i valori costanti `int`associati dei membri enum sono di tipo ; iniziano con zero e aumentano di uno seguendo l'ordine del testo della definizione. È possibile specificare in modo esplicito qualsiasi altro tipo [numerico integrale](integral-numeric-types.md) come tipo sottostante di un tipo di enumerazione. È inoltre possibile specificare in modo esplicito i valori costanti associati, come illustrato nell'esempio seguente:You also can explicitly specify the associated constant values, as the following example shows:
+Per impostazione predefinita, i valori costanti `int`associati dei membri enum sono di tipo ; iniziano con zero e aumentano di uno seguendo l'ordine del testo della definizione. È possibile specificare in modo esplicito qualsiasi altro tipo [numerico integrale](integral-numeric-types.md) come tipo sottostante di un tipo di enumerazione. È inoltre possibile specificare in modo esplicito i valori costanti associati, come illustrato nell'esempio seguente:You can also explicitly specify the associated constant values, as the following example shows:
 
 ```csharp
 enum ErrorCode : ushort

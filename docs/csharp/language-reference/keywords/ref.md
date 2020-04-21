@@ -1,18 +1,18 @@
 ---
 title: Parola chiave ref - Riferimenti per C#
-ms.date: 03/19/2020
+ms.date: 04/21/2020
 f1_keywords:
 - ref_CSharpKeyword
 - ref
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: d54d932ca96f1966ecc05a532a2468b7e16fac46
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: 494a46040d6cc33c5284449779fae89705fd29c2
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805854"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738831"
 ---
 # <a name="ref-c-reference"></a>ref (Riferimenti per C#)
 
@@ -21,7 +21,7 @@ La parola chiave `ref` indica un valore che viene passato per riferimento. Viene
 - Nella firma di un metodo e in una chiamata al metodo, per passare un argomento a un metodo per riferimento. Per altre informazioni, vedere [Passaggio di un argomento per riferimento](#passing-an-argument-by-reference).
 - Nella firma di un metodo, per restituire un valore al chiamante per riferimento. Per altre informazioni, vedere [Valori di riferimento restituiti](#reference-return-values).
 - Nel corpo di un membro, per indicare che un valore restituito di riferimento è archiviato in locale come un riferimento che il chiamante intende modificare o, in generale, che una variabile locale accede a un altro valore per riferimento. Per altre informazioni, vedere [Variabili locali ref](#ref-locals).
-- In una dichiarazione `struct` per dichiarare `ref struct` o `readonly ref struct`. Per altre informazioni, vedere [Tipi ref struct](#ref-struct-types).
+- In una dichiarazione `struct` per dichiarare `ref struct` o `readonly ref struct`. Per altre informazioni, [ `ref` ](../builtin-types/struct.md#ref-struct) vedere la sezione struct dell'articolo [Tipi di struttura.](../builtin-types/struct.md)
 
 ## <a name="passing-an-argument-by-reference"></a>Passaggio di un argomento per riferimento
 
@@ -136,23 +136,6 @@ Nell'esempio seguente viene definita una classe `Book` che ha due campi <xref:Sy
 Quando il chiamante archivia il valore restituito dal metodo `GetBookByTitle` come una variabile locale ref, le modifiche apportate al valore restituito dal chiamante vengono riflesse nell'oggetto `BookCollection`, come illustrato nell'esempio seguente.
 
 [!code-csharp[csrefKeywordsMethodParams#6](~/samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#5)]
-
-## <a name="ref-struct-types"></a>Tipi ref struct
-
-L'aggiunta del modificatore `ref` a una dichiarazione `struct` specifica che le istanze di questo tipo devono essere allocate nello stack. In altre parole, questi tipi non possono mai essere creati nell'heap come membro di un'altra classe. La principale motivazione di questa funzionalità sono stati <xref:System.Span%601> e le strutture correlate.
-
-L'obiettivo di mantenere un tipo `ref struct` come variabile allocata nello stack comporta diverse regole che il compilatore applica per tutti i tipi `ref struct`.
-
-- Non è possibile eseguire il boxing di `ref struct`. Non è possibile assegnare un tipo `ref struct` a una variabile di tipo `object`, `dynamic` o qualsiasi tipo di interfaccia.
-- I tipi `ref struct` non possono implementare interfacce.
-- Non è possibile dichiarare `ref struct` come campo membro di una classe o di un normale struct. Ciò include la dichiarazione di una proprietà implementata automaticamente, che crea un campo di supporto generato dal compilatore.
-- Non è possibile dichiarare variabili locali che sono tipi `ref struct` nei metodi asincroni. È possibile dichiararli in <xref:System.Threading.Tasks.Task>metodi <xref:System.Threading.Tasks.Task%601>sincroni che restituiscono tipi , , o `Task`simili.
-- Non è possibile dichiarare variabili locali `ref struct` negli iteratori.
-- Non è possibile acquisire variabili `ref struct` in espressioni lambda o funzioni locali.
-
-Queste restrizioni evitano l'uso accidentale di un tipo `ref struct` in modo che possa essere alzato di livello nell'heap gestito.
-
-È possibile combinare i modificatori per dichiarare uno struct come `readonly ref`. `readonly ref struct` combina i vantaggi e le restrizioni delle dichiarazioni `ref struct` e `readonly struct`.
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 

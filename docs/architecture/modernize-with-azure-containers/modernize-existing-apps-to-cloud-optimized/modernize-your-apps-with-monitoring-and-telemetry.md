@@ -2,12 +2,12 @@
 title: Modernizzare le app con monitoraggio e telemetria
 description: Modernizza le applicazioni .NET esistenti con i contenitori di Azure Cloud e Windows . Modernizza le tue app con monitoraggio e telemetria
 ms.date: 04/30/2018
-ms.openlocfilehash: 3d629e89a73c870d4b6396c6b1d0ecbe95b79ead
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a5101f150d6548406db8638904fb4ab6375edf9c
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72393859"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739174"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Modernizzare le app con monitoraggio e telemetria
 
@@ -27,7 +27,7 @@ Nella figura 4-10 viene illustrato un esempio di monitoraggio dell'applicazione 
 
 [Azure Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-overview) fa parte della soluzione di monitoraggio generale di [Microsoft Azure.](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview) È anche un servizio in [Operations Management Suite (OMS).](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview) Log Analytics monitora gli ambienti cloud e locali (OMS per locale) per mantenere la disponibilità e le prestazioni. Raccoglie i dati generati dalle risorse negli ambienti cloud e locali e da altri strumenti di monitoraggio per analizzare più origini.
 
-In relazione ai log dell'infrastruttura di Azure, Log Analytics, come servizio di Azure, invii i dati di log e metriche da altri servizi di Azure (tramite Monitoraggio di [Azure),](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor)macchine virtuali di Azure, contenitori Docker e infrastrutture cloud locali o di altro tipo. Log Analytics offre una ricerca flessibile nei log e l'analisi out-of-the-box su questi dati. Fornisce strumenti avanzati che è possibile utilizzare per analizzare i dati tra le origini, consente query complesse in tutti i log e può ricevere avvisi in modo proattivo in base alle condizioni specificate. È anche possibile raccogliere dati personalizzati nel repository centrale di Log Analytics, in cui è possibile eseguire query e visualizzarli. È inoltre possibile sfruttare le soluzioni integrate di Log Analytics per ottenere immediatamente informazioni dettagliate sulla sicurezza e le funzionalità dell'infrastruttura.
+In relazione ai log dell'infrastruttura di Azure, Log Analytics, come servizio di Azure, invii i dati di log e metriche da altri servizi di Azure (tramite Monitoraggio di [Azure),](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor)macchine virtuali di Azure, contenitori Docker e infrastrutture cloud locali o di altro tipo. Log Analytics offre una ricerca flessibile nei log e l'analisi out-of-the-box su questi dati. Fornisce strumenti avanzati che è possibile utilizzare per analizzare i dati tra le origini, consente query complesse in tutti i log e può ricevere avvisi in modo proattivo in base alle condizioni specificate. È anche possibile raccogliere dati personalizzati nel repository centrale di Log Analytics, in cui è possibile eseguire query e visualizzarli. È inoltre possibile sfruttare le soluzioni integrate log Analytics per ottenere immediatamente informazioni dettagliate sulla sicurezza e le funzionalità dell'infrastruttura.
 
 È possibile accedere a Log Analytics tramite il portale di OMS o il portale di Azure, che viene eseguito in qualsiasi browser e fornire l'accesso alle impostazioni di configurazione e a più strumenti per analizzare e agire sui dati raccolti.
 
@@ -67,7 +67,7 @@ Nella figura 4-11 sono illustrate le relazioni tra i vari host e agenti del cont
 
 <https://docs.microsoft.com/azure/azure-monitor/overview>
 
-- **Che cos'è Application Insights?**
+- **Informazioni su Azure Application Insights**
 
 <https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview>
 

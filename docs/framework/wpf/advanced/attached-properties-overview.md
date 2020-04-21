@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: 5086401f4616074d364c1d387b751116120d5969
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: b207db459776c9f8fa7ea247d01071eeb8c995cf
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389006"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739291"
 ---
 # <a name="attached-properties-overview"></a>Cenni preliminari sulle proprietà associate
 
@@ -20,11 +20,11 @@ Una proprietà associata è un concetto definito da XAML. Una proprietà associa
 
 ## <a name="prerequisites"></a>Prerequisiti<a name="prerequisites"></a>
 
-Questo argomento presuppone la conoscenza delle proprietà di dipendenza dal punto di vista di un consumer delle proprietà di dipendenza esistenti nelle classi di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], nonché la lettura dell'argomento [Panoramica sulle proprietà di dipendenza](dependency-properties-overview.md). Per seguire gli esempi in questo argomento, è inoltre necessario comprendere XAML e sapere come scrivere applicazioni WPFWPF.
+In questo articolo si presuppone che si comprendano le proprietà [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] di dipendenza dal punto di vista di un consumer di proprietà di dipendenza esistenti nelle classi e sia stato letto Cenni cenni preliminari sulle proprietà di [dipendenza](dependency-properties-overview.md). Per seguire gli esempi in questo articolo, è inoltre necessario comprendere XAML e sapere come scrivere applicazioni WPFWPF.
 
 ## <a name="why-use-attached-properties"></a>Perché utilizzare le proprietà associateWhy Use Attached Properties<a name="attached_properties_usage"></a>
 
-Una delle finalità di una proprietà associata consiste nel consentire a diversi elementi figlio di specificare valori univoci di una proprietà effettivamente definita in un elemento padre. Un'applicazione specifica di questo scenario consente agli elementi figlio di notificare all'elemento padre la modalità con cui devono essere presentati nell'[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Un esempio <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> è la proprietà. La <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> proprietà viene creata come proprietà associata perché è progettata per <xref:System.Windows.Controls.DockPanel>essere impostata su elementi contenuti all'interno di un oggetto , anziché su <xref:System.Windows.Controls.DockPanel> se stesso. La <xref:System.Windows.Controls.DockPanel> classe definisce <xref:System.Windows.DependencyProperty> il <xref:System.Windows.Controls.DockPanel.DockProperty>campo statico <xref:System.Windows.Controls.DockPanel.GetDock%2A> denominato <xref:System.Windows.Controls.DockPanel.SetDock%2A> , quindi fornisce i metodi e come funzioni di accesso pubbliche per la proprietà associata.
+Uno scopo di una proprietà associata è consentire a diversi elementi figlio di specificare valori univoci per una proprietà definita in un elemento padre. Un'applicazione specifica di questo scenario consente agli elementi figlio di notificare all'elemento padre la modalità con cui devono essere presentati nell'[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Un esempio <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> è la proprietà. La <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> proprietà viene creata come proprietà associata perché è progettata per <xref:System.Windows.Controls.DockPanel> essere <xref:System.Windows.Controls.DockPanel> impostata su elementi contenuti all'interno di un anziché su se stesso. La <xref:System.Windows.Controls.DockPanel> classe definisce <xref:System.Windows.DependencyProperty> il <xref:System.Windows.Controls.DockPanel.DockProperty>campo statico <xref:System.Windows.Controls.DockPanel.GetDock%2A> denominato <xref:System.Windows.Controls.DockPanel.SetDock%2A> , quindi fornisce i metodi e come funzioni di accesso pubbliche per la proprietà associata.
 
 ## <a name="attached-properties-in-xaml"></a>Proprietà associate in XAMLAttached Properties in XAML<a name="attached_properties_xaml"></a>
 
@@ -34,13 +34,13 @@ Di seguito è riportato un <xref:System.Windows.Controls.DockPanel.Dock%2A?displ
 
 [!code-xaml[PropertiesOvwSupport#APBasicUsage](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml#apbasicusage)]
 
-Si noti che l'utilizzo è in qualche modo simile a una proprietà statica; si fa sempre <xref:System.Windows.Controls.DockPanel> riferimento al tipo che possiede e registra la proprietà associata, anziché fare riferimento a qualsiasi istanza specificata dal nome.
+L'utilizzo è in qualche modo simile a una proprietà statica; si fa sempre <xref:System.Windows.Controls.DockPanel> riferimento al tipo che possiede e registra la proprietà associata, anziché fare riferimento a qualsiasi istanza specificata dal nome.
 
-Inoltre, dato che una proprietà associata in XAML è un attributo che viene impostato nel markup, solo l'operazione di impostazione ha una certa rilevanza. Non è possibile ottenere direttamente una proprietà in XAML, sebbene esistano alcuni meccanismi indiretti per confrontare i valori, ad esempio i trigger negli stili. Per altri dettagli, vedere [Applicazione di stili e modelli](../controls/styling-and-templating.md).
+Inoltre, dato che una proprietà associata in XAML è un attributo che viene impostato nel markup, solo l'operazione di impostazione ha una certa rilevanza. Non è possibile ottenere direttamente una proprietà in XAML, sebbene esistano alcuni meccanismi indiretti per confrontare i valori, ad esempio i trigger negli stili. Per altri dettagli, vedere [Applicazione di stili e modelli](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
 
 ### <a name="attached-property-implementation-in-wpf"></a>Implementazione delle proprietà associate in WPF
 
-In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], la maggior parte delle proprietà associate presenti nei tipi WPFWPF correlati alla presentazione dell'interfaccia utente vengono implementate come proprietà di dipendenza. Le proprietà associate sono un concetto XAML, mentre le proprietà di dipendenza sono un concetto WPFWPF. Poiché le proprietà associate WPFWPF sono proprietà di dipendenza, supportano i concetti delle proprietà di dipendenza, ad esempio i metadati della proprietà e i valori predefiniti dai metadati della proprietà.
+In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], la maggior parte delle proprietà associate correlate all'interfaccia utente nei tipi WPFWPF vengono implementate come proprietà di dipendenza. Le proprietà associate sono un concetto XAML, mentre le proprietà di dipendenza sono un concetto WPFWPF. Poiché le proprietà associate WPFWPF sono proprietà di dipendenza, supportano i concetti delle proprietà di dipendenza, ad esempio i metadati della proprietà e i valori predefiniti dai metadati della proprietà.
 
 ## <a name="how-attached-properties-are-used-by-the-owning-type"></a>Come le proprietà associate vengono utilizzate dal tipo proprietario<a name="howused"></a>
 
@@ -91,7 +91,7 @@ Come indicato in precedenza, è necessario eseguire la registrazione come propri
 
 Se la classe definisce la proprietà associata esclusivamente per l'utilizzo su <xref:System.Windows.DependencyObject>altri tipi, la classe non deve derivare da . Ma è necessario derivare da <xref:System.Windows.DependencyObject> se si segue il modello WPF globale di avere la proprietà associata anche essere una proprietà di dipendenza.
 
-Definire la proprietà associata come proprietà di `public static readonly` dipendenza <xref:System.Windows.DependencyProperty>dichiarando un campo di tipo . Per definire questo campo, utilizzare <xref:System.Windows.DependencyProperty.RegisterAttached%2A> il valore restituito del metodo. Il nome del campo deve corrispondere al nome `Property`della proprietà associata, aggiunto con la stringa , per seguire il modello WPF stabilito di denominazione dei campi di identificazione rispetto alle proprietà che rappresentano. Il provider della proprietà associata deve inoltre fornire metodi **statici Get_PropertyName_** e **Set_PropertyName_** come funzioni di accesso per la proprietà associata. in caso contrario, il sistema di proprietà non sarà in grado di utilizzare la proprietà associata.
+Definire la proprietà associata come proprietà di `public static readonly` dipendenza <xref:System.Windows.DependencyProperty>dichiarando un campo di tipo . Per definire questo campo, utilizzare <xref:System.Windows.DependencyProperty.RegisterAttached%2A> il valore restituito del metodo. Il nome del campo deve corrispondere al nome `Property`della proprietà associata, aggiunto con la stringa , per seguire il modello WPF stabilito di denominazione dei campi di identificazione rispetto alle proprietà che rappresentano. Il provider della proprietà associata deve inoltre fornire metodi **statici Get_PropertyName_** e **Set_PropertyName_** come funzioni di accesso per la proprietà associata. in caso contrario, il sistema di proprietà non è in grado di utilizzare la proprietà associata.
 
 > [!NOTE]
 > Se si ometti la funzione di accesso get della proprietà associata, l'associazione dati sulla proprietà non funzionerà negli strumenti di progettazione, ad esempio Visual Studio e Blend per Visual Studio.

@@ -1,7 +1,7 @@
 ---
 title: Operatori ed espressioni di accesso ai membri - Informazioni di riferimento su C
 description: Informazioni sugli operatori C# che è possibile usare per accedere ai membri di tipo.
-ms.date: 03/31/2020
+ms.date: 04/17/2020
 author: pkulikov
 f1_keywords:
 - ._CSharpKeyword
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 90066b1e9c219f66fc0c76423679e81aa3fa6770
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 4e213c92ae08edd8d537017e474c33200cb4c22c
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81120988"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738729"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>Operatori ed espressioni di accesso ai membri (riferimenti per C
 
@@ -155,6 +155,8 @@ if (handler != null)
     handler(…);
 }
 ```
+
+Si tratta di un modo thread-safe per `handler` garantire che venga richiamato solo un non null. Poiché le istanze dei delegati non sono modificabili, `handler` nessun thread può modificare il valore a cui fa riferimento la variabile locale. In particolare, se il codice eseguito da `PropertyChanged` un `PropertyChanged` altro `null` `handler` thread annulla la sottoscrizione all'evento e diventa before viene richiamato, il valore a `handler` cui viene fatto riferimento rimane invariato. L'operatore `?.` valuta l'operando di sinistra non più di una `null` volta, garantendo che non possa essere modificato dopo essere stato verificato come non null.
 
 ## <a name="invocation-expression-"></a>Espressione di chiamata ()
 

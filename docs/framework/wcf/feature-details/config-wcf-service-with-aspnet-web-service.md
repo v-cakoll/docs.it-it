@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-ms.openlocfilehash: 22713aba4f86fe493ba3d16ef09c2a71b6d55fe0
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: ddd7e8c95701532010b54e5136a33d37d139f6a4
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389789"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739236"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>Procedura: configurare un servizio WCF che interagisca con client di servizi Web ASP.NET
 
 Per configurare un endpoint del servizio Windows Communication Foundation (WCF) per <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> l'interoperabilità con i client del servizio Web ASP.NET, usare il tipo come tipo di associazione per l'endpoint del servizio.  
   
- È possibile, se lo si desidera, attivare nell'associazione il supporto per HTTPS e l'autenticazione del client a livello di trasporto. ASP.NET client del servizio Web non supportano <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> la codifica dei messaggi MTOM, pertanto la proprietà deve essere lasciata come valore predefinito, ovvero <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>. I client di servizi Web ASP.NET non supportano WS-Security, pertanto <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> deve essere impostato su <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.  
+ È possibile, se lo si desidera, attivare nell'associazione il supporto per HTTPS e l'autenticazione del client a livello di trasporto. ASP.NET client del servizio Web non supportano <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> la codifica dei messaggi MTOM, pertanto la proprietà deve essere lasciata come valore predefinito, ovvero <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>. ASP.NET i client del servizio Web non <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> supportano <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>WS-Security, pertanto deve essere impostato su .  
   
  Per rendere disponibili i metadati per un servizio WCF per ASP.NET strumenti di generazione di proxy del servizio Web, ovvero strumento del linguaggio di descrizione dei [servizi Web (Wsdl.exe),](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v%3dvs.100))strumento di [individuazione dei servizi Web (Disco.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cy2a3ybs(v=vs.100))e aggiunta di **riferimenti Web** in Visual Studio, è necessario esporre un endpoint dei metadati HTTP/GET.  
   

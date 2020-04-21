@@ -2,12 +2,12 @@
 title: Comando dotnet
 description: Informazioni sul comando dotnet (il driver generico per l'interfaccia della riga di comando di .NET Core) e sul relativo utilizzo.
 ms.date: 02/13/2020
-ms.openlocfilehash: d700f35f3c977524ff3857da99519882eb0136e9
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 6a08297499d955db44e342dc82fed25b7b9b8171
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463278"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739072"
 ---
 # <a name="dotnet-command"></a>Comando dotnet
 
@@ -264,7 +264,7 @@ dotnet myapp.dll
 
 - `DOTNET_NOLOGO`
 
-  Specifica se i messaggi di benvenuto e di telemetria di .NET Core vengono visualizzati alla prima esecuzione. Impostare `true` su per disattivare `true` `1`l'audio di questi messaggi (valori `yes` o accettati) o su `false` consentito (valori `false`, `0`o `no` accettati ). Se non è impostato, il valore predefinito è `false` e i messaggi verranno visualizzati alla prima esecuzione. Si noti che questo flag `DOTNET_CLI_TELEMETRY_OPTOUT` non ha alcun effetto sui dati di telemetria (vedere per la disattivazione dell'invio di dati di telemetria).
+  Specifica se i messaggi di benvenuto e di telemetria di .NET Core vengono visualizzati alla prima esecuzione. Impostare `true` su per disattivare `true` `1`l'audio di questi messaggi (valori `yes` o accettati) o su `false` consentito (valori `false`, `0`o `no` accettati ). Se non è impostato, il valore predefinito è `false` e i messaggi verranno visualizzati alla prima esecuzione. Questo flag non ha alcun `DOTNET_CLI_TELEMETRY_OPTOUT` effetto sui dati di telemetria (vedere per rifiutare esplicitamente l'invio di dati di telemetria).
 
 - `DOTNET_CLI_TELEMETRY_OPTOUT`
 

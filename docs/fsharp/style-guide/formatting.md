@@ -2,19 +2,19 @@
 title: Linee guida per la formattazione del codice F#
 description: Informazioni sulle linee guida per la formattazione del codice F.
 ms.date: 11/04/2019
-ms.openlocfilehash: 2086b515b8ec9b69a44e2e65ca06fb320670dff2
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: b8be70dd29a04e71614308164e541b99a1724305
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278938"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739550"
 ---
 # <a name="f-code-formatting-guidelines"></a>Linee guida per la formattazione del codice F#
 
 In questo articolo vengono fornite linee guida per la formattazione del codice in modo che il codice F .NET sia:This article offers guidelines for how to format your code so that your F's code is:
 
-* Generalmente considerato come più leggibile
-* È in conformità con le convenzioni applicate dagli strumenti di formattazione in Visual Studio e altri editor
+* Più leggibile
+* In conformità con le convenzioni applicate dagli strumenti di formattazione in Visual Studio e altri editor
 * Simile ad altro codice online
 
 Queste linee guida sono basate su [una guida completa alle convenzioni](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) di formattazione di F , di [Anh-Dung Phan](https://github.com/dungpa).
@@ -27,7 +27,7 @@ Per impostazione predefinita, in F, per impostazione predefinita viene utilizzat
 
 Quando è richiesto il rientro, è necessario utilizzare spazi, non tabulazioni. È necessario almeno uno spazio. L'organizzazione può creare standard di codifica per specificare il numero di spazi da utilizzare per il rientro; due, tre o quattro spazi di rientro a ogni livello in cui si verifica il rientro è tipico.
 
-**Si consigliano 4 spazi per rientro.**
+**Sono consigliati quattro spazi per rientro.**
 
 Detto questo, l'indentazione dei programmi è una questione soggettiva. Le variazioni sono OK, ma la prima regola da seguire è la *coerenza del rientro*. Scegliere uno stile di rientro generalmente accettato e utilizzarlo sistematicamente in tutta la codebase.
 
@@ -43,7 +43,7 @@ Utilizzare sempre spazi vuoti intorno alle espressioni aritmetiche binarie:Alway
 let subtractThenAdd x = x - 1 + 3
 ```
 
-Gli `-` operatori unari devono sempre avere il valore che stanno negando immediatamente seguire:
+Gli `-` operatori unari devono sempre essere immediatamente seguiti dal valore che stanno negando:
 
 ```fsharp
 // OK
@@ -100,7 +100,7 @@ let myFun (a: decimal) b c = a + b + c
 let myFunBad (a:decimal)(b)c = a + b + c
 ```
 
-### <a name="place-parameters-on-a-new-line-for-very-long-member-definitions"></a>Posizionare i parametri in una nuova riga per definizioni di membri molto lunghe
+### <a name="place-parameters-on-a-new-line-for-long-member-definitions"></a>Inserire i parametri in una nuova riga per le definizioni dei membri lunghi
 
 Se si dispone di una definizione di membro molto lunga, posizionare i parametri in nuove righe e applicare loro un rientro di un ambito.
 
@@ -180,7 +180,7 @@ let f x = x + 1 // Increment by one.
 
 ## <a name="naming-conventions"></a>Convenzioni di denominazione
 
-### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>Usare camelCase per funzioni e valori associati a classi, espressioni e modelliUse camelCase for class-bound, expression-bound and pattern-bound values and functions
+### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>Usare camelCase per funzioni e valori associati a classi, espressioni e modelliUse camelCase for class-bound, expression-bound, and pattern-bound values and functions
 
 È comune e accettato lo stile di F , utilizzare camelCase per tutti i nomi associati come variabili locali o in corrispondenze di modelli e definizioni di funzione.
 
@@ -195,7 +195,7 @@ let addIAndJ I J = I+J
 let AddIAndJ i j = i + j
 ```
 
-Anche le funzioni associate localmente nelle classi devono usare camelCase.Locally-bound functions in classes should also use camelCase.
+Anche le funzioni associate localmente nelle classi devono usare camelCase.Locally bound functions in classes should also use camelCase.
 
 ```fsharp
 type MyClass() =
@@ -287,7 +287,7 @@ Anche gli spazi dei nomi,`.dll` le eccezioni, gli eventi e i nomi di progetto de
 
 Storicamente, alcune librerie di F , hanno usato caratteri di sottolineatura nei nomi. Tuttavia, questo non è più ampiamente accettato, in parte perché si contrae con le convenzioni di denominazione .NET. Detto questo, alcuni programmatori F , utilizzare sottolineature pesantemente, in parte per motivi storici, e la tolleranza e il rispetto è importante. Tuttavia, essere consapevoli del fatto che lo stile è spesso antipatico da altri che hanno una scelta su se usarlo.
 
-Alcune eccezioni includono l'interoperabilità con i componenti nativi, dove i caratteri di sottolineatura sono molto comuni.
+Un'eccezione include l'interoperabilità con i componenti nativi, dove i caratteri di sottolineatura sono comuni.
 
 ### <a name="use-standard-f-operators"></a>Usare gli operatori standard di F
 
@@ -325,7 +325,7 @@ Per tutti gli altri tipi, utilizzare la forma del prefisso.
 
 ## <a name="formatting-tuples"></a>Formattazione di tuple
 
-La creazione di un'istanza di una tupla deve essere racchiusa tra parentesi e le virgole di delimitazione all'interno devono essere seguite da un singolo spazio, ad esempio: `(1, 2)`, `(x, y, z)`.
+Una creazione di un'istanza di tupla deve essere racchiusa tra parentesi e `(1, 2)` `(x, y, z)`le virgole di delimitazione al suo interno devono essere seguite da un singolo spazio, ad esempio: , .
 
 È comunemente accettato per omettere le parentesi nel criterio di ricerca delle tuple:It is commonly accepted to omit parentheses in pattern matching of tuples:
 
@@ -354,7 +354,7 @@ In sintesi, preferire le istanze di tupla tra parentesi, ma quando si usano tupl
 
 ## <a name="formatting-discriminated-union-declarations"></a>Formattazione delle dichiarazioni di unione discriminate
 
-Rientro `|` nella definizione del tipo di 4 spazi:
+Applicare `|` un rientro nella definizione del tipo di quattro spazi:
 
 ```fsharp
 // OK
@@ -393,7 +393,7 @@ let tree1 =
 
 ## <a name="formatting-record-declarations"></a>Formattazione delle dichiarazioni di record
 
-Applicare `{` un rientro nella definizione del tipo di 4 spazi e iniziare l'elenco dei campi sulla stessa riga:
+Applicare `{` un rientro nella definizione del tipo di quattro spazi e iniziare l'elenco dei campi sulla stessa riga:
 
 ```fsharp
 // OK
@@ -508,7 +508,7 @@ let rainbow2 =
         Lackeys = ["Zippy"; "George"; "Bungle"] }
 ```
 
-E come con le linee guida di record, si consiglia di dedicare righe separate per le parentesi graffe e far rientrare un ambito a destra con l'espressione. Si noti che in alcuni casi speciali, ad esempio il wrapping di un valore con un optional senza parentesi, potrebbe essere necessario mantenere una parentesi graffa su una riga:Note that in some special cases, such as wrapping a value with an optional without parentheses, you may need to keep a brace on one line:
+E come con le linee guida di record, si consiglia di dedicare righe separate per le parentesi graffe e far rientrare un ambito a destra con l'espressione. In alcuni casi speciali, ad esempio il wrapping di un valore con un optional senza parentesi, potrebbe essere necessario mantenere una parentesi graffa su una riga:In some special cases, such as wrapping a value with an optional without parentheses, you may need to keep a brace on one line:
 
 ```fsharp
 type S = { F1: int; F2: string }
@@ -691,7 +691,7 @@ lambdaList
     | Var v -> 1)
 ```
 
-Criteri di ricerca `let` nelle `let rec` funzioni definite da o devono `let`essere `function` rientrate di 4 spazi dopo l'avvio di , anche se viene utilizzata la parola chiave:
+Criteri di ricerca `let` nelle `let rec` funzioni definite da o devono `let`essere `function` rientrate di quattro spazi dopo l'avvio di , anche se viene utilizzata la parola chiave:
 
 ```fsharp
 let rec sizeLambda acc = function
@@ -824,7 +824,7 @@ module A2 =
 
 ### <a name="formatting-object-expressions-and-interfaces"></a>Formattazione di espressioni e interfacce di oggetti
 
-Le espressioni oggetto e le interfacce devono `member` essere allineate nello stesso modo con il rientro dopo 4 spazi.
+Le espressioni oggetto e le interfacce devono `member` essere allineate nello stesso modo con il rientro dopo quattro spazi.
 
 ```fsharp
 let comparer =

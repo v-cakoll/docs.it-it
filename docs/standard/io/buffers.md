@@ -7,12 +7,12 @@ helpviewer_keywords:
 - I/O [.NET], buffers
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: f939164cd56b2fb2feeeb171236b0e1171327e19
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d113def0182dc6a5bcea6c18b2d0e4b475946e31
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160118"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739614"
 ---
 # <a name="work-with-buffers-in-net"></a>Utilizzare i buffer in .NET
 
@@ -105,7 +105,7 @@ Esistono alcuni approcci che possono essere utilizzati per elaborare i dati in s
 - Copiare `ReadOnlySequence<T>` l'oggetto in una matrice contigua e trattarlo come un singolo buffer:Copy the to a contiguo array and treat it as a single buffer:
   - Se la dimensione `ReadOnlySequence<T>` di è piccola, può essere ragionevole copiare i dati in un buffer allocato nello stack utilizzando l'operatore [stackalloc.](../../csharp/language-reference/operators/stackalloc.md)
   - Copiare `ReadOnlySequence<T>` l'oggetto in <xref:System.Buffers.ArrayPool%601.Shared%2A?displayProperty=nameWithType>una matrice in pool utilizzando .
-  - Utilizzare [`ReadOnlySequence<T>.ToArray()`](xref:System.Buffers.BuffersExtensions.ToArray%2A). Questa operazione non è consigliata nei percorsi attivi in quanto alloca un nuovo `T[]` nell'heap.
+  - Usare [`ReadOnlySequence<T>.ToArray()`](xref:System.Buffers.BuffersExtensions.ToArray%2A). Questa operazione non è consigliata nei percorsi attivi in quanto alloca un nuovo `T[]` nell'heap.
 
 Negli esempi seguenti vengono illustrati `ReadOnlySequence<byte>`alcuni casi comuni per l'elaborazione:
 
@@ -191,5 +191,5 @@ Nell'esempio riportato di seguito viene analizzata una lunghezza intera `ReadOnl
 ### <a name="sequencereadert-common-problems"></a>SequenceReader\<\> T problemi comuni
 
 - Poiché `SequenceReader<T>` è una struttura modificabile, deve essere sempre passata per [riferimento](../../csharp/language-reference/keywords/ref.md).
-- `SequenceReader<T>`è uno [struct di riferimento,](../../csharp/language-reference/keywords/ref.md#ref-struct-types) pertanto può essere utilizzato solo nei metodi sincroni e non può essere archiviato nei campi. Per ulteriori informazioni, consultate Scrivere codice [C, sicuro ed efficiente.](../../csharp/write-safe-efficient-code.md)
+- `SequenceReader<T>`è uno [struct di riferimento,](../../csharp/language-reference/builtin-types/struct.md#ref-struct) pertanto può essere utilizzato solo nei metodi sincroni e non può essere archiviato nei campi. Per ulteriori informazioni, consultate Scrivere codice [C, sicuro ed efficiente.](../../csharp/write-safe-efficient-code.md)
 - `SequenceReader<T>`è ottimizzato per l'uso come lettore forward-only. `Rewind`è destinato a backup di piccole dimensioni che `Read`non `Peek`possono `IsNext` essere risolti utilizzando altre API , e , .

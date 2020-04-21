@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: dbe4f4e95c2b99f1be47885e39d51db81ba3a97d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 188d909fd33b14755d9b121953b1fa434ecf536d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173705"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738810"
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in (Riferimenti per C#)
 
@@ -27,7 +27,7 @@ A partire dalla versione 7.3 di `Current` C, se la `T` proprietà dell'enumerato
 
 A partire dalla versione 8.0 di C, l'operatore `await` può essere applicato all'istruzione `foreach` quando il tipo di raccolta implementa l'interfaccia. <xref:System.Collections.Generic.IAsyncEnumerable%601> Ogni iterazione del ciclo può essere sospesa mentre l'elemento successivo viene recuperato in modo asincrono. Per impostazione predefinita, gli elementi di flusso vengono elaborati nel contesto acquisito. Se si desidera disabilitare l'acquisizione del contesto, utilizzare il <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType> metodo di estensione. Per ulteriori informazioni sui contesti di sincronizzazione e sull'acquisizione del contesto corrente, vedere l'articolo [sull'utilizzo del modello asincrono basato su attività](../../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).
 
-In un punto qualsiasi all'interno del blocco dell'istruzione `foreach` è possibile uscire dal ciclo usando l'istruzione [break](break.md) o passare all'iterazione successiva nel ciclo con l'istruzione [continue](continue.md). Si può uscire da un ciclo `foreach` anche usando l'istruzione [goto](goto.md), [return](return.md) o [throw](throw.md).
+In un punto qualsiasi all'interno del blocco dell'istruzione `foreach` è possibile uscire dal ciclo usando l'istruzione [break](break.md) o passare all'iterazione successiva nel ciclo con l'istruzione [continue](continue.md). È inoltre possibile `foreach` uscire da un ciclo mediante le istruzioni [goto](goto.md), [return](return.md)o [throw](throw.md) .
 
 Se l'istruzione `foreach` viene applicata a `null`, viene generata una <xref:System.NullReferenceException>. Se la raccolta `foreach` di origine dell'istruzione `foreach` è vuota, il corpo del ciclo non viene eseguito e ignorato.
 
@@ -58,7 +58,7 @@ Per altre informazioni, vedere la sezione [L'istruzione foreach](~/_csharplang/s
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida di riferimento a C](../index.md)
-- [Guida per programmatori C#](../../programming-guide/index.md)
-- [Parole chiave di C#](index.md)
+- [Guida alla programmazione in C](../../programming-guide/index.md)
+- [Parole chiave di C](index.md)
 - [Utilizzo di foreach con array](../../programming-guide/arrays/using-foreach-with-arrays.md)
 - [per istruzione](for.md)

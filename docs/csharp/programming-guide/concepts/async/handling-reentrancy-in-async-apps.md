@@ -2,12 +2,12 @@
 title: Gestione della reentrancy nelle app asincrone (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: 67fbbd294ffe6219b58065f974543b2dd483a92c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d46a87ed2200dc92b8e3d23be80306a31a01e501
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77451863"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738309"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Gestione della reentrancy nelle app asincrone (C#)
 
@@ -33,7 +33,7 @@ Quando si include codice asincrono nell'applicazione, è consigliabile prevedere
 > [!NOTE]
 > Transport Layer Security (TLS) versione 1.2 è ora la versione minima da usare nello sviluppo dell'app. Se l'app è destinata a una versione di .NET Framework precedente alla 4.7, vedere il seguente articolo per [le procedure consigliate TLS (Transport Layer Security) con .NET Framework.](../../../../framework/network-programming/tls.md)
 
-## <a name="BKMK_RecognizingReentrancy"></a>Riconoscere la rientranza
+## <a name="recognizing-reentrancy"></a><a name="BKMK_RecognizingReentrancy"></a>Riconoscere la rientranza
 
 Nell'esempio riportato in questo argomento viene scelto un pulsante **Start** per avviare un'app asincrona che scarica una serie di siti Web e calcola il numero totale di byte scaricati. Una versione sincrona dell'esempio avrebbe risposto allo stesso modo indipendentemente dal numero di volte che un utente sceglie il pulsante perché, dopo la prima volta, il thread dell'interfaccia utente ignora tali eventi fino al termine dell'esecuzione dell'applicazione. In un'applicazione asincrona, tuttavia, il thread dell'interfaccia utente continua a rispondere e potrebbe essere possibile riattivare l'operazione asincrona prima del suo completamento.
 
@@ -91,7 +91,7 @@ TOTAL bytes returned:  890591
 
 È possibile esaminare il codice che genera l'output andando alla fine di questo argomento. È possibile provare il codice scaricando la soluzione nel computer locale ed eseguendo il progetto WebsiteDownload oppure usando il codice alla fine di questo argomento per creare un progetto personalizzato. Per altre informazioni e istruzioni, vedere [Revisione ed esecuzione dell'app di esempio](#BKMD_SettingUpTheExample).
 
-## <a name="BKMK_HandlingReentrancy"></a> Gestione della reentrancy
+## <a name="handling-reentrancy"></a><a name="BKMK_HandlingReentrancy"></a> Gestione della reentrancy
 
 È possibile gestire la reentrancy in diversi modi, a seconda delle operazioni che si desidera che l'applicazione esegua. In questo argomento vengono illustrati gli esempi seguenti:
 
@@ -107,11 +107,11 @@ TOTAL bytes returned:  890591
 
   Consentire l'esecuzione asincrona di tutte le operazioni richieste, ma coordinare la visualizzazione dell'output in modo che vengano visualizzati i risultati di ogni operazione tutti insieme e ordinati.
 
-### <a name="BKMK_DisableTheStartButton"></a>Disattivare il pulsante Start
+### <a name="disable-the-start-button"></a><a name="BKMK_DisableTheStartButton"></a>Disattivare il pulsante Start
 
 È possibile bloccare il pulsante **Start** durante l'esecuzione di un'operazione disabilitando il pulsante nella parte superiore del gestore eventi `StartButton_Click`. È possibile riabilitare il pulsante dall'interno un blocco `finally` al termine dell'operazione in modo che gli utenti possano eseguire nuovamente l'applicazione.
 
-Per configurare questo scenario, apportare le modifiche seguenti al codice di base fornito in [Revisione ed esecuzione dell'app di esempio](#BKMD_SettingUpTheExample). È anche possibile scaricare l'app finita da [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) (Esempio di progetti asincroni: reentrancy in applicazioni desktop .NET). Il nome del progetto è DisableStartButton.
+Per configurare questo scenario, apportare le modifiche seguenti al codice di base fornito in [Revisione ed esecuzione dell'app di esempio](#BKMD_SettingUpTheExample). È anche possibile scaricare l'app finita da [Esempi asincroni: Rientranza nelle app desktop .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Il nome del progetto è DisableStartButton.
 
 ```csharp
 private async void StartButton_Click(object sender, RoutedEventArgs e)
@@ -140,13 +140,13 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
 
 In seguito alle modifiche, il pulsante non risponde mentre `AccessTheWebAsync` sta scaricando i siti Web. Pertanto, il processo non potrà essere riattivato.
 
-### <a name="BKMK_CancelAndRestart"></a> Annullare e riavviare l'operazione
+### <a name="cancel-and-restart-the-operation"></a><a name="BKMK_CancelAndRestart"></a> Annullare e riavviare l'operazione
 
 Anziché disabilitare il pulsante **Start**, è possibile tenere attivo il pulsante ma, se l'utente sceglie di nuovo il pulsante, è necessario annullare l'operazione in esecuzione e consentire la continuazione dell'operazione richiesta più di recente.
 
 Per altre informazioni sull'annullamento, vedere [Ottimizzazione dell'app asincrona (C#)](./fine-tuning-your-async-application.md).
 
-Per configurare questo scenario, apportare le modifiche seguenti al codice di base fornito in [Revisione ed esecuzione dell'app di esempio](#BKMD_SettingUpTheExample). È anche possibile scaricare l'app finita da [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) (Esempio di progetti asincroni: reentrancy in applicazioni desktop .NET). Il nome del progetto è CancelAndRestart.
+Per configurare questo scenario, apportare le modifiche seguenti al codice di base fornito in [Revisione ed esecuzione dell'app di esempio](#BKMD_SettingUpTheExample). È anche possibile scaricare l'app finita da [Esempi asincroni: Rientranza nelle app desktop .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Il nome del progetto è CancelAndRestart.
 
 1. Dichiarare una variabile <xref:System.Threading.CancellationTokenSource>, `cts`, che sia compresa nell'ambito per tutti i metodi.
 
@@ -301,13 +301,13 @@ TOTAL bytes returned:  890591
 
 Per eliminare gli elenchi parziali, rimuovere la prima riga di codice in `StartButton_Click` per cancellare la casella di testo ogni volta che l'utente riavvia l'operazione.
 
-### <a name="BKMK_RunMultipleOperations"></a>Esecuzione di più operazioni e accodamento dell'outputRun Multiple Operations and Queue the Output
+### <a name="run-multiple-operations-and-queue-the-output"></a><a name="BKMK_RunMultipleOperations"></a>Esecuzione di più operazioni e accodamento dell'outputRun Multiple Operations and Queue the Output
 
 Il terzo esempio è il più complesso in quanto l'app avvia un'altra operazione asincrona ogni volta che l'utente sceglie il pulsante **Start** e tutte le operazioni vengono eseguite fino al completamento. Tutte le operazioni richieste scaricano i siti Web dall'elenco in modo asincrono, ma l'output delle operazioni viene visualizzato in sequenza. In altre parole, l'attività di download effettiva è di tipo interleaved, come illustrato nell'output in [Riconoscimento della reentrancy](#BKMK_RecognizingReentrancy), ma l'elenco dei risultati per ogni gruppo viene visualizzato separatamente.
 
 Le operazioni condividono un codice <xref:System.Threading.Tasks.Task> globale, `pendingWork`, che funge da gatekeeper per il processo di visualizzazione.
 
-Per configurare questo scenario, apportare le modifiche seguenti al codice di base fornito in [Revisione ed esecuzione dell'app di esempio](#BKMD_SettingUpTheExample). È anche possibile scaricare l'app finita da [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) (Esempio di progetti asincroni: reentrancy in applicazioni desktop .NET). Il nome del progetto è QueueResults.
+Per configurare questo scenario, apportare le modifiche seguenti al codice di base fornito in [Revisione ed esecuzione dell'app di esempio](#BKMD_SettingUpTheExample). È anche possibile scaricare l'app finita da [Esempi asincroni: Rientranza nelle app desktop .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Il nome del progetto è QueueResults.
 
 Nell'output seguente viene illustrato il risultato restituito quando l'utente sceglie il pulsante **Start** una sola volta. L'etichetta A indica che il risultato fa riferimento alla prima volta che il pulsante **Start** viene scelto. I numeri indicano l'ordine degli URL nell'elenco delle destinazioni di download.
 
@@ -547,14 +547,14 @@ L'output mostra i modelli seguenti.
 
     Dopo che un gruppo entra in `StartButton_Click`, l'operazione non completa un'espressione await fino a quando l'operazione non entra in `FinishOneGroupAsync`. Pertanto, nessuna operazione può assumere il controllo durante l'esecuzione di tale segmento di codice.
 
-## <a name="BKMD_SettingUpTheExample"></a>Revisione ed esecuzione dell'app di esempio
+## <a name="reviewing-and-running-the-example-app"></a><a name="BKMD_SettingUpTheExample"></a>Revisione ed esecuzione dell'app di esempio
 
 Per comprendere meglio l'applicazione di esempio, è possibile scaricarla, compilarla manualmente o esaminare il codice alla fine di questo argomento senza implementare l'applicazione.
 
 > [!NOTE]
 > Per eseguire l'esempio come applicazione dektop WPF (Windows Presentation Foundation), è necessario che nel computer siano installati Visual Studio 2012 o versioni successive e .NET Framework 4.5 o versioni successive.
 
-### <a name="BKMK_DownloadingTheApp"></a> Download dell'app
+### <a name="downloading-the-app"></a><a name="BKMK_DownloadingTheApp"></a> Download dell'app
 
 1. Scaricare il file compresso da [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) (Esempio di progetti asincroni: reentrancy in applicazioni desktop .NET).
 
@@ -568,7 +568,7 @@ Per comprendere meglio l'applicazione di esempio, è possibile scaricarla, compi
 
 6. Premere CTRL+F5 per compilare ed eseguire il progetto.
 
-### <a name="BKMK_BuildingTheApp"></a> Compilazione dell'app
+### <a name="building-the-app"></a><a name="BKMK_BuildingTheApp"></a> Compilazione dell'app
 
 Nella sezione seguente viene illustrato il codice per compilare l'esempio come app WPF.
 

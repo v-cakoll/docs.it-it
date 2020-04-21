@@ -2,18 +2,18 @@
 title: Interpolazione di stringhe - Esercitazione su C#
 description: Questa esercitazione mostra come usare la funzionalità di interpolazione di stringhe di C# per includere risultati di espressioni formattate in una stringa più grande.
 ms.date: 10/23/2018
-ms.openlocfilehash: 593f3a77370da73dfd5f090be98112327b86b1f7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 22637895f241585bac4909479f225bf3cb581614
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75346787"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738276"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>Usare l'interpolazione di stringhe per la costruzione di stringhe formattate
 
 Questa esercitazione descrive come usare l'[interpolazione di stringhe](../../language-reference/tokens/interpolated.md) in C# per inserire i valori in un'unica stringa di risultato. Verranno descritte le procedure per scrivere codice C# e visualizzare i risultati della compilazione ed esecuzione del codice. L'esercitazione contiene una serie di lezioni che descrivono come inserire valori in una stringa e formattare questi valori in modi diversi.
 
-Questa esercitazione prevede la presenza di un computer da usare per lo sviluppo. L'esercitazione di .NET [Hello World in 10 minuti](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) contiene istruzioni per la configurazione dell'ambiente di sviluppo locale in Windows, Linux o macOS. È anche possibile completare la [versione interattiva](interpolated-strings.yml) di questa esercitazione nel browser.
+Questa esercitazione prevede la presenza di un computer da usare per lo sviluppo. L'esercitazione di .NET [Hello World in 10 minuti](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) contiene istruzioni per la configurazione dell'ambiente di sviluppo locale in Windows, Linux o macOS. È inoltre possibile completare la [versione interattiva](interpolated-strings.yml) di questa esercitazione nel browser.
 
 ## <a name="create-an-interpolated-string"></a>Creare una stringa interpolata
 

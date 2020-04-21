@@ -10,12 +10,12 @@ helpviewer_keywords:
 - string interpolation [C#]
 - interpolated string [C#]
 author: pkulikov
-ms.openlocfilehash: 97bc606569b83bd14cd3b32495deb8e529747e9c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2b95fa5fe5cecd4825e8c17a33f7795c6c9480c6
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76980119"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738367"
 ---
 # <a name="---string-interpolation-c-reference"></a>- interpolazione di stringhe (riferimenti in C
 
@@ -74,7 +74,7 @@ Da una stringa interpolata vengono effettuate tre conversioni implicite:
       - Un metodo <xref:System.FormattableString.Invariant%2A> che produce una stringa risultato per <xref:System.Globalization.CultureInfo.InvariantCulture>.
       - Un metodo <xref:System.FormattableString.ToString(System.IFormatProvider)> che produce una stringa risultato per impostazioni cultura specifiche.
 
-    È anche possibile usare il metodo <xref:System.FormattableString.ToString(System.IFormatProvider)> per fornire un'implementazione definita dall'utente dell'interfaccia <xref:System.IFormatProvider> che supporta la formattazione personalizzata. Per altre informazioni, vedere la sezione [Formattazione personalizzata con ICustomFormatter](../../../standard/base-types/formatting-types.md#custom-formatting-with-icustomformatter) dell'articolo [Formattazione dei tipi in .NET.](../../../standard/base-types/formatting-types.md)
+    È inoltre possibile <xref:System.FormattableString.ToString(System.IFormatProvider)> utilizzare il metodo per fornire <xref:System.IFormatProvider> un'implementazione definita dall'utente dell'interfaccia che supporta la formattazione personalizzata. Per altre informazioni, vedere la sezione [Formattazione personalizzata con ICustomFormatter](../../../standard/base-types/formatting-types.md#custom-formatting-with-icustomformatter) dell'articolo [Formattazione dei tipi in .NET.](../../../standard/base-types/formatting-types.md)
 
 1. Conversione di una stringa interpolata in un'istanza di <xref:System.IFormattable> che consente anche di creare più stringhe risultato con contenuto associato a impostazioni cultura specifiche da una singola istanza di <xref:System.IFormattable>.
 
@@ -84,7 +84,7 @@ L'esempio seguente usa la conversione implicita a <xref:System.FormattableString
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-Se non si ha familiarità con l'interpolazione di stringhe, vedere l'esercitazione interattiva [Interpolazione di stringhe in C#](../../tutorials/exploration/interpolated-strings.yml). È anche possibile verificare un'altra esercitazione di [interpolazione di stringhe in C#](../../tutorials/string-interpolation.md) che illustra come usare le stringhe interpolate per produrre stringhe formattate.
+Se non si ha familiarità con l'interpolazione di stringhe, vedere l'esercitazione interattiva [Interpolazione di stringhe in C#](../../tutorials/exploration/interpolated-strings.yml). È anche possibile controllare un'altra interpolazione di [stringhe nell'esercitazione di C ,](../../tutorials/string-interpolation.md) che illustra come usare le stringhe interpolate per produrre stringhe formattate.
 
 ## <a name="compilation-of-interpolated-strings"></a>Compilazione di stringhe interpolate
 
@@ -99,7 +99,7 @@ Per altre informazioni, vedere la sezione [Stringhe interpolate](~/_csharplang/s
 ## <a name="see-also"></a>Vedere anche
 
 - [Informazioni di riferimento su C#](../index.md)
-- [Caratteri speciali di C](index.md)
+- [Caratteri speciali di C#](index.md)
 - [Stringhe](../../programming-guide/strings/index.md)
 - [Stringhe di formato numerico standard](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Formattazione composita](../../../standard/base-types/composite-formatting.md)

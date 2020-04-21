@@ -6,12 +6,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 2962de53eab132ad02aaf679fdd6037bd24fa714
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 0035f7d8aa862b4bd1b09a6f122a89786a6e295b
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463889"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738258"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Vincoli sui parametri di tipo (Guida per programmatori C#)
 
@@ -19,7 +19,7 @@ I vincoli indicano al compilatore quali funzionalità deve usare un argomento ti
 
 |Vincolo|Descrizione|
 |----------------|-----------------|
-|`where T : struct`|L'argomento di tipo deve essere un tipo di valore non nullable. Per informazioni sui tipi di valore nullable, vedere [Tipi di valore nullable](../../language-reference/builtin-types/nullable-value-types.md). Poiché tutti i tipi di valore `struct` hanno `new()` un costruttore senza parametri `new()` accessibile, il vincolo implica il vincolo e non può essere combinato con il vincolo. Non è inoltre possibile `struct` combinare `unmanaged` il vincolo con il vincolo.|
+|`where T : struct`|L'argomento di tipo deve essere un tipo di valore non nullable. Per informazioni sui tipi di valore nullable, vedere [Tipi di valore nullable](../../language-reference/builtin-types/nullable-value-types.md). Poiché tutti i tipi di valore `struct` hanno `new()` un costruttore senza parametri `new()` accessibile, il vincolo implica il vincolo e non può essere combinato con il vincolo. Non è possibile `struct` combinare il `unmanaged` vincolo con il vincolo.|
 |`where T : class`|L'argomento tipo deve essere un tipo riferimento. Questo vincolo si applica anche a qualsiasi tipo di classe, interfaccia, delegato o matrice. In un contesto nullable in C `T` , 8.0 o versione successiva, deve essere un tipo di riferimento non nullable. |
 |`where T : class?`|L'argomento di tipo deve essere un tipo di riferimento, nullable o non nullable. Questo vincolo si applica anche a qualsiasi tipo di classe, interfaccia, delegato o matrice.|
 |`where T : notnull`|L'argomento di tipo deve essere un tipo non nullable. L'argomento può essere un tipo di riferimento non nullable in C , 8.0 o versioni successive, o un tipo di valore non nullable. |

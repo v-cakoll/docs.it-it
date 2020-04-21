@@ -2,12 +2,12 @@
 title: Comando dotnet test
 description: Il comando dotnet test viene usato per eseguire unit test in un determinato progetto.
 ms.date: 02/27/2020
-ms.openlocfilehash: f9df03cda01bdaf649394a58e96903e764193338
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 2eebcbe2e4a1660da4ffa4ea9a68190c8443463a
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463381"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739095"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -51,7 +51,7 @@ I progetti di test specificano l'applicazione di esecuzione dei test usando un n
 
 ## <a name="options"></a>Opzioni
 
-- **`a|--test-adapter-path <PATH_TO_ADAPTER>`**
+- **`-a|--test-adapter-path <PATH_TO_ADAPTER>`**
 
   Usa gli adattatori di test personalizzati dal percorso specificato nell'esecuzione del test.
 
@@ -59,19 +59,19 @@ I progetti di test specificano l'applicazione di esecuzione dei test usando un n
 
   Esegue i test in modalità di segnalazione degli errori. Questa opzione è utile per isolare i test problematici che causano l'arresto anomalo dell'host di test. Crea un file di output nella directory corrente denominato *Sequence.xml* che acquisisce l'ordine di esecuzione dei test prima dell'arresto anomalo.
 
-- **`c|--configuration <CONFIGURATION>`**
+- **`-c|--configuration <CONFIGURATION>`**
 
   Definisce la configurazione di compilazione. Il valore predefinito è `Debug`, ma la configurazione del progetto può eseguire l'override di questa impostazione predefinita dell'SDK.
 
-- **`-collect <DATA_COLLECTOR_FRIENDLY_NAME>`**
+- **`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`**
 
   Abilita l'agente di raccolta dati per l'esecuzione dei test. Per altre informazioni, vedere [Monitoraggio e analisi di esecuzioni dei test](https://aka.ms/vstest-collect).
 
-- **`d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
+- **`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
   Abilita la modalità di diagnostica per la piattaforma di test e scrive messaggi di diagnostica nel file specificato.
 
-- **`f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   Cerca i file binari di test per un [framework](../../standard/frameworks.md)specifico.
 
@@ -79,7 +79,7 @@ I progetti di test specificano l'applicazione di esecuzione dei test usando un n
 
   Filtra i test nel progetto corrente usando l'espressione specificata. Per altre informazioni, vedere la sezione [Dettagli dell'opzione filter](#filter-option-details). Per altre informazioni ed esempi sull'uso del filtro degli unit test selettivi, vedere [Esecuzione di unit test selettivi](../testing/selective-unit-tests.md).
 
-- **`h|--help`**
+- **`-h|--help`**
 
   Stampa una breve guida per il comando.
 
@@ -87,7 +87,7 @@ I progetti di test specificano l'applicazione di esecuzione dei test usando un n
 
   Consente al comando di arrestarsi e attendere l'input o l'azione dell'utente, ad esempio il completamento dell'autenticazione. Disponibile a partire da .NET Core 3.0 SDK.
 
-- **`l|--logger <LOGGER_URI/FRIENDLY_NAME>`**
+- **`-l|--logger <LOGGER_URI/FRIENDLY_NAME>`**
 
   Specifica un logger per i risultati di test. A differenza di `-l "console;v=d"` MSBuild, dotnet test non accetta `-l "console;verbosity=detailed"`abbreviazioni: anziché utilizzare .
 

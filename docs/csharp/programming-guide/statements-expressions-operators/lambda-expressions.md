@@ -8,12 +8,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: c549b9fcc91401aed846afd39e656b60e16afb74
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 44d6ed9ac6e1c3c4d08bbd69ca808d2e740f0c4e
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937597"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738323"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Espressioni lambda (Guida per programmatori C#)
 
@@ -37,7 +37,7 @@ Qualsiasi espressione lambda può essere convertita in tipo [delegato](../../lan
 
 [!code-csharp-interactive[lambda is delegate](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Delegate)]
 
-Un'espressione lambda può essere convertita anche in tipo [albero delle espressioni](../concepts/expression-trees/index.md), come mostrato nell'esempio seguente:
+Le espressioni lambda dell'espressione possono anche essere convertite nei tipi di [struttura ad albero dell'espressione,](../concepts/expression-trees/index.md) come illustrato nell'esempio seguente:Expression lambdas can also be converted to the expression tree types, as the following example shows:
 
 [!code-csharp-interactive[lambda is expression tree](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#ExpressionTree)]
 
@@ -227,7 +227,7 @@ Per altre informazioni, vedere la sezione [Espressioni di funzioni anonime](~/_c
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../index.md)
+- [Guida alla programmazione in C](../index.md)
 - [LINQ (Language-Integrated Query)](../concepts/linq/index.md)
 - [Alberi delle espressioni](../concepts/expression-trees/index.md)
 - [Funzioni locali rispetto alle espressioni lambdaLocal functions compared to lambda expressions](../../local-functions-vs-lambdas.md)

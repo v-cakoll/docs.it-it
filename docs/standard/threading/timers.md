@@ -12,12 +12,12 @@ helpviewer_keywords:
 - timers, about timers
 ms.assetid: 7091500d-be18-499b-a942-95366ce185e5
 author: pkulikov
-ms.openlocfilehash: d7d1fa13b02fe7425fa9b4cb81ba20297a23fe4b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d463eb2a8d598dc5ba9b2fb51a6fc08c563e6fe4
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73128946"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739493"
 ---
 # <a name="timers"></a>Timer
 
@@ -35,7 +35,7 @@ ms.locfileid: "73128946"
 
 ## <a name="the-systemthreadingtimer-class"></a>Classe System.Threading.Timer
 
-La classe <xref:System.Threading.Timer?displayProperty=nameWithType> consente di chiamare in modo continuativo un delegato a determinati intervalli di tempo. È inoltre possibile usare questa classe per pianificare una singola chiamata a un delegato in un intervallo di tempo specifico. Il delegato viene eseguito su un thread <xref:System.Threading.ThreadPool>.
+La classe <xref:System.Threading.Timer?displayProperty=nameWithType> consente di chiamare in modo continuativo un delegato a determinati intervalli di tempo. È inoltre possibile utilizzare questa classe per pianificare una singola chiamata a un delegato in un intervallo di tempo specificato. Il delegato viene eseguito su un thread <xref:System.Threading.ThreadPool>.
 
 Quando si crea un oggetto <xref:System.Threading.Timer?displayProperty=nameWithType>, si specifica un delegato <xref:System.Threading.TimerCallback> che definisce il metodo di callback, un oggetto di stato facoltativo passato al callback, il tempo di attesa prima della prima chiamata di callback e l'intervallo di tempo tra le chiamate di callback. Per annullare un timer in sospeso, chiamare il metodo <xref:System.Threading.Timer.Dispose%2A?displayProperty=nameWithType>.
 

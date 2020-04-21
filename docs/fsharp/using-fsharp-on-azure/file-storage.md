@@ -3,18 +3,18 @@ title: Introduzione all'archiviazione file di Azure con F#
 description: Archiviare i dati dei file nel cloud con Archiviazione file di Azure e montare la condivisione di file nel cloud da una macchina virtuale Azure (VM) o da un'applicazione locale che esegue Windows.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 2088442e05ba36b388a3324942ebbf8c7eb263dd
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 1b38ee53f2f73f7b7f4ee12f712f487cb726d41e
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607467"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739599"
 ---
 # <a name="get-started-with-azure-file-storage-using-f"></a>Introduzione all'archiviazione dei file di Azure tramite FGet started with Azure File storage using F\#
 
 Archiviazione file di Azure offre condivisioni file nel cloud usando il [protocollo Server Message Block (SMB)](https://msdn.microsoft.com/library/windows/desktop/aa365233.aspx)standard. Sono supportati sia SMB 2.1 che SMB 3.0. Con Archiviazione file di Azure si può eseguire la migrazione ad Azure delle applicazioni legacy basate su condivisioni file velocemente e senza costose riscritture. Le applicazioni in esecuzione in macchine virtuali di Azure o in servizi cloud oppure in client locali possono montare una condivisione file nel cloud, esattamente come un'applicazione desktop monta una tipica condivisione SMB. Non ci sono limiti per i componenti delle applicazioni che possono montare e accedere contemporaneamente alla condivisione di archiviazione file.
 
-Per una panoramica concettuale dell'archiviazione dei file, vedere [la guida .NET per l'archiviazione](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-files)dei file .
+Per una panoramica concettuale dell'archiviazione dei file, vedere [la guida .NET per l'archiviazione dei file](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-files).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -127,13 +127,13 @@ In questo caso, creare un file e copiarlo in un BLOB all'interno dello stesso ac
 
 Analisi archiviazione di Azure supporta le metriche per l'archiviazione dei file. Grazie ai dati di metrica, è possibile monitorare le richieste e diagnosticare i problemi.
 
-È possibile abilitare le metriche per l'archiviazione dei file dal portale di Azure oppure è possibile farlo da F , in questo modo:You can enable metrics for File storage from the [Azure Portal,](https://portal.azure.com)or you can do it from F .
+È possibile abilitare le metriche per l'archiviazione dei file dal portale di [Azure](https://portal.azure.com)oppure eseguire questa operazione da F .
 
 [!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L126-L140)]
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Vedere i collegamenti seguenti per ulteriori informazioni sull'archiviazione file di Azure.
+Per altre informazioni sull'archiviazione dei file di Azure, vedere questi collegamenti.
 
 ### <a name="conceptual-articles-and-videos"></a>Articoli concettuali e video
 
@@ -146,7 +146,7 @@ Vedere i collegamenti seguenti per ulteriori informazioni sull'archiviazione fil
 - [Come usare AzCopy con Archiviazione di Microsoft Azure](https://docs.microsoft.com/azure/storage/storage-use-azcopy)
 - [Caricare, scaricare ed elencare BLOB con l'interfaccia della riga di comando di Azure](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-cli#create-and-manage-file-shares)
 
-### <a name="reference"></a>Informazioni di riferimento
+### <a name="reference"></a>Riferimento
 
 - [Informazioni di riferimento sulla libreria client di archiviazione per .NET](https://msdn.microsoft.com/library/azure/mt347887.aspx)
 - [Riferimento API REST del servizio File](/rest/api/storageservices/fileservices/File-Service-REST-API)
