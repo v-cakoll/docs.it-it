@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 5a4f1d4c0c2ddd0d3967e15090d8f8c1ac42f83e
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: bc293c359af5744eebc63c0d0f94b4cebe3d450a
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121410"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "82021247"
 ---
 # <a name="type-testing-operators-and-cast-expression-c-reference"></a>Operatori di test dei tipi ed espressione cast (riferimenti per C
 
@@ -123,7 +123,7 @@ L'operatore `typeof` ottiene l'istanza <xref:System.Type?displayProperty=nameWit
 
 [!code-csharp-interactive[typeof operator](snippets/TypeTestingAndConversionOperators.cs#TypeOf)]
 
-È possibile usare l'operatore `typeof` anche con tipi generici non associati. Il nome di un tipo generico non associato deve contenere il numero appropriato di virgole, ovvero una in meno rispetto al numero di parametri del tipo. L'esempio seguente illustra l'uso dell'operatore `typeof` con un tipo generico non associato:
+È inoltre possibile `typeof` utilizzare l'operatore con tipi generici non associati. Il nome di un tipo generico non associato deve contenere il numero appropriato di virgole, ovvero una in meno rispetto al numero di parametri del tipo. L'esempio seguente illustra l'uso dell'operatore `typeof` con un tipo generico non associato:
 
 [!code-csharp-interactive[typeof unbound generic](snippets/TypeTestingAndConversionOperators.cs#TypeOfUnboundGeneric)]
 

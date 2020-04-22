@@ -3,12 +3,12 @@ title: Panoramica dello strumento WCF svcutil
 description: Panoramica dello strumento Microsoft WCF dotnet-svcutil che aggiunge funzionalità per i progetti .NET Core e ASP.NET Core, come lo strumento WCF svcutil per i progetti .NET Framework.
 author: mlacouture
 ms.date: 02/22/2019
-ms.openlocfilehash: 0607c73935f319f2cc0d8d9f92d96a4c71c54edf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1f500c9355112183a135c2b639807c7cd62fbbfc
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76920940"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021263"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>Strumento WCF dotnet-svcutil per .NET Core
 
@@ -21,7 +21,7 @@ Lo strumento **dotnet-svcutil** è un'opzione alternativa al provider di servizi
 > [!IMPORTANT]
 > Si consiglia di fare riferimento solo a servizi provenienti da un'origine attendibile. L'aggiunta di riferimenti da un'origine non attendibile può compromettere la sicurezza.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 <!-- markdownlint-disable MD025 -->
 
@@ -128,7 +128,7 @@ Il file generato viene salvato come _HelloSvcutil/ServiceReference/Reference.cs_
 4. Modificare il metodo `Configure` per richiamare il servizio Web. Per eseguire questa operazione, creare un'istanza della classe che eredita da `ClientBase` e chiamare il metodo sull'oggetto client:
 
     ```csharp
-    public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
         if (env.IsDevelopment())
         {

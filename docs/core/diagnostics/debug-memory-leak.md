@@ -2,13 +2,13 @@
 title: Esercitazione sul debug di una perdita di memoriaDebug a memory leak tutorial
 description: Informazioni su come eseguire il debug di una perdita di memoria in .NET Core.Learn how to debug a memory leak in .NET Core.
 ms.topic: tutorial
-ms.date: 12/17/2019
-ms.openlocfilehash: 014945394f87edd02c94f7c3b28043bd07470d8b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/20/2020
+ms.openlocfilehash: d47992bab9dab64cf7f88ff679eef407dd891b5a
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76737738"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021363"
 ---
 # <a name="tutorial-debug-a-memory-leak-in-net-core"></a>Esercitazione: Eseguire il debug di una perdita di memoria in .NET CoreTutorial: Debug a memory leak in .NET Core
 
@@ -26,7 +26,7 @@ In questa esercitazione si apprenderà come:
 > - Generare un file dump.
 > - Analizzare l'utilizzo della memoria utilizzando il file di dump.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 L'esercitazione usa:
 
@@ -137,7 +137,7 @@ In questa esercitazione è ora completata [l'obiettivo](https://docs.microsoft.c
 
 ### <a name="analyze-the-core-dump"></a>Analizzare il dump principale
 
-Ora che si dispone di un dump principale generato, utilizzare lo strumento dotnet-dump) per analizzare il dump:Now that you have a core dump generated, use the [dotnet-dump)](dotnet-dump.md) tool to analyze the dump:
+Ora che si dispone di un dump principale generato, utilizzare lo strumento [dotnet-dump](dotnet-dump.md) per analizzare il dump:
 
 ```dotnetcli
 dotnet-dump analyze core_20190430_185145
@@ -146,7 +146,7 @@ dotnet-dump analyze core_20190430_185145
 Dove `core_20190430_185145` è il nome del dump principale che si desidera analizzare.
 
 > [!NOTE]
-> Se viene visualizzato un errore che si lamenta che non è possibile *trovare libdl.so,* potrebbe essere necessario installare il pacchetto *libc6-dev.* Per altre informazioni, vedere [Prerequisiti per .NET Core in Linux](../linux-prerequisites.md).
+> Se viene visualizzato un errore che si lamenta che non è possibile *trovare libdl.so,* potrebbe essere necessario installare il pacchetto *libc6-dev.* Per altre informazioni, vedere [Prerequisiti per .NET Core in Linux](../install/dependencies.md?pivots=os-linux).
 
 Verrà visualizzato un messaggio di richiesta in cui è possibile immettere i comandi SOS. In genere, la prima cosa che si desidera esaminare è lo stato complessivo dell'heap gestito:
 

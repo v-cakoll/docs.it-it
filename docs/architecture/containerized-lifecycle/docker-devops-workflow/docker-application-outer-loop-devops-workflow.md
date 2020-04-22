@@ -2,12 +2,12 @@
 title: Passaggi nel flusso di lavoro DevOps del ciclo esterno per un'applicazione Docker
 description: Informazioni sui passaggi del "ciclo esterno" del flusso di lavoro DevOps
 ms.date: 02/15/2019
-ms.openlocfilehash: fdda1b6a2deb08ed97867583fcc8048d4dba880c
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 44bd73bf88a743e5350e422d3ea000ca075f7383
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988973"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "82021293"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Passaggi nel flusso di lavoro DevOps del ciclo esterno per un'applicazione Docker
 
@@ -31,7 +31,7 @@ Sebbene il controllo del codice sorgente (SCC) e la gestione del codice sorgente
 
 Le immagini locali generate dagli sviluppatori dovrebbero essere usate solo dagli sviluppatori durante i test nei propri computer. Per questa ragione è fondamentale avere la pipeline DevOps attivata dal codice di controllo del codice sorgente.
 
-Azure DevOps Services e Team Foundation Server supportano Git e il controllo della versione di Team Foundation. È possibile scegliere una delle due opzioni e usarla per un'esperienza Microsoft end-to-end. Tuttavia, è anche possibile gestire il codice in repository esterni, ad esempio GitHub, repository Git locali o Subversion, ed essere ancora in grado di connettersi e ottenere il codice come punto di partenza della pipeline di integrazione continua DevOps.
+Azure DevOps Services e Team Foundation Server supportano Git e il controllo della versione di Team Foundation. È possibile scegliere una delle due opzioni e usarla per un'esperienza Microsoft end-to-end. Tuttavia, è anche possibile gestire il codice in repository esterni (ad esempio GitHub, repository Git locali o Subversion) ed essere comunque in grado di connettersi a esso e ottenere il codice come punto di partenza per la pipeline di CI DevOps.
 
 ## <a name="step-3-build-ci-integrate-and-test-with-azure-devops-services-and-docker"></a>Passaggio 3: Creare, CI, integrare e testare con i servizi DevOps di Azure e DockerStep 3: Build, CI, Integrate, and Test with Azure DevOps Services and Docker
 
@@ -184,7 +184,7 @@ Dal punto di vista della distribuzione continua, in particolare di Azure DevOps 
 
 **Figura 5-9**. Distribuzione di applicazioni distribuite nel servizio contenitore
 
-Inizialmente, durante la distribuzione in determinati cluster o agenti di orchestrazione, venivano in genere usati script e meccanismi di distribuzione specifici per ogni agente di orchestrazione (Kubernetes e Service Fabric hanno meccanismi di distribuzione diversi) anziché lo strumento `docker-compose` più semplice e facile da usare basato sul file di definizione `docker-compose.yml`. Tuttavia, grazie all'attività Distribuisci Docker servizi DevOps di Azure, illustrata nella Figura 5-10, `docker-compose.yml` è ora anche possibile distribuire agli agenti `docker-compose.yml` di orchestrazione supportati usando semplicemente il file familiare perché lo strumento esegue automaticamente tale "traduzione" (dal file al formato richiesto dall'agente di orchestrazione).
+Inizialmente, durante la distribuzione in determinati cluster o agenti di orchestrazione, venivano in genere usati script e meccanismi di distribuzione specifici per ogni agente di orchestrazione (Kubernetes e Service Fabric hanno meccanismi di distribuzione diversi) anziché lo strumento `docker-compose` più semplice e facile da usare basato sul file di definizione `docker-compose.yml`. Tuttavia, grazie all'attività Distribuisci Docker servizi DevOps di Azure, illustrata nella Figura 5-10, `docker-compose.yml` ora è anche possibile distribuire agli agenti `docker-compose.yml` di orchestrazione supportati usando semplicemente il file familiare perché lo strumento esegue automaticamente tale "traduzione" (dal file al formato richiesto dall'agente di orchestrazione).
 
 ![Screenshot che mostra l'attività Distribuisci a Kubernetes.](./media/docker-application-outer-loop-devops-workflow/add-deploy-to-kubernetes-task.png)
 

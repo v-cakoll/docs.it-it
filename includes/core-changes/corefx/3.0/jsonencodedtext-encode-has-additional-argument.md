@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f5ae4669c85ae4f5d57d88ab55f6e1c758a625a6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2afe5ae80c2d7feca89737b767a6335950d04416
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79147588"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021606"
 ---
 ### <a name="jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument"></a>I metodi JsonEncodedText.Encode hanno un argomento JavaScriptEncoder aggiuntivo
 
@@ -52,7 +52,7 @@ Si tratta solo di una modifica di interruzione binaria; una ricompilazione su .N
 
 #### <a name="category"></a>Category
 
-CoreFx
+Librerie .NET di base
 
 #### <a name="affected-apis"></a>API interessate
 

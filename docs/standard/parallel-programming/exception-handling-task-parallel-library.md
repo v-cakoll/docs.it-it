@@ -1,6 +1,6 @@
 ---
 title: Gestione delle eccezioni (Task Parallel Library)
-ms.date: 03/30/2017
+ms.date: 04/20/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, exceptions
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
-ms.openlocfilehash: 12777a5f34b8aadcc80977b8796fc2cd53c626a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aa6d4b706eb11921ffd419402bcf4cf059a29b11
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73134257"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021507"
 ---
 # <a name="exception-handling-task-parallel-library"></a>Gestione delle eccezioni (Task Parallel Library)
 
@@ -89,7 +89,14 @@ Se un'attività viene completata con lo stato <xref:System.Threading.Tasks.TaskS
 [!code-csharp[TPL_Exceptions#27](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/exceptionprop21.cs#27)]
 [!code-vb[TPL_Exceptions#27](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/exceptionprop21.vb#27)]
 
-In un'applicazione reale, il delegato della continuazione potrebbe registrare informazioni dettagliate sull'eccezione ed eventualmente generare nuove attività per recuperare dall'eccezione.
+In un'applicazione significativa, il delegato di continuazione potrebbe registrare informazioni dettagliate sull'eccezione ed eventualmente generare nuove attività per il ripristino dall'eccezione. Se un'attività si verifica un errore, le espressioni seguenti generano l'eccezione:If a task faults, the following expressions throw the exception:
+
+- `await task`
+- `task.Wait()`
+- `task.Result`
+- `task.GetAwaiter().GetResult()`
+
+Utilizzare [`try-catch`](../../csharp/language-reference/keywords/try-catch.md) un'istruzione per gestire e osservare le eccezioni generate. In alternativa, osservare l'eccezione accedendo alla <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> proprietà.
 
 ## <a name="unobservedtaskexception-event"></a>Evento UnobservedTaskException
 

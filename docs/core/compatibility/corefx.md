@@ -1,17 +1,17 @@
 ---
 title: Modifiche di rilievo della libreria di classi base
-description: Elenca le modifiche di rilievo in .NET CoreFx, la libreria di classi base.
+description: Vengono elencate le modifiche di rilievo nelle librerie .NET principali.
 ms.date: 09/20/2019
-ms.openlocfilehash: 56a3cf4f4c00a79752d5a98bb086bb9f8c0614b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8cf90ca2bc8736101c1cb8d327a93d100148937b
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79147575"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021836"
 ---
-# <a name="corefx-breaking-changes"></a>Modifiche di rilievo CoreFx
+# <a name="core-net-libraries-breaking-changes"></a>Modifiche delle librerie .NET di base
 
-CoreFx provides the primitives and other general types used by .NET Core.
+The core .NET libraries provide the primitives and other general types used by .NET Core.
 
 In questa pagina sono documentate le seguenti modifiche di rilievo:
 

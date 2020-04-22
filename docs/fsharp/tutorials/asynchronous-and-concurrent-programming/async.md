@@ -2,12 +2,12 @@
 title: Programmazione asincrona
 description: Informazioni su come F è un supporto pulito per l'asincronia basato su un modello di programmazione a livello di linguaggio derivato dai concetti di programmazione funzionale di base.
 ms.date: 12/17/2018
-ms.openlocfilehash: 9b2e3057c126d84474c21fde653da5bbee32938a
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 0a7d400c9778e30d6b25798239f12b7b2b0e3d82
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81608036"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021526"
 ---
 # <a name="async-programming-in-f"></a>Programmazione asincrona in FAsync programming in F\#
 
@@ -16,7 +16,7 @@ La programmazione asincrona è un meccanismo essenziale per le applicazioni mode
 - La presentazione di un processo server in grado di soddisfare un numero significativo di richieste in ingresso simultanee, riducendo al minimo le risorse di sistema occupate durante l'elaborazione delle richieste attende gli input da sistemi o servizi esterni a tale processo
 - Mantenimento di un'interfaccia utente reattiva o di un thread principale durante lo stato di avanzamento simultaneo del lavoro in background
 
-Anche se il lavoro in background spesso comporta l'utilizzo di più thread, è importante considerare i concetti di asincronia e multithreading separatamente. In realtà, sono preoccupazioni separate, e una non implica l'altra. Ciò che segue in questo articolo descrive questo in modo più dettagliato.
+Anche se il lavoro in background spesso comporta l'utilizzo di più thread, è importante considerare i concetti di asincronia e multithreading separatamente. In realtà, sono preoccupazioni separate, e una non implica l'altra. In questo articolo vengono descritti i concetti separati in modo più dettagliato.
 
 ## <a name="asynchrony-defined"></a>Asincronità definita
 
@@ -26,7 +26,7 @@ Il punto precedente - che l'asincronia è indipendente dall'utilizzo di più thr
 - Parallelismo; quando più calcoli o più parti di un singolo calcolo vengono eseguite esattamente nello stesso momento.
 - Asincronia; quando uno o più calcoli possono essere eseguiti separatamente dal flusso principale del programma.
 
-Tutti e tre sono concetti ortogonali, ma possono essere facilmente confusi, soprattutto quando vengono utilizzati insieme. Ad esempio, potrebbe essere necessario eseguire più calcoli asincroni in parallelo. Ciò non significa che il parallelismo o l'asincronia si implichino l'un l'altro.
+Tutti e tre sono concetti ortogonali, ma possono essere facilmente confusi, soprattutto quando vengono utilizzati insieme. Ad esempio, potrebbe essere necessario eseguire più calcoli asincroni in parallelo. Questa relazione non significa che il parallelismo o l'asincronia si impondano l'un l'altro.
 
 Se si considera l'etimologia della parola "asincrono", ci sono due pezzi coinvolti:
 
@@ -35,7 +35,7 @@ Se si considera l'etimologia della parola "asincrono", ci sono due pezzi coinvol
 
 Quando si mettono insieme questi due termini, si noterà che "asincrono" significa "non allo stesso tempo". L'operazione è terminata. Non vi è alcuna implicazione di concorrenza o parallelismo in questa definizione. Questo vale anche nella pratica.
 
-In termini pratici, i calcoli asincroni in F , sono pianificati per l'esecuzione indipendentemente dal flusso di programma principale. Ciò non implica la concorrenza o il parallelismo, né implica che un calcolo avvenga sempre in background. Infatti, i calcoli asincroni possono anche essere eseguiti in modo sincrono, a seconda della natura del calcolo e dell'ambiente in cui è in esecuzione il calcolo.
+In termini pratici, i calcoli asincroni in F , sono pianificati per l'esecuzione indipendentemente dal flusso di programma principale. Questa esecuzione indipendente non implica concorrenza o parallelismo, né implica che un calcolo avvenga sempre in background. Infatti, i calcoli asincroni possono anche essere eseguiti in modo sincrono, a seconda della natura del calcolo e dell'ambiente in cui è in esecuzione il calcolo.
 
 L'asporto principale che si dovrebbe avere è che i calcoli asincroni sono indipendenti dal flusso di programma principale. Sebbene esistano poche garanzie su quando o come viene eseguito un calcolo asincrono, esistono alcuni approcci per orchestrarli e pianificarli. Nella parte restante di questo articolo vengono esaminati i concetti di base per l'asincronia di F e viene illustrato come usare i tipi, le funzioni e le espressioni incorporate in F.
 
@@ -136,7 +136,7 @@ Questa pianificazione `printTotalFileBytes` verrà pianificata per l'esecuzione 
 
 ## <a name="important-async-module-functions"></a>Importanti funzioni del modulo asincrono
 
-Quando si scrive codice asincrono in F , in genere si interagisce con un framework che gestisce la pianificazione dei calcoli per l'utente. Tuttavia, questo non è sempre il caso, quindi è bene imparare le varie funzioni di partenza per pianificare il lavoro asincrono.
+Quando si scrive codice asincrono in F, in genere si interagisce con un framework che gestisce la pianificazione dei calcoli per l'utente. Tuttavia, questo non è sempre il caso, quindi è bene imparare le varie funzioni di partenza per pianificare il lavoro asincrono.
 
 Poiché i calcoli asincroni F , sono una _specifica_ di lavoro anziché una rappresentazione del lavoro che è già in esecuzione, devono essere avviati in modo esplicito con una funzione di avvio. Esistono molte funzioni di [avvio asincrone](https://msdn.microsoft.com/library/ee370232.aspx) che sono utili in contesti diversi. Nella sezione seguente vengono descritte alcune delle funzioni di avvio più comuni.
 
@@ -167,7 +167,7 @@ Esegue un calcolo asincrono, avviato immediatamente dal thread del sistema opera
 Firma:
 
 ```fsharp
-computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
+computation: Async<unit> * cancellationToken: ?CancellationToken -> unit
 ```
 
 Quando usare:
@@ -185,7 +185,7 @@ Esegue un calcolo nel pool di thread. Restituisce <xref:System.Threading.Tasks.T
 Firma:
 
 ```fsharp
-computation: Async<'T> - taskCreationOptions: ?TaskCreationOptions - cancellationToken: ?CancellationToken -> Task<'T>
+computation: Async<'T> * taskCreationOptions: ?TaskCreationOptions * cancellationToken: ?CancellationToken -> Task<'T>
 ```
 
 Quando usare:
@@ -203,7 +203,7 @@ Pianifica una sequenza di calcoli asincroni da eseguire in parallelo. Il grado d
 Firma:
 
 ```fsharp
-computations: seq<Async<'T>> - ?maxDegreesOfParallelism: int -> Async<'T[]>
+computations: seq<Async<'T>> * ?maxDegreesOfParallelism: int -> Async<'T[]>
 ```
 
 Quando usarlo:
@@ -214,7 +214,7 @@ Quando usarlo:
 A cosa fare attenzione:
 
 - È possibile accedere alla matrice di valori risultante solo dopo aver completato tutti i calcoli.
-- I calcoli verranno eseguiti comunque finiscano per essere pianificati. Ciò significa che non è possibile fare affidamento sul loro ordine di esecuzione.
+- I calcoli verranno eseguiti ogni volta che finiscono per essere pianificati. Questo comportamento significa che non è possibile fare affidamento sul loro ordine di esecuzione.
 
 ### <a name="asyncsequential"></a>Async.Sequential
 
@@ -242,7 +242,7 @@ Restituisce un calcolo asincrono <xref:System.Threading.Tasks.Task%601> che atte
 Firma:
 
 ```fsharp
-task: Task<'T>  -> Async<'T>
+task: Task<'T> -> Async<'T>
 ```
 
 Quando usare:
@@ -251,7 +251,7 @@ Quando usare:
 
 A cosa fare attenzione:
 
-- Le eccezioni <xref:System.AggregateException> vengono incapsulate in seguito alla convenzione della libreria Task Parallel Library e questo è diverso dal modo in cui il asincrono di F , in genere espone le eccezioni.
+- Le eccezioni <xref:System.AggregateException> vengono incapsulate in seguito alla convenzione della libreria Task Parallel Library e questo comportamento è diverso dal modo in cui il asincrono di F , in genere espone le eccezioni.
 
 ### <a name="asynccatch"></a>Async.Catch
 
@@ -287,7 +287,7 @@ Quando usare:
 
 A cosa fare attenzione:
 
-- Se è necessario utilizzare questo `Async.Start` perché si desidera `Async<unit>`utilizzare o un'altra funzione che richiede , considerare se scartare il risultato è bene fare. L'eliminazione dei risultati solo per adattarsi a una firma del tipo non deve essere in genere eseguita.
+- Se è `Async.Ignore` necessario utilizzare perché `Async.Start` si desidera `Async<unit>`utilizzare o un'altra funzione che richiede , considerare se l'eliminazione del risultato è corretta. Evitare di eliminare i risultati solo per adattarsi a una firma del tipo.
 
 ### <a name="asyncrunsynchronously"></a>Async.RunSynchronously
 
@@ -296,7 +296,7 @@ Esegue un calcolo asincrono e attende il risultato sul thread chiamante. Questa 
 Firma:
 
 ```fsharp
-computation: Async<'T> - timeout: ?int - cancellationToken: ?CancellationToken -> 'T
+computation: Async<'T> * timeout: ?int * cancellationToken: ?CancellationToken -> 'T
 ```
 
 Quando usarlo:
@@ -310,12 +310,12 @@ A cosa fare attenzione:
 
 ### <a name="asyncstart"></a>Async.Start
 
-Avvia un calcolo asincrono `unit`nel pool di thread che restituisce . Non aspetta il suo risultato. I calcoli annidati iniziati con `Async.Start` vengono avviati completamente indipendentemente dal calcolo padre che li ha chiamati. La loro durata non è legata ad alcun calcolo padre. Se il calcolo padre viene annullato, non viene annullato alcun calcolo figlio.
+Avvia un calcolo asincrono `unit`nel pool di thread che restituisce . Non aspetta il suo risultato. I calcoli annidati iniziati con `Async.Start` vengono avviati indipendentemente dal calcolo padre che li ha chiamati. La loro durata non è legata ad alcun calcolo padre. Se il calcolo padre viene annullato, non viene annullato alcun calcolo figlio.
 
 Firma:
 
 ```fsharp
-computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
+computation: Async<unit> * cancellationToken: ?CancellationToken -> unit
 ```
 
 Utilizzare solo quando:
@@ -328,7 +328,7 @@ Utilizzare solo quando:
 A cosa fare attenzione:
 
 - Le eccezioni generate dai `Async.Start` calcoli avviati con non vengono propagate al chiamante. Lo stack di chiamate verrà completamente rimosso.
-- Qualsiasi lavoro effettivo (ad `printfn`esempio `Async.Start` la chiamata ) avviato con non causerà l'effetto si verifica sul thread principale dell'esecuzione di un programma.
+- Qualsiasi lavoro (ad `printfn`esempio `Async.Start` la chiamata ) avviato con non causerà l'effetto si verifica sul thread principale di esecuzione di un programma.
 
 ## <a name="interoperate-with-net"></a>Interoperabilità con .NET
 

@@ -5,12 +5,12 @@ ms.date: 04/02/2020
 author: natke
 ms.author: nakersha
 ms.custom: how-to
-ms.openlocfilehash: 0b870542706c065295d48205b7780e568e267ab6
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: c427439d0950bfea38f1d6d11af84216e0f1965f
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888302"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021849"
 ---
 # <a name="install-extra-mlnet-dependencies"></a>Installare dipendenze ML.NET aggiuntiveInstall extra ML.NET dependencies
 
@@ -87,7 +87,7 @@ Non sono necessarie procedure di installazione aggiuntive. La libreria viene ins
 5. Aggiungere questo percorso al percorso della libreria di caricamento:Add this location to the load library path:
 
     ```bash
-    sudo ldconfig /opt/intel/compilers_and_libraries_2020.0.166/linux/compiler/lib/intel64_li
+    sudo ldconfig /opt/intel/compilers_and_libraries_2020.0.166/linux/compiler/lib/intel64_lin
     ```
 
 ### <a name="mac"></a>Mac

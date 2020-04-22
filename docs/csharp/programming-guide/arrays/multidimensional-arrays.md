@@ -5,12 +5,12 @@ helpviewer_keywords:
 - arrays [C#], multidimensional
 - multidimensional arrays [C#]
 ms.assetid: 020ce02e-7dff-4273-8e53-bf0b33747232
-ms.openlocfilehash: eb49f4386b6106328f1613b5ec70794ac26fc9b7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ee5fae36ff844fadad7e1b6a766020319b67a83c
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75715042"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021752"
 ---
 # <a name="multidimensional-arrays-c-programming-guide"></a>Matrici multidimensionali (Guida per programmatori C#)
 
@@ -28,7 +28,7 @@ Le matrici possono avere più di una dimensione. La dichiarazione seguente, ad e
   
  [!code-csharp[csProgGuideArrays#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#13)]  
   
- È possibile anche inizializzare la matrice senza specificarne il numero di dimensioni.  
+ È inoltre possibile inizializzare la matrice senza specificare il rango.  
   
  [!code-csharp[csProgGuideArrays#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#14)]  
   
@@ -50,7 +50,7 @@ Le matrici possono avere più di una dimensione. La dichiarazione seguente, ad e
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../index.md)
+- [Guida alla programmazione in C](../index.md)
 - [Matrici](./index.md)
 - [Matrici unidimensionali](./single-dimensional-arrays.md)
-- [Matrici frastagliate](./jagged-arrays.md)
+- [Matrici irregolari](./jagged-arrays.md)

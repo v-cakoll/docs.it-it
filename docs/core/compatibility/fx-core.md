@@ -3,12 +3,12 @@ title: Modifiche di rilievo - .NET Framework a .NET CoreBreaking changes - .NET 
 titleSuffix: ''
 description: Vengono elencate le modifiche di rilievo da .NET Framework a .NET Core.
 ms.date: 12/18/2019
-ms.openlocfilehash: f712be14d7debc4b3008f8459e6ee925754b25f0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ef16132c8dcffbe9bcfbe02834c9a78d6d0c33e4
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77449400"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021810"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>Modifiche di rilievo per la migrazione da .NET Framework a .NET Core
 
@@ -17,7 +17,7 @@ Se si esegue la migrazione di un'app da .NET Framework a .NET Core, le modifiche
 > [!NOTE]
 > Questo articolo non è un elenco completo delle modifiche di rilievo tra .NET Framework e .NET Core.This article is not a complete list of breaking changes between .NET Framework and .NET Core. I cambiamenti di rilievo più importanti vengono aggiunti qui quando veniamo a conoscenza di loro.
 
-## <a name="corefx"></a>CoreFx
+## <a name="core-net-libraries"></a>Librerie .NET di base
 
 - [Modifica del valore predefinito di UseShellExecute](#change-in-default-value-of-useshellexecute)
 - [UnauthorizedAccessException generata da FileSystemInfo.Attributes](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes)
