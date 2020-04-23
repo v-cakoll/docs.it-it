@@ -2,12 +2,12 @@
 title: Comando dotnet publish
 description: Il comando dotnet publish pubblica un progetto o una soluzione .NET Core in una directory.
 ms.date: 02/24/2020
-ms.openlocfilehash: ca6b6bd0151674a81e0beee7798dc6bde9c088f0
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 78ed8098be1b6887fc6a2a647fd169e2bf7f7fd1
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463461"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102801"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -24,7 +24,7 @@ dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
     [-f|--framework <FRAMEWORK>] [--force] [--interactive]
     [--manifest <PATH_TO_MANIFEST_FILE>] [--no-build] [--no-dependencies]
     [--no-restore] [--nologo] [-o|--output <OUTPUT_DIRECTORY>]
-    [-p:PublishReadyToRun] [-p:PublishSingleFile] [-p:PublishTrimmed]
+    [-p:PublishReadyToRun=true] [-p:PublishSingleFile=true] [-p:PublishTrimmed=true]
     [-r|--runtime <RUNTIME_IDENTIFIER>] [--self-contained [true|false]]
     [--no-self-contained] [-v|--verbosity <LEVEL>]
     [--version-suffix <VERSION_SUFFIX>]
@@ -42,6 +42,10 @@ dotnet publish -h|--help
 - Dipendenze dell'applicazione copiate dalla cache NuGet nella cartella di output.
 
 L'output del comando `dotnet publish` è pronto per la distribuzione in un sistema di hosting (ad esempio, un server, un PC, un Mac, un laptop) per l'esecuzione. È l'unico metodo supportato ufficialmente per preparare l'applicazione per la distribuzione. A seconda del tipo di distribuzione specificato dal progetto, nel sistema host il runtime condiviso di .NET Core può essere installato o meno. Per altre informazioni, vedere [Pubblicare app .NET Core con l'interfaccia della riga di comando di .NET Core](../deploying/deploy-with-cli.md).
+
+### <a name="implicit-restore"></a>Ripristino implicito
+
+[!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
 
 ### <a name="msbuild"></a>MSBuild
 
@@ -135,13 +139,13 @@ Per altre informazioni, vedere le seguenti risorse:
 
     Se viene specificato un percorso relativo durante la pubblicazione di una soluzione, l'output di ogni progetto viene inserito in una cartella separata rispetto al percorso del file di progetto. Se viene specificato un percorso assoluto durante la pubblicazione di una soluzione, tutto l'output di pubblicazione per tutti i progetti viene inserito nella cartella specificata.
 
-- **`-p:PublishReadyToRun`**
+- **`-p:PublishReadyToRun=true`**
 
   Compila gli assembly dell'applicazione in formato ReadyToRun (R2R). R2R è un formato di compilazione AOT (Ahead-of-time). Per ulteriori informazioni, vedere [Immagini ReadyToRun](../whats-new/dotnet-core-3-0.md#readytorun-images). Disponibile a partire da .NET Core 3.0 SDK.
 
   È consigliabile specificare questa opzione in un profilo di pubblicazione anziché nella riga di comando. Per ulteriori informazioni, vedere [MSBuild](#msbuild).
 
-- **`-p:PublishSingleFile`**
+- **`-p:PublishSingleFile=true`**
 
   Crea un pacchetto dell'app in un eseguibile a file singolo specifico della piattaforma. L'eseguibile è autoestraente e contiene tutte le dipendenze (incluso nativo) necessarie per eseguire l'app. Quando l'app viene eseguita per la prima volta, l'applicazione viene estratta in una directory in base al nome dell'app e all'identificatore di compilazione. L'avvio dell'applicazione sarà più veloce alla successiva esecuzione. L'applicazione non ha bisogno di estrarre se stessa una seconda volta a meno che non viene utilizzata una nuova versione. Disponibile a partire da .NET Core 3.0 SDK.
 
@@ -149,7 +153,7 @@ Per altre informazioni, vedere le seguenti risorse:
 
   È consigliabile specificare questa opzione in un profilo di pubblicazione anziché nella riga di comando. Per ulteriori informazioni, vedere [MSBuild](#msbuild).
 
-- **`-p:PublishTrimmed`**
+- **`-p:PublishTrimmed=true`**
 
   Taglia le librerie inutilizzate per ridurre le dimensioni di distribuzione di un'app durante la pubblicazione di un eseguibile autonomo. Per ulteriori informazioni, consultate [Tagliare distribuzioni ed eseguibili indipendenti.](../deploying/trim-self-contained.md) Disponibile a partire da .NET Core 3.0 SDK.
 

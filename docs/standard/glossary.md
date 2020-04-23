@@ -3,12 +3,12 @@ title: Glossario .NET
 description: Significato di termini selezionati usati nella documentazione di .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: d8f16579ea4dcbc9260aac83e16d3fbd30db519c
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: e7608ee7e68300d691df51aed923db0e8b518165
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635575"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102476"
 ---
 # <a name="net-glossary"></a>Glossario .NET
 
@@ -54,9 +54,12 @@ Il significato esatto dipende dal contesto, ma Common Language Runtime in genere
 
 Questo tipo di CLR viene creato dalla stessa base di codice di CLR. In origine, CoreCLR era il runtime di Silverlight ed è stato progettato per l'esecuzione su più piattaforme, in particolare Windows e OS X. CoreCLR è ora incluso in .NET Core e rappresenta una versione semplificata di CLR. È comunque un runtime [multipiattaforma](#cross-platform), che include ora il supporto per molte distribuzioni Linux. CoreCLR è anche una macchina virtuale con funzionalità JIT e di esecuzione del codice.
 
-## <a name="corefx"></a>CoreFX
+## <a name="corefx"></a>CoreFx
 
 Libreria di classi base .NET Core (BCL)
+
+> [!TIP]
+> *Fx* è l'acronimo *di framework*.
 
 Un insieme di librerie che costituiscono il sistema. \* (e in misura limitata\*Microsoft. ) spazi dei nomi. La libreria di classi base è un framework generico di livello inferiore su cui si basano framework applicazione di livello superiore, ad esempio ASP.NET Core. Il codice sorgente di .NET Core BCL è contenuto nel repository di [runtime di .NET Core.](https://github.com/dotnet/runtime) La maggior parte delle API .NET Core sono però anche disponibili in .NET Framework, di conseguenza è possibile considerare CoreFX come un fork della libreria di classi base .NET Framework.
 

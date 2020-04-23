@@ -3,12 +3,12 @@ title: Novità di C# 7.0 - Guida a C#
 description: Panoramica delle nuove funzionalità nella versione 7.0 del linguaggio C#.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: a6ac5c00ceb2ce8e5e56e2a86a8cde937d5108e2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1291de95b88b3de16fb94fb376fb4153dd4a5862
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399693"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102671"
 ---
 # <a name="whats-new-in-c-70"></a>Novità di C# 7.0
 
@@ -20,7 +20,7 @@ C# 7.0 aggiunge diverse nuove funzionalità al linguaggio C#:
   - È possibile creare tipi leggeri e senza nome che contengono più campi pubblici. I compilatori e gli strumenti dell'IDE comprendono la semantica di questi tipi.
 - [Variabili discard](#discards)
   - Le variabili discard sono variabili temporanee di sola scrittura usate nelle assegnazioni quando non si è interessati al valore assegnato. Sono utili soprattutto per la decostruzione di tuple e tipi definiti dall'utente, nonché per la chiamata di metodi con i parametri `out`.
-- [Criteri](#pattern-matching)
+- [Criteri di ricerca](#pattern-matching)
   - È possibile creare una logica di salto condizionato basata su tipi e valori arbitrari dei membri di tali tipi.
 - [`ref`gente del posto e ritorni](#ref-locals-and-returns)
   - Le variabili locali del metodo e i valori restituiti possono essere riferimenti ad altre opzioni di memorizzazione.
@@ -107,7 +107,7 @@ L'esempio seguente definisce un metodo `QueryCityDataForYears` che restituisce u
 
 Per altre informazioni, vedere [Variabili discard](../discards.md).
 
-## <a name="pattern-matching"></a>Corrispondenza dei criteri
+## <a name="pattern-matching"></a>Criteri di ricerca
 
 L'uso dei *criteri di ricerca* consente di implementare l'invio dei metodi per le proprietà diverse dal tipo di un oggetto. Probabilmente si ha già familiarità con l'invio dei metodi basato sul tipo di un oggetto. Nella programmazione orientata agli oggetti i metodi virtuali e di override offrono la sintassi del linguaggio necessaria per implementare l'invio dei metodi basato sul tipo di un oggetto. Le classi di base e derivate consentono diverse implementazioni.
 Le espressioni di criteri di ricerca estendono questo concetto in modo che sia possibile implementare facilmente modelli di invio simili per i tipi e gli elementi di dati che non sono correlati attraverso una gerarchia di ereditarietà.
@@ -211,7 +211,7 @@ La stessa tecnica può essere usata con i metodi `async` per garantire che le ec
 [!code-csharp[TaskExample](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#TaskExample "Task returning method with local function")]
 
 > [!NOTE]
-> Alcune delle progettazioni supportate dalle funzioni locali possono essere eseguite anche usando le *espressioni lambda*. Per altre informazioni, vedere [Funzioni locali e espressioni lambda](../local-functions-vs-lambdas.md).
+> Alcune delle progettazioni supportate dalle funzioni locali possono essere eseguite anche utilizzando *le espressioni lambda*. Per altre informazioni, vedere [Funzioni locali e espressioni lambda](../programming-guide/classes-and-structs/local-functions.md#local-functions-vs-lambda-expressions).
 
 ## <a name="more-expression-bodied-members"></a>Più membri con corpo di espressione
 

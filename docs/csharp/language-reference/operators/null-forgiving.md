@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: a8b47e83ce9e999ea2afe94db0a21725abc2d327
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: f3d06dec42ba117cd30dbf4d05fa4a6f594e57e5
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738581"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82101975"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! (null-forgiving) (riferimento c'è)
 
@@ -43,7 +43,7 @@ Se è possibile `IsValid` modificare il metodo, è possibile utilizzare l'attrib
 
 [!code-csharp[Use an attribute](snippets/NullForgivingOperator.cs#UseAttribute)]
 
-Nell'esempio precedente, non è necessario utilizzare l'operatore di perdono null perché `p` il `null` compilatore `if` dispone di informazioni sufficienti per scoprire che non possono essere all'interno dell'istruzione. Per ulteriori informazioni sugli attributi che consentono di fornire informazioni aggiuntive sullo stato null di una variabile, vedere [Aggiornare le API con attributi per definire le aspettative null.](../../nullable-attributes.md)
+Nell'esempio precedente, non è necessario utilizzare l'operatore di perdono null perché `p` il `null` compilatore `if` dispone di informazioni sufficienti per scoprire che non possono essere all'interno dell'istruzione. Per ulteriori informazioni sugli attributi che consentono di fornire informazioni aggiuntive sullo stato null di una variabile, vedere [Aggiornare le API con attributi per definire le aspettative null.](../attributes/nullable-analysis.md)
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 

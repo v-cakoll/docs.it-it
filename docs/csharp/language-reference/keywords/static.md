@@ -1,24 +1,26 @@
 ---
 title: Modificatore static - Riferimenti per C#
-ms.date: 01/22/2020
+ms.date: 04/22/2020
 f1_keywords:
 - static
 - static_CSharpKeyword
 helpviewer_keywords:
 - static keyword [C#]
 ms.assetid: 5509e215-2183-4da3-bab4-6b7e607a4fdf
-ms.openlocfilehash: e7671e9db488a7b50f4ed736864d6fa8d95eef1a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 771bcfdac4c4bf27c15da4bc374d804405317a78
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76744656"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102060"
 ---
 # <a name="static-c-reference"></a>static (Riferimenti per C#)
 
+Questa pagina `static` copre la parola chiave modificatore. Anche `static` la parola chiave [`using static`](using-static.md) fa parte della direttiva.
+
 Usare il modificatore `static` per dichiarare un membro statico, che appartiene allo stesso tipo invece che a un oggetto specifico. Il `static` modificatore può `static` essere utilizzato per dichiarare le classi. Nelle classi, interfacce e struct è `static` possibile aggiungere il modificatore a campi, metodi, proprietà, operatori, eventi e costruttori. Il `static` modificatore non può essere utilizzato con gli indicizzatori o i finalizzatori. Per ulteriori informazioni, vedere [Classi statiche e Membri di classi statiche](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md).
 
-## <a name="example"></a>Esempio
+## <a name="example---static-class"></a>Esempio - classe statica
 
 La classe seguente viene dichiarata come `static` e contiene solo metodi `static`:
 
@@ -47,13 +49,13 @@ Le classi, le `static` interfacce `static` e le classi possono avere costruttori
 
 Per `static` illustrare i membri, prendere in considerazione una classe che rappresenta un dipendente dell'azienda. Si supponga che la classe contenga un metodo di conteggio dei dipendenti e un campo per memorizzare il numero dei dipendenti. Sia il metodo che il campo non appartengono a nessuna istanza del dipendente. Appartengono invece alla classe dei dipendenti nel suo complesso. Devono essere dichiarati come `static` membri della classe.
 
-## <a name="example"></a>Esempio
+## <a name="example---static-field-and-method"></a>Esempio - campo statico e metodo
 
 Questo esempio legge il nome e l'ID di un nuovo dipendente, il contatore dipendente viene incrementato di uno e vengono visualizzate le informazioni per il nuovo dipendente e il nuovo numero di dipendenti. Questo programma legge il numero corrente di dipendenti dalla tastiera.
 
 [!code-csharp[csrefKeywordsModifiers#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#20)]  
 
-## <a name="example"></a>Esempio
+## <a name="example---static-initialization"></a>Esempio - inizializzazione staticaExample - static initialization
 
 In questo esempio viene `static` illustrato che `static` è possibile inizializzare un campo utilizzando un altro campo non ancora dichiarato. I risultati rimarranno indefiniti fino a `static` quando non si assegna esplicitamente un valore al campo.
 
@@ -66,7 +68,8 @@ In questo esempio viene `static` illustrato che `static` è possibile inizializz
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida di riferimento a C](../index.md)
-- [Guida per programmatori C#](../../programming-guide/index.md)
-- [Parole chiave di C#](index.md)
+- [Guida alla programmazione in C](../../programming-guide/index.md)
+- [Parole chiave di C](index.md)
 - [Modificatori](index.md)
+- [utilizzando la direttiva statica](using-static.md)
 - [Classi statiche e membri di classi statiche](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md)

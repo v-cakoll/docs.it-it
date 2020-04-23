@@ -5,20 +5,20 @@ helpviewer_keywords:
 - GCCpuGroup element
 - <GCCpuGroup> element
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
-ms.openlocfilehash: ae9c96c9d49cf3f6be94da3f77b91423cab12e0b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f1cbe5a7109d6e4aae2e92710920a1c6b3a40d00
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74430487"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102892"
 ---
-# <a name="gccpugroup-element"></a>\<elemento > GCCpuGroup
+# <a name="gccpugroup-element"></a>\<Elemento> GCCpuGroup
 
 Specifica se Garbage Collection supporta più gruppi di CPU.
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<runtime >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<GCCpuGroup >**
+[**\<>di configurazione**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<>di runtime**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<>di GCCpuGroup**
 
 ## <a name="syntax"></a>Sintassi
 
@@ -31,40 +31,40 @@ Specifica se Garbage Collection supporta più gruppi di CPU.
 
 Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.
 
-### <a name="attributes"></a>Attributi
+### <a name="attributes"></a>Attributes
 
-|Attributo|description|
+|Attributo|Descrizione|
 |---------------|-----------------|
 |`enabled`|Attributo obbligatorio.<br /><br /> Specifica se Garbage Collection supporta più gruppi di CPU.|
 
 ## <a name="enabled-attribute"></a>Attributo enabled
 
-|Value|description|
+|valore|Descrizione|
 |-----------|-----------------|
-|`false`|Garbage Collection non supporta più gruppi di CPU. Questa è l'impostazione predefinita.|
-|`true`|Se il server Garbage Collection è abilitato, Garbage Collection supporta più gruppi di CPU.|
+|`false`|La procedura di Garbage Collection non supporta più gruppi di CPU. Questa è la modalità predefinita.|
+|`true`|La Garbage Collection supporta più gruppi di CPU, se l'operazione di Garbage Collection per server è abilitata.|
 
 ### <a name="child-elements"></a>Elementi figlio
 
-Nessuno.
+No.
 
 ### <a name="parent-elements"></a>Elementi padre
 
-|Elemento|description|
+|Elemento|Descrizione|
 |-------------|-----------------|
 |`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|
 
 ## <a name="remarks"></a>Osservazioni
 
-Quando un computer dispone di più gruppi di CPU e Garbage Collection server è abilitato (vedere l'elemento [\<> gcserver](gcserver-element.md) ), l'abilitazione di questo elemento estende Garbage Collection in tutti i gruppi di CPU e prende in considerazione tutti i core quando crea e bilancia gli heap.
+Quando un computer dispone di più gruppi di CPU e la Garbage Collection del server è abilitata (vedere l'elemento [ \<gallida>),](gcserver-element.md) l'abilitazione di questo elemento estende l'operazione di Garbage Collection in tutti i gruppi di CPU e tiene conto di tutti i core durante la creazione e il bilanciamento degli heap.
 
 > [!NOTE]
-> Questo elemento si applica solo ai thread Garbage Collection. Per consentire al runtime di distribuire i thread utente in tutti i gruppi di CPU, è necessario abilitare anche l'elemento [\<Thread_UseAllCpuGroups >](thread-useallcpugroups-element.md) .
+> Questo elemento si applica solo ai thread di Garbage Collection.This element applies only to garbage collection threads. Per consentire al runtime di distribuire i thread utente tra tutti i gruppi di CPU, è necessario abilitare anche l'elemento [ \<>Thread_UseAllCpuGroups.](thread-useallcpugroups-element.md)
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come abilitare Garbage Collection per più gruppi di CPU.
+Nell'esempio seguente viene illustrato come abilitare la procedura di Garbage Collection per più gruppi di CPU.
 
 ```xml
 <configuration>
@@ -78,6 +78,6 @@ Nell'esempio seguente viene illustrato come abilitare Garbage Collection per pi�
 ## <a name="see-also"></a>Vedere anche
 
 - [Schema delle impostazioni di runtime](index.md)
-- [Schema dei file di configurazione](../index.md)
-- [Per disabilitare Garbage Collection simultanee](gcconcurrent-element.md#to-disable-background-garbage-collection)
-- [Operazione di Garbage Collection per workstation e server](../../../../standard/garbage-collection/fundamentals.md#workstation-and-server-garbage-collection)
+- [Schema del file di configurazione](../index.md)
+- [Disabilitare Garbage Collection simultanea](gcconcurrent-element.md#to-disable-background-garbage-collection)
+- [Operazione di Garbage Collection per workstation e server](../../../../standard/garbage-collection/workstation-server-gc.md)

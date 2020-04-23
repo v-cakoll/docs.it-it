@@ -9,12 +9,12 @@ helpviewer_keywords:
 - gcConcurrent element
 - <gcConcurrent> element
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
-ms.openlocfilehash: 5957337aa960a0d5f445249b410dbfaddb7b08e9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 249518ae7477d284d50f9010757db83b7752c657
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400043"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102918"
 ---
 # <a name="gcconcurrent-element"></a>\<elemento> gcConcurrent
 
@@ -82,7 +82,7 @@ Il file di configurazione seguente disabilita l'operazione di Garbage Collection
 
 Se è presente **un'impostazione gcConcurrentSetting** nel file di configurazione del computer, definisce il valore predefinito per tutte le applicazioni .NET Framework. Con l'impostazione del file di configurazione del computer viene eseguito l'override dell'impostazione del file di configurazione dell'applicazione.
 
-Per ulteriori informazioni sull'operazione di Garbage Collection simultanea e in background, vedere le [sezioni](../../../../standard/garbage-collection/fundamentals.md#background-server-garbage-collection) Operazioni di Garbage Collection [simultanee](../../../../standard/garbage-collection/fundamentals.md#concurrent-garbage-collection)e in background, vedere le sezioni Operazioni di Garbage [Collection](../../../../standard/garbage-collection/fundamentals.md#background-workstation-garbage-collection)simultanee e in background nell'articolo [Nozioni fondamentali sulla Garbage Collection](../../../../standard/garbage-collection/fundamentals.md) .
+Per ulteriori informazioni sull'operazione di Garbage Collection simultanea e in background, vedere [Garbage Collection](../../../../standard/garbage-collection/background-gc.md)in background .
 
 ## <a name="example"></a>Esempio
 

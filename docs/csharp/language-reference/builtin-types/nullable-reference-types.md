@@ -2,12 +2,12 @@
 title: Tipi di riferimento nullable - Riferimenti in C
 description: Informazioni sui tipi di riferimento nullable di C'è e su come usarli
 ms.date: 04/06/2020
-ms.openlocfilehash: cbc7397ac76b43b79a4168f4c61fe2c631b4a46b
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: cb61b162b06faa51faabbcdd91e55618cdeaca73
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888316"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102697"
 ---
 # <a name="nullable-reference-types-c-reference"></a>Tipi di riferimento nullable (riferimenti per C
 
@@ -61,11 +61,11 @@ Il frammento di codice seguente mostra dove il compilatore genera avvisi quando 
 
 :::code language="csharp" source="snippets/NullableReferenceTypes.cs" id="SnippetLocalWarnings":::
 
-Negli esempi precedenti viene illustrata l'analisi statica del compilatore per determinare lo stato null delle variabili di riferimento. Il compilatore applica le regole di linguaggio per i controlli null e le assegnazioni per informare l'analisi.  Il compilatore non è in grado di formulare ipotesi sulla semantica di metodi o proprietà. Se si chiamano metodi che eseguono controlli null, il compilatore non può conoscere tali metodi influiscono sullo stato null di una variabile. Esistono diversi attributi che è possibile aggiungere alle API per informare il compilatore sulla semantica degli argomenti e dei valori restituiti. Questi attributi sono stati applicati a molte API comuni nelle librerie .NET Core.These attributes have been applied to many common APIs in the .NET Core libraries. Ad esempio, <xref:System.String.IsNullOrEmpty%2A> è stato aggiornato e il compilatore interpreta correttamente tale metodo come un controllo null. Per ulteriori informazioni sugli attributi che si applicano all'analisi statica dello stato Null, vedere l'articolo sugli [attributi nullable](../../nullable-attributes.md).
+Negli esempi precedenti viene illustrata l'analisi statica del compilatore per determinare lo stato null delle variabili di riferimento. Il compilatore applica le regole di linguaggio per i controlli null e le assegnazioni per informare l'analisi.  Il compilatore non è in grado di formulare ipotesi sulla semantica di metodi o proprietà. Se si chiamano metodi che eseguono controlli null, il compilatore non può conoscere tali metodi influiscono sullo stato null di una variabile. Esistono diversi attributi che è possibile aggiungere alle API per informare il compilatore sulla semantica degli argomenti e dei valori restituiti. Questi attributi sono stati applicati a molte API comuni nelle librerie .NET Core.These attributes have been applied to many common APIs in the .NET Core libraries. Ad esempio, <xref:System.String.IsNullOrEmpty%2A> è stato aggiornato e il compilatore interpreta correttamente tale metodo come un controllo null. Per ulteriori informazioni sugli attributi che si applicano all'analisi statica dello stato Null, vedere l'articolo sugli [attributi nullable](../attributes/nullable-analysis.md).
 
 ## <a name="setting-the-nullable-context"></a>Impostazione del contesto nullableSetting the nullable context
 
-Esistono due modi per controllare il contesto nullable. A livello di progetto, `<Nullable>enable</Nullable>` è possibile aggiungere l'impostazione del progetto. In un singolo file di origine `#nullable enable` in C, è possibile aggiungere il pragma per abilitare il contesto nullable. Vedere l'articolo sull'impostazione di [una strategia nullable](../../nullable-attributes.md).
+Esistono due modi per controllare il contesto nullable. A livello di progetto, `<Nullable>enable</Nullable>` è possibile aggiungere l'impostazione del progetto. In un singolo file di origine `#nullable enable` in C, è possibile aggiungere il pragma per abilitare il contesto nullable. Vedere l'articolo sull'impostazione di [una strategia nullable](../../nullable-migration-strategies.md).
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 

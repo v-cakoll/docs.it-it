@@ -2,12 +2,12 @@
 title: Comando dotnet build
 description: Il comando dotnet build consente di compilare un progetto e tutte le relative dipendenze.
 ms.date: 02/14/2020
-ms.openlocfilehash: 27deca4ab1c12314db5214c73660862a8a57a398
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 1022df059493c7e045f81d4be93dff2fdab77eb1
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463715"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102840"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -43,9 +43,13 @@ Per i progetti eseguibili destinati a versioni precedenti a .NET Core 3.0, le di
 
 Per i progetti eseguibili destinati a .NET Core 3.0 e versioni successive, le dipendenze della libreria vengono copiate nella cartella di output. Ciò significa che se non sono presenti altre logiche specifiche della pubblicazione (ad esempio i progetti Web), l'output di compilazione deve essere distribuibile.
 
-Per la compilazione è necessario il file *project.assets.json*, che elenca le dipendenze dell'applicazione. Il file viene [`dotnet restore`](dotnet-restore.md) creato quando viene eseguito. Senza il file di asset sul posto, gli strumenti non possono risolvere gli assembly di riferimento, generando così errori. Con .NET Core 1.x SDK, `dotnet restore` era `dotnet build`necessario eseguire in modo esplicito prima dell'esecuzione . A partire da .NET Core 2.0 SDK, `dotnet restore` viene eseguito in modo implicito quando viene eseguito `dotnet build`. Se si desidera disabilitare ripristino implicito quando si esegue il comando di compilazione, è possibile passare l’opzione `--no-restore`.
+### <a name="implicit-restore"></a>Ripristino implicito
+
+Per la compilazione è necessario il file *project.assets.json*, che elenca le dipendenze dell'applicazione. Il file viene [`dotnet restore`](dotnet-restore.md) creato quando viene eseguito. Senza il file di asset sul posto, gli strumenti non possono risolvere gli assembly di riferimento, generando così errori.
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
+
+### <a name="executable-or-library-output"></a>Output dell'eseguibile o della libreria
 
 La proprietà `<OutputType>` nel file di progetto determina se il progetto è eseguibile o meno. L'esempio seguente descrive un progetto che produce codice eseguibile:
 

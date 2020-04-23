@@ -8,12 +8,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: 95ae438e9fb52cc584d18a981bffb66147eb4a77
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 8d5cd73bb9393533cb669581420e24297cb5ff71
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242816"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102931"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides>elemento
 
@@ -32,7 +32,7 @@ Definisce una o più opzioni di compatibilità usate dalla classe <xref:System.A
 ## <a name="attributes-and-elements"></a>Attributi ed elementi
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.
 
-### <a name="attributes"></a>Attributi
+### <a name="attributes"></a>Attributes
 
 |Attributo|Descrizione|
 |---------------|-----------------|
@@ -59,7 +59,7 @@ Definisce una o più opzioni di compatibilità usate dalla classe <xref:System.A
 
  `value` L'attributo `<AppContextSwitchOverrides>` dell'elemento è costituito da una singola stringa costituita da una o più coppie nome/valore delimitate da punto e virgola.  Ogni nome identifica un'opzione di compatibilità`true` e `false`il valore corrispondente è un valore booleano ( o ) che indica se l'opzione è impostata. Per impostazione predefinita, l'opzione è `false`, e le librerie forniscono la nuova funzionalità. Forniscono la funzionalità precedente solo se è impostata `true`l'opzione, ovvero il relativo valore è . Ciò consente alle librerie di fornire un nuovo comportamento per un'API esistente, consentendo ai chiamanti che dipendono dal comportamento precedente di rifiutare esplicitamente la nuova funzionalità.
 
- .NET Framework supporta le opzioni seguenti:
+.NET Framework supporta le opzioni seguenti:
 
 |Nome switch|Descrizione|Presentare|
 |-----------------|-----------------|----------------|
@@ -141,7 +141,7 @@ Definisce una o più opzioni di compatibilità usate dalla classe <xref:System.A
 
  Gli sviluppatori di librerie possono anche definire opzioni personalizzate per consentire ai chiamanti di rifiutare esplicitamente le funzionalità modificate introdotte nelle versioni successive delle librerie. Per altre informazioni, vedere la classe <xref:System.AppContext>.
 
-## <a name="switches-in-aspnet-applications"></a>Interruttori in applicazioni ASP.NET
+## <a name="switches-in-aspnet-apps"></a>Opzioni nelle app ASP.NET
 
 È possibile configurare un'applicazione ASP.NET [ \<](../appsettings/add-element-for-appsettings.md) per l'utilizzo delle impostazioni di compatibilità aggiungendo un elemento Aggiungi>alla sezione [ \<appSettings>](../appsettings/index.md) del file web.config.
 
@@ -179,6 +179,7 @@ Nell'esempio seguente `<add>` viene utilizzato l'elemento per aggiungere due imp
 
 ## <a name="see-also"></a>Vedere anche
 
+- [Ridurre i nuovi comportamenti in .NET Framework 4.6 e versioni successive](../../../migration-guide/mitigations.md)
 - <xref:System.AppContext?displayProperty=nameWithType>
 - [\<Elemento> di runtime](runtime-element.md)
 - [\<Elemento> configurazione](../configuration-element.md)

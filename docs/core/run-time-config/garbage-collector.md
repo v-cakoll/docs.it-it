@@ -3,12 +3,12 @@ title: Impostazioni di configurazione del Garbage Collector
 description: Informazioni sulle impostazioni di runtime per la configurazione del modo in cui il Garbage Collector gestisce la memoria per le app .NET Core.Learn about run-time settings for configuring how the garbage collector manages memory for .NET Core apps.
 ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: dfb641eeda03d1acaa4771bd6253fcb33c4082a6
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: ec575bdd17c8a7c290673b7085074bbba94cedef
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607810"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102866"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Opzioni di configurazione in fase di esecuzione per la procedura di Garbage CollectionRun-time configuration options for garbage collection
 
@@ -24,7 +24,7 @@ Le impostazioni sono organizzate in gruppi in questa pagina. Le impostazioni all
 
 ## <a name="flavors-of-garbage-collection"></a>Sapori di garbage collection
 
-I due tipi principali di garbage collection sono workstation GC e server GC. Per ulteriori informazioni sulle differenze tra i due, vedere [Nozioni fondamentali sulla procedura di Garbage Collection](../../standard/garbage-collection/fundamentals.md#workstation-and-server-garbage-collection).
+I due tipi principali di garbage collection sono workstation GC e server GC. Per ulteriori informazioni sulle differenze tra i due, vedere [Garbage Collection per workstation e server.](../../standard/garbage-collection/workstation-server-gc.md)
 
 I sottoprogusti della garbage collection sono di sfondo e non simultanei.
 
@@ -72,7 +72,7 @@ File di progetto:
 
 - Configura se l'operazione di Garbage Collection in background (simultanea) è abilitata.
 - Impostazione predefinita: Abilitato (`true`).
-- Per ulteriori informazioni, consultate [Garbage Collection](../../standard/garbage-collection/fundamentals.md#background-workstation-garbage-collection) in background e Garbage Collection del server in [background.](../../standard/garbage-collection/fundamentals.md#background-server-garbage-collection)
+- Per ulteriori informazioni, consultate [Garbage Collection](../../standard/garbage-collection/background-gc.md)in background .
 
 | | Nome impostazione | Valori | Versione introdotta |
 | - | - | - | - |
@@ -240,7 +240,7 @@ Esempio:
 
 - Specifica la dimensione massima di commit, in byte, per l'heap GC e la contabilità GC.
 - Questa impostazione si applica solo ai computer a 64 bit.
-- Il valore predefinito, che si applica solo in alcuni casi, è il minore di 20 MB o il 75% del limite di memoria sul contenitore. Il valore predefinito viene applicato se:
+- Il valore predefinito, che si applica solo in alcuni casi, è il maggiore di 20 MB o il 75% del limite di memoria sul contenitore. Il valore predefinito viene applicato se:
 
   - Il processo è in esecuzione all'interno di un contenitore con un limite di memoria specificato.
   - [System.GC.HeapHardLimitPercent](#systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent) non impostato.

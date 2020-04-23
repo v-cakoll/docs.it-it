@@ -1,32 +1,32 @@
 ---
-title: LOH su Windows - .NET
+title: Heap oggetti grandi (LOH) in Windows
 ms.date: 05/02/2018
 helpviewer_keywords:
 - large object heap (LOH)"
 - LOH
 - garbage collection, large object heap
 - GC [.NET ], large object heap
-ms.openlocfilehash: 5125b76dd26ffa4fb363ecf8449f65b490f57b93
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ab9beca58b3d6118bc0f5121b6f5dec71a9f9f36
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74283616"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102268"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Heap oggetti grandi nei sistemi Windows
 
-.NET Garbage Collector (GC) suddivide gli oggetti in oggetti piccoli e grandi. Nel caso di un oggetto grande, alcuni attributi associati assumono un'importanza maggiore rispetto a quando sono associati a un oggetto piccolo. Ad esempio la compattazione, ovvero la copia in memoria dell'oggetto in un altro punto dell'heap, può risultare dispendiosa. Per questo motivo .NET Garbage Collector inserisce gli oggetti di grandi dimensioni nell'heap oggetti grandi (LOH, Large Object Heap). In questo argomento viene esaminato in modo approfondito l'heap oggetti grandi. Si analizzano gli elementi che qualificano un oggetto come oggetto grande, come vengono raccolti gli oggetti grandi e il tipo di implicazioni di questi oggetti sulle prestazioni.
+Il Garbage Collector (GC) di .NET divide gli oggetti in oggetti di piccole e grandi dimensioni. Nel caso di un oggetto grande, alcuni attributi associati assumono un'importanza maggiore rispetto a quando sono associati a un oggetto piccolo. Ad esempio, compattarlo&mdash;in questo modo, copiarlo&mdash;in memoria in un altro punto dell'heap può essere costoso. Per questo motivo, il Garbage Collector inserisce oggetti di grandi dimensioni nell'heap oggetti grandi (LOH). In questo articolo viene illustrato che cosa qualifica un oggetto come un oggetto di grandi dimensioni, come vengono raccolti gli oggetti di grandi dimensioni e che tipo di prestazioni implicazioni comporta oggetti di grandi dimensioni impliche.
 
 > [!IMPORTANT]
-> Questo argomento illustra l'heap oggetti grandi in .NET Framework e .NET Core in esecuzione solo nei sistemi Windows. Non riguarda l'heap oggetti grandi in esecuzione in implementazioni di .NET su altre piattaforme.
+> In questo articolo viene illustrato l'heap oggetti grandi in .NET Framework e .NET Core in esecuzione solo su sistemi Windows. Non riguarda l'heap oggetti grandi in esecuzione in implementazioni di .NET su altre piattaforme.
 
-## <a name="how-an-object-ends-up-on-the-large-object-heap-and-how-gc-handles-them"></a>Come un oggetto raggiunge l'heap oggetti grandi e come viene gestito da GC
+## <a name="how-an-object-ends-up-on-the-loh"></a>Come un oggetto finisce sul LOH
 
 Se un oggetto è maggiore o uguale a 85.000 byte, viene considerato un oggetto di grandi dimensioni. Questo valore è stato determinato dall'ottimizzazione delle prestazioni. Quando la richiesta di allocazione di un oggetto supera gli 85.000 byte, il runtime destina l'oggetto all'heap oggetti grandi.
 
-Per comprendere il significato di questa impostazione, è utile esaminare alcuni principi fondamentali di GC in .NET.
+Per comprendere il significato di questo, è utile esaminare alcuni aspetti fondamentali relativi al Garbage Collector.
 
-Il Garbage Collector di .NET è un collector generazionale. Le generazioni sono tre: generazione 0, generazione 1 e generazione 2. La presenza di 3 generazioni deriva dal fatto che in un'app ottimizzata la maggior parte degli oggetti viene eliminata nella generazione 0. In un'applicazione server, ad esempio, le allocazioni associate a ogni richiesta dovrebbero essere eliminate al termine della richiesta. Le richieste di allocazione durante l'esecuzione raggiungono la generazione 1 e vengono eliminate in questa generazione. In pratica la generazione 1 fa da buffer tra le aree degli oggetti recenti e quelle degli oggetti con durata maggiore.
+Il Garbage Collector è un agente di raccolta generazionale. Le generazioni sono tre: generazione 0, generazione 1 e generazione 2. La presenza di 3 generazioni deriva dal fatto che in un'app ottimizzata la maggior parte degli oggetti viene eliminata nella generazione 0. In un'applicazione server, ad esempio, le allocazioni associate a ogni richiesta dovrebbero essere eliminate al termine della richiesta. Le richieste di allocazione durante l'esecuzione raggiungono la generazione 1 e vengono eliminate in questa generazione. In pratica la generazione 1 fa da buffer tra le aree degli oggetti recenti e quelle degli oggetti con durata maggiore.
 
 Gli oggetti piccoli vengono sempre allocati nella generazione 0 e a seconda della loro ciclo di vita possono passare alla generazione 1 o alla generazione 2. Gli oggetti grandi vengono sempre allocati nella generazione 2.
 
@@ -64,7 +64,7 @@ Figura 3: LOH dopo un'operazione GC di generazione 2
 
 ## <a name="when-is-a-large-object-collected"></a>Quando viene raccolto un oggetto di grandi dimensioni?
 
-In genere un'operazione GC avviene quando si verifica una delle tre condizioni seguenti:
+In generale, un GC si verifica in una delle seguenti tre condizioni:
 
 - L'allocazione supera la soglia della generazione 0 o degli oggetti grandi.
 
@@ -80,7 +80,7 @@ In genere un'operazione GC avviene quando si verifica una delle tre condizioni s
 
   Questo si verifica quando il Garbage Collector riceve una notifica di uso di memoria elevato dal sistema operativo. Se il Garbage Collector rileva condizioni produttive per un'operazione GC di generazione 2, attiva tale operazione.
 
-## <a name="loh-performance-implications"></a>Implicazioni a livello di prestazioni dell'heap oggetti grandi
+## <a name="loh-performance-implications"></a>Implicazioni delle prestazioni LOH
 
 Le allocazioni nell'heap oggetti grandi influiscono sulle prestazioni nei modi seguenti.
 
@@ -122,7 +122,7 @@ Le allocazioni nell'heap oggetti grandi influiscono sulle prestazioni nei modi s
 
 Fra i tre fattori, i primi due sono in genere più significativi del terzo. Per questo motivo è consigliabile allocare un pool di oggetti grandi da usare più volte anziché allocare oggetti temporanei.
 
-## <a name="collecting-performance-data-for-the-loh"></a>Raccolta di dati sulle prestazioni per l'heap oggetti grandi
+## <a name="collect-performance-data-for-the-loh"></a>Raccogliere i dati sulle prestazioni per il LaOHCollect performance data for the LOH
 
 Prima di raccogliere dati sulle prestazioni per un'area specifica, è necessario aver eseguito le operazioni seguenti:
 
@@ -310,6 +310,6 @@ Questo comando viene interrotto nel debugger e mostra lo stack di chiamate solo 
 
 In CLR 2.0 la nuova funzionalità *VM Hoarding* (Accumulo in memoria virtuale) può essere utile in situazioni con acquisizione e rilascio frequenti di segmenti, ad esempio nell'heap degli oggetti piccoli e nell'heap degli oggetti grandi. Per impostare VM Hoarding si specifica un flag di avvio chiamato `STARTUP_HOARD_GC_VM` tramite l'API di hosting. Invece di rilasciare i segmenti vuoti per restituirli al sistema operativo, CLR libera la memoria in questi segmenti e li inserisce in un elenco di standby. (Si noti che CLR non esegue questa operazione per i segmenti che sono troppo grandi.) CLR utilizza in seguito tali segmenti per soddisfare le nuove richieste di segmento. Quando l'app torna a richiedere un nuovo segmento, CLR usa un segmento di questo elenco di standby, se è disponibile un segmento abbastanza grande.
 
-La funzionalità VM Hoarding è anche utile per le applicazioni che desiderano mantenere i segmenti già acquisiti ed evitare eccezioni di memoria insufficiente, ad esempio le applicazioni server essenziali in esecuzione nel sistema.
+L'accumulo di macchine virtuali è utile anche per le applicazioni che desiderano mantenere i segmenti già acquisiti, ad esempio alcune app server che sono le app dominanti in esecuzione nel sistema, per evitare eccezioni di memoria insufficiente.
 
 Quando si usa questa funzionalità è consigliabile sottoporre a test accurati l'applicazione, per garantire che l'uso della memoria sia sufficientemente stabile.

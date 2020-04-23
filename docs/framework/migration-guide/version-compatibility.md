@@ -1,5 +1,5 @@
 ---
-title: Compatibilità tra le versioni in .NET Framework
+title: Compatibilità delle versioni in .NET Framework
 ms.custom: updateeachrelease
 ms.date: 04/02/2019
 helpviewer_keywords:
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: e0de18b5a40875d1fec2633c16688111d8f4b9ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2e268753bf5941e9d28ee2bdd82ce77016ddf01a
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73974960"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102983"
 ---
-# <a name="version-compatibility-in-the-net-framework"></a>Compatibilità tra le versioni in .NET Framework
+# <a name="version-compatibility"></a>Compatibilità tra versioni
 
-Per compatibilità con le versioni precedenti si intende che un'app sviluppata per una particolare versione di una piattaforma sarà eseguita su versioni successive di quella piattaforma. .NET Framework tenta di ottimizzare la compatibilità con le versioni precedenti: il codice sorgente scritto per una versione di .NET Framework deve essere compilato su versioni successive di .NET Framework e i file binari in esecuzione su una versione di .NET Framework devono comportarsi in modo analogo nelle versioni successive di .NET Framework.
+Per compatibilità con le versioni precedenti si intende che un'app sviluppata per una particolare versione di una piattaforma sarà eseguita su versioni successive di quella piattaforma. .NET Framework tenta di ottimizzare la compatibilità con le versioni precedenti: il codice sorgente scritto per una versione di .NET Framework deve essere compilato nelle versioni successive di .NET Framework e i file binari eseguiti in una versione di .NET Framework devono comportarsi in modo identico nelle versioni successive di .NET Framework.
 
 ## <a name="version-compatibility-for-apps"></a><a name="Apps"></a> Compatibilità tra le versioni per app
 
-Per impostazione predefinita, un'app viene eseguita sulla versione di .NET Framework per cui è stata creata. Se tale versione non è presente e il file di configurazione dell'app non definisce le versioni supportate, potrebbe verificarsi un errore di inizializzazione di .NET Framework. In questo caso, il tentativo di esecuzione dell'app avrà esito negativo.
+Per impostazione predefinita, un'app viene eseguita nella versione di .NET Framework per cui è stata compilata. Se tale versione non è presente e il file di configurazione dell'app non definisce le versioni supportate, potrebbe verificarsi un errore di inizializzazione di .NET Framework. In questo caso, il tentativo di esecuzione dell'app avrà esito negativo.
 
 Per definire le versioni specifiche in cui viene [ \<](../configure-apps/file-schema/startup/supportedruntime-element.md) eseguita l'app, aggiungi uno o più elementi di>supportedRuntime al file di configurazione dell'app. Ogni elemento `<supportedRuntime>` elenca una versione supportata del runtime, con il primo che specifica la versione preferita e l'ultimo che specifica l'ultima versione nell'elenco delle preferenze.
 
@@ -41,7 +41,7 @@ Un'app, diversamente da un componente, può controllare la versione di .NET Fram
 
 A causa di questa restrizione, le garanzie di compatibilità sono particolarmente importanti per i componenti. A partire da .NET Framework 4, è possibile specificare il livello di compatibilità di un componente in più versioni applicando l'attributo <xref:System.Runtime.Versioning.ComponentGuaranteesAttribute?displayProperty=nameWithType> a tale componente. Gli strumenti possono usare questo attributo per rilevare le possibili violazioni della garanzia di compatibilità in versioni future di un componente.
 
-## <a name="backward-compatibility-and-the-net-framework"></a>Compatibilità con le versioni precedenti e .NET Framework
+## <a name="backward-compatibility"></a>compatibilità con versioni precedenti
 
 .NET Framework 4.5 e versioni successive sono compatibili con le versioni precedenti delle app create con le versioni precedenti di .NET Framework. In altre parole, le app e i componenti creati con le versioni precedenti funzioneranno senza applicare alcuna modifica in .NET Framework 4.5 e versioni successive. Tuttavia, per impostazione predefinita, le app vengono eseguite sulla versione di Common Language Runtime per la quale sono state sviluppate, pertanto potrebbe essere necessario fornire un file di configurazione per far sì che l'app venga eseguita in .NET Framework 4.5 o versioni successive. Per altre informazioni, vedere la sezione [Compatibilità tra le versioni per app](#Apps) in questo articolo.
 
@@ -63,9 +63,9 @@ Se l'app o il componente non funziona come previsto in .NET Framework 4.5 (e ver
 
 - Se si verifica un problema non documentato, segnalarlo nel [sito della community degli sviluppatori .NET](https://developercommunity.visualstudio.com/spaces/61/index.html) oppure nel [repository GitHub Microsoft/dotnet](https://github.com/microsoft/dotnet/issues).
 
-## <a name="compatibility-and-side-by-side-execution"></a>Compatibilità ed esecuzione affiancata
+## <a name="side-by-side-execution"></a>Esecuzione side-by-side
 
-Se non si riesce a trovare una soluzione alternativa adatta al problema, ricordare che .NET Framework 4.5 (e versioni intermedie) viene eseguito side-by-side con le versioni 1.1, 2.0 e 3.5 ed è un aggiornamento sul posto che sostituisce la versione 4. Per app destinate alle versioni 1.1, 2.0 e 3.5, è possibile installare la versione appropriata di .NET Framework nel computer di destinazione per eseguire l'app nell'ambiente migliore. Per altre informazioni sull'esecuzione side-by-side, vedere [Esecuzione side-by-side](../deployment/side-by-side-execution.md).
+Se non è possibile trovare una soluzione appropriata per il problema, tenere presente che .NET Framework 4.5 (o una delle sue versioni puntuali) viene eseguito affiancato alle versioni 1.1, 2.0 e 3.5 ed è un aggiornamento sul posto che sostituisce la versione 4. Per le app destinate alle versioni 1.1, 2.0 e 3.5, è possibile installare la versione appropriata di .NET Framework nel computer di destinazione per eseguire l'app nel proprio ambiente migliore. Per altre informazioni sull'esecuzione side-by-side, vedere [Esecuzione side-by-side](../deployment/side-by-side-execution.md).
 
 ## <a name="see-also"></a>Vedere anche
 

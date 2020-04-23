@@ -2,12 +2,12 @@
 title: 'Attributi riservati di C: analisi statica nullable'
 ms.date: 04/14/2020
 description: Questi attributi vengono interpretati dal compilatore per fornire un'analisi statica migliore per i tipi di riferimento nullable e non nullable.
-ms.openlocfilehash: 0315d78db7517541efe578d8675c0f2fe45f5aea
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 33521133a6a01196e6e1ab9c3cdc191a24f1ecf3
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389863"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102710"
 ---
 # <a name="reserved-attributes-contribute-to-the-compilers-null-state-static-analysis"></a>Gli attributi riservati contribuiscono all'analisi statica dello stato null del compilatore
 
@@ -129,7 +129,7 @@ public Customer FindCustomer(string lastName, string firstName)
 
 Probabilmente hai scritto un metodo `null` come questo per restituire quando il nome cercato non è stato trovato. Indica `null` chiaramente che il record non è stato trovato. In questo esempio, è probabile che `Customer` si `Customer?`modifichi il tipo restituito da a . La dichiarazione del valore restituito come tipo di riferimento nullable specifica chiaramente lo scopo di questa API.
 
-Per i motivi trattati in [Definizioni generiche e supporto di valori Null,](../../nullable-attributes.md#generic-definitions-and-nullability) tale tecnica non funziona con i metodi generici. Si può avere un metodo generico che segue un modello simile:You may have a generic method that follows a similar pattern:
+Per i motivi trattati in [Definizioni generiche e supporto di valori Null,](../../nullable-migration-strategies.md#generic-definitions-and-nullability) tale tecnica non funziona con i metodi generici. Si può avere un metodo generico che segue un modello simile:You may have a generic method that follows a similar pattern:
 
 ```csharp
 public T Find<T>(IEnumerable<T> sequence, Func<T, bool> match)

@@ -2,12 +2,12 @@
 title: Architettura degli strumenti della riga di comando di .NET Core
 description: Informazioni sui livelli degli strumenti di .NET Core e sulle modifiche apportate nelle versioni più recenti.
 ms.date: 03/06/2017
-ms.openlocfilehash: fde1a0acb6af9dd65aa3466b4ea37473b2eab6fb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e1a9fe59225c17d54f6e7213d2b3c3fa70ee58e0
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77092915"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102879"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>Panoramica generale delle modifiche agli strumenti di .NET Core
 
@@ -30,7 +30,7 @@ Nella figura seguente viene fornito un breve riepilogo dei livelli dell'anteprim
 
 ![Architettura di alto livello degli strumenti dell'anteprima 2](media/cli-msbuild-architecture/p2-arch.png)
 
-La stratificazione degli strumenti in Anteprima 2 è semplice. Nella parte inferiore, la base è l'interfaccia della riga di comando di .NET Core. Tutti gli altri strumenti di livello superiore, ad esempio Visual Studio o Visual Studio Code, dipendono e si basano sull'interfaccia della riga di comando per compilare progetti, ripristinare le dipendenze e così via. Ad esempio, se Visual Studio desiderasse eseguire un'operazione di ripristino, chiamerebbe il `dotnet restore` comando ( vedere[nota](#dotnet-restore-note)) nell'interfaccia della riga di comando.
+La stratificazione degli strumenti in Anteprima 2 è semplice. Nella parte inferiore, la base è l'interfaccia della riga di comando di .NET Core. Tutti gli altri strumenti di livello superiore, ad esempio Visual Studio o Visual Studio Code, dipendono e si basano sull'interfaccia della riga di comando per compilare progetti, ripristinare le dipendenze e così via. Ad esempio, se Visual Studio desidera eseguire un'operazione `dotnet restore` di ripristino, chiamerebbe il comando nell'interfaccia della riga di comando.
 
 Con il passaggio al nuovo sistema di progetto, il diagramma precedente risulta modificato nel modo illustrato di seguito:
 
@@ -41,7 +41,7 @@ La differenza principale è che l'interfaccia della riga di comando non è più 
 > [!NOTE]
 > Una "destinazione" è un termine MSBuild che indica un'operazione denominata che MSBuild può richiamare. La destinazione è in genere associata a una o più attività che eseguono la logica dell'operazione. MSBuild supporta diverse destinazioni predefinite, ad esempio `Copy` o `Execute`. Consente inoltre agli utenti di scrivere le proprie attività usando codice gestito e definire destinazioni per eseguire tali attività. Per altre informazioni, vedere [Attività di MSBuild](/visualstudio/msbuild/msbuild-tasks).
 
-Tutti i set di strumenti, inclusa l'interfaccia della riga di comando, utilizzano ora il componente SDK condiviso e le relative destinazioni. Ad esempio, Visual Studio 2019 non `dotnet restore` chiama il comando ([nota nota](#dotnet-restore-note)) per ripristinare le dipendenze per i progetti .NET Core.For example, Visual Studio 2019 doesn't call into the ( see note ) command to restore dependencies for .NET Core projects. Al contrario, utilizza direttamente la destinazione "Ripristina". Poiché si tratta di destinazioni MSBuild, è anche possibile usare direttamente MSBuild per eseguirle mediante il comando [dotnet-msbuild](dotnet-msbuild.md).
+Tutti i set di strumenti, inclusa l'interfaccia della riga di comando, utilizzano ora il componente SDK condiviso e le relative destinazioni. Ad esempio, Visual Studio 2019 non `dotnet restore` chiama il comando per ripristinare le dipendenze per i progetti .NET Core.For example, Visual Studio 2019 doesn't call into the command to restore dependencies for .NET Core projects. Al contrario, utilizza direttamente la destinazione "Ripristina". Poiché si tratta di destinazioni MSBuild, è anche possibile usare direttamente MSBuild per eseguirle mediante il comando [dotnet-msbuild](dotnet-msbuild.md).
 
 ### <a name="cli-commands"></a>Comandi dell'interfaccia della riga di comando
 
@@ -73,5 +73,6 @@ Questo comando pubblica un'applicazione `pub` in una cartella utilizzando la con
 
 Eccezioni degne di `new` nota a questa regola sono i comandi e `run` . Non sono stati implementati come destinazioni MSBuild.
 
-<a name="dotnet-restore-note"></a>
+### <a name="implicit-restore"></a>Ripristino implicito
+
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

@@ -2,12 +2,12 @@
 title: Linee guida per la formattazione del codice F#
 description: Informazioni sulle linee guida per la formattazione del codice F.
 ms.date: 11/04/2019
-ms.openlocfilehash: b8be70dd29a04e71614308164e541b99a1724305
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: dd48380a90ee92b2c1edaaabc116fa1cd8010390
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739550"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102489"
 ---
 # <a name="f-code-formatting-guidelines"></a>Linee guida per la formattazione del codice F#
 
@@ -579,10 +579,10 @@ Quando si generano matrici ed `->` elenchi `do ... yield` a livello di codice, p
 
 ```fsharp
 // Preferred
-let squares = [ for x in 1..10 -> x*x ]
+let squares = [ for x in 1..10 -> x * x ]
 
 // Not preferred
-let squares' = [ for x in 1..10 do yield x*x ]
+let squares' = [ for x in 1..10 do yield x * x ]
 ```
 
 Le versioni precedenti del linguaggio `yield` F , richiedevano la specifica in situazioni in cui i dati possono essere generati in modo condizionale o se possono essere presenti espressioni consecutive da valutare. Preferisci omettere queste parole chiave a meno che non sia necessario compilare con una versione del linguaggio F. precedente:Prefer omitting these `yield` keywords unless you must compile with an older F' language version:
@@ -816,10 +816,10 @@ let function1 a b = a - b * b
 ```fsharp
 // A1 and A2 are local modules.
 module A1 =
-    let function1 a b = a*a + b*b
+    let function1 a b = a * a + b * b
 
 module A2 =
-    let function2 a b = a*a - b*b
+    let function2 a b = a * a - b * b
 ```
 
 ### <a name="formatting-object-expressions-and-interfaces"></a>Formattazione di espressioni e interfacce di oggetti
@@ -878,7 +878,7 @@ type MyRecord =
 
 ### <a name="formatting-attributes-on-parameters"></a>Formattazione degli attributi sui parametri
 
-Gli attributi possono anche essere posti sui parametri. In questo caso, posizionare quindi sulla stessa riga del parametro e prima del nome:
+Gli attributi possono anche essere posizionati sui parametri. In questo caso, posizionare quindi sulla stessa riga del parametro e prima del nome:
 
 ```fsharp
 // Defines a class that takes an optional value as input defaulting to false.

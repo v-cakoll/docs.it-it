@@ -2,12 +2,12 @@
 title: Controllo delle versioni del linguaggio C# - Guida a C#
 description: Informazioni su come viene determinata la versione del linguaggio C'è determinato in base al progetto e i motivi alla base di tale scelta. Scopri come sostituire manualmente l'impostazione predefinita.
 ms.date: 02/21/2020
-ms.openlocfilehash: ef7275aad7638f52ecbfca1dfbdb962ae242fb48
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 850c4a860878593d80aaa3b7b38efaff9e003f43
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399539"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102658"
 ---
 # <a name="c-language-versioning"></a>Controllo delle versioni del linguaggio C#
 
@@ -20,7 +20,7 @@ La versione 8.0 (e successive) di Cè è supportata solo in .NET Core 3.x e vers
 - L'implementazione predefinita dei membri di interfaccia richiede nuove funzionalità in .NET Core 3.0 CLR.
 - I flussi asincroni <xref:System.IAsyncDisposable?displayProperty=nameWithType> <xref:System.Collections.Generic.IAsyncEnumerable%601?displayProperty=nameWithType>richiedono <xref:System.Collections.Generic.IAsyncEnumerator%601?displayProperty=nameWithType>i nuovi tipi , e .
 - Gli indici e gli intervalli richiedono i nuovi tipi <xref:System.Index?displayProperty=nameWithType> e <xref:System.Range?displayProperty=nameWithType>.
-- I tipi di riferimento nullable utilizzano diversi [attributi](../nullable-attributes.md) per fornire avvisi migliori. Tali attributi sono stati aggiunti in .NET Core 3.0. Altri framework di destinazione non sono stati annotati con uno di questi attributi. Ciò significa che gli avvisi nullable potrebbero non riflettere accuratamente i potenziali problemi.
+- I tipi di riferimento nullable utilizzano diversi [attributi](attributes/nullable-analysis.md) per fornire avvisi migliori. Tali attributi sono stati aggiunti in .NET Core 3.0. Altri framework di destinazione non sono stati annotati con uno di questi attributi. Ciò significa che gli avvisi nullable potrebbero non riflettere accuratamente i potenziali problemi.
 
 ## <a name="defaults"></a>Valori predefiniti
 

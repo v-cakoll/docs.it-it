@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 494a46040d6cc33c5284449779fae89705fd29c2
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 07e1b49605c83908f7b9af25e0cb2599a97257c5
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738831"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102073"
 ---
 # <a name="ref-c-reference"></a>ref (Riferimenti per C#)
 
@@ -77,7 +77,7 @@ Per altre informazioni su come passare i tipi di riferimento per valore e per ri
   
 ## <a name="reference-return-values"></a>Valori restituiti di riferimento
 
-I valori restituiti di riferimento (o valori restituiti ref) sono i valori che un metodo restituisce per riferimento al chiamante. In altre parole, il chiamante può modificare il valore restituito da un metodo e tale modifica viene riflessa nello stato dell'oggetto che contiene il metodo.
+I valori restituiti di riferimento (o valori restituiti ref) sono i valori che un metodo restituisce per riferimento al chiamante. Ovvero, il chiamante può modificare il valore restituito da un metodo e tale modifica si riflette nello stato dell'oggetto nel metodo chiamante.
 
 Un valore restituito di riferimento viene definito mediante la parola chiave `ref`:
 
@@ -94,6 +94,10 @@ return ref DecimalArray[0];
 ```
 
 Affinché il chiamante modifichi lo stato dell'oggetto, il valore restituito di riferimento deve essere archiviato in una variabile definita in modo esplicito come [variabile locale ref](#ref-locals).
+
+Di seguito è riportato un esempio di restituzione di rifmti più completo, che mostra sia la firma del metodo che il corpo del metodo.
+
+[!code-csharp[FindReturningRef](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#FindReturningRef "Find returning by reference")]
 
 Il metodo chiamato può anche dichiarare il valore restituito come `ref readonly` per restituire il valore per riferimento e specificare che il codice chiamante non può modificare il valore restituito. Il metodo chiamante può evitare la copia del valore restituito archiviando il valore in una variabile [ref readonly](#ref-readonly-locals) locale.
 
