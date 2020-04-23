@@ -6,12 +6,12 @@ metadata:
   description: Imparare la programmazione in C - per gli sviluppatori principianti, gli sviluppatori non hanno familiarità con c'è e gli sviluppatori esperti di C / .NET
   ms.topic: landing-page
   ms.date: 11/19/2019
-  ms.openlocfilehash: 2bec49d0832a7d00d0fea247166a9ec073f37e11
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.openlocfilehash: a0de519e518cac70bac831cf689042e104cd1389
+  ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
   ms.translationtype: MT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 03/15/2020
-  ms.locfileid: "75339164"
+  ms.lasthandoff: 04/23/2020
+  ms.locfileid: "82102723"
 landingContent:
 - title: 'Imparare a programmare in C #'
   linkLists:
@@ -71,14 +71,14 @@ landingContent:
       url: whats-new/csharp-8.md
   - linkListType: overview
     links:
-    - text: Corrispondenza dei criteri
+    - text: Criteri di ricerca
       url: pattern-matching.md
     - text: Tipi riferimento nullable
       url: nullable-references.md
   - linkListType: concept
     links:
-    - text: Annotare le API per il supporto dei valori NullAntate APIs for nullability
-      url: nullable-attributes.md
+    - text: Scegliere una strategia di migrazione nullableChoose a nullable migration strategy
+      url: nullable-migration-strategies.md
   - linkListType: tutorial
     links:
     - text: Usare e generare flussi asincroniConsume and generate async streams
@@ -103,7 +103,7 @@ landingContent:
   linkLists:
   - linkListType: reference
     links:
-    - text: Informazioni di riferimento sul linguaggio
+    - text: Riferimenti per il linguaggio
       url: language-reference/index.md
     - text: Parole chiave di C#
       url: language-reference/keywords/index.md
